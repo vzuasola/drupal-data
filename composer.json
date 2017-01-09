@@ -24,7 +24,7 @@
         "drupal/console": "~1.0",
         "drupal/examples": "1.x-dev",
         "drupal/restui": "^1.13",
-        "drupal/ldap": "^7.2@beta"
+        "drupal/ldap": "3.0.0-alpha2"
     },
     "require-dev": {
         "behat/mink": "~1.7",

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "f20f521f428e8d6054924ba409c83e23",
+    "content-hash": "7731b1f058a1e1a147de5e52012e1ec8",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1558,21 +1558,73 @@
         },
         {
             "name": "drupal/ldap",
-            "version": "7.2.0-beta12",
+            "version": "3.0.0-alpha2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/liip-forks/drupal-ldap.git",
-                "reference": "6b0c662a101c806cca9e2260020ff85ae39ad8fd"
+                "url": "https://git.drupal.org/project/ldap",
+                "reference": "8.x-3.0-alpha2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/liip-forks/drupal-ldap/zipball/6b0c662a101c806cca9e2260020ff85ae39ad8fd",
-                "reference": "6b0c662a101c806cca9e2260020ff85ae39ad8fd",
-                "shasum": ""
+                "url": "https://ftp.drupal.org/files/projects/ldap-8.x-3.0-alpha2.zip",
+                "reference": null,
+                "shasum": "c3534404149138314c5b832bd7a708c1a11a7218"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "require-dev": {
+                "drupal/authorization": "*",
+                "drupal/externalauth": "*",
+                "drupal/feeds": "*",
+                "drupal/ldap_query": "*",
+                "drupal/ldap_servers": "*",
+                "drupal/ldap_user": "*"
             },
             "type": "drupal-module",
-            "notification-url": "https://packagist.org/downloads/",
-            "time": "2014-06-20T09:42:39+00:00"
+            "extra": {
+                "branch-alias": {
+                    "dev-3.x": "3.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-3.0-alpha2",
+                    "datestamp": "1483534142"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "dgtlmoon",
+                    "homepage": "https://www.drupal.org/user/25027"
+                },
+                {
+                    "name": "grahl",
+                    "homepage": "https://www.drupal.org/user/146040"
+                },
+                {
+                    "name": "johnbarclay",
+                    "homepage": "https://www.drupal.org/user/225037"
+                },
+                {
+                    "name": "larowlan",
+                    "homepage": "https://www.drupal.org/user/395439"
+                },
+                {
+                    "name": "queenvictoria",
+                    "homepage": "https://www.drupal.org/user/856454"
+                },
+                {
+                    "name": "welly",
+                    "homepage": "https://www.drupal.org/user/354705"
+                }
+            ],
+            "homepage": "https://www.drupal.org/project/ldap",
+            "support": {
+                "source": "http://cgit.drupalcode.org/ldap"
+            }
         },
         {
             "name": "drupal/restui",
@@ -6133,8 +6185,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "drupal/examples": 20,
-        "drupal/ldap": 10
+        "drupal/examples": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
