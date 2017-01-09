@@ -1,0 +1,5 @@
+name: matterhorn_blocks
+type: module
+description: Provides an API for defining custom block entries
+core: 8.x
+package: Matterhorn
