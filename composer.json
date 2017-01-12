@@ -24,7 +24,11 @@
         "drupal/console": "~1.0",
         "drupal/examples": "1.x-dev",
         "drupal/restui": "^1.13",
-        "drupal/ldap": "3.0.0-alpha2"
+        "drupal/ldap": "3.0.0-alpha2",
+        "drupal/devel": "~1.0",
+        "drupal/relaxed": "^1.0@alpha",
+        "drupal/externalauth": "^1.0@alpha",
+        "drupal/authorization": "1.x-dev"
     },
     "require-dev": {
         "behat/mink": "~1.7",
@@ -70,5 +74,8 @@
             "drush/contrib/{$name}": ["type:drupal-drush"]
         }
     },
-    "enable-patching": true
+    "enable-patching": true,
+    "config": {
+        "secure-http": false
+    }
 }
