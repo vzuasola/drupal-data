@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "e173cd492f0755544ba003c631ee974f",
+    "content-hash": "4a479479f756597402cc4c2f73b87984",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -2190,17 +2190,11 @@
         },
         {
             "name": "drupal/restui",
-            "version": "1.13.0",
+            "version": "dev-1.x",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/restui",
-                "reference": "8.x-1.13"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/restui-8.x-1.13.zip",
-                "reference": "8.x-1.13",
-                "shasum": "808fc735bd9f80069fe1353b7b0f8390d294ff28"
+                "reference": "dd9d0bf438da8c16a62a4d79aea96b65bd231900"
             },
             "require": {
                 "drupal/core": "^8.2.0"
@@ -2211,10 +2205,9 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.13",
-                    "datestamp": "1478790974"
-                },
-                "patches_applied": []
+                    "version": "8.x-1.13+3-dev",
+                    "datestamp": "1482507483"
+                }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
@@ -2248,6 +2241,75 @@
             "support": {
                 "source": "https://cgit.drupalcode.org/restui",
                 "issues": "https://www.drupal.org/project/issues/restui"
+            },
+            "time": "2016-12-23 15:33:09"
+        },
+        {
+            "name": "drupal/workspace",
+            "version": "1.0.0-alpha4",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/workspace",
+                "reference": "8.x-1.0-alpha4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/workspace-8.x-1.0-alpha4.zip",
+                "reference": null,
+                "shasum": "5cde5f4a4d7c69595335076825c8330e6de575fa"
+            },
+            "require": {
+                "drupal/core": "*",
+                "drupal/replication": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-alpha4",
+                    "datestamp": "1477395239"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Crell",
+                    "homepage": "https://www.drupal.org/user/26398"
+                },
+                {
+                    "name": "Frank Ralf",
+                    "homepage": "https://www.drupal.org/user/216048"
+                },
+                {
+                    "name": "dixon_",
+                    "homepage": "https://www.drupal.org/user/239911"
+                },
+                {
+                    "name": "jeqq",
+                    "homepage": "https://www.drupal.org/user/1427908"
+                },
+                {
+                    "name": "jvandyk",
+                    "homepage": "https://www.drupal.org/user/2375"
+                },
+                {
+                    "name": "timmillwood",
+                    "homepage": "https://www.drupal.org/user/227849"
+                }
+            ],
+            "description": "The workspace module",
+            "homepage": "https://www.drupal.org/project/workspace",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/workspace",
+                "issues": "http://drupal.org/project/issues/workspace"
             }
         },
         {
@@ -6895,9 +6957,11 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "drupal/examples": 20,
+        "drupal/restui": 20,
         "drupal/relaxed": 15,
         "drupal/externalauth": 15,
-        "drupal/authorization": 20
+        "drupal/authorization": 20,
+        "drupal/workspace": 15
     },
     "prefer-stable": true,
     "prefer-lowest": false,

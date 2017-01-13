@@ -23,12 +23,13 @@
         "drush/drush": "~8.0",
         "drupal/console": "~1.0",
         "drupal/examples": "1.x-dev",
-        "drupal/restui": "^1.13",
+        "drupal/restui": "1.x-dev",
         "drupal/ldap": "3.0.0-alpha2",
         "drupal/devel": "~1.0",
         "drupal/relaxed": "^1.0@alpha",
         "drupal/externalauth": "^1.0@alpha",
-        "drupal/authorization": "1.x-dev"
+        "drupal/authorization": "1.x-dev",
+        "drupal/workspace": "^1.0@alpha"
     },
     "require-dev": {
         "behat/mink": "~1.7",
