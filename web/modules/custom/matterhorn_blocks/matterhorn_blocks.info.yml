@@ -1,5 +1,5 @@
-name: matterhorn_blocks
+name: Matterhorn Blocks
 type: module
-description: Provides an API for defining custom block entries
+description: Provides an API for defining custom block entries and page components
 core: 8.x
 package: Matterhorn
