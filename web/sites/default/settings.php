@@ -285,7 +285,7 @@ $config_directories = array();
  *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt');
  * @endcode
  */
-$settings['hash_salt'] = 'U8CQSLvTXOLNOoMe1cjzGbUziR2c7PvuYDA-oL8SrgyAZayLUC1FLPwd4wkahxsOxe0T41NLrg';
+$settings['hash_salt'] = 'rWtA7Wb0Vl-4TdP_Ni4Pptp16-LmjWX-I9L1pkoTE5jI2eivMCupJBCeTRlBCLSqp78Zxr_B3g';
 
 /**
  * Deployment identifier.
@@ -753,10 +753,14 @@ $settings['file_scan_ignore_directories'] = [
 #   include __DIR__ . '/settings.local.php';
 # }
 $databases['default']['default'] = array (
-  'database' => 'sites/default/database.sqlite',
+  'database' => 'wbc-core',
+  'username' => 'admin',
+  'password' => 'admin',
   'prefix' => '',
-  'namespace' => 'Drupal\\Core\\Database\\Driver\\sqlite',
-  'driver' => 'sqlite',
+  'host' => '192.168.56.101',
+  'port' => '3306',
+  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
+  'driver' => 'mysql',
 );
 $settings['install_profile'] = 'standard';
-$config_directories['sync'] = 'sites/default/files/config_gys119J-vwXcM_dQ46Rr2TyHUln_68W88gQOdlPia21j-ezmBUyzXgJOMklNHqnrHPMAk6jr6w/sync';
+$config_directories['sync'] = 'sites/default/files/config_QOXEMbhWlTQA6GjbNHA8wctxk1BujPNWc6gzmjqDBb3KxLnAuJYu09HkTJbt-WSKKSROQLe6Vg/sync';

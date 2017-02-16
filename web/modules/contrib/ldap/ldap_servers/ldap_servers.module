@@ -1,0 +1,304 @@
+<?php
+
+/**
+ * @file
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Session\AccountProxy;
+use Drupal\Core\Url;
+use Drupal\ldap_servers\Entity\Server;
+use Drupal\ldap_servers\TokenFunctions;
+use Drupal\ldap_servers\TokenHelper;
+use Drupal\ldap_user\LdapUserConf;
+
+
+
+/**
+ * Implements hook_help().
+ */
+function ldap_servers_help($route_name, RouteMatchInterface $route_match) {
+  $servers_help = '<p>' . t('LDAP Servers store "LDAP server configurations" so other modules can connect to them and leverage their data.') . ' ';
+  $servers_help .= t('LDAP Authentication and LDAP Authorization are two such modules. Generally, only one LDAP Server configuration is needed.') . ' ' . '</p>';
+  $servers_help .= '<p>' . t('When multiple LDAP server configurations are needed, each is not necessarily a separate physical LDAP server; they may have different binding users or some other configuration difference.') . ' </p>';
+
+  switch ($route_name) {
+    case 'ldap_servers.settings':
+      return $servers_help;
+
+    case 'help.page.ldap_servers':
+      $servers_help .= '<h3>' . t('Configuration - Settings') . '</h3>';
+      $servers_help .= '<dl>';
+      $servers_help .= '<dt>' . t('REQUIRE HTTPS ON CREDENTIAL PAGES') . '</dt>';
+      $servers_help .= '<dd>' . t('If checked, modules using LDAP will not allow credentials to be entered on or submitted to HTTP pages, only HTTPS. This option should be used with an approach to get all logon forms to be HTTPS.') . '</dd>';
+      $servers_help .= '<dt>' . t('LOG DETAILED LDAP ACTIONS') . '</dt>';
+      $servers_help .= '<dd>' . t('Enables LDAP logging to the Drupal Watchdog system') . '</dd>';
+      $servers_help .= '</dl>';
+      $servers_help .= '<h3>' . t('Configuration - Servers (List)') . '</h3>';
+      $servers_help .= '<dl>';
+      $servers_help .= '<dt>' . t('Configuration Table') . '</dt>';
+      $servers_help .= '<dd>' . t('Provides a list of currently stored LDAP server configuratins.') . '</dd>';
+      $servers_help .= '<h3>' . t('Configuration - Servers (Add LDAP Server Configuration)') . '</h3>';
+      $servers_help .= '<dl>';
+      $servers_help .= '<dt>' . t('CONNECTION SETTINGS') . '</dt>';
+      $servers_help .= '<dd>' . t('Machine name -') . ' </dd>';
+      $servers_help .= '<dd>' . t('Name -') . ' </dd>';
+      $servers_help .= '<dd>' . t('Enabled -') . ' </dd>';
+      $servers_help .= '<dd>' . t('LDAP Server Type') . ' </dd>';
+      $servers_help .= '<dd>' . t('LDAP Server -') . ' </dd>';
+      $servers_help .= '<dd>' . t('LDAP port -') . ' </dd>';
+      $servers_help .= '<dd>' . t('Use Start-TLS -') . ' </dd>';
+      $servers_help .= '</dl>';
+      $servers_help .= '<dl>';
+      $servers_help .= '<dt>' . t('BINDING METHOD') . '</dt>';
+      $servers_help .= '<dd>' . t('Binding Method for searches -') . ' </dd>';
+      $servers_help .= '<dd>' . t('Service Account -') . ' </dd>';
+      $servers_help .= '<dd>' . t('DN for non-anonymous search -') . ' </dd>';
+      $servers_help .= '<dd>' . t('Password for non-anonymous search -') . ' </dd>';
+      $servers_help .= '<dd>' . t('Clear existing password from database -') . ' </dd>';
+      $servers_help .= '</dl>';
+      $servers_help .= '<dl>';
+      $servers_help .= '<dt>' . t('LDAP USER TO DRUPAL USER RELATIONSHIP') . '</dt>';
+      $servers_help .= '<dd>' . t('Base DNs for LDAP Users, Groups, and Other Entries -') . ' </dd>';
+      $servers_help .= '<dd>' . t('AuthName Attribute -') . ' </dd>';
+      $servers_help .= '<dd>' . t('AccountName Attribute -') . ' </dd>';
+      $servers_help .= '<dd>' . t('Email Attribute -') . ' </dd>';
+      $servers_help .= '<dd>' . t('Email Template -') . ' </dd>';
+      $servers_help .= '<dd>' . t('Persistant and Unique User ID Attribute -') . ' </dd>';
+      $servers_help .= '<dd>' . t('Does PUID hold a binary value? -') . ' </dd>';
+      $servers_help .= '<dd>' . t('Expression for User DN -') . ' </dd>';
+      $servers_help .= '<dd>' . t('PHP to Transform Drupal Login Username to LDAP UserName Attribute -') . ' </dd>';
+      $servers_help .= '<dd>' . t('Testing Drupal Username -') . ' </dd>';
+      $servers_help .= '<dd>' . t('DN of Testing Username -') . ' </dd>';
+      $servers_help .= '</dl>';
+      return $servers_help;
+
+    case 'entity.ldap_server.collection':
+      $output = '<p>' . t('Setup an LDAP server configuration to be used by other modules such as LDAP Authentication, LDAP Authorization, etc.') . '</p>';
+      $output .= '<p>' . t('More than one LDAP server configuration can exist for a physical LDAP server. Multiple configurations for the same physical ldap server are useful in cases such as: (1) different base dn\'s for authentication and authorization and (2) service accounts with different privileges for different purposes.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Advertise the current ldap api version.
+ */
+function ldap_api_version() {
+  return '2.0';
+}
+
+/**
+ * Implements hook_cron().
+ */
+function ldap_servers_cron() {
+  // If any modules implement hook_ldap_servers_user_cron().
+  // user entity query to find most recent 100 entries that have not been processed
+  // query for these and pass to modules implementing hook_ldap_server_maintenance()
+  // update user field to have current date as date most recently checked.
+}
+
+/**
+ * Implements hook_ldap_attributes_needed_alter().
+ */
+function ldap_servers_ldap_attributes_needed_alter(&$attributes, $params) {
+  $token_helper = new TokenHelper();
+  // Force this data type.
+  $attributes['dn'] = TokenFunctions::setAttributeMap(@$attributes['dn'], 'ldap_dn');
+
+  // Puid attributes are server specific.
+  if ($params['sid'] && $params['sid']) {
+    if (is_scalar($params['sid'])) {
+      $factory = \Drupal::service('ldap.servers');
+      /* @var Server $ldap_server */
+      $ldap_server = $factory->getServerById($params['sid']);
+
+      if ($ldap_server) {
+        // mail, unique_persistent_attr, user_attr, mail_template, and user_dn_expression are needed for all functionality.
+        if (!isset($attributes[$ldap_server->get('mail_attr')])) {
+          $attributes[$ldap_server->get('mail_attr')] = TokenFunctions::setAttributeMap();
+        }
+        if (!isset($attributes[$ldap_server->get('picture_attr')])) {
+          $attributes[$ldap_server->get('picture_attr')] = TokenFunctions::setAttributeMap();
+        }
+        if ($ldap_server->get('unique_persistent_attr') && !isset($attributes[$ldap_server->get('unique_persistent_attr')])) {
+          $attributes[$ldap_server->get('unique_persistent_attr')] = TokenFunctions::setAttributeMap();
+        }
+        if ($ldap_server->get('user_dn_expression')) {
+          // @FIXME: Parameters don't match
+          $token_helper->extractTokenAttributes($attributes, $ldap_server->get('user_dn_expression'), TRUE);
+        }
+        if ($ldap_server->get('mail_template')) {
+          $token_helper->extractTokenAttributes($attributes, $ldap_server->get('mail_template'));
+        }
+        if (!isset($attributes[$ldap_server->get('user_attr')])) {
+          $attributes[$ldap_server->get('user_attr')] = TokenFunctions::setAttributeMap();
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_ldap_user_attrs_list_alter().
+ * TODO: This function is too messy, needs to be cleaned up. Ideally
+ * remove hook_ldap_user_attrs_list_alter altogether and build it dynamically.
+ */
+function ldap_servers_ldap_user_attrs_list_alter(&$available_user_attrs, &$params) {
+  if (isset($params['ldap_server']) && $params['ldap_server']) {
+    /* @var Server $ldap_server */
+    $ldap_server = $params['ldap_server'];
+  }
+  else {
+    // Without a server id, ldap_servers module has nothing to offer.
+    return;
+  }
+  $ldap_user_conf  = $params['ldap_user_conf'];
+  $direction = $params['direction'];
+
+  $url = Url::fromRoute('entity.ldap_server.collection');
+  $tokens = array(
+    '%edit_link' => \Drupal::l($url->toString(), $url),
+    '%sid' => $ldap_server->id(),
+  );
+
+  $server_edit_path = 'admin/config/people/ldap/servers/edit/' . $ldap_server->id();
+
+  if ($direction == LdapUserConf::$provisioningDirectionToDrupalUser) {
+
+    /**
+     * These 4 user fields identify where in ldap and which ldap server they are
+     * associated with. They are required for a Drupal account to be
+     * "ldap associated" regardless of if any other fields/properties are
+     * provisioned or synced.
+     */
+
+    if ($ldap_server->get('unique_persistent_attr')) {
+      foreach (array(
+        'field.ldap_user_puid_sid',
+        'field.ldap_user_puid',
+        'field.ldap_user_puid_property',
+      ) as $i => $property_id) {
+        $property_token = '[' . $property_id . ']';
+        if (!isset($available_user_attrs[$property_token]) || !is_array($available_user_attrs[$property_token])) {
+          $available_user_attrs[$property_token] = array();
+        }
+      }
+
+      $available_user_attrs['[field.ldap_user_puid_sid]'] = array(
+        'name' => t('Field: sid providing PUID'),
+        'configurable_to_drupal' => 0,
+        'configurable_to_ldap' => 1,
+        'source' => t('%sid', $tokens),
+        'notes' => 'not configurable',
+        'direction' => LdapUserConf::$provisioningDirectionToDrupalUser,
+        'enabled' => TRUE,
+        'prov_events' => array(LdapUserConf::$eventCreateDrupalUser),
+        'config_module' => 'ldap_servers',
+        'prov_module' => 'ldap_user',
+      ) + $available_user_attrs['[field.ldap_user_puid_sid]'];
+
+      $available_user_attrs['[field.ldap_user_puid]'] = array(
+        'name' => t('Field: PUID', $tokens),
+        'configurable_to_drupal' => 0,
+        'configurable_to_ldap' => 1,
+        'source' => '[' . $ldap_server->get('unique_persistent_attr') . ']',
+        'notes' => 'configure at ' . $server_edit_path,
+        'convert' => $ldap_server->get('unique_persistent_attr_binary'),
+        'direction' => LdapUserConf::$provisioningDirectionToDrupalUser,
+        'enabled' => TRUE,
+        'prov_events' => array(LdapUserConf::$eventCreateDrupalUser),
+        'config_module' => 'ldap_servers',
+        'prov_module' => 'ldap_user',
+      ) + $available_user_attrs['[field.ldap_user_puid]'];
+
+      $available_user_attrs['[field.ldap_user_puid_property]'] =
+      array(
+        'name' => t('Field: PUID Attribute', $tokens),
+        'configurable_to_drupal' => 0,
+        'configurable_to_ldap' => 1,
+        'source' => $ldap_server->get('unique_persistent_attr') ,
+        'notes' => 'configure at ' . $server_edit_path,
+        'direction' => LdapUserConf::$provisioningDirectionToDrupalUser,
+        'enabled' => TRUE,
+        'prov_events' => array(LdapUserConf::$eventCreateDrupalUser),
+        'config_module' => 'ldap_servers',
+        'prov_module' => 'ldap_user',
+      ) + $available_user_attrs['[field.ldap_user_puid_property]'];
+    }
+
+    $token = '[field.ldap_user_current_dn]';
+    if (!isset($available_user_attrs[$token]) || !is_array($available_user_attrs[$token])) {
+      $available_user_attrs[$token] = array();
+    }
+    $available_user_attrs[$token] =
+    array(
+      'name' => t('Field: Most Recent DN', $tokens),
+      'configurable_to_drupal' => 0,
+      'configurable_to_ldap' => 0,
+      'source' => '[dn]',
+      'notes' => 'not configurable',
+      'direction' => LdapUserConf::$provisioningDirectionToDrupalUser,
+      'enabled' => TRUE,
+      'prov_events' => array(LdapUserConf::$eventCreateDrupalUser, LdapUserConf::$eventSyncToDrupalUser),
+      'config_module' => 'ldap_servers',
+      'prov_module' => 'ldap_user',
+    ) + $available_user_attrs[$token];
+
+    if ($ldap_user_conf->provisionsDrupalAccountsFromLdap) {
+      if (!isset($available_user_attrs['[property.name]']) || !is_array($available_user_attrs['[property.name]'])) {
+        $available_user_attrs['[property.name]'] = array();
+      }
+      $available_user_attrs['[property.name]'] = array(
+        'name' => 'Property: Username',
+        'source' => '[' . $ldap_server->get('user_attr') . ']',
+        'direction' => LdapUserConf::$provisioningDirectionToDrupalUser,
+        'enabled' => TRUE,
+        'prov_events' => array(LdapUserConf::$eventCreateDrupalUser, LdapUserConf::$eventSyncToDrupalUser),
+        'config_module' => 'ldap_servers',
+        'prov_module' => 'ldap_user',
+      ) + $available_user_attrs['[property.name]'];
+
+      if (!isset($available_user_attrs['[property.mail]']) || !is_array($available_user_attrs['[property.mail]'])) {
+        $available_user_attrs['[property.mail]'] = array();
+      }
+      $available_user_attrs['[property.mail]'] = array(
+        'name' => 'Property: Email',
+        'source' => ($ldap_server->get('mail_template')) ? $ldap_server->get('mail_template') : '[' . $ldap_server->get('mail_attr') . ']',
+        'direction' => LdapUserConf::$provisioningDirectionToDrupalUser,
+        'enabled' => TRUE,
+        'prov_events' => array(LdapUserConf::$eventCreateDrupalUser, LdapUserConf::$eventSyncToDrupalUser),
+        'config_module' => 'ldap_servers',
+        'prov_module' => 'ldap_user',
+      ) + $available_user_attrs['[property.mail]'];
+
+      if ($ldap_server->get('picture_attr')) {
+        if (!isset($available_user_attrs['[property.picture]']) || !is_array($available_user_attrs['[property.picture]'])) {
+          $available_user_attrs['[property.picture]'] = array();
+        }
+        $available_user_attrs['[property.picture]'] = array(
+          'name' => 'Property: Picture',
+          'source' => '[' . $ldap_server->get('picture_attr') . ']',
+          'direction' => LdapUserConf::$provisioningDirectionToDrupalUser,
+          'enabled' => TRUE,
+          'prov_events' => array(LdapUserConf::$eventCreateDrupalUser, LdapUserConf::$eventSyncToDrupalUser),
+          'config_module' => 'ldap_servers',
+          'prov_module' => 'ldap_user',
+        ) + $available_user_attrs['[property.picture]'];
+      }
+    }
+  }
+}
+
+
+/**
+ * Implements hook_user_logout().
+ */
+function ldap_servers_user_logout(AccountProxy $account) {
+  // When the user logs out clear the LDAP cached data.
+  $cache_key = 'ldap_servers:user_data:' . $account->getUsername();
+  if ($cache = \Drupal::cache()->get($cache_key)) {
+    \Drupal::cache()->delete($cache_key);
+  }
+}
