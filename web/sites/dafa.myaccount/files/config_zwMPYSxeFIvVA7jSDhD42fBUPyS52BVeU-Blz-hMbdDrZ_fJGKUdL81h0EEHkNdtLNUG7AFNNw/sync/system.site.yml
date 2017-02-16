@@ -1,0 +1,14 @@
+uuid: f97b092f-81c0-4265-9b0c-6adbdce9dedd
+name: 'dafabet myaccount  site'
+mail: ashwini@gmail.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: AyT9s8OUcclfALRE_imByOMgtZ19eOlqdF6zI3p7yqo
