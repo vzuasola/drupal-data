@@ -1,0 +1,6 @@
+entity.matterhorn_block_entity.add_form:
+  route_name: 'entity.matterhorn_block_entity.add_form'
+  title: 'Add matterhorn block'
+  appears_on:
+    - entity.matterhorn_block_entity.collection
+

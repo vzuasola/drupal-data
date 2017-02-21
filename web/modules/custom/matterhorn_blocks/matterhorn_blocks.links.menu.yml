@@ -1,0 +1,9 @@
+
+# Matterhorn block entity menu items definition
+entity.matterhorn_block_entity.collection:
+  title: 'Matterhorn block entity'
+  route_name: entity.matterhorn_block_entity.collection
+  description: 'List Matterhorn block entity (bundles)'
+  parent: system.admin_structure
+  weight: 99
+

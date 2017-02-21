@@ -1,0 +1,4 @@
+services:
+  plugin.manager.matterhorn_blocks_plugin:
+    class: Drupal\matterhorn_blocks\Plugin\MatterhornBlocksPluginManager
+    parent: default_plugin_manager
