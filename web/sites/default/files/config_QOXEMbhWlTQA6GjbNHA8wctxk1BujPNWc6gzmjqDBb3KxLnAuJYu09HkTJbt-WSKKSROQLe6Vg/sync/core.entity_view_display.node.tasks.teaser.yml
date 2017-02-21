@@ -1,0 +1,17 @@
+uuid: 5757c712-af36-49ec-ba80-c00ba7103d99
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.tasks
+  module:
+    - user
+id: node.tasks.teaser
+targetEntityType: node
+bundle: tasks
+mode: teaser
+content:
+  links:
+    weight: 100
+hidden: {  }
