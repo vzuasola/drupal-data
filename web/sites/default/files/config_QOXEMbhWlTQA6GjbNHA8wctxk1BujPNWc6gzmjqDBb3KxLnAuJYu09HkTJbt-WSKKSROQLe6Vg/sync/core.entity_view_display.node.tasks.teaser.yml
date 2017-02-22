@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.tasks.field_task
     - node.type.tasks
   module:
     - user
@@ -16,3 +17,4 @@ content:
     weight: 100
 hidden:
   field_task: true
+  langcode: true

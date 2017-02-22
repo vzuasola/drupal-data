@@ -20,4 +20,5 @@ content:
     type: basic_string
   links:
     weight: 100
-hidden: {  }
+hidden:
+  langcode: true
