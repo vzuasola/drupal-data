@@ -1,0 +1,4 @@
+#Define the administer permission for the robot config entity.
+'access my_account config':
+  title: 'My Account API config'
+  description: Access API Endpoint for all configurations related to My Account

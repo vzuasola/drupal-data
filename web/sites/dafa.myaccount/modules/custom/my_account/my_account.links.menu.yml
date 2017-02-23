@@ -1,0 +1,12 @@
+my_account.admin_settings_config:
+  title: 'My Account'
+  route_name: my_account.admin_config_system
+  menu_name: my_account
+  parent: system.admin_config
+  weight: -15
+
+my_account.admin_settings:
+  title: 'Change Password'
+  description: 'Change Password Field Settings, Validation and Error Messages'
+  route_name: my_account.admin_settings
+  parent: my_account.admin_settings_config
