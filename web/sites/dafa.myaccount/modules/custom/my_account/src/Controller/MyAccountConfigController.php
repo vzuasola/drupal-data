@@ -20,17 +20,8 @@ class MyAccountConfigController extends ControllerBase {
    */
   public function api() {
 
-    return new JsonResponse([]);
-
+    $config = \Drupal::config('my_account.change_password');
+    $values = $config->get();
+    return new JsonResponse( $values);
   }
-
-  /**
-   * A simple controller method to explain what this module is about.
-   */
-  public function admin() {
-
-    return new Response('asd');
-
-  }
-
 }
