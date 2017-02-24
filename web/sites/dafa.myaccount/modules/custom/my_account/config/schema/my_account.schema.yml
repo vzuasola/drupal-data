@@ -1,0 +1,38 @@
+my_account.change_password:
+  type: config_object
+  label: 'Change Password'
+  mapping:
+    current_password:
+      type: label
+      label: 'Field Label for Current Password'
+    new_password:
+      type: label
+      label: 'Field Label for New Password'
+    confirm_password:
+      type: label
+      label: 'Field Label for Confirm Password'
+    op_required:
+      type: text
+      label: 'Check if old password is required'
+    op_required_err_message:
+      type: text
+      label: 'Error Message for required Old Password'
+    op_length:
+      type: text
+      label: 'Length of Old Password'
+    op_length_err_message:
+      type: text
+      label: 'Length pf Old Password'
+    np_required:
+      type: text
+      label: 'Check if new password is required'
+    np_required_err_message:
+      type: text
+      label: 'Error Message for required New Password'
+    np_length:
+      type: text
+      label: 'Length of new Password'
+    np_length_err_message:
+      type: text
+      label: 'Length of new Password'
+  langcode: 'en'
