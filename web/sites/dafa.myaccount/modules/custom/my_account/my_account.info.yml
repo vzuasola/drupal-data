@@ -3,6 +3,5 @@ description: Module for my account configurations
 package: My Account
 type: module
 core: 8.x
-# Information added by Drupal.org packaging script on 2017-01-15
 version: '8.x-1.x-dev'
 core: '8.x'

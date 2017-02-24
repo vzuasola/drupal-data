@@ -39,23 +39,23 @@ class ChangePassword extends ConfigFormBase {
       '#group' => 'change_password',
     ];
 
-    $form['field_labels']['fl_current_password'] = [
+    $form['field_labels']['current_password'] = [
       '#type' => 'textfield',
       '#title' => t('Current Password'),
-      '#default_value' => $myAccountConfig->get('fl_current_password')
+      '#default_value' => $myAccountConfig->get('current_password')
     ];
 
-    $form['field_labels']['fl_new_password'] = [
+    $form['field_labels']['new_password'] = [
       '#type' => 'textfield',
       '#title' => t('New Password'),
-      '#default_value' => $myAccountConfig->get('fl_new_password')
+      '#default_value' => $myAccountConfig->get('new_password')
     ];
 
 
-    $form['field_labels']['fl_confirm_password'] = [
+    $form['field_labels']['confirm_password'] = [
       '#type' => 'textfield',
       '#title' => t('Confirm Password'),
-      '#default_value' => $myAccountConfig->get('fl_confirm_password')
+      '#default_value' => $myAccountConfig->get('confirm_password')
     ];
 
     $form['validation'] = [
@@ -70,29 +70,29 @@ class ChangePassword extends ConfigFormBase {
       '#open' => true
     ];
 
-    $form['validation']['vl_old_password']['vl_op_required'] = [
+    $form['validation']['vl_old_password']['op_required'] = [
       '#title' => t('Required?'),
       '#type' => 'checkbox',
-      '#default_value' => $myAccountConfig->get('vl_op_required')
+      '#default_value' => $myAccountConfig->get('op_required')
     ];
 
-    $form['validation']['vl_old_password']['vl_op_required_err_message'] = [
+    $form['validation']['vl_old_password']['op_required_err_message'] = [
       '#title' => t('Required Error Message'),
       '#type' => 'textfield',
-      '#default_value' => $myAccountConfig->get('vl_op_required_err_message')
+      '#default_value' => $myAccountConfig->get('op_required_err_message')
     ];
 
-    $form['validation']['vl_old_password']['vl_op_length'] = [
+    $form['validation']['vl_old_password']['op_length'] = [
       '#title' => t('Min and Max Length'),
       '#description' => t('Format: num - num, ex 1-4'),
       '#type' => 'textfield',
-      '#default_value' => $myAccountConfig->get('vl_op_length')
+      '#default_value' => $myAccountConfig->get('op_length')
     ];
 
-     $form['validation']['vl_old_password']['vl_op_length_err_message'] = [
+     $form['validation']['vl_old_password']['op_length_err_message'] = [
       '#title' => t('Min/Max Error Message'),
       '#type' => 'textfield',
-      '#default_value' => $myAccountConfig->get('vl_op_length_err_message')
+      '#default_value' => $myAccountConfig->get('op_length_err_message')
     ];
 
     $form['validation']['vl_new_password'] = [
@@ -101,29 +101,29 @@ class ChangePassword extends ConfigFormBase {
       '#open' => true
     ];
 
-    $form['validation']['vl_new_password']['vl_np_required'] = [
+    $form['validation']['vl_new_password']['np_required'] = [
       '#title' => t('Required?'),
       '#type' => 'checkbox',
-      '#default_value' => $myAccountConfig->get('vl_np_required')
+      '#default_value' => $myAccountConfig->get('np_required')
     ];
 
-    $form['validation']['vl_new_password']['vl_np_required_err_message'] = [
+    $form['validation']['vl_new_password']['np_required_err_message'] = [
       '#title' => t('Required Error Message'),
       '#type' => 'textfield',
-      '#default_value' => $myAccountConfig->get('vl_np_required_err_message')
+      '#default_value' => $myAccountConfig->get('np_required_err_message')
     ];
 
-    $form['validation']['vl_new_password']['vl_np_length'] = [
+    $form['validation']['vl_new_password']['np_length'] = [
       '#title' => t('Min and Max Length'),
       '#description' => t('Format: num - num, ex 1-4'),
       '#type' => 'textfield',
-      '#default_value' => $myAccountConfig->get('vl_np_length')
+      '#default_value' => $myAccountConfig->get('np_length')
     ];
 
-     $form['validation']['vl_new_password']['vl_np_length_err_message'] = [
+     $form['validation']['vl_new_password']['np_length_err_message'] = [
       '#title' => t('Min/Max Error Message'),
       '#type' => 'textfield',
-      '#default_value' => $myAccountConfig->get('vl_np_length_err_message')
+      '#default_value' => $myAccountConfig->get('np_length_err_message')
     ];
 
     $form['actions'] = ['#type' => 'actions'];
@@ -164,17 +164,17 @@ class ChangePassword extends ConfigFormBase {
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
      $this->config('my_account.change_password')
-      ->set('fl_current_password', $form_state->getValue('fl_current_password'))
-      ->set('fl_new_password', $form_state->getValue('fl_new_password'))
-      ->set('fl_confirm_password', $form_state->getValue('fl_confirm_password'))
-      ->set('vl_op_required', $form_state->getValue('vl_op_required'))
-      ->set('vl_op_required_err_message', $form_state->getValue('vl_op_required_err_message'))
-      ->set('vl_op_length', $form_state->getValue('vl_op_length'))
-      ->set('vl_op_length_err_message', $form_state->getValue('vl_op_length_err_message'))
-      ->set('vl_np_required', $form_state->getValue('vl_np_required'))
-      ->set('vl_np_required_err_message', $form_state->getValue('vl_np_required_err_message'))
-      ->set('vl_np_length', $form_state->getValue('vl_np_length'))
-      ->set('vl_np_length_err_message', $form_state->getValue('vl_np_length_err_message'))
+      ->set('current_password', $form_state->getValue('current_password'))
+      ->set('new_password', $form_state->getValue('new_password'))
+      ->set('confirm_password', $form_state->getValue('confirm_password'))
+      ->set('op_required', $form_state->getValue('op_required'))
+      ->set('op_required_err_message', $form_state->getValue('op_required_err_message'))
+      ->set('op_length', $form_state->getValue('op_length'))
+      ->set('op_length_err_message', $form_state->getValue('op_length_err_message'))
+      ->set('np_required', $form_state->getValue('np_required'))
+      ->set('np_required_err_message', $form_state->getValue('np_required_err_message'))
+      ->set('np_length', $form_state->getValue('np_length'))
+      ->set('np_length_err_message', $form_state->getValue('np_length_err_message'))
       ->save();
   }
 
