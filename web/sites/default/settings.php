@@ -753,11 +753,11 @@ $settings['file_scan_ignore_directories'] = [
 #   include __DIR__ . '/settings.local.php';
 # }
 $databases['default']['default'] = array (
-  'database' => 'wbc-core',
+  'database' => 'default',
   'username' => 'admin',
   'password' => 'admin',
   'prefix' => '',
-  'host' => '192.168.56.101',
+  'host' => '127.0.0.1',
   'port' => '3306',
   'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
   'driver' => 'mysql',
