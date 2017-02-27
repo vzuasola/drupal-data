@@ -55,3 +55,6 @@
  */
 $sites['dafa.myaccount'] = 'dafa.myaccount';
 $sites['dafa.casino'] = 'dafa.casino';
+
+$sites['casino.dev'] = 'dafa.casino';
+$sites['account.dev'] = 'dafa.casino';
