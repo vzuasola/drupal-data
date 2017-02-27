@@ -1,0 +1,15 @@
+myaccount_profile.admin_config_settings:
+ path: 'admin/config/my_account/myprofile'
+ defaults:
+   _form: 'Drupal\myaccount_profile\Form\MyAccountProfileSettings'
+   _title: 'My Profile configuration'
+ requirements:
+    _permission: 'administer my_account config'
+
+myaccount_profile.api:
+  path: 'api/myprofileview.json'
+  defaults:
+    _controller: '\Drupal\myaccount_profile\Controller\MyAccountProfileConfigController::api'
+  requirements:
+    _permission: "access my_account config"
+
