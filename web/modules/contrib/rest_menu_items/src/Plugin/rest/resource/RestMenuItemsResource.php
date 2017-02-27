@@ -224,7 +224,7 @@ class RestMenuItemsResource extends ResourceBase {
         'key' => $item_name,
         'title' => $org_link->getTitle(),
         'uri' => $uri,
-        'alias' => ltrim($uri, '/'),
+        'alias' => ltrim($alias, '/'),
         'external' => $external,
       );
 
