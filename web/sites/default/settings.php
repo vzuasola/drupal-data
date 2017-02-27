@@ -752,6 +752,9 @@ $settings['file_scan_ignore_directories'] = [
 # if (file_exists(__DIR__ . '/settings.local.php')) {
 #   include __DIR__ . '/settings.local.php';
 # }
+$settings['install_profile'] = 'standard';
+$config_directories['sync'] = 'sites/default/files/config/sync';
+
 $databases['default']['default'] = array (
   'database' => 'default',
   'username' => 'admin',
@@ -762,5 +765,3 @@ $databases['default']['default'] = array (
   'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
   'driver' => 'mysql',
 );
-$settings['install_profile'] = 'standard';
-$config_directories['sync'] = 'sites/default/files/config_QOXEMbhWlTQA6GjbNHA8wctxk1BujPNWc6gzmjqDBb3KxLnAuJYu09HkTJbt-WSKKSROQLe6Vg/sync';
