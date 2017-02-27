@@ -285,7 +285,7 @@ $config_directories = array();
  *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt');
  * @endcode
  */
-$settings['hash_salt'] = 'v9xyY-5oMODKmG4_FYhqYzt6rqYErW-4EZLEvT1lj9dSob3O-xdfI3rhiy3sKxZUpaakpee1YA';
+$settings['hash_salt'] = 'f7-721ChvH764mCLqRpSJjIYnLRRhYVO173RDNdyTSxLg-HNha7d9N5oIqUthNdnxjOQYQgI6A';
 
 /**
  * Deployment identifier.
@@ -752,8 +752,10 @@ $settings['file_scan_ignore_directories'] = [
 # if (file_exists(__DIR__ . '/settings.local.php')) {
 #   include __DIR__ . '/settings.local.php';
 # }
+$settings['install_profile'] = 'standard';
+$config_directories['sync'] = 'sites/dafa.myaccount/files/config/sync';
 $databases['default']['default'] = array (
-  'database' => 'wbc-myaccount',
+  'database' => 'account',
   'username' => 'admin',
   'password' => 'admin',
   'prefix' => '',
@@ -762,5 +764,3 @@ $databases['default']['default'] = array (
   'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
   'driver' => 'mysql',
 );
-$settings['install_profile'] = 'standard';
-$config_directories['sync'] = 'sites/dafa.myaccount/files/config_zwMPYSxeFIvVA7jSDhD42fBUPyS52BVeU-Blz-hMbdDrZ_fJGKUdL81h0EEHkNdtLNUG7AFNNw/sync';
