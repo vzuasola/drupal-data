@@ -53,8 +53,13 @@
  * @see \Drupal\Core\DrupalKernel::getSitePath()
  * @see https://www.drupal.org/documentation/install/multi-site
  */
-$sites['dafa.myaccount'] = 'dafa.myaccount';
-$sites['dafa.casino'] = 'dafa.casino';
 
-$sites['casino.dev'] = 'dafa.casino';
-$sites['account.dev'] = 'dafa.casino';
+// My Account Instances
+$sites['dafa.myaccount'] = 'dafa.myaccount';
+$sites['account.drupal.dev'] = 'dafa.myaccount';
+$sites['account.drupal.local'] = 'dafa.myaccount';
+
+// Casino Site Instances
+$sites['dafa.casino'] = 'dafa.casino';
+$sites['casino.drupal.dev'] = 'dafa.casino';
+$sites['casino.drupal.local'] = 'dafa.casino';
