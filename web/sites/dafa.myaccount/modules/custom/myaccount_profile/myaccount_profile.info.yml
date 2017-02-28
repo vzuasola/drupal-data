@@ -1,6 +1,6 @@
-name: Myaccount Profile configuration
+name: My Account Profile Configuration
 type: module
 description: 'This module handles My account profile configuration and API.'
-package: Custom
+package: My Account
 
 core: '8.x'

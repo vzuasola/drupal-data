@@ -7,7 +7,7 @@ myaccount_profile.admin_config_settings:
     _permission: 'administer my_account config'
 
 myaccount_profile.api:
-  path: 'api/myprofileview.json'
+  path: 'api/configuration/my_profile'
   defaults:
     _controller: '\Drupal\myaccount_profile\Controller\MyAccountProfileConfigController::api'
   requirements:
