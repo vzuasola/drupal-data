@@ -55,11 +55,9 @@
  */
 
 // My Account Instances
-$sites['dafa.myaccount'] = 'dafa.myaccount';
-$sites['account.drupal.dev'] = 'dafa.myaccount';
-$sites['account.drupal.local'] = 'dafa.myaccount';
+$sites['account.drupal.dev'] = 'myaccount';
+$sites['account.drupal.local'] = 'myaccount';
 
 // Casino Site Instances
-$sites['dafa.casino'] = 'dafa.casino';
-$sites['casino.drupal.dev'] = 'dafa.casino';
-$sites['casino.drupal.local'] = 'dafa.casino';
+$sites['casino.drupal.dev'] = 'casino';
+$sites['casino.drupal.local'] = 'casino';
