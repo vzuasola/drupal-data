@@ -1,5 +1,5 @@
 my_account.api:
-  path: 'api/my_account/configuration'
+  path: 'api/configuration/my_account_change_password'
   defaults:
     _controller: '\Drupal\my_account\Controller\MyAccountConfigController::api'
   requirements:
