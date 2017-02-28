@@ -285,7 +285,7 @@ $config_directories = array();
  *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt');
  * @endcode
  */
-$settings['hash_salt'] = '';
+$settings['hash_salt'] = 'lm2BRB7qpE54zL3KTsivxig6WvWEmzqpnD8sBN4N9_Lk78WFGV_RuJlV0xlmEMeWLQaWUy3f7w';
 
 /**
  * Deployment identifier.
@@ -752,3 +752,15 @@ $settings['file_scan_ignore_directories'] = [
 # if (file_exists(__DIR__ . '/settings.local.php')) {
 #   include __DIR__ . '/settings.local.php';
 # }
+$databases['default']['default'] = array (
+  'database' => 'wbc-webcomposer',
+  'username' => 'admin',
+  'password' => 'admin',
+  'prefix' => '',
+  'host' => 'localhost',
+  'port' => '3306',
+  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
+  'driver' => 'mysql',
+);
+$settings['install_profile'] = 'standard';
+$config_directories['sync'] = 'sites/default/files/config_SMBgqXNqOZtGmRIkeWdnwonLmUFCIPEGsTwCytTTiuWjTltO5wrDLrNdyN976m-YDH4ANm5w7A/sync';
