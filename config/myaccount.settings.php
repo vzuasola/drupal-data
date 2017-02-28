@@ -285,7 +285,7 @@ $config_directories = array();
  *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt');
  * @endcode
  */
-$settings['hash_salt'] = '';
+$settings['hash_salt'] = 'f7-721ChvH764mCLqRpSJjIYnLRRhYVO173RDNdyTSxLg-HNha7d9N5oIqUthNdnxjOQYQgI6A';
 
 /**
  * Deployment identifier.
@@ -752,3 +752,15 @@ $settings['file_scan_ignore_directories'] = [
 # if (file_exists(__DIR__ . '/settings.local.php')) {
 #   include __DIR__ . '/settings.local.php';
 # }
+$settings['install_profile'] = 'standard';
+$config_directories['sync'] = 'sites/dafa.myaccount/files/config/sync';
+$databases['default']['default'] = array (
+  'database' => 'account',
+  'username' => 'admin',
+  'password' => 'admin',
+  'prefix' => '',
+  'host' => 'localhost',
+  'port' => '3306',
+  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
+  'driver' => 'mysql',
+);
