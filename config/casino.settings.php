@@ -753,7 +753,7 @@ $settings['file_scan_ignore_directories'] = [
 #   include __DIR__ . '/settings.local.php';
 # }
 $settings['install_profile'] = 'standard';
-$config_directories['sync'] = 'sites/dafa.casino/files/config/sync';
+$config_directories['sync'] = 'sites/casino/files/config/sync';
 
 $databases['default']['default'] = array (
   'database' => 'casino',
