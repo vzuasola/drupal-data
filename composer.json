@@ -39,7 +39,8 @@
     "prefer-stable": true,
     "autoload": {
         "classmap": [
-            "scripts/composer/ScriptHandler.php"
+            "scripts/composer/ScriptHandler.php",
+            "scripts/composer/SettingsHandler.php"
         ]
     },
     "scripts": {
@@ -55,6 +56,9 @@
         ],
         "post-update-cmd": [
             "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+        ],
+        "sync-settings": [
+            "DrupalProject\\composer\\SettingsHandler::syncSettings"
         ]
     },
     "extra": {
