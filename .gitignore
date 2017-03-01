@@ -15,5 +15,3 @@ console/log
 
 # Ignore settings files
 web/sites/*/settings.php
-
-

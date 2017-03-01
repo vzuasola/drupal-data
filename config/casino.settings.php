@@ -285,7 +285,7 @@ $config_directories = array();
  *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt');
  * @endcode
  */
-$settings['hash_salt'] = 'J9kEzyLFK-ZgmWHgJkJogJQy6Vi3_MV6-M0Y8QunthBXNaAl0QKyEYmVQriPoZ0FjxND5UQ3sw';
+$settings['hash_salt'] = 'VevkgRWTUUUalLX8fq3x9ePe6LPaSIRIohdTQ3CWZg2uJbKfj51hLbxQvQLr6LMWJNpNrp1n1A';
 
 /**
  * Deployment identifier.
@@ -752,8 +752,11 @@ $settings['file_scan_ignore_directories'] = [
 # if (file_exists(__DIR__ . '/settings.local.php')) {
 #   include __DIR__ . '/settings.local.php';
 # }
+$settings['install_profile'] = 'standard';
+$config_directories['sync'] = 'sites/dafa.casino/files/config/sync';
+
 $databases['default']['default'] = array (
-  'database' => 'wbc-casino',
+  'database' => 'casino',
   'username' => 'admin',
   'password' => 'admin',
   'prefix' => '',
@@ -762,5 +765,3 @@ $databases['default']['default'] = array (
   'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
   'driver' => 'mysql',
 );
-$settings['install_profile'] = 'standard';
-$config_directories['sync'] = 'sites/casino/files/config_-bCj0idci9bZZQ-RcGLB6ewJMddpIXEt1y55kO6_NFT5e3gC2oNba7d8BdR6EfrDk1n86uGL3A/sync';
