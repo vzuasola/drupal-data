@@ -45,7 +45,11 @@ class SettingsHandler
           $product = $directory->getFileName();
 
           if ( $fs->exists("$configs/$product.settings.php")) {
-            $fs->copy("$configs/$product.settings.php", "$directory/settings.php", true);
+            try {
+              $fs->symlink("$configs/$product.settings.php", "$directory/settings.php", true);
+            } catch (\Exception $e) {
+              $fs->copy("$configs/$product.settings.php", "$directory/settings.php", true);
+            }
             $fs->chmod("$directory/settings.php", 0666);
           }
         }
