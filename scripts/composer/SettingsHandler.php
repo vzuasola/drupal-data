@@ -44,7 +44,7 @@ class SettingsHandler
         foreach ($finder as $directory) {
           $product = $directory->getFileName();
 
-          if ( $fs->exists("$configs/$product.settings.php")) {
+          if ($fs->exists("$configs/$product.settings.php")) {
             try {
               $fs->symlink("$configs/$product.settings.php", "$directory/settings.php", true);
             } catch (\Exception $e) {
