@@ -12,6 +12,9 @@ use Composer\Semver\Comparator;
 use Symfony\Component\Filesystem\Filesystem;
 use Symfony\Component\Finder\Finder;
 
+/**
+ * Handles settings synchronization and automation
+ */
 class SettingsHandler
 {
     protected static function getConfigRoot($projectRoot)
