@@ -27,6 +27,12 @@ class SettingsHandler
         return $projectRoot . '/web/sites';
     }
 
+    protected static function getDrushAlias($projectRoot)
+    {
+        return $projectRoot . '/drush';
+    }
+
+
     /**
      * Syncs the files in the config directory to their respective sites 
      * directory
@@ -54,4 +60,26 @@ class SettingsHandler
           }
         }
     }
-}
+    
+   /**
+     * Syncs the files in the config directory to their respective sites
+     * directory
+     */
+    public static function drushSettings(Event $event)
+    {
+        $fs = new Filesystem();
+
+        $configs = static::getDrushAlias(getcwd());
+
+         if (!$fs->exists("/home/vagrant/.drush/webcomposer.aliases.drushrc.php")) {
+           try {
+             $fs->symlink("$configs/webcomposer.aliases.drushrc.php", "/home/vagrant/.drush/webcomposer.aliases.drushrc.php", true);
+
+           } catch (\Exception $e) {
+             $fs->copy("$configs/webcomposer.aliases.drushrc.php", "/home/vagrant/.drush/webcomposer.aliases.drushrc.php", true);    
+           }
+         }
+    }   
+
+
+}    
