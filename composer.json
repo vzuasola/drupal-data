@@ -54,15 +54,22 @@
         ],
         "post-install-cmd": [
             "DrupalProject\\composer\\ScriptHandler::createRequiredFiles",
-            "DrupalProject\\composer\\SettingsHandler::syncSettings"
+            "DrupalProject\\composer\\SettingsHandler::syncSettings",
+            "DrupalProject\\composer\\SettingsHandler::drushSettings"
+
         ],
         "post-update-cmd": [
             "DrupalProject\\composer\\ScriptHandler::createRequiredFiles",
             "DrupalProject\\composer\\SettingsHandler::syncSettings"
+
         ],
         "sync-settings": [
             "DrupalProject\\composer\\SettingsHandler::syncSettings"
+        ],
+        "drush-settings": [
+            "DrupalProject\\composer\\SettingsHandler::drushSettings"
         ]
+
     },
     "extra": {
         "installer-paths": {
