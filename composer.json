@@ -75,6 +75,11 @@
         "installer-paths": {
             "web/core": ["type:drupal-core"],
             "drush/contrib/{$name}": ["type:drupal-drush"]
+        },
+        "patches": {
+            "drupal/core": {
+                "taxonomy_views": "https://www.drupal.org/files/issues/2048733-32.patch"
+            }
         }
     },
     "enable-patching": true,
