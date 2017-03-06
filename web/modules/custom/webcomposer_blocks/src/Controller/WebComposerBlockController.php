@@ -15,11 +15,11 @@ class WebComposerBlockController extends ControllerBase {
   /**
    *
    */
-  public function getUUIDbyID($id) {
+  public function getIDbyUUID($uuid) {
 
-    $ids = \Drupal::entityQuery('block_content')->condition('uuid', $id)->execute();
+    $ids = \Drupal::entityQuery('block_content')->condition('uuid', $uuid)->execute();
     if (null != $ids) {
-        return new JsonResponse([$id => array_pop($ids)]);
+        return new JsonResponse([$uuid => array_pop($ids)]);
     }
     return new JsonResponse([]);
   }
