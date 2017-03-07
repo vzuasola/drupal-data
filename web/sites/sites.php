@@ -54,6 +54,10 @@
  * @see https://www.drupal.org/documentation/install/multi-site
  */
 
+// Webcomposer Demo Instances
+$sites['wc.drupal.dev'] = 'webcomposer';
+$sites['wc.drupal.local'] = 'webcomposer';
+
 // My Account Instances
 $sites['account.drupal.dev'] = 'myaccount';
 $sites['account.drupal.local'] = 'myaccount';
