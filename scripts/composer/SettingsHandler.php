@@ -50,14 +50,14 @@ class SettingsHandler
         foreach ($finder as $directory) {
           $product = $directory->getFileName();
 
-          if ($fs->exists("$configs/$product.settings.php")) {
-            try {
-              $fs->symlink("$configs/$product.settings.php", "$directory/settings.php", true);
-            } catch (\Exception $e) {
+         // if ($fs->exists("$configs/$product.settings.php")) {
+           // try {
+           //   $fs->symlink("$configs/$product.settings.php", "$directory/settings.php", true);
+           // } catch (\Exception $e) {
               $fs->copy("$configs/$product.settings.php", "$directory/settings.php", true);
-            }
+          //  }
             $fs->chmod("$directory/settings.php", 0666);
-          }
+        //  }
         }
     }
     
@@ -72,12 +72,12 @@ class SettingsHandler
         $configs = static::getDrushAlias(getcwd());
 
          if (!$fs->exists("/home/vagrant/.drush/webcomposer.aliases.drushrc.php")) {
-           try {
-             $fs->symlink("$configs/webcomposer.aliases.drushrc.php", "/home/vagrant/.drush/webcomposer.aliases.drushrc.php", true);
+         #  try {
+         #    $fs->symlink("$configs/webcomposer.aliases.drushrc.php", "/home/vagrant/.drush/webcomposer.aliases.drushrc.php", true);
 
-           } catch (\Exception $e) {
+         #  } catch (\Exception $e) {
              $fs->copy("$configs/webcomposer.aliases.drushrc.php", "/home/vagrant/.drush/webcomposer.aliases.drushrc.php", true);    
-           }
+         #  }
          }
     }   
 
