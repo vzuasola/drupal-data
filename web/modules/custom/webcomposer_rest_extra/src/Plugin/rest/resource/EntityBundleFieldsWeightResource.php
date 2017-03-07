@@ -93,7 +93,7 @@ class EntityBundleFieldsWeightResource extends ResourceBase
     if ($entity && $bundle) {
 
       if (!empty($bundle)) {
-        $weights = entity_get_form_display('contact_message', 'feedback', 'default');
+        $weights = entity_get_form_display($entity, $bundle, 'default');
         return new ResourceResponse($weights);
       }
 
