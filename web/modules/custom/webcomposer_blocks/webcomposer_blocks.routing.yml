@@ -3,4 +3,5 @@ webcomposer_blocks.api_uuid_id:
   defaults:
     _controller: '\Drupal\webcomposer_blocks\Controller\WebComposerBlockController::getIDbyUUID'
   requirements:
-    _access: 'TRUE'
+    _permission: 'access webcomposer_blocks api'
+
