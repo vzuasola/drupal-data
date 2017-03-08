@@ -19,3 +19,7 @@ permissions:
   - 'search content'
   - 'restful get rest_menu_item'
   - 'access my_account config'
+  - 'restful get Web Composer Token Resource Label'
+  - 'restful post Web Composer Token Resource Label'
+  - 'restful get webcomposer_token_rest'
+  - 'restful post webcomposer_token_rest'
