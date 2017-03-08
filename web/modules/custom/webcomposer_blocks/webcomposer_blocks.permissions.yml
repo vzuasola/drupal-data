@@ -1,0 +1,4 @@
+#Define the administer permission for the robot config entity.
+'access webcomposer_blocks api':
+  title: 'Webcomposer Block API'
+  description: Access API Endpoint for all configurations related to Webcomposer Blocks
