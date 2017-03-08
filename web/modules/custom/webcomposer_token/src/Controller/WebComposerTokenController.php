@@ -34,20 +34,4 @@ class WebComposerTokenController extends ControllerBase {
 
     return new JsonResponse($allTokens);
   }
-
-  /**
-   *
-   */
-  public function replaceTokens(Request $request) {
-
-    $json = json_decode($request->getContent(), true);
-
-    if(!isset($json['text']) || 'application/json' != $request->headers->get('Content-type')) {
-      return new JsonResponse(['message' => 'Invalid Request/JSON'], 406);
-    }
-
-    $text = \Drupal::service('token')->replace($json['text']);
-
-    return new JsonResponse(['text' => $text]);
-  }
 }
