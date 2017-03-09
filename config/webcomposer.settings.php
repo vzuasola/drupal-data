@@ -754,3 +754,13 @@ $settings['file_scan_ignore_directories'] = [
 # }
 $settings['install_profile'] = 'standard';
 $config_directories['sync'] = 'sites/webcomposer/files/config/sync';
+$databases['default']['default'] = array (
+  'database' => 'webcomposer',
+  'username' => 'admin',
+  'password' => 'admin',
+  'prefix' => '',
+  'host' => 'localhost',
+  'port' => '3306',
+  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
+  'driver' => 'mysql',
+);
