@@ -1,0 +1,170 @@
+my_account_form_profile.change_password:
+  type: config_object
+  label: 'My Account Change Password Configuration'
+  mapping:
+    current_password_label:
+      type: label
+      label: 'Field Label for Current Password'
+    current_password_help:
+      type: text
+      label: 'Current password help text'
+    current_password_required:
+      type: label
+      label: 'Current password required label'
+    field_current_password_default:
+      type: label
+      label: 'Field Label for default Current Password'
+    current_password_error:
+      type: text
+      label: 'Error messages fo current password'
+    new_password_label:
+      type: label
+      label: 'Field Label for New Password'
+    new_password_help:
+      type: text
+      label: 'New password help text'
+    new_password_required:
+      type: label
+      label: 'New password required label'
+    field_new_password_default:
+      type: label
+      label: 'Field Label for default New Password'
+    new_password_error:
+      type: text
+      label: 'Error messages fo new password'
+    confirm_password_label:
+      type: label
+      label: 'Field Label for Confirm Password'
+    confirm_password_help:
+      type: text
+      label: 'Confirm password help text'
+    confirm_password_required:
+      type: label
+      label: 'Confirm password required label'
+    field_confirm_password_default:
+      type: label
+      label: 'Field Label for default Confirm Password'
+    confirm_password_error:
+      type: text
+      label: 'Error messages fo confirm password'
+  langcode: 'en'
+
+my_account_form_profile.profile:
+  type: config_object
+  label: 'My Account Profile Configuration'
+  mapping:
+    user_name_field_label:
+      type: label
+      label: 'Field Label for Username'
+    user_name_field_required:
+      type: label
+      label: 'Username field required'
+    user_name_field_weight:
+      type: label
+      label: 'Username field wight'
+    currency_field_label:
+      type: label
+      label: 'Field Label for currency'
+    currency_field_required:
+      type: label
+      label: 'Currency field required label'
+    currency_field_error:
+      type: text
+      label: 'Error message for Currency'
+    currency_field_weight:
+      type: label
+      label: 'Currency Field wight'
+    first_name_field_label:
+      type: label
+      label: 'Field Label for First name'
+    first_name_field_required:
+      type: label
+      label: 'First name field required label'
+    first_name_field_error:
+      type: text
+      label: 'Error message for First name'
+    first_name_field_weight:
+      type: label
+      label: 'First name Field wight'
+    last_name_field_label:
+      type: label
+      label: 'Field Label for Last name'
+    last_name_field_required:
+      type: label
+      label: 'Last name field required label'
+    last_name_field_error:
+      type: text
+      label: 'Error message for Last name'
+    last_name_field_weight:
+      type: label
+      label: 'Last name Field wight'
+    dob_field_label:
+      type: label
+      label: 'Field Label for DOB'
+    dob_field_required:
+      type: label
+      label: 'DOB field required label'
+    dob_field_error:
+      type: text
+      label: 'Error message for DOB'
+    dob_field_weight:
+      type: label
+      label: 'DOB Field wight'
+    country_field_label:
+      type: label
+      label: 'Field Label for Country'
+    country_field_required:
+      type: label
+      label: 'Country field required label'
+    country_field_error:
+      type: text
+      label: 'Error message for country'
+    country_field_weight:
+      type: label
+      label: 'Country Field wight'
+    email_field_label:
+      type: label
+      label: 'Field Label for Email'
+    email_field_required:
+      type: label
+      label: 'Email field required label'
+    email_field_error:
+      type: text
+      label: 'Error message for email'
+    email_field_weight:
+      type: label
+      label: 'Email Field wight'
+    mobile_number_field_label:
+      type: label
+      label: 'Field Label for Mobile number'
+    mobile_number_field_required:
+      type: label
+      label: 'Mobile number field required label'
+    mobile_number_field_error:
+      type: text
+      label: 'Error message for Mobile number'
+    mobile_number_field_weight:
+      type: label
+      label: 'Mobile Field wight'
+    language_field_label:
+      type: label
+      label: 'Field label for Language'
+    language_field_help_text:
+      type: label
+      label: 'Field Label for Language'
+    language_field_required:
+      type: label
+      label: 'Language field required label'
+    language_field_error:
+      type: text
+      label: 'Error message for Language'
+    language_field_weight:
+      type: label
+      label: 'Language Field wight'
+    communication_details_field_label:
+      type: label
+      label: 'Communication detail fieldset label'
+    account_details_field_label:
+      type: label
+      label: 'Account communication fieldset label'
+  langcode: 'en'

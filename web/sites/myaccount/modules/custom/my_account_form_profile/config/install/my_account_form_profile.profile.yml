@@ -1,0 +1,57 @@
+#user name
+user_name_field_label: ''
+user_name_field_required: ''
+user_name_field_weight: ''
+
+#curreny
+currency_field_label: ''
+currency_field_required: ''
+currency_field_error: ''
+currency_field_weight: ''
+
+#first name
+first_name_field_label: ''
+first_name_field_required: ''
+first_name_field_error: ''
+first_name_field_weight: ''
+
+#last name
+last_name_field_label: ''
+last_name_field_required: ''
+last_name_field_error: ''
+last_name_field_weight: ''
+
+#DOB
+dob_field_label: ''
+dob_name_field_required: ''
+dob_name_field_error: ''
+dob_name_field_weight: ''
+
+#country
+country_field_label: ''
+country_field_required: ''
+country_field_error: ''
+country_field_weight: ''
+
+#email
+email_field_label: ''
+email_field_required: ''
+email_field_error: ''
+email_field_weight: ''
+
+#header field
+communication_details_field_label: ''
+account_details_field_label: ''
+
+#mobile
+mobile_number_field_label: ''
+mobile_number_field_required: ''
+mobile_number_field_error: ''
+mobile_number_field_weight: ''
+
+#language
+language_field_label: ''
+language_field_help_text: ''
+language_field_required: ''
+language_field_error: ''
+language_field_weight: ''
