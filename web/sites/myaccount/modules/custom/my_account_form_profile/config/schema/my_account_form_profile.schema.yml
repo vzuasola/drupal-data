@@ -61,7 +61,7 @@ my_account_form_profile.profile:
       label: 'Username field required'
     user_name_field_weight:
       type: label
-      label: 'Username field wight'
+      label: 'Username field weight'
     currency_field_label:
       type: label
       label: 'Field Label for currency'
@@ -73,7 +73,7 @@ my_account_form_profile.profile:
       label: 'Error message for Currency'
     currency_field_weight:
       type: label
-      label: 'Currency Field wight'
+      label: 'Currency Field weight'
     first_name_field_label:
       type: label
       label: 'Field Label for First name'
@@ -85,7 +85,7 @@ my_account_form_profile.profile:
       label: 'Error message for First name'
     first_name_field_weight:
       type: label
-      label: 'First name Field wight'
+      label: 'First name Field weight'
     last_name_field_label:
       type: label
       label: 'Field Label for Last name'
@@ -97,7 +97,7 @@ my_account_form_profile.profile:
       label: 'Error message for Last name'
     last_name_field_weight:
       type: label
-      label: 'Last name Field wight'
+      label: 'Last name Field weight'
     dob_field_label:
       type: label
       label: 'Field Label for DOB'
@@ -109,7 +109,7 @@ my_account_form_profile.profile:
       label: 'Error message for DOB'
     dob_field_weight:
       type: label
-      label: 'DOB Field wight'
+      label: 'DOB Field weight'
     country_field_label:
       type: label
       label: 'Field Label for Country'
@@ -121,7 +121,7 @@ my_account_form_profile.profile:
       label: 'Error message for country'
     country_field_weight:
       type: label
-      label: 'Country Field wight'
+      label: 'Country Field weight'
     email_field_label:
       type: label
       label: 'Field Label for Email'
@@ -133,7 +133,7 @@ my_account_form_profile.profile:
       label: 'Error message for email'
     email_field_weight:
       type: label
-      label: 'Email Field wight'
+      label: 'Email Field weight'
     mobile_number_field_label:
       type: label
       label: 'Field Label for Mobile number'
@@ -145,7 +145,7 @@ my_account_form_profile.profile:
       label: 'Error message for Mobile number'
     mobile_number_field_weight:
       type: label
-      label: 'Mobile Field wight'
+      label: 'Mobile Field weight'
     language_field_label:
       type: label
       label: 'Field label for Language'
@@ -160,7 +160,7 @@ my_account_form_profile.profile:
       label: 'Error message for Language'
     language_field_weight:
       type: label
-      label: 'Language Field wight'
+      label: 'Language Field weight'
     communication_details_field_label:
       type: label
       label: 'Communication detail fieldset label'
