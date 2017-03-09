@@ -10,6 +10,7 @@ module:
   config: 0
   config_translation: 0
   contact: 0
+  contact_storage: 0
   contextual: 0
   datetime: 0
   dblog: 0
@@ -53,6 +54,7 @@ module:
   user: 0
   views_ui: 0
   webcomposer_blocks: 0
+  webcomposer_rest_extra: 0
   webcomposer_token: 0
   menu_link_content: 1
   content_translation: 10
