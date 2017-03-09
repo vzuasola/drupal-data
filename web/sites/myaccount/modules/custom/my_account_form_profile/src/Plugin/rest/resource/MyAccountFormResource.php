@@ -6,11 +6,11 @@ use Drupal\rest\Plugin\ResourceBase;
 use Drupal\rest\ResourceResponse;
 
 /**
- * Provides a My Account Change Password Resources
+ * Provides a My Account Rest Resources
  *
  * @RestResource(
- *   id = "change_password_resource",
- *   label = @Translation("My Account Change Password Resource"),
+ *   id = "my_account_profile_form_resource",
+ *   label = @Translation("My Account Rest Resource"),
  *   uri_paths = {
  *     "canonical" = "/api/configuration/{id}"
  *   }
@@ -25,7 +25,6 @@ class MyAccountFormResource extends ResourceBase
      */
     public function get($id)
     {
-
         switch ($id) {
             case 'my_account_change_password':
                 $config = \Drupal::config('my_account_form_profile.change_password');
