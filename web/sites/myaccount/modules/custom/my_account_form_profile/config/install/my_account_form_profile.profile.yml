@@ -23,9 +23,9 @@ last_name_field_weight: ''
 
 #DOB
 dob_field_label: ''
-dob_name_field_required: ''
-dob_name_field_error: ''
-dob_name_field_weight: ''
+dob_field_required: ''
+dob_field_error: ''
+dob_field_weight: ''
 
 #country
 country_field_label: ''

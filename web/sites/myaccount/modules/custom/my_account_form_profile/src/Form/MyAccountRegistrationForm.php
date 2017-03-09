@@ -72,14 +72,14 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#default_value' => $myAccountConfig->get('user_name_field_weight')
         ];
 
-        $form['field_configuration']['field_labels_courency'] = [
+        $form['field_configuration']['field_labels_currency'] = [
             '#type' => 'details',
             '#title' => 'Currency',
             '#open' => False,
             '#tree' => TRUE,
         ];
 
-        $form['field_configuration']['field_labels_courency']['currency_field_label'] = [
+        $form['field_configuration']['field_labels_currency']['currency_field_label'] = [
             '#type' => 'textfield',
             '#title' => t('Label'),
             '#size' => 25,
@@ -88,20 +88,20 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#default_value' => $myAccountConfig->get('currency_field_required')
         ];
 
-        $form['field_configuration']['field_labels_courency']['currency_field_required'] = [
+        $form['field_configuration']['field_labels_currency']['currency_field_required'] = [
             '#type' => 'checkbox',
             '#title' => $this->t('Required field'),
             '#default_value' => $myAccountConfig->get('currency_field_required')
         ];
 
-        $form['field_configuration']['field_labels_courency']['currency_field_error'] = [
+        $form['field_configuration']['field_labels_currency']['currency_field_error'] = [
             '#type' => 'textfield',
             '#title' => $this->t('Error message for currency'),
             '#size' => 100,
             '#default_value' => $myAccountConfig->get('currency_field_error')
         ];
 
-        $form['field_configuration']['field_labels_courency']['currency_field_weight'] = [
+        $form['field_configuration']['field_labels_currency']['currency_field_weight'] = [
             '#type' => 'textfield',
             '#title' => $this->t('Field Weight'),
             '#size' => 5,
@@ -151,7 +151,7 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#tree' => TRUE,
         ];
 
-        $form['field_configuration']['field_labels_last_name']['first_last_field_label'] = [
+        $form['field_configuration']['field_labels_last_name']['last_name_field_label'] = [
             '#type' => 'textfield',
             '#title' => t('Label'),
             '#size' => 25,
@@ -439,6 +439,39 @@ class MyAccountRegistrationForm extends ConfigFormBase
             ->set('user_name_field_label', $configuration['field_labels_user_name']['user_name_field_label'])
             ->set('user_name_field_required', $configuration['field_labels_user_name']['user_name_field_required'])
             ->set('user_name_field_weight', $configuration['field_labels_user_name']['user_name_field_weight'])
+            ->set('currency_field_label', $configuration['field_labels_currency']['currency_field_label'])
+            ->set('currency_field_required', $configuration['field_labels_currency']['currency_field_required'])
+            ->set('currency_field_error', $configuration['field_labels_currency']['currency_field_error'])
+            ->set('currency_field_weight', $configuration['field_labels_currency']['currency_field_weight'])
+            ->set('first_name_field_label', $configuration['field_labels_first_name']['first_name_field_label'])
+            ->set('first_name_field_required', $configuration['field_labels_first_name']['first_name_field_required'])
+            ->set('first_name_field_error', $configuration['field_labels_first_name']['first_name_field_error'])
+            ->set('first_name_field_weight', $configuration['field_labels_first_name']['first_name_field_weight'])
+            ->set('last_name_field_label', $configuration['field_labels_last_name']['last_name_field_label'])
+            ->set('last_name_field_required', $configuration['field_labels_last_name']['last_name_field_required'])
+            ->set('last_name_field_error', $configuration['field_labels_last_name']['last_name_field_error'])
+            ->set('last_name_field_weight', $configuration['field_labels_last_name']['last_name_field_weight'])
+            ->set('dob_field_label', $configuration['field_labels_dob']['dob_field_label'])
+            ->set('dob_field_required', $configuration['field_labels_dob']['dob_field_required'])
+            ->set('dob_field_error', $configuration['field_labels_dob']['dob_field_error'])
+            ->set('dob_field_weight', $configuration['field_labels_dob']['dob_field_weight'])
+            ->set('country_field_label', $configuration['field_labels_country']['country_field_label'])
+            ->set('country_field_required', $configuration['field_labels_country']['country_field_required'])
+            ->set('country_field_error', $configuration['field_labels_country']['country_field_error'])
+            ->set('country_field_weight', $configuration['field_labels_country']['country_field_weight'])
+            ->set('email_field_label', $configuration['field_labels_email']['email_field_label'])
+            ->set('email_field_required', $configuration['field_labels_email']['email_field_required'])
+            ->set('email_field_error', $configuration['field_labels_email']['email_field_error'])
+            ->set('email_field_weight', $configuration['field_labels_email']['email_field_weight'])
+            ->set('mobile_number_field_label', $configuration['field_labels_mobile_number']['mobile_number_field_label'])
+            ->set('mobile_number_field_required', $configuration['field_labels_mobile_number']['mobile_number_field_required'])
+            ->set('mobile_number_field_error', $configuration['field_labels_mobile_number']['mobile_number_field_error'])
+            ->set('mobile_number_field_weight', $configuration['field_labels_mobile_number']['mobile_number_field_weight'])
+            ->set('language_field_label', $configuration['field_labels_language']['language_field_label'])
+            ->set('language_field_required', $configuration['field_labels_language']['language_field_required'])
+            ->set('language_field_error', $configuration['field_labels_language']['language_field_error'])
+            ->set('language_field_weight', $configuration['field_labels_language']['language_field_weight'])
+            ->set('language_field_help_text', $configuration['field_labels_language']['language_field_help_text'])
             ->save();
     }
 
