@@ -22,8 +22,8 @@ use Psr\Log\LoggerInterface;
  * Provides a resource to get view modes by entity and bundle.
  *
  * @RestResource(
- *   id = "Entity Bundle Resource Label",
- *   label = @Translation("entity_bundle_fields_resource"),
+ *   id = "entity_bundle_fields_resource",
+ *   label = @Translation("Entity Bundle Resource Label"),
  *   uri_paths = {
  *     "canonical" = "/entity/{entity}/{bundle}/fields"
  *   }
