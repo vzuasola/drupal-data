@@ -22,8 +22,8 @@ use Psr\Log\LoggerInterface;
  * Provides a resource to get view modes by entity and bundle.
  *
  * @RestResource(
- *   id = "Entity Bundle Weight Resource",
- *   label = @Translation("entity_bundle_weight_resource"),
+ *   id = "entity_bundle_weight_resource",
+ *   label = @Translation("Entity Bundle Weight Resource"),
  *   uri_paths = {
  *     "canonical" = "/entity/{entity}/{bundle}/fields/weights"
  *   }
