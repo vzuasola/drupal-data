@@ -1,0 +1,7 @@
+my_account.menu.icon:
+  version: VERSION
+  js:
+      js/my_account_form_profile.js: {}
+  css:
+    theme:
+      css/my_account_form_profile.css: {}
