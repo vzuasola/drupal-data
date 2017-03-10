@@ -1,15 +1,15 @@
-uuid: 163966c4-0e44-41d0-b829-5c16b49002b6
+uuid: dcfda87f-8cd4-4112-9309-374d2da214bb
 langcode: en
 status: true
 dependencies:
   module:
     - basic_auth
-    - block_content
     - hal
     - serialization
     - user
-id: entity.block_content
-plugin_id: 'entity:block_content'
+    - webcomposer_blocks
+id: custom_block_resource
+plugin_id: custom_block_resource
 granularity: method
 configuration:
   GET:
