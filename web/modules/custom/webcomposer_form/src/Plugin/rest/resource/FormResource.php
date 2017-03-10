@@ -18,7 +18,7 @@ use Drupal\field\Entity\FieldConfig;
  *   id = "form_resource",
  *   label = @Translation("Form resource"),
  *   uri_paths = {
- *     "canonical" = "/api/contact_form/{id}"
+ *     "canonical" = "/api/form/{id}"
  *   }
  * )
  */
