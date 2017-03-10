@@ -114,8 +114,6 @@ class FormResource extends ResourceBase {
   {
     $definition = array();
 
-    kint_require();
-
     $formDisplay = entity_get_form_display('contact_message', $id, 'default');
     $components = $formDisplay->getComponents();
 
