@@ -1,57 +1,40 @@
-#user name
-user_name_field_label: 'Username'
+user_name_field_label: Username
 user_name_field_required: '1'
 user_name_field_weight: '0'
-
-#curreny
-currency_field_label: 'PHP'
+currency_field_label: PHP
 currency_field_required: '1'
 currency_field_error: 'Error Currency Field Error message'
 currency_field_weight: '1'
-
-#first name
 first_name_field_label: 'First name'
 first_name_field_required: '1'
 first_name_field_error: 'Error message for first name field'
 first_name_field_weight: '2'
-
-#last name
 last_name_field_label: 'Last name'
 last_name_field_required: '1'
 last_name_field_error: 'Last name field error message'
 last_name_field_weight: '3'
-
-#DOB
-dob_field_label: 'DOB'
+dob_field_label: DOB
 dob_field_required: '1'
 dob_field_error: 'Error message for dob'
 dob_field_weight: '4'
-
-#country
-country_field_label: 'Country'
+country_field_label: Country
 country_field_required: '1'
 country_field_error: 'Error message for country'
 country_field_weight: '5'
-
-#email
-email_field_label: 'Email'
+email_field_label: Email
 email_field_required: '1'
 email_field_error: 'Error message for Email'
 email_field_weight: '6'
-
-#header field
 communication_details_field_label: 'Communication Details'
 account_details_field_label: 'Account Details'
-
-#mobile
 mobile_number_field_label: 'Mobile Number'
 mobile_number_field_required: '1'
 mobile_number_field_error: 'Error message for Mobile'
 mobile_number_field_weight: '7'
-
-#language
-language_field_label: 'Language'
+language_field_label: Language
 language_field_help_text: 'Help text for Language'
 language_field_required: '1'
 language_field_error: 'Error field for Language'
 language_field_weight: '8'
+_core:
+  default_config_hash: LHj622cq2SsGHa1LJ-07mxDsYMotwjMnRiEI6UJ_7AM
