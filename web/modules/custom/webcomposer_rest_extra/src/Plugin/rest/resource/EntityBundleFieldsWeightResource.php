@@ -94,6 +94,7 @@ class EntityBundleFieldsWeightResource extends ResourceBase
 
       if (!empty($bundle)) {
         $weights = entity_get_form_display($entity, $bundle, 'default');
+        
         $build = array(
           '#cache' => array(
             'max-age' => 0,
