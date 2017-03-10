@@ -22,3 +22,4 @@ permissions:
   - 'restful post webcomposer_token_rest'
   - 'restful get entity_bundle_fields_resource'
   - 'restful get entity_bundle_weight_resource'
+  - 'restful get form_resource'
