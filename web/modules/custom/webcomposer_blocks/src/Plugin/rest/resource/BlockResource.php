@@ -2,6 +2,7 @@
 
 namespace Drupal\webcomposer_blocks\Plugin\rest\resource;
 
+use Drupal\block\Entity\Block;
 use Drupal\Core\Session\AccountProxyInterface;
 use Drupal\rest\Plugin\ResourceBase;
 use Drupal\rest\ResourceResponse;
@@ -81,19 +82,46 @@ class BlockResource extends ResourceBase {
    *   Throws exception expected.
    */
   public function get($id) {
-    kint_require();
     // You must to implement the logic of your REST Resource here.
     // Use current user after pass authentication to validate access.
     if (!$this->currentUser->hasPermission('access content')) {
       throw new AccessDeniedHttpException();
     }
 
-    $ids = \Drupal::entityQuery('block_content')->condition('uuid', $id)->execute();
+    $block = $this->getBlockDefinition($id);
 
-    if (!$ids) {
+    if (!$block) {
       throw new NotFoundHttpException(t('Block with ID of @id was not found', array('@id' => $id)));
     }
 
-    return new ResourceResponse(array($id => array_pop($ids)));
+    $build = array(
+      '#cache' => array(
+        'max-age' => 0,
+      ),
+    );
+
+    return (new ResourceResponse($block))->addCacheableDependency($build);
+  }
+
+  /**
+   * Get block definition by machine name
+   *
+   * @param string $id
+   *   The block machine name
+   *
+   * @return object
+   */
+  private function getBlockDefinition($id)
+  {
+    $block = \Drupal::entityTypeManager()
+      ->getStorage('block')
+      ->load($id);
+
+    if ($block) {
+      $uuid = $block->getPlugin()->getDerivativeId();
+      $block_content = \Drupal::service('entity.repository')->loadEntityByUuid('block_content', $uuid);
+
+      return $block_content;
+    }
   }
 }
