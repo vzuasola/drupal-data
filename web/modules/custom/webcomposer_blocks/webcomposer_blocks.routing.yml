@@ -5,3 +5,4 @@ webcomposer_blocks.api_uuid_id:
   requirements:
     _permission: 'access webcomposer_blocks api'
 
+

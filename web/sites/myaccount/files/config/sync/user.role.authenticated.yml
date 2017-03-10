@@ -23,3 +23,6 @@ permissions:
   - 'restful post Web Composer Token Resource Label'
   - 'restful get webcomposer_token_rest'
   - 'restful post webcomposer_token_rest'
+  - 'restful get entity_bundle_fields_resource'
+  - 'restful get entity_bundle_weight_resource'
+  - 'restful get form_resource'
