@@ -31,7 +31,6 @@ use Psr\Log\LoggerInterface;
  */
 class EntityBundleFieldsResource extends ResourceBase
 {
-
   /**
    *  A curent user instance.
    *
@@ -99,13 +98,20 @@ class EntityBundleFieldsResource extends ResourceBase
 
       // Fetch all fields and key them by field name.
       $field_configs = FieldConfig::loadMultiple($ids);
+
+      $build = array(
+        '#cache' => array(
+          'max-age' => 0,
+        ),
+      );
+
       $fields = array();
       foreach ($field_configs as $field_instance) {
         $fields[$field_instance->getName()] = $field_instance;
       }
 
       if (!empty($fields)) {
-        return new ResourceResponse($fields);
+        return (new ResourceResponse($fields))->addCacheableDependency($build);
       }
 
       throw new NotFoundHttpException(t('Field for entity @entity and bundle @bundle were not found', array('@entity' => $entity, '@bundle' => $bundle)));
