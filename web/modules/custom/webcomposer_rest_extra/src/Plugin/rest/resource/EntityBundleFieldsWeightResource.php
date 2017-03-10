@@ -94,7 +94,14 @@ class EntityBundleFieldsWeightResource extends ResourceBase
 
       if (!empty($bundle)) {
         $weights = entity_get_form_display($entity, $bundle, 'default');
-        return new ResourceResponse($weights);
+        
+        $build = array(
+          '#cache' => array(
+            'max-age' => 0,
+          ),
+        );
+
+        return (new ResourceResponse($weights))->addCacheableDependency($build);
       }
 
       throw new NotFoundHttpException(t('Field for entity @entity and bundle @bundle were not found', array('@entity' => $entity, '@bundle' => $bundle)));

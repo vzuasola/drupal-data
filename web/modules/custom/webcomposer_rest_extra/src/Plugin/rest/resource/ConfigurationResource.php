@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Definition of Drupal\webcomposer_rest_extra\Plugin\rest\resource\EntityBundleViewModesResource.
+ * Contains Drupal\webcomposer_rest_extra\Plugin\rest\resource\entity_rest_extra.
  */
 
 namespace Drupal\webcomposer_rest_extra\Plugin\rest\resource;
@@ -10,49 +10,34 @@ namespace Drupal\webcomposer_rest_extra\Plugin\rest\resource;
 use Drupal\Core\Entity\EntityManagerInterface;
 use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Session\AccountProxyInterface;
+use Drupal\field\Entity\FieldConfig;
 use Drupal\rest\Plugin\ResourceBase;
 use Drupal\rest\ResourceResponse;
 use Symfony\Component\DependencyInjection\ContainerInterface;
+use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
-use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
 use Psr\Log\LoggerInterface;
 
 /**
  * Provides a resource to get view modes by entity and bundle.
  *
  * @RestResource(
- *   id = "bundle_view_modes",
- *   label = @Translation("View modes by bundle"),
+ *   id = "configuration_resource",
+ *   label = @Translation("Configuration Resource"),
  *   uri_paths = {
- *     "canonical" = "entity/{entity}/{bundle}/view_modes"
+ *     "canonical" = "/api/configs/{configuration}"
  *   }
  * )
  */
-class EntityBundleViewModesResource extends ResourceBase {
-
+class ConfigurationResource extends ResourceBase
+{
   /**
-   * A curent user instance.
+   *  A curent user instance.
    *
    * @var \Drupal\Core\Session\AccountProxyInterface
    */
-
   protected $currentUser;
-
-  /**
-   * A instance of entity manager.
-   *
-   * @var \Drupal\Core\Entity\EntityManagerInterface
-   */
-
-  protected $entityManager;
-
-  /**
-   * The configuration factory.
-   *
-   * @var \Drupal\Core\Config\ConfigFactoryInterface
-   */
-  protected $configFactory;
 
   /**
    * Constructs a Drupal\rest\Plugin\ResourceBase object.
@@ -70,16 +55,13 @@ class EntityBundleViewModesResource extends ResourceBase {
    */
   public function __construct(
     array $configuration,
-    $plugin_id, $plugin_definition,
+    $plugin_id,
+    $plugin_definition,
     array $serializer_formats,
     LoggerInterface $logger,
-    EntityManagerInterface $entity_manager,
-    ConfigFactoryInterface $config_factory,
     AccountProxyInterface $current_user) {
     parent::__construct($configuration, $plugin_id, $plugin_definition, $serializer_formats, $logger);
 
-    $this->entityManager = $entity_manager;
-    $this->configFactory = $config_factory;
     $this->currentUser = $current_user;
   }
 
@@ -93,8 +75,6 @@ class EntityBundleViewModesResource extends ResourceBase {
       $plugin_definition,
       $container->getParameter('serializer.formats'),
       $container->get('logger.factory')->get('rest'),
-      $container->get('entity.manager'),
-      $container->get('config.factory'),
       $container->get('current_user')
     );
   }
@@ -102,34 +82,31 @@ class EntityBundleViewModesResource extends ResourceBase {
   /**
    * Responds to GET requests.
    *
-   * Returns a list of bundles for specified entity.
+   * Returns a specific configuration based on the passed on the ID.
    *
    * @return \Drupal\rest\ResourceResponse
-   *   The response containing a list of bundle names.
+   *   The response containing a reponse HTML.
    *
    * @throws \Symfony\Component\HttpKernel\Exception\HttpException
    */
-  public function get($entity = NULL, $bundle = NULL) {
-    if ($entity && $bundle) {
-      $entity_view_display =  $this->entityManager->getDefinition('entity_view_display');
-      $config_prefix = $entity_view_display->getConfigPrefix();
-
-      $list = $this->configFactory->listAll($config_prefix . '.' . $entity . '.' . $bundle . '.');
-
-      $view_modes = array();
-      foreach ($list as $view_mode) {
-        $view_mode_machine_id = str_replace($config_prefix . '.', '', $view_mode);
-        list(,, $view_mode_label) = explode('.', $view_mode_machine_id);
-        $view_modes[$view_mode_machine_id] = $view_mode_label;
-      }
-
-      if (!empty($view_modes)) {
-        return new ResourceResponse($view_modes);
-      }
-
-      throw new NotFoundHttpException(t('Views modes for @entity and @bundle were not found', array('@entity' => $entity, '@bundle' => $bundle)));
+  public function get($id) {
+    if (!$this->currentUser->hasPermission('access content')) {
+      throw new AccessDeniedHttpException();
     }
 
-    throw new HttpException(t('Entity or Bundle weren\'t provided'));
+    $config = \Drupal::config($id);
+    $raw = $config->getRawData();
+
+    foreach ($raw as $key => $values) {
+      $data[$key] = $config->get($key);
+    }
+
+    $build = array(
+      '#cache' => array(
+        'max-age' => 0,
+      ),
+    );
+
+    return (new ResourceResponse($data))->addCacheableDependency($build);
   }
 }
