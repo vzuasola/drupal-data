@@ -4,12 +4,22 @@ status: true
 dependencies:
   config:
     - contact.form.feedback
+    - field.field.contact_message.feedback.field_allow
     - field.field.contact_message.feedback.field_name
 id: contact_message.feedback.default
 targetEntityType: contact_message
 bundle: feedback
 mode: default
 content:
+  field_allow:
+    weight: 2
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
   field_name:
     weight: 1
     label: above

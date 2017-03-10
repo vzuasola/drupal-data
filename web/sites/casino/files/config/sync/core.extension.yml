@@ -52,6 +52,7 @@ module:
   user: 0
   views_ui: 0
   webcomposer_blocks: 0
+  webcomposer_form: 0
   webcomposer_rest_extra: 0
   webcomposer_token: 0
   menu_link_content: 1
