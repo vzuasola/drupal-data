@@ -21,7 +21,8 @@
         "cweagans/composer-patches": "~1.0",
         "drupal/core": "~8.0",
         "drush/drush": "~8.0",
-        "drupal/console": "~1.0"
+        "drupal/console": "~1.0",
+	"relaxedws/replicator": "^1.0@alpha"
     },
     "require-dev": {
         "behat/mink": "~1.7",
@@ -39,7 +40,8 @@
     "prefer-stable": true,
     "autoload": {
         "classmap": [
-            "scripts/composer/ScriptHandler.php"
+            "scripts/composer/ScriptHandler.php",
+            "scripts/composer/SettingsHandler.php"
         ]
     },
     "scripts": {
@@ -51,16 +53,27 @@
             "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
         ],
         "post-install-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles",
+            "DrupalProject\\composer\\SettingsHandler::syncSettings"
         ],
         "post-update-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles",
+            "DrupalProject\\composer\\SettingsHandler::syncSettings"
+
+        ],
+        "sync-settings": [
+            "DrupalProject\\composer\\SettingsHandler::syncSettings"
         ]
     },
     "extra": {
         "installer-paths": {
             "web/core": ["type:drupal-core"],
             "drush/contrib/{$name}": ["type:drupal-drush"]
+        },
+        "patches": {
+            "drupal/core": {
+                "taxonomy_views": "https://www.drupal.org/files/issues/2048733-32.patch"
+            }
         }
     },
     "enable-patching": true,
