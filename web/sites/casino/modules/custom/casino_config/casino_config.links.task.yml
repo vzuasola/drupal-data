@@ -1,0 +1,44 @@
+casino_config.dafabet_ketword_tab:
+  route_name: casino_config.dafabet_keyword_form
+  title: 'About Dafabet'
+  base_route: casino_config.dafabet_keyword_form
+
+casino_config.copyright_config_tab:
+  route_name: casino_config.copyright_config_form
+  title: 'Copyright'
+  base_route: casino_config.copyright_config_form
+
+casino_config.left_floating_banner_tab:
+  route_name: casino_config.left_floating_banner_form
+  title: 'Left Floating Banner'
+  base_route: casino_config.left_floating_banner_form
+
+casino_config.right_floating_banner_tab:
+  route_name: casino_config.right_floating_banner_form
+  title: 'Right Floating Banner'
+  base_route: casino_config.right_floating_banner_form
+
+casino_config.page_not_found_tab:
+  route_name: casino_config.page_not_found_form
+  title: 'Page Not Found'
+  base_route: casino_config.page_not_found_form
+
+casino_config.unsupp_language_tab:
+  route_name: casino_config.unsupp_language_form
+  title: 'Unsupported language'
+  base_route: casino_config.unsupp_language_form
+
+casino_config.benefit_tiles_tab:
+  route_name: casino_config.lobby_left_tile_form
+  title: 'Benefit tile configuration'
+  base_route: casino_config.lobby_left_tile_form
+
+casino_config.gold_experience_tab:
+  route_name: casino_config.lobby_right_tile_form
+  title: 'Gold experience tile'
+  base_route: casino_config.lobby_right_tile_form
+
+casino_config.login_configuration_tab:
+  route_name: casino_config.login_config_form
+  title: 'Login configuration'
+  base_route: casino_config.login_config_form
