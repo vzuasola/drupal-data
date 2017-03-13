@@ -87,7 +87,7 @@ class CasinoRestResource extends ResourceBase {
 
     $data = array();
     try{
-      $config = \Drupal::config("casino_config.$id`");
+      $config = \Drupal::config("casino_config.$id");
       $data = $config->get();
       // $rawData = $config->getRawData();
       // foreach($rawData as $key => $values){
