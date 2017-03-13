@@ -95,9 +95,7 @@ class FormResource extends ResourceBase {
       ),
     );
 
-    kint_require();
     $data = $this->getFieldDefinition($id);
-    ddd($data);
 
     if (!$data) {
       throw new NotFoundHttpException(t('Contact form with ID @id was not found', array('@id' => $id)));
