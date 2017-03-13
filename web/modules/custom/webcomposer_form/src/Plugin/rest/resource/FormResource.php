@@ -95,7 +95,9 @@ class FormResource extends ResourceBase {
       ),
     );
 
+    kint_require();
     $data = $this->getFieldDefinition($id);
+    ddd($data);
 
     if (!$data) {
       throw new NotFoundHttpException(t('Contact form with ID @id was not found', array('@id' => $id)));
@@ -127,7 +129,9 @@ class FormResource extends ResourceBase {
       if (isset($field_configs["contact_message.$id.$key"])) {
         $config = $field_configs["contact_message.$id.$key"];
         
-        $definition[$key] = $config->toArray() + $component;
+        $definition[$key] = $config->toArray() + $component + [
+          'storage' => $config->getFieldStorageDefinition()
+        ];
 
         // remove redundancy of having two type definitions
         unset($definition[$key]['type']);
