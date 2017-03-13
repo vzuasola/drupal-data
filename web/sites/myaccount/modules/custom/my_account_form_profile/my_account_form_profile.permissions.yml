@@ -1,0 +1,9 @@
+administer my_account registration form:
+  title: 'MyAccount Registration Form'
+  description: 'User able to access MyAccount Registration form.'
+  restrict access: true
+
+administer my_account change password form:
+  title: 'MyAccount Change Password Form'
+  description: 'User able to access MyAccount change password form.'
+  restrict access: true
