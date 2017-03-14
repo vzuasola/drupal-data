@@ -4,22 +4,30 @@ status: true
 dependencies:
   config:
     - contact.form.feedback
-    - field.field.contact_message.feedback.field_allow
+    - field.field.contact_message.feedback.field_check
+    - field.field.contact_message.feedback.field_comment
     - field.field.contact_message.feedback.field_name
+    - field.field.contact_message.feedback.field_radio
+    - field.field.contact_message.feedback.field_select
+  module:
+    - options
 id: contact_message.feedback.default
 targetEntityType: contact_message
 bundle: feedback
 mode: default
 content:
-  field_allow:
+  field_check:
     weight: 2
     label: above
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
+    settings: {  }
     third_party_settings: {  }
-    type: boolean
+    type: list_default
+  field_comment:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
   field_name:
     weight: 1
     label: above
@@ -27,6 +35,18 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+  field_radio:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+  field_select:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
   mail:
     weight: -2
     label: above
