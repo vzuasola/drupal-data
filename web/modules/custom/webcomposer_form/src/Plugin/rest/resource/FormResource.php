@@ -126,13 +126,10 @@ class FormResource extends ResourceBase {
     foreach ($components as $key => $component) {
       if (isset($field_configs["contact_message.$id.$key"])) {
         $config = $field_configs["contact_message.$id.$key"];
-        
+
         $definition[$key] = $config->toArray() + $component + [
           'storage' => $config->getFieldStorageDefinition()
         ];
-
-        // remove redundancy of having two type definitions
-        unset($definition[$key]['type']);
       }
     }
 
