@@ -1,14 +1,15 @@
-uuid: 20f05017-1135-4d5a-8aef-a38d173a2373
+uuid: fc127549-6a2b-4683-85f3-76d96deeaee3
 langcode: en
 status: true
 dependencies:
   module:
     - contact
-id: contact_message.field_allow
-field_name: field_allow
+id: contact_message.field_comment
+field_name: field_comment
 entity_type: contact_message
-type: boolean
-settings: {  }
+type: string_long
+settings:
+  case_sensitive: false
 module: core
 locked: false
 cardinality: 1

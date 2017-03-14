@@ -1,0 +1,30 @@
+uuid: 8911dae1-272f-42ef-b22f-62a7b9e21708
+langcode: en
+status: true
+dependencies:
+  module:
+    - contact
+    - options
+id: contact_message.field_check
+field_name: field_check
+entity_type: contact_message
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'yes'
+      label: 'Yes'
+    -
+      value: 'no'
+      label: 'No'
+    -
+      value: maybe
+      label: Maybe
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
