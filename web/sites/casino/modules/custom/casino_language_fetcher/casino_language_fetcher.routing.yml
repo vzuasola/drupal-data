@@ -1,0 +1,7 @@
+casino_lang.admin_settings:
+  path: 'test/langs'
+  defaults:
+    _controller: 'Drupal\casino_language_fetcher\Controller\LanguageAPI::getEnabledLanguages'
+    _title: 'Language fetcher'
+  requirements:
+    _permission: 'access content'
