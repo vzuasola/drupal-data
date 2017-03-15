@@ -6,7 +6,6 @@ use Drupal\Core\Session\AccountProxyInterface;
 use Drupal\rest\Plugin\ResourceBase;
 use Drupal\rest\ResourceResponse;
 use Symfony\Component\DependencyInjection\ContainerInterface;
-use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
 use Drupal\Core\Language\LanguageManagerInterface;
 use Psr\Log\LoggerInterface;
 
@@ -92,10 +91,6 @@ class LanguageRestResource extends ResourceBase {
    *   Throws exception expected.
    */
   public function get() {
-
-    if (!$this->currentUser->hasPermission('access content')) {
-      throw new AccessDeniedHttpException();
-    }
     $data = array();
     try {
       $lang_obj = $this->languageManager->getLanguages();
@@ -104,18 +99,27 @@ class LanguageRestResource extends ResourceBase {
           $key = $lang_array->getId();
           $data[$key] = [
             'name' => $lang_array->getName(),
-            'id'   => $key
+            'id'   => $key,
           ];
         }
+        $data['default'] = [
+          'name' => $this->languageManager->getDefaultLanguage()->getId(),
+          'id' => $this->languageManager->getDefaultLanguage()->getName(),
+        ];
       }
     }
     catch (\Exception $e) {
-      $this->logger->error('Content not found');
+      $this->logger->error('Language not found.');
       $data = array(
-        'error' => $this->t('Content not found')
+        'error' => $this->t('Language not found.'),
       );
     }
-    return new ResourceResponse($data);
+    $build = array(
+      '#cache' => array(
+        'max-age' => 0,
+      ),
+    );
+    return (new ResourceResponse($data))->addCacheableDependency($build);
   }
 
 }
