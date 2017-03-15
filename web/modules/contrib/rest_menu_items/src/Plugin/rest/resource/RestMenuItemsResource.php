@@ -220,12 +220,22 @@ class RestMenuItemsResource extends ResourceBase {
 
       $alias = $this->aliasManager->getAliasByPath("/$uri");
 
+      // pull the additional attributes
+      $attr = array();
+      $options = $item_value['url']->getOptions();
+      if(isset($options['attributes'])){
+        foreach($options['attributes'] as $key => $value){
+          $attr[$key] = $value;
+        }
+      }
+
       $items[$item_name] = array(
         'key' => $item_name,
         'title' => $org_link->getTitle(),
         'uri' => $uri,
         'alias' => ltrim($alias, '/'),
         'external' => $external,
+        'attribute' => $attr,
       );
 
       if (!empty($item_value['below'])) {
