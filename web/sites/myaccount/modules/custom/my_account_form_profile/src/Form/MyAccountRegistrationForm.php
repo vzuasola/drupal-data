@@ -29,7 +29,7 @@ class MyAccountRegistrationForm extends ConfigFormBase
      */
     public function buildForm(array $form, FormStateInterface $form_state)
     {
-
+        // Get Form configuration.
         $myAccountConfig = $this->config('my_account_form_profile.profile');
 
         $form['profile'] = [
