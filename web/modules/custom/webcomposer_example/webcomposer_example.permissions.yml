@@ -1,0 +1,5 @@
+administer webcomposer_example sample_config_form:
+  title: 'WebComposer Example Form'
+  description: 'Admin access for Web Composer Sample Form'
+  restrict access: true
+

@@ -22,8 +22,8 @@ use Psr\Log\LoggerInterface;
  * Provides a resource to get view modes by entity and bundle.
  *
  * @RestResource(
- *   id = "Entity Bundle Resource Label",
- *   label = @Translation("entity_bundle_fields_resource"),
+ *   id = "entity_bundle_fields_resource",
+ *   label = @Translation("Entity Bundle Resource Label"),
  *   uri_paths = {
  *     "canonical" = "/entity/{entity}/{bundle}/fields"
  *   }
@@ -31,7 +31,6 @@ use Psr\Log\LoggerInterface;
  */
 class EntityBundleFieldsResource extends ResourceBase
 {
-
   /**
    *  A curent user instance.
    *
@@ -99,13 +98,20 @@ class EntityBundleFieldsResource extends ResourceBase
 
       // Fetch all fields and key them by field name.
       $field_configs = FieldConfig::loadMultiple($ids);
+
+      $build = array(
+        '#cache' => array(
+          'max-age' => 0,
+        ),
+      );
+
       $fields = array();
       foreach ($field_configs as $field_instance) {
         $fields[$field_instance->getName()] = $field_instance;
       }
 
       if (!empty($fields)) {
-        return new ResourceResponse($fields);
+        return (new ResourceResponse($fields))->addCacheableDependency($build);
       }
 
       throw new NotFoundHttpException(t('Field for entity @entity and bundle @bundle were not found', array('@entity' => $entity, '@bundle' => $bundle)));
