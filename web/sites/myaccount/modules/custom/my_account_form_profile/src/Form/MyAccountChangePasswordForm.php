@@ -30,6 +30,7 @@ class MyAccountChangePasswordForm extends ConfigFormBase
     public function buildForm(array $form, FormStateInterface $form_state)
     {
 
+        // Get Form configuration.
         $myAccountConfig = $this->config('my_account_form_profile.change_password');
 
         $form['change_password'] = [
