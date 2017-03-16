@@ -1,6 +1,6 @@
 {
     "artifactory": {
-        "username": "web-composer-drupal",
+        "username": "web-composer",
         "password": "ARTIFACTORY_PASSWORD",
         "permissions": ["r", "w"],
         "instances": [
