@@ -30,7 +30,7 @@ class LobbyLeftTile extends ConfigFormBase{
       $form['lobby_left_tile_title'] = array(
         '#type' => 'textfield',
         '#title' => $this->t('Title'),
-        '#default_value' => $config->get('lobby_left_title'),
+        '#default_value' => $config->get('lobby_left_tile_title'),
         '#required' => TRUE,
       );
 
