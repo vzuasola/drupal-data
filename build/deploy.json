@@ -9,7 +9,7 @@
         ]
     },
     "project": {
-        "style": "drupal7",
+        "style": "drupal8",
         "archive_directory": "base",
         "archive_exclude_directories": [
             ".git",
