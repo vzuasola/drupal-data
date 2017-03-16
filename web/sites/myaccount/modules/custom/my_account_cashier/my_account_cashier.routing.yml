@@ -1,0 +1,7 @@
+my_account_cashier.config:
+  path: '/admin/config/my_account/cashier'
+  defaults:
+    _title: 'MyAccount Cashier'
+    _form: '\Drupal\my_account_cashier\Form\MyAccountCashierForm'
+  requirements:
+    _permission: 'administer my_account cashier'
