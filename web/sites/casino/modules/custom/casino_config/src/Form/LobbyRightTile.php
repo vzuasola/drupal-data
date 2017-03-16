@@ -4,6 +4,7 @@ namespace Drupal\casino_config\Form;
 
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\file\Entity\File;
 
 class LobbyRightTile extends ConfigFormBase{
 
@@ -76,7 +77,7 @@ class LobbyRightTile extends ConfigFormBase{
     foreach($keys as $key){
       if($key == "lobby_right_tile_image"){
         $fid = $form_state->getValue($key);
-        $file = \Drupal\file\Entity\File::load($fid[0]);
+        $file = File::load($fid[0]);
         $this->config('casino_config.lobby_right_tile')->set("lobby_right_tile_image_url", file_create_url($file->getFileUri()))->save();
       }
 
