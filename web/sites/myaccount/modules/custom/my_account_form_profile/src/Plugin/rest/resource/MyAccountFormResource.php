@@ -25,6 +25,7 @@ class MyAccountFormResource extends ResourceBase
      */
     public function get($id)
     {
+
         switch ($id) {
             case 'my_account_change_password':
                 $config = \Drupal::config('my_account_form_profile.change_password');
@@ -33,6 +34,11 @@ class MyAccountFormResource extends ResourceBase
                 break;
             case 'my_account_profile':
                 $config = \Drupal::config('my_account_form_profile.profile');
+                $values = $config->get();
+                return new ResourceResponse($values);
+                break;
+            case 'my_account_cashier':
+                $config = \Drupal::config('my_account_cashier.link');
                 $values = $config->get();
                 return new ResourceResponse($values);
                 break;

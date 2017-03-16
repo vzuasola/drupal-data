@@ -1,0 +1,8 @@
+my_account_cashier.link:
+  type: config_object
+  label: 'My Account Cashier Link Configuration'
+  mapping:
+    cashier_link:
+      type: label
+      label: 'Cashier Link'
+  langcode: 'en'
