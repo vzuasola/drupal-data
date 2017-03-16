@@ -1,57 +1,80 @@
 #user name
-user_name_field_label: 'Username'
-user_name_field_required: '1'
-user_name_field_weight: '0'
+username_field:
+  label: 'Username'
+  required: '1'
+  weight: '0'
+  wrapper: 'username'
 
 #curreny
-currency_field_label: 'PHP'
-currency_field_required: '1'
-currency_field_error: 'Error Currency Field Error message'
-currency_field_weight: '1'
+currency_field:
+  label: 'Currency'
+  required: '1'
+  error: 'Error Currency Field Error message'
+  weight: '1'
+  wrapper: 'currency_wrapper'
 
 #first name
-first_name_field_label: 'First name'
-first_name_field_required: '1'
-first_name_field_error: 'Error message for first name field'
-first_name_field_weight: '2'
+first_name_field:
+  label: 'First name'
+  required: '1'
+  error: 'Error message for first name field'
+  weight: '2'
+  wrapper: 'first_name'
 
 #last name
-last_name_field_label: 'Last name'
-last_name_field_required: '1'
-last_name_field_error: 'Last name field error message'
-last_name_field_weight: '3'
+last_name_field:
+  label: 'Last name'
+  required: '1'
+  error: 'Last name field error message'
+  weight: '3'
+  wrapper: 'lastname'
 
 #DOB
-dob_field_label: 'DOB'
-dob_field_required: '1'
-dob_field_error: 'Error message for dob'
-dob_field_weight: '4'
+dob_field:
+  label: 'DOB'
+  required: '1'
+  error: 'Error message for dob'
+  weight: '4'
+  wrapper: 'dob'
 
 #country
-country_field_label: 'Country'
-country_field_required: '1'
-country_field_error: 'Error message for country'
-country_field_weight: '5'
+country_field:
+  label: 'Country'
+  required: '1'
+  error: 'Error message for country'
+  weight: '5'
+  wrapper: 'country'
 
 #email
-email_field_label: 'Email'
-email_field_required: '1'
-email_field_error: 'Error message for Email'
-email_field_weight: '6'
+email_field:
+  label: 'Email'
+  required: '1'
+  error: 'Error message for Email'
+  weight: '6'
+  wrapper: 'email'
 
 #header field
-communication_details_field_label: 'Communication Details'
-account_details_field_label: 'Account Details'
+communication_detail_field:
+  label: 'Communication Details'
+  wrapper: 'communication'
+
+account_field:
+  label: 'Account Details'
+  wrapper: 'account'
 
 #mobile
-mobile_number_field_label: 'Mobile Number'
-mobile_number_field_required: '1'
-mobile_number_field_error: 'Error message for Mobile'
-mobile_number_field_weight: '7'
+mobile_number_field:
+  label: 'Mobile Number'
+  required: '1'
+  error: 'Error message for Mobile'
+  weight: '7'
+  wrapper: 'mobile_number'
 
 #language
-language_field_label: 'Language'
-language_field_help_text: 'Help text for Language'
-language_field_required: '1'
-language_field_error: 'Error field for Language'
-language_field_weight: '8'
+language_field:
+  label: 'Language'
+  help_text: 'Help text for Language'
+  required: '1'
+  error: 'Error field for Language'
+  weight: '8'
+  wrapper: 'language'
