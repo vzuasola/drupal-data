@@ -140,7 +140,7 @@ def create_image(image_name=None, docker_file=None):
            '-f', docker_file,
            '-t', image_name,
            '.')
-
+    print('poor man debugging: {0}'.format(" ".join(cmd)))
     # docker_build = subprocess.Popen(cmd, cwd=project_dir(), stdout=subprocess.PIPE)
     docker_build = subprocess.Popen(cmd, cwd=project_dir())
 
