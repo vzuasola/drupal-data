@@ -77,3 +77,11 @@ casino_config.copyright_config_form:
     _title: 'Copyright'
   requirements:
     _permission: 'administer site configuration'
+
+casino_config.header_config_form:
+  path: 'admin/config/casino/join-now-button'
+  defaults:
+    _form: 'Drupal\casino_config\Form\HeaderConfiguration'
+    _title: 'Casino Header Configurations'
+  requirements:
+    _permission: 'administer site configuration'
