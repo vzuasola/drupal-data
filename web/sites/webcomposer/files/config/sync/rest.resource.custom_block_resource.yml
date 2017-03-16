@@ -1,0 +1,21 @@
+uuid: dcfda87f-8cd4-4112-9309-374d2da214bb
+langcode: en
+status: true
+dependencies:
+  module:
+    - basic_auth
+    - hal
+    - serialization
+    - user
+    - webcomposer_blocks
+id: custom_block_resource
+plugin_id: custom_block_resource
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - hal_json
+      - json
+    supported_auth:
+      - basic_auth
+      - cookie

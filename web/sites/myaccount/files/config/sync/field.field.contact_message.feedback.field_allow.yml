@@ -1,0 +1,23 @@
+uuid: 14b9e911-dc19-4ff1-b171-c53123bd0bbe
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.feedback
+    - field.storage.contact_message.field_allow
+id: contact_message.feedback.field_allow
+field_name: field_allow
+entity_type: contact_message
+bundle: feedback
+label: Allow
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

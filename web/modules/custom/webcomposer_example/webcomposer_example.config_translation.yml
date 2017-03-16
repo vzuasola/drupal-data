@@ -1,0 +1,5 @@
+webcomposer_example.sample_form:
+  title: 'WebComposer Sample From Translation'
+  base_route_name: webcomposer_example.sample_form
+  names:
+    - webcomposer_example.sample_form
