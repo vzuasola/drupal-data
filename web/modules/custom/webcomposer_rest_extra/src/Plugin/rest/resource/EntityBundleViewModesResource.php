@@ -32,7 +32,7 @@ use Psr\Log\LoggerInterface;
 class EntityBundleViewModesResource extends ResourceBase {
 
   /**
-   *  A curent user instance.
+   * A curent user instance.
    *
    * @var \Drupal\Core\Session\AccountProxyInterface
    */
@@ -40,7 +40,7 @@ class EntityBundleViewModesResource extends ResourceBase {
   protected $currentUser;
 
   /**
-   *  A instance of entity manager.
+   * A instance of entity manager.
    *
    * @var \Drupal\Core\Entity\EntityManagerInterface
    */
@@ -54,41 +54,7 @@ class EntityBundleViewModesResource extends ResourceBase {
    */
   protected $configFactory;
 
-  /*
-   * Responds to GET requests.
-   *
-   * Returns a list of bundles for specified entity.
-   *
-   * @return \Drupal\rest\ResourceResponse
-   *   The response containing a list of bundle names.
-   *
-   * @throws \Symfony\Component\HttpKernel\Exception\HttpException
-   */
-  public function get($entity = NULL, $bundle = NULL) {
-    if ($entity && $bundle) {
-      $entity_view_display =  $this->entityManager->getDefinition('entity_view_display');
-      $config_prefix = $entity_view_display->getConfigPrefix();
-
-      $list = $this->configFactory->listAll($config_prefix . '.' . $entity . '.' . $bundle . '.');
-
-      $view_modes = array();
-      foreach ($list as $view_mode) {
-        $view_mode_machine_id = str_replace($config_prefix . '.', '', $view_mode);
-        list(,, $view_mode_label) = explode('.', $view_mode_machine_id);
-        $view_modes[$view_mode_machine_id] = $view_mode_label;
-      }
-
-      if (!empty($view_modes)) {
-        return new ResourceResponse($view_modes);
-      }
-
-      throw new NotFoundHttpException(t('Views modes for @entity and @bundle were not found', array('@entity' => $entity, '@bundle' => $bundle)));
-    }
-
-        throw new HttpException(t('Entity or Bundle weren\'t provided'));
-  }
-
-    /**
+  /**
    * Constructs a Drupal\rest\Plugin\ResourceBase object.
    *
    * @param array $configuration
@@ -131,5 +97,39 @@ class EntityBundleViewModesResource extends ResourceBase {
       $container->get('config.factory'),
       $container->get('current_user')
     );
+  }
+
+  /**
+   * Responds to GET requests.
+   *
+   * Returns a list of bundles for specified entity.
+   *
+   * @return \Drupal\rest\ResourceResponse
+   *   The response containing a list of bundle names.
+   *
+   * @throws \Symfony\Component\HttpKernel\Exception\HttpException
+   */
+  public function get($entity = NULL, $bundle = NULL) {
+    if ($entity && $bundle) {
+      $entity_view_display =  $this->entityManager->getDefinition('entity_view_display');
+      $config_prefix = $entity_view_display->getConfigPrefix();
+
+      $list = $this->configFactory->listAll($config_prefix . '.' . $entity . '.' . $bundle . '.');
+
+      $view_modes = array();
+      foreach ($list as $view_mode) {
+        $view_mode_machine_id = str_replace($config_prefix . '.', '', $view_mode);
+        list(,, $view_mode_label) = explode('.', $view_mode_machine_id);
+        $view_modes[$view_mode_machine_id] = $view_mode_label;
+      }
+
+      if (!empty($view_modes)) {
+        return new ResourceResponse($view_modes);
+      }
+
+      throw new NotFoundHttpException(t('Views modes for @entity and @bundle were not found', array('@entity' => $entity, '@bundle' => $bundle)));
+    }
+
+    throw new HttpException(t('Entity or Bundle weren\'t provided'));
   }
 }
