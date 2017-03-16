@@ -1,0 +1,132 @@
+{
+    "artifactory": {
+        "username": "web-composer-drupal",
+        "password": "ARTIFACTORY_PASSWORD",
+        "permissions": ["r", "w"],
+        "instances": [
+            "http://mic-pele-artifact.msred.dom:8081/artifactory/web-composer-drupal",
+            "http://trc-ptc-afact01.msred.dom:8081/artifactory/web-composer-drupal"
+        ]
+    },
+    "project": {
+        "style": "drupal7",
+        "archive_directory": "base",
+        "archive_exclude_directories": [
+            ".git",
+            ".svn",
+            "build",
+            "deploy",
+            "test",
+            "tests"
+        ],
+        "archive_exclude_extensions": [
+            "txt",
+            "TXT",
+            "CHANGELOG.md",
+            "README.md",
+            "LICENSE",
+            "example.settings.local.php",
+            "example.sites.php",
+            "settings.php",
+            "settings.php.QA1",
+            "settings.php.DEV",
+            "settings.php.GIT",
+            "composer.json",
+            "config.build",
+            "install.php",
+            "sync.build",
+            "xmlrpc.php"
+        ]
+    },
+    "development": {
+        "ansible_tower_instance": "mic-tst-itass01.msgreen.dom",
+        "authorized_users": [
+            "any"
+        ],
+        "dockerfile": "build/Dockerfile.deploy",
+        "job_name": "web-composer-drupal: deploy - development environment",
+        "password": "MSGREEN_DEPLOY_PASSWORD",
+        "prerequisite": "any",
+        "username": "web-composer-drupal"
+    },
+    "testing": {
+        "ansible_tower_instance": "mic-tst-itass01.msgreen.dom",
+        "authorized_users": [
+            "any"
+        ],
+        "dockerfile": "build/Dockerfile.deploy",
+        "job_name": "web-composer-drupal: deploy - testing environment (QA)",
+        "password": "MSGREEN_DEPLOY_PASSWORD",
+        "prerequisite": "any",
+        "username": "web-composer-drupal"
+    },
+    "uat": {
+        "ansible_tower_instance": "msc-co-itass01.msorange.dom",
+        "authorized_users": [
+            "any"
+        ],
+        "dockerfile": "build/Dockerfile.deploy",
+        "job_name": "web-composer-drupal: deploy - uat environent",
+        "password": "MSORANGE_DEPLOY_PASSWORD",
+        "prerequisite": "any",
+        "username": "web-composer-drupal"
+    },
+    "staging": {
+        "ansible_tower_instance": "msc-co-itass01.msorange.dom",
+        "authorized_users": [
+            "any"
+        ],
+        "dockerfile": "build/Dockerfile.deploy",
+        "job_name": "web-composer-drupal: deploy - staging environent",
+        "password": "MSORANGE_DEPLOY_PASSWORD",
+        "prerequisite": "any",
+        "username": "web-composer-drupal"
+    },
+    "staging-signoff": {
+        "authorized_users": [
+            "any",
+            "glenbert.garing@bayviewtechnology.com",
+            "jennifer.gregorio@bayviewtechnology.com",
+            "krystelmae.penoso@bayviewtechnology.com",
+            "renzjonathan.alib@bayviewtechnology.com"
+        ],
+        "prerequisite": "staging"
+    },
+    "internal-production": {
+        "ansible_tower_instance": "trc-ptc-itass01.msred.dom",
+        "authorized_users": [
+            "glenbert.garing@bayviewtechnology.com",
+            "jennifer.gregorio@bayviewtechnology.com",
+            "krystelmae.penoso@bayviewtechnology.com",
+            "renzjonathan.alib@bayviewtechnology.com"
+        ],
+        "dockerfile": "build/Dockerfile.deploy",
+        "job_name": "web-composer-drupal: Deploy - Internal production",
+        "password": "MSRED_DEPLOY_PASSWORD",
+        "prerequisite": "any",
+        "username": "web-composer-drupal"
+    },
+    "internal-production-signoff": {
+        "authorized_users": [
+            "glenbert.garing@bayviewtechnology.com",
+            "jennifer.gregorio@bayviewtechnology.com",
+            "krystelmae.penoso@bayviewtechnology.com",
+            "renzjonathan.alib@bayviewtechnology.com"
+        ],
+        "prerequisite": "internal-production"
+    },
+    "production": {
+        "ansible_tower_instance": "trc-ptc-itass01.msred.dom",
+        "authorized_users": [
+            "glenbert.garing@bayviewtechnology.com",
+            "jennifer.gregorio@bayviewtechnology.com",
+            "krystelmae.penoso@bayviewtechnology.com",
+            "renzjonathan.alib@bayviewtechnology.com"
+        ],
+        "dockerfile": "build/Dockerfile.deploy",
+        "job_name": "web-composer-drupal: deploy - Production (front facing)",
+        "password": "MSRED_DEPLOY_PASSWORD",
+        "prerequisite": "any",
+        "username": "web-composer-drupal"
+    }
+}
