@@ -1,0 +1,30 @@
+uuid: 9a568ebc-77fe-43bd-b74f-e5868c845b9f
+langcode: en
+status: true
+dependencies:
+  module:
+    - contact
+    - options
+id: contact_message.field_radio
+field_name: field_radio
+entity_type: contact_message
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: one
+      label: One
+    -
+      value: two
+      label: Two
+    -
+      value: three
+      label: Three
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -22,8 +22,8 @@ use Psr\Log\LoggerInterface;
  * Provides a resource to get view modes by entity and bundle.
  *
  * @RestResource(
- *   id = "Entity Bundle Weight Resource",
- *   label = @Translation("entity_bundle_weight_resource"),
+ *   id = "entity_bundle_weight_resource",
+ *   label = @Translation("Entity Bundle Weight Resource"),
  *   uri_paths = {
  *     "canonical" = "/entity/{entity}/{bundle}/fields/weights"
  *   }
@@ -94,7 +94,14 @@ class EntityBundleFieldsWeightResource extends ResourceBase
 
       if (!empty($bundle)) {
         $weights = entity_get_form_display($entity, $bundle, 'default');
-        return new ResourceResponse($weights);
+        
+        $build = array(
+          '#cache' => array(
+            'max-age' => 0,
+          ),
+        );
+
+        return (new ResourceResponse($weights))->addCacheableDependency($build);
       }
 
       throw new NotFoundHttpException(t('Field for entity @entity and bundle @bundle were not found', array('@entity' => $entity, '@bundle' => $bundle)));

@@ -1,0 +1,9 @@
+my_account_form_profile.change_password_form:
+  route_name: my_account_form_profile.change_password_form
+  base_route: my_account_form_profile.change_password_form
+  title: 'My Account Change Password Form configuration'
+
+my_account_form_profile.profile:
+  route_name: my_account_form_profile.profile
+  base_route: my_account_form_profile.profile
+  title: 'My Account Profile Form configuration'

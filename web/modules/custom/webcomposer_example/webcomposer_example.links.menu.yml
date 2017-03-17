@@ -1,0 +1,28 @@
+webcomposer_example.sample:
+  title: 'Web Composer Form Config Example'
+  route_name: webcomposer_example.sample
+  parent: system.admin
+  description: 'Web Composer From Config Example'
+  weight: -1
+
+webcomposer_example.sample_admin:
+  title: 'Web Composer Form Config Example'
+  route_name: webcomposer_example.sample
+  parent: system.admin_config
+  description: 'Web Composer From Config Example'
+  weight: -15
+
+webcomposer_example.sample_form:
+  title: 'Web Composer Form Config Example'
+  description: 'Web Composer Form Config Example'
+  route_name: webcomposer_example.sample_form
+  parent: webcomposer_example.sample
+  weight: 0
+
+webcomposer_example.sample_admin_form:
+  title: 'Web Composer Form Config Example'
+  description: 'Web Composer Form Config Example'
+  route_name: webcomposer_example.sample_form
+  parent: webcomposer_example.sample_admin
+  weight: 0
+
