@@ -1,80 +1,117 @@
 #user name
 username_field:
-  label: 'Username'
-  required: '1'
   weight: '0'
-  wrapper: 'username'
+  options:
+    label: 'Username'
+    placeholder: 'Username Placeholder'
+    required: '1'
+    wrapper_class: 'username'
 
 #curreny
 currency_field:
-  label: 'Currency'
-  required: '1'
-  error: 'Error Currency Field Error message'
-  weight: '1'
-  wrapper: 'currency_wrapper'
+  weight: '0'
+  options:
+    label: 'Enter Currency'
+    placeholder: 'Currency'
+    required: '1'
+    error: 'Error Currency Field Error message'
+    wrapper_class: 'currency_wrapper'
 
 #first name
 first_name_field:
-  label: 'First name'
-  required: '1'
-  error: 'Error message for first name field'
-  weight: '2'
-  wrapper: 'first_name'
+  weight: '1'
+  options:
+    label: 'First name'
+    placeholder: 'Enter First Name'
+    required: '1'
+    error: 'Error message for first name field'
+    wrapper_class: 'first_name'
 
 #last name
 last_name_field:
-  label: 'Last name'
-  required: '1'
-  error: 'Last name field error message'
-  weight: '3'
-  wrapper: 'lastname'
+  weight: '2'
+  options:
+    label: 'Last name'
+    placeholder: 'Enter Last Name'
+    required: '1'
+    error: 'Last name field error message'
+    wrapper_class: 'lastname'
 
 #DOB
 dob_field:
-  label: 'DOB'
-  required: '1'
-  error: 'Error message for dob'
-  weight: '4'
-  wrapper: 'dob'
+  weight: '3'
+  options:
+    label: 'DOB'
+    required: '1'
+    error: 'Error message for dob'
+    wrapper_class: 'dob'
+
+#DOB month
+dob_month:
+  weight: '3'
+  options:
+    wrapper_class: 'dob-month'
+
+#DOB day
+dob_day:
+  weight: '3'
+  options:
+    wrapper_class: 'dob-day'
+
+#DOB year
+dob_year:
+  weight: '3'
+  options:
+    wrapper_class: 'dob-year'
 
 #country
 country_field:
-  label: 'Country'
-  required: '1'
-  error: 'Error message for country'
-  weight: '5'
-  wrapper: 'country'
+  weight: '3'
+  options:
+    label: 'Country'
+    placeholder: 'Country'
+    required: '1'
+    error: 'Error message for country'
+    wrapper_class: 'country'
 
 #email
 email_field:
-  label: 'Email'
-  required: '1'
-  error: 'Error message for Email'
-  weight: '6'
-  wrapper: 'email'
+  weight: '5'
+  options:
+    label: 'Email'
+    placeholder: 'tech.shanu786@gmail.com'
+    required: '1'
+    error: 'Error message for Email'
+    wrapper_class: 'email'
 
 #header field
 communication_detail_field:
-  label: 'Communication Details'
-  wrapper: 'communication'
+  options:
+    label: 'Communication Details'
+    wrapper_class: 'communication'
 
 account_field:
-  label: 'Account Details'
-  wrapper: 'account'
+  options:
+    label: 'Account Details'
+    wrapper_class: 'account'
 
 #mobile
 mobile_number_field:
-  label: 'Mobile Number'
-  required: '1'
-  error: 'Error message for Mobile'
-  weight: '7'
-  wrapper: 'mobile_number'
+  weight: '6'
+  options:
+    label: 'Mobile Number'
+    placeholder: '09217715594'
+    required: '1'
+    error: 'Error message for Mobile'
+    wrapper_class: 'mobile_number'
 
 #language
 language_field:
-  label: 'Language'
-  help_text: 'Help text for Language'
-  required: '1'
-  error: 'Error field for Language'
-  weight: '8'
-  wrapper: 'language'
+  weight: '7'
+  options:
+    label: 'Language'
+    placeholder: 'Enter Language'
+    help_text: 'Help text for Language'
+    required: '1'
+    error: 'Error field for Language'
+    wrapper_class: 'language'
