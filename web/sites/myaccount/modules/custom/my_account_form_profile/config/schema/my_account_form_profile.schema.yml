@@ -85,9 +85,12 @@ my_account_form_profile.profile:
             error:
               type: label
               label: 'Error message'
-            placeholder:
-              type: label
-              label: 'Placeholder value for field'
+            attr:
+              type: mapping
+              mapping:
+                placeholder:
+                  type: label
+                  label: 'Placeholder value for field'
     currency_field:
       type: mapping
       mapping:
@@ -100,9 +103,12 @@ my_account_form_profile.profile:
             error:
               type: label
               label: 'Error message'
-            placeholder:
-              type: label
-              label: 'Placeholder value for field'
+            attr:
+              type: mapping
+              mapping:
+                placeholder:
+                  type: label
+                  label: 'Placeholder value for field'
     first_name_field:
       type: mapping
       mapping:
@@ -115,9 +121,12 @@ my_account_form_profile.profile:
             error:
               type: label
               label: 'Error message'
-            placeholder:
-              type: label
-              label: 'Placeholder value for field'
+            attr:
+              type: mapping
+              mapping:
+                placeholder:
+                  type: label
+                  label: 'Placeholder value for field'
     last_name_field:
       type: mapping
       mapping:
@@ -130,9 +139,12 @@ my_account_form_profile.profile:
             error:
               type: label
               label: 'Error message'
-            placeholder:
-              type: label
-              label: 'Placeholder value for field'
+            attr:
+              type: mapping
+              mapping:
+                placeholder:
+                  type: label
+                  label: 'Placeholder value for field'
     dob_field:
       type: mapping
       mapping:
@@ -145,9 +157,12 @@ my_account_form_profile.profile:
             error:
               type: label
               label: 'Error message'
-            placeholder:
-              type: label
-              label: 'Placeholder value for field'
+            attr:
+              type: mapping
+              mapping:
+                placeholder:
+                  type: label
+                  label: 'Placeholder value for field'
     country_field:
       type: mapping
       mapping:
@@ -160,9 +175,12 @@ my_account_form_profile.profile:
             error:
               type: label
               label: 'Error message'
-            placeholder:
-              type: label
-              label: 'Placeholder value for field'
+            attr:
+              type: mapping
+              mapping:
+                placeholder:
+                  type: label
+                  label: 'Placeholder value for field'
     email_field:
       type: mapping
       mapping:
@@ -175,9 +193,12 @@ my_account_form_profile.profile:
             error:
               type: label
               label: 'Error message'
-            placeholder:
-              type: label
-              label: 'Placeholder value for field'
+            attr:
+              type: mapping
+              mapping:
+                placeholder:
+                  type: label
+                  label: 'Placeholder value for field'
     communication_detail_field:
       type: mapping
       mapping:
@@ -208,9 +229,12 @@ my_account_form_profile.profile:
             error:
               type: label
               label: 'Error message'
-            placeholder:
-              type: label
-              label: 'Placeholder value for field'
+            attr:
+              type: mapping
+              mapping:
+                placeholder:
+                  type: label
+                  label: 'Placeholder value for field'
     language_field:
       type: mapping
       mapping:
@@ -223,7 +247,10 @@ my_account_form_profile.profile:
             error:
               type: label
               label: 'Error message'
-            placeholder:
-              type: label
-              label: 'Placeholder value for field'
+            attr:
+              type: mapping
+              mapping:
+                placeholder:
+                  type: label
+                  label: 'Placeholder value for field'
   langcode: 'en'
