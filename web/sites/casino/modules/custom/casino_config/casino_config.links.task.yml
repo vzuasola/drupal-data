@@ -42,3 +42,8 @@ casino_config.login_configuration_tab:
   route_name: casino_config.login_config_form
   title: 'Login configuration'
   base_route: casino_config.login_config_form
+
+casino_config.header_configuration_tab:
+  route_name: casino_config.header_config_form
+  title: 'Header configuration'
+  base_route: casino_config.header_config_form
