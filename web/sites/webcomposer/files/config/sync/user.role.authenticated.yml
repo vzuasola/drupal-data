@@ -28,3 +28,4 @@ permissions:
   - 'restful get form_resource'
   - 'restful get custom_block_resource'
   - 'restful post contact_message'
+  - 'restful get language_rest_resource'
