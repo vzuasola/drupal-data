@@ -27,7 +27,7 @@ use Symfony\Component\HttpKernel\Exception\HttpException;
  *
  * @RestResource(
  *   id = "contact_message",
- *   label = @Translation("Contact message"),
+ *   label = @Translation("Contact message submission"),
  *   serialization_class = "Drupal\contact\Entity\Message",
  *   uri_paths = {
  *     "canonical" = "/contact_message/{entity}"
