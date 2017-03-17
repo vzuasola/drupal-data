@@ -1,0 +1,6 @@
+name: My Account and change password form
+description: Module for my account form configurations
+package: My Account
+type: module
+core: 8.x
+version: '8.x-1.x-dev'
