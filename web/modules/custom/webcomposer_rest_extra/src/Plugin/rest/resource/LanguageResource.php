@@ -33,12 +33,20 @@ class LanguageResource extends ResourceBase {
    * @var \Drupal\Core\Session\AccountProxyInterface
    */
   protected $currentUser;
+
   /**
    * The language manager.
    *
    * @var \Drupal\Core\Language\LanguageManagerInterface
    */
   protected $languageManager;
+
+  /**
+   * Config factory instance
+   *
+   * @var \Drupal\Core\Config\ConfigFactory
+   */
+  protected $config;
 
   /**
    * Constructs a Drupal\rest\Plugin\ResourceBase object.
@@ -65,11 +73,13 @@ class LanguageResource extends ResourceBase {
     array $serializer_formats,
     LoggerInterface $logger,
     AccountProxyInterface $current_user,
-    LanguageManagerInterface $language_manager) {
+    LanguageManagerInterface $language_manager,
+    $config) {
     parent::__construct($configuration, $plugin_id, $plugin_definition, $serializer_formats, $logger);
 
     $this->languageManager = $language_manager;
     $this->currentUser = $current_user;
+    $this->config = $config;
   }
 
   /**
@@ -83,7 +93,8 @@ class LanguageResource extends ResourceBase {
       $container->getParameter('serializer.formats'),
       $container->get('logger.factory')->get('rest'),
       $container->get('current_user'),
-      $container->get('language_manager')
+      $container->get('language_manager'),
+      $container->get('config.factory')
     );
   }
 
@@ -101,23 +112,32 @@ class LanguageResource extends ResourceBase {
     try {
       $lang_obj = $this->languageManager->getLanguages();
 
+      // get the language negotiation URL prefixes
+      $config = $this->config->get('language.negotiation');
+      $prefixes = $config->get('url.prefixes');
+
       if ($lang_obj) {
         foreach ($lang_obj as $lang_array) {
           $key = $lang_array->getId();
           $data[$key] = [
             'name' => $lang_array->getName(),
-            'id'   => $key,
+            'id' => $key,
+            'prefix' => $prefixes[$key],
           ];
         }
 
+        $default_lang_key = $this->languageManager->getDefaultLanguage()->getId();
+
         $data['default'] = [
-          'name' => $this->languageManager->getDefaultLanguage()->getId(),
-          'id' => $this->languageManager->getDefaultLanguage()->getName(),
+          'id' => $default_lang_key,
+          'name' => $this->languageManager->getDefaultLanguage()->getName(),
+          'prefix' => $prefixes[$default_lang_key]
         ];
       }
     }
     catch (\Exception $e) {
       $this->logger->error('Language not found.');
+
       $data = array(
         'error' => $this->t('Language not found.'),
       );
