@@ -64,7 +64,7 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#title' => t('Placeholder'),
             '#size' => 25,
             '#description' => $this->t('Placeholder for the username Field.'),
-            '#default_value' => $myAccountConfigValue['username_field']['options']['placeholder']
+            '#default_value' => $myAccountConfigValue['username_field']['options']['attr']['placeholder'],
         ];
 
         $form['field_configuration']['field_labels_user_name']['required'] = [
@@ -109,7 +109,7 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#title' => t('Placeholder'),
             '#size' => 25,
             '#description' => $this->t('Placeholder for the currency Field.'),
-            '#default_value' => $myAccountConfigValue['currency_field']['options']['placeholder']
+            '#default_value' => $myAccountConfigValue['currency_field']['options']['attr']['placeholder'],
         ];
 
         $form['field_configuration']['field_labels_currency']['required'] = [
@@ -161,7 +161,7 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#title' => t('Placeholder'),
             '#size' => 25,
             '#description' => $this->t('Placeholder for the first name Field.'),
-            '#default_value' => $myAccountConfigValue['first_name_field']['options']['placeholder']
+            '#default_value' => $myAccountConfigValue['first_name_field']['options']['attr']['placeholder'],
         ];
 
         $form['field_configuration']['field_labels_first_name']['required'] = [
@@ -213,7 +213,7 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#title' => t('Placeholder'),
             '#size' => 25,
             '#description' => $this->t('Placeholder for the last name Field.'),
-            '#default_value' => $myAccountConfigValue['last_name_field']['options']['placeholder']
+            '#default_value' => $myAccountConfigValue['last_name_field']['options']['attr']['placeholder'],
         ];
 
         $form['field_configuration']['field_labels_last_name']['required'] = [
@@ -373,7 +373,7 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#title' => t('Placeholder'),
             '#size' => 25,
             '#description' => $this->t('Placeholder for the country Field.'),
-            '#default_value' => $myAccountConfigValue['country_field']['options']['placeholder']
+            '#default_value' => $myAccountConfigValue['country_field']['options']['attr']['placeholder'],
         ];
 
         $form['field_configuration']['field_labels_country']['required'] = [
@@ -425,7 +425,7 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#title' => t('Placeholder'),
             '#size' => 25,
             '#description' => $this->t('Placeholder for the email Field.'),
-            '#default_value' => $myAccountConfigValue['email_field']['options']['placeholder']
+            '#default_value' => $myAccountConfigValue['email_field']['options']['attr']['placeholder'],
         ];
 
         $form['field_configuration']['field_labels_email']['required'] = [
@@ -478,7 +478,7 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#size' => 25,
             '#required' => TRUE,
             '#description' => $this->t('Placeholder for the mobile number Field.'),
-            '#default_value' => $myAccountConfigValue['mobile_number_field']['options']['placeholder']
+            '#default_value' => $myAccountConfigValue['mobile_number_field']['options']['attr']['placeholder'],
         ];
 
         $form['field_configuration']['field_labels_mobile_number']['required'] = [
@@ -530,7 +530,7 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#title' => t('Placeholder'),
             '#size' => 25,
             '#description' => $this->t('Placeholder for the language Field.'),
-            '#default_value' => $myAccountConfigValue['language_field']['options']['placeholder']
+            '#default_value' => $myAccountConfigValue['language_field']['options']['attr']['placeholder'],
         ];
 
         $form['field_configuration']['field_labels_language']['required'] = [
@@ -641,7 +641,7 @@ class MyAccountRegistrationForm extends ConfigFormBase
         $configuration = $form_state->getValue('field_configuration');
         $this->config('my_account_form_profile.profile')
             ->set('username_field.options.label', $configuration['field_labels_user_name']['label'])
-            ->set('username_field.options.placeholder', $configuration['field_labels_user_name']['placeholder'])
+            ->set('username_field.options.attr.placeholder', $configuration['field_labels_user_name']['placeholder'])
             ->set('username_field.options.required', $configuration['field_labels_user_name']['required'])
             ->set('username_field.weight', $configuration['field_labels_user_name']['weight'])
             ->set('dob_month.weight', $configuration['field_labels_dob_month']['weight'])
@@ -652,19 +652,19 @@ class MyAccountRegistrationForm extends ConfigFormBase
             ->set('dob_day.options.wrapper_class', $configuration['field_labels_dob_day']['wrapper_class'])
             ->set('username_field.options.wrapper_class', $configuration['field_labels_user_name']['wrapper_class'])
             ->set('currency_field.options.label', $configuration['field_labels_currency']['label'])
-            ->set('currency_field.options.placeholder', $configuration['field_labels_currency']['placeholder'])
+            ->set('currency_field.options.attr.placeholder', $configuration['field_labels_currency']['placeholder'])
             ->set('currency_field.options.required', $configuration['field_labels_currency']['required'])
             ->set('currency_field.options.error', $configuration['field_labels_currency']['error'])
             ->set('currency_field.weight', $configuration['field_labels_currency']['weight'])
             ->set('currency_field.options.wrapper_class', $configuration['field_labels_currency']['wrapper_class'])
             ->set('first_name_field.options.label', $configuration['field_labels_first_name']['label'])
-            ->set('first_name_field.options.placeholder', $configuration['field_labels_first_name']['placeholder'])
+            ->set('first_name_field.options.attr.placeholder', $configuration['field_labels_first_name']['placeholder'])
             ->set('first_name_field.options.required', $configuration['field_labels_first_name']['required'])
             ->set('first_name_field.options.error', $configuration['field_labels_first_name']['error'])
             ->set('first_name_field.weight', $configuration['field_labels_first_name']['weight'])
             ->set('first_name_field.options.wrapper_class', $configuration['field_labels_first_name']['wrapper_class'])
             ->set('last_name_field.options.label', $configuration['field_labels_last_name']['label'])
-            ->set('last_name_field.options.placeholder', $configuration['field_labels_last_name']['placeholder'])
+            ->set('last_name_field.options.attr.placeholder', $configuration['field_labels_last_name']['placeholder'])
             ->set('last_name_field.options.required', $configuration['field_labels_last_name']['required'])
             ->set('last_name_field.options.error', $configuration['field_labels_last_name']['error'])
             ->set('last_name_field.weight', $configuration['field_labels_last_name']['weight'])
@@ -675,13 +675,13 @@ class MyAccountRegistrationForm extends ConfigFormBase
             ->set('dob_field.weight', $configuration['field_labels_dob']['weight'])
             ->set('dob_field.options.wrapper_class', $configuration['field_labels_dob']['wrapper_class'])
             ->set('country_field.options.label', $configuration['field_labels_country']['label'])
-            ->set('country_field.options.placeholder', $configuration['field_labels_country']['placeholder'])
+            ->set('country_field.options.attr.placeholder', $configuration['field_labels_country']['placeholder'])
             ->set('country_field.options.required', $configuration['field_labels_country']['required'])
             ->set('country_field.options.error', $configuration['field_labels_country']['error'])
             ->set('country_field.weight', $configuration['field_labels_country']['weight'])
             ->set('country_field.options.wrapper_class', $configuration['field_labels_country']['wrapper_class'])
             ->set('email_field.options.label', $configuration['field_labels_email']['label'])
-            ->set('email_field.options.placeholder', $configuration['field_labels_email']['placeholder'])
+            ->set('email_field.options.attr.placeholder', $configuration['field_labels_email']['placeholder'])
             ->set('email_field.options.required', $configuration['field_labels_email']['required'])
             ->set('email_field.options.error', $configuration['field_labels_email']['error'])
             ->set('email_field.weight', $configuration['field_labels_email']['weight'])
@@ -693,7 +693,7 @@ class MyAccountRegistrationForm extends ConfigFormBase
             ->set('mobile_number_field.weight', $configuration['field_labels_mobile_number']['weight'])
             ->set('mobile_number_field.options.wrapper_class', $configuration['field_labels_mobile_number']['wrapper_class'])
             ->set('language_field.options.label', $configuration['field_labels_language']['label'])
-            ->set('language_field.options.placeholder', $configuration['field_labels_language']['placeholder'])
+            ->set('language_field.options.attr.placeholder', $configuration['field_labels_language']['placeholder'])
             ->set('language_field.options.required', $configuration['field_labels_language']['required'])
             ->set('language_field.options.error', $configuration['field_labels_language']['error'])
             ->set('language_field.weight', $configuration['field_labels_language']['weight'])
