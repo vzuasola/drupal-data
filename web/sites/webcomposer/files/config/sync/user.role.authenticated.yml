@@ -27,3 +27,4 @@ permissions:
   - 'restful get entity_bundle_weight_resource'
   - 'restful get form_resource'
   - 'restful get custom_block_resource'
+  - 'restful get language_rest_resource'
