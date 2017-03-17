@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\my_account_cashier\Form;
+namespace Drupal\my_account_core\Form;
 
 use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Form\FormStateInterface;
@@ -31,7 +31,7 @@ class MyAccountCashierForm extends ConfigFormBase
     {
 
         // Get Form configuration.
-        $myAccountCashierConfig = $this->config('my_account_cashier.link');
+        $myAccountCoreConfig = $this->config('my_account_core.cashier');
 
         $form['cashier'] = [
             '#type' => 'vertical_tabs',
@@ -51,7 +51,7 @@ class MyAccountCashierForm extends ConfigFormBase
             '#size' => 25,
             '#required' => true,
             '#description' => $this->t('Label for cashier link.'),
-            '#default_value' => $myAccountCashierConfig->get('cashier_link')
+            '#default_value' => $myAccountCoreConfig->get('cashier_link')
         ];
 
         $form['actions'] = ['#type' => 'actions'];
@@ -79,7 +79,7 @@ class MyAccountCashierForm extends ConfigFormBase
      */
     protected function getEditableConfigNames()
     {
-        return ['my_account_cashier.link'];
+        return ['my_account_core.cashier'];
     }
 
 
@@ -94,7 +94,7 @@ class MyAccountCashierForm extends ConfigFormBase
     public function submitForm(array &$form, FormStateInterface $form_state)
     {
         $configuration = $form_state->getValue('field_configuration');
-        $this->config('my_account_cashier.link')
+        $this->config('my_account_core.cashier')
             ->set('cashier_link', $configuration['cashier_link'])
             ->save();
     }

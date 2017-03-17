@@ -1,4 +1,4 @@
-my_account_cashier.link:
+my_account_core.cashier:
   type: config_object
   label: 'My Account Cashier Link Configuration'
   mapping:

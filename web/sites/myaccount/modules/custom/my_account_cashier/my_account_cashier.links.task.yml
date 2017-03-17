@@ -1,4 +1,0 @@
-my_account_cashier.config:
-  route_name: my_account_cashier.config
-  base_route: my_account_cashier.config
-  title: 'My Account Cashier configuration'

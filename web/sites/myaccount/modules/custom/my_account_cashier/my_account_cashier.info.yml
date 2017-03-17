@@ -1,6 +1,0 @@
-name: My Account Cashier Module
-description: Module for my account cashier configuration
-package: My Account
-type: module
-core: 8.x
-version: '8.x-1.x-dev'

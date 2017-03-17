@@ -38,7 +38,7 @@ class MyAccountFormResource extends ResourceBase
                 return new ResourceResponse($values);
                 break;
             case 'my_account_cashier':
-                $config = \Drupal::config('my_account_cashier.link');
+                $config = \Drupal::config('my_account_cashier.cashier');
                 $values = $config->get();
                 return new ResourceResponse($values);
                 break;

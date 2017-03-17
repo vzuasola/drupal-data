@@ -1,4 +1,0 @@
-administer my_account cashier:
-  title: 'MyAccount Cashier'
-  description: 'User able to access MyAccount Cashier.'
-  restrict access: true
