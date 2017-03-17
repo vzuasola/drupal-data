@@ -119,3 +119,17 @@ casino_config.login_config:
     error_message_service_not_available:
       type: label
       label: 'Error thrown by services'
+
+casino_config.header_config:
+  type: config_object
+  label: 'Casino Header Configurations'
+  mapping:
+    join_now_text:
+      type: label
+      label: 'Join Now Text'
+    join_now_link:
+      type: label
+      label: 'Join Now Link'
+    login_issue_text:
+      type: label
+      label: 'Login Issue Text'
