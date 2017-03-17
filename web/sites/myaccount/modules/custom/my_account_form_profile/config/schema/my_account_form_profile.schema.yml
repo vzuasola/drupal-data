@@ -6,39 +6,66 @@ my_account_form_profile.change_password:
     current_password_field:
       type: mapping
       mapping:
-        label:
-          type: label
-          label: 'Current password label'
-        default:
-          type: label
-          label: 'default value for current password error'
-        error:
-          type: label
-          label: 'Error message for current password field'
+        options:
+          type: mapping
+          mapping:
+            label:
+              type: label
+              label: 'Default value for current password error'
+            help:
+              type: label
+              label: 'Help text for field'
+            error:
+              type: label
+              label: 'Error value for field'
+            attr:
+              type: mapping
+              mapping:
+                placeholder:
+                  type: label
+                  label: 'Placeholder value for field'
     new_password_field:
       type: mapping
       mapping:
-        label:
-          type: label
-          label: 'New Password label'
-        default:
-          type: label
-          label: 'default value for New Password error'
-        error:
-          type: label
-          label: 'Error message for New Password field'
+        options:
+          type: mapping
+          mapping:
+            label:
+              type: label
+              label: 'Default value for new password error'
+            help:
+              type: label
+              label: 'Help text for field'
+            error:
+              type: label
+              label: 'Error value for field'
+            attr:
+              type: mapping
+              mapping:
+                placeholder:
+                  type: label
+                  label: 'Placeholder value for field'
     confirm_password_field:
       type: mapping
       mapping:
-        label:
-          type: label
-          label: 'Confirm password label'
-        default:
-          type: label
-          label: 'default value for Confirm password error'
-        error:
-          type: label
-          label: 'Error message for Confirm password field'
+        options:
+          type: mapping
+          mapping:
+            label:
+              type: label
+              label: 'Default value for confirm password error'
+            help:
+              type: label
+              label: 'Help text for field'
+            error:
+              type: label
+              label: 'Error value for field'
+            attr:
+              type: mapping
+              mapping:
+                placeholder:
+                  type: label
+                  label: 'Placeholder value for field'
   langcode: 'en'
 
 # Change password form schema configuration
@@ -49,94 +76,154 @@ my_account_form_profile.profile:
     username_field:
       type: mapping
       mapping:
-        label:
-          type: label
-          label: 'Field label'
-        error:
-          type: label
-          label: 'Error message'
+        options:
+          type: mapping
+          mapping:
+            label:
+              type: label
+              label: 'Field label'
+            error:
+              type: label
+              label: 'Error message'
+            placeholder:
+              type: label
+              label: 'Placeholder value for field'
     currency_field:
       type: mapping
       mapping:
-        label:
-          type: label
-          label: 'Field label'
-        error:
-          type: label
-          label: 'Error message'
+        options:
+          type: mapping
+          mapping:
+            label:
+              type: label
+              label: 'Field label'
+            error:
+              type: label
+              label: 'Error message'
+            placeholder:
+              type: label
+              label: 'Placeholder value for field'
     first_name_field:
       type: mapping
       mapping:
-        label:
-          type: label
-          label: 'Field label'
-        error:
-          type: label
-          label: 'Error message'
+        options:
+          type: mapping
+          mapping:
+            label:
+              type: label
+              label: 'Field label'
+            error:
+              type: label
+              label: 'Error message'
+            placeholder:
+              type: label
+              label: 'Placeholder value for field'
     last_name_field:
       type: mapping
       mapping:
-        label:
-          type: label
-          label: 'Field label'
-        error:
-          type: label
-          label: 'Error message'
+        options:
+          type: mapping
+          mapping:
+            label:
+              type: label
+              label: 'Field label'
+            error:
+              type: label
+              label: 'Error message'
+            placeholder:
+              type: label
+              label: 'Placeholder value for field'
     dob_field:
       type: mapping
       mapping:
-        label:
-          type: label
-          label: 'Field label'
-        error:
-          type: label
-          label: 'Error message'
+        options:
+          type: mapping
+          mapping:
+            label:
+              type: label
+              label: 'Field label'
+            error:
+              type: label
+              label: 'Error message'
+            placeholder:
+              type: label
+              label: 'Placeholder value for field'
     country_field:
       type: mapping
       mapping:
-        label:
-          type: label
-          label: 'Field label'
-        error:
-          type: label
-          label: 'Error message'
+        options:
+          type: mapping
+          mapping:
+            label:
+              type: label
+              label: 'Field label'
+            error:
+              type: label
+              label: 'Error message'
+            placeholder:
+              type: label
+              label: 'Placeholder value for field'
     email_field:
       type: mapping
       mapping:
-        label:
-          type: label
-          label: 'Field label'
-        error:
-          type: label
-          label: 'Error message'
+        options:
+          type: mapping
+          mapping:
+            label:
+              type: label
+              label: 'Field label'
+            error:
+              type: label
+              label: 'Error message'
+            placeholder:
+              type: label
+              label: 'Placeholder value for field'
     communication_detail_field:
       type: mapping
       mapping:
-        label:
-          type: label
-          label: 'Field label'
+        options:
+          type: mapping
+          mapping:
+            label:
+              type: label
+              label: 'Field label'
     account_field:
       type: mapping
       mapping:
-        label:
-          type: label
-          label: 'Field label'
+        options:
+          type: mapping
+          mapping:
+            label:
+              type: label
+              label: 'Field label'
     mobile_number_field:
       type: mapping
       mapping:
-        label:
-          type: label
-          label: 'Field label'
-        error:
-          type: label
-          label: 'Error message'
+        options:
+          type: mapping
+          mapping:
+            label:
+              type: label
+              label: 'Field label'
+            error:
+              type: label
+              label: 'Error message'
+            placeholder:
+              type: label
+              label: 'Placeholder value for field'
     language_field:
       type: mapping
       mapping:
-        label:
-          type: label
-          label: 'Field label'
-        error:
-          type: label
-          label: 'Error message'
+        options:
+          type: mapping
+          mapping:
+            label:
+              type: label
+              label: 'Field label'
+            error:
+              type: label
+              label: 'Error message'
+            placeholder:
+              type: label
+              label: 'Placeholder value for field'
   langcode: 'en'

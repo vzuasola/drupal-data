@@ -56,13 +56,21 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#size' => 25,
             '#required' => TRUE,
             '#description' => $this->t('Label for the username Field.'),
-            '#default_value' => $myAccountConfigValue['username_field']['label']
+            '#default_value' => $myAccountConfigValue['username_field']['options']['label']
+        ];
+
+        $form['field_configuration']['field_labels_user_name']['placeholder'] = [
+            '#type' => 'textfield',
+            '#title' => t('Placeholder'),
+            '#size' => 25,
+            '#description' => $this->t('Placeholder for the username Field.'),
+            '#default_value' => $myAccountConfigValue['username_field']['options']['placeholder']
         ];
 
         $form['field_configuration']['field_labels_user_name']['required'] = [
             '#type' => 'checkbox',
             '#title' => $this->t('Required field'),
-            '#default_value' => $myAccountConfigValue['username_field']['required']
+            '#default_value' => $myAccountConfigValue['username_field']['options']['required']
         ];
 
         $form['field_configuration']['field_labels_user_name']['weight'] = [
@@ -72,12 +80,12 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#default_value' => $myAccountConfigValue['username_field']['weight']
         ];
 
-        $form['field_configuration']['field_labels_user_name']['wrapper'] = [
+        $form['field_configuration']['field_labels_user_name']['wrapper_class'] = [
             '#type' => 'textfield',
             '#title' => t('Username wrapper'),
             '#size' => 25,
             '#description' => $this->t('Wrapper class for field.'),
-            '#default_value' => $myAccountConfigValue['username_field']['wrapper']
+            '#default_value' => $myAccountConfigValue['username_field']['options']['wrapper_class']
         ];
 
         $form['field_configuration']['field_labels_currency'] = [
@@ -93,20 +101,28 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#size' => 25,
             '#required' => TRUE,
             '#description' => $this->t('Label for the currency Field.'),
-            '#default_value' => $myAccountConfigValue['currency_field']['label']
+            '#default_value' => $myAccountConfigValue['currency_field']['options']['label']
+        ];
+
+        $form['field_configuration']['field_labels_currency']['placeholder'] = [
+            '#type' => 'textfield',
+            '#title' => t('Placeholder'),
+            '#size' => 25,
+            '#description' => $this->t('Placeholder for the currency Field.'),
+            '#default_value' => $myAccountConfigValue['currency_field']['options']['placeholder']
         ];
 
         $form['field_configuration']['field_labels_currency']['required'] = [
             '#type' => 'checkbox',
             '#title' => $this->t('Required field'),
-            '#default_value' => $myAccountConfigValue['currency_field']['required']
+            '#default_value' => $myAccountConfigValue['currency_field']['options']['required']
         ];
 
         $form['field_configuration']['field_labels_currency']['error'] = [
             '#type' => 'textfield',
             '#title' => $this->t('Error message for currency'),
             '#size' => 100,
-            '#default_value' => $myAccountConfigValue['currency_field']['error']
+            '#default_value' => $myAccountConfigValue['currency_field']['options']['error']
         ];
 
         $form['field_configuration']['field_labels_currency']['weight'] = [
@@ -116,12 +132,12 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#default_value' => $myAccountConfigValue['currency_field']['weight']
         ];
 
-        $form['field_configuration']['field_labels_currency']['wrapper'] = [
+        $form['field_configuration']['field_labels_currency']['wrapper_class'] = [
             '#type' => 'textfield',
             '#title' => t('wrapper class'),
             '#size' => 25,
             '#description' => $this->t('Wrapper class for field.'),
-            '#default_value' => $myAccountConfigValue['currency_field']['wrapper']
+            '#default_value' => $myAccountConfigValue['currency_field']['options']['wrapper_class']
         ];
 
         $form['field_configuration']['field_labels_first_name'] = [
@@ -137,20 +153,28 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#size' => 25,
             '#required' => TRUE,
             '#description' => $this->t('Label for the first name Field.'),
-            '#default_value' => $myAccountConfigValue['first_name_field']['label']
+            '#default_value' => $myAccountConfigValue['first_name_field']['options']['label']
+        ];
+
+        $form['field_configuration']['field_labels_first_name']['placeholder'] = [
+            '#type' => 'textfield',
+            '#title' => t('Placeholder'),
+            '#size' => 25,
+            '#description' => $this->t('Placeholder for the first name Field.'),
+            '#default_value' => $myAccountConfigValue['first_name_field']['options']['placeholder']
         ];
 
         $form['field_configuration']['field_labels_first_name']['required'] = [
             '#type' => 'checkbox',
             '#title' => $this->t('Required field'),
-            '#default_value' => $myAccountConfigValue['first_name_field']['required']
+            '#default_value' => $myAccountConfigValue['first_name_field']['options']['required']
         ];
 
         $form['field_configuration']['field_labels_first_name']['error'] = [
             '#type' => 'textfield',
             '#title' => $this->t('Error message for First name'),
             '#size' => 100,
-            '#default_value' => $myAccountConfigValue['first_name_field']['error']
+            '#default_value' => $myAccountConfigValue['first_name_field']['options']['error']
         ];
 
         $form['field_configuration']['field_labels_first_name']['weight'] = [
@@ -160,12 +184,12 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#default_value' => $myAccountConfigValue['first_name_field']['weight']
         ];
 
-        $form['field_configuration']['field_labels_first_name']['wrapper'] = [
+        $form['field_configuration']['field_labels_first_name']['wrapper_class'] = [
             '#type' => 'textfield',
             '#title' => t('First name wrapper class'),
             '#size' => 25,
             '#description' => $this->t('Wrapper class for field.'),
-            '#default_value' => $myAccountConfigValue['first_name_field']['wrapper']
+            '#default_value' => $myAccountConfigValue['first_name_field']['options']['wrapper_class']
         ];
 
         $form['field_configuration']['field_labels_last_name'] = [
@@ -181,20 +205,28 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#size' => 25,
             '#required' => TRUE,
             '#description' => $this->t('Label for the last name Field.'),
-            '#default_value' => $myAccountConfigValue['last_name_field']['label']
+            '#default_value' => $myAccountConfigValue['last_name_field']['options']['label']
+        ];
+
+        $form['field_configuration']['field_labels_last_name']['placeholder'] = [
+            '#type' => 'textfield',
+            '#title' => t('Placeholder'),
+            '#size' => 25,
+            '#description' => $this->t('Placeholder for the last name Field.'),
+            '#default_value' => $myAccountConfigValue['last_name_field']['options']['placeholder']
         ];
 
         $form['field_configuration']['field_labels_last_name']['required'] = [
             '#type' => 'checkbox',
             '#title' => $this->t('Required field'),
-            '#default_value' => $myAccountConfigValue['last_name_field']['required']
+            '#default_value' => $myAccountConfigValue['last_name_field']['options']['required']
         ];
 
         $form['field_configuration']['field_labels_last_name']['error'] = [
             '#type' => 'textfield',
             '#title' => $this->t('Error message for Last name'),
             '#size' => 100,
-            '#default_value' => $myAccountConfigValue['last_name_field']['error']
+            '#default_value' => $myAccountConfigValue['last_name_field']['options']['error']
         ];
 
         $form['field_configuration']['field_labels_last_name']['weight'] = [
@@ -204,12 +236,12 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#default_value' => $myAccountConfigValue['last_name_field']['weight']
         ];
 
-        $form['field_configuration']['field_labels_last_name']['wrapper'] = [
+        $form['field_configuration']['field_labels_last_name']['wrapper_class'] = [
             '#type' => 'textfield',
             '#title' => t('Last name wrapper class'),
             '#size' => 25,
             '#description' => $this->t('Wrapper class for field.'),
-            '#default_value' => $myAccountConfigValue['last_name_field']['wrapper']
+            '#default_value' => $myAccountConfigValue['last_name_field']['options']['wrapper_class']
         ];
 
         $form['field_configuration']['field_labels_dob'] = [
@@ -225,20 +257,20 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#size' => 25,
             '#required' => TRUE,
             '#description' => $this->t('Label for the DOB Field.'),
-            '#default_value' => $myAccountConfigValue['dob_field']['label']
+            '#default_value' => $myAccountConfigValue['dob_field']['options']['label']
         ];
 
         $form['field_configuration']['field_labels_dob']['required'] = [
             '#type' => 'checkbox',
             '#title' => $this->t('Required field'),
-            '#default_value' => $myAccountConfigValue['dob_field']['required']
+            '#default_value' => $myAccountConfigValue['dob_field']['options']['required']
         ];
 
         $form['field_configuration']['field_labels_dob']['error'] = [
             '#type' => 'textfield',
             '#title' => $this->t('Error message for DOB'),
             '#size' => 100,
-            '#default_value' => $myAccountConfigValue['dob_field']['error']
+            '#default_value' => $myAccountConfigValue['dob_field']['options']['error']
         ];
 
         $form['field_configuration']['field_labels_dob']['weight'] = [
@@ -248,12 +280,76 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#default_value' => $myAccountConfigValue['dob_field']['weight']
         ];
 
-        $form['field_configuration']['field_labels_dob']['wrapper'] = [
+        $form['field_configuration']['field_labels_dob']['wrapper_class'] = [
             '#type' => 'textfield',
             '#title' => t('DOB wrapper class'),
             '#size' => 25,
             '#description' => $this->t('Wrapper class for field.'),
-            '#default_value' => $myAccountConfigValue['dob_field']['wrapper']
+            '#default_value' => $myAccountConfigValue['dob_field']['options']['wrapper_class']
+        ];
+        $form['field_configuration']['field_labels_dob_month'] = [
+            '#type' => 'details',
+            '#title' => 'DOB Month',
+            '#open' => False,
+            '#tree' => TRUE,
+        ];
+
+        $form['field_configuration']['field_labels_dob_month']['weight'] = [
+            '#type' => 'select',
+            '#title' => $this->t('DOB Month Field Weight'),
+            '#options' => array('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10'),
+            '#default_value' => $myAccountConfigValue['dob_month']['weight']
+        ];
+
+        $form['field_configuration']['field_labels_dob_month']['wrapper_class'] = [
+            '#type' => 'textfield',
+            '#title' => t('DOB Month wrapper class'),
+            '#size' => 25,
+            '#description' => $this->t('Wrapper class for field.'),
+            '#default_value' => $myAccountConfigValue['dob_month']['options']['wrapper_class']
+        ];
+
+        $form['field_configuration']['field_labels_dob_day'] = [
+            '#type' => 'details',
+            '#title' => 'DOB Day',
+            '#open' => False,
+            '#tree' => TRUE,
+        ];
+
+        $form['field_configuration']['field_labels_dob_day']['weight'] = [
+            '#type' => 'select',
+            '#title' => $this->t('DOB Day Field Weight'),
+            '#options' => array('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10'),
+            '#default_value' => $myAccountConfigValue['dob_day']['weight']
+        ];
+
+        $form['field_configuration']['field_labels_dob_day']['wrapper_class'] = [
+            '#type' => 'textfield',
+            '#title' => t('DOB Day wrapper class'),
+            '#size' => 25,
+            '#description' => $this->t('Wrapper class for field.'),
+            '#default_value' => $myAccountConfigValue['dob_day']['options']['wrapper_class']
+        ];
+        $form['field_configuration']['field_labels_dob_year'] = [
+            '#type' => 'details',
+            '#title' => 'DOB Year',
+            '#open' => False,
+            '#tree' => TRUE,
+        ];
+
+        $form['field_configuration']['field_labels_dob_year']['weight'] = [
+            '#type' => 'select',
+            '#title' => $this->t('DOB Year Field Weight'),
+            '#options' => array('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10'),
+            '#default_value' => $myAccountConfigValue['dob_year']['weight']
+        ];
+
+        $form['field_configuration']['field_labels_dob_year']['wrapper_class'] = [
+            '#type' => 'textfield',
+            '#title' => t('DOB Year wrapper class'),
+            '#size' => 25,
+            '#description' => $this->t('Wrapper class for field.'),
+            '#default_value' => $myAccountConfigValue['dob_year']['options']['wrapper_class']
         ];
 
         $form['field_configuration']['field_labels_country'] = [
@@ -269,20 +365,28 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#size' => 25,
             '#required' => TRUE,
             '#description' => $this->t('Label for the country Field.'),
-            '#default_value' => $myAccountConfigValue['country_field']['label']
+            '#default_value' => $myAccountConfigValue['country_field']['options']['label']
+        ];
+
+        $form['field_configuration']['field_labels_country']['placeholder'] = [
+            '#type' => 'textfield',
+            '#title' => t('Placeholder'),
+            '#size' => 25,
+            '#description' => $this->t('Placeholder for the country Field.'),
+            '#default_value' => $myAccountConfigValue['country_field']['options']['placeholder']
         ];
 
         $form['field_configuration']['field_labels_country']['required'] = [
             '#type' => 'checkbox',
             '#title' => $this->t('Required field'),
-            '#default_value' => $myAccountConfigValue['country_field']['required']
+            '#default_value' => $myAccountConfigValue['country_field']['options']['required']
         ];
 
         $form['field_configuration']['field_labels_country']['error'] = [
             '#type' => 'textfield',
             '#title' => $this->t('Error message for Country'),
             '#size' => 100,
-            '#default_value' => $myAccountConfigValue['country_field']['error']
+            '#default_value' => $myAccountConfigValue['country_field']['options']['error']
         ];
 
         $form['field_configuration']['field_labels_country']['weight'] = [
@@ -292,12 +396,12 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#default_value' => $myAccountConfigValue['country_field']['weight']
         ];
 
-        $form['field_configuration']['field_labels_country']['wrapper'] = [
+        $form['field_configuration']['field_labels_country']['wrapper_class'] = [
             '#type' => 'textfield',
             '#title' => t('Country wrapper class'),
             '#size' => 25,
             '#description' => $this->t('Wrapper class for field.'),
-            '#default_value' => $myAccountConfigValue['country_field']['wrapper']
+            '#default_value' => $myAccountConfigValue['country_field']['options']['wrapper_class']
         ];
 
         $form['field_configuration']['field_labels_email'] = [
@@ -313,20 +417,28 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#size' => 25,
             '#required' => TRUE,
             '#description' => $this->t('Label for the email Field.'),
-            '#default_value' => $myAccountConfigValue['email_field']['label']
+            '#default_value' => $myAccountConfigValue['email_field']['options']['label']
+        ];
+
+        $form['field_configuration']['field_labels_email']['placeholder'] = [
+            '#type' => 'textfield',
+            '#title' => t('Placeholder'),
+            '#size' => 25,
+            '#description' => $this->t('Placeholder for the email Field.'),
+            '#default_value' => $myAccountConfigValue['email_field']['options']['placeholder']
         ];
 
         $form['field_configuration']['field_labels_email']['required'] = [
             '#type' => 'checkbox',
             '#title' => $this->t('Required field'),
-            '#default_value' => $myAccountConfigValue['email_field']['required']
+            '#default_value' => $myAccountConfigValue['email_field']['options']['required']
         ];
 
         $form['field_configuration']['field_labels_email']['error'] = [
             '#type' => 'textfield',
             '#title' => $this->t('Error message for Email'),
             '#size' => 100,
-            '#default_value' => $myAccountConfigValue['email_field']['error']
+            '#default_value' => $myAccountConfigValue['email_field']['options']['error']
         ];
 
         $form['field_configuration']['field_labels_email']['weight'] = [
@@ -336,12 +448,12 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#default_value' => $myAccountConfigValue['email_field']['weight']
         ];
 
-        $form['field_configuration']['field_labels_email']['wrapper'] = [
+        $form['field_configuration']['field_labels_email']['wrapper_class'] = [
             '#type' => 'textfield',
             '#title' => t('Email wrapper class'),
             '#size' => 25,
             '#description' => $this->t('Wrapper class for field.'),
-            '#default_value' => $myAccountConfigValue['email_field']['wrapper']
+            '#default_value' => $myAccountConfigValue['email_field']['options']['wrapper_class']
         ];
 
         $form['field_configuration']['field_labels_mobile_number'] = [
@@ -357,20 +469,29 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#size' => 25,
             '#required' => TRUE,
             '#description' => $this->t('Label for the mobile number Field.'),
-            '#default_value' => $myAccountConfigValue['mobile_number_field']['label']
+            '#default_value' => $myAccountConfigValue['mobile_number_field']['options']['label']
+        ];
+
+        $form['field_configuration']['field_labels_mobile_number']['placeholder'] = [
+            '#type' => 'textfield',
+            '#title' => t('Placeholder'),
+            '#size' => 25,
+            '#required' => TRUE,
+            '#description' => $this->t('Placeholder for the mobile number Field.'),
+            '#default_value' => $myAccountConfigValue['mobile_number_field']['options']['placeholder']
         ];
 
         $form['field_configuration']['field_labels_mobile_number']['required'] = [
             '#type' => 'checkbox',
             '#title' => $this->t('Required field'),
-            '#default_value' => $myAccountConfigValue['mobile_number_field']['required']
+            '#default_value' => $myAccountConfigValue['mobile_number_field']['options']['required']
         ];
 
         $form['field_configuration']['field_labels_mobile_number']['error'] = [
             '#type' => 'textfield',
             '#title' => $this->t('Error message for Mobile number'),
             '#size' => 100,
-            '#default_value' => $myAccountConfigValue['mobile_number_field']['error']
+            '#default_value' => $myAccountConfigValue['mobile_number_field']['options']['error']
         ];
 
         $form['field_configuration']['field_labels_mobile_number']['weight'] = [
@@ -380,12 +501,12 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#default_value' => $myAccountConfigValue['mobile_number_field']['weight']
         ];
 
-        $form['field_configuration']['field_labels_mobile_number']['wrapper'] = [
+        $form['field_configuration']['field_labels_mobile_number']['wrapper_class'] = [
             '#type' => 'textfield',
             '#title' => t('Mobile no. wrapper class'),
             '#size' => 25,
             '#description' => $this->t('Wrapper class for field.'),
-            '#default_value' => $myAccountConfigValue['mobile_number_field']['wrapper']
+            '#default_value' => $myAccountConfigValue['mobile_number_field']['options']['wrapper_class']
         ];
 
         $form['field_configuration']['field_labels_language'] = [
@@ -401,20 +522,28 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#size' => 25,
             '#required' => TRUE,
             '#description' => $this->t('Label for the language Field.'),
-            '#default_value' => $myAccountConfigValue['language_field']['label']
+            '#default_value' => $myAccountConfigValue['language_field']['options']['label']
+        ];
+
+        $form['field_configuration']['field_labels_language']['placeholder'] = [
+            '#type' => 'textfield',
+            '#title' => t('Placeholder'),
+            '#size' => 25,
+            '#description' => $this->t('Placeholder for the language Field.'),
+            '#default_value' => $myAccountConfigValue['language_field']['options']['placeholder']
         ];
 
         $form['field_configuration']['field_labels_language']['required'] = [
             '#type' => 'checkbox',
             '#title' => $this->t('Required field'),
-            '#default_value' => $myAccountConfigValue['language_field']['required']
+            '#default_value' => $myAccountConfigValue['language_field']['options']['required']
         ];
 
         $form['field_configuration']['field_labels_language']['error'] = [
             '#type' => 'textfield',
             '#title' => $this->t('Error message for Language'),
             '#size' => 100,
-            '#default_value' => $myAccountConfigValue['language_field']['error']
+            '#default_value' => $myAccountConfigValue['language_field']['options']['error']
         ];
 
         $form['field_configuration']['field_labels_language']['weight'] = [
@@ -423,20 +552,20 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#options' => array('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10'),
             '#default_value' => $myAccountConfigValue['language_field']['weight']
         ];
-        $form['field_configuration']['field_labels_language']['language_field_help_text'] = [
+        $form['field_configuration']['field_labels_language']['help_text'] = [
             '#type' => 'textarea',
             '#title' => $this->t('Help text'),
             '#rows' => 5,
             '#description' => $this->t('Instructions to present to the user below this field on the editing form.'),
-            '#default_value' => $myAccountConfigValue['language_field']['language_field_help_text']
+            '#default_value' => $myAccountConfigValue['language_field']['options']['help_text']
         ];
 
-        $form['field_configuration']['field_labels_language']['wrapper'] = [
+        $form['field_configuration']['field_labels_language']['wrapper_class'] = [
             '#type' => 'textfield',
             '#title' => t('Language wrapper class'),
             '#size' => 25,
             '#description' => $this->t('Wrapper class for field.'),
-            '#default_value' => $myAccountConfigValue['language_field']['wrapper']
+            '#default_value' => $myAccountConfigValue['language_field']['options']['wrapper_class']
         ];
 
         $form['actions'] = ['#type' => 'actions'];
@@ -511,51 +640,65 @@ class MyAccountRegistrationForm extends ConfigFormBase
     {
         $configuration = $form_state->getValue('field_configuration');
         $this->config('my_account_form_profile.profile')
-            ->set('username_field.label', $configuration['field_labels_user_name']['label'])
-            ->set('username_field.required', $configuration['field_labels_user_name']['required'])
+            ->set('username_field.options.label', $configuration['field_labels_user_name']['label'])
+            ->set('username_field.options.placeholder', $configuration['field_labels_user_name']['placeholder'])
+            ->set('username_field.options.required', $configuration['field_labels_user_name']['required'])
             ->set('username_field.weight', $configuration['field_labels_user_name']['weight'])
-            ->set('username_field.wrapper', $configuration['field_labels_user_name']['wrapper'])
-            ->set('currency_field.label', $configuration['field_labels_currency']['label'])
-            ->set('currency_field.required', $configuration['field_labels_currency']['required'])
-            ->set('currency_field.error', $configuration['field_labels_currency']['error'])
+            ->set('dob_month.weight', $configuration['field_labels_dob_month']['weight'])
+            ->set('dob_field.options.wrapper_class', $configuration['field_labels_dob_month']['wrapper_class'])
+            ->set('dob_year.weight', $configuration['field_labels_dob_year']['weight'])
+            ->set('dob_year.options.wrapper_class', $configuration['field_labels_dob_year']['wrapper_class'])
+            ->set('dob_day.weight', $configuration['field_labels_dob_day']['weight'])
+            ->set('dob_day.options.wrapper_class', $configuration['field_labels_dob_day']['wrapper_class'])
+            ->set('username_field.options.wrapper_class', $configuration['field_labels_user_name']['wrapper_class'])
+            ->set('currency_field.options.label', $configuration['field_labels_currency']['label'])
+            ->set('currency_field.options.placeholder', $configuration['field_labels_currency']['placeholder'])
+            ->set('currency_field.options.required', $configuration['field_labels_currency']['required'])
+            ->set('currency_field.options.error', $configuration['field_labels_currency']['error'])
             ->set('currency_field.weight', $configuration['field_labels_currency']['weight'])
-            ->set('currency_field.wrapper', $configuration['field_labels_currency']['wrapper'])
-            ->set('first_name_field.label', $configuration['field_labels_first_name']['label'])
-            ->set('first_name_field.required', $configuration['field_labels_first_name']['required'])
-            ->set('first_name_field.error', $configuration['field_labels_first_name']['error'])
+            ->set('currency_field.options.wrapper_class', $configuration['field_labels_currency']['wrapper_class'])
+            ->set('first_name_field.options.label', $configuration['field_labels_first_name']['label'])
+            ->set('first_name_field.options.placeholder', $configuration['field_labels_first_name']['placeholder'])
+            ->set('first_name_field.options.required', $configuration['field_labels_first_name']['required'])
+            ->set('first_name_field.options.error', $configuration['field_labels_first_name']['error'])
             ->set('first_name_field.weight', $configuration['field_labels_first_name']['weight'])
-            ->set('first_name_field.wrapper', $configuration['field_labels_first_name']['wrapper'])
-            ->set('last_name_field.label', $configuration['field_labels_last_name']['label'])
-            ->set('last_name_field.required', $configuration['field_labels_last_name']['required'])
-            ->set('last_name_field.error', $configuration['field_labels_last_name']['error'])
+            ->set('first_name_field.options.wrapper_class', $configuration['field_labels_first_name']['wrapper_class'])
+            ->set('last_name_field.options.label', $configuration['field_labels_last_name']['label'])
+            ->set('last_name_field.options.placeholder', $configuration['field_labels_last_name']['placeholder'])
+            ->set('last_name_field.options.required', $configuration['field_labels_last_name']['required'])
+            ->set('last_name_field.options.error', $configuration['field_labels_last_name']['error'])
             ->set('last_name_field.weight', $configuration['field_labels_last_name']['weight'])
-            ->set('last_name_field.wrapper', $configuration['field_labels_last_name']['wrapper'])
-            ->set('dob_field.label', $configuration['field_labels_dob']['label'])
-            ->set('dob_field.required', $configuration['field_labels_dob']['required'])
-            ->set('dob_field.error', $configuration['field_labels_dob']['error'])
+            ->set('last_name_field.options.wrapper_class', $configuration['field_labels_last_name']['wrapper_class'])
+            ->set('dob_field.options.label', $configuration['field_labels_dob']['label'])
+            ->set('dob_field.options.required', $configuration['field_labels_dob']['required'])
+            ->set('dob_field.options.error', $configuration['field_labels_dob']['error'])
             ->set('dob_field.weight', $configuration['field_labels_dob']['weight'])
-            ->set('dob_field.wrapper', $configuration['field_labels_dob']['wrapper'])
-            ->set('country_field.label', $configuration['field_labels_country']['label'])
-            ->set('country_field.required', $configuration['field_labels_country']['required'])
-            ->set('country_field.error', $configuration['field_labels_country']['error'])
+            ->set('dob_field.options.wrapper_class', $configuration['field_labels_dob']['wrapper_class'])
+            ->set('country_field.options.label', $configuration['field_labels_country']['label'])
+            ->set('country_field.options.placeholder', $configuration['field_labels_country']['placeholder'])
+            ->set('country_field.options.required', $configuration['field_labels_country']['required'])
+            ->set('country_field.options.error', $configuration['field_labels_country']['error'])
             ->set('country_field.weight', $configuration['field_labels_country']['weight'])
-            ->set('country_field.wrapper', $configuration['field_labels_country']['wrapper'])
-            ->set('email_field.label', $configuration['field_labels_email']['label'])
-            ->set('email_field.required', $configuration['field_labels_email']['required'])
-            ->set('email_field.error', $configuration['field_labels_email']['error'])
+            ->set('country_field.options.wrapper_class', $configuration['field_labels_country']['wrapper_class'])
+            ->set('email_field.options.label', $configuration['field_labels_email']['label'])
+            ->set('email_field.options.placeholder', $configuration['field_labels_email']['placeholder'])
+            ->set('email_field.options.required', $configuration['field_labels_email']['required'])
+            ->set('email_field.options.error', $configuration['field_labels_email']['error'])
             ->set('email_field.weight', $configuration['field_labels_email']['weight'])
-            ->set('email_field.wrapper', $configuration['field_labels_email']['wrapper'])
+            ->set('email_field.options.wrapper_class', $configuration['field_labels_email']['wrapper_class'])
             ->set('mobile_number_field.label', $configuration['field_labels_mobile_number']['label'])
-            ->set('mobile_number_field.required', $configuration['field_labels_mobile_number']['required'])
-            ->set('mobile_number_field.error', $configuration['field_labels_mobile_number']['error'])
+            ->set('mobile_number_field.placeholder', $configuration['field_labels_mobile_number']['placeholder'])
+            ->set('mobile_number_field.options.required', $configuration['field_labels_mobile_number']['required'])
+            ->set('mobile_number_field.options.error', $configuration['field_labels_mobile_number']['error'])
             ->set('mobile_number_field.weight', $configuration['field_labels_mobile_number']['weight'])
-            ->set('mobile_number_field.wrapper', $configuration['field_labels_mobile_number']['wrapper'])
-            ->set('language_field.label', $configuration['field_labels_language']['label'])
-            ->set('language_field.required', $configuration['field_labels_language']['required'])
-            ->set('language_field.error', $configuration['field_labels_language']['error'])
+            ->set('mobile_number_field.options.wrapper_class', $configuration['field_labels_mobile_number']['wrapper_class'])
+            ->set('language_field.options.label', $configuration['field_labels_language']['label'])
+            ->set('language_field.options.placeholder', $configuration['field_labels_language']['placeholder'])
+            ->set('language_field.options.required', $configuration['field_labels_language']['required'])
+            ->set('language_field.options.error', $configuration['field_labels_language']['error'])
             ->set('language_field.weight', $configuration['field_labels_language']['weight'])
-            ->set('language_field.language_field_help_text', $configuration['field_labels_language']['language_field_help_text'])
-            ->set('language_field.wrapper', $configuration['field_labels_language']['wrapper'])
+            ->set('language_field.options.help_text', $configuration['field_labels_language']['help_text'])
+            ->set('language_field.options.wrapper_class', $configuration['field_labels_language']['wrapper_class'])
             ->save();
     }
 

@@ -58,7 +58,7 @@ class MyAccountChangePasswordForm extends ConfigFormBase
             '#size' => 25,
             '#required' => TRUE,
             '#description' => $this->t('Label for the current password Field.'),
-            '#default_value' => $myAccountConfigValue['current_password_field']['label']
+            '#default_value' => $myAccountConfigValue['current_password_field']['options']['label']
         ];
 
         $form['field_configuration']['field_labels_current']['help'] = [
@@ -66,26 +66,26 @@ class MyAccountChangePasswordForm extends ConfigFormBase
             '#title' => $this->t('Help text'),
             '#rows' => 5,
             '#description' => $this->t('Instructions to present to the user below this field on the editing form.'),
-            '#default_value' => $myAccountConfigValue['current_password_field']['help']
+            '#default_value' => $myAccountConfigValue['current_password_field']['options']['help']
         ];
 
         $form['field_configuration']['field_labels_current']['required'] = [
             '#type' => 'checkbox',
             '#title' => $this->t('Required field'),
-            '#default_value' => $myAccountConfigValue['current_password_field']['required']
+            '#default_value' => $myAccountConfigValue['current_password_field']['options']['required']
         ];
 
         $form['field_configuration']['field_labels_current']['default_detail'] = [
             '#type' => 'details',
-            '#title' => 'Default value',
+            '#title' => 'Field Placeholder',
             '#description' => $this->t('The default value for this field, used when creating new content.'),
         ];
 
-        $form['field_configuration']['field_labels_current']['default_detail']['default'] = [
+        $form['field_configuration']['field_labels_current']['default_detail']['placeholder'] = [
             '#type' => 'textfield',
-            '#title' => $this->t('Change Password'),
+            '#title' => $this->t('Current Password'),
             '#maxlength' => 255,
-            '#default_value' => $myAccountConfigValue['current_password_field']['default'],
+            '#default_value' => $myAccountConfigValue['current_password_field']['options']['attr']['placeholder'],
         ];
 
         $form['field_configuration']['field_labels_current']['error'] = [
@@ -93,7 +93,7 @@ class MyAccountChangePasswordForm extends ConfigFormBase
             '#title' => t('Current Password Error'),
             '#description' => $this->t('Required Error Message.'),
             '#maxlength' => 255,
-            '#default_value' => $myAccountConfigValue['current_password_field']['error']
+            '#default_value' => $myAccountConfigValue['current_password_field']['options']['error']
         ];
 
         $form['field_configuration']['field_labels_current']['weight'] = [
@@ -103,12 +103,12 @@ class MyAccountChangePasswordForm extends ConfigFormBase
             '#default_value' => $myAccountConfigValue['current_password_field']['weight']
         ];
 
-        $form['field_configuration']['field_labels_current']['wrapper'] = [
+        $form['field_configuration']['field_labels_current']['wrapper_class'] = [
             '#type' => 'textfield',
             '#title' => t('Current password wrapper'),
             '#size' => 25,
             '#description' => $this->t('Wrapper class for field.'),
-            '#default_value' => $myAccountConfigValue['current_password_field']['wrapper']
+            '#default_value' => $myAccountConfigValue['current_password_field']['options']['wrapper_class']
         ];
 
         $form['field_configuration']['field_labels_new_password'] = [
@@ -124,7 +124,7 @@ class MyAccountChangePasswordForm extends ConfigFormBase
             '#size' => 25,
             '#required' => TRUE,
             '#description' => $this->t('Label for the new password Field.'),
-            '#default_value' => $myAccountConfigValue['new_password_field']['label']
+            '#default_value' => $myAccountConfigValue['new_password_field']['options']['label']
         ];
 
         $form['field_configuration']['field_labels_new_password']['help'] = [
@@ -132,26 +132,26 @@ class MyAccountChangePasswordForm extends ConfigFormBase
             '#title' => $this->t('Help text'),
             '#rows' => 5,
             '#description' => $this->t('Instructions to present to the user below this field on the editing form.'),
-            '#default_value' => $myAccountConfigValue['new_password_field']['help']
+            '#default_value' => $myAccountConfigValue['new_password_field']['options']['help']
         ];
 
         $form['field_configuration']['field_labels_new_password']['required'] = [
             '#type' => 'checkbox',
             '#title' => $this->t('Required field'),
-            '#default_value' => $myAccountConfigValue['new_password_field']['required']
+            '#default_value' => $myAccountConfigValue['new_password_field']['options']['required']
         ];
 
         $form['field_configuration']['field_labels_new_password']['default_detail'] = [
             '#type' => 'details',
-            '#title' => 'Default value',
+            '#title' => 'Field Placeholder',
             '#description' => $this->t('The default value for this field, used when creating new content.'),
         ];
 
-        $form['field_configuration']['field_labels_new_password']['default_detail']['default'] = [
+        $form['field_configuration']['field_labels_new_password']['default_detail']['placeholder'] = [
             '#type' => 'textfield',
             '#title' => $this->t('New Password'),
             '#maxlength' => 255,
-            '#default_value' => $myAccountConfigValue['new_password_field']['default'],
+            '#default_value' => $myAccountConfigValue['new_password_field']['options']['attr']['placeholder'],
         ];
 
         $form['field_configuration']['field_labels_new_password']['error'] = [
@@ -159,7 +159,7 @@ class MyAccountChangePasswordForm extends ConfigFormBase
             '#title' => t('New Password Error'),
             '#description' => $this->t('Required Error Message.'),
             '#maxlength' => 255,
-            '#default_value' => $myAccountConfigValue['new_password_field']['error']
+            '#default_value' => $myAccountConfigValue['new_password_field']['options']['error']
         ];
 
         $form['field_configuration']['field_labels_new_password']['weight'] = [
@@ -169,12 +169,12 @@ class MyAccountChangePasswordForm extends ConfigFormBase
             '#default_value' => $myAccountConfigValue['new_password_field']['weight']
         ];
 
-        $form['field_configuration']['field_labels_new_password']['wrapper'] = [
+        $form['field_configuration']['field_labels_new_password']['wrapper_class'] = [
             '#type' => 'textfield',
             '#title' => t('New password wrapper'),
             '#size' => 25,
             '#description' => $this->t('Wrapper class for field.'),
-            '#default_value' => $myAccountConfigValue['new_password_field']['wrapper']
+            '#default_value' => $myAccountConfigValue['new_password_field']['options']['wrapper_class']
         ];
 
         $form['field_configuration']['field_labels_confirm'] = [
@@ -191,7 +191,7 @@ class MyAccountChangePasswordForm extends ConfigFormBase
             '#size' => 25,
             '#required' => TRUE,
             '#description' => $this->t('Label for the confirm password Field.'),
-            '#default_value' => $myAccountConfigValue['confirm_password_field']['label']
+            '#default_value' => $myAccountConfigValue['confirm_password_field']['options']['label']
         ];
 
         $form['field_configuration']['field_labels_confirm']['help'] = [
@@ -199,26 +199,26 @@ class MyAccountChangePasswordForm extends ConfigFormBase
             '#title' => $this->t('Help text'),
             '#rows' => 5,
             '#description' => $this->t('Instructions to present to the user below this field on the editing form.'),
-            '#default_value' => $myAccountConfigValue['confirm_password_field']['help']
+            '#default_value' => $myAccountConfigValue['confirm_password_field']['options']['help']
         ];
 
         $form['field_configuration']['field_labels_confirm']['required'] = [
             '#type' => 'checkbox',
             '#title' => $this->t('Required field'),
-            '#default_value' => $myAccountConfigValue['confirm_password_field']['required']
+            '#default_value' => $myAccountConfigValue['confirm_password_field']['options']['required']
         ];
 
         $form['field_configuration']['field_labels_confirm']['default_detail'] = [
             '#type' => 'details',
-            '#title' => 'Default value',
+            '#title' => 'Field Placeholder',
             '#description' => $this->t('The default value for this field, used when creating new content.'),
         ];
 
-        $form['field_configuration']['field_labels_confirm']['default_detail']['default'] = [
+        $form['field_configuration']['field_labels_confirm']['default_detail']['placeholder'] = [
             '#type' => 'textfield',
             '#title' => $this->t('Confirm Password'),
             '#maxlength' => 255,
-            '#default_value' => $myAccountConfigValue['confirm_password_field']['default'],
+            '#default_value' => $myAccountConfigValue['confirm_password_field']['options']['attr']['placeholder'],
         ];
 
         $form['field_configuration']['field_labels_confirm']['error'] = [
@@ -226,7 +226,7 @@ class MyAccountChangePasswordForm extends ConfigFormBase
             '#title' => t('Confirm Password Error'),
             '#description' => $this->t('Required Error Message.'),
             '#maxlength' => 255,
-            '#default_value' => $myAccountConfigValue['confirm_password_field']['error']
+            '#default_value' => $myAccountConfigValue['confirm_password_field']['options']['error']
         ];
 
         $form['field_configuration']['field_labels_confirm']['weight'] = [
@@ -236,12 +236,12 @@ class MyAccountChangePasswordForm extends ConfigFormBase
             '#default_value' => $myAccountConfigValue['confirm_password_field']['weight']
         ];
 
-        $form['field_configuration']['field_labels_confirm']['wrapper'] = [
+        $form['field_configuration']['field_labels_confirm']['wrapper_class'] = [
             '#type' => 'textfield',
             '#title' => t('New password wrapper'),
             '#size' => 25,
             '#description' => $this->t('Wrapper class for field.'),
-            '#default_value' => $myAccountConfigValue['confirm_password_field']['wrapper']
+            '#default_value' => $myAccountConfigValue['confirm_password_field']['options']['wrapper_class']
         ];
 
         $form['actions'] = ['#type' => 'actions'];
@@ -316,27 +316,27 @@ class MyAccountChangePasswordForm extends ConfigFormBase
     {
         $configuration = $form_state->getValue('field_configuration');
         $this->config('my_account_form_profile.change_password')
-            ->set('current_password_field.label', $configuration['field_labels_current']['label'])
-            ->set('current_password_field.help', $configuration['field_labels_current']['help'])
-            ->set('current_password_field.required', $configuration['field_labels_current']['required'])
+            ->set('current_password_field.options.label', $configuration['field_labels_current']['label'])
+            ->set('current_password_field.options.help', $configuration['field_labels_current']['help'])
+            ->set('current_password_field.options.required', $configuration['field_labels_current']['required'])
             ->set('current_password_field.weight', $configuration['field_labels_current']['weight'])
-            ->set('current_password_field.wrapper', $configuration['field_labels_current']['wrapper'])
-            ->set('current_password_field.default', $configuration['field_labels_current']['default_detail']['default'])
-            ->set('current_password_field.error', $configuration['field_labels_current']['error'])
-            ->set('confirm_password_field.label', $configuration['field_labels_confirm']['label'])
-            ->set('confirm_password_field.help', $configuration['field_labels_confirm']['help'])
+            ->set('current_password_field.options.wrapper_class', $configuration['field_labels_current']['wrapper_class'])
+            ->set('current_password_field.options.attr.placeholder', $configuration['field_labels_current']['default_detail']['placeholder'])
+            ->set('current_password_field.options.error', $configuration['field_labels_current']['error'])
+            ->set('confirm_password_field.options.label', $configuration['field_labels_confirm']['label'])
+            ->set('confirm_password_field.options.help', $configuration['field_labels_confirm']['help'])
             ->set('confirm_password_field.weight', $configuration['field_labels_confirm']['confirm_password_weight'])
-            ->set('confirm_password_field.wrapper', $configuration['field_labels_confirm']['wrapper'])
-            ->set('confirm_password_field.required', $configuration['field_labels_confirm']['required'])
-            ->set('confirm_password_field.default', $configuration['field_labels_confirm']['default_detail']['default'])
-            ->set('confirm_password_field.error', $configuration['field_labels_confirm']['error'])
-            ->set('new_password_field.label', $configuration['field_labels_new_password']['label'])
-            ->set('new_password_field.help', $configuration['field_labels_new_password']['help'])
-            ->set('new_password_field.required', $configuration['field_labels_new_password']['required'])
-            ->set('new_password_field.default', $configuration['field_labels_new_password']['default_detail']['default'])
-            ->set('new_password_field.error', $configuration['field_labels_new_password']['error'])
+            ->set('confirm_password_field.options.wrapper_class', $configuration['field_labels_confirm']['wrapper_class'])
+            ->set('confirm_password_field.options.required', $configuration['field_labels_confirm']['required'])
+            ->set('confirm_password_field.options.attr.placeholder', $configuration['field_labels_confirm']['default_detail']['placeholder'])
+            ->set('confirm_password_field.options.error', $configuration['field_labels_confirm']['error'])
+            ->set('new_password_field.options.label', $configuration['field_labels_new_password']['label'])
+            ->set('new_password_field.options.help', $configuration['field_labels_new_password']['help'])
+            ->set('new_password_field.options.required', $configuration['field_labels_new_password']['required'])
+            ->set('new_password_field.options.attr.placeholder', $configuration['field_labels_new_password']['default_detail']['placeholder'])
+            ->set('new_password_field.options.error', $configuration['field_labels_new_password']['error'])
             ->set('new_password_field.weight', $configuration['field_labels_new_password']['weight'])
-            ->set('new_password_field.wrapper', $configuration['field_labels_new_password']['wrapper'])
+            ->set('new_password_field.options.wrapper_class', $configuration['field_labels_new_password']['wrapper_class'])
             ->save();
     }
 
