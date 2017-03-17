@@ -1,0 +1,18 @@
+<?php
+/**
+ * @file
+ * My Account Custom entity form configuration.
+ */
+
+use Drupal\Core\Menu\MenuTreeParameters;
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Url;
+
+/**
+ *  Implements hook_page_attachments().
+ */
+function my_account_form_profile_page_attachments(array &$attachments)
+{
+    // Unconditionally attach an asset to the page.
+    $attachments['#attached']['library'][] = 'my_account_form_profile/my_account.menu.icon';
+}

@@ -1,7 +1,0 @@
-matterhorn_blocks.list_controller_show:
-  path: '/matterhorn_blocks/hello/{name}'
-  defaults:
-    _controller: '\Drupal\matterhorn_blocks\Controller\ListController::show'
-    _title: 'list'
-  requirements:
-    _permission: 'access content'
