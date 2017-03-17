@@ -1,18 +1,18 @@
-uuid: a40751e4-5718-4167-bf6d-45cf3d23a4e5
+uuid: 66e24e55-09f5-48f8-b711-d58f8716b6c3
 langcode: en
 status: true
 dependencies:
   config:
-    - block_content.type.sponsorship_block
-    - field.field.block_content.sponsorship_block.field_sponsor_logo
+    - block_content.type.social_media_block
+    - field.field.block_content.social_media_block.field_social_media
   module:
     - paragraphs
-id: block_content.sponsorship_block.default
+id: block_content.social_media_block.default
 targetEntityType: block_content
-bundle: sponsorship_block
+bundle: social_media_block
 mode: default
 content:
-  field_sponsor_logo:
+  field_social_media:
     type: entity_reference_paragraphs
     weight: 3
     settings:
@@ -35,6 +35,4 @@ content:
     weight: 2
     settings: {  }
     third_party_settings: {  }
-  translation:
-    weight: 10
 hidden: {  }
