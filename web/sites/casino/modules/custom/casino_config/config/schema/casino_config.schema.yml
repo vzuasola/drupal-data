@@ -133,9 +133,3 @@ casino_config.header_config:
     login_issue_text:
       type: label
       label: 'Login Issue Text'
-    casino_logo:
-      type: managed_file
-      label: 'Image'
-    casino_logo_alt:
-      type: label
-      label: 'Logo alternative text'
