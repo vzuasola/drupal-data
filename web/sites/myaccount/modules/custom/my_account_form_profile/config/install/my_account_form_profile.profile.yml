@@ -85,7 +85,7 @@ email_field:
   options:
     label: 'Email'
     attr:
-      placeholder: 'tech.shanu786@gmail.com'
+      placeholder: '#######@gmail.com'
     required: '1'
     error: 'Error message for Email'
     wrapper_class: 'email'
