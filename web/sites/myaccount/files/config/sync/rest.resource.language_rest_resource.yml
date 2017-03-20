@@ -1,0 +1,21 @@
+uuid: b006ee2e-7d0d-4c60-b265-64129a81173d
+langcode: en
+status: true
+dependencies:
+  module:
+    - basic_auth
+    - hal
+    - serialization
+    - user
+    - webcomposer_rest_extra
+id: language_rest_resource
+plugin_id: language_rest_resource
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - hal_json
+      - json
+    supported_auth:
+      - basic_auth
+      - cookie
