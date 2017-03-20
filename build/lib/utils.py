@@ -265,29 +265,29 @@ def _drupal7_pre_archive():
     shutil.copytree('site', site_dest)
     shutil.copytree('vendor', vendor_dest)
 
+
 def _drupal8_pre_archive():
     """
     copies site directory into -> base/sites/all/default
     """
     print('pre-archive steps')
-    site_dest = os.path.join('base', 'default')
-    vendor_dest = os.path.join('base', 'sites', 'all', 'vendor')
-    for directory in (site_dest, vendor_dest):
-        if os.path.exists(directory):
+    site_dest = os.path.basename('base')
+    if os.path.exists(site_dest):
+        try:
+            shutil.rmtree(site_dest)
+            # at this point, there's no base/sites/all/default
+            intermediate_dirs = os.path.join(*(site_dest.split(os.sep)[0:-1]))
+            mkdir_p(intermediate_dirs)
+        except OSError as error:
             try:
-                shutil.rmtree(directory)
-                # at this point, there's no base/sites/all/default
-                intermediate_dirs = os.path.join(*(directory.split(os.sep)[0:-1]))
-                mkdir_p(intermediate_dirs)
+                os.remove(site_dest)
             except OSError as error:
-                try:
-                    os.remove(directory)
-                except OSError as error:
-                    raise PipelineError(error)
-            except shutil.Error as error:
                 raise PipelineError(error)
-    shutil.copytree('site', site_dest)
-    shutil.copytree('vendor', vendor_dest)
+        except shutil.Error as error:
+            raise PipelineError(error)
+    for item in ('config', 'drush', 'vendor', 'web'):
+        shutil.copytree(item, os.path.join(site_dest, item))
+
 
 def _pre_archive():
     """
