@@ -31,6 +31,7 @@ module:
   link: 0
   locale: 0
   menu_ui: 0
+  my_account_core: 0
   my_account_form_profile: 0
   node: 0
   options: 0
