@@ -25,13 +25,7 @@
             "README",
             "README.md",
             "LICENSE",
-            "example.settings.local.php",
-            "example.sites.php",
             ".gitkeep",
-            "settings.php",
-            "settings.php.QA1",
-            "settings.php.DEV",
-            "settings.php.GIT",
             "composer.json"
         ]
     },
