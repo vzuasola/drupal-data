@@ -133,3 +133,6 @@ casino_config.header_config:
     login_issue_text:
       type: label
       label: 'Login Issue Text'
+    login_issue_link:
+      type: label
+      label: 'Login Issue Link'
