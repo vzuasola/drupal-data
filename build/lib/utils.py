@@ -183,6 +183,13 @@ def sha1(filename, blocksize=65536):
     return hash_.hexdigest()
 
 
+def base_directory():
+    """
+    returns the base directory name from deploy.json
+    """
+    return read_coniguration(DEFAULT_CONFIG_FILE, 'project')['archive_directory']
+
+
 def create_archive(archive_name=None, base_dir=None, filter_fn=_archive_exclude):
     """
     create a tar.gz archive from base_dir excluding items
@@ -205,7 +212,7 @@ def create_archive(archive_name=None, base_dir=None, filter_fn=_archive_exclude)
         archive_name = _archive_path()
     if not base_dir:
         # read the base directory as configured in our deploy.json file
-        base_dir = read_coniguration(DEFAULT_CONFIG_FILE, 'project')['archive_directory']
+        base_dir = base_directory()
 
     if os.path.exists(archive_name):
         os.remove(archive_name)
@@ -230,7 +237,6 @@ def mkdir_p(directory):
     for path in directory.split(os.sep):
         full_path = os.path.join(full_path, path)
         try:
-            print(full_path)
             os.mkdir(full_path)
         except OSError:
             # directory already exists, just pass for now
@@ -271,13 +277,11 @@ def _drupal8_pre_archive():
     copies site directory into -> base/sites/all/default
     """
     print('pre-archive steps')
-    site_dest = os.path.basename('base')
+    site_dest = base_directory()
     if os.path.exists(site_dest):
         try:
             shutil.rmtree(site_dest)
-            # at this point, there's no base/sites/all/default
-            intermediate_dirs = os.path.join(*(site_dest.split(os.sep)[0:-1]))
-            mkdir_p(intermediate_dirs)
+            mkdir_p(site_dest)
         except OSError as error:
             try:
                 os.remove(site_dest)
