@@ -36,6 +36,9 @@ class MyAccountFormResource extends ResourceBase
             case 'my_account_cashier':
                 $config = \Drupal::config('my_account_core.cashier');
                 break;
+            case 'my_account_livechat':
+                $config = \Drupal::config('my_account_core.livechat');
+                break;
             default:
         }
 
