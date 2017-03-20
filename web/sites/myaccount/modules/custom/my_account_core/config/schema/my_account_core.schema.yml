@@ -6,3 +6,14 @@ my_account_core.cashier:
       type: label
       label: 'Cashier Link'
   langcode: 'en'
+my_account_core.livechat:
+  type: config_object
+  label: 'My Account Live Chat Configuration'
+  mapping:
+    live_chat_text:
+      type: label
+      label: 'Live Chat Text'
+    live_chat_link:
+      type: label
+      label: 'Live Chat Link'
+  langcode: 'en'

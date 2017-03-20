@@ -123,9 +123,3 @@ language_field:
     required: '1'
     error: 'Error field for Language'
     wrapper_class: 'language'
-
-#submit button label
-change_profile_label_field:
-  options:
-    label: 'Change profile submit'
-    wrapper_class: 'change-profile'
