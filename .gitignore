@@ -19,3 +19,4 @@ web/sites/*/settings.php
 
 # files created by the build process
 *.pyc
+*.tar.gz
