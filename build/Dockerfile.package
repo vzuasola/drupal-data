@@ -1,4 +1,4 @@
-FROM composer/composer:php5-alpine
+FROM composer/composer:alpine
 RUN composer global require "hirak/prestissimo:^0.3"
 RUN mkdir -p /composer/cache
 RUN chmod -R 777 /composer
