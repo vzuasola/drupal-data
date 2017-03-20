@@ -4,13 +4,12 @@
         "password": "ARTIFACTORY_PASSWORD",
         "permissions": ["r", "w"],
         "instances": [
-            "http://mic-pele-artifact.msred.dom:8081/artifactory/web-composer-drupal",
             "http://trc-ptc-afact01.msred.dom:8081/artifactory/web-composer-drupal"
         ]
     },
     "project": {
         "style": "drupal8",
-        "archive_directory": "base",
+        "archive_directory": "web-composer-drupal",
         "archive_exclude_directories": [
             ".git",
             ".svn",
@@ -23,19 +22,17 @@
             "txt",
             "TXT",
             "CHANGELOG.md",
+            "README",
             "README.md",
             "LICENSE",
             "example.settings.local.php",
             "example.sites.php",
+            ".gitkeep",
             "settings.php",
             "settings.php.QA1",
             "settings.php.DEV",
             "settings.php.GIT",
-            "composer.json",
-            "config.build",
-            "install.php",
-            "sync.build",
-            "xmlrpc.php"
+            "composer.json"
         ]
     },
     "development": {
