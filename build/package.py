@@ -12,9 +12,9 @@ from lib.utils import artifactory_urls, DEFAULT_CONFIG_FILE
 
 def main():
     print('creating docker image')
-    # docker.create_image()
+    docker.create_image()
     print('generating final package using docker')
-    # docker.package()
+    docker.package()
     print('creating archive')
     archive = create_archive()
     archive = os.path.basename(archive)
