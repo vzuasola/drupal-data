@@ -28,6 +28,9 @@ create package:
      DOCKERFILE: build/Dockerfile.package
   script:
       - python -u build/package.py
+  cache:
+    paths:
+      - vendor/
   artifacts:
     expire_in: 7d
     paths:
