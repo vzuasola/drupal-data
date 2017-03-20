@@ -69,6 +69,13 @@ class HeaderConfiguration extends ConfigFormBase {
       '#default_value' => $config->get('login_issue_text'),
       '#required' => TRUE,
     );
+    $form['login_group']['login_issue_link'] = array(
+      '#type' => 'url',
+      '#title' => $this->t('Login Issue Link'),
+      '#description' => $this->t('The link for user redirection when clicked on Login Issue Text.'),
+      '#default_value' => $config->get('login_issue_link'),
+      '#required' => TRUE,
+    );
 
     return parent::buildForm($form, $form_state);
   }
@@ -81,6 +88,7 @@ class HeaderConfiguration extends ConfigFormBase {
       'join_now_text',
       'join_now_link',
       'login_issue_text',
+      'login_issue_link',
     );
     foreach ($keys as $key) {
       $this->config('casino_config.header_config')->set($key, $form_state->getValue($key))->save();
