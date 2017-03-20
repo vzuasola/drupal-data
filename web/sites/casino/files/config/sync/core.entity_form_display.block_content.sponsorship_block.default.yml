@@ -1,0 +1,40 @@
+uuid: a40751e4-5718-4167-bf6d-45cf3d23a4e5
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.sponsorship_block
+    - field.field.block_content.sponsorship_block.field_sponsor_logo
+  module:
+    - paragraphs
+id: block_content.sponsorship_block.default
+targetEntityType: block_content
+bundle: sponsorship_block
+mode: default
+content:
+  field_sponsor_logo:
+    type: entity_reference_paragraphs
+    weight: 3
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: -5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+  translation:
+    weight: 10
+hidden: {  }
