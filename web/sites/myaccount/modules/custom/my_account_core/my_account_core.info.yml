@@ -1,0 +1,6 @@
+name: My Account Core Module
+description: Module for my account core configuration
+package: My Account
+type: module
+core: 8.x
+version: '8.x-1.x-dev'

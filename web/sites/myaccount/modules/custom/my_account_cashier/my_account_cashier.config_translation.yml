@@ -1,5 +1,0 @@
-my_account_cashier.link:
-  title: 'My Account Cashier Translation'
-  base_route_name: my_account_cashier.config
-  names:
-    - my_account_cashier.link
