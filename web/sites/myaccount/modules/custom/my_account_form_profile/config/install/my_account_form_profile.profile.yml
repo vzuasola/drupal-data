@@ -94,12 +94,10 @@ email_field:
 communication_detail_field:
   options:
     label: 'Communication Details'
-    wrapper_class: 'communication'
 
 account_field:
   options:
     label: 'Account Details'
-    wrapper_class: 'account'
 
 #mobile
 mobile_number_field:
