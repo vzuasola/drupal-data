@@ -1,0 +1,21 @@
+uuid: 9d0951fe-e808-406d-b345-77a554022d78
+langcode: en
+status: true
+dependencies:
+  module:
+    - basic_auth
+    - casino_config
+    - hal
+    - serialization
+    - user
+id: casino_rest_resource
+plugin_id: casino_rest_resource
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - hal_json
+      - json
+    supported_auth:
+      - basic_auth
+      - cookie
