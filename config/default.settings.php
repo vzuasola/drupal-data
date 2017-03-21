@@ -285,7 +285,7 @@ $config_directories = array();
  *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt');
  * @endcode
  */
-$settings['hash_salt'] = 'rWtA7Wb0Vl-4TdP_Ni4Pptp16-LmjWX-I9L1pkoTE5jI2eivMCupJBCeTRlBCLSqp78Zxr_B3g';
+$settings['hash_salt'] = 'VevkgRWTUUUalLX8fq3x9ePe6LPaSIRIohdTQ3CWZg2uJbKfj51hLbxQvQLr6LMWJNpNrp1n1A';
 
 /**
  * Deployment identifier.
@@ -749,19 +749,8 @@ $settings['file_scan_ignore_directories'] = [
  *
  * Keep this code block at the end of this file to take full effect.
  */
-# if (file_exists(__DIR__ . '/settings.local.php')) {
-#   include __DIR__ . '/settings.local.php';
-# }
+ if (file_exists(__DIR__ . '/casino.database.php')) {
+   include __DIR__ . '/casino.database.php';
+ }
 $settings['install_profile'] = 'standard';
-$config_directories['sync'] = 'sites/default/files/config/sync';
-
-$databases['default']['default'] = array (
-  'database' => 'default',
-  'username' => 'admin',
-  'password' => 'admin',
-  'prefix' => '',
-  'host' => '127.0.0.1',
-  'port' => '3306',
-  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
-  'driver' => 'mysql',
-);
+$config_directories['sync'] = 'sites/casino/files/config/sync';
