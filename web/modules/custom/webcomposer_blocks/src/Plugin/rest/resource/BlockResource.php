@@ -121,7 +121,46 @@ class BlockResource extends ResourceBase {
       $uuid = $block->getPlugin()->getDerivativeId();
       $block_content = \Drupal::service('entity.repository')->loadEntityByUuid('block_content', $uuid);
 
-      return $block_content;
+      $block_return['block_content'] = $block_content;
+      foreach ($block_content as $field => $fieldValue) {
+        if ( is_null($fieldValue->value) ){
+          $ttt = $block_content->getFieldDefinition($field)->getSettings();
+          if($ttt['target_type'] == 'paragraph'){
+            $block_return['paragraph'] = $this->getParagraphDetails($block_content->$field);
+          }
+        }
+      }
+      return $block_return;
     }
+  }
+
+  /**
+   * Load multiple paragraph
+   *
+   * @param array $itemCollection
+   * - ID of paragraph stored in array
+   *
+   * @return object
+   */
+  public function loadMultipleParagraph($itemCollection = [])
+  {
+    $paragraph = \Drupal::entityManager()->getStorage('paragraph')->loadMultiple($itemCollection);
+    return $paragraph;
+  }
+
+  /**
+   * Get Sponsorship Details
+   *
+   * @param array $paragraphs
+   * - ID of paragraph stored in array
+   *
+   * @return array
+   */
+  private function getParagraphDetails($paragraphs = [])
+  {
+    foreach ($paragraphs as $item) {
+      $paragraphItemCollection[] = $item->target_id;
+    }
+    return $this->loadMultipleParagraph($paragraphItemCollection);
   }
 }
