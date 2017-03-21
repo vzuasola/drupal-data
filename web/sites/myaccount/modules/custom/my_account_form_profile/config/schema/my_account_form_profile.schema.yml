@@ -1,170 +1,274 @@
+# Change password form schema configuration
 my_account_form_profile.change_password:
   type: config_object
   label: 'My Account Change Password Configuration'
   mapping:
-    current_password_label:
-      type: label
-      label: 'Field Label for Current Password'
-    current_password_help:
-      type: text
-      label: 'Current password help text'
-    current_password_required:
-      type: label
-      label: 'Current password required label'
-    field_current_password_default:
-      type: label
-      label: 'Field Label for default Current Password'
-    current_password_error:
-      type: text
-      label: 'Error messages fo current password'
-    new_password_label:
-      type: label
-      label: 'Field Label for New Password'
-    new_password_help:
-      type: text
-      label: 'New password help text'
-    new_password_required:
-      type: label
-      label: 'New password required label'
-    field_new_password_default:
-      type: label
-      label: 'Field Label for default New Password'
-    new_password_error:
-      type: text
-      label: 'Error messages fo new password'
-    confirm_password_label:
-      type: label
-      label: 'Field Label for Confirm Password'
-    confirm_password_help:
-      type: text
-      label: 'Confirm password help text'
-    confirm_password_required:
-      type: label
-      label: 'Confirm password required label'
-    field_confirm_password_default:
-      type: label
-      label: 'Field Label for default Confirm Password'
-    confirm_password_error:
-      type: text
-      label: 'Error messages fo confirm password'
+    current_password_field:
+      type: mapping
+      mapping:
+        options:
+          type: mapping
+          mapping:
+            label:
+              type: label
+              label: 'Default value for current password error'
+            help:
+              type: label
+              label: 'Help text for field'
+            error:
+              type: label
+              label: 'Error value for field'
+            attr:
+              type: mapping
+              mapping:
+                placeholder:
+                  type: label
+                  label: 'Placeholder value for field'
+    new_password_field:
+      type: mapping
+      mapping:
+        options:
+          type: mapping
+          mapping:
+            label:
+              type: label
+              label: 'Default value for new password error'
+            help:
+              type: label
+              label: 'Help text for field'
+            error:
+              type: label
+              label: 'Error value for field'
+            attr:
+              type: mapping
+              mapping:
+                placeholder:
+                  type: label
+                  label: 'Placeholder value for field'
+    confirm_password_field:
+      type: mapping
+      mapping:
+        options:
+          type: mapping
+          mapping:
+            label:
+              type: label
+              label: 'Default value for confirm password error'
+            help:
+              type: label
+              label: 'Help text for field'
+            error:
+              type: label
+              label: 'Error value for field'
+            attr:
+              type: mapping
+              mapping:
+                placeholder:
+                  type: label
+                  label: 'Placeholder value for field'
+    submit_button_label_field:
+      type: mapping
+      mapping:
+        options:
+          type: mapping
+          mapping:
+            label:
+              type: label
+              label: 'Default value for current password submit button'
   langcode: 'en'
 
+# Change password form schema configuration
 my_account_form_profile.profile:
   type: config_object
   label: 'My Account Profile Configuration'
   mapping:
-    user_name_field_label:
-      type: label
-      label: 'Field Label for Username'
-    user_name_field_required:
-      type: label
-      label: 'Username field required'
-    user_name_field_weight:
-      type: label
-      label: 'Username field weight'
-    currency_field_label:
-      type: label
-      label: 'Field Label for currency'
-    currency_field_required:
-      type: label
-      label: 'Currency field required label'
-    currency_field_error:
-      type: text
-      label: 'Error message for Currency'
-    currency_field_weight:
-      type: label
-      label: 'Currency Field weight'
-    first_name_field_label:
-      type: label
-      label: 'Field Label for First name'
-    first_name_field_required:
-      type: label
-      label: 'First name field required label'
-    first_name_field_error:
-      type: text
-      label: 'Error message for First name'
-    first_name_field_weight:
-      type: label
-      label: 'First name Field weight'
-    last_name_field_label:
-      type: label
-      label: 'Field Label for Last name'
-    last_name_field_required:
-      type: label
-      label: 'Last name field required label'
-    last_name_field_error:
-      type: text
-      label: 'Error message for Last name'
-    last_name_field_weight:
-      type: label
-      label: 'Last name Field weight'
-    dob_field_label:
-      type: label
-      label: 'Field Label for DOB'
-    dob_field_required:
-      type: label
-      label: 'DOB field required label'
-    dob_field_error:
-      type: text
-      label: 'Error message for DOB'
-    dob_field_weight:
-      type: label
-      label: 'DOB Field weight'
-    country_field_label:
-      type: label
-      label: 'Field Label for Country'
-    country_field_required:
-      type: label
-      label: 'Country field required label'
-    country_field_error:
-      type: text
-      label: 'Error message for country'
-    country_field_weight:
-      type: label
-      label: 'Country Field weight'
-    email_field_label:
-      type: label
-      label: 'Field Label for Email'
-    email_field_required:
-      type: label
-      label: 'Email field required label'
-    email_field_error:
-      type: text
-      label: 'Error message for email'
-    email_field_weight:
-      type: label
-      label: 'Email Field weight'
-    mobile_number_field_label:
-      type: label
-      label: 'Field Label for Mobile number'
-    mobile_number_field_required:
-      type: label
-      label: 'Mobile number field required label'
-    mobile_number_field_error:
-      type: text
-      label: 'Error message for Mobile number'
-    mobile_number_field_weight:
-      type: label
-      label: 'Mobile Field weight'
-    language_field_label:
-      type: label
-      label: 'Field label for Language'
-    language_field_help_text:
-      type: label
-      label: 'Field Label for Language'
-    language_field_required:
-      type: label
-      label: 'Language field required label'
-    language_field_error:
-      type: text
-      label: 'Error message for Language'
-    language_field_weight:
-      type: label
-      label: 'Language Field weight'
-    communication_details_field_label:
-      type: label
-      label: 'Communication detail fieldset label'
-    account_details_field_label:
-      type: label
-      label: 'Account communication fieldset label'
+    username_field:
+      type: mapping
+      mapping:
+        options:
+          type: mapping
+          mapping:
+            label:
+              type: label
+              label: 'Field label'
+            error:
+              type: label
+              label: 'Error message'
+            attr:
+              type: mapping
+              mapping:
+                placeholder:
+                  type: label
+                  label: 'Placeholder value for field'
+    currency_field:
+      type: mapping
+      mapping:
+        options:
+          type: mapping
+          mapping:
+            label:
+              type: label
+              label: 'Field label'
+            error:
+              type: label
+              label: 'Error message'
+            attr:
+              type: mapping
+              mapping:
+                placeholder:
+                  type: label
+                  label: 'Placeholder value for field'
+    first_name_field:
+      type: mapping
+      mapping:
+        options:
+          type: mapping
+          mapping:
+            label:
+              type: label
+              label: 'Field label'
+            error:
+              type: label
+              label: 'Error message'
+            attr:
+              type: mapping
+              mapping:
+                placeholder:
+                  type: label
+                  label: 'Placeholder value for field'
+    last_name_field:
+      type: mapping
+      mapping:
+        options:
+          type: mapping
+          mapping:
+            label:
+              type: label
+              label: 'Field label'
+            error:
+              type: label
+              label: 'Error message'
+            attr:
+              type: mapping
+              mapping:
+                placeholder:
+                  type: label
+                  label: 'Placeholder value for field'
+    dob_field:
+      type: mapping
+      mapping:
+        options:
+          type: mapping
+          mapping:
+            label:
+              type: label
+              label: 'Field label'
+            error:
+              type: label
+              label: 'Error message'
+            attr:
+              type: mapping
+              mapping:
+                placeholder:
+                  type: label
+                  label: 'Placeholder value for field'
+    country_field:
+      type: mapping
+      mapping:
+        options:
+          type: mapping
+          mapping:
+            label:
+              type: label
+              label: 'Field label'
+            error:
+              type: label
+              label: 'Error message'
+            attr:
+              type: mapping
+              mapping:
+                placeholder:
+                  type: label
+                  label: 'Placeholder value for field'
+    email_field:
+      type: mapping
+      mapping:
+        options:
+          type: mapping
+          mapping:
+            label:
+              type: label
+              label: 'Field label'
+            error:
+              type: label
+              label: 'Error message'
+            attr:
+              type: mapping
+              mapping:
+                placeholder:
+                  type: label
+                  label: 'Placeholder value for field'
+    communication_detail_field:
+      type: mapping
+      mapping:
+        options:
+          type: mapping
+          mapping:
+            label:
+              type: label
+              label: 'Field label'
+    account_field:
+      type: mapping
+      mapping:
+        options:
+          type: mapping
+          mapping:
+            label:
+              type: label
+              label: 'Field label'
+    mobile_number_field:
+      type: mapping
+      mapping:
+        options:
+          type: mapping
+          mapping:
+            label:
+              type: label
+              label: 'Field label'
+            error:
+              type: label
+              label: 'Error message'
+            attr:
+              type: mapping
+              mapping:
+                placeholder:
+                  type: label
+                  label: 'Placeholder value for field'
+    language_field:
+      type: mapping
+      mapping:
+        options:
+          type: mapping
+          mapping:
+            label:
+              type: label
+              label: 'Field label'
+            error:
+              type: label
+              label: 'Error message'
+            attr:
+              type: mapping
+              mapping:
+                placeholder:
+                  type: label
+                  label: 'Placeholder value for field'
+    change_profile_label_field:
+      type: mapping
+      mapping:
+        options:
+          type: mapping
+          mapping:
+            label:
+              type: label
+              label: 'Default value for Change profile submit button'
   langcode: 'en'
