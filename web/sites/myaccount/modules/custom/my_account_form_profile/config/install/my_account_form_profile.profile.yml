@@ -12,7 +12,7 @@ username_field:
 currency_field:
   weight: '0'
   options:
-    label: 'Enter Currency'
+    label: 'Currency'
     attr:
       placeholder: 'Currency'
     required: '1'
@@ -45,7 +45,7 @@ last_name_field:
 dob_field:
   weight: '3'
   options:
-    label: 'DOB'
+    label: 'Date of Birth'
     required: '1'
     error: 'Error message for dob'
     wrapper_class: 'dob'
@@ -83,7 +83,7 @@ country_field:
 email_field:
   weight: '5'
   options:
-    label: 'Email'
+    label: 'Email Address'
     attr:
       placeholder: '#######@gmail.com'
     required: '1'
@@ -94,18 +94,16 @@ email_field:
 communication_detail_field:
   options:
     label: 'Communication Details'
-    wrapper_class: 'communication'
 
 account_field:
   options:
     label: 'Account Details'
-    wrapper_class: 'account'
 
 #mobile
 mobile_number_field:
   weight: '6'
   options:
-    label: 'Mobile Number'
+    label: 'Contact Number'
     attr:
       placeholder: '09217715594'
     required: '1'
