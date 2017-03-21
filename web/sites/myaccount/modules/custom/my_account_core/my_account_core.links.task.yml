@@ -1,0 +1,8 @@
+my_account_core.cashier:
+  route_name: my_account_core.cashier_config
+  base_route: my_account_core.cashier_config
+  title: 'My Account Cashier configuration'
+my_account_core.livechat:
+  route_name: my_account_core.livechat_config
+  base_route: my_account_core.livechat_config
+  title: 'My Account Live Chat Configuration'
