@@ -1,5 +1,0 @@
-myaccount_profile.admin_config_settings:
-  title: 'My Profile'
-  description: 'My Profile Field Settings, Validation and Error Messages'
-  route_name: myaccount_profile.admin_config_settings
-  parent: my_account.admin_settings_config

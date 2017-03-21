@@ -41,21 +41,27 @@ casino_config.lobby_left_tile:
   type: mapping
   label: 'Lobby Left Tile'
   mapping:
-    lobby_left_title:
+    lobby_left_tile_title:
       type: label
       label: 'Title'
-    lobby_left_content:
+    lobby_left_tile_image:
+      type: manage_file
+      label: 'Image'
+    lobby_left_tile_content:
       type: text_format
       label: 'Content'
       translatable: true
 
 casino_config.lobby_right_tile:
   type: mapping
-  label: 'Lobby Left Tile'
+  label: 'Lobby Right Tile'
   mapping:
     lobby_right_tile_title:
       type: label
       label: 'Title'
+    lobby_right_tile_image:
+      type: managed_file
+      label: 'Image'
     lobby_right_tile_content:
       type: text_format
       label: 'Content'
@@ -113,3 +119,20 @@ casino_config.login_config:
     error_message_service_not_available:
       type: label
       label: 'Error thrown by services'
+
+casino_config.header_config:
+  type: config_object
+  label: 'Casino Header Configurations'
+  mapping:
+    join_now_text:
+      type: label
+      label: 'Join Now Text'
+    join_now_link:
+      type: label
+      label: 'Join Now Link'
+    login_issue_text:
+      type: label
+      label: 'Login Issue Text'
+    login_issue_link:
+      type: label
+      label: 'Login Issue Link'

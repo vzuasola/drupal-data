@@ -1,0 +1,22 @@
+uuid: 7adb6a18-c478-4ce7-ad71-a85e58e1f554
+langcode: en
+status: true
+dependencies:
+  module:
+    - basic_auth
+    - hal
+    - my_account_form_profile
+    - serialization
+    - user
+id: my_account_profile_form_resource
+plugin_id: my_account_profile_form_resource
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - hal_json
+      - json
+      - xml
+    supported_auth:
+      - basic_auth
+      - cookie

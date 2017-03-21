@@ -1,0 +1,4 @@
+administer my_account core:
+  title: 'MyAccount Core'
+  description: 'User able to access MyAccount Core.'
+  restrict access: true

@@ -1,0 +1,40 @@
+uuid: 66e24e55-09f5-48f8-b711-d58f8716b6c3
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.social_media_block
+    - field.field.block_content.social_media_block.field_social_media
+  module:
+    - paragraphs
+id: block_content.social_media_block.default
+targetEntityType: block_content
+bundle: social_media_block
+mode: default
+content:
+  field_social_media:
+    type: entity_reference_paragraphs
+    weight: 3
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: -5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+  translation:
+    weight: 10
+hidden: {  }
