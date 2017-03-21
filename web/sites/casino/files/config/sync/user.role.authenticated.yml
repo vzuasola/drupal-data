@@ -28,3 +28,7 @@ permissions:
   - 'restful get form_resource'
   - 'restful get language_rest_resource'
   - 'restful post contact_message'
+  - 'administer rest resources'
+  - 'restful get casino_rest_resource'
+  - 'restful get configuration_resource'
+  - 'restful get custom_block_resource'
