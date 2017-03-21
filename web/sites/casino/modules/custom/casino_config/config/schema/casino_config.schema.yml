@@ -1,0 +1,138 @@
+casino_config.dafabet_keyword:
+  type: mapping
+  label: 'Dafabet Keyword'
+  mapping:
+    dafabet_keyword_title:
+      type: label
+      label: 'Title'
+    dafabet_keyword_content:
+      type: text_format
+      label: 'Description'
+      translatable: true
+
+casino_config.copyright_config:
+  type: mapping
+  label: 'Copyright'
+  mapping:
+    copyright_label:
+      type: label
+      label: 'Copyright Label'
+    all_right_reserved_label:
+      type: label
+      label: 'All right Reserved Label'
+
+casino_config.left_floating_banner:
+  type: mapping
+  label: 'Left Floating Banner'
+  mapping:
+    left_floating_banner_label:
+      type: label
+      label: 'Label'
+
+casino_config.right_floating_banner:
+  type: mapping
+  label: 'Right Floating Banner'
+  mapping:
+    right_floating_banner_label:
+      type: label
+      label: 'Label'
+
+casino_config.lobby_left_tile:
+  type: mapping
+  label: 'Lobby Left Tile'
+  mapping:
+    lobby_left_tile_title:
+      type: label
+      label: 'Title'
+    lobby_left_tile_image:
+      type: manage_file
+      label: 'Image'
+    lobby_left_tile_content:
+      type: text_format
+      label: 'Content'
+      translatable: true
+
+casino_config.lobby_right_tile:
+  type: mapping
+  label: 'Lobby Right Tile'
+  mapping:
+    lobby_right_tile_title:
+      type: label
+      label: 'Title'
+    lobby_right_tile_image:
+      type: managed_file
+      label: 'Image'
+    lobby_right_tile_content:
+      type: text_format
+      label: 'Content'
+      translatable: true
+
+casino_config.page_not_found:
+  type: mapping
+  label: 'Page not found'
+  mapping:
+    page_not_found_title:
+      type: label
+      label: 'Page Title'
+    page_not_found_content:
+      type: text_format
+      label: 'Content'
+      translatable: true
+
+casino_config.unsupported_language:
+  type: mapping
+  label: 'Unsupported Language'
+  mapping:
+    unsupp_language_title:
+      type: label
+      label: 'Page Title'
+    unsupp_language_content:
+      type: text_format
+      label: 'Content'
+      translatable: true
+
+casino_config.login_config:
+  type: config_object
+  label: 'Login Config settings'
+  mapping:
+    username_placeholder:
+     type: label
+     label: 'Username field Placeholder'
+    password_placeholder:
+      type: label
+      label: 'Password field Placeholder'
+    login_bottom_label:
+      type: label
+      label: 'Login Botton Label'
+    error_message_blank_username:
+      type: label
+      label: 'Blank Username'
+    error_message_blank_password:
+      type: label
+      label: 'Blank Password'
+    error_message_blank_passname:
+      type: label
+      label: 'Blank Username and Password'
+    error_message_invalid_passname:
+      type: label
+      label: 'Invalid Username and Password'
+    error_message_service_not_available:
+      type: label
+      label: 'Error thrown by services'
+
+casino_config.header_config:
+  type: config_object
+  label: 'Casino Header Configurations'
+  mapping:
+    join_now_text:
+      type: label
+      label: 'Join Now Text'
+    join_now_link:
+      type: label
+      label: 'Join Now Link'
+    login_issue_text:
+      type: label
+      label: 'Login Issue Text'
+    login_issue_link:
+      type: label
+      label: 'Login Issue Link'

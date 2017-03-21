@@ -1,0 +1,24 @@
+uuid: a1478607-4b62-4d5f-9337-33a31e43c5af
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.social_media_block
+    - field.field.block_content.social_media_block.field_social_media
+  module:
+    - entity_reference_revisions
+id: block_content.social_media_block.default
+targetEntityType: block_content
+bundle: social_media_block
+mode: default
+content:
+  field_social_media:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+hidden:
+  langcode: true
