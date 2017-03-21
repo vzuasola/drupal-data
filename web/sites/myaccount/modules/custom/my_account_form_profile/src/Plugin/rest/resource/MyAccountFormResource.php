@@ -77,7 +77,7 @@ class MyAccountFormResource extends ResourceBase
         if ($key == 'header') {
 
             // Get only header values for profile.
-            $value['accout_detail'] = $values['account_field']['options']['label'];
+            $value['account_detail'] = $values['account_field']['options']['label'];
             $value['communication'] = $values['communication_detail_field']['options']['label'];
         } elseif ($key == 'profile') {
 
