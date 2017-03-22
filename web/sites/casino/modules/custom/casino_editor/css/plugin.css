@@ -1,0 +1,23 @@
+.cke_combopanel__fontsize ul {
+    list-style: none;
+}
+
+.px12 { font-size: 12px; }
+.px14 { font-size: 14px; }
+.px16 { font-size: 16px; }
+.px20 { font-size: 20px; }
+.px36 { font-size: 36px; }
+.px48 { font-size: 48px; }
+.px72 { font-size: 72px; }
+
+.fc-red { color: #AF0000; }
+.fc-yellow { color: #FFE000; }
+.fc-white { color: #FFF; }
+.fc-grey-light { color: #E6E7E8; }
+.fc-grey { color: #D3D3D3; }
+.fc-grey-dark { color: #5E5E5E; }
+.fc-black { color: #373737; }
+
+.cke_panel_list {
+    list-style: none !important;
+}
