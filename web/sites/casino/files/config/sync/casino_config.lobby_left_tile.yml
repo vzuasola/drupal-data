@@ -1,0 +1,7 @@
+lobby_left_tile_title: 'Benefits tile'
+lobby_left_tile_content:
+  value: "<p>Tet ontent</p>\r\n"
+  format: basic_html
+lobby_left_tile_image_url: 'http://casino.drupal.local/sites/casino/files/upload/tiles/lobby_tile_1_0.jpg'
+lobby_left_tile_image:
+  - '11'
