@@ -57,7 +57,7 @@ CKEDITOR.dialog.add("simplelinkDialog", function(editor) {
             {
                 type: "select",
                 label: "Select the link target",
-                items: [ ['New Tab', '_blank'], ['Same Tab', '_self'], ['New Window', '_newWindow'] ],
+                items: [ ['New Tab', '_blank'], ['Same Tab', '_self'], ['New Window', 'window'] ],
                 'default': '_blank',
                 setup: function(element) {
                     // console.log(element);
