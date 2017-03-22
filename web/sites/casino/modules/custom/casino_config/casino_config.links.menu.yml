@@ -63,3 +63,9 @@ casino_config.admin_header_config:
   parent: casino_config.casino_config_list
   description: 'Casino Header Configurations'
   route_name: casino_config.header_config_form
+
+casino_config.admin_partners_config:
+  title: 'Partners Configurations'
+  parent: casino_config.casino_config_list
+  description: 'Casino Header Configurations'
+  route_name: casino_config.partners_config_form
