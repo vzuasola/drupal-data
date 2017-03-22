@@ -568,23 +568,6 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#default_value' => $myAccountConfigValue['language_field']['options']['wrapper_class']
         ];
 
-        $form['field_configuration']['field_submit_button_labels'] = [
-            '#type' => 'details',
-            '#title' => 'Submit Button',
-            '#group' => 'submit_button',
-            '#open' => False,
-            '#tree' => TRUE,
-        ];
-
-        $form['field_configuration']['field_submit_button_labels']['label'] = [
-            '#type' => 'textfield',
-            '#title' => $this->t('Submit Button'),
-            '#size' => 25,
-            '#required' => TRUE,
-            '#description' => $this->t('Label for the Submit button Field.'),
-            '#default_value' => $myAccountConfigValue['change_profile_label_field']['options']['label']
-        ];
-
         $form['actions'] = ['#type' => 'actions'];
         // Add a submit button that handles the submission of the form.
         $form['actions']['submit'] = [

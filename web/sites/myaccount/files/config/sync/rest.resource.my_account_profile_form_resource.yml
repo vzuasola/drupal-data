@@ -1,4 +1,4 @@
-uuid: 7adb6a18-c478-4ce7-ad71-a85e58e1f554
+uuid: 8de3cadd-25f6-43c5-b74d-6b59db8bc1dd
 langcode: en
 status: true
 dependencies:
@@ -8,6 +8,8 @@ dependencies:
     - my_account_form_profile
     - serialization
     - user
+_core:
+  default_config_hash: V4GgEf6B5XJIPioYgflZn6lm8biIBGeY9DzqKCyNJeA
 id: my_account_profile_form_resource
 plugin_id: my_account_profile_form_resource
 granularity: method
