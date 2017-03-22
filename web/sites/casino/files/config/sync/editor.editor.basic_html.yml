@@ -1,5 +1,5 @@
 uuid: ba1bcc27-86b6-42a6-b213-02c890031389
-langcode: en
+langcode: zh-hans
 status: true
 dependencies:
   config:
@@ -22,7 +22,7 @@ settings:
         -
           name: Linking
           items:
-            - SimpleLink
+            - DrupalLink
             - DrupalUnlink
         -
           name: Lists
@@ -32,6 +32,7 @@ settings:
         -
           name: Media
           items:
+            - Blockquote
             - DrupalImage
         -
           name: 'Block Formatting'
@@ -41,20 +42,7 @@ settings:
           name: Tools
           items:
             - Source
-        -
-          name: Font
-          items:
-            - FontSizes
-            - FontColors
-        -
-          name: Alignment
-          items:
-            - JustifyRight
-            - JustifyCenter
-            - JustifyLeft
   plugins:
-    language:
-      language_list: un
     stylescombo:
       styles: ''
 image_upload:
@@ -63,5 +51,5 @@ image_upload:
   directory: inline-images
   max_size: ''
   max_dimensions:
-    width: null
-    height: null
+    width: 0
+    height: 0
