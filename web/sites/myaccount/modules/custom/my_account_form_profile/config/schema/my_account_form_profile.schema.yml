@@ -262,13 +262,4 @@ my_account_form_profile.profile:
                 placeholder:
                   type: label
                   label: 'Placeholder value for field'
-    change_profile_label_field:
-      type: mapping
-      mapping:
-        options:
-          type: mapping
-          mapping:
-            label:
-              type: label
-              label: 'Default value for Change profile submit button'
   langcode: 'en'

@@ -26,46 +26,47 @@ class MyAccountFormResource extends ResourceBase
     public function get($id)
     {
 
+        // Expired the caches for resources update.
+        $build = array(
+            '#cache' => array(
+                'max-age' => 0,
+            ),
+        );
+
         switch ($id) {
 
             case 'my_account_change_password':
                 $config = \Drupal::config('my_account_form_profile.change_password');
                 $values = $config->get();
-                return new ResourceResponse($values);
                 break;
 
             case 'my_account_profile':
 
                 // Make seperte value for Profile field
                 $config = \Drupal::config('my_account_form_profile.profile');
-                $values = $config->get();
-                $values = $this->get_profile_hader_profile_value($values, 'profile');
-                return new ResourceResponse($values);
+                $values = $this->get_profile_hader_profile_value($config->get(), 'profile');
                 break;
 
             case 'my_account_cashier':
                 $config = \Drupal::config('my_account_core.cashier');
                 $values = $config->get();
-                return new ResourceResponse($values);
                 break;
 
             case 'my_account_livechat':
                 $config = \Drupal::config('my_account_core.livechat');
                 $values = $config->get();
-                return new ResourceResponse($values);
                 break;
 
             case 'my_account_profile_header':
 
                 // Get only hader section values.
                 $config = \Drupal::config('my_account_form_profile.profile');
-                $values = $config->get();
-                $values = $this->get_profile_hader_profile_value($values, 'header');
-                return new ResourceResponse($values);
+                $values = $this->get_profile_hader_profile_value($config->get(), 'header');
                 break;
             default:
         }
 
+        return (new ResourceResponse($values))->addCacheableDependency($build);
     }
 
 
