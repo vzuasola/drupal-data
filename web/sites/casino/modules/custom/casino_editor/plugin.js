@@ -1,4 +1,4 @@
-// (function ($, Drupal, drupalSettings, CKEDITOR) {
+(function ($, Drupal, drupalSettings, CKEDITOR) {
 
     function getSelectedSpan(editor) {
         var selection = editor.getSelection();
@@ -93,7 +93,7 @@
     }
 
 
-    CKEDITOR.plugins.add('wc_editor', {
+    CKEDITOR.plugins.add('casino_editor', {
             requires : ['richcombo', 'dialog'],
             icons: 'simplelink',
 
@@ -178,4 +178,4 @@
         }
     );
 
-// })(jQuery, Drupal, drupalSettings, CKEDITOR);
+})(jQuery, Drupal, drupalSettings, CKEDITOR);

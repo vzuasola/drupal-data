@@ -1,25 +1,25 @@
 <?php
 
-namespace Drupal\wc_editor\Plugin\CKEditorPlugin;
+namespace Drupal\casino_editor\Plugin\CKEditorPlugin;
 
 use Drupal\ckeditor\CKEditorPluginBase;
 use Drupal\editor\Entity\Editor;
 use Drupal\ckeditor\CKEditorPluginCssInterface;
 
 /**
- * Defines the "wc_editor" plugin.
+ * Defines the "casino_editor" plugin.
  *
  * @CKEditorPlugin(
- *   id = "wc_editor",
- *   label = @Translation("Web Composer Editor"),
+ *   id = "casino_editor",
+ *   label = @Translation("Casino CKEditor Plugins"),
  * )
  */
-class WebComposerEditor extends CKEditorPluginBase implements CKEditorPluginCssInterface {
+class CasinoEditor extends CKEditorPluginBase implements CKEditorPluginCssInterface {
   /**
    * {@inheritdoc}
    */
   public function getFile() {
-    return drupal_get_path('module', 'wc_editor') . '/plugin.js';
+    return drupal_get_path('module', 'casino_editor') . '/plugin.js';
   }
 
   /**
@@ -27,7 +27,7 @@ class WebComposerEditor extends CKEditorPluginBase implements CKEditorPluginCssI
    */
   public function getCssFiles(Editor $editor) {
     return array(
-      drupal_get_path('module', 'wc_editor') . '/css/plugin.css'
+      drupal_get_path('module', 'casino_editor') . '/css/plugin.css'
     );
   }
 
@@ -42,7 +42,7 @@ class WebComposerEditor extends CKEditorPluginBase implements CKEditorPluginCssI
    * {@inheritdoc}
    */
   public function getButtons() {
-    $modulePath = drupal_get_path('module', 'wc_editor');
+    $modulePath = drupal_get_path('module', 'casino_editor');
     return [
       'FontSizes' => [
           'label' => t('Font Size'),
