@@ -49,9 +49,9 @@ settings:
         -
           name: Alignment
           items:
-            - JustifyLeft
-            - JustifyBlock
             - JustifyRight
+            - JustifyCenter
+            - JustifyLeft
   plugins:
     language:
       language_list: un
