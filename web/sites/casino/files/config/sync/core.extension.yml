@@ -54,6 +54,7 @@ module:
   update: 0
   user: 0
   views_ui: 0
+  wc_editor: 0
   webcomposer_blocks: 0
   webcomposer_form: 0
   webcomposer_rest_extra: 0
