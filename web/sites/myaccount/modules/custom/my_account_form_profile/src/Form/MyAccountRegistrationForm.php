@@ -699,7 +699,6 @@ class MyAccountRegistrationForm extends ConfigFormBase
             ->set('language_field.weight', $configuration['field_labels_language']['weight'])
             ->set('language_field.options.help_text', $configuration['field_labels_language']['help_text'])
             ->set('language_field.options.wrapper_class', $configuration['field_labels_language']['wrapper_class'])
-            ->set('change_profile_label_field.options.label', $configuration['field_submit_button_labels']['label'])
             ->save();
     }
 
