@@ -220,7 +220,15 @@ class RestMenuItemsResource extends ResourceBase {
         $external = TRUE;
       }
       else {
-        $uri = $url->getInternalPath();
+        try {
+          $uri = $url->getInternalPath();
+        }
+        catch (\UnexpectedValueException $e) {
+          // if the path is relative in Drupal, but does not exist, we use the
+          // actual menu path as our uri
+          $uri = $url->getUri();
+          $uri = str_replace('base:', '/', $uri);
+        }
       }
 
       $alias = $this->aliasManager->getAliasByPath("/$uri");
