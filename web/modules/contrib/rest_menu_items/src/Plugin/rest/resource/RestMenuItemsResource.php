@@ -227,7 +227,7 @@ class RestMenuItemsResource extends ResourceBase {
           // if the path is relative in Drupal, but does not exist, we use the
           // actual menu path as our uri
           $uri = $url->getUri();
-          $uri = str_replace('base:', '/', $uri);
+          $uri = str_replace('base:', '', $uri);
         }
       }
 
