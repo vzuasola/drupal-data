@@ -122,11 +122,11 @@ class BlockResource extends ResourceBase {
       $block_content = \Drupal::service('entity.repository')->loadEntityByUuid('block_content', $uuid);
 
       $block_return['block_content'] = $block_content;
-      foreach ($block_content as $field => $fieldValue) {
-        if ( is_null($fieldValue->value) ){
-          $ttt = $block_content->getFieldDefinition($field)->getSettings();
-          if($ttt['target_type'] == 'paragraph'){
-            $block_return['paragraph'] = $this->getParagraphDetails($block_content->$field);
+      foreach ($block_content as $fieldType => $field) {
+        if ( is_null($field->value) ){
+          $fieldSettings = $block_content->getFieldDefinition($fieldType)->getSettings();
+          if($fieldSettings['target_type'] == 'paragraph'){
+            $block_return['paragraph'] = $this->getParagraphDetails($block_content->$fieldType);
           }
         }
       }
