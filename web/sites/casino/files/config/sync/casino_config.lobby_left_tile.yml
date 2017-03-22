@@ -1,7 +1,7 @@
-lobby_left_tile_title: 'Benefits tile'
+lobby_left_tile_title: 'WHY CHOOSE GOLD?'
 lobby_left_tile_content:
-  value: "<p>Tet ontent</p>\r\n"
+  value: "<div class=\"lobby-content-text\">\r\n<ul>\r\n\t<li class=\"mb-15 fc-red\" data-font-color=\"Red\"><span class=\"lobby-check\"></span>Faster and smoother gameplay</li>\r\n\t<li class=\"mb-15\"><span class=\"lobby-check\"></span>Faster withdrawal</li>\r\n\t<li class=\"mb-15\"><span class=\"lobby-check\"></span>Exclusive promotional offers</li>\r\n\t<li class=\"mb-15\"><span class=\"lobby-check\"></span>Optimized software accessibility</li>\r\n\t<li class=\"mb-15\"><span class=\"lobby-check\"></span>Prestigious gaming experience</li>\r\n\t<li class=\"mb-15\"><span class=\"lobby-check\"></span>Exclusive mobile games and offers</li>\r\n</ul>\r\n</div>\r\n"
   format: basic_html
-lobby_left_tile_image_url: 'http://casino.drupal.local/sites/casino/files/upload/tiles/lobby_tile_1_0.jpg'
+lobby_left_tile_image_url: 'http://casino.drupal.local/sites/casino/files/upload/tiles/lobby_tile_1.jpg'
 lobby_left_tile_image:
-  - '11'
+  - '13'

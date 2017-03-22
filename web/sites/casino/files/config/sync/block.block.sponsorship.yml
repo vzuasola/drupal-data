@@ -1,9 +1,9 @@
-uuid: eb1a0d16-925e-428c-8dc6-bd671b37215f
+uuid: 6739df0b-5e79-4321-a333-64137a373c60
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:sponsorship_block:49a2b94c-1f64-486b-ac78-a51e9609c522'
+    - 'block_content:sponsorship_block:28b0280c-8bb0-4aaa-ae54-4fbb894386c4'
   module:
     - block_content
   theme:
@@ -13,9 +13,9 @@ theme: bartik
 region: featured_bottom_first
 weight: 0
 provider: null
-plugin: 'block_content:49a2b94c-1f64-486b-ac78-a51e9609c522'
+plugin: 'block_content:28b0280c-8bb0-4aaa-ae54-4fbb894386c4'
 settings:
-  id: 'block_content:49a2b94c-1f64-486b-ac78-a51e9609c522'
+  id: 'block_content:28b0280c-8bb0-4aaa-ae54-4fbb894386c4'
   label: Sponsorship
   provider: block_content
   label_display: visible

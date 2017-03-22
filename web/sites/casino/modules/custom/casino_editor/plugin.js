@@ -1,10 +1,12 @@
 (function ($, Drupal, drupalSettings, CKEDITOR) {
 
+    CKEDITOR.dtd.$removeEmpty.span = 0;
+
     function getSelectedSpan(editor) {
         var selection = editor.getSelection();
         var selectedElement = selection.getSelectedElement();
 
-        if (selectedElement && (selectedElement.is('span') || selectedElement.is('p') | selectedElement.is('div'))) {
+        if (selectedElement && (selectedElement.is('span') || selectedElement.is('p') | selectedElement.is('div') | selectedElement.is('ul') | selectedElement.is('li'))) {
           return selectedElement;
         }
 
@@ -12,7 +14,21 @@
 
         if (range) {
           range.shrink(CKEDITOR.SHRINK_TEXT);
-          return editor.elementPath(range.getCommonAncestor()).contains('span', 1);
+          if (editor.elementPath(range.getCommonAncestor()).contains('span', 1)) {
+            return editor.elementPath(range.getCommonAncestor()).contains('span', 1);
+          }
+          if (editor.elementPath(range.getCommonAncestor()).contains('p', 1)) {
+            return editor.elementPath(range.getCommonAncestor()).contains('p', 1);
+          }
+          if (editor.elementPath(range.getCommonAncestor()).contains('ul', 1)) {
+            return editor.elementPath(range.getCommonAncestor()).contains('p', 1);
+          }
+          if (editor.elementPath(range.getCommonAncestor()).contains('li', 1)) {
+            return editor.elementPath(range.getCommonAncestor()).contains('p', 1);
+          }
+          if (editor.elementPath(range.getCommonAncestor()).contains('div', 1)) {
+            return editor.elementPath(range.getCommonAncestor()).contains('div', 1);
+          }
         }
         return null;
     }
@@ -71,6 +87,7 @@
     var onFontColorChange = function(editor, value, items) {
 
         var span = getSelectedSpan(editor);
+
         var selected_text = editor.getSelection().getSelectedText();
 
         if (span) {
