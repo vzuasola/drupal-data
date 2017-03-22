@@ -41,19 +41,19 @@ dob_field:
     error: 'Error message for dob'
     wrapper_class: dob
 dob_month:
-  weight: '3'
+  weight: '5'
   options:
     wrapper_class: dob-month
 dob_day:
-  weight: '3'
+  weight: '4'
   options:
     wrapper_class: dob-day
 dob_year:
-  weight: '3'
+  weight: '6'
   options:
     wrapper_class: dob-year
 country_field:
-  weight: '3'
+  weight: '7'
   options:
     label: Country
     attr:
@@ -62,7 +62,7 @@ country_field:
     error: 'Error message for country'
     wrapper_class: country
 email_field:
-  weight: '5'
+  weight: '8'
   options:
     label: Email
     attr:
@@ -79,7 +79,7 @@ account_field:
     label: 'Account Details'
     wrapper_class: account
 mobile_number_field:
-  weight: '6'
+  weight: '9'
   options:
     label: 'Mobile Number'
     attr:
@@ -90,7 +90,7 @@ mobile_number_field:
   label: 'Mobile Number'
   placeholder: '09217715594'
 language_field:
-  weight: '7'
+  weight: '10'
   options:
     label: Language
     attr:
