@@ -10,10 +10,13 @@
 .px48 { font-size: 48px; }
 .px72 { font-size: 72px; }
 
-.fc-red { color: red; }
-.fc-blue { color: blue; }
-.fc-yellow { color: yellow; }
-.fc-black { color: black; }
+.fc-red { color: #AF0000; }
+.fc-yellow { color: #FFE000; }
+.fc-white { color: #FFF; }
+.fc-grey-light { color: #E6E7E8; }
+.fc-grey { color: #D3D3D3; }
+.fc-grey-dark { color: #5E5E5E; }
+.fc-black { color: #373737; }
 
 .cke_panel_list {
     list-style: none !important;
