@@ -1,0 +1,12 @@
+name: Web Composer Editor
+type: module
+description: "Custom plugins for CKEditor"
+package: Web Composer
+# core: 8.x
+
+dependencies:
+  - ckeditor
+# Information added by Drupal.org packaging script on 2016-09-16
+version: '8.x-1.0'
+core: '8.x'
+project: 'wc_editor'

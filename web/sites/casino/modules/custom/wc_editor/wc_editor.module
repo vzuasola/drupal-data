@@ -1,0 +1,12 @@
+<?php
+
+function wc_editor_editor_js_settings_alter(&$settings) {
+    foreach ($settings['editor']['formats'] as $name => $value) {
+        
+        $settings['editor']['formats'][$name]['editorSettings']['extraAllowedContent'] = 'span(*)[data-font-color,data-font-size];a(*)[target,href]';
+        $settings['editor']['formats'][$name]['editorSettings']['startupOutlineBlocks'] = true;
+        $settings['editor']['formats'][$name]['editorSettings']['startupMode'] = 'source';
+        $settings['editor']['formats'][$name]['editorSettings']['removePlugins'] = 'link';
+        
+    }
+}
