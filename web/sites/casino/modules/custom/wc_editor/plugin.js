@@ -174,16 +174,6 @@
 
                 CKEDITOR.dialog.add( 'simplelinkDialog', this.path + 'js/dialogs/simplelink.js' );
 
-                editor.on('dialogDefinition', function (evt) {
-                    // var dialog = evt.data;
-                    // console.log(dialog);
-
-                    // if (dialog.name == 'link') {
-                    //     console.log('ye');
-                    // }
-                    alert('ye');
-                });
-
             }
         }
     );
