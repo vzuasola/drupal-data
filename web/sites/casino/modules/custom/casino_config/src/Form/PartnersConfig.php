@@ -6,7 +6,7 @@ use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\file\Entity\File;
 
-class PartnersConfig extends ConfigFormBase{
+class PartnersConfig extends ConfigFormBase {
 
   /**
    * {@inheritdoc}
@@ -49,12 +49,11 @@ class PartnersConfig extends ConfigFormBase{
     $keys = array(
       'partners_logo',
     );
-    foreach($keys as $key){
+    foreach( $keys as $key ){
       $fid = $form_state->getValue($key);
       $file = File::load($fid[0]);
       $file->setPermanent();
       $file->save();
-
 
       $this->config('casino_config.partners')->set("partners_image_url", file_create_url($file->getFileUri()))->save();
       $this->config('casino_config.partners')->set($key, $form_state->getValue($key))->save();
