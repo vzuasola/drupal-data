@@ -18,7 +18,7 @@ settings:
       value: _blank
       label: 'New Tab'
     -
-      value: _newWindow
+      value: window
       label: 'New Window'
   allowed_values_function: ''
 module: options
