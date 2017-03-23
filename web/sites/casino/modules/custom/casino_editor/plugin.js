@@ -1,18 +1,31 @@
 (function ($, Drupal, drupalSettings, CKEDITOR) {
 
+    CKEDITOR.dtd.$removeEmpty.span = 0;
+
     function getSelectedSpan(editor) {
         var selection = editor.getSelection();
         var selectedElement = selection.getSelectedElement();
 
-        if (selectedElement && (selectedElement.is('span') || selectedElement.is('p') | selectedElement.is('div'))) {
-          return selectedElement;
+        var allowedTags = ['span', 'p', 'ul', 'li', 'div', 'a'];
+
+        if (selectedElement) {
+            for (i = 0; i <= allowedTags.length; i++) {
+                if (selectedElement.is(allowedTags[i])) {
+                    return selectedElement;
+                }
+            }
         }
 
         var range = selection.getRanges(true)[0];
 
         if (range) {
-          range.shrink(CKEDITOR.SHRINK_TEXT);
-          return editor.elementPath(range.getCommonAncestor()).contains('span', 1);
+            range.shrink(CKEDITOR.SHRINK_TEXT);
+
+            for (i = 0; i <= allowedTags.length; i++) {
+                if (editor.elementPath(range.getCommonAncestor()).contains(allowedTags[i], 1)) {
+                    return editor.elementPath(range.getCommonAncestor()).contains(allowedTags[i], 1);
+                }
+            }
         }
         return null;
     }
@@ -29,10 +42,10 @@
                 var fontColors = editor.ui.get('FontColors');
                 
                 for (i = 0; i < classes.length; i++) {
-                    if (classes[i].startsWith('px')) {
+                    if (classes[i].match(/^text\-[0-9]/)) {
                         fontSizes.setValue(classes[i], span.getAttribute('data-font-size'));
                     }
-                    if (classes[i].startsWith('fc-')) {
+                    if (classes[i].match(/^text\-[a-zA-Z\-]/)) {
                         fontColors.setValue(classes[i], span.getAttribute('data-font-color'));
                     }
                 }
@@ -51,7 +64,7 @@
         if (span) {
             var className = span.$.className.split(' ');
             for(i = 0; i < className.length; i++) {
-                if (className[i].indexOf("px") >= 0) {
+                if (className[i].match(/^text\-[0-9]/)) {
                     className.splice(i, 1);
                 }
             }
@@ -71,12 +84,13 @@
     var onFontColorChange = function(editor, value, items) {
 
         var span = getSelectedSpan(editor);
+
         var selected_text = editor.getSelection().getSelectedText();
 
         if (span) {
             var className = span.$.className.split(' ');
             for(i = 0; i < className.length; i++) {
-                if (className[i].indexOf("fc") >= 0) {
+                if (className[i].match(/^text\-[a-zA-Z\-]/)) {
                     className.splice(i, 1);
                 }
             }
@@ -110,10 +124,10 @@
                 //     });
                 // });
 
-                editor.on('doubleclick', function( evt )
-                {
-                    onSelect(editor);
-                });
+                // editor.on('doubleclick', function( evt )
+                // {
+                //     onSelect(editor);
+                // });
 
                 editor.ui.addRichCombo('FontSizes',
                 {
@@ -121,13 +135,13 @@
                     title: 'Font Size',
                     init: function() {
                         // TODO: pull this from config?
-                        this.add('px12', '12px', '12px');
-                        this.add('px14', '14px', '14px');
-                        this.add('px16', '16px', '16px');
-                        this.add('px20', '20px', '20px');
-                        this.add('px36', '36px', '36px');
-                        this.add('px48', '48px', '48px');
-                        this.add('px72', '72px', '72px');
+                        this.add('text-12', '12px', '12px');
+                        this.add('text-14', '14px', '14px');
+                        this.add('text-16', '16px', '16px');
+                        this.add('text-20', '20px', '20px');
+                        this.add('text-36', '36px', '36px');
+                        this.add('text-48', '48px', '48px');
+                        this.add('text-72', '72px', '72px');
                     },
 
                     onClick: function(value, marked)
@@ -145,13 +159,16 @@
                     title: 'Font Color',
                     init: function() {
                         // TODO: pull this from config
-                        this.add('fc-yellow', 'Yellow', 'Yellow');
-                        this.add('fc-red', 'Red', 'Red');
-                        this.add('fc-white', 'White', 'White');
-                        this.add('fc-grey-light', 'Light Grey', 'Light Grey');
-                        this.add('fc-grey', 'Grey ', 'Grey');
-                        this.add('fc-grey-dark', 'Dark Grey', 'Dark Grey');
-                        this.add('fc-black', 'Black', 'Black');
+                        this.add('text-yellow', 'Yellow', 'Yellow');
+                        this.add('text-red', 'Red', 'Red');
+                        this.add('text-dark-red', 'Dark Red', 'Dark Red');
+                        this.add('text-white', 'White', 'White');
+                        this.add('text-lightest-gray', 'Lightest Gray', 'Lightest Gray');
+                        this.add('text-light-gray', 'Light Gray ', 'Light Gray');
+                        this.add('text-gray', 'Gray', 'Gray');
+                        this.add('text-dark-gray', 'Dark Grey', 'Dark Grey');
+                        this.add('text-black', 'Black', 'Black');
+                        this.add('text-light-gold', 'Light Gold', 'Light Gold');
                     },
 
 

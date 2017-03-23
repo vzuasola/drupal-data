@@ -66,15 +66,7 @@ casino_config.lobby_right_tile_form:
   path: 'admin/config/casino/lobby-right-tile'
   defaults:
     _form: 'Drupal\casino_config\Form\LobbyRightTile'
-    _title: 'Gold Experince Tile'
-  requirements:
-    _permission: 'administer site configuration'
-
-casino_config.copyright_config_form:
-  path: 'admin/config/casino/copyright'
-  defaults:
-    _form: 'Drupal\casino_config\Form\CopyrightConfig'
-    _title: 'Copyright'
+    _title: 'Gold Experience Tile'
   requirements:
     _permission: 'administer site configuration'
 

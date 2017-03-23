@@ -1,0 +1,4 @@
+lobby_left_tile_title: 'Benefits tile sc'
+lobby_left_tile_content:
+  value: "<p>Tet ontent sc</p>\r\n"
+  format: basic_html
