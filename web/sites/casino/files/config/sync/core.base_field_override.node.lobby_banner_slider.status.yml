@@ -1,0 +1,22 @@
+uuid: 1cd41256-fb29-4868-ab9f-3bb13df216b3
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - node.type.lobby_banner_slider
+id: node.lobby_banner_slider.status
+field_name: status
+entity_type: node
+bundle: lobby_banner_slider
+label: 'Publishing status'
+description: 'A boolean indicating whether the node is published.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,9 +1,9 @@
-uuid: b68527d3-7f11-4d07-b91e-67a51e57daae
-langcode: zh-hans
+uuid: aee1d066-dac9-4418-a9d4-c4f30eeb2254
+langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:social_media_block:4c6d0ebb-3bf2-4fb6-b6d5-d8e4d2f1523e'
+    - 'block_content:social_media_block:62906dd9-6151-40a5-a4e8-57948fa4bf14'
   module:
     - block_content
   theme:
@@ -13,10 +13,10 @@ theme: bartik
 region: featured_bottom_second
 weight: 0
 provider: null
-plugin: 'block_content:4c6d0ebb-3bf2-4fb6-b6d5-d8e4d2f1523e'
+plugin: 'block_content:62906dd9-6151-40a5-a4e8-57948fa4bf14'
 settings:
-  id: 'block_content:4c6d0ebb-3bf2-4fb6-b6d5-d8e4d2f1523e'
-  label: 'Follow us and receive the latest updates'
+  id: 'block_content:62906dd9-6151-40a5-a4e8-57948fa4bf14'
+  label: 'Social Media Link'
   provider: block_content
   label_display: visible
   status: true

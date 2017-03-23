@@ -10,17 +10,6 @@ casino_config.dafabet_keyword:
       label: 'Description'
       translatable: true
 
-casino_config.copyright_config:
-  type: mapping
-  label: 'Copyright'
-  mapping:
-    copyright_label:
-      type: label
-      label: 'Copyright Label'
-    all_right_reserved_label:
-      type: label
-      label: 'All right Reserved Label'
-
 casino_config.left_floating_banner:
   type: mapping
   label: 'Left Floating Banner'
