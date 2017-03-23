@@ -57,7 +57,7 @@ class MyAccountAccessDeniedForm extends ConfigFormBase
             '#type' => 'textarea',
             '#title' => t('Bottom Blurb'),
             '#required' => true,
-            '#description' => $this->t('Live Chat Markup : <pre><a href="{livechat.link}"></pre> Livechat </a>'),
+            '#description' => $this->t('Bottom Blurb'),
             '#default_value' => $myAccountAccessDeniedConfig->get('bottom_blurb')
         ];
 
