@@ -42,6 +42,17 @@ settings:
           name: Tools
           items:
             - Source
+        -
+          name: Font
+          items:
+            - FontSizes
+            - FontColors
+        -
+          name: Alignment
+          items:
+            - JustifyLeft
+            - JustifyCenter
+            - JustifyRight
   plugins:
     stylescombo:
       styles: ''

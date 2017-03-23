@@ -50,6 +50,17 @@ settings:
           items:
             - ShowBlocks
             - Source
+        -
+          name: Font
+          items:
+            - FontSizes
+            - FontColors
+        -
+          name: Alignment
+          items:
+            - JustifyRight
+            - JustifyCenter
+            - JustifyLeft
   plugins:
     stylescombo:
       styles: ''
