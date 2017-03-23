@@ -183,9 +183,9 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#type' => 'select',
             '#title' => $this->t('Field Weight'),
             '#options' => [
-                    '2'=>'2',
-                    '3'=>'3',
-                ],
+                '2' => '2',
+                '3' => '3',
+            ],
             '#default_value' => $myAccountConfigValue['first_name_field']['weight'],
         ];
 
@@ -238,9 +238,9 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#type' => 'select',
             '#title' => $this->t('Field Weight'),
             '#options' => [
-                    '2'=>'2',
-                    '3'=>'3',
-                ],
+                '2' => '2',
+                '3' => '3',
+            ],
             '#default_value' => $myAccountConfigValue['last_name_field']['weight'],
         ];
 
@@ -296,25 +296,25 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#description' => $this->t('Wrapper class for field.'),
             '#default_value' => $myAccountConfigValue['dob_field']['options']['wrapper_class'],
         ];
-        $form['field_configuration']['field_labels_dob_month'] = [
+        $form['field_configuration']['field_labels_dob']['field_labels_dob_month'] = [
             '#type' => 'details',
             '#title' => 'DOB Month',
             '#open' => False,
             '#tree' => TRUE,
         ];
 
-        $form['field_configuration']['field_labels_dob_month']['weight'] = [
+        $form['field_configuration']['field_labels_dob']['field_labels_dob_month']['weight'] = [
             '#type' => 'select',
             '#title' => $this->t('DOB Month Field Weight'),
             '#options' => [
-                    '5'=>'5',
-                    '6'=>'6',
-                    '7'=>'7',
-                ],
+                '5' => '5',
+                '6' => '6',
+                '7' => '7',
+            ],
             '#default_value' => $myAccountConfigValue['dob_month']['weight'],
         ];
 
-        $form['field_configuration']['field_labels_dob_month']['wrapper_class'] = [
+        $form['field_configuration']['field_labels_dob']['field_labels_dob_month']['wrapper_class'] = [
             '#type' => 'textfield',
             '#title' => $this->t('DOB Month wrapper class'),
             '#size' => 25,
@@ -322,50 +322,50 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#default_value' => $myAccountConfigValue['dob_month']['options']['wrapper_class'],
         ];
 
-        $form['field_configuration']['field_labels_dob_day'] = [
+        $form['field_configuration']['field_labels_dob']['field_labels_dob_day'] = [
             '#type' => 'details',
             '#title' => 'DOB Day',
             '#open' => False,
             '#tree' => TRUE,
         ];
 
-        $form['field_configuration']['field_labels_dob_day']['weight'] = [
+        $form['field_configuration']['field_labels_dob']['field_labels_dob_day']['weight'] = [
             '#type' => 'select',
             '#title' => $this->t('DOB Day Field Weight'),
             '#options' => [
-                    '5'=>'5',
-                    '6'=>'6',
-                    '7'=>'7',
-                ],
+                '5' => '5',
+                '6' => '6',
+                '7' => '7',
+            ],
             '#default_value' => $myAccountConfigValue['dob_day']['weight'],
         ];
 
-        $form['field_configuration']['field_labels_dob_day']['wrapper_class'] = [
+        $form['field_configuration']['field_labels_dob']['field_labels_dob_day']['wrapper_class'] = [
             '#type' => 'textfield',
             '#title' => $this->t('DOB Day wrapper class'),
             '#size' => 25,
             '#description' => $this->t('Wrapper class for field.'),
             '#default_value' => $myAccountConfigValue['dob_day']['options']['wrapper_class'],
         ];
-        $form['field_configuration']['field_labels_dob_year'] = [
+        $form['field_configuration']['field_labels_dob']['field_labels_dob_year'] = [
             '#type' => 'details',
             '#title' => 'DOB Year',
             '#open' => False,
             '#tree' => TRUE,
         ];
 
-        $form['field_configuration']['field_labels_dob_year']['weight'] = [
+        $form['field_configuration']['field_labels_dob']['field_labels_dob_year']['weight'] = [
             '#type' => 'select',
             '#title' => $this->t('DOB Year Field Weight'),
-            '#options' => array(
-                    '5'=>'5',
-                    '6'=>'6',
-                    '7'=>'7',
-                ),
+            '#options' => [
+                '5' => '5',
+                '6' => '6',
+                '7' => '7',
+            ],
             '#default_value' => $myAccountConfigValue['dob_year']['weight'],
         ];
 
-        $form['field_configuration']['field_labels_dob_year']['wrapper_class'] = [
+        $form['field_configuration']['field_labels_dob']['field_labels_dob_year']['wrapper_class'] = [
             '#type' => 'textfield',
             '#title' => $this->t('DOB Year wrapper class'),
             '#size' => 25,
@@ -593,6 +593,31 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#default_value' => $myAccountConfigValue['language_field']['options']['wrapper_class'],
         ];
 
+        $form['field_configuration']['field_labels_account'] = [
+            '#type' => 'details',
+            '#title' => 'My Profile Header',
+            '#open' => False,
+            '#tree' => TRUE,
+        ];
+
+        $form['field_configuration']['field_labels_account']['account_label'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Account Detail'),
+            '#size' => 25,
+            '#required' => TRUE,
+            '#description' => $this->t('Label for the language Field.'),
+            '#default_value' => $myAccountConfigValue['account_field']['options']['label'],
+        ];
+
+        $form['field_configuration']['field_labels_account']['communication_label'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Communication Detail'),
+            '#size' => 25,
+            '#required' => TRUE,
+            '#description' => $this->t('Label for the language Field.'),
+            '#default_value' => $myAccountConfigValue['communication_detail_field']['options']['label'],
+        ];
+
         $form['actions'] = ['#type' => 'actions'];
         // Add a submit button that handles the submission of the form.
         $form['actions']['submit'] = [
@@ -669,12 +694,12 @@ class MyAccountRegistrationForm extends ConfigFormBase
             ->set('username_field.options.attr.placeholder', $configuration['field_labels_user_name']['placeholder'])
             ->set('username_field.options.required', $configuration['field_labels_user_name']['required'])
             ->set('username_field.weight', $configuration['field_labels_user_name']['weight'])
-            ->set('dob_month.weight', $configuration['field_labels_dob_month']['weight'])
-            ->set('dob_field.options.wrapper_class', $configuration['field_labels_dob_month']['wrapper_class'])
-            ->set('dob_year.weight', $configuration['field_labels_dob_year']['weight'])
-            ->set('dob_year.options.wrapper_class', $configuration['field_labels_dob_year']['wrapper_class'])
-            ->set('dob_day.weight', $configuration['field_labels_dob_day']['weight'])
-            ->set('dob_day.options.wrapper_class', $configuration['field_labels_dob_day']['wrapper_class'])
+            ->set('dob_month.weight', $configuration['field_labels_dob']['field_labels_dob_month']['weight'])
+            ->set('dob_month.options.wrapper_class', $configuration['field_labels_dob']['field_labels_dob_month']['wrapper_class'])
+            ->set('dob_year.weight', $configuration['field_labels_dob']['field_labels_dob_year']['weight'])
+            ->set('dob_year.options.wrapper_class', $configuration['field_labels_dob']['field_labels_dob_year']['wrapper_class'])
+            ->set('dob_day.weight', $configuration['field_labels_dob']['field_labels_dob_day']['weight'])
+            ->set('dob_day.options.wrapper_class', $configuration['field_labels_dob']['field_labels_dob_day']['wrapper_class'])
             ->set('username_field.options.wrapper_class', $configuration['field_labels_user_name']['wrapper_class'])
             ->set('currency_field.options.label', $configuration['field_labels_currency']['label'])
             ->set('currency_field.options.attr.placeholder', $configuration['field_labels_currency']['placeholder'])
@@ -724,6 +749,8 @@ class MyAccountRegistrationForm extends ConfigFormBase
             ->set('language_field.weight', $configuration['field_labels_language']['weight'])
             ->set('language_field.options.help_text', $configuration['field_labels_language']['help_text'])
             ->set('language_field.options.wrapper_class', $configuration['field_labels_language']['wrapper_class'])
+            ->set('account_field.options.label', $configuration['field_labels_account']['account_label'])
+            ->set('communication_detail_field.options.label', $configuration['field_labels_account']['communication_label'])
             ->save();
     }
 
