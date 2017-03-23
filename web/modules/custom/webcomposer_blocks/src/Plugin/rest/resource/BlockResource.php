@@ -31,6 +31,9 @@ class BlockResource extends ResourceBase {
    */
   protected $currentUser;
 
+  protected $entityRepository;
+  protected $entity_manager;
+
   /**
    * Constructs a Drupal\rest\Plugin\ResourceBase object.
    *
@@ -53,10 +56,14 @@ class BlockResource extends ResourceBase {
     $plugin_definition,
     array $serializer_formats,
     LoggerInterface $logger,
-    AccountProxyInterface $current_user) {
+    AccountProxyInterface $current_user,
+    $entity_repository,
+    $entity_manager) {
     parent::__construct($configuration, $plugin_id, $plugin_definition, $serializer_formats, $logger);
 
     $this->currentUser = $current_user;
+    $this->entityRepository = $entity_repository;
+    $this->entityManager = $entity_manager;
   }
 
   /**
@@ -69,7 +76,9 @@ class BlockResource extends ResourceBase {
       $plugin_definition,
       $container->getParameter('serializer.formats'),
       $container->get('logger.factory')->get('webcomposer_blocks'),
-      $container->get('current_user')
+      $container->get('current_user'),
+      $container->get('entity.repository'),
+      $container->get('entity.manager')
     );
   }
 
@@ -113,15 +122,30 @@ class BlockResource extends ResourceBase {
    */
   private function getBlockDefinition($id)
   {
-    $block = \Drupal::entityTypeManager()
-      ->getStorage('block')
-      ->load($id);
+    $block = $this->entityManager->getStorage('block')->load($id);
 
     if ($block) {
       $uuid = $block->getPlugin()->getDerivativeId();
-      $block_content = \Drupal::service('entity.repository')->loadEntityByUuid('block_content', $uuid);
+      $block_content = $this->entityRepository->loadEntityByUuid('block_content', $uuid);
 
-      return $block_content;
+      $block_content_array = $block_content->toArray();
+
+      foreach ($block_content as $fieldType => $field) {
+          $fieldSettings = $field->getSettings();
+
+          if ($fieldSettings['target_type'] == 'paragraph') {
+            foreach ($block_content_array[$fieldType] as $key => $value) {
+              $block_content_array[$fieldType][$key]['paragraph'] = $this->loadParagraphByID($value['target_id']);
+            }
+          }
+      }
+      return $block_content_array;
     }
+  }
+
+
+  public function loadParagraphByID($target_id){
+    $paragraph = $this->entityManager->getStorage('paragraph')->load($target_id);
+    return $paragraph;
   }
 }

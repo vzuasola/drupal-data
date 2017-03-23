@@ -19,6 +19,7 @@ permissions:
   - 'search content'
   - 'restful get rest_menu_item'
   - 'access my_account config'
+  - 'restful get my_account_profile_form_resource'
   - 'restful get Web Composer Token Resource Label'
   - 'restful post Web Composer Token Resource Label'
   - 'restful get webcomposer_token_rest'
@@ -26,3 +27,5 @@ permissions:
   - 'restful get entity_bundle_fields_resource'
   - 'restful get entity_bundle_weight_resource'
   - 'restful get form_resource'
+  - 'restful get language_rest_resource'
+  - 'restful post contact_message'

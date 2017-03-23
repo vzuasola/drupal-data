@@ -4,6 +4,9 @@ status: true
 dependencies:
   config:
     - node.type.lobby_banner_slider
+third_party_settings:
+  content_translation:
+    enabled: false
 id: node.lobby_banner_slider
 target_entity_type_id: node
 target_bundle: lobby_banner_slider

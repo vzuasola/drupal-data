@@ -1,0 +1,21 @@
+uuid: e974d4e5-cd8e-40f4-8169-7ab836b1db28
+langcode: en
+status: true
+dependencies:
+  module:
+    - basic_auth
+    - hal
+    - serialization
+    - user
+    - webcomposer_rest_extra
+id: contact_message
+plugin_id: contact_message
+granularity: method
+configuration:
+  POST:
+    supported_formats:
+      - hal_json
+      - json
+    supported_auth:
+      - basic_auth
+      - cookie

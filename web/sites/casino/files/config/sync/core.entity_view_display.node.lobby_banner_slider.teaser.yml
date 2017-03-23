@@ -24,4 +24,8 @@ content:
   links:
     weight: 100
 hidden:
+  field_banner_link: true
+  field_banner_link_target: true
+  field_content_position: true
+  field_image: true
   langcode: true

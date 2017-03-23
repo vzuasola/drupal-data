@@ -85,3 +85,11 @@ casino_config.header_config_form:
     _title: 'Casino Header Configurations'
   requirements:
     _permission: 'administer site configuration'
+
+casino_config.partners_config_form:
+  path: 'admin/config/casino/partners'
+  defaults:
+    _form: 'Drupal\casino_config\Form\PartnersConfig'
+    _title: 'Partners Configurations'
+  requirements:
+    _permission: 'administer site configuration'
