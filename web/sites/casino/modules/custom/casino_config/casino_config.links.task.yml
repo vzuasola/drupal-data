@@ -3,11 +3,6 @@ casino_config.dafabet_ketword_tab:
   title: 'About Dafabet'
   base_route: casino_config.dafabet_keyword_form
 
-casino_config.copyright_config_tab:
-  route_name: casino_config.copyright_config_form
-  title: 'Copyright'
-  base_route: casino_config.copyright_config_form
-
 casino_config.left_floating_banner_tab:
   route_name: casino_config.left_floating_banner_form
   title: 'Left Floating Banner'

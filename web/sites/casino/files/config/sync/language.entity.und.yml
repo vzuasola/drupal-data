@@ -1,5 +1,5 @@
 uuid: 8ba8647d-0376-488e-b6f6-f3582cab514f
-langcode: en
+langcode: zh-hans
 status: true
 dependencies: {  }
 _core:
@@ -7,5 +7,5 @@ _core:
 id: und
 label: 'Not specified'
 direction: ltr
-weight: 2
+weight: 6
 locked: true

@@ -70,14 +70,6 @@ casino_config.lobby_right_tile_form:
   requirements:
     _permission: 'administer site configuration'
 
-casino_config.copyright_config_form:
-  path: 'admin/config/casino/copyright'
-  defaults:
-    _form: 'Drupal\casino_config\Form\CopyrightConfig'
-    _title: 'Copyright'
-  requirements:
-    _permission: 'administer site configuration'
-
 casino_config.header_config_form:
   path: 'admin/config/casino/join-now-button'
   defaults:
