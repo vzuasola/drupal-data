@@ -79,6 +79,8 @@ class LobbyLeftTile extends ConfigFormBase{
       if($key == "lobby_left_tile_image"){
         $fid = $form_state->getValue($key);
         $file = File::load($fid[0]);
+        $file->setPermanent();
+        $file->save();
         $this->config('casino_config.lobby_left_tile')->set("lobby_left_tile_image_url", file_create_url($file->getFileUri()))->save();
       }
 

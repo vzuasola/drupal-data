@@ -1,0 +1,20 @@
+uuid: 59f556af-408d-4b2d-9bde-760504ee48ba
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - node.type.lobby_banner_slider
+id: node.lobby_banner_slider.uid
+field_name: uid
+entity_type: node
+bundle: lobby_banner_slider
+label: 'Authored by'
+description: 'The username of the content author.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\node\Entity\Node::getCurrentUserId'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

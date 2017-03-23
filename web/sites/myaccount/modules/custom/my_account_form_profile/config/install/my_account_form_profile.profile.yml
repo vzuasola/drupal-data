@@ -121,4 +121,3 @@ language_field:
     required: '1'
     error: 'Error field for Language'
     wrapper_class: 'language'
-    

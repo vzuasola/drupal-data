@@ -14,7 +14,7 @@ bundle: lobby_banner_slider
 label: 'Banner Link Target'
 description: ''
 required: true
-translatable: false
+translatable: true
 default_value:
   -
     value: _top

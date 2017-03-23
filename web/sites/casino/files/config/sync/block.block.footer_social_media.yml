@@ -1,0 +1,25 @@
+uuid: aee1d066-dac9-4418-a9d4-c4f30eeb2254
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:social_media_block:62906dd9-6151-40a5-a4e8-57948fa4bf14'
+  module:
+    - block_content
+  theme:
+    - bartik
+id: footer_social_media
+theme: bartik
+region: featured_bottom_second
+weight: 0
+provider: null
+plugin: 'block_content:62906dd9-6151-40a5-a4e8-57948fa4bf14'
+settings:
+  id: 'block_content:62906dd9-6151-40a5-a4e8-57948fa4bf14'
+  label: 'Social Media Link'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
