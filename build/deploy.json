@@ -4,12 +4,12 @@
         "password": "ARTIFACTORY_PASSWORD",
         "permissions": ["r", "w"],
         "instances": [
-            "http://trc-ptc-afact01.msred.dom:8081/artifactory/web-composer-drupal"
+            "http://trc-ptc-afact01.msred.dom:8081/artifactory/drupal-data"
         ]
     },
     "project": {
         "style": "drupal8",
-        "archive_directory": "web-composer-drupal",
+        "archive_directory": "drupal-data",
         "archive_exclude_directories": [
             ".git",
             ".svn",
@@ -35,10 +35,10 @@
             "any"
         ],
         "dockerfile": "build/Dockerfile.deploy",
-        "job_name": "web-composer-drupal: deploy - development environment",
+        "job_name": "drupal-data: deploy - development environment",
         "password": "MSGREEN_DEPLOY_PASSWORD",
         "prerequisite": "any",
-        "username": "web-composer-drupal"
+        "username": "drupal-data"
     },
     "testing": {
         "ansible_tower_instance": "mic-tst-itass01.msgreen.dom",
@@ -46,10 +46,10 @@
             "any"
         ],
         "dockerfile": "build/Dockerfile.deploy",
-        "job_name": "web-composer-drupal: deploy - testing environment (QA)",
+        "job_name": "drupal-data: deploy - testing environment (QA)",
         "password": "MSGREEN_DEPLOY_PASSWORD",
         "prerequisite": "any",
-        "username": "web-composer-drupal"
+        "username": "drupal-data"
     },
     "uat": {
         "ansible_tower_instance": "msc-co-itass01.msorange.dom",
@@ -57,10 +57,10 @@
             "any"
         ],
         "dockerfile": "build/Dockerfile.deploy",
-        "job_name": "web-composer-drupal: deploy - uat environent",
+        "job_name": "drupal-data: deploy - uat environent",
         "password": "MSORANGE_DEPLOY_PASSWORD",
         "prerequisite": "any",
-        "username": "web-composer-drupal"
+        "username": "drupal-data"
     },
     "staging": {
         "ansible_tower_instance": "msc-co-itass01.msorange.dom",
@@ -68,10 +68,10 @@
             "any"
         ],
         "dockerfile": "build/Dockerfile.deploy",
-        "job_name": "web-composer-drupal: deploy - staging environent",
+        "job_name": "drupal-data: deploy - staging environent",
         "password": "MSORANGE_DEPLOY_PASSWORD",
         "prerequisite": "any",
-        "username": "web-composer-drupal"
+        "username": "drupal-data"
     },
     "staging-signoff": {
         "authorized_users": [
@@ -92,10 +92,10 @@
             "renzjonathan.alib@bayviewtechnology.com"
         ],
         "dockerfile": "build/Dockerfile.deploy",
-        "job_name": "web-composer-drupal: Deploy - Internal production",
+        "job_name": "drupal-data: deploy - Internal production",
         "password": "MSRED_DEPLOY_PASSWORD",
         "prerequisite": "any",
-        "username": "web-composer-drupal"
+        "username": "drupal-data"
     },
     "internal-production-signoff": {
         "authorized_users": [
@@ -115,9 +115,9 @@
             "renzjonathan.alib@bayviewtechnology.com"
         ],
         "dockerfile": "build/Dockerfile.deploy",
-        "job_name": "web-composer-drupal: deploy - Production (front facing)",
+        "job_name": "drupal-data: deploy - Production (front facing)",
         "password": "MSRED_DEPLOY_PASSWORD",
         "prerequisite": "any",
-        "username": "web-composer-drupal"
+        "username": "drupal-data"
     }
 }
