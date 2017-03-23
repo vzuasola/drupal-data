@@ -77,7 +77,7 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#type' => 'select',
             '#title' => $this->t('Field weight'),
             '#disabled' => TRUE,
-            '#options' => ['0'],
+            '#options' => ['0' => '0'],
             '#default_value' => $myAccountConfigValue['username_field']['weight'],
         ];
 
@@ -130,7 +130,7 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#type' => 'select',
             '#title' => $this->t('Field Weight'),
             '#disabled' => TRUE,
-            '#options' => ['1'],
+            '#options' => ['1' => '1'],
             '#default_value' => $myAccountConfigValue['currency_field']['weight'],
         ];
 
@@ -182,10 +182,10 @@ class MyAccountRegistrationForm extends ConfigFormBase
         $form['field_configuration']['field_labels_first_name']['weight'] = [
             '#type' => 'select',
             '#title' => $this->t('Field Weight'),
-            '#options' => array(
+            '#options' => [
                     '2'=>'2',
                     '3'=>'3',
-                ),
+                ],
             '#default_value' => $myAccountConfigValue['first_name_field']['weight'],
         ];
 
@@ -237,10 +237,10 @@ class MyAccountRegistrationForm extends ConfigFormBase
         $form['field_configuration']['field_labels_last_name']['weight'] = [
             '#type' => 'select',
             '#title' => $this->t('Field Weight'),
-            '#options' => array(
+            '#options' => [
                     '2'=>'2',
                     '3'=>'3',
-                ),
+                ],
             '#default_value' => $myAccountConfigValue['last_name_field']['weight'],
         ];
 
@@ -285,7 +285,7 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#type' => 'select',
             '#title' => $this->t('Field Weight'),
             '#disabled' => TRUE,
-            '#options' => ['4'],
+            '#options' => ['4' => '4'],
             '#default_value' => $myAccountConfigValue['dob_field']['weight'],
         ];
 
@@ -306,11 +306,11 @@ class MyAccountRegistrationForm extends ConfigFormBase
         $form['field_configuration']['field_labels_dob_month']['weight'] = [
             '#type' => 'select',
             '#title' => $this->t('DOB Month Field Weight'),
-            '#options' => array(
+            '#options' => [
                     '5'=>'5',
                     '6'=>'6',
                     '7'=>'7',
-                ),
+                ],
             '#default_value' => $myAccountConfigValue['dob_month']['weight'],
         ];
 
@@ -332,11 +332,11 @@ class MyAccountRegistrationForm extends ConfigFormBase
         $form['field_configuration']['field_labels_dob_day']['weight'] = [
             '#type' => 'select',
             '#title' => $this->t('DOB Day Field Weight'),
-            '#options' => array(
+            '#options' => [
                     '5'=>'5',
                     '6'=>'6',
                     '7'=>'7',
-                ),
+                ],
             '#default_value' => $myAccountConfigValue['dob_day']['weight'],
         ];
 
@@ -414,7 +414,7 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#type' => 'select',
             '#title' => $this->t('Field Weight'),
             '#disabled' => TRUE,
-            '#options' => ['8'],
+            '#options' => ['8' => '8'],
             '#default_value' => $myAccountConfigValue['country_field']['weight'],
         ];
 
@@ -467,7 +467,7 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#type' => 'select',
             '#title' => $this->t('Field Weight'),
             '#disabled' => TRUE,
-            '#options' => ['9'],
+            '#options' => ['9' => '9'],
             '#default_value' => $myAccountConfigValue['email_field']['weight'],
         ];
 
@@ -521,7 +521,7 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#type' => 'select',
             '#title' => $this->t('Field Weight'),
             '#disabled' => TRUE,
-            '#options' => ['10'],
+            '#options' => ['10' => '10'],
             '#default_value' => $myAccountConfigValue['mobile_number_field']['weight'],
         ];
 
@@ -574,7 +574,7 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#type' => 'select',
             '#title' => $this->t('Field Weight'),
             '#disabled' => TRUE,
-            '#options' => ['11'],
+            '#options' => ['11' => '11'],
             '#default_value' => $myAccountConfigValue['language_field']['weight'],
         ];
         $form['field_configuration']['field_labels_language']['help_text'] = [
