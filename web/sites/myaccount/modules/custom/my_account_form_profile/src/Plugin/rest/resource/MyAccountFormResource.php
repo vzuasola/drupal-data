@@ -57,6 +57,16 @@ class MyAccountFormResource extends ResourceBase
                 $values = $config->get();
                 break;
 
+            case 'my_account_access_denied':
+                $config = \Drupal::config('my_account_error_handler.403');
+                $values = $config->get();
+                break;
+
+            case 'my_account_page_not_found':
+                $config = \Drupal::config('my_account_error_handler.404');
+                $values = $config->get();
+                break;
+
             case 'my_account_profile_header':
 
                 // Get only hader section values.

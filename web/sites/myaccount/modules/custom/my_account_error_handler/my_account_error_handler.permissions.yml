@@ -1,0 +1,4 @@
+administer my_account error_handler:
+  title: 'MyAccount Error Handler'
+  description: 'User able to access MyAccount Error Handler.'
+  restrict access: true

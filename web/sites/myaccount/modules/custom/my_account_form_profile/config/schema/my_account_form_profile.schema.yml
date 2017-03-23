@@ -121,6 +121,9 @@ my_account_form_profile.profile:
     first_name_field:
       type: mapping
       mapping:
+        weight:
+          type: label
+          label: 'Weight for First name field'
         options:
           type: mapping
           mapping:
@@ -139,6 +142,9 @@ my_account_form_profile.profile:
     last_name_field:
       type: mapping
       mapping:
+        weight:
+          type: label
+          label: 'Weight for Last name field'
         options:
           type: mapping
           mapping:
@@ -172,6 +178,24 @@ my_account_form_profile.profile:
                 placeholder:
                   type: label
                   label: 'Placeholder value for field'
+    dob_month:
+      type: mapping
+      mapping:
+        weight:
+          type: label
+          label: 'Weight for DOB month field'
+    dob_day:
+      type: mapping
+      mapping:
+        weight:
+          type: label
+          label: 'Weight for DOB day field'
+    dob_year:
+      type: mapping
+      mapping:
+        weight:
+          type: label
+          label: 'Weight for DOB year field'
     country_field:
       type: mapping
       mapping:
