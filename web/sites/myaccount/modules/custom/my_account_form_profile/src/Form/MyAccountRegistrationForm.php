@@ -296,14 +296,14 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#description' => $this->t('Wrapper class for field.'),
             '#default_value' => $myAccountConfigValue['dob_field']['options']['wrapper_class'],
         ];
-        $form['field_configuration']['field_labels_dob_month'] = [
+        $form['field_configuration']['field_labels_dob']['field_labels_dob_month'] = [
             '#type' => 'details',
             '#title' => 'DOB Month',
             '#open' => False,
             '#tree' => TRUE,
         ];
 
-        $form['field_configuration']['field_labels_dob_month']['weight'] = [
+        $form['field_configuration']['field_labels_dob']['field_labels_dob_month']['weight'] = [
             '#type' => 'select',
             '#title' => $this->t('DOB Month Field Weight'),
             '#options' => array(
@@ -314,7 +314,7 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#default_value' => $myAccountConfigValue['dob_month']['weight'],
         ];
 
-        $form['field_configuration']['field_labels_dob_month']['wrapper_class'] = [
+        $form['field_configuration']['field_labels_dob']['field_labels_dob_month']['wrapper_class'] = [
             '#type' => 'textfield',
             '#title' => $this->t('DOB Month wrapper class'),
             '#size' => 25,
@@ -322,14 +322,14 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#default_value' => $myAccountConfigValue['dob_month']['options']['wrapper_class'],
         ];
 
-        $form['field_configuration']['field_labels_dob_day'] = [
+        $form['field_configuration']['field_labels_dob']['field_labels_dob_day'] = [
             '#type' => 'details',
             '#title' => 'DOB Day',
             '#open' => False,
             '#tree' => TRUE,
         ];
 
-        $form['field_configuration']['field_labels_dob_day']['weight'] = [
+        $form['field_configuration']['field_labels_dob']['field_labels_dob_day']['weight'] = [
             '#type' => 'select',
             '#title' => $this->t('DOB Day Field Weight'),
             '#options' => array(
@@ -340,21 +340,21 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#default_value' => $myAccountConfigValue['dob_day']['weight'],
         ];
 
-        $form['field_configuration']['field_labels_dob_day']['wrapper_class'] = [
+        $form['field_configuration']['field_labels_dob']['field_labels_dob_day']['wrapper_class'] = [
             '#type' => 'textfield',
             '#title' => $this->t('DOB Day wrapper class'),
             '#size' => 25,
             '#description' => $this->t('Wrapper class for field.'),
             '#default_value' => $myAccountConfigValue['dob_day']['options']['wrapper_class'],
         ];
-        $form['field_configuration']['field_labels_dob_year'] = [
+        $form['field_configuration']['field_labels_dob']['field_labels_dob_year'] = [
             '#type' => 'details',
             '#title' => 'DOB Year',
             '#open' => False,
             '#tree' => TRUE,
         ];
 
-        $form['field_configuration']['field_labels_dob_year']['weight'] = [
+        $form['field_configuration']['field_labels_dob']['field_labels_dob_year']['weight'] = [
             '#type' => 'select',
             '#title' => $this->t('DOB Year Field Weight'),
             '#options' => array(
@@ -365,7 +365,7 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#default_value' => $myAccountConfigValue['dob_year']['weight'],
         ];
 
-        $form['field_configuration']['field_labels_dob_year']['wrapper_class'] = [
+        $form['field_configuration']['field_labels_dob']['field_labels_dob_year']['wrapper_class'] = [
             '#type' => 'textfield',
             '#title' => $this->t('DOB Year wrapper class'),
             '#size' => 25,
@@ -694,12 +694,12 @@ class MyAccountRegistrationForm extends ConfigFormBase
             ->set('username_field.options.attr.placeholder', $configuration['field_labels_user_name']['placeholder'])
             ->set('username_field.options.required', $configuration['field_labels_user_name']['required'])
             ->set('username_field.weight', $configuration['field_labels_user_name']['weight'])
-            ->set('dob_month.weight', $configuration['field_labels_dob_month']['weight'])
-            ->set('dob_field.options.wrapper_class', $configuration['field_labels_dob_month']['wrapper_class'])
-            ->set('dob_year.weight', $configuration['field_labels_dob_year']['weight'])
-            ->set('dob_year.options.wrapper_class', $configuration['field_labels_dob_year']['wrapper_class'])
-            ->set('dob_day.weight', $configuration['field_labels_dob_day']['weight'])
-            ->set('dob_day.options.wrapper_class', $configuration['field_labels_dob_day']['wrapper_class'])
+            ->set('dob_month.weight', $configuration['field_labels_dob']['field_labels_dob_month']['weight'])
+            ->set('dob_month.options.wrapper_class', $configuration['field_labels_dob']['field_labels_dob_month']['wrapper_class'])
+            ->set('dob_year.weight', $configuration['field_labels_dob']['field_labels_dob_year']['weight'])
+            ->set('dob_year.options.wrapper_class', $configuration['field_labels_dob']['field_labels_dob_year']['wrapper_class'])
+            ->set('dob_day.weight', $configuration['field_labels_dob']['field_labels_dob_day']['weight'])
+            ->set('dob_day.options.wrapper_class', $configuration['field_labels_dob']['field_labels_dob_day']['wrapper_class'])
             ->set('username_field.options.wrapper_class', $configuration['field_labels_user_name']['wrapper_class'])
             ->set('currency_field.options.label', $configuration['field_labels_currency']['label'])
             ->set('currency_field.options.attr.placeholder', $configuration['field_labels_currency']['placeholder'])
