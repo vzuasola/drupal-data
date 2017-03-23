@@ -182,10 +182,10 @@ class MyAccountRegistrationForm extends ConfigFormBase
         $form['field_configuration']['field_labels_first_name']['weight'] = [
             '#type' => 'select',
             '#title' => $this->t('Field Weight'),
-            '#options' => array(
+            '#options' => [
                 '2' => '2',
                 '3' => '3',
-            ),
+            ],
             '#default_value' => $myAccountConfigValue['first_name_field']['weight'],
         ];
 
@@ -237,10 +237,10 @@ class MyAccountRegistrationForm extends ConfigFormBase
         $form['field_configuration']['field_labels_last_name']['weight'] = [
             '#type' => 'select',
             '#title' => $this->t('Field Weight'),
-            '#options' => array(
+            '#options' => [
                 '2' => '2',
                 '3' => '3',
-            ),
+            ],
             '#default_value' => $myAccountConfigValue['last_name_field']['weight'],
         ];
 
@@ -306,11 +306,11 @@ class MyAccountRegistrationForm extends ConfigFormBase
         $form['field_configuration']['field_labels_dob']['field_labels_dob_month']['weight'] = [
             '#type' => 'select',
             '#title' => $this->t('DOB Month Field Weight'),
-            '#options' => array(
+            '#options' => [
                 '5' => '5',
                 '6' => '6',
                 '7' => '7',
-            ),
+            ],
             '#default_value' => $myAccountConfigValue['dob_month']['weight'],
         ];
 
@@ -332,11 +332,11 @@ class MyAccountRegistrationForm extends ConfigFormBase
         $form['field_configuration']['field_labels_dob']['field_labels_dob_day']['weight'] = [
             '#type' => 'select',
             '#title' => $this->t('DOB Day Field Weight'),
-            '#options' => array(
+            '#options' => [
                 '5' => '5',
                 '6' => '6',
                 '7' => '7',
-            ),
+            ],
             '#default_value' => $myAccountConfigValue['dob_day']['weight'],
         ];
 
@@ -357,11 +357,11 @@ class MyAccountRegistrationForm extends ConfigFormBase
         $form['field_configuration']['field_labels_dob']['field_labels_dob_year']['weight'] = [
             '#type' => 'select',
             '#title' => $this->t('DOB Year Field Weight'),
-            '#options' => array(
+            '#options' => [
                 '5' => '5',
                 '6' => '6',
                 '7' => '7',
-            ),
+            ],
             '#default_value' => $myAccountConfigValue['dob_year']['weight'],
         ];
 
