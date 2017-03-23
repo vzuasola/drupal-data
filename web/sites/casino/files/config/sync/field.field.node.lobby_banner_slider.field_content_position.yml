@@ -13,8 +13,8 @@ entity_type: node
 bundle: lobby_banner_slider
 label: 'Content Position'
 description: ''
-required: true
-translatable: false
+required: false
+translatable: true
 default_value:
   -
     value: top
