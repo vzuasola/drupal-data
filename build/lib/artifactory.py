@@ -51,7 +51,7 @@ def upload(url, username, password, file_to_upload):
             print('{0} to upload {1} to {2}'.format(FAILED, file_to_upload, short_url))
             print('      url: {0}'.format(url))
             print('      username: {0}'.format(username))
-            print('      password: {0}'.format(password))
+            print('      password: {0}'.format('**************'))
             print('      please check: {0}'.format(url))
             print('      error: {0}'.format(error))
             print('      reason: {0}'.format(error.args[0].reason))
