@@ -1,0 +1,21 @@
+uuid: db3627d6-fcba-462c-b018-14fbf360abe7
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_link_target
+    - paragraphs.paragraphs_type.social_media
+  module:
+    - options
+id: paragraph.social_media.field_link_target
+field_name: field_link_target
+entity_type: paragraph
+bundle: social_media
+label: 'Link Target'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

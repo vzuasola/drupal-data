@@ -4,7 +4,6 @@ namespace Drupal\casino_config\Form;
 
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
-
 /**
  * Provides configuration settings form for Header Element Configuration.
  */
@@ -76,6 +75,26 @@ class HeaderConfiguration extends ConfigFormBase {
       '#default_value' => $config->get('login_issue_link'),
       '#required' => TRUE,
     );
+    $form['lang_group'] = array(
+      '#type' => 'details',
+      '#title' => $this->t('Language Switcher Settings'),
+      '#collapsible' => TRUE,
+      '#group' => 'header_settings_tab',
+    );
+    $form['lang_group']['sc_lang_text'] = array(
+      '#type' => 'textfield',
+      '#title' => $this->t('Text for simplified chinese langauge'),
+      '#description' => $this->t('Text for simplified chinese langauge'),
+      '#default_value' => $config->get('sc_lang_text'),
+      '#required' => TRUE,
+    );
+    $form['lang_group']['ch_lang_text'] = array(
+      '#type' => 'textfield',
+      '#title' => $this->t('Text for Traditional chinese langauge'),
+      '#description' => $this->t('Text for traditional chinese langauge.'),
+      '#default_value' => $config->get('ch_lang_text'),
+      '#required' => TRUE,
+    );
 
     return parent::buildForm($form, $form_state);
   }
@@ -89,6 +108,8 @@ class HeaderConfiguration extends ConfigFormBase {
       'join_now_link',
       'login_issue_text',
       'login_issue_link',
+      'sc_lang_text',
+      'ch_lang_text',
     );
     foreach ($keys as $key) {
       $this->config('casino_config.header_config')->set($key, $form_state->getValue($key))->save();
