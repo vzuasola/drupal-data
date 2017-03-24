@@ -1,4 +1,5 @@
 module:
+  action: 0
   automated_cron: 0
   basic_auth: 0
   block: 0
@@ -18,6 +19,7 @@ module:
   dblog: 0
   devel: 0
   devel_generate: 0
+  draggableviews: 0
   dynamic_page_cache: 0
   editor: 0
   entity_reference_revisions: 0
@@ -43,6 +45,7 @@ module:
   rest: 0
   rest_menu_items: 0
   restui: 0
+  scheduler: 0
   search: 0
   serialization: 0
   shortcut: 0
