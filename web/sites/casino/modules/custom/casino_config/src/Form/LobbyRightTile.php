@@ -80,6 +80,8 @@ class LobbyRightTile extends ConfigFormBase{
         $file = File::load($fid[0]);
         $file->setPermanent();
         $file->save();
+        $file_usage = \Drupal::service('file.usage');
+        $file_usage->add($file, 'casino_cofnig', 'managed_file', $fid[0]);
         $this->config('casino_config.lobby_right_tile')->set("lobby_right_tile_image_url", file_create_url($file->getFileUri()))->save();
       }
 
