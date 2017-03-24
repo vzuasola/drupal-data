@@ -130,11 +130,6 @@ class BlockResource extends ResourceBase {
   {
     $block = $this->entityManager->getStorage('block')->load($id);
 
-    kint_require();
-
-
-    // ddd($this->$languageManager);
-
     if ($block) {
       $uuid = $block->getPlugin()->getDerivativeId();
       $block_content = $this->entityRepository->loadEntityByUuid('block_content', $uuid);
