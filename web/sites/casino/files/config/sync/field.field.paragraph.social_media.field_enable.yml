@@ -1,0 +1,23 @@
+uuid: 22555ed7-66db-4407-919d-f2d2a0b19901
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_enable
+    - paragraphs.paragraphs_type.social_media
+id: paragraph.social_media.field_enable
+field_name: field_enable
+entity_type: paragraph
+bundle: social_media
+label: Enable
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Enable
+  off_label: Disabled
+field_type: boolean
