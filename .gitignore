@@ -21,3 +21,4 @@ web/sites/*/settings.php
 *.pyc
 *.tar.gz
 web-composer-drupal/*
+drupal-data/*
