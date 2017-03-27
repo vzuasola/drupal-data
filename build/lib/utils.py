@@ -289,9 +289,9 @@ def _drupal8_pre_archive():
                 raise PipelineError(error)
         except shutil.Error as error:
             raise PipelineError(error)
-        config = read_coniguration(DEFAULT_CONFIG_FILE, 'project')
-        for item in config['archive_include_directories']:
-            shutil.copytree(item, os.path.oin(site_dest, item))
+    config = read_coniguration(DEFAULT_CONFIG_FILE, 'project')
+    for item in config['archive_include_directories']:
+        shutil.copytree(item, os.path.join(site_dest, item))
 
 
 def _pre_archive():

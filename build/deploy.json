@@ -8,6 +8,7 @@
         ]
     },
     "project": {
+        "name": "drupal-data",
         "style": "drupal8",
         "archive_directory": "drupal-data",
         "archive_include_directories": [
