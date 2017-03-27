@@ -59,8 +59,8 @@ $sites['wc.drupal.dev'] = 'webcomposer';
 $sites['wc.drupal.local'] = 'webcomposer';
 
 // My Account Instances
-$sites['account.drupal.dev'] = 'myaccount';
-$sites['account.drupal.local'] = 'myaccount';
+$sites['account.drupal.dev'] = 'account';
+$sites['account.drupal.local'] = 'account';
 
 // Casino Site Instances
 $sites['casino.drupal.dev'] = 'casino';
