@@ -10,6 +10,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Psr\Log\LoggerInterface;
+use Drupal\block_content\Entity\BlockContent;
 
 /**
  * Provides a resource to get view modes by entity and bundle.
@@ -30,6 +31,10 @@ class BlockResource extends ResourceBase {
    * @var \Drupal\Core\Session\AccountProxyInterface
    */
   protected $currentUser;
+
+  protected $entityRepository;
+  protected $entity_manager;
+  protected $current_language;
 
   /**
    * Constructs a Drupal\rest\Plugin\ResourceBase object.
@@ -53,10 +58,16 @@ class BlockResource extends ResourceBase {
     $plugin_definition,
     array $serializer_formats,
     LoggerInterface $logger,
-    AccountProxyInterface $current_user) {
+    AccountProxyInterface $current_user,
+    $entity_repository,
+    $entity_manager,
+    $language_manager ) {
     parent::__construct($configuration, $plugin_id, $plugin_definition, $serializer_formats, $logger);
 
     $this->currentUser = $current_user;
+    $this->entityRepository = $entity_repository;
+    $this->entityManager = $entity_manager;
+    $this->current_language = $language_manager->getCurrentLanguage()->getId();
   }
 
   /**
@@ -69,7 +80,10 @@ class BlockResource extends ResourceBase {
       $plugin_definition,
       $container->getParameter('serializer.formats'),
       $container->get('logger.factory')->get('webcomposer_blocks'),
-      $container->get('current_user')
+      $container->get('current_user'),
+      $container->get('entity.repository'),
+      $container->get('entity.manager'),
+      $container->get('language_manager')
     );
   }
 
@@ -113,15 +127,32 @@ class BlockResource extends ResourceBase {
    */
   private function getBlockDefinition($id)
   {
-    $block = \Drupal::entityTypeManager()
-      ->getStorage('block')
-      ->load($id);
+    $block = $this->entityManager->getStorage('block')->load($id);
 
     if ($block) {
       $uuid = $block->getPlugin()->getDerivativeId();
-      $block_content = \Drupal::service('entity.repository')->loadEntityByUuid('block_content', $uuid);
+      $block_content = $this->entityRepository->loadEntityByUuid('block_content', $uuid);
 
-      return $block_content;
+      $translatedBlocked = $block_content->getTranslation($this->current_language);
+      $block_content_array = $translatedBlocked->toArray();
+
+      foreach ($block_content as $fieldType => $field) {
+          $fieldSettings = $field->getSettings();
+
+          if ($fieldSettings['target_type'] == 'paragraph') {
+            foreach ($block_content_array[$fieldType] as $key => $value) {
+              $block_content_array[$fieldType][$key]['paragraph'] = $this->loadParagraphByID($value['target_id']);
+            }
+          }
+      }
+      return $block_content_array;
     }
+  }
+
+
+  public function loadParagraphByID($target_id){
+    $paragraph = $this->entityManager->getStorage('paragraph')->load($target_id);
+    $translatedParagraph = $paragraph->getTranslation($this->current_language);
+    return $translatedParagraph;
   }
 }

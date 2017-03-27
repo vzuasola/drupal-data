@@ -13,8 +13,8 @@ entity_type: node
 bundle: lobby_banner_slider
 label: 'Banner Link'
 description: ''
-required: false
-translatable: false
+required: true
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

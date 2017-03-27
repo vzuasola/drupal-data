@@ -1,0 +1,12 @@
+attributes:
+  class:
+    label: ''
+    description: ''
+  target:
+    label: ''
+    description: ''
+    options:
+      _blank: 'New Tab'
+      _self: 'Same Tab'
+      window: 'New window'
+langcode: zh-hans

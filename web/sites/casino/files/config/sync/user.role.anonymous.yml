@@ -1,5 +1,5 @@
 uuid: 0d660c03-6a40-4dbc-a800-dfd5c06ec3fb
-langcode: en
+langcode: zh-hans
 status: true
 dependencies: {  }
 _core:
@@ -25,3 +25,7 @@ permissions:
   - 'restful get form_resource'
   - 'restful get language_rest_resource'
   - 'restful post contact_message'
+  - 'administer rest resources'
+  - 'restful get casino_rest_resource'
+  - 'restful get configuration_resource'
+  - 'restful get custom_block_resource'
