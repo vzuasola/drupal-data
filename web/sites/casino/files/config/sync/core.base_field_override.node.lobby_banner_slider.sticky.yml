@@ -1,4 +1,4 @@
-uuid: 1b5618a3-b5e8-468e-a121-f1b5ae19bab1
+uuid: 02a350c5-a417-493f-b6fe-f35bb56afba6
 langcode: zh-hans
 status: true
 dependencies:
@@ -11,7 +11,7 @@ bundle: lobby_banner_slider
 label: 'Sticky at top of lists'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value:
   -
     value: 0

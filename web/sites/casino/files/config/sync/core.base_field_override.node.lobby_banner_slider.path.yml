@@ -1,4 +1,4 @@
-uuid: 1fd96ea5-e5cf-449c-950a-8a2ab84af176
+uuid: f778f09b-2105-40c2-acc0-96a75892c211
 langcode: zh-hans
 status: true
 dependencies:
@@ -13,7 +13,7 @@ bundle: lobby_banner_slider
 label: 'URL alias'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }
