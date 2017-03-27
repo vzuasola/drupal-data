@@ -1,0 +1,25 @@
+uuid: 471b970c-929b-424b-9b99-8b516752bdcd
+langcode: zh-hant
+status: true
+dependencies:
+  content:
+    - 'block_content:lobby_tile:e6c6bdb9-2b7d-439c-b9cb-3214b6a457ae'
+  module:
+    - block_content
+  theme:
+    - bartik
+id: lobby_right_tile
+theme: bartik
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:e6c6bdb9-2b7d-439c-b9cb-3214b6a457ae'
+settings:
+  id: 'block_content:e6c6bdb9-2b7d-439c-b9cb-3214b6a457ae'
+  label: 'Lobby Right Tile'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

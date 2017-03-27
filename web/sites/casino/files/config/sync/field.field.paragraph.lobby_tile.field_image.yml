@@ -1,24 +1,24 @@
-uuid: b96b473d-42f0-43a9-8f79-96ad904e5ff8
-langcode: en
+uuid: 1da728d1-0a82-4e1d-9292-db55a94c8314
+langcode: zh-hant
 status: true
 dependencies:
   config:
-    - field.storage.node.field_image
-    - node.type.lobby_banner_slider
+    - field.storage.paragraph.field_image
+    - paragraphs.paragraphs_type.lobby_tile
   module:
     - content_translation
     - image
 third_party_settings:
   content_translation:
     translation_sync:
-      alt: alt
-      title: title
-      file: '0'
-id: node.lobby_banner_slider.field_image
+      file: file
+      alt: '0'
+      title: '0'
+id: paragraph.lobby_tile.field_image
 field_name: field_image
-entity_type: node
-bundle: lobby_banner_slider
-label: 'Banner Image'
+entity_type: paragraph
+bundle: lobby_tile
+label: Image
 description: ''
 required: true
 translatable: true

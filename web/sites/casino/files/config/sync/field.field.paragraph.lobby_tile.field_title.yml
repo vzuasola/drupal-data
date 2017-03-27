@@ -1,0 +1,19 @@
+uuid: 0d4eeb0a-5cfe-4538-b80b-85d3d8ed3524
+langcode: zh-hant
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.lobby_tile
+id: paragraph.lobby_tile.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: lobby_tile
+label: Title
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

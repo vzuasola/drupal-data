@@ -1,0 +1,25 @@
+uuid: 504b23f1-7e7a-4a6f-87ff-4c25e5143f80
+langcode: zh-hant
+status: true
+dependencies:
+  content:
+    - 'block_content:lobby_tile:e7bd34d2-160e-46ad-8019-f6b8890beb7b'
+  module:
+    - block_content
+  theme:
+    - bartik
+id: lobby_left_tile
+theme: bartik
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:e7bd34d2-160e-46ad-8019-f6b8890beb7b'
+settings:
+  id: 'block_content:e7bd34d2-160e-46ad-8019-f6b8890beb7b'
+  label: 'Lobby Left Tile'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

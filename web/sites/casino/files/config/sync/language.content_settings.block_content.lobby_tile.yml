@@ -1,0 +1,16 @@
+uuid: e65f8e2e-8951-453f-9e02-c96ed7812e7b
+langcode: zh-hant
+status: true
+dependencies:
+  config:
+    - block_content.type.lobby_tile
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: block_content.lobby_tile
+target_entity_type_id: block_content
+target_bundle: lobby_tile
+default_langcode: site_default
+language_alterable: true

@@ -2,10 +2,6 @@ uuid: 18168eda-8099-4a1f-84ee-ec5cdac92d97
 langcode: zh-hans
 status: true
 dependencies:
-  content:
-    - 'block_content:social_media_block:4c6d0ebb-3bf2-4fb6-b6d5-d8e4d2f1523e'
-  module:
-    - block_content
   theme:
     - bartik
 id: footer_social_media
