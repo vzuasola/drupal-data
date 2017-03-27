@@ -10,6 +10,12 @@
     "project": {
         "style": "drupal8",
         "archive_directory": "drupal-data",
+        "archive_include_directories": [
+            "config",
+            "drush",
+            "vendor",
+            "web"
+        ],
         "archive_exclude_directories": [
             ".git",
             ".svn",

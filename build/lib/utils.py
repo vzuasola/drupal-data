@@ -41,8 +41,8 @@ def _version():
 
 
 def _package_name():
-    package = gitlab_var('CI_PROJECT_NAME', default='just_a_test')
-    return "{0}-{1}".format(package, _version())
+    config = read_coniguration(DEFAULT_CONFIG_FILE, 'project')
+    return "{0}-{1}".format(config['name'], _version())
 
 
 def _archive_name():
@@ -289,8 +289,9 @@ def _drupal8_pre_archive():
                 raise PipelineError(error)
         except shutil.Error as error:
             raise PipelineError(error)
-    for item in ('config', 'drush', 'vendor', 'web'):
-        shutil.copytree(item, os.path.join(site_dest, item))
+        config = read_coniguration(DEFAULT_CONFIG_FILE, 'project')
+        for item in config['archive_include_directories']:
+            shutil.copytree(item, os.path.oin(site_dest, item))
 
 
 def _pre_archive():
