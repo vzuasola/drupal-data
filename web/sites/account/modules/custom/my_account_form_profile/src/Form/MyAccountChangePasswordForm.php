@@ -261,6 +261,30 @@ class MyAccountChangePasswordForm extends ConfigFormBase
             '#default_value' => $myAccountConfigValue['submit_button_label_field']['options']['label']
         ];
 
+        $form['field_configuration']['field_landing_page'] = [
+            '#type' => 'details',
+            '#title' => 'Landing Page',
+            '#group' => 'landing_page',
+            '#open' => False,
+            '#tree' => TRUE,
+        ];
+
+        $form['field_configuration']['field_landing_page']['top_blurb'] = [
+            '#type' => 'textarea',
+            '#title' => $this->t('Top Blurb'),
+            '#required' => TRUE,
+            '#description' => $this->t('Top Blurb'),
+            '#default_value' => $myAccountConfigValue['top_blurb']
+        ];
+
+        $form['field_configuration']['field_landing_page']['bottom_blurb'] = [
+            '#type' => 'textarea',
+            '#title' => $this->t('Bottom Blurb'),
+            '#required' => TRUE,
+            '#description' => $this->t('Bottom Blurb'),
+            '#default_value' => $myAccountConfigValue['bottom_blurb']
+        ];
+
         $form['actions'] = ['#type' => 'actions'];
         // Add a submit button that handles the submission of the form.
         $form['actions']['submit'] = [
@@ -355,6 +379,8 @@ class MyAccountChangePasswordForm extends ConfigFormBase
             ->set('new_password_field.weight', $configuration['field_labels_new_password']['weight'])
             ->set('new_password_field.options.wrapper_class', $configuration['field_labels_new_password']['wrapper_class'])
             ->set('submit_button_label_field.options.label', $configuration['field_submit_button_labels']['label'])
+            ->set('top_blurb', $configuration['field_landing_page']['top_blurb'])
+            ->set('bottom_blurb', $configuration['field_landing_page']['bottom_blurb'])
             ->save();
     }
 

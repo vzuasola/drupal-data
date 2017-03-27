@@ -75,6 +75,12 @@ my_account_form_profile.change_password:
             label:
               type: label
               label: 'Default value for current password submit button'
+    top_blurb:
+      type: text
+      label: 'My Account Change Password Top Blurb'
+    bottom_blurb:
+      type: text
+      label: 'My Account Change Password Bottom Blurb'
   langcode: 'en'
 
 # Change password form schema configuration
