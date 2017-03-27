@@ -34,8 +34,7 @@ class BlockResource extends ResourceBase {
 
   protected $entityRepository;
   protected $entity_manager;
-
-  protected $languageManager;
+  protected $current_language;
 
   /**
    * Constructs a Drupal\rest\Plugin\ResourceBase object.
@@ -68,7 +67,7 @@ class BlockResource extends ResourceBase {
     $this->currentUser = $current_user;
     $this->entityRepository = $entity_repository;
     $this->entityManager = $entity_manager;
-    $this->$languageManager = $language_manager;
+    $this->current_language = $language_manager->getCurrentLanguage()->getId();
   }
 
   /**
@@ -134,9 +133,7 @@ class BlockResource extends ResourceBase {
       $uuid = $block->getPlugin()->getDerivativeId();
       $block_content = $this->entityRepository->loadEntityByUuid('block_content', $uuid);
 
-      $lang = $this->$languageManager->getCurrentLanguage()->getId();
-      $translatedBlocked = $block_content->getTranslation($lang);
-
+      $translatedBlocked = $block_content->getTranslation($this->current_language);
       $block_content_array = $translatedBlocked->toArray();
 
       foreach ($block_content as $fieldType => $field) {
@@ -155,6 +152,7 @@ class BlockResource extends ResourceBase {
 
   public function loadParagraphByID($target_id){
     $paragraph = $this->entityManager->getStorage('paragraph')->load($target_id);
-    return $paragraph;
+    $translatedParagraph = $paragraph->getTranslation($this->current_language);
+    return $translatedParagraph;
   }
 }
