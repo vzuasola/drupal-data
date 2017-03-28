@@ -1,0 +1,7 @@
+uuid: f1fcf230-2c40-445d-90d9-1c71324f9a9a
+langcode: zh-hant
+status: true
+dependencies: {  }
+id: lobby_tile
+label: 'Lobby Tile'
+behavior_plugins: {  }

@@ -1,0 +1,19 @@
+uuid: f4d90fd2-2e91-4dc6-aa38-98c0a34725fd
+langcode: zh-hant
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+id: paragraph.field_content
+field_name: field_content
+entity_type: paragraph
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

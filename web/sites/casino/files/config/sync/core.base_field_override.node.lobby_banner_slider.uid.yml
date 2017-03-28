@@ -1,4 +1,4 @@
-uuid: f6accb2a-8422-4a6b-8032-1bd13a627067
+uuid: 59f556af-408d-4b2d-9bde-760504ee48ba
 langcode: zh-hans
 status: true
 dependencies:
@@ -11,7 +11,7 @@ bundle: lobby_banner_slider
 label: 'Authored by'
 description: 'The username of the content author.'
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: 'Drupal\node\Entity\Node::getCurrentUserId'
 settings:
