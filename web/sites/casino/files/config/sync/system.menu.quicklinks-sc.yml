@@ -1,0 +1,8 @@
+uuid: 40615826-b604-4eaf-befa-b72fe5bfcb70
+langcode: zh-hans
+status: true
+dependencies: {  }
+id: quicklinks-sc
+label: Quicklinks-SC
+description: 'Menu to add the quicklink items in SC Language'
+locked: false

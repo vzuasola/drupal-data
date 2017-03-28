@@ -1,0 +1,8 @@
+uuid: 610e60be-cb56-4cfe-a681-ec86a0f02bf2
+langcode: zh-hant
+status: true
+dependencies: {  }
+id: product-menu-ch
+label: 'Product Menu CH'
+description: 'Menu to add the product Menu Items available in CH Language'
+locked: false

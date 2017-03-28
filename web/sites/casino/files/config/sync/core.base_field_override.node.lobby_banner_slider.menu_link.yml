@@ -1,4 +1,4 @@
-uuid: ee9b6cc4-0373-4129-b1a3-0eac6f253f0a
+uuid: 99f47fa6-1b1e-48e9-bc61-f4daafef17bf
 langcode: zh-hans
 status: true
 dependencies:
@@ -11,7 +11,7 @@ bundle: lobby_banner_slider
 label: 'Menu link'
 description: 'Computed menu link for the node (only available during node saving).'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
