@@ -11,7 +11,7 @@ my_account_form_profile.change_password:
           mapping:
             label:
               type: label
-              label: 'Default value for current password error'
+              label: 'Default value for current password'
             help:
               type: label
               label: 'Help text for field'
@@ -32,7 +32,7 @@ my_account_form_profile.change_password:
           mapping:
             label:
               type: label
-              label: 'Default value for new password error'
+              label: 'Default value for new password'
             help:
               type: label
               label: 'Help text for field'
@@ -53,7 +53,7 @@ my_account_form_profile.change_password:
           mapping:
             label:
               type: label
-              label: 'Default value for confirm password error'
+              label: 'Default value for confirm password'
             help:
               type: label
               label: 'Help text for field'
@@ -75,6 +75,12 @@ my_account_form_profile.change_password:
             label:
               type: label
               label: 'Default value for current password submit button'
+    top_blurb:
+      type: text
+      label: 'My Account Change Password Top Blurb'
+    bottom_blurb:
+      type: text
+      label: 'My Account Change Password Bottom Blurb'
   langcode: 'en'
 
 # Change password form schema configuration
