@@ -1,0 +1,43 @@
+uuid: 74484e6f-daa1-4ca7-b529-08c1a73de19e
+langcode: zh-hant
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.lobby_tile.field_content
+    - field.field.paragraph.lobby_tile.field_image
+    - field.field.paragraph.lobby_tile.field_title
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.lobby_tile
+  module:
+    - image
+    - text
+id: paragraph.lobby_tile.default
+targetEntityType: paragraph
+bundle: lobby_tile
+mode: default
+content:
+  field_content:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+  field_image:
+    weight: 2
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+hidden:
+  created: true
+  status: true
+  uid: true

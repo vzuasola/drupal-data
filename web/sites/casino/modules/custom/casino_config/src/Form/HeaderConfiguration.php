@@ -114,6 +114,7 @@ class HeaderConfiguration extends ConfigFormBase {
     foreach ($keys as $key) {
       $this->config('casino_config.header_config')->set($key, $form_state->getValue($key))->save();
     }
+    return parent::submitForm($form, $form_state);
   }
 
 }
