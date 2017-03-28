@@ -1,9 +1,9 @@
-uuid: 0688d215-0eb2-4c0c-bb4f-a4d32455072e
+uuid: 5cc67495-dd91-4522-802f-64a165b1f77a
 langcode: zh-hans
 status: true
 dependencies:
   content:
-    - 'block_content:sponsorship_block:03dde24c-40cf-488d-9f5d-680cf18f171e'
+    - 'block_content:sponsorship_block:85e69c91-5079-4268-bd1b-f5c45627cb16'
   module:
     - block_content
   theme:
@@ -13,9 +13,9 @@ theme: bartik
 region: featured_bottom_first
 weight: 0
 provider: null
-plugin: 'block_content:03dde24c-40cf-488d-9f5d-680cf18f171e'
+plugin: 'block_content:85e69c91-5079-4268-bd1b-f5c45627cb16'
 settings:
-  id: 'block_content:03dde24c-40cf-488d-9f5d-680cf18f171e'
+  id: 'block_content:85e69c91-5079-4268-bd1b-f5c45627cb16'
   label: Sponsorship
   provider: block_content
   label_display: visible

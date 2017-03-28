@@ -1,0 +1,8 @@
+uuid: 827efe0d-3547-4a75-bd93-39168b74c4a3
+langcode: zh-hans
+status: true
+dependencies: {  }
+id: product-menu-sc
+label: 'Product Menu SC'
+description: 'Menu to add the product Menu Items available in SC Language'
+locked: false

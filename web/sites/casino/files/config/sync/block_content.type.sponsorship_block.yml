@@ -5,4 +5,4 @@ dependencies: {  }
 id: sponsorship_block
 label: 'Sponsorship Block'
 revision: 0
-description: ''
+description: '<i>Note: Need to configure at least 1 item<i>'

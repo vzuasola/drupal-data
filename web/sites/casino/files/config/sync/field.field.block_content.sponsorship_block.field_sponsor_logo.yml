@@ -13,7 +13,7 @@ field_name: field_sponsor_logo
 entity_type: block_content
 bundle: sponsorship_block
 label: 'Sponsor Logo'
-description: ''
+description: '<i>Note: Need to configure at least 1 item<i>'
 required: false
 translatable: true
 default_value: {  }
@@ -27,4 +27,7 @@ settings:
       sponsorship:
         enabled: true
         weight: 2
+      social_media:
+        weight: 3
+        enabled: false
 field_type: entity_reference_revisions

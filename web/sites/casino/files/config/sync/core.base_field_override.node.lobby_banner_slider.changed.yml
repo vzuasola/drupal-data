@@ -1,4 +1,4 @@
-uuid: 4bebabca-634f-44d8-900c-d4536697cce6
+uuid: 80c93da8-4e96-4fc0-85ca-f5ca699aba12
 langcode: zh-hans
 status: true
 dependencies:
@@ -11,7 +11,7 @@ bundle: lobby_banner_slider
 label: Changed
 description: 'The time that the node was last edited.'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

@@ -1,5 +1,5 @@
-uuid: 22555ed7-66db-4407-919d-f2d2a0b19901
-langcode: zh-hans
+uuid: 2e30c895-b4f6-4af9-98c6-95bff102731f
+langcode: en
 status: true
 dependencies:
   config:
@@ -12,10 +12,10 @@ bundle: social_media
 label: Enable
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value:
   -
-    value: 0
+    value: 1
 default_value_callback: ''
 settings:
   on_label: Enable

@@ -1,9 +1,9 @@
-uuid: a10c297f-7327-4392-abb3-3bc6d972c0fc
-langcode: zh-hans
+uuid: 62fc6866-6277-43a5-be0c-c090566454dc
+langcode: zh-hant
 status: true
 dependencies: {  }
 id: zh-hant
 label: 'Chinese, Traditional'
 direction: ltr
-weight: 4
+weight: -9
 locked: false
