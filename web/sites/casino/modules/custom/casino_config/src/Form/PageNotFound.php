@@ -69,8 +69,8 @@ class PageNotFound extends ConfigFormBase{
       'page_not_found_content',
       'page_not_found_image',
     );
-    foreach($keys as $key){
-      if($key == page_not_found_image){
+    foreach ($keys as $key) {
+      if ($key == 'page_not_found_image') {
         $fid = $form_state->getValue($key);
         if ($fid) {
           $file = File::load($fid[0]);
