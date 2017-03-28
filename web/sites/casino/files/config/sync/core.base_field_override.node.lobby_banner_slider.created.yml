@@ -1,4 +1,4 @@
-uuid: 4960e429-fb53-481c-bbfa-15f7960ef7d0
+uuid: a83b3dfb-06da-445a-9dcc-b378bea4c4d7
 langcode: zh-hans
 status: true
 dependencies:
@@ -11,7 +11,7 @@ bundle: lobby_banner_slider
 label: 'Authored on'
 description: 'The time that the node was created.'
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }

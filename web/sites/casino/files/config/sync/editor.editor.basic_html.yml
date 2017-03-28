@@ -19,8 +19,6 @@ settings:
           items:
             - Bold
             - Italic
-            - Underline
-            - Styles
         -
           name: Linking
           items:
@@ -59,7 +57,7 @@ settings:
     language:
       language_list: un
     stylescombo:
-      styles: "a.btn.btn-small|Small Button\r\na.btn.btn-medium|Medium Button\r\na.btn.btn-large|Large Button"
+      styles: ''
 image_upload:
   status: true
   scheme: public

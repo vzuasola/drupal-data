@@ -1,4 +1,4 @@
-uuid: df3a7c27-d1de-46c5-a80d-e42c87888737
+uuid: 7e0eb759-bb19-4502-944f-c2f6af569d2c
 langcode: zh-hans
 status: true
 dependencies:
@@ -11,7 +11,7 @@ bundle: lobby_banner_slider
 label: 'Promoted to front page'
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value:
   -
     value: 1
