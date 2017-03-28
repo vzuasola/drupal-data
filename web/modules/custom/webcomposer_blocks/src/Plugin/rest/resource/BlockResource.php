@@ -137,13 +137,15 @@ class BlockResource extends ResourceBase {
       $block_content_array = $translatedBlocked->toArray();
 
       foreach ($block_content as $fieldType => $field) {
-          $fieldSettings = $field->getSettings();
+        $fieldSettings = $field->getSettings();
 
+        if (isset($fieldSettings['target_type'])) {
           if ($fieldSettings['target_type'] == 'paragraph') {
             foreach ($block_content_array[$fieldType] as $key => $value) {
               $block_content_array[$fieldType][$key]['paragraph'] = $this->loadParagraphByID($value['target_id']);
             }
           }
+        }
       }
       return $block_content_array;
     }
