@@ -37,14 +37,14 @@ class MyAccountFormResource extends ResourceBase
 
             case 'my_account_change_password':
                 $config = \Drupal::config('my_account_form_profile.change_password');
-                $values = $config->get();
+                $values = $this->filter_array_exposed($config->get(), 'password');
                 break;
 
             case 'my_account_profile':
 
                 // Make seperte value for Profile field
                 $config = \Drupal::config('my_account_form_profile.profile');
-                $values = $this->get_profile_hader_profile_value($config->get(), 'profile');
+                $values = $this->filter_array_exposed($config->get(), 'profile');
                 break;
 
             case 'my_account_cashier':
@@ -71,7 +71,7 @@ class MyAccountFormResource extends ResourceBase
 
                 // Get only hader section values.
                 $config = \Drupal::config('my_account_form_profile.profile');
-                $values = $this->get_profile_hader_profile_value($config->get(), 'header');
+                $values = $this->filter_array_exposed($config->get(), 'header');
                 break;
             default:
         }
@@ -83,8 +83,45 @@ class MyAccountFormResource extends ResourceBase
     /**
      * @return array with header key
      */
-    public function get_profile_hader_profile_value($values, $key)
+    public function filter_array_exposed($values, $key)
     {
+        if ($key == 'password') {
+
+            // Convert string with array key messages
+            $value_array = explode('|', $values['iCore_error']['key_messages']);
+            $string = $values['iCore_error']['key_messages'];
+
+            // Explode strings
+            $list = explode("\n", $string);
+            $list = array_map('trim', $list);
+            $list = array_filter($list, 'strlen');
+
+            $generated_keys = $explicit_keys = FALSE;
+            $field_type = "list_integer";
+            foreach ($list as $position => $text) {
+                $value = $key = FALSE;
+                // Check for an explicit key.
+                $matches = array();
+                if (preg_match('/(.*)\|(.*)/', $text, $matches)) {
+                    $key = $matches[1];
+                    $value = $matches[2];
+                    $explicit_keys = TRUE;
+                } // Otherwise see if we can generate a key from the position.
+                elseif ($generate_keys) {
+                    $key = (string)$position;
+                    $value = $text;
+                    $generated_keys = TRUE;
+                } else {
+                    return;
+                }
+                // Key value save in array.
+                $icore[$key] = $value;
+            }
+
+            $values['iCore_error']['key_messages'] = $icore;
+            // Assign with existing array
+            $value = $values;
+        }
         if ($key == 'header') {
 
             // Get only header values for profile.
@@ -102,3 +139,4 @@ class MyAccountFormResource extends ResourceBase
 
 
 }
+
