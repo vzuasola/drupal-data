@@ -16,7 +16,7 @@ settings:
       label: 'New Tab'
     -
       value: _self
-      label: 'same Window'
+      label: 'Same Window'
     -
       value: window
       label: 'New Window'

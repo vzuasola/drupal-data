@@ -1,10 +1,10 @@
-uuid: 5fbd7621-f8da-4847-a464-d4c087387a32
+uuid: dba502ec-850d-4b07-90aa-a58b5ce92138
 langcode: zh-hans
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_image
-    - paragraphs.paragraphs_type.lobby_tile
+    - field.storage.node.field_image
+    - node.type.promotion
   module:
     - content_translation
     - image
@@ -14,11 +14,11 @@ third_party_settings:
       file: file
       alt: '0'
       title: '0'
-id: paragraph.lobby_tile.field_image
+id: node.promotion.field_image
 field_name: field_image
-entity_type: paragraph
-bundle: lobby_tile
-label: Image
+entity_type: node
+bundle: promotion
+label: 'Banner Image'
 description: ''
 required: true
 translatable: true
@@ -30,7 +30,7 @@ settings:
   max_filesize: ''
   max_resolution: ''
   min_resolution: ''
-  alt_field: false
+  alt_field: true
   alt_field_required: true
   title_field: false
   title_field_required: false
