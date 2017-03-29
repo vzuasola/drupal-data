@@ -42,10 +42,15 @@
             "any"
         ],
         "dockerfile": "build/Dockerfile.deploy",
-        "job_name": "drupal-data: deploy - development environment",
+        "job_name": "CMS: deploy - development environment",
         "password": "MSGREEN_DEPLOY_PASSWORD",
         "prerequisite": "any",
-        "username": "drupal-data"
+        "limit": "drupal-data",
+        "extra-vars": {
+            "project": "drupal-data",
+            "gitlab_user_email": "$GITLAB_USER_EMAIL"
+        },
+        "username": "dafa-stack"
     },
     "testing": {
         "ansible_tower_instance": "mic-tst-itass01.msgreen.dom",
@@ -53,10 +58,15 @@
             "any"
         ],
         "dockerfile": "build/Dockerfile.deploy",
-        "job_name": "drupal-data: deploy - testing environment (QA)",
+        "job_name": "CMS: deploy - testing environment (QA)",
         "password": "MSGREEN_DEPLOY_PASSWORD",
         "prerequisite": "any",
-        "username": "drupal-data"
+        "limit": "drupal-data",
+        "extra-vars": {
+            "project": "drupal-data",
+            "gitlab_user_email": "$GITLAB_USER_EMAIL"
+        },
+        "username": "dafa-stack"
     },
     "uat": {
         "ansible_tower_instance": "msc-co-itass01.msorange.dom",
@@ -64,10 +74,15 @@
             "any"
         ],
         "dockerfile": "build/Dockerfile.deploy",
-        "job_name": "drupal-data: deploy - uat environent",
+        "job_name": "CMS: deploy - uat environment",
         "password": "MSORANGE_DEPLOY_PASSWORD",
         "prerequisite": "any",
-        "username": "drupal-data"
+        "limit": "drupal-data",
+        "extra-vars": {
+            "project": "drupal-data",
+            "gitlab_user_email": "$GITLAB_USER_EMAIL"
+        },
+        "username": "dafa-stack"
     },
     "staging": {
         "ansible_tower_instance": "msc-co-itass01.msorange.dom",
@@ -75,10 +90,15 @@
             "any"
         ],
         "dockerfile": "build/Dockerfile.deploy",
-        "job_name": "drupal-data: deploy - staging environent",
+        "job_name": "CMS: deploy - staging environment",
         "password": "MSORANGE_DEPLOY_PASSWORD",
         "prerequisite": "any",
-        "username": "drupal-data"
+        "limit": "drupal-data",
+        "extra-vars": {
+            "project": "drupal-data",
+            "gitlab_user_email": "$GITLAB_USER_EMAIL"
+        },
+        "username": "dafa-stack"
     },
     "staging-signoff": {
         "authorized_users": [
@@ -99,10 +119,15 @@
             "renzjonathan.alib@bayviewtechnology.com"
         ],
         "dockerfile": "build/Dockerfile.deploy",
-        "job_name": "drupal-data: deploy - Internal production",
+        "job_name": "drupal-data: Deploy - Internal production",
         "password": "MSRED_DEPLOY_PASSWORD",
         "prerequisite": "any",
-        "username": "drupal-data"
+        "limit": "drupal-data",
+        "extra-vars": {
+            "project": "drupal-data",
+            "gitlab_user_email": "$GITLAB_USER_EMAIL"
+        },
+        "username": "dafa-stack"
     },
     "internal-production-signoff": {
         "authorized_users": [
@@ -122,9 +147,14 @@
             "renzjonathan.alib@bayviewtechnology.com"
         ],
         "dockerfile": "build/Dockerfile.deploy",
-        "job_name": "drupal-data: deploy - Production (front facing)",
+        "job_name": "CMS: deploy - Production (front facing)",
         "password": "MSRED_DEPLOY_PASSWORD",
         "prerequisite": "any",
-        "username": "drupal-data"
+        "limit": "drupal-data",
+        "extra-vars": {
+            "project": "drupal-data",
+            "gitlab_user_email": "$GITLAB_USER_EMAIL"
+        },
+        "username": "dafa-stack"
     }
 }
