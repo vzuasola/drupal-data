@@ -278,6 +278,7 @@ def _drupal8_pre_archive():
     """
     print('pre-archive steps')
     site_dest = base_directory()
+
     if os.path.exists(site_dest):
         try:
             shutil.rmtree(site_dest)

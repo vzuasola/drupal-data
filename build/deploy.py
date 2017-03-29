@@ -133,7 +133,7 @@ def create_docker_image(image_name, dockerfile):
         raise PipelineError(msg)
 
 
-def excecute_deployment(config, image_name, version):
+def execute_deployment(config, image_name, version):
     """
     Execute the deployment using tower companion, to run a deployment we need:
         1. environment configuration (to get the environment name)
@@ -153,14 +153,23 @@ def excecute_deployment(config, image_name, version):
            '-v', '{0}:/deploy'.format(deployment_conf_dir()),
            image_name,
            'python', '-u', '/usr/local/bin/kick_and_monitor',
-           '--template-name', '{0}'.format(config['job_name']),
-           '--extra-vars', 'version: {0}'.format(version)]
+           '--template-name', '{0}'.format(config['job_name'])]
 
-    if "GITLAB_USER_EMAIL" in os.environ:
+    cmd.append('--limit')
+    cmd.append(config['limit'])
+    # add version
+    cmd.append('--extra-vars')
+    cmd.append('version: {0}'.format(version))
+    for key in config['extra-vars']:
+        value = config['extra-vars'][key]
+        if value.startswith('$'):
+            value = os.environ[value.replace('$', '')]
+        print('add --extra-vars: {0} -> {1}'.format(key, value))
         cmd.append('--extra-vars')
-        cmd.append('gitlab_user_email: {0}'.format(
-            os.environ['GITLAB_USER_EMAIL']))
+        cmd.append('{0}: {1}'.format(key, value))
+
     # this line kicks off the deployment
+    print(" ".join(cmd))
     deployment = subprocess.Popen(cmd)
     # let's wait for the deployment to complete
     deployment.wait()
@@ -205,7 +214,7 @@ def deploy(config_file, environment, version):
     create_docker_configuration(config)
     dockerfile = dockerfile_path(config)
     create_docker_image(image_name, dockerfile)
-    excecute_deployment(config, image_name, version)
+    execute_deployment(config, image_name, version)
 
 
 def main():
