@@ -87,13 +87,38 @@ class MyAccountChangePasswordForm extends ConfigFormBase
             '#maxlength' => 255,
             '#default_value' => $myAccountConfigValue['current_password_field']['options']['attr']['placeholder'],
         ];
+        $form['field_configuration']['field_labels_current']['error_detail'] = [
+            '#type' => 'details',
+            '#title' => 'Validation Error',
+            '#description' => $this->t('The default value for this field, used when creating new content.'),
+        ];
 
-        $form['field_configuration']['field_labels_current']['error'] = [
+        $form['field_configuration']['field_labels_current']['error_detail']['required_error'] = [
             '#type' => 'textfield',
-            '#title' => $this->t('Current Password Error'),
-            '#description' => $this->t('Required Error Message.'),
+            '#title' => $this->t('Required Error'),
             '#maxlength' => 255,
-            '#default_value' => $myAccountConfigValue['current_password_field']['options']['error']
+            '#default_value' => $myAccountConfigValue['current_password_field']['validation_error']['required_error'],
+        ];
+
+        $form['field_configuration']['field_labels_current']['error_detail']['minlength_error'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Minlength Error'),
+            '#maxlength' => 255,
+            '#default_value' => $myAccountConfigValue['current_password_field']['validation_error']['minlength_error'],
+        ];
+
+        $form['field_configuration']['field_labels_current']['error_detail']['maxlength_error'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Maxlength Error'),
+            '#maxlength' => 255,
+            '#default_value' => $myAccountConfigValue['current_password_field']['validation_error']['maxlength_error'],
+        ];
+
+        $form['field_configuration']['field_labels_current']['error_detail']['format_error'] = [
+            '#type' => 'textarea',
+            '#title' => $this->t('Format Error'),
+            '#maxlength' => 255,
+            '#default_value' => $myAccountConfigValue['current_password_field']['validation_error']['format_error'],
         ];
 
         $form['field_configuration']['field_labels_current']['weight'] = [
@@ -153,13 +178,38 @@ class MyAccountChangePasswordForm extends ConfigFormBase
             '#maxlength' => 255,
             '#default_value' => $myAccountConfigValue['new_password_field']['options']['attr']['placeholder'],
         ];
+        $form['field_configuration']['field_labels_new_password']['error_detail'] = [
+            '#type' => 'details',
+            '#title' => 'Validation Error',
+            '#description' => $this->t('The default value for this field, used when creating new content.'),
+        ];
 
-        $form['field_configuration']['field_labels_new_password']['error'] = [
+        $form['field_configuration']['field_labels_new_password']['error_detail']['required_error'] = [
             '#type' => 'textfield',
-            '#title' => $this->t('New Password Error'),
-            '#description' => $this->t('Required Error Message.'),
+            '#title' => $this->t('Required Error'),
             '#maxlength' => 255,
-            '#default_value' => $myAccountConfigValue['new_password_field']['options']['error']
+            '#default_value' => $myAccountConfigValue['new_password_field']['validation_error']['required_error'],
+        ];
+
+        $form['field_configuration']['field_labels_new_password']['error_detail']['minlength_error'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Minlength Error'),
+            '#maxlength' => 255,
+            '#default_value' => $myAccountConfigValue['new_password_field']['validation_error']['minlength_error'],
+        ];
+
+        $form['field_configuration']['field_labels_new_password']['error_detail']['maxlength_error'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Maxlength Error'),
+            '#maxlength' => 255,
+            '#default_value' => $myAccountConfigValue['new_password_field']['validation_error']['maxlength_error'],
+        ];
+
+        $form['field_configuration']['field_labels_new_password']['error_detail']['format_error'] = [
+            '#type' => 'textarea',
+            '#title' => $this->t('Format Error'),
+            '#maxlength' => 255,
+            '#default_value' => $myAccountConfigValue['new_password_field']['validation_error']['format_error'],
         ];
 
         $form['field_configuration']['field_labels_new_password']['weight'] = [
@@ -220,13 +270,45 @@ class MyAccountChangePasswordForm extends ConfigFormBase
             '#maxlength' => 255,
             '#default_value' => $myAccountConfigValue['confirm_password_field']['options']['attr']['placeholder'],
         ];
+        $form['field_configuration']['field_labels_confirm']['error_detail'] = [
+            '#type' => 'details',
+            '#title' => 'Validation Error',
+            '#description' => $this->t('The default value for this field, used when creating new content.'),
+        ];
 
-        $form['field_configuration']['field_labels_confirm']['error'] = [
+        $form['field_configuration']['field_labels_confirm']['error_detail']['required_error'] = [
             '#type' => 'textfield',
-            '#title' => $this->t('Confirm Password Error'),
-            '#description' => $this->t('Required Error Message.'),
+            '#title' => $this->t('Required Error'),
             '#maxlength' => 255,
-            '#default_value' => $myAccountConfigValue['confirm_password_field']['options']['error']
+            '#default_value' => $myAccountConfigValue['confirm_password_field']['validation_error']['required_error'],
+        ];
+
+        $form['field_configuration']['field_labels_confirm']['error_detail']['minlength_error'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Minlength Error'),
+            '#maxlength' => 255,
+            '#default_value' => $myAccountConfigValue['confirm_password_field']['validation_error']['minlength_error'],
+        ];
+
+        $form['field_configuration']['field_labels_confirm']['error_detail']['mismatch'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Mismatch Error'),
+            '#maxlength' => 255,
+            '#default_value' => $myAccountConfigValue['confirm_password_field']['validation_error']['mismatch'],
+        ];
+
+        $form['field_configuration']['field_labels_confirm']['error_detail']['maxlength_error'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Maxlength Error'),
+            '#maxlength' => 255,
+            '#default_value' => $myAccountConfigValue['confirm_password_field']['validation_error']['maxlength_error'],
+        ];
+
+        $form['field_configuration']['field_labels_confirm']['error_detail']['format_error'] = [
+            '#type' => 'textarea',
+            '#title' => $this->t('Format Error'),
+            '#maxlength' => 255,
+            '#default_value' => $myAccountConfigValue['confirm_password_field']['validation_error']['format_error'],
         ];
 
         $form['field_configuration']['field_labels_confirm']['weight'] = [
@@ -285,43 +367,27 @@ class MyAccountChangePasswordForm extends ConfigFormBase
             '#default_value' => $myAccountConfigValue['bottom_blurb']
         ];
 
+        $form['field_configuration']['field_icore_validation'] = [
+            '#type' => 'details',
+            '#title' => 'iCore Validation',
+            '#group' => 'change_password',
+        ];
+
+        $form['field_configuration']['field_icore_validation']['icore_error'] = [
+            '#type' => 'textarea',
+            '#title' => $this->t('iCOre Error Messages'),
+            '#description' => $this->t('iCore error list.'),
+            '#maxlength' => 255,
+            '#default_value' => $myAccountConfigValue['iCore_error']['key_messages']
+        ];
+
         $form['actions'] = ['#type' => 'actions'];
         // Add a submit button that handles the submission of the form.
         $form['actions']['submit'] = [
             '#type' => 'submit',
             '#value' => $this->t('Submit'),
         ];
-        $form['icore'] = [
-            '#type' => 'vertical_tabs',
-        ];
-        $form['field_icore_validation'] = [
-            '#type' => 'details',
-            '#title' => 'iCore Validation',
-            '#group' => 'icore',
-            '#open' => TRUE,
-            '#tree' => TRUE,
-        ];
-        $form['field_icore_validation']['error1'] = [
-            '#type' => 'textfield',
-            '#title' => $this->t('Confirm Password Error'),
-            '#description' => $this->t('Required Error Message.'),
-            '#maxlength' => 255,
-            '#default_value' => $this->t('Default error')
-        ];
-        $form['field_icore_validation']['error2'] = array(
-            '#type' => 'textfield',
-            '#title' => $this->t('Current Password Error'),
-            '#description' => $this->t('Required Error Message.'),
-            '#maxlength' => 255,
-            '#default_value' => $this->t('Default error')
-        );
-        $form['field_icore_validation']['error3'] = [
-            '#type' => 'textfield',
-            '#title' => $this->t('New Password Error'),
-            '#description' => $this->t('Required Error Message.'),
-            '#maxlength' => 255,
-            '#default_value' => $this->t('Default error')
-        ];
+
         return $form;
     }
 
@@ -363,24 +429,35 @@ class MyAccountChangePasswordForm extends ConfigFormBase
             ->set('current_password_field.weight', $configuration['field_labels_current']['weight'])
             ->set('current_password_field.options.wrapper_class', $configuration['field_labels_current']['wrapper_class'])
             ->set('current_password_field.options.attr.placeholder', $configuration['field_labels_current']['default_detail']['placeholder'])
-            ->set('current_password_field.options.error', $configuration['field_labels_current']['error'])
+            ->set('current_password_field.validation_error.required_error', $configuration['field_labels_current']['error_detail']['required_error'])
+            ->set('current_password_field.validation_error.minlength_error', $configuration['field_labels_current']['error_detail']['minlength_error'])
+            ->set('current_password_field.validation_error.maxlength_error', $configuration['field_labels_current']['error_detail']['maxlength_error'])
+            ->set('current_password_field.validation_error.format_error', $configuration['field_labels_current']['error_detail']['format_error'])
             ->set('confirm_password_field.options.label', $configuration['field_labels_confirm']['label'])
             ->set('confirm_password_field.options.help', $configuration['field_labels_confirm']['help'])
             ->set('confirm_password_field.weight', $configuration['field_labels_confirm']['weight'])
             ->set('confirm_password_field.options.wrapper_class', $configuration['field_labels_confirm']['wrapper_class'])
             ->set('confirm_password_field.options.required', $configuration['field_labels_confirm']['required'])
             ->set('confirm_password_field.options.attr.placeholder', $configuration['field_labels_confirm']['default_detail']['placeholder'])
-            ->set('confirm_password_field.options.error', $configuration['field_labels_confirm']['error'])
+            ->set('confirm_password_field.validation_error.required_error', $configuration['field_labels_confirm']['error_detail']['required_error'])
+            ->set('confirm_password_field.validation_error.minlength_error', $configuration['field_labels_confirm']['error_detail']['minlength_error'])
+            ->set('confirm_password_field.validation_error.mismatch', $configuration['field_labels_confirm']['error_detail']['mismatch'])
+            ->set('confirm_password_field.validation_error.maxlength_error', $configuration['field_labels_confirm']['error_detail']['maxlength_error'])
+            ->set('confirm_password_field.validation_error.format_error', $configuration['field_labels_confirm']['error_detail']['format_error'])
             ->set('new_password_field.options.label', $configuration['field_labels_new_password']['label'])
             ->set('new_password_field.options.help', $configuration['field_labels_new_password']['help'])
             ->set('new_password_field.options.required', $configuration['field_labels_new_password']['required'])
             ->set('new_password_field.options.attr.placeholder', $configuration['field_labels_new_password']['default_detail']['placeholder'])
-            ->set('new_password_field.options.error', $configuration['field_labels_new_password']['error'])
+            ->set('new_password_field.validation_error.required_error', $configuration['field_labels_new_password']['error_detail']['required_error'])
+            ->set('new_password_field.validation_error.minlength_error', $configuration['field_labels_new_password']['error_detail']['minlength_error'])
+            ->set('new_password_field.validation_error.maxlength_error', $configuration['field_labels_new_password']['error_detail']['maxlength_error'])
+            ->set('new_password_field.validation_error.format_error', $configuration['field_labels_confirm']['error_detail']['format_error'])
             ->set('new_password_field.weight', $configuration['field_labels_new_password']['weight'])
             ->set('new_password_field.options.wrapper_class', $configuration['field_labels_new_password']['wrapper_class'])
             ->set('submit_button_label_field.options.label', $configuration['field_submit_button_labels']['label'])
             ->set('top_blurb', $configuration['field_landing_page']['top_blurb'])
             ->set('bottom_blurb', $configuration['field_landing_page']['bottom_blurb'])
+            ->set('iCore_error.key_messages', $configuration['field_icore_validation']['icore_error'])
             ->save();
     }
 

@@ -15,15 +15,27 @@ my_account_form_profile.change_password:
             help:
               type: label
               label: 'Help text for field'
-            error:
-              type: label
-              label: 'Error value for field'
             attr:
               type: mapping
               mapping:
                 placeholder:
                   type: label
                   label: 'Placeholder value for field'
+        validation_error:
+          type: mapping
+          mapping:
+            required_error:
+              type: label
+              label: 'This is a required field.'
+            minlength_error:
+              type: label
+              label: 'Please enter at least 6 characters.'
+            maxlength_error:
+              type: label
+              label: 'Please enter no more than 10 characters.'
+            format_error:
+              type: text
+              label: 'Password must contain 6-10 alphanumeric characters only with no special characters and spaces.'
     new_password_field:
       type: mapping
       mapping:
@@ -36,15 +48,27 @@ my_account_form_profile.change_password:
             help:
               type: label
               label: 'Help text for field'
-            error:
-              type: label
-              label: 'Error value for field'
             attr:
               type: mapping
               mapping:
                 placeholder:
                   type: label
                   label: 'Placeholder value for field'
+        validation_error:
+          type: mapping
+          mapping:
+            required_error:
+              type: label
+              label: 'This is a required field.'
+            minlength_error:
+              type: label
+              label: 'Please enter at least 6 characters.'
+            maxlength_error:
+              type: label
+              label: 'Please enter no more than 10 characters.'
+            format_error:
+              type: text
+              label: 'Password must contain 6-10 alphanumeric characters only with no special characters and spaces.'
     confirm_password_field:
       type: mapping
       mapping:
@@ -57,15 +81,36 @@ my_account_form_profile.change_password:
             help:
               type: label
               label: 'Help text for field'
-            error:
-              type: label
-              label: 'Error value for field'
             attr:
               type: mapping
               mapping:
                 placeholder:
                   type: label
                   label: 'Placeholder value for field'
+        validation_error:
+          type: mapping
+          mapping:
+            required_error:
+              type: label
+              label: 'This is a required field.'
+            minlength_error:
+              type: label
+              label: 'Please enter at least 6 characters.'
+            maxlength_error:
+              type: label
+              label: 'Please enter no more than 10 characters.'
+            mismatch:
+              type: label
+              label: 'Please enter the same value.'
+            format_error:
+              type: text
+              label: 'Password must contain 6-10 alphanumeric characters only with no special characters and spaces.'
+    iCore_error:
+      type: mapping
+      mapping:
+        key_messages:
+          type: text
+          label: 'key|Error message'
     submit_button_label_field:
       type: mapping
       mapping:
