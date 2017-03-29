@@ -1,15 +1,16 @@
-uuid: 078d3999-1d88-447b-9b8c-14eae8881864
+uuid: a525d416-a673-4f05-a089-e3d0fb3630f8
 langcode: zh-hans
 status: true
 dependencies:
   module:
-    - paragraphs
-id: paragraph.field_enable
-field_name: field_enable
-entity_type: paragraph
-type: boolean
+    - node
+    - text
+id: node.field_banner_content
+field_name: field_banner_content
+entity_type: node
+type: text_long
 settings: {  }
-module: core
+module: text
 locked: false
 cardinality: 1
 translatable: true

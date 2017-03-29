@@ -1,22 +1,22 @@
-uuid: 55c8fffb-3054-46c9-adcd-8cd9f083f091
+uuid: 9a5f8564-a150-4bcb-81ad-95ad06a8ac46
 langcode: zh-hans
 status: true
 dependencies:
   content:
-    - 'block_content:sponsorship_block:28b0280c-8bb0-4aaa-ae54-4fbb894386c4'
+    - 'block_content:sponsorship_block:85e69c91-5079-4268-bd1b-f5c45627cb16'
   module:
     - block_content
   theme:
     - bartik
 id: sponsorship
 theme: bartik
-region: featured_bottom_first
+region: sidebar_second
 weight: 0
 provider: null
-plugin: 'block_content:28b0280c-8bb0-4aaa-ae54-4fbb894386c4'
+plugin: 'block_content:85e69c91-5079-4268-bd1b-f5c45627cb16'
 settings:
-  id: 'block_content:28b0280c-8bb0-4aaa-ae54-4fbb894386c4'
-  label: Sponsorship
+  id: 'block_content:85e69c91-5079-4268-bd1b-f5c45627cb16'
+  label: 'SC - Sponsorship - Note: Need to configure at least 1 item'
   provider: block_content
   label_display: visible
   status: true

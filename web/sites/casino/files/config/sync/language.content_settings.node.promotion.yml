@@ -1,16 +1,16 @@
-uuid: a34946bd-b815-4742-863f-65f8d6452f4c
-langcode: en
+uuid: a3070d6d-b734-48d4-809f-7908bd9c903e
+langcode: zh-hans
 status: true
 dependencies:
   config:
-    - node.type.page
+    - node.type.promotion
   module:
     - content_translation
 third_party_settings:
   content_translation:
     enabled: true
-id: node.page
+id: node.promotion
 target_entity_type_id: node
-target_bundle: page
+target_bundle: promotion
 default_langcode: site_default
 language_alterable: true
