@@ -369,14 +369,14 @@ class MyAccountChangePasswordForm extends ConfigFormBase
 
         $form['field_configuration']['field_icore_validation'] = [
             '#type' => 'details',
-            '#title' => 'iCore Validation',
+            '#title' => 'Integration Validation',
             '#group' => 'change_password',
         ];
 
         $form['field_configuration']['field_icore_validation']['icore_error'] = [
             '#type' => 'textarea',
-            '#title' => $this->t('iCOre Error Messages'),
-            '#description' => $this->t('iCore error list.'),
+            '#title' => $this->t('Integration Error Messages'),
+            '#description' => $this->t('Integration error list.'),
             '#maxlength' => 255,
             '#default_value' => $myAccountConfigValue['iCore_error']['key_messages']
         ];
