@@ -1,0 +1,26 @@
+first_name_field:
+  options:
+    label: Imię
+last_name_field:
+  options:
+    label: Nazwisko
+dob_field:
+  options:
+    label: 'Data urodzenia'
+country_field:
+  options:
+    label: Kraj
+    attr:
+      placeholder: Kraj
+email_field:
+  options:
+    label: 'Adres Email'
+communication_detail_field:
+  options:
+    label: 'Dane kontaktowe'
+account_field:
+  options:
+    label: Konto
+language_field:
+  options:
+    label: Język
