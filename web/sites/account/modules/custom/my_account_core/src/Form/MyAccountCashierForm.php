@@ -29,9 +29,16 @@ class MyAccountCashierForm extends ConfigFormBase
      */
     public function buildForm(array $form, FormStateInterface $form_state)
     {
-
         // Get Form configuration.
         $myAccountCoreConfig = $this->config('my_account_core.cashier');
+
+        $domains = unserialize($myAccountCoreConfig->get('cashier_domain_mapping'));
+        $domainMapping = [];
+        foreach ($domains as $account => $cashier) {
+            $domainMapping[] = implode('|', [trim($account), trim($cashier)]);
+        }
+
+        $domainMapping = implode(PHP_EOL,$domainMapping);
 
         $form['cashier'] = [
             '#type' => 'vertical_tabs',
@@ -45,13 +52,12 @@ class MyAccountCashierForm extends ConfigFormBase
             '#tree' => true,
         ];
 
-        $form['field_configuration']['cashier_link'] = [
-            '#type' => 'textfield',
-            '#title' => t('Cashier Link'),
-            '#size' => 25,
+        $form['field_configuration']['cashier_domain_mapping'] = [
+            '#type' => 'textarea',
+            '#title' => t('Cashier Domain Mapping'),
             '#required' => true,
-            '#description' => $this->t('Label for cashier link.'),
-            '#default_value' => $myAccountCoreConfig->get('cashier_link')
+            '#description' => $this->t('Cashier Domain Mapping'),
+            '#default_value' => $domainMapping
         ];
 
         $form['actions'] = ['#type' => 'actions'];
@@ -93,9 +99,18 @@ class MyAccountCashierForm extends ConfigFormBase
      */
     public function submitForm(array &$form, FormStateInterface $form_state)
     {
-        $configuration = $form_state->getValue('field_configuration');
+        $configuration = $form_state->getValue('field_configuration')['cashier_domain_mapping'];
+
+        $domains = explode(PHP_EOL, trim($configuration));
+
+        // Explode domains
+        foreach ($domains as $domain) {
+            list ($account,$cashier) = explode('|', $domain);
+            $domainMapping[$account] = trim($cashier);
+        }
+
         $this->config('my_account_core.cashier')
-            ->set('cashier_link', $configuration['cashier_link'])
+            ->set('cashier_domain_mapping', serialize($domainMapping))
             ->save();
     }
 
