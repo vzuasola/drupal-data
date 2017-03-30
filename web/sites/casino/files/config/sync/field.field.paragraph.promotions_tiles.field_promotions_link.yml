@@ -1,0 +1,23 @@
+uuid: 991e3f6f-f1b1-4a4a-876a-cb6b05a02207
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_promotions_link
+    - paragraphs.paragraphs_type.promotions_tiles
+  module:
+    - link
+id: paragraph.promotions_tiles.field_promotions_link
+field_name: field_promotions_link
+entity_type: paragraph
+bundle: promotions_tiles
+label: 'Promotions Link'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link
