@@ -137,57 +137,30 @@ def prerequisite(config):
     return config['prerequisite']
 
 
-def meets_requirements(requirement):
+def check_dependencies(config):
     """
     Checks if current deployment statisfies requirements
 
     Returns:
         (bool) checks if requested deployment can be performed
     """
-    # step 1.
-    # get page 0, this will tell us how many pages in total there are
-    # the number of pages depends on `per_page` size so don't the value of
-    # RESULTS_PER_PAGE during the run
-    url = deployments_url()
-    headers = {"PRIVATE-TOKEN": api_token()}
-    params = {'per_page': RESULTS_PER_PAGE, 'page': 0}
-    res = requests.get(url, headers=headers, verify=False, params=params)
-    # if we're lucky the result is already in the first page, but...
-    if is_deployable(res.json(), requirement):
-        return True
-
-    # in case it's not, we need to iterate to the deployment results starting
-    # from the last page, our custom class, Pages will do this for us
-    pages = Pages()
-    pages.last = int(res.headers['X-Total-Pages']) + 1
-    for page in pages:
-        params = {'per_page': RESULTS_PER_PAGE, 'page': page}
-        res = requests.get(url, headers=headers, verify=False, params=params)
-        if is_deployable(res.json(), requirement):
+    try:
+        depends_on = config['depends_on']
+        with open(depends_on, 'r') as dependency:
+            msg = ("{0} Κέρβερος says: all the requirements are met: {1},"
+                  "let's start".format(SUCCESS, dependency.read()))
+            print(msg)
             return True
-    return False
-
-
-def is_deployable(deployments, requirement):
-    """
-    Parses deployments and returns true if we can proceed with the deployment
-
-    Args:
-        deployments (dict): json as returned from the api call
-
-    Returns:
-        bool
-    """
-    pipeline = pipeline_id()
-    for deployment in deployments:
-        current_pipeline = int(deployment['deployable']['pipeline']['id'])
-        state = deployment['deployable']['status']
-        name = deployment['deployable']['name']
-
-        if current_pipeline == pipeline:
-            if name == requirement and state == 'success':
-                return True
-    return False
+    except KeyError:
+        msg = ("{0} Κέρβερος this step do not depend on any previous "
+               "stage".format(SUCCESS))
+        print(msg)
+        return True
+    except (OSError, IOError):
+        msg = ("{0} Κέρβερος won't let you pass, requirements are not met:"
+               " {1} does not exist".format(FAILED, depends_on))
+        print(msg)
+        return False
 
 
 def current_user_email():
@@ -224,26 +197,9 @@ def authorized(config):
     print(msg)
 
 
-def pre_requirements(config):
-    prereq = prerequisite(config)
-    if prereq == 'any':
-        msg = ("{0}  Κέρβερος this step do not depend on any previous "
-               "stage".format(SUCCESS))
-        print(msg)
-        return True
-    if not meets_requirements(prereq):
-        msg = ("{0} Κέρβερος does not allow you to proceed any further "
-               "requirements are not met: {1} "
-               "did not complete successfully".format(FAILED, prereq))
-        raise PipelineError(msg)
-    msg = ("{0} Κέρβερος says: all the requirements are met, let's "
-           "start".format(SUCCESS))
-    print(msg)
-    return True
-
-
 def check(config):
     # no blockers for this environment
     print('{0} Κέρβερος sniffs'.format(INFO))
     authorized(config)
-    pre_requirements(config)
+    if not check_dependencies(config):
+        raise PipelineError('Requirements are not met. Giving up.')

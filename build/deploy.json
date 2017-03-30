@@ -44,7 +44,7 @@
         "dockerfile": "build/Dockerfile.deploy",
         "job_name": "CMS: deploy - development environment",
         "password": "MSGREEN_DEPLOY_PASSWORD",
-        "prerequisite": "any",
+        "creates": "build/deployed/development.jsonl",
         "limit": "drupal-data",
         "extra-vars": {
             "project": "drupal-data",
@@ -60,7 +60,8 @@
         "dockerfile": "build/Dockerfile.deploy",
         "job_name": "CMS: deploy - testing environment (QA)",
         "password": "MSGREEN_DEPLOY_PASSWORD",
-        "prerequisite": "any",
+        "depends_on": "build/deployed/development.jsonl",
+        "creates": "build/deployed/testing.jsonl",
         "limit": "drupal-data",
         "extra-vars": {
             "project": "drupal-data",
@@ -76,7 +77,8 @@
         "dockerfile": "build/Dockerfile.deploy",
         "job_name": "CMS: deploy - uat environment",
         "password": "MSORANGE_DEPLOY_PASSWORD",
-        "prerequisite": "any",
+        "depends_on": "build/deployed/testing.jsonl",
+        "creates": "build/deployed/uat.jsonl",
         "limit": "drupal-data",
         "extra-vars": {
             "project": "drupal-data",
@@ -92,7 +94,8 @@
         "dockerfile": "build/Dockerfile.deploy",
         "job_name": "CMS: deploy - staging environment",
         "password": "MSORANGE_DEPLOY_PASSWORD",
-        "prerequisite": "any",
+        "depends_on": "build/deployed/testing.jsonl",
+        "creates": "build/deployed/staging.jsonl",
         "limit": "drupal-data",
         "extra-vars": {
             "project": "drupal-data",
@@ -101,14 +104,15 @@
         "username": "dafa-stack"
     },
     "staging-signoff": {
+        "depends_on": "build/deployed/staging.jsonl",
+        "creates": "build/deployed/staging-signoff.jsonl",
         "authorized_users": [
             "any",
             "glenbert.garing@bayviewtechnology.com",
             "jennifer.gregorio@bayviewtechnology.com",
             "krystelmae.penoso@bayviewtechnology.com",
             "renzjonathan.alib@bayviewtechnology.com"
-        ],
-        "prerequisite": "staging"
+        ]
     },
     "internal-production": {
         "ansible_tower_instance": "trc-ptc-itass01.msred.dom",
@@ -119,9 +123,10 @@
             "renzjonathan.alib@bayviewtechnology.com"
         ],
         "dockerfile": "build/Dockerfile.deploy",
-        "job_name": "drupal-data: Deploy - Internal production",
+        "job_name": "CMS: deploy - Internal production",
         "password": "MSRED_DEPLOY_PASSWORD",
-        "prerequisite": "any",
+        "depends_on": "build/deployed/staging-signoff.jsonl",
+        "creates": "build/deployed/internal-production.jsonl",
         "limit": "drupal-data",
         "extra-vars": {
             "project": "drupal-data",
@@ -135,8 +140,7 @@
             "jennifer.gregorio@bayviewtechnology.com",
             "krystelmae.penoso@bayviewtechnology.com",
             "renzjonathan.alib@bayviewtechnology.com"
-        ],
-        "prerequisite": "internal-production"
+        ]
     },
     "production": {
         "ansible_tower_instance": "trc-ptc-itass01.msred.dom",
@@ -149,7 +153,8 @@
         "dockerfile": "build/Dockerfile.deploy",
         "job_name": "CMS: deploy - Production (front facing)",
         "password": "MSRED_DEPLOY_PASSWORD",
-        "prerequisite": "any",
+        "depends_on": "build/deployed/internal-production-signoff.jsonl",
+        "creates": "build/deployed/production.jsonl",
         "limit": "drupal-data",
         "extra-vars": {
             "project": "drupal-data",

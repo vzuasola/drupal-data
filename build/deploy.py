@@ -6,6 +6,8 @@ This module binds GitLab deployments and Ansible Tower jobs
 from __future__ import print_function
 from __future__ import absolute_import
 import argparse
+import datetime
+import json
 import os
 import subprocess
 import sys
@@ -195,6 +197,29 @@ def authorized_users(config):
     return (user.lower() for user in config['authorized_users'])
 
 
+def mark_deployment_as_done(config, project_name):
+    """
+    Once the deployment is complete, append to "creates" file,
+    some info we will need for the following deployments
+
+    params: config
+    params: project name (str): name of the project
+    raises: PipelineError
+    """
+    filename = config['creates']
+    data = {'time': str(datetime.datetime.now()),
+            'project': project_name,
+            'job_name': config['job_name'],
+            'executed_by': current_user_email()}
+    data = json.dumps(data)
+    try:
+        with open(filename, 'a') as f_in:
+            f_in.write(data)
+            f_in.write("\n")
+    except (IOError, OSError) as error:
+        raise PipelineError(error)
+
+
 def deploy(config_file, environment, version):
     """
     The only function you want to call from main(). A nice cozy wrapper for the
@@ -209,12 +234,15 @@ def deploy(config_file, environment, version):
             file a bug
     """
     config = read_coniguration(config_file=config_file, environment=environment)
+    project_name = read_coniguration(config_file=config_file,
+                                     environment='project')['name']
     kerberos.check(config)
     image_name = docker_image_name(environment)
     create_docker_configuration(config)
     dockerfile = dockerfile_path(config)
     create_docker_image(image_name, dockerfile)
     execute_deployment(config, image_name, version)
+    mark_deployment_as_done(config, project_name)
 
 
 def main():

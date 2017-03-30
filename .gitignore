@@ -22,3 +22,5 @@ web/sites/*/settings.php
 *.tar.gz
 web-composer-drupal/*
 drupal-data/*
+build/deployed/*.jsonl
+deploy/*
