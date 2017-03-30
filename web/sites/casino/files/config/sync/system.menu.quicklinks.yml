@@ -1,8 +1,8 @@
 uuid: ac9d874d-4184-454a-ae23-e5ebb4cc29a1
-langcode: en
+langcode: zh-hans
 status: true
 dependencies: {  }
 id: quicklinks
 label: Quicklinks
-description: ''
+description: 'Footer quicklinks <br>  <i>Note: Need to configure at least 1 item<i>'
 locked: false

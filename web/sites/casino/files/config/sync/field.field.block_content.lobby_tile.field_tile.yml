@@ -1,5 +1,5 @@
-uuid: d2d93471-dde3-4350-a3ab-631aa874e914
-langcode: zh-hant
+uuid: 767efdfd-8871-4142-81bc-d7d71a12a450
+langcode: zh-hans
 status: true
 dependencies:
   config:
