@@ -1,0 +1,37 @@
+username_field:
+  options:
+    label: UsernameIN
+currency_field:
+  options:
+    label: CurrencyIN
+    attr:
+      placeholder: CurrencyIN
+first_name_field:
+  options:
+    label: 'First nameIN'
+last_name_field:
+  options:
+    label: 'Last nameIN'
+dob_field:
+  options:
+    label: 'Date of BirthIN'
+country_field:
+  options:
+    label: CountryIN
+    attr:
+      placeholder: CountryIN
+email_field:
+  options:
+    label: 'Email AddressIN'
+communication_detail_field:
+  options:
+    label: 'Communication DetailsIN'
+account_field:
+  options:
+    label: 'Account DetailsIN'
+mobile_number_field:
+  options:
+    label: 'Contact NumberIN'
+language_field:
+  options:
+    label: LanguageIN
