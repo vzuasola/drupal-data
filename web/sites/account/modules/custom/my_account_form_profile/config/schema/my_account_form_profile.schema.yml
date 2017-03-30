@@ -5,69 +5,96 @@ my_account_form_profile.change_password:
   mapping:
     current_password_field:
       type: mapping
+      label: 'Current Password'
       mapping:
         options:
           type: mapping
+          label: 'Field label'
           mapping:
             label:
               type: label
-              label: 'Default value for current password error'
+              label: 'Default value for current password'
             help:
               type: label
               label: 'Help text for field'
-            error:
-              type: label
-              label: 'Error value for field'
             attr:
               type: mapping
+              label: 'Field Placeholder'
               mapping:
                 placeholder:
                   type: label
                   label: 'Placeholder value for field'
     new_password_field:
       type: mapping
+      label: 'New Password'
       mapping:
         options:
           type: mapping
+          label: 'Field label'
           mapping:
             label:
               type: label
-              label: 'Default value for new password error'
+              label: 'Default value for new password'
             help:
               type: label
               label: 'Help text for field'
-            error:
-              type: label
-              label: 'Error value for field'
             attr:
               type: mapping
+              label: 'Field Placeholder'
               mapping:
                 placeholder:
                   type: label
                   label: 'Placeholder value for field'
     confirm_password_field:
       type: mapping
+      label: 'Confirm Password'
       mapping:
         options:
           type: mapping
+          label: 'Field label'
           mapping:
             label:
               type: label
-              label: 'Default value for confirm password error'
+              label: 'Default value for confirm password'
             help:
               type: label
               label: 'Help text for field'
-            error:
-              type: label
-              label: 'Error value for field'
             attr:
               type: mapping
+              label: 'Placeholder value for field'
               mapping:
                 placeholder:
                   type: label
                   label: 'Placeholder value for field'
+    validation_error:
+      type: mapping
+      label: 'Validation Error Messages'
+      mapping:
+        required_error:
+          type: label
+          label: 'This is a required field.'
+        minlength_error:
+          type: label
+          label: 'Please enter at least 6 characters.'
+        maxlength_error:
+          type: label
+          label: 'Please enter no more than 10 characters.'
+        mismatch:
+          type: label
+          label: 'Please enter the same value.'
+        format_error:
+          type: text
+          label: 'Password must contain 6-10 alphanumeric characters only with no special characters and spaces.'
+    iCore_error:
+      type: mapping
+      label: 'Integration Message Translation'
+      mapping:
+        key_messages:
+          type: text
+          label: 'key|Error message'
     submit_button_label_field:
       type: mapping
+      label: 'Submit Button Label'
       mapping:
         options:
           type: mapping
@@ -75,6 +102,12 @@ my_account_form_profile.change_password:
             label:
               type: label
               label: 'Default value for current password submit button'
+    top_blurb:
+      type: text
+      label: 'My Account Change Password Top Blurb'
+    bottom_blurb:
+      type: text
+      label: 'My Account Change Password Bottom Blurb'
   langcode: 'en'
 
 # Change password form schema configuration
@@ -84,9 +117,11 @@ my_account_form_profile.profile:
   mapping:
     username_field:
       type: mapping
+      label: 'Username field'
       mapping:
         options:
           type: mapping
+          label: 'Field label'
           mapping:
             label:
               type: label
@@ -96,15 +131,18 @@ my_account_form_profile.profile:
               label: 'Error message'
             attr:
               type: mapping
+              label: 'Placeholder value for field'
               mapping:
                 placeholder:
                   type: label
                   label: 'Placeholder value for field'
     currency_field:
       type: mapping
+      label: 'Currency'
       mapping:
         options:
           type: mapping
+          label: 'Field label'
           mapping:
             label:
               type: label
@@ -114,18 +152,21 @@ my_account_form_profile.profile:
               label: 'Error message'
             attr:
               type: mapping
+              label: 'Placeholder value for field'
               mapping:
                 placeholder:
                   type: label
                   label: 'Placeholder value for field'
     first_name_field:
       type: mapping
+      label: 'First Name'
       mapping:
         weight:
           type: label
           label: 'Weight for First name field'
         options:
           type: mapping
+          label: 'Field label'
           mapping:
             label:
               type: label
@@ -135,18 +176,21 @@ my_account_form_profile.profile:
               label: 'Error message'
             attr:
               type: mapping
+              label: 'Placeholder value for field'
               mapping:
                 placeholder:
                   type: label
                   label: 'Placeholder value for field'
     last_name_field:
       type: mapping
+      label: 'Last Name'
       mapping:
         weight:
           type: label
           label: 'Weight for Last name field'
         options:
           type: mapping
+          label: 'Field label'
           mapping:
             label:
               type: label
@@ -156,15 +200,18 @@ my_account_form_profile.profile:
               label: 'Error message'
             attr:
               type: mapping
+              label: 'Placeholder value for field'
               mapping:
                 placeholder:
                   type: label
                   label: 'Placeholder value for field'
     dob_field:
       type: mapping
+      label: 'DOB'
       mapping:
         options:
           type: mapping
+          label: 'Field label'
           mapping:
             label:
               type: label
@@ -174,33 +221,39 @@ my_account_form_profile.profile:
               label: 'Error message'
             attr:
               type: mapping
+              label: 'Placeholder value for field'
               mapping:
                 placeholder:
                   type: label
                   label: 'Placeholder value for field'
     dob_month:
       type: mapping
+      label: 'DOB Month Weight'
       mapping:
         weight:
           type: label
           label: 'Weight for DOB month field'
     dob_day:
       type: mapping
+      label: 'DOB Day Weight'
       mapping:
         weight:
           type: label
           label: 'Weight for DOB day field'
     dob_year:
       type: mapping
+      label: 'DOB Year Weight'
       mapping:
         weight:
           type: label
           label: 'Weight for DOB year field'
     country_field:
       type: mapping
+      label: 'Country field translation'
       mapping:
         options:
           type: mapping
+          label: 'Field label'
           mapping:
             label:
               type: label
@@ -210,15 +263,18 @@ my_account_form_profile.profile:
               label: 'Error message'
             attr:
               type: mapping
+              label: 'Placeholder value for field'
               mapping:
                 placeholder:
                   type: label
                   label: 'Placeholder value for field'
     email_field:
       type: mapping
+      label: 'Email'
       mapping:
         options:
           type: mapping
+          label: 'Field label'
           mapping:
             label:
               type: label
@@ -228,33 +284,40 @@ my_account_form_profile.profile:
               label: 'Error message'
             attr:
               type: mapping
+              label: 'Placeholder value for field'
               mapping:
                 placeholder:
                   type: label
                   label: 'Placeholder value for field'
     communication_detail_field:
       type: mapping
+      label: 'Communication header label translation'
       mapping:
         options:
           type: mapping
+          label: 'Field label'
           mapping:
             label:
               type: label
               label: 'Field label'
     account_field:
       type: mapping
+      label: 'Account header label translation'
       mapping:
         options:
           type: mapping
+          label: 'Field label'
           mapping:
             label:
               type: label
               label: 'Field label'
     mobile_number_field:
       type: mapping
+      label: 'Contact'
       mapping:
         options:
           type: mapping
+          label: 'Field label'
           mapping:
             label:
               type: label
@@ -264,15 +327,18 @@ my_account_form_profile.profile:
               label: 'Error message'
             attr:
               type: mapping
+              label: 'Placeholder value for field'
               mapping:
                 placeholder:
                   type: label
                   label: 'Placeholder value for field'
     language_field:
       type: mapping
+      label: 'Language'
       mapping:
         options:
           type: mapping
+          label: 'Field label'
           mapping:
             label:
               type: label
@@ -282,6 +348,7 @@ my_account_form_profile.profile:
               label: 'Error message'
             attr:
               type: mapping
+              label: 'Placeholder value for field'
               mapping:
                 placeholder:
                   type: label

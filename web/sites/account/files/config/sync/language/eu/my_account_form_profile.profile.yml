@@ -1,0 +1,7 @@
+last_name_field:
+  options:
+    label: Surname
+dob_month:
+  weight: '5'
+dob_day:
+  weight: '6'

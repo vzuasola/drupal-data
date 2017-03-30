@@ -1,0 +1,39 @@
+username_field:
+  options:
+    label: ユーザーネーム
+currency_field:
+  options:
+    label: 通貨
+    attr:
+      placeholder: 通貨
+first_name_field:
+  weight: '3'
+  options:
+    label: 名前
+last_name_field:
+  weight: '2'
+  options:
+    label: 苗字
+dob_field:
+  options:
+    label: ' 生年月日'
+country_field:
+  options:
+    label: 国
+    attr:
+      placeholder: 国
+email_field:
+  options:
+    label: 'E メールアドレス'
+communication_detail_field:
+  options:
+    label: ご連絡内容の詳細
+account_field:
+  options:
+    label: アカウント情報
+mobile_number_field:
+  options:
+    label: 電話番号（ハイフンは不可）
+language_field:
+  options:
+    label: 言語

@@ -1,0 +1,43 @@
+username_field:
+  options:
+    label: 아이디
+currency_field:
+  options:
+    label: '화폐 단위'
+    attr:
+      placeholder: '화폐 단위'
+first_name_field:
+  weight: '3'
+  options:
+    label: '성을 입력하세요'
+last_name_field:
+  weight: '2'
+  options:
+    label: '이름을 입력하세요'
+dob_field:
+  options:
+    label: 생년월일
+dob_day:
+  weight: '7'
+dob_year:
+  weight: '5'
+country_field:
+  options:
+    label: ' 나라'
+    attr:
+      placeholder: ' 나라'
+email_field:
+  options:
+    label: '이메일 주소'
+communication_detail_field:
+  options:
+    label: '연락처 정보'
+account_field:
+  options:
+    label: '계정 정보'
+mobile_number_field:
+  options:
+    label: 휴대번호
+language_field:
+  options:
+    label: 언어

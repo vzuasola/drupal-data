@@ -1,0 +1,4 @@
+top_blurb: 'The page you are looking for cannot be found. You may have followed a bad link or typed an address (URL) incorrectly.'
+bottom_blurb: 'For question and inquiries, you can contact us at the following: <a href="{livechat.link}"> Live Chat </a> or <a href="mailto:ensupport@dafabet.com"> Email </a>'
+_core:
+  default_config_hash: TLDm6-AwRy33ygv3rYljWbVUNLpTm_OCkfalfb3tvsk

@@ -1,0 +1,39 @@
+username_field:
+  options:
+    label: ยูสเซอร์เนม/ไอดี
+currency_field:
+  options:
+    label: สกุลเงิน
+    attr:
+      placeholder: สกุลเงิน
+first_name_field:
+  weight: '3'
+  options:
+    label: ชื่อจริง
+last_name_field:
+  weight: '2'
+  options:
+    label: นามสกุล
+dob_field:
+  options:
+    label: วันเกิด
+country_field:
+  options:
+    label: ประเทศ
+    attr:
+      placeholder: ประเทศ
+email_field:
+  options:
+    label: อีเมล
+communication_detail_field:
+  options:
+    label: รายละเอียดการติดต่อ
+account_field:
+  options:
+    label: รายละเอียดบัญชี
+mobile_number_field:
+  options:
+    label: ' เบอร์โทรศัพท์มือถือ'
+language_field:
+  options:
+    label: ภาษา
