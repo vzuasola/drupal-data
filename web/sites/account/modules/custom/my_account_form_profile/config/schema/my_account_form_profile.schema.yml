@@ -24,22 +24,6 @@ my_account_form_profile.change_password:
                 placeholder:
                   type: label
                   label: 'Placeholder value for field'
-        validation_error:
-          type: mapping
-          label: 'Validation Error Messages'
-          mapping:
-            required_error:
-              type: label
-              label: 'This is a required field.'
-            minlength_error:
-              type: label
-              label: 'Please enter at least 6 characters.'
-            maxlength_error:
-              type: label
-              label: 'Please enter no more than 10 characters.'
-            format_error:
-              type: text
-              label: 'Password must contain 6-10 alphanumeric characters only with no special characters and spaces.'
     new_password_field:
       type: mapping
       label: 'New Password'
@@ -61,22 +45,6 @@ my_account_form_profile.change_password:
                 placeholder:
                   type: label
                   label: 'Placeholder value for field'
-        validation_error:
-          type: mapping
-          label: 'Validation Error Messages'
-          mapping:
-            required_error:
-              type: label
-              label: 'This is a required field.'
-            minlength_error:
-              type: label
-              label: 'Please enter at least 6 characters.'
-            maxlength_error:
-              type: label
-              label: 'Please enter no more than 10 characters.'
-            format_error:
-              type: text
-              label: 'Password must contain 6-10 alphanumeric characters only with no special characters and spaces.'
     confirm_password_field:
       type: mapping
       label: 'Confirm Password'
@@ -98,25 +66,25 @@ my_account_form_profile.change_password:
                 placeholder:
                   type: label
                   label: 'Placeholder value for field'
-        validation_error:
-          type: mapping
-          label: 'Validation Error Messages'
-          mapping:
-            required_error:
-              type: label
-              label: 'This is a required field.'
-            minlength_error:
-              type: label
-              label: 'Please enter at least 6 characters.'
-            maxlength_error:
-              type: label
-              label: 'Please enter no more than 10 characters.'
-            mismatch:
-              type: label
-              label: 'Please enter the same value.'
-            format_error:
-              type: text
-              label: 'Password must contain 6-10 alphanumeric characters only with no special characters and spaces.'
+    validation_error:
+      type: mapping
+      label: 'Validation Error Messages'
+      mapping:
+        required_error:
+          type: label
+          label: 'This is a required field.'
+        minlength_error:
+          type: label
+          label: 'Please enter at least 6 characters.'
+        maxlength_error:
+          type: label
+          label: 'Please enter no more than 10 characters.'
+        mismatch:
+          type: label
+          label: 'Please enter the same value.'
+        format_error:
+          type: text
+          label: 'Password must contain 6-10 alphanumeric characters only with no special characters and spaces.'
     iCore_error:
       type: mapping
       label: 'Integration Message Translation'
