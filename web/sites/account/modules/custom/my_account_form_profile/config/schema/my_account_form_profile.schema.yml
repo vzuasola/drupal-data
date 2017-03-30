@@ -5,7 +5,7 @@ my_account_form_profile.change_password:
   mapping:
     current_password_field:
       type: mapping
-      label: 'Current Password Translation'
+      label: 'Current Password'
       mapping:
         options:
           type: mapping
@@ -42,7 +42,7 @@ my_account_form_profile.change_password:
               label: 'Password must contain 6-10 alphanumeric characters only with no special characters and spaces.'
     new_password_field:
       type: mapping
-      label: 'New Password Translation'
+      label: 'New Password'
       mapping:
         options:
           type: mapping
@@ -79,7 +79,7 @@ my_account_form_profile.change_password:
               label: 'Password must contain 6-10 alphanumeric characters only with no special characters and spaces.'
     confirm_password_field:
       type: mapping
-      label: 'Confirm Password Translation'
+      label: 'Confirm Password'
       mapping:
         options:
           type: mapping
@@ -119,7 +119,7 @@ my_account_form_profile.change_password:
               label: 'Password must contain 6-10 alphanumeric characters only with no special characters and spaces.'
     iCore_error:
       type: mapping
-      label: 'iCOre Message Translation'
+      label: 'Integration Message Translation'
       mapping:
         key_messages:
           type: text
@@ -149,7 +149,7 @@ my_account_form_profile.profile:
   mapping:
     username_field:
       type: mapping
-      label: 'Username field translation'
+      label: 'Username field'
       mapping:
         options:
           type: mapping
@@ -170,7 +170,7 @@ my_account_form_profile.profile:
                   label: 'Placeholder value for field'
     currency_field:
       type: mapping
-      label: 'Currency field translation'
+      label: 'Currency'
       mapping:
         options:
           type: mapping
@@ -191,7 +191,7 @@ my_account_form_profile.profile:
                   label: 'Placeholder value for field'
     first_name_field:
       type: mapping
-      label: 'First name field translation'
+      label: 'First Name'
       mapping:
         weight:
           type: label
@@ -215,7 +215,7 @@ my_account_form_profile.profile:
                   label: 'Placeholder value for field'
     last_name_field:
       type: mapping
-      label: 'Last name field translation'
+      label: 'Last Name'
       mapping:
         weight:
           type: label
@@ -239,7 +239,7 @@ my_account_form_profile.profile:
                   label: 'Placeholder value for field'
     dob_field:
       type: mapping
-      label: 'DOB Field translation'
+      label: 'DOB'
       mapping:
         options:
           type: mapping
@@ -302,7 +302,7 @@ my_account_form_profile.profile:
                   label: 'Placeholder value for field'
     email_field:
       type: mapping
-      label: 'Email field translation'
+      label: 'Email'
       mapping:
         options:
           type: mapping
@@ -345,7 +345,7 @@ my_account_form_profile.profile:
               label: 'Field label'
     mobile_number_field:
       type: mapping
-      label: 'Contact number field translation'
+      label: 'Contact'
       mapping:
         options:
           type: mapping
@@ -366,7 +366,7 @@ my_account_form_profile.profile:
                   label: 'Placeholder value for field'
     language_field:
       type: mapping
-      label: 'Language field translation'
+      label: 'Language'
       mapping:
         options:
           type: mapping
