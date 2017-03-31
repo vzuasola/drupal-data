@@ -1,4 +1,4 @@
-uuid: 04ddbd62-a480-422c-81b2-fe0b1ee0b521
+uuid: 18f4be17-b8a1-4645-b89a-1967b77303fa
 langcode: zh-hans
 status: true
 dependencies:
@@ -6,7 +6,6 @@ dependencies:
     - 'block_content:floating_banner_left:64941b47-f7cd-4e3e-96a6-6a1bb2fbfde4'
   module:
     - block_content
-    - system
   theme:
     - bartik
 id: floating_banner_left
@@ -23,9 +22,4 @@ settings:
   status: true
   info: ''
   view_mode: full
-visibility:
-  request_path:
-    id: request_path
-    pages: '<front>'
-    negate: true
-    context_mapping: {  }
+visibility: {  }

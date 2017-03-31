@@ -6,15 +6,12 @@ dependencies:
     - block_content.type.floating_banner_right
     - field.field.block_content.floating_banner_right.field_banner_items_right
     - field.field.block_content.floating_banner_right.field_icon
-    - field.field.block_content.floating_banner_right.field_link
-    - field.field.block_content.floating_banner_right.field_link_target
     - field.field.block_content.floating_banner_right.field_page_visibility
     - field.field.block_content.floating_banner_right.field_title
     - field.field.block_content.floating_banner_right.field_title_layout
     - image.style.thumbnail
   module:
     - image
-    - link
     - paragraphs
 id: block_content.floating_banner_right.default
 targetEntityType: block_content
@@ -39,18 +36,6 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
-  field_link:
-    weight: 6
-    settings:
-      placeholder_url: ''
-      placeholder_title: ''
-    third_party_settings: {  }
-    type: link_default
-  field_link_target:
-    weight: 7
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
   field_page_visibility:
     weight: 8
     settings:

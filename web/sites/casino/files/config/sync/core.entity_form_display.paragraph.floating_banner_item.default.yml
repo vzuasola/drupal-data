@@ -7,7 +7,6 @@ dependencies:
     - field.field.paragraph.floating_banner_item.field_link_class
     - field.field.paragraph.floating_banner_item.field_link_target
     - field.field.paragraph.floating_banner_item.field_link_text
-    - field.field.paragraph.floating_banner_item.field_page_visibility
     - paragraphs.paragraphs_type.floating_banner_item
   module:
     - link
@@ -40,13 +39,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
-  field_page_visibility:
-    weight: 15
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textarea
   translation:
     weight: 10
 hidden:

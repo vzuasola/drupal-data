@@ -7,7 +7,6 @@ dependencies:
     - field.field.paragraph.floating_banner_item.field_link_class
     - field.field.paragraph.floating_banner_item.field_link_target
     - field.field.paragraph.floating_banner_item.field_link_text
-    - field.field.paragraph.floating_banner_item.field_page_visibility
     - paragraphs.paragraphs_type.floating_banner_item
   module:
     - link
@@ -47,10 +46,4 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
-  field_page_visibility:
-    weight: 4
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: basic_string
 hidden: {  }

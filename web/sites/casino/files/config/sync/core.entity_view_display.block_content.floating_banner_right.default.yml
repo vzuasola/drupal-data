@@ -6,15 +6,12 @@ dependencies:
     - block_content.type.floating_banner_right
     - field.field.block_content.floating_banner_right.field_banner_items_right
     - field.field.block_content.floating_banner_right.field_icon
-    - field.field.block_content.floating_banner_right.field_link
-    - field.field.block_content.floating_banner_right.field_link_target
     - field.field.block_content.floating_banner_right.field_page_visibility
     - field.field.block_content.floating_banner_right.field_title
     - field.field.block_content.floating_banner_right.field_title_layout
   module:
     - entity_reference_revisions
     - image
-    - link
     - options
 id: block_content.floating_banner_right.default
 targetEntityType: block_content
@@ -37,23 +34,6 @@ content:
       image_link: ''
     third_party_settings: {  }
     type: image
-  field_link:
-    weight: 2
-    label: above
-    settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
-    third_party_settings: {  }
-    type: link
-  field_link_target:
-    weight: 3
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
   field_page_visibility:
     weight: 6
     label: above

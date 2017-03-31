@@ -12,20 +12,41 @@ type: list_string
 settings:
   allowed_values:
     -
-      value: line
-      label: Line
+      value: faq
+      label: FAQ
     -
       value: email
       label: Email
     -
-      value: wechat
-      label: Wechat
-    -
       value: call
       label: Call
     -
-      value: faq
-      label: FAQ
+      value: banner-facebook
+      label: Facebook
+    -
+      value: banner-twitter
+      label: Twitter
+    -
+      value: banner-youtube
+      label: Youtube
+    -
+      value: wechat
+      label: Wechat
+    -
+      value: weibo
+      label: Weibo
+    -
+      value: viber
+      label: Viber
+    -
+      value: zalo
+      label: Zalo
+    -
+      value: line
+      label: Line
+    -
+      value: talk
+      label: Talk
     -
       value: messenger
       label: Messenger
@@ -36,8 +57,17 @@ settings:
       value: bbm
       label: BBM
     -
-      value: twitter
-      label: Twitter
+      value: pidgin
+      label: Pidgin
+    -
+      value: casino
+      label: Casino
+    -
+      value: casino-gold
+      label: 'Casino Gold'
+    -
+      value: poker
+      label: Poker
   allowed_values_function: ''
 module: options
 locked: false
