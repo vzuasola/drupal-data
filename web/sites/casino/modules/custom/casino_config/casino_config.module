@@ -1,0 +1,59 @@
+<?php
+
+use \Drupal\Core\Form\FormStateInterface;
+use \Drupal\Core\Render\Markup;
+
+
+function casino_config_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if ($form_id == 'block_content_social_media_block_form') {
+    $isSocialMediaBlockExist = checkCustomBlockIfExist('social_media_block');
+    if ($isSocialMediaBlockExist > 0) {
+      if ( !isset($form['langcode']['#multilingual']) ) {
+        unset($form['actions']['submit']['#submit']);
+        $form['actions']['submit']['#submit'][] = 'block_content_social_media_block_form_submit';
+      }
+    }
+  } else if ($form_id == 'block_content_sponsorship_block_form') {
+    $isSponsorBlockExist = checkCustomBlockIfExist('sponsorship_block');
+    if ($isSponsorBlockExist > 0) {
+      if ( !isset($form['langcode']['#multilingual']) ) {
+        unset($form['actions']['submit']['#submit']);
+        $form['actions']['submit']['#submit'][] = 'block_content_sponsor_block_form_submit';
+      }
+    }
+  }
+}
+
+/**
+ * Additional submit handler for block_content_social_media_block_form
+ */
+function block_content_social_media_block_form_submit(&$form, FormStateInterface $form_state) {
+  $message = "Sorry, a Social Media block is already existing. Please contact the administrator if another Social Media block is required.";
+  drupal_set_message(Markup::create($message), 'error');
+}
+
+/**
+ * Additional submit handler for block_content_sponsorship_block_form
+ */
+function block_content_sponsor_block_form_submit(&$form, FormStateInterface $form_state) {
+  $message = "Sorry, Sponsorship block is already existing. Please contact the administrator if another Sponsorship block is required.";
+  drupal_set_message(Markup::create($message), 'error');
+}
+
+
+function checkCustomBlockIfExist($block_type) {
+  $blockCounter = 0;
+  $blockDefinitions = \Drupal::service('plugin.manager.block')->getDefinitions();
+  foreach ( $blockDefinitions as $blockKey => $blockValue ) {
+    if ($blockValue['id'] == 'block_content' ) {
+      $explodedBlockKey = explode(':', $blockKey);
+
+      $block_content = \Drupal::service('entity.repository')->loadEntityByUuid('block_content', $explodedBlockKey[1]);
+
+      if($block_content->type->target_id == $block_type) {
+        $blockCounter += 1;
+      }
+    }
+  }
+  return $blockCounter;
+}
