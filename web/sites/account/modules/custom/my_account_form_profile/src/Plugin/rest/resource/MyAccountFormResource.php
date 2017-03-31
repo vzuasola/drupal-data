@@ -68,10 +68,15 @@ class MyAccountFormResource extends ResourceBase
                 break;
 
             case 'my_account_profile_header':
-
                 // Get only hader section values.
                 $config = \Drupal::config('my_account_form_profile.profile');
                 $values = $this->filter_array_exposed($config->get(), 'header');
+                break;
+
+            case 'my_account_header':
+                // Get only hader section values.
+                $config = \Drupal::config('my_account_core.header');
+                $values = $config->get();
                 break;
             default:
         }
