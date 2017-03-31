@@ -85,7 +85,7 @@ my_account_form_profile.change_password:
         format_error:
           type: text
           label: 'Password must contain 6-10 alphanumeric characters only with no special characters and spaces.'
-    iCore_error:
+    integration_error_messages:
       type: mapping
       label: 'Integration Message Translation'
       mapping:

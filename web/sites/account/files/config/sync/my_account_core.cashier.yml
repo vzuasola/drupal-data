@@ -1,4 +1,3 @@
-cashier_link: 'https://account.dafabet.com|https://cashier2.dafabet.com'
+cashier_domain_mapping: 'https://account.dafabet.com|https://cashier2.dafabet.com'
 _core:
-  default_config_hash: JRqlH8IHzh-8oVlG6FPNdu8D2wZ1UJJfRm0QD-cYfPY
-cashier_domain_mapping: 'a:1:{s:27:"https://account.dafabet.com";s:28:"https://cashier2.dafabet.com";}'
+  default_config_hash: 7eb5TGHnmCTxjPVKpRX9_-AHuG4ERAtfhEugEdlAc44

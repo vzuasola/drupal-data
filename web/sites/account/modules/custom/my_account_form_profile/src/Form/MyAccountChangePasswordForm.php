@@ -267,12 +267,12 @@ class MyAccountChangePasswordForm extends ConfigFormBase
             '#group' => 'change_password',
         ];
 
-        $form['field_configuration']['field_icore_validation']['icore_error'] = [
+        $form['field_configuration']['field_icore_validation']['integration_error'] = [
             '#type' => 'textarea',
             '#title' => $this->t('Integration Error Messages'),
             '#description' => $this->t('Integration error list.'),
             '#maxlength' => 255,
-            '#default_value' => $myAccountConfigValue['iCore_error']['key_messages']
+            '#default_value' => $myAccountConfigValue['integration_error_messages']['key_messages']
         ];
 
         $form['field_configuration']['error_detail'] = [
@@ -385,7 +385,7 @@ class MyAccountChangePasswordForm extends ConfigFormBase
             ->set('submit_button_label_field.options.label', $configuration['field_submit_button_labels']['label'])
             ->set('top_blurb', $configuration['field_landing_page']['top_blurb'])
             ->set('bottom_blurb', $configuration['field_landing_page']['bottom_blurb'])
-            ->set('iCore_error.key_messages', $configuration['field_icore_validation']['icore_error'])
+            ->set('integration_error_messages.key_messages', $configuration['field_icore_validation']['integration_error'])
             ->save();
     }
 
