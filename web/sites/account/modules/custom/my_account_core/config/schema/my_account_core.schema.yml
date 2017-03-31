@@ -17,3 +17,11 @@ my_account_core.livechat:
       type: label
       label: 'Live Chat Link'
   langcode: 'en'
+my_account_core.header:
+  type: config_object
+  label: 'My Account Header Configuration'
+  mapping:
+    welcome_text:
+      type: label
+      label: 'Welcome Text'
+  langcode: 'en'
