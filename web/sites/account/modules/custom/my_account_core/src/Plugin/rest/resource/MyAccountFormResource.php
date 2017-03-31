@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\my_account_form_profile\Plugin\rest\resource;
+namespace Drupal\my_account_core\Plugin\rest\resource;
 
 use Drupal\rest\Plugin\ResourceBase;
 use Drupal\rest\ResourceResponse;
@@ -9,7 +9,7 @@ use Drupal\rest\ResourceResponse;
  * Provides a My Account Rest Resources
  *
  * @RestResource(
- *   id = "my_account_profile_form_resource",
+ *   id = "my_account_core_form_resource",
  *   label = @Translation("My Account Rest Resource"),
  *   uri_paths = {
  *     "canonical" = "/api/configuration/{id}"
@@ -49,7 +49,15 @@ class MyAccountFormResource extends ResourceBase
 
             case 'my_account_cashier':
                 $config = \Drupal::config('my_account_core.cashier');
-                $values = $config->get();
+                $configValue = $config->get()['cashier_domain_mapping'];
+                $domains = explode(PHP_EOL, trim($configValue));
+                $values = [];
+
+                // Explode domains
+                foreach ($domains as $domain) {
+                    list ($key, $value) = explode('|', $domain);
+                    $values[$key] = trim($value);
+                }
                 break;
 
             case 'my_account_livechat':
@@ -68,10 +76,15 @@ class MyAccountFormResource extends ResourceBase
                 break;
 
             case 'my_account_profile_header':
-
                 // Get only hader section values.
                 $config = \Drupal::config('my_account_form_profile.profile');
                 $values = $this->filter_array_exposed($config->get(), 'header');
+                break;
+
+            case 'my_account_header':
+                // Get only hader section values.
+                $config = \Drupal::config('my_account_core.header');
+                $values = $config->get();
                 break;
             default:
         }
@@ -88,8 +101,8 @@ class MyAccountFormResource extends ResourceBase
         if ($key == 'password') {
 
             // Convert string with array key messages
-            $value_array = explode('|', $values['iCore_error']['key_messages']);
-            $string = $values['iCore_error']['key_messages'];
+            $value_array = explode('|', $values['integration_error_messages']['key_messages']);
+            $string = $values['integration_error_messages']['key_messages'];
 
             // Explode strings
             $list = explode("\n", $string);
@@ -118,7 +131,7 @@ class MyAccountFormResource extends ResourceBase
                 $icore[$key] = $value;
             }
 
-            $values['iCore_error']['key_messages'] = $icore;
+            $values['integration_error_messages']['key_messages'] = $icore;
             // Assign with existing array
             $value = $values;
         }

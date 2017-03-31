@@ -19,7 +19,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  * @see \Drupal\Core\Form\FormBase
  * @see \Drupal\Core\Form\ConfigFormBase
  */
-class MyAccountCashierForm extends ConfigFormBase
+class MyAccountHeaderForm extends ConfigFormBase
 {
 
     /**
@@ -29,28 +29,29 @@ class MyAccountCashierForm extends ConfigFormBase
      */
     public function buildForm(array $form, FormStateInterface $form_state)
     {
-        // Get Form configuration.
-        $myAccountCoreConfig = $this->config('my_account_core.cashier');
-        $domains = $myAccountCoreConfig->get('cashier_domain_mapping');
 
-        $form['cashier'] = [
+        // Get Form configuration.
+        $myAccountCoreConfig = $this->config('my_account_core.header');
+
+        $form['header'] = [
             '#type' => 'vertical_tabs',
         ];
 
         $form['field_configuration'] = [
             '#type' => 'details',
-            '#title' => 'Field Configuration',
-            '#group' => 'cashier',
+            '#title' => 'Welcome Text',
+            '#group' => 'header',
             '#open' => true,
             '#tree' => true,
         ];
 
-        $form['field_configuration']['cashier_domain_mapping'] = [
-            '#type' => 'textarea',
-            '#title' => t('Cashier Domain Mapping'),
+        $form['field_configuration']['welcome_text'] = [
+            '#type' => 'textfield',
+            '#title' => t('Welcome text'),
+            '#size' => 255,
             '#required' => true,
-            '#description' => $this->t('Cashier Domain Mapping'),
-            '#default_value' => $domains
+            '#description' => $this->t('Text for welcome text appear at the header top navigation.'),
+            '#default_value' => $myAccountCoreConfig->get('welcome_text')
         ];
 
         $form['actions'] = ['#type' => 'actions'];
@@ -69,7 +70,7 @@ class MyAccountCashierForm extends ConfigFormBase
      */
     public function getFormId()
     {
-        return 'fapi_cashier_config';
+        return 'fapi_header_config';
     }
 
     /**
@@ -78,7 +79,7 @@ class MyAccountCashierForm extends ConfigFormBase
      */
     protected function getEditableConfigNames()
     {
-        return ['my_account_core.cashier'];
+        return ['my_account_core.header'];
     }
 
 
@@ -92,10 +93,9 @@ class MyAccountCashierForm extends ConfigFormBase
      */
     public function submitForm(array &$form, FormStateInterface $form_state)
     {
-        $domains = $form_state->getValue('field_configuration')['cashier_domain_mapping'];
-
-        $this->config('my_account_core.cashier')
-            ->set('cashier_domain_mapping', $domains)
+        $configuration = $form_state->getValue('field_configuration');
+        $this->config('my_account_core.header')
+            ->set('welcome_text', $configuration['welcome_text'])
             ->save();
     }
 

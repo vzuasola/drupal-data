@@ -2,7 +2,7 @@ my_account_core.cashier:
   type: config_object
   label: 'My Account Cashier Link Configuration'
   mapping:
-    cashier_link:
+    cashier_domain_mapping:
       type: label
       label: 'Cashier Link'
   langcode: 'en'
@@ -16,4 +16,12 @@ my_account_core.livechat:
     live_chat_link:
       type: label
       label: 'Live Chat Link'
+  langcode: 'en'
+my_account_core.header:
+  type: config_object
+  label: 'My Account Header Configuration'
+  mapping:
+    welcome_text:
+      type: label
+      label: 'Welcome Text'
   langcode: 'en'
