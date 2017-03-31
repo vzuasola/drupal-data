@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\my_account_form_profile\Plugin\rest\resource;
+namespace Drupal\my_account_core\Plugin\rest\resource;
 
 use Drupal\rest\Plugin\ResourceBase;
 use Drupal\rest\ResourceResponse;
@@ -9,7 +9,7 @@ use Drupal\rest\ResourceResponse;
  * Provides a My Account Rest Resources
  *
  * @RestResource(
- *   id = "my_account_profile_form_resource",
+ *   id = "my_account_core_form_resource",
  *   label = @Translation("My Account Rest Resource"),
  *   uri_paths = {
  *     "canonical" = "/api/configuration/{id}"

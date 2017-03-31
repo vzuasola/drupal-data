@@ -1,15 +1,14 @@
-uuid: 76d7d385-c1cb-40b0-a767-38c8b27bbcb5
 langcode: en
 status: true
 dependencies:
   module:
     - basic_auth
     - hal
-    - rest_menu_items
+    - my_account_core
     - serialization
     - user
-id: rest_menu_item
-plugin_id: rest_menu_item
+id: my_account_core_form_resource
+plugin_id: my_account_core_form_resource
 granularity: method
 configuration:
   GET:
