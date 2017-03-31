@@ -2,7 +2,7 @@ my_account_core.cashier:
   type: config_object
   label: 'My Account Cashier Link Configuration'
   mapping:
-    cashier_link:
+    cashier_domain_mapping:
       type: label
       label: 'Cashier Link'
   langcode: 'en'

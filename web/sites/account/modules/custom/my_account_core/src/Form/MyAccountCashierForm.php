@@ -31,14 +31,7 @@ class MyAccountCashierForm extends ConfigFormBase
     {
         // Get Form configuration.
         $myAccountCoreConfig = $this->config('my_account_core.cashier');
-
-        $domains = unserialize($myAccountCoreConfig->get('cashier_domain_mapping'));
-        $domainMapping = [];
-        foreach ($domains as $account => $cashier) {
-            $domainMapping[] = implode('|', [trim($account), trim($cashier)]);
-        }
-
-        $domainMapping = implode(PHP_EOL,$domainMapping);
+        $domains = $myAccountCoreConfig->get('cashier_domain_mapping');
 
         $form['cashier'] = [
             '#type' => 'vertical_tabs',
@@ -57,7 +50,7 @@ class MyAccountCashierForm extends ConfigFormBase
             '#title' => t('Cashier Domain Mapping'),
             '#required' => true,
             '#description' => $this->t('Cashier Domain Mapping'),
-            '#default_value' => $domainMapping
+            '#default_value' => $domains
         ];
 
         $form['actions'] = ['#type' => 'actions'];
@@ -99,18 +92,10 @@ class MyAccountCashierForm extends ConfigFormBase
      */
     public function submitForm(array &$form, FormStateInterface $form_state)
     {
-        $configuration = $form_state->getValue('field_configuration')['cashier_domain_mapping'];
-
-        $domains = explode(PHP_EOL, trim($configuration));
-
-        // Explode domains
-        foreach ($domains as $domain) {
-            list ($account,$cashier) = explode('|', $domain);
-            $domainMapping[$account] = trim($cashier);
-        }
+        $domains = $form_state->getValue('field_configuration')['cashier_domain_mapping'];
 
         $this->config('my_account_core.cashier')
-            ->set('cashier_domain_mapping', serialize($domainMapping))
+            ->set('cashier_domain_mapping', $domains)
             ->save();
     }
 

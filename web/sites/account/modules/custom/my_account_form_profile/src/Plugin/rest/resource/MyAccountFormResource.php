@@ -49,7 +49,15 @@ class MyAccountFormResource extends ResourceBase
 
             case 'my_account_cashier':
                 $config = \Drupal::config('my_account_core.cashier');
-                $values = $config->get();
+                $configValue = $config->get()['cashier_domain_mapping'];
+                $domains = explode(PHP_EOL, trim($configValue));
+                $values = [];
+
+                // Explode domains
+                foreach ($domains as $domain) {
+                    list ($key,$value) = explode('|', $domain);
+                    $values[$key] = trim($value);
+                }
                 break;
 
             case 'my_account_livechat':
