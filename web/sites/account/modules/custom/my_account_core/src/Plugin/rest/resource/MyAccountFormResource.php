@@ -55,7 +55,7 @@ class MyAccountFormResource extends ResourceBase
 
                 // Explode domains
                 foreach ($domains as $domain) {
-                    list ($key,$value) = explode('|', $domain);
+                    list ($key, $value) = explode('|', $domain);
                     $values[$key] = trim($value);
                 }
                 break;
@@ -101,8 +101,8 @@ class MyAccountFormResource extends ResourceBase
         if ($key == 'password') {
 
             // Convert string with array key messages
-            $value_array = explode('|', $values['iCore_error']['key_messages']);
-            $string = $values['iCore_error']['key_messages'];
+            $value_array = explode('|', $values['integration_error_messages']['key_messages']);
+            $string = $values['integration_error_messages']['key_messages'];
 
             // Explode strings
             $list = explode("\n", $string);
@@ -131,7 +131,7 @@ class MyAccountFormResource extends ResourceBase
                 $icore[$key] = $value;
             }
 
-            $values['iCore_error']['key_messages'] = $icore;
+            $values['integration_error_messages']['key_messages'] = $icore;
             // Assign with existing array
             $value = $values;
         }
