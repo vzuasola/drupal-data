@@ -1,0 +1,39 @@
+uuid: 6bada8b2-e1ae-4949-90d1-2c0c79a58f9a
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - block_content.type.floating_banner_left
+    - field.storage.block_content.field_banner_items
+    - paragraphs.paragraphs_type.floating_banner_item
+  module:
+    - entity_reference_revisions
+id: block_content.floating_banner_left.field_banner_items
+field_name: field_banner_items
+entity_type: block_content
+bundle: floating_banner_left
+label: 'Banner Items'
+description: 'Items that will be shown with drawer like effect once hovered on the floating banner.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      floating_banner_item: floating_banner_item
+    target_bundles_drag_drop:
+      floating_banner_item:
+        enabled: true
+        weight: 5
+      lobby_tile:
+        weight: 6
+        enabled: false
+      social_media:
+        weight: 7
+        enabled: false
+      sponsorship:
+        weight: 8
+        enabled: false
+field_type: entity_reference_revisions
