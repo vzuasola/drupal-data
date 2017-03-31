@@ -24,4 +24,14 @@ content:
   links:
     weight: 100
 hidden:
+  field_banner_content: true
+  field_banner_link: true
+  field_banner_link_target: true
+  field_full_tile_image: true
+  field_full_tile_link: true
+  field_full_tile_summary: true
+  field_half_tile_image: true
+  field_half_tile_link: true
+  field_half_tile_summary: true
+  field_image: true
   langcode: true

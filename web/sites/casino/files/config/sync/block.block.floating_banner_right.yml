@@ -1,0 +1,31 @@
+uuid: 158fdd10-f8d9-4b63-9679-8622fc3339ce
+langcode: zh-hans
+status: true
+dependencies:
+  content:
+    - 'block_content:floating_banner_right:29f42816-37bd-468a-a929-4f300d667fe8'
+  module:
+    - block_content
+    - system
+  theme:
+    - bartik
+id: floating_banner_right
+theme: bartik
+region: footer_fourth
+weight: 0
+provider: null
+plugin: 'block_content:29f42816-37bd-468a-a929-4f300d667fe8'
+settings:
+  id: 'block_content:29f42816-37bd-468a-a929-4f300d667fe8'
+  label: 'FBR - 1 - CH'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: "<front>\r\n/test"
+    negate: false
+    context_mapping: {  }
