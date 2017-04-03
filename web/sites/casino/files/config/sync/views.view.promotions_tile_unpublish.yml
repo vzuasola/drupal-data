@@ -1,4 +1,4 @@
-uuid: cf36caf5-78e8-47b7-9101-cbb454cc121b
+uuid: 0945f272-108d-4f7a-8c12-0976ecc13ba5
 langcode: zh-hans
 status: true
 dependencies:
@@ -19,10 +19,10 @@ dependencies:
     - serialization
     - text
     - user
-id: promotions_tile
-label: 'promotions Tile'
+id: promotions_tile_unpublish
+label: 'Promotions Tile Unpublish'
 module: views
-description: 'Displays the promotion contents.'
+description: 'Shows the unpublished contents for Promotions Tiles.'
 tag: ''
 base_table: node_field_data
 base_field: nid
@@ -62,7 +62,7 @@ display:
       pager:
         type: some
         options:
-          items_per_page: 2
+          items_per_page: 1
           offset: 0
       style:
         type: default
@@ -73,6 +73,9 @@ display:
           id: title
           table: node_field_data
           field: title
+          settings:
+            link_to_entity: true
+          plugin_id: field
           relationship: none
           group_type: group
           admin_label: ''
@@ -109,7 +112,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: false
+          element_label_colon: true
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -119,8 +122,6 @@ display:
           hide_alter_empty: true
           click_sort_column: value
           type: string
-          settings:
-            link_to_entity: false
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -131,7 +132,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_full_tile_link:
           id: field_full_tile_link
           table: node__field_full_tile_link
@@ -467,7 +467,7 @@ display:
             alter_text: false
             text: ''
             make_link: true
-            path: '{{ field_half_tile_link }} '
+            path: '{{ field_half_tile_link }}'
             absolute: false
             external: false
             replace_spaces: false
@@ -520,16 +520,43 @@ display:
           plugin_id: field
       filters:
         status:
-          value: '1'
+          id: status
           table: node_field_data
           field: status
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: '0'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
           plugin_id: boolean
           entity_type: node
           entity_field: status
-          id: status
-          expose:
-            operator: ''
-          group: 1
         type:
           id: type
           table: node_field_data
@@ -586,9 +613,8 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          operator: or
-          value:
-            1: '1'
+          operator: empty
+          value: {  }
           group: 1
           exposed: false
           expose:
@@ -634,7 +660,7 @@ display:
           entity_type: node
           entity_field: changed
           plugin_id: date
-      title: 'promotions Tile'
+      title: 'Promotions Tile Unpublish'
       header: {  }
       footer: {  }
       empty: {  }
@@ -683,12 +709,9 @@ display:
     position: 2
     display_options:
       display_extenders: {  }
-      path: api/promotions_tile
+      path: api/promotions_tile_unpublish
       style:
         type: serializer
-        options:
-          formats:
-            json: json
       defaults:
         style: false
         row: false
@@ -698,7 +721,7 @@ display:
       pager:
         type: some
         options:
-          items_per_page: 2
+          items_per_page: 1
           offset: 0
     cache_metadata:
       max-age: -1
