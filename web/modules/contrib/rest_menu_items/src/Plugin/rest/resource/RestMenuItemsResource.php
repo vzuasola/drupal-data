@@ -146,7 +146,9 @@ class RestMenuItemsResource extends ResourceBase {
 
       // Set the parameters.
       $parameters = new MenuTreeParameters();
-      $parameters->onlyEnabledLinks();
+      // Comment out this line as this is causing issues for parent-child relationship
+      // in terms of enabled/disabled feature
+      //$parameters->onlyEnabledLinks();
 
       if (!empty($this->maxDepth)) {
         $parameters->setMaxDepth($this->maxDepth);
@@ -233,14 +235,14 @@ class RestMenuItemsResource extends ResourceBase {
 
       $alias = $this->aliasManager->getAliasByPath("/$uri");
 
-      // pull the additional attributes 
-      $attr = array(); 
-      $options = $item_value['url']->getOptions(); 
- 
-      if (isset($options['attributes'])) { 
-        foreach($options['attributes'] as $key => $value) { 
-          $attr[$key] = $value; 
-        } 
+      // pull the additional attributes
+      $attr = array();
+      $options = $item_value['url']->getOptions();
+
+      if (isset($options['attributes'])) {
+        foreach($options['attributes'] as $key => $value) {
+          $attr[$key] = $value;
+        }
       }
 
       $final_alias = ltrim($alias, '/');
@@ -252,7 +254,7 @@ class RestMenuItemsResource extends ResourceBase {
         'uri' => $uri,
         'alias' => $alias,
         'external' => $external,
-        'attributes' => $attr, 
+        'attributes' => $attr,
       );
 
       if (!empty($item_value['below'])) {
