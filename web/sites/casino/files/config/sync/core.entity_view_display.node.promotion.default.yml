@@ -118,4 +118,5 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_promote_to_lobby: true
   langcode: true
