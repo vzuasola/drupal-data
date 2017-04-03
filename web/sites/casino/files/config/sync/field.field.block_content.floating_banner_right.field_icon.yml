@@ -1,0 +1,45 @@
+uuid: 0c64babb-af73-446b-ad9a-2206f28fa8d1
+langcode: zh-hant
+status: true
+dependencies:
+  config:
+    - block_content.type.floating_banner_right
+    - field.storage.block_content.field_icon
+  module:
+    - content_translation
+    - image
+third_party_settings:
+  content_translation:
+    translation_sync:
+      alt: alt
+      title: title
+      file: '0'
+id: block_content.floating_banner_right.field_icon
+field_name: field_icon
+entity_type: block_content
+bundle: floating_banner_right
+label: Icon
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: false
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image
