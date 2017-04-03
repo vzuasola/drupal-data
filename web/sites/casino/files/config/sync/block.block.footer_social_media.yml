@@ -6,6 +6,7 @@ dependencies:
     - 'block_content:social_media_block:9f055538-1f5f-4caa-900a-6f72a273f88e'
   module:
     - block_content
+    - system
   theme:
     - bartik
 id: footer_social_media
@@ -22,4 +23,9 @@ settings:
   status: true
   info: ''
   view_mode: full
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: /banner-slider
+    negate: true
+    context_mapping: {  }
