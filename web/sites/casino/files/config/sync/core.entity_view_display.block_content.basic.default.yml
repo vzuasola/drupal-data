@@ -1,5 +1,5 @@
 uuid: cd4bd287-0180-4257-beec-383b3faddb3b
-langcode: en
+langcode: zh-hans
 status: true
 dependencies:
   config:

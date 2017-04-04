@@ -1,0 +1,24 @@
+uuid: 1a4bef6f-0088-44fa-a88a-37e4ac215e89
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - block_content.type.lobby_tile
+    - field.field.block_content.lobby_tile.field_tile
+  module:
+    - entity_reference_revisions
+id: block_content.lobby_tile.default
+targetEntityType: block_content
+bundle: lobby_tile
+mode: default
+content:
+  field_tile:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+hidden:
+  langcode: true

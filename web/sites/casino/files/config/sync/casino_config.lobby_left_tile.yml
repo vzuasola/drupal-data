@@ -1,7 +1,10 @@
-lobby_left_tile_title: 'Benefits tile'
+langcode: zh-hans
+_core:
+  default_config_hash: zrDzV-6LU1cRUG3p_gAd8_FHy7pnRz8SS-D4uOGgb04
+lobby_left_tile_title: test
 lobby_left_tile_content:
-  value: "<p>Tet ontent</p>\r\n"
+  value: asa
   format: basic_html
-lobby_left_tile_image_url: 'http://casino.drupal.local/sites/casino/files/upload/tiles/lobby_tile_1_0.jpg'
+lobby_left_tile_image_url: 'http://casino.drupal.dev/sites/casino/files/upload/tiles/Chrysanthemum.jpg'
 lobby_left_tile_image:
-  - '11'
+  - '128'

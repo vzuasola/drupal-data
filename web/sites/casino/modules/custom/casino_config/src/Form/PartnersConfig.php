@@ -51,11 +51,12 @@ class PartnersConfig extends ConfigFormBase {
     );
     foreach( $keys as $key ){
       $fid = $form_state->getValue($key);
-      $file = File::load($fid[0]);
-      $file->setPermanent();
-      $file->save();
-
-      $this->config('casino_config.partners')->set("partners_image_url", file_create_url($file->getFileUri()))->save();
+      if ($fid){
+        $file = File::load($fid[0]);
+        $file->setPermanent();
+        $file->save();
+        $this->config('casino_config.partners')->set("partners_image_url", file_create_url($file->getFileUri()))->save();
+      }
       $this->config('casino_config.partners')->set($key, $form_state->getValue($key))->save();
     }
     parent::submitForm($form, $form_state);

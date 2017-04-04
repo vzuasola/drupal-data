@@ -1,0 +1,9 @@
+name: My Account Error Handler Module
+description: Module for my account error handler configuration
+package: My Account
+type: module
+core: 8.x
+version: '8.x-1.x-dev'
+dependencies:
+  - rest
+  - my_account_core

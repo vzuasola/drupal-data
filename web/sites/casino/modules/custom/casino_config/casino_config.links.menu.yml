@@ -10,12 +10,6 @@ casino_config.admin_dafabet_keyword:
   description: 'Dafabet keyword configuration'
   route_name: casino_config.dafabet_keyword_form
 
-casino_config.admin_copyright_config:
-  title: 'Copyright'
-  parent: casino_config.casino_config_list
-  description: 'Copyright configuration'
-  route_name: casino_config.copyright_config_form
-
 casino_config.admin_left_floating_banner:
   title: 'Left Floating Banner'
   parent: casino_config.casino_config_list

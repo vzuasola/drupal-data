@@ -60,10 +60,9 @@ $sites['wc.drupal.local'] = 'webcomposer';
 $sites['dev-admin.elysium-dfbt.com'] = 'webcomposer';
 
 // My Account Instances
-$sites['account.drupal.dev'] = 'myaccount';
-$sites['account.drupal.local'] = 'myaccount';
-$sites['dev-account.elysium-dfbt.com'] = 'myaccount';
-
+$sites['account.drupal.dev'] = 'account';
+$sites['account.drupal.local'] = 'account';
+$sites['dev-account.elysium-dfbt.com'] = 'account';
 
 // Casino Site Instances
 $sites['casino.drupal.dev'] = 'casino';

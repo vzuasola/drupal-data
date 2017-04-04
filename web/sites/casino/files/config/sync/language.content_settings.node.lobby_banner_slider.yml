@@ -4,11 +4,13 @@ status: true
 dependencies:
   config:
     - node.type.lobby_banner_slider
+  module:
+    - content_translation
 third_party_settings:
   content_translation:
-    enabled: false
+    enabled: true
 id: node.lobby_banner_slider
 target_entity_type_id: node
 target_bundle: lobby_banner_slider
 default_langcode: site_default
-language_alterable: false
+language_alterable: true

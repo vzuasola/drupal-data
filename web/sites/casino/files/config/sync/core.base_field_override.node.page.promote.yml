@@ -1,5 +1,5 @@
 uuid: f9bd2f07-8b81-4b62-9b01-91fb4f219d69
-langcode: en
+langcode: zh-hans
 status: true
 dependencies:
   config:
@@ -13,7 +13,7 @@ bundle: page
 label: 'Promoted to front page'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value:
   -
     value: 0

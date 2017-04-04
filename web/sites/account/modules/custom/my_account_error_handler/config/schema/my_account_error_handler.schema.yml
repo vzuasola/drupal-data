@@ -1,0 +1,22 @@
+my_account_error_handler.403:
+  type: config_object
+  label: 'My Account Access Denied Page Configuration'
+  mapping:
+    top_blurb:
+      type: text
+      label: 'Access Denied Top Blurb'
+    bottom_blurb:
+      type: text
+      label: 'Access Denied Bottom Blurb'
+  langcode: 'en'
+my_account_error_handler.404:
+  type: config_object
+  label: 'My Account Page not Found Configuration'
+  mapping:
+    top_blurb:
+      type: text
+      label: 'Top Blurb'
+    bottom_blurb:
+      type: text
+      label: 'Bottom Blurb'
+  langcode: 'en'

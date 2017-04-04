@@ -1,0 +1,19 @@
+uuid: 8ca8db88-65e2-4b38-a62d-6417098714f6
+langcode: zh-hans
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_full_tile_link
+field_name: field_full_tile_link
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

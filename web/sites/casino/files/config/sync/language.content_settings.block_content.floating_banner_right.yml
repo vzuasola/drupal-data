@@ -1,0 +1,16 @@
+uuid: e353fc28-d299-4224-bd16-cf1b02a4f348
+langcode: zh-hant
+status: true
+dependencies:
+  config:
+    - block_content.type.floating_banner_right
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: block_content.floating_banner_right
+target_entity_type_id: block_content
+target_bundle: floating_banner_right
+default_langcode: site_default
+language_alterable: true

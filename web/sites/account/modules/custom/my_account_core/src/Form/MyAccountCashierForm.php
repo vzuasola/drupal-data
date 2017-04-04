@@ -29,9 +29,9 @@ class MyAccountCashierForm extends ConfigFormBase
      */
     public function buildForm(array $form, FormStateInterface $form_state)
     {
-
         // Get Form configuration.
         $myAccountCoreConfig = $this->config('my_account_core.cashier');
+        $domains = $myAccountCoreConfig->get('cashier_domain_mapping');
 
         $form['cashier'] = [
             '#type' => 'vertical_tabs',
@@ -45,13 +45,12 @@ class MyAccountCashierForm extends ConfigFormBase
             '#tree' => true,
         ];
 
-        $form['field_configuration']['cashier_link'] = [
-            '#type' => 'textfield',
-            '#title' => t('Cashier Link'),
-            '#size' => 25,
+        $form['field_configuration']['cashier_domain_mapping'] = [
+            '#type' => 'textarea',
+            '#title' => t('Cashier Domain Mapping'),
             '#required' => true,
-            '#description' => $this->t('Label for cashier link.'),
-            '#default_value' => $myAccountCoreConfig->get('cashier_link')
+            '#description' => $this->t('Cashier Domain Mapping'),
+            '#default_value' => $domains
         ];
 
         $form['actions'] = ['#type' => 'actions'];
@@ -93,9 +92,10 @@ class MyAccountCashierForm extends ConfigFormBase
      */
     public function submitForm(array &$form, FormStateInterface $form_state)
     {
-        $configuration = $form_state->getValue('field_configuration');
+        $domains = $form_state->getValue('field_configuration')['cashier_domain_mapping'];
+
         $this->config('my_account_core.cashier')
-            ->set('cashier_link', $configuration['cashier_link'])
+            ->set('cashier_domain_mapping', $domains)
             ->save();
     }
 

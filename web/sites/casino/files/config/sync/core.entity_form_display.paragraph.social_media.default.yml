@@ -3,6 +3,8 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.social_media.field_enable
+    - field.field.paragraph.social_media.field_link_target
     - field.field.paragraph.social_media.field_social_media_link_class
     - field.field.paragraph.social_media.field_social_media_links
     - paragraphs.paragraphs_type.social_media
@@ -11,6 +13,17 @@ targetEntityType: paragraph
 bundle: social_media
 mode: default
 content:
+  field_enable:
+    weight: 13
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+  field_link_target:
+    weight: 14
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
   field_social_media_link_class:
     weight: 1
     settings: {  }

@@ -1,22 +1,22 @@
-uuid: b68527d3-7f11-4d07-b91e-67a51e57daae
+uuid: 113ce42b-dec6-4cf4-aa3b-a9434689e7c5
 langcode: zh-hans
 status: true
 dependencies:
   content:
-    - 'block_content:social_media_block:4c6d0ebb-3bf2-4fb6-b6d5-d8e4d2f1523e'
+    - 'block_content:social_media_block:9f055538-1f5f-4caa-900a-6f72a273f88e'
   module:
     - block_content
   theme:
     - bartik
 id: footer_social_media
 theme: bartik
-region: featured_bottom_second
+region: sidebar_second
 weight: 0
 provider: null
-plugin: 'block_content:4c6d0ebb-3bf2-4fb6-b6d5-d8e4d2f1523e'
+plugin: 'block_content:9f055538-1f5f-4caa-900a-6f72a273f88e'
 settings:
-  id: 'block_content:4c6d0ebb-3bf2-4fb6-b6d5-d8e4d2f1523e'
-  label: 'Follow us and receive the latest updates'
+  id: 'block_content:9f055538-1f5f-4caa-900a-6f72a273f88e'
+  label: 'Follow us and receive the latest updates - sc'
   provider: block_content
   label_display: visible
   status: true
