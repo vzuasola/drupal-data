@@ -1,0 +1,9 @@
+uuid: d39ee8e5-8035-48e3-b1c4-68eb9edd45a6
+langcode: en
+status: true
+dependencies: {  }
+id: eu
+label: European
+direction: ltr
+weight: -9
+locked: false

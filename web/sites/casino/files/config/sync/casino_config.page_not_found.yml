@@ -1,0 +1,8 @@
+langcode: zh-hans
+page_not_found_title: 'Page not found'
+page_not_found_content:
+  value: "<div class=\"container page-404-text-area text-center mt-50\">\r\n        <h2 class=\"text-semibold\">Ooops, that was unexpected.</h2>\r\n        <p class=\"mb-5\">The page doesn't exist.</p>\r\n        <p class=\"mb-5\">You may have followed a bad link or typed the address (URL) incorrectly.</p>\r\n        <p class=\"mb-5\">We'll help get you around though.</p>\r\n    </div>\r\n    <div class=\"page-404-icons mt-20\">\r\n    \t<ul>\r\n    \t\t<li class=\"ow-sports\">\r\n    \t\t\t<a class=\"mb-25\" href=\"#\"></a>\r\n    \t\t\t<span>OW Sports</span>\r\n    \t\t</li>\r\n    \t\t<li class=\"dafa-sports\">\r\n    \t\t\t<a class=\"mb-25\" href=\"#\"></a>\r\n    \t\t\t<span>Dafa Sports</span>\r\n    \t\t</li>\r\n    \t\t<li class=\"casino\">\r\n    \t\t\t<a class=\"mb-25\" href=\"#\"></a>\r\n    \t\t\t<span>Casino</span>\r\n    \t\t</li>\r\n    \t\t<li class=\"casino-gold\">\r\n    \t\t\t<a class=\"mb-25\" href=\"#\"></a>\r\n    \t\t\t<span>Casino Gold</span>\r\n    \t\t</li>\r\n    \t\t<li class=\"live-dealer\">\r\n    \t\t\t<a class=\"mb-25\" href=\"#\"></a>\r\n    \t\t\t<span>Live Dealer</span>\r\n    \t\t</li>\r\n    \t\t<li class=\"poker\">\r\n    \t\t\t<a class=\"mb-25\" href=\"#\"></a>\r\n    \t\t\t<span>Poker</span>\r\n    \t\t</li>\r\n    \t\t<li class=\"games\">\r\n    \t\t\t<a class=\"mb-25\" href=\"#\"></a>\r\n    \t\t\t<span>Games</span>\r\n    \t\t</li>\r\n    \t</ul>\r\n    </div>"
+  format: basic_html
+_core:
+  default_config_hash: 8onHrO9ALn8ld7xHHfCMu2NuOECH8QcfgVuUUhhHLQw
+page_not_found_image: {  }

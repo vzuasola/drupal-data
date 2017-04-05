@@ -1,4 +1,4 @@
-uuid: 76d7d385-c1cb-40b0-a767-38c8b27bbcb5
+uuid: c6b1af87-c4d7-455b-94e5-f97058cdf8ad
 langcode: en
 status: true
 dependencies:
@@ -16,7 +16,6 @@ configuration:
     supported_formats:
       - hal_json
       - json
-      - xml
     supported_auth:
       - basic_auth
       - cookie

@@ -1,0 +1,22 @@
+first_name_field:
+  weight: '3'
+last_name_field:
+  weight: '2'
+  options:
+    label: 'Last Name'
+dob_day:
+  weight: '7'
+dob_year:
+  weight: '5'
+communication_detail_field:
+  options:
+    label: 聯系方式
+account_field:
+  options:
+    label: 賬戶信息
+mobile_number_field:
+  options:
+    label: 聯系方式
+language_field:
+  options:
+    label: 語言

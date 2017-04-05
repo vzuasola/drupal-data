@@ -1,5 +1,5 @@
-uuid: 3e9c2489-7010-4df3-b77f-7bfe20a79bb3
-langcode: zh-hant
+uuid: 47dbf734-c564-45a0-b533-fd1cf98b3684
+langcode: zh-hans
 status: true
 dependencies:
   config:
@@ -16,13 +16,13 @@ bundle: lobby_tile
 mode: default
 content:
   field_content:
-    weight: 1
+    weight: 0
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
   field_image:
-    weight: 2
+    weight: 1
     label: above
     settings:
       image_style: ''
@@ -30,7 +30,7 @@ content:
     third_party_settings: {  }
     type: image
   field_title:
-    weight: 0
+    weight: 2
     label: above
     settings:
       link_to_entity: false

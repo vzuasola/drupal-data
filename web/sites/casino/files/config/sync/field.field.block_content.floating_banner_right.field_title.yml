@@ -1,0 +1,19 @@
+uuid: 061643f0-6960-4147-9a9d-1d5e98a28165
+langcode: zh-hant
+status: true
+dependencies:
+  config:
+    - block_content.type.floating_banner_right
+    - field.storage.block_content.field_title
+id: block_content.floating_banner_right.field_title
+field_name: field_title
+entity_type: block_content
+bundle: floating_banner_right
+label: Title
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

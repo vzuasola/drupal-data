@@ -29,3 +29,4 @@ permissions:
   - 'restful get form_resource'
   - 'restful get language_rest_resource'
   - 'restful post contact_message'
+  - 'restful get my_account_core_form_resource'

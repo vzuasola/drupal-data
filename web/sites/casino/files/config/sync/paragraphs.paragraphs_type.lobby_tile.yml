@@ -1,5 +1,5 @@
-uuid: f1fcf230-2c40-445d-90d9-1c71324f9a9a
-langcode: zh-hant
+uuid: a956f988-f5e0-4906-9012-b97e5236d098
+langcode: zh-hans
 status: true
 dependencies: {  }
 id: lobby_tile

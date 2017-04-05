@@ -7,11 +7,10 @@ dependencies:
     - scheduler
 third_party_settings:
   menu_ui:
-    available_menus:
-      - main
-    parent: 'main:'
+    available_menus: {  }
+    parent: ''
   scheduler:
-    expand_fieldset: when_required
+    expand_fieldset: always
     fields_display_mode: vertical_tab
     publish_enable: true
     publish_past_date: error
@@ -20,11 +19,11 @@ third_party_settings:
     publish_touch: false
     unpublish_enable: true
     unpublish_required: false
-    unpublish_revision: true
+    unpublish_revision: false
 name: 'Lobby - Banner Slider'
 type: lobby_banner_slider
-description: ''
+description: 'Use for banner slider on the lobby page.'
 help: ''
 new_revision: true
-preview_mode: 2
+preview_mode: 0
 display_submitted: true
