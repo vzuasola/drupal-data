@@ -32,7 +32,6 @@ class SettingsHandler
         return $projectRoot . '/drush';
     }
 
-
     /**
      * Syncs the files in the config directory to their respective sites 
      * directory
@@ -48,9 +47,9 @@ class SettingsHandler
         $finder->directories()->in($sites)->depth('== 0');
 
         foreach ($finder as $directory) {
-          $product = $directory->getFileName();
-
-              $fs->copy("$configs/$product.settings.php", "$directory/settings.php", true);
+            $product = $directory->getFileName();
+            
+            $fs->copy("$configs/$product.settings.php", "$directory/settings.php", true);
             $fs->chmod("$directory/settings.php", 0666);
         }
     }
@@ -68,7 +67,5 @@ class SettingsHandler
          if (!$fs->exists("/home/vagrant/.drush/webcomposer.aliases.drushrc.php")) {
              $fs->copy("$configs/webcomposer.aliases.drushrc.php", "/home/vagrant/.drush/webcomposer.aliases.drushrc.php", true);    
          }
-    }   
-
-
-}    
+    }
+}
