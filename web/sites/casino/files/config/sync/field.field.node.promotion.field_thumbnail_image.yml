@@ -1,24 +1,18 @@
-uuid: 484b1234-a559-42ec-a9a3-25ddd2e65333
+uuid: f7d18238-9a5d-4606-a45f-551993a00ed7
 langcode: zh-hans
 status: true
 dependencies:
   config:
-    - field.storage.node.field_half_tile_image
+    - field.storage.node.field_thumbnail_image
     - node.type.promotion
   module:
     - image
-third_party_settings:
-  content_translation:
-    translation_sync:
-      file: file
-      alt: '0'
-      title: '0'
-id: node.promotion.field_half_tile_image
-field_name: field_half_tile_image
+id: node.promotion.field_thumbnail_image
+field_name: field_thumbnail_image
 entity_type: node
 bundle: promotion
-label: 'Half Tile Image'
-description: ''
+label: 'Thumbnail Image'
+description: 'The thumbnail image appearing on the right side block for promotions.'
 required: false
 translatable: true
 default_value: {  }

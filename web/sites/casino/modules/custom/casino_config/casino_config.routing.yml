@@ -85,3 +85,19 @@ casino_config.partners_config_form:
     _title: 'Partners Configurations'
   requirements:
     _permission: 'administer site configuration'
+
+casino_config.partners_config_form:
+  path: 'admin/config/casino/partners'
+  defaults:
+    _form: 'Drupal\casino_config\Form\PartnersConfig'
+    _title: 'Partners Configurations'
+  requirements:
+    _permission: 'administer site configuration'
+
+casino_config.promo_right_block_form:
+  path: 'admin/config/casino/promo-right-block'
+  defaults:
+    _form: 'Drupal\casino_config\Form\PromotionsRightBlockConfig'
+    _title: 'Promo Right Block Configurations'
+  requirements:
+    _permission: 'administer site configuration'
