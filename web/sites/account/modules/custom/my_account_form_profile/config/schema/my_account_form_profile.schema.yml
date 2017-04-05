@@ -82,6 +82,12 @@ my_account_form_profile.change_password:
         mismatch:
           type: label
           label: 'Please enter the same value.'
+        not_username:
+          type: label
+          label: 'Must not be the same with username.'
+        not_password:
+          type: label
+          label: 'Must not be the same as Password.'
         format_error:
           type: text
           label: 'Password must contain 6-10 alphanumeric characters only with no special characters and spaces.'
