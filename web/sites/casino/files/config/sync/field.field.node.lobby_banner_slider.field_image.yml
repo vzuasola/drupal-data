@@ -7,6 +7,12 @@ dependencies:
     - node.type.lobby_banner_slider
   module:
     - image
+third_party_settings:
+  content_translation:
+    translation_sync:
+      alt: alt
+      title: title
+      file: '0'
 id: node.lobby_banner_slider.field_image
 field_name: field_image
 entity_type: node
