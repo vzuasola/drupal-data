@@ -1,14 +1,17 @@
+uuid: 40e5a0a6-6b33-4e9b-89d8-9f1c53552ade
 langcode: en
 status: true
 dependencies:
   module:
     - basic_auth
     - hal
-    - my_account_form_profile
+    - my_account_core
     - serialization
     - user
-id: my_account_profile_form_resource
-plugin_id: my_account_profile_form_resource
+_core:
+  default_config_hash: OMRMuQOGULzZb098a24bicic0DDOD0V69SsgLCBoCM0
+id: my_account_core_form_resource
+plugin_id: my_account_core_form_resource
 granularity: method
 configuration:
   GET:

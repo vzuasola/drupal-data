@@ -6,4 +6,3 @@ core: 8.x
 version: '8.x-1.x-dev'
 dependencies:
   - rest
-  - my_account_form_profile

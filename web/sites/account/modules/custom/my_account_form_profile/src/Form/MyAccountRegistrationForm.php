@@ -624,37 +624,6 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#type' => 'submit',
             '#value' => $this->t('Submit'),
         ];
-        $form['icore'] = [
-            '#type' => 'vertical_tabs',
-        ];
-        $form['field_icore_validation'] = [
-            '#type' => 'details',
-            '#title' => 'iCore Validation',
-            '#group' => 'icore',
-            '#open' => TRUE,
-            '#tree' => TRUE,
-        ];
-        $form['field_icore_validation']['confirm_password_error1'] = [
-            '#type' => 'textfield',
-            '#title' => $this->t('Confirm Password Error'),
-            '#description' => $this->t('Required Error Message.'),
-            '#maxlength' => 255,
-            '#default_value' => $this->t('Default error')
-        ];
-        $form['field_icore_validation']['current_password_error2'] = array(
-            '#type' => 'textfield',
-            '#title' => $this->t('Current Password Error'),
-            '#description' => $this->t('Required Error Message.'),
-            '#maxlength' => 255,
-            '#default_value' => $this->t('Default error')
-        );
-        $form['field_icore_validation']['new_password_error3'] = [
-            '#type' => 'textfield',
-            '#title' => $this->t('New Password Error'),
-            '#description' => $this->t('Required Error Message.'),
-            '#maxlength' => 255,
-            '#default_value' => $this->t('Default error')
-        ];
         return $form;
     }
 
