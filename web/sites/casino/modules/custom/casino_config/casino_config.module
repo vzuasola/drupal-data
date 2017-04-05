@@ -5,27 +5,40 @@ use \Drupal\Core\Render\Markup;
 
 
 function casino_config_form_alter(&$form, FormStateInterface $form_state, $form_id) {
-  if ($form_id == 'block_content_social_media_block_form') {
-    $isSocialMediaBlockExist = checkCustomBlockIfExist('social_media_block');
-    if ($isSocialMediaBlockExist > 0) {
-      if ( !isset($form['langcode']['#multilingual']) ) {
-        unset($form['actions']['submit']['#submit']);
-        $form['actions']['submit']['#submit'][] = 'block_content_social_media_block_form_submit';
-      }
-    }
-  } else if ($form_id == 'block_content_sponsorship_block_form') {
-    $isSponsorBlockExist = checkCustomBlockIfExist('sponsorship_block');
-    if ($isSponsorBlockExist > 0) {
-      if ( !isset($form['langcode']['#multilingual']) ) {
-        unset($form['actions']['submit']['#submit']);
-        $form['actions']['submit']['#submit'][] = 'block_content_sponsor_block_form_submit';
+  $alterFormInfos = array(
+    array(
+      'formID' => 'block_content_sponsorship_block_form',
+      'blockType' => 'sponsorship_block',
+      'submitHandler' => 'block_content_sponsor_block_form_submit'
+    ),
+    array(
+      'formID' => 'block_content_social_media_block_form',
+      'blockType' => 'social_media_block',
+      'submitHandler' => 'block_content_social_media_block_form_submit'
+    ),
+  );
+  foreach($alterFormInfos as $formKey => $formValue) {
+    if ($form_id == $formValue['formID']) {
+      $isSponsorBlockExist = checkCustomBlockIfExist($formValue['blockType']);
+      $isTranslationForm = false;
+      if ($isSponsorBlockExist > 0) {
+        foreach ($form['#cache']['tags'] as $key => $value) {
+          $explodeValue = explode(':', $value);
+          if ( is_numeric($explodeValue[1]) ){
+            $isTranslationForm = true;
+          }
+        }
+        if ( !$isTranslationForm ) {
+          unset($form['actions']['submit']['#submit']);
+          $form['actions']['submit']['#submit'][] = $formValue['submitHandler'];
+        }
       }
     }
   }
 }
 
 /**
- * Additional submit handler for block_content_social_media_block_form
+ * submit handler for block_content_social_media_block_form
  */
 function block_content_social_media_block_form_submit(&$form, FormStateInterface $form_state) {
   $message = "Sorry, a Social Media block is already existing. Please contact the administrator if another Social Media block is required.";
@@ -33,7 +46,7 @@ function block_content_social_media_block_form_submit(&$form, FormStateInterface
 }
 
 /**
- * Additional submit handler for block_content_sponsorship_block_form
+ * submit handler for block_content_sponsorship_block_form
  */
 function block_content_sponsor_block_form_submit(&$form, FormStateInterface $form_state) {
   $message = "Sorry, Sponsorship block is already existing. Please contact the administrator if another Sponsorship block is required.";

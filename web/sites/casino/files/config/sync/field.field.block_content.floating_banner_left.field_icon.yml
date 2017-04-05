@@ -14,7 +14,7 @@ bundle: floating_banner_left
 label: Icon
 description: 'This is the icon for the floating banner'
 required: true
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
