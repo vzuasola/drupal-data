@@ -5,4 +5,4 @@ RUN chmod -R 777 /composer
 RUN apk update
 RUN apk add openssh
 RUN mkdir -p /root/.ssh
-ENTRYPOINT composer update --no-dev --profile
+ENTRYPOINT composer install --no-dev --profile
