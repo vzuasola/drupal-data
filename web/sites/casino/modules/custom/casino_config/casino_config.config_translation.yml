@@ -51,3 +51,10 @@ casino_config.casino_header_config_form_schema:
   base_route_name: casino_config.header_config_form
   names:
     - 'casino_config.header_config'
+
+casino_config.casino_promo_right_block_schema:
+  title: 'Right Side Block configurations'
+  base_route_name: casino_config.promo_right_block_form
+  names:
+    - 'casino_config.promo_right_block'
+

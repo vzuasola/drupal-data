@@ -125,3 +125,14 @@ casino_config.header_config:
     login_issue_link:
       type: label
       label: 'Login Issue Link'
+
+casino_config.promo_right_block:
+  type: mapping
+  label: 'Casino Promotions Right Block'
+  mapping:
+    promo_block_title:
+      type: label
+      label: 'Promo Right Block Title'
+    promo_block_visibility:
+      type: text
+      label: 'Promo Right Block Visibility'

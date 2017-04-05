@@ -63,3 +63,11 @@ casino_config.admin_partners_config:
   parent: casino_config.casino_config_list
   description: 'Casino Header Configurations'
   route_name: casino_config.partners_config_form
+
+casino_config.promo_right_block_config:
+  title: 'Promo Right Block Configurations'
+  parent: casino_config.casino_config_list
+  description: 'Casino Header Configurations'
+  route_name: casino_config.promo_right_block_form
+
+
