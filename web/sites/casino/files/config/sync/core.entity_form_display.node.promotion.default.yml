@@ -209,4 +209,5 @@ content:
     weight: 10
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_promote_to_lobby: true

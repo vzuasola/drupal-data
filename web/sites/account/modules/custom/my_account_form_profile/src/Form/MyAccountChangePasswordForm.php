@@ -308,6 +308,19 @@ class MyAccountChangePasswordForm extends ConfigFormBase
             '#maxlength' => 255,
             '#default_value' => $myAccountConfigValue['validation_error']['maxlength_error'],
         ];
+        $form['field_configuration']['error_detail']['not_username'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('NOT accept the username'),
+            '#maxlength' => 255,
+            '#default_value' => $myAccountConfigValue['validation_error']['not_username'],
+        ];
+
+        $form['field_configuration']['error_detail']['not_password'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('NOT accept the word password'),
+            '#maxlength' => 255,
+            '#default_value' => $myAccountConfigValue['validation_error']['not_password'],
+        ];
 
         $form['field_configuration']['error_detail']['format_error'] = [
             '#type' => 'textarea',
@@ -375,6 +388,8 @@ class MyAccountChangePasswordForm extends ConfigFormBase
             ->set('validation_error.minlength_error', $configuration['error_detail']['minlength_error'])
             ->set('validation_error.mismatch', $configuration['error_detail']['mismatch'])
             ->set('validation_error.maxlength_error', $configuration['error_detail']['maxlength_error'])
+            ->set('validation_error.not_username', $configuration['error_detail']['not_username'])
+            ->set('validation_error.not_password', $configuration['error_detail']['not_password'])
             ->set('validation_error.format_error', $configuration['error_detail']['format_error'])
             ->set('new_password_field.options.label', $configuration['field_labels_new_password']['label'])
             ->set('new_password_field.options.help', $configuration['field_labels_new_password']['help'])

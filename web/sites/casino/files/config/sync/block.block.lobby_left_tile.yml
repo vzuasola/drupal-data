@@ -6,6 +6,7 @@ dependencies:
     - 'block_content:lobby_tile:a0538d78-6fad-4f32-987e-184c6cc9c4cb'
   module:
     - block_content
+    - system
   theme:
     - bartik
 id: lobby_left_tile
@@ -22,4 +23,9 @@ settings:
   status: true
   info: ''
   view_mode: full
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: /banner-slider
+    negate: true
+    context_mapping: {  }

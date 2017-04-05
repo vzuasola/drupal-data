@@ -1,0 +1,24 @@
+uuid: 4c27b2d4-75cb-44b1-8ad8-599501a0c933
+langcode: zh-hans
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_promote_to_lobby
+field_name: field_promote_to_lobby
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '1'
+      label: 'Promote to Lobby'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
