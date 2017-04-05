@@ -285,7 +285,7 @@ $config_directories = array();
  *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt');
  * @endcode
  */
-$settings['hash_salt'] = 'rWtA7Wb0Vl-4TdP_Ni4Pptp16-LmjWX-I9L1pkoTE5jI2eivMCupJBCeTRlBCLSqp78Zxr_B3g';
+$settings['hash_salt'] = 'fwjKBRlyzPwDBPb1FDstyHYrQzH-Eh4khQtBJOiIBRy8U_m4Xb1LnqVQBUGubkWy89KCgBf83w';
 
 /**
  * Deployment identifier.
@@ -749,13 +749,14 @@ $settings['file_scan_ignore_directories'] = [
  *
  * Keep this code block at the end of this file to take full effect.
  */
-# if (file_exists(__DIR__ . '/settings.local.php')) {
-#   include __DIR__ . '/settings.local.php';
-# }
+ if (file_exists(__DIR__ . '/database.php')) {
+   include __DIR__ . '/database.php';
+ }
 $settings['install_profile'] = 'standard';
 $config_directories['sync'] = 'sites/webcomposer/files/config/sync';
+/*
 $databases['default']['default'] = array (
-  'database' => 'webcomposer',
+  'database' => 'account',
   'username' => 'admin',
   'password' => 'admin',
   'prefix' => '',
@@ -764,3 +765,4 @@ $databases['default']['default'] = array (
   'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
   'driver' => 'mysql',
 );
+*/
