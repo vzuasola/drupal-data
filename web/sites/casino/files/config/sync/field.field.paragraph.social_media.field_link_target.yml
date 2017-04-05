@@ -1,4 +1,4 @@
-uuid: db3627d6-fcba-462c-b018-14fbf360abe7
+uuid: aa9682be-3090-4128-8cca-6204ce708658
 langcode: zh-hans
 status: true
 dependencies:
@@ -15,7 +15,9 @@ label: 'Link Target'
 description: ''
 required: false
 translatable: true
-default_value: {  }
+default_value:
+  -
+    value: window
 default_value_callback: ''
 settings: {  }
 field_type: list_string

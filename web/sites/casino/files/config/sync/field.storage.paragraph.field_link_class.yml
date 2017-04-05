@@ -1,0 +1,78 @@
+uuid: 942bf5bc-6728-49ed-b2b8-285bd170e5a9
+langcode: zh-hans
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_link_class
+field_name: field_link_class
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: faq
+      label: FAQ
+    -
+      value: email
+      label: Email
+    -
+      value: call
+      label: Call
+    -
+      value: banner-facebook
+      label: Facebook
+    -
+      value: banner-twitter
+      label: Twitter
+    -
+      value: banner-youtube
+      label: Youtube
+    -
+      value: wechat
+      label: Wechat
+    -
+      value: weibo
+      label: Weibo
+    -
+      value: viber
+      label: Viber
+    -
+      value: zalo
+      label: Zalo
+    -
+      value: line
+      label: Line
+    -
+      value: talk
+      label: Talk
+    -
+      value: messenger
+      label: Messenger
+    -
+      value: whatsapp
+      label: WhatsApp
+    -
+      value: bbm
+      label: BBM
+    -
+      value: pidgin
+      label: Pidgin
+    -
+      value: casino
+      label: Casino
+    -
+      value: casino-gold
+      label: 'Casino Gold'
+    -
+      value: poker
+      label: Poker
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

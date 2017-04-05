@@ -57,11 +57,15 @@
 // Webcomposer Demo Instances
 $sites['wc.drupal.dev'] = 'webcomposer';
 $sites['wc.drupal.local'] = 'webcomposer';
+$sites['dev-admin.elysium-dfbt.com'] = 'webcomposer';
 
 // My Account Instances
 $sites['account.drupal.dev'] = 'account';
 $sites['account.drupal.local'] = 'account';
+$sites['dev-account.elysium-dfbt.com'] = 'account';
 
 // Casino Site Instances
 $sites['casino.drupal.dev'] = 'casino';
 $sites['casino.drupal.local'] = 'casino';
+$sites['dev-casino.elysium-dfbt.com'] = 'casino';
+$sites['dev-csngold.elysium-dfbt.com'] = 'casino';

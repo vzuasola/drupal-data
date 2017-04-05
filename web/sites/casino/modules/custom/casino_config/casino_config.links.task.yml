@@ -42,3 +42,8 @@ casino_config.header_configuration_tab:
   route_name: casino_config.header_config_form
   title: 'Header configuration'
   base_route: casino_config.header_config_form
+
+casino_config.promo_right_block_configuration_tab:
+  route_name: casino_config.promo_right_block_form
+  title: 'Promo Right Block configuration'
+  base_route: casino_config.promo_right_block_form

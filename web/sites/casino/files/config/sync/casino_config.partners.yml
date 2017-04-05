@@ -1,5 +1,6 @@
-copyright_label: null
-all_right_reserved_label: null
+langcode: zh-hans
+_core:
+  default_config_hash: zrDzV-6LU1cRUG3p_gAd8_FHy7pnRz8SS-D4uOGgb04
+partners_image_url: 'http://casino.drupal.dev/sites/casino/files/upload/tiles/footer-partners_0.png'
 partners_logo:
-  - '5'
-partners_image_url: 'http://casino.drupal.local/sites/casino/files/upload/tiles/footer-partners.png'
+  - '131'

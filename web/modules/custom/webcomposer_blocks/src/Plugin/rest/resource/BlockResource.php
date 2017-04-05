@@ -11,6 +11,7 @@ use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Psr\Log\LoggerInterface;
 use Drupal\block_content\Entity\BlockContent;
+use Drupal\file\Entity\File;
 
 /**
  * Provides a resource to get view modes by entity and bundle.
@@ -137,22 +138,36 @@ class BlockResource extends ResourceBase {
       $block_content_array = $translatedBlocked->toArray();
 
       foreach ($block_content as $fieldType => $field) {
-          $fieldSettings = $field->getSettings();
+        $fieldSettings = $field->getSettings();
 
+        if (isset($fieldSettings['target_type'])) {
           if ($fieldSettings['target_type'] == 'paragraph') {
             foreach ($block_content_array[$fieldType] as $key => $value) {
               $block_content_array[$fieldType][$key]['paragraph'] = $this->loadParagraphByID($value['target_id']);
             }
           }
+          else if ($fieldSettings['target_type'] == 'file') {
+            foreach ($block_content_array[$fieldType] as $key => $value) {
+              $block_content_array[$fieldType][$key]['uri'] = $this->getFileURI($value['target_id']);
+            }
+          }
+        }
       }
       return $block_content_array;
     }
   }
 
 
-  public function loadParagraphByID($target_id){
+  private function loadParagraphByID($target_id){
     $paragraph = $this->entityManager->getStorage('paragraph')->load($target_id);
     $translatedParagraph = $paragraph->getTranslation($this->current_language);
     return $translatedParagraph;
+  }
+
+  private function getFileURI($target_id){
+    $file = File::load($target_id);
+    $url = file_create_url($file->getFileUri());
+    $url = parse_url($url);
+    return $url['path'];
   }
 }

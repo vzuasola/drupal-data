@@ -1,0 +1,125 @@
+uuid: 92eb5ef0-6981-412d-a303-e15028ce740e
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - field.field.node.promotion.body
+    - field.field.node.promotion.field_banner_content
+    - field.field.node.promotion.field_banner_link
+    - field.field.node.promotion.field_banner_link_target
+    - field.field.node.promotion.field_full_tile_image
+    - field.field.node.promotion.field_full_tile_link
+    - field.field.node.promotion.field_full_tile_summary
+    - field.field.node.promotion.field_half_tile_image
+    - field.field.node.promotion.field_half_tile_link
+    - field.field.node.promotion.field_half_tile_summary
+    - field.field.node.promotion.field_image
+    - node.type.promotion
+  module:
+    - image
+    - link
+    - options
+    - text
+    - user
+id: node.promotion.default
+targetEntityType: node
+bundle: promotion
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+  field_banner_content:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  field_banner_link:
+    weight: 5
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+  field_banner_link_target:
+    weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+  field_full_tile_image:
+    weight: 8
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  field_full_tile_link:
+    weight: 10
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+  field_full_tile_summary:
+    weight: 9
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  field_half_tile_image:
+    weight: 12
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  field_half_tile_link:
+    weight: 14
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+  field_half_tile_summary:
+    weight: 13
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  field_image:
+    weight: 3
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  links:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_promote_to_lobby: true
+  field_right_side_block_option: true
+  field_thumbnail_image: true
+  field_thumbnail_summary: true
+  langcode: true

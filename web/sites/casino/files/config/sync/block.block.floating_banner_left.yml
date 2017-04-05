@@ -1,0 +1,31 @@
+uuid: 18f4be17-b8a1-4645-b89a-1967b77303fa
+langcode: zh-hans
+status: true
+dependencies:
+  content:
+    - 'block_content:floating_banner_left:64941b47-f7cd-4e3e-96a6-6a1bb2fbfde4'
+  module:
+    - block_content
+    - system
+  theme:
+    - bartik
+id: floating_banner_left
+theme: bartik
+region: footer_fourth
+weight: 0
+provider: null
+plugin: 'block_content:64941b47-f7cd-4e3e-96a6-6a1bb2fbfde4'
+settings:
+  id: 'block_content:64941b47-f7cd-4e3e-96a6-6a1bb2fbfde4'
+  label: 'FBL - 1 - CH'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /banner-slider
+    negate: true
+    context_mapping: {  }

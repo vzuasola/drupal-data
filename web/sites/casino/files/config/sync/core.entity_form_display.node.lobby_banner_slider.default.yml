@@ -73,6 +73,13 @@ content:
       display_label: true
     weight: 4
     third_party_settings: {  }
+  publish_on:
+    type: datetime_timestamp_no_default
+    weight: 30
+    settings: {  }
+    third_party_settings: {  }
+  scheduler_settings:
+    weight: 20
   sticky:
     type: boolean_checkbox
     settings:
@@ -95,5 +102,10 @@ content:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  unpublish_on:
+    type: datetime_timestamp_no_default
+    weight: 30
+    settings: {  }
     third_party_settings: {  }
 hidden: {  }

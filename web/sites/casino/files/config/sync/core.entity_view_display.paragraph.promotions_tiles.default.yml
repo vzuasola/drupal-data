@@ -1,0 +1,44 @@
+uuid: 0b6ca092-12ad-4ebe-ac06-1361dcb566c1
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.promotions_tiles.field_image
+    - field.field.paragraph.promotions_tiles.field_promotions_link
+    - field.field.paragraph.promotions_tiles.field_summary
+    - paragraphs.paragraphs_type.promotions_tiles
+  module:
+    - image
+    - link
+    - text
+id: paragraph.promotions_tiles.default
+targetEntityType: paragraph
+bundle: promotions_tiles
+mode: default
+content:
+  field_image:
+    weight: 0
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  field_promotions_link:
+    weight: 1
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+  field_summary:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+hidden: {  }

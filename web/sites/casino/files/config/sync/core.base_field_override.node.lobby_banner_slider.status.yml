@@ -1,4 +1,4 @@
-uuid: 1cd41256-fb29-4868-ab9f-3bb13df216b3
+uuid: 5d1225e0-ce7f-48a2-8460-bff93b1023d4
 langcode: zh-hans
 status: true
 dependencies:
@@ -14,7 +14,7 @@ required: false
 translatable: false
 default_value:
   -
-    value: 1
+    value: 0
 default_value_callback: ''
 settings:
   on_label: 'On'

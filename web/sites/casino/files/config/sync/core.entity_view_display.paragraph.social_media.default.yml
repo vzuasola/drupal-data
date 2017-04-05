@@ -16,7 +16,7 @@ bundle: social_media
 mode: default
 content:
   field_enable:
-    weight: 3
+    weight: 4
     label: above
     settings:
       format: default
@@ -25,7 +25,7 @@ content:
     third_party_settings: {  }
     type: boolean
   field_link_target:
-    weight: 2
+    weight: 5
     label: above
     settings: {  }
     third_party_settings: {  }
