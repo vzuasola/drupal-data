@@ -32,7 +32,6 @@ class MyAccountLivechatForm extends ConfigFormBase
 
         // Get Form configuration.
         $myAccountCoreConfig = $this->config('my_account_core.livechat');
-
         $form['livechat'] = [
             '#type' => 'vertical_tabs',
         ];
@@ -61,6 +60,61 @@ class MyAccountLivechatForm extends ConfigFormBase
             '#required' => true,
             '#description' => $this->t('Link for Live Chat.'),
             '#default_value' => $myAccountCoreConfig->get('live_chat_link')
+        ];
+
+        $form['field_configuration']['field_jwt_configuration'] = [
+            '#type' => 'details',
+            '#title' => 'JWT Config',
+            '#group' => 'livechat',
+        ];
+
+        $form['field_configuration']['field_jwt_configuration']['jwt_enabled'] = [
+            '#type' => 'checkbox',
+            '#title' => $this->t('JWT Enabled'),
+            '#description' => $this->t('Check this if you want to enable JWT'),
+            '#maxlength' => 255,
+            '#size' => 10,
+            '#default_value' => $myAccountCoreConfig->get('jwt_config')['jwt_enabled']
+        ];
+
+        $form['field_configuration']['field_jwt_configuration']['url_post'] = [
+            '#type' => 'url',
+            '#title' => $this->t('URL Post'),
+            '#description' => $this->t('URL that JWT will be posted'),
+            '#maxlength' => 255,
+            '#default_value' => $myAccountCoreConfig->get('jwt_config')['url_post']
+        ];
+
+        $form['field_configuration']['field_jwt_configuration']['url_post_timout'] = [
+            '#type' => 'number',
+            '#title' => $this->t('URL Post Timeout'),
+            '#description' => $this->t('Ajax Timeout'),
+            '#maxlength' => 255,
+            '#default_value' => $myAccountCoreConfig->get('jwt_config')['url_post_timout']
+        ];
+
+        $form['field_configuration']['field_jwt_configuration']['jwt_key'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('JWT Key'),
+            '#description' => $this->t('Key for JWT'),
+            '#size' => 255,
+            '#default_value' => $myAccountCoreConfig->get('jwt_config')['jwt_key']
+        ];
+
+        $form['field_configuration']['field_jwt_configuration']['validity_time'] = [
+            '#type' => 'number',
+            '#title' => $this->t('Validation Time (Seconds)'),
+            '#description' => $this->t('Time of validity of JWT Token in seconds.'),
+            '#maxlength' => 255,
+            '#default_value' => $myAccountCoreConfig->get('jwt_config')['validity_time']
+        ];
+
+        $form['field_configuration']['field_jwt_configuration']['xDomain_proxy'] = [
+            '#type' => 'url',
+            '#title' => $this->t('XDomain Proxy'),
+            '#description' => $this->t('The protocol and domain of the XDomain proxy for CORS support (eg. https://www.cs-livechatcom)'),
+            '#maxlength' => 255,
+            '#default_value' => $myAccountCoreConfig->get('jwt_config')['xDomain_proxy']
         ];
 
         $form['actions'] = ['#type' => 'actions'];
@@ -106,6 +160,12 @@ class MyAccountLivechatForm extends ConfigFormBase
         $this->config('my_account_core.livechat')
             ->set('live_chat_text', $configuration['live_chat_text'])
             ->set('live_chat_link', $configuration['live_chat_link'])
+            ->set('jwt_config.jwt_enabled', $configuration['field_jwt_configuration']['jwt_enabled'])
+            ->set('jwt_config.url_post', $configuration['field_jwt_configuration']['url_post'])
+            ->set('jwt_config.url_post_timout', $configuration['field_jwt_configuration']['url_post_timout'])
+            ->set('jwt_config.jwt_key', $configuration['field_jwt_configuration']['jwt_key'])
+            ->set('jwt_config.validity_time', $configuration['field_jwt_configuration']['validity_time'])
+            ->set('jwt_config.xDomain_proxy', $configuration['field_jwt_configuration']['xDomain_proxy'])
             ->save();
     }
 

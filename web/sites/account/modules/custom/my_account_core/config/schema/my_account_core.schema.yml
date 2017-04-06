@@ -16,6 +16,13 @@ my_account_core.livechat:
     live_chat_link:
       type: label
       label: 'Live Chat Link'
+    jwt_config:
+      type: mapping
+      label: 'JWT Config settings'
+      mapping:
+        jwt_enabled:
+          type: label
+          label: 'Enabled for Language'
   langcode: 'en'
 my_account_core.header:
   type: config_object
