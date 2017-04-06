@@ -754,7 +754,7 @@ $settings['file_scan_ignore_directories'] = [
  }
 $settings['install_profile'] = 'standard';
 $config_directories['sync'] = 'sites/account/files/config/sync';
-/*
+
 $databases['default']['default'] = array (
   'database' => 'account',
   'username' => 'admin',
@@ -765,4 +765,3 @@ $databases['default']['default'] = array (
   'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
   'driver' => 'mysql',
 );
-*/
