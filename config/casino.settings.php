@@ -754,9 +754,9 @@ $settings['file_scan_ignore_directories'] = [
  }
 $settings['install_profile'] = 'standard';
 $config_directories['sync'] = 'sites/casino/files/config/sync';
-/*
+
 $databases['default']['default'] = array (
-  'database' => 'account',
+  'database' => 'casino',
   'username' => 'admin',
   'password' => 'admin',
   'prefix' => '',
@@ -765,4 +765,3 @@ $databases['default']['default'] = array (
   'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
   'driver' => 'mysql',
 );
-*/
