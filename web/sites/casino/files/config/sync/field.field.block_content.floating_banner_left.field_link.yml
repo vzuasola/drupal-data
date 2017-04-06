@@ -13,7 +13,7 @@ entity_type: block_content
 bundle: floating_banner_left
 label: Link
 description: 'If there''s no banner items this will be the action when the banner is clicked.'
-required: true
+required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''

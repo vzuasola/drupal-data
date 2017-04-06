@@ -13,7 +13,7 @@ entity_type: block_content
 bundle: floating_banner_left
 label: 'Link Target'
 description: ''
-required: true
+required: false
 translatable: true
 default_value:
   -
