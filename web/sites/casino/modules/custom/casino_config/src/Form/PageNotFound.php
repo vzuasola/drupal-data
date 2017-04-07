@@ -6,7 +6,10 @@ use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\file\Entity\File;
 
-class PageNotFound extends ConfigFormBase{
+/**
+ * Configuration Form for the Page Not Found.
+ */
+class PageNotFound extends ConfigFormBase {
 
   /**
    * {@inheritdoc}
@@ -48,16 +51,9 @@ class PageNotFound extends ConfigFormBase{
       '#type' => 'text_format',
       '#title' => $this->t('Content'),
       '#default_value' => $d['value'],
-      '#format' => $d['format']
+      '#format' => $d['format'],
     );
     return parent::buildForm($form, $form_state);
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  public function validateForm(array &$form, FormStateInterface $form_state) {
-    parent::validateForm($form, $form_state);
   }
 
   /**
@@ -76,6 +72,9 @@ class PageNotFound extends ConfigFormBase{
           $file = File::load($fid[0]);
           $file->setPermanent();
           $file->save();
+          $file_usage = \Drupal::service('file.usage');
+          $file_usage->add($file, 'casino_config', 'image', $fid[0]);
+
           $this->config('casino_config.page_not_found')->set("page_not_found_image_url", file_create_url($file->getFileUri()))->save();
         }
       }
