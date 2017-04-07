@@ -3,6 +3,7 @@ langcode: zh-hans
 status: true
 dependencies:
   config:
+    - field.field.paragraph.floating_banner_item.field_enable
     - field.field.paragraph.floating_banner_item.field_link
     - field.field.paragraph.floating_banner_item.field_link_class
     - field.field.paragraph.floating_banner_item.field_link_target
@@ -16,6 +17,15 @@ targetEntityType: paragraph
 bundle: floating_banner_item
 mode: default
 content:
+  field_enable:
+    weight: 4
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
   field_link:
     weight: 1
     label: above
@@ -28,7 +38,7 @@ content:
     third_party_settings: {  }
     type: link
   field_link_class:
-    weight: 2
+    weight: 7
     label: above
     settings: {  }
     third_party_settings: {  }

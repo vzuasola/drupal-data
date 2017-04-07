@@ -3,6 +3,7 @@ langcode: zh-hans
 status: true
 dependencies:
   config:
+    - field.field.paragraph.floating_banner_item.field_enable
     - field.field.paragraph.floating_banner_item.field_link
     - field.field.paragraph.floating_banner_item.field_link_class
     - field.field.paragraph.floating_banner_item.field_link_target
@@ -15,32 +16,40 @@ targetEntityType: paragraph
 bundle: floating_banner_item
 mode: default
 content:
+  field_enable:
+    weight: 1
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
   field_link:
-    weight: 12
+    weight: 3
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
   field_link_class:
-    weight: 13
+    weight: 5
     settings: {  }
     third_party_settings: {  }
     type: options_select
   field_link_target:
-    weight: 14
+    weight: 4
     settings: {  }
     third_party_settings: {  }
     type: options_select
   field_link_text:
-    weight: 11
+    weight: 2
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
   translation:
-    weight: 10
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   created: true
   status: true

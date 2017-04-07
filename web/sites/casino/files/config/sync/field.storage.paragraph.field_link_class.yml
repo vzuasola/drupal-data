@@ -1,4 +1,4 @@
-uuid: 942bf5bc-6728-49ed-b2b8-285bd170e5a9
+uuid: 38e06ac8-3aec-4dd6-af6d-c3991e9d3947
 langcode: zh-hans
 status: true
 dependencies:
@@ -57,9 +57,6 @@ settings:
       value: bbm
       label: BBM
     -
-      value: qq
-      label: QQ
-    -
       value: casino
       label: Casino
     -
@@ -68,6 +65,9 @@ settings:
     -
       value: poker
       label: Poker
+    -
+      value: qq
+      label: QQ
   allowed_values_function: ''
 module: options
 locked: false
