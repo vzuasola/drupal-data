@@ -1,3 +1,12 @@
 #live chat config
 live_chat_text: '24/7 Livechat'
 live_chat_link: 'https://www.cs-livechat.com/c/en/mc-desktop?brand=Dafa&amp;product=Dafabet&amp;height=760&amp;width=360'
+
+#live chat jwt config
+jwt_config:
+  jwt_enabled: '1'
+  url_post: 'https://www.cs-livechat.com/s/jwt'
+  url_post_timout: '5000'
+  jwt_key: 'secret-jwt-key'
+  validity_time: '1800'
+  xDomain_proxy: 'https://www.cs-livechat.com'
