@@ -1,4 +1,11 @@
 live_chat_text: '24/7 Livechat'
-live_chat_link: 'https://www.cs-livechat.com/c/en/mc-desktop?brand=Dafa&amp;product=Dafabet&amp;height=760&amp;width=360'
+live_chat_link: 'https://stg-chat.elysium-dfbt.com/c/en/mc-desktop?brand=Dafa&height=760&width=360'
+jwt_config:
+  jwt_enabled: '1'
+  url_post: 'https://stg-chat.elysium-dfbt.com/s/jwt'
+  url_post_timout: '5000'
+  jwt_key: secret-jwt-key
+  validity_time: '1800'
+  xDomain_proxy: 'https://stg-chat.elysium-dfbt.com'
 _core:
-  default_config_hash: _WOKZMtvXrCKsEGuynzFrCJequYfNHUsHiVTfd1Yrd8
+  default_config_hash: 6JrEg3cAG8u7d3drtedNZX8hzgL_nhTNmyV0xv_lmsk
