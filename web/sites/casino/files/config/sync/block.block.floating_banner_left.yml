@@ -1,12 +1,11 @@
-uuid: 18f4be17-b8a1-4645-b89a-1967b77303fa
-langcode: zh-hans
+uuid: a2bf2b88-2c39-4d4f-952e-57a49e83e33b
+langcode: zh-hant
 status: true
 dependencies:
   content:
-    - 'block_content:floating_banner_left:64941b47-f7cd-4e3e-96a6-6a1bb2fbfde4'
+    - 'block_content:floating_banner_left:ffb7cbe5-d6c2-484f-99bd-6e1929102f2c'
   module:
     - block_content
-    - system
   theme:
     - bartik
 id: floating_banner_left
@@ -14,18 +13,13 @@ theme: bartik
 region: footer_fourth
 weight: 0
 provider: null
-plugin: 'block_content:64941b47-f7cd-4e3e-96a6-6a1bb2fbfde4'
+plugin: 'block_content:ffb7cbe5-d6c2-484f-99bd-6e1929102f2c'
 settings:
-  id: 'block_content:64941b47-f7cd-4e3e-96a6-6a1bb2fbfde4'
-  label: 'FBL - 1 - CH'
+  id: 'block_content:ffb7cbe5-d6c2-484f-99bd-6e1929102f2c'
+  label: 'Left Floating Banner'
   provider: block_content
   label_display: visible
   status: true
   info: ''
   view_mode: full
-visibility:
-  request_path:
-    id: request_path
-    pages: /banner-slider
-    negate: true
-    context_mapping: {  }
+visibility: {  }
