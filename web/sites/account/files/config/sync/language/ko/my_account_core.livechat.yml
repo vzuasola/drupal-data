@@ -1,2 +1,4 @@
 live_chat_text: '24/7 라이브 채팅'
-live_chat_link: 'https://www.cs-livechat.com/c/kr/mc-desktop?brand=Dafa&amp;product=Dafabet&amp;height=760&amp;width=360'
+live_chat_link: 'https://server.iad.liveperson.net/hc/69756831/?cmd=file&file=visitorWantsToChat&site=69756831&byhref=1&imageUrl=http://server.ia'
+jwt_config:
+  jwt_enabled: '0'
