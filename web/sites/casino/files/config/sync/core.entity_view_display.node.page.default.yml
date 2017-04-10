@@ -4,8 +4,10 @@ status: true
 dependencies:
   config:
     - field.field.node.page.body
+    - field.field.node.page.field_log_in_state
     - node.type.page
   module:
+    - options
     - text
     - user
 _core:
@@ -21,6 +23,12 @@ content:
     weight: 100
     settings: {  }
     third_party_settings: {  }
+  field_log_in_state:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
   links:
     weight: 101
 hidden:

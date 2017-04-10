@@ -1,0 +1,27 @@
+uuid: a75400d8-91fe-4ee4-8c9f-e0fcbd6d6f8d
+langcode: zh-hans
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_log_in_state
+field_name: field_log_in_state
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '0'
+      label: Pre-Login
+    -
+      value: '1'
+      label: Post-Login
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 2
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
