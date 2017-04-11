@@ -7,6 +7,8 @@ username_field:
       placeholder: 'Username Placeholder'
     required: '1'
     wrapper_class: 'username'
+    tooltip_required: '0'
+    tooltip_message: 'Field tooltip'
 
 #curreny
 currency_field:
@@ -18,6 +20,8 @@ currency_field:
     required: '1'
     error: 'Error Currency Field Error message'
     wrapper_class: 'currency_wrapper'
+    tooltip_required: '0'
+    tooltip_message: 'Field tooltip'
 
 #first name
 first_name_field:
@@ -29,6 +33,8 @@ first_name_field:
     required: '1'
     error: 'Error message for first name field'
     wrapper_class: 'first_name'
+    tooltip_required: '0'
+    tooltip_message: 'Field tooltip'
 
 #last name
 last_name_field:
@@ -40,6 +46,8 @@ last_name_field:
     required: '1'
     error: 'Last name field error message'
     wrapper_class: 'lastname'
+    tooltip_required: '0'
+    tooltip_message: 'Field tooltip'
 
 #DOB
 dob_field:
@@ -49,6 +57,8 @@ dob_field:
     required: '1'
     error: 'Error message for dob'
     wrapper_class: 'dob'
+    tooltip_required: '0'
+    tooltip_message: 'Field tooltip'
 
 #DOB month
 dob_month:
@@ -73,11 +83,22 @@ country_field:
   weight: '8'
   options:
     label: 'Country'
-    attr:
-      placeholder: 'Country'
     required: '1'
-    error: 'Error message for country'
+    choices: "Korea|Korea\r\nZimbabwe|Zimbabwe\r\nChina|China\r\nIndia|india"
     wrapper_class: 'country'
+    tooltip_required: '1'
+    tooltip_message: 'Text information'
+
+#country
+gender_field:
+  weight: '8'
+  options:
+    label: 'Gender'
+    required: '1'
+    choices: "M|Male\r\nF|Female"
+    wrapper_class: 'gender'
+    tooltip_required: '1'
+    tooltip_message: 'Text information'
 
 #email
 email_field:
@@ -89,6 +110,8 @@ email_field:
     required: '1'
     error: 'Error message for Email'
     wrapper_class: 'email'
+    tooltip_required: '1'
+    tooltip_message: 'Email address tooltip'
 
 #header field
 communication_detail_field:
@@ -109,6 +132,8 @@ mobile_number_field:
     required: '1'
     error: 'Error message for Mobile'
     wrapper_class: 'mobile_number'
+    tooltip_required: '0'
+    tooltip_message: 'Field tooltip'
 
 #language
 language_field:
@@ -121,3 +146,30 @@ language_field:
     required: '1'
     error: 'Error field for Language'
     wrapper_class: 'language'
+    tooltip_required: '1'
+    tooltip_message: 'Language tooltip'
+
+
+#gender
+gender_field:
+  weight: '11'
+  options:
+    label: 'Gender'
+    required: '1'
+    error: 'Error field for Gender'
+    wrapper_class: 'gender'
+    tooltip_required: '1'
+    tooltip_message: 'Language tooltip'
+
+#submit button label
+submit_button_label_field:
+  options:
+    label: 'Save changes'
+    wrapper_class: 'change-profile-submit'
+
+
+#cancel button label
+cancel_button_label_field:
+  options:
+    label: 'Cancel'
+    wrapper_class: 'change-profile-cancel'

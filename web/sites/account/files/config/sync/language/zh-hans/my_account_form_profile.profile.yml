@@ -24,8 +24,6 @@ dob_year:
 country_field:
   options:
     label: 国家
-    attr:
-      placeholder: 国家
 email_field:
   options:
     label: 电子邮件地址
