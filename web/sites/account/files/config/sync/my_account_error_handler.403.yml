@@ -1,4 +1,4 @@
 top_blurb: 'We are unable to authenticate you on the Dafabet Cashier as it seems your account has been logged out, we apologize for any inconvenience this may have caused.'
-bottom_blurb: 'For question and inquiries, you can contact us at the following: <a href="{livechat.link}"> Live Chat </a> or <a href="mailto:ensupport@dafabet.com"> Email </a>'
+bottom_blurb: 'For question and inquiries, you can contact us at the following: <a href="{livechat.link}" class="live-chat-popup"> Live Chat </a> or <a href="mailto:ensupport@dafabet.com"> Email </a>'
 _core:
   default_config_hash: YFcGjsqZw5OMO1kqw0PpmNJ0mFkRmP7gQ-eNrt-gQ0I
