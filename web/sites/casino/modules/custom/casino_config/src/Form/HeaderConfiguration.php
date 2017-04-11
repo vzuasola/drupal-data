@@ -95,6 +95,19 @@ class HeaderConfiguration extends ConfigFormBase {
       '#default_value' => $config->get('ch_lang_text'),
       '#required' => TRUE,
     );
+    $form['balance_group'] = array(
+      '#type' => 'details',
+      '#title' => $this->t('Balance Settings'),
+      '#collapsible' => TRUE,
+      '#group' => 'header_settings_tab',
+    );
+    $form['balance_group']['balance_error_text'] = array(
+      '#type' => 'textfield',
+      '#title' => $this->t('Balance Error Message.'),
+      '#description' => $this->t('Balance Error Message.'),
+      '#default_value' => $config->get('balance_error_text'),
+      '#required' => TRUE,
+    );
 
     return parent::buildForm($form, $form_state);
   }
@@ -110,6 +123,7 @@ class HeaderConfiguration extends ConfigFormBase {
       'login_issue_link',
       'sc_lang_text',
       'ch_lang_text',
+      'balance_error_text',
     );
     foreach ($keys as $key) {
       $this->config('casino_config.header_config')->set($key, $form_state->getValue($key))->save();

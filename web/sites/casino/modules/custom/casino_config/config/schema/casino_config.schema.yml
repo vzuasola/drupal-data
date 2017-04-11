@@ -125,6 +125,9 @@ casino_config.header_config:
     login_issue_link:
       type: label
       label: 'Login Issue Link'
+    balance_error_text:
+      type: label
+      label: 'Balance Error Message'
 
 casino_config.promo_right_block:
   type: mapping
