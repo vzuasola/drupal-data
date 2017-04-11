@@ -73,6 +73,26 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#default_value' => $myAccountConfigValue['username_field']['options']['required'],
         ];
 
+        $form['field_configuration']['field_labels_user_name']['default_detail'] = [
+            '#type' => 'details',
+            '#title' => 'Tooltip Detail',
+            '#description' => $this->t('Tooltip configuration'),
+        ];
+
+        $form['field_configuration']['field_labels_user_name']['default_detail']['tooltip_message'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Tooltip Message'),
+            '#size' => 225,
+            '#description' => $this->t('Tooltip detail for field.'),
+            '#default_value' => $myAccountConfigValue['username_field']['options']['tooltip_message'],
+        ];
+
+        $form['field_configuration']['field_labels_user_name']['default_detail']['tooltip_required'] = [
+            '#type' => 'checkbox',
+            '#title' => $this->t('Tooltip required'),
+            '#default_value' => $myAccountConfigValue['username_field']['options']['tooltip_required'],
+        ];
+
         $form['field_configuration']['field_labels_user_name']['weight'] = [
             '#type' => 'select',
             '#title' => $this->t('Field weight'),
@@ -118,6 +138,27 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#title' => $this->t('Required field'),
             '#default_value' => $myAccountConfigValue['currency_field']['options']['required'],
         ];
+
+        $form['field_configuration']['field_labels_currency']['default_detail'] = [
+            '#type' => 'details',
+            '#title' => 'Tooltip Detail',
+            '#description' => $this->t('Tooltip configuration'),
+        ];
+
+        $form['field_configuration']['field_labels_currency']['default_detail']['tooltip_message'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Tooltip Message'),
+            '#size' => 225,
+            '#description' => $this->t('Tooltip detail for field.'),
+            '#default_value' => $myAccountConfigValue['username_field']['options']['tooltip_message'],
+        ];
+
+        $form['field_configuration']['field_labels_currency']['default_detail']['tooltip_required'] = [
+            '#type' => 'checkbox',
+            '#title' => $this->t('Tooltip required'),
+            '#default_value' => $myAccountConfigValue['username_field']['options']['tooltip_required'],
+        ];
+
 
         $form['field_configuration']['field_labels_currency']['error'] = [
             '#type' => 'textfield',
@@ -171,7 +212,25 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#title' => $this->t('Required field'),
             '#default_value' => $myAccountConfigValue['first_name_field']['options']['required'],
         ];
+        $form['field_configuration']['field_labels_first_name']['default_detail'] = [
+            '#type' => 'details',
+            '#title' => 'Tooltip Detail',
+            '#description' => $this->t('Tooltip configuration'),
+        ];
 
+        $form['field_configuration']['field_labels_first_name']['default_detail']['tooltip_message'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Tooltip Message'),
+            '#size' => 225,
+            '#description' => $this->t('Tooltip detail for field.'),
+            '#default_value' => $myAccountConfigValue['username_field']['options']['tooltip_message'],
+        ];
+
+        $form['field_configuration']['field_labels_first_name']['default_detail']['tooltip_required'] = [
+            '#type' => 'checkbox',
+            '#title' => $this->t('Tooltip required'),
+            '#default_value' => $myAccountConfigValue['username_field']['options']['tooltip_required'],
+        ];
         $form['field_configuration']['field_labels_first_name']['error'] = [
             '#type' => 'textfield',
             '#title' => $this->t('Error message for First name'),
@@ -226,7 +285,25 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#title' => $this->t('Required field'),
             '#default_value' => $myAccountConfigValue['last_name_field']['options']['required'],
         ];
+        $form['field_configuration']['field_labels_last_name']['default_detail'] = [
+            '#type' => 'details',
+            '#title' => 'Tooltip Detail',
+            '#description' => $this->t('Tooltip configuration'),
+        ];
 
+        $form['field_configuration']['field_labels_last_name']['default_detail']['tooltip_message'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Tooltip Message'),
+            '#size' => 225,
+            '#description' => $this->t('Tooltip detail for field.'),
+            '#default_value' => $myAccountConfigValue['username_field']['options']['tooltip_message'],
+        ];
+
+        $form['field_configuration']['field_labels_last_name']['default_detail']['tooltip_required'] = [
+            '#type' => 'checkbox',
+            '#title' => $this->t('Tooltip required'),
+            '#default_value' => $myAccountConfigValue['username_field']['options']['tooltip_required'],
+        ];
         $form['field_configuration']['field_labels_last_name']['error'] = [
             '#type' => 'textfield',
             '#title' => $this->t('Error message for Last name'),
@@ -273,7 +350,25 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#title' => $this->t('Required field'),
             '#default_value' => $myAccountConfigValue['dob_field']['options']['required'],
         ];
+        $form['field_configuration']['field_labels_dob']['default_detail'] = [
+            '#type' => 'details',
+            '#title' => 'Tooltip Detail',
+            '#description' => $this->t('Tooltip configuration'),
+        ];
 
+        $form['field_configuration']['field_labels_dob']['default_detail']['tooltip_message'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Tooltip Message'),
+            '#size' => 225,
+            '#description' => $this->t('Tooltip detail for field.'),
+            '#default_value' => $myAccountConfigValue['username_field']['options']['tooltip_message'],
+        ];
+
+        $form['field_configuration']['field_labels_dob']['default_detail']['tooltip_required'] = [
+            '#type' => 'checkbox',
+            '#title' => $this->t('Tooltip required'),
+            '#default_value' => $myAccountConfigValue['username_field']['options']['tooltip_required'],
+        ];
         $form['field_configuration']['field_labels_dob']['error'] = [
             '#type' => 'textfield',
             '#title' => $this->t('Error message for DOB'),
@@ -402,7 +497,25 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#title' => $this->t('Required field'),
             '#default_value' => $myAccountConfigValue['country_field']['options']['required'],
         ];
+        $form['field_configuration']['field_labels_country']['default_detail'] = [
+            '#type' => 'details',
+            '#title' => 'Tooltip Detail',
+            '#description' => $this->t('Tooltip configuration'),
+        ];
 
+        $form['field_configuration']['field_labels_country']['default_detail']['tooltip_message'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Tooltip Message'),
+            '#size' => 225,
+            '#description' => $this->t('Tooltip detail for field.'),
+            '#default_value' => $myAccountConfigValue['username_field']['options']['tooltip_message'],
+        ];
+
+        $form['field_configuration']['field_labels_country']['default_detail']['tooltip_required'] = [
+            '#type' => 'checkbox',
+            '#title' => $this->t('Tooltip required'),
+            '#default_value' => $myAccountConfigValue['username_field']['options']['tooltip_required'],
+        ];
         $form['field_configuration']['field_labels_country']['error'] = [
             '#type' => 'textfield',
             '#title' => $this->t('Error message for Country'),
@@ -455,7 +568,25 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#title' => $this->t('Required field'),
             '#default_value' => $myAccountConfigValue['email_field']['options']['required'],
         ];
+        $form['field_configuration']['field_labels_email']['default_detail'] = [
+            '#type' => 'details',
+            '#title' => 'Tooltip Detail',
+            '#description' => $this->t('Tooltip configuration'),
+        ];
 
+        $form['field_configuration']['field_labels_email']['default_detail']['tooltip_message'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Tooltip Message'),
+            '#size' => 225,
+            '#description' => $this->t('Tooltip detail for field.'),
+            '#default_value' => $myAccountConfigValue['username_field']['options']['tooltip_message'],
+        ];
+
+        $form['field_configuration']['field_labels_email']['default_detail']['tooltip_required'] = [
+            '#type' => 'checkbox',
+            '#title' => $this->t('Tooltip required'),
+            '#default_value' => $myAccountConfigValue['username_field']['options']['tooltip_required'],
+        ];
         $form['field_configuration']['field_labels_email']['error'] = [
             '#type' => 'textfield',
             '#title' => $this->t('Error message for Email'),
@@ -509,7 +640,25 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#title' => $this->t('Required field'),
             '#default_value' => $myAccountConfigValue['mobile_number_field']['options']['required'],
         ];
+        $form['field_configuration']['field_labels_mobile_number']['default_detail'] = [
+            '#type' => 'details',
+            '#title' => 'Tooltip Detail',
+            '#description' => $this->t('Tooltip configuration'),
+        ];
 
+        $form['field_configuration']['field_labels_mobile_number']['default_detail']['tooltip_message'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Tooltip Message'),
+            '#size' => 225,
+            '#description' => $this->t('Tooltip detail for field.'),
+            '#default_value' => $myAccountConfigValue['username_field']['options']['tooltip_message'],
+        ];
+
+        $form['field_configuration']['field_labels_mobile_number']['default_detail']['tooltip_required'] = [
+            '#type' => 'checkbox',
+            '#title' => $this->t('Tooltip required'),
+            '#default_value' => $myAccountConfigValue['username_field']['options']['tooltip_required'],
+        ];
         $form['field_configuration']['field_labels_mobile_number']['error'] = [
             '#type' => 'textfield',
             '#title' => $this->t('Error message for Mobile number'),
@@ -562,7 +711,25 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#title' => $this->t('Required field'),
             '#default_value' => $myAccountConfigValue['language_field']['options']['required'],
         ];
+        $form['field_configuration']['field_labels_language']['default_detail'] = [
+            '#type' => 'details',
+            '#title' => 'Tooltip Detail',
+            '#description' => $this->t('Tooltip configuration'),
+        ];
 
+        $form['field_configuration']['field_labels_language']['default_detail']['tooltip_message'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Tooltip Message'),
+            '#size' => 225,
+            '#description' => $this->t('Tooltip detail for field.'),
+            '#default_value' => $myAccountConfigValue['username_field']['options']['tooltip_message'],
+        ];
+
+        $form['field_configuration']['field_labels_language']['default_detail']['tooltip_required'] = [
+            '#type' => 'checkbox',
+            '#title' => $this->t('Tooltip required'),
+            '#default_value' => $myAccountConfigValue['username_field']['options']['tooltip_required'],
+        ];
         $form['field_configuration']['field_labels_language']['error'] = [
             '#type' => 'textfield',
             '#title' => $this->t('Error message for Language'),
@@ -617,6 +784,31 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#description' => $this->t('Label for the language Field.'),
             '#default_value' => $myAccountConfigValue['communication_detail_field']['options']['label'],
         ];
+        $form['field_configuration']['field_submit_button_labels'] = [
+            '#type' => 'details',
+            '#title' => 'Submit Button Label',
+            '#group' => 'submit_button',
+            '#open' => False,
+            '#tree' => TRUE,
+        ];
+
+        $form['field_configuration']['field_submit_button_labels']['submit_label'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Submit Button'),
+            '#size' => 25,
+            '#required' => TRUE,
+            '#description' => $this->t('Label for the Submit button.'),
+            '#default_value' => $myAccountConfigValue['submit_button_label_field']['options']['label']
+        ];
+
+        $form['field_configuration']['field_submit_button_labels']['cancel_label'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Cancel Button'),
+            '#size' => 25,
+            '#required' => TRUE,
+            '#description' => $this->t('Label for the Cancel button.'),
+            '#default_value' => $myAccountConfigValue['cancel_button_label_field']['options']['label']
+        ];
 
         $form['actions'] = ['#type' => 'actions'];
         // Add a submit button that handles the submission of the form.
@@ -660,6 +852,8 @@ class MyAccountRegistrationForm extends ConfigFormBase
         $configuration = $form_state->getValue('field_configuration');
         $this->config('my_account_form_profile.profile')
             ->set('username_field.options.label', $configuration['field_labels_user_name']['label'])
+            ->set('username_field.options.tooltip_message', $configuration['field_labels_user_name']['default_detail']['tooltip_message'])
+            ->set('username_field.options.tooltip_required', $configuration['field_labels_user_name']['default_detail']['tooltip_required'])
             ->set('username_field.options.attr.placeholder', $configuration['field_labels_user_name']['placeholder'])
             ->set('username_field.options.required', $configuration['field_labels_user_name']['required'])
             ->set('username_field.weight', $configuration['field_labels_user_name']['weight'])
@@ -671,47 +865,63 @@ class MyAccountRegistrationForm extends ConfigFormBase
             ->set('dob_day.options.wrapper_class', $configuration['field_labels_dob']['field_labels_dob_day']['wrapper_class'])
             ->set('username_field.options.wrapper_class', $configuration['field_labels_user_name']['wrapper_class'])
             ->set('currency_field.options.label', $configuration['field_labels_currency']['label'])
+            ->set('currency_field.options.tooltip_message', $configuration['field_labels_currency']['default_detail']['tooltip_message'])
+            ->set('currency_field.options.tooltip_required', $configuration['field_labels_currency']['default_detail']['tooltip_required'])
             ->set('currency_field.options.attr.placeholder', $configuration['field_labels_currency']['placeholder'])
             ->set('currency_field.options.required', $configuration['field_labels_currency']['required'])
             ->set('currency_field.options.error', $configuration['field_labels_currency']['error'])
             ->set('currency_field.weight', $configuration['field_labels_currency']['weight'])
             ->set('currency_field.options.wrapper_class', $configuration['field_labels_currency']['wrapper_class'])
             ->set('first_name_field.options.label', $configuration['field_labels_first_name']['label'])
+            ->set('first_name_field.options.tooltip_message', $configuration['field_labels_first_name']['default_detail']['tooltip_message'])
+            ->set('first_name_field.options.tooltip_required', $configuration['field_labels_first_name']['default_detail']['tooltip_required'])
             ->set('first_name_field.options.attr.placeholder', $configuration['field_labels_first_name']['placeholder'])
             ->set('first_name_field.options.required', $configuration['field_labels_first_name']['required'])
             ->set('first_name_field.options.error', $configuration['field_labels_first_name']['error'])
             ->set('first_name_field.weight', $configuration['field_labels_first_name']['weight'])
             ->set('first_name_field.options.wrapper_class', $configuration['field_labels_first_name']['wrapper_class'])
             ->set('last_name_field.options.label', $configuration['field_labels_last_name']['label'])
+            ->set('last_name_field.options.tooltip_message', $configuration['field_labels_last_name']['default_detail']['tooltip_message'])
+            ->set('last_name_field.options.tooltip_required', $configuration['field_labels_last_name']['default_detail']['tooltip_required'])
             ->set('last_name_field.options.attr.placeholder', $configuration['field_labels_last_name']['placeholder'])
             ->set('last_name_field.options.required', $configuration['field_labels_last_name']['required'])
             ->set('last_name_field.options.error', $configuration['field_labels_last_name']['error'])
             ->set('last_name_field.weight', $configuration['field_labels_last_name']['weight'])
             ->set('last_name_field.options.wrapper_class', $configuration['field_labels_last_name']['wrapper_class'])
             ->set('dob_field.options.label', $configuration['field_labels_dob']['label'])
+            ->set('dob_field.options.tooltip_message', $configuration['field_labels_dob']['default_detail']['tooltip_message'])
+            ->set('dob_field.options.tooltip_required', $configuration['field_labels_dob']['default_detail']['tooltip_required'])
             ->set('dob_field.options.required', $configuration['field_labels_dob']['required'])
             ->set('dob_field.options.error', $configuration['field_labels_dob']['error'])
             ->set('dob_field.weight', $configuration['field_labels_dob']['weight'])
             ->set('dob_field.options.wrapper_class', $configuration['field_labels_dob']['wrapper_class'])
             ->set('country_field.options.label', $configuration['field_labels_country']['label'])
+            ->set('country_field.options.tooltip_message', $configuration['field_labels_country']['default_detail']['tooltip_message'])
+            ->set('country_field.options.tooltip_required', $configuration['field_labels_country']['default_detail']['tooltip_required'])
             ->set('country_field.options.attr.placeholder', $configuration['field_labels_country']['placeholder'])
             ->set('country_field.options.required', $configuration['field_labels_country']['required'])
             ->set('country_field.options.error', $configuration['field_labels_country']['error'])
             ->set('country_field.weight', $configuration['field_labels_country']['weight'])
             ->set('country_field.options.wrapper_class', $configuration['field_labels_country']['wrapper_class'])
             ->set('email_field.options.label', $configuration['field_labels_email']['label'])
+            ->set('email_field.options.tooltip_message', $configuration['field_labels_email']['default_detail']['tooltip_message'])
+            ->set('email_field.options.tooltip_required', $configuration['field_labels_email']['default_detail']['tooltip_required'])
             ->set('email_field.options.attr.placeholder', $configuration['field_labels_email']['placeholder'])
             ->set('email_field.options.required', $configuration['field_labels_email']['required'])
             ->set('email_field.options.error', $configuration['field_labels_email']['error'])
             ->set('email_field.weight', $configuration['field_labels_email']['weight'])
             ->set('email_field.options.wrapper_class', $configuration['field_labels_email']['wrapper_class'])
             ->set('mobile_number_field.label', $configuration['field_labels_mobile_number']['label'])
+            ->set('mobile_number_field.options.tooltip_message', $configuration['field_labels_mobile_number']['default_detail']['tooltip_message'])
+            ->set('mobile_number_field.options.tooltip_required', $configuration['field_labels_mobile_number']['default_detail']['tooltip_required'])
             ->set('mobile_number_field.placeholder', $configuration['field_labels_mobile_number']['placeholder'])
             ->set('mobile_number_field.options.required', $configuration['field_labels_mobile_number']['required'])
             ->set('mobile_number_field.options.error', $configuration['field_labels_mobile_number']['error'])
             ->set('mobile_number_field.weight', $configuration['field_labels_mobile_number']['weight'])
             ->set('mobile_number_field.options.wrapper_class', $configuration['field_labels_mobile_number']['wrapper_class'])
             ->set('language_field.options.label', $configuration['field_labels_language']['label'])
+            ->set('language_field.options.tooltip_message', $configuration['field_labels_language']['default_detail']['tooltip_message'])
+            ->set('language_field.options.tooltip_required', $configuration['field_labels_language']['default_detail']['tooltip_required'])
             ->set('language_field.options.attr.placeholder', $configuration['field_labels_language']['placeholder'])
             ->set('language_field.options.required', $configuration['field_labels_language']['required'])
             ->set('language_field.options.error', $configuration['field_labels_language']['error'])
@@ -720,6 +930,8 @@ class MyAccountRegistrationForm extends ConfigFormBase
             ->set('language_field.options.wrapper_class', $configuration['field_labels_language']['wrapper_class'])
             ->set('account_field.options.label', $configuration['field_labels_account']['account_label'])
             ->set('communication_detail_field.options.label', $configuration['field_labels_account']['communication_label'])
+            ->set('submit_button_label_field.options.label', $configuration['field_submit_button_labels']['submit_label'])
+            ->set('cancel_button_label_field.options.label', $configuration['field_submit_button_labels']['cancel_label'])
             ->save();
     }
 
