@@ -8,12 +8,13 @@ dependencies:
     - field.field.node.lobby_banner_slider.field_banner_link_target
     - field.field.node.lobby_banner_slider.field_content_position
     - field.field.node.lobby_banner_slider.field_image
+    - field.field.node.lobby_banner_slider.field_log_in_state
     - image.style.thumbnail
     - node.type.lobby_banner_slider
   module:
     - image
     - link
-    - path
+    - scheduler
     - text
 id: node.lobby_banner_slider.default
 targetEntityType: node
@@ -22,7 +23,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 7
+    weight: 6
     settings:
       rows: 9
       summary_rows: 3
@@ -30,7 +31,7 @@ content:
     third_party_settings: {  }
   created:
     type: datetime_timestamp
-    weight: 3
+    weight: 4
     settings: {  }
     third_party_settings: {  }
   field_banner_link:
@@ -46,40 +47,36 @@ content:
     third_party_settings: {  }
     type: options_select
   field_content_position:
-    weight: 8
+    weight: 7
     settings: {  }
     third_party_settings: {  }
     type: options_select
   field_image:
-    weight: 9
+    weight: 8
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+  field_log_in_state:
+    type: options_buttons
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
   langcode:
     type: language_select
     weight: 1
     settings: {  }
     third_party_settings: {  }
-  path:
-    type: path
-    weight: 6
-    settings: {  }
-    third_party_settings: {  }
-  promote:
-    type: boolean_checkbox
-    settings:
-      display_label: true
-    weight: 4
-    third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
-    weight: 30
+    weight: 13
     settings: {  }
     third_party_settings: {  }
   scheduler_settings:
-    weight: 20
+    weight: 12
+    settings: {  }
+    third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
@@ -94,10 +91,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 10
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 2
+    weight: 3
     settings:
       match_operator: CONTAINS
       size: 60
@@ -105,7 +104,9 @@ content:
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp_no_default
-    weight: 30
+    weight: 14
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  path: true
+  promote: true
