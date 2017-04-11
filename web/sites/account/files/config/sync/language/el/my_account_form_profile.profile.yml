@@ -20,8 +20,6 @@ dob_field:
 country_field:
   options:
     label: Χώρα
-    attr:
-      placeholder: Χώρα
 email_field:
   options:
     label: 'Διεύθυνση Email'

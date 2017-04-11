@@ -24,8 +24,6 @@ dob_year:
 country_field:
   options:
     label: ' 나라'
-    attr:
-      placeholder: ' 나라'
 email_field:
   options:
     label: '이메일 주소'

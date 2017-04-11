@@ -20,8 +20,6 @@ dob_field:
 country_field:
   options:
     label: 'Quốc gia'
-    attr:
-      placeholder: 'Quốc gia'
 email_field:
   options:
     label: 'Địa chỉ Email'

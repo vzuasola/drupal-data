@@ -18,8 +18,6 @@ dob_field:
 country_field:
   options:
     label: CountryIN
-    attr:
-      placeholder: CountryIN
 email_field:
   options:
     label: 'Email AddressIN'

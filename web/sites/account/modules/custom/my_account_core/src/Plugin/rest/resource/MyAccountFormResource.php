@@ -99,39 +99,7 @@ class MyAccountFormResource extends ResourceBase
     public function filter_array_exposed($values, $key)
     {
         if ($key == 'password') {
-
-            // Convert string with array key messages
-            $value_array = explode('|', $values['integration_error_messages']['key_messages']);
-            $string = $values['integration_error_messages']['key_messages'];
-
-            // Explode strings
-            $list = explode("\n", $string);
-            $list = array_map('trim', $list);
-            $list = array_filter($list, 'strlen');
-
-            $generated_keys = $explicit_keys = FALSE;
-            $field_type = "list_integer";
-            foreach ($list as $position => $text) {
-                $value = $key = FALSE;
-                // Check for an explicit key.
-                $matches = array();
-                if (preg_match('/(.*)\|(.*)/', $text, $matches)) {
-                    $key = $matches[1];
-                    $value = $matches[2];
-                    $explicit_keys = TRUE;
-                } // Otherwise see if we can generate a key from the position.
-                elseif ($generate_keys) {
-                    $key = (string)$position;
-                    $value = $text;
-                    $generated_keys = TRUE;
-                } else {
-                    return;
-                }
-                // Key value save in array.
-                $icore[$key] = $value;
-            }
-
-            $values['integration_error_messages']['key_messages'] = $icore;
+            $values['integration_error_messages']['key_messages'] = $this->exclude_key_value_string($values['integration_error_messages']['key_messages']);
             // Assign with existing array
             $value = $values;
         }
@@ -145,11 +113,47 @@ class MyAccountFormResource extends ResourceBase
             // Get only Profile field.
             unset($values['account_field']);
             unset($values['communication_detail_field']);
+
+            // Trim string with array.
+            $values['gender_field']['options']['choices'] = $this->exclude_key_value_string($values['gender_field']['options']['choices']);
+            $values['country_field']['options']['choices'] = $this->exclude_key_value_string($values['country_field']['options']['choices']);
             $value = $values;
         }
         return $value;
     }
 
+    /**
+     * @return array with header key
+     */
+    public function exclude_key_value_string($field_string_value)
+    {
+
+        // Explode strings
+        $list = explode("\n", $field_string_value);
+        $list = array_map('trim', $list);
+        $list = array_filter($list, 'strlen');
+
+        $generated_keys = $explicit_keys = FALSE;
+        $field_type = "list_integer";
+        foreach ($list as $position => $text) {
+            $value = $key = FALSE;
+            // Check for an explicit key.
+            $matches = array();
+            if (preg_match('/(.*)\|(.*)/', $text, $matches)) {
+                $key = $matches[1];
+                $value = $matches[2];
+                $explicit_keys = TRUE;
+            } // Otherwise see if we can generate a key from the position.
+            elseif ($generate_keys) {
+                $key = (string)$position;
+                $value = $text;
+                $generated_keys = TRUE;
+            }
+            // Key value save in array.
+            $filter_array[$key] = $value;
+        }
+        return $filter_array;
+    }
 
 }
 
