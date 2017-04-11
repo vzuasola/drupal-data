@@ -60,4 +60,5 @@ content:
   links:
     weight: 100
 hidden:
+  field_log_in_state: true
   langcode: true

@@ -1,0 +1,25 @@
+uuid: ed5de861-d58c-4b0a-9be9-9d999783e710
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_log_in_state
+    - node.type.lobby_banner_slider
+  module:
+    - options
+id: node.lobby_banner_slider.field_log_in_state
+field_name: field_log_in_state
+entity_type: node
+bundle: lobby_banner_slider
+label: 'Log-in State'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: '0'
+  -
+    value: '1'
+default_value_callback: ''
+settings: {  }
+field_type: list_string
