@@ -135,6 +135,9 @@ my_account_form_profile.profile:
             error:
               type: label
               label: 'Error message'
+            tooltip_message:
+              type: label
+              label: 'Tooltip message'
             attr:
               type: mapping
               label: 'Placeholder value for field'
@@ -156,6 +159,9 @@ my_account_form_profile.profile:
             error:
               type: label
               label: 'Error message'
+            tooltip_message:
+              type: label
+              label: 'Tooltip message'
             attr:
               type: mapping
               label: 'Placeholder value for field'
@@ -180,6 +186,9 @@ my_account_form_profile.profile:
             error:
               type: label
               label: 'Error message'
+            tooltip_message:
+              type: label
+              label: 'Tooltip message'
             attr:
               type: mapping
               label: 'Placeholder value for field'
@@ -204,6 +213,9 @@ my_account_form_profile.profile:
             error:
               type: label
               label: 'Error message'
+            tooltip_message:
+              type: label
+              label: 'Tooltip message'
             attr:
               type: mapping
               label: 'Placeholder value for field'
@@ -225,6 +237,9 @@ my_account_form_profile.profile:
             error:
               type: label
               label: 'Error message'
+            tooltip_message:
+              type: label
+              label: 'Tooltip message'
             attr:
               type: mapping
               label: 'Placeholder value for field'
@@ -267,6 +282,9 @@ my_account_form_profile.profile:
             error:
               type: label
               label: 'Error message'
+            tooltip_message:
+              type: label
+              label: 'Tooltip message'
             attr:
               type: mapping
               label: 'Placeholder value for field'
@@ -288,6 +306,9 @@ my_account_form_profile.profile:
             error:
               type: label
               label: 'Error message'
+            tooltip_message:
+              type: label
+              label: 'Tooltip message'
             attr:
               type: mapping
               label: 'Placeholder value for field'
@@ -331,6 +352,9 @@ my_account_form_profile.profile:
             error:
               type: label
               label: 'Error message'
+            tooltip_message:
+              type: label
+              label: 'Tooltip message'
             attr:
               type: mapping
               label: 'Placeholder value for field'
@@ -338,6 +362,23 @@ my_account_form_profile.profile:
                 placeholder:
                   type: label
                   label: 'Placeholder value for field'
+    gender_field:
+      type: mapping
+      label: 'Gender'
+      mapping:
+        options:
+          type: mapping
+          label: 'Field label'
+          mapping:
+            label:
+              type: label
+              label: 'Field label'
+            error:
+              type: label
+              label: 'Error message'
+            tooltip_message:
+              type: label
+              label: 'Tooltip message'
     language_field:
       type: mapping
       label: 'Language'
@@ -352,6 +393,9 @@ my_account_form_profile.profile:
             error:
               type: label
               label: 'Error message'
+            tooltip_message:
+              type: label
+              label: 'Tooltip message'
             attr:
               type: mapping
               label: 'Placeholder value for field'
@@ -359,4 +403,24 @@ my_account_form_profile.profile:
                 placeholder:
                   type: label
                   label: 'Placeholder value for field'
+    submit_button_label_field:
+      type: mapping
+      label: 'Submit Button Label'
+      mapping:
+        options:
+          type: mapping
+          mapping:
+            label:
+              type: label
+              label: 'Default value for change profile submit button'
+    cancel_button_label_field:
+      type: mapping
+      label: 'Submit Button Label'
+      mapping:
+        options:
+          type: mapping
+          mapping:
+            label:
+              type: label
+              label: 'Default value for change profile cancel button'
   langcode: 'en'
