@@ -83,11 +83,20 @@ country_field:
   weight: '8'
   options:
     label: 'Country'
-    attr:
-      placeholder: 'Country'
     required: '1'
-    error: 'Error message for country'
+    choices: "Korea|Korea\r\nZimbabwe|Zimbabwe\r\nChina|China\r\nIndia|india"
     wrapper_class: 'country'
+    tooltip_required: '1'
+    tooltip_message: 'Text information'
+
+#country
+gender_field:
+  weight: '8'
+  options:
+    label: 'Gender'
+    required: '1'
+    choices: "M|Male\r\nF|Female"
+    wrapper_class: 'gender'
     tooltip_required: '1'
     tooltip_message: 'Text information'
 

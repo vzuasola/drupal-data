@@ -10,8 +10,6 @@ dob_field:
 country_field:
   options:
     label: Kraj
-    attr:
-      placeholder: Kraj
 email_field:
   options:
     label: 'Adres Email'

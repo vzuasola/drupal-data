@@ -20,8 +20,6 @@ dob_field:
 country_field:
   options:
     label: ประเทศ
-    attr:
-      placeholder: ประเทศ
 email_field:
   options:
     label: อีเมล

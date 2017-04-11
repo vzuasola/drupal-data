@@ -183,6 +183,71 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#default_value' => $myAccountConfigValue['currency_field']['options']['wrapper_class'],
         ];
 
+        $form['field_configuration']['field_labels_gender'] = [
+            '#type' => 'details',
+            '#title' => 'Gender',
+            '#open' => False,
+            '#tree' => TRUE,
+        ];
+
+        $form['field_configuration']['field_labels_gender']['label'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Label'),
+            '#size' => 25,
+            '#required' => TRUE,
+            '#description' => $this->t('Label for the Gender Field.'),
+            '#default_value' => $myAccountConfigValue['gender_field']['options']['label'],
+        ];
+
+        $form['field_configuration']['field_labels_gender']['choices'] = [
+            '#type' => 'textarea',
+            '#title' => $this->t('Choices'),
+            '#description' => $this->t('Choices for key|value'),
+            '#maxlength' => 255,
+            '#default_value' => $myAccountConfigValue['gender_field']['options']['choices']
+        ];
+        $form['field_configuration']['field_labels_gender']['required'] = [
+            '#type' => 'checkbox',
+            '#title' => $this->t('Required field'),
+            '#default_value' => $myAccountConfigValue['gender_field']['options']['required'],
+        ];
+
+        $form['field_configuration']['field_labels_gender']['default_detail'] = [
+            '#type' => 'details',
+            '#title' => 'Tooltip Detail',
+            '#description' => $this->t('Tooltip configuration'),
+        ];
+
+        $form['field_configuration']['field_labels_gender']['default_detail']['tooltip_message'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Tooltip Message'),
+            '#size' => 225,
+            '#description' => $this->t('Tooltip detail for field.'),
+            '#default_value' => $myAccountConfigValue['gender_field']['options']['tooltip_message'],
+        ];
+
+        $form['field_configuration']['field_labels_gender']['default_detail']['tooltip_required'] = [
+            '#type' => 'checkbox',
+            '#title' => $this->t('Tooltip required'),
+            '#default_value' => $myAccountConfigValue['gender_field']['options']['tooltip_required'],
+        ];
+
+        $form['field_configuration']['field_labels_gender']['weight'] = [
+            '#type' => 'select',
+            '#title' => $this->t('Field weight'),
+            '#disabled' => TRUE,
+            '#options' => ['0' => '0'],
+            '#default_value' => $myAccountConfigValue['gender_field']['weight'],
+        ];
+
+        $form['field_configuration']['field_labels_gender']['wrapper_class'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Gender wrapper'),
+            '#size' => 25,
+            '#description' => $this->t('Wrapper class for field.'),
+            '#default_value' => $myAccountConfigValue['gender_field']['options']['wrapper_class'],
+        ];
+
         $form['field_configuration']['field_labels_first_name'] = [
             '#type' => 'details',
             '#title' => 'First Name',
@@ -484,12 +549,12 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#default_value' => $myAccountConfigValue['country_field']['options']['label'],
         ];
 
-        $form['field_configuration']['field_labels_country']['placeholder'] = [
-            '#type' => 'textfield',
-            '#title' => $this->t('Placeholder'),
-            '#size' => 25,
-            '#description' => $this->t('Placeholder for the country Field.'),
-            '#default_value' => $myAccountConfigValue['country_field']['options']['attr']['placeholder'],
+        $form['field_configuration']['field_labels_country']['choices'] = [
+            '#type' => 'textarea',
+            '#title' => $this->t('Choices'),
+            '#description' => $this->t('Choices for key|value'),
+            '#maxlength' => 255,
+            '#default_value' => $myAccountConfigValue['country_field']['options']['choices']
         ];
 
         $form['field_configuration']['field_labels_country']['required'] = [
@@ -857,6 +922,12 @@ class MyAccountRegistrationForm extends ConfigFormBase
             ->set('username_field.options.attr.placeholder', $configuration['field_labels_user_name']['placeholder'])
             ->set('username_field.options.required', $configuration['field_labels_user_name']['required'])
             ->set('username_field.weight', $configuration['field_labels_user_name']['weight'])
+            ->set('gender_field.options.label', $configuration['field_labels_gender']['label'])
+            ->set('gender_field.options.choices', $configuration['field_labels_gender']['choices'])
+            ->set('gender_field.options.tooltip_message', $configuration['field_labels_gender']['default_detail']['tooltip_message'])
+            ->set('gender_field.options.tooltip_required', $configuration['field_labels_gender']['default_detail']['tooltip_required'])
+            ->set('gender_field.options.required', $configuration['field_labels_gender']['required'])
+            ->set('gender_field.weight', $configuration['field_labels_gender']['weight'])
             ->set('dob_month.weight', $configuration['field_labels_dob']['field_labels_dob_month']['weight'])
             ->set('dob_month.options.wrapper_class', $configuration['field_labels_dob']['field_labels_dob_month']['wrapper_class'])
             ->set('dob_year.weight', $configuration['field_labels_dob']['field_labels_dob_year']['weight'])
@@ -898,7 +969,7 @@ class MyAccountRegistrationForm extends ConfigFormBase
             ->set('country_field.options.label', $configuration['field_labels_country']['label'])
             ->set('country_field.options.tooltip_message', $configuration['field_labels_country']['default_detail']['tooltip_message'])
             ->set('country_field.options.tooltip_required', $configuration['field_labels_country']['default_detail']['tooltip_required'])
-            ->set('country_field.options.attr.placeholder', $configuration['field_labels_country']['placeholder'])
+            ->set('country_field.options.choices', $configuration['field_labels_country']['choices'])
             ->set('country_field.options.required', $configuration['field_labels_country']['required'])
             ->set('country_field.options.error', $configuration['field_labels_country']['error'])
             ->set('country_field.weight', $configuration['field_labels_country']['weight'])

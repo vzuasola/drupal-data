@@ -20,8 +20,6 @@ dob_field:
 country_field:
   options:
     label: 国
-    attr:
-      placeholder: 国
 email_field:
   options:
     label: 'E メールアドレス'

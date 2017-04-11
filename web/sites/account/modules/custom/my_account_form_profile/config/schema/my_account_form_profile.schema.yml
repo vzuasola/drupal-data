@@ -169,6 +169,26 @@ my_account_form_profile.profile:
                 placeholder:
                   type: label
                   label: 'Placeholder value for field'
+    gender_field:
+      type: mapping
+      label: 'Gender'
+      mapping:
+        options:
+          type: mapping
+          label: 'Field label'
+          mapping:
+            label:
+              type: label
+              label: 'Field label'
+            error:
+              type: label
+              label: 'Error message'
+            tooltip_message:
+              type: label
+              label: 'Tooltip message'
+            choices:
+              type: text
+              label: 'Gender Choices value'
     first_name_field:
       type: mapping
       label: 'First Name'
@@ -285,13 +305,9 @@ my_account_form_profile.profile:
             tooltip_message:
               type: label
               label: 'Tooltip message'
-            attr:
-              type: mapping
-              label: 'Placeholder value for field'
-              mapping:
-                placeholder:
-                  type: label
-                  label: 'Placeholder value for field'
+            choices:
+              type: text
+              label: 'Country Choices value'
     email_field:
       type: mapping
       label: 'Email'
