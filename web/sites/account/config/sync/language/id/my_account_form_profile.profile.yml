@@ -12,8 +12,6 @@ dob_field:
 country_field:
   options:
     label: Negara
-    attr:
-      placeholder: Negara
 email_field:
   options:
     label: 'Alamat Email'

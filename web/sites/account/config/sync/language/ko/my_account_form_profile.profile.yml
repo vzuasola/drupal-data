@@ -1,43 +1,41 @@
 username_field:
   options:
-    label: 用户名
+    label: 아이디
 currency_field:
   options:
-    label: 货币
+    label: '화폐 단위'
     attr:
-      placeholder: 货币
+      placeholder: '화폐 단위'
 first_name_field:
   weight: '3'
   options:
-    label: 输入您的姓
+    label: '성을 입력하세요'
 last_name_field:
   weight: '2'
   options:
-    label: 输入您的名字
+    label: '이름을 입력하세요'
 dob_field:
   options:
-    label: 出生日期
+    label: 생년월일
 dob_day:
   weight: '7'
 dob_year:
   weight: '5'
 country_field:
   options:
-    label: 国家
-    attr:
-      placeholder: 国家
+    label: ' 나라'
 email_field:
   options:
-    label: 电子邮件地址
+    label: '이메일 주소'
 communication_detail_field:
   options:
-    label: 联系方式
+    label: '연락처 정보'
 account_field:
   options:
-    label: 账户信息
+    label: '계정 정보'
 mobile_number_field:
   options:
-    label: 联系电话
+    label: 휴대번호
 language_field:
   options:
-    label: 语言
+    label: 언어
