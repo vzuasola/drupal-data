@@ -167,7 +167,12 @@ class BlockResource extends ResourceBase {
   private function getFileURI($target_id){
     $file = File::load($target_id);
     $url = file_create_url($file->getFileUri());
-    $url = parse_url($url);
-    return $url['path'];
+    
+    /* This function will return the relative path once symlinking
+     * of the uploads folder to front has been implemented. 
+     */
+    // $url = parse_url($url);
+    // return $url['path'];
+    return $url;
   }
 }
