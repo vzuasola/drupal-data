@@ -52,44 +52,6 @@ class LoginConfig extends ConfigFormBase{
             '#default_value' => $config->get('login_bottom_label'),
         );
 
-
-        $form['login_form_validation_details'] = array(
-          '#type' => 'details',
-          '#title' => t('Login Field Validation'),
-          '#group' => 'advanced',
-        );
-        $form['login_form_validation_details']['group_username'] = array(
-          '#type' => 'details',
-          '#title' => t('Username'),
-        );
-        $form['login_form_validation_details']['group_username']['username_validation_min'] = array(
-            '#type' => 'textfield',
-            '#title' => $this->t('Minimum character'),
-            '#default_value' => $config->get('username_validation_min'),
-        );
-        $form['login_form_validation_details']['group_username']['username_validation_max'] = array(
-            '#type' => 'textfield',
-            '#title' => $this->t('Maximum character'),
-            '#default_value' => $config->get('username_validation_max'),
-        );
-
-
-        $form['login_form_validation_details']['group_password'] = array(
-          '#type' => 'details',
-          '#title' => t('Password'),
-        );
-        $form['login_form_validation_details']['group_password']['password_validation_min'] = array(
-            '#type' => 'textfield',
-            '#title' => $this->t('Minimum character'),
-            '#default_value' => $config->get('password_validation_min'),
-        );
-        $form['login_form_validation_details']['group_password']['password_validation_max'] = array(
-            '#type' => 'textfield',
-            '#title' => $this->t('Maximum character'),
-            '#default_value' => $config->get('password_validation_max'),
-        );
-
-
         $form['login_form_error_messages_details'] = array(
             '#type' => 'details',
             '#title' => t('Error Messages'),
