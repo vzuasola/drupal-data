@@ -1,25 +1,23 @@
-uuid: 41485580-e5ab-4b40-8758-0b1f4025988a
+uuid: efd0026e-b8d8-4d62-bfbe-4fdc1eeae2d1
 langcode: zh-hans
 status: true
 dependencies:
   config:
     - field.storage.node.field_log_in_state
-    - node.type.page
+    - node.type.promotion
   module:
     - options
-id: node.page.field_log_in_state
+id: node.promotion.field_log_in_state
 field_name: field_log_in_state
 entity_type: node
-bundle: page
+bundle: promotion
 label: 'Log-in State'
 description: ''
-required: true
-translatable: false
+required: false
+translatable: true
 default_value:
   -
     value: '0'
-  -
-    value: '1'
 default_value_callback: ''
 settings: {  }
 field_type: list_string

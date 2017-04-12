@@ -15,11 +15,11 @@ third_party_settings:
     publish_enable: true
     publish_past_date: publish
     publish_required: false
-    publish_revision: false
+    publish_revision: true
     publish_touch: false
     unpublish_enable: true
     unpublish_required: false
-    unpublish_revision: false
+    unpublish_revision: true
 name: 'Lobby - Banner Slider'
 type: lobby_banner_slider
 description: 'Use for banner slider on the lobby page.'

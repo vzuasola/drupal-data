@@ -1,0 +1,18 @@
+uuid: cccf06ab-26b1-49d9-8360-50f8d5b9bcc8
+langcode: zh-hant
+status: true
+dependencies:
+  config:
+    - node.type.promotion
+id: node.promotion.publish_on
+field_name: publish_on
+entity_type: node
+bundle: promotion
+label: 'Publish on'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: timestamp
