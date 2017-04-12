@@ -63,9 +63,12 @@ $sites['dev-admin.elysium-dfbt.com'] = 'webcomposer';
 $sites['account.drupal.dev'] = 'account';
 $sites['account.drupal.local'] = 'account';
 $sites['dev-account.elysium-dfbt.com'] = 'account';
+$sites['dev-cms-account.elysium-dfbt.com'] = 'account';
 
 // Casino Site Instances
 $sites['casino.drupal.dev'] = 'casino';
 $sites['casino.drupal.local'] = 'casino';
 $sites['dev-casino.elysium-dfbt.com'] = 'casino';
+$sites['dev-cms-casino.elysium-dfbt.com'] = 'casino';
 $sites['dev-csngold.elysium-dfbt.com'] = 'casino';
+$sites['dev-cms-csngold.elysium-dfbt.com'] = 'casino';
