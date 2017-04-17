@@ -54,9 +54,9 @@ class MyAccountLivechatForm extends ConfigFormBase
         ];
 
         $form['field_configuration']['live_chat_link'] = [
-            '#type' => 'textfield',
+            '#type' => 'textarea',
             '#title' => t('Live Chat Link'),
-            '#size' => 255,
+            '#size' => 500,
             '#required' => true,
             '#description' => $this->t('Link for Live Chat.'),
             '#default_value' => $myAccountCoreConfig->get('live_chat_link')
