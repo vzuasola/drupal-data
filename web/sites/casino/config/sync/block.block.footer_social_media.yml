@@ -1,31 +1,34 @@
-uuid: 113ce42b-dec6-4cf4-aa3b-a9434689e7c5
-langcode: zh-hans
+uuid: 7350138b-4cbd-4d86-a51f-5bd2ffa7b1ad
+langcode: zh-hant
 status: true
 dependencies:
   content:
-    - 'block_content:social_media_block:9f055538-1f5f-4caa-900a-6f72a273f88e'
+    - 'block_content:social_media_block:8cee3b07-6bdf-4659-bdef-0eb295f9f653'
   module:
     - block_content
-    - system
+    - language
   theme:
     - bartik
 id: footer_social_media
 theme: bartik
-region: sidebar_second
+region: footer_third
 weight: 0
 provider: null
-plugin: 'block_content:9f055538-1f5f-4caa-900a-6f72a273f88e'
+plugin: 'block_content:8cee3b07-6bdf-4659-bdef-0eb295f9f653'
 settings:
-  id: 'block_content:9f055538-1f5f-4caa-900a-6f72a273f88e'
-  label: 'Follow us and receive the latest updates - sc'
+  id: 'block_content:8cee3b07-6bdf-4659-bdef-0eb295f9f653'
+  label: 'Social Media Link sc'
   provider: block_content
   label_display: visible
   status: true
   info: ''
   view_mode: full
 visibility:
-  request_path:
-    id: request_path
-    pages: /banner-slider
-    negate: true
-    context_mapping: {  }
+  language:
+    id: language
+    langcodes:
+      zh-hans: zh-hans
+      zh-hant: zh-hant
+    negate: false
+    context_mapping:
+      language: '@language.current_language_context:language_interface'

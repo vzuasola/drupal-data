@@ -1,5 +1,5 @@
 langcode: zh-hans
 _core:
   default_config_hash: zrDzV-6LU1cRUG3p_gAd8_FHy7pnRz8SS-D4uOGgb04
-promo_block_title: 'Promotion Block '
-promo_block_visibility: "/promo3\r\n/promo1"
+promo_block_title: 'Promotion Block-sc'
+promo_block_visibility: "/promo-2\r\n/promo-3"

@@ -1,19 +1,19 @@
-uuid: 93755a95-e5d4-48ca-a229-c4d00a36eb53
+uuid: d7fc347d-dbf7-40bb-a6f7-92aa74f07090
 langcode: zh-hans
 status: true
 dependencies:
   config:
-    - field.storage.node.field_half_tile_link
+    - field.storage.node.field_right_side_block_link
     - node.type.promotion
   module:
     - link
-id: node.promotion.field_half_tile_link
-field_name: field_half_tile_link
+id: node.promotion.field_right_side_block_link
+field_name: field_right_side_block_link
 entity_type: node
 bundle: promotion
-label: 'Half Tile Link'
+label: 'Right Side Block Link'
 description: ''
-required: false
+required: true
 translatable: true
 default_value: {  }
 default_value_callback: ''
