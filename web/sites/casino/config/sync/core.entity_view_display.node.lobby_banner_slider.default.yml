@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.lobby_banner_slider.field_banner_link_target
     - field.field.node.lobby_banner_slider.field_content_position
     - field.field.node.lobby_banner_slider.field_image
+    - field.field.node.lobby_banner_slider.field_log_in_state
     - node.type.lobby_banner_slider
   module:
     - image
@@ -57,8 +58,13 @@ content:
       image_link: ''
     third_party_settings: {  }
     type: image
+  field_log_in_state:
+    weight: 106
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
   links:
     weight: 100
 hidden:
-  field_log_in_state: true
   langcode: true

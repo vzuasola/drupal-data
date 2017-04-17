@@ -1017,7 +1017,7 @@ display:
   rest_export_1:
     display_plugin: rest_export
     id: rest_export_1
-    display_title: Default
+    display_title: Pre-Post
     position: 1
     display_options:
       display_extenders: {  }
@@ -1149,7 +1149,7 @@ display:
   rest_export_2:
     display_plugin: rest_export
     id: rest_export_2
-    display_title: Pre-Login
+    display_title: Pre
     position: 1
     display_options:
       display_extenders: {  }
@@ -1268,7 +1268,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          operator: and
+          operator: or
           value:
             - '0'
           group: 1
@@ -1307,7 +1307,7 @@ display:
         operator: AND
         groups:
           1: AND
-      display_description: 'All banners that are accessible on pre-login only'
+      display_description: ''
     cache_metadata:
       max-age: 0
       contexts:
@@ -1320,7 +1320,7 @@ display:
   rest_export_3:
     display_plugin: rest_export
     id: rest_export_3
-    display_title: Post-Login
+    display_title: Post
     position: 1
     display_options:
       display_extenders: {  }
@@ -1439,7 +1439,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          operator: and
+          operator: or
           value:
             1: '1'
           group: 1
@@ -1478,7 +1478,7 @@ display:
         operator: AND
         groups:
           1: AND
-      display_description: 'All banners that are accessible on post-login only'
+      display_description: ''
     cache_metadata:
       max-age: 0
       contexts:

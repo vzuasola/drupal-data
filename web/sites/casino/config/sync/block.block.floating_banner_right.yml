@@ -1,9 +1,9 @@
-uuid: f456c04f-8c58-420d-addd-8801585c9f87
-langcode: zh-hant
+uuid: 0eee60b0-02a8-4a12-936c-4a7a4903935d
+langcode: zh-hans
 status: true
 dependencies:
   content:
-    - 'block_content:floating_banner_right:95383e64-428d-4519-b83a-8580b6697d1e'
+    - 'block_content:floating_banner_right:9499d64f-ac9f-4b15-9354-d9a268aa3a21'
   module:
     - block_content
   theme:
@@ -13,9 +13,9 @@ theme: bartik
 region: footer_fourth
 weight: 0
 provider: null
-plugin: 'block_content:95383e64-428d-4519-b83a-8580b6697d1e'
+plugin: 'block_content:9499d64f-ac9f-4b15-9354-d9a268aa3a21'
 settings:
-  id: 'block_content:95383e64-428d-4519-b83a-8580b6697d1e'
+  id: 'block_content:9499d64f-ac9f-4b15-9354-d9a268aa3a21'
   label: 'Right Floating Banner'
   provider: block_content
   label_display: visible

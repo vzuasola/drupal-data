@@ -1,12 +1,12 @@
-uuid: 8ca8db88-65e2-4b38-a62d-6417098714f6
+uuid: e4e48d4a-45ca-4b07-adb8-c3c35ea21629
 langcode: zh-hans
 status: true
 dependencies:
   module:
     - link
     - node
-id: node.field_full_tile_link
-field_name: field_full_tile_link
+id: node.field_right_side_block_link
+field_name: field_right_side_block_link
 entity_type: node
 type: link
 settings: {  }
