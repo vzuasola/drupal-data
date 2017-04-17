@@ -14,7 +14,7 @@ my_account_core.livechat:
       type: label
       label: 'Live Chat Text'
     live_chat_link:
-      type: label
+      type: text
       label: 'Live Chat Link'
     jwt_config:
       type: mapping
