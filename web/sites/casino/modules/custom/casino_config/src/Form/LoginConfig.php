@@ -81,6 +81,17 @@ class LoginConfig extends ConfigFormBase{
             '#title' => $this->t('Invalid Username and Password'),
             '#default_value' => $config->get('error_message_invalid_passname'),
         );
+        $form['login_form_error_messages_details']['error_message_account_suspended'] = array(
+            '#type' => 'textfield',
+            '#title' => $this->t('Player account is Suspended/Closed'),
+            '#default_value' => $config->get('error_message_account_suspended'),
+        );
+        $form['login_form_error_messages_details']['error_message_account_locked'] = array(
+            '#type' => 'textfield',
+            '#title' => $this->t('  Player account is locked after (X) consecutive login attempt'),
+            '#description' => $this->t('Note: number of attempts (X) and number of minutes (Y) configuration is located at the Middleware.'),
+            '#default_value' => $config->get('error_message_account_locked'),
+        );
 
         $form['login_form_error_messages_details']['error_message_service_not_available'] = array(
             '#type' => 'textfield',
@@ -107,7 +118,9 @@ class LoginConfig extends ConfigFormBase{
             'error_message_blank_password',
             'error_message_blank_passname',
             'error_message_invalid_passname',
-            'error_message_service_not_available'
+            'error_message_service_not_available',
+            'error_message_account_suspended',
+            'error_message_account_locked'
         );
         foreach($loginValuesKeys as $keys){
             $this->config('casino_config.login_config')->set($keys, $form_state->getValue($keys))->save();

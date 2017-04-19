@@ -7,3 +7,5 @@ login_issue_text: 'Cant login'
 login_issue_link: 'http://google.com'
 sc_lang_text: chinese-sc-test
 ch_lang_text: chinese-ch-test
+balance_error_text: 'Cannot Load Balance'
+cashier_icon_hover_text: Cashier
