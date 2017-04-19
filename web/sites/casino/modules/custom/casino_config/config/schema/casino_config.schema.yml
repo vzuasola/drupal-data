@@ -128,6 +128,9 @@ casino_config.header_config:
     balance_error_text:
       type: label
       label: 'Balance Error Message'
+    cashier_icon_hover_text:
+      type: label
+      label: 'Cashier Icon Hover Text'
 
 casino_config.promo_right_block:
   type: mapping
