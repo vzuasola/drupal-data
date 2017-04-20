@@ -1,0 +1,16 @@
+uuid: af2ba987-8a5f-4a7f-913d-d8422a4191da
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - block_content.type.floating_banner_left
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: block_content.floating_banner_left
+target_entity_type_id: block_content
+target_bundle: floating_banner_left
+default_langcode: site_default
+language_alterable: true

@@ -72,3 +72,5 @@ $sites['dev-casino.elysium-dfbt.com'] = 'casino';
 $sites['dev-cms-casino.elysium-dfbt.com'] = 'casino';
 $sites['dev-csngold.elysium-dfbt.com'] = 'casino';
 $sites['dev-cms-csngold.elysium-dfbt.com'] = 'casino';
+
+$sites['casino-gold.drupal.local'] = 'casino-gold';

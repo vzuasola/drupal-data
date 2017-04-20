@@ -1,0 +1,23 @@
+uuid: 1ca2b920-de19-4924-a7a4-1d08700f1307
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - block_content.type.floating_banner_left
+    - field.storage.block_content.field_link_target
+  module:
+    - options
+id: block_content.floating_banner_left.field_link_target
+field_name: field_link_target
+entity_type: block_content
+bundle: floating_banner_left
+label: 'Link Target'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: _top
+default_value_callback: ''
+settings: {  }
+field_type: list_string
