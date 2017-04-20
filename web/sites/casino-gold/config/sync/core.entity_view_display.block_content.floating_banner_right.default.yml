@@ -1,0 +1,57 @@
+uuid: dcb1ccc0-95a4-4f2b-af8e-b76e0193d621
+langcode: zh-hant
+status: true
+dependencies:
+  config:
+    - block_content.type.floating_banner_right
+    - field.field.block_content.floating_banner_right.field_banner_items_right
+    - field.field.block_content.floating_banner_right.field_icon
+    - field.field.block_content.floating_banner_right.field_page_visibility
+    - field.field.block_content.floating_banner_right.field_title
+    - field.field.block_content.floating_banner_right.field_title_layout
+  module:
+    - entity_reference_revisions
+    - image
+    - options
+id: block_content.floating_banner_right.default
+targetEntityType: block_content
+bundle: floating_banner_right
+mode: default
+content:
+  field_banner_items_right:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+  field_icon:
+    weight: 1
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  field_page_visibility:
+    weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+  field_title:
+    weight: 4
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_title_layout:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+hidden:
+  langcode: true

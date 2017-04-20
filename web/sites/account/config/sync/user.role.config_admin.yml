@@ -1,0 +1,26 @@
+uuid: 7d13658f-d85f-4e63-b6b8-cbc3667ae96a
+langcode: en
+status: true
+dependencies: {  }
+id: config_admin
+label: 'Config Admin'
+weight: 3
+is_admin: null
+permissions:
+  0: 'translate configuration'
+  1: 'administer languages'
+  2: 'administer my_account core'
+  3: 'administer my_account error_handler'
+  4: 'administer my_account change password form'
+  5: 'administer my_account registration form'
+  6: 'customize shortcut links'
+  7: 'switch shortcut sets'
+  8: 'administer menu'
+  10: 'access administration pages'
+  11: 'access site in maintenance mode'
+  12: 'view the administration theme'
+  13: 'access toolbar'
+  14: 'change own username'
+  15: 'select account cancellation method'
+  16: 'access user profiles'
+  17: 'administer nodes'

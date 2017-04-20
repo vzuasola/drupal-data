@@ -1,0 +1,19 @@
+uuid: 2b64439e-7edf-45a9-8a92-227d158c7d27
+langcode: zh-hans
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+id: paragraph.field_summary
+field_name: field_summary
+entity_type: paragraph
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
