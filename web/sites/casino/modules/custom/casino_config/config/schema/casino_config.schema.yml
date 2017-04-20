@@ -145,3 +145,29 @@ casino_config.promo_right_block:
     promo_block_visibility:
       type: text
       label: 'Promo Right Block Visibility'
+
+casino_config.autologout_config:
+  type: mapping
+  label: 'Auto Logout Configurations'
+  mapping:
+    max_session_time:
+      type: label
+      label: 'Maximum Session Time'
+    autologout_box_title:
+      type: label
+      label: 'Auto Logout LightBox Title'
+    autologout_box_content:
+      type: label
+      label: 'Auto Logout LightBox Content'
+    affirmative_button_text:
+      type: label
+      label: 'Affirmative Response text'
+    negative_button_text:
+      type: label
+      label: 'Negative Response text'
+    notification_title:
+      type: label
+      label: 'Notification Box Settings'
+    notification_content:
+      type: label
+      label: 'Autologout Notification Box Title'
