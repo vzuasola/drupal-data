@@ -1,0 +1,17 @@
+uuid: 7c425606-37c8-4149-bb49-32e5c471ae3e
+langcode: zh-hans
+status: true
+dependencies:
+  module:
+    - casino_config
+    - serialization
+    - user
+id: casino_rest_resource
+plugin_id: casino_rest_resource
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+    supported_auth:
+      - cookie

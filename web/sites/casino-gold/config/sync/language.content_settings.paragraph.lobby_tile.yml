@@ -1,0 +1,16 @@
+uuid: 3a274951-feed-4232-8e5e-93bf15e5c73b
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.lobby_tile
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: paragraph.lobby_tile
+target_entity_type_id: paragraph
+target_bundle: lobby_tile
+default_langcode: site_default
+language_alterable: true

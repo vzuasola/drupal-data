@@ -1,0 +1,21 @@
+uuid: 6d84ed69-6b16-4091-a40e-d325dda42801
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_thumbnail_summary
+    - node.type.promotion
+  module:
+    - text
+id: node.promotion.field_thumbnail_summary
+field_name: field_thumbnail_summary
+entity_type: node
+bundle: promotion
+label: 'Thumbnail summary'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
