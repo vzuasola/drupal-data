@@ -1,0 +1,13 @@
+uuid: 71d6aacc-61d6-42d1-83bc-ee05b26cbdfa
+langcode: zh-hans
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: Zx0jD1Klh5tZaGJy8uOeR_2MCu9FDM4xg7TaUJUEbkI
+id: node_delete_action
+label: 'Delete content'
+type: node
+plugin: node_delete_action
+configuration: {  }
