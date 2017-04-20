@@ -1,0 +1,14 @@
+uuid: 3316cb96-5456-46d8-839d-ea8ac3f2203d
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.config_admin
+  module:
+    - user
+id: user_remove_role_action.config_admin
+label: 'Remove the Config Admin role from the selected users'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: config_admin
