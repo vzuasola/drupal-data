@@ -1,0 +1,42 @@
+uuid: a3e41245-068e-4774-a69c-d267adeba25c
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - block_content.type.lobby_tile
+    - field.field.block_content.lobby_tile.field_tile
+  module:
+    - paragraphs
+id: block_content.lobby_tile.default
+targetEntityType: block_content
+bundle: lobby_tile
+mode: default
+content:
+  field_tile:
+    type: entity_reference_paragraphs
+    weight: 2
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+  translation:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

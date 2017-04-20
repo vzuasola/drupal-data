@@ -5,6 +5,7 @@ dependencies:
   config:
     - block_content.type.social_media_block
     - field.field.block_content.social_media_block.field_block_enable
+    - field.field.block_content.social_media_block.field_sm_blurb
     - field.field.block_content.social_media_block.field_social_media
   module:
     - entity_reference_revisions
@@ -22,6 +23,14 @@ content:
       format_custom_true: ''
     third_party_settings: {  }
     type: boolean
+    region: content
+  field_sm_blurb:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
     region: content
   field_social_media:
     type: entity_reference_revisions_entity_view

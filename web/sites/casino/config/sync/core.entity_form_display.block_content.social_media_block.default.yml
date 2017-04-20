@@ -5,6 +5,7 @@ dependencies:
   config:
     - block_content.type.social_media_block
     - field.field.block_content.social_media_block.field_block_enable
+    - field.field.block_content.social_media_block.field_sm_blurb
     - field.field.block_content.social_media_block.field_social_media
   module:
     - paragraphs
@@ -19,6 +20,14 @@ content:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
+    region: content
+  field_sm_blurb:
+    weight: 26
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
   field_social_media:
     type: entity_reference_paragraphs
