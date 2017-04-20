@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - block_content.type.sponsorship_block
+    - field.field.block_content.sponsorship_block.field_block_enable
     - field.field.block_content.sponsorship_block.field_sponsor_logo
   module:
     - entity_reference_revisions
@@ -12,6 +13,15 @@ targetEntityType: block_content
 bundle: sponsorship_block
 mode: default
 content:
+  field_block_enable:
+    weight: 1
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
   field_sponsor_logo:
     type: entity_reference_revisions_entity_view
     weight: 0
