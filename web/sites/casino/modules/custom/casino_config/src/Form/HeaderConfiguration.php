@@ -108,17 +108,24 @@ class HeaderConfiguration extends ConfigFormBase {
       '#default_value' => $config->get('balance_error_text'),
       '#required' => TRUE,
     );
-    $form['cashier_group'] = array(
+    $form['header_icon_group'] = array(
       '#type' => 'details',
-      '#title' => $this->t('Cashier Settings'),
+      '#title' => $this->t('Header Icon Settings'),
       '#collapsible' => TRUE,
       '#group' => 'header_settings_tab',
     );
-    $form['cashier_group']['cashier_icon_hover_text'] = array(
+    $form['header_icon_group']['cashier_icon_hover_text'] = array(
       '#type' => 'textfield',
       '#title' => $this->t('Cashier Icon Hover Text.'),
       '#description' => $this->t('Cashier Icon Hover Text.'),
       '#default_value' => $config->get('cashier_icon_hover_text'),
+      '#required' => TRUE,
+    );
+    $form['header_icon_group']['profile_icon_hover_text'] = array(
+      '#type' => 'textfield',
+      '#title' => $this->t('My Profile Icon Hover Text.'),
+      '#description' => $this->t('My Profile Icon Hover Text.'),
+      '#default_value' => $config->get('profile_icon_hover_text'),
       '#required' => TRUE,
     );
 
@@ -152,6 +159,7 @@ class HeaderConfiguration extends ConfigFormBase {
       'sc_lang_text',
       'ch_lang_text',
       'balance_error_text',
+      'profile_icon_hover_text',
       'cashier_icon_hover_text',
       'product_menu_new_tag'
     );
