@@ -6,8 +6,6 @@ username_field:
       placeholder: 'Username Placeholder'
     required: '1'
     wrapper_class: username
-    tooltip_required: '0'
-    tooltip_message: 'Field tooltip'
 currency_field:
   weight: '1'
   options:
@@ -17,8 +15,6 @@ currency_field:
     required: '1'
     error: 'Error Currency Field Error message'
     wrapper_class: currency_wrapper
-    tooltip_required: '0'
-    tooltip_message: 'Field tooltip'
 first_name_field:
   weight: '2'
   options:
@@ -28,8 +24,6 @@ first_name_field:
     required: '1'
     error: 'Error message for first name field'
     wrapper_class: first_name
-    tooltip_required: '0'
-    tooltip_message: 'Field tooltip'
 last_name_field:
   weight: '3'
   options:
@@ -39,8 +33,6 @@ last_name_field:
     required: '1'
     error: 'Last name field error message'
     wrapper_class: lastname
-    tooltip_required: '0'
-    tooltip_message: 'Field tooltip'
 dob_field:
   weight: '4'''
   options:
@@ -48,8 +40,6 @@ dob_field:
     required: '1'
     error: 'Error message for dob'
     wrapper_class: dob
-    tooltip_required: '0'
-    tooltip_message: 'Field tooltip'
 dob_month:
   weight: '6'
   options:
@@ -66,20 +56,11 @@ country_field:
   weight: '8'
   options:
     label: Country
+    attr:
+      placeholder: Country
     required: '1'
-    choices: "Korea|Korea\r\nZimbabwe|Zimbabwe\r\nChina|China\r\nIndia|india"
+    error: 'Error message for country'
     wrapper_class: country
-    tooltip_required: '1'
-    tooltip_message: 'Text information'
-gender_field:
-  weight: '8'
-  options:
-    label: Gender
-    required: '1'
-    choices: "M|Male\r\nF|Female"
-    wrapper_class: gender
-    tooltip_required: '1'
-    tooltip_message: 'Text information'
 email_field:
   weight: '9'
   options:
@@ -89,8 +70,6 @@ email_field:
     required: '1'
     error: 'Error message for Email'
     wrapper_class: email
-    tooltip_required: '1'
-    tooltip_message: 'Email address tooltip'
 communication_detail_field:
   options:
     label: 'Communication Details'
@@ -106,8 +85,6 @@ mobile_number_field:
     required: '1'
     error: 'Error message for Mobile'
     wrapper_class: mobile_number
-    tooltip_required: '0'
-    tooltip_message: 'Field tooltip'
 language_field:
   weight: '11'
   options:
@@ -118,15 +95,5 @@ language_field:
     required: '1'
     error: 'Error field for Language'
     wrapper_class: language
-    tooltip_required: '1'
-    tooltip_message: 'Language tooltip'
-submit_button_label_field:
-  options:
-    label: 'Save changes'
-    wrapper_class: change-profile-submit
-cancel_button_label_field:
-  options:
-    label: Cancel
-    wrapper_class: change-profile-cancel
 _core:
   default_config_hash: 7yTXCtTTnT75cn_sdn6Wrq5U1w2jZmt-IkXPdbx7A8U
