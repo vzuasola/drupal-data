@@ -1,0 +1,22 @@
+uuid: d8c812f3-f7b7-4e1a-b71c-42f2a322c618
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.promotion
+  module:
+    - text
+id: node.promotion.body
+field_name: body
+entity_type: node
+bundle: promotion
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

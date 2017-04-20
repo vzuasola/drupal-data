@@ -1,0 +1,25 @@
+uuid: 0eee60b0-02a8-4a12-936c-4a7a4903935d
+langcode: zh-hans
+status: true
+dependencies:
+  content:
+    - 'block_content:floating_banner_right:9499d64f-ac9f-4b15-9354-d9a268aa3a21'
+  module:
+    - block_content
+  theme:
+    - bartik
+id: floating_banner_right
+theme: bartik
+region: footer_fourth
+weight: 0
+provider: null
+plugin: 'block_content:9499d64f-ac9f-4b15-9354-d9a268aa3a21'
+settings:
+  id: 'block_content:9499d64f-ac9f-4b15-9354-d9a268aa3a21'
+  label: 'Right Floating Banner'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

@@ -4,6 +4,8 @@ status: true
 dependencies:
   config:
     - block_content.type.social_media_block
+    - field.field.block_content.social_media_block.field_block_enable
+    - field.field.block_content.social_media_block.field_sm_blurb
     - field.field.block_content.social_media_block.field_social_media
   module:
     - entity_reference_revisions
@@ -12,6 +14,24 @@ targetEntityType: block_content
 bundle: social_media_block
 mode: default
 content:
+  field_block_enable:
+    weight: 1
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_sm_blurb:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
   field_social_media:
     type: entity_reference_revisions_entity_view
     weight: 0
@@ -20,5 +40,6 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
+    region: content
 hidden:
   langcode: true

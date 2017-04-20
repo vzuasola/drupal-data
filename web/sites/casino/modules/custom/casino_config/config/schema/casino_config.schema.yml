@@ -131,6 +131,9 @@ casino_config.header_config:
     cashier_icon_hover_text:
       type: label
       label: 'Cashier Icon Hover Text'
+    product_menu_new_tag:
+      type: label
+      label: 'New tag text'
 
 casino_config.promo_right_block:
   type: mapping

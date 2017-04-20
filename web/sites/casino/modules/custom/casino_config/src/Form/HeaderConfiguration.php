@@ -122,6 +122,21 @@ class HeaderConfiguration extends ConfigFormBase {
       '#required' => TRUE,
     );
 
+    $form['newtag_group'] = array(
+      '#type' => 'details',
+      '#title' => $this->t('New Tag Settings'),
+      '#collapsible' => TRUE,
+      '#group' => 'header_settings_tab',
+    );
+    $form['newtag_group']['product_menu_new_tag'] = array(
+      '#type' => 'textfield',
+      '#title' => $this->t('New tag text'),
+      '#description' => $this->t('New tag text'),
+      '#default_value' => $config->get('product_menu_new_tag'),
+      '#required' => TRUE,
+    );
+
+
     return parent::buildForm($form, $form_state);
   }
 
@@ -138,6 +153,7 @@ class HeaderConfiguration extends ConfigFormBase {
       'ch_lang_text',
       'balance_error_text',
       'cashier_icon_hover_text',
+      'product_menu_new_tag'
     );
     foreach ($keys as $key) {
       $this->config('casino_config.header_config')->set($key, $form_state->getValue($key))->save();

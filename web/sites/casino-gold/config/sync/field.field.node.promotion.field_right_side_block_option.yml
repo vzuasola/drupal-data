@@ -1,0 +1,21 @@
+uuid: 755142cf-7485-4fc4-94cf-25fa9ccbb456
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_right_side_block_option
+    - node.type.promotion
+  module:
+    - options
+id: node.promotion.field_right_side_block_option
+field_name: field_right_side_block_option
+entity_type: node
+bundle: promotion
+label: 'Right Side Block option'
+description: 'Option to add the promotions to the Right Side Block.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
