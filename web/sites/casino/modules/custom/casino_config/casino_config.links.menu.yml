@@ -76,3 +76,8 @@ casino_config.admin_footer_configuration:
   description: 'Casino Header Configurations'
   route_name: casino_config.footer_config_form
 
+casino_config.autologout_config:
+  title: 'Auto Logout Configurations'
+  parent: casino_config.casino_config_list
+  description: 'Casino Player Auto Logout Configurations'
+  route_name: casino_config.autologout_config_form
