@@ -108,19 +108,41 @@ class HeaderConfiguration extends ConfigFormBase {
       '#default_value' => $config->get('balance_error_text'),
       '#required' => TRUE,
     );
-    $form['cashier_group'] = array(
+    $form['header_icon_group'] = array(
       '#type' => 'details',
-      '#title' => $this->t('Cashier Settings'),
+      '#title' => $this->t('Header Icon Settings'),
       '#collapsible' => TRUE,
       '#group' => 'header_settings_tab',
     );
-    $form['cashier_group']['cashier_icon_hover_text'] = array(
+    $form['header_icon_group']['cashier_icon_hover_text'] = array(
       '#type' => 'textfield',
       '#title' => $this->t('Cashier Icon Hover Text.'),
       '#description' => $this->t('Cashier Icon Hover Text.'),
       '#default_value' => $config->get('cashier_icon_hover_text'),
       '#required' => TRUE,
     );
+    $form['header_icon_group']['profile_icon_hover_text'] = array(
+      '#type' => 'textfield',
+      '#title' => $this->t('My Profile Icon Hover Text.'),
+      '#description' => $this->t('My Profile Icon Hover Text.'),
+      '#default_value' => $config->get('profile_icon_hover_text'),
+      '#required' => TRUE,
+    );
+
+    $form['newtag_group'] = array(
+      '#type' => 'details',
+      '#title' => $this->t('New Tag Settings'),
+      '#collapsible' => TRUE,
+      '#group' => 'header_settings_tab',
+    );
+    $form['newtag_group']['product_menu_new_tag'] = array(
+      '#type' => 'textfield',
+      '#title' => $this->t('New tag text'),
+      '#description' => $this->t('New tag text'),
+      '#default_value' => $config->get('product_menu_new_tag'),
+      '#required' => TRUE,
+    );
+
 
     return parent::buildForm($form, $form_state);
   }
@@ -137,7 +159,9 @@ class HeaderConfiguration extends ConfigFormBase {
       'sc_lang_text',
       'ch_lang_text',
       'balance_error_text',
+      'profile_icon_hover_text',
       'cashier_icon_hover_text',
+      'product_menu_new_tag'
     );
     foreach ($keys as $key) {
       $this->config('casino_config.header_config')->set($key, $form_state->getValue($key))->save();
