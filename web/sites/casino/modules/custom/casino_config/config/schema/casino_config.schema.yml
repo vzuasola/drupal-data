@@ -149,6 +149,15 @@ casino_config.promo_right_block:
       type: text
       label: 'Promo Right Block Visibility'
 
+casino_config.footer_config:
+  type: mapping
+  label: 'Footer configuration'
+  mapping:
+    quicklinks_title:
+      type: label
+      label: 'Quicklinks title'
+      description: 'Text to be displayed in quicklinks title.'
+
 casino_config.autologout_config:
   type: mapping
   label: 'Auto Logout Configurations'
