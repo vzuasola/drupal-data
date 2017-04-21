@@ -174,3 +174,12 @@ casino_config.autologout_config:
     notification_content:
       type: label
       label: 'Autologout Notification Box Title'
+
+casino_config.footer_config:
+  type: mapping
+  label: 'Footer configuration'
+  mapping:
+    quicklinks_title:
+      type: label
+      label: 'Quicklinks title'
+      description: 'Text to be displayed in quicklinks title.'
