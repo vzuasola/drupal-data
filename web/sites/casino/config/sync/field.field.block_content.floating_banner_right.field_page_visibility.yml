@@ -9,7 +9,7 @@ id: block_content.floating_banner_right.field_page_visibility
 field_name: field_page_visibility
 entity_type: block_content
 bundle: floating_banner_right
-label: 'Page Visibility'
+label: Pages
 description: ''
 required: false
 translatable: true

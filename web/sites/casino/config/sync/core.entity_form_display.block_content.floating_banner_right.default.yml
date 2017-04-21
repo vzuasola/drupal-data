@@ -7,6 +7,7 @@ dependencies:
     - field.field.block_content.floating_banner_right.field_banner_items_right
     - field.field.block_content.floating_banner_right.field_icon
     - field.field.block_content.floating_banner_right.field_page_visibility
+    - field.field.block_content.floating_banner_right.field_page_visibility_option
     - field.field.block_content.floating_banner_right.field_title
     - field.field.block_content.floating_banner_right.field_title_layout
     - image.style.thumbnail
@@ -20,7 +21,7 @@ mode: default
 content:
   field_banner_items_right:
     type: entity_reference_paragraphs
-    weight: 9
+    weight: 8
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -29,6 +30,7 @@ content:
       form_display_mode: default
       default_paragraph_type: ''
     third_party_settings: {  }
+    region: content
   field_icon:
     weight: 3
     settings:
@@ -36,13 +38,21 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+    region: content
   field_page_visibility:
-    weight: 8
+    weight: 7
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
     type: string_textarea
+    region: content
+  field_page_visibility_option:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_title:
     weight: 4
     settings:
@@ -50,11 +60,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
   field_title_layout:
     weight: 5
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
   info:
     type: string_textfield
     weight: 0
@@ -62,13 +74,16 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
   langcode:
     type: language_select
     weight: 1
     settings: {  }
     third_party_settings: {  }
+    region: content
   translation:
     weight: 2
+    region: content
     settings: {  }
     third_party_settings: {  }
 hidden: {  }
