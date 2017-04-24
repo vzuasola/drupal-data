@@ -1,0 +1,8 @@
+username_placeholder: 'Username - ch'
+password_placeholder: 'Password - ch'
+login_bottom_label: 'Login - ch'
+error_message_blank_username: 'Username is required. - ch'
+error_message_blank_password: 'Password is required. - ch'
+error_message_blank_passname: 'Username and Password is required. - ch'
+error_message_invalid_passname: 'Sorry the Username and Password you entered does not match. Please try again. - ch'
+error_message_service_not_available: 'Service not available. - ch'

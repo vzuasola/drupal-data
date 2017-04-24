@@ -105,12 +105,6 @@ casino_config.login_config:
     error_message_invalid_passname:
       type: label
       label: 'Invalid Username and Password'
-    error_message_account_suspended:
-      type: label
-      label: 'Suspended Player Account'
-    error_message_account_locked:
-      type: label
-      label: 'Locked Player Account'
     error_message_service_not_available:
       type: label
       label: 'Error thrown by services'
