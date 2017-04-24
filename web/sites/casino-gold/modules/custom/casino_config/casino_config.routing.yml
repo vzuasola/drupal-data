@@ -101,3 +101,27 @@ casino_config.promo_right_block_form:
     _title: 'Promo Right Block Configurations'
   requirements:
     _permission: 'administer site configuration'
+
+casino_config.footer_config_form:
+  path: 'admin/config/casino/footer-configuration'
+  defaults:
+    _form: 'Drupal\casino_config\Form\FooterConfiguration'
+    _title: 'Footer configuration'
+  requirements:
+    _permission: 'administer site configuration'
+
+casino_config.autologout_config_form:
+  path: 'admin/config/casino/auto-logout-config'
+  defaults:
+    _form: 'Drupal\casino_config\Form\SessionTimeoutConfig'
+    _title: 'Auto Logout Configurations'
+  requirements:
+    _permission: 'administer site configuration'
+
+casino_config.footer_config_form:
+  path: 'admin/config/casino/footer-configuration'
+  defaults:
+    _form: 'Drupal\casino_config\Form\FooterConfiguration'
+    _title: 'Footer configuration'
+  requirements:
+    _permission: 'administer site configuration'
