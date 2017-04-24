@@ -48,6 +48,11 @@ casino_config.promo_right_block_configuration_tab:
   title: 'Promo Right Block configuration'
   base_route: casino_config.promo_right_block_form
 
+casino_config.footer_configuration_tab:
+  route_name: casino_config.footer_config_form
+  title: 'Footer configuration'
+  base_route: casino_config.footer_config_form
+
 casino_config.autologout_configuration_tab:
   route_name: casino_config.autologout_config_form
   title: 'Auto Logout configurations'

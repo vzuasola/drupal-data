@@ -1,0 +1,23 @@
+uuid: ab6561f6-b962-4114-9478-f79fd0baaf4b
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - block_content.type.floating_banner_right
+    - field.storage.block_content.field_page_visibility_option
+  module:
+    - options
+id: block_content.floating_banner_right.field_page_visibility_option
+field_name: field_page_visibility_option
+entity_type: block_content
+bundle: floating_banner_right
+label: 'Page Visibility'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: '0'
+default_value_callback: ''
+settings: {  }
+field_type: list_string
