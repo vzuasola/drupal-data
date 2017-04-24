@@ -1,195 +1,279 @@
 (function ($, Drupal, drupalSettings, CKEDITOR) {
+    var fontSizes = [
+        ['12px', 'text-12'],
+        ['14px', 'text-14'],
+        ['16px', 'text-16'],
+        ['18px', 'text-18'],
+        ['20px', 'text-20'],
+        ['36px', 'text-36'],
+        ['48px', 'text-48'],
+        ['72px', 'text-72']
+    ];
 
-    CKEDITOR.dtd.$removeEmpty.span = 0;
+    var fontColors = [
+        ['Yelow', 'text-yellow'],
+        ['Red', 'text-red'],
+        ['Dark Red', 'text-dark-red'],
+        ['White', 'text-white'],
+        ['Lightest Gray', 'text-lightest-gray'],
+        ['Light Gray', 'text-light-gray'],
+        ['Gray', 'text-gray'],
+        ['Dark Gray', 'text-dark-gray'],
+        ['Black', 'text-black'],
+        ['Light Gold', 'text-light-gold'],
+    ];
 
-    function getSelectedSpan(editor) {
-        var selection = editor.getSelection();
-        var selectedElement = selection.getSelectedElement();
+    var fontSizesStr = '';
+    $.each(fontSizes, function(key, value) {
+        fontSizesStr += (value[0] + '/' + value[1] + ';');
+    });
 
-        var allowedTags = ['span', 'p', 'ul', 'li', 'div', 'a'];
+    var fontColorsStr = '';
+    $.each(fontColors, function(key, value) {
+        fontColorsStr += (value[0] + '/' + value[1] + ';');
+    });
 
-        if (selectedElement) {
-            for (i = 0; i <= allowedTags.length; i++) {
-                if (selectedElement.is(allowedTags[i])) {
-                    return selectedElement;
-                }
-            }
-        }
-
-        var range = selection.getRanges(true)[0];
-
-        if (range) {
-            range.shrink(CKEDITOR.SHRINK_TEXT);
-
-            for (i = 0; i <= allowedTags.length; i++) {
-                if (editor.elementPath(range.getCommonAncestor()).contains(allowedTags[i], 1)) {
-                    return editor.elementPath(range.getCommonAncestor()).contains(allowedTags[i], 1);
-                }
-            }
-        }
-        return null;
-    }
-
-    var onSelect = function(editor) {
-
-        var span = getSelectedSpan(editor);
-        
-        if (span) {
-            if (span.getAttribute('class') != null) {
-                var classes = span.getAttribute('class').split(' ');
-
-                var fontSizes = editor.ui.get('FontSizes');
-                var fontColors = editor.ui.get('FontColors');
-                
-                for (i = 0; i < classes.length; i++) {
-                    if (classes[i].match(/^text\-[0-9]/)) {
-                        fontSizes.setValue(classes[i], span.getAttribute('data-font-size'));
-                    }
-                    if (classes[i].match(/^text\-[a-zA-Z\-]/)) {
-                        fontColors.setValue(classes[i], span.getAttribute('data-font-color'));
-                    }
-                }
-            }
+    CKEDITOR.config.fontSizes = fontSizesStr;
+    CKEDITOR.config.fontSizesDefaultLabel = '';
+    CKEDITOR.config.fontSizeStyle = {
+        element: 'span',
+        attributes: { 
+            'class': '#(size)'
         }
     };
 
-    var onFontChange = function(editor, value, items) {
-
-        var span = getSelectedSpan(editor);
-        var selection = editor.getSelection();
-        var selectionRange = selection.getRanges(true)[0];
-        var selected_text = selection.getSelectedText();
-        
-
-        if (span) {
-            var className = span.$.className.split(' ');
-            for(i = 0; i < className.length; i++) {
-                if (className[i].match(/^text\-[0-9]/)) {
-                    className.splice(i, 1);
-                }
-            }
-            className.push(value);
-            span.setAttributes({ class: className.join(' ') });
-            span.data('font-size', items[value]);
-        } else {
-            var span = new CKEDITOR.dom.element("span");
-            span.setAttributes({ class: value });
-            span.data('font-size', items[value]);
-            span.setText(selected_text);
-            editor.insertElement(span);   
-            
+    CKEDITOR.config.fontColors = fontColorsStr;
+    CKEDITOR.config.fontColorsDefaultLabel = '';
+    CKEDITOR.config.fontColorStyle = {
+        element: 'span',
+        attributes: { 
+            'class': '#(color)'
         }
-    }
+    };
 
-    var onFontColorChange = function(editor, value, items) {
+    function addCombo( editor, comboName, styleType, lang, entries, defaultLabel, styleDefinition, order ) {
+        var config = editor.config,
+            style = new CKEDITOR.style( styleDefinition );
 
-        var span = getSelectedSpan(editor);
+        // Gets the list of fonts from the settings.
+        var names = entries.split( ';' ),
+            values = [];
 
-        var selected_text = editor.getSelection().getSelectedText();
+        // Create style objects for all fonts.
+        var styles = {};
+        for ( var i = 0; i < names.length; i++ ) {
+            var parts = names[ i ];
 
-        if (span) {
-            var className = span.$.className.split(' ');
-            for(i = 0; i < className.length; i++) {
-                if (className[i].match(/^text\-[a-zA-Z\-]/)) {
-                    className.splice(i, 1);
-                }
+            if ( parts ) {
+                parts = parts.split( '/' );
+
+                var vars = {},
+                    name = names[ i ] = parts[ 0 ];
+
+                vars[ styleType ] = values[ i ] = parts[ 1 ] || name;
+
+                styles[ name ] = new CKEDITOR.style( styleDefinition, vars );
+                styles[ name ]._.definition.name = name;
+            } else {
+                names.splice( i--, 1 );
             }
-            className.push(value);
-            span.setAttributes({ class: className.join(' ') });
-            span.data('font-color', items[value]);
-        } else {
-            var span = new CKEDITOR.dom.element("span");
-            span.setAttributes({ class: value });
-            span.setText(selected_text);  
-            span.data('font-color', items[value]);
-            editor.insertElement(span);   
         }
-    }
+
+        editor.ui.addRichCombo( comboName, {
+            label: lang.label,
+            title: lang.panelTitle,
+            toolbar: 'styles,' + order,
+            allowedContent: style,
+            requiredContent: style,
+            contentTransformations: [
+                [
+                    {
+                        element: 'font',
+                        check: 'span',
+                        left: function( element ) {
+                            return !!element.attributes.size ||
+                                !!element.attributes.align ||
+                                !!element.attributes.face;
+                        },
+                        right: function( element ) {
+                            var sizes = [
+                                '', // Non-existent size "0"
+                                'x-small',
+                                'small',
+                                'medium',
+                                'large',
+                                'x-large',
+                                'xx-large',
+                                '48px' // Closest value to what size="7" might mean.
+                            ];
+
+                            element.name = 'span';
+
+                            if ( element.attributes.size ) {
+                                element.styles[ 'font-size' ] = sizes[ element.attributes.size ];
+                                delete element.attributes.size;
+                            }
+
+                            if ( element.attributes.align ) {
+                                element.styles[ 'text-align' ] = element.attributes.align;
+                                delete element.attributes.align;
+                            }
+
+                            if ( element.attributes.face ) {
+                                element.styles[ 'font-family' ] = element.attributes.face;
+                                delete element.attributes.face;
+                            }
+                        }
+                    }
+                ]
+            ],
+            panel: {
+                css: [ CKEDITOR.skin.getPath( 'editor' ) ].concat( config.contentsCss ),
+                multiSelect: false,
+                attributes: { 'aria-label': lang.panelTitle }
+            },
+
+            init: function() {
+                this.startGroup( lang.panelTitle );
+
+                for ( var i = 0; i < names.length; i++ ) {
+                    var name = names[ i ];
+
+                    // Add the tag entry to the panel list.
+                    this.add( name, styles[ name ].buildPreview(), name );
+                }
+            },
+
+            onClick: function( value ) {
+                editor.focus();
+                editor.fire( 'saveSnapshot' );
+
+                var previousValue = this.getValue(),
+                    style = styles[ value ];
+
+                // When applying one style over another, first remove the previous one (#12403).
+                // NOTE: This is only a temporary fix. It will be moved to the styles system (#12687).
+                if ( previousValue && value != previousValue ) {
+                    var previousStyle = styles[ previousValue ],
+                        range = editor.getSelection().getRanges()[ 0 ];
+
+                    // If the range is collapsed we can't simply use the editor.removeStyle method
+                    // because it will remove the entire element and we want to split it instead.
+                    if ( range.collapsed ) {
+                        var path = editor.elementPath(),
+                            // Find the style element.
+                            matching = path.contains( function( el ) {
+                                return previousStyle.checkElementRemovable( el );
+                            } );
+
+                        if ( matching ) {
+                            var startBoundary = range.checkBoundaryOfElement( matching, CKEDITOR.START ),
+                                endBoundary = range.checkBoundaryOfElement( matching, CKEDITOR.END ),
+                                node, bm;
+
+                            // If we are at both boundaries it means that the element is empty.
+                            // Remove it but in a way that we won't lose other empty inline elements inside it.
+                            // Example: <p>x<span style="font-size:48px"><em>[]</em></span>x</p>
+                            // Result: <p>x<em>[]</em>x</p>
+                            if ( startBoundary && endBoundary ) {
+                                bm = range.createBookmark();
+                                // Replace the element with its children (TODO element.replaceWithChildren).
+                                while ( ( node = matching.getFirst() ) ) {
+                                    node.insertBefore( matching );
+                                }
+                                matching.remove();
+                                range.moveToBookmark( bm );
+
+                            // If we are at the boundary of the style element, move out and copy nested styles/elements.
+                            } else if ( startBoundary || endBoundary ) {
+                                range.moveToPosition( matching, startBoundary ? CKEDITOR.POSITION_BEFORE_START : CKEDITOR.POSITION_AFTER_END );
+                                cloneSubtreeIntoRange( range, path.elements.slice(), matching );
+                            } else {
+                                // Split the element and clone the elements that were in the path
+                                // (between the startContainer and the matching element)
+                                // into the new place.
+                                range.splitElement( matching );
+                                range.moveToPosition( matching, CKEDITOR.POSITION_AFTER_END );
+                                cloneSubtreeIntoRange( range, path.elements.slice(), matching );
+                            }
+
+                            editor.getSelection().selectRanges( [ range ] );
+                        }
+                    } else {
+                        editor.removeStyle( previousStyle );
+                    }
+                }
+
+                editor[ previousValue == value ? 'removeStyle' : 'applyStyle' ]( style );
+
+                editor.fire( 'saveSnapshot' );
+            },
+
+            onRender: function() {
+                editor.on( 'selectionChange', function( ev ) {
+                    var currentValue = this.getValue();
+
+                    var elementPath = ev.data.path,
+                        elements = elementPath.elements;
+
+                    // For each element into the elements path.
+                    for ( var i = 0, element; i < elements.length; i++ ) {
+                        element = elements[ i ];
+
+                        // Check if the element is removable by any of
+                        // the styles.
+                        for ( var value in styles ) {
+                            if ( styles[ value ].checkElementMatch( element, true, editor ) ) {
+                                if ( value != currentValue )
+                                    this.setValue( value );
+                                return;
+                            }
+                        }
+                    }
+
+                    // If no styles match, just empty it.
+                    this.setValue( '', defaultLabel );
+                }, this );
+            },
+
+            refresh: function() {
+                if ( !editor.activeFilter.check( style ) )
+                    this.setState( CKEDITOR.TRISTATE_DISABLED );
+            }
+        } );
+    };
+
+    CKEDITOR.dtd.$removeEmpty.span = 0;
 
 
     CKEDITOR.plugins.add('casino_editor', {
             requires : ['richcombo', 'dialog'],
             icons: 'simplelink',
-
+            lang: 'en',
             init: function (editor) {
 
                 this._editor = editor;
                 var config = editor.config;
 
-                // editor.removeListener('link');
+                addCombo( editor, 'FontSizes', 'size', editor.lang.casino_editor.fontSize, config.fontSizes, config.fontSizesDefaultLabel, config.fontSizeStyle, 30 );
+                addCombo( editor, 'FontColors', 'color', editor.lang.casino_editor.fontColor, config.fontColors, config.fontfontColorsDefaultLabel, config.fontColorStyle, 30 );
 
-                // editor.on('contentDom', function() {
-                //     editor.document.on('keyup', function(event) {
-                //         console.log('ye')
-                //     });
-                // });
-
-                // editor.on('doubleclick', function( evt )
-                // {
-                //     onSelect(editor);
-                // });
-
-                editor.ui.addRichCombo('FontSizes',
-                {
-                    label: 'Font Size',
-                    title: 'Font Size',
-                    init: function() {
-                        // TODO: pull this from config?
-                        this.add('text-12', '12px', '12px');
-                        this.add('text-14', '14px', '14px');
-                        this.add('text-16', '16px', '16px');
-                        this.add('text-20', '20px', '20px');
-                        this.add('text-36', '36px', '36px');
-                        this.add('text-48', '48px', '48px');
-                        this.add('text-72', '72px', '72px');
-                    },
-
-                    onClick: function(value, marked)
-                    {
-                        editor.fire( 'saveSnapshot' );
-                        onFontChange(editor, value, this._.items);
-                        this.setValue(value, this._.items[value]);
-                    }
-                });
-
-                editor.ui.addRichCombo('FontColors',
-                {
-                    id: 'fontcolor',
-                    label: 'Font Color',
-                    title: 'Font Color',
-                    init: function() {
-                        // TODO: pull this from config
-                        this.add('text-yellow', 'Yellow', 'Yellow');
-                        this.add('text-red', 'Red', 'Red');
-                        this.add('text-dark-red', 'Dark Red', 'Dark Red');
-                        this.add('text-white', 'White', 'White');
-                        this.add('text-lightest-gray', 'Lightest Gray', 'Lightest Gray');
-                        this.add('text-light-gray', 'Light Gray ', 'Light Gray');
-                        this.add('text-gray', 'Gray', 'Gray');
-                        this.add('text-dark-gray', 'Dark Grey', 'Dark Grey');
-                        this.add('text-black', 'Black', 'Black');
-                        this.add('text-light-gold', 'Light Gold', 'Light Gold');
-                    },
-
-
-                    onClick: function(value)
-                    {
-                        editor.fire( 'saveSnapshot' );
-
-                        onFontColorChange(editor, value, this._.items);
-                        this.setValue(value, this._.items[value]);
-                    }
-                });
 
                 editor.addCommand( 'simplelink', new CKEDITOR.dialogCommand( 'simplelinkDialog' ) );
-
                 editor.ui.addButton( 'SimpleLink', {
                     label: 'Add a link',
                     icons: 'simplelink',
                     command: 'simplelink'
                 });
-
                 CKEDITOR.dialog.add( 'simplelinkDialog', this.path + 'js/dialogs/simplelink.js' );
+
+                editor.addCommand( 'textformat', new CKEDITOR.dialogCommand( 'textFormatDialog' ) );
+                editor.ui.addButton( 'TextFormat', {
+                    label: 'Format Text',
+                    icons: 'textformat',
+                    command: 'textformat'
+                });
+                CKEDITOR.dialog.add( 'textFormatDialog', this.path + 'js/dialogs/textformat.js' );
 
             }
         }
