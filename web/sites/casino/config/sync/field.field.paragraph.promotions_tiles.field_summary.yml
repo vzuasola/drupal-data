@@ -1,0 +1,21 @@
+uuid: a3969c93-047b-41be-9f11-e6b08b6bfb98
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_summary
+    - paragraphs.paragraphs_type.promotions_tiles
+  module:
+    - text
+id: paragraph.promotions_tiles.field_summary
+field_name: field_summary
+entity_type: paragraph
+bundle: promotions_tiles
+label: summary
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
