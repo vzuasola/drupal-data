@@ -6,7 +6,7 @@ function casino_editor_editor_js_settings_alter(&$settings) {
             $settings['editor']['formats'][$text_format_id]['editorSettings']['extraAllowedContent'] = 'span(*)[data-font-color,data-font-size];a(*)[target,href]';
             $settings['editor']['formats'][$text_format_id]['editorSettings']['startupOutlineBlocks'] = true;
             // $settings['editor']['formats'][$text_format_id]['editorSettings']['startupMode'] = 'source';
-            $settings['editor']['formats'][$text_format_id]['editorSettings']['removePlugins'] = 'link';
-        }        
+            $settings['editor']['formats'][$text_format_id]['editorSettings']['removePlugins'] = 'drupallink';
+        }
     }
 }

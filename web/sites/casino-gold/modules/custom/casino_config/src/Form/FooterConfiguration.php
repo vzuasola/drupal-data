@@ -49,7 +49,20 @@ class FooterConfiguration extends ConfigFormBase {
       '#required' => TRUE,
     );
 
+    return parent::buildForm($form, $form_state);
+  }
 
+  /**
+   * {@inheritdoc}
+   */
+  public function submitForm(array &$form, FormStateInterface $form_state) {
+    $keys = array(
+      'quicklinks_title',
+    );
+    foreach ($keys as $key) {
+      $this->config('casino_config.footer_config')->set($key, $form_state->getValue($key))->save();
+    }
+    return parent::submitForm($form, $form_state);
   }
 
 }
