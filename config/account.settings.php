@@ -752,5 +752,5 @@ $settings['file_scan_ignore_directories'] = [
  if (file_exists(__DIR__ . '/database.php')) {
    include __DIR__ . '/database.php';
  }
-$settings['install_profile'] = 'standard';
+$settings['install_profile'] = 'config_installer';
 $config_directories['sync'] = 'sites/account/config/sync';
