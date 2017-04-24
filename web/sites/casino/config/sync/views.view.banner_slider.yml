@@ -1268,7 +1268,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          operator: or
+          operator: and
           value:
             - '0'
           group: 1
@@ -1439,7 +1439,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          operator: or
+          operator: and
           value:
             1: '1'
           group: 1
