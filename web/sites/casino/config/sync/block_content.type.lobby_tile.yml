@@ -1,8 +1,0 @@
-uuid: 4caee13f-f629-45c1-932e-a77e732e5b19
-langcode: zh-hant
-status: true
-dependencies: {  }
-id: lobby_tile
-label: 'Lobby Tile'
-revision: 0
-description: 'Block type for lobby tiles'

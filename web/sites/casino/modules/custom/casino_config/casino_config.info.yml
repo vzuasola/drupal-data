@@ -1,5 +1,0 @@
-name: Casino Configuration
-type: module
-description: Casino Specific Module
-core: 8.x
-package: Casino
