@@ -1,0 +1,20 @@
+uuid: ea771bd9-b985-4188-b2f2-335a13c347d8
+langcode: en
+status: true
+dependencies:
+  module:
+    - hal
+    - serialization
+    - user
+    - webcomposer_blocks
+id: custom_block_resource
+plugin_id: custom_block_resource
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - hal_json
+      - json
+      - xml
+    supported_auth:
+      - cookie
