@@ -66,8 +66,8 @@ $sites['dev-account.elysium-dfbt.com'] = 'account';
 $sites['dev-cms-account.elysium-dfbt.com'] = 'account';
 
 // Casino Site Instances
-$sites['casino-gold.drupal.dev'] = 'casino-gold';
-$sites['casino-gold.drupal.local'] = 'casino-gold';
+$sites['csngold.drupal.dev'] = 'casino-gold';
+$sites['csngold.drupal.local'] = 'casino-gold';
 $sites['dev-csngold.elysium-dfbt.com'] = 'casino-gold';
 $sites['dev-cms-csngold.elysium-dfbt.com'] = 'casino-gold';
 
