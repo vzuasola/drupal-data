@@ -9,7 +9,7 @@ id: block_content.floating_banner_left.field_page_visibility
 field_name: field_page_visibility
 entity_type: block_content
 bundle: floating_banner_left
-label: 'Page Visibility'
+label: 'Except for the following pages'
 description: ''
 required: false
 translatable: true

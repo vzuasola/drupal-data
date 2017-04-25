@@ -7,6 +7,7 @@ dependencies:
     - field.field.block_content.floating_banner_right.field_banner_items_right
     - field.field.block_content.floating_banner_right.field_icon
     - field.field.block_content.floating_banner_right.field_page_visibility
+    - field.field.block_content.floating_banner_right.field_page_visibility_option
     - field.field.block_content.floating_banner_right.field_title
     - field.field.block_content.floating_banner_right.field_title_layout
   module:
@@ -26,6 +27,7 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
+    region: content
   field_icon:
     weight: 1
     label: above
@@ -34,12 +36,21 @@ content:
       image_link: ''
     third_party_settings: {  }
     type: image
+    region: content
   field_page_visibility:
     weight: 6
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
+    region: content
+  field_page_visibility_option:
+    weight: 7
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
   field_title:
     weight: 4
     label: above
@@ -47,11 +58,13 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
   field_title_layout:
     weight: 5
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
+    region: content
 hidden:
   langcode: true
