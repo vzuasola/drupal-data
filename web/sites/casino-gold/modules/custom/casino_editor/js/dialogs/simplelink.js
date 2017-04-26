@@ -14,30 +14,22 @@ CKEDITOR.dialog.add("simplelinkDialog", function(editor) {
                 type: "text",
                 label: "URL",
                 id: "edp-URL",
-                validate: CKEDITOR.dialog.validate.notEmpty( "url cannot be empty." ),
+                validate: CKEDITOR.dialog.validate.regex(/^(\/|http(|s)).*/i, "Please enter a valid url." ),
                 setup: function( element ) {
                     var href = element.getAttribute("href");
-                    var isExternalURL = /^(http|https):\/\//;
                     if(href) {
-                        if(!isExternalURL.test(href)) {
-                            href = "http://" + href;
-                        }
                         this.setValue(href);
                     }
                 },
                 commit: function(element) {
                     var href = this.getValue();
-                    var isExternalURL = /^(http|https):\/\//;
                     if(href) {
-                        if(!isExternalURL.test(href)) {
-                            href = "http://" + href;
-                        }
                         element.setAttribute("href", href);
                         if(!element.getText()) {
                             element.setText(this.getValue());
                         }
                     }    
-                    element.setText(this.getValue());       
+                    element.setText(this.getValue()); 
                 }               
             }, 
             {
