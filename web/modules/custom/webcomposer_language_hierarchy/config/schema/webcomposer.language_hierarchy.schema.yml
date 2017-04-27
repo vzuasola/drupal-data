@@ -1,0 +1,9 @@
+# Schema for configuration files of the Web Composer Language Hierarchy module.
+
+language.entity.*.third_party.webcomposer_language_hierarchy:
+  type: mapping
+  label: 'Webcomposer Per language fallback settings'
+  mapping:
+    webcomposer_fallback_langcode:
+      type: string
+      label: 'Webcomposer Fallback language code'
