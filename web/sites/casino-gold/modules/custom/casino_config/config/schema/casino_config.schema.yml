@@ -143,6 +143,9 @@ casino_config.header_config:
     product_menu_new_tag:
       type: label
       label: 'New tag text'
+    welcome_text:
+      type: label
+      label: 'Welcome Text'
 
 casino_config.promo_right_block:
   type: mapping
