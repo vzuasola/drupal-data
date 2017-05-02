@@ -1,0 +1,8 @@
+uuid: 27844bae-aa0b-45cf-ba96-6925ebb4700f
+langcode: zh-hant
+status: true
+dependencies: {  }
+id: profile-menu-ch
+label: 'Profile Menu CH'
+description: "Profile Menu Items for CH Language\t"
+locked: false
