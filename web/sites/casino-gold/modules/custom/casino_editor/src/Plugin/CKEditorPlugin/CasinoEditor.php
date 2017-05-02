@@ -64,13 +64,13 @@ class CasinoEditor extends CKEditorPluginBase implements CKEditorPluginCssInterf
               ],
           ],
       ],
-      'SimpleLink' => array(
-        'label' => t('Link ckeditor button'),
-        'image' => $modulePath . '/icons/simplelink.png',
+      'Link' => array(
+        'label' => t('Casino Editor Link'),
+        'image' => $modulePath . '/icons/link.png',
       ),
-      'TextFormat' => array(
-        'label' => t('Text Format'),
-        'image' => $modulePath . '/icons/simplelink.png',
+      'Unlink' => array(
+        'label' => t('Casino Editor Unlink'),
+        'image' => $modulePath . '/icons/unlink.png',
       ),
   ];
   }
