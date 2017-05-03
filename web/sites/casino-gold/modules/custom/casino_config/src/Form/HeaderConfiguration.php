@@ -142,6 +142,19 @@ class HeaderConfiguration extends ConfigFormBase {
       '#default_value' => $config->get('product_menu_new_tag'),
       '#required' => TRUE,
     );
+    $form['welcome_text_group'] = array(
+      '#type' => 'details',
+      '#title' => $this->t('Welcome Text Settings'),
+      '#collapsible' => TRUE,
+      '#group' => 'header_settings_tab',
+    );
+    $form['welcome_text_group']['welcome_text'] = array(
+      '#type' => 'textfield',
+      '#title' => $this->t('Welcome Text'),
+      '#description' => $this->t('{username} will be replaced with account username'),
+      '#default_value' => $config->get('welcome_text'),
+      '#required' => TRUE,
+    );
 
 
     return parent::buildForm($form, $form_state);
@@ -161,7 +174,8 @@ class HeaderConfiguration extends ConfigFormBase {
       'balance_error_text',
       'profile_icon_hover_text',
       'cashier_icon_hover_text',
-      'product_menu_new_tag'
+      'product_menu_new_tag',
+      'welcome_text',
     );
     foreach ($keys as $key) {
       $this->config('casino_config.header_config')->set($key, $form_state->getValue($key))->save();
