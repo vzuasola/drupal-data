@@ -1,0 +1,23 @@
+uuid: bbb3f493-f394-49af-8497-449d19c9a1ee
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_block_link_target
+    - node.type.page
+  module:
+    - options
+id: node.page.field_block_link_target
+field_name: field_block_link_target
+entity_type: node
+bundle: page
+label: 'Block Link Target'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: _top
+default_value_callback: ''
+settings: {  }
+field_type: list_string

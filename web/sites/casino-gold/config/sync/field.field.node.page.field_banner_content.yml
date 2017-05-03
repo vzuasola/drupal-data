@@ -1,0 +1,21 @@
+uuid: 05f3fb5a-fa1c-42a9-a86e-113ca128e27b
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_banner_content
+    - node.type.page
+  module:
+    - text
+id: node.page.field_banner_content
+field_name: field_banner_content
+entity_type: node
+bundle: page
+label: 'Banner Content'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

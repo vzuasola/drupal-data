@@ -1,0 +1,28 @@
+uuid: 32982716-9c76-4358-aa83-aa4181607bf0
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_right_side_block_content
+    - node.type.page
+    - node.type.promotion
+id: node.promotion.field_right_side_block_content
+field_name: field_right_side_block_content
+entity_type: node
+bundle: promotion
+label: 'Right Side Block Content'
+description: 'List of basic pages to promote as right side block for this basic page.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      page: page
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
