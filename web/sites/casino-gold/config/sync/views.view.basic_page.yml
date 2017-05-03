@@ -10,6 +10,7 @@ dependencies:
     - rest
     - serialization
     - user
+    - views_arg_order_sort
 id: basic_page
 label: 'Basic Page'
 module: views
@@ -144,85 +145,23 @@ display:
           entity_type: node
           entity_field: type
           plugin_id: bundle
-        langcode:
-          id: langcode
-          table: node_field_data
-          field: langcode
+      sorts:
+        weight:
+          id: weight
+          table: views_arg_order_sort
+          field: weight
           relationship: none
           group_type: group
           admin_label: ''
-          operator: in
-          value:
-            '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
-          group: 1
+          order: ASC
           exposed: false
           expose:
-            operator_id: ''
             label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          entity_type: node
-          entity_field: langcode
-          plugin_id: language
-        nid:
-          id: nid
-          table: node_field_data
-          field: nid
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: '='
-          value:
-            min: ''
-            max: ''
-            value: ''
-          group: 1
-          exposed: true
-          expose:
-            use_operator: false
-            operator: nid_op
-            identifier: nid
-            label: ID
-            description: null
-            remember: false
-            multiple: false
-            required: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          entity_type: node
-          entity_field: nid
-          plugin_id: numeric
-      sorts: {  }
+          inherit_type: 1
+          null_below: 1
+          argument_number: '0'
+          field_type: 'node_field_data::nid'
+          plugin_id: views_arg_order_sort_default
       title: 'Basic Page'
       header: {  }
       footer: {  }
@@ -555,7 +494,6 @@ display:
       max-age: 0
       contexts:
         - 'languages:language_interface'
-        - url
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
@@ -580,10 +518,10 @@ display:
         options:
           items_per_page: 10
           offset: 0
+      rendering_language: '***LANGUAGE_language_interface***'
     cache_metadata:
       max-age: -1
       contexts:
-        - 'languages:language_content'
         - 'languages:language_interface'
         - request_format
         - url
