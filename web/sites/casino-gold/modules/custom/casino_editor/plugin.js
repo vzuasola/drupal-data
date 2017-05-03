@@ -248,7 +248,7 @@
 
     CKEDITOR.plugins.add('casino_editor', {
             requires : ['richcombo', 'dialog'],
-            icons: 'simplelink',
+            icons: 'link,unlink',
             lang: 'en',
             init: function (editor) {
 
@@ -258,25 +258,93 @@
                 addCombo( editor, 'FontSizes', 'size', editor.lang.casino_editor.fontSize, config.fontSizes, config.fontSizesDefaultLabel, config.fontSizeStyle, 30 );
                 addCombo( editor, 'FontColors', 'color', editor.lang.casino_editor.fontColor, config.fontColors, config.fontfontColorsDefaultLabel, config.fontColorStyle, 30 );
 
+                editor.addCommand( 'link', new CKEDITOR.dialogCommand( 'link' ) );
+                editor.addCommand( 'unlink', new CKEDITOR.unlinkCommand() );
 
-                editor.addCommand( 'simplelink', new CKEDITOR.dialogCommand( 'simplelinkDialog' ) );
-                editor.ui.addButton( 'SimpleLink', {
-                    label: 'Add a link',
-                    icons: 'simplelink',
-                    command: 'simplelink'
+                editor.ui.addButton( 'Link', {
+                    label: 'Link',
+                    command: 'link'
                 });
-                CKEDITOR.dialog.add( 'simplelinkDialog', this.path + 'js/dialogs/simplelink.js' );
-
-                editor.addCommand( 'textformat', new CKEDITOR.dialogCommand( 'textFormatDialog' ) );
-                editor.ui.addButton( 'TextFormat', {
-                    label: 'Format Text',
-                    icons: 'textformat',
-                    command: 'textformat'
+                editor.ui.addButton( 'Unlink', {
+                    label: 'Unlink',
+                    command: 'unlink'
                 });
-                CKEDITOR.dialog.add( 'textFormatDialog', this.path + 'js/dialogs/textformat.js' );
-
+                CKEDITOR.dialog.add( 'link', this.path + 'js/dialogs/link.js' );
             }
         }
     );
+
+    CKEDITOR.plugins.link = {
+        getSelectedLink: function( editor ) {
+            var selection = editor.getSelection();
+            var selectedElement = selection.getSelectedElement();
+            if ( selectedElement && selectedElement.is( 'a' ) )
+                return selectedElement;
+
+            var range = selection.getRanges()[ 0 ];
+
+            if ( range ) {
+                range.shrink( CKEDITOR.SHRINK_TEXT );
+                return editor.elementPath( range.getCommonAncestor() ).contains( 'a', 1 );
+            }
+            return null;
+        },
+        getLinkAttributes: function( editor, data ) {
+            var set = {},
+                url = ( data.href && CKEDITOR.tools.trim( data.href ) ) || '';
+
+            set[ 'data-cke-saved-href' ] = url;
+
+            if ( data.target ) {
+                set.target = data.target;
+            }
+
+            if ( set[ 'data-cke-saved-href' ] )
+                set.href = set[ 'data-cke-saved-href' ];
+
+            return {
+                set: set
+            };
+        },
+        parseLinkAttributes: function( editor, element ) {
+            var href = ( element && ( element.data( 'cke-saved-href' ) || element.getAttribute( 'href' ) ) ) || '',
+                retval = {};
+
+            retval.href = href;
+
+            // Load target and popup settings.
+            if ( element ) {
+                var target = element.getAttribute( 'target' );
+
+                retval.target = target;
+            }
+
+            return retval;
+        },
+    };
+
+    CKEDITOR.unlinkCommand = function() {};
+    CKEDITOR.unlinkCommand.prototype = {
+        exec: function( editor ) {
+            var style = new CKEDITOR.style( { element: 'a', type: CKEDITOR.STYLE_INLINE, alwaysRemoveElement: 1 } );
+            editor.removeStyle( style );
+        },
+
+        refresh: function( editor, path ) {
+            // Despite our initial hope, document.queryCommandEnabled() does not work
+            // for this in Firefox. So we must detect the state by element paths.
+
+            var element = path.lastElement && path.lastElement.getAscendant( 'a', true );
+
+            if ( element && element.getName() == 'a' && element.getAttribute( 'href' ) && element.getChildCount() )
+                this.setState( CKEDITOR.TRISTATE_OFF );
+            else
+                this.setState( CKEDITOR.TRISTATE_DISABLED );
+        },
+
+        contextSensitive: 1,
+        startDisabled: 1,
+        requiredContent: 'a[href]'
+    };
 
 })(jQuery, Drupal, drupalSettings, CKEDITOR);
