@@ -1,25 +1,23 @@
-uuid: 41485580-e5ab-4b40-8758-0b1f4025988a
+uuid: bf8c6b8b-6b50-42c4-a7f8-ea32c3df634d
 langcode: zh-hans
 status: true
 dependencies:
   config:
-    - field.storage.node.field_log_in_state
+    - field.storage.node.field_banner_link_target
     - node.type.page
   module:
     - options
-id: node.page.field_log_in_state
-field_name: field_log_in_state
+id: node.page.field_banner_link_target
+field_name: field_banner_link_target
 entity_type: node
 bundle: page
-label: 'Log-in State'
+label: 'Banner Link Target'
 description: ''
-required: true
+required: false
 translatable: true
 default_value:
   -
-    value: '0'
-  -
-    value: '1'
+    value: _top
 default_value_callback: ''
 settings: {  }
 field_type: list_string

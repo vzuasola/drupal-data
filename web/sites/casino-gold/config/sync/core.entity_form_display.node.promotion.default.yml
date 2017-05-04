@@ -14,6 +14,7 @@ dependencies:
     - field.field.node.promotion.field_image
     - field.field.node.promotion.field_log_in_state
     - field.field.node.promotion.field_promote_to_lobby
+    - field.field.node.promotion.field_right_side_block_content
     - field.field.node.promotion.field_right_side_block_link
     - field.field.node.promotion.field_right_side_block_option
     - field.field.node.promotion.field_thumbnail_image
@@ -177,6 +178,15 @@ content:
     weight: 16
     settings: {  }
     third_party_settings: {  }
+    region: content
+  field_right_side_block_content:
+    weight: 33
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
     region: content
   field_right_side_block_link:
     weight: 2

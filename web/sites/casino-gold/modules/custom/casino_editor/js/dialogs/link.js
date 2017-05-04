@@ -2,6 +2,10 @@ CKEDITOR.dialog.add("link", function(editor) {
     var plugin = CKEDITOR.plugins.link,
         initialLinkText;
 
+    var allowedLangCodes = [
+        'sc', 'ch'
+    ];
+
     return {
         // allowedContent: "a[href,target]",
         title: "Insert Link",
@@ -22,7 +26,14 @@ CKEDITOR.dialog.add("link", function(editor) {
                     this.setValue(data.href);
                 },
                 commit: function(data) {
-                    data.href = this.getValue();
+                    var url = this.getValue();
+                    if (/^(http|https)/.test(url.toLowerCase()) == false) {
+                        var segments = url.replace(/^\/|\/$/g, '').split('/');
+                        if (segments && allowedLangCodes.indexOf(segments[0]) == -1) {
+                            url = '/' + editor.config.language + url;
+                        }
+                    }
+                    data.href = url;
                 }               
             }, 
             {

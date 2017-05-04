@@ -6,6 +6,7 @@ dependencies:
     - 'block_content:sponsorship_block:5a69d4cd-142e-46b5-abf5-6eb3a182e19d'
   module:
     - block_content
+    - system
   theme:
     - bartik
 id: sponsorship
@@ -22,4 +23,9 @@ settings:
   status: true
   info: ''
   view_mode: full
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: "/basic-page\r\n/banner-slider"
+    negate: true
+    context_mapping: {  }
