@@ -1,0 +1,19 @@
+uuid: 09eec133-f692-439b-ac9e-330b88938632
+langcode: zh-hans
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_block_link
+field_name: field_block_link
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

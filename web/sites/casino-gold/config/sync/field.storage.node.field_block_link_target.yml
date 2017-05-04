@@ -1,0 +1,30 @@
+uuid: 20a0008f-4047-480c-9cf9-d0cfcf28d4d9
+langcode: zh-hans
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_block_link_target
+field_name: field_block_link_target
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: _top
+      label: 'Same Window'
+    -
+      value: _blank
+      label: 'New Tab'
+    -
+      value: window
+      label: 'New Window'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

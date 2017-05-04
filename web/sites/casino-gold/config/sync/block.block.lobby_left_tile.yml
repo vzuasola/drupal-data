@@ -26,6 +26,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: /banner-slider
+    pages: "/banner-slider\r\n/basic-page"
     negate: true
     context_mapping: {  }
