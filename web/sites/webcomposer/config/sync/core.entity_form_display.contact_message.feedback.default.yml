@@ -19,6 +19,7 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
+    region: content
   field_comment:
     weight: 4
     settings:
@@ -26,6 +27,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textarea
+    region: content
   field_name:
     weight: 0
     settings:
@@ -33,16 +35,19 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
   field_radio:
     weight: 2
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
+    region: content
   field_select:
     weight: 3
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
 hidden:
   copy: true
   langcode: true
