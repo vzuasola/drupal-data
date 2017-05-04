@@ -22,12 +22,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: list_default
+    region: content
   field_comment:
     weight: 4
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
+    region: content
   field_name:
     weight: 1
     label: above
@@ -35,24 +37,28 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
   field_radio:
     weight: 3
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
+    region: content
   field_select:
     weight: 5
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
+    region: content
   mail:
     weight: -2
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
+    region: content
   message:
     type: string
     weight: 0
@@ -60,6 +66,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    region: content
   name:
     weight: -3
     label: above
@@ -67,6 +74,7 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
   subject:
     weight: -1
     label: above
@@ -74,5 +82,6 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
 hidden:
   langcode: true
