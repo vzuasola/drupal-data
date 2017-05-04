@@ -749,8 +749,9 @@ $settings['file_scan_ignore_directories'] = [
  *
  * Keep this code block at the end of this file to take full effect.
  */
- if (file_exists(__DIR__ . '/database.php')) {
-   include __DIR__ . '/database.php';
- }
+if (file_exists(__DIR__ . '/database.php')) {
+  include __DIR__ . '/database.php';
+}
+
 $settings['install_profile'] = 'config_installer';
 $config_directories['sync'] = 'sites/casino-gold/config/sync';
