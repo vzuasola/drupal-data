@@ -60,6 +60,7 @@ module:
   tour: 0
   update: 0
   user: 0
+  views_arg_order_sort: 0
   views_ui: 0
   webcomposer_blocks: 0
   webcomposer_form: 0
