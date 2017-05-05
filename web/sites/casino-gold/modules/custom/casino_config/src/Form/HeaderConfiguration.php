@@ -155,6 +155,13 @@ class HeaderConfiguration extends ConfigFormBase {
       '#default_value' => $config->get('welcome_text'),
       '#required' => TRUE,
     );
+    $form['welcome_text_group']['profile_link'] = array(
+      '#type' => 'textfield',
+      '#title' => $this->t('Profile Link'),
+      '#description' => $this->t('Profile Link'),
+      '#default_value' => $config->get('profile_link'),
+      '#required' => TRUE,
+    );
 
 
     return parent::buildForm($form, $form_state);
@@ -176,6 +183,7 @@ class HeaderConfiguration extends ConfigFormBase {
       'cashier_icon_hover_text',
       'product_menu_new_tag',
       'welcome_text',
+      'profile_link',
     );
     foreach ($keys as $key) {
       $this->config('casino_config.header_config')->set($key, $form_state->getValue($key))->save();

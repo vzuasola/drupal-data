@@ -9,3 +9,7 @@ sc_lang_text: chinese-sc-test
 ch_lang_text: chinese-ch-test
 balance_error_text: 'Cannot Load Balance'
 cashier_icon_hover_text: Cashier
+profile_icon_hover_text: 'My Account'
+product_menu_new_tag: NEW
+welcome_text: 'Welcome {username}'
+profile_link: 'https://dev-accountwww.elysium-dfbt.com/sc/my-profile'
