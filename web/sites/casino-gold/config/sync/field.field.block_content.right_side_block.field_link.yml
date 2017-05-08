@@ -1,0 +1,23 @@
+uuid: ff9432e5-557f-4e99-9f5a-f4aaa7d99513
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - block_content.type.right_side_block
+    - field.storage.block_content.field_link
+  module:
+    - link
+id: block_content.right_side_block.field_link
+field_name: field_link
+entity_type: block_content
+bundle: right_side_block
+label: Link
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+field_type: link

@@ -7,13 +7,9 @@ dependencies:
     - field.field.node.page.field_banner_content
     - field.field.node.page.field_banner_link
     - field.field.node.page.field_banner_link_target
-    - field.field.node.page.field_block_image
-    - field.field.node.page.field_block_link
-    - field.field.node.page.field_block_link_target
-    - field.field.node.page.field_block_title
     - field.field.node.page.field_image
     - field.field.node.page.field_log_in_state
-    - field.field.node.page.field_right_side_block_content
+    - field.field.node.page.field_right_side_block
     - image.style.thumbnail
     - node.type.page
   module:
@@ -40,21 +36,6 @@ third_party_settings:
         open: false
         required_fields: true
       label: Banner
-    group_block_setting:
-      children:
-        - field_block_title
-        - field_block_image
-        - field_block_link
-        - field_block_link_target
-      parent_name: ''
-      weight: 12
-      format_type: details
-      format_settings:
-        id: ''
-        classes: ''
-        open: true
-        required_fields: true
-      label: 'Block Settings'
 _core:
   default_config_hash: KSvzyFhdLuxniTsunUnUfpfMmod2l57GibtVjL8ymHM
 id: node.page.default
@@ -99,36 +80,6 @@ content:
     third_party_settings: {  }
     type: options_select
     region: content
-  field_block_image:
-    weight: 13
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    type: image_image
-    region: content
-  field_block_link:
-    weight: 14
-    settings:
-      placeholder_url: ''
-      placeholder_title: ''
-    third_party_settings: {  }
-    type: link_default
-    region: content
-  field_block_link_target:
-    weight: 15
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
-  field_block_title:
-    weight: 12
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_image:
     weight: 12
     settings:
@@ -143,7 +94,7 @@ content:
     third_party_settings: {  }
     type: options_buttons
     region: content
-  field_right_side_block_content:
+  field_right_side_block:
     weight: 26
     settings:
       match_operator: CONTAINS
