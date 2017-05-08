@@ -1,0 +1,28 @@
+webcomposer_config.list:
+  title: 'Webcomposer Configuration'
+  description: 'Provides an API for defining custom block entries and page components'
+  parent: system.admin_config
+  route_name: webcomposer_config.admin_settings
+
+webcomposer_config.admin_footer_configuration:
+  title: 'Footer Configuration'
+  parent: webcomposer_config.list
+  description: 'Provides configuration for Footer Section.'
+  route_name: webcomposer_config.footer_configuration_form
+
+webcomposer_config.admin_header_configuration:
+  title: 'Header Configuration'
+  parent: webcomposer_config.list
+  description: 'Provides configuration for Header Section.'
+  route_name: webcomposer_config.header_configuration_form
+
+webcomposer_config.admin_login_configuration:
+  title: 'Login Configuration'
+  parent: webcomposer_config.list
+  description: 'Provides configuration for Header (Login form) Section.'
+  route_name: webcomposer_config.login_configuration_form
+
+webcomposer_config.recreate_block_content_configuration:
+  title: 'Recreate Block Content'
+  parent: webcomposer_config.list
+  route_name: webcomposer_config.recreate_block_content_form

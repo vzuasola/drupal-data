@@ -1,0 +1,78 @@
+webcomposer_config.header_configuration:
+  type: config_object
+  label: 'Header Configurations'
+  mapping:
+    join_now_text:
+      type: label
+      label: 'Join Now Text'
+    join_now_link:
+      type: label
+      label: 'Join Now Link'
+    login_issue_text:
+      type: label
+      label: 'Login Issue Text'
+    login_issue_link:
+      type: label
+      label: 'Login Issue Link'
+    balance_error_text:
+      type: label
+      label: 'Balance Error Message'
+    cashier_icon_hover_text:
+      type: label
+      label: 'Cashier Icon Hover Text'
+    profile_icon_hover_text:
+      type: label
+      label: 'My Profile Icon Hover Text'
+    product_menu_new_tag:
+      type: label
+      label: 'New tag text'
+
+webcomposer_config.footer_configuration:
+  type: config_object
+  label: 'Footer Configurations'
+  mapping:
+    about_dafabet_title:
+      type: label
+      label: 'About dafabet title'
+    about_dafabet_content:
+      type: text_format
+      label: 'About dafabet description'
+      translatable: true
+    quicklinks_title:
+      type: label
+      label: 'Quicklinks title'
+
+webcomposer_config.login_configuration:
+  type: config_object
+  label: 'Login Configurations'
+  mapping:
+    username_placeholder:
+     type: label
+     label: 'Username field Placeholder'
+    password_placeholder:
+      type: label
+      label: 'Password field Placeholder'
+    login_bottom_label:
+      type: label
+      label: 'Login Botton Label'
+    error_message_blank_username:
+      type: label
+      label: 'Blank Username'
+    error_message_blank_password:
+      type: label
+      label: 'Blank Password'
+    error_message_blank_passname:
+      type: label
+      label: 'Blank Username and Password'
+    error_message_invalid_passname:
+      type: label
+      label: 'Invalid Username and Password'
+    error_message_account_suspended:
+      type: label
+      label: 'Suspended Player Account'
+    error_message_account_locked:
+      type: label
+      label: 'Locked Player Account'
+    error_message_service_not_available:
+      type: label
+      label: 'Error thrown by services'
