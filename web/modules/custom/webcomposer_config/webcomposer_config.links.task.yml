@@ -1,0 +1,14 @@
+webcomposer_config.footer_configuration_tab:
+  route_name: webcomposer_config.footer_configuration_form
+  title: 'Footer Configuration'
+  base_route: webcomposer_config.footer_configuration_form
+
+webcomposer_config.header_configuration_tab:
+  route_name: webcomposer_config.header_configuration_form
+  title: 'Footer Configuration'
+  base_route: webcomposer_config.header_configuration_form
+
+webcomposer_config.login_configuration_tab:
+  route_name: webcomposer_config.login_configuration_form
+  title: 'Footer Configuration'
+  base_route: webcomposer_config.login_configuration_form

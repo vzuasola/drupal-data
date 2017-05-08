@@ -1,0 +1,160 @@
+<?php
+
+use Drupal\block\Entity\Block;
+use Drupal\block_content\Entity\BlockContent;
+use Drupal\webcomposer_config\WebcomposerConfig;
+use Drupal\menu_link_content\Entity\MenuLinkContent;
+
+
+function webcomposer_config_install(){
+
+  // create Social Media Block
+  createSocialMediaBlock();
+
+  // create Sponsorship Block
+  createSponsorshipBlock();
+
+  // Create quicklinks menu
+  $quickLinks = [ '/' => 'About us'];
+  addMenu('quicklinks-sc', $quickLinks);
+  addMenu('quicklinks-ch', $quickLinks);
+
+  // create product menu
+  $product_menu = [ '/' => 'Home' ];
+  addMenu('product-menu-sc', $product_menu);
+  addMenu('product-menu-ch', $product_menu);
+
+}
+
+function createSocialMediaBlock() {
+  $paragraphItems = array([
+      'type' => 'social_media',
+      'field_social_media_link_class' => 'facebook',
+      'field_link_target' => '_blank',
+      'field_social_media_links' => 'https://www.facebook.com',
+      'field_enable' => TRUE
+    ],[
+      'type' => 'social_media',
+      'field_social_media_link_class' => 'twitter',
+      'field_link_target' => '_blank',
+      'field_social_media_links' => 'https://www.twitter.com',
+      'field_enable' => TRUE
+    ],[
+      'type' => 'social_media',
+      'field_social_media_link_class' => 'google',
+      'field_link_target' => '_blank',
+      'field_social_media_links' => 'https://www.google.com',
+      'field_enable' => TRUE
+    ],[
+      'type' => 'social_media',
+      'field_social_media_link_class' => 'youtube',
+      'field_link_target' => '_blank',
+      'field_social_media_links' => 'https://www.youtube.com',
+      'field_enable' => TRUE
+    ],[
+      'type' => 'social_media',
+      'field_social_media_link_class' => 'linkedin',
+      'field_link_target' => '_blank',
+      'field_social_media_links' => 'https://www.linkedin.com',
+      'field_enable' => TRUE
+    ]
+  );
+  $paragraph = WebcomposerConfig::createParagraph($paragraphItems);
+  $block_content = BlockContent::create([
+    'info' => 'Social Media Block',
+    'type' => 'social_media_block',
+    'field_social_media' => $paragraph,
+    'field_block_enable' => TRUE,
+    'field_sm_blurb' => 'Follow us'
+  ]);
+  $block_content->save();
+  placeBlockContentInRegion('footer_social_media', $block_content->uuid(), 'content', 'Social Media');
+}
+
+
+function createSponsorshipBlock() {
+  global $base_url;
+  $modulePath = drupal_get_path('module', 'webcomposer_config');
+  $paragraphItems = array(
+    array(
+      'type' => 'sponsorship',
+      'field_sponsor_logo_link' => '#',
+      'field_link_target' => '_blank',
+      'field_sponsor_logo' => system_retrieve_file("$base_url/$modulePath/assets/images/blackburn.png", 'public://', TRUE)->id(),
+    ),
+    array(
+      'type' => 'sponsorship',
+      'field_sponsor_logo_link' => '#',
+      'field_link_target' => '_blank',
+      'field_sponsor_logo' => system_retrieve_file("$base_url/$modulePath/assets/images/burnley.png", 'public://', TRUE)->id(),
+    ),
+    array(
+      'type' => 'sponsorship',
+      'field_sponsor_logo_link' => '#',
+      'field_link_target' => '_blank',
+      'field_sponsor_logo' => system_retrieve_file("$base_url/$modulePath/assets/images/celtic.png", 'public://', TRUE)->id(),
+    ),
+    array(
+      'type' => 'sponsorship',
+      'field_sponsor_logo_link' => '#',
+      'field_link_target' => '_blank',
+      'field_sponsor_logo' => system_retrieve_file("$base_url/$modulePath/assets/images/everton.png", 'public://', TRUE)->id(),
+    ),
+    array(
+      'type' => 'sponsorship',
+      'field_sponsor_logo_link' => '#',
+      'field_link_target' => '_blank',
+      'field_sponsor_logo' => system_retrieve_file("$base_url/$modulePath/assets/images/sunderland.png", 'public://', TRUE)->id(),
+    ),
+    array(
+      'type' => 'sponsorship',
+      'field_sponsor_logo_link' => '#',
+      'field_link_target' => '_blank',
+      'field_sponsor_logo' => system_retrieve_file("$base_url/$modulePath/assets/images/wales.png", 'public://', TRUE)->id(),
+    ),
+
+  );
+  $paragraph = WebcomposerConfig::createParagraph($paragraphItems);
+  $block_content = BlockContent::create([
+    'info' => 'Sponsorship Block',
+    'type' => 'sponsorship_block',
+    'field_sponsor_logo' => $paragraph,
+    'field_block_enable' => TRUE,
+  ]);
+  $block_content->save();
+  placeBlockContentInRegion('sponsorship', $block_content->uuid(), 'content', 'Sponsorship Block');
+}
+
+
+
+function placeBlockContentInRegion($blockID, $uuid, $region, $label) {
+  $block = Block::create([
+    'id' => $blockID,
+    'plugin' => 'block_content:' . $uuid,
+    'region' => $region,
+    'provider' => 'block_content',
+    'weight' => -100,
+    'settings' => [
+      'label' => $label,
+      'label_display' => 'visible',
+      'status' => TRUE
+    ],
+    'theme' => 'bartik',
+    'visibility' => [],
+  ]);
+  $block->save();
+}
+
+function addMenu($menuName, $items) {
+  foreach($items as $link => $title) {
+    $menu_link = MenuLinkContent::create([
+      'title' => $title,
+      'link' => [
+        'uri' => "internal:$link"
+      ],
+      'menu_name' => $menuName,
+      'expanded' => TRUE,
+    ]);
+    $menu_link->save();
+  }
+}
