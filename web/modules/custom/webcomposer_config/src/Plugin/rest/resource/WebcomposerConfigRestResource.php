@@ -16,7 +16,7 @@ use Psr\Log\LoggerInterface;
  *   id = "webcomposer_config",
  *   label = @Translation("Webcomposer Config Resource"),
  *   uri_paths = {
- *     "canonical" = "/api/webcomposer/configuration/{id}"
+ *     "canonical" = "/api/general/configuration/{id}"
  *   }
  * )
  */
