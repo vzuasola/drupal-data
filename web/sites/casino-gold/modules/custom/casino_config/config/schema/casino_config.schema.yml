@@ -149,6 +149,9 @@ casino_config.header_config:
     profile_link:
       type: label
       label: 'Profile Link'
+    profile_logout_text:
+      type: label
+      label: 'Profile Logout Text'
 
 casino_config.promo_right_block:
   type: mapping
