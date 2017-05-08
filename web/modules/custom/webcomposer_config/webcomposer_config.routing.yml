@@ -29,11 +29,3 @@ webcomposer_config.login_configuration_form:
     _title: 'Login Configuration'
   requirements:
     _permission: 'administer site configuration'
-
-webcomposer_config.recreate_block_content_form:
-  path: 'admin/config/webcomposer/config/recreate-block-content'
-  defaults:
-    _form: 'Drupal\webcomposer_config\Form\WebcomposerConfigRecreateBlockContent'
-    _title: 'Recreate Block Content'
-  requirements:
-    _permission: 'administer site configuration'
