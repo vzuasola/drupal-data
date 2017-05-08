@@ -150,13 +150,6 @@ function createSponsorshipBlock() {
 }
 
 
-
-
-
-
-
-
-
 function placeBlockContentInRegion($blockID, $uuid, $region, $label) {
   $block = Block::create([
     'id' => $blockID,
