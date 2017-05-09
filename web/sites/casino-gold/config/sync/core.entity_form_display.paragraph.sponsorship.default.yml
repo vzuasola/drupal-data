@@ -20,6 +20,7 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
   field_sponsor_logo:
     weight: 0
     settings:
@@ -27,6 +28,7 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+    region: content
   field_sponsor_logo_link:
     weight: 1
     settings:
@@ -34,8 +36,10 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
   translation:
     weight: 10
+    region: content
 hidden:
   created: true
   status: true
