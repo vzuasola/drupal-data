@@ -1,0 +1,8 @@
+uuid: 6f81df31-52ee-4d88-a3e4-21d5896f4401
+langcode: zh-hans
+status: true
+dependencies: {  }
+id: right_side_block
+label: 'Right Side Block'
+revision: 0
+description: 'Custom block type for inner page right side block.'

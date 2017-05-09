@@ -1,25 +1,18 @@
-uuid: fdf06fc8-1fed-4e55-9adb-7a97a055b173
+uuid: 65517c94-13b0-4537-a3f3-7c368520dee4
 langcode: zh-hans
 status: true
 dependencies:
   config:
-    - field.storage.node.field_block_image
-    - node.type.page
+    - block_content.type.right_side_block
+    - field.storage.block_content.field_image
   module:
-    - content_translation
     - image
-third_party_settings:
-  content_translation:
-    translation_sync:
-      alt: alt
-      title: title
-      file: '0'
-id: node.page.field_block_image
-field_name: field_block_image
-entity_type: node
-bundle: page
-label: 'Block Image'
-description: 'Image to be used if the basic page is visible on the right side block of inner pages.'
+id: block_content.right_side_block.field_image
+field_name: field_image
+entity_type: block_content
+bundle: right_side_block
+label: Image
+description: ''
 required: true
 translatable: true
 default_value: {  }

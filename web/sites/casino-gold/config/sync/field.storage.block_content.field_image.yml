@@ -1,14 +1,14 @@
-uuid: 580bad5a-a554-466d-81b2-eb98ace880a7
+uuid: 883e3121-4470-4318-84b4-68dc58344829
 langcode: zh-hans
 status: true
 dependencies:
   module:
+    - block_content
     - file
     - image
-    - node
-id: node.field_block_image
-field_name: field_block_image
-entity_type: node
+id: block_content.field_image
+field_name: field_image
+entity_type: block_content
 type: image
 settings:
   uri_scheme: public
