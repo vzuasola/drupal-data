@@ -184,7 +184,7 @@ casino_config.autologout_config:
       type: label
       label: 'Auto Logout LightBox Title'
     autologout_box_content:
-      type: label
+      type: text_format
       label: 'Auto Logout LightBox Content'
     affirmative_button_text:
       type: label
@@ -196,8 +196,8 @@ casino_config.autologout_config:
       type: label
       label: 'Notification Box Settings'
     notification_content:
-      type: label
-      label: 'Autologout Notification Box Title'
+      type: text_format
+      label: 'Notification Box Content'
 
 casino_config.footer_config:
   type: mapping
