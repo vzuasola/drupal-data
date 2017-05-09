@@ -98,6 +98,13 @@ class CasinoRestResource extends ResourceBase {
         'error' => $this->t('Configuration not found')
       );
     }
-    return new ResourceResponse($data);
+
+    $build = array(
+      '#cache' => array(
+        'max-age' => 0,
+      ),
+    );
+
+    return (new ResourceResponse($data))->addCacheableDependency($build);
   }
 }
