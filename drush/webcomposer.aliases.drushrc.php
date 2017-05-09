@@ -57,8 +57,8 @@ $aliases['myaccount'] = array (
   ),
 );
 
-$aliases['casino-gold'] = array (
-  'uri' => 'casino-gold.drupal.dev',
+$aliases['csngold'] = array (
+  'uri' => 'csngold.drupal.dev',
   'root' => '/var/www/html/web-composer/drupal/web/',
   'path-aliases' => array(
     '%dump-dir' => '/tmp',
