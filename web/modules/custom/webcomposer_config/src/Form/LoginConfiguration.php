@@ -10,7 +10,7 @@ class LoginConfiguration extends ConfigFormBase{
      * {@inheritdoc}
      */
     protected function getEditableConfigNames() {
-        return ['webcomposer_config.footer_configuration'];
+        return ['webcomposer_config.login_configuration'];
     }
 
     /**
@@ -24,7 +24,7 @@ class LoginConfiguration extends ConfigFormBase{
      * {@inheritdoc}
      */
     public function buildForm(array $form, FormStateInterface $form_state) {
-        $config = $this->config('webcomposer_config.footer_configuration');
+        $config = $this->config('webcomposer_config.login_configuration');
 
         $form['advanced'] = array(
             '#type' => 'vertical_tabs',
@@ -123,7 +123,7 @@ class LoginConfiguration extends ConfigFormBase{
             'error_message_account_locked'
         );
         foreach($loginValuesKeys as $keys){
-            $this->config('webcomposer_config.footer_configuration')->set($keys, $form_state->getValue($keys))->save();
+            $this->config('webcomposer_config.login_configuration')->set($keys, $form_state->getValue($keys))->save();
         }
         parent::submitForm($form, $form_state);
     }
