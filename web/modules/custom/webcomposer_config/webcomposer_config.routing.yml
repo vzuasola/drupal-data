@@ -1,0 +1,31 @@
+webcomposer_config.admin_settings:
+  path: 'admin/config/webcomposer/config'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Webcomposer Configuration'
+  requirements:
+    _permission: 'administer site configuration'
+
+webcomposer_config.header_configuration_form:
+  path: 'admin/config/webcomposer/config/header'
+  defaults:
+    _form: 'Drupal\webcomposer_config\Form\HeaderConfiguration'
+    _title: 'Header Configuration'
+  requirements:
+    _permission: 'administer site configuration'
+
+webcomposer_config.footer_configuration_form:
+  path: 'admin/config/webcomposer/config/footer'
+  defaults:
+    _form: 'Drupal\webcomposer_config\Form\FooterConfiguration'
+    _title: 'Footer Configuration'
+  requirements:
+    _permission: 'administer site configuration'
+
+webcomposer_config.login_configuration_form:
+  path: 'admin/config/webcomposer/config/login'
+  defaults:
+    _form: 'Drupal\webcomposer_config\Form\LoginConfiguration'
+    _title: 'Login Configuration'
+  requirements:
+    _permission: 'administer site configuration'

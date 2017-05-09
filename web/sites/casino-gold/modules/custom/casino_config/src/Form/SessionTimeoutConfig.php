@@ -43,9 +43,9 @@ class SessionTimeoutConfig extends ConfigFormBase {
     $form['session_timeout_details']['session_maxtime'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Maximum Session Time'),
-      '#required' => TRUE,
       '#default_value' => $config->get('session_maxtime'),
       '#description' => $this->t('The maximum time after which the Player gets automatically logged Out.'),
+      '#required' => TRUE,
     ];
 
     $form['lightbox_details'] = [
@@ -57,33 +57,36 @@ class SessionTimeoutConfig extends ConfigFormBase {
     $form['lightbox_details']['autologout_box_title'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Auto Logout LightBox Title'),
-      '#required' => TRUE,
       '#description' => $this->t('The Title of the Auto Logout LightBox.'),
       '#default_value' => $config->get('autologout_box_title'),
+      '#required' => TRUE,
     ];
 
+    $content = $config->get('autologout_box_content');
+
     $form['lightbox_details']['autologout_box_content'] = [
-      '#type' => 'textfield',
+      '#type' => 'text_format',
       '#title' => $this->t('Auto Logout LightBox Content'),
-      '#required' => TRUE,
       '#description' => $this->t('The Content of the Auto Logout LightBox.'),
-      '#default_value' => $config->get('autologout_box_content'),
+      '#default_value' => $content['value'],
+      '#format' => $content['format'],
+      '#required' => TRUE,
     ];
 
     $form['lightbox_details']['affirmative_button_text'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Affirmative Response text'),
-      '#required' => TRUE,
       '#description' => $this->t('The Affirmative Button text in Auto Logout LightBox.'),
       '#default_value' => $config->get('affirmative_button_text'),
+      '#required' => TRUE,
     ];
 
     $form['lightbox_details']['negative_button_text'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Negative Response text'),
-      '#required' => TRUE,
       '#description' => $this->t('The Negative response Button text in Auto Logout LightBox.'),
       '#default_value' => $config->get('negative_button_text'),
+      '#required' => TRUE,
     ];
 
     $form['notification_box_details'] = [
@@ -95,17 +98,20 @@ class SessionTimeoutConfig extends ConfigFormBase {
     $form['notification_box_details']['notification_title'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Autologout Notification Box Title'),
-      '#required' => TRUE,
       '#description' => $this->t('The Title of the Auto logout Notification LightBox'),
       '#default_value' => $config->get('notification_title'),
+      '#required' => TRUE,
     ];
 
+    $notification_content = $config->get('notification_content');
+
     $form['notification_box_details']['notification_content'] = [
-      '#type' => 'textfield',
+      '#type' => 'text_format',
       '#title' => $this->t('Autologout Notification Box Content'),
-      '#required' => TRUE,
       '#description' => $this->t('The Content of the Auto logout Notification LightBox'),
-      '#default_value' => $config->get('notification_content'),
+      '#default_value' => $notification_content['value'],
+      '#format' => $notification_content['format'],
+      '#required' => TRUE,
     ];
 
     return parent::buildForm($form, $form_state);

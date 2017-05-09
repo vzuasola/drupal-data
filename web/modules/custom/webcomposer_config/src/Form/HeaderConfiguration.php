@@ -1,19 +1,18 @@
 <?php
 
-namespace Drupal\casino_config\Form;
+namespace Drupal\webcomposer_config\Form;
 
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
-/**
- * Provides configuration settings form for Header Element Configuration.
- */
+use Drupal\file\Entity\File;
+
 class HeaderConfiguration extends ConfigFormBase {
 
   /**
    * {@inheritdoc}
    */
   protected function getEditableConfigNames() {
-    return ['casino_config.header_config'];
+    return ['webcomposer_config.header_configuration'];
   }
 
   /**
@@ -27,8 +26,7 @@ class HeaderConfiguration extends ConfigFormBase {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-
-    $config = $this->config('casino_config.header_config');
+    $config = $this->config('webcomposer_config.header_configuration');
 
     $form['header_settings_tab'] = array(
       '#type' => 'vertical_tabs',
@@ -108,6 +106,27 @@ class HeaderConfiguration extends ConfigFormBase {
       '#default_value' => $config->get('balance_error_text'),
       '#required' => TRUE,
     );
+    $form['header_icon_group'] = array(
+      '#type' => 'details',
+      '#title' => $this->t('Header Icon Settings'),
+      '#collapsible' => TRUE,
+      '#group' => 'header_settings_tab',
+    );
+    $form['header_icon_group']['cashier_icon_hover_text'] = array(
+      '#type' => 'textfield',
+      '#title' => $this->t('Cashier Icon Hover Text.'),
+      '#description' => $this->t('Cashier Icon Hover Text.'),
+      '#default_value' => $config->get('cashier_icon_hover_text'),
+      '#required' => TRUE,
+    );
+    $form['header_icon_group']['profile_icon_hover_text'] = array(
+      '#type' => 'textfield',
+      '#title' => $this->t('My Profile Icon Hover Text.'),
+      '#description' => $this->t('My Profile Icon Hover Text.'),
+      '#default_value' => $config->get('profile_icon_hover_text'),
+      '#required' => TRUE,
+    );
+
     $form['newtag_group'] = array(
       '#type' => 'details',
       '#title' => $this->t('New Tag Settings'),
@@ -121,55 +140,6 @@ class HeaderConfiguration extends ConfigFormBase {
       '#default_value' => $config->get('product_menu_new_tag'),
       '#required' => TRUE,
     );
-    $form['welcome_text_group'] = array(
-      '#type' => 'details',
-      '#title' => $this->t('Welcome Text Settings'),
-      '#collapsible' => TRUE,
-      '#group' => 'header_settings_tab',
-    );
-    $form['welcome_text_group']['welcome_text'] = array(
-      '#type' => 'textfield',
-      '#title' => $this->t('Welcome Text'),
-      '#description' => $this->t('{username} will be replaced with account username'),
-      '#default_value' => $config->get('welcome_text'),
-      '#required' => TRUE,
-    );
-    $form['welcome_text_group']['profile_link'] = array(
-      '#type' => 'textfield',
-      '#title' => $this->t('Profile Link'),
-      '#description' => $this->t('Profile Link'),
-      '#default_value' => $config->get('profile_link'),
-      '#required' => TRUE,
-    );
-    $form['header_other_group'] = array(
-      '#type' => 'details',
-      '#title' => $this->t('Other Settings'),
-      '#collapsible' => TRUE,
-      '#group' => 'header_settings_tab',
-    );
-    $form['header_other_group']['profile_logout_text'] = array(
-      '#type' => 'textfield',
-      '#title' => $this->t('Logout Link Text.'),
-      '#description' => $this->t('Logout Link Text.'),
-      '#default_value' => $config->get('profile_logout_text'),
-      '#required' => TRUE,
-    );
-    $form['header_other_group']['cashier_icon_hover_text'] = array(
-      '#type' => 'textfield',
-      '#title' => $this->t('Cashier Icon Hover Text.'),
-      '#description' => $this->t('Cashier Icon Hover Text.'),
-      '#default_value' => $config->get('cashier_icon_hover_text'),
-      '#required' => TRUE,
-    );
-    $form['header_other_group']['profile_icon_hover_text'] = array(
-      '#type' => 'textfield',
-      '#title' => $this->t('My Profile Icon Hover Text.'),
-      '#description' => $this->t('My Profile Icon Hover Text.'),
-      '#default_value' => $config->get('profile_icon_hover_text'),
-      '#required' => TRUE,
-    );
-
-
     return parent::buildForm($form, $form_state);
   }
 
@@ -187,13 +157,10 @@ class HeaderConfiguration extends ConfigFormBase {
       'balance_error_text',
       'profile_icon_hover_text',
       'cashier_icon_hover_text',
-      'product_menu_new_tag',
-      'welcome_text',
-      'profile_link',
-      'profile_logout_text',
+      'product_menu_new_tag'
     );
     foreach ($keys as $key) {
-      $this->config('casino_config.header_config')->set($key, $form_state->getValue($key))->save();
+      $this->config('webcomposer_config.header_configuration')->set($key, $form_state->getValue($key))->save();
     }
     return parent::submitForm($form, $form_state);
   }
