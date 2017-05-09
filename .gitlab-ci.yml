@@ -12,27 +12,19 @@ stages:
    - internal-production-signoff
    - deploy-production
 
-execute tests:
-  stage: tests
-  variables:
-     DOCKERFILE: build/Dockerfile.tests
-  script:
-      - python -u build/tests.py
-  artifacts:
-    paths:
-      - "phpcs*.txt"
-
 create package:
   stage: package
   variables:
      DOCKERFILE: build/Dockerfile.package
   script:
       - python -u build/package.py
+  only:
+    - /^(working|release-.*)$/
   cache:
     paths:
       - vendor/
   artifacts:
-    expire_in: 7d
+    expire_in: 1d
     paths:
       - "*.tar.gz"
 
