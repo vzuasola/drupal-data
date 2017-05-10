@@ -4,7 +4,7 @@ namespace Drupal\webcomposer_monolog\Logger\Handler;
 
 /**
  * Custom monolog handler for AppDynamics.
- * 
+ *
  * Allows to log error/info/notice to AppDynamics.
  * Extension of Monolog library to use AppDynamics as destination.
  */
@@ -56,9 +56,11 @@ class AppDynamicsHandler extends AbstractProcessingHandler {
    */
   protected function write(array $record) {
     if (!empty($record['message'])) {
+      $severity = $record['level_name'];
+      $level_name = $this->LogSeverityHandling($severity);
       // Construct the query parameter which are mandatory by AppDynamics
       $this->query['eventtype'] = static::EVENT_TYPE;
-      $this->query['severity'] = $record['level_name'];
+      $this->query['severity'] = $level_name;
       $this->query['summary'] = $record['context']['message'] ?? $record['message'];
       $this->query['customeventtype'] = $record['context']['event'] ?? $record['message'];
       $this->query['comment'] = $record['formatted'] ?? 'No formatted log response.';
@@ -72,4 +74,36 @@ class AppDynamicsHandler extends AbstractProcessingHandler {
     }
   }
 
+  /**
+   * Logs a severity handling.
+   *
+   * @param      <array>  $severity  The severity
+   *
+   * @return     string  ( name of level strictly for appdynamics )
+   */
+  protected function LogSeverityHandling($severity){
+     $level_name = NULL;
+      switch ($severity) {
+        case 'WARNING':
+          $level_name = 'WARN';
+          break;
+        case 'CRITICAL':
+         $level_name = 'ERROR';
+          break;
+        case 'NOTICE':
+          $level_name = 'WARN';
+          break;
+        case 'EMERGENCY':
+          $level_name = 'ERROR';
+          break;
+        case 'ALERT':
+          $level_name = 'WARN';
+          break;
+        case 'EMERGENCY':
+          $level_name = 'ERROR';
+          # code...
+          break;
+      }
+      return $level_name;
+  }
 }
