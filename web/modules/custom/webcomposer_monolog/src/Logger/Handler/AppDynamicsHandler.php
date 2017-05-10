@@ -101,7 +101,6 @@ class AppDynamicsHandler extends AbstractProcessingHandler {
           break;
         case 'EMERGENCY':
           $level_name = 'ERROR';
-          # code...
           break;
       }
       return $level_name;
