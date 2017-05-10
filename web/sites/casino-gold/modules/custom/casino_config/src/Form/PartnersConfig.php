@@ -36,6 +36,7 @@ class PartnersConfig extends ConfigFormBase {
       '#upload_validators' => array(
         'file_validate_extensions' => array('gif png jpg jpeg'),
       ),
+      '#description' => $this->t('Upload image with dimensions of 523x41 pixels.'),
     );
 
 

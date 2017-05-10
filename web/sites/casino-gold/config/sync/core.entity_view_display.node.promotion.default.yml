@@ -14,7 +14,7 @@ dependencies:
     - field.field.node.promotion.field_image
     - field.field.node.promotion.field_log_in_state
     - field.field.node.promotion.field_promote_to_lobby
-    - field.field.node.promotion.field_right_side_block_content
+    - field.field.node.promotion.field_right_side_block
     - field.field.node.promotion.field_right_side_block_link
     - field.field.node.promotion.field_right_side_block_option
     - field.field.node.promotion.field_thumbnail_image
@@ -112,7 +112,7 @@ content:
     third_party_settings: {  }
     type: list_default
     region: content
-  field_right_side_block_content:
+  field_right_side_block:
     weight: 17
     label: above
     settings:
