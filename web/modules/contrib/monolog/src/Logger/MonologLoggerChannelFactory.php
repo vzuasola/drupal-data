@@ -12,6 +12,8 @@ use Psr\Log\LoggerInterface;
 use Psr\Log\NullLogger;
 use Symfony\Component\DependencyInjection\ContainerAwareInterface;
 use Symfony\Component\DependencyInjection\ContainerAwareTrait;
+use Monolog\Formatter\JsonFormatter;
+
 
 /**
  * Defines a factory for logging channels.
@@ -85,7 +87,10 @@ class MonologLoggerChannelFactory implements LoggerChannelFactoryInterface, Cont
     $handlers = array_key_exists($channel_name, $parameters) ? $parameters[$channel_name] : $parameters['default'];
 
     foreach ($handlers as $handler) {
-      $logger->pushHandler($this->container->get('monolog.handler.' . $handler));
+      $stream = $this->container->get('monolog.handler.' . $handler);
+      $format = new JsonFormatter();
+      $stream->setFormatter($format);
+      $logger->pushHandler($stream);
     }
 
     foreach ($this->container->getParameter('monolog.processors') as $processor) {
