@@ -19,7 +19,7 @@ field_name: field_sponsor_logo
 entity_type: paragraph
 bundle: sponsorship
 label: 'Sponsor Logo'
-description: ''
+description: 'The Image upload size is 276 x 74 px.'
 required: false
 translatable: true
 default_value: {  }

@@ -19,7 +19,7 @@ field_name: field_thumbnail_image
 entity_type: node
 bundle: promotion
 label: 'Thumbnail Image'
-description: 'The thumbnail image appearing on the right side block for promotions.'
+description: 'The Image upload size is 225x225 px.'
 required: false
 translatable: true
 default_value: {  }
