@@ -1,0 +1,8 @@
+uuid: 882a816d-2f7e-4f49-ac67-a9881a50d1cf
+langcode: zh-hans
+status: true
+dependencies: {  }
+id: profile-menu-sc
+label: 'Profile Menu SC'
+description: "Profile Menu Items for SC Language\t"
+locked: false
