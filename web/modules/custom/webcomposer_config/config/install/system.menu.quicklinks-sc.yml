@@ -3,6 +3,6 @@ langcode: zh-hans
 status: true
 dependencies: {  }
 id: quicklinks-sc
-label: Quicklinks-SC
+label: Quicklinks SC
 description: 'Menu to add the quicklink items in SC Language'
 locked: false

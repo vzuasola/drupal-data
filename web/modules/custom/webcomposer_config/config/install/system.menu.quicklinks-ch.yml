@@ -3,6 +3,6 @@ langcode: zh-hant
 status: true
 dependencies: {  }
 id: quicklinks-ch
-label: Quicklinks-CH
+label: Quicklinks CH
 description: 'Menu to add the quicklink items in CH Language'
 locked: false
