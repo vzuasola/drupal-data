@@ -1,7 +1,5 @@
 <?php
 
-
-
 namespace Drupal\webcomposer_config\Form;
 
 use Drupal\Core\Form\ConfigFormBase;
@@ -9,7 +7,6 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\file\Entity\File;
 
 class FooterConfiguration extends ConfigFormBase {
-
   /**
    * {@inheritdoc}
    */
@@ -23,7 +20,6 @@ class FooterConfiguration extends ConfigFormBase {
   public function getFormId() {
     return 'webcomposer_config_footer_settings_form';
   }
-
 
   /**
    * {@inheritdoc}
@@ -129,5 +125,4 @@ class FooterConfiguration extends ConfigFormBase {
     }
     parent::submitForm($form, $form_state);
   }
-
 }

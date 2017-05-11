@@ -7,7 +7,6 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\file\Entity\File;
 
 class HeaderConfiguration extends ConfigFormBase {
-
   /**
    * {@inheritdoc}
    */
