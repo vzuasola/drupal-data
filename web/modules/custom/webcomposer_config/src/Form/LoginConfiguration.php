@@ -30,6 +30,7 @@ class LoginConfiguration extends ConfigFormBase{
             '#type' => 'vertical_tabs',
             '#title' => t('Settings'),
         );
+
         $form['login_form_details'] = array(
           '#type' => 'details',
           '#title' => t('Login Form Settings'),
@@ -41,11 +42,13 @@ class LoginConfiguration extends ConfigFormBase{
             '#title' => $this->t('Username Placeholder'),
             '#default_value' => $config->get('username_placeholder'),
         );
+
         $form['login_form_details'] ['password_placeholder'] = array(
             '#type' => 'textfield',
             '#title' => $this->t('Password Placeholder'),
             '#default_value' => $config->get('password_placeholder'),
         );
+
         $form['login_form_details'] ['login_bottom_label'] = array(
             '#type' => 'textfield',
             '#title' => $this->t('Login Botton Label'),
@@ -81,11 +84,13 @@ class LoginConfiguration extends ConfigFormBase{
             '#title' => $this->t('Invalid Username and Password'),
             '#default_value' => $config->get('error_message_invalid_passname'),
         );
+
         $form['login_form_error_messages_details']['error_message_account_suspended'] = array(
             '#type' => 'textfield',
             '#title' => $this->t('Player account is Suspended/Closed'),
             '#default_value' => $config->get('error_message_account_suspended'),
         );
+
         $form['login_form_error_messages_details']['error_message_account_locked'] = array(
             '#type' => 'textfield',
             '#title' => $this->t('  Player account is locked after (X) consecutive login attempt'),
@@ -122,9 +127,11 @@ class LoginConfiguration extends ConfigFormBase{
             'error_message_account_suspended',
             'error_message_account_locked'
         );
-        foreach($loginValuesKeys as $keys){
+
+        foreach ($loginValuesKeys as $keys){
             $this->config('webcomposer_config.login_configuration')->set($keys, $form_state->getValue($keys))->save();
         }
+        
         parent::submitForm($form, $form_state);
     }
 }

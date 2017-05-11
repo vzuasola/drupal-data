@@ -1,6 +1,7 @@
 <?php
 
 
+
 namespace Drupal\webcomposer_config\Form;
 
 use Drupal\Core\Form\ConfigFormBase;
@@ -40,13 +41,16 @@ class FooterConfiguration extends ConfigFormBase {
       '#title' => t('About Dafabet'),
       '#group' => 'advanced',
     );
+    
     $form['about_dafabet_details']['about_dafabet_title'] = array(
         '#type' => 'textfield',
         '#title' => $this->t('Title'),
         '#default_value' => $config->get('about_dafabet_title'),
         '#required' => TRUE,
     );
+
     $d = $config->get('about_dafabet_content');
+
     $form['about_dafabet_details']['about_dafabet_content'] = array(
         '#type' => 'text_format',
         '#title' => $this->t('content'),
@@ -55,12 +59,12 @@ class FooterConfiguration extends ConfigFormBase {
         '#required' => TRUE,
     );
 
-
     $form['partners_details'] = array(
       '#type' => 'details',
       '#title' => t('Partners Logo'),
       '#group' => 'advanced',
     );
+
     $form['partners_details']['partners_logo'] = array(
       '#type' => 'managed_file',
       '#title' => $this->t('Partners logo'),
@@ -71,13 +75,13 @@ class FooterConfiguration extends ConfigFormBase {
       ),
     );
 
-
     $form['quicklinks_group'] = array(
       '#type' => 'details',
       '#title' => $this->t('Quicklinks Title'),
       '#collapsible' => TRUE,
       '#group' => 'advanced',
     );
+
     $form['quicklinks_group']['quicklinks_title'] = array(
       '#type' => 'textfield',
       '#title' => $this->t('Quicklink Title'),
@@ -88,7 +92,6 @@ class FooterConfiguration extends ConfigFormBase {
 
     return parent::buildForm($form, $form_state);
   }
-
 
   /**
    * {@inheritdoc}
@@ -107,12 +110,11 @@ class FooterConfiguration extends ConfigFormBase {
       'partners_logo',
       'quicklinks_title'
     );
-    foreach($keys as $key){
 
-      if($key == 'partners_logo') {
-
+    foreach ($keys as $key) {
+      if ($key == 'partners_logo') {
         $fid = $form_state->getValue('partners_logo');
-        if($fid) {
+        if ($fid) {
           $file = File::load($fid[0]);
           $file->setPermanent();
           $file->save();
@@ -122,10 +124,7 @@ class FooterConfiguration extends ConfigFormBase {
 
           $this->config('webcomposer_config.footer_configuration')->set("partners_image_url", file_create_url($file->getFileUri()))->save();
         }
-
       }
-
-
       $this->config('webcomposer_config.footer_configuration')->set($key, $form_state->getValue($key))->save();
     }
     parent::submitForm($form, $form_state);
