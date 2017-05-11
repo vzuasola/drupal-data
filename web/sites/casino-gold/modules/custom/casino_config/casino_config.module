@@ -3,6 +3,15 @@
 use \Drupal\Core\Form\FormStateInterface;
 use \Drupal\Core\Render\Markup;
 
+function casino_config_module_implements_alter(&$implementations, $hook)
+{
+    if ($hook == 'form_alter')
+    {
+         $group = $implementations['casino_config'];
+         unset($implementations['casino_config']);
+         $implementations['casino_config'] = $group;
+    }
+}
 
 function casino_config_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   $alterFormInfos = array(
@@ -35,6 +44,9 @@ function casino_config_form_alter(&$form, FormStateInterface $form_state, $form_
       }
     }
   }
+
+  unset($form['unpublish_on']['widget'][0]['value']['#description']);
+  unset($form['publish_on']['widget'][0]['value']['#description']);
 }
 
 /**
