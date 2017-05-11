@@ -85,3 +85,24 @@ webcomposer_config.login_configuration:
     error_message_service_not_available:
       type: label
       label: 'Error thrown by services'
+    max_session_time:
+      type: label
+      label: 'Maximum Session Time'
+    autologout_box_title:
+      type: label
+      label: 'Auto Logout LightBox Title'
+    autologout_box_content:
+      type: text_format
+      label: 'Auto Logout LightBox Content'
+    affirmative_button_text:
+      type: label
+      label: 'Affirmative Response text'
+    negative_button_text:
+      type: label
+      label: 'Negative Response text'
+    notification_title:
+      type: label
+      label: 'Notification Box Settings'
+    notification_content:
+      type: text_format
+      label: 'Notification Box Content'
