@@ -76,7 +76,7 @@ class DomainPlaceholderResource extends ResourceBase {
     $lang_code = \Drupal::service('language_manager')->getCurrentLanguage()->getId();
 
     $term = reset($term);
-    $getEntities = $term->get('field_placeholder')->referencedEntities();
+    $getEntities = $term->get('field_add_placeholder')->referencedEntities();
 
     foreach($getEntities as $getEntity) {
 
