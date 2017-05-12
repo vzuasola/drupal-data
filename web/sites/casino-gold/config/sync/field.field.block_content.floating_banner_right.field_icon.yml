@@ -6,6 +6,7 @@ dependencies:
     - block_content.type.floating_banner_right
     - field.storage.block_content.field_icon
   module:
+    - content_translation
     - image
 third_party_settings:
   content_translation:
@@ -18,7 +19,7 @@ field_name: field_icon
 entity_type: block_content
 bundle: floating_banner_right
 label: Icon
-description: ''
+description: 'The Image upload size is 80 x 80 px.'
 required: true
 translatable: false
 default_value: {  }

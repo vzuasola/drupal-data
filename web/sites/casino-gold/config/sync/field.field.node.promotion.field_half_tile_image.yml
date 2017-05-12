@@ -19,7 +19,7 @@ field_name: field_half_tile_image
 entity_type: node
 bundle: promotion
 label: 'Half Tile Image'
-description: ''
+description: 'The Image upload size is 700x350 px.'
 required: false
 translatable: true
 default_value: {  }

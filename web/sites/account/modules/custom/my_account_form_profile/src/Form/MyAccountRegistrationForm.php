@@ -482,7 +482,7 @@ class MyAccountRegistrationForm extends ConfigFormBase
         $form['field_configuration']['field_labels_mobile_number'] = [
             '#type' => 'details',
             '#title' => 'Mobile Number',
-            '#open' => False,
+            '#open' => false,
             '#tree' => TRUE,
         ];
 
@@ -705,8 +705,8 @@ class MyAccountRegistrationForm extends ConfigFormBase
             ->set('email_field.options.error', $configuration['field_labels_email']['error'])
             ->set('email_field.weight', $configuration['field_labels_email']['weight'])
             ->set('email_field.options.wrapper_class', $configuration['field_labels_email']['wrapper_class'])
-            ->set('mobile_number_field.label', $configuration['field_labels_mobile_number']['label'])
-            ->set('mobile_number_field.placeholder', $configuration['field_labels_mobile_number']['placeholder'])
+            ->set('mobile_number_field.options.label', $configuration['field_labels_mobile_number']['label'])
+            ->set('mobile_number_field.options.attr.placeholder', $configuration['field_labels_mobile_number']['placeholder'])
             ->set('mobile_number_field.options.required', $configuration['field_labels_mobile_number']['required'])
             ->set('mobile_number_field.options.error', $configuration['field_labels_mobile_number']['error'])
             ->set('mobile_number_field.weight', $configuration['field_labels_mobile_number']['weight'])

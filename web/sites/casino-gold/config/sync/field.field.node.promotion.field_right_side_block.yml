@@ -1,0 +1,25 @@
+uuid: 5ac578ae-caf2-40e8-a335-7305fee205e2
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_right_side_block
+    - node.type.promotion
+id: node.promotion.field_right_side_block
+field_name: field_right_side_block
+entity_type: node
+bundle: promotion
+label: 'Right Side Block Content'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: right_side_block
+      display_name: entity_reference_1
+      arguments: {  }
+field_type: entity_reference

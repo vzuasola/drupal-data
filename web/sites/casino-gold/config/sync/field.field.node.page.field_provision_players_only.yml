@@ -1,0 +1,23 @@
+uuid: f1c585b1-172d-4da7-9319-030cdef9e4f7
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_provision_players_only
+    - node.type.page
+id: node.page.field_provision_players_only
+field_name: field_provision_players_only
+entity_type: node
+bundle: page
+label: 'Provision Players Only'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean
