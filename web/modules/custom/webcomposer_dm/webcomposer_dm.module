@@ -1,0 +1,27 @@
+<?php
+
+/**
+ * @file
+ * Contains webcomposer_dm.module.
+ */
+define('DOMAIN_GROUP_VOCAB', 'domain_groups');
+define('DOMAIN_VOCAB', 'domain');
+define('MASTER_PLACEHOLDER', 'master_placeholder');
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function webcomposer_dm_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the webcomposer_d module.
+    case 'help.page.webcomposer_dm':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Allows to do customisation around Domain Management') . '</p>';
+      return $output;
+
+    default:
+  }
+}

@@ -19,7 +19,7 @@ field_name: field_full_tile_image
 entity_type: node
 bundle: promotion
 label: 'Full Tile Image'
-description: ''
+description: 'The Image upload size is 700x700 px.'
 required: false
 translatable: true
 default_value: {  }

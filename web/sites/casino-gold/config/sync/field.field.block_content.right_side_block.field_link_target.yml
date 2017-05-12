@@ -1,0 +1,23 @@
+uuid: 32d0be2d-d1bf-49b5-a3c9-189c171d7305
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - block_content.type.right_side_block
+    - field.storage.block_content.field_link_target
+  module:
+    - options
+id: block_content.right_side_block.field_link_target
+field_name: field_link_target
+entity_type: block_content
+bundle: right_side_block
+label: 'Link Target'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: _top
+default_value_callback: ''
+settings: {  }
+field_type: list_string

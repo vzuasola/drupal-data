@@ -1,0 +1,20 @@
+uuid: e3349323-ddd9-4a55-ac4e-6a2aa1e47134
+langcode: zh-hans
+status: true
+dependencies:
+  module:
+    - block_content
+    - node
+id: node.field_right_side_block
+field_name: field_right_side_block
+entity_type: node
+type: entity_reference
+settings:
+  target_type: block_content
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

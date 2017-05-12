@@ -247,7 +247,6 @@ class MyAccountChangePasswordForm extends ConfigFormBase
             '#type' => 'textarea',
             '#title' => $this->t('Integration Error Messages'),
             '#description' => $this->t('Integration error list.'),
-            '#maxlength' => 255,
             '#default_value' => $myAccountConfigValue['integration_error_messages']['key_messages']
         ];
 

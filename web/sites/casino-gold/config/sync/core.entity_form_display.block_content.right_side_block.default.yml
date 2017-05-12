@@ -1,0 +1,67 @@
+uuid: 839a37a6-0608-49e5-b575-636a8aea85ee
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - block_content.type.right_side_block
+    - field.field.block_content.right_side_block.field_image
+    - field.field.block_content.right_side_block.field_link
+    - field.field.block_content.right_side_block.field_link_target
+    - field.field.block_content.right_side_block.field_title
+    - image.style.thumbnail
+  module:
+    - image
+    - link
+id: block_content.right_side_block.default
+targetEntityType: block_content
+bundle: right_side_block
+mode: default
+content:
+  field_image:
+    weight: 27
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_link:
+    weight: 28
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_link_target:
+    weight: 29
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_title:
+    weight: 26
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
+hidden: {  }

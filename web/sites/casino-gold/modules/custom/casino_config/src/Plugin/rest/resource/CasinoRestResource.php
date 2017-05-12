@@ -89,15 +89,18 @@ class CasinoRestResource extends ResourceBase {
     try{
       $config = \Drupal::config("casino_config.$id");
       $data = $config->get();
-      // $rawData = $config->getRawData();
-      // foreach($rawData as $key => $values){
-      //   $data[$key] = $config->get($key);
-      // }
     } catch (\Exception $e) {
       $data = array(
         'error' => $this->t('Configuration not found')
       );
     }
-    return new ResourceResponse($data);
+
+    $build = array(
+      '#cache' => array(
+        'max-age' => 0,
+      ),
+    );
+
+    return (new ResourceResponse($data))->addCacheableDependency($build);
   }
 }

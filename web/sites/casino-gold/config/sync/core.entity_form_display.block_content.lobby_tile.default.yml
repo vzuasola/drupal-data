@@ -23,6 +23,7 @@ content:
       form_display_mode: default
       default_paragraph_type: ''
     third_party_settings: {  }
+    region: content
   info:
     type: string_textfield
     weight: 0
@@ -30,13 +31,16 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
   langcode:
     type: language_select
     weight: 1
     settings: {  }
     third_party_settings: {  }
+    region: content
   translation:
     weight: 3
     settings: {  }
     third_party_settings: {  }
+    region: content
 hidden: {  }

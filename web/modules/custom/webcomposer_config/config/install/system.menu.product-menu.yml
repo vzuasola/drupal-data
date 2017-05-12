@@ -1,0 +1,8 @@
+uuid: 321624ad-c0ef-4bf6-8e2f-c9589d05da17
+langcode: zh-hant
+status: true
+dependencies: {  }
+id: product-menu
+label: 'Product Menu'
+description: 'Menu to add the product menu items available'
+locked: false
