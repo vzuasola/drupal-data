@@ -1,0 +1,21 @@
+uuid: 1443fbea-5db9-4806-b9fb-0532cb6df6af
+langcode: en
+status: true
+dependencies:
+  module:
+    - basic_auth
+    - hal
+    - serialization
+    - user
+    - webcomposer_config
+id: webcomposer_config
+plugin_id: webcomposer_config
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - hal_json
+      - json
+    supported_auth:
+      - basic_auth
+      - cookie
