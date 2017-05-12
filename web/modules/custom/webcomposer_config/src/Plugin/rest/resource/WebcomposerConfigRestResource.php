@@ -86,14 +86,22 @@ class WebcomposerConfigRestResource extends ResourceBase {
     }
 
     $data = array();
-    try{
-      $config = \Drupal::config($id);
+
+    try {
+      $config = \Drupal::config("webcomposer_config.$id");
       $data = $config->get();
     } catch (\Exception $e) {
       $data = array(
         'error' => $this->t('Configuration not found')
       );
     }
-    return new ResourceResponse($data);
+
+    $build = array(
+      '#cache' => array(
+        'max-age' => 0,
+      ),
+    );
+
+    return (new ResourceResponse($data))->addCacheableDependency($build);
   }
 }
