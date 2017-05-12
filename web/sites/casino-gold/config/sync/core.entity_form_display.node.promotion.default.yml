@@ -14,7 +14,6 @@ dependencies:
     - field.field.node.promotion.field_image
     - field.field.node.promotion.field_log_in_state
     - field.field.node.promotion.field_promote_to_lobby
-    - field.field.node.promotion.field_provision_players_only
     - field.field.node.promotion.field_right_side_block
     - field.field.node.promotion.field_right_side_block_link
     - field.field.node.promotion.field_right_side_block_option
@@ -180,12 +179,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-  field_provision_players_only:
-    type: options_buttons
-    weight: 1
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   field_right_side_block:
     weight: 20
     settings:

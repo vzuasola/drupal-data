@@ -9,7 +9,6 @@ dependencies:
     - field.field.node.page.field_banner_link_target
     - field.field.node.page.field_image
     - field.field.node.page.field_log_in_state
-    - field.field.node.page.field_provision_players_only
     - field.field.node.page.field_right_side_block
     - image.style.thumbnail
     - node.type.page
@@ -95,12 +94,6 @@ content:
     third_party_settings: {  }
     type: options_buttons
     region: content
-  field_provision_players_only:
-    type: options_buttons
-    weight: 1
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   field_right_side_block:
     weight: 14
     settings:
