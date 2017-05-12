@@ -139,6 +139,7 @@ content:
     region: content
 hidden:
   field_promote_to_lobby: true
+  field_provision_players_only: true
   field_right_side_block_option: true
   field_thumbnail_image: true
   field_thumbnail_summary: true
