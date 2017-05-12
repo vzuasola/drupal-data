@@ -26,6 +26,7 @@ content:
       format_custom_true: ''
     third_party_settings: {  }
     type: boolean
+    region: content
   field_link:
     weight: 1
     label: above
@@ -37,18 +38,21 @@ content:
       target: ''
     third_party_settings: {  }
     type: link
+    region: content
   field_link_class:
     weight: 7
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
+    region: content
   field_link_target:
     weight: 3
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
+    region: content
   field_link_text:
     weight: 0
     label: above
@@ -56,4 +60,5 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
 hidden: {  }

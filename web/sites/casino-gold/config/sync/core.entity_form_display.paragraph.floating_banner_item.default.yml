@@ -22,6 +22,7 @@ content:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
+    region: content
   field_link:
     weight: 3
     settings:
@@ -29,16 +30,19 @@ content:
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
+    region: content
   field_link_class:
     weight: 5
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
   field_link_target:
     weight: 4
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
   field_link_text:
     weight: 2
     settings:
@@ -46,10 +50,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
   translation:
     weight: 0
     settings: {  }
     third_party_settings: {  }
+    region: content
 hidden:
   created: true
   status: true
