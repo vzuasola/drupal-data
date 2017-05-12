@@ -1,0 +1,7 @@
+uuid: ba335579-e3e6-4f19-9743-f13690ea3bbc
+langcode: en
+status: true
+dependencies: {  }
+id: domain_management_configuration
+label: 'Domain Management Configuration'
+behavior_plugins: {  }

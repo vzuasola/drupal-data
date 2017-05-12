@@ -1,0 +1,9 @@
+uuid: c2d35f44-bddf-416b-8717-bee5625a96fd
+langcode: en
+status: true
+dependencies: {  }
+name: 'Master Placeholder'
+vid: master_placeholder
+description: 'Allows to create master list of placeholder.'
+hierarchy: 0
+weight: 0
