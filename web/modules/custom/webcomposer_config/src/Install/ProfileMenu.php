@@ -12,7 +12,6 @@ class ProfileMenu {
       '/' => 'My Account'
     );
 
-    WebcomposerConfig::createMenu('profile-menu-sc', $menu);
-    WebcomposerConfig::createMenu('profile-menu-ch', $menu);
+    WebcomposerConfig::createMenu('profile-menu', $menu);
   }
 }

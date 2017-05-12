@@ -12,7 +12,6 @@ class ProductMenu {
       '/' => 'Home'
     );
 
-    WebcomposerConfig::createMenu('product-menu-sc', $menu);
-    WebcomposerConfig::createMenu('product-menu-ch', $menu);
+    WebcomposerConfig::createMenu('product-menu', $menu);
   }
 }

@@ -12,7 +12,6 @@ class QuickLinksMenu {
       '/' => 'About Us'
     );
 
-    WebcomposerConfig::createMenu('quicklinks-sc', $menu);
-    WebcomposerConfig::createMenu('quicklinks-ch', $menu);
+    WebcomposerConfig::createMenu('quicklinks', $menu);
   }
 }

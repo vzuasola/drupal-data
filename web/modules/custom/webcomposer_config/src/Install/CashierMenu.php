@@ -12,7 +12,6 @@ class CashierMenu {
       '/' => 'Cashier'
     );
 
-    WebcomposerConfig::createMenu('cashier-menu-sc', $menu);
-    WebcomposerConfig::createMenu('cashier-menu-ch', $menu);
+    WebcomposerConfig::createMenu('cashier-menu', $menu);
   }
 }

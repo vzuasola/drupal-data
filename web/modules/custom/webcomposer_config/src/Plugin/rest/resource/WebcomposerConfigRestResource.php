@@ -86,7 +86,8 @@ class WebcomposerConfigRestResource extends ResourceBase {
     }
 
     $data = array();
-    try{
+
+    try {
       $config = \Drupal::config("webcomposer_config.$id");
       $data = $config->get();
     } catch (\Exception $e) {
