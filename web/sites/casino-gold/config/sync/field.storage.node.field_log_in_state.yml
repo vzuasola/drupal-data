@@ -17,10 +17,13 @@ settings:
     -
       value: '1'
       label: Post-Login
+    -
+      value: '2'
+      label: 'Gold Only'
   allowed_values_function: ''
 module: options
 locked: false
-cardinality: 2
+cardinality: 3
 translatable: true
 indexes: {  }
 persist_with_no_fields: false
