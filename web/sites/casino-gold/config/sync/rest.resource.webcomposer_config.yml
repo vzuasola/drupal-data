@@ -1,0 +1,17 @@
+uuid: c79822e5-7b9d-4fe4-b7d1-aca192f37a03
+langcode: zh-hans
+status: true
+dependencies:
+  module:
+    - serialization
+    - user
+    - webcomposer_config
+id: webcomposer_config
+plugin_id: webcomposer_config
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+    supported_auth:
+      - cookie
