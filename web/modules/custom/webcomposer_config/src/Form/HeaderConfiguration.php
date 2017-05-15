@@ -48,7 +48,7 @@ class HeaderConfiguration extends ConfigFormBase {
     );
 
     $form['join_now_group']['join_now_link'] = array(
-      '#type' => 'url',
+      '#type' => 'textfield',
       '#title' => $this->t('Join Now Link'),
       '#description' => $this->t('The link for user redirection when clicked on Join Now Button.'),
       '#default_value' => $config->get('join_now_link'),
@@ -71,7 +71,7 @@ class HeaderConfiguration extends ConfigFormBase {
     );
 
     $form['login_group']['login_issue_link'] = array(
-      '#type' => 'url',
+      '#type' => 'textfield',
       '#title' => $this->t('Login Issue Link'),
       '#description' => $this->t('The link for user redirection when clicked on Login Issue Text.'),
       '#default_value' => $config->get('login_issue_link'),
