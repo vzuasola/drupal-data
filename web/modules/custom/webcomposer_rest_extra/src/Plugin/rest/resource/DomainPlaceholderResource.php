@@ -85,7 +85,7 @@ class DomainPlaceholderResource extends ResourceBase {
       }
 
       $key = $translation->field_placeholder_key->value;
-      $value = $translation->field_placeholder_value->value;
+      $value = $translation->field_default_value->value;
 
       //Make the key value pair for response
       $definition[] = [$key => $value];
