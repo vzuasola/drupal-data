@@ -23,7 +23,16 @@ content:
     settings:
       trim_length: 600
     third_party_settings: {  }
+    region: content
   links:
     weight: 101
+    region: content
 hidden:
+  field_banner_content: true
+  field_banner_link: true
+  field_banner_link_target: true
+  field_image: true
+  field_log_in_state: true
+  field_provision_players_only: true
+  field_right_side_block: true
   langcode: true

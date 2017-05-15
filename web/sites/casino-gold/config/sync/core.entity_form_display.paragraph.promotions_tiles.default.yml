@@ -24,6 +24,7 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+    region: content
   field_promotions_link:
     weight: 1
     settings:
@@ -31,6 +32,7 @@ content:
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
+    region: content
   field_summary:
     weight: 2
     settings:
@@ -38,8 +40,10 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
+    region: content
   translation:
     weight: 10
+    region: content
 hidden:
   created: true
   status: true
