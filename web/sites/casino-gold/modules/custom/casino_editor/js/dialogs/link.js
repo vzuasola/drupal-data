@@ -30,7 +30,7 @@ CKEDITOR.dialog.add("link", function(editor) {
                     if (/^(http|https)/.test(url.toLowerCase()) == false) {
                         var segments = url.replace(/^\/|\/$/g, '').split('/');
                         if (segments && allowedLangCodes.indexOf(segments[0]) == -1) {
-                            url = '/' + editor.config.language + url;
+                            url = '/' + editor.config.language + '/' + editor.config.site + url;
                         }
                     }
                     data.href = url;

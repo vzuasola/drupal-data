@@ -1,0 +1,26 @@
+langcode: zh-hans
+username_placeholder: Username
+password_placeholder: Password
+login_bottom_label: Login
+username_validation_min: null
+username_validation_max: null
+password_validation_min: null
+password_validation_max: null
+error_message_blank_username: 'Username is required.'
+error_message_blank_password: 'Password is required.'
+error_message_blank_passname: 'Username and Password is required.'
+error_message_invalid_passname: 'Sorry the Username and Password you entered does not match. Please try again.'
+error_message_service_not_available: 'Service not available.'
+error_message_account_suspended: ''
+error_message_account_locked: ''
+session_maxtime: '1'
+autologout_box_title: Reminder-title
+autologout_box_content:
+  value: "<p>this is the text fo the notification box.<span class=\"sessionTimer\"></span>&nbsp;seconds.\r\n</p>\r\n"
+  format: basic_html
+affirmative_button_text: Yes-sc
+negative_button_text: No-sc
+notification_title: 'notification title'
+notification_content:
+  value: "<p>This is notification Box\r\n</p>\r\n"
+  format: basic_html
