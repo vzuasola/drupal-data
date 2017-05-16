@@ -243,6 +243,7 @@
         } );
     };
 
+    CKEDITOR.config.protectedSource.push(/<a[^>]*><\/a>/g);
     CKEDITOR.dtd.$removeEmpty.span = 0;
 
 
