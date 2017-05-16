@@ -55,6 +55,13 @@ class LoginConfiguration extends ConfigFormBase {
       '#default_value' => $config->get('login_bottom_label'),
       );
 
+    $form['login_form_details'] ['lightbox_blurb'] = array(
+      '#type' => 'textfield',
+      '#title' => $this->t('Login lightbox blurb'),
+      '#default_value' => $config->get('lightbox_blurb'),
+    );
+
+
     $form['login_form_error_messages_details'] = array(
       '#type' => 'details',
       '#title' => t('Error Messages'),
@@ -211,6 +218,7 @@ class LoginConfiguration extends ConfigFormBase {
       'negative_button_text',
       'notification_title',
       'notification_content',
+      'lightbox_blurb'
       );
 
     foreach ($loginValuesKeys as $keys){
