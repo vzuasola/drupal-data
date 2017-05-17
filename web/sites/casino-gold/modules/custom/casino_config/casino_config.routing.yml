@@ -37,3 +37,11 @@ casino_config.autologout_config_form:
     _title: 'Auto Logout Configurations'
   requirements:
     _permission: 'administer site configuration'
+
+casino_config.provisioning_config_form:
+  path: 'admin/config/casino/provisioning-ligtbox-config'
+  defaults:
+    _form: 'Drupal\casino_config\Form\ProvisionLightBoxConfig'
+    _title: 'Provisioning LigtBox Configurations'
+  requirements:
+    _permission: 'administer site configuration'
