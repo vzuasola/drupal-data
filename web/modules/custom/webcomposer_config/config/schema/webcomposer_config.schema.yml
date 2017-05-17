@@ -64,6 +64,9 @@ webcomposer_config.login_configuration:
     login_bottom_label:
       type: label
       label: 'Login Botton Label'
+    lightbox_blurb:
+      type: label
+      label: 'Login lightbox blurb'
     error_message_blank_username:
       type: label
       label: 'Blank Username'
