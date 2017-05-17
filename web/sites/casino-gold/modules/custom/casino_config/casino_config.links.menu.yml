@@ -27,3 +27,10 @@ casino_config.autologout_config:
   parent: casino_config.casino_config_list
   description: 'Casino Player Auto Logout Configurations'
   route_name: casino_config.autologout_config_form
+
+casino_config.provisioning_config:
+  title: 'Provisioning LightBox Configurations'
+  parent: casino_config.casino_config_list
+  description: 'Provisioning LightBox Configurations'
+  route_name: casino_config.provisioning_config_form
+
