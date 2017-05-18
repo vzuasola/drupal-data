@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.lobby_banner_slider.field_banner_link
     - field.field.node.lobby_banner_slider.field_banner_link_target
     - field.field.node.lobby_banner_slider.field_content_position
+    - field.field.node.lobby_banner_slider.field_gold_only
     - field.field.node.lobby_banner_slider.field_image
     - field.field.node.lobby_banner_slider.field_log_in_state
     - image.style.thumbnail
@@ -23,7 +24,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 3
+    weight: 4
     settings:
       rows: 9
       summary_rows: 3
@@ -31,7 +32,7 @@ content:
     third_party_settings: {  }
     region: content
   field_banner_link:
-    weight: 7
+    weight: 8
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -39,19 +40,25 @@ content:
     type: link_default
     region: content
   field_banner_link_target:
-    weight: 8
+    weight: 9
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_content_position:
-    weight: 4
+    weight: 5
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
+  field_gold_only:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
   field_image:
-    weight: 5
+    weight: 6
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -66,37 +73,37 @@ content:
     region: content
   langcode:
     type: language_select
-    weight: 2
+    weight: 3
     settings: {  }
     third_party_settings: {  }
     region: content
   publish_on:
     type: datetime_timestamp_no_default
-    weight: 10
+    weight: 11
     settings: {  }
     third_party_settings: {  }
     region: content
   scheduler_settings:
-    weight: 9
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: 1
+    weight: 2
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     region: content
   translation:
-    weight: 6
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp_no_default
-    weight: 11
+    weight: 12
     settings: {  }
     third_party_settings: {  }
     region: content

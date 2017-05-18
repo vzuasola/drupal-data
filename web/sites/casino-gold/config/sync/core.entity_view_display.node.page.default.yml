@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.page.field_banner_content
     - field.field.node.page.field_banner_link
     - field.field.node.page.field_banner_link_target
+    - field.field.node.page.field_gold_only
     - field.field.node.page.field_image
     - field.field.node.page.field_log_in_state
     - field.field.node.page.field_right_side_block
@@ -52,6 +53,13 @@ content:
     region: content
   field_banner_link_target:
     weight: 105
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_gold_only:
+    weight: 112
     label: above
     settings: {  }
     third_party_settings: {  }

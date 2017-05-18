@@ -58,3 +58,36 @@ casino_config.autologout_config:
     notification_content:
       type: text_format
       label: 'Notification Box Content'
+
+casino_config.provisioning_config:
+  type: mapping
+  label: 'Provisioning Configurations'
+  mapping:
+    app_top_blurb:
+      type: text_format
+      label: 'Application Top Blurb'
+      translatable: true
+    app_middle_blurb:
+      type: text_format
+      label: 'Application Middle Blurb'
+      translatable: true
+    reapp_top_blurb:
+      type: text_format
+      label: 'Reapplication Top Blurb'
+      translatable: true
+    reapp_middle_blurb:
+      type: text_format
+      label: 'Reapplication Middle Blurb'
+      translatable: true
+    gold_player_top_blurb:
+      type: text_format
+      label: 'Already Gold Player Top Blurb'
+      translatable: true
+    gold_player_middle_blurb:
+      type: text_format
+      label: 'Already Gold Player Middle Blurb'
+      translatable: true
+    bottom_blurb_content:
+      type: text_format
+      label: 'Bottom Blurb Content'
+      translatable: true
