@@ -67,11 +67,19 @@ class ThirdPartyResources extends ResourceBase {
 
      // You must to implement the logic of your REST Resource here.
 
-    $query = \Drupal::entityQuery('node')
+    if($route == '*') {
+      $query = \Drupal::entityQuery('node')
+      ->condition('status', 1)
+      ->condition('type', 'third_party_css_and_javascript');
+     $entity_ids = $query->execute();
+    }
+    else {
+      $query = \Drupal::entityQuery('node')
       ->condition('status', 1)
       ->condition('type', 'third_party_css_and_javascript')
       ->condition('field_route_name', $route);
-    $entity_ids = $query->execute();
+     $entity_ids = $query->execute();
+    }
 
     if (empty($entity_ids)) {
       throw new NotFoundHttpException(t('No Script found for given Route @id', array('@id' => $route)));
