@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\webcomposer_rest_extra\Plugin\rest\resource;
+namespace Drupal\webcomposer_snippet\Plugin\rest\resource;
 
 use Drupal\rest\Plugin\ResourceBase;
 use Drupal\rest\ResourceResponse;
