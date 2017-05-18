@@ -51,7 +51,7 @@ class LoginConfiguration extends ConfigFormBase {
 
     $form['login_form_details'] ['login_bottom_label'] = array(
       '#type' => 'textfield',
-      '#title' => $this->t('Login Botton Label'),
+      '#title' => $this->t('Login Button Label'),
       '#default_value' => $config->get('login_bottom_label'),
       );
 
