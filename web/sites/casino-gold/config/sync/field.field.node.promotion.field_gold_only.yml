@@ -1,0 +1,21 @@
+uuid: b0a64b0c-23e0-460f-88fd-6ebee931fad1
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_gold_only
+    - node.type.promotion
+  module:
+    - options
+id: node.promotion.field_gold_only
+field_name: field_gold_only
+entity_type: node
+bundle: promotion
+label: 'Gold Only'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
