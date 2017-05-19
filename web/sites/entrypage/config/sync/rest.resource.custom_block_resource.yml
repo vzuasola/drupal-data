@@ -1,0 +1,17 @@
+uuid: 976a40de-de4a-4221-aea2-4033b535b354
+langcode: en
+status: true
+dependencies:
+  module:
+    - serialization
+    - user
+    - webcomposer_blocks
+id: custom_block_resource
+plugin_id: custom_block_resource
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+    supported_auth:
+      - cookie

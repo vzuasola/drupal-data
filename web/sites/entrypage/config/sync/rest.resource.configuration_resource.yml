@@ -1,0 +1,17 @@
+uuid: 8c2e4ea1-197e-4e20-ad2e-7e32545f2926
+langcode: en
+status: true
+dependencies:
+  module:
+    - serialization
+    - user
+    - webcomposer_rest_extra
+id: configuration_resource
+plugin_id: configuration_resource
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+    supported_auth:
+      - cookie
