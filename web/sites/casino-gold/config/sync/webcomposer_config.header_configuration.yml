@@ -1,0 +1,14 @@
+langcode: zh-hans
+join_now_text: JOIN-NOW
+join_now_link: 'http://www.dafabet.com/en/join'
+login_issue_text: 'Cant login'
+login_issue_link: 'http://www.dafabet.com/en/cant-login'
+sc_lang_text: chinese-sc-test
+ch_lang_text: chinese-ch-test
+balance_error_text: 'Cannot Load Balance'
+profile_icon_hover_text: 'My Account'
+cashier_icon_hover_text: Cashier
+product_menu_new_tag: NEW
+welcome_text: 'Good day! {username}'
+profile_link: 'https://qa1-accountwww.elysium-dfbt.com/sc/my-profile'
+profile_logout_text: 登出

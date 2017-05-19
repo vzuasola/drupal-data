@@ -119,6 +119,8 @@ class FooterConfiguration extends ConfigFormBase {
           $file_usage->add($file, 'webcomposer_config', 'image', $fid[0]);
 
           $this->config('webcomposer_config.footer_configuration')->set("partners_image_url", file_create_url($file->getFileUri()))->save();
+        } else {
+          $this->config('webcomposer_config.footer_configuration')->set("partners_image_url", null);
         }
       }
       $this->config('webcomposer_config.footer_configuration')->set($key, $form_state->getValue($key))->save();
