@@ -1,0 +1,17 @@
+uuid: ff858c3f-7f2f-4e1b-a7cf-0c72f02fc8d4
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - serialization
+    - user
+id: entity.configurable_language
+plugin_id: 'entity:configurable_language'
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+    supported_auth:
+      - cookie

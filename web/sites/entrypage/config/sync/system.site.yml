@@ -1,0 +1,14 @@
+uuid: 439ce2cb-8750-4e5b-b288-2e4e68fb2b7f
+name: entrypage
+mail: kapil.kataria@bayviewtechnology.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: AyT9s8OUcclfALRE_imByOMgtZ19eOlqdF6zI3p7yqo

@@ -1,0 +1,21 @@
+uuid: e679e075-90ef-4f24-abe2-a7edf7460028
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: j5zLMOdJBqC0bMvSdth5UebkprJB8g_2FXHqhfpJzow
+id: anonymous
+label: 'Anonymous user'
+weight: 0
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access site-wide contact form'
+  - 'restful get configuration_resource'
+  - 'restful get custom_block_resource'
+  - 'restful get entity_bundle_fields_resource'
+  - 'restful get language_rest_resource'
+  - 'restful get webcomposer_config'
+  - 'search content'
+  - 'use text format restricted_html'

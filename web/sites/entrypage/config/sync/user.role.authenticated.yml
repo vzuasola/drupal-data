@@ -1,0 +1,22 @@
+uuid: 551f5923-262f-4025-84c6-06767c17ee50
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
+id: authenticated
+label: 'Authenticated user'
+weight: 1
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access shortcuts'
+  - 'access site-wide contact form'
+  - 'post comments'
+  - 'restful get configuration_resource'
+  - 'restful get language_rest_resource'
+  - 'restful get webcomposer_config'
+  - 'search content'
+  - 'skip comment approval'
+  - 'use text format basic_html'
