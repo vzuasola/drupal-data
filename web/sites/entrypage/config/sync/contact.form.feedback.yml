@@ -1,4 +1,4 @@
-uuid: c450f44f-2ce6-4d26-bd29-1377eb32751a
+uuid: ea3a57d1-291b-493c-925a-b3ec6bd9fc30
 langcode: en
 status: true
 dependencies: {  }
@@ -7,7 +7,7 @@ _core:
 id: feedback
 label: 'Website feedback'
 recipients:
-  - kapil.kataria@bayviewtechnology.com
+  - ashwini@gmail.com
 reply: ''
 weight: 0
 message: 'Your message has been sent.'
