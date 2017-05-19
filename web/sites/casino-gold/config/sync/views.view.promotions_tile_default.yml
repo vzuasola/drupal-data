@@ -508,6 +508,18 @@ display:
           reduce_duplicates: true
           plugin_id: list_field
       sorts:
+        field_gold_only_value:
+          id: field_gold_only_value
+          table: node__field_gold_only
+          field: field_gold_only_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: DESC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: standard
         changed:
           id: changed
           table: node_field_data

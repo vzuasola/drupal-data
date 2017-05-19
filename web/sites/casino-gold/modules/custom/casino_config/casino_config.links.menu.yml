@@ -4,24 +4,6 @@ casino_config.casino_config_list:
   parent: system.admin_config
   route_name: casino_config.admin_settings
 
-casino_config.admin_dafabet_keyword:
-  title: 'Dafabet Keyword'
-  parent: casino_config.casino_config_list
-  description: 'Dafabet keyword configuration'
-  route_name: casino_config.dafabet_keyword_form
-
-casino_config.admin_left_floating_banner:
-  title: 'Left Floating Banner'
-  parent: casino_config.casino_config_list
-  description: 'left floating banner configuration'
-  route_name: casino_config.left_floating_banner_form
-
-casino_config.admin_right_floating_banner:
-  title: 'Right Floating Banner'
-  parent: casino_config.casino_config_list
-  description: 'Right floating banner configuration'
-  route_name: casino_config.right_floating_banner_form
-
 casino_config.admin_page_not_found:
   title: 'Page not found'
   parent: casino_config.casino_config_list
@@ -34,47 +16,11 @@ casino_config.admin_unsupported_language:
   description: 'Unsupported language configuration'
   route_name: casino_config.unsupp_language_form
 
-casino_config.admin_benefit_tiles:
-  title: 'Benefit Tiles'
-  parent: casino_config.casino_config_list
-  description: 'Benefit tiles configuration'
-  route_name: casino_config.lobby_left_tile_form
-
-casino_config.admin_gold_experience_tile:
-  title: 'Gold experience tile'
-  parent: casino_config.casino_config_list
-  description: 'Gold experience tiles configuration'
-  route_name: casino_config.lobby_right_tile_form
-
-casino_config.admin_login_config:
-  title: 'Login'
-  parent: casino_config.casino_config_list
-  description: 'Login configuration'
-  route_name: casino_config.login_config_form
-
-casino_config.admin_header_config:
-  title: 'Casino Header Configurations'
-  parent: casino_config.casino_config_list
-  description: 'Casino Header Configurations'
-  route_name: casino_config.header_config_form
-
-casino_config.admin_partners_config:
-  title: 'Partners Configurations'
-  parent: casino_config.casino_config_list
-  description: 'Casino Header Configurations'
-  route_name: casino_config.partners_config_form
-
 casino_config.promo_right_block_config:
   title: 'Promo Right Block Configurations'
   parent: casino_config.casino_config_list
   description: 'Casino Header Configurations'
   route_name: casino_config.promo_right_block_form
-
-casino_config.admin_footer_configuration:
-  title: 'Footer configuration'
-  parent: casino_config.casino_config_list
-  description: 'Casino Header Configurations'
-  route_name: casino_config.footer_config_form
 
 casino_config.autologout_config:
   title: 'Auto Logout Configurations'
@@ -82,8 +28,9 @@ casino_config.autologout_config:
   description: 'Casino Player Auto Logout Configurations'
   route_name: casino_config.autologout_config_form
 
-casino_config.admin_footer_configuration:
-  title: 'Footer configuration'
+casino_config.provisioning_config:
+  title: 'Provisioning LightBox Configurations'
   parent: casino_config.casino_config_list
-  description: 'Casino Header Configurations'
-  route_name: casino_config.footer_config_form
+  description: 'Provisioning LightBox Configurations'
+  route_name: casino_config.provisioning_config_form
+

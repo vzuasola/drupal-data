@@ -7,9 +7,9 @@ dependencies:
     - field.field.node.lobby_banner_slider.field_banner_link
     - field.field.node.lobby_banner_slider.field_banner_link_target
     - field.field.node.lobby_banner_slider.field_content_position
+    - field.field.node.lobby_banner_slider.field_gold_only
     - field.field.node.lobby_banner_slider.field_image
     - field.field.node.lobby_banner_slider.field_log_in_state
-    - field.field.node.lobby_banner_slider.field_provision_players_only
     - node.type.lobby_banner_slider
   module:
     - image
@@ -55,6 +55,13 @@ content:
     third_party_settings: {  }
     type: list_default
     region: content
+  field_gold_only:
+    weight: 107
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
   field_image:
     weight: 102
     label: above
@@ -70,16 +77,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: list_default
-    region: content
-  field_provision_players_only:
-    weight: 107
-    label: above
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    type: boolean
     region: content
   links:
     weight: 100

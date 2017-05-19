@@ -1,10 +1,8 @@
-uuid: dcfda87f-8cd4-4112-9309-374d2da214bb
+uuid: 9eaf6fd4-8810-4ac1-bf25-88164680ab83
 langcode: en
 status: true
 dependencies:
   module:
-    - basic_auth
-    - hal
     - serialization
     - user
     - webcomposer_blocks
@@ -14,8 +12,6 @@ granularity: method
 configuration:
   GET:
     supported_formats:
-      - hal_json
       - json
     supported_auth:
-      - basic_auth
       - cookie

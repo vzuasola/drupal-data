@@ -49,7 +49,8 @@ function casino_config_form_alter(&$form, FormStateInterface $form_state, $form_
       }
     }
   }
-
+  // remove access to content translation field
+  $form['content_translation']['#access'] = false;
   // hide the description on publish/unpublish from scheduler module
   unset($form['unpublish_on']['widget'][0]['value']['#description']);
   unset($form['publish_on']['widget'][0]['value']['#description']);

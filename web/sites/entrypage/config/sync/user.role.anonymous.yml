@@ -1,4 +1,4 @@
-uuid: 0d660c03-6a40-4dbc-a800-dfd5c06ec3fb
+uuid: e679e075-90ef-4f24-abe2-a7edf7460028
 langcode: en
 status: true
 dependencies: {  }
@@ -9,20 +9,13 @@ label: 'Anonymous user'
 weight: 0
 is_admin: false
 permissions:
-  - 'access content'
-  - 'use text format restricted_html'
   - 'access comments'
+  - 'access content'
   - 'access site-wide contact form'
-  - 'search content'
-  - 'restful get rest_menu_item'
-  - 'access my_account config'
-  - 'restful get Web Composer Token Resource Label'
-  - 'restful post Web Composer Token Resource Label'
-  - 'restful get webcomposer_token_rest'
-  - 'restful post webcomposer_token_rest'
-  - 'restful get entity_bundle_fields_resource'
-  - 'restful get entity_bundle_weight_resource'
-  - 'restful get form_resource'
+  - 'restful get configuration_resource'
   - 'restful get custom_block_resource'
-  - 'restful post contact_message'
+  - 'restful get entity_bundle_fields_resource'
   - 'restful get language_rest_resource'
+  - 'restful get webcomposer_config'
+  - 'search content'
+  - 'use text format restricted_html'
