@@ -1,4 +1,4 @@
-uuid: 551f5923-262f-4025-84c6-06767c17ee50
+uuid: 3840d1aa-2b25-4f21-b3ef-c1d872b61e20
 langcode: en
 status: true
 dependencies: {  }
@@ -15,8 +15,13 @@ permissions:
   - 'access site-wide contact form'
   - 'post comments'
   - 'restful get configuration_resource'
+  - 'restful get custom_block_resource'
+  - 'restful get entity_bundle_fields_resource'
+  - 'restful get entity_bundle_weight_resource'
+  - 'restful get form_resource'
   - 'restful get language_rest_resource'
-  - 'restful get webcomposer_config'
+  - 'restful get rest_menu_item'
+  - 'restful post user_registration'
   - 'search content'
   - 'skip comment approval'
   - 'use text format basic_html'

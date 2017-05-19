@@ -1,0 +1,22 @@
+uuid: 99473e81-e61f-4b2e-9cf5-72361b38c936
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_position
+    - node.type.third_party_css_and_javascript
+  module:
+    - options
+id: node.third_party_css_and_javascript.field_position
+field_name: field_position
+entity_type: node
+bundle: third_party_css_and_javascript
+label: Position
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
+
