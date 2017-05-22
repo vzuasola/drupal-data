@@ -32,4 +32,5 @@ permissions:
   - 'restful post webcomposer_token_rest'
   - 'search content'
   - 'skip comment approval'
+  - 'translate promotion node'
   - 'use text format basic_html'

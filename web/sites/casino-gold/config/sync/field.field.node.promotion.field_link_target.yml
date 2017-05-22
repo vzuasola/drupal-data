@@ -1,0 +1,23 @@
+uuid: c8869387-c8f8-4c9e-b616-89b56049958f
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_link_target
+    - node.type.promotion
+  module:
+    - options
+id: node.promotion.field_link_target
+field_name: field_link_target
+entity_type: node
+bundle: promotion
+label: 'Link Target'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: _self
+default_value_callback: ''
+settings: {  }
+field_type: list_string

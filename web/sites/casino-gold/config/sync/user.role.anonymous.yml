@@ -29,4 +29,5 @@ permissions:
   - 'restful post contact_message'
   - 'restful post webcomposer_token_rest'
   - 'search content'
+  - 'translate promotion node'
   - 'use text format restricted_html'

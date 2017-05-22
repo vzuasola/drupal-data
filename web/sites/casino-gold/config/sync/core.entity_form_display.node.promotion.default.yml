@@ -13,6 +13,7 @@ dependencies:
     - field.field.node.promotion.field_half_tile_image
     - field.field.node.promotion.field_half_tile_summary
     - field.field.node.promotion.field_image
+    - field.field.node.promotion.field_link_target
     - field.field.node.promotion.field_log_in_state
     - field.field.node.promotion.field_promote_to_lobby
     - field.field.node.promotion.field_right_side_block
@@ -36,7 +37,7 @@ third_party_settings:
         - field_full_tile_image
         - field_full_tile_summary
       parent_name: ''
-      weight: 11
+      weight: 13
       format_type: details
       format_settings:
         id: ''
@@ -49,7 +50,7 @@ third_party_settings:
         - field_half_tile_image
         - field_half_tile_summary
       parent_name: ''
-      weight: 12
+      weight: 14
       format_type: details
       format_settings:
         id: ''
@@ -64,7 +65,7 @@ third_party_settings:
         - field_banner_link_target
         - field_banner_content
       parent_name: ''
-      weight: 10
+      weight: 12
       format_type: details
       format_settings:
         id: ''
@@ -77,8 +78,9 @@ third_party_settings:
         - field_thumbnail_image
         - field_thumbnail_summary
         - field_right_side_block_link
+        - field_link_target
       parent_name: ''
-      weight: 13
+      weight: 15
       format_type: details
       format_settings:
         id: ''
@@ -93,7 +95,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 9
+    weight: 11
     settings:
       rows: 9
       summary_rows: 3
@@ -168,6 +170,12 @@ content:
     third_party_settings: {  }
     type: image_image
     region: content
+  field_link_target:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_log_in_state:
     weight: 0
     settings: {  }
@@ -176,7 +184,7 @@ content:
     region: content
   field_promote_to_lobby:
     type: options_buttons
-    weight: 14
+    weight: 2
     settings: {  }
     third_party_settings: {  }
     region: content
@@ -199,7 +207,7 @@ content:
     region: content
   field_right_side_block_option:
     type: options_buttons
-    weight: 15
+    weight: 3
     settings: {  }
     third_party_settings: {  }
     region: content
@@ -221,43 +229,43 @@ content:
     region: content
   langcode:
     type: language_select
-    weight: 3
+    weight: 5
     settings: {  }
     third_party_settings: {  }
     region: content
   path:
     type: path
-    weight: 6
+    weight: 8
     settings: {  }
     third_party_settings: {  }
     region: content
   publish_on:
     type: datetime_timestamp_no_default
-    weight: 7
+    weight: 9
     settings: {  }
     third_party_settings: {  }
     region: content
   scheduler_settings:
-    weight: 5
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: 2
+    weight: 4
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     region: content
   translation:
-    weight: 4
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp_no_default
-    weight: 8
+    weight: 10
     settings: {  }
     third_party_settings: {  }
     region: content
