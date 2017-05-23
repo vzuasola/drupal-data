@@ -1,7 +1,0 @@
-uuid: 882a816d-2f7e-4f49-ac67-a9881a50d1cf
-status: true
-dependencies: {  }
-id: profile-menu
-label: 'Profile Menu'
-description: "Profile Menu Items"
-locked: false

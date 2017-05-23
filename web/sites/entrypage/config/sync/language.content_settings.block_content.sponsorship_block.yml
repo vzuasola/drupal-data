@@ -1,0 +1,16 @@
+uuid: 826af526-26e5-46ad-a164-0901ff0d1302
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.sponsorship_block
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: block_content.sponsorship_block
+target_entity_type_id: block_content
+target_bundle: sponsorship_block
+default_langcode: site_default
+language_alterable: true

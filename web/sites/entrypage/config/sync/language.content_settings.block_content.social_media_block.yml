@@ -1,0 +1,16 @@
+uuid: 86d1b161-7a99-41ca-985f-900232cef2ac
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.social_media_block
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: block_content.social_media_block
+target_entity_type_id: block_content
+target_bundle: social_media_block
+default_langcode: site_default
+language_alterable: true

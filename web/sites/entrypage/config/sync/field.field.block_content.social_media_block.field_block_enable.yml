@@ -1,0 +1,25 @@
+uuid: 9a337e7f-b853-451f-8220-1d90b4cd469a
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.social_media_block
+    - field.storage.block_content.field_block_enable
+_core:
+  default_config_hash: mmOsWRYj34Tt0MbMLfFmtNmuyxda27Qg_0TZBtYFZ_E
+id: block_content.social_media_block.field_block_enable
+field_name: field_block_enable
+entity_type: block_content
+bundle: social_media_block
+label: Enable/Disable
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Enable
+  off_label: Disable
+field_type: boolean
