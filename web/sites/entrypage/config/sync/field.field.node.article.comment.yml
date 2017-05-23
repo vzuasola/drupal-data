@@ -16,7 +16,7 @@ bundle: article
 label: Comments
 description: ''
 required: true
-translatable: false
+translatable: true
 default_value:
   -
     status: 2

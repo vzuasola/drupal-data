@@ -6,10 +6,7 @@ attributes:
     label: ''
     description: ''
     options:
-      _blank: 'New Tab'
-      _self: 'Same Window'
-      window: 'New Window'
-  menuTag:
-    label: 'Menu Tag'
-    options:
-      new: 'New Product'
+      _blank: 'New window (_blank)'
+      _self: 'Same window (_self)'
+_core:
+  default_config_hash: 9nRDOclwSlz2Os9mJXM1LXNbV2q-bADV0zipiWPXymk
