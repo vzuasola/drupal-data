@@ -1,17 +1,17 @@
-uuid: 427ca7cf-de32-4887-859d-c9de0d850278
+uuid: 967cf6ba-73b6-4174-8a25-d8f5bc8317da
 langcode: zh-hans
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_link_text
+    - field.storage.paragraph.field_lightbox_title
     - paragraphs.paragraphs_type.floating_banner_item
-id: paragraph.floating_banner_item.field_link_text
-field_name: field_link_text
+id: paragraph.floating_banner_item.field_lightbox_title
+field_name: field_lightbox_title
 entity_type: paragraph
 bundle: floating_banner_item
-label: 'Button Text'
+label: 'Lightbox Title'
 description: ''
-required: true
+required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''
