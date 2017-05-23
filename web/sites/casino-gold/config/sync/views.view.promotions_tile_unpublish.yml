@@ -32,7 +32,7 @@ display:
       access:
         type: perm
         options:
-          perm: 'access content'
+          perm: 'translate promotion node'
       cache:
         type: tag
         options: {  }
