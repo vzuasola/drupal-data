@@ -13,6 +13,7 @@ dependencies:
     - field.field.node.promotion.field_half_tile_image
     - field.field.node.promotion.field_half_tile_summary
     - field.field.node.promotion.field_image
+    - field.field.node.promotion.field_link_target
     - field.field.node.promotion.field_log_in_state
     - field.field.node.promotion.field_promote_to_lobby
     - field.field.node.promotion.field_right_side_block
@@ -112,6 +113,13 @@ content:
       image_link: ''
     third_party_settings: {  }
     type: image
+    region: content
+  field_link_target:
+    weight: 19
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
   field_log_in_state:
     weight: 15
