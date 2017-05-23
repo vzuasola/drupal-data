@@ -19,7 +19,6 @@ permissions:
   - 'restful get form_resource'
   - 'restful get language_rest_resource'
   - 'restful get rest_menu_item'
-  - 'restful get webcomposer_config'
   - 'restful post user_registration'
   - 'search content'
   - 'use text format restricted_html'

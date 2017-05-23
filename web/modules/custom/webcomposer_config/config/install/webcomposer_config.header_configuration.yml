@@ -1,0 +1,13 @@
+join_now_text: JOIN NOW
+join_now_link: 'http://google.com'
+login_issue_text: 'Cant login'
+login_issue_link: 'http://google.com'
+sc_lang_text: SC
+ch_lang_text: CH
+balance_error_text: 'Error fetching balances'
+profile_icon_hover_text: 'My Profile'
+cashier_icon_hover_text: 'Cashier'
+product_menu_new_tag: NEW
+welcome_text: 'Hola {username}!'
+profile_link: '#'
+profile_logout_text: /logout
