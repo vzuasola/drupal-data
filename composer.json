@@ -73,7 +73,7 @@
         },
         "patches": {
             "drupal/core": {
-                "Date field all languages title fix": "https://www.drupal.org/files/issues/2652850-26_0.patch"
+                "Date field all languages title fix": "https://www.drupal.org/files/issues/2652850-17.patch"
             }
         }
     },
