@@ -1,4 +1,4 @@
-uuid: 275038a0-5659-477b-a7ad-ee1c1a707c0e
+uuid: 541c1a8e-979f-4cb7-bf58-98f852365d6c
 langcode: en
 status: true
 dependencies: {  }
@@ -7,5 +7,5 @@ _core:
 id: en
 label: English
 direction: ltr
-weight: -10
+weight: 0
 locked: false

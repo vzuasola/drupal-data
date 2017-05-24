@@ -506,7 +506,10 @@ if ($settings['hash_salt']) {
  * security by serving user-uploaded files from a different domain or subdomain
  * pointing to the same server. Do not include a trailing slash.
  */
-# $settings['file_public_base_url'] = 'http://downloads.example.com/files';
+if(isset($_SERVER['HTTP_X_FE_BASE_URI'])) {
+  $settings['file_public_base_url'] =  $_SERVER['HTTP_X_FE_BASE_URI'];
+
+ }
 
 /**
  * Public file path:
@@ -515,7 +518,7 @@ if ($settings['hash_salt']) {
  * must exist and be writable by Drupal. This directory must be relative to
  * the Drupal installation directory and be accessible over the web.
  */
-# $settings['file_public_path'] = 'sites/default/files';
+ #$settings['file_public_path'] = 'casino/sites';
 
 /**
  * Private file path:
