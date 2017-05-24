@@ -1,17 +1,17 @@
-uuid: 427ca7cf-de32-4887-859d-c9de0d850278
+uuid: 45b80912-cbf9-456b-8baf-43d8f06dee27
 langcode: zh-hans
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_link_text
-    - paragraphs.paragraphs_type.floating_banner_item
-id: paragraph.floating_banner_item.field_link_text
+    - paragraphs.paragraphs_type.floating_banner_item_right
+id: paragraph.floating_banner_item_right.field_link_text
 field_name: field_link_text
 entity_type: paragraph
-bundle: floating_banner_item
+bundle: floating_banner_item_right
 label: 'Button Text'
 description: ''
-required: true
+required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''
