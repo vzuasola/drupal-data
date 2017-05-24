@@ -39,7 +39,6 @@ settings:
           items:
             - Blockquote
             - DrupalImage
-            - Table
             - HorizontalRule
         -
           name: 'Block Formatting'
@@ -61,6 +60,11 @@ settings:
             - JustifyLeft
             - JustifyCenter
             - JustifyRight
+        -
+          name: Widgets
+          items:
+            - Table
+            - Accordion
   plugins:
     language:
       language_list: un

@@ -1,0 +1,23 @@
+uuid: 596bdcfe-0682-4e3b-806c-4655cac6d97f
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_enable
+    - paragraphs.paragraphs_type.floating_banner_item_right
+id: paragraph.floating_banner_item_right.field_enable
+field_name: field_enable
+entity_type: paragraph
+bundle: floating_banner_item_right
+label: Enable
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Enable
+  off_label: Disable
+field_type: boolean
