@@ -8,7 +8,5 @@ attributes:
     options:
       _blank: 'New window (_blank)'
       _self: 'Same window (_self)'
-  menuTag:
-    label: 'Menu Tag'
-    options:
-      new: 'New Product'
+_core:
+  default_config_hash: 9nRDOclwSlz2Os9mJXM1LXNbV2q-bADV0zipiWPXymk
