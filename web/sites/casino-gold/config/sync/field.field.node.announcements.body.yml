@@ -1,0 +1,22 @@
+uuid: dadaad12-3424-4d5e-8f48-c762e017de5a
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.announcements
+  module:
+    - text
+id: node.announcements.body
+field_name: body
+entity_type: node
+bundle: announcements
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary
