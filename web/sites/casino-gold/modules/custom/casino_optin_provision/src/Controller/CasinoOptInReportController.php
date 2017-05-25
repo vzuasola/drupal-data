@@ -15,7 +15,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 class CasinoOptInReportController extends ControllerBase {
 
   /**
-   *
+   * $connection
    */
   protected $connection;
 
@@ -36,7 +36,7 @@ class CasinoOptInReportController extends ControllerBase {
   }
 
   /**
-   *
+   * API Callback
    */
   public function optin_post(Request $request) {
 
@@ -47,12 +47,12 @@ class CasinoOptInReportController extends ControllerBase {
 
     // This condition checks the `Content-type` and makes sure to
     // decode JSON string from the request body into array.
-    if ( 0 === strpos( $request->headers->get( 'Content-Type' ), 'application/json' ) ) {
+    if (0 === strpos($request->headers->get('Content-Type'), 'application/json')) {
 
-      $data = json_decode( $request->getContent(), TRUE );
+      $data = json_decode($request->getContent(), TRUE);
       $request->request->replace(is_array($data) ? $data : array());
 
-      if ( !empty($data['username']) && !empty($data['application_date']) && !empty($data['currency']) ) {
+      if (!empty($data['username']) && !empty($data['application_date']) && !empty($data['currency'])) {
         try {
 
           $isOnProcess = $this->checkUsernameIfInProcess($data['username']);

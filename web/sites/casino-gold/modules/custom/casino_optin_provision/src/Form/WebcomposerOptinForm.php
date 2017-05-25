@@ -77,6 +77,10 @@ class WebcomposerOptinForm extends FormBase{
   */
   public function buildForm(array $form, FormStateInterface $form_state) {
 
+    // drupal_add_js("(function($){
+    //   console.log('Test');
+    // })(jQuery)","inline");
+
     $dateNow = $this->dateFormatter->format(time(), 'date_only');
 
     $dateConfig = $this->config->get('core.date_format.date_only');
@@ -133,6 +137,7 @@ class WebcomposerOptinForm extends FormBase{
     $dFrom = strtotime($formValue['date_from']);
     $dTo = strtotime($formValue['date_to']);
 
+    dsm($formValue['date_from']);
     if (!$this->validateDate($formValue['date_from'])) {
       $form_state->setErrorByName('date_from', $this->t('The value in Date is not a valid date.'));
     }
@@ -168,6 +173,8 @@ class WebcomposerOptinForm extends FormBase{
    */
   public function buildTable($dateFrom, $dateTo) {
 
+    dsm($dateFrom);
+    dsm($dateTo);
     $rows = array();
     $dFrom = strtotime("$dateFrom 00:00:01");
     $dTo = strtotime("$dateTo 23:59:59" );
