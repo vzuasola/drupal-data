@@ -1,0 +1,5 @@
+name: Casino Opt-In Reports
+type: module
+description: This module provides Opt-in Reporting Tool
+core: 8.x
+package: Casino

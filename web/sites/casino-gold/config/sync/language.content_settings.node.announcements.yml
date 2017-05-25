@@ -1,0 +1,11 @@
+uuid: 4c8ccb7e-2332-4a98-ba9f-2d9c8b80d43d
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - node.type.announcements
+id: node.announcements
+target_entity_type_id: node
+target_bundle: announcements
+default_langcode: site_default
+language_alterable: false
