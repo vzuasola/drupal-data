@@ -146,7 +146,9 @@ class BlockResource extends ResourceBase {
           $language = $this->defaultLanguage;
           $translatedBlocked = $block_content->getTranslation($language);
         } catch (\Exception $e) {
-          throw new NotFoundHttpException('Custom block not found');
+          throw new NotFoundHttpException("Tried to fetch Custom block $id 
+            using the default language but was not found. Please check the 
+            validity of the translation of the block");
         }
       }
 
