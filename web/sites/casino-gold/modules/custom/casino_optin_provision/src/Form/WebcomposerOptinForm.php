@@ -77,10 +77,6 @@ class WebcomposerOptinForm extends FormBase{
   */
   public function buildForm(array $form, FormStateInterface $form_state) {
 
-    // drupal_add_js("(function($){
-    //   console.log('Test');
-    // })(jQuery)","inline");
-
     $dateNow = $this->dateFormatter->format(time(), 'date_only');
 
     $dateConfig = $this->config->get('core.date_format.date_only');
