@@ -41,7 +41,7 @@ class DownloadResultsController extends ControllerBase {
   /**
    *
    */
-  public static function create( ContainerInterface $container) {
+  public static function create(ContainerInterface $container) {
     return new static(
       $container->get('database'),
       $container->get('date.formatter'),
