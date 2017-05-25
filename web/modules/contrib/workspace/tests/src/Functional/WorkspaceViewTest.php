@@ -2,7 +2,8 @@
 
 namespace Drupal\Tests\workspace\Functional;
 
-use Drupal\Tests\BrowserTestBase;
+use Drupal\simpletest\BrowserTestBase;
+
 
 /**
  * Tests permission controls on workspaces.
@@ -10,12 +11,11 @@ use Drupal\Tests\BrowserTestBase;
  * @group workspace
  * @runTestsInSeparateProcesses
  * @preserveGlobalState disabled
- *
  */
 class WorkspaceViewTest extends BrowserTestBase {
   use WorkspaceTestUtilities;
 
-  public static $modules = ['workspace', 'multiversion'];
+  public static $modules = ['workspace', 'workspace'];
 
   /**
    * Verifies that a user can view their own workspace.
@@ -100,5 +100,5 @@ class WorkspaceViewTest extends BrowserTestBase {
     $this->drupalGet("admin/structure/workspace/{$packers->id()}/activate");
     $this->assertEquals(200, $session->getStatusCode());
   }
-  
+
 }

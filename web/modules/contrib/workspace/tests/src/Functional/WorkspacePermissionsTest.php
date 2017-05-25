@@ -2,8 +2,6 @@
 
 namespace Drupal\Tests\workspace\Functional;
 
-use Drupal\Core\Entity\EntityTypeManagerInterface;
-use Drupal\multiversion\Entity\WorkspaceInterface;
 use Drupal\Tests\BrowserTestBase;
 
 /**
@@ -16,7 +14,10 @@ use Drupal\Tests\BrowserTestBase;
 class WorkspacePermissionsTest extends BrowserTestBase {
   use WorkspaceTestUtilities;
 
-  public static $modules = ['workspace', 'multiversion'];
+  /**
+   * @var array
+   */
+  public static $modules = ['workspace', 'workspace'];
 
   /**
    * Verifies that a user can create but not edit a workspace.
@@ -48,9 +49,9 @@ class WorkspacePermissionsTest extends BrowserTestBase {
     // Now edit that same workspace; We shouldn't be able to do so, since
     // we don't have edit permissions.
 
-    /** @var EntityTypeManagerInterface $etm */
+    /** @var \Drupal\Core\Entity\EntityTypeManagerInterface $etm */
     $etm = \Drupal::service('entity_type.manager');
-    /** @var WorkspaceInterface $bears */
+    /** @var \Drupal\workspace\Entity\WorkspaceInterface $bears */
     $entity_list = $etm->getStorage('workspace')->loadByProperties(['label' => 'Bears']);
     $bears = current($entity_list);
 
@@ -163,5 +164,4 @@ class WorkspacePermissionsTest extends BrowserTestBase {
     $this->drupalGet("/admin/structure/workspace/{$bears->id()}/edit");
     $this->assertEquals(200, $session->getStatusCode());
   }
-
 }
