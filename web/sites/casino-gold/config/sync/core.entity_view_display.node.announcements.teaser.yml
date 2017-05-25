@@ -1,0 +1,29 @@
+uuid: 511b8c3d-a794-4c2f-a1a4-26ca6057c43d
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.announcements.body
+    - node.type.announcements
+  module:
+    - text
+    - user
+id: node.announcements.teaser
+targetEntityType: node
+bundle: announcements
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true
