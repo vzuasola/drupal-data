@@ -4,6 +4,8 @@ status: true
 dependencies:
   config:
     - block_content.type.lobby_tile
+    - field.field.block_content.lobby_tile.field_coming_soon_label
+    - field.field.block_content.lobby_tile.field_enable_tile
     - field.field.block_content.lobby_tile.field_tile
   module:
     - paragraphs
@@ -12,9 +14,23 @@ targetEntityType: block_content
 bundle: lobby_tile
 mode: default
 content:
+  field_coming_soon_label:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_enable_tile:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
   field_tile:
     type: entity_reference_paragraphs
-    weight: 2
+    weight: 4
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -39,8 +55,8 @@ content:
     third_party_settings: {  }
     region: content
   translation:
-    weight: 3
+    weight: 5
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden: {  }
