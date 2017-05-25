@@ -133,15 +133,15 @@ class WebcomposerOptinForm extends FormBase{
     $dFrom = strtotime($formValue['date_from']);
     $dTo = strtotime($formValue['date_to']);
 
-    if ( !$this->validateDate($formValue['date_from']) ) {
+    if (!$this->validateDate($formValue['date_from'])) {
       $form_state->setErrorByName('date_from', $this->t('The value in Date is not a valid date.'));
     }
 
-    if ( !$this->validateDate($formValue['date_to']) ) {
+    if (!$this->validateDate($formValue['date_to'])) {
       $form_state->setErrorByName('date_to', $this->t('The value in Date is not a valid date.'));
     }
 
-    if ( $this->validateDate($formValue['date_from']) && $this->validateDate($formValue['date_to']) ) {
+    if ($this->validateDate($formValue['date_from']) && $this->validateDate($formValue['date_to'])) {
       if ($dFrom > $dTo) {
         $form_state->setErrorByName('date_from', $this->t('Please check your date.'));
       }

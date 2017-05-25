@@ -29,7 +29,7 @@ class CasinoOptInReportController extends ControllerBase {
   /**
    *
    */
-  public static function create( ContainerInterface $container) {
+  public static function create(ContainerInterface $container) {
     return new static(
       $container->get('database')
     );
@@ -38,19 +38,19 @@ class CasinoOptInReportController extends ControllerBase {
   /**
    *
    */
-  public function optin_post( Request $request  ) {
+  public function optin_post(Request $request) {
 
-    $responseStatus = [
+    $responseStatus = array(
       'status' => 'failed',
       'message' => 'Something went wrong, please check your data.',
-    ];
+    );
 
     // This condition checks the `Content-type` and makes sure to
     // decode JSON string from the request body into array.
     if ( 0 === strpos( $request->headers->get( 'Content-Type' ), 'application/json' ) ) {
 
       $data = json_decode( $request->getContent(), TRUE );
-      $request->request->replace( is_array( $data ) ? $data : [] );
+      $request->request->replace(is_array($data) ? $data : array());
 
       if ( !empty($data['username']) && !empty($data['application_date']) && !empty($data['currency']) ) {
         try {
@@ -58,10 +58,10 @@ class CasinoOptInReportController extends ControllerBase {
           $isOnProcess = $this->checkUsernameIfInProcess($data['username']);
 
           if ($isOnProcess) {
-            $responseStatus = [
+            $responseStatus = array(
               'status' => 'on-process',
               'message' => 'User application is currently on-process',
-            ];
+            );
           } else {
             $isSaved = db_insert('casino_optin_report')
                         ->fields(array(
@@ -72,20 +72,20 @@ class CasinoOptInReportController extends ControllerBase {
                         ->execute();
 
             if ($isSaved) {
-              $responseStatus = [
+              $responseStatus = array(
                 'status' => 'success',
                 'message' => 'Data have been saved successfully.',
-              ];
+              );
             }
           }
 
         } catch (\Exception $e){
-          return new JsonResponse( $responseStatus );
+          return new JsonResponse($responseStatus);
         }
       }
     }
 
-    return new JsonResponse( $responseStatus );
+    return new JsonResponse($responseStatus);
   }
 
   /**
