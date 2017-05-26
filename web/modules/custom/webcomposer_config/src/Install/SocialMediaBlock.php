@@ -101,7 +101,7 @@ class SocialMediaBlock {
         ));
 
         $block_content->save();
-        WebcomposerConfig::placeBlockInRegion('footer_social_media', $block_content->uuid(), 'content', 'Sponsorship Block');
+        WebcomposerConfig::placeBlockInRegion('footer_social_media', $block_content->uuid(), 'content', 'Social Media Block');
       }
     }
   }

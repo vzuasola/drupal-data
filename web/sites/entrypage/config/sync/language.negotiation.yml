@@ -5,9 +5,29 @@ url:
   prefixes:
     en: en
     zh-hans: sc
+    zh-hant: ch
+    id: id
+    eu: eu
+    th: th
+    vi: vi
+    ja: ja
+    ko: ko
+    hi: hi
+    el: el
+    pl: pl
   domains:
     en: ''
     zh-hans: ''
+    zh-hant: ''
+    id: ''
+    eu: ''
+    th: ''
+    vi: ''
+    ja: ''
+    ko: ''
+    hi: ''
+    el: ''
+    pl: ''
 selected_langcode: site_default
 _core:
   default_config_hash: uEePITI9tV6WqzmsTb7MfPCi5yPWXSxAN1xeLcYFQbM

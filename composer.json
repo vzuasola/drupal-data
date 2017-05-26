@@ -64,6 +64,9 @@
         ],
         "sync-settings": [
             "DrupalProject\\composer\\SettingsHandler::syncSettings"
+        ],
+        "sync-drush": [
+            "DrupalProject\\composer\\SettingsHandler::syncDrush"
         ]
     },
     "extra": {
