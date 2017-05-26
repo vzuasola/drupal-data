@@ -1,0 +1,23 @@
+uuid: 6114779e-b964-4109-80c5-10eda833bb16
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - block_content.type.lobby_tile
+    - field.storage.block_content.field_enable_tile
+  module:
+    - options
+id: block_content.lobby_tile.field_enable_tile
+field_name: field_enable_tile
+entity_type: block_content
+bundle: lobby_tile
+label: 'Enable Tile'
+description: 'Disabled tile will have no hover effect or any animation.'
+required: false
+translatable: true
+default_value:
+  -
+    value: '1'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,27 @@
+uuid: 7e60d5da-19eb-4ee9-9e56-7050e859e866
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - field.field.node.announcements.body
+    - node.type.announcements
+  module:
+    - text
+    - user
+id: node.announcements.default
+targetEntityType: node
+bundle: announcements
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

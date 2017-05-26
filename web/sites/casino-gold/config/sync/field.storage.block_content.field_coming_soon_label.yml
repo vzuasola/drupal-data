@@ -1,0 +1,21 @@
+uuid: 245673e0-f7e2-4e6b-af83-2b3f9151e4f1
+langcode: zh-hans
+status: true
+dependencies:
+  module:
+    - block_content
+id: block_content.field_coming_soon_label
+field_name: field_coming_soon_label
+entity_type: block_content
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

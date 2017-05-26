@@ -1,0 +1,21 @@
+uuid: 71b5b120-11b7-4228-bd3b-e7b772d3a53f
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_link_class
+    - paragraphs.paragraphs_type.floating_banner_item_right
+  module:
+    - options
+id: paragraph.floating_banner_item_right.field_link_class
+field_name: field_link_class
+entity_type: paragraph
+bundle: floating_banner_item_right
+label: 'Link Class'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -144,3 +144,33 @@ fieldset[disabled] a.btn {
 .cke_panel_list {
     list-style: none !important;
 }
+
+.btn-medium {
+  padding: 5px 26px;
+  font-size: 30px;
+  font-weight: normal;
+  line-height: 1.42857;
+  border-radius: 2px; }
+
+.btn-large {
+  padding: 8px 52px;
+  font-size: 38px;
+  font-weight: bold;
+  line-height: 1.42857;
+  border-radius: 10px; }
+
+.btn-small {
+  padding: 2px 13px;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857;
+  border-radius: 1px; }
+
+.btn-block {
+  display: block;
+  width: 100%; }
+  .btn-block + .btn-block {
+    margin-top: 5px; }
+    
+.btn-lower-case {
+  text-transform: none; }
