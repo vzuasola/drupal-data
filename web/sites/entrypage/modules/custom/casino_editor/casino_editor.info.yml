@@ -1,7 +1,7 @@
 name: Casino CKEditor Plugins
 type: module
 description: "Custom plugins for CKEditor"
-package: Web Composer
+package: Custom
 
 dependencies:
   - ckeditor
