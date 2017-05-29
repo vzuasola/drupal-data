@@ -832,7 +832,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          operator: and
+          operator: or
           value:
             - '0'
           group: 1
@@ -1065,18 +1065,6 @@ display:
           expose:
             label: ''
           plugin_id: standard
-        field_log_in_state_value:
-          id: field_log_in_state_value
-          table: node__field_log_in_state
-          field: field_log_in_state_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: DESC
-          exposed: false
-          expose:
-            label: ''
-          plugin_id: standard
         changed:
           id: changed
           table: node_field_data
@@ -1278,7 +1266,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          operator: and
+          operator: or
           value:
             1: '1'
           group: 1
