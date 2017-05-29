@@ -3,6 +3,6 @@ langcode: en
 status: true
 dependencies: {  }
 id: product-menu
-label: 'product menu'
+label: 'Product Menu'
 description: ''
 locked: false
