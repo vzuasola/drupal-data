@@ -413,7 +413,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          operator: or
+          operator: 'not empty'
           value:
             1: '1'
           group: 1
@@ -485,6 +485,44 @@ display:
           entity_type: node
           entity_field: langcode
           plugin_id: language
+        field_gold_only_value:
+          id: field_gold_only_value
+          table: node__field_gold_only
+          field: field_gold_only_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: empty
+          value: {  }
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          plugin_id: list_field
       sorts:
         changed:
           id: changed
@@ -757,7 +795,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          operator: or
+          operator: 'not empty'
           value:
             1: '1'
           group: 1
@@ -836,7 +874,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          operator: not
+          operator: empty
           value:
             1: '1'
           group: 1
@@ -980,7 +1018,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          operator: or
+          operator: 'not empty'
           value:
             1: '1'
           group: 1
