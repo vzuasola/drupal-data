@@ -6,23 +6,23 @@ url:
     en: en
     zh-hans: sc
     zh-hant: ch
-    id: id
     eu: eu
     th: th
-    vi: vi
-    ja: ja
-    ko: ko
-    hi: hi
-    el: el
+    vi: vn
+    id: in
+    ja: jp
+    ko: kr
+    hi: id
+    el: gr
     pl: pl
   domains:
     en: ''
     zh-hans: ''
     zh-hant: ''
-    id: ''
     eu: ''
     th: ''
     vi: ''
+    id: ''
     ja: ''
     ko: ''
     hi: ''
