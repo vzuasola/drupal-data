@@ -1,0 +1,64 @@
+uuid: 0acfef9b-5e15-4ec4-a0a4-f535e031c6bb
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.floating_banner_item_right.field_enable
+    - field.field.paragraph.floating_banner_item_right.field_link
+    - field.field.paragraph.floating_banner_item_right.field_link_class
+    - field.field.paragraph.floating_banner_item_right.field_link_target
+    - field.field.paragraph.floating_banner_item_right.field_link_text
+    - paragraphs.paragraphs_type.floating_banner_item_right
+  module:
+    - link
+    - options
+id: paragraph.floating_banner_item_right.default
+targetEntityType: paragraph
+bundle: floating_banner_item_right
+mode: default
+content:
+  field_enable:
+    weight: 1
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_link:
+    weight: 2
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_link_class:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_link_target:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_link_text:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

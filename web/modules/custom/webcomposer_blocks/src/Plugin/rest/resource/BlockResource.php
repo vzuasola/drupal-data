@@ -34,8 +34,9 @@ class BlockResource extends ResourceBase {
   protected $currentUser;
 
   protected $entityRepository;
-  protected $entity_manager;
-  protected $current_language;
+  protected $entityManager;
+  protected $currentLanguage;
+  protected $defaultLanguage;
 
   /**
    * Constructs a Drupal\rest\Plugin\ResourceBase object.
@@ -68,7 +69,8 @@ class BlockResource extends ResourceBase {
     $this->currentUser = $current_user;
     $this->entityRepository = $entity_repository;
     $this->entityManager = $entity_manager;
-    $this->current_language = $language_manager->getCurrentLanguage()->getId();
+    $this->currentLanguage = $language_manager->getCurrentLanguage()->getId();
+    $this->defaultLanguage = $language_manager->getDefaultLanguage()->getId();
   }
 
   /**
@@ -134,7 +136,22 @@ class BlockResource extends ResourceBase {
       $uuid = $block->getPlugin()->getDerivativeId();
       $block_content = $this->entityRepository->loadEntityByUuid('block_content', $uuid);
 
-      $translatedBlocked = $block_content->getTranslation($this->current_language);
+      try {
+        $language = $this->currentLanguage;
+        $translatedBlocked = $block_content->getTranslation($language);
+      } catch (\Exception $e) {
+        // if the block is not available for the specific language, then
+        // try to use the default language
+        try {
+          $language = $this->defaultLanguage;
+          $translatedBlocked = $block_content->getTranslation($language);
+        } catch (\Exception $e) {
+          throw new NotFoundHttpException("Tried to fetch Custom block $id 
+            using the default language but was not found. Please check the 
+            validity of the translation of the block");
+        }
+      }
+
       $block_content_array = $translatedBlocked->toArray();
 
       foreach ($block_content as $fieldType => $field) {
@@ -143,7 +160,7 @@ class BlockResource extends ResourceBase {
         if (isset($fieldSettings['target_type'])) {
           if ($fieldSettings['target_type'] == 'paragraph') {
             foreach ($block_content_array[$fieldType] as $key => $value) {
-              $block_content_array[$fieldType][$key]['paragraph'] = $this->loadParagraphByID($value['target_id']);
+              $block_content_array[$fieldType][$key]['paragraph'] = $this->loadParagraphByID($value['target_id'], $language);
             }
           }
           else if ($fieldSettings['target_type'] == 'file') {
@@ -157,22 +174,16 @@ class BlockResource extends ResourceBase {
     }
   }
 
-
-  private function loadParagraphByID($target_id){
-    $paragraph = $this->entityManager->getStorage('paragraph')->load($target_id);
-    $translatedParagraph = $paragraph->getTranslation($this->current_language);
+  private function loadParagraphByID($id, $language) {
+    $paragraph = $this->entityManager->getStorage('paragraph')->load($id);
+    $translatedParagraph = $paragraph->getTranslation($language);
     return $translatedParagraph;
   }
 
-  private function getFileURI($target_id){
-    $file = File::load($target_id);
+  private function getFileURI($id) {
+    $file = File::load($id);
     $url = file_create_url($file->getFileUri());
     
-    /* This function will return the relative path once symlinking
-     * of the uploads folder to front has been implemented. 
-     */
-    // $url = parse_url($url);
-    // return $url['path'];
     return $url;
   }
 }

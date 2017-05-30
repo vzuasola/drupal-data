@@ -1,0 +1,8 @@
+uuid: b26f5802-138a-4fc6-8868-22c65cea03d8
+langcode: zh-hans
+status: true
+dependencies: {  }
+id: product-menu-sc
+label: 'Product Menu SC'
+description: ''
+locked: false

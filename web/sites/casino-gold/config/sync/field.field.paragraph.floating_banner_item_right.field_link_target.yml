@@ -1,0 +1,21 @@
+uuid: ac949534-e44c-48f1-bb58-08fd1838579d
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_link_target
+    - paragraphs.paragraphs_type.floating_banner_item_right
+  module:
+    - options
+id: paragraph.floating_banner_item_right.field_link_target
+field_name: field_link_target
+entity_type: paragraph
+bundle: floating_banner_item_right
+label: 'Link Target'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -63,6 +63,11 @@ $sites['dev-admin.elysium-dfbt.com'] = 'webcomposer';
 $sites['entry.drupal.dev'] = 'entrypage';
 $sites['entry.drupal.local'] = 'entrypage';
 
+$sites['entrypage.drupal.local'] = 'entrypage';
+$sites['entrypage.drupal.dev'] = 'entrypage';
+$sites['dev-entrypage.elysium-dfbt.com'] = 'entrypage';
+$sites['dev-cms-entrypage.elysium-dfbt.com'] = 'entrypage';
+
 // My Account Instances
 $sites['account.drupal.dev'] = 'account';
 $sites['account.drupal.local'] = 'account';

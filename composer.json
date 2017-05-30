@@ -64,6 +64,9 @@
         ],
         "sync-settings": [
             "DrupalProject\\composer\\SettingsHandler::syncSettings"
+        ],
+        "sync-drush": [
+            "DrupalProject\\composer\\SettingsHandler::syncDrush"
         ]
     },
     "extra": {
@@ -72,6 +75,9 @@
             "drush/contrib/{$name}": ["type:drupal-drush"]
         },
         "patches": {
+            "drupal/core": {
+                "Date field all languages title fix": "https://www.drupal.org/files/issues/2652850-17.patch"
+            }
         }
     },
     "enable-patching": true,

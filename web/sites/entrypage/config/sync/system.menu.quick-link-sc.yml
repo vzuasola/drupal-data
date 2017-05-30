@@ -1,0 +1,8 @@
+uuid: ff779230-7a40-48e3-8fd7-5f88551291e1
+langcode: zh-hant
+status: true
+dependencies: {  }
+id: quick-link-sc
+label: 'Quick Link SC'
+description: ''
+locked: false

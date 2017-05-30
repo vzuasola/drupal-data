@@ -1,0 +1,19 @@
+uuid: ceb8560d-9cc3-4645-b2b3-b3ea24768b88
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - block_content.type.lobby_tile
+    - field.storage.block_content.field_coming_soon_label
+id: block_content.lobby_tile.field_coming_soon_label
+field_name: field_coming_soon_label
+entity_type: block_content
+bundle: lobby_tile
+label: 'Coming Soon Text'
+description: 'This will be visible if the tile is disabled'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

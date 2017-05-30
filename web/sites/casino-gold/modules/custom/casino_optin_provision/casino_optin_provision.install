@@ -1,0 +1,51 @@
+<?php
+
+/**
+ * Implements hook_schema
+ */
+function casino_optin_provision_schema() {
+  $schema['casino_optin_report'] = [
+    'description' => 'This table used to saved users who is trying to apply for provisioning.',
+    'fields' => [
+      'oid' => [
+        'description' => 'The primary identifier.',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ],
+      'username' => [
+        'description' => "Player's username",
+        'type' => 'varchar',
+        'length' => 50,
+        'not null' => TRUE,
+        'default' => '',
+      ],
+      'application_date' => [
+        'description' => 'Opt-In Date',
+        'type' => 'int', // Will be using timestamps
+        'not null' => TRUE,
+        'default' => 0,
+      ],
+      'currency' => [
+        'description' => "Player's currency",
+        'type' => 'varchar',
+        'length' => 10,
+        'not null' => TRUE,
+        'default' => '',
+      ],
+    ],
+    'primary key' => ['oid'],
+  ];
+
+  return $schema;
+}
+
+
+
+/**
+ * Implements hook_uninstall
+ */
+function casino_optin_provision_uninstall() {
+    $config = \Drupal::service('config.factory')->getEditable('core.date_format.date_only');
+    $config->delete();
+}
