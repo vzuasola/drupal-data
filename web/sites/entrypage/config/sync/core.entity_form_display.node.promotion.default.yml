@@ -15,6 +15,7 @@ dependencies:
     - field.field.node.promotion.field_image
     - field.field.node.promotion.field_link_target
     - field.field.node.promotion.field_log_in_state
+    - field.field.node.promotion.field_mark_as_featured
     - field.field.node.promotion.field_product
     - field.field.node.promotion.field_promote_to_lobby
     - field.field.node.promotion.field_thumbnail_image
@@ -127,6 +128,12 @@ content:
     third_party_settings: {  }
     type: options_buttons
     region: content
+  field_mark_as_featured:
+    weight: 47
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
   field_product:
     weight: 37
     settings:
@@ -140,7 +147,7 @@ content:
     weight: 43
     settings: {  }
     third_party_settings: {  }
-    type: options_select
+    type: options_buttons
     region: content
   field_thumbnail_image:
     weight: 44
