@@ -95,8 +95,6 @@ function checkCustomBlockIfExist($block_type) {
  * Implements hook_cron()
  */
 function casino_config_cron() {
-
-
   /**
    * Casino Provision
    * Purge table after 30 days
@@ -118,9 +116,7 @@ function casino_config_cron() {
   } catch (\Exception $e) {
     \Drupal::logger('casino_provision')->error("Error deleting data");
   }
-   /**
-    * End
-    */
+  // End Casino Provision
 
 }
 
