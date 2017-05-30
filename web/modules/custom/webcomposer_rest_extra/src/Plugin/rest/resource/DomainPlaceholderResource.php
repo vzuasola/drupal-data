@@ -63,8 +63,7 @@ class DomainPlaceholderResource extends ResourceBase {
   {
     $definition = array();
 
-     // You must to implement the logic of your REST Resource here.
-
+    // You must to implement the logic of your REST Resource here.
     $term = \Drupal::entityTypeManager()
         ->getStorage('taxonomy_term')
         ->loadByProperties(['name' => $domain]);
@@ -78,8 +77,7 @@ class DomainPlaceholderResource extends ResourceBase {
     $term = reset($term);
     $getEntities = $term->get('field_add_placeholder')->referencedEntities();
 
-    foreach($getEntities as $getEntity) {
-
+    foreach ($getEntities as $getEntity) {
       if ($getEntity->hasTranslation($lang_code)) {
         $translation = $getEntity->getTranslation($lang_code);
       }
@@ -87,9 +85,11 @@ class DomainPlaceholderResource extends ResourceBase {
       $key = $translation->field_placeholder_key->value;
       $value = $translation->field_default_value->value;
 
-      //Make the key value pair for response
-      $definition[] = [$key => $value];
-
+      // filter out empty placeholder keys
+      if ($key && $value) {
+        // Make the key value pair for response
+        $definition[$key] = $value;
+      }
    }
 
     return $definition;

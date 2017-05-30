@@ -1,5 +1,13 @@
+webcomposer_dm.admin_settings:
+  path: 'admin/config/webcomposer/config'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Webcomposer Domains Configuration'
+  requirements:
+    _permission: 'administer site configuration'
+
 webcomposer_dm.manage_groups:
-  path: '/domain-management/manage-domain-groups'
+  path: 'admin/config/webcomposer/domains/groups'
   defaults:
     _controller: '\Drupal\webcomposer_dm\Controller\DomainManagement::getManageGroupsPage'
     _title: 'Manage Domain Groups'
@@ -7,8 +15,9 @@ webcomposer_dm.manage_groups:
     _permission: 'administer site configuration'
   options:
     _admin_route: TRUE
+
 webcomposer_dm.manage_domains:
-  path: '/domain-management/manage-domains'
+  path: 'admin/config/webcomposer/domains/domain'
   defaults:
     _controller: '\Drupal\webcomposer_dm\Controller\DomainManagement::getManageDomainsPage'
     _title: 'Manage Domains'
@@ -16,8 +25,9 @@ webcomposer_dm.manage_domains:
     _permission: 'administer site configuration'
   options:
     _admin_route: TRUE
+
 webcomposer_dm.manage_placeholders:
-  path: '/domain-management/manage-placeholders'
+  path: 'admin/config/webcomposer/domains/placeholders'
   defaults:
     _controller: '\Drupal\webcomposer_dm\Controller\DomainManagement::getManagePlaceholdersPage'
     _title: 'Domain Management Configuration'
