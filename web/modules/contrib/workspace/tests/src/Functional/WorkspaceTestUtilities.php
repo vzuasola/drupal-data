@@ -2,8 +2,10 @@
 
 namespace Drupal\Tests\workspace\Functional;
 
+use Drupal\Core\Entity\EntityTypeManagerInterface;
+use Drupal\multiversion\Entity\WorkspaceInterface;
 use Drupal\node\Entity\NodeType;
-use Drupal\workspace\Entity\WorkspaceInterface;
+use Drupal\workspace\WorkspacePointerInterface;
 
 /**
  * Utility methods for use in BrowserTestBase tests.
@@ -20,7 +22,7 @@ trait WorkspaceTestUtilities {
    *
    * @param $label
    *   The label of the workspace to load.
-   * @return \Drupal\workspace\Entity\WorkspaceInterface
+   * @return WorkspaceInterface
    */
   protected function getOneWorkspaceByLabel($label) {
     return $this->getOneEntityByLabel('workspace', $label);
@@ -36,14 +38,15 @@ trait WorkspaceTestUtilities {
    *   The type of entity to load.
    * @param $label
    *   The label of the entity to load.
-   * @return \Drupal\workspace\Entity\WorkspaceInterface
+   * @return WorkspaceInterface
    */
   protected function getOneEntityByLabel($type, $label) {
-    /** @var \Drupal\Core\Entity\EntityTypeManagerInterface $etm */
+    /** @var EntityTypeManagerInterface $etm */
     $etm = \Drupal::service('entity_type.manager');
 
     $property = $etm->getDefinition($type)->getKey('label');
 
+    /** @var WorkspaceInterface $bears */
     $entity_list = $etm->getStorage($type)->loadByProperties([$property => $label]);
 
     $entity = current($entity_list);
@@ -63,7 +66,7 @@ trait WorkspaceTestUtilities {
    * @param string $machine_name
    *   The machine name of the workspace to create.
    *
-   * @return \Drupal\workspace\Entity\WorkspaceInterface
+   * @return WorkspaceInterface
    *   The workspace that was just created.
    *
    * @throws \Behat\Mink\Exception\ElementNotFoundException
@@ -110,7 +113,7 @@ trait WorkspaceTestUtilities {
    * This assumes that the switcher block has already been setup by calling
    * setupWorkspaceSwitcherBlock().
    *
-   * @param \Drupal\workspace\Entity\WorkspaceInterface $workspace
+   * @param WorkspaceInterface $workspace
    *   The workspace to set active.
    */
   protected function switchToWorkspace(WorkspaceInterface $workspace) {
@@ -147,29 +150,20 @@ trait WorkspaceTestUtilities {
    *
    * @param string $label
    * @param string $bundle
-   * @param bool $publish
    *
-   * @return \Drupal\workspace\Entity\WorkspaceInterface
+   * @return \Drupal\multiversion\Entity\WorkspaceInterface
    *
    * @throws \Behat\Mink\Exception\ElementNotFoundException
    */
-  protected function createNodeThroughUI($label, $bundle, $publish = TRUE) {
+  protected function createNodeThroughUI($label, $bundle) {
     $this->drupalGet('/node/add/' . $bundle);
 
-    /** @var \Behat\Mink\Session $session */
     $session = $this->getSession();
     $this->assertSession()->statusCodeEquals(200);
 
-    /** @var \Behat\Mink\Element\DocumentElement $page */
     $page = $session->getPage();
     $page->fillField('Title', $label);
-    if ($publish) {
-      $button = $page->findButton(t('Save and publish')) ?: $page->findButton(t('Save'));
-      $button->click();
-    }
-    else {
-      $page->findButton(t('Save as unpublished'))->click();
-    }
+    $page->findButton(t('Save'))->click();
 
     $session->getPage()->hasContent("{$label} has been created");
 
@@ -181,13 +175,13 @@ trait WorkspaceTestUtilities {
    *
    * @todo Replace this with a common method in the module somewhere.
    *
-   * @param \Drupal\workspace\Entity\WorkspaceInterface $workspace
+   * @param \Drupal\multiversion\Entity\WorkspaceInterface $workspace
    *   The workspace for which we want a pointer.
-   * @return \Drupal\workspace\WorkspacePointerInterface
+   * @return WorkspacePointerInterface
    *   The pointer to the provided workspace.
    */
   protected function getPointerToWorkspace(WorkspaceInterface $workspace) {
-    /** @var \Drupal\Core\Entity\EntityTypeManagerInterface $etm */
+    /** @var EntityTypeManagerInterface $etm */
     $etm = \Drupal::service('entity_type.manager');
 
     $pointers = $etm->getStorage('workspace_pointer')

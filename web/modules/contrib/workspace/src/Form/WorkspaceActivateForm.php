@@ -3,7 +3,7 @@
 namespace Drupal\workspace\Form;
 
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\workspace\Entity\WorkspaceInterface;
+use Drupal\multiversion\Entity\WorkspaceInterface;
 
 /**
  * Handle activation of a workspace on administrative pages.
@@ -38,7 +38,7 @@ class WorkspaceActivateForm extends WorkspaceActivateFormBase {
       '#value' => 'Activate',
     ];
 
-    $form['#title'] = $this->t('Activate workspace %label', ['%label' => $workspace->label()]);
+    $form['#title'] = $this->t('Activate workspace %label', array('%label' => $workspace->label()));
 
     return $form;
   }

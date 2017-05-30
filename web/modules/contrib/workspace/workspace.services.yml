@@ -1,80 +1,42 @@
-parameters:
-  workspace.default: live
-  workspace.factory.keyvalue.sorted_set:
-    default: keyvalue.sorted_set.database
-
 services:
+  workspace.replicator_manager:
+    class: Drupal\workspace\ReplicatorManager
+    arguments: ['@workspace.conflict_tracker', '@event_dispatcher']
+    tags:
+      - { name: service_collector, tag: workspace_replicator, call: addReplicator}
+  workspace.internal_replicator:
+    class: Drupal\workspace\InternalReplicator
+    arguments: ['@workspace.manager', '@entity_type.manager', '@replication.changes_factory', '@replication.revisiondiff_factory', '@multiversion.entity_index.rev', '@serializer']
+    tags:
+      - {name: workspace_replicator, priority: 10}
+  workspace.entity_type_info:
+    class: Drupal\workspace\EntityTypeInfo
+    arguments: ['@multiversion.manager']
+  workspace.entity_operations:
+    class: Drupal\workspace\EntityOperations
+    arguments: ['@multiversion.manager', '@entity_type.manager']
+  workspace.toolbar:
+    class: Drupal\workspace\Toolbar
+    arguments: ['@entity_type.manager', '@workspace.manager', '@form_builder', '@current_user']
+  workspace.route_subscriber:
+    class: Drupal\workspace\Routing\RouteSubscriber
+    arguments: ['@multiversion.manager']
+    tags:
+      - { name: event_subscriber }
   workspace.paramconverter.entity_revision:
     class: Drupal\workspace\ParamConverter\EntityRevisionConverter
     arguments: ['@entity.manager']
     tags:
       - { name: paramconverter, priority: 30 }
+  workspace.workbench_moderation_subscriber:
+    class: Drupal\workspace\EventSubscriber\WorkbenchModerationSubscriber
+    arguments: ['@entity_type.manager', '@workspace.replicator_manager']
+    tags:
+      - { name: event_subscriber }
+  workspace.entity_access:
+    class: Drupal\workspace\EntityAccess
+    arguments: ['@entity_type.manager', '@workspace.manager', '%workspace.default%']
   access_check.workspace_view:
     class: Drupal\workspace\Access\WorkspaceViewCheck
     tags:
       - { name: access_check, applies_to: _workspace_view }
-  workspace.manager:
-    class: Drupal\workspace\WorkspaceManager
-    arguments: ['@request_stack', '@entity_type.manager', '@current_user', '@logger.channel.workspace']
-    tags:
-      - { name: service_collector, tag: workspace_negotiator, call: addNegotiator }
-  workspace.index.sequence:
-    class: Drupal\workspace\Index\SequenceIndex
-    arguments: ['@workspace.keyvalue.sorted_set', '@workspace.manager']
-  workspace.changes_factory:
-    class: Drupal\workspace\Changes\ChangesFactory
-    arguments: ['@entity_type.manager', '@workspace.index.sequence']
-  workspace.keyvalue.sorted_set:
-    class: Drupal\workspace\KeyValueStore\KeyValueSortedSetFactory
-    arguments: ['@service_container', '%workspace.factory.keyvalue.sorted_set%']
-  workspace.keyvalue.sorted_set.database:
-    class: Drupal\workspace\KeyValueStore\KeyValueDatabaseSortedSetFactory
-    arguments: ['@serialization.phpserialize', '@database']
-  workspace.upstream_manager:
-    class: Drupal\workspace\UpstreamManager
-    parent: default_plugin_manager
-
-  workspace.replication_manager:
-    class: Drupal\workspace\Replication\ReplicationManager
-    tags:
-      - { name: service_collector, tag: workspace_replicator, call: addReplicator }
-  workspace.default_replicator:
-    class: Drupal\workspace\Replication\DefaultReplicator
-    arguments: ['@workspace.manager', '@workspace.changes_factory', '@entity_type.manager', '@workspace.index.sequence']
-    tags:
-      - { name: workspace_replicator, priority: 0 }
-
-  workspace.negotiator.default:
-    class: Drupal\workspace\Negotiator\DefaultWorkspaceNegotiator
-    calls:
-      - [setContainer, ['@service_container']]
-      - [setCurrentUser, ['@current_user']]
-      - [setWorkspaceManager, ['@workspace.manager']]
-    tags:
-      - { name: workspace_negotiator, priority: 0 }
-  workspace.negotiator.session:
-    class: Drupal\workspace\Negotiator\SessionWorkspaceNegotiator
-    arguments: ['@user.private_tempstore']
-    calls:
-      - [setContainer, ['@service_container']]
-      - [setCurrentUser, ['@current_user']]
-      - [setWorkspaceManager, ['@workspace.manager']]
-    tags:
-      - { name: workspace_negotiator, priority: 100 }
-  workspace.negotiator.param:
-    class: Drupal\workspace\Negotiator\ParamWorkspaceNegotiator
-    calls:
-      - [setContainer, ['@service_container']]
-      - [setCurrentUser, ['@current_user']]
-      - [setWorkspaceManager, ['@workspace.manager']]
-    tags:
-      - { name: workspace_negotiator, priority: 200 }
-
-  cache_context.workspace:
-    class: Drupal\workspace\WorkspaceCacheContext
-    arguments: ['@workspace.manager']
-    tags:
-      - { name: cache.context }
-  logger.channel.workspace:
-    parent: logger.channel_base
-    arguments: ['cron']

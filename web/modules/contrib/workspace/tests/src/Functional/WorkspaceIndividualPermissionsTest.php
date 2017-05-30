@@ -8,9 +8,7 @@ use Drupal\Tests\BrowserTestBase;
  * Tests permission controls on workspaces.
  *
  * @group workspace
- *
  * @runTestsInSeparateProcesses
- *
  * @preserveGlobalState disabled
  */
 class WorkspaceIndividualPermissionsTest extends BrowserTestBase {
@@ -20,7 +18,7 @@ class WorkspaceIndividualPermissionsTest extends BrowserTestBase {
   /**
    * {@inheritdoc}
    */
-  public static $modules = ['workspace', 'workspace'];
+  public static $modules = ['workspace', 'multiversion'];
 
   /**
    * Verifies that a user can create and edit only their own workspace.

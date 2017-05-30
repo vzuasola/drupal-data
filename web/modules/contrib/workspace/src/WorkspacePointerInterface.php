@@ -1,10 +1,11 @@
 <?php
 
+
 namespace Drupal\workspace;
 
 use Drupal\Core\Entity\ContentEntityInterface;
 use Drupal\Core\Entity\EntityChangedInterface;
-use Drupal\workspace\Entity\WorkspaceInterface;
+use Drupal\multiversion\Entity\WorkspaceInterface;
 
 /**
  * Provides an interface for defining Workspace pointer entities.
@@ -12,6 +13,7 @@ use Drupal\workspace\Entity\WorkspaceInterface;
  * @ingroup workspace
  */
 interface WorkspacePointerInterface extends ContentEntityInterface, EntityChangedInterface {
+  // Add get/set methods for your configuration properties here.
 
   /**
    * Gets the Workspace pointer name.
@@ -54,7 +56,7 @@ interface WorkspacePointerInterface extends ContentEntityInterface, EntityChange
   /**
    * Sets the Workspace this pointer references.
    *
-   * @param \Drupal\workspace\Entity\WorkspaceInterface $workspace
+   * @param \Drupal\multiversion\Entity\WorkspaceInterface $workspace
    *
    * @return $this
    *   The called Workspace pointer entity.
@@ -64,7 +66,7 @@ interface WorkspacePointerInterface extends ContentEntityInterface, EntityChange
   /**
    * Returns the referenced workspace entity.
    *
-   * @return \Drupal\workspace\Entity\WorkspaceInterface
+   * @return \Drupal\multiversion\Entity\WorkspaceInterface
    *   The workspace entity.
    */
   public function getWorkspace();
@@ -93,5 +95,4 @@ interface WorkspacePointerInterface extends ContentEntityInterface, EntityChange
    * @return string
    */
   public function generateReplicationId(WorkspacePointerInterface $target);
-
 }

@@ -3,13 +3,11 @@
 namespace Drupal\workspace\Access;
 
 use Drupal\Core\Access\AccessResult;
+use Drupal\Core\Access\AccessResultInterface;
 use Drupal\Core\Routing\Access\AccessInterface;
 use Drupal\Core\Session\AccountInterface;
-use Drupal\workspace\Entity\WorkspaceInterface;
+use Drupal\multiversion\Entity\WorkspaceInterface;
 
-/**
- * Class WorkspaceViewCheck
- */
 class WorkspaceViewCheck implements AccessInterface {
 
   /**
@@ -17,16 +15,15 @@ class WorkspaceViewCheck implements AccessInterface {
    *
    * "View" in practice implies "is allowed to make active".
    *
-   * @param \Drupal\workspace\Entity\WorkspaceInterface $workspace
+   * @param WorkspaceInterface $workspace
    *   The workspace to view.
-   * @param \Drupal\Core\Session\AccountInterface $account
+   * @param AccountInterface $account
    *   The user account to check.
    *
-   * @return \Drupal\Core\Access\AccessResultInterface
+   * @return AccessResultInterface
    *   The access result.
    */
   public function access(WorkspaceInterface $workspace, AccountInterface $account) {
     return AccessResult::allowedIf($workspace->access('view', $account))->addCacheableDependency($workspace);
   }
-
 }

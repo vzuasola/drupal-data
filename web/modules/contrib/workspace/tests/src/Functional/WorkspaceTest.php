@@ -38,5 +38,5 @@ class WorkspaceTest extends BrowserTestBase {
     $page->findButton(t('Save'))->click();
     $session->getPage()->hasContent("This value is not valid");
   }
-
+  
 }
