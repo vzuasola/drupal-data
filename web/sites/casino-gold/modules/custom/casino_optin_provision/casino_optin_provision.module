@@ -22,3 +22,24 @@ function casino_optin_provision_help($route_name, RouteMatchInterface $route_mat
     default:
   }
 }
+
+
+/**
+ * Implements hook_cron()
+ */
+function casino_optin_provision_cron() {
+  $formatedDate = date("Y-m-d", time());
+
+  // Note: No configuration for 30 days purging
+  $thirtyDays = strtotime("$formatedDate -30 days");
+
+  $isDeleted = \Drupal::database()->delete("casino_optin_report")
+                ->condition("application_date", $thirtyDays, "<")
+                ->execute();
+
+  if ($isDeleted) {
+    \Drupal::logger('my_module')->notice("All Data older than $thirtyDays are deleted.");
+  } else {
+    \Drupal::logger('my_module')->error("Error deleting data");
+  }
+}
