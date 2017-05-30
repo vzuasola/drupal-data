@@ -55,9 +55,9 @@ class CasinoOptInReportController extends ControllerBase {
       if (!empty($data['username']) && !empty($data['application_date']) && !empty($data['currency'])) {
         try {
 
-          // $isOnProcess = $this->checkUsernameIfInProcess($data['username']);
+          $isOnProcess = $this->checkUsernameIfInProcess($data['username']);
 
-          if (false) {
+          if ($isOnProcess) {
             $responseStatus = array(
               'status' => 'on-process',
               'message' => 'User application is currently on-process',
