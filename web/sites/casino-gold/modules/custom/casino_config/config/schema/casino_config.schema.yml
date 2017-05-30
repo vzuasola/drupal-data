@@ -91,3 +91,14 @@ casino_config.provisioning_config:
       type: text_format
       label: 'Bottom Blurb Content'
       translatable: true
+
+casino_config.announcement_config:
+  type: mapping
+  label: 'Casino Announcement Config'
+  mapping:
+    announcement_title:
+      type: label
+      label: 'Announcement LigthBox Title'
+    announcement_default_msg:
+      type: label
+      label: 'Announcement LigthBox Default Message'
