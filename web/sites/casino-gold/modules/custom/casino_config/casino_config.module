@@ -114,7 +114,7 @@ function casino_config_cron() {
     \Drupal::logger('casino_provision')->notice("All data older than $dateFormat are deleted.");
 
   } catch (\Exception $e) {
-    \Drupal::logger('casino_provision')->error("Error deleting data");
+    \Drupal::logger('casino_provision')->error($e);
   }
   // End Casino Provision
 
