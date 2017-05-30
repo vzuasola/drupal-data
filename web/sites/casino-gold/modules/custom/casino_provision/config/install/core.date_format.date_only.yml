@@ -4,4 +4,4 @@ dependencies: {  }
 id: date_only
 label: 'Date only'
 locked: false
-pattern: m/d/Y
+pattern: Y-m-d
