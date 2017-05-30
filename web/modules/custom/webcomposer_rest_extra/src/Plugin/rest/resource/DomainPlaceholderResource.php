@@ -88,7 +88,7 @@ class DomainPlaceholderResource extends ResourceBase {
       // filter out empty placeholder keys
       if ($key && $value) {
         // Make the key value pair for response
-        $definition[] = array($key => $value);
+        $definition[$key] = $value;
       }
    }
 
