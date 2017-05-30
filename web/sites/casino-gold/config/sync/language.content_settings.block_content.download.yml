@@ -1,0 +1,11 @@
+uuid: d475f156-71cb-48e6-9011-4b5a9f251051
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - block_content.type.download
+id: block_content.download
+target_entity_type_id: block_content
+target_bundle: download
+default_langcode: site_default
+language_alterable: false

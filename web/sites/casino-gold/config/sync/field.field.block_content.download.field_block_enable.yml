@@ -1,0 +1,23 @@
+uuid: 80d61be9-5917-43a3-8ba9-f4ee53e17172
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - block_content.type.download
+    - field.storage.block_content.field_block_enable
+id: block_content.download.field_block_enable
+field_name: field_block_enable
+entity_type: block_content
+bundle: download
+label: Enable/Disable
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Enable
+  off_label: Disable
+field_type: boolean

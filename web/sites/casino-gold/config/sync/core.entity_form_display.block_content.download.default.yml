@@ -1,0 +1,56 @@
+uuid: eac2b47a-74e9-4b20-a51b-9c1d01864546
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - block_content.type.download
+    - field.field.block_content.download.body
+    - field.field.block_content.download.field_block_enable
+    - field.field.block_content.download.field_link
+  module:
+    - link
+    - text
+id: block_content.download.default
+targetEntityType: block_content
+bundle: download
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 3
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_block_enable:
+    weight: 1
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_link:
+    weight: 4
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }
