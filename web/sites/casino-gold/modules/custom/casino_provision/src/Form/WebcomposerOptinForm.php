@@ -2,10 +2,10 @@
 
 /**
  * @file
- * Contains \Drupal\casino_optin_provision\Form\WebcomposerOptinForm.
+ * Contains \Drupal\casino_provision\Form\WebcomposerOptinForm.
  */
 
-namespace Drupal\casino_optin_provision\Form;
+namespace Drupal\casino_provision\Form;
 
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
@@ -155,7 +155,7 @@ class WebcomposerOptinForm extends FormBase{
     $csvArray = array();
     $formValue = $form_state->getValues();
 
-    $url = Url::fromRoute('casino_optin_provision.report')
+    $url = Url::fromRoute('casino_provision.report')
           ->setRouteParameters(array(
             'date_from' => $formValue['date_from'],
             'date_to'=> $formValue['date_to']));
@@ -173,7 +173,7 @@ class WebcomposerOptinForm extends FormBase{
     $dTo = strtotime("$dateTo 23:59:59" );
 
     $query = $this->connection
-                  ->select('casino_optin_report', 'opt')
+                  ->select('casino_provision_report', 'opt')
                   ->condition('opt.application_date', array($dFrom, $dTo), 'BETWEEN');
 
     $countQuery = clone $query;
@@ -197,7 +197,7 @@ class WebcomposerOptinForm extends FormBase{
       return "No Results!";
     }
 
-    $url = Url::fromRoute('casino_optin_provision.download',array(
+    $url = Url::fromRoute('casino_provision.download',array(
       'date_from' => $dateFrom,
       'date_to'=> $dateTo
     ));

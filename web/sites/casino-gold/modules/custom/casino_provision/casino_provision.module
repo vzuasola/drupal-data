@@ -1,0 +1,29 @@
+<?php
+
+/**
+ * @file
+ * Contains casino_provision.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_cron()
+ */
+function casino_provision_cron() {
+  $formatedDate = date("Y-m-d", time());
+
+  // Note: No configuration for 30 days purging
+  $thirtyDays = strtotime("$formatedDate -30 days");
+
+  $isDeleted = \Drupal::database()->delete("casino_provision_report")
+                ->condition("application_date", $thirtyDays, "<")
+                ->execute();
+
+  if ($isDeleted) {
+    $dateFormat = date("Y-m-d", $thirtyDays);
+    \Drupal::logger('my_module')->notice("All data older than $dateFormat are deleted.");
+  } else {
+    \Drupal::logger('my_module')->error("Error deleting data");
+  }
+}

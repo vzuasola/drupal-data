@@ -1,10 +1,10 @@
 <?php
 /**
  * @file
- * Contains \Drupal\casino_optin_provision\Controller\CasinoOptInReportController.
+ * Contains \Drupal\casino_provision\Controller\CasinoOptInReportController.
  */
 
-namespace Drupal\casino_optin_provision\Controller;
+namespace Drupal\casino_provision\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
 
@@ -38,7 +38,7 @@ class CasinoOptInReportController extends ControllerBase {
   /**
    * API Callback
    */
-  public function optin_post(Request $request) {
+  public function casinoProvision(Request $request) {
 
     $responseStatus = array(
       'status' => 'failed',
@@ -55,15 +55,15 @@ class CasinoOptInReportController extends ControllerBase {
       if (!empty($data['username']) && !empty($data['application_date']) && !empty($data['currency'])) {
         try {
 
-          $isOnProcess = $this->checkUsernameIfInProcess($data['username']);
+          // $isOnProcess = $this->checkUsernameIfInProcess($data['username']);
 
-          if ($isOnProcess) {
+          if (false) {
             $responseStatus = array(
               'status' => 'on-process',
               'message' => 'User application is currently on-process',
             );
           } else {
-            $isSaved = db_insert('casino_optin_report')
+            $isSaved = $this->connection->insert('casino_provision_report')
                         ->fields(array(
                           'username' => $data['username'],
                           'application_date' => $data['application_date'],
@@ -80,6 +80,7 @@ class CasinoOptInReportController extends ControllerBase {
           }
 
         } catch (\Exception $e){
+          \Drupal::logger('casino_provision')->notice($e);
           return new JsonResponse($responseStatus);
         }
       }
@@ -92,7 +93,7 @@ class CasinoOptInReportController extends ControllerBase {
    * Check username if it's already on-process
    */
   private function checkUsernameIfInProcess($username) {
-    $query = $this->connection->select('casino_optin_report', 'opt')
+    $query = $this->connection->select('casino_provision_report', 'opt')
                           ->fields('opt', array('username'))
                           ->condition('opt.username', $username);
 
