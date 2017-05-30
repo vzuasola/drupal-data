@@ -10,16 +10,17 @@ label: 'Node Pattern'
 type: 'canonical_entities:node'
 pattern: '/[node:title]'
 selection_criteria:
-  37e2b5a5-dcc9-4e81-a3c2-3feaa7911677:
+  bcd9ff08-07c4-4062-8f87-6d0dff27ed6d:
     id: node_type
     bundles:
+      download: download
       page: page
       promotion: promotion
     negate: false
     context_mapping:
       node: node
-    uuid: 37e2b5a5-dcc9-4e81-a3c2-3feaa7911677
-  da680ba1-afd9-4392-bebb-0017e9abe40e:
+    uuid: bcd9ff08-07c4-4062-8f87-6d0dff27ed6d
+  262f73df-b44f-4208-8d35-331a2e4448b3:
     id: language
     langcodes:
       zh-hans: zh-hans
@@ -27,7 +28,7 @@ selection_criteria:
     negate: false
     context_mapping:
       language: 'node:langcode:language'
-    uuid: da680ba1-afd9-4392-bebb-0017e9abe40e
+    uuid: 262f73df-b44f-4208-8d35-331a2e4448b3
 selection_logic: and
 weight: -10
 relationships:
