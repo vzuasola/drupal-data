@@ -3,8 +3,8 @@
 /**
  * Implements hook_schema
  */
-function casino_optin_provision_schema() {
-  $schema['casino_optin_report'] = [
+function casino_provision_schema() {
+  $schema['casino_provision_report'] = [
     'description' => 'This table used to saved users who is trying to apply for provisioning.',
     'fields' => [
       'oid' => [
@@ -45,7 +45,7 @@ function casino_optin_provision_schema() {
 /**
  * Implements hook_uninstall
  */
-function casino_optin_provision_uninstall() {
+function casino_provision_uninstall() {
     $config = \Drupal::service('config.factory')->getEditable('core.date_format.date_only');
     $config->delete();
 }

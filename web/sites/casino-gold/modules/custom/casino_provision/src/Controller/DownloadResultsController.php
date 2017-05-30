@@ -2,10 +2,10 @@
 
 /**
  * @file
- * Contains \Drupal\casino_optin_provision\Controller\DownloadResultsController.
+ * Contains \Drupal\casino_provision\Controller\DownloadResultsController.
  */
 
-namespace Drupal\casino_optin_provision\Controller;
+namespace Drupal\casino_provision\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
 use Symfony\Component\HttpFoundation\RequestStack;
@@ -63,7 +63,7 @@ class DownloadResultsController extends ControllerBase {
     $tTo = strtotime("$dateTo 23:59:59");
 
     $query = $this->connection
-                  ->select('casino_optin_report', 'opt')
+                  ->select('casino_provision_report', 'opt')
                   ->fields('opt', array('oid','username','application_date','currency'))
                   ->condition('opt.application_date', array($tFrom, $tTo), 'BETWEEN')
                   ->orderBy('oid', 'DESC');
