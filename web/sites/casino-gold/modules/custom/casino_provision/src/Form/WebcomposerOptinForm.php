@@ -169,7 +169,7 @@ class WebcomposerOptinForm extends FormBase{
   public function buildTable($dateFrom, $dateTo) {
 
     $rows = array();
-    $dFrom = strtotime("$dateFrom 00:00:01");
+    $dFrom = strtotime("$dateFrom 00:00:00");
     $dTo = strtotime("$dateTo 23:59:59" );
 
     $query = $this->connection
@@ -180,7 +180,7 @@ class WebcomposerOptinForm extends FormBase{
     $countQuery->addExpression('Count(opt.oid)');
 
     $pagedQuery = $query->extend('Drupal\Core\Database\Query\PagerSelectExtender');
-    $pagedQuery->limit(2);
+    $pagedQuery->limit(10);
     $pagedQuery->setCountQuery($countQuery);
 
     $results = $pagedQuery->fields('opt', array('oid','username','application_date','currency'))
