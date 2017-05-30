@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.promotion.field_banner_content
     - field.field.node.promotion.field_banner_link
     - field.field.node.promotion.field_banner_link_target
+    - field.field.node.promotion.field_content_position
     - field.field.node.promotion.field_full_tile_image
     - field.field.node.promotion.field_full_tile_summary
     - field.field.node.promotion.field_half_tile_image
@@ -64,6 +65,12 @@ content:
     region: content
   field_banner_link_target:
     weight: 35
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_content_position:
+    weight: 46
     settings: {  }
     third_party_settings: {  }
     type: options_select
