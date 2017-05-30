@@ -3,5 +3,5 @@ langcode: zh-hans
 status: true
 dependencies: {  }
 id: floating_banner_item
-label: 'Floating Banner Item'
+label: 'Floating Banner Item (Left)'
 behavior_plugins: {  }

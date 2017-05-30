@@ -1,0 +1,24 @@
+casino_optin_provision.post:
+  path: 'api/optin/post.json'
+  defaults:
+    _controller: 'Drupal\casino_optin_provision\Controller\CasinoOptInReportController::optin_post'
+  methods:  [POST]
+  requirements:
+    _access: 'TRUE'
+
+casino_optin_provision.download:
+  path: 'api/optin/download'
+  defaults:
+    _controller: 'Drupal\casino_optin_provision\Controller\DownloadResultsController::download'
+  requirements:
+    _permission: 'access content'
+
+casino_optin_provision.report:
+  path: 'admin/reports/optin-report'
+  defaults:
+    _form: '\Drupal\casino_optin_provision\Form\WebcomposerOptinForm'
+    _title: 'Casino Opt-In Report'
+  requirements:
+    _permission: 'administer site configuration'
+
+

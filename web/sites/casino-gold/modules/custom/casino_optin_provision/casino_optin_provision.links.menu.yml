@@ -1,0 +1,5 @@
+casino_optin_provision.optin_report:
+  title: 'Casino Opt-In reports'
+  parent: system.admin_reports
+  route_name: casino_optin_provision.report
+  description: 'Casino Gold Provisioning Report'

@@ -58,14 +58,13 @@ class SettingsHandler
      * Syncs the files in the config directory to their respective sites
      * directory
      */
-    public static function drushSettings(Event $event)
+    public static function syncDrush(Event $event)
     {
         $fs = new Filesystem();
-
         $configs = static::getDrushAlias(getcwd());
 
-         if (!$fs->exists("/home/vagrant/.drush/webcomposer.aliases.drushrc.php")) {
-             $fs->copy("$configs/webcomposer.aliases.drushrc.php", "/home/vagrant/.drush/webcomposer.aliases.drushrc.php", true);    
-         }
+        if ($fs->exists("/home/vagrant/.drush/")) {
+            $fs->copy("$configs/webcomposer.aliases.drushrc.php", "/home/vagrant/.drush/webcomposer.aliases.drushrc.php", true);    
+        }
     }
 }
