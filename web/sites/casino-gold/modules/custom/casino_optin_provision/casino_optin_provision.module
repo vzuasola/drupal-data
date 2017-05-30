@@ -38,7 +38,7 @@ function casino_optin_provision_cron() {
                 ->execute();
 
   if ($isDeleted) {
-    $dateFormat = date($thirtyDays, time());
+    $dateFormat = date("Y-m-d", $thirtyDays);
     \Drupal::logger('my_module')->notice("All data older than $dateFormat are deleted.");
   } else {
     \Drupal::logger('my_module')->error("Error deleting data");
