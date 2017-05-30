@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 <?php
 
 /**
@@ -759,4 +757,3 @@ if (file_exists(__DIR__ . '/database.php')) {
 
 $settings['install_profile'] = 'config_installer';
 $config_directories['sync'] = 'sites/account/config/sync';
->>>>>>> 26280abbe58df5290dcdf12c02e688ec58a68f3c
