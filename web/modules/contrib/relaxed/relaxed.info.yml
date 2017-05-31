@@ -8,11 +8,12 @@ dependencies:
   - basic_auth
   - multiversion
   - replication
+  - system (>=8.3.x)
 test_dependencies:
   - workspace
 
-# Information added by Drupal.org packaging script on 2016-10-25
-version: '8.x-1.0-alpha10'
+# Information added by Drupal.org packaging script on 2017-03-30
+version: '8.x-1.0-beta1'
 core: '8.x'
 project: 'relaxed'
-datestamp: 1477395543
+datestamp: 1490878203
