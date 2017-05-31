@@ -10,7 +10,7 @@ third_party_settings:
 _core:
   default_config_hash: lBXDpdDPXQtrfTJQhr6MjRJJEEyYSoRJ0acdvHLsWeA
 id: en
-label: 'English (Asia) Test'
+label: 'English (Asia)'
 direction: ltr
 weight: -10
 locked: false
