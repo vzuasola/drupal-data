@@ -2,7 +2,7 @@ name: Webcomposer Monolog
 type: module
 description: Allows to extend monolog library.
 core: 8.x
-package: webcomposer
+package: Web Composer
 dependencies:
   - monolog
   - webcomposer_connector

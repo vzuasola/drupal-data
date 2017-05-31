@@ -1,6 +1,6 @@
 <?php
 
-function casino_editor_editor_js_settings_alter(&$settings) {
+function webcomposer_editor_editor_js_settings_alter(&$settings) {
     $languages = [
         'zh-hans' => 'sc',
         'zh-hant' => 'ch',

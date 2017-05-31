@@ -1,8 +1,0 @@
-uuid: 2a7c1a2c-9fa6-40f1-acc2-74d77b9c01b6
-langcode: zh-hant
-status: true
-dependencies: {  }
-id: product-menu-ch
-label: 'Product Menu CH'
-description: ''
-locked: false

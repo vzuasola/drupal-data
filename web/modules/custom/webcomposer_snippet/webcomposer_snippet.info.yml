@@ -2,4 +2,4 @@ name: Webcomposer Snippet Management
 type: module
 description: Allows customisation around Snippet Management.
 core: 8.x
-package: webcomposer
+package: Web Composer

@@ -2,4 +2,4 @@ name: Webcomposer Domain Management
 type: module
 description: Allows customisation around Domain Management.
 core: 8.x
-package: webcomposer
+package: Web Composer
