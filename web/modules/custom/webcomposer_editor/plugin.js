@@ -247,7 +247,7 @@
     CKEDITOR.dtd.$removeEmpty.span = 0;
 
 
-    CKEDITOR.plugins.add('casino_editor', {
+    CKEDITOR.plugins.add('webcomposer_editor', {
             requires : ['richcombo', 'dialog'],
             icons: 'link,unlink',
             lang: 'en',
@@ -256,8 +256,8 @@
                 this._editor = editor;
                 var config = editor.config;
 
-                addCombo( editor, 'FontSizes', 'size', editor.lang.casino_editor.fontSize, config.fontSizes, config.fontSizesDefaultLabel, config.fontSizeStyle, 30 );
-                addCombo( editor, 'FontColors', 'color', editor.lang.casino_editor.fontColor, config.fontColors, config.fontfontColorsDefaultLabel, config.fontColorStyle, 30 );
+                addCombo( editor, 'FontSizes', 'size', editor.lang.webcomposer_editor.fontSize, config.fontSizes, config.fontSizesDefaultLabel, config.fontSizeStyle, 30 );
+                addCombo( editor, 'FontColors', 'color', editor.lang.webcomposer_editor.fontColor, config.fontColors, config.fontfontColorsDefaultLabel, config.fontColorStyle, 30 );
 
                 editor.addCommand( 'link', new CKEDITOR.dialogCommand( 'link' ) );
                 editor.addCommand( 'unlink', new CKEDITOR.unlinkCommand() );

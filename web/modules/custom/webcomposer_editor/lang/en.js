@@ -1,4 +1,4 @@
-CKEDITOR.plugins.setLang( 'casino_editor', 'en', {
+CKEDITOR.plugins.setLang( 'webcomposer_editor', 'en', {
     fontSize: {
         label: 'Size',
         voiceLabel: 'Font Size',
