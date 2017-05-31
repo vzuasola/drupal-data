@@ -1,0 +1,24 @@
+casino_provision.post:
+  path: 'api/casino-provision/post.json'
+  defaults:
+    _controller: 'Drupal\casino_provision\Controller\CasinoOptInReportController::casinoProvision'
+  methods:  [POST]
+  requirements:
+    _access: 'TRUE'
+
+casino_provision.download:
+  path: 'api/casino-provision/download'
+  defaults:
+    _controller: 'Drupal\casino_provision\Controller\DownloadResultsController::download'
+  requirements:
+    _permission: 'access content'
+
+casino_provision.report:
+  path: 'admin/reports/provision-report'
+  defaults:
+    _form: '\Drupal\casino_provision\Form\WebcomposerOptinForm'
+    _title: 'Casino Provisioning Report'
+  requirements:
+    _permission: 'administer site configuration'
+
+

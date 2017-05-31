@@ -89,3 +89,34 @@ function checkCustomBlockIfExist($block_type) {
   }
   return $blockCounter;
 }
+
+
+/**
+ * Implements hook_cron()
+ */
+function casino_config_cron() {
+  /**
+   * Casino Provision
+   * Purge table after 30 days
+   * Start
+   */
+  try {
+    $formatedDate = date("Y-m-d", time());
+
+    // Note: No configuration for 30 days purging
+    $thirtyDays = strtotime("$formatedDate -30 days");
+
+    \Drupal::database()->delete("casino_provision_report")
+                  ->condition("application_date", $thirtyDays, "<")
+                  ->execute();
+
+    $dateFormat = date("Y-m-d", $thirtyDays);
+    \Drupal::logger('casino_provision')->notice("All data older than $dateFormat are deleted.");
+
+  } catch (\Exception $e) {
+    \Drupal::logger('casino_provision')->error($e);
+  }
+  // End Casino Provision
+
+}
+
