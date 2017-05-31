@@ -10,6 +10,8 @@ namespace Drupal\casino_provision\Controller;
 use Drupal\Core\Controller\ControllerBase;
 use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\DependencyInjection\ContainerInterface;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\JsonResponse;
 
 class DownloadResultsController extends ControllerBase {
 
@@ -92,7 +94,7 @@ class DownloadResultsController extends ControllerBase {
 
     $output = fopen("php://output", "w");
 
-    fputcsv($output, array('Opt-In Date','Username','Currency'));
+    fputcsv($output, array('Date','Username','Currency'));
     foreach ($data as $row) {
         fputcsv($output, $row);
     }
