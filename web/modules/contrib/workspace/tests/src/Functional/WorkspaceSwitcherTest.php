@@ -49,5 +49,5 @@ class WorkspaceSwitcherTest extends BrowserTestBase {
 
     $session->getPage()->findLink($gravity->label());
   }
-
+  
 }

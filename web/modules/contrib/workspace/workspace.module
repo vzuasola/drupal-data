@@ -1,265 +1,34 @@
 <?php
 
-use Drupal\Core\Cache\Cache;
-use Drupal\Core\Database\Query\AlterableInterface;
+use Drupal\Component\Utility\Unicode;
 use Drupal\Core\Entity\EntityInterface;
-use Drupal\Core\Entity\EntityTypeInterface;
-use Drupal\Core\Field\BaseFieldDefinition;
-use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Entity\FieldableEntityInterface;
+use Drupal\Core\Field\FieldStorageDefinitionInterface;
+use Drupal\Core\Link;
 use Drupal\Core\Session\AccountInterface;
 use Drupal\Core\Url;
-use Drupal\views\Plugin\views\query\QueryPluginBase;
-use Drupal\views\ViewExecutable;
-use Drupal\views\Views;
-use Drupal\workspace\EntityAccess;
-use Drupal\workspace\Form\DeploymentForm;
-use Drupal\workspace\Form\WorkspaceSwitcherForm;
-use Drupal\workspace\Plugin\Field\WorkspaceFieldItemList;
+use Drupal\multiversion\Entity\WorkspaceInterface;
+use Drupal\Core\Routing\RouteMatchInterface;
 
 /**
- * Implements hook_help().
+ * Implements hook_entity_type_alter().
  */
-function workspace_help($route_name, RouteMatchInterface $route_match) {
-  switch ($route_name) {
-    // Main module help for the workspace module.
-    case 'help.page.workspace':
-      $output = '';
-      $output .= '<h3>' . t('About') . '</h3>';
-      $output .= '<p>' . t('The Workspace module allows workspaces to be defined and switched between. Content is then assigned to the active workspace when created. For more information, see the <a href=":workspace">online documentation for the Workspace module</a>.', [':workspace' => 'https://www.drupal.org/node/2824024']) . '</p>';
-      return $output;
-  }
+function workspace_entity_type_alter(array &$entity_types) {
+  \Drupal::service('workspace.entity_type_info')->entityTypeAlter($entity_types);
+}
+
+/**
+ * Implements hook_entity_type_build().
+ */
+function workspace_entity_type_build(array &$entity_types) {
+  \Drupal::service('workspace.entity_type_info')->entityTypeBuild($entity_types);
 }
 
 /**
  * Implements hook_entity_base_field_info().
  */
-function workspace_entity_base_field_info(EntityTypeInterface $entity_type) {
-  if (\Drupal::service('workspace.manager')->entityTypeCanBelongToWorkspaces($entity_type)) {
-    return ['workspace' => BaseFieldDefinition::create('entity_reference')
-      ->setLabel(t('Workspace'))
-      ->setDescription(t('The Workspace of this piece of content.'))
-      ->setComputed(TRUE)
-      ->setClass(WorkspaceFieldItemList::class)
-      ->setSetting('target_type', 'workspace')
-      ->setTranslatable(TRUE)];
-  }
-}
-
-/**
- * Implements hook_query_TAG_alter().
- */
-function workspace_query_entity_query_alter(AlterableInterface $query) {
-  /** @var \Drupal\workspace\WorkspaceManagerInterface $workspace_manager */
-  $workspace_manager = \Drupal::service('workspace.manager');
-  $active_workspace = $workspace_manager->getActiveWorkspace();
-  $default_workspace_id = \Drupal::getContainer()->getParameter('workspace.default');
-  if ($active_workspace == $default_workspace_id) {
-    return;
-  }
-
-  $entity_type = \Drupal::entityTypeManager()->getDefinition($query->getMetaData('entity_type'));
-  if (!empty($entity_type) && $workspace_manager->entityTypeCanBelongToWorkspaces($entity_type)) {
-    $entity_type_id = $entity_type->id();
-    $entity_type_id_key = $entity_type->getKey('id');
-    $query->leftJoin('content_workspace_field_revision', 'cwfr', 'base_table.' . $entity_type_id_key . ' = cwfr.content_entity_id');
-    $query->condition('cwfr.content_entity_type_id', $entity_type_id);
-    $query->condition('cwfr.workspace', [$active_workspace, $default_workspace_id], 'IN');
-  }
-}
-
-/**
- * Implements hook_views_query_alter().
- */
-function workspace_views_query_alter(ViewExecutable $view, QueryPluginBase $query) {
-  /** @var \Drupal\workspace\WorkspaceManagerInterface $workspace_manager */
-  $workspace_manager = \Drupal::service('workspace.manager');
-  $active_workspace = $workspace_manager->getActiveWorkspace();
-  $default_workspace_id = \Drupal::getContainer()->getParameter('workspace.default');
-  if ($active_workspace == $default_workspace_id) {
-    return;
-  }
-
-  $entity_type = $view->getBaseEntityType();
-  if (!$workspace_manager->entityTypeCanBelongToWorkspaces($entity_type)) {
-    return;
-  }
-
-  $configuration = [
-    'table' => 'content_workspace_field_revision',
-    'field' => 'content_entity_id',
-    'left_table' => $entity_type->getDataTable(),
-    'left_field' => $entity_type->getKey('id'),
-    'operator' => '=',
-  ];
-  /** @var \Drupal\views\Plugin\views\join\JoinPluginBase $join */
-  $join = Views::pluginManager('join')
-    ->createInstance('standard', $configuration);
-  /** @var \Drupal\views\Plugin\views\query\Sql $query */
-  // @todo Don't use distinct.
-  $query->addRelationship('cwrf', $join, 'content_workspace_field_revision');
-  $query->setWhereGroup('OR', 'workspace');
-  $query->addWhere('workspace', 'cwrf.workspace', [$active_workspace, $default_workspace_id], 'IN');
-  $query->addWhere('workspace', 'cwrf.workspace', NULL, 'IS');
-  //$query->aggregationMethodSimple($entity_type->getDataTable(), $entity_type->getKey('id'));
-  foreach ($query->where as $where_id => $where) {
-    foreach ($where['conditions'] as $condition_id => $condition) {
-      if ($condition['field'] == $entity_type->getDataTable() . '.' . $entity_type->getKey('published')) {
-        $value = $query->where[$where_id]['conditions'][$condition_id]['value'];
-        $query->setWhereGroup('OR', 'published');
-        $query->addWhere('published', 'cwrf.published', $value);
-        $query->addWhere('published', $entity_type->getDataTable() . '.' . $entity_type->getKey('published'), $value);
-        unset($query->where[$where_id]['conditions'][$condition_id]);
-      }
-    }
-  }
-
-  foreach ($view->displayHandlers->getInstanceIds() as $display_id) {
-    $view->displayHandlers->get($display_id)->setOption('group_by', TRUE);
-  }
-}
-
-
-/**
- * Implements hook_entity_load().
- */
-function workspace_entity_load(array &$entities, $entity_type_id) {
-  /** @var \Drupal\workspace\WorkspaceManagerInterface $workspace_manager */
-  $workspace_manager = \Drupal::service('workspace.manager');
-  if (!$workspace_manager->entityTypeCanBelongToWorkspaces(\Drupal::entityTypeManager()->getDefinition($entity_type_id))) {
-    return;
-  }
-
-  $active_workspace = $workspace_manager->getActiveWorkspace();
-  $default_workspace_id = \Drupal::getContainer()->getParameter('workspace.default');
-  if ($active_workspace == $default_workspace_id) {
-    return;
-  }
-
-  $keys = array_keys($entities);
-  $results = \Drupal::entityTypeManager()
-    ->getStorage('content_workspace')
-    ->getQuery()
-    ->allRevisions()
-    ->condition('content_entity_type_id', $entity_type_id)
-    ->condition('content_entity_id', $keys, 'IN')
-    ->condition('workspace', [$active_workspace, $default_workspace_id], 'IN')
-    ->sort('revision_id', 'DESC')
-    ->range(0, 1)
-    ->execute();
-  foreach ($results as $revision_id => $entity_id) {
-    /** @var \Drupal\workspace\Entity\ContentWorkspaceInterface $content_workspace */
-    $content_workspace = \Drupal::entityTypeManager()
-      ->getStorage('content_workspace')
-      ->loadRevision($revision_id);
-    $entity = $entities[$content_workspace->get('content_entity_id')->value];
-    if ($content_workspace->get('content_entity_revision_id')->value != $entity->getRevisionId()) {
-      $new_entity = \Drupal::entityTypeManager()
-        ->getStorage($entity_type_id)
-        ->loadRevision($content_workspace->get('content_entity_revision_id')->value);
-      $entities[$entity->id()] = $new_entity;
-    }
-    $content_workspace->isPublished() ? $entities[$entity->id()]->setPublished() : $entities[$entity->id()]->setUnpublished();
-  }
-}
-
-/**
- * Implements hook_element_info_alter().
- */
-function workspace_element_info_alter(array &$types) {
-  foreach ($types as &$type) {
-    if (!isset($type['#pre_render'])) {
-      $type['#pre_render'] =[];
-    }
-    $type['#pre_render'][] = 'workspace_element_pre_render';
-  }
-}
-
-/**
- * Element pre-render callback.
- */
-function workspace_element_pre_render($element) {
-  if (isset($element['#cache'])) {
-    if (!isset($element['#cache']['contexts'])) {
-      $element['#cache']['contexts'] = [];
-    }
-    $element['#cache']['contexts'] = Cache::mergeContexts(
-      $element['#cache']['contexts'], ['workspace']
-    );
-  }
-  return $element;
-}
-
-/**
- * Implements hook_entity_presave().
- */
-function workspace_entity_presave(EntityInterface $entity) {
-  /** @var \Drupal\workspace\WorkspaceManagerInterface $workspace_manager */
-  $workspace_manager = \Drupal::service('workspace.manager');
-
-  // Only modify the entity if the active workspace isn't the default, and
-  // and the entity can belong to a workspace.
-  if (!empty($workspace_manager->getActiveWorkspace())
-    && $workspace_manager->entityCanBelongToWorkspaces($entity)) {
-
-    if (!$entity->isNew()) {
-      $original_workspace_id = $entity->original->workspace->target_id;
-      $workspace_id = $entity->workspace->target_id;
-      /** @var \Drupal\Core\Entity\ContentEntityInterface|\Drupal\Core\Entity\EntityPublishedInterface $entity */
-      if ($original_workspace_id == $workspace_id) {
-        // Force a new revision is the entity is not new and the workspace
-        // is the same as the previous revision.
-        $entity->setNewRevision(TRUE);
-      }
-    }
-
-    // The publishing status can be stored in a property for safe keeping
-    $entity->initial_published = $entity->isPublished();
-
-    $default_workspace_id = \Drupal::getContainer()->getParameter('workspace.default');
-    if ($default_workspace_id != $workspace_manager->getActiveWorkspace()) {
-      // As this is the non-default workspace only new entity revisions should be
-      // made default.
-      if (isset($entity->original)
-          && ($entity->original->workspace->target_id == $default_workspace_id
-          || is_null($entity->original->workspace->target_id))) {
-        $entity->isDefaultRevision(FALSE);
-      }
-      else {
-        $entity->isDefaultRevision(TRUE);
-      }
-
-      // All entities in the non-default workspace get unpublished.
-      $entity->setUnpublished();
-    }
-  }
-}
-
-/**
- * Implements hook_entity_insert().
- */
-function workspace_entity_insert(EntityInterface $entity) {
-  /** @var \Drupal\workspace\WorkspaceManagerInterface $workspace_manager */
-  $workspace_manager = \Drupal::service('workspace.manager');
-  $workspace_manager->updateOrCreateFromEntity($entity);
-  if ($workspace_manager->entityCanBelongToWorkspaces($entity)) {
-    \Drupal::service('workspace.index.sequence')
-      ->useWorkspace($workspace_manager->getActiveWorkspace())
-      ->add($entity);
-  }
-}
-
-/**
- * Implements hook_entity_update().
- */
-function workspace_entity_update(EntityInterface $entity) {
-  /** @var \Drupal\workspace\WorkspaceManagerInterface $workspace_manager */
-  $workspace_manager = \Drupal::service('workspace.manager');
-  $workspace_manager->updateOrCreateFromEntity($entity);
-  if ($workspace_manager->entityCanBelongToWorkspaces($entity)) {
-    \Drupal::service('workspace.index.sequence')
-      ->useWorkspace($workspace_manager->getActiveWorkspace())
-      ->add($entity);
-  }
+function workspace_entity_base_field_info(\Drupal\Core\Entity\EntityTypeInterface $entity_type) {
+  return \Drupal::service('workspace.entity_type_info')->entityBaseFieldInfo($entity_type);
 }
 
 /**
@@ -268,148 +37,130 @@ function workspace_entity_update(EntityInterface $entity) {
  * @return array
  */
 function workspace_active_id() {
-  return 'workspace:' . \Drupal::service('workspace.manager')->getActiveWorkspace();
-}
-
-/**
- * Implements hook_theme().
- */
-function workspace_theme($existing, $type, $theme, $path) {
-  return [
-    'workspace_toolbox' => [
-      'variables' => [
-        'workspace_forms' => NULL,
-        'control_block' => NULL,
-        'deploy_form' => NULL,
-      ],
-    ],
-  ];
-}
-
-/**
- * Implements hook_page_bottom().
- */
-function workspace_page_bottom(array &$page_bottom) {
-  /** @var \Drupal\workspace\Entity\WorkspaceInterface $active_workspace */
-  $active_workspace = \Drupal::service('workspace.manager')->getActiveWorkspace(TRUE);
-  $control_block = t('Current workspace: <h3 class="active-workspace">@active_workspace</h3> <a href="@collection_url">Manage workspaces</a>', ['@active_workspace' => $active_workspace->label(), '@collection_url' => Url::fromRoute('entity.workspace.collection')->toString()]);
-  $deploy_form = \Drupal::formBuilder()->getForm(DeploymentForm::class, $active_workspace);
-
-  $workspace_forms = [];
-  /** @var \Drupal\workspace\Entity\WorkspaceInterface $workspace */
-  foreach (\Drupal::entityTypeManager()->getStorage('workspace')->loadMultiple() as $workspace) {
-    if ($workspace->id() != $active_workspace->id() && $workspace->access('view', \Drupal::currentUser())) {
-      $workspace_forms['workspace_' . $workspace->getMachineName()] = \Drupal::formBuilder()->getForm(WorkspaceSwitcherForm::class, $workspace);
-    }
+  /** @var \Drupal\multiversion\Entity\Workspace $active_workspace */
+  $active_workspace = \Drupal::service('workspace.manager')->getActiveWorkspace();
+  if ($active_workspace instanceof WorkspaceInterface) {
+    return [$active_workspace->id()];
   }
+}
 
-  $page_bottom['workspace_toolbox'] = [
-    '#theme' => 'workspace_toolbox',
-    '#workspace_forms' => $workspace_forms,
-    '#control_block' => $control_block,
-    '#deploy_form' => $deploy_form,
-    '#attached' => [
-      'library' => ['workspace/drupal.workspace.toolbox'],
-    ],
-  ];
+/**
+ * Implements hook_ENTITY_TYPE_insert()
+ *
+ * @param \Drupal\multiversion\Entity\WorkspaceInterface $workspace
+ */
+function workspace_workspace_insert(WorkspaceInterface $workspace) {
+  \Drupal::service('workspace.entity_operations')->workspaceInsert($workspace);
+}
+
+function workspace_pointer_allowed_values(FieldStorageDefinitionInterface $definition, FieldableEntityInterface $entity = NULL, &$cacheable) {
+  return \Drupal\workspace\Entity\Replication::getPointerAllowedValues($definition, $entity, $cacheable);
 }
 
 /**
  * Implements hook_toolbar().
- *
- * @see \Drupal\workspace\Toolbar
  */
 function workspace_toolbar() {
-  $items = [];
-
-  /** @var \Drupal\workspace\Entity\WorkspaceInterface $active_workspace */
-  $active_workspace = \Drupal::service('workspace.manager')->getActiveWorkspace(TRUE);
-
-  $items['workspace_switcher'] = [
-    // Include the toolbar_tab_wrapper to style the link like a toolbar tab.
-    // Exclude the theme wrapper if custom styling is desired.
-    '#type' => 'toolbar_item',
-    '#weight' => 125,
-    '#wrapper_attributes' => [
-      'class' => ['workspace-toolbar-tab'],
-    ],
-    '#attached' => [
-      'library' => ['workspace/drupal.workspace.toolbar'],
-    ],
-  ];
-
-  $items['workspace_switcher']['tab'] = [
-    '#type' => 'link',
-    '#title' => t('@active', ['@active' => $active_workspace->label()]),
-    '#url' => Url::fromRoute('entity.workspace.collection'),
-    '#attributes' => [
-      'title' => t('Switch workspaces'),
-      'class' => ['toolbar-icon', 'toolbar-icon-workspace'],
-    ],
-  ];
-
-  return $items;
-}
-
-/**
- * Prerender callback; Adds the workspace switcher forms to the render array.
- *
- * @param array $element
- *
- * @return array
- *   The modified $element.
- */
-function workspace_switcher_toolbar_pre_render(array $element) {
-  /** @var \Drupal\workspace\Entity\WorkspaceInterface $workspace */
-  foreach (\Drupal::entityTypeManager()->getStorage('workspace')->loadMultiple() as $workspace) {
-    if ($workspace->access('view', \Drupal::currentUser())) {
-      $element['workspace_forms']['workspace_' . $workspace->getMachineName()] = \Drupal::formBuilder()->getForm(WorkspaceSwitcherForm::class, $workspace);
-    }
-  }
-
-  return $element;
+  return \Drupal::service('workspace.toolbar')->toolbar();
 }
 
 /**
  * Implements hook_entity_access().
- *
- * @see \Drupal\workspace\EntityAccess
  */
 function workspace_entity_access(EntityInterface $entity, $operation, AccountInterface $account) {
-  return \Drupal::service('class_resolver')
-    ->getInstanceFromDefinition(EntityAccess::class)
-    ->entityAccess($entity, $operation, $account);
+  return \Drupal::service('workspace.entity_access')->entityAccess($entity, $operation, $account);
 }
 
 /**
  * Implements hook_entity_create_access().
- *
- * @see \Drupal\workspace\EntityAccess
  */
 function workspace_entity_create_access(AccountInterface $account, array $context, $entity_bundle) {
-  return \Drupal::service('class_resolver')
-    ->getInstanceFromDefinition(EntityAccess::class)
-    ->entityCreateAccess($account, $context, $entity_bundle);
+  return \Drupal::service('workspace.entity_access')->entityCreateAccess($account, $context, $entity_bundle);
 }
 
 /**
  * Implements hook_ENTITY_TYPE_access().
- *
- * @see \Drupal\workspace\EntityAccess
  */
 function workspace_workspace_access(EntityInterface $entity, $operation, AccountInterface $account) {
-  return \Drupal::service('class_resolver')
-    ->getInstanceFromDefinition(EntityAccess::class)
-    ->workspaceAccess($entity, $operation, $account);
+  return \Drupal::service('workspace.entity_access')->workspaceAccess($entity, $operation, $account);
 }
 
 /**
  * Implements hook_ENTITY_TYPE_create_access().
- *
- * @see \Drupal\workspace\EntityAccess
  */
 function workspace_workspace_create_access(AccountInterface $account, array $context, $entity_bundle) {
-  return \Drupal::service('class_resolver')
-    ->getInstanceFromDefinition(EntityAccess::class)
-    ->workspaceCreateAccess($account, $context, $entity_bundle);
+  return \Drupal::service('workspace.entity_access')->workspaceCreateAccess($account, $context, $entity_bundle);
+}
+
+
+/**
+ * Implements hook_theme().
+ *
+ * @param $existing
+ * @param $type
+ * @param $theme
+ * @param $path
+ * @return array
+ */
+function workspace_theme($existing, $type, $theme, $path) {
+  return [
+    'workspace_add_list' => [
+      'variables' => ['content' => NULL],
+    ],
+    'workspace_rev' => [
+      'render element' => 'elements',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_preprocess_HOOK
+ */
+function workspace_preprocess_workspace_add_list(&$variables) {
+  if (!empty($variables['content'])) {
+    foreach ($variables['content'] as $type) {
+      $variables['types'][$type->id()]['label'] = $type->label();
+      $options = array('query' => \Drupal::request()->query->all());
+      $variables['types'][$type->id()]['url'] = Url::fromRoute('entity.workspace.add_form', array('workspace_type' => $type->id()), $options);
+    }
+  }
+}
+
+/**
+ * Prepares variables for revision templates.
+ */
+function workspace_preprocess_workspace_rev(&$variables) {
+  $uuid = $variables['elements']['#uuid'];
+  $rev = $variables['elements']['#rev'];
+  $rev_info = array_merge(
+    \Drupal::service('multiversion.entity_index.rev')->get("$uuid:$rev"),
+    $variables['elements']['#rev_info']
+  );
+
+  $variables = array_merge($variables, $rev_info);
+
+  list($i) = explode('-', $rev);
+  // Apart from the index length, we want 7 characters plus dash and ellipsis.
+  $length = strlen($i) + 9;
+  $title = Unicode::truncate($rev, $length, FALSE, TRUE);
+
+  if (!empty($rev_info['revision_id'])) {
+    $entity_revision = \Drupal::entityTypeManager()->getStorage($rev_info['entity_type_id'])->loadRevision($rev_info['revision_id']);
+    $variables['title'] = Link::fromTextAndUrl($title, $entity_revision->toUrl('revision'));
+  }
+  else {
+    $variables['title'] = $title;
+  }
+}
+
+/**
+ * Implements hook_help().
+ */
+function workspace_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.workspace':
+      $output = '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('The <a href="@link">Workspace module</a> Provides the ability to have multiple workspaces on a single site to facilitate things like full-site preview and content staging.', array('@link' => 'https://www.drupal.org/project/workspace')) . '</p>';
+      return $output;
+  }
 }

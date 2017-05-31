@@ -6,19 +6,15 @@ use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Entity\EntityListBuilder;
 use Drupal\Core\Entity\EntityStorageInterface;
 use Drupal\Core\Entity\EntityTypeInterface;
+use Drupal\multiversion\Workspace\WorkspaceManagerInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * Defines a class to build a listing of workspace entities.
  *
- * @see \Drupal\workspace\Entity\Workspace
+ * @see \Drupal\multiversion\Entity\Workspace
  */
 class WorkspaceListBuilder extends EntityListBuilder {
-
-  /**
-   * @var \Drupal\workspace\WorkspaceManagerInterface
-   */
-  protected $workspaceManager;
 
   /**
    * {@inheritdoc}
@@ -38,7 +34,8 @@ class WorkspaceListBuilder extends EntityListBuilder {
    *   The entity type definition.
    * @param \Drupal\Core\Entity\EntityStorageInterface $storage
    *   The entity storage class.
-   * @param \Drupal\workspace\WorkspaceManagerInterface $workspace_manager
+   * @param \Drupal\multiversion\Workspace\WorkspaceManagerInterface $workspace_manager
+   *   The workspace manager.
    */
   public function __construct(EntityTypeInterface $entity_type, EntityStorageInterface $storage, WorkspaceManagerInterface $workspace_manager) {
     parent::__construct($entity_type, $storage);
@@ -49,8 +46,10 @@ class WorkspaceListBuilder extends EntityListBuilder {
    * {@inheritdoc}
    */
   public function buildHeader() {
+    // @todo should we show conflicted state in this list?
     $header['label'] = t('Workspace');
     $header['uid'] = t('Owner');
+    $header['type'] = t('Type');
     $header['status'] = t('Status');
 
     return $header + parent::buildHeader();
@@ -60,10 +59,13 @@ class WorkspaceListBuilder extends EntityListBuilder {
    * {@inheritdoc}
    */
   public function buildRow(EntityInterface $entity) {
-    /** @var \Drupal\workspace\Entity\WorkspaceInterface $entity */
+    /** @var \Drupal\multiversion\Entity\WorkspaceInterface $entity */
     $row['label'] = $entity->label() . ' (' . $entity->getMachineName() . ')';
     $row['owner'] = $entity->getOwner()->getDisplayname();
-    $active_workspace = $this->workspaceManager->getActiveWorkspace();
+    /** @var \Drupal\multiversion\Entity\WorkspaceTypeInterface $type */
+    $type = $entity->get('type')->first()->entity;
+    $row['type'] = $type ? $type->label() : '';
+    $active_workspace = $this->workspaceManager->getActiveWorkspace()->id();
     $row['status'] = $active_workspace == $entity->id() ? 'Active' : 'Inactive';
     return $row + parent::buildRow($entity);
   }
@@ -72,28 +74,26 @@ class WorkspaceListBuilder extends EntityListBuilder {
    * {@inheritdoc}
    */
   public function getDefaultOperations(EntityInterface $entity) {
-    /** @var \Drupal\workspace\Entity\WorkspaceInterface $entity */
+    /** @var \Drupal\multiversion\Entity\WorkspaceInterface $entity */
     $operations = parent::getDefaultOperations($entity);
     if (isset($operations['edit'])) {
-      $operations['edit']['query']['destination'] = $entity->url('collection');
+      $operations['edit']['query']['destination'] = $entity->toUrl('collection')->toString();
     }
 
-    $active_workspace = $this->workspaceManager->getActiveWorkspace();
+    $active_workspace = $this->workspaceManager->getActiveWorkspace()->id();
     if ($entity->id() != $active_workspace) {
-      $operations['activate'] = [
+      $operations['activate'] = array(
         'title' => $this->t('Set Active'),
         'weight' => 20,
-        'url' => $entity->urlInfo('activate-form', ['query' => ['destination' => $entity->url('collection')]]),
-      ];
+        'url' => $entity->toUrl('activate-form', ['query' => ['destination' => $entity->toUrl('collection')->toString()]]),
+      );
     }
 
-    if ('workspace:' . $entity->id() != $entity->get('upstream')->value) {
-      $operations['deployment'] = [
-        'title' => $this->t('Deploy content'),
-        'weight' => 20,
-        'url' => $entity->urlInfo('deployment-form', ['query' => ['destination' => $entity->url('collection')]]),
-      ];
-    }
+    $operations['conflicts'] = [
+      'title' => $this->t('View Conflicts'),
+      'weight' => 21,
+      'url' => $entity->toUrl('conflicts', ['workspace' => $entity->id()]),
+    ];
 
     return $operations;
   }
