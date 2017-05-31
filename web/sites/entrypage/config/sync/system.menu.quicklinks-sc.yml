@@ -1,8 +1,0 @@
-uuid: 4348a884-0c1c-480d-9864-30fc1820efb0
-langcode: en
-status: true
-dependencies: {  }
-id: quicklinks-sc
-label: 'Quicklinks SC'
-description: ''
-locked: false
