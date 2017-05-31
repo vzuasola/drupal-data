@@ -59,14 +59,14 @@ class DownloadResultsController extends ControllerBase {
     $dateFrom = $this->request->getCurrentRequest()->get('date_from');
     $dateTo = $this->request->getCurrentRequest()->get('date_to');
 
-    $tFrom = strtotime("$dateFrom 00:00:01");
+    $tFrom = strtotime("$dateFrom 00:00:00");
     $tTo = strtotime("$dateTo 23:59:59");
 
     $query = $this->connection
                   ->select('casino_provision_report', 'opt')
                   ->fields('opt', array('oid','username','application_date','currency'))
                   ->condition('opt.application_date', array($tFrom, $tTo), 'BETWEEN')
-                  ->orderBy('oid', 'DESC');
+                  ->orderBy('opt.application_date', 'DESC');
 
     $queryResults = $query->execute()->fetchAll();
 
@@ -76,7 +76,7 @@ class DownloadResultsController extends ControllerBase {
       $data[$key]['currrency'] = $value->currency;
     }
 
-    $this->generateCsv($data, "OptInreport-$dateFrom-$dateTo.csv");
+    $this->generateCsv($data, "OptInreport.csv");
   }
 
   /**
