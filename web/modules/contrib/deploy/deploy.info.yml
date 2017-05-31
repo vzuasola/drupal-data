@@ -5,8 +5,8 @@ description: ' Allows content to be deployed between servers. Either to be used 
 dependencies:
   - workspace
 
-# Information added by Drupal.org packaging script on 2016-10-25
-version: '8.x-1.0-alpha7'
+# Information added by Drupal.org packaging script on 2017-03-30
+version: '8.x-1.0-beta1'
 core: '8.x'
 project: 'deploy'
-datestamp: 1477396455
+datestamp: 1490870604

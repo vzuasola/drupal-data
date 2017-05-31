@@ -34,7 +34,7 @@ trait ContentEntityStorageTrait {
     $query = parent::buildQuery($ids, $revision_id);
 
     // Prevent to modify the query before entity type updates.
-    if ($ids === NULL) {
+    if (strpos($this->entityType->getStorageClass(), 'Drupal\multiversion\Entity\Storage') === FALSE) {
       return $query;
     }
 
@@ -157,11 +157,8 @@ trait ContentEntityStorageTrait {
    * {@inheritdoc}
    */
   protected function doPreSave(EntityInterface $entity) {
-    if (!$entity->isNew() && !isset($entity->original) && $entity->originalId) {
-      $entity->original = $this->loadUnchanged($entity->originalId);
-    }
-    elseif (!$entity->isNew() && !isset($entity->original)) {
-      $entity->original = $entity;
+    if (!$entity->isNew() && !isset($entity->original)) {
+      $entity->original = $this->loadUnchanged($entity->originalId ?: $entity->id());
     }
     parent::doPreSave($entity);
   }

@@ -683,59 +683,6 @@
             "time": "2017-01-13T14:02:13+00:00"
         },
         {
-            "name": "doctrine/couchdb",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/doctrine/couchdb-client.git",
-                "reference": "911c01716730af0fc0b5074a0740fddce3156ac0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/couchdb-client/zipball/911c01716730af0fc0b5074a0740fddce3156ac0",
-                "reference": "911c01716730af0fc0b5074a0740fddce3156ac0",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.4"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~4.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Doctrine\\CouchDB": "lib/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Benjamin Eberlei",
-                    "email": "kontakt@beberlei.de"
-                },
-                {
-                    "name": "Lukas Kahwe Smith",
-                    "email": "smith@pooteeweet.org"
-                }
-            ],
-            "description": "CouchDB Client",
-            "homepage": "http://www.doctrine-project.org",
-            "keywords": [
-                "couchdb",
-                "persistence"
-            ],
-            "time": "2016-08-06 11:26:41"
-        },
-        {
             "name": "doctrine/inflector",
             "version": "v1.1.0",
             "source": {
@@ -902,12 +849,12 @@
             "version": "8.3.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/drupal-composer/drupal-core.git",
+                "url": "https://github.com/drupal/core.git",
                 "reference": "53326f9503e5e9e406fab22e4fbae6ddb706f7be"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal-composer/drupal-core/zipball/53326f9503e5e9e406fab22e4fbae6ddb706f7be",
+                "url": "https://api.github.com/repos/drupal/core/zipball/53326f9503e5e9e406fab22e4fbae6ddb706f7be",
                 "reference": "53326f9503e5e9e406fab22e4fbae6ddb706f7be",
                 "shasum": ""
             },
@@ -2122,21 +2069,74 @@
             "time": "2017-03-19T21:40:44+00:00"
         },
         {
-            "name": "relaxedws/replicator",
-            "version": "1.0.0-alpha3",
+            "name": "relaxedws/couchdb",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/relaxedws/couchdb-replicator.git",
-                "reference": "dc2772760178081b8d8c00001405b46df83de3bb"
+                "url": "https://github.com/relaxedws/couchdb-client.git",
+                "reference": "45197b808a5e3d72b88aabf7ac589713c676db68"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/relaxedws/couchdb-replicator/zipball/dc2772760178081b8d8c00001405b46df83de3bb",
-                "reference": "dc2772760178081b8d8c00001405b46df83de3bb",
+                "url": "https://api.github.com/repos/relaxedws/couchdb-client/zipball/45197b808a5e3d72b88aabf7ac589713c676db68",
+                "reference": "45197b808a5e3d72b88aabf7ac589713c676db68",
                 "shasum": ""
             },
             "require": {
-                "doctrine/couchdb": "dev-master"
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Doctrine\\CouchDB": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de"
+                },
+                {
+                    "name": "Lukas Kahwe Smith",
+                    "email": "smith@pooteeweet.org"
+                }
+            ],
+            "description": "CouchDB Client",
+            "homepage": "http://www.doctrine-project.org",
+            "keywords": [
+                "couchdb",
+                "persistence"
+            ],
+            "time": "2017-04-26T19:56:15+00:00"
+        },
+        {
+            "name": "relaxedws/replicator",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/relaxedws/couchdb-replicator.git",
+                "reference": "acfe46008f3021a80c8f53bfa913a9e00f7b1d4a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/relaxedws/couchdb-replicator/zipball/acfe46008f3021a80c8f53bfa913a9e00f7b1d4a",
+                "reference": "acfe46008f3021a80c8f53bfa913a9e00f7b1d4a",
+                "shasum": ""
+            },
+            "require": {
+                "relaxedws/couchdb": "~1"
             },
             "require-dev": {
                 "phpunit/phpunit": "4.8.*"
@@ -2161,7 +2161,7 @@
                 }
             ],
             "description": "couchdb-replicator",
-            "time": "2017-04-04T10:38:26+00:00"
+            "time": "2017-04-30T15:20:47+00:00"
         },
         {
             "name": "stack/builder",
@@ -4301,6 +4301,59 @@
                 "resolver"
             ],
             "time": "2012-10-28T21:08:28+00:00"
+        },
+        {
+            "name": "doctrine/couchdb",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/couchdb-client.git",
+                "reference": "911c01716730af0fc0b5074a0740fddce3156ac0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/couchdb-client/zipball/911c01716730af0fc0b5074a0740fddce3156ac0",
+                "reference": "911c01716730af0fc0b5074a0740fddce3156ac0",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Doctrine\\CouchDB": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de"
+                },
+                {
+                    "name": "Lukas Kahwe Smith",
+                    "email": "smith@pooteeweet.org"
+                }
+            ],
+            "description": "CouchDB Client",
+            "homepage": "http://www.doctrine-project.org",
+            "keywords": [
+                "couchdb",
+                "persistence"
+            ],
+            "time": "2016-08-06 11:26:41"
         },
         {
             "name": "doctrine/instantiator",
