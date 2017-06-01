@@ -7,14 +7,86 @@ dependencies:
     - field.field.node.promotion.field_banner_content
     - field.field.node.promotion.field_banner_link
     - field.field.node.promotion.field_banner_link_target
+    - field.field.node.promotion.field_content_position
+    - field.field.node.promotion.field_full_tile_image
+    - field.field.node.promotion.field_full_tile_summary
+    - field.field.node.promotion.field_half_tile_image
+    - field.field.node.promotion.field_half_tile_summary
     - field.field.node.promotion.field_image
+    - field.field.node.promotion.field_link_target
+    - field.field.node.promotion.field_log_in_state
+    - field.field.node.promotion.field_product
+    - field.field.node.promotion.field_right_side_block_link
+    - field.field.node.promotion.field_thumbnail_image
+    - field.field.node.promotion.field_thumbnail_summary
     - image.style.thumbnail
     - node.type.promotion
   module:
+    - field_group
     - image
     - link
     - path
+    - scheduler
     - text
+third_party_settings:
+  field_group:
+    group_promotions_banner:
+      children:
+        - field_image
+        - field_content_position
+        - field_banner_content
+        - field_banner_link
+        - field_banner_link_target
+      parent_name: ''
+      weight: 15
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: 'Promotions Banner'
+    group_promotions_full_tiles:
+      children:
+        - field_full_tile_image
+        - field_full_tile_summary
+      parent_name: ''
+      weight: 17
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: 'Promotions Full Tiles'
+    group_promotions_tiles:
+      children:
+        - field_half_tile_image
+        - field_half_tile_summary
+      parent_name: ''
+      weight: 18
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: 'Promotions Half Tiles'
+    group_promotions_thumbnail:
+      children:
+        - field_thumbnail_image
+        - field_thumbnail_summary
+        - field_right_side_block_link
+        - field_link_target
+      parent_name: ''
+      weight: 16
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: 'Promotions Thumbnail'
 id: node.promotion.default
 targetEntityType: node
 bundle: promotion
@@ -22,7 +94,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 31
+    weight: 13
     settings:
       rows: 9
       summary_rows: 3
@@ -31,12 +103,12 @@ content:
     region: content
   created:
     type: datetime_timestamp
-    weight: 10
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
   field_banner_content:
-    weight: 33
+    weight: 34
     settings:
       rows: 5
       placeholder: ''
@@ -44,7 +116,7 @@ content:
     type: text_textarea
     region: content
   field_banner_link:
-    weight: 34
+    weight: 35
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -52,7 +124,13 @@ content:
     type: link_default
     region: content
   field_banner_link_target:
-    weight: 35
+    weight: 36
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_content_position:
+    weight: 33
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -65,15 +143,60 @@ content:
     third_party_settings: {  }
     type: image_image
     region: content
+  field_link_target:
+    weight: 22
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_log_in_state:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_product:
+    weight: 3
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_right_side_block_link:
+    weight: 21
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_thumbnail_image:
+    weight: 19
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_thumbnail_summary:
+    weight: 20
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
   langcode:
     type: language_select
-    weight: 2
+    weight: 1
     region: content
     settings: {  }
     third_party_settings: {  }
   path:
     type: path
-    weight: 30
+    weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -81,23 +204,39 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 15
+    weight: 7
     region: content
+    third_party_settings: {  }
+  publish_on:
+    type: datetime_timestamp_no_default
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  scheduler_settings:
+    weight: 9
+    region: content
+    settings: {  }
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 16
+    weight: 8
     region: content
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: -5
+    weight: 0
     region: content
     settings:
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 14
+    region: content
+    settings: {  }
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
@@ -108,4 +247,14 @@ content:
       placeholder: ''
     region: content
     third_party_settings: {  }
-hidden: {  }
+  unpublish_on:
+    type: datetime_timestamp_no_default
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_full_tile_image: true
+  field_full_tile_summary: true
+  field_half_tile_image: true
+  field_half_tile_summary: true

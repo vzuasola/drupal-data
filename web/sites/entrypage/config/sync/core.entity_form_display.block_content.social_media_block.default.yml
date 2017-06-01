@@ -24,7 +24,7 @@ content:
     type: boolean_checkbox
     region: content
   field_sm_blurb:
-    weight: 2
+    weight: 26
     settings:
       size: 60
       placeholder: ''
@@ -33,7 +33,7 @@ content:
     region: content
   field_social_media:
     type: entity_reference_paragraphs
-    weight: 3
+    weight: 2
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -53,13 +53,13 @@ content:
     region: content
   langcode:
     type: language_select
-    weight: 5
+    weight: 4
     settings: {  }
     third_party_settings: {  }
     region: content
   translation:
-    weight: 4
-    region: content
+    weight: 3
     settings: {  }
     third_party_settings: {  }
+    region: content
 hidden: {  }
