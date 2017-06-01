@@ -1,0 +1,22 @@
+uuid: 956ae39c-7d77-41ab-90d7-c68474711c20
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_product
+    - node.type.promotion
+  module:
+    - options
+id: node.promotion.field_product
+field_name: field_product
+entity_type: node
+bundle: promotion
+label: Product
+description: 'Please specify the product for this promotion.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
+
