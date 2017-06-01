@@ -13,14 +13,17 @@ settings:
   allowed_values:
     -
       value: '0'
-      label: Pre-Login
+      label: 'Pre Login'
     -
       value: '1'
-      label: Post-Login
+      label: 'Post Login'
+    -
+      value: '2'
+      label: Both
   allowed_values_function: ''
 module: options
 locked: false
-cardinality: 3
+cardinality: 1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false
