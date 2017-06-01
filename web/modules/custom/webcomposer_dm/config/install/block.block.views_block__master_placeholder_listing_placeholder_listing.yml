@@ -25,6 +25,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: /domain-management/manage-placeholders
+    pages: /admin/config/webcomposer/domains/placeholders
     negate: false
     context_mapping: {  }
