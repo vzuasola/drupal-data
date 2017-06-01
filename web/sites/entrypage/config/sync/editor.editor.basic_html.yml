@@ -47,10 +47,9 @@ settings:
         -
           name: Align
           items:
-            - JustifyRight
-            - JustifyBlock
-            - JustifyCenter
             - JustifyLeft
+            - JustifyCenter
+            - JustifyRight
         -
           name: Font
           items:
