@@ -1,0 +1,25 @@
+uuid: 2f5037dd-fd0b-4e3c-94d8-ba9cbfc06b3f
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: promotion_queue
+label: 'Promotion Queue'
+handler: simple
+handler_configuration: {  }
+entity_settings:
+  target_type: node
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      promotion: promotion
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+queue_settings:
+  min_size: 0
+  max_size: 0
+  act_as_queue: false
+  reverse_in_admin: false

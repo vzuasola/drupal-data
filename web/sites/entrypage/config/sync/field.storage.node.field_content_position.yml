@@ -1,25 +1,28 @@
-uuid: 25f134d5-3928-4909-a125-493725fcc68a
+uuid: c51108e7-4ce8-4b23-b854-e682356c3a75
 langcode: en
 status: true
 dependencies:
   module:
     - node
     - options
-id: node.field_log_in_state
-field_name: field_log_in_state
+id: node.field_content_position
+field_name: field_content_position
 entity_type: node
 type: list_string
 settings:
   allowed_values:
     -
-      value: '0'
-      label: 'Pre Login'
+      value: top
+      label: Top
     -
-      value: '1'
-      label: 'Post Login'
+      value: bottom
+      label: Bottom
     -
-      value: '2'
-      label: Both
+      value: left
+      label: Left
+    -
+      value: right
+      label: Right
   allowed_values_function: ''
 module: options
 locked: false
