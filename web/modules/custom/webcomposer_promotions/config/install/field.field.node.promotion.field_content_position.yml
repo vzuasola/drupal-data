@@ -1,0 +1,21 @@
+uuid: a3b0b6ac-9e8f-4d58-a8a6-3ac5a9603407
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content_position
+    - node.type.promotion
+  module:
+    - options
+id: node.promotion.field_content_position
+field_name: field_content_position
+entity_type: node
+bundle: promotion
+label: 'Content Position'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
