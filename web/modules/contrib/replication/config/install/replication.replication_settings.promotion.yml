@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {  }
+id: promotion
+label: Replicate only promotion entities
+filter_id: entity_type
+parameters:
+  types:
+    - node.promotion
