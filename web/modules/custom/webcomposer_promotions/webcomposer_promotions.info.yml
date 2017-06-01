@@ -6,3 +6,7 @@ package: Web Composer
 dependencies:
   - scheduler
   - entityqueue
+  - content_translation
+  - relaxed
+  - workspace
+  - deploy
