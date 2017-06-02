@@ -25,7 +25,7 @@ class PromotionRightSideForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   public function getFormId() {
-    return 'promotion_right_side_form';
+    return 'webcomposer_promotions.promotion_right_side_form';
   }
 
   /**
@@ -46,7 +46,7 @@ class PromotionRightSideForm extends ConfigFormBase {
     $form['promotion_right_side_visibility'] = array(
       '#type' => 'textarea',
       '#title' => $this->t('Promotion Right Side Visibility'),
-      '#description' => $this->t('Defines page were the promotion right side block will be visible'),
+      '#description' => $this->t("Defines page were the promotion right side block will be visible. Specify pages by using their paths. Enter one path per line. The '*' character is a wildcard."),
       '#default_value' => $config->get('promotion_right_side_visibility'),
     );
 

@@ -1,4 +1,3 @@
-
 webcomposer_promotions.promotion_right_side_form:
   path: '/admin/config/webcomposer/config/promo_right_side'
   defaults:
