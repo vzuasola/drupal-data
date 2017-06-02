@@ -17,7 +17,7 @@ class PromotionRightSideForm extends ConfigFormBase {
    */
   protected function getEditableConfigNames() {
     return [
-      'webcomposer_promotions.promotionrightside',
+      'webcomposer_config.promotion_right_side',
     ];
   }
 
@@ -32,21 +32,24 @@ class PromotionRightSideForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    $config = $this->config('webcomposer_promotions.promotionrightside');
-    $form['promotion_right_side_title'] = [
+    $config = $this->config('webcomposer_config.promotion_right_side');
+
+    $form['promotion_right_side_title'] = array(
       '#type' => 'textfield',
       '#title' => $this->t('Promotion Right Side Title'),
       '#description' => $this->t('The title of the promotion right side block'),
       '#maxlength' => 64,
       '#size' => 64,
       '#default_value' => $config->get('promotion_right_side_title'),
-    ];
-    $form['promotion_right_side_visibility'] = [
+    );
+
+    $form['promotion_right_side_visibility'] = array(
       '#type' => 'textarea',
       '#title' => $this->t('Promotion Right Side Visibility'),
       '#description' => $this->t('Defines page were the promotion right side block will be visible'),
       '#default_value' => $config->get('promotion_right_side_visibility'),
-    ];
+    );
+
     return parent::buildForm($form, $form_state);
   }
 
@@ -63,10 +66,13 @@ class PromotionRightSideForm extends ConfigFormBase {
   public function submitForm(array &$form, FormStateInterface $form_state) {
     parent::submitForm($form, $form_state);
 
-    $this->config('webcomposer_promotions.promotionrightside')
-      ->set('promotion_right_side_title', $form_state->getValue('promotion_right_side_title'))
-      ->set('promotion_right_side_visibility', $form_state->getValue('promotion_right_side_visibility'))
-      ->save();
-  }
+    $keys = array(
+      'promotion_right_side_title',
+      'promotion_right_side_visibility',
+    );
 
+    foreach ($keys as $key) {
+      $this->config('webcomposer_config.promotion_right_side')->set($key, $form_state->getValue($key))->save();
+    }
+  }
 }
