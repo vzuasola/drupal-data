@@ -7,3 +7,7 @@ dependencies:
   - webcomposer_config
   - scheduler
   - entityqueue
+  - content_translation
+  - relaxed
+  - workspace
+  - deploy
