@@ -85,15 +85,55 @@ class DomainPlaceholderResource extends ResourceBase {
       $key = $translation->field_placeholder_key->value;
       $value = $translation->field_default_value->value;
 
-      // filter out empty placeholder keys
-      if ($key && $value) {
-        // Make the key value pair for response
-        $definition[$key] = $value;
+
+      $definition[$key] = $value;
+
+      if(empty($value)) {
+        //check in master placeholder list
+        $masterPlaceholderList = 'master_placeholder';
+        $fallback = $this->webcomposerPlaceholderFallback($masterPlaceholderList);
+
       }
+
    }
 
     return $definition;
   }
 
+
+  /**
+ * { function_description }
+ *
+ * @param      <type>  $key    The key
+ *
+ * @return     <type>  ( description_of_the_return_value )
+ */
+    private function webcomposerPlaceholderFallback($vid) {
+      $definition = array();
+      $query = \Drupal::entityQuery('taxonomy_term');
+      $query->condition('vid', "$vid");
+      $tids = $query->execute();
+      $terms = \Drupal\taxonomy\Entity\Term::loadMultiple($tids);
+
+      $term = reset($terms);
+
+     $getEntities = $term->get('field_add_master_placeholder')->referencedEntities();
+       $lang_code = \Drupal::service('language_manager')->getCurrentLanguage()->getId();
+      foreach ($getEntities as $getEntity) {
+      if ($getEntity->hasTranslation($lang_code)) {
+        $translation = $getEntity->getTranslation($lang_code);
+         // kint($translation);die();
+      }
+
+      $key = $translation->field_placeholder_key->value;
+      $value = $translation->field_default_value->value;
+
+
+      $definition[$key] = $value;
+
+    }
+
+    return $definition;
+}
 
 }
