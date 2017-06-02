@@ -8,6 +8,6 @@ dependencies:
   - scheduler
   - entityqueue
   - content_translation
-  - relaxed
-  - workspace
-  - deploy
+  # - relaxed
+  # - workspace
+  # - deploy
