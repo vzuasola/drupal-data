@@ -26,6 +26,8 @@ dependencies:
     - options
     - text
     - user
+_core:
+  default_config_hash: nwRMH5lBqdFFd9zJdNEpaFTOxqC0A2obNW74N5EU0N4
 id: node.promotion.default
 targetEntityType: node
 bundle: promotion

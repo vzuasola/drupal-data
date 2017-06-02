@@ -21,6 +21,8 @@ third_party_settings:
     unpublish_enable: false
     unpublish_required: false
     unpublish_revision: false
+_core:
+  default_config_hash: inD4wCnCjTZNNs68FewTHbKBrvCu7iW3zFAZqxXGaYk
 name: Promotion
 type: promotion
 description: 'Use promotion to add promotion content.'

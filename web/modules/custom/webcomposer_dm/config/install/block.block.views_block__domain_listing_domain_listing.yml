@@ -25,6 +25,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: /domain-management/manage-domains
+    pages: /admin/config/webcomposer/domains/domain
     negate: false
     context_mapping: {  }

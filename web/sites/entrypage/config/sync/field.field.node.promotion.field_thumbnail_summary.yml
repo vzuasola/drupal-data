@@ -7,6 +7,8 @@ dependencies:
     - node.type.promotion
   module:
     - text
+_core:
+  default_config_hash: 1YqeT2XId7I060sXNVdtOkX5rQAnr4FFgoK_7zZi2tc
 id: node.promotion.field_thumbnail_summary
 field_name: field_thumbnail_summary
 entity_type: node

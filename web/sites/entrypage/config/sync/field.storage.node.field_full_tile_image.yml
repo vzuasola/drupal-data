@@ -6,6 +6,8 @@ dependencies:
     - file
     - image
     - node
+_core:
+  default_config_hash: faPWonKAw4YThmZkZ1jAasudmxKAeP5LKtAszqSIN-k
 id: node.field_full_tile_image
 field_name: field_full_tile_image
 entity_type: node

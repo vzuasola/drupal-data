@@ -9,6 +9,8 @@ dependencies:
 third_party_settings:
   content_translation:
     enabled: true
+_core:
+  default_config_hash: vOioCbVMFxY--eQ3FbXuwv8BquJQLc--nI8ioxJ4OEE
 id: taxonomy_term.master_placeholder
 target_entity_type_id: taxonomy_term
 target_bundle: master_placeholder

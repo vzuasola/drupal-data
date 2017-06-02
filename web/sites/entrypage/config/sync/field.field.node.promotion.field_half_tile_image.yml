@@ -7,6 +7,8 @@ dependencies:
     - node.type.promotion
   module:
     - image
+_core:
+  default_config_hash: jthqu6pj3n_2ZHKLPyFvoWzMjLerNLidJIEb4TcCAhs
 id: node.promotion.field_half_tile_image
 field_name: field_half_tile_image
 entity_type: node
