@@ -87,6 +87,8 @@ third_party_settings:
         open: false
         required_fields: true
       label: 'Promotions Thumbnail'
+_core:
+  default_config_hash: REpuDcJgDsDpuU0keFA4HDluTQxvT7wSEcUqidMSEcM
 id: node.promotion.default
 targetEntityType: node
 bundle: promotion

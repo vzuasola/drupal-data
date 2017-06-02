@@ -9,6 +9,8 @@ dependencies:
 third_party_settings:
   content_translation:
     enabled: true
+_core:
+  default_config_hash: ui_OyFGz2YJ_R38ht65aKRYas4AS-vkl_gUXPbQ4XoM
 id: paragraph.domain_management_configuration
 target_entity_type_id: paragraph
 target_bundle: domain_management_configuration

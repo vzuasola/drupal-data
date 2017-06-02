@@ -1,0 +1,5 @@
+webcomposer_promotions.promotion_right_side_schema:
+  title: 'Promotion Right Side'
+  base_route_name: webcomposer_promotions.promotion_right_side_form
+  names:
+    - 'webcomposer_config.promotion_right_side'

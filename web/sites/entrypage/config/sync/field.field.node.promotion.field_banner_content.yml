@@ -7,6 +7,8 @@ dependencies:
     - node.type.promotion
   module:
     - text
+_core:
+  default_config_hash: Qu163b9UtnNsetfpC25-4pkP_-ZO_ARl6O6S5PMyIoo
 id: node.promotion.field_banner_content
 field_name: field_banner_content
 entity_type: node

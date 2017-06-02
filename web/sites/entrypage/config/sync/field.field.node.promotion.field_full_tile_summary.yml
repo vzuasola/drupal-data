@@ -7,6 +7,8 @@ dependencies:
     - node.type.promotion
   module:
     - text
+_core:
+  default_config_hash: DDDnDUjXSNDCrNbDCVVS8ifxpy7oPe7M3IkXrjGjpFs
 id: node.promotion.field_full_tile_summary
 field_name: field_full_tile_summary
 entity_type: node

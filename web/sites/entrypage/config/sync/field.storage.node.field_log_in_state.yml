@@ -5,6 +5,8 @@ dependencies:
   module:
     - node
     - options
+_core:
+  default_config_hash: xbXZuyY-5CrGwmknDU3EbJgro5ZgvgCTd8TDbBTra_4
 id: node.field_log_in_state
 field_name: field_log_in_state
 entity_type: node
