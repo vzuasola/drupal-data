@@ -9,6 +9,8 @@ dependencies:
   module:
     - text
     - user
+_core:
+  default_config_hash: GpAJLFgG-pHcm7xK9pYyGDEWfN_0RKNcYRxr4grGp_Q
 id: node.promotion.teaser
 targetEntityType: node
 bundle: promotion
@@ -40,6 +42,7 @@ hidden:
   field_mark_as_featured: true
   field_product: true
   field_promote_to_lobby: true
+  field_right_side_block_link: true
   field_thumbnail_image: true
   field_thumbnail_summary: true
   langcode: true

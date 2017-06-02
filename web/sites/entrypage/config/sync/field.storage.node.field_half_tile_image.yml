@@ -6,6 +6,8 @@ dependencies:
     - file
     - image
     - node
+_core:
+  default_config_hash: qjnXOES8AdOIFWCfV_lwl3T6EBvG4FpB4TexUQ3NaHI
 id: node.field_half_tile_image
 field_name: field_half_tile_image
 entity_type: node

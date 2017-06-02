@@ -5,6 +5,8 @@ dependencies:
   module:
     - link
     - node
+_core:
+  default_config_hash: xkFzZpEYRQ9nXY5GcRR7-6C7NYNnFkVNlWooe9rEJF8
 id: node.field_right_side_block_link
 field_name: field_right_side_block_link
 entity_type: node

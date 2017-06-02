@@ -7,6 +7,8 @@ dependencies:
     - node.type.promotion
   module:
     - image
+_core:
+  default_config_hash: EGL3mrkI3Lep3bbAZwx9oNGTbUvwWLXXnk2X6DL5-E4
 id: node.promotion.field_full_tile_image
 field_name: field_full_tile_image
 entity_type: node

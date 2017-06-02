@@ -7,6 +7,8 @@ dependencies:
     - node.type.promotion
   module:
     - options
+_core:
+  default_config_hash: Xz6ED98nLhXKGfBo66qKjcI6Bfn0uIMGX5nC8w3muWM
 id: node.promotion.field_link_target
 field_name: field_link_target
 entity_type: node
