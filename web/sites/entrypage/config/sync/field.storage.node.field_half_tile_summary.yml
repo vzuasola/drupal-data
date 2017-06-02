@@ -5,6 +5,8 @@ dependencies:
   module:
     - node
     - text
+_core:
+  default_config_hash: bQAWX22nnKjEqPu9jwn6d9z4gXMJlawAySIOh-RDA-s
 id: node.field_half_tile_summary
 field_name: field_half_tile_summary
 entity_type: node

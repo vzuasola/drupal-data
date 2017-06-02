@@ -1,0 +1,10 @@
+webcomposer_config.promotion_right_side:
+  type: config_object
+  label: 'Promotion Right Side Block Configurations'
+  mapping:
+    promotion_right_side_title:
+      type: label
+      label: 'Promotion Right Side Block Title'
+    promotion_right_side_visibility:
+      type: label
+      label: 'Promotion Right Side Block Visibility'

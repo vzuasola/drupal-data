@@ -7,6 +7,8 @@ dependencies:
     - node.type.promotion
   module:
     - options
+_core:
+  default_config_hash: GG7mdZfunFRfau6Pp5ty3_hd_l5MCQL-LPg36s5Xx94
 id: node.promotion.field_log_in_state
 field_name: field_log_in_state
 entity_type: node

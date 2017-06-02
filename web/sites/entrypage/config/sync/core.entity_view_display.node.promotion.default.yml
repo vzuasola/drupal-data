@@ -7,7 +7,6 @@ dependencies:
     - field.field.node.promotion.field_banner_content
     - field.field.node.promotion.field_banner_link
     - field.field.node.promotion.field_banner_link_target
-    - field.field.node.promotion.field_content_position
     - field.field.node.promotion.field_full_tile_image
     - field.field.node.promotion.field_full_tile_summary
     - field.field.node.promotion.field_half_tile_image
@@ -17,6 +16,7 @@ dependencies:
     - field.field.node.promotion.field_log_in_state
     - field.field.node.promotion.field_product
     - field.field.node.promotion.field_right_side_block_link
+    - field.field.node.promotion.field_right_side_block_option
     - field.field.node.promotion.field_thumbnail_image
     - field.field.node.promotion.field_thumbnail_summary
     - node.type.promotion
@@ -26,6 +26,8 @@ dependencies:
     - options
     - text
     - user
+_core:
+  default_config_hash: nwRMH5lBqdFFd9zJdNEpaFTOxqC0A2obNW74N5EU0N4
 id: node.promotion.default
 targetEntityType: node
 bundle: promotion
@@ -59,13 +61,6 @@ content:
     region: content
   field_banner_link_target:
     weight: 105
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
-    region: content
-  field_content_position:
-    weight: 116
     label: above
     settings: {  }
     third_party_settings: {  }
@@ -145,6 +140,16 @@ content:
       target: ''
     third_party_settings: {  }
     type: link
+    region: content
+  field_right_side_block_option:
+    weight: 118
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
     region: content
   field_thumbnail_image:
     weight: 114

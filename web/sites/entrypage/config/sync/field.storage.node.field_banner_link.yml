@@ -5,6 +5,8 @@ dependencies:
   module:
     - link
     - node
+_core:
+  default_config_hash: ZFyxZCCQOF-R1J5VVefpBKHfklovu-CfqYWj4XR3qsU
 id: node.field_banner_link
 field_name: field_banner_link
 entity_type: node

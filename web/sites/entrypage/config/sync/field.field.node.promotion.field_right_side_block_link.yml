@@ -7,13 +7,15 @@ dependencies:
     - node.type.promotion
   module:
     - link
+_core:
+  default_config_hash: vWjU3PCjfuVNSCGwQ-TpydPm5JpqgfLTMn_rpYThwJE
 id: node.promotion.field_right_side_block_link
 field_name: field_right_side_block_link
 entity_type: node
 bundle: promotion
 label: 'Right Side Block Link'
 description: ''
-required: true
+required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''

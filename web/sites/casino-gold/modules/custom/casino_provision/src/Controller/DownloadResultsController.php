@@ -92,7 +92,7 @@ class DownloadResultsController extends ControllerBase {
 
     $output = fopen("php://output", "w");
 
-    fputcsv($output, array('Opt-In Date','Username','Currency'));
+    fputcsv($output, array('Date','Username','Currency'));
     foreach ($data as $row) {
         fputcsv($output, $row);
     }

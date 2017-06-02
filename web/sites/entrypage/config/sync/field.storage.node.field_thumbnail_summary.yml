@@ -5,6 +5,8 @@ dependencies:
   module:
     - node
     - text
+_core:
+  default_config_hash: lvBiJG1vvQIFvFuFBg4bQtfSMrouwAJAcJ7MxjV-88Q
 id: node.field_thumbnail_summary
 field_name: field_thumbnail_summary
 entity_type: node

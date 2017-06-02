@@ -7,6 +7,8 @@ dependencies:
     - node.type.promotion
   module:
     - text
+_core:
+  default_config_hash: OS16YO_8-3vzGgZFISXcQxOtA71E1e4GZ9t4zSprnXs
 id: node.promotion.field_half_tile_summary
 field_name: field_half_tile_summary
 entity_type: node

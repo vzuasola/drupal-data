@@ -14,6 +14,8 @@ third_party_settings:
       file: file
       alt: '0'
       title: '0'
+_core:
+  default_config_hash: n93fBTNSs6iS9Zpxc-Euo8aH6XxJg2hOYB0Vr3Il0I8
 id: node.promotion.field_image
 field_name: field_image
 entity_type: node

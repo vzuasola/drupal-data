@@ -6,6 +6,7 @@ use Drupal\webcomposer_config\Install\SocialMediaBlock;
 use Drupal\webcomposer_config\Install\SponsorshipBlock;
 use Drupal\webcomposer_config\Install\QuickLinksMenu;
 use Drupal\webcomposer_config\Install\ProductMenu;
+use Drupal\webcomposer_config\Install\ProductMenuRight;
 use Drupal\webcomposer_config\Install\CashierMenu;
 use Drupal\webcomposer_config\Install\ProfileMenu;
 
@@ -29,5 +30,8 @@ function webcomposer_config_install() {
   $menu->createMenu();
 
   $menu = new ProfileMenu();
+  $menu->createMenu();
+
+  $menu = new ProductMenuRight();
   $menu->createMenu();
 }
