@@ -1,0 +1,8 @@
+uuid: 27f5a6af-4a4d-400f-a2d5-2b7e55a3dea1
+langcode: zh-hans
+status: true
+dependencies: {  }
+id: product-menu-right-ch
+label: 'Product Menu Right CH'
+description: ''
+locked: false
