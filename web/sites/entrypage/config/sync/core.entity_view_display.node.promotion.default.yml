@@ -16,6 +16,7 @@ dependencies:
     - field.field.node.promotion.field_log_in_state
     - field.field.node.promotion.field_product
     - field.field.node.promotion.field_right_side_block_link
+    - field.field.node.promotion.field_right_side_block_option
     - field.field.node.promotion.field_thumbnail_image
     - field.field.node.promotion.field_thumbnail_summary
     - node.type.promotion
@@ -139,6 +140,16 @@ content:
       target: ''
     third_party_settings: {  }
     type: link
+    region: content
+  field_right_side_block_option:
+    weight: 118
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
     region: content
   field_thumbnail_image:
     weight: 114
