@@ -89,9 +89,22 @@ class DomainPlaceholderResource extends ResourceBase {
       $definition[$key] = $value;
 
       if(empty($value)) {
-        //check in master placeholder list
+        // check the value in domain group
+        $domainGroup = 'domain_groups';
+        $fallback = $this->webcomposerPlaceholderFallback($domainGroup);
+        $checkIfKeyExits = array_key_exists($key, $fallback) ? true : false;
+        if ($checkIfKeyExits == TRUE) {
+          $definition = array_merge($definition, $fallback);
+        }
+
+        // check in master placeholder list
         $masterPlaceholderList = 'master_placeholder';
         $fallback = $this->webcomposerPlaceholderFallback($masterPlaceholderList);
+        $checkIfKeyExits = array_key_exists($key, $fallback) ? true : false;
+
+        if ($checkIfKeyExits == TRUE) {
+          $definition = array_merge($definition, $fallback);
+        }
 
       }
 
@@ -109,6 +122,8 @@ class DomainPlaceholderResource extends ResourceBase {
  * @return     <type>  ( description_of_the_return_value )
  */
     private function webcomposerPlaceholderFallback($vid) {
+
+      $field = !empty(($vid == 'domain_groups')) ? 'field_add_placeholder' : 'field_add_master_placeholder';
       $definition = array();
       $query = \Drupal::entityQuery('taxonomy_term');
       $query->condition('vid', "$vid");
@@ -117,12 +132,11 @@ class DomainPlaceholderResource extends ResourceBase {
 
       $term = reset($terms);
 
-     $getEntities = $term->get('field_add_master_placeholder')->referencedEntities();
-       $lang_code = \Drupal::service('language_manager')->getCurrentLanguage()->getId();
+      $getEntities = $term->get("$field")->referencedEntities();
+      $lang_code = \Drupal::service('language_manager')->getCurrentLanguage()->getId();
       foreach ($getEntities as $getEntity) {
       if ($getEntity->hasTranslation($lang_code)) {
         $translation = $getEntity->getTranslation($lang_code);
-         // kint($translation);die();
       }
 
       $key = $translation->field_placeholder_key->value;
@@ -134,6 +148,6 @@ class DomainPlaceholderResource extends ResourceBase {
     }
 
     return $definition;
-}
+  }
 
 }
