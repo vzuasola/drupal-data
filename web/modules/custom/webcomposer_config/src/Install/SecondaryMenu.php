@@ -4,7 +4,7 @@ namespace Drupal\webcomposer_config\Install;
 
 use Drupal\webcomposer_config\WebcomposerConfig;
 
-class ProductMenuRight {
+class SecondaryMenu {
 
   public function createMenu()
   {
@@ -13,6 +13,6 @@ class ProductMenuRight {
       '/mobile' => 'Mobile'
     );
 
-    WebcomposerConfig::createMenu('product-menu-right', $menu);
+    WebcomposerConfig::createMenu('secondary-menu', $menu);
   }
 }
