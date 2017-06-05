@@ -9,6 +9,8 @@ dependencies:
 third_party_settings:
   content_translation:
     enabled: true
+_core:
+  default_config_hash: ESNzePP8byiPAfvXoJDmvUFsWxPuOR6DUMt7eiqGtNo
 id: taxonomy_term.domain_groups
 target_entity_type_id: taxonomy_term
 target_bundle: domain_groups

@@ -1,16 +1,15 @@
-uuid: de1dfd99-ae6f-463e-8ffa-fadfe87b94ba
+uuid: 365f272f-59be-4879-b8b4-634128932f6e
 langcode: en
 status: true
 dependencies:
   module:
     - node
-    - text
-id: node.field_full_tile_summary
-field_name: field_full_tile_summary
+id: node.field_right_side_block_option
+field_name: field_right_side_block_option
 entity_type: node
-type: text_long
+type: boolean
 settings: {  }
-module: text
+module: core
 locked: false
 cardinality: 1
 translatable: true
