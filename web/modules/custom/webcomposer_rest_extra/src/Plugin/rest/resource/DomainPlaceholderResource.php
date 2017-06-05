@@ -115,11 +115,11 @@ class DomainPlaceholderResource extends ResourceBase {
 
 
   /**
- * { function_description }
+ * { returns all the placeholder list from domain group and placeholder list }
  *
- * @param      <type>  $key    The key
+ * @param      <index>  $key    The key
  *
- * @return     <type>  ( description_of_the_return_value )
+ * @return     <array>  ( fallback array of domain and master placeholder list )
  */
     private function webcomposerPlaceholderFallback($vid) {
 
