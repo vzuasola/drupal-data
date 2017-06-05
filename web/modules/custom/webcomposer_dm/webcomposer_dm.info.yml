@@ -3,3 +3,6 @@ type: module
 description: Allows customisation around Domain Management.
 core: 8.x
 package: Web Composer
+dependencies:
+  - paragraphs
+  - content_translation
