@@ -85,15 +85,69 @@ class DomainPlaceholderResource extends ResourceBase {
       $key = $translation->field_placeholder_key->value;
       $value = $translation->field_default_value->value;
 
-      // filter out empty placeholder keys
-      if ($key && $value) {
-        // Make the key value pair for response
-        $definition[$key] = $value;
+
+      $definition[$key] = $value;
+
+      if(empty($value)) {
+        // check the value in domain group
+        $domainGroup = 'domain_groups';
+        $fallback = $this->webcomposerPlaceholderFallback($domainGroup);
+        $checkIfKeyExits = array_key_exists($key, $fallback) ? true : false;
+        if ($checkIfKeyExits == TRUE) {
+          $definition = array_merge($definition, $fallback);
+        }
+
+        // check in master placeholder list
+        $masterPlaceholderList = 'master_placeholder';
+        $fallback = $this->webcomposerPlaceholderFallback($masterPlaceholderList);
+        $checkIfKeyExits = array_key_exists($key, $fallback) ? true : false;
+
+        if ($checkIfKeyExits == TRUE) {
+          $definition = array_merge($definition, $fallback);
+        }
+
       }
+
    }
 
     return $definition;
   }
 
+
+  /**
+ * { returns all the placeholder list from domain group and placeholder list }
+ *
+ * @param      <index>  $key    The key
+ *
+ * @return     <array>  ( fallback array of domain and master placeholder list )
+ */
+    private function webcomposerPlaceholderFallback($vid) {
+
+      $field = !empty(($vid == 'domain_groups')) ? 'field_add_placeholder' : 'field_add_master_placeholder';
+      $definition = array();
+      $query = \Drupal::entityQuery('taxonomy_term');
+      $query->condition('vid', "$vid");
+      $tids = $query->execute();
+      $terms = \Drupal\taxonomy\Entity\Term::loadMultiple($tids);
+
+      $term = reset($terms);
+
+      $getEntities = $term->get("$field")->referencedEntities();
+      $lang_code = \Drupal::service('language_manager')->getCurrentLanguage()->getId();
+      foreach ($getEntities as $getEntity) {
+      if ($getEntity->hasTranslation($lang_code)) {
+        $translation = $getEntity->getTranslation($lang_code);
+      }
+
+      $key = $translation->field_placeholder_key->value;
+      $value = $translation->field_default_value->value;
+
+
+      $definition[$key] = $value;
+
+    }
+
+    return $definition;
+  }
 
 }
