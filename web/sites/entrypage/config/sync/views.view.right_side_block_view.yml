@@ -459,7 +459,7 @@ display:
           relationship: none
           group_type: group
           admin_label: 'field_right_side_block_content: Content'
-          required: false
+          required: true
           plugin_id: standard
       arguments:
         nid:
@@ -494,7 +494,7 @@ display:
             fail: 'not found'
           validate_options: {  }
           break_phrase: false
-          not: true
+          not: false
           entity_type: node
           entity_field: nid
           plugin_id: node_nid
