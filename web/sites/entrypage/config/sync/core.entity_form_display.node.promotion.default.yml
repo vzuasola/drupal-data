@@ -18,6 +18,7 @@ dependencies:
     - field.field.node.promotion.field_right_side_block_content
     - field.field.node.promotion.field_right_side_block_link
     - field.field.node.promotion.field_right_side_block_option
+    - field.field.node.promotion.field_right_side_block_title
     - field.field.node.promotion.field_thumbnail_image
     - field.field.node.promotion.field_thumbnail_summary
     - image.style.thumbnail
@@ -90,6 +91,7 @@ third_party_settings:
     group_right_side_block:
       children:
         - field_right_side_block_option
+        - field_right_side_block_title
         - field_right_side_block_content
       parent_name: ''
       weight: 16
@@ -174,7 +176,7 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_right_side_block_content:
-    weight: 18
+    weight: 60
     settings:
       match_operator: CONTAINS
       size: 60
@@ -191,11 +193,19 @@ content:
     type: link_default
     region: content
   field_right_side_block_option:
-    weight: 17
+    weight: 58
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
+    region: content
+  field_right_side_block_title:
+    weight: 59
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
   field_thumbnail_image:
     weight: 55
