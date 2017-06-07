@@ -1,5 +1,0 @@
-name: Webcomposer Form
-type: module
-description: Exposed Contact Form Fields. This module is deprecated please use webcoposer rest extra.
-core: 8.x
-package: deprecated
