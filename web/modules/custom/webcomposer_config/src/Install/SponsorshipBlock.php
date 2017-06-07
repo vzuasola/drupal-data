@@ -9,7 +9,7 @@ use Drupal\block_content\Entity\BlockContentType;
 
 class SponsorshipBlock {
   /**
-   * 
+   *
    */
   public function createBlock() {
     $paragraphItems = $this->getItems();
@@ -65,7 +65,7 @@ class SponsorshipBlock {
   }
 
   /**
-   * 
+   *
    */
   private function getItems() {
     global $base_url;
