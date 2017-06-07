@@ -1,0 +1,56 @@
+uuid: b410de3e-691a-4e62-b8d2-dd55402a8f48
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - field.field.node.registration_template.body
+    - node.type.registration_template
+  module:
+    - path
+    - text
+id: node.registration_template.default
+targetEntityType: node
+bundle: registration_template
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 4
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  promote: true
+  publish_on: true
+  sticky: true
+  uid: true
+  unpublish_on: true
