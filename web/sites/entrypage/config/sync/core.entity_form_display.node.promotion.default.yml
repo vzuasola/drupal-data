@@ -15,6 +15,7 @@ dependencies:
     - field.field.node.promotion.field_link_target
     - field.field.node.promotion.field_log_in_state
     - field.field.node.promotion.field_product
+    - field.field.node.promotion.field_right_side_block_content
     - field.field.node.promotion.field_right_side_block_link
     - field.field.node.promotion.field_right_side_block_option
     - field.field.node.promotion.field_thumbnail_image
@@ -153,6 +154,15 @@ content:
     region: content
   field_product:
     weight: 3
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_right_side_block_content:
+    weight: 57
     settings:
       match_operator: CONTAINS
       size: 60
