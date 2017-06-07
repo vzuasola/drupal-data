@@ -19,7 +19,7 @@ use Psr\Log\LoggerInterface;
  *
  * @RestResource(
  *   id = "configuration_resource",
- *   label = @Translation("Configuration Resource"),
+ *   label = @Translation("General Configuration Resource"),
  *   uri_paths = {
  *     "canonical" = "/api/general/configuration/{id}"
  *   }
