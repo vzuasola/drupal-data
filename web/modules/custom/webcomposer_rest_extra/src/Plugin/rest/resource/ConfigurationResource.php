@@ -7,16 +7,11 @@
 
 namespace Drupal\webcomposer_rest_extra\Plugin\rest\resource;
 
-use Drupal\Core\Entity\EntityManagerInterface;
-use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Session\AccountProxyInterface;
-use Drupal\field\Entity\FieldConfig;
 use Drupal\rest\Plugin\ResourceBase;
 use Drupal\rest\ResourceResponse;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
-use Symfony\Component\HttpKernel\Exception\HttpException;
-use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Psr\Log\LoggerInterface;
 
 /**
@@ -24,16 +19,16 @@ use Psr\Log\LoggerInterface;
  *
  * @RestResource(
  *   id = "configuration_resource",
- *   label = @Translation("Configuration Resource"),
+ *   label = @Translation("General Configuration Resource"),
  *   uri_paths = {
- *     "canonical" = "/api/configs/{configuration}"
+ *     "canonical" = "/api/general/configuration/{id}"
  *   }
  * )
  */
-class ConfigurationResource extends ResourceBase
-{
+class ConfigurationResource extends ResourceBase {
+
   /**
-   *  A curent user instance.
+   * A current user instance.
    *
    * @var \Drupal\Core\Session\AccountProxyInterface
    */
@@ -52,6 +47,8 @@ class ConfigurationResource extends ResourceBase
    *   The available serialization formats.
    * @param \Psr\Log\LoggerInterface $logger
    *   A logger instance.
+   * @param \Drupal\Core\Session\AccountProxyInterface $current_user
+   *   A current user instance.
    */
   public function __construct(
     array $configuration,
@@ -74,7 +71,7 @@ class ConfigurationResource extends ResourceBase
       $plugin_id,
       $plugin_definition,
       $container->getParameter('serializer.formats'),
-      $container->get('logger.factory')->get('rest'),
+      $container->get('logger.factory')->get('custom_rest'),
       $container->get('current_user')
     );
   }
@@ -82,23 +79,26 @@ class ConfigurationResource extends ResourceBase
   /**
    * Responds to GET requests.
    *
-   * Returns a specific configuration based on the passed on the ID.
-   *
-   * @return \Drupal\rest\ResourceResponse
-   *   The response containing a reponse HTML.
+   * Returns a list of bundles for specified entity.
    *
    * @throws \Symfony\Component\HttpKernel\Exception\HttpException
+   *   Throws exception expected.
    */
   public function get($id) {
+
     if (!$this->currentUser->hasPermission('access content')) {
       throw new AccessDeniedHttpException();
     }
 
-    $config = \Drupal::config($id);
-    $raw = $config->getRawData();
+    $data = array();
 
-    foreach ($raw as $key => $values) {
-      $data[$key] = $config->get($key);
+    try {
+      $config = \Drupal::config("webcomposer_config.$id");
+      $data = $config->get();
+    } catch (\Exception $e) {
+      $data = array(
+        'error' => $this->t('Configuration not found')
+      );
     }
 
     $build = array(
