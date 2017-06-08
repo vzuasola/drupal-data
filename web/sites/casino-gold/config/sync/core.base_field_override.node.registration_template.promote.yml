@@ -1,0 +1,22 @@
+uuid: bdeacd1d-8719-47b1-aba6-a683d466ff25
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - node.type.registration_template
+id: node.registration_template.promote
+field_name: promote
+entity_type: node
+bundle: registration_template
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
