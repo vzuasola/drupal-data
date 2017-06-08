@@ -1,0 +1,30 @@
+uuid: cac4fc54-11de-4f81-881e-4b66b6c2ed67
+langcode: zh-hans
+status: true
+dependencies:
+  module:
+    - options
+    - taxonomy
+id: taxonomy_term.field_target
+field_name: field_target
+entity_type: taxonomy_term
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: _blank
+      label: 'New Window (_blank)'
+    -
+      value: _self
+      label: 'Same Window (_self)'
+    -
+      value: new_window
+      label: 'New Window'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
