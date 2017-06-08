@@ -57,7 +57,7 @@ class ProductTabs extends ResourceBase {
  *
  * @throws     \Symfony\Component\HttpKernel\Exception\NotFoundHttpException  (description)
  *
- * @return     <type>                                                         The product tabs.
+ * @return     <json>                                                         The product tabs.
  */
   private function getProductTabs()
   {
@@ -126,9 +126,9 @@ class ProductTabs extends ResourceBase {
 /**
  * Gets the product promotion count.
  *
- * @param      <type>  $tids   The tids
+ * @param      <array>  $tids   The tids
  *
- * @return     <type>  The product promotion count.
+ * @return     <string>  The product promotion count.
  */
     private function getProductPromotionCount($tids , $langCode) {
 
