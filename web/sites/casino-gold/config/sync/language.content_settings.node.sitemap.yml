@@ -1,0 +1,16 @@
+uuid: 2bb7a88d-3a4b-4324-bc30-e121e2a5aa76
+langcode: zh-hant
+status: true
+dependencies:
+  config:
+    - node.type.sitemap
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.sitemap
+target_entity_type_id: node
+target_bundle: sitemap
+default_langcode: site_default
+language_alterable: true
