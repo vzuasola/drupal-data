@@ -1,4 +1,4 @@
-uuid: d5c90f47-7052-457f-ac61-cd54147dc5e0
+uuid: 18cfabde-ea0a-4bb1-85d6-fa350ac4f186
 langcode: zh-hans
 status: true
 dependencies:
@@ -22,8 +22,8 @@ third_party_settings:
     unpublish_revision: false
 name: 'Registration Template'
 type: registration_template
-description: 'Use for updating Registration template for Step 2'
+description: 'Use for registration step 2.'
 help: ''
 new_revision: true
-preview_mode: 0
+preview_mode: 1
 display_submitted: true

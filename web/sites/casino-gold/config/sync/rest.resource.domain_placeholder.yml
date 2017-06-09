@@ -1,10 +1,8 @@
-uuid: 25d0d209-2036-45a0-b503-af491e5c35b1
+uuid: 58ab854c-070e-4e05-b490-fc2166eb91e6
 langcode: zh-hans
 status: true
 dependencies:
   module:
-    - basic_auth
-    - hal
     - serialization
     - user
     - webcomposer_rest_extra
@@ -14,9 +12,6 @@ granularity: method
 configuration:
   GET:
     supported_formats:
-      - hal_json
       - json
-      - xml
     supported_auth:
-      - basic_auth
       - cookie

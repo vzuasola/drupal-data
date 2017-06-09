@@ -1,13 +1,13 @@
-uuid: f9ec7eec-48ff-4f87-a431-c4182ced09fd
+uuid: 7e9b02d2-c997-4663-84e1-97127241ffd1
 langcode: zh-hans
 status: true
 dependencies:
   config:
-    - node.type.registration_template
-id: node.registration_template.promote
+    - node.type.announcements
+id: node.announcements.promote
 field_name: promote
 entity_type: node
-bundle: registration_template
+bundle: announcements
 label: 'Promoted to front page'
 description: ''
 required: false
