@@ -1,0 +1,5 @@
+entity.left_floating_banner_entity.add_form:
+  route_name: entity.left_floating_banner_entity.add_form
+  title: 'Add Left floating banner entity'
+  appears_on:
+    - entity.left_floating_banner_entity.collection
