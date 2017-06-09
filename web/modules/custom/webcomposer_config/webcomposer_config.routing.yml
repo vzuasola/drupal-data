@@ -29,3 +29,11 @@ webcomposer_config.login_configuration_form:
     _title: 'Login Configuration'
   requirements:
     _permission: 'administer site configuration'
+
+webcomposer_config.outdated_browser_configuration_form:
+  path: 'admin/config/webcomposer/config/browser'
+  defaults:
+    _form: 'Drupal\webcomposer_config\Form\OutdatedBrowserConfiguration'
+    _title: 'Outdated Browser Configuration'
+  requirements:
+    _permission: 'administer site configuration'
