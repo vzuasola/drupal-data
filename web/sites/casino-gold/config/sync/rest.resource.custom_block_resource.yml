@@ -1,0 +1,17 @@
+uuid: e4d62d5c-f102-4bef-8ab3-fe30ed04efba
+langcode: zh-hans
+status: true
+dependencies:
+  module:
+    - serialization
+    - user
+    - webcomposer_rest_extra
+id: custom_block_resource
+plugin_id: custom_block_resource
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+    supported_auth:
+      - cookie

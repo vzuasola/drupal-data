@@ -4,8 +4,10 @@ status: true
 dependencies:
   config:
     - field.field.node.registration_template.body
+    - field.field.node.registration_template.field_log_in_state
     - node.type.registration_template
   module:
+    - options
     - text
     - user
 id: node.registration_template.default
@@ -19,6 +21,13 @@ content:
     weight: 101
     settings: {  }
     third_party_settings: {  }
+    region: content
+  field_log_in_state:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
   links:
     weight: 100
