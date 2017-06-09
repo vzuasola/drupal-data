@@ -7,7 +7,6 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\file\Entity\File;
 
 class OutdatedBrowserConfiguration extends ConfigFormBase {
-  
   /**
    * {@inheritdoc}
    */
@@ -28,13 +27,14 @@ class OutdatedBrowserConfiguration extends ConfigFormBase {
   public function buildForm(array $form, FormStateInterface $form_state) {
     $config = $this->config('webcomposer_config.browser_configuration');
 
-    $d = $config->get('message');
+    $default = $config->get('message');
 
     $form['message'] = array(
       '#type' => 'text_format',
       '#title' => $this->t('Outdated browser message'),
-      '#default_value' => $d['value'],
-      '#format' => $d['format'],
+      '#description' => $this->t('Add outdated browser message.'),
+      '#default_value' => $default['value'],
+      '#format' => $default['format'],
     );
 
     return parent::buildForm($form, $form_state);
