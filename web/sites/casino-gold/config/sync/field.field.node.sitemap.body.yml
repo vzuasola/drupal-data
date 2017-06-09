@@ -1,0 +1,22 @@
+uuid: e321c0f1-b8e5-4955-b0a2-1f4134ae1bc7
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.sitemap
+  module:
+    - text
+id: node.sitemap.body
+field_name: body
+entity_type: node
+bundle: sitemap
+label: Blurb
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

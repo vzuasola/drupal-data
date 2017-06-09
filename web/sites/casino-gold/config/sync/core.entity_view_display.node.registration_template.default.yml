@@ -1,0 +1,27 @@
+uuid: d393a3a0-f8cd-431a-a8c3-921392143bbb
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - field.field.node.registration_template.body
+    - node.type.registration_template
+  module:
+    - text
+    - user
+id: node.registration_template.default
+targetEntityType: node
+bundle: registration_template
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

@@ -1,0 +1,27 @@
+uuid: 2f92f97b-a40d-4f01-bca2-a700fa950e92
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - field.field.node.sitemap.body
+    - node.type.sitemap
+  module:
+    - text
+    - user
+id: node.sitemap.default
+targetEntityType: node
+bundle: sitemap
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true
