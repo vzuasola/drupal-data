@@ -1,21 +1,21 @@
-uuid: 10fec427-8d60-4eaa-83ee-1f645d18b310
+uuid: 36b51a26-8c2b-4b88-99ab-4811bbab59d2
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:social_media_block:31a78b18-f965-4f41-b7b1-46b526d0a0e4'
+    - 'block_content:social_media_block:145ee4fb-32f3-49d7-ab6b-f5ec7231a64c'
   module:
     - block_content
   theme:
     - bartik
 id: footer_social_media
 theme: bartik
-region: content
-weight: -100
-provider: block_content
-plugin: 'block_content:31a78b18-f965-4f41-b7b1-46b526d0a0e4'
+region: footer_first
+weight: 0
+provider: null
+plugin: 'block_content:145ee4fb-32f3-49d7-ab6b-f5ec7231a64c'
 settings:
-  id: 'block_content:31a78b18-f965-4f41-b7b1-46b526d0a0e4'
+  id: 'block_content:145ee4fb-32f3-49d7-ab6b-f5ec7231a64c'
   label: 'Social Media Block'
   provider: block_content
   label_display: visible
