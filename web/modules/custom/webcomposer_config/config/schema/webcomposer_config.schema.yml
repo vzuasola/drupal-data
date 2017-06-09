@@ -109,3 +109,12 @@ webcomposer_config.login_configuration:
     notification_content:
       type: text_format
       label: 'Notification Box Content'
+
+webcomposer_config.browser_configuration:
+  type: config_object
+  label: 'Outdated Browser Configurations'
+  mapping:
+    message:
+      type: text_format
+      label: 'Outdated browser message'
+      translatable: true
