@@ -14,6 +14,7 @@ dependencies:
     - field.field.node.promotion.field_image
     - field.field.node.promotion.field_link_target
     - field.field.node.promotion.field_log_in_state
+    - field.field.node.promotion.field_mark_as_featured
     - field.field.node.promotion.field_product
     - field.field.node.promotion.field_right_side_block_content
     - field.field.node.promotion.field_right_side_block_link
@@ -165,6 +166,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
+    region: content
+  field_mark_as_featured:
+    weight: 61
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
     region: content
   field_product:
     weight: 3
