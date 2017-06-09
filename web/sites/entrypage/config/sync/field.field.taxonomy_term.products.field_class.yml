@@ -1,0 +1,19 @@
+uuid: 3a918dbb-fa7d-4cc1-8353-9dbc3db07115
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_class
+    - taxonomy.vocabulary.products
+id: taxonomy_term.products.field_class
+field_name: field_class
+entity_type: taxonomy_term
+bundle: products
+label: Class
+description: 'Enter value for class attribute.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

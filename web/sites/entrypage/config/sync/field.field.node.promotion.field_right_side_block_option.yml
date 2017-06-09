@@ -12,7 +12,7 @@ bundle: promotion
 label: 'Right Side Block Option'
 description: 'Show the right side promotion'
 required: false
-translatable: false
+translatable: true
 default_value:
   -
     value: 1

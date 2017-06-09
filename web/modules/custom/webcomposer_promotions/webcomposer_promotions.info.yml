@@ -4,7 +4,6 @@ description: It Adds promotions feature for centralised promotions.
 core: 8.x
 package: Web Composer
 dependencies:
-  - webcomposer_config
   - scheduler
   - entityqueue
   - content_translation

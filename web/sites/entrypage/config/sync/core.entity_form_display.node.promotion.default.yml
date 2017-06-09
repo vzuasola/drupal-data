@@ -15,8 +15,10 @@ dependencies:
     - field.field.node.promotion.field_link_target
     - field.field.node.promotion.field_log_in_state
     - field.field.node.promotion.field_product
+    - field.field.node.promotion.field_right_side_block_content
     - field.field.node.promotion.field_right_side_block_link
     - field.field.node.promotion.field_right_side_block_option
+    - field.field.node.promotion.field_right_side_block_title
     - field.field.node.promotion.field_thumbnail_image
     - field.field.node.promotion.field_thumbnail_summary
     - image.style.thumbnail
@@ -37,7 +39,7 @@ third_party_settings:
         - field_banner_link
         - field_banner_link_target
       parent_name: ''
-      weight: 15
+      weight: 14
       format_type: details
       format_settings:
         id: ''
@@ -50,7 +52,7 @@ third_party_settings:
         - field_full_tile_image
         - field_full_tile_summary
       parent_name: ''
-      weight: 17
+      weight: 19
       format_type: details
       format_settings:
         id: ''
@@ -63,7 +65,7 @@ third_party_settings:
         - field_half_tile_image
         - field_half_tile_summary
       parent_name: ''
-      weight: 18
+      weight: 20
       format_type: details
       format_settings:
         id: ''
@@ -73,11 +75,24 @@ third_party_settings:
       label: 'Promotions Half Tiles'
     group_promotions_thumbnail:
       children:
-        - field_right_side_block_option
         - field_right_side_block_link
         - field_link_target
         - field_thumbnail_image
         - field_thumbnail_summary
+      parent_name: ''
+      weight: 15
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: 'Promotions Thumbnail'
+    group_right_side_block:
+      children:
+        - field_right_side_block_option
+        - field_right_side_block_title
+        - field_right_side_block_content
       parent_name: ''
       weight: 16
       format_type: details
@@ -86,7 +101,7 @@ third_party_settings:
         classes: ''
         open: false
         required_fields: true
-      label: 'Promotions Thumbnail'
+      label: 'Right Side Block'
 _core:
   default_config_hash: REpuDcJgDsDpuU0keFA4HDluTQxvT7wSEcUqidMSEcM
 id: node.promotion.default
@@ -96,7 +111,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 13
+    weight: 12
     settings:
       rows: 9
       summary_rows: 3
@@ -105,7 +120,7 @@ content:
     region: content
   created:
     type: datetime_timestamp
-    weight: 6
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -160,6 +175,15 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
+  field_right_side_block_content:
+    weight: 60
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
   field_right_side_block_link:
     weight: 53
     settings:
@@ -169,11 +193,19 @@ content:
     type: link_default
     region: content
   field_right_side_block_option:
-    weight: 52
+    weight: 58
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
+    region: content
+  field_right_side_block_title:
+    weight: 59
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
   field_thumbnail_image:
     weight: 55
@@ -199,7 +231,7 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 12
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -207,17 +239,17 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 7
+    weight: 6
     region: content
     third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
-    weight: 11
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
   scheduler_settings:
-    weight: 9
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -225,7 +257,7 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 8
+    weight: 7
     region: content
     third_party_settings: {  }
   title:
@@ -237,13 +269,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 14
+    weight: 13
     region: content
     settings: {  }
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 5
+    weight: 4
     settings:
       match_operator: CONTAINS
       size: 60
@@ -252,7 +284,7 @@ content:
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp_no_default
-    weight: 10
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }
