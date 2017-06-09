@@ -1,5 +1,5 @@
-uuid: fefa1df9-e9c4-434b-ba6a-bef0834921ab
-langcode: zh-hant
+uuid: 1bc1425c-8c34-4dd1-be1a-75f20f62539d
+langcode: zh-hans
 status: true
 dependencies:
   module:
@@ -7,9 +7,8 @@ dependencies:
     - scheduler
 third_party_settings:
   menu_ui:
-    available_menus:
-      - main
-    parent: 'main:'
+    available_menus: {  }
+    parent: ''
   scheduler:
     expand_fieldset: when_required
     fields_display_mode: vertical_tab
@@ -23,7 +22,7 @@ third_party_settings:
     unpublish_revision: false
 name: Sitemap
 type: sitemap
-description: 'Used to add content for the Sitemap.'
+description: 'Add the content for sitemap.'
 help: ''
 new_revision: true
 preview_mode: 1

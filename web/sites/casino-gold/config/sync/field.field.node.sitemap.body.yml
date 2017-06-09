@@ -1,5 +1,5 @@
-uuid: 8f91d6ff-2383-4311-a209-3b6538ea71d0
-langcode: zh-hant
+uuid: e321c0f1-b8e5-4955-b0a2-1f4134ae1bc7
+langcode: zh-hans
 status: true
 dependencies:
   config:
@@ -18,5 +18,5 @@ translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
-  display_summary: false
+  display_summary: true
 field_type: text_with_summary

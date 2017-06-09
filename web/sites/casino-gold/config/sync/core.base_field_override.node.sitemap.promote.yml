@@ -1,13 +1,13 @@
-uuid: f9ec7eec-48ff-4f87-a431-c4182ced09fd
+uuid: d30e71c9-36d0-464e-acc5-af197ef3b916
 langcode: zh-hans
 status: true
 dependencies:
   config:
-    - node.type.registration_template
-id: node.registration_template.promote
+    - node.type.sitemap
+id: node.sitemap.promote
 field_name: promote
 entity_type: node
-bundle: registration_template
+bundle: sitemap
 label: 'Promoted to front page'
 description: ''
 required: false

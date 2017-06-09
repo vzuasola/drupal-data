@@ -1,8 +1,0 @@
-uuid: ded390f3-cdce-4506-84e1-d6394a0897d4
-langcode: zh-hans
-status: true
-dependencies: {  }
-id: secondary-menu-ch
-label: 'Secondary Menu CH'
-description: ''
-locked: false
