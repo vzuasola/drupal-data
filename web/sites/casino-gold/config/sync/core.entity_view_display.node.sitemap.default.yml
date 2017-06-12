@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.sitemap.body
+    - field.field.node.sitemap.field_right_side_block
     - node.type.sitemap
   module:
     - text
@@ -19,6 +20,14 @@ content:
     weight: 101
     settings: {  }
     third_party_settings: {  }
+    region: content
+  field_right_side_block:
+    weight: 102
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
     region: content
   links:
     weight: 100
