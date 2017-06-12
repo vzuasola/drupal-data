@@ -518,9 +518,8 @@ display:
         type: data_entity
         options: {  }
       pager:
-        type: some
+        type: none
         options:
-          items_per_page: 2
           offset: 0
       display_description: ''
       filters:
@@ -679,9 +678,8 @@ display:
         type: data_entity
         options: {  }
       pager:
-        type: some
+        type: none
         options:
-          items_per_page: 2
           offset: 0
       display_description: ''
       sorts:
@@ -851,9 +849,8 @@ display:
         type: data_entity
         options: {  }
       pager:
-        type: some
+        type: none
         options:
-          items_per_page: 2
           offset: 0
       display_description: ''
       filters:
