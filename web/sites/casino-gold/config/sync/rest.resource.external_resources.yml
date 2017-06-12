@@ -1,0 +1,17 @@
+uuid: c12f4a53-b82d-40bd-a9b6-67ef918e8bdb
+langcode: zh-hans
+status: true
+dependencies:
+  module:
+    - serialization
+    - user
+    - webcomposer_snippet
+id: external_resources
+plugin_id: external_resources
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+    supported_auth:
+      - cookie
