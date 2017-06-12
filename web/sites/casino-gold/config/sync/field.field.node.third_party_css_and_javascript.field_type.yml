@@ -16,7 +16,7 @@ bundle: third_party_css_and_javascript
 label: Type
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }
