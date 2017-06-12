@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.sitemap.body
+    - field.field.node.sitemap.field_right_side_block
     - node.type.sitemap
   module:
     - path
@@ -22,6 +23,15 @@ content:
       summary_rows: 3
       placeholder: ''
     third_party_settings: {  }
+    region: content
+  field_right_side_block:
+    weight: 26
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
     region: content
   langcode:
     type: language_select
