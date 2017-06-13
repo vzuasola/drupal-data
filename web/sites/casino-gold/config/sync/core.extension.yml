@@ -8,6 +8,7 @@ module:
   breakpoint: 0
   casino_config: 0
   casino_editor: 0
+  casino_provision: 0
   ckeditor: 0
   ckeditor_accordion: 0
   ckeditor_codemirror: 0
@@ -68,6 +69,7 @@ module:
   webcomposer_config: 0
   webcomposer_dm: 0
   webcomposer_rest_extra: 0
+  webcomposer_snippet: 0
   webcomposer_token: 0
   menu_link_content: 1
   pathauto: 1
