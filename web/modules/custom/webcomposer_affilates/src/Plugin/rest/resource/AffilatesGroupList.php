@@ -51,15 +51,13 @@ class AffilatesGroupList extends ResourceBase {
 
 }
 
-  /**
-   * Gets the field definition.
-   *
-   * @param      <string>                                                         $domain  The domain
-   *
-   * @throws     \Symfony\Component\HttpKernel\Exception\NotFoundHttpException  (if term do not get loaded)
-   *
-   * @return     array                                                          The field definition.
-   */
+/**
+ * Gets the field definition.
+ *
+ * @throws     \Symfony\Component\HttpKernel\Exception\NotFoundHttpException  (it term do not get loaded)
+ *
+ * @return     <type>                                                         The field definition.
+ */
   private function getFieldDefinition()
   {
 
