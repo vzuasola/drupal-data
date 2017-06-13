@@ -11,7 +11,7 @@ entity_type: node
 bundle: promotion
 label: 'Mark as Featured'
 description: 'Please choose that this promotion is feature or not.'
-required: true
+required: false
 translatable: true
 default_value:
   -
