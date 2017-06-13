@@ -32,10 +32,12 @@ hidden:
   field_full_tile_image: true
   field_full_tile_link: true
   field_full_tile_summary: true
+  field_gold_only: true
   field_half_tile_image: true
   field_half_tile_link: true
   field_half_tile_summary: true
   field_image: true
+  field_link_target: true
   field_log_in_state: true
   field_promote_to_lobby: true
   field_provision_players_only: true

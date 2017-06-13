@@ -1,13 +1,13 @@
-uuid: c79822e5-7b9d-4fe4-b7d1-aca192f37a03
+uuid: c12f4a53-b82d-40bd-a9b6-67ef918e8bdb
 langcode: zh-hans
 status: true
 dependencies:
   module:
     - serialization
     - user
-    - webcomposer_config
-id: webcomposer_config
-plugin_id: webcomposer_config
+    - webcomposer_snippet
+id: external_resources
+plugin_id: external_resources
 granularity: method
 configuration:
   GET:
