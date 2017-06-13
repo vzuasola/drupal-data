@@ -5,10 +5,10 @@
  * Implements hook_uninstall
  */
 function entrypage_promotions_uninstall() {
-   $keys = array(
+   $keys = [
       'views.view.featured_promotion',
       'views.view.promotions_for_products',
-    );
+    ];
 
     foreach ($keys as $key) {
       \Drupal::configFactory()->getEditable($key)->delete();
