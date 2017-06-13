@@ -99,7 +99,7 @@ class CasinoProvisionResource extends ResourceBase
     public function post($data)
     {
 
-        if(!$this->currentUser->hasPermission($permission)) {
+        if(!$this->currentUser->hasPermission('access content')) {
             throw new AccessDeniedHttpException();
         }
 
