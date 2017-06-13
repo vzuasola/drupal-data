@@ -159,10 +159,6 @@ class CasinoProvisionResource extends ResourceBase
         $result = $query->execute();
         $data = $result->fetchField();
 
-        if ($data) {
-            return true;
-        } else {
-            return false;
-        }
+        return !empty($data);
     }
 }
