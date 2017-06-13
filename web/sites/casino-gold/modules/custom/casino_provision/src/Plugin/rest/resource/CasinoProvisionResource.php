@@ -103,44 +103,44 @@ class CasinoProvisionResource extends ResourceBase
             throw new AccessDeniedHttpException();
         }
 
-        $responseStatus = array(
+        $responseStatus = [
         'status' => 'failed',
         'message' => 'Something went wrong, please check your data.',
-        );
+        ];
 
         if (!empty($data['username']) && !empty($data['application_date']) && !empty($data['currency'])) {
-          try {
+            try {
 
-            $isOnProcess = $this->checkUsernameIfInProcess($data['username']);
+                $isOnProcess = $this->checkUsernameIfInProcess($data['username']);
 
-            if ($isOnProcess) {
-              $responseStatus = array(
-              'status' => 'on-process',
-              'message' => 'User application is currently on-process',
-              );
-            } else {
-              $isSaved = $this->connection->insert('casino_provision_report')
-                  ->fields(
-                      array(
-                      'username' => $data['username'],
-                      'application_date' => $data['application_date'],
-                      'currency' => $data['currency']
-                      )
-                  )
-                  ->execute();
+                if ($isOnProcess) {
+                    $responseStatus = [
+                    'status' => 'on-process',
+                    'message' => 'User application is currently on-process',
+                    ];
+                } else {
+                    $isSaved = $this->connection->insert('casino_provision_report')
+                        ->fields(
+                            [
+                            'username' => $data['username'],
+                            'application_date' => $data['application_date'],
+                            'currency' => $data['currency']
+                            ]
+                        )
+                        ->execute();
 
-              if ($isSaved) {
-                $responseStatus = array(
-                'status' => 'success',
-                'message' => 'Data have been saved successfully.',
-                );
-              }
+                    if ($isSaved) {
+                        $responseStatus = [
+                        'status' => 'success',
+                        'message' => 'Data have been saved successfully.',
+                        ];
+                    }
+                }
+
+            } catch (\Exception $e){
+                \Drupal::logger('casino_provision')->notice($e);
+                return new JsonResponse($responseStatus);
             }
-
-          } catch (\Exception $e){
-              \Drupal::logger('casino_provision')->notice($e);
-              return new JsonResponse($responseStatus);
-          }
         }
 
         return  new ResourceResponse($responseStatus);
@@ -159,6 +159,7 @@ class CasinoProvisionResource extends ResourceBase
         $result = $query->execute();
         $data = $result->fetchField();
 
-        return !empty($data);
+        $flag = !empty($data) ? true : false;
+        return $flag;
     }
 }
