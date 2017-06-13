@@ -64,7 +64,7 @@ class ProductTabs extends ResourceBase {
 
     if (empty($terms)) {
       $errorMessage = t('No Product tabs are configured. Please configure the products and translation in product taxonomy.');
-      \Drupal::logger('wbc_rest_resoruce')->error($errorMessage);
+      \Drupal::logger('wbc_rest_resource')->error($errorMessage);
       throw new NotFoundHttpException($errorMessage);
     }
 
@@ -80,7 +80,7 @@ class ProductTabs extends ResourceBase {
           $class = $translation->field_class->value;
           $target = $translation->field_target->value;
           $tag = $translation->field_menu_tag->value;
-              
+
           // Get count of promotions tagged with product.
           if ($check_enable == '1') {
             $key = $translation->id();
@@ -100,7 +100,7 @@ class ProductTabs extends ResourceBase {
 
             if ($check_enable == '1') {
               $key = $translation->id();
-              
+
               $data[] = [
                 'product_name' => $translation->getName(),
                 'id' => $key,
