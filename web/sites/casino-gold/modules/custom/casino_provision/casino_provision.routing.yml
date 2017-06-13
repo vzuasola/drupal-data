@@ -16,7 +16,7 @@ casino_provision.download:
 casino_provision.report:
   path: 'admin/reports/provision-report'
   defaults:
-    _form: '\Drupal\casino_provision\Form\WebcomposerOptinForm'
+    _form: '\Drupal\casino_provision\Form\CasinoGoldProvisioningReportForm'
     _title: 'Casino Provisioning Report'
   requirements:
     _permission: 'administer site configuration'
