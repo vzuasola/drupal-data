@@ -1,0 +1,22 @@
+{#
+/**
+ * @file left_floating_banner_entity.html.twig
+ * Default theme implementation to present Left floating banner entity data.
+ *
+ * This template is used when viewing Left floating banner entity pages.
+ *
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_left_floating_banner_entity()
+ *
+ * @ingroup themeable
+ */
+#}
+<div{{ attributes.addClass('left_floating_banner_entity') }}>
+  {% if content %}
+    {{- content -}}
+  {% endif %}
+</div>
