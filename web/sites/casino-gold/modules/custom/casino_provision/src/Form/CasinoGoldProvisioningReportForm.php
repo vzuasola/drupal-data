@@ -19,7 +19,7 @@ use Drupal\Core\Link;
 use Symfony\Component\HttpFoundation\RequestStack;
 
 
-class WebcomposerOptinForm extends FormBase{
+class CasinoGoldProvisioningReportForm extends FormBase{
 
   /**
    * $connection
