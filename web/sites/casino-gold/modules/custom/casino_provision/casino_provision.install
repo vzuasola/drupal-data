@@ -46,6 +46,6 @@ function casino_provision_schema() {
  * Implements hook_uninstall
  */
 function casino_provision_uninstall() {
-    $config = \Drupal::service('config.factory')->getEditable('core.date_format.date_only');
-    $config->delete();
+  $config = \Drupal::service('config.factory')->getEditable('core.date_format.date_only');
+  $config->delete();
 }

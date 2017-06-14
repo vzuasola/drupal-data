@@ -14,23 +14,27 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 class DownloadResultsController extends ControllerBase {
 
   /**
-   * $connection
+   * @var $connection
    */
   protected $connection;
 
   /**
-   * $request
+   * @var $request
    */
   protected $request;
 
   /**
-   * $dateFormatter
+   * @var $dateFormatter
    */
   protected $dateFormatter;
 
 
   /**
+   * @var \Drupal\Core\Database\Connection $conn
    *
+   * @var \Symfony\Component\HttpFoundation\RequestStack $req
+   *
+   * @var \Drupal\Core\Datetime $date_formatter
    */
   public function __construct($conn, $date_formatter, RequestStack $req){
     $this->connection = $conn;
@@ -39,7 +43,7 @@ class DownloadResultsController extends ControllerBase {
   }
 
   /**
-   *
+   * @var Symfony\Component\DependencyInjection\ContainerInterface $container
    */
   public static function create(ContainerInterface $container) {
     return new static(
@@ -50,7 +54,7 @@ class DownloadResultsController extends ControllerBase {
   }
 
   /**
-   *
+   * Page Callback
    */
   public function download() {
 
@@ -81,6 +85,10 @@ class DownloadResultsController extends ControllerBase {
 
   /**
    * Generate CSV File
+   *
+   * @var array $data
+   *
+   * @var string $filename
    */
   public function generateCsv($data, $filename = "export.csv") {
 
