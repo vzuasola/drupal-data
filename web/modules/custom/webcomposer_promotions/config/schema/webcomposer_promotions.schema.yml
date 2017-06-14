@@ -1,10 +1,10 @@
-webcomposer_config.promotion_right_side:
+webcomposer_config.promotion_configuration:
   type: config_object
-  label: 'Promotion Right Side Block Configurations'
+  label: 'Promotion Custom Configurations'
   mapping:
-    promotion_right_side_title:
+    read_more:
       type: label
-      label: 'Promotion Right Side Block Title'
-    promotion_right_side_visibility:
+      label: 'Promotion Read More Configuration'
+    countdown:
       type: label
-      label: 'Promotion Right Side Block Visibility'
+      label: 'Promotion countdown Configuration'
