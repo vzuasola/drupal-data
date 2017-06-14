@@ -1,5 +1,8 @@
 <?php
 
+use Drupal\Core\Language\LanguageInterface;
+use Drupal\views\Plugin\views\PluginBase;
+
 /**
  * @file
  * Contains draggableviews.module.
@@ -22,6 +25,21 @@ function draggableviews_views_data_alter(&$data) {
     'filter' => array(
       'help' => t('Filter by the draggableviews weight value (Native handler only).'),
       'id' => 'numeric',
+    ),
+  );
+  $data['draggableviews_structure']['args'] = array(
+    'title' => t('DraggableViews Unique'),
+    'group' => t('Draggableviews'),
+    'help' => t('Display the unique value.'),
+    'field' => array(
+      'id' => 'standard',
+    ),
+    'sort' => array(
+      'id' => 'standard',
+    ),
+    'filter' => array(
+      'help' => t('Filter by the draggableviews unqiue value (Native handler only).'),
+      'id' => 'string',
     ),
   );
   $data['draggableviews_structure']['parent'] = array(
@@ -58,9 +76,22 @@ function draggableviews_views_data_alter(&$data) {
         'left_table' => $base_table,
         'left_field' => $entity_keys['id'],
         'field' => 'entity_id',
+        'extra' => array(
+          array('field' => 'args', 'value' => '***LANGUAGE***'),
+        ),
       );
     }
   }
+}
+
+/**
+ * Implements hook_views_query_substitutions().
+ *
+ * Allow replacement of current userid so we can cache these queries.
+ */
+function draggableviews_views_query_substitutions(\Drupal\views\ViewExecutable $view) {
+  $language = \Drupal::languageManager()->getCurrentLanguage(LanguageInterface::TYPE_CONTENT)->getId();
+  return array('***LANGUAGE***' => $language);
 }
 
 /**
@@ -142,7 +173,9 @@ function draggableviews_views_submit(&$form, \Drupal\Core\Form\FormStateInterfac
 
   $weight = 0;
 
+  $language = \Drupal::languageManager()->getCurrentLanguage(LanguageInterface::TYPE_CONTENT)->getId();
   $connection = \Drupal\Core\Database\Database::getConnection();
+
   $transaction = $connection->startTransaction();
   try {
     foreach ($input['draggableviews'] as $item) {
@@ -150,6 +183,7 @@ function draggableviews_views_submit(&$form, \Drupal\Core\Form\FormStateInterfac
       $connection->delete('draggableviews_structure')
         ->condition('view_name', $view_name)
         ->condition('view_display', $view_display)
+        ->condition('args', $language)
         ->condition('entity_id', $item['id'])
         ->execute();
 
@@ -157,7 +191,7 @@ function draggableviews_views_submit(&$form, \Drupal\Core\Form\FormStateInterfac
       $record = [
         'view_name' => $view_name,
         'view_display' => $view_display,
-        'args' => '[]',
+        'args' => $language,
         'entity_id' => $item['id'],
         'weight' => $weight,
       ];
