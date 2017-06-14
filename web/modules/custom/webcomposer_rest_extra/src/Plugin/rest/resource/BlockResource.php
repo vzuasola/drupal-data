@@ -139,20 +139,10 @@ class BlockResource extends ResourceBase {
       try { 
         $language = $this->currentLanguage; 
         $translatedBlocked = $block_content->getTranslation($language); 
+        $block_content_array = $translatedBlocked->toArray(); 
       } catch (\Exception $e) { 
-        // if the block is not available for the specific language, then 
-        // try to use the default language 
-        try { 
-          $language = $this->defaultLanguage; 
-          $translatedBlocked = $block_content->getTranslation($language); 
-        } catch (\Exception $e) { 
-          throw new NotFoundHttpException("Tried to fetch Custom block $id  
-            using the default language but was not found. Please check the  
-            validity of the translation of the block"); 
-        } 
-      } 
- 
-      $block_content_array = $translatedBlocked->toArray(); 
+        $block_content_array = [];
+      }
  
       foreach ($block_content as $fieldType => $field) { 
         $fieldSettings = $field->getSettings(); 
