@@ -153,7 +153,7 @@ class CasinoGoldProvisioningReportForm extends FormBase{
   * {@inheritdoc}
   */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    $csvArray = []];
+    $csvArray = [];
     $formValue = $form_state->getValues();
 
     $url = Url::fromRoute('casino_provision.report')
