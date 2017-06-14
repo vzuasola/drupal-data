@@ -72,18 +72,13 @@ class DomainPlaceholderResource extends ResourceBase {
       throw new NotFoundHttpException(t('Term name with ID @id was not found', array('@id' => $domain)));
     }
 
-    $lang_code = \Drupal::service('language_manager')->getCurrentLanguage()->getId();
-
     $term = reset($term);
     $getEntities = $term->get('field_add_placeholder')->referencedEntities();
 
     foreach ($getEntities as $getEntity) {
-      if ($getEntity->hasTranslation($lang_code)) {
-        $translation = $getEntity->getTranslation($lang_code);
-      }
 
-      $key = $translation->field_placeholder_key->value;
-      $value = $translation->field_default_value->value;
+      $key = $getEntity->field_placeholder_key->value;
+      $value = $getEntity->field_default_value->value;
 
 
       $definition[$key] = $value;
