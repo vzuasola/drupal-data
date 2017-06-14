@@ -16,7 +16,7 @@ bundle: promotion
 label: 'Thumbnail Image'
 description: 'The Image upload size is 225x225 px.'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

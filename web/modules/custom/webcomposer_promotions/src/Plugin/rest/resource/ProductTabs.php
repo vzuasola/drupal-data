@@ -38,7 +38,7 @@ class ProductTabs extends ResourceBase {
 
     if (!$data) {
       $errorMessage = t('No Product tabs are configured. Please configure the products and translation in product taxonomy.');
-      \Drupal::logger('wbc_rest_resoruce')->error($errorMessage);
+      \Drupal::logger('wbc_rest_resource')->error($errorMessage);
       throw new NotFoundHttpException($errorMessage);
     }
 
@@ -75,12 +75,15 @@ class ProductTabs extends ResourceBase {
     if ($terms) {
       foreach ($terms as $getEntity) {
         if ($getEntity->hasTranslation($langCode)) {
-          $translation = $getEntity->getTranslation($langCode);
-          $check_enable = $translation->field_enable_disable->value;
-          $class = $translation->field_class->value;
-          $target = $translation->field_target->value;
-          $tag = $translation->field_menu_tag->value;
 
+          $translation = $getEntity->getTranslation($langCode);
+          $productId = $getEntity->field_product_id->value;
+
+          $check_enable = $translation->field_enable_disable->value;
+          $class = isset($translation->field_class->value) ? $translation->field_class->value : NULL;
+          $target = isset($translation->field_target->value) ? $translation->field_target->value : NULL;
+          $tag = isset($translation->field_menu_tag->value) ? $translation->field_menu_tag->value : NULL;
+              
           // Get count of promotions tagged with product.
           if ($check_enable == '1') {
             $key = $translation->id();
@@ -89,6 +92,7 @@ class ProductTabs extends ResourceBase {
             $productAttribute = ['class'=> $class , 'target' => $target, 'tag' => $tag];
             $data[] = [
               'product_name' => $translation->getName(),
+              'product_id' => $productId,
               'id' => $key,
               'count' => $count,
               'product_attribute' => $productAttribute,
