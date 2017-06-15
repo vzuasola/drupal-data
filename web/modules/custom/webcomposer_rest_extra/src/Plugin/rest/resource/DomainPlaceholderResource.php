@@ -123,8 +123,9 @@ class DomainPlaceholderResource extends ResourceBase {
       $query = \Drupal::entityQuery('taxonomy_term');
       $query->condition('vid', "$vid");
       $tids = $query->execute();
+      $terms = \Drupal\taxonomy\Entity\Term::loadMultiple($tids);
       
-      if ($terms = \Drupal\taxonomy\Entity\Term::loadMultiple($tids)) {
+      if ($terms) {
         $term = reset($terms);
         $getEntities = $term->get("$field")->referencedEntities();
         
