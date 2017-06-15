@@ -123,24 +123,20 @@ class DomainPlaceholderResource extends ResourceBase {
       $query = \Drupal::entityQuery('taxonomy_term');
       $query->condition('vid', "$vid");
       $tids = $query->execute();
-      $terms = \Drupal\taxonomy\Entity\Term::loadMultiple($tids);
+      
+      if ($terms = \Drupal\taxonomy\Entity\Term::loadMultiple($tids)) {
+        $term = reset($terms);
+        $getEntities = $term->get("$field")->referencedEntities();
+        
+        foreach ($getEntities as $getEntity) {
 
-      $term = reset($terms);
+          $key = $getEntity->field_placeholder_key->value;
+          $value = $getEntity->field_default_value->value;
 
-      $getEntities = $term->get("$field")->referencedEntities();
-      $lang_code = \Drupal::service('language_manager')->getCurrentLanguage()->getId();
-      foreach ($getEntities as $getEntity) {
-      if ($getEntity->hasTranslation($lang_code)) {
-        $translation = $getEntity->getTranslation($lang_code);
+          $definition[$key] = $value;
+
+        }
       }
-
-      $key = $translation->field_placeholder_key->value;
-      $value = $translation->field_default_value->value;
-
-
-      $definition[$key] = $value;
-
-    }
 
     return $definition;
   }
