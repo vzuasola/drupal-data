@@ -1122,7 +1122,7 @@ display:
   rest_export_2:
     display_plugin: rest_export
     id: rest_export_2
-    display_title: 'REST export 2'
+    display_title: 'REST export filters'
     position: 3
     display_options:
       display_extenders: {  }
@@ -1307,6 +1307,7 @@ display:
         operator: AND
         groups:
           1: AND
+      display_description: ''
     cache_metadata:
       max-age: -1
       contexts:
