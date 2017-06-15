@@ -36,9 +36,9 @@ function entrypage_promotions_node_presave(EntityInterface $node) {
 
   $connection = Database::getConnection();
   if($node->getType() == 'promotion') {
-    $check = $node->get('field_hide_promotion')->getValue();
+    $check = $node->get('field_hide_promotion')->value;
 
-    if($check == TRUE) {
+    if($check == 1) {
       $nid = $node->id();
       $getResult = $connection->select('node__field_right_side_block_content', 'n')
       ->fields('n', array('field_right_side_block_content_target_id'))
