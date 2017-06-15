@@ -5,19 +5,39 @@ use \Drupal\Core\Render\Markup;
 
 /**
  * Implements hook_module_implements_alter()
+ *
+ * @var array $implementations
+ *    An array keyed by the module's name.
+ *
+ * @var string $hook
+ *  The name of the module hook being implemented.
  */
 function casino_config_module_implements_alter(&$implementations, $hook)
 {
-    if ($hook == 'form_alter')
-    {
-      // Move the casino editor as last module to override
-      // the form alter from the scheduler.
-      $group = $implementations['casino_config'];
-      unset($implementations['casino_config']);
-      $implementations['casino_config'] = $group;
-    }
+  if ($hook == 'form_alter')
+  {
+    // Move the casino editor as last module to override
+    // the form alter from the scheduler.
+    $group = $implementations['casino_config'];
+    unset($implementations['casino_config']);
+    $implementations['casino_config'] = $group;
+  }
 }
 
+
+/**
+ * Implements hook_module_implements_alter()
+ *
+ * @var array $form
+ *    Nested array of form elements that comprise the form.
+ *
+ * @var \Drupal\Core\Form\FormStateInterface $form_state
+ *    The current state of the form.
+ *
+ * @var string $form_id
+ *    String representing the name of the form itself.
+ *
+ */
 function casino_config_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   // remove access to content translation field
   $form['content_translation']['#access'] = false;

@@ -2,6 +2,9 @@
 /**
  * @file
  * Contains \Drupal\casino_provision\Controller\CasinoOptInReportController.
+ *
+ * Note: This file is no longer needed. we will delete this file once they
+ * verified the update in qa1 environment
  */
 
 namespace Drupal\casino_provision\Controller;
@@ -20,14 +23,14 @@ class CasinoOptInReportController extends ControllerBase {
   protected $connection;
 
   /**
-   *
+   * @var \Drupal\Core\Database\Connection $conn
    */
   public function __construct($conn){
     $this->connection = $conn;
   }
 
   /**
-   *
+   * @var Symfony\Component\DependencyInjection\ContainerInterface $container
    */
   public static function create(ContainerInterface $container) {
     return new static(
@@ -36,7 +39,7 @@ class CasinoOptInReportController extends ControllerBase {
   }
 
   /**
-   * API Callback
+   * Page-API Callback
    */
   public function casinoProvision(Request $request) {
 
