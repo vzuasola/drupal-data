@@ -9,19 +9,17 @@ id: node.promotion.field_right_side_block_content
 field_name: field_right_side_block_content
 entity_type: node
 bundle: promotion
-label: 'Right side block content'
+label: 'Right Side Block Content'
 description: ''
 required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:node'
+  handler: views
   handler_settings:
-    target_bundles:
-      promotion: promotion
-    sort:
-      field: _none
-    auto_create: false
-    auto_create_bundle: ''
+    view:
+      view_name: right_side_block_promotion
+      display_name: right_side_block_promotion_entity_reference
+      arguments: {  }
 field_type: entity_reference
