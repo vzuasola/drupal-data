@@ -1,0 +1,4 @@
+promotions_filters: 1
+promotions_filters_message: 'Term @term already exists in vocabulary @vocabulary.'
+products: 1
+products_message: 'Term @term already exists in vocabulary @vocabulary.'

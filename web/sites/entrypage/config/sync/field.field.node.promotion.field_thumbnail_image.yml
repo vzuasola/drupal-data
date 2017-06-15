@@ -6,7 +6,6 @@ dependencies:
     - field.storage.node.field_thumbnail_image
     - node.type.promotion
   module:
-    - content_translation
     - image
 third_party_settings:
   content_translation:
