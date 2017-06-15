@@ -1,7 +1,7 @@
 enabled_entity_types: {  }
 verbose: false
-separator: ''
-case: false
+separator: '-'
+case: true
 max_length: null
 max_component_length: null
 update_action: 2
