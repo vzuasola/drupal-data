@@ -7,6 +7,12 @@ dependencies:
     - node.type.promotion
   module:
     - image
+third_party_settings:
+  content_translation:
+    translation_sync:
+      alt: alt
+      title: title
+      file: '0'
 _core:
   default_config_hash: JF_zJAz6Rx2myG7-SLL8d5e6GdpODxJpt1ogcGJWGAc
 id: node.promotion.field_thumbnail_image
