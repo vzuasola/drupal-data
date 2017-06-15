@@ -140,26 +140,26 @@ class BlockResource extends ResourceBase {
         $language = $this->currentLanguage; 
         $translatedBlocked = $block_content->getTranslation($language); 
         $block_content_array = $translatedBlocked->toArray(); 
-      } catch (\Exception $e) { 
-        $block_content_array = [];
-      }
- 
-      foreach ($block_content as $fieldType => $field) { 
-        $fieldSettings = $field->getSettings(); 
- 
-        if (isset($fieldSettings['target_type'])) { 
-          if ($fieldSettings['target_type'] == 'paragraph') { 
-            foreach ($block_content_array[$fieldType] as $key => $value) { 
-              $block_content_array[$fieldType][$key]['paragraph'] = $this->loadParagraphByID($value['target_id'], $language); 
+        
+        foreach ($block_content as $fieldType => $field) { 
+          $fieldSettings = $field->getSettings(); 
+   
+          if (isset($fieldSettings['target_type'])) { 
+            if ($fieldSettings['target_type'] == 'paragraph') { 
+              foreach ($block_content_array[$fieldType] as $key => $value) { 
+                $block_content_array[$fieldType][$key]['paragraph'] = $this->loadParagraphByID($value['target_id'], $language); 
+              } 
             } 
-          } 
-          else if ($fieldSettings['target_type'] == 'file') { 
-            foreach ($block_content_array[$fieldType] as $key => $value) { 
-              $block_content_array[$fieldType][$key]['uri'] = $this->getFileURI($value['target_id']); 
+            else if ($fieldSettings['target_type'] == 'file') { 
+              foreach ($block_content_array[$fieldType] as $key => $value) { 
+                $block_content_array[$fieldType][$key]['uri'] = $this->getFileURI($value['target_id']); 
+              } 
             } 
           } 
         } 
-      } 
+      } catch (\Exception $e) { 
+        $block_content_array = [];
+      }
       return $block_content_array; 
     }
   }
