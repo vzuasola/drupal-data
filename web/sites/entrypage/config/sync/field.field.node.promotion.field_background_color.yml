@@ -12,10 +12,12 @@ field_name: field_background_color
 entity_type: node
 bundle: promotion
 label: 'Background color'
-description: ''
+description: 'The ribbon background color'
 required: false
 translatable: true
-default_value: {  }
+default_value:
+  -
+    value: cyan
 default_value_callback: ''
 settings: {  }
 field_type: list_string

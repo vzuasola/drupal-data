@@ -12,10 +12,12 @@ field_name: field_text_color
 entity_type: node
 bundle: promotion
 label: 'Text Color'
-description: ''
+description: 'The ribbon text color'
 required: false
 translatable: true
-default_value: {  }
+default_value:
+  -
+    value: white
 default_value_callback: ''
 settings: {  }
 field_type: list_string
