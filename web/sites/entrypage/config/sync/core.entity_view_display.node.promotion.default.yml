@@ -220,4 +220,5 @@ content:
     weight: 100
     region: content
 hidden:
+  field_hide_promotion: true
   langcode: true

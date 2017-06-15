@@ -7,10 +7,6 @@ dependencies:
     - field.field.node.promotion.field_banner_content
     - field.field.node.promotion.field_banner_link
     - field.field.node.promotion.field_banner_link_target
-    - field.field.node.promotion.field_full_tile_image
-    - field.field.node.promotion.field_full_tile_summary
-    - field.field.node.promotion.field_half_tile_image
-    - field.field.node.promotion.field_half_tile_summary
     - field.field.node.promotion.field_hide_promotion
     - field.field.node.promotion.field_image
     - field.field.node.promotion.field_link_target
@@ -51,32 +47,6 @@ third_party_settings:
         open: false
         required_fields: true
       label: 'Promotions Banner'
-    group_promotions_full_tiles:
-      children:
-        - field_full_tile_image
-        - field_full_tile_summary
-      parent_name: ''
-      weight: 19
-      format_type: details
-      format_settings:
-        id: ''
-        classes: ''
-        open: false
-        required_fields: true
-      label: 'Promotions Full Tiles'
-    group_promotions_tiles:
-      children:
-        - field_half_tile_image
-        - field_half_tile_summary
-      parent_name: ''
-      weight: 20
-      format_type: details
-      format_settings:
-        id: ''
-        classes: ''
-        open: false
-        required_fields: true
-      label: 'Promotions Half Tiles'
     group_promotions_thumbnail:
       children:
         - field_right_side_block_link
@@ -152,6 +122,9 @@ content:
     region: content
   field_hide_promotion:
     weight: 21
+    type: boolean_checkbox
+    weight: 5
+    region: content
     settings:
       display_label: true
     third_party_settings: {  }
@@ -316,8 +289,4 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden:
-  field_full_tile_image: true
-  field_full_tile_summary: true
-  field_half_tile_image: true
-  field_half_tile_summary: true
+hidden: {  }
