@@ -14,18 +14,21 @@ use Drupal\ckeditor\CKEditorPluginCssInterface;
  *   label = @Translation("Casino CKEditor Plugins"),
  * )
  */
-class CasinoEditor extends CKEditorPluginBase implements CKEditorPluginCssInterface {
+class CasinoEditor extends CKEditorPluginBase implements CKEditorPluginCssInterface
+{
   /**
    * {@inheritdoc}
    */
-  public function getFile() {
+  public function getFile()
+  {
     return drupal_get_path('module', 'casino_editor') . '/plugin.js';
   }
 
   /**
    * {@inheritdoc}
    */
-  public function getCssFiles(Editor $editor) {
+  public function getCssFiles(Editor $editor)
+  {
     return array(
       drupal_get_path('module', 'casino_editor') . '/css/plugin.css'
     );
@@ -34,44 +37,46 @@ class CasinoEditor extends CKEditorPluginBase implements CKEditorPluginCssInterf
   /**
    * {@inheritdoc}
    */
-  public function getConfig(Editor $editor) {
+  public function getConfig(Editor $editor)
+  {
     return [];
   }
 
   /**
    * {@inheritdoc}
    */
-  public function getButtons() {
+  public function getButtons()
+  {
     $modulePath = drupal_get_path('module', 'casino_editor');
     return [
       'FontSizes' => [
-          'label' => t('Font Size'),
-          'image_alternative' => [
-              '#type' => 'inline_template',
-              '#template' => '<a href="#" role="button" aria-label=""><span class="ckeditor-button-dropdown">{{ text }}<span class="ckeditor-button-arrow"></span></span></a>',
-              '#context' => [
-                  'text' => t('Font Size'),
-              ],
+        'label' => t('Font Size'),
+        'image_alternative' => [
+          '#type' => 'inline_template',
+          '#template' => '<a href="#" role="button" aria-label=""><span class="ckeditor-button-dropdown">{{ text }}<span class="ckeditor-button-arrow"></span></span></a>',
+          '#context' => [
+            'text' => t('Font Size'),
           ],
+        ],
       ],
       'FontColors' => [
-          'label' => t('Font Color'),
-          'image_alternative' => [
-              '#type' => 'inline_template',
-              '#template' => '<a href="#" role="button" aria-label=""><span class="ckeditor-button-dropdown">{{ text }}<span class="ckeditor-button-arrow"></span></span></a>',
-              '#context' => [
-                  'text' => t('Font Color'),
-              ],
+        'label' => t('Font Color'),
+        'image_alternative' => [
+          '#type' => 'inline_template',
+          '#template' => '<a href="#" role="button" aria-label=""><span class="ckeditor-button-dropdown">{{ text }}<span class="ckeditor-button-arrow"></span></span></a>',
+          '#context' => [
+            'text' => t('Font Color'),
           ],
+        ],
       ],
-      'Link' => array(
+      'Link' => [
         'label' => t('Casino Editor Link'),
         'image' => $modulePath . '/icons/link.png',
-      ),
-      'Unlink' => array(
+      ],
+      'Unlink' => [
         'label' => t('Casino Editor Unlink'),
         'image' => $modulePath . '/icons/unlink.png',
-      ),
-  ];
+      ],
+    ];
   }
 }

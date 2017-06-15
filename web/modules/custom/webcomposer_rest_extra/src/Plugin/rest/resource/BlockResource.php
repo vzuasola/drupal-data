@@ -139,37 +139,27 @@ class BlockResource extends ResourceBase {
       try { 
         $language = $this->currentLanguage; 
         $translatedBlocked = $block_content->getTranslation($language); 
+        $block_content_array = $translatedBlocked->toArray(); 
+        
+        foreach ($block_content as $fieldType => $field) { 
+          $fieldSettings = $field->getSettings(); 
+   
+          if (isset($fieldSettings['target_type'])) { 
+            if ($fieldSettings['target_type'] == 'paragraph') { 
+              foreach ($block_content_array[$fieldType] as $key => $value) { 
+                $block_content_array[$fieldType][$key]['paragraph'] = $this->loadParagraphByID($value['target_id'], $language); 
+              } 
+            } 
+            else if ($fieldSettings['target_type'] == 'file') { 
+              foreach ($block_content_array[$fieldType] as $key => $value) { 
+                $block_content_array[$fieldType][$key]['uri'] = $this->getFileURI($value['target_id']); 
+              } 
+            } 
+          } 
+        } 
       } catch (\Exception $e) { 
-        // if the block is not available for the specific language, then 
-        // try to use the default language 
-        try { 
-          $language = $this->defaultLanguage; 
-          $translatedBlocked = $block_content->getTranslation($language); 
-        } catch (\Exception $e) { 
-          throw new NotFoundHttpException("Tried to fetch Custom block $id  
-            using the default language but was not found. Please check the  
-            validity of the translation of the block"); 
-        } 
-      } 
- 
-      $block_content_array = $translatedBlocked->toArray(); 
- 
-      foreach ($block_content as $fieldType => $field) { 
-        $fieldSettings = $field->getSettings(); 
- 
-        if (isset($fieldSettings['target_type'])) { 
-          if ($fieldSettings['target_type'] == 'paragraph') { 
-            foreach ($block_content_array[$fieldType] as $key => $value) { 
-              $block_content_array[$fieldType][$key]['paragraph'] = $this->loadParagraphByID($value['target_id'], $language); 
-            } 
-          } 
-          else if ($fieldSettings['target_type'] == 'file') { 
-            foreach ($block_content_array[$fieldType] as $key => $value) { 
-              $block_content_array[$fieldType][$key]['uri'] = $this->getFileURI($value['target_id']); 
-            } 
-          } 
-        } 
-      } 
+        $block_content_array = [];
+      }
       return $block_content_array; 
     }
   }

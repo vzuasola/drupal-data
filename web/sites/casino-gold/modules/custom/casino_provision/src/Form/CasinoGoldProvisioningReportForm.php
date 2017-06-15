@@ -19,7 +19,7 @@ use Drupal\Core\Link;
 use Symfony\Component\HttpFoundation\RequestStack;
 
 
-class WebcomposerOptinForm extends FormBase{
+class CasinoGoldProvisioningReportForm extends FormBase{
 
   /**
    * $connection
@@ -43,7 +43,13 @@ class WebcomposerOptinForm extends FormBase{
 
 
   /**
+   * @var \Drupal\Core\Database\Connection $conn
    *
+   * @var Drupal\Core\Config\ConfigFactory $conf
+   *
+   * @var \Drupal\Core\Datetime $date_formatter
+   *
+   * @var \Symfony\Component\HttpFoundation\RequestStack $request
    */
   public function __construct($conn, $conf, $date_formatter, RequestStack $request) {
     $this->connection = $conn;
@@ -85,41 +91,36 @@ class WebcomposerOptinForm extends FormBase{
     // get the results from the parameters
     $date_from = $this->request->getCurrentRequest()->get('date_from');
     $date_to = $this->request->getCurrentRequest()->get('date_to');
-
     $isValidDate = false;
 
-    /**
-     * TODO
-     * Change type from date to textfield and apply jQuery Datepicker
-     */
-    $form['date_from'] = array(
+    $form['date_from'] = [
       '#type' => 'date',
       '#title' => $this->t('Date From'),
       '#date_date_format' => $format,
       '#default_value' => $date_from ?? $dateNow,
       '#required' => true
-    );
+    ];
 
-    $form['date_to'] = array(
+    $form['date_to'] = [
       '#type' => 'date',
       '#title' => $this->t('Date To'),
       '#date_date_format' => $format,
       '#default_value' => $date_to ?? $dateNow,
       '#required' => true
-    );
+    ];
 
-    $form['actions']['submit'] = array(
+    $form['actions']['submit'] = [
       '#type' => 'submit',
       '#value' => $this->t('Search'),
       '#button_type' => 'primary',
-    );
+    ];
 
     if ( $this->validateDate($date_from) && $this->validateDate($date_to)) {
       $result = $this->buildTable($date_from, $date_to);
-      $form['search_result'] = array(
+      $form['search_result'] = [
         '#type' => 'item',
         '#markup' => $result,
-      );
+      ];
     }
 
     return $form;
@@ -152,7 +153,7 @@ class WebcomposerOptinForm extends FormBase{
   * {@inheritdoc}
   */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    $csvArray = array();
+    $csvArray = [];
     $formValue = $form_state->getValues();
 
     $url = Url::fromRoute('casino_provision.report')
