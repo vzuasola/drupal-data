@@ -4,13 +4,14 @@ status: true
 dependencies:
   config:
     - field.storage.taxonomy_term.field_active
-    - field.storage.taxonomy_term.field_select_affiliates_group
     - taxonomy.vocabulary.affiliates_parameters
   module:
     - draggableviews
     - options
     - taxonomy
     - user
+_core:
+  default_config_hash: oLhTZcMXNnslBXrfyWZjPt51-mGAV6B2PYW2u3nQr6Y
 id: affiliates_lists
 label: 'Affiliates Lists'
 module: views
@@ -186,11 +187,11 @@ display:
           entity_type: taxonomy_term
           entity_field: name
           plugin_id: term_name
-        field_select_affiliates_group:
-          id: field_select_affiliates_group
-          table: taxonomy_term__field_select_affiliates_group
-          field: field_select_affiliates_group
-          relationship: none
+        name_1:
+          id: name_1
+          table: taxonomy_term_field_data
+          field: name
+          relationship: field_select_affiliates_group
           group_type: group
           admin_label: ''
           label: Group
@@ -234,11 +235,11 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_label
+          click_sort_column: value
+          type: string
           settings:
-            link: true
-          group_column: target_id
+            link_to_entity: false
+          group_column: value
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -248,7 +249,10 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
+          convert_spaces: false
+          entity_type: taxonomy_term
+          entity_field: name
+          plugin_id: term_name
         edit_taxonomy_term:
           id: edit_taxonomy_term
           table: taxonomy_term_data
@@ -417,7 +421,7 @@ display:
           id: draggableviews
           table: taxonomy_term_field_data
           field: draggableviews
-          relationship: none
+          relationship: field_select_affiliates_group
           group_type: group
           admin_label: ''
           label: 'Taxonomy term'
@@ -509,17 +513,19 @@ display:
           entity_field: vid
           plugin_id: bundle
       sorts:
-        field_select_affiliates_group_target_id:
-          id: field_select_affiliates_group_target_id
-          table: taxonomy_term__field_select_affiliates_group
-          field: field_select_affiliates_group_target_id
-          relationship: none
+        name:
+          id: name
+          table: taxonomy_term_field_data
+          field: name
+          relationship: field_select_affiliates_group
           group_type: group
           admin_label: ''
-          order: DESC
+          order: ASC
           exposed: false
           expose:
             label: ''
+          entity_type: taxonomy_term
+          entity_field: name
           plugin_id: standard
         weight:
           id: weight
@@ -537,7 +543,16 @@ display:
       header: {  }
       footer: {  }
       empty: {  }
-      relationships: {  }
+      relationships:
+        field_select_affiliates_group:
+          id: field_select_affiliates_group
+          table: taxonomy_term__field_select_affiliates_group
+          field: field_select_affiliates_group
+          relationship: none
+          group_type: group
+          admin_label: 'field_select_affiliates_group: Taxonomy term'
+          required: false
+          plugin_id: standard
       arguments: {  }
       display_extenders: {  }
     cache_metadata:
@@ -548,7 +563,6 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.taxonomy_term.field_active'
-        - 'config:field.storage.taxonomy_term.field_select_affiliates_group'
   block_1:
     display_plugin: block
     id: block_1
@@ -565,4 +579,3 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.taxonomy_term.field_active'
-        - 'config:field.storage.taxonomy_term.field_select_affiliates_group'
