@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.promotion.body
+    - field.field.node.promotion.field_background_color
     - field.field.node.promotion.field_banner_content
     - field.field.node.promotion.field_banner_link
     - field.field.node.promotion.field_banner_link_target
@@ -14,10 +15,12 @@ dependencies:
     - field.field.node.promotion.field_mark_as_featured
     - field.field.node.promotion.field_product
     - field.field.node.promotion.field_product_subfilter
+    - field.field.node.promotion.field_ribbon_label
     - field.field.node.promotion.field_right_side_block_content
     - field.field.node.promotion.field_right_side_block_link
     - field.field.node.promotion.field_right_side_block_option
     - field.field.node.promotion.field_right_side_block_title
+    - field.field.node.promotion.field_text_color
     - field.field.node.promotion.field_thumbnail_image
     - field.field.node.promotion.field_thumbnail_summary
     - image.style.thumbnail
@@ -76,6 +79,20 @@ third_party_settings:
         open: false
         required_fields: true
       label: 'Right Side Block'
+    group_ribbon_configuration:
+      children:
+        - field_ribbon_label
+        - field_text_color
+        - field_background_color
+      parent_name: ''
+      weight: 20
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: 'Ribbon Configuration'
 _core:
   default_config_hash: REpuDcJgDsDpuU0keFA4HDluTQxvT7wSEcUqidMSEcM
 id: node.promotion.default
@@ -98,6 +115,12 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_background_color:
+    weight: 63
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_banner_content:
     weight: 34
     settings:
@@ -173,6 +196,15 @@ content:
     third_party_settings: {  }
     type: options_shs
     region: content
+  field_ribbon_label:
+    weight: 61
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
   field_right_side_block_content:
     weight: 60
     settings:
@@ -204,6 +236,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_text_color:
+    weight: 62
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   field_thumbnail_image:
     weight: 55
