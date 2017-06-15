@@ -1,4 +1,4 @@
-uuid: 2d6a481f-24dc-4732-a2ee-0ad41ee73989
+uuid: 7116e906-45ee-45b4-b230-01cb402c2139
 langcode: en
 status: true
 dependencies:
@@ -9,8 +9,8 @@ id: taxonomy_term.products.field_product_id
 field_name: field_product_id
 entity_type: taxonomy_term
 bundle: products
-label: 'Product ID'
-description: 'The unique product ID for this product'
+label: product_id
+description: ''
 required: true
 translatable: false
 default_value: {  }

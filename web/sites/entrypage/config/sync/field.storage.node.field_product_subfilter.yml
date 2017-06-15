@@ -1,14 +1,16 @@
-uuid: bf4a5619-be54-4ec0-99e9-299e21549e21
+uuid: 024f327f-5dac-426c-9e4f-b7db067dba1a
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: node.field_hide_promotion
-field_name: field_hide_promotion
+    - taxonomy
+id: node.field_product_subfilter
+field_name: field_product_subfilter
 entity_type: node
-type: boolean
-settings: {  }
+type: entity_reference
+settings:
+  target_type: taxonomy_term
 module: core
 locked: false
 cardinality: 1
