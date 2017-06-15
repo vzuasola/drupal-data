@@ -74,44 +74,32 @@ class ProductTabs extends ResourceBase {
 
     if ($terms) {
       foreach ($terms as $getEntity) {
-        if ($getEntity->hasTranslation($langCode)) {
-
+        try {
           $translation = $getEntity->getTranslation($langCode);
-          $productId = $getEntity->field_product_id->value;
+        } catch (\Exception $e) {
+          $translation = $getEntity->getTranslation($defaultLang);
+        }
 
-          $check_enable = $translation->field_enable_disable->value;
-          $class = isset($translation->field_class->value) ? $translation->field_class->value : NULL;
-          $target = isset($translation->field_target->value) ? $translation->field_target->value : NULL;
-          $tag = isset($translation->field_menu_tag->value) ? $translation->field_menu_tag->value : NULL;
-              
-          // Get count of promotions tagged with product.
-          if ($check_enable == '1') {
-            $key = $translation->id();
-            $count = $this->getProductPromotionCount($key, $langCode);
+        $productId = $getEntity->field_product_id->value;
 
-            $productAttribute = ['class'=> $class , 'target' => $target, 'tag' => $tag];
-            $data[] = [
-              'product_name' => $translation->getName(),
-              'product_id' => $productId,
-              'id' => $key,
-              'count' => $count,
-              'product_attribute' => $productAttribute,
-            ];
-          }
-          else {
-            $translation = $getEntity->getTranslation($defaultLang);
-            $check_enable = $translation->field_enable_disable->value;
+        $check_enable = $translation->field_enable_disable->value;
+        $class = isset($translation->field_class->value) ? $translation->field_class->value : NULL;
+        $target = isset($translation->field_target->value) ? $translation->field_target->value : NULL;
+        $tag = isset($translation->field_menu_tag->value) ? $translation->field_menu_tag->value : NULL;
+            
+        // Get count of promotions tagged with product.
+        if ($check_enable === '1') {
+          $key = $translation->id();
+          $count = $this->getProductPromotionCount($key, $langCode);
 
-            if ($check_enable == '1') {
-              $key = $translation->id();
-
-              $data[] = [
-                'product_name' => $translation->getName(),
-                'id' => $key,
-                'product_attribute' => $productAttribute,
-              ];
-            }
-          }
+          $productAttribute = ['class'=> $class , 'target' => $target, 'tag' => $tag];
+          $data[] = [
+            'product_name' => $translation->getName(),
+            'product_id' => $productId,
+            'id' => $key,
+            'count' => $count,
+            'product_attribute' => $productAttribute,
+          ];
         }
       }
     }
