@@ -15,6 +15,7 @@ dependencies:
     - serialization
     - text
     - user
+    - webcomposer_rest_extra
 id: featured_promotion
 label: 'Featured Promotion for all product'
 module: views
@@ -686,8 +687,9 @@ display:
       display_extenders: {  }
       path: api/promotions_featured
       style:
-        type: serializer
+        type: node_list_serializer
         options:
+          uses_fields: false
           formats:
             json: json
       defaults:

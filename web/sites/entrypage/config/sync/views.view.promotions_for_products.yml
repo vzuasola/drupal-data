@@ -17,6 +17,7 @@ dependencies:
     - taxonomy
     - text
     - user
+    - webcomposer_rest_extra
 id: promotions_for_products
 label: 'Promotions for Products'
 module: views
@@ -562,8 +563,9 @@ display:
       display_extenders: {  }
       path: api/promotions
       style:
-        type: serializer
+        type: node_list_serializer
         options:
+          uses_fields: false
           formats:
             json: json
       defaults:
