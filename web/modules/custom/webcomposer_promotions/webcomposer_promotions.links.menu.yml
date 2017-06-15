@@ -1,6 +1,6 @@
-webcomposer_promotions.promotion_right_side_form:
-  title: 'Promotion Right Side'
-  route_name: webcomposer_promotions.promotion_right_side_form
-  description: 'Configure the promotion right side block'
+webcomposer_promotions.promotion_configuration:
+  title: 'Promotion Custom Configuration'
+  route_name: webcomposer_promotions.promotion_configuration
+  description: 'Configure the Promotion custom configuration'
   parent: webcomposer_config.list
 

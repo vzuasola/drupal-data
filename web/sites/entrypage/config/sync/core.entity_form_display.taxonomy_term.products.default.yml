@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.taxonomy_term.products.field_class
     - field.field.taxonomy_term.products.field_enable_disable
+    - field.field.taxonomy_term.products.field_product_id
     - field.field.taxonomy_term.products.field_product_tag
     - field.field.taxonomy_term.products.field_target
     - taxonomy.vocabulary.products
@@ -16,19 +17,31 @@ third_party_settings:
   field_group:
     group_attributes:
       children:
-        - field_enable_disable
         - field_class
         - field_target
         - field_product_tag
       parent_name: ''
-      weight: 20
-      format_type: fieldset
+      weight: 5
+      format_type: details
       format_settings:
-        id: product_attributes
-        classes: product_attributes
-        description: ''
+        id: ''
+        classes: ''
+        open: false
         required_fields: true
       label: Attributes
+    group_taxonomy:
+      children:
+        - description
+        - path
+      parent_name: ''
+      weight: 6
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: Taxonomy
 id: taxonomy_term.products.default
 targetEntityType: taxonomy_term
 bundle: products
@@ -36,7 +49,7 @@ mode: default
 content:
   description:
     type: text_textarea
-    weight: 0
+    weight: 3
     region: content
     settings:
       placeholder: ''
@@ -51,11 +64,19 @@ content:
     type: string_textfield
     region: content
   field_enable_disable:
-    weight: 31
+    weight: 2
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
+    region: content
+  field_product_id:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
   field_product_tag:
     weight: 34
@@ -71,13 +92,13 @@ content:
     region: content
   langcode:
     type: language_select
-    weight: 2
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
   name:
     type: string_textfield
-    weight: -5
+    weight: 0
     region: content
     settings:
       size: 60
@@ -85,12 +106,12 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 30
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
   translation:
-    weight: 10
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }

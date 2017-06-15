@@ -15,3 +15,9 @@ webcomposer_config.login_configuration_schema:
   base_route_name: webcomposer_config.login_configuration_form
   names:
     - 'webcomposer_config.login_configuration'
+
+webcomposer_config.outdated_browser_configuration_schema:
+  title: 'Outdated Browser Configuration'
+  base_route_name: webcomposer_config.outdated_browser_configuration_form
+  names:
+    - 'webcomposer_config.browser_configuration'

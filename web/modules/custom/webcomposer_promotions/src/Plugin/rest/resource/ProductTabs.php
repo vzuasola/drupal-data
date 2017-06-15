@@ -38,7 +38,7 @@ class ProductTabs extends ResourceBase {
 
     if (!$data) {
       $errorMessage = t('No Product tabs are configured. Please configure the products and translation in product taxonomy.');
-      \Drupal::logger('wbc_rest_resoruce')->error($errorMessage);
+      \Drupal::logger('wbc_rest_resource')->error($errorMessage);
       throw new NotFoundHttpException($errorMessage);
     }
 
@@ -64,7 +64,7 @@ class ProductTabs extends ResourceBase {
 
     if (empty($terms)) {
       $errorMessage = t('No Product tabs are configured. Please configure the products and translation in product taxonomy.');
-      \Drupal::logger('wbc_rest_resoruce')->error($errorMessage);
+      \Drupal::logger('wbc_rest_resource')->error($errorMessage);
       throw new NotFoundHttpException($errorMessage);
     }
 
@@ -74,40 +74,32 @@ class ProductTabs extends ResourceBase {
 
     if ($terms) {
       foreach ($terms as $getEntity) {
-        if ($getEntity->hasTranslation($langCode)) {
+        try {
           $translation = $getEntity->getTranslation($langCode);
-          $check_enable = $translation->field_enable_disable->value;
-          $class = $translation->field_class->value;
-          $target = $translation->field_target->value;
-          $tag = $translation->field_menu_tag->value;
-              
-          // Get count of promotions tagged with product.
-          if ($check_enable == '1') {
-            $key = $translation->id();
-            $count = $this->getProductPromotionCount($key, $langCode);
+        } catch (\Exception $e) {
+          $translation = $getEntity->getTranslation($defaultLang);
+        }
 
-            $productAttribute = ['class'=> $class , 'target' => $target, 'tag' => $tag];
-            $data[] = [
-              'product_name' => $translation->getName(),
-              'id' => $key,
-              'count' => $count,
-              'product_attribute' => $productAttribute,
-            ];
-          }
-          else {
-            $translation = $getEntity->getTranslation($defaultLang);
-            $check_enable = $translation->field_enable_disable->value;
+        $productId = $getEntity->field_product_id->value;
 
-            if ($check_enable == '1') {
-              $key = $translation->id();
-              
-              $data[] = [
-                'product_name' => $translation->getName(),
-                'id' => $key,
-                'product_attribute' => $productAttribute,
-              ];
-            }
-          }
+        $check_enable = $translation->field_enable_disable->value;
+        $class = isset($translation->field_class->value) ? $translation->field_class->value : NULL;
+        $target = isset($translation->field_target->value) ? $translation->field_target->value : NULL;
+        $tag = isset($translation->field_menu_tag->value) ? $translation->field_menu_tag->value : NULL;
+            
+        // Get count of promotions tagged with product.
+        if ($check_enable === '1') {
+          $key = $translation->id();
+          $count = $this->getProductPromotionCount($key, $langCode);
+
+          $productAttribute = ['class'=> $class , 'target' => $target, 'tag' => $tag];
+          $data[] = [
+            'product_name' => $translation->getName(),
+            'product_id' => $productId,
+            'id' => $key,
+            'count' => $count,
+            'product_attribute' => $productAttribute,
+          ];
         }
       }
     }
