@@ -7,5 +7,5 @@ _core:
 name: Products
 vid: products
 description: 'List of all the products.'
-hierarchy: 0
+hierarchy: 1
 weight: 0

@@ -13,6 +13,7 @@ dependencies:
     - field.field.node.promotion.field_log_in_state
     - field.field.node.promotion.field_mark_as_featured
     - field.field.node.promotion.field_product
+    - field.field.node.promotion.field_product_subfilter
     - field.field.node.promotion.field_right_side_block_content
     - field.field.node.promotion.field_right_side_block_link
     - field.field.node.promotion.field_right_side_block_option
@@ -27,6 +28,7 @@ dependencies:
     - link
     - path
     - scheduler
+    - shs
     - text
 third_party_settings:
   field_group:
@@ -119,12 +121,15 @@ content:
     type: options_select
     region: content
   field_hide_promotion:
+    weight: 21
     type: boolean_checkbox
     weight: 5
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
   field_image:
     weight: 32
     settings:
@@ -146,7 +151,7 @@ content:
     type: options_buttons
     region: content
   field_mark_as_featured:
-    weight: 4
+    weight: 5
     settings:
       display_label: true
     third_party_settings: {  }
@@ -160,6 +165,16 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
+    region: content
+  field_product_subfilter:
+    weight: 4
+    settings:
+      display_node_count: false
+      create_new_items: false
+      create_new_levels: false
+      force_deepest: false
+    third_party_settings: {  }
+    type: options_shs
     region: content
   field_right_side_block_content:
     weight: 60

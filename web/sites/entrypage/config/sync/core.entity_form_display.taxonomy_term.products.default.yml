@@ -17,31 +17,19 @@ third_party_settings:
   field_group:
     group_attributes:
       children:
+        - field_enable_disable
         - field_class
         - field_target
         - field_product_tag
       parent_name: ''
-      weight: 5
-      format_type: details
+      weight: 20
+      format_type: fieldset
       format_settings:
-        id: ''
-        classes: ''
-        open: false
+        id: product_attributes
+        classes: product_attributes
+        description: ''
         required_fields: true
       label: Attributes
-    group_taxonomy:
-      children:
-        - description
-        - path
-      parent_name: ''
-      weight: 6
-      format_type: details
-      format_settings:
-        id: ''
-        classes: ''
-        open: false
-        required_fields: true
-      label: Taxonomy
 id: taxonomy_term.products.default
 targetEntityType: taxonomy_term
 bundle: products
@@ -49,7 +37,7 @@ mode: default
 content:
   description:
     type: text_textarea
-    weight: 3
+    weight: 0
     region: content
     settings:
       placeholder: ''
@@ -64,14 +52,14 @@ content:
     type: string_textfield
     region: content
   field_enable_disable:
-    weight: 2
+    weight: 31
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
   field_product_id:
-    weight: 1
+    weight: 35
     settings:
       size: 60
       placeholder: ''
@@ -92,13 +80,13 @@ content:
     region: content
   langcode:
     type: language_select
-    weight: 4
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
   name:
     type: string_textfield
-    weight: 0
+    weight: -5
     region: content
     settings:
       size: 60
@@ -106,12 +94,12 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 4
+    weight: 30
     region: content
     settings: {  }
     third_party_settings: {  }
   translation:
-    weight: 3
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
