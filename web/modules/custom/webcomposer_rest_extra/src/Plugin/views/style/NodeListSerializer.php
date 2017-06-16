@@ -32,6 +32,12 @@ class NodeListSerializer extends Serializer {
           $term = $this->loadTerm($value[0]['target_id']);
           $rowAssoc[$key][0] = $term;
         }
+
+        if (isset($value[0]['target_type']) && $value[0]['target_type'] == 'paragraph') {
+          // loading the paragraph object onto the rest export
+          $paragraph = $this->loadParagraph($value[0]['target_id']);
+          $rowAssoc[$key][0] = $paragraph;
+        }
       }
 
       $rows[] = $rowAssoc;
@@ -61,5 +67,13 @@ class NodeListSerializer extends Serializer {
     $term->set('path', $term_alias);
 
     return $term;
+  }
+
+   /**
+   * Load paragraph by paragraph ID
+   */
+  private function loadParagraph($tid) {
+    $entities = \Drupal::entityTypeManager()->getStorage('paragraph')->load($tid);
+    return $entities;
   }
 }

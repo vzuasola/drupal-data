@@ -1,51 +1,59 @@
-uuid: aaa2593b-6745-4eae-a5e8-fdfded68cf92
+uuid: 4c2dc230-da89-414d-8f63-17d68144e159
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.left_floating_banner_entity.left_floating_banner_entity.field_banner_item
-    - field.field.left_floating_banner_entity.left_floating_banner_entity.field_floating_banner_type
-    - field.field.left_floating_banner_entity.left_floating_banner_entity.field_image
-    - field.field.left_floating_banner_entity.left_floating_banner_entity.field_link
-    - field.field.left_floating_banner_entity.left_floating_banner_entity.field_link_target
-    - field.field.left_floating_banner_entity.left_floating_banner_entity.field_title
-    - field.field.left_floating_banner_entity.left_floating_banner_entity.field_title_layout
+    - field.field.paragraph.floating_banner_item.field_button_text
+    - field.field.paragraph.floating_banner_item.field_enable
+    - field.field.paragraph.floating_banner_item.field_lightbox_content
+    - field.field.paragraph.floating_banner_item.field_lightbox_title
+    - field.field.paragraph.floating_banner_item.field_link
+    - field.field.paragraph.floating_banner_item.field_link_class
+    - field.field.paragraph.floating_banner_item.field_link_target
+    - paragraphs.paragraphs_type.floating_banner_item
   module:
-    - entity_reference_revisions
-    - image
     - link
     - options
-    - user
-    - webcomposer_floating_banners
-id: left_floating_banner_entity.left_floating_banner_entity.default
-targetEntityType: left_floating_banner_entity
-bundle: left_floating_banner_entity
+    - text
+_core:
+  default_config_hash: _FimPVYlOcwCxKw69qnjYAJHgqH2GK289hhQ2d_WMnI
+id: paragraph.floating_banner_item.default
+targetEntityType: paragraph
+bundle: floating_banner_item
 mode: default
 content:
-  field_banner_item:
-    type: entity_reference_revisions_entity_view
-    weight: 6
+  field_button_text:
+    weight: 0
     label: above
     settings:
-      view_mode: default
-      link: ''
+      link_to_entity: false
     third_party_settings: {  }
+    type: string
     region: content
-  field_floating_banner_type:
-    weight: 7
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
-    region: content
-  field_image:
+  field_enable:
     weight: 1
     label: above
     settings:
-      image_style: ''
-      image_link: ''
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
     third_party_settings: {  }
-    type: image
+    type: boolean
+    region: content
+  field_lightbox_content:
+    weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_lightbox_title:
+    weight: 5
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
     region: content
   field_link:
     weight: 2
@@ -59,42 +67,18 @@ content:
     third_party_settings: {  }
     type: link
     region: content
-  field_link_target:
+  field_link_class:
     weight: 4
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
-  field_title:
+  field_link_target:
     weight: 3
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_title_layout:
-    weight: 5
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
-  name:
-    label: above
-    type: string
-    weight: -4
-    region: content
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-  user_id:
-    label: hidden
-    type: author
-    weight: 0
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-hidden:
-  langcode: true
+hidden: {  }
