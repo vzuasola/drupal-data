@@ -1,17 +1,17 @@
-uuid: 53f04d9d-c450-4a66-b258-3a526d4eba37
+uuid: 106bf5ce-7a01-45ef-a65a-cbceca2a1eac
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_product_subfilter
+    - field.storage.node.field_ribbon_label
     - node.type.promotion
-    - taxonomy.vocabulary.products
-id: node.promotion.field_product_subfilter
-field_name: field_product_subfilter
+    - taxonomy.vocabulary.ribbon_labels
+id: node.promotion.field_ribbon_label
+field_name: field_ribbon_label
 entity_type: node
 bundle: promotion
-label: 'Product Subfilter'
-description: 'The filter which this product will be tagged'
+label: 'Ribbon label'
+description: 'The ribbon label based on the <b>Ribbon labels</b> taxonomy'
 required: false
 translatable: true
 default_value: {  }
@@ -20,7 +20,7 @@ settings:
   handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      products: products
+      ribbon_labels: ribbon_labels
     sort:
       field: _none
     auto_create: false
