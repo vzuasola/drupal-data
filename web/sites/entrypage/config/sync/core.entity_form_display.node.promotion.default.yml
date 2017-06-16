@@ -26,6 +26,7 @@ dependencies:
     - image.style.thumbnail
     - node.type.promotion
   module:
+    - entity_reference_views_select
     - field_group
     - image
     - link
@@ -179,12 +180,9 @@ content:
     region: content
   field_product:
     weight: 3
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: erviews_options_select
     region: content
   field_product_subfilter:
     weight: 4
