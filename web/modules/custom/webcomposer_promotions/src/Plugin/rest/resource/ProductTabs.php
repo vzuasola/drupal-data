@@ -96,26 +96,31 @@ class ProductTabs extends ResourceBase {
 
           // Find the sub filter of product term
           $findChildren = \Drupal::entityTypeManager()->getStorage('taxonomy_term')
-          ->loadTree('products', $parent = $key, $max_depth = NULL, $load_entities = FALSE);
+            ->loadTree('products', $parent = $key, $max_depth = NULL, $load_entities = FALSE);
 
           foreach ($findChildren as $value) {
-           if(in_array($key, $value->parents)) {
-
-             $filters[]= ['filter_name' => $value->name, 'id' => $value->tid , 'parent' => $value->parents, 'subfilter_id' => $productId];
+           $term = \Drupal\taxonomy\Entity\Term::load($value->tid);
+           
+           if (in_array($key, $value->parents)) {
+             $filters[] = [
+              'filter_name' => $value->name, 
+              'id' => $value->tid , 
+              'parent' => $value->parents, 
+              'subfilter_id' => $term->field_product_id->value,
+            ];
            }
-
          }
 
          $count = $this->getProductPromotionCount($key, $langCode);
 
          $productAttribute = ['class'=> $class , 'target' => $target, 'tag' => $tag];
          $data[] = [
-         'product_name' => $translation->getName(),
-         'product_id' => $productId,
-         'id' => $key,
-         'count' => $count,
-         'product_attribute' => $productAttribute,
-         'filters' => $filters,
+           'product_name' => $translation->getName(),
+           'product_id' => $productId,
+           'id' => $key,
+           'count' => $count,
+           'product_attribute' => $productAttribute,
+           'filters' => $filters,
          ];
        }
      }
