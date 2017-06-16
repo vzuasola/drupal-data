@@ -7,4 +7,7 @@ webcomposer_config.promotion_configuration:
       label: 'Promotion Read More Configuration'
     countdown:
       type: label
-      label: 'Promotion countdown Configuration'
+      label: 'Promotion Countdown Configuration'
+    all_text:
+      type: label
+      label: 'Promotion All Text Configuration'

@@ -225,7 +225,7 @@ content:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: text_textarea
+    type: string_textarea
     region: content
   field_promotion_summary_link:
     weight: 64
