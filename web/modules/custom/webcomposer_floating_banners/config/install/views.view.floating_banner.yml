@@ -6,10 +6,13 @@ dependencies:
     - rest
     - serialization
     - webcomposer_floating_banners
+    - webcomposer_rest_extra
+_core:
+  default_config_hash: hMfpr1Sh7iBYlnhZ1ksamjZyc48Mk9z677qzv3SiZWw
 id: floating_banner
 label: 'Floating Banner'
 module: views
-description: ''
+description: 'View expose floating right and left side banner.'
 tag: ''
 base_table: left_floating_banner_entity_field_data
 base_field: id
@@ -158,6 +161,12 @@ display:
     display_options:
       display_extenders: {  }
       path: api/floating_banner
+      style:
+        type: node_list_serializer
+        options:
+          uses_fields: false
+          formats:
+            json: json
     cache_metadata:
       max-age: -1
       contexts:
