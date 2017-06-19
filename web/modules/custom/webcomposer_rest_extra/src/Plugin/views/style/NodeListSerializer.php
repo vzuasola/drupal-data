@@ -33,29 +33,33 @@ class NodeListSerializer extends Serializer {
           $rowAssoc[$key][0] = $term;
         }
 
-        if (isset($value[0]['target_type']) && $value[0]['target_type'] == 'paragraph') {
+        foreach ($value as $pid) {
+          if (isset($pid['target_type']) && $pid['target_type'] == 'paragraph') {
           // loading the paragraph object onto the rest export
-          $paragraph = $this->loadParagraph($value[0]['target_id']);
-          $rowAssoc[$key][0] = $paragraph;
-        }
-      }
+           $rowAssoc[$key][] = $this->loadParagraph($pid['target_id']);
 
-      $rows[] = $rowAssoc;
-    }
+         }
 
-    unset($this->view->row_index);
+       }
+
+     }
+
+     $rows[] = $rowAssoc;
+   }
+
+   unset($this->view->row_index);
 
     // Get the content type configured in the display or fallback to the
     // default.
-    if ((empty($this->view->live_preview))) {
-      $content_type = $this->displayHandler->getContentType();
-    }
-    else {
-      $content_type = !empty($this->options['formats']) ? reset($this->options['formats']) : 'json';
-    }
-
-    return $this->serializer->serialize($rows, $content_type, ['views_style_plugin' => $this]);
+   if ((empty($this->view->live_preview))) {
+    $content_type = $this->displayHandler->getContentType();
   }
+  else {
+    $content_type = !empty($this->options['formats']) ? reset($this->options['formats']) : 'json';
+  }
+
+  return $this->serializer->serialize($rows, $content_type, ['views_style_plugin' => $this]);
+}
 
   /**
    * Load terms by taxonomy ID
@@ -72,7 +76,7 @@ class NodeListSerializer extends Serializer {
    /**
    * Load paragraph by paragraph ID
    */
-  private function loadParagraph($tid) {
+   private function loadParagraph($tid) {
     $entities = \Drupal::entityTypeManager()->getStorage('paragraph')->load($tid);
     return $entities;
   }
