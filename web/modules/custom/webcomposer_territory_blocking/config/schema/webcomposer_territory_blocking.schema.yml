@@ -1,4 +1,4 @@
-webcomposer_territory_blocking.territory_blocking:
+webcomposer_config.territory_blocking:
   type: config_object
   label: 'Territory Blocking Configuration'
   mapping:
