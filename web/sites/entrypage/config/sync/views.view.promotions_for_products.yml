@@ -7,6 +7,7 @@ dependencies:
     - field.storage.node.field_thumbnail_image
     - field.storage.node.field_thumbnail_summary
     - node.type.promotion
+    - system.menu.admin
     - taxonomy.vocabulary.products
   module:
     - draggableviews
@@ -201,12 +202,12 @@ display:
       display_extenders: {  }
       path: admin/config/promotions-for-products
       menu:
-        type: none
+        type: normal
         title: 'Promotions for Products'
-        description: ''
+        description: 'Sort the promotions for per product category'
         expanded: false
-        parent: ''
-        weight: 0
+        parent: webcomposer_config.list
+        weight: 1
         context: '0'
         menu_name: admin
       fields:

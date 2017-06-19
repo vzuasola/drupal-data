@@ -27,9 +27,7 @@ use Drupal\node\Entity\Node;
  * )
  */
 class ProductTabs extends ResourceBase {
-
-
-   /**
+  /**
    *  A current user instance.
    *
    * @var \Drupal\Core\Session\AccountProxyInterface
@@ -80,7 +78,6 @@ class ProductTabs extends ResourceBase {
       $container->get('request_stack')->getCurrentRequest()
     );
   }
-
 
   /**
    * Responds to GET requests.
