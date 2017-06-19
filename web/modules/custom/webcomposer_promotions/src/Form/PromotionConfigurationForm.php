@@ -36,7 +36,7 @@ class PromotionConfigurationForm extends ConfigFormBase {
 
     $form['read_more'] = array(
       '#type' => 'textfield',
-      '#title' => $this->t('Read More text'),
+      '#title' => $this->t('Read More Text'),
       '#description' => $this->t('The Translated string for read more.'),
       '#maxlength' => 64,
       '#size' => 64,
@@ -50,6 +50,15 @@ class PromotionConfigurationForm extends ConfigFormBase {
       '#maxlength' => 64,
       '#size' => 64,
       '#default_value' => $config->get('countdown'),
+    );
+
+    $form['all_text'] = array(
+      '#type' => 'textfield',
+      '#title' => $this->t('Product Filter All Text'),
+      '#description' => $this->t('The Translated string for the `All` text on the product filter dropdown'),
+      '#maxlength' => 64,
+      '#size' => 64,
+      '#default_value' => $config->get('all_text'),
     );
 
     return parent::buildForm($form, $form_state);
@@ -71,6 +80,7 @@ class PromotionConfigurationForm extends ConfigFormBase {
     $keys = array(
       'read_more',
       'countdown',
+      'all_text',
     );
 
     foreach ($keys as $key) {

@@ -15,11 +15,15 @@ dependencies:
     - field.field.node.promotion.field_mark_as_featured
     - field.field.node.promotion.field_product
     - field.field.node.promotion.field_product_subfilter
+    - field.field.node.promotion.field_promotion_link_target
+    - field.field.node.promotion.field_promotion_summary
+    - field.field.node.promotion.field_promotion_summary_link
     - field.field.node.promotion.field_ribbon_label
     - field.field.node.promotion.field_right_side_block_content
     - field.field.node.promotion.field_right_side_block_link
     - field.field.node.promotion.field_right_side_block_option
     - field.field.node.promotion.field_right_side_block_title
+    - field.field.node.promotion.field_summary_image
     - field.field.node.promotion.field_text_color
     - field.field.node.promotion.field_thumbnail_image
     - field.field.node.promotion.field_thumbnail_summary
@@ -94,6 +98,21 @@ third_party_settings:
         open: false
         required_fields: true
       label: 'Ribbon Configuration'
+    group_promotion_summary:
+      children:
+        - field_promotion_summary_link
+        - field_promotion_link_target
+        - field_summary_image
+        - field_promotion_summary
+      parent_name: ''
+      weight: 20
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: 'Promotion Summary'
 _core:
   default_config_hash: REpuDcJgDsDpuU0keFA4HDluTQxvT7wSEcUqidMSEcM
 id: node.promotion.default
@@ -194,6 +213,28 @@ content:
     third_party_settings: {  }
     type: options_shs
     region: content
+  field_promotion_link_target:
+    weight: 65
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_promotion_summary:
+    weight: 67
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_promotion_summary_link:
+    weight: 64
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
   field_ribbon_label:
     weight: 61
     settings:
@@ -234,6 +275,14 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_summary_image:
+    weight: 66
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
     region: content
   field_text_color:
     weight: 62
