@@ -1,0 +1,13 @@
+webcomposer_territory_blocking.config:
+  title: 'Territory Blocking'
+  route_name: webcomposer_territory_blocking.config
+  parent: system.admin
+  description: 'Territory Blocking menu'
+  weight: -1
+
+webcomposer_territory_blocking.territory_blocking_config:
+  title: 'Territory Blocking'
+  description: 'List of restricted countries'
+  route_name: webcomposer_territory_blocking.territory_blocking_config
+  parent: webcomposer_territory_blocking.config
+  weight: 1

@@ -1,0 +1,8 @@
+name: Webcomposer Territory Blocking
+description: Dedicated module for territory blocking configuration
+package: Web Composer
+type: module
+core: 8.x
+version: '8.x-1.x-dev'
+dependencies:
+  - rest
