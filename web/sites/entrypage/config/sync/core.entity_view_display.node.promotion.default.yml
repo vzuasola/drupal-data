@@ -15,11 +15,15 @@ dependencies:
     - field.field.node.promotion.field_mark_as_featured
     - field.field.node.promotion.field_product
     - field.field.node.promotion.field_product_subfilter
+    - field.field.node.promotion.field_promotion_link_target
+    - field.field.node.promotion.field_promotion_summary
+    - field.field.node.promotion.field_promotion_summary_link
     - field.field.node.promotion.field_ribbon_label
     - field.field.node.promotion.field_right_side_block_content
     - field.field.node.promotion.field_right_side_block_link
     - field.field.node.promotion.field_right_side_block_option
     - field.field.node.promotion.field_right_side_block_title
+    - field.field.node.promotion.field_summary_image
     - field.field.node.promotion.field_text_color
     - field.field.node.promotion.field_thumbnail_image
     - field.field.node.promotion.field_thumbnail_summary
@@ -152,6 +156,32 @@ content:
     third_party_settings: {  }
     type: entity_reference_label
     region: content
+  field_promotion_link_target:
+    weight: 129
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_promotion_summary:
+    weight: 131
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_promotion_summary_link:
+    weight: 127
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
   field_ribbon_label:
     weight: 124
     label: above
@@ -197,6 +227,15 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_summary_image:
+    weight: 130
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
     region: content
   field_text_color:
     weight: 125
