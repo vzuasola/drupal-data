@@ -20,7 +20,6 @@ class NodeListSerializer extends Serializer {
   public function render() {
     $rows = array();
 
-    kint_require();
     foreach ($this->view->result as $row_index => $row) {
       $this->view->row_index = $row_index;
 
