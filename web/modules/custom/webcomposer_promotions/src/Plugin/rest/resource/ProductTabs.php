@@ -161,40 +161,46 @@ class ProductTabs extends ResourceBase {
           $key = $translation->Id();
 
           // Find the sub filter of product term
-          $findChildren = \Drupal::entityTypeManager()->getStorage('taxonomy_term')
+          $findChildren = \Drupal::entityTypeManager()
+            ->getStorage('taxonomy_term')
             ->loadTree('products', $parent = $key, $max_depth = NULL, $load_entities = FALSE);
 
           foreach ($findChildren as $value) {
-           $term = \Drupal\taxonomy\Entity\Term::load($value->tid);
+            $term = \Drupal\taxonomy\Entity\Term::load($value->tid);
 
-           if (in_array($key, $value->parents)) {
-             $filters[] = [
-              'filter_name' => $value->name,
-              'id' => $value->tid ,
-              'parent' => $value->parents,
-              'subfilter_id' => $term->field_product_id->value,
-            ];
-           }
-         }
+            if (in_array($key, $value->parents)) {
+              $filters[] = [
+                'filter_name' => $value->name,
+                'id' => $value->tid ,
+                'parent' => $value->parents,
+                'subfilter_id' => $term->field_product_id->value,
+              ];
+            }
+          }
 
-         $count = $this->getProductPromotionCount($key, $langCode, $state, $type);
+          // get a separate count for the All featured tab
+          if ($productId == 'all') {
+            $count = $this->getAllFeaturedPromotionCount($langCode, $state);
+          } else {
+            $count = $this->getProductPromotionCount($key, $langCode, $state, $type);
+          }
 
+          $productAttribute = ['class'=> $class , 'target' => $target, 'tag' => $tag];
 
-         $productAttribute = ['class'=> $class , 'target' => $target, 'tag' => $tag];
-         $data[] = [
-           'product_name' => $translation->getName(),
-           'product_id' => $productId,
-           'id' => $key,
-           'count' => $count,
-           'product_attribute' => $productAttribute,
-           'filters' => $filters,
-         ];
-       }
-     }
-   }
+          $data[] = [
+            'product_name' => $translation->getName(),
+            'product_id' => $productId,
+            'id' => $key,
+            'count' => $count,
+            'product_attribute' => $productAttribute,
+            'filters' => $filters,
+          ];
+        }
+      }
+    }
 
-   return $data;
- }
+    return $data;
+  }
 
   /**
    * Gets the product promotion count.
@@ -204,30 +210,33 @@ class ProductTabs extends ResourceBase {
    * @return <string> The product promotion count.
    */
   private function getProductPromotionCount($tids , $langCode, $state, $type) {
+    $count = 0;
 
     switch ($state) {
       case '0':
-          $count = $this->getPromotionCount($tids , $langCode, $state);
-           if($type == 'featured') {
-             $count = $this->getFeaturedPromotionCount($tids , $langCode, $state, $type);
-           }
-        break;
-      case '1':
         $count = $this->getPromotionCount($tids , $langCode, $state);
-        if($type == 'featured') {
+        if ($type == 'featured') {
           $count = $this->getFeaturedPromotionCount($tids , $langCode, $state, $type);
         }
         break;
+
+      case '1':
+        $count = $this->getPromotionCount($tids , $langCode, $state);
+        if ($type == 'featured') {
+          $count = $this->getFeaturedPromotionCount($tids , $langCode, $state, $type);
+        }
+        break;
+
       case 'all':
         $count = $this->getAllPromotionCount($tids , $langCode);
         break;
+
       case 'hidden':
         $count = $this->getHiddenPromotionCount($tids, $langCode);
         break;
     }
 
     return $count;
-
   }
 
   /**
@@ -238,8 +247,7 @@ class ProductTabs extends ResourceBase {
    * @return <string> The product promotion count.
    */
   private function getPromotionCount($tids , $langCode, $state) {
-
-     $query = \Drupal::entityQuery('node')
+    $query = \Drupal::entityQuery('node')
       ->condition('status', 1)
       ->condition('type', 'promotion')
       ->condition('field_product', "$tids")
@@ -247,6 +255,7 @@ class ProductTabs extends ResourceBase {
       ->condition('field_log_in_state', array('$state', '2'), 'IN')
       ->condition('field_mark_as_featured', "0")
       ->condition('langcode' , "$langCode");
+
     $countNids = $query->count('processes')->execute();
     $countNids = !empty($countNids) ? $countNids : "0";
 
@@ -261,8 +270,7 @@ class ProductTabs extends ResourceBase {
    * @return <string> The product promotion count.
    */
   private function getAllPromotionCount($tids , $langCode) {
-
-     $query = \Drupal::entityQuery('node')
+    $query = \Drupal::entityQuery('node')
       ->condition('status', 1)
       ->condition('type', 'promotion')
       ->condition('field_product', "$tids")
@@ -274,7 +282,27 @@ class ProductTabs extends ResourceBase {
     return $countNids;
   }
 
-   /**
+  /**
+   * Gets the Featured product promotion count for all products.
+   *
+   * @return <string> The product promotion count.
+   */
+  private function getAllFeaturedPromotionCount($langCode, $state) {
+    $query = \Drupal::entityQuery('node')
+      ->condition('status', 1)
+      ->condition('type', 'promotion')
+      ->condition('field_hide_promotion', "0")
+      ->condition('field_log_in_state', array("$state", '2') , 'IN')
+      ->condition('field_mark_as_featured', "1")
+      ->condition('langcode' , "$langCode");
+
+    $countNids = $query->count('processes')->execute();
+    $countNids = !empty($countNids) ? $countNids : "0";
+
+    return $countNids;
+  }
+
+  /**
    * Gets the Featured product promotion count.
    *
    * @param <array> $tids The tids
@@ -282,8 +310,7 @@ class ProductTabs extends ResourceBase {
    * @return <string> The product promotion count.
    */
   private function getFeaturedPromotionCount($tids , $langCode, $state) {
-
-     $query = \Drupal::entityQuery('node')
+    $query = \Drupal::entityQuery('node')
       ->condition('status', 1)
       ->condition('type', 'promotion')
       ->condition('field_product', "$tids")
@@ -298,7 +325,7 @@ class ProductTabs extends ResourceBase {
     return $countNids;
   }
 
-   /**
+  /**
    * Gets the Hidden product promotion count.
    *
    * @param <array> $tids The tids
@@ -306,8 +333,7 @@ class ProductTabs extends ResourceBase {
    * @return <string> The product promotion count.
    */
   private function getHiddenPromotionCount($tids , $langCode) {
-
-     $query = \Drupal::entityQuery('node')
+    $query = \Drupal::entityQuery('node')
       ->condition('status', 1)
       ->condition('type', 'promotion')
       ->condition('field_product', "$tids")
@@ -319,5 +345,4 @@ class ProductTabs extends ResourceBase {
 
     return $countNids;
   }
-
 }
