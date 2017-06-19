@@ -6,6 +6,14 @@ use Drupal\rest\Plugin\ResourceBase;
 use Drupal\rest\ResourceResponse;
 use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+use Drupal\Core\Session\AccountProxyInterface;
+use Symfony\Component\DependencyInjection\ContainerInterface;
+use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
+use Symfony\Component\HttpKernel\Exception\HttpException;
+use Symfony\Component\HttpFoundation\Request;
+use Psr\Log\LoggerInterface;
+use Drupal\node\Entity\Node;
+
 
 /**
  * Provides a resource to get view modes by entity and bundle.
@@ -19,6 +27,61 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
  * )
  */
 class ProductTabs extends ResourceBase {
+
+
+   /**
+   *  A current user instance.
+   *
+   * @var \Drupal\Core\Session\AccountProxyInterface
+   */
+  protected $currentUser;
+
+  /**
+   *
+   * @var \Symfony\Component\HttpFoundation\Request
+   */
+  protected $currentRequest;
+
+  /**
+   * Constructs a Drupal\rest\Plugin\ResourceBase object.
+   *
+   * @param array $configuration
+   *   A configuration array containing information about the plugin instance.
+   * @param string $plugin_id
+   *   The plugin_id for the plugin instance.
+   * @param mixed $plugin_definition
+   *   The plugin implementation definition.
+   * @param array $serializer_formats
+   *   The available serialization formats.
+   * @param \Psr\Log\LoggerInterface $logger
+   *   A logger instance.
+   * @param \Drupal\Core\Session\AccountProxyInterface $current_user
+   *   The current user instance.
+   * @param Symfony\Component\HttpFoundation\Request $current_request
+   *   The current request
+   */
+  public function __construct(array $configuration, $plugin_id, $plugin_definition, array $serializer_formats, LoggerInterface $logger, AccountProxyInterface $current_user, Request $current_request) {
+    parent::__construct($configuration, $plugin_id, $plugin_definition, $serializer_formats, $logger);
+    $this->currentUser = $current_user;
+    $this->currentRequest = $current_request;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition) {
+    return new static(
+      $configuration,
+      $plugin_id,
+      $plugin_definition,
+      $container->getParameter('serializer.formats'),
+      $container->get('logger.factory')->get('rest'),
+      $container->get('current_user'),
+      $container->get('request_stack')->getCurrentRequest()
+    );
+  }
+
+
   /**
    * Responds to GET requests.
    *
@@ -34,7 +97,10 @@ class ProductTabs extends ResourceBase {
         ),
       );
 
-    $data = $this->getProductTabs();
+    $state = $this->currentRequest->query->get('state');
+    $type = $this->currentRequest->query->get('type');
+
+    $data = $this->getProductTabs($state, $type);
 
     if (!$data) {
       $errorMessage = t('No Product tabs are configured. Please configure the products and translation in product taxonomy.');
@@ -52,15 +118,15 @@ class ProductTabs extends ResourceBase {
    *
    * @return <json> The product tabs.
    */
-  private function getProductTabs()
+  private function getProductTabs($state, $type)
   {
+
     //You must to implement the logic of your REST Resource here.
     $query = \Drupal::entityQuery('taxonomy_term');
     $query->condition('vid', "products");
     $query->sort('weight', 'ASC');
     $tids = $query->execute();
     $terms = \Drupal\taxonomy\Entity\Term::loadMultiple($tids);
-
 
     if (empty($terms)) {
       $errorMessage = t('No Product tabs are configured. Please configure the
@@ -95,39 +161,46 @@ class ProductTabs extends ResourceBase {
           $key = $translation->Id();
 
           // Find the sub filter of product term
-          $findChildren = \Drupal::entityTypeManager()->getStorage('taxonomy_term')
+          $findChildren = \Drupal::entityTypeManager()
+            ->getStorage('taxonomy_term')
             ->loadTree('products', $parent = $key, $max_depth = NULL, $load_entities = FALSE);
 
           foreach ($findChildren as $value) {
-           $term = \Drupal\taxonomy\Entity\Term::load($value->tid);
-           
-           if (in_array($key, $value->parents)) {
-             $filters[] = [
-              'filter_name' => $value->name, 
-              'id' => $value->tid , 
-              'parent' => $value->parents, 
-              'subfilter_id' => $term->field_product_id->value,
-            ];
-           }
-         }
+            $term = \Drupal\taxonomy\Entity\Term::load($value->tid);
 
-         $count = $this->getProductPromotionCount($key, $langCode);
+            if (in_array($key, $value->parents)) {
+              $filters[] = [
+                'filter_name' => $value->name,
+                'id' => $value->tid ,
+                'parent' => $value->parents,
+                'subfilter_id' => $term->field_product_id->value,
+              ];
+            }
+          }
 
-         $productAttribute = ['class'=> $class , 'target' => $target, 'tag' => $tag];
-         $data[] = [
-           'product_name' => $translation->getName(),
-           'product_id' => $productId,
-           'id' => $key,
-           'count' => $count,
-           'product_attribute' => $productAttribute,
-           'filters' => $filters,
-         ];
-       }
-     }
-   }
+          // get a separate count for the All featured tab
+          if ($productId == 'all') {
+            $count = $this->getAllFeaturedPromotionCount($langCode, $state);
+          } else {
+            $count = $this->getProductPromotionCount($key, $langCode, $state, $type);
+          }
 
-   return $data;
- }
+          $productAttribute = ['class'=> $class , 'target' => $target, 'tag' => $tag];
+
+          $data[] = [
+            'product_name' => $translation->getName(),
+            'product_id' => $productId,
+            'id' => $key,
+            'count' => $count,
+            'product_attribute' => $productAttribute,
+            'filters' => $filters,
+          ];
+        }
+      }
+    }
+
+    return $data;
+  }
 
   /**
    * Gets the product promotion count.
@@ -136,12 +209,136 @@ class ProductTabs extends ResourceBase {
    *
    * @return <string> The product promotion count.
    */
-  private function getProductPromotionCount($tids , $langCode) {
+  private function getProductPromotionCount($tids , $langCode, $state, $type) {
+    $count = 0;
+
+    switch ($state) {
+      case '0':
+        $count = $this->getPromotionCount($tids , $langCode, $state);
+        if ($type == 'featured') {
+          $count = $this->getFeaturedPromotionCount($tids , $langCode, $state, $type);
+        }
+        break;
+
+      case '1':
+        $count = $this->getPromotionCount($tids , $langCode, $state);
+        if ($type == 'featured') {
+          $count = $this->getFeaturedPromotionCount($tids , $langCode, $state, $type);
+        }
+        break;
+
+      case 'all':
+        $count = $this->getAllPromotionCount($tids , $langCode);
+        break;
+
+      case 'hidden':
+        $count = $this->getHiddenPromotionCount($tids, $langCode);
+        break;
+    }
+
+    return $count;
+  }
+
+  /**
+   * Gets the product specific promotion count.
+   *
+   * @param <array> $tids The tids
+   *
+   * @return <string> The product promotion count.
+   */
+  private function getPromotionCount($tids , $langCode, $state) {
     $query = \Drupal::entityQuery('node')
-    ->condition('status', 1)
-    ->condition('type', 'promotion')
-    ->condition('field_product', "$tids")
-    ->condition('langcode' , "$langCode");
+      ->condition('status', 1)
+      ->condition('type', 'promotion')
+      ->condition('field_product', "$tids")
+      ->condition('field_hide_promotion', "0")
+      ->condition('field_log_in_state', array('$state', '2'), 'IN')
+      ->condition('field_mark_as_featured', "0")
+      ->condition('langcode' , "$langCode");
+
+    $countNids = $query->count('processes')->execute();
+    $countNids = !empty($countNids) ? $countNids : "0";
+
+    return $countNids;
+  }
+
+  /**
+   * Gets All the product promotion count.
+   *
+   * @param <array> $tids The tids
+   *
+   * @return <string> The product promotion count.
+   */
+  private function getAllPromotionCount($tids , $langCode) {
+    $query = \Drupal::entityQuery('node')
+      ->condition('status', 1)
+      ->condition('type', 'promotion')
+      ->condition('field_product', "$tids")
+      ->condition('langcode' , "$langCode");
+
+    $countNids = $query->count('processes')->execute();
+    $countNids = !empty($countNids) ? $countNids : "0";
+
+    return $countNids;
+  }
+
+  /**
+   * Gets the Featured product promotion count for all products.
+   *
+   * @return <string> The product promotion count.
+   */
+  private function getAllFeaturedPromotionCount($langCode, $state) {
+    $query = \Drupal::entityQuery('node')
+      ->condition('status', 1)
+      ->condition('type', 'promotion')
+      ->condition('field_hide_promotion', "0")
+      ->condition('field_log_in_state', array("$state", '2') , 'IN')
+      ->condition('field_mark_as_featured', "1")
+      ->condition('langcode' , "$langCode");
+
+    $countNids = $query->count('processes')->execute();
+    $countNids = !empty($countNids) ? $countNids : "0";
+
+    return $countNids;
+  }
+
+  /**
+   * Gets the Featured product promotion count.
+   *
+   * @param <array> $tids The tids
+   *
+   * @return <string> The product promotion count.
+   */
+  private function getFeaturedPromotionCount($tids , $langCode, $state) {
+    $query = \Drupal::entityQuery('node')
+      ->condition('status', 1)
+      ->condition('type', 'promotion')
+      ->condition('field_product', "$tids")
+      ->condition('field_hide_promotion', "0")
+      ->condition('field_log_in_state', array("$state", '2') , 'IN')
+      ->condition('field_mark_as_featured', "1")
+      ->condition('langcode' , "$langCode");
+
+    $countNids = $query->count('processes')->execute();
+    $countNids = !empty($countNids) ? $countNids : "0";
+
+    return $countNids;
+  }
+
+  /**
+   * Gets the Hidden product promotion count.
+   *
+   * @param <array> $tids The tids
+   *
+   * @return <string> The product promotion count.
+   */
+  private function getHiddenPromotionCount($tids , $langCode) {
+    $query = \Drupal::entityQuery('node')
+      ->condition('status', 1)
+      ->condition('type', 'promotion')
+      ->condition('field_product', "$tids")
+      ->condition('field_hide_promotion', "1")
+      ->condition('langcode' , "$langCode");
 
     $countNids = $query->count('processes')->execute();
     $countNids = !empty($countNids) ? $countNids : "0";
