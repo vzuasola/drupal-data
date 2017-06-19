@@ -244,7 +244,7 @@ class ProductTabs extends ResourceBase {
       ->condition('type', 'promotion')
       ->condition('field_product', "$tids")
       ->condition('field_hide_promotion', "0")
-      ->condition('field_log_in_state', "$state")
+      ->condition('field_log_in_state', array('$state', '2'), 'IN')
       ->condition('field_mark_as_featured', "0")
       ->condition('langcode' , "$langCode");
     $countNids = $query->count('processes')->execute();
@@ -288,7 +288,7 @@ class ProductTabs extends ResourceBase {
       ->condition('type', 'promotion')
       ->condition('field_product', "$tids")
       ->condition('field_hide_promotion', "0")
-      ->condition('field_log_in_state', "$state")
+      ->condition('field_log_in_state', array("$state", '2') , 'IN')
       ->condition('field_mark_as_featured', "1")
       ->condition('langcode' , "$langCode");
 
