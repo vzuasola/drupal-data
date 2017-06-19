@@ -20,11 +20,16 @@ class NodeListSerializer extends Serializer {
   public function render() {
     $rows = array();
 
+    kint_require();
     foreach ($this->view->result as $row_index => $row) {
       $this->view->row_index = $row_index;
 
       // converting current row into array
       $rowAssoc = $this->serializer->normalize($this->view->rowPlugin->render($row));
+
+      // add aliases on the nodes
+      $alias = \Drupal::service('path.alias_manager')->getAliasByPath("/node/$row->nid");
+      $rowAssoc['alias'][0]['value'] = $alias;
 
       foreach ($rowAssoc as $key => $value) {
         if (isset($value[0]['target_type']) && $value[0]['target_type'] == 'taxonomy_term') {
