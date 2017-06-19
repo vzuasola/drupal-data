@@ -30,7 +30,7 @@ class TerritoryBlockingForm extends ConfigFormBase
     public function buildForm(array $form, FormStateInterface $form_state)
     {
         // Get Form configuration.
-        $TerritoryBlockingConfig = $this->config('webcomposer_territory_blocking.territory_blocking');
+        $TerritoryBlockingConfig = $this->config('webcomposer_config.territory_blocking');
         $restricted_countries = $TerritoryBlockingConfig->get('territory_blocking_mapping');
 
         $form['territory_blocking'] = [
@@ -78,7 +78,7 @@ class TerritoryBlockingForm extends ConfigFormBase
      */
     protected function getEditableConfigNames()
     {
-        return ['webcomposer_territory_blocking.territory_blocking'];
+        return ['webcomposer_config.territory_blocking'];
     }
 
 
@@ -94,7 +94,7 @@ class TerritoryBlockingForm extends ConfigFormBase
     {
         $restricted_countries = $form_state->getValue('field_configuration')['territory_blocking_mapping'];
 
-        $this->config('webcomposer_territory_blocking.territory_blocking')
+        $this->config('webcomposer_config.territory_blocking')
             ->set('territory_blocking_mapping', $restricted_countries)
             ->save();
     }
