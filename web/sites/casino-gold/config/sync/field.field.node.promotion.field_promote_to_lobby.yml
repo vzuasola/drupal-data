@@ -11,7 +11,7 @@ id: node.promotion.field_promote_to_lobby
 field_name: field_promote_to_lobby
 entity_type: node
 bundle: promotion
-label: 'Promote to Lobby'
+label: 'Promote to Lobby in Casino Gold'
 description: ''
 required: false
 translatable: true
