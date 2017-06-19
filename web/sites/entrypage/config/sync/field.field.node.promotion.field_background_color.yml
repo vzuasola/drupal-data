@@ -1,0 +1,23 @@
+uuid: baac1a94-5c71-40ca-9571-27e2fe247202
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_background_color
+    - node.type.promotion
+  module:
+    - options
+id: node.promotion.field_background_color
+field_name: field_background_color
+entity_type: node
+bundle: promotion
+label: 'Background color'
+description: 'The ribbon background color'
+required: false
+translatable: true
+default_value:
+  -
+    value: cyan
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -12,3 +12,8 @@ webcomposer_config.login_configuration_tab:
   route_name: webcomposer_config.login_configuration_form
   title: 'Login Configuration'
   base_route: webcomposer_config.login_configuration_form
+
+webcomposer_config.outdated_browser_configuration_tab:
+  route_name: webcomposer_config.outdated_browser_configuration_form
+  title: 'Outdated Browser Configuration'
+  base_route: webcomposer_config.outdated_browser_configuration_form

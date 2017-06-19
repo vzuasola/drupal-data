@@ -1,8 +1,0 @@
-<?php
-
-/**
- * Implements hook_install().
- */
-function webcomposer_promotions_uninstall() {
-  \Drupal::configFactory()->getEditable('webcomposer_config.promotion_right_side')->delete();
-}

@@ -42,7 +42,10 @@ hidden:
   field_mark_as_featured: true
   field_product: true
   field_promote_to_lobby: true
+  field_right_side_block_content: true
   field_right_side_block_link: true
+  field_right_side_block_option: true
+  field_right_side_block_title: true
   field_thumbnail_image: true
   field_thumbnail_summary: true
   langcode: true

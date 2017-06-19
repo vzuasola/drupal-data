@@ -1,6 +1,6 @@
 langcode: zh-hans
 join_now_text: JOIN-NOW
-join_now_link: 'http://www.dafabet.com/en/cant-login'
+join_now_link: 'https://qa1-www.elysium-dfbt.com/sc/casino-gold/join?{tracking.token}'
 login_issue_text: 'Cant login'
 login_issue_link: 'http://www.dafabet.com/en/cant-login'
 sc_lang_text: chinese-sc-test

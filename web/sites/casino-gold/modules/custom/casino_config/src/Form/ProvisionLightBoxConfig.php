@@ -8,26 +8,30 @@ use Drupal\Core\Form\FormStateInterface;
 /**
  * Configuration Form for Provisioning LightBox.
  */
-class ProvisionLightBoxConfig extends ConfigFormBase {
+class ProvisionLightBoxConfig extends ConfigFormBase
+{
 
   /**
    * {@inheritdoc}
    */
-  protected function getEditableConfigNames() {
+  protected function getEditableConfigNames()
+  {
     return ['casino_config.provisioning_config'];
   }
 
   /**
    * {@inheritdoc}
    */
-  public function getFormId() {
+  public function getFormId()
+  {
     return 'provisioning_config_settings_form';
   }
 
   /**
    * {@inheritdoc}.
    */
-  public function buildForm(array $form, FormStateInterface $form_state) {
+  public function buildForm(array $form, FormStateInterface $form_state)
+  {
     $config = $this->config('casino_config.provisioning_config');
 
     $form['advanced'] = [
@@ -42,18 +46,16 @@ class ProvisionLightBoxConfig extends ConfigFormBase {
     ];
 
     $content = $config->get('app_top_blurb');
-
     $form['provision_application_details']['app_top_blurb'] = [
       '#type' => 'text_format',
       '#title' => $this->t('Application Top Blurb'),
       '#description' => $this->t('The Application Top Blurb for the Provisioning LightBox.'),
       '#default_value' => $content['value'],
       '#format' => $content['format'],
-      '#required' => TRUE,
+      '#required' => true,
     ];
 
     $content = $config->get('app_middle_blurb');
-
     $form['provision_application_details']['app_middle_blurb'] = [
       '#type' => 'text_format',
       '#title' => $this->t('Application Middle Blurb'),
@@ -69,18 +71,16 @@ class ProvisionLightBoxConfig extends ConfigFormBase {
     ];
 
     $content = $config->get('reapp_top_blurb');
-
     $form['provision_reapplication_details']['reapp_top_blurb'] = [
       '#type' => 'text_format',
       '#title' => $this->t('Reapplication Top Blurb'),
       '#description' => $this->t('The Reapplication Top Blurb for the Provisioning LightBox.'),
       '#default_value' => $content['value'],
       '#format' => $content['format'],
-      '#required' => TRUE,
+      '#required' => true,
     ];
 
     $content = $config->get('reapp_middle_blurb');
-
     $form['provision_reapplication_details']['reapp_middle_blurb'] = [
       '#type' => 'text_format',
       '#title' => $this->t('Reapplication Middle Blurb'),
@@ -96,18 +96,16 @@ class ProvisionLightBoxConfig extends ConfigFormBase {
     ];
 
     $content = $config->get('gold_player_top_blurb');
-
     $form['gold_player_details']['gold_player_top_blurb'] = [
       '#type' => 'text_format',
       '#title' => $this->t('Already Gold Player Top Blurb'),
       '#description' => $this->t('The Already Gold Player Top Blurb for the Provisioning LightBox.'),
       '#default_value' => $content['value'],
       '#format' => $content['format'],
-      '#required' => TRUE,
+      '#required' => true,
     ];
 
     $content = $config->get('gold_player_middle_blurb');
-
     $form['gold_player_details']['gold_player_middle_blurb'] = [
       '#type' => 'text_format',
       '#title' => $this->t('Already Gold Player Middle Blurb'),
@@ -123,7 +121,6 @@ class ProvisionLightBoxConfig extends ConfigFormBase {
     ];
 
     $content = $config->get('bottom_blurb_content');
-
     $form['bottom_blurb_details']['bottom_blurb_content'] = [
       '#type' => 'text_format',
       '#title' => $this->t('Bottom Blurb Content'),
@@ -135,23 +132,24 @@ class ProvisionLightBoxConfig extends ConfigFormBase {
     return parent::buildForm($form, $form_state);
   }
 
-  /**
-   * {@inheritdoc}
-   */
-  public function submitForm(array &$form, FormStateInterface $form_state) {
-    $autoLogoutValuesKeys = [
-      'app_top_blurb',
-      'app_middle_blurb',
-      'reapp_top_blurb',
-      'reapp_middle_blurb',
-      'gold_player_top_blurb',
-      'gold_player_middle_blurb',
-      'bottom_blurb_content',
-    ];
-    foreach ($autoLogoutValuesKeys as $keys) {
-      $this->config('casino_config.provisioning_config')->set($keys, $form_state->getValue($keys))->save();
+    /**
+     * {@inheritdoc}
+     */
+    public function submitForm(array &$form, FormStateInterface $form_state)
+    {
+        $autoLogoutValuesKeys = [
+        'app_top_blurb',
+        'app_middle_blurb',
+        'reapp_top_blurb',
+        'reapp_middle_blurb',
+        'gold_player_top_blurb',
+        'gold_player_middle_blurb',
+        'bottom_blurb_content',
+        ];
+        foreach ($autoLogoutValuesKeys as $keys) {
+            $this->config('casino_config.provisioning_config')->set($keys, $form_state->getValue($keys))->save();
+        }
+        parent::submitForm($form, $form_state);
     }
-    parent::submitForm($form, $form_state);
-  }
 
 }

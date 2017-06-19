@@ -1,0 +1,24 @@
+webcomposer_config.affilates_admin_settings:
+  path: 'admin/config/webcomposer/config/affiliates'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Webcomposer Affiliates Configuration'
+  requirements:
+    _permission: 'administer site configuration'
+
+webcomposer_config.affilates_form:
+  path: 'admin/config/webcomposer/config/affilates-list'
+  defaults:
+    _controller: 'Drupal\webcomposer_affilates\Controller\AffilateListing::getTaxonomyForm'
+    _title: admin Controller
+  requirements:
+    _permission: 'administer site configuration'
+
+webcomposer_config.affiliate_configuration_form:
+  path: 'admin/config/webcomposer/config/affiliates-config'
+  defaults:
+    _form: 'Drupal\webcomposer_affilates\Form\AffiliateConfiguration'
+    _title: 'Affiliate Configuration'
+  requirements:
+    _permission: 'administer site configuration'
+

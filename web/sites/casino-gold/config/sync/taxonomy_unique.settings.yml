@@ -1,0 +1,6 @@
+domain_groups: 1
+domain_groups_message: 'Term @term already exists in vocabulary @vocabulary.'
+domain: 1
+domain_message: 'Term @term already exists in vocabulary @vocabulary.'
+master_placeholder: 1
+master_placeholder_message: 'Term @term already exists in vocabulary @vocabulary.'

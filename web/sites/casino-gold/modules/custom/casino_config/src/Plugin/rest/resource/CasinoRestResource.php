@@ -20,7 +20,8 @@ use Psr\Log\LoggerInterface;
  *   }
  * )
  */
-class CasinoRestResource extends ResourceBase {
+class CasinoRestResource extends ResourceBase
+{
 
   /**
    * A current user instance.
@@ -32,15 +33,15 @@ class CasinoRestResource extends ResourceBase {
   /**
    * Constructs a Drupal\rest\Plugin\ResourceBase object.
    *
-   * @param array $configuration
+   * @param array                                      $configuration
    *   A configuration array containing information about the plugin instance.
-   * @param string $plugin_id
+   * @param string                                     $plugin_id
    *   The plugin_id for the plugin instance.
-   * @param mixed $plugin_definition
+   * @param mixed                                      $plugin_definition
    *   The plugin implementation definition.
-   * @param array $serializer_formats
+   * @param array                                      $serializer_formats
    *   The available serialization formats.
-   * @param \Psr\Log\LoggerInterface $logger
+   * @param \Psr\Log\LoggerInterface                   $logger
    *   A logger instance.
    * @param \Drupal\Core\Session\AccountProxyInterface $current_user
    *   A current user instance.
@@ -51,7 +52,8 @@ class CasinoRestResource extends ResourceBase {
     $plugin_definition,
     array $serializer_formats,
     LoggerInterface $logger,
-    AccountProxyInterface $current_user) {
+    AccountProxyInterface $current_user
+  ) {
     parent::__construct($configuration, $plugin_id, $plugin_definition, $serializer_formats, $logger);
 
     $this->currentUser = $current_user;
@@ -60,7 +62,8 @@ class CasinoRestResource extends ResourceBase {
   /**
    * {@inheritdoc}
    */
-  public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition) {
+  public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition)
+  {
     return new static(
       $configuration,
       $plugin_id,
@@ -79,7 +82,8 @@ class CasinoRestResource extends ResourceBase {
    * @throws \Symfony\Component\HttpKernel\Exception\HttpException
    *   Throws exception expected.
    */
-  public function get($id) {
+  public function get($id)
+  {
 
     if (!$this->currentUser->hasPermission('access content')) {
       throw new AccessDeniedHttpException();

@@ -20,7 +20,8 @@ use Psr\Log\LoggerInterface;
  *   }
  * )
  */
-class LanguageRestResource extends ResourceBase {
+class LanguageRestResource extends ResourceBase
+{
 
   /**
    * A current user instance.
@@ -28,6 +29,7 @@ class LanguageRestResource extends ResourceBase {
    * @var \Drupal\Core\Session\AccountProxyInterface
    */
   protected $currentUser;
+
   /**
    * The language manager.
    *
@@ -38,39 +40,41 @@ class LanguageRestResource extends ResourceBase {
   /**
    * Constructs a Drupal\rest\Plugin\ResourceBase object.
    *
-   * @param array $configuration
+   * @param array                                          $configuration
    *   A configuration array containing information about the plugin instance.
-   * @param string $plugin_id
+   * @param string                                         $plugin_id
    *   The plugin_id for the plugin instance.
-   * @param mixed $plugin_definition
+   * @param mixed                                          $plugin_definition
    *   The plugin implementation definition.
-   * @param array $serializer_formats
+   * @param array                                          $serializer_formats
    *   The available serialization formats.
-   * @param \Psr\Log\LoggerInterface $logger
+   * @param \Psr\Log\LoggerInterface                       $logger
    *   A logger instance.
-   * @param \Drupal\Core\Session\AccountProxyInterface $current_user
+   * @param \Drupal\Core\Session\AccountProxyInterface     $current_user
    *   A current user instance.
    * @param \Drupal\Core\Language\LanguageManagerInterface $language_manager
    *   The language manager.
    */
   public function __construct(
-    array $configuration,
-    $plugin_id,
-    $plugin_definition,
-    array $serializer_formats,
-    LoggerInterface $logger,
-    AccountProxyInterface $current_user,
-    LanguageManagerInterface $language_manager) {
-    parent::__construct($configuration, $plugin_id, $plugin_definition, $serializer_formats, $logger);
+      array $configuration,
+      $plugin_id,
+      $plugin_definition,
+      array $serializer_formats,
+      LoggerInterface $logger,
+      AccountProxyInterface $current_user,
+      LanguageManagerInterface $language_manager
+  ) {
+      parent::__construct($configuration, $plugin_id, $plugin_definition, $serializer_formats, $logger);
 
-    $this->languageManager = $language_manager;
-    $this->currentUser = $current_user;
+      $this->languageManager = $language_manager;
+      $this->currentUser = $current_user;
   }
 
   /**
    * {@inheritdoc}
    */
-  public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition) {
+  public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition)
+  {
     return new static(
       $configuration,
       $plugin_id,
@@ -90,36 +94,37 @@ class LanguageRestResource extends ResourceBase {
    * @throws \Symfony\Component\HttpKernel\Exception\HttpException
    *   Throws exception expected.
    */
-  public function get() {
-    $data = array();
-    try {
-      $lang_obj = $this->languageManager->getLanguages();
-      if ($lang_obj) {
-        foreach ($lang_obj as $lang_array) {
-          $key = $lang_array->getId();
-          $data[$key] = [
-            'name' => $lang_array->getName(),
-            'id'   => $key,
+  public function get()
+  {
+      $data = array();
+      try {
+        $lang_obj = $this->languageManager->getLanguages();
+        if ($lang_obj) {
+          foreach ($lang_obj as $lang_array) {
+            $key = $lang_array->getId();
+            $data[$key] = [
+              'name' => $lang_array->getName(),
+              'id'   => $key,
+            ];
+          }
+          $data['default'] = [
+            'name' => $this->languageManager->getDefaultLanguage()->getId(),
+            'id' => $this->languageManager->getDefaultLanguage()->getName(),
           ];
         }
-        $data['default'] = [
-          'name' => $this->languageManager->getDefaultLanguage()->getId(),
-          'id' => $this->languageManager->getDefaultLanguage()->getName(),
-        ];
       }
-    }
-    catch (\Exception $e) {
-      $this->logger->error('Language not found.');
-      $data = array(
-        'error' => $this->t('Language not found.'),
+      catch (\Exception $e) {
+        $this->logger->error('Language not found.');
+        $data = array(
+          'error' => $this->t('Language not found.'),
+        );
+      }
+      $build = array(
+        '#cache' => array(
+          'max-age' => 0,
+        ),
       );
-    }
-    $build = array(
-      '#cache' => array(
-        'max-age' => 0,
-      ),
-    );
-    return (new ResourceResponse($data))->addCacheableDependency($build);
+      return (new ResourceResponse($data))->addCacheableDependency($build);
   }
 
 }

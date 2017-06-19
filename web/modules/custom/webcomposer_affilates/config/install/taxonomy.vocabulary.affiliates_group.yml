@@ -1,0 +1,9 @@
+uuid: 531bdd1a-37b0-4250-818b-732fc89e7402
+langcode: zh-hans
+status: true
+dependencies: {  }
+name: 'Affiliates Group'
+vid: affiliates_group
+description: 'List of group of Affiliates'
+hierarchy: 0
+weight: -9

@@ -5,61 +5,68 @@ namespace Drupal\casino_config\Form;
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
 
-class UnSupportedLanguage extends ConfigFormBase{
+class UnSupportedLanguage extends ConfigFormBase
+{
 
   /**
    * {@inheritdoc}
    */
-  protected function getEditableConfigNames() {
+  protected function getEditableConfigNames()
+  {
     return ['casino_config.unsupported_language'];
   }
 
   /**
    * {@inheritdoc}
    */
-  public function getFormId() {
+  public function getFormId()
+  {
     return 'dafabet_keyword_settings_form';
   }
 
   /**
    * {@inheritdoc}
    */
-  public function buildForm(array $form, FormStateInterface $form_state) {
+  public function buildForm(array $form, FormStateInterface $form_state)
+  {
     $config = $this->config('casino_config.unsupported_language');
-      $form['unsupp_language_title'] = array(
-          '#type' => 'textfield',
-          '#title' => $this->t('Title'),
-          '#default_value' => $config->get('unsupp_language_title'),
-      );
-      $d = $config->get('unsupp_language_content');
-      $form['unsupp_language_content'] = array(
-          '#type' => 'text_format',
-          '#title' => $this->t('Content'),
-          '#default_value' => $d['value'],
-          '#format' => $d['format']
-      );
-      return parent::buildForm($form, $form_state);
+    $form['unsupp_language_title'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Title'),
+      '#default_value' => $config->get('unsupp_language_title'),
+    ];
+
+    $d = $config->get('unsupp_language_content');
+    $form['unsupp_language_content'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('Content'),
+      '#default_value' => $d['value'],
+      '#format' => $d['format']
+    ];
+
+    return parent::buildForm($form, $form_state);
   }
 
   /**
    * {@inheritdoc}
    */
-  public function validateForm(array &$form, FormStateInterface $form_state) {
+  public function validateForm(array &$form, FormStateInterface $form_state)
+  {
     parent::validateForm($form, $form_state);
   }
 
   /**
    * {@inheritdoc}
    */
-  public function submitForm(array &$form, FormStateInterface $form_state) {
-    $keys = array(
+  public function submitForm(array &$form, FormStateInterface $form_state)
+  {
+    $keys = [
       'unsupp_language_title',
-      'unsupp_language_content'
-    );
+      'unsupp_language_content',
+    ];
     foreach($keys as $key){
       $this->config('casino_config.unsupported_language')->set($key, $form_state->getValue($key))->save();
     }
     parent::submitForm($form, $form_state);
   }
-
 }
