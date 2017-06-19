@@ -49,7 +49,7 @@ class SessionTimeoutConfig extends ConfigFormBase
       '#type' => 'textfield',
       '#title' => $this->t('Maximum Session Time'),
       '#default_value' => $config->get('session_maxtime'),
-      '#description' => $this->t('The maximum time after which the Player gets automatically logged Out.'),
+      '#description' => $this->t('The maximum time after which the Player gets automatically logged Out.The entered time should be in minutes.'),
       '#required' => true,
     ];
 
