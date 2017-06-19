@@ -25,35 +25,3 @@ function entrypage_promotions_help($route_name, RouteMatchInterface $route_match
   }
 }
 
-/**
- * { hide promotion from everywhere }
- *
- * @param      \Drupal\Core\Entity\EntityInterface  $node   The node
- */
-function entrypage_promotions_node_presave(EntityInterface $node) {
-
- // We are doing this to hide promotion from everywhere.
-
-  $connection = Database::getConnection();
-  if($node->getType() == 'promotion') {
-    $check = $node->get('field_hide_promotion')->getValue();
-
-    if($check == TRUE) {
-      $nid = $node->id();
-      $getResult = $connection->select('node__field_right_side_block_content', 'n')
-      ->fields('n', array('field_right_side_block_content_target_id'))
-      ->fields('n', array('entity_id', 'field_right_side_block_content_target_id'))
-      ->condition('n.field_right_side_block_content_target_id',  "$nid");
-      $data = $getResult->execute()->fetchAll();
-
-      foreach ($data as $value) {
-        $targetId = $value->field_right_side_block_content_target_id;
-        $query = $connection->delete('node__field_right_side_block_content')
-        ->condition('field_right_side_block_content_target_id',  $targetId);
-        $data = $query->execute();
-
-      }
-    }
-
-  }
-}

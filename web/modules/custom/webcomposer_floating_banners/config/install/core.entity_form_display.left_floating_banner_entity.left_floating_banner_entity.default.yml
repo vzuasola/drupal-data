@@ -16,6 +16,8 @@ dependencies:
     - link
     - paragraphs
     - webcomposer_floating_banners
+_core:
+  default_config_hash: y9x1pbL-kI6XorW0H3tXhajuM-ndKbicJ8cQLEtNjrs
 id: left_floating_banner_entity.left_floating_banner_entity.default
 targetEntityType: left_floating_banner_entity
 bundle: left_floating_banner_entity
@@ -23,7 +25,7 @@ mode: default
 content:
   field_banner_item:
     type: entity_reference_paragraphs
-    weight: 15
+    weight: 5
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -34,13 +36,13 @@ content:
     third_party_settings: {  }
     region: content
   field_floating_banner_type:
-    weight: 16
+    weight: 6
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_image:
-    weight: 6
+    weight: 1
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -48,7 +50,7 @@ content:
     type: image_image
     region: content
   field_link:
-    weight: 11
+    weight: 2
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -56,13 +58,13 @@ content:
     type: link_default
     region: content
   field_link_target:
-    weight: 13
+    weight: 3
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_title:
-    weight: 12
+    weight: 0
     settings:
       size: 60
       placeholder: ''
@@ -70,35 +72,13 @@ content:
     type: string_textfield
     region: content
   field_title_layout:
-    weight: 14
+    weight: 4
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
-  langcode:
-    type: language_select
-    weight: 2
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  name:
-    type: string_textfield
-    weight: -4
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  translation:
-    weight: 10
-    region: content
-  user_id:
-    type: entity_reference_autocomplete
-    weight: 5
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    region: content
-    third_party_settings: {  }
-hidden: {  }
+hidden:
+  langcode: true
+  name: true
+  translation: true
+  user_id: true

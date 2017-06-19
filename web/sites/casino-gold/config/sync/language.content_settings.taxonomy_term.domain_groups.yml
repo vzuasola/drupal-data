@@ -8,11 +8,11 @@ dependencies:
     - content_translation
 third_party_settings:
   content_translation:
-    enabled: true
+    enabled: false
 _core:
   default_config_hash: aod9DXcLsMPrhctj0fGMevbz1MworInCTHMvO3_L67k
 id: taxonomy_term.domain_groups
 target_entity_type_id: taxonomy_term
 target_bundle: domain_groups
 default_langcode: site_default
-language_alterable: true
+language_alterable: false

@@ -9,8 +9,8 @@ id: taxonomy_term.products.field_product_id
 field_name: field_product_id
 entity_type: taxonomy_term
 bundle: products
-label: product_id
-description: ''
+label: 'Product ID'
+description: 'The unique ID for this term'
 required: true
 translatable: false
 default_value: {  }

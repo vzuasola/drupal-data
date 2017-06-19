@@ -1,0 +1,50 @@
+<?php
+
+
+/**
+ * Implements hook_uninstall
+ */
+function webcomposer_floating_banners_uninstall() {
+   $keys = [
+      'core.base_field_override.left_floating_banner_entity.left_floating_banner_entity.user_id',
+      'core.entity_form_display.left_floating_banner_entity.left_floating_banner_entity.default',
+      'core.entity_form_display.paragraph.floating_banner_item.default',
+      'core.entity_view_display.left_floating_banner_entity.left_floating_banner_entity.default',
+      'core.entity_view_display.paragraph.floating_banner_item.default',
+      'field.field.left_floating_banner_entity.left_floating_banner_entity.field_banner_item',
+      'field.field.left_floating_banner_entity.left_floating_banner_entity.field_floating_banner_type',
+      'field.field.left_floating_banner_entity.left_floating_banner_entity.field_image',
+      'field.field.left_floating_banner_entity.left_floating_banner_entity.field_link',
+      'field.field.left_floating_banner_entity.left_floating_banner_entity.field_link_target',
+      'field.field.left_floating_banner_entity.left_floating_banner_entity.field_title',
+      'field.field.left_floating_banner_entity.left_floating_banner_entity.field_title_layout',
+      'field.field.paragraph.floating_banner_item.field_button_text',
+      'field.field.paragraph.floating_banner_item.field_enable',
+      'field.field.paragraph.floating_banner_item.field_link',
+      'field.field.paragraph.floating_banner_item.field_link_class',
+      'field.field.paragraph.floating_banner_item.field_link_target',
+      'field.storage.left_floating_banner_entity.field_banner_item',
+      'field.storage.left_floating_banner_entity.field_floating_banner_type',
+      'field.storage.left_floating_banner_entity.field_image',
+      'field.storage.left_floating_banner_entity.field_link',
+      'field.storage.left_floating_banner_entity.field_link_target',
+      'field.storage.left_floating_banner_entity.field_title',
+      'field.storage.left_floating_banner_entity.field_title_layout',
+      'field.storage.paragraph.field_button_text',
+      'field.storage.paragraph.field_link',
+      'field.storage.paragraph.field_link_class',
+      'language.content_settings.left_floating_banner_entity.left_floating_banner_entity',
+      'language.content_settings.paragraph.floating_banner_item',
+      'paragraphs.paragraphs_type.floating_banner_item',
+      'views.view.floating_banner',
+      'field.storage.paragraph.field_lightbox_content',
+      'field.storage.paragraph.field_lightbox_title',
+      'field.field.paragraph.floating_banner_item.field_lightbox_content',
+      'field.field.paragraph.floating_banner_item.field_lightbox_title',
+    ];
+
+    foreach ($keys as $key) {
+      \Drupal::configFactory()->getEditable($key)->delete();
+    }
+
+}

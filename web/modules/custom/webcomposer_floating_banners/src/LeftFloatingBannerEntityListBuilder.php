@@ -20,8 +20,7 @@ class LeftFloatingBannerEntityListBuilder extends EntityListBuilder {
    * {@inheritdoc}
    */
   public function buildHeader() {
-    $header['id'] = $this->t('Left floating banner entity ID');
-    $header['name'] = $this->t('Name');
+    $header['title'] = $this->t('Title');
     return $header + parent::buildHeader();
   }
 
@@ -30,15 +29,19 @@ class LeftFloatingBannerEntityListBuilder extends EntityListBuilder {
    */
   public function buildRow(EntityInterface $entity) {
     /* @var $entity \Drupal\webcomposer_floating_banners\Entity\LeftFloatingBannerEntity */
-    $row['id'] = $entity->id();
-    $row['name'] = $this->l(
-      $entity->label(),
+     // Get current and default language for fall back.
+    $langCode = \Drupal::service('language_manager')->getCurrentLanguage()->getId();
+    $entity = $entity->getTranslation($langCode);
+    $getTitle = $entity->get('field_title')->value;
+    $row['title'] = $this->l(
+      $getTitle,
       new Url(
         'entity.left_floating_banner_entity.edit_form', array(
           'left_floating_banner_entity' => $entity->id(),
         )
       )
     );
+
     return $row + parent::buildRow($entity);
   }
 
