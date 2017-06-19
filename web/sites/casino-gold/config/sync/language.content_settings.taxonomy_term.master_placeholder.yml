@@ -8,11 +8,11 @@ dependencies:
     - content_translation
 third_party_settings:
   content_translation:
-    enabled: true
+    enabled: false
 _core:
   default_config_hash: aWM7rFZzVK1xkXPUSyrvLuQ_bOueDrqgorw7vX0j4pY
 id: taxonomy_term.master_placeholder
 target_entity_type_id: taxonomy_term
 target_bundle: master_placeholder
 default_langcode: site_default
-language_alterable: true
+language_alterable: false

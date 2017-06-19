@@ -31,8 +31,8 @@ class ProductTabs extends ResourceBase {
     $build = array(
       '#cache' => array(
         'max-age' => 0,
-      ),
-    );
+        ),
+      );
 
     $data = $this->getProductTabs();
 
@@ -54,21 +54,22 @@ class ProductTabs extends ResourceBase {
    */
   private function getProductTabs()
   {
-    // You must to implement the logic of your REST Resource here.
+    //You must to implement the logic of your REST Resource here.
     $query = \Drupal::entityQuery('taxonomy_term');
     $query->condition('vid', "products");
-    $query->condition('field_enable_disable', '1');
     $query->sort('weight', 'ASC');
     $tids = $query->execute();
     $terms = \Drupal\taxonomy\Entity\Term::loadMultiple($tids);
 
+
     if (empty($terms)) {
-      $errorMessage = t('No Product tabs are configured. Please configure the products and translation in product taxonomy.');
+      $errorMessage = t('No Product tabs are configured. Please configure the
+        products and translation in product taxonomy.');
       \Drupal::logger('wbc_rest_resource')->error($errorMessage);
       throw new NotFoundHttpException($errorMessage);
     }
 
-    // Get current and default language for fallback.
+    // Get current and default language for fall back.
     $langCode = \Drupal::service('language_manager')->getCurrentLanguage()->getId();
     $defaultLang = \Drupal::service('language_manager')->getDefaultLanguage()->getId();
 
@@ -80,32 +81,53 @@ class ProductTabs extends ResourceBase {
           $translation = $getEntity->getTranslation($defaultLang);
         }
 
-        $productId = $getEntity->field_product_id->value;
-
         $check_enable = $translation->field_enable_disable->value;
-        $class = isset($translation->field_class->value) ? $translation->field_class->value : NULL;
-        $target = isset($translation->field_target->value) ? $translation->field_target->value : NULL;
-        $tag = isset($translation->field_menu_tag->value) ? $translation->field_menu_tag->value : NULL;
-            
+
         // Get count of promotions tagged with product.
         if ($check_enable === '1') {
-          $key = $translation->id();
-          $count = $this->getProductPromotionCount($key, $langCode);
 
-          $productAttribute = ['class'=> $class , 'target' => $target, 'tag' => $tag];
-          $data[] = [
-            'product_name' => $translation->getName(),
-            'product_id' => $productId,
-            'id' => $key,
-            'count' => $count,
-            'product_attribute' => $productAttribute,
-          ];
-        }
-      }
-    }
+          $filters = [];
+          $productId = $getEntity->field_product_id->value;
+          $class = isset($translation->field_class->value) ? $translation->field_class->value : NULL;
+          $target = isset($translation->field_target->value) ? $translation->field_target->value : NULL;
+          $tag = isset($translation->field_menu_tag->value) ? $translation->field_menu_tag->value : NULL;
 
-    return $data;
-  }
+          $key = $translation->Id();
+
+          // Find the sub filter of product term
+          $findChildren = \Drupal::entityTypeManager()->getStorage('taxonomy_term')
+            ->loadTree('products', $parent = $key, $max_depth = NULL, $load_entities = FALSE);
+
+          foreach ($findChildren as $value) {
+           $term = \Drupal\taxonomy\Entity\Term::load($value->tid);
+           
+           if (in_array($key, $value->parents)) {
+             $filters[] = [
+              'filter_name' => $value->name, 
+              'id' => $value->tid , 
+              'parent' => $value->parents, 
+              'subfilter_id' => $term->field_product_id->value,
+            ];
+           }
+         }
+
+         $count = $this->getProductPromotionCount($key, $langCode);
+
+         $productAttribute = ['class'=> $class , 'target' => $target, 'tag' => $tag];
+         $data[] = [
+           'product_name' => $translation->getName(),
+           'product_id' => $productId,
+           'id' => $key,
+           'count' => $count,
+           'product_attribute' => $productAttribute,
+           'filters' => $filters,
+         ];
+       }
+     }
+   }
+
+   return $data;
+ }
 
   /**
    * Gets the product promotion count.
@@ -116,10 +138,10 @@ class ProductTabs extends ResourceBase {
    */
   private function getProductPromotionCount($tids , $langCode) {
     $query = \Drupal::entityQuery('node')
-      ->condition('status', 1)
-      ->condition('type', 'promotion')
-      ->condition('field_product', "$tids")
-      ->condition('langcode' , "$langCode");
+    ->condition('status', 1)
+    ->condition('type', 'promotion')
+    ->condition('field_product', "$tids")
+    ->condition('langcode' , "$langCode");
 
     $countNids = $query->count('processes')->execute();
     $countNids = !empty($countNids) ? $countNids : "0";

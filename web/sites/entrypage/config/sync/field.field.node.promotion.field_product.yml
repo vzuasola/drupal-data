@@ -5,24 +5,21 @@ dependencies:
   config:
     - field.storage.node.field_product
     - node.type.promotion
-    - taxonomy.vocabulary.products
 id: node.promotion.field_product
 field_name: field_product
 entity_type: node
 bundle: promotion
 label: Product
-description: ''
+description: 'The product this promotion content will be tagged to'
 required: true
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:taxonomy_term'
+  handler: views
   handler_settings:
-    target_bundles:
-      products: products
-    sort:
-      field: _none
-    auto_create: false
-    auto_create_bundle: ''
+    view:
+      view_name: product
+      display_name: entity_reference_1
+      arguments: {  }
 field_type: entity_reference

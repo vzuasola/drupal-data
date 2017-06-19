@@ -1,5 +1,8 @@
 affiliates_parameters: 1
 affiliates_parameters_message: 'Term @term already exists in vocabulary @vocabulary.'
-_core:
-  default_config_hash: 0tEKhHEBKw7t69xR4gd-EIAl54uy17BI4Jj2oYdNJxQ
-langcode: zh-hans
+domain_groups: 1
+domain_groups_message: 'Term @term already exists in vocabulary @vocabulary.'
+domain: 1
+domain_message: 'Term @term already exists in vocabulary @vocabulary.'
+master_placeholder: 1
+master_placeholder_message: 'Term @term already exists in vocabulary @vocabulary.'

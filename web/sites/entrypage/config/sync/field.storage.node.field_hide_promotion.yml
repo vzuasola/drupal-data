@@ -1,4 +1,3 @@
-
 uuid: bf4a5619-be54-4ec0-99e9-299e21549e21
 langcode: en
 status: true
@@ -17,4 +16,3 @@ translatable: true
 indexes: {  }
 persist_with_no_fields: false
 custom_storage: false
-
