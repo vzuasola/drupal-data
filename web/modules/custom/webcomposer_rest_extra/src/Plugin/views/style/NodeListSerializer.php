@@ -27,8 +27,10 @@ class NodeListSerializer extends Serializer {
       $rowAssoc = $this->serializer->normalize($this->view->rowPlugin->render($row));
 
       // add aliases on the nodes
-      $alias = \Drupal::service('path.alias_manager')->getAliasByPath("/node/$row->nid");
-      $rowAssoc['alias'][0]['value'] = $alias;
+      if (isset($row->nid)) {
+        $alias = \Drupal::service('path.alias_manager')->getAliasByPath("/node/$row->nid");
+        $rowAssoc['alias'][0]['value'] = $alias;
+      }
 
       foreach ($rowAssoc as $key => $value) {
         if (isset($value[0]['target_type']) && $value[0]['target_type'] == 'taxonomy_term') {

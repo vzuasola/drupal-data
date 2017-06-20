@@ -48,7 +48,7 @@ class LeftFloatingBannerEntitySettingsForm extends FormBase {
    *   Form definition array.
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    $form['LeftFloatingBannerEntity_settings']['#markup'] = 'Settings form for Left floating banner entity entities. Manage field settings here.';
+    $form['LeftFloatingBannerEntity_settings']['#markup'] = 'Settings form for Floating Banner entities. Manage field settings here.';
     return $form;
   }
 

@@ -8,7 +8,7 @@ dependencies:
   module:
     - options
 _core:
-  default_config_hash: oXykLVpqkIbRowBFbKhholQirJ96ahwxDa04LP3AL5o
+  default_config_hash: fVsdmTI-yafcRE_EFwInqS7l9mTRGsbjJ1KNXFcmUQo
 id: paragraph.floating_banner_item.field_link_class
 field_name: field_link_class
 entity_type: paragraph

@@ -1,4 +1,4 @@
-uuid: 2f74daea-7b92-419e-aadd-1e78aa8bb83e
+uuid: 4c2dc230-da89-414d-8f63-17d68144e159
 langcode: en
 status: true
 dependencies:
@@ -12,98 +12,73 @@ dependencies:
     - field.field.paragraph.floating_banner_item.field_link_target
     - paragraphs.paragraphs_type.floating_banner_item
   module:
-    - field_group
     - link
+    - options
     - text
-third_party_settings:
-  field_group:
-    group_link:
-      children:
-        - field_link
-        - field_link_target
-        - field_link_class
-      parent_name: ''
-      weight: 5
-      format_type: details
-      format_settings:
-        id: ''
-        classes: ''
-        open: false
-        required_fields: false
-      label: Link
-    group_lightbox:
-      children:
-        - field_lightbox_title
-        - field_lightbox_content
-      parent_name: ''
-      weight: 6
-      format_type: details
-      format_settings:
-        id: ''
-        classes: ''
-        open: false
-        required_fields: false
-      label: Lightbox
 _core:
-  default_config_hash: XgZfOXiU_LgBGqByUxN8W5aSpnaJF7xVLMIKttBAIAY
+  default_config_hash: CyROnntYjBFIdFrxZPJk4a_p68ZVi598ERuZmm79uZM
 id: paragraph.floating_banner_item.default
 targetEntityType: paragraph
 bundle: floating_banner_item
 mode: default
 content:
   field_button_text:
-    weight: 1
+    weight: 0
+    label: above
     settings:
-      size: 60
-      placeholder: ''
+      link_to_entity: false
     third_party_settings: {  }
-    type: string_textfield
+    type: string
     region: content
   field_enable:
-    weight: 0
+    weight: 1
+    label: above
     settings:
-      display_label: true
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
     third_party_settings: {  }
-    type: boolean_checkbox
+    type: boolean
     region: content
   field_lightbox_content:
-    type: text_textarea
-    weight: 10
-    region: content
-    settings:
-      rows: 5
-      placeholder: ''
+    weight: 6
+    label: above
+    settings: {  }
     third_party_settings: {  }
+    type: text_default
+    region: content
   field_lightbox_title:
-    type: string_textfield
-    weight: 9
-    region: content
+    weight: 5
+    label: above
     settings:
-      size: 60
-      placeholder: ''
+      link_to_entity: false
     third_party_settings: {  }
+    type: string
+    region: content
   field_link:
     weight: 2
+    label: above
     settings:
-      placeholder_url: ''
-      placeholder_title: ''
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
     third_party_settings: {  }
-    type: link_default
+    type: link
     region: content
   field_link_class:
     weight: 4
+    label: above
     settings: {  }
     third_party_settings: {  }
-    type: options_select
+    type: list_default
     region: content
   field_link_target:
     weight: 3
+    label: above
     settings: {  }
     third_party_settings: {  }
-    type: options_select
+    type: list_default
     region: content
-hidden:
-  created: true
-  status: true
-  translation: true
-  uid: true
+hidden: {  }
