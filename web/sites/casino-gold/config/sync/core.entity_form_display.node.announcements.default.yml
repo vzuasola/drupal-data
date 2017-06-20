@@ -34,6 +34,17 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  publish_on:
+    type: datetime_timestamp
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  scheduler_settings:
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   title:
     type: string_textfield
     weight: 0
@@ -47,10 +58,14 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  unpublish_on:
+    type: datetime_timestamp
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   created: true
   promote: true
-  publish_on: true
   sticky: true
   uid: true
-  unpublish_on: true
