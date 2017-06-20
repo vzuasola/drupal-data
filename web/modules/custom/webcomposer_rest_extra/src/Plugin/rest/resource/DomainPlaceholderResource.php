@@ -73,7 +73,7 @@ class DomainPlaceholderResource extends ResourceBase
 
       $term = reset($term);
 
-      // Append placeholder from domain
+      // Append placeholder from domain group
       $group = $term->get('field_select_domain_group')->referencedEntities();
       $domainGroupPlaceholder = $this->getGroupDomainPlaceholder($group[0]->id());
       $definition = array_merge($definition, $domainGroupPlaceholder);
