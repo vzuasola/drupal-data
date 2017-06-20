@@ -3,18 +3,12 @@ langcode: zh-hans
 status: true
 dependencies:
   config:
-    - field.storage.node.field_full_tile_image
-    - field.storage.node.field_full_tile_summary
-    - field.storage.node.field_half_tile_image
-    - field.storage.node.field_half_tile_summary
     - node.type.promotion
   module:
-    - image
     - node
     - options
     - rest
     - serialization
-    - text
     - user
 id: promotions
 label: Promotions
@@ -128,10 +122,61 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_full_tile_summary:
-          id: field_full_tile_summary
-          table: node__field_full_tile_summary
-          field: field_full_tile_summary
+        path:
+          id: path
+          table: node
+          field: path
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          absolute: false
+          entity_type: node
+          plugin_id: node_path
+        changed:
+          id: changed
+          table: node_field_data
+          field: changed
           relationship: none
           group_type: group
           admin_label: ''
@@ -177,8 +222,11 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: text_default
-          settings: {  }
+          type: timestamp
+          settings:
+            date_format: custom
+            custom_date_format: 'Y-m-d H:i:s'
+            timezone: ''
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -189,196 +237,8 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
-        field_full_tile_image:
-          id: field_full_tile_image
-          table: node__field_full_tile_image
-          field: field_full_tile_image
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: '{{ field_full_tile_link }}'
-            absolute: true
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: image
-          settings:
-            image_style: ''
-            image_link: ''
-          group_column: ''
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_half_tile_summary:
-          id: field_half_tile_summary
-          table: node__field_half_tile_summary
-          field: field_half_tile_summary
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: text_default
-          settings: {  }
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_half_tile_image:
-          id: field_half_tile_image
-          table: node__field_half_tile_image
-          field: field_half_tile_image
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: image
-          settings:
-            image_style: ''
-            image_link: ''
-          group_column: ''
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
+          entity_type: node
+          entity_field: changed
           plugin_id: field
       filters:
         status:
@@ -471,11 +331,7 @@ display:
         - 'languages:language_interface'
         - 'user.node_grants:view'
         - user.permissions
-      tags:
-        - 'config:field.storage.node.field_full_tile_image'
-        - 'config:field.storage.node.field_full_tile_summary'
-        - 'config:field.storage.node.field_half_tile_image'
-        - 'config:field.storage.node.field_half_tile_summary'
+      tags: {  }
   block_1:
     display_plugin: block
     id: block_1
@@ -490,11 +346,7 @@ display:
         - 'languages:language_interface'
         - 'user.node_grants:view'
         - user.permissions
-      tags:
-        - 'config:field.storage.node.field_full_tile_image'
-        - 'config:field.storage.node.field_full_tile_summary'
-        - 'config:field.storage.node.field_half_tile_image'
-        - 'config:field.storage.node.field_half_tile_summary'
+      tags: {  }
   rest_export_1:
     display_plugin: rest_export
     id: rest_export_1
@@ -515,8 +367,15 @@ display:
         filter_groups: false
         sorts: false
       row:
-        type: data_entity
-        options: {  }
+        type: data_field
+        options:
+          field_options:
+            title:
+              alias: ''
+              raw_output: false
+            path:
+              alias: ''
+              raw_output: false
       pager:
         type: none
         options:
@@ -650,11 +509,7 @@ display:
         - request_format
         - 'user.node_grants:view'
         - user.permissions
-      tags:
-        - 'config:field.storage.node.field_full_tile_image'
-        - 'config:field.storage.node.field_full_tile_summary'
-        - 'config:field.storage.node.field_half_tile_image'
-        - 'config:field.storage.node.field_half_tile_summary'
+      tags: {  }
   rest_export_2:
     display_plugin: rest_export
     id: rest_export_2
@@ -675,8 +530,15 @@ display:
         filters: false
         filter_groups: false
       row:
-        type: data_entity
-        options: {  }
+        type: data_field
+        options:
+          field_options:
+            title:
+              alias: ''
+              raw_output: false
+            path:
+              alias: ''
+              raw_output: false
       pager:
         type: none
         options:
@@ -822,11 +684,7 @@ display:
         - request_format
         - 'user.node_grants:view'
         - user.permissions
-      tags:
-        - 'config:field.storage.node.field_full_tile_image'
-        - 'config:field.storage.node.field_full_tile_summary'
-        - 'config:field.storage.node.field_half_tile_image'
-        - 'config:field.storage.node.field_half_tile_summary'
+      tags: {  }
   rest_export_3:
     display_plugin: rest_export
     id: rest_export_3
@@ -846,8 +704,15 @@ display:
         filters: false
         filter_groups: false
       row:
-        type: data_entity
-        options: {  }
+        type: data_field
+        options:
+          field_options:
+            title:
+              alias: ''
+              raw_output: false
+            path:
+              alias: ''
+              raw_output: false
       pager:
         type: none
         options:
@@ -1003,8 +868,4 @@ display:
         - request_format
         - 'user.node_grants:view'
         - user.permissions
-      tags:
-        - 'config:field.storage.node.field_full_tile_image'
-        - 'config:field.storage.node.field_full_tile_summary'
-        - 'config:field.storage.node.field_half_tile_image'
-        - 'config:field.storage.node.field_half_tile_summary'
+      tags: {  }
