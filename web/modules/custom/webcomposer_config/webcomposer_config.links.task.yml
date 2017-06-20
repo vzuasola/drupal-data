@@ -17,3 +17,8 @@ webcomposer_config.outdated_browser_configuration_tab:
   route_name: webcomposer_config.outdated_browser_configuration_form
   title: 'Outdated Browser Configuration'
   base_route: webcomposer_config.outdated_browser_configuration_form
+
+webcomposer_config.page_not_found_configuration_tab:
+  route_name: entrypage_config.page_not_found_form
+  title: 'Page Not Found'
+  base_route: entrypage_config.page_not_found_form

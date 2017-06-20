@@ -21,3 +21,9 @@ webcomposer_config.outdated_browser_configuration_schema:
   base_route_name: webcomposer_config.outdated_browser_configuration_form
   names:
     - 'webcomposer_config.browser_configuration'
+
+webcomposer_config.page_not_found_schema:
+  title: 'Page Not Found'
+  base_route_name: entrypage_config.page_not_found_form
+  names:
+    - 'webcomposer_config.page_not_found'
