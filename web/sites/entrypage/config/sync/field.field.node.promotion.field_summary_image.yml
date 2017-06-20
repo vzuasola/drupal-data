@@ -6,20 +6,13 @@ dependencies:
     - field.storage.node.field_summary_image
     - node.type.promotion
   module:
-    - content_translation
     - image
-third_party_settings:
-  content_translation:
-    translation_sync:
-      alt: alt
-      title: title
-      file: '0'
 id: node.promotion.field_summary_image
 field_name: field_summary_image
 entity_type: node
 bundle: promotion
-label: 'Promotion Thumbnail  ( summary page )'
-description: 'The Image upload size is 575x325 px.'
+label: 'Summary Image'
+description: ''
 required: false
 translatable: true
 default_value: {  }

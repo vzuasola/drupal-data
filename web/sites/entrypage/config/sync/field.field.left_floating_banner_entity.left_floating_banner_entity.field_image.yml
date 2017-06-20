@@ -1,28 +1,28 @@
-uuid: 03cc6521-6435-4cbb-89aa-4bc5bdd93b00
+uuid: 7f7b5f15-8d9f-40e2-b7ee-2f4fd5b64022
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_image
-    - node.type.promotion
+    - field.storage.left_floating_banner_entity.field_image
   module:
     - content_translation
     - image
+    - webcomposer_floating_banners
 third_party_settings:
   content_translation:
     translation_sync:
-      file: file
-      alt: '0'
-      title: '0'
+      alt: alt
+      title: title
+      file: '0'
 _core:
-  default_config_hash: n93fBTNSs6iS9Zpxc-Euo8aH6XxJg2hOYB0Vr3Il0I8
-id: node.promotion.field_image
+  default_config_hash: nPUanhcj0GxWT_mPiPyySRT3opyEYI3-bH_KYZbqqu0
+id: left_floating_banner_entity.left_floating_banner_entity.field_image
 field_name: field_image
-entity_type: node
-bundle: promotion
-label: 'Banner Image'
-description: 'The Image upload size is 1920x500 px.'
-required: true
+entity_type: left_floating_banner_entity
+bundle: left_floating_banner_entity
+label: Image
+description: ''
+required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''
