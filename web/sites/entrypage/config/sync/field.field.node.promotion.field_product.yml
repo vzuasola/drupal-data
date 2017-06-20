@@ -12,7 +12,7 @@ bundle: promotion
 label: Product
 description: 'The product this promotion content will be tagged to'
 required: true
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

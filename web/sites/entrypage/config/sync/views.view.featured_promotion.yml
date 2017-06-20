@@ -17,6 +17,8 @@ dependencies:
     - text
     - user
     - webcomposer_rest_extra
+_core:
+  default_config_hash: Z_szoVdDunll8_am3-NeQVstJQT1lPAuHQtql0w23YU
 id: featured_promotion
 label: 'Featured Promotion for all product'
 module: views
@@ -569,6 +571,7 @@ display:
         fields: false
         filters: false
         filter_groups: false
+        empty: false
       filters:
         status:
           value: '1'
@@ -718,6 +721,7 @@ display:
         weight: 2
         context: '0'
         menu_name: admin
+      empty: {  }
     cache_metadata:
       max-age: 0
       contexts:

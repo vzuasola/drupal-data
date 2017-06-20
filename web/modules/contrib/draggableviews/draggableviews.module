@@ -78,6 +78,8 @@ function draggableviews_views_data_alter(&$data) {
         'field' => 'entity_id',
         'extra' => array(
           array('field' => 'args', 'value' => '***LANGUAGE***'),
+          array('field' => 'view_name', 'value' => '***VIEW_ID***'),
+          array('field' => 'view_display', 'value' => '***VIEW_DISPLAY***'),
         ),
       );
     }
@@ -91,7 +93,7 @@ function draggableviews_views_data_alter(&$data) {
  */
 function draggableviews_views_query_substitutions(\Drupal\views\ViewExecutable $view) {
   $language = \Drupal::languageManager()->getCurrentLanguage(LanguageInterface::TYPE_CONTENT)->getId();
-  return array('***LANGUAGE***' => $language);
+  return array('***VIEW_ID***' => $view->id(), '***VIEW_DISPLAY***' => $view->current_display, '***LANGUAGE***' => $language);
 }
 
 /**
