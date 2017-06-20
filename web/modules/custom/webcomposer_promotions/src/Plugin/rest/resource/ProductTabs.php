@@ -18,6 +18,8 @@ use Drupal\node\Entity\Node;
 /**
  * Provides a resource to get view modes by entity and bundle.
  *
+ * TODO This can be refined
+ *
  * @RestResource(
  *   id = "product_tabs",
  *   label = @Translation("Product Tabs"),
@@ -162,20 +164,22 @@ class ProductTabs extends ResourceBase {
             ->loadTree('products', $parent = $key, $max_depth = NULL, $load_entities = FALSE);
 
           foreach ($findChildren as $value) {
-            $term = \Drupal\taxonomy\Entity\Term::load($value->tid);
-
-            try {
-              $filterTranslated = $term->getTranslation($langCode);
-            } catch (\Exception $e) {
-              $filterTranslated = $term->getTranslation($defaultLang);
-            }
-
             if (in_array($key, $value->parents)) {
+
+              // get term translation
+              $term = \Drupal\taxonomy\Entity\Term::load($value->tid);
+
+              try {
+                $filterTranslated = $term->getTranslation($langCode);
+              } catch (\Exception $e) {
+                $filterTranslated = $term->getTranslation($defaultLang);
+              }
+
               $filters[] = [
-                'filter_name' => $filterTranslated->name,
+                'filter_name' => $filterTranslated->name->value,
                 'id' => $value->tid ,
                 'parent' => $value->parents,
-                'subfilter_id' => $value->field_product_id->value,
+                'subfilter_id' => $term->field_product_id->value,
               ];
             }
           }
