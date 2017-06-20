@@ -45,7 +45,7 @@ third_party_settings:
         required_fields: false
       label: Lightbox
 _core:
-  default_config_hash: XgZfOXiU_LgBGqByUxN8W5aSpnaJF7xVLMIKttBAIAY
+  default_config_hash: wseahqsuA6mT03G4veAp_MOTiLQ2PftvQcklw4t_kDE
 id: paragraph.floating_banner_item.default
 targetEntityType: paragraph
 bundle: floating_banner_item

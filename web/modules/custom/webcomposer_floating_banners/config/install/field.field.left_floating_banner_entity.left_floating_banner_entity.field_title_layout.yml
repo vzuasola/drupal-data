@@ -7,13 +7,15 @@ dependencies:
   module:
     - options
     - webcomposer_floating_banners
+_core:
+  default_config_hash: PJhwilfpBZswZD88KI494Zzyn0dufwUNm0dSZ15hVbk
 id: left_floating_banner_entity.left_floating_banner_entity.field_title_layout
 field_name: field_title_layout
 entity_type: left_floating_banner_entity
 bundle: left_floating_banner_entity
 label: 'Title layout'
 description: ''
-required: false
+required: true
 translatable: true
 default_value:
   -

@@ -1,0 +1,7 @@
+webcomposer_floating_banners.admin_settings:
+  path: 'admin/config/webcomposer/banners'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Webcomposer Floating Banners'
+  requirements:
+    _permission: 'administer site configuration'

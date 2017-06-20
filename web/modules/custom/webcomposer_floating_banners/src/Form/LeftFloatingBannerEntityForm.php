@@ -34,17 +34,18 @@ class LeftFloatingBannerEntityForm extends ContentEntityForm {
 
     switch ($status) {
       case SAVED_NEW:
-        drupal_set_message($this->t('Created the %label Left floating banner entity.', [
+        drupal_set_message($this->t('Created the %label Floating Banner entity.', [
           '%label' => $entity->label(),
         ]));
         break;
 
       default:
-        drupal_set_message($this->t('Saved the %label Left floating banner entity.', [
+        drupal_set_message($this->t('Saved the %label Floating Banner entity.', [
           '%label' => $entity->label(),
         ]));
     }
-    $form_state->setRedirect('entity.left_floating_banner_entity.canonical', ['left_floating_banner_entity' => $entity->id()]);
+    
+    $form_state->setRedirectUrl($entity->urlInfo('collection'));
   }
 
 }
