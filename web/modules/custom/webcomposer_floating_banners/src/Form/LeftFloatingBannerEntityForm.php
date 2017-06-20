@@ -44,7 +44,8 @@ class LeftFloatingBannerEntityForm extends ContentEntityForm {
           '%label' => $entity->label(),
         ]));
     }
-    $form_state->setRedirect('entity.left_floating_banner_entity.canonical', ['left_floating_banner_entity' => $entity->id()]);
+    
+    $form_state->setRedirectUrl($entity->urlInfo('collection'));
   }
 
 }
