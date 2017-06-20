@@ -17,7 +17,7 @@ dependencies:
     - paragraphs
     - webcomposer_floating_banners
 _core:
-  default_config_hash: y9x1pbL-kI6XorW0H3tXhajuM-ndKbicJ8cQLEtNjrs
+  default_config_hash: wT3oBgnC6GTKNNBCzSM4EOl5Am8DLJnc-32zm90Syuw
 id: left_floating_banner_entity.left_floating_banner_entity.default
 targetEntityType: left_floating_banner_entity
 bundle: left_floating_banner_entity
@@ -25,7 +25,7 @@ mode: default
 content:
   field_banner_item:
     type: entity_reference_paragraphs
-    weight: 5
+    weight: 6
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -36,13 +36,13 @@ content:
     third_party_settings: {  }
     region: content
   field_floating_banner_type:
-    weight: 6
+    weight: 2
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_image:
-    weight: 1
+    weight: 3
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -50,7 +50,7 @@ content:
     type: image_image
     region: content
   field_link:
-    weight: 2
+    weight: 4
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -58,7 +58,7 @@ content:
     type: link_default
     region: content
   field_link_target:
-    weight: 3
+    weight: 5
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -72,7 +72,7 @@ content:
     type: string_textfield
     region: content
   field_title_layout:
-    weight: 4
+    weight: 1
     settings: {  }
     third_party_settings: {  }
     type: options_select

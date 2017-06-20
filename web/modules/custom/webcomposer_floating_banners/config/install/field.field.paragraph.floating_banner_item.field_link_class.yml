@@ -7,12 +7,14 @@ dependencies:
     - paragraphs.paragraphs_type.floating_banner_item
   module:
     - options
+_core:
+  default_config_hash: oXykLVpqkIbRowBFbKhholQirJ96ahwxDa04LP3AL5o
 id: paragraph.floating_banner_item.field_link_class
 field_name: field_link_class
 entity_type: paragraph
 bundle: floating_banner_item
 label: 'Link Class'
-description: ''
+description: 'Specify a class that can add a predefined icon for the links.'
 required: false
 translatable: true
 default_value: {  }

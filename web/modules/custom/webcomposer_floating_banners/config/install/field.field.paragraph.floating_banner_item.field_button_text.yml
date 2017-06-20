@@ -5,12 +5,14 @@ dependencies:
   config:
     - field.storage.paragraph.field_button_text
     - paragraphs.paragraphs_type.floating_banner_item
+_core:
+  default_config_hash: PjNyX3Y_AZ5HF46jtt6kK27fp9CvsMnkZgqpVmCIxuQ
 id: paragraph.floating_banner_item.field_button_text
 field_name: field_button_text
 entity_type: paragraph
 bundle: floating_banner_item
 label: 'Button Text'
-description: ''
+description: 'The text that will appear alongside the button.'
 required: false
 translatable: true
 default_value: {  }

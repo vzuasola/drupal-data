@@ -7,15 +7,19 @@ dependencies:
   module:
     - options
     - webcomposer_floating_banners
+_core:
+  default_config_hash: LIw1uBcos_ZJYup4-GJqs5MD0Phr8m64Od7lYQGOdPM
 id: left_floating_banner_entity.left_floating_banner_entity.field_link_target
 field_name: field_link_target
 entity_type: left_floating_banner_entity
 bundle: left_floating_banner_entity
 label: 'Link Target'
 description: ''
-required: false
+required: true
 translatable: true
-default_value: {  }
+default_value:
+  -
+    value: _top
 default_value_callback: ''
 settings: {  }
 field_type: list_string
