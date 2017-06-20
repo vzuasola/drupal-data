@@ -6,6 +6,8 @@
  */
 function webcomposer_floating_banners_uninstall() {
    $keys = [
+      'language.content_settings.left_floating_banner_entity.left_floating_banner_entity.yml',
+      'language.content_settings.paragraph.floating_banner_item.yml',
       'core.base_field_override.left_floating_banner_entity.left_floating_banner_entity.user_id.yml',
       'core.entity_form_display.left_floating_banner_entity.left_floating_banner_entity.default.yml',
       'core.entity_form_display.paragraph.floating_banner_item.default.yml',
@@ -36,13 +38,11 @@ function webcomposer_floating_banners_uninstall() {
       'field.storage.paragraph.field_lightbox_title.yml',
       'field.storage.paragraph.field_link_class.yml',
       'field.storage.paragraph.field_link.yml',
-      'language.content_settings.left_floating_banner_entity.left_floating_banner_entity.yml',
-      'language.content_settings.paragraph.floating_banner_item.yml',
       'paragraphs.paragraphs_type.floating_banner_item.yml',
+      'views.view.floating_banner.yml',
     ];
 
     foreach ($keys as $key) {
       \Drupal::configFactory()->getEditable($key)->delete();
     }
-
 }

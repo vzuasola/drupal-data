@@ -6,7 +6,7 @@ dependencies:
     - field.storage.paragraph.field_enable
     - paragraphs.paragraphs_type.floating_banner_item
 _core:
-  default_config_hash: hRWjGLEga2UlHmYvg8M019cARr5LJlcy9UodL4Nth6Q
+  default_config_hash: W6r5PpNqeX_gVpvbklVp6m18orusC8XAbZXrg9DZU_o
 id: paragraph.floating_banner_item.field_enable
 field_name: field_enable
 entity_type: paragraph

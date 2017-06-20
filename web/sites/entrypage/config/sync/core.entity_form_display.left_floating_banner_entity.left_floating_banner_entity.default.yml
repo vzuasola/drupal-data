@@ -17,7 +17,7 @@ dependencies:
     - paragraphs
     - webcomposer_floating_banners
 _core:
-  default_config_hash: wT3oBgnC6GTKNNBCzSM4EOl5Am8DLJnc-32zm90Syuw
+  default_config_hash: gqe-SURSFMW7PX2rDQiLlavv8l3TRTB5fSW1kFoGkMc
 id: left_floating_banner_entity.left_floating_banner_entity.default
 targetEntityType: left_floating_banner_entity
 bundle: left_floating_banner_entity

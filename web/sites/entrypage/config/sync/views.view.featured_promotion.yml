@@ -17,6 +17,8 @@ dependencies:
     - text
     - user
     - webcomposer_rest_extra
+_core:
+  default_config_hash: Z_szoVdDunll8_am3-NeQVstJQT1lPAuHQtql0w23YU
 id: featured_promotion
 label: 'Featured Promotion for all product'
 module: views

@@ -246,9 +246,12 @@ content:
     region: content
   field_ribbon_label:
     weight: 61
-    settings: {  }
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
-    type: erviews_options_select
+    type: entity_reference_autocomplete
     region: content
   field_right_side_block_content:
     weight: 60
