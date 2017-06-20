@@ -37,3 +37,11 @@ webcomposer_config.outdated_browser_configuration_form:
     _title: 'Outdated Browser Configuration'
   requirements:
     _permission: 'administer site configuration'
+
+entrypage_config.page_not_found_form:
+  path: 'admin/config/entrypage/page-not-found'
+  defaults:
+    _form: 'Drupal\webcomposer_config\Form\PageNotFound'
+    _title: 'Page Not Found'
+  requirements:
+    _permission: 'administer site configuration'
