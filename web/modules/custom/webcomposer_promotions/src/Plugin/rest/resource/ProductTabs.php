@@ -117,7 +117,6 @@ class ProductTabs extends ResourceBase {
    */
   private function getProductTabs($state, $type)
   {
-
     //You must to implement the logic of your REST Resource here.
     $query = \Drupal::entityQuery('taxonomy_term');
     $query->condition('vid', "products");
@@ -165,12 +164,18 @@ class ProductTabs extends ResourceBase {
           foreach ($findChildren as $value) {
             $term = \Drupal\taxonomy\Entity\Term::load($value->tid);
 
+            try {
+              $filterTranslated = $term->getTranslation($langCode);
+            } catch (\Exception $e) {
+              $filterTranslated = $term->getTranslation($defaultLang);
+            }
+
             if (in_array($key, $value->parents)) {
               $filters[] = [
-                'filter_name' => $value->name,
+                'filter_name' => $filterTranslated->name,
                 'id' => $value->tid ,
                 'parent' => $value->parents,
-                'subfilter_id' => $term->field_product_id->value,
+                'subfilter_id' => $value->field_product_id->value,
               ];
             }
           }
