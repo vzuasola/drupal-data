@@ -12,7 +12,7 @@ id: node.promotion.field_right_side_content
 field_name: field_right_side_content
 entity_type: node
 bundle: promotion
-label: 'Inner Page right-side block'
+label: 'Inner Page Right Side Block'
 description: ''
 required: false
 translatable: true
