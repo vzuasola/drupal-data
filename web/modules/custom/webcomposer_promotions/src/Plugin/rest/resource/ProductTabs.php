@@ -117,8 +117,7 @@ class ProductTabs extends ResourceBase {
    *
    * @return <json> The product tabs.
    */
-  private function getProductTabs($state, $type)
-  {
+  private function getProductTabs($state, $type) {
     // You must to implement the logic of your REST Resource here.
     $query = \Drupal::entityQuery('taxonomy_term');
     $query->condition('vid', "products");
@@ -215,9 +214,7 @@ class ProductTabs extends ResourceBase {
    * @return <string> The product promotion count.
    */
   private function getPromotionCount($productId, $langCode, $state) {
-    $query = \Drupal::entityQuery('node')
-      ->condition('status', 1)
-      ->condition('type', 'promotion');
+    $query = \Drupal::entityQuery('node')->condition('type', 'promotion');
 
     $countNids = $query->execute();
 
@@ -234,11 +231,13 @@ class ProductTabs extends ResourceBase {
           if ($getEntity->hasTranslation($langCode)) {
             $translation = $getEntity->getTranslation($langCode);
 
+            $status = $translation->status->value;
             $product = $translation->field_product->target_id;
             $hidePromotion = $translation->field_hide_promotion->value;
             $loginState = $translation->field_log_in_state->value;
 
-            if ($product == $productId &&
+            if ($status == '1' &&
+              $product == $productId &&
               $hidePromotion == '0' &&
               in_array($loginState, array($state, '2'))
             ) {
@@ -265,7 +264,6 @@ class ProductTabs extends ResourceBase {
    */
   private function getAllFeaturedPromotionCount($langCode, $state) {
     $query = \Drupal::entityQuery('node')
-      ->condition('status', 1)
       ->condition('type', 'promotion');
 
     $countNids = $query->execute();
@@ -273,15 +271,19 @@ class ProductTabs extends ResourceBase {
     // Get a node storage object.
     $nodeStorage = \Drupal::entityManager()->getStorage('node')->loadMultiple($countNids);
     if ($nodeStorage) {
+      $countNid = [];
+      
       foreach ($nodeStorage as $getEntity) {
         if ($getEntity->hasTranslation($langCode)) {
           $translation = $getEntity->getTranslation($langCode);
 
+          $status = $translation->status->value;
           $hidePromotion = $translation->field_hide_promotion->value;
           $checkFeatured = $translation->field_mark_as_featured->value;
           $loginState = $translation->field_log_in_state->value;
 
-          if ($checkFeatured == '1' &&
+          if ($status == '1' && 
+            $checkFeatured == '1' &&
             $hidePromotion == '0' &&
             in_array($loginState, array($state, '2'))
           ) {
