@@ -252,13 +252,13 @@ class ProductTabs extends ResourceBase {
    *
    * @return <string> The product promotion count.
    */
-  private function getPromotionCount($tids , $langCode, $state) {
+  private function getPromotionCount($tids, $langCode, $state) {
     $query = \Drupal::entityQuery('node')
       ->condition('status', 1)
       ->condition('type', 'promotion')
       ->condition('field_product', "$tids")
       ->condition('field_hide_promotion', "0")
-      ->condition('field_log_in_state', array('$state', '2'), 'IN')
+      ->condition('field_log_in_state', array("$state", '2'), 'IN')
       ->condition('langcode' , "$langCode");
 
     $countNids = $query->count('processes')->execute();
