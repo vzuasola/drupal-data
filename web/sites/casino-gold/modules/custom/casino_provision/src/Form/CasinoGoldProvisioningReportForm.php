@@ -181,7 +181,7 @@ class CasinoGoldProvisioningReportForm extends FormBase{
     $countQuery->addExpression('Count(opt.oid)');
 
     $pagedQuery = $query->extend('Drupal\Core\Database\Query\PagerSelectExtender');
-    $pagedQuery->limit(10);
+    $pagedQuery->limit(25);
     $pagedQuery->setCountQuery($countQuery);
 
     $results = $pagedQuery->fields('opt', array('oid','username','application_date','currency'))
