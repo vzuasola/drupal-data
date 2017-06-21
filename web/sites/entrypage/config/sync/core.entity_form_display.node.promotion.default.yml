@@ -123,11 +123,12 @@ third_party_settings:
       weight: 22
       format_type: details
       format_settings:
+        label: 'Inner Page Right Side Block'
+        required_fields: true
         id: ''
         classes: ''
         open: false
-        required_fields: true
-      label: 'Inner Page right-side block'
+      label: 'Inner Page Right Side Block'
 _core:
   default_config_hash: REpuDcJgDsDpuU0keFA4HDluTQxvT7wSEcUqidMSEcM
 id: node.promotion.default
