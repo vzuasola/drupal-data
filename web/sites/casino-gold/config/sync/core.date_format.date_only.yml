@@ -1,0 +1,8 @@
+uuid: 5f7b726b-763e-4ee3-8973-f9ea36807c31
+langcode: zh-hans
+status: true
+dependencies: {  }
+id: date_only
+label: 'Date Only'
+locked: false
+pattern: Y-m-d
