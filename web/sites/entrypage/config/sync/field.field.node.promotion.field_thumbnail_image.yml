@@ -6,6 +6,7 @@ dependencies:
     - field.storage.node.field_thumbnail_image
     - node.type.promotion
   module:
+    - content_translation
     - image
 third_party_settings:
   content_translation:
@@ -19,7 +20,7 @@ id: node.promotion.field_thumbnail_image
 field_name: field_thumbnail_image
 entity_type: node
 bundle: promotion
-label: 'Thumbnail Image'
+label: 'Promotion Thumbnail  ( right-side block )'
 description: 'The Image upload size is 225x225 px.'
 required: false
 translatable: true

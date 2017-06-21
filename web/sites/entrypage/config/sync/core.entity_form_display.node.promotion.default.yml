@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.promotion.field_banner_content
     - field.field.node.promotion.field_banner_link
     - field.field.node.promotion.field_banner_link_target
+    - field.field.node.promotion.field_hide_countdown
     - field.field.node.promotion.field_hide_promotion
     - field.field.node.promotion.field_image
     - field.field.node.promotion.field_link_target
@@ -36,7 +37,6 @@ dependencies:
     - link
     - path
     - scheduler
-    - shs
     - text
 third_party_settings:
   field_group:
@@ -104,6 +104,7 @@ third_party_settings:
         - field_promotion_link_target
         - field_summary_image
         - field_promotion_summary
+        - field_hide_countdown
       parent_name: ''
       weight: 20
       format_type: details
@@ -163,6 +164,13 @@ content:
     third_party_settings: {  }
     type: options_select
     region: content
+  field_hide_countdown:
+    weight: 68
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
   field_hide_promotion:
     weight: 6
     type: boolean_checkbox
@@ -205,13 +213,9 @@ content:
     region: content
   field_product_subfilter:
     weight: 4
-    settings:
-      display_node_count: false
-      create_new_items: false
-      create_new_levels: false
-      force_deepest: false
+    settings: {  }
     third_party_settings: {  }
-    type: options_shs
+    type: erviews_options_select
     region: content
   field_promotion_link_target:
     weight: 65

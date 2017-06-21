@@ -7,15 +7,19 @@ dependencies:
   module:
     - options
     - webcomposer_floating_banners
+_core:
+  default_config_hash: w0Yi7fzOP8RgAdRANlN2oQoLbUSmxRojCEdiLHgM9OU
 id: left_floating_banner_entity.left_floating_banner_entity.field_floating_banner_type
 field_name: field_floating_banner_type
 entity_type: left_floating_banner_entity
 bundle: left_floating_banner_entity
 label: 'Floating Banner type'
-description: ''
-required: false
+description: 'The type of the floating banner. Either left or right.'
+required: true
 translatable: true
-default_value: {  }
+default_value:
+  -
+    value: '0'
 default_value_callback: ''
 settings: {  }
 field_type: list_string

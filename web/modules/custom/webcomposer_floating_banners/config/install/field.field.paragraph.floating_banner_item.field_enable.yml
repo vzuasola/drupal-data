@@ -5,17 +5,19 @@ dependencies:
   config:
     - field.storage.paragraph.field_enable
     - paragraphs.paragraphs_type.floating_banner_item
+_core:
+  default_config_hash: hRWjGLEga2UlHmYvg8M019cARr5LJlcy9UodL4Nth6Q
 id: paragraph.floating_banner_item.field_enable
 field_name: field_enable
 entity_type: paragraph
 bundle: floating_banner_item
 label: Enable
-description: ''
+description: 'If unchecked then this banner item will be disabled.'
 required: false
 translatable: true
 default_value:
   -
-    value: 0
+    value: 1
 default_value_callback: ''
 settings:
   on_label: Enable
