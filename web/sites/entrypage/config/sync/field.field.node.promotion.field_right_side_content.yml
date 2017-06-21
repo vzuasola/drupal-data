@@ -1,0 +1,39 @@
+uuid: a7a897f3-cdd8-417e-bc68-79c8c03a1b18
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_right_side_content
+    - node.type.promotion
+    - paragraphs.paragraphs_type.right_side_block_content
+  module:
+    - entity_reference_revisions
+id: node.promotion.field_right_side_content
+field_name: field_right_side_content
+entity_type: node
+bundle: promotion
+label: 'Inner Page right-side block'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      right_side_block_content: right_side_block_content
+    target_bundles_drag_drop:
+      right_side_block_content:
+        enabled: true
+        weight: 5
+      floating_banner_item:
+        weight: 6
+        enabled: false
+      social_media:
+        weight: 7
+        enabled: false
+      sponsorship:
+        weight: 8
+        enabled: false
+field_type: entity_reference_revisions

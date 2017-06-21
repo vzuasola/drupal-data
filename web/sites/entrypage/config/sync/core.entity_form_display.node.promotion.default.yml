@@ -24,6 +24,7 @@ dependencies:
     - field.field.node.promotion.field_right_side_block_link
     - field.field.node.promotion.field_right_side_block_option
     - field.field.node.promotion.field_right_side_block_title
+    - field.field.node.promotion.field_right_side_content
     - field.field.node.promotion.field_summary_image
     - field.field.node.promotion.field_text_color
     - field.field.node.promotion.field_thumbnail_image
@@ -35,6 +36,7 @@ dependencies:
     - field_group
     - image
     - link
+    - paragraphs
     - path
     - scheduler
     - text
@@ -90,7 +92,7 @@ third_party_settings:
         - field_text_color
         - field_background_color
       parent_name: ''
-      weight: 20
+      weight: 21
       format_type: details
       format_settings:
         id: ''
@@ -114,6 +116,18 @@ third_party_settings:
         open: false
         required_fields: true
       label: 'Promotion Summary'
+    group_inner_page_right_side_bloc:
+      children:
+        - field_right_side_content
+      parent_name: ''
+      weight: 22
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: 'Inner Page right-side block'
 _core:
   default_config_hash: REpuDcJgDsDpuU0keFA4HDluTQxvT7wSEcUqidMSEcM
 id: node.promotion.default
@@ -279,6 +293,18 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_right_side_content:
+    type: entity_reference_paragraphs
+    weight: 23
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
     region: content
   field_summary_image:
     weight: 66
