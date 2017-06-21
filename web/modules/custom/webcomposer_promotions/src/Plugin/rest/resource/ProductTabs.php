@@ -78,7 +78,7 @@ class ProductTabs extends ResourceBase {
       $container->get('logger.factory')->get('rest'),
       $container->get('current_user'),
       $container->get('request_stack')->getCurrentRequest()
-    );
+      );
   }
 
   /**
@@ -160,8 +160,8 @@ class ProductTabs extends ResourceBase {
 
           // Find the sub filter of product term
           $findChildren = \Drupal::entityTypeManager()
-            ->getStorage('taxonomy_term')
-            ->loadTree('products', $parent = $key, $max_depth = NULL, $load_entities = FALSE);
+          ->getStorage('taxonomy_term')
+          ->loadTree('products', $parent = $key, $max_depth = NULL, $load_entities = FALSE);
 
           foreach ($findChildren as $value) {
             if (in_array($key, $value->parents)) {
@@ -176,10 +176,10 @@ class ProductTabs extends ResourceBase {
               }
 
               $filters[] = [
-                'filter_name' => $filterTranslated->name->value,
-                'id' => $value->tid ,
-                'parent' => $value->parents,
-                'subfilter_id' => $term->field_product_id->value,
+              'filter_name' => $filterTranslated->name->value,
+              'id' => $value->tid ,
+              'parent' => $value->parents,
+              'subfilter_id' => $term->field_product_id->value,
               ];
             }
           }
@@ -194,12 +194,12 @@ class ProductTabs extends ResourceBase {
           $productAttribute = ['class'=> $class , 'target' => $target, 'tag' => $tag];
 
           $data[] = [
-            'product_name' => $translation->getName(),
-            'product_id' => $productId,
-            'id' => $key,
-            'count' => $count,
-            'product_attribute' => $productAttribute,
-            'filters' => $filters,
+          'product_name' => $translation->getName(),
+          'product_id' => $productId,
+          'id' => $key,
+          'count' => $count,
+          'product_attribute' => $productAttribute,
+          'filters' => $filters,
           ];
         }
       }
@@ -220,26 +220,20 @@ class ProductTabs extends ResourceBase {
 
     switch ($state) {
       case '0':
-        $count = $this->getPromotionCount($tids , $langCode, $state);
-        if ($type == 'featured') {
-          $count = $this->getFeaturedPromotionCount($tids , $langCode, $state, $type);
-        }
-        break;
+      $count = $this->getPromotionCount($tids , $langCode, $state);
+      break;
 
       case '1':
-        $count = $this->getPromotionCount($tids , $langCode, $state);
-        if ($type == 'featured') {
-          $count = $this->getFeaturedPromotionCount($tids , $langCode, $state, $type);
-        }
-        break;
+      $count = $this->getPromotionCount($tids , $langCode, $state);
+      break;
 
       case 'all':
-        $count = $this->getAllPromotionCount($tids , $langCode);
-        break;
+      $count = $this->getAllPromotionCount($tids , $langCode);
+      break;
 
       case 'hidden':
-        $count = $this->getHiddenPromotionCount($tids, $langCode);
-        break;
+      $count = $this->getHiddenPromotionCount($tids, $langCode);
+      break;
     }
 
     return $count;
@@ -254,12 +248,12 @@ class ProductTabs extends ResourceBase {
    */
   private function getPromotionCount($tids, $langCode, $state) {
     $query = \Drupal::entityQuery('node')
-      ->condition('status', 1)
-      ->condition('type', 'promotion')
-      ->condition('field_product', "$tids")
-      ->condition('field_hide_promotion', "0")
-      ->condition('field_log_in_state', array("$state", '2'), 'IN')
-      ->condition('langcode' , "$langCode");
+    ->condition('status', 1)
+    ->condition('type', 'promotion')
+    ->condition('field_product', "$tids")
+    ->condition('field_hide_promotion', "0")
+    ->condition('field_log_in_state', array("$state", '2'), 'IN')
+    ->condition('langcode' , "$langCode");
 
     $countNids = $query->count('processes')->execute();
     $countNids = !empty($countNids) ? $countNids : "0";
@@ -276,10 +270,10 @@ class ProductTabs extends ResourceBase {
    */
   private function getAllPromotionCount($tids , $langCode) {
     $query = \Drupal::entityQuery('node')
-      ->condition('status', 1)
-      ->condition('type', 'promotion')
-      ->condition('field_product', "$tids")
-      ->condition('langcode' , "$langCode");
+    ->condition('status', 1)
+    ->condition('type', 'promotion')
+    ->condition('field_product', "$tids")
+    ->condition('langcode' , "$langCode");
 
     $countNids = $query->count('processes')->execute();
     $countNids = !empty($countNids) ? $countNids : "0";
@@ -294,41 +288,35 @@ class ProductTabs extends ResourceBase {
    */
   private function getAllFeaturedPromotionCount($langCode, $state) {
     $query = \Drupal::entityQuery('node')
-      ->condition('status', 1)
-      ->condition('type', 'promotion')
-      ->condition('field_hide_promotion', "0")
-      ->condition('field_log_in_state', array("$state", '2') , 'IN')
-      ->condition('field_mark_as_featured', "1")
-      ->condition('langcode' , "$langCode");
+    ->condition('status', 1)
+    ->condition('type', 'promotion')
+    ->condition('field_hide_promotion', "0")
+    ->condition('field_log_in_state', array("$state", '2') , 'IN');
 
-    $countNids = $query->count('processes')->execute();
-    $countNids = !empty($countNids) ? $countNids : "0";
 
-    return $countNids;
+    $countNids = $query->execute();
+    // Get a node storage object.
+    $node_storage = \Drupal::entityManager()->getStorage('node')->loadMultiple($countNids);
+    if ($node_storage) {
+      foreach ($node_storage as $getEntity) {
+        if($getEntity->hasTranslation($langCode)) {
+          $translation = $getEntity->getTranslation($langCode);
+          $CheckFeatured = $translation->field_mark_as_featured->value;
+
+          if($CheckFeatured == "1") {
+            $countNid[] = $translation->nid->value;
+          }
+        }
+      }
+
+      $result = count($countNid);
+      $result = !empty($result) ? $result : "0";
+    }
+
+
+    return $result;
   }
 
-  /**
-   * Gets the Featured product promotion count.
-   *
-   * @param <array> $tids The tids
-   *
-   * @return <string> The product promotion count.
-   */
-  private function getFeaturedPromotionCount($tids , $langCode, $state) {
-    $query = \Drupal::entityQuery('node')
-      ->condition('status', 1)
-      ->condition('type', 'promotion')
-      ->condition('field_product', "$tids")
-      ->condition('field_hide_promotion', "0")
-      ->condition('field_log_in_state', array("$state", '2') , 'IN')
-      ->condition('field_mark_as_featured', "1")
-      ->condition('langcode' , "$langCode");
-
-    $countNids = $query->count('processes')->execute();
-    $countNids = !empty($countNids) ? $countNids : "0";
-
-    return $countNids;
-  }
 
   /**
    * Gets the Hidden product promotion count.
@@ -339,11 +327,11 @@ class ProductTabs extends ResourceBase {
    */
   private function getHiddenPromotionCount($tids , $langCode) {
     $query = \Drupal::entityQuery('node')
-      ->condition('status', 1)
-      ->condition('type', 'promotion')
-      ->condition('field_product', "$tids")
-      ->condition('field_hide_promotion', "1")
-      ->condition('langcode' , "$langCode");
+    ->condition('status', 1)
+    ->condition('type', 'promotion')
+    ->condition('field_product', "$tids")
+    ->condition('field_hide_promotion', "1")
+    ->condition('langcode' , "$langCode");
 
     $countNids = $query->count('processes')->execute();
     $countNids = !empty($countNids) ? $countNids : "0";
