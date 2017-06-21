@@ -39,11 +39,10 @@ class NodeListSerializer extends Serializer {
           $rowAssoc[$key][0] = $term;
         }
 
-        foreach ($value as $pid) {
+        foreach ($value as $paragraphKey => $pid) {
           if (isset($pid['target_type']) && $pid['target_type'] == 'paragraph') {
           // loading the paragraph object onto the rest export
-           $rowAssoc[$key][] = $this->loadParagraph($pid['target_id']);
-
+           $rowAssoc[$key][$paragraphKey] = $this->loadParagraph($pid['target_id']);
          }
 
        }
