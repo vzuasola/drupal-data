@@ -195,9 +195,9 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
-  page_1:
+  page_featured_promotions:
     display_plugin: page
-    id: page_1
+    id: page_featured_promotions
     display_title: Page
     position: 1
     display_options:
