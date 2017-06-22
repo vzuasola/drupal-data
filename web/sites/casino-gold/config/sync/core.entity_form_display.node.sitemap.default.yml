@@ -4,12 +4,31 @@ status: true
 dependencies:
   config:
     - field.field.node.sitemap.body
+    - field.field.node.sitemap.field_basic_page_group_label
+    - field.field.node.sitemap.field_promotions_group_label
     - field.field.node.sitemap.field_right_side_block
     - node.type.sitemap
   module:
+    - field_group
     - path
     - scheduler
     - text
+third_party_settings:
+  field_group:
+    group_category_label:
+      children:
+        - field_promotions_group_label
+        - field_basic_page_group_label
+      parent_name: ''
+      weight: 7
+      format_type: details
+      format_settings:
+        label: 'Sitemap Category Label'
+        open: true
+        id: ''
+        classes: ''
+        required_fields: false
+      label: 'Sitemap Category Label'
 id: node.sitemap.default
 targetEntityType: node
 bundle: sitemap
@@ -24,8 +43,24 @@ content:
       placeholder: ''
     third_party_settings: {  }
     region: content
+  field_basic_page_group_label:
+    weight: 9
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_promotions_group_label:
+    weight: 8
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_right_side_block:
-    weight: 26
+    weight: 10
     settings:
       match_operator: CONTAINS
       size: 60
