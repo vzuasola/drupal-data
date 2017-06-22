@@ -7,7 +7,7 @@ dependencies:
 id: node.field_route_name
 field_name: field_route_name
 entity_type: node
-type: string
+type: string_long
 settings:
   max_length: 255
   is_ascii: false

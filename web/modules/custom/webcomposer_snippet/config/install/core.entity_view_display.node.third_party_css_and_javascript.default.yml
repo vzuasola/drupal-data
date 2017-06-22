@@ -36,7 +36,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    type: basic_string
     region: content
   field_type:
     weight: 102
