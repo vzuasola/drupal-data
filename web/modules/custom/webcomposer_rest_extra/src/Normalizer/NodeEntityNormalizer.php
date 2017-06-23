@@ -36,23 +36,25 @@ class NodeEntityNormalizer extends ContentEntityNormalizer
             if (isset($value[0]['target_id'])) {
                 $targetId = $value[0]['target_id'];
                 $setting  = $entity->get($key)->getSettings();
-                
-                if ($setting['target_type'] == 'paragraph') {
-                    foreach ($value as $id => $item) {
-                        $attributes[$key][$id] = $this->loadParagraphByID($targetId);
-                    }
-                }
-                
-                if ($setting['target_type'] == 'taxonomy_term') {
-                    foreach ($value as $id => $item) {
-                        $attributes[$key][$id] = $this->loadTerm($targetId);
-                    }
-                }
-                
-                if ($setting['target_type'] == 'node') {
-                    foreach ($value as $id => $item) {
-                        $attributes[$key][$id] = $this->NodeLoadById($targetId);
-                    }
+
+                switch ($setting['target_type']) {
+                	case 'paragraph':
+                		foreach ($value as $id => $item) {
+                        	$attributes[$key][$id] = $this->loadParagraphByID($targetId);
+                    	}
+                	break;
+
+                	case 'taxonomy_term':
+                		foreach ($value as $id => $item) {
+                        	$attributes[$key][$id] = $this->loadTerm($targetId);
+                   		}	
+                	break;
+
+                	case 'node':
+                		foreach ($value as $id => $item) {
+                        	$attributes[$key][$id] = $this->NodeLoadById($targetId);
+                    	}
+                	break;
                 }
             }
         }
@@ -67,8 +69,8 @@ class NodeEntityNormalizer extends ContentEntityNormalizer
     private function loadParagraphByID($id)
     {
         
-        $lang            = \Drupal::languageManager()->getCurrentLanguage(\Drupal\Core\Language\LanguageInterface::TYPE_CONTENT)->getId();
-        $paragraph       = \Drupal::entityManager()->getStorage('paragraph')->load($id);
+        $lang = \Drupal::languageManager()->getCurrentLanguage(\Drupal\Core\Language\LanguageInterface::TYPE_CONTENT)->getId();
+        $paragraph = \Drupal::entityManager()->getStorage('paragraph')->load($id);
         $para_translated = \Drupal::service('entity.repository')->getTranslationFromContext($paragraph, $lang);
         return $para_translated->toArray();
     }
@@ -81,7 +83,7 @@ class NodeEntityNormalizer extends ContentEntityNormalizer
         
         $lang = \Drupal::languageManager()->getCurrentLanguage(\Drupal\Core\Language\LanguageInterface::TYPE_CONTENT)->getId();
         
-        $term            = \Drupal\taxonomy\Entity\Term::load($tid);
+        $term = \Drupal\taxonomy\Entity\Term::load($tid);
         $term_translated = \Drupal::service('entity.repository')->getTranslationFromContext($term, $lang);
         return $term_translated->toArray();
         
@@ -95,7 +97,7 @@ class NodeEntityNormalizer extends ContentEntityNormalizer
         
         $lang = \Drupal::languageManager()->getCurrentLanguage(\Drupal\Core\Language\LanguageInterface::TYPE_CONTENT)->getId();
         
-        $node            = \Drupal::entityManager()->getStorage('node')->load($id);
+        $node = \Drupal::entityManager()->getStorage('node')->load($id);
         $node_translated = \Drupal::service('entity.repository')->getTranslationFromContext($node, $lang);
         return $node_translated->toArray();
         
