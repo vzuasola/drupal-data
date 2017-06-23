@@ -98,7 +98,7 @@ casino_config.announcement_config:
   mapping:
     announcement_title:
       type: label
-      label: 'Announcement LigthBox Title'
+      label: 'Announcement Lightbox Title'
     announcement_default_msg:
       type: label
-      label: 'Announcement LigthBox Default Message'
+      label: 'Announcement Lightbox Default Message'
