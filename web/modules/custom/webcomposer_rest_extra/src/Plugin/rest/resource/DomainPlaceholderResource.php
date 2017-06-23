@@ -31,21 +31,6 @@ class DomainPlaceholderResource extends ResourceBase
    */
   protected $currentLanguage;
 
-
-  /**
-   * @var string $defaultLanguage
-   *    Default language
-   */
-  protected $defaultLanguage;
-
-
-  /** 
-   * A current user instance. 
-   * 
-   * @var \Drupal\Core\Session\AccountProxyInterface 
-   */ 
-  protected $currentUser; 
-
   /** 
    * Constructs a Drupal\rest\Plugin\ResourceBase object. 
    * 
@@ -73,7 +58,6 @@ class DomainPlaceholderResource extends ResourceBase
     parent::__construct($configuration, $plugin_id, $plugin_definition, $serializer_formats, $logger); 
     $this->currentUser = $current_user; 
     $this->currentLanguage = $language_manager->getCurrentLanguage()->getId(); 
-    $this->defaultLanguage = $language_manager->getCurrentLanguage()->getId();
   } 
 
 
@@ -154,10 +138,9 @@ class DomainPlaceholderResource extends ResourceBase
       $getEntities = $term->get('field_add_placeholder')->referencedEntities();
       foreach ($getEntities as $getEntity) {
 
-        try {
+        if ($getEntity->hasTranslation($this->currentLanguage)) {
           $translatedEntity = $getEntity->getTranslation($this->currentLanguage);  
-          $definition[$translatedEntity->field_placeholder_key->value] = $translatedEntity->field_default_value->value;
-        } catch (\Exception $e) {
+          $definition[$translatedEntity->field_placeholder_key->value] = $translatedEntity->field_default_value->value;  
         }
 
         if(empty($value)) {
@@ -233,12 +216,10 @@ class DomainPlaceholderResource extends ResourceBase
         $termEntities = $masterTerm->get('field_add_master_placeholder')->referencedEntities();
 
         foreach ($termEntities as $termEntity) {
-          try {
+          if ($termEntity->hasTranslation($this->currentLanguage)) {
             $translatedEntity = $termEntity->getTranslation($this->currentLanguage);  
             $masterLists[$translatedEntity->field_placeholder_key->value] = $translatedEntity->field_default_value->value;
-          } catch (\Exception $e) {
           }
-          
         }
       }
 
@@ -258,12 +239,10 @@ class DomainPlaceholderResource extends ResourceBase
       $termEntities = $term->get('field_add_placeholder')->referencedEntities();
 
       foreach ($termEntities as $termEntity) {
-        try {
+        if ($termEntity->hasTranslation($this->currentLanguage)) {
           $translatedEntity = $termEntity->getTranslation($this->currentLanguage);
-          $placeHolder[$translatedEntity->field_placeholder_key->value] = $translatedEntity->field_default_value->value;  
-        } catch (\Exception $e) {
+          $placeHolder[$translatedEntity->field_placeholder_key->value] = $translatedEntity->field_default_value->value;
         }
-        
       }
 
       return $placeHolder;
