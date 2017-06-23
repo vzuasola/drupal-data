@@ -41,13 +41,13 @@ class AnnouncementLightBoxConfig extends ConfigFormBase
 
     $form['announcement_details'] = [
       '#type' => 'details',
-      '#title' => t('Announcement LigthBox Settings'),
+      '#title' => t('Announcement Lightbox Settings'),
       '#group' => 'advanced',
     ];
 
     $form['announcement_details']['announcement_title'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('Announcement LigthBox Title'),
+      '#title' => $this->t('Announcement Lightbox Title'),
       '#description' => $this->t('Text to be displayed on top of the Announcement Lightbox.'),
       '#default_value' => $config->get('announcement_title'),
       '#required' => true,
@@ -55,7 +55,7 @@ class AnnouncementLightBoxConfig extends ConfigFormBase
 
     $form['announcement_details']['announcement_default_msg'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('Announcement LigthBox default message'),
+      '#title' => $this->t('Announcement Lightbox default message'),
       '#description' => $this->t('The message shown to player if there are no published announcements.'),
       '#default_value' => $config->get('announcement_default_msg'),
       '#required' => true,

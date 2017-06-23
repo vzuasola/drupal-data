@@ -83,11 +83,12 @@ third_party_settings:
       weight: 15
       format_type: details
       format_settings:
+        label: 'Promotion Thumbnail (Right-Side Block)'
+        required_fields: true
         id: ''
         classes: ''
         open: false
-        required_fields: true
-      label: 'Promotions Thumbnail'
+      label: 'Promotion Thumbnail (Right-Side Block)'
 id: node.promotion.default
 targetEntityType: node
 bundle: promotion
