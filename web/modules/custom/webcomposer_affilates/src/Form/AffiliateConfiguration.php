@@ -42,7 +42,7 @@ class AffiliateConfiguration extends ConfigFormBase {
     $form['affiliate_group']['affiliate_expiration'] = array(
       '#type' => 'textfield',
       '#title' => $this->t('Affiliate Parameter expiration'),
-      '#description' => $this->t('The expiration time of the Tracking variables in Days.'),
+      '#description' => $this->t('The expiration time of the Tracking variables in Minutes.'),
       '#default_value' => $config->get('affiliate_expiration'),
       '#required' => TRUE,
     );

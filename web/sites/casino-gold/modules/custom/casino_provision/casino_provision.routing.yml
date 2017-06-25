@@ -1,11 +1,3 @@
-casino_provision.post:
-  path: 'api/casino-provision/post.json'
-  defaults:
-    _controller: 'Drupal\casino_provision\Controller\CasinoOptInReportController::casinoProvision'
-  methods:  [POST]
-  requirements:
-    _access: 'TRUE'
-
 casino_provision.download:
   path: 'api/casino-provision/download'
   defaults:
