@@ -100,7 +100,7 @@ class LoginConfiguration extends ConfigFormBase {
     $form['login_form_error_messages_details']['error_message_account_locked'] = array(
       '#type' => 'textfield',
       '#title' => $this->t('  Player account is locked after (X) consecutive login attempt'),
-      '#description' => $this->t('Note: number of attempts (X) and number of minutes (Y) configuration is located at the Middleware.'),
+      '#description' => $this->t('Note: number of attempts (X) and number of minutes (Y) configuration is located at the middleware.'),
       '#default_value' => $config->get('error_message_account_locked'),
     );
 
@@ -120,7 +120,7 @@ class LoginConfiguration extends ConfigFormBase {
       '#type' => 'number',
       '#title' => $this->t('Maximum Session Time'),
       '#default_value' => $config->get('session_maxtime'),
-      '#description' => $this->t('The maximum time after which the Player gets automatically logged Out.'),
+      '#description' => $this->t('The maximum time in <strong>minutes</strong> after which the player gets automatically logged out.'),
       '#required' => TRUE,
     ];
 
@@ -199,10 +199,6 @@ class LoginConfiguration extends ConfigFormBase {
       'username_placeholder',
       'password_placeholder',
       'login_bottom_label',
-      'username_validation_min',
-      'username_validation_max',
-      'password_validation_min',
-      'password_validation_max',
       'error_message_blank_username',
       'error_message_blank_password',
       'error_message_blank_passname',
@@ -220,7 +216,7 @@ class LoginConfiguration extends ConfigFormBase {
       'lightbox_blurb'
     );
 
-    foreach ($loginValuesKeys as $keys){
+    foreach ($loginValuesKeys as $keys) {
       $this->config('webcomposer_config.login_configuration')->set($keys, $form_state->getValue($keys))->save();
     }
 

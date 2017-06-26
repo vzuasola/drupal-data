@@ -17,6 +17,7 @@ permissions:
   - 'post comments'
   - 'restful get configuration_resource'
   - 'restful get custom_block_resource'
+  - 'restful get domain_placeholder'
   - 'restful get entity_bundle_fields_resource'
   - 'restful get entity_bundle_weight_resource'
   - 'restful get form_resource'

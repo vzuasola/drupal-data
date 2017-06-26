@@ -7,6 +7,7 @@ dependencies:
     - node.type.announcements
   module:
     - path
+    - scheduler
     - text
 id: node.announcements.default
 targetEntityType: node
@@ -35,7 +36,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   publish_on:
-    type: datetime_timestamp
+    type: datetime_timestamp_no_default
     weight: 6
     region: content
     settings: {  }
@@ -59,7 +60,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   unpublish_on:
-    type: datetime_timestamp
+    type: datetime_timestamp_no_default
     weight: 7
     region: content
     settings: {  }
