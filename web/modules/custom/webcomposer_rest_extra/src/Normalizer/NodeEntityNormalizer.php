@@ -117,19 +117,17 @@ class NodeEntityNormalizer extends ContentEntityNormalizer
         $node_translated = \Drupal::service('entity.repository')->getTranslationFromContext($node, $lang);
         $node_translated_array = $node_translated->toArray();
 
-
         foreach ($node_translated_array as $field => $item) {
             $setting  = $node_translated->get($field)->getSettings();
-            dsm($setting['target_type']);
 
             if (isset($setting['target_type'])) {
                 if ($setting['target_type'] == 'file') {
                     $node_translated_array[$field] = $this->loadFileById($item[0]['target_id']);
                 }
             }
-            die();
+
         }
-        //die();
+
         return $node_translated_array;
         
     }
