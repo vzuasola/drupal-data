@@ -13,13 +13,11 @@ use Drupal\paragraphs\Entity\Paragraph;
 
 class NodeEntityNormalizer extends ContentEntityNormalizer
 {
-    
     /**
      * The interface or class that this Normalizer supports. 
      * 
      * @var string 
      */
-    
     protected $supportedInterfaceOrClass = 'Drupal\node\NodeInterface';
     
     /** 
@@ -31,7 +29,7 @@ class NodeEntityNormalizer extends ContentEntityNormalizer
         $entity_data = $entity->toArray();
         
         $attributes = parent::normalize($entity, $format, $context);
-        
+
         foreach ($entity_data as $key => $value) {
             if (isset($value[0]['target_id'])) {
                 $targetId = $value[0]['target_id'];
@@ -40,19 +38,19 @@ class NodeEntityNormalizer extends ContentEntityNormalizer
                 switch ($setting['target_type']) {
                 	case 'paragraph':
                 		foreach ($value as $id => $item) {
-                        	$attributes[$key][$id] = $this->loadParagraphByID($targetId);
+                        	$attributes[$key][$id] = $this->loadParagraphByID($item['target_id']);
                     	}
                 	break;
 
                 	case 'taxonomy_term':
                 		foreach ($value as $id => $item) {
-                        	$attributes[$key][$id] = $this->loadTerm($targetId);
+                        	$attributes[$key][$id] = $this->loadTerm($item['target_id']);
                    		}	
                 	break;
 
                 	case 'node':
                 		foreach ($value as $id => $item) {
-                        	$attributes[$key][$id] = $this->NodeLoadById($targetId);
+                        	$attributes[$key][$id] = $this->NodeLoadById($item['target_id']);
                     	}
                 	break;
                 }
@@ -60,7 +58,6 @@ class NodeEntityNormalizer extends ContentEntityNormalizer
         }
         
         return $attributes;
-        
     }
     
     /**
@@ -68,7 +65,6 @@ class NodeEntityNormalizer extends ContentEntityNormalizer
      */
     private function loadParagraphByID($id)
     {
-        
         $lang = \Drupal::languageManager()->getCurrentLanguage(\Drupal\Core\Language\LanguageInterface::TYPE_CONTENT)->getId();
         $paragraph = \Drupal::entityManager()->getStorage('paragraph')->load($id);
         $para_translated = \Drupal::service('entity.repository')->getTranslationFromContext($paragraph, $lang);
@@ -80,13 +76,11 @@ class NodeEntityNormalizer extends ContentEntityNormalizer
      */
     private function loadTerm($tid)
     {
-        
         $lang = \Drupal::languageManager()->getCurrentLanguage(\Drupal\Core\Language\LanguageInterface::TYPE_CONTENT)->getId();
         
         $term = \Drupal\taxonomy\Entity\Term::load($tid);
         $term_translated = \Drupal::service('entity.repository')->getTranslationFromContext($term, $lang);
         return $term_translated->toArray();
-        
     }
     
     /**
