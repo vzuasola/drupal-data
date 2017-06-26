@@ -4,3 +4,7 @@ products: 0
 products_message: 'Term @term already exists in vocabulary @vocabulary.'
 ribbon_labels: 1
 ribbon_labels_message: 'Term @term already exists in vocabulary @vocabulary.'
+domain: 1
+domain_message: 'Term @term already exists in vocabulary @vocabulary.'
+domain_groups: 1
+domain_groups_message: 'Term @term already exists in vocabulary @vocabulary.'
