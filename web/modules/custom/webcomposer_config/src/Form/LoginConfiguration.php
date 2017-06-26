@@ -122,6 +122,8 @@ class LoginConfiguration extends ConfigFormBase {
       '#default_value' => $config->get('session_maxtime'),
       '#description' => $this->t('The maximum time in <strong>minutes</strong> after which the player gets automatically logged out.'),
       '#required' => TRUE,
+      '#min' => 0.5,
+      '#step' => 0.5,
     ];
 
     $form['lightbox_details'] = [
