@@ -10,7 +10,7 @@ webcomposer_config.affilates_form:
   path: 'admin/config/webcomposer/config/affilates-list'
   defaults:
     _controller: 'Drupal\webcomposer_affilates\Controller\AffilateListing::getTaxonomyForm'
-    _title: admin Controller
+    _title: Add Affiliates
   requirements:
     _permission: 'administer site configuration'
 

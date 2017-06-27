@@ -8,6 +8,7 @@ dependencies:
     - field.field.taxonomy_term.products.field_product_id
     - field.field.taxonomy_term.products.field_product_tag
     - field.field.taxonomy_term.products.field_target
+    - field.field.taxonomy_term.products.field_this_product_kebab
     - taxonomy.vocabulary.products
   module:
     - options
@@ -63,6 +64,16 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: list_default
+    region: content
+  field_this_product_kebab:
+    weight: 6
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
     region: content
 hidden:
   langcode: true
