@@ -6,6 +6,7 @@ use Drupal\serialization\Normalizer\ContentEntityNormalizer;
 use Drupal\Core\Datetime\DrupalDateTime;
 use Drupal\rest\Plugin\views\style\Serializer;
 use Drupal\paragraphs\Entity\Paragraph;
+use Drupal\file\Entity\File;
 
 /** 
  * Converts typed data objects to arrays.
@@ -68,7 +69,18 @@ class NodeEntityNormalizer extends ContentEntityNormalizer
         $lang = \Drupal::languageManager()->getCurrentLanguage(\Drupal\Core\Language\LanguageInterface::TYPE_CONTENT)->getId();
         $paragraph = \Drupal::entityManager()->getStorage('paragraph')->load($id);
         $para_translated = \Drupal::service('entity.repository')->getTranslationFromContext($paragraph, $lang);
-        return $para_translated->toArray();
+        $para_translated_array = $para_translated->toArray();
+
+        foreach ($para_translated_array as $field => $item) {
+            $setting  = $para_translated->get($field)->getSettings();
+            if (isset($setting['target_type'])) {
+                if ($setting['target_type'] == 'file') {
+                    $field_array = array_merge($para_translated_array[$field][0], $this->loadFileById($item[0]['target_id']));
+                    $para_translated_array[$field] = $field_array;
+                }
+            }
+        }
+        return $para_translated_array;
     }
     
     /**
@@ -80,7 +92,19 @@ class NodeEntityNormalizer extends ContentEntityNormalizer
         
         $term = \Drupal\taxonomy\Entity\Term::load($tid);
         $term_translated = \Drupal::service('entity.repository')->getTranslationFromContext($term, $lang);
-        return $term_translated->toArray();
+        $term_translated_array = $term_translated->toArray();
+
+        foreach ($term_translated_array as $field => $item) {
+            $setting  = $term_translated->get($field)->getSettings();
+            if (isset($setting['target_type'])) {
+                if ($setting['target_type'] == 'file') {
+                    $field_array = array_merge($term_translated_array[$field][0], $this->loadFileById($item[0]['target_id']));
+                    $term_translated_array[$field] = $field_array;
+                }
+            }
+        }
+
+        return $term_translated_array;
     }
     
     /**
@@ -93,8 +117,38 @@ class NodeEntityNormalizer extends ContentEntityNormalizer
         
         $node = \Drupal::entityManager()->getStorage('node')->load($id);
         $node_translated = \Drupal::service('entity.repository')->getTranslationFromContext($node, $lang);
-        return $node_translated->toArray();
+        $node_translated_array = $node_translated->toArray();
+
+        foreach ($node_translated_array as $field => $item) {
+            $setting  = $node_translated->get($field)->getSettings();
+
+            if (isset($setting['target_type'])) {
+                if ($setting['target_type'] == 'file') {
+                    $field_array = array_merge($node_translated_array[$field][0], $this->loadFileById($item[0]['target_id']));
+                    $node_translated_array[$field] = $field_array;
+                }
+            }
+
+        }
+
+        return $node_translated_array;
         
     }
-    
+
+    /**
+     * Load file url data by target ID
+     */
+    private function loadFileById($fid) 
+    {
+
+        $fileArray = []; 
+
+        if (isset($fid)) {
+            $file = File::load($fid);
+            $fileArray = $file->toArray();
+            $fileArray['image_url'] = file_create_url($file->getFileUri());
+        }
+
+        return $fileArray;
+    }
 }

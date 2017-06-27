@@ -1,11 +1,11 @@
-uuid: 9db84a5e-726f-41b2-83e3-fda22c49e6ce
+uuid: 32cde249-9c08-4b27-9306-4bcbdb37706f
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: node.field_hide_right_side_block
-field_name: field_hide_right_side_block
+id: node.field_show_inner_page_right_side
+field_name: field_show_inner_page_right_side
 entity_type: node
 type: boolean
 settings: {  }
