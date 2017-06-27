@@ -10,7 +10,6 @@ dependencies:
     - field.field.node.promotion.field_banner_link_target
     - field.field.node.promotion.field_hide_countdown
     - field.field.node.promotion.field_hide_promotion
-    - field.field.node.promotion.field_hide_right_side_block
     - field.field.node.promotion.field_image
     - field.field.node.promotion.field_link_target
     - field.field.node.promotion.field_log_in_state
@@ -26,6 +25,7 @@ dependencies:
     - field.field.node.promotion.field_right_side_block_option
     - field.field.node.promotion.field_right_side_block_title
     - field.field.node.promotion.field_right_side_content
+    - field.field.node.promotion.field_show_inner_page_right_side
     - field.field.node.promotion.field_summary_image
     - field.field.node.promotion.field_text_color
     - field.field.node.promotion.field_thumbnail_image
@@ -119,7 +119,7 @@ third_party_settings:
       label: 'Promotion Summary'
     group_inner_page_right_side_bloc:
       children:
-        - field_hide_right_side_block
+        - field_show_inner_page_right_side
         - field_right_side_content
       parent_name: ''
       weight: 22
@@ -195,13 +195,6 @@ content:
     settings:
       display_label: true
     third_party_settings: {  }
-  field_hide_right_side_block:
-    weight: 69
-    settings:
-      display_label: true
-    third_party_settings: {  }
-    type: boolean_checkbox
-    region: content
   field_image:
     weight: 32
     settings:
@@ -306,7 +299,7 @@ content:
     region: content
   field_right_side_content:
     type: entity_reference_paragraphs
-    weight: 70
+    weight: 72
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -315,6 +308,13 @@ content:
       form_display_mode: default
       default_paragraph_type: ''
     third_party_settings: {  }
+    region: content
+  field_show_inner_page_right_side:
+    weight: 71
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
     region: content
   field_summary_image:
     weight: 66

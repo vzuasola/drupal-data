@@ -10,7 +10,6 @@ dependencies:
     - field.field.node.promotion.field_banner_link_target
     - field.field.node.promotion.field_hide_countdown
     - field.field.node.promotion.field_hide_promotion
-    - field.field.node.promotion.field_hide_right_side_block
     - field.field.node.promotion.field_image
     - field.field.node.promotion.field_link_target
     - field.field.node.promotion.field_log_in_state
@@ -26,6 +25,7 @@ dependencies:
     - field.field.node.promotion.field_right_side_block_option
     - field.field.node.promotion.field_right_side_block_title
     - field.field.node.promotion.field_right_side_content
+    - field.field.node.promotion.field_show_inner_page_right_side
     - field.field.node.promotion.field_summary_image
     - field.field.node.promotion.field_text_color
     - field.field.node.promotion.field_thumbnail_image
@@ -113,16 +113,6 @@ content:
     region: content
   field_hide_promotion:
     weight: 122
-    label: above
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    type: boolean
-    region: content
-  field_hide_right_side_block:
-    weight: 134
     label: above
     settings:
       format: default
@@ -260,6 +250,16 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
+    region: content
+  field_show_inner_page_right_side:
+    weight: 134
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
     region: content
   field_summary_image:
     weight: 130
