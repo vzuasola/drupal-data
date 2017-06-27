@@ -127,11 +127,16 @@ class ThirdPartyResources extends ResourceBase {
     }
 
     $lang_code = \Drupal::service('language_manager')->getCurrentLanguage()->getId();
+    $default_lang_code = \Drupal::service('language_manager')->getDefaultLanguage()->getId();
+
     foreach ($entity_ids as $value) {
-       $getEntity = \Drupal::entityTypeManager()->getStorage('node')->load($value);
-       if ($getEntity->hasTranslation($lang_code)) {
-         $definition[] = $getEntity->getTranslation($lang_code);
-       }
+      $getEntity = \Drupal::entityTypeManager()->getStorage('node')->load($value);
+
+      if ($getEntity->hasTranslation($lang_code)) {
+        $definition[] = $getEntity->getTranslation($lang_code);
+      } else {
+        $definition[] = $getEntity->getTranslation($default_lang_code);
+      }
     }
 
     return $definition;
