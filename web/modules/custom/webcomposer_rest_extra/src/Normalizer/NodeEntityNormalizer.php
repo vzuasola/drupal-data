@@ -75,7 +75,8 @@ class NodeEntityNormalizer extends ContentEntityNormalizer
             $setting  = $para_translated->get($field)->getSettings();
             if (isset($setting['target_type'])) {
                 if ($setting['target_type'] == 'file') {
-                    $para_translated_array[$field] = $this->loadFileById($item[0]['target_id']);
+                    $field_array = array_merge($para_translated_array[$field][0], $this->loadFileById($item[0]['target_id']));
+                    $para_translated_array[$field] = $field_array;
                 }
             }
         }
@@ -97,7 +98,8 @@ class NodeEntityNormalizer extends ContentEntityNormalizer
             $setting  = $term_translated->get($field)->getSettings();
             if (isset($setting['target_type'])) {
                 if ($setting['target_type'] == 'file') {
-                    $term_translated_array[$field] = $this->loadFileById($item[0]['target_id']);
+                    $field_array = array_merge($term_translated_array[$field][0], $this->loadFileById($item[0]['target_id']));
+                    $term_translated_array[$field] = $field_array;
                 }
             }
         }
@@ -122,7 +124,8 @@ class NodeEntityNormalizer extends ContentEntityNormalizer
 
             if (isset($setting['target_type'])) {
                 if ($setting['target_type'] == 'file') {
-                    $node_translated_array[$field] = $this->loadFileById($item[0]['target_id']);
+                    $field_array = array_merge($node_translated_array[$field][0], $this->loadFileById($item[0]['target_id']));
+                    $node_translated_array[$field] = $field_array;
                 }
             }
 
