@@ -1,0 +1,8 @@
+webcomposer_config.territory_blocking:
+  type: config_object
+  label: 'Territory Blocking Configuration'
+  mapping:
+    territory_blocking_mapping:
+      type: label
+      label: 'Restricted Countries'
+  langcode: 'en'

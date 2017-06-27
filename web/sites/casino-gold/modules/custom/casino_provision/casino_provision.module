@@ -8,9 +8,15 @@
 use Drupal\Core\Routing\RouteMatchInterface;
 
 /**
- * Implements hook_help().
+ * Implements hook_help()
+ *
+ * @var string $route_name
+ *    For module overview help
+ *
+ * @var Drupal\Core\Routing\RouteMatchInterface $route_match
+ *    The current route match. This can be used to generate different help output for different pages that share the same route.
  */
-function casino_optin_provision_help($route_name, RouteMatchInterface $route_match) {
+function casino_provision_help($route_name, RouteMatchInterface $route_match) {
   switch ($route_name) {
     // Main module help for the webcomposer_optin_report module.
     case 'help.page.webcomposer_optin_report':

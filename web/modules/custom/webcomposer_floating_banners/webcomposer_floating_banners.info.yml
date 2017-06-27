@@ -1,0 +1,5 @@
+name: Webcomposer Floating Banners
+type: module
+description: Floating Banners functionality for Web Composer
+core: 8.x
+package: Web Composer

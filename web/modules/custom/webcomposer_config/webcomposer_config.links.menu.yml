@@ -21,3 +21,15 @@ webcomposer_config.admin_login_configuration:
   parent: webcomposer_config.list
   description: 'Provides configuration for Header (Login form) Section.'
   route_name: webcomposer_config.login_configuration_form
+
+webcomposer_config.admin_outdate_browser_configuration:
+  title: 'Outdated Browser Configuration'
+  parent: webcomposer_config.list
+  description: 'Provides configuration for outdate browser messages.'
+  route_name: webcomposer_config.outdated_browser_configuration_form
+
+webcomposer_config.admin_page_not_found_configuration:
+  title: 'Page Not Found'
+  parent: webcomposer_config.list
+  description: 'Page not found configuration.'
+  route_name: entrypage_config.page_not_found_form

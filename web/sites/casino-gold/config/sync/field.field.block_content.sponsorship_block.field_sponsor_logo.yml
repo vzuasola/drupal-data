@@ -15,7 +15,7 @@ bundle: sponsorship_block
 label: 'Sponsor Logo'
 description: "<p role=\"contentinfo\" aria-label=\"Error message\" class=\"messages messages--warning\">\r\n          <span role=\"warning\">\r\n                    Note: Need to configure at least 1 item\r\n                </span>\r\n      </p>"
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

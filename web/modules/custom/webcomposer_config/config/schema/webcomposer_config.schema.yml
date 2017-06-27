@@ -109,3 +109,24 @@ webcomposer_config.login_configuration:
     notification_content:
       type: text_format
       label: 'Notification Box Content'
+
+webcomposer_config.browser_configuration:
+  type: config_object
+  label: 'Outdated Browser Configurations'
+  mapping:
+    message:
+      type: text_format
+      label: 'Outdated browser message'
+      translatable: true
+
+webcomposer_config.page_not_found:
+  type: config_object
+  label: 'Page Not Found'
+  mapping:
+    page_not_found_title:
+      type: label
+      label: 'Page Title'
+    page_not_found_content:
+      type: text_format
+      label: 'Content'
+      translatable: true

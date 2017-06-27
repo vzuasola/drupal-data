@@ -1,8 +1,8 @@
-uuid: ded390f3-cdce-4506-84e1-d6394a0897d4
+uuid: a4c2438e-9be0-4b6f-b380-29c6cc9340c9
 langcode: zh-hans
 status: true
 dependencies: {  }
 id: secondary-menu-ch
 label: 'Secondary Menu CH'
-description: ''
+description: 'Right side menu in the header section.'
 locked: false

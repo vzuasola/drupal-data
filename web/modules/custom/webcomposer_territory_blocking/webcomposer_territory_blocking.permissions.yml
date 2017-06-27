@@ -1,0 +1,4 @@
+administer territory blocking:
+  title: 'Webcomposer Territory Blocking'
+  description: 'permits user to access territory blocking configuration'
+  restrict access: true

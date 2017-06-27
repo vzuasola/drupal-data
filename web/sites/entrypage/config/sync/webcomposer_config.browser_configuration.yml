@@ -1,0 +1,3 @@
+message:
+  value: "<h1><span class=\"text-yellow\">Your browser is out of date</span></h1>\r\n\r\n<p>Update your browser to view this website correctly.</p>\r\n\r\n<p><a class=\"btn btn-medium btn-yellow\" href=\"#\">Update browser my now</a></p>\r\n\r\n<p>Click notification bar to dismiss</p>\r\n"
+  format: basic_html

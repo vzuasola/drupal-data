@@ -20,10 +20,13 @@ module:
   dblog: 0
   devel: 0
   devel_generate: 0
+  draggableviews: 0
   dynamic_page_cache: 0
   editor: 0
   entity_reference_revisions: 0
+  entity_reference_views_select: 0
   entityqueue: 0
+  entrypage_promotions: 0
   field: 0
   field_group: 0
   field_ui: 0
@@ -33,6 +36,7 @@ module:
   history: 0
   image: 0
   kint: 0
+  lang_dropdown: 0
   language: 0
   libraries: 0
   link: 0
@@ -54,8 +58,10 @@ module:
   search: 0
   serialization: 0
   shortcut: 0
+  shs: 0
   system: 0
   taxonomy: 0
+  taxonomy_unique: 0
   text: 0
   token: 0
   toolbar: 0
@@ -63,10 +69,12 @@ module:
   update: 0
   user: 0
   views_ui: 0
-  webcomposer_blocks: 0
+  webcomposer_affilates: 0
   webcomposer_config: 0
   webcomposer_connector: 0
+  webcomposer_dm: 0
   webcomposer_editor: 0
+  webcomposer_floating_banners: 0
   webcomposer_language_hierarchy: 0
   webcomposer_monolog: 0
   webcomposer_promotions: 0

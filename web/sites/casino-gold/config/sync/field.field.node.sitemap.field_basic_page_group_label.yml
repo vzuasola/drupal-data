@@ -1,0 +1,19 @@
+uuid: f19f666e-c28c-448c-bb1a-6f0cf0e110b9
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_basic_page_group_label
+    - node.type.sitemap
+id: node.sitemap.field_basic_page_group_label
+field_name: field_basic_page_group_label
+entity_type: node
+bundle: sitemap
+label: 'Basic Page Group Label'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

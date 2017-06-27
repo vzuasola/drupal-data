@@ -1,0 +1,4 @@
+webcomposer_territory_blocking.territory_blocking:
+  route_name: webcomposer_territory_blocking.territory_blocking_config
+  base_route: webcomposer_territory_blocking.territory_blocking_config
+  title: 'Territory Blocking Configuration'

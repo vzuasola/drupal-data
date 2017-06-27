@@ -1,20 +1,17 @@
-uuid: ea771bd9-b985-4188-b2f2-335a13c347d8
-langcode: en
+uuid: e4d62d5c-f102-4bef-8ab3-fe30ed04efba
+langcode: zh-hans
 status: true
 dependencies:
   module:
-    - hal
     - serialization
     - user
-    - webcomposer_blocks
+    - webcomposer_rest_extra
 id: custom_block_resource
 plugin_id: custom_block_resource
 granularity: method
 configuration:
   GET:
     supported_formats:
-      - hal_json
       - json
-      - xml
     supported_auth:
       - cookie

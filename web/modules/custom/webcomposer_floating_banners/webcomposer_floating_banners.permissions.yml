@@ -1,0 +1,22 @@
+add left floating banner entity entities:
+  title: 'Create new Left floating banner entity entities'
+
+administer left floating banner entity entities:
+  title: 'Administer Left floating banner entity entities'
+  description: 'Allow to access the administration form to configure Left floating banner entity entities.'
+  restrict access: true
+
+delete left floating banner entity entities:
+  title: 'Delete Left floating banner entity entities'
+
+edit left floating banner entity entities:
+  title: 'Edit Left floating banner entity entities'
+
+access left floating banner entity overview:
+  title: 'Access the Left floating banner entity overview page'
+
+view published left floating banner entity entities:
+  title: 'View published Left floating banner entity entities'
+
+view unpublished left floating banner entity entities:
+  title: 'View unpublished Left floating banner entity entities'

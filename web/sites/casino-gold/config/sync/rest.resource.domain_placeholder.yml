@@ -1,0 +1,17 @@
+uuid: 58ab854c-070e-4e05-b490-fc2166eb91e6
+langcode: zh-hans
+status: true
+dependencies:
+  module:
+    - serialization
+    - user
+    - webcomposer_rest_extra
+id: domain_placeholder
+plugin_id: domain_placeholder
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+    supported_auth:
+      - cookie
