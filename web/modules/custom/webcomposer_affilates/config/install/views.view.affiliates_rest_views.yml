@@ -10,6 +10,8 @@ dependencies:
     - serialization
     - taxonomy
     - user
+_core:
+  default_config_hash: Jik3aW1aTiunqy9iBDejLv8iifhJwqX8CrvNVp3pqJc
 id: affiliates_rest_views
 label: 'Affiliates Rest Views'
 module: views
@@ -260,20 +262,6 @@ display:
           reduce_duplicates: false
           plugin_id: list_field
       sorts:
-        name:
-          id: name
-          table: taxonomy_term_field_data
-          field: name
-          relationship: field_select_affiliates_group
-          group_type: group
-          admin_label: ''
-          order: ASC
-          exposed: false
-          expose:
-            label: ''
-          entity_type: taxonomy_term
-          entity_field: name
-          plugin_id: standard
         weight:
           id: weight
           table: draggableviews_structure
@@ -285,6 +273,20 @@ display:
           exposed: false
           expose:
             label: ''
+          plugin_id: standard
+        weight_1:
+          id: weight_1
+          table: taxonomy_term_field_data
+          field: weight
+          relationship: field_select_affiliates_group
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          entity_type: taxonomy_term
+          entity_field: weight
           plugin_id: standard
       header: {  }
       footer: {  }

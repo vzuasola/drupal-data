@@ -20,6 +20,8 @@ function webcomposer_affilates_uninstall() {
       'views.view.affiliates_lists',
       'core.entity_view_display.taxonomy_term.affiliates_parameters.default',
       'language.content_settings.taxonomy_term.affiliates_group',
+      'views.view.affiliates_rest_views.yml',
+      'webcomposer_config.affiliate_configuration.yml',
     );
 
     foreach ($keys as $key) {

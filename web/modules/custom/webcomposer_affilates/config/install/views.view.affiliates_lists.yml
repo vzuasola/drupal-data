@@ -11,7 +11,7 @@ dependencies:
     - taxonomy
     - user
 _core:
-  default_config_hash: oLhTZcMXNnslBXrfyWZjPt51-mGAV6B2PYW2u3nQr6Y
+  default_config_hash: U9NguMKPw5I08nJKSNmZm6BVE_qwsQ83aPeK49blOgw
 id: affiliates_lists
 label: 'Affiliates Lists'
 module: views
@@ -70,7 +70,7 @@ display:
           description: ''
           columns:
             name: name
-            field_select_affiliates_group: field_select_affiliates_group
+            name_1: name_1
             edit_taxonomy_term: edit_taxonomy_term
             delete_taxonomy_term: delete_taxonomy_term
             field_active: field_active
@@ -83,7 +83,7 @@ display:
               separator: ''
               empty_column: false
               responsive: ''
-            field_select_affiliates_group:
+            name_1:
               sortable: false
               default_sort_order: asc
               align: ''
@@ -513,10 +513,10 @@ display:
           entity_field: vid
           plugin_id: bundle
       sorts:
-        name:
-          id: name
+        weight:
+          id: weight
           table: taxonomy_term_field_data
-          field: name
+          field: weight
           relationship: field_select_affiliates_group
           group_type: group
           admin_label: ''
@@ -525,10 +525,10 @@ display:
           expose:
             label: ''
           entity_type: taxonomy_term
-          entity_field: name
+          entity_field: weight
           plugin_id: standard
-        weight:
-          id: weight
+        weight_1:
+          id: weight_1
           table: draggableviews_structure
           field: weight
           relationship: none
