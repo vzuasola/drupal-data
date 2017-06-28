@@ -145,9 +145,10 @@ class ProductTabs extends ResourceBase {
         }
 
         $checkEnable = $translation->field_enable_disable->value;
+        $notKebabProduct = $translation->field_this_product_kebab->value;
 
         // Get count of promotions tagged with product.
-        if ($checkEnable === '1') {
+        if ($checkEnable === '1' && $notKebabProduct === '0') {
           $filters = [];
 
           $productId = $getEntity->field_product_id->value;
