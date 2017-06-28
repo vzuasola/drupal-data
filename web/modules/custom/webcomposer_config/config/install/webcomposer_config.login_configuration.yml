@@ -16,6 +16,7 @@ autologout_box_content:
 affirmative_button_text: 'Yes'
 negative_button_text: 'No'
 notification_title: Notification
+notification_window_title: 'Session has timed out!'
 notification_content:
   value: "<p>Your session has timed out due to inactivity.</p>\r\n"
   format: basic_html

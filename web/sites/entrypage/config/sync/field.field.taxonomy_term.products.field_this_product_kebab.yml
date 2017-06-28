@@ -9,8 +9,8 @@ id: taxonomy_term.products.field_this_product_kebab
 field_name: field_this_product_kebab
 entity_type: taxonomy_term
 bundle: products
-label: 'Make this Product Kebab'
-description: ''
+label: 'Show in Kebab'
+description: 'If checked will show this product on the secondary menu'
 required: false
 translatable: true
 default_value:
