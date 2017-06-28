@@ -56,7 +56,7 @@ class LoginConfiguration extends ConfigFormBase {
     );
 
     $form['login_form_details'] ['lightbox_blurb'] = array(
-      '#type' => 'textfield',
+      '#type' => 'textarea',
       '#title' => $this->t('Login lightbox blurb'),
       '#default_value' => $config->get('lightbox_blurb'),
     );
@@ -180,6 +180,14 @@ class LoginConfiguration extends ConfigFormBase {
       '#required' => TRUE,
     ];
 
+    $form['notification_box_details']['notification_window_title'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Notification Window Title'),
+      '#description' => $this->t('The Blinking Window Title of the Notification LightBox'),
+      '#default_value' => $config->get('notification_window_title'),
+      '#required' => TRUE,
+    ];
+
     $notification_content = $config->get('notification_content');
     $form['notification_box_details']['notification_content'] = [
       '#type' => 'text_format',
@@ -214,6 +222,7 @@ class LoginConfiguration extends ConfigFormBase {
       'affirmative_button_text',
       'negative_button_text',
       'notification_title',
+      'notification_window_title',
       'notification_content',
       'lightbox_blurb'
     );
