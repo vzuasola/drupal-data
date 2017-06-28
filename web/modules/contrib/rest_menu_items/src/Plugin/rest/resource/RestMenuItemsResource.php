@@ -245,14 +245,27 @@ class RestMenuItemsResource extends ResourceBase {
         }
       }
 
+      // initialize query string 
+      $queryString = '';
+      // only append the query string if the uri is relative
+      if (!$url->isExternal() && isset($options['query'])) {
+        // build query param
+        $query = http_build_query($options['query']);
+        // decode query param 
+        $query = urldecode($query);
+        if (!empty($query)) {
+          $queryString = "?$query";
+        }
+      }
+
       $final_alias = ltrim($alias, '/');
       $alias = $final_alias == '' ? '/' : $final_alias;
 
       $items[$item_name] = array(
         'key' => $item_name,
         'title' => $org_link->getTitle(),
-        'uri' => $uri,
-        'alias' => $alias,
+        'uri' => "$uri$queryString",
+        'alias' => "$alias$queryString",
         'external' => $external,
         'attributes' => $attr,
       );
