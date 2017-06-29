@@ -311,6 +311,17 @@ my_account_form_profile.profile:
             label:
               type: label
               label: 'Field label'
+    verify_text_field:
+      type: mapping
+      label: 'Verify text translation'
+      mapping:
+        options:
+          type: mapping
+          label: 'Field label'
+          mapping:
+            label:
+              type: label
+              label: 'Field label'
     mobile_number_field:
       type: mapping
       label: 'Contact'

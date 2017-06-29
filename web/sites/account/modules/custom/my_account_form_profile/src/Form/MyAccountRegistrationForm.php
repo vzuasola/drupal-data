@@ -618,6 +618,22 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#default_value' => $myAccountConfigValue['communication_detail_field']['options']['label'],
         ];
 
+        $form['field_configuration']['field_labels_sms_verification'] = [
+            '#type' => 'details',
+            '#title' => 'SMS Verification',
+            '#open' => False,
+            '#tree' => TRUE,
+        ];
+
+        $form['field_configuration']['field_labels_sms_verification']['verify_text'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Verify Text'),
+            '#size' => 25,
+            '#required' => TRUE,
+            '#description' => $this->t('Text for Verify Link'),
+            '#default_value' => $myAccountConfigValue['verify_text_field']['options']['label'],
+        ];
+
         $form['actions'] = ['#type' => 'actions'];
         // Add a submit button that handles the submission of the form.
         $form['actions']['submit'] = [
@@ -720,6 +736,7 @@ class MyAccountRegistrationForm extends ConfigFormBase
             ->set('language_field.options.wrapper_class', $configuration['field_labels_language']['wrapper_class'])
             ->set('account_field.options.label', $configuration['field_labels_account']['account_label'])
             ->set('communication_detail_field.options.label', $configuration['field_labels_account']['communication_label'])
+            ->set('verify_text_field.options.label', $configuration['field_labels_sms_verification']['verify_text'])
             ->save();
     }
 

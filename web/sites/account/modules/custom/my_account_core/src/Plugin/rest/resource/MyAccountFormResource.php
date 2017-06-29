@@ -81,6 +81,12 @@ class MyAccountFormResource extends ResourceBase
                 $values = $this->filter_array_exposed($config->get(), 'header');
                 break;
 
+            case 'my_account_sms_verification':
+                // Get only sms verification section values.
+                $config = \Drupal::config('my_account_form_profile.profile');
+                $values = $this->filter_array_exposed($config->get(), 'sms_verification');
+                break;
+
             case 'my_account_header':
                 // Get only hader section values.
                 $config = \Drupal::config('my_account_core.header');
@@ -145,7 +151,10 @@ class MyAccountFormResource extends ResourceBase
             // Get only Profile field.
             unset($values['account_field']);
             unset($values['communication_detail_field']);
+            unset($values['verify_text_field']);
             $value = $values;
+        } elseif ($key == 'sms_verification') {
+            $value['verify_text'] = $values['verify_text_field']['options']['label'];
         }
         return $value;
     }
