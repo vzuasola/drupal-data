@@ -1,0 +1,103 @@
+uuid: f9fa7fe5-bd17-49a4-9f5b-312235150e9a
+langcode: en
+status: open
+dependencies:
+  enforced:
+    module:
+      - webform_demo_application_evaluation
+_core:
+  default_config_hash: I3JbOyQIamjCjBGs_4y9wEy2giH91yIfmdyOwafEitk
+open: null
+close: null
+uid: null
+template: false
+id: demo_application
+title: 'Demo: Application'
+description: 'A demonstration of a very basic application form.'
+category: Demo
+elements: "contact:\n  '#type': webform_contact\n  '#title': Contact\n  '#name__required': true\n  '#company__required': true\n  '#email__required': true\n  '#phone__required': true\n  '#address__required': true\n  '#address_2__required': true\n  '#city__required': true\n  '#state_province__required': true\n  '#postal_code__required': true\n  '#country__required': true\ntest:\n  '#type': checkbox\n  '#title': test\nusername:\n  '#type': textfield\n  '#title': username\n  '#required': true\n  '#unique': true\nusername1:\n  '#type': textfield\n  '#title': username1\n  '#required': true\n  '#unique': true\n"
+css: ''
+javascript: ''
+settings:
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  form_submit_once: false
+  form_exception_message: ''
+  form_open_message: ''
+  form_close_message: ''
+  form_previous_submissions: true
+  form_confidential: false
+  form_confidential_message: ''
+  form_convert_anonymous: false
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_unsaved: false
+  form_disable_back: false
+  form_autofocus: false
+  form_details_toggle: false
+  submission_log: false
+  wizard_progress_bar: true
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_start_label: ''
+  wizard_complete: true
+  wizard_complete_label: ''
+  preview: 0
+  preview_label: ''
+  preview_title: ''
+  preview_message: ''
+  draft: none
+  draft_auto_save: false
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  confirmation_type: page
+  confirmation_title: ''
+  confirmation_message: ''
+  confirmation_url: ''
+  confirmation_attributes: {  }
+  confirmation_back: true
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  limit_total: null
+  limit_total_message: ''
+  limit_user: null
+  limit_user_message: ''
+  purge: none
+  purge_days: null
+  entity_limit_total: null
+  entity_limit_user: null
+  results_disabled: false
+  results_disabled_ignore: false
+  token_update: false
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+  view_any:
+    roles:
+      - authenticated
+    users: {  }
+  update_any:
+    roles: {  }
+    users: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+  view_own:
+    roles: {  }
+    users: {  }
+  update_own:
+    roles: {  }
+    users: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+handlers: {  }
