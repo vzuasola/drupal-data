@@ -189,6 +189,8 @@ class WebformElementBase extends PluginBase implements WebformElementInterface {
       'required_error' => '',
       'unique' => FALSE,
       'unique_error' => '',
+      'length_error' => '',
+      'format_error' => '',
       // Attributes.
       'wrapper_attributes' => [],
       'attributes' => [],
@@ -238,6 +240,8 @@ class WebformElementBase extends PluginBase implements WebformElementInterface {
       'field_suffix',
       'required_error',
       'unique_error',
+      'length_error',
+      'format_error',
       'admin_title',
       'placeholder',
       'markup',
@@ -1687,6 +1691,7 @@ class WebformElementBase extends PluginBase implements WebformElementInterface {
       '#description' => $this->t('Make this field non-editable. Useful for displaying default value. Changeable via JavaScript or developer tools.'),
       '#return_value' => TRUE,
     ];
+
     $form['form']['open'] = [
       '#type' => 'checkbox',
       '#title' => $this->t('Open'),
@@ -1803,6 +1808,7 @@ class WebformElementBase extends PluginBase implements WebformElementInterface {
       '#description' => $this->t('Check this option if the user must enter a value.'),
       '#return_value' => TRUE,
     ];
+
     $form['validation']['required_error'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Custom required error message'),
@@ -1813,6 +1819,19 @@ class WebformElementBase extends PluginBase implements WebformElementInterface {
         ],
       ],
     ];
+
+    $form['validation']['length_error'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Custom Length error message'),
+      '#description' => $this->t('This message will be used when a required webform element is less and exceeds the max and min length.'),
+    ];
+
+    $form['validation']['format_error'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Custom Format error message'),
+      '#description' => $this->t('This message will be used when a required webform element does not match with format.'),
+    ];
+
     $form['validation']['unique'] = [
       '#type' => 'checkbox',
       '#title' => $this->t('Unique'),
