@@ -77,7 +77,7 @@ class DownloadResultsController extends ControllerBase {
     foreach ($queryResults as $key => $value) {
       $date = $this->dateFormatter->format($value->application_date, 'date_only');
       $data[$key]['application_date'] = "=\"$date\"";
-      $data[$key]['username'] = "=\"$value->username\"";
+      $data[$key]['username'] = "=\"{$value->username}\"";
       $data[$key]['currrency'] = $value->currency;
     }
 
