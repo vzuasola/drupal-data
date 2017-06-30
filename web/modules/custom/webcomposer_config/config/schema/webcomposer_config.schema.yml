@@ -17,6 +17,9 @@ webcomposer_config.header_configuration:
     balance_error_text:
       type: label
       label: 'Balance Error Message'
+    lobby_page_title:
+      type: label
+      label: 'Lobby Page Title'
     cashier_icon_hover_text:
       type: label
       label: 'Cashier Icon Hover Text'

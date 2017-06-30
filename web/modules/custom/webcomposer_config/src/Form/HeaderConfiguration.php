@@ -161,6 +161,14 @@ class HeaderConfiguration extends ConfigFormBase {
       '#group' => 'header_settings_tab',
     );
 
+    $form['header_other_group']['lobby_page_title'] = array(
+      '#type' => 'textfield',
+      '#title' => $this->t('Lobby Page Title.'),
+      '#description' => $this->t('Lobby Page Title.'),
+      '#default_value' => $config->get('lobby_page_title'),
+      '#required' => TRUE,
+    );
+
     $form['header_other_group']['profile_logout_text'] = array(
       '#type' => 'textfield',
       '#title' => $this->t('Logout Link Text.'),
@@ -200,6 +208,7 @@ class HeaderConfiguration extends ConfigFormBase {
       'sc_lang_text',
       'ch_lang_text',
       'balance_error_text',
+      'lobby_page_title',
       'profile_icon_hover_text',
       'cashier_icon_hover_text',
       'product_menu_new_tag',
