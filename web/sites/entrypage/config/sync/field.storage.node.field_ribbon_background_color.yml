@@ -1,12 +1,12 @@
-uuid: 3ac38f7b-d348-486d-8056-cbaa47bb3962
+uuid: 4381b7f8-56dd-467e-86ea-a978a8b8c00f
 langcode: en
 status: true
 dependencies:
   module:
     - color_field
     - node
-id: node.field_text_color
-field_name: field_text_color
+id: node.field_ribbon_background_color
+field_name: field_ribbon_background_color
 entity_type: node
 type: color_field_type
 settings:
