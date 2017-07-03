@@ -25,11 +25,6 @@ settings:
             - '-'
             - RemoveFormat
         -
-          name: Linking
-          items:
-            - DrupalLink
-            - DrupalUnlink
-        -
           name: Lists
           items:
             - BulletedList
@@ -38,7 +33,7 @@ settings:
           name: Media
           items:
             - Blockquote
-            - DrupalImage
+            - ImceImage
             - Table
             - HorizontalRule
         -
@@ -46,18 +41,44 @@ settings:
           items:
             - Format
         -
+          name: Linking
+          items:
+            - DrupalUnlink
+            - DrupalLink
+        -
           name: Tools
           items:
+            - JustifyLeft
+            - JustifyBlock
+            - JustifyRight
+            - JustifyCenter
             - ShowBlocks
             - Source
   plugins:
+    language:
+      language_list: un
     stylescombo:
       styles: ''
+    codemirror:
+      enable: false
+      mode: htmlmixed
+      theme: default
+      lineNumbers: true
+      lineWrapping: true
+      matchBrackets: true
+      autoCloseTags: true
+      autoCloseBrackets: true
+      enableSearchTools: true
+      enableCodeFolding: true
+      enableCodeFormatting: true
+      autoFormatOnStart: true
+      autoFormatOnModeChange: true
+      autoFormatOnUncomment: true
 image_upload:
   status: true
   scheme: public
   directory: inline-images
   max_size: ''
   max_dimensions:
-    width: 0
-    height: 0
+    width: null
+    height: null
