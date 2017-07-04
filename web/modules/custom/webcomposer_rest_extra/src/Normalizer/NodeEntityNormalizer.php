@@ -138,8 +138,11 @@ class NodeEntityNormalizer extends ContentEntityNormalizer
 
     if (isset($fid)) {
       $file = File::load($fid);
-      $fileArray = $file->toArray();
-      $fileArray['image_url'] = file_create_url($file->getFileUri());
+
+      if ($file) {
+        $fileArray = $file->toArray();
+        $fileArray['image_url'] = file_create_url($file->getFileUri());
+      }
     }
 
     return $fileArray;
