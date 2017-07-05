@@ -219,6 +219,7 @@ function webcomposer_config_form_webform_ui_element_form_alter(&$form, FormState
     ],
   ];
 
+
 }
 
 /**
@@ -236,11 +237,105 @@ function webcomposer_config_webform_third_party_settings_form_alter(array &$form
     '#title' => t('Layout Settings'),
   ];
 
-  $form['third_party_settings']['webcomposer_config']['background_image'] = [
+  $form['third_party_settings']['webform_background'] = [
+    '#type' => 'details',
+    '#title' => t('Background Settings'),
+  ];
+
+  $form['third_party_settings']['webform_background']['background_image_en'] = [
     '#type' => 'webform_image_file',
-    '#title' => t('Form Background Image'),
+    '#title' => t('Form Background Image EN'),
     '#description' => t('The background image of the form'),
-    '#default_value' => $settings->getThirdPartySetting('webcomposer_config', 'background_image'),
+    '#default_value' => $settings->getThirdPartySetting('webform_background', 'background_image_en'),
+    '#upload_location' => 'public://webform-backgrounds',
+  ];
+
+  $form['third_party_settings']['webform_background']['background_image_sc'] = [
+    '#type' => 'webform_image_file',
+    '#title' => t('Form Background Image SC'),
+    '#description' => t('The background image of the form'),
+    '#default_value' => $settings->getThirdPartySetting('webform_background', 'background_image_sc'),
+    '#upload_location' => 'public://webform-backgrounds',
+  ];
+
+  $form['third_party_settings']['webform_background']['background_image_ch'] = [
+    '#type' => 'webform_image_file',
+    '#title' => t('Form Background Image CH'),
+    '#description' => t('The background image of the form'),
+    '#default_value' => $settings->getThirdPartySetting('webform_background', 'background_image_ch'),
+    '#upload_location' => 'public://webform-backgrounds',
+  ];
+
+  $form['third_party_settings']['webform_background']['background_image_eu'] = [
+    '#type' => 'webform_image_file',
+    '#title' => t('Form Background Image EU'),
+    '#description' => t('The background image of the form'),
+    '#default_value' => $settings->getThirdPartySetting('webform_background', 'background_image_eu'),
+    '#upload_location' => 'public://webform-backgrounds',
+  ];
+
+  $form['third_party_settings']['webform_background']['background_image_th'] = [
+    '#type' => 'webform_image_file',
+    '#title' => t('Form Background Image TH'),
+    '#description' => t('The background image of the form'),
+    '#default_value' => $settings->getThirdPartySetting('webform_background', 'background_image_th'),
+    '#upload_location' => 'public://webform-backgrounds',
+  ];
+
+  $form['third_party_settings']['webform_background']['background_image_vn'] = [
+    '#type' => 'webform_image_file',
+    '#title' => t('Form Background Image VN'),
+    '#description' => t('The background image of the form'),
+    '#default_value' => $settings->getThirdPartySetting('webform_background', 'background_image_vn'),
+    '#upload_location' => 'public://webform-backgrounds',
+  ];
+
+  $form['third_party_settings']['webform_background']['background_image_in'] = [
+    '#type' => 'webform_image_file',
+    '#title' => t('Form Background Image IN'),
+    '#description' => t('The background image of the form'),
+    '#default_value' => $settings->getThirdPartySetting('webform_background', 'background_image_in'),
+    '#upload_location' => 'public://webform-backgrounds',
+  ];
+
+  $form['third_party_settings']['webform_background']['background_image_jp'] = [
+    '#type' => 'webform_image_file',
+    '#title' => t('Form Background Image JP'),
+    '#description' => t('The background image of the form'),
+    '#default_value' => $settings->getThirdPartySetting('webform_background', 'background_image_jp'),
+    '#upload_location' => 'public://webform-backgrounds',
+  ];
+
+  $form['third_party_settings']['webform_background']['background_image_kr'] = [
+    '#type' => 'webform_image_file',
+    '#title' => t('Form Background Image KR'),
+    '#description' => t('The background image of the form'),
+    '#default_value' => $settings->getThirdPartySetting('webform_background', 'background_image_kr'),
+    '#upload_location' => 'public://webform-backgrounds',
+  ];
+
+  $form['third_party_settings']['webform_background']['background_image_id'] = [
+    '#type' => 'webform_image_file',
+    '#title' => t('Form Background Image ID'),
+    '#description' => t('The background image of the form'),
+    '#default_value' => $settings->getThirdPartySetting('webform_background', 'background_image_id'),
+    '#upload_location' => 'public://webform-backgrounds',
+  ];
+
+  $form['third_party_settings']['webform_background']['background_image_gr'] = [
+    '#type' => 'webform_image_file',
+    '#title' => t('Form Background Image GR'),
+    '#description' => t('The background image of the form'),
+    '#default_value' => $settings->getThirdPartySetting('webform_background', 'background_image_gr'),
+    '#upload_location' => 'public://webform-backgrounds',
+  ];
+
+  $form['third_party_settings']['webform_background']['background_image_pl'] = [
+    '#type' => 'webform_image_file',
+    '#title' => t('Form Background Image PL'),
+    '#description' => t('The background image of the form'),
+    '#default_value' => $settings->getThirdPartySetting('webform_background', 'background_image_pl'),
+    '#upload_location' => 'public://webform-backgrounds',
   ];
 
   $form['third_party_settings']['webcomposer_config']['error_font_color'] = [
@@ -248,6 +343,7 @@ function webcomposer_config_webform_third_party_settings_form_alter(array &$form
     '#title' => t('Error Font Color'),
     '#description' => t('The color of the error labels'),
     '#default_value' => $settings->getThirdPartySetting('webcomposer_config', 'error_font_color'),
+
   ];
 
   $form['third_party_settings']['webcomposer_config']['label_font_color'] = [
@@ -280,8 +376,41 @@ function _webcomposer_config_webform_form_validate(&$form, \Drupal\Core\Form\For
 
   // remove the background image upload on empty background
   $third_party_settings = $form_state->getValue('third_party_settings');
-  if (empty($third_party_settings['webform_layout']['background_image'])) {
-    unset($third_party_settings['webform_layout']['background_image']);
+  if (empty($third_party_settings['webform_background']['background_image_en'])) {
+    unset($third_party_settings['webform_background']['background_image_en']);
+  }
+   if (empty($third_party_settings['webform_background']['background_image_sc'])) {
+    unset($third_party_settings['webform_background']['background_image_sc']);
+  }
+   if (empty($third_party_settings['webform_background']['background_image_ch'])) {
+    unset($third_party_settings['webform_background']['background_image_ch']);
+  }
+   if (empty($third_party_settings['webform_background']['background_image_eu'])) {
+    unset($third_party_settings['webform_background']['background_image_eu']);
+  }
+   if (empty($third_party_settings['webform_background']['background_image_th'])) {
+    unset($third_party_settings['webform_background']['background_image_th']);
+  }
+   if (empty($third_party_settings['webform_background']['background_image_vn'])) {
+    unset($third_party_settings['webform_background']['background_image_vn']);
+  }
+   if (empty($third_party_settings['webform_background']['background_image_in'])) {
+    unset($third_party_settings['webform_background']['background_image_in']);
+  }
+   if (empty($third_party_settings['webform_background']['background_image_jp'])) {
+    unset($third_party_settings['webform_background']['background_image_jp']);
+  }
+   if (empty($third_party_settings['webform_background']['background_image_kr'])) {
+    unset($third_party_settings['webform_background']['background_image_kr']);
+  }
+   if (empty($third_party_settings['webform_background']['background_image_id'])) {
+    unset($third_party_settings['webform_background']['background_image_id']);
+  }
+   if (empty($third_party_settings['webform_background']['background_image_gr'])) {
+    unset($third_party_settings['webform_background']['background_image_gr']);
+  }
+   if (empty($third_party_settings['webform_background']['background_image_pl'])) {
+    unset($third_party_settings['webform_background']['background_image_pl']);
   }
 
   $form_state->setValue('third_party_settings', $third_party_settings);
