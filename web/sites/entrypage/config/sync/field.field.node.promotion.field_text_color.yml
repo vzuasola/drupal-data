@@ -1,4 +1,4 @@
-uuid: 8c4612ab-222d-4142-a279-2faa306aea42
+uuid: 3c612268-211f-4e5e-9bb1-0287721d78b6
 langcode: en
 status: true
 dependencies:
@@ -6,18 +6,17 @@ dependencies:
     - field.storage.node.field_text_color
     - node.type.promotion
   module:
-    - options
+    - color_field
 id: node.promotion.field_text_color
 field_name: field_text_color
 entity_type: node
 bundle: promotion
 label: 'Text Color'
-description: 'The ribbon text color'
+description: ''
 required: false
 translatable: true
-default_value:
-  -
-    value: white
+default_value: {  }
 default_value_callback: ''
-settings: {  }
-field_type: list_string
+settings:
+  opacity: 0
+field_type: color_field_type

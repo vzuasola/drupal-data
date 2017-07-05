@@ -54,6 +54,20 @@ QA:
       paths:
         - build/deployed/*.jsonl
 
+tct:
+  stage: deploy-test
+  environment:
+    name: tct
+    url: https://rodwin.fix.me
+  script:
+      - python -u build/deploy.py --environment tct --version "$VERSION.${CI_PIPELINE_ID}"
+  when: manual
+  dependencies:
+   - dev
+  artifacts:
+      paths:
+        - build/deployed/*.jsonl
+
 staging:
   stage: deploy-staging
   environment:

@@ -5,6 +5,7 @@
  * Support module for Webform module custom properties testing.
  */
 
+
 use Drupal\Core\Form\FormStateInterface;
 
 /**
@@ -26,6 +27,8 @@ function webcomposer_config_form_webform_ui_element_form_alter(&$form, FormState
     'length_error' => '',
     'format_error' => '',
     'hide' => 'FALSE',
+    'font_color' => '',
+    'error_color' => '',
   ];
 
   // Append the $default_custom_properties to $default_properties stored in the
@@ -78,5 +81,75 @@ function webcomposer_config_form_webform_ui_element_form_alter(&$form, FormState
       '#default_value' => $custom_properties['format_error'],
     ];
 
+    $form['properties']['validation']['font_color'] = array(
+	    '#type' => 'color',
+	    '#title' => t('Label Font Color'),
+	    '#description' => t('The color of the label'),
+	    '#parents' => ['properties', 'font_color'],
+	    '#default_value' => $custom_properties['font_color'],
+ 	 );
+
+ 	 $form['properties']['validation']['error_color'] = array(
+	    '#type' => 'color',
+	    '#title' => t('Error Font Color'),
+	    '#description' => t('The color of the error label'),
+	    '#parents' => ['properties', 'error_color'],
+	    '#default_value' => $custom_properties['error_color'],
+  	);
+
+}
+
+
+/**
+ * Perform alterations on webform third party settings form.
+ */
+function webcomposer_config_webform_third_party_settings_form_alter(array &$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+  $settings = $form_state->getFormObject()->getEntity();
+
+  // put the form side by side
+  $form['general_settings']['#weight'] = -10;
+  $form['third_party_settings']['#weight'] = -5;
+
+  $form['third_party_settings']['webform_layout'] = [
+    '#type' => 'details',
+    '#title' => t('Layout Settings'),
+  ];
+
+  $form['third_party_settings']['webform_layout']['background_image'] = array(
+    '#type' => 'webform_image_file',
+    '#title' => t('Form Background Image'),
+    '#description' => t('The background image of the form'),
+    '#default_value' => $settings->getThirdPartySetting('webform_layout', 'background_image'),
+  );
+
+
+  $form['#validate'][] = '_webcomposer_config_webform_form_validate';
+}
+
+/**
+ * Validate function
+ */
+function _webcomposer_config_webform_form_validate(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+  $settings = $form_state->getFormObject()->getEntity();
+
+  // fix for image uploads breaking due to unknown reasons that the scheduled date
+  // gets validated on image upload AJAX calls
+  $date = $settings->get('open')['date'];
+  if (!$date) {
+    $settings->set('open', FALSE);
+  }
+
+  $date = $settings->get('close')['date'];
+  if (!$date) {
+    $settings->set('close', FALSE);
+  }
+
+  // remove the background image upload on empty background
+  $third_party_settings = $form_state->getValue('third_party_settings');
+  if (empty($third_party_settings['webform_layout']['background_image'])) {
+    unset($third_party_settings['webform_layout']['background_image']);
+  }
+
+  $form_state->setValue('third_party_settings', $third_party_settings);
 }
 

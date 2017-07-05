@@ -240,6 +240,8 @@ class WebformElementBase extends PluginBase implements WebformElementInterface {
       'unique_error',
       'length_error',
       'format_error',
+      'font_color',
+      'error_color',
       'admin_title',
       'placeholder',
       'markup',
