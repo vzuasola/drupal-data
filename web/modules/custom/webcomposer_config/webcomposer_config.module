@@ -22,7 +22,6 @@ use Drupal\Core\Form\FormStateInterface;
  */
 function webcomposer_config_form_webform_ui_element_form_alter(&$form, FormStateInterface $form_state) {
   // Define default custom properties.
-
   $default_custom_properties = [
     'length_error' => '',
     'format_error' => '',
@@ -41,9 +40,9 @@ function webcomposer_config_form_webform_ui_element_form_alter(&$form, FormState
     $form_state->get('default_properties') + $default_custom_properties
   );
 
-// Retrieve the values from the custom properties element's default value.
+  // Retrieve the values from the custom properties element's default value.
   // @see \Drupal\webform\Plugin\WebformElementBase::buildConfigurationForm
- $custom_properties = $form['properties']['custom']['properties']['#default_value'];
+  $custom_properties = $form['properties']['custom']['properties']['#default_value'];
 
   // Make sure to unset the custom properties which are going to be handled via
   // the below webform elements.
@@ -54,7 +53,6 @@ function webcomposer_config_form_webform_ui_element_form_alter(&$form, FormState
 
   // Finally, append the default custom property values.
   $custom_properties += $default_custom_properties;
-
 
   // Set custom data.
    $form['properties']['validation']['hide'] = [
@@ -81,9 +79,7 @@ function webcomposer_config_form_webform_ui_element_form_alter(&$form, FormState
       '#default_value' => $custom_properties['format_error'],
     ];
 
-
 }
-
 
 /**
  * Perform alterations on webform third party settings form.
@@ -95,31 +91,31 @@ function webcomposer_config_webform_third_party_settings_form_alter(array &$form
   $form['general_settings']['#weight'] = -10;
   $form['third_party_settings']['#weight'] = -5;
 
-  $form['third_party_settings']['webform_layout'] = [
+  $form['third_party_settings']['webcomposer_config'] = [
     '#type' => 'details',
     '#title' => t('Layout Settings'),
   ];
 
-  $form['third_party_settings']['webform_layout']['background_image'] = array(
+  $form['third_party_settings']['webcomposer_config']['background_image'] = [
     '#type' => 'webform_image_file',
     '#title' => t('Form Background Image'),
     '#description' => t('The background image of the form'),
-    '#default_value' => $settings->getThirdPartySetting('webform_layout', 'background_image'),
-  );
+    '#default_value' => $settings->getThirdPartySetting('webcomposer_config', 'background_image'),
+  ];
 
-  $form['third_party_settings']['webform_layout']['font_color'] = array(
-    '#type' => 'color',
-    '#title' => t('Label Font Color'),
-    '#description' => t('The color of the label'),
-    '#default_value' => $settings->getThirdPartySetting('webform_layout', 'font_color'),
-  );
-
-  $form['third_party_settings']['webform_layout']['error_color'] = array(
+  $form['third_party_settings']['webcomposer_config']['error_font_color'] = [
     '#type' => 'color',
     '#title' => t('Error Font Color'),
-    '#description' => t('The color of the error label'),
-    '#default_value' => $settings->getThirdPartySetting('webform_layout', 'error_color'),
-  );
+    '#description' => t('The color of the error labels'),
+    '#default_value' => $settings->getThirdPartySetting('webcomposer_config', 'error_font_color'),
+  ];
+
+  $form['third_party_settings']['webcomposer_config']['label_font_color'] = [
+    '#type' => 'color',
+    '#title' => t('Label Font Color'),
+    '#description' => t('The color of the field labels'),
+    '#default_value' => $settings->getThirdPartySetting('label_font_color', 'error_font_color'),
+  ];
 
   $form['#validate'][] = '_webcomposer_config_webform_form_validate';
 }
