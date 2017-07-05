@@ -2,8 +2,103 @@
 
 /**
  * @file
- * Contains webcomposer_config.module.
+ * Support module for Webform module custom properties testing.
  */
+
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ *
+ * PLEASE NOTE:
+ * The custom_* prefix should be replaced with the custom module's namespace.
+ * For example, the Acme module (acme.module) should prefix all custom
+ * element properties with 'acme_'.
+ *
+ * @see \Drupal\webform_ui\Form\WebformUiElementFormBase
+ * @see \Drupal\webform\Plugin\WebformElementBase::buildConfigurationForm
+ * @see \Drupal\webform\Plugin\WebformElementBase::form
+ */
+function webcomposer_config_form_webform_ui_element_form_alter(&$form, FormStateInterface $form_state) {
+  // Define default custom properties.
+
+  $default_custom_properties = [
+    'length_error' => '',
+    'format_error' => '',
+    'hide' => 'FALSE',
+    'font_color' => '',
+    'error_color' => '',
+  ];
+
+  // Append the $default_custom_properties to $default_properties stored in the
+  // webform's state. This allows default custom properties to be removed when the
+  // webform is submitted. If this is omitted, custom properties will always
+  // be append to the element's properties.
+  // @see \Drupal\webform\Plugin\WebformElementBase::getConfigurationFormProperties
+  $form_state->set(
+    'default_properties',
+    $form_state->get('default_properties') + $default_custom_properties
+  );
+
+// Retrieve the values from the custom properties element's default value.
+  // @see \Drupal\webform\Plugin\WebformElementBase::buildConfigurationForm
+ $custom_properties = $form['properties']['custom']['properties']['#default_value'];
+
+  // Make sure to unset the custom properties which are going to be handled via
+  // the below webform elements.
+  $form['properties']['custom']['properties']['#default_value'] = array_diff_key(
+    $custom_properties,
+    $default_custom_properties
+  );
+
+  // Finally, append the default custom property values.
+  $custom_properties += $default_custom_properties;
+
+
+  // Set custom data.
+   $form['properties']['validation']['hide'] = [
+      '#type' => 'checkbox',
+      '#title' => t('Hide this Field'),
+      '#description' => t('Make this field hidden. Useful for hiding this field from form. Changeable via JavaScript or developer tools.'),
+      '#parents' => ['properties', 'hide'],
+      '#default_value' => $custom_properties['hide'],
+    ];
+
+   $form['properties']['validation']['length_error'] = [
+      '#type' => 'textfield',
+      '#title' => t('Custom Length error message'),
+      '#description' => t('This message will be used when a required webform element is less and exceeds the max and min length.'),
+      '#parents' => ['properties', 'length_error'],
+      '#default_value' => $custom_properties['length_error'],
+    ];
+
+    $form['properties']['validation']['format_error'] = [
+      '#type' => 'textfield',
+      '#title' => t('Custom Format error message'),
+      '#description' => t('This message will be used when a required webform element does not match with format.'),
+      '#parents' => ['properties', 'format_error'],
+      '#default_value' => $custom_properties['format_error'],
+    ];
+
+    $form['properties']['validation']['font_color'] = array(
+	    '#type' => 'color',
+	    '#title' => t('Label Font Color'),
+	    '#description' => t('The color of the label'),
+	    '#parents' => ['properties', 'font_color'],
+	    '#default_value' => $custom_properties['font_color'],
+ 	 );
+
+ 	 $form['properties']['validation']['error_color'] = array(
+	    '#type' => 'color',
+	    '#title' => t('Error Font Color'),
+	    '#description' => t('The color of the error label'),
+	    '#parents' => ['properties', 'error_color'],
+	    '#default_value' => $custom_properties['error_color'],
+  	);
+
+}
+
 
 /**
  * Perform alterations on webform third party settings form.
@@ -27,19 +122,6 @@ function webcomposer_config_webform_third_party_settings_form_alter(array &$form
     '#default_value' => $settings->getThirdPartySetting('webform_layout', 'background_image'),
   );
 
-  $form['third_party_settings']['webform_layout']['font_color'] = array(
-    '#type' => 'color',
-    '#title' => t('Label Font Color'),
-    '#description' => t('The color of the label'),
-    '#default_value' => $settings->getThirdPartySetting('webform_layout', 'font_color'),
-  );
-
-  $form['third_party_settings']['webform_layout']['error_color'] = array(
-    '#type' => 'color',
-    '#title' => t('Error Font Color'),
-    '#description' => t('The color of the error label'),
-    '#default_value' => $settings->getThirdPartySetting('webform_layout', 'error_color'),
-  );
 
   $form['#validate'][] = '_webcomposer_config_webform_form_validate';
 }
@@ -70,3 +152,4 @@ function _webcomposer_config_webform_form_validate(&$form, \Drupal\Core\Form\For
 
   $form_state->setValue('third_party_settings', $third_party_settings);
 }
+
