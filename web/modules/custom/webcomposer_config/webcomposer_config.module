@@ -81,21 +81,6 @@ function webcomposer_config_form_webform_ui_element_form_alter(&$form, FormState
       '#default_value' => $custom_properties['format_error'],
     ];
 
-    $form['properties']['validation']['font_color'] = array(
-	    '#type' => 'color',
-	    '#title' => t('Label Font Color'),
-	    '#description' => t('The color of the label'),
-	    '#parents' => ['properties', 'font_color'],
-	    '#default_value' => $custom_properties['font_color'],
- 	 );
-
- 	 $form['properties']['validation']['error_color'] = array(
-	    '#type' => 'color',
-	    '#title' => t('Error Font Color'),
-	    '#description' => t('The color of the error label'),
-	    '#parents' => ['properties', 'error_color'],
-	    '#default_value' => $custom_properties['error_color'],
-  	);
 
 }
 
@@ -122,6 +107,19 @@ function webcomposer_config_webform_third_party_settings_form_alter(array &$form
     '#default_value' => $settings->getThirdPartySetting('webform_layout', 'background_image'),
   );
 
+  $form['third_party_settings']['webform_layout']['font_color'] = array(
+    '#type' => 'color',
+    '#title' => t('Label Font Color'),
+    '#description' => t('The color of the label'),
+    '#default_value' => $settings->getThirdPartySetting('webform_layout', 'font_color'),
+  );
+
+  $form['third_party_settings']['webform_layout']['error_color'] = array(
+    '#type' => 'color',
+    '#title' => t('Error Font Color'),
+    '#description' => t('The color of the error label'),
+    '#default_value' => $settings->getThirdPartySetting('webform_layout', 'error_color'),
+  );
 
   $form['#validate'][] = '_webcomposer_config_webform_form_validate';
 }
