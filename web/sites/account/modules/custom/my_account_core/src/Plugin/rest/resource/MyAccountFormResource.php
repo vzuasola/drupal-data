@@ -152,9 +152,28 @@ class MyAccountFormResource extends ResourceBase
             unset($values['account_field']);
             unset($values['communication_detail_field']);
             unset($values['verify_text_field']);
+            unset($values['modal_verify_header_text_field']);
+            unset($values['modal_verify_body_text_field']);
+            unset($values['modal_verification_code_placeholder_field']);
+            unset($values['modal_verification_resend_code_text_field']);
+            unset($values['modal_verification_submit_text_field']);
+            unset($values['verification_code_response_field']);
+            unset($values['verification_code_required_message_field']);
+            unset($values['verification_code_min_length_message_field']);
+            unset($values['verification_code_max_length_message_field']);
+
             $value = $values;
         } elseif ($key == 'sms_verification') {
-            $value['verify_text'] = $values['verify_text_field']['options']['label'];
+            $value['verify_text'] = $values['verify_text_field'];
+            $value['modal_verify_header_text'] = $values['modal_verify_header_text_field'];
+            $value['modal_verify_body_text'] = $values['modal_verify_body_text_field'];
+            $value['modal_verification_code_placeholder'] = $values['modal_verification_code_placeholder_field'];
+            $value['modal_verification_resend_code_text'] = $values['modal_verification_resend_code_text_field'];
+            $value['modal_verification_submit_text'] = $values['modal_verification_submit_text_field'];
+            $value['verification_code_response'] = $values['verification_code_response_field'];
+            $value['verification_code_required_message'] = $values['verification_code_required_message_field'];
+            $value['verification_code_min_length_message'] = $values['verification_code_min_length_message_field'];
+            $value['verification_code_max_length_message'] = $values['verification_code_max_length_message_field'];
         }
         return $value;
     }
