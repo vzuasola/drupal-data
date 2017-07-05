@@ -163,7 +163,7 @@ class HeaderConfiguration extends ConfigFormBase {
 
     $form['announcement_group'] = array(
       '#type' => 'details',
-      '#title' => $this->t('Announment Bar'),
+      '#title' => $this->t('Announcement Bar'),
       '#collapsible' => TRUE,
       '#group' => 'header_settings_tab',
     );
@@ -183,7 +183,7 @@ class HeaderConfiguration extends ConfigFormBase {
 
     $form['announcement_group']['critical_issue']['critical_announcement_content'] = [
       '#type' => 'text_format',
-      '#title' => t('Announment Content'),
+      '#title' => t('Announcement Content'),
       '#default_value' => $default_critical_announcement['value'],
       '#description' => $this->t('NOTE: Announcement content must not be empty and announcement must be enabled to show announcement.'),
       '#format' => $default_critical_announcement['format'],
