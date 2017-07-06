@@ -8,6 +8,7 @@ use Drupal\rest\Plugin\ResourceBase;
 use Drupal\rest\ResourceResponse;
 use Symfony\Component\HttpFoundation\Response;
 
+
 /**
  * Creates a resource for submitting a webform.
  *
@@ -59,6 +60,7 @@ class WebformSubmitResource extends ResourceBase {
     // Check webform is open.
     $webform = Webform::load($values['webform_id']);
     $is_open = WebformSubmissionForm::isOpen($webform);
+    $webformSetting = $webform->getSettings();
 
     if ($is_open === TRUE) {
       // Validate submission.
@@ -66,14 +68,31 @@ class WebformSubmitResource extends ResourceBase {
 
       // Check there are no validation errors.
       if (!empty($errors)) {
-        $errors = ['error' => $errors];
+        $errors = [
+        'error' => $errors, 
+        'form_exception_message' => $webformSetting['form_exception_message']];
         return new ResourceResponse($errors);
       }
       else {
         // Return submission ID.
         $webform_submission = WebformSubmissionForm::submitValues($values);
-        return new ResourceResponse(['sid' => $webform_submission->id()]);
+        
+        $response = [
+        'sid' => $webform_submission->id(),
+        'confirmation_message' => $webformSetting['confirmation_message'],
+
+        ];
+        return new ResourceResponse($response);
       }
+    }
+    else {
+      // if the form is closed
+      $response = [
+        'form_close_message' => $webformSetting['form_close_message'],
+
+        ];
+        return new ResourceResponse($response);
+
     }
   }
 
