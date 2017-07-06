@@ -618,6 +618,101 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#default_value' => $myAccountConfigValue['communication_detail_field']['options']['label'],
         ];
 
+        $form['field_configuration']['field_labels_sms_verification'] = [
+            '#type' => 'details',
+            '#title' => 'SMS Verification',
+            '#open' => False,
+            '#tree' => TRUE,
+        ];
+
+        $form['field_configuration']['field_labels_sms_verification']['verify_text'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Verify Text'),
+            '#size' => 25,
+            '#required' => TRUE,
+            '#description' => $this->t('Text for Verify Link'),
+            '#default_value' => $myAccountConfigValue['verify_text_field'],
+        ];
+
+        $form['field_configuration']['field_labels_sms_verification']['modal_verify_header_text'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Modal Verify Header Text'),
+            '#required' => TRUE,
+            '#description' => $this->t('Text modal verify text header'),
+            '#default_value' => $myAccountConfigValue['modal_verify_header_text_field'],
+        ];
+
+        $form['field_configuration']['field_labels_sms_verification']['modal_verify_body_text'] = [
+            '#type' => 'textarea',
+            '#title' => $this->t('Modal Verify Body Text'),
+            '#required' => TRUE,
+            '#description' => $this->t('Text modal verify body text'),
+            '#default_value' => $myAccountConfigValue['modal_verify_body_text_field'],
+        ];
+
+        $form['field_configuration']['field_labels_sms_verification']['modal_verification_code_placeholder'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Modal Verification Code Placeholder'),
+            '#size' => 25,
+            '#required' => TRUE,
+            '#description' => $this->t('Placeholder text for verification field textfield'),
+            '#default_value' => $myAccountConfigValue['modal_verification_code_placeholder_field'],
+        ];
+
+        $form['field_configuration']['field_labels_sms_verification']['modal_verification_resend_code_text'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Modal Resend Verification Code Text'),
+            '#size' => 25,
+            '#required' => TRUE,
+            '#description' => $this->t('Text for resend verification code'),
+            '#default_value' => $myAccountConfigValue['modal_verification_resend_code_text_field'],
+        ];
+
+        $form['field_configuration']['field_labels_sms_verification']['modal_verification_submit_text'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Modal Submit Verification Code Text'),
+            '#size' => 25,
+            '#required' => TRUE,
+            '#description' => $this->t('Text for submit verification code'),
+            '#default_value' => $myAccountConfigValue['modal_verification_submit_text_field'],
+        ];
+
+        $form['field_configuration']['field_labels_sms_verification']['verification_code_response'] = [
+            '#type' => 'textarea',
+            '#title' => $this->t('Response from ICore'),
+            '#size' => 25,
+            '#required' => TRUE,
+            '#description' => $this->t('Response from ICore'),
+            '#default_value' => $myAccountConfigValue['verification_code_response_field'],
+        ];
+
+        $form['field_configuration']['field_labels_sms_verification']['verification_code_required_message'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Required Field Error Message'),
+            '#size' => 25,
+            '#required' => TRUE,
+            '#description' => $this->t('Required Field Error Message'),
+            '#default_value' => $myAccountConfigValue['verification_code_required_message_field'],
+        ];
+
+        $form['field_configuration']['field_labels_sms_verification']['verification_code_min_length_message'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Min Length Field Error Message'),
+            '#size' => 25,
+            '#required' => TRUE,
+            '#description' => $this->t('Min Length Field Error Message'),
+            '#default_value' => $myAccountConfigValue['verification_code_min_length_message_field'],
+        ];
+
+        $form['field_configuration']['field_labels_sms_verification']['verification_code_max_length_message'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Max Length Field Error Message'),
+            '#size' => 25,
+            '#required' => TRUE,
+            '#description' => $this->t('Max Length Field Error Message'),
+            '#default_value' => $myAccountConfigValue['verification_code_max_length_message_field'],
+        ];
+
         $form['actions'] = ['#type' => 'actions'];
         // Add a submit button that handles the submission of the form.
         $form['actions']['submit'] = [
@@ -720,6 +815,16 @@ class MyAccountRegistrationForm extends ConfigFormBase
             ->set('language_field.options.wrapper_class', $configuration['field_labels_language']['wrapper_class'])
             ->set('account_field.options.label', $configuration['field_labels_account']['account_label'])
             ->set('communication_detail_field.options.label', $configuration['field_labels_account']['communication_label'])
+            ->set('verify_text_field', $configuration['field_labels_sms_verification']['verify_text'])
+            ->set('modal_verify_header_text_field', $configuration['field_labels_sms_verification']['modal_verify_header_text'])
+            ->set('modal_verify_body_text_field', $configuration['field_labels_sms_verification']['modal_verify_body_text'])
+            ->set('modal_verification_code_placeholder_field', $configuration['field_labels_sms_verification']['modal_verification_code_placeholder'])
+            ->set('modal_verification_resend_code_text_field', $configuration['field_labels_sms_verification']['modal_verification_resend_code_text'])
+            ->set('modal_verification_submit_text_field', $configuration['field_labels_sms_verification']['modal_verification_submit_text'])
+            ->set('verification_code_response_field', $configuration['field_labels_sms_verification']['verification_code_response'])
+            ->set('verification_code_required_message_field', $configuration['field_labels_sms_verification']['verification_code_required_message'])
+            ->set('verification_code_min_length_message_field', $configuration['field_labels_sms_verification']['verification_code_min_length_message'])
+            ->set('verification_code_max_length_message_field', $configuration['field_labels_sms_verification']['verification_code_max_length_message'])
             ->save();
     }
 
