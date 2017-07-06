@@ -154,6 +154,72 @@ class HeaderConfiguration extends ConfigFormBase {
       '#required' => TRUE,
     );
 
+    // for default display in text format and text area.
+
+    $default_news_announcement = $config->get('news_announcement_content');
+
+    $default_critical_announcement = $config->get('critical_announcement_content');
+
+
+    $form['announcement_group'] = array(
+      '#type' => 'details',
+      '#title' => $this->t('Announcement Bar'),
+      '#collapsible' => TRUE,
+      '#group' => 'header_settings_tab',
+    );
+
+    $form['announcement_group']['critical_issue'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Critical Issues'),
+    ];
+
+    $form['announcement_group']['critical_issue']['critical_announcement'] = [
+      '#type' => 'checkbox',
+      '#title' => 'Enable Critical Issue announcements',
+      '#description' => $this->t('Show/hide Critical Issue announcement. Default value is "Enabled".'),
+      '#default_value' => $config->get('critical_announcement'),
+
+    ];
+
+    $form['announcement_group']['critical_issue']['critical_announcement_content'] = [
+      '#type' => 'text_format',
+      '#title' => t('Announcement Content'),
+      '#default_value' => $default_critical_announcement['value'],
+      '#description' => $this->t('NOTE: Announcement content must not be empty and announcement must be enabled to show announcement.'),
+      '#format' => $default_critical_announcement['format'],
+      '#states' => [
+        'invisible' => [
+          'input[name="critical_announcement"]' => ['checked' => FALSE],
+        ],
+      ],
+    ];
+
+    $form['announcement_group']['news_issue'] = [
+      '#type' => 'details',
+      '#title' => $this->t('News'),
+    ];
+
+    $form['announcement_group']['news_issue']['news_announcement'] = [
+      '#type' => 'checkbox',
+      '#title' => 'Enable news announcements',
+      '#description' => $this->t('Show/hide news announcement. Default value is "Enabled".'),
+      '#default_value' => $config->get('news_announcement'),
+
+    ];
+
+    $form['announcement_group']['news_issue']['news_announcement_content'] = [
+      '#type' => 'text_format',
+      '#title' => t('News Content'),
+      '#description' => $this->t('NOTE: Announcement content must not be empty and announcement must be enabled to show announcement.'),
+      '#default_value' => $default_news_announcement['value'],
+      '#format' => $default_news_announcement['format'],
+      '#states' => [
+        'invisible' => [
+          'input[name="news_announcement"]' => ['checked' => FALSE],
+        ],
+      ],
+    ];
+
     $form['header_other_group'] = array(
       '#type' => 'details',
       '#title' => $this->t('Other Settings'),
@@ -213,6 +279,10 @@ class HeaderConfiguration extends ConfigFormBase {
       'cashier_icon_hover_text',
       'product_menu_new_tag',
       'welcome_text',
+      'critical_announcement',
+      'critical_announcement_content',
+      'news_announcement',
+      'news_announcement_content',
       'profile_link',
       'profile_logout_text',
     );

@@ -20,6 +20,14 @@ webcomposer_config.header_configuration:
     lobby_page_title:
       type: label
       label: 'Lobby Page Title'
+    critical_announcement_content:
+      type: label
+      label: 'Announcement Content'
+      translatable: true
+    news_announcement_content:
+      type: label
+      label: 'Announcement Content'
+      translatable: true
     cashier_icon_hover_text:
       type: label
       label: 'Cashier Icon Hover Text'

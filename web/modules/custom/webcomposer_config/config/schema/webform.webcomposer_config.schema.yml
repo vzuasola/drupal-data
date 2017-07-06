@@ -1,0 +1,10 @@
+webform.settings.third_party.webcomposer_config:
+  type: mapping
+  label: 'Webform Layout Settings'
+  mapping:
+    error_font_color:
+      type: text
+      label: 'The color of the error labels'
+    label_font_color:
+      type: text
+      label: 'The color of the field labels'
