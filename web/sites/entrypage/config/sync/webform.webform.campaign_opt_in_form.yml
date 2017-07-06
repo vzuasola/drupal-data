@@ -2,6 +2,15 @@ uuid: 408f1fb2-7d3a-423a-8f71-3c324d5253f2
 langcode: en
 status: open
 dependencies: {  }
+third_party_settings:
+  webcomposer_config:
+    error_font_color: '#00ff00'
+    label_font_color: '#000000'
+  webform_background:
+    background_image_en:
+      - '178'
+    background_image_sc:
+      - '179'
 open: null
 close: null
 uid: 1
