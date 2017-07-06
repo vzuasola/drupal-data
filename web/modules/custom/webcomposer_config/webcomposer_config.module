@@ -30,6 +30,8 @@ function webcomposer_config_form_webform_ui_element_form_alter(&$form, FormState
     'unicode_error' => 'Input should be unicode',
     'email' => FALSE,
     'email_error' => 'Input should be a valid email',
+    'numeric' => FALSE,
+    'numeric_error' => 'Input should be numeric',
     'numeric_symbols' => FALSE,
     'numeric_symbols_error' => 'Input should be numeric',
     'min_length' => FALSE,
@@ -135,6 +137,27 @@ function webcomposer_config_form_webform_ui_element_form_alter(&$form, FormState
     '#states' => [
       'visible' => [
         ':input[name="properties[email]"]' => ['checked' => TRUE],
+      ],
+    ],
+  ];
+
+  $form['properties']['validation']['numeric'] = [
+    '#type' => 'checkbox',
+    '#title' => t('Numeric'),
+    '#description' => t('Make this field numeric'),
+    '#parents' => ['properties', 'numeric'],
+    '#default_value' => $custom_properties['numeric'],
+  ];
+
+  $form['properties']['validation']['numeric_error'] = [
+    '#type' => 'textfield',
+    '#title' => t('Numeric error message'),
+    '#description' => t('The error message for the numeric validation'),
+    '#parents' => ['properties', 'numeric_error'],
+    '#default_value' => $custom_properties['numeric_error'],
+    '#states' => [
+      'visible' => [
+        ':input[name="properties[numeric]"]' => ['checked' => TRUE],
       ],
     ],
   ];
