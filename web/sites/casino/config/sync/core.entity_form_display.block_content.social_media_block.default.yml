@@ -9,6 +9,8 @@ dependencies:
     - field.field.block_content.social_media_block.field_social_media
   module:
     - paragraphs
+_core:
+  default_config_hash: ZdgiZpDjW8cBPT0HGll1PzzC02CJmDu8ryC2k52_upI
 id: block_content.social_media_block.default
 targetEntityType: block_content
 bundle: social_media_block

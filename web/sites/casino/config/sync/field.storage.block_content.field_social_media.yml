@@ -6,6 +6,8 @@ dependencies:
     - block_content
     - entity_reference_revisions
     - paragraphs
+_core:
+  default_config_hash: ID7sfV3dVCO-tYcwCqtLbif9TQUbh8xZHvdHsI2nFJQ
 id: block_content.field_social_media
 field_name: field_social_media
 entity_type: block_content

@@ -1,5 +1,0 @@
-name: Casino Language Fetcher API
-type: module
-description: Module to get the enabled and configured language for the site
-core: 8.x
-package: Casino

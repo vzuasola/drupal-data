@@ -1,5 +1,5 @@
-uuid: 1877e659-1482-4fb4-8d36-0da0c873d9ba
-langcode: zh-hans
+uuid: ebac2757-08d3-477c-b9f8-f8ccaaeda5f2
+langcode: en
 status: true
 dependencies:
   config:
@@ -7,11 +7,13 @@ dependencies:
     - node.type.promotion
   module:
     - text
+_core:
+  default_config_hash: Qu163b9UtnNsetfpC25-4pkP_-ZO_ARl6O6S5PMyIoo
 id: node.promotion.field_banner_content
 field_name: field_banner_content
 entity_type: node
 bundle: promotion
-label: 'Banner Content'
+label: 'Banner content'
 description: ''
 required: false
 translatable: true

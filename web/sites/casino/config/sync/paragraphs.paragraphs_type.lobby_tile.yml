@@ -1,7 +1,0 @@
-uuid: a956f988-f5e0-4906-9012-b97e5236d098
-langcode: zh-hans
-status: true
-dependencies: {  }
-id: lobby_tile
-label: 'Lobby Tile'
-behavior_plugins: {  }
