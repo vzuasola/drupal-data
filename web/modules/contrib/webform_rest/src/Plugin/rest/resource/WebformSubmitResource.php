@@ -61,7 +61,7 @@ class WebformSubmitResource extends ResourceBase {
     $webform = Webform::load($values['webform_id']);
     $is_open = WebformSubmissionForm::isOpen($webform);
     $webformSetting = $webform->getSettings();
-
+    $is_closed = $webform->isClosed();
     if ($is_open === TRUE) {
       // Validate submission.
       $errors = WebformSubmissionForm::validateValues($values);
@@ -85,7 +85,7 @@ class WebformSubmitResource extends ResourceBase {
         return new ResourceResponse($response);
       }
     }
-    else {
+    elseif($is_closed === TRUE){
       // if the form is closed
       $response = [
         'form_close_message' => $webformSetting['form_close_message'],
@@ -93,6 +93,13 @@ class WebformSubmitResource extends ResourceBase {
         ];
         return new ResourceResponse($response);
 
+    }
+    else {
+      $response = [
+        'limit_total_message' => $webformSetting['limit_total_message'],
+
+        ];
+        return new ResourceResponse($response);
     }
   }
 
