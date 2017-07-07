@@ -82,6 +82,7 @@ module:
   webcomposer_promotions: 0
   webcomposer_rest_extra: 0
   webcomposer_token: 0
+  webcomposer_webform: 0
   webform: 0
   webform_devel: 0
   webform_node: 0
