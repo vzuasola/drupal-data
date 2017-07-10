@@ -1,0 +1,22 @@
+# Social Media routing definition
+social_media_entity.settings_tab:
+  route_name: social_media_entity.settings
+  title: 'Settings'
+  base_route: social_media_entity.settings
+
+entity.social_media_entity.canonical:
+  route_name: entity.social_media_entity.canonical
+  base_route: entity.social_media_entity.canonical
+  title: 'View'
+
+entity.social_media_entity.edit_form:
+  route_name: entity.social_media_entity.edit_form
+  base_route: entity.social_media_entity.canonical
+  title: 'Edit'
+
+entity.social_media_entity.delete_form:
+  route_name:  entity.social_media_entity.delete_form
+  base_route:  entity.social_media_entity.canonical
+  title: Delete
+  weight: 10
+

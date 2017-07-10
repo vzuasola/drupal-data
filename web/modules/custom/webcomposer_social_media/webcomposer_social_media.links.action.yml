@@ -1,0 +1,5 @@
+entity.social_media_entity.add_form:
+  route_name: entity.social_media_entity.add_form
+  title: 'Add Social Media'
+  appears_on:
+    - entity.social_media_entity.collection

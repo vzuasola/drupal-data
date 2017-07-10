@@ -1,0 +1,20 @@
+webcomposer_sponsor.list:
+  title: 'Webcomposer Sponsors'
+  description: 'Configure the Footer Sponsors'
+  parent: system.admin_config
+  route_name: webcomposer_sponsors.admin_settings
+  weight: 1500
+
+# Sponsor menu items definition
+entity.sponsor_entity.collection:
+  title: 'Sponsor list'
+  route_name: entity.sponsor_entity.collection
+  description: 'List Sponsor entities'
+  parent: webcomposer_sponsor.list
+
+sponsor_entity.admin.structure.settings:
+  title: Sponsor settings
+  description: 'Configure Sponsor entities'
+  route_name: sponsor_entity.settings
+  parent: webcomposer_sponsor.list
+  weight: 100
