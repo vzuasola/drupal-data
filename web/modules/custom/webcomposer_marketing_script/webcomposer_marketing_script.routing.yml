@@ -1,0 +1,7 @@
+webcomposer_marketing_script.admin_settings:
+  path: 'admin/config/webcomposer/marketing_script'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Webcomposer Marketing Script'
+  requirements:
+    _permission: 'administer site configuration'
