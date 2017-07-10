@@ -41,10 +41,10 @@ function webcomposer_webform_form_webform_ui_element_form_alter(&$form, FormStat
   // webform is submitted. If this is omitted, custom properties will always 
   // be append to the element's properties. 
   // @see \Drupal\webform\Plugin\WebformElementBase::getConfigurationFormProperties 
-  $form_state->set( 
-    'default_properties', 
-    $form_state->get('default_properties') + $default_custom_properties 
-  ); 
+  // $form_state->set( 
+  //   'default_properties', 
+  //   $form_state->get('default_properties') + $default_custom_properties 
+  // );
 
   // Retrieve the values from the custom properties element's default value.
   // @see \Drupal\webform\Plugin\WebformElementBase::buildConfigurationForm
