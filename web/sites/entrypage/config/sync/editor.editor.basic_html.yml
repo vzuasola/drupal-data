@@ -24,8 +24,8 @@ settings:
         -
           name: Linking
           items:
-            - DrupalLink
-            - DrupalUnlink
+            - Link
+            - Unlink
         -
           name: Lists
           items:
@@ -35,7 +35,7 @@ settings:
           name: Media
           items:
             - Blockquote
-            - DrupalImage
+            - ImceImage
         -
           name: 'Block Formatting'
           items:
@@ -61,10 +61,10 @@ settings:
             - Table
             - Accordion
   plugins:
-    language:
-      language_list: un
     stylescombo:
       styles: "a.btn.btn-small|Small Button\r\na.btn.btn-medium|Medium Button\r\na.btn.btn-large|Large Button"
+    language:
+      language_list: un
     codemirror:
       enable: true
       mode: htmlmixed

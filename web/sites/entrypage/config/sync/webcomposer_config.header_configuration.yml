@@ -14,4 +14,4 @@ profile_logout_text: Logout
 _core:
   default_config_hash: Ynx2hkfeSTtNe4GyBQ1t4lBkrV4wrazLGjX_M7Mk3mg
 lobby_page_title: test
-critical_announcement: 1
+critical_announcement: '1'
