@@ -1,0 +1,22 @@
+add marketing script entities:
+  title: 'Create new Marketing Script entities'
+
+administer marketing script entities:
+  title: 'Administer Marketing Script entities'
+  description: 'Allow to access the administration form to configure Marketing Script entities.'
+  restrict access: true
+
+delete marketing script entities:
+  title: 'Delete Marketing Script entities'
+
+edit marketing script entities:
+  title: 'Edit Marketing Script entities'
+
+access marketing script overview:
+  title: 'Access the Marketing Script overview page'
+
+view published marketing script entities:
+  title: 'View published Marketing Script entities'
+
+view unpublished marketing script entities:
+  title: 'View unpublished Marketing Script entities'
