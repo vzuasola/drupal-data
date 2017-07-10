@@ -1,0 +1,21 @@
+uuid: 7febc9b0-9e9a-46fb-b905-ae3985df3ee1
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - webcomposer_floating_banners
+_core:
+  default_config_hash: sJ6YJWw8yBk9YGz_LUSEtUx3NBTNzDn3VIGOvXHOnXk
+id: left_floating_banner_entity.field_link
+field_name: field_link
+entity_type: left_floating_banner_entity
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

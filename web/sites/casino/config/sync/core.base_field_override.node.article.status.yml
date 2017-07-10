@@ -1,4 +1,4 @@
-uuid: 1ea92de4-c93c-4a7f-b820-23c265bdb427
+uuid: 52a72f72-6f93-4b30-b675-312a66ee6795
 langcode: en
 status: true
 dependencies:
@@ -9,9 +9,9 @@ field_name: status
 entity_type: node
 bundle: article
 label: 'Publishing status'
-description: 'A boolean indicating whether the node is published.'
+description: 'A boolean indicating the published state.'
 required: false
-translatable: false
+translatable: true
 default_value:
   -
     value: 1

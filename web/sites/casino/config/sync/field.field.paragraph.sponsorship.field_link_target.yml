@@ -7,6 +7,8 @@ dependencies:
     - paragraphs.paragraphs_type.sponsorship
   module:
     - options
+_core:
+  default_config_hash: XikMcFO8eimz5-aWvAWOX4_xOIISxCrAmRePfPui3vc
 id: paragraph.sponsorship.field_link_target
 field_name: field_link_target
 entity_type: paragraph

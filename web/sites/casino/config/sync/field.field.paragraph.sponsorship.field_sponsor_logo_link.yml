@@ -5,6 +5,8 @@ dependencies:
   config:
     - field.storage.paragraph.field_sponsor_logo_link
     - paragraphs.paragraphs_type.sponsorship
+_core:
+  default_config_hash: oMSL5q8sFbthwEwGVZJ-Q2CHzl3uUV4dbvWwakCg32A
 id: paragraph.sponsorship.field_sponsor_logo_link
 field_name: field_sponsor_logo_link
 entity_type: paragraph

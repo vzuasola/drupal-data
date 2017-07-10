@@ -1,5 +1,5 @@
-uuid: ba1bcc27-86b6-42a6-b213-02c890031389
-langcode: zh-hans
+uuid: ca6f949a-8789-4ed9-b9d0-e278e77be352
+langcode: en
 status: true
 dependencies:
   config:
@@ -18,13 +18,13 @@ settings:
           name: Formatting
           items:
             - Bold
-            - Italic
             - Underline
+            - Italic
             - Styles
         -
           name: Linking
           items:
-            - SimpleLink
+            - DrupalLink
             - DrupalUnlink
         -
           name: Lists
@@ -45,16 +45,21 @@ settings:
           items:
             - Source
         -
-          name: Font
-          items:
-            - FontSizes
-            - FontColors
-        -
-          name: Alignment
+          name: Align
           items:
             - JustifyLeft
             - JustifyCenter
             - JustifyRight
+        -
+          name: Font
+          items:
+            - FontColors
+            - FontSizes
+        -
+          name: Table
+          items:
+            - Table
+            - Accordion
   plugins:
     language:
       language_list: un
@@ -63,7 +68,7 @@ settings:
     codemirror:
       enable: true
       mode: htmlmixed
-      theme: dracula
+      theme: default
       lineNumbers: true
       lineWrapping: true
       matchBrackets: true

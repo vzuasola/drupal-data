@@ -9,6 +9,8 @@ dependencies:
     - field.field.block_content.social_media_block.field_social_media
   module:
     - entity_reference_revisions
+_core:
+  default_config_hash: g7_KEqNkhVYM27vrkxyWJSr6kxEUFmA5Zeh13yo05pk
 id: block_content.social_media_block.default
 targetEntityType: block_content
 bundle: social_media_block

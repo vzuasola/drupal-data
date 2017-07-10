@@ -1,0 +1,14 @@
+uuid: aa0b5cc4-21c1-49a8-a4ac-74e95ad3c585
+langcode: ja
+status: true
+dependencies:
+  module:
+    - webcomposer_language_hierarchy
+third_party_settings:
+  webcomposer_language_hierarchy:
+    webcomposer_fallback_langcode: en
+id: ja
+label: 日本語
+direction: ltr
+weight: -3
+locked: false
