@@ -150,7 +150,7 @@ def execute_deployment(config, image_name, version):
     Raises:
         PipelineError
     """
-    cmd = ['docker', 'run', '--security-opt', 'label:type:unconfined_t',
+    cmd = ['docker', 'run', '--rm', '-t', '--security-opt', 'label:type:unconfined_t',
            '-u', '{0}:{1}'.format(os.getuid(), os.getuid()),
            '-v', '{0}:/deploy'.format(deployment_conf_dir()),
            image_name,
