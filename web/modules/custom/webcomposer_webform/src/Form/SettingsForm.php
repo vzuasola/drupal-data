@@ -185,7 +185,7 @@ class SettingsForm {
       '#type' => 'details',
       '#title' => t('Translated Backgrounds'),
       '#open' => FALSE,
-      '#parents' => ['third_party_settings', 'webform_background'],
+      '#parents' => ['third_party_settings', 'webcomposer_webform', 'webform_background'],
     ];
 
     foreach ($this->languageManager->getLanguages() as $language) {
@@ -238,8 +238,8 @@ class SettingsForm {
       if (isset($this->prefixes[$lang])) {
         $langKey = $this->prefixes[$lang];
 
-        if (empty($third_party_settings['webform_background']['webform_background']["background_image_$langKey"])) {
-          unset($third_party_settings['webform_background']['webform_background']["background_image_$langKey"]);
+        if (empty($third_party_settings['webcomposer_webform']['webform_background']["background_image_$langKey"])) {
+          unset($third_party_settings['webcomposer_webform']['webform_background']["background_image_$langKey"]);
         }
       }
     }
