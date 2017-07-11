@@ -11,6 +11,8 @@ dependencies:
     - options
     - user
     - webcomposer_marketing_script
+_core:
+  default_config_hash: T3Qrl64iG0_lFSJJDximWN4mMRUH9L5ZLc63rmURYPY
 id: marketing_script_entity.marketing_script_entity.default
 targetEntityType: marketing_script_entity
 bundle: marketing_script_entity

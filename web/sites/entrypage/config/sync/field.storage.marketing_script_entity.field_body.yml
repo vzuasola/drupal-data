@@ -4,6 +4,8 @@ status: true
 dependencies:
   module:
     - webcomposer_marketing_script
+_core:
+  default_config_hash: vR5zOIU4SwkmH0xKNDxQ-4hvmNwH3gm4fhTDk8_Q6G8
 id: marketing_script_entity.field_body
 field_name: field_body
 entity_type: marketing_script_entity
