@@ -7,7 +7,6 @@ dependencies:
       - webform
   module:
     - webcomposer_webform
-    - webform_background
 third_party_settings:
   webcomposer_webform:
     webcomposer_webform_layout:
@@ -28,19 +27,6 @@ third_party_settings:
       error_background_color: '#ff0000'
     webform_background:
       background_image: {  }
-  webform_background:
-    background_image_en: {  }
-    background_image_sc: {  }
-    background_image_ch: {  }
-    background_image_eu: {  }
-    background_image_th: {  }
-    background_image_vn: {  }
-    background_image_in: {  }
-    background_image_jp: {  }
-    background_image_kr: {  }
-    background_image_id: {  }
-    background_image_gr: {  }
-    background_image_pl: {  }
 _core:
   default_config_hash: k-pt3VLxBw-YVz1njxzRpczoo8bThqMQspJ3h0rf_FE
 open: null
