@@ -36,16 +36,29 @@ hidden:
   field_full_tile_summary: true
   field_half_tile_image: true
   field_half_tile_summary: true
+  field_hide_countdown: true
+  field_hide_promotion: true
+  field_hide_right_side_block: true
   field_image: true
   field_link_target: true
   field_log_in_state: true
   field_mark_as_featured: true
   field_product: true
+  field_product_subfilter: true
   field_promote_to_lobby: true
+  field_promotion_link_target: true
+  field_promotion_summary: true
+  field_promotion_summary_link: true
+  field_ribbon_background_color: true
+  field_ribbon_label: true
   field_right_side_block_content: true
   field_right_side_block_link: true
   field_right_side_block_option: true
   field_right_side_block_title: true
+  field_right_side_content: true
+  field_show_inner_page_right_side: true
+  field_summary_image: true
+  field_text_color: true
   field_thumbnail_image: true
   field_thumbnail_summary: true
   langcode: true
