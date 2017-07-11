@@ -9,6 +9,24 @@ use Drupal\Core\Form\FormStateInterface;
  */
 class SettingsForm {
   /**
+   * Language manager
+   */
+  private $languageManager;
+
+  /**
+   * Language prefixes
+   */
+  private $prefixes;
+
+  /**
+   * Constructor
+   */
+  public function __construct() {
+    $this->languageManager = \Drupal::service('language_manager');
+    $this->prefixes = \Drupal::config('language.negotiation')->get('url.prefixes');
+  }
+
+  /**
    * 
    */
   public function getForm(&$form, FormStateInterface $form_state) {
@@ -22,6 +40,10 @@ class SettingsForm {
         $form[$key]['#access'] = FALSE;
       }
     }
+
+    $form['submission_limits']['limit_user']['#access'] = FALSE;
+    $form['submission_limits']['entity_limit_user']['#access'] = FALSE;
+    $form['submission_limits']['limit_user_message']['#access'] = FALSE;
 
     // put the form side by side
     $form['general_settings']['#weight'] = -10;
@@ -132,109 +154,44 @@ class SettingsForm {
       '#default_value' => $settings->getThirdPartySetting('webcomposer_webform_submission_layout', 'error_background_color', '#ff0000'),
     ];
 
-    // TODO Make this dynamic by looping on the available language instead
-    // Also add a default fallback
     $form['third_party_settings']['webform_background'] = [
       '#type' => 'details',
       '#title' => t('Background Settings'),
       '#open' => FALSE,
     ];
 
-    $form['third_party_settings']['webform_background']['background_image_en'] = [
+    $form['third_party_settings']['webform_background']['background_image'] = [
       '#type' => 'webform_image_file',
-      '#title' => t('Form Background Image EN'),
+      '#title' => t('Default Form Background Image'),
       '#description' => t('The background image of the form'),
-      '#default_value' => $settings->getThirdPartySetting('webform_background', 'background_image_en'),
+      '#default_value' => $settings->getThirdPartySetting('webform_background', 'background_image'),
       '#upload_location' => 'public://webform-backgrounds',
     ];
 
-    $form['third_party_settings']['webform_background']['background_image_sc'] = [
-      '#type' => 'webform_image_file',
-      '#title' => t('Form Background Image SC'),
-      '#description' => t('The background image of the form'),
-      '#default_value' => $settings->getThirdPartySetting('webform_background', 'background_image_sc'),
-      '#upload_location' => 'public://webform-backgrounds',
+    // translated backgrounds
+
+    $form['third_party_settings']['webform_background']['translated'] = [
+      '#type' => 'details',
+      '#title' => t('Translated Backgrounds'),
+      '#open' => FALSE,
+      '#parents' => ['third_party_settings', 'webform_background'],
     ];
 
-    $form['third_party_settings']['webform_background']['background_image_ch'] = [
-      '#type' => 'webform_image_file',
-      '#title' => t('Form Background Image CH'),
-      '#description' => t('The background image of the form'),
-      '#default_value' => $settings->getThirdPartySetting('webform_background', 'background_image_ch'),
-      '#upload_location' => 'public://webform-backgrounds',
-    ];
+    foreach ($this->languageManager->getLanguages() as $language) {
+      $lang = $language->getId();
 
-    $form['third_party_settings']['webform_background']['background_image_eu'] = [
-      '#type' => 'webform_image_file',
-      '#title' => t('Form Background Image EU'),
-      '#description' => t('The background image of the form'),
-      '#default_value' => $settings->getThirdPartySetting('webform_background', 'background_image_eu'),
-      '#upload_location' => 'public://webform-backgrounds',
-    ];
+      if (isset($this->prefixes[$lang])) {
+        $langKey = $this->prefixes[$lang];
 
-    $form['third_party_settings']['webform_background']['background_image_th'] = [
-      '#type' => 'webform_image_file',
-      '#title' => t('Form Background Image TH'),
-      '#description' => t('The background image of the form'),
-      '#default_value' => $settings->getThirdPartySetting('webform_background', 'background_image_th'),
-      '#upload_location' => 'public://webform-backgrounds',
-    ];
-
-    $form['third_party_settings']['webform_background']['background_image_vn'] = [
-      '#type' => 'webform_image_file',
-      '#title' => t('Form Background Image VN'),
-      '#description' => t('The background image of the form'),
-      '#default_value' => $settings->getThirdPartySetting('webform_background', 'background_image_vn'),
-      '#upload_location' => 'public://webform-backgrounds',
-    ];
-
-    $form['third_party_settings']['webform_background']['background_image_in'] = [
-      '#type' => 'webform_image_file',
-      '#title' => t('Form Background Image IN'),
-      '#description' => t('The background image of the form'),
-      '#default_value' => $settings->getThirdPartySetting('webform_background', 'background_image_in'),
-      '#upload_location' => 'public://webform-backgrounds',
-    ];
-
-    $form['third_party_settings']['webform_background']['background_image_jp'] = [
-      '#type' => 'webform_image_file',
-      '#title' => t('Form Background Image JP'),
-      '#description' => t('The background image of the form'),
-      '#default_value' => $settings->getThirdPartySetting('webform_background', 'background_image_jp'),
-      '#upload_location' => 'public://webform-backgrounds',
-    ];
-
-    $form['third_party_settings']['webform_background']['background_image_kr'] = [
-      '#type' => 'webform_image_file',
-      '#title' => t('Form Background Image KR'),
-      '#description' => t('The background image of the form'),
-      '#default_value' => $settings->getThirdPartySetting('webform_background', 'background_image_kr'),
-      '#upload_location' => 'public://webform-backgrounds',
-    ];
-
-    $form['third_party_settings']['webform_background']['background_image_id'] = [
-      '#type' => 'webform_image_file',
-      '#title' => t('Form Background Image ID'),
-      '#description' => t('The background image of the form'),
-      '#default_value' => $settings->getThirdPartySetting('webform_background', 'background_image_id'),
-      '#upload_location' => 'public://webform-backgrounds',
-    ];
-
-    $form['third_party_settings']['webform_background']['background_image_gr'] = [
-      '#type' => 'webform_image_file',
-      '#title' => t('Form Background Image GR'),
-      '#description' => t('The background image of the form'),
-      '#default_value' => $settings->getThirdPartySetting('webform_background', 'background_image_gr'),
-      '#upload_location' => 'public://webform-backgrounds',
-    ];
-
-    $form['third_party_settings']['webform_background']['background_image_pl'] = [
-      '#type' => 'webform_image_file',
-      '#title' => t('Form Background Image PL'),
-      '#description' => t('The background image of the form'),
-      '#default_value' => $settings->getThirdPartySetting('webform_background', 'background_image_pl'),
-      '#upload_location' => 'public://webform-backgrounds',
-    ];
+        $form['third_party_settings']['webform_background']['translated']["background_image_$langKey"] = [
+          '#type' => 'webform_image_file',
+          '#title' => "Form Background Image for " . strtoupper($langKey) ,
+          '#description' => t('The background image of the form'),
+          '#default_value' => $settings->getThirdPartySetting('webform_background', "background_image_$langKey"),
+          '#upload_location' => 'public://webform-backgrounds',
+        ];
+      }
+    }
 
     $form['#validate'][] = [$this, 'validate'];
   }
@@ -257,44 +214,23 @@ class SettingsForm {
       $settings->set('close', FALSE);
     }
 
+    // always mark this form as open
+    $form_state->setValue('status', 'open');
+
     // remove the background image upload on empty background
     $third_party_settings = $form_state->getValue('third_party_settings');
 
-    if (empty($third_party_settings['webform_background']['background_image_en'])) {
-      unset($third_party_settings['webform_background']['background_image_en']);
-    }
-    if (empty($third_party_settings['webform_background']['background_image_sc'])) {
-      unset($third_party_settings['webform_background']['background_image_sc']);
-    }
-    if (empty($third_party_settings['webform_background']['background_image_ch'])) {
-      unset($third_party_settings['webform_background']['background_image_ch']);
-    }
-    if (empty($third_party_settings['webform_background']['background_image_eu'])) {
-      unset($third_party_settings['webform_background']['background_image_eu']);
-    }
-    if (empty($third_party_settings['webform_background']['background_image_th'])) {
-      unset($third_party_settings['webform_background']['background_image_th']);
-    }
-    if (empty($third_party_settings['webform_background']['background_image_vn'])) {
-      unset($third_party_settings['webform_background']['background_image_vn']);
-    }
-    if (empty($third_party_settings['webform_background']['background_image_in'])) {
-      unset($third_party_settings['webform_background']['background_image_in']);
-    }
-    if (empty($third_party_settings['webform_background']['background_image_jp'])) {
-      unset($third_party_settings['webform_background']['background_image_jp']);
-    }
-    if (empty($third_party_settings['webform_background']['background_image_kr'])) {
-      unset($third_party_settings['webform_background']['background_image_kr']);
-    }
-    if (empty($third_party_settings['webform_background']['background_image_id'])) {
-      unset($third_party_settings['webform_background']['background_image_id']);
-    }
-    if (empty($third_party_settings['webform_background']['background_image_gr'])) {
-      unset($third_party_settings['webform_background']['background_image_gr']);
-    }
-    if (empty($third_party_settings['webform_background']['background_image_pl'])) {
-      unset($third_party_settings['webform_background']['background_image_pl']);
+    // remove translated backgrounds
+    foreach ($this->languageManager->getLanguages() as $language) {
+      $lang = $language->getId();
+
+      if (isset($this->prefixes[$lang])) {
+        $langKey = $this->prefixes[$lang];
+
+        if (empty($third_party_settings['webform_background']["background_image_$langKey"])) {
+          unset($third_party_settings['webform_background']["background_image_$langKey"]);
+        }
+      }
     }
 
     $form_state->setValue('third_party_settings', $third_party_settings);
