@@ -5,6 +5,8 @@ dependencies:
   module:
     - options
     - webcomposer_marketing_script
+_core:
+  default_config_hash: rKA0XapXOSZ6-7RljuIUTfAU2SG2qMdBryXtddBNo8Q
 id: marketing_script_entity.field_position
 field_name: field_position
 entity_type: marketing_script_entity
