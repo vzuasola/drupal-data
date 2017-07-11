@@ -7,9 +7,6 @@ dependencies:
       - webform
   module:
     - webcomposer_webform
-    - webcomposer_webform_submission
-    - webcomposer_webform_submission_layout
-    - webform_background
 third_party_settings:
   webcomposer_webform:
     label_font_color: '#000000'
