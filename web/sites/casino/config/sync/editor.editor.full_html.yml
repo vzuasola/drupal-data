@@ -1,5 +1,5 @@
-uuid: c02efee6-f6be-4a04-9ae4-b75dc059b4cd
-langcode: zh-hans
+uuid: dbc250a2-989b-4daa-892a-cdafda102867
+langcode: en
 status: true
 dependencies:
   config:
@@ -25,11 +25,6 @@ settings:
             - '-'
             - RemoveFormat
         -
-          name: Linking
-          items:
-            - SimpleLink
-            - DrupalUnlink
-        -
           name: Lists
           items:
             - BulletedList
@@ -38,7 +33,7 @@ settings:
           name: Media
           items:
             - Blockquote
-            - DrupalImage
+            - ImceImage
             - Table
             - HorizontalRule
         -
@@ -46,30 +41,28 @@ settings:
           items:
             - Format
         -
+          name: Linking
+          items:
+            - DrupalUnlink
+            - DrupalLink
+        -
           name: Tools
           items:
+            - JustifyLeft
+            - JustifyBlock
+            - JustifyRight
+            - JustifyCenter
             - ShowBlocks
             - Source
-        -
-          name: Font
-          items:
-            - FontSizes
-            - FontColors
-        -
-          name: Alignment
-          items:
-            - JustifyLeft
-            - JustifyCenter
-            - JustifyRight
   plugins:
     language:
       language_list: un
     stylescombo:
       styles: ''
     codemirror:
-      enable: true
+      enable: false
       mode: htmlmixed
-      theme: dracula
+      theme: default
       lineNumbers: true
       lineWrapping: true
       matchBrackets: true

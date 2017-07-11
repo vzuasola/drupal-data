@@ -1,10 +1,12 @@
-uuid: cc47a42a-e04b-47fd-ad01-6c34e7ad1127
+uuid: b9a04391-3f5c-4062-a696-8eddb8865255
 langcode: en
 status: true
 dependencies:
   module:
     - node
     - options
+_core:
+  default_config_hash: YTc7gw7jgkk7Gy1Q1YjEQ5BeYY77S-aJjonzEKNhHxs
 id: node.field_banner_link_target
 field_name: field_banner_link_target
 entity_type: node

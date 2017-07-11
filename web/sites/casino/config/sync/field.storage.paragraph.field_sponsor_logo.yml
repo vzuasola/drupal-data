@@ -6,6 +6,8 @@ dependencies:
     - file
     - image
     - paragraphs
+_core:
+  default_config_hash: 312vyt954iGk0kSvHaUFsbewKpV3VZWNh9VQDTIcfxA
 id: paragraph.field_sponsor_logo
 field_name: field_sponsor_logo
 entity_type: paragraph

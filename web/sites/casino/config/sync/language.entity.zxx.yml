@@ -1,5 +1,5 @@
-uuid: d0547675-2498-4647-a33b-c94b9999e064
-langcode: zh-hans
+uuid: f941b689-990e-4e1f-ab87-1d6ecf77298e
+langcode: en
 status: true
 dependencies: {  }
 _core:
@@ -7,5 +7,5 @@ _core:
 id: zxx
 label: 'Not applicable'
 direction: ltr
-weight: 7
+weight: 13
 locked: true

@@ -1,4 +1,4 @@
-uuid: c3a261ae-88aa-4ac5-a8d1-644737fc4d6f
+uuid: 3d7f07ba-af7d-433d-8c54-5b88a1e51e5e
 langcode: en
 status: true
 dependencies:
@@ -11,7 +11,7 @@ bundle: article
 label: 'Authored on'
 description: 'The time that the node was created.'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

@@ -1,10 +1,12 @@
-uuid: 0d22f911-f404-4ec2-add0-c72f40fd0d4d
+uuid: 20f0d6f9-321d-4461-b279-1d6d3c90b8c3
 langcode: en
 status: true
 dependencies:
   module:
     - link
     - node
+_core:
+  default_config_hash: ZFyxZCCQOF-R1J5VVefpBKHfklovu-CfqYWj4XR3qsU
 id: node.field_banner_link
 field_name: field_banner_link
 entity_type: node

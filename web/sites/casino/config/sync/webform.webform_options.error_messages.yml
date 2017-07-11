@@ -1,0 +1,8 @@
+uuid: 295e9f32-3c52-411d-80b0-4ef37f0bd32a
+langcode: en
+status: true
+dependencies: {  }
+id: error_messages
+label: 'Error Messages'
+category: General
+options: "required: 'Username is requried'\nlength: 'Username Length Error'\nformat: 'Username Format Error'\n"

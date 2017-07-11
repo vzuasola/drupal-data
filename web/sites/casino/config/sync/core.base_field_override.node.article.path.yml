@@ -1,4 +1,4 @@
-uuid: 65159794-a656-498b-8350-642a98cdb1c1
+uuid: 04cc31ae-51f7-4d5d-9a0d-20769367960b
 langcode: en
 status: true
 dependencies:
@@ -13,7 +13,7 @@ bundle: article
 label: 'URL alias'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }
