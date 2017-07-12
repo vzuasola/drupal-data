@@ -154,22 +154,6 @@ class SettingsForm {
    * 
    */
   public function validate(&$form, FormStateInterface $form_state) {
-    $settings = $form_state->getFormObject()->getEntity();
-
-    // fix for image uploads breaking due to unknown reasons that the scheduled date
-    // gets validated on image upload AJAX calls
-    $date = $settings->get('open')['date'];
-    if (!$date) {
-      $settings->set('open', FALSE);
-    }
-
-    $date = $settings->get('close')['date'];
-    if (!$date) {
-      $settings->set('close', FALSE);
-    }
-
-    // always mark this form as open
-    $form_state->setValue('status', 'open');
 
     // remove the background image upload on empty background
     $third_party_settings = $form_state->getValue('third_party_settings');
