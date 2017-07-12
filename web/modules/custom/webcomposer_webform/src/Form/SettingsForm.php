@@ -32,6 +32,14 @@ class SettingsForm {
   public function getForm(&$form, FormStateInterface $form_state) {
     $settings = $form_state->getFormObject()->getEntity();
 
+    $form['submission_limits']['limit_user']['#access'] = FALSE;
+    $form['submission_limits']['entity_limit_user']['#access'] = FALSE;
+    $form['submission_limits']['limit_user_message']['#access'] = FALSE;
+
+    // put the form side by side
+    $form['general_settings']['#weight'] = -10;
+    $form['third_party_settings']['#weight'] = -5;
+
     // Layout settings
 
     $configs = $settings->getThirdPartySetting('webcomposer_webform', 'webcomposer_webform_layout');
@@ -154,22 +162,6 @@ class SettingsForm {
    * 
    */
   public function validate(&$form, FormStateInterface $form_state) {
-    $settings = $form_state->getFormObject()->getEntity();
-
-    // fix for image uploads breaking due to unknown reasons that the scheduled date
-    // gets validated on image upload AJAX calls
-    $date = $settings->get('open')['date'];
-    if (!$date) {
-      $settings->set('open', FALSE);
-    }
-
-    $date = $settings->get('close')['date'];
-    if (!$date) {
-      $settings->set('close', FALSE);
-    }
-
-    // always mark this form as open
-    $form_state->setValue('status', 'open');
 
     // remove the background image upload on empty background
     $third_party_settings = $form_state->getValue('third_party_settings');
