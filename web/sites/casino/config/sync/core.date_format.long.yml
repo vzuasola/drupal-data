@@ -1,5 +1,5 @@
-uuid: cb5cf0ce-4476-47d1-b71e-fb279e0c32dc
-langcode: zh-hans
+uuid: c141d776-85ec-4269-989e-d39c5cb3ca61
+langcode: en
 status: true
 dependencies: {  }
 _core:
@@ -7,4 +7,4 @@ _core:
 id: long
 label: 'Default long date'
 locked: false
-pattern: 'l, F j, Y - h:i A'
+pattern: 'l, F j, Y - H:i'

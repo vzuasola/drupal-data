@@ -1,0 +1,5 @@
+entity.marketing_script_entity.add_form:
+  route_name: entity.marketing_script_entity.add_form
+  title: 'Add Marketing Script'
+  appears_on:
+    - entity.marketing_script_entity.collection

@@ -1,7 +1,12 @@
-uuid: a8453366-da92-4c7b-a0c0-d061956c28f5
-langcode: zh-hans
+uuid: c7a09179-0a86-468d-8e9f-eef43284330c
+langcode: en
 status: true
 dependencies: {  }
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
 _core:
   default_config_hash: KuyA4NHPXcmKAjRtwa0vQc2ZcyrUJy6IlS2TAyMNRbc
 name: 'Basic page'

@@ -1,11 +1,13 @@
-uuid: a0a1669f-ca95-4d41-b177-945cd959d9c8
-langcode: zh-hans
+uuid: 774ac344-3d8d-47a6-98b2-228efc53f391
+langcode: en
 status: true
 dependencies:
   module:
     - file
     - image
     - node
+_core:
+  default_config_hash: qB1kfbRP26PVgLhbQl9roiPDPglF1Yd8N1h9nkhUI_c
 id: node.field_thumbnail_image
 field_name: field_thumbnail_image
 entity_type: node

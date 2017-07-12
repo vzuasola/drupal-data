@@ -8,6 +8,8 @@ dependencies:
     - paragraphs.paragraphs_type.social_media
   module:
     - entity_reference_revisions
+_core:
+  default_config_hash: OXCHCIR9GQmgI8lDBRgLdUGk1ytQE2s4uR7ivjPeLQY
 id: block_content.social_media_block.field_social_media
 field_name: field_social_media
 entity_type: block_content
@@ -15,7 +17,7 @@ bundle: social_media_block
 label: 'Social Media'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

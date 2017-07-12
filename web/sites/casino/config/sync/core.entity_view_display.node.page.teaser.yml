@@ -1,5 +1,5 @@
-uuid: fe599ce8-6fb4-4424-adba-69b9668fee82
-langcode: zh-hans
+uuid: 732ae4fa-65cf-4bdc-a79a-68b596925906
+langcode: en
 status: true
 dependencies:
   config:
@@ -10,7 +10,7 @@ dependencies:
     - text
     - user
 _core:
-  default_config_hash: rN2zrScZAJ9xB16hm_Deb9QJKy6JXnn0PdI2n5Z3KRs
+  default_config_hash: cSv5lDnbIgDug475Hdz3woED2XMqYv3awI-J9u1JLbY
 id: node.page.teaser
 targetEntityType: node
 bundle: page
@@ -20,10 +20,12 @@ content:
     label: hidden
     type: text_summary_or_trimmed
     weight: 100
+    region: content
     settings:
       trim_length: 600
     third_party_settings: {  }
   links:
     weight: 101
+    region: content
 hidden:
   langcode: true

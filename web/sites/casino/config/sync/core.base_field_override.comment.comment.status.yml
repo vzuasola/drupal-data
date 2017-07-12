@@ -1,4 +1,4 @@
-uuid: 55850b14-1975-4535-a4e6-80d61166f057
+uuid: 29235b99-a2e8-498f-9e73-527c1a518dde
 langcode: en
 status: true
 dependencies:
@@ -9,7 +9,7 @@ field_name: status
 entity_type: comment
 bundle: comment
 label: 'Publishing status'
-description: 'A boolean indicating whether the comment is published.'
+description: 'A boolean indicating the published state.'
 required: false
 translatable: false
 default_value:

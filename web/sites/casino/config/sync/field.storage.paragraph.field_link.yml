@@ -1,10 +1,12 @@
-uuid: b4374239-0ed1-4f46-8f6b-ccc557b7d249
-langcode: zh-hans
+uuid: 319ed36c-d545-439d-843f-892400e5d1e8
+langcode: en
 status: true
 dependencies:
   module:
     - link
     - paragraphs
+_core:
+  default_config_hash: Vc4Pe69D_j0WPJPYcms5ubXMufgE4qprmnuXZojLjDY
 id: paragraph.field_link
 field_name: field_link
 entity_type: paragraph

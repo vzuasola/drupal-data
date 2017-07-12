@@ -1,4 +1,4 @@
-uuid: c7b77c8b-571c-4bb0-b406-e174b3e2af1a
+uuid: 1709fc43-3fe7-4833-8528-db31af5424c5
 langcode: en
 status: true
 dependencies:
@@ -8,9 +8,9 @@ dependencies:
     - content_translation
 third_party_settings:
   content_translation:
-    enabled: false
+    enabled: true
 id: node.article
 target_entity_type_id: node
 target_bundle: article
 default_langcode: site_default
-language_alterable: false
+language_alterable: true

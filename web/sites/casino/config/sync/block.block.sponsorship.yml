@@ -1,22 +1,22 @@
-uuid: 696c738a-3e19-403c-be85-1f97e9c1c2e7
-langcode: zh-hant
+uuid: 0cf9d24d-c7b8-4fa6-bde5-a35693b961ec
+langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:sponsorship_block:5a69d4cd-142e-46b5-abf5-6eb3a182e19d'
+    - 'block_content:sponsorship_block:d7c0ec7a-63fd-4784-810e-20f6a699f8e3'
   module:
     - block_content
   theme:
     - bartik
 id: sponsorship
 theme: bartik
-region: sidebar_second
+region: footer_first
 weight: 0
 provider: null
-plugin: 'block_content:5a69d4cd-142e-46b5-abf5-6eb3a182e19d'
+plugin: 'block_content:d7c0ec7a-63fd-4784-810e-20f6a699f8e3'
 settings:
-  id: 'block_content:5a69d4cd-142e-46b5-abf5-6eb3a182e19d'
-  label: 'Sponsorship - SC'
+  id: 'block_content:d7c0ec7a-63fd-4784-810e-20f6a699f8e3'
+  label: 'Sponsorship Block'
   provider: block_content
   label_display: visible
   status: true

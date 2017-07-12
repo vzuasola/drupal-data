@@ -1,5 +1,5 @@
 uuid: aa9682be-3090-4128-8cca-6204ce708658
-langcode: zh-hans
+langcode: en
 status: true
 dependencies:
   config:
@@ -7,6 +7,8 @@ dependencies:
     - paragraphs.paragraphs_type.social_media
   module:
     - options
+_core:
+  default_config_hash: h4tntrpb2wlHjh9z-0N05bDwz7FBVO19jZ5BAMWM1Kk
 id: paragraph.social_media.field_link_target
 field_name: field_link_target
 entity_type: paragraph

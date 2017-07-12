@@ -8,6 +8,8 @@ dependencies:
     - paragraphs.paragraphs_type.sponsorship
   module:
     - entity_reference_revisions
+_core:
+  default_config_hash: SMhjCy1mUFdcFyY94KGIcJywfHWaNHkqzAVgW0MMbIc
 id: block_content.sponsorship_block.field_sponsor_logo
 field_name: field_sponsor_logo
 entity_type: block_content

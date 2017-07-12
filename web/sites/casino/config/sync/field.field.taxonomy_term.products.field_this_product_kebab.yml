@@ -1,0 +1,23 @@
+uuid: 16a7efe7-3cf8-47bc-afc8-30628e7dc9c9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_this_product_kebab
+    - taxonomy.vocabulary.products
+id: taxonomy_term.products.field_this_product_kebab
+field_name: field_this_product_kebab
+entity_type: taxonomy_term
+bundle: products
+label: 'Show in Kebab'
+description: 'If checked will show this product on the secondary menu'
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

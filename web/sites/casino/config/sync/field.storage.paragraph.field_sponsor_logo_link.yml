@@ -4,6 +4,8 @@ status: true
 dependencies:
   module:
     - paragraphs
+_core:
+  default_config_hash: YDPWW41H1FSRr79KEfyR57zrsNtR7yB8aEoBER2sbrc
 id: paragraph.field_sponsor_logo_link
 field_name: field_sponsor_logo_link
 entity_type: paragraph

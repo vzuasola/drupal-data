@@ -1,10 +1,9 @@
-uuid: 23371bc6-2e5d-4e97-954e-3bc078301c75
-langcode: zh-hans
+uuid: 08aeac91-ef8e-451a-a70b-b51e1050ad65
+langcode: en
 status: true
 dependencies:
   module:
     - search
-    - system
   theme:
     - bartik
 _core:
@@ -20,9 +19,4 @@ settings:
   label: Search
   provider: search
   label_display: visible
-visibility:
-  request_path:
-    id: request_path
-    pages: /banner-slider
-    negate: true
-    context_mapping: {  }
+visibility: {  }

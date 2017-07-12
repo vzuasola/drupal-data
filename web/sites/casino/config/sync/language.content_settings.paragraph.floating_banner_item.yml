@@ -1,5 +1,5 @@
-uuid: 455fb8e7-3b4f-4c38-8744-6b10a433bec6
-langcode: zh-hans
+uuid: dccf54c7-3cdd-4251-8d38-6c99062b45be
+langcode: en
 status: true
 dependencies:
   config:
@@ -9,6 +9,8 @@ dependencies:
 third_party_settings:
   content_translation:
     enabled: true
+_core:
+  default_config_hash: VlwmZsJ-AByPZcYXg2Wqyo-vgYBQ-8MnTHFtZ_tar80
 id: paragraph.floating_banner_item
 target_entity_type_id: paragraph
 target_bundle: floating_banner_item
