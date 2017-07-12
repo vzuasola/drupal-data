@@ -523,7 +523,7 @@ class WebformSubmissionExporter implements WebformSubmissionExporterInterface {
     $ranges = [
       'serial' => ['#type' => 'number'],
       'sid' => ['#type' => 'number'],
-      'date' => ['#type' => 'date'],
+      'date' => ['#type' => 'datetime'],
     ];
     foreach ($ranges as $key => $range_element) {
       $form['export']['download'][$key] = [
@@ -646,7 +646,6 @@ class WebformSubmissionExporter implements WebformSubmissionExporterInterface {
   public function generate() {
     $entity_ids = $this->getQuery()->execute();
     $webform_submissions = WebformSubmission::loadMultiple($entity_ids);
-
     $this->writeHeader();
     $this->writeRecords($webform_submissions);
     $this->writeFooter();
