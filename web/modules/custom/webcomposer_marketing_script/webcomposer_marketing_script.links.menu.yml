@@ -1,0 +1,20 @@
+webcomposer_marketing_script.list:
+  title: 'Webcomposer Marketing Script'
+  description: 'Configure the Marketing Script'
+  parent: system.admin_config
+  route_name: webcomposer_marketing_script.admin_settings
+
+# Marketing Script menu items definition
+entity.marketing_script_entity.collection:
+  title: 'Marketing Script list'
+  route_name: entity.marketing_script_entity.collection
+  description: 'List Marketing Script entities'
+  parent: webcomposer_marketing_script.list
+  weight: 100
+
+marketing_script_entity.admin.structure.settings:
+  title: Marketing Script settings
+  description: 'Configure Marketing Script entities'
+  route_name: marketing_script_entity.settings
+  parent: webcomposer_marketing_script.list
+  weight: 105

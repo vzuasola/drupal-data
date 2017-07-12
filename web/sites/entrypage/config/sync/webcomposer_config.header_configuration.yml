@@ -13,3 +13,12 @@ profile_link: '#'
 profile_logout_text: Logout
 _core:
   default_config_hash: Ynx2hkfeSTtNe4GyBQ1t4lBkrV4wrazLGjX_M7Mk3mg
+lobby_page_title: Lobby
+critical_announcement: '1'
+critical_announcement_content:
+  value: "<p>This is a critical announcement</p>\r\n"
+  format: basic_html
+news_announcement: '0'
+news_announcement_content:
+  value: ''
+  format: basic_html

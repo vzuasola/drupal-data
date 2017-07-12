@@ -22,3 +22,4 @@ notification_content:
 lightbox_blurb: ''
 _core:
   default_config_hash: LDw8PW9wswSVGgpFjaaHESQeB7QVJEtmV2mGoR4ANVY
+notification_window_title: 'Session has timed out'

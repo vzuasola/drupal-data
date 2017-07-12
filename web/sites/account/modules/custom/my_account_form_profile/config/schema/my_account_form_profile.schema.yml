@@ -311,6 +311,36 @@ my_account_form_profile.profile:
             label:
               type: label
               label: 'Field label'
+    verify_text_field:
+      type: label
+      label: 'Verify text translation'
+    modal_verify_header_text_field:
+      type: label
+      label: 'Modal Verify Header text translation'
+    modal_verify_body_text_field:
+      type: text
+      label: 'Modal Verify Body text translation'
+    modal_verification_code_placeholder_field:
+      type: label
+      label: 'Modal Verification Code Placeholer translation'
+    modal_verification_resend_code_text_field:
+      type: label
+      label: 'Modal Resend Verification Code Text translation'
+    modal_verification_submit_text_field:
+      type: label
+      label: 'Modal Submit Verification Code Text translation'
+    verification_code_response_field:
+      type: text
+      label: 'Response from ICore'
+    verification_code_required_message_field:
+      type: label
+      label: 'Required field error message'
+    verification_code_min_length_message_field:
+      type: label
+      label: 'Minimum Length error message'
+    verification_code_max_length_message_field:
+      type: label
+      label: 'Maximum Length error message'  
     mobile_number_field:
       type: mapping
       label: 'Contact'

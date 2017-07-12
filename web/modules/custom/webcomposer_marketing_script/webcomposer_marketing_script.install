@@ -1,0 +1,25 @@
+<?php
+
+
+/**
+ * Implements hook_uninstall
+ */
+function webcomposer_marketing_script_uninstall() {
+   $keys = [
+      'core.entity_form_display.marketing_script_entity.marketing_script_entity.default.yml',
+      'core.entity_view_display.marketing_script_entity.marketing_script_entity.default.yml',
+      'field.field.marketing_script_entity.marketing_script_entity.field_body.yml',
+      'field.field.marketing_script_entity.marketing_script_entity.field_per_page_configuratiion.yml',
+      'field.field.marketing_script_entity.marketing_script_entity.field_position.yml',
+      'field.field.marketing_script_entity.marketing_script_entity.field_type.yml',
+      'field.storage.marketing_script_entity.field_body.yml',
+      'field.storage.marketing_script_entity.field_per_page_configuratiion.yml',
+      'field.storage.marketing_script_entity.field_position.yml',
+      'field.storage.marketing_script_entity.field_type.yml',
+      'language.content_settings.marketing_script_entity.marketing_script_entity.yml',
+    ];
+
+    foreach ($keys as $key) {
+      \Drupal::configFactory()->getEditable($key)->delete();
+    }
+}
