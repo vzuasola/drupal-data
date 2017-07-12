@@ -32,23 +32,6 @@ class SettingsForm {
   public function getForm(&$form, FormStateInterface $form_state) {
     $settings = $form_state->getFormObject()->getEntity();
 
-    // Hide all fields except these
-    $exclude = ['general_settings', 'submission_limits', 'third_party_settings'];
-
-    foreach ($form as $key => $value) {
-      if (!in_array($key, $exclude) && is_array($value)) {
-        $form[$key]['#access'] = FALSE;
-      }
-    }
-
-    $form['submission_limits']['limit_user']['#access'] = FALSE;
-    $form['submission_limits']['entity_limit_user']['#access'] = FALSE;
-    $form['submission_limits']['limit_user_message']['#access'] = FALSE;
-
-    // put the form side by side
-    $form['general_settings']['#weight'] = -10;
-    $form['third_party_settings']['#weight'] = -5;
-
     // Layout settings
 
     $configs = $settings->getThirdPartySetting('webcomposer_webform', 'webcomposer_webform_layout');
@@ -79,48 +62,6 @@ class SettingsForm {
       '#description' => t('An optional markup to show as the form header'),
       '#default_value' => $configs['header_markup']['value'] ?? NULL,
       '#format' => $configs['header_markup']['format'] ?? NULL,
-    ];
-
-    // Submission settings
-
-    $configs = $settings->getThirdPartySetting('webcomposer_webform', 'webcomposer_webform_submission');
-
-    $form['third_party_settings']['webcomposer_webform']['webcomposer_webform_submission'] = [
-      '#type' => 'details',
-      '#title' => t('Submission Settings'),
-      '#collapsed' => FALSE,
-    ];
-
-    $form['third_party_settings']['webcomposer_webform']['webcomposer_webform_submission']['submission_status'] = [
-      '#type' => 'radios',
-      '#title' => t('Submission Status'),
-      '#description' => t('The status for this form submission'),
-      '#options' => [
-        'open' => 'Open',
-        'close' => 'Closed',
-      ],
-      '#default_value' => $configs['submission_status'] ?? 'open',
-    ];
-
-    $form['third_party_settings']['webcomposer_webform']['webcomposer_webform_submission']['successful_submission_message'] = [
-      '#type' => 'textarea',
-      '#title' => t('Successful Submission Message'),
-      '#description' => t('Message to show when the submission is successful'),
-      '#default_value' => $configs['successful_submission_message'] ?? NULL,
-    ];
-
-    $form['third_party_settings']['webcomposer_webform']['webcomposer_webform_submission']['closed_submission_message'] = [
-      '#type' => 'textarea',
-      '#title' => t('Closed Submission Message'),
-      '#description' => t('Message to show when the submission is closed'),
-      '#default_value' => $configs['closed_submission_message'] ?? NULL,
-    ];
-
-    $form['third_party_settings']['webcomposer_webform']['webcomposer_webform_submission']['failed_submission_message'] = [
-      '#type' => 'textarea',
-      '#title' => t('Failed Submission Message'),
-      '#description' => t('Message to show when the submission is failed'),
-      '#default_value' => $configs['failed_submission_message'] ?? NULL,
     ];
 
     // Submission Layout settings
@@ -204,6 +145,8 @@ class SettingsForm {
       }
     }
 
+    $this->tweakForm($form);
+
     $form['#validate'][] = [$this, 'validate'];
   }
 
@@ -245,5 +188,45 @@ class SettingsForm {
     }
 
     $form_state->setValue('third_party_settings', $third_party_settings);
+  }
+
+  /**
+   * Tweak the form
+   */
+  private function tweakForm(&$form) {
+    // Hide all fields except these
+
+    $exclude = [
+      'general_settings', 
+      'submission_limits', 
+      'third_party_settings',
+      'confirmation_settings',
+      'form_settings',
+    ];
+
+    foreach ($form as $key => $value) {
+      if (!in_array($key, $exclude) && is_array($value)) {
+        $form[$key]['#access'] = FALSE;
+      }
+    }
+
+    // Form settings tweaks
+    unset($form['form_settings']['status']['#options']['scheduled']);
+
+    // confirmation tweaks
+    $form['confirmation_settings']['confirmation_type']['#default_value'] = 'page';
+    $form['confirmation_settings']['confirmation_type']['#access'] = FALSE;
+    $form['confirmation_settings']['confirmation_url']['#access'] = FALSE;
+    $form['confirmation_settings']['confirmation_title']['#access'] = FALSE;
+    $form['confirmation_settings']['confirmation_page']['#access'] = FALSE;
+
+    // submission tweaks
+    $form['submission_limits']['limit_user']['#access'] = FALSE;
+    $form['submission_limits']['entity_limit_user']['#access'] = FALSE;
+    $form['submission_limits']['limit_user_message']['#access'] = FALSE;
+
+    // put the form side by side
+    $form['general_settings']['#weight'] = -10;
+    $form['third_party_settings']['#weight'] = -5;
   }
 }
