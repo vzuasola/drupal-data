@@ -59,7 +59,7 @@ class DelimitedWebformExporter extends TabularBaseWebformExporter {
       '#type' => 'select',
       '#title' => $this->t('Delimiter text format'),
       '#description' => $this->t('This is the delimiter used in the CSV/TSV file when downloading webform results. Using tabs in the export is the most reliable method for preserving non-latin characters. You may want to change this to another character depending on the program with which you anticipate importing results.'),
-      '#required' => TRUE,
+      '#required' => FALSE,
       '#options' => [
         ','  => $this->t('Comma (,)'),
         '\t' => $this->t('Tab (\t)'),
