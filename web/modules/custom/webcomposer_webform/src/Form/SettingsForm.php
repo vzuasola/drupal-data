@@ -32,6 +32,14 @@ class SettingsForm {
   public function getForm(&$form, FormStateInterface $form_state) {
     $settings = $form_state->getFormObject()->getEntity();
 
+    $form['submission_limits']['limit_user']['#access'] = FALSE;
+    $form['submission_limits']['entity_limit_user']['#access'] = FALSE;
+    $form['submission_limits']['limit_user_message']['#access'] = FALSE;
+
+    // put the form side by side
+    $form['general_settings']['#weight'] = -10;
+    $form['third_party_settings']['#weight'] = -5;
+
     // Layout settings
 
     $configs = $settings->getThirdPartySetting('webcomposer_webform', 'webcomposer_webform_layout');
