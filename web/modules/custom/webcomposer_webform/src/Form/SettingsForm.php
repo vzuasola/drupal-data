@@ -32,22 +32,6 @@ class SettingsForm {
   public function getForm(&$form, FormStateInterface $form_state) {
     $settings = $form_state->getFormObject()->getEntity();
 
-    // Hide all fields except these
-
-    $exclude = [
-      'general_settings', 
-      'submission_limits', 
-      'third_party_settings',
-      'confirmation_settings',
-      'form_settings',
-    ];
-
-    foreach ($form as $key => $value) {
-      if (!in_array($key, $exclude) && is_array($value)) {
-        $form[$key]['#access'] = FALSE;
-      }
-    }
-
     // Layout settings
 
     $configs = $settings->getThirdPartySetting('webcomposer_webform', 'webcomposer_webform_layout');
@@ -161,6 +145,8 @@ class SettingsForm {
       }
     }
 
+    $this->tweakForm($form);
+
     $form['#validate'][] = [$this, 'validate'];
   }
 
@@ -208,6 +194,22 @@ class SettingsForm {
    * Tweak the form
    */
   private function tweakForm(&$form) {
+    // Hide all fields except these
+
+    $exclude = [
+      'general_settings', 
+      'submission_limits', 
+      'third_party_settings',
+      'confirmation_settings',
+      'form_settings',
+    ];
+
+    foreach ($form as $key => $value) {
+      if (!in_array($key, $exclude) && is_array($value)) {
+        $form[$key]['#access'] = FALSE;
+      }
+    }
+
     // Form settings tweaks
     unset($form['form_settings']['status']['#options']['scheduled']);
 
