@@ -332,6 +332,7 @@ class WebformSubmissionExporter implements WebformSubmissionExporterInterface {
       '#type' => 'select',
       '#title' => $this->t('Element multiple values delimiter'),
       '#description' => $this->t('This is the delimiter when an element has multiple values.'),
+      '#required' => FALSE,
       '#options' => [
         ';' => $this->t('Semicolon (;)'),
         ',' => $this->t('Comma (,)'),
