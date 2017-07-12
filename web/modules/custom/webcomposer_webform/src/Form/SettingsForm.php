@@ -32,6 +32,7 @@ class SettingsForm {
   public function getForm(&$form, FormStateInterface $form_state) {
     $settings = $form_state->getFormObject()->getEntity();
 
+
     $form['submission_limits']['limit_user']['#access'] = FALSE;
     $form['submission_limits']['entity_limit_user']['#access'] = FALSE;
     $form['submission_limits']['limit_user_message']['#access'] = FALSE;
@@ -39,6 +40,7 @@ class SettingsForm {
     // put the form side by side
     $form['general_settings']['#weight'] = -10;
     $form['third_party_settings']['#weight'] = -5;
+
 
     // Layout settings
 
@@ -153,6 +155,8 @@ class SettingsForm {
       }
     }
 
+    $this->tweakForm($form);
+
     $form['#validate'][] = [$this, 'validate'];
   }
 
@@ -178,5 +182,45 @@ class SettingsForm {
     }
 
     $form_state->setValue('third_party_settings', $third_party_settings);
+  }
+
+  /**
+   * Tweak the form
+   */
+  private function tweakForm(&$form) {
+    // Hide all fields except these
+
+    $exclude = [
+      'general_settings', 
+      'submission_limits', 
+      'third_party_settings',
+      'confirmation_settings',
+      'form_settings',
+    ];
+
+    foreach ($form as $key => $value) {
+      if (!in_array($key, $exclude) && is_array($value)) {
+        $form[$key]['#access'] = FALSE;
+      }
+    }
+
+    // Form settings tweaks
+    unset($form['form_settings']['status']['#options']['scheduled']);
+
+    // confirmation tweaks
+    $form['confirmation_settings']['confirmation_type']['#default_value'] = 'page';
+    $form['confirmation_settings']['confirmation_type']['#access'] = FALSE;
+    $form['confirmation_settings']['confirmation_url']['#access'] = FALSE;
+    $form['confirmation_settings']['confirmation_title']['#access'] = FALSE;
+    $form['confirmation_settings']['confirmation_page']['#access'] = FALSE;
+
+    // submission tweaks
+    $form['submission_limits']['limit_user']['#access'] = FALSE;
+    $form['submission_limits']['entity_limit_user']['#access'] = FALSE;
+    $form['submission_limits']['limit_user_message']['#access'] = FALSE;
+
+    // put the form side by side
+    $form['general_settings']['#weight'] = -10;
+    $form['third_party_settings']['#weight'] = -5;
   }
 }
