@@ -1,0 +1,6 @@
+critical_announcement_content:
+  value: "<p class=\"text-align-center\"><span class=\"text-12\"><span class=\"text-white\">THIS IS REAL THIS ME</span></span></p>\r\n"
+  format: basic_html
+news_announcement_content:
+  value: "<p><span class=\"text-white\">DAFABET TESTING</span></p>\r\n"
+  format: basic_html

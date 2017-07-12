@@ -5,6 +5,8 @@ dependencies:
   config:
     - block_content.type.sponsorship_block
     - field.storage.block_content.field_block_enable
+_core:
+  default_config_hash: PvW2bMMf0CM_-SARVGcosgm0r0NF2FxgN3W7JW8AIBI
 id: block_content.sponsorship_block.field_block_enable
 field_name: field_block_enable
 entity_type: block_content

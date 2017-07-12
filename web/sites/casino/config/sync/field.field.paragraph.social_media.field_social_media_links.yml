@@ -5,6 +5,8 @@ dependencies:
   config:
     - field.storage.paragraph.field_social_media_links
     - paragraphs.paragraphs_type.social_media
+_core:
+  default_config_hash: pV1lR9C8baBLjUHECDgZ9-9o1ynmBXy2ApLqwCOEudI
 id: paragraph.social_media.field_social_media_links
 field_name: field_social_media_links
 entity_type: paragraph

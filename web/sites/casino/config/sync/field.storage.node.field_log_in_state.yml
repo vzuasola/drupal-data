@@ -1,10 +1,12 @@
-uuid: d3bfa607-d04a-49e5-84ce-2e83fbd025e7
-langcode: zh-hans
+uuid: 25f134d5-3928-4909-a125-493725fcc68a
+langcode: en
 status: true
 dependencies:
   module:
     - node
     - options
+_core:
+  default_config_hash: xbXZuyY-5CrGwmknDU3EbJgro5ZgvgCTd8TDbBTra_4
 id: node.field_log_in_state
 field_name: field_log_in_state
 entity_type: node
@@ -13,14 +15,17 @@ settings:
   allowed_values:
     -
       value: '0'
-      label: Pre-Login
+      label: 'Pre Login'
     -
       value: '1'
-      label: Post-Login
+      label: 'Post Login'
+    -
+      value: '2'
+      label: Both
   allowed_values_function: ''
 module: options
 locked: false
-cardinality: 2
+cardinality: 1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

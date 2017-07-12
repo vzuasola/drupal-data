@@ -1,12 +1,19 @@
-uuid: efa91be0-73a7-4f4a-ab77-02139e6e4f4b
-langcode: zh-hans
+uuid: f1ae2163-b9f9-42f3-9352-0411e59523db
+langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_image
     - node.type.article
   module:
+    - content_translation
     - image
+third_party_settings:
+  content_translation:
+    translation_sync:
+      alt: alt
+      title: title
+      file: '0'
 _core:
   default_config_hash: tgJzhA7Swh4M_gWU5FwFe5lPxPj5rebpMbvhpdNrERs
 id: node.article.field_image
@@ -16,7 +23,7 @@ bundle: article
 label: Image
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

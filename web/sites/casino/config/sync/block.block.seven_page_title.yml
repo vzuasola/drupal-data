@@ -1,5 +1,5 @@
-uuid: 0dc4c1fb-184e-4678-a76c-40f27e1584f6
-langcode: zh-hans
+uuid: e815478d-9493-4219-bf3f-5cd70c8aba80
+langcode: en
 status: true
 dependencies:
   theme:
@@ -9,7 +9,7 @@ _core:
 id: seven_page_title
 theme: seven
 region: header
-weight: -30
+weight: -5
 provider: null
 plugin: page_title_block
 settings:

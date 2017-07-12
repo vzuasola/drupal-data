@@ -1,4 +1,4 @@
-uuid: 0dfb6b63-9e36-4767-97cd-762f21c9488c
+uuid: 72310b72-b8a1-4ccd-810f-48c6dec1c758
 langcode: en
 status: true
 dependencies:
@@ -9,7 +9,7 @@ field_name: name
 entity_type: taxonomy_term
 bundle: tags
 label: Name
-description: 'The term name.'
+description: ''
 required: true
 translatable: false
 default_value: {  }

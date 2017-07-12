@@ -1,5 +1,5 @@
-uuid: 6d0b5823-6512-4821-99cd-1ca6b032c307
-langcode: zh-hans
+uuid: 5800d520-02a1-4e7c-90df-30a74e9c43d6
+langcode: en
 status: true
 dependencies:
   config:
@@ -7,6 +7,8 @@ dependencies:
     - paragraphs.paragraphs_type.floating_banner_item
   module:
     - link
+_core:
+  default_config_hash: V9IphLTzS2hAycDoDXmcmqNuGOWW8DgUrf365Bd14Gc
 id: paragraph.floating_banner_item.field_link
 field_name: field_link
 entity_type: paragraph
@@ -19,5 +21,5 @@ default_value: {  }
 default_value_callback: ''
 settings:
   link_type: 17
-  title: 0
+  title: 1
 field_type: link

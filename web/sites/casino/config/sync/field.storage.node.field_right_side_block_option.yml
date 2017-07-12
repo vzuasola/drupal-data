@@ -1,23 +1,17 @@
-uuid: 285e9ff7-b598-47d1-904d-82a0e73e6eb9
-langcode: zh-hans
+uuid: 365f272f-59be-4879-b8b4-634128932f6e
+langcode: en
 status: true
 dependencies:
   module:
     - node
-    - options
 id: node.field_right_side_block_option
 field_name: field_right_side_block_option
 entity_type: node
-type: list_string
-settings:
-  allowed_values:
-    -
-      value: '1'
-      label: 'Add to Right Side Promotions Block'
-  allowed_values_function: ''
-module: options
+type: boolean
+settings: {  }
+module: core
 locked: false
-cardinality: 2
+cardinality: 1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false
