@@ -22,7 +22,7 @@ entity_type: node
 bundle: promotion
 label: 'Banner Image'
 description: 'The Image upload size is 1920x500 px.'
-required: true
+required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''
