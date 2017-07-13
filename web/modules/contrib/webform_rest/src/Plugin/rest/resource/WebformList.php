@@ -19,7 +19,6 @@ use Symfony\Component\HttpFoundation\Response;
  * )
  */
 class WebformList extends ResourceBase {
-
   /**
    * Responds webform entities id.
    *
@@ -31,19 +30,20 @@ class WebformList extends ResourceBase {
    *
    */
   public function get() {
-
     $content_entity_types = [];
     $entity_type_definations = \Drupal::entityTypeManager()->getDefinitions();
+
     /* @var $definition EntityTypeInterface */
     foreach ($entity_type_definations as $definition) {
-      if($definition->id() == 'webform') {
+      if ($definition->id() == 'webform') {
         $types = \Drupal::entityTypeManager()->getStorage('webform')->loadMultiple();
+
         foreach ($types as $type) {
           $content_entity_types[] = $type->id();
-       }
-     }
+        }
+      }
     }
-       return new ResourceResponse($content_entity_types);
-  }
 
+    return new ResourceResponse($content_entity_types);
+  }
 }
