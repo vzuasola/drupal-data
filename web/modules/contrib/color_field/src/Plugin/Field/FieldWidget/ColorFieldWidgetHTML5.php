@@ -65,7 +65,7 @@ class ColorFieldWidgetHTML5 extends WidgetBase {
     }
 
     $element['color'] = array(
-      '#title' => t('Color'),
+      '#title' => $this->fieldDefinition->getLabel(),
       '#type' => 'color',
       '#maxlength' => 7,
       '#size' => 7,
