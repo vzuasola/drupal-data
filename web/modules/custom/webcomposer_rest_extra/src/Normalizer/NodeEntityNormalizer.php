@@ -134,6 +134,7 @@ class NodeEntityNormalizer extends ContentEntityNormalizer
    * Load file url data by target ID
    */
   private function loadFileById($fid) {
+    $result = [];
     $fileArray = []; 
 
     if (isset($fid)) {
@@ -141,10 +142,12 @@ class NodeEntityNormalizer extends ContentEntityNormalizer
 
       if ($file) {
         $fileArray = $file->toArray();
-        $fileArray['image_url'] = file_create_url($file->getFileUri());
+        $fileArray['url'] = file_create_url($file->getFileUri());
       }
     }
 
-    return $fileArray;
+    $result[] = $fileArray;
+
+    return $result;
   }
 }

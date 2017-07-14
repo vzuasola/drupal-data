@@ -11,7 +11,12 @@ use Drupal\Core\Form\FormStateInterface;
  */
 class ElementForm {
 
-  protected $default_custom_properties = [
+  protected $elementProperties = [
+    'visibility' => TRUE,
+  ];
+
+  protected $validationProperties = [
+    'visibility' => TRUE,
     'required_error' => 'This field is required',
     'alphanumeric' => FALSE,
     'alphanumeric_error' => 'Input should be alphanumeric',
@@ -35,10 +40,17 @@ class ElementForm {
    * 
    */
   public function getForm(&$form, FormStateInterface $form_state) {
-    if (!isset($form['properties']['validation'])) {
-      return;
-    }
+    $this->elementSettings($form, $form_state);
 
+    if (isset($form['properties']['validation'])) {
+      $this->validationSettings($form, $form_state);
+    }
+  }
+
+  /**
+   * 
+   */
+  private function elementSettings(&$form, FormStateInterface $form_state) {
     // Retrieve the values from the custom properties element's default value.
     // @see \Drupal\webform\Plugin\WebformElementBase::buildConfigurationForm
     $custom_properties = $form['properties']['custom']['properties']['#default_value'];
@@ -47,11 +59,38 @@ class ElementForm {
     // the below webform elements.
     $form['properties']['custom']['properties']['#default_value'] = array_diff_key(
       $custom_properties,
-      $this->default_custom_properties
+      $this->elementProperties
     );
 
     // Finally, append the default custom property values.
-    $custom_properties += $this->default_custom_properties;
+    $custom_properties += $this->elementProperties;
+
+    $form['properties']['element']['visibility'] = [
+      '#type' => 'checkbox',
+      '#title' => t('Visibility'),
+      '#description' => t('Show or hide this field. When unchecked will hide this field.'),
+      '#parents' => ['properties', 'visibility'],
+      '#default_value' => $custom_properties['visibility'],
+    ];
+  }
+
+  /**
+   * 
+   */
+  private function validationSettings(&$form, FormStateInterface $form_state) {
+    // Retrieve the values from the custom properties element's default value.
+    // @see \Drupal\webform\Plugin\WebformElementBase::buildConfigurationForm
+    $custom_properties = $form['properties']['custom']['properties']['#default_value'];
+
+    // Make sure to unset the custom properties which are going to be handled via
+    // the below webform elements.
+    $form['properties']['custom']['properties']['#default_value'] = array_diff_key(
+      $custom_properties,
+      $this->validationProperties
+    );
+
+    // Finally, append the default custom property values.
+    $custom_properties += $this->validationProperties;
 
     // Hide all fields except these
     $exclude = ['required', 'required_error'];
@@ -64,6 +103,8 @@ class ElementForm {
 
     $form['properties']['validation']['#weight'] = -5;
     $form['properties']['validation']['required_error']['#description'] = t('The error message for the required validation');
+
+    // Validation fields
 
     $form['properties']['validation']['alphanumeric'] = [
       '#type' => 'checkbox',

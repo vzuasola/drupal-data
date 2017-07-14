@@ -33,3 +33,9 @@ webcomposer_config.admin_page_not_found_configuration:
   parent: webcomposer_config.list
   description: 'Page not found configuration.'
   route_name: entrypage_config.page_not_found_form
+
+webcomposer_config.admin_pushnx_configuration:
+  title: 'Push Notification Configuration'
+  parent: webcomposer_config.list
+  description: 'Provides configuration for Push Notification.'
+  route_name: webcomposer_config.pushnx_configuration_form

@@ -1,0 +1,18 @@
+enable: 1
+producttype_id: '4'
+retry_count: '2'
+delay_count: '500'
+expiry_delay_count: '10000'
+login_selector: ''
+debug_logging: 0
+debug_display_all: 0
+debug_display_expirydate: 0
+exclude_pages: "page-not-found\r\nuser\r\nuser/*\r\nfaqs"
+translated_texts: "Notifications\r\nOK\r\nACCEPT\r\nDECLINE"
+expiry_error_message: "en-US|This offer has already expired."
+date_format: "en-US|DD/MM/YYYY HH:mm (G&#77;T +8)"
+text_notifications: "en-US|Notifications"
+text_ok: "en-US|Ok"
+text_accept: "en-US|Accept"
+text_decline: "en-US|Decline"
+date_offset: "en-US|+08:00"

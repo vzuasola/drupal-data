@@ -332,6 +332,7 @@ class WebformSubmissionExporter implements WebformSubmissionExporterInterface {
       '#type' => 'select',
       '#title' => $this->t('Element multiple values delimiter'),
       '#description' => $this->t('This is the delimiter when an element has multiple values.'),
+      '#required' => FALSE,
       '#options' => [
         ';' => $this->t('Semicolon (;)'),
         ',' => $this->t('Comma (,)'),
@@ -522,7 +523,7 @@ class WebformSubmissionExporter implements WebformSubmissionExporterInterface {
     $ranges = [
       'serial' => ['#type' => 'number'],
       'sid' => ['#type' => 'number'],
-      'date' => ['#type' => 'date'],
+      'date' => ['#type' => 'datetime'],
     ];
     foreach ($ranges as $key => $range_element) {
       $form['export']['download'][$key] = [
@@ -645,7 +646,6 @@ class WebformSubmissionExporter implements WebformSubmissionExporterInterface {
   public function generate() {
     $entity_ids = $this->getQuery()->execute();
     $webform_submissions = WebformSubmission::loadMultiple($entity_ids);
-
     $this->writeHeader();
     $this->writeRecords($webform_submissions);
     $this->writeFooter();
