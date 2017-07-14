@@ -6,14 +6,21 @@ dependencies:
     - field.storage.node.field_mobile_banner_image
     - node.type.mobile
   module:
+    - content_translation
     - image
+third_party_settings:
+  content_translation:
+    translation_sync:
+      file: file
+      alt: '0'
+      title: '0'
 id: node.mobile.field_mobile_banner_image
 field_name: field_mobile_banner_image
 entity_type: node
 bundle: mobile
 label: 'Mobile Banner Image'
 description: ''
-required: false
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''
