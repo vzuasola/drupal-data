@@ -47,7 +47,7 @@ class WebformElementsResource extends ResourceBase {
       $vendorSettings = $this->getVendorSettings($webform);
 
       $response = [
-        'elements' => $webform->getElementsDecoded(),
+        'elements' => $webform->getElementsDecodedAndFlattened(),
         'settings' => $webform->getSettings(),
         'third_party_settings' => $vendorSettings,
       ];

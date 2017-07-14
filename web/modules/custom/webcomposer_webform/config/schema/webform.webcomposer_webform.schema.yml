@@ -12,6 +12,9 @@ webform.settings.third_party.webcomposer_webform:
         error_font_color:
           type: text
           label: 'Error Font Color'
+        header_markup:
+          type: text_format
+          label: 'Header Markup'
 
     webcomposer_webform_submission_layout:
       label: Webform Submission Layout
