@@ -7,6 +7,12 @@ dependencies:
     - node.type.mobile
   module:
     - image
+third_party_settings:
+  content_translation:
+    translation_sync:
+      file: file
+      alt: '0'
+      title: '0'
 id: node.mobile.field_mobile_main_image
 field_name: field_mobile_main_image
 entity_type: node
