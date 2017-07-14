@@ -2,7 +2,6 @@
 
 namespace Drupal\webform_rest\Plugin\rest\resource;
 
-use Drupal\Core\Render\Element;
 use Drupal\webform\Entity\Webform;
 use Drupal\rest\Plugin\ResourceBase;
 use Drupal\rest\ResourceResponse;
@@ -44,23 +43,11 @@ class WebformElementsResource extends ResourceBase {
 
     // Basic check to see if something's returned.
     if ($webform) {
-      // Grab the form in its entirety.
-      $form = $webform->getSubmissionForm();
-      $webformSetting = $webform->getSettings();
-
       // third party settings
       $vendorSettings = $this->getVendorSettings($webform);
 
-      // remove non element values on the element array by only getting
-      // valid element children
-      $elements = [];
-
-      foreach (Element::children($form['elements']) as $key) {
-        $elements[$key] = $form['elements'][$key];
-      }
-
       $response = [
-        'elements' => $elements,
+        'elements' => $webform->getElementsDecoded(),
         'settings' => $webform->getSettings(),
         'third_party_settings' => $vendorSettings,
       ];
