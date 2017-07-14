@@ -1,0 +1,5 @@
+name: webcomposer_inner_right_side_block
+type: module
+description: Allows to add Inner page right side block
+core: 8.x
+package: webcomposer

@@ -1,0 +1,7 @@
+webcomposer_right_side_block.admin_settings:
+  path: 'admin/config/webcomposer/right_side_block'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Webcomposer Inner Page Right Side Block'
+  requirements:
+    _permission: 'administer site configuration'

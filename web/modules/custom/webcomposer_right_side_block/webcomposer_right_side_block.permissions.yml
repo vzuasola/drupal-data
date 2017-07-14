@@ -1,0 +1,22 @@
+add inner page right side block entities:
+  title: 'Create new Inner Page Right Side Block entities'
+
+administer inner page right side block entities:
+  title: 'Administer Inner Page Right Side Block entities'
+  description: 'Allow to access the administration form to configure Inner Page Right Side Block entities.'
+  restrict access: true
+
+delete inner page right side block entities:
+  title: 'Delete Inner Page Right Side Block entities'
+
+edit inner page right side block entities:
+  title: 'Edit Inner Page Right Side Block entities'
+
+access inner page right side block overview:
+  title: 'Access the Inner Page Right Side Block overview page'
+
+view published inner page right side block entities:
+  title: 'View published Inner Page Right Side Block entities'
+
+view unpublished inner page right side block entities:
+  title: 'View unpublished Inner Page Right Side Block entities'

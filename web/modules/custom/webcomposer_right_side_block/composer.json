@@ -1,0 +1,14 @@
+{
+  "name": "drupal/webcomposer_right_side_block",
+  "type": "drupal-module",
+  "description": "Allows to add Inner page right side block",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/webcomposer_right_side_block",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/webcomposer_right_side_block",
+    "source": "http://cgit.drupalcode.org/webcomposer_right_side_block"
+  },
+  "require": { }
+}
