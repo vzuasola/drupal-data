@@ -13,7 +13,7 @@ entity_type: node
 bundle: mobile
 label: 'Android Main Content'
 description: ''
-required: false
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''
