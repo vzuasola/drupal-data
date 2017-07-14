@@ -158,7 +158,20 @@ class SettingsForm {
    * 
    */
   public function validate(&$form, FormStateInterface $form_state) {
+    $settings = $form_state->getFormObject()->getEntity(); 
 
+    // fix for image uploads breaking due to unknown reasons that the scheduled date 
+    // gets validated on image upload AJAX calls 
+    $date = $settings->get('open')['date']; 
+    if (!$date) { 
+      $settings->set('open', FALSE); 
+    } 
+ 
+    $date = $settings->get('close')['date']; 
+    if (!$date) { 
+      $settings->set('close', FALSE); 
+    } 
+ 
     // remove the background image upload on empty background
     $third_party_settings = $form_state->getValue('third_party_settings');
 
@@ -169,7 +182,7 @@ class SettingsForm {
       if (isset($this->prefixes[$lang])) {
         $langKey = $this->prefixes[$lang];
 
-        if (empty($third_party_settings['webcomposer_webform']['webform_background']["background_image_$langKey"])) {
+        if (!empty($third_party_settings['webcomposer_webform']['webform_background']["background_image_$langKey"])) {
           unset($third_party_settings['webcomposer_webform']['webform_background']["background_image_$langKey"]);
         }
       }

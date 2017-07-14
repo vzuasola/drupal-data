@@ -20,6 +20,7 @@ permissions:
   - 'restful get entity_bundle_weight_resource'
   - 'restful get form_resource'
   - 'restful get language_rest_resource'
+  - 'restful get marketing_script'
   - 'restful get product_tabs'
   - 'restful get rest_menu_item'
   - 'restful get webcomposer_config'

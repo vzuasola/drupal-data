@@ -55,10 +55,10 @@ settings:
             - ShowBlocks
             - Source
   plugins:
-    language:
-      language_list: un
     stylescombo:
       styles: ''
+    language:
+      language_list: un
     codemirror:
       enable: false
       mode: htmlmixed

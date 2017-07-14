@@ -16,7 +16,7 @@ use Drupal\webcomposer_marketing_script\Entity\MarketingScriptEntity;
  *
  * @RestResource(
  *   id = "marketing_script",
- *   label = @Translation("Marketing script"),
+ *   label = @Translation("Marketing Script Resource"),
  *   uri_paths = {
  *     "canonical" = "/api/marketing_script"
  *   }
@@ -96,26 +96,20 @@ class MarketingScriptResource extends ResourceBase {
     $route = $this->currentRequest->query->get('route');
     $response = [];
 
-    // You must to implement the logic of your REST Resource here.
-    // Use current user after pass authentication to validate access.
-    if (!$this->currentUser->hasPermission('access content')) {
-      throw new AccessDeniedHttpException();
-    }
     $results = MarketingScriptEntity::loadMultiple();
 
-       
     foreach ($results as $value) {
-      
       $result = $value->toArray();   
       $data = explode(PHP_EOL, $result['field_per_page_configuratiion'][0]['value']);
 
-        foreach ($data as $key) {
-          $trimmed_key = trim($key);
-            if (fnmatch($trimmed_key, $route)) {
-              $response[] = $result;
-              break;
-            }
+      foreach ($data as $key) {
+        $trimmed_key = trim($key);
+
+        if (fnmatch($trimmed_key, $route)) {
+          $response[] = $result;
+          break;
         }
+      }
     } 
 
     $build = array( 
@@ -123,6 +117,7 @@ class MarketingScriptResource extends ResourceBase {
         'max-age' => 0, 
       ), 
     ); 
+
     return (new ResourceResponse($response))->addCacheableDependency($build);
   }
 

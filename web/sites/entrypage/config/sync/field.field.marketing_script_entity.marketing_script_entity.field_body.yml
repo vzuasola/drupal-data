@@ -13,7 +13,7 @@ field_name: field_body
 entity_type: marketing_script_entity
 bundle: marketing_script_entity
 label: Body
-description: ''
+description: 'The actual body content.'
 required: true
 translatable: true
 default_value: {  }

@@ -15,10 +15,10 @@ settings:
   allowed_values:
     -
       value: css
-      label: css
+      label: Stylesheet
     -
       value: js
-      label: javascript
+      label: Javascript
   allowed_values_function: ''
 module: options
 locked: false
