@@ -13,7 +13,7 @@ field_name: field_per_page_config
 entity_type: left_floating_banner_entity
 bundle: left_floating_banner_entity
 label: 'Per page configuration'
-description: 'Specify pages by using their paths. Enter one path per line. The ''*'' character is a wildcard. An example path is /promotion/* for every user page. <front> is the front page.'
+description: 'Specify pages by using their paths. Enter one path per line. The ''*'' character is a wildcard. An example path is /promotion/* for every user page.'
 required: false
 translatable: true
 default_value: {  }
