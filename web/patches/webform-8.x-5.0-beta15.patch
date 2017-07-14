@@ -1,0 +1,62 @@
+diff --git a/src/Plugin/WebformElementBase.php b/src/Plugin/WebformElementBase.php
+index dad0f66..ff6c65d 100644
+--- a/src/Plugin/WebformElementBase.php
++++ b/src/Plugin/WebformElementBase.php
+@@ -248,6 +248,22 @@ class WebformElementBase extends PluginBase implements WebformElementInterface {
+       'markup',
+       'test',
+       'default_value',
++
++      'alphanumeric_error',
++      'unicode_error',
++      'email_error',
++      'numeric_error',
++      'numeric_symbols_error',
++      'min_length_error',
++      'max_length_error',
++
++      'required_error_message',
++      'alphanumeric_error_message',
++      'unicode_error_message',
++      'email_error_message',
++      'numeric_symbols_error_message',
++      'min_length_error_message',
++      'max_length_error_message',
+     ];
+   }
+ 
+diff --git a/src/Plugin/WebformExporter/DelimitedWebformExporter.php b/src/Plugin/WebformExporter/DelimitedWebformExporter.php
+index 521880e..6cec42d 100644
+--- a/src/Plugin/WebformExporter/DelimitedWebformExporter.php
++++ b/src/Plugin/WebformExporter/DelimitedWebformExporter.php
+@@ -59,7 +59,7 @@ class DelimitedWebformExporter extends TabularBaseWebformExporter {
+       '#type' => 'select',
+       '#title' => $this->t('Delimiter text format'),
+       '#description' => $this->t('This is the delimiter used in the CSV/TSV file when downloading webform results. Using tabs in the export is the most reliable method for preserving non-latin characters. You may want to change this to another character depending on the program with which you anticipate importing results.'),
+-      '#required' => TRUE,
++      '#required' => FALSE,
+       '#options' => [
+         ','  => $this->t('Comma (,)'),
+         '\t' => $this->t('Tab (\t)'),
+diff --git a/src/WebformSubmissionExporter.php b/src/WebformSubmissionExporter.php
+index 9e6dad0..d11eecf 100644
+--- a/src/WebformSubmissionExporter.php
++++ b/src/WebformSubmissionExporter.php
+@@ -347,7 +347,7 @@ class WebformSubmissionExporter implements WebformSubmissionExporterInterface {
+       '#type' => 'select',
+       '#title' => $this->t('Element multiple values delimiter'),
+       '#description' => $this->t('This is the delimiter when an element has multiple values.'),
+-      '#required' => TRUE,
++      '#required' => FALSE,
+       '#options' => [
+         ';' => $this->t('Semicolon (;)'),
+         ',' => $this->t('Comma (,)'),
+@@ -539,7 +539,7 @@ class WebformSubmissionExporter implements WebformSubmissionExporterInterface {
+     $ranges = [
+       'serial' => ['#type' => 'number'],
+       'sid' => ['#type' => 'number'],
+-      'date' => ['#type' => 'date'],
++      'date' => ['#type' => 'datetime'],
+     ];
+     foreach ($ranges as $key => $range_element) {
+       $form['export']['download'][$key] = [
