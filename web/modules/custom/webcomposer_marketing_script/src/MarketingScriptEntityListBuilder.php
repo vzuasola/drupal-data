@@ -20,7 +20,6 @@ class MarketingScriptEntityListBuilder extends EntityListBuilder {
    * {@inheritdoc}
    */
   public function buildHeader() {
-    $header['id'] = $this->t('Marketing Script ID');
     $header['name'] = $this->t('Name');
     return $header + parent::buildHeader();
   }
@@ -30,7 +29,6 @@ class MarketingScriptEntityListBuilder extends EntityListBuilder {
    */
   public function buildRow(EntityInterface $entity) {
     /* @var $entity \Drupal\webcomposer_marketing_script\Entity\MarketingScriptEntity */
-    $row['id'] = $entity->id();
     $row['name'] = $this->l(
       $entity->label(),
       new Url(
