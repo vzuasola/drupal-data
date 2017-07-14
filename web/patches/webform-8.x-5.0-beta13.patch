@@ -1,0 +1,122 @@
+diff --git a/src/Plugin/WebformElement/ProcessedText.php b/src/Plugin/WebformElement/ProcessedText.php
+index 9434f68..0166fe8 100644
+--- a/src/Plugin/WebformElement/ProcessedText.php
++++ b/src/Plugin/WebformElement/ProcessedText.php
+@@ -23,10 +23,18 @@ class ProcessedText extends WebformMarkupBase {
+    * {@inheritdoc}
+    */
+   public function getDefaultProperties() {
++    if (function_exists('filter_formats')) {
++      $formats = filter_formats(\Drupal::currentUser());
++      $format = reset($formats);
++      $default_format = $format ? $format->id() : filter_fallback_format();
++    }
++    else {
++      $default_format = '';
++    }
+     return parent::getDefaultProperties() + [
+       // Markup settings.
+       'text' => '',
+-      'format' => (function_exists('filter_default_format')) ? filter_default_format(\Drupal::currentUser()) : '',
++      'format' => $default_format ,
+     ];
+   }
+ 
+diff --git a/src/Plugin/WebformExporter/DelimitedWebformExporter.php b/src/Plugin/WebformExporter/DelimitedWebformExporter.php
+index 521880e..6cec42d 100644
+--- a/src/Plugin/WebformExporter/DelimitedWebformExporter.php
++++ b/src/Plugin/WebformExporter/DelimitedWebformExporter.php
+@@ -59,7 +59,7 @@ class DelimitedWebformExporter extends TabularBaseWebformExporter {
+       '#type' => 'select',
+       '#title' => $this->t('Delimiter text format'),
+       '#description' => $this->t('This is the delimiter used in the CSV/TSV file when downloading webform results. Using tabs in the export is the most reliable method for preserving non-latin characters. You may want to change this to another character depending on the program with which you anticipate importing results.'),
+-      '#required' => TRUE,
++      '#required' => FALSE,
+       '#options' => [
+         ','  => $this->t('Comma (,)'),
+         '\t' => $this->t('Tab (\t)'),
+diff --git a/src/WebformElementBase.php b/src/WebformElementBase.php
+index 6629f1c..3c7eff8 100644
+--- a/src/WebformElementBase.php
++++ b/src/WebformElementBase.php
+@@ -238,11 +238,26 @@ class WebformElementBase extends PluginBase implements WebformElementInterface {
+       'field_suffix',
+       'required_error',
+       'unique_error',
++      'required_error_message',
++      'alphanumeric_error_message',
++      'unicode_error_message',
++      'email_error_message',
++      'numeric_symbols_error_message',
++      'min_length_error_message',
++      'max_length_error_message',
+       'admin_title',
+       'placeholder',
+       'markup',
+       'test',
+       'default_value',
++      'alphanumeric_error',
++      'unicode_error',
++      'email_error',
++      'numeric_error',
++      'numeric_symbols_error',
++      'min_length_error',
++      'max_length_error',
++
+     ];
+   }
+ 
+@@ -1687,6 +1702,7 @@ class WebformElementBase extends PluginBase implements WebformElementInterface {
+       '#description' => $this->t('Make this field non-editable. Useful for displaying default value. Changeable via JavaScript or developer tools.'),
+       '#return_value' => TRUE,
+     ];
++
+     $form['form']['open'] = [
+       '#type' => 'checkbox',
+       '#title' => $this->t('Open'),
+@@ -1803,6 +1819,7 @@ class WebformElementBase extends PluginBase implements WebformElementInterface {
+       '#description' => $this->t('Check this option if the user must enter a value.'),
+       '#return_value' => TRUE,
+     ];
++
+     $form['validation']['required_error'] = [
+       '#type' => 'textfield',
+       '#title' => $this->t('Custom required error message'),
+@@ -1813,6 +1830,7 @@ class WebformElementBase extends PluginBase implements WebformElementInterface {
+         ],
+       ],
+     ];
++
+     $form['validation']['unique'] = [
+       '#type' => 'checkbox',
+       '#title' => $this->t('Unique'),
+diff --git a/src/WebformSubmissionExporter.php b/src/WebformSubmissionExporter.php
+index 2aef4d3..d75dfa2 100644
+--- a/src/WebformSubmissionExporter.php
++++ b/src/WebformSubmissionExporter.php
+@@ -332,7 +332,7 @@ class WebformSubmissionExporter implements WebformSubmissionExporterInterface {
+       '#type' => 'select',
+       '#title' => $this->t('Element multiple values delimiter'),
+       '#description' => $this->t('This is the delimiter when an element has multiple values.'),
+-      '#required' => TRUE,
++      '#required' => FALSE,
+       '#options' => [
+         ';' => $this->t('Semicolon (;)'),
+         ',' => $this->t('Comma (,)'),
+@@ -523,7 +523,7 @@ class WebformSubmissionExporter implements WebformSubmissionExporterInterface {
+     $ranges = [
+       'serial' => ['#type' => 'number'],
+       'sid' => ['#type' => 'number'],
+-      'date' => ['#type' => 'date'],
++      'date' => ['#type' => 'datetime'],
+     ];
+     foreach ($ranges as $key => $range_element) {
+       $form['export']['download'][$key] = [
+@@ -646,7 +646,6 @@ class WebformSubmissionExporter implements WebformSubmissionExporterInterface {
+   public function generate() {
+     $entity_ids = $this->getQuery()->execute();
+     $webform_submissions = WebformSubmission::loadMultiple($entity_ids);
+-
+     $this->writeHeader();
+     $this->writeRecords($webform_submissions);
+     $this->writeFooter();
