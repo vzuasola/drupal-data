@@ -16,7 +16,7 @@ use Drupal\user\UserInterface;
  *
  * @ContentEntityType(
  *   id = "left_floating_banner_entity",
- *   label = @Translation("Left floating banner entity"),
+ *   label = @Translation("Floating banner entity"),
  *   handlers = {
  *     "view_builder" = "Drupal\Core\Entity\EntityViewBuilder",
  *     "list_builder" = "Drupal\webcomposer_floating_banners\LeftFloatingBannerEntityListBuilder",
