@@ -1,0 +1,7 @@
+webcomposer_sponsors.admin_settings:
+  path: 'admin/config/webcomposer/sponsors'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Webcomposer Sponsors'
+  requirements:
+    _permission: 'administer site configuration'

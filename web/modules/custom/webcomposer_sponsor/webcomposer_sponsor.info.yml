@@ -1,0 +1,5 @@
+name: Webcomposer Sponsor
+type: module
+description: Standardized Sponsors saved to CMI
+core: 8.x
+package: Web Composer

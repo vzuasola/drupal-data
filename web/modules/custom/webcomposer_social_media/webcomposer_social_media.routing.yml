@@ -1,0 +1,7 @@
+webcomposer_social_media.admin_settings:
+  path: 'admin/config/webcomposer/social_media'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Webcomposer Social Media'
+  requirements:
+    _permission: 'administer site configuration'
