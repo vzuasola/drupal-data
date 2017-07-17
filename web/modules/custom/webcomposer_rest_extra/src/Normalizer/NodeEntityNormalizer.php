@@ -61,8 +61,7 @@ class NodeEntityNormalizer extends ContentEntityNormalizer
   /**
    * Load Paragraph by ID
    */
-  private function loadParagraphById($id)
-  {
+  private function loadParagraphById($id) {
     $lang = \Drupal::languageManager()->getCurrentLanguage(\Drupal\Core\Language\LanguageInterface::TYPE_CONTENT)->getId();
     $paragraph = \Drupal::entityManager()->getStorage('paragraph')->load($id);
     $paragraphTranslated = \Drupal::service('entity.repository')->getTranslationFromContext($paragraph, $lang);

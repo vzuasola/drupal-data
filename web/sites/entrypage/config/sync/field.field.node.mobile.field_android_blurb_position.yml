@@ -14,7 +14,7 @@ bundle: mobile
 label: 'Android Blurb Position'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value:
   -
     value: right
