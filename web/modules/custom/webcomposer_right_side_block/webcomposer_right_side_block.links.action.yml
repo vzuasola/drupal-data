@@ -1,0 +1,5 @@
+entity.right_side_block_entity.add_form:
+  route_name: entity.right_side_block_entity.add_form
+  title: 'Add Inner Page Right Side Block'
+  appears_on:
+    - entity.right_side_block_entity.collection
