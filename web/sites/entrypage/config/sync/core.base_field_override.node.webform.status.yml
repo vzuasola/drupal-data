@@ -1,22 +1,20 @@
-uuid: c1436f85-2888-43b1-adfb-2e6aff5f0210
+uuid: 875b5fdb-ba39-43f0-8f3f-3342399a1d30
 langcode: en
 status: true
 dependencies:
   config:
     - node.type.webform
-_core:
-  default_config_hash: FvXJkxryo6J_0TQRlb5Z77Ge-sim5GHzCI1Ft3kZu-4
-id: node.webform.promote
-field_name: promote
+id: node.webform.status
+field_name: status
 entity_type: node
 bundle: webform
-label: 'Promoted to front page'
-description: ''
+label: 'Publishing status'
+description: 'A boolean indicating the published state.'
 required: false
 translatable: false
 default_value:
   -
-    value: 0
+    value: 1
 default_value_callback: ''
 settings:
   on_label: 'On'
