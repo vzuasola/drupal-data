@@ -151,6 +151,7 @@ class MyAccountFormResource extends ResourceBase
             // Get only Profile field.
             unset($values['account_field']);
             unset($values['communication_detail_field']);
+            unset($values['enable_sms_verification_field']);
             unset($values['verify_text_field']);
             unset($values['modal_verify_header_text_field']);
             unset($values['modal_verify_body_text_field']);
@@ -164,6 +165,7 @@ class MyAccountFormResource extends ResourceBase
 
             $value = $values;
         } elseif ($key == 'sms_verification') {
+            $value['enable_sms_verification'] = $values['enable_sms_verification_field'];
             $value['verify_text'] = $values['verify_text_field'];
             $value['modal_verify_header_text'] = $values['modal_verify_header_text_field'];
             $value['modal_verify_body_text'] = $values['modal_verify_body_text_field'];
