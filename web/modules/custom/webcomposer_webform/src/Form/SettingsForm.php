@@ -176,19 +176,20 @@ class SettingsForm {
     $third_party_settings = $form_state->getValue('third_party_settings');
 
     // remove translated backgrounds
-    foreach ($this->languageManager->getLanguages() as $language) {
-      $lang = $language->getId();
+    // foreach ($this->languageManager->getLanguages() as $language) {
+    //   $lang = $language->getId();
 
-      if (isset($this->prefixes[$lang])) {
-        $langKey = $this->prefixes[$lang];
+    //   if (isset($this->prefixes[$lang])) {
+    //     $langKey = $this->prefixes[$lang];
 
-        if (!empty($third_party_settings['webcomposer_webform']['webform_background']["background_image_$langKey"])) {
-          unset($third_party_settings['webcomposer_webform']['webform_background']["background_image_$langKey"]);
-        }
-      }
-    }
+    //     if (!empty($third_party_settings['webcomposer_webform']['webform_background']["background_image_$langKey"])) {
+    //       unset($third_party_settings['webcomposer_webform']['webform_background']["background_image_$langKey"]);
+    //     }
+    //   }
+    // }
 
     $form_state->setValue('third_party_settings', $third_party_settings);
+ 
   }
 
   /**

@@ -1,0 +1,22 @@
+add social media entities:
+  title: 'Create new Social Media entities'
+
+administer social media entities:
+  title: 'Administer Social Media entities'
+  description: 'Allow to access the administration form to configure Social Media entities.'
+  restrict access: true
+
+delete social media entities:
+  title: 'Delete Social Media entities'
+
+edit social media entities:
+  title: 'Edit Social Media entities'
+
+access social media overview:
+  title: 'Access the Social Media overview page'
+
+view published social media entities:
+  title: 'View published Social Media entities'
+
+view unpublished social media entities:
+  title: 'View unpublished Social Media entities'

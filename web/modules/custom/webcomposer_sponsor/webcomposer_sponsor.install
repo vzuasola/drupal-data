@@ -1,0 +1,34 @@
+<?php
+
+
+/**
+ * Implements hook_uninstall
+ */
+function webcomposer_sponsor_uninstall() {
+   $keys = [
+      'core.base_field_override.paragraph.sponsorship.created.yml',
+      'core.base_field_override.paragraph.sponsorship.status.yml',
+      'core.base_field_override.paragraph.sponsorship.uid.yml',
+      'core.base_field_override.sponsor_entity.sponsor_entity.user_id.yml',
+      'core.entity_form_display.paragraph.sponsorship.default.yml',
+      'core.entity_form_display.sponsor_entity.sponsor_entity.default.yml',
+      'core.entity_view_display.paragraph.sponsorship.default.yml',
+      'core.entity_view_display.sponsor_entity.sponsor_entity.default.yml',
+      'field.field.paragraph.sponsorship.field_link_target.yml',
+      'field.field.paragraph.sponsorship.field_sponsor_logo.yml',
+      'field.field.paragraph.sponsorship.field_sponsor_logo_link.yml',
+      'field.field.sponsor_entity.sponsor_entity.field_sponsors.yml',
+      'field.storage.paragraph.field_link_target.yml',
+      'field.storage.paragraph.field_sponsor_logo.yml',
+      'field.storage.paragraph.field_sponsor_logo_link.yml',
+      'field.storage.sponsor_entity.field_sponsors.yml',
+      'language.content_settings.paragraph.sponsorship.yml',
+      'language.content_settings.sponsor_entity.sponsor_entity.yml',
+      'paragraphs.paragraphs_type.sponsorship.yml',
+      'views.view.sponsors.yml'
+    ];
+
+    foreach ($keys as $key) {
+      \Drupal::configFactory()->getEditable($key)->delete();
+    }
+}
