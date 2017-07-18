@@ -20,7 +20,6 @@ class RightSideBlockEntityListBuilder extends EntityListBuilder {
    * {@inheritdoc}
    */
   public function buildHeader() {
-    $header['id'] = $this->t('Inner Page Right Side Block ID');
     $header['name'] = $this->t('Name');
     return $header + parent::buildHeader();
   }

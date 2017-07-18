@@ -21,9 +21,11 @@ settings:
   default_preview_label: Preview
   default_preview_title: '[webform:title]: Preview'
   default_preview_message: 'Please review your submission. Your submission is not complete until you press the &quot;Submit&quot; button!'
+  preview_classes: ''
   default_draft_button_label: 'Save Draft'
   default_draft_saved_message: 'Submission saved. You may return to this form later and it will restore the current values.'
   default_draft_loaded_message: 'A partially-completed form was found. Please complete the remaining portions.'
+  default_submission_label: Submit
   default_submission_log: false
   default_confirmation_message: 'New submission added to [webform:title].'
   default_confirmation_back_label: 'Back to form'
@@ -62,6 +64,9 @@ element:
   default_description_display: ''
   default_icheck: ''
   default_google_maps_api_key: ''
+  default_empty_option: false
+  default_empty_option_required: ''
+  default_empty_option_optional: ''
   excluded_elements:
     captcha: captcha
     color: color
@@ -72,7 +77,6 @@ element:
     details: details
     email: email
     entity_autocomplete: entity_autocomplete
-    fieldset: fieldset
     hidden: hidden
     item: item
     label: label
@@ -135,6 +139,7 @@ element:
     webform_wizard_page: webform_wizard_page
 file:
   file_public: false
+  file_private_redirect: false
   default_max_filesize: ''
   default_managed_file_extensions: 'gif jpg png bmp eps tif pict psd txt rtf html odf pdf doc docx ppt pptx xls xlsx xml avi mov mp3 ogg wav bz2 dmg gz jar rar sit svg tar zip'
   default_audio_file_extensions: 'mp3 ogg wav'
@@ -144,6 +149,7 @@ file:
 format: {  }
 mail:
   roles: {  }
+  default_to_mail: '[site:mail]'
   default_from_mail: '[site:mail]'
   default_from_name: '[site:name]'
   default_reply_to: ''

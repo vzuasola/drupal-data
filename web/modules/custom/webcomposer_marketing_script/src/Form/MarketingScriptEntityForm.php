@@ -44,6 +44,7 @@ class MarketingScriptEntityForm extends ContentEntityForm {
           '%label' => $entity->label(),
         ]));
     }
+    
     $form_state->setRedirectUrl($entity->urlInfo('collection'));
   }
 
