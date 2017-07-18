@@ -77,6 +77,14 @@ class ElementForm {
     $type = $callback->getElement()['#type'];
 
     if ($type == 'fieldset') {
+      $form['properties']['element']['legend'] = [
+        '#type' => 'textfield',
+        '#title' => t('Legend'),
+        '#description' => t('The fieldset legend that will act as the title'),
+        '#parents' => ['properties', 'legend'],
+        '#default_value' => $custom_properties['legend'],
+      ];
+
       $form['properties']['element']['class'] = [
         '#type' => 'textfield',
         '#title' => t('Class'),
