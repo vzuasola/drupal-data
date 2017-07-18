@@ -72,6 +72,27 @@ class ElementForm {
       '#parents' => ['properties', 'visibility'],
       '#default_value' => $custom_properties['visibility'],
     ];
+
+    $callback = $form_state->getBuildInfo()['callback_object'];
+    $type = $callback->getElement()['#type'];
+
+    if ($type == 'fieldset') {
+      $form['properties']['element']['legend'] = [
+        '#type' => 'textfield',
+        '#title' => t('Legend'),
+        '#description' => t('The fieldset legend that will act as the title'),
+        '#parents' => ['properties', 'legend'],
+        '#default_value' => $custom_properties['legend'],
+      ];
+
+      $form['properties']['element']['class'] = [
+        '#type' => 'textfield',
+        '#title' => t('Class'),
+        '#description' => t('Custom class for this fieldset'),
+        '#parents' => ['properties', 'class'],
+        '#default_value' => $custom_properties['class'],
+      ];
+    }
   }
 
   /**
