@@ -9,6 +9,7 @@ dependencies:
     - entity_reference_revisions
     - rest
     - serialization
+    - webcomposer_rest_extra
     - webcomposer_right_side_block
 id: inner_page_right_side_block
 label: 'Inner Page right-side block'
@@ -288,6 +289,12 @@ display:
     display_options:
       display_extenders: {  }
       path: api/inner_page_right_side_block
+      style:
+        type: node_list_serializer
+        options:
+          uses_fields: false
+          formats:
+            json: json
     cache_metadata:
       max-age: -1
       contexts:
