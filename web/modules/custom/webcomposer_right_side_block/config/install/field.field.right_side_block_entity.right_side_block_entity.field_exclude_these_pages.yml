@@ -11,7 +11,7 @@ field_name: field_exclude_these_pages
 entity_type: right_side_block_entity
 bundle: right_side_block_entity
 label: 'Exclude these Pages'
-description: ''
+description: 'Specify page to exclude. One page per line, wildcard <strong>*</strong> is also accepted.'
 required: false
 translatable: true
 default_value: {  }

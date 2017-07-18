@@ -13,7 +13,7 @@ field_name: field_innerpage_right_side_block
 entity_type: right_side_block_entity
 bundle: right_side_block_entity
 label: 'Inner Page right-side block'
-description: 'Allow user to Inner Page right-side block.'
+description: 'Add items to an block entry.'
 required: true
 translatable: true
 default_value: {  }

@@ -23,7 +23,7 @@ third_party_settings:
     unpublish_revision: false
 name: Mobile
 type: mobile
-description: ''
+description: 'Adds a special page to be used as mobile information.'
 help: ''
 new_revision: true
 preview_mode: 1

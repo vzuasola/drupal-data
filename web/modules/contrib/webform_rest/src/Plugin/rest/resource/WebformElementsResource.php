@@ -7,6 +7,7 @@ use Drupal\rest\Plugin\ResourceBase;
 use Drupal\rest\ResourceResponse;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 use Drupal\webform\WebformThirdPartySettingsManager;
+use Drupal\file\Entity\File;
 
 /**
  * Creates a resource for retrieving webform elements.
@@ -77,7 +78,40 @@ class WebformElementsResource extends ResourceBase {
       $settings = $webform->getThirdPartySettings($provider);
       $results[$provider] = $settings;
     }
+  
+      
+    foreach ($results['webcomposer_webform']['webform_background'] as $key => $value) {
+ 
+      if (!empty($value[0])) {
+           $file = $this->loadFileById($value[0]);
+           foreach ($file as $value) {
+            $fileImageURL = $value['url'];
+            $results['webcomposer_webform']['webform_background'][$key][0] = $fileImageURL;
+           }
+      }
+    }
 
     return $results;
+  }
+
+   /**
+   * Load file url data by target ID
+   */
+  private function loadFileById($fid) {
+    $result = [];
+    $fileArray = []; 
+
+    if (isset($fid)) {
+      $file = File::load($fid);
+
+      if ($file) {
+        $fileArray = $file->toArray();
+        $fileArray['url'] = file_create_url($file->getFileUri());
+      }
+    }
+
+    $result[] = $fileArray;
+
+    return $result;
   }
 }
