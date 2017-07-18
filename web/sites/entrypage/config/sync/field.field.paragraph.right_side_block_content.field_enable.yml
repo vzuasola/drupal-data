@@ -10,12 +10,12 @@ field_name: field_enable
 entity_type: paragraph
 bundle: right_side_block_content
 label: Enable
-description: ''
-required: false
+description: 'If uncheck will disable this item.'
+required: true
 translatable: true
 default_value:
   -
-    value: 0
+    value: 1
 default_value_callback: ''
 settings:
   on_label: Enable
