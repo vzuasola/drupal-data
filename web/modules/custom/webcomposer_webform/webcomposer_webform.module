@@ -1,0 +1,34 @@
+<?php
+
+/**
+ * @file
+ * Contains webcomposer_webform.module.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+
+use Drupal\webcomposer_webform\Form\SettingsForm;
+use Drupal\webcomposer_webform\Form\ElementForm;
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function webcomposer_webform_form_webform_ui_element_form_alter(&$form, FormStateInterface $form_state) {
+  $elementForm = new ElementForm();
+
+  $elementForm->getForm($form, $form_state);
+
+  return $form;
+}
+
+/**
+ * Perform alterations on webform third party settings form.
+ */
+function webcomposer_webform_webform_third_party_settings_form_alter(array &$form, FormStateInterface $form_state) {
+  $settingsForm = new SettingsForm();
+
+  $settingsForm->getForm($form, $form_state);
+
+  return $form;
+}
+

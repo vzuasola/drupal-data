@@ -1,34 +1,25 @@
-uuid: 7350138b-4cbd-4d86-a51f-5bd2ffa7b1ad
-langcode: zh-hant
+uuid: 36b51a26-8c2b-4b88-99ab-4811bbab59d2
+langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:social_media_block:8cee3b07-6bdf-4659-bdef-0eb295f9f653'
+    - 'block_content:social_media_block:145ee4fb-32f3-49d7-ab6b-f5ec7231a64c'
   module:
     - block_content
-    - language
   theme:
     - bartik
 id: footer_social_media
 theme: bartik
-region: footer_third
+region: footer_first
 weight: 0
 provider: null
-plugin: 'block_content:8cee3b07-6bdf-4659-bdef-0eb295f9f653'
+plugin: 'block_content:145ee4fb-32f3-49d7-ab6b-f5ec7231a64c'
 settings:
-  id: 'block_content:8cee3b07-6bdf-4659-bdef-0eb295f9f653'
-  label: 'Social Media Link sc'
+  id: 'block_content:145ee4fb-32f3-49d7-ab6b-f5ec7231a64c'
+  label: 'Social Media Block'
   provider: block_content
   label_display: visible
   status: true
   info: ''
   view_mode: full
-visibility:
-  language:
-    id: language
-    langcodes:
-      zh-hans: zh-hans
-      zh-hant: zh-hant
-    negate: false
-    context_mapping:
-      language: '@language.current_language_context:language_interface'
+visibility: {  }

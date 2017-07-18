@@ -1,0 +1,5 @@
+name: webcomposer_marketing_script
+type: module
+description: Allows to add marketing script
+core: 8.x
+package: webcomposer

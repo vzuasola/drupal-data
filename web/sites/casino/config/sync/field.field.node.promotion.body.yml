@@ -1,5 +1,5 @@
-uuid: d8c812f3-f7b7-4e1a-b71c-42f2a322c618
-langcode: zh-hans
+uuid: ac8d2e18-3aa8-49da-87fe-6f93c92510bc
+langcode: en
 status: true
 dependencies:
   config:
@@ -7,6 +7,8 @@ dependencies:
     - node.type.promotion
   module:
     - text
+_core:
+  default_config_hash: 1P2kJGKAIK5uC6TH8zwvMpJsJkUB8g5eR1RU1GF4Bos
 id: node.promotion.body
 field_name: body
 entity_type: node

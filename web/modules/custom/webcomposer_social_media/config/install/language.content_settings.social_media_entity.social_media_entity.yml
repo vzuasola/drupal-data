@@ -1,0 +1,15 @@
+uuid: 1dc9f443-f657-4e86-a1e9-9673297fd154
+langcode: en
+status: true
+dependencies:
+  module:
+    - content_translation
+    - webcomposer_social_media
+third_party_settings:
+  content_translation:
+    enabled: true
+id: social_media_entity.social_media_entity
+target_entity_type_id: social_media_entity
+target_bundle: social_media_entity
+default_langcode: site_default
+language_alterable: true

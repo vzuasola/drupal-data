@@ -1,0 +1,5 @@
+name: Webcomposer Social Media
+type: module
+description: Standardized Social Media savd to CMI
+core: 8.x
+package: Web Composer

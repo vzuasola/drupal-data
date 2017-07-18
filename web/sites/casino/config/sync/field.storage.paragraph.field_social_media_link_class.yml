@@ -5,6 +5,8 @@ dependencies:
   module:
     - options
     - paragraphs
+_core:
+  default_config_hash: e4YngkoEt9hmZk0Zam5eY5Uk3ho8keWOWsaRlJlE1LU
 id: paragraph.field_social_media_link_class
 field_name: field_social_media_link_class
 entity_type: paragraph

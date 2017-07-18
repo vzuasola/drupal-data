@@ -1,0 +1,32 @@
+uuid: 0121cc20-afb7-4d08-a7e6-f138721bf149
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.domain_group_listing
+  module:
+    - system
+    - views
+  theme:
+    - seven
+_core:
+  default_config_hash: 4JCwJc4T-EzdR6meGrxd3GrwX1zNEMNrpeq36mhaGZ8
+id: views_block__domain_group_listing_domain_group_listing
+theme: seven
+region: content
+weight: -2
+provider: null
+plugin: 'views_block:domain_group_listing-domain_group_listing'
+settings:
+  id: 'views_block:domain_group_listing-domain_group_listing'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /admin/config/webcomposer/domains/groups
+    negate: false
+    context_mapping: {  }

@@ -1,11 +1,9 @@
-uuid: 163966c4-0e44-41d0-b829-5c16b49002b6
+uuid: 8be6d7a0-10d8-4386-8f97-b3841a11ee84
 langcode: en
 status: true
 dependencies:
   module:
-    - basic_auth
     - block_content
-    - hal
     - serialization
     - user
 id: entity.block_content
@@ -14,8 +12,6 @@ granularity: method
 configuration:
   GET:
     supported_formats:
-      - hal_json
       - json
     supported_auth:
-      - basic_auth
       - cookie

@@ -61,8 +61,7 @@ class NodeEntityNormalizer extends ContentEntityNormalizer
   /**
    * Load Paragraph by ID
    */
-  private function loadParagraphById($id)
-  {
+  private function loadParagraphById($id) {
     $lang = \Drupal::languageManager()->getCurrentLanguage(\Drupal\Core\Language\LanguageInterface::TYPE_CONTENT)->getId();
     $paragraph = \Drupal::entityManager()->getStorage('paragraph')->load($id);
     $paragraphTranslated = \Drupal::service('entity.repository')->getTranslationFromContext($paragraph, $lang);
@@ -134,14 +133,20 @@ class NodeEntityNormalizer extends ContentEntityNormalizer
    * Load file url data by target ID
    */
   private function loadFileById($fid) {
+    $result = [];
     $fileArray = []; 
 
     if (isset($fid)) {
       $file = File::load($fid);
-      $fileArray = $file->toArray();
-      $fileArray['image_url'] = file_create_url($file->getFileUri());
+
+      if ($file) {
+        $fileArray = $file->toArray();
+        $fileArray['url'] = file_create_url($file->getFileUri());
+      }
     }
 
-    return $fileArray;
+    $result[] = $fileArray;
+
+    return $result;
   }
 }

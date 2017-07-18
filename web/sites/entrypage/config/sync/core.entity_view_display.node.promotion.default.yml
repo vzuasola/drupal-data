@@ -4,12 +4,12 @@ status: true
 dependencies:
   config:
     - field.field.node.promotion.body
-    - field.field.node.promotion.field_background_color
     - field.field.node.promotion.field_banner_content
     - field.field.node.promotion.field_banner_link
     - field.field.node.promotion.field_banner_link_target
     - field.field.node.promotion.field_hide_countdown
     - field.field.node.promotion.field_hide_promotion
+    - field.field.node.promotion.field_hide_right_side_block
     - field.field.node.promotion.field_image
     - field.field.node.promotion.field_link_target
     - field.field.node.promotion.field_log_in_state
@@ -19,19 +19,19 @@ dependencies:
     - field.field.node.promotion.field_promotion_link_target
     - field.field.node.promotion.field_promotion_summary
     - field.field.node.promotion.field_promotion_summary_link
+    - field.field.node.promotion.field_ribbon_background_color
     - field.field.node.promotion.field_ribbon_label
     - field.field.node.promotion.field_right_side_block_content
     - field.field.node.promotion.field_right_side_block_link
     - field.field.node.promotion.field_right_side_block_option
     - field.field.node.promotion.field_right_side_block_title
-    - field.field.node.promotion.field_right_side_content
-    - field.field.node.promotion.field_show_inner_page_right_side
     - field.field.node.promotion.field_summary_image
     - field.field.node.promotion.field_text_color
     - field.field.node.promotion.field_thumbnail_image
     - field.field.node.promotion.field_thumbnail_summary
     - node.type.promotion
   module:
+    - color_field
     - entity_reference_revisions
     - image
     - link
@@ -51,13 +51,6 @@ content:
     weight: 101
     settings: {  }
     third_party_settings: {  }
-    region: content
-  field_background_color:
-    weight: 126
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
     region: content
   field_banner_content:
     weight: 103
@@ -196,6 +189,15 @@ content:
     third_party_settings: {  }
     type: link
     region: content
+  field_ribbon_background_color:
+    weight: 135
+    label: above
+    settings:
+      format: hex
+      opacity: '1'
+    third_party_settings: {  }
+    type: color_field_formatter_text
+    region: content
   field_ribbon_label:
     weight: 124
     label: above
@@ -271,11 +273,13 @@ content:
     type: image
     region: content
   field_text_color:
-    weight: 125
+    weight: 136
     label: above
-    settings: {  }
+    settings:
+      format: hex
+      opacity: '1'
     third_party_settings: {  }
-    type: list_default
+    type: color_field_formatter_text
     region: content
   field_thumbnail_image:
     weight: 114
@@ -298,4 +302,5 @@ content:
     region: content
 hidden:
   field_hide_promotion: true
+  field_hide_right_side_block: true
   langcode: true

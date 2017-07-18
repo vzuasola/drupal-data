@@ -22,3 +22,8 @@ webcomposer_config.page_not_found_configuration_tab:
   route_name: entrypage_config.page_not_found_form
   title: 'Page Not Found'
   base_route: entrypage_config.page_not_found_form
+
+webcomposer_config.pushnx_configuration_tab:
+  route_name: webcomposer_config.pushnx_configuration_form
+  title: 'Push Notification Configuration'
+  base_route: webcomposer_config.pushnx_configuration_form

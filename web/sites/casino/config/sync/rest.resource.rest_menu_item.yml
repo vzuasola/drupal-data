@@ -1,10 +1,8 @@
-uuid: 76d7d385-c1cb-40b0-a767-38c8b27bbcb5
+uuid: 5b18e93e-caef-4400-9860-7cc673efd781
 langcode: en
 status: true
 dependencies:
   module:
-    - basic_auth
-    - hal
     - rest_menu_items
     - serialization
     - user
@@ -14,9 +12,6 @@ granularity: method
 configuration:
   GET:
     supported_formats:
-      - hal_json
       - json
-      - xml
     supported_auth:
-      - basic_auth
       - cookie

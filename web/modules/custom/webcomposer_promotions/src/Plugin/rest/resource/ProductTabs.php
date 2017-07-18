@@ -146,6 +146,7 @@ class ProductTabs extends ResourceBase {
 
         $checkEnable = $translation->field_enable_disable->value;
 
+
         // Get count of promotions tagged with product.
         if ($checkEnable === '1') {
           $filters = [];
@@ -154,6 +155,7 @@ class ProductTabs extends ResourceBase {
           $class = isset($translation->field_class->value) ? $translation->field_class->value : NULL;
           $target = isset($translation->field_target->value) ? $translation->field_target->value : NULL;
           $tag = isset($translation->field_menu_tag->value) ? $translation->field_menu_tag->value : NULL;
+          $KebabProduct = isset($translation->field_this_product_kebab->value) ? $translation->field_this_product_kebab->value : NULL;
 
           $key = $translation->Id();
 
@@ -197,6 +199,7 @@ class ProductTabs extends ResourceBase {
             'id' => $key,
             'count' => $count,
             'product_attribute' => $productAttribute,
+            'kebab_product' => $KebabProduct,
             'filters' => $filters,
           ];
         }
@@ -272,7 +275,7 @@ class ProductTabs extends ResourceBase {
     $nodeStorage = \Drupal::entityManager()->getStorage('node')->loadMultiple($countNids);
     if ($nodeStorage) {
       $countNid = [];
-      
+
       foreach ($nodeStorage as $getEntity) {
         if ($getEntity->hasTranslation($langCode)) {
           $translation = $getEntity->getTranslation($langCode);
@@ -282,7 +285,7 @@ class ProductTabs extends ResourceBase {
           $checkFeatured = $translation->field_mark_as_featured->value;
           $loginState = $translation->field_log_in_state->value;
 
-          if ($status == '1' && 
+          if ($status == '1' &&
             $checkFeatured == '1' &&
             $hidePromotion == '0' &&
             in_array($loginState, array($state, '2'))

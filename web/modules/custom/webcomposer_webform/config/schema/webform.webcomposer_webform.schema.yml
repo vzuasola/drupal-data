@@ -1,0 +1,35 @@
+webform.settings.third_party.webcomposer_webform:
+  type: mapping
+  label: 'Webform Layout Settings'
+  mapping:
+    webcomposer_webform_layout:
+      label: Webform Layout
+      type: mapping
+      mapping:
+        label_font_color:
+          type: text
+          label: 'Label Font Color'
+        error_font_color:
+          type: text
+          label: 'Error Font Color'
+        header_markup:
+          type: text_format
+          label: 'Header Markup'
+
+    webcomposer_webform_submission_layout:
+      label: Webform Submission Layout
+      type: mapping
+      mapping:
+        success_font_color:
+          type: text
+          label: 'Success Font Color'
+        success_background_color:
+          type: text
+          label: 'Success Background Color'
+        error_font_color:
+          type: text
+          label: 'Error Font Color'
+        error_background_color:
+          type: text
+          label: 'Error Background Color'
+

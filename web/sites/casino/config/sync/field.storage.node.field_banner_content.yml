@@ -1,10 +1,12 @@
-uuid: a525d416-a673-4f05-a089-e3d0fb3630f8
-langcode: zh-hans
+uuid: 01752f94-e8c1-4de5-a1f0-6fd098250284
+langcode: en
 status: true
 dependencies:
   module:
     - node
     - text
+_core:
+  default_config_hash: jqoLoa54GLlQyNyNn_bmnMf4NpQ5v2WKMXTXKUfcI48
 id: node.field_banner_content
 field_name: field_banner_content
 entity_type: node

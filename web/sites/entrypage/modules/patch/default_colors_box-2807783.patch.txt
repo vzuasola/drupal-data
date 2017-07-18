@@ -1,0 +1,13 @@
+diff --git a/js/color_field_widget_box.jquery.js b/js/color_field_widget_box.jquery.js
+index 23bef75..56da3a5 100644
+--- a/js/color_field_widget_box.jquery.js
++++ b/js/color_field_widget_box.jquery.js
+@@ -20,7 +20,7 @@
+ 
+             var $context = $(context);
+ 
+-            var default_colors = settings.color_field.color_field_widget_box.settings.default_colors;
++            var default_colors = settings.color_field.color_field_widget_box.settings.palette;
+ 
+             $context.find('.color-field-widget-box-form').each(function (index, element) {
+                 var $element = $(element);
