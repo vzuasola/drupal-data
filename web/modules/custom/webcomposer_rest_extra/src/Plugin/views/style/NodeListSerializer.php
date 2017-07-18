@@ -1,7 +1,9 @@
 <?php
 
 namespace Drupal\webcomposer_rest_extra\Plugin\views\style;
+
 use Drupal\rest\Plugin\views\style\Serializer;
+use Drupal\file\Entity\File;
 
 /**
  * @ingroup views_style_plugins
@@ -99,5 +101,26 @@ class NodeListSerializer extends Serializer {
     }
 
     return $pargraphTranslatedArray;
+  }
+
+  /**
+   * Load file url data by target ID
+   */
+  private function loadFileById($fid) {
+    $result = [];
+    $fileArray = []; 
+
+    if (isset($fid)) {
+      $file = File::load($fid);
+
+      if ($file) {
+        $fileArray = $file->toArray();
+        $fileArray['url'] = file_create_url($file->getFileUri());
+      }
+    }
+
+    $result[] = $fileArray;
+
+    return $result;
   }
 }
