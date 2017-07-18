@@ -44,7 +44,7 @@ class RightSideBlockEntityForm extends ContentEntityForm {
           '%label' => $entity->label(),
         ]));
     }
-    $form_state->setRedirect('entity.right_side_block_entity.canonical', ['right_side_block_entity' => $entity->id()]);
-  }
 
+    $form_state->setRedirectUrl($entity->urlInfo('collection'));
+  }
 }
