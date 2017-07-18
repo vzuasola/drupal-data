@@ -30,7 +30,6 @@ class RightSideBlockEntityListBuilder extends EntityListBuilder {
    */
   public function buildRow(EntityInterface $entity) {
     /* @var $entity \Drupal\webcomposer_right_side_block\Entity\RightSideBlockEntity */
-    // $row['id'] = $entity->id();
     $row['name'] = $this->l(
       $entity->label(),
       new Url(
