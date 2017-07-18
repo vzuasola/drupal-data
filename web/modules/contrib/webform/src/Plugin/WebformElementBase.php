@@ -249,6 +249,8 @@ class WebformElementBase extends PluginBase implements WebformElementInterface {
       'test',
       'default_value',
 
+      'legend',
+      
       'alphanumeric_error',
       'unicode_error',
       'email_error',

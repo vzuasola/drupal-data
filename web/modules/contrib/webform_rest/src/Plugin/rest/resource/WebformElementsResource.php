@@ -48,7 +48,7 @@ class WebformElementsResource extends ResourceBase {
       $vendorSettings = $this->getVendorSettings($webform);
 
       $response = [
-        'elements' => $webform->getElementsDecodedAndFlattened(),
+        'elements' => $this->getElements($webform),
         'settings' => $webform->getSettings(),
         'third_party_settings' => $vendorSettings,
       ];
@@ -67,6 +67,16 @@ class WebformElementsResource extends ResourceBase {
   }
 
   /**
+   * 
+   */
+  private function getElements($webform) {
+    $original = $webform->getElementsDecoded();
+    $decoded = $webform->getElementsOriginalDecoded();
+
+    return array_replace_recursive($original, $decoded);
+  }
+
+  /**
    * Gets all third part settings
    */
   private function getVendorSettings($webform) {
@@ -78,23 +88,27 @@ class WebformElementsResource extends ResourceBase {
       $settings = $webform->getThirdPartySettings($provider);
       $results[$provider] = $settings;
     }
-  
-      
+        
     foreach ($results['webcomposer_webform']['webform_background'] as $key => $value) {
- 
       if (!empty($value[0])) {
-           $file = $this->loadFileById($value[0]);
-           foreach ($file as $value) {
-            $fileImageURL = $value['url'];
-            $results['webcomposer_webform']['webform_background'][$key][0] = $fileImageURL;
-           }
+        $file = $this->loadFileById($value[0]);
+
+        if (!empty($file)) {
+          foreach ($file as $value) {
+
+            if (isset($value['url'])) {
+              $fileImageURL = $value['url'];
+              $results['webcomposer_webform']['webform_background'][$key][0] = $fileImageURL;
+            }
+          }
+        }
       }
     }
 
     return $results;
   }
 
-   /**
+  /**
    * Load file url data by target ID
    */
   private function loadFileById($fid) {

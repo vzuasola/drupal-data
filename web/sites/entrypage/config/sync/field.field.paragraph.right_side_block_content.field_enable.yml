@@ -11,7 +11,7 @@ entity_type: paragraph
 bundle: right_side_block_content
 label: Enable
 description: 'If uncheck will disable this item.'
-required: true
+required: false
 translatable: true
 default_value:
   -

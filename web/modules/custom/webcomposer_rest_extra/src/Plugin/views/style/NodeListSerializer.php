@@ -1,7 +1,9 @@
 <?php
 
 namespace Drupal\webcomposer_rest_extra\Plugin\views\style;
+
 use Drupal\rest\Plugin\views\style\Serializer;
+use Drupal\file\Entity\File;
 
 /**
  * @ingroup views_style_plugins
@@ -41,30 +43,27 @@ class NodeListSerializer extends Serializer {
 
         foreach ($value as $paragraphKey => $pid) {
           if (isset($pid['target_type']) && $pid['target_type'] == 'paragraph') {
-          // loading the paragraph object onto the rest export
-           $rowAssoc[$key][$paragraphKey] = $this->loadParagraph($pid['target_id']);
-         }
+            // loading the paragraph object onto the rest export
+            $rowAssoc[$key][$paragraphKey] = $this->loadParagraphById($pid['target_id']);
+          }
+        }
+      }
 
-       }
+      $rows[] = $rowAssoc;
+    }
 
-     }
-
-     $rows[] = $rowAssoc;
-   }
-
-   unset($this->view->row_index);
+    unset($this->view->row_index);
 
     // Get the content type configured in the display or fallback to the
     // default.
-   if ((empty($this->view->live_preview))) {
-    $content_type = $this->displayHandler->getContentType();
-  }
-  else {
-    $content_type = !empty($this->options['formats']) ? reset($this->options['formats']) : 'json';
-  }
+    if ((empty($this->view->live_preview))) {
+      $content_type = $this->displayHandler->getContentType();
+    } else {
+      $content_type = !empty($this->options['formats']) ? reset($this->options['formats']) : 'json';
+    }
 
-  return $this->serializer->serialize($rows, $content_type, ['views_style_plugin' => $this]);
-}
+    return $this->serializer->serialize($rows, $content_type, ['views_style_plugin' => $this]);
+  }
 
   /**
    * Load terms by taxonomy ID
@@ -79,20 +78,49 @@ class NodeListSerializer extends Serializer {
     $term_translated->set('path', $term_alias);
 
     return $term_translated;
-
-    // $term = \Drupal\taxonomy\Entity\Term::load($tid);
-
-    // $term_alias = \Drupal::service('path.alias_manager')->getAliasByPath('/taxonomy/term/' . $tid);
-    // $term->set('path', $term_alias);
-
-    // return $term;
   }
 
-   /**
+  /**
    * Load paragraph by paragraph ID
    */
-   private function loadParagraph($tid) {
-    $entities = \Drupal::entityTypeManager()->getStorage('paragraph')->load($tid);
-    return $entities;
+  private function loadParagraphById($id) {
+    $lang = \Drupal::languageManager()->getCurrentLanguage(\Drupal\Core\Language\LanguageInterface::TYPE_CONTENT)->getId();
+    $paragraph = \Drupal::entityManager()->getStorage('paragraph')->load($id);
+    $paragraphTranslated = \Drupal::service('entity.repository')->getTranslationFromContext($paragraph, $lang);
+    $pargraphTranslatedArray = $paragraphTranslated->toArray();
+
+    foreach ($pargraphTranslatedArray as $field => $item) {
+      $setting = $paragraphTranslated->get($field)->getSettings();
+
+      if (isset($setting['target_type'])) {
+        if ($setting['target_type'] == 'file') {
+          $field_array = array_merge($pargraphTranslatedArray[$field][0], $this->loadFileById($item[0]['target_id']));
+          $pargraphTranslatedArray[$field] = $field_array;
+        }
+      }
+    }
+
+    return $pargraphTranslatedArray;
+  }
+
+  /**
+   * Load file url data by target ID
+   */
+  private function loadFileById($fid) {
+    $result = [];
+    $fileArray = []; 
+
+    if (isset($fid)) {
+      $file = File::load($fid);
+
+      if ($file) {
+        $fileArray = $file->toArray();
+        $fileArray['url'] = file_create_url($file->getFileUri());
+      }
+    }
+
+    $result[] = $fileArray;
+
+    return $result;
   }
 }

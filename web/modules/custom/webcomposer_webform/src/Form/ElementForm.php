@@ -20,8 +20,8 @@ class ElementForm {
     'required_error' => 'This field is required',
     'alphanumeric' => FALSE,
     'alphanumeric_error' => 'Input should be alphanumeric',
-    'unicode' => FALSE,
-    'unicode_error' => 'Input should be unicode',
+    'no_symbols' => FALSE,
+    'no_symbols_error' => 'Input should not contain invalid symbols',
     'email' => FALSE,
     'email_error' => 'Input should be a valid email',
     'numeric' => FALSE,
@@ -72,6 +72,27 @@ class ElementForm {
       '#parents' => ['properties', 'visibility'],
       '#default_value' => $custom_properties['visibility'],
     ];
+
+    $callback = $form_state->getBuildInfo()['callback_object'];
+    $type = $callback->getElement()['#type'];
+
+    if ($type == 'fieldset') {
+      $form['properties']['element']['legend'] = [
+        '#type' => 'textfield',
+        '#title' => t('Legend'),
+        '#description' => t('The fieldset legend that will act as the title'),
+        '#parents' => ['properties', 'legend'],
+        '#default_value' => $custom_properties['legend'],
+      ];
+
+      $form['properties']['element']['class'] = [
+        '#type' => 'textfield',
+        '#title' => t('Class'),
+        '#description' => t('Custom class for this fieldset'),
+        '#parents' => ['properties', 'class'],
+        '#default_value' => $custom_properties['class'],
+      ];
+    }
   }
 
   /**
@@ -127,23 +148,23 @@ class ElementForm {
       ],
     ];
 
-    $form['properties']['validation']['unicode'] = [
+    $form['properties']['validation']['no_symbols'] = [
       '#type' => 'checkbox',
-      '#title' => t('Unicode'),
-      '#description' => t('Make this field accept alphanumeric + spaces + foreign characters'),
-      '#parents' => ['properties', 'unicode'],
-      '#default_value' => $custom_properties['unicode'],
+      '#title' => t('No Symbols'),
+      '#description' => t('Make this field accept alphanumeric + spaces + foreign characters except special symbols'),
+      '#parents' => ['properties', 'no_symbols'],
+      '#default_value' => $custom_properties['no_symbols'],
     ];
 
-    $form['properties']['validation']['unicode_error'] = [
+    $form['properties']['validation']['no_symbols_error'] = [
       '#type' => 'textfield',
-      '#title' => t('Unicode error message'),
-      '#description' => t('The error message for the unicode validation'),
-      '#parents' => ['properties', 'unicode_error'],
-      '#default_value' => $custom_properties['unicode_error'],
+      '#title' => t('No Symbols error message'),
+      '#description' => t('The error message for the no symbols validation'),
+      '#parents' => ['properties', 'no_symbols_error'],
+      '#default_value' => $custom_properties['no_symbols_error'],
       '#states' => [
         'visible' => [
-          ':input[name="properties[unicode]"]' => ['checked' => TRUE],
+          ':input[name="properties[no_symbols]"]' => ['checked' => TRUE],
         ],
       ],
     ];
