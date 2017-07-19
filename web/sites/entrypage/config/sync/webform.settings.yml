@@ -94,6 +94,7 @@ element:
     text_format: text_format
     url: url
     value: value
+    webform_actions: webform_actions
     webform_address: webform_address
     webform_audio_file: webform_audio_file
     webform_autocomplete: webform_autocomplete
