@@ -100,6 +100,8 @@ account_field:
     label: 'Account Details'
 
 #sms
+enable_sms_verification_field: 1
+
 verify_text_field: 'Verify'
 
 modal_verify_header_text_field: 'Verify Mobile Number'

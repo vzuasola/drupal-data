@@ -311,6 +311,9 @@ my_account_form_profile.profile:
             label:
               type: label
               label: 'Field label'
+    enable_sms_verification_field:
+      type: boolean_checkbox
+      label: 'Enable SMS Verification'
     verify_text_field:
       type: label
       label: 'Verify text translation'
