@@ -24,7 +24,6 @@ use Drupal\taxonomy\Entity\Term;
  */
 class DomainPlaceholderResource extends ResourceBase
 {
-
   /**
    * @var string $currentLanguage
    *    Current language
@@ -54,13 +53,12 @@ class DomainPlaceholderResource extends ResourceBase
     array $serializer_formats,
     LoggerInterface $logger,
     AccountProxyInterface $current_user,
-    $language_manager ) {
+    $language_manager
+  ) {
     parent::__construct($configuration, $plugin_id, $plugin_definition, $serializer_formats, $logger);
     $this->currentUser = $current_user;
     $this->currentLanguage = $language_manager->getCurrentLanguage()->getId();
   }
-
-
 
   /**
    * {@inheritdoc}
@@ -76,7 +74,6 @@ class DomainPlaceholderResource extends ResourceBase
       $container->get('language_manager')
     );
   }
-
 
   /**
    * Responds to GET requests.
@@ -103,23 +100,23 @@ class DomainPlaceholderResource extends ResourceBase
       return (new ResourceResponse($data))->addCacheableDependency($build);
   }
 
-  /**
-   * Gets the field definition.
-   *
-   * @param <string> $domain The domain
-   *
-   * @throws \Symfony\Component\HttpKernel\Exception\NotFoundHttpException  (if term do not get loaded)
-   *
-   * @return array                                                          The field definition.
-   */
+    /**
+     * Gets the field definition.
+     *
+     * @param <string> $domain The domain
+     *
+     * @throws \Symfony\Component\HttpKernel\Exception\NotFoundHttpException  (if term do not get loaded)
+     *
+     * @return array                                                          The field definition.
+     */
     private function getFieldDefinition($domain)
     {
       $definition = array();
 
       // You must to implement the logic of your REST Resource here.
       $term = \Drupal::entityTypeManager()
-      ->getStorage('taxonomy_term')
-      ->loadByProperties(['name' => $domain]);
+        ->getStorage('taxonomy_term')
+        ->loadByProperties(['name' => $domain]);
 
       if (empty($term)) {
           throw new NotFoundHttpException(t('Term namex with ID @id was not found', array('@id' => $domain)));
@@ -135,17 +132,24 @@ class DomainPlaceholderResource extends ResourceBase
       $definition = array_merge($definition, $domainGroupPlaceholder);
 
       $getEntities = $term->get('field_add_placeholder')->referencedEntities();
+
       foreach ($getEntities as $getEntity) {
+        $value = NULL;
 
         if ($getEntity->hasTranslation($this->currentLanguage)) {
           $translatedEntity = $getEntity->getTranslation($this->currentLanguage);
+
+          $value = $translatedEntity->field_default_value->value;
           $definition[$translatedEntity->field_placeholder_key->value] = $translatedEntity->field_default_value->value;
         }
 
-        if(empty($value)) {
+        if (empty($value)) {
           // check the value in domain group
           $domainGroup = 'domain_groups';
           $fallback = $this->webcomposerPlaceholderFallback($domainGroup);
+
+          $key = $getEntity->field_placeholder_key->value;
+
           $checkIfKeyExits = array_key_exists($key, $fallback) ? true : false;
           if ($checkIfKeyExits == true) {
             $definition = array_merge($definition, $fallback);
@@ -165,17 +169,15 @@ class DomainPlaceholderResource extends ResourceBase
       return $definition;
     }
 
-
     /**
-     * { returns all the placeholder list from domain group and placeholder list }
+     * Returns all the placeholder list from domain group and placeholder list
      *
      * @param <index> $key The key
      *
-     * @return <array>  ( fallback array of domain and master placeholder list )
+     * @return <array> fallback array of domain and master placeholder list
      */
     private function webcomposerPlaceholderFallback($vid)
     {
-
       $field = !empty(($vid == 'domain_groups')) ? 'field_add_placeholder' : 'field_add_master_placeholder';
       $definition = array();
       $query = \Drupal::entityQuery('taxonomy_term');
@@ -197,7 +199,6 @@ class DomainPlaceholderResource extends ResourceBase
 
       return $definition;
     }
-
 
     /**
      * Get Master Placeholder Lists
@@ -227,8 +228,7 @@ class DomainPlaceholderResource extends ResourceBase
 
 
     /**
-     * @var int $tid
-     *    Taxonomy term ID
+     * @var int $tid Taxonomy term ID
      */
     private function getGroupDomainPlaceholder($tid)
     {
