@@ -625,6 +625,14 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#tree' => TRUE,
         ];
 
+        $form['field_configuration']['field_labels_sms_verification']['enable_sms_verification'] = [
+            '#type' => 'checkbox',
+            '#title' => $this->t('Enable SMS Verification'),
+            '#required' => FALSE,
+            '#description' => $this->t('SMS Verification Feature Toggling'),
+            '#default_value' => $myAccountConfigValue['enable_sms_verification_field'],
+        ];
+
         $form['field_configuration']['field_labels_sms_verification']['verify_text'] = [
             '#type' => 'textfield',
             '#title' => $this->t('Verify Text'),
@@ -815,6 +823,7 @@ class MyAccountRegistrationForm extends ConfigFormBase
             ->set('language_field.options.wrapper_class', $configuration['field_labels_language']['wrapper_class'])
             ->set('account_field.options.label', $configuration['field_labels_account']['account_label'])
             ->set('communication_detail_field.options.label', $configuration['field_labels_account']['communication_label'])
+            ->set('enable_sms_verification_field', $configuration['field_labels_sms_verification']['enable_sms_verification'])
             ->set('verify_text_field', $configuration['field_labels_sms_verification']['verify_text'])
             ->set('modal_verify_header_text_field', $configuration['field_labels_sms_verification']['modal_verify_header_text'])
             ->set('modal_verify_body_text_field', $configuration['field_labels_sms_verification']['modal_verify_body_text'])
