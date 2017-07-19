@@ -9,11 +9,16 @@ use Drupal\webform\Plugin\WebformElement\WebformActions;
  *
  * @WebformElement(
  *   id = "webform_reset",
- *   label = @Translation("Reset button(s)"),
+ *   label = @Translation("Reset button"),
  *   description = @Translation("Provides an element that contains a Webform's reset button."),
  *   category = @Translation("Reset"),
  * )
  */
 class WebformReset extends WebformActions {
-
+  /**
+   * {@inheritdoc}
+   */
+  public function isRoot() {
+   return FALSE;
+  }
 }
