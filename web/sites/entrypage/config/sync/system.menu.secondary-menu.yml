@@ -3,6 +3,6 @@ langcode: en
 status: true
 dependencies: {  }
 id: secondary-menu
-label: 'Secondary Menu'
+label: 'Secondary Menu EN'
 description: ''
 locked: false
