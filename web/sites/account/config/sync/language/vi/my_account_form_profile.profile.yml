@@ -9,14 +9,14 @@ currency_field:
 first_name_field:
   weight: '3'
   options:
-    label: 'Nhập Họ'
+    label: Tên
 last_name_field:
   weight: '2'
   options:
-    label: 'Nhập Tên Đệm và Tên'
+    label: Họ
 dob_field:
   options:
-    label: 'Ngày tháng năm'
+    label: 'Ngày Sinh'
 country_field:
   options:
     label: 'Quốc gia'
@@ -31,7 +31,15 @@ account_field:
     label: 'Chi Tiết Tài Khoản'
 mobile_number_field:
   options:
-    label: 'Số điện thoại liên lạc'
+    label: 'Số Điện Thoại'
 language_field:
   options:
     label: 'Ngôn Ngữ'
+verify_text_field: 'Xác thực'
+modal_verify_header_text_field: 'Xác thực Số Điện Thoại Di Động'
+modal_verify_body_text_field: 'Mã xác thực đã được gửi đến Số ĐTDĐ bạn đăng ký. Để hoàn thành xác thực số điện thoại,  bạn cần nhập Mã 6 số vào bên dưới.'
+modal_verification_code_placeholder_field: Mã
+modal_verification_resend_code_text_field: 'Gửi lại Mã'
+modal_verification_submit_text_field: GỬI
+verification_code_response_field: "SMS_VERIFICATION_SUCCESS|Mã xác thực đã được gửi đến Số ĐTDĐ bạn đăng ký.\r\nSMS_VERIFICATION_FAILED|Rất tiếc, đã có lỗi trong quá trình xác thực số điện thoại của bạn. Vui lòng thử lại hoặc liên hệ với chúng tôi thông qua<a href=\"{livechat.link}\" class=\"live-chat-popup\"> Live Chat </a> hoặc <a href=\"mailto:vnsupport@dafabet.com\"> Email </a> (Mã:110)\r\nSMS_VERIFICATION_SUBMIT_SUCCESS|Số Điện Thoại Di Động của bạn đã được xác thực thành công.\r\nSMS_VERIFICATION_SUBMIT_FAILED| Mã vừa được nhập không chính xác. Vui lòng thử lại. (Mã:111)\r\nINTERNAL_ERROR|Lỗi hệ thống (Mã: 801) "
+verification_code_required_message_field: 'Mục này là bắt buộc.'
