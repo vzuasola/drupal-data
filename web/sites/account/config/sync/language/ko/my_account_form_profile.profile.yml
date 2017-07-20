@@ -45,5 +45,5 @@ modal_verify_body_text_field: '인증 번호가 문자로 발송되었습니다.
 modal_verification_code_placeholder_field: 코드
 modal_verification_resend_code_text_field: '코드 재발송'
 modal_verification_submit_text_field: 제출하기
-verification_code_response_field: "SMS_VERIFICATION_SUCCESS|인증 번호가 문자로 발송되었습니다.\r\nSMS_VERIFICATION_FAILED|죄송합니다, 휴대폰 번호 인증에 오류가 발생했습니다. 다시 시도해주시거나<a href=\"{livechat.link}\" class=\"live-chat-popup\"> 라이브 채팅</a> 또는 <a href=\"mailto:krsupport@dafabet.com\"> 이메일</a>로 연락주시길 바랍니다. (코드:110)\r\nSMS_VERIFICATION_SUBMIT_SUCCESS|휴대폰 번호가 성공적으로 인증되었습니다.\r\nSMS_VERIFICATION_SUBMIT_FAILED| 유효하지 않은 인증 번호를 입력하셨습니다. 다시 시도해주십시오.(코드:111)\r\nINTERNAL_ERROR|내부 오류 (코드: 801)"
+verification_code_response_field: "SMS_VERIFICATION_SUCCESS|인증 번호가 문자로 발송되었습니다.\r\nSMS_VERIFICATION_FAILED|죄송합니다, 휴대폰 번호 인증에 오류가 발생했습니다. 다시 시도해주시거나<a href=\"{livechat.link}\" class=\"live-chat-popup-trigger\"> 라이브 채팅</a> 또는 <a href=\"mailto:krsupport@dafabet.com\"> 이메일</a>로 연락주시길 바랍니다. (코드:110)\r\nSMS_VERIFICATION_SUBMIT_SUCCESS|휴대폰 번호가 성공적으로 인증되었습니다.\r\nSMS_VERIFICATION_SUBMIT_FAILED| 유효하지 않은 인증 번호를 입력하셨습니다. 다시 시도해주십시오.(코드:111)\r\nINTERNAL_ERROR|내부 오류 (코드: 801)"
 verification_code_required_message_field: '본 항목은 필수 항목입니다.'

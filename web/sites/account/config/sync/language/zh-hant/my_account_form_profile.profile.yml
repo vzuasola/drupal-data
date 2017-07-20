@@ -45,5 +45,5 @@ modal_verify_body_text_field: 驗證碼已通過短信發送給您。請在下�
 modal_verification_code_placeholder_field: '驗證碼 '
 modal_verification_resend_code_text_field: 重新發送
 modal_verification_submit_text_field: 提交
-verification_code_response_field: "SMS_VERIFICATION_SUCCESS|驗證碼已發送至您的手機號碼。\r\nSMS_VERIFICATION_FAILED|抱歉，驗證手機號碼出現錯誤。請重試或通過<a href=\"{livechat.link}\" class=\"live-chat-popup\"> 在線聊天</a>或<a href=\"mailto:cnsupport@dafabet.com\">郵箱</a>聯系我們。(代碼: 110)\r\nSMS_VERIFICATION_SUBMIT_SUCCESS|您的手機號碼已驗證成功。\r\nSMS_VERIFICATION_SUBMIT_FAILED| 您輸入的驗證碼無效。請重試。 (代碼:111)\r\nINTERNAL_ERROR|內部錯誤 (代碼: 801)"
+verification_code_response_field: "SMS_VERIFICATION_SUCCESS|驗證碼已發送至您的手機號碼。\r\nSMS_VERIFICATION_FAILED|抱歉，驗證手機號碼出現錯誤。請重試或通過<a href=\"{livechat.link}\" class=\"live-chat-popup-trigger\"> 在線聊天</a>或<a href=\"mailto:cnsupport@dafabet.com\">郵箱</a>聯系我們。(代碼: 110)\r\nSMS_VERIFICATION_SUBMIT_SUCCESS|您的手機號碼已驗證成功。\r\nSMS_VERIFICATION_SUBMIT_FAILED| 您輸入的驗證碼無效。請重試。 (代碼:111)\r\nINTERNAL_ERROR|內部錯誤 (代碼: 801)"
 verification_code_required_message_field: 此項必填。

@@ -45,7 +45,7 @@ modal_verify_body_text_field: 验证码已通过短信发送给您。请在下�
 modal_verification_code_placeholder_field: '验证码 '
 modal_verification_resend_code_text_field: 重新发送
 modal_verification_submit_text_field: 提交
-verification_code_response_field: "SMS_VERIFICATION_SUCCESS|验证码已发送至您的手机号码。\r\nSMS_VERIFICATION_FAILED|抱歉，验证手机号码出现错误。请重试或通过<a href=\"{livechat.link}\" class=\"live-chat-popup\"> 在线聊天</a>或<a href=\"mailto:cnsupport@dafabet.com\">邮箱</a>联系我们。(代码:110)\r\nSMS_VERIFICATION_SUBMIT_SUCCESS|您的手机号码已验证成功。\r\nSMS_VERIFICATION_SUBMIT_FAILED| 您输入的验证码无效。请重试。 (代码:111)\r\nINTERNAL_ERROR|内部错误 (代码: 801)"
+verification_code_response_field: "SMS_VERIFICATION_SUCCESS|验证码已发送至您的手机号码。\r\nSMS_VERIFICATION_FAILED|抱歉，验证手机号码出现错误。请重试或通过<a href=\"{livechat.link}\" class=\"live-chat-popup-trigger\"> 在线聊天</a>或<a href=\"mailto:cnsupport@dafabet.com\">邮箱</a>联系我们。(代码:110)\r\nSMS_VERIFICATION_SUBMIT_SUCCESS|您的手机号码已验证成功。\r\nSMS_VERIFICATION_SUBMIT_FAILED| 您输入的验证码无效。请重试。 (代码:111)\r\nINTERNAL_ERROR|内部错误 (代码: 801)"
 verification_code_required_message_field: 此项必填。
 verification_code_min_length_message_field: ''
 verification_code_max_length_message_field: ''
