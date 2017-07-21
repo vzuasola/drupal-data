@@ -22,3 +22,17 @@ account_field:
 language_field:
   options:
     label: Język
+currency_field:
+  options:
+    label: Waluta
+mobile_number_field:
+  options:
+    label: 'Numer Telefonu'
+verify_text_field: Weryfikuj
+modal_verify_header_text_field: 'Zweryfikuj numer telefonu'
+modal_verify_body_text_field: "SMS z kodem weryfikacyjny został do Ciebie wysłany. Aby dokończyć weryfikację numeru telefonu należy wprowadzić 6-ścio cyfrowy kod poniżej.\r\n"
+modal_verification_code_placeholder_field: Kod
+modal_verification_resend_code_text_field: 'Prześlij kod ponownie'
+modal_verification_submit_text_field: WYŚLIJ
+verification_code_response_field: "SMS_VERIFICATION_SUCCESS|Kod weryfikacyjny został wysłany na Twój numer komórkowy.\r\nSMS_VERIFICATION_FAILED|Przepraszamy, wystąpił błąd podczas weryfikacji Twojego numeru. Prosimy spróbować ponownie lub skontaktować się z nami popez<a href=\"mailto:plsupport@dafabet.com\"> Email </a> (Kod:110)\r\nSMS_VERIFICATION_SUBMIT_SUCCESS|Twój numer komórkowy został pomyślnie zweryfikowany.\r\nSMS_VERIFICATION_SUBMIT_FAILED| Wpisany kod jest nieprawidłowy. Prosimy spróbować ponownie. (Kod:111)\r\nINTERNAL_ERROR|Błąd wewnętrzny (Kod: 801)"
+verification_code_required_message_field: 'Pole musi być wypełnione.'

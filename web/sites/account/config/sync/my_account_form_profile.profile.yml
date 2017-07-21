@@ -4,7 +4,7 @@ username_field:
     label: Username
     attr:
       placeholder: 'Username Placeholder'
-    required: '1'
+    required: 1
     wrapper_class: username
 currency_field:
   weight: '1'
@@ -12,7 +12,7 @@ currency_field:
     label: Currency
     attr:
       placeholder: Currency
-    required: '1'
+    required: 1
     error: 'Error Currency Field Error message'
     wrapper_class: currency_wrapper
 first_name_field:
@@ -21,7 +21,7 @@ first_name_field:
     label: 'First name'
     attr:
       placeholder: 'Enter First Name'
-    required: '1'
+    required: 1
     error: 'Error message for first name field'
     wrapper_class: first_name
 last_name_field:
@@ -30,14 +30,14 @@ last_name_field:
     label: 'Last name'
     attr:
       placeholder: 'Enter Last Name'
-    required: '1'
+    required: 1
     error: 'Last name field error message'
     wrapper_class: lastname
 dob_field:
   weight: '4'''
   options:
     label: 'Date of Birth'
-    required: '1'
+    required: 1
     error: 'Error message for dob'
     wrapper_class: dob
 dob_month:
@@ -58,7 +58,7 @@ country_field:
     label: Country
     attr:
       placeholder: Country
-    required: '1'
+    required: 1
     error: 'Error message for country'
     wrapper_class: country
 email_field:
@@ -67,7 +67,7 @@ email_field:
     label: 'Email Address'
     attr:
       placeholder: '#######@gmail.com'
-    required: '1'
+    required: 1
     error: 'Error message for Email'
     wrapper_class: email
 communication_detail_field:
@@ -79,10 +79,10 @@ account_field:
 mobile_number_field:
   weight: '10'
   options:
-    label: 'Contact Number'
+    label: 'Mobile Number'
     attr:
       placeholder: '09217715594'
-    required: '1'
+    required: 1
     error: 'Error message for Mobile'
     wrapper_class: mobile_number
 language_field:
@@ -92,8 +92,19 @@ language_field:
     attr:
       placeholder: 'Enter Language'
     help_text: 'Help text for Language'
-    required: '1'
+    required: 1
     error: 'Error field for Language'
     wrapper_class: language
 _core:
   default_config_hash: 7yTXCtTTnT75cn_sdn6Wrq5U1w2jZmt-IkXPdbx7A8U
+enable_sms_verification_field: 1
+verify_text_field: Verify
+modal_verify_header_text_field: 'Verify Mobile Number'
+modal_verify_body_text_field: 'A verification code has been sent to you via SMS. To complete your phone number verification, please enter the 6-digit code below. '
+modal_verification_code_placeholder_field: Code
+modal_verification_resend_code_text_field: 'Resend code'
+modal_verification_submit_text_field: SUBMIT
+verification_code_response_field: "SMS_VERIFICATION_SUCCESS|A verification code has been sent to your mobile number.\r\nSMS_VERIFICATION_FAILED|Sorry, there was an error verifying your mobile number. Please try again or you may contact us at the following: <a href=\"{livechat.link}\" class=\"live-chat-popup-trigger\"> Live Chat </a> or <a href=\"mailto:ensupport@dafabet.com\"> Email </a> (Code:110)\r\nSMS_VERIFICATION_SUBMIT_SUCCESS|Your mobile number has been successfully verified.\r\nSMS_VERIFICATION_SUBMIT_FAILED| You have entered an invalid verification code. Please try again. (Code:111)\r\nINTERNAL_ERROR|Internal Error (Code: 801)"
+verification_code_required_message_field: 'This is a required field.'
+verification_code_min_length_message_field: 'Min 6'
+verification_code_max_length_message_field: 'Max 6'
