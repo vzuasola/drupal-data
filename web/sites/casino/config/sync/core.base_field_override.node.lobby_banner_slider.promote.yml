@@ -1,0 +1,24 @@
+uuid: 2afb74be-3933-4dce-b292-1c9ee08a62a9
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - node.type.lobby_banner_slider
+_core:
+  default_config_hash: D4p0EFPjY83SwZbw_WnZ7AC4EqVWOCPQyAAthoI5xog
+id: node.lobby_banner_slider.promote
+field_name: promote
+entity_type: node
+bundle: lobby_banner_slider
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

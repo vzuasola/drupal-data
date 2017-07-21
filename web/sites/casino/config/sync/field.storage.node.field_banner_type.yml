@@ -1,0 +1,27 @@
+uuid: b43b89ee-79c7-448f-b17e-5870b3955d2d
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_banner_type
+field_name: field_banner_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: home
+      label: Homepage
+    -
+      value: jackpot
+      label: Jackpot
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
