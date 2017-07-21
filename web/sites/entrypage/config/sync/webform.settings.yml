@@ -69,6 +69,7 @@ element:
   default_empty_option_optional: ''
   excluded_elements:
     captcha: captcha
+    checkbox: checkbox
     color: color
     container: container
     date: date
