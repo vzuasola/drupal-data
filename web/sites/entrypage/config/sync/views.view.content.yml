@@ -491,8 +491,7 @@ display:
           group_type: group
           admin_label: ''
           operator: in
-          value:
-            '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
+          value: {  }
           group: 1
           exposed: true
           expose:
