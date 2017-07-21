@@ -10,5 +10,5 @@ third_party_settings:
 id: eu
 label: 'English (Europe)'
 direction: ltr
-weight: -7
+weight: -9
 locked: false
