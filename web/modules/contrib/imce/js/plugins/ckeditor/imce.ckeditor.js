@@ -90,7 +90,6 @@
             continue;
           }
           File = selection[i];
-          console.log(File);
         var inlineSrcPath = File.getUrl().replace('/sites/entrypage/files/', '/'); 
           // Image
           if (is_img && File.width) {
