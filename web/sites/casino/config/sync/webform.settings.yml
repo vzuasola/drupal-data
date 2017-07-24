@@ -21,9 +21,11 @@ settings:
   default_preview_label: Preview
   default_preview_title: '[webform:title]: Preview'
   default_preview_message: 'Please review your submission. Your submission is not complete until you press the &quot;Submit&quot; button!'
+  preview_classes: ''
   default_draft_button_label: 'Save Draft'
   default_draft_saved_message: 'Submission saved. You may return to this form later and it will restore the current values.'
   default_draft_loaded_message: 'A partially-completed form was found. Please complete the remaining portions.'
+  default_submission_label: Submit
   default_submission_log: false
   default_confirmation_message: 'New submission added to [webform:title].'
   default_confirmation_back_label: 'Back to form'
@@ -46,12 +48,8 @@ export:
   header_prefix: true
   header_prefix_label_delimiter: ': '
   header_prefix_key_delimiter: __
-  composite_element_item_format: label
   options_format: compact
   options_item_format: label
-  entity_reference_format: link
-  likert_answers_format: label
-  signature_format: status
   excluded_exporters: {  }
 batch:
   default_batch_export_size: 500
@@ -66,10 +64,82 @@ element:
   default_description_display: ''
   default_icheck: ''
   default_google_maps_api_key: ''
+  default_empty_option: false
+  default_empty_option_required: ''
+  default_empty_option_optional: ''
   excluded_elements:
+    captcha: captcha
+    color: color
+    container: container
+    date: date
+    datelist: datelist
+    datetime: datetime
+    details: details
+    email: email
+    entity_autocomplete: entity_autocomplete
+    hidden: hidden
+    item: item
+    label: label
+    language_select: language_select
+    machine_name: machine_name
+    managed_file: managed_file
+    number: number
+    password: password
+    password_confirm: password_confirm
+    range: range
+    search: search
+    table: table
+    tableselect: tableselect
+    tel: tel
+    text_format: text_format
+    url: url
+    value: value
     webform_address: webform_address
+    webform_audio_file: webform_audio_file
+    webform_autocomplete: webform_autocomplete
+    webform_buttons: webform_buttons
+    webform_buttons_other: webform_buttons_other
+    webform_checkboxes_other: webform_checkboxes_other
+    webform_codemirror: webform_codemirror
+    webform_computed_token: webform_computed_token
+    webform_computed_twig: webform_computed_twig
+    webform_contact: webform_contact
+    webform_creditcard: webform_creditcard
+    webform_creditcard_number: webform_creditcard_number
+    webform_document_file: webform_document_file
+    webform_element: webform_element
+    webform_email_confirm: webform_email_confirm
+    webform_email_multiple: webform_email_multiple
+    webform_entity_checkboxes: webform_entity_checkboxes
+    webform_entity_radios: webform_entity_radios
+    webform_entity_select: webform_entity_select
+    webform_flexbox: webform_flexbox
+    webform_image_file: webform_image_file
+    webform_image_select: webform_image_select
+    webform_likert: webform_likert
+    webform_link: webform_link
+    webform_location: webform_location
+    webform_mapping: webform_mapping
+    webform_markup: webform_markup
+    webform_message: webform_message
+    webform_name: webform_name
+    webform_radios_other: webform_radios_other
+    webform_rating: webform_rating
+    webform_select_other: webform_select_other
+    webform_signature: webform_signature
+    webform_table_sort: webform_table_sort
+    webform_tableselect_sort: webform_tableselect_sort
+    webform_telephone: webform_telephone
+    webform_term_checkboxes: webform_term_checkboxes
+    webform_term_select: webform_term_select
+    webform_time: webform_time
+    webform_toggle: webform_toggle
+    webform_toggles: webform_toggles
+    webform_video_file: webform_video_file
+    webform_wizard_page: webform_wizard_page
 file:
   file_public: false
+  file_private_redirect: false
   default_max_filesize: ''
   default_managed_file_extensions: 'gif jpg png bmp eps tif pict psd txt rtf html odf pdf doc docx ppt pptx xls xlsx xml avi mov mp3 ogg wav bz2 dmg gz jar rar sit svg tar zip'
   default_audio_file_extensions: 'mp3 ogg wav'
@@ -79,6 +149,7 @@ file:
 format: {  }
 mail:
   roles: {  }
+  default_to_mail: '[site:mail]'
   default_from_mail: '[site:mail]'
   default_from_name: '[site:name]'
   default_reply_to: ''

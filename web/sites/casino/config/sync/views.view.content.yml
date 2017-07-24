@@ -581,15 +581,14 @@ display:
         type: 'default tab'
         title: Content
         description: ''
-        expanded: false
-        parent: ''
-        weight: -10
-        context: '0'
         menu_name: admin
+        weight: -10
+        context: ''
       tab_options:
         type: normal
         title: Content
         description: 'Find and manage content'
+        menu_name: admin
         weight: -10
       display_extenders: {  }
     display_plugin: page
