@@ -1,0 +1,9 @@
+lobby_page_title: 'Zakłady Online - Stawiaj na Sport, Graj w Kasynie i w Pokera Online w Dafabet'
+join_now_text: 'DOŁĄCZ TERAZ'
+login_issue_text: 'Problem z logowaniem?'
+balance_error_text: 'Błąd pobierania. '
+profile_icon_hover_text: 'Mój profil'
+product_menu_new_tag: Nowy
+welcome_text: '{username}'
+profile_link: 'https://stg-cashier.elysium-dfbt.com/pl?ticket={auth.token}&product=dafabet{tracking.token}'
+profile_logout_text: Wyloguj

@@ -70,6 +70,9 @@ settings:
     -
       value: qq
       label: QQ
+    -
+      value: dafabet-connect
+      label: 'Dafabet Connect'
   allowed_values_function: ''
 module: options
 locked: false

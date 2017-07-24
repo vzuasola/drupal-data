@@ -1,0 +1,7 @@
+profile_link: 'https://stg-cashier.elysium-dfbt.com/eu/?ticket={auth.token}&product=dafabet{tracking.token}'
+critical_announcement_content:
+  value: ''
+  format: basic_html
+news_announcement_content:
+  value: ''
+  format: basic_html

@@ -11,16 +11,16 @@ dependencies:
 third_party_settings:
   content_translation:
     translation_sync:
-      alt: alt
-      title: title
-      file: '0'
+      file: file
+      alt: '0'
+      title: '0'
 _core:
   default_config_hash: JF_zJAz6Rx2myG7-SLL8d5e6GdpODxJpt1ogcGJWGAc
 id: node.promotion.field_thumbnail_image
 field_name: field_thumbnail_image
 entity_type: node
 bundle: promotion
-label: 'Promotion Thumbnail  ( right-side block )'
+label: 'Thumbnail Image'
 description: 'The Image upload size is 225x225 px.'
 required: false
 translatable: true

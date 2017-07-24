@@ -1,0 +1,22 @@
+uuid: 3da71115-2816-4bb1-b273-1dc634d9e338
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_mobile_main_content
+    - node.type.mobile
+  module:
+    - text
+id: node.mobile.field_mobile_main_content
+field_name: field_mobile_main_content
+entity_type: node
+bundle: mobile
+label: 'Mobile Main Content'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

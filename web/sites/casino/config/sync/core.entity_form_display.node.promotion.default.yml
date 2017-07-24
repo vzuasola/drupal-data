@@ -25,8 +25,6 @@ dependencies:
     - field.field.node.promotion.field_right_side_block_link
     - field.field.node.promotion.field_right_side_block_option
     - field.field.node.promotion.field_right_side_block_title
-    - field.field.node.promotion.field_right_side_content
-    - field.field.node.promotion.field_show_inner_page_right_side
     - field.field.node.promotion.field_summary_image
     - field.field.node.promotion.field_text_color
     - field.field.node.promotion.field_thumbnail_image
@@ -39,7 +37,6 @@ dependencies:
     - field_group
     - image
     - link
-    - paragraphs
     - path
     - scheduler
     - text
@@ -60,21 +57,6 @@ third_party_settings:
         open: false
         required_fields: true
       label: 'Promotions Banner'
-    group_promotions_thumbnail:
-      children:
-        - field_right_side_block_link
-        - field_link_target
-        - field_thumbnail_image
-        - field_thumbnail_summary
-      parent_name: ''
-      weight: 18
-      format_type: details
-      format_settings:
-        id: ''
-        classes: ''
-        open: false
-        required_fields: true
-      label: 'Promotions Thumbnail'
     group_right_side_block:
       children:
         - field_right_side_block_option
@@ -84,10 +66,11 @@ third_party_settings:
       weight: 19
       format_type: details
       format_settings:
+        label: 'Right Side Block'
+        open: true
+        required_fields: true
         id: ''
         classes: ''
-        open: false
-        required_fields: true
       label: 'Right Side Block'
     group_ribbon_configuration:
       children:
@@ -114,25 +97,38 @@ third_party_settings:
       weight: 20
       format_type: details
       format_settings:
+        label: 'Promotion Thumbnail ( summary page )'
+        open: true
+        required_fields: true
         id: ''
         classes: ''
-        open: false
-        required_fields: true
-      label: 'Promotion Summary'
+      label: 'Promotion Thumbnail ( summary page )'
     group_inner_page_right_side_bloc:
-      children:
-        - field_show_inner_page_right_side
-        - field_right_side_content
+      children: {  }
       parent_name: ''
       weight: 22
       format_type: details
       format_settings:
-        label: 'Inner Page Right Side Block'
-        required_fields: true
         id: ''
         classes: ''
         open: false
-      label: 'Inner Page Right Side Block'
+        required_fields: true
+      label: 'INNER PAGE RIGHT-SIDE BLOCK'
+    group_promotion_thumbnail_right_:
+      children:
+        - field_right_side_block_link
+        - field_link_target
+        - field_thumbnail_image
+        - field_thumbnail_summary
+      parent_name: ''
+      weight: 18
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: 'PROMOTION THUMBNAIL (RIGHT-SIDE BLOCK)'
 _core:
   default_config_hash: REpuDcJgDsDpuU0keFA4HDluTQxvT7wSEcUqidMSEcM
 id: node.promotion.default
@@ -302,7 +298,7 @@ content:
     region: content
   field_right_side_content:
     type: entity_reference_paragraphs
-    weight: 72
+    weight: 24
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -313,7 +309,7 @@ content:
     third_party_settings: {  }
     region: content
   field_show_inner_page_right_side:
-    weight: 71
+    weight: 23
     settings:
       display_label: true
     third_party_settings: {  }
