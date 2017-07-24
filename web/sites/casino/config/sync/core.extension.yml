@@ -26,7 +26,6 @@ module:
   entity_reference_revisions: 0
   entity_reference_views_select: 0
   entityqueue: 0
-  entrypage_promotions: 0
   field: 0
   field_group: 0
   field_ui: 0
