@@ -15,7 +15,6 @@ def main():
     data = {'date': str(datetime.date.today())}
     with open(filename, 'a') as data_out:
         data_out.write(json.dumps(data))
-    logger.debug('add %s to %s', data, filename)
     logger.info('stage complete')
 
 

@@ -147,10 +147,6 @@ def create_image(image_name=None, docker_file=None):
     while docker_build.poll() is None:
         out = docker_build.stdout.read()
         err = docker_build.stderr.read()
-        if out:
-            logger.debug(out)
-        if err:
-            logger.error(err)
     if docker_build.returncode != 0:
         msg = 'Failed to build required docker image: {0}'.format(" ".join(cmd))
         raise PipelineError(msg)
@@ -227,7 +223,6 @@ def run_command(cmd, output_file):
                 msg = buff.strip()
                 if output_file:
                     output_file.write(msg)
-                    logger.debug(msg)
                 else:
                     logger.info(msg)
                 buff = ""

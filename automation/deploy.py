@@ -174,12 +174,10 @@ def execute_deployment(config, image_name, version):
         value = config['extra-vars'][key]
         if value.startswith('$'):
             value = os.environ[value.replace('$', '')]
-        logger.debug('add --extra-vars: {0} -> {1}'.format(key, value))
         cmd.append('--extra-vars')
         cmd.append('{0}: {1}'.format(key, value))
 
     # this line kicks off the deployment
-    logger.debug(" ".join(cmd))
     deployment = subprocess.Popen(cmd)
     # let's wait for the deployment to complete
     deployment.wait()
@@ -241,7 +239,6 @@ def deploy(config_file, environment, version):
         PipelineError: something when wrong during this deployment, please
             file a bug
     """
-    logger.debug('creating config')
     try:
         config = read_configuration(config_file=config_file, environment='deploy')
         config = config[environment]
