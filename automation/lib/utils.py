@@ -207,11 +207,9 @@ def create_archive(package_config):
     """
     # execute the pre archive steps
     _pre_archive(package_config)
-    logger.debug('pre archive complete')
 
     archive_name = _archive_name()
     base_dir = base_directory()
-    logger.debug('archive name: %s, base dir %s', archive_name, base_dir)
 
     if os.path.exists(archive_name):
         os.remove(archive_name)
@@ -238,7 +236,6 @@ def _drupal7_pre_archive():
     vendor_dest = os.path.join(PROJECT_DIR, 'base', 'sites', 'all', 'vendor')
     for directory in (site_dest, vendor_dest):
         if os.path.exists(directory):
-            logger.debug('directoy %s exists', directory)
             try:
                 shutil.rmtree(directory)
                 # at this point, there's no base/sites/all/default
@@ -254,7 +251,6 @@ def _drupal7_pre_archive():
 
     shutil.copytree(os.path.join(PROJECT_DIR, 'site'), site_dest)
     shutil.copytree(os.path.join(PROJECT_DIR, 'vendor'), vendor_dest)
-    logger.debug('drupal7 pre package, complete')
 
 
 def _drupal8_pre_archive(package_config):
