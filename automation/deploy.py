@@ -288,4 +288,3 @@ if __name__ == '__main__':
         logger.error(error)
         docker.cleanup_volumes('/app')
         sys.exit(1)
-        
