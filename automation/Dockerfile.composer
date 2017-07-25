@@ -1,0 +1,8 @@
+FROM composer/composer:alpine
+RUN composer global require "hirak/prestissimo:^0.3"
+RUN mkdir -p /composer/cache
+RUN chmod -R 777 /composer
+RUN apk update
+RUN apk add openssh
+RUN mkdir -p /root/.ssh
+ENTRYPOINT composer install --profile --no-interaction --ignore-platform-reqs
