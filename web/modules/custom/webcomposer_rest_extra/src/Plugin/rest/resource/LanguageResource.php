@@ -12,6 +12,7 @@ use Drupal\rest\Plugin\ResourceBase;
 use Drupal\rest\ResourceResponse;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\Core\Language\LanguageManagerInterface;
+use Drupal\Core\Language\LanguageInterface;
 use Psr\Log\LoggerInterface;
 
 /**
@@ -110,31 +111,32 @@ class LanguageResource extends ResourceBase {
     $data = array();
 
     try {
-      $lang_obj = $this->languageManager->getLanguages();
+      $lang_obj = $this->languageManager->getLanguages(LanguageInterface::STATE_CONFIGURABLE);
 
       // get the language negotiation URL prefixes
       $config = $this->config->get('language.negotiation');
       $prefixes = $config->get('url.prefixes');
 
-      $configManager = \Drupal::entityTypeManager()->getStorage('configurable_language');
-      $default_lang_key = $this->languageManager->getDefaultLanguage()->getId();
-
       if ($lang_obj) {
         foreach ($lang_obj as $lang_array) {
           $key = $lang_array->getId();
-          $languageConfigEntity= $configManager->load($key);
-          $customLabel = $languageConfigEntity->getThirdPartySetting('webcomposer_language_hierarchy', 'webcomposer_language_custom_label');
+          $customLabel = $this->getCustomLabel($key);
 
           $data[$key] = [
             'name' => $customLabel ?? $lang_array->getName(),
             'id' => $key,
-            'prefix' => $prefixes[$key],
+            'prefix' => $prefixes[$key]
           ];
-
-          if ($key == $default_lang_key) {
-            $data['default'] = $data[$key];
-          }
         }
+
+        $default_lang_key = $this->languageManager->getDefaultLanguage()->getId();
+        $customLabel = $this->getCustomLabel($default_lang_key);
+
+        $data['default'] = [
+          'id' => $default_lang_key,
+          'name' => $customLabel ?? $this->languageManager->getDefaultLanguage()->getName(),
+          'prefix' => $prefixes[$default_lang_key]
+        ];
       }
     }
     catch (\Exception $e) {
@@ -152,5 +154,19 @@ class LanguageResource extends ResourceBase {
     );
 
     return (new ResourceResponse($data))->addCacheableDependency($build);
+  }
+
+  /**
+   * Gets the language custom label from Third Party Setting
+   *
+   * @param string @langKey
+   * @return mixed
+   */
+  private function getCustomLabel($langKey) {
+    $configManager = \Drupal::entityTypeManager()->getStorage('configurable_language');
+    $languageConfigEntity= $configManager->load($langKey);
+    $customLabel = $languageConfigEntity->getThirdPartySetting('webcomposer_language_hierarchy', 'webcomposer_language_custom_label');
+
+    return $customLabel;
   }
 }
