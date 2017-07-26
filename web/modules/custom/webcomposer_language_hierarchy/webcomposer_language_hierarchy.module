@@ -64,6 +64,15 @@ function webcomposer_language_hierarchy_form_language_admin_edit_form_alter(&$fo
       $options[$language->getId()] = $language->getName();
     }
   }
+
+  // custom label
+  $form['webcomposer_language_custom_label'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Frontend Language Selector Label'),
+    '#description' => t('Note: Set the label that will override the language name and be displayed on the frontend language selector.'),
+    '#default_value' => $this_language->getThirdPartySetting('webcomposer_language_hierarchy', 'webcomposer_language_custom_label'),
+  );
+
   $options['site_default_language'] = t('Site Default Language(' . $default_language->getName(). ')');
   $form['webcomposer_language_hierarchy_fallback_langcode'] = array(
     '#type' => 'select',
@@ -74,6 +83,7 @@ function webcomposer_language_hierarchy_form_language_admin_edit_form_alter(&$fo
     // Allow to not fall back on any other language.
     '#empty_option' => t('-None-'),
   );
+
   $form['#entity_builders'][] = 'webcomposer_language_hierarchy_form_language_admin_edit_form_builder';
 }
 
@@ -88,4 +98,16 @@ function webcomposer_language_hierarchy_form_language_admin_edit_form_builder($e
     'webcomposer_fallback_langcode',
     $form_state->getValue('webcomposer_language_hierarchy_fallback_langcode')
   );
+  if ($form_state->getValue('webcomposer_language_custom_label')) {
+    $this_language->setThirdPartySetting(
+        'webcomposer_language_hierarchy',
+        'webcomposer_language_custom_label', 
+        $form_state->getValue('webcomposer_language_custom_label')
+    );
+  } else {
+    $this_language->unsetThirdPartySetting(
+      'webcomposer_language_hierarchy',
+      'webcomposer_language_custom_label'
+    );
+  }
 }
