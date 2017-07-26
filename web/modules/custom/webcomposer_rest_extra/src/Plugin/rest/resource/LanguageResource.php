@@ -12,7 +12,6 @@ use Drupal\rest\Plugin\ResourceBase;
 use Drupal\rest\ResourceResponse;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\Core\Language\LanguageManagerInterface;
-use Drupal\Core\Language\LanguageInterface;
 use Psr\Log\LoggerInterface;
 
 /**
@@ -111,7 +110,7 @@ class LanguageResource extends ResourceBase {
     $data = array();
 
     try {
-      $lang_obj = $this->languageManager->getLanguages(LanguageInterface::STATE_CONFIGURABLE);
+      $lang_obj = $this->languageManager->getLanguages();
 
       // get the language negotiation URL prefixes
       $config = $this->config->get('language.negotiation');
