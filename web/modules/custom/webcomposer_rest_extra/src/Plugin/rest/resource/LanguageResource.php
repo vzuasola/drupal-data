@@ -116,23 +116,25 @@ class LanguageResource extends ResourceBase {
       $config = $this->config->get('language.negotiation');
       $prefixes = $config->get('url.prefixes');
 
+      $configManager = \Drupal::entityTypeManager()->getStorage('configurable_language');
+      $default_lang_key = $this->languageManager->getDefaultLanguage()->getId();
+
       if ($lang_obj) {
         foreach ($lang_obj as $lang_array) {
           $key = $lang_array->getId();
+          $languageConfigEntity= $configManager->load($key);
+          $customLabel = $languageConfigEntity->getThirdPartySetting('webcomposer_language_hierarchy', 'webcomposer_language_custom_label');
+
           $data[$key] = [
-            'name' => $lang_array->getName(),
+            'name' => $customLabel ?? $lang_array->getName(),
             'id' => $key,
             'prefix' => $prefixes[$key],
           ];
+
+          if ($key == $default_lang_key) {
+            $data['default'] = $data[$key];
+          }
         }
-
-        $default_lang_key = $this->languageManager->getDefaultLanguage()->getId();
-
-        $data['default'] = [
-          'id' => $default_lang_key,
-          'name' => $this->languageManager->getDefaultLanguage()->getName(),
-          'prefix' => $prefixes[$default_lang_key]
-        ];
       }
     }
     catch (\Exception $e) {
