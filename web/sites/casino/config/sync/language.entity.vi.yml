@@ -7,8 +7,9 @@ dependencies:
 third_party_settings:
   webcomposer_language_hierarchy:
     webcomposer_fallback_langcode: en
+    webcomposer_language_custom_label: 'Tiếng Việt'
 id: vi
-label: 'Tiếng Việt'
+label: Vietnamese
 direction: ltr
-weight: -5
+weight: -4
 locked: false
