@@ -158,7 +158,7 @@ class LanguageResource extends ResourceBase {
   /**
    * Gets the language custom label from Third Party Setting
    *
-   * @param string @langKey
+   * @param string $langKey
    * @return mixed
    */
   private function getCustomLabel($langKey) {
