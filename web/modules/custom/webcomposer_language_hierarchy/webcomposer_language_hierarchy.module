@@ -68,8 +68,8 @@ function webcomposer_language_hierarchy_form_language_admin_edit_form_alter(&$fo
   // custom label
   $form['webcomposer_language_custom_label'] = array(
     '#type' => 'textfield',
-    '#title' => t('Custom Language Label'),
-    '#description' => t('Note: Set custom label that will override the langauge name and be displayed on the frontend language selector.'),
+    '#title' => t('Frontend Language Selector Label'),
+    '#description' => t('Note: Set the label that will override the language name and be displayed on the frontend language selector.'),
     '#default_value' => $this_language->getThirdPartySetting('webcomposer_language_hierarchy', 'webcomposer_language_custom_label'),
   );
 
