@@ -98,9 +98,16 @@ function webcomposer_language_hierarchy_form_language_admin_edit_form_builder($e
     'webcomposer_fallback_langcode',
     $form_state->getValue('webcomposer_language_hierarchy_fallback_langcode')
   );
-  $this_language->setThirdPartySetting(
+  if ($form_state->getValue('webcomposer_language_custom_label')) {
+    $this_language->setThirdPartySetting(
+        'webcomposer_language_hierarchy',
+        'webcomposer_language_custom_label', 
+        $form_state->getValue('webcomposer_language_custom_label')
+    );
+  } else {
+    $this_language->unsetThirdPartySetting(
       'webcomposer_language_hierarchy',
-      'webcomposer_language_custom_label', 
-      $form_state->getValue('webcomposer_language_custom_label')
-  );
+      'webcomposer_language_custom_label'
+    );
+  }
 }
