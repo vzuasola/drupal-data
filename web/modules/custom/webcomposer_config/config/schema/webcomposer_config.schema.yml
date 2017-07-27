@@ -17,6 +17,9 @@ webcomposer_config.header_configuration:
     balance_error_text:
       type: label
       label: 'Balance Error Message'
+    balance_label_mapping:
+      type: text
+      label: 'Balances label mapping'
     lobby_page_title:
       type: label
       label: 'Lobby Page Title'
