@@ -55,10 +55,15 @@ settings:
             - ShowBlocks
             - Source
   plugins:
-    stylescombo:
-      styles: ''
+    autogrow:
+      enable: 1
+      min_height: '600'
+      max_height: '1200'
+      bottom_space: '50'
     language:
       language_list: un
+    stylescombo:
+      styles: ''
     codemirror:
       enable: false
       mode: htmlmixed
