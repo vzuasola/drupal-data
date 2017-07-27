@@ -92,6 +92,24 @@ class MyAccountFormResource extends ResourceBase
                 $config = \Drupal::config('my_account_core.header');
                 $values = $config->get();
                 break;
+
+            case 'my_account_profile_country_mapping':
+                // Get only country mapping section values.
+                $config = \Drupal::config('my_account_form_profile.profile');
+                $values = $this->filter_array_exposed($config->get(), 'country_mapping');
+                break;
+
+            case 'my_account_profile_country_code_mapping':
+                // Get only country mapping section values.
+                $config = \Drupal::config('my_account_form_profile.profile');
+                $values = $this->filter_array_exposed($config->get(), 'country_code_mapping');
+                break;
+
+            case 'my_account_profile_btn_config':
+                // Get only btn config section values.
+                $config = \Drupal::config('my_account_form_profile.profile');
+                $values = $this->filter_array_exposed($config->get(), 'btn_config');
+                break;
             default:
         }
 
@@ -146,11 +164,13 @@ class MyAccountFormResource extends ResourceBase
             // Get only header values for profile.
             $value['account_detail'] = $values['account_field']['options']['label'];
             $value['communication'] = $values['communication_detail_field']['options']['label'];
+            $value['home_address'] = $values['home_address_field']['options']['label'];
         } elseif ($key == 'profile') {
 
             // Get only Profile field.
             unset($values['account_field']);
             unset($values['communication_detail_field']);
+            unset($values['home_address_field']);
             unset($values['enable_sms_verification_field']);
             unset($values['verify_text_field']);
             unset($values['modal_verify_header_text_field']);
@@ -162,6 +182,10 @@ class MyAccountFormResource extends ResourceBase
             unset($values['verification_code_required_message_field']);
             unset($values['verification_code_min_length_message_field']);
             unset($values['verification_code_max_length_message_field']);
+            unset($values['country_mapping_field']);
+            unset($values['country_code_mapping_field']);
+            unset($values['save_changes_field']);
+            unset($values['cancel_field']);
 
             $value = $values;
         } elseif ($key == 'sms_verification') {
@@ -176,6 +200,13 @@ class MyAccountFormResource extends ResourceBase
             $value['verification_code_required_message'] = $values['verification_code_required_message_field'];
             $value['verification_code_min_length_message'] = $values['verification_code_min_length_message_field'];
             $value['verification_code_max_length_message'] = $values['verification_code_max_length_message_field'];
+        } elseif ($key == 'country_mapping') {
+            $value['country_mapping'] = $values['country_mapping_field'];
+        } elseif ($key == 'country_code_mapping') {
+            $value['country_code_mapping'] = $values['country_code_mapping_field'];
+        } elseif ($key == 'btn_config') {
+            $value['save_changes'] = $values['save_changes_field'];
+            $value['cancel'] = $values['cancel_field'];
         }
         return $value;
     }

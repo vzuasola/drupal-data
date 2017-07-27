@@ -5,7 +5,6 @@ username_field:
     label: 'Username'
     attr:
       placeholder: 'Username Placeholder'
-    required: '1'
     wrapper_class: 'username'
 
 #curreny
@@ -15,7 +14,6 @@ currency_field:
     label: 'Currency'
     attr:
       placeholder: 'Currency'
-    required: '1'
     error: 'Error Currency Field Error message'
     wrapper_class: 'currency_wrapper'
 
@@ -26,7 +24,6 @@ first_name_field:
     label: 'First name'
     attr:
       placeholder: 'Enter First Name'
-    required: '1'
     error: 'Error message for first name field'
     wrapper_class: 'first_name'
 
@@ -37,7 +34,6 @@ last_name_field:
     label: 'Last name'
     attr:
       placeholder: 'Enter Last Name'
-    required: '1'
     error: 'Last name field error message'
     wrapper_class: 'lastname'
 
@@ -46,7 +42,6 @@ dob_field:
   weight: 4'
   options:
     label: 'Date of Birth'
-    required: '1'
     error: 'Error message for dob'
     wrapper_class: 'dob'
 
@@ -75,7 +70,6 @@ country_field:
     label: 'Country'
     attr:
       placeholder: 'Country'
-    required: '1'
     error: 'Error message for country'
     wrapper_class: 'country'
 
@@ -86,9 +80,15 @@ email_field:
     label: 'Email Address'
     attr:
       placeholder: '#######@gmail.com'
-    required: '1'
     error: 'Error message for Email'
     wrapper_class: 'email'
+
+#gender
+gender_field:
+  weight: '10'
+  options:
+    label: 'Gender'
+    wrapper_class: 'gender'
 
 #header field
 communication_detail_field:
@@ -98,6 +98,10 @@ communication_detail_field:
 account_field:
   options:
     label: 'Account Details'
+
+home_address_field:
+  options:
+    label: 'Home Address'
 
 #sms
 enable_sms_verification_field: 1
@@ -124,23 +128,63 @@ verification_code_max_length_message_field: 'Please enter no more than 6 charact
 
 #mobile
 mobile_number_field:
-  weight: '10'
+  weight: '11'
   options:
     label: 'Contact Number'
     attr:
       placeholder: '09217715594'
-    required: '1'
     error: 'Error message for Mobile'
     wrapper_class: 'mobile_number'
 
+#mobile
+mobile_number_1_field:
+  weight: '13'
+  options:
+    label: ''
+    attr:
+      placeholder: '09217715594'
+    error: 'Error message for Mobile'
+    wrapper_class: 'mobile_number_1'
+
 #language
 language_field:
-  weight: '11'
+  weight: '12'
   options:
     label: 'Language'
     attr:
       placeholder: 'Enter Language'
     help_text: 'Help text for Language'
-    required: '1'
     error: 'Error field for Language'
     wrapper_class: 'language'
+
+#address
+address_field:
+  weight: '13'
+  options:
+    label: 'Address'
+    attr:
+      placeholder: 'Address'
+    wrapper_class: 'address'
+
+#city
+city_field:
+  weight: '14'
+  options:
+    label: 'City'
+    attr:
+      placeholder: 'City'
+    wrapper_class: 'city'
+
+#postal_code
+postal_code_field:
+  weight: '15'
+  options:
+    label: 'Postal Code'
+    attr:
+      placeholder: 'Postal Code'
+    wrapper_class: 'postal_code'
+
+save_changes_field: 'Save Changes'
+cancel_field: 'Cancel'
+country_code_mapping_field: 'PH|+63'
+country_mapping_field: 'Christmas Island|1'

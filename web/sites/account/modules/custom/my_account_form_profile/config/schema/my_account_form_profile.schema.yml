@@ -289,6 +289,71 @@ my_account_form_profile.profile:
                 placeholder:
                   type: label
                   label: 'Placeholder value for field'
+    gender_field:
+      type: mapping
+      label: 'Gender'
+      mapping:
+        options:
+          type: mapping
+          label: 'Field label'
+          mapping:
+            label:
+              type: label
+              label: 'Field label'
+    address_field:
+      type: mapping
+      label: 'Address field'
+      mapping:
+        options:
+          type: mapping
+          label: 'Field label'
+          mapping:
+            label:
+              type: label
+              label: 'Field label'
+            attr:
+              type: mapping
+              label: 'Placeholder value for field'
+              mapping:
+                placeholder:
+                  type: label
+                  label: 'Placeholder value for field'
+    city_field:
+      type: mapping
+      label: 'City field'
+      mapping:
+        options:
+          type: mapping
+          label: 'Field label'
+          mapping:
+            label:
+              type: label
+              label: 'Field label'
+            attr:
+              type: mapping
+              label: 'Placeholder value for field'
+              mapping:
+                placeholder:
+                  type: label
+                  label: 'Placeholder value for field'
+    postal_code_field:
+      type: mapping
+      label: 'Postal Code field'
+      mapping:
+        options:
+          type: mapping
+          label: 'Field label'
+          mapping:
+            label:
+              type: label
+              label: 'Field label'
+            attr:
+              type: mapping
+              label: 'Placeholder value for field'
+              mapping:
+                placeholder:
+                  type: label
+                  label: 'Placeholder value for field'
     communication_detail_field:
       type: mapping
       label: 'Communication header label translation'
@@ -303,6 +368,17 @@ my_account_form_profile.profile:
     account_field:
       type: mapping
       label: 'Account header label translation'
+      mapping:
+        options:
+          type: mapping
+          label: 'Field label'
+          mapping:
+            label:
+              type: label
+              label: 'Field label'
+    home_address_field:
+      type: mapping
+      label: 'Home Address header label translation'
       mapping:
         options:
           type: mapping
@@ -365,6 +441,27 @@ my_account_form_profile.profile:
                 placeholder:
                   type: label
                   label: 'Placeholder value for field'
+    mobile_number_1_field:
+      type: mapping
+      label: ''
+      mapping:
+        options:
+          type: mapping
+          label: 'Field label'
+          mapping:
+            label:
+              type: label
+              label: 'Field label'
+            error:
+              type: label
+              label: 'Error message'
+            attr:
+              type: mapping
+              label: 'Placeholder value for field'
+              mapping:
+                placeholder:
+                  type: label
+                  label: 'Placeholder value for field'
     language_field:
       type: mapping
       label: 'Language'
@@ -386,4 +483,64 @@ my_account_form_profile.profile:
                 placeholder:
                   type: label
                   label: 'Placeholder value for field'
+      address_field:
+      type: mapping
+      label: 'Address'
+      mapping:
+        options:
+          type: mapping
+          label: 'Field label'
+          mapping:
+            label:
+              type: label
+              label: 'Field label'
+            attr:
+              type: mapping
+              label: 'Placeholder value for field'
+              mapping:
+                placeholder:
+                  type: label
+                  label: 'Placeholder value for field'
+      city_field:
+        type: mapping
+        label: 'City'
+        mapping:
+          options:
+            type: mapping
+            label: 'Field label'
+            mapping:
+              label:
+                type: label
+                label: 'Field label'
+              attr:
+                type: mapping
+                label: 'Placeholder value for field'
+                mapping:
+                  placeholder:
+                    type: label
+                    label: 'Placeholder value for field'
+      postal_code_field:
+        type: mapping
+        label: 'Address'
+        mapping:
+          options:
+            type: mapping
+            label: 'Field label'
+            mapping:
+              label:
+                type: label
+                label: 'Field label'
+              attr:
+                type: mapping
+                label: 'Placeholder value for field'
+                mapping:
+                  placeholder:
+                    type: label
+                    label: 'Placeholder value for field'
+    save_changes_field:
+      type: label
+      label: 'Save Changes Button translation'
+    cancel_field:
+      type: label
+      label: 'Cancel Button translation'
   langcode: 'en'
