@@ -4,7 +4,6 @@ username_field:
     label: Username
     attr:
       placeholder: 'Username Placeholder'
-    required: 1
     wrapper_class: username
 currency_field:
   weight: '1'
@@ -12,7 +11,6 @@ currency_field:
     label: Currency
     attr:
       placeholder: Currency
-    required: 1
     error: 'Error Currency Field Error message'
     wrapper_class: currency_wrapper
 first_name_field:
@@ -21,7 +19,6 @@ first_name_field:
     label: 'First name'
     attr:
       placeholder: 'Enter First Name'
-    required: 1
     error: 'Error message for first name field'
     wrapper_class: first_name
 last_name_field:
@@ -30,14 +27,12 @@ last_name_field:
     label: 'Last name'
     attr:
       placeholder: 'Enter Last Name'
-    required: 1
     error: 'Last name field error message'
     wrapper_class: lastname
 dob_field:
-  weight: '4'''
+  weight: '4'
   options:
     label: 'Date of Birth'
-    required: 1
     error: 'Error message for dob'
     wrapper_class: dob
 dob_month:
@@ -58,7 +53,6 @@ country_field:
     label: Country
     attr:
       placeholder: Country
-    required: 1
     error: 'Error message for country'
     wrapper_class: country
 email_field:
@@ -67,7 +61,6 @@ email_field:
     label: 'Email Address'
     attr:
       placeholder: '#######@gmail.com'
-    required: 1
     error: 'Error message for Email'
     wrapper_class: email
 communication_detail_field:
@@ -82,7 +75,6 @@ mobile_number_field:
     label: 'Mobile Number'
     attr:
       placeholder: '09217715594'
-    required: 1
     error: 'Error message for Mobile'
     wrapper_class: mobile_number
 language_field:
@@ -92,7 +84,6 @@ language_field:
     attr:
       placeholder: 'Enter Language'
     help_text: 'Help text for Language'
-    required: 1
     error: 'Error field for Language'
     wrapper_class: language
 _core:
