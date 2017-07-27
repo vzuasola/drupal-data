@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.right_side_block_content.field_enable
     - field.field.paragraph.right_side_block_content.field_image
     - field.field.paragraph.right_side_block_content.field_link
     - field.field.paragraph.right_side_block_content.field_link_target
@@ -17,6 +18,16 @@ targetEntityType: paragraph
 bundle: right_side_block_content
 mode: default
 content:
+  field_enable:
+    weight: 4
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
   field_image:
     weight: 1
     label: above

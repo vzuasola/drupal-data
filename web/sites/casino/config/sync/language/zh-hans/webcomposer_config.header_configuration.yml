@@ -1,6 +1,10 @@
-critical_announcement_content:
-  value: "<p class=\"text-align-center\"><span class=\"text-12\"><span class=\"text-white\">THIS IS REAL THIS ME</span></span></p>\r\n"
-  format: basic_html
-news_announcement_content:
-  value: "<p><span class=\"text-white\">DAFABET TESTING</span></p>\r\n"
-  format: basic_html
+lobby_page_title: '在线投注—— 在Dafabet畅享体育投注、娱乐场和扑克游戏带来的无限乐趣'
+join_now_text: 立即加入
+login_issue_text: 无法登录？
+balance_error_text: 错误检索
+profile_icon_hover_text: 我的账户
+cashier_icon_hover_text: 出纳柜台
+product_menu_new_tag: '新 '
+welcome_text: '{username}'
+profile_link: 'https://stg-cashier.elysium-dfbt.com/sc/?ticket={auth.token}&product=dafabet{tracking.token}'
+profile_logout_text: 登出

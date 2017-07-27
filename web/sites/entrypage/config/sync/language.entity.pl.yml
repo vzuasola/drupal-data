@@ -1,9 +1,14 @@
 uuid: 9f844171-b972-4477-ad6a-4c34856a3cab
-langcode: en
+langcode: pl
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - webcomposer_language_hierarchy
+third_party_settings:
+  webcomposer_language_hierarchy:
+    webcomposer_fallback_langcode: ''
 id: pl
-label: Polish
+label: Polski
 direction: ltr
 weight: 1
 locked: false

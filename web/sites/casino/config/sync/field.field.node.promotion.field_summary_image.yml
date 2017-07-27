@@ -11,16 +11,16 @@ dependencies:
 third_party_settings:
   content_translation:
     translation_sync:
-      alt: alt
-      title: title
-      file: '0'
+      file: file
+      alt: '0'
+      title: '0'
 id: node.promotion.field_summary_image
 field_name: field_summary_image
 entity_type: node
 bundle: promotion
-label: 'Promotion Thumbnail  ( summary page )'
+label: 'Thumbnail Image'
 description: 'The Image upload size is 575x325 px.'
-required: false
+required: true
 translatable: true
 default_value: {  }
 default_value_callback: ''

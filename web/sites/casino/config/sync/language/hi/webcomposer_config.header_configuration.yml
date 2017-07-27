@@ -1,0 +1,2 @@
+profile_link: 'https://stg-cashier.elysium-dfbt.com/en/?ticket={auth.token}&product=dafabet{tracking.token}'
+welcome_text: '{username}'
