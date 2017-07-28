@@ -1,0 +1,4 @@
+webcomposer_announcements.announcements_configuration_tab:
+  route_name: webcomposer_announcements.announcements_configuration
+  title: 'Announcements Custom Configuration'
+  base_route: webcomposer_announcements.announcements_configuration

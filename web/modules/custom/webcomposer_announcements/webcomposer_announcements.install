@@ -1,0 +1,26 @@
+<?php
+
+/**
+ * Implements hook_uninstall
+ */
+function webcomposer_announcements_uninstall() {
+  $keys = [
+    'core.base_field_override.node.announcements.promote',
+    'core.base_field_override.node.announcements.publish_on',
+    'core.base_field_override.node.announcements.status',
+    'core.base_field_override.node.announcements.unpublish_on',
+    'core.entity_form_display.node.announcements.default',
+    'core.entity_view_display.node.announcements.default',
+    'core.entity_view_display.node.announcements.teaser',
+    'field.field.node.announcements.body',
+    'language.content_settings.node.announcements',
+    'node.type.announcements',
+    'views.view.announcement_list',
+    'views.view.announcements_listing',
+    'webcomposer_config.announcements_configuration',
+  ];
+
+  foreach ($keys as $key) {
+    \Drupal::configFactory()->getEditable($key)->delete();
+  }
+}

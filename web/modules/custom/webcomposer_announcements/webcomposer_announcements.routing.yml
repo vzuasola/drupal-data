@@ -1,0 +1,7 @@
+webcomposer_announcements.announcements_configuration:
+  path: '/admin/config/webcomposer/config/announcements_configuration'
+  defaults:
+    _form: '\Drupal\webcomposer_announcements\Form\AnnouncementsConfiguration'
+    _title: 'Announcements Custom Configuration'
+  requirements:
+    _permission: 'access administration pages'

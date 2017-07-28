@@ -1,0 +1,5 @@
+webcomposer_announcements.announcements_configuration:
+  title: 'Announcements Custom Configuration'
+  route_name: webcomposer_announcements.announcements_configuration
+  description: 'Configure the announcements custom configuration'
+  parent: webcomposer_config.list
