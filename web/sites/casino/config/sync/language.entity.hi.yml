@@ -7,8 +7,9 @@ dependencies:
 third_party_settings:
   webcomposer_language_hierarchy:
     webcomposer_fallback_langcode: en
+    webcomposer_language_custom_label: हिन्दी
 id: hi
-label: हिन्दी
+label: 'Hindi (India)'
 direction: ltr
-weight: -1
+weight: -5
 locked: false

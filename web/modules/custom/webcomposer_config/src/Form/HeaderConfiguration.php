@@ -116,6 +116,13 @@ class HeaderConfiguration extends ConfigFormBase {
       '#required' => TRUE,
     );
 
+    $form['balance_group']['balance_label_mapping'] = array(
+      '#type' => 'textarea',
+      '#title' => $this->t('Balances label mapping'),
+      '#description' => $this->t('Labels and ordering for the balance breakdown'),
+      '#default_value' => $config->get('balance_label_mapping')
+    );
+
     $form['newtag_group'] = array(
       '#type' => 'details',
       '#title' => $this->t('New Tag Settings'),
@@ -274,6 +281,7 @@ class HeaderConfiguration extends ConfigFormBase {
       'sc_lang_text',
       'ch_lang_text',
       'balance_error_text',
+      'balance_label_mapping',
       'lobby_page_title',
       'profile_icon_hover_text',
       'cashier_icon_hover_text',
@@ -293,5 +301,4 @@ class HeaderConfiguration extends ConfigFormBase {
     
     return parent::submitForm($form, $form_state);
   }
-
 }
