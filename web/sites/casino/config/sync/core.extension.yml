@@ -62,6 +62,7 @@ module:
   user: 0
   views_ui: 0
   webcomposer_affilates: 0
+  webcomposer_announcements: 0
   webcomposer_config: 0
   webcomposer_connector: 0
   webcomposer_dm: 0
