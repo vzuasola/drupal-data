@@ -1,5 +1,25 @@
+webcomposer_announcements.admin_settings:
+  title: 'Webcomposer Announcements'
+  description: 'Manage Announcements'
+  parent: system.admin_config
+  route_name: webcomposer_announcements.admin_settings
+
 webcomposer_announcements.announcements_configuration:
   title: 'Announcements Custom Configuration'
   route_name: webcomposer_announcements.announcements_configuration
   description: 'Configure the announcements custom configuration'
-  parent: webcomposer_config.list
+  parent: webcomposer_announcements.admin_settings
+
+# Announcement menu items definition
+entity.announcement_entity.collection:
+  title: 'Announcement Entity list'
+  route_name: entity.announcement_entity.collection
+  description: 'List Announcement entities'
+  parent: webcomposer_announcements.admin_settings
+  weight: 100
+
+announcement_entity.admin.structure.settings:
+  title: Announcement Entity settings
+  description: 'Configure Announcement entities'
+  route_name: announcement_entity.settings
+  parent: webcomposer_announcements.admin_settings

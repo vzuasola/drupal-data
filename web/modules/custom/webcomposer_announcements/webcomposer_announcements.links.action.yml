@@ -1,7 +1,5 @@
-entity.announcements.add_form:
-  route_name: node.add
-  route_parameters:
-    node_type: 'announcements'
+entity.announcement_entity.add_form:
+  route_name: entity.announcement_entity.add_form
   title: 'Add Announcement'
   appears_on:
-    - view.announcements_listing.page_1
+    - entity.announcement_entity.collection

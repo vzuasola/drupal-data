@@ -1,3 +1,25 @@
+# Announcement routing definition
+announcement_entity.settings_tab:
+  route_name: announcement_entity.settings
+  title: 'Settings'
+  base_route: announcement_entity.settings
+
+entity.announcement_entity.canonical:
+  route_name: entity.announcement_entity.canonical
+  base_route: entity.announcement_entity.canonical
+  title: 'View'
+
+entity.announcement_entity.edit_form:
+  route_name: entity.announcement_entity.edit_form
+  base_route: entity.announcement_entity.canonical
+  title: 'Edit'
+
+entity.announcement_entity.delete_form:
+  route_name:  entity.announcement_entity.delete_form
+  base_route:  entity.announcement_entity.canonical
+  title: Delete
+  weight: 10
+
 webcomposer_announcements.announcements_configuration_tab:
   route_name: webcomposer_announcements.announcements_configuration
   title: 'Announcements Custom Configuration'

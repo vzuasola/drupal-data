@@ -1,4 +1,4 @@
-webcomposer_config.announcements_configuration:
+webcomposer_announcements.announcements_configuration:
   type: config_object
   label: 'Announcements Custom Configurations'
   mapping:
