@@ -86,6 +86,21 @@ class FooterConfiguration extends ConfigFormBase {
       '#required' => TRUE,
     );
 
+    $form['social_group'] = array(
+      '#type' => 'details',
+      '#title' => $this->t('Social Media Title'),
+      '#collapsible' => TRUE,
+      '#group' => 'advanced',
+    );
+
+    $form['social_group']['social_media_title'] = array(
+      '#type' => 'textfield',
+      '#title' => $this->t('Social Media Title'),
+      '#description' => $this->t('Text to be displayed above the Social Media Links.'),
+      '#default_value' => $config->get('social_media_title'),
+      '#required' => TRUE,
+    );
+
     return parent::buildForm($form, $form_state);
   }
 
@@ -104,7 +119,8 @@ class FooterConfiguration extends ConfigFormBase {
       'about_dafabet_title',
       'about_dafabet_content',
       'partners_logo',
-      'quicklinks_title'
+      'quicklinks_title',
+      'social_media_title'
     );
 
     foreach ($keys as $key) {

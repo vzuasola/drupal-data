@@ -1,0 +1,32 @@
+<?php
+
+
+/**
+ * Implements hook_uninstall
+ */
+function webcomposer_social_media_uninstall() {
+   $keys = [
+      'core.entity_form_display.paragraph.social_media_cmi.default.yml',
+      'core.entity_form_display.social_media_entity.social_media_entity.default.yml',
+      'core.entity_view_display.paragraph.social_media_cmi.default.yml',
+      'core.entity_view_display.social_media_entity.social_media_entity.default.yml',
+      'field.field.paragraph.social_media_cmi.field_socialmedia_cmi_enable.yml',
+      'field.field.paragraph.social_media_cmi.field_socialmedia_cmi_link_class.yml',
+      'field.field.paragraph.social_media_cmi.field_socialmedia_cmi_links.yml',
+      'field.field.paragraph.social_media_cmi.field_socialmedia_cmi_linktarget.yml',
+      'field.field.social_media_entity.social_media_entity.field_social_media_cmi.yml',
+      'field.storage.paragraph.field_socialmedia_cmi_enable.yml',
+      'field.storage.paragraph.field_socialmedia_cmi_link_class.yml',
+      'field.storage.paragraph.field_socialmedia_cmi_links.yml',
+      'field.storage.paragraph.field_socialmedia_cmi_linktarget.yml',
+      'field.storage.social_media_entity.field_social_media_cmi.yml',
+      'language.content_settings.paragraph.social_media_cmi.yml',
+      'language.content_settings.social_media_entity.social_media_entity.yml',
+      'paragraphs.paragraphs_type.social_media_cmi.yml',
+      'views.view.social_media_rest_cmi.yml',
+    ];
+
+    foreach ($keys as $key) {
+      \Drupal::configFactory()->getEditable($key)->delete();
+    }
+}
