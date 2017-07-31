@@ -11,7 +11,7 @@ class AnnouncementConfigurationForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   protected function getEditableConfigNames() {
-    return ['webcomposer_announcements.announcements_configuration'];
+    return ['webcomposer_config.announcements_configuration'];
   }
 
   /**
@@ -25,7 +25,7 @@ class AnnouncementConfigurationForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    $config = $this->config('webcomposer_announcements.announcements_configuration');
+    $config = $this->config('webcomposer_config.announcements_configuration');
 
     $form['title'] = array(
       '#type' => 'textfield',
@@ -58,7 +58,7 @@ class AnnouncementConfigurationForm extends ConfigFormBase {
     );
 
     foreach ($keys as $key) {
-      $this->config('webcomposer_announcements.announcements_configuration')->set($key, $form_state->getValue($key))->save();
+      $this->config('webcomposer_config.announcements_configuration')->set($key, $form_state->getValue($key))->save();
     }
   }
 

@@ -6,7 +6,7 @@ dependencies:
     - datetime
     - webcomposer_announcements
 _core:
-  default_config_hash: vlRL9vvHp2JTs72g5i_Oh2iWregZRePKKtqqiumfYIA
+  default_config_hash: 3omgNS-eUinix8QYU4snNUVjHTCrqc7uCvfCgs_n0YQ
 id: announcement_entity.field_unpublish_date
 field_name: field_unpublish_date
 entity_type: announcement_entity

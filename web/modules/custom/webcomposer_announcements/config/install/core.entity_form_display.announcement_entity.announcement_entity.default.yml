@@ -27,7 +27,7 @@ third_party_settings:
         required_fields: false
       label: 'Scheduler Settings'
 _core:
-  default_config_hash: aM4XnwkVFpchnQ9y0PipQ049WjdKfglXYaMOwPqeSUY
+  default_config_hash: neq5N0f1cVJ9rdviYgigpbN4gNrY8Z1PhCoyPku536U
 id: announcement_entity.announcement_entity.default
 targetEntityType: announcement_entity
 bundle: announcement_entity
@@ -67,5 +67,8 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
 hidden:
   user_id: true

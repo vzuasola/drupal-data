@@ -6,7 +6,7 @@ dependencies:
     - text
     - webcomposer_announcements
 _core:
-  default_config_hash: Ek4kCb9Q1nIXqe7j5QAAz4gNlydtcAotneGDaGLqFtc
+  default_config_hash: tz-SAgQok1RC60C1NcglfyoRbdlAu59KBnjiVpIopNg
 id: announcement_entity.field_body
 field_name: field_body
 entity_type: announcement_entity
