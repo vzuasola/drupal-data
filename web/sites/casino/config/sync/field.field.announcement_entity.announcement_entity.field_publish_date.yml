@@ -1,0 +1,26 @@
+uuid: 3f40fcde-3a91-4295-8e97-c95a7457b6de
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.announcement_entity.field_publish_date
+  module:
+    - datetime
+    - webcomposer_announcements
+_core:
+  default_config_hash: D-RLE4R4W5hW3OrBpsp8hNmGouf-uonZwRoEwyDowmE
+id: announcement_entity.announcement_entity.field_publish_date
+field_name: field_publish_date
+entity_type: announcement_entity
+bundle: announcement_entity
+label: 'Publish Date'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+default_value_callback: ''
+settings: {  }
+field_type: datetime
