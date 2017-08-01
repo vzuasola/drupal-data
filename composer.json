@@ -76,7 +76,8 @@
         },
         "patches": {
             "drupal/core": {
-                "Date field all languages title fix": "https://www.drupal.org/files/issues/2652850-17.patch"
+                "Date field all languages title fix": "https://www.drupal.org/files/issues/2652850-17.patch",
+                "Fix CKEditor translation": "web/patches/ckeditor-translation.patch"
             }
         }
     },
