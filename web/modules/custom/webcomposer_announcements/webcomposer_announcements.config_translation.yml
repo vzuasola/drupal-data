@@ -2,4 +2,4 @@ webcomposer_announcements.announcements_configuration:
   title: 'Announcements Custom Configuration'
   base_route_name: webcomposer_announcements.announcements_configuration
   names:
-    - 'webcomposer_announcements.announcements_configuration'
+    - 'webcomposer_config.announcements_configuration'
