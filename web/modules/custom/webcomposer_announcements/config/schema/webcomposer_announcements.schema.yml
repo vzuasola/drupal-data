@@ -1,0 +1,10 @@
+webcomposer_announcements.announcements_configuration:
+  type: config_object
+  label: 'Announcements Custom Configurations'
+  mapping:
+    title:
+      type: label
+      label: 'Announcements Lightbox Title'
+    default_message:
+      type: label
+      label: 'Announcements Lightbox Default Message'
