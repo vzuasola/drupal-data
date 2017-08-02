@@ -13,8 +13,8 @@ id: announcement_entity.announcement_entity.field_unpublish_date
 field_name: field_unpublish_date
 entity_type: announcement_entity
 bundle: announcement_entity
-label: 'Unpublish Date'
-description: ''
+label: 'Unpublish Date (optional)'
+description: "<p>If this is set the announcement will be <strong>unavailable</strong> after this date.\r\n<br>Delete the date set if the announcement will be republished.\r\n</p>"
 required: false
 translatable: true
 default_value: {  }
