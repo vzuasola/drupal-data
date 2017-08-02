@@ -7,7 +7,7 @@ dependencies:
     - serialization
     - webcomposer_announcements
 _core:
-  default_config_hash: IK7qdvwDgSXqDrwIKvZNjE4v50VQ2d-uK8qDTHMWZc8
+  default_config_hash: vgimOMC8KwcM92VPqu3064nNlinS-rlejQVaKOrsN8k
 id: announcements
 label: 'Announcements - REST'
 module: views
@@ -140,46 +140,6 @@ display:
           separator: ', '
           field_api_classes: false
       filters:
-        field_publish_date_value:
-          id: field_publish_date_value
-          table: announcement_entity__field_publish_date
-          field: field_publish_date_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: '<'
-          value:
-            min: ''
-            max: ''
-            value: now
-            type: offset
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          plugin_id: datetime
         langcode:
           id: langcode
           table: announcement_entity_field_data
@@ -220,19 +180,19 @@ display:
           entity_type: announcement_entity
           entity_field: langcode
           plugin_id: language
-        field_unpublish_date_value:
-          id: field_unpublish_date_value
-          table: announcement_entity__field_unpublish_date
-          field: field_unpublish_date_value
+        field_publish_date_value:
+          id: field_publish_date_value
+          table: announcement_entity__field_publish_date
+          field: field_publish_date_value
           relationship: none
           group_type: group
           admin_label: ''
-          operator: '>'
+          operator: empty
           value:
             min: ''
             max: ''
-            value: now
-            type: offset
+            value: ''
+            type: date
           group: 1
           exposed: false
           expose:
@@ -260,20 +220,20 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           plugin_id: datetime
-        field_publish_date_value_1:
-          id: field_publish_date_value_1
-          table: announcement_entity__field_publish_date
-          field: field_publish_date_value
+        field_unpublish_date_value:
+          id: field_unpublish_date_value
+          table: announcement_entity__field_unpublish_date
+          field: field_unpublish_date_value
           relationship: none
           group_type: group
           admin_label: ''
-          operator: '<'
+          operator: empty
           value:
             min: ''
             max: ''
-            value: now
-            type: offset
-          group: 2
+            value: ''
+            type: date
+          group: 1
           exposed: false
           expose:
             operator_id: ''
@@ -340,19 +300,19 @@ display:
           entity_type: announcement_entity
           entity_field: langcode
           plugin_id: language
-        field_unpublish_date_value_1:
-          id: field_unpublish_date_value_1
-          table: announcement_entity__field_unpublish_date
-          field: field_unpublish_date_value
+        field_publish_date_value_1:
+          id: field_publish_date_value_1
+          table: announcement_entity__field_publish_date
+          field: field_publish_date_value
           relationship: none
           group_type: group
           admin_label: ''
-          operator: empty
+          operator: '<'
           value:
             min: ''
             max: ''
-            value: ''
-            type: date
+            value: now
+            type: offset
           group: 2
           exposed: false
           expose:
@@ -380,11 +340,291 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           plugin_id: datetime
-      sorts:
-        field_publish_date_value:
-          id: field_publish_date_value
+        field_unpublish_date_value_1:
+          id: field_unpublish_date_value_1
+          table: announcement_entity__field_unpublish_date
+          field: field_unpublish_date_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '>'
+          value:
+            min: ''
+            max: ''
+            value: now
+            type: offset
+          group: 2
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: datetime
+        langcode_3:
+          id: langcode_3
+          table: announcement_entity_field_data
+          field: langcode
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
+          group: 3
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: announcement_entity
+          entity_field: langcode
+          plugin_id: language
+        field_publish_date_value_3:
+          id: field_publish_date_value_3
           table: announcement_entity__field_publish_date
           field: field_publish_date_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '<'
+          value:
+            min: ''
+            max: ''
+            value: now
+            type: offset
+          group: 3
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: datetime
+        field_unpublish_date_value_3:
+          id: field_unpublish_date_value_3
+          table: announcement_entity__field_unpublish_date
+          field: field_unpublish_date_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: empty
+          value:
+            min: ''
+            max: ''
+            value: ''
+            type: date
+          group: 3
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: datetime
+        langcode_2:
+          id: langcode_2
+          table: announcement_entity_field_data
+          field: langcode
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
+          group: 4
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: announcement_entity
+          entity_field: langcode
+          plugin_id: language
+        field_publish_date_value_2:
+          id: field_publish_date_value_2
+          table: announcement_entity__field_publish_date
+          field: field_publish_date_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: empty
+          value:
+            min: ''
+            max: ''
+            value: ''
+            type: date
+          group: 4
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: datetime
+        field_unpublish_date_value_2:
+          id: field_unpublish_date_value_2
+          table: announcement_entity__field_unpublish_date
+          field: field_unpublish_date_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '>'
+          value:
+            min: ''
+            max: ''
+            value: now
+            type: offset
+          group: 4
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: datetime
+      sorts:
+        changed:
+          id: changed
+          table: announcement_entity_field_data
+          field: changed
           relationship: none
           group_type: group
           admin_label: ''
@@ -393,7 +633,9 @@ display:
           expose:
             label: ''
           granularity: second
-          plugin_id: datetime
+          entity_type: announcement_entity
+          entity_field: changed
+          plugin_id: date
       header: {  }
       footer: {  }
       empty: {  }
@@ -405,6 +647,8 @@ display:
         groups:
           1: AND
           2: AND
+          3: AND
+          4: AND
     cache_metadata:
       max-age: -1
       contexts:

@@ -8,19 +8,16 @@ dependencies:
     - datetime
     - webcomposer_announcements
 _core:
-  default_config_hash: D-RLE4R4W5hW3OrBpsp8hNmGouf-uonZwRoEwyDowmE
+  default_config_hash: g3A3QTfuLiGyp2yPI7dbCSbjAl8qAkObKwwdM0vwJ5s
 id: announcement_entity.announcement_entity.field_publish_date
 field_name: field_publish_date
 entity_type: announcement_entity
 bundle: announcement_entity
-label: 'Publish Date'
-description: ''
-required: true
+label: 'Publish Date (optional)'
+description: "<p>If this is set the announcement will be available from this date up until the date set on <strong>Unpublish Date</strong>.\r\n<br>Otherwise, the announcement will be available upon saving.</p>"
+required: false
 translatable: true
-default_value:
-  -
-    default_date_type: now
-    default_date: now
+default_value: {  }
 default_value_callback: ''
 settings: {  }
 field_type: datetime
