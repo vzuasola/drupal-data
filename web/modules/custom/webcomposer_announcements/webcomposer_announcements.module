@@ -1,0 +1,28 @@
+<?php
+
+use Drupal\Core\Form\FormStateInterface;
+
+function webcomposer_announcements_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+	// $forms = [
+	// 	'announcement_entity_edit_form',
+	// 	'announcement_entity_add_form'
+	// ];
+	// if (in_array($form_id, $forms)) {
+	// 	$form['#validate'][] = 'webcomposer_announcements_validate_announcement';
+	// }
+	// Load the real code only when needed.
+	// module_invoke('scheduler', 'scheduler_form_node_type_form_alter', $form, $form_state);
+	// \Drupal::moduleHandler()->invoke('scheduler', 'form_node_type_form_alter', [$form, $form_state]);
+}
+
+function webcomposer_announcements_validate_announcement(&$form, FormStateInterface $form_state) {
+	// $publish = $form_state->getValue('field_publish_date');
+	// $unpublish = $form_state->getValue('field_unpublish_date');
+
+	// $publishDate = $publish[0]['value'] ? $publish[0]['value']->format('U') : null;
+	// $unpublishDate = $unpublish[0]['value'] ? $unpublish[0]['value']->format('U') :null;
+
+	// if ($publishDate && $unpublishDate && $unpublishDate < $publishDate) {
+	// 	$form_state->setErrorByName('field_unpublish_date', t('Unpublish date should be greater than the publish date.'));
+	// }
+}
