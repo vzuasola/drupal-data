@@ -1,0 +1,25 @@
+<?php
+
+use Drupal\Core\Form\FormStateInterface;
+
+function webcomposer_announcements_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+	$forms = [
+		'announcement_entity_edit_form',
+		'announcement_entity_add_form'
+	];
+	if (in_array($form_id, $forms)) {
+		$form['#validate'][] = 'webcomposer_announcements_validate_announcement';
+	}
+}
+
+function webcomposer_announcements_validate_announcement(&$form, FormStateInterface $form_state) {
+	$publish = $form_state->getValue('field_publish_date');
+	$unpublish = $form_state->getValue('field_unpublish_date');
+
+	$publishDate = isset($publish[0]['value']) ? $publish[0]['value']->format('U') : null;
+	$unpublishDate = isset($unpublish[0]['value']) ? $unpublish[0]['value']->format('U') :null;
+
+	if ($unpublishDate < $publishDate) {
+		$form_state->setErrorByName('field_unpublish_date', t('Unpublish date should be greater than the publish date.'));
+	}
+}

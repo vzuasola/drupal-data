@@ -27,7 +27,7 @@ third_party_settings:
         required_fields: false
       label: 'Scheduler Settings'
 _core:
-  default_config_hash: neq5N0f1cVJ9rdviYgigpbN4gNrY8Z1PhCoyPku536U
+  default_config_hash: ATL0JcDWzxT2OoyjF4vTuFGFHVWDyvIaTXBIPEjf0hI
 id: announcement_entity.announcement_entity.default
 targetEntityType: announcement_entity
 bundle: announcement_entity
