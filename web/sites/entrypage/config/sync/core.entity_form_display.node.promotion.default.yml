@@ -37,7 +37,6 @@ dependencies:
     - field_group
     - image
     - link
-    - paragraphs
     - path
     - scheduler
     - text
@@ -67,10 +66,11 @@ third_party_settings:
       weight: 19
       format_type: details
       format_settings:
+        label: 'Right Side Block'
+        open: true
+        required_fields: true
         id: ''
         classes: ''
-        open: false
-        required_fields: true
       label: 'Right Side Block'
     group_ribbon_configuration:
       children:
@@ -98,15 +98,13 @@ third_party_settings:
       format_type: details
       format_settings:
         label: 'Promotion Thumbnail ( summary page )'
+        open: true
         required_fields: true
         id: ''
         classes: ''
-        open: false
       label: 'Promotion Thumbnail ( summary page )'
     group_inner_page_right_side_bloc:
-      children:
-        - field_show_inner_page_right_side
-        - field_right_side_content
+      children: {  }
       parent_name: ''
       weight: 22
       format_type: details

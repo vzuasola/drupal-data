@@ -757,3 +757,6 @@ if (file_exists(__DIR__ . '/database.php')) {
 
 $settings['install_profile'] = 'config_installer';
 $config_directories['sync'] = 'sites/entrypage/config/sync';
+
+// The primary site of front end
+$settings['primary_site_prefix'] = 'promotions';

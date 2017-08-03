@@ -2,10 +2,6 @@ CKEDITOR.dialog.add("link", function(editor) {
     var plugin = CKEDITOR.plugins.link,
         initialLinkText;
 
-    var allowedLangCodes = [
-        'sc', 'ch'
-    ];
-
     return {
         // allowedContent: "a[href,target]",
         title: "Insert Link",
@@ -29,8 +25,9 @@ CKEDITOR.dialog.add("link", function(editor) {
                     var url = this.getValue();
                     if (/^(http|https)/.test(url.toLowerCase()) == false) {
                         var segments = url.replace(/^\/|\/$/g, '').split('/');
-                        if (segments && allowedLangCodes.indexOf(segments[0]) == -1) {
+                        if (segments && editor.config.allowedLanguages.indexOf(segments[0]) == -1) {
                             url = '/' + editor.config.language + '/' + editor.config.site + url;
+                            console.log(url);
                         }
                     }
                     data.href = url;

@@ -7,8 +7,9 @@ dependencies:
 third_party_settings:
   webcomposer_language_hierarchy:
     webcomposer_fallback_langcode: ''
+    webcomposer_language_custom_label: 繁體中文
 id: zh-hant
-label: 繁體中文
+label: 'Traditional Chinese'
 direction: ltr
 weight: -8
 locked: false

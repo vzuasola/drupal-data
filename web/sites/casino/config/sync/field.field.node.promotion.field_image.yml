@@ -20,9 +20,9 @@ id: node.promotion.field_image
 field_name: field_image
 entity_type: node
 bundle: promotion
-label: 'Promotion Banner'
+label: 'Banner Image'
 description: 'The Image upload size is 1920x500 px.'
-required: true
+required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''

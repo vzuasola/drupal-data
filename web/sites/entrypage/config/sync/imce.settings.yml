@@ -1,4 +1,4 @@
-abs_urls: true
+abs_urls: false
 roles_profiles:
   administrator:
     public: admin

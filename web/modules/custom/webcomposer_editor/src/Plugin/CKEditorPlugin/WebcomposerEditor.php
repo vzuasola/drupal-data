@@ -65,11 +65,11 @@ class WebcomposerEditor extends CKEditorPluginBase implements CKEditorPluginCssI
           ],
       ],
       'Link' => array(
-        'label' => t('Casino Editor Link'),
+        'label' => t('Webcomposer Editor Link'),
         'image' => $modulePath . '/icons/link.png',
       ),
       'Unlink' => array(
-        'label' => t('Casino Editor Unlink'),
+        'label' => t('Webcomposer Editor Unlink'),
         'image' => $modulePath . '/icons/unlink.png',
       ),
   ];

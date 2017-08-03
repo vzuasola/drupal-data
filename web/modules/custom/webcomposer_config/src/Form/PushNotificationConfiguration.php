@@ -62,11 +62,6 @@ class PushNotificationConfiguration extends ConfigFormBase
       '#title' => $this->t('Exclude Pages'),
       '#group' => 'pushnx_settings_tab',
     );
-    $form['game_launch_settings'] = array(
-      '#type' => 'details',
-      '#title' => $this->t('Game Launch'),
-      '#group' => 'pushnx_settings_tab',
-    );
     $form['debug_settings'] = array(
       '#type' => 'details',
       '#title' => $this->t('Debug Settings'),
@@ -102,13 +97,6 @@ class PushNotificationConfiguration extends ConfigFormBase
       '#title' => $this->t('Expiry Delay Count'),
       '#default_value' => $config->get('expiry_delay_count'),
       '#description' => $this->t('Milisecond of delay to show the expiry message.'),
-    );
-    // Game Launch
-    $form['game_launch_settings']['login_selector'] = array(
-      '#type' => 'textfield',
-      '#title' => $this->t('Modal Login Selectors'),
-      '#default_value' => $config->get('login_selector'),
-      '#description' => $this->t('Overriding auto game launch fancybox submit login.'),
     );
     // Debug Settings
     $form['debug_settings']['debug_logging'] = array(
