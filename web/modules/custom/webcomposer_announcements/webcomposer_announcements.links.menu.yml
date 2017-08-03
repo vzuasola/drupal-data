@@ -14,7 +14,7 @@ webcomposer_announcements.announcements_configuration:
 entity.announcement_entity.collection:
   title: 'Announcement List'
   route_name: entity.announcement_entity.collection
-  description: 'Manage' Announcements'
+  description: 'Manage Announcements'
   parent: webcomposer_announcements.admin_settings
 
 announcement_entity.admin.structure.settings:
