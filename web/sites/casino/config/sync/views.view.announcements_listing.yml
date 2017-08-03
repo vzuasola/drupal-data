@@ -5,8 +5,11 @@ dependencies:
   config:
     - field.storage.announcement_entity.field_publish_date
     - field.storage.announcement_entity.field_unpublish_date
+    - user.role.administrator
+    - user.role.authenticated
   module:
     - datetime
+    - user
     - webcomposer_announcements
 id: announcements_listing
 label: 'Announcements - Listing'
@@ -24,8 +27,11 @@ display:
     position: 0
     display_options:
       access:
-        type: none
-        options: {  }
+        type: role
+        options:
+          role:
+            authenticated: authenticated
+            administrator: administrator
       cache:
         type: tag
         options: {  }
@@ -601,6 +607,7 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
+        - user.roles
       tags:
         - 'config:field.storage.announcement_entity.field_publish_date'
         - 'config:field.storage.announcement_entity.field_unpublish_date'
@@ -619,6 +626,7 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
+        - user.roles
       tags:
         - 'config:field.storage.announcement_entity.field_publish_date'
         - 'config:field.storage.announcement_entity.field_unpublish_date'
