@@ -18,7 +18,7 @@ third_party_settings:
         - field_publish_date
         - field_unpublish_date
       parent_name: ''
-      weight: 3
+      weight: 2
       format_type: details
       format_settings:
         id: ''
@@ -61,11 +61,7 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  translation:
-    weight: 2
-    region: content
-    settings: {  }
-    third_party_settings: {  }
 hidden:
   langcode: true
+  translation: true
   user_id: true

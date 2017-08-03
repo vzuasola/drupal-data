@@ -19,7 +19,7 @@ function webcomposer_announcements_validate_announcement(&$form, FormStateInterf
 	$publishDate = isset($publish[0]['value']) ? $publish[0]['value']->format('U') : null;
 	$unpublishDate = isset($unpublish[0]['value']) ? $unpublish[0]['value']->format('U') :null;
 
-	if ($unpublishDate < $publishDate) {
+	if ($unpublishDate && $unpublishDate < $publishDate) {
 		$form_state->setErrorByName('field_unpublish_date', t('Unpublish date should be greater than the publish date.'));
 	}
 }
