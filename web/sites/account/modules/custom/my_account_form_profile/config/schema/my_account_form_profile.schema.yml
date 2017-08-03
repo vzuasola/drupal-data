@@ -521,7 +521,7 @@ my_account_form_profile.profile:
                     label: 'Placeholder value for field'
       postal_code_field:
         type: mapping
-        label: 'Address'
+        label: 'Postal Code'
         mapping:
           options:
             type: mapping
@@ -537,10 +537,119 @@ my_account_form_profile.profile:
                   placeholder:
                     type: label
                     label: 'Placeholder value for field'
+      contact_preference_field:
+        type: mapping
+        label: 'Contact Preference'
+        mapping:
+          options:
+            type: mapping
+            label: 'Field label'
+            mapping:
+              label:
+                type: label
+                label: 'Field label'
+    contact_preference_label:
+      type: mapping
+      label: 'Contact Preference header label translation'
+      mapping:
+        options:
+          type: mapping
+          label: 'Field label'
+          mapping:
+            label:
+              type: label
+              label: 'Field label'
+    contact_preference_top_blurb_field:
+      type: text
+      label: 'Contact Preference Top Blurb translation'
+    contact_preference_bottom_blurb_field:
+      type: text
+      label: 'Contact Preference Bottom Blurb translation'             
     save_changes_field:
       type: label
       label: 'Save Changes Button translation'
     cancel_field:
       type: label
       label: 'Cancel Button translation'
+    modal_preview_header_field:
+      type: label
+      label: 'Modal Preview Header Field translation'
+    modal_preview_top_blurb_field:
+      type: text
+      label: 'Modal Preview Top Blurb Field translation'
+    modal_preview_current_label_field:
+      type: label
+      label: 'Modal Preview Current Label Field translation'
+    modal_preview_old_label_field:
+      type: label
+      label: 'Modal Preview Old Label Field translation'
+    modal_preview_bottom_blurb_field:
+      type: text
+      label: 'Modal Preview Bottom Blurb Field translation'
+    modal_preview_placeholder_field:
+      type: label
+      label: 'Modal Preview Placeholder Field translation'
+    modal_preview_btn_field:
+      type: label
+      label: 'Modal Preview Button Field translation'
+    server_side_validation_field:
+      type: label
+      label: 'Server Side Validation Field translation'
+    primary_label_field:
+      type: label
+      label: 'Primary Label Field translation'
+    add_mobile_label_field:
+      type: label
+      label: 'Add Mobile Label Field translation'
+    no_changed_detected_message_field:
+      type: label
+      label: 'No change message translation'
+    required_validation_field:
+      type: label
+      label: 'Required Validation translation'
+    mobile_number_format_validation_field:
+      type: label
+      label: 'Mobile Number Format Validation Message translation'
+    mobile_number_min_length_validation_field:
+      type: label
+      label: 'Mobile number minimum length error message translation'
+    mobile_number_max_length_validation_field:
+      type: label
+      label: 'Mobile number maximum length error message translation'
+    address_max_length_validation_field:
+      type: label
+      label: 'Address maximum length error message translation'
+    address_min_length_validation_field:
+      type: label
+      label: 'Address minimum length error message translation'
+    address_format_validation_field:
+      type: label
+      label: 'Address format error message translation'
+    city_max_length_validation_field:
+      type: label
+      label: 'City maximum length error message translation'
+    city_min_length_validation_field:
+      type: label
+      label: 'City minimum length error message translation'
+    city_format_validation_field:
+      type: label
+      label: 'City format error message translation'
+    postal_code_max_length_validation_field:
+      type: label
+      label: 'Postal Code maximum length error message translation'
+    postal_code_max_length_value_field:
+      type: label
+      label: 'Postal Code maximum length value translation'
+    postal_code_format_validation_field:
+      type: label
+      label: 'Postal Code format error message translation'
+    password_max_length_validation_field:
+      type: label
+      label: 'Password maximum length error message translation'
+    password_min_length_validation_field:
+      type: label
+      label: 'Password minimum length error message translation'
+    password_format_validation_field:
+      type: label
+      label: 'Password format error message translation'
   langcode: 'en'

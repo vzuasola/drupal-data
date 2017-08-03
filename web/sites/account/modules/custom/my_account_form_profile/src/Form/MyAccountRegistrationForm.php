@@ -83,6 +83,20 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#default_value' => $myAccountConfigValue['username_field']['options']['wrapper_class'],
         ];
 
+        $form['field_configuration']['field_labels_user_name']['enable_tooltip'] = [
+            '#type' => 'checkbox',
+            '#title' => $this->t('Enable Tooltip'),
+            '#required' => FALSE,
+            '#default_value' => $myAccountConfigValue['username_field']['options']['attr']['enable_tooltip'],
+        ];
+
+        $form['field_configuration']['field_labels_user_name']['tooltip_blurb'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Tooltip Blurb'),
+            '#required' => FALSE,
+            '#default_value' => $myAccountConfigValue['username_field']['options']['attr']['tooltip_blurb'],
+        ];
+
         $form['field_configuration']['field_labels_currency'] = [
             '#type' => 'details',
             '#title' => 'Currency',
@@ -128,6 +142,20 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#size' => 25,
             '#description' => $this->t('Wrapper class for field.'),
             '#default_value' => $myAccountConfigValue['currency_field']['options']['wrapper_class'],
+        ];
+
+        $form['field_configuration']['field_labels_currency']['enable_tooltip'] = [
+            '#type' => 'checkbox',
+            '#title' => $this->t('Enable Tooltip'),
+            '#required' => FALSE,
+            '#default_value' => $myAccountConfigValue['currency_field']['options']['attr']['enable_tooltip'],
+        ];
+
+        $form['field_configuration']['field_labels_currency']['tooltip_blurb'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Tooltip Blurb'),
+            '#required' => FALSE,
+            '#default_value' => $myAccountConfigValue['currency_field']['options']['attr']['tooltip_blurb'],
         ];
 
         $form['field_configuration']['field_labels_first_name'] = [
@@ -179,6 +207,20 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#default_value' => $myAccountConfigValue['first_name_field']['options']['wrapper_class'],
         ];
 
+        $form['field_configuration']['field_labels_first_name']['enable_tooltip'] = [
+            '#type' => 'checkbox',
+            '#title' => $this->t('Enable Tooltip'),
+            '#required' => FALSE,
+            '#default_value' => $myAccountConfigValue['first_name_field']['options']['attr']['enable_tooltip'],
+        ];
+
+        $form['field_configuration']['field_labels_first_name']['tooltip_blurb'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Tooltip Blurb'),
+            '#required' => FALSE,
+            '#default_value' => $myAccountConfigValue['first_name_field']['options']['attr']['tooltip_blurb'],
+        ];
+
         $form['field_configuration']['field_labels_last_name'] = [
             '#type' => 'details',
             '#title' => 'Last Name',
@@ -226,6 +268,20 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#size' => 25,
             '#description' => $this->t('Wrapper class for field.'),
             '#default_value' => $myAccountConfigValue['last_name_field']['options']['wrapper_class'],
+        ];
+
+        $form['field_configuration']['field_labels_last_name']['enable_tooltip'] = [
+            '#type' => 'checkbox',
+            '#title' => $this->t('Enable Tooltip'),
+            '#required' => FALSE,
+            '#default_value' => $myAccountConfigValue['last_name_field']['options']['attr']['enable_tooltip'],
+        ];
+
+        $form['field_configuration']['field_labels_last_name']['tooltip_blurb'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Tooltip Blurb'),
+            '#required' => FALSE,
+            '#default_value' => $myAccountConfigValue['last_name_field']['options']['attr']['tooltip_blurb'],
         ];
 
         $form['field_configuration']['field_labels_dob'] = [
@@ -282,6 +338,20 @@ class MyAccountRegistrationForm extends ConfigFormBase
                 '7' => '7',
             ],
             '#default_value' => $myAccountConfigValue['dob_month']['weight'],
+        ];
+
+        $form['field_configuration']['field_labels_dob']['enable_tooltip'] = [
+            '#type' => 'checkbox',
+            '#title' => $this->t('Enable Tooltip'),
+            '#required' => FALSE,
+            '#default_value' => $myAccountConfigValue['dob_field']['options']['attr']['enable_tooltip'],
+        ];
+
+        $form['field_configuration']['field_labels_dob']['tooltip_blurb'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Tooltip Blurb'),
+            '#required' => FALSE,
+            '#default_value' => $myAccountConfigValue['dob_field']['options']['attr']['tooltip_blurb'],
         ];
 
         $form['field_configuration']['field_labels_dob']['field_labels_dob_month']['wrapper_class'] = [
@@ -390,6 +460,20 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#default_value' => $myAccountConfigValue['country_field']['options']['wrapper_class'],
         ];
 
+        $form['field_configuration']['field_labels_country']['enable_tooltip'] = [
+            '#type' => 'checkbox',
+            '#title' => $this->t('Enable Tooltip'),
+            '#required' => FALSE,
+            '#default_value' => $myAccountConfigValue['country_field']['options']['attr']['enable_tooltip'],
+        ];
+
+        $form['field_configuration']['field_labels_country']['tooltip_blurb'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Tooltip Blurb'),
+            '#required' => FALSE,
+            '#default_value' => $myAccountConfigValue['country_field']['options']['attr']['tooltip_blurb'],
+        ];
+
         $form['field_configuration']['field_labels_email'] = [
             '#type' => 'details',
             '#title' => 'Email',
@@ -437,6 +521,20 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#default_value' => $myAccountConfigValue['email_field']['options']['wrapper_class'],
         ];
 
+        $form['field_configuration']['field_labels_email']['enable_tooltip'] = [
+            '#type' => 'checkbox',
+            '#title' => $this->t('Enable Tooltip'),
+            '#required' => FALSE,
+            '#default_value' => $myAccountConfigValue['email_field']['options']['attr']['enable_tooltip'],
+        ];
+
+        $form['field_configuration']['field_labels_email']['tooltip_blurb'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Tooltip Blurb'),
+            '#required' => FALSE,
+            '#default_value' => $myAccountConfigValue['email_field']['options']['attr']['tooltip_blurb'],
+        ];
+
         $form['field_configuration']['field_labels_gender'] = [
             '#type' => 'details',
             '#title' => 'Gender',
@@ -467,6 +565,20 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#size' => 25,
             '#description' => $this->t('Wrapper class for field.'),
             '#default_value' => $myAccountConfigValue['gender_field']['options']['wrapper_class'],
+        ];
+
+        $form['field_configuration']['field_labels_gender']['enable_tooltip'] = [
+            '#type' => 'checkbox',
+            '#title' => $this->t('Enable Tooltip'),
+            '#required' => FALSE,
+            '#default_value' => $myAccountConfigValue['gender_field']['options']['attr']['enable_tooltip'],
+        ];
+
+        $form['field_configuration']['field_labels_gender']['tooltip_blurb'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Tooltip Blurb'),
+            '#required' => FALSE,
+            '#default_value' => $myAccountConfigValue['gender_field']['options']['attr']['tooltip_blurb'],
         ];
 
         $form['field_configuration']['field_labels_mobile_number'] = [
@@ -510,6 +622,61 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#default_value' => $myAccountConfigValue['mobile_number_field']['options']['wrapper_class'],
         ];
 
+        $form['field_configuration']['field_labels_mobile_number']['enable_tooltip'] = [
+            '#type' => 'checkbox',
+            '#title' => $this->t('Enable Tooltip'),
+            '#required' => FALSE,
+            '#default_value' => $myAccountConfigValue['mobile_number_field']['options']['attr']['enable_tooltip'],
+        ];
+
+        $form['field_configuration']['field_labels_mobile_number']['tooltip_blurb'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Tooltip Blurb'),
+            '#required' => FALSE,
+            '#default_value' => $myAccountConfigValue['mobile_number_field']['options']['attr']['tooltip_blurb'],
+        ];
+
+        $form['field_configuration']['field_labels_mobile_number_1'] = [
+            '#type' => 'details',
+            '#title' => 'Mobile Number 1',
+            '#open' => false,
+            '#tree' => TRUE,
+        ];
+
+        $form['field_configuration']['field_labels_mobile_number_1']['label'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Label'),
+            '#size' => 25,
+            '#required' => FALSE,
+            '#description' => $this->t('Label for the mobile number 1 Field.'),
+            '#default_value' => $myAccountConfigValue['mobile_number_field_1']['options']['label'],
+        ];
+
+        $form['field_configuration']['field_labels_mobile_number_1']['placeholder'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Placeholder'),
+            '#size' => 25,
+            '#required' => FALSE,
+            '#description' => $this->t('Placeholder for the mobile number Field.'),
+            '#default_value' => $myAccountConfigValue['mobile_number_field_1']['options']['attr']['placeholder'],
+        ];
+
+        $form['field_configuration']['field_labels_mobile_number_1']['weight'] = [
+            '#type' => 'select',
+            '#title' => $this->t('Field Weight'),
+            '#disabled' => TRUE,
+            '#options' => ['12' => '12'],
+            '#default_value' => '12',
+        ];
+
+        $form['field_configuration']['field_labels_mobile_number_1']['wrapper_class'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Mobile no. wrapper class'),
+            '#size' => 25,
+            '#description' => $this->t('Wrapper class for field.'),
+            '#default_value' => $myAccountConfigValue['mobile_number_field_1']['options']['wrapper_class'],
+        ];
+
         $form['field_configuration']['field_labels_language'] = [
             '#type' => 'details',
             '#title' => 'Language',
@@ -545,9 +712,10 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#type' => 'select',
             '#title' => $this->t('Field Weight'),
             '#disabled' => TRUE,
-            '#options' => ['12' => '12'],
+            '#options' => ['13' => '13'],
             '#default_value' => $myAccountConfigValue['language_field']['weight'],
         ];
+
         $form['field_configuration']['field_labels_language']['help_text'] = [
             '#type' => 'textarea',
             '#title' => $this->t('Help text'),
@@ -564,45 +732,18 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#default_value' => $myAccountConfigValue['language_field']['options']['wrapper_class'],
         ];
 
-        $form['field_configuration']['field_labels_mobile_number_1'] = [
-            '#type' => 'details',
-            '#title' => 'Mobile Number 1',
-            '#open' => false,
-            '#tree' => TRUE,
-        ];
-
-        $form['field_configuration']['field_labels_mobile_number_1']['label'] = [
-            '#type' => 'textfield',
-            '#title' => $this->t('Label'),
-            '#size' => 25,
+        $form['field_configuration']['field_labels_language']['enable_tooltip'] = [
+            '#type' => 'checkbox',
+            '#title' => $this->t('Enable Tooltip'),
             '#required' => FALSE,
-            '#description' => $this->t('Label for the mobile number 1 Field.'),
-            '#default_value' => $myAccountConfigValue['mobile_number_field_1']['options']['label'],
+            '#default_value' => $myAccountConfigValue['language_field']['options']['attr']['enable_tooltip'],
         ];
 
-        $form['field_configuration']['field_labels_mobile_number_1']['placeholder'] = [
+        $form['field_configuration']['field_labels_language']['tooltip_blurb'] = [
             '#type' => 'textfield',
-            '#title' => $this->t('Placeholder'),
-            '#size' => 25,
+            '#title' => $this->t('Tooltip Blurb'),
             '#required' => FALSE,
-            '#description' => $this->t('Placeholder for the mobile number Field.'),
-            '#default_value' => $myAccountConfigValue['mobile_number_field_1']['options']['attr']['placeholder'],
-        ];
-
-        $form['field_configuration']['field_labels_mobile_number_1']['weight'] = [
-            '#type' => 'select',
-            '#title' => $this->t('Field Weight'),
-            '#disabled' => TRUE,
-            '#options' => ['13' => '13'],
-            '#default_value' => '13',
-        ];
-
-        $form['field_configuration']['field_labels_mobile_number_1']['wrapper_class'] = [
-            '#type' => 'textfield',
-            '#title' => $this->t('Mobile no. wrapper class'),
-            '#size' => 25,
-            '#description' => $this->t('Wrapper class for field.'),
-            '#default_value' => $myAccountConfigValue['mobile_number_field_1']['options']['wrapper_class'],
+            '#default_value' => $myAccountConfigValue['language_field']['options']['attr']['tooltip_blurb'],
         ];
 
         $form['field_configuration']['field_labels_address'] = [
@@ -645,6 +786,20 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#default_value' => $myAccountConfigValue['address_field']['options']['wrapper_class'],
         ];
 
+        $form['field_configuration']['field_labels_address']['enable_tooltip'] = [
+            '#type' => 'checkbox',
+            '#title' => $this->t('Enable Tooltip'),
+            '#required' => FALSE,
+            '#default_value' => $myAccountConfigValue['address_field']['options']['attr']['enable_tooltip'],
+        ];
+
+        $form['field_configuration']['field_labels_address']['tooltip_blurb'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Tooltip Blurb'),
+            '#required' => FALSE,
+            '#default_value' => $myAccountConfigValue['address_field']['options']['attr']['tooltip_blurb'],
+        ];
+
         $form['field_configuration']['field_labels_city'] = [
             '#type' => 'details',
             '#title' => 'City',
@@ -683,6 +838,20 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#size' => 25,
             '#description' => $this->t('Wrapper class for field.'),
             '#default_value' => $myAccountConfigValue['city_field']['options']['wrapper_class'],
+        ];
+
+        $form['field_configuration']['field_labels_city']['enable_tooltip'] = [
+            '#type' => 'checkbox',
+            '#title' => $this->t('Enable Tooltip'),
+            '#required' => FALSE,
+            '#default_value' => $myAccountConfigValue['city_field']['options']['attr']['enable_tooltip'],
+        ];
+
+        $form['field_configuration']['field_labels_city']['tooltip_blurb'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Tooltip Blurb'),
+            '#required' => FALSE,
+            '#default_value' => $myAccountConfigValue['city_field']['options']['attr']['tooltip_blurb'],
         ];
 
         $form['field_configuration']['field_labels_postal_code'] = [
@@ -725,6 +894,66 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#default_value' => $myAccountConfigValue['postal_code_field']['options']['wrapper_class'],
         ];
 
+        $form['field_configuration']['field_labels_postal_code']['enable_tooltip'] = [
+            '#type' => 'checkbox',
+            '#title' => $this->t('Enable Tooltip'),
+            '#required' => FALSE,
+            '#default_value' => $myAccountConfigValue['postal_code_field']['options']['attr']['enable_tooltip'],
+        ];
+
+        $form['field_configuration']['field_labels_postal_code']['tooltip_blurb'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Tooltip Blurb'),
+            '#required' => FALSE,
+            '#default_value' => $myAccountConfigValue['postal_code_field']['options']['attr']['tooltip_blurb'],
+        ];
+
+        $form['field_configuration']['field_labels_contact_preference'] = [
+            '#type' => 'details',
+            '#title' => 'Contact Preference',
+            '#open' => false,
+            '#tree' => TRUE,
+        ];
+
+        $form['field_configuration']['field_labels_contact_preference']['label'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Label'),
+            '#size' => 25,
+            '#required' => FALSE,
+            '#description' => $this->t('Label for the Contact Preference Field.'),
+            '#default_value' => $myAccountConfigValue['contact_preference_field']['options']['label'],
+        ];
+
+        $form['field_configuration']['field_labels_contact_preference']['weight'] = [
+            '#type' => 'select',
+            '#title' => $this->t('Field Weight'),
+            '#disabled' => TRUE,
+            '#options' => ['17' => '17'],
+            '#default_value' => '17',
+        ];
+
+        $form['field_configuration']['field_labels_contact_preference']['wrapper_class'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Contact Preference wrapper class'),
+            '#size' => 25,
+            '#description' => $this->t('Wrapper class for field.'),
+            '#default_value' => $myAccountConfigValue['contact_preference_field']['options']['wrapper_class'],
+        ];
+
+        $form['field_configuration']['field_labels_contact_preference']['enable_tooltip'] = [
+            '#type' => 'checkbox',
+            '#title' => $this->t('Enable Tooltip'),
+            '#required' => FALSE,
+            '#default_value' => $myAccountConfigValue['contact_preference_field']['options']['attr']['enable_tooltip'],
+        ];
+
+        $form['field_configuration']['field_labels_contact_preference']['tooltip_blurb'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Tooltip Blurb'),
+            '#required' => FALSE,
+            '#default_value' => $myAccountConfigValue['contact_preference_field']['options']['attr']['tooltip_blurb'],
+        ];
+
         $form['field_configuration']['field_labels_account'] = [
             '#type' => 'details',
             '#title' => 'My Profile Header',
@@ -757,6 +986,38 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#required' => TRUE,
             '#description' => $this->t('Label for Home Address'),
             '#default_value' => $myAccountConfigValue['home_address_field']['options']['label'],
+        ];
+
+        $form['field_configuration']['field_labels_account']['contact_preference'] = [
+            '#type' => 'details',
+            '#title' => 'Contact Prefrence',
+            '#open' => False,
+            '#tree' => TRUE,
+        ];
+
+        $form['field_configuration']['field_labels_account']['contact_preference']['contact_preference_label'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Contact Preference'),
+            '#size' => 25,
+            '#required' => TRUE,
+            '#description' => $this->t('Label for Contact Preference'),
+            '#default_value' => $myAccountConfigValue['contact_preference_label']['options']['label'],
+        ];
+
+        $form['field_configuration']['field_labels_account']['contact_preference']['contact_preference_top_blurb'] = [
+            '#type' => 'textarea',
+            '#title' => $this->t('Contact Preference Top Blurb'),
+            '#required' => TRUE,
+            '#description' => $this->t('Top Blurb of  Contact Preference'),
+            '#default_value' => $myAccountConfigValue['contact_preference_top_blurb_field'],
+        ];
+
+        $form['field_configuration']['field_labels_account']['contact_preference']['contact_preference_bottom_blurb'] = [
+            '#type' => 'textarea',
+            '#title' => $this->t('Contact Preference Bottom Blurb'),
+            '#required' => TRUE,
+            '#description' => $this->t('Bottom Blurb of  Contact Preference'),
+            '#default_value' => $myAccountConfigValue['contact_preference_bottom_blurb_field'],
         ];
 
         $form['field_configuration']['field_labels_sms_verification'] = [
@@ -913,6 +1174,252 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#default_value' => $myAccountConfigValue['cancel_field'],
         ];
 
+        $form['field_configuration']['field_labels_modal_preview'] = [
+            '#type' => 'details',
+            '#title' => 'Modal Preview',
+            '#open' => False,
+            '#tree' => TRUE,
+        ];
+
+        $form['field_configuration']['field_labels_modal_preview']['modal_preview_header'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Modal Preview Header'),
+            '#required' => TRUE,
+            '#default_value' => $myAccountConfigValue['modal_preview_header_field'],
+        ];
+
+        $form['field_configuration']['field_labels_modal_preview']['modal_preview_top_blurb'] = [
+            '#type' => 'textarea',
+            '#title' => $this->t('Modal Preview Top Blurb'),
+            '#required' => TRUE,
+            '#default_value' => $myAccountConfigValue['modal_preview_top_blurb_field'],
+        ];
+
+        $form['field_configuration']['field_labels_modal_preview']['modal_preview_current_label'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Modal Preview Current Label'),
+            '#required' => TRUE,
+            '#default_value' => $myAccountConfigValue['modal_preview_current_label_field'],
+        ];
+
+        $form['field_configuration']['field_labels_modal_preview']['modal_preview_old_label'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Modal Preview Old Label'),
+            '#required' => TRUE,
+            '#default_value' => $myAccountConfigValue['modal_preview_old_label_field'],
+        ];
+
+        $form['field_configuration']['field_labels_modal_preview']['modal_preview_bottom_blurb'] = [
+            '#type' => 'textarea',
+            '#title' => $this->t('Modal Preview Bottom Blurb'),
+            '#required' => TRUE,
+            '#default_value' => $myAccountConfigValue['modal_preview_bottom_blurb_field'],
+        ];
+
+        $form['field_configuration']['field_labels_modal_preview']['modal_preview_placeholder'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Modal Preview Password Placeholder'),
+            '#required' => TRUE,
+            '#default_value' => $myAccountConfigValue['modal_preview_placeholder_field'],
+        ];
+
+        $form['field_configuration']['field_labels_modal_preview']['modal_preview_btn'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Modal Preview Button'),
+            '#required' => TRUE,
+            '#default_value' => $myAccountConfigValue['modal_preview_btn_field'],
+        ];
+
+        $form['field_configuration']['field_labels_validation_configuration'] = [
+            '#type' => 'details',
+            '#title' => 'Validation Configuration',
+            '#open' => False,
+            '#tree' => TRUE,
+        ];
+
+        $form['field_configuration']['field_labels_validation_configuration']['server_side_validation'] = [
+            '#type' => 'textarea',
+            '#title' => $this->t('Server-side Validation Mapping'),
+            '#required' => TRUE,
+            '#default_value' => $myAccountConfigValue['server_side_validation_field'],
+        ];
+
+        $form['field_configuration']['field_labels_validation_configuration']['required_validation'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Required Error Message'),
+            '#required' => TRUE,
+            '#default_value' => $myAccountConfigValue['required_validation_field'],
+        ];
+
+        $form['field_configuration']['field_labels_validation_configuration']['mobile_number_validation'] = [
+            '#type' => 'details',
+            '#title' => 'Mobile Number',
+            '#open' => False,
+            '#tree' => TRUE,
+        ];
+
+        $form['field_configuration']['field_labels_validation_configuration']['mobile_number_validation']['mobile_number_format_validation'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Mobile Number Format Error Message'),
+            '#required' => TRUE,
+            '#default_value' => $myAccountConfigValue['mobile_number_format_validation_field'],
+        ];
+
+        $form['field_configuration']['field_labels_validation_configuration']['mobile_number_validation']['mobile_number_min_length_validation'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Mobile Number Min Length Error Message'),
+            '#required' => TRUE,
+            '#default_value' => $myAccountConfigValue['mobile_number_min_length_validation_field'],
+        ];
+
+        $form['field_configuration']['field_labels_validation_configuration']['mobile_number_validation']['mobile_number_max_length_validation'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Mobile Number Max Length Error Message'),
+            '#required' => TRUE,
+            '#default_value' => $myAccountConfigValue['mobile_number_max_length_validation_field'],
+        ];
+
+        $form['field_configuration']['field_labels_validation_configuration']['address_validation'] = [
+            '#type' => 'details',
+            '#title' => 'Address',
+            '#open' => False,
+            '#tree' => TRUE,
+        ];
+
+        $form['field_configuration']['field_labels_validation_configuration']['address_validation']['address_format_validation'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Address Format Error Message'),
+            '#required' => TRUE,
+            '#default_value' => $myAccountConfigValue['address_format_validation_field'],
+        ];
+
+        $form['field_configuration']['field_labels_validation_configuration']['address_validation']['address_min_length_validation'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Address Min Length Error Message'),
+            '#required' => TRUE,
+            '#default_value' => $myAccountConfigValue['address_min_length_validation_field'],
+        ];
+
+        $form['field_configuration']['field_labels_validation_configuration']['address_validation']['address_max_length_validation'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Address Max Length Error Message'),
+            '#required' => TRUE,
+            '#default_value' => $myAccountConfigValue['address_max_length_validation_field'],
+        ];
+
+        $form['field_configuration']['field_labels_validation_configuration']['city_validation'] = [
+            '#type' => 'details',
+            '#title' => 'City',
+            '#open' => False,
+            '#tree' => TRUE,
+        ];
+
+        $form['field_configuration']['field_labels_validation_configuration']['city_validation']['city_format_validation'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('City Format Error Message'),
+            '#required' => TRUE,
+            '#default_value' => $myAccountConfigValue['city_format_validation_field'],
+        ];
+
+        $form['field_configuration']['field_labels_validation_configuration']['city_validation']['city_min_length_validation'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('City Min Length Error Message'),
+            '#required' => TRUE,
+            '#default_value' => $myAccountConfigValue['city_min_length_validation_field'],
+        ];
+
+        $form['field_configuration']['field_labels_validation_configuration']['city_validation']['city_max_length_validation'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('City Max Length Error Message'),
+            '#required' => TRUE,
+            '#default_value' => $myAccountConfigValue['city_max_length_validation_field'],
+        ];
+
+        $form['field_configuration']['field_labels_validation_configuration']['postal_code_validation'] = [
+            '#type' => 'details',
+            '#title' => 'Postal Code',
+            '#open' => False,
+            '#tree' => TRUE,
+        ];
+
+        $form['field_configuration']['field_labels_validation_configuration']['postal_code_validation']['postal_code_format_validation'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Postal Code Format Error Message'),
+            '#required' => TRUE,
+            '#default_value' => $myAccountConfigValue['postal_code_format_validation_field'],
+        ];
+
+        $form['field_configuration']['field_labels_validation_configuration']['postal_code_validation']['postal_code_max_length_value'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Postal Code Max Length Value'),
+            '#required' => TRUE,
+            '#size' => 10,
+            '#default_value' => $myAccountConfigValue['postal_code_max_length_value_field'],
+        ];
+
+        $form['field_configuration']['field_labels_validation_configuration']['postal_code_validation']['postal_code_max_length_validation'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Postal Code Max Length Error Message'),
+            '#required' => TRUE,
+            '#default_value' => $myAccountConfigValue['postal_code_max_length_validation_field'],
+        ];
+
+        $form['field_configuration']['field_labels_validation_configuration']['password_validation'] = [
+            '#type' => 'details',
+            '#title' => 'Password',
+            '#open' => False,
+            '#tree' => TRUE,
+        ];
+
+        $form['field_configuration']['field_labels_validation_configuration']['password_validation']['password_format_validation'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Password Format Error Message'),
+            '#required' => TRUE,
+            '#default_value' => $myAccountConfigValue['password_format_validation_field'],
+        ];
+
+        $form['field_configuration']['field_labels_validation_configuration']['password_validation']['password_min_length_validation'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Password Min Length Error Message'),
+            '#required' => TRUE,
+            '#default_value' => $myAccountConfigValue['password_min_length_validation_field'],
+        ];
+
+        $form['field_configuration']['field_labels_validation_configuration']['password_validation']['password_max_length_validation'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Password Max Length Error Message'),
+            '#required' => TRUE,
+            '#default_value' => $myAccountConfigValue['password_max_length_validation_field'],
+        ];
+
+        $form['field_configuration']['field_labels_generic_configuration'] = [
+            '#type' => 'details',
+            '#title' => 'Generic Configuration',
+            '#open' => False,
+            '#tree' => TRUE,
+        ];
+
+        $form['field_configuration']['field_labels_generic_configuration']['primary_label'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Label for primary mobile number tagging'),
+            '#required' => TRUE,
+            '#default_value' => $myAccountConfigValue['primary_label_field'],
+        ];
+
+        $form['field_configuration']['field_labels_generic_configuration']['add_mobile_label'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Label for adding mobile number link'),
+            '#required' => TRUE,
+            '#default_value' => $myAccountConfigValue['add_mobile_label_field'],
+        ];
+
+        $form['field_configuration']['field_labels_generic_configuration']['no_changed_detected_message'] = [
+            '#type' => 'textarea',
+            '#title' => $this->t('Message if no changed has been detected'),
+            '#required' => TRUE,
+            '#default_value' => $myAccountConfigValue['no_changed_detected_message_field'],
+        ];
+
         $form['actions'] = ['#type' => 'actions'];
         // Add a submit button that handles the submission of the form.
         $form['actions']['submit'] = [
@@ -956,6 +1463,34 @@ class MyAccountRegistrationForm extends ConfigFormBase
         $this->config('my_account_form_profile.profile')
             ->set('username_field.options.label', $configuration['field_labels_user_name']['label'])
             ->set('username_field.options.attr.placeholder', $configuration['field_labels_user_name']['placeholder'])
+            ->set('username_field.options.attr.enable_tooltip', $configuration['field_labels_user_name']['enable_tooltip'])
+            ->set('username_field.options.attr.tooltip_blurb', $configuration['field_labels_user_name']['tooltip_blurb'])
+            ->set('currency_field.options.attr.enable_tooltip', $configuration['field_labels_currency']['enable_tooltip'])
+            ->set('currency_field.options.attr.tooltip_blurb', $configuration['field_labels_currency']['tooltip_blurb'])
+           ->set('first_name_field.options.attr.enable_tooltip', $configuration['field_labels_first_name']['enable_tooltip'])
+            ->set('first_name_field.options.attr.tooltip_blurb', $configuration['field_labels_first_name']['tooltip_blurb'])
+           ->set('last_name_field.options.attr.enable_tooltip', $configuration['field_labels_last_name']['enable_tooltip'])
+            ->set('last_name_field.options.attr.tooltip_blurb', $configuration['field_labels_last_name']['tooltip_blurb'])
+           ->set('dob_field.options.attr.enable_tooltip', $configuration['field_labels_dob']['enable_tooltip'])
+            ->set('dob_field.options.attr.tooltip_blurb', $configuration['field_labels_dob']['tooltip_blurb'])
+           ->set('country_field.options.attr.enable_tooltip', $configuration['field_labels_country']['enable_tooltip'])
+            ->set('country_field.options.attr.tooltip_blurb', $configuration['field_labels_country']['tooltip_blurb'])
+           ->set('email_field.options.attr.enable_tooltip', $configuration['field_labels_email']['enable_tooltip'])
+            ->set('email_field.options.attr.tooltip_blurb', $configuration['field_labels_email']['tooltip_blurb'])
+           ->set('gender_field.options.attr.enable_tooltip', $configuration['field_labels_gender']['enable_tooltip'])
+            ->set('gender_field.options.attr.tooltip_blurb', $configuration['field_labels_gender']['tooltip_blurb'])
+           ->set('mobile_number_field.options.attr.enable_tooltip', $configuration['field_labels_mobile_number']['enable_tooltip'])
+            ->set('mobile_number_field.options.attr.tooltip_blurb', $configuration['field_labels_mobile_number']['tooltip_blurb'])
+           ->set('language_field.options.attr.enable_tooltip', $configuration['field_labels_language']['enable_tooltip'])
+            ->set('language_field.options.attr.tooltip_blurb', $configuration['field_labels_language']['tooltip_blurb'])
+           ->set('address_field.options.attr.enable_tooltip', $configuration['field_labels_address']['enable_tooltip'])
+            ->set('address_field.options.attr.tooltip_blurb', $configuration['field_labels_address']['tooltip_blurb'])
+           ->set('city_field.options.attr.enable_tooltip', $configuration['field_labels_city']['enable_tooltip'])
+            ->set('city_field.options.attr.tooltip_blurb', $configuration['field_labels_city']['tooltip_blurb'])
+           ->set('postal_code_field.options.attr.enable_tooltip', $configuration['field_labels_postal_code']['enable_tooltip'])
+            ->set('postal_code_field.options.attr.tooltip_blurb', $configuration['field_labels_postal_code']['tooltip_blurb'])
+           ->set('contact_preference_field.options.attr.enable_tooltip', $configuration['field_labels_contact_preference']['enable_tooltip'])
+            ->set('contact_preference_field.options.attr.tooltip_blurb', $configuration['field_labels_contact_preference']['tooltip_blurb'])
             ->set('username_field.weight', $configuration['field_labels_user_name']['weight'])
             ->set('dob_month.weight', $configuration['field_labels_dob']['field_labels_dob_month']['weight'])
             ->set('dob_month.options.wrapper_class', $configuration['field_labels_dob']['field_labels_dob_month']['wrapper_class'])
@@ -1022,9 +1557,15 @@ class MyAccountRegistrationForm extends ConfigFormBase
             ->set('postal_code_field.options.attr.placeholder', $configuration['field_labels_postal_code']['placeholder'])
             ->set('postal_code_field.weight', $configuration['field_labels_postal_code']['weight'])
             ->set('postal_code_field.options.wrapper_class', $configuration['field_labels_postal_code']['wrapper_class'])
+            ->set('contact_preference_field.options.label', $configuration['field_labels_contact_preference']['label'])
+            ->set('contact_preference_field.weight', $configuration['field_labels_contact_preference']['weight'])
+            ->set('contact_preference_field.options.wrapper_class', $configuration['field_labels_contact_preference']['wrapper_class'])
             ->set('account_field.options.label', $configuration['field_labels_account']['account_label'])
             ->set('communication_detail_field.options.label', $configuration['field_labels_account']['communication_label'])
             ->set('home_address_field.options.label', $configuration['field_labels_account']['home_address_label'])
+            ->set('contact_preference_label.options.label', $configuration['field_labels_account']['contact_preference']['contact_preference_label'])
+            ->set('contact_preference_top_blurb_field', $configuration['field_labels_account']['contact_preference']['contact_preference_top_blurb'])
+            ->set('contact_preference_bottom_blurb_field', $configuration['field_labels_account']['contact_preference']['contact_preference_bottom_blurb'])
             ->set('enable_sms_verification_field', $configuration['field_labels_sms_verification']['enable_sms_verification'])
             ->set('verify_text_field', $configuration['field_labels_sms_verification']['verify_text'])
             ->set('modal_verify_header_text_field', $configuration['field_labels_sms_verification']['modal_verify_header_text'])
@@ -1040,6 +1581,33 @@ class MyAccountRegistrationForm extends ConfigFormBase
             ->set('country_code_mapping_field', $configuration['field_labels_country_code_mapping']['country_code_mapping'])
             ->set('save_changes_field', $configuration['field_labels_btn_config']['save_changes'])
             ->set('cancel_field', $configuration['field_labels_btn_config']['cancel'])
+            ->set('modal_preview_header_field', $configuration['field_labels_modal_preview']['modal_preview_header'])
+            ->set('modal_preview_top_blurb_field', $configuration['field_labels_modal_preview']['modal_preview_top_blurb'])
+            ->set('modal_preview_current_label_field', $configuration['field_labels_modal_preview']['modal_preview_current_label'])
+            ->set('modal_preview_old_label_field', $configuration['field_labels_modal_preview']['modal_preview_old_label'])
+            ->set('modal_preview_bottom_blurb_field', $configuration['field_labels_modal_preview']['modal_preview_bottom_blurb'])
+            ->set('modal_preview_placeholder_field', $configuration['field_labels_modal_preview']['modal_preview_placeholder'])
+            ->set('modal_preview_btn_field', $configuration['field_labels_modal_preview']['modal_preview_btn'])
+            ->set('server_side_validation_field', $configuration['field_labels_validation_configuration']['server_side_validation'])
+            ->set('required_validation_field', $configuration['field_labels_validation_configuration']['required_validation'])
+            ->set('mobile_number_format_validation_field', $configuration['field_labels_validation_configuration']['mobile_number_validation']['mobile_number_format_validation'])
+            ->set('mobile_number_min_length_validation_field', $configuration['field_labels_validation_configuration']['mobile_number_validation']['mobile_number_min_length_validation'])
+            ->set('mobile_number_max_length_validation_field', $configuration['field_labels_validation_configuration']['mobile_number_validation']['mobile_number_max_length_validation'])
+            ->set('address_max_length_validation_field', $configuration['field_labels_validation_configuration']['address_validation']['address_max_length_validation'])
+            ->set('address_min_length_validation_field', $configuration['field_labels_validation_configuration']['address_validation']['address_min_length_validation'])
+            ->set('address_format_validation_field', $configuration['field_labels_validation_configuration']['address_validation']['address_format_validation'])
+            ->set('city_max_length_validation_field', $configuration['field_labels_validation_configuration']['city_validation']['city_max_length_validation'])
+            ->set('city_min_length_validation_field', $configuration['field_labels_validation_configuration']['city_validation']['city_min_length_validation'])
+            ->set('city_format_validation_field', $configuration['field_labels_validation_configuration']['city_validation']['city_format_validation'])
+            ->set('postal_code_max_length_validation_field', $configuration['field_labels_validation_configuration']['postal_code_validation']['postal_code_max_length_validation'])
+            ->set('postal_code_max_length_value_field', $configuration['field_labels_validation_configuration']['postal_code_validation']['postal_code_max_length_value'])
+            ->set('postal_code_format_validation_field', $configuration['field_labels_validation_configuration']['postal_code_validation']['postal_code_format_validation'])
+            ->set('password_max_length_validation_field', $configuration['field_labels_validation_configuration']['password_validation']['password_max_length_validation'])
+            ->set('password_min_length_validation_field', $configuration['field_labels_validation_configuration']['password_validation']['password_min_length_validation'])
+            ->set('password_format_validation_field', $configuration['field_labels_validation_configuration']['password_validation']['password_format_validation'])
+            ->set('primary_label_field', $configuration['field_labels_generic_configuration']['primary_label'])
+            ->set('add_mobile_label_field', $configuration['field_labels_generic_configuration']['add_mobile_label'])
+            ->set('no_changed_detected_message_field', $configuration['field_labels_generic_configuration']['no_changed_detected_message'])
             ->save();
     }
 

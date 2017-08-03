@@ -39,7 +39,7 @@ last_name_field:
 
 #DOB
 dob_field:
-  weight: 4'
+  weight: '4'
   options:
     label: 'Date of Birth'
     error: 'Error message for dob'
@@ -138,7 +138,7 @@ mobile_number_field:
 
 #mobile
 mobile_number_1_field:
-  weight: '13'
+  weight: '12'
   options:
     label: ''
     attr:
@@ -148,7 +148,7 @@ mobile_number_1_field:
 
 #language
 language_field:
-  weight: '12'
+  weight: '13'
   options:
     label: 'Language'
     attr:
@@ -159,7 +159,7 @@ language_field:
 
 #address
 address_field:
-  weight: '13'
+  weight: '14'
   options:
     label: 'Address'
     attr:
@@ -168,7 +168,7 @@ address_field:
 
 #city
 city_field:
-  weight: '14'
+  weight: '15'
   options:
     label: 'City'
     attr:
@@ -177,7 +177,7 @@ city_field:
 
 #postal_code
 postal_code_field:
-  weight: '15'
+  weight: '16'
   options:
     label: 'Postal Code'
     attr:
@@ -188,3 +188,44 @@ save_changes_field: 'Save Changes'
 cancel_field: 'Cancel'
 country_code_mapping_field: 'PH|+63'
 country_mapping_field: 'Christmas Island|1'
+server_side_validation_field: 'INTERNAL_ERROR|Internal Server Error'
+required_validation_field: 'This is a required field'
+mobile_number_format_validation_field: 'Mobile number format error message'
+mobile_number_min_length_validation_field: 'Mobile number minimum length error message'
+mobile_number_max_length_validation_field: 'Mobile number maximum length error message'
+address_max_length_validation_field: 'Address maximum length error message'
+address_min_length_validation_field: 'Address minimum length error message'
+address_format_validation_field: 'Address format error message'
+city_max_length_validation_field: 'City maximum length error message'
+city_min_length_validation_field: 'City minimum length error message'
+city_format_validation_field: 'City format error message'
+postal_code_max_length_validation_field: 'Postal Code maximum length error message'
+postal_code_max_length_value_field: '10'
+postal_code_format_validation_field: 'Postal Code format error message'
+password_max_length_validation_field: 'Password maximum length error message'
+password_min_length_validation_field: 'Password minimum length error message'
+password_format_validation_field: 'Password format error message'
+primary_label_field: 'Primary'
+add_mobile_label_field: 'Add mobile number'
+no_changed_detected_message_field: 'No changes have been detected'
+contact_preference_top_blurb_field: 'Would you like to get the latest promos, updates and offers'
+contact_preference_bottom_blurb_field: '* By default, all promotions and offers will be sent via email registered.'
+contact_preference_field:
+  weight: '17'
+  options:
+    label: 'Yes, send me the latest promotions, updatesd and offers?'
+    wrapper_class: 'contact_preference'
+contact_preference_label:
+  options:
+    label: 'Contact Preference'
+modal_preview_header_field: 'Save Account Changes'
+modal_preview_top_blurb_field: 'Please review list of changes. Changes may require to provide documents for profile verification.'
+modal_preview_current_label_field: 'Current'
+modal_preview_old_label_field: 'Old'
+modal_preview_bottom_blurb_field: 'Enter your password to save changes to your account'
+modal_preview_placeholder_field: 'Password'
+modal_preview_btn_field: 'Save Changes'
+
+
+
+
