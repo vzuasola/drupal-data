@@ -12,14 +12,14 @@ webcomposer_announcements.announcements_configuration:
 
 # Announcement menu items definition
 entity.announcement_entity.collection:
-  title: 'Announcement Entity list'
+  title: 'Announcement List'
   route_name: entity.announcement_entity.collection
-  description: 'List Announcement entities'
+  description: 'Manage Announcements'
   parent: webcomposer_announcements.admin_settings
-  weight: 100
 
 announcement_entity.admin.structure.settings:
   title: Announcement Entity settings
   description: 'Configure Announcement entities'
   route_name: announcement_entity.settings
   parent: webcomposer_announcements.admin_settings
+  weight: 100
