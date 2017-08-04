@@ -225,7 +225,6 @@ class MyAccountFormResource extends ResourceBase
             unset($values['modal_preview_header_field']);
             unset($values['modal_preview_top_blurb_field']);
             unset($values['modal_preview_current_label_field']);
-            unset($values['modal_preview_old_label_field']);
             unset($values['modal_preview_new_label_field']);
             unset($values['modal_preview_bottom_blurb_field']);
             unset($values['modal_preview_placeholder_field']);
