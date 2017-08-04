@@ -11,3 +11,6 @@ webcomposer_config.promotion_configuration:
     all_text:
       type: label
       label: 'Promotion All Text Configuration'
+    browser_title:
+      type: label
+      label: 'Browser title Configuration'
