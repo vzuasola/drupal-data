@@ -54,6 +54,15 @@ class MyAccountHeaderForm extends ConfigFormBase
             '#default_value' => $myAccountCoreConfig->get('welcome_text')
         ];
 
+        $form['field_configuration']['product_menu_new_tag'] = [
+            '#type' => 'textfield',
+            '#title' => t('New Tag'),
+            '#size' => 255,
+            '#required' => true,
+            '#description' => $this->t('Text for new tag'),
+            '#default_value' => $myAccountCoreConfig->get('product_menu_new_tag')
+        ];
+
         $form['actions'] = ['#type' => 'actions'];
         // Add a submit button that handles the submission of the form.
         $form['actions']['submit'] = [
@@ -96,6 +105,7 @@ class MyAccountHeaderForm extends ConfigFormBase
         $configuration = $form_state->getValue('field_configuration');
         $this->config('my_account_core.header')
             ->set('welcome_text', $configuration['welcome_text'])
+            ->set('product_menu_new_tag', $configuration['product_menu_new_tag'])
             ->save();
     }
 

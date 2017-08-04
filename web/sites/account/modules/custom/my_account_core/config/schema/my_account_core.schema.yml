@@ -31,4 +31,7 @@ my_account_core.header:
     welcome_text:
       type: label
       label: 'Welcome Text'
+    product_menu_new_tag:
+      type: label
+      label: 'New Tag Text'
   langcode: 'en'
