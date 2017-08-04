@@ -131,11 +131,14 @@ my_account_form_profile.profile:
               label: 'Error message'
             attr:
               type: mapping
-              label: 'Placeholder value for field'
+              label: 'Attributes Fields'
               mapping:
                 placeholder:
                   type: label
                   label: 'Placeholder value for field'
+                tooltip_blurb:
+                  type: label
+                  label: 'Tooltip Blurb'
     currency_field:
       type: mapping
       label: 'Currency'
@@ -152,11 +155,14 @@ my_account_form_profile.profile:
               label: 'Error message'
             attr:
               type: mapping
-              label: 'Placeholder value for field'
+              label: 'Attributes Fields'
               mapping:
                 placeholder:
                   type: label
                   label: 'Placeholder value for field'
+                tooltip_blurb:
+                  type: label
+                  label: 'Tooltip Blurb'
     first_name_field:
       type: mapping
       label: 'First Name'
@@ -176,11 +182,14 @@ my_account_form_profile.profile:
               label: 'Error message'
             attr:
               type: mapping
-              label: 'Placeholder value for field'
+              label: 'Attributes Fields'
               mapping:
                 placeholder:
                   type: label
                   label: 'Placeholder value for field'
+                tooltip_blurb:
+                  type: label
+                  label: 'Tooltip Blurb'
     last_name_field:
       type: mapping
       label: 'Last Name'
@@ -200,11 +209,14 @@ my_account_form_profile.profile:
               label: 'Error message'
             attr:
               type: mapping
-              label: 'Placeholder value for field'
+              label: 'Attributes fields'
               mapping:
                 placeholder:
                   type: label
                   label: 'Placeholder value for field'
+                tooltip_blurb:
+                  type: label
+                  label: 'Tooltip Blurb'
     dob_field:
       type: mapping
       label: 'DOB'
@@ -221,11 +233,14 @@ my_account_form_profile.profile:
               label: 'Error message'
             attr:
               type: mapping
-              label: 'Placeholder value for field'
+              label: 'Attributes Fields'
               mapping:
                 placeholder:
                   type: label
                   label: 'Placeholder value for field'
+                tooltip_blurb:
+                  type: label
+                  label: 'Tooltip Blurb'
     dob_month:
       type: mapping
       label: 'DOB Month Weight'
@@ -263,11 +278,14 @@ my_account_form_profile.profile:
               label: 'Error message'
             attr:
               type: mapping
-              label: 'Placeholder value for field'
+              label: 'Attributes Fields'
               mapping:
                 placeholder:
                   type: label
                   label: 'Placeholder value for field'
+                tooltip_blurb:
+                  type: label
+                  label: 'Tooltip Blurb'
     email_field:
       type: mapping
       label: 'Email'
@@ -284,11 +302,14 @@ my_account_form_profile.profile:
               label: 'Error message'
             attr:
               type: mapping
-              label: 'Placeholder value for field'
+              label: 'Attributes Fields'
               mapping:
                 placeholder:
                   type: label
                   label: 'Placeholder value for field'
+                tooltip_blurb:
+                  type: label
+                  label: 'Tooltip Blurb'
     gender_field:
       type: mapping
       label: 'Gender'
@@ -300,6 +321,13 @@ my_account_form_profile.profile:
             label:
               type: label
               label: 'Field label'
+              attr:
+                type: mapping
+                label: 'Attributes Fields'
+                mapping:
+                  tooltip_blurb:
+                    type: label
+                    label: 'Tooltip Blurb'
     address_field:
       type: mapping
       label: 'Address field'
@@ -313,11 +341,14 @@ my_account_form_profile.profile:
               label: 'Field label'
             attr:
               type: mapping
-              label: 'Placeholder value for field'
+              label: 'Attributes Fields'
               mapping:
                 placeholder:
                   type: label
                   label: 'Placeholder value for field'
+                tooltip_blurb:
+                  type: label
+                  label: 'Tooltip Blurb'
     city_field:
       type: mapping
       label: 'City field'
@@ -331,11 +362,14 @@ my_account_form_profile.profile:
               label: 'Field label'
             attr:
               type: mapping
-              label: 'Placeholder value for field'
+              label: 'Attributes Fields'
               mapping:
                 placeholder:
                   type: label
                   label: 'Placeholder value for field'
+                tooltip_blurb:
+                  type: label
+                  label: 'Tooltip Blurb'
     postal_code_field:
       type: mapping
       label: 'Postal Code field'
@@ -349,11 +383,14 @@ my_account_form_profile.profile:
               label: 'Field label'
             attr:
               type: mapping
-              label: 'Placeholder value for field'
+              label: 'Attributes Fields'
               mapping:
                 placeholder:
                   type: label
                   label: 'Placeholder value for field'
+                tooltip_blurb:
+                  type: label
+                  label: 'Tooltip Blurb'
     communication_detail_field:
       type: mapping
       label: 'Communication header label translation'
@@ -436,32 +473,14 @@ my_account_form_profile.profile:
               label: 'Error message'
             attr:
               type: mapping
-              label: 'Placeholder value for field'
+              label: 'Attributes Fields'
               mapping:
                 placeholder:
                   type: label
                   label: 'Placeholder value for field'
-    mobile_number_1_field:
-      type: mapping
-      label: ''
-      mapping:
-        options:
-          type: mapping
-          label: 'Field label'
-          mapping:
-            label:
-              type: label
-              label: 'Field label'
-            error:
-              type: label
-              label: 'Error message'
-            attr:
-              type: mapping
-              label: 'Placeholder value for field'
-              mapping:
-                placeholder:
+                tooltip_blurb:
                   type: label
-                  label: 'Placeholder value for field'
+                  label: 'Tooltip Blurb'
     language_field:
       type: mapping
       label: 'Language'
@@ -478,65 +497,14 @@ my_account_form_profile.profile:
               label: 'Error message'
             attr:
               type: mapping
-              label: 'Placeholder value for field'
+              label: 'Attributes Fields'
               mapping:
                 placeholder:
                   type: label
                   label: 'Placeholder value for field'
-      address_field:
-      type: mapping
-      label: 'Address'
-      mapping:
-        options:
-          type: mapping
-          label: 'Field label'
-          mapping:
-            label:
-              type: label
-              label: 'Field label'
-            attr:
-              type: mapping
-              label: 'Placeholder value for field'
-              mapping:
-                placeholder:
+                tooltip_blurb:
                   type: label
-                  label: 'Placeholder value for field'
-      city_field:
-        type: mapping
-        label: 'City'
-        mapping:
-          options:
-            type: mapping
-            label: 'Field label'
-            mapping:
-              label:
-                type: label
-                label: 'Field label'
-              attr:
-                type: mapping
-                label: 'Placeholder value for field'
-                mapping:
-                  placeholder:
-                    type: label
-                    label: 'Placeholder value for field'
-      postal_code_field:
-        type: mapping
-        label: 'Postal Code'
-        mapping:
-          options:
-            type: mapping
-            label: 'Field label'
-            mapping:
-              label:
-                type: label
-                label: 'Field label'
-              attr:
-                type: mapping
-                label: 'Placeholder value for field'
-                mapping:
-                  placeholder:
-                    type: label
-                    label: 'Placeholder value for field'
+                  label: 'Tooltip Blurb'
       contact_preference_field:
         type: mapping
         label: 'Contact Preference'
@@ -548,6 +516,13 @@ my_account_form_profile.profile:
               label:
                 type: label
                 label: 'Field label'
+              attr:
+                type: mapping
+                label: 'Attributes Fields'
+                mapping:
+                  tooltip_blurb:
+                    type: label
+                    label: 'Tooltip Blurb'
     contact_preference_label:
       type: mapping
       label: 'Contact Preference header label translation'
@@ -580,9 +555,9 @@ my_account_form_profile.profile:
     modal_preview_current_label_field:
       type: label
       label: 'Modal Preview Current Label Field translation'
-    modal_preview_old_label_field:
+    modal_preview_new_label_field:
       type: label
-      label: 'Modal Preview Old Label Field translation'
+      label: 'Modal Preview New Label Field translation'
     modal_preview_bottom_blurb_field:
       type: text
       label: 'Modal Preview Bottom Blurb Field translation'
@@ -593,7 +568,7 @@ my_account_form_profile.profile:
       type: label
       label: 'Modal Preview Button Field translation'
     server_side_validation_field:
-      type: label
+      type: text
       label: 'Server Side Validation Field translation'
     primary_label_field:
       type: label
@@ -652,4 +627,10 @@ my_account_form_profile.profile:
     password_format_validation_field:
       type: label
       label: 'Password format error message translation'
+    contact_preference_yes_label_field:
+      type: label
+      label: 'True translation'
+    contact_preference_no_label_field:
+      type: label
+      label: 'False translation'
   langcode: 'en'
