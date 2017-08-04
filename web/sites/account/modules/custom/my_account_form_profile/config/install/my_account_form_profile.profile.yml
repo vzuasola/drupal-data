@@ -221,10 +221,12 @@ contact_preference_label:
 modal_preview_header_field: 'Save Account Changes'
 modal_preview_top_blurb_field: 'Please review list of changes. Changes may require to provide documents for profile verification.'
 modal_preview_current_label_field: 'Current'
-modal_preview_old_label_field: 'Old'
+modal_preview_new_label_field: 'New'
 modal_preview_bottom_blurb_field: 'Enter your password to save changes to your account'
 modal_preview_placeholder_field: 'Password'
 modal_preview_btn_field: 'Save Changes'
+contact_preference_yes_label_field: 'Yes'
+contact_preference_no_label_field: 'No'
 
 
 

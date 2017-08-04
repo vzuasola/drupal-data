@@ -1020,6 +1020,20 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#default_value' => $myAccountConfigValue['contact_preference_bottom_blurb_field'],
         ];
 
+        $form['field_configuration']['field_labels_account']['contact_preference']['contact_preference_yes_label'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Contact Preference True Label'),
+            '#required' => TRUE,
+            '#default_value' => $myAccountConfigValue['contact_preference_yes_label_field'],
+        ];
+
+        $form['field_configuration']['field_labels_account']['contact_preference']['contact_preference_no_label'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Contact Preference False Label'),
+            '#required' => TRUE,
+            '#default_value' => $myAccountConfigValue['contact_preference_no_label_field'],
+        ];
+
         $form['field_configuration']['field_labels_sms_verification'] = [
             '#type' => 'details',
             '#title' => 'SMS Verification',
@@ -1202,11 +1216,11 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#default_value' => $myAccountConfigValue['modal_preview_current_label_field'],
         ];
 
-        $form['field_configuration']['field_labels_modal_preview']['modal_preview_old_label'] = [
+        $form['field_configuration']['field_labels_modal_preview']['modal_preview_new_label'] = [
             '#type' => 'textfield',
-            '#title' => $this->t('Modal Preview Old Label'),
+            '#title' => $this->t('Modal Preview New Label'),
             '#required' => TRUE,
-            '#default_value' => $myAccountConfigValue['modal_preview_old_label_field'],
+            '#default_value' => $myAccountConfigValue['modal_preview_new_label_field'],
         ];
 
         $form['field_configuration']['field_labels_modal_preview']['modal_preview_bottom_blurb'] = [
@@ -1566,6 +1580,8 @@ class MyAccountRegistrationForm extends ConfigFormBase
             ->set('contact_preference_label.options.label', $configuration['field_labels_account']['contact_preference']['contact_preference_label'])
             ->set('contact_preference_top_blurb_field', $configuration['field_labels_account']['contact_preference']['contact_preference_top_blurb'])
             ->set('contact_preference_bottom_blurb_field', $configuration['field_labels_account']['contact_preference']['contact_preference_bottom_blurb'])
+            ->set('contact_preference_yes_label_field', $configuration['field_labels_account']['contact_preference']['contact_preference_yes_label'])
+            ->set('contact_preference_no_label_field', $configuration['field_labels_account']['contact_preference']['contact_preference_no_label'])
             ->set('enable_sms_verification_field', $configuration['field_labels_sms_verification']['enable_sms_verification'])
             ->set('verify_text_field', $configuration['field_labels_sms_verification']['verify_text'])
             ->set('modal_verify_header_text_field', $configuration['field_labels_sms_verification']['modal_verify_header_text'])
@@ -1584,7 +1600,7 @@ class MyAccountRegistrationForm extends ConfigFormBase
             ->set('modal_preview_header_field', $configuration['field_labels_modal_preview']['modal_preview_header'])
             ->set('modal_preview_top_blurb_field', $configuration['field_labels_modal_preview']['modal_preview_top_blurb'])
             ->set('modal_preview_current_label_field', $configuration['field_labels_modal_preview']['modal_preview_current_label'])
-            ->set('modal_preview_old_label_field', $configuration['field_labels_modal_preview']['modal_preview_old_label'])
+            ->set('modal_preview_new_label_field', $configuration['field_labels_modal_preview']['modal_preview_new_label'])
             ->set('modal_preview_bottom_blurb_field', $configuration['field_labels_modal_preview']['modal_preview_bottom_blurb'])
             ->set('modal_preview_placeholder_field', $configuration['field_labels_modal_preview']['modal_preview_placeholder'])
             ->set('modal_preview_btn_field', $configuration['field_labels_modal_preview']['modal_preview_btn'])

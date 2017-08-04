@@ -226,6 +226,7 @@ class MyAccountFormResource extends ResourceBase
             unset($values['modal_preview_top_blurb_field']);
             unset($values['modal_preview_current_label_field']);
             unset($values['modal_preview_old_label_field']);
+            unset($values['modal_preview_new_label_field']);
             unset($values['modal_preview_bottom_blurb_field']);
             unset($values['modal_preview_placeholder_field']);
             unset($values['modal_preview_btn_field']);
@@ -250,6 +251,8 @@ class MyAccountFormResource extends ResourceBase
             unset($values['password_format_validation_field']);
             unset($values['password_min_length_validation_field']);
             unset($values['password_max_length_validation_field']);
+            unset($values['contact_preference_yes_label_field']);
+            unset($values['contact_preference_no_label_field']);
 
             $value = $values;
         } elseif ($key == 'sms_verification') {
@@ -275,7 +278,7 @@ class MyAccountFormResource extends ResourceBase
             $value['modal_preview_header'] = $values['modal_preview_header_field'];
             $value['modal_preview_top_blurb'] = $values['modal_preview_top_blurb_field'];
             $value['modal_preview_current_label'] = $values['modal_preview_current_label_field'];
-            $value['modal_preview_old_label'] = $values['modal_preview_old_label_field'];
+            $value['modal_preview_new_label'] = $values['modal_preview_new_label_field'];
             $value['modal_preview_bottom_blurb'] = $values['modal_preview_bottom_blurb_field'];
             $value['modal_preview_placeholder'] = $values['modal_preview_placeholder_field'];
             $value['modal_preview_btn'] = $values['modal_preview_btn_field'];
@@ -306,6 +309,9 @@ class MyAccountFormResource extends ResourceBase
             $value['address_label'] = $values['address_field']['options']['label'];
             $value['city_label'] = $values['city_field']['options']['label'];
             $value['postal_code_label'] = $values['postal_code_field']['options']['label'];
+            $value['contact_preference_label'] = $values['contact_preference_field']['options']['label'];
+            $value['contact_preference_yes'] = $values['contact_preference_yes_label_field'];
+            $value['contact_preference_no'] = $values['contact_preference_no_label_field'];
         } elseif ($key == 'myprofile_general_configuration') {
             $value['primary_label'] = $values['primary_label_field'];
             $value['add_mobile_label'] = $values['add_mobile_label_field'];
