@@ -34,6 +34,15 @@ class PromotionConfigurationForm extends ConfigFormBase {
   public function buildForm(array $form, FormStateInterface $form_state) {
     $config = $this->config('webcomposer_config.promotion_configuration');
 
+    $form['browser_title'] = array(
+      '#type' => 'textfield',
+      '#title' => $this->t('Browser Tab Title'),
+      '#description' => $this->t('The Title on browser tab.'),
+      '#maxlength' => 64,
+      '#size' => 64,
+      '#default_value' => $config->get('browser_title'),
+    );
+
     $form['read_more'] = array(
       '#type' => 'textfield',
       '#title' => $this->t('Read More Text'),
@@ -81,6 +90,7 @@ class PromotionConfigurationForm extends ConfigFormBase {
       'read_more',
       'countdown',
       'all_text',
+      'browser_title',
     );
 
     foreach ($keys as $key) {
