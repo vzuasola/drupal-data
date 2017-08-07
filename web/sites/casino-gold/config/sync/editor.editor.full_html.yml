@@ -38,7 +38,7 @@ settings:
           name: Media
           items:
             - Blockquote
-            - DrupalImage
+            - ImceImage
             - HorizontalRule
         -
           name: 'Block Formatting'
