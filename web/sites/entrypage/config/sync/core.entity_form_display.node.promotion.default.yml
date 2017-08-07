@@ -250,10 +250,9 @@ content:
     region: content
   field_ribbon_background_color:
     weight: 82
-    settings:
-      default_colors: '#9F0101, #B3490E, #1C6CC7, #AB1616, #1843C1, #558D0B, #8E0749, #B7870D, #05895A, #4E2292, #007983, #711E83, #01711B, #315A00, #012C5B, #013947, #C82201, #AD8A2F, #0132BF, #00BD2F, #8600A4, #360484, #4B0001, #0A463A, #005088, #90902E, #00C4C4, #724B73, #FFE000, #AF0000, #FFFFFF, #e6e7e8, #D3D3D3, #5E5E5E, #373737'
+    settings: {  }
     third_party_settings: {  }
-    type: color_field_widget_box
+    type: color_field_widget_html5
     region: content
   field_ribbon_label:
     weight: 80
@@ -325,10 +324,9 @@ content:
     region: content
   field_text_color:
     weight: 81
-    settings:
-      default_colors: '#9F0101, #B3490E, #1C6CC7, #AB1616, #1843C1, #558D0B, #8E0749, #B7870D, #05895A, #4E2292, #007983, #711E83, #01711B, #315A00, #012C5B, #013947, #C82201, #AD8A2F, #0132BF, #00BD2F, #8600A4, #360484, #4B0001, #0A463A, #005088, #90902E, #00C4C4, #724B73, #FFE000, #AF0000, #FFFFFF, #e6e7e8, #D3D3D3, #5E5E5E, #373737'
+    settings: {  }
     third_party_settings: {  }
-    type: color_field_widget_box
+    type: color_field_widget_html5
     region: content
   field_thumbnail_image:
     weight: 55
