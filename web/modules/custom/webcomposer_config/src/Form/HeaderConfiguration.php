@@ -290,6 +290,7 @@ class HeaderConfiguration extends ConfigFormBase {
       'sc_lang_text',
       'ch_lang_text',
       'balance_error_text',
+      'balance_error_text_product',
       'balance_label_mapping',
       'lobby_page_title',
       'profile_icon_hover_text',
