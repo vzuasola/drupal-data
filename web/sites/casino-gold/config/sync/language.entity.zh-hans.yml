@@ -1,7 +1,13 @@
 uuid: 5ca863c3-1ef6-4360-9475-740aea993b31
 langcode: zh-hans
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - webcomposer_language_hierarchy
+third_party_settings:
+  webcomposer_language_hierarchy:
+    webcomposer_fallback_langcode: site_default_language
+    webcomposer_language_custom_label: 简体中文
 id: zh-hans
 label: 'Chinese, Simplified'
 direction: ltr

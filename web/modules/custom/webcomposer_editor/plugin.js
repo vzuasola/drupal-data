@@ -271,6 +271,31 @@
                     command: 'unlink'
                 });
                 CKEDITOR.dialog.add( 'link', this.path + 'js/dialogs/link.js' );
+            },
+            afterInit: function(editor) {
+                var dataProcessor = editor.dataProcessor,
+                    htmlFilter = dataProcessor && dataProcessor.htmlFilter;
+
+                if (htmlFilter) {
+                    htmlFilter.addRules({
+                        elements: {
+                            $: function (element) {
+                                element.forEach(function(node) {
+                                    if (node.name == 'img' && typeof node.attributes['draggable'] === 'undefined') {
+                                        var src = node.attributes['src'];
+                                        // remove publich path
+                                        var inlineSrc = src.replace(editor.config.publicPath, '');
+                                        // trim slashes
+                                        inlineSrc = inlineSrc ? inlineSrc.replace(/^\/+|\/+$/g, '') : null;
+                                        // add attribute to image
+                                        node.attributes['inline-src'] = inlineSrc;
+                                    }
+                                });
+                                return element;
+                            }
+                        }
+                    });
+                }
             }
         }
     );
