@@ -448,8 +448,8 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#type' => 'select',
             '#title' => $this->t('Field Weight'),
             '#disabled' => TRUE,
-            '#options' => ['8' => '8'],
-            '#default_value' => $myAccountConfigValue['country_field']['weight'],
+            '#options' => ['9' => '9'],
+            '#default_value' => '9',
         ];
 
         $form['field_configuration']['field_labels_country']['wrapper_class'] = [
@@ -509,8 +509,8 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#type' => 'select',
             '#title' => $this->t('Field Weight'),
             '#disabled' => TRUE,
-            '#options' => ['9' => '9'],
-            '#default_value' => $myAccountConfigValue['email_field']['weight'],
+            '#options' => ['8' => '8'],
+            '#default_value' => '8',
         ];
 
         $form['field_configuration']['field_labels_email']['wrapper_class'] = [
