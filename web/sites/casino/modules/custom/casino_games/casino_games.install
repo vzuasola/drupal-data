@@ -1,0 +1,44 @@
+<?php
+
+
+/**
+ * Implements hook_uninstall
+ */
+function casino_games_uninstall() {
+   	$keys = [
+		'core.base_field_override.node.game.promote',
+		'core.entity_form_display.node.game.default',
+		'core.entity_view_display.node.game.default',
+		'core.entity_view_display.node.game.teaser',
+		'field.field.node.game.body',
+		'field.field.node.game.field_game_image',
+		'field.field.node.game.field_game_info_toggle',
+		'field.field.node.game.field_game_info',
+		'field.storage.node.field_game_image',
+		'field.storage.node.field_game_info_toggle',
+		'field.storage.node.field_game_info',
+		'language.content_settings.node.game',
+		'node.type.game',
+		'views.view.games_listing',
+    ];
+
+    foreach ($keys as $key) {
+  		\Drupal::configFactory()->getEditable($key)->delete();
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

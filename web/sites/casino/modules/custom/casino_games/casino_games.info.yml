@@ -1,0 +1,9 @@
+name: Casino Games
+type: module
+description: My Awesome Module
+core: 8.x
+package: Custom
+dependencies:
+  - scheduler
+  - draggableviews
+  - conditional_fields
