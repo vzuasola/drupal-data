@@ -1,6 +1,7 @@
 <?php
 
 use Drupal\Core\Site\Settings;
+use Drupal\Core\StreamWrapper\PublicStream;
 
 function webcomposer_editor_editor_js_settings_alter(&$settings) {
     $prefixes = \Drupal::config('language.negotiation')->get('url.prefixes');
@@ -11,6 +12,7 @@ function webcomposer_editor_editor_js_settings_alter(&$settings) {
 
     $prefix = Settings::get('primary_site_prefix');
     $siteFolder = basename(str_replace('/files', '', \Drupal::service('file_system')->realpath("public://")));
+    $publicPath = PublicStream::basePath();
 
     foreach (array_keys($settings['editor']['formats']) as $text_format_id) {
         if ($settings['editor']['formats'][$text_format_id]['editor'] === 'ckeditor') {
@@ -26,6 +28,7 @@ function webcomposer_editor_editor_js_settings_alter(&$settings) {
 
             $siteName = $prefix ?? $siteFolder;
             $settings['editor']['formats'][$text_format_id]['editorSettings']['site'] = $siteName;
+            $settings['editor']['formats'][$text_format_id]['editorSettings']['publicPath'] = $publicPath;
         }
     }
 }
