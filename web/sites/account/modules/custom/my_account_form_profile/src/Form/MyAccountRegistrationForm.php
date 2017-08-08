@@ -649,7 +649,7 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#size' => 25,
             '#required' => FALSE,
             '#description' => $this->t('Label for the mobile number 1 Field.'),
-            '#default_value' => $myAccountConfigValue['mobile_number_field_1']['options']['label'],
+            '#default_value' => $myAccountConfigValue['mobile_number_1_field']['options']['label'],
         ];
 
         $form['field_configuration']['field_labels_mobile_number_1']['placeholder'] = [
@@ -658,7 +658,7 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#size' => 25,
             '#required' => FALSE,
             '#description' => $this->t('Placeholder for the mobile number Field.'),
-            '#default_value' => $myAccountConfigValue['mobile_number_field_1']['options']['attr']['placeholder'],
+            '#default_value' => $myAccountConfigValue['mobile_number_1_field']['options']['attr']['placeholder'],
         ];
 
         $form['field_configuration']['field_labels_mobile_number_1']['weight'] = [
@@ -674,7 +674,7 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#title' => $this->t('Mobile no. wrapper class'),
             '#size' => 25,
             '#description' => $this->t('Wrapper class for field.'),
-            '#default_value' => $myAccountConfigValue['mobile_number_field_1']['options']['wrapper_class'],
+            '#default_value' => $myAccountConfigValue['mobile_number_1_field']['options']['wrapper_class'],
         ];
 
         $form['field_configuration']['field_labels_language'] = [
