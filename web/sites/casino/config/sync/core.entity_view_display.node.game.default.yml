@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.game.field_game_image
     - field.field.node.game.field_game_info
     - field.field.node.game.field_game_info_toggle
+    - field.field.node.game.field_game_title
     - node.type.game
   module:
     - image
@@ -51,6 +52,13 @@ content:
       format_custom_true: ''
     third_party_settings: {  }
     type: boolean
+    region: content
+  field_game_title:
+    weight: 105
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
     region: content
   links:
     weight: 100

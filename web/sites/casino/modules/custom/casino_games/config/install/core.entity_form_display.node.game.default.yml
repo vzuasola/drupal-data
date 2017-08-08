@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.game.field_game_image
     - field.field.node.game.field_game_info
     - field.field.node.game.field_game_info_toggle
+    - field.field.node.game.field_game_title
     - image.style.thumbnail
     - node.type.game
   module:
@@ -23,7 +24,7 @@ third_party_settings:
         - field_game_info_toggle
         - field_game_info
       parent_name: ''
-      weight: 7
+      weight: 8
       format_type: details
       format_settings:
         label: 'Game Information'
@@ -40,7 +41,7 @@ bundle: game
 mode: default
 content:
   field_game_image:
-    weight: 6
+    weight: 7
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -79,40 +80,48 @@ content:
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
+  field_game_title:
+    weight: 1
+    settings:
+      rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
   langcode:
     type: language_select
-    weight: 1
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
   path:
     type: path
-    weight: 3
+    weight: 4
     settings: {  }
     third_party_settings: {  }
     region: content
   publish_on:
     type: datetime_timestamp_no_default
-    weight: 4
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
   scheduler_settings:
-    weight: 2
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }
   title:
     type: string_textfield
     weight: 0
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    region: content
   unpublish_on:
     type: datetime_timestamp_no_default
-    weight: 5
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
