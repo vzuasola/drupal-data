@@ -90,11 +90,9 @@
             continue;
           }
           File = selection[i];
-        var inlineSrcPath = File.getUrl().replace('/sites/entrypage/files/', '/'); 
           // Image
           if (is_img && File.width) {
-            lines.push('<img src="' + File.getUrl() + '" width="' + File.width + '" height="' + File.height + '" alt="' + File.formatName() + '" inline-src="' + inlineSrcPath + '" />');
-
+            lines.push('<img src="' + File.getUrl() + '" width="' + File.width + '" height="' + File.height + '" alt="' + File.formatName() + '" />');
           }
           // Link
           else {
