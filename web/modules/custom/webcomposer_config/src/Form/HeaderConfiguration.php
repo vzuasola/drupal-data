@@ -116,11 +116,20 @@ class HeaderConfiguration extends ConfigFormBase {
       '#required' => TRUE,
     );
 
+    $form['balance_group']['balance_error_text_product'] = array(
+      '#type' => 'textfield',
+      '#title' => $this->t('Product Balance Error Message'),
+      '#description' => $this->t('Error message for the per product balance'),
+      '#default_value' => $config->get('balance_error_text_product'),
+      '#required' => TRUE,
+    );
+
     $form['balance_group']['balance_label_mapping'] = array(
       '#type' => 'textarea',
       '#title' => $this->t('Balances label mapping'),
       '#description' => $this->t('Labels and ordering for the balance breakdown'),
-      '#default_value' => $config->get('balance_label_mapping')
+      '#default_value' => $config->get('balance_label_mapping'),
+      '#required' => TRUE
     );
 
     $form['newtag_group'] = array(
@@ -281,6 +290,7 @@ class HeaderConfiguration extends ConfigFormBase {
       'sc_lang_text',
       'ch_lang_text',
       'balance_error_text',
+      'balance_error_text_product',
       'balance_label_mapping',
       'lobby_page_title',
       'profile_icon_hover_text',
