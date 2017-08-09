@@ -15,3 +15,11 @@ casino_games.list.games:
   parent: casino_games.admin_settings
   description: 'Manage Games'
   route_name: casino_games.list.games
+
+casino_games.list.categories:
+  title: 'List Game Categories'
+  parent: casino_games.admin_settings
+  description: 'Manage Game Categories'
+  route_name: entity.taxonomy_vocabulary.overview_form
+  route_parameters:
+    taxonomy_vocabulary: 'games_category'

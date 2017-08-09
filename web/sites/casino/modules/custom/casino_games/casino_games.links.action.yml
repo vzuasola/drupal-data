@@ -1,7 +1,10 @@
-game.add_form:
-  route_name: 'node.add'
-  title: 'Add Game'
-  route_parameters:
-    node_type: 'game'
-  appears_on:
-      - entity.node.collection
+# game.add_form:
+#   route_name: 'entity.taxonomy_term.add_form'
+#   title: 'Add Category'
+#   route_parameters:
+#     taxonomy_vocabulary: 'games_category'
+#   options:
+#     query:
+#       destination: '/admin/config/game/categories'
+#   appears_on:
+#       - casino_games.list.categories
