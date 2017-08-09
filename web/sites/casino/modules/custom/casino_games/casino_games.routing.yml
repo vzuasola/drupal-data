@@ -14,14 +14,6 @@ casino_games.list.games:
   requirements:
     _permission: 'administer site configuration'
 
-# casino_games.list.categories:
-#   path: 'admin/config/game/categories'
-#   defaults:
-#     _controller: '\Drupal\casino_games\Controller\GamesController::getList'
-#     _title: 'Manage Game Categories'
-#   requirements:
-#     _permission: 'administer site configuration'
-
 casino_games.games_configuration:
   path: 'admin/config/webcomposer/games/config'
   defaults:
