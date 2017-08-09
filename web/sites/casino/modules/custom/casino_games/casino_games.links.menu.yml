@@ -1,0 +1,17 @@
+casino_games.admin_settings:
+  title: 'Casino Games Configuration'
+  description: 'Provides an interface for managing games.'
+  parent: system.admin_config
+  route_name: casino_games.admin_settings
+
+casino_games.games_configuration:
+  title: 'Configure Games'
+  route_name: casino_games.games_configuration
+  description: 'Configure the Games'
+  parent: casino_games.admin_settings
+
+casino_games.list.games:
+  title: 'List Games'
+  parent: casino_games.admin_settings
+  description: 'Manage Games'
+  route_name: casino_games.list.games
