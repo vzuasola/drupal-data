@@ -329,7 +329,7 @@ display:
           admin_label: ''
           empty: true
           tokenize: false
-          content: "<ul class=\"action-links\">\n<li><a href=\"/en/node/add/game\" class=\"button button-action button--primary button--small\">Add Game</a></li>\n<li><a href=\"/en/admin/content/game/sorting\" class=\"button button--primary button--small\">Sort Games</a></li>\n</ul>"
+          content: "<ul class=\"action-links\">\n<li><a href=\"/en/node/add/game\" class=\"button button-action button--primary button--small\">Add Game</a></li>\n<!--<li><a href=\"/en/admin/content/game/sorting\" class=\"button button--primary button--small\">Sort Games</a></li>-->\n</ul>"
           plugin_id: text_custom
       defaults:
         header: false

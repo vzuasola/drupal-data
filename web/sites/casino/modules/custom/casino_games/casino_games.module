@@ -16,9 +16,24 @@ function casino_games_help($route_name, RouteMatchInterface $route_match) {
     case 'help.page.casino_games':
       $output = '';
       $output .= '<h3>' . t('About') . '</h3>';
-      $output .= '<p>' . t('My Awesome Module') . '</p>';
+      $output .= '<p>' . t('Casino Games Module') . '</p>';
       return $output;
 
     default:
   }
+}
+
+
+function casino_games_form_alter(&$form, $form_state, $form_id) {
+  	if ($form_id == 'node_game_form' || $form_id == 'node_game_edit_form') {
+ 		foreach (array_keys($form['actions']) as $action) {
+		    if ($action != 'preview' && isset($form['actions'][$action]['#type']) && $form['actions'][$action]['#type'] === 'submit') {
+		      $form['actions'][$action]['#submit'][] = 'casino_games_form_submit';
+		    }
+  		}
+  	}
+}
+
+function casino_games_form_submit($form, &$form_state) {
+	$form_state->setRedirect('casino_games.list.games');
 }

@@ -820,18 +820,21 @@ display:
         groups:
           1: AND
       sorts:
-        weight:
-          id: weight
-          table: draggableviews_structure
-          field: weight
+        created:
+          id: created
+          table: node_field_data
+          field: created
           relationship: none
           group_type: group
           admin_label: ''
-          order: ASC
+          order: DESC
           exposed: false
           expose:
             label: ''
-          plugin_id: standard
+          granularity: second
+          entity_type: node
+          entity_field: created
+          plugin_id: date
       access:
         type: none
         options: {  }
