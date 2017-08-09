@@ -4,8 +4,14 @@ casino_games.admin_settings:
   parent: system.admin_config
   route_name: casino_games.admin_settings
 
+casino_games.games_configuration:
+  title: 'Configure Games'
+  route_name: casino_games.games_configuration
+  description: 'Configure the Games'
+  parent: casino_games.admin_settings
+
 casino_games.list.games:
-  title: 'Manage Games'
+  title: 'List Games'
   parent: casino_games.admin_settings
   description: 'Manage Games'
   route_name: casino_games.list.games

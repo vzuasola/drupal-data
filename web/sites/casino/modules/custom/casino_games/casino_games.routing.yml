@@ -13,5 +13,11 @@ casino_games.list.games:
     _title: 'Manage Games'
   requirements:
     _permission: 'administer site configuration'
-  options:
-    _admin_route: TRUE
+
+casino_games.games_configuration:
+  path: 'admin/config/webcomposer/games/config'
+  defaults:
+    _form: 'Drupal\casino_games\Form\GamesConfigurationForm'
+    _title: 'Games Custom Configuration'
+  requirements:
+    _permission: 'administer site configuration'
