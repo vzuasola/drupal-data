@@ -1,0 +1,44 @@
+add web composer slider entities:
+  title: 'Create new Web composer slider entities'
+
+administer web composer slider entities:
+  title: 'Administer Web composer slider entities'
+  description: 'Allow to access the administration form to configure Web composer slider entities.'
+  restrict access: true
+
+delete web composer slider entities:
+  title: 'Delete Web composer slider entities'
+
+edit web composer slider entities:
+  title: 'Edit Web composer slider entities'
+
+access web composer slider overview:
+  title: 'Access the Web composer slider overview page'
+
+view published web composer slider entities:
+  title: 'View published Web composer slider entities'
+
+view unpublished web composer slider entities:
+  title: 'View unpublished Web composer slider entities'
+add web composer slider entities:
+  title: 'Create new Web Composer Slider entities'
+
+administer web composer slider entities:
+  title: 'Administer Web Composer Slider entities'
+  description: 'Allow to access the administration form to configure Web Composer Slider entities.'
+  restrict access: true
+
+delete web composer slider entities:
+  title: 'Delete Web Composer Slider entities'
+
+edit web composer slider entities:
+  title: 'Edit Web Composer Slider entities'
+
+access web composer slider overview:
+  title: 'Access the Web Composer Slider overview page'
+
+view published web composer slider entities:
+  title: 'View published Web Composer Slider entities'
+
+view unpublished web composer slider entities:
+  title: 'View unpublished Web Composer Slider entities'
