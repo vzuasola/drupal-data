@@ -1,0 +1,63 @@
+uuid: b9b173d3-a8c3-40c8-ae7f-dd82f424bc3d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.metatag_entity.metatag_entity.field_abstract
+    - field.field.metatag_entity.metatag_entity.field_description
+    - field.field.metatag_entity.metatag_entity.field_keywords
+    - field.field.metatag_entity.metatag_entity.field_per_page_visibility
+  module:
+    - text
+    - user
+    - webcomposer_metatags
+id: metatag_entity.metatag_entity.default
+targetEntityType: metatag_entity
+bundle: metatag_entity
+mode: default
+content:
+  field_abstract:
+    weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_description:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_keywords:
+    weight: 7
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_per_page_visibility:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  name:
+    label: above
+    type: string
+    weight: -4
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  user_id:
+    label: hidden
+    type: author
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true
