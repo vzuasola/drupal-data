@@ -4,7 +4,6 @@ ignored_config_entities:
   4: 'editor.*'
   6: 'filter.*'
   8: 'block.*'
-  10: 'language.*'
-  12: 'devel.*'
+  10: 'devel.*'
 _core:
   default_config_hash: UVH1aJ4b44UM-VdPVN7hNNuuVqfReJxwfVeDQH1Hvsk
