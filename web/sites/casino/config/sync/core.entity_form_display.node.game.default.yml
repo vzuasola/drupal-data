@@ -41,7 +41,7 @@ third_party_settings:
         - field_play_now_toggle
         - field_play_for_fun_toggle
       parent_name: ''
-      weight: 20
+      weight: 10
       format_type: details
       format_settings:
         label: 'Game Launching'
@@ -98,7 +98,7 @@ content:
     type: boolean_checkbox
     region: content
   field_game_title:
-    weight: 1
+    weight: 2
     settings:
       rows: 3
       placeholder: ''
@@ -107,7 +107,7 @@ content:
     region: content
   field_games_category:
     type: options_buttons
-    weight: 2
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -127,7 +127,7 @@ content:
     region: content
   langcode:
     type: language_select
-    weight: 3
+    weight: 1
     region: content
     settings: {  }
     third_party_settings: {  }

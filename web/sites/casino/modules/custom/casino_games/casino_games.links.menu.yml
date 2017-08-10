@@ -5,19 +5,19 @@ casino_games.admin_settings:
   route_name: casino_games.admin_settings
 
 casino_games.games_configuration:
-  title: 'Configure Games'
+  title: 'Games Custom Configuration'
   route_name: casino_games.games_configuration
   description: 'Configure the Games'
   parent: casino_games.admin_settings
 
 casino_games.list.games:
-  title: 'List Games'
+  title: 'Manage Games'
   parent: casino_games.admin_settings
   description: 'Manage Games'
   route_name: casino_games.list.games
 
 casino_games.list.categories:
-  title: 'List Game Categories'
+  title: 'Manage Categories'
   parent: casino_games.admin_settings
   description: 'Manage Game Categories'
   route_name: entity.taxonomy_vocabulary.overview_form
