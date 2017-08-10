@@ -9,6 +9,8 @@ dependencies:
     - field.field.node.game.field_game_info_toggle
     - field.field.node.game.field_game_title
     - field.field.node.game.field_games_category
+    - field.field.node.game.field_play_for_fun_toggle
+    - field.field.node.game.field_play_now_toggle
     - image.style.thumbnail
     - node.type.game
   module:
@@ -25,7 +27,7 @@ third_party_settings:
         - field_game_info_toggle
         - field_game_info
       parent_name: ''
-      weight: 8
+      weight: 9
       format_type: details
       format_settings:
         label: 'Game Information'
@@ -34,6 +36,20 @@ third_party_settings:
         classes: ''
         required_fields: false
       label: 'Game Information'
+    group_game_langu:
+      children:
+        - field_play_now_toggle
+        - field_play_for_fun_toggle
+      parent_name: ''
+      weight: 20
+      format_type: details
+      format_settings:
+        label: 'Game Launching'
+        open: true
+        id: ''
+        classes: ''
+        required_fields: false
+      label: 'Game Launching'
 _core:
   default_config_hash: tYMNVoRMcnzjYWed7L97NAkH34_8EOrvU6_GTa2vJzQ
 id: node.game.default
@@ -42,7 +58,7 @@ bundle: game
 mode: default
 content:
   field_game_image:
-    weight: 7
+    weight: 8
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -91,30 +107,44 @@ content:
     region: content
   field_games_category:
     type: options_buttons
-    weight: 9
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_play_for_fun_toggle:
+    weight: 11
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_play_now_toggle:
+    weight: 10
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
   langcode:
     type: language_select
-    weight: 2
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }
   path:
     type: path
-    weight: 4
+    weight: 5
     settings: {  }
     third_party_settings: {  }
     region: content
   publish_on:
     type: datetime_timestamp_no_default
-    weight: 5
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
   scheduler_settings:
-    weight: 3
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -128,7 +158,7 @@ content:
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp_no_default
-    weight: 6
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }

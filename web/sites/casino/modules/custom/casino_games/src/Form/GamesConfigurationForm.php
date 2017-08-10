@@ -51,6 +51,14 @@ class GamesConfigurationForm extends ConfigFormBase {
       '#required' => TRUE,
     );
 
+    $form['kebab_menu_text'] = array(
+      '#type' => 'textfield',
+      '#title' => $this->t('Category Kebab Text'),
+      '#description' => $this->t('The text to display on category kebab menu.'),
+      '#default_value' => $config->get('kebab_menu_text'),
+      '#required' => TRUE,
+    );
+
     return parent::buildForm($form, $form_state);
   }
 
@@ -64,6 +72,7 @@ class GamesConfigurationForm extends ConfigFormBase {
       'play_text',
       'play_for_fun_text',
       'game_info_text',
+      'kebab_menu_text',
     );
 
     foreach ($keys as $key) {
