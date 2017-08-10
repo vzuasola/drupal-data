@@ -20,7 +20,6 @@ class MetatagEntityListBuilder extends EntityListBuilder {
    * {@inheritdoc}
    */
   public function buildHeader() {
-    $header['id'] = $this->t('Metatag entity ID');
     $header['name'] = $this->t('Name');
     return $header + parent::buildHeader();
   }
@@ -30,7 +29,6 @@ class MetatagEntityListBuilder extends EntityListBuilder {
    */
   public function buildRow(EntityInterface $entity) {
     /* @var $entity \Drupal\webcomposer_metatags\Entity\MetatagEntity */
-    $row['id'] = $entity->id();
     $row['name'] = $this->l(
       $entity->label(),
       new Url(
