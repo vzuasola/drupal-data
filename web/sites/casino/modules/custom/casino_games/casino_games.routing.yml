@@ -1,5 +1,5 @@
 casino_games.admin_settings:
-  path: 'admin/config/webcomposer/games'
+  path: 'admin/games'
   defaults:
     _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
     _title: 'Casino Games Configuration'
@@ -7,7 +7,7 @@ casino_games.admin_settings:
     _permission: 'administer site configuration'
 
 casino_games.list.games:
-  path: 'admin/content/game'
+  path: 'admin/games/manage'
   defaults:
     _controller: '\Drupal\casino_games\Controller\GamesController::getList'
     _title: 'Manage Games'
@@ -15,7 +15,7 @@ casino_games.list.games:
     _permission: 'administer site configuration'
 
 casino_games.games_configuration:
-  path: 'admin/config/webcomposer/games/config'
+  path: 'admin/games/config'
   defaults:
     _form: 'Drupal\casino_games\Form\GamesConfigurationForm'
     _title: 'Games Custom Configuration'

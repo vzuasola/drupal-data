@@ -1,0 +1,23 @@
+uuid: 3e7e003a-090b-4d46-bffd-04ae083d9c85
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_play_now_toggle
+    - node.type.game
+id: node.game.field_play_now_toggle
+field_name: field_play_now_toggle
+entity_type: node
+bundle: game
+label: 'Show Play Now Button'
+description: 'Uncheck to the <b>Play Now</b> button.'
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

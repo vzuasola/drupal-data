@@ -11,3 +11,6 @@ webcomposer_config.games_configuration:
     game_info_text:
       type: label
       label: 'Game Info Link Text'
+    kebab_menu_text:
+      type: label
+      label: 'Category Kebab Menu Text'
