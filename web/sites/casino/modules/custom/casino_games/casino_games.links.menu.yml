@@ -1,0 +1,25 @@
+casino_games.admin_settings:
+  title: 'Casino Games Configuration'
+  description: 'Provides an interface for managing games.'
+  parent: system.admin_config
+  route_name: casino_games.admin_settings
+
+casino_games.games_configuration:
+  title: 'Games Custom Configuration'
+  route_name: casino_games.games_configuration
+  description: 'Configure the Games'
+  parent: casino_games.admin_settings
+
+casino_games.list.games:
+  title: 'Manage Games'
+  parent: casino_games.admin_settings
+  description: 'Manage Games'
+  route_name: casino_games.list.games
+
+casino_games.list.categories:
+  title: 'Manage Categories'
+  parent: casino_games.admin_settings
+  description: 'Manage Game Categories'
+  route_name: entity.taxonomy_vocabulary.overview_form
+  route_parameters:
+    taxonomy_vocabulary: 'games_category'
