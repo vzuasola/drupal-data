@@ -12,7 +12,7 @@ bundle: games_category
 label: 'Show to Kebab'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value:
   -
     value: 0
