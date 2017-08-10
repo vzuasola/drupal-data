@@ -20,7 +20,6 @@ class WebComposerSliderListBuilder extends EntityListBuilder {
    * {@inheritdoc}
    */
   public function buildHeader() {
-    $header['id'] = $this->t('Web Composer Slider ID');
     $header['name'] = $this->t('Name');
     return $header + parent::buildHeader();
   }

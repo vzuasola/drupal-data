@@ -44,7 +44,7 @@ class WebComposerSliderForm extends ContentEntityForm {
           '%label' => $entity->label(),
         ]));
     }
-    $form_state->setRedirect('entity.web_composer_slider.canonical', ['web_composer_slider' => $entity->id()]);
+    $form_state->setRedirectUrl($entity->urlInfo('collection'));
   }
 
 }
