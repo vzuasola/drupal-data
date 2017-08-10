@@ -8,3 +8,5 @@ domain: 1
 domain_message: 'Term @term already exists in vocabulary @vocabulary.'
 domain_groups: 1
 domain_groups_message: 'Term @term already exists in vocabulary @vocabulary.'
+games_category: 1
+games_category_message: 'Term @term already exists in vocabulary @vocabulary.'
