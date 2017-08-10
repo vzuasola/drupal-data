@@ -1,0 +1,22 @@
+add metatag entity entities:
+  title: 'Create new Metatag entity entities'
+
+administer metatag entity entities:
+  title: 'Administer Metatag entity entities'
+  description: 'Allow to access the administration form to configure Metatag entity entities.'
+  restrict access: true
+
+delete metatag entity entities:
+  title: 'Delete Metatag entity entities'
+
+edit metatag entity entities:
+  title: 'Edit Metatag entity entities'
+
+access metatag entity overview:
+  title: 'Access the Metatag entity overview page'
+
+view published metatag entity entities:
+  title: 'View published Metatag entity entities'
+
+view unpublished metatag entity entities:
+  title: 'View unpublished Metatag entity entities'

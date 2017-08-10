@@ -1,0 +1,36 @@
+<?php
+
+/**
+ * @file
+ * Contains webcomposer_metatags.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function webcomposer_metatags_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the webcomposer_metatags module.
+    case 'help.page.webcomposer_metatags':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Manage metatags Configurations') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function webcomposer_metatags_theme() {
+  return [
+    'webcomposer_metatags' => [
+      'template' => 'webcomposer_metatags',
+      'render element' => 'children',
+    ],
+  ];
+}
