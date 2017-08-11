@@ -7,14 +7,13 @@ webcomposer_social_media.list:
 
 # Social Media menu items definition
 entity.social_media_entity.collection:
-  title: 'Social Media list'
+  title: 'Social Media List'
   route_name: entity.social_media_entity.collection
   description: 'List Social Media entities'
   parent: webcomposer_social_media.list
-  weight: 100
 
 social_media_entity.admin.structure.settings:
-  title: Social Media settings
+  title: Social Media Settings
   description: 'Configure Social Media entities'
   route_name: social_media_entity.settings
   parent: webcomposer_social_media.list
