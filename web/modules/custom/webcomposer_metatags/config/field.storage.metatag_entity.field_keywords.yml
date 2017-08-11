@@ -1,0 +1,19 @@
+uuid: 79598764-e022-4b9c-af7e-7d8fcbfa3704
+langcode: en
+status: true
+dependencies:
+  module:
+    - text
+    - webcomposer_metatags
+id: metatag_entity.field_keywords
+field_name: field_keywords
+entity_type: metatag_entity
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
