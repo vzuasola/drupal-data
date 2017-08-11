@@ -1,0 +1,21 @@
+uuid: 2ccb2a34-5dd0-4fc4-b247-f39705a7bc01
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.metatag_entity.field_keywords
+  module:
+    - text
+    - webcomposer_metatags
+id: metatag_entity.metatag_entity.field_keywords
+field_name: field_keywords
+entity_type: metatag_entity
+bundle: metatag_entity
+label: Keywords
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
