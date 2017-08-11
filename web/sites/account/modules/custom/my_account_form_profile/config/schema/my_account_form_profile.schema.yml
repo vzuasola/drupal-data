@@ -505,24 +505,24 @@ my_account_form_profile.profile:
                 tooltip_blurb:
                   type: label
                   label: 'Tooltip Blurb'
-      contact_preference_field:
-        type: mapping
-        label: 'Contact Preference'
-        mapping:
-          options:
-            type: mapping
-            label: 'Field label'
-            mapping:
-              label:
-                type: label
-                label: 'Field label'
-              attr:
-                type: mapping
-                label: 'Attributes Fields'
-                mapping:
-                  tooltip_blurb:
-                    type: label
-                    label: 'Tooltip Blurb'
+    contact_preference_field:
+      type: mapping
+      label: 'Contact Preference'
+      mapping:
+        options:
+          type: mapping
+          label: 'Field label'
+          mapping:
+            label:
+              type: label
+              label: 'Field label'
+            attr:
+              type: mapping
+              label: 'Attributes Fields'
+              mapping:
+                tooltip_blurb:
+                  type: label
+                  label: 'Tooltip Blurb'
     contact_preference_label:
       type: mapping
       label: 'Contact Preference header label translation'
