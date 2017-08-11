@@ -10,38 +10,36 @@ use Drupal\Core\Entity\EntityTypeInterface;
 use Drupal\user\UserInterface;
 
 /**
- * Defines the Web Composer Slider entity.
+ * Defines the Webcomposer slider entity entity.
  *
  * @ingroup webcomposer_slider
  *
  * @ContentEntityType(
- *   id = "web_composer_slider",
- *   label = @Translation("Web Composer Slider"),
- *   bundle_label = @Translation("Web Composer Slider type"),
+ *   id = "webcomposer_slider_entity",
+ *   label = @Translation("Webcomposer slider entity"),
  *   handlers = {
  *     "view_builder" = "Drupal\Core\Entity\EntityViewBuilder",
- *     "list_builder" = "Drupal\webcomposer_slider\WebComposerSliderListBuilder",
- *     "views_data" = "Drupal\webcomposer_slider\Entity\WebComposerSliderViewsData",
- *     "translation" = "Drupal\webcomposer_slider\WebComposerSliderTranslationHandler",
+ *     "list_builder" = "Drupal\webcomposer_slider\WebcomposerSliderEntityListBuilder",
+ *     "views_data" = "Drupal\webcomposer_slider\Entity\WebcomposerSliderEntityViewsData",
+ *     "translation" = "Drupal\webcomposer_slider\WebcomposerSliderEntityTranslationHandler",
  *
  *     "form" = {
- *       "default" = "Drupal\webcomposer_slider\Form\WebComposerSliderForm",
- *       "add" = "Drupal\webcomposer_slider\Form\WebComposerSliderForm",
- *       "edit" = "Drupal\webcomposer_slider\Form\WebComposerSliderForm",
- *       "delete" = "Drupal\webcomposer_slider\Form\WebComposerSliderDeleteForm",
+ *       "default" = "Drupal\webcomposer_slider\Form\WebcomposerSliderEntityForm",
+ *       "add" = "Drupal\webcomposer_slider\Form\WebcomposerSliderEntityForm",
+ *       "edit" = "Drupal\webcomposer_slider\Form\WebcomposerSliderEntityForm",
+ *       "delete" = "Drupal\webcomposer_slider\Form\WebcomposerSliderEntityDeleteForm",
  *     },
- *     "access" = "Drupal\webcomposer_slider\WebComposerSliderAccessControlHandler",
+ *     "access" = "Drupal\webcomposer_slider\WebcomposerSliderEntityAccessControlHandler",
  *     "route_provider" = {
- *       "html" = "Drupal\webcomposer_slider\WebComposerSliderHtmlRouteProvider",
+ *       "html" = "Drupal\webcomposer_slider\WebcomposerSliderEntityHtmlRouteProvider",
  *     },
  *   },
- *   base_table = "web_composer_slider",
- *   data_table = "web_composer_slider_field_data",
+ *   base_table = "webcomposer_slider_entity",
+ *   data_table = "webcomposer_slider_entity_field_data",
  *   translatable = TRUE,
- *   admin_permission = "administer web composer slider entities",
+ *   admin_permission = "administer webcomposer slider entity entities",
  *   entity_keys = {
  *     "id" = "id",
- *     "bundle" = "type",
  *     "label" = "name",
  *     "uuid" = "uuid",
  *     "uid" = "user_id",
@@ -49,18 +47,16 @@ use Drupal\user\UserInterface;
  *     "status" = "status",
  *   },
  *   links = {
- *     "canonical" = "/admin/structure/web_composer_slider/{web_composer_slider}",
- *     "add-page" = "/admin/structure/web_composer_slider/add",
- *     "add-form" = "/admin/structure/web_composer_slider/add/{web_composer_slider_type}",
- *     "edit-form" = "/admin/structure/web_composer_slider/{web_composer_slider}/edit",
- *     "delete-form" = "/admin/structure/web_composer_slider/{web_composer_slider}/delete",
- *     "collection" = "/admin/structure/web_composer_slider",
+ *     "canonical" = "/admin/structure/webcomposer_slider_entity/{webcomposer_slider_entity}",
+ *     "add-form" = "/admin/structure/webcomposer_slider_entity/add",
+ *     "edit-form" = "/admin/structure/webcomposer_slider_entity/{webcomposer_slider_entity}/edit",
+ *     "delete-form" = "/admin/structure/webcomposer_slider_entity/{webcomposer_slider_entity}/delete",
+ *     "collection" = "/admin/structure/webcomposer_slider_entity",
  *   },
- *   bundle_entity_type = "web_composer_slider_type",
- *   field_ui_base_route = "entity.web_composer_slider_type.edit_form"
+ *   field_ui_base_route = "webcomposer_slider_entity.settings"
  * )
  */
-class WebComposerSlider extends ContentEntityBase implements WebComposerSliderInterface {
+class WebcomposerSliderEntity extends ContentEntityBase implements WebcomposerSliderEntityInterface {
 
   use EntityChangedTrait;
 
@@ -72,13 +68,6 @@ class WebComposerSlider extends ContentEntityBase implements WebComposerSliderIn
     $values += array(
       'user_id' => \Drupal::currentUser()->id(),
     );
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  public function getType() {
-    return $this->bundle();
   }
 
   /**
@@ -164,7 +153,7 @@ class WebComposerSlider extends ContentEntityBase implements WebComposerSliderIn
 
     $fields['user_id'] = BaseFieldDefinition::create('entity_reference')
       ->setLabel(t('Authored by'))
-      ->setDescription(t('The user ID of author of the Web Composer Slider entity.'))
+      ->setDescription(t('The user ID of author of the Webcomposer slider entity entity.'))
       ->setRevisionable(TRUE)
       ->setSetting('target_type', 'user')
       ->setSetting('handler', 'default')
@@ -189,7 +178,7 @@ class WebComposerSlider extends ContentEntityBase implements WebComposerSliderIn
 
     $fields['name'] = BaseFieldDefinition::create('string')
       ->setLabel(t('Name'))
-      ->setDescription(t('The name of the Web Composer Slider entity.'))
+      ->setDescription(t('The name of the Webcomposer slider entity entity.'))
       ->setSettings(array(
         'max_length' => 50,
         'text_processing' => 0,
@@ -209,7 +198,7 @@ class WebComposerSlider extends ContentEntityBase implements WebComposerSliderIn
 
     $fields['status'] = BaseFieldDefinition::create('boolean')
       ->setLabel(t('Publishing status'))
-      ->setDescription(t('A boolean indicating whether the Web Composer Slider is published.'))
+      ->setDescription(t('A boolean indicating whether the Webcomposer slider entity is published.'))
       ->setDefaultValue(TRUE);
 
     $fields['created'] = BaseFieldDefinition::create('created')

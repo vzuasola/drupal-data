@@ -1,44 +1,22 @@
-add web composer slider entities:
-  title: 'Create new Web composer slider entities'
+add webcomposer slider entity entities:
+  title: 'Create new Webcomposer slider entity entities'
 
-administer web composer slider entities:
-  title: 'Administer Web composer slider entities'
-  description: 'Allow to access the administration form to configure Web composer slider entities.'
+administer webcomposer slider entity entities:
+  title: 'Administer Webcomposer slider entity entities'
+  description: 'Allow to access the administration form to configure Webcomposer slider entity entities.'
   restrict access: true
 
-delete web composer slider entities:
-  title: 'Delete Web composer slider entities'
+delete webcomposer slider entity entities:
+  title: 'Delete Webcomposer slider entity entities'
 
-edit web composer slider entities:
-  title: 'Edit Web composer slider entities'
+edit webcomposer slider entity entities:
+  title: 'Edit Webcomposer slider entity entities'
 
-access web composer slider overview:
-  title: 'Access the Web composer slider overview page'
+access webcomposer slider entity overview:
+  title: 'Access the Webcomposer slider entity overview page'
 
-view published web composer slider entities:
-  title: 'View published Web composer slider entities'
+view published webcomposer slider entity entities:
+  title: 'View published Webcomposer slider entity entities'
 
-view unpublished web composer slider entities:
-  title: 'View unpublished Web composer slider entities'
-add web composer slider entities:
-  title: 'Create new Web Composer Slider entities'
-
-administer web composer slider entities:
-  title: 'Administer Web Composer Slider entities'
-  description: 'Allow to access the administration form to configure Web Composer Slider entities.'
-  restrict access: true
-
-delete web composer slider entities:
-  title: 'Delete Web Composer Slider entities'
-
-edit web composer slider entities:
-  title: 'Edit Web Composer Slider entities'
-
-access web composer slider overview:
-  title: 'Access the Web Composer Slider overview page'
-
-view published web composer slider entities:
-  title: 'View published Web Composer Slider entities'
-
-view unpublished web composer slider entities:
-  title: 'View unpublished Web Composer Slider entities'
+view unpublished webcomposer slider entity entities:
+  title: 'View unpublished Webcomposer slider entity entities'

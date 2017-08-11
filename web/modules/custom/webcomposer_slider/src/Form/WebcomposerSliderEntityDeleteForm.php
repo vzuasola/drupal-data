@@ -5,11 +5,11 @@ namespace Drupal\webcomposer_slider\Form;
 use Drupal\Core\Entity\ContentEntityDeleteForm;
 
 /**
- * Provides a form for deleting Web Composer Slider entities.
+ * Provides a form for deleting Webcomposer slider entity entities.
  *
  * @ingroup webcomposer_slider
  */
-class WebComposerSliderDeleteForm extends ContentEntityDeleteForm {
+class WebcomposerSliderEntityDeleteForm extends ContentEntityDeleteForm {
 
 
 }

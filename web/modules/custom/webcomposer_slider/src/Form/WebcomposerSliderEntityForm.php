@@ -6,17 +6,17 @@ use Drupal\Core\Entity\ContentEntityForm;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Form controller for Web Composer Slider edit forms.
+ * Form controller for Webcomposer slider entity edit forms.
  *
  * @ingroup webcomposer_slider
  */
-class WebComposerSliderForm extends ContentEntityForm {
+class WebcomposerSliderEntityForm extends ContentEntityForm {
 
   /**
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    /* @var $entity \Drupal\webcomposer_slider\Entity\WebComposerSlider */
+    /* @var $entity \Drupal\webcomposer_slider\Entity\WebcomposerSliderEntity */
     $form = parent::buildForm($form, $form_state);
 
     $entity = $this->entity;
@@ -34,16 +34,17 @@ class WebComposerSliderForm extends ContentEntityForm {
 
     switch ($status) {
       case SAVED_NEW:
-        drupal_set_message($this->t('Created the %label Web Composer Slider.', [
+        drupal_set_message($this->t('Created the %label Webcomposer slider entity.', [
           '%label' => $entity->label(),
         ]));
         break;
 
       default:
-        drupal_set_message($this->t('Saved the %label Web Composer Slider.', [
+        drupal_set_message($this->t('Saved the %label Webcomposer slider entity.', [
           '%label' => $entity->label(),
         ]));
     }
+
     $form_state->setRedirectUrl($entity->urlInfo('collection'));
   }
 

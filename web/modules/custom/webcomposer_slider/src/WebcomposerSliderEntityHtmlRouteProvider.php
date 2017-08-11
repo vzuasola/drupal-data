@@ -7,12 +7,12 @@ use Drupal\Core\Entity\Routing\AdminHtmlRouteProvider;
 use Symfony\Component\Routing\Route;
 
 /**
- * Provides routes for Web Composer Slider entities.
+ * Provides routes for Webcomposer slider entity entities.
  *
  * @see Drupal\Core\Entity\Routing\AdminHtmlRouteProvider
  * @see Drupal\Core\Entity\Routing\DefaultHtmlRouteProvider
  */
-class WebComposerSliderHtmlRouteProvider extends AdminHtmlRouteProvider {
+class WebcomposerSliderEntityHtmlRouteProvider extends AdminHtmlRouteProvider {
 
   /**
    * {@inheritdoc}
@@ -51,7 +51,7 @@ class WebComposerSliderHtmlRouteProvider extends AdminHtmlRouteProvider {
           '_entity_list' => $entity_type_id,
           '_title' => "{$entity_type->getLabel()} list",
         ])
-        ->setRequirement('_permission', 'access web composer slider overview')
+        ->setRequirement('_permission', 'access webcomposer slider entity overview')
         ->setOption('_admin_route', TRUE);
 
       return $route;
@@ -72,7 +72,7 @@ class WebComposerSliderHtmlRouteProvider extends AdminHtmlRouteProvider {
       $route = new Route("/admin/structure/{$entity_type->id()}/settings");
       $route
         ->setDefaults([
-          '_form' => 'Drupal\webcomposer_slider\Form\WebComposerSliderSettingsForm',
+          '_form' => 'Drupal\webcomposer_slider\Form\WebcomposerSliderEntitySettingsForm',
           '_title' => "{$entity_type->getLabel()} settings",
         ])
         ->setRequirement('_permission', $entity_type->getAdminPermission())

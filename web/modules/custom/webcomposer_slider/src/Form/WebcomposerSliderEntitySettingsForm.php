@@ -6,13 +6,13 @@ use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Class WebComposerSliderSettingsForm.
+ * Class WebcomposerSliderEntitySettingsForm.
  *
  * @package Drupal\webcomposer_slider\Form
  *
  * @ingroup webcomposer_slider
  */
-class WebComposerSliderSettingsForm extends FormBase {
+class WebcomposerSliderEntitySettingsForm extends FormBase {
 
   /**
    * Returns a unique string identifying the form.
@@ -21,7 +21,7 @@ class WebComposerSliderSettingsForm extends FormBase {
    *   The unique string identifying the form.
    */
   public function getFormId() {
-    return 'WebComposerSlider_settings';
+    return 'WebcomposerSliderEntity_settings';
   }
 
   /**
@@ -37,7 +37,7 @@ class WebComposerSliderSettingsForm extends FormBase {
   }
 
   /**
-   * Defines the settings form for Web Composer Slider entities.
+   * Defines the settings form for Webcomposer slider entity entities.
    *
    * @param array $form
    *   An associative array containing the structure of the form.
@@ -48,7 +48,7 @@ class WebComposerSliderSettingsForm extends FormBase {
    *   Form definition array.
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    $form['WebComposerSlider_settings']['#markup'] = 'Settings form for Web Composer Slider entities. Manage field settings here.';
+    $form['WebcomposerSliderEntity_settings']['#markup'] = 'Settings form for Webcomposer slider entity entities. Manage field settings here.';
     return $form;
   }
 

@@ -5,9 +5,9 @@ namespace Drupal\webcomposer_slider\Entity;
 use Drupal\views\EntityViewsData;
 
 /**
- * Provides Views data for Web Composer Slider entities.
+ * Provides Views data for Webcomposer slider entity entities.
  */
-class WebComposerSliderViewsData extends EntityViewsData {
+class WebcomposerSliderEntityViewsData extends EntityViewsData {
 
   /**
    * {@inheritdoc}

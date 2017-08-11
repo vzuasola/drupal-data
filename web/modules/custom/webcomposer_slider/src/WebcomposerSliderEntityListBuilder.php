@@ -8,11 +8,11 @@ use Drupal\Core\Routing\LinkGeneratorTrait;
 use Drupal\Core\Url;
 
 /**
- * Defines a class to build a listing of Web Composer Slider entities.
+ * Defines a class to build a listing of Webcomposer slider entity entities.
  *
  * @ingroup webcomposer_slider
  */
-class WebComposerSliderListBuilder extends EntityListBuilder {
+class WebcomposerSliderEntityListBuilder extends EntityListBuilder {
 
   use LinkGeneratorTrait;
 
@@ -28,12 +28,13 @@ class WebComposerSliderListBuilder extends EntityListBuilder {
    * {@inheritdoc}
    */
   public function buildRow(EntityInterface $entity) {
-    /* @var $entity \Drupal\webcomposer_slider\Entity\WebComposerSlider */
+    /* @var $entity \Drupal\webcomposer_slider\Entity\WebcomposerSliderEntity */
+    $row['id'] = $entity->id();
     $row['name'] = $this->l(
       $entity->label(),
       new Url(
-        'entity.web_composer_slider.edit_form', array(
-          'web_composer_slider' => $entity->id(),
+        'entity.webcomposer_slider_entity.edit_form', array(
+          'webcomposer_slider_entity' => $entity->id(),
         )
       )
     );
