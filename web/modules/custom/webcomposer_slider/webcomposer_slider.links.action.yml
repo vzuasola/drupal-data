@@ -1,16 +1,5 @@
-entity.web_composer_slider.add_form:
-  route_name: 'entity.web_composer_slider.add_page'
-  title: 'Add Web composer slider'
+entity.webcomposer_slider_entity.add_form:
+  route_name: entity.webcomposer_slider_entity.add_form
+  title: 'Add Webcomposer slider entity'
   appears_on:
-    - entity.web_composer_slider.collection
-entity.web_composer_slider.add_form:
-  route_name: 'entity.web_composer_slider.add_page'
-  title: 'Add Web Composer Slider'
-  appears_on:
-    - entity.web_composer_slider.collection
-entity.web_composer_slider_type.add_form:
-  route_name: 'entity.web_composer_slider_type.add_form'
-  title: 'Add Web Composer Slider type'
-  appears_on:
-    - entity.web_composer_slider_type.collection
-
+    - entity.webcomposer_slider_entity.collection
