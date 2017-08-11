@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_banner_image
     - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_banner_link
+    - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_banner_link_target
     - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_blurb
     - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_log_in_state
     - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_title
@@ -42,6 +43,13 @@ content:
       target: ''
     third_party_settings: {  }
     type: link
+    region: content
+  field_banner_link_target:
+    weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
   field_blurb:
     weight: 3
