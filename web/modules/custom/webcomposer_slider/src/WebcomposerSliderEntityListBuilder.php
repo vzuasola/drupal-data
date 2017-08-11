@@ -29,9 +29,8 @@ class WebcomposerSliderEntityListBuilder extends EntityListBuilder {
    */
   public function buildRow(EntityInterface $entity) {
     /* @var $entity \Drupal\webcomposer_slider\Entity\WebcomposerSliderEntity */
-    $row['id'] = $entity->id();
     $row['name'] = $this->l(
-      $entity->label(),
+      $entity->get('field_title')->value,
       new Url(
         'entity.webcomposer_slider_entity.edit_form', array(
           'webcomposer_slider_entity' => $entity->id(),
