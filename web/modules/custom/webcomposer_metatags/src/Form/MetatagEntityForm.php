@@ -1,22 +1,22 @@
 <?php
 
-namespace Drupal\webcomposer_sponsor\Form;
+namespace Drupal\webcomposer_metatags\Form;
 
 use Drupal\Core\Entity\ContentEntityForm;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Form controller for Sponsor edit forms.
+ * Form controller for Metatag entity edit forms.
  *
- * @ingroup webcomposer_sponsor
+ * @ingroup webcomposer_metatags
  */
-class SponsorEntityForm extends ContentEntityForm {
+class MetatagEntityForm extends ContentEntityForm {
 
   /**
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    /* @var $entity \Drupal\webcomposer_sponsor\Entity\SponsorEntity */
+    /* @var $entity \Drupal\webcomposer_metatags\Entity\MetatagEntity */
     $form = parent::buildForm($form, $form_state);
 
     $entity = $this->entity;
@@ -34,13 +34,13 @@ class SponsorEntityForm extends ContentEntityForm {
 
     switch ($status) {
       case SAVED_NEW:
-        drupal_set_message($this->t('Created the %label Sponsor.', [
+        drupal_set_message($this->t('Created the %label Metatag entity.', [
           '%label' => $entity->label(),
         ]));
         break;
 
       default:
-        drupal_set_message($this->t('Saved the %label Sponsor.', [
+        drupal_set_message($this->t('Saved the %label Metatag entity.', [
           '%label' => $entity->label(),
         ]));
     }

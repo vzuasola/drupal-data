@@ -1,0 +1,7 @@
+webcomposer_slider.admin_settings:
+  path: 'admin/config/webcomposer/webcomposer_slider'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Webcomposer Slider'
+  requirements:
+    _permission: 'administer site configuration'

@@ -1,0 +1,5 @@
+name: webcomposer_metatags
+type: module
+description: Manage metatags Configurations
+core: 8.x
+package: WEB COMPOSER

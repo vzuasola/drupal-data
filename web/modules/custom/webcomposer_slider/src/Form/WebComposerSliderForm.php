@@ -1,22 +1,22 @@
 <?php
 
-namespace Drupal\webcomposer_sponsor\Form;
+namespace Drupal\webcomposer_slider\Form;
 
 use Drupal\Core\Entity\ContentEntityForm;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Form controller for Sponsor edit forms.
+ * Form controller for Web Composer Slider edit forms.
  *
- * @ingroup webcomposer_sponsor
+ * @ingroup webcomposer_slider
  */
-class SponsorEntityForm extends ContentEntityForm {
+class WebComposerSliderForm extends ContentEntityForm {
 
   /**
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    /* @var $entity \Drupal\webcomposer_sponsor\Entity\SponsorEntity */
+    /* @var $entity \Drupal\webcomposer_slider\Entity\WebComposerSlider */
     $form = parent::buildForm($form, $form_state);
 
     $entity = $this->entity;
@@ -34,13 +34,13 @@ class SponsorEntityForm extends ContentEntityForm {
 
     switch ($status) {
       case SAVED_NEW:
-        drupal_set_message($this->t('Created the %label Sponsor.', [
+        drupal_set_message($this->t('Created the %label Web Composer Slider.', [
           '%label' => $entity->label(),
         ]));
         break;
 
       default:
-        drupal_set_message($this->t('Saved the %label Sponsor.', [
+        drupal_set_message($this->t('Saved the %label Web Composer Slider.', [
           '%label' => $entity->label(),
         ]));
     }
