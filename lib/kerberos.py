@@ -11,13 +11,14 @@ the pipeline.json file
 
 Κέρβερος, has a weird tendency of speaking about iteslf in 3rd person.
 """
-from __future__ import print_function
 from __future__ import absolute_import
+from __future__ import print_function
 
 import os
-from lib.utils import SUCCESS, FAILED, INFO
+
 from lib.error import PipelineError
 from lib.logger import logger
+from lib.utils import SUCCESS, FAILED, INFO
 
 
 # we need to iterate through the deployment pages following this order:

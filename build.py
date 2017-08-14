@@ -1,17 +1,19 @@
 #!/usr/bin/env python
 
-from __future__ import print_function
 from __future__ import absolute_import
+from __future__ import print_function
 
 import argparse
-import os
 import sys
+
+import os
+
 import lib.artifactory as artifactory
 import lib.docker as docker
 from lib.error import PipelineError
 from lib.logger import logger
-from lib.utils import gitlab_var, create_archive, read_configuration
 from lib.utils import artifactory_urls, DEFAULT_CONFIG_FILE
+from lib.utils import gitlab_var, create_archive, read_configuration
 
 
 def parse_cli():

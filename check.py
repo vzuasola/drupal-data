@@ -4,12 +4,14 @@
 This module takes care of your deploy.json
 """
 
-from __future__ import print_function
 from __future__ import absolute_import
+from __future__ import print_function
+
 import argparse
-import os
 import json
-from lib.logger import logger
+
+import os
+from automation.lib import logger
 
 
 class Config:
