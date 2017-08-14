@@ -37,6 +37,7 @@ Follow the below steps to use the pipelines repository using subtree to
 the letter, otherwise you'll need to configure a lot more than described.
 ### Add remote for automation
 ```
+cd into your repository directory
 git remote add pipelines git@gitlab.ph.esl-asia.com:Automation-team/automation-pipelines.git
 ```
 ### Setup subtree
