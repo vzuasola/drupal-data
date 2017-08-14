@@ -1,0 +1,12 @@
+#live chat config
+live_chat_text: '24/7 Livechat'
+live_chat_link: 'https://stg-chat.elysium-dfbt.com/c/en/mc-desktop?brand=Dafa&height=760&width=360'
+
+#live chat jwt config
+jwt_config:
+  jwt_enabled: '1'
+  url_post: 'https://stg-chat.elysium-dfbt.com/s/jwt'
+  url_post_timout: '5000'
+  jwt_key: 'secret-jwt-key'
+  validity_time: '1800'
+  xDomain_proxy: 'https://stg-chat.elysium-dfbt.com'

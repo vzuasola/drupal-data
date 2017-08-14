@@ -53,3 +53,11 @@ webcomposer_config.pushnx_configuration_form:
     _title: 'Push Notification Configuration'
   requirements:
     _permission: 'administer site configuration'
+
+webcomposer_config.livechat_configuration_form:
+  path: 'admin/config/webcomposer/config/livechat'
+  defaults:
+    _form: 'Drupal\webcomposer_config\Form\LiveChatConfiguration'
+    _title: 'Live Chat Configuration'
+  requirements:
+    _permission: 'administer site configuration'

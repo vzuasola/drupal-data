@@ -1,0 +1,4 @@
+live_chat_text: '24/7 Livechat'
+live_chat_link: 'mailto:grsupport@dafabet.com'
+jwt_config:
+  jwt_enabled: 0

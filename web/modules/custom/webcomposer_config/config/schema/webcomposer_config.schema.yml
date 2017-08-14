@@ -158,3 +158,21 @@ webcomposer_config.page_not_found:
       type: text_format
       label: 'Content'
       translatable: true
+
+webcomposer_config.livechat_configuration:
+  type: config_object
+  label: 'Live Chat Configuration'
+  mapping:
+    live_chat_text:
+      type: label
+      label: 'Live Chat Text'
+    live_chat_link:
+      type: text
+      label: 'Live Chat Link'
+    jwt_config:
+      type: mapping
+      label: 'JWT Config settings'
+      mapping:
+        jwt_enabled:
+          type: label
+          label: 'Enable for language'

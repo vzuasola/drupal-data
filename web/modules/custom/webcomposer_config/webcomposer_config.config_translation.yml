@@ -27,3 +27,9 @@ webcomposer_config.page_not_found_schema:
   base_route_name: entrypage_config.page_not_found_form
   names:
     - 'webcomposer_config.page_not_found'
+
+webcomposer_config.livechat_configuration_schema:
+  title: 'Live Chat Configuration'
+  base_route_name: webcomposer_config.livechat_configuration_form
+  names:
+    - 'webcomposer_config.livechat_configuration'

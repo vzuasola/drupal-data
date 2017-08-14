@@ -39,3 +39,9 @@ webcomposer_config.admin_pushnx_configuration:
   parent: webcomposer_config.list
   description: 'Provides configuration for Push Notification.'
   route_name: webcomposer_config.pushnx_configuration_form
+
+webcomposer_config.admin_livechat_configuration:
+  title: 'Live Chat Configuration'
+  parent: webcomposer_config.list
+  description: 'Provides configuration for live chat and avaya chat support'
+  route_name: webcomposer_config.livechat_configuration_form
