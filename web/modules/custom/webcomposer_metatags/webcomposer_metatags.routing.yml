@@ -1,0 +1,7 @@
+webcomposer_metatags.admin_settings:
+  path: 'admin/config/webcomposer/metatags'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Webcomposer MetaTags'
+  requirements:
+    _permission: 'administer site configuration'

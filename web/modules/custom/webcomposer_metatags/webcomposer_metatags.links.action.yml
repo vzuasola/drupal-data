@@ -1,0 +1,5 @@
+entity.metatag_entity.add_form:
+  route_name: entity.metatag_entity.add_form
+  title: 'Add Metatag entity'
+  appears_on:
+    - entity.metatag_entity.collection

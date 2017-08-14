@@ -1,23 +1,22 @@
 <?php
 
-
 /**
  * Implements hook_uninstall
  */
 function webcomposer_right_side_block_uninstall() {
-   $keys = [
-      'views.view.inner_page_right_side_block.yml',
-      'language.content_settings.right_side_block_entity.right_side_block_entity.yml',
-      'field.storage.right_side_block_entity.field_innerpage_right_side_block.yml',
-      'field.storage.right_side_block_entity.field_exclude_these_pages.yml',
-      'field.field.right_side_block_entity.right_side_block_entity.field_innerpage_right_side_block.yml',
-      'field.field.right_side_block_entity.right_side_block_entity.field_exclude_these_pages.yml',
-      'field.field.paragraph.right_side_block_content.field_enable.yml',
-      'core.entity_view_display.right_side_block_entity.right_side_block_entity.default.yml',
-      'core.entity_form_display.right_side_block_entity.right_side_block_entity.default.yml',
-    ];
+  $keys = [
+    'views.view.inner_page_right_side_block.yml',
+    'language.content_settings.right_side_block_entity.right_side_block_entity.yml',
+    'field.storage.right_side_block_entity.field_innerpage_right_side_block.yml',
+    'field.storage.right_side_block_entity.field_exclude_these_pages.yml',
+    'field.field.right_side_block_entity.right_side_block_entity.field_innerpage_right_side_block.yml',
+    'field.field.right_side_block_entity.right_side_block_entity.field_exclude_these_pages.yml',
+    'field.field.paragraph.right_side_block_content.field_enable.yml',
+    'core.entity_view_display.right_side_block_entity.right_side_block_entity.default.yml',
+    'core.entity_form_display.right_side_block_entity.right_side_block_entity.default.yml',
+  ];
 
-    foreach ($keys as $key) {
-      \Drupal::configFactory()->getEditable($key)->delete();
-    }
+  foreach ($keys as $key) {
+    \Drupal::configFactory()->getEditable($key)->delete();
+  }
 }

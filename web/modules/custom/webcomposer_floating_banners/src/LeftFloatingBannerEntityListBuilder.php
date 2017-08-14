@@ -29,23 +29,25 @@ class LeftFloatingBannerEntityListBuilder extends EntityListBuilder {
    */
   public function buildRow(EntityInterface $entity) {
     /* @var $entity \Drupal\webcomposer_floating_banners\Entity\LeftFloatingBannerEntity */
-     // Get current and default language for fall back.
+
+    // Get current and default language for fall back.
     $langCode = \Drupal::service('language_manager')->getCurrentLanguage()->getId();
-    if($entity->hasTranslation($langCode)) {
-    $entity = $entity->getTranslation($langCode);
-   $getTitle = $entity->get('field_title')->value;
-    $row['title'] = $this->l(
-      $getTitle,
-      new Url(
-        'entity.left_floating_banner_entity.edit_form', array(
-          'left_floating_banner_entity' => $entity->id(),
+
+    if ($entity->hasTranslation($langCode)) {
+      $entity = $entity->getTranslation($langCode);
+      $title = $entity->get('field_title')->value;
+
+      $row['title'] = $this->l(
+        $title,
+        new Url(
+          'entity.left_floating_banner_entity.edit_form', 
+          array(
+            'left_floating_banner_entity' => $entity->id(),
+          )
         )
-      )
-    );
-    return $row + parent::buildRow($entity);
+      );
+
+      return $row + parent::buildRow($entity);
+    }
   }
-
-
-  }
-
 }

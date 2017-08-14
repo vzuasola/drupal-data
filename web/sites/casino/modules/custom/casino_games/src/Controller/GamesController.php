@@ -14,7 +14,7 @@ class GamesController extends ControllerBase {
 	public function getList(Request $request) {
 	    return array(
 	      '#type' => 'markup',
-	      '#markup' => render(null),
+	      '#markup' => "",
 	    );
   	}
 
