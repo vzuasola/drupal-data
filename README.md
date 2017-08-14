@@ -22,9 +22,10 @@ framework. Should you see anything wrong in the presentation please don't
 hesitate to bring it to my attention (eric.vansteenbergen@esl-asia.com)
 
 ## Requirements
+* Artifactory repository setup and configured with user/password
 * environment variables as defined in GitLab project settings for pipelines.
 * access to external tools in place before usage, Sonar, Selenium, HP
-Fortify, ...
+Fortify, Artifactory, ...
 
 ## Usage
 The preferred way to incorporate pipelines into a new project is to use
