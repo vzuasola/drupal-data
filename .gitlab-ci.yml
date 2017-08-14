@@ -4,6 +4,7 @@ variables:
 stages:
   - tests
   - package
+  - code-scan
   - deploy-dev
   - integration-tests-development
   - deploy-test
@@ -36,6 +37,14 @@ static code analysis:
       - python -u automation/run.py --stage sonarqube
   only:
     - /^(working|CI|release-.*)$/
+
+code-scan:
+  stage: code-scan
+  environment:
+    name: code-scan
+  script:
+    - python -u automation/run.py --stage code-scan
+  when: manual
 
 dev:
   stage: deploy-dev

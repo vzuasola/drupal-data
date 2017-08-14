@@ -92,6 +92,80 @@
             }
         }
     },
+    "code-scan": {
+        "steps": {
+            "authorize": {
+                "dockerfile": "automation/Dockerfile.authorize",
+                "docker-image-suffix": "-authorize",
+                "options": [
+                    "--env",
+                    "USER=$GITLAB_USER_EMAIL",
+                    "--env",
+                    "AUTHORIZED_USERS=$MSGREEN_AUTHORIZED_USERS",
+                    "--env",
+                    "DEPENDS_ON=/app/automation/deployed/package.jsonl"
+                ],
+                "command": [
+                    "python",
+                    "/app/automation/authorize.py"
+                ],
+                "volumes": [
+                    "$PWD:/app"
+                ]
+            },
+            "deploy": {
+                "dockerfile": "automation/Dockerfile.deploy",
+                "docker-image-suffix": "-deploy",
+                "options": [
+                    "--env",
+                    "TC_USERNAME=dafa-stack",
+                    "--env",
+                    "TC_PASSWORD=$MSGREEN_DEPLOY_PASSWORD",
+                    "--env",
+                    "TC_HOST=mic-tst-itass01.msgreen.dom",
+                    "--env",
+                    "TC_VERIFY_SSL=no",
+                    "--env",
+                    "TC_RECKLESS_MODE=yes"
+                ],
+                "command": [
+                    "kick_and_monitor",
+                    "--template-name",
+                    "execute-code-scan",
+                    "--extra-vars",
+                    "version: $VERSION.$CI_PIPELINE_ID",
+                    "--extra-vars",
+                    "project: $CI_PROJECT_NAME",
+                    "--extra-vars",
+                    "commit-id: $CI_COMMIT_SHA",
+                    "--extra-vars",
+                    "apptype: java",
+                    "--extra-vars",
+                    "git_project_url: $CI_REPOSITORY_URL",
+                    "--extra-vars",
+                    "gitlab_user_email: $GITLAB_USER_EMAIL"
+                ],
+                "volumes": []
+            },
+            "mark as complete": {
+                "dockerfile": "automation/Dockerfile.authorize",
+                "docker-image-suffix": "-mark-as-complete",
+                "options": [
+                    "--env",
+                    "USER=$GITLAB_USER_EMAIL",
+                    "--env",
+                    "CREATES=/app/automation/deployed/development.jsonl"
+                ],
+                "command": [
+                    "python",
+                    "/app/automation/mark_as_complete.py"
+                ],
+                "volumes": [
+                    "$PWD:/app"
+                ]
+            }
+        }
+    },
     "deploy-development": {
         "steps": {
             "authorize": {
