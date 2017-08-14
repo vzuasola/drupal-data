@@ -1,25 +1,18 @@
-
-# Web composer slider menu items definition
 webcomposer_slider.list:
   title: 'Webcomposer Slider Configuration'
   description: 'List Web composer slider entities'
   parent: system.admin_config
   route_name: webcomposer_slider.admin_settings
 
-
-# Web Composer Slider menu items definition
-entity.web_composer_slider.collection:
-  title: 'Web Composer Slider list'
-  route_name: entity.web_composer_slider.collection
-  description: 'List Web Composer Slider entities'
+# Webcomposer slider entity menu items definition
+entity.webcomposer_slider_entity.collection:
+  title: 'Web Composer Slider List'
+  route_name: entity.webcomposer_slider_entity.collection
+  description: 'List Webcomposer slider entity entities'
   parent: webcomposer_slider.list
-  weight: 100
 
-
-# Web Composer Slider type menu items definition
-entity.web_composer_slider_type.collection:
-  title: 'Web Composer Slider type'
-  route_name: entity.web_composer_slider_type.collection
-  description: 'List Web Composer Slider type (bundles)'
+webcomposer_slider_entity.admin.structure.settings:
+  title: 'Web Composer Slider Settings'
+  description: 'Configure Webcomposer slider entity entities'
+  route_name: webcomposer_slider_entity.settings
   parent: webcomposer_slider.list
-  weight: 99
