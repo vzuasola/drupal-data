@@ -3,21 +3,23 @@
 This module binds GitLab deployments and Ansible Tower jobs
 """
 
-from __future__ import print_function
 from __future__ import absolute_import
+from __future__ import print_function
+
 import argparse
 import datetime
 import json
-import os
 import subprocess
 import sys
+
+import os
+
+import lib.docker as docker
 import lib.kerberos as kerberos
-from lib.utils import FAILED, read_configuration
-from lib.utils import deployment_conf_dir, project_dir
 from lib.error import PipelineError
 from lib.logger import logger
-import lib.docker as docker
-
+from lib.utils import FAILED, read_configuration
+from lib.utils import deployment_conf_dir, project_dir
 
 # some constants...
 CURRENT_DIR = os.path.abspath(os.path.dirname(__file__))
