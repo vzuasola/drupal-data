@@ -28,7 +28,7 @@ webcomposer_config.pushnx_configuration_tab:
   title: 'Push Notification Configuration'
   base_route: webcomposer_config.pushnx_configuration_form
 
-webcomposer_config.livechat_configuration_tab:
-  route_name: webcomposer_config.livechat_configuration_form
-  title: 'Live Chat Configuration'
-  base_route: webcomposer_config.livechat_configuration_form
+webcomposer_config.avaya_configuration_tab:
+  route_name: webcomposer_config.avaya_configuration_form
+  title: 'Avaya Chat Configuration'
+  base_route: webcomposer_config.avaya_configuration_form
