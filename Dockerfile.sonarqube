@@ -7,4 +7,5 @@ RUN mv sonar-scanner-3.0.3.778 sonar-scanner
 RUN cd /usr/bin && ln -s /sonar-scanner/bin/sonar-scanner sonar-scanner
 RUN rm -rf /sonar-scanner-cli.zip
 RUN apk del curl
+WORKDIR /app
 CMD ['/usr/bin/sonar-scanner']
