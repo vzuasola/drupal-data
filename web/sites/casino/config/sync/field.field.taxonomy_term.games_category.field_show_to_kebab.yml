@@ -9,7 +9,7 @@ id: taxonomy_term.games_category.field_show_to_kebab
 field_name: field_show_to_kebab
 entity_type: taxonomy_term
 bundle: games_category
-label: 'Show to Kebab'
+label: 'Show in Kebab'
 description: ''
 required: false
 translatable: true
