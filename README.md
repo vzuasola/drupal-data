@@ -1,5 +1,5 @@
 ## automation-pipelines
-
+#
 Welcome to automation pipelines. This repository aims to provide the base
 layout for the GitLab pipeline framework.
 
