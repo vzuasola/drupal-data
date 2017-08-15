@@ -109,7 +109,7 @@
                     "/usr/bin/sonar-scanner",
                     "-Dsonar.host.url=$SONARQUBE_URL",
                     "-Dsonar.projectKey=$CI_PROJECT_NAME",
-                    "-Dsonar.sources=./",
+                    "-Dsonar.sources=/app",
                     "-Dsonar.projectVersion=$VERSION"
                 ],
                 "volumes": [
