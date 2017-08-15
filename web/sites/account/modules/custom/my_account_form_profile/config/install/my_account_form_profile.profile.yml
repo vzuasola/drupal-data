@@ -104,7 +104,7 @@ home_address_field:
     label: 'Home Address'
 
 #sms
-enable_sms_verification_field: 1
+enable_sms_verification_field: '1'
 
 verify_text_field: 'Verify'
 
