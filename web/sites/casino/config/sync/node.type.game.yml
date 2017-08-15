@@ -26,6 +26,6 @@ name: Game
 type: game
 description: 'Use game for game listing entry.'
 help: ''
-new_revision: false
-preview_mode: 1
+new_revision: true
+preview_mode: 0
 display_submitted: true
