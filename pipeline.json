@@ -99,9 +99,14 @@
             "sonarqube-scanner": {
                 "dockerfile": "automation/Dockerfile.sonarqube",
                 "docker-image-suffix": "-sonarqube:1.0.0",
-                "options": [],
+                "options": [
+                    "--env",
+                    "SONARQUBE_URL=$SONARQUBE_URL",
+                    "--env",
+                    "CI_PROJECT_NAME=$CI_PROJECT_NAME"
+                ],
                 "command": [
-                    "/sonar-scanner/bin/sonar-scanner",
+                    "/usr/bin/sonar-scanner",
                     "-Dsonar.host.url=$SONARQUBE_URL",
                     "-Dsonar.projectKey=$CI_PROJECT_NAME",
                     "-Dsonar.sources=./",
