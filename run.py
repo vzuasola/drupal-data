@@ -48,8 +48,7 @@ def main():
         docker.execute(image_name=image_name, dockerfile=dockerfile,
                        options=options, command=command, volumes=volumes,
                        output=output)
-
-    docker.cleanup_volumes('/app')
+        docker.cleanup_volumes('/app')
 
 
 if __name__ == '__main__':
