@@ -16,9 +16,13 @@
                 "dockerfile": "automation/Dockerfile.composer",
                 "docker-image-suffix": "-composer",
                 "options": [],
-                "command": [],
+                "command": [
+                    "install",
+                    "-v",
+                    "--no-interaction"
+                ],
                 "volumes": [
-                    "$PWD:/app"
+                    "$PWD:/var/www/html/app"
                 ]
             },
             "yarn-install": {
@@ -70,21 +74,19 @@
                 "volumes": [
                     "$PWD:/app"
                 ]
-            }
-        }
-    },
-    "sonarqube": {
-        "steps": {
-            "sonarqube-scanner": {
-                "dockerfile": "automation/Dockerfile.sonarqube",
-                "docker-image-suffix": "-sonarqube",
-                "options": [],
+            },
+            "mark as complete": {
+                "dockerfile": "automation/Dockerfile.authorize",
+                "docker-image-suffix": "-mark-as-complete",
+                "options": [
+                    "--env",
+                    "USER=$GITLAB_USER_EMAIL",
+                    "--env",
+                    "CREATES=/app/automation/deployed/package.jsonl"
+                ],
                 "command": [
-                    "/sonar-scanner/bin/sonar-scanner",
-                    "-Dsonar.host.url=$SONARQUBE_URL",
-                    "-Dsonar.projectKey=$CI_PROJECT_NAME",
-                    "-Dsonar.sources=/app",
-                    "-Dsonar.exclusions=**.py"
+                    "python",
+                    "/app/automation/mark_as_complete.py"
                 ],
                 "volumes": [
                     "$PWD:/app"
@@ -92,7 +94,26 @@
             }
         }
     },
-    "code-scan": {
+    "sonarqube": {
+        "steps": {
+            "sonarqube-scanner": {
+                "dockerfile": "automation/Dockerfile.sonarqube",
+                "docker-image-suffix": "-sonarqube:1.0.0",
+                "options": [],
+                "command": [
+                    "/sonar-scanner/bin/sonar-scanner",
+                    "-Dsonar.host.url=$SONARQUBE_URL",
+                    "-Dsonar.projectKey=$CI_PROJECT_NAME",
+                    "-Dsonar.sources=./",
+                    "-Dsonar.projectVersion=$VERSION"
+                ],
+                "volumes": [
+                    "$PWD:/app"
+                ]
+            }
+        }
+    },
+    "deploy-development": {
         "steps": {
             "authorize": {
                 "dockerfile": "automation/Dockerfile.authorize",
@@ -131,78 +152,6 @@
                 "command": [
                     "kick_and_monitor",
                     "--template-name",
-                    "execute-code-scan",
-                    "--extra-vars",
-                    "version: $VERSION.$CI_PIPELINE_ID",
-                    "--extra-vars",
-                    "project: $CI_PROJECT_NAME",
-                    "--extra-vars",
-                    "commit-id: $CI_COMMIT_SHA",
-                    "--extra-vars",
-                    "apptype: java",
-                    "--extra-vars",
-                    "git_project_url: $CI_REPOSITORY_URL",
-                    "--extra-vars",
-                    "gitlab_user_email: $GITLAB_USER_EMAIL"
-                ],
-                "volumes": []
-            },
-            "mark as complete": {
-                "dockerfile": "automation/Dockerfile.authorize",
-                "docker-image-suffix": "-mark-as-complete",
-                "options": [
-                    "--env",
-                    "USER=$GITLAB_USER_EMAIL",
-                    "--env",
-                    "CREATES=/app/automation/deployed/development.jsonl"
-                ],
-                "command": [
-                    "python",
-                    "/app/automation/mark_as_complete.py"
-                ],
-                "volumes": [
-                    "$PWD:/app"
-                ]
-            }
-        }
-    },
-    "deploy-development": {
-        "steps": {
-            "authorize": {
-                "dockerfile": "automation/Dockerfile.authorize",
-                "docker-image-suffix": "-authorize",
-                "options": [
-                    "--env",
-                    "USER=$GITLAB_USER_EMAIL",
-                    "--env",
-                    "AUTHORIZED_USERS=$MSGREEN_AUTHORIZED_USERS"
-                ],
-                "command": [
-                    "python",
-                    "/app/automation/authorize.py"
-                ],
-                "volumes": [
-                    "$PWD:/app"
-                ]
-            },
-            "deploy": {
-                "dockerfile": "automation/Dockerfile.deploy",
-                "docker-image-suffix": "-deploy",
-                "options": [
-                    "--env",
-                    "TC_USERNAME=data-stack",
-                    "--env",
-                    "TC_PASSWORD=$MSGREEN_DEPLOY_PASSWORD",
-                    "--env",
-                    "TC_HOST=mic-tst-itass01.msgreen.dom",
-                    "--env",
-                    "TC_VERIFY_SSL=no",
-                    "--env",
-                    "TC_RECKLESS_MODE=yes"
-                ],
-                "command": [
-                    "kick_and_monitor",
-                    "--template-name",
                     "CMS: deploy - development environment",
                     "--extra-vars",
                     "version: $VERSION.$CI_PIPELINE_ID",
@@ -212,7 +161,7 @@
                 "volumes": []
             },
             "mark as complete": {
-                "dockerfile": "automation/Dockerfile.mark_as_done",
+                "dockerfile": "automation/Dockerfile.authorize",
                 "docker-image-suffix": "-mark-as-complete",
                 "options": [
                     "--env",
@@ -232,12 +181,31 @@
     },
     "integration-tests-development": {
         "steps": {
+            "authorize": {
+                "dockerfile": "automation/Dockerfile.authorize",
+                "docker-image-suffix": "-authorize",
+                "options": [
+                    "--env",
+                    "USER=$GITLAB_USER_EMAIL",
+                    "--env",
+                    "AUTHORIZED_USERS=$MSGREEN_AUTHORIZED_USERS",
+                    "--env",
+                    "DEPENDS_ON=/app/automation/deployed/development.jsonl"
+                ],
+                "command": [
+                    "python",
+                    "/app/automation/authorize.py"
+                ],
+                "volumes": [
+                    "$PWD:/app"
+                ]
+            },
             "trigger integration tests": {
                 "dockerfile": "automation/Dockerfile.deploy",
                 "docker-image-suffix": "-integration-tests",
                 "options": [
                     "--env",
-                    "TC_USERNAME=data-stack",
+                    "TC_USERNAME=dafa-stack",
                     "--env",
                     "TC_PASSWORD=$INTEGRATION_TESTS_PASSWORD",
                     "--env",
@@ -263,7 +231,7 @@
                 "volumes": []
             },
             "mark as complete": {
-                "dockerfile": "automation/Dockerfile.mark_as_done",
+                "dockerfile": "automation/Dockerfile.authorize",
                 "docker-image-suffix": "-mark-as-complete",
                 "options": [
                     "--env",
@@ -291,7 +259,8 @@
                     "USER=$GITLAB_USER_EMAIL",
                     "--env",
                     "AUTHORIZED_USERS=$MSGREEN_AUTHORIZED_USERS",
-                    "DEPENDS_ON=/app/automation/deployed/integration-tests-development.jsonl,/app/automation/deployed/development.jsonl"
+                    "--env",
+                    "DEPENDS_ON=/app/automation/deployed/development.jsonl"
                 ],
                 "command": [
                     "python",
@@ -306,7 +275,7 @@
                 "docker-image-suffix": "-deploy",
                 "options": [
                     "--env",
-                    "TC_USERNAME=data-stack",
+                    "TC_USERNAME=dafa-stack",
                     "--env",
                     "TC_PASSWORD=$MSGREEN_DEPLOY_PASSWORD",
                     "--env",
@@ -328,13 +297,13 @@
                 "volumes": []
             },
             "mark as complete": {
-                "dockerfile": "automation/Dockerfile.mark_as_done",
+                "dockerfile": "automation/Dockerfile.authorize",
                 "docker-image-suffix": "-mark-as-complete",
                 "options": [
                     "--env",
                     "USER=$GITLAB_USER_EMAIL",
                     "--env",
-                    "CREATES=/appautomation/deployed/testing.jsonl"
+                    "CREATES=/app/automation/deployed/testing.jsonl"
                 ],
                 "command": [
                     "python",
@@ -348,12 +317,31 @@
     },
     "integration-tests-test": {
         "steps": {
+            "authorize": {
+                "dockerfile": "automation/Dockerfile.authorize",
+                "docker-image-suffix": "-authorize",
+                "options": [
+                    "--env",
+                    "USER=$GITLAB_USER_EMAIL",
+                    "--env",
+                    "AUTHORIZED_USERS=$MSGREEN_AUTHORIZED_USERS",
+                    "--env",
+                    "DEPENDS_ON=/app/automation/deployed/testing.jsonl"
+                ],
+                "command": [
+                    "python",
+                    "/app/automation/authorize.py"
+                ],
+                "volumes": [
+                    "$PWD:/app"
+                ]
+            },
             "trigger integration tests": {
                 "dockerfile": "automation/Dockerfile.deploy",
                 "docker-image-suffix": "-integration-tests",
                 "options": [
                     "--env",
-                    "TC_USERNAME=data-stack",
+                    "TC_USERNAME=dafa-stack",
                     "--env",
                     "TC_PASSWORD=$INTEGRATION_TESTS_PASSWORD",
                     "--env",
@@ -379,13 +367,13 @@
                 "volumes": []
             },
             "mark as complete": {
-                "dockerfile": "automation/Dockerfile.mark_as_done",
+                "dockerfile": "automation/Dockerfile.authorize",
                 "docker-image-suffix": "-mark-as-complete",
                 "options": [
                     "--env",
                     "USER=$GITLAB_USER_EMAIL",
                     "--env",
-                    "CREATES=/app/automation/deployed/integration-tests-development.jsonl"
+                    "CREATES=/app/automation/deployed/integration-tests-test.jsonl"
                 ],
                 "command": [
                     "python",
@@ -406,7 +394,9 @@
                     "--env",
                     "USER=$GITLAB_USER_EMAIL",
                     "--env",
-                    "AUTHORIZED_USERS=$MSGREEN_AUTHORIZED_USERS"
+                    "AUTHORIZED_USERS=$MSGREEN_AUTHORIZED_USERS",
+                    "--env",
+                    "DEPENDS_ON=/app/automation/deployed/development.jsonl"
                 ],
                 "command": [
                     "python",
@@ -421,7 +411,7 @@
                 "docker-image-suffix": "-deploy",
                 "options": [
                     "--env",
-                    "TC_USERNAME=data-stack",
+                    "TC_USERNAME=dafa-stack",
                     "--env",
                     "TC_PASSWORD=$MSGREEN_DEPLOY_PASSWORD",
                     "--env",
@@ -443,7 +433,7 @@
                 "volumes": []
             },
             "mark as complete": {
-                "dockerfile": "automation/Dockerfile.mark_as_done",
+                "dockerfile": "automation/Dockerfile.authorize",
                 "docker-image-suffix": "-mark-as-complete",
                 "options": [
                     "--env",
@@ -470,7 +460,9 @@
                     "--env",
                     "USER=$GITLAB_USER_EMAIL",
                     "--env",
-                    "AUTHORIZED_USERS=$MSGREEN_AUTHORIZED_USERS"
+                    "AUTHORIZED_USERS=$MSORANGE_AUTHORIZED_USERS",
+                    "--env",
+                    "DEPENDS_ON=/app/automation/deployed/testing.jsonl"
                 ],
                 "command": [
                     "python",
@@ -485,7 +477,7 @@
                 "docker-image-suffix": "-deploy",
                 "options": [
                     "--env",
-                    "TC_USERNAME=data-stack",
+                    "TC_USERNAME=dafa-stack",
                     "--env",
                     "TC_PASSWORD=$MSORANGE_DEPLOY_PASSWORD",
                     "--env",
@@ -507,7 +499,7 @@
                 "volumes": []
             },
             "mark as complete": {
-                "dockerfile": "automation/Dockerfile.mark_as_done",
+                "dockerfile": "automation/Dockerfile.authorize",
                 "docker-image-suffix": "-mark-as-complete",
                 "options": [
                     "--env",
@@ -534,7 +526,7 @@
                     "--env",
                     "USER=$GITLAB_USER_EMAIL",
                     "--env",
-                    "AUTHORIZED_USERS=$MSGREEN_AUTHORIZED_USERS",
+                    "AUTHORIZED_USERS=$MSORANGE_AUTHORIZED_USERS",
                     "--env",
                     "DEPENDS_ON=/app/automation/deployed/testing.jsonl"
                 ],
@@ -551,7 +543,7 @@
                 "docker-image-suffix": "-deploy",
                 "options": [
                     "--env",
-                    "TC_USERNAME=data-stack",
+                    "TC_USERNAME=dafa-stack",
                     "--env",
                     "TC_PASSWORD=$MSORANGE_DEPLOY_PASSWORD",
                     "--env",
@@ -573,13 +565,13 @@
                 "volumes": []
             },
             "mark as complete": {
-                "dockerfile": "automation/Dockerfile.mark_as_done",
+                "dockerfile": "automation/Dockerfile.authorize",
                 "docker-image-suffix": "-mark-as-complete",
                 "options": [
                     "--env",
                     "USER=$GITLAB_USER_EMAIL",
                     "--env",
-                    "/app/automation/deployed/staging.jsonl"
+                    "CREATES=/app/automation/deployed/staging.jsonl"
                 ],
                 "command": [
                     "python",
@@ -600,7 +592,9 @@
                     "--env",
                     "USER=$GITLAB_USER_EMAIL",
                     "--env",
-                    "AUTHORIZED_USERS=$STAGING_SIGNOFF_USERS"
+                    "AUTHORIZED_USERS=$STAGING_SIGNOFF_USERS",
+                    "--env",
+                    "DEPENDS_ON=/app/automation/deployed/staging.jsonl"
                 ],
                 "command": [
                     "python",
@@ -611,13 +605,13 @@
                 ]
             },
             "mark as complete": {
-                "dockerfile": "automation/Dockerfile.mark_as_done",
+                "dockerfile": "automation/Dockerfile.authorize",
                 "docker-image-suffix": "-mark-as-complete",
                 "options": [
                     "--env",
                     "USER=$GITLAB_USER_EMAIL",
                     "--env",
-                    "CREATES=/appautomation/deployed/staging-signoff.jsonl"
+                    "CREATES=/app/automation/deployed/staging-signoff.jsonl"
                 ],
                 "command": [
                     "python",
