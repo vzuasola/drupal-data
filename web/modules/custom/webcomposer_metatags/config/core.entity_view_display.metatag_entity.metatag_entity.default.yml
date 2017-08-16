@@ -8,7 +8,6 @@ dependencies:
     - field.field.metatag_entity.metatag_entity.field_keywords
     - field.field.metatag_entity.metatag_entity.field_per_page_visibility
   module:
-    - text
     - user
     - webcomposer_metatags
 id: metatag_entity.metatag_entity.default
@@ -17,32 +16,32 @@ bundle: metatag_entity
 mode: default
 content:
   field_abstract:
-    weight: 6
+    weight: 9
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    type: basic_string
     region: content
   field_description:
-    weight: 5
+    weight: 10
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    type: basic_string
     region: content
   field_keywords:
-    weight: 7
+    weight: 11
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    type: basic_string
     region: content
   field_per_page_visibility:
-    weight: 4
+    weight: 8
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    type: basic_string
     region: content
   name:
     label: above

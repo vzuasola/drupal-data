@@ -1,16 +1,16 @@
-uuid: 6e108178-e25b-4141-97d3-b6a2b9e519b5
+uuid: 60b20bf5-8600-4851-8b93-9fd71ce5c1d9
 langcode: en
 status: true
 dependencies:
   module:
-    - text
     - webcomposer_metatags
 id: metatag_entity.field_description
 field_name: field_description
 entity_type: metatag_entity
-type: text_long
-settings: {  }
-module: text
+type: string_long
+settings:
+  case_sensitive: false
+module: core
 locked: false
 cardinality: 1
 translatable: true

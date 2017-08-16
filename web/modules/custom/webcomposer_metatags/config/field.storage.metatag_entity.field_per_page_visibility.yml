@@ -1,17 +1,16 @@
-uuid: 1f541fca-5a8d-4638-9744-d6ea2baf946b
+uuid: eb987c96-2938-4e30-9892-739d45edb256
 langcode: en
 status: true
 dependencies:
   module:
-    - text
     - webcomposer_metatags
 id: metatag_entity.field_per_page_visibility
 field_name: field_per_page_visibility
 entity_type: metatag_entity
-type: text
+type: string_long
 settings:
-  max_length: 255
-module: text
+  case_sensitive: false
+module: core
 locked: false
 cardinality: 1
 translatable: true

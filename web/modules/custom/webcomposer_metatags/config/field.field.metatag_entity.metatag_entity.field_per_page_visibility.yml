@@ -1,11 +1,10 @@
-uuid: db2247cd-41b7-49b2-9447-f8d355a9be0e
+uuid: b206a747-6834-447b-9ada-bd19b134e36f
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.metatag_entity.field_per_page_visibility
   module:
-    - text
     - webcomposer_metatags
 id: metatag_entity.metatag_entity.field_per_page_visibility
 field_name: field_per_page_visibility
@@ -18,4 +17,4 @@ translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: text
+field_type: string_long

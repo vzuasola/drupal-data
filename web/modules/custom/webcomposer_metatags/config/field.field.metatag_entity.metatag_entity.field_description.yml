@@ -1,11 +1,10 @@
-uuid: 35e76732-5181-4a24-9a30-4b7165a4a7a0
+uuid: a271ee63-39eb-48ed-826a-1ace13550ff0
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.metatag_entity.field_description
   module:
-    - text
     - webcomposer_metatags
 id: metatag_entity.metatag_entity.field_description
 field_name: field_description
@@ -18,4 +17,4 @@ translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: text_long
+field_type: string_long
