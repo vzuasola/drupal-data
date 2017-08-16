@@ -180,7 +180,7 @@
                     "--env",
                     "AUTHORIZED_USERS=$MSGREEN_AUTHORIZED_USERS",
                     "--env",
-                    "DEPENDS_ON=/app/automation/deployed/package.jsonl"
+                    "DEPENDS_ON=/app/automation/deployed/development.jsonl"
                 ],
                 "command": [
                     "python",
@@ -231,7 +231,7 @@
                     "--env",
                     "USER=$GITLAB_USER_EMAIL",
                     "--env",
-                    "CREATES=/app/automation/deployed/development.jsonl"
+                    "CREATES=/app/automation/deployed/code-scan.jsonl"
                 ],
                 "command": [
                     "python",
