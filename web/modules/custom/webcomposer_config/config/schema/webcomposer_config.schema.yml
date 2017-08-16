@@ -158,3 +158,11 @@ webcomposer_config.page_not_found:
       type: text_format
       label: 'Content'
       translatable: true
+
+webcomposer_config.avaya_configuration:
+  type: config_object
+  label: 'Avaya Chat Configuration'
+  mapping:
+    base_url:
+      type: text
+      label: 'Avaya Chat Base URL'

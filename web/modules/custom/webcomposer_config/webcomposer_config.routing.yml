@@ -53,3 +53,11 @@ webcomposer_config.pushnx_configuration_form:
     _title: 'Push Notification Configuration'
   requirements:
     _permission: 'administer site configuration'
+
+webcomposer_config.avaya_configuration_form:
+  path: 'admin/config/webcomposer/config/avaya'
+  defaults:
+    _form: 'Drupal\webcomposer_config\Form\AvayaChatConfiguration'
+    _title: 'Avaya Chat Configuration'
+  requirements:
+    _permission: 'administer site configuration'
