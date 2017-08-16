@@ -123,20 +123,13 @@
             "phpcs": {
                 "dockerfile": "automation/Dockerfile.phpqatools",
                 "docker-image-suffix": "-phpqatools",
-                "options": [
-                    "--env",
-                    "SSH_AUTH_SOCK=/ssh-auth.sock",
-                    "--user",
-                    "$UID:$GROUPS"
-                ],
+                "options": [],
                 "command": [
                     "phpcs"
                 ],
                 "volumes": [
                     "$PWD:/app",
-                    "$SSH_AUTH_SOCK:/ssh-auth.sock",
                     "$HOME/.ssh:/home/$USER/.ssh:ro"
-
                 ]
             }
         }
@@ -146,21 +139,14 @@
             "sensiolab-security-checker": {
                 "dockerfile": "automation/Dockerfile.phpqatools",
                 "docker-image-suffix": "-phpqatools",
-                "options": [
-                    "--env",
-                    "SSH_AUTH_SOCK=/ssh-auth.sock",
-                    "--user",
-                    "$UID:$GROUPS"
-                ],
+                "options": [],
                 "command": [
                     "security-checker",
                     "security:check"
                 ],
                 "volumes": [
                     "$PWD:/app",
-                    "$SSH_AUTH_SOCK:/ssh-auth.sock",
                     "$HOME/.ssh:/home/$USER/.ssh:ro"
-
                 ]
             }
         }
