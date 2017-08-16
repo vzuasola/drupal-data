@@ -130,7 +130,7 @@
                     "$UID:$GROUPS"
                 ],
                 "command": [
-                    "phpcs",
+                    "phpcs"
                 ],
                 "volumes": [
                     "$PWD:/app",
