@@ -1,0 +1,5 @@
+webcomposer_avaya.admin_avaya_configuration:
+  title: 'Avaya Chat Configuration'
+  parent: webcomposer_config.list
+  description: 'Provides configuration for avaya chat support'
+  route_name: webcomposer_avaya.avaya_configuration_form
