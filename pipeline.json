@@ -96,9 +96,29 @@
     },
     "sonarqube": {
         "steps": {
+            "sonarqube-scanner-preview": {
+                "dockerfile": ".ci/pipeline-helper/Dockerfile.sonarqube",
+                "docker-image-suffix": "-sonarqube",
+                "options": [],
+                "command": [
+                    "/sonar-scanner/bin/sonar-scanner",
+                    "-Dsonar.host.url=$SONARQUBE_URL",
+                    "-Dsonar.projectKey=$CI_PROJECT_NAME",
+                    "-Dsonar.sources=./",
+                    "-Dsonar.projectVersion=$VERSION",
+                    "-Dsonar.analysis.mode=preview",
+                    "-Dsonar.gitlab.commit_sha=$SONAR_COMMIT_SHA",
+                    "-Dsonar.gitlab.ref_name=$CI_COMMIT_REF_NAME",
+                    "-Dsonar.gitlab.project_id=$CI_PROJECT_ID",
+                    "-Dsonar.gitlab.unique_issue_per_inline=true"
+                ],
+                "volumes": [
+                    "$PWD:/app"
+                ]
+            },
             "sonarqube-scanner": {
                 "dockerfile": "automation/Dockerfile.sonarqube",
-                "docker-image-suffix": "-sonarqube:1.0.0",
+                "docker-image-suffix": "-sonarqube",
                 "options": [
                     "--env",
                     "SONARQUBE_URL=$SONARQUBE_URL",
@@ -128,8 +148,7 @@
                     "phpcs"
                 ],
                 "volumes": [
-                    "$PWD:/app",
-                    "$HOME/.ssh:/home/$USER/.ssh:ro"
+                    "$PWD:/app"
                 ]
             }
         }
@@ -145,8 +164,7 @@
                     "security:check"
                 ],
                 "volumes": [
-                    "$PWD:/app",
-                    "$HOME/.ssh:/home/$USER/.ssh:ro"
+                    "$PWD:/app"
                 ]
             }
         }
