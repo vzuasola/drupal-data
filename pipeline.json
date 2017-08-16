@@ -97,7 +97,7 @@
     "sonarqube": {
         "steps": {
             "sonarqube-scanner-preview": {
-                "dockerfile": ".ci/pipeline-helper/Dockerfile.sonarqube",
+                "dockerfile": "automation/Dockerfile.sonarqube",
                 "docker-image-suffix": "-sonarqube",
                 "options": [],
                 "command": [
