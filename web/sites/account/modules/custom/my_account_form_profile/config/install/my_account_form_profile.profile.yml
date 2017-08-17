@@ -104,7 +104,7 @@ home_address_field:
     label: 'Home Address'
 
 #sms
-enable_sms_verification_field: 1
+enable_sms_verification_field: '1'
 
 verify_text_field: 'Verify'
 
@@ -208,6 +208,8 @@ password_format_validation_field: 'Password format error message'
 primary_label_field: 'Primary'
 add_mobile_label_field: 'Add mobile number'
 no_changed_detected_message_field: 'No changes have been detected'
+male_label_field: 'Male'
+female_label_field: 'Female'
 contact_preference_top_blurb_field: 'Would you like to get the latest promos, updates and offers'
 contact_preference_bottom_blurb_field: '* By default, all promotions and offers will be sent via email registered.'
 contact_preference_field:

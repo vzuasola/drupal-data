@@ -425,7 +425,7 @@ my_account_form_profile.profile:
               type: label
               label: 'Field label'
     enable_sms_verification_field:
-      type: boolean_checkbox
+      type: label
       label: 'Enable SMS Verification'
     verify_text_field:
       type: label
@@ -579,6 +579,12 @@ my_account_form_profile.profile:
     no_changed_detected_message_field:
       type: label
       label: 'No change message translation'
+    female_label_field:
+      type: label
+      label: 'Female label translation'
+    male_label_field:
+      type: label
+      label: 'Male label translation'
     required_validation_field:
       type: label
       label: 'Required Validation translation'
