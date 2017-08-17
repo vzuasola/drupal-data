@@ -34,4 +34,7 @@ my_account_core.header:
     product_menu_new_tag:
       type: label
       label: 'New Tag Text'
+    help_tooltip:
+      type: label
+      label: 'Help Tooltip'
   langcode: 'en'
