@@ -105,11 +105,17 @@ class PushNotificationConfiguration extends ConfigFormBase
       '#default_value' => $config->get('debug_logging'),
       '#description' => $this->t('Chronicle Logging.'),
     );
+    $form['debug_settings']['debug_display_expirydate'] = array(
+      '#type' => 'checkbox',
+      '#title' => $this->t('Display Expiry Date'),
+      '#default_value' => $config->get('debug_display_expirydate'),
+      '#description' => $this->t('Show Expiry Date on Messages.'),
+    );
     $form['debug_settings']['debug_display_all'] = array(
       '#type' => 'checkbox',
-      '#title' => $this->t('Debug'),
+      '#title' => $this->t('Filter Expired Messages'),
       '#default_value' => $config->get('debug_display_all'),
-      '#description' => $this->t('Includes Expired Messages and Filter Expired Messages.'),
+      '#description' => $this->t('Enable filtering of Expired Messages.'),
     );
     // Exclude Pages
     $form['exclude_page_settings']['exclude_pages'] = array(
@@ -186,7 +192,8 @@ class PushNotificationConfiguration extends ConfigFormBase
       'date_offset',
       'login_selector',
       'debug_logging',
-      'debug_display_all'
+      'debug_display_all',
+      'debug_display_expirydate'
     );
 
     $config = $this->config('webcomposer_config.pushnx_configuration');
