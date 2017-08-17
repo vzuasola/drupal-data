@@ -1,5 +1,5 @@
 webcomposer_avaya.list:
-  title: 'Webcomposer Configuration'
+  title: 'Avaya Configuration'
   description: 'Avaya config settings'
   parent: system.admin_config
   route_name: webcomposer_avaya.admin_settings
