@@ -19,7 +19,7 @@ field_name: field_slideroverlay_image
 entity_type: paragraph
 bundle: slider_overlay_cmi
 label: 'Overlay Image'
-description: ''
+description: 'The image for the slider overlay. The recommended upload size is 100 x 40 pixels'
 required: false
 translatable: true
 default_value: {  }
