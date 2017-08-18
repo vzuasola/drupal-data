@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "4abfba21ac1bbd089647110c492e05a8",
+    "content-hash": "173b1c3cefb15ad7a9c25137e6d54388",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -846,16 +846,16 @@
         },
         {
             "name": "drupal/core",
-            "version": "8.3.4",
+            "version": "8.3.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "f34eee7255142ab5416107972ef13d011f11e163"
+                "reference": "32f66ed9cc593f8e9ab0eaaaeff4cadbd859d5ff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/f34eee7255142ab5416107972ef13d011f11e163",
-                "reference": "f34eee7255142ab5416107972ef13d011f11e163",
+                "url": "https://api.github.com/repos/drupal/core/zipball/32f66ed9cc593f8e9ab0eaaaeff4cadbd859d5ff",
+                "reference": "32f66ed9cc593f8e9ab0eaaaeff4cadbd859d5ff",
                 "shasum": ""
             },
             "require": {
@@ -1008,7 +1008,8 @@
             "type": "drupal-core",
             "extra": {
                 "patches_applied": {
-                    "Date field all languages title fix": "https://www.drupal.org/files/issues/2652850-17.patch"
+                    "Date field all languages title fix": "https://www.drupal.org/files/issues/2652850-17.patch",
+                    "Fix CKEditor translation": "web/patches/ckeditor-translation.patch"
                 }
             },
             "autoload": {
@@ -1032,7 +1033,7 @@
                 "GPL-2.0+"
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
-            "time": "2017-06-21T18:13:27+00:00"
+            "time": "2017-08-16T17:10:35+00:00"
         },
         {
             "name": "drush/drush",
