@@ -199,59 +199,11 @@ class MyAccountFormResource extends ResourceBase
             $value['contact_preference_top_blurb'] = $values['contact_preference_top_blurb_field'];
             $value['contact_preference_bottom_blurb'] = $values['contact_preference_bottom_blurb_field'];
         } elseif ($key == 'profile') {
+            $unsetKeys = $this->getUnsetKeys();
 
-            // Get only Profile field.
-            unset($values['account_field']);
-            unset($values['communication_detail_field']);
-            unset($values['home_address_field']);
-            unset($values['contact_preference_label']);
-            unset($values['contact_preference_top_blurb_field']);
-            unset($values['contact_preference_bottom_blurb_field']);
-            unset($values['enable_sms_verification_field']);
-            unset($values['verify_text_field']);
-            unset($values['modal_verify_header_text_field']);
-            unset($values['modal_verify_body_text_field']);
-            unset($values['modal_verification_code_placeholder_field']);
-            unset($values['modal_verification_resend_code_text_field']);
-            unset($values['modal_verification_submit_text_field']);
-            unset($values['verification_code_response_field']);
-            unset($values['verification_code_required_message_field']);
-            unset($values['verification_code_min_length_message_field']);
-            unset($values['verification_code_max_length_message_field']);
-            unset($values['country_mapping_field']);
-            unset($values['country_code_mapping_field']);
-            unset($values['save_changes_field']);
-            unset($values['cancel_field']);
-            unset($values['modal_preview_header_field']);
-            unset($values['modal_preview_top_blurb_field']);
-            unset($values['modal_preview_current_label_field']);
-            unset($values['modal_preview_new_label_field']);
-            unset($values['modal_preview_bottom_blurb_field']);
-            unset($values['modal_preview_placeholder_field']);
-            unset($values['modal_preview_btn_field']);
-            unset($values['modal_preview_field']);
-            unset($values['server_side_validation_field']);
-            unset($values['primary_label_field']);
-            unset($values['add_mobile_label_field']);
-            unset($values['no_changed_detected_message_field']);
-            unset($values['required_validation_field']);
-            unset($values['mobile_number_format_validation_field']);
-            unset($values['mobile_number_min_length_validation_field']);
-            unset($values['mobile_number_max_length_validation_field']);
-            unset($values['address_format_validation_field']);
-            unset($values['address_min_length_validation_field']);
-            unset($values['address_max_length_validation_field']);
-            unset($values['city_format_validation_field']);
-            unset($values['city_min_length_validation_field']);
-            unset($values['city_max_length_validation_field']);
-            unset($values['postal_code_format_validation_field']);
-            unset($values['postal_code_max_length_validation_field']);
-            unset($values['postal_code_max_length_value_field']);
-            unset($values['password_format_validation_field']);
-            unset($values['password_min_length_validation_field']);
-            unset($values['password_max_length_validation_field']);
-            unset($values['contact_preference_yes_label_field']);
-            unset($values['contact_preference_no_label_field']);
+            foreach ($unsetKeys as $key) {
+                unset($values[$key]);
+            }
 
             $value = $values;
         } elseif ($key == 'sms_verification') {
@@ -315,9 +267,68 @@ class MyAccountFormResource extends ResourceBase
             $value['primary_label'] = $values['primary_label_field'];
             $value['add_mobile_label'] = $values['add_mobile_label_field'];
             $value['no_changed_detected_message'] = $values['no_changed_detected_message_field'];
+            $value['male_label'] = $values['male_label_field'];
+            $value['female_label'] = $values['female_label_field'];
         }
         return $value;
     }
 
-
+    private function getUnsetKeys() {
+        return $unsetKeys = [
+                'account_field',
+                'communication_detail_field',
+                'home_address_field',
+                'contact_preference_label',
+                'contact_preference_top_blurb_field',
+                'contact_preference_bottom_blurb_field',
+                'contact_preference_bottom_blurb_field',
+                'enable_sms_verification_field',
+                'verify_text_field',
+                'modal_verify_header_text_field',
+                'modal_verify_body_text_field',
+                'modal_verification_code_placeholder_field',
+                'modal_verification_resend_code_text_field',
+                'modal_verification_submit_text_field',
+                'verification_code_response_field',
+                'verification_code_required_message_field',
+                'verification_code_min_length_message_field',
+                'verification_code_max_length_message_field',
+                'country_mapping_field',
+                'country_code_mapping_field',
+                'save_changes_field',
+                'cancel_field',
+                'modal_preview_header_field',
+                'modal_preview_top_blurb_field',
+                'modal_preview_current_label_field',
+                'modal_preview_new_label_field',
+                'modal_preview_bottom_blurb_field',
+                'modal_preview_placeholder_field',
+                'modal_preview_btn_field',
+                'modal_preview_field',
+                'server_side_validation_field',
+                'primary_label_field',
+                'add_mobile_label_field',
+                'no_changed_detected_message_field',
+                'required_validation_field',
+                'mobile_number_format_validation_field',
+                'mobile_number_min_length_validation_field',
+                'mobile_number_max_length_validation_field',
+                'address_format_validation_field',
+                'address_min_length_validation_field',
+                'address_max_length_validation_field',
+                'city_format_validation_field',
+                'city_min_length_validation_field',
+                'city_max_length_validation_field',
+                'postal_code_format_validation_field',
+                'postal_code_max_length_validation_field',
+                'postal_code_max_length_value_field',
+                'password_format_validation_field',
+                'password_min_length_validation_field',
+                'password_max_length_validation_field',
+                'contact_preference_yes_label_field',
+                'contact_preference_no_label_field',
+                'male_label_field',
+                'female_label_field',
+            ];
+    }
 }
