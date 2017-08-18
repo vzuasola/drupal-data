@@ -133,7 +133,7 @@ class ConfigurationResource extends ResourceBase {
       $file = File::load($fid);
 
       if ($file) {
-        $file_url = preg_replace('/public:\/\//', '/uploads/', $file->getFileUri());
+        $file_url = preg_replace('/public:\/\//', '', $file->getFileUri());
       }
     }
 
