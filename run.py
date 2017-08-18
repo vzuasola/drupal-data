@@ -34,7 +34,10 @@ def main():
     steps = project_config[stage]['steps']
 
     for step in steps:
-        logger.info('\nstep: {0}'.format(step))
+        if 'skip' in steps[step] and steps[step]['skip'] == 'true' :
+            logger.info('\nSkipped step: {0} in stage: {1}'.format(step, stage))
+            continue;
+        logger.info('\nstage: {0}, step: {1}'.format(stage, step))
         image_name = "{0}{1}".format(project_name,
                                      steps[step]['docker-image-suffix'])
         dockerfile = steps[step]['dockerfile']
