@@ -180,7 +180,8 @@
                 "command": [
                     "phpmd",
                     "src/,templates/,app/,devtool/",
-                    "text,codesize,cleancode,unusedcode,naming,design,controversial"
+                    "text",
+                    "codesize,cleancode,unusedcode,naming,design,controversial"
                 ],
                 "volumes": [
                     "$PWD:/app"
