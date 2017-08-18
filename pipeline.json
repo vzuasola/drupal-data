@@ -94,8 +94,25 @@
             }
         }
     },
-    "sonarqube": {
+    "phpunit-sonarqube": {
         "steps": {
+            "unit test": {
+                "dockerfile": "automation/Dockerfile.phpqatools",
+                "docker-image-suffix": "-phpqatools",
+                "options": [],
+                "command": [
+                    "phpunit",
+                    "--fail-on-warning",
+                    "--fail-on-risky",
+                    "--coverage",
+                    "--log-junit=coverage/junit.xml",
+                    "--coverage-clover=coverage/clover.xml"
+                ],
+                "volumes": [
+                    "$PWD:/app"
+                ],
+                "skip": "true"
+            },
             "sonarqube-scanner-preview": {
                 "dockerfile": "automation/Dockerfile.sonarqube",
                 "docker-image-suffix": "-sonarqube",
@@ -147,6 +164,23 @@
                 "options": [],
                 "command": [
                     "phpcs"
+                ],
+                "volumes": [
+                    "$PWD:/app"
+                ]
+            }
+        }
+    },
+    "phpmd": {
+        "steps": {
+            "phpmd": {
+                "dockerfile": "automation/Dockerfile.phpqatools",
+                "docker-image-suffix": "-phpqatools",
+                "options": [],
+                "command": [
+                    "phpmd",
+                    "src/,templates/,app/,devtool/",
+                    "text,codesize,cleancode,unusedcode,naming,design,controversial"
                 ],
                 "volumes": [
                     "$PWD:/app"
