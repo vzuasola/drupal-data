@@ -290,5 +290,5 @@ def _pre_archive(package_config):
         logger.info('detected drupal7 project style')
         _drupal7_pre_archive()
     else:
-        logger.info('detected drupal8 project style')
+        logger.info('detected non-drupal7 project style')
         _drupal8_pre_archive(package_config)
