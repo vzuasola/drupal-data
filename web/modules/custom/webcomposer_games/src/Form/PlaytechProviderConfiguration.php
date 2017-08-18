@@ -37,6 +37,13 @@ class PlaytechProviderConfiguration extends ConfigFormBase {
       '#default_value' => $config->get('javascript_assets')
     );
 
+    $form['lobby_url'] = array(
+      '#type' => 'textfield',
+      '#title' => t('Lobby URL'),
+      '#description' => $this->t('The Playtech Lobby URL'),
+      '#default_value' => $config->get('lobby_url')
+    );
+
     $form['actions'] = ['#type' => 'actions'];
 
     $form['actions']['submit'] = [
@@ -57,7 +64,8 @@ class PlaytechProviderConfiguration extends ConfigFormBase {
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $keys = [
-      'javascript_assets'
+      'javascript_assets',
+      'lobby_url',
     ];
 
     foreach ($keys as $key) {
