@@ -1,0 +1,5 @@
+webcomposer_domain_import.webcomposer_domain_import:
+  title: 'Domain Import'
+  parent: webcomposer_dm.list
+  description: 'Import the domain here'
+  route_name: webcomposer_domain_import.webcomposer_domain_import
