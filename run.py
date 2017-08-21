@@ -9,10 +9,12 @@ import sys
 import os
 
 import lib.docker as docker
+import lib.git as git
 from lib.error import PipelineError
 from lib.logger import logger
 from lib.utils import DEFAULT_CONFIG_FILE
 from lib.utils import read_configuration
+
 
 
 def parse_cli():
@@ -32,6 +34,8 @@ def main():
         raise PipelineError('CI_PROJECT_NAME is not defilend')
     project_config = read_configuration(DEFAULT_CONFIG_FILE)
     steps = project_config[stage]['steps']
+
+    git.get_sonar_sha()
 
     for step in steps:
         if 'skip' in steps[step] and steps[step]['skip'] == 'true' :

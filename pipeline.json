@@ -152,7 +152,8 @@
                 ],
                 "volumes": [
                     "$PWD:/app"
-                ]
+                ],
+                "skip": "true"
             }
         }
     },
