@@ -37,6 +37,13 @@ class PlaytechProviderConfiguration extends ConfigFormBase {
       '#default_value' => $config->get('javascript_assets')
     );
 
+    $form['playtech_pas_endpoint'] = array(
+      '#type' => 'textfield',
+      '#title' => t('Playtech PAS Endpoint'),
+      '#description' => $this->t('Defines the endpoint used for authenticating PAS'),
+      '#default_value' => $config->get('playtech_pas_endpoint')
+    );
+
     $form['lobby_url'] = array(
       '#type' => 'textfield',
       '#title' => t('Lobby URL'),
@@ -65,6 +72,7 @@ class PlaytechProviderConfiguration extends ConfigFormBase {
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $keys = [
       'javascript_assets',
+      'playtech_pas_endpoint',
       'lobby_url',
     ];
 
