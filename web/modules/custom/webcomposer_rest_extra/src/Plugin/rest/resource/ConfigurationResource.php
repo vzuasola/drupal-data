@@ -97,12 +97,18 @@ class ConfigurationResource extends ResourceBase {
       $config = \Drupal::config("webcomposer_config.$id");
       $data = $config->get();
 
-      // Get file relative path if configuration is only Footer.
-      if ($id == 'footer_configuration') {
-        $file_id = $data['partners_logo'][0];
-        $data['partners_image_url'] = $this->getFileRelativePath($file_id);
+      // Get relative path for the configuration images.
+      switch ($id) {
+        case 'footer_configuration':
+          $file_id = $data['partners_logo'][0];
+          $data['partners_image_url'] = $this->getFileRelativePath($file_id);
+          break;
+        
+        case 'page_not_found':
+          $file_id = $data['page_not_found_image'][0];
+          $data['page_not_found_image_url'] = $this->getFileRelativePath($file_id);
+          break;
       }
-
     } catch (\Exception $e) {
       $data = array(
         'error' => $this->t('Configuration not found')
