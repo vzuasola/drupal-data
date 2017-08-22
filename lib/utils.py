@@ -290,5 +290,17 @@ def _pre_archive(package_config):
         logger.info('detected drupal7 project style')
         _drupal7_pre_archive()
     else:
-        logger.info('detected drupal8 project style')
+        logger.info('detected non-drupal7 project style')
         _drupal8_pre_archive(package_config)
+
+
+def get_version():
+    """
+    Retrieves the version based on the branch name and add it on the env variable VERSION.
+    """
+    if 'CI_COMMIT_REF_NAME' not in os.environ:
+        msg = "{0} is not defined in your environment".format('CI_COMMIT_REF_NAME')
+        raise PipelineError(msg)
+    branch_name = os.environ['CI_COMMIT_REF_NAME'].replace('release-v', '')
+    logger.debug(branch_name)
+    os.environ['VERSION'] = branch_name

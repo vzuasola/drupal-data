@@ -9,10 +9,13 @@ import sys
 import os
 
 import lib.docker as docker
+import lib.git as git
 from lib.error import PipelineError
 from lib.logger import logger
 from lib.utils import DEFAULT_CONFIG_FILE
 from lib.utils import read_configuration
+from lib.utils import get_version
+
 
 
 def parse_cli():
@@ -33,8 +36,14 @@ def main():
     project_config = read_configuration(DEFAULT_CONFIG_FILE)
     steps = project_config[stage]['steps']
 
+    git.get_sonar_sha()
+    get_version()
+
     for step in steps:
-        logger.info('\nstep: {0}'.format(step))
+        if 'skip' in steps[step] and steps[step]['skip'] == 'true' :
+            logger.info('\nSkipped step: {0} in stage: {1}'.format(step, stage))
+            continue;
+        logger.info('\nstage: {0}, step: {1}'.format(stage, step))
         image_name = "{0}{1}".format(project_name,
                                      steps[step]['docker-image-suffix'])
         dockerfile = steps[step]['dockerfile']
