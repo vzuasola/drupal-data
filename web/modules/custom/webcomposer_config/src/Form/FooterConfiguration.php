@@ -65,7 +65,7 @@ class FooterConfiguration extends ConfigFormBase {
       '#type' => 'managed_file',
       '#title' => $this->t('Partners logo'),
       '#default_value' => $config->get('partners_logo'),
-      '#upload_location' => 'public://upload/tiles',
+      '#upload_location' => 'public://',
       '#upload_validators' => array(
         'file_validate_extensions' => array('gif png jpg jpeg'),
       ),

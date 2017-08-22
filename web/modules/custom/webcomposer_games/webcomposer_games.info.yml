@@ -1,0 +1,5 @@
+name: Webcomposer Games
+type: module
+description: Webcomposer Games Provider Configuration
+core: 8.x
+package: Web Composer
