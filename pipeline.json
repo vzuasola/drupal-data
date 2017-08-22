@@ -131,8 +131,7 @@
                 ],
                 "volumes": [
                     "$PWD:/app"
-                ],
-                "skip": "true"
+                ]
             },
             "sonarqube-scanner": {
                 "dockerfile": "automation/Dockerfile.sonarqube",
@@ -152,8 +151,7 @@
                 ],
                 "volumes": [
                     "$PWD:/app"
-                ],
-                "skip": "true"
+                ]
             }
         }
     },

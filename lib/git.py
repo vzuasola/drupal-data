@@ -26,14 +26,16 @@ def git_executable():
             return git_path
 
 
-def git_log(options=""):
+def git_log(options=None):
     """
     Retrieves the git commit log
     """
     cmd = [git_executable()]
 
     cmd.append('log')
-    cmd.append(options)
+    if options is not None:
+        for option in options:
+            cmd.append(option)
     
     result = run_git_command(cmd, None)
 
@@ -54,27 +56,26 @@ def run_git_command(cmd, output_file):
         logger.info('redirecting output to: {0} (it may take a while)'.format(output_file))
         output_file = open(output_file, 'w')
     
-    while process.poll() is None:
-        # read 1 char
-        if output_file:
-            progressbar.update()
-        std_ = process.stdout.read(1)
-        if std_:
-            buff = "{0}{1}".format(buff, std_)
-            result = "{0}{1}".format(result, std_)
+    while True:
+        out = process.stdout.read(1)
+        if out == '' and process.poll() != None:
+            break
+        if out != '':
+            buff = "{0}{1}".format(buff, out)
+            result = "{0}{1}".format(result, out)
             if buff.endswith('\n'):
                 msg = buff.strip()
                 if output_file:
                     output_file.write(msg)
                 else:
-                    logger.info(msg)
+                    logger.debug(msg)
                 buff = ""
+
     if output_file:
         output_file.close()
         progressbar.complete()
         logger.info('done!')
 
-    logger.debug(result)
     # clean up
     if process.poll() != 0 :
         raise PipelineError('{0} failed'.format(' '.join(cmd)))
@@ -95,11 +96,14 @@ def get_sonar_sha():
     if 'BASELINE_BRANCH' in os.environ:
         baseline_branch = os.environ['BASELINE_BRANCH']
 
-    addtl_options = '--pretty=format:%H origin/' + baseline_branch + '..' + os.environ['CI_COMMIT_SHA']
+    addtl_options = [
+        "--pretty=format:%H",
+        "origin/" + baseline_branch + ".." + os.environ['CI_COMMIT_SHA']
+    ]
     logger.debug(addtl_options);
 
     commit_sha = git_log(addtl_options)
     final_commit_sha = commit_sha.replace('\n', ',')
     
-    logger.debug('Commit SHA for SonarQube: '.format(final_commit_sha))
+    logger.debug('Commit SHA for SonarQube: {0}'.format(final_commit_sha))
     os.environ['SONAR_COMMIT_SHA'] = final_commit_sha
