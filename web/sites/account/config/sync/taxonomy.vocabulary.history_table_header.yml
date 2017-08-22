@@ -1,0 +1,9 @@
+uuid: 6b298a66-8f67-4cf6-b3f8-723275c44838
+langcode: en
+status: true
+dependencies: {  }
+name: 'History Table Header'
+vid: history_table_header
+description: ''
+hierarchy: 0
+weight: 0

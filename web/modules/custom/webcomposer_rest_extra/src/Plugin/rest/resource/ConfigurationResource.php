@@ -13,6 +13,7 @@ use Drupal\rest\ResourceResponse;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
 use Psr\Log\LoggerInterface;
+use Drupal\file\Entity\File;
 
 /**
  * Provides a resource to get view modes by entity and bundle.
@@ -95,6 +96,19 @@ class ConfigurationResource extends ResourceBase {
     try {
       $config = \Drupal::config("webcomposer_config.$id");
       $data = $config->get();
+
+      // Get relative path for the configuration images.
+      switch ($id) {
+        case 'footer_configuration':
+          $file_id = $data['partners_logo'][0];
+          $data['partners_image_url'] = $this->getFileRelativePath($file_id);
+          break;
+        
+        case 'page_not_found':
+          $file_id = $data['page_not_found_image'][0];
+          $data['page_not_found_image_url'] = $this->getFileRelativePath($file_id);
+          break;
+      }
     } catch (\Exception $e) {
       $data = array(
         'error' => $this->t('Configuration not found')
@@ -108,5 +122,27 @@ class ConfigurationResource extends ResourceBase {
     );
 
     return (new ResourceResponse($data))->addCacheableDependency($build);
+  }
+
+  /**
+   * Load file by the file id.
+   * 
+   * @param  String $fid 
+   *  file id to get the file object.
+   * @return String 
+   *  file relative path.
+   */
+  private function getFileRelativePath($fid) {
+    $file_url;
+
+    if (isset($fid)) {
+      $file = File::load($fid);
+
+      if ($file) {
+        $file_url = preg_replace('/public:\/\//', '', $file->getFileUri());
+      }
+    }
+
+    return $file_url;
   }
 }

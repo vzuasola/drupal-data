@@ -1,0 +1,16 @@
+uuid: ee225f69-a35d-4002-8b8b-ed46234ce1a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.history_table_header
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.history_table_header
+target_entity_type_id: taxonomy_term
+target_bundle: history_table_header
+default_langcode: site_default
+language_alterable: false

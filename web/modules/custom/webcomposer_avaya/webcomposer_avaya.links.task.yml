@@ -1,0 +1,4 @@
+webcomposer_avaya.avaya_configuration_tab:
+  route_name: webcomposer_avaya.avaya_configuration_form
+  title: 'Avaya Chat Configuration'
+  base_route: webcomposer_avaya.avaya_configuration_form

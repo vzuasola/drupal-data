@@ -63,6 +63,15 @@ class MyAccountHeaderForm extends ConfigFormBase
             '#default_value' => $myAccountCoreConfig->get('product_menu_new_tag')
         ];
 
+        $form['field_configuration']['help_tooltip'] = [
+            '#type' => 'textfield',
+            '#title' => t('Help Tooltip'),
+            '#size' => 255,
+            '#required' => true,
+            '#description' => $this->t('Tooltip for help'),
+            '#default_value' => $myAccountCoreConfig->get('help_tooltip')
+        ];
+
         $form['actions'] = ['#type' => 'actions'];
         // Add a submit button that handles the submission of the form.
         $form['actions']['submit'] = [
@@ -106,6 +115,7 @@ class MyAccountHeaderForm extends ConfigFormBase
         $this->config('my_account_core.header')
             ->set('welcome_text', $configuration['welcome_text'])
             ->set('product_menu_new_tag', $configuration['product_menu_new_tag'])
+            ->set('help_tooltip', $configuration['help_tooltip'])
             ->save();
     }
 
