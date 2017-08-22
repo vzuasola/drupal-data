@@ -303,4 +303,4 @@ def get_version():
         raise PipelineError(msg)
     branch_name = os.environ['CI_COMMIT_REF_NAME'].replace('release-v', '')
     logger.debug(branch_name)
-    os.environ['CI_COMMIT_REF_NAME'] = branch_name
+    os.environ['VERSION'] = branch_name
