@@ -14,6 +14,7 @@ from lib.error import PipelineError
 from lib.logger import logger
 from lib.utils import DEFAULT_CONFIG_FILE
 from lib.utils import read_configuration
+from lib.utils import get_version
 
 
 
@@ -36,6 +37,7 @@ def main():
     steps = project_config[stage]['steps']
 
     git.get_sonar_sha()
+    get_version()
 
     for step in steps:
         if 'skip' in steps[step] and steps[step]['skip'] == 'true' :
