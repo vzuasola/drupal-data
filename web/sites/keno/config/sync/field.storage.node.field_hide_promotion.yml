@@ -1,0 +1,18 @@
+uuid: bf4a5619-be54-4ec0-99e9-299e21549e21
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_hide_promotion
+field_name: field_hide_promotion
+entity_type: node
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

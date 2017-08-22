@@ -1,0 +1,41 @@
+uuid: a8319217-811c-45aa-85af-a3cec262e659
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.slider_overlay_entity.slider_overlay_entity.field_slider_overlay_cmi
+  module:
+    - entity_reference_revisions
+    - slider_overlay
+    - user
+id: slider_overlay_entity.slider_overlay_entity.default
+targetEntityType: slider_overlay_entity
+bundle: slider_overlay_entity
+mode: default
+content:
+  field_slider_overlay_cmi:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  name:
+    label: above
+    type: string
+    weight: -4
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  user_id:
+    label: hidden
+    type: author
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

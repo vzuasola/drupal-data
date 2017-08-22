@@ -1,0 +1,8 @@
+uuid: 64120cfb-75ec-4aa0-bfaa-a74850a9a8c2
+langcode: th
+status: true
+dependencies: {  }
+id: product-menu-th
+label: 'Product Menu TH'
+description: ''
+locked: false
