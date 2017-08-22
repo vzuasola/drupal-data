@@ -20,6 +20,8 @@ dob_field:
 country_field:
   options:
     label: Χώρα
+    attr:
+      placeholder: Χώρα
 email_field:
   options:
     label: 'Διεύθυνση Email'
@@ -29,12 +31,6 @@ communication_detail_field:
 account_field:
   options:
     label: 'Λεπτομέρειες Λογαριασμού'
-mobile_number_field:
-  options:
-    label: 'Αριθμός Κινητού'
-language_field:
-  options:
-    label: Γλώσσα
 verify_text_field: Επιβεβαίωση
 modal_verify_header_text_field: 'Επιβεβαίωση Αριθμού Κινητού'
 modal_verify_body_text_field: 'Ένας κωδικός επιβεβαίωσης σας έχει σταλεί μέσω SMS. Για να ολοκληρώσετε την επιβεβαίωση του αριθμού κινητού σας, παρακαλώ εισάγετε τον 6-ψήφιο κωδικό παρακάτω.'
@@ -43,3 +39,9 @@ modal_verification_resend_code_text_field: 'Επανάληψη αποστολή�
 modal_verification_submit_text_field: ΥΠΟΒΟΛΗ
 verification_code_response_field: "SMS_VERIFICATION_SUCCESS|Ένας κωδικός επιβεβαίωσης σας έχει σταλεί στον αριθμό κινητού σας.\r\nSMS_VERIFICATION_FAILED|Μας συγχωρείτε, υπήρξε κάποιο λάθος στην επιβεβαίωση του αριθμού κινητού σας. Παρακαλώ δοκιμάστε ξανά αλλιώς μπορείτε να επικοινωνήσετε μαζί μας μέσω<a href=\"mailto:grsupport@dafabet.com\"> Email </a> (Κωδικός:110)\r\nSMS_VERIFICATION_SUBMIT_SUCCESS|Ο αριθμός κινητού σας έχει επιβεβαιωθεί επιτυχώς.\r\nSMS_VERIFICATION_SUBMIT_FAILED| Έχετε εισάγει έναν μη έγκυρο κωδικό επιβεβαίωσης. Παρακαλώ δοκιμάστε ξανά.(Κωδικός:111)\r\nINTERNAL_ERROR|Εσωτερικό σφάλμα (Κωδικός: 801)"
 verification_code_required_message_field: 'Αυτό το πεδίο είναι υποχρεωτικό.'
+mobile_number_field:
+  options:
+    label: 'Αριθμός Κινητού'
+language_field:
+  options:
+    label: Γλώσσα

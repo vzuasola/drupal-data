@@ -1,0 +1,19 @@
+uuid: 4c0c4962-9470-407f-aeb6-e301f2c03910
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_icore_field
+    - taxonomy.vocabulary.history_table_header
+id: taxonomy_term.history_table_header.field_icore_field
+field_name: field_icore_field
+entity_type: taxonomy_term
+bundle: history_table_header
+label: 'iCore Field'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
