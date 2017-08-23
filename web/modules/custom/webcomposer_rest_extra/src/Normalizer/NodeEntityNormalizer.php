@@ -169,7 +169,7 @@ class NodeEntityNormalizer extends ContentEntityNormalizer
     $htmlDoc = $document->load($markup[0]['value']);
     $dom_object = simplexml_import_dom($htmlDoc);
     $images = $dom_object->xpath('//img');
-    $base_path = Settings::get('cke_editor_config', $default = NULL);
+    $base_path = Settings::get('ck_editor_inline_image_prefix', $default = NULL);
 
     foreach ($images as $image) {
       $replace = preg_replace('/\/sites\/[a-z]+\/files/', $base_path, $image['src']);
