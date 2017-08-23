@@ -7,6 +7,8 @@ use Drupal\Core\Datetime\DrupalDateTime;
 use Drupal\rest\Plugin\views\style\Serializer;
 use Drupal\paragraphs\Entity\Paragraph;
 use Drupal\file\Entity\File;
+use Drupal\Component\Utility\Html;
+use Drupal\Core\Site\Settings;
 
 /** 
  * Converts typed data objects to arrays.
@@ -25,10 +27,16 @@ class NodeEntityNormalizer extends ContentEntityNormalizer
    */
   public function normalize($entity, $format = NULL, array $context = [])
   {
+    kint_require();
+
     $entityData = $entity->toArray();
     $attributes = parent::normalize($entity, $format, $context);
 
     foreach ($entityData as $key => $value) {
+       if (isset($value[0]['format']) && !empty($value[0]['format'])) {
+        $attributes[$key][0]['value'] = $this->filterHtml($value);
+      }
+
       if (isset($value[0]['target_id'])) {
         $targetId = $value[0]['target_id'];
         $setting = $entity->get($key)->getSettings();
@@ -150,5 +158,28 @@ class NodeEntityNormalizer extends ContentEntityNormalizer
     $result[] = $fileArray;
 
     return $result;
+  }
+
+  /**
+   * Filtered Html for Image Source.
+   */
+  public function filterHtml($markup)
+  {     
+    $document = new Html();
+    $htmlDoc = $document->load($markup[0]['value']);
+    $dom_object = simplexml_import_dom($htmlDoc);
+    $images = $dom_object->xpath('//img');
+    $base_path = Settings::get('cke_editor_config', $default = NULL);
+
+    foreach ($images as $image) {
+      $replace = preg_replace('/\/sites\/[a-z]+\/files/', $base_path, $image['src']);
+      $image['src'] = $replace;          
+    }
+
+    $html_markup = Html::serialize($htmlDoc);
+    $processed_html = trim($html_markup);
+
+    return $processed_html;
+
   }
 }
