@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\webcomposer_domain_export\ExportParserService;
+namespace Drupal\webcomposer_domain_import\Parser;
 
 /**
  * Class for parsing Matterhorn Domains data to excel object

@@ -1,4 +1,0 @@
-services:
-  webcomposer_domain.export_xls:
-    class: Drupal\webcomposer_domain_import\src\ExcelParserService
-
