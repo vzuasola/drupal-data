@@ -127,7 +127,15 @@
                     "-Dsonar.gitlab.commit_sha=$SONAR_COMMIT_SHA",
                     "-Dsonar.gitlab.ref_name=$CI_COMMIT_REF_NAME",
                     "-Dsonar.gitlab.project_id=$CI_PROJECT_ID",
-                    "-Dsonar.gitlab.unique_issue_per_inline=true"
+                    "-Dsonar.gitlab.unique_issue_per_inline=true",
+                    "-Dsonar.gitlab.failure_notification_mode=commit-status",
+                    "-Dsonar.gitlab.ping_user=true",
+                    "-Dsonar.gitlab.only_issue_from_commit_line=true",
+                    "-Dsonar.gitlab.max_blocker_issues_gate=0",
+                    "-Dsonar.gitlab.max_critical_issues_gate=0",
+                    "-Dsonar.gitlab.max_major_issues_gate=0",
+                    "-Dsonar.gitlab.max_minor_issues_gate=0",
+                    "-Dsonar.gitlab.comment_no_issue=true"
                 ],
                 "volumes": [
                     "$PWD:/app"
