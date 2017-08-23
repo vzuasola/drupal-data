@@ -17,6 +17,7 @@ use Drupal\taxonomy\Entity\Vocabulary;
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\taxonomy\Entity\Term;
 use Drupal\paragraphs\Entity\Paragraph;
+// use Drupal\webcomposer_domain_import\Controller\WebcomposerDomainExport;
 /**
  * Contribute form.
  */
@@ -32,6 +33,9 @@ class ExportForm extends FormBase {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
+
+  	// $check = new WebcomposerDomainExport;
+  	// kint($check);
     // Revert form
     $form['webcomposer_domain_export'] = array(
         '#type' => 'fieldset',
@@ -44,7 +48,7 @@ class ExportForm extends FormBase {
     $form['webcomposer_domain_export']['submit'] = array(
         '#type' => 'submit',
         '#value' => t('Export'),
-        '#submit' => array('webcomposer_domain_export_excel'),
+        '#submit' => array('Drupal\webcomposer_domain_import\Controller\WebcomposerDomainExport::matterhorn_domain_export_excel'),
     );
 
     return $form;
@@ -58,14 +62,6 @@ class ExportForm extends FormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-	// Display result.
-    foreach ($form_state->getValues() as $key => $value) {		
-		if($key == 'field_vocabulary_name')
-		{
-			$voc_name = $value;
-		}     
-    }
-     // kint($voc_name);
-    create_taxonomy($voc_name);
+
   }
 }

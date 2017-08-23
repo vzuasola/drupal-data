@@ -24,7 +24,7 @@ class WebcomposerDomainExport extends ControllerBase {
     ];
   }
 
-}
+
 
 
 /**
@@ -34,8 +34,11 @@ class WebcomposerDomainExport extends ControllerBase {
  *
  */
 public function matterhorn_domain_export_excel() {
-    $data = matterhorn_domain_export_get_parsed_data();
-    matterhorn_domain_export_create_excel($data);
+  
+  $parser  = \Drupal::service('webcomposer_domain.export_xls');
+    kint($parser);die();
+    $data = $this->matterhorn_domain_export_get_parsed_data();
+   // matterhorn_domain_export_create_excel($data);
 
     return;
 }
@@ -49,8 +52,8 @@ public function matterhorn_domain_export_excel() {
  */
 public function matterhorn_domain_export_get_parsed_data() {
     $result = array();
-    $parser = new Matterhorn\Domains\ExportParser;
-
+    $parser  = \Drupal::service('webcomposer_domain.export_xls');
+    kint($parser);die();
     $groups = _matterhorn_domain_get_domain_groups();
     $domains = _matterhorn_domain_get_domain_groups_with_domains();
     $placeholders = _matterhorn_domain_get_all_variables();
@@ -235,3 +238,4 @@ public function _matterhorn_domain_export_get_current_domain_by_name($search) {
     return FALSE;
 }
 
+}

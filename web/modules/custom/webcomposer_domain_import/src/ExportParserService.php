@@ -1,153 +1,246 @@
 <?php
 
-namespace Matterhorn\Domains;
-
-use phpoffice\phpexcel;
+namespace Drupal\webcomposer_domain_export\ExportParserService;
 
 /**
- * Class for creating and reading Matterhorn Domains Excel Spreadsheet file using PHP Excel
+ * Class for parsing Matterhorn Domains data to excel object
  *
  * @package Matterhorn Domains
  * @author alex <alexandernikko.tenepere@bayviewtechnology.com>
  *
  */
-class ExcelParserService {
+class ExportParserService {
 
-	// Main PHP excel object
-	private $excel;
-	// The filename of the excel file
-	private $filename;
-	// Number of sheets
-	private $sheet_number;
+	// Container for default placeholder list
+	private $placeholders = array();
+	private $domains = array();
 
 	/**
-	 * Constructor function
-	 * Passing the excel object to the class instance
-	 *
-	 * @param array $rows - the phpexcel array object
-	 *
-	 */
-	public function __construct() {
-		// initialize PHP excel object
-		$this->excel = new \PHPExcel();
-		// set filename
-		$this->sheet_number = 0;
-	}
-
-	/**
-	 * Reads and parses an excel file into a array of worksheets
+	 * Converts a column based format array to row based PHP excel readable array
 	 *
 	 * @author alex <alexandernikko.tenepere@bayviewtechnology.com>
-	 * @param array $path
-	 * @return array $sheets
+	 * @param array $columns - a column based format array
+	 * @return array $result
 	 *
 	 */
-	public function read_excel($path) {
-		try {
-			// attempt to read excel file
-			$excelReader = \PHPExcel_IOFactory::createReaderForFile($path);
-			$excelReader->setLoadAllSheets();
-			$excel = $excelReader->load($path);
-		} catch (Exception $e) {
-			// an error has occured parsing the excel file
-			return FALSE;
+	public function excel_filter_column($columns) {
+		$result = array();
+
+		foreach($columns as $column_key => $column_data) {
+			foreach($column_data as $row_key => $row_data) {
+				$result[$row_key][$column_key] = $row_data;
+			}
 		}
 
-		// get all sheet names from the file
-		$worksheetNames = $excel->getSheetNames($path);
+		return $result;
+	}
 
-		$sheets = array();
+	/**
+	 * Generates the languages worksheet data
+	 *
+	 * @author alex <alexandernikko.tenepere@bayviewtechnology.com>
+	 * @param array $languages - the list of available languages
+	 * @return array $result
+	 *
+	 */
+	public function excel_get_languages($languages) {
+		$result = array();
 
-		foreach($worksheetNames as $key => $sheetName){
-			$excel->setActiveSheetIndexByName($sheetName);
-			$sheets[$sheetName] = $excel->getActiveSheet()->toArray(NULL, TRUE, TRUE, TRUE);
+		// add label to array collection
+		$result[] = array('Languages');
+
+		foreach ($languages as $key => $value) {
+			$result[] = array($key);
 		}
 
-		return $sheets;
+		return $result;
 	}
 
 	/**
-	 * Creates an excel sheet based on the given worksheet data
+	 * Generates the domain groups worksheet data
 	 *
 	 * @author alex <alexandernikko.tenepere@bayviewtechnology.com>
-	 * @param array $data - the array containing a single worksheet data
-	 * @param array $sheet_name - the name of the worksheet
+	 * @param array $groups - the domain groups fetched from the database
+	 * @return array $result
 	 *
 	 */
-	public function create_sheet($data, $sheet_name) {
-		// create a new worksheet
-		$this->excel->createSheet();
-		// populate sheet with data and add sheet name
-		$this->excel->setActiveSheetIndex($this->sheet_number);
-	    $this->excel->getActiveSheet()->fromArray($data);
-	    $this->excel->getActiveSheet()->setTitle($sheet_name);
+	public function excel_get_domain_groups($groups) {
+		$result = array();
 
-	    // calls the stlyer function
-	    $this->style_excel($data);
-
-	    // increment sheet count
-	    $this->sheet_number = $this->sheet_number + 1;
-	}
-
-	/**
-	 * Generate the excel file and invoke download operation
-	 *
-	 * @author alex <alexandernikko.tenepere@bayviewtechnology.com>
-	 * @param array $excel_version - the excel version of the generated excel
-	 * @param boolean $headers - check if download will be invoked from browser
-	 * @param array $output - the URL to output the file
-	 *
-	 */
-	public function save($filename, $excel_version = 'Excel2007', $headers = TRUE, $output = 'php://output') {
-		// Removes the blank worksheet set by PHP excel
-		$this->excel->removeSheetByIndex($this->sheet_number);
-		// create writer for excel object
-		$excelWriter = \PHPExcel_IOFactory::createWriter($this->excel, $excel_version);
-
-		// set the headers so that browser will invoke an upload
-		if ($headers) {
-			$this->set_headers($filename);
+		foreach ($groups as $group) {
+			$result[] = array($group);
 		}
 
-		// output the excel file
-		$excelWriter->save($output);
+		return $result;
 	}
 
 	/**
-	 * Triggers the browser to invoke download operation
+	 * Generates the domain list worksheet data with their corresponding groups
 	 *
 	 * @author alex <alexandernikko.tenepere@bayviewtechnology.com>
+	 * @param array $groups - the list of domains from the database
+	 * @return array $result
 	 *
 	 */
-	private function set_headers($filename) {
-		header("Content-Type: application/force-download");
-		header("Content-Type: application/octet-stream");
-		header("Content-Type: application/download");
-		header('Content-Disposition: attachment; filename="' . $filename . '"');
-		header("Content-Transfer-Encoding: binary ");
+	public function excel_get_domains($groups) {
+		$k = 0;
+		$result = array();
+
+		foreach ($groups['groups'] as $group) {
+			$name = $group['name'];
+			$result[$k][] = $group['name'];
+
+			foreach ($group['domains'] as $domain) {
+				$result[$k][] = $domain['domain'];
+			}
+
+			$k++;
+		}
+
+		// get the highest row number
+		$count = 0;
+		foreach ($result as $group) {
+			$x = count($group);
+			if ($count < $x) {
+				$count = $x;
+			}
+		}
+
+		// populate missing rows with nulls, so that all columns will have the same number of rows
+		for ($i = 0; $i < count($result)-1; $i++) {
+			for ($j = 0; $j < $count; $j++) {
+				if (empty($result[$i][$j])) {
+					$result[$i][$j] = NULL;
+				}
+			}
+		}
+
+		$result = $this->excel_filter_column($result);
+
+		return $result;
 	}
 
 	/**
-	 * Apply styling to worksheet
+	 * Generates the domain list worksheet data
 	 *
 	 * @author alex <alexandernikko.tenepere@bayviewtechnology.com>
+	 * @param array $domain_groups - the list of domain groups
+	 * @return array $result
 	 *
 	 */
-	private function style_excel() {
-		// Column and row dimension
-		$column = $this->excel->getActiveSheet()->getHighestColumn();
+	public function excel_get_domain_list($domain_groups) {
+		// if cache is not empty, return the cache instead
+		if (!empty($this->domains)) {
+			return $this->domains;
+		}
 
-		$this->excel->getDefaultStyle()->getAlignment()->setHorizontal(\PHPExcel_Style_Alignment::HORIZONTAL_LEFT);
-		$this->excel->getActiveSheet()->getColumnDimension('A')->setAutoSize(true);
-		// $this->excel->getDefaultStyle()->getAlignment()->setWrapText(true);
+		$result = array();
+		$k = 0;
 
-		$this->excel->getActiveSheet()->getDefaultRowDimension()->setRowHeight(17);
-		$this->excel->getActiveSheet()->getDefaultColumnDimension()->setWidth(20);
+		foreach ($domain_groups['groups'] as $group) {
+			$name = $group['name'];
+			$result[$k][] = $group['name'];
 
-	    $this->excel->getActiveSheet()->getStyle('A1:' . $column . '1')->getFont()->setBold(true);
-	    // $this->excel->getActiveSheet()->getRowDimension('1')->getStyle()->getFont()->setBold(true);
+			foreach ($group['domains'] as $domain) {
+				$result[$k][] = $domain['domain'];
+			}
 
-	    // $this->excel->getDefaultStyle()->getFont()->setName('Arial');
+			$k++;
+		}
+
+		// put all domain variables in class property
+		$this->domains = $result;
+		return $this->domains;
+	}
+
+	/**
+	 * Generates the placeholder list together with the description
+	 *
+	 * @author alex <alexandernikko.tenepere@bayviewtechnology.com>
+	 * @param array $placeholders - the list of placeholders
+	 * @return array $result
+	 *
+	 */
+	public function excel_get_placeholders_description($placeholders) {
+		$result = array();
+		$result = $this->cache_placeholders($placeholders);
+
+		// convert token data into excel writable arrays
+		$result = $this->excel_filter_column($result);
+		return $result;
+	}
+
+	/**
+	 * Generates the tokens and placeholder worksheet data per domain
+	 *
+	 * @author alex <alexandernikko.tenepere@bayviewtechnology.com>
+	 * @param array $data - array containing the token data per domain
+	 * @param array $placeholders - the list of placeholders
+	 * @param array $defaults - the default placeholder values
+	 * @return array $result
+	 *
+	 */
+	public function excel_get_all_tokens($data, $placeholders, $defaults = NULL) {
+		$result = array();
+
+		$cache = $this->cache_placeholders($placeholders);
+		$result['label'] = $cache['label'];
+
+		// put default token value as part of excel spreadsheet
+		if ($defaults) {
+			$result['default']['group'] = 'default';
+			// loop through default values
+			foreach ($defaults as $domain) {
+				$result['default'][ $domain['name'] ] = $domain['value'];
+			}
+		}
+
+		// reformat token data into column based format
+		// save column structure by appending NULLS to empty columns
+		foreach ($data as $group_name => $group) {
+			$result[$group_name]['group'] = $group_name;
+			foreach ($result['label'] as $token) {
+				// check if token exist, otherwise make it NULL
+				if (!isset( $group[$token]['value'])) {
+					$group[$token]['value'] = NULL;
+				}
+
+				$result[$group_name][$token] = $group[$token]['value'];
+			}
+		}
+
+		// convert token data into excel writable arrays
+		$result = $this->excel_filter_column($result);
+
+		return $result;
+	}
+
+	/**
+	 * Private helper functions
+	 *
+	 */
+
+	/**
+	 * Comment
+	 *
+	 * @author alex <alexandernikko.tenepere@bayviewtechnology.com>
+	 * @param array $placeholders - the list of placeholders
+	 * @return array $result
+	 *
+	 */
+	private function cache_placeholders($placeholders) {
+		// check if property is empty
+		if (empty($this->placeholders)) {
+			$this->placeholders['label']['group'] = 'tokens';
+			$this->placeholders['description']['group'] = 'description';
+			// loop through the keys of the default values
+			foreach ($placeholders as $key => $placeholder) {
+				$this->placeholders['label'][$key] = $key;
+				$this->placeholders['description'][$key] = $placeholder['description'];
+			}
+		}
+
+		return $this->placeholders;
 	}
 
 }

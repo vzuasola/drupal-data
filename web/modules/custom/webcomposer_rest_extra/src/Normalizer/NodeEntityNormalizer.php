@@ -7,6 +7,7 @@ use Drupal\Core\Datetime\DrupalDateTime;
 use Drupal\rest\Plugin\views\style\Serializer;
 use Drupal\paragraphs\Entity\Paragraph;
 use Drupal\file\Entity\File;
+use Drupal\Core\Site\Settings;
 
 /** 
  * Converts typed data objects to arrays.
@@ -29,6 +30,38 @@ class NodeEntityNormalizer extends ContentEntityNormalizer
     $attributes = parent::normalize($entity, $format, $context);
 
     foreach ($entityData as $key => $value) {
+
+      if (isset($value[0]['format'])) {
+        $value = $value[0]['value'];
+        // kint($value);
+        $base_path = Settings::get('cke_editor_config', $default = NULL);
+       
+         $value = preg_replace('<img.*?(src="\/sites\/[a-z]+\/files\/).*?>', '<img.*?(src="/en/promotions").*?>', $value);
+        kint($value);
+      
+        // $attributes[$key][$value] = $value;
+        // kint($attributes);
+        // $htmlDoc = $doc->load($value[0]['value']);
+        // $test = simplexml_import_dom($htmlDoc);
+        // $images = $test->xpath('//img');
+        // $base_path = Settings::get('cke_editor_config', $default = NULL);
+        // foreach ($images as $image) {
+        //   $replace = preg_replace('/\/sites\/[a-z]+\/files/', $base_path, $image['src']);
+        //   $image['src'] = $replace;
+        //   ddd($image
+        } 
+      
+
+
+
+
+
+
+
+
+
+
+
       if (isset($value[0]['target_id'])) {
         $targetId = $value[0]['target_id'];
         $setting = $entity->get($key)->getSettings();
