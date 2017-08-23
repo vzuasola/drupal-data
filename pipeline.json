@@ -127,7 +127,10 @@
                     "-Dsonar.gitlab.commit_sha=$SONAR_COMMIT_SHA",
                     "-Dsonar.gitlab.ref_name=$CI_COMMIT_REF_NAME",
                     "-Dsonar.gitlab.project_id=$CI_PROJECT_ID",
-                    "-Dsonar.gitlab.unique_issue_per_inline=true"
+                    "-Dsonar.gitlab.unique_issue_per_inline=true",
+                    "-Dsonar.gitlab.failure_notification_mode=exit-code",
+                    "-Dsonar.gitlab.ping_user=true",
+                    "-Dsonar.gitlab.only_issue_from_commit_line=true"
                 ],
                 "volumes": [
                     "$PWD:/app"
