@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.game.field_game_title
     - field.field.node.game.field_games_category
     - field.field.node.game.field_play_for_fun_toggle
+    - field.field.node.game.field_ribbon_configuration
     - image.style.thumbnail
     - node.type.game
   module:
@@ -116,6 +117,15 @@ content:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
+    region: content
+  field_ribbon_configuration:
+    weight: 26
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
     region: content
   langcode:
     type: language_select
