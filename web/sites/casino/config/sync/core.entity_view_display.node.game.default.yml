@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.game.field_game_title
     - field.field.node.game.field_games_category
     - field.field.node.game.field_play_for_fun_toggle
+    - field.field.node.game.field_ribbon_configuration
     - node.type.game
   module:
     - image
@@ -71,6 +72,14 @@ content:
       format_custom_true: ''
     third_party_settings: {  }
     type: boolean
+    region: content
+  field_ribbon_configuration:
+    weight: 108
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
     region: content
   links:
     weight: 100

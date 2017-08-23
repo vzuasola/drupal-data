@@ -1,0 +1,17 @@
+lobby_page_title: 'Taruhan Online – Bertaruhlah pada Olahraga, Main Kasino dan Poker Online di Dafabet'
+join_now_text: 'GABUNG SEKARANG'
+login_issue_text: 'Tidak bisa Login?'
+balance_error_text: '"Pesan Error Total Saldo"  Error.'
+profile_icon_hover_text: 'Profil Saya'
+cashier_icon_hover_text: Kasir
+product_menu_new_tag: Baru
+welcome_text: '{username}'
+profile_link: 'https://stg-cashier.elysium-dfbt.com/id/?ticket={auth.token}&product=dafabet{tracking.token}'
+critical_announcement_content:
+  value: "<p>Test Test&nbsp;</p>\r\n"
+  format: basic_html
+news_announcement_content:
+  value: "<p>Test Test</p>\r\n"
+  format: basic_html
+balance_label_mapping: "4|OW Sports\r\n6|Dafa Sports\r\n1|Kasino Klasik\r\n2|Kasino Gold\r\n5|Dealer Langsung & Games\r\n3|Poker\r\n7|Fish Hunter"
+balance_error_text_product: "N/A"

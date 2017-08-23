@@ -1,0 +1,38 @@
+uuid: 02787870-0c57-4993-a866-07aca8de5a96
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.sponsorship_block
+    - field.field.block_content.sponsorship_block.field_block_enable
+    - field.field.block_content.sponsorship_block.field_sponsor_logo
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: aVq5zderWuAacYU4dXp_IPv2DL7wRYwEMqHGLZMEcp0
+id: block_content.sponsorship_block.default
+targetEntityType: block_content
+bundle: sponsorship_block
+mode: default
+content:
+  field_block_enable:
+    weight: 1
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_sponsor_logo:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

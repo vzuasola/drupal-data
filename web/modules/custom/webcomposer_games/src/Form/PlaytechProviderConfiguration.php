@@ -37,11 +37,37 @@ class PlaytechProviderConfiguration extends ConfigFormBase {
       '#default_value' => $config->get('javascript_assets')
     );
 
+    $form['playtech_pas_endpoint'] = array(
+      '#type' => 'textfield',
+      '#title' => t('Playtech PAS Endpoint'),
+      '#description' => $this->t('Defines the endpoint used for authenticating PAS'),
+      '#default_value' => $config->get('playtech_pas_endpoint')
+    );
+
+    $form['playtech_pas_casino'] = array(
+      '#type' => 'textfield',
+      '#title' => t('Playtech PAS Casino'),
+      '#description' => $this->t('Defines the casino value used for authenticating PAS'),
+      '#default_value' => $config->get('playtech_pas_casino')
+    );
+
     $form['lobby_url'] = array(
       '#type' => 'textfield',
       '#title' => t('Lobby URL'),
       '#description' => $this->t('The Playtech Lobby URL'),
       '#default_value' => $config->get('lobby_url')
+    );
+
+    $form['languages'] = array(
+      '#type' => 'textarea',
+      '#title' => t('Language Mapping'),
+      '#size' => 500,
+      '#description' => $this->t('Define the language mapping for Playtech games. Pipe separated language code and value, one per line.
+          <br>
+          If no mapping specified will use the front end language prefix as is.
+          <br>
+          <strong>en|en-us</strong>'),
+      '#default_value' => $config->get('languages')
     );
 
     $form['actions'] = ['#type' => 'actions'];
@@ -65,11 +91,16 @@ class PlaytechProviderConfiguration extends ConfigFormBase {
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $keys = [
       'javascript_assets',
+      'playtech_pas_endpoint',
       'lobby_url',
+      'playtech_pas_casino',
+      'languages'
     ];
 
     foreach ($keys as $key) {
       $this->config('webcomposer_config.games_playtech_provider')->set($key, $form_state->getValue($key))->save();
     }
+
+    parent::submitForm($form, $form_state);
   }
 }
