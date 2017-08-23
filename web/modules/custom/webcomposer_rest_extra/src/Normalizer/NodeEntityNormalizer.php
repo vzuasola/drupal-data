@@ -31,7 +31,7 @@ class NodeEntityNormalizer extends ContentEntityNormalizer
     $attributes = parent::normalize($entity, $format, $context);
 
     foreach ($entityData as $key => $value) {
-       if (isset($value[0]['format']) && !empty($value[0]['format'])) {
+       if (isset($value[0]['format']) && !empty($value)) {
         $attributes[$key][0]['value'] = $this->filterHtml($value);
       }
 
