@@ -1,0 +1,19 @@
+entrypage_front_blocks.list:
+  title: 'Entrypage Front Blocks Configuration'
+  description: 'List Entrypage Front Blocks Configuration'
+  parent: system.admin_config
+  route_name: entrypage_front_blocks.admin_settings
+  
+# Entrypage front block menu items definition
+entity.entrypage_front_block.collection:
+  title: 'Entrypage front block list'
+  route_name: entity.entrypage_front_block.collection
+  description: 'List Entrypage front block entities'
+  parent: entrypage_front_blocks.list
+  weight: 100
+
+entrypage_front_block.admin.structure.settings:
+  title: Entrypage front block settings
+  description: 'Configure Entrypage front block entities'
+  route_name: entrypage_front_block.settings
+  parent: entrypage_front_blocks.list
