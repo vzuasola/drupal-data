@@ -10,3 +10,7 @@ my_account_core.header:
   route_name: my_account_core.header_config
   base_route: my_account_core.header_config
   title: 'My Account Header Configuration'
+my_account_core.bonus_history_tab:
+  route_name: my_account_core.bonus_history_config
+  base_route: my_account_core.bonus_history_config
+  title: 'Bonus History Configuration'
