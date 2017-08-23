@@ -27,8 +27,6 @@ class NodeEntityNormalizer extends ContentEntityNormalizer
    */
   public function normalize($entity, $format = NULL, array $context = [])
   {
-    kint_require();
-
     $entityData = $entity->toArray();
     $attributes = parent::normalize($entity, $format, $context);
 
