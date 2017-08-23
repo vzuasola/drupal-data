@@ -74,6 +74,12 @@ class PushNotificationConfiguration extends ConfigFormBase
       '#default_value' => $config->get('enable'),
       '#description' => $this->t('Enable/Disable Push Notification.'),
     );
+    $form['connection_settings']['domain'] = array(
+      '#type' => 'textfield',
+      '#title' => $this->t('Domain'),
+      '#default_value' => $config->get('domain'),
+      '#description' => $this->t('Override default Push server domain.'),
+    );
     $form['connection_settings']['producttype_id'] = array(
       '#type' => 'textfield',
       '#title' => $this->t('Product Type Id'),
@@ -182,6 +188,7 @@ class PushNotificationConfiguration extends ConfigFormBase
     $keys = array(
       'enable',
       'producttype_id',
+      'domain',
       'retry_count',
       'delay_count',
       'expiry_delay_count',

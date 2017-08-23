@@ -1,0 +1,9 @@
+uuid: 0a06aced-9e9b-4ee8-bc21-2f7c37479639
+langcode: en
+status: true
+dependencies: {  }
+name: 'Product Tabs'
+vid: product_tabs
+description: ''
+hierarchy: 0
+weight: 0

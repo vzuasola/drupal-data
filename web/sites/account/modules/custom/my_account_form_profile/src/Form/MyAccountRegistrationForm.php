@@ -1434,6 +1434,20 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#default_value' => $myAccountConfigValue['no_changed_detected_message_field'],
         ];
 
+        $form['field_configuration']['field_labels_generic_configuration']['male_label'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Label for Male'),
+            '#required' => TRUE,
+            '#default_value' => $myAccountConfigValue['male_label_field'],
+        ];
+
+        $form['field_configuration']['field_labels_generic_configuration']['female_label'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Label for Female'),
+            '#required' => TRUE,
+            '#default_value' => $myAccountConfigValue['female_label_field'],
+        ];
+
         $form['actions'] = ['#type' => 'actions'];
         // Add a submit button that handles the submission of the form.
         $form['actions']['submit'] = [
@@ -1624,6 +1638,8 @@ class MyAccountRegistrationForm extends ConfigFormBase
             ->set('primary_label_field', $configuration['field_labels_generic_configuration']['primary_label'])
             ->set('add_mobile_label_field', $configuration['field_labels_generic_configuration']['add_mobile_label'])
             ->set('no_changed_detected_message_field', $configuration['field_labels_generic_configuration']['no_changed_detected_message'])
+            ->set('male_label_field', $configuration['field_labels_generic_configuration']['male_label'])
+            ->set('female_label_field', $configuration['field_labels_generic_configuration']['female_label'])
             ->save();
     }
 

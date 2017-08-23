@@ -44,7 +44,7 @@ class PageNotFound extends ConfigFormBase
       '#type' => 'managed_file',
       '#title' => $this->t('Image'),
       '#default_value' => $config->get('page_not_found_image'),
-      '#upload_location' => 'public://upload',
+      '#upload_location' => 'public://',
       '#upload_validators' => array(
         'file_validate_extensions' => array('gif png jpg jpeg'),
       ),

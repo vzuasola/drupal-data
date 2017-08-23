@@ -4,4 +4,4 @@ display:
       filters:
         langcode:
           expose:
-            label: LanguageIN
+            label: Language
