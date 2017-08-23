@@ -760,3 +760,4 @@ $config_directories['sync'] = 'sites/entrypage/config/sync';
 
 // The primary site of front end
 $settings['primary_site_prefix'] = 'promotions';
+$settings['cke_editor_config'] = '/en/promotions';
