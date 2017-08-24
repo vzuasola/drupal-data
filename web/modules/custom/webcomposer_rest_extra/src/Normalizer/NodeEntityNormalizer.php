@@ -42,7 +42,12 @@ class NodeEntityNormalizer extends ContentEntityNormalizer
 
           case 'taxonomy_term':
             foreach ($value as $id => $item) {
-              $attributes[$key][$id] = $this->loadTermById($item['target_id']);
+              $term = $this->loadTermById($item['target_id']);
+              if ($term === false) {
+                unset($attributes[$key][$id]);
+              } else {
+                $attributes[$key][$id] = $term;
+              }
             }
             break;
 
@@ -88,6 +93,11 @@ class NodeEntityNormalizer extends ContentEntityNormalizer
     $lang = \Drupal::languageManager()->getCurrentLanguage(\Drupal\Core\Language\LanguageInterface::TYPE_CONTENT)->getId();
 
     $term = \Drupal\taxonomy\Entity\Term::load($tid);
+
+    if (!$term) {
+      return false;
+    }
+
     $termTranslated = \Drupal::service('entity.repository')->getTranslationFromContext($term, $lang);
     $translatedArray = $termTranslated->toArray();
 
