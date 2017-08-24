@@ -2,4 +2,4 @@ javascript_assets: 'https://login.megasportcasino.com/jswrapper/integration.js.p
 lobby_url: 'https://www.google-analytics.com/lobby.js'
 playtech_pas_endpoint: 'https://login.megasportcasino.com/Login.php'
 playtech_pas_casino: mannycasino
-languages: "sc|zh-hans\r\nch|zh-hant"
+languages: "sc|zh-cn\r\nch|zh-cn\r\nkr|ko\r\nvn|en"
