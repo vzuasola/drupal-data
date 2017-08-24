@@ -23,3 +23,11 @@ casino_games.list.categories:
   route_name: entity.taxonomy_vocabulary.overview_form
   route_parameters:
     taxonomy_vocabulary: 'games_category'
+
+casino_games.list.ribbons:
+  title: 'Manage Ribbons'
+  parent: casino_games.admin_settings
+  description: 'Manage Games Ribbons'
+  route_name: entity.taxonomy_vocabulary.overview_form
+  route_parameters:
+    taxonomy_vocabulary: 'ribbon_labels'
