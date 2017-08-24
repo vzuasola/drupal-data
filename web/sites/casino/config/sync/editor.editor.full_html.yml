@@ -46,6 +46,7 @@ settings:
             - Link
             - Unlink
             - game_category_button
+            - login_lightbox_button
         -
           name: Tools
           items:
