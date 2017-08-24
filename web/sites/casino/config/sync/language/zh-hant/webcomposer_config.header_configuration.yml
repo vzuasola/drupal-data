@@ -14,4 +14,4 @@ news_announcement_content:
   value: ''
   format: basic_html
 balance_label_mapping: "4|沙巴體育\r\n6|大發體育\r\n1|娛樂場金典版\r\n2|娛樂場黃金版\r\n5|現場荷官&遊戲\r\n3|撲克\r\n7|捕魚王"
-balance_error_text_product: 無
+balance_error_text_product: "無"
