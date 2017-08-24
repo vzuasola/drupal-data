@@ -38,3 +38,16 @@ my_account_core.header:
       type: label
       label: 'Help Tooltip'
   langcode: 'en'
+my_account_core.bonus_history:
+  type: config_object
+  label: 'Bonus History Configuration'
+  mapping:
+    datetime_format:
+      type: label
+      label: 'Date ans Time format'
+    no_result:
+      type: label
+      label: 'No Result Message'
+    service_unavailable:
+      type: label
+      label: 'Service not available'

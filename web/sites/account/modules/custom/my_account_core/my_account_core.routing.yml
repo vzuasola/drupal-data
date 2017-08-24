@@ -19,3 +19,10 @@ my_account_core.header_config:
     _form: '\Drupal\my_account_core\Form\MyAccountHeaderForm'
   requirements:
     _permission: 'administer my_account core'
+my_account_core.bonus_history_config:
+  path: '/admin/config/my_account/bonus-history'
+  defaults:
+    _title: 'Bonus History Configuration'
+    _form: '\Drupal\my_account_core\Form\BonusHistoryForm'
+  requirements:
+    _permission: 'administer my_account core'
