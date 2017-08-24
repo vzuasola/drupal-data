@@ -2,15 +2,15 @@ CKEDITOR.dialog.add("login_lightbox_button", function(editor) {
     var fieldsLang = editor.lang.login_lightbox_button.loginLightboxButtonFields;
 
     return {
-        allowedContent: "a[href,data-login]",
-        title: "Insert Login Light Box Button",
+        allowedContent: "a[href,data-game-category]",
+        title: "Insert Game Category Button",
         minWidth: 550,
         minHeight: 100,
         resizable: CKEDITOR.DIALOG_RESIZE_NONE,
         contents: [
             {
                 id: "login_lightbox_button",
-                label: "Login Light Box Button",
+                label: "Game Category Button",
                     elements: [
                         {
                             type: "text",
