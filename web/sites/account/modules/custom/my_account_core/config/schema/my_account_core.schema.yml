@@ -37,6 +37,19 @@ my_account_core.header:
     help_tooltip:
       type: label
       label: 'Help Tooltip'
+my_account_core.help:
+  type: config_object
+  label: 'My Account Help Configuration'
+  mapping:
+    welcome_text:
+      type: text
+      label: 'How To'
+    product_menu_new_tag:
+      type: text
+      label: 'FAQ'
+    help_tooltip:
+      type: text
+      label: 'Error Codes'
   langcode: 'en'
 my_account_core.bonus_history:
   type: config_object
@@ -51,3 +64,4 @@ my_account_core.bonus_history:
     service_unavailable:
       type: label
       label: 'Service not available'
+  langcode: 'en'
