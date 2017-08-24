@@ -13,3 +13,8 @@ my_account_core.header:
   base_route_name: my_account_core.header_config
   names:
     - my_account_core.header
+my_account_core.help:
+  title: 'My Account Help Translation'
+  base_route_name: my_account_core.help_config
+  names:
+    - my_account_core.help
