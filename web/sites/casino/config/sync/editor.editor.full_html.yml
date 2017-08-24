@@ -45,6 +45,7 @@ settings:
           items:
             - Link
             - Unlink
+            - game_category_button
         -
           name: Tools
           items:
@@ -55,10 +56,10 @@ settings:
             - ShowBlocks
             - Source
   plugins:
-    stylescombo:
-      styles: ''
     language:
       language_list: un
+    stylescombo:
+      styles: ''
     codemirror:
       enable: false
       mode: htmlmixed
