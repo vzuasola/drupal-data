@@ -106,10 +106,10 @@ class NodeListSerializer extends Serializer {
       }
 
       // replace the images src for text formats
-      foreach ($item as $value) {
+      foreach ($item as $key => $value) {
         if (isset($value['format'])) {
           $field_array = $this->filterHtml($value['value']);
-          $pargraphTranslatedArray[$field] = $field_array;    
+          $pargraphTranslatedArray[$field][$key]['value'] = $field_array;
         }
       }
     }
