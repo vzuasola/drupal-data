@@ -70,10 +70,17 @@ class BonusHistoryForm extends ConfigFormBase
       '#required' => true,
     ];
 
+    $form['bonus_history_group']['zero_display'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Zero Display'),
+      '#default_value' => $config->get('zero_display') ?? 'N/A',
+      '#required' => true,
+    ];
+
     $form['bonus_history_group']['no_result'] = [
       '#type' => 'textfield',
       '#title' => $this->t('No Result Message'),
-      '#default_value' => $config->get('no_result') ?? 'N/A',
+      '#default_value' => $config->get('no_result') ?? 'No Results Found',
       '#required' => true,
     ];
 
@@ -113,7 +120,8 @@ class BonusHistoryForm extends ConfigFormBase
     $keys = [
       'datetime_format',
       'no_result',
-      'service_unavailable'
+      'service_unavailable',
+      'zero_display'
     ];
     foreach ($keys as $key) {
         $this->config('my_account_core.bonus_history')
