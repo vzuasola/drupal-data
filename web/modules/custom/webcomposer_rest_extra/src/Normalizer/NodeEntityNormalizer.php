@@ -31,9 +31,10 @@ class NodeEntityNormalizer extends ContentEntityNormalizer
     $attributes = parent::normalize($entity, $format, $context);
 
     foreach ($entityData as $key => $value) {
+      
        if (isset($value[0]['format'])) {
         if (!empty($value[0]['value'])) {
-          $attributes[$key][0]['value'] = $this->filterHtml($value);
+          $attributes[$key][0]['value'] = $this->filterHtml($attributes[$key][0]['value']);
         }
       }
 
@@ -84,8 +85,14 @@ class NodeEntityNormalizer extends ContentEntityNormalizer
           $pargraphTranslatedArray[$field] = $field_array;
         }
       }
-    }
+      foreach ($item as $value) {
+         if (isset($value['format'])) {
+            $field_array = $this->filterHtml($value['value']);
+            $pargraphTranslatedArray[$field] = $field_array;    
+          }
+      }
 
+    }
     return $pargraphTranslatedArray;
   }
 
@@ -135,7 +142,7 @@ class NodeEntityNormalizer extends ContentEntityNormalizer
           }
         }
       }
-      }
+    }
     return $nodeTranslatedArray;
   }
 
@@ -164,12 +171,12 @@ class NodeEntityNormalizer extends ContentEntityNormalizer
    * Filtered Html for Image Source.
    */
   public function filterHtml($markup)
-  {     
+  {
     $document = new Html();
-    $htmlDoc = $document->load($markup[0]['value']);
+    $htmlDoc = $document->load($markup);
     $dom_object = simplexml_import_dom($htmlDoc);
     $images = $dom_object->xpath('//img');
-    $base_path = Settings::get('cke_editor_config', $default = NULL);
+    $base_path = Settings::get('ck_editor_inline_image_prefix', $default = NULL);
 
     foreach ($images as $image) {
       $replace = preg_replace('/\/sites\/[a-z]+\/files/', $base_path, $image['src']);
