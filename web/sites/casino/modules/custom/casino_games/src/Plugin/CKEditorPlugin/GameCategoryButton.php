@@ -33,7 +33,7 @@ class GameCategoryButton extends CKEditorPluginBase {
     return [
       'game_category_button' => [
         'label' => t('Game Category Button'),
-        'image' => 'sites/casino/modules/custom/casino_games/js/plugins/game_category_button/images/icon.png',
+        'image' => 'sites/casino/modules/custom/casino_games/js/plugins/game_category_button/icons/game_category_button.png',
       ],
     ];
   }

@@ -70,17 +70,20 @@ CKEDITOR.dialog.add("game_category_button", function(editor) {
                  element = selector.getAscendant( 'a', true );
             }
 
-            if ( !element || element.getName() != 'a' ) {
-                element = editor.document.createElement( 'a' );
-                element.setAttribute("href","#");
+            if ((element && element.getName() === 'a' && !element.data('game-category')) ||
+                (!element || element.getName() != 'a')) {
+                element = editor.document.createElement('a');
+
                 if(selection) {
                     element.setText(selection.getSelectedText());
                 }
+
                 this.insertMode = true;
-            }
-            else {
+            } else {
                 this.insertMode = false;
             }
+
+            element.setAttribute("href", "#");
 
             this.element = element;
 

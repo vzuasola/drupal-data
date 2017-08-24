@@ -27,40 +27,18 @@
             init: function (editor) {
                 var config = editor.config;
 
-                editor.addCommand( 'game_category_button', new CKEDITOR.dialogCommand( 'game_category_button' ) );
+                editor.addCommand( 'game_category_button', new CKEDITOR.dialogCommand( 'game_category_button' , {
+                    startDisabled: true
+                }));
 
                 editor.ui.addButton('game_category_button', {
                     label: editor.lang.game_category_button.categoryButton.label,
                     command: 'game_category_button'
                 });
+
                 CKEDITOR.dialog.add( 'game_category_button', this.path + 'js/dialogs/game_category_button.js' );
                 bindSelectionChange(editor);
-            }/*,
-            afterInit: function(editor) {
-                var dataProcessor = editor.dataProcessor,
-                    htmlFilter = dataProcessor && dataProcessor.htmlFilter;
-
-                if (htmlFilter) {
-                    htmlFilter.addRules({
-                        elements: {
-                            $: function (element) {
-                                element.forEach(function(node) {
-                                    if (node.name == 'img' && typeof node.attributes['draggable'] === 'undefined') {
-                                        var src = node.attributes['src'];
-                                        // remove publich path
-                                        var inlineSrc = src.replace(editor.config.publicPath, '');
-                                        // trim slashes
-                                        inlineSrc = inlineSrc ? inlineSrc.replace(/^\/+|\/+$/g, '') : null;
-                                        // add attribute to image
-                                        node.attributes['inline-src'] = inlineSrc;
-                                    }
-                                });
-                                return element;
-                            }
-                        }
-                    });
-                }
-            }*/
+            }
         }
     );
 })(jQuery, Drupal, drupalSettings, CKEDITOR);
