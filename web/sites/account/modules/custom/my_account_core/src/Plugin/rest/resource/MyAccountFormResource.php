@@ -145,6 +145,15 @@ class MyAccountFormResource extends ResourceBase
                 $config = \Drupal::config('my_account_form_profile.profile');
                 $values = $this->filter_array_exposed($config->get(), 'myprofile_clientside_validation');
                 break;
+            case 'bonus_history':
+                try {
+                  $config = \Drupal::config('my_account_core.bonus_history');
+                  $values = $config->get();
+                } catch (\Exception $e) {
+                  $values = array(
+                    'error' => $this->t('Configuration not found')
+                  );
+                }
             default:
         }
 

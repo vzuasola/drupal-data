@@ -74,6 +74,12 @@ class PushNotificationConfiguration extends ConfigFormBase
       '#default_value' => $config->get('enable'),
       '#description' => $this->t('Enable/Disable Push Notification.'),
     );
+    $form['connection_settings']['domain'] = array(
+      '#type' => 'textfield',
+      '#title' => $this->t('Domain'),
+      '#default_value' => $config->get('domain'),
+      '#description' => $this->t('Override default Push server domain.'),
+    );
     $form['connection_settings']['producttype_id'] = array(
       '#type' => 'textfield',
       '#title' => $this->t('Product Type Id'),
@@ -105,17 +111,17 @@ class PushNotificationConfiguration extends ConfigFormBase
       '#default_value' => $config->get('debug_logging'),
       '#description' => $this->t('Chronicle Logging.'),
     );
-    $form['debug_settings']['debug_display_all'] = array(
-      '#type' => 'checkbox',
-      '#title' => $this->t('Display All Messages'),
-      '#default_value' => $config->get('debug_display_all'),
-      '#description' => $this->t('Includes Expired Messages.'),
-    );
     $form['debug_settings']['debug_display_expirydate'] = array(
       '#type' => 'checkbox',
       '#title' => $this->t('Display Expiry Date'),
       '#default_value' => $config->get('debug_display_expirydate'),
-      '#description' => $this->t('Includes Expiry Date on Messages.'),
+      '#description' => $this->t('Show Expiry Date on Messages.'),
+    );
+    $form['debug_settings']['debug_display_all'] = array(
+      '#type' => 'checkbox',
+      '#title' => $this->t('Filter Expired Messages'),
+      '#default_value' => $config->get('debug_display_all'),
+      '#description' => $this->t('Enable filtering of Expired Messages.'),
     );
     // Exclude Pages
     $form['exclude_page_settings']['exclude_pages'] = array(
@@ -182,6 +188,7 @@ class PushNotificationConfiguration extends ConfigFormBase
     $keys = array(
       'enable',
       'producttype_id',
+      'domain',
       'retry_count',
       'delay_count',
       'expiry_delay_count',

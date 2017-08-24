@@ -1,0 +1,7 @@
+third_party_settings:
+  webcomposer_webform:
+    webcomposer_webform_layout:
+      header_markup:
+        value: "<p class=\"text-align-center\"><span class=\"text-dark-red\"><span class=\"text-18\"><strong>WEBFORM FOR TSHIRTS</strong></span></span></p>\r\n\r\n<p class=\"text-align-center\"><a href=\"http://www.google.com\"><b>Text link</b></a></p>\r\n"
+        format: basic_html
+elements: "footer:\n  '#text': \"<p>This is a footer blurb</p>\\n\\n<p>This is another paragraph</p>\"\n"

@@ -1,0 +1,22 @@
+uuid: 26d35cbc-c456-43c6-ace8-555b144d6ddd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_android_main_content
+    - node.type.mobile
+  module:
+    - text
+id: node.mobile.field_android_main_content
+field_name: field_android_main_content
+entity_type: node
+bundle: mobile
+label: 'Android Main Content'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

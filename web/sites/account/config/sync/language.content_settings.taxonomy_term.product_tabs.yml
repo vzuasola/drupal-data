@@ -1,0 +1,16 @@
+uuid: 27aa3746-c17f-410f-ad10-05c5258fe3a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.product_tabs
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.product_tabs
+target_entity_type_id: taxonomy_term
+target_bundle: product_tabs
+default_langcode: site_default
+language_alterable: false

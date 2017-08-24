@@ -1,0 +1,65 @@
+uuid: 5ee322eb-4fce-4c0f-9fa0-f112b0852cf6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.metatag_entity.metatag_entity.field_abstract
+    - field.field.metatag_entity.metatag_entity.field_description
+    - field.field.metatag_entity.metatag_entity.field_keywords
+    - field.field.metatag_entity.metatag_entity.field_per_page_visibility
+  module:
+    - webcomposer_metatags
+id: metatag_entity.metatag_entity.default
+targetEntityType: metatag_entity
+bundle: metatag_entity
+mode: default
+content:
+  field_abstract:
+    weight: 7
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_description:
+    weight: 8
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_keywords:
+    weight: 9
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_per_page_visibility:
+    weight: 6
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  translation: true
+  user_id: true

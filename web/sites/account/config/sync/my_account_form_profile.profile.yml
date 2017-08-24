@@ -48,7 +48,7 @@ dob_year:
   options:
     wrapper_class: dob-year
 country_field:
-  weight: '8'
+  weight: '9'
   options:
     label: Country
     attr:
@@ -56,29 +56,56 @@ country_field:
     error: 'Error message for country'
     wrapper_class: country
 email_field:
-  weight: '9'
+  weight: '8'
   options:
     label: 'Email Address'
     attr:
       placeholder: '#######@gmail.com'
     error: 'Error message for Email'
     wrapper_class: email
+gender_field:
+  weight: '10'
+  options:
+    label: Gender
+    wrapper_class: gender
 communication_detail_field:
   options:
     label: 'Communication Details'
 account_field:
   options:
     label: 'Account Details'
-mobile_number_field:
-  weight: '10'
+home_address_field:
   options:
-    label: 'Mobile Number'
+    label: 'Home Address'
+enable_sms_verification_field: '1'
+verify_text_field: Verify
+modal_verify_header_text_field: 'Verify Mobile Number'
+modal_verify_body_text_field: 'A verification code was sent to your mobile number. Please check and enter the code below to verify your details. '
+modal_verification_code_placeholder_field: 'Verification Code'
+modal_verification_resend_code_text_field: 'Resend code'
+modal_verification_submit_text_field: Submit
+verification_code_response_field: 'SMS_VERIFICATION_SUCCESS|A verification code was sent to your mobile number'
+verification_code_required_message_field: 'This is a required field.'
+verification_code_min_length_message_field: 'Please enter at least 6 characters.'
+verification_code_max_length_message_field: 'Please enter no more than 6 characters.'
+mobile_number_field:
+  weight: '11'
+  options:
+    label: 'Contact Number'
     attr:
       placeholder: '09217715594'
     error: 'Error message for Mobile'
     wrapper_class: mobile_number
+mobile_number_1_field:
+  weight: '12'
+  options:
+    label: ''
+    attr:
+      placeholder: '09217715594'
+    error: 'Error message for Mobile'
+    wrapper_class: mobile_number_1
 language_field:
-  weight: '11'
+  weight: '13'
   options:
     label: Language
     attr:
@@ -86,16 +113,69 @@ language_field:
     help_text: 'Help text for Language'
     error: 'Error field for Language'
     wrapper_class: language
+address_field:
+  weight: '14'
+  options:
+    label: Address
+    attr:
+      placeholder: Address
+    wrapper_class: address
+city_field:
+  weight: '15'
+  options:
+    label: City
+    attr:
+      placeholder: City
+    wrapper_class: city
+postal_code_field:
+  weight: '16'
+  options:
+    label: 'Postal Code'
+    attr:
+      placeholder: 'Postal Code'
+    wrapper_class: postal_code
+save_changes_field: 'Save Changes'
+cancel_field: Cancel
+country_code_mapping_field: PH|+63
+country_mapping_field: 'Christmas Island|1'
+server_side_validation_field: 'INTERNAL_ERROR|Internal Server Error'
+required_validation_field: 'This is a required field'
+mobile_number_format_validation_field: 'Mobile number format error message'
+mobile_number_min_length_validation_field: 'Mobile number minimum length error message'
+mobile_number_max_length_validation_field: 'Mobile number maximum length error message'
+address_max_length_validation_field: 'Address maximum length error message'
+address_min_length_validation_field: 'Address minimum length error message'
+address_format_validation_field: 'Address format error message'
+city_max_length_validation_field: 'City maximum length error message'
+city_min_length_validation_field: 'City minimum length error message'
+city_format_validation_field: 'City format error message'
+postal_code_max_length_validation_field: 'Postal Code maximum length error message'
+postal_code_max_length_value_field: '10'
+postal_code_format_validation_field: 'Postal Code format error message'
+password_max_length_validation_field: 'Password maximum length error message'
+password_min_length_validation_field: 'Password minimum length error message'
+password_format_validation_field: 'Password format error message'
+primary_label_field: Primary
+add_mobile_label_field: 'Add mobile number'
+no_changed_detected_message_field: 'No changes have been detected'
+contact_preference_top_blurb_field: 'Would you like to get the latest promos, updates and offers'
+contact_preference_bottom_blurb_field: '* By default, all promotions and offers will be sent via email registered.'
+contact_preference_field:
+  weight: '17'
+  options:
+    label: 'Yes, send me the latest promotions, updatesd and offers?'
+    wrapper_class: contact_preference
+contact_preference_label:
+  options:
+    label: 'Contact Preference'
+modal_preview_header_field: 'Save Account Changes'
+modal_preview_top_blurb_field: 'Please review list of changes. Changes may require to provide documents for profile verification.'
+modal_preview_current_label_field: Current
+modal_preview_new_label_field: New
+modal_preview_bottom_blurb_field: 'Enter your password to save changes to your account'
+modal_preview_placeholder_field: Password
+modal_preview_btn_field: 'Save Changes'
+contact_preference_yes_label_field: 'Yes'
+contact_preference_no_label_field: 'No'
 _core:
-  default_config_hash: 7yTXCtTTnT75cn_sdn6Wrq5U1w2jZmt-IkXPdbx7A8U
-enable_sms_verification_field: 1
-verify_text_field: Verify
-modal_verify_header_text_field: 'Verify Mobile Number'
-modal_verify_body_text_field: 'A verification code has been sent to you via SMS. To complete your phone number verification, please enter the 6-digit code below. '
-modal_verification_code_placeholder_field: Code
-modal_verification_resend_code_text_field: 'Resend code'
-modal_verification_submit_text_field: SUBMIT
-verification_code_response_field: "SMS_VERIFICATION_SUCCESS|A verification code has been sent to your mobile number.\r\nSMS_VERIFICATION_FAILED|Sorry, there was an error verifying your mobile number. Please try again or you may contact us at the following: <a href=\"{livechat.link}\" class=\"live-chat-popup-trigger\"> Live Chat </a> or <a href=\"mailto:ensupport@dafabet.com\"> Email </a> (Code:110)\r\nSMS_VERIFICATION_SUBMIT_SUCCESS|Your mobile number has been successfully verified.\r\nSMS_VERIFICATION_SUBMIT_FAILED| You have entered an invalid verification code. Please try again. (Code:111)\r\nINTERNAL_ERROR|Internal Error (Code: 801)"
-verification_code_required_message_field: 'This is a required field.'
-verification_code_min_length_message_field: 'Min 6'
-verification_code_max_length_message_field: 'Max 6'
+  default_config_hash: TjvnuS4nsfoXfX8HYPQYjPSDmFbidr8O7YmETrrIcDI

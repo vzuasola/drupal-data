@@ -1,3 +1,11 @@
+username_field:
+  options:
+    label: 用戶名
+currency_field:
+  options:
+    label: 貨幣
+    attr:
+      placeholder: 貨幣
 first_name_field:
   weight: '3'
   options:
@@ -6,31 +14,13 @@ last_name_field:
   weight: '2'
   options:
     label: 姓
+dob_field:
+  options:
+    label: 出生日期
 dob_day:
   weight: '7'
 dob_year:
   weight: '5'
-communication_detail_field:
-  options:
-    label: 聯系方式
-account_field:
-  options:
-    label: 賬戶信息
-mobile_number_field:
-  options:
-    label: 手機號碼
-language_field:
-  options:
-    label: 語言
-username_field:
-  options:
-    label: 用戶名
-currency_field:
-  options:
-    label: 貨幣
-dob_field:
-  options:
-    label: 出生日期
 country_field:
   options:
     label: 國家
@@ -39,6 +29,12 @@ country_field:
 email_field:
   options:
     label: 電子郵件地址
+communication_detail_field:
+  options:
+    label: 聯系方式
+account_field:
+  options:
+    label: 賬戶信息
 verify_text_field: 驗證
 modal_verify_header_text_field: 驗證手機號碼
 modal_verify_body_text_field: 驗證碼已通過短信發送給您。請在下面輸入6位數字的驗證碼，以完成手機號碼的驗證。
@@ -47,3 +43,9 @@ modal_verification_resend_code_text_field: 重新發送
 modal_verification_submit_text_field: 提交
 verification_code_response_field: "SMS_VERIFICATION_SUCCESS|驗證碼已發送至您的手機號碼。\r\nSMS_VERIFICATION_FAILED|抱歉，驗證手機號碼出現錯誤。請重試或通過<a href=\"{livechat.link}\" class=\"live-chat-popup-trigger\"> 在線聊天</a>或<a href=\"mailto:cnsupport@dafabet.com\">郵箱</a>聯系我們。(代碼: 110)\r\nSMS_VERIFICATION_SUBMIT_SUCCESS|您的手機號碼已驗證成功。\r\nSMS_VERIFICATION_SUBMIT_FAILED| 您輸入的驗證碼無效。請重試。 (代碼:111)\r\nINTERNAL_ERROR|內部錯誤 (代碼: 801)"
 verification_code_required_message_field: 此項必填。
+mobile_number_field:
+  options:
+    label: 手機號碼
+language_field:
+  options:
+    label: 語言

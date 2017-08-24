@@ -1,0 +1,65 @@
+uuid: ab889161-5aad-4e4e-a44a-b5f4c7a74a29
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.history_table_header.field_enable_disable
+    - field.field.taxonomy_term.history_table_header.field_icore_field
+    - taxonomy.vocabulary.history_table_header
+  module:
+    - path
+    - text
+id: taxonomy_term.history_table_header.default
+targetEntityType: taxonomy_term
+bundle: history_table_header
+mode: default
+content:
+  description:
+    type: text_textarea
+    weight: 3
+    region: content
+    settings:
+      placeholder: ''
+      rows: 5
+    third_party_settings: {  }
+  field_enable_disable:
+    weight: 2
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_icore_field:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  langcode:
+    type: language_select
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  translation:
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

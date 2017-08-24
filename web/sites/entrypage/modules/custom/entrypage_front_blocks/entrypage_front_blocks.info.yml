@@ -1,0 +1,5 @@
+name: Entrypage front blocks
+type: module
+description: Module for Entrypahe home blocks.
+core: 8.x
+package: Custom
