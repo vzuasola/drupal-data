@@ -36,22 +36,21 @@ class NodeListSerializer extends Serializer {
       }
 
       foreach ($rowAssoc as $key => $value) {
-        if (isset($value[0]['format'])) {
-          if (!empty($value[0]['value'])) {
-           $rowAssoc[$key][0]['value'] = $this->filterHtml($value[0]['value']);
-          }
+        // replace the images src for text formats
+        if (isset($value[0]['format']) && isset($value[0]['value'])) {
+          $rowAssoc[$key][0]['value'] = $this->filterHtml($value[0]['value']);
         }
 
+        // loading the term object onto the rest export
         if (isset($value[0]['target_type']) && $value[0]['target_type'] == 'taxonomy_term') {
-          // loading the term object onto the rest export
           $term = $this->loadTerm($value[0]['target_id']);
           $rowAssoc[$key][0] = $term;
         }
 
 
+        // loading the paragraph object onto the rest export
         foreach ($value as $paragraphKey => $pid) {
           if (isset($pid['target_type']) && $pid['target_type'] == 'paragraph') {
-            // loading the paragraph object onto the rest export
             $rowAssoc[$key][$paragraphKey] = $this->loadParagraphById($pid['target_id']);
           }
         }
@@ -106,11 +105,12 @@ class NodeListSerializer extends Serializer {
         }
       }
 
+      // replace the images src for text formats
       foreach ($item as $value) {
-         if (isset($value['format'])) {
-            $field_array = $this->filterHtml($value['value']);
-            $pargraphTranslatedArray[$field] = $field_array;    
-          }
+        if (isset($value['format'])) {
+          $field_array = $this->filterHtml($value['value']);
+          $pargraphTranslatedArray[$field] = $field_array;    
+        }
       }
     }
 
@@ -122,7 +122,7 @@ class NodeListSerializer extends Serializer {
    */
   private function loadFileById($fid) {
     $result = [];
-    $fileArray = []; 
+    $fileArray = [];
 
     if (isset($fid)) {
       $file = File::load($fid);
@@ -141,20 +141,23 @@ class NodeListSerializer extends Serializer {
   /**
    * Filtered Html for Image Source.
    */
-  public function filterHtml($markup)
-  {   
+  public function filterHtml($markup) {
     $document = new Html();
+
     $htmlDoc = $document->load($markup);
-    $dom_object = simplexml_import_dom($htmlDoc);
-    $images = $dom_object->xpath('//img');
-    $base_path = Settings::get('ck_editor_inline_image_prefix', $default = NULL);
+    $domObject = simplexml_import_dom($htmlDoc);
+
+    $images = $domObject->xpath('//img');
+    $basePath = Settings::get('ck_editor_inline_image_prefix', NULL);
+
     foreach ($images as $image) {
-      $replace = preg_replace('/\/sites\/[a-z]+\/files/', $base_path, $image['src']);
+      $replace = preg_replace('/\/sites\/[a-z]+\/files/', $basePath, $image['src']);
       $image['src'] = $replace;
     }
-    $html_markup = Html::serialize($htmlDoc);
-    $processed_html = trim($html_markup);
-    return $processed_html;
 
+    $htmlMarkup = Html::serialize($htmlDoc);
+    $processedHtml = trim($htmlMarkup);
+
+    return $processedHtml;
   }
 }

@@ -25,14 +25,13 @@ class NodeEntityNormalizer extends ContentEntityNormalizer
   /** 
    * {@inheritdoc} 
    */
-  public function normalize($entity, $format = NULL, array $context = [])
-  {
+  public function normalize($entity, $format = NULL, array $context = []) {
     $entityData = $entity->toArray();
     $attributes = parent::normalize($entity, $format, $context);
 
     foreach ($entityData as $key => $value) {
-      
-       if (isset($value[0]['format'])) {
+      // replace the images src for text formats
+      if (isset($value[0]['format'])) {
         if (!empty($value[0]['value'])) {
           $attributes[$key][0]['value'] = $this->filterHtml($attributes[$key][0]['value']);
         }
@@ -85,11 +84,12 @@ class NodeEntityNormalizer extends ContentEntityNormalizer
           $pargraphTranslatedArray[$field] = $field_array;
         }
       }
+
       foreach ($item as $value) {
-         if (isset($value['format'])) {
-            $field_array = $this->filterHtml($value['value']);
-            $pargraphTranslatedArray[$field] = $field_array;    
-          }
+        if (isset($value['format'])) {
+          $field_array = $this->filterHtml($value['value']);
+          $pargraphTranslatedArray[$field] = $field_array;
+        }
       }
 
     }
@@ -170,23 +170,23 @@ class NodeEntityNormalizer extends ContentEntityNormalizer
   /**
    * Filtered Html for Image Source.
    */
-  public function filterHtml($markup)
-  {
+  public function filterHtml($markup) {
     $document = new Html();
+
     $htmlDoc = $document->load($markup);
-    $dom_object = simplexml_import_dom($htmlDoc);
-    $images = $dom_object->xpath('//img');
-    $base_path = Settings::get('ck_editor_inline_image_prefix', $default = NULL);
+    $domObject = simplexml_import_dom($htmlDoc);
+
+    $images = $domObject->xpath('//img');
+    $basePath = Settings::get('ck_editor_inline_image_prefix', NULL);
 
     foreach ($images as $image) {
-      $replace = preg_replace('/\/sites\/[a-z]+\/files/', $base_path, $image['src']);
-      $image['src'] = $replace;          
+      $replace = preg_replace('/\/sites\/[a-z]+\/files/', $basePath, $image['src']);
+      $image['src'] = $replace;
     }
 
-    $html_markup = Html::serialize($htmlDoc);
-    $processed_html = trim($html_markup);
+    $htmlMarkup = Html::serialize($htmlDoc);
+    $processedHtml = trim($htmlMarkup);
 
-    return $processed_html;
-
+    return $processedHtml;
   }
 }
