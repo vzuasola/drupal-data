@@ -1,0 +1,22 @@
+add downloadable entity entities:
+  title: 'Create new Downloadable entity entities'
+
+administer downloadable entity entities:
+  title: 'Administer Downloadable entity entities'
+  description: 'Allow to access the administration form to configure Downloadable entity entities.'
+  restrict access: true
+
+delete downloadable entity entities:
+  title: 'Delete Downloadable entity entities'
+
+edit downloadable entity entities:
+  title: 'Edit Downloadable entity entities'
+
+access downloadable entity overview:
+  title: 'Access the Downloadable entity overview page'
+
+view published downloadable entity entities:
+  title: 'View published Downloadable entity entities'
+
+view unpublished downloadable entity entities:
+  title: 'View unpublished Downloadable entity entities'

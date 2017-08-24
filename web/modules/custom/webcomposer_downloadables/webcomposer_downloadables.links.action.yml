@@ -1,0 +1,5 @@
+entity.downloadable_entity.add_form:
+  route_name: entity.downloadable_entity.add_form
+  title: 'Add Downloadable entity'
+  appears_on:
+    - entity.downloadable_entity.collection
