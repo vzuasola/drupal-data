@@ -85,10 +85,10 @@ class NodeEntityNormalizer extends ContentEntityNormalizer
         }
       }
 
-      foreach ($item as $value) {
+      foreach ($item as $key => $value) {
         if (isset($value['format'])) {
           $field_array = $this->filterHtml($value['value']);
-          $pargraphTranslatedArray[$field] = $field_array;
+          $pargraphTranslatedArray[$field][$key]['value'] = $field_array;
         }
       }
 
