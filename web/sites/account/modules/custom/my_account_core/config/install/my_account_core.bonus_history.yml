@@ -2,3 +2,4 @@
 datetime_format: 'd/m/Y h:i A'
 no_result: 'N/A'
 service_unavailable: 'Error Fetching Data'
+zero_display: 'N/A'
