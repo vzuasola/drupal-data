@@ -12,10 +12,10 @@ dependencies:
     - serialization
     - taxonomy
 id: game_categories_rest
-label: 'Game Categories - REST'
+label: 'Games - Categories'
 module: views
-description: ''
-tag: ''
+description: 'Get all categories that has games assigned to it.'
+tag: games
 base_table: node_field_data
 base_field: nid
 core: 8.x
