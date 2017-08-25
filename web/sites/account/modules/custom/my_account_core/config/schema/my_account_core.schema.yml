@@ -55,6 +55,9 @@ my_account_core.bonus_history:
   type: config_object
   label: 'Bonus History Configuration'
   mapping:
+    page_title:
+      type: label
+      label: 'Page tile'
     datetime_format:
       type: label
       label: 'Date ans Time format'
@@ -64,4 +67,13 @@ my_account_core.bonus_history:
     service_unavailable:
       type: label
       label: 'Service not available'
+    zero_display:
+      type: label
+      label: 'Zero display'
+    next_label:
+      type: label
+      label: 'Next Label'
+    prev_label:
+      type: label
+      label: 'Previous Label'
   langcode: 'en'
