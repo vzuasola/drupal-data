@@ -100,7 +100,21 @@ class FooterConfiguration extends ConfigFormBase {
       '#default_value' => $config->get('social_media_title'),
       '#required' => TRUE,
     );
+    
+    $form['back_to_top'] = array(
+      '#type' => 'details',
+      '#title' => $this->t('Back To Top'),
+      '#collapsible' => TRUE,
+      '#group' => 'advanced',
+    );
 
+    $form['back_to_top']['back_to_top_title'] = array(
+      '#type' => 'textarea',
+      '#title' => $this->t('Exclude These Pages'),
+      '#description' => $this->t('Exclude Back To Top Button From These Pages.'),
+      '#default_value' => $config->get('back_to_top_title'),
+      
+    );
     return parent::buildForm($form, $form_state);
   }
 
@@ -120,7 +134,8 @@ class FooterConfiguration extends ConfigFormBase {
       'about_dafabet_content',
       'partners_logo',
       'quicklinks_title',
-      'social_media_title'
+      'social_media_title',
+      'back_to_top_title'
     );
 
     foreach ($keys as $key) {
