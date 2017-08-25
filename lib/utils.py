@@ -304,3 +304,16 @@ def get_version():
     branch_name = os.environ['CI_COMMIT_REF_NAME'].replace('release-v', '')
     logger.debug(branch_name)
     os.environ['VERSION'] = branch_name
+
+
+def skip_step(stage, step):
+    """
+    Skips a step in a stage if defined in the environment variable (or in the Gitlab CI Pipelines secret variables).
+    """
+    if 'SKIP_STEPS' not in os.environ:
+        return False
+
+    steps_to_skip = os.environ['SKIP_STEPS'].split(',')
+    concat_stage_step = stage + '|' + step
+    if concat_stage_step in steps_to_skip:
+        return True

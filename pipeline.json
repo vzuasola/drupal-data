@@ -110,8 +110,7 @@
                 ],
                 "volumes": [
                     "$PWD:/app"
-                ],
-                "skip": "true"
+                ]
             },
             "sonarqube-scanner-preview": {
                 "dockerfile": "automation/Dockerfile.sonarqube",
@@ -238,7 +237,7 @@
                 "docker-image-suffix": "-deploy",
                 "options": [
                     "--env",
-                    "TC_USERNAME=dafa-stack",
+                    "TC_USERNAME=$MSGREEN_DEPLOY_USERNAME",
                     "--env",
                     "TC_PASSWORD=$MSGREEN_DEPLOY_PASSWORD",
                     "--env",
@@ -251,7 +250,7 @@
                 "command": [
                     "kick_and_monitor",
                     "--template-name",
-                    "execute-code-scan",
+                    "$CODE_SCAN",
                     "--extra-vars",
                     "version: $VERSION.$CI_PIPELINE_ID",
                     "--extra-vars",
@@ -312,7 +311,7 @@
                 "docker-image-suffix": "-deploy",
                 "options": [
                     "--env",
-                    "TC_USERNAME=dafa-stack",
+                    "TC_USERNAME=$MSGREEN_DEPLOY_USERNAME",
                     "--env",
                     "TC_PASSWORD=$MSGREEN_DEPLOY_PASSWORD",
                     "--env",
@@ -325,7 +324,7 @@
                 "command": [
                     "kick_and_monitor",
                     "--template-name",
-                    "CMS: deploy - development environment",
+                    "$DEPLOY_DEVELOPMENT",
                     "--extra-vars",
                     "version: $VERSION.$CI_PIPELINE_ID",
                     "--extra-vars",
@@ -378,7 +377,7 @@
                 "docker-image-suffix": "-integration-tests",
                 "options": [
                     "--env",
-                    "TC_USERNAME=dafa-stack",
+                    "TC_USERNAME=$INTEGRATION_TESTS_USERNAME",
                     "--env",
                     "TC_PASSWORD=$INTEGRATION_TESTS_PASSWORD",
                     "--env",
@@ -391,7 +390,7 @@
                 "command": [
                     "kick_and_monitor",
                     "--template-name",
-                    "Execute selenium integration tests",
+                    "$INTEGRATION_DEVELOPMENT",
                     "--extra-vars",
                     "version: $VERSION.$CI_PIPELINE_ID",
                     "--extra-vars",
@@ -448,7 +447,7 @@
                 "docker-image-suffix": "-deploy",
                 "options": [
                     "--env",
-                    "TC_USERNAME=dafa-stack",
+                    "TC_USERNAME=$MSGREEN_DEPLOY_USERNAME",
                     "--env",
                     "TC_PASSWORD=$MSGREEN_DEPLOY_PASSWORD",
                     "--env",
@@ -461,7 +460,7 @@
                 "command": [
                     "kick_and_monitor",
                     "--template-name",
-                    "CMS: deploy - testing environment (QA)",
+                    "$DEPLOY_QA",
                     "--extra-vars",
                     "version: $VERSION.$CI_PIPELINE_ID",
                     "--extra-vars",
@@ -514,7 +513,7 @@
                 "docker-image-suffix": "-integration-tests",
                 "options": [
                     "--env",
-                    "TC_USERNAME=dafa-stack",
+                    "TC_USERNAME=$INTEGRATION_TESTS_USERNAME",
                     "--env",
                     "TC_PASSWORD=$INTEGRATION_TESTS_PASSWORD",
                     "--env",
@@ -527,7 +526,7 @@
                 "command": [
                     "kick_and_monitor",
                     "--template-name",
-                    "Execute selenium integration tests",
+                    "$INTEGRATION_QA",
                     "--extra-vars",
                     "version: $VERSION.$CI_PIPELINE_ID",
                     "--extra-vars",
@@ -584,7 +583,7 @@
                 "docker-image-suffix": "-deploy",
                 "options": [
                     "--env",
-                    "TC_USERNAME=dafa-stack",
+                    "TC_USERNAME=$MSGREEN_DEPLOY_USERNAME",
                     "--env",
                     "TC_PASSWORD=$MSGREEN_DEPLOY_PASSWORD",
                     "--env",
@@ -597,7 +596,7 @@
                 "command": [
                     "kick_and_monitor",
                     "--template-name",
-                    "CMS: deploy - TCT environment",
+                    "$DEPLOY_TCT",
                     "--extra-vars",
                     "version: $VERSION.$CI_PIPELINE_ID",
                     "--extra-vars",
@@ -650,7 +649,7 @@
                 "docker-image-suffix": "-deploy",
                 "options": [
                     "--env",
-                    "TC_USERNAME=dafa-stack",
+                    "TC_USERNAME=$MSORANGE_DEPLOY_USERNAME",
                     "--env",
                     "TC_PASSWORD=$MSORANGE_DEPLOY_PASSWORD",
                     "--env",
@@ -663,7 +662,7 @@
                 "command": [
                     "kick_and_monitor",
                     "--template-name",
-                    "CMS: deploy - uat environment",
+                    "$DEPLOY_UAT",
                     "--extra-vars",
                     "version: $VERSION.$CI_PIPELINE_ID",
                     "--extra-vars",
@@ -716,7 +715,7 @@
                 "docker-image-suffix": "-deploy",
                 "options": [
                     "--env",
-                    "TC_USERNAME=dafa-stack",
+                    "TC_USERNAME=$MSORANGE_DEPLOY_USERNAME",
                     "--env",
                     "TC_PASSWORD=$MSORANGE_DEPLOY_PASSWORD",
                     "--env",
@@ -729,7 +728,7 @@
                 "command": [
                     "kick_and_monitor",
                     "--template-name",
-                    "CMS: deploy - staging environment",
+                    "$DEPLOY_STG",
                     "--extra-vars",
                     "version: $VERSION.$CI_PIPELINE_ID",
                     "--extra-vars",
