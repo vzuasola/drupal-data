@@ -44,25 +44,31 @@ class MyAccountHelpForm extends ConfigFormBase
             '#tree' => true,
         ];
 
+        $howTo = $myAccountCoreConfig->get('help_how_to');
         $form['field_configuration']['help_how_to'] = [
             '#type' => 'text_format',
             '#title' => t('How To'),
             '#required' => true,
-            '#default_value' => $myAccountCoreConfig->get('help_how_to')
+            '#default_value' => $howTo['value'],
+            '#format' => $howTo['format']
         ];
 
+        $faq = $myAccountCoreConfig->get('help_faq');
         $form['field_configuration']['help_faq'] = [
             '#type' => 'text_format',
             '#title' => t('FAQ'),
             '#required' => true,
-            '#default_value' => $myAccountCoreConfig->get('help_faq')
+            '#default_value' => $faq['value'],
+            '#format' => $faq['format']
         ];
 
+        $errorCode = $myAccountCoreConfig->get('help_error_code');
         $form['field_configuration']['help_error_code'] = [
             '#type' => 'text_format',
             '#title' => t('Error Code'),
             '#required' => true,
-            '#default_value' => $myAccountCoreConfig->get('help_error_code')
+            '#default_value' => $errorCode['value'],
+            '#format' => $errorCode['format']
         ];
 
         $form['actions'] = ['#type' => 'actions'];
