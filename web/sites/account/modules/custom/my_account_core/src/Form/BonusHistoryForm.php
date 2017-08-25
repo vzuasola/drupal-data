@@ -58,8 +58,15 @@ class BonusHistoryForm extends ConfigFormBase
 
     $form['bonus_history_group'] = [
       '#type' => 'details',
-      '#title' => 'Bonus History Configuration',
+      '#title' => 'Bonus History',
       '#group' => 'my_account_group'
+    ];
+
+    $form['bonus_history_group']['page_title'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Page Title'),
+      '#default_value' => $config->get('page_title') ?? 'Active Bonuses',
+      '#required' => true,
     ];
 
     $form['bonus_history_group']['datetime_format'] = [
@@ -70,10 +77,17 @@ class BonusHistoryForm extends ConfigFormBase
       '#required' => true,
     ];
 
+    $form['bonus_history_group']['zero_display'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Zero Display'),
+      '#default_value' => $config->get('zero_display') ?? 'N/A',
+      '#required' => true,
+    ];
+
     $form['bonus_history_group']['no_result'] = [
       '#type' => 'textfield',
       '#title' => $this->t('No Result Message'),
-      '#default_value' => $config->get('no_result') ?? 'N/A',
+      '#default_value' => $config->get('no_result') ?? 'No Active bonus under this product',
       '#required' => true,
     ];
 
@@ -81,6 +95,34 @@ class BonusHistoryForm extends ConfigFormBase
       '#type' => 'textfield',
       '#title' => $this->t('Service not available'),
       '#default_value' => $config->get('service_unavailable') ?? 'N/A',
+      '#required' => true,
+    ];
+
+    $form['pagination_group'] = [
+      '#type' => 'details',
+      '#title' => 'Pagination',
+      '#group' => 'my_account_group'
+    ];
+
+    $form['pagination_group']['items_to_display'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Items to display'),
+      '#description' => $this->t('Items to display per page.'),
+      '#default_value' => $config->get('items_to_display') ?? '5',
+      '#required' => true,
+    ];
+
+    $form['pagination_group']['next_label'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Next Label'),
+      '#default_value' => $config->get('next_label') ?? 'Next',
+      '#required' => true,
+    ];
+
+    $form['pagination_group']['prev_label'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Previous Label'),
+      '#default_value' => $config->get('prev_label') ?? 'Prev',
       '#required' => true,
     ];
     
@@ -111,9 +153,14 @@ class BonusHistoryForm extends ConfigFormBase
   public function submitForm(array &$form, FormStateInterface $form_state)
   {
     $keys = [
+      'page_title',
       'datetime_format',
       'no_result',
-      'service_unavailable'
+      'service_unavailable',
+      'zero_display',
+      'items_to_display',
+      'next_label',
+      'prev_label'
     ];
     foreach ($keys as $key) {
         $this->config('my_account_core.bonus_history')
