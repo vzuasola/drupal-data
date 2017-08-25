@@ -41,14 +41,14 @@ my_account_core.help:
   type: config_object
   label: 'My Account Help Configuration'
   mapping:
-    welcome_text:
-      type: text
+    help_how_to:
+      type: text_format
       label: 'How To'
-    product_menu_new_tag:
-      type: text
+    help_faq:
+      type: text_format
       label: 'FAQ'
-    help_tooltip:
-      type: text
+    help_error_code:
+      type: text_format
       label: 'Error Codes'
   langcode: 'en'
 my_account_core.bonus_history:
