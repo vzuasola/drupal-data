@@ -4,19 +4,21 @@ status: true
 dependencies:
   config:
     - node.type.game
+    - taxonomy.vocabulary.games_category
   module:
     - draggableviews
     - node
     - rest
     - serialization
+    - taxonomy
     - user
 _core:
   default_config_hash: tS8PbpJX90aRFC3-UTgXzdqkq7_2frk2pz4TMijEebM
 id: games_sorting
-label: 'Games - Sorting'
+label: 'Games - API and Sorting'
 module: node
-description: 'Find and manage content.'
-tag: default
+description: 'Game sorting and games api.'
+tag: games
 base_table: node_field_data
 base_field: nid
 core: 8.x
@@ -565,6 +567,52 @@ display:
           entity_type: node
           entity_field: langcode
           plugin_id: language
+        field_games_category_target_id:
+          id: field_games_category_target_id
+          table: node__field_games_category
+          field: field_games_category_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_games_category_target_id_op
+            label: 'Game Category'
+            description: ''
+            use_operator: false
+            operator: field_games_category_target_id_op
+            identifier: category
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              e: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: games_category
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
       filter_groups:
         operator: AND
         groups:
@@ -591,7 +639,9 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url
         - url.query_args
+        - user
         - 'user.node_grants:view'
         - user.permissions
       max-age: 0
@@ -822,6 +872,18 @@ display:
         groups:
           1: AND
       sorts:
+        weight:
+          id: weight
+          table: draggableviews_structure
+          field: weight
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: standard
         created:
           id: created
           table: node_field_data
@@ -1117,6 +1179,18 @@ display:
         groups:
           1: AND
       sorts:
+        weight:
+          id: weight
+          table: draggableviews_structure
+          field: weight
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: standard
         created:
           id: created
           table: node_field_data
