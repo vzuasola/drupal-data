@@ -1,6 +1,15 @@
 {
         "include_directories": [
-            "base"
+            "app",
+            "assets",
+            "cache",
+            "core",
+            "devtool",
+            "logs",
+            "src",
+            "templates",
+            "vendor",
+            "web"
         ],
         "exclude_directories": [
             ".git",

@@ -13,13 +13,6 @@ stages:
   - internal-production-signoff
   - deploy-production
 
-cache:
-  paths:
-    - .bower-cache/
-    - .node-cache/
-    - .composer-cache/
-    - .yarn-cache/
-
 static code analysis:
   stage: tests
   script:
@@ -51,6 +44,13 @@ create package:
       - automation/deployed/*.jsonl
     expire_in: 1 day
   when: manual
+  cache:
+    key: v2
+    paths:
+      - devtool/.bower-cache/
+      - devtool/.node-cache/
+      - .composer-cache/
+      - devtool/.yarn-cache/
 
 dev:
   stage: deploy-dev
