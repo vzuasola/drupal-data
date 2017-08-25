@@ -15,6 +15,7 @@ from lib.logger import logger
 from lib.utils import DEFAULT_CONFIG_FILE
 from lib.utils import read_configuration
 from lib.utils import get_version
+from lib.utils import skip_step
 
 
 
@@ -40,7 +41,7 @@ def main():
     get_version()
 
     for step in steps:
-        if 'skip' in steps[step] and steps[step]['skip'] == 'true' :
+        if skip_step(stage, step) :
             logger.info('\nSkipped step: {0} in stage: {1}'.format(step, stage))
             continue;
         logger.info('\nstage: {0}, step: {1}'.format(stage, step))
