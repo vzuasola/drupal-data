@@ -65,6 +65,11 @@ class MyAccountFormResource extends ResourceBase
                 $values = $config->get();
                 break;
 
+            case 'my_account_help':
+                $config = \Drupal::config('my_account_core.help');
+                $values = $config->get();
+                break;
+
             case 'my_account_access_denied':
                 $config = \Drupal::config('my_account_error_handler.403');
                 $values = $config->get();
