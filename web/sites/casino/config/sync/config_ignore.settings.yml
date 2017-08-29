@@ -2,7 +2,6 @@ ignored_config_entities:
   0: 'webform.webform.*'
   2: 'system.menu.*'
   4: 'filter.*'
-  6: 'block.*'
-  8: 'devel.*'
+  6: 'devel.*'
 _core:
   default_config_hash: UVH1aJ4b44UM-VdPVN7hNNuuVqfReJxwfVeDQH1Hvsk
