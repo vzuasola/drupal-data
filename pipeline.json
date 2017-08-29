@@ -19,7 +19,8 @@
                 "command": [
                     "install",
                     "-v",
-                    "--no-interaction"
+                    "--no-interaction",
+                    "--no-dev"
                 ],
                 "volumes": [
                     "$PWD:/var/www/html/app"
@@ -96,6 +97,19 @@
     },
     "phpunit-sonarqube": {
         "steps": {
+            "composer": {
+                "dockerfile": "automation/Dockerfile.composer",
+                "docker-image-suffix": "-composer",
+                "options": [],
+                "command": [
+                    "install",
+                    "-v",
+                    "--no-interaction"
+                ],
+                "volumes": [
+                    "$PWD:/var/www/html/app"
+                ]
+            },
             "unit test": {
                 "dockerfile": "automation/Dockerfile.phpqatools",
                 "docker-image-suffix": "-phpqatools",
@@ -185,9 +199,9 @@
                 "options": [],
                 "command": [
                     "phpmd",
-                    "src/,templates/,app/,devtool/",
+                    "$PHPMD_SRC",
                     "text",
-                    "codesize,cleancode,unusedcode,naming,design,controversial"
+                    "$PHPMD_RULES"
                 ],
                 "volumes": [
                     "$PWD:/app"
