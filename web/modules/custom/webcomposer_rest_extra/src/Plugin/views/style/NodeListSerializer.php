@@ -4,6 +4,8 @@ namespace Drupal\webcomposer_rest_extra\Plugin\views\style;
 
 use Drupal\rest\Plugin\views\style\Serializer;
 use Drupal\file\Entity\File;
+use Drupal\Component\Utility\Html;
+use Drupal\Core\Site\Settings;
 
 /**
  * @ingroup views_style_plugins
@@ -24,7 +26,6 @@ class NodeListSerializer extends Serializer {
 
     foreach ($this->view->result as $row_index => $row) {
       $this->view->row_index = $row_index;
-
       // converting current row into array
       $rowAssoc = $this->serializer->normalize($this->view->rowPlugin->render($row));
 
@@ -35,15 +36,21 @@ class NodeListSerializer extends Serializer {
       }
 
       foreach ($rowAssoc as $key => $value) {
+        // replace the images src for text formats
+        if (isset($value[0]['format']) && isset($value[0]['value'])) {
+          $rowAssoc[$key][0]['value'] = $this->filterHtml($value[0]['value']);
+        }
+
+        // loading the term object onto the rest export
         if (isset($value[0]['target_type']) && $value[0]['target_type'] == 'taxonomy_term') {
-          // loading the term object onto the rest export
           $term = $this->loadTerm($value[0]['target_id']);
           $rowAssoc[$key][0] = $term;
         }
 
+
+        // loading the paragraph object onto the rest export
         foreach ($value as $paragraphKey => $pid) {
           if (isset($pid['target_type']) && $pid['target_type'] == 'paragraph') {
-            // loading the paragraph object onto the rest export
             $rowAssoc[$key][$paragraphKey] = $this->loadParagraphById($pid['target_id']);
           }
         }
@@ -91,11 +98,18 @@ class NodeListSerializer extends Serializer {
 
     foreach ($pargraphTranslatedArray as $field => $item) {
       $setting = $paragraphTranslated->get($field)->getSettings();
-
       if (isset($setting['target_type'])) {
         if ($setting['target_type'] == 'file') {
           $field_array = array_merge($pargraphTranslatedArray[$field][0], $this->loadFileById($item[0]['target_id']));
           $pargraphTranslatedArray[$field] = $field_array;
+        }
+      }
+
+      // replace the images src for text formats
+      foreach ($item as $key => $value) {
+        if (isset($value['format'])) {
+          $field_array = $this->filterHtml($value['value']);
+          $pargraphTranslatedArray[$field][$key]['value'] = $field_array;
         }
       }
     }
@@ -108,7 +122,7 @@ class NodeListSerializer extends Serializer {
    */
   private function loadFileById($fid) {
     $result = [];
-    $fileArray = []; 
+    $fileArray = [];
 
     if (isset($fid)) {
       $file = File::load($fid);
@@ -122,5 +136,28 @@ class NodeListSerializer extends Serializer {
     $result[] = $fileArray;
 
     return $result;
+  }
+
+  /**
+   * Filtered Html for Image Source.
+   */
+  public function filterHtml($markup) {
+    $document = new Html();
+
+    $htmlDoc = $document->load($markup);
+    $domObject = simplexml_import_dom($htmlDoc);
+
+    $images = $domObject->xpath('//img');
+    $basePath = Settings::get('ck_editor_inline_image_prefix', NULL);
+
+    foreach ($images as $image) {
+      $replace = preg_replace('/\/sites\/[a-z]+\/files/', $basePath, $image['src']);
+      $image['src'] = $replace;
+    }
+
+    $htmlMarkup = Html::serialize($htmlDoc);
+    $processedHtml = trim($htmlMarkup);
+
+    return $processedHtml;
   }
 }

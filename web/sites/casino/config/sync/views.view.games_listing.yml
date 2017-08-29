@@ -15,8 +15,8 @@ _core:
 id: games_listing
 label: 'Games - Listing'
 module: node
-description: 'Find and manage content.'
-tag: default
+description: 'Dashboard to manage games.'
+tag: games
 base_table: node_field_data
 base_field: nid
 core: 8.x

@@ -1,0 +1,3 @@
+datetime_format: 'd/m/Y h:i A'
+no_result: 'N/A no result found'
+service_unavailable: 'Error Fetching Data asda sdasd'

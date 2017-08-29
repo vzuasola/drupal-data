@@ -3,20 +3,25 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.storage.node.field_game_image
+    - image.style.thumbnail
     - node.type.game
+    - taxonomy.vocabulary.games_category
   module:
     - draggableviews
+    - image
     - node
     - rest
     - serialization
+    - taxonomy
     - user
 _core:
   default_config_hash: tS8PbpJX90aRFC3-UTgXzdqkq7_2frk2pz4TMijEebM
 id: games_sorting
-label: 'Games - Sorting'
+label: 'Games - API and Sorting'
 module: node
-description: 'Find and manage content.'
-tag: default
+description: 'Game sorting and games api.'
+tag: games
 base_table: node_field_data
 base_field: nid
 core: 8.x
@@ -438,6 +443,70 @@ display:
           entity_type: node
           entity_field: nid
           plugin_id: draggable_views_field
+        field_game_image:
+          id: field_game_image
+          table: node__field_game_image
+          field: field_game_image
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Game Thumbnail Image'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: image
+          settings:
+            image_style: thumbnail
+            image_link: ''
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
       filters:
         status:
           id: status
@@ -565,6 +634,52 @@ display:
           entity_type: node
           entity_field: langcode
           plugin_id: language
+        field_games_category_target_id:
+          id: field_games_category_target_id
+          table: node__field_games_category
+          field: field_games_category_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_games_category_target_id_op
+            label: 'Game Category'
+            description: ''
+            use_operator: false
+            operator: field_games_category_target_id_op
+            identifier: category
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              e: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: games_category
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
       filter_groups:
         operator: AND
         groups:
@@ -591,11 +706,14 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url
         - url.query_args
+        - user
         - 'user.node_grants:view'
         - user.permissions
       max-age: 0
-      tags: {  }
+      tags:
+        - 'config:field.storage.node.field_game_image'
   rest_export_1:
     display_plugin: rest_export
     id: rest_export_1
@@ -822,6 +940,18 @@ display:
         groups:
           1: AND
       sorts:
+        weight:
+          id: weight
+          table: draggableviews_structure
+          field: weight
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: standard
         created:
           id: created
           table: node_field_data
@@ -1117,6 +1247,18 @@ display:
         groups:
           1: AND
       sorts:
+        weight:
+          id: weight
+          table: draggableviews_structure
+          field: weight
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: standard
         created:
           id: created
           table: node_field_data

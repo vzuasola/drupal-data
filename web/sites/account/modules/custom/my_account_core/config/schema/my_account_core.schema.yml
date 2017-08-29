@@ -37,4 +37,43 @@ my_account_core.header:
     help_tooltip:
       type: label
       label: 'Help Tooltip'
+my_account_core.help:
+  type: config_object
+  label: 'My Account Help Configuration'
+  mapping:
+    help_how_to:
+      type: text_format
+      label: 'How To'
+    help_faq:
+      type: text_format
+      label: 'FAQ'
+    help_error_code:
+      type: text_format
+      label: 'Error Codes'
+  langcode: 'en'
+my_account_core.bonus_history:
+  type: config_object
+  label: 'Bonus History Configuration'
+  mapping:
+    page_title:
+      type: label
+      label: 'Page tile'
+    datetime_format:
+      type: label
+      label: 'Date ans Time format'
+    no_result:
+      type: label
+      label: 'No Result Message'
+    service_unavailable:
+      type: label
+      label: 'Service not available'
+    zero_display:
+      type: label
+      label: 'Zero display'
+    next_label:
+      type: label
+      label: 'Next Label'
+    prev_label:
+      type: label
+      label: 'Previous Label'
   langcode: 'en'

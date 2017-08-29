@@ -272,6 +272,7 @@
                 });
                 CKEDITOR.dialog.add( 'link', this.path + 'js/dialogs/link.js' );
             },
+           
         }
     );
 

@@ -26,6 +26,8 @@ settings:
           items:
             - Link
             - Unlink
+            - game_category_button
+            - login_lightbox_button
         -
           name: Lists
           items:
@@ -61,10 +63,10 @@ settings:
             - Table
             - Accordion
   plugins:
-    stylescombo:
-      styles: "a.btn.btn-small|Small Button\r\na.btn.btn-medium|Medium Button\r\na.btn.btn-large|Large Button"
     language:
       language_list: un
+    stylescombo:
+      styles: "a.btn.btn-small|Small Button\r\na.btn.btn-medium|Medium Button\r\na.btn.btn-large|Large Button"
     codemirror:
       enable: true
       mode: htmlmixed

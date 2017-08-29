@@ -1,0 +1,10 @@
+uuid: f6e2786a-3b15-412f-87a6-e0691eba915e
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: uV2tdGIKEGIMtwOYZd-3MaMWXPlF9dC5A4GIuTuiKEE
+id: social_media_block
+label: 'Social Media Block'
+revision: 0
+description: 'This block is intended for the social media'

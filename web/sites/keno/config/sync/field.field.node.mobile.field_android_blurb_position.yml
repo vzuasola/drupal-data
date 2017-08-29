@@ -1,0 +1,23 @@
+uuid: e2611ff6-36f2-459e-bbc0-a01442b2e74e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_android_blurb_position
+    - node.type.mobile
+  module:
+    - options
+id: node.mobile.field_android_blurb_position
+field_name: field_android_blurb_position
+entity_type: node
+bundle: mobile
+label: 'Android Blurb Position'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: right
+default_value_callback: ''
+settings: {  }
+field_type: list_string
