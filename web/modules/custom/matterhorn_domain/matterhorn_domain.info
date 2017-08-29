@@ -1,0 +1,16 @@
+name = Matterhorn domain
+description = Manage domains and domain-specific variables for matterhorn websites
+package = matterhorn
+
+dependencies[] = matterhorn_framework
+dependencies[] = classloader
+
+files[] = includes/matterhorn_domain.import.inc
+files[] = includes/matterhorn_domain.export.inc
+files[] = includes/matterhorn_domain.import.batch.inc
+files[] = includes/matterhorn_domain.database.read.inc
+files[] = includes/matterhorn_domain.database.write.inc
+
+configure = admin/config/framework/domain/settings
+core = 7.x
+

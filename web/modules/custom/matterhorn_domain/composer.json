@@ -1,0 +1,12 @@
+{
+    "name": "matterhorn/domains",
+    "type": "drupal-module",
+    "require": {
+        "phpoffice/phpexcel": ">=1.8.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "Matterhorn\\Domains": "lib/"
+        }
+    }
+}
