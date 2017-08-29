@@ -1,0 +1,398 @@
+<?php
+
+/**
+ * @file
+ * Installation file for Matterhorn Domain module.
+ */
+
+/**
+ * Implements hook_schema().
+ */
+function matterhorn_domain_schema() {
+
+    // New domain table
+
+    $schema['new_matterhorn_domain_types'] = array(
+        'fields' => array(
+            'id' => array('type' => 'serial', 'not null' => TRUE),
+            'type' => array('type' => 'varchar', 'length' => 10, 'default' => ''),
+        ),
+        'primary key' => array('id'),
+    );
+
+    $schema['new_matterhorn_domain_domains'] = array(
+        'fields' => array(
+            'id' => array('type' => 'serial', 'not null' => TRUE),
+            'group_id' => array('type' => 'int', 'length' => 10),
+            'type_id' => array('type' => 'int', 'length' => 10, 'not null' => TRUE),
+            'name' => array('type' => 'varchar', 'length' => 200, 'not null' => TRUE, 'default' => ''),
+            'weight' => array('type' => 'int', 'not null' => TRUE, 'default' => 0),
+        ),
+        'foreign keys' => array(
+            'group_id' => array(
+                'table' => 'new_matterhorn_domain_domains',
+                'columns' => array('group_id' => 'id'),
+            ),
+            'type_id' => array(
+                'table' => 'new_matterhorn_domain_types',
+                'columns' => array('type_id' => 'id'),
+            ),
+        ),
+        'primary key' => array('id'),
+    );
+
+    $schema['new_matterhorn_domain_variables'] = array(
+        'fields' => array(
+            'id' => array('type' => 'serial', 'not null' => TRUE),
+            'name' => array('type' => 'varchar', 'length' => 100, 'not null' => TRUE),
+            'description' => array('type' => 'text'),
+        ),
+        'primary key' => array('id'),
+    );
+
+    $schema['new_matterhorn_domain_domain_variables'] = array(
+        'fields' => array(
+            'id' => array('type' => 'serial', 'not null' => TRUE),
+            'domain_id' => array('type' => 'int', 'length' => 10),
+            'variable_id' => array('type' => 'int', 'length' => 10),
+            'value' => array('type' => 'text'),
+            'language' => array('type' => 'varchar', 'length' => 12, 'not null' => TRUE),
+        ),
+        'foreign keys' => array(
+            'domain_id' => array(
+                'table' => 'new_matterhorn_domain_domains',
+                'columns' => array('domain_id' => 'id'),
+            ),
+            'variable_id' => array(
+                'table' => 'new_matterhorn_domain_variables',
+                'columns' => array('variable_id' => 'id'),
+            ),
+            'language' => array(
+                'table' => 'languages',
+                'columns' => array('language' => 'id'),
+            ),
+        ),
+        'primary key' => array('id'),
+    );
+
+    // Original domain table
+
+    $schema['matterhorn_domain_domains'] = array(
+        'fields' => array(
+            'id' => array('type' => 'serial', 'unsigned' => TRUE, 'not null' => TRUE),
+            'group_id' => array('type' => 'int', 'unsigned' => TRUE, 'not null' => TRUE, 'default' => 0),
+            'domain' => array('type' => 'varchar', 'length' => 200, 'not null' => TRUE, 'default' => ''),
+            'weight' => array('type' => 'int', 'unsigned' => FALSE, 'not null' => TRUE, 'default' => 0),
+        ),
+        'primary key' => array('id'),
+    );
+
+    $schema['matterhorn_domain_variables'] = array(
+        'fields' => array(
+            'id' => array('type' => 'serial', 'unsigned' => TRUE, 'not null' => TRUE),
+            'name' => array('type' => 'varchar', 'length' => 100, 'not null' => TRUE, 'default' => ''),
+            'description' => array('type' => 'text'),
+        ),
+        'primary key' => array('id'),
+    );
+
+    $schema['matterhorn_domain_groups'] = array(
+        'fields' => array(
+            'id' => array('type' => 'serial', 'unsigned' => TRUE, 'not null' => TRUE),
+            'name' => array('type' => 'varchar', 'length' => 100, 'not null' => TRUE, 'default' => ''),
+        ),
+        'primary key' => array('id'),
+    );
+
+    $schema['matterhorn_domain_domain_variables'] = array(
+        'fields' => array(
+            'id' => array('type' => 'varchar', 'length' => 50, 'not null' => TRUE, 'default' => ''),
+            'name' => array('type' => 'varchar', 'length' => 100, 'not null' => TRUE, 'default' => ''),
+            'value' => array('type' => 'text', 'not null' => TRUE),
+            'language' => array('type' => 'varchar', 'length' => 10, 'not null' => TRUE, 'default' => ''),
+        ),
+    );
+
+    // Temporary table
+
+    $schema['temp_matterhorn_domain_domains'] = array(
+        'fields' => array(
+            'id' => array('type' => 'serial', 'not null' => TRUE),
+            'group_id' => array('type' => 'int', 'length' => 10),
+            'type_id' => array('type' => 'int', 'length' => 10, 'not null' => TRUE),
+            'name' => array('type' => 'varchar', 'length' => 200, 'not null' => TRUE, 'default' => ''),
+            'weight' => array('type' => 'int', 'not null' => TRUE, 'default' => 0),
+        ),
+        'foreign keys' => array(
+            'group_id' => array(
+                'table' => 'temp_matterhorn_domain_domains',
+                'columns' => array('group_id' => 'id'),
+            ),
+            'type_id' => array(
+                'table' => 'new_matterhorn_domain_types',
+                'columns' => array('type_id' => 'id'),
+            ),
+        ),
+        'primary key' => array('id'),
+    );
+
+    $schema['temp_matterhorn_domain_variables'] = array(
+        'fields' => array(
+            'id' => array('type' => 'serial', 'not null' => TRUE),
+            'name' => array('type' => 'varchar', 'length' => 100, 'not null' => TRUE),
+            'description' => array('type' => 'text'),
+        ),
+        'primary key' => array('id'),
+    );
+
+    $schema['temp_matterhorn_domain_domain_variables'] = array(
+        'fields' => array(
+            'id' => array('type' => 'serial', 'not null' => TRUE),
+            'domain_id' => array('type' => 'int', 'length' => 10),
+            'variable_id' => array('type' => 'int', 'length' => 10),
+            'value' => array('type' => 'text'),
+            'language' => array('type' => 'varchar', 'length' => 12, 'not null' => TRUE),
+        ),
+        'foreign keys' => array(
+            'domain_id' => array(
+                'table' => 'temp_matterhorn_domain_domains',
+                'columns' => array('domain_id' => 'id'),
+            ),
+            'variable_id' => array(
+                'table' => 'temp_matterhorn_domain_variables',
+                'columns' => array('variable_id' => 'id'),
+            ),
+            'language' => array(
+                'table' => 'languages',
+                'columns' => array('language' => 'id'),
+            ),
+        ),
+        'primary key' => array('id'),
+    );
+
+    // Backup table
+
+    $schema['backup_matterhorn_domain_domains'] = array(
+        'fields' => array(
+            'id' => array('type' => 'serial', 'not null' => TRUE),
+            'group_id' => array('type' => 'int', 'length' => 10),
+            'type_id' => array('type' => 'int', 'length' => 10, 'not null' => TRUE),
+            'name' => array('type' => 'varchar', 'length' => 200, 'not null' => TRUE, 'default' => ''),
+            'weight' => array('type' => 'int', 'not null' => TRUE, 'default' => 0),
+        ),
+        'foreign keys' => array(
+            'group_id' => array(
+                'table' => 'new_matterhorn_domain_domains',
+                'columns' => array('group_id' => 'id'),
+            ),
+            'type_id' => array(
+                'table' => 'new_matterhorn_domain_types',
+                'columns' => array('type_id' => 'id'),
+            ),
+        ),
+        'primary key' => array('id'),
+    );
+
+    $schema['backup_matterhorn_domain_variables'] = array(
+        'fields' => array(
+            'id' => array('type' => 'serial', 'unsigned' => TRUE, 'not null' => TRUE),
+            'name' => array('type' => 'varchar', 'length' => 100, 'not null' => TRUE, 'default' => ''),
+            'description' => array('type' => 'text'),
+        ),
+        'primary key' => array('id'),
+    );
+
+    $schema['backup_matterhorn_domain_domain_variables'] = array(
+        'fields' => array(
+            'id' => array('type' => 'serial', 'not null' => TRUE),
+            'domain_id' => array('type' => 'int', 'length' => 10),
+            'variable_id' => array('type' => 'int', 'length' => 10),
+            'value' => array('type' => 'text'),
+            'language' => array('type' => 'varchar', 'length' => 12, 'not null' => TRUE),
+        ),
+        'foreign keys' => array(
+            'domain_id' => array(
+                'table' => 'new_matterhorn_domain_domains',
+                'columns' => array('domain_id' => 'id'),
+            ),
+            'variable_id' => array(
+                'table' => 'new_matterhorn_domain_variables',
+                'columns' => array('variable_id' => 'id'),
+            ),
+            'language' => array(
+                'table' => 'languages',
+                'columns' => array('language' => 'id'),
+            ),
+        ),
+        'primary key' => array('id'),
+    );
+
+    // Logs table
+
+    $schema['matterhorn_domain_log'] = array(
+        'fields' => array(
+            'lid' => array('type' => 'serial', 'unsigned' => TRUE, 'not null' => TRUE),
+            'uid' => array('type' => 'int', 'not null' => TRUE, 'default' => 0),
+            'scope' => array('type' => 'varchar', 'length' => 50, 'not null' => TRUE, 'default' => ''),
+            'parent_name' => array('type' => 'varchar', 'length' => 150, 'not null' => TRUE, 'default' => ''),
+            'field_name' => array('type' => 'varchar', 'length' => 150, 'not null' => TRUE, 'default' => ''),
+            'language' => array('type' => 'varchar', 'length' => 10, 'not null' => TRUE, 'default' => ''),
+            'action' => array('type' => 'varchar', 'length' => 50, 'not null' => TRUE, 'default' => ''),
+            'new_value' => array('type' => 'text'),
+            'old_value' => array('type' => 'text'),
+            'created' => array('type' => 'int', 'not null' => TRUE, 'default' => 0)
+        ),
+        'primary key' => array('lid'),
+    );
+
+    return $schema;
+}
+
+/**
+ * Upgrades schema to new matterhorn domain format.
+ * Attempts data migration from old schema to new schema.
+ */
+function matterhorn_domain_update_7020(&$sandbox) {
+
+    // Declare default data
+
+    $variable = array(
+        'id' => 1,
+        'type' => 'variable'
+    );
+
+    $domain = array(
+        'id' => 3,
+        'type' => 'domain'
+    );
+
+    $group = array(
+        'id' => 2,
+        'type' => 'group'
+    );
+
+    $groups = array(
+        'id' => 2,
+        'group_id' => NULL,
+        'type_id' => 2,
+        'name' => 'main',
+        'weight' => 0
+    );
+
+    // Create new schema table
+
+    $schema = drupal_get_schema('new_matterhorn_domain_types');
+    if (!db_table_exists('new_matterhorn_domain_types')) {
+        // create the table
+        db_create_table('new_matterhorn_domain_types', $schema);
+        // populate table with default data
+        db_insert('new_matterhorn_domain_types')
+            ->fields(array_keys($domain))
+            ->values($domain)
+            ->values($group)
+            ->values($variable)
+            ->execute();
+    }
+
+    $schema = drupal_get_schema('new_matterhorn_domain_domains');
+    if (!db_table_exists('new_matterhorn_domain_domains')) {
+        // create the table
+        db_create_table('new_matterhorn_domain_domains', $schema);
+        // populate table with default data
+        db_insert('new_matterhorn_domain_domains')
+            ->fields(array_keys($groups))
+            ->values($groups)
+            ->execute();
+    }
+
+    $schema = drupal_get_schema('new_matterhorn_domain_variables');
+    if (!db_table_exists('new_matterhorn_domain_variables'))
+        db_create_table('new_matterhorn_domain_variables', $schema);
+
+    $schema = drupal_get_schema('new_matterhorn_domain_domain_variables');
+    if (!db_table_exists('new_matterhorn_domain_domain_variables'))
+        db_create_table('new_matterhorn_domain_domain_variables', $schema);
+
+    // Create temporary table
+
+    $schema = drupal_get_schema('temp_matterhorn_domain_domains');
+    if (!db_table_exists('temp_matterhorn_domain_domains'))
+        db_create_table('temp_matterhorn_domain_domains', $schema);
+
+    $schema = drupal_get_schema('temp_matterhorn_domain_variables');
+    if (!db_table_exists('temp_matterhorn_domain_variables'))
+        db_create_table('temp_matterhorn_domain_variables', $schema);
+
+    $schema = drupal_get_schema('temp_matterhorn_domain_domain_variables');
+    if (!db_table_exists('temp_matterhorn_domain_domain_variables'))
+        db_create_table('temp_matterhorn_domain_domain_variables', $schema);
+
+    // Create backup tables
+
+    $schema = drupal_get_schema('backup_matterhorn_domain_domains');
+    if (!db_table_exists('backup_matterhorn_domain_domains'))
+        db_create_table('backup_matterhorn_domain_domains', $schema);
+
+    $schema = drupal_get_schema('backup_matterhorn_domain_variables');
+    if (!db_table_exists('backup_matterhorn_domain_variables'))
+        db_create_table('backup_matterhorn_domain_variables', $schema);
+
+    $schema = drupal_get_schema('backup_matterhorn_domain_domain_variables');
+    if (!db_table_exists('backup_matterhorn_domain_domain_variables'))
+        db_create_table('backup_matterhorn_domain_domain_variables', $schema);
+
+
+    // Attempt automatic data migration
+
+    module_load_include('inc', 'matterhorn_domain', 'legacy/matterhorn_domain.legacy.read');
+    module_load_include('inc', 'matterhorn_domain', 'includes/matterhorn_domain.import');
+    module_load_include('inc', 'matterhorn_domain', 'includes/matterhorn_domain.import.batch');
+
+    $data = matterhorn_domain_legacy_export_get_parsed_data();
+    $result = matterhorn_domain_export_create_excel_data($data);
+
+    matterhorn_domain_import_batch_migrate($result);
+}
+
+/**
+ * Update the length of the lanugage column to support per currency as language
+ */
+function matterhorn_domain_update_7030(&$sandbox) {
+    if ( db_table_exists('new_matterhorn_domain_domain_variables') ) {
+        db_change_field('new_matterhorn_domain_domain_variables', 'language', 'language', array(
+            'type' => 'varchar', 'length' => 50, 'not null' => TRUE
+        ));
+    }
+
+    if ( db_table_exists('matterhorn_domain_domain_variables') ) {
+        db_change_field('matterhorn_domain_domain_variables', 'language', 'language', array(
+            'type' => 'varchar', 'length' => 50, 'not null' => TRUE
+        ));
+    }
+
+    if ( db_table_exists('temp_matterhorn_domain_domain_variables') ) {
+        db_change_field('temp_matterhorn_domain_domain_variables', 'language', 'language', array(
+            'type' => 'varchar', 'length' => 50, 'not null' => TRUE
+        ));
+    }
+
+    if ( db_table_exists('backup_matterhorn_domain_domain_variables') ) {
+        db_change_field('backup_matterhorn_domain_domain_variables', 'language', 'language', array(
+            'type' => 'varchar', 'length' => 50, 'not null' => TRUE
+        ));
+    }
+
+    if ( db_table_exists('matterhorn_domain_log') ) {
+        db_change_field('matterhorn_domain_log', 'language', 'language', array(
+            'type' => 'varchar', 'length' => 50, 'not null' => TRUE
+        ));
+    }
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function matterhorn_domain_uninstall() {
+    variable_del('matterhorn_domain_row_limit');
+    variable_del('matterhorn_domain_token');
+}

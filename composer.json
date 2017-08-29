@@ -22,7 +22,8 @@
         "drupal/core": "~8.3",
         "drush/drush": "~8.0",
         "relaxedws/replicator": "^1.0@alpha",
-        "monolog/monolog": "^1.6"
+        "monolog/monolog": "^1.6",
+        "phpoffice/phpexcel": "^1.8"
     },
     "require-dev": {
         "drupal/console": "~1.0",

@@ -1,0 +1,5 @@
+services:
+  wecomposer_domain_import.export:
+    class: Drupal\webcomposer_domain_import\Parser\ExportParser
+    arguments: []
+
