@@ -1,3 +1,8 @@
 datetime_format: 'd/m/Y h:i A'
-no_result: 'N/A no result found'
-service_unavailable: 'Error Fetching Data asda sdasd'
+no_result: 'No result found'
+service_unavailable: 'Error Fetching Data'
+page_title: 'Active Bonuses'
+zero_display: N/A
+items_to_display: '5'
+next_label: Next
+prev_label: Prev
