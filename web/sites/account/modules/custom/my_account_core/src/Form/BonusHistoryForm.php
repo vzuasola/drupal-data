@@ -98,6 +98,13 @@ class BonusHistoryForm extends ConfigFormBase
       '#required' => true,
     ];
 
+    $form['bonus_history_group']['sportsbook_expirydate_display'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Sportsbook expiry date display'),
+      '#default_value' => $config->get('sportsbook_expirydate_display') ?? 'N/A',
+      '#required' => true,
+    ];
+
     $form['pagination_group'] = [
       '#type' => 'details',
       '#title' => 'Pagination',
@@ -160,7 +167,8 @@ class BonusHistoryForm extends ConfigFormBase
       'zero_display',
       'items_to_display',
       'next_label',
-      'prev_label'
+      'prev_label',
+      'sportsbook_expirydate_display',
     ];
     foreach ($keys as $key) {
         $this->config('my_account_core.bonus_history')

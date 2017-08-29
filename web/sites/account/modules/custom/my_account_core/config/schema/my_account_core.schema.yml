@@ -76,4 +76,7 @@ my_account_core.bonus_history:
     prev_label:
       type: label
       label: 'Previous Label'
+    sportsbook_expirydate_display:
+      type: label
+      label: 'Sportbook Expiry Date Display'
   langcode: 'en'
