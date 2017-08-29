@@ -412,9 +412,9 @@
                     "--extra-vars",
                     "test_type: build-sanity",
                     "--extra-vars",
-                    "gitlab_user_email: $GITLAB_USER_EMAIL",
+                    "selenium_test_env: dev",
                     "--extra-vars",
-                    "selenium_test_env: dev"
+                    "gitlab_user_email: $GITLAB_USER_EMAIL"
                 ],
                 "volumes": []
             },
