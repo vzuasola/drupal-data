@@ -14,3 +14,6 @@ webcomposer_config.games_configuration:
     kebab_menu_text:
       type: label
       label: 'Category Kebab Menu Text'
+    load_more_text:
+      type: label
+      label: 'Load More Text'
