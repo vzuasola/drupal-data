@@ -59,6 +59,14 @@ class GamesConfigurationForm extends ConfigFormBase {
       '#required' => TRUE,
     );
 
+    $form['load_more_text'] = array(
+      '#type' => 'textfield',
+      '#title' => $this->t('Load More Text'),
+      '#description' => $this->t('The text to display on load more button.'),
+      '#default_value' => $config->get('load_more_text'),
+      '#required' => TRUE,
+    );
+
     return parent::buildForm($form, $form_state);
   }
 
@@ -73,6 +81,7 @@ class GamesConfigurationForm extends ConfigFormBase {
       'play_for_fun_text',
       'game_info_text',
       'kebab_menu_text',
+      'load_more_text',
     );
 
     foreach ($keys as $key) {
