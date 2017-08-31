@@ -11,10 +11,14 @@ from lib.logger import logger
 
 
 def main():
-    filename = os.environ['CREATES']
-    data = {'date': str(datetime.date.today())}
-    with open(filename, 'a') as data_out:
-        data_out.write(json.dumps(data))
+    if 'CREATES' not in os.environ:
+        msg = "{0} is not defined in your environment".format('CREATES')
+        raise PipelineError(msg)
+    for create in os.environ['CREATES'].split(','):
+        data = {'date': str(datetime.date.today())}
+        with open(create, 'a') as data_out:
+            data_out.write(json.dumps(data))
+    
     logger.info('stage complete')
 
 

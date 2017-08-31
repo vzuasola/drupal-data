@@ -7,7 +7,9 @@ stages:
   - deploy-dev
   - integration-tests-development
   - deploy-test
+  - integration-tests-test
   - deploy-staging
+  - integration-tests-staging
   - staging-signoff
   - deploy-internal-production
   - internal-production-signoff
@@ -60,29 +62,24 @@ dev:
   script:
     - python -u automation/run.py --stage deploy-development
   when: manual
+  dependencies:
+    - create package
   artifacts:
     paths:
       - automation/deployed/*.jsonl
 
-selinium tests development:
+selenium tests development:
   stage: integration-tests-development
   script:
     - python -u automation/run.py --stage integration-tests-development
   when: manual
+  dependencies:
+    - dev
   artifacts:
     paths:
       - automation/deployed/*.jsonl
 
-hp fortify scan development:
-  stage: integration-tests-development
-  script:
-    - python -u automation/run.py --stage code-scan
-  when: manual
-  artifacts:
-    paths:
-      - automation/deployed/*.jsonl
-
-qa:
+qa1:
   stage: deploy-test
   environment:
     name: testing
@@ -92,6 +89,21 @@ qa:
   when: manual
   dependencies:
     - dev
+  artifacts:
+    paths:
+      - automation/deployed/*.jsonl
+  only:
+    - /^working$/
+    - /^release-.*$/
+    - tags
+
+selenium tests qa1:
+  stage: integration-tests-test
+  script:
+    - python -u automation/run.py --stage integration-tests-test
+  when: manual
+  dependencies:
+    - qa1
   artifacts:
     paths:
       - automation/deployed/*.jsonl
@@ -118,20 +130,18 @@ tct:
     - /^release-.*$/
     - tags
 
-staging:
-  stage: deploy-staging
-  environment:
-    name: staging
-    url: https://rodwin.fix.me
+selenium tests tct:
+  stage: integration-tests-test
   script:
-    - python -u automation/run.py --stage deploy-uat
+    - python -u automation/run.py --stage integration-tests-tct
   when: manual
   dependencies:
-    - qa
+    - tct
   artifacts:
     paths:
       - automation/deployed/*.jsonl
   only:
+    - /^working$/
     - /^release-.*$/
     - tags
 
@@ -141,10 +151,11 @@ uat:
     name: uat
     url: https://rodwin.fix.me
   script:
-    - python -u automation/run.py --stage deploy-staging
+    - python -u automation/run.py --stage deploy-uat
   when: manual
   dependencies:
-    - qa
+    - qa1
+    - tct
   artifacts:
     paths:
       - automation/deployed/*.jsonl
@@ -152,7 +163,67 @@ uat:
     - /^release-.*$/
     - tags
 
-staging-signoff:
+selenium tests uat:
+  stage: integration-tests-staging
+  script:
+    - python -u automation/run.py --stage integration-tests-uat
+  when: manual
+  dependencies:
+    - uat
+  artifacts:
+    paths:
+      - automation/deployed/*.jsonl
+  only:
+    - /^release-.*$/
+    - tags
+
+staging:
+  stage: deploy-staging
+  environment:
+    name: staging
+    url: https://rodwin.fix.me
+  script:
+    - python -u automation/run.py --stage deploy-staging
+  when: manual
+  dependencies:
+    - qa1
+    - tct
+  artifacts:
+    paths:
+      - automation/deployed/*.jsonl
+  only:
+    - /^release-.*$/
+    - tags
+
+selenium tests staging:
+  stage: integration-tests-staging
+  script:
+    - python -u automation/run.py --stage integration-tests-stg
+  when: manual
+  dependencies:
+    - staging
+  artifacts:
+    paths:
+      - automation/deployed/*.jsonl
+  only:
+    - /^release-.*$/
+    - tags
+
+hp fortify scan staging:
+  stage: integration-tests-staging
+  script:
+    - python -u automation/run.py --stage code-scan-staging
+  when: manual
+  dependencies:
+    - staging
+  artifacts:
+    paths:
+      - automation/deployed/*.jsonl
+  only:
+    - /^release-.*$/
+    - tags
+
+staging signoff:
   stage: staging-signoff
   environment:
     name: staging-signoff
@@ -185,6 +256,22 @@ internal prod:
     - /^release-.*$/
     - tags
 
+internal prod signoff:
+  stage: internal-production-signoff
+  environment:
+    name: internal-production-signoff
+  script:
+    - python -u automation/run.py --stage internal-prod-signoff
+  when: manual
+  dependencies:
+    - internal prod
+  artifacts:
+    paths:
+      - automation/deployed/*.jsonl
+  only:
+    - /^release-.*$/
+    - tags
+
 production:
   stage: deploy-production
   environment:
@@ -193,6 +280,8 @@ production:
   script:
     - python -u automation/run.py --stage deploy-production
   when: manual
+  dependencies:
+   - internal prod signoff
   artifacts:
     paths:
       - automation/deployed/*.jsonl
