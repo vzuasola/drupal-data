@@ -87,11 +87,11 @@ def get_sonar_sha():
     Retrieves the commit sha that is needed by SonarQube for the Gitlab plugin. This also sets it as an environment variable $SONAR_COMMIT_SHA
     """
 
-
     if 'CI_COMMIT_SHA' not in os.environ:
         msg = "{0} is not defined in your environment".format('CI_COMMIT_SHA')
         raise PipelineError(msg)
 
+    # @todo: Find a solution for this workaround since this will not achieve the correct goal of SonarQube baseline check if BASELINE_BRANCH is not defined.
     if 'BASELINE_BRANCH' not in os.environ:
         baseline_branch = os.environ['CI_COMMIT_REF_NAME']
     else:
