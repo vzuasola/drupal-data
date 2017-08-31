@@ -1,0 +1,8 @@
+uuid: 36e945f5-1c11-44b8-a156-65a0560915d8
+langcode: zh-hans
+status: true
+dependencies: {  }
+id: help-menu
+label: 'Help Menu'
+description: ''
+locked: false
