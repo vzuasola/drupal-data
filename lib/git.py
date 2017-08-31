@@ -92,8 +92,9 @@ def get_sonar_sha():
         msg = "{0} is not defined in your environment".format('CI_COMMIT_SHA')
         raise PipelineError(msg)
 
-    baseline_branch = 'working'
-    if 'BASELINE_BRANCH' in os.environ:
+    if 'BASELINE_BRANCH' not in os.environ:
+        baseline_branch = os.environ['CI_COMMIT_REF_NAME']
+    else:
         baseline_branch = os.environ['BASELINE_BRANCH']
 
     addtl_options = [
