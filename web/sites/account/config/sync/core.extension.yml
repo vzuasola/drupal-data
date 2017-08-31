@@ -7,6 +7,7 @@ module:
   block_content: 0
   breakpoint: 0
   ckeditor: 0
+  ckeditor_accordion: 0
   color: 0
   comment: 0
   config: 0
@@ -30,6 +31,7 @@ module:
   language: 0
   link: 0
   locale: 0
+  menu_link_attributes: 0
   menu_ui: 0
   my_account_core: 0
   my_account_error_handler: 0
@@ -53,6 +55,7 @@ module:
   update: 0
   user: 0
   views_ui: 0
+  webcomposer_editor: 0
   webcomposer_rest_extra: 0
   webcomposer_territory_blocking: 0
   menu_link_content: 1
