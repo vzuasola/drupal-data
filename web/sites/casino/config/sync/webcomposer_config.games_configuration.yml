@@ -3,4 +3,4 @@ play_for_fun_text: 'Free Play'
 game_info_text: 'Game Info'
 kebab_menu_text: More
 load_more_text: 'Load More Games'
-load_more_disabled: 1
+load_more_disabled: 0
