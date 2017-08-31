@@ -91,6 +91,7 @@ def get_sonar_sha():
         msg = "{0} is not defined in your environment".format('CI_COMMIT_SHA')
         raise PipelineError(msg)
 
+    # @todo: Find a solution for this since this will not achieve the correct goal of SonarQube baseline check.
     baseline_branch = os.environ['CI_COMMIT_REF_NAME']
     if 'BASELINE_BRANCH' in os.environ:
         baseline_branch = os.environ['BASELINE_BRANCH']
