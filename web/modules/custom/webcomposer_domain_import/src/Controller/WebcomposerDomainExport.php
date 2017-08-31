@@ -35,7 +35,7 @@ class WebcomposerDomainExport extends ControllerBase {
  */
 public function matterhorn_domain_export_excel() {
   
-  $parser  = \Drupal::service('wecomposer_domain_import.export');
+  $parser  = \Drupal::service('webcomposer_domain_import.export');
     // kint($parser);die();
     $data = $this->matterhorn_domain_export_get_parsed_data();
    // matterhorn_domain_export_create_excel($data);
