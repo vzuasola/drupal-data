@@ -50,7 +50,10 @@ settings:
           items:
             - ShowBlocks
             - Source
+            - Accordion
   plugins:
+    language:
+      language_list: un
     stylescombo:
       styles: ''
 image_upload:
