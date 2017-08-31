@@ -1,0 +1,5 @@
+name: Entrypage partners
+type: module
+description: This module shows entrypage partners.
+core: 8.x
+package: Custom

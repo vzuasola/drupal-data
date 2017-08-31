@@ -1,0 +1,18 @@
+entrypage_partners.list:
+  title: 'Entrypage Partner Blocks Configuration'
+  description: 'List Entrypage partner Blocks Configuration'
+  parent: system.admin_config
+  route_name: entrypage_partners.admin_settings
+  
+# Entrypage partner menu items definition
+entity.entrypage_partner.collection:
+  title: 'Entrypage partner list'
+  route_name: entity.entrypage_partner.collection
+  description: 'List Entrypage partner entities'
+  parent: entrypage_partners.list
+
+entrypage_partner.admin.structure.settings:
+  title: Entrypage partner settings
+  description: 'Configure Entrypage partner entities'
+  route_name: entrypage_partner.settings
+  parent: entrypage_partners.list

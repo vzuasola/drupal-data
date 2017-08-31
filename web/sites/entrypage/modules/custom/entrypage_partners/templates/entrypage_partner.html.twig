@@ -1,0 +1,22 @@
+{#
+/**
+ * @file entrypage_partner.html.twig
+ * Default theme implementation to present Entrypage partner data.
+ *
+ * This template is used when viewing Entrypage partner pages.
+ *
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_entrypage_partner()
+ *
+ * @ingroup themeable
+ */
+#}
+<div{{ attributes.addClass('entrypage_partner') }}>
+  {% if content %}
+    {{- content -}}
+  {% endif %}
+</div>

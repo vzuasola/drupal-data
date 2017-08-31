@@ -1,0 +1,14 @@
+{
+  "name": "drupal/entrypage_partners",
+  "type": "drupal-module",
+  "description": "This module shows entrypage partners.",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/entrypage_partners",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/entrypage_partners",
+    "source": "http://cgit.drupalcode.org/entrypage_partners"
+  },
+  "require": { }
+}
