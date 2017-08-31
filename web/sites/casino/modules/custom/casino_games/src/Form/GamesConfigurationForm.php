@@ -67,6 +67,14 @@ class GamesConfigurationForm extends ConfigFormBase {
       '#required' => TRUE,
     );
 
+    $form['load_more_disabled'] = array(
+      '#type' => 'checkbox',
+      '#title' => $this->t('Disable Load More'),
+      '#description' => $this->t('If checked all games will be shown at once.'),
+      '#default_value' => $config->get('load_more_disabled'),
+      '#required' => FALSE,
+    );
+
     return parent::buildForm($form, $form_state);
   }
 
@@ -82,6 +90,7 @@ class GamesConfigurationForm extends ConfigFormBase {
       'game_info_text',
       'kebab_menu_text',
       'load_more_text',
+      'load_more_disabled',
     );
 
     foreach ($keys as $key) {
