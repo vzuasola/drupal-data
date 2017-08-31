@@ -16,6 +16,7 @@ dependencies:
     - options
     - rest
     - serialization
+    - user
     - webcomposer_rest_extra
     - webcomposer_slider
 id: webcomposer_slider
@@ -288,6 +289,8 @@ display:
         pager: false
         filters: false
         filter_groups: false
+        empty: false
+        access: false
       row:
         type: fields
         options:
@@ -888,16 +891,73 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           plugin_id: string
+        langcode_1:
+          id: langcode_1
+          table: webcomposer_slider_entity_field_data
+          field: langcode
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: webcomposer_slider_entity
+          entity_field: langcode
+          plugin_id: language
       filter_groups:
         operator: AND
         groups:
           1: AND
+      empty:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content: 'No content available.'
+          plugin_id: text_custom
+      access:
+        type: perm
+        options:
+          perm: 'access content overview'
     cache_metadata:
       max-age: 0
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
+        - user.permissions
       tags:
         - 'config:field.storage.webcomposer_slider_entity.field_banner_image'
         - 'config:field.storage.webcomposer_slider_entity.field_log_in_state'
