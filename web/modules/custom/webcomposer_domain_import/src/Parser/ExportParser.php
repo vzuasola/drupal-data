@@ -1,18 +1,16 @@
 <?php
 
-namespace Drupal\webcomposer_domain_import;
+namespace Drupal\webcomposer_domain_import\Parser;
 
 /**
- * Class for parsing Matterhorn Domains data to excel object
+ * Class for parsing Domains data to excel object
  *
- * @package Matterhorn Domains
- * @author alex <alexandernikko.tenepere@bayviewtechnology.com>
+ * @package Webcomposer Domain Import
  *
  */
 class ExportParser {
 
-
-	  /**
+	/**
    * Constructor.
    */
   public function __construct() {
@@ -22,6 +20,107 @@ class ExportParser {
 	// Container for default placeholder list
 	private $placeholders = array();
 	private $domains = array();
+
+	/**
+   * Returns an array of all domain groups, where the index is the primary key `id`
+   *
+   */
+  public function get_domain_groups() {
+    static $groups = '';
+
+    if ($groups != '') {
+        return $groups;
+    }
+
+    $groups = array();
+
+    $domain_groups = \Drupal::entityManager()->getStorage('taxonomy_term')->loadTree('domain_groups');
+    foreach ($domain_groups as $key => $value) {
+    	$groups[] = (string) $value->name;
+    }
+
+    return $groups;
+  }
+
+
+  /**
+   * Returns a nested array of domain groups with the following data:
+   *
+   * id = the domain group primary key
+   * name = name of the domain group
+   * domains  = array containing the domains under this domain group
+   *
+   */
+  public function get_domain_groups_with_domains() {
+
+    $count = 0;
+
+    // Get all the domains with respective groups.
+    $domains = \Drupal::entityManager()->getStorage('taxonomy_term')->loadTree('domain');
+
+    foreach ($domains as $key => $value) {
+      $count++;
+
+    	// Get domain group ID.
+    	$group_id = taxonomy_term_load($value->tid)->get('field_select_domain_group')->getValue(false)[0]['target_id'];
+
+    	// Set array as domain name => group.
+    	$group_name = taxonomy_term_load($group_id)->get('name')->getValue(false)[0]['value'];
+
+    	// $domain_name = [$value->tid => $value->name];
+    	if (!array_key_exists($group_id, $groups)) {
+        $groups[$group_id]['id'] = $group_id;
+        $groups[$group_id]['name'] = $group_name;
+        $domain_information = array (
+          'id'=>$value->tid,
+          'domain'=>$value->name,
+          'weight'=>$count
+        );
+
+        $groups[$group_id]['domains'][$value->tid] = $domain_information;
+
+      } else {
+          // Get domain information.
+          $domain_information = ['id'=>$value->tid, 'domain'=>$value->name, 'weight'=>$count];
+
+          // Update the domains in existing array.
+          $groups[$group_id]['domains'][$value->tid] = array_merge($domain_information, $groups[$group_id]['domains']);
+     	 }
+    }
+
+    $result = array(
+        'groups' => $groups,
+        'count' => $count,
+    );
+
+    return $result;
+  }
+
+  /**
+   * Returns an array of all placeholder
+   *
+   */
+  function _matterhorn_domain_get_all_variables($tokens = NULL) {
+    $variables = array();
+
+    // query all variables from database
+    $query = db_select('new_matterhorn_domain_variables', 'vars')->fields('vars');
+
+    if (!empty($tokens)) {
+        $names = array_keys($tokens);
+        $query->condition('name', $names, 'IN');
+    }
+
+    // sort data by name
+    $result = $query->orderBy('vars.name')->execute();
+
+    // format data
+    while ($row = $result->fetchAssoc()) {
+        $variables[$row['name']] = $row;
+    }
+
+    return $variables;
+  }
 
 	/**
 	 * Converts a column based format array to row based PHP excel readable array
@@ -101,9 +200,9 @@ class ExportParser {
 			foreach ($group['domains'] as $domain) {
 				$result[$k][] = $domain['domain'];
 			}
-
 			$k++;
 		}
+    // kint($result);die;
 
 		// get the highest row number
 		$count = 0;
@@ -250,5 +349,4 @@ class ExportParser {
 
 		return $this->placeholders;
 	}
-
 }
