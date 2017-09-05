@@ -33,7 +33,7 @@
                 "options": [],
                 "command": [
                     "eslint",
-                    "core/assets/js"
+                    "$ESLINT_SRC"
                 ],
                 "volumes": [
                     "$PWD:/app"
