@@ -9,3 +9,9 @@ webcomposer_games.admin_games_playtech_provider:
   parent: webcomposer_games.list
   description: 'Provides configuration for Playtech game provider'
   route_name: webcomposer_games.games_playtech_provider_form
+
+webcomposer_games.admin_games_fim_provider:
+  title: 'FIM Provider Configuration'
+  parent: webcomposer_games.list
+  description: 'Provides configuration for FIM game provider'
+  route_name: webcomposer_games.games_fim_provider_form
