@@ -205,6 +205,9 @@ def run_command(cmd, output_file):
     """
     execute and logs command
     """
+
+    # Show command when in DEBUG_MODE
+    logger.debug('\nCommand to be executed: {0}'.format(' '.join(cmd)))
     process = subprocess.Popen(cmd, stdout=subprocess.PIPE)
     buff = ""
     progressbar = ProgressBar()
@@ -217,7 +220,6 @@ def run_command(cmd, output_file):
         if output_file:
             progressbar.update()
         std_ = process.stdout.read(1)
-        std_error = process.stderr.read(1)
         if std_:
             buff = "{0}{1}".format(buff, std_)
             if buff.endswith('\n'):
@@ -226,15 +228,6 @@ def run_command(cmd, output_file):
                     output_file.write(msg)
                 else:
                     logger.info(msg)
-                buff = ""
-        if std_error:
-            buff = "{0}{1}".format(buff, std_)
-            if buff.endswith('\n'):
-                msg = buff.strip()
-                if output_file:
-                    output_file.write(msg)
-                else:
-                    logger.error(msg)
                 buff = ""
     if output_file:
         output_file.close()
@@ -297,9 +290,6 @@ def execute(image_name, dockerfile, options, command, volumes, output):
     if command:
         for cmmd in command:
             cmd.append(expand_variables(cmmd))
-
-    # Show command when in DEBUG_MODE
-    logger.debug('\nCommand to be executed: {0}'.format(' '.join(cmd)))
 
     if run_command(cmd, output) != 0:
         raise PipelineError('{0} failed'.format(' '.join(cmd)))
