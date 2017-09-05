@@ -22,9 +22,3 @@ casino_config.provisioning_configuration_tab:
   route_name: casino_config.provisioning_config_form
   title: 'Auto Logout configurations'
   base_route: casino_config.provisioning_config_form
-
-casino_config.announcement_configuration_tab:
-  route_name: casino_config.announcement_config_form
-  title: 'Announcements configurations'
-  base_route: casino_config.announcement_config_form
-
