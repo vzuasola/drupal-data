@@ -37,11 +37,3 @@ casino_config.provisioning_config_form:
     _title: 'Provisioning LigtBox Configurations'
   requirements:
     _permission: 'administer site configuration'
-
-casino_config.announcement_config_form:
-  path: 'admin/config/casino/announcement-ligtbox-config'
-  defaults:
-    _form: 'Drupal\casino_config\Form\AnnouncementLightBoxConfig'
-    _title: 'Announcement LigtBox Configurations'
-  requirements:
-    _permission: 'administer site configuration'

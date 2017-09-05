@@ -27,3 +27,4 @@ casino_config.announcement_config_schema:
   base_route_name: casino_config.announcement_config_form
   names:
     - 'casino_config.announcement_config'
+
