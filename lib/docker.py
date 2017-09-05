@@ -217,6 +217,7 @@ def run_command(cmd, output_file):
         if output_file:
             progressbar.update()
         std_ = process.stdout.read(1)
+        std_error = process.stderr.read(1)
         if std_:
             buff = "{0}{1}".format(buff, std_)
             if buff.endswith('\n'):
@@ -225,6 +226,15 @@ def run_command(cmd, output_file):
                     output_file.write(msg)
                 else:
                     logger.info(msg)
+                buff = ""
+        if std_error:
+            buff = "{0}{1}".format(buff, std_)
+            if buff.endswith('\n'):
+                msg = buff.strip()
+                if output_file:
+                    output_file.write(msg)
+                else:
+                    logger.error(msg)
                 buff = ""
     if output_file:
         output_file.close()
