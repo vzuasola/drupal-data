@@ -205,6 +205,9 @@ def run_command(cmd, output_file):
     """
     execute and logs command
     """
+
+    # Show command when in DEBUG_MODE
+    logger.debug('\nCommand to be executed: {0}'.format(' '.join(cmd)))
     process = subprocess.Popen(cmd, stdout=subprocess.PIPE)
     buff = ""
     progressbar = ProgressBar()
@@ -287,9 +290,6 @@ def execute(image_name, dockerfile, options, command, volumes, output):
     if command:
         for cmmd in command:
             cmd.append(expand_variables(cmmd))
-
-    # Show command when in DEBUG_MODE
-    logger.debug('\nCommand to be executed: {0}'.format(' '.join(cmd)))
 
     if run_command(cmd, output) != 0:
         raise PipelineError('{0} failed'.format(' '.join(cmd)))

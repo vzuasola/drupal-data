@@ -102,3 +102,4 @@ To configure/add manually, go to your projects `Settings` -> `Pipeline`. On the 
 | **SKIP_STEPS**                   | `phpunit-sonarqube`&#124;`composer,phpunit-sonarqube`&#124;`unit test,package`&#124;`yarn-install,package`&#124;`yarn-dist`    | Skip a specific step in a stage. Comma-separated value of `stage`&#124;`step` that needs to be skipped.    |
 | **PHPMD_SRC**                   | `src/,templates/,app/,devtool/`    | Comma-separated values of all paths that will be analyzed by PHPMD.    |
 | **PHPMD_RULES**                   | `codesize,cleancode,unusedcode,naming,design,controversial`    | Comma-separated values of rules that will be used by PHPMD.    |
+| **ESLINT_SRC**                   | `core/assets/js`    | Path to run the eslint scanner.    |
