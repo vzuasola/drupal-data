@@ -27,7 +27,7 @@
     },
     "eslinter": {
         "steps": {
-            "phpcs": {
+            "scan": {
                 "dockerfile": "automation/Dockerfile.eslint",
                 "docker-image-suffix": "-eslint",
                 "options": [],
