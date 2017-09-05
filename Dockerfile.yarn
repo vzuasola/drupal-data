@@ -1,2 +1,3 @@
 FROM kkarczmarczyk/node-yarn:6.9
+VOLUME /app/devtool
 WORKDIR /app/devtool
