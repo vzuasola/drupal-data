@@ -28,13 +28,12 @@
     "eslinter": {
         "steps": {
             "phpcs": {
-                "dockerfile": "automation/Dockerfile.yarn",
-                "docker-image-suffix": "-yarn",
+                "dockerfile": "automation/Dockerfile.eslint",
+                "docker-image-suffix": "-eslint",
                 "options": [],
                 "command": [
-                    "bash",
-                    "-c",
-                    "'cd /app && eslint core/assets/js/*'"
+                    "eslint",
+                    "core/assets/js/*"
                 ],
                 "volumes": [
                     "$PWD:/app"
