@@ -1,0 +1,16 @@
+webcomposer_form_manager.admin_settings:
+  path: 'admin/config/webcomposer/form'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Webcomposer Form Configuration'
+  requirements:
+    _permission: 'administer site configuration'
+
+webcomposer_form_manager.overview_form:
+  path: '/admin/config/webcomposer/form/list'
+  defaults:
+    _form: '\Drupal\webcomposer_form_manager\Form\OverviewForm'
+    _title: 'Webcomposer Form List'
+  requirements:
+    _permission: 'administer site configuration'
+

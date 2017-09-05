@@ -1,0 +1,10 @@
+<?php
+
+/**
+ * @file
+ * Contains webcomposer_form_manager.module.
+ */
+
+function webcomposer_form_manager_form_alter() {
+
+}
