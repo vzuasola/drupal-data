@@ -25,6 +25,11 @@ php code sniffer:
   script:
     - python -u automation/run.py --stage phpcs
 
+es linter:
+  stage: tests
+  script:
+    - python -u automation/run.py --stage eslinter
+
 phpmd:
   stage: tests
   script:
@@ -101,6 +106,21 @@ selenium tests qa1:
   stage: integration-tests-test
   script:
     - python -u automation/run.py --stage integration-tests-test
+  when: manual
+  dependencies:
+    - qa1
+  artifacts:
+    paths:
+      - automation/deployed/*.jsonl
+  only:
+    - /^working$/
+    - /^release-.*$/
+    - tags
+
+hp fortify scan qa1:
+  stage: integration-tests-test
+  script:
+    - python -u automation/run.py --stage code-scan-testing
   when: manual
   dependencies:
     - qa1
@@ -209,20 +229,6 @@ selenium tests staging:
     - /^release-.*$/
     - tags
 
-hp fortify scan staging:
-  stage: integration-tests-staging
-  script:
-    - python -u automation/run.py --stage code-scan-staging
-  when: manual
-  dependencies:
-    - staging
-  artifacts:
-    paths:
-      - automation/deployed/*.jsonl
-  only:
-    - /^release-.*$/
-    - tags
-
 staging signoff:
   stage: staging-signoff
   environment:
@@ -248,7 +254,7 @@ internal prod:
     - python -u automation/run.py --stage deploy-internal-production
   when: manual
   dependencies:
-   - staging-signoff
+   - staging signoff
   artifacts:
     paths:
       - automation/deployed/*.jsonl
