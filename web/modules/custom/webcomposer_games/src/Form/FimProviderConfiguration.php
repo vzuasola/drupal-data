@@ -20,14 +20,14 @@ class FimProviderConfiguration extends ConfigFormBase {
    * @inheritdoc
    */
   protected function getEditableConfigNames() {
-    return ['webcomposer_config.games_playtech_provider'];
+    return ['webcomposer_config.games_fim_provider'];
   }
 
   /**
    * @inheritdoc
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    $config = $this->config('webcomposer_config.games_playtech_provider');
+    $config = $this->config('webcomposer_config.games_fim_provider');
 
 
     $form['playtech_fim_endpoint'] = array(
@@ -61,7 +61,7 @@ class FimProviderConfiguration extends ConfigFormBase {
     ];
 
     foreach ($keys as $key) {
-      $this->config('webcomposer_config.games_playtech_provider')->set($key, $form_state->getValue($key))->save();
+      $this->config('webcomposer_config.games_fim_provider')->set($key, $form_state->getValue($key))->save();
     }
 
     parent::submitForm($form, $form_state);
