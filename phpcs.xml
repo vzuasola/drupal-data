@@ -5,6 +5,8 @@
     <exclude-pattern>*/Tests/*</exclude-pattern>
     <exclude-pattern>*/templates/cache/*</exclude-pattern>
     <exclude-pattern>*.js</exclude-pattern>
+    <exclude-pattern>*.txt</exclude-pattern>
+    <exclude-pattern>*.yml</exclude-pattern>
 
     <arg name="report" value="full"/>
     <arg name="report" value="summary"/>
