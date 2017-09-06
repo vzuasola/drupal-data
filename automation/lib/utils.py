@@ -4,12 +4,14 @@ This module provides basic utilities
 
 from __future__ import print_function
 from __future__ import absolute_import
+from collections import OrderedDict
 import hashlib
 import json
 import os
 import tarfile
 import shutil
 from .error import PipelineError
+from .logger import logger
 
 # some constants...
 CURRENT_DIR = os.path.abspath(os.path.dirname(__file__))
@@ -19,19 +21,21 @@ SUCCESS = '\033[92m[OK]    \033[0m'
 FAILED = '\033[91m[FAILED]\033[0m'
 
 # default configuration file
-BUILD_DIR = os.path.join(CURRENT_DIR, os.pardir)
-DEFAULT_CONFIG_FILE = os.path.join(BUILD_DIR, 'deploy.json')
+BUILD_DIR = os.path.abspath(os.path.join(CURRENT_DIR, os.pardir))
+PROJECT_DIR = os.path.abspath(os.path.join(BUILD_DIR, os.pardir))
+DEFAULT_CONFIG_FILE = os.path.join(BUILD_DIR, 'pipeline.json')
+PACKAGE_CONFIG = os.path.join(PROJECT_DIR, 'pipeline-package.json')
 
 
 def artifactory_urls():
     """
-    Reads the configuration from deploy.json and return the artifactory
+    Reads the configuration from pipeline.json and return the artifactory
     instances urls
     for more information about the package names, please refer to the
     README.md file in this project.
     """
-    config = read_coniguration(DEFAULT_CONFIG_FILE, 'artifactory')
-    for artifactory in config['instances']:
+    config = read_configuration(DEFAULT_CONFIG_FILE)
+    for artifactory in config['artifactory']['instances']:
         yield "{0}/{1}".format(artifactory, _archive_name())
 
 
@@ -41,8 +45,7 @@ def _version():
 
 
 def _package_name():
-    config = read_coniguration(DEFAULT_CONFIG_FILE, 'project')
-    return "{0}-{1}".format(config['name'], _version())
+    return "{0}-{1}".format(os.environ['CI_PROJECT_NAME'], _version())
 
 
 def _archive_name():
@@ -54,9 +57,9 @@ def _archive_path():
 
 
 def _archive_exclude(filename):
-    config = read_coniguration(DEFAULT_CONFIG_FILE, 'project')
-    archive_exclude_directories = config['archive_exclude_directories']
-    archive_exclude_extensions = tuple(config['archive_exclude_extensions'])
+    config = read_configuration(PACKAGE_CONFIG)
+    archive_exclude_directories = config['exclude_directories']
+    archive_exclude_extensions = tuple(config['exclude_extensions'])
     if filename.name.endswith('robots.txt'):
         return filename
     if os.path.split(filename.name)[1] in archive_exclude_directories:
@@ -66,7 +69,7 @@ def _archive_exclude(filename):
     return filename
 
 
-def read_coniguration(config_file, environment):
+def read_configuration(config_file):
     """
     reads the deployment configuration for a given environment
 
@@ -81,10 +84,10 @@ def read_coniguration(config_file, environment):
     """
     try:
         with open(config_file, 'r') as json_in:
-            deploy_config = json.load(json_in)
-        return deploy_config[environment]
+            deploy_config = json.load(json_in, object_pairs_hook=OrderedDict)
+        return deploy_config
     except IOError as error:
-        msg = 'cannot read configuration file: {0}'.format(error)
+        msg = 'cannot read configuration file: {0}. Make sure file exists and has correct permissions.'.format(error)
         raise PipelineError(msg)
     except KeyError:
         msg = ('{0} provided environment name, {1}, does in the specified '
@@ -185,40 +188,34 @@ def sha1(filename, blocksize=65536):
 
 def base_directory():
     """
-    returns the base directory name from deploy.json
+    returns the base directory name from pipeline.json
     """
-    return read_coniguration(DEFAULT_CONFIG_FILE, 'project')['archive_directory']
+    if os.path.exists(os.path.join(PROJECT_DIR, 'base')):
+        return os.path.join(PROJECT_DIR, 'base')
+    return os.path.join(PROJECT_DIR, 'final_package')
 
 
-def create_archive(archive_name=None, base_dir=None, filter_fn=_archive_exclude):
+def create_archive(package_config):
     """
     create a tar.gz archive from base_dir excluding items
     provided in exclude
 
     Args:
-        archive_name (str): name of the archive to create
-
-        base_dir (str): name of the directory to compress
-
-        exclude (list, tuple): elements to exclude from the archive
-
+        package_config (dict): a dictionary with your package configuration
     Raises:
         PipelineError
     """
     # execute the pre archive steps
-    _pre_archive()
+    _pre_archive(package_config)
 
-    if not archive_name:
-        archive_name = _archive_path()
-    if not base_dir:
-        # read the base directory as configured in our deploy.json file
-        base_dir = base_directory()
+    archive_name = _archive_name()
+    base_dir = base_directory()
 
     if os.path.exists(archive_name):
         os.remove(archive_name)
 
     tar = tarfile.open(archive_name, "w:gz")
-    tar.add(base_dir, arcname='.', filter=filter_fn)
+    tar.add(base_dir, arcname='.', filter=_archive_exclude)
     tar.close()
     return archive_name
 
@@ -227,33 +224,16 @@ def mkdir_p(directory):
     """
     mkdir -p implementation in python
     """
-    if os.path.isdir(directory):
-        return
-    if os.path.isfile(directory):
-        raise PipelineError('cannot mkdir -p {0} (is a file)'.format(directory))
-    if os.path.islink(directory):
-        raise PipelineError('cannot mkdir -p {0} (is a link)'.format(directory))
-    full_path = ''
-    for path in directory.split(os.sep):
-        full_path = os.path.join(full_path, path)
-        try:
-            os.mkdir(full_path)
-        except OSError:
-            # directory already exists, just pass for now
-            # we will raise a PipelineError if "directory"
-            # does not exist
-            pass
-    if not os.path.isdir(directory):
-        raise PipelineError("mkdir_p, cannot create {0}".format(directory))
+    os.system('mkdir -p {0}'.format(os.path.abspath(directory)))
 
 
 def _drupal7_pre_archive():
     """
     copies site directory into -> base/sites/all/default
     """
-    print('pre-archive steps')
-    site_dest = os.path.join('base', 'sites', 'default')
-    vendor_dest = os.path.join('base', 'sites', 'all', 'vendor')
+    logger.info('drupal7 pre-archive steps')
+    site_dest = os.path.join(PROJECT_DIR, 'base', 'sites', 'default')
+    vendor_dest = os.path.join(PROJECT_DIR, 'base', 'sites', 'all', 'vendor')
     for directory in (site_dest, vendor_dest):
         if os.path.exists(directory):
             try:
@@ -268,17 +248,18 @@ def _drupal7_pre_archive():
                     raise PipelineError(error)
             except shutil.Error as error:
                 raise PipelineError(error)
-    shutil.copytree('site', site_dest)
-    shutil.copytree('vendor', vendor_dest)
+
+    shutil.copytree(os.path.join(PROJECT_DIR, 'site'), site_dest)
+    shutil.copytree(os.path.join(PROJECT_DIR, 'vendor'), vendor_dest)
 
 
-def _drupal8_pre_archive():
+def _drupal8_pre_archive(package_config):
     """
     copies site directory into -> base/sites/all/default
     """
-    print('pre-archive steps')
-    site_dest = base_directory()
-
+    logger.info('pre-archive steps')
+    site_dest = os.path.abspath(base_directory())
+    logger.info('site dest: -> %s', site_dest)
     if os.path.exists(site_dest):
         try:
             shutil.rmtree(site_dest)
@@ -290,12 +271,14 @@ def _drupal8_pre_archive():
                 raise PipelineError(error)
         except shutil.Error as error:
             raise PipelineError(error)
-    config = read_coniguration(DEFAULT_CONFIG_FILE, 'project')
-    for item in config['archive_include_directories']:
-        shutil.copytree(item, os.path.join(site_dest, item))
+    for item in package_config['include_directories']:
+        path = os.path.abspath(os.path.join(PROJECT_DIR, item))
+        logger.info('copy %s -> %s', path, os.path.join(site_dest, item))
+        shutil.copytree(path, os.path.join(site_dest, item))
+    logger.info('pre package complete')
 
 
-def _pre_archive():
+def _pre_archive(package_config):
     """
     Don't call this function directly, create_archive will do it for you
     In drupal7, "composer" do not create files into the right directory
@@ -303,9 +286,34 @@ def _pre_archive():
     Drupal8 instead creates files into the right place, so this function
     will have on drupal8 projects
     """
-    config = read_coniguration(DEFAULT_CONFIG_FILE, 'project')
-    project_style = config['style']
-    if project_style == 'drupal7':
+    if os.path.exists(os.path.join(PROJECT_DIR, 'base')):
+        logger.info('detected drupal7 project style')
         _drupal7_pre_archive()
-    elif project_style == 'drupal8':
-        _drupal8_pre_archive()
+    else:
+        logger.info('detected non-drupal7 project style')
+        _drupal8_pre_archive(package_config)
+
+
+def get_version():
+    """
+    Retrieves the version based on the branch name and add it on the env variable VERSION.
+    """
+    if 'CI_COMMIT_REF_NAME' not in os.environ:
+        msg = "{0} is not defined in your environment".format('CI_COMMIT_REF_NAME')
+        raise PipelineError(msg)
+    branch_name = os.environ['CI_COMMIT_REF_NAME'].replace('release-v', '')
+    logger.debug(branch_name)
+    os.environ['VERSION'] = branch_name
+
+
+def skip_step(stage, step):
+    """
+    Skips a step in a stage if defined in the environment variable (or in the Gitlab CI Pipelines secret variables).
+    """
+    if 'SKIP_STEPS' not in os.environ:
+        return False
+
+    steps_to_skip = os.environ['SKIP_STEPS'].split(',')
+    concat_stage_step = stage + '|' + step
+    if concat_stage_step in steps_to_skip:
+        return True

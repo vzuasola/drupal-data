@@ -3,23 +3,27 @@
 This module binds GitLab deployments and Ansible Tower jobs
 """
 
-from __future__ import print_function
 from __future__ import absolute_import
+from __future__ import print_function
+
 import argparse
 import datetime
 import json
-import os
 import subprocess
 import sys
-import lib.kerberos as kerberos
-from lib.utils import FAILED, read_coniguration
-from lib.utils import deployment_conf_dir, project_dir
-from lib.error import PipelineError
 
+import os
+
+import lib.docker as docker
+import lib.kerberos as kerberos
+from lib.error import PipelineError
+from lib.logger import logger
+from lib.utils import FAILED, read_configuration
+from lib.utils import deployment_conf_dir, project_dir
 
 # some constants...
 CURRENT_DIR = os.path.abspath(os.path.dirname(__file__))
-DEFAULT_CONFIG_FILE = os.path.join(CURRENT_DIR, 'deploy.json')
+DEFAULT_CONFIG_FILE = os.path.join(CURRENT_DIR, 'pipeline.json')
 
 
 def deployment_conf_file():
@@ -32,7 +36,7 @@ def deployment_conf_file():
 def dockerfile_path(config):
     """
     Returns the path to the dockerfile we are using in this stage
-    (defined in deploy.json)
+    (defined in pipeline.json)
     """
     # was: DOCKER_FILE = os.path.join(CURRENT_DIR, 'Dockerfile.deploy')
     return config['dockerfile']
@@ -150,28 +154,32 @@ def execute_deployment(config, image_name, version):
     Raises:
         PipelineError
     """
-    cmd = ['docker', 'run', '--rm', '-t', '--security-opt', 'label:type:unconfined_t',
+    cmd = ['docker', 'run', '--security-opt', 'label:type:unconfined_t',
            '-u', '{0}:{1}'.format(os.getuid(), os.getuid()),
            '-v', '{0}:/deploy'.format(deployment_conf_dir()),
            image_name,
            'python', '-u', '/usr/local/bin/kick_and_monitor',
            '--template-name', '{0}'.format(config['job_name'])]
-
-    cmd.append('--limit')
-    cmd.append(config['limit'])
-    # add version
-    cmd.append('--extra-vars')
-    cmd.append('version: {0}'.format(version))
+    if 'limit' in config:
+        cmd.append('--limit')
+        limit = config['limit']
+        # limit may be an environment variable
+        if '$' in limit:
+            limit = os.environ[limit.replace('$', '')]
+        cmd.append(limit)
+    if 'version' in config:
+        # add version
+        cmd.append('--extra-vars')
+        cmd.append('version: {0}'.format(version))
+    # extra keys
     for key in config['extra-vars']:
         value = config['extra-vars'][key]
         if value.startswith('$'):
             value = os.environ[value.replace('$', '')]
-        print('add --extra-vars: {0} -> {1}'.format(key, value))
         cmd.append('--extra-vars')
         cmd.append('{0}: {1}'.format(key, value))
 
     # this line kicks off the deployment
-    print(" ".join(cmd))
     deployment = subprocess.Popen(cmd)
     # let's wait for the deployment to complete
     deployment.wait()
@@ -192,7 +200,7 @@ def current_user_email():
 def authorized_users(config):
     """
     Returns a tuple of the authorized users for this step
-    (as defined in deploy.json)
+    (as defined in pipeline.json)
     """
     return (user.lower() for user in config['authorized_users'])
 
@@ -233,9 +241,14 @@ def deploy(config_file, environment, version):
         PipelineError: something when wrong during this deployment, please
             file a bug
     """
-    config = read_coniguration(config_file=config_file, environment=environment)
-    project_name = read_coniguration(config_file=config_file,
-                                     environment='project')['name']
+    try:
+        config = read_configuration(config_file=config_file, environment='deploy')
+        config = config[environment]
+        project_name = os.environ['CI_PROJECT_NAME']
+    except KeyError as error:
+        msg = "missing key in configuration! {0}".format(error)
+        logger.error(msg)
+        raise PipelineError(msg)
     kerberos.check(config)
     image_name = docker_image_name(environment)
     create_docker_configuration(config)
@@ -261,14 +274,16 @@ def main():
                         default=DEFAULT_CONFIG_FILE,
                         required=False)
     args = parser.parse_args()
-    try:
-        deploy(config_file=args.config_file,
-               environment=args.environment,
-               version=args.version)
-    except PipelineError as error:
-        print("{0} deployment stage failed".format(FAILED))
-        print(error)
-        sys.exit(1)
+    deploy(config_file=args.config_file,
+           environment=args.environment,
+           version=args.version)
+    docker.cleanup_volumes('/app')
 
 if __name__ == '__main__':
-    main()
+    try:
+        main()
+    except PipelineError as error:
+        logger.error("{0} deployment stage failed".format(FAILED))
+        logger.error(error)
+        docker.cleanup_volumes('/app')
+        sys.exit(1)

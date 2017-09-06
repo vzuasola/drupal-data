@@ -5,27 +5,20 @@
 
 Κέρβερος decides if your deployment can be applied to the next environment
 based on the prerequisite variable in .gitlab-ci.yml and authorizations set in
-the deploy.json file
+the pipeline.json file
 
 Κέρβερος it's a strange name but it also ensures we're using utf-8 encoding
 
 Κέρβερος, has a weird tendency of speaking about iteslf in 3rd person.
 """
-from __future__ import print_function
 from __future__ import absolute_import
+from __future__ import print_function
 
-import logging
 import os
-import requests
-from lib.utils import SUCCESS, FAILED, INFO
-from lib.error import PipelineError
 
-# how many results for page?
-RESULTS_PER_PAGE = 40
-# requests is printing out annoying ssl-warnings
-# https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-# this line disables them
-logging.captureWarnings(True)
+from lib.error import PipelineError
+from lib.logger import logger
+from lib.utils import SUCCESS, FAILED, INFO
 
 
 # we need to iterate through the deployment pages following this order:
@@ -148,18 +141,18 @@ def check_dependencies(config):
         depends_on = config['depends_on']
         with open(depends_on, 'r') as dependency:
             msg = ("{0} Κέρβερος says: all the requirements are met: {1},"
-                  "let's start".format(SUCCESS, dependency.read()))
-            print(msg)
+                   "let's start".format(SUCCESS, dependency.read()))
+            logger.info(msg)
             return True
     except KeyError:
         msg = ("{0} Κέρβερος this step do not depend on any previous "
                "stage".format(SUCCESS))
-        print(msg)
+        logger.error(msg)
         return True
     except (OSError, IOError):
         msg = ("{0} Κέρβερος won't let you pass, requirements are not met:"
                " {1} does not exist".format(FAILED, depends_on))
-        print(msg)
+        logger.error(msg)
         return False
 
 
@@ -173,7 +166,7 @@ def current_user_email():
 def authorized_users(config):
     """
     Returns a tuple of the authorized users for this step
-    (as defined in deploy.json)
+    (as defined in pipeline.json)
     """
     return (user.lower() for user in config['authorized_users'])
 
@@ -183,7 +176,7 @@ def authorized(config):
     if "any" in valid_users:
         msg = ("{0} Κέρβερος says: this steps can be performed by "
                "anyone, be ready for the next quest".format(SUCCESS))
-        print(msg)
+        logger.info(msg)
         return True
 
     user = current_user_email()
@@ -194,12 +187,12 @@ def authorized(config):
 
     msg = ("{0} Κέρβερος says: you're authorized to trigger "
            "this step, be ready for the next quest".format(SUCCESS, user))
-    print(msg)
+    logger.info(msg)
 
 
 def check(config):
     # no blockers for this environment
-    print('{0} Κέρβερος sniffs'.format(INFO))
+    logger.info('{0} Κέρβερος sniffs'.format(INFO))
     authorized(config)
     if not check_dependencies(config):
         raise PipelineError('Requirements are not met. Giving up.')

@@ -14,6 +14,7 @@ except ImportError:
 import requests
 from .utils import SUCCESS, FAILED, md5, sha1
 from .error import PipelineError
+from .logger import logger
 
 
 def upload(url, username, password, file_to_upload):
@@ -44,15 +45,15 @@ def upload(url, username, password, file_to_upload):
             response = requests.put(url, auth=(username, password),
                                     headers=headers, data=upload_me)
             if response.status_code != 201:
-                print('{0} {1}'.format(FAILED, url))
+                logger.error('{0} {1}'.format(FAILED, url))
             else:
-                print('{0} {1}'.format(SUCCESS, url))
+                logger.info('{0} {1}'.format(SUCCESS, url))
         except requests.ConnectionError as error:
-            print('{0} to upload {1} to {2}'.format(FAILED, file_to_upload, short_url))
-            print('      url: {0}'.format(url))
-            print('      username: {0}'.format(username))
-            print('      password: {0}'.format('**************'))
-            print('      please check: {0}'.format(url))
-            print('      error: {0}'.format(error))
-            print('      reason: {0}'.format(error.args[0].reason))
+            logger.error('{0} to upload {1} to {2}'.format(FAILED, file_to_upload, short_url))
+            logger.error('      url: {0}'.format(url))
+            logger.error('      username: {0}'.format(username))
+            logger.error('      password: {0}'.format('**************'))
+            logger.error('      please check: {0}'.format(url))
+            logger.error('      error: {0}'.format(error))
+            logger.error('      reason: {0}'.format(error.args[0][0]))
             raise PipelineError('upload step failed')

@@ -3,15 +3,17 @@
 QA approvals
 """
 
-from __future__ import print_function
 from __future__ import absolute_import
+from __future__ import print_function
+
 import argparse
-import os
 import sys
+
+import os
+
 import lib.kerberos as kerberos
 from lib.error import PipelineError
-from lib.utils import SUCCESS, FAILED, read_coniguration, DEFAULT_CONFIG_FILE
-
+from lib.utils import SUCCESS, read_configuration, DEFAULT_CONFIG_FILE
 
 # some constants...
 CURRENT_DIR = os.path.abspath(os.path.dirname(__file__))
@@ -25,7 +27,7 @@ def signoff(config_file, environment):
         config_file (str): path to the configuration file
         environment (str): the environment you're about to deploy
     """
-    config = read_coniguration(config_file=config_file, environment=environment)
+    config = read_configuration(config_file=config_file, environment=environment)
     user = kerberos.current_user_email()
     try:
         kerberos.check(config)

@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+
 """
 This module binds GitLab deployments and Ansible Tower jobs
 """
@@ -7,15 +8,11 @@ from __future__ import print_function
 from __future__ import absolute_import
 import os
 import subprocess
+from .logger import logger
+from .progressbar import ProgressBar
 from .error import PipelineError
-from .utils import gitlab_var, project_dir, SUCCESS, FAILED
+from .utils import gitlab_var, project_dir
 from .utils import read_json_configuration
-
-
-TEST_CONFIGURATION = 'build/tests.json'
-TEST_RESULT_PHP = 'phpcs-php-results.txt'
-TEST_RESULT_CSS = 'phpcs-css-results.txt'
-TEST_RESULT_JS = 'phpcs-js-results.txt'
 
 
 def deployment_conf_dir():
@@ -140,14 +137,18 @@ def create_image(image_name=None, docker_file=None):
            '-f', docker_file,
            '-t', image_name,
            '.')
-    print('poor man debugging: {0}'.format(" ".join(cmd)))
-    # docker_build = subprocess.Popen(cmd, cwd=project_dir(), stdout=subprocess.PIPE)
-    docker_build = subprocess.Popen(cmd, cwd=project_dir())
 
-    print('building docker image: {0}'.format(image_name))
-    docker_build.wait()
+    docker_build = subprocess.Popen(cmd, cwd=project_dir(),
+                                    stdout=subprocess.PIPE,
+                                    stderr=subprocess.PIPE)
+
+    logger.info('building docker image: {0}'.format(image_name))
+    # suppress full log of the image build step unless we're in debug mode.
+    while docker_build.poll() is None:
+        out = docker_build.stdout.read()
+        err = docker_build.stderr.read()
     if docker_build.returncode != 0:
-        msg = 'Failed to required docker image: {0}'.format(" ".join(cmd))
+        msg = 'Failed to build required docker image: {0}'.format(" ".join(cmd))
         raise PipelineError(msg)
 
 
@@ -171,97 +172,124 @@ def _base_test_cmd():
 
 
 def cleanup_volumes(volume):
+    logger.info('\nreset permissions on local files')
     cmd = [docker_executable(),
            'run', '--rm', '-t', '--security-opt', 'label:type:unconfined_t',
            '-v', '{0}:{1}'.format(project_dir(), volume),
            'alpine:latest',
            'chown', '-R', '{0}:{1}'.format(os.getuid(), os.getuid()),
            '{0}'.format(volume)]
-    print(" ".join(cmd))
-    cleanup = subprocess.Popen(cmd)
-    cleanup.wait()
-    if cleanup.returncode != 0:
-        raise PipelineError("Volume clean up has failed")
+    if run_command(cmd, output_file=None) != 0:
+        msg = "Volume clean up has failed: {0}".format(' '.join(cmd))
+        raise PipelineError(msg)
 
 
-def _php_test_command():
+def ssh_dir():
     """
-    phpcs test command
+    get the ssh configuration directory from known location or from local user
+    fail ssh directory is not present
     """
-    cmd = _base_test_cmd()
-    cmd.append('--extensions=php,module,inc,install,test,profile,theme')
-    return cmd
+    known_ssh_dirs = ('~/ssh-docker/', '~/.ssh/')
+    for path in known_ssh_dirs:
+        path = os.path.expanduser(path)
+        if os.path.exists(path):
+            logger.info('using ssh dir: {0}'.format(path))
+            return path
+
+    msg = 'could not find ssh configuration on canonical paths: {0}'.format(
+        ','.join(known_ssh_dirs))
+    raise PipelineError(msg)
 
 
-def _css_test_command():
+def run_command(cmd, output_file):
     """
-    php css test command
-    """
-    cmd = _base_test_cmd()
-    cmd.append('--extensions=css')
-    return cmd
-
-
-def _js_test_command():
-    """
-    phpjs javascript test command
-    """
-    cmd = _base_test_cmd()
-    cmd.append('--extensions=js')
-    return cmd
-
-
-def execute_tests():
-    """
-    I execute php tests!
+    execute and logs command
     """
 
-    php_out = open(TEST_RESULT_PHP, 'w')
-    css_out = open(TEST_RESULT_CSS, 'w')
-    js_out = open(TEST_RESULT_JS, 'w')
-
-    # start all the process
-    php = subprocess.Popen(_php_test_command(), stdout=php_out)
-    css = subprocess.Popen(_css_test_command(), stdout=css_out)
-    js = subprocess.Popen(_js_test_command(), stdout=js_out)
-    print('started phpcs - php tests')
-    print('started phpcs - css tests')
-    print('started phpcs - js tests')
-
-    # wait for processes to complete
-    php.wait()
-    css.wait()
-    js.wait()
-
-    # write to file
-    php_out.flush()
-    css_out.flush()
-    js_out.flush()
-
-    # close output file
-    php_out.close()
-    css_out.close()
-    js_out.close()
-
-    print("{0} php tests".format(SUCCESS if php.returncode == 0 else FAILED))
-    print("{0} css tests".format(SUCCESS if css.returncode == 0 else FAILED))
-    print("{0} js tests".format(SUCCESS if js.returncode == 0 else FAILED))
-    cleanup_volumes(volume='/opt/tests/project')
+    # Show command when in DEBUG_MODE
+    logger.debug('\nCommand to be executed: {0}'.format(' '.join(cmd)))
+    process = subprocess.Popen(cmd, stdout=subprocess.PIPE)
+    buff = ""
+    progressbar = ProgressBar()
+    if output_file:
+        logger.info('redirecting output to: {0} (it may take a while)'.format(output_file))
+        output_file = open(output_file, 'w')
+    logger.info('')
+    while process.poll() is None:
+        # read 1 char
+        if output_file:
+            progressbar.update()
+        std_ = process.stdout.read(1)
+        if std_:
+            buff = "{0}{1}".format(buff, std_)
+            if buff.endswith('\n'):
+                msg = buff.strip()
+                if output_file:
+                    output_file.write(msg)
+                else:
+                    logger.info(msg)
+                buff = ""
+    if output_file:
+        output_file.close()
+        progressbar.complete()
+        logger.info('done!')
+    # clean up
+    return process.poll()
 
 
-def package():
+def expand_variables(string):
     """
-    This function executes the compose in a docker container
+    takes a string and expands $XXXXXXX into an environment variable
+    if the variable is not available, it will throw a gigantic exception
     """
-    cmd = (docker_executable(),
-           'run', '--rm', '-t', '--security-opt', 'label:type:unconfined_t',
-           # '-u', '{0}:{1}'.format(os.getuid(), os.getuid()),
-           '-v', '{0}:/root/.ssh/:ro'.format(os.path.expanduser('~/.ssh/')),
-           '-v', '{0}:/app'.format(project_dir()),
-           default_image_name())
-    print('>> {0}'.format(" ".join(cmd)))
-    pkg = subprocess.Popen(cmd)
-    pkg.wait()
-    cleanup_volumes(volume='/app')
-    if pkg.returncode != 0:
-        raise PipelineError("Packaging has failed!")
+    if '$' not in string:
+        return string
+    pre, _, post = string.partition('$')
+    # take the first element of the string followed by ::space:: or all the
+    # string
+    env_variable = post.split(':')[0]
+    env_variable = env_variable.split('/')[0]
+    env_variable = env_variable.split(' ')[0]
+    env_variable = env_variable.split('.')[0]
+    # remove any '
+    env_variable = env_variable.replace("'", '')
+    # remove any "
+    env_variable = env_variable.replace('"', '')
+    # remove any space from the string
+    if env_variable not in os.environ:
+        msg = "{0} is not defined in your environment".format(env_variable)
+        raise PipelineError(msg)
+    string = string.replace('${0}'.format(env_variable), os.environ[env_variable])
+    if "$" in string:
+        return expand_variables(string)
+    return string
+
+
+def execute(image_name, dockerfile, options, command, volumes, output):
+
+    create_image(image_name=image_name, docker_file=dockerfile)
+
+    cmd = [docker_executable(),
+           'run',
+           '--rm', '-t', '--security-opt', 'label:type:unconfined_t',
+           '-v', '{0}:/root/.ssh/:ro'.format(ssh_dir())]
+
+    for volume in volumes:
+        cmd.append('-v')
+        cmd.append(expand_variables(volume))
+
+    # now add options, if any
+    for option in options:
+        opt = expand_variables(option)
+        cmd.append(opt)
+
+    # tell docker which machine you want to use
+    cmd.append(image_name)
+
+    # now, append the final command, if any
+    if command:
+        for cmmd in command:
+            cmd.append(expand_variables(cmmd))
+
+    if run_command(cmd, output) != 0:
+        raise PipelineError('{0} failed'.format(' '.join(cmd)))
