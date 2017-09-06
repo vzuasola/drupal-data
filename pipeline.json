@@ -161,12 +161,16 @@
             "composer": {
                 "dockerfile": "automation/Dockerfile.composer",
                 "docker-image-suffix": "-composer",
-                "options": [],
+                "options": [
+                    "--env",
+                    "SYMFONY_ENV=prod"
+                ],
                 "command": [
                     "install",
                     "-v",
                     "--no-interaction",
-                    "--no-dev"
+                    "--no-dev",
+                    "--optimize-autoloader"
                 ],
                 "volumes": [
                     "$PWD:/var/www/html/app"
@@ -216,7 +220,7 @@
                     "python",
                     "/app/automation/package.py",
                     "--configuration-file",
-                    "/app/automation/package.json"
+                    "/app/pipeline-package.json"
                 ],
                 "volumes": [
                     "$PWD:/app"

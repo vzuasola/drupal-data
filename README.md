@@ -51,7 +51,7 @@ Three files need to be correctly configured for the pipelines to work.
 * `.gitlab-ci.yml`: this file defines your actual pipeline as you see it in
 your browser when you go to the pipelines in your project. *Comments inside
 the file*
-* `package.json`: this file contains an include/exclude list to take into
+* `pipeline-package.json`: this file contains an include/exclude list to take into
 consideration when building your package. *Comments inside
 the file*
 * `pipeline.json`: this one contains the actual tasks that get executed
@@ -62,15 +62,15 @@ the file*
 From the root directory of your repository:
 ```
 cp automation/.gitlab-ci.yml.dist ./.gitlab-ci.yml
-cp automation/package.json.dist  automation/package.json
+cp automation/pipeline-package.json.dist  ./pipeline-package.json
 ```
 
 Now you only need to commit and push to your repository in order to have
 pipelines working.
 
-Please note that this will overwrite any existing file (`package.json`, and `.gitlab-ci.yml`).
+Please note that this will overwrite any existing file (`pipeline-package.json`, and `.gitlab-ci.yml`).
 
-Once you are done copying, you can make changes to your project's `package.json` and `.gitlab-ci.yml` to suit your application needs. If you think your changes can be used by other projects, please update the distribution files (`*.dist`) and push them to the main repo (`git@gitlab.ph.esl-asia.com:Automation-team/automation-pipelines.git`)
+Once you are done copying, you can make changes to your project's `pipeline-package.json` and `.gitlab-ci.yml` to suit your application needs. If you think your changes can be used by other projects, please update the distribution files (`*.dist`) and push them to the main repo (`git@gitlab.ph.esl-asia.com:Automation-team/automation-pipelines.git`)
 
 
 ### Configuring environment variables

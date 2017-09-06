@@ -20,7 +20,8 @@
             "deploy",
             "example",
             "test",
-            "tests"
+            "tests",
+            "prod"
         ],
         "exclude_extensions": [
             "txt",
