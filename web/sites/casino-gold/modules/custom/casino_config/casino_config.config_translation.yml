@@ -21,10 +21,3 @@ casino_config.provisioning_config_schema:
   base_route_name: casino_config.provisioning_config_form
   names:
     - 'casino_config.provisioning_config'
-
-casino_config.announcement_config_schema:
-  title: 'Announcement LightBox configurations'
-  base_route_name: casino_config.announcement_config_form
-  names:
-    - 'casino_config.announcement_config'
-
