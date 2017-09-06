@@ -24,7 +24,7 @@ FAILED = '\033[91m[FAILED]\033[0m'
 BUILD_DIR = os.path.abspath(os.path.join(CURRENT_DIR, os.pardir))
 PROJECT_DIR = os.path.abspath(os.path.join(BUILD_DIR, os.pardir))
 DEFAULT_CONFIG_FILE = os.path.join(BUILD_DIR, 'pipeline.json')
-PACKAGE_CONFIG = os.path.join(BUILD_DIR, 'package.json')
+PACKAGE_CONFIG = os.path.join(PROJECT_DIR, 'pipeline-package.json')
 
 
 def artifactory_urls():
@@ -87,7 +87,7 @@ def read_configuration(config_file):
             deploy_config = json.load(json_in, object_pairs_hook=OrderedDict)
         return deploy_config
     except IOError as error:
-        msg = 'cannot read configuration file: {0}'.format(error)
+        msg = 'cannot read configuration file: {0}. Make sure file exists and has correct permissions.'.format(error)
         raise PipelineError(msg)
     except KeyError:
         msg = ('{0} provided environment name, {1}, does in the specified '
