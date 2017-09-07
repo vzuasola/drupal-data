@@ -197,13 +197,20 @@ class WebcomposerDomainExport extends ControllerBase {
       $result['default'][$key] = $placeholder;
     }
 
-
     $result = $this->service->excel_filter_column($result);
 
     return $result;
   }
 
+  /**
+   * Get the all structured data for the ecxel.
+   * @param  array $placeholders array of placeholders.
+   * @param  string $language    language code.
+   * @return array               result array of excelsheet.
+   */
   public function get_all_domains_data_per_language($placeholders, $language) {
+    $variables = [];
+
     // Get all the domain groups
     $domains_groups = $this->service->get_domain_groups();
 
@@ -261,9 +268,7 @@ class WebcomposerDomainExport extends ControllerBase {
               $filterTranslated = $paragraphs->getTranslation($language);
               $placeholder_key = $filterTranslated->field_placeholder_key->value;
               $placeholder_default = $filterTranslated->field_default_value->value;
-              // $array_key_value[$group_name] = [$placeholder_key=>$placeholder_default];
               $domain_placeholer_array[$placeholder_key] = $placeholder_default;
-
             }
           }
           $domain_array[$group_name][$domain->name] = $domain_placeholer_array;
@@ -272,16 +277,19 @@ class WebcomposerDomainExport extends ControllerBase {
     }
 
     foreach ($group_placeholders as $key => $value) {
+      $variables[$key] = $value;
       foreach ($domain_array as $domain => $data) {
         if (array_key_exists($domain, $group_placeholders)) {
           foreach ($data as $name => $default) {
-            $group_placeholders[$name] = $default;
+            if ($key === $domain) {
+              $variables[$name] = $default;
+            }
           }
         }
       }
     }
 
-    foreach ($group_placeholders as $key => $value) {
+    foreach ($variables as $key => $value) {
       // check if property is empty
       $placeholders['group'][$key] = $key;
       foreach ($value as $holder => $default) {
@@ -290,6 +298,7 @@ class WebcomposerDomainExport extends ControllerBase {
         } else {
           $placeholders[$holder]['label'] = $holder;
           $placeholders[$holder]['default'] = $default;
+          $placeholders[$holder][$key] = $default;
         }
       }
     }
