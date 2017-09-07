@@ -19,7 +19,6 @@ class FormBase extends ConfigFormBase {
    * {@inheritdoc}
    */
   protected function getEditableConfigNames() {
-
   }
 
   /**

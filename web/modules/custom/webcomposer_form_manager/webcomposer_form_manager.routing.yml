@@ -14,3 +14,11 @@ webcomposer_form_manager.overview_form:
   requirements:
     _permission: 'administer site configuration'
 
+webcomposer_form_manager.form.view:
+  path: '/admin/config/webcomposer/form/manage/{form}'
+  defaults:
+    _form: '\Drupal\webcomposer_form_manager\Form\ManageForm'
+    _title_callback: '\Drupal\webcomposer_form_manager\Form\ManageForm::title'
+  requirements:
+    _permission: 'administer site configuration'
+

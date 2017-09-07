@@ -3,6 +3,8 @@
 namespace Drupal\webcomposer_form_manager\Form;
 
 use Drupal\Core\Form\FormStateInterface;
+use Symfony\Component\DependencyInjection\ContainerInterface;
+use Drupal\Core\Url;
 
 /**
  * Class List.
@@ -10,6 +12,26 @@ use Drupal\Core\Form\FormStateInterface;
  * @package Drupal\webcomposer_form_manager\Form
  */
 class OverviewForm extends FormBase {
+  /**
+   * Class constructor.
+   */
+  public function __construct($typedConfigManager, $languageManager, $formManager) {
+    parent::__construct($typedConfigManager, $languageManager);
+
+    $this->formManager = $formManager;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public static function create(ContainerInterface $container) {
+    return new static(
+      $container->get('config.typed'),
+      $container->get('language_manager'),
+      $container->get('webcomposer_form_manager.form_manager')
+    );
+  }
+
   /**
    * {@inheritdoc}
    */
@@ -22,30 +44,37 @@ class OverviewForm extends FormBase {
   /**
    * {@inheritdoc}
    */
-  protected function getDefaultConfigName() {
-    return 'webcomposer_form_manager.list';
-  }
-
-  /**
-   * {@inheritdoc}
-   */
   public function getFormId() {
-    return 'list';
+    return 'webcomposer_form_manager.overview_form';
   }
 
   /**
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    $name = $this->getDefaultConfigName();
+    $formList = $this->formManager->getFormList();
+    $rows = [];
 
-    $form['javascript_assets'] = array(
-      '#type' => 'textarea',
-      '#title' => t('Javascript Assets'),
-      '#size' => 500,
-      '#description' => $this->t('Define the Playtech scripts that should be included on game launch. Provide one script per line'),
-      '#default_value' => $this->getConfigValues($name, 'javascript_assets')
-    );
+    foreach ($formList as $key => $value) {
+      $url = new Url('webcomposer_form_manager.form.view', ['form' => $key]);
+
+      $rows[] = [
+        'title' => $value['name'],
+        'actions' => $this->l('Manage', $url),
+      ];
+    }
+
+    $header = [
+      'name' => 'Name',
+      'actions' => 'Actions',
+    ];
+
+    $form['table'] = [
+      '#type' => 'table',
+      '#header' => $header,
+      '#rows' => $rows,
+      '#empty' => 'No form to show',
+    ];
 
     return parent::buildForm($form, $form_state);
   }
@@ -62,13 +91,5 @@ class OverviewForm extends FormBase {
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
     parent::submitForm($form, $form_state);
-
-    $name = $this->getDefaultConfigName();
-
-    $keys = [
-      'javascript_assets',
-    ];
-
-    $this->saveConfigValues($name, $keys, $form_state);
   }
 }
