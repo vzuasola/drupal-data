@@ -3,3 +3,9 @@ webcomposer_domain_import.webcomposer_domain_import:
   parent: webcomposer_dm.list
   description: 'Import the domain here'
   route_name: webcomposer_domain_import.webcomposer_domain_import
+
+webcomposer_domain_import.webcomposer_domain_export:
+  title: 'Domain Export'
+  parent: webcomposer_dm.list
+  description: 'Export domains here'
+  route_name: webcomposer_domain_import.webcomposer_domain_export

@@ -10,7 +10,7 @@ namespace Drupal\webcomposer_domain_import\Parser;
  */
 class ExportParser {
 
-	/**
+  /**
    * Constructor.
    */
   public function __construct() {
@@ -35,8 +35,9 @@ class ExportParser {
     $groups = array();
 
     $domain_groups = \Drupal::entityManager()->getStorage('taxonomy_term')->loadTree('domain_groups');
+
     foreach ($domain_groups as $key => $value) {
-    	$groups[] = (string) $value->name;
+    	$groups[$value->tid] = $value->name;
     }
 
     return $groups;
@@ -67,7 +68,6 @@ class ExportParser {
     	// Set array as domain name => group.
     	$group_name = taxonomy_term_load($group_id)->get('name')->getValue(false)[0]['value'];
 
-    	// $domain_name = [$value->tid => $value->name];
     	if (!array_key_exists($group_id, $groups)) {
         $groups[$group_id]['id'] = $group_id;
         $groups[$group_id]['name'] = $group_name;
@@ -100,23 +100,20 @@ class ExportParser {
    * Returns an array of all placeholder
    *
    */
-  function _matterhorn_domain_get_all_variables($tokens = NULL) {
+  function get_domain_tokens($tokens = NULL) {
     $variables = array();
 
-    // query all variables from database
-    $query = db_select('new_matterhorn_domain_variables', 'vars')->fields('vars');
+    // Get the master placeholders
+    $placeholders = \Drupal::entityManager()->getStorage('taxonomy_term')->loadTree('master_placeholder');
 
-    if (!empty($tokens)) {
-        $names = array_keys($tokens);
-        $query->condition('name', $names, 'IN');
-    }
-
-    // sort data by name
-    $result = $query->orderBy('vars.name')->execute();
-
-    // format data
-    while ($row = $result->fetchAssoc()) {
-        $variables[$row['name']] = $row;
+    foreach ($placeholders as $value) {
+      $token = taxonomy_term_load($value->tid)->get('field_add_master_placeholder')->getValue(false)[0]['target_id'];
+      // kint(taxonomy_term_load($value->tid);
+      $paragraphs = \Drupal::entityManager()->getStorage('paragraph')->load($token);
+      $placeholder_key = $paragraphs->get('field_placeholder_key')->getValue(false);
+      $placeholder_desc = $paragraphs->get('field_description')->getValue(false);
+      // kint($placeholder_desc;
+      $variables[$placeholder_key[0]['value']] = $placeholder_desc[0]['value'];
     }
 
     return $variables;
@@ -189,75 +186,42 @@ class ExportParser {
 	 * @return array $result
 	 *
 	 */
-	public function excel_get_domains($groups) {
-		$k = 0;
-		$result = array();
+  public function excel_get_domains($groups) {
+    $k = 0;
+    $result = array();
 
-		foreach ($groups['groups'] as $group) {
-			$name = $group['name'];
-			$result[$k][] = $group['name'];
+    foreach ($groups['groups'] as $group) {
+      $name = $group['name'];
+      $result[$k][] = $group['name'];
 
-			foreach ($group['domains'] as $domain) {
-				$result[$k][] = $domain['domain'];
-			}
-			$k++;
-		}
-    // kint($result);die;
+      foreach ($group['domains'] as $domain) {
+        $result[$k][] = $domain['domain'];
+      }
+      $k++;
+    }
 
-		// get the highest row number
-		$count = 0;
-		foreach ($result as $group) {
-			$x = count($group);
-			if ($count < $x) {
-				$count = $x;
-			}
-		}
+    // get the highest row number
+    $count = 0;
+    foreach ($result as $group) {
+      $x = count($group);
+      if ($count < $x) {
+        $count = $x;
+      }
+    }
 
-		// populate missing rows with nulls, so that all columns will have the same number of rows
-		for ($i = 0; $i < count($result)-1; $i++) {
-			for ($j = 0; $j < $count; $j++) {
-				if (empty($result[$i][$j])) {
-					$result[$i][$j] = NULL;
-				}
-			}
-		}
+    // populate missing rows with nulls, so
+     // that all columns will have the same number of rows
+    for ($i = 0; $i < count($result)-1; $i++) {
+      for ($j = 0; $j < $count; $j++) {
+        if (empty($result[$i][$j])) {
+          $result[$i][$j] = NULL;
+        }
+      }
+    }
 
-		$result = $this->excel_filter_column($result);
+    $result = $this->excel_filter_column($result);
 
 		return $result;
-	}
-
-	/**
-	 * Generates the domain list worksheet data
-	 *
-	 * @author alex <alexandernikko.tenepere@bayviewtechnology.com>
-	 * @param array $domain_groups - the list of domain groups
-	 * @return array $result
-	 *
-	 */
-	public function excel_get_domain_list($domain_groups) {
-		// if cache is not empty, return the cache instead
-		if (!empty($this->domains)) {
-			return $this->domains;
-		}
-
-		$result = array();
-		$k = 0;
-
-		foreach ($domain_groups['groups'] as $group) {
-			$name = $group['name'];
-			$result[$k][] = $group['name'];
-
-			foreach ($group['domains'] as $domain) {
-				$result[$k][] = $domain['domain'];
-			}
-
-			$k++;
-		}
-
-		// put all domain variables in class property
-		$this->domains = $result;
-		return $this->domains;
 	}
 
 	/**
@@ -274,6 +238,7 @@ class ExportParser {
 
 		// convert token data into excel writable arrays
 		$result = $this->excel_filter_column($result);
+
 		return $result;
 	}
 
@@ -336,14 +301,16 @@ class ExportParser {
 	 *
 	 */
 	private function cache_placeholders($placeholders) {
+
 		// check if property is empty
 		if (empty($this->placeholders)) {
 			$this->placeholders['label']['group'] = 'tokens';
 			$this->placeholders['description']['group'] = 'description';
+
 			// loop through the keys of the default values
 			foreach ($placeholders as $key => $placeholder) {
 				$this->placeholders['label'][$key] = $key;
-				$this->placeholders['description'][$key] = $placeholder['description'];
+				$this->placeholders['description'][$key] = $placeholder;
 			}
 		}
 
