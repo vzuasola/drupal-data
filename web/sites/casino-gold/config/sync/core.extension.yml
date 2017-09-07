@@ -69,11 +69,12 @@ module:
   views_arg_order_sort: 0
   views_ui: 0
   webcomposer_affilates: 0
+  webcomposer_announcements: 0
   webcomposer_config: 0
   webcomposer_connector: 0
   webcomposer_dm: 0
-  webcomposer_language_hierarchy: 0
   webcomposer_editor: 0
+  webcomposer_language_hierarchy: 0
   webcomposer_monolog: 0
   webcomposer_rest_extra: 0
   webcomposer_snippet: 0

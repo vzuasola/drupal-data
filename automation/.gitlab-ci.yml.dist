@@ -24,13 +24,16 @@ php code sniffer:
   stage: tests
   script:
     - python -u automation/run.py --stage phpcs
-  allow_failure: true
+
+es linter:
+  stage: tests
+  script:
+    - python -u automation/run.py --stage eslinter
 
 phpmd:
   stage: tests
   script:
     - python -u automation/run.py --stage phpmd
-  allow_failure: true
 
 sensiolabs security checker:
   stage: tests
@@ -51,7 +54,10 @@ create package:
   cache:
     key: v2
     paths:
+      - devtool/.bower-cache/
+      - devtool/.node-cache/
       - .composer-cache/
+      - devtool/.yarn-cache/
 
 dev:
   stage: deploy-dev
@@ -67,6 +73,17 @@ dev:
     paths:
       - automation/deployed/*.jsonl
 
+selenium tests development:
+  stage: integration-tests-development
+  script:
+    - python -u automation/run.py --stage integration-tests-development
+  when: manual
+  dependencies:
+    - dev
+  artifacts:
+    paths:
+      - automation/deployed/*.jsonl
+
 qa1:
   stage: deploy-test
   environment:
@@ -77,6 +94,21 @@ qa1:
   when: manual
   dependencies:
     - dev
+  artifacts:
+    paths:
+      - automation/deployed/*.jsonl
+  only:
+    - /^working$/
+    - /^release-.*$/
+    - tags
+
+selenium tests qa1:
+  stage: integration-tests-test
+  script:
+    - python -u automation/run.py --stage integration-tests-test
+  when: manual
+  dependencies:
+    - qa1
   artifacts:
     paths:
       - automation/deployed/*.jsonl
@@ -118,6 +150,21 @@ tct:
     - /^release-.*$/
     - tags
 
+selenium tests tct:
+  stage: integration-tests-test
+  script:
+    - python -u automation/run.py --stage integration-tests-tct
+  when: manual
+  dependencies:
+    - tct
+  artifacts:
+    paths:
+      - automation/deployed/*.jsonl
+  only:
+    - /^working$/
+    - /^release-.*$/
+    - tags
+
 uat:
   stage: deploy-staging
   environment:
@@ -136,6 +183,20 @@ uat:
     - /^release-.*$/
     - tags
 
+selenium tests uat:
+  stage: integration-tests-staging
+  script:
+    - python -u automation/run.py --stage integration-tests-uat
+  when: manual
+  dependencies:
+    - uat
+  artifacts:
+    paths:
+      - automation/deployed/*.jsonl
+  only:
+    - /^release-.*$/
+    - tags
+
 staging:
   stage: deploy-staging
   environment:
@@ -147,6 +208,20 @@ staging:
   dependencies:
     - qa1
     - tct
+  artifacts:
+    paths:
+      - automation/deployed/*.jsonl
+  only:
+    - /^release-.*$/
+    - tags
+
+selenium tests staging:
+  stage: integration-tests-staging
+  script:
+    - python -u automation/run.py --stage integration-tests-stg
+  when: manual
+  dependencies:
+    - staging
   artifacts:
     paths:
       - automation/deployed/*.jsonl

@@ -22,22 +22,11 @@ casino_config.promo_right_block_config:
   description: 'Casino Header Configurations'
   route_name: casino_config.promo_right_block_form
 
-casino_config.autologout_config:
-  title: 'Auto Logout Configurations'
-  parent: casino_config.casino_config_list
-  description: 'Casino Player Auto Logout Configurations'
-  route_name: casino_config.autologout_config_form
-
 casino_config.provisioning_config:
   title: 'Provisioning LightBox Configurations'
   parent: casino_config.casino_config_list
   description: 'Provisioning LightBox Configurations'
   route_name: casino_config.provisioning_config_form
 
-casino_config.announcement_config:
-  title: 'Announcement LightBox Configurations'
-  parent: casino_config.casino_config_list
-  description: 'Announcement LightBox Configurations'
-  route_name: casino_config.announcement_config_form
 
 

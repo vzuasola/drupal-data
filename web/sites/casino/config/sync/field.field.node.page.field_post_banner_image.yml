@@ -1,9 +1,9 @@
-uuid: 11de1c73-8ccd-429a-a6a4-5f28863bce9c
+uuid: b298873c-5e67-4cb8-9490-ef3089c3c2ea
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_image
+    - field.storage.node.field_post_banner_image
     - node.type.page
   module:
     - content_translation
@@ -14,12 +14,12 @@ third_party_settings:
       file: file
       alt: '0'
       title: '0'
-id: node.page.field_image
-field_name: field_image
+id: node.page.field_post_banner_image
+field_name: field_post_banner_image
 entity_type: node
 bundle: page
 label: 'Banner Image'
-description: 'The image for the banner. The recommended upload size is 1920x500.'
+description: ''
 required: false
 translatable: true
 default_value: {  }
