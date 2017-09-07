@@ -134,11 +134,6 @@ class WebcomposerDomainExport extends ControllerBase {
   }
 
   /**
-   * Matterhorn Domain Export DB functions
-   *
-   */
-
-  /**
    * Returns an array of all domains, where the index is the primary key `id` for domains temp table
    *
    * @return array $groups
@@ -162,10 +157,6 @@ class WebcomposerDomainExport extends ControllerBase {
    * @param  string $language language code.
    * @return array result     array of data.
    */
-  // public function get_all_domains_per_language($domains, $language = 'en') {
-  //   $domains_groups =
-  // }
-
   public function get_all_placeholders_per_language($key) {
     $variables = array();
     $result = array();
@@ -175,14 +166,14 @@ class WebcomposerDomainExport extends ControllerBase {
 
     foreach ($placeholders as $value) {
       $token = taxonomy_term_load($value->tid);
-        // kint($test);die;
+
       if ($token->hasTranslation($key)) {
         $paragraph = $token->get('field_add_master_placeholder')->getValue(false)[0]['target_id'];
         $paragraphs = \Drupal::entityManager()->getStorage('paragraph')->load($paragraph);
-        $filterTranslated = $paragraphs->getTranslation($key);
-        $placeholder_key = $filterTranslated->field_placeholder_key->value;
-        $placeholder_desc = $filterTranslated->field_default_value->value;
-        // kint($placeholder_key);die;
+        $translated = $paragraphs->getTranslation($key);
+        $placeholder_key = $translated->field_placeholder_key->value;
+        $placeholder_desc = $translated->field_default_value->value;
+
         $variables[$placeholder_key] = $placeholder_desc;
       }
     }
@@ -229,9 +220,9 @@ class WebcomposerDomainExport extends ControllerBase {
           $paragraph = $group->get('field_add_placeholder')->getValue(false)[0]['target_id'];
           $paragraphs = \Drupal::entityManager()->getStorage('paragraph')->load($paragraph);
           if ($paragraphs->hasTranslation($language)) {
-            $filterTranslated = $paragraphs->getTranslation($language);
-            $placeholder_key = $filterTranslated->field_placeholder_key->value;
-            $placeholder_default = $filterTranslated->field_default_value->value;
+            $translated = $paragraphs->getTranslation($language);
+            $placeholder_key = $translated->field_placeholder_key->value;
+            $placeholder_default = $translated->field_default_value->value;
             // Check if the values of the fields are not empty.
             if (!empty($placeholder_key) && !empty($placeholder_default)) {
               $group_placeholders[$value][$placeholder_key] = $placeholder_default;
@@ -265,9 +256,9 @@ class WebcomposerDomainExport extends ControllerBase {
             $paragraphs = \Drupal::entityManager()->getStorage('paragraph')->load($target_id);
 
             if ($paragraphs->hasTranslation($language)) {
-              $filterTranslated = $paragraphs->getTranslation($language);
-              $placeholder_key = $filterTranslated->field_placeholder_key->value;
-              $placeholder_default = $filterTranslated->field_default_value->value;
+              $translated = $paragraphs->getTranslation($language);
+              $placeholder_key = $translated->field_placeholder_key->value;
+              $placeholder_default = $translated->field_default_value->value;
               $domain_placeholer_array[$placeholder_key] = $placeholder_default;
             }
           }

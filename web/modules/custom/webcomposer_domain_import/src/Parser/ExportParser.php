@@ -97,10 +97,10 @@ class ExportParser {
   }
 
   /**
-   * Returns an array of all placeholder
-   *
+   * Get domains with domain groups.
+   * @return array  array of all the tockens.
    */
-  function get_domain_tokens($tokens = NULL) {
+  function get_domain_tokens() {
     $variables = array();
 
     // Get the master placeholders
@@ -108,11 +108,11 @@ class ExportParser {
 
     foreach ($placeholders as $value) {
       $token = taxonomy_term_load($value->tid)->get('field_add_master_placeholder')->getValue(false)[0]['target_id'];
-      // kint(taxonomy_term_load($value->tid);
+
       $paragraphs = \Drupal::entityManager()->getStorage('paragraph')->load($token);
       $placeholder_key = $paragraphs->get('field_placeholder_key')->getValue(false);
       $placeholder_desc = $paragraphs->get('field_description')->getValue(false);
-      // kint($placeholder_desc;
+
       $variables[$placeholder_key[0]['value']] = $placeholder_desc[0]['value'];
     }
 
@@ -121,8 +121,6 @@ class ExportParser {
 
 	/**
 	 * Converts a column based format array to row based PHP excel readable array
-	 *
-	 * @author alex <alexandernikko.tenepere@bayviewtechnology.com>
 	 * @param array $columns - a column based format array
 	 * @return array $result
 	 *
@@ -141,8 +139,6 @@ class ExportParser {
 
 	/**
 	 * Generates the languages worksheet data
-	 *
-	 * @author alex <alexandernikko.tenepere@bayviewtechnology.com>
 	 * @param array $languages - the list of available languages
 	 * @return array $result
 	 *
@@ -163,7 +159,6 @@ class ExportParser {
 	/**
 	 * Generates the domain groups worksheet data
 	 *
-	 * @author alex <alexandernikko.tenepere@bayviewtechnology.com>
 	 * @param array $groups - the domain groups fetched from the database
 	 * @return array $result
 	 *
@@ -181,7 +176,6 @@ class ExportParser {
 	/**
 	 * Generates the domain list worksheet data with their corresponding groups
 	 *
-	 * @author alex <alexandernikko.tenepere@bayviewtechnology.com>
 	 * @param array $groups - the list of domains from the database
 	 * @return array $result
 	 *
@@ -227,7 +221,6 @@ class ExportParser {
 	/**
 	 * Generates the placeholder list together with the description
 	 *
-	 * @author alex <alexandernikko.tenepere@bayviewtechnology.com>
 	 * @param array $placeholders - the list of placeholders
 	 * @return array $result
 	 *
@@ -245,7 +238,6 @@ class ExportParser {
 	/**
 	 * Generates the tokens and placeholder worksheet data per domain
 	 *
-	 * @author alex <alexandernikko.tenepere@bayviewtechnology.com>
 	 * @param array $data - array containing the token data per domain
 	 * @param array $placeholders - the list of placeholders
 	 * @param array $defaults - the default placeholder values
@@ -288,14 +280,7 @@ class ExportParser {
 	}
 
 	/**
-	 * Private helper functions
-	 *
-	 */
-
-	/**
-	 * Comment
-	 *
-	 * @author alex <alexandernikko.tenepere@bayviewtechnology.com>
+	 * Format the array of placeholders.
 	 * @param array $placeholders - the list of placeholders
 	 * @return array $result
 	 *
