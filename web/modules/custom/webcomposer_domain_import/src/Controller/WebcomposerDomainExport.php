@@ -90,14 +90,9 @@ class WebcomposerDomainExport extends ControllerBase {
         // Get all the domain data per domain group per language.
         $variables = $this->get_all_domains_data_per_language($placeholders, $key);
 
-        // $variables = $this->get_all_domain_variables($list, $key);
-        // kint($variables);die;
-        // $defaults = $this->service->get_domain_variables_default($key);
-
-        // $result['variables'][$key] = $parser->excel_get_all_tokens($variables, $placeholders, $defaults);
         $result['variables'][$key] = $variables;
       }
-      // kint($result);die;
+
       return $result;
   }
 
@@ -119,8 +114,6 @@ class WebcomposerDomainExport extends ControllerBase {
         $language[$key] = $value->getName();
       }
 
-      // create new excel parser class instance
-      // $excel = \Drupal::service('webcomposer_domain_import.excel_parser');
       // create languages worksheet
       $this->excal_parser->create_sheet($data['languages'], 'Languages');
       // create domains worksheet
@@ -176,6 +169,7 @@ class WebcomposerDomainExport extends ControllerBase {
   public function get_all_placeholders_per_language($key) {
     $variables = array();
     $result = array();
+
     // Get the master placeholders
     $placeholders = \Drupal::entityManager()->getStorage('taxonomy_term')->loadTree('master_placeholder');
 
@@ -210,8 +204,11 @@ class WebcomposerDomainExport extends ControllerBase {
   }
 
   public function get_all_domains_data_per_language($placeholders, $language) {
-    // Domain all the domain groups
+    // Get all the domain groups
     $domains_groups = $this->service->get_domain_groups();
+
+    // Get all the domains.
+    $domains = \Drupal::entityManager()->getStorage('taxonomy_term')->loadTree('domain');
 
     // Get the domains for respective domain group.
     foreach ($domains_groups as $key => $value) {
@@ -243,7 +240,47 @@ class WebcomposerDomainExport extends ControllerBase {
       }
     }
 
-    // kint($group_placeholders);die;
+    foreach ($domains as $domain) {
+
+      $domain_data = taxonomy_term_load($domain->tid);
+      $group_domain = $domain_data->get('field_select_domain_group')->getValue(false)[0]['target_id'];
+
+      $group_name = taxonomy_term_load($group_domain)->getName();
+
+      if ($domain_data->hasTranslation($language)) {
+        // Get value of the field.
+        $field_placeholder = $domain_data->get('field_add_placeholder')->getValue(false);
+        if (!empty($field_placeholder)) {
+          $bal = 0;
+          foreach ($field_placeholder as $key => $field) {
+
+            $target_id = $field['target_id'];
+            $paragraphs = \Drupal::entityManager()->getStorage('paragraph')->load($target_id);
+
+            if ($paragraphs->hasTranslation($language)) {
+              $filterTranslated = $paragraphs->getTranslation($language);
+              $placeholder_key = $filterTranslated->field_placeholder_key->value;
+              $placeholder_default = $filterTranslated->field_default_value->value;
+              // $array_key_value[$group_name] = [$placeholder_key=>$placeholder_default];
+              $domain_placeholer_array[$placeholder_key] = $placeholder_default;
+
+            }
+          }
+          $domain_array[$group_name][$domain->name] = $domain_placeholer_array;
+        }
+      }
+    }
+
+    foreach ($group_placeholders as $key => $value) {
+      foreach ($domain_array as $domain => $data) {
+        if (array_key_exists($domain, $group_placeholders)) {
+          foreach ($data as $name => $default) {
+            $group_placeholders[$name] = $default;
+          }
+        }
+      }
+    }
+
     foreach ($group_placeholders as $key => $value) {
       // check if property is empty
       $placeholders['group'][$key] = $key;
@@ -251,7 +288,8 @@ class WebcomposerDomainExport extends ControllerBase {
         if (array_key_exists($holder, $placeholders)) {
           $placeholders[$holder][$key] = $default;
         } else {
-          $placeholders[$holder] = $holder;
+          $placeholders[$holder]['label'] = $holder;
+          $placeholders[$holder]['default'] = $default;
         }
       }
     }
@@ -266,9 +304,9 @@ class WebcomposerDomainExport extends ControllerBase {
       }
     }
 
-    $i = 1;
-    // kint($placeholders);die;
     // loop through the keys of the default values
+    $i = 1;
+
     foreach ($placeholders as $key => $array) {
       foreach ($array as $k => $value) {
       if (array_key_exists($k, $result)) {
@@ -302,7 +340,7 @@ class WebcomposerDomainExport extends ControllerBase {
     }
 
     $result = $this->service->excel_filter_column($result);
-    // kint($result);die;
+
     return $result;
   }
 }
