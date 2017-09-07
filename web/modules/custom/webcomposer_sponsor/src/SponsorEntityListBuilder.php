@@ -16,7 +16,7 @@ class SponsorEntityListBuilder extends EntityListBuilder {
    * {@inheritdoc}
    */
   public function buildHeader() {
-    $header['id'] = $this->t('ID');
+    $header['name'] = $this->t('Name');
     return $header + parent::buildHeader();
   }
 
@@ -24,7 +24,7 @@ class SponsorEntityListBuilder extends EntityListBuilder {
    * {@inheritdoc}
    */
   public function buildRow(EntityInterface $entity) {
-    $row['id'] = $entity->id();
+    $row['name'] = $entity->label();
     return $row + parent::buildRow($entity);
   }
 }
