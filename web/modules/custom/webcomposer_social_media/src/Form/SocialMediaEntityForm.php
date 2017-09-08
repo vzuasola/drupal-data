@@ -44,7 +44,8 @@ class SocialMediaEntityForm extends ContentEntityForm {
           '%label' => $entity->label(),
         ]));
     }
-    $form_state->setRedirect('entity.social_media_entity.canonical', ['social_media_entity' => $entity->id()]);
+
+    $form_state->setRedirectUrl($entity->urlInfo('collection'));
   }
 
 }

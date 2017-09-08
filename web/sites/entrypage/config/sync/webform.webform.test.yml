@@ -1,0 +1,105 @@
+uuid: 3ea9ec67-d052-4576-95a5-7c32117a7444
+langcode: en
+status: open
+dependencies: {  }
+open: null
+close: null
+uid: 1
+template: false
+id: test
+title: Test
+description: ''
+category: ''
+elements: "username:\n  '#type': textfield\n  '#title': Username\n  '#visibility': 1\n  '#required': true\n  '#alphanumeric': 1\n  '#alphanumeric_error': ''\n  '#no_symbols': 1\n  '#no_symbols_error': sumb\n  '#email': 0\n  '#email_error': ''\n  '#numeric': 0\n  '#numeric_error': ''\n  '#numeric_symbols': 0\n  '#numeric_symbols_error': ''\n  '#min_length': 1\n  '#min_length_value': '3'\n  '#min_length_error': 'Min length requirement not met'\n  '#max_length': 1\n  '#max_length_value': '15'\n  '#max_length_error': 'Max length exceeded'\n  '#format_items': comma\nradio1:\n  '#type': radios\n  '#title': Radio1\n  '#default_value': roption1\n  '#visibility': 1\n  '#options':\n    roption1: 'Radio Option 1'\n    roption2: 'Radio Option 2'\n    roption3: 'Radio Option 3'\n  '#alphanumeric': 0\n  '#alphanumeric_error': ''\n  '#no_symbols': 1\n  '#no_symbols_error': symb\n  '#email': 0\n  '#email_error': ''\n  '#numeric': 0\n  '#numeric_error': ''\n  '#numeric_symbols': 0\n  '#numeric_symbols_error': ''\n  '#min_length': 0\n  '#min_length_value': ''\n  '#min_length_error': ''\n  '#max_length': 0\n  '#max_length_value': ''\n  '#max_length_error': ''\ncontact_number:\n  '#type': textfield\n  '#title': 'Contact Number'\n  '#visibility': 1\n  '#alphanumeric': 0\n  '#alphanumeric_error': ''\n  '#no_symbols': 1\n  '#no_symbols_error': symb\n  '#email': 0\n  '#email_error': ''\n  '#numeric': 0\n  '#numeric_error': ''\n  '#numeric_symbols': 0\n  '#numeric_symbols_error': ''\n  '#min_length': 1\n  '#min_length_value': '4'\n  '#min_length_error': 'Min length requirement not met'\n  '#max_length': 1\n  '#max_length_value': '15'\n  '#max_length_error': 'Max length exceeded'\n  '#format_items': comma\ne_mail_address:\n  '#type': textfield\n  '#title': 'E-mail Address'\n  '#visibility': 1\n  '#alphanumeric': 0\n  '#alphanumeric_error': ''\n  '#no_symbols': 1\n  '#no_symbols_error': nosymb\n  '#email': 1\n  '#email_error': 'Input should be a valid email'\n  '#numeric': 0\n  '#numeric_error': ''\n  '#numeric_symbols': 0\n  '#numeric_symbols_error': ''\n  '#min_length': 1\n  '#min_length_value': '5'\n  '#min_length_error': 'Min length requirement not met'\n  '#max_length': 1\n  '#max_length_value': '100'\n  '#max_length_error': 'Max length exceeded'\n  '#format_items': comma\ncomments:\n  '#type': textarea\n  '#title': Comments\n  '#visibility': 1\n  '#alphanumeric': 0\n  '#alphanumeric_error': ''\n  '#no_symbols': 1\n  '#no_symbols_error': 'Input should not contain invalid symbols'\n  '#email': 0\n  '#email_error': ''\n  '#numeric': 0\n  '#numeric_error': ''\n  '#numeric_symbols': 0\n  '#numeric_symbols_error': ''\n  '#min_length': 0\n  '#min_length_value': ''\n  '#min_length_error': ''\n  '#max_length': 0\n  '#max_length_value': ''\n  '#max_length_error': ''\ndropdown1:\n  '#type': select\n  '#title': Dropdown1\n  '#visibility': 1\n  '#options':\n    dropdown1: 'Dropdown 1'\n    dropdown2: 'Dropdown 2'\n    dropdown3: 'Dropdown 3'\n    dropdown4: 'Dropdown 4'\n  '#empty_option': '-Select-'\n  '#required': true\n  '#alphanumeric': 0\n  '#alphanumeric_error': ''\n  '#no_symbols': 1\n  '#no_symbols_error': nosmb\n  '#email': 0\n  '#email_error': ''\n  '#numeric': 0\n  '#numeric_error': ''\n  '#numeric_symbols': 0\n  '#numeric_symbols_error': ''\n  '#min_length': 0\n  '#min_length_value': ''\n  '#min_length_error': ''\n  '#max_length': 0\n  '#max_length_value': ''\n  '#max_length_error': ''\nradio2:\n  '#type': radios\n  '#title': Radio2\n  '#visibility': 0\n  '#options':\n    roption1: 'Radio Option 1'\n    roption2: 'Radio Option 2'\n    roption3: 'Radio Option 3'\n    roption4: 'Radtio Option 4'\n    roption5: 'Radtio Option 5'\n  '#required': true\n  '#alphanumeric': 0\n  '#alphanumeric_error': ''\n  '#no_symbols': 1\n  '#no_symbols_error': nosymb\n  '#email': 0\n  '#email_error': ''\n  '#numeric': 0\n  '#numeric_error': ''\n  '#numeric_symbols': 0\n  '#numeric_symbols_error': ''\n  '#min_length': 0\n  '#min_length_value': ''\n  '#min_length_error': ''\n  '#max_length': 0\n  '#max_length_value': ''\n  '#max_length_error': ''\ndropdown2:\n  '#type': select\n  '#title': Dropdown2\n  '#visibility': 1\n  '#options':\n    dropdown1: 'Dropdown 1'\n    dropdown2: 'Dropdown 2'\n    dropdown3: 'Dropdown 3'\n    dropdown4: 'Dropdown 4'\n    dropdown5: 'Dropdown 5'\n  '#empty_option': '-Select-'\n  '#required': true\n  '#alphanumeric': 0\n  '#alphanumeric_error': ''\n  '#no_symbols': 1\n  '#no_symbols_error': nosymb\n  '#email': 0\n  '#email_error': ''\n  '#numeric': 0\n  '#numeric_error': ''\n  '#numeric_symbols': 0\n  '#numeric_symbols_error': ''\n  '#min_length': 0\n  '#min_length_value': ''\n  '#min_length_error': ''\n  '#max_length': 0\n  '#max_length_value': ''\n  '#max_length_error': ''\ndropdown3:\n  '#type': select\n  '#title': Dropdown3\n  '#visibility': 1\n  '#options':\n    dropdown1: 'Dropdown 1'\n    dropdown2: 'Dropdown 2'\n    dropdown3: 'Dropdown 3'\n    dropdown4: 'Dropdown 4'\n    dropdown5: 'Dropdown 5'\n    dropdown6: 'Dropdown 6'\n  '#empty_option': '-Select-'\n  '#alphanumeric': 0\n  '#alphanumeric_error': ''\n  '#no_symbols': 0\n  '#no_symbols_error': ''\n  '#email': 0\n  '#email_error': ''\n  '#numeric': 0\n  '#numeric_error': ''\n  '#numeric_symbols': 0\n  '#numeric_symbols_error': ''\n  '#min_length': 0\n  '#min_length_value': ''\n  '#min_length_error': ''\n  '#max_length': 0\n  '#max_length_value': ''\n  '#max_length_error': ''\n  '#required': true\ncheckbox1:\n  '#type': checkboxes\n  '#title': Checkbox1\n  '#multiple': 0\n  '#visibility': 1\n  '#options':\n    coption1: 'Checkbox Option 1'\n    coption2: 'Checkbox Option 2'\n    coption3: 'Checkbox Option 3'\n    coption4: 'Checkbox Option 4'\n  '#alphanumeric': 0\n  '#alphanumeric_error': ''\n  '#no_symbols': 0\n  '#no_symbols_error': ''\n  '#email': 0\n  '#email_error': ''\n  '#numeric': 0\n  '#numeric_error': ''\n  '#numeric_symbols': 0\n  '#numeric_symbols_error': ''\n  '#min_length': 0\n  '#min_length_value': ''\n  '#min_length_error': ''\n  '#max_length': 0\n  '#max_length_value': ''\n  '#max_length_error': ''\ncheckbox2:\n  '#type': checkboxes\n  '#title': Checkbox2\n  '#visibility': 1\n  '#options':\n    coption1: 'Checkbox Option 1'\n    coption2: 'Checkbox Option 2'\n    coption3: 'Checkbox Option 3'\n  '#alphanumeric': 0\n  '#alphanumeric_error': ''\n  '#no_symbols': 0\n  '#no_symbols_error': ''\n  '#email': 0\n  '#email_error': ''\n  '#numeric': 0\n  '#numeric_error': ''\n  '#numeric_symbols': 0\n  '#numeric_symbols_error': ''\n  '#min_length': 0\n  '#min_length_value': ''\n  '#min_length_error': ''\n  '#max_length': 0\n  '#max_length_value': ''\n  '#max_length_error': ''\ncontainer:\n  '#type': fieldset\n  '#title': Container\n  '#visibility': 1\n  '#legend': ''\n  '#class': form-item-inline\n  '#alphanumeric': 0\n  '#alphanumeric_error': ''\n  '#no_symbols': 0\n  '#no_symbols_error': ''\n  '#email': 0\n  '#email_error': ''\n  '#numeric': 0\n  '#numeric_error': ''\n  '#numeric_symbols': 0\n  '#numeric_symbols_error': ''\n  '#min_length': 0\n  '#min_length_value': ''\n  '#min_length_error': ''\n  '#max_length': 0\n  '#max_length_value': ''\n  '#max_length_error': ''\n  submit:\n    '#type': webform_custom_submit\n    '#title': Submit\n    '#visibility': 1\n    '#submit__label': Submit\n  reset:\n    '#type': webform_reset\n    '#title': Reset\n    '#visibility': 1\n    '#submit__label': Reset\ncheckbox3:\n  '#type': checkboxes\n  '#title': checkbox3\n  '#visibility': 1\n  '#options':\n    test1: qa1\n    test2: qa2\n    test3: qa3\n  '#alphanumeric': 0\n  '#alphanumeric_error': ''\n  '#no_symbols': 0\n  '#no_symbols_error': ''\n  '#email': 0\n  '#email_error': ''\n  '#numeric': 0\n  '#numeric_error': ''\n  '#numeric_symbols': 0\n  '#numeric_symbols_error': ''\n  '#min_length': 0\n  '#min_length_value': ''\n  '#min_length_error': ''\n  '#max_length': 0\n  '#max_length_value': ''\n  '#max_length_error': ''\n"
+css: ''
+javascript: ''
+settings:
+  ajax: false
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  form_submit_once: false
+  form_exception_message: ''
+  form_open_message: ''
+  form_close_message: ''
+  form_previous_submissions: true
+  form_confidential: false
+  form_confidential_message: ''
+  form_convert_anonymous: false
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_unsaved: false
+  form_disable_back: false
+  form_autofocus: false
+  form_details_toggle: false
+  submission_label: ''
+  submission_log: false
+  submission_user_columns: {  }
+  wizard_progress_bar: true
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_start_label: ''
+  wizard_complete: true
+  wizard_complete_label: ''
+  preview: 0
+  preview_label: ''
+  preview_title: ''
+  preview_message: ''
+  preview_attributes: {  }
+  preview_excluded_elements: {  }
+  draft: none
+  draft_multiple: false
+  draft_auto_save: false
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  confirmation_type: page
+  confirmation_title: ''
+  confirmation_message: ''
+  confirmation_url: ''
+  confirmation_attributes: {  }
+  confirmation_back: true
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  limit_total: null
+  limit_total_message: ''
+  limit_user: null
+  limit_user_message: ''
+  purge: none
+  purge_days: null
+  entity_limit_total: null
+  entity_limit_user: null
+  results_disabled: false
+  results_disabled_ignore: false
+  token_update: false
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+  view_any:
+    roles: {  }
+    users: {  }
+  update_any:
+    roles: {  }
+    users: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+  view_own:
+    roles: {  }
+    users: {  }
+  update_own:
+    roles: {  }
+    users: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+handlers: {  }
