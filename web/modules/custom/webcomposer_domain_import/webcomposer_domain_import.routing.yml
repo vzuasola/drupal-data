@@ -15,6 +15,7 @@ webcomposer_domain_import.webcomposer_domain_export:
   defaults:
     # _controller: '\Drupal\webcomposer_domain_import\Controller\WebcomposerDomainExport::DomainExport'
      _form: '\Drupal\webcomposer_domain_import\Form\ExportForm'
+     _title: 'Domain Export'
   requirements:
     _permission: 'administer site configuration'
   options:

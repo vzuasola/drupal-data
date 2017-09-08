@@ -3,6 +3,7 @@
 namespace Drupal\webcomposer_domain_import\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
+use Parser\ExcelParser;
 
 /**
  * Class WebcomposerDomainExport.
@@ -10,6 +11,24 @@ use Drupal\Core\Controller\ControllerBase;
  * @package Drupal\webcomposer_domain_import\Controller
  */
 class WebcomposerDomainExport extends ControllerBase {
+
+  // Variable for the all enabled languages.
+  private $languages;
+
+  // ExcelParser object.
+  private $excal_parser;
+
+  // Service for the export parser
+  private $service;
+
+  /**
+   * Constructor.
+   */
+  public function __construct() {
+    $this->languages = \Drupal::languageManager()->getLanguages($flags = 1);
+    $this->excal_parser = \Drupal::service('webcomposer_domain_import.excel_parser');
+    $this->service = \Drupal::service('webcomposer_domain_import.export');
+  }
 
   /**
    * Domain Export.
@@ -24,218 +43,304 @@ class WebcomposerDomainExport extends ControllerBase {
     ];
   }
 
+  /**
+   * Gets Matterhorn Domain data and invoke export excel operation
+   *
+   * @author alex <alexandernikko.tenepere@bayviewtechnology.com>
+   *
+   */
+  public function domain_export_excel() {
 
+    $export = new WebcomposerDomainExport();
+    $data = $export->domain_export_get_parsed_data();
+    $export->domain_export_create_excel($data);
 
+      return;
+  }
 
-/**
- * Gets Matterhorn Domain data and invoke export excel operation
- *
- * @author alex <alexandernikko.tenepere@bayviewtechnology.com>
- *
- */
-public function matterhorn_domain_export_excel() {
-  
-  $parser  = \Drupal::service('webcomposer_domain_import.export');
-    // kint($parser);die();
-    $data = $this->matterhorn_domain_export_get_parsed_data();
-   // matterhorn_domain_export_create_excel($data);
+  /**
+   * Gets data from Matterhorn Domain and parse it to PHP excel readable array
+   *
+   * @author alex <alexandernikko.tenepere@bayviewtechnology.com>
+   * @return array $result - the parsed Matterhorn Domain data
+   *
+   */
+  public function domain_export_get_parsed_data() {
+      $result = array();
+      $language = array();
+      $groups = $this->service->get_domain_groups();
+      $domains = $this->service->get_domain_groups_with_domains();
 
-    return;
-}
+      $placeholders = $this->service->get_domain_tokens();
 
-/**
- * Gets data from Matterhorn Domain and parse it to PHP excel readable array
- *
- * @author alex <alexandernikko.tenepere@bayviewtechnology.com>
- * @return array $result - the parsed Matterhorn Domain data
- *
- */
-public function matterhorn_domain_export_get_parsed_data() {
-    $result = array();
-    $parser  = \Drupal::service('webcomposer_domain.export_xls');
-    // kint($parser);die();
-    $groups = _matterhorn_domain_get_domain_groups();
-    $domains = _matterhorn_domain_get_domain_groups_with_domains();
-    $placeholders = _matterhorn_domain_get_all_variables();
+      // Get all languages from which are enabled.
+      foreach ($this->languages as $key => $value) {
+        $language[$value->getId()] = $value->getName();
+      }
 
-    $result['languages'] = $parser->excel_get_languages( language_list() );
-    $result['groups'] = $parser->excel_get_domain_groups($groups);
-    $result['domains'] = $parser->excel_get_domains($domains);
-    $result['placeholders'] = $parser->excel_get_placeholders_description($placeholders);
+      // Parse the languages in excel format.
+      $result['languages'] = $this->service->excel_get_languages($language);
 
-    foreach ( language_list() as $language => $languages ) {
-        $list = $parser->excel_get_domain_list($domains);
+      $result['domains'] = $this->service->excel_get_domains($domains);
 
-        $variables = _matterhorn_domain_export_get_all_variables($list, $language);
-        $defaults = _matterhorn_domain_get_variables_default($language);
+      $result['placeholders'] = $this->service->excel_get_placeholders_description($placeholders);
+      foreach ($language as $key => $value) {
+        // $list = $this->service->excel_get_domain_list($domains);
+        $placeholders = $this->get_all_placeholders_per_language($key);
+        // Get all the domain data per domain group per language.
+        $variables = $this->get_all_domains_data_per_language($placeholders, $key);
 
-        $result['variables'][$language] = $parser->excel_get_all_tokens($variables, $placeholders, $defaults);
-    }
+        $result['variables'][$key] = $variables;
+      }
 
-    return $result;
-}
+      return $result;
+  }
 
-/**
- * Creates the excel worksheet from the given parsed data
- * Invokes excel download
- *
- * @author alex <alexandernikko.tenepere@bayviewtechnology.com>
- * @param string $data - the parsed Matterhorn Domain data
- * @param array $excel_version - the excel version of the generated excel
- * @param boolean $headers - check if download will be invoked from browser
- * @param array $output - the URL to output the file
- *
- */
-public function matterhorn_domain_export_create_excel($data, $excel_version = 'Excel2007', $headers = TRUE, $output = 'php://output') {
-    // create new excel parser class instance
-    $excel = new Matterhorn\Domains\ExcelParser;
-    // create languages worksheet
-    $excel->create_sheet($data['languages'], 'Languages');
-    // create domains worksheet
-    $excel->create_sheet($data['domains'], 'Domains');
-    // create token placeholder worksheet
-    $excel->create_sheet($data['placeholders'], 'Tokens');
-    // create tokens worksheet per language
-    foreach ( language_list() as $key => $language ) {
-        $excel->create_sheet($data['variables'][$key], $key);
-    }
-    // invoke excel creation and download
-    $excel->save('export.xlsx', $excel_version, $headers, $output);
+  /**
+   * Creates the excel worksheet from the given parsed data
+   * Invokes excel download
+   *
+   * @author alex <alexandernikko.tenepere@bayviewtechnology.com>
+   * @param string $data - the parsed Matterhorn Domain data
+   * @param array $excel_version - the excel version of the generated excel
+   * @param boolean $headers - check if download will be invoked from browser
+   * @param array $output - the URL to output the file
+   *
+   */
+  public function domain_export_create_excel($data, $excel_version = 'Excel2007', $headers = TRUE, $output = 'php://output') {
+      $language = array();
+      // Get all languages from which are enabled.
+      foreach ($this->languages as $key => $value) {
+        $language[$key] = $value->getName();
+      }
 
-    // stop script only if headers is set to invoke a download
-    if ($headers) {
-        exit;
-    }
-}
+      // create languages worksheet
+      $this->excal_parser->create_sheet($data['languages'], 'Languages');
+      // create domains worksheet
+      $this->excal_parser->create_sheet($data['domains'], 'Domains');
+      // create token placeholder worksheet
+      $this->excal_parser->create_sheet($data['placeholders'], 'Tokens');
+      // create tokens worksheet per language
+      foreach ( $language as $key => $language ) {
+          $this->excal_parser->create_sheet($data['variables'][$key], $key);
+      }
+      // invoke excel creation and download
+      $this->excal_parser->save('export.xlsx', $excel_version, $headers, $output);
 
-/**
- * Matterhorn Domain Export DB functions
- *
- */
+      // stop script only if headers is set to invoke a download
+      if ($headers) {
+          exit;
+      }
+  }
 
-/**
- * Returns an array of all domains, where the index is the primary key `id` for domains temp table
- *
- * @return array $groups
- *
- */
-public function _matterhorn_domain_export_get_all_domains() {
+  /**
+   * Returns an array of all domains, where the index is the primary key `id` for domains temp table
+   *
+   * @return array $groups
+   *
+   */
+  public function get_all_domains() {
     $domains = array();
 
-    $result = db_select('new_matterhorn_domain_domains', 'domains')
-        ->fields('domains')
-        ->orderBy('group_id')
-        ->orderBy('weight')
-        ->execute();
+    // Get all domains
+    $domains = \Drupal::entityManager()->getStorage('taxonomy_term')->loadTree('domain');
 
-    foreach($result as $row){
-        $groups[$row->id] = $row->name;
+    foreach($domains as $domain){
+        $groups[$domain->tid] = $domain->name;
     }
 
     return $groups;
-}
+  }
 
-/**
- * Gets the id of a given domain
- *
- * @author alex <alexandernikko.tenepere@bayviewtechnology.com>
- * @param string $domain - the name of the domain
- * @return array $result - array containing domain string of domain id and type
- *
- */
-public function _matterhorn_domain_export_get_type_id($domain) {
+  /**
+   * Get all the data per language.
+   * @param  string $language language code.
+   * @return array result     array of data.
+   */
+  public function get_all_placeholders_per_language($key) {
+    $variables = array();
     $result = array();
-    $groups = _matterhorn_domain_get_domain_groups();
-    $domains = _matterhorn_domain_export_get_all_domains();
 
-    $result['id'] = array_search($domain, $groups);
+    // Get the master placeholders
+    $placeholders = \Drupal::entityManager()->getStorage('taxonomy_term')->loadTree('master_placeholder');
 
-    if ($result['id']) {
-        $result['type'] = 'group';
-        return $result;
+    foreach ($placeholders as $value) {
+      $token = taxonomy_term_load($value->tid);
+
+      if ($token->hasTranslation($key)) {
+        $paragraph = $token->get('field_add_master_placeholder')->getValue(false)[0]['target_id'];
+        $paragraphs = \Drupal::entityManager()->getStorage('paragraph')->load($paragraph);
+        $translated = $paragraphs->getTranslation($key);
+        $placeholder_key = $translated->field_placeholder_key->value;
+        $placeholder_desc = $translated->field_default_value->value;
+
+        $variables[$placeholder_key] = $placeholder_desc;
+      }
     }
 
-    $result['id'] = array_search($domain, $domains);
+    // check if property is empty
+    $result['label']['group'] = 'Tokens';
+    $result['default']['group'] = 'Default';
 
-    if ($result['id']) {
-        $result['type'] = 'domain';
-        return $result;
+    // loop through the keys of the default values
+    foreach ($variables as $key => $placeholder) {
+      $result['label'][$key] = $key;
+      $result['default'][$key] = $placeholder;
     }
 
-    return FALSE;
-}
-
-/**
- * Fetches all the variables from the given domain list and language
- *
- * @author alex <alexandernikko.tenepere@bayviewtechnology.com>
- * @param array $domains - array containing the list of domains
- * @param string $language - the language
- * @return array $data
- *
- */
-public function _matterhorn_domain_export_get_all_variables($domains, $language) {
-    $data = array();
-
-    // loop through domain groups
-    for ($i = 0; $i < count($domains); $i++ ) {
-        // loop through domain lists per group
-        for ($k = 0; $k < count( $domains[$i] ); $k++) {
-            // get all variables per domain list
-            $data[ $domains[$i][$k] ] = _matterhorn_domain_export_get_variables($domains[$i][$k], $language);
-        }
-    }
-
-    return $data;
-}
-
-/**
- * Gets the variable values of a specific domain and language
- *
- * @author alex <alexandernikko.tenepere@bayviewtechnology.com>
- * @param string $domain - the name of the domain
- * @param string $lang - the language
- * @return array $result - the variable data
- *
- */
-public function _matterhorn_domain_export_get_variables($domain, $lang) {
-    $result = array();
-    $data = _matterhorn_domain_export_get_type_id($domain);
-
-    $id = $data['id'];
-    $type = $data['type'];
-
-    if ($type !== 'domain' && $type !== 'group') {
-        $id = FALSE;
-    }
-
-    if ($id) {
-        $result = _matterhorn_domain_get_variables_by_id($id, $lang);
-    } else {
-        $result = _matterhorn_domain_get_variables_default($lang);
-    }
+    $result = $this->service->excel_filter_column($result);
 
     return $result;
-}
+  }
 
-/**
- * Gets the data of the specified domain
- *
- * @author alex <alexandernikko.tenepere@bayviewtechnology.com>
- * @param string $search - the name of the domain
- * @return array $result
- *
- */
-public function _matterhorn_domain_export_get_current_domain_by_name($search) {
-    $domains = _matterhorn_domain_get_domains();
+  /**
+   * Get the all structured data for the ecxel.
+   * @param  array $placeholders array of placeholders.
+   * @param  string $language    language code.
+   * @return array               result array of excelsheet.
+   */
+  public function get_all_domains_data_per_language($placeholders, $language) {
+    $variables = [];
 
-    foreach ($domains as $domain) {
-        if ($domain['name'] == $search) {
-            return $domain;
+    // Get all the domain groups
+    $domains_groups = $this->service->get_domain_groups();
+
+    // Get all the domains.
+    $domains = \Drupal::entityManager()->getStorage('taxonomy_term')->loadTree('domain');
+
+    // Get the domains for respective domain group.
+    foreach ($domains_groups as $key => $value) {
+      $group = taxonomy_term_load($key);
+      if ($group->hasTranslation($language)) {
+        // Get value of the field.
+        $target_id = $group->get('field_add_placeholder')->getValue(false);
+
+        // Check if the field is not empty.
+        if (!empty($target_id)) {
+          $paragraph = $group->get('field_add_placeholder')->getValue(false)[0]['target_id'];
+          $paragraphs = \Drupal::entityManager()->getStorage('paragraph')->load($paragraph);
+          if ($paragraphs->hasTranslation($language)) {
+            $translated = $paragraphs->getTranslation($language);
+            $placeholder_key = $translated->field_placeholder_key->value;
+            $placeholder_default = $translated->field_default_value->value;
+            // Check if the values of the fields are not empty.
+            if (!empty($placeholder_key) && !empty($placeholder_default)) {
+              $group_placeholders[$value][$placeholder_key] = $placeholder_default;
+            } else {
+              $group_placeholders[$value] = NULL;
+            }
+          } else {
+            $group_placeholders[$value] = NULL;
+          }
+        } else {
+          $group_placeholders[$value] = NULL;
         }
+      }
     }
 
-    return FALSE;
-}
+    foreach ($domains as $domain) {
 
+      $domain_data = taxonomy_term_load($domain->tid);
+      $group_domain = $domain_data->get('field_select_domain_group')->getValue(false)[0]['target_id'];
+
+      $group_name = taxonomy_term_load($group_domain)->getName();
+
+      if ($domain_data->hasTranslation($language)) {
+        // Get value of the field.
+        $field_placeholder = $domain_data->get('field_add_placeholder')->getValue(false);
+        if (!empty($field_placeholder)) {
+          $bal = 0;
+          foreach ($field_placeholder as $key => $field) {
+
+            $target_id = $field['target_id'];
+            $paragraphs = \Drupal::entityManager()->getStorage('paragraph')->load($target_id);
+
+            if ($paragraphs->hasTranslation($language)) {
+              $translated = $paragraphs->getTranslation($language);
+              $placeholder_key = $translated->field_placeholder_key->value;
+              $placeholder_default = $translated->field_default_value->value;
+              $domain_placeholer_array[$placeholder_key] = $placeholder_default;
+            }
+          }
+          $domain_array[$group_name][$domain->name] = $domain_placeholer_array;
+        }
+      }
+    }
+
+    foreach ($group_placeholders as $key => $value) {
+      $variables[$key] = $value;
+      foreach ($domain_array as $domain => $data) {
+        if (array_key_exists($domain, $group_placeholders)) {
+          foreach ($data as $name => $default) {
+            if ($key === $domain) {
+              $variables[$name] = $default;
+            }
+          }
+        }
+      }
+    }
+
+    foreach ($variables as $key => $value) {
+      // check if property is empty
+      $placeholders['group'][$key] = $key;
+      foreach ($value as $holder => $default) {
+        if (array_key_exists($holder, $placeholders)) {
+          $placeholders[$holder][$key] = $default;
+        } else {
+          $placeholders[$holder]['label'] = $holder;
+          $placeholders[$holder]['default'] = $default;
+          $placeholders[$holder][$key] = $default;
+        }
+      }
+    }
+
+    $group = $placeholders['group'];
+
+    array_shift($placeholders);
+
+     foreach ($group as $key => $value) {
+      if (!array_key_exists($key, $result)) {
+        $result[$key][] = $value;
+      }
+    }
+
+    // loop through the keys of the default values
+    $i = 1;
+
+    foreach ($placeholders as $key => $array) {
+      foreach ($array as $k => $value) {
+      if (array_key_exists($k, $result)) {
+        $result[$k][$i] = $value;
+      } else {
+        $result[$k][$i] = NULL;
+      }
+    }
+      $i++;
+    }
+
+    $result = array_values($result);
+
+    // get the highest row number
+    $count = 0;
+    foreach ($result as $group) {
+      $x = count($group);
+      if ($count < $x) {
+        $count = $x;
+      }
+    }
+
+    // populate missing rows with nulls, so
+     // that all columns will have the same number of rows
+    for ($i = 0; $i < count($result); $i++) {
+      for ($j = 0; $j < $count; $j++) {
+        if (empty($result[$i][$j])) {
+          $result[$i][$j] = NULL;
+        }
+      }
+    }
+
+    $result = $this->service->excel_filter_column($result);
+
+    return $result;
+  }
 }

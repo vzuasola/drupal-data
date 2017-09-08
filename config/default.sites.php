@@ -76,6 +76,8 @@ $sites['casino.drupal.dev'] = 'casino';
 // Keno instance
 $sites['keno.drupal.local'] = 'keno';
 $sites['keno.drupal.dev'] = 'keno';
+$sites['dev-keno.elysium-dfbt.com'] = 'keno';
+$sites['dev-cms-keno.elysium-dfbt.com'] = 'keno';
 
 // Casino Gold Site Instances
 $sites['csngold.drupal.dev'] = 'casino-gold';

@@ -12,8 +12,6 @@ use Drupal\Core\Link;
  * @ingroup webcomposer_sponsor
  */
 class SponsorEntityListBuilder extends EntityListBuilder {
-
-
   /**
    * {@inheritdoc}
    */
@@ -26,13 +24,7 @@ class SponsorEntityListBuilder extends EntityListBuilder {
    * {@inheritdoc}
    */
   public function buildRow(EntityInterface $entity) {
-    /* @var $entity \Drupal\webcomposer_sponsor\Entity\SponsorEntity */
-    $row['name'] = Link::createFromRoute(
-      $entity->label(),
-      'entity.sponsor_entity.edit_form',
-      ['sponsor_entity' => $entity->id()]
-    );
+    $row['name'] = $entity->label();
     return $row + parent::buildRow($entity);
   }
-
 }

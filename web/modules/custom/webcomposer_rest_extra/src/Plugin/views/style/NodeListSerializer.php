@@ -151,7 +151,7 @@ class NodeListSerializer extends Serializer {
     $basePath = Settings::get('ck_editor_inline_image_prefix', NULL);
 
     foreach ($images as $image) {
-      $replace = preg_replace('/\/sites\/[a-z]+\/files/', $basePath, $image['src']);
+      $replace = preg_replace('/\/sites\/[a-z\-]+\/files/', $basePath, $image['src']);
       $image['src'] = $replace;
     }
 

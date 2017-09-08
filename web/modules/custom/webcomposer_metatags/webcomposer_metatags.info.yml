@@ -1,5 +1,5 @@
-name: webcomposer_metatags
+name: Webcomposer Metatags
 type: module
 description: Manage metatags Configurations
 core: 8.x
-package: WEB COMPOSER
+package: Web Composer

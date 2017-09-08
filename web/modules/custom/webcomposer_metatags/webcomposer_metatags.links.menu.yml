@@ -1,18 +1,18 @@
 webcomposer_metatags.list:
-  title: 'Webcomposer MetaTags'
+  title: 'Webcomposer Metatags'
   description: 'Configure the Metatags'
   parent: system.admin_config
   route_name: webcomposer_metatags.admin_settings
+
 # Metatag entity menu items definition
 entity.metatag_entity.collection:
-  title: 'Metatag entity list'
+  title: 'Metatag List'
   route_name: entity.metatag_entity.collection
   description: 'List Metatag entity entities'
   parent: webcomposer_metatags.list
-  weight: 100
 
 metatag_entity.admin.structure.settings:
-  title: Metatag entity settings
+  title: Metatag Settings
   description: 'Configure Metatag entity entities'
   route_name: metatag_entity.settings
   parent: webcomposer_metatags.list
