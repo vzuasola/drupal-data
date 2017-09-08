@@ -84,6 +84,7 @@
     },
     "enable-patching": true,
     "config": {
-        "secure-http": false
+        "secure-http": false,
+        "cache-dir": ".composer-cache"
     }
 }

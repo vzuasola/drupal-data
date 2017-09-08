@@ -1,32 +1,57 @@
 variables:
-    VERSION: "0.1.0"
+  GIT_SUBMODULE_STRATEGY: recursive
 
 stages:
-   - tests
-   - package
-   - deploy-dev
-   - deploy-test
-   - deploy-staging
-   - staging-signoff
-   - deploy-internal-production
-   - internal-production-signoff
-   - deploy-production
+  - tests
+  - package
+  - deploy-dev
+  - integration-tests-development
+  - deploy-test
+  - integration-tests-test
+  - deploy-staging
+  - integration-tests-staging
+  - staging-signoff
+  - deploy-internal-production
+  - internal-production-signoff
+  - deploy-production
+
+static code analysis:
+  stage: tests
+  script:
+    - python -u automation/run.py --stage phpunit-sonarqube
+
+php code sniffer:
+  stage: tests
+  script:
+    - python -u automation/run.py --stage phpcs
+  allow_failure: true
+
+phpmd:
+  stage: tests
+  script:
+    - python -u automation/run.py --stage phpmd
+  allow_failure: true
+
+sensiolabs security checker:
+  stage: tests
+  script:
+    - python -u automation/run.py --stage sensiolab-security-checker
+  allow_failure: true
 
 create package:
   stage: package
-  variables:
-     DOCKERFILE: build/Dockerfile.package
   script:
-      - python -u build/package.py
-  only:
-    - /^(working|release-.*)$/
-  cache:
-    paths:
-      - vendor/
+    - python -u automation/run.py --stage package
   artifacts:
-    expire_in: 1d
     paths:
       - "*.tar.gz"
+      - automation/deployed/*.jsonl
+    expire_in: 1 day
+  when: manual
+  cache:
+    key: v2
+    paths:
+      - .composer-cache/
 
 dev:
   stage: deploy-dev
@@ -34,25 +59,46 @@ dev:
     name: development
     url: https://rodwin.fix.me
   script:
-      - python -u build/deploy.py --environment development --version "$VERSION.${CI_PIPELINE_ID}"
+    - python -u automation/run.py --stage deploy-development
   when: manual
+  dependencies:
+    - create package
   artifacts:
-      paths:
-        - build/deployed/*.jsonl
+    paths:
+      - automation/deployed/*.jsonl
 
-QA:
+qa1:
   stage: deploy-test
   environment:
     name: testing
     url: https://rodwin.fix.me
   script:
-      - python -u build/deploy.py --environment testing --version "$VERSION.${CI_PIPELINE_ID}"
+    - python -u automation/run.py --stage deploy-testing
   when: manual
   dependencies:
-   - dev
+    - dev
   artifacts:
-      paths:
-        - build/deployed/*.jsonl
+    paths:
+      - automation/deployed/*.jsonl
+  only:
+    - /^working$/
+    - /^release-.*$/
+    - tags
+
+hp fortify scan qa1:
+  stage: integration-tests-test
+  script:
+    - python -u automation/run.py --stage code-scan-testing
+  when: manual
+  dependencies:
+    - qa1
+  artifacts:
+    paths:
+      - automation/deployed/*.jsonl
+  only:
+    - /^working$/
+    - /^release-.*$/
+    - tags
 
 tct:
   stage: deploy-test
@@ -60,27 +106,17 @@ tct:
     name: tct
     url: https://rodwin.fix.me
   script:
-      - python -u build/deploy.py --environment tct --version "$VERSION.${CI_PIPELINE_ID}"
+    - python -u automation/run.py --stage deploy-tct
   when: manual
   dependencies:
-   - dev
+    - dev
   artifacts:
-      paths:
-        - build/deployed/*.jsonl
-
-staging:
-  stage: deploy-staging
-  environment:
-    name: staging
-    url: https://rodwin.fix.me
-  script:
-      - python -u build/deploy.py --environment staging --version "$VERSION.${CI_PIPELINE_ID}"
-  when: manual
-  dependencies:
-   - QA
-  artifacts:
-      paths:
-        - build/deployed/*.jsonl
+    paths:
+      - automation/deployed/*.jsonl
+  only:
+    - /^working$/
+    - /^release-.*$/
+    - tags
 
 uat:
   stage: deploy-staging
@@ -88,26 +124,51 @@ uat:
     name: uat
     url: https://rodwin.fix.me
   script:
-      - python -u build/deploy.py --environment uat --version "$VERSION.${CI_PIPELINE_ID}"
+    - python -u automation/run.py --stage deploy-uat
   when: manual
   dependencies:
-   - QA
+    - qa1
+    - tct
   artifacts:
-      paths:
-        - build/deployed/*.jsonl
+    paths:
+      - automation/deployed/*.jsonl
+  only:
+    - /^release-.*$/
+    - tags
 
-staging-signoff:
+staging:
+  stage: deploy-staging
+  environment:
+    name: staging
+    url: https://rodwin.fix.me
+  script:
+    - python -u automation/run.py --stage deploy-staging
+  when: manual
+  dependencies:
+    - qa1
+    - tct
+  artifacts:
+    paths:
+      - automation/deployed/*.jsonl
+  only:
+    - /^release-.*$/
+    - tags
+
+staging signoff:
   stage: staging-signoff
   environment:
     name: staging-signoff
   script:
-      - python -u build/signoff.py --environment staging
+    - python -u automation/run.py --stage staging-signoff
   when: manual
   dependencies:
-   - staging
+    - staging
   artifacts:
-      paths:
-        - build/deployed/*.jsonl
+    paths:
+      - automation/deployed/*.jsonl
+  only:
+    - /^release-.*$/
+    - tags
 
 internal prod:
   stage: deploy-internal-production
@@ -115,26 +176,32 @@ internal prod:
     name: internal-production
     url: https://rodwin.fix.me
   script:
-      - python -u build/deploy.py --environment internal-production --version "$VERSION.${CI_PIPELINE_ID}"
+    - python -u automation/run.py --stage deploy-internal-production
   when: manual
   dependencies:
-   - staging-signoff
+   - staging signoff
   artifacts:
-      paths:
-        - build/deployed/*.jsonl
+    paths:
+      - automation/deployed/*.jsonl
+  only:
+    - /^release-.*$/
+    - tags
 
-internal-production-signoff:
+internal prod signoff:
   stage: internal-production-signoff
   environment:
     name: internal-production-signoff
-  script :
-      - python -u build/signoff.py --environment internal-production
+  script:
+    - python -u automation/run.py --stage internal-prod-signoff
   when: manual
   dependencies:
-   - staging
+    - internal prod
   artifacts:
-      paths:
-        - build/deployed/*.jsonl
+    paths:
+      - automation/deployed/*.jsonl
+  only:
+    - /^release-.*$/
+    - tags
 
 production:
   stage: deploy-production
@@ -142,10 +209,13 @@ production:
     name: production
     url: https://www.dafabet.com/en/sports-df/
   script:
-      - python -u build/deploy.py --environment production --version "$VERSION.${CI_PIPELINE_ID}"
+    - python -u automation/run.py --stage deploy-production
   when: manual
   dependencies:
-   - internal-production-signoff
+   - internal prod signoff
   artifacts:
-      paths:
-        - build/deployed/*.jsonl
+    paths:
+      - automation/deployed/*.jsonl
+  only:
+    - /^release-.*$/
+    - tags

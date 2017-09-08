@@ -23,3 +23,5 @@ web-composer-drupal/*
 drupal-data/*
 build/deployed/*.jsonl
 deploy/*
+pipeline.log
+.composer-cache

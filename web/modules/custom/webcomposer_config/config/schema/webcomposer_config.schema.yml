@@ -75,6 +75,9 @@ webcomposer_config.footer_configuration:
     quicklinks_title:
       type: label
       label: 'Quicklinks title'
+    social_media_title:
+      type: label
+      label: 'Social Media Title'
 
 webcomposer_config.login_configuration:
   type: config_object

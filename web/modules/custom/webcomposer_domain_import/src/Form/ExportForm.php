@@ -48,7 +48,7 @@ class ExportForm extends FormBase {
     $form['webcomposer_domain_export']['submit'] = array(
         '#type' => 'submit',
         '#value' => t('Export'),
-        '#submit' => array('Drupal\webcomposer_domain_import\Controller\WebcomposerDomainExport::matterhorn_domain_export_excel'),
+        '#submit' => array('Drupal\webcomposer_domain_import\Controller\WebcomposerDomainExport::domain_export_excel'),
     );
 
     return $form;

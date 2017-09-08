@@ -11,7 +11,7 @@ field_name: field_per_page_visibility
 entity_type: metatag_entity
 bundle: metatag_entity
 label: 'Per Page Visibility'
-description: ''
+description: 'Specify pages by using their paths. Enter one path per line. The ''*'' character is a wildcard. An example path is /promotion/* for every user page.'
 required: false
 translatable: true
 default_value: {  }
