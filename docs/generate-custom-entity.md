@@ -114,6 +114,9 @@ $form_state->setRedirectUrl($entity->urlInfo('collection'));
 
 * Double check your fields
 
+* You need to active translation, go to `/admin/config/regional/content-language` then `check` you entity
+on the Custom Language Settings
+
 ## Add an exposed views for your Entity
 
 Your entity needs an exposed view to fetch the data
