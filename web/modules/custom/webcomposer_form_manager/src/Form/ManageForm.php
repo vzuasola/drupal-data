@@ -4,6 +4,7 @@ namespace Drupal\webcomposer_form_manager\Form;
 
 use Drupal\Core\Form\FormStateInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
+use Drupal\Core\Url;
 
 /**
  * Class List.
@@ -117,7 +118,7 @@ class ManageForm extends FormBase {
     $form['form_settings'] = [
       '#type' => 'details',
       '#title' => 'Form Settings',
-      '#open' => TRUE,
+      '#open' => FALSE,
     ];
 
     foreach ($settings as $key => $value) {
@@ -141,13 +142,27 @@ class ManageForm extends FormBase {
       $url = new Url('webcomposer_form_manager.form.view', ['form' => $key]);
 
       $rows[] = [
-        'title' => $value['name'],
-        'actions' => $this->l('Manage', $url),
+        'title' => $value['#title'],
+        'type' => $value['#type'],
+        'actions' => $this->l('Edit', $url),
+        'weight' => [
+          '#type' => 'weight',
+          '#title' => 'Weight',
+          '#title_display' => 'invisible',
+          '#default_value' => 0,
+          '#attributes' => ['class' => ['webcomposer-form-manager-weight']],
+        ],
       ];
     }
 
+    // $rows[] = [
+    //   'data' => $row,
+    //   'class' => ['draggable'],
+    // ];
+
     $header = [
       'name' => 'Name',
+      'type' => 'Field type',
       'actions' => 'Actions',
     ];
 
@@ -156,6 +171,18 @@ class ManageForm extends FormBase {
       '#header' => $header,
       '#rows' => $rows,
       '#empty' => 'No form to show',
+
+      '#tabledrag' => [
+        [
+          'action' => 'order',
+          'relationship' => 'sibling',
+          'group' => 'mytable-order-weight',
+        ],
+      ],
+
+      '#attributes' => [
+        'id' => 'webcomposer-form-manager-fields',
+      ],
     ];
   }
 
