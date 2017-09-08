@@ -5,10 +5,12 @@ login_issue_text: 'Cant login'
 login_issue_link: 'http://www.dafabet.com/en/cant-login'
 sc_lang_text: chinese-sc-test
 ch_lang_text: chinese-ch-test
-balance_error_text: 'Cannot Load Balance'
+balance_error_text: 错误检索
 profile_icon_hover_text: 'My Account'
 cashier_icon_hover_text: Cashier
 product_menu_new_tag: NEW
 welcome_text: 'Good day! {username}'
 profile_link: 'https://qa1-accountwww.elysium-dfbt.com/sc/my-profile'
 profile_logout_text: 登出
+balance_label_mapping: "4|沙巴体育\r\n6|大发体育\r\n1|娱乐场经典版\r\n2|娱乐场黄金版\r\n5|现场荷官&老虎机网页版\r\n3|扑克\r\n7|捕鱼王"
+balance_error_text_product: "无"
