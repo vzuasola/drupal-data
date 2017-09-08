@@ -1,5 +1,0 @@
-autologout_box_content:
-  value: "<p>this is the text fo the notification box.<span class=\"sessionTimer\"></span>&nbsp;seconds.qwe</p>\r\n"
-  format: basic_html
-affirmative_button_text: Yes-ch
-negative_button_text: No-ch

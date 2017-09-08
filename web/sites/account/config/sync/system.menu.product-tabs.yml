@@ -1,0 +1,8 @@
+uuid: b66c3b17-a7e7-44a1-b6d8-e7b5f1fae913
+langcode: en
+status: true
+dependencies: {  }
+id: product-tabs
+label: 'Product Tabs'
+description: ''
+locked: false

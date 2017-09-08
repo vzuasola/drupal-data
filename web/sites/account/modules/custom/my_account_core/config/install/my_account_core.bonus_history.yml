@@ -1,0 +1,9 @@
+#Bonus History
+datetime_format: 'd/m/Y h:i A'
+no_result: 'N/A'
+service_unavailable: 'Error Fetching Data'
+zero_display: 'N/A'
+page_title: 'Active Bonuses'
+items_to_display: 5
+next_label: 'Next'
+prev_label: 'Prev'

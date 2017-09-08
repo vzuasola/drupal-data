@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains webcomposer_downloadables.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function webcomposer_downloadables_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the webcomposer_downloadables module.
+    case 'help.page.webcomposer_downloadables':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Manage auto downloadble files') . '</p>';
+      return $output;
+
+    default:
+  }
+}

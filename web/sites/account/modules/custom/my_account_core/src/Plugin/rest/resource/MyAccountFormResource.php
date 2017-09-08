@@ -65,6 +65,11 @@ class MyAccountFormResource extends ResourceBase
                 $values = $config->get();
                 break;
 
+            case 'my_account_help':
+                $config = \Drupal::config('my_account_core.help');
+                $values = $config->get();
+                break;
+
             case 'my_account_access_denied':
                 $config = \Drupal::config('my_account_error_handler.403');
                 $values = $config->get();
@@ -140,6 +145,15 @@ class MyAccountFormResource extends ResourceBase
                 $config = \Drupal::config('my_account_form_profile.profile');
                 $values = $this->filter_array_exposed($config->get(), 'myprofile_clientside_validation');
                 break;
+            case 'bonus_history':
+                try {
+                  $config = \Drupal::config('my_account_core.bonus_history');
+                  $values = $config->get();
+                } catch (\Exception $e) {
+                  $values = array(
+                    'error' => $this->t('Configuration not found')
+                  );
+                }
             default:
         }
 

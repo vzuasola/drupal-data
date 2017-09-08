@@ -12,7 +12,7 @@ bundle: product_tabs
 label: Enable/Disable
 description: 'Please check this for enable the product tab.'
 required: false
-translatable: false
+translatable: true
 default_value:
   -
     value: 1

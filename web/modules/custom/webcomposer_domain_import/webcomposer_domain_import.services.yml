@@ -1,0 +1,12 @@
+services:
+  webcomposer_domain_import.export:
+    class: Drupal\webcomposer_domain_import\Parser\ExportParser
+    arguments: []
+
+  webcomposer_domain_import.excel_parser:
+    class: Drupal\webcomposer_domain_import\Parser\ExcelParser
+    arguments: []
+
+  webcomposer_domain_import.import:
+    class: Drupal\webcomposer_domain_import\Parser\ImportParser
+    arguments: ['@webcomposer_domain_import.excel_parser']
