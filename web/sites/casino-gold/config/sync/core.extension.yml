@@ -20,13 +20,13 @@ module:
   contextual: 0
   ctools: 0
   datetime: 0
-  dblog: 0
   devel: 0
-  devel_generate: 0
   draggableviews: 0
   dynamic_page_cache: 0
   editor: 0
   entity_reference_revisions: 0
+  entity_reference_views_select: 0
+  entityqueue: 0
   field: 0
   field_group: 0
   field_ui: 0
@@ -44,9 +44,10 @@ module:
   locale: 0
   menu_link_attributes: 0
   menu_ui: 0
-  monolog: 0
   node: 0
   options: 0
+  paragraphs: 0
+  paragraphs_type_permissions: 0
   path: 0
   quickedit: 0
   rdf: 0
@@ -78,6 +79,8 @@ module:
   webcomposer_language_hierarchy: 0
   webcomposer_monolog: 0
   webcomposer_rest_extra: 0
+  webcomposer_sponsor: 0
+  webcomposer_territory_blocking: 0
   webcomposer_snippet: 0
   webcomposer_token: 0
   menu_link_content: 1
