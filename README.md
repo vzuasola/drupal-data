@@ -11,8 +11,8 @@ the [Documentation on drupal.org](https://www.drupal.org/node/2471553).
 
 ## Documentations
 
-* [Generating a Module Skeleton](docs/generating-module.md)
-* [Generating a Custom Content Entity](docs/generating-custom-entity.md)
+* [Generating a Module Skeleton](docs/generate-module.md)
+* [Generating a Custom Content Entity](docs/generate-custom-entity.md)
 
 ## Updating Drupal Core
 
