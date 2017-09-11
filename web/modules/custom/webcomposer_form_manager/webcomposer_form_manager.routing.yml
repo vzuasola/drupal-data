@@ -22,3 +22,10 @@ webcomposer_form_manager.form.view:
   requirements:
     _permission: 'administer site configuration'
 
+webcomposer_form_manager.field.view:
+  path: '/admin/config/webcomposer/form/manage/{form}/field/{field}'
+  defaults:
+    _form: '\Drupal\webcomposer_form_manager\Form\ManageField'
+    _title_callback: '\Drupal\webcomposer_form_manager\Form\ManageField::title'
+  requirements:
+    _permission: 'administer site configuration'

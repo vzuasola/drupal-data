@@ -6,7 +6,7 @@ class WebcomposerFormEntity {
   /**
    * 
    */
-  private $io;
+  private $id;
 
   /**
    *
@@ -26,11 +26,18 @@ class WebcomposerFormEntity {
   /**
    * 
    */
-  public function __construct($id, $name, $fields, $settings) {
+  public function __construct($id, $name, $settings) {
     $this->id = $id;
     $this->name = $name;
-    $this->fields = $fields;
     $this->settings = $settings;
+  }
+
+  /**
+   * 
+   */
+  public function setField(WebcomposerFormFieldEntity $field) {
+    $field->setForm($this->getId());
+    $this->fields[$field->getId()] = $field;
   }
 
   /**
@@ -52,6 +59,13 @@ class WebcomposerFormEntity {
    */
   public function getFields() {
     return $this->fields ? $this->fields : [];
+  }
+
+  /**
+   * 
+   */
+  public function getField($id) {
+    return isset($this->fields[$id]) ? $this->fields[$id] : NULL;
   }
 
   /**

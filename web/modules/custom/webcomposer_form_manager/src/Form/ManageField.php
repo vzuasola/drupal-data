@@ -7,11 +7,11 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\Core\Url;
 
 /**
- * Class List.
+ * Field settings
  *
  * @package Drupal\webcomposer_form_manager\Form
  */
-class ManageForm extends FormBase {
+class ManageField extends FormBase {
   private $formManager;
   private $route;
 
@@ -25,6 +25,7 @@ class ManageForm extends FormBase {
     $this->route = $route;
 
     $this->entity = $this->getEntity();
+    $this->field = $this->getField();
   }
 
   /**
@@ -38,12 +39,22 @@ class ManageForm extends FormBase {
   }
 
   /**
+   *
+   */
+  private function getField() {
+    $fieldId = $this->route->getParameter('field');
+    $field = $this->entity->getField($fieldId);
+
+    return $field;
+  }
+
+  /**
    * 
    */
   public function title() {
-    $name = $this->entity->getName();
+    $field = $this->field->getName();
 
-    return $name;
+    return $field;
   }
 
   /**
@@ -63,9 +74,10 @@ class ManageForm extends FormBase {
    */
   protected function getEditableConfigNames() {
     $id = $this->entity->getId();
+    $field = $this->field->getId();
 
     return [
-      "webcomposer_form_manager.form.$id"
+      "webcomposer_form_manager.form.$id.$field"
     ];
   }
 
@@ -74,28 +86,28 @@ class ManageForm extends FormBase {
    */
   protected function getDefaultConfigName() {
     $id = $this->entity->getId();
+    $field = $this->field->getId();
 
-    return "webcomposer_form_manager.form.$id";
+    return "webcomposer_form_manager.form.$id.$field";
   }
 
   /**
    * {@inheritdoc}
    */
   public function getFormId() {
-    return 'webcomposer_form_manager.manage_form';
+    return 'webcomposer_form_manager.manage_field';
   }
 
   /**
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    // check if the entity exists first
-    if (!$this->entity) {
+    // check if the entity and field exists first
+    if (!$this->entity && !$this->field) {
       throw new \Symfony\Component\HttpKernel\Exception\NotFoundHttpException();
     }
 
     $this->generateSettingsForm($form);
-    $this->generateFieldsForm($form);
 
     return parent::buildForm($form, $form_state);
   }
@@ -105,83 +117,24 @@ class ManageForm extends FormBase {
    */
   protected function generateSettingsForm(&$form) {
     $name = $this->getDefaultConfigName();
-    $settings = $this->entity->getSettings();
 
-    $form['form_settings'] = [
+    $form['field_settings'] = [
       '#type' => 'details',
-      '#title' => 'Form Settings',
-      '#open' => FALSE,
+      '#title' => 'Field Settings',
+      '#open' => TRUE,
     ];
 
-    foreach ($settings as $key => $value) {
-      $form['form_settings'][$key] = $value;
+    foreach ($this->field->getSettings() as $key => $value) {
+      $form['field_settings'][$key] = $value;
 
       $defaultValue = $this->getConfigValues($name, $key);
+      $defaultDefinedValue = $this->field->getOption('default_value');
+
       if (isset($defaultValue)) {
-        $form['form_settings'][$key]['#default_value'] = $defaultValue;
+        $form['field_settings'][$key]['#default_value'] = $defaultValue;
+      } elseif ($defaultDefinedValue) {
+        $form['field_settings'][$key]['#default_value'] = $defaultDefinedValue;
       }
-    }
-  }
-
-  /**
-   * Generates the settings form
-   */
-  protected function generateFieldsForm(&$form) {
-    $id = $this->entity->getId();
-    $name = $this->getDefaultConfigName();
-    $fields = $this->entity->getFields();
-
-    $i = 0;
-    $header = ['Name', 'Field type', 'Actions', 'Weight'];
-
-    $form['table'] = [
-      '#type' => 'table',
-      '#header' => $header,
-      '#empty' => 'No form to show',
-      '#tabledrag' => [
-        [
-          'action' => 'order',
-          'relationship' => 'sibling',
-          'group' => 'mytable-order-weight',
-        ],
-      ],
-    ];
-
-    foreach ($fields as $key => $field) {
-      $url = new Url('webcomposer_form_manager.field.view', [
-        'form' => $id,
-        'field' => $field->getId(),
-      ]);
-
-      $weight = ++ $i;
-
-      $form['table'][$key]['title'] = [
-        '#markup' => $field->getName(),
-      ];
-
-      $form['table'][$key]['type'] = [
-        '#markup' => ucwords($field->getType()),
-      ];
-
-      if ($field->getSettings()) {
-        $form['table'][$key]['actions'] = [
-          '#markup' => $this->l('Edit', $url),
-        ];
-      } else {
-        $form['table'][$key]['actions'] = [
-          '#markup' => 'No actions',
-        ];
-      }
-
-      $form['table'][$key]['weight'] = [
-        '#type' => 'weight',
-        '#title' => 'Weight',
-        '#title_display' => 'invisible',
-        '#default_value' => $weight,
-        '#attributes' => ['class' => ['mytable-order-weight']],
-      ];
-
-      $form['table'][$key]['#attributes'] = ['class' => ['draggable']];
     }
   }
 

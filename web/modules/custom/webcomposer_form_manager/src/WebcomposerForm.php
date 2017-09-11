@@ -3,6 +3,7 @@
 namespace Drupal\webcomposer_form_manager;
 
 use Drupal\webcomposer_form_manager\Entity\WebcomposerFormEntity;
+use Drupal\webcomposer_form_manager\Entity\WebcomposerFormFieldEntity;
 
 /**
  * 
@@ -26,39 +27,56 @@ class WebcomposerForm {
    * 
    */
   public function getFormById($id) {
-    $one = new WebcomposerFormEntity(
-      'form_one',
-      'Form One',
-      [
-        'firstname' => [
-          '#type' => 'textfield',
-          '#title' => 'First Name',
-          '#default_value' => 'Alex'
-        ],
-        'lastname' => [
-          '#type' => 'textfield',
-          '#title' => 'Last Name',
-          '#default_value' => 'Alexander'
-        ]
+    $formOneSettings = [
+      'show' => [
+        '#title' => 'Show this form',
+        '#type' => 'checkbox',
+        '#default_value' => true
       ],
-      [
-        'show' => [
-          '#title' => 'Show this form',
-          '#type' => 'checkbox',
-          '#default_value' => true
-        ],
+      'alias' => [
+        '#title' => 'Form alias',
+        '#type' => 'textfield',
+        '#description' => 'The alias for this form',
+      ],
+    ];
+
+    $formOne = new WebcomposerFormEntity('form_one', 'Form One', $formOneSettings);
+
+    $formOne->setField(
+      new WebcomposerFormFieldEntity('firstname', 'First name', 'textfield', ['default_value' => 'Leo'])
+    );
+
+    $formOne->setField(
+      new WebcomposerFormFieldEntity('lastname', 'Last name', 'textfield', ['default_value' => 'Drew'], [
         'alias' => [
-          '#title' => 'Form alias',
+          '#title' => 'Last name alias',
           '#type' => 'textfield',
-          '#description' => 'The alias for this form',
+          '#description' => 'The alias for this last name',
         ],
-      ]
+      ])
     );
 
     $forms = [
-      'form_one' => $one,
+      'form_one' => $formOne,
     ];
 
     return $forms[$id] ?? NULL;
+  }
+
+  /**
+   *
+   */
+  public function getValidations() {
+    return [
+      'alphanumeric' => [
+        'parameters' => [
+          'show' => [
+            '#title' => 'Allow special characters',
+            '#type' => 'checkbox',
+            '#default_value' => true
+          ],
+        ],
+      ],
+    ];
   }
 }
