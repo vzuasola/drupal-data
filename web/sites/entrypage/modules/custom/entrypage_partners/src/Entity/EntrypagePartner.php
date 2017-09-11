@@ -56,34 +56,31 @@ use Drupal\user\UserInterface;
  *   field_ui_base_route = "entrypage_partner.settings"
  * )
  */
-class EntrypagePartner extends ContentEntityBase implements EntrypagePartnerInterface
-{
+class EntrypagePartner extends ContentEntityBase implements EntrypagePartnerInterface {
+
     use EntityChangedTrait;
 
     /**
      * {@inheritdoc}
      */
-    public static function preCreate(EntityStorageInterface $storage_controller, array &$values)
-    {
+    public static function preCreate(EntityStorageInterface $storage_controller, array &$values) {
         parent::preCreate($storage_controller, $values);
         $values += [
-      'user_id' => \Drupal::currentUser()->id(),
-    ];
+            'user_id' => \Drupal::currentUser()->id(),
+        ];
     }
 
     /**
      * {@inheritdoc}
      */
-    public function getName()
-    {
+    public function getName() {
         return $this->get('name')->value;
     }
 
     /**
      * {@inheritdoc}
      */
-    public function setName($name)
-    {
+    public function setName($name) {
         $this->set('name', $name);
         return $this;
     }
@@ -91,16 +88,14 @@ class EntrypagePartner extends ContentEntityBase implements EntrypagePartnerInte
     /**
      * {@inheritdoc}
      */
-    public function getCreatedTime()
-    {
+    public function getCreatedTime() {
         return $this->get('created')->value;
     }
 
     /**
      * {@inheritdoc}
      */
-    public function setCreatedTime($timestamp)
-    {
+    public function setCreatedTime($timestamp) {
         $this->set('created', $timestamp);
         return $this;
     }
@@ -108,24 +103,21 @@ class EntrypagePartner extends ContentEntityBase implements EntrypagePartnerInte
     /**
      * {@inheritdoc}
      */
-    public function getOwner()
-    {
+    public function getOwner() {
         return $this->get('user_id')->entity;
     }
 
     /**
      * {@inheritdoc}
      */
-    public function getOwnerId()
-    {
+    public function getOwnerId() {
         return $this->get('user_id')->target_id;
     }
 
     /**
      * {@inheritdoc}
      */
-    public function setOwnerId($uid)
-    {
+    public function setOwnerId($uid) {
         $this->set('user_id', $uid);
         return $this;
     }
@@ -133,8 +125,7 @@ class EntrypagePartner extends ContentEntityBase implements EntrypagePartnerInte
     /**
      * {@inheritdoc}
      */
-    public function setOwner(UserInterface $account)
-    {
+    public function setOwner(UserInterface $account) {
         $this->set('user_id', $account->id());
         return $this;
     }
@@ -142,16 +133,14 @@ class EntrypagePartner extends ContentEntityBase implements EntrypagePartnerInte
     /**
      * {@inheritdoc}
      */
-    public function isPublished()
-    {
+    public function isPublished() {
         return (bool) $this->getEntityKey('status');
     }
 
     /**
      * {@inheritdoc}
      */
-    public function setPublished($published)
-    {
+    public function setPublished($published) {
         $this->set('status', $published ? true : false);
         return $this;
     }
@@ -159,8 +148,7 @@ class EntrypagePartner extends ContentEntityBase implements EntrypagePartnerInte
     /**
      * {@inheritdoc}
      */
-    public static function baseFieldDefinitions(EntityTypeInterface $entity_type)
-    {
+    public static function baseFieldDefinitions(EntityTypeInterface $entity_type) {
         $fields = parent::baseFieldDefinitions($entity_type);
 
         $fields['user_id'] = BaseFieldDefinition::create('entity_reference')

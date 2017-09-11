@@ -11,10 +11,9 @@ use Drupal\user\EntityOwnerInterface;
  *
  * @ingroup entrypage_partners
  */
-interface EntrypagePartnerInterface extends ContentEntityInterface, EntityChangedInterface, EntityOwnerInterface
-{
+interface EntrypagePartnerInterface extends ContentEntityInterface, EntityChangedInterface, EntityOwnerInterface {
 
-  // Add get/set methods for your configuration properties here.
+    // Add get/set methods for your configuration properties here.
 
     /**
      * Gets the Entrypage partner name.

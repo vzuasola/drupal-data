@@ -8,8 +8,6 @@ use Drupal\Core\Form\FormStateInterface;
 /**
  * Class EntrypageFrontBlockSettingsForm.
  *
- * @package Drupal\entrypage_front_blocks\Form
- *
  * @ingroup entrypage_front_blocks
  */
 class EntrypageFrontBlockSettingsForm extends FormBase {
@@ -21,7 +19,7 @@ class EntrypageFrontBlockSettingsForm extends FormBase {
    *   The unique string identifying the form.
    */
   public function getFormId() {
-    return 'EntrypageFrontBlock_settings';
+    return 'entrypagefrontblock_settings';
   }
 
   /**
@@ -48,7 +46,7 @@ class EntrypageFrontBlockSettingsForm extends FormBase {
    *   Form definition array.
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    $form['EntrypageFrontBlock_settings']['#markup'] = 'Settings form for Entrypage front block entities. Manage field settings here.';
+    $form['entrypagefrontblock_settings']['#markup'] = 'Settings form for Entrypage front block entities. Manage field settings here.';
     return $form;
   }
 
