@@ -10,8 +10,7 @@ use Drupal\Core\Form\FormStateInterface;
  *
  * @ingroup entrypage_partners
  */
-class EntrypagePartnerSettingsForm extends FormBase
-{
+class EntrypagePartnerSettingsForm extends FormBase {
 
   /**
    * Returns a unique string identifying the form.
@@ -19,8 +18,7 @@ class EntrypagePartnerSettingsForm extends FormBase
    * @return string
    *   The unique string identifying the form.
    */
-    public function getFormId()
-    {
+    public function getFormId() {
         return 'entrypagepartner_settings';
     }
 
@@ -32,8 +30,7 @@ class EntrypagePartnerSettingsForm extends FormBase
      * @param \Drupal\Core\Form\FormStateInterface $form_state
      *   The current state of the form.
      */
-    public function submitForm(array &$form, FormStateInterface $form_state)
-    {
+    public function submitForm(array &$form, FormStateInterface $form_state) {
         // Empty implementation of the abstract submit class.
     }
 
@@ -48,8 +45,7 @@ class EntrypagePartnerSettingsForm extends FormBase
      * @return array
      *   Form definition array.
      */
-    public function buildForm(array $form, FormStateInterface $form_state)
-    {
+    public function buildForm(array $form, FormStateInterface $form_state) {
         $form['entrypagepartner_settings']['#markup'] = 'Settings form for Entrypage partner entities. Manage field settings here.';
         return $form;
     }

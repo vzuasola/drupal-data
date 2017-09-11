@@ -16,21 +16,9 @@ function entrypage_front_blocks_help($route_name, RouteMatchInterface $route_mat
     case 'help.page.entrypage_front_blocks':
       $output = '';
       $output .= '<h3>' . t('About') . '</h3>';
-      $output .= '<p>' . t('Module for Entrypahe home blocks.') . '</p>';
+      $output .= '<p>' . t('Module for Entrypage home blocks.') . '</p>';
       return $output;
 
     default:
   }
-}
-
-/**
- * Implements hook_theme().
- */
-function entrypage_front_blocks_theme() {
-  return [
-    'entrypage_front_blocks' => [
-      'template' => 'entrypage_front_blocks',
-      'render element' => 'children',
-    ],
-  ];
 }

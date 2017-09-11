@@ -12,14 +12,12 @@ use Symfony\Component\Routing\Route;
  * @see \Drupal\Core\Entity\Routing\AdminHtmlRouteProvider
  * @see \Drupal\Core\Entity\Routing\DefaultHtmlRouteProvider
  */
-class EntrypagePartnerHtmlRouteProvider extends AdminHtmlRouteProvider
-{
+class EntrypagePartnerHtmlRouteProvider extends AdminHtmlRouteProvider {
 
   /**
    * {@inheritdoc}
    */
-    public function getRoutes(EntityTypeInterface $entity_type)
-    {
+    public function getRoutes(EntityTypeInterface $entity_type) {
         $collection = parent::getRoutes($entity_type);
 
         $entity_type_id = $entity_type->id();
@@ -40,8 +38,7 @@ class EntrypagePartnerHtmlRouteProvider extends AdminHtmlRouteProvider
      * @return \Symfony\Component\Routing\Route|null
      *   The generated route, if available.
      */
-    protected function getSettingsFormRoute(EntityTypeInterface $entity_type)
-    {
+    protected function getSettingsFormRoute(EntityTypeInterface $entity_type) {
         if (!$entity_type->getBundleEntityType()) {
             $route = new Route("/admin/structure/{$entity_type->id()}/settings");
             $route

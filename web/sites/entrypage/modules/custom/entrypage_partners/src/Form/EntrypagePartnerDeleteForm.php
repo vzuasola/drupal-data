@@ -9,6 +9,5 @@ use Drupal\Core\Entity\ContentEntityDeleteForm;
  *
  * @ingroup entrypage_partners
  */
-class EntrypagePartnerDeleteForm extends ContentEntityDeleteForm
-{
+class EntrypagePartnerDeleteForm extends ContentEntityDeleteForm {
 }

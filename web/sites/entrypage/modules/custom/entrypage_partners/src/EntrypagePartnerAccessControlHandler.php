@@ -12,28 +12,26 @@ use Drupal\Core\Access\AccessResult;
  *
  * @see \Drupal\entrypage_partners\Entity\EntrypagePartner.
  */
-class EntrypagePartnerAccessControlHandler extends EntityAccessControlHandler
-{
+class EntrypagePartnerAccessControlHandler extends EntityAccessControlHandler {
 
   /**
    * {@inheritdoc}
    */
-    protected function checkAccess(EntityInterface $entity, $operation, AccountInterface $account)
-    {
+    protected function checkAccess(EntityInterface $entity, $operation, AccountInterface $account) {
         /** @var \Drupal\entrypage_partners\Entity\EntrypagePartnerInterface $entity */
         switch ($operation) {
-      case 'view':
-        if (!$entity->isPublished()) {
-            return AccessResult::allowedIfHasPermission($account, 'view unpublished entrypage partner entities');
+          case 'view':
+            if (!$entity->isPublished()) {
+                return AccessResult::allowedIfHasPermission($account, 'view unpublished entrypage partner entities');
+            }
+            return AccessResult::allowedIfHasPermission($account, 'view published entrypage partner entities');
+
+          case 'update':
+            return AccessResult::allowedIfHasPermission($account, 'edit entrypage partner entities');
+
+          case 'delete':
+            return AccessResult::allowedIfHasPermission($account, 'delete entrypage partner entities');
         }
-        return AccessResult::allowedIfHasPermission($account, 'view published entrypage partner entities');
-
-      case 'update':
-        return AccessResult::allowedIfHasPermission($account, 'edit entrypage partner entities');
-
-      case 'delete':
-        return AccessResult::allowedIfHasPermission($account, 'delete entrypage partner entities');
-    }
 
         // Unknown operation, no opinion.
         return AccessResult::neutral();
@@ -42,8 +40,7 @@ class EntrypagePartnerAccessControlHandler extends EntityAccessControlHandler
     /**
      * {@inheritdoc}
      */
-    protected function checkCreateAccess(AccountInterface $account, array $context, $entity_bundle = null)
-    {
+    protected function checkCreateAccess(AccountInterface $account, array $context, $entity_bundle = null) {
         return AccessResult::allowedIfHasPermission($account, 'add entrypage partner entities');
     }
 }

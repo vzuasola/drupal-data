@@ -12,8 +12,7 @@ use Drupal\Core\Url;
  *
  * @ingroup entrypage_partners
  */
-class EntrypagePartnerListBuilder extends EntityListBuilder
-{
+class EntrypagePartnerListBuilder extends EntityListBuilder {
   use LinkGeneratorTrait;
   
   /**
@@ -28,6 +27,8 @@ class EntrypagePartnerListBuilder extends EntityListBuilder
    * {@inheritdoc}
    */
   public function buildRow(EntityInterface $entity) {
+    /* @var $entity \Drupal\entrypage_partners\Entity\EntrypagePartner */
+
     // Get current and default language for fall back.
     $langCode = \Drupal::service('language_manager')->getCurrentLanguage()->getId();
 
@@ -38,7 +39,7 @@ class EntrypagePartnerListBuilder extends EntityListBuilder
       $row['name'] = $this->l(
         $name,
         new Url(
-          'entity.entrypage_partner.edit_form', 
+          'entity.entrypage_partner.edit_form',
           array(
             'entrypage_partner' => $entity->id(),
           )
