@@ -4,7 +4,6 @@ status: true
 dependencies:
   module:
     - basic_auth
-    - hal
     - rest_menu_items
     - serialization
     - user
@@ -14,7 +13,6 @@ granularity: method
 configuration:
   GET:
     supported_formats:
-      - hal_json
       - json
       - xml
     supported_auth:

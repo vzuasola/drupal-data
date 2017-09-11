@@ -4,7 +4,6 @@ status: true
 dependencies:
   module:
     - basic_auth
-    - hal
     - node
 _core:
   default_config_hash: t_jfECmZhJqBOJuSOFn87EOi_TWi-_fRYTuJgd19vgg
@@ -19,7 +18,6 @@ configuration:
     - DELETE
   formats:
     - json
-    - hal_json
   authentication:
     - basic_auth
     - cookie
