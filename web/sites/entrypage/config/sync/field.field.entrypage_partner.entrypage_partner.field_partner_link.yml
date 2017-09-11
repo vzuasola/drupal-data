@@ -1,0 +1,23 @@
+uuid: 6749ca3d-1836-43ee-87d1-7f936e025e0e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.entrypage_partner.field_partner_link
+  module:
+    - entrypage_partners
+    - link
+id: entrypage_partner.entrypage_partner.field_partner_link
+field_name: field_partner_link
+entity_type: entrypage_partner
+bundle: entrypage_partner
+label: 'Partner Link'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link
