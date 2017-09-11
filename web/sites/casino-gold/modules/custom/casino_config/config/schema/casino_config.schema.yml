@@ -1,15 +1,3 @@
-casino_config.page_not_found:
-  type: mapping
-  label: 'Page not found'
-  mapping:
-    page_not_found_title:
-      type: label
-      label: 'Page Title'
-    page_not_found_content:
-      type: text_format
-      label: 'Content'
-      translatable: true
-
 casino_config.unsupported_language:
   type: mapping
   label: 'Unsupported Language'

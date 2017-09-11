@@ -6,14 +6,6 @@ casino_config.admin_settings:
   requirements:
     _permission: 'administer site configuration'
 
-casino_config.page_not_found_form:
-  path: 'admin/config/casino/page-not-found'
-  defaults:
-    _form: 'Drupal\casino_config\Form\PageNotFound'
-    _title: 'Page Not Found'
-  requirements:
-    _permission: 'administer site configuration'
-
 casino_config.unsupp_language_form:
   path: 'admin/config/casino/unsupported-language'
   defaults:
