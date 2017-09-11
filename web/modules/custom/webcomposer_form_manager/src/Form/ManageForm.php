@@ -107,18 +107,20 @@ class ManageForm extends FormBase {
     $name = $this->getDefaultConfigName();
     $settings = $this->entity->getSettings();
 
-    $form['form_settings'] = [
-      '#type' => 'details',
-      '#title' => 'Form Settings',
-      '#open' => FALSE,
-    ];
+    if (!empty($settings)) {
+      $form['form_settings'] = [
+        '#type' => 'details',
+        '#title' => 'Form Settings',
+        '#open' => TRUE,
+      ];
 
-    foreach ($settings as $key => $value) {
-      $form['form_settings'][$key] = $value;
+      foreach ($settings as $key => $value) {
+        $form['form_settings'][$key] = $value;
 
-      $defaultValue = $this->getConfigValues($name, $key);
-      if (isset($defaultValue)) {
-        $form['form_settings'][$key]['#default_value'] = $defaultValue;
+        $defaultValue = $this->getConfigValues($name, $key);
+        if (isset($defaultValue)) {
+          $form['form_settings'][$key]['#default_value'] = $defaultValue;
+        }
       }
     }
   }

@@ -103,7 +103,10 @@ class ManageField extends FormBase {
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
     // check if the entity and field exists first
-    if (!$this->entity && !$this->field) {
+    if (!$this->entity ||
+      !$this->field ||
+      empty($this->field->getSettings())
+    ) {
       throw new \Symfony\Component\HttpKernel\Exception\NotFoundHttpException();
     }
 
@@ -155,7 +158,7 @@ class ManageField extends FormBase {
 
     $name = $this->getDefaultConfigName();
 
-    $settings = $this->entity->getSettings();
+    $settings = $this->field->getSettings();
     $keys = array_keys($settings);
 
     $this->saveConfigValues($name, $keys, $form_state);
