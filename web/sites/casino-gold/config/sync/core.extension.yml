@@ -78,6 +78,7 @@ module:
   webcomposer_connector: 0
   webcomposer_dm: 0
   webcomposer_editor: 0
+  webcomposer_games: 0
   webcomposer_language_hierarchy: 0
   webcomposer_rest_extra: 0
   webcomposer_snippet: 0

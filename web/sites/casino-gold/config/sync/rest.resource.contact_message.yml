@@ -4,7 +4,6 @@ status: true
 dependencies:
   module:
     - basic_auth
-    - hal
     - serialization
     - user
     - webcomposer_rest_extra
@@ -14,7 +13,6 @@ granularity: method
 configuration:
   POST:
     supported_formats:
-      - hal_json
       - json
     supported_auth:
       - basic_auth
