@@ -1,12 +1,12 @@
-uuid: d15e0b7e-2520-4877-a9db-15c47532bf94
+uuid: b603c740-e513-40c4-968b-5a12eb7c32a4
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.entrypage_partner.field_image
+    - field.storage.entrypage_front_block.field_image
   module:
     - content_translation
-    - entrypage_partners
+    - entrypage_front_blocks
     - image
 third_party_settings:
   content_translation:
@@ -14,12 +14,10 @@ third_party_settings:
       file: file
       alt: '0'
       title: '0'
-_core:
-  default_config_hash: FnvGWvK2T9ESlNpcVkgd_HOJoAhBjYH-aniQSbzsKoM
-id: entrypage_partner.entrypage_partner.field_image
+id: entrypage_front_block.entrypage_front_block.field_image
 field_name: field_image
-entity_type: entrypage_partner
-bundle: entrypage_partner
+entity_type: entrypage_front_block
+bundle: entrypage_front_block
 label: Image
 description: ''
 required: true

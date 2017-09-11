@@ -1,16 +1,14 @@
-uuid: dbcfc26f-f69b-49d0-bafe-86a0f1f52620
+uuid: 92886ca8-1503-49a1-baca-0495da945ff9
 langcode: en
 status: true
 dependencies:
   module:
-    - entrypage_partners
+    - entrypage_front_blocks
     - file
     - image
-_core:
-  default_config_hash: JwLL3ItKG0Cqt5ObLvR4lpOMFHBwKaEt4WX8PSj0e0c
-id: entrypage_partner.field_image
+id: entrypage_front_block.field_image
 field_name: field_image
-entity_type: entrypage_partner
+entity_type: entrypage_front_block
 type: image
 settings:
   uri_scheme: public

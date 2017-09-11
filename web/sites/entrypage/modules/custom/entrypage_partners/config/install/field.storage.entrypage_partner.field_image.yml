@@ -6,6 +6,8 @@ dependencies:
     - entrypage_partners
     - file
     - image
+_core:
+  default_config_hash: JwLL3ItKG0Cqt5ObLvR4lpOMFHBwKaEt4WX8PSj0e0c
 id: entrypage_partner.field_image
 field_name: field_image
 entity_type: entrypage_partner

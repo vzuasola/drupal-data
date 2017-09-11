@@ -1,20 +1,18 @@
-uuid: f019d4c4-a682-4782-8bcd-2af1c1af0daf
+uuid: f5aed3c6-c2ea-423f-94e9-6ac5937327ba
 langcode: en
 status: true
 dependencies:
   module:
-    - entrypage_partners
+    - entrypage_front_blocks
     - rest
     - serialization
     - webcomposer_rest_extra
-_core:
-  default_config_hash: vm_T8Zzq0rBtFfFmhG5evBDxeUFYvXe8aIsiR0EwvS4
-id: entrypage_partners_api
-label: 'Entrypage Partners CMI'
+id: entrypage_front_blocks_cmi
+label: 'Entrypage Front Blocks CMI'
 module: views
 description: ''
 tag: ''
-base_table: entrypage_partner_field_data
+base_table: entrypage_front_block_field_data
 base_field: id
 core: 8.x
 display:
@@ -77,7 +75,7 @@ display:
           default_field_elements: true
       fields:
         name:
-          table: entrypage_partner_field_data
+          table: entrypage_front_block_field_data
           field: name
           id: name
           entity_type: null
@@ -143,7 +141,7 @@ display:
       filters:
         langcode:
           id: langcode
-          table: entrypage_partner_field_data
+          table: entrypage_front_block_field_data
           field: langcode
           relationship: none
           group_type: group
@@ -178,7 +176,7 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          entity_type: entrypage_partner
+          entity_type: entrypage_front_block
           entity_field: langcode
           plugin_id: language
       sorts: {  }
@@ -196,14 +194,14 @@ display:
         - request_format
         - url.query_args
       tags: {  }
-  rest_export_entrypage_partners_cmi:
+  rest_export_entrypage_front_blocks_cmi:
     display_plugin: rest_export
-    id: rest_export_entrypage_partners_cmi
+    id: rest_export_entrypage_front_blocks_cmi
     display_title: 'REST export'
     position: 1
     display_options:
       display_extenders: {  }
-      path: api/entrypage_partners
+      path: api/entrypage_front_blocks
       pager:
         type: none
         options:

@@ -6,6 +6,7 @@
 function entrypage_partners_uninstall()
 {
    $keys = [
+      'core.base_field_override.entrypage_partner.entrypage_partner.user_id.yml',
       'core.entity_form_display.entrypage_partner.entrypage_partner.default.yml',
       'core.entity_view_display.entrypage_partner.entrypage_partner.default.yml',
       'field.field.entrypage_partner.entrypage_partner.field_image.yml',

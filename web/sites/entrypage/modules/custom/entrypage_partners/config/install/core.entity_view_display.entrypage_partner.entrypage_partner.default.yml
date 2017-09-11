@@ -10,6 +10,8 @@ dependencies:
     - image
     - link
     - user
+_core:
+  default_config_hash: '-1zSesgz6r_JqR6p44vhNFP-xxWui86lXOOm8LtGZO4'
 id: entrypage_partner.entrypage_partner.default
 targetEntityType: entrypage_partner
 bundle: entrypage_partner

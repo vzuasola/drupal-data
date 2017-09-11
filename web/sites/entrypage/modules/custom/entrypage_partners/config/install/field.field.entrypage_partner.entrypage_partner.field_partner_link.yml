@@ -7,6 +7,8 @@ dependencies:
   module:
     - entrypage_partners
     - link
+_core:
+  default_config_hash: vDKKc7CpiQeWYygD_5lDM4TXhufR9Ej8o2xPG8Ydx5Y
 id: entrypage_partner.entrypage_partner.field_partner_link
 field_name: field_partner_link
 entity_type: entrypage_partner
