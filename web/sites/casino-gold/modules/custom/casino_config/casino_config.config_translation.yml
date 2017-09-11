@@ -1,9 +1,3 @@
-casino_config.page_not_found_form_schema:
-  title: 'page not found'
-  base_route_name: casino_config.page_not_found_form
-  names:
-    - 'casino_config.page_not_found'
-
 casino_config.unsupp_language_form_schema:
   title: 'Unsupported language'
   base_route_name: casino_config.unsupp_language_form
