@@ -31,10 +31,10 @@ class EntrypageFrontBlockListBuilder extends EntityListBuilder {
     /* @var $entity \Drupal\entrypage_front_blocks\Entity\EntrypageFrontBlock */
 
     // Get current and default language for fall back.
-    $langCode = \Drupal::service('language_manager')->getCurrentLanguage()->getId();
+    $language = \Drupal::service('language_manager')->getCurrentLanguage()->getId();
 
-    if ($entity->hasTranslation($langCode)) {
-      $entity = $entity->getTranslation($langCode);
+    if ($entity->hasTranslation($language)) {
+      $entity = $entity->getTranslation($language);
       $name = $entity->get('name')->value;
 
       $row['name'] = $this->l(
