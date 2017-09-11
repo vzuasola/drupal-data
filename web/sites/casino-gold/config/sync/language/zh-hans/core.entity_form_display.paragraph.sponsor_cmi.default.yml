@@ -20,13 +20,10 @@ content:
     settings:
       size: 60
       placeholder: ''
-    third_party_settings: {  }
     type: string_textfield
     region: content
   field_sponsor_cmi_link_target:
     weight: 2
-    settings: {  }
-    third_party_settings: {  }
     type: options_select
     region: content
   field_sponsor_cmi_logo:
@@ -34,7 +31,6 @@ content:
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
-    third_party_settings: {  }
     type: image_image
     region: content
 hidden:

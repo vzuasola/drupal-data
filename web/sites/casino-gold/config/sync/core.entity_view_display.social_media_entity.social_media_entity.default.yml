@@ -1,20 +1,20 @@
-uuid: 905d9c2b-bf8e-434b-8bb5-1cf962cd772a
+uuid: 96332454-4923-474b-8b1e-28d6812ab702
 langcode: zh-hans
 status: true
 dependencies:
   config:
-    - field.field.sponsor_entity.sponsor_entity.field_sponsor_cmi
+    - field.field.social_media_entity.social_media_entity.field_social_media_cmi
   module:
     - entity_reference_revisions
-    - webcomposer_sponsor
+    - webcomposer_social_media
 _core:
-  default_config_hash: sBMNUmBzlQHOK2jLxBlZCdZMAPBytbdjxP8BpYW9rkM
-id: sponsor_entity.sponsor_entity.default
-targetEntityType: sponsor_entity
-bundle: sponsor_entity
+  default_config_hash: AmN8d-T6VJ3nIhgaD8-IRMtBq9m-gkKp8_pfUKgQBrQ
+id: social_media_entity.social_media_entity.default
+targetEntityType: social_media_entity
+bundle: social_media_entity
 mode: default
 content:
-  field_sponsor_cmi:
+  field_social_media_cmi:
     type: entity_reference_revisions_entity_view
     weight: 1
     label: above

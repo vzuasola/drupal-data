@@ -1,10 +1,12 @@
 uuid: 7c3ea6fd-5770-4794-ba5e-1bcf5a322738
-langcode: en
+langcode: zh-hans
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_sponsor_cmi_link
     - paragraphs.paragraphs_type.sponsor_cmi
+_core:
+  default_config_hash: FV9BGZWukLjyVSDWuXw_ZM61oBrC4Knd_wuTbVFuk2E
 id: paragraph.sponsor_cmi.field_sponsor_cmi_link
 field_name: field_sponsor_cmi_link
 entity_type: paragraph

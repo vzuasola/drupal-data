@@ -22,13 +22,10 @@ content:
       add_mode: dropdown
       form_display_mode: default
       default_paragraph_type: ''
-    third_party_settings: {  }
     region: content
   translation:
     weight: 1
     region: content
-    settings: {  }
-    third_party_settings: {  }
 hidden:
   langcode: true
   name: true

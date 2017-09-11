@@ -1,5 +1,5 @@
 uuid: 4260a911-ef56-4425-a3ae-53a8498eadfd
-langcode: en
+langcode: zh-hans
 status: true
 dependencies:
   config:
@@ -10,6 +10,8 @@ dependencies:
     - paragraphs.paragraphs_type.sponsor_cmi
   module:
     - image
+_core:
+  default_config_hash: RPFa9NzRpOO9r5OJqKw9M2fJN4jGhVYwwwFpiNv1u1o
 id: paragraph.sponsor_cmi.default
 targetEntityType: paragraph
 bundle: sponsor_cmi
@@ -36,6 +38,9 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+    region: content
+  translation:
+    weight: 10
     region: content
 hidden:
   created: true

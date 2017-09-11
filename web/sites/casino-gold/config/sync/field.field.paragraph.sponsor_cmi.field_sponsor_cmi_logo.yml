@@ -1,5 +1,5 @@
 uuid: d48f6797-4960-40c4-853a-f334ae2779c4
-langcode: en
+langcode: zh-hans
 status: true
 dependencies:
   config:
@@ -14,6 +14,8 @@ third_party_settings:
       file: file
       alt: '0'
       title: '0'
+_core:
+  default_config_hash: WlP718dwwxVEgI2ERDG9P4qQPzFtFjKCizLqwlu5sRk
 id: paragraph.sponsor_cmi.field_sponsor_cmi_logo
 field_name: field_sponsor_cmi_logo
 entity_type: paragraph

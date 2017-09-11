@@ -1,5 +1,5 @@
 uuid: c5e3c676-2791-4a63-abbe-2cb69e923569
-langcode: en
+langcode: zh-hans
 status: true
 dependencies:
   config:
@@ -10,6 +10,8 @@ dependencies:
   module:
     - image
     - options
+_core:
+  default_config_hash: C-T2Ug4u8m5SjUOXVFsb2-AbEFCZjOhf-94jEulkV6M
 id: paragraph.sponsor_cmi.default
 targetEntityType: paragraph
 bundle: sponsor_cmi
