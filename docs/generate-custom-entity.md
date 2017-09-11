@@ -7,6 +7,10 @@ the scope of the module.
 ```bash
 $ drupal --uri=entrypage.drupal.dev gect
 ```
+or
+```bash
+$ drupal --uri=entrypage.drupal.dev geco
+```
 
 All answers can be default except for 
 * Enter the module name: `webcomposer_module`

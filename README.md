@@ -36,7 +36,7 @@ Follow the steps below to update your core files.
    updated core files with your customized files. This facilitates the use 
    of a [three-way merge tool such as kdiff3](http://www.gitshah.com/2010/12/how-to-setup-kdiff-as-diff-tool-for-git.html). This setup is not necessary if your changes are simple; 
    keeping all of your modifications at the beginning or end of the file is a 
-   good strategy to keep merges easy.
+   good strategy to keep merges easy. 
 
 ## FAQ
 
