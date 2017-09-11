@@ -1,14 +1,16 @@
-uuid: 38f3f745-2647-4841-9ce1-fd4546a5f6ed
+uuid: fbea8d72-1319-4a41-b73d-dd57bf9996dc
 langcode: zh-hans
 status: true
 dependencies:
   module:
     - entity_reference_revisions
     - paragraphs
-    - webcomposer_sponsor
-id: sponsor_entity.field_sponsor_cmi
-field_name: field_sponsor_cmi
-entity_type: sponsor_entity
+    - webcomposer_social_media
+_core:
+  default_config_hash: 6XHlaGFzRoqSX3ASYi4Fferk0JlCXc3LSX5PyO_IriM
+id: social_media_entity.field_social_media_cmi
+field_name: field_social_media_cmi
+entity_type: social_media_entity
 type: entity_reference_revisions
 settings:
   target_type: paragraph

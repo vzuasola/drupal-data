@@ -1,4 +1,4 @@
-uuid: d97897f7-e37b-4fa1-8890-de4c9a6a8557
+uuid: 035ad893-dae3-41ae-86bf-a9f05f1431e1
 langcode: zh-hans
 status: true
 dependencies:
@@ -6,9 +6,9 @@ dependencies:
     - options
     - paragraphs
 _core:
-  default_config_hash: KeKavMmLku8sMceCXLodAl-PcKRUge3AewI3xBYBmLY
-id: paragraph.field_sponsor_cmi_link_target
-field_name: field_sponsor_cmi_link_target
+  default_config_hash: eqfAZb0NzRTjJ9HLRfP-p0qggwlQzugaM3yQaqsK4Tw
+id: paragraph.field_socialmedia_cmi_linktarget
+field_name: field_socialmedia_cmi_linktarget
 entity_type: paragraph
 type: list_string
 settings:
