@@ -4,12 +4,6 @@ casino_config.casino_config_list:
   parent: system.admin_config
   route_name: casino_config.admin_settings
 
-casino_config.admin_page_not_found:
-  title: 'Page not found'
-  parent: casino_config.casino_config_list
-  description: 'Page not found configuration'
-  route_name: casino_config.page_not_found_form
-
 casino_config.admin_unsupported_language:
   title: 'Unsupported Language'
   parent: casino_config.casino_config_list
