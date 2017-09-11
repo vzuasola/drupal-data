@@ -22,15 +22,3 @@ function entrypage_partners_help($route_name, RouteMatchInterface $route_match) 
     default:
   }
 }
-
-/**
- * Implements hook_theme().
- */
-function entrypage_partners_theme() {
-  return [
-    'entrypage_partners' => [
-      'template' => 'entrypage_partners',
-      'render element' => 'children',
-    ],
-  ];
-}

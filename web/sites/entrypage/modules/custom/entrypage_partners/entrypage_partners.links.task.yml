@@ -1,4 +1,4 @@
-# Entrypage partner routing definition
+#Entrypage partner routing definition
 entrypage_partner.settings_tab:
   route_name: entrypage_partner.settings
   title: 'Settings'
@@ -13,11 +13,6 @@ entity.entrypage_partner.edit_form:
   route_name: entity.entrypage_partner.edit_form
   base_route: entity.entrypage_partner.canonical
   title: 'Edit'
-
-entity.entrypage_partner.version_history:
-  route_name: entity.entrypage_partner.version_history
-  base_route: entity.entrypage_partner.canonical
-  title: 'Revisions'
 
 entity.entrypage_partner.delete_form:
   route_name:  entity.entrypage_partner.delete_form
