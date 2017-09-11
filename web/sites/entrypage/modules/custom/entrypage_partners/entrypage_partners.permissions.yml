@@ -20,14 +20,3 @@ view published entrypage partner entities:
 
 view unpublished entrypage partner entities:
   title: 'View unpublished Entrypage partner entities'
-
-view all entrypage partner revisions:
-  title: 'View all Entrypage partner revisions'
-
-revert all entrypage partner revisions:
-  title: 'Revert all Entrypage partner revisions'
-  description: 'Role requires permission <em>view Entrypage partner revisions</em> and <em>edit rights</em> for entrypage partner entities in question or <em>administer entrypage partner entities</em>.'
-
-delete all entrypage partner revisions:
-  title: 'Delete all revisions'
-  description: 'Role requires permission to <em>view Entrypage partner revisions</em> and <em>delete rights</em> for entrypage partner entities in question or <em>administer entrypage partner entities</em>.'

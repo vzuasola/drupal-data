@@ -12,17 +12,19 @@ use Drupal\Core\Access\AccessResult;
  *
  * @see \Drupal\entrypage_partners\Entity\EntrypagePartner.
  */
-class EntrypagePartnerAccessControlHandler extends EntityAccessControlHandler {
+class EntrypagePartnerAccessControlHandler extends EntityAccessControlHandler
+{
 
   /**
    * {@inheritdoc}
    */
-  protected function checkAccess(EntityInterface $entity, $operation, AccountInterface $account) {
-    /** @var \Drupal\entrypage_partners\Entity\EntrypagePartnerInterface $entity */
-    switch ($operation) {
+    protected function checkAccess(EntityInterface $entity, $operation, AccountInterface $account)
+    {
+        /** @var \Drupal\entrypage_partners\Entity\EntrypagePartnerInterface $entity */
+        switch ($operation) {
       case 'view':
         if (!$entity->isPublished()) {
-          return AccessResult::allowedIfHasPermission($account, 'view unpublished entrypage partner entities');
+            return AccessResult::allowedIfHasPermission($account, 'view unpublished entrypage partner entities');
         }
         return AccessResult::allowedIfHasPermission($account, 'view published entrypage partner entities');
 
@@ -33,15 +35,15 @@ class EntrypagePartnerAccessControlHandler extends EntityAccessControlHandler {
         return AccessResult::allowedIfHasPermission($account, 'delete entrypage partner entities');
     }
 
-    // Unknown operation, no opinion.
-    return AccessResult::neutral();
-  }
+        // Unknown operation, no opinion.
+        return AccessResult::neutral();
+    }
 
-  /**
-   * {@inheritdoc}
-   */
-  protected function checkCreateAccess(AccountInterface $account, array $context, $entity_bundle = NULL) {
-    return AccessResult::allowedIfHasPermission($account, 'add entrypage partner entities');
-  }
-
+    /**
+     * {@inheritdoc}
+     */
+    protected function checkCreateAccess(AccountInterface $account, array $context, $entity_bundle = null)
+    {
+        return AccessResult::allowedIfHasPermission($account, 'add entrypage partner entities');
+    }
 }

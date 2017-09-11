@@ -12,15 +12,15 @@ use Drupal\Core\Url;
  *
  * @ingroup entrypage_partners
  */
-class EntrypagePartnerListBuilder extends EntityListBuilder {
-
+class EntrypagePartnerListBuilder extends EntityListBuilder
+{
   use LinkGeneratorTrait;
-
+  
   /**
    * {@inheritdoc}
    */
   public function buildHeader() {
-    $header['title'] = $this->t('Title');
+    $header['name'] = $this->t('Name');
     return $header + parent::buildHeader();
   }
 
@@ -28,17 +28,15 @@ class EntrypagePartnerListBuilder extends EntityListBuilder {
    * {@inheritdoc}
    */
   public function buildRow(EntityInterface $entity) {
-    /* @var $entity \Drupal\webcomposer_floating_banners\Entity\LeftFloatingBannerEntity */
-
     // Get current and default language for fall back.
     $langCode = \Drupal::service('language_manager')->getCurrentLanguage()->getId();
 
     if ($entity->hasTranslation($langCode)) {
       $entity = $entity->getTranslation($langCode);
-      $title = $entity->get('field_title')->value;
+      $name = $entity->get('name')->value;
 
-      $row['title'] = $this->l(
-        $title,
+      $row['name'] = $this->l(
+        $name,
         new Url(
           'entity.entrypage_partner.edit_form', 
           array(
@@ -50,4 +48,5 @@ class EntrypagePartnerListBuilder extends EntityListBuilder {
       return $row + parent::buildRow($entity);
     }
   }
+
 }
