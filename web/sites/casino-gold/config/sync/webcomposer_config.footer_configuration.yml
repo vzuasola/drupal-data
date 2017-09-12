@@ -1,7 +1,10 @@
 langcode: zh-hans
 about_dafabet_title: 'About Dafabet'
 about_dafabet_content:
-  value: "<p>Welcome to Dafabet, Asia's leading online betting site and home to some of the best gaming products on the web that includes Sports Betting, Online Casino, Live Casino Games, Online Poker, Flash Games and an array of world class online betting games. sc\r\n</p>\r\n"
+  value: "<p>Welcome to Dafabet, Asia's leading online betting site and home to some of the best gaming products on the web that includes Sports Betting, Online Casino, Live Casino Games, Online Poker, Flash Games and an array of world class online betting games. sc</p>\r\n"
   format: basic_html
 partners_logo: {  }
 quicklinks_title: 'Quick Links'
+partners_image_url: null
+social_media_title: 'Follow us and receive the latest updates'
+back_to_top_title: ''
