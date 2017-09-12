@@ -1,22 +1,22 @@
-uuid: f1314d07-1974-40d2-bcd7-c644d664be5e
+uuid: 3f184cb2-1788-4a02-837e-fcc519dbd74c
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.sponsor_entity.sponsor_entity.field_sponsor_cmi
+    - field.field.taxonomy_term.master_placeholder.field_add_master_placeholder
+    - taxonomy.vocabulary.master_placeholder
   module:
     - paragraphs
-    - webcomposer_sponsor
 _core:
-  default_config_hash: 0Mzj_OSp_Monm3obq-yGXQpjSvTepCKn2m6L6i4ctB0
-id: sponsor_entity.sponsor_entity.default
-targetEntityType: sponsor_entity
-bundle: sponsor_entity
+  default_config_hash: b3kLYzqm8n19T065Ab46k-p8YVl3B82s_Drn7vTwuWA
+id: taxonomy_term.master_placeholder.default
+targetEntityType: taxonomy_term
+bundle: master_placeholder
 mode: default
 content:
-  field_sponsor_cmi:
+  field_add_master_placeholder:
     type: entity_reference_paragraphs
-    weight: 0
+    weight: 4
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -26,19 +26,25 @@ content:
       default_paragraph_type: ''
     third_party_settings: {  }
     region: content
+  langcode:
+    type: language_select
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   name:
     type: string_textfield
-    weight: -1
+    weight: 0
     region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 1
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
-  langcode: true
-  user_id: true
+  description: true
+  path: true

@@ -4,6 +4,8 @@ username_field:
     label: Username
     attr:
       placeholder: 'Username Placeholder'
+      enable_tooltip: 0
+      tooltip_blurb: ''
     wrapper_class: username
 currency_field:
   weight: '1'
@@ -11,6 +13,8 @@ currency_field:
     label: Currency
     attr:
       placeholder: Currency
+      enable_tooltip: 0
+      tooltip_blurb: ''
     error: 'Error Currency Field Error message'
     wrapper_class: currency_wrapper
 first_name_field:
@@ -19,6 +23,8 @@ first_name_field:
     label: 'First name'
     attr:
       placeholder: 'Enter First Name'
+      enable_tooltip: 0
+      tooltip_blurb: ''
     error: 'Error message for first name field'
     wrapper_class: first_name
 last_name_field:
@@ -27,6 +33,8 @@ last_name_field:
     label: 'Last name'
     attr:
       placeholder: 'Enter Last Name'
+      enable_tooltip: 0
+      tooltip_blurb: ''
     error: 'Last name field error message'
     wrapper_class: lastname
 dob_field:
@@ -35,6 +43,9 @@ dob_field:
     label: 'Date of Birth'
     error: 'Error message for dob'
     wrapper_class: dob
+    attr:
+      enable_tooltip: 0
+      tooltip_blurb: ''
 dob_month:
   weight: '6'
   options:
@@ -53,6 +64,8 @@ country_field:
     label: Country
     attr:
       placeholder: Country
+      enable_tooltip: 0
+      tooltip_blurb: ''
     error: 'Error message for country'
     wrapper_class: country
 email_field:
@@ -61,6 +74,8 @@ email_field:
     label: 'Email Address'
     attr:
       placeholder: '#######@gmail.com'
+      enable_tooltip: 0
+      tooltip_blurb: ''
     error: 'Error message for Email'
     wrapper_class: email
 gender_field:
@@ -68,6 +83,9 @@ gender_field:
   options:
     label: Gender
     wrapper_class: gender
+    attr:
+      enable_tooltip: 0
+      tooltip_blurb: ''
 communication_detail_field:
   options:
     label: 'Communication Details'
@@ -94,6 +112,8 @@ mobile_number_field:
     label: 'Contact Number'
     attr:
       placeholder: '09217715594'
+      enable_tooltip: 0
+      tooltip_blurb: ''
     error: 'Error message for Mobile'
     wrapper_class: mobile_number
 mobile_number_1_field:
@@ -110,6 +130,8 @@ language_field:
     label: Language
     attr:
       placeholder: 'Enter Language'
+      enable_tooltip: 0
+      tooltip_blurb: ''
     help_text: 'Help text for Language'
     error: 'Error field for Language'
     wrapper_class: language
@@ -119,6 +141,8 @@ address_field:
     label: Address
     attr:
       placeholder: Address
+      enable_tooltip: 0
+      tooltip_blurb: ''
     wrapper_class: address
 city_field:
   weight: '15'
@@ -126,6 +150,8 @@ city_field:
     label: City
     attr:
       placeholder: City
+      enable_tooltip: 0
+      tooltip_blurb: ''
     wrapper_class: city
 postal_code_field:
   weight: '16'
@@ -133,10 +159,12 @@ postal_code_field:
     label: 'Postal Code'
     attr:
       placeholder: 'Postal Code'
+      enable_tooltip: 0
+      tooltip_blurb: ''
     wrapper_class: postal_code
 save_changes_field: 'Save Changes'
 cancel_field: Cancel
-country_code_mapping_field: PH|+63
+country_code_mapping_field: "PH|+63\r\nHK|+8"
 country_mapping_field: 'Christmas Island|1'
 server_side_validation_field: 'INTERNAL_ERROR|Internal Server Error'
 required_validation_field: 'This is a required field'
@@ -165,6 +193,9 @@ contact_preference_field:
   options:
     label: 'Yes, send me the latest promotions, updatesd and offers?'
     wrapper_class: contact_preference
+    attr:
+      enable_tooltip: 0
+      tooltip_blurb: ''
 contact_preference_label:
   options:
     label: 'Contact Preference'
@@ -179,3 +210,5 @@ contact_preference_yes_label_field: 'Yes'
 contact_preference_no_label_field: 'No'
 _core:
   default_config_hash: TjvnuS4nsfoXfX8HYPQYjPSDmFbidr8O7YmETrrIcDI
+male_label_field: Male
+female_label_field: Female
