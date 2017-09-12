@@ -1,0 +1,8 @@
+sportsbook_expirydate_display: '不适用 '
+datetime_format: 'Y/m/d h:i A'
+no_result: '不适用 '
+service_unavailable: 读取数据错误
+zero_display: '不适用 '
+page_title: 活跃奖金
+next_label: 下一步
+prev_label: 先前的

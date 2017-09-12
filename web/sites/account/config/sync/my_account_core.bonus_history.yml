@@ -1,5 +1,5 @@
 datetime_format: 'd/m/Y h:i A'
-no_result: 'No result found'
+no_result: 'You currently don''t have any bonuses for this product.'
 service_unavailable: 'Error Fetching Data'
 page_title: 'Active Bonuses'
 zero_display: N/A

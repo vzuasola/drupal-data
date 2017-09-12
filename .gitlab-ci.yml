@@ -19,6 +19,7 @@ static code analysis:
   stage: tests
   script:
     - python -u automation/run.py --stage phpunit-sonarqube
+  allow_failure: true
 
 php code sniffer:
   stage: tests
