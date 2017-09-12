@@ -33,15 +33,81 @@ account_field:
     label: รายละเอียดบัญชี
 verify_text_field: ยืนยัน
 modal_verify_header_text_field: 'ยืนยันเบอร์โทรศัพท์ '
-modal_verify_body_text_field: 'รหัสยืนยันได้ถูกส่งผ่านทาง SMS แล้ว เพื่อเป็นการยืนยันเบอร์โทรศัพท์ของคุณกรุณาใส่รหัส 6 ตัว ด่านล่าง'
+modal_verify_body_text_field: 'รหัสการตรวจสอบได้ถูกส่งให้คุณผ่านทาง SMS เรียบร้อยแล้ว เพื่อให้การตรวจสอบหมายเลขโทรศัพท์ของคุณสมบูรณ์  กรณาใส่รหัส 6 ตัวด้านล่างนี้ ภายใน 10 นาที  หากคุณไม่ได้รับรหัสใดๆจากทางเรา กรุณาติดต่อที่ฝ่ายบริการลูกค้าแชทสด 24 ชั่วโมง'
 modal_verification_code_placeholder_field: รหัส
 modal_verification_resend_code_text_field: ส่งรหัสอีกครั้ง
 modal_verification_submit_text_field: ยืนยัน
 verification_code_response_field: "SMS_VERIFICATION_SUCCESS|รหัสยืนยันได้ถูกส่งไปที่เบอร์โทรศัพท์ของคุณแล้ว \r\nSMS_VERIFICATION_FAILED|ขออภัย มีข้อผิดพลาดบางอย่างในการยืนยันเบอร์โทรศัพท์ของคุณ กรุณาลองอีกครั้งหรือติดต่อที่ฝ่ายบริการลูกค้<a href=\"{livechat.link}\" class=\"live-chat-popup-trigger\">าแชทสด 24 ชั่วโมง</a> หรือผ่านทาง <a href=\"mailto:thaisupport@dafabet.com\"> อีเมล</a> (รหัส:110)\r\nSMS_VERIFICATION_SUBMIT_SUCCESS|เบอร์โทรศัพท์ของคุณได้รับการยืนยันเรียบร้อยแล้ว \r\nSMS_VERIFICATION_SUBMIT_FAILED| คุณใส่รหัสยืนยันไม่ถูกต้อง กรุณาลองอีกครั้ง  (รหัส:111)\r\nINTERNAL_ERROR|ข้อผิดพลาดภายใน (รหัส: 801)"
 verification_code_required_message_field: ข้อมูลจำเป็น
+verification_code_min_length_message_field: 'รหัสผ่านต้องมีอย่างน้อย6 ตัวอักษร'
 mobile_number_field:
   options:
-    label: เบอร์โทรศัพท์มือถือ
+    label: เบอร์มือถือ
+    attr:
+      tooltip_blurb: 'ใส่เบอร์โทรศัพท์ของคุณพร้อมรหัสประเทศ (ตัวอย่าง +6612345678). ใส่ได้เฉพาะตัวเลขและเครื่องหมาย + เท่านั้น'
 language_field:
   options:
     label: ภาษา
+contact_preference_bottom_blurb_field: '*โปรโมชั่นและการอัพเดตข้อมูลข่าวสารล่าสุดทั้งหมดจะถูกส่งไปยังอีเมลที่คุณทำการลงทะเบียนไว้ '
+home_address_field:
+  options:
+    label: ที่อยู่
+address_field:
+  options:
+    label: ที่อยู่
+    attr:
+      placeholder: จังหวัด
+city_field:
+  options:
+    label: จังหวัด
+    attr:
+      placeholder: จังหวัด
+postal_code_field:
+  options:
+    label: รหัสไปรษณีย์
+    attr:
+      placeholder: รหัสไปรษณีย์
+save_changes_field: 'บันทึกการเปลี่ยนแปลง '
+cancel_field: ยกเลิก
+server_side_validation_field: "INTERNAL_ERROR|ข้อผิดพลาดภายใน (รหัส: 801)\r\nUPDATE_PROFILE_SUCCESS|ข้อมูลของคุณได้ทำการอัพเดตเรียบร้อยแล้ว \r\nUPDATE_PROFILE_FAILED|มีข้อผิดพลาดบางอย่างในการอัพเดตข้อมูลของคุณ กรุณาลองอีกครั้งหรือติดต่อที่ฝ่ายบริการลูกค้ <a href=\"{livechat.link}\" class=\"live-chat-popup-trigger\">าแชทสด 24 ชั่วโม</a> หรือผ่านทา <a href=\"mailto:thaisupport@dafabet.com\">อีเมล</a> (รหัส: 700)\r\nCHECK_SESSION_PASSWORD_FAILED|มีข้อผิดพลาดบางอย่างในการอัพเดตข้อมูลของคุณ กรุณาลองอีกครั้งหรือติดต่อที่ฝ่ายบริการลูกค้ <a href=\"{livechat.link}\" class=\"live-chat-popup-trigger\">าแชทสด 24 ชั่วโม</a> หรือผ่านทา <a href=\"mailto:thaisupport@dafabet.com\">อีเมล</a> (รหัส: 700)"
+required_validation_field: ข้อมูลจำเป็น
+mobile_number_format_validation_field: 'ช่องนี้สามารถใส่เครื่องหมายบวก (+) และตัวเลขได้เท่านั้น'
+mobile_number_min_length_validation_field: 'รหัสผ่านต้องมีอย่างน้อย11 ตัวอักษร'
+mobile_number_max_length_validation_field: 'รหัสผ่านต้องไม่เกิน14 ตัวอักษร'
+address_max_length_validation_field: 'รหัสผ่านต้องไม่เกิน100 ตัวอักษร'
+address_min_length_validation_field: 'รหัสผ่านต้องมีอย่างน้อย2 ตัวอักษร'
+address_format_validation_field: 'ช่องนี้สามารถใส่ตัวอักษรหรือตัวเลขและเครื่องหมาย ()_-/\&#,. ได้เท่านั้น'
+city_max_length_validation_field: 'รหัสผ่านต้องไม่เกิน30 ตัวอักษร'
+city_min_length_validation_field: 'รหัสผ่านต้องมีอย่างน้อย2 ตัวอักษร'
+city_format_validation_field: 'ช่องนี้สามารถใส่ตัวอักษรหรือตัวเลขและเครื่องหมาย ()_-/\&#,. ได้เท่านั้น'
+postal_code_max_length_validation_field: 'รหัสผ่านต้องไม่เกิน10 ตัวอักษร'
+postal_code_format_validation_field: 'ช่องนี้สามารถใส่เครื่องหมายขีด (-) และตัวอักษรหรือตัวเลขได้เท่านั้น'
+password_max_length_validation_field: 'รหัสผ่านต้องไม่เกิน10 ตัวอักษร'
+password_min_length_validation_field: 'รหัสผ่านต้องมีอย่างน้อย6 ตัวอักษร'
+password_format_validation_field: ช่องนี้สามารถใส่ตัวอักษรหรือตัวเลขได้เท่านั้น
+primary_label_field: ข้อมูลเบื้องต้น
+add_mobile_label_field: เพิ่มเบอร์โทรศัพท์มือถือ
+contact_preference_top_blurb_field: 'คุณต้องการรับข้อมูลข่าวสารโปรโมชั่นล่าสุดหรือไม่? '
+contact_preference_field:
+  options:
+    label: 'ใช่ กรุณาส่งข้อมูลข่าวสารโปรโมชั่นล่าสุด '
+    attr:
+      tooltip_blurb: ''
+modal_preview_header_field: 'บันทึกการเปลี่ยนแปลงบัญชี '
+modal_preview_top_blurb_field: กรุณาตรวจสอบข้อมูลอีกครั้ง
+modal_preview_current_label_field: 'ล่าสุด '
+modal_preview_new_label_field: 'ใหม่ '
+modal_preview_bottom_blurb_field: ใส่รหัสผ่านของคุณเพื่อยืนยันการเปลี่ยนแปลง
+modal_preview_placeholder_field: รหัสผ่าน
+modal_preview_btn_field: 'บันทึกการเปลี่ยนแปลง '
+gender_field:
+  options:
+    label: เพศ
+no_changed_detected_message_field: 'ยังไม่มีการเปลี่ยนแปลงใด '
+contact_preference_label:
+  options:
+    label: ตั้งค่าการติดต่อ
+contact_preference_yes_label_field: 'ใช่ '
+contact_preference_no_label_field: ไม่ใช่
+male_label_field: ชาย
+female_label_field: หญิง
