@@ -7,15 +7,15 @@ webcomposer_form_manager.admin_settings:
     _permission: 'administer site configuration'
 
 webcomposer_form_manager.overview_form:
-  path: '/admin/config/webcomposer/form/list'
+  path: '/admin/config/webcomposer/form/manager'
   defaults:
     _form: '\Drupal\webcomposer_form_manager\Form\OverviewForm'
-    _title: 'Webcomposer Form List'
+    _title: 'Form Manager'
   requirements:
     _permission: 'administer site configuration'
 
 webcomposer_form_manager.form.view:
-  path: '/admin/config/webcomposer/form/manage/{form}'
+  path: '/admin/config/webcomposer/form/manager/manage/{form}'
   defaults:
     _form: '\Drupal\webcomposer_form_manager\Form\ManageForm'
     _title_callback: '\Drupal\webcomposer_form_manager\Form\ManageForm::title'
@@ -23,7 +23,7 @@ webcomposer_form_manager.form.view:
     _permission: 'administer site configuration'
 
 webcomposer_form_manager.field.view:
-  path: '/admin/config/webcomposer/form/manage/{form}/field/{field}'
+  path: '/admin/config/webcomposer/form/manager/manage/{form}/field/{field}'
   defaults:
     _form: '\Drupal\webcomposer_form_manager\Form\ManageField'
     _title_callback: '\Drupal\webcomposer_form_manager\Form\ManageField::title'

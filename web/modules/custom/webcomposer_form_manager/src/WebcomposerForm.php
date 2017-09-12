@@ -64,18 +64,30 @@ class WebcomposerForm {
   }
 
   /**
-   *
+   * @todo Create an alter hook so modules can alter the validation sets
+   * @todo Sync the validation behavior and description with Webform Validations
    */
   public function getValidations() {
     return [
+      'required' => [
+        'title' => 'Required',
+        'description' => 'Make this field required. Does not accept empty string inputs such as nulls and whitespace only.',
+      ],
       'alphanumeric' => [
+        'title' => 'Alphanumeric',
+        'description' => 'Only accept alpha numeric characters',
         'parameters' => [
           'show' => [
             '#title' => 'Allow special characters',
+            '#description' => 'If checked will allow special characters to be part of the validation',
             '#type' => 'checkbox',
             '#default_value' => true
           ],
         ],
+      ],
+      'numeric' => [
+        'title' => 'Numeric',
+        'description' => 'Only accept valid numbers (whole numbers and decimal)',
       ],
     ];
   }

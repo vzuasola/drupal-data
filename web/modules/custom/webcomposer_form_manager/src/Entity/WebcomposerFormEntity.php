@@ -2,6 +2,9 @@
 
 namespace Drupal\webcomposer_form_manager\Entity;
 
+/**
+ * Defines a custom Webcomposer Form Entity
+ */
 class WebcomposerFormEntity {
   /**
    * 

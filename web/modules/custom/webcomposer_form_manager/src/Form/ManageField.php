@@ -111,6 +111,7 @@ class ManageField extends FormBase {
     }
 
     $this->generateSettingsForm($form);
+    $this->generateValidationsForm($form);
 
     return parent::buildForm($form, $form_state);
   }
@@ -125,6 +126,7 @@ class ManageField extends FormBase {
       '#type' => 'details',
       '#title' => 'Field Settings',
       '#open' => TRUE,
+      '#tree' => TRUE,
     ];
 
     foreach ($this->field->getSettings() as $key => $value) {
@@ -142,6 +144,62 @@ class ManageField extends FormBase {
   }
 
   /**
+   * Generates the validation form
+   */
+  protected function generateValidationsForm(&$form) {
+    $form['field_validations'] = [
+      '#type' => 'vertical_tabs',
+      '#title' => 'Configure validation for this field',
+      '#tree' => TRUE,
+    ];
+
+    $validations = $this->formManager->getValidations();
+
+    foreach ($validations as $key => $value) {
+      $form[$key] = [
+        '#type' => 'details',
+        '#title' => $value['title'],
+        '#group' => 'field_validations',
+        '#parents' => ['field_validations'],
+        '#tree' => TRUE,
+      ];
+
+      $form[$key]['enable'] = [
+        '#type' => 'checkbox',
+        '#title' => $value['title'],
+        '#description' => $value['description'],
+        '#parents' => ['field_validations', $key, 'enable'],
+      ];
+
+      $form[$key]['error_wrapper'] = [
+        '#type' => 'details',
+        '#title' => 'Error message',
+        '#open' => TRUE,
+      ];
+
+      $form[$key]['error_wrapper']['error_message'] = [
+        '#type' => 'textarea',
+        '#title' => 'Error Message',
+        '#description' => "Provides the default error message for this validation set",
+        '#parents' => ['field_validations', $key, 'error_message'],
+      ];
+
+      if (!empty($value['parameters'])) {
+        $form[$key]['parameters_wrapper'] = [
+          '#type' => 'details',
+          '#title' => 'Parameters',
+          '#open' => TRUE,
+          '#parents' => ['field_validations', $key, 'parameters'],
+        ];
+
+        foreach ($value['parameters'] as $paramKey => $paramValue) {
+          $form[$key]['parameters_wrapper'][$paramKey] = $paramValue;
+        }
+      }
+    }
+  }
+
+  /**
    * {@inheritdoc}
    */
   public function validateForm(array &$form, FormStateInterface $form_state) {
@@ -150,17 +208,33 @@ class ManageField extends FormBase {
 
   /**
    * {@inheritdoc}
-   *
-   * @todo Add saving of field orders here
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
     parent::submitForm($form, $form_state);
 
+    dump($form_state->getValue(['field_settings']));
+    die;
+
+    $this->saveFieldSettings($form, $form_state);
+    $this->saveValidations($form, $form_state);
+  }
+
+  /**
+   * Save field settings
+   */
+  protected function saveFieldSettings($form, FormStateInterface $form_state) {
     $name = $this->getDefaultConfigName();
 
     $settings = $this->field->getSettings();
     $keys = array_keys($settings);
 
     $this->saveConfigValues($name, $keys, $form_state);
+  }
+
+  /**
+   * Save field validations
+   */
+  protected function saveValidations($form, FormStateInterface $form_state) {
+
   }
 }
