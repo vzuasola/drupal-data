@@ -1,0 +1,8 @@
+sportsbook_expirydate_display: '해당사항 없음'
+datetime_format: 'Y/m/d h:i A'
+no_result: '해당사항 없음'
+service_unavailable: '데이터 로딩 실패'
+zero_display: '해당사항 없음'
+page_title: '활성 보너스'
+next_label: 다음
+prev_label: 이전

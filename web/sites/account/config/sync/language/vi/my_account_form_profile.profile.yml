@@ -33,15 +33,79 @@ account_field:
     label: 'Chi Tiết Tài Khoản'
 verify_text_field: 'Xác thực'
 modal_verify_header_text_field: 'Xác thực Số Điện Thoại Di Động'
-modal_verify_body_text_field: 'Mã xác thực đã được gửi đến Số ĐTDĐ bạn đăng ký. Để hoàn thành xác thực số điện thoại,  bạn cần nhập Mã 6 số vào bên dưới.'
+modal_verify_body_text_field: 'Mã xác thực đã được gửi đến bạn qua Tin Nhắn. Hãy nhập mã 6 chữ số vào mục bên dưới để hoàn tất việc xác thực số điện thoại trong vòng 10 phút. Nếu không nhận được mã xác thực, vui lòng liên hệ Hỗ Trợ Trực Tuyến.'
 modal_verification_code_placeholder_field: Mã
 modal_verification_resend_code_text_field: 'Gửi lại Mã'
 modal_verification_submit_text_field: GỬI
 verification_code_response_field: "SMS_VERIFICATION_SUCCESS|Mã xác thực đã được gửi đến Số ĐTDĐ bạn đăng ký.\r\nSMS_VERIFICATION_FAILED|Rất tiếc, đã có lỗi trong quá trình xác thực số điện thoại của bạn. Vui lòng thử lại hoặc liên hệ với chúng tôi thông qua<a href=\"{livechat.link}\" class=\"live-chat-popup-trigger\"> Live Chat </a> hoặc <a href=\"mailto:vnsupport@dafabet.com\"> Email </a> (Mã:110)\r\nSMS_VERIFICATION_SUBMIT_SUCCESS|Số Điện Thoại Di Động của bạn đã được xác thực thành công.\r\nSMS_VERIFICATION_SUBMIT_FAILED| Mã vừa được nhập không chính xác. Vui lòng thử lại. (Mã:111)\r\nINTERNAL_ERROR|Lỗi hệ thống (Mã: 801) "
 verification_code_required_message_field: 'Mục này là bắt buộc.'
+verification_code_min_length_message_field: 'Vui lòng nhập ít nhất 6 ký tự.'
 mobile_number_field:
   options:
     label: 'Số Điện Thoại'
+    attr:
+      tooltip_blurb: 'Nhập số điện thoại di động của bạn với mã quốc gia (ví dụ: +8412345678). Chỉ cho phép các giá trị chữ số và dấu cộng.'
 language_field:
   options:
     label: 'Ngôn Ngữ'
+contact_preference_bottom_blurb_field: '*Tất cả các khuyến mãi, cập nhật và ưu đãi sẽ được gửi đến địa chỉ email đăng ký của bạn'
+contact_preference_field:
+  options:
+    label: 'Tôi đồng ý nhận email về các khuyến mãi, cập nhật và ưu đãi mới nhất'
+home_address_field:
+  options:
+    label: 'Địa chỉ'
+address_field:
+  options:
+    label: 'Địa chỉ'
+    attr:
+      placeholder: 'Địa chỉ'
+city_field:
+  options:
+    label: 'Thành phố'
+    attr:
+      placeholder: 'Thành phố'
+postal_code_field:
+  options:
+    label: 'Mã bưu điện'
+    attr:
+      placeholder: 'Mã bưu điện'
+save_changes_field: 'Lưu thay đổi'
+cancel_field: Hủy
+server_side_validation_field: "INTERNAL_ERROR|Lỗi hệ thống (Mã: 801) \r\nUPDATE_PROFILE_SUCCESS|Hồ sơ của bạn đã được cập nhật.\r\nUPDATE_PROFILE_FAILED|Đã xảy ra lỗi khi cập nhật hồ sơ của bạn. Vui lòng thử lại hoặc liên hệ với chúng tôi thông qua: <a href=\"{livechat.link}\" class=\"live-chat-popup-trigger\">Chat Trực Tuyến</a> hoặc <a href=\"mailto:vnsupport@dafabet.com\">Email.</a>(Mã: 700)\r\nCHECK_SESSION_PASSWORD_FAILED|Đã xảy ra lỗi khi cập nhật hồ sơ của bạn. Vui lòng thử lại hoặc liên hệ với chúng tôi thông qua: <a href=\"{livechat.link}\" class=\"live-chat-popup-trigger\">Chat Trực Tuyến</a> hoặc <a href=\"mailto:vnsupport@dafabet.com\">Email.</a>(Mã: 700)"
+required_validation_field: 'Mục này là bắt buộc.'
+mobile_number_format_validation_field: 'Phần này chỉ có thể bao gồm dấu cộng (+) và các ký tự số.'
+mobile_number_min_length_validation_field: 'Vui lòng nhập ít nhất 11 ký tự.'
+mobile_number_max_length_validation_field: 'Vui lòng nhập không quá 14 ký tự.'
+address_max_length_validation_field: 'Vui lòng nhập không quá 100 ký tự.'
+address_min_length_validation_field: 'Vui lòng nhập ít nhất 2 ký tự.'
+address_format_validation_field: 'Phần này chỉ có thể bao gồm các ký tự chữ và số và các ký tự () _- / \ & # ,.'
+city_max_length_validation_field: 'Vui lòng nhập không quá 30 ký tự.'
+city_min_length_validation_field: 'Vui lòng nhập ít nhất 2 ký tự.'
+city_format_validation_field: 'Phần này chỉ có thể bao gồm các ký tự chữ và số và các ký tự () _- / \ & # ,.'
+postal_code_max_length_validation_field: 'Vui lòng nhập không quá 10 ký tự.'
+postal_code_format_validation_field: 'Phần này chỉ có thể bao gồm dấu gạch ngang (-) ký tự chữ và số.'
+password_max_length_validation_field: 'Vui lòng nhập không quá 10 ký tự.'
+password_min_length_validation_field: 'Vui lòng nhập ít nhất 6 ký tự.'
+password_format_validation_field: 'Phần này chỉ có thể bao gồm các ký tự chữ và số.'
+primary_label_field: 'Mặc định'
+add_mobile_label_field: 'Thêm số ĐTDĐ'
+contact_preference_top_blurb_field: 'Bạn có muốn nhận email về các khuyến mãi, cập nhật và ưu đãi mới nhất không?'
+modal_preview_header_field: 'Lưu Thay đổi Tài khoản'
+modal_preview_top_blurb_field: 'Vui lòng xem lại danh sách các thay đổi.'
+modal_preview_current_label_field: 'Hiện tại '
+modal_preview_new_label_field: Mới
+modal_preview_bottom_blurb_field: "Nhập mật khẩu để lưu các thay đổi cho tài khoản của bạn.\r\n"
+modal_preview_placeholder_field: 'Mật khẩu'
+modal_preview_btn_field: 'Lưu thay đổi'
+gender_field:
+  options:
+    label: 'Giới tính'
+no_changed_detected_message_field: 'Không có thay đổi nào được thực hiện.'
+contact_preference_label:
+  options:
+    label: 'Thông Tin Liên hệ'
+contact_preference_yes_label_field: 'Có '
+contact_preference_no_label_field: Không
+male_label_field: 'Nam '
+female_label_field: Nữ
