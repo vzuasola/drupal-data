@@ -95,6 +95,58 @@ class FormBase extends ConfigFormBase {
   /**
    *
    */
+  public function saveRawConfigValue($name, $key, $data) {
+    if ($this->isConfigValueOverride()) {
+      $language = $this->languageManager->getCurrentLanguage();
+      $configTranslation = $this->languageManager->getLanguageConfigOverride($language->getId(), $name);
+
+      $configTranslation->set($key, $data)->save();
+
+      $savedConfig = $configTranslation->get();
+
+      if (empty($savedConfig)) {
+        $configTranslation->delete();
+      } else {
+        $configTranslation->save();
+      }
+
+      return;
+    }
+
+    $this->config($name)->set($key, $data)->save();
+  }
+
+  /**
+   *
+   */
+  public function saveRawConfigValues($name, $keys, $data) {
+    if ($this->isConfigValueOverride()) {
+      $language = $this->languageManager->getCurrentLanguage();
+      $configTranslation = $this->languageManager->getLanguageConfigOverride($language->getId(), $name);
+
+      foreach ($keys as $key) {
+        $configTranslation->set($key, $data[$key])->save();
+      }
+
+      $savedConfig = $configTranslation->get();
+
+      if (empty($savedConfig)) {
+        $configTranslation->delete();
+      } else {
+        $configTranslation->save();
+      }
+
+      return;
+    }
+
+    foreach ($keys as $key) {
+      $this->config($name)->set($key, $data[$key])->save();
+    }
+  }
+
+  /**
+   *
+   */
   protected function isConfigValueOverride() {
     $currentLanguage = $this->languageManager->getCurrentLanguage()->getId();
     $defaultLanguage = $this->languageManager->getDefaultLanguage()->getId();

@@ -72,10 +72,12 @@ class WebcomposerForm {
       'required' => [
         'title' => 'Required',
         'description' => 'Make this field required. Does not accept empty string inputs such as nulls and whitespace only.',
+        'error' => 'Field should be requuired',
       ],
       'alphanumeric' => [
         'title' => 'Alphanumeric',
         'description' => 'Only accept alpha numeric characters',
+        'error' => 'Field should be alphanumeric',
         'parameters' => [
           'show' => [
             '#title' => 'Allow special characters',
@@ -88,6 +90,7 @@ class WebcomposerForm {
       'numeric' => [
         'title' => 'Numeric',
         'description' => 'Only accept valid numbers (whole numbers and decimal)',
+        'error' => 'Field should be numeric',
       ],
     ];
   }

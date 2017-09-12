@@ -103,11 +103,11 @@ class ManageField extends FormBase {
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
     // check if the entity and field exists first
-    if (!$this->entity ||
-      !$this->field ||
-      empty($this->field->getSettings())
-    ) {
-      throw new \Symfony\Component\HttpKernel\Exception\NotFoundHttpException();
+    switch (true) {
+      case !$this->entity:
+      case !$this->field:
+      case empty($this->field->getSettings()):
+        throw new \Symfony\Component\HttpKernel\Exception\NotFoundHttpException();
     }
 
     $this->generateSettingsForm($form);
@@ -121,6 +121,7 @@ class ManageField extends FormBase {
    */
   protected function generateSettingsForm(&$form) {
     $name = $this->getDefaultConfigName();
+    $fieldSettings = $this->getConfigValues($name, 'field_settings');
 
     $form['field_settings'] = [
       '#type' => 'details',
@@ -132,13 +133,12 @@ class ManageField extends FormBase {
     foreach ($this->field->getSettings() as $key => $value) {
       $form['field_settings'][$key] = $value;
 
-      $defaultValue = $this->getConfigValues($name, $key);
-      $defaultDefinedValue = $this->field->getOption('default_value');
+      $defaultValue = $this->field->getOption('default_value');
 
-      if (isset($defaultValue)) {
+      if (isset($fieldSettings[$key])) {
+        $form['field_settings'][$key]['#default_value'] = $fieldSettings[$key];
+      } elseif ($defaultValue) {
         $form['field_settings'][$key]['#default_value'] = $defaultValue;
-      } elseif ($defaultDefinedValue) {
-        $form['field_settings'][$key]['#default_value'] = $defaultDefinedValue;
       }
     }
   }
@@ -147,6 +147,9 @@ class ManageField extends FormBase {
    * Generates the validation form
    */
   protected function generateValidationsForm(&$form) {
+    $name = $this->getDefaultConfigName();
+    $fieldValidations = $this->getConfigValues($name, 'field_validations');
+
     $form['field_validations'] = [
       '#type' => 'vertical_tabs',
       '#title' => 'Configure validation for this field',
@@ -160,7 +163,6 @@ class ManageField extends FormBase {
         '#type' => 'details',
         '#title' => $value['title'],
         '#group' => 'field_validations',
-        '#parents' => ['field_validations'],
         '#tree' => TRUE,
       ];
 
@@ -169,6 +171,7 @@ class ManageField extends FormBase {
         '#title' => $value['title'],
         '#description' => $value['description'],
         '#parents' => ['field_validations', $key, 'enable'],
+        '#default_value' => $fieldValidations[$key]['enable'] ?? FALSE,
       ];
 
       $form[$key]['error_wrapper'] = [
@@ -182,6 +185,7 @@ class ManageField extends FormBase {
         '#title' => 'Error Message',
         '#description' => "Provides the default error message for this validation set",
         '#parents' => ['field_validations', $key, 'error_message'],
+        '#default_value' => $fieldValidations[$key]['error_message'] ?? $value['error'] ?? "",
       ];
 
       if (!empty($value['parameters'])) {
@@ -194,6 +198,10 @@ class ManageField extends FormBase {
 
         foreach ($value['parameters'] as $paramKey => $paramValue) {
           $form[$key]['parameters_wrapper'][$paramKey] = $paramValue;
+
+          if (isset($fieldValidations[$key]['parameters'][$paramKey])) {
+            $form[$key]['parameters_wrapper'][$paramKey]['#default_value'] = $fieldValidations[$key]['parameters'][$paramKey];
+          }
         }
       }
     }
@@ -212,9 +220,6 @@ class ManageField extends FormBase {
   public function submitForm(array &$form, FormStateInterface $form_state) {
     parent::submitForm($form, $form_state);
 
-    dump($form_state->getValue(['field_settings']));
-    die;
-
     $this->saveFieldSettings($form, $form_state);
     $this->saveValidations($form, $form_state);
   }
@@ -228,13 +233,32 @@ class ManageField extends FormBase {
     $settings = $this->field->getSettings();
     $keys = array_keys($settings);
 
-    $this->saveConfigValues($name, $keys, $form_state);
+    $data = [];
+    $fieldSettings = $form_state->getValue(['field_settings']);
+
+    foreach ($keys as $key) {
+      $data[$key] = $fieldSettings[$key];
+    }
+
+    $this->saveRawConfigValue($name, 'field_settings', $data);
   }
 
   /**
    * Save field validations
    */
   protected function saveValidations($form, FormStateInterface $form_state) {
+    $name = $this->getDefaultConfigName();
 
+    $validations = $this->formManager->getValidations();
+    $keys = array_keys($validations);
+
+    $data = [];
+    $fieldValidations = $form_state->getValue(['field_validations']);
+
+    foreach ($keys as $key) {
+      $data[$key] = $fieldValidations[$key];
+    }
+
+    $this->saveRawConfigValue($name, 'field_validations', $data);
   }
 }
