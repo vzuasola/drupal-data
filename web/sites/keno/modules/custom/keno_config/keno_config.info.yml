@@ -1,0 +1,6 @@
+name: Keno Configurations Module
+description: Keno specific module.
+package: Keno
+
+type: module
+core: 8.x
