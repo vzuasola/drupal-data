@@ -91,16 +91,16 @@ class KenoRestResource extends ResourceBase {
       $config = \Drupal::config("keno_config.$id");
       $data = $config->get();
     } catch (\Exception $e) {
-      $data = array(
+      $data = [
         'error' => $this->t('Configuration not found')
-      );
+      ];
     }
 
-    $build = array(
-      '#cache' => array(
+    $build = [
+      '#cache' => [
         'max-age' => 0,
-      ),
-    );
+      ],
+    ];
 
     return (new ResourceResponse($data))->addCacheableDependency($build);
   }
