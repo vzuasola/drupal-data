@@ -51,11 +51,11 @@ class TrustElementForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    $kenoConfigValuesKeys = [
+    $kenoConfig = [
       'trust_element_title',
       'trust_element_content',
     ];
-    foreach ($kenoConfigValuesKeys as $keys) {
+    foreach ($kenoConfig as $keys) {
         $this->config('keno_config.trust_element_config')->set($keys, $form_state->getValue($keys))->save();
     }
     parent::submitForm($form, $form_state);
