@@ -1,0 +1,5 @@
+keno_config.trust_element_config_schema:
+  title: 'Trust Element'
+  base_route_name: keno_config.trust_element_form
+  names:
+    - 'keno_config.trust_element_config'
