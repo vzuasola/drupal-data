@@ -6,7 +6,7 @@ use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Configuration Form for the Auto Logout Fucntionality.
+ * Configuration Form for Trust Element.
  */
 class TrustElementForm extends ConfigFormBase {
 
