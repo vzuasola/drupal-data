@@ -86,7 +86,7 @@ class KenoRestResource extends ResourceBase {
       throw new AccessDeniedHttpException();
     }
 
-    $data = array();
+    $data = [];
     try {
       $config = \Drupal::config("keno_config.$id");
       $data = $config->get();
