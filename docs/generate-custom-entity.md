@@ -110,7 +110,7 @@ $form_state->setRedirectUrl($entity->urlInfo('collection'));
 
 * `Sync first your configuration, so that sync fields will be empty`. Your config sync should show no changes afterwards.
 
-* Add field on the entity settings. `Please put proper and gramtically correct description on each field`.
+* Add field on the entity settings. `Please put proper and gramatically correct description on each field`.
 
 * Manage the form display, on the entity settings. Sort your fields as necessary. Set `Name` field to the topmost display and these fields should be `hidden`
     * `Language`
