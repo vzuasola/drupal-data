@@ -8,6 +8,7 @@ use Drupal\rest\ResourceResponse;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 use Drupal\webform\WebformThirdPartySettingsManager;
 use Drupal\file\Entity\File;
+use Drupal\Core\Render\Element;
 
 /**
  * Creates a resource for retrieving webform elements.
@@ -73,7 +74,30 @@ class WebformElementsResource extends ResourceBase {
     $original = $webform->getElementsDecoded();
     $decoded = $webform->getElementsOriginalDecoded();
 
-    return array_replace_recursive($original, $decoded);
+    $result = array_replace_recursive($original, $decoded);
+
+    $this->fixFieldset($result, $result, $decoded);
+
+    return $result;
+  }
+
+  /**
+   * Fix for fieldset not being translated
+   */
+  private function fixFieldset(&$form, $base, $decoded) {
+    foreach (Element::children($form) as $key) {
+      if (isset($form[$key]['#type']) &&
+        $form[$key]['#type'] == 'fieldset'
+      ) {
+        foreach (Element::children($form[$key]) as $field) {
+          if (isset($base[$field]) && isset($decoded[$field])) {
+            $form[$key][$field] = array_replace_recursive($form[$key][$field], $decoded[$field]);
+
+            $this->fixFieldset($form[$key][$field], $base, $decoded);
+          }
+        }
+      }
+    }
   }
 
   /**
