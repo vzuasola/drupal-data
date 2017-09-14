@@ -1,0 +1,11 @@
+keno_config.trust_element_config:
+  type: mapping
+  label: 'Trust Element'
+  mapping:
+    trust_element_title:
+      type: label
+      label: 'Title'
+    trust_element_content:
+      type: text_format
+      label: 'Content'
+      translatable: true
