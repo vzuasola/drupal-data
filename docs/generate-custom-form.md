@@ -55,7 +55,7 @@ webcomposer_module.list:
 
 * Clear the cache and check the configuration page, your form should appear now. If not then you need to debug it
 
-## Adding fields and 
+## Adding fields and submit handler
 
 * On the generated `MyConfigForm.php`, add your fields as it is
 
