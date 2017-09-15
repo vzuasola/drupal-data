@@ -16,8 +16,8 @@ All answers can be default except for
 * A title for the menu link: `My Configuration`
 * A description for the menu link: `Configuration my custom settings`
 
-> For Webcomposer module paths, use this format. Example us for single sign on form
->`/admin/config/webcomposer/single_signon/authentication`
+> For Webcomposer module paths, use this format `/admin/config/webcomposer/<module_name>/<form_name>`
+> Example for single sign on form `/admin/config/webcomposer/single_signon/authentication`
 
 * Delete the generated `config/install` folder on the module
 
@@ -132,15 +132,13 @@ my_text: My Text default value
 my_textarea: This is a really long text
 ```
 
-> Best practice is 1 yml per form, since 1 form only contains 1 editableConfigName
+> Best practice is one yml per form, since one form only contains one editableConfigName
 
 ### Uninstall hook
 
 * Create `webcomposer_module.install`
 
 * Add this hook, specify `keys` of `getEditableConfigNames` per form
-
-> Best practice is 1 key per form, since 1 form only contains 1 editableConfigName
 
 ```php
 /**
@@ -155,5 +153,6 @@ function webcomposer_module_uninstall() {
       \Drupal::configFactory()->getEditable($key)->delete();
     }
 }
-
 ```
+
+> Best practice is one key per form, since one form only contains one editableConfigName
