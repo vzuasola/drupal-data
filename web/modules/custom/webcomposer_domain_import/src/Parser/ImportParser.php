@@ -36,6 +36,7 @@ class ImportParser {
 
   	}
 
+
   	/**
 	 * Function to process all data at once
 	 * Calling this function will tell the parser to process all data and store it in its cache
