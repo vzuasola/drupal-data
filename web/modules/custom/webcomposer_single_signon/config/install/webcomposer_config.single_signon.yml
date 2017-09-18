@@ -1,1 +1,2 @@
 single_signon_server: https://www.dafabet.com
+supported_domains: "*.dafabet.com\r\n*.elysium-dfbt.com"

@@ -41,6 +41,13 @@ class AuthenticationForm extends ConfigFormBase {
       '#default_value' => $config->get('single_signon_server')
     ];
 
+    $form['supported_domains'] = [
+      '#type' => 'textarea',
+      '#title' => t('Supported Domains'),
+      '#description' => $this->t('Define the domains that the Single Sign On will allow requests from.<br>One domain per line. Supports wildcard.'),
+      '#default_value' => $config->get('supported_domains')
+    ];
+
     return parent::buildForm($form, $form_state);
   }
 
@@ -57,6 +64,7 @@ class AuthenticationForm extends ConfigFormBase {
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $keys = [
       'single_signon_server',
+      'supported_domains',
     ];
 
     foreach ($keys as $key) {
