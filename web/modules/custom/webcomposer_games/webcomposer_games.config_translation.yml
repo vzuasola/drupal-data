@@ -3,3 +3,9 @@ webcomposer_games.games_playtech_provider_schema:
   base_route_name: webcomposer_games.games_playtech_provider_form
   names:
     - 'webcomposer_config.games_playtech_provider'
+
+webcomposer_games.loading_page_schema:
+  title: 'Loading Page Configuration'
+  base_route_name: webcomposer_games.loading_page_form
+  names:
+    - 'webcomposer_config.loading_page'
