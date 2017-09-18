@@ -19,6 +19,7 @@ module:
   devel_generate: 0
   dynamic_page_cache: 0
   editor: 0
+  entity_reference_revisions: 0
   field: 0
   field_ui: 0
   file: 0
@@ -38,6 +39,7 @@ module:
   my_account_form_profile: 0
   node: 0
   options: 0
+  paragraphs: 0
   path: 0
   quickedit: 0
   rdf: 0
@@ -55,6 +57,7 @@ module:
   update: 0
   user: 0
   views_ui: 0
+  webcomposer_dm: 0
   webcomposer_editor: 0
   webcomposer_rest_extra: 0
   webcomposer_territory_blocking: 0

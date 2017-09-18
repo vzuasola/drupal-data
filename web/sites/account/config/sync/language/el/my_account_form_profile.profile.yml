@@ -33,15 +33,79 @@ account_field:
     label: 'Λεπτομέρειες Λογαριασμού'
 verify_text_field: Επιβεβαίωση
 modal_verify_header_text_field: 'Επιβεβαίωση Αριθμού Κινητού'
-modal_verify_body_text_field: 'Ένας κωδικός επιβεβαίωσης σας έχει σταλεί μέσω SMS. Για να ολοκληρώσετε την επιβεβαίωση του αριθμού κινητού σας, παρακαλώ εισάγετε τον 6-ψήφιο κωδικό παρακάτω.'
+modal_verify_body_text_field: 'Ένας κωδικός επιβεβαίωσης σας έχει αποσταλεί μέσω SMS. Για να ολοκληρωθεί η επαλήθευση του κινητού σας τηλεφώνου, παρακαλώ συμπληρώστε τον 6-ψήφιο κωδικό παρακάτω εντός 10 λεπτών. Αν δε λάβατε κάποιο κωδικό, παρακαλώ επικοινωνήστε με την Εξυπηρέτηση Πελατών.'
 modal_verification_code_placeholder_field: Κωδικός
 modal_verification_resend_code_text_field: 'Επανάληψη αποστολής κωδικού'
 modal_verification_submit_text_field: ΥΠΟΒΟΛΗ
 verification_code_response_field: "SMS_VERIFICATION_SUCCESS|Ένας κωδικός επιβεβαίωσης σας έχει σταλεί στον αριθμό κινητού σας.\r\nSMS_VERIFICATION_FAILED|Μας συγχωρείτε, υπήρξε κάποιο λάθος στην επιβεβαίωση του αριθμού κινητού σας. Παρακαλώ δοκιμάστε ξανά αλλιώς μπορείτε να επικοινωνήσετε μαζί μας μέσω<a href=\"mailto:grsupport@dafabet.com\"> Email </a> (Κωδικός:110)\r\nSMS_VERIFICATION_SUBMIT_SUCCESS|Ο αριθμός κινητού σας έχει επιβεβαιωθεί επιτυχώς.\r\nSMS_VERIFICATION_SUBMIT_FAILED| Έχετε εισάγει έναν μη έγκυρο κωδικό επιβεβαίωσης. Παρακαλώ δοκιμάστε ξανά.(Κωδικός:111)\r\nINTERNAL_ERROR|Εσωτερικό σφάλμα (Κωδικός: 801)"
 verification_code_required_message_field: 'Αυτό το πεδίο είναι υποχρεωτικό.'
+verification_code_min_length_message_field: 'Παρακαλώ εισάγετε τουλάχιστον 6 χαρακτήρες.'
 mobile_number_field:
   options:
-    label: 'Αριθμός Κινητού'
+    label: 'Κινητού Αριθμός'
+    attr:
+      tooltip_blurb: 'Παρακαλώ γράψτε το κινητό σας τηλέφωνο με κωδικό χώρας (π.χ. +6612345678). Μόνο αριθμοί και το σύμβολο της πρόσθεσης είναι αποδε'
 language_field:
   options:
     label: Γλώσσα
+contact_preference_bottom_blurb_field: '*Όλες οι προωθητικές ενέργειες, ενημερώσεις και προσφορές θα σταλούν στην εγγεγραμμένη διεύθυνση ηλεκτρονικού ταχυδρομείου σας.'
+contact_preference_field:
+  options:
+    label: 'Ναι. Στείλτε μου τις τελευταίες προωθητικές ενέργειες, ενημερώσεις και προσφορές.'
+home_address_field:
+  options:
+    label: Διεύθυνση
+address_field:
+  options:
+    label: Διεύθυνση
+    attr:
+      placeholder: Διεύθυνση
+city_field:
+  options:
+    label: Χώρα/Πόλη
+    attr:
+      placeholder: Χώρα/Πόλη
+postal_code_field:
+  options:
+    label: 'Ταχυδρομικός Κώδικας'
+    attr:
+      placeholder: 'Ταχυδρομικός Κώδικας'
+save_changes_field: 'Αποθήκευσε τις Αλλαγές'
+cancel_field: Ακύρωση
+server_side_validation_field: "INTERNAL_ERROR|Εσωτερικό σφάλμα (Κωδικός: 801)\r\nUPDATE_PROFILE_SUCCESS|Το προφίλ σου έχει ενημερωθεί.\r\nUPDATE_PROFILE_FAILED|Υπήρξε σφάλμα κατά την ενημέρωση του προφίλ σας. Παρακαλώ προσπαθήστε ξανά ή επικοινωνήστε μαζί μας μέσω :<a href=\"mailto:grsupport@dafabet.com\">Email.</a>(Κωδικός: 700)\r\nCHECK_SESSION_PASSWORD_FAILED|Υπήρξε σφάλμα κατά την ενημέρωση του προφίλ σας. Παρακαλώ προσπαθήστε ξανά ή επικοινωνήστε μαζί μας μέσω :<a href=\"mailto:grsupport@dafabet.com\">Email.</a>(Κωδικός: 700)"
+required_validation_field: 'Αυτό το πεδίο είναι υποχρεωτικό.'
+mobile_number_format_validation_field: 'Αυτό το πεδίο μπορεί να περιέχει μόνο το σύμβολο της πρόσθεσης (+) και νούμερα. '
+mobile_number_min_length_validation_field: 'Παρακαλώ εισάγετε τουλάχιστον 11 χαρακτήρες.'
+mobile_number_max_length_validation_field: 'Παρακαλώ εισάγετε όχι περισσότερους από 14 χαρακτήρες.'
+address_max_length_validation_field: 'Παρακαλώ εισάγετε όχι περισσότερους από 100 χαρακτήρες.'
+address_min_length_validation_field: 'Παρακαλώ εισάγετε τουλάχιστον 2 χαρακτήρες.'
+address_format_validation_field: 'Αυτό το πεδίο μπορεί να περιέχει μόνο αλφαριθμητικούς χαρακτήρες και ()_-/\&#,.'
+city_max_length_validation_field: 'Παρακαλώ εισάγετε όχι περισσότερους από 30 χαρακτήρες.'
+city_min_length_validation_field: 'Παρακαλώ εισάγετε τουλάχιστον 2 χαρακτήρες.'
+city_format_validation_field: 'Αυτό το πεδίο μπορεί να περιέχει μόνο αλφαριθμητικούς χαρακτήρες και ()_-/\&#,.'
+postal_code_max_length_validation_field: 'Παρακαλώ εισάγετε όχι περισσότερους από 10 χαρακτήρες.'
+postal_code_format_validation_field: 'Αυτό το πεδίο μπορεί να περιέχει μόνο παύλα (-) και αλφαριθμητικούς χαρακτήρες. '
+password_max_length_validation_field: 'Παρακαλώ εισάγετε όχι περισσότερους από 10 χαρακτήρες.'
+password_min_length_validation_field: 'Παρακαλώ εισάγετε τουλάχιστον 6 χαρακτήρες.'
+password_format_validation_field: 'Αυτό το πεδίο μπορεί να περιέχει μόνο αλφαριθμητικούς χαρακτήρες.'
+primary_label_field: Αρχικός
+add_mobile_label_field: 'Προσθέστε Αριθμό Κινητού Τηλεφώνου'
+contact_preference_top_blurb_field: "Θα θέλατε να λάβετε τις τελευταίες προωθητικές ενέργειες, ενημερώσεις και προσφορές;\r\n"
+modal_preview_header_field: 'Αποθήκευσε τις Αλλαγές Λογαριασμού'
+modal_preview_top_blurb_field: 'Ανατρέξτε στη λίστα αλλαγών.'
+modal_preview_current_label_field: 'Τρέχων '
+modal_preview_new_label_field: Νέος
+modal_preview_bottom_blurb_field: 'Εισαγάγετε τον κωδικό πρόσβασής σας για να αποθηκεύσετε τις αλλαγές στο λογαριασμό σας.'
+modal_preview_placeholder_field: 'Κωδικός Πρόσβασης'
+modal_preview_btn_field: 'Αποθήκευσε τις Αλλαγές'
+gender_field:
+  options:
+    label: Φύλο
+no_changed_detected_message_field: 'Δεν έγινε καμία αλλαγή.'
+contact_preference_label:
+  options:
+    label: 'Προτίμηση Επικοινωνίας'
+contact_preference_yes_label_field: 'Ναι '
+contact_preference_no_label_field: Όχι
+male_label_field: 'Άντρας '
+female_label_field: Γυναίκα

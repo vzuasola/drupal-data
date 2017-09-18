@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.taxonomy_term.product_tabs.field_bonus_friendly_name
     - field.field.taxonomy_term.product_tabs.field_enable_disable_tab
     - field.field.taxonomy_term.product_tabs.field_product_tab_id
     - field.field.taxonomy_term.product_tabs.field_show_in_kebab
@@ -21,6 +22,16 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_bonus_friendly_name:
+    weight: 4
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
   field_enable_disable_tab:
     weight: 3
     label: above
