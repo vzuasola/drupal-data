@@ -1,0 +1,11 @@
+uuid: 7bbbf1a1-b6be-4af7-b599-4ba010e3d7fc
+langcode: zh-hans
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 6G7JAcqERXFPz8KlDKEgZ7p3TlpmtnJaIOtntmAuNUc
+name: 'Affiliates Parameters'
+vid: affiliates_parameters
+description: 'List of Affiliates parameter'
+hierarchy: 0
+weight: -10

@@ -1,0 +1,23 @@
+uuid: c0f88618-f349-4aa0-abc5-454a93223d48
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_social_media_links
+    - paragraphs.paragraphs_type.social_media
+_core:
+  default_config_hash: pV1lR9C8baBLjUHECDgZ9-9o1ynmBXy2ApLqwCOEudI
+id: paragraph.social_media.field_social_media_links
+field_name: field_social_media_links
+entity_type: paragraph
+bundle: social_media
+label: Links
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: '#'
+default_value_callback: ''
+settings: {  }
+field_type: string
