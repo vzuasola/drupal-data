@@ -7,3 +7,4 @@ webcomposer_games.loading_page_tab:
   route_name: webcomposer_games.loading_page_form
   title: 'Loading Page Configuration'
   base_route: webcomposer_games.loading_page_form
+  
