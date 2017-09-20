@@ -2,9 +2,3 @@ webcomposer_games.games_playtech_provider_tab:
   route_name: webcomposer_games.games_playtech_provider_form
   title: 'Playtech Provider Configuration'
   base_route: webcomposer_games.games_playtech_provider_form
-
-webcomposer_games.loading_page_tab:
-  route_name: webcomposer_games.loading_page_form
-  title: 'Loading Page Configuration'
-  base_route: webcomposer_games.loading_page_form
-  

@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\keno_config\Form;
+namespace Drupal\webcomposer_games\Form;
 
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
@@ -14,7 +14,7 @@ class LoadingPage extends ConfigFormBase {
    * {@inheritdoc}
    */
   protected function getEditableConfigNames() {
-    return ['keno_config.loading_page'];
+    return ['webcomposer_config.loading_page'];
   }
 
   /**
@@ -28,14 +28,14 @@ class LoadingPage extends ConfigFormBase {
    * {@inheritdoc}.
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    $config = $this->config('keno_config.loading_page');
+    $config = $this->config('webcomposer_config.loading_page');
 
-    $content = $config->get('loading_page_content');
+    $d = $config->get('loading_page_content');
     $form['loading_page_content'] = [
       '#type' => 'text_format',
       '#title' => $this->t('Content'),
-      '#default_value' => $content['value'],
-      '#format' => $content['format'],
+      '#default_value' => $d['value'],
+      '#format' => $d['format'],
     ];
 
     return parent::buildForm($form, $form_state);
@@ -49,7 +49,7 @@ class LoadingPage extends ConfigFormBase {
       'loading_page_content',
     ];
     foreach ($keys as $key) {
-        $this->config('keno_config.loading_page')->set($key, $form_state->getValue($key))->save();
+        $this->config('webcomposer_config.loading_page')->set($key, $form_state->getValue($key))->save();
     }
     parent::submitForm($form, $form_state);
   }

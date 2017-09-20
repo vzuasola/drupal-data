@@ -15,9 +15,3 @@ webcomposer_games.admin_games_fim_provider:
   parent: webcomposer_games.list
   description: 'Provides configuration for FIM game provider'
   route_name: webcomposer_games.games_fim_provider_form
-
-webcomposer_games.loading_page:
-  title: 'Loading Page Configuration'
-  parent: webcomposer_games.list
-  description: 'Provides configuration for Loading Page'
-  route_name: webcomposer_games.loading_page_form
