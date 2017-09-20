@@ -483,7 +483,8 @@ class ImportParser {
   			// remove nulls from array
   			$match = array_filter($match, 'strlen');
   			$check = array_filter($check, 'strlen');
-
+kint($match);
+kint($check);
   			if ($match !== $check) {
   				return 'EXCEL_FORMAT_INVALID_COLUMNS';
   			}
@@ -546,7 +547,8 @@ class ImportParser {
 			$domain = array_filter($domain, 'strlen');
 			asort($domain);
   			$domain = array_values($domain);
-
+kint($domain);
+kint($domain_list);
 			if ($domain_list !== $domain) {
 				return 'EXCEL_FORMAT_DOMAINS_MISMATCH';
 			}

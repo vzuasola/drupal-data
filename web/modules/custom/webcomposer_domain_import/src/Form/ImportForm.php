@@ -17,6 +17,7 @@ use Drupal\taxonomy\Entity\Vocabulary;
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\taxonomy\Entity\Term;
 use Drupal\paragraphs\Entity\Paragraph;
+use Drupal\webcomposer_domain_import\Controller\WebcomposerDomainImport;
 /**
  * Contribute form.
  */
@@ -32,6 +33,8 @@ class ImportForm extends FormBase {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
+   $import = new WebcomposerDomainImport();
+    // kint($import);die();
     $form['import_file'] = array(
         '#type' => 'managed_file',
         '#title' => $this->t('Import file'),
@@ -48,7 +51,7 @@ class ImportForm extends FormBase {
       '#type' => 'submit',
       '#value' => $this->t('Import'),
       '#button_type' => 'primary',
-      '#submit' => array('Drupal\webcomposer_domain_import\Controller\WebcomposerDomainImport::DomainImport'),     
+      '#submit' => array(array($import, 'content')),     
    ); 
     return $form;
   }
@@ -61,14 +64,19 @@ class ImportForm extends FormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-	// Display result.
-    foreach ($form_state->getValues() as $key => $value) {	
-		if($key == 'field_vocabulary_name')
-		{
-			$voc_name = $value;
-		}     
-    }
-    create_taxonomy($voc_name);
+  //     $operations[] = ['DomainImport', [$form, $form_state]];
+  //    $batch = array(
+  //     'title' => t('Import is in process...'),
+  //     'operations' =>  $operations,
+  //     // 'finished' => 'smackmybatch_batch_finished',
+  // 'init_message' => t('Smack Batch is starting.'),
+  // 'progress_message' => t('Processed @current out of @total.'),
+  // 'error_message' => t('Smack My Batch has encountered an error.'),
+  //       'file' => 'Drupal\webcomposer_domain_import\Controller\WebcomposerDomainImport',
+  //   );
+
+  //   batch_set($batch);
+  //       batch_process('admin/config/webcomposer/domains/Import');
   }
 }
 
