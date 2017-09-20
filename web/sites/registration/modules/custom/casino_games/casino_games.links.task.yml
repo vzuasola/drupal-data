@@ -1,4 +1,0 @@
-casino_games.games_configuration_tab:
-  route_name: casino_games.games_configuration
-  title: 'Configure Games'
-  base_route: casino_games.games_configuration
