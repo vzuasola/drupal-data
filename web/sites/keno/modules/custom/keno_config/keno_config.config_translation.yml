@@ -3,3 +3,9 @@ keno_config.trust_element_config_schema:
   base_route_name: keno_config.trust_element_form
   names:
     - 'keno_config.trust_element_config'
+
+keno_config.loading_page_schema:
+  title: 'Loading Page Configuration'
+  base_route_name: keno_config.loading_page_form
+  names:
+    - 'keno_config.loading_page'
