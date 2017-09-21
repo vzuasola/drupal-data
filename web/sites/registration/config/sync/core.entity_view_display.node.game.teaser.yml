@@ -35,4 +35,5 @@ hidden:
   field_games_category: true
   field_play_for_fun_toggle: true
   field_play_now_toggle: true
+  field_ribbon_configuration: true
   langcode: true
