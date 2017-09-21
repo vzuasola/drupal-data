@@ -1,0 +1,88 @@
+uuid: 939c092d-f94b-4f1f-827c-75bf298287bb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.keno_lobby_tile_entity.keno_lobby_tile_entity.field_blurb
+    - field.field.keno_lobby_tile_entity.keno_lobby_tile_entity.field_button_text
+    - field.field.keno_lobby_tile_entity.keno_lobby_tile_entity.field_tile_image
+    - field.field.keno_lobby_tile_entity.keno_lobby_tile_entity.field_tile_link
+    - field.field.keno_lobby_tile_entity.keno_lobby_tile_entity.field_tile_link_target
+    - field.field.keno_lobby_tile_entity.keno_lobby_tile_entity.field_title
+  module:
+    - image
+    - keno_lobby_tile
+    - options
+    - text
+    - user
+_core:
+  default_config_hash: WGxa5uhFKD49yLwPrR-vnrcTSjKP4Uv88-Gr_z3b1WM
+id: keno_lobby_tile_entity.keno_lobby_tile_entity.default
+targetEntityType: keno_lobby_tile_entity
+bundle: keno_lobby_tile_entity
+mode: default
+content:
+  field_blurb:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_button_text:
+    weight: 6
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tile_image:
+    weight: 5
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_tile_link:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tile_link_target:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_title:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  name:
+    label: above
+    type: string
+    weight: -4
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  user_id:
+    label: hidden
+    type: author
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

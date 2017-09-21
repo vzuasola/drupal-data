@@ -1,15 +1,15 @@
-uuid: 9d43c3ef-84f5-4f8b-9c74-7a329382aff8
+uuid: fb774998-3e20-4018-844a-8d3df8737d02
 langcode: en
 status: true
 dependencies:
   module:
+    - keno_lobby_tile
     - options
-    - webcomposer_slider
 _core:
-  default_config_hash: s-DgRxAO-llnIE1P81OjsT_zYao_V8_uv4lEBcDn3Mg
-id: webcomposer_slider_entity.field_banner_link_target
-field_name: field_banner_link_target
-entity_type: webcomposer_slider_entity
+  default_config_hash: Y0jhZ-AyS2AgCdpJEXo5nYcxsY5MNsZyKsjjx8dDYxA
+id: keno_lobby_tile_entity.field_tile_link_target
+field_name: field_tile_link_target
+entity_type: keno_lobby_tile_entity
 type: list_string
 settings:
   allowed_values:

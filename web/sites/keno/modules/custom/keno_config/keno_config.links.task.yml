@@ -2,3 +2,8 @@ keno_config.trust_element_config_tab:
   route_name: keno_config.trust_element_form
   title: 'Trust Element'
   base_route: keno_config.trust_element_form
+
+  keno_config.loading_page_tab:
+  route_name: keno_config.loading_page_form
+  title: 'Loading Page Configuration'
+  base_route: keno_config.loading_page_form
