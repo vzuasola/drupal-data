@@ -1,0 +1,20 @@
+uuid: 16e897d0-f34b-48fb-8217-2e99a8f3a5c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.keno_lobby_tile_entity.field_tile_link
+  module:
+    - keno_lobby_tile
+id: keno_lobby_tile_entity.keno_lobby_tile_entity.field_tile_link
+field_name: field_tile_link
+entity_type: keno_lobby_tile_entity
+bundle: keno_lobby_tile_entity
+label: 'Tile Link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
