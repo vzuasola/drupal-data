@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\webcomposer_games\Form;
+namespace Drupal\keno_config\Form;
 
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
@@ -8,27 +8,27 @@ use Drupal\Core\Form\FormStateInterface;
 /**
  * Configuration Form for Loading Page.
  */
-class LoadingPage extends ConfigFormBase {
+class LoadingPageForm extends ConfigFormBase {
 
   /**
    * {@inheritdoc}
    */
   protected function getEditableConfigNames() {
-    return ['webcomposer_config.loading_page'];
+    return ['keno_config.loading_page'];
   }
 
   /**
    * {@inheritdoc}
    */
   public function getFormId() {
-    return 'loadingPage_settings_form';
+    return 'loading_page_form';
   }
 
   /**
    * {@inheritdoc}.
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    $config = $this->config('webcomposer_config.loading_page');
+    $config = $this->config('keno_config.loading_page');
 
     $content = $config->get('loading_page_content');
     $form['loading_page_content'] = [
