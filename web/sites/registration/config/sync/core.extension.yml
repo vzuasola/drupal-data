@@ -1,5 +1,6 @@
 module:
   action: 0
+  admin_toolbar: 0
   automated_cron: 0
   block: 0
   block_content: 0
@@ -36,6 +37,7 @@ module:
   filter: 0
   image: 0
   imce: 0
+  kint: 0
   lang_dropdown: 0
   language: 0
   libraries: 0
@@ -56,7 +58,6 @@ module:
   scheduler: 0
   serialization: 0
   shortcut: 0
-  slider_overlay: 0
   system: 0
   taxonomy: 0
   taxonomy_unique: 0
@@ -73,8 +74,8 @@ module:
   webcomposer_dm: 0
   webcomposer_downloadables: 0
   webcomposer_editor: 0
-  webcomposer_games: 0
   webcomposer_floating_banners: 0
+  webcomposer_games: 0
   webcomposer_language_hierarchy: 0
   webcomposer_marketing_script: 0
   webcomposer_promotions: 0
