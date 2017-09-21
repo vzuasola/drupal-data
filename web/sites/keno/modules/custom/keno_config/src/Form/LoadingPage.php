@@ -30,12 +30,12 @@ class LoadingPage extends ConfigFormBase {
   public function buildForm(array $form, FormStateInterface $form_state) {
     $config = $this->config('webcomposer_config.loading_page');
 
-    $d = $config->get('loading_page_content');
+    $content = $config->get('loading_page_content');
     $form['loading_page_content'] = [
       '#type' => 'text_format',
       '#title' => $this->t('Content'),
-      '#default_value' => $d['value'],
-      '#format' => $d['format'],
+      '#default_value' => $content['value'],
+      '#format' => $content['format'],
     ];
 
     return parent::buildForm($form, $form_state);
