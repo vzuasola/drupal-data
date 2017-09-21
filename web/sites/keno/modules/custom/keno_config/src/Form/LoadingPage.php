@@ -8,7 +8,7 @@ use Drupal\Core\Form\FormStateInterface;
 /**
  * Configuration Form for Loading Page.
  */
-class LoadingPage extends ConfigFormBase {
+class LoadingPageForm extends ConfigFormBase {
 
   /**
    * {@inheritdoc}
@@ -21,7 +21,7 @@ class LoadingPage extends ConfigFormBase {
    * {@inheritdoc}
    */
   public function getFormId() {
-    return 'loadingPage_settings_form';
+    return 'loading_page_form';
   }
 
   /**
