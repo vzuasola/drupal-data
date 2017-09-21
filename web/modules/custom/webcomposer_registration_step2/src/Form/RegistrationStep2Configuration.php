@@ -6,7 +6,7 @@ use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Avaya chat configuration class
+ * Registration step2 configuration class
  */
 class RegistrationStep2Configuration extends ConfigFormBase {
   /**
