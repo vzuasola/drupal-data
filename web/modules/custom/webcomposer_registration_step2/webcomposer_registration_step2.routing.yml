@@ -1,0 +1,15 @@
+webcomposer_registration_step2.admin_settings:
+  path: 'admin/config/webcomposer/registration-step2'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Webcomposer Registration Step 2'
+  requirements:
+    _permission: 'administer site configuration'
+
+webcomposer_registration_step2.registration_step2_configuration_form:
+  path: 'admin/config/webcomposer/registration-step2/config'
+  defaults:
+    _form: 'Drupal\webcomposer_registration_step2\Form\RegistrationStep2Configuration'
+    _title: 'Registration Step 2 Configuration'
+  requirements:
+    _permission: 'administer site configuration'

@@ -1,0 +1,11 @@
+webcomposer_registration_step2.list:
+  title: 'Registration Step 2 Configuration'
+  description: 'Registration step2 make deposit config settings'
+  parent: system.admin_config
+  route_name: webcomposer_registration_step2.admin_settings
+
+webcomposer_registration_step2.admin_registration_step2_configuration:
+  title: 'Registration Step 2 Configuration'
+  parent: webcomposer_registration_step2.list
+  description: 'Provides configuration for registration step 2'
+  route_name: webcomposer_registration_step2.registration_step2_configuration_form

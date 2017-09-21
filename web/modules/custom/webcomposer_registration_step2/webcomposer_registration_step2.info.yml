@@ -1,0 +1,7 @@
+name: Registration Step 2
+type: module
+description: Registration step 2 make deposit configuration
+core: 8.x
+package: Web Composer
+dependencies:
+  - webcomposer_config

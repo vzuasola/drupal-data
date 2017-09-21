@@ -1,0 +1,14 @@
+<?php
+
+/**
+ * Implements hook_uninstall
+ */
+function webcomposer_registration_step2_uninstall() {
+    $keys = [
+      'webcomposer_config.registration_step2_configuration',
+    ];
+
+    foreach ($keys as $key) {
+      \Drupal::configFactory()->getEditable($key)->delete();
+    }
+}
