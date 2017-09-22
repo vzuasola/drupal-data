@@ -7,6 +7,8 @@ dependencies:
   module:
     - image
     - keno_lobby_tile
+_core:
+  default_config_hash: pOuAaar03HJUEnBL34f7bZefoTCw07OSaQ6w_b7FJZY
 id: keno_lobby_tile_entity.keno_lobby_tile_entity.field_tile_image
 field_name: field_tile_image
 entity_type: keno_lobby_tile_entity

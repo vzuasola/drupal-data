@@ -6,18 +6,10 @@ keno_config.admin_settings:
   requirements:
     _permission: 'administer site configuration'
 
-keno_config.trust_element_form:
-  path: 'admin/config/keno/trust-element'
+keno_config.keno_config_form:
+  path: 'admin/config/keno/keno_config'
   defaults:
-    _form: 'Drupal\keno_config\Form\TrustElementForm'
-    _title: 'Trust Element'
-  requirements:
-    _permission: 'administer site configuration'
-
-keno_config.loading_page_form:
-  path: 'admin/config/keno/loading-page'
-  defaults:
-    _form: 'Drupal\keno_config\Form\LoadingPageForm'
-    _title: 'Loading Page Configuration Form'
+    _form: 'Drupal\keno_config\Form\KenoConfigForm'
+    _title: 'Keno Configuration'
   requirements:
     _permission: 'administer site configuration'

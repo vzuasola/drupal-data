@@ -4,14 +4,8 @@ keno_config.keno_config_list:
   parent: system.admin_config
   route_name: keno_config.admin_settings
 
-keno_config.admin_trust_element:
-  title: 'Trust Element'
+keno_config.admin_keno_config:
+  title: 'Keno Configuration'
   parent: keno_config.keno_config_list
-  description: 'Trust Element'
-  route_name: keno_config.trust_element_form
-
-keno_config.loading_page:
-  title: 'Loading Page Configuration'
-  parent: keno_config.keno_config_list
-  description: 'Provides configuration for Loading Page'
-  route_name: keno_config.loading_page_form
+  description: 'Keno Configuration'
+  route_name: keno_config.keno_config_form

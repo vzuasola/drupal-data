@@ -6,6 +6,8 @@ dependencies:
     - file
     - image
     - keno_lobby_tile
+_core:
+  default_config_hash: f3WUVegBu9jMERK0CA-nG9d6ezpgHQ2Q-Mkp_n-nInM
 id: keno_lobby_tile_entity.field_tile_image
 field_name: field_tile_image
 entity_type: keno_lobby_tile_entity

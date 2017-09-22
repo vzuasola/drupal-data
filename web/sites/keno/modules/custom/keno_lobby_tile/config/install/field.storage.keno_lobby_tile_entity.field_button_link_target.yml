@@ -1,14 +1,12 @@
-uuid: fb774998-3e20-4018-844a-8d3df8737d02
+uuid: 73852cc3-373d-4e24-8d85-dd97947ce3ea
 langcode: en
 status: true
 dependencies:
   module:
     - keno_lobby_tile
     - options
-_core:
-  default_config_hash: Y0jhZ-AyS2AgCdpJEXo5nYcxsY5MNsZyKsjjx8dDYxA
-id: keno_lobby_tile_entity.field_tile_link_target
-field_name: field_tile_link_target
+id: keno_lobby_tile_entity.field_button_link_target
+field_name: field_button_link_target
 entity_type: keno_lobby_tile_entity
 type: list_string
 settings:
