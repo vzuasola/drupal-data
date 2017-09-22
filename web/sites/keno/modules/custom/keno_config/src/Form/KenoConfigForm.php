@@ -79,12 +79,12 @@ class KenoConfigForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    $kenoConfig = [
+    $kenoConfiguration = [
       'trust_element_title',
       'trust_element_content',
       'lobby_tiles_alignment',
     ];
-    foreach ($kenoConfig as $keys) {
+    foreach ($kenoConfiguration as $keys) {
         $this->config('keno_config.keno_configuration')->set($keys, $form_state->getValue($keys))->save();
     }
     parent::submitForm($form, $form_state);
