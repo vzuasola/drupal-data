@@ -79,7 +79,7 @@ class KenoConfigForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    $kenoConfiguration = [
+    $kenoConfig = [
       'trust_element_title',
       'trust_element_content',
       'lobby_tiles_alignment',
