@@ -1,0 +1,11 @@
+webcomposer_config.registration_landing_page_configuration:
+  type: config_object
+  label: 'Registration Landing Page Configuration'
+  mapping:
+    registration_content:
+      type: text_format
+      label: 'Registration Landing Page Content'
+      translatable: true
+    registration_title:
+      type: label
+      label: 'Make Deposit'
