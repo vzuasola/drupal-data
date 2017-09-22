@@ -1018,7 +1018,8 @@ display:
         type: node_list_serializer
         options:
           uses_fields: false
-          formats: {  }
+          formats:
+            json: json
     cache_metadata:
       contexts:
         - 'languages:language_content'
@@ -1292,7 +1293,8 @@ display:
         type: node_list_serializer
         options:
           uses_fields: false
-          formats: {  }
+          formats:
+            json: json
     cache_metadata:
       contexts:
         - 'languages:language_content'
