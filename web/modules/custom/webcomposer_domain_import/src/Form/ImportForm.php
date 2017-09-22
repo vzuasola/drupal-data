@@ -18,6 +18,7 @@ use Drupal\Core\Entity\EntityInterface;
 use Drupal\taxonomy\Entity\Term;
 use Drupal\paragraphs\Entity\Paragraph;
 use Drupal\webcomposer_domain_import\Controller\WebcomposerDomainImport;
+
 /**
  * Contribute form.
  */
@@ -34,7 +35,6 @@ class ImportForm extends FormBase {
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
    $import = new WebcomposerDomainImport();
-    // kint($import);die();
     $form['import_file'] = array(
         '#type' => 'managed_file',
         '#title' => $this->t('Import file'),
@@ -49,9 +49,7 @@ class ImportForm extends FormBase {
     $form['actions']['#type'] = 'actions';    
     $form['submit'] = array(
       '#type' => 'submit',
-      '#value' => $this->t('Import'),
-      '#button_type' => 'primary',
-      '#submit' => array(array($import, 'content')),     
+      '#value' => $this->t('Import'), 
    ); 
     return $form;
   }
@@ -64,19 +62,26 @@ class ImportForm extends FormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-  //     $operations[] = ['DomainImport', [$form, $form_state]];
-  //    $batch = array(
-  //     'title' => t('Import is in process...'),
-  //     'operations' =>  $operations,
-  //     // 'finished' => 'smackmybatch_batch_finished',
-  // 'init_message' => t('Smack Batch is starting.'),
-  // 'progress_message' => t('Processed @current out of @total.'),
-  // 'error_message' => t('Smack My Batch has encountered an error.'),
-  //       'file' => 'Drupal\webcomposer_domain_import\Controller\WebcomposerDomainImport',
-  //   );
+  	  $import = new WebcomposerDomainImport();
+  	  $languages = $import->getExcelLanguages($form_state);
+  	  $operations = [
+  	  	array(array($import, 'ImportPrepare'), array($form_state)),
+        array(array($import, 'ImportDomainGroups'), array($form_state)),
+        array(array($import, 'ImportMasterPlaceholder'), array($form_state)),
 
-  //   batch_set($batch);
-  //       batch_process('admin/config/webcomposer/domains/Import');
+  	  ];
+  	  foreach ($languages as $key => $langcode) {
+  	  	# code...
+  	  	$operations[] = array(array($import, 'ImportDomains'), array($form_state, $langcode));
+  	  }
+  	  
+      $batch = array(
+      'title' => t('Importing Domains'),
+      'operations' => $operations,
+      'init_message' => t('Batch is starting.'),
+      'finished' => '\Drupal\webcomposer_domain_import\Controller\WebcomposerDomainImport::DomainImportFinishedCallback',
+    );
+    batch_set($batch);
   }
 }
 

@@ -31,8 +31,8 @@ class ImportParser {
 	 * @param array $rows - the phpexcel array object
 	 *
 	 */
-	public function __construct($rows) {
-    	$this->rows = $rows;
+	public function setData($rows) {
+    	return $this->rows = $rows;
 
   	}
 
@@ -95,11 +95,10 @@ class ImportParser {
   		$validate[] = $this->validate_labels();
   		$validate[] = $this->validate_domain_labels();
   		$validate[] = $this->validate_main_format();
-  		$validate[] = $this->validate_tokens_consistency();
   		$validate[] = $this->validate_domain_format();
-  		$validate[] = $this->validate_domain_consistency();
-  		$validate[] = $this->validate_domain_duplicates();
-  		$validate[] = $this->validate_tokens_duplicates();
+  		$validate[] = $this->validate_domain_consistency(); // need to correct the export.
+  		$validate[] = $this->validate_domain_duplicates(); //correct the export
+  		// $validate[] = $this->validate_tokens_duplicates();
 
   		foreach ($validate as $code) {
   			if ($code !== 'VALIDATE_OK') {
@@ -420,7 +419,7 @@ class ImportParser {
 
   		// check excel labels
 		if (!$language_label || !$token_label || !$token_description) {
-			return 'EXCEL_IMPROPER_FORMAT';
+			return 'EXCEL_IMPROPER_FORMAT_LABELS';
 		}
 
 		return 'VALIDATE_OK';
@@ -442,7 +441,7 @@ class ImportParser {
   			$description = $cache['columns'][$language][1][1];
 
   			if (strtolower($token) !== 'tokens' || strtolower($description) !== 'default') {
-  				return 'EXCEL_IMPROPER_FORMAT';
+  				return 'EXCEL_IMPROPER_FORMAT_DOMAIN_LABELS';
   			}
   		}
 
@@ -460,7 +459,7 @@ class ImportParser {
 	  	$group_list = array_keys($this->domains);
 
 	  	if (!in_array('main', $group_list)) {
-	  		return 'EXCEL_IMPROPER_FORMAT';
+	  		return 'EXCEL_IMPROPER_MAIN_FORMAT';
 	  	}
 
 	  	return 'VALIDATE_OK';
@@ -483,8 +482,6 @@ class ImportParser {
   			// remove nulls from array
   			$match = array_filter($match, 'strlen');
   			$check = array_filter($check, 'strlen');
-kint($match);
-kint($check);
   			if ($match !== $check) {
   				return 'EXCEL_FORMAT_INVALID_COLUMNS';
   			}
@@ -513,7 +510,7 @@ kint($check);
   			}
 
   			if (count($domain_row) < count($domains)) {
-  				return 'EXCEL_IMPROPER_FORMAT';
+  				return 'EXCEL_IMPROPER_DOMAIN_FORMAT';
   			}
   		}
 
@@ -534,7 +531,6 @@ kint($check);
   		$domain_list = $this->list;
   		asort($domain_list);
   		$domain_list = array_values($domain_list);
-
 		foreach ($this->languages as $language) {
 
 			$domain = $rows[$language][1];
@@ -547,8 +543,7 @@ kint($check);
 			$domain = array_filter($domain, 'strlen');
 			asort($domain);
   			$domain = array_values($domain);
-kint($domain);
-kint($domain_list);
+
 			if ($domain_list !== $domain) {
 				return 'EXCEL_FORMAT_DOMAINS_MISMATCH';
 			}
@@ -613,5 +608,16 @@ kint($domain_list);
 
 		return 'VALIDATE_OK';
   	}
+
+  	public function excel_get_master_placeholder($language) {
+		$columns = $this->excel_filter_column($language);
+
+		$key = $columns[0];
+		$value = $columns[1];
+		$check = array_combine($key, $value);
+		$this->variables['en'] = $check;
+
+		return $this->variables['en'];
+	}
 
 }
