@@ -12,6 +12,8 @@ dependencies:
     - keno_lobby_tile
     - rest
     - serialization
+_core:
+  default_config_hash: 15u0NpEabMteaOmB7Y6olR49luH2TkrUzFPqDJapY-o
 id: keno_lobby_tile
 label: 'Keno Lobby Tile'
 module: views

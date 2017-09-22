@@ -6,6 +6,8 @@ dependencies:
     - field.storage.keno_lobby_tile_entity.field_title
   module:
     - keno_lobby_tile
+_core:
+  default_config_hash: n5L_jCIOVGjeUe-eTG6gLedfz4QgtMTVVTSSSqLZZ1U
 id: keno_lobby_tile_entity.keno_lobby_tile_entity.field_title
 field_name: field_title
 entity_type: keno_lobby_tile_entity
