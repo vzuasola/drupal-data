@@ -4,6 +4,8 @@ status: true
 dependencies:
   module:
     - keno_lobby_tile
+_core:
+  default_config_hash: '-tBT_PrsZ5Rt2133hOSR15tQfy9QVuENv8nVPdh70MM'
 id: keno_lobby_tile_entity.field_title
 field_name: field_title
 entity_type: keno_lobby_tile_entity

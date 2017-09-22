@@ -7,6 +7,8 @@ dependencies:
   module:
     - keno_lobby_tile
     - text
+_core:
+  default_config_hash: AsXVOntzNf1W_tPeSaVOkL0MhpoCptU3VAo9GtHBnHg
 id: keno_lobby_tile_entity.keno_lobby_tile_entity.field_blurb
 field_name: field_blurb
 entity_type: keno_lobby_tile_entity
