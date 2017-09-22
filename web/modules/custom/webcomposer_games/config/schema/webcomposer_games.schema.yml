@@ -5,3 +5,12 @@ webcomposer_config.games_playtech_provider:
     lobby_url:
       type: text
       label: 'Lobby URL'
+
+webcomposer_config.games_opus_provider:
+  type: config_object
+  label: 'Opus Provider Configuration'
+  mapping:
+    opus_game_loader_content:
+      type: text_format
+      label: 'Content'
+      translatable: true

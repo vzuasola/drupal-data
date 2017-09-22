@@ -9,12 +9,3 @@ keno_config.trust_element_config:
       type: text_format
       label: 'Content'
       translatable: true
-
-keno_config.loading_page_config:
-  type: mapping
-  label: 'Loading Page'
-  mapping:
-    loading_page_content:
-      type: text_format
-      label: 'Content'
-      translatable: true

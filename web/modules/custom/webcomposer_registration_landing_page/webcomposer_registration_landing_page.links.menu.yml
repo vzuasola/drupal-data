@@ -1,0 +1,11 @@
+webcomposer_registration_landing_page.list:
+  title: 'Registration Landing Page Configuration'
+  description: 'Registration landing page make deposit config settings'
+  parent: system.admin_config
+  route_name: webcomposer_registration_landing_page.admin_settings
+
+webcomposer_registration_landing_page.admin_registration_landing_page_configuration:
+  title: 'Registration Landing Page Configuration'
+  parent: webcomposer_registration_landing_page.list
+  description: 'Provides configuration for registration landing page'
+  route_name: webcomposer_registration_landing_page.registration_landing_page_configuration_form
