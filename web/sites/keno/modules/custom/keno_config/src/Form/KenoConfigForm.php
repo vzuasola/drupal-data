@@ -6,7 +6,7 @@ use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Configuration Form for Trust Element.
+ * Configuration Form for Keno Configuration.
  */
 class KenoConfigForm extends ConfigFormBase {
 
@@ -47,12 +47,12 @@ class KenoConfigForm extends ConfigFormBase {
       '#default_value' => $config->get('trust_element_title'),
     ];
 
-    $d = $config->get('trust_element_content');
+    $data = $config->get('trust_element_content');
     $form['trust_element']['trust_element_content'] = [
       '#type' => 'text_format',
       '#title' => $this->t('Content'),
-      '#default_value' => $d['value'],
-      '#format' => $d['format'],
+      '#default_value' => $data['value'],
+      '#format' => $data['format'],
     ];
 
     $form['lobby_tiles'] = [
