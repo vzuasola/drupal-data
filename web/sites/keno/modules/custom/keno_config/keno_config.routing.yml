@@ -13,11 +13,3 @@ keno_config.trust_element_form:
     _title: 'Trust Element'
   requirements:
     _permission: 'administer site configuration'
-
-keno_config.loading_page_form:
-  path: 'admin/config/keno/loading-page'
-  defaults:
-    _form: 'Drupal\keno_config\Form\LoadingPageForm'
-    _title: 'Loading Page Configuration Form'
-  requirements:
-    _permission: 'administer site configuration'
