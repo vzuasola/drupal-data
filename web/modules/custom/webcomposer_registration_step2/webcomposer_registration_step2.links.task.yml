@@ -1,4 +1,0 @@
-webcomposer_registration_step2.registration_step2_configuration_tab:
-  route_name: webcomposer_registration_step2.registration_step2_configuration_form
-  title: 'Registration Step 2 Configuration'
-  base_route: webcomposer_registration_step2.registration_step2_configuration_form
