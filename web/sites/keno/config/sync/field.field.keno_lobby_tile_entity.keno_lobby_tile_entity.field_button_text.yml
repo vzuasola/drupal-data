@@ -14,7 +14,7 @@ entity_type: keno_lobby_tile_entity
 bundle: keno_lobby_tile_entity
 label: 'Button Text'
 description: ''
-required: false
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''
