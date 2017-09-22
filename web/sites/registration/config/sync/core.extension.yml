@@ -5,7 +5,6 @@ module:
   block: 0
   block_content: 0
   breakpoint: 0
-  casino_games: 0
   ckeditor: 0
   ckeditor_accordion: 0
   ckeditor_codemirror: 0
@@ -67,7 +66,6 @@ module:
   user: 0
   views_ui: 0
   webcomposer_affilates: 0
-  webcomposer_announcements: 0
   webcomposer_avaya: 0
   webcomposer_config: 0
   webcomposer_connector: 0
@@ -75,7 +73,6 @@ module:
   webcomposer_downloadables: 0
   webcomposer_editor: 0
   webcomposer_floating_banners: 0
-  webcomposer_games: 0
   webcomposer_language_hierarchy: 0
   webcomposer_marketing_script: 0
   webcomposer_promotions: 0
