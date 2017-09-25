@@ -4,6 +4,8 @@ status: true
 dependencies:
   config:
     - field.field.keno_lobby_tile_entity.keno_lobby_tile_entity.field_blurb
+    - field.field.keno_lobby_tile_entity.keno_lobby_tile_entity.field_button_link
+    - field.field.keno_lobby_tile_entity.keno_lobby_tile_entity.field_button_link_target
     - field.field.keno_lobby_tile_entity.keno_lobby_tile_entity.field_button_text
     - field.field.keno_lobby_tile_entity.keno_lobby_tile_entity.field_tile_image
     - field.field.keno_lobby_tile_entity.keno_lobby_tile_entity.field_tile_link
@@ -13,6 +15,7 @@ dependencies:
   module:
     - image
     - keno_lobby_tile
+    - link
     - text
 _core:
   default_config_hash: ILFRo5rHCqg379rQSZXM8gt4GzukQFgXssTIqLG9Vj8
@@ -22,15 +25,29 @@ bundle: keno_lobby_tile_entity
 mode: default
 content:
   field_blurb:
-    weight: 3
+    weight: 5
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
     region: content
+  field_button_link:
+    weight: 7
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_button_link_target:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_button_text:
-    weight: 4
+    weight: 6
     settings:
       size: 60
       placeholder: ''
@@ -46,15 +63,15 @@ content:
     type: image_image
     region: content
   field_tile_link:
-    weight: 5
+    weight: 3
     settings:
-      size: 60
-      placeholder: ''
+      placeholder_url: ''
+      placeholder_title: ''
     third_party_settings: {  }
-    type: string_textfield
+    type: link_default
     region: content
   field_tile_link_target:
-    weight: 6
+    weight: 4
     settings: {  }
     third_party_settings: {  }
     type: options_select
