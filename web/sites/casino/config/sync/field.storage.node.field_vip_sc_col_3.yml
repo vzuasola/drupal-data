@@ -1,0 +1,19 @@
+uuid: d7a517dd-4ba0-496c-8608-7ad46fd73d1c
+langcode: zh-hans
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_vip_sc_col_3
+field_name: field_vip_sc_col_3
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

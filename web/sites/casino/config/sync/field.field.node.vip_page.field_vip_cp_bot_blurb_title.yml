@@ -1,0 +1,19 @@
+uuid: 36c7763e-3dfe-4569-9a44-6948bdd1b03f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_vip_cp_bot_blurb_title
+    - node.type.vip_page
+id: node.vip_page.field_vip_cp_bot_blurb_title
+field_name: field_vip_cp_bot_blurb_title
+entity_type: node
+bundle: vip_page
+label: 'VIP Cash Points Bottom Blurb Title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
