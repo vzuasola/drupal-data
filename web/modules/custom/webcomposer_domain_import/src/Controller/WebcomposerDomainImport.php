@@ -67,7 +67,7 @@ class WebcomposerDomainImport extends ControllerBase {
     $sheets = $this->ExcelParser->read_excel($realPath);
     $this->ImportParser->setData($sheets);
     if ($this->ImportParser->validate() === "EXCEL_FORMAT_OK") {
-      $context['sandbox'] = "EXCEL_FORMAT_OK";
+      $context['sandbox'] = $this->ImportParser->validate();
 
     }
     else {
