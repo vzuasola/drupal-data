@@ -299,6 +299,7 @@ class WebcomposerDomainExport extends ControllerBase {
     foreach ($variables as $key => $value) {
       // Check if property is empty.
       $placeholders['group'][$key] = $key;
+      if(is_array($value)) {
       foreach ($value as $holder => $default) {
         if (array_key_exists($holder, $placeholders)) {
           $placeholders[$holder][$key] = $default;
@@ -310,11 +311,12 @@ class WebcomposerDomainExport extends ControllerBase {
         }
       }
     }
+    }
 
     $group = $placeholders['group'];
 
     array_shift($placeholders);
-
+    $result = [];
     foreach ($group as $key => $value) {
       if (!array_key_exists($key, $result)) {
         $result[$key][] = $value;
