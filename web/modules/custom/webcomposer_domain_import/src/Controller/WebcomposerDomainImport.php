@@ -87,12 +87,12 @@ class WebcomposerDomainImport extends ControllerBase {
    * @param [Array] &$context
    */
   public function importPrepare($form_state, &$context) {
-    kint_require();
-    $message = 'Deleting existing Domains, Domains groups, Master Placeholders and realted Paragraphs...';
-    $context['message'] = $message;
+  
 
     $this->readExcel($form_state, $context);
     $this->ImportParser->setData($context['sandbox']);
+    $message = 'Deleting existing Domains, Domains groups, Master Placeholders and realted Paragraphs...';
+    $context['message'] = $message;
     // if ($this->ImportParser->validate() === "EXCEL_FORMAT_OK") {
       $this->deleteParagraph();
       // Prepare all the vacabs for import.
@@ -114,10 +114,10 @@ class WebcomposerDomainImport extends ControllerBase {
    * @param [Array] &$context
    */
   public  function importDomainGroups($form_state, &$context) {
-    $message = 'Importing Domains Groups...';
-    $context['message'] = $message;
     $this->readExcel($form_state, $context);
     $this->ImportParser->setData($context['sandbox']);
+    $message = 'Importing Domains Groups...';
+    $context['message'] = $message;
     $languages = $this->ImportParser->excel_get_languages();
     foreach ($languages as $key => $value) {
       $getPlaceholerVariables[$value] = $this->ImportParser->excel_get_variables($value);
@@ -150,7 +150,8 @@ class WebcomposerDomainImport extends ControllerBase {
               ];
             }
           }
-          $check = $this->readTaxonomyByName($value['name'], $vocab);
+
+          $check = $this->readTaxonomyByName($value['name'], self::DOMAIN_GROUP);
           if (empty($check)) {
             $termItem = [
               'name' => $value['name'],
@@ -188,10 +189,10 @@ class WebcomposerDomainImport extends ControllerBase {
    * @param [type] $langcode
    */
   public function importDomains($form_state, $langcode, &$context) {
-    $message = 'Importing Domains...';
-    $context['message'] = $message;
     $this->readExcel($form_state, $context);
     $this->ImportParser->setData($context['sandbox']);
+    $message = 'Importing Domains...';
+    $context['message'] = $message;
     $getPlaceholerVariables[$langcode] = $this->ImportParser->excel_get_variables($langcode);
     foreach ($getPlaceholerVariables as $langcode => $term) {
       foreach ($term as $value) {
@@ -225,7 +226,7 @@ class WebcomposerDomainImport extends ControllerBase {
               ];
             }
           }
-          $check = $this->readTaxonomyByName($value['name'], $vocab);
+          $check = $this->readTaxonomyByName($value['name'], self::DOMAIN);
           if (empty($check)) {
 
             $termItem = [
@@ -265,10 +266,11 @@ class WebcomposerDomainImport extends ControllerBase {
    * @param [Array] &$context
    */
   public function importMasterPlaceholder($form_state, &$context) {
-    $message = 'Importing Master Placeholder...';
-    $context['message'] = $message;
+
     $this->readExcel($form_state, $context);
     $this->ImportParser->setData($context['sandbox']);
+    $message = 'Importing Master Placeholder...';
+    $context['message'] = $message;
     $getPlaceholerVariables = $this->ImportParser->excel_get_master_placeholder('en');
     foreach ($getPlaceholerVariables as $key => $value) {
       // code...
@@ -290,7 +292,7 @@ class WebcomposerDomainImport extends ControllerBase {
 
         $paragraph->save();
 
-        $check = $this->readTaxonomyByName($key, $vocab);
+        $check = $this->readTaxonomyByName($key, self::MASTER_PLACEHOLDER);
         if (empty($check)) {
 
           $termItem = [

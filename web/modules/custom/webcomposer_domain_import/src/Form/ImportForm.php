@@ -61,7 +61,6 @@ class ImportForm extends FormBase {
 
     ];
     foreach ($languages as $key => $langcode) {
-      // code...
       $operations[] = [[$import, 'importDomains'], [$form_state, $langcode]];
     }
 
