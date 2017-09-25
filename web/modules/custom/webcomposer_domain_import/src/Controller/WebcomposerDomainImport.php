@@ -3,14 +3,11 @@
 namespace Drupal\webcomposer_domain_import\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
-use Drupal\webcomposer_domain_import\Form\ImportForm;
 use Drupal\file\Entity\File;
-// use Drupal\webcomposer_domain_import\Parser\ImportParser;
-// use Drupal\webcomposer_domain_import\Parser\ExcelParser;
+// Use Drupal\webcomposer_domain_import\Parser\ImportParser;
+// use Drupal\webcomposer_domain_import\Parser\ExcelParser;.
 use Drupal\taxonomy\Entity\Term;
 use Drupal\paragraphs\Entity\Paragraph;
-use Symfony\Component\DependencyInjection\ContainerInterface;
-use Drupal\Core\Database\Connection;
 use Drupal\Core\Database\Database;
 
 /**
@@ -25,40 +22,42 @@ class WebcomposerDomainImport extends ControllerBase {
   const MASTER_PLACEHOLDER = 'master_placeholder';
 
   /**
-   * [$ImportParser description]
+   * Import parser Object.
+   *
    * @var [type]
    */
   private $ImportParser;
 
-   /**
+  /**
    * Database Service Object.
    *
    * @var \Drupal\Core\Database\Connection
    */
-    protected $connection;
+  protected $connection;
 
   /**
-   * [$ExcelParser description]
+   * ExcelParser Object.
+   *
    * @var [type]
    */
   private $ExcelParser;
 
   /**
-   * [__construct description]
+   * Construct Class Contructor.
    */
   public function __construct() {
-      $this->ImportParser =  \Drupal::service('webcomposer_domain_import.import');
-      $this->ExcelParser = \Drupal::service('webcomposer_domain_import.excel_parser');
-
+    $this->ImportParser = \Drupal::service('webcomposer_domain_import.import');
+    $this->ExcelParser = \Drupal::service('webcomposer_domain_import.excel_parser');
 
   }
-  
+
   /**
-   * [ReadExcel description]
-   * @param [type] $form_state [description]
-   * @param [type] &$context   [description]
+   * ReadExcel Reads the file and check the validation.
+   *
+   * @param [Array] $form_state
+   * @param [Array] &$context
    */
-  private function ReadExcel($form_state, &$context) {
+  private function readExcel($form_state, &$context) {
     $message = 'Reading File...';
     $context['message'] = $message;
     $file_field = $form_state->getValue('import_file');
@@ -67,310 +66,319 @@ class WebcomposerDomainImport extends ControllerBase {
     $realPath = drupal_realpath($uri);
     $sheets = $this->ExcelParser->read_excel($realPath);
     $context['sandbox'] = $sheets;
-    
+
   }
 
   /**
-   * [getExcelLanguages description]
-   * @param  [type] $form_state [description]
-   * @return [type]             [description]
+   * Get all the languages from sheet.
+   *
+   * @param [array] $form_state
    */
   public function getExcelLanguages($form_state) {
-     $this->ReadExcel($form_state, $context);
-     $this->ImportParser->setData($context['sandbox']);
+    $this->readExcel($form_state, $context);
+    $this->ImportParser->setData($context['sandbox']);
     return $this->ImportParser->excel_get_languages();
   }
-  
+
   /**
-   * [ImportPrepare description]
-   * @param [type] $form_state [description]
-   * @param [type] &$context   [description]
+   * Preparing the Import.
+   *
+   * @param [Array] $form_state
+   * @param [Array] &$context
    */
-  public function ImportPrepare($form_state, &$context) {
+  public function importPrepare($form_state, &$context) {
     $message = 'Deleting existing Domains, Domains groups, Master Placeholders and realted Paragraphs...';
     $context['message'] = $message;
 
-    $this->ReadExcel($form_state, $context);
+    $this->readExcel($form_state, $context);
     $this->ImportParser->setData($context['sandbox']);
-    if($this->ImportParser->validate() === "EXCEL_FORMAT_OK") {  
-      $this->DeleteParagraph();
-      // Prepare all the vacabs for import
+    if ($this->ImportParser->validate() === "EXCEL_FORMAT_OK") {
+      $this->deleteParagraph();
+      // Prepare all the vacabs for import.
       $vid = [self::DOMAIN, self::DOMAIN_GROUP, self::MASTER_PLACEHOLDER];
-      $this->TermDelete($vid);
+      $this->termDelete($vid);
     }
     else {
       ksm($this->ImportParser->validate());
-      $message = t('An error occurred while processing %error_operation .', array('%error_operation' => $this->ImportParser->validate(), TRUE));
+      $message = t('An error occurred while processing %error_operation .', ['%error_operation' => $this->ImportParser->validate(), TRUE]);
       drupal_set_message($message, 'error');
       $context['finished'] = 1;
     }
   }
 
   /**
-   * [ImportDomainGroups description]
-   * @param [type] $form_state [description]
-   * @param [type] &$context   [description]
+   * Import Domain Groups.
+   *
+   * @param [Array] $form_state
+   * @param [Array] &$context
    */
-  public  function ImportDomainGroups($form_state, &$context) {
+  public  function importDomainGroups($form_state, &$context) {
     $message = 'Importing Domains Groups...';
     $context['message'] = $message;
-    $this->ReadExcel($form_state, $context);
+    $this->readExcel($form_state, $context);
     $this->ImportParser->setData($context['sandbox']);
     $languages = $this->ImportParser->excel_get_languages();
     foreach ($languages as $key => $value) {
-        $getPlaceholerVariables[$value] = $this->ImportParser->excel_get_variables($value);
+      $getPlaceholerVariables[$value] = $this->ImportParser->excel_get_variables($value);
     }
-    foreach ($getPlaceholerVariables as $langcode => $term) { 
+    foreach ($getPlaceholerVariables as $langcode => $term) {
       foreach ($term as $value) {
-        if($value['type'] === 'group') {
-           $paragraphLists = array();
-              foreach ($value['variables'] as $PlaceholderKey => $PlaceholderValue) {
-                  if(!is_null($PlaceholderValue)) {
-                    $paragraph = Paragraph::create([
-                      'type' => 'domain_management_configuration',
-                      'field_placeholder_key' => array(
-                          "value"  =>  $PlaceholderKey,
-                        ),
-                      'field_default_value' => array(
-                        "value" => $PlaceholderValue,
-                        ),
-                      'langcode' => array(
-                        "value" => $langcode,
-                        ),
-                      ]);
+        if ($value['type'] === 'group') {
+          $paragraphLists = [];
+          foreach ($value['variables'] as $placeholderKey => $placeholderValue) {
+            if (!is_null($placeholderValue)) {
+              $paragraph = Paragraph::create(
+              [
+                'type' => 'domain_management_configuration',
+                'field_placeholder_key' => [
+                  "value"  => $placeholderKey,
+                ],
+                'field_default_value' => [
+                  "value" => $placeholderValue,
+                ],
+                'langcode' => [
+                  "value" => $langcode,
+                ],
+              ]
+              );
 
-                      $paragraph->save();
-                      $paragraphLists[] = array(
-                       'target_id' => $paragraph->id(),
-                       'target_revision_id' => $paragraph->getRevisionId(),
-                        ); 
-                  }
-              }
-             $check = $this->readTaxonomyByName($value['name'] , $vocab);
-             if(empty($check)) {
-                $termItem = [
-                  'name' => $value['name'],
-                  'vid' => self::DOMAIN_GROUP,
-                  'langcode' => $langcode,
-                  'field_add_placeholder' => $paragraphLists,
-                ];
-              
-                $termSave = Term::create($termItem)->save();
+              $paragraph->save();
+              $paragraphLists[] = [
+                'target_id' => $paragraph->id(),
+                'target_revision_id' => $paragraph->getRevisionId(),
+              ];
             }
-            else {
-              $TermLoad = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->load($check);
-              if($langcode != 'en') {
-                if(!$TermLoad->hasTranslation($langcode)) {
-                   $TermLoad->addTranslation($langcode , [ 
-                      'name' => $value['name'],
-                      'field_add_placeholder' => $paragraphLists,
-                    ])->save();
-                }
+          }
+          $check = $this->readTaxonomyByName($value['name'], $vocab);
+          if (empty($check)) {
+            $termItem = [
+              'name' => $value['name'],
+              'vid' => self::DOMAIN_GROUP,
+              'langcode' => $langcode,
+              'field_add_placeholder' => $paragraphLists,
+            ];
+
+            $termSave = Term::create($termItem)->save();
+          }
+          else {
+            $termLoad = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->load($check);
+            if ($langcode != 'en') {
+              if (!$termLoad->hasTranslation($langcode)) {
+                $termLoad->addTranslation(
+                $langcode, [
+                  'name' => $value['name'],
+                  'field_add_placeholder' => $paragraphLists,
+                ]
+                )->save();
               }
             }
           }
+        }
       }
     }
-  //end of function 
+    // End of function.
   }
 
   /**
-   * [ImportDomains description]
-   * @param [type] $form_state [description]
-   * @param [type] $langcode   [description]
-   * @param [type] &$context   [description]
+   * Import Domains.
+   *
+   * @param [Array] $form_state
+   * @param [Array] &$context
+   * @param [type] $langcode
    */
-  public function ImportDomains($form_state, $langcode, &$context) {
+  public function importDomains($form_state, $langcode, &$context) {
     $message = 'Importing Domains...';
     $context['message'] = $message;
-    $this->ReadExcel($form_state, $context);
+    $this->readExcel($form_state, $context);
     $this->ImportParser->setData($context['sandbox']);
-      $getPlaceholerVariables[$langcode] = $this->ImportParser->excel_get_variables($langcode);
-      foreach ($getPlaceholerVariables as $langcode => $term) { 
-          foreach ($term as $value) {
-            if($value['type'] === 'group') {
-               $group = $this->readTaxonomyByName($value['name'] , 'domain_groups');
+    $getPlaceholerVariables[$langcode] = $this->ImportParser->excel_get_variables($langcode);
+    foreach ($getPlaceholerVariables as $langcode => $term) {
+      foreach ($term as $value) {
+        if ($value['type'] === 'group') {
+          $group = $this->readTaxonomyByName($value['name'], 'domain_groups');
+        }
+
+        if ($value['type'] === 'domain') {
+          $paragraphLists = [];
+          foreach ($value['variables'] as $placeholderKey => $placeholderValue) {
+            if (!is_null($placeholderValue)) {
+              $paragraph = Paragraph::create(
+              [
+                'type' => 'domain_management_configuration',
+                'field_placeholder_key' => [
+                  "value"  => $placeholderKey,
+                ],
+                'field_default_value' => [
+                  "value" => $placeholderValue,
+                ],
+                'langcode' => [
+                  "value" => $langcode,
+                ],
+              ]
+              );
+
+              $paragraph->save();
+              $paragraphLists[] = [
+                'target_id' => $paragraph->id(),
+                'target_revision_id' => $paragraph->getRevisionId(),
+              ];
             }
-            
-            if($value['type'] === 'domain') {
-               $paragraphLists = array();
-                  foreach ($value['variables'] as $PlaceholderKey => $PlaceholderValue) {
-                      if(!is_null($PlaceholderValue)) {
-                        $paragraph = Paragraph::create([
-                          'type' => 'domain_management_configuration',
-                          'field_placeholder_key' => array(
-                              "value"  =>  $PlaceholderKey,
-                            ),
-                          'field_default_value' => array(
-                            "value" => $PlaceholderValue,
-                            ),
-                          'langcode' => array(
-                            "value" => $langcode,
-                            ),
-                          ]);
-
-                          $paragraph->save();
-                          $paragraphLists[] = array(
-                           'target_id' => $paragraph->id(),
-                           'target_revision_id' => $paragraph->getRevisionId(),
-                            ); 
-                      }
-                  }
-                $check = $this->readTaxonomyByName($value['name'] , $vocab);
-                 if(empty($check)) {
-
-                    $termItem = [
-                      'name' => $value['name'],
-                      'vid' => self::DOMAIN,
-                      'langcode' => $langcode,
-                      'field_add_placeholder' => $paragraphLists,
-                      'field_select_domain_group' => $group
-                    ];
-                  
-                    $termSave = Term::create($termItem)->save();
-                   }
-                  else {
-                    $TermLoad = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->load($check);
-                    if($langcode != 'en') {
-                      if(!$TermLoad->hasTranslation($langcode)) {
-                         $TermLoad->addTranslation($langcode , [ 
-                            'name' => $value['name'],
-                            'field_add_placeholder' => $paragraphLists,
-                          ])->save();
-                      }
-                    }
-                  }  
-              }
-
           }
+          $check = $this->readTaxonomyByName($value['name'], $vocab);
+          if (empty($check)) {
+
+            $termItem = [
+              'name' => $value['name'],
+              'vid' => self::DOMAIN,
+              'langcode' => $langcode,
+              'field_add_placeholder' => $paragraphLists,
+              'field_select_domain_group' => $group,
+            ];
+
+            $termSave = Term::create($termItem)->save();
+          }
+          else {
+            $termLoad = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->load($check);
+            if ($langcode != 'en') {
+              if (!$termLoad->hasTranslation($langcode)) {
+                $termLoad->addTranslation(
+                $langcode, [
+                  'name' => $value['name'],
+                  'field_add_placeholder' => $paragraphLists,
+                ]
+                )->save();
+              }
+            }
+          }
+        }
+
       }
-      //end of function
-      
+    }
+    // End of function.
   }
 
   /**
-   * [ImportMasterPlaceholder description]
-   * @param [type] $form_state [description]
-   * @param [type] &$context   [description]
+   * ImportMasterPlaceholder.
+   *
+   * @param [Array] $form_state
+   * @param [Array] &$context
    */
-  public function ImportMasterPlaceholder($form_state, &$context) {
+  public function importMasterPlaceholder($form_state, &$context) {
     $message = 'Importing Master Placeholder...';
     $context['message'] = $message;
-    $this->ReadExcel($form_state, $context);
+    $this->readExcel($form_state, $context);
     $this->ImportParser->setData($context['sandbox']);
-       $getPlaceholerVariables = $this->ImportParser->excel_get_master_placeholder('en');
-          foreach ($getPlaceholerVariables as $key => $value) {
-            // code...
-            if($key !== 'Tokens' && $value !== 'Default') {
-             $paragraph = Paragraph::create([
-                'type' => 'domain_management_configuration',
-                'field_placeholder_key' => array(
-                    "value"  =>  $key,
-                  ),
-                'field_default_value' => array(
-                  "value" => $value,
-                  ),
-                'langcode' => array(
-                  "value" => 'en',
-                  ),
-                ]);
+    $getPlaceholerVariables = $this->ImportParser->excel_get_master_placeholder('en');
+    foreach ($getPlaceholerVariables as $key => $value) {
+      // code...
+      if ($key !== 'Tokens' && $value !== 'Default') {
+        $paragraph = Paragraph::create(
+        [
+          'type' => 'domain_management_configuration',
+          'field_placeholder_key' => [
+            "value"  => $key,
+          ],
+          'field_default_value' => [
+            "value" => $value,
+          ],
+          'langcode' => [
+            "value" => 'en',
+          ],
+        ]
+        );
 
-                $paragraph->save();
+        $paragraph->save();
 
-             $check = $this->readTaxonomyByName($key , $vocab);
-                 if(empty($check)) {
+        $check = $this->readTaxonomyByName($key, $vocab);
+        if (empty($check)) {
 
-                    $termItem = [
-                      'name' => $key,
-                      'vid' => self::MASTER_PLACEHOLDER,
-                      'langcode' => 'en',
-                      'field_add_master_placeholder' => ['target_id' => $paragraph->id(), 'target_revision_id' => $paragraph->getRevisionId()]
-                    ];
-                    $termSave = Term::create($termItem)->save();
-                   } 
-              }
-          }
+          $termItem = [
+            'name' => $key,
+            'vid' => self::MASTER_PLACEHOLDER,
+            'langcode' => 'en',
+            'field_add_master_placeholder' => ['target_id' => $paragraph->id(), 'target_revision_id' => $paragraph->getRevisionId()],
+          ];
+          $termSave = Term::create($termItem)->save();
+        }
+      }
+    }
 
   }
 
- /**
-  * [readTaxonomyByName description]
-  * @param  [type] $name  [description]
-  * @param  [type] $vocab [description]
-  * @return [type]        [description]
-  */
-  private function readTaxonomyByName($name, $vocab)
-  {
+  /**
+   * ReadTaxonomyByName.
+   *
+   * @param [string] $name
+   * @param [string] $vocab
+   *
+   * @return [interger]
+   *   $term_id
+   */
+  private function readTaxonomyByName($name, $vocab) {
     $termid = 0;
-    $term_id =0;
-    //Get tid of term with same name 
-    $termid = db_query('SELECT n.tid FROM {taxonomy_term_field_data} n WHERE n.name  = :uid AND n.vid  = :vid', array(':uid' =>  $name, ':vid' => $vocab));
-    foreach($termid as $val){
-      $term_id = $val->tid; // get tid.
-    } 
+    $term_id = 0;
+    // Get tid of term with same name.
+    $termid = db_query('SELECT n.tid FROM {taxonomy_term_field_data} n WHERE n.name  = :uid AND n.vid  = :vid', [':uid' => $name, ':vid' => $vocab]);
+    foreach ($termid as $val) {
+      // Get tid.
+      $term_id = $val->tid;
+    }
     return $term_id;
 
   }
 
- /**
-  * [TermDelete description]
-  * @param [type] $vid [description]
-  */
-  private function TermDelete($vid) {
+  /**
+   * TermDelete.
+   *
+   * @param [string] $vid
+   */
+  private function termDelete($vid) {
     foreach ($vid as $key => $vocab) {
       $tids = \Drupal::entityQuery('taxonomy_term')
-          ->condition('vid', $vocab)
-         ->execute();
+        ->condition('vid', $vocab)
+        ->execute();
       entity_delete_multiple('taxonomy_term', $tids);
     }
   }
 
   /**
-   * [createParagraph description]
-   * @param  [type] $placeholderKey   [description]
-   * @param  [type] $PlaceholderValue [description]
-   * @return [type]                   [description]
+   * DeleteParagraph.
    */
-  private function DeleteParagraph() {
-   $tables = ['paragraph__field_placeholder_key', 
-    'paragraph__field_default_value', 
-    'paragraph__field_description', 
-    'paragraph_revision__field_default_value', 
-    'paragraph_revision__field_description', 
-    'paragraph_revision__field_placeholder_key'
-  ]; 
-    // delete the placeholder key, placeholder value and description tables
-  // Before proceeding with import
-    foreach ($tables as $table) { 
+  private function deleteParagraph() {
+    $tables = ['paragraph__field_placeholder_key',
+      'paragraph__field_default_value',
+      'paragraph__field_description',
+      'paragraph_revision__field_default_value',
+      'paragraph_revision__field_description',
+      'paragraph_revision__field_placeholder_key',
+    ];
+    // Delete the placeholder key, placeholder value and description tables
+    // Before proceeding with import.
+    foreach ($tables as $table) {
       \Drupal::database()->delete($table)
-                ->condition('bundle', 'domain_management_configuration', '=')
-                ->execute();
+        ->condition('bundle', 'domain_management_configuration', '=')
+        ->execute();
     }
 
     // Delete all entries from main paragraph tables for domain configs.
-    
-    $ParagraphTable = [
+    $paragraphTable = [
       'paragraphs_item',
       'paragraphs_item_field_data',
     ];
 
-    foreach ($ParagraphTable as $table) { 
+    foreach ($paragraphTable as $table) {
       \Drupal::database()->delete($table)
-                ->condition('type', 'domain_management_configuration', '=')
-                ->execute();
+        ->condition('type', 'domain_management_configuration', '=')
+        ->execute();
     }
-   
-  
 
   }
 
   /**
-   * [DomainImportFinishedCallback description]
+   * DomainImportFinishedCallback for Batch Process to end.
    */
-  public static function DomainImportFinishedCallback() {
+  public static function domainImportFinishedCallback() {
     drupal_set_message('Import complete.');
   }
 
-
 }
-

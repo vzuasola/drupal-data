@@ -255,7 +255,8 @@ $config_directories = array();
  *
  * @see \Drupal\Core\Site\Settings::get()
  */
-
+$check = \Drupal\Core\Site\Settings::get();
+kint($check);die();
 /**
  * The active installation profile.
  *
