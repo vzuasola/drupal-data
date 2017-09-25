@@ -1,17 +1,17 @@
-uuid: 9742afef-3522-42d2-85b0-f5e1cbeaa866
+uuid: 74d21b27-318d-4f21-b941-0eb308265c02
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_vip_cp_col_3
+    - field.storage.node.field_vip_cb_col_3
     - node.type.vip_page
   module:
     - text
-id: node.vip_page.field_vip_cp_col_3
-field_name: field_vip_cp_col_3
+id: node.vip_page.field_vip_cb_col_3
+field_name: field_vip_cb_col_3
 entity_type: node
 bundle: vip_page
-label: 'VIP Cash Points Column 3'
+label: 'VIP Cash Back Column 3'
 description: ''
 required: false
 translatable: true

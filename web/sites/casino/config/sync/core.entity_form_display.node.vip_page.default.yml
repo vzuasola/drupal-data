@@ -6,20 +6,22 @@ dependencies:
     - field.field.node.vip_page.field_vip_banner_content
     - field.field.node.vip_page.field_vip_banner_content_pos
     - field.field.node.vip_page.field_vip_banner_image
-    - field.field.node.vip_page.field_vip_cp_bot_blurb_content
-    - field.field.node.vip_page.field_vip_cp_bot_blurb_title
-    - field.field.node.vip_page.field_vip_cp_col_1
-    - field.field.node.vip_page.field_vip_cp_col_2
-    - field.field.node.vip_page.field_vip_cp_col_3
+    - field.field.node.vip_page.field_vip_cb_bot_blurb_content
+    - field.field.node.vip_page.field_vip_cb_col_1
+    - field.field.node.vip_page.field_vip_cb_col_2
+    - field.field.node.vip_page.field_vip_cb_col_3
+    - field.field.node.vip_page.field_vip_cb_title
+    - field.field.node.vip_page.field_vip_cb_top_blurb_content
+    - field.field.node.vip_page.field_vip_cp_content
     - field.field.node.vip_page.field_vip_cp_enable
     - field.field.node.vip_page.field_vip_cp_title
     - field.field.node.vip_page.field_vip_sc_bot_blurb_content
-    - field.field.node.vip_page.field_vip_sc_bot_blurb_title
     - field.field.node.vip_page.field_vip_sc_col_1
     - field.field.node.vip_page.field_vip_sc_col_2
     - field.field.node.vip_page.field_vip_sc_col_3
     - field.field.node.vip_page.field_vip_sc_enable
     - field.field.node.vip_page.field_vip_sc_title
+    - field.field.node.vip_page.field_vip_sc_top_blurb_content
     - field.field.node.vip_page.field_vip_structure_content
     - field.field.node.vip_page.field_vip_structure_enable
     - field.field.node.vip_page.field_vip_structure_title
@@ -58,96 +60,89 @@ third_party_settings:
       format_type: details
       format_settings:
         label: 'VIP Structure Tab'
-        open: true
         id: ''
         classes: ''
+        open: false
         required_fields: false
       label: 'VIP Structure Tab'
     group_vip_cash_points_tab:
       children:
         - field_vip_cp_enable
         - field_vip_cp_title
-        - group_vip_cash_points_content
-        - group_vip_cp_bottom_blu
+        - field_vip_cp_content
       parent_name: ''
       weight: 10
       format_type: details
       format_settings:
         label: 'VIP Cash Points Tab'
-        open: true
-        id: ''
-        classes: ''
-        required_fields: false
-      label: 'VIP Cash Points Tab'
-    group_vip_cp_bottom_blu:
-      children:
-        - field_vip_cp_bot_blurb_title
-        - field_vip_cp_bot_blurb_content
-      parent_name: group_vip_cash_points_tab
-      weight: 41
-      format_type: details
-      format_settings:
         id: ''
         classes: ''
         open: false
         required_fields: false
-      label: 'VIP Cash Points Bottom Blurb Section'
+      label: 'VIP Cash Points Tab'
     group_vip_slots_club_tab:
       children:
         - field_vip_sc_enable
         - field_vip_sc_title
+        - field_vip_sc_top_blurb_content
         - group_vip_slots_club_content
-        - group_vip_slots_club_bottom_blur
+        - field_vip_sc_bot_blurb_content
       parent_name: ''
       weight: 11
       format_type: details
       format_settings:
+        label: 'VIP Slots Club Tab'
         id: ''
         classes: ''
-        open: true
+        open: false
         required_fields: false
       label: 'VIP Slots Club Tab'
-    group_vip_slots_club_bottom_blur:
-      children:
-        - field_vip_sc_bot_blurb_title
-        - field_vip_sc_bot_blurb_content
-      parent_name: group_vip_slots_club_tab
-      weight: 51
-      format_type: details
-      format_settings:
-        id: ''
-        classes: ''
-        open: false
-        required_fields: false
-      label: 'VIP Slots Club Bottom Blurb Section'
-    group_vip_cash_points_content:
-      children:
-        - field_vip_cp_col_1
-        - field_vip_cp_col_2
-        - field_vip_cp_col_3
-      parent_name: group_vip_cash_points_tab
-      weight: 40
-      format_type: details
-      format_settings:
-        id: ''
-        classes: ''
-        open: false
-        required_fields: false
-      label: 'VIP Cash Points Content'
     group_vip_slots_club_content:
       children:
         - field_vip_sc_col_1
         - field_vip_sc_col_2
         - field_vip_sc_col_3
       parent_name: group_vip_slots_club_tab
-      weight: 50
+      weight: 48
       format_type: details
       format_settings:
+        label: 'VIP Slots Club Content'
+        open: true
+        id: ''
+        classes: ''
+        required_fields: false
+      label: 'VIP Slots Club Content'
+    group_vip_cash_back_tab:
+      children:
+        - field_vip_cb_title
+        - field_vip_cb_top_blurb_content
+        - group_vip_cash_back_content
+        - field_vip_cb_bot_blurb_content
+      parent_name: ''
+      weight: 20
+      format_type: details
+      format_settings:
+        label: 'VIP Cash Back Tab'
         id: ''
         classes: ''
         open: false
         required_fields: false
-      label: 'VIP Slots Club Content'
+      label: 'VIP Cash Back Tab'
+    group_vip_cash_back_content:
+      children:
+        - field_vip_cb_col_1
+        - field_vip_cb_col_2
+        - field_vip_cb_col_3
+      parent_name: group_vip_cash_back_tab
+      weight: 59
+      format_type: details
+      format_settings:
+        label: 'VIP Cash Back Content'
+        open: true
+        id: ''
+        classes: ''
+        required_fields: false
+      label: 'VIP Cash Back Content'
 id: node.vip_page.default
 targetEntityType: node
 bundle: vip_page
@@ -181,40 +176,56 @@ content:
     third_party_settings: {  }
     type: image_image
     region: content
-  field_vip_cp_bot_blurb_content:
-    weight: 55
+  field_vip_cb_bot_blurb_content:
+    weight: 60
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
     region: content
-  field_vip_cp_bot_blurb_title:
-    weight: 54
+  field_vip_cb_col_1:
+    weight: 59
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_vip_cb_col_2:
+    weight: 60
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_vip_cb_col_3:
+    weight: 61
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_vip_cb_title:
+    weight: 57
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_vip_cp_col_1:
+  field_vip_cb_top_blurb_content:
+    weight: 58
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_vip_cp_content:
     weight: 39
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    type: text_textarea
-    region: content
-  field_vip_cp_col_2:
-    weight: 40
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    type: text_textarea
-    region: content
-  field_vip_cp_col_3:
-    weight: 41
     settings:
       rows: 5
       placeholder: ''
@@ -237,20 +248,12 @@ content:
     type: string_textfield
     region: content
   field_vip_sc_bot_blurb_content:
-    weight: 52
+    weight: 49
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
-    region: content
-  field_vip_sc_bot_blurb_title:
-    weight: 51
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
     region: content
   field_vip_sc_col_1:
     weight: 47
@@ -290,6 +293,14 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_vip_sc_top_blurb_content:
+    weight: 47
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
     region: content
   field_vip_structure_content:
     weight: 56

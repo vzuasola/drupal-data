@@ -1,12 +1,12 @@
-uuid: 0783507d-0d34-4f79-bb27-0fb7692ffcef
+uuid: 338dcb8f-fe31-41dd-989f-dc2e413e0944
 langcode: en
 status: true
 dependencies:
   module:
     - node
     - text
-id: node.field_vip_cp_col_1
-field_name: field_vip_cp_col_1
+id: node.field_vip_sc_top_blurb_content
+field_name: field_vip_sc_top_blurb_content
 entity_type: node
 type: text_long
 settings: {  }
