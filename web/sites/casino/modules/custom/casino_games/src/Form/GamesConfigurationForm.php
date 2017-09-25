@@ -11,7 +11,7 @@ class GamesConfigurationForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   protected function getEditableConfigNames() {
-    return ['webcomposer_config.games_configuration'];
+    return ['casino_config.games_configuration'];
   }
 
   /**
@@ -25,9 +25,21 @@ class GamesConfigurationForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    $config = $this->config('webcomposer_config.games_configuration');
+    $config = $this->config('casino_config.games_configuration');
 
-    $form['play_text'] = array(
+    $form['games_configuration_tab'] = array(
+      '#type' => 'vertical_tabs',
+      '#title' => t('Settings'),
+    );
+
+    $form['thumbnail_group'] = array(
+      '#type' => 'details',
+      '#title' => $this->t('Thumbnail'),
+      '#collapsible' => TRUE,
+      '#group' => 'games_configuration_tab',
+    );
+
+    $form['thumbnail_group']['play_text'] = array(
       '#type' => 'textfield',
       '#title' => $this->t('Play Now Button Text'),
       '#description' => $this->t('The text to display on play button.'),
@@ -35,7 +47,7 @@ class GamesConfigurationForm extends ConfigFormBase {
       '#required' => TRUE,
     );
 
-    $form['play_for_fun_text'] = array(
+    $form['thumbnail_group']['play_for_fun_text'] = array(
       '#type' => 'textfield',
       '#title' => $this->t('Play For Fun Link Text'),
       '#description' => $this->t('The text to display on play for fun link.'),
@@ -43,7 +55,7 @@ class GamesConfigurationForm extends ConfigFormBase {
       '#required' => TRUE,
     );
 
-    $form['game_info_text'] = array(
+    $form['thumbnail_group']['game_info_text'] = array(
       '#type' => 'textfield',
       '#title' => $this->t('Game Info Link Text'),
       '#description' => $this->t('The text to display on game info link.'),
@@ -51,7 +63,14 @@ class GamesConfigurationForm extends ConfigFormBase {
       '#required' => TRUE,
     );
 
-    $form['kebab_menu_text'] = array(
+    $form['category_group'] = array(
+      '#type' => 'details',
+      '#title' => $this->t('Category'),
+      '#collapsible' => TRUE,
+      '#group' => 'games_configuration_tab',
+    );
+
+    $form['category_group']['kebab_menu_text'] = array(
       '#type' => 'textfield',
       '#title' => $this->t('Category Kebab Text'),
       '#description' => $this->t('The text to display on category kebab menu.'),
@@ -59,7 +78,7 @@ class GamesConfigurationForm extends ConfigFormBase {
       '#required' => TRUE,
     );
 
-    $form['load_more_text'] = array(
+    $form['category_group']['load_more_text'] = array(
       '#type' => 'textfield',
       '#title' => $this->t('Load More Text'),
       '#description' => $this->t('The text to display on load more button.'),
@@ -67,12 +86,38 @@ class GamesConfigurationForm extends ConfigFormBase {
       '#required' => TRUE,
     );
 
-    $form['load_more_disabled'] = array(
+    $form['category_group']['load_more_disabled'] = array(
       '#type' => 'checkbox',
       '#title' => $this->t('Disable Load More'),
       '#description' => $this->t('If checked all games will be shown at once.'),
       '#default_value' => $config->get('load_more_disabled'),
       '#required' => FALSE,
+    );
+
+    $form['freeplay_lightbox_group'] = array(
+      '#type' => 'details',
+      '#title' => $this->t('Free Play Lightbox'),
+      '#collapsible' => TRUE,
+      '#group' => 'games_configuration_tab',
+      '#description' => $this->t('Lightbox will appear when user access the game on free play while logged in.'),
+    );
+
+    $form['freeplay_lightbox_group']['freeplay_lightbox_title'] = array(
+      '#type' => 'textfield',
+      '#title' => $this->t('Free Play Lightbox Title'),
+      '#description' => $this->t('The text that will be displayed as title of the lightbox.'),
+      '#default_value' => $config->get('freeplay_lightbox_title'),
+      '#required' => TRUE,
+    );
+
+    $freePlayLightboxContent = $config->get('freeplay_lightbox_content');
+    $form['freeplay_lightbox_group']['freeplay_lightbox_content'] = array(
+      '#type' => 'text_format',
+      '#title' => $this->t('Lightbox Content'),
+      '#description' => $this->t('The text that will be displayed as content of the lightbox.'),
+      '#default_value' => $freePlayLightboxContent['value'],
+      '#format' => $freePlayLightboxContent['format'],
+      '#required' => TRUE,
     );
 
     return parent::buildForm($form, $form_state);
@@ -91,10 +136,12 @@ class GamesConfigurationForm extends ConfigFormBase {
       'kebab_menu_text',
       'load_more_text',
       'load_more_disabled',
+      'freeplay_lightbox_title',
+      'freeplay_lightbox_content',
     );
 
     foreach ($keys as $key) {
-      $this->config('webcomposer_config.games_configuration')->set($key, $form_state->getValue($key))->save();
+      $this->config('casino_config.games_configuration')->set($key, $form_state->getValue($key))->save();
     }
   }
 

@@ -2,4 +2,4 @@ casino_games.games_configuration:
   title: 'Games Custom Configuration'
   base_route_name: casino_games.games_configuration
   names:
-    - 'webcomposer_config.games_configuration'
+    - 'casino_config.games_configuration'

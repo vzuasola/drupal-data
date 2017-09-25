@@ -1,4 +1,4 @@
-webcomposer_config.games_configuration:
+casino_config.games_configuration:
   type: config_object
   label: 'Games Custom Configurations'
   mapping:
@@ -17,3 +17,10 @@ webcomposer_config.games_configuration:
     load_more_text:
       type: label
       label: 'Load More Text'
+    freeplay_lightbox_title:
+      type: label
+      label: 'Free Play Lightbox Title'
+    freeplay_lightbox_content:
+      type: text_format
+      label: 'Free Play Lightbox Content'
+      translatable: true
