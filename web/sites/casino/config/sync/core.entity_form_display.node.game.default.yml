@@ -45,6 +45,7 @@ third_party_settings:
         - field_game_code
         - field_game_type
         - field_fim
+        - group_game_provider
       parent_name: ''
       weight: 10
       format_type: details
@@ -163,7 +164,7 @@ content:
     type: boolean_checkbox
     region: content
   field_ribbon_configuration:
-    weight: 12
+    weight: 11
     settings:
       match_operator: CONTAINS
       size: 60
