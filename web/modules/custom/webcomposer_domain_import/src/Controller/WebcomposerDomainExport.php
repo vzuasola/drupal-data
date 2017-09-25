@@ -299,18 +299,18 @@ class WebcomposerDomainExport extends ControllerBase {
     foreach ($variables as $key => $value) {
       // Check if property is empty.
       $placeholders['group'][$key] = $key;
-      if(is_array($value)) {
-      foreach ($value as $holder => $default) {
-        if (array_key_exists($holder, $placeholders)) {
-          $placeholders[$holder][$key] = $default;
-        }
-        else {
-          $placeholders[$holder]['label'] = $holder;
-          $placeholders[$holder]['default'] = $default;
-          $placeholders[$holder][$key] = $default;
+      if (is_array($value)) {
+        foreach ($value as $holder => $default) {
+          if (array_key_exists($holder, $placeholders)) {
+            $placeholders[$holder][$key] = $default;
+          }
+          else {
+            $placeholders[$holder]['label'] = $holder;
+            $placeholders[$holder]['default'] = $default;
+            $placeholders[$holder][$key] = $default;
+          }
         }
       }
-    }
     }
 
     $group = $placeholders['group'];
