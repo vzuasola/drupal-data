@@ -1,14 +1,14 @@
-uuid: aae330e1-5ea7-4634-9555-658d01849054
+uuid: dff61a43-dc09-47dc-b23e-daa5b13c0c63
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_content_position
+    - field.storage.node.field_vip_banner_content_pos
     - node.type.vip_page
   module:
     - options
-id: node.vip_page.field_content_position
-field_name: field_content_position
+id: node.vip_page.field_vip_banner_content_pos
+field_name: field_vip_banner_content_pos
 entity_type: node
 bundle: vip_page
 label: 'Banner Content Position'

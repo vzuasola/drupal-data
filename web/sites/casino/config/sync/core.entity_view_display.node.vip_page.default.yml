@@ -3,9 +3,9 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.vip_page.field_banner_content
-    - field.field.node.vip_page.field_banner_image
-    - field.field.node.vip_page.field_content_position
+    - field.field.node.vip_page.field_vip_banner_content
+    - field.field.node.vip_page.field_vip_banner_content_pos
+    - field.field.node.vip_page.field_vip_banner_image
     - field.field.node.vip_page.field_vip_cp_bot_blurb_content
     - field.field.node.vip_page.field_vip_cp_bot_blurb_title
     - field.field.node.vip_page.field_vip_cp_col_1
@@ -34,28 +34,28 @@ targetEntityType: node
 bundle: vip_page
 mode: default
 content:
-  field_banner_content:
-    weight: 102
+  field_vip_banner_content:
+    weight: 124
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
-  field_banner_image:
-    weight: 101
+  field_vip_banner_content_pos:
+    weight: 123
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_vip_banner_image:
+    weight: 122
     label: above
     settings:
       image_style: ''
       image_link: ''
     third_party_settings: {  }
     type: image
-    region: content
-  field_content_position:
-    weight: 103
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
     region: content
   field_vip_cp_bot_blurb_content:
     weight: 113

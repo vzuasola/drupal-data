@@ -1,13 +1,13 @@
-uuid: cf63b300-0ce2-4616-b3d4-651d12a49aca
+uuid: 1d191d6c-3b39-41ab-94d7-f78f24ecf986
 langcode: en
 status: true
 dependencies:
   module:
-    - paragraphs
+    - node
     - text
-id: paragraph.field_vip_tab_content
-field_name: field_vip_tab_content
-entity_type: paragraph
+id: node.field_vip_banner_content
+field_name: field_vip_banner_content
+entity_type: node
 type: text_long
 settings: {  }
 module: text

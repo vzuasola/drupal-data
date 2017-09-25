@@ -1,7 +1,0 @@
-uuid: d8f4ed8c-f0e2-447d-b71e-d3fe28d5600d
-langcode: en
-status: true
-dependencies: {  }
-id: vip_page_basic
-label: 'VIP Page Basic'
-behavior_plugins: {  }

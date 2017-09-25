@@ -1,14 +1,14 @@
-uuid: ba9df083-b0d8-4491-8821-60a416c60cf2
+uuid: caf10b72-e365-4277-b4e5-b4e52e3deeee
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_banner_content
+    - field.storage.node.field_vip_banner_content
     - node.type.vip_page
   module:
     - text
-id: node.vip_page.field_banner_content
-field_name: field_banner_content
+id: node.vip_page.field_vip_banner_content
+field_name: field_vip_banner_content
 entity_type: node
 bundle: vip_page
 label: 'Banner Content'
