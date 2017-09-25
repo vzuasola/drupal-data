@@ -1,0 +1,17 @@
+uuid: fa1c75a3-15c2-4456-a114-cc34e21e5d44
+langcode: en
+status: true
+dependencies:
+  module:
+    - casino_games
+    - serialization
+    - user
+id: casino_config_rest_resource
+plugin_id: casino_config_rest_resource
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+    supported_auth:
+      - cookie
