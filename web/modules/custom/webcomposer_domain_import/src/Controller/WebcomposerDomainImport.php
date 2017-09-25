@@ -99,9 +99,9 @@ class WebcomposerDomainImport extends ControllerBase {
       $this->termDelete($vid);
     }
     else {
-      ksm($this->ImportParser->validate());
-      $message = t('An error occurred while processing %error_operation .', ['%error_operation' => $this->ImportParser->validate(), TRUE]);
-      drupal_set_message($message, 'error');
+      // @todo fix the message on success as well.
+      // $message = t('An error occurred while processing %error_operation .', ['%error_operation' => $this->ImportParser->validate(), TRUE]);
+      // drupal_set_message($message, 'error');
       $context['finished'] = 1;
     }
   }
