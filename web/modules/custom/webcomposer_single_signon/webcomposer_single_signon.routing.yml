@@ -1,0 +1,18 @@
+webcomposer_single_signon.admin_settings:
+  path: 'admin/config/webcomposer/single_signon'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Webcomposer Single Signon'
+  requirements:
+    _permission: 'administer site configuration'
+
+webcomposer_single_signon.authentication_form:
+  path: '/admin/config/webcomposer/single_signon/authentication'
+  defaults:
+    _form: '\Drupal\webcomposer_single_signon\Form\AuthenticationForm'
+    _title: 'Authentication Form'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE
+

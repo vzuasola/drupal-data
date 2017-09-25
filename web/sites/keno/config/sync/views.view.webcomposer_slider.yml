@@ -18,6 +18,8 @@ dependencies:
     - serialization
     - webcomposer_rest_extra
     - webcomposer_slider
+_core:
+  default_config_hash: '-_cChWAnFe4AwHvtrU_VTsC44B4A-fyyndMIVRSiWLM'
 id: webcomposer_slider
 label: 'Webcomposer Slider'
 module: views

@@ -1,0 +1,15 @@
+webcomposer_registration_landing_page.admin_settings:
+  path: 'admin/config/webcomposer/registration-landing_page'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Webcomposer Registration Landing Page'
+  requirements:
+    _permission: 'administer site configuration'
+
+webcomposer_registration_landing_page.registration_landing_page_configuration_form:
+  path: 'admin/config/webcomposer/registration-landing_page/config'
+  defaults:
+    _form: 'Drupal\webcomposer_registration_landing_page\Form\RegistrationLandingPageConfiguration'
+    _title: 'Registration Landing Page Configuration'
+  requirements:
+    _permission: 'administer site configuration'

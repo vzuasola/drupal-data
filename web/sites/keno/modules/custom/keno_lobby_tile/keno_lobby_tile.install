@@ -1,0 +1,29 @@
+<?php
+
+
+/**
+ * Implements hook_uninstall
+ */
+function keno_lobby_tile_uninstall() {
+  $keys = [
+    'core.entity_form_display.keno_lobby_tile_entity.keno_lobby_tile_entity.default.yml',
+    'core.entity_view_display.keno_lobby_tile_entity.keno_lobby_tile_entity.default.yml',
+    'field.field.keno_lobby_tile_entity.keno_lobby_tile_entity.field_blurb.yml',
+    'field.field.keno_lobby_tile_entity.keno_lobby_tile_entity.field_button_text.yml',
+    'field.field.keno_lobby_tile_entity.keno_lobby_tile_entity.field_tile_image.uml',
+    'field.field.keno_lobby_tile_entity.keno_lobby_tile_entity.field_tile_link_target.yml',
+    'field.field.keno_lobby_tile_entity.keno_lobby_tile_entity.field_tile_link.yml',
+    'field.field.keno_lobby_tile_entity.keno_lobby_tile_entity.field_title.yml',
+    'field.storage.keno_lobby_tile_entity.field_blurb.yml',
+    'field.storage.keno_lobby_tile_entity.field_button_text.yml',
+    'field.storage.keno_lobby_tile_entity.field_tile_image.yml',
+    'field.storage.keno_lobby_tile_entity.field_tile_link_target.yml',
+    'field.storage.keno_lobby_tile_entity.field_tile_link.yml',
+    'field.storage.keno_lobby_tile_entity.field_title.yml',
+    'views.view.keno_lobby_tile.yml',
+    ];
+
+    foreach ($keys as $key) {
+      \Drupal::configFactory()->getEditable($key)->delete();
+    }
+}
