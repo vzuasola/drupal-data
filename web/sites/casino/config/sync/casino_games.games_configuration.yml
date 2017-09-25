@@ -1,4 +1,4 @@
-play_text: 'Play Now'
+play_text: 'Play Now - eeen'
 play_for_fun_text: 'Free Play'
 game_info_text: 'Game Info'
 kebab_menu_text: More
@@ -6,5 +6,7 @@ load_more_text: 'Load More Games'
 load_more_disabled: 0
 freeplay_lightbox_title: Sample
 freeplay_lightbox_content:
-  value: "<p>Nulla porttitor accumsan tincidunt. Vivamus suscipit tortor eget felis porttitor volutpat.</p>\r\n"
+  value: "<p>Nulla porttitor accumsan tincidunt. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.</p>\r\n"
   format: basic_html
+disable_language_selector: 1
+disable_announcement_icon: 1

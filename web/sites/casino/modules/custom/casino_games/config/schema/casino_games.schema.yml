@@ -1,4 +1,4 @@
-casino_config.games_configuration:
+casino_games.games_configuration:
   type: config_object
   label: 'Games Custom Configurations'
   mapping:
