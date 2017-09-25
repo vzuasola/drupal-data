@@ -1,17 +1,17 @@
-uuid: 37b88491-a11e-4e78-8715-390277fc93fc
+uuid: 1bf2e6cf-1e32-4a5b-b9ea-6efb06e5b532
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_vip_cp_col_1
+    - field.storage.node.field_vip_cb_top_blurb_content
     - node.type.vip_page
   module:
     - text
-id: node.vip_page.field_vip_cp_col_1
-field_name: field_vip_cp_col_1
+id: node.vip_page.field_vip_cb_top_blurb_content
+field_name: field_vip_cb_top_blurb_content
 entity_type: node
 bundle: vip_page
-label: 'VIP Cash Points Column 1'
+label: 'VIP Cash Back Top Blurb Content'
 description: ''
 required: false
 translatable: true
