@@ -87,23 +87,24 @@ class WebcomposerDomainImport extends ControllerBase {
    * @param [Array] &$context
    */
   public function importPrepare($form_state, &$context) {
+    kint_require();
     $message = 'Deleting existing Domains, Domains groups, Master Placeholders and realted Paragraphs...';
     $context['message'] = $message;
 
     $this->readExcel($form_state, $context);
     $this->ImportParser->setData($context['sandbox']);
-    if ($this->ImportParser->validate() === "EXCEL_FORMAT_OK") {
+    // if ($this->ImportParser->validate() === "EXCEL_FORMAT_OK") {
       $this->deleteParagraph();
       // Prepare all the vacabs for import.
       $vid = [self::DOMAIN, self::DOMAIN_GROUP, self::MASTER_PLACEHOLDER];
       $this->termDelete($vid);
-    }
-    else {
+    // }
+    // else {
       // @todo fix the message on success as well.
       // $message = t('An error occurred while processing %error_operation .', ['%error_operation' => $this->ImportParser->validate(), TRUE]);
       // drupal_set_message($message, 'error');
-      $context['finished'] = 1;
-    }
+    //   $context['finished'] = 1;
+    // }
   }
 
   /**

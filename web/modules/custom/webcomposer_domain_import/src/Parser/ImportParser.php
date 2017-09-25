@@ -96,11 +96,11 @@ class ImportParser {
     $validate[] = $this->validate_labels();
     $validate[] = $this->validate_domain_labels();
     $validate[] = $this->validate_main_format();
-    $validate[] = $this->validate_domain_format();
+    // $validate[] = $this->validate_domain_format();
     // Need to correct the export.
-    $validate[] = $this->validate_domain_consistency();
+    // $validate[] = $this->validate_domain_consistency();
     // Correct the export.
-    $validate[] = $this->validate_domain_duplicates();
+    // $validate[] = $this->validate_domain_duplicates();
     // $validate[] = $this->validate_tokens_duplicates();
     foreach ($validate as $code) {
       if ($code !== 'VALIDATE_OK') {
@@ -425,7 +425,6 @@ class ImportParser {
     if (isset($cache['columns']['Tokens'][1][1])) {
       $token_description = $cache['columns']['Tokens'][1][1];
     }
-
     // Check excel labels.
     if (!$language_label || !$token_label || !$token_description) {
       return 'EXCEL_IMPROPER_FORMAT_LABELS';
