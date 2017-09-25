@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.vip_page.field_vip_cb_col_1
     - field.field.node.vip_page.field_vip_cb_col_2
     - field.field.node.vip_page.field_vip_cb_col_3
+    - field.field.node.vip_page.field_vip_cb_enable
     - field.field.node.vip_page.field_vip_cb_title
     - field.field.node.vip_page.field_vip_cb_top_blurb_content
     - field.field.node.vip_page.field_vip_cp_content
@@ -86,6 +87,16 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: text_default
+    region: content
+  field_vip_cb_enable:
+    weight: 133
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
     region: content
   field_vip_cb_title:
     weight: 126
