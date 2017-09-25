@@ -66,14 +66,7 @@ class WebcomposerDomainImport extends ControllerBase {
     $realPath = drupal_realpath($uri);
     $sheets = $this->ExcelParser->read_excel($realPath);
     $this->ImportParser->setData($sheets);
-    if ($this->ImportParser->validate() === "EXCEL_FORMAT_OK") {
-      $context['sandbox'] = $this->ImportParser->validate();
-
-    }
-    else {
-      $context['sandbox'] = $this->ImportParser->validate();
-    }
-
+    $context['sandbox'] = $this->ImportParser->validate();
   }
 
   /**
