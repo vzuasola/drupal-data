@@ -1,0 +1,21 @@
+uuid: aae330e1-5ea7-4634-9555-658d01849054
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content_position
+    - node.type.vip_page
+  module:
+    - options
+id: node.vip_page.field_content_position
+field_name: field_content_position
+entity_type: node
+bundle: vip_page
+label: 'Banner Content Position'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

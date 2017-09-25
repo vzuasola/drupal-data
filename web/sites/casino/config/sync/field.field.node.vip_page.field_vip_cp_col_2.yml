@@ -1,0 +1,21 @@
+uuid: 7a52a679-02bc-43f4-b08d-415674f9fa6c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_vip_cp_col_2
+    - node.type.vip_page
+  module:
+    - text
+id: node.vip_page.field_vip_cp_col_2
+field_name: field_vip_cp_col_2
+entity_type: node
+bundle: vip_page
+label: 'VIP Cash Points Column 2'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
