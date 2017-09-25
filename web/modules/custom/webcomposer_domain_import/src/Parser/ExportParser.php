@@ -53,7 +53,7 @@ class ExportParser {
   public function get_domain_groups_with_domains() {
 
     $count = 0;
-
+    $groups = [];
     // Get all the domains with respective groups.
     $domains = \Drupal::entityManager()->getStorage('taxonomy_term')->loadTree('domain');
 
