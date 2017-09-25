@@ -11,7 +11,7 @@ class GamesConfigurationForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   protected function getEditableConfigNames() {
-    return ['webcomposer_config.games_configuration'];
+    return ['casino_config.games_configuration'];
   }
 
   /**
@@ -25,7 +25,7 @@ class GamesConfigurationForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    $config = $this->config('webcomposer_config.games_configuration');
+    $config = $this->config('casino_config.games_configuration');
 
     $form['games_configuration_tab'] = array(
       '#type' => 'vertical_tabs',
@@ -141,7 +141,7 @@ class GamesConfigurationForm extends ConfigFormBase {
     );
 
     foreach ($keys as $key) {
-      $this->config('webcomposer_config.games_configuration')->set($key, $form_state->getValue($key))->save();
+      $this->config('casino_config.games_configuration')->set($key, $form_state->getValue($key))->save();
     }
   }
 
