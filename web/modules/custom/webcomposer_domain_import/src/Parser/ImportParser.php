@@ -422,11 +422,8 @@ class ImportParser {
       $token_label = $cache['columns']['Tokens'][0][1];
     }
 
-    if (isset($cache['columns']['Tokens'][1][1])) {
-      $token_description = $cache['columns']['Tokens'][1][1];
-    }
     // Check excel labels.
-    if (!$language_label || !$token_label || !$token_description) {
+    if (!$language_label || !$token_label) {
       return 'EXCEL_IMPROPER_FORMAT_LABELS';
     }
 
