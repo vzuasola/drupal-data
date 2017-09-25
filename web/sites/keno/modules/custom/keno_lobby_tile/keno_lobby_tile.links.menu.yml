@@ -1,0 +1,18 @@
+keno_lobby_tile.list:
+  title: 'Keno Lobby Tiles Configuration'
+  description: 'List Keno lobby tile entities'
+  parent: system.admin_config
+  route_name: keno_lobby_tile.admin_settings
+
+# Keno lobby tile entity menu items definition
+entity.keno_lobby_tile_entity.collection:
+  title: 'Keno lobby tile entity list'
+  route_name: entity.keno_lobby_tile_entity.collection
+  description: 'List Keno lobby tile entity entities'
+  parent: keno_lobby_tile.list
+
+keno_lobby_tile_entity.admin.structure.settings:
+  title: Keno lobby tile entity settings
+  description: 'Configure Keno lobby tile entity entities'
+  route_name: keno_lobby_tile_entity.settings
+  parent: keno_lobby_tile.list

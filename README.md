@@ -13,6 +13,7 @@ the [Documentation on drupal.org](https://www.drupal.org/node/2471553).
 
 * [Generating a Module Skeleton](docs/generate-module.md)
 * [Generating a Custom Content Entity](docs/generate-custom-entity.md)
+* [Generating a Custom Configuration Form](docs/generate-custom-form.md)
 
 ## Updating Drupal Core
 

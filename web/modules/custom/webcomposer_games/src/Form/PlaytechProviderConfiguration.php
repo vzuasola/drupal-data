@@ -29,36 +29,36 @@ class PlaytechProviderConfiguration extends ConfigFormBase {
   public function buildForm(array $form, FormStateInterface $form_state) {
     $config = $this->config('webcomposer_config.games_playtech_provider');
 
-    $form['javascript_assets'] = array(
+    $form['javascript_assets'] = [
       '#type' => 'textarea',
       '#title' => t('Javascript Assets'),
       '#size' => 500,
       '#description' => $this->t('Define the Playtech scripts that should be included on game launch. Provide one script per line'),
       '#default_value' => $config->get('javascript_assets')
-    );
+    ];
 
-    $form['playtech_pas_endpoint'] = array(
+    $form['playtech_pas_endpoint'] = [
       '#type' => 'textfield',
       '#title' => t('Playtech PAS Endpoint'),
       '#description' => $this->t('Defines the endpoint used for authenticating PAS'),
       '#default_value' => $config->get('playtech_pas_endpoint')
-    );
+    ];
 
-    $form['playtech_pas_casino'] = array(
+    $form['playtech_pas_casino'] = [
       '#type' => 'textfield',
       '#title' => t('Playtech PAS Casino'),
       '#description' => $this->t('Defines the casino value used for authenticating PAS'),
       '#default_value' => $config->get('playtech_pas_casino')
-    );
+    ];
 
-    $form['lobby_url'] = array(
+    $form['lobby_url'] = [
       '#type' => 'textfield',
       '#title' => t('Lobby URL'),
       '#description' => $this->t('The Playtech Lobby URL'),
       '#default_value' => $config->get('lobby_url')
-    );
+    ];
 
-    $form['languages'] = array(
+    $form['languages'] = [
       '#type' => 'textarea',
       '#title' => t('Language Mapping'),
       '#size' => 500,
@@ -68,7 +68,7 @@ class PlaytechProviderConfiguration extends ConfigFormBase {
           <br>
           <strong>en|en-us</strong>'),
       '#default_value' => $config->get('languages')
-    );
+    ];
 
     $form['actions'] = ['#type' => 'actions'];
 

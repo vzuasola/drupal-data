@@ -1,0 +1,12 @@
+webcomposer_single_signon.list:
+  title: 'Webcomposer Single Signon'
+  parent: system.admin_config
+  description: 'Configuration for single signon'
+  route_name: webcomposer_single_signon.admin_settings
+
+webcomposer_single_signon.authentication_form:
+  title: 'Authentication Settings'
+  route_name: webcomposer_single_signon.authentication_form
+  description: 'Configure authentication of Webcomposer Single Signon'
+  parent: webcomposer_single_signon.list
+

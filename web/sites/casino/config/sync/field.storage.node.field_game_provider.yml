@@ -1,0 +1,27 @@
+uuid: 93f46349-c462-4fa5-a0b6-edff0a34320f
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_game_provider
+field_name: field_game_provider
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '0'
+      label: PAS
+    -
+      value: '1'
+      label: FIM
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
