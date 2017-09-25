@@ -1,0 +1,19 @@
+uuid: 0783507d-0d34-4f79-bb27-0fb7692ffcef
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_vip_cp_col_1
+field_name: field_vip_cp_col_1
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
