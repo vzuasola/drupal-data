@@ -5,8 +5,15 @@ dependencies:
   config:
     - field.storage.keno_lobby_tile_entity.field_tile_image
   module:
+    - content_translation
     - image
     - keno_lobby_tile
+third_party_settings:
+  content_translation:
+    translation_sync:
+      file: file
+      alt: '0'
+      title: '0'
 _core:
   default_config_hash: pOuAaar03HJUEnBL34f7bZefoTCw07OSaQ6w_b7FJZY
 id: keno_lobby_tile_entity.keno_lobby_tile_entity.field_tile_image
@@ -16,7 +23,7 @@ bundle: keno_lobby_tile_entity
 label: 'Tile Image'
 description: ''
 required: true
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
