@@ -14,7 +14,7 @@ bundle: keno_lobby_tile_entity
 label: 'Button Link Target'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }
