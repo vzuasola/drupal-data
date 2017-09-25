@@ -1,21 +1,14 @@
-uuid: 37716745-94af-4e91-b5b0-5db3966911c0
+uuid: 39a7f0cf-0dec-488f-a4c5-a0be1cfe76b7
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_banner_image
+    - field.storage.node.field_vip_banner_image
     - node.type.vip_page
   module:
-    - content_translation
     - image
-third_party_settings:
-  content_translation:
-    translation_sync:
-      alt: alt
-      title: title
-      file: '0'
-id: node.vip_page.field_banner_image
-field_name: field_banner_image
+id: node.vip_page.field_vip_banner_image
+field_name: field_vip_banner_image
 entity_type: node
 bundle: vip_page
 label: 'Banner Image'

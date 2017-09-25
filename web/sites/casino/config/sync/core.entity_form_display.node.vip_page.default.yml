@@ -3,9 +3,9 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.vip_page.field_banner_content
-    - field.field.node.vip_page.field_banner_image
-    - field.field.node.vip_page.field_content_position
+    - field.field.node.vip_page.field_vip_banner_content
+    - field.field.node.vip_page.field_vip_banner_content_pos
+    - field.field.node.vip_page.field_vip_banner_image
     - field.field.node.vip_page.field_vip_cp_bot_blurb_content
     - field.field.node.vip_page.field_vip_cp_bot_blurb_title
     - field.field.node.vip_page.field_vip_cp_col_1
@@ -36,9 +36,9 @@ third_party_settings:
   field_group:
     group_banner_section:
       children:
-        - field_banner_image
-        - field_banner_content
-        - field_content_position
+        - field_vip_banner_image
+        - field_vip_banner_content_pos
+        - field_vip_banner_content
       parent_name: ''
       weight: 8
       format_type: details
@@ -84,7 +84,7 @@ third_party_settings:
         - field_vip_cp_bot_blurb_title
         - field_vip_cp_bot_blurb_content
       parent_name: group_vip_cash_points_tab
-      weight: 40
+      weight: 41
       format_type: details
       format_settings:
         id: ''
@@ -126,7 +126,7 @@ third_party_settings:
         - field_vip_cp_col_2
         - field_vip_cp_col_3
       parent_name: group_vip_cash_points_tab
-      weight: 39
+      weight: 40
       format_type: details
       format_settings:
         id: ''
@@ -159,30 +159,30 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_banner_content:
-    weight: 12
+  field_vip_banner_content:
+    weight: 55
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
     region: content
-  field_banner_image:
-    weight: 11
+  field_vip_banner_content_pos:
+    weight: 54
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_vip_banner_image:
+    weight: 53
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
     region: content
-  field_content_position:
-    weight: 13
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
   field_vip_cp_bot_blurb_content:
-    weight: 44
+    weight: 55
     settings:
       rows: 5
       placeholder: ''
@@ -190,7 +190,7 @@ content:
     type: text_textarea
     region: content
   field_vip_cp_bot_blurb_title:
-    weight: 43
+    weight: 54
     settings:
       size: 60
       placeholder: ''
@@ -292,7 +292,7 @@ content:
     type: string_textfield
     region: content
   field_vip_structure_content:
-    weight: 30
+    weight: 56
     settings:
       rows: 5
       placeholder: ''
@@ -301,14 +301,14 @@ content:
     type: text_textarea
     region: content
   field_vip_structure_enable:
-    weight: 28
+    weight: 54
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
   field_vip_structure_title:
-    weight: 29
+    weight: 55
     settings:
       size: 60
       placeholder: ''
