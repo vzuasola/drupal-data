@@ -94,15 +94,33 @@ class GamesConfigurationForm extends ConfigFormBase {
       '#required' => FALSE,
     );
 
-    $form['freeplay_lightbox_group'] = array(
+    $form['header_group'] = array(
       '#type' => 'details',
-      '#title' => $this->t('Free Play Lightbox'),
+      '#title' => $this->t('Header Section'),
       '#collapsible' => TRUE,
-      '#group' => 'games_configuration_tab',
-      '#description' => $this->t('Lightbox will appear when user access the game on free play while logged in.'),
+      '#group' => 'games_configuration_tab'
     );
 
-    $form['freeplay_lightbox_group']['freeplay_lightbox_title'] = array(
+    $form['header_group']['disable_language_selector'] = array(
+      '#type' => 'checkbox',
+      '#title' => t('Disable Language Selector'),
+      '#default_value' => $config->get('disable_language_selector')
+    );
+
+    $form['header_group']['disable_announcement_icon'] = array(
+      '#type' => 'checkbox',
+      '#title' => t('Disable Announcement Icon'),
+      '#default_value' => $config->get('disable_announcement_icon')
+    );
+
+    $form['game_page_group'] = array(
+      '#type' => 'details',
+      '#title' => $this->t('Game Page'),
+      '#collapsible' => TRUE,
+      '#group' => 'games_configuration_tab'
+    );
+
+    $form['game_page_group']['freeplay_lightbox_title'] = array(
       '#type' => 'textfield',
       '#title' => $this->t('Free Play Lightbox Title'),
       '#description' => $this->t('The text that will be displayed as title of the lightbox.'),
@@ -111,9 +129,9 @@ class GamesConfigurationForm extends ConfigFormBase {
     );
 
     $freePlayLightboxContent = $config->get('freeplay_lightbox_content');
-    $form['freeplay_lightbox_group']['freeplay_lightbox_content'] = array(
+    $form['game_page_group']['freeplay_lightbox_content'] = array(
       '#type' => 'text_format',
-      '#title' => $this->t('Lightbox Content'),
+      '#title' => $this->t('Free Play Lightbox Content'),
       '#description' => $this->t('The text that will be displayed as content of the lightbox.'),
       '#default_value' => $freePlayLightboxContent['value'],
       '#format' => $freePlayLightboxContent['format'],
@@ -138,6 +156,8 @@ class GamesConfigurationForm extends ConfigFormBase {
       'load_more_disabled',
       'freeplay_lightbox_title',
       'freeplay_lightbox_content',
+      'disable_language_selector',
+      'disable_announcement_icon'
     );
 
     foreach ($keys as $key) {
