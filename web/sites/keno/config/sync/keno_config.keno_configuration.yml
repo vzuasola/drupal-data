@@ -2,4 +2,4 @@ trust_element_title: 'Play KENO like never before'
 trust_element_content:
   value: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent et ultricies augue. Vestibulum tristique, nunc.</p>\r\n"
   format: basic_html
-lobby_tiles_alignment: center
+lobby_tiles_alignment: left
