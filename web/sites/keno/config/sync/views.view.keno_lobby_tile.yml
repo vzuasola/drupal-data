@@ -54,9 +54,9 @@ display:
           sort_asc_label: Asc
           sort_desc_label: Desc
       pager:
-        type: none
+        type: some
         options:
-          items_per_page: 0
+          items_per_page: 3
           offset: 0
       style:
         type: table
