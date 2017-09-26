@@ -301,6 +301,10 @@
                 set.target = data.target;
             }
 
+            if ( data.class ) {
+                set.class = data.class;
+            }
+
             if ( set[ 'data-cke-saved-href' ] )
                 set.href = set[ 'data-cke-saved-href' ];
 
@@ -316,9 +320,11 @@
 
             // Load target and popup settings.
             if ( element ) {
-                var target = element.getAttribute( 'target' );
+                var target = element.getAttribute( 'target' ),
+                    className = element.getAttribute('class');
 
                 retval.target = target;
+                retval.class = className;
             }
 
             return retval;
