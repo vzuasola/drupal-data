@@ -483,6 +483,7 @@ display:
         filters: false
         filter_groups: false
         sorts: false
+        pager: false
       filters:
         langcode:
           id: langcode
@@ -495,19 +496,22 @@ display:
           value:
             '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
           group: 1
-          exposed: false
+          exposed: true
           expose:
-            operator_id: ''
-            label: ''
+            operator_id: langcode_op
+            label: 'Translation language'
             description: ''
             use_operator: false
-            operator: ''
-            identifier: ''
+            operator: langcode_op
+            identifier: langcode
             required: false
             remember: false
             multiple: false
             remember_roles:
               authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              e: '0'
             reduce: false
           is_grouped: false
           group_info:
@@ -524,45 +528,6 @@ display:
           entity_type: keno_lobby_tile_entity
           entity_field: langcode
           plugin_id: language
-        field_title_value:
-          id: field_title_value
-          table: keno_lobby_tile_entity__field_title
-          field: field_title_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: '='
-          value: ''
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_title_value_op
-            label: 'Title (field_title)'
-            description: ''
-            use_operator: false
-            operator: field_title_value_op
-            identifier: field_title_value
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              e: '0'
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          plugin_id: string
       filter_groups:
         operator: AND
         groups:
@@ -580,6 +545,10 @@ display:
           expose:
             label: ''
           plugin_id: standard
+      pager:
+        type: none
+        options:
+          offset: 0
     cache_metadata:
       max-age: 0
       contexts:
@@ -611,7 +580,7 @@ display:
       pager:
         type: some
         options:
-          items_per_page: 10
+          items_per_page: 3
           offset: 0
       filters:
         langcode:
