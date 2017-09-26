@@ -284,7 +284,6 @@ class ImportParser {
     // Unset the label as part of the placeholder collection.
     unset($default[0]);
     unset($tokens[0]);
-    unset($description[0]);
 
     // Reformat array to placeholder => value.
     foreach ($tokens as $key => $token) {
@@ -422,11 +421,8 @@ class ImportParser {
       $token_label = $cache['columns']['Tokens'][0][1];
     }
 
-    if (isset($cache['columns']['Tokens'][1][1])) {
-      $token_description = $cache['columns']['Tokens'][1][1];
-    }
     // Check excel labels.
-    if (!$language_label || !$token_label || !$token_description) {
+    if (!$language_label || !$token_label) {
       return 'EXCEL_IMPROPER_FORMAT_LABELS';
     }
 
@@ -618,17 +614,48 @@ class ImportParser {
   }
 
   /**
+   * Gets the placeholders and its respective default value from the phpexcel object per language.
    *
+   * @author alex <alexandernikko.tenepere@bayviewtechnology.com>
+   * @param array $rows
+   *   - the phpexcel array object.
+   * @param array $language
+   *   - the language of the token to fetch.
+   *
+   * @return result
    */
-  public function excel_get_master_placeholder($language) {
+  public function excel_get_master_placeholder($language, $caching = TRUE) {
+    // If cache is not empty, return the cache instead.
+    if (!empty($this->placeholders[$language]) && $caching == TRUE) {
+      return $this->placeholders[$language];
+    }
+
     $columns = $this->excel_filter_column($language);
 
-    $key = $columns[0];
-    $value = $columns[1];
-    $check = array_combine($key, $value);
-    $this->variables['en'] = $check;
+    // Tokens are always on column A.
+    $tokens = array_values($columns[0]);
+    // Default values are always on column B.
+    $default = array_values($columns[1]);
+    // No default value has been set, return false instead.
+    if ($default[0] != 'Default') {
+      return FALSE;
+    }
 
-    return $this->variables['en'];
+    // Unset the label as part of the placeholder collection.
+    unset($default[0]);
+    unset($tokens[0]);
+
+    // Reformat array to placeholder => value.
+    foreach ($tokens as $key => $token) {
+      // Skip loop if token is NULL.
+      if (!isset($token)) {
+        continue;
+      }
+
+      $this->placeholders[$language][$token] = $default[$key];
+    }
+
+    return $this->placeholders[$language];
   }
 
 }
