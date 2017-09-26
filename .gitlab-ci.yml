@@ -76,8 +76,6 @@ qa1:
   script:
     - python -u automation/run.py --stage deploy-testing
   when: manual
-  dependencies:
-    - dev
   artifacts:
     paths:
       - automation/deployed/*.jsonl
@@ -109,8 +107,6 @@ tct:
   script:
     - python -u automation/run.py --stage deploy-tct
   when: manual
-  dependencies:
-    - dev
   artifacts:
     paths:
       - automation/deployed/*.jsonl

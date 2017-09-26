@@ -4,11 +4,11 @@ status: true
 dependencies:
   config:
     - field.field.node.game.body
+    - field.field.node.game.field_fim
     - field.field.node.game.field_game_code
     - field.field.node.game.field_game_image
     - field.field.node.game.field_game_info
     - field.field.node.game.field_game_info_toggle
-    - field.field.node.game.field_game_provider
     - field.field.node.game.field_game_title
     - field.field.node.game.field_game_type
     - field.field.node.game.field_games_category
@@ -33,6 +33,16 @@ content:
     weight: 101
     settings: {  }
     third_party_settings: {  }
+    region: content
+  field_fim:
+    weight: 111
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
     region: content
   field_game_code:
     weight: 109
@@ -67,13 +77,6 @@ content:
       format_custom_true: ''
     third_party_settings: {  }
     type: boolean
-    region: content
-  field_game_provider:
-    weight: 111
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
     region: content
   field_game_title:
     weight: 105

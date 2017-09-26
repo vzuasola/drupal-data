@@ -15,6 +15,7 @@ dependencies:
     - serialization
     - taxonomy
     - user
+    - webcomposer_rest_extra
 _core:
   default_config_hash: tS8PbpJX90aRFC3-UTgXzdqkq7_2frk2pz4TMijEebM
 id: games_sorting
@@ -1013,6 +1014,12 @@ display:
           not: false
           plugin_id: numeric
       relationships: {  }
+      style:
+        type: node_list_serializer
+        options:
+          uses_fields: false
+          formats:
+            json: json
     cache_metadata:
       contexts:
         - 'languages:language_content'
@@ -1282,6 +1289,12 @@ display:
         options:
           offset: 0
       arguments: {  }
+      style:
+        type: node_list_serializer
+        options:
+          uses_fields: false
+          formats:
+            json: json
     cache_metadata:
       contexts:
         - 'languages:language_content'
