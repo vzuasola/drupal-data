@@ -7,6 +7,7 @@ dependencies:
     - node.type.page
   module:
     - path
+    - scheduler
     - text
 _core:
   default_config_hash: sWCotip3wyA0CvZUxyo-StTDU8TyTAhx5fcfOiHS6s4
@@ -73,6 +74,8 @@ content:
   translation:
     weight: 10
     region: content
+    settings: {  }
+    third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
     weight: 5

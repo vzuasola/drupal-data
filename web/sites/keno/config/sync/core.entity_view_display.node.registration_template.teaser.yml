@@ -1,0 +1,29 @@
+uuid: fdd8ba40-53c3-46ed-be8d-54d6c55587a5
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.registration_template.body
+    - node.type.registration_template
+  module:
+    - text
+    - user
+id: node.registration_template.teaser
+targetEntityType: node
+bundle: registration_template
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

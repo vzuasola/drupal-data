@@ -1,0 +1,22 @@
+uuid: c25e25cd-4b7a-44c4-a6f6-bea53c2157e6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.registration_template
+  module:
+    - text
+id: node.registration_template.body
+field_name: body
+entity_type: node
+bundle: registration_template
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary
