@@ -1,0 +1,21 @@
+uuid: caf10b72-e365-4277-b4e5-b4e52e3deeee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_vip_banner_content
+    - node.type.vip_page
+  module:
+    - text
+id: node.vip_page.field_vip_banner_content
+field_name: field_vip_banner_content
+entity_type: node
+bundle: vip_page
+label: 'Banner Content'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

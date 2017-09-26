@@ -1,0 +1,19 @@
+uuid: 406a3e82-9905-47c3-b9db-a60bd15dbbad
+langcode: en
+status: true
+dependencies:
+  module:
+    - keno_lobby_tile
+    - link
+id: keno_lobby_tile_entity.field_button_link
+field_name: field_button_link
+entity_type: keno_lobby_tile_entity
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

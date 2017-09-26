@@ -23,7 +23,8 @@
         "drush/drush": "~8.0",
         "relaxedws/replicator": "^1.0@alpha",
         "monolog/monolog": "^1.6",
-        "phpoffice/phpexcel": "^1.8"
+        "phpoffice/phpexcel": "^1.8",
+        "squizlabs/php_codesniffer": "^2.7"
     },
     "require-dev": {
         "drupal/console": "~1.0",

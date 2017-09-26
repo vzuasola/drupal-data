@@ -203,7 +203,7 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: api/social_media
+      path: api/social-media
       pager:
         type: none
         options:
