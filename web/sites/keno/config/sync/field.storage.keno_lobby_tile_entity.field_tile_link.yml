@@ -1,20 +1,16 @@
-uuid: a794a8cf-f109-476f-8702-e4017a0f7996
+uuid: 2fba67dd-5482-41fa-9161-61b360e45630
 langcode: en
 status: true
 dependencies:
   module:
     - keno_lobby_tile
-_core:
-  default_config_hash: 83a2XXViOFbdIs6GOFTDTmWTBJXzFWdVeeoiu_OqrLY
+    - link
 id: keno_lobby_tile_entity.field_tile_link
 field_name: field_tile_link
 entity_type: keno_lobby_tile_entity
-type: string
-settings:
-  max_length: 255
-  is_ascii: false
-  case_sensitive: false
-module: core
+type: link
+settings: {  }
+module: link
 locked: false
 cardinality: 1
 translatable: true

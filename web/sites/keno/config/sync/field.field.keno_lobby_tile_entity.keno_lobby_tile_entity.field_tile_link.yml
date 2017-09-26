@@ -1,4 +1,4 @@
-uuid: 16e897d0-f34b-48fb-8217-2e99a8f3a5c8
+uuid: 34629221-4411-42e5-97dd-a9b190882b11
 langcode: en
 status: true
 dependencies:
@@ -6,17 +6,18 @@ dependencies:
     - field.storage.keno_lobby_tile_entity.field_tile_link
   module:
     - keno_lobby_tile
-_core:
-  default_config_hash: 7glrc_KS7g-Vk5Z9XlCIYNdIXNkOE_YXlVzHVqE3dDg
+    - link
 id: keno_lobby_tile_entity.keno_lobby_tile_entity.field_tile_link
 field_name: field_tile_link
 entity_type: keno_lobby_tile_entity
 bundle: keno_lobby_tile_entity
-label: 'Tile Link'
+label: 'Tile Image Link'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
-settings: {  }
-field_type: string
+settings:
+  link_type: 17
+  title: 0
+field_type: link

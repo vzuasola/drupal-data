@@ -13,10 +13,10 @@ id: keno_lobby_tile_entity.keno_lobby_tile_entity.field_tile_link_target
 field_name: field_tile_link_target
 entity_type: keno_lobby_tile_entity
 bundle: keno_lobby_tile_entity
-label: 'Tile Link Target'
+label: 'Tile Image Link Target'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

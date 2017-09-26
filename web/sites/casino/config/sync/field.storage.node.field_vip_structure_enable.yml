@@ -1,0 +1,18 @@
+uuid: 562f2954-602e-4a8b-917f-61463399ae69
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_vip_structure_enable
+field_name: field_vip_structure_enable
+entity_type: node
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
