@@ -1,0 +1,21 @@
+uuid: a8a9eb0b-180c-426f-9b45-7c9d9afb2946
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_vip_sc_col_1
+    - node.type.vip_page
+  module:
+    - text
+id: node.vip_page.field_vip_sc_col_1
+field_name: field_vip_sc_col_1
+entity_type: node
+bundle: vip_page
+label: 'VIP Slots Club Column 1'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
