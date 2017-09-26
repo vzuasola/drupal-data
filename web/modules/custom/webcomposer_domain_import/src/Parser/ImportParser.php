@@ -100,7 +100,7 @@ class ImportParser {
     // Need to correct the export.
     // $validate[] = $this->validate_domain_consistency();
     // Correct the export.
-    // $validate[] = $this->validate_domain_duplicates();
+    $validate[] = $this->validate_domain_duplicates();
     // $validate[] = $this->validate_tokens_duplicates();
     foreach ($validate as $code) {
       if ($code !== 'VALIDATE_OK') {
