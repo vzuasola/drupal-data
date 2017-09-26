@@ -88,7 +88,7 @@ class WebcomposerDomainImport extends ControllerBase {
   public function importPrepare($form_state, &$context) {
     $this->readExcel($form_state, $context);
 
-    $message = 'Deleting existing Domains, Domains groups, Master Placeholders and realted Paragraphs...';
+    $message = 'Deleting existing Domains, Domains groups, Master Placeholders and related Paragraphs...';
     $context['message'] = $message;
     if ($context['sandbox'] === "EXCEL_FORMAT_OK") {
       $this->deleteParagraph();
