@@ -1,0 +1,21 @@
+uuid: 45b65b7b-49bf-4ce7-8fd8-670fac882a73
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_log_in_state
+    - node.type.page
+  module:
+    - options
+id: node.page.field_log_in_state
+field_name: field_log_in_state
+entity_type: node
+bundle: page
+label: 'Log-in State'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
