@@ -1,0 +1,23 @@
+uuid: ebac2757-08d3-477c-b9f8-f8ccaaeda5f2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_banner_content
+    - node.type.promotion
+  module:
+    - text
+_core:
+  default_config_hash: Qu163b9UtnNsetfpC25-4pkP_-ZO_ARl6O6S5PMyIoo
+id: node.promotion.field_banner_content
+field_name: field_banner_content
+entity_type: node
+bundle: promotion
+label: 'Banner content'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

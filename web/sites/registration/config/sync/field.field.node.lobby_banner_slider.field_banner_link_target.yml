@@ -1,0 +1,23 @@
+uuid: 7943a4ca-3181-45c7-ba0e-725b7c16b04e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_banner_link_target
+    - node.type.lobby_banner_slider
+  module:
+    - options
+id: node.lobby_banner_slider.field_banner_link_target
+field_name: field_banner_link_target
+entity_type: node
+bundle: lobby_banner_slider
+label: 'Banner Link Target'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: _top
+default_value_callback: ''
+settings: {  }
+field_type: list_string
