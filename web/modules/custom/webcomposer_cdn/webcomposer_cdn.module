@@ -1,0 +1,42 @@
+<?php
+
+/**
+ * @file
+ * Contains webcomposer_cdn.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function webcomposer_cdn_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the webcomposer_cdn module.
+    case 'help.page.webcomposer_cdn':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('This module handles the CDN configuration.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_file_url_alter()
+ */
+function webcomposer_cdn_file_url_alter(&$uri) {
+  if(!isset($_SERVER['HTTP_X_FE_BASE_URI'])) {
+
+    // Don't alter CSS file URLs while settings.php is disabling CSS aggregation.
+    if (substr($uri, -4) === '.css' && isset($GLOBALS['config']['system.performance']['css']['preprocess']) && $GLOBALS['config']['system.performance']['css']['preprocess'] === FALSE) {
+      return;
+    }
+
+    $result = \Drupal::service('cdn.file_url_generator')->generate($uri);
+    if ($result) {
+      $uri = $result;
+    }
+  }
+}
