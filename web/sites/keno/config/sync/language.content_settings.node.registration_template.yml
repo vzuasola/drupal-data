@@ -1,0 +1,11 @@
+uuid: 0f0853ab-a1dc-41eb-9d78-c15f06960647
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.registration_template
+id: node.registration_template
+target_entity_type_id: node
+target_bundle: registration_template
+default_langcode: site_default
+language_alterable: false

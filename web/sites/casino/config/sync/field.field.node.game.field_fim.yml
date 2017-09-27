@@ -1,0 +1,23 @@
+uuid: 2ad5d2e4-94f7-4888-a9a2-89f46eeda343
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fim
+    - node.type.game
+id: node.game.field_fim
+field_name: field_fim
+entity_type: node
+bundle: game
+label: 'FIM (game provider)'
+description: 'If checked the Game Provider will be FIM else the default Game Provider will be PAS.'
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
