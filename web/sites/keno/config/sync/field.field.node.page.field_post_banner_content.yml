@@ -1,0 +1,21 @@
+uuid: 906da3dc-93a6-45f0-b9ed-92d8f17e50d6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_post_banner_content
+    - node.type.page
+  module:
+    - text
+id: node.page.field_post_banner_content
+field_name: field_post_banner_content
+entity_type: node
+bundle: page
+label: 'Banner content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
