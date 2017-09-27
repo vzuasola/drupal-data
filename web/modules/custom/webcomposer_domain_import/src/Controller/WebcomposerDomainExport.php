@@ -89,7 +89,6 @@ class WebcomposerDomainExport extends ControllerBase {
 
     $result['placeholders'] = $this->service->excel_get_placeholders_description($placeholders);
     foreach ($language as $key => $value) {
-      // $list = $this->service->excel_get_domain_list($domains);
       $placeholders = $this->get_all_placeholders_per_language($key);
       // Get all the domain data per domain group per language.
       $variables = $this->get_all_domains_data_per_language($placeholders, $key);
@@ -169,21 +168,23 @@ class WebcomposerDomainExport extends ControllerBase {
   public function get_all_placeholders_per_language($key) {
     $variables = [];
     $result = [];
-
     // Get the master placeholders.
     $placeholders = \Drupal::entityManager()->getStorage('taxonomy_term')->loadTree('master_placeholder');
-
     foreach ($placeholders as $value) {
       $token = taxonomy_term_load($value->tid);
 
       if ($token->hasTranslation($key)) {
+        $token = $token->getTranslation($key);
         $paragraph = $token->get('field_add_master_placeholder')->getValue(FALSE)[0]['target_id'];
         $paragraphs = \Drupal::entityManager()->getStorage('paragraph')->load($paragraph);
-        $translated = $paragraphs->getTranslation($key);
-        $placeholder_key = $translated->field_placeholder_key->value;
-        $placeholder_desc = $translated->field_default_value->value;
+        if ($paragraphs->hasTranslation($key)) {
+          $translated = $paragraphs->getTranslation($key);
+          $placeholder_key = $translated->field_placeholder_key->value;
+          $placeholder_desc = $translated->field_default_value->value;
+          $variables[$placeholder_key] = $placeholder_desc;
 
-        $variables[$placeholder_key] = $placeholder_desc;
+        }
+
       }
     }
 
@@ -198,7 +199,6 @@ class WebcomposerDomainExport extends ControllerBase {
     }
 
     $result = $this->service->excel_filter_column($result);
-
     return $result;
   }
 
