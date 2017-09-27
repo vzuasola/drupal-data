@@ -111,11 +111,8 @@ class ExportParser {
 
       $paragraphs = \Drupal::entityManager()->getStorage('paragraph')->load($token);
       $placeholder_key = $paragraphs->get('field_placeholder_key')->getValue(FALSE);
-      $placeholder_desc = $paragraphs->get('field_description')->getValue(FALSE);
-
-      $variables[$placeholder_key[0]['value']] = $placeholder_desc[0]['value'];
+      $variables[] = $placeholder_key[0]['value'];
     }
-
     return $variables;
   }
 
@@ -302,12 +299,10 @@ class ExportParser {
     // Check if property is empty.
     if (empty($this->placeholders)) {
       $this->placeholders['label']['group'] = 'tokens';
-      $this->placeholders['description']['group'] = 'description';
 
       // Loop through the keys of the default values.
       foreach ($placeholders as $key => $placeholder) {
-        $this->placeholders['label'][$key] = $key;
-        $this->placeholders['description'][$key] = $placeholder;
+        $this->placeholders['label'][$key] = $placeholder;
       }
     }
 

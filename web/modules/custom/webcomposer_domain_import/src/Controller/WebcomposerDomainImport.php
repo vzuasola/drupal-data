@@ -88,7 +88,7 @@ class WebcomposerDomainImport extends ControllerBase {
   public function importPrepare($form_state, &$context) {
     $this->readExcel($form_state, $context);
 
-    $message = 'Deleting existing Domains, Domains groups, Master Placeholders and realted Paragraphs...';
+    $message = 'Deleting existing Domains, Domains groups, Master Placeholders and related Paragraphs...';
     $context['message'] = $message;
     if ($context['sandbox'] === "EXCEL_FORMAT_OK") {
       $this->deleteParagraph();
@@ -277,15 +277,18 @@ class WebcomposerDomainImport extends ControllerBase {
    * @param [Array] &$context
    */
   public function importMasterPlaceholder($form_state, &$context) {
-
     $this->readExcel($form_state, $context);
     if ($context['sandbox'] === "EXCEL_FORMAT_OK") {
       $message = 'Importing Master Placeholder...';
       $context['message'] = $message;
-      $getPlaceholerVariables = $this->ImportParser->excel_get_master_placeholder('en');
-      foreach ($getPlaceholerVariables as $key => $value) {
-        // code...
-        if ($key !== 'Tokens' && $value !== 'Default') {
+      $languages = $this->ImportParser->excel_get_languages();
+      foreach ($languages as $key => $value) {
+        $getPlaceholerVariables[$value] = $this->ImportParser->excel_get_master_placeholder($value);
+      }
+      foreach ($getPlaceholerVariables as $langcode => $term) {
+        $paragraphLists = [];
+        $termName = [];
+        foreach ($term as $key => $value) {
           $paragraph = Paragraph::create(
           [
             'type' => 'domain_management_configuration',
@@ -296,25 +299,50 @@ class WebcomposerDomainImport extends ControllerBase {
               "value" => $value,
             ],
             'langcode' => [
-              "value" => 'en',
+              "value" => $langcode,
             ],
           ]
             );
 
           $paragraph->save();
-
-          $check = $this->readTaxonomyByName($key, self::MASTER_PLACEHOLDER);
+          $paragraphLists[] = [
+            'target_id' => $paragraph->id(),
+            'target_revision_id' => $paragraph->getRevisionId(),
+          ];
+          $termName[] = $key;
+        }
+        foreach ($termName as $key => $value) {
+          $check = $this->readTaxonomyByName($value, self::MASTER_PLACEHOLDER);
           if (empty($check)) {
-
             $termItem = [
-              'name' => $key,
+              'name' => $value,
               'vid' => self::MASTER_PLACEHOLDER,
-              'langcode' => 'en',
-              'field_add_master_placeholder' => ['target_id' => $paragraph->id(), 'target_revision_id' => $paragraph->getRevisionId()],
+              'langcode' => $langcode,
+              'field_add_master_placeholder' => [
+                'target_id' => $paragraphLists[$key]['target_id'],
+                'target_revision_id' => $paragraphLists[$key]['target_revision_id'],
+              ],
             ];
             $termSave = Term::create($termItem)->save();
           }
+          else {
+            $termLoad = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->load($check);
+            if ($langcode != 'en') {
+              if (!$termLoad->hasTranslation($langcode)) {
+                $termLoad->addTranslation(
+                $langcode, [
+                  'name' => $value,
+                  'field_add_master_placeholder' => [
+                    'target_id' => $paragraphLists[$key]['target_id'],
+                    'target_revision_id' => $paragraphLists[$key]['target_revision_id'],
+                  ],
+                ]
+                  )->save();
+              }
+            }
+          }
         }
+
       }
     }
     else {
@@ -322,7 +350,6 @@ class WebcomposerDomainImport extends ControllerBase {
       drupal_set_message($message, 'error');
       $context['finished'] = 1;
     }
-
   }
 
   /**
