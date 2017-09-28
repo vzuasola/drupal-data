@@ -1,8 +1,8 @@
-services:
-  webcomposer_form_manager.form_manager:
+services: 
+  webcomposer_form_manager.form_manager: 
     class: Drupal\webcomposer_form_manager\WebcomposerForm 
-    arguments: [@module_handler]
-  plugin.manager.form_manager:
-    class: Drupal\webcomposer_form_manager\WebcomposerForm
-    arguments: [@plugin.manager.webcomposer_form]
-
+    arguments: [@plugin.manager.webcomposer_form, @module_handler] 
+ 
+  plugin.manager.webcomposer_form: 
+    class: Drupal\webcomposer_form_manager\WebcomposerFormManager 
+    parent: default_plugin_manager 

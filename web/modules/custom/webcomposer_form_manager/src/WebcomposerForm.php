@@ -27,7 +27,7 @@ class WebcomposerForm {
    */
   public function __construct($pluginManager, $moduleHandler){
     $this->pluginManager = $pluginManager;
-    $this->module_handler = $module_handler;
+    $this->moduleHandler = $moduleHandler;
   }
 
   /**
@@ -88,7 +88,7 @@ class WebcomposerForm {
    * @return array
    */
   public function getValidations() {
-   $validation = [
+    $validation = [
       'required' => [
         'title' => 'Required',
         'description' => 'Make this field required. Does not accept empty string inputs such as nulls and whitespace only.',
@@ -114,7 +114,8 @@ class WebcomposerForm {
       ],
     ];
 
-    $this->module_handler->alter('webcomposer_form_validation', $validation);
+    $this->moduleHandler->alter('webcomposer_form_validation', $validation);
+
     return $validation;
   }
 }
