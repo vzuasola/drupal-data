@@ -17,22 +17,21 @@ CKEDITOR.dialog.add("link", function(editor) {
                 type: "text",
                 label: "Link",
                 id: "edp-URL",
-                validate: CKEDITOR.dialog.validate.regex(/^(\/|http(|s)|mailto\:).*/i, "Please enter a valid url." ),
+                validate: CKEDITOR.dialog.validate.regex(/^(\/|http(|s)|mailto\:|\#).*/i, "Please enter a valid url." ),
                 setup: function(data) {
                     this.setValue(data.href);
                 },
                 commit: function(data) {
                     var url = this.getValue();
-                    if (/^(http|https)/.test(url.toLowerCase()) == false) {
+                    if (/^(http(|s)|\#)/.test(url.toLowerCase()) == false) {
                         var segments = url.replace(/^\/|\/$/g, '').split('/');
                         if (segments && editor.config.allowedLanguages.indexOf(segments[0]) == -1) {
                             url = '/' + editor.config.language + '/' + editor.config.site + url;
-                            console.log(url);
                         }
                     }
                     data.href = url;
-                }               
-            }, 
+                }
+            },
             {
                 type: "text",
                 label: "Text",
@@ -57,7 +56,19 @@ CKEDITOR.dialog.add("link", function(editor) {
                 commit: function(data) {
                     data.target = this.getValue();
                 }
-            }]
+            },
+            {
+                type: "text",
+                label: "Class",
+                id: "edp-class",
+                setup: function(data) {
+                    this.setValue( data.class );
+                },
+                commit: function(data) {
+                    data.class = this.getValue();
+                }
+            }
+            ]
         }],
         onShow: function() {
             var editor = this.getParentEditor(),
