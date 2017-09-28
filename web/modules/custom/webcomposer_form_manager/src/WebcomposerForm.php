@@ -59,6 +59,10 @@ class WebcomposerForm {
       ])
     );
 
+    $formOne->setField(
+      new WebcomposerFormFieldEntity('password', 'Password', 'textfield', ['default_value' => 'Leo'])
+    );
+
     $forms = [
       'form_one' => $formOne,
     ];
@@ -75,7 +79,7 @@ class WebcomposerForm {
       'required' => [
         'title' => 'Required',
         'description' => 'Make this field required. Does not accept empty string inputs such as nulls and whitespace only.',
-        'error' => 'Field should be requuired',
+        'error' => 'Field should be required',
       ],
       'alphanumeric' => [
         'title' => 'Alphanumeric',

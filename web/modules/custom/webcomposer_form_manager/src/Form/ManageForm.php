@@ -2,8 +2,9 @@
 
 namespace Drupal\webcomposer_form_manager\Form;
 
-use Drupal\Core\Form\FormStateInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
+use Drupal\Component\Utility\SortArray;
+use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Url;
 
 /**
@@ -112,6 +113,7 @@ class ManageForm extends FormBase {
         '#type' => 'details',
         '#title' => 'Form Settings',
         '#open' => TRUE,
+        '#tree' => TRUE,
       ];
 
       foreach ($settings as $key => $value) {
@@ -132,8 +134,6 @@ class ManageForm extends FormBase {
     $id = $this->entity->getId();
     $name = $this->getDefaultConfigName();
     $fields = $this->entity->getFields();
-
-    $i = 0;
     $header = ['Name', 'Field type', 'Actions', 'Weight'];
 
     $form['table'] = [
@@ -147,15 +147,27 @@ class ManageForm extends FormBase {
           'group' => 'mytable-order-weight',
         ],
       ],
+      '#tree' => TRUE,
     ];
+
+    $i = 0;
+    $fieldWeights = $this->getConfigValues($name, 'weights');
+
+    // sort the fields by weights fetched from the save storage
+    uasort($fields, function ($a, $b) use ($fieldWeights) {
+      $aId = $a->getId();
+      $bId = $b->getId();
+
+      if (isset($fieldWeights[$aId]) && isset($fieldWeights[$bId])) {
+        return SortArray::sortByKeyInt($fieldWeights[$aId], $fieldWeights[$bId], 'weight');
+      }
+    });
 
     foreach ($fields as $key => $field) {
       $url = new Url('webcomposer_form_manager.field.view', [
         'form' => $id,
         'field' => $field->getId(),
       ]);
-
-      $weight = ++ $i;
 
       $form['table'][$key]['title'] = [
         '#markup' => $field->getName(),
@@ -175,6 +187,8 @@ class ManageForm extends FormBase {
         ];
       }
 
+      $weight = $fieldWeights[$key]['weight'] ?? ++ $i;
+
       $form['table'][$key]['weight'] = [
         '#type' => 'weight',
         '#title' => 'Weight',
@@ -183,7 +197,8 @@ class ManageForm extends FormBase {
         '#attributes' => ['class' => ['mytable-order-weight']],
       ];
 
-      $form['table'][$key]['#attributes'] = ['class' => ['draggable']];
+      $form['table'][$key]['#weight'] = $weight;
+      $form['table'][$key]['#attributes']['class'][] = 'draggable';
     }
   }
 
@@ -201,12 +216,35 @@ class ManageForm extends FormBase {
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
     parent::submitForm($form, $form_state);
+    
+    $this->saveFormSettings($form, $form_state);
+    $this->saveFieldWeights($form, $form_state);
+  }
 
+  /**
+   * Save form settings
+   */
+  protected function saveFormSettings($form, FormStateInterface $form_state) {
     $name = $this->getDefaultConfigName();
 
-    $settings = $this->entity->getSettings();
-    $keys = array_keys($settings);
+    $data = $form_state->getValue('form_settings');
 
-    $this->saveConfigValues($name, $keys, $form_state);
+    $this->saveRawConfigValue($name, 'form_settings', $data);
+  }
+
+  /**
+   * Save weights of the field
+   */
+  protected function saveFieldWeights($form, FormStateInterface $form_state) {
+    $name = $this->getDefaultConfigName();
+
+    $weights = [];
+    $data = $form_state->getValue('table');
+
+    foreach ($data as $key => $value) {
+      $weights[$key]['weight'] = $value['weight'];
+    }
+
+    $this->saveRawConfigValue($name, 'weights', $weights);
   }
 }

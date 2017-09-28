@@ -37,7 +37,13 @@ class WebcomposerFormFieldEntity {
   private $form;
 
   /**
-   * 
+   * Constructor
+   *
+   * @param string $id The ID of this field
+   * @param string $name The friendly name of this field
+   * @param string $type The field type
+   * @param array $options List of options that alters this field's behavior
+   * @param array $settings An array of field settings, in form API format
    */
   public function __construct($id, $name, $type, $options = [], $settings = []) {
     $this->id = $id;
