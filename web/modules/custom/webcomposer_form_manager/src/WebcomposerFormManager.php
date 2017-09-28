@@ -24,7 +24,7 @@ class WebcomposerFormManager extends DefaultPluginManager {
    *   The module handler to invoke the alter hook with.
    */
   public function __construct(\Traversable $namespaces, CacheBackendInterface $cache_backend, ModuleHandlerInterface $module_handler) {
-    parent::__construct('Plugin/Webcomposer/Form', $namespaces, $module_handler, 'Drupal\webcomposer_form_manager\Plugin\WebcomposerFormInterFace', 'Drupal\webcomposer_form_manager\Annotation\WebcomposerForm');
+    parent::__construct('Plugin/Webcomposer/Form', $namespaces, $module_handler, 'Drupal\webcomposer_form_manager\WebcomposerFormInterFace', 'Drupal\webcomposer_form_manager\Annotation\WebcomposerForm');
 
     $this->alterInfo('webcomposer_form_manager_info');
     $this->setCacheBackend($cache_backend, 'webcomposer_form_manager_plugins');
