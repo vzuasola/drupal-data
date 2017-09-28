@@ -20,20 +20,13 @@ class WebcomposerForm {
    *
    * @var object
    */
-  private $module_handler;
+  private $moduleHandler;
 
   /**
    *
    */
-  public function __construct($pluginManager)
-  {
+  public function __construct($pluginManager, $moduleHandler){
     $this->pluginManager = $pluginManager;
-  }
-  /**
-   *
-   */
-   public function __construct($module_handler)
-  {
     $this->module_handler = $module_handler;
   }
 
