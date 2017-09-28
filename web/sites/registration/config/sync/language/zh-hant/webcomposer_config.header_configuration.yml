@@ -1,0 +1,21 @@
+lobby_page_title: 在Dafabet暢享體育投注、娛樂場和撲克遊戲帶來的無限樂趣
+critical_announcement: '1'
+critical_announcement_content:
+  value: ''
+  format: basic_html
+news_announcement_content:
+  value: ''
+  format: basic_html
+join_now_text: 立即加入
+join_now_link: '/{domain:entry}/{domain:lang_token}/cant-login{tracking.token}'
+login_issue_text: 無法登錄？
+login_issue_link: '/{domain:entry}/{domain:lang_token}/cant-login{tracking.token}'
+balance_error_text: 'Error Retrieving.'
+profile_icon_hover_text: 我的賬戶
+cashier_icon_hover_text: 出納櫃臺
+product_menu_new_tag: 新
+welcome_text: '{username}'
+profile_link: 'https://stg-cashier.elysium-dfbt.com/ch/?ticket={auth.token}&product=dafabet{tracking.token}'
+profile_logout_text: 登出
+balance_label_mapping: "4|沙巴體育\r\n6|大發體育\r\n1|娛樂場金典版\r\n2|娛樂場黃金版\r\n5|現場荷官&遊戲\r\n3|撲克\r\n7|捕魚王"
+balance_error_text_product: 無

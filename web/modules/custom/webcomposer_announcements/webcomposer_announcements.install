@@ -26,6 +26,7 @@ function webcomposer_announcements_uninstall() {
       'views.view.announcements',
       'webcomposer_config.announcements_configuration',
       'views.view.announcements_listing',
+      'core.base_field_override.announcement_entity.announcement_entity.user_id'
     ];
 
     foreach ($keys as $key) {
