@@ -97,6 +97,7 @@ class ImportParser {
     $validate[] = $this->validate_domain_labels();
     $validate[] = $this->validate_main_format();
     $validate[] = $this->validate_domain_duplicates();
+    $validate[] = $this->validate_domain_consistency();
     foreach ($validate as $code) {
       if ($code !== 'VALIDATE_OK') {
         return $code;
