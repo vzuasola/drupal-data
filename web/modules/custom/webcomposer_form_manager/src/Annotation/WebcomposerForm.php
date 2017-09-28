@@ -23,12 +23,9 @@ class WebcomposerForm extends Plugin {
   public $id;
 
   /**
-   * The label of the plugin.
+   * The label of the form.
    *
-   * @var \Drupal\Core\Annotation\Translation
-   *
-   * @ingroup plugin_translatable
+   * @var string
    */
-  public $label;
-
+  public $name;
 }
