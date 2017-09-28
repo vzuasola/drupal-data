@@ -174,8 +174,9 @@ class WebcomposerDomainExport extends ControllerBase {
       $token = taxonomy_term_load($value->tid);
 
       if ($token->hasTranslation($key)) {
-        $token = $token->getTranslation($key);
-        $paragraph = $token->get('field_add_master_placeholder')->getValue(FALSE)[0]['target_id'];
+        $getTranslation = $token->getTranslation($key);
+
+        $paragraph = $getTranslation->get('field_add_master_placeholder')->getValue(FALSE)[0]['target_id'];
         $paragraphs = \Drupal::entityManager()->getStorage('paragraph')->load($paragraph);
         if ($paragraphs->hasTranslation($key)) {
           $translated = $paragraphs->getTranslation($key);
@@ -214,10 +215,8 @@ class WebcomposerDomainExport extends ControllerBase {
    */
   public function get_all_domains_data_per_language($placeholders, $language) {
     $variables = [];
-
     // Get all the domain groups.
     $domains_groups = $this->service->get_domain_groups();
-
     // Get all the domains.
     $domains = \Drupal::entityManager()->getStorage('taxonomy_term')->loadTree('domain');
 
@@ -226,11 +225,12 @@ class WebcomposerDomainExport extends ControllerBase {
       $group = taxonomy_term_load($key);
       if ($group->hasTranslation($language)) {
         // Get value of the field.
-        $target_id = $group->get('field_add_placeholder')->getValue(FALSE);
+        $getTranslation = $group->getTranslation($language);
+        $target_id = $getTranslation->get('field_add_placeholder')->getValue(FALSE);
 
         // Check if the field is not empty.
         if (!empty($target_id)) {
-          $paragraph = $group->get('field_add_placeholder')->getValue(FALSE)[0]['target_id'];
+          $paragraph = $getTranslation->get('field_add_placeholder')->getValue(FALSE)[0]['target_id'];
           $paragraphs = \Drupal::entityManager()->getStorage('paragraph')->load($paragraph);
           if ($paragraphs->hasTranslation($language)) {
             $translated = $paragraphs->getTranslation($language);
@@ -263,15 +263,18 @@ class WebcomposerDomainExport extends ControllerBase {
 
       if ($domain_data->hasTranslation($language)) {
         // Get value of the field.
-        $field_placeholder = $domain_data->get('field_add_placeholder')->getValue(FALSE);
+        $domainTranslation = $domain_data->getTranslation($language);
+        $field_placeholder = $domainTranslation->get('field_add_placeholder')->getValue(FALSE);
+
         if (!empty($field_placeholder)) {
-          $bal = 0;
+          $domain_placeholer_array = [];
           foreach ($field_placeholder as $key => $field) {
 
             $target_id = $field['target_id'];
             $paragraphs = \Drupal::entityManager()->getStorage('paragraph')->load($target_id);
 
             if ($paragraphs->hasTranslation($language)) {
+
               $translated = $paragraphs->getTranslation($language);
               $placeholder_key = $translated->field_placeholder_key->value;
               $placeholder_default = $translated->field_default_value->value;
