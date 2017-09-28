@@ -72,6 +72,16 @@ class KenoConfigForm extends ConfigFormBase {
       '#default_value' => $config->get('lobby_tiles_alignment'),
     ];
 
+    $form['lobby_tiles']['lobby_tiles_background'] = [
+      '#type' => 'managed_file',
+      '#title' => $this->t('Background'),
+      '#default_value' => $config->get('lobby_tiles_background'),
+      '#upload_location' => 'public://',
+      '#upload_validators' => [
+        'file_validate_extensions' => ['gif png jpg jpeg'],
+      ],
+    ];
+
     return parent::buildForm($form, $form_state);
   }
 
