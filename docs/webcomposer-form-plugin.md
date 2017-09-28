@@ -225,3 +225,30 @@ class LoginForm extends WebcomposerFormBase implements WebcomposerFormInterface 
 }
 
 ```
+
+## Best practices
+
+If you are defining your own module, with forms, it is recommended that you
+delete the settings on you uninstall hook.
+
+Suppose you have these form IDs as plugin:
+* login
+* registration
+
+Define a `hook_uninstall` like this
+
+```php
+/**
+ * Implements hook_uninstall
+ */
+function my_module_uninstall() {
+    $keys = [
+        'webcomposer_form_manager.form.registration',
+        'webcomposer_form_manager.form.login',
+    ];
+
+    foreach ($keys as $key) {
+      \Drupal::configFactory()->getEditable($key)->delete();
+    }
+}
+```
