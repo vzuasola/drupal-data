@@ -12,6 +12,17 @@ class WebcomposerForm {
   /**
    *
    */
+  private $module_handler;
+  /**
+   *
+   */
+  public function __construct($module_handler){
+    $this->module_handler = $module_handler;
+  }
+
+  /**
+   *
+   */
   public function getFormList() {
     $form_manager =\Drupal::service('plugin.manager.form_manager');
     $form_manager_definitions = $form_manager->getDefinitions();
@@ -75,7 +86,7 @@ class WebcomposerForm {
    * @todo Sync the validation behavior and description with Webform Validations
    */
   public function getValidations() {
-    return [
+   $validation = [
       'required' => [
         'title' => 'Required',
         'description' => 'Make this field required. Does not accept empty string inputs such as nulls and whitespace only.',
@@ -100,5 +111,8 @@ class WebcomposerForm {
         'error' => 'Field should be numeric',
       ],
     ];
+
+    $this->module_handler->alter('webcomposer_form_validation', $validation);
+    return $validation;
   }
 }
