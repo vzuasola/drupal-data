@@ -34,7 +34,7 @@ class ImportForm extends FormBase {
       '#upload_location' => 'public://taxonomy_files/',
       '#description' => t('Upload a file to Import taxonomy! Supported format xlsx'),
     ];
-    // $form['actions']['#type'] = 'actions';.
+
     $form['submit'] = [
       '#type' => 'submit',
       '#value' => $this->t('Import'),
