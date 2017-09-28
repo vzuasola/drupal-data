@@ -1,0 +1,21 @@
+uuid: af70e9eb-90af-45c2-af7a-25420326f39d
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+_core:
+  default_config_hash: uVHK0uEalYcjKphUb9h9o4pQEu2njeFp77cuA9SbPuw
+id: paragraph.field_lightbox_content
+field_name: field_lightbox_content
+entity_type: paragraph
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

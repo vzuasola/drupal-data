@@ -82,6 +82,10 @@ $sites['casino.drupal.dev'] = 'casino';
 $sites['keno.drupal.local'] = 'keno';
 $sites['keno.drupal.dev'] = 'keno';
 
+// Keno instance
+$sites['registration.drupal.local'] = 'registration';
+$sites['registration.drupal.dev'] = 'registration';
+
 // Casino Site Instances
 $sites['csngold.drupal.dev'] = 'casino-gold';
 $sites['csngold.drupal.local'] = 'casino-gold';

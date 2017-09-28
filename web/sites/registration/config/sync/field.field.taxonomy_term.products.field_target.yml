@@ -1,0 +1,21 @@
+uuid: 17dc72c1-6641-4b07-bbc1-364c2148d7db
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_target
+    - taxonomy.vocabulary.products
+  module:
+    - options
+id: taxonomy_term.products.field_target
+field_name: field_target
+entity_type: taxonomy_term
+bundle: products
+label: Target
+description: 'Enter value for target attribute.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

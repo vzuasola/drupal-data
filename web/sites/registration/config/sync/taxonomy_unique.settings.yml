@@ -1,0 +1,12 @@
+promotions_filters: 1
+promotions_filters_message: 'Term @term already exists in vocabulary @vocabulary.'
+products: 0
+products_message: 'Term @term already exists in vocabulary @vocabulary.'
+ribbon_labels: 1
+ribbon_labels_message: 'Term @term already exists in vocabulary @vocabulary.'
+domain: 1
+domain_message: 'Term @term already exists in vocabulary @vocabulary.'
+domain_groups: 1
+domain_groups_message: 'Term @term already exists in vocabulary @vocabulary.'
+games_category: 1
+games_category_message: 'Term @term already exists in vocabulary @vocabulary.'
