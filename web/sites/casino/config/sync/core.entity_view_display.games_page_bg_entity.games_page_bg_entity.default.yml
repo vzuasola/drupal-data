@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.games_page_bg_entity.games_page_bg_entity.field_exclude_on_listed_pages
     - field.field.games_page_bg_entity.games_page_bg_entity.field_game_page_background
     - field.field.games_page_bg_entity.games_page_bg_entity.field_include_on_listed_pages
   module:
@@ -15,13 +14,6 @@ targetEntityType: games_page_bg_entity
 bundle: games_page_bg_entity
 mode: default
 content:
-  field_exclude_on_listed_pages:
-    weight: 3
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: basic_string
-    region: content
   field_game_page_background:
     weight: 1
     label: above

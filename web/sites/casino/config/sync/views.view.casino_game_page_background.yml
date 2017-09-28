@@ -1,9 +1,8 @@
-uuid: 40b3a009-047e-45ed-8581-e89f53054d5e
+uuid: b51d8386-36f2-46f2-9e6e-f2f5615594f9
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.games_page_bg_entity.field_exclude_on_listed_pages
     - field.storage.games_page_bg_entity.field_game_page_background
     - field.storage.games_page_bg_entity.field_include_on_listed_pages
     - image.style.thumbnail
@@ -12,7 +11,6 @@ dependencies:
     - image
     - rest
     - serialization
-    - webcomposer_rest_extra
 id: casino_game_page_background
 label: 'Casino Game Page Background'
 module: views
@@ -46,10 +44,10 @@ display:
         type: basic
         options:
           submit_button: Apply
-          reset_button: false
+          reset_button: true
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
-          expose_sort_order: true
+          expose_sort_order: false
           sort_asc_label: Asc
           sort_desc_label: Desc
       pager:
@@ -71,22 +69,7 @@ display:
             previous: ‹‹
             next: ››
       style:
-        type: table
-        options:
-          grouping: {  }
-          row_class: ''
-          default_row_class: true
-          uses_fields: false
-          columns: {  }
-          default: ''
-          info: {  }
-          override: true
-          sticky: false
-          order: asc
-          caption: ''
-          summary: ''
-          description: ''
-          empty_table: false
+        type: serializer
       row:
         type: fields
         options:
@@ -95,10 +78,13 @@ display:
           hide_empty: false
           default_field_elements: true
       fields:
-        field_game_page_background:
-          id: field_game_page_background
-          table: games_page_bg_entity__field_game_page_background
-          field: field_game_page_background
+        name:
+          table: games_page_bg_entity_field_data
+          field: name
+          id: name
+          entity_type: null
+          entity_field: name
+          plugin_id: field
           relationship: none
           group_type: group
           admin_label: ''
@@ -135,7 +121,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: false
+          element_label_colon: true
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -143,71 +129,8 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: target_id
-          type: image_url
-          settings:
-            image_style: ''
-          group_column: ''
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_exclude_on_listed_pages:
-          id: field_exclude_on_listed_pages
-          table: games_page_bg_entity__field_exclude_on_listed_pages
-          field: field_exclude_on_listed_pages
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: false
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
           click_sort_column: value
-          type: basic_string
+          type: string
           settings: {  }
           group_column: value
           group_columns: {  }
@@ -219,70 +142,43 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
-        field_include_on_listed_pages:
-          id: field_include_on_listed_pages
-          table: games_page_bg_entity__field_include_on_listed_pages
-          field: field_include_on_listed_pages
+      filters:
+        langcode:
+          id: langcode
+          table: games_page_bg_entity_field_data
+          field: langcode
           relationship: none
           group_type: group
           admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: basic_string
-          settings: {  }
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-      filters: {  }
+          operator: in
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            use_operator: false
+            operator: langcode_op
+            identifier: langcode
+            label: 'Translation language'
+            description: null
+            remember: false
+            multiple: false
+            required: false
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: games_page_bg_entity
+          entity_field: langcode
+          plugin_id: language
       sorts:
         created:
           id: created
@@ -306,15 +202,14 @@ display:
       arguments: {  }
       display_extenders: {  }
     cache_metadata:
-      max-age: 0
+      max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - request_format
+        - url
         - url.query_args
-      tags:
-        - 'config:field.storage.games_page_bg_entity.field_exclude_on_listed_pages'
-        - 'config:field.storage.games_page_bg_entity.field_game_page_background'
-        - 'config:field.storage.games_page_bg_entity.field_include_on_listed_pages'
+      tags: {  }
   page_1:
     display_plugin: page
     id: page_1
@@ -328,22 +223,29 @@ display:
           grouping: {  }
           row_class: ''
           default_row_class: true
-          uses_fields: false
-          columns: {  }
-          default: ''
-          info: {  }
           override: true
           sticky: false
-          order: asc
           caption: ''
           summary: ''
           description: ''
+          columns:
+            name: name
+          info:
+            name:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+          default: '-1'
           empty_table: false
       defaults:
         style: false
         row: false
         fields: false
-        title: false
+        filters: false
+        filter_groups: false
       row:
         type: fields
         options:
@@ -359,7 +261,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Page Background'
+          label: 'Game Page Background'
           exclude: false
           alter:
             alter_text: false
@@ -392,7 +294,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: false
+          element_label_colon: true
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -416,68 +318,6 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_exclude_on_listed_pages:
-          id: field_exclude_on_listed_pages
-          table: games_page_bg_entity__field_exclude_on_listed_pages
-          field: field_exclude_on_listed_pages
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: 'Excluded Game Pages'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: false
-          empty: '-'
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: false
-          click_sort_column: value
-          type: basic_string
-          settings: {  }
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
         field_include_on_listed_pages:
           id: field_include_on_listed_pages
           table: games_page_bg_entity__field_include_on_listed_pages
@@ -485,7 +325,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Included Game Pages'
+          label: 'Include on listed pages'
           exclude: false
           alter:
             alter_text: false
@@ -518,14 +358,14 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: false
+          element_label_colon: true
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
           empty: '-'
           hide_empty: false
           empty_zero: false
-          hide_alter_empty: false
+          hide_alter_empty: true
           click_sort_column: value
           type: basic_string
           settings: {  }
@@ -540,16 +380,203 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
+        edit_games_page_bg_entity:
+          id: edit_games_page_bg_entity
+          table: games_page_bg_entity
+          field: edit_games_page_bg_entity
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Edit
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          text: edit
+          entity_type: games_page_bg_entity
+          plugin_id: entity_link_edit
+        delete_games_page_bg_entity:
+          id: delete_games_page_bg_entity
+          table: games_page_bg_entity
+          field: delete_games_page_bg_entity
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Delete
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          text: delete
+          entity_type: games_page_bg_entity
+          plugin_id: entity_link_delete
       path: admin/structure/games_page_bg_entity
-      title: 'Casino Games Page Background'
+      filters:
+        langcode:
+          id: langcode
+          table: games_page_bg_entity_field_data
+          field: langcode
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: langcode_op
+            label: Language
+            description: ''
+            use_operator: false
+            operator: langcode_op
+            identifier: langcode
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              e: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: games_page_bg_entity
+          entity_field: langcode
+          plugin_id: language
+        field_include_on_listed_pages_value:
+          id: field_include_on_listed_pages_value
+          table: games_page_bg_entity__field_include_on_listed_pages
+          field: field_include_on_listed_pages_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: contains
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_include_on_listed_pages_value_op
+            label: 'Include on'
+            description: ''
+            use_operator: false
+            operator: field_include_on_listed_pages_value_op
+            identifier: field_include_on_listed_pages_value
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              e: '0'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: string
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
     cache_metadata:
       max-age: 0
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url
         - url.query_args
       tags:
-        - 'config:field.storage.games_page_bg_entity.field_exclude_on_listed_pages'
         - 'config:field.storage.games_page_bg_entity.field_game_page_background'
         - 'config:field.storage.games_page_bg_entity.field_include_on_listed_pages'
   rest_export_1:
@@ -566,19 +593,69 @@ display:
           items_per_page: 10
           offset: 0
       style:
-        type: node_list_serializer
+        type: serializer
         options:
+          grouping: {  }
+          uses_fields: false
           formats: {  }
       row:
         type: data_entity
         options: {  }
+      filters:
+        langcode:
+          id: langcode
+          table: games_page_bg_entity_field_data
+          field: langcode
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: langcode_op
+            label: Language
+            description: ''
+            use_operator: false
+            operator: langcode_op
+            identifier: langcode
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              e: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: games_page_bg_entity
+          entity_field: langcode
+          plugin_id: language
+      defaults:
+        filters: false
+        filter_groups: false
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
         - request_format
-      tags:
-        - 'config:field.storage.games_page_bg_entity.field_exclude_on_listed_pages'
-        - 'config:field.storage.games_page_bg_entity.field_game_page_background'
-        - 'config:field.storage.games_page_bg_entity.field_include_on_listed_pages'
+      tags: {  }
