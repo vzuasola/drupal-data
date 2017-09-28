@@ -10,6 +10,7 @@ use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
 use Psr\Log\LoggerInterface;
 use Drupal\Component\Utility\Html;
 use Drupal\Core\Site\Settings;
+use Drupal\webcomposer_rest_extra\FilterHtmlTrait;
 
 /**
  * Provides a resource to get view modes by entity and bundle.
@@ -24,6 +25,7 @@ use Drupal\Core\Site\Settings;
  */
 class CasinoConfigRestResource extends ResourceBase {
 
+  use FilterHtmlTrait;
   /**
    * A current user instance.
    *
@@ -111,28 +113,5 @@ class CasinoConfigRestResource extends ResourceBase {
     ];
 
     return (new ResourceResponse($data))->addCacheableDependency($build);
-  }
-
-  /**
-   * Filtered Html for Image Source.
-   */
-  public function filterHtml($markup) {
-    $document = new Html();
-
-    $htmlDoc = $document->load($markup);
-    $domObject = simplexml_import_dom($htmlDoc);
-
-    $images = $domObject->xpath('//img');
-    $basePath = Settings::get('ck_editor_inline_image_prefix', NULL);
-
-    foreach ($images as $image) {
-      $replace = preg_replace('/\/sites\/[a-z\-]+\/files/', $basePath, $image['src']);
-      $image['src'] = $replace;
-    }
-
-    $htmlMarkup = Html::serialize($htmlDoc);
-    $processedHtml = trim($htmlMarkup);
-
-    return $processedHtml;
   }
 }
