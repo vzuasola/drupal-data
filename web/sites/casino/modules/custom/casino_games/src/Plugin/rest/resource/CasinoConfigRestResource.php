@@ -8,6 +8,8 @@ use Drupal\rest\ResourceResponse;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
 use Psr\Log\LoggerInterface;
+use Drupal\Component\Utility\Html;
+use Drupal\Core\Site\Settings;
 
 /**
  * Provides a resource to get view modes by entity and bundle.
@@ -90,6 +92,12 @@ class CasinoConfigRestResource extends ResourceBase {
     try {
       $config = \Drupal::config("casino_games.$id");
       $data = $config->get();
+      foreach ($data as $key => $value) {
+        // replace the images src for text formats
+        if (isset($value['format']) && isset($value['value'])) {
+            $data[$key]['value'] = $this->filterHtml($value['value']);
+        }
+      }
     } catch (\Exception $e) {
       $data = [
         'error' => $this->t('Configuration not found')
@@ -103,5 +111,28 @@ class CasinoConfigRestResource extends ResourceBase {
     ];
 
     return (new ResourceResponse($data))->addCacheableDependency($build);
+  }
+
+  /**
+   * Filtered Html for Image Source.
+   */
+  public function filterHtml($markup) {
+    $document = new Html();
+
+    $htmlDoc = $document->load($markup);
+    $domObject = simplexml_import_dom($htmlDoc);
+
+    $images = $domObject->xpath('//img');
+    $basePath = Settings::get('ck_editor_inline_image_prefix', NULL);
+
+    foreach ($images as $image) {
+      $replace = preg_replace('/\/sites\/[a-z\-]+\/files/', $basePath, $image['src']);
+      $image['src'] = $replace;
+    }
+
+    $htmlMarkup = Html::serialize($htmlDoc);
+    $processedHtml = trim($htmlMarkup);
+
+    return $processedHtml;
   }
 }
