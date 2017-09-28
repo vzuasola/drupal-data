@@ -10,17 +10,20 @@ use Drupal\webcomposer_form_manager\Entity\WebcomposerFormFieldEntity;
  */
 class WebcomposerForm {
   /**
-   * 
+   *
    */
   public function getFormList() {
-    return [
-      'form_one' => [
-          'name' => 'Form One',
-      ],
-      'form_sample' => [
-          'name' => 'Form Sample',
-      ],
-    ];
+    $form_manager =\Drupal::service('plugin.manager.form_manager');
+    $form_manager_definitions = $form_manager->getDefinitions();
+
+    $result = [];
+
+    foreach ($form_manager_definitions as $definition) {
+      $id = $definition['id'];
+      $result[$id]['name'] = $definition['label'];
+    }
+
+    return $result; 
   }
 
   /**
@@ -40,7 +43,7 @@ class WebcomposerForm {
       ],
     ];
 
-    $formOne = new WebcomposerFormEntity('form_one', 'Form One', $formOneSettings);
+    $formOne = new WebcomposerFormEntity('form_one', 'Test form', $formOneSettings);
 
     $formOne->setField(
       new WebcomposerFormFieldEntity('firstname', 'First name', 'textfield', ['default_value' => 'Leo'])
