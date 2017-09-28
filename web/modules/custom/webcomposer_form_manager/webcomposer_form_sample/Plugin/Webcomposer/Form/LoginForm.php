@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\webcomposer_form_manager\Plugin\Webcomposer\Form;
+namespace Drupal\webcomposer_form_sample\Plugin\Webcomposer\Form;
 
 use Drupal\webcomposer_form_manager\WebcomposerFormBase;
 use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
