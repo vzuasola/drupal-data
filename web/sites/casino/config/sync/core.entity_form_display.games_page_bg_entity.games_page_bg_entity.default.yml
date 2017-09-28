@@ -1,0 +1,55 @@
+uuid: 8e96339f-d7df-46de-af76-6f23adb9558c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.games_page_bg_entity.games_page_bg_entity.field_exclude_on_listed_pages
+    - field.field.games_page_bg_entity.games_page_bg_entity.field_game_page_background
+    - field.field.games_page_bg_entity.games_page_bg_entity.field_include_on_listed_pages
+    - image.style.thumbnail
+  module:
+    - casino_games_page_background
+    - image
+id: games_page_bg_entity.games_page_bg_entity.default
+targetEntityType: games_page_bg_entity
+bundle: games_page_bg_entity
+mode: default
+content:
+  field_exclude_on_listed_pages:
+    weight: 5
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_game_page_background:
+    weight: 3
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_include_on_listed_pages:
+    weight: 4
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  translation:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  name: true
+  user_id: true

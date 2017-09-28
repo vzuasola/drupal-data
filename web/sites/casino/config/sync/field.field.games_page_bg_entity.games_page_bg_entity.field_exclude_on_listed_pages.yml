@@ -1,0 +1,20 @@
+uuid: 5ffbd3df-bb9f-46c8-ac41-cb7f47a7c7e3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.games_page_bg_entity.field_exclude_on_listed_pages
+  module:
+    - casino_games_page_background
+id: games_page_bg_entity.games_page_bg_entity.field_exclude_on_listed_pages
+field_name: field_exclude_on_listed_pages
+entity_type: games_page_bg_entity
+bundle: games_page_bg_entity
+label: 'Exclude on listed pages'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long
