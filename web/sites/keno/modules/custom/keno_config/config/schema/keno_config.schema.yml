@@ -9,3 +9,11 @@ keno_config.keno_configuration:
       type: text_format
       label: 'Trust Element Content'
       translatable: true
+    lobby_tiles_alignment:
+      type: select
+      label: 'Lobby Tiles Alignment'
+      translatable: true
+    lobby_tiles_background:
+      type: managed_file
+      label: 'Lobby Tiles Background'
+      translatable: true
