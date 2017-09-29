@@ -1,19 +1,19 @@
 # Web Composer template for Drupal projects
 
-[![Build Status](https://travis-ci.org/drupal-composer/drupal-project.svg?branch=8.x)](https://travis-ci.org/drupal-composer/drupal-project)
-
 This project template should provide a kickstart for managing your site
 dependencies with [Composer](https://getcomposer.org/).
 
-If you want to know how to use it as replacement for
-[Drush Make](https://github.com/drush-ops/drush/blob/master/docs/make.md) visit
-the [Documentation on drupal.org](https://www.drupal.org/node/2471553).
-
 ## Documentations
+
+### Module
 
 * [Generating a Module Skeleton](docs/generate-module.md)
 * [Generating a Custom Content Entity](docs/generate-custom-entity.md)
 * [Generating a Custom Configuration Form](docs/generate-custom-form.md)
+
+### Plugins
+
+* [Creating a Webcomposer Form Plugin](docs/webcomposer-form-plugin.md)
 
 ## Updating Drupal Core
 
