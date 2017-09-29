@@ -501,7 +501,7 @@ class WebcomposerDomainImport extends ControllerBase {
    * DomainImportFinishedCallback for Batch Process to end.
    */
   public function domainImportFinishedCallback() {
-    drupal_set_message('Import successfully Completed!');
+    drupal_set_message(t('Import successfully Completed!'), 'status');
   }
 
 }
