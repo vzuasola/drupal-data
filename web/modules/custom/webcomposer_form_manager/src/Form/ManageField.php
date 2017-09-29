@@ -12,7 +12,25 @@ use Drupal\Core\Url;
  * @package Drupal\webcomposer_form_manager\Form
  */
 class ManageField extends FormBase {
+  /**
+   * Drupal language manager
+   *
+   * @var object
+   */
+  protected $languageManager;
+
+  /**
+   * Form manager
+   *
+   * @var \Drupal\webcomposer_form_manager\WebcomposerForm
+   */
   private $formManager;
+
+  /**
+   * Current Route
+   *
+   * @var object
+   */
   private $route;
 
   /**
@@ -21,6 +39,7 @@ class ManageField extends FormBase {
   public function __construct($typedConfigManager, $languageManager, $formManager, $route) {
     parent::__construct($typedConfigManager, $languageManager);
 
+    $this->languageManager = $languageManager;
     $this->formManager = $formManager;
     $this->route = $route;
 
@@ -108,6 +127,12 @@ class ManageField extends FormBase {
       case !$this->field:
       case empty($this->field->getSettings()):
         throw new \Symfony\Component\HttpKernel\Exception\NotFoundHttpException();
+    }
+
+    // display helpful message to remind editors that they are translating a value
+    if ($this->isConfigValueOverride()) {
+      $lang = $this->languageManager->getCurrentLanguage()->getId();
+      drupal_set_message(t("You are translating this configuration to language <strong>$lang</strong>"), 'warning');
     }
 
     $this->generateSettingsForm($form);

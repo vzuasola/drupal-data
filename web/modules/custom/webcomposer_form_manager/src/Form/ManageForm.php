@@ -13,8 +13,31 @@ use Drupal\Core\Url;
  * @package Drupal\webcomposer_form_manager\Form
  */
 class ManageForm extends FormBase {
+  /**
+   * Form manager
+   *
+   * @var \Drupal\webcomposer_form_manager\WebcomposerForm
+   */
   private $formManager;
+
+  /**
+   * Current Route
+   *
+   * @var object
+   */
   private $route;
+
+  /**
+   * {@inheritdoc}
+   */
+  public static function create(ContainerInterface $container) {
+    return new static(
+      $container->get('config.typed'),
+      $container->get('language_manager'),
+      $container->get('webcomposer_form_manager.form_manager'),
+      $container->get('current_route_match')
+    );
+  }
 
   /**
    * Class constructor.
@@ -45,18 +68,6 @@ class ManageForm extends FormBase {
     $name = $this->entity->getName();
 
     return $name;
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  public static function create(ContainerInterface $container) {
-    return new static(
-      $container->get('config.typed'),
-      $container->get('language_manager'),
-      $container->get('webcomposer_form_manager.form_manager'),
-      $container->get('current_route_match')
-    );
   }
 
   /**
@@ -93,6 +104,12 @@ class ManageForm extends FormBase {
     // check if the entity exists first
     if (!$this->entity) {
       throw new \Symfony\Component\HttpKernel\Exception\NotFoundHttpException();
+    }
+
+    // display helpful message to remind editors that they are translating a value
+    if ($this->isConfigValueOverride()) {
+      $lang = $this->languageManager->getCurrentLanguage()->getId();
+      drupal_set_message(t("You are translating this configuration to language <strong>$lang</strong>"), 'warning');
     }
 
     $this->generateSettingsForm($form);
@@ -179,12 +196,22 @@ class ManageForm extends FormBase {
       ];
 
       if ($field->getSettings()) {
-        $form['table'][$key]['actions'] = [
-          '#markup' => $this->l('Edit', $url),
+        $operations = [
+          'data' => [
+            '#type' => 'operations',
+            '#links' => [
+              'edit' => [
+                'url' => $url,
+                'title' => 'Edit'
+              ],
+            ],
+          ],
         ];
+
+        $form['table'][$key]['actions'] = $operations;
       } else {
         $form['table'][$key]['actions'] = [
-          '#markup' => 'No actions',
+          '#markup' => 'No Actions',
         ];
       }
 

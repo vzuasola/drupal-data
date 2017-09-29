@@ -15,6 +15,7 @@ class WebcomposerForm {
    * @var object
    */
   private $pluginManager;
+
   /**
    * The Webcomposer Form module handler
    *
