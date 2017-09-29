@@ -10,7 +10,7 @@ use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
  *
  * @WebcomposerForm(
  *   id = "login",
- *   name = "LoginForm",
+ *   name = "Login Form",
  * )
  */
 class LoginForm extends WebcomposerFormBase implements WebcomposerFormInterface {

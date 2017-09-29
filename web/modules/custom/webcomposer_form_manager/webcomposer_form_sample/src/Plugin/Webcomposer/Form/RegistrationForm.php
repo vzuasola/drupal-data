@@ -10,11 +10,11 @@ use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
  *
  * @WebcomposerForm(
  *   id = "registration",
- *   name = "RegistrationForm",
+ *   name = "Registration Form",
  * )
  */
 class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInterface {
-    /**
+  /**
    *
    */
   public function getSettings() {
