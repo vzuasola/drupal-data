@@ -6,7 +6,7 @@ use Drupal\webcomposer_form_manager\WebcomposerFormBase;
 use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
 
 /**
- * RegistrationForm
+ * LoginForm
  *
  * @WebcomposerForm(
  *   id = "login",
@@ -19,15 +19,32 @@ class LoginForm extends WebcomposerFormBase implements WebcomposerFormInterface 
    */
   public function getSettings() {
     return [
-      'show' => [
-        '#title' => 'Show this form',
+      'checkbox' => [
+        '#title' => 'Checkbox',
         '#type' => 'checkbox',
         '#default_value' => true
       ],
-      'alias' => [
-        '#title' => 'Form alias',
+      'textfield' => [
+        '#title' => 'Textfield',
         '#type' => 'textfield',
-        '#description' => 'The alias for this form',
+        '#description' => 'A description for this field',
+      ],
+      'textarea' => [
+        '#title' => 'Textarea',
+        '#type' => 'textarea',
+        '#description' => 'A description for this field',
+      ],
+      'checkboxes' => [
+        '#title' => 'Checkboxes',
+        '#type' => 'checkboxes',
+        '#options' => ['A' => 'Choice A', 'B' => 'Choice B'],
+        '#description' => 'A description for this field',
+      ],
+      'radios' => [
+        '#title' => 'Radios',
+        '#type' => 'radios',
+        '#options' => ['A' => 'Choice A', 'B' => 'Choice B'],
+        '#description' => 'A description for this field',
       ],
     ];
   }
@@ -44,10 +61,32 @@ class LoginForm extends WebcomposerFormBase implements WebcomposerFormInterface 
           'default_value' => 'Leandrew',
         ],
         'settings' => [
-          'alias' => [
-            '#title' => 'Username alias',
+          'checkbox' => [
+            '#title' => 'Field Checkbox',
+            '#type' => 'checkbox',
+            '#default_value' => true
+          ],
+          'textfield' => [
+            '#title' => 'Field Textfield',
             '#type' => 'textfield',
-            '#description' => 'The alias for this username',
+            '#description' => 'A description for this field',
+          ],
+          'textarea' => [
+            '#title' => 'Field Textarea',
+            '#type' => 'textarea',
+            '#description' => 'A description for this field',
+          ],
+          'checkboxes' => [
+            '#title' => 'Field Checkboxes',
+            '#type' => 'checkboxes',
+            '#options' => ['A' => 'Choice A', 'B' => 'Choice B'],
+            '#description' => 'A description for this field',
+          ],
+          'radios' => [
+            '#title' => 'Field Radios',
+            '#type' => 'radios',
+            '#options' => ['A' => 'Choice A', 'B' => 'Choice B'],
+            '#description' => 'A description for this field',
           ],
         ],
       ],
