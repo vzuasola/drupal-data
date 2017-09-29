@@ -17,7 +17,7 @@ All answers can be default except for
 * Enter the class of your new content entity: `DefaultEntity`
 * Is your entity revisionable: `no`
 
-`PS: If you are gonna add let say an Awesome Slider, the entity name will be AwesomeSliderEntity`
+> If you are gonna add let say an Awesome Slider, the entity name will be AwesomeSliderEntity
 
 ## Change the menu path
 
@@ -35,7 +35,7 @@ webcomposer_module.admin_settings:
     _permission: 'administer site configuration'
 ```
 
-`PS: You can change the admin/config/webcomposer/ to admin/config/<my_product>/ for product specific modules`
+> You can change the admin/config/webcomposer/ to admin/config/<my_product>/ for product specific modules`
 
 * Modify the `webcomposer_module.links.menu.yml`
     * Create entry for the main menu item
