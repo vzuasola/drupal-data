@@ -84,17 +84,13 @@ class ManageFieldController extends ControllerBase {
       $languageName = $language->getName();
       $status = 'Published';
 
-      $uri = new Url(
-        'webcomposer_form_manager.field.view',
-        [
-          'form' => $this->route->getParameter('form'),
-          'field' => $this->route->getParameter('field'),
-          'language' => $language->getId(),
-        ],
-        [
-          'language' => $language,
-        ]
-      );
+      $uri = new Url('webcomposer_form_manager.field.view', [
+        'form' => $this->route->getParameter('form'),
+        'field' => $this->route->getParameter('field'),
+        'language' => $language->getId(),
+      ], [
+        'language' => $language,
+      ]);
 
       $operations = [
         'data' => [

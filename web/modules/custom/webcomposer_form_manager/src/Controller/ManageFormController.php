@@ -73,16 +73,12 @@ class ManageFormController extends ControllerBase {
       $languageName = $language->getName();
       $status = 'Published';
 
-      $uri = new Url(
-        'webcomposer_form_manager.form.view',
-        [
-          'form' => $this->route->getParameter('form'),
-          'language' => $language->getId(),
-        ],
-        [
-          'language' => $language,
-        ]
-      );
+      $uri = new Url('webcomposer_form_manager.form.view', [
+        'form' => $this->route->getParameter('form'),
+        'language' => $language->getId(),
+      ], [
+        'language' => $language,
+      ]);
 
       $operations = [
         'data' => [
