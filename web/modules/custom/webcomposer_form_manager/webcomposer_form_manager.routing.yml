@@ -22,10 +22,26 @@ webcomposer_form_manager.form.view:
   requirements:
     _permission: 'administer site configuration'
 
+webcomposer_form_manager.form.view_translate:
+  path: '/admin/config/webcomposer/form/manager/manage/{form}/translate'
+  defaults:
+    _controller: '\Drupal\webcomposer_form_manager\Controller\ManageFormController::translate'
+    _title_callback: '\Drupal\webcomposer_form_manager\Controller\ManageFormController::title'
+  requirements:
+    _permission: 'administer site configuration'
+
 webcomposer_form_manager.field.view:
   path: '/admin/config/webcomposer/form/manager/manage/{form}/field/{field}'
   defaults:
     _form: '\Drupal\webcomposer_form_manager\Form\ManageField'
     _title_callback: '\Drupal\webcomposer_form_manager\Form\ManageField::title'
+  requirements:
+    _permission: 'administer site configuration'
+
+webcomposer_form_manager.field.view_translate:
+  path: '/admin/config/webcomposer/form/manager/manage/{form}/field/{field}/translate'
+  defaults:
+    _controller: '\Drupal\webcomposer_form_manager\Controller\ManageFieldController::translate'
+    _title_callback: '\Drupal\webcomposer_form_manager\Controller\ManageFieldController::title'
   requirements:
     _permission: 'administer site configuration'
