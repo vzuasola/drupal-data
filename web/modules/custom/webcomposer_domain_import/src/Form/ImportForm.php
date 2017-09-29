@@ -74,7 +74,6 @@ class ImportForm extends FormBase {
       'title' => t('Importing Domains'),
       'operations' => $operations,
       'init_message' => t('Batch is starting.'),
-      'finished' => '\Drupal\webcomposer_domain_import\Controller\WebcomposerDomainImport::domainImportFinishedCallback',
     ];
     batch_set($batch);
   }
