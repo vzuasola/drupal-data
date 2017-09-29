@@ -1,0 +1,20 @@
+games_page_background.list:
+  title: 'Casino Games Page Background Configuration'
+  description: 'List casino games page background entities'
+  parent: system.admin_config
+  route_name: games_page_background.admin_settings
+
+# Casino Games Page Background menu items definition
+entity.games_page_bg_entity.collection:
+  title: 'Casino Games Page Background list'
+  route_name: entity.games_page_bg_entity.collection
+  description: 'List Casino Games Page Background entities'
+  parent: games_page_background.list
+  weight: 100
+
+games_page_bg_entity.admin.structure.settings:
+  title: Casino Games Page Background settings
+  description: 'Configure Casino Games Page Background entities'
+  route_name: games_page_bg_entity.settings
+  parent: games_page_background.list
+  weight: 101

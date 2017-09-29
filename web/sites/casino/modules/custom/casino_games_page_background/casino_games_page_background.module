@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains casino_games_page_background.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function casino_games_page_background_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the casino_games_page_background module.
+    case 'help.page.casino_games_page_background':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Allow to add Games Page Background for Casino Classic') . '</p>';
+      return $output;
+
+    default:
+  }
+}
