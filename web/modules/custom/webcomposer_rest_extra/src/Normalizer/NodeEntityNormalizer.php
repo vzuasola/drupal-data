@@ -46,7 +46,6 @@ class NodeEntityNormalizer extends ContentEntityNormalizer
           } else {
             $attributes[$key][0]['value'] = $this->filterHtml($attributes[$key][0]['value']);
           }
-          // kint($attributes[$key][0]['value']);die;
         }
       }
 
