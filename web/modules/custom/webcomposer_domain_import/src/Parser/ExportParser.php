@@ -29,81 +29,79 @@ class ExportParser {
     return $this->readTaxonomyByName('domain_groups');
   }
 
-/**
- * Retruns all domains
- */
+  /**
+   * Retruns all domains.
+   */
+  public function get_domain() {
+    return $this->readTaxonomyByName('domain');
+  }
 
-public function get_domain() {
-   return $this->readTaxonomyByName('domain');
-}
+  /**
+   * Returns domain group id.
+   */
+  public function get_domain_group_id($entity_id) {
+    $termid = 0;
+    $term_id = 0;
 
+    $termid = db_query('SELECT n.field_select_domain_group_target_id FROM {taxonomy_term__field_select_domain_group} n WHERE n.entity_id  = :entity_id', [':entity_id' => $entity_id]);
 
-/**
- * Returns domain group id.
- */
-public function get_domain_group_id($entity_id) {
-  $termid = 0;
-  $term_id = 0;
-  
-  $termid = db_query('SELECT n.field_select_domain_group_target_id FROM {taxonomy_term__field_select_domain_group} n WHERE n.entity_id  = :entity_id', [':entity_id' => $entity_id]);
-
-   foreach ($termid as $val) {
+    foreach ($termid as $val) {
       // Get tid.
       $term_id = $val->field_select_domain_group_target_id;
     }
     return $term_id;
 
-}
+  }
 
-/**
- * Returns Placeholder target id.
- */
-public function get_add_placeholder_target_id($entity_id, $langcode) {
-   $termid = 0;
-  $term_id = [];
-  
-  $termid = db_query('SELECT n.field_add_placeholder_target_id FROM {taxonomy_term__field_add_placeholder} n WHERE n.entity_id  = :entity_id AND n.langcode = :langcode', [':entity_id' => $entity_id, ':langcode' => $langcode]);
+  /**
+   * Returns Placeholder target id.
+   */
+  public function get_add_placeholder_target_id($entity_id, $langcode) {
+    $termid = 0;
+    $term_id = [];
 
-   foreach ($termid as $val) {
+    $termid = db_query('SELECT n.field_add_placeholder_target_id FROM {taxonomy_term__field_add_placeholder} n WHERE n.entity_id  = :entity_id AND n.langcode = :langcode', [':entity_id' => $entity_id, ':langcode' => $langcode]);
+
+    foreach ($termid as $val) {
       // Get tid.
       $term_id[]['target_id'] = $val->field_add_placeholder_target_id;
     }
     return $term_id;
-}
+  }
 
-/**
- * Returns Placeholder Key.
- */
-public function get_paragraph__field_placeholder_key($entity_id, $langcode) {
-   $termid = 0;
-  $key_value = '';
-  
-  $termid = db_query('SELECT n.field_placeholder_key_value FROM {paragraph__field_placeholder_key} n WHERE n.entity_id  = :entity_id AND n.langcode = :langcode', [':entity_id' => $entity_id, ':langcode' => $langcode]);
+  /**
+   * Returns Placeholder Key.
+   */
+  public function get_paragraph__field_placeholder_key($entity_id, $langcode) {
+    $termid = 0;
+    $key_value = '';
 
-   foreach ($termid as $val) {
+    $termid = db_query('SELECT n.field_placeholder_key_value FROM {paragraph__field_placeholder_key} n WHERE n.entity_id  = :entity_id AND n.langcode = :langcode', [':entity_id' => $entity_id, ':langcode' => $langcode]);
+
+    foreach ($termid as $val) {
       // Get tid.
       $key_value = $val->field_placeholder_key_value;
     }
     return $key_value;
-}
+  }
 
-/**
- * REturns Placeholder default key.
- */
-public function get_paragraph__field_default_value($entity_id, $langcode) {
-   $termid = 0;
-  $key_value = '';
-  
-  $termid = db_query('SELECT n.field_default_value_value FROM {paragraph__field_default_value} n WHERE n.entity_id  = :entity_id AND n.langcode = :langcode', [':entity_id' => $entity_id, ':langcode' => $langcode]);
+  /**
+   * REturns Placeholder default key.
+   */
+  public function get_paragraph__field_default_value($entity_id, $langcode) {
+    $termid = 0;
+    $key_value = '';
 
-   foreach ($termid as $val) {
+    $termid = db_query('SELECT n.field_default_value_value FROM {paragraph__field_default_value} n WHERE n.entity_id  = :entity_id AND n.langcode = :langcode', [':entity_id' => $entity_id, ':langcode' => $langcode]);
+
+    foreach ($termid as $val) {
       // Get tid.
       $key_value = $val->field_default_value_value;
     }
     return $key_value;
-}
+  }
 
-/**
+  /**
    * Returns ter id based on vocab id.
    */
   private function readTaxonomyByName($vocab) {
@@ -111,14 +109,12 @@ public function get_paragraph__field_default_value($entity_id, $langcode) {
     // Get tid of term with same name.
     $termid = db_query('SELECT n.tid, n.name FROM {taxonomy_term_field_data} n WHERE n.vid  = :vid', [':vid' => $vocab]);
     foreach ($termid as $termName) {
-      // Get tid and term name
+      // Get tid and term name.
       $term_id[$termName->tid] = $termName->name;
     }
     return $term_id;
 
   }
-
-
 
   /**
    * Returns a nested array of domain groups with the following data:.
