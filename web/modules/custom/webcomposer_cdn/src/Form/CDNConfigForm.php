@@ -43,8 +43,8 @@ class CDNConfigForm extends ConfigFormBase {
       '#title' => $this->t('CDN Domain Configuration'),
        '#default_value' => $config->get('cdn_domain_configuration'),
       '#description' => $this->t('Add the CDN domain to specific country here.
-        please follow the following format. Country Code | Domain;
-        Example: PH | example.cdn.com'),
+        please follow the following format. Country Code|Domain;
+        Example: PH|example.cdn.com'),
     ];
 
     return parent::buildForm($form, $form_state);

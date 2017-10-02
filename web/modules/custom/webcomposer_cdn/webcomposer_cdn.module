@@ -48,14 +48,15 @@ function webcomposer_cdn_file_url_alter(&$uri) {
     // Get domain configuration in the form of array.
     $domains = explode(PHP_EOL, $cdn_domains);
     foreach ($domains as $value) {
-      list($code, $domain) = explode(' | ', $value);
+      $domain_value = str_replace(' ', '', $value);
+      list($code, $domain) = explode('|', $domain_value);
       $domain_settings[$code] = $domain;
     }
 
     if (!empty($country_code) && array_key_exists($country_code, $domain_settings)) {
       $url = preg_replace('/public:\/\//', '', $uri);
-      $doamin = trim($domain_settings[$country_code]);
-      $uri = 'https://' . $doamin . '/' . $url;
+      $domain = trim($domain_settings[$country_code]);
+      $uri = 'https://' . $domain . '/' . $url;
     }
   }
 }
@@ -63,7 +64,7 @@ function webcomposer_cdn_file_url_alter(&$uri) {
 /**
  * Implements hook_inline_image_url_change_alter().
  */
-function webcomposer_cdn_inline_image_url_change_alter(&$html_body) {
+function webcomposer_cdn_inline_image_url_change_alter(&$basepath) {
   // Get the CDN configuration from the
   $config = \Drupal::config('webcomposer_cdn.cdn_configuration');
   $cdn_is_enabled = $config->get('enable_cdn');
@@ -78,28 +79,16 @@ function webcomposer_cdn_inline_image_url_change_alter(&$html_body) {
   // Get domain configuration in the form of array.
   $domains = explode(PHP_EOL, $cdn_domains);
   foreach ($domains as $value) {
-    list($code, $domain) = explode(' | ', $value);
+    $domain_value = str_replace(' ', '', $value);
+    list($code, $domain) = explode('|', $domain_value);
     $domain_settings[$code] = $domain;
   }
+  $domain = trim($domain_settings[$country_code]);
   // Alter the image url if the request is from front-end
   if (isset($_SERVER['HTTP_X_FE_BASE_URI']) && $cdn_is_enabled === 1 &&
     !empty($country_code) && array_key_exists($country_code, $domain_settings)) {
-    $document = new Html();
-
-    $htmldoc = $document->load($html_body);
-    $domobject = simplexml_import_dom($htmldoc);
-
-    $images = $domobject->xpath('//img');
-    $doamin = trim($domain_settings[$country_code]);
-
-    foreach ($images as $image) {
-      $replace = preg_replace('/\/sites\/[a-z\-]+\/files/', 'https://' . $doamin, $image['src']);
-      $image['src'] = $replace;
-    }
-
-    $htmlmarkup = Html::serialize($htmldoc);
-    $processedhtml = trim($htmlmarkup);
+    $basepath = "https://$domain";
+  } else {
+    $basepath = $basepath;
   }
-
-  return $processedhtml;
 }

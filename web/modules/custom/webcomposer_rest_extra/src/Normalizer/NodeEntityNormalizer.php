@@ -40,12 +40,7 @@ class NodeEntityNormalizer extends ContentEntityNormalizer
       // replace the images src for text formats
       if (isset($value[0]['format'])) {
         if (!empty($value[0]['value'])) {
-          $processedHTML = $module_handler->invokeAll('inline_image_url_change_alter', array($attributes[$key][0]['value']));
-          if (!empty($processedHTML)) {
-            $attributes[$key][0]['value'] = $processedHTML;
-          } else {
-            $attributes[$key][0]['value'] = $this->filterHtml($attributes[$key][0]['value']);
-          }
+          $attributes[$key][0]['value'] = $this->filterHtml($attributes[$key][0]['value']);
         }
       }
 
@@ -104,14 +99,8 @@ class NodeEntityNormalizer extends ContentEntityNormalizer
 
       foreach ($item as $key => $value) {
         if (isset($value['format'])) {
-          $processedHTML = $module_handler->invokeAll('inline_image_url_change_alter', array($attributes[$key][0]['value']));
-          if (!empty($processedHTML)) {
-            $field_array = $processedHTML;
-            $pargraphTranslatedArray[$field][$key]['value'] = $field_array;
-          } else {
-            $field_array = $this->filterHtml($value['value']);
-            $pargraphTranslatedArray[$field][$key]['value'] = $field_array;
-          }
+          $field_array = $this->filterHtml($value['value']);
+          $pargraphTranslatedArray[$field][$key]['value'] = $field_array;
         }
       }
 

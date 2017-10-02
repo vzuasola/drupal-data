@@ -12,22 +12,11 @@ use Drupal\Core\Site\Settings;
  * @param \Drupal\node\NodeInterface $node
  *   The node being viewed.
  */
-function hook_inline_image_url_change_alter(&$html_body) {
-  $document = new Html();
-
-  $htmlDoc = $document->load($html_body);
-  $domObject = simplexml_import_dom($htmlDoc);
-
-  $images = $domObject->xpath('//img');
-  $basePath = Settings::get('ck_editor_inline_image_prefix', NULL);
-
-  foreach ($images as $image) {
-    $replace = preg_replace('/\/sites\/[a-z\-]+\/files/', $basePath, $image['src']);
-    $image['src'] = $replace;
+function hook_inline_image_url_change_alter(&$basepath) {
+  // Alter the base path for the image here.
+  if (isset($_SERVER['HTTP_X_FE_BASE_URI'])) {
+    $basepath = "https://$domain";
+  } else {
+    $basepath = $basepath;
   }
-
-  $htmlMarkup = Html::serialize($htmlDoc);
-  $processedHtml = trim($htmlMarkup);
-
-  return $processedHtml;
 }

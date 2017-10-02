@@ -7,6 +7,7 @@ use Drupal\file\Entity\File;
 use Drupal\Component\Utility\Html;
 use Drupal\Core\Site\Settings;
 use \Drupal\Core\Extension\ModuleHandler;
+use Drupal\webcomposer_rest_extra\FilterHtmlTrait;
 
 /**
  * @ingroup views_style_plugins
@@ -19,6 +20,7 @@ use \Drupal\Core\Extension\ModuleHandler;
  * )
  */
 class NodeListSerializer extends Serializer {
+  use FilterHtmlTrait;
   /**
    * {@inheritdoc}
    */
@@ -40,12 +42,7 @@ class NodeListSerializer extends Serializer {
         // replace the images src for text formats
         $module_handler = \Drupal::moduleHandler();
         if (isset($value[0]['format']) && isset($value[0]['value'])) {
-          $processedHTML = $module_handler->invokeAll('inline_image_url_change_alter', array($attributes[$key][0]['value']));
-          if (!empty($processedHTML)) {
-            $rowAssoc[$key][0]['value'] = $processedHTML;
-          } else {
             $rowAssoc[$key][0]['value'] = $this->filterHtml($value[0]['value']);
-          }
         }
 
         // loading the term object onto the rest export
@@ -114,14 +111,8 @@ class NodeListSerializer extends Serializer {
       // replace the images src for text formats
       foreach ($item as $key => $value) {
         if (isset($value['format'])) {
-           $processedHTML = $module_handler->invokeAll('inline_image_url_change_alter', array($value['value']));
-          if (!empty($processedHTML)) {
-            $field_array = $processedHTML;
-            $pargraphTranslatedArray[$field][$key]['value'] = $field_array;
-          } else {
-            $field_array = $this->filterHtml($value['value']);
-            $pargraphTranslatedArray[$field][$key]['value'] = $field_array;
-          }
+          $field_array = $this->filterHtml($value['value']);
+          $pargraphTranslatedArray[$field][$key]['value'] = $field_array;
         }
       }
     }
@@ -148,28 +139,5 @@ class NodeListSerializer extends Serializer {
     $result[] = $fileArray;
 
     return $result;
-  }
-
-  /**
-   * Filtered Html for Image Source.
-   */
-  public function filterHtml($markup) {
-    $document = new Html();
-
-    $htmlDoc = $document->load($markup);
-    $domObject = simplexml_import_dom($htmlDoc);
-
-    $images = $domObject->xpath('//img');
-    $basePath = Settings::get('ck_editor_inline_image_prefix', NULL);
-
-    foreach ($images as $image) {
-      $replace = preg_replace('/\/sites\/[a-z\-]+\/files/', $basePath, $image['src']);
-      $image['src'] = $replace;
-    }
-
-    $htmlMarkup = Html::serialize($htmlDoc);
-    $processedHtml = trim($htmlMarkup);
-
-    return $processedHtml;
   }
 }
