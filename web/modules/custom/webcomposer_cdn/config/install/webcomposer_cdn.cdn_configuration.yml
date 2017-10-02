@@ -1,0 +1,2 @@
+enable_cdn: false
+cdn_domain_configuration: 'PH|example.cdn.com'

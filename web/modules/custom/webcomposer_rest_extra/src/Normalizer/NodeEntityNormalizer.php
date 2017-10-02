@@ -11,26 +11,25 @@ use Drupal\Component\Utility\Html;
 use Drupal\Core\Site\Settings;
 use Drupal\webcomposer_rest_extra\FilterHtmlTrait;
 
-/** 
+/**
  * Converts typed data objects to arrays.
  */
 class NodeEntityNormalizer extends ContentEntityNormalizer
 {
   use FilterHtmlTrait;
   /**
-   * The interface or class that this Normalizer supports. 
-   * 
-   * @var string 
+   * The interface or class that this Normalizer supports.
+   *
+   * @var string
    */
   protected $supportedInterfaceOrClass = 'Drupal\node\NodeInterface';
 
-  /** 
-   * {@inheritdoc} 
+  /**
+   * {@inheritdoc}
    */
   public function normalize($entity, $format = NULL, array $context = []) {
     $entityData = $entity->toArray();
     $attributes = parent::normalize($entity, $format, $context);
-
     foreach ($entityData as $key => $value) {
       // replace the images src for text formats
       if (isset($value[0]['format'])) {
@@ -163,7 +162,7 @@ class NodeEntityNormalizer extends ContentEntityNormalizer
    */
   private function loadFileById($fid) {
     $result = [];
-    $fileArray = []; 
+    $fileArray = [];
 
     if (isset($fid)) {
       $file = File::load($fid);

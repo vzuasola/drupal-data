@@ -18,9 +18,12 @@ trait FilterHtmlTrait {
 
         $htmlDoc = $document->load($markup);
         $domObject = simplexml_import_dom($htmlDoc);
-
+        // replace the images src for text formats
+        $module_handler = \Drupal::moduleHandler();
         $images = $domObject->xpath('//img');
         $basePath = Settings::get('ck_editor_inline_image_prefix', NULL);
+
+        $module_handler->alter('inline_image_url_change', $basePath);
 
         foreach ($images as $image) {
             $replace = preg_replace('/\/sites\/[a-z\-]+\/files/', $basePath, $image['src']);
