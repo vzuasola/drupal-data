@@ -32,7 +32,6 @@ class CDNConfigForm extends ConfigFormBase {
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
     $config = $this->config('webcomposer_cdn.cdn_configuration');
-
     $form['enable_cdn'] = [
       '#type' => 'checkbox',
       '#title' => $this->t('Enable CDN'),

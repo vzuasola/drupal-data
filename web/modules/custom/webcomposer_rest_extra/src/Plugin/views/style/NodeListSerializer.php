@@ -6,6 +6,7 @@ use Drupal\rest\Plugin\views\style\Serializer;
 use Drupal\file\Entity\File;
 use Drupal\Component\Utility\Html;
 use Drupal\Core\Site\Settings;
+use \Drupal\Core\Extension\ModuleHandler;
 
 /**
  * @ingroup views_style_plugins
@@ -37,8 +38,14 @@ class NodeListSerializer extends Serializer {
 
       foreach ($rowAssoc as $key => $value) {
         // replace the images src for text formats
+        $module_handler = \Drupal::moduleHandler();
         if (isset($value[0]['format']) && isset($value[0]['value'])) {
-          $rowAssoc[$key][0]['value'] = $this->filterHtml($value[0]['value']);
+          $processedHTML = $module_handler->invokeAll('inline_image_url_change_alter', array($attributes[$key][0]['value']));
+          if (!empty($processedHTML)) {
+            $rowAssoc[$key][0]['value'] = $processedHTML;
+          } else {
+            $rowAssoc[$key][0]['value'] = $this->filterHtml($value[0]['value']);
+          }
         }
 
         // loading the term object onto the rest export
@@ -46,7 +53,6 @@ class NodeListSerializer extends Serializer {
           $term = $this->loadTerm($value[0]['target_id']);
           $rowAssoc[$key][0] = $term;
         }
-
 
         // loading the paragraph object onto the rest export
         foreach ($value as $paragraphKey => $pid) {
@@ -79,8 +85,8 @@ class NodeListSerializer extends Serializer {
     $lang = \Drupal::languageManager()->getCurrentLanguage(\Drupal\Core\Language\LanguageInterface::TYPE_CONTENT)->getId();
 
     $term = \Drupal\taxonomy\Entity\Term::load($tid);
-    $term_translated = \Drupal::service('entity.repository')->getTranslationFromContext($term, $lang); 
-     
+    $term_translated = \Drupal::service('entity.repository')->getTranslationFromContext($term, $lang);
+
     $term_alias = \Drupal::service('path.alias_manager')->getAliasByPath('/taxonomy/term/' . $tid);
     $term_translated->set('path', $term_alias);
 
@@ -108,8 +114,14 @@ class NodeListSerializer extends Serializer {
       // replace the images src for text formats
       foreach ($item as $key => $value) {
         if (isset($value['format'])) {
-          $field_array = $this->filterHtml($value['value']);
-          $pargraphTranslatedArray[$field][$key]['value'] = $field_array;
+           $processedHTML = $module_handler->invokeAll('inline_image_url_change_alter', array($value['value']));
+          if (!empty($processedHTML)) {
+            $field_array = $processedHTML;
+            $pargraphTranslatedArray[$field][$key]['value'] = $field_array;
+          } else {
+            $field_array = $this->filterHtml($value['value']);
+            $pargraphTranslatedArray[$field][$key]['value'] = $field_array;
+          }
         }
       }
     }

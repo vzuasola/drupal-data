@@ -93,14 +93,11 @@ class CDNRestResource extends ResourceBase {
     try {
       $config = \Drupal::config("webcomposer_cdn.cdn_configuration");
       $data = $config->get();
-
-      // $configuration = $data['cdn_domain_configuration'];
       $cdn_domains = explode(PHP_EOL, $data['cdn_domain_configuration']);
       foreach ($cdn_domains as $value) {
         list($code, $domain) = explode(' | ', $value);
         $domain_settings[$code] = $domain;
       }
-
       $data['cdn_domain_configuration'] = $domain_settings;
     } catch (\Exception $e) {
       $data = array(
@@ -114,7 +111,6 @@ class CDNRestResource extends ResourceBase {
       ),
     );
 
-    // return new ResourceResponse("Implement REST State GET!");
     return (new ResourceResponse($data))->addCacheableDependency($build);
   }
 

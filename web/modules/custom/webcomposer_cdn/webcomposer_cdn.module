@@ -6,11 +6,13 @@
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Component\Utility\Html;
 
 /**
  * Implements hook_help().
  */
 function webcomposer_cdn_help($route_name, RouteMatchInterface $route_match) {
+  kint("sjkdj");die;
   switch ($route_name) {
     // Main module help for the webcomposer_cdn module.
     case 'help.page.webcomposer_cdn':
@@ -27,16 +29,78 @@ function webcomposer_cdn_help($route_name, RouteMatchInterface $route_match) {
  * Implements hook_file_url_alter()
  */
 function webcomposer_cdn_file_url_alter(&$uri) {
-  if(!isset($_SERVER['HTTP_X_FE_BASE_URI'])) {
-
-    // Don't alter CSS file URLs while settings.php is disabling CSS aggregation.
-    if (substr($uri, -4) === '.css' && isset($GLOBALS['config']['system.performance']['css']['preprocess']) && $GLOBALS['config']['system.performance']['css']['preprocess'] === FALSE) {
+  // Get the CDN configuration from the
+  $config = \Drupal::config('webcomposer_cdn.cdn_configuration');
+  $cdn_is_enabled = $config->get('enable_cdn');
+  $cdn_domains = $config->get('cdn_domain_configuration');
+  // Check if the CDN is enabled and FE_BASE_URI is set and proceed.
+  if(isset($_SERVER['HTTP_X_FE_BASE_URI']) && $cdn_is_enabled === 1) {
+    // Exclude drupal css from change the url alter.
+    if (substr($uri, -4) === '.css' || substr($uri, -4) ===  '/[a-z][A-Z]/' . '.js') {
       return;
     }
 
-    $result = \Drupal::service('cdn.file_url_generator')->generate($uri);
-    if ($result) {
-      $uri = $result;
+    if (isset($_SERVER['HTTP_X_CUSTOM_LB_GEOIP_COUNTRY'])) {
+      $country_code = $_SERVER['HTTP_X_CUSTOM_LB_GEOIP_COUNTRY'];
+    } else {
+      $country_code = 'NULL';
+    }
+
+    // Get domain configuration in the form of array.
+    $domains = explode(PHP_EOL, $cdn_domains);
+    foreach ($domains as $value) {
+      list($code, $domain) = explode(' | ', $value);
+      $domain_settings[$code] = $domain;
+    }
+
+    if (!empty($country_code) && array_key_exists($country_code, $domain_settings)) {
+      $url = preg_replace('/public:\/\//', '', $uri);
+      $doamin = trim($domain_settings[$country_code]);
+      $uri = 'https://' . $doamin . '/' . $url;
     }
   }
+}
+
+/**
+ * Implements hook_inline_image_url_change_alter().
+ */
+function webcomposer_cdn_inline_image_url_change_alter(&$html_body) {
+  // Get the CDN configuration from the
+  $config = \Drupal::config('webcomposer_cdn.cdn_configuration');
+  $cdn_is_enabled = $config->get('enable_cdn');
+  $cdn_domains = $config->get('cdn_domain_configuration');
+
+  if (isset($_SERVER['HTTP_X_CUSTOM_LB_GEOIP_COUNTRY'])) {
+    $country_code = $_SERVER['HTTP_X_CUSTOM_LB_GEOIP_COUNTRY'];
+  } else {
+    $country_code = 'NULL';
+  }
+
+  // Get domain configuration in the form of array.
+  $domains = explode(PHP_EOL, $cdn_domains);
+  foreach ($domains as $value) {
+    list($code, $domain) = explode(' | ', $value);
+    $domain_settings[$code] = $domain;
+  }
+  // Alter the
+  if(isset($_SERVER['HTTP_X_FE_BASE_URI']) && $cdn_is_enabled === 1 &&
+    !empty($country_code) && array_key_exists($country_code, $domain_settings)) {
+    $document = new Html();
+
+    $htmlDoc = $document->load($html_body);
+    $domObject = simplexml_import_dom($htmlDoc);
+
+    $images = $domObject->xpath('//img');
+    $doamin = trim($domain_settings[$country_code]);
+
+    foreach ($images as $image) {
+      $replace = preg_replace('/\/sites\/[a-z\-]+\/files/', 'https://' . $doamin, $image['src']);
+      $image['src'] = $replace;
+    }
+
+    $htmlMarkup = Html::serialize($htmlDoc);
+    $processedHtml = trim($htmlMarkup);
+  }
+
+  return $processedHtml;
 }

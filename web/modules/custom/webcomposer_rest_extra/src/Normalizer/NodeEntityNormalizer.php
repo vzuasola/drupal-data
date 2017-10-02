@@ -10,32 +10,43 @@ use Drupal\file\Entity\File;
 use Drupal\Component\Utility\Html;
 use Drupal\Core\Site\Settings;
 use Drupal\webcomposer_rest_extra\FilterHtmlTrait;
+use Drupal\Core\Extension\ModuleHandler;
 
-/** 
+/**
  * Converts typed data objects to arrays.
  */
 class NodeEntityNormalizer extends ContentEntityNormalizer
 {
   use FilterHtmlTrait;
   /**
-   * The interface or class that this Normalizer supports. 
-   * 
-   * @var string 
+   * The interface or class that this Normalizer supports.
+   *
+   * @var string
    */
   protected $supportedInterfaceOrClass = 'Drupal\node\NodeInterface';
 
-  /** 
-   * {@inheritdoc} 
+  /**
+   * {@inheritdoc}
    */
   public function normalize($entity, $format = NULL, array $context = []) {
     $entityData = $entity->toArray();
     $attributes = parent::normalize($entity, $format, $context);
+    $module_handler = \Drupal::moduleHandler();
+    // Get the CDN configuration from the
+    $config = \Drupal::config('webcomposer_cdn.cdn_configuration');
+    $cdn_is_enabled = $config->get('enable_cdn');
 
     foreach ($entityData as $key => $value) {
       // replace the images src for text formats
       if (isset($value[0]['format'])) {
         if (!empty($value[0]['value'])) {
-          $attributes[$key][0]['value'] = $this->filterHtml($attributes[$key][0]['value']);
+          $processedHTML = $module_handler->invokeAll('inline_image_url_change_alter', array($attributes[$key][0]['value']));
+          if (!empty($processedHTML)) {
+            $attributes[$key][0]['value'] = $processedHTML;
+          } else {
+            $attributes[$key][0]['value'] = $this->filterHtml($attributes[$key][0]['value']);
+          }
+          // kint($attributes[$key][0]['value']);die;
         }
       }
 
@@ -94,8 +105,14 @@ class NodeEntityNormalizer extends ContentEntityNormalizer
 
       foreach ($item as $key => $value) {
         if (isset($value['format'])) {
-          $field_array = $this->filterHtml($value['value']);
-          $pargraphTranslatedArray[$field][$key]['value'] = $field_array;
+          $processedHTML = $module_handler->invokeAll('inline_image_url_change_alter', array($attributes[$key][0]['value']));
+          if (!empty($processedHTML)) {
+            $field_array = $processedHTML;
+            $pargraphTranslatedArray[$field][$key]['value'] = $field_array;
+          } else {
+            $field_array = $this->filterHtml($value['value']);
+            $pargraphTranslatedArray[$field][$key]['value'] = $field_array;
+          }
         }
       }
 
@@ -163,7 +180,7 @@ class NodeEntityNormalizer extends ContentEntityNormalizer
    */
   private function loadFileById($fid) {
     $result = [];
-    $fileArray = []; 
+    $fileArray = [];
 
     if (isset($fid)) {
       $file = File::load($fid);
