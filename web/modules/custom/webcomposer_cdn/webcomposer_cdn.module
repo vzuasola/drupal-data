@@ -12,7 +12,6 @@ use Drupal\Component\Utility\Html;
  * Implements hook_help().
  */
 function webcomposer_cdn_help($route_name, RouteMatchInterface $route_match) {
-  kint("sjkdj");die;
   switch ($route_name) {
     // Main module help for the webcomposer_cdn module.
     case 'help.page.webcomposer_cdn':
