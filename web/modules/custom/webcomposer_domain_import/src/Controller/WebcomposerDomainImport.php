@@ -139,7 +139,7 @@ class WebcomposerDomainImport extends ControllerBase {
             }
           }
 
-          $tid = $this->readTaxonomyByName($value['name'], self::DOMAIN_GROUP);
+          $tid = $this->readTaxonomyByName(trim($value['name']), self::DOMAIN_GROUP);
           if (empty($tid)) {
             $termItem = [
               'name' => trim($value['name']),
@@ -204,7 +204,7 @@ class WebcomposerDomainImport extends ControllerBase {
       $getPlaceholerVariables = $this->ImportParser->excel_get_variables($langcode);
       foreach ($getPlaceholerVariables as $value) {
         if ($value['type'] === 'group') {
-          $group = $this->readTaxonomyByName($value['name'], 'domain_groups');
+          $group = $this->readTaxonomyByName(trim($value['name']), 'domain_groups');
         }
 
         if ($value['type'] === 'domain') {
@@ -233,7 +233,7 @@ class WebcomposerDomainImport extends ControllerBase {
               ];
             }
           }
-          $tid = $this->readTaxonomyByName($value['name'], self::DOMAIN);
+          $tid = $this->readTaxonomyByName(trim($value['name']), self::DOMAIN);
           if (empty($tid)) {
             $termItem = [
               'name' => trim($value['name']),
