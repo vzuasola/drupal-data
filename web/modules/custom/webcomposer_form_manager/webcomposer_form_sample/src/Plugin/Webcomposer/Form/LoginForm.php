@@ -103,12 +103,51 @@ class LoginForm extends WebcomposerFormBase implements WebcomposerFormInterface 
 
       'comments' => [
         'name' => 'Comment',
-        'type' => 'textfield',
+        'type' => 'textarea',
         'settings' => [
           'name' => [
             '#title' => 'Default name',
             '#type' => 'textfield',
             '#description' => 'The default name for the comment',
+          ],
+        ],
+      ],
+
+      'gender' => [
+        'name' => 'Gender',
+        'type' => 'radio',
+        'settings' => [
+          'options' => [
+            '#title' => 'Options',
+            '#type' => 'textarea',
+            '#description' => 'Provide a pipe separated key value pair. <br> <small>Example male|Male</small>',
+            '#default_value' => implode(PHP_EOL, ['male|Male', 'female|Female']),
+          ],
+        ],
+      ],
+
+      'preference' => [
+        'name' => 'Preference',
+        'type' => 'select',
+        'settings' => [
+          'options' => [
+            '#title' => 'Options',
+            '#type' => 'textarea',
+            '#description' => 'Provide a pipe separated key value pair. <br> <small>Example key|value</small>',
+            '#default_value' => implode(PHP_EOL, ['1|Chicken', '2|Beef']),
+          ],
+        ],
+      ],
+
+      'age' => [
+        'name' => 'Valid Age',
+        'type' => 'checkbox',
+        'settings' => [
+          'label' => [
+            '#title' => 'Label',
+            '#type' => 'textfield',
+            '#description' => 'The label for this checkbox',
+            '#default_value' => 'I am above 18 years old',
           ],
         ],
       ],
