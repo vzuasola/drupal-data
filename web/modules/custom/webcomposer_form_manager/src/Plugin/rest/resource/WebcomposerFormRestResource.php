@@ -14,7 +14,7 @@ use Psr\Log\LoggerInterface;
  *
  * @RestResource(
  *   id = "webcomposer_form_rest_resource",
- *   label = @Translation("Webcomposer form rest resource"),
+ *   label = @Translation("Webcomposer Form Rest Resource"),
  *   uri_paths = {
  *     "canonical" = "/api/webcomposer_forms/form/{id}"
  *   }
@@ -91,7 +91,6 @@ class WebcomposerFormRestResource extends ResourceBase {
    *   Throws exception expected.
    */
   public function get($id) {
-
     if (!$this->currentUser->hasPermission('access content')) {
       throw new AccessDeniedHttpException();
     }
@@ -105,11 +104,14 @@ class WebcomposerFormRestResource extends ResourceBase {
       $data = ['error' => $this->t('Form not found')];
     }
 
-    $formFields= $this->formManager->getFormById($id)->getFields();
+    // @todo Form fields should be sorted based on weights at this point, so
+    // that FE won't need to sort it
+    $formFields = $this->formManager->getFormById($id)->getFields();
 
     foreach ($formFields as $key => $value) {
       $config = \Drupal::config("webcomposer_form_manager.form.$id.$key");
       $data['fields'][$key] = $config->get();
+      $data['fields'][$key]['type'] = $value->getType();
     }
 
     $build = array(
