@@ -5,6 +5,7 @@ namespace Drupal\webcomposer_form_manager\Form;
 use Drupal\Core\Form\FormStateInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\Core\Url;
+use Drupal\Core\Link;
 
 /**
  * Field settings
@@ -131,14 +132,36 @@ class ManageField extends FormBase {
 
     // display helpful message to remind editors that they are translating a value
     if ($this->isConfigValueOverride()) {
-      $lang = $this->languageManager->getCurrentLanguage()->getId();
-      drupal_set_message(t("You are translating this configuration to language <strong>$lang</strong>"), 'warning');
+      $this->notify();
     }
 
     $this->generateSettingsForm($form);
     $this->generateValidationsForm($form);
 
     return parent::buildForm($form, $form_state);
+  }
+
+  /**
+   * Notify user that the form is a translate form
+   */
+  private function notify() {
+    $id = $this->entity->getId();
+    $field = $this->field->getId();
+
+    $lang = $this->languageManager->getCurrentLanguage()->getId();
+    $language = $this->languageManager->getDefaultLanguage();
+
+    $uri = new Url('webcomposer_form_manager.field.view', [
+      'form' => $id,
+      'field' => $field,
+      'language' => $language->getId(),
+    ], [
+      'language' => $language,
+    ]);
+
+    $link = Link::fromTextAndUrl(t('Cancel translating'), $uri)->toString();
+
+    drupal_set_message(t("You are translating this configuration to language <strong>$lang</strong>. Go back by <strong>$link</strong>"), 'warning');
   }
 
   /**
@@ -228,6 +251,12 @@ class ManageField extends FormBase {
             $form[$key]['parameters_wrapper'][$paramKey]['#default_value'] = $fieldValidations[$key]['parameters'][$paramKey];
           }
         }
+      }
+
+      // disable translation for the following fields
+      if ($this->isConfigValueOverride()) {
+        $form[$key]['enable']['#disabled'] = TRUE;
+        $form[$key]['parameters_wrapper']['#disabled'] = TRUE;
       }
     }
   }

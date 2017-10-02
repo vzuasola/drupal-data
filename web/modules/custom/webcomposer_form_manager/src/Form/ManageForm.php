@@ -6,6 +6,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\Component\Utility\SortArray;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Url;
+use Drupal\Core\Link;
 
 /**
  * Class List.
@@ -13,6 +14,13 @@ use Drupal\Core\Url;
  * @package Drupal\webcomposer_form_manager\Form
  */
 class ManageForm extends FormBase {
+  /**
+   * Drupal language manager
+   *
+   * @var object
+   */
+  protected $languageManager;
+
   /**
    * Form manager
    *
@@ -45,6 +53,7 @@ class ManageForm extends FormBase {
   public function __construct($typedConfigManager, $languageManager, $formManager, $route) {
     parent::__construct($typedConfigManager, $languageManager);
 
+    $this->languageManager = $languageManager;
     $this->formManager = $formManager;
     $this->route = $route;
 
@@ -108,14 +117,34 @@ class ManageForm extends FormBase {
 
     // display helpful message to remind editors that they are translating a value
     if ($this->isConfigValueOverride()) {
-      $lang = $this->languageManager->getCurrentLanguage()->getId();
-      drupal_set_message(t("You are translating this configuration to language <strong>$lang</strong>"), 'warning');
+      $this->notify();
     }
 
     $this->generateSettingsForm($form);
     $this->generateFieldsForm($form);
 
     return parent::buildForm($form, $form_state);
+  }
+
+  /**
+   * Notify user that the form is a translate form
+   */
+  private function notify() {
+    $id = $this->entity->getId();
+
+    $lang = $this->languageManager->getCurrentLanguage()->getId();
+    $language = $this->languageManager->getDefaultLanguage();
+
+    $uri = new Url('webcomposer_form_manager.form.view', [
+      'form' => $id,
+      'language' => $language->getId(),
+    ], [
+      'language' => $language,
+    ]);
+
+    $link = Link::fromTextAndUrl(t('Cancel translating'), $uri)->toString();
+
+    drupal_set_message(t("You are translating this configuration to language <strong>$lang</strong>. Go back by <strong>$link</strong>"), 'warning');
   }
 
   /**
