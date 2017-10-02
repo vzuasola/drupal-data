@@ -81,18 +81,20 @@ class WebcomposerDomainImport extends ControllerBase {
   public function importPrepare($form_state, &$context) {
     $this->readExcel($form_state, $context);
 
-    $message = 'Deleting existing Domains, Domains groups, Master Placeholders and related Paragraphs...';
-    $context['message'] = $message;
     if ($context['sandbox'] === "EXCEL_FORMAT_OK") {
+      $message = 'Deleting existing Domains, Domains groups, Master Placeholders and related Paragraphs...';
+      $context['message'] = $message;
       $this->deleteParagraph();
       // Prepare all the vacabs for import.
       $vid = [self::DOMAIN, self::DOMAIN_GROUP, self::MASTER_PLACEHOLDER];
       $this->termDelete($vid);
     }
     else {
-      $message = t('An error occurred while processing %error_operation .', ['%error_operation' => $context['sandbox'], TRUE]);
-      drupal_set_message($message, 'error');
       $context['finished'] = 1;
+      $message = t('An error occurred while processing %error_operation .', ['%error_operation' => $context['sandbox']]);
+      $status = drupal_set_message($message, 'error');
+      $this->domainImportErrorCallback($status);
+
     }
   }
 
@@ -118,10 +120,10 @@ class WebcomposerDomainImport extends ControllerBase {
               [
                 'type' => 'domain_management_configuration',
                 'field_placeholder_key' => [
-                  "value"  => $placeholderKey,
+                  "value"  => trim($placeholderKey),
                 ],
                 'field_default_value' => [
-                  "value" => $placeholderValue,
+                  "value" => trim($placeholderValue),
                 ],
                 'langcode' => [
                   "value" => $langcode,
@@ -137,10 +139,10 @@ class WebcomposerDomainImport extends ControllerBase {
             }
           }
 
-          $tid = $this->readTaxonomyByName($value['name'], self::DOMAIN_GROUP);
+          $tid = $this->readTaxonomyByName(trim($value['name']), self::DOMAIN_GROUP);
           if (empty($tid)) {
             $termItem = [
-              'name' => $value['name'],
+              'name' => trim($value['name']),
               'vid' => self::DOMAIN_GROUP,
               'langcode' => $langcode,
               'field_add_placeholder' => $paragraphLists,
@@ -154,7 +156,7 @@ class WebcomposerDomainImport extends ControllerBase {
               'tid' => $tid,
               'vid' => self::DOMAIN_GROUP,
               'langcode' => $langcode,
-              'name' => $value['name'],
+              'name' => trim($value['name']),
             ];
             $this->insertTermTranslation($translationStack);
             foreach ($paragraphLists as $key => $value) {
@@ -180,8 +182,9 @@ class WebcomposerDomainImport extends ControllerBase {
     }
     else {
       $message = t('An error occurred while processing %error_operation .', ['%error_operation' => $context['sandbox'], TRUE]);
-      drupal_set_message($message, 'error');
       $context['finished'] = 1;
+      $status = drupal_set_message($message, 'error');
+      $this->domainImportErrorCallback($status);
     }
 
   }
@@ -201,7 +204,7 @@ class WebcomposerDomainImport extends ControllerBase {
       $getPlaceholerVariables = $this->ImportParser->excel_get_variables($langcode);
       foreach ($getPlaceholerVariables as $value) {
         if ($value['type'] === 'group') {
-          $group = $this->readTaxonomyByName($value['name'], 'domain_groups');
+          $group = $this->readTaxonomyByName(trim($value['name']), 'domain_groups');
         }
 
         if ($value['type'] === 'domain') {
@@ -212,10 +215,10 @@ class WebcomposerDomainImport extends ControllerBase {
               [
                 'type' => 'domain_management_configuration',
                 'field_placeholder_key' => [
-                  "value"  => $placeholderKey,
+                  "value"  => trim($placeholderKey),
                 ],
                 'field_default_value' => [
-                  "value" => $placeholderValue,
+                  "value" => trim($placeholderValue),
                 ],
                 'langcode' => [
                   "value" => $langcode,
@@ -230,10 +233,10 @@ class WebcomposerDomainImport extends ControllerBase {
               ];
             }
           }
-          $tid = $this->readTaxonomyByName($value['name'], self::DOMAIN);
+          $tid = $this->readTaxonomyByName(trim($value['name']), self::DOMAIN);
           if (empty($tid)) {
             $termItem = [
-              'name' => $value['name'],
+              'name' => trim($value['name']),
               'vid' => self::DOMAIN,
               'langcode' => $langcode,
               'field_add_placeholder' => $paragraphLists,
@@ -248,7 +251,7 @@ class WebcomposerDomainImport extends ControllerBase {
               'tid' => $tid,
               'vid' => self::DOMAIN,
               'langcode' => $langcode,
-              'name' => $value['name'],
+              'name' => trim($value['name']),
             ];
             $this->insertTermTranslation($translationStack);
             foreach ($paragraphLists as $key => $value) {
@@ -271,12 +274,13 @@ class WebcomposerDomainImport extends ControllerBase {
         }
 
       }
-
+      $this->domainImportFinishedCallback();
     }
     else {
       $message = t('An error occurred while processing %error_operation .', ['%error_operation' => $context['sandbox'], TRUE]);
-      drupal_set_message($message, 'error');
       $context['finished'] = 1;
+      $status = drupal_set_message($message, 'error');
+      $this->domainImportErrorCallback($status);
     }
   }
 
@@ -303,10 +307,10 @@ class WebcomposerDomainImport extends ControllerBase {
           [
             'type' => 'domain_management_configuration',
             'field_placeholder_key' => [
-              "value"  => $key,
+              "value"  => trim($key),
             ],
             'field_default_value' => [
-              "value" => $value,
+              "value" => trim($value),
             ],
             'langcode' => [
               "value" => $langcode,
@@ -325,7 +329,7 @@ class WebcomposerDomainImport extends ControllerBase {
           $tid = $this->readTaxonomyByName($value, self::MASTER_PLACEHOLDER);
           if (empty($tid)) {
             $termItem = [
-              'name' => $value,
+              'name' => trim($value),
               'vid' => self::MASTER_PLACEHOLDER,
               'langcode' => $langcode,
               'field_add_master_placeholder' => [
@@ -341,7 +345,7 @@ class WebcomposerDomainImport extends ControllerBase {
               'tid' => $tid,
               'vid' => self::MASTER_PLACEHOLDER,
               'langcode' => $langcode,
-              'name' => $value,
+              'name' => trim($value),
             ];
             $this->insertTermTranslation($translationStack);
 
@@ -365,8 +369,9 @@ class WebcomposerDomainImport extends ControllerBase {
     }
     else {
       $message = t('An error occurred while processing %error_operation .', ['%error_operation' => $context['sandbox'], TRUE]);
-      drupal_set_message($message, 'error');
       $context['finished'] = 1;
+      $status = drupal_set_message($message, 'error');
+      $this->domainImportErrorCallback($status);
     }
   }
 
@@ -486,10 +491,17 @@ class WebcomposerDomainImport extends ControllerBase {
   }
 
   /**
+   * DomainImportErrorCallback for Batch Process to end.
+   */
+  public function domainImportErrorCallback($status) {
+    return $status;
+  }
+
+  /**
    * DomainImportFinishedCallback for Batch Process to end.
    */
-  public static function domainImportFinishedCallback() {
-    drupal_set_message('Import complete.');
+  public function domainImportFinishedCallback() {
+    drupal_set_message(t('Import successfully Completed!'), 'status');
   }
 
 }
