@@ -10,7 +10,7 @@ use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
 use Psr\Log\LoggerInterface;
 
 /**
- * Provides a resource to get view modes by entity and bundle.
+ * Provides a resource to get data of Webcomposer Forms.
  *
  * @RestResource(
  *   id = "webcomposer_form_rest_resource",
