@@ -6,7 +6,6 @@ use Drupal\rest\Plugin\views\style\Serializer;
 use Drupal\file\Entity\File;
 use Drupal\Component\Utility\Html;
 use Drupal\Core\Site\Settings;
-use \Drupal\Core\Extension\ModuleHandler;
 use Drupal\webcomposer_rest_extra\FilterHtmlTrait;
 
 /**
@@ -40,7 +39,6 @@ class NodeListSerializer extends Serializer {
 
       foreach ($rowAssoc as $key => $value) {
         // replace the images src for text formats
-        $module_handler = \Drupal::moduleHandler();
         if (isset($value[0]['format']) && isset($value[0]['value'])) {
             $rowAssoc[$key][0]['value'] = $this->filterHtml($value[0]['value']);
         }

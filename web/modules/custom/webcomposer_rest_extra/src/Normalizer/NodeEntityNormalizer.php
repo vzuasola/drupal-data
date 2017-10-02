@@ -10,7 +10,6 @@ use Drupal\file\Entity\File;
 use Drupal\Component\Utility\Html;
 use Drupal\Core\Site\Settings;
 use Drupal\webcomposer_rest_extra\FilterHtmlTrait;
-use Drupal\Core\Extension\ModuleHandler;
 
 /**
  * Converts typed data objects to arrays.
@@ -31,11 +30,6 @@ class NodeEntityNormalizer extends ContentEntityNormalizer
   public function normalize($entity, $format = NULL, array $context = []) {
     $entityData = $entity->toArray();
     $attributes = parent::normalize($entity, $format, $context);
-    $module_handler = \Drupal::moduleHandler();
-    // Get the CDN configuration from the
-    $config = \Drupal::config('webcomposer_cdn.cdn_configuration');
-    $cdn_is_enabled = $config->get('enable_cdn');
-
     foreach ($entityData as $key => $value) {
       // replace the images src for text formats
       if (isset($value[0]['format'])) {
