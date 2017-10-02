@@ -95,7 +95,8 @@ class CDNRestResource extends ResourceBase {
       $data = $config->get();
       $cdn_domains = explode(PHP_EOL, $data['cdn_domain_configuration']);
       foreach ($cdn_domains as $value) {
-        list($code, $domain) = explode(' | ', $value);
+        $domain_value = str_replace(' ', '', $value);
+        list($code, $domain) = explode('|', $domain_value);
         $domain_settings[$code] = $domain;
       }
       $data['cdn_domain_configuration'] = $domain_settings;
