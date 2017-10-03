@@ -3,16 +3,24 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.vip_page.field_column_1_lightbox_title_cb
+    - field.field.node.vip_page.field_column_1_lightbox_title_sc
+    - field.field.node.vip_page.field_column_2_lightbox_title_cb
+    - field.field.node.vip_page.field_column_2_lightbox_title_sc
+    - field.field.node.vip_page.field_column_3_lightbox_title_cb
+    - field.field.node.vip_page.field_column_3_lightbox_title_sc
     - field.field.node.vip_page.field_vip_banner_content
     - field.field.node.vip_page.field_vip_banner_content_pos
     - field.field.node.vip_page.field_vip_banner_image
+    - field.field.node.vip_page.field_vip_cash_back_column_1_lb
+    - field.field.node.vip_page.field_vip_cash_back_column_2_lb
+    - field.field.node.vip_page.field_vip_cash_back_column_3_lb
     - field.field.node.vip_page.field_vip_cb_bot_blurb_content
     - field.field.node.vip_page.field_vip_cb_col_1
     - field.field.node.vip_page.field_vip_cb_col_2
     - field.field.node.vip_page.field_vip_cb_col_3
     - field.field.node.vip_page.field_vip_cb_enable
     - field.field.node.vip_page.field_vip_cb_title
-    - field.field.node.vip_page.field_vip_cb_top_blurb_content
     - field.field.node.vip_page.field_vip_cp_content
     - field.field.node.vip_page.field_vip_cp_enable
     - field.field.node.vip_page.field_vip_cp_title
@@ -22,7 +30,9 @@ dependencies:
     - field.field.node.vip_page.field_vip_sc_col_3
     - field.field.node.vip_page.field_vip_sc_enable
     - field.field.node.vip_page.field_vip_sc_title
-    - field.field.node.vip_page.field_vip_sc_top_blurb_content
+    - field.field.node.vip_page.field_vip_slots_club_column_1_lb
+    - field.field.node.vip_page.field_vip_slots_club_column_2_lb
+    - field.field.node.vip_page.field_vip_slots_club_column_3_lb
     - field.field.node.vip_page.field_vip_structure_content
     - field.field.node.vip_page.field_vip_structure_enable
     - field.field.node.vip_page.field_vip_structure_title
@@ -37,6 +47,54 @@ targetEntityType: node
 bundle: vip_page
 mode: default
 content:
+  field_column_1_lightbox_title_cb:
+    weight: 140
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_column_1_lightbox_title_sc:
+    weight: 143
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_column_2_lightbox_title_cb:
+    weight: 141
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_column_2_lightbox_title_sc:
+    weight: 144
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_column_3_lightbox_title_cb:
+    weight: 142
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_column_3_lightbox_title_sc:
+    weight: 145
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
   field_vip_banner_content:
     weight: 124
     label: above
@@ -59,6 +117,27 @@ content:
       image_link: ''
     third_party_settings: {  }
     type: image
+    region: content
+  field_vip_cash_back_column_1_lb:
+    weight: 134
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_vip_cash_back_column_2_lb:
+    weight: 135
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_vip_cash_back_column_3_lb:
+    weight: 136
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
     region: content
   field_vip_cb_bot_blurb_content:
     weight: 130
@@ -105,13 +184,6 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
-    region: content
-  field_vip_cb_top_blurb_content:
-    weight: 132
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
     region: content
   field_vip_cp_content:
     weight: 125
@@ -184,8 +256,22 @@ content:
     third_party_settings: {  }
     type: string
     region: content
-  field_vip_sc_top_blurb_content:
-    weight: 131
+  field_vip_slots_club_column_1_lb:
+    weight: 137
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_vip_slots_club_column_2_lb:
+    weight: 138
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_vip_slots_club_column_3_lb:
+    weight: 139
     label: above
     settings: {  }
     third_party_settings: {  }
