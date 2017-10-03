@@ -15,4 +15,6 @@ alias wbcfe='cd /var/www/html/web-composer/entrypage'
 alias wbcapi='cd /var/www/html/web-composer/logic'
 alias clean='git clean -i'
 alias nuke='sh /var/www/html/web-composer/drupal/scripts/git-nuke.sh'
+alias drupalns='drupal multisite:new'
+
 
