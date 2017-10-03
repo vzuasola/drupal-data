@@ -1,0 +1,21 @@
+uuid: 4f380984-cff3-457a-a992-c372c8a5c89e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_vip_cash_back_column_3_lb
+    - node.type.vip_page
+  module:
+    - text
+id: node.vip_page.field_vip_cash_back_column_3_lb
+field_name: field_vip_cash_back_column_3_lb
+entity_type: node
+bundle: vip_page
+label: 'VIP Cash Back Column 3 Lightbox'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
