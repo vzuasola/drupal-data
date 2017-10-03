@@ -291,15 +291,16 @@ class WebcomposerDomainImport extends ControllerBase {
    * @param [Array] &$context
    */
   public function importMasterPlaceholder($form_state, &$context) {
+ 
     $this->readExcel($form_state, $context);
     if ($context['sandbox'] === "EXCEL_FORMAT_OK") {
       $message = 'Importing Master Placeholder...';
       $context['message'] = $message;
       $languages = $this->ImportParser->excel_get_languages();
       foreach ($languages as $key => $value) {
-        $getPlaceholerVariables[$value] = $this->ImportParser->excel_get_master_placeholder($value);
+        $getPlaceholderVariables[$value] = $this->ImportParser->excel_get_master_placeholder($value);
       }
-      foreach ($getPlaceholerVariables as $langcode => $term) {
+      foreach ($getPlaceholderVariables as $langcode => $term) {
         $paragraphLists = [];
         $termName = [];
         foreach ($term as $key => $value) {
@@ -326,7 +327,7 @@ class WebcomposerDomainImport extends ControllerBase {
           $termName[] = $key;
         }
         foreach ($termName as $key => $value) {
-          $tid = $this->readTaxonomyByName($value, self::MASTER_PLACEHOLDER);
+          $tid = $this->readTaxonomyByName(trim($value), self::MASTER_PLACEHOLDER);
           if (empty($tid)) {
             $termItem = [
               'name' => trim($value),
