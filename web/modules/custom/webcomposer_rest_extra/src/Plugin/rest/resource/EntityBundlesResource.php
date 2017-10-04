@@ -46,37 +46,7 @@ class EntityBundlesResource extends ResourceBase {
 
   protected $entityManager;
 
-  /*
-   * Responds to GET requests.
-   *
-   * Returns a list of bundles for specified entity.
-   *
-   * @return \Drupal\rest\ResourceResponse
-   *   The response containing a list of bundle names.
-   *
-   * @throws \Symfony\Component\HttpKernel\Exception\HttpException
-   */
-  public function get($entity = NULL) {
-    if ($entity) {
-
-      $bundles_entities = \Drupal::entityManager()->getStorage($entity .'_type')->loadMultiple();
-
-      $bundles = array();
-      foreach ($bundles_entities as $entity) {
-        $bundles[$entity->id()] = $entity->label();
-      }
-
-      if (!empty($bundles)) {
-        return new ResourceResponse($bundles);
-      }
-
-      throw new NotFoundHttpException(t('Bundles for entity @entity were not found', array('@entity' => $entity)));
-    }
-
-    throw new HttpException(t('Entity wasn\'t provided'));
-  }
-
-    /**
+  /**
    * Constructs a Drupal\rest\Plugin\ResourceBase object.
    *
    * @param array $configuration
@@ -96,11 +66,11 @@ class EntityBundlesResource extends ResourceBase {
     $plugin_definition,
     array $serializer_formats,
     LoggerInterface $logger,
-    EntityManagerInterface $entity_manager,
+    EntityManagerInterface $entityManager,
     AccountProxyInterface $current_user) {
     parent::__construct($configuration, $plugin_id, $plugin_definition, $serializer_formats, $logger);
 
-    $this->entityManager = $entity_manager;
+    $this->entityManager = $entityManager;
     $this->currentUser = $current_user;
   }
 
@@ -117,5 +87,35 @@ class EntityBundlesResource extends ResourceBase {
       $container->get('entity.manager'),
       $container->get('current_user')
     );
+  }
+
+  /*
+   * Responds to GET requests.
+   *
+   * Returns a list of bundles for specified entity.
+   *
+   * @return \Drupal\rest\ResourceResponse
+   *   The response containing a list of bundle names.
+   *
+   * @throws \Symfony\Component\HttpKernel\Exception\HttpException
+   */
+  public function get($entity = NULL) {
+    if ($entity) {
+
+      $bundles_entities = $this->entityManager->getStorage($entity .'_type')->loadMultiple();
+
+      $bundles = array();
+      foreach ($bundles_entities as $entity) {
+        $bundles[$entity->id()] = $entity->label();
+      }
+
+      if (!empty($bundles)) {
+        return new ResourceResponse($bundles);
+      }
+
+      throw new NotFoundHttpException(t('Bundles for entity @entity were not found', array('@entity' => $entity)));
+    }
+
+    throw new HttpException(t('Entity wasn\'t provided'));
   }
 }

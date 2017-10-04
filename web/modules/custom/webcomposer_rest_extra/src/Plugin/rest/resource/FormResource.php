@@ -12,7 +12,7 @@ use Psr\Log\LoggerInterface;
 use Drupal\field\Entity\FieldConfig;
 
 /**
- * Provides a resource to get view modes by entity and bundle.
+ * Provides a resource to get forms.
  *
  * @RestResource(
  *   id = "form_resource",
@@ -30,6 +30,13 @@ class FormResource extends ResourceBase {
    * @var \Drupal\Core\Session\AccountProxyInterface
    */
   protected $currentUser;
+
+  /**
+   * The query object that can query the given entity type.
+   *
+   * @var \Drupal\Core\Entity\Query\QueryInterface
+   */
+  protected $entityQuery;
 
   /**
    * Constructs a Drupal\rest\Plugin\ResourceBase object.
@@ -53,10 +60,11 @@ class FormResource extends ResourceBase {
     $plugin_definition,
     array $serializer_formats,
     LoggerInterface $logger,
-    AccountProxyInterface $current_user) {
+    AccountProxyInterface $current_user, $entityQuery) {
     parent::__construct($configuration, $plugin_id, $plugin_definition, $serializer_formats, $logger);
 
     $this->currentUser = $current_user;
+    $this->entityQuery = $entityQuery;
   }
 
   /**
@@ -69,7 +77,8 @@ class FormResource extends ResourceBase {
       $plugin_definition,
       $container->getParameter('serializer.formats'),
       $container->get('logger.factory')->get('webcomposer_form'),
-      $container->get('current_user')
+      $container->get('current_user'),
+      $container->get('entity.query')
     );
   }
 
@@ -117,7 +126,7 @@ class FormResource extends ResourceBase {
     $formDisplay = entity_get_form_display('contact_message', $id, 'default');
     $components = $formDisplay->getComponents();
 
-    $ids = \Drupal::entityQuery('field_config')
+    $ids = $this->entityQuery->get('field_config')
       ->condition('id', "contact_message.$id.", 'STARTS_WITH')
       ->execute();
 

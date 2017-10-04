@@ -15,7 +15,7 @@ use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
 use Psr\Log\LoggerInterface;
 
 /**
- * Provides a resource to get view modes by entity and bundle.
+ * Provides a resource to get view of configurations.
  *
  * @RestResource(
  *   id = "webcomposer_config",
@@ -33,6 +33,13 @@ class WebComposerConfigResource extends ResourceBase {
    * @var \Drupal\Core\Session\AccountProxyInterface
    */
   protected $currentUser;
+
+  /**
+   *  Config Factory Object.
+   *
+   * @var core/lib/Drupal/Core/Config/ConfigFactory.php
+   */
+  protected $configFactory;
 
   /**
    * Constructs a Drupal\rest\Plugin\ResourceBase object.
@@ -56,10 +63,11 @@ class WebComposerConfigResource extends ResourceBase {
     $plugin_definition,
     array $serializer_formats,
     LoggerInterface $logger,
-    AccountProxyInterface $current_user) {
+    AccountProxyInterface $current_user, $configFactory) {
     parent::__construct($configuration, $plugin_id, $plugin_definition, $serializer_formats, $logger);
 
     $this->currentUser = $current_user;
+    $this->configFactory = $configFactory;
   }
 
   /**
@@ -72,7 +80,8 @@ class WebComposerConfigResource extends ResourceBase {
       $plugin_definition,
       $container->getParameter('serializer.formats'),
       $container->get('logger.factory')->get('custom_rest'),
-      $container->get('current_user')
+      $container->get('current_user'),
+      $container->get('config.factory')
     );
   }
 
@@ -93,7 +102,7 @@ class WebComposerConfigResource extends ResourceBase {
     $data = array();
 
     try {
-      $config = \Drupal::config("webcomposer_config.$id");
+      $config = $this->configFactory->get("webcomposer_config.$id");
       $data = $config->get();
     } catch (\Exception $e) {
       $data = array(
@@ -101,11 +110,11 @@ class WebComposerConfigResource extends ResourceBase {
       );
     }
 
-    $build = array(
-      '#cache' => array(
+    $build = [
+      '#cache' => [
         'max-age' => 0,
-      ),
-    );
+      ],
+    ];
 
     return (new ResourceResponse($data))->addCacheableDependency($build);
   }
