@@ -17,18 +17,18 @@ class WebcomposerForm {
   private $pluginManager;
 
   /**
-   * The Webcomposer Form module handler
+   * The Webcomposer Form Validation manager
    *
    * @var object
    */
-  private $moduleHandler;
+  private $validationManager;
 
   /**
-   *
+   * Public constructor
    */
-  public function __construct($pluginManager, $moduleHandler){
+  public function __construct($pluginManager, $validationManager) {
     $this->pluginManager = $pluginManager;
-    $this->moduleHandler = $moduleHandler;
+    $this->validationManager = $validationManager;
   }
 
   /**
@@ -82,41 +82,10 @@ class WebcomposerForm {
 
   /**
    * Gets the list of validations
-   * 
-   * @todo Create an alter hook so modules can alter the validation sets
-   * @todo Sync the validation behavior and description with Webform Validations
    *
    * @return array
    */
   public function getValidations() {
-    $validation = [
-      'required' => [
-        'title' => 'Required',
-        'description' => 'Make this field required. Does not accept empty string inputs such as nulls and whitespace only.',
-        'error' => 'Field should be required',
-      ],
-      'alphanumeric' => [
-        'title' => 'Alphanumeric',
-        'description' => 'Only accept alpha numeric characters',
-        'error' => 'Field should be alphanumeric',
-        'parameters' => [
-          'show' => [
-            '#title' => 'Allow special characters',
-            '#description' => 'If checked will allow special characters to be part of the validation',
-            '#type' => 'checkbox',
-            '#default_value' => true
-          ],
-        ],
-      ],
-      'numeric' => [
-        'title' => 'Numeric',
-        'description' => 'Only accept valid numbers (whole numbers and decimal)',
-        'error' => 'Field should be numeric',
-      ],
-    ];
-
-    $this->moduleHandler->alter('webcomposer_form_validation', $validation);
-
-    return $validation;
+    return $this->validationManager->getDefaults();
   }
 }

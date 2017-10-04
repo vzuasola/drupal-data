@@ -1,0 +1,12 @@
+webcomposer_cdn.list:
+  title: 'Webcomposer CDN Configuration'
+  description: 'Provides and API for defining custom CDN settings for countries.'
+  parent: system.admin_config
+  route_name: webcomposer_config.admin_settings
+
+
+webcomposer_cdn.admin_cdn_configuration:
+  title: 'CDN Configuration'
+  parent: webcomposer_cdn.list
+  description: 'Provides configuration for CDN.'
+  route_name: webcomposer_cdn.cdn_config_form

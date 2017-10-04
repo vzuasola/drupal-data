@@ -6,6 +6,7 @@ use Drupal\rest\Plugin\views\style\Serializer;
 use Drupal\file\Entity\File;
 use Drupal\Component\Utility\Html;
 use Drupal\Core\Site\Settings;
+use Drupal\webcomposer_rest_extra\FilterHtmlTrait;
 
 /**
  * @ingroup views_style_plugins
@@ -18,6 +19,7 @@ use Drupal\Core\Site\Settings;
  * )
  */
 class NodeListSerializer extends Serializer {
+  use FilterHtmlTrait;
   /**
    * {@inheritdoc}
    */
@@ -38,7 +40,7 @@ class NodeListSerializer extends Serializer {
       foreach ($rowAssoc as $key => $value) {
         // replace the images src for text formats
         if (isset($value[0]['format']) && isset($value[0]['value'])) {
-          $rowAssoc[$key][0]['value'] = $this->filterHtml($value[0]['value']);
+            $rowAssoc[$key][0]['value'] = $this->filterHtml($value[0]['value']);
         }
 
         // loading the term object onto the rest export
@@ -46,7 +48,6 @@ class NodeListSerializer extends Serializer {
           $term = $this->loadTerm($value[0]['target_id']);
           $rowAssoc[$key][0] = $term;
         }
-
 
         // loading the paragraph object onto the rest export
         foreach ($value as $paragraphKey => $pid) {
@@ -79,8 +80,8 @@ class NodeListSerializer extends Serializer {
     $lang = \Drupal::languageManager()->getCurrentLanguage(\Drupal\Core\Language\LanguageInterface::TYPE_CONTENT)->getId();
 
     $term = \Drupal\taxonomy\Entity\Term::load($tid);
-    $term_translated = \Drupal::service('entity.repository')->getTranslationFromContext($term, $lang); 
-     
+    $term_translated = \Drupal::service('entity.repository')->getTranslationFromContext($term, $lang);
+
     $term_alias = \Drupal::service('path.alias_manager')->getAliasByPath('/taxonomy/term/' . $tid);
     $term_translated->set('path', $term_alias);
 
@@ -136,28 +137,5 @@ class NodeListSerializer extends Serializer {
     $result[] = $fileArray;
 
     return $result;
-  }
-
-  /**
-   * Filtered Html for Image Source.
-   */
-  public function filterHtml($markup) {
-    $document = new Html();
-
-    $htmlDoc = $document->load($markup);
-    $domObject = simplexml_import_dom($htmlDoc);
-
-    $images = $domObject->xpath('//img');
-    $basePath = Settings::get('ck_editor_inline_image_prefix', NULL);
-
-    foreach ($images as $image) {
-      $replace = preg_replace('/\/sites\/[a-z\-]+\/files/', $basePath, $image['src']);
-      $image['src'] = $replace;
-    }
-
-    $htmlMarkup = Html::serialize($htmlDoc);
-    $processedHtml = trim($htmlMarkup);
-
-    return $processedHtml;
   }
 }
