@@ -113,25 +113,32 @@ class GamesConfigurationForm extends ConfigFormBase {
       '#default_value' => $config->get('disable_announcement_icon')
     );
 
-    $form['game_page_group'] = array(
+    $form['lightbox_group'] = array(
       '#type' => 'details',
-      '#title' => $this->t('Game Page'),
+      '#title' => $this->t('Lightbox'),
       '#collapsible' => TRUE,
       '#group' => 'games_configuration_tab'
     );
 
-    $form['game_page_group']['freeplay_lightbox_title'] = array(
+    $lightbox_group_title = $this->t('Direct access free play on Post login (Lightbox)');
+    $form['lightbox_group']['freeplay'] = array(
+        '#type' => 'details',
+        '#title' => $lightboxGroupTitle,
+        '#open' => TRUE
+    );
+
+    $form['lightbox_group']['freeplay']['freeplay_lightbox_title'] = array(
       '#type' => 'textfield',
-      '#title' => $this->t('Free Play Lightbox Title'),
+      '#title' => $this->t('Title'),
       '#description' => $this->t('The text that will be displayed as title of the lightbox.'),
       '#default_value' => $config->get('freeplay_lightbox_title'),
       '#required' => TRUE,
     );
 
     $freePlayLightboxContent = $config->get('freeplay_lightbox_content');
-    $form['game_page_group']['freeplay_lightbox_content'] = array(
+    $form['lightbox_group']['freeplay']['freeplay_lightbox_content'] = array(
       '#type' => 'text_format',
-      '#title' => $this->t('Free Play Lightbox Content'),
+      '#title' => $this->t('Content'),
       '#description' => $this->t('The text that will be displayed as content of the lightbox.'),
       '#default_value' => $freePlayLightboxContent['value'],
       '#format' => $freePlayLightboxContent['format'],
