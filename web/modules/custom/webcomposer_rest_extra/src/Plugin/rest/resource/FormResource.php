@@ -126,7 +126,7 @@ class FormResource extends ResourceBase {
     $formDisplay = entity_get_form_display('contact_message', $id, 'default');
     $components = $formDisplay->getComponents();
 
-    $ids = $this->entityQuery->get('field_config')
+    $ids = $this->entityQuery->get('field_config', 'AND')
       ->condition('id', "contact_message.$id.", 'STARTS_WITH')
       ->execute();
 
