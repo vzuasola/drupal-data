@@ -89,11 +89,9 @@ class WebcomposerDomainExport extends ControllerBase {
 
     $result['placeholders'] = $this->service->excel_get_placeholders_description($placeholders);
     foreach ($language as $key => $value) {
-      // $list = $this->service->excel_get_domain_list($domains);
       $placeholders = $this->get_all_placeholders_per_language($key);
       // Get all the domain data per domain group per language.
       $variables = $this->get_all_domains_data_per_language($placeholders, $key);
-
       $result['variables'][$key] = $variables;
     }
 
@@ -169,21 +167,24 @@ class WebcomposerDomainExport extends ControllerBase {
   public function get_all_placeholders_per_language($key) {
     $variables = [];
     $result = [];
-
     // Get the master placeholders.
     $placeholders = \Drupal::entityManager()->getStorage('taxonomy_term')->loadTree('master_placeholder');
-
     foreach ($placeholders as $value) {
       $token = taxonomy_term_load($value->tid);
 
       if ($token->hasTranslation($key)) {
-        $paragraph = $token->get('field_add_master_placeholder')->getValue(FALSE)[0]['target_id'];
-        $paragraphs = \Drupal::entityManager()->getStorage('paragraph')->load($paragraph);
-        $translated = $paragraphs->getTranslation($key);
-        $placeholder_key = $translated->field_placeholder_key->value;
-        $placeholder_desc = $translated->field_default_value->value;
+        $getTranslation = $token->getTranslation($key);
 
-        $variables[$placeholder_key] = $placeholder_desc;
+        $paragraph = $getTranslation->get('field_add_master_placeholder')->getValue(FALSE)[0]['target_id'];
+        $paragraphs = \Drupal::entityManager()->getStorage('paragraph')->load($paragraph);
+        if ($paragraphs->hasTranslation($key)) {
+          $translated = $paragraphs->getTranslation($key);
+          $placeholder_key = $translated->field_placeholder_key->value;
+          $placeholder_desc = $translated->field_default_value->value;
+          $variables[$placeholder_key] = $placeholder_desc;
+
+        }
+
       }
     }
 
@@ -198,7 +199,6 @@ class WebcomposerDomainExport extends ControllerBase {
     }
 
     $result = $this->service->excel_filter_column($result);
-
     return $result;
   }
 
@@ -214,72 +214,48 @@ class WebcomposerDomainExport extends ControllerBase {
    */
   public function get_all_domains_data_per_language($placeholders, $language) {
     $variables = [];
-
     // Get all the domain groups.
     $domains_groups = $this->service->get_domain_groups();
-
-    // Get all the domains.
-    $domains = \Drupal::entityManager()->getStorage('taxonomy_term')->loadTree('domain');
-
+    $domains = $this->service->get_domain();
     // Get the domains for respective domain group.
     foreach ($domains_groups as $key => $value) {
-      $group = taxonomy_term_load($key);
-      if ($group->hasTranslation($language)) {
-        // Get value of the field.
-        $target_id = $group->get('field_add_placeholder')->getValue(FALSE);
-
-        // Check if the field is not empty.
-        if (!empty($target_id)) {
-          $paragraph = $group->get('field_add_placeholder')->getValue(FALSE)[0]['target_id'];
-          $paragraphs = \Drupal::entityManager()->getStorage('paragraph')->load($paragraph);
-          if ($paragraphs->hasTranslation($language)) {
-            $translated = $paragraphs->getTranslation($language);
-            $placeholder_key = $translated->field_placeholder_key->value;
-            $placeholder_default = $translated->field_default_value->value;
-            // Check if the values of the fields are not empty.
-            if (!empty($placeholder_key) && !empty($placeholder_default)) {
-              $group_placeholders[$value][$placeholder_key] = $placeholder_default;
-            }
-            else {
-              $group_placeholders[$value] = NULL;
-            }
+      $target_id = $this->service->get_add_placeholder_target_id($key, $language);
+      // Check if the field is not empty.
+      if (!empty($target_id)) {
+        foreach ($target_id as $field) {
+          $pid = $field['target_id'];
+          $placeholder_key = $this->service->get_paragraph__field_placeholder_key($pid, $language);
+          $placeholder_default = $this->service->get_paragraph__field_default_value($pid, $language);
+          // Check if the values of the fields are not empty.
+          if (!empty($placeholder_key) && !empty($placeholder_default)) {
+            $group_placeholders[$value][$placeholder_key] = $placeholder_default;
           }
           else {
             $group_placeholders[$value] = NULL;
           }
         }
-        else {
-          $group_placeholders[$value] = NULL;
-        }
+      }
+      else {
+        $group_placeholders[$value] = NULL;
       }
     }
 
-    foreach ($domains as $domain) {
+    foreach ($domains as $domain_tid => $domain) {
+      $group_domain = $this->service->get_domain_group_id($domain_tid);
+      if (array_key_exists($group_domain, $domains_groups)) {
+        $group_name = $domains_groups[$group_domain];
+      }
+      $field_placeholder = $this->service->get_add_placeholder_target_id($domain_tid, $language);
+      if (!empty($field_placeholder)) {
+        $domain_placeholer_array = [];
+        foreach ($field_placeholder as $field) {
 
-      $domain_data = taxonomy_term_load($domain->tid);
-      $group_domain = $domain_data->get('field_select_domain_group')->getValue(FALSE)[0]['target_id'];
-
-      $group_name = taxonomy_term_load($group_domain)->getName();
-
-      if ($domain_data->hasTranslation($language)) {
-        // Get value of the field.
-        $field_placeholder = $domain_data->get('field_add_placeholder')->getValue(FALSE);
-        if (!empty($field_placeholder)) {
-          $bal = 0;
-          foreach ($field_placeholder as $key => $field) {
-
-            $target_id = $field['target_id'];
-            $paragraphs = \Drupal::entityManager()->getStorage('paragraph')->load($target_id);
-
-            if ($paragraphs->hasTranslation($language)) {
-              $translated = $paragraphs->getTranslation($language);
-              $placeholder_key = $translated->field_placeholder_key->value;
-              $placeholder_default = $translated->field_default_value->value;
-              $domain_placeholer_array[$placeholder_key] = $placeholder_default;
-            }
-          }
-          $domain_array[$group_name][$domain->name] = $domain_placeholer_array;
+          $target_id = $field['target_id'];
+          $placeholder_key = $this->service->get_paragraph__field_placeholder_key($target_id, $language);
+          $placeholder_default = $this->service->get_paragraph__field_default_value($target_id, $language);
+          $domain_placeholer_array[$placeholder_key] = $placeholder_default;
         }
+        $domain_array[$group_name][$domain] = $domain_placeholer_array;
       }
     }
 

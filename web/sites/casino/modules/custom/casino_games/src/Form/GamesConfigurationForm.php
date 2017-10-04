@@ -113,31 +113,63 @@ class GamesConfigurationForm extends ConfigFormBase {
       '#default_value' => $config->get('disable_announcement_icon')
     );
 
-    $form['game_page_group'] = array(
+    $form['lightbox_group'] = array(
       '#type' => 'details',
-      '#title' => $this->t('Game Page'),
+      '#title' => $this->t('Lightbox'),
       '#collapsible' => TRUE,
       '#group' => 'games_configuration_tab'
     );
 
-    $form['game_page_group']['freeplay_lightbox_title'] = array(
+    $lightbox_group_title = $this->t('Direct access free play on Post login (Lightbox)');
+    $form['lightbox_group']['freeplay'] = array(
+        '#type' => 'details',
+        '#title' => $lightboxGroupTitle,
+        '#open' => TRUE
+    );
+
+    $form['lightbox_group']['freeplay']['freeplay_lightbox_title'] = array(
       '#type' => 'textfield',
-      '#title' => $this->t('Free Play Lightbox Title'),
+      '#title' => $this->t('Title'),
       '#description' => $this->t('The text that will be displayed as title of the lightbox.'),
       '#default_value' => $config->get('freeplay_lightbox_title'),
       '#required' => TRUE,
     );
 
     $freePlayLightboxContent = $config->get('freeplay_lightbox_content');
-    $form['game_page_group']['freeplay_lightbox_content'] = array(
+    $form['lightbox_group']['freeplay']['freeplay_lightbox_content'] = array(
       '#type' => 'text_format',
-      '#title' => $this->t('Free Play Lightbox Content'),
+      '#title' => $this->t('Content'),
       '#description' => $this->t('The text that will be displayed as content of the lightbox.'),
       '#default_value' => $freePlayLightboxContent['value'],
       '#format' => $freePlayLightboxContent['format'],
       '#required' => TRUE,
     );
+    $form['game_promotion'] = array(
+      '#type' => 'details',
+      '#title' => $this->t('Promotions'),
+      '#collapsible' => TRUE,
+      '#group' => 'games_configuration_tab',
+    );
 
+    $form['game_promotion']['game_promotion_link'] = array(
+      '#type' => 'textfield',
+      '#title' => $this->t('Promotions Link'),
+      '#description' => $this->t('Add redirection to Centralized Promotions page'),
+      '#default_value' => $config->get('game_promotion_link'),
+      '#required' => TRUE,
+    );
+    $form['game_promotion']['game_promotion_link_target'] = array(
+      '#type' => 'select',
+      '#options' => [
+          '_blank' => 'New Tab',
+          '_self' => 'Same Window',
+          'window' => 'New Window'
+      ],
+      '#title' => $this->t('Promotions Link Target'),
+      '#description' => $this->t('Select Target for the promotions link'),
+      '#default_value' => $config->get('game_promotion_link_target'),
+      '#required' => TRUE,
+    );
     return parent::buildForm($form, $form_state);
   }
 
@@ -146,7 +178,7 @@ class GamesConfigurationForm extends ConfigFormBase {
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
     parent::submitForm($form, $form_state);
-    
+
     $keys = array(
       'play_text',
       'play_for_fun_text',
@@ -157,7 +189,9 @@ class GamesConfigurationForm extends ConfigFormBase {
       'freeplay_lightbox_title',
       'freeplay_lightbox_content',
       'disable_language_selector',
-      'disable_announcement_icon'
+      'disable_announcement_icon',
+      'game_promotion_link',
+      'game_promotion_link_target'
     );
 
     foreach ($keys as $key) {

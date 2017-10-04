@@ -1,0 +1,19 @@
+uuid: 62f755d3-29bd-4a1a-8418-70271545067f
+langcode: en
+status: true
+dependencies:
+  module:
+    - casino_games_page_background
+id: games_page_bg_entity.field_include_on_listed_pages
+field_name: field_include_on_listed_pages
+entity_type: games_page_bg_entity
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,9 +1,10 @@
 name: Casino Games
 type: module
-description: My Awesome Module
+description: Casino Games Custom Configuration
 core: 8.x
 package: Custom
 dependencies:
   - scheduler
   - draggableviews
   - conditional_fields
+  - webcomposer_rest_extra
