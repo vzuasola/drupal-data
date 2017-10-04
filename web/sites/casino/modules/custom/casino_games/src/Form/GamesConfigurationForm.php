@@ -120,7 +120,7 @@ class GamesConfigurationForm extends ConfigFormBase {
       '#group' => 'games_configuration_tab'
     );
 
-    $lightboxGroupTitle = $this->t('Direct access free play on Post login (Lightbox)');
+    $lightbox_group_title = $this->t('Direct access free play on Post login (Lightbox)');
     $form['lightbox_group']['freeplay'] = array(
         '#type' => 'details',
         '#title' => $lightboxGroupTitle,
