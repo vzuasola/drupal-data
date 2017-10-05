@@ -12,7 +12,7 @@ use Psr\Log\LoggerInterface;
 use Drupal\taxonomy\Entity\Term;
 
 /**
- * Provides a resource to get view modes by entity and bundle.
+ * Provides a resource to get view domains,domain groups and master placeholder.
  *
  * @RestResource(
  *   id = "domain_placeholder",
@@ -29,6 +29,20 @@ class DomainPlaceholderResource extends ResourceBase
    *    Current language
    */
   protected $currentLanguage;
+
+  /**
+   * The entity type manager.
+   *
+   * @var \Drupal\Core\Entity\EntityTypeManagerInterface
+   */
+  protected $entityTypeManager;
+
+  /**
+   * The query object that can query the given entity type.
+   *
+   * @var \Drupal\Core\Entity\Query\QueryInterface
+   */
+  protected $entityQuery;
 
   /**
    * Constructs a Drupal\rest\Plugin\ResourceBase object.
@@ -53,11 +67,13 @@ class DomainPlaceholderResource extends ResourceBase
     array $serializer_formats,
     LoggerInterface $logger,
     AccountProxyInterface $current_user,
-    $language_manager
+    $language_manager,$entityTypeManager, $entityQuery
   ) {
     parent::__construct($configuration, $plugin_id, $plugin_definition, $serializer_formats, $logger);
     $this->currentUser = $current_user;
     $this->currentLanguage = $language_manager->getCurrentLanguage()->getId();
+    $this->entityTypeManager = $entityTypeManager;
+    $this->entityQuery = $entityQuery;
   }
 
   /**
@@ -71,7 +87,9 @@ class DomainPlaceholderResource extends ResourceBase
       $container->getParameter('serializer.formats'),
       $container->get('logger.factory')->get('custom_rest'),
       $container->get('current_user'),
-      $container->get('language_manager')
+      $container->get('language_manager'),
+      $container->get('entity_type.manager'),
+      $container->get('entity.query')
     );
   }
 
@@ -114,9 +132,7 @@ class DomainPlaceholderResource extends ResourceBase
       $definition = array();
 
       // You must to implement the logic of your REST Resource here.
-      $term = \Drupal::entityTypeManager()
-        ->getStorage('taxonomy_term')
-        ->loadByProperties(['name' => $domain]);
+      $term = $this->entityTypeManager->getStorage('taxonomy_term')->loadByProperties(['name' => $domain]);
 
       if (empty($term)) {
           throw new NotFoundHttpException(t('Term namex with ID @id was not found', array('@id' => $domain)));
@@ -129,8 +145,8 @@ class DomainPlaceholderResource extends ResourceBase
 
       $group = $term->get('field_select_domain_group')->referencedEntities();
       $domainGroupPlaceholder = $this->getGroupDomainPlaceholder($group[0]->id());
-      $definition = array_merge($definition, $domainGroupPlaceholder);
 
+      $definition = array_merge($definition, $domainGroupPlaceholder);
       $getEntities = $term->get('field_add_placeholder')->referencedEntities();
 
       foreach ($getEntities as $getEntity) {
@@ -180,7 +196,7 @@ class DomainPlaceholderResource extends ResourceBase
     {
       $field = !empty(($vid == 'domain_groups')) ? 'field_add_placeholder' : 'field_add_master_placeholder';
       $definition = array();
-      $query = \Drupal::entityQuery('taxonomy_term');
+      $query = $this->entityQuery->get('taxonomy_term', 'AND');
       $query->condition('vid', "$vid");
       $tids = $query->execute();
       $terms = Term::loadMultiple($tids);
@@ -206,7 +222,7 @@ class DomainPlaceholderResource extends ResourceBase
     private function getMasterPlaceholder()
     {
       $masterLists = [];
-      $masterQuery = \Drupal::entityQuery('taxonomy_term');
+      $masterQuery = $this->entityQuery->get('taxonomy_term', 'AND');
       $masterQuery->condition('vid', 'master_placeholder');
       $masterPlaceholderTids = $masterQuery->execute();
 
