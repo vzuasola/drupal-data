@@ -39,8 +39,8 @@ function webcomposer_cdn_file_url_alter(&$uri) {
       return;
     }
 
-    if (isset($_SERVER['HTTP_X_CUSTOM_LB_GEOIP_COUNTRY'])) {
-      $country_code = $_SERVER['HTTP_X_CUSTOM_LB_GEOIP_COUNTRY'];
+    if (isset($_SERVER['HTTP_X_FE_COUNTRY_CODE'])) {
+      $country_code = $_SERVER['HTTP_X_FE_COUNTRY_CODE'];
     } else {
       $country_code = 'NULL';
     }
@@ -70,8 +70,8 @@ function webcomposer_cdn_inline_image_url_change_alter(&$basepath) {
   $cdn_is_enabled = $config->get('enable_cdn');
   $cdn_domains = $config->get('cdn_domain_configuration');
 
-  if (isset($_SERVER['HTTP_X_CUSTOM_LB_GEOIP_COUNTRY'])) {
-    $country_code = $_SERVER['HTTP_X_CUSTOM_LB_GEOIP_COUNTRY'];
+  if (isset($_SERVER['HTTP_X_FE_COUNTRY_CODE'])) {
+    $country_code = $_SERVER['HTTP_X_FE_COUNTRY_CODE'];
   } else {
     $country_code = 'NULL';
   }
@@ -85,7 +85,7 @@ function webcomposer_cdn_inline_image_url_change_alter(&$basepath) {
   }
   $domain = trim($domain_settings[$country_code]);
   // Alter the image url if the request is from front-end
-  if (isset($_SERVER['HTTP_X_FE_BASE_URI']) && $cdn_is_enabled === 1 &&
+  if (!isset($_SERVER['HTTP_X_FE_BASE_URI']) && $cdn_is_enabled === 1 &&
     !empty($country_code) && array_key_exists($country_code, $domain_settings)) {
     $basepath = "https://$domain";
   } else {
