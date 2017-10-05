@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.game.field_game_title
     - field.field.node.game.field_game_type
     - field.field.node.game.field_games_category
+    - field.field.node.game.field_jackpot_code
     - field.field.node.game.field_play_for_fun_toggle
     - field.field.node.game.field_ribbon_configuration
     - image.style.thumbnail
@@ -45,7 +46,6 @@ third_party_settings:
         - field_game_code
         - field_game_type
         - field_fim
-        - group_game_provider
       parent_name: ''
       weight: 10
       format_type: details
@@ -56,6 +56,19 @@ third_party_settings:
         classes: ''
         required_fields: false
       label: 'Game Launching'
+    group_jackpot:
+      children:
+        - field_jackpot_code
+      parent_name: ''
+      weight: 11
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: open
+        description: ''
+        required_fields: true
+      label: JACKPOT
 _core:
   default_config_hash: tYMNVoRMcnzjYWed7L97NAkH34_8EOrvU6_GTa2vJzQ
 id: node.game.default
@@ -156,6 +169,14 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_jackpot_code:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_play_for_fun_toggle:
     weight: 11
     settings:
@@ -164,7 +185,7 @@ content:
     type: boolean_checkbox
     region: content
   field_ribbon_configuration:
-    weight: 11
+    weight: 12
     settings:
       match_operator: CONTAINS
       size: 60
