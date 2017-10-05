@@ -37,7 +37,7 @@ class WebcomposerFormRestResource extends ResourceBase {
   protected $formManager;
 
   /**
-   *  Config Factory Object.
+   * Config Factory Object.
    *
    * @var core/lib/Drupal/Core/Config/ConfigFactory.php
    */

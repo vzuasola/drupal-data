@@ -35,7 +35,7 @@ class WebComposerConfigResource extends ResourceBase {
   protected $currentUser;
 
   /**
-   *  Config Factory Object.
+   * Config Factory Object.
    *
    * @var core/lib/Drupal/Core/Config/ConfigFactory.php
    */

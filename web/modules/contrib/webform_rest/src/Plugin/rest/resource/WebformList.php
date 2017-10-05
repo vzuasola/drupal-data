@@ -29,7 +29,7 @@ class WebformList extends ResourceBase {
    */
   protected $currentUser;
 
-   /**
+  /**
    * The entity type manager.
    *
    * @var \Drupal\Core\Entity\EntityTypeManagerInterface
