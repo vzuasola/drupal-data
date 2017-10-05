@@ -37,6 +37,13 @@ class WebcomposerFormRestResource extends ResourceBase {
   protected $formManager;
 
   /**
+   * Config Factory Object.
+   *
+   * @var core/lib/Drupal/Core/Config/ConfigFactory.php
+   */
+  protected $configFactory;
+
+  /**
    * Constructs a Drupal\rest\Plugin\ResourceBase object.
    *
    * @param array $configuration
@@ -59,12 +66,14 @@ class WebcomposerFormRestResource extends ResourceBase {
     array $serializer_formats,
     LoggerInterface $logger,
     AccountProxyInterface $current_user,
-    $formManager
+    $formManager,
+    $configFactory
     ) {
     parent::__construct($configuration, $plugin_id, $plugin_definition, $serializer_formats, $logger);
 
     $this->currentUser = $current_user;
     $this->formManager = $formManager;
+    $this->configFactory = $configFactory;
   }
 
   /**
@@ -78,7 +87,8 @@ class WebcomposerFormRestResource extends ResourceBase {
       $container->getParameter('serializer.formats'),
       $container->get('logger.factory')->get('webcomposer_form_manager'),
       $container->get('current_user'),
-      $container->get('webcomposer_form_manager.form_manager')
+      $container->get('webcomposer_form_manager.form_manager'),
+      $container->get('config.factory')
     );
   }
 
@@ -98,7 +108,7 @@ class WebcomposerFormRestResource extends ResourceBase {
     $data = [];
 
     try {
-      $config = \Drupal::config("webcomposer_form_manager.form.$id");
+      $config = $this->configFactory->get("webcomposer_form_manager.form.$id");
       $data = $config->get();
     } catch (\Exception $e) {
       $data = ['error' => $this->t('Form not found')];
@@ -109,16 +119,16 @@ class WebcomposerFormRestResource extends ResourceBase {
     $formFields = $this->formManager->getFormById($id)->getFields();
 
     foreach ($formFields as $key => $value) {
-      $config = \Drupal::config("webcomposer_form_manager.form.$id.$key");
+      $config = $this->configFactory->get("webcomposer_form_manager.form.$id.$key");
       $data['fields'][$key] = $config->get();
       $data['fields'][$key]['type'] = $value->getType();
     }
 
-    $build = array(
-      '#cache' => array(
+    $build = [
+      '#cache' => [
         'max-age' => 0,
-      ),
-    );
+      ],
+    ];
 
     return (new ResourceResponse($data))->addCacheableDependency($build);
   }

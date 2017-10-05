@@ -19,7 +19,7 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Psr\Log\LoggerInterface;
 
 /**
- * Provides a resource to get view modes by entity and bundle.
+ * Provides a resource to get view modes of entity,bundles and Resource by weight.
  *
  * @RestResource(
  *   id = "entity_bundle_weight_resource",
@@ -94,7 +94,6 @@ class EntityBundleFieldsWeightResource extends ResourceBase
 
       if (!empty($bundle)) {
         $weights = entity_get_form_display($entity, $bundle, 'default');
-        
         $build = array(
           '#cache' => array(
             'max-age' => 0,
