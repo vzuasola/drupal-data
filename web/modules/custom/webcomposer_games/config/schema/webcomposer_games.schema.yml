@@ -21,3 +21,6 @@ webcomposer_config.games_opus_provider:
     opus_unsupported_currencies_title:
       type: text
       label: 'Title'
+    opus_unsupported_currencies_button:
+      type: text
+      label: 'Button Ok'
