@@ -1,12 +1,12 @@
-uuid: d845bde0-f37f-42a7-b835-3d579f934714
+uuid: 4ff0c3f2-b340-4a84-b16f-d3ccdd331609
 langcode: en
 status: true
 dependencies:
   module:
     - node
     - text
-id: node.field_vip_cb_top_blurb_content
-field_name: field_vip_cb_top_blurb_content
+id: node.field_vip_cash_back_column_1_lb
+field_name: field_vip_cash_back_column_1_lb
 entity_type: node
 type: text_long
 settings: {  }

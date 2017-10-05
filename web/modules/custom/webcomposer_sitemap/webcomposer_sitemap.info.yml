@@ -1,0 +1,5 @@
+name: Webcomposer Sitemap
+type: module
+description: Handles Webcomposer Sitemap Configuration
+core: 8.x
+package: Web Composer
