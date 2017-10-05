@@ -1,6 +1,8 @@
 lobby_page_title: 'Cá Cược Trực Tuyến – Cùng đặt cược vào Thể Thao, Casino và Poker Trực tuyến tại Dafabet'
 join_now_text: 'THAM GIA NGAY'
+join_now_link: '/{domain:entry}/{domain:lang_token}/cant-login{tracking.token}'
 login_issue_text: 'Quên mật khẩu?'
+login_issue_link: '/{domain:entry}/{domain:lang_token}/cant-login{tracking.token}'
 balance_error_text: 'Đã xảy ra lỗi'
 profile_icon_hover_text: 'Thông Tin Cá Nhân'
 cashier_icon_hover_text: 'Thu Ngân'
