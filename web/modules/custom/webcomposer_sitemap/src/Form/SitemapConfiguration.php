@@ -30,6 +30,12 @@ class SitemapConfiguration extends ConfigFormBase {
   public function buildForm(array $form, FormStateInterface $form_state) {
     $config = $this->config('webcomposer_config.sitemap_configuration');
 
+    $form['enable_sitemap'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable /  Disable of Sitemap'),
+      '#default_value' => 0,
+    ];
+
     $form['sitemap_title'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Title'),
@@ -94,6 +100,7 @@ class SitemapConfiguration extends ConfigFormBase {
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $sitemapConfig = [
+      'enable_sitemap',
       'sitemap_title',
       'sitemap_content',
       'sitemap_home_label',
