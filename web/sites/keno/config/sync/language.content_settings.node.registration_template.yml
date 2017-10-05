@@ -4,6 +4,9 @@ status: true
 dependencies:
   config:
     - node.type.registration_template
+third_party_settings:
+  content_translation:
+    enabled: false
 id: node.registration_template
 target_entity_type_id: node
 target_bundle: registration_template
