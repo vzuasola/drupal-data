@@ -29,9 +29,10 @@ function webcomposer_cdn_help($route_name, RouteMatchInterface $route_match) {
  */
 function webcomposer_cdn_file_url_alter(&$uri) {
   // Get the CDN configuration from the
-  $config = \Drupal::config('webcomposer_cdn.cdn_configuration');
+  $config = \Drupal::config('webcomposer_config.cdn_configuration');
   $cdn_is_enabled = $config->get('enable_cdn');
   $cdn_domains = $config->get('cdn_domain_configuration');
+  \Drupal::logger('my_module')->error('header ' . $_SERVER['HTTP_X_FE_COUNTRY_CODE']);
   // Check if the CDN is enabled and FE_BASE_URI is set and proceed.
   if (isset($_SERVER['HTTP_X_FE_BASE_URI']) && $cdn_is_enabled === 1) {
     // Exclude drupal css from change the url alter.
@@ -66,7 +67,7 @@ function webcomposer_cdn_file_url_alter(&$uri) {
  */
 function webcomposer_cdn_inline_image_url_change_alter(&$basepath) {
   // Get the CDN configuration from the
-  $config = \Drupal::config('webcomposer_cdn.cdn_configuration');
+  $config = \Drupal::config('webcomposer_config.cdn_configuration');
   $cdn_is_enabled = $config->get('enable_cdn');
   $cdn_domains = $config->get('cdn_domain_configuration');
 

@@ -3,3 +3,6 @@ type: module
 description: This module handles the CDN configuration.
 core: 8.x
 package: Web Composer
+dependencies:
+- webcomposer_config
+- webcomposer_rest_extra
