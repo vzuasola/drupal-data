@@ -86,6 +86,12 @@ class OpusProviderConfiguration extends ConfigFormBase {
       '#default_value' => $message['value'],
       '#format' => $message['format'],
     );
+    $form['opus_unsupported_currencies_button'] = array(
+      '#type' => 'textfield',
+      '#title' => t('Opus Unsupported Currency button'),
+      '#description' => $this->t('Defines the Unsupported Currency LightBox Ok button'),
+      '#default_value' => $config->get('opus_unsupported_currencies_button')
+    );
     $form['actions'] = ['#type' => 'actions'];
 
     $form['actions']['submit'] = [
@@ -111,7 +117,8 @@ class OpusProviderConfiguration extends ConfigFormBase {
       'opus_alternative_game_url',
       'languages','currency',
       'opus_unsupported_currencies_title',
-      'opus_unsupported_currencies_message'
+      'opus_unsupported_currencies_message',
+      'opus_unsupported_currencies_button'
     ];
 
     foreach ($keys as $key) {

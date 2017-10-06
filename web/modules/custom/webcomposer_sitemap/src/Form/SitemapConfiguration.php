@@ -33,7 +33,7 @@ class SitemapConfiguration extends ConfigFormBase {
     $form['enable_sitemap'] = [
       '#type' => 'checkbox',
       '#title' => $this->t('Enable /  Disable of Sitemap'),
-      '#default_value' => 0,
+      '#default_value' => $config->get('enable_sitemap'),
     ];
 
     $form['sitemap_title'] = [
