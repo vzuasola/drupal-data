@@ -1,20 +1,20 @@
-uuid: 3bf3d51b-fc29-4fd2-82c7-4e6f4196c57b
+uuid: cc9951f7-c93e-4bd9-9be0-9bf05dd19b91
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_sponsor_mobile_logo
+    - field.storage.paragraph.field_sponsor_cmi_mobile_logo
     - paragraphs.paragraphs_type.sponsor_cmi
   module:
     - image
-id: paragraph.sponsor_cmi.field_sponsor_mobile_logo
-field_name: field_sponsor_mobile_logo
+id: paragraph.sponsor_cmi.field_sponsor_cmi_mobile_logo
+field_name: field_sponsor_cmi_mobile_logo
 entity_type: paragraph
 bundle: sponsor_cmi
 label: 'Mobile Logo'
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

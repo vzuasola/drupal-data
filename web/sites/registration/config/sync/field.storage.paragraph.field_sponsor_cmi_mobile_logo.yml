@@ -1,4 +1,4 @@
-uuid: fe190b5d-2b76-4cc6-98db-2c6af619dbc6
+uuid: 7b7ed562-e6ce-47b4-9b00-ac16710f9b49
 langcode: en
 status: true
 dependencies:
@@ -6,8 +6,8 @@ dependencies:
     - file
     - image
     - paragraphs
-id: paragraph.field_sponsor_mobile_logo
-field_name: field_sponsor_mobile_logo
+id: paragraph.field_sponsor_cmi_mobile_logo
+field_name: field_sponsor_cmi_mobile_logo
 entity_type: paragraph
 type: image
 settings:
