@@ -9,26 +9,27 @@ use Drupal\paragraphs\Entity\Paragraph;
 use Drupal\file\Entity\File;
 use Drupal\Component\Utility\Html;
 use Drupal\Core\Site\Settings;
+use Drupal\webcomposer_rest_extra\FilterHtmlTrait;
 
-/** 
+/**
  * Converts typed data objects to arrays.
  */
 class NodeEntityNormalizer extends ContentEntityNormalizer
 {
+  use FilterHtmlTrait;
   /**
-   * The interface or class that this Normalizer supports. 
-   * 
-   * @var string 
+   * The interface or class that this Normalizer supports.
+   *
+   * @var string
    */
   protected $supportedInterfaceOrClass = 'Drupal\node\NodeInterface';
 
-  /** 
-   * {@inheritdoc} 
+  /**
+   * {@inheritdoc}
    */
   public function normalize($entity, $format = NULL, array $context = []) {
     $entityData = $entity->toArray();
     $attributes = parent::normalize($entity, $format, $context);
-
     foreach ($entityData as $key => $value) {
       // replace the images src for text formats
       if (isset($value[0]['format'])) {
@@ -161,7 +162,7 @@ class NodeEntityNormalizer extends ContentEntityNormalizer
    */
   private function loadFileById($fid) {
     $result = [];
-    $fileArray = []; 
+    $fileArray = [];
 
     if (isset($fid)) {
       $file = File::load($fid);
@@ -175,28 +176,5 @@ class NodeEntityNormalizer extends ContentEntityNormalizer
     $result[] = $fileArray;
 
     return $result;
-  }
-
-  /**
-   * Filtered Html for Image Source.
-   */
-  public function filterHtml($markup) {
-    $document = new Html();
-
-    $htmlDoc = $document->load($markup);
-    $domObject = simplexml_import_dom($htmlDoc);
-
-    $images = $domObject->xpath('//img');
-    $basePath = Settings::get('ck_editor_inline_image_prefix', NULL);
-
-    foreach ($images as $image) {
-      $replace = preg_replace('/\/sites\/[a-z\-]+\/files/', $basePath, $image['src']);
-      $image['src'] = $replace;
-    }
-
-    $htmlMarkup = Html::serialize($htmlDoc);
-    $processedHtml = trim($htmlMarkup);
-
-    return $processedHtml;
   }
 }

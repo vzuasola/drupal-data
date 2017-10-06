@@ -1,0 +1,19 @@
+webcomposer_form_manager.form.view_tab:
+  route_name: webcomposer_form_manager.form.view
+  title: 'Form'
+  base_route: webcomposer_form_manager.form.view
+
+webcomposer_form_manager.form.view_translate:
+  route_name: webcomposer_form_manager.form.view_translate
+  title: 'Translate'
+  base_route: webcomposer_form_manager.form.view
+
+webcomposer_form_manager.field.view_tab:
+  route_name: webcomposer_form_manager.field.view
+  title: 'Form'
+  base_route: webcomposer_form_manager.field.view
+
+webcomposer_form_manager.field.view_translate:
+  route_name: webcomposer_form_manager.field.view_translate
+  title: 'Translate'
+  base_route: webcomposer_form_manager.field.view

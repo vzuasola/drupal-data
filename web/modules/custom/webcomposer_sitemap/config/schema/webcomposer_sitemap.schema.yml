@@ -1,0 +1,29 @@
+webcomposer_config.sitemap_configuration:
+  type: config_object
+  label: 'Sitemap Configuration'
+  mapping:
+    sitemap_title:
+      type: label
+      label: 'Sitemap Title'
+      translatable: true
+    sitemap_content:
+      type: text_format
+      label: 'Sitemap Content'
+      translatable: true
+    sitemap_home_label:
+      type: label
+      label: 'Home Title'
+      translatable: true
+    sitemap_promotions_label:
+      type: label
+      label: 'Promotions Title'
+      translatable: true
+    sitemap_mobile_label:
+      type: label
+      label: 'Mobile Title'
+      translatable: true
+    sitemap_basic_pages_label:
+      type: label
+      label: 'Basic Pages Title'
+      translatable: true
+

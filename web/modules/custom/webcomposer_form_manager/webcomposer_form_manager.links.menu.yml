@@ -1,0 +1,11 @@
+webcomposer_form_manager.admin_list:
+  title: 'Webcomposer Form Manager'
+  parent: system.admin_config
+  route_name: webcomposer_form_manager.admin_settings
+  description: 'Manages Webcomposer form entries'
+
+webcomposer_form_manager.admin_overview_list:
+  title: 'Form List'
+  parent: webcomposer_form_manager.admin_list
+  route_name: webcomposer_form_manager.overview_form
+  description: 'Manages Webcomposer form entries'

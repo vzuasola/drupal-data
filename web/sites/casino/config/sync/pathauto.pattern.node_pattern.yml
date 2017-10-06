@@ -9,15 +9,17 @@ label: 'node pattern'
 type: 'canonical_entities:node'
 pattern: '/[node:title]'
 selection_criteria:
-  f644163a-d191-42be-a684-5d9896ebf1f0:
+  3355d6b6-d94a-4f2b-99d0-ed692600aa62:
     id: node_type
     bundles:
+      game: game
       page: page
       promotion: promotion
+      vip_page: vip_page
     negate: false
     context_mapping:
       node: node
-    uuid: f644163a-d191-42be-a684-5d9896ebf1f0
+    uuid: 3355d6b6-d94a-4f2b-99d0-ed692600aa62
 selection_logic: and
 weight: -5
 relationships: {  }

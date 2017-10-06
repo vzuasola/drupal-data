@@ -34,7 +34,7 @@ class ImportForm extends FormBase {
       '#upload_location' => 'public://taxonomy_files/',
       '#description' => t('Upload a file to Import taxonomy! Supported format xlsx'),
     ];
-    $form['actions']['#type'] = 'actions';
+
     $form['submit'] = [
       '#type' => 'submit',
       '#value' => $this->t('Import'),
@@ -56,19 +56,24 @@ class ImportForm extends FormBase {
     $languages = $import->getExcelLanguages($form_state);
     $operations = [
         [[$import, 'importPrepare'], [$form_state]],
-        [[$import, 'importDomainGroups'], [$form_state]],
         [[$import, 'importMasterPlaceholder'], [$form_state]],
-
     ];
     foreach ($languages as $key => $langcode) {
-      $operations[] = [[$import, 'importDomains'], [$form_state, $langcode]];
+      $operations[] = [[$import, 'importDomainGroups'],
+      [$form_state, $langcode],
+      ];
+    }
+
+    foreach ($languages as $key => $langcode) {
+      $operations[] = [[$import, 'importDomains'],
+      [$form_state, $langcode],
+      ];
     }
 
     $batch = [
       'title' => t('Importing Domains'),
       'operations' => $operations,
       'init_message' => t('Batch is starting.'),
-      'finished' => '\Drupal\webcomposer_domain_import\Controller\WebcomposerDomainImport::domainImportFinishedCallback',
     ];
     batch_set($batch);
   }

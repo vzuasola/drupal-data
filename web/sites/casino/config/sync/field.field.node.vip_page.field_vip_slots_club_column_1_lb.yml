@@ -1,0 +1,21 @@
+uuid: 38c4317e-1823-4141-afd0-c6b5320be2aa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_vip_slots_club_column_1_lb
+    - node.type.vip_page
+  module:
+    - text
+id: node.vip_page.field_vip_slots_club_column_1_lb
+field_name: field_vip_slots_club_column_1_lb
+entity_type: node
+bundle: vip_page
+label: 'VIP Slots Club Column 1 Lightbox'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -26,21 +26,94 @@ class ExportParser {
    * Returns an array of all domain groups, where the index is the primary key `id`.
    */
   public function get_domain_groups() {
-    static $groups = '';
+    return $this->readTaxonomyByName('domain_groups');
+  }
 
-    if ($groups != '') {
-      return $groups;
+  /**
+   * Retruns all domains.
+   */
+  public function get_domain() {
+    return $this->readTaxonomyByName('domain');
+  }
+
+  /**
+   * Returns domain group id.
+   */
+  public function get_domain_group_id($entity_id) {
+    $termid = 0;
+    $term_id = 0;
+
+    $termid = db_query('SELECT n.field_select_domain_group_target_id FROM {taxonomy_term__field_select_domain_group} n WHERE n.entity_id  = :entity_id', [':entity_id' => $entity_id]);
+
+    foreach ($termid as $val) {
+      // Get tid.
+      $term_id = $val->field_select_domain_group_target_id;
     }
+    return $term_id;
 
-    $groups = [];
+  }
 
-    $domain_groups = \Drupal::entityManager()->getStorage('taxonomy_term')->loadTree('domain_groups');
+  /**
+   * Returns Placeholder target id.
+   */
+  public function get_add_placeholder_target_id($entity_id, $langcode) {
+    $termid = 0;
+    $term_id = [];
 
-    foreach ($domain_groups as $key => $value) {
-      $groups[$value->tid] = $value->name;
+    $termid = db_query('SELECT n.field_add_placeholder_target_id FROM {taxonomy_term__field_add_placeholder} n WHERE n.entity_id  = :entity_id AND n.langcode = :langcode', [':entity_id' => $entity_id, ':langcode' => $langcode]);
+
+    foreach ($termid as $val) {
+      // Get tid.
+      $term_id[]['target_id'] = $val->field_add_placeholder_target_id;
     }
+    return $term_id;
+  }
 
-    return $groups;
+  /**
+   * Returns Placeholder Key.
+   */
+  public function get_paragraph__field_placeholder_key($entity_id, $langcode) {
+    $termid = 0;
+    $key_value = '';
+
+    $termid = db_query('SELECT n.field_placeholder_key_value FROM {paragraph__field_placeholder_key} n WHERE n.entity_id  = :entity_id AND n.langcode = :langcode', [':entity_id' => $entity_id, ':langcode' => $langcode]);
+
+    foreach ($termid as $val) {
+      // Get tid.
+      $key_value = $val->field_placeholder_key_value;
+    }
+    return $key_value;
+  }
+
+  /**
+   * REturns Placeholder default key.
+   */
+  public function get_paragraph__field_default_value($entity_id, $langcode) {
+    $termid = 0;
+    $key_value = '';
+
+    $termid = db_query('SELECT n.field_default_value_value FROM {paragraph__field_default_value} n WHERE n.entity_id  = :entity_id AND n.langcode = :langcode', [':entity_id' => $entity_id, ':langcode' => $langcode]);
+
+    foreach ($termid as $val) {
+      // Get tid.
+      $key_value = $val->field_default_value_value;
+    }
+    return $key_value;
+  }
+
+  /**
+   * Returns ter id based on vocab id.
+   */
+  private function readTaxonomyByName($vocab) {
+    $term_id = [];
+    // Get tid of term with same name.
+    $termid = db_query('SELECT n.tid, n.name FROM {taxonomy_term_field_data} n WHERE n.vid  = :vid', [':vid' => $vocab]);
+    foreach ($termid as $termName) {
+      // Get tid and term name.
+      $term_id[$termName->tid] = $termName->name;
+    }
+    return $term_id;
+
   }
 
   /**
@@ -111,11 +184,8 @@ class ExportParser {
 
       $paragraphs = \Drupal::entityManager()->getStorage('paragraph')->load($token);
       $placeholder_key = $paragraphs->get('field_placeholder_key')->getValue(FALSE);
-      $placeholder_desc = $paragraphs->get('field_description')->getValue(FALSE);
-
-      $variables[$placeholder_key[0]['value']] = $placeholder_desc[0]['value'];
+      $variables[] = $placeholder_key[0]['value'];
     }
-
     return $variables;
   }
 
@@ -302,12 +372,10 @@ class ExportParser {
     // Check if property is empty.
     if (empty($this->placeholders)) {
       $this->placeholders['label']['group'] = 'tokens';
-      $this->placeholders['description']['group'] = 'description';
 
       // Loop through the keys of the default values.
       foreach ($placeholders as $key => $placeholder) {
-        $this->placeholders['label'][$key] = $key;
-        $this->placeholders['description'][$key] = $placeholder;
+        $this->placeholders['label'][$key] = $placeholder;
       }
     }
 
