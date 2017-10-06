@@ -1,0 +1,30 @@
+uuid: 9bb9073c-adb1-45cb-8f93-487dda53f23b
+langcode: en
+status: true
+dependencies:
+  module:
+    - keno_lobby_tile
+    - options
+id: keno_lobby_tile_entity.field_log_in_state
+field_name: field_log_in_state
+entity_type: keno_lobby_tile_entity
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '0'
+      label: 'Pre Login'
+    -
+      value: '1'
+      label: 'Post Login'
+    -
+      value: '2'
+      label: Both
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

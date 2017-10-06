@@ -5,5 +5,5 @@ webcomposer_games.games_playtech_provider_tab:
 
 webcomposer_games.admin_games_opus_provider_tab:
   route_name: webcomposer_games.games_opus_provider_form
-  title: 'Playtech Provider Configuration'
+  title: 'Opus Provider Configuration'
   base_route: webcomposer_games.games_opus_provider_form
