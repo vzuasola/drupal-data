@@ -7,6 +7,8 @@ dependencies:
     - field.field.keno_lobby_tile_entity.keno_lobby_tile_entity.field_button_link
     - field.field.keno_lobby_tile_entity.keno_lobby_tile_entity.field_button_link_target
     - field.field.keno_lobby_tile_entity.keno_lobby_tile_entity.field_button_text
+    - field.field.keno_lobby_tile_entity.keno_lobby_tile_entity.field_enable_keno_free_play
+    - field.field.keno_lobby_tile_entity.keno_lobby_tile_entity.field_enable_keno_game_launching
     - field.field.keno_lobby_tile_entity.keno_lobby_tile_entity.field_log_in_state
     - field.field.keno_lobby_tile_entity.keno_lobby_tile_entity.field_tile_image
     - field.field.keno_lobby_tile_entity.keno_lobby_tile_entity.field_tile_link
@@ -56,6 +58,20 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_enable_keno_free_play:
+    weight: 13
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_enable_keno_game_launching:
+    weight: 12
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
     region: content
   field_log_in_state:
     weight: 2
