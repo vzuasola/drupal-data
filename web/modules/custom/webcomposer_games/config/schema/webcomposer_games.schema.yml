@@ -14,3 +14,10 @@ webcomposer_config.games_opus_provider:
       type: text_format
       label: 'Content'
       translatable: true
+    opus_unsupported_currencies_message:
+      type: text_format
+      label: 'Content'
+      translatable: true
+    opus_unsupported_currencies_title:
+      type: text
+      label: 'Title'

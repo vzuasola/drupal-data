@@ -1,0 +1,15 @@
+webcomposer_sitemap.admin_settings:
+  path: 'admin/config/webcomposer/sitemap'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Sitemap Configuration'
+  requirements:
+    _permission: 'administer site configuration'
+
+webcomposer_sitemap.sitemap_configuration_form:
+  path: 'admin/config/webcomposer/sitemap/config'
+  defaults:
+    _form: 'Drupal\webcomposer_sitemap\Form\SitemapConfiguration'
+    _title: 'Sitemap Configuration'
+  requirements:
+    _permission: 'administer site configuration'

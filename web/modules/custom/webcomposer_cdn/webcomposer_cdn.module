@@ -39,8 +39,8 @@ function webcomposer_cdn_file_url_alter(&$uri) {
       return;
     }
 
-    if (isset($_SERVER['HTTP_X_CUSTOM_LB_GEOIP_COUNTRY'])) {
-      $country_code = $_SERVER['HTTP_X_CUSTOM_LB_GEOIP_COUNTRY'];
+    if (isset($_SERVER['HTTP_X_FE_COUNTRY_CODE'])) {
+      $country_code = $_SERVER['HTTP_X_FE_COUNTRY_CODE'];
     } else {
       $country_code = 'NULL';
     }
@@ -70,8 +70,8 @@ function webcomposer_cdn_inline_image_url_change_alter(&$basepath) {
   $cdn_is_enabled = $config->get('enable_cdn');
   $cdn_domains = $config->get('cdn_domain_configuration');
 
-  if (isset($_SERVER['HTTP_X_CUSTOM_LB_GEOIP_COUNTRY'])) {
-    $country_code = $_SERVER['HTTP_X_CUSTOM_LB_GEOIP_COUNTRY'];
+  if (isset($_SERVER['HTTP_X_FE_COUNTRY_CODE'])) {
+    $country_code = $_SERVER['HTTP_X_FE_COUNTRY_CODE'];
   } else {
     $country_code = 'NULL';
   }

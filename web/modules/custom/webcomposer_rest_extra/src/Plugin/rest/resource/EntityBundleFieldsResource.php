@@ -19,13 +19,13 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Psr\Log\LoggerInterface;
 
 /**
- * Provides a resource to get view modes by entity and bundle.
+ * Provides a resource to get view modes by entity,bundle and fields.
  *
  * @RestResource(
  *   id = "entity_bundle_fields_resource",
  *   label = @Translation("Entity Bundle Resource Label"),
  *   uri_paths = {
- *     "canonical" = "/entity/{entity}/{bundle}/fields"
+ *     "canonical" = "entity/{entity}/{bundle}/fields"
  *   }
  * )
  */
@@ -37,6 +37,13 @@ class EntityBundleFieldsResource extends ResourceBase
    * @var \Drupal\Core\Session\AccountProxyInterface
    */
   protected $currentUser;
+
+  /**
+   * The query object that can query the given entity type.
+   *
+   * @var \Drupal\Core\Entity\Query\QueryInterface
+   */
+  protected $entityQuery;
 
   /**
    * Constructs a Drupal\rest\Plugin\ResourceBase object.
@@ -58,10 +65,11 @@ class EntityBundleFieldsResource extends ResourceBase
     $plugin_definition,
     array $serializer_formats,
     LoggerInterface $logger,
-    AccountProxyInterface $current_user) {
+    AccountProxyInterface $current_user, $entityQuery) {
     parent::__construct($configuration, $plugin_id, $plugin_definition, $serializer_formats, $logger);
 
     $this->currentUser = $current_user;
+    $this->entityQuery = $entityQuery;
   }
 
   /**
@@ -74,7 +82,8 @@ class EntityBundleFieldsResource extends ResourceBase
       $plugin_definition,
       $container->getParameter('serializer.formats'),
       $container->get('logger.factory')->get('rest'),
-      $container->get('current_user')
+      $container->get('current_user'),
+      $container->get('entity.query')
     );
   }
 
@@ -92,7 +101,7 @@ class EntityBundleFieldsResource extends ResourceBase
     if ($entity && $bundle) {
 
       // Query by filtering on the ID by entity and bundle.
-      $ids = \Drupal::entityQuery('field_config')
+      $ids = $this->entityQuery->get('field_config', 'AND')
         ->condition('id', $entity . '.' . $bundle . '.', 'STARTS_WITH')
         ->execute();
 
