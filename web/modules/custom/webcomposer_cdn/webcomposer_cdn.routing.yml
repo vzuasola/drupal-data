@@ -6,4 +6,3 @@ webcomposer_cdn.cdn_config_form:
     _title: 'CDN Configuration'
   requirements:
     _permission: 'administer site configuration'
-
