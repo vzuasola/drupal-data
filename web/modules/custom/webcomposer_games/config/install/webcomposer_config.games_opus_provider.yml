@@ -9,3 +9,4 @@ opus_unsupported_currencies_title: 'Currency not supported'
 opus_unsupported_currencies_message:
   value: "<p>Sorry, your currency is not supported.\r\nPlease choose other gaming rooms.</p>"
   format: basic_html
+opus_unsupported_currencies_button: 'Ok'
