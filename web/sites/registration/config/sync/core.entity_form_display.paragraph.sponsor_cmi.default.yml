@@ -6,6 +6,8 @@ dependencies:
     - field.field.paragraph.sponsor_cmi.field_sponsor_cmi_link
     - field.field.paragraph.sponsor_cmi.field_sponsor_cmi_link_target
     - field.field.paragraph.sponsor_cmi.field_sponsor_cmi_logo
+    - field.field.paragraph.sponsor_cmi.field_sponsor_cmi_tablet_logo
+    - field.field.paragraph.sponsor_cmi.field_sponsor_mobile_logo
     - image.style.thumbnail
     - paragraphs.paragraphs_type.sponsor_cmi
   module:
@@ -18,7 +20,7 @@ bundle: sponsor_cmi
 mode: default
 content:
   field_sponsor_cmi_link:
-    weight: 1
+    weight: 4
     settings:
       size: 60
       placeholder: ''
@@ -26,7 +28,7 @@ content:
     type: string_textfield
     region: content
   field_sponsor_cmi_link_target:
-    weight: 2
+    weight: 5
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -39,9 +41,27 @@ content:
     third_party_settings: {  }
     type: image_image
     region: content
-  translation:
-    weight: 10
+  field_sponsor_cmi_tablet_logo:
+    weight: 2
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
     region: content
+  field_sponsor_mobile_logo:
+    weight: 3
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  translation:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   created: true
   status: true

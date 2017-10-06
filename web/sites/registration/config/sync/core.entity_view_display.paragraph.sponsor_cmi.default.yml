@@ -6,6 +6,8 @@ dependencies:
     - field.field.paragraph.sponsor_cmi.field_sponsor_cmi_link
     - field.field.paragraph.sponsor_cmi.field_sponsor_cmi_link_target
     - field.field.paragraph.sponsor_cmi.field_sponsor_cmi_logo
+    - field.field.paragraph.sponsor_cmi.field_sponsor_cmi_tablet_logo
+    - field.field.paragraph.sponsor_cmi.field_sponsor_mobile_logo
     - paragraphs.paragraphs_type.sponsor_cmi
   module:
     - image
@@ -34,6 +36,24 @@ content:
     region: content
   field_sponsor_cmi_logo:
     weight: 2
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_sponsor_cmi_tablet_logo:
+    weight: 3
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_sponsor_mobile_logo:
+    weight: 4
     label: above
     settings:
       image_style: ''
