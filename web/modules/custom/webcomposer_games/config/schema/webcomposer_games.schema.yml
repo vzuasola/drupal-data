@@ -1,3 +1,4 @@
+
 webcomposer_config.games_playtech_provider:
   type: config_object
   label: 'Playtech Provider Configuration'
