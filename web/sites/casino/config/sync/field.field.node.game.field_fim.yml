@@ -10,7 +10,7 @@ field_name: field_fim
 entity_type: node
 bundle: game
 label: 'FIM (game provider)'
-description: 'If checked the Game Provider will be FIM else the default Game Provider will be PAS.'
+description: 'If checked the Game Provider will be FIM else the default Game Provider will be PAS. (This field will deprecate in future)'
 required: false
 translatable: true
 default_value:
