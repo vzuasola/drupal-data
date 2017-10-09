@@ -1,3 +1,4 @@
+
 webcomposer_config.games_playtech_provider:
   type: config_object
   label: 'Playtech Provider Configuration'
@@ -14,3 +15,13 @@ webcomposer_config.games_opus_provider:
       type: text_format
       label: 'Content'
       translatable: true
+    opus_unsupported_currencies_message:
+      type: text_format
+      label: 'Content'
+      translatable: true
+    opus_unsupported_currencies_title:
+      type: text
+      label: 'Title'
+    opus_unsupported_currencies_button:
+      type: text
+      label: 'Button Ok'

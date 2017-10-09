@@ -17,7 +17,7 @@ class CDNConfigForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   protected function getEditableConfigNames() {
-    return ['webcomposer_cdn.cdn_configuration'];
+    return ['webcomposer_config.cdn_configuration'];
   }
 
   /**
@@ -31,7 +31,7 @@ class CDNConfigForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    $config = $this->config('webcomposer_cdn.cdn_configuration');
+    $config = $this->config('webcomposer_config.cdn_configuration');
     $form['enable_cdn'] = [
       '#type' => 'checkbox',
       '#title' => $this->t('Enable CDN'),
@@ -67,7 +67,7 @@ class CDNConfigForm extends ConfigFormBase {
     );
 
     foreach ($keys as $key) {
-      $this->config('webcomposer_cdn.cdn_configuration')->set($key, $form_state->getValue($key))->save();
+      $this->config('webcomposer_config.cdn_configuration')->set($key, $form_state->getValue($key))->save();
     }
 
     parent::submitForm($form, $form_state);

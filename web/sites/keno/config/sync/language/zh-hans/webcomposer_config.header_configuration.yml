@@ -1,6 +1,8 @@
 lobby_page_title: '在线投注—— 在Dafabet畅享体育投注、娱乐场和扑克游戏带来的无限乐趣'
 join_now_text: 立即加入
+join_now_link: '/{domain:entry}/{domain:lang_token}/cant-login{tracking.token}'
 login_issue_text: 无法登录？
+login_issue_link: '/{domain:entry}/{domain:lang_token}/cant-login{tracking.token}'
 balance_error_text: 错误检索
 profile_icon_hover_text: 我的账户
 cashier_icon_hover_text: 出纳柜台

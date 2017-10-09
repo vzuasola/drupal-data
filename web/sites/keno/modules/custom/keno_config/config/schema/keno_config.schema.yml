@@ -13,7 +13,7 @@ keno_config.keno_configuration:
       type: select
       label: 'Lobby Tiles Alignment'
       translatable: true
-    lobby_tiles_background:
+    keno_background:
       type: managed_file
       label: 'Lobby Tiles Background'
       translatable: true
