@@ -4,4 +4,5 @@ trust_element_content:
   format: basic_html
 lobby_tiles_alignment: left
 keno_background:
-  - '1479'
+  - '1483'
+keno_background_image_url: 'http://keno.drupal.local/sites/keno/files/bg.jpg'
