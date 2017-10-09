@@ -4,12 +4,25 @@ namespace Drupal\webcomposer_domain_import\Form;
 
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\webcomposer_domain_import\Controller\WebcomposerDomainExport;
 
 /**
  * Contribute form.
  */
 class ExportForm extends FormBase {
+
+  /**
+   * DomainExport object.
+   *
+   * @var $domainExport
+   */
+  private $domainExport;
+
+  /**
+   * Constructor.
+   */
+  public function __construct() {
+    $this->domainExport = \Drupal::service('webcomposer_domain_import.domain_export');
+  }
 
   /**
    * {@inheritdoc}
@@ -22,7 +35,6 @@ class ExportForm extends FormBase {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    $export = new WebcomposerDomainExport();
     $form['webcomposer_domain_export'] = [
       '#type' => 'fieldset',
       '#title' => $this->t('Export Domains'),
@@ -34,7 +46,7 @@ class ExportForm extends FormBase {
     $form['webcomposer_domain_export']['submit'] = [
       '#type' => 'submit',
       '#value' => $this->t('Export'),
-      '#submit' => [[$export, 'domain_export_excel']],
+      '#submit' => [[$this->domainExport, 'domainExportExcel']],
     ];
 
     return $form;

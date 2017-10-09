@@ -13,16 +13,22 @@ class WebcomposerDomainExport extends ControllerBase {
 
   /**
    * Variable for the all enabled languages.
+   *
+   * @var languages
    */
   private $languages;
 
   /**
    * ExcelParser object.
+   *
+   * @var excelParser
    */
-  private $excal_parser;
+  private $excelParser;
 
   /**
    * Service for the export parser.
+   *
+   * @var service
    */
   private $service;
 
@@ -31,21 +37,8 @@ class WebcomposerDomainExport extends ControllerBase {
    */
   public function __construct() {
     $this->languages = \Drupal::languageManager()->getLanguages($flags = 1);
-    $this->excal_parser = \Drupal::service('webcomposer_domain_import.excel_parser');
+    $this->excelParser = \Drupal::service('webcomposer_domain_import.excel_parser');
     $this->service = \Drupal::service('webcomposer_domain_import.export');
-  }
-
-  /**
-   * Domain Export.
-   *
-   * @return string
-   *   Return Hello string.
-   */
-  public function DomainExport() {
-    return [
-      '#type' => 'markup',
-      '#markup' => $this->t('Implement method: Export Successfull'),
-    ];
   }
 
   /**
@@ -53,13 +46,11 @@ class WebcomposerDomainExport extends ControllerBase {
    *
    * @author alex <alexandernikko.tenepere@bayviewtechnology.com>
    */
-  public function domain_export_excel() {
+  public function domainExportExcel() {
 
     $export = new WebcomposerDomainExport();
-    $data = $export->domain_export_get_parsed_data();
-    $export->domain_export_create_excel($data);
-
-    return;
+    $data = $export->domainExportGetParsedData();
+    $export->domainExportCreateExcel($data);
   }
 
   /**
@@ -67,9 +58,10 @@ class WebcomposerDomainExport extends ControllerBase {
    *
    * @author alex <alexandernikko.tenepere@bayviewtechnology.com>
    *
-   * @return array $result - the parsed Matterhorn Domain data
+   * @return array
+   *   The parsed Matterhorn Domain data
    */
-  public function domain_export_get_parsed_data() {
+  public function domainExportGetParsedData() {
     $result = [];
     $language = [];
     $groups = $this->service->get_domain_groups();
@@ -89,9 +81,9 @@ class WebcomposerDomainExport extends ControllerBase {
 
     $result['placeholders'] = $this->service->excel_get_placeholders_description($placeholders);
     foreach ($language as $key => $value) {
-      $placeholders = $this->get_all_placeholders_per_language($key);
+      $placeholders = $this->getAllPlaceholdersPerLanguage($key);
       // Get all the domain data per domain group per language.
-      $variables = $this->get_all_domains_data_per_language($placeholders, $key);
+      $variables = $this->getAllDomainsDataPerLanguage($placeholders, $key);
       $result['variables'][$key] = $variables;
     }
 
@@ -99,20 +91,18 @@ class WebcomposerDomainExport extends ControllerBase {
   }
 
   /**
-   * Creates the excel worksheet from the given parsed data
-   * Invokes excel download.
+   * Creates the excel worksheet from given parsed data invokes excel download.
    *
-   * @author alex <alexandernikko.tenepere@bayviewtechnology.com>
    * @param string $data
-   *   - the parsed Matterhorn Domain data.
+   *   - The parsed Domain data.
    * @param array $excel_version
-   *   - the excel version of the generated excel.
+   *   - The excel version of the generated excel.
    * @param bool $headers
-   *   - check if download will be invoked from browser.
+   *   - Check if download will be invoked from browser.
    * @param array $output
-   *   - the URL to output the file.
+   *   - The URL to output the file.
    */
-  public function domain_export_create_excel($data, $excel_version = 'Excel2007', $headers = TRUE, $output = 'php://output') {
+  public function domainExportCreateExcel($data, array $excel_version = 'Excel2007', $headers = TRUE, array $output = 'php://output') {
     $language = [];
     // Get all languages from which are enabled.
     foreach ($this->languages as $key => $value) {
@@ -120,17 +110,17 @@ class WebcomposerDomainExport extends ControllerBase {
     }
 
     // Create languages worksheet.
-    $this->excal_parser->create_sheet($data['languages'], 'Languages');
+    $this->excelParser->create_sheet($data['languages'], 'Languages');
     // Create domains worksheet.
-    $this->excal_parser->create_sheet($data['domains'], 'Domains');
+    $this->excelParser->create_sheet($data['domains'], 'Domains');
     // Create token placeholder worksheet.
-    $this->excal_parser->create_sheet($data['placeholders'], 'Tokens');
+    $this->excelParser->create_sheet($data['placeholders'], 'Tokens');
     // Create tokens worksheet per language.
     foreach ($language as $key => $language) {
-      $this->excal_parser->create_sheet($data['variables'][$key], $key);
+      $this->excelParser->create_sheet($data['variables'][$key], $key);
     }
     // Invoke excel creation and download.
-    $this->excal_parser->save('export.xlsx', $excel_version, $headers, $output);
+    $this->excelParser->save('export.xlsx', $excel_version, $headers, $output);
 
     // Stop script only if headers is set to invoke a download.
     if ($headers) {
@@ -139,32 +129,15 @@ class WebcomposerDomainExport extends ControllerBase {
   }
 
   /**
-   * Returns an array of all domains, where the index is the primary key `id` for domains temp table.
-   *
-   * @return array $groups
-   */
-  public function get_all_domains() {
-    $domains = [];
-
-    // Get all domains.
-    $domains = \Drupal::entityManager()->getStorage('taxonomy_term')->loadTree('domain');
-
-    foreach ($domains as $domain) {
-      $groups[$domain->tid] = $domain->name;
-    }
-
-    return $groups;
-  }
-
-  /**
    * Get all the data per language.
    *
-   * @param string $language
-   *   language code.
+   * @param string $key
+   *   Language code.
    *
-   * @return array result     array of data.
+   * @return array
+   *   Result array of data.
    */
-  public function get_all_placeholders_per_language($key) {
+  public function getAllPlaceholdersPerLanguage($key) {
     $variables = [];
     $result = [];
     // Get the master placeholders.
@@ -206,13 +179,14 @@ class WebcomposerDomainExport extends ControllerBase {
    * Get the all structured data for the ecxel.
    *
    * @param array $placeholders
-   *   array of placeholders.
+   *   Array of placeholders.
    * @param string $language
-   *   language code.
+   *   Language code.
    *
-   * @return array               result array of excelsheet.
+   * @return array
+   *   Result array of excelsheet.
    */
-  public function get_all_domains_data_per_language($placeholders, $language) {
+  public function getAllDomainsDataPerLanguage(array $placeholders, $language) {
     $variables = [];
     // Get all the domain groups.
     $domains_groups = $this->service->get_domain_groups();
