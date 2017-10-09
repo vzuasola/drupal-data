@@ -393,6 +393,11 @@ display:
         operator: AND
         groups:
           1: AND
+      style:
+        type: node_list_serializer
+        options:
+          uses_fields: false
+          formats: {  }
     cache_metadata:
       max-age: -1
       contexts:
