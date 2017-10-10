@@ -1,0 +1,9 @@
+
+# Registration Theme menu items definition
+entity.registration_theme_entity.collection:
+  title: 'Registration Theme'
+  route_name: entity.registration_theme_entity.collection
+  description: 'List Registration Theme (bundles)'
+  parent: system.admin_structure
+  weight: 99
+
