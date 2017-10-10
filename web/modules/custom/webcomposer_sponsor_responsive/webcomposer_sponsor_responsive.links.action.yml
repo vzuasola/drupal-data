@@ -1,0 +1,5 @@
+entity.sponsor_responsive_entity.add_form:
+  route_name: entity.sponsor_responsive_entity.add_form
+  title: 'Add Sponsor'
+  appears_on:
+    - entity.sponsor_responsive_entity.collection

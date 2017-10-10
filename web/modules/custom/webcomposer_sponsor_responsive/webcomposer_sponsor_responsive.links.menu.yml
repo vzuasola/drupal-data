@@ -1,0 +1,20 @@
+webcomposer_sponsor_responsive.list:
+  title: 'Webcomposer Responsive Sponsors'
+  description: 'Configure the Footer Sponsors'
+  parent: system.admin_config
+  route_name: webcomposer_sponsor_responsive.admin_settings
+  weight: 1500
+
+# Sponsor menu items definition
+entity.sponsor_responsive_entity.collection:
+  title: 'Responsive Sponsor list'
+  route_name: entity.sponsor_responsive_entity.collection
+  description: 'List Sponsor entities'
+  parent: webcomposer_sponsor_responsive.list
+
+sponsor_responsive_entity.admin.structure.settings:
+  title: 'Responsive Sponsor settings'
+  description: 'Configure Sponsor entities'
+  route_name: sponsor_responsive_entity.settings
+  parent: webcomposer_sponsor_responsive.list
+  weight: 100
