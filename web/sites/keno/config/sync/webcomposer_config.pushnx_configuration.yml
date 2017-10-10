@@ -1,0 +1,20 @@
+enable: 1
+domain: 'anything'
+producttype_id: ''
+retry_count: '34'
+delay_count: '500'
+expiry_delay_count: '10000'
+exclude_pages: ''
+translated_texts: "Notifications\r\nOK\r\nACCEPT\r\nDECLINE"
+expiry_error_message: "en-US|This offer has already expired\r\nzh-TW|This offer has already expired._ch\r\nel|This offer has already expired._gr\r\nid|This offer has already expired._id\r\nhi|This offer has already expired._in\r\nja|This offer has already expired._jp\r\nko-KR|This offer has already expired._kr\r\npl|This offer has already expired._pl\r\nru|This offer has already expired._ru\r\nzh-CN|This offer has already expired._sc\r\nth|This offer has already expired._th\r\nen-GB|This offer has already expired._eu\r\nvi|This offer has already expired._vn\r\n"
+date_format: "en-US|dd/mm/yyyy HH:MM\r\nzh-TW|yyyy/mm/dd HH:MM\r\nel|dd/mm/yyyy HH:MM\r\nid|dd/mm/yyyy HH:MM\r\nhi|dd/mm/yyyy HH:MM\r\nja|yyyy/mm/dd HH:MM\r\nko-KR|yyyy/mm/dd HH:MM\r\npl|dd/mm/yyyy HH:MM\r\nru|dd/mm/yyyy HH:MM\r\nzh-CN|yyyy/mm/dd HH:MM\r\nth|dd/mm/yyyy HH:MM\r\nen-GB|dd/mm/yyyy HH:MM\r\nvi|dd/mm/yyyy HH:MM"
+date_offset: "en-US|+8\r\nzh-TW|+8\r\nel|+3\r\nid|+7\r\nhi|+8\r\nja|+9\r\nko-KR|+9\r\npl|+2\r\nru|+3\r\nzh-CN|+8\r\nth|+7\r\nen-GB||+1\r\nvi|+7"
+login_selector: ''
+debug_logging: 0
+debug_display_all: 0
+debug_display_expirydate: 0
+text_: ''
+text_notifications: "en-US|Notifications\r\nzh-TW|Notifications_ch\r\nel|Notifications_gr\r\nid|Notifications_id\r\nhi|Notifications_in\r\nja|Notifications_jp\r\nko-KR|Notifications_kr\r\npl|Notifications_pl\r\nru|Notifications_ru\r\nzh-CN|Notifications_sc\r\nth|Notifications_th\r\nen-GB|Notifications_eu\r\nvi|Notifications_vn"
+text_ok: "en-US|Ok\r\nzh-TW|Ok_ch\r\nel|Ok_gr\r\nid|Ok_id\r\nhi|Ok_in\r\nja|Ok_jp\r\nko-KR|Ok_kr\r\npl|Ok_pl\r\nru|Ok_ru\r\nzh-CN|Ok_sc\r\nth|Ok_th\r\nen-GB|Ok_eu\r\nvi|Ok_vn"
+text_accept: "en-US|Accept\r\nzh-TW|Accept_ch\r\nel|Accept_gr\r\nid|Accept_id\r\nhi|Accept_in\r\nja|Accept_jp\r\nko-KR|Accept_kr\r\npl|Accept_pl\r\nru|Accept_ru\r\nzh-CN|Accept_sc\r\nth|Accept_th\r\nen-GB|Accept_eu\r\nvi|Accept_vn\r\n"
+text_decline: "en-US|Decline\r\nzh-TW|Decline_ch\r\nel|Decline_gr\r\nid|Decline_id\r\nhi|Decline_in\r\nja|Decline_jp\r\nko-KR|Decline_kr\r\npl|Decline_pl\r\nru|Decline_ru\r\nzh-CN|Decline_sc\r\nth|Decline_th\r\nen-GB|Decline_eu\r\nvi|Decline_vn"
