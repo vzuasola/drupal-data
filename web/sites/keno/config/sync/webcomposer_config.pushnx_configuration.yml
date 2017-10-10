@@ -1,5 +1,4 @@
 enable: 1
-domain: 'anything'
 producttype_id: ''
 retry_count: '34'
 delay_count: '500'
