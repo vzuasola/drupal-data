@@ -30,7 +30,7 @@ display:
         type: none
         options: {  }
       cache:
-        type: tag
+        type: none
         options: {  }
       query:
         type: views_query
@@ -229,31 +229,9 @@ display:
           summary: ''
           description: ''
           columns:
-            field_game_page_background: field_game_page_background
-            field_include_on_listed_pages: field_include_on_listed_pages
-            edit_games_page_bg_entity: edit_games_page_bg_entity
-            delete_games_page_bg_entity: delete_games_page_bg_entity
+            name: name
           info:
-            field_game_page_background:
-              sortable: false
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            field_include_on_listed_pages:
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            edit_games_page_bg_entity:
-              sortable: false
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            delete_games_page_bg_entity:
+            name:
               sortable: false
               default_sort_order: asc
               align: ''
@@ -261,14 +239,13 @@ display:
               empty_column: false
               responsive: ''
           default: '-1'
-          empty_table: true
+          empty_table: false
       defaults:
         style: false
         row: false
         fields: false
         filters: false
         filter_groups: false
-        empty: false
       row:
         type: fields
         options:
@@ -592,18 +569,6 @@ display:
         operator: AND
         groups:
           1: AND
-      empty:
-        area_text_custom:
-          id: area_text_custom
-          table: views
-          field: area_text_custom
-          relationship: none
-          group_type: group
-          admin_label: ''
-          empty: true
-          tokenize: false
-          content: 'No content available.'
-          plugin_id: text_custom
     cache_metadata:
       max-age: 0
       contexts:
