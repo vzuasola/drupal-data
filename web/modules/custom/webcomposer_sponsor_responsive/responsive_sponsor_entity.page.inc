@@ -21,8 +21,7 @@ use Drupal\Core\Render\Element;
  */
 function template_preprocess_sponsor_responsive_entity(array &$variables) {
   // Fetch SponsorResponsiveEntity Entity Object.
-  $sponsor_responsive_entity = $variables['elements']['#sponsor_responsive_entity'];
-
+  // $variables['elements']['#sponsor_responsive_entity'];.
   // Helpful $content variable for templates.
   foreach (Element::children($variables['elements']) as $key) {
     $variables['content'][$key] = $variables['elements'][$key];
