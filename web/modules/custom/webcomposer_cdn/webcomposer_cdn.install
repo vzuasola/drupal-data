@@ -1,0 +1,13 @@
+<?php
+/**
+ * Implements hook_uninstall
+ */
+function webcomposer_cdn_uninstall() {
+   $keys = [
+      'webcomposer_config.cdn_configuration'
+    ];
+
+    foreach ($keys as $key) {
+      \Drupal::configFactory()->getEditable($key)->delete();
+    }
+}

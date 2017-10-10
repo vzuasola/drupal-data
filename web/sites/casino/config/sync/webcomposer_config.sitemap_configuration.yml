@@ -1,0 +1,12 @@
+enable_sitemap: 1
+sitemap_title: Sitemap
+sitemap_content:
+  value: ''
+  format: basic_html
+sitemap_home_label: Home
+sitemap_home_link: '<front>'
+sitemap_promotions_label: Promotions
+sitemap_promotions_link: '/{domain:entry}/{domain:lang_token}/promotions'
+sitemap_mobile_label: Mobile
+sitemap_mobile_link: '/{domain:entry}/{domain:lang_token}/mobile'
+sitemap_basic_pages_label: 'Basic Page'
