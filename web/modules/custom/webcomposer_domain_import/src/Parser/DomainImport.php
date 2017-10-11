@@ -1,21 +1,16 @@
 <?php
 
-namespace Drupal\webcomposer_domain_import\Controller;
+namespace Drupal\webcomposer_domain_import\Parser;
 
-use Drupal\Core\Controller\ControllerBase;
 use Drupal\file\Entity\File;
-// Use Drupal\webcomposer_domain_import\Parser\ImportParser;
-// use Drupal\webcomposer_domain_import\Parser\ExcelParser;.
 use Drupal\taxonomy\Entity\Term;
 use Drupal\paragraphs\Entity\Paragraph;
 use Drupal\Core\Database\Database;
 
 /**
- * Class WebcomposerDomainImport.
- *
- * @package Drupal\webcomposer_domain_import\Controller
+ * Class DomainImport.
  */
-class WebcomposerDomainImport extends ControllerBase {
+class DomainImport {
 
   const DOMAIN = 'domain';
   const DOMAIN_GROUP = 'domain_groups';
@@ -38,17 +33,28 @@ class WebcomposerDomainImport extends ControllerBase {
   /**
    * Construct Class Contructor.
    */
-  public function __construct() {
-    $this->ImportParser = \Drupal::service('webcomposer_domain_import.import');
-    $this->ExcelParser = \Drupal::service('webcomposer_domain_import.excel_parser');
+  public function __construct($ImportParser, $ExcelParser) {
+    $this->ImportParser = $ImportParser;
+    $this->ExcelParser = $ExcelParser;
+  }
 
+  /**
+   * {@inheritdoc}
+   */
+  public static function create(ContainerInterface $container) {
+    return new static(
+      $ImportParser,
+      $ExcelParser
+    );
   }
 
   /**
    * ReadExcel Reads the file and check the validation.
    *
-   * @param [Array] $form_state
-   * @param [Array] &$context
+   * @param string $form_state
+   *   Form state after submit.
+   * @param string &$context
+   *   Batch process context.
    */
   private function readExcel($form_state, &$context) {
     $message = 'Reading File...';
@@ -57,7 +63,7 @@ class WebcomposerDomainImport extends ControllerBase {
     $fid = $file_field[0];
     $uri = File::load($fid)->getFileUri();
     $realPath = drupal_realpath($uri);
-    $sheets = $this->ExcelParser->read_excel($realPath);
+    $sheets = $this->ExcelParser->readExcel($realPath);
     $this->ImportParser->setData($sheets);
     $context['sandbox'] = $this->ImportParser->validate();
   }
@@ -65,7 +71,8 @@ class WebcomposerDomainImport extends ControllerBase {
   /**
    * Get all the languages from sheet.
    *
-   * @param [array] $form_state
+   * @param string $form_state
+   *   Form state after submit.
    */
   public function getExcelLanguages($form_state) {
     $this->readExcel($form_state, $context);
@@ -291,7 +298,7 @@ class WebcomposerDomainImport extends ControllerBase {
    * @param [Array] &$context
    */
   public function importMasterPlaceholder($form_state, &$context) {
- 
+
     $this->readExcel($form_state, $context);
     if ($context['sandbox'] === "EXCEL_FORMAT_OK") {
       $message = 'Importing Master Placeholder...';

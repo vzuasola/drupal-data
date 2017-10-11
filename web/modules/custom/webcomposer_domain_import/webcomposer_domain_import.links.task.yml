@@ -1,5 +1,5 @@
 webcomposer_domain_import.webcomposer_domain_import:
-  route_name: webcomposer_domain_import.webcomposer_domain_import 
+  route_name: webcomposer_domain_import.webcomposer_domain_import
   title: 'Domain Import'
   base_route: webcomposer_dm.domain_management
 
