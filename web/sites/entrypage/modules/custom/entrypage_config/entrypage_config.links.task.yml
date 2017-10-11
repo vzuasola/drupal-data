@@ -1,0 +1,4 @@
+entrypage_config.entrypage_configuration:
+  route_name: entrypage_config.entrypage_configuration
+  base_route: entrypage_config.entrypage_configuration
+  title: 'Entrypage custom configuration'

@@ -1,0 +1,15 @@
+entrypage_config.admin_settings:
+  path: '/admin/config/entrypage_config'
+  defaults:
+    _title: 'Entrypage Configuration Form'
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+  requirements:
+    _permission: 'administer site configuration'
+
+entrypage_config.entrypage_configuration:
+  path: '/admin/config/entrypage_config/custom'
+  defaults:
+    _title: 'Entrypage Configuration Form'
+    _form: '\Drupal\entrypage_config\Form\EntrypageCustomConfigForm'
+  requirements:
+    _permission: 'administer site configuration'

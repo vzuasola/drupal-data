@@ -1,0 +1,8 @@
+entrypage_config.entrypage_configuration:
+  type: config_object
+  label: 'Entrypage Custom Configuration'
+  mapping:
+    trust_element_content:
+      type: text_format
+      label: 'Trust Element Content'
+  langcode: 'en'

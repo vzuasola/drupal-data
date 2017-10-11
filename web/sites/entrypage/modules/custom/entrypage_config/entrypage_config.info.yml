@@ -1,0 +1,5 @@
+name: Entrypage Configuration
+description: Entrypage Custom Configuration
+package: Custom
+type: module
+core: 8.x

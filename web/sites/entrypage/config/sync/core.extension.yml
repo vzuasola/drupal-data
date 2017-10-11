@@ -27,6 +27,7 @@ module:
   entity_reference_revisions: 0
   entity_reference_views_select: 0
   entityqueue: 0
+  entrypage_config: 0
   entrypage_front_blocks: 0
   entrypage_partners: 0
   entrypage_promotions: 0
@@ -66,6 +67,7 @@ module:
   user: 0
   views_ui: 0
   webcomposer_affilates: 0
+  webcomposer_announcements: 0
   webcomposer_config: 0
   webcomposer_connector: 0
   webcomposer_dm: 0
