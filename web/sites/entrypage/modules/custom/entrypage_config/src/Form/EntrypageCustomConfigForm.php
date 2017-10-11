@@ -18,8 +18,7 @@ class EntrypageCustomConfigForm extends ConfigFormBase {
   /**
    * {@inheritdoc}
    */
-  public function getFormId()
-  {
+  public function getFormId() {
     return 'entrypage_config.entrypage_configuration_form';
   }
 
