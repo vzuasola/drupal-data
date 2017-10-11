@@ -270,7 +270,6 @@ class ImportParser {
     $tokens = array_values($columns[0]);
     // Default values are always on column B.
     $default = array_values($columns[1]);
-    $description = array_values($descriptions[1]);
 
     // No default value has been set, return false instead.
     if ($default[0] != 'default') {
@@ -289,7 +288,6 @@ class ImportParser {
       }
 
       $this->placeholders[$language][$token]['name'] = $default[$key];
-      $this->placeholders[$language][$token]['description'] = $description[$key];
     }
 
     return $this->placeholders[$language];
@@ -543,7 +541,6 @@ class ImportParser {
       $domain = array_filter($domain, 'strlen');
       asort($domain);
       $domain = array_values($domain);
-
       if ($domain_list !== $domain) {
         return 'EXCEL_FORMAT_DOMAINS_MISMATCH';
       }
