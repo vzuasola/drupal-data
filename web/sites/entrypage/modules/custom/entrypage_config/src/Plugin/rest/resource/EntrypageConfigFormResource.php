@@ -16,8 +16,7 @@ use Drupal\rest\ResourceResponse;
  *   }
  * )
  */
-class EntrypageConfigFormResource extends ResourceBase
-{
+class EntrypageConfigFormResource extends ResourceBase {
   /**
    * Responds to GET requests.
    *
@@ -26,10 +25,10 @@ class EntrypageConfigFormResource extends ResourceBase
    * @throws \Symfony\Component\HttpKernel\Exception\HttpException
    *   Throws exception expected.
    */
-  public function get($id)
-  {
+  public function get($id) {
     $data = array();
-    try{
+
+    try {
       $config = \Drupal::config("entrypage_config.$id");
       $data = $config->get();
     } catch (\Exception $e) {
