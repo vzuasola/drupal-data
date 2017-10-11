@@ -43,8 +43,6 @@ class DomainExport {
    * @author alex <alexandernikko.tenepere@bayviewtechnology.com>
    */
   public function domainExportExcel() {
-
-    // $export = new WebcomposerDomainExport();
     $data = $this->domainExportGetParsedData();
     $this->domainExportCreateExcel($data);
   }
