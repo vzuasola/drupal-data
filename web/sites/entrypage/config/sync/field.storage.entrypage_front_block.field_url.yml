@@ -1,0 +1,19 @@
+uuid: 2ef2e78a-4c31-417e-989a-c0da71a0998b
+langcode: en
+status: true
+dependencies:
+  module:
+    - entrypage_front_blocks
+    - link
+id: entrypage_front_block.field_url
+field_name: field_url
+entity_type: entrypage_front_block
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
