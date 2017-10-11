@@ -36,7 +36,6 @@ class DomainImport {
   public function __construct($ImportParser, $ExcelParser) {
     $this->ImportParser = $ImportParser;
     $this->ExcelParser = $ExcelParser;
-
   }
 
   /**
