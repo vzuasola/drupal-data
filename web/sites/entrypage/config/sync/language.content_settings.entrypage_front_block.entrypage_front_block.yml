@@ -1,0 +1,15 @@
+uuid: 00a2aea7-f3ae-4893-bd0f-3f163d728fee
+langcode: en
+status: true
+dependencies:
+  module:
+    - content_translation
+    - entrypage_front_blocks
+third_party_settings:
+  content_translation:
+    enabled: true
+id: entrypage_front_block.entrypage_front_block
+target_entity_type_id: entrypage_front_block
+target_bundle: entrypage_front_block
+default_langcode: site_default
+language_alterable: true

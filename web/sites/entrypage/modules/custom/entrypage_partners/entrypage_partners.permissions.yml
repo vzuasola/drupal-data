@@ -1,0 +1,22 @@
+add entrypage partner entities:
+  title: 'Create new Entrypage partner entities'
+
+administer entrypage partner entities:
+  title: 'Administer Entrypage partner entities'
+  description: 'Allow to access the administration form to configure Entrypage partner entities.'
+  restrict access: true
+
+delete entrypage partner entities:
+  title: 'Delete Entrypage partner entities'
+
+edit entrypage partner entities:
+  title: 'Edit Entrypage partner entities'
+
+access entrypage partner overview:
+  title: 'Access the Entrypage partner overview page'
+
+view published entrypage partner entities:
+  title: 'View published Entrypage partner entities'
+
+view unpublished entrypage partner entities:
+  title: 'View unpublished Entrypage partner entities'
