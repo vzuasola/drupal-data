@@ -20,8 +20,7 @@ use Psr\Log\LoggerInterface;
  *   }
  * )
  */
-class EntrypageConfigFormResource extends ResourceBase
-{
+class EntrypageConfigFormResource extends ResourceBase {
 
   /**
    * A current user instance.
@@ -82,15 +81,14 @@ class EntrypageConfigFormResource extends ResourceBase
    * @throws \Symfony\Component\HttpKernel\Exception\HttpException
    *   Throws exception expected.
    */
-  public function get($id)
-  {
+  public function get($id) {
 
     if (!$this->currentUser->hasPermission('access content')) {
       throw new AccessDeniedHttpException();
     }
 
     $data = array();
-    try{
+    try {
       $config = \Drupal::config("entrypage_config.$id");
       $data = $config->get();
     } catch (\Exception $e) {
