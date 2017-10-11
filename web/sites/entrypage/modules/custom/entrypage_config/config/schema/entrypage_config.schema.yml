@@ -1,0 +1,11 @@
+entrypage_config.entrypage_configuration:
+  type: config_object
+  label: 'Entrypage Custom Configuration'
+  mapping:
+    trust_element_content:
+      type: text_format
+      label: 'Trust Element Content'
+    sponsors_logo:
+      type: managed_file
+      label: 'Sponsors Logo'
+  langcode: 'en'
