@@ -4,7 +4,6 @@ namespace Drupal\webcomposer_domain_import\Form;
 
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\webcomposer_domain_import\Controller\WebcomposerDomainImport;
 
 /**
  * Contribute form.
@@ -16,7 +15,7 @@ class ImportForm extends FormBase {
    *
    * @var domainImport
    */
-  private $domainImport;
+  protected $domainImport;
 
   /**
    * Constructor.
@@ -65,7 +64,6 @@ class ImportForm extends FormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    kint($this->domainImport);die();
     $languages = $this->domainImport->getExcelLanguages($form_state);
     $operations = [
         [[$this->domainImport, 'importPrepare'], [$form_state]],

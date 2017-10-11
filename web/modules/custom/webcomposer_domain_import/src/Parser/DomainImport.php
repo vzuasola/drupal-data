@@ -1,21 +1,16 @@
 <?php
 
-namespace Drupal\webcomposer_domain_import\Controller;
+namespace Drupal\webcomposer_domain_import\Parser;
 
-use Drupal\Core\Controller\ControllerBase;
 use Drupal\file\Entity\File;
-// Use Drupal\webcomposer_domain_import\Parser\ImportParser;
-// use Drupal\webcomposer_domain_import\Parser\ExcelParser;.
 use Drupal\taxonomy\Entity\Term;
 use Drupal\paragraphs\Entity\Paragraph;
 use Drupal\Core\Database\Database;
 
 /**
- * Class WebcomposerDomainImport.
- *
- * @package Drupal\webcomposer_domain_import\Controller
+ * Class DomainImport.
  */
-class WebcomposerDomainImport extends ControllerBase {
+class DomainImport {
 
   const DOMAIN = 'domain';
   const DOMAIN_GROUP = 'domain_groups';
@@ -291,7 +286,7 @@ class WebcomposerDomainImport extends ControllerBase {
    * @param [Array] &$context
    */
   public function importMasterPlaceholder($form_state, &$context) {
- 
+
     $this->readExcel($form_state, $context);
     if ($context['sandbox'] === "EXCEL_FORMAT_OK") {
       $message = 'Importing Master Placeholder...';

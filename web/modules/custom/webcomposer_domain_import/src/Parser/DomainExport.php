@@ -1,15 +1,11 @@
 <?php
 
-namespace Drupal\webcomposer_domain_import\Controller;
-
-use Drupal\Core\Controller\ControllerBase;
+namespace Drupal\webcomposer_domain_import\Parser;
 
 /**
- * Class WebcomposerDomainExport.
- *
- * @package Drupal\webcomposer_domain_import\Controller
+ * Class which handles domain export.
  */
-class WebcomposerDomainExport extends ControllerBase {
+class DomainExport {
 
   /**
    * Variable for the all enabled languages.
@@ -48,9 +44,9 @@ class WebcomposerDomainExport extends ControllerBase {
    */
   public function domainExportExcel() {
 
-    $export = new WebcomposerDomainExport();
-    $data = $export->domainExportGetParsedData();
-    $export->domainExportCreateExcel($data);
+    // $export = new WebcomposerDomainExport();
+    $data = $this->domainExportGetParsedData();
+    $this->domainExportCreateExcel($data);
   }
 
   /**
@@ -95,14 +91,14 @@ class WebcomposerDomainExport extends ControllerBase {
    *
    * @param string $data
    *   - The parsed Domain data.
-   * @param array $excel_version
+   * @param string $excel_version
    *   - The excel version of the generated excel.
    * @param bool $headers
    *   - Check if download will be invoked from browser.
-   * @param array $output
+   * @param string $output
    *   - The URL to output the file.
    */
-  public function domainExportCreateExcel($data, array $excel_version = 'Excel2007', $headers = TRUE, array $output = 'php://output') {
+  public function domainExportCreateExcel($data, $excel_version = 'Excel2007', $headers = TRUE, $output = 'php://output') {
     $language = [];
     // Get all languages from which are enabled.
     foreach ($this->languages as $key => $value) {
