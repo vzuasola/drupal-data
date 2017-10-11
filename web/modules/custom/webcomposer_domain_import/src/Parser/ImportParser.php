@@ -541,6 +541,7 @@ class ImportParser {
       $domain = array_filter($domain, 'strlen');
       asort($domain);
       $domain = array_values($domain);
+
       if ($domain_list !== $domain) {
         return 'EXCEL_FORMAT_DOMAINS_MISMATCH';
       }
