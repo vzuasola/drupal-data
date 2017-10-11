@@ -42,8 +42,10 @@ class DomainImport {
   /**
    * ReadExcel Reads the file and check the validation.
    *
-   * @param [Array] $form_state
-   * @param [Array] &$context
+   * @param string $form_state
+   *   Form state after submit.
+   * @param string &$context
+   *   Batch process context.
    */
   private function readExcel($form_state, &$context) {
     $message = 'Reading File...';
@@ -52,7 +54,7 @@ class DomainImport {
     $fid = $file_field[0];
     $uri = File::load($fid)->getFileUri();
     $realPath = drupal_realpath($uri);
-    $sheets = $this->ExcelParser->read_excel($realPath);
+    $sheets = $this->ExcelParser->readExcel($realPath);
     $this->ImportParser->setData($sheets);
     $context['sandbox'] = $this->ImportParser->validate();
   }
@@ -60,7 +62,8 @@ class DomainImport {
   /**
    * Get all the languages from sheet.
    *
-   * @param [array] $form_state
+   * @param string $form_state
+   *   Form state after submit.
    */
   public function getExcelLanguages($form_state) {
     $this->readExcel($form_state, $context);

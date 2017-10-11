@@ -106,14 +106,14 @@ class DomainExport {
     }
 
     // Create languages worksheet.
-    $this->excelParser->create_sheet($data['languages'], 'Languages');
+    $this->excelParser->createSheet($data['languages'], 'Languages');
     // Create domains worksheet.
-    $this->excelParser->create_sheet($data['domains'], 'Domains');
+    $this->excelParser->createSheet($data['domains'], 'Domains');
     // Create token placeholder worksheet.
-    $this->excelParser->create_sheet($data['placeholders'], 'Tokens');
+    $this->excelParser->createSheet($data['placeholders'], 'Tokens');
     // Create tokens worksheet per language.
     foreach ($language as $key => $language) {
-      $this->excelParser->create_sheet($data['variables'][$key], $key);
+      $this->excelParser->createSheet($data['variables'][$key], $key);
     }
     // Invoke excel creation and download.
     $this->excelParser->save('export.xlsx', $excel_version, $headers, $output);

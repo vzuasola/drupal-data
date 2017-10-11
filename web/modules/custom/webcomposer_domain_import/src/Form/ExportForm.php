@@ -13,7 +13,7 @@ class ExportForm extends FormBase {
   /**
    * DomainExport object.
    *
-   * @var $domainExport
+   * @var domainExport
    */
   private $domainExport;
 
