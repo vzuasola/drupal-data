@@ -13,8 +13,8 @@ services:
 
   webcomposer_domain_import.domain_export:
     class: Drupal\webcomposer_domain_import\Parser\DomainExport
-    arguments: []
+    arguments: ['@language_manager', '@webcomposer_domain_import.excel_parser','@webcomposer_domain_import.export']
 
   webcomposer_domain_import.domain_import:
     class: Drupal\webcomposer_domain_import\Parser\DomainImport
-    arguments: []
+    arguments: ['@webcomposer_domain_import.import', '@webcomposer_domain_import.excel_parser']

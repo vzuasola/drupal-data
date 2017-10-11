@@ -2,6 +2,8 @@
 
 namespace Drupal\webcomposer_domain_import\Parser;
 
+use Symfony\Component\DependencyInjection\ContainerInterface;
+
 /**
  * Class which handles domain export.
  */
@@ -12,31 +14,39 @@ class DomainExport {
    *
    * @var languages
    */
-  private $languages;
+  protected $languages;
 
   /**
    * ExcelParser object.
    *
    * @var excelParser
    */
-  private $excelParser;
+  protected $excelParser;
 
   /**
    * Service for the export parser.
    *
    * @var service
    */
-  private $service;
+  protected $service;
 
   /**
    * Constructor.
    */
-  public function __construct() {
-    $this->languages = \Drupal::languageManager()->getLanguages($flags = 1);
-    $this->excelParser = \Drupal::service('webcomposer_domain_import.excel_parser');
-    $this->service = \Drupal::service('webcomposer_domain_import.export');
+  public function __construct($languages, $excelParser, $service) {
+    $this->languages = $languages;
+    $this->excelParser = $excelParser;
+    $this->service = $service;
   }
 
+
+ public static function create(ContainerInterface $container) {
+    return new static(
+      $languages,
+      $excelParser,
+      $service
+    );
+  }
   /**
    * Gets Matterhorn Domain data and invoke export excel operation.
    *
@@ -50,12 +60,11 @@ class DomainExport {
   /**
    * Gets data from Matterhorn Domain and parse it to PHP excel readable array.
    *
-   * @author alex <alexandernikko.tenepere@bayviewtechnology.com>
-   *
    * @return array
    *   The parsed Matterhorn Domain data
    */
   public function domainExportGetParsedData() {
+    $getLanguages = $this->languages->getLanguages($flags = 1);
     $result = [];
     $language = [];
     $groups = $this->service->get_domain_groups();
@@ -64,7 +73,7 @@ class DomainExport {
     $placeholders = $this->service->get_domain_tokens();
 
     // Get all languages from which are enabled.
-    foreach ($this->languages as $key => $value) {
+    foreach ($getLanguages as $key => $value) {
       $language[$value->getId()] = $value->getName();
     }
 
@@ -97,9 +106,10 @@ class DomainExport {
    *   - The URL to output the file.
    */
   public function domainExportCreateExcel($data, $excel_version = 'Excel2007', $headers = TRUE, $output = 'php://output') {
+    $getLanguages = $this->languages->getLanguages($flags = 1);
     $language = [];
     // Get all languages from which are enabled.
-    foreach ($this->languages as $key => $value) {
+    foreach ($getLanguages as $key => $value) {
       $language[$key] = $value->getName();
     }
 

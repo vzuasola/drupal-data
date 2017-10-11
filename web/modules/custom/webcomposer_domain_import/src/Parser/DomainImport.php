@@ -33,10 +33,20 @@ class DomainImport {
   /**
    * Construct Class Contructor.
    */
-  public function __construct() {
-    $this->ImportParser = \Drupal::service('webcomposer_domain_import.import');
-    $this->ExcelParser = \Drupal::service('webcomposer_domain_import.excel_parser');
+  public function __construct($ImportParser, $ExcelParser) {
+    $this->ImportParser = $ImportParser;
+    $this->ExcelParser = $ExcelParser;
 
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public static function create(ContainerInterface $container) {
+    return new static(
+      $ImportParser,
+      $ExcelParser
+    );
   }
 
   /**
