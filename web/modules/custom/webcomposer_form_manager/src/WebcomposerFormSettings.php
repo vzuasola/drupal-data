@@ -26,16 +26,16 @@ class WebcomposerFormSettings {
   /**
    * Public constructor
    */
-  public function __construct($formManager, $configFactory) {
-    $this->formManager = $formManager;
-    $this->configFactory = $configFactory;
+  public function __construct($form_manager, $config_factory) {
+    $this->formManager = $form_manager;
+    $this->configFactory = $config_factory;
   }
 
   /**
    * Fetch a single form entity instance
    *
    * @param string $id The form ID
-   * 
+   *
    * @return array
    */
   public function getForm($id) {
