@@ -10,7 +10,7 @@ use Drupal\webcomposer_form_manager\Entity\WebcomposerFormFieldEntity;
  */
 class WebcomposerFormSettings {
   /**
-   * Webcomposer Instance.
+   * Webcomposer Form Manager Instance.
    *
    * @var Drupal\webcomposer_form_manager\WebcomposerForm
    */
@@ -36,7 +36,7 @@ class WebcomposerFormSettings {
    *
    * @param string $id The form ID
    * 
-   * @return WebcomposerFormEntity
+   * @return array
    */
   public function getForm($id) {
     $config = $this->getFormDataFromConfig($id);
@@ -46,7 +46,11 @@ class WebcomposerFormSettings {
   }
 
   /**
+   * Get the data from the config using a form ID
    *
+   * @param string $id The form ID
+   *
+   * @return array
    */
   private function getFormDataFromConfig($id) {
     try {
@@ -70,7 +74,11 @@ class WebcomposerFormSettings {
   }
 
   /**
+   * Get the data from the default values using a form ID
    *
+   * @param string $id The form ID
+   *
+   * @return array
    */
   private function getFormDataFromDefaults($id) {
     $data['form_settings'] = $this->getFormSettings($id);
@@ -80,7 +88,11 @@ class WebcomposerFormSettings {
   }
 
   /**
+   * Get form settings from form manager
    *
+   * @param string $id The form ID
+   *
+   * @return array
    */
   private function getFormSettings($id) {
     $data = [];
@@ -96,7 +108,11 @@ class WebcomposerFormSettings {
   }
 
   /**
+   * Get form settings from form manager
    *
+   * @param string $id The form ID
+   *
+   * @return array
    */
   private function getFields($id) {
     $data = [];
@@ -111,7 +127,11 @@ class WebcomposerFormSettings {
   }
 
   /**
+   * Aggregate fields settings from a field instance
+   * 
+   * @param WebcomposerFormFieldEntity $field A field instance
    *
+   * @return array
    */
   private function getFieldSettings(WebcomposerFormFieldEntity $field) {
     $data = [];
