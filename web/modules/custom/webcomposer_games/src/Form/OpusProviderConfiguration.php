@@ -47,8 +47,8 @@ class OpusProviderConfiguration extends ConfigFormBase {
 
     $form['opus_game_free_play_url'] = array(
       '#type' => 'textfield',
-      '#title' => t('Opus Real Play Game url'),
-      '#description' => $this->t('Defines the Opus Real Play Game Url'),
+      '#title' => t('Opus Free Play Game url'),
+      '#description' => $this->t('Defines the Opus Free Play Games Url'),
       '#default_value' => $config->get('opus_game_free_play_url')
     );
 
