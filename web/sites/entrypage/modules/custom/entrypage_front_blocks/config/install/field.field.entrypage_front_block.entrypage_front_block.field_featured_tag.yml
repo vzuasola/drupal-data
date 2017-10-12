@@ -1,0 +1,29 @@
+uuid: f0393477-fffd-4f39-99a3-210675741a42
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.entrypage_front_block.field_featured_tag
+    - taxonomy.vocabulary.ribbon_labels
+  module:
+    - entrypage_front_blocks
+id: entrypage_front_block.entrypage_front_block.field_featured_tag
+field_name: field_featured_tag
+entity_type: entrypage_front_block
+bundle: entrypage_front_block
+label: 'Featured Tag'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      ribbon_labels: ribbon_labels
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

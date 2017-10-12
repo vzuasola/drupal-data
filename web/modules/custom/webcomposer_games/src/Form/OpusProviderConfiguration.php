@@ -30,6 +30,7 @@ class OpusProviderConfiguration extends ConfigFormBase {
     $config = $this->config('webcomposer_config.games_opus_provider');
 
     $content = $config->get('opus_game_loader_content');
+    $message = $config->get('opus_unsupported_currencies_message');
     $form['opus_game_loader_content'] = [
       '#type' => 'text_format',
       '#title' => $this->t('Game Loader Content'),
@@ -44,6 +45,13 @@ class OpusProviderConfiguration extends ConfigFormBase {
       '#default_value' => $config->get('opus_game_url')
     );
 
+    $form['opus_game_free_play_url'] = array(
+      '#type' => 'textfield',
+      '#title' => t('Opus Free Play Game url'),
+      '#description' => $this->t('Defines the Opus Free Play Games Url'),
+      '#default_value' => $config->get('opus_game_free_play_url')
+    );
+
     $form['opus_alternative_game_url'] = array(
       '#type' => 'textfield',
       '#title' => t('Opus Alternate Game url'),
@@ -55,14 +63,14 @@ class OpusProviderConfiguration extends ConfigFormBase {
       '#type' => 'textarea',
       '#title' => t('Language Mapping'),
       '#size' => 500,
-      '#description' => $this->t('Define the language mapping for Playtech games. Pipe separated language code and value, one per line.
+      '#description' => $this->t('Define the language mapping for Opus games. Pipe separated language code and value, one per line.
           <br>
           If no mapping specified will use the front end language prefix as is.
           <br>
           <strong>en|en-us</strong>'),
       '#default_value' => $config->get('languages')
     );
-    
+
    $form['currency'] = array(
       '#type' => 'textarea',
       '#title' => t('Currency'),
@@ -70,6 +78,26 @@ class OpusProviderConfiguration extends ConfigFormBase {
       '#description' => $this->t('Define the curency for opus games.
          '),
       '#default_value' => $config->get('currency')
+    );
+
+    $form['opus_unsupported_currencies_title'] = array(
+      '#type' => 'textfield',
+      '#title' => t('Opus Unsupported Currency title'),
+      '#description' => $this->t('Defines the Unsupported Currency LightBox title'),
+      '#default_value' => $config->get('opus_unsupported_currencies_title')
+    );
+
+    $form['opus_unsupported_currencies_message'] = array(
+      '#type' => 'text_format',
+      '#title' => $this->t('Opus Unsupported Currency Message'),
+      '#default_value' => $message['value'],
+      '#format' => $message['format'],
+    );
+    $form['opus_unsupported_currencies_button'] = array(
+      '#type' => 'textfield',
+      '#title' => t('Opus Unsupported Currency button'),
+      '#description' => $this->t('Defines the Unsupported Currency LightBox Ok button'),
+      '#default_value' => $config->get('opus_unsupported_currencies_button')
     );
     $form['actions'] = ['#type' => 'actions'];
 
@@ -93,8 +121,12 @@ class OpusProviderConfiguration extends ConfigFormBase {
     $keys = [
       'opus_game_loader_content',
       'opus_game_url',
+      'opus_game_free_play_url',
       'opus_alternative_game_url',
-      'languages','currency'
+      'languages','currency',
+      'opus_unsupported_currencies_title',
+      'opus_unsupported_currencies_message',
+      'opus_unsupported_currencies_button'
     ];
 
     foreach ($keys as $key) {
