@@ -68,11 +68,16 @@ class EntrypageSliderConfig extends ConfigFormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
+    $keys = [
+      'pagination_position'
+    ];
 
+    foreach($keys as $key) {
       // Saving the Values.
       $this->config('entrypage_config.entrypage_slider_configuration')
-          ->set('pagination_position', $form_state->getValue('pagination_position'))
+          ->set($key, $form_state->getValue($key))
           ->save();
+    }
 
     parent::submitForm($form, $form_state);
   }
