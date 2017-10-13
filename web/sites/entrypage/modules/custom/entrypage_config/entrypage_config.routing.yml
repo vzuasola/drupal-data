@@ -13,3 +13,11 @@ entrypage_config.entrypage_configuration:
     _form: '\Drupal\entrypage_config\Form\EntrypageCustomConfigForm'
   requirements:
     _permission: 'administer site configuration'
+
+entrypage_config.entrypage_slider_configuration:
+  path: '/admin/config/entrypage_config/slider'
+  defaults:
+    _title: 'Entrypage Sliders Configuration Form'
+    _form: '\Drupal\entrypage_config\Form\EntrypageSliderConfig'
+  requirements:
+    _permission: 'administer site configuration'

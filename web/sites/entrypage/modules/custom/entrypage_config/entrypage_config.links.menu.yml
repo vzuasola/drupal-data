@@ -9,3 +9,9 @@ entrypage_config.entrypage_config_form:
   description: 'Configure the Entrypage custom configuration'
   route_name: entrypage_config.entrypage_configuration
   parent: entrypage_config.list
+
+entrypage_config.entrypage_slider_configuration:
+  title: 'Entrypage Sliders Configuration'
+  description: 'Configure the Entrypage Slider configuration'
+  route_name: entrypage_config.entrypage_slider_configuration
+  parent: entrypage_config.list
