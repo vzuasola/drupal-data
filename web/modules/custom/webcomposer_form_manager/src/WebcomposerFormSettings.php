@@ -2,6 +2,7 @@
 
 namespace Drupal\webcomposer_form_manager;
 
+use Drupal\Component\Utility\SortArray;
 use Drupal\webcomposer_form_manager\Entity\WebcomposerFormEntity;
 use Drupal\webcomposer_form_manager\Entity\WebcomposerFormFieldEntity;
 
@@ -42,7 +43,23 @@ class WebcomposerFormSettings {
     $config = $this->getFormDataFromConfig($id);
     $defaults = $this->getFormDataFromDefaults($id);
 
-    return array_replace_recursive($defaults, $config);
+    $data = array_replace_recursive($defaults, $config);
+
+    // sort the fields array depending on weights
+    $weights = isset($data['weights']) ? $data['weights'] : [];
+    if ($weights) {
+      // sort the fields by weights fetched from the save storage
+      uasort($data['fields'], function ($a, $b) use ($weights) {
+        $aId = $a['id'];
+        $bId = $b['id'];
+
+        if (isset($weights[$aId]) && isset($weights[$bId])) {
+          return SortArray::sortByKeyInt($weights[$aId], $weights[$bId], 'weight');
+        }
+      });
+    }
+
+    return $data;
   }
 
   /**
@@ -60,8 +77,6 @@ class WebcomposerFormSettings {
       $data = ['error' => $this->t('Form not found')];
     }
 
-    // @todo Form fields should be sorted based on weights at this point, so
-    // that FE won't need to sort it
     $formFields = $this->formManager->getFormById($id)->getFields();
 
     foreach ($formFields as $key => $value) {
@@ -119,6 +134,7 @@ class WebcomposerFormSettings {
     $fields = $this->formManager->getFormById($id)->getFields();
     
     foreach ($fields as $key => $value) {
+      $data[$key]['id'] = $value->getId();
       $data[$key]['type'] = $value->getType();
       $data[$key]['field_settings'] = $this->getFieldSettings($value);
     }
