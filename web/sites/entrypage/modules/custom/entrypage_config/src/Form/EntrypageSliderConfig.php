@@ -69,7 +69,7 @@ class EntrypageSliderConfig extends ConfigFormBase {
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $keys = [
-      'pagination_position'
+      'pagination_position',
     ];
 
     foreach($keys as $key) {
