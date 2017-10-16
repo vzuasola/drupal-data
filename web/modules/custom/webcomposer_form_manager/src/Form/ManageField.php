@@ -277,7 +277,7 @@ class ManageField extends FormBase {
 
     $id = $this->entity->getId();
     $field = $this->field->getId();
-    $language = $this->languageManager->getDefaultLanguage();
+    $language = $this->languageManager->getCurrentLanguage();
 
     drupal_set_message($this->t("The configuration for field <strong>$field</strong> has been saved."));
 
