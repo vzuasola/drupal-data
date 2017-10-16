@@ -21,3 +21,9 @@ webcomposer_games.admin_games_opus_provider:
   parent: webcomposer_games.list
   description: 'Provides configuration for opus games provider'
   route_name: webcomposer_games.games_opus_provider_form
+
+webcomposer_games.admin_icore_games_integration:
+  title: 'ICore Games Integration Configuration'
+  parent: webcomposer_games.list
+  description: 'Provides configuration for icore games integration'
+  route_name: webcomposer_games.icore_games_integration_form
