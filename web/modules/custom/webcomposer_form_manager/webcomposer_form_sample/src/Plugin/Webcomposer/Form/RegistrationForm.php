@@ -88,6 +88,12 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
         'name' => 'Gender',
         'type' => 'radios',
         'settings' => [
+          'label' => [
+            '#title' => 'Label',
+            '#type' => 'textfield',
+            '#description' => 'The label for this field',
+            '#default_value' => 'Gender',
+          ],
           'choices' => [
             '#title' => 'Gender Choices',
             '#type' => 'textarea',
