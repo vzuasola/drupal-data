@@ -101,6 +101,12 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
         'name' => 'Countries',
         'type' => 'select',
         'settings' => [
+          'label' => [
+            '#title' => 'Label',
+            '#type' => 'textfield',
+            '#description' => 'The label for this field',
+            '#default_value' => 'Country',
+          ],
           'placeholder' => [
             '#title' => 'Choose a country',
             '#type' => 'textfield',
