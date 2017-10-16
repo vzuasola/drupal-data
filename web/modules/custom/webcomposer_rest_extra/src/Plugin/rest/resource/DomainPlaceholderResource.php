@@ -236,7 +236,6 @@ class DomainPlaceholderResource extends ResourceBase
             $masterLists[$placeholder_key] = $placeholder_desc;
          }
        }
-
     }
       return $masterLists;
     }
