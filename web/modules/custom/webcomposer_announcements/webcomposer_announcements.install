@@ -10,15 +10,15 @@ use Drupal\webcomposer_announcements\Entity\AnnouncementEntity;
 /**
  * Implements hook_uninstall.
  */
-webcomposer_announcements_uninstall() {
-$entities = AnnouncementEntity::loadMultiple();
+function webcomposer_announcements_uninstall() {
+  $entities = AnnouncementEntity::loadMultiple();
 
-foreach ($entities as $entity) {
-  $entity->delete();
-}
+  foreach ($entities as $entity) {
+    $entity->delete();
+  }
 
-$keys =
-  $['core.entity_form_display.announcement_entity.announcement_entity.default',
+  $keys = [
+    'core.entity_form_display.announcement_entity.announcement_entity.default',
     'core.entity_view_display.announcement_entity.announcement_entity.default',
     'field.field.announcement_entity.announcement_entity.field_body',
     'field.field.announcement_entity.announcement_entity.field_publish_date',
@@ -32,7 +32,7 @@ $keys =
     'core.base_field_override.announcement_entity.announcement_entity.user_id',
   ];
 
-foreach ($keys as $key) {
-  \Drupal::configFactory()->getEditable($key)->delete();
-}
+  foreach ($keys as $key) {
+    \Drupal::configFactory()->getEditable($key)->delete();
+  }
 }
