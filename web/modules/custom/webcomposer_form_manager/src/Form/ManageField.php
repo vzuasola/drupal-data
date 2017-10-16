@@ -272,10 +272,23 @@ class ManageField extends FormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    parent::submitForm($form, $form_state);
-
     $this->saveFieldSettings($form, $form_state);
     $this->saveValidations($form, $form_state);
+
+    $id = $this->entity->getId();
+    $field = $this->field->getId();
+    $language = $this->languageManager->getDefaultLanguage();
+
+    drupal_set_message($this->t("The configuration for field <strong>$field</strong> has been saved."));
+
+    $uri = new Url('webcomposer_form_manager.form.view', [
+      'form' => $id,
+      'language' => $language->getId(),
+    ], [
+      'language' => $language,
+    ]);
+
+    $form_state->setRedirectUrl($uri);
   }
 
   /**

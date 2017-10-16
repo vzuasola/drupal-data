@@ -21,7 +21,6 @@ use Psr\Log\LoggerInterface;
  * )
  */
 class WebcomposerFormRestResource extends ResourceBase {
-
   /**
    * A current user instance.
    *
@@ -30,18 +29,11 @@ class WebcomposerFormRestResource extends ResourceBase {
   protected $currentUser;
 
   /**
-   * Webcomposer Instance.
+   * Webcomposer Settings Manager.
    *
-   * @var Drupal\webcomposer_form_manager\WebcomposerForm
+   * @var Drupal\webcomposer_form_manager\WebcomposerFormSettings
    */
-  protected $formManager;
-
-  /**
-   * Config Factory Object.
-   *
-   * @var core/lib/Drupal/Core/Config/ConfigFactory.php
-   */
-  protected $configFactory;
+  protected $formSettingsManager;
 
   /**
    * Constructs a Drupal\rest\Plugin\ResourceBase object.
@@ -66,14 +58,12 @@ class WebcomposerFormRestResource extends ResourceBase {
     array $serializer_formats,
     LoggerInterface $logger,
     AccountProxyInterface $current_user,
-    $formManager,
-    $configFactory
-    ) {
+    $formSettingsManager
+  ) {
     parent::__construct($configuration, $plugin_id, $plugin_definition, $serializer_formats, $logger);
 
     $this->currentUser = $current_user;
-    $this->formManager = $formManager;
-    $this->configFactory = $configFactory;
+    $this->formSettingsManager = $formSettingsManager;
   }
 
   /**
@@ -87,8 +77,7 @@ class WebcomposerFormRestResource extends ResourceBase {
       $container->getParameter('serializer.formats'),
       $container->get('logger.factory')->get('webcomposer_form_manager'),
       $container->get('current_user'),
-      $container->get('webcomposer_form_manager.form_manager'),
-      $container->get('config.factory')
+      $container->get('webcomposer_form_manager.settings')
     );
   }
 
@@ -105,24 +94,7 @@ class WebcomposerFormRestResource extends ResourceBase {
       throw new AccessDeniedHttpException();
     }
 
-    $data = [];
-
-    try {
-      $config = $this->configFactory->get("webcomposer_form_manager.form.$id");
-      $data = $config->get();
-    } catch (\Exception $e) {
-      $data = ['error' => $this->t('Form not found')];
-    }
-
-    // @todo Form fields should be sorted based on weights at this point, so
-    // that FE won't need to sort it
-    $formFields = $this->formManager->getFormById($id)->getFields();
-
-    foreach ($formFields as $key => $value) {
-      $config = $this->configFactory->get("webcomposer_form_manager.form.$id.$key");
-      $data['fields'][$key] = $config->get();
-      $data['fields'][$key]['type'] = $value->getType();
-    }
+    $data = $this->formSettingsManager->getForm($id);
 
     $build = [
       '#cache' => [

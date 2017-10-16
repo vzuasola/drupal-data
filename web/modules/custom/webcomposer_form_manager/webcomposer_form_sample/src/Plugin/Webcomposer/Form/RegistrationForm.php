@@ -36,7 +36,7 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
         'name' => 'First name',
         'type' => 'textfield',
         'settings' => [
-          'placeholder' => [
+          'label' => [
             '#title' => 'Placeholder',
             '#type' => 'textfield',
             '#description' => 'Placeholder for the fistname',
@@ -49,11 +49,24 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
         'name' => 'Last name',
         'type' => 'textfield',
         'settings' => [
-          'placeholder' => [
+          'label' => [
             '#title' => 'Placeholder',
             '#type' => 'textfield',
             '#description' => 'Placeholder for the lastname',
             '#default_value' => 'ViCarpio',
+          ],
+        ],
+      ],
+
+      'submit' => [
+        'name' => 'Submit',
+        'type' => 'submit',
+        'settings' => [
+          'label' => [
+            '#title' => 'Submit Label',
+            '#type' => 'textfield',
+            '#description' => 'Label for the submit button',
+            '#default_value' => 'Submit',
           ],
         ],
       ],

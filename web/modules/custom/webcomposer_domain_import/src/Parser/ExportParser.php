@@ -10,13 +10,6 @@ namespace Drupal\webcomposer_domain_import\Parser;
 class ExportParser {
 
   /**
-   * Constructor.
-   */
-  public function __construct() {
-
-  }
-
-  /**
    * Container for default placeholder list.
    */
   private $placeholders = [];
