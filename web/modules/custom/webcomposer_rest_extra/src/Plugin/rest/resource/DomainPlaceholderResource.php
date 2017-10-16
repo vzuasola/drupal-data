@@ -222,23 +222,22 @@ class DomainPlaceholderResource extends ResourceBase
     private function getMasterPlaceholder()
     {
       $masterLists = [];
-      $masterQuery = $this->entityQuery->get('taxonomy_term', 'AND');
-      $masterQuery->condition('vid', 'master_placeholder');
-      $masterPlaceholderTids = $masterQuery->execute();
+      $placeholders = \Drupal::entityManager()->getStorage('taxonomy_term')->loadTree('master_placeholder');
+      foreach ($placeholders as $value) {
+        $token = taxonomy_term_load($value->tid);
+        if ($token->hasTranslation($this->currentLanguage)) {
+          $getTranslation = $token->getTranslation($this->currentLanguage);
+          $paragraph = $getTranslation->get('field_add_master_placeholder')->getValue(FALSE)[0]['target_id'];
+          $paragraphs = \Drupal::entityManager()->getStorage('paragraph')->load($paragraph);
+          if ($paragraphs->hasTranslation($this->currentLanguage)) {
+            $translated = $paragraphs->getTranslation($this->currentLanguage);
+            $placeholder_key = $translated->field_placeholder_key->value;
+            $placeholder_desc = $translated->field_default_value->value;
+            $masterLists[$placeholder_key] = $placeholder_desc;
+         }
+       }
 
-      $masterTerms = Term::loadMultiple($masterPlaceholderTids);
-
-      foreach ($masterTerms as $masterTerm) {
-        $termEntities = $masterTerm->get('field_add_master_placeholder')->referencedEntities();
-
-        foreach ($termEntities as $termEntity) {
-          if ($termEntity->hasTranslation($this->currentLanguage)) {
-            $translatedEntity = $termEntity->getTranslation($this->currentLanguage);
-            $masterLists[$translatedEntity->field_placeholder_key->value] = $translatedEntity->field_default_value->value;
-          }
-        }
-      }
-
+    }
       return $masterLists;
     }
 
