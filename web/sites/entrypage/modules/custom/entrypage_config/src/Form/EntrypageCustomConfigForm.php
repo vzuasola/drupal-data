@@ -64,7 +64,7 @@ class EntrypageCustomConfigForm extends ConfigFormBase {
       'trust_element_content'
     ];
 
-    foreach($keys as $key) {
+    foreach ($keys as $key) {
       $this->config('entrypage_config.entrypage_configuration')->set($key, $form_state->getValue($key))->save();
     }
 
