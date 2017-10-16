@@ -1,0 +1,7 @@
+uuid: 5121e54c-aa1e-426b-982e-a67fc0691ef7
+langcode: en
+status: true
+dependencies: {  }
+id: responsive_partner
+label: 'Responsive Partner'
+behavior_plugins: {  }
