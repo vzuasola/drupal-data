@@ -45,6 +45,13 @@ class OpusProviderConfiguration extends ConfigFormBase {
       '#default_value' => $config->get('opus_game_url')
     );
 
+    $form['opus_game_free_play_url'] = array(
+      '#type' => 'textfield',
+      '#title' => t('Opus Free Play Game url'),
+      '#description' => $this->t('Defines the Opus Free Play Games Url'),
+      '#default_value' => $config->get('opus_game_free_play_url')
+    );
+
     $form['opus_alternative_game_url'] = array(
       '#type' => 'textfield',
       '#title' => t('Opus Alternate Game url'),
@@ -114,6 +121,7 @@ class OpusProviderConfiguration extends ConfigFormBase {
     $keys = [
       'opus_game_loader_content',
       'opus_game_url',
+      'opus_game_free_play_url',
       'opus_alternative_game_url',
       'languages','currency',
       'opus_unsupported_currencies_title',

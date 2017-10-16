@@ -1,0 +1,20 @@
+uuid: a8a2a936-af47-486c-8457-dbe2d903cb21
+langcode: en
+status: true
+dependencies:
+  module:
+    - entrypage_partners
+id: entrypage_partner.entrypage_partner.user_id
+field_name: user_id
+entity_type: entrypage_partner
+bundle: entrypage_partner
+label: 'Authored by'
+description: 'The user ID of author of the Entrypage partner entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

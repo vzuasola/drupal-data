@@ -20,7 +20,7 @@ class EntrypageFrontBlockListBuilder extends EntityListBuilder {
    * {@inheritdoc}
    */
   public function buildHeader() {
-    $header['title'] = $this->t('Title');
+    $header['name'] = $this->t('Name');
     return $header + parent::buildHeader();
   }
 
@@ -28,19 +28,19 @@ class EntrypageFrontBlockListBuilder extends EntityListBuilder {
    * {@inheritdoc}
    */
   public function buildRow(EntityInterface $entity) {
-    /* @var $entity \Drupal\webcomposer_floating_banners\Entity\LeftFloatingBannerEntity */
+    /* @var $entity \Drupal\entrypage_front_blocks\Entity\EntrypageFrontBlock */
 
     // Get current and default language for fall back.
-    $langCode = \Drupal::service('language_manager')->getCurrentLanguage()->getId();
+    $language = \Drupal::service('language_manager')->getCurrentLanguage()->getId();
 
-    if ($entity->hasTranslation($langCode)) {
-      $entity = $entity->getTranslation($langCode);
-      $title = $entity->get('field_title')->value;
+    if ($entity->hasTranslation($language)) {
+      $entity = $entity->getTranslation($language);
+      $name = $entity->get('name')->value;
 
-      $row['title'] = $this->l(
-        $title,
+      $row['name'] = $this->l(
+        $name,
         new Url(
-          'entity.entrypage_front_block.edit_form', 
+          'entity.entrypage_front_block.edit_form',
           array(
             'entrypage_front_block' => $entity->id(),
           )
@@ -50,4 +50,5 @@ class EntrypageFrontBlockListBuilder extends EntityListBuilder {
       return $row + parent::buildRow($entity);
     }
   }
+
 }
