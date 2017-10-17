@@ -11,9 +11,7 @@ use Drupal\user\EntityOwnerInterface;
  *
  * @ingroup webcomposer_announcements
  */
-interface AnnouncementEntityInterface extends  ContentEntityInterface, EntityChangedInterface, EntityOwnerInterface {
-
-  // Add get/set methods for your configuration properties here.
+interface AnnouncementEntityInterface extends ContentEntityInterface, EntityChangedInterface, EntityOwnerInterface {
 
   /**
    * Gets the Announcement name.
@@ -67,7 +65,8 @@ interface AnnouncementEntityInterface extends  ContentEntityInterface, EntityCha
    * Sets the published status of a Announcement.
    *
    * @param bool $published
-   *   TRUE to set this Announcement to published, FALSE to set it to unpublished.
+   *   TRUE to set this Announcement to published,
+   *   FALSE to set it to unpublished.
    *
    * @return \Drupal\webcomposer_announcements\Entity\AnnouncementEntityInterface
    *   The called Announcement entity.

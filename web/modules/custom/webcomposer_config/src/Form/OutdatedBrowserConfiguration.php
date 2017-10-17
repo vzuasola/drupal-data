@@ -4,9 +4,12 @@ namespace Drupal\webcomposer_config\Form;
 
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\file\Entity\File;
 
+/**
+ * Config form for OutdatedBrowser.
+ */
 class OutdatedBrowserConfiguration extends ConfigFormBase {
+
   /**
    * {@inheritdoc}
    */
@@ -29,13 +32,13 @@ class OutdatedBrowserConfiguration extends ConfigFormBase {
 
     $default = $config->get('message');
 
-    $form['message'] = array(
+    $form['message'] = [
       '#type' => 'text_format',
       '#title' => $this->t('Outdated browser message'),
       '#description' => $this->t('Add outdated browser message.'),
       '#default_value' => $default['value'],
       '#format' => $default['format'],
-    );
+    ];
 
     return parent::buildForm($form, $form_state);
   }
@@ -45,7 +48,7 @@ class OutdatedBrowserConfiguration extends ConfigFormBase {
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
 
-      $this->config('webcomposer_config.browser_configuration')->set('message',$form_state->getValue('message'))->save();
+    $this->config('webcomposer_config.browser_configuration')->set('message', $form_state->getValue('message'))->save();
 
     return parent::submitForm($form, $form_state);
   }

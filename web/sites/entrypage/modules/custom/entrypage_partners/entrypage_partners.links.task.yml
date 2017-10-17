@@ -1,0 +1,22 @@
+#Entrypage partner routing definition
+entrypage_partner.settings_tab:
+  route_name: entrypage_partner.settings
+  title: 'Settings'
+  base_route: entrypage_partner.settings
+
+entity.entrypage_partner.canonical:
+  route_name: entity.entrypage_partner.canonical
+  base_route: entity.entrypage_partner.canonical
+  title: 'View'
+
+entity.entrypage_partner.edit_form:
+  route_name: entity.entrypage_partner.edit_form
+  base_route: entity.entrypage_partner.canonical
+  title: 'Edit'
+
+entity.entrypage_partner.delete_form:
+  route_name:  entity.entrypage_partner.delete_form
+  base_route:  entity.entrypage_partner.canonical
+  title: Delete
+  weight: 10
+

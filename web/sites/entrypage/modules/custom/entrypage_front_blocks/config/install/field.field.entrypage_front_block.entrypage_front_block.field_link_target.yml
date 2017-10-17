@@ -1,0 +1,23 @@
+uuid: 26c9e414-429f-4b91-9676-89524cd5aa1c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.entrypage_front_block.field_link_target
+  module:
+    - entrypage_front_blocks
+    - options
+id: entrypage_front_block.entrypage_front_block.field_link_target
+field_name: field_link_target
+entity_type: entrypage_front_block
+bundle: entrypage_front_block
+label: 'Link Target'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: _top
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -3,27 +3,29 @@
 namespace Drupal\webcomposer_affilates\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
-use Symfony\Component\HttpFoundation\JsonResponse;
-use Symfony\Component\HttpFoundation\Request;
-use Drupal\Component\Utility\Unicode;
-use Drupal\Component\Utility\Html;
 
+/**
+ * Controller for Affilate listing.
+ */
 class AffilateListing extends ControllerBase {
 
   /**
    * Returns the Taxonomy Form.
+   *
+   * @return array
+   *   The taxonomy form.
    */
   public function getTaxonomyForm() {
 
-    $taxonomyTerm = $this->entityManager()->getStorage('taxonomy_term')->create(array(
+    $taxonomyTerm = $this->entityManager()->getStorage('taxonomy_term')->create([
       'vid' => 'affiliates_parameters',
-    ));
+    ]);
 
     $taxonomyAddForm = $this->entityFormBuilder()->getForm($taxonomyTerm);
-    return array(
+    return [
       '#type' => 'markup',
       '#markup' => render($taxonomyAddForm),
-    );
+    ];
   }
-}
 
+}
