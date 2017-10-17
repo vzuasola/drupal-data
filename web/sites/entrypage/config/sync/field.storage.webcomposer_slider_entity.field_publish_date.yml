@@ -1,4 +1,4 @@
-uuid: 8065f085-a973-46a9-a633-d4ba281d3338
+uuid: 15bb5a25-4d7a-459a-a3bc-7926f9ce9fbc
 langcode: en
 status: true
 dependencies:
@@ -6,9 +6,9 @@ dependencies:
     - datetime
     - webcomposer_slider
 _core:
-  default_config_hash: JSKlHAWbAgbrFMVsYaFtvbiv6YnkB_V8KQbxeBKTwSk
-id: webcomposer_slider_entity.field_unpublish_date
-field_name: field_unpublish_date
+  default_config_hash: 4yHCMpQt19HLI7kM0fRFXSAPo8MBvv30MFW4aCpl8_E
+id: webcomposer_slider_entity.field_publish_date
+field_name: field_publish_date
 entity_type: webcomposer_slider_entity
 type: datetime
 settings:

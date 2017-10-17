@@ -1,17 +1,17 @@
-uuid: 6f29c5a6-5811-4182-8620-74dcbc9467ff
+uuid: ef6ee9e0-a261-4d28-8565-a8cb39aeae66
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.webcomposer_slider_entity.field_unpublish_date
+    - field.storage.webcomposer_slider_entity.field_publish_date
   module:
     - datetime
     - webcomposer_slider
-id: webcomposer_slider_entity.webcomposer_slider_entity.field_unpublish_date
-field_name: field_unpublish_date
+id: webcomposer_slider_entity.webcomposer_slider_entity.field_publish_date
+field_name: field_publish_date
 entity_type: webcomposer_slider_entity
 bundle: webcomposer_slider_entity
-label: 'Unpublish Date (optional)'
+label: 'Publish Date (optional)'
 description: ''
 required: false
 translatable: true

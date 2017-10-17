@@ -1,12 +1,12 @@
-uuid: 1de3279a-0e93-449c-bf22-525f35691729
+uuid: 15bb5a25-4d7a-459a-a3bc-7926f9ce9fbc
 langcode: en
 status: true
 dependencies:
   module:
     - datetime
     - webcomposer_slider
-id: webcomposer_slider_entity.field_published_date
-field_name: field_published_date
+id: webcomposer_slider_entity.field_publish_date
+field_name: field_publish_date
 entity_type: webcomposer_slider_entity
 type: datetime
 settings:

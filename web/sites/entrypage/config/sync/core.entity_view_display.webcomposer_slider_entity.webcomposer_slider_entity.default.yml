@@ -8,7 +8,7 @@ dependencies:
     - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_banner_link_target
     - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_blurb
     - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_log_in_state
-    - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_published_date
+    - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_publish_date
     - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_title
     - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_unpublish_date
   module:
@@ -68,7 +68,7 @@ content:
     third_party_settings: {  }
     type: list_default
     region: content
-  field_published_date:
+  field_publish_date:
     weight: 7
     label: above
     settings:
