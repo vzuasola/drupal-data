@@ -115,9 +115,9 @@ class ICoreGamesIntegrationConfiguration extends ConfigFormBase {
       'fallback_error'
     ];
 
-    $newKeys = array_merge($providers, $keys);
+    $result = array_merge($providers, $keys);
 
-    foreach ($newKeys as $key) {
+    foreach ($result as $key) {
       $this->config('webcomposer_config.icore_games_integration')->set($key, $form_state->getValue($key))->save();
     }
 
