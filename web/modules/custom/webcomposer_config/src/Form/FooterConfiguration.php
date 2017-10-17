@@ -117,8 +117,23 @@ class FooterConfiguration extends ConfigFormBase {
       '#title' => $this->t('Exclude These Pages'),
       '#description' => $this->t('Exclude Back To Top Button From These Pages.'),
       '#default_value' => $config->get('back_to_top_title'),
-
     ];
+
+    $form['responsive_footer'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Responsive Footer'),
+      '#collapsible' => TRUE,
+      '#group' => 'advanced',
+    ];
+
+    $form['responsive_footer']['sponsor_mobile_desc'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Sponsor Mobile Description'),
+      '#description' => $this->t('Text to be displayed in mobile devices below the sponsor logos.'),
+      '#default_value' => $config->get('sponsor_mobile_desc'),
+      '#required' => TRUE,
+    ];
+
     return parent::buildForm($form, $form_state);
   }
 
@@ -139,6 +154,7 @@ class FooterConfiguration extends ConfigFormBase {
       'quicklinks_title',
       'social_media_title',
       'back_to_top_title',
+      'sponsor_mobile_desc',
     ];
 
     foreach ($keys as $key) {
