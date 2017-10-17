@@ -35,7 +35,6 @@ module:
   field_ui: 0
   file: 0
   filter: 0
-  hal: 0
   image: 0
   imce: 0
   kint: 0

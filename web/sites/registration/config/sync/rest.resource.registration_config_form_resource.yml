@@ -4,7 +4,6 @@ status: true
 dependencies:
   module:
     - basic_auth
-    - hal
     - registration_config
     - serialization
     - user
@@ -16,9 +15,8 @@ granularity: method
 configuration:
   GET:
     supported_formats:
-      - hal_json
-      - json
-      - xml
+      1: json
+      2: xml
     supported_auth:
       - basic_auth
       - cookie
