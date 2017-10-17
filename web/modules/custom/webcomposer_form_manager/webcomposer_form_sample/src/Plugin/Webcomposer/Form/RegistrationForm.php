@@ -103,6 +103,25 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
         ],
       ],
 
+      'foods' => [
+        'name' => 'Foods',
+        'type' => 'checkboxes',
+        'settings' => [
+          'label' => [
+            '#title' => 'Label',
+            '#type' => 'textfield',
+            '#description' => 'The label for this field',
+            '#default_value' => 'Foods',
+          ],
+          'choices' => [
+            '#title' => 'Food Choices',
+            '#type' => 'textarea',
+            '#description' => 'Provide a pipe separated key value pair. <br> <small>Example key|My Value</small>',
+            '#default_value' => implode(PHP_EOL, ['pizza|Pizza', 'donut|Donut']),
+          ],
+        ],
+      ],
+
       'countries' => [
         'name' => 'Countries',
         'type' => 'select',
