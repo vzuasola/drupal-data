@@ -16,15 +16,13 @@ use Drupal\rest\ResourceResponse;
  *   }
  * )
  */
-class RegistrationConfigResource extends ResourceBase
-{
+class RegistrationConfigResource extends ResourceBase {
 
     /**
      * Responds to entity GET requests.
      * @return \Drupal\rest\ResourceResponse
      */
-    public function get($id)
-    {
+    public function get($id) {
 
         // Expired the caches for resources update.
         $build = array(
