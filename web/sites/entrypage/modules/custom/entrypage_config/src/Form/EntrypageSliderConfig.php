@@ -72,7 +72,7 @@ class EntrypageSliderConfig extends ConfigFormBase {
       'pagination_position',
     ];
 
-    foreach($keys as $key) {
+    foreach ($keys as $key) {
       // Saving the Values.
       $this->config('entrypage_config.entrypage_slider_configuration')
           ->set($key, $form_state->getValue($key))

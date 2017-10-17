@@ -9,3 +9,9 @@ webcomposer_games.games_opus_provider_schema:
   base_route_name: webcomposer_games.games_opus_provider_form
   names:
     - 'webcomposer_config.games_opus_provider'
+
+webcomposer_games.icore_games_integration_schema:
+  title: 'ICore Games Integration Configuration'
+  base_route_name: webcomposer_games.icore_games_integration_form
+  names:
+    - 'webcomposer_config.icore_games_integration'
