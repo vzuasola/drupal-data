@@ -1,10 +1,12 @@
-uuid: 91bcd7ec-e103-4eb0-8bf1-01166e26d8b4
+uuid: 8065f085-a973-46a9-a633-d4ba281d3338
 langcode: en
 status: true
 dependencies:
   module:
     - datetime
     - webcomposer_slider
+_core:
+  default_config_hash: JSKlHAWbAgbrFMVsYaFtvbiv6YnkB_V8KQbxeBKTwSk
 id: webcomposer_slider_entity.field_unpublish_date
 field_name: field_unpublish_date
 entity_type: webcomposer_slider_entity
