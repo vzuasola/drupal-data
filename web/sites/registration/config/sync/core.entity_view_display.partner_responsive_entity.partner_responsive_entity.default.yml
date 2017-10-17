@@ -1,0 +1,41 @@
+uuid: 4f3b1392-884b-48e6-a869-0689cbd529ed
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.partner_responsive_entity.partner_responsive_entity.field_responsive_partners
+  module:
+    - entity_reference_revisions
+    - user
+    - webcomposer_partner_responsive
+id: partner_responsive_entity.partner_responsive_entity.default
+targetEntityType: partner_responsive_entity
+bundle: partner_responsive_entity
+mode: default
+content:
+  field_responsive_partners:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  name:
+    label: above
+    type: string
+    weight: -4
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  user_id:
+    label: hidden
+    type: author
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true
