@@ -2,10 +2,8 @@
 
 namespace Drupal\webcomposer_cdn\Form;
 
-use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Form\ConfigFormBase;
-use Drupal\Core\Config\ConfigFactory;
 
 /**
  * Class CDNConfigForm.
@@ -13,6 +11,7 @@ use Drupal\Core\Config\ConfigFactory;
  * @package Drupal\webcomposer_cdn\Form
  */
 class CDNConfigForm extends ConfigFormBase {
+
   /**
    * {@inheritdoc}
    */
@@ -41,7 +40,7 @@ class CDNConfigForm extends ConfigFormBase {
     $form['cdn_domain_configuration'] = [
       '#type' => 'textarea',
       '#title' => $this->t('CDN Domain Configuration'),
-       '#default_value' => $config->get('cdn_domain_configuration'),
+      '#default_value' => $config->get('cdn_domain_configuration'),
       '#description' => $this->t('Add the CDN domain to specific country here.
         please follow the following format. Country Code|Domain;
         Example: PH|example.cdn.com'),
@@ -51,20 +50,19 @@ class CDNConfigForm extends ConfigFormBase {
   }
 
   /**
-    * {@inheritdoc}
-    */
+   * {@inheritdoc}
+   */
   public function validateForm(array &$form, FormStateInterface $form_state) {
-    parent::validateForm($form, $form_state);
   }
 
   /**
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-     $keys = array(
+    $keys = [
       'enable_cdn',
-      'cdn_domain_configuration'
-    );
+      'cdn_domain_configuration',
+    ];
 
     foreach ($keys as $key) {
       $this->config('webcomposer_config.cdn_configuration')->set($key, $form_state->getValue($key))->save();

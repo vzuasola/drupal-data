@@ -6,10 +6,8 @@ use Drupal\Core\Session\AccountProxyInterface;
 use Drupal\rest\Plugin\ResourceBase;
 use Drupal\rest\ResourceResponse;
 use Symfony\Component\DependencyInjection\ContainerInterface;
-use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
 use Psr\Log\LoggerInterface;
 use Drupal\webcomposer_announcements\Entity\AnnouncementEntity;
-use Drupal\Core\Datetime\DrupalDateTime;
 
 /**
  * Provides a resource to get view modes by entity and bundle.
@@ -32,8 +30,9 @@ class AnnouncementRestResource extends ResourceBase {
   protected $currentUser;
 
   /**
-   * @var string $currentLanguage
-   *    Current language
+   * Current Language.
+   *
+   * @var stringCurrentlanguage
    */
   protected $currentLanguage;
 
@@ -52,6 +51,8 @@ class AnnouncementRestResource extends ResourceBase {
    *   A logger instance.
    * @param \Drupal\Core\Session\AccountProxyInterface $current_user
    *   A current user instance.
+   * @param mixed $language_manager
+   *   The langauge instance.
    */
   public function __construct(
     array $configuration,
@@ -95,32 +96,19 @@ class AnnouncementRestResource extends ResourceBase {
     $response = [];
 
     foreach ($results as $value) {
-      echo '<pre>';
-      var_dump(new DrupalDateTime('UTC'));
-      echo '<br>';
       if ($value->hasTranslation($this->currentLanguage)) {
         $translatedEntity = $value->getTranslation($this->currentLanguage);
         $result = $translatedEntity->toArray();
-        // $publishDate = new DrupalDateTime($result['field_publish_date'][0]['value']);
-        echo '<pre>';
-        var_dump($result['field_publish_date']);
         exit;
       }
-      // 
-      // 
-
-      
-      // var_dump($publishDate)
       exit;
-
-      $response[] = $result;
     }
 
-    $build = array( 
-      '#cache' => array( 
-        'max-age' => 0, 
-      ), 
-    ); 
+    $build = [
+      '#cache' => [
+        'max-age' => 0,
+      ],
+    ];
 
     return (new ResourceResponse($response))->addCacheableDependency($build);
   }

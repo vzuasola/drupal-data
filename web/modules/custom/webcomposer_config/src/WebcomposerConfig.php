@@ -6,12 +6,22 @@ use Drupal\paragraphs\Entity\Paragraph;
 use Drupal\block\Entity\Block;
 use Drupal\menu_link_content\Entity\MenuLinkContent;
 
+/**
+ * Webcomposer Config gonna create a blocks, menu and paragraph.
+ */
 class WebcomposerConfig {
+
   /**
-   * Helper function to create paragraph item entries
+   * Creates a paragraph.
+   *
+   * @param mixed $itemsInArray
+   *   The items in array.
+   *
+   * @return array
+   *   Paragraph list.
    */
   public static function createParagraph($itemsInArray) {
-    $paragraphLists = array();
+    $paragraphLists = [];
 
     foreach ($itemsInArray as $paramKey => $paramValue) {
       foreach ($paramValue as $key => $value) {
@@ -21,52 +31,67 @@ class WebcomposerConfig {
       $paragraph = Paragraph::create($paragraphItem);
       $paragraph->save();
 
-      $paragraphLists[] = array(
+      $paragraphLists[] = [
         'target_id' => $paragraph->id(),
         'target_revision_id' => $paragraph->getRevisionId(),
-      );
+      ];
     }
 
     return $paragraphLists;
   }
 
   /**
-   * Helper function to place block in specific regions
+   * Helper function to create  Block.
+   *
+   * @param mixed $blockID
+   *   The block id.
+   * @param mixed $uuid
+   *   The uuid.
+   * @param mixed $region
+   *   The region.
+   * @param mixed $label
+   *   The label.
    */
   public static function placeBlockInRegion($blockID, $uuid, $region, $label) {
-    $block = Block::create(array(
+    $block = Block::create([
       'id' => $blockID,
       'plugin' => 'block_content:' . $uuid,
       'region' => $region,
       'provider' => 'block_content',
       'weight' => -100,
-      'settings' => array(
+      'settings' => [
         'label' => $label,
         'label_display' => 'visible',
-        'status' => TRUE
-      ),
+        'status' => TRUE,
+      ],
       'theme' => 'bartik',
-      'visibility' => array(),
-    ));
+      'visibility' => [],
+    ]);
 
     $block->save();
   }
 
   /**
-   * Helper function to create menu items
+   * Creates a menu.
+   *
+   * @param mixed $menuName
+   *   The menu name.
+   * @param mixed $items
+   *   The items.
    */
   public static function createMenu($menuName, $items) {
     foreach ($items as $link => $title) {
-      $menu_link = MenuLinkContent::create(array(
+      $menu_link = MenuLinkContent::create([
         'title' => $title,
-        'link' => array(
-          'uri' => "internal:$link"
-        ),
+        'link' => [
+          'uri' => "internal:$link",
+        ],
         'menu_name' => $menuName,
         'expanded' => TRUE,
-      ));
+      ]);
 
       $menu_link->save();
     }
   }
+
 }

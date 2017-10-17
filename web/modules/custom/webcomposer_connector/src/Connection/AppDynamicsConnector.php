@@ -4,62 +4,64 @@ namespace Drupal\webcomposer_connector\Connection;
 
 /**
  * AppDynamics Connection as service.
- * 
+ *
  * Class is to expose connection to AppDynamics as service.
  */
 use GuzzleHttp\Client;
 
+/**
+ * AppDynamics connector for logging.
+ */
 class AppDynamicsConnector {
 
   /**
-   * The static event key
+   * The static event key.
    */
   const EVENT_TYPE = 'CUSTOM';
 
   /**
-   * AppDynamics host from environment settings
+   * AppDynamics host from environment settings.
    *
    * @var string
    */
   static protected $appDynamicsHost;
 
   /**
-   * AppDynamics API authentication username
+   * AppDynamics API authentication username.
    *
    * @var string
    */
   static protected $appDynamicsUsername;
 
   /**
-   * AppDynamics API authentication account name
+   * AppDynamics API authentication account name.
    *
    * @var string
    */
   static protected $appDynamicsAccountName;
 
   /**
-   * AppDynamics API authentication password
+   * AppDynamics API authentication password.
    *
    * @var string
    */
   static protected $appDynamicsPassword;
 
   /**
-   * Guzzle client object
+   * Guzzle client object.
    *
    * @var object
    */
   static protected $client;
 
   /**
-   * Factory method.
-   * 
    * Returns AppDynamics connection object.
-   * @return Guzlle Client object.
-   *   Appdynamics connection object to make API request.    
+   *
+   * @return object
+   *   The connection.
    */
   public static function getConnection() {
-    // set connection parameters.
+    // Set connection parameters.
     self::setConnectionParameters();
     $client = self::getClient();
     return $client;
@@ -67,7 +69,7 @@ class AppDynamicsConnector {
 
   /**
    * Setter Method.
-   * 
+   *
    * Set Appdyanmics connection variables.
    * Get the variables from environment.
    */
@@ -85,24 +87,27 @@ class AppDynamicsConnector {
       self::$appDynamicsPassword = $env['APPDYNAMICS_ACCOUNTNAME'];
     }
     else {
-      // Get connection parameters from Drupal config if not stored in env varibales.
+      // Get connection parameters from Drupal config
+      // if not stored in env varibales.
       self::$appDynamicsHost = \Drupal::config('webcomposer_connector.appdynamics')->get('host');
       self::$appDynamicsUsername = \Drupal::config('webcomposer_connector.appdynamics')->get('username');
       self::$appDynamicsAccountName = \Drupal::config('webcomposer_connector.appdynamics')->get('account_name');
       self::$appDynamicsPassword = \Drupal::config('webcomposer_connector.appdynamics')->get('password');
-      ;
     }
   }
 
   /**
-   * Get Guzzle client instantiation
+   * Get Guzzle client instantiation.
    *
-   * @param array $options Additional options
-   * @return Client
+   * @param array $options
+   *   Additional options.
+   *
+   * @return GuzzleClient
+   *   Guzzel client object.
    */
-  private function getClient($options = []) {
+  private function getClient(array $options = []) {
     // We have to manually create the base64 encoded signature,
-    // as the built-in auth by Guzzle is not working
+    // as the built-in auth by Guzzle is not working.
     $credentials = base64_encode(
         self::$appDynamicsUsername . '@' . self::$appDynamicsAccountName . ':' . self::$appDynamicsPassword
     );
@@ -111,7 +116,7 @@ class AppDynamicsConnector {
       'base_uri' => self::$appDynamicsHost,
       'headers' => [
         'Content-Type' => 'application/json',
-        'Authorization' => 'Basic ' . $credentials
+        'Authorization' => 'Basic ' . $credentials,
       ],
     ];
 
