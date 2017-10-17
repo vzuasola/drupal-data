@@ -1,0 +1,13 @@
+<?php
+/**
+ * @file
+ * Functions to support creating CKEditor Accordion.
+ */
+
+/**
+ * Implements hook_page_attachments_alter().
+ */
+function ckeditor_accordion_page_attachments_alter(array &$page) {
+  // Attaches css assets globally.
+  $page['#attached']['library'][] = 'ckeditor_accordion/accordion_style';
+}

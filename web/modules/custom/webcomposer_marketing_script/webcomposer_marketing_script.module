@@ -1,0 +1,36 @@
+<?php
+
+/**
+ * @file
+ * Contains webcomposer_marketing_script.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function webcomposer_marketing_script_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the webcomposer_marketing_script module.
+    case 'help.page.webcomposer_marketing_script':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Allows to add marketing script') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function webcomposer_marketing_script_theme() {
+  return [
+    'webcomposer_marketing_script' => [
+      'template' => 'webcomposer_marketing_script',
+      'render element' => 'children',
+    ],
+  ];
+}

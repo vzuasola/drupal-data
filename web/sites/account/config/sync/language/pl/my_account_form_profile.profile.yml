@@ -1,0 +1,80 @@
+first_name_field:
+  options:
+    label: Imię
+last_name_field:
+  options:
+    label: Nazwisko
+dob_field:
+  options:
+    label: 'Data urodzenia'
+country_field:
+  options:
+    label: Kraj
+    attr:
+      placeholder: Kraj
+email_field:
+  options:
+    label: 'Adres Email'
+communication_detail_field:
+  options:
+    label: 'Dane kontaktowe'
+account_field:
+  options:
+    label: Konto
+verify_text_field: Weryfikuj
+modal_verify_header_text_field: 'Zweryfikuj numer telefonu'
+modal_verify_body_text_field: 'Kod weryfikacyjny został wysłany w postaci SMS. Aby zakończyć weryfikację twojego numeru telefonu, prosimy wpisać 6-ścio cyfrowy kod w przeciągu 10 minut. Jeżeli nie otrzymałeś żadnego kodu, prosimy o kontakt z Obsługą Klienta.'
+modal_verification_code_placeholder_field: Kod
+modal_verification_resend_code_text_field: 'Prześlij kod ponownie'
+modal_verification_submit_text_field: WYŚLIJ
+verification_code_response_field: "SMS_VERIFICATION_SUCCESS|Kod weryfikacyjny został wysłany na Twój numer komórkowy.\r\nSMS_VERIFICATION_FAILED|Przepraszamy, wystąpił błąd podczas weryfikacji Twojego numeru. Prosimy spróbować ponownie lub skontaktować się z nami popez<a href=\"mailto:plsupport@dafabet.com\"> Email </a> (Kod:110)\r\nSMS_VERIFICATION_SUBMIT_SUCCESS|Twój numer komórkowy został pomyślnie zweryfikowany.\r\nSMS_VERIFICATION_SUBMIT_FAILED| Wpisany kod jest nieprawidłowy. Prosimy spróbować ponownie. (Kod:111)\r\nINTERNAL_ERROR|Błąd wewnętrzny (Kod: 801)"
+verification_code_required_message_field: 'Pole musi być wypełnione.'
+verification_code_min_length_message_field: 'Prosimy wpisać przynajmniej 6 znaków.'
+mobile_number_field:
+  options:
+    label: 'Numer  Telefonu'
+language_field:
+  options:
+    label: Język
+contact_preference_bottom_blurb_field: '*Wszystkie promocje, aktualizacje oraz oferty będą wysyłane na Twój zarejestrowany adres mailowy.'
+contact_preference_field:
+  options:
+    label: 'Tak, chcę otrzymywać najnowsze oferty, promocje oraz aktualizacje. '
+address_field:
+  options:
+    label: Adres
+    attr:
+      placeholder: Adres
+city_field:
+  options:
+    label: Miasto
+    attr:
+      placeholder: Miasto
+postal_code_field:
+  options:
+    label: 'Kod Pocztowy'
+    attr:
+      placeholder: 'Kod Pocztowy'
+save_changes_field: 'Zapisz Zmiany'
+cancel_field: Anuluj
+server_side_validation_field: "INTERNAL_ERROR|Błąd wewnętrzny (Kod: 801)\r\nUPDATE_PROFILE_SUCCESS|Twój profil został zaktualizowany.\r\nUPDATE_PROFILE_FAILED|Podczas aktualizacji profilu wystąpił błąd. Prosimy spróbować ponownie lub skontaktować się z nami poprzez <a href=\"mailto:ensupport@dafabet.com\">Email.</a> (Kod: 700)\r\nCHECK_SESSION_PASSWORD_FAILED|Podczas aktualizacji profilu wystąpił błąd. Prosimy spróbować ponownie lub skontaktować się z nami poprzez <a href=\"mailto:ensupport@dafabet.com\">Email.</a> (Kod: 700)"
+required_validation_field: 'Pole musi być wypełnione.'
+mobile_number_min_length_validation_field: 'Prosimy wpisać przynajmniej 11 znaków.'
+mobile_number_max_length_validation_field: 'Prosimy wpisać nie więcej niż 14 znaków.'
+address_max_length_validation_field: 'Prosimy wpisać nie więcej niż 100 znaków.'
+address_min_length_validation_field: 'Prosimy wpisać przynajmniej 2 znaków.'
+city_max_length_validation_field: 'Prosimy wpisać nie więcej niż 30 znaków.'
+city_min_length_validation_field: 'Prosimy wpisać przynajmniej 2 znaków.'
+postal_code_max_length_validation_field: 'Prosimy wpisać nie więcej niż 10 znaków.'
+password_max_length_validation_field: 'Prosimy wpisać nie więcej niż 10 znaków.'
+password_min_length_validation_field: 'Prosimy wpisać przynajmniej 6 znaków.'
+primary_label_field: Podstawowy
+add_mobile_label_field: 'Dodaj Numer Telefonu'
+contact_preference_top_blurb_field: "Czy chcesz otrzymywać najnowsze oferty, promocje oraz aktualizacje?\r\n"
+modal_preview_header_field: 'Zapisz Zmiany na Koncie'
+modal_preview_top_blurb_field: 'Proszę sprawdzić listę zmian. '
+modal_preview_current_label_field: 'Obecny '
+modal_preview_new_label_field: Nowy
+modal_preview_bottom_blurb_field: 'Wprowadź swoje hasło, aby zachować zmiany na swoim koncie. '
+modal_preview_placeholder_field: Hasło
+modal_preview_btn_field: 'Zapisz Zmiany'

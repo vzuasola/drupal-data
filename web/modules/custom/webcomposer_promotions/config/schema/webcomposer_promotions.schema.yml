@@ -1,0 +1,16 @@
+webcomposer_config.promotion_configuration:
+  type: config_object
+  label: 'Promotion Custom Configurations'
+  mapping:
+    read_more:
+      type: label
+      label: 'Promotion Read More Configuration'
+    countdown:
+      type: label
+      label: 'Promotion Countdown Configuration'
+    all_text:
+      type: label
+      label: 'Promotion All Text Configuration'
+    browser_title:
+      type: label
+      label: 'Browser title Configuration'

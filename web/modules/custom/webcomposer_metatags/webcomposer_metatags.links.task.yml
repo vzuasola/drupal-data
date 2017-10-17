@@ -1,0 +1,22 @@
+# Metatag entity routing definition
+metatag_entity.settings_tab:
+  route_name: metatag_entity.settings
+  title: 'Settings'
+  base_route: metatag_entity.settings
+
+entity.metatag_entity.canonical:
+  route_name: entity.metatag_entity.canonical
+  base_route: entity.metatag_entity.canonical
+  title: 'View'
+
+entity.metatag_entity.edit_form:
+  route_name: entity.metatag_entity.edit_form
+  base_route: entity.metatag_entity.canonical
+  title: 'Edit'
+
+entity.metatag_entity.delete_form:
+  route_name:  entity.metatag_entity.delete_form
+  base_route:  entity.metatag_entity.canonical
+  title: Delete
+  weight: 10
+

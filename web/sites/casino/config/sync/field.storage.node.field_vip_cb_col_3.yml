@@ -1,0 +1,19 @@
+uuid: bae0af19-1836-4ff7-b0fe-0f629f20eaf1
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_vip_cb_col_3
+field_name: field_vip_cb_col_3
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,112 @@
+username_field:
+  options:
+    label: ユーザーネーム
+currency_field:
+  options:
+    label: 通貨
+    attr:
+      placeholder: 通貨
+first_name_field:
+  weight: '3'
+  options:
+    label: 名前
+last_name_field:
+  weight: '2'
+  options:
+    label: 苗字
+dob_field:
+  options:
+    label: ' 生年月日'
+country_field:
+  options:
+    label: 国
+    attr:
+      placeholder: 国
+email_field:
+  options:
+    label: 'E メールアドレス'
+communication_detail_field:
+  options:
+    label: ご連絡内容の詳細
+account_field:
+  options:
+    label: アカウント情報
+verify_text_field: 承認
+modal_verify_header_text_field: 携帯電話番号の確認
+modal_verify_body_text_field: '認証コードがSMSで送信されました。ご登録のお電話番号の認証を完了するには、 10 分以内に6桁の認証コードを入力して下さい。もし、認証コードをお受け取りになられていない場合は、カスタマーサポートまで、お問い合わせ下さい。'
+modal_verification_code_placeholder_field: コード
+modal_verification_resend_code_text_field: コードを再送
+modal_verification_submit_text_field: 送信
+verification_code_response_field: "SMS_VERIFICATION_SUCCESS|認証コードがお客様の携帯電話番号に送信されました。\r\nSMS_VERIFICATION_FAILED|申し訳ございません。お客様の携帯電話番号の承認にエラーが発生しました。再度お試しいただくか、カスタマーサポートまで<a href=\"mailto:jpsupport@dafabet.com\"> メール </a> にてご連絡ください。(コード:110)\r\nSMS_VERIFICATION_SUBMIT_SUCCESS|お客様の携帯電話番号が承認されました。\r\nSMS_VERIFICATION_SUBMIT_FAILED| 入力された認証コードは無効です。正しいものをご入力下さい。 (コード:111)\r\nINTERNAL_ERROR|Internal Error (コード: 801)"
+verification_code_required_message_field: 入力必須項目です。
+verification_code_min_length_message_field: 6字以上にて入力してください。
+mobile_number_field:
+  options:
+    label: 携帯電話番号
+    attr:
+      tooltip_blurb: 国番号（例：+8112345678）と併せて携帯電話番号を入力してください。数値と正符号（+）だけがご入力いただけます。
+language_field:
+  options:
+    label: 言語
+contact_preference_bottom_blurb_field: '*全てのプロモーションや特典の情報はご登録のメールアドレスに送信されます。'
+contact_preference_field:
+  options:
+    label: はい。最新のプロモーションや特典、その他の重要なお知らせの送信を希望します。
+home_address_field:
+  options:
+    label: 住所
+verification_code_max_length_message_field: 6字以上にて入力してください。
+address_field:
+  options:
+    label: 住所
+    attr:
+      placeholder: 住所
+city_field:
+  options:
+    label: 市区町村
+    attr:
+      placeholder: 市区町村
+postal_code_field:
+  options:
+    label: 郵便番号
+    attr:
+      placeholder: 郵便番号
+save_changes_field: 変更を保存する
+cancel_field: キャンセル
+server_side_validation_field: "INTERNAL_ERROR|内部エラー (Code: 801)\r\nUPDATE_PROFILE_SUCCESS|お客様の登録情報は更新されました。\r\nUPDATE_PROFILE_FAILED|お客様の登録情報が更新できませんでした。再度お試しいただくか、カスタマーサポートまで<a href=\"mailto:jpsupport@dafabet.com\">にてご連絡ください。(Code: 700)\r\nCHECK_SESSION_PASSWORD_FAILED|お客様の登録情報が更新できませんでした。再度お試しいただくか、カスタマーサポートまで<a href=\"mailto:jpsupport@dafabet.com\">にてご連絡ください。(Code: 700)"
+required_validation_field: 入力必須項目です。
+mobile_number_min_length_validation_field: 11字以上にて入力してください。
+mobile_number_max_length_validation_field: 14字以内にて入力してください。
+address_max_length_validation_field: 100字以内にて入力してください。
+address_min_length_validation_field: 2字以上にて入力してください。
+city_max_length_validation_field: 30字以内にて入力してください。
+city_min_length_validation_field: 2字以上にて入力してください。
+postal_code_max_length_validation_field: 10字以内にて入力してください。
+password_max_length_validation_field: 10字以内にて入力してください。
+password_min_length_validation_field: 6字以上にて入力してください。
+primary_label_field: 主番号
+add_mobile_label_field: 携帯電話番号を追加
+contact_preference_top_blurb_field: "最新のプロモーションや特典、その他の重要なお知らせをお受け取りになりますか？\r\n"
+modal_preview_header_field: アカウント情報の変更を保存する
+modal_preview_top_blurb_field: "変更する情報をご確認ください。\r\n"
+modal_preview_current_label_field: 現在の登録情報
+modal_preview_new_label_field: 新しい登録情報
+modal_preview_bottom_blurb_field: "アカウント情報の変更を保存するにはパスワードを入力してください。\r\n"
+modal_preview_placeholder_field: パスワード
+modal_preview_btn_field: 変更を保存する
+mobile_number_format_validation_field: （+）プラス記号と半角数字のみ、ご記入いただけます。
+address_format_validation_field: '　半角英数字と()_-/\&#,.のみ、ご記入いただけます。'
+city_format_validation_field: '　半角英数字と()_-/\&#,.のみ、ご記入いただけます。'
+postal_code_format_validation_field: （－）マイナス記号と半角英数字のみ、ご記入いただけます。
+password_format_validation_field: 半角英数字のみ、ご記入いただけます。
+gender_field:
+  options:
+    label: 性別
+no_changed_detected_message_field: 変更はありません
+contact_preference_label:
+  options:
+    label: 連絡先の設定
+contact_preference_yes_label_field: ' はい'
+contact_preference_no_label_field: いいえ
+male_label_field: '男性 '
+female_label_field: 女性

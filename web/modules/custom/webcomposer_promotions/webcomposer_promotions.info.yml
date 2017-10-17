@@ -1,0 +1,12 @@
+name: Webcomposer Promotions
+type: module
+description: It Adds promotions feature for centralised promotions.
+core: 8.x
+package: Web Composer
+dependencies:
+  - scheduler
+  - entityqueue
+  - content_translation
+  # - relaxed
+  # - workspace
+  # - deploy

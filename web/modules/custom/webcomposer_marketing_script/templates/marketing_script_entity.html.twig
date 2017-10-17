@@ -1,0 +1,22 @@
+{#
+/**
+ * @file marketing_script_entity.html.twig
+ * Default theme implementation to present Marketing Script data.
+ *
+ * This template is used when viewing Marketing Script pages.
+ *
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_marketing_script_entity()
+ *
+ * @ingroup themeable
+ */
+#}
+<div{{ attributes.addClass('marketing_script_entity') }}>
+  {% if content %}
+    {{- content -}}
+  {% endif %}
+</div>

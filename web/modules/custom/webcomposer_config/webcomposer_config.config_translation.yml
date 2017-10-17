@@ -1,0 +1,29 @@
+webcomposer_config.header_configuration_schema:
+  title: 'Header Configuration'
+  base_route_name: webcomposer_config.header_configuration_form
+  names:
+    - 'webcomposer_config.header_configuration'
+
+webcomposer_config.footer_configuration_schema:
+  title: 'Footer Configuration'
+  base_route_name: webcomposer_config.footer_configuration_form
+  names:
+    - 'webcomposer_config.footer_configuration'
+
+webcomposer_config.login_configuration_schema:
+  title: 'Login Configuration'
+  base_route_name: webcomposer_config.login_configuration_form
+  names:
+    - 'webcomposer_config.login_configuration'
+
+webcomposer_config.outdated_browser_configuration_schema:
+  title: 'Outdated Browser Configuration'
+  base_route_name: webcomposer_config.outdated_browser_configuration_form
+  names:
+    - 'webcomposer_config.browser_configuration'
+
+webcomposer_config.page_not_found_schema:
+  title: 'Page Not Found'
+  base_route_name: entrypage_config.page_not_found_form
+  names:
+    - 'webcomposer_config.page_not_found'

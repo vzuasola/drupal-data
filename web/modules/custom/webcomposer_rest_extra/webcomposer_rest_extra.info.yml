@@ -1,0 +1,9 @@
+name: Webcomposer Rest Extra
+type: module
+description: Extra Rest resources to enable access entities configuration
+package: Web Composer
+
+version: '8.x-1.x-dev'
+core: '8.x'
+
+

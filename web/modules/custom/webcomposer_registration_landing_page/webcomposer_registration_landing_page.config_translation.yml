@@ -1,0 +1,5 @@
+webcomposer_registration_landing_page.registration_landing_page_configuration_schema:
+  title: 'Registration Landing Page Configuration'
+  base_route_name: webcomposer_registration_landing_page.registration_landing_page_configuration_form
+  names:
+    - 'webcomposer_config.registration_landing_page_configuration'

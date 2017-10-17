@@ -1,0 +1,42 @@
+uuid: db5d3876-3a4f-4e66-be23-95130e691688
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.affiliates_parameters.field_active
+    - field.field.taxonomy_term.affiliates_parameters.field_select_affiliates_group
+    - taxonomy.vocabulary.affiliates_parameters
+_core:
+  default_config_hash: mKAdujvHPT2NBm9tGzJwqesrsYLSnucSVf1gF85-pyI
+id: taxonomy_term.affiliates_parameters.default
+targetEntityType: taxonomy_term
+bundle: affiliates_parameters
+mode: default
+content:
+  field_active:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_select_affiliates_group:
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  description: true
+  langcode: true
+  path: true

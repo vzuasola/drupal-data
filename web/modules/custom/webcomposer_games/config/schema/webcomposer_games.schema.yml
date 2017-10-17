@@ -1,0 +1,27 @@
+
+webcomposer_config.games_playtech_provider:
+  type: config_object
+  label: 'Playtech Provider Configuration'
+  mapping:
+    lobby_url:
+      type: text
+      label: 'Lobby URL'
+
+webcomposer_config.games_opus_provider:
+  type: config_object
+  label: 'Opus Provider Configuration'
+  mapping:
+    opus_game_loader_content:
+      type: text_format
+      label: 'Content'
+      translatable: true
+    opus_unsupported_currencies_message:
+      type: text_format
+      label: 'Content'
+      translatable: true
+    opus_unsupported_currencies_title:
+      type: text
+      label: 'Title'
+    opus_unsupported_currencies_button:
+      type: text
+      label: 'Button Ok'

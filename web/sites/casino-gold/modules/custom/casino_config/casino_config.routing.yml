@@ -1,0 +1,31 @@
+casino_config.admin_settings:
+  path: 'admin/config/casino'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Casino Configuration'
+  requirements:
+    _permission: 'administer site configuration'
+
+casino_config.unsupp_language_form:
+  path: 'admin/config/casino/unsupported-language'
+  defaults:
+    _form: 'Drupal\casino_config\Form\UnSupportedLanguage'
+    _title: 'Unsupported Language'
+  requirements:
+    _permission: 'administer site configuration'
+
+casino_config.promo_right_block_form:
+  path: 'admin/config/casino/promo-right-block'
+  defaults:
+    _form: 'Drupal\casino_config\Form\PromotionsRightBlockConfig'
+    _title: 'Promo Right Block Configurations'
+  requirements:
+    _permission: 'administer site configuration'
+
+casino_config.provisioning_config_form:
+  path: 'admin/config/casino/provisioning-ligtbox-config'
+  defaults:
+    _form: 'Drupal\casino_config\Form\ProvisionLightBoxConfig'
+    _title: 'Provisioning LigtBox Configurations'
+  requirements:
+    _permission: 'administer site configuration'

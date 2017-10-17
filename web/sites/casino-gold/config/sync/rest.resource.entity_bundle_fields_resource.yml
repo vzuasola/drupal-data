@@ -1,0 +1,19 @@
+uuid: 74efb83c-ea2f-432b-a1c4-0bc25e276dda
+langcode: en
+status: true
+dependencies:
+  module:
+    - basic_auth
+    - serialization
+    - user
+    - webcomposer_rest_extra
+id: entity_bundle_fields_resource
+plugin_id: entity_bundle_fields_resource
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+    supported_auth:
+      - basic_auth
+      - cookie

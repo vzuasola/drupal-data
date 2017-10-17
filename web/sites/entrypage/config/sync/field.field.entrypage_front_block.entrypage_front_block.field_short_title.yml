@@ -1,0 +1,21 @@
+uuid: 7522001a-e606-49b8-b3ef-e1ba8df53349
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.entrypage_front_block.field_short_title
+  module:
+    - entrypage_front_blocks
+    - text
+id: entrypage_front_block.entrypage_front_block.field_short_title
+field_name: field_short_title
+entity_type: entrypage_front_block
+bundle: entrypage_front_block
+label: 'Short Title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

@@ -1,0 +1,23 @@
+uuid: 37b91fc5-5954-4e53-8b73-290b5c73c7ff
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_enable_disable
+    - taxonomy.vocabulary.history_table_header
+id: taxonomy_term.history_table_header.field_enable_disable
+field_name: field_enable_disable
+entity_type: taxonomy_term
+bundle: history_table_header
+label: Enable/Disable
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

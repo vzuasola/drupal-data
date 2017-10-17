@@ -1,0 +1,94 @@
+<?php
+
+/**
+ * @file
+ * Contains webcomposer_cdn.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Component\Utility\Html;
+
+/**
+ * Implements hook_help().
+ */
+function webcomposer_cdn_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the webcomposer_cdn module.
+    case 'help.page.webcomposer_cdn':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('This module handles the CDN configuration.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_file_url_alter()
+ */
+function webcomposer_cdn_file_url_alter(&$uri) {
+  // Get the CDN configuration from the
+  $config = \Drupal::config('webcomposer_config.cdn_configuration');
+  $cdn_is_enabled = $config->get('enable_cdn');
+  $cdn_domains = $config->get('cdn_domain_configuration');
+  // Check if the CDN is enabled and FE_BASE_URI is set and proceed.
+  if (isset($_SERVER['HTTP_X_FE_BASE_URI']) && $cdn_is_enabled === 1) {
+    // Exclude drupal css from change the url alter.
+    if (substr($uri, -4) === '.css' || substr($uri, -4) ===  '/[a-z][A-Z]/' . '.js') {
+      return;
+    }
+
+    if (isset($_SERVER['HTTP_X_FE_COUNTRY_CODE'])) {
+      $country_code = $_SERVER['HTTP_X_FE_COUNTRY_CODE'];
+    } else {
+      $country_code = 'NULL';
+    }
+
+    // Get domain configuration in the form of array.
+    $domains = explode(PHP_EOL, $cdn_domains);
+    foreach ($domains as $value) {
+      $domain_value = str_replace(' ', '', $value);
+      list($code, $domain) = explode('|', $domain_value);
+      $domain_settings[$code] = $domain;
+    }
+
+    if (!empty($country_code) && array_key_exists($country_code, $domain_settings)) {
+      $url = preg_replace('/public:\/\//', '', $uri);
+      $domain = trim($domain_settings[$country_code]);
+      $uri = 'https://' . $domain . '/' . $url;
+    }
+  }
+}
+
+/**
+ * Implements hook_inline_image_url_change_alter().
+ */
+function webcomposer_cdn_inline_image_url_change_alter(&$basepath) {
+  // Get the CDN configuration from the
+  $config = \Drupal::config('webcomposer_config.cdn_configuration');
+  $cdn_is_enabled = $config->get('enable_cdn');
+  $cdn_domains = $config->get('cdn_domain_configuration');
+
+  if (isset($_SERVER['HTTP_X_FE_COUNTRY_CODE'])) {
+    $country_code = $_SERVER['HTTP_X_FE_COUNTRY_CODE'];
+  } else {
+    $country_code = 'NULL';
+  }
+
+  // Get domain configuration in the form of array.
+  $domains = explode(PHP_EOL, $cdn_domains);
+  foreach ($domains as $value) {
+    $domain_value = str_replace(' ', '', $value);
+    list($code, $domain) = explode('|', $domain_value);
+    $domain_settings[$code] = $domain;
+  }
+  $domain = trim($domain_settings[$country_code]);
+  // Alter the image url if the request is from front-end
+  if (isset($_SERVER['HTTP_X_FE_BASE_URI']) && $cdn_is_enabled === 1 &&
+    !empty($country_code) && array_key_exists($country_code, $domain_settings)) {
+    $basepath = "https://$domain";
+  } else {
+    $basepath = $basepath;
+  }
+}

@@ -1,0 +1,34 @@
+uuid: b72cdfe0-7f25-4d67-8915-3874b01abe54
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
+id: authenticated
+label: 'Authenticated user'
+weight: 1
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access my_account config'
+  - 'access shortcuts'
+  - 'access site-wide contact form'
+  - 'post comments'
+  - 'restful get Web Composer Token Resource Label'
+  - 'restful get configuration_resource'
+  - 'restful get domain_placeholder'
+  - 'restful get entity_bundle_fields_resource'
+  - 'restful get entity_bundle_weight_resource'
+  - 'restful get form_resource'
+  - 'restful get language_rest_resource'
+  - 'restful get my_account_core_form_resource'
+  - 'restful get my_account_profile_form_resource'
+  - 'restful get rest_menu_item'
+  - 'restful get webcomposer_token_rest'
+  - 'restful post Web Composer Token Resource Label'
+  - 'restful post contact_message'
+  - 'restful post webcomposer_token_rest'
+  - 'search content'
+  - 'skip comment approval'
+  - 'use text format basic_html'

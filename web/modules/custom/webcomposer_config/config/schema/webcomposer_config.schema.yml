@@ -1,0 +1,163 @@
+webcomposer_config.header_configuration:
+  type: config_object
+  label: 'Header Configurations'
+  mapping:
+    join_now_text:
+      type: label
+      label: 'Join Now Text'
+    join_now_link:
+      type: label
+      label: 'Join Now Link'
+    login_issue_text:
+      type: label
+      label: 'Login Issue Text'
+    login_issue_link:
+      type: label
+      label: 'Login Issue Link'
+    balance_error_text:
+      type: label
+      label: 'Balance Error Message'
+    balance_error_text_product:
+      type: label
+      label: 'Product Balance Error Message'
+    balance_label_mapping:
+      type: text
+      label: 'Balances label mapping'
+    lobby_page_title:
+      type: label
+      label: 'Lobby Page Title'
+    critical_announcement:
+      type: label
+      label: 'Enable Critical Issue announcements'
+      translatable: true
+    critical_announcement_content:
+      type: text_format
+      label: 'Critical Announcement Content'
+      translatable: true
+    news_announcement:
+      type: label
+      label: 'Enable news announcements'
+      translatable: true
+    news_announcement_content:
+      type: text_format
+      label: 'News Announcement Content'
+      translatable: true
+    cashier_icon_hover_text:
+      type: label
+      label: 'Cashier Icon Hover Text'
+    profile_icon_hover_text:
+      type: label
+      label: 'My Profile Icon Hover Text'
+    product_menu_new_tag:
+      type: label
+      label: 'New tag text'
+    welcome_text:
+      type: label
+      label: 'Welcome Text'
+    profile_link:
+      type: label
+      label: 'Profile Link'
+    profile_logout_text:
+      type: label
+      label: 'Profile Logout Text'
+
+webcomposer_config.footer_configuration:
+  type: config_object
+  label: 'Footer Configurations'
+  mapping:
+    about_dafabet_title:
+      type: label
+      label: 'About dafabet title'
+    about_dafabet_content:
+      type: text_format
+      label: 'About dafabet description'
+      translatable: true
+    quicklinks_title:
+      type: label
+      label: 'Quicklinks title'
+    social_media_title:
+      type: label
+      label: 'Social Media Title'
+
+webcomposer_config.login_configuration:
+  type: config_object
+  label: 'Login Configurations'
+  mapping:
+    username_placeholder:
+     type: label
+     label: 'Username field Placeholder'
+    password_placeholder:
+      type: label
+      label: 'Password field Placeholder'
+    login_bottom_label:
+      type: label
+      label: 'Login Botton Label'
+    lightbox_blurb:
+      type: label
+      label: 'Login lightbox blurb'
+    error_message_blank_username:
+      type: label
+      label: 'Blank Username'
+    error_message_blank_password:
+      type: label
+      label: 'Blank Password'
+    error_message_blank_passname:
+      type: label
+      label: 'Blank Username and Password'
+    error_message_invalid_passname:
+      type: label
+      label: 'Invalid Username and Password'
+    error_message_account_suspended:
+      type: label
+      label: 'Suspended Player Account'
+    error_message_account_locked:
+      type: label
+      label: 'Locked Player Account'
+    error_message_service_not_available:
+      type: label
+      label: 'Error thrown by services'
+    max_session_time:
+      type: label
+      label: 'Maximum Session Time'
+    autologout_box_title:
+      type: label
+      label: 'Auto Logout LightBox Title'
+    autologout_box_content:
+      type: text_format
+      label: 'Auto Logout LightBox Content'
+    affirmative_button_text:
+      type: label
+      label: 'Affirmative Response text'
+    negative_button_text:
+      type: label
+      label: 'Negative Response text'
+    notification_title:
+      type: label
+      label: 'The Title of the Auto logout Notification LightBox'
+    notification_window_title:
+      type: label
+      label: 'Notification Window Title'
+    notification_content:
+      type: text_format
+      label: 'Notification Box Content'
+
+webcomposer_config.browser_configuration:
+  type: config_object
+  label: 'Outdated Browser Configurations'
+  mapping:
+    message:
+      type: text_format
+      label: 'Outdated browser message'
+      translatable: true
+
+webcomposer_config.page_not_found:
+  type: config_object
+  label: 'Page Not Found'
+  mapping:
+    page_not_found_title:
+      type: label
+      label: 'Page Title'
+    page_not_found_content:
+      type: text_format
+      label: 'Content'
+      translatable: true

@@ -1,0 +1,218 @@
+variables:
+  GIT_SUBMODULE_STRATEGY: recursive
+
+stages:
+  - tests
+  - package
+  - deploy-dev
+  - integration-tests-development
+  - deploy-test
+  - integration-tests-test
+  - deploy-staging
+  - integration-tests-staging
+  - staging-signoff
+  - deploy-internal-production
+  - internal-production-signoff
+  - deploy-production
+
+static code analysis:
+  stage: tests
+  script:
+    - python -u automation/run.py --stage phpunit-sonarqube
+  allow_failure: true
+
+php code sniffer:
+  stage: tests
+  script:
+    - python -u automation/run.py --stage phpcs
+  allow_failure: true
+
+phpmd:
+  stage: tests
+  script:
+    - python -u automation/run.py --stage phpmd
+  allow_failure: true
+
+sensiolabs security checker:
+  stage: tests
+  script:
+    - python -u automation/run.py --stage sensiolab-security-checker
+  allow_failure: true
+
+create package:
+  stage: package
+  script:
+    - python -u automation/run.py --stage package
+  artifacts:
+    paths:
+      - "*.tar.gz"
+      - automation/deployed/*.jsonl
+    expire_in: 1 day
+  when: manual
+  cache:
+    key: v2
+    paths:
+      - .composer-cache/
+
+dev:
+  stage: deploy-dev
+  environment:
+    name: development
+    url: https://rodwin.fix.me
+  script:
+    - python -u automation/run.py --stage deploy-development
+  when: manual
+  dependencies:
+    - create package
+  artifacts:
+    paths:
+      - automation/deployed/*.jsonl
+
+qa1:
+  stage: deploy-test
+  environment:
+    name: testing
+    url: https://rodwin.fix.me
+  script:
+    - python -u automation/run.py --stage deploy-testing
+  when: manual
+  artifacts:
+    paths:
+      - automation/deployed/*.jsonl
+  only:
+    - /^working$/
+    - /^release-.*$/
+    - tags
+
+hp fortify scan qa1:
+  stage: integration-tests-test
+  script:
+    - python -u automation/run.py --stage code-scan-testing
+  when: manual
+  dependencies:
+    - qa1
+  artifacts:
+    paths:
+      - automation/deployed/*.jsonl
+  only:
+    - /^working$/
+    - /^release-.*$/
+    - tags
+
+tct:
+  stage: deploy-test
+  environment:
+    name: tct
+    url: https://rodwin.fix.me
+  script:
+    - python -u automation/run.py --stage deploy-tct
+  when: manual
+  artifacts:
+    paths:
+      - automation/deployed/*.jsonl
+  only:
+    - /^working$/
+    - /^release-.*$/
+    - tags
+
+uat:
+  stage: deploy-staging
+  environment:
+    name: uat
+    url: https://rodwin.fix.me
+  script:
+    - python -u automation/run.py --stage deploy-uat
+  when: manual
+  dependencies:
+    - qa1
+    - tct
+  artifacts:
+    paths:
+      - automation/deployed/*.jsonl
+  only:
+    - /^release-.*$/
+    - tags
+
+staging:
+  stage: deploy-staging
+  environment:
+    name: staging
+    url: https://rodwin.fix.me
+  script:
+    - python -u automation/run.py --stage deploy-staging
+  when: manual
+  dependencies:
+    - qa1
+    - tct
+  artifacts:
+    paths:
+      - automation/deployed/*.jsonl
+  only:
+    - /^release-.*$/
+    - tags
+
+staging signoff:
+  stage: staging-signoff
+  environment:
+    name: staging-signoff
+  script:
+    - python -u automation/run.py --stage staging-signoff
+  when: manual
+  dependencies:
+    - staging
+  artifacts:
+    paths:
+      - automation/deployed/*.jsonl
+  only:
+    - /^release-.*$/
+    - tags
+
+internal prod:
+  stage: deploy-internal-production
+  environment:
+    name: internal-production
+    url: https://rodwin.fix.me
+  script:
+    - python -u automation/run.py --stage deploy-internal-production
+  when: manual
+  dependencies:
+   - staging signoff
+  artifacts:
+    paths:
+      - automation/deployed/*.jsonl
+  only:
+    - /^release-.*$/
+    - tags
+
+internal prod signoff:
+  stage: internal-production-signoff
+  environment:
+    name: internal-production-signoff
+  script:
+    - python -u automation/run.py --stage internal-prod-signoff
+  when: manual
+  dependencies:
+    - internal prod
+  artifacts:
+    paths:
+      - automation/deployed/*.jsonl
+  only:
+    - /^release-.*$/
+    - tags
+
+production:
+  stage: deploy-production
+  environment:
+    name: production
+    url: https://www.dafabet.com/en/sports-df/
+  script:
+    - python -u automation/run.py --stage deploy-production
+  when: manual
+  dependencies:
+   - internal prod signoff
+  artifacts:
+    paths:
+      - automation/deployed/*.jsonl
+  only:
+    - /^release-.*$/
+    - tags

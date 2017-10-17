@@ -1,0 +1,24 @@
+uuid: 9040b604-8abb-4f18-9a37-3e35c00d1a9c
+langcode: en
+status: true
+dependencies:
+  module:
+    - basic_auth
+    - hal
+    - my_account_core
+    - serialization
+    - user
+_core:
+  default_config_hash: OMRMuQOGULzZb098a24bicic0DDOD0V69SsgLCBoCM0
+id: my_account_core_form_resource
+plugin_id: my_account_core_form_resource
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - hal_json
+      - json
+      - xml
+    supported_auth:
+      - basic_auth
+      - cookie

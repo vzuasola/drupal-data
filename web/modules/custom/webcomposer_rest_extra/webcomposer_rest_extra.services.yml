@@ -1,0 +1,6 @@
+services:
+  webcomposer_rest_extra.node_entity:
+    class: Drupal\webcomposer_rest_extra\Normalizer\NodeEntityNormalizer
+    arguments: ['@entity.manager']
+    tags:
+      - { name: normalizer, priority: 10 }

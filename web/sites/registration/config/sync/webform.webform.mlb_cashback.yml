@@ -1,0 +1,122 @@
+uuid: d22d1cd0-9085-4e04-b67e-d10fd9cae31e
+langcode: en
+status: open
+dependencies:
+  module:
+    - webcomposer_webform
+third_party_settings:
+  webcomposer_webform:
+    webcomposer_webform_layout:
+      label_font_color: '#000000'
+      error_font_color: '#ff0000'
+      header_markup:
+        value: ''
+        format: basic_html
+    webcomposer_webform_submission_layout:
+      success_font_color: '#00ff00'
+      success_background_color: '#ffffff'
+      error_font_color: '#ff0000'
+      error_background_color: '#ffffff'
+    webform_background:
+      background_image: {  }
+open: null
+close: null
+uid: 117
+template: false
+id: mlb_cashback
+title: 'MLB CASHBACK'
+description: 'Username capture for MLB Cashback entries'
+category: Winter
+elements: "player_username:\n  '#type': textfield\n  '#title': 'Player Username'\n  '#description': Username\n  '#visibility': 1\n  '#required': true\n  '#required_error': 'This field is required'\n  '#alphanumeric': 1\n  '#alphanumeric_error': 'Input should be alphanumeric'\n  '#unicode': 0\n  '#unicode_error': ''\n  '#email': 0\n  '#email_error': ''\n  '#numeric': 0\n  '#numeric_error': ''\n  '#numeric_symbols': 0\n  '#numeric_symbols_error': ''\n  '#min_length': 0\n  '#min_length_value': ''\n  '#min_length_error': ''\n  '#max_length': 0\n  '#max_length_value': ''\n  '#max_length_error': ''\n"
+css: ''
+javascript: ''
+settings:
+  ajax: false
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  form_submit_once: false
+  form_exception_message: ''
+  form_open_message: ''
+  form_close_message: 'The competition has reached maximum entries. Please try again next week before semi-finals start.&nbsp;'
+  form_previous_submissions: true
+  form_confidential: false
+  form_confidential_message: ''
+  form_convert_anonymous: false
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_unsaved: false
+  form_disable_back: false
+  form_autofocus: false
+  form_details_toggle: false
+  submission_label: ''
+  submission_log: false
+  submission_user_columns: {  }
+  wizard_progress_bar: true
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_start_label: ''
+  wizard_complete: true
+  wizard_complete_label: ''
+  preview: 0
+  preview_label: ''
+  preview_title: ''
+  preview_message: ''
+  preview_attributes: {  }
+  preview_excluded_elements: {  }
+  draft: none
+  draft_multiple: false
+  draft_auto_save: false
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  confirmation_type: page
+  confirmation_title: ''
+  confirmation_message: 'Thank you! Your entry has been received!&nbsp;'
+  confirmation_url: ''
+  confirmation_attributes: {  }
+  confirmation_back: true
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  limit_total: null
+  limit_total_message: ''
+  limit_user: 1
+  limit_user_message: ''
+  purge: none
+  purge_days: null
+  entity_limit_total: 1
+  entity_limit_user: 1
+  results_disabled: false
+  results_disabled_ignore: false
+  token_update: false
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+  view_any:
+    roles: {  }
+    users: {  }
+  update_any:
+    roles: {  }
+    users: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+  view_own:
+    roles: {  }
+    users: {  }
+  update_own:
+    roles: {  }
+    users: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+handlers: {  }

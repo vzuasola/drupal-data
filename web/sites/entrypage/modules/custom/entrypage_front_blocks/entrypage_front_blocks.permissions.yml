@@ -1,0 +1,22 @@
+add entrypage front block entities:
+  title: 'Create new Entrypage front block entities'
+
+administer entrypage front block entities:
+  title: 'Administer Entrypage front block entities'
+  description: 'Allow to access the administration form to configure Entrypage front block entities.'
+  restrict access: true
+
+delete entrypage front block entities:
+  title: 'Delete Entrypage front block entities'
+
+edit entrypage front block entities:
+  title: 'Edit Entrypage front block entities'
+
+access entrypage front block overview:
+  title: 'Access the Entrypage front block overview page'
+
+view published entrypage front block entities:
+  title: 'View published Entrypage front block entities'
+
+view unpublished entrypage front block entities:
+  title: 'View unpublished Entrypage front block entities'

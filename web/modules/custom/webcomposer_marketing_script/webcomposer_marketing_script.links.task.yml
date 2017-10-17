@@ -1,0 +1,22 @@
+# Marketing Script routing definition
+marketing_script_entity.settings_tab:
+  route_name: marketing_script_entity.settings
+  title: 'Settings'
+  base_route: marketing_script_entity.settings
+
+entity.marketing_script_entity.canonical:
+  route_name: entity.marketing_script_entity.canonical
+  base_route: entity.marketing_script_entity.canonical
+  title: 'View'
+
+entity.marketing_script_entity.edit_form:
+  route_name: entity.marketing_script_entity.edit_form
+  base_route: entity.marketing_script_entity.canonical
+  title: 'Edit'
+
+entity.marketing_script_entity.delete_form:
+  route_name:  entity.marketing_script_entity.delete_form
+  base_route:  entity.marketing_script_entity.canonical
+  title: Delete
+  weight: 10
+

@@ -1,0 +1,117 @@
+username_field:
+  options:
+    label: 用戶名
+currency_field:
+  options:
+    label: 貨幣
+    attr:
+      placeholder: 貨幣
+first_name_field:
+  weight: '3'
+  options:
+    label: 名
+last_name_field:
+  weight: '2'
+  options:
+    label: 姓
+dob_field:
+  options:
+    label: 出生日期
+dob_day:
+  weight: '7'
+dob_year:
+  weight: '5'
+country_field:
+  options:
+    label: 國家
+    attr:
+      placeholder: 國家
+email_field:
+  options:
+    label: 電子郵件地址
+communication_detail_field:
+  options:
+    label: 聯系方式
+account_field:
+  options:
+    label: 賬戶信息
+verify_text_field: 驗證
+modal_verify_header_text_field: 驗證手機號碼
+modal_verify_body_text_field: '驗證碼已通過短信發送給您。請在10 分鐘內輸入下面的6位數驗證碼完成手機號碼認證。如果您未收到任何代碼，請聯繫人工客服。'
+modal_verification_code_placeholder_field: '驗證碼 '
+modal_verification_resend_code_text_field: 重新發送
+modal_verification_submit_text_field: 提交
+verification_code_response_field: "SMS_VERIFICATION_SUCCESS|驗證碼已發送至您的手機號碼。\r\nSMS_VERIFICATION_FAILED|抱歉，驗證手機號碼出現錯誤。請重試或通過<a href=\"{livechat.link}\" class=\"live-chat-popup-trigger\"> 在線聊天</a>或<a href=\"mailto:cnsupport@dafabet.com\">郵箱</a>聯系我們。(代碼: 110)\r\nSMS_VERIFICATION_SUBMIT_SUCCESS|您的手機號碼已驗證成功。\r\nSMS_VERIFICATION_SUBMIT_FAILED| 您輸入的驗證碼無效。請重試。 (代碼:111)\r\nINTERNAL_ERROR|內部錯誤 (代碼: 801)"
+verification_code_required_message_field: 此項必填。
+verification_code_min_length_message_field: 請至少輸入6個字符。
+mobile_number_field:
+  options:
+    label: 手機號碼
+    attr:
+      tooltip_blurb: 請輸入手機號及區號（如：+8612345678）。只允許輸入數字值和加號。
+    error: ''
+language_field:
+  options:
+    label: 語言
+    attr:
+      placeholder: 語言
+    error: ''
+contact_preference_field:
+  options:
+    label: 好的，請給我發送優惠活動、即時更新以及奉送的最新信息。
+verification_code_max_length_message_field: 請輸入不超過10個字符。
+address_field:
+  options:
+    label: 地址
+    attr:
+      placeholder: 地址
+city_field:
+  options:
+    label: 鎮/市
+    attr:
+      placeholder: 鎮/市
+postal_code_field:
+  options:
+    label: 郵編
+    attr:
+      placeholder: 郵編
+save_changes_field: 保存更改
+cancel_field: 取消
+server_side_validation_field: "INTERNAL_ERROR|內部錯誤 (代碼: 801)\r\nUPDATE_PROFILE_SUCCESS|您的資料已經更新。\r\nUPDATE_PROFILE_FAILED|更新資料出現錯誤。請重試或通過。<a href=\"{livechat.link}\" class=\"live-chat-popup-trigger\">在線聊天</a>或<a href=\"mailto:cnsupport@dafabet.com\">郵箱</a>聯系我們。(代碼: 700)\r\nCHECK_SESSION_PASSWORD_FAILED|更新資料出現錯誤。請重試或通過。<a href=\"{livechat.link}\" class=\"live-chat-popup-trigger\">在線聊天</a>或<a href=\"mailto:cnsupport@dafabet.com\">郵箱</a>聯系我們。(代碼: 700)"
+required_validation_field: 此項必填。
+mobile_number_format_validation_field: '此欄僅可含加號(+) 和數字值。'
+mobile_number_min_length_validation_field: 請至少輸入11個字符。
+mobile_number_max_length_validation_field: 請輸入不超過14個字符。
+address_max_length_validation_field: 請輸入不超過100個字符。
+address_min_length_validation_field: 請至少輸入2個字符。
+address_format_validation_field: '此欄僅可含字母數字值和 ()_-/\&#, 。'
+city_max_length_validation_field: 請輸入不超過30個字符。
+city_min_length_validation_field: 請至少輸入2個字符。
+city_format_validation_field: '此欄僅可含字母數字值和 ()_-/\&#, 。'
+postal_code_max_length_validation_field: 請輸入不超過10個字符。
+postal_code_format_validation_field: '此欄僅可含破折號 (-) 和字母數字值。'
+password_max_length_validation_field: 請輸入不超過10個字符。
+password_min_length_validation_field: 請至少輸入6個字符。
+password_format_validation_field: 此欄僅可含字母數字值。
+primary_label_field: 主要信息
+add_mobile_label_field: 添加手機號碼
+contact_preference_top_blurb_field: 您想接收到優惠活動、即時更新以及奉送的最新信息麼？
+contact_preference_bottom_blurb_field: '*所有的優惠活動、即時更新以及奉送的最新信息將發送至您註冊的大發郵箱。'
+modal_preview_header_field: 保存賬戶更改
+modal_preview_top_blurb_field: 請瀏覽更改的內容
+modal_preview_current_label_field: 當前
+modal_preview_new_label_field: '新 '
+modal_preview_bottom_blurb_field: 輸入密碼以保存賬戶的更改。
+modal_preview_placeholder_field: 密碼
+modal_preview_btn_field: 保存更改
+gender_field:
+  options:
+    label: 性別
+no_changed_detected_message_field: 無任何改變。
+contact_preference_label:
+  options:
+    label: 联系方式偏好
+contact_preference_yes_label_field: 是
+contact_preference_no_label_field: 否
+male_label_field: '男性 '
+female_label_field: 女性

@@ -1,0 +1,21 @@
+uuid: e8c41c65-bfdf-4f86-b941-5dba9bdb9d67
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.feedback
+    - field.storage.contact_message.field_radio
+  module:
+    - options
+id: contact_message.feedback.field_radio
+field_name: field_radio
+entity_type: contact_message
+bundle: feedback
+label: Radio
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

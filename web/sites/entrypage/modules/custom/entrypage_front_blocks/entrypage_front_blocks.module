@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains entrypage_front_blocks.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function entrypage_front_blocks_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the entrypage_front_blocks module.
+    case 'help.page.entrypage_front_blocks':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Module for Entrypage home blocks.') . '</p>';
+      return $output;
+
+    default:
+  }
+}

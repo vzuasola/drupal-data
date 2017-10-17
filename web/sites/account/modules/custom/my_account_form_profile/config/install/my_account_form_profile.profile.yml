@@ -1,0 +1,235 @@
+#user name
+username_field:
+  weight: '0'
+  options:
+    label: 'Username'
+    attr:
+      placeholder: 'Username Placeholder'
+    wrapper_class: 'username'
+
+#curreny
+currency_field:
+  weight: '1'
+  options:
+    label: 'Currency'
+    attr:
+      placeholder: 'Currency'
+    error: 'Error Currency Field Error message'
+    wrapper_class: 'currency_wrapper'
+
+#first name
+first_name_field:
+  weight: '2'
+  options:
+    label: 'First name'
+    attr:
+      placeholder: 'Enter First Name'
+    error: 'Error message for first name field'
+    wrapper_class: 'first_name'
+
+#last name
+last_name_field:
+  weight: '3'
+  options:
+    label: 'Last name'
+    attr:
+      placeholder: 'Enter Last Name'
+    error: 'Last name field error message'
+    wrapper_class: 'lastname'
+
+#DOB
+dob_field:
+  weight: '4'
+  options:
+    label: 'Date of Birth'
+    error: 'Error message for dob'
+    wrapper_class: 'dob'
+
+#DOB month
+dob_month:
+  weight: '6'
+  options:
+    wrapper_class: 'dob-month'
+
+#DOB day
+dob_day:
+  weight: '5'
+  options:
+    wrapper_class: 'dob-day'
+
+#DOB year
+dob_year:
+  weight: '7'
+  options:
+    wrapper_class: 'dob-year'
+
+#country
+country_field:
+  weight: '9'
+  options:
+    label: 'Country'
+    attr:
+      placeholder: 'Country'
+    error: 'Error message for country'
+    wrapper_class: 'country'
+
+#email
+email_field:
+  weight: '8'
+  options:
+    label: 'Email Address'
+    attr:
+      placeholder: '#######@gmail.com'
+    error: 'Error message for Email'
+    wrapper_class: 'email'
+
+#gender
+gender_field:
+  weight: '10'
+  options:
+    label: 'Gender'
+    wrapper_class: 'gender'
+
+#header field
+communication_detail_field:
+  options:
+    label: 'Communication Details'
+
+account_field:
+  options:
+    label: 'Account Details'
+
+home_address_field:
+  options:
+    label: 'Home Address'
+
+#sms
+enable_sms_verification_field: '1'
+
+verify_text_field: 'Verify'
+
+modal_verify_header_text_field: 'Verify Mobile Number'
+
+modal_verify_body_text_field: 'A verification code was sent to your mobile number. Please check and enter the code below to verify your details. '
+
+modal_verification_code_placeholder_field: 'Verification Code'
+
+modal_verification_resend_code_text_field: 'Resend code'
+
+modal_verification_submit_text_field: 'Submit'
+
+verification_code_response_field: 'SMS_VERIFICATION_SUCCESS|A verification code was sent to your mobile number'
+
+verification_code_required_message_field: 'This is a required field.'
+
+verification_code_min_length_message_field: 'Please enter at least 6 characters.'
+
+verification_code_max_length_message_field: 'Please enter no more than 6 characters.'
+
+#mobile
+mobile_number_field:
+  weight: '11'
+  options:
+    label: 'Contact Number'
+    attr:
+      placeholder: '09217715594'
+    error: 'Error message for Mobile'
+    wrapper_class: 'mobile_number'
+
+#mobile
+mobile_number_1_field:
+  weight: '12'
+  options:
+    label: ''
+    attr:
+      placeholder: '09217715594'
+    error: 'Error message for Mobile'
+    wrapper_class: 'mobile_number_1'
+
+#language
+language_field:
+  weight: '13'
+  options:
+    label: 'Language'
+    attr:
+      placeholder: 'Enter Language'
+    help_text: 'Help text for Language'
+    error: 'Error field for Language'
+    wrapper_class: 'language'
+
+#address
+address_field:
+  weight: '14'
+  options:
+    label: 'Address'
+    attr:
+      placeholder: 'Address'
+    wrapper_class: 'address'
+
+#city
+city_field:
+  weight: '15'
+  options:
+    label: 'City'
+    attr:
+      placeholder: 'City'
+    wrapper_class: 'city'
+
+#postal_code
+postal_code_field:
+  weight: '16'
+  options:
+    label: 'Postal Code'
+    attr:
+      placeholder: 'Postal Code'
+    wrapper_class: 'postal_code'
+
+save_changes_field: 'Save Changes'
+cancel_field: 'Cancel'
+country_code_mapping_field: 'PH|+63'
+country_mapping_field: 'Christmas Island|1'
+server_side_validation_field: 'INTERNAL_ERROR|Internal Server Error'
+required_validation_field: 'This is a required field'
+mobile_number_format_validation_field: 'Mobile number format error message'
+mobile_number_min_length_validation_field: 'Mobile number minimum length error message'
+mobile_number_max_length_validation_field: 'Mobile number maximum length error message'
+address_max_length_validation_field: 'Address maximum length error message'
+address_min_length_validation_field: 'Address minimum length error message'
+address_format_validation_field: 'Address format error message'
+city_max_length_validation_field: 'City maximum length error message'
+city_min_length_validation_field: 'City minimum length error message'
+city_format_validation_field: 'City format error message'
+postal_code_max_length_validation_field: 'Postal Code maximum length error message'
+postal_code_max_length_value_field: '10'
+postal_code_format_validation_field: 'Postal Code format error message'
+password_max_length_validation_field: 'Password maximum length error message'
+password_min_length_validation_field: 'Password minimum length error message'
+password_format_validation_field: 'Password format error message'
+primary_label_field: 'Primary'
+add_mobile_label_field: 'Add mobile number'
+no_changed_detected_message_field: 'No changes have been detected'
+male_label_field: 'Male'
+female_label_field: 'Female'
+contact_preference_top_blurb_field: 'Would you like to get the latest promos, updates and offers'
+contact_preference_bottom_blurb_field: '* By default, all promotions and offers will be sent via email registered.'
+contact_preference_field:
+  weight: '17'
+  options:
+    label: 'Yes, send me the latest promotions, updatesd and offers?'
+    wrapper_class: 'contact_preference'
+contact_preference_label:
+  options:
+    label: 'Contact Preference'
+modal_preview_header_field: 'Save Account Changes'
+modal_preview_top_blurb_field: 'Please review list of changes. Changes may require to provide documents for profile verification.'
+modal_preview_current_label_field: 'Current'
+modal_preview_new_label_field: 'New'
+modal_preview_bottom_blurb_field: 'Enter your password to save changes to your account'
+modal_preview_placeholder_field: 'Password'
+modal_preview_btn_field: 'Save Changes'
+contact_preference_yes_label_field: 'Yes'
+contact_preference_no_label_field: 'No'
+
+
+
+

@@ -1,0 +1,7 @@
+name: Avaya Chat Integration
+type: module
+description: Avaya chat integration configuration
+core: 8.x
+package: Web Composer
+dependencies:
+  - webcomposer_rest_extra

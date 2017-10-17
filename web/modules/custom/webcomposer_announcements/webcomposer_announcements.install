@@ -1,0 +1,35 @@
+<?php
+
+use Drupal\webcomposer_announcements\Entity\AnnouncementEntity;
+
+/**
+ * Implements hook_uninstall
+ */
+function webcomposer_announcements_uninstall() {
+
+    $entities = AnnouncementEntity::loadMultiple();
+    
+    foreach ($entities as $entity) {
+        $entity->delete();
+    }
+
+    $keys = [
+      'core.entity_form_display.announcement_entity.announcement_entity.default',
+      'core.entity_view_display.announcement_entity.announcement_entity.default',
+      'field.field.announcement_entity.announcement_entity.field_body',
+      'field.field.announcement_entity.announcement_entity.field_publish_date',
+      'field.field.announcement_entity.announcement_entity.field_unpublish_date',
+      'field.storage.announcement_entity.field_body',
+      'field.storage.announcement_entity.field_publish_date',
+      'field.storage.announcement_entity.field_unpublish_date',
+      'language.content_settings.announcement_entity.announcement_entity',
+      'views.view.announcements',
+      'webcomposer_config.announcements_configuration',
+      'views.view.announcements_listing',
+      'core.base_field_override.announcement_entity.announcement_entity.user_id'
+    ];
+
+    foreach ($keys as $key) {
+      \Drupal::configFactory()->getEditable($key)->delete();
+    }
+}

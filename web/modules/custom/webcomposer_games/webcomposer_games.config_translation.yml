@@ -1,0 +1,11 @@
+webcomposer_games.games_playtech_provider_schema:
+  title: 'Playtech Provider Configuration'
+  base_route_name: webcomposer_games.games_playtech_provider_form
+  names:
+    - 'webcomposer_config.games_playtech_provider'
+
+webcomposer_games.games_opus_provider_schema:
+  title: 'Opus Provider Configuration'
+  base_route_name: webcomposer_games.games_opus_provider_form
+  names:
+    - 'webcomposer_config.games_opus_provider'

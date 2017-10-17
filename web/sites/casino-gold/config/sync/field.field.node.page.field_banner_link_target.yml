@@ -1,0 +1,23 @@
+uuid: bf8c6b8b-6b50-42c4-a7f8-ea32c3df634d
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_banner_link_target
+    - node.type.page
+  module:
+    - options
+id: node.page.field_banner_link_target
+field_name: field_banner_link_target
+entity_type: node
+bundle: page
+label: 'Banner Link Target'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: _top
+default_value_callback: ''
+settings: {  }
+field_type: list_string

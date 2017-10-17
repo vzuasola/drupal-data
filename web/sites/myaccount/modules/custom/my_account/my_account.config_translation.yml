@@ -1,5 +1,0 @@
-my_account.change_password:
-  title: 'Change password'
-  base_route_name: my_account.admin_settings
-  names:
-    - my_account.change_password

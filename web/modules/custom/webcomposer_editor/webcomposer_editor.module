@@ -1,0 +1,34 @@
+<?php
+
+use Drupal\Core\Site\Settings;
+use Drupal\Core\StreamWrapper\PublicStream;
+
+function webcomposer_editor_editor_js_settings_alter(&$settings) {
+    $prefixes = \Drupal::config('language.negotiation')->get('url.prefixes');
+    $current = \Drupal::languageManager()->getCurrentLanguage()->getId();
+    $languages = \Drupal::languageManager()->getLanguages();
+
+    $allowed = array_values($prefixes);
+
+    $prefix = Settings::get('primary_site_prefix');
+    $siteFolder = basename(str_replace('/files', '', \Drupal::service('file_system')->realpath("public://")));
+    $publicPath = PublicStream::basePath();
+
+    foreach (array_keys($settings['editor']['formats']) as $text_format_id) {
+        if ($settings['editor']['formats'][$text_format_id]['editor'] === 'ckeditor') {
+            $settings['editor']['formats'][$text_format_id]['editorSettings']['extraAllowedContent'] = 'span(*)[data-font-color,data-font-size];a(*)[target,href]';
+            $settings['editor']['formats'][$text_format_id]['editorSettings']['startupOutlineBlocks'] = true;
+            // $settings['editor']['formats'][$text_format_id]['editorSettings']['startupMode'] = 'source';
+            $settings['editor']['formats'][$text_format_id]['editorSettings']['removePlugins'] = 'drupallink';
+
+            $settings['editor']['formats'][$text_format_id]['editorSettings']['allowedLanguages'] = $allowed;
+
+            $langCode = $prefixes[$current];
+            $settings['editor']['formats'][$text_format_id]['editorSettings']['language'] = $langCode;
+
+            $siteName = $prefix ?? $siteFolder;
+            $settings['editor']['formats'][$text_format_id]['editorSettings']['site'] = $siteName;
+            $settings['editor']['formats'][$text_format_id]['editorSettings']['publicPath'] = $publicPath;
+        }
+    }
+}

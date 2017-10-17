@@ -1,0 +1,38 @@
+uuid: 4174fd73-a9df-436f-acd8-d3f3ef5be0ca
+langcode: zh-hans
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: node_pattern
+label: 'Node Pattern'
+type: 'canonical_entities:node'
+pattern: '/[node:title]'
+selection_criteria:
+  785fe131-6218-4330-a75c-f59a9702177e:
+    id: node_type
+    bundles:
+      download: download
+      page: page
+      promotion: promotion
+      registration_template: registration_template
+      sitemap: sitemap
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 785fe131-6218-4330-a75c-f59a9702177e
+  7cec5084-616d-4b3f-b841-26665c038e31:
+    id: language
+    langcodes:
+      zh-hans: zh-hans
+      zh-hant: zh-hant
+    negate: false
+    context_mapping:
+      language: 'node:langcode:language'
+    uuid: 7cec5084-616d-4b3f-b841-26665c038e31
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Language

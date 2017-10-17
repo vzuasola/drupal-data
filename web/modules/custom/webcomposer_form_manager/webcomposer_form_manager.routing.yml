@@ -1,0 +1,47 @@
+webcomposer_form_manager.admin_settings:
+  path: 'admin/config/webcomposer/form'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Webcomposer Form Configuration'
+  requirements:
+    _permission: 'administer site configuration'
+
+webcomposer_form_manager.overview_form:
+  path: '/admin/config/webcomposer/form/manager'
+  defaults:
+    _form: '\Drupal\webcomposer_form_manager\Form\OverviewForm'
+    _title: 'Form Manager'
+  requirements:
+    _permission: 'administer site configuration'
+
+webcomposer_form_manager.form.view:
+  path: '/admin/config/webcomposer/form/manager/manage/{form}'
+  defaults:
+    _form: '\Drupal\webcomposer_form_manager\Form\ManageForm'
+    _title_callback: '\Drupal\webcomposer_form_manager\Form\ManageForm::title'
+  requirements:
+    _permission: 'administer site configuration'
+
+webcomposer_form_manager.form.view_translate:
+  path: '/admin/config/webcomposer/form/manager/manage/{form}/translate'
+  defaults:
+    _controller: '\Drupal\webcomposer_form_manager\Controller\ManageFormController::translate'
+    _title_callback: '\Drupal\webcomposer_form_manager\Controller\ManageFormController::title'
+  requirements:
+    _permission: 'administer site configuration'
+
+webcomposer_form_manager.field.view:
+  path: '/admin/config/webcomposer/form/manager/manage/{form}/field/{field}'
+  defaults:
+    _form: '\Drupal\webcomposer_form_manager\Form\ManageField'
+    _title_callback: '\Drupal\webcomposer_form_manager\Form\ManageField::title'
+  requirements:
+    _permission: 'administer site configuration'
+
+webcomposer_form_manager.field.view_translate:
+  path: '/admin/config/webcomposer/form/manager/manage/{form}/field/{field}/translate'
+  defaults:
+    _controller: '\Drupal\webcomposer_form_manager\Controller\ManageFieldController::translate'
+    _title_callback: '\Drupal\webcomposer_form_manager\Controller\ManageFieldController::title'
+  requirements:
+    _permission: 'administer site configuration'

@@ -1,0 +1,15 @@
+uuid: 4e9d277c-251f-464f-9897-39ab786c8817
+langcode: zh-hant
+status: true
+dependencies:
+  module:
+    - webcomposer_language_hierarchy
+third_party_settings:
+  webcomposer_language_hierarchy:
+    webcomposer_fallback_langcode: site_default_language
+    webcomposer_language_custom_label: 繁體中文
+id: zh-hant
+label: 'Chinese, Traditional'
+direction: ltr
+weight: -7
+locked: false

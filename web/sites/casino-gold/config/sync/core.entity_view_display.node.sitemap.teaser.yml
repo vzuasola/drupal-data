@@ -1,0 +1,29 @@
+uuid: 3eeee18f-9e00-4e3f-bd68-bdf3640a10fc
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.sitemap.body
+    - node.type.sitemap
+  module:
+    - text
+    - user
+id: node.sitemap.teaser
+targetEntityType: node
+bundle: sitemap
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

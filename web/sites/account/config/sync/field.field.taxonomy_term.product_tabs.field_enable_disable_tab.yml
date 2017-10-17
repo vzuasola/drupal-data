@@ -1,0 +1,23 @@
+uuid: d4cfd36e-0dbf-4207-a081-cca81cf41673
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_enable_disable_tab
+    - taxonomy.vocabulary.product_tabs
+id: taxonomy_term.product_tabs.field_enable_disable_tab
+field_name: field_enable_disable_tab
+entity_type: taxonomy_term
+bundle: product_tabs
+label: Enable/Disable
+description: 'Please check this for enable the product tab.'
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

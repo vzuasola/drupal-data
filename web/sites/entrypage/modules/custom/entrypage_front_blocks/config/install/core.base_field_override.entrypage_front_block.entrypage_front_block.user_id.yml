@@ -1,0 +1,20 @@
+uuid: 1ec4b10a-9c88-47b3-9b19-f53c67bd0e34
+langcode: en
+status: true
+dependencies:
+  module:
+    - entrypage_front_blocks
+id: entrypage_front_block.entrypage_front_block.user_id
+field_name: user_id
+entity_type: entrypage_front_block
+bundle: entrypage_front_block
+label: 'Authored by'
+description: 'The user ID of author of the Entrypage front block entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

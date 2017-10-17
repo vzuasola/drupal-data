@@ -1,0 +1,106 @@
+uuid: 7715c5b3-d7be-483d-be60-d00bda97f661
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - block_content.type.floating_banner_left
+    - field.field.block_content.floating_banner_left.field_banner_items
+    - field.field.block_content.floating_banner_left.field_icon
+    - field.field.block_content.floating_banner_left.field_link
+    - field.field.block_content.floating_banner_left.field_link_target
+    - field.field.block_content.floating_banner_left.field_page_visibility
+    - field.field.block_content.floating_banner_left.field_page_visibility_option
+    - field.field.block_content.floating_banner_left.field_title
+    - field.field.block_content.floating_banner_left.field_title_layout
+    - image.style.thumbnail
+  module:
+    - image
+    - link
+    - paragraphs
+id: block_content.floating_banner_left.default
+targetEntityType: block_content
+bundle: floating_banner_left
+mode: default
+content:
+  field_banner_items:
+    type: entity_reference_paragraphs
+    weight: 10
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_icon:
+    weight: 3
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_link:
+    weight: 6
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_link_target:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_page_visibility:
+    weight: 9
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_page_visibility_option:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_title:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_title_layout:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  info:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  langcode:
+    type: language_select
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  translation:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

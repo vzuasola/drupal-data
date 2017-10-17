@@ -1,0 +1,21 @@
+uuid: b31c79a8-e766-4b80-a22c-461574f98e28
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_promote_to_lobby
+    - node.type.promotion
+  module:
+    - options
+id: node.promotion.field_promote_to_lobby
+field_name: field_promote_to_lobby
+entity_type: node
+bundle: promotion
+label: 'Promote to Lobby in Casino Gold'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,25 @@
+uuid: ebebf838-e7c3-4224-989e-4704c1de58f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_banner_link
+    - node.type.promotion
+  module:
+    - link
+_core:
+  default_config_hash: HESv1rzLpkfpTPSwksNDf7zW6KAWpdDeMyCI6N8Wa38
+id: node.promotion.field_banner_link
+field_name: field_banner_link
+entity_type: node
+bundle: promotion
+label: 'Banner Link'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

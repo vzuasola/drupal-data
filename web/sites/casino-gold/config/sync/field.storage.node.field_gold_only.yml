@@ -1,0 +1,24 @@
+uuid: 2caeb5f5-952f-4ed6-8454-b88dd6482ded
+langcode: zh-hans
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_gold_only
+field_name: field_gold_only
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '1'
+      label: 'Gold Only'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 2
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

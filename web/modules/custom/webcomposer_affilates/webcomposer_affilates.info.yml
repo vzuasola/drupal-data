@@ -1,0 +1,7 @@
+name: Webcomposer Affilate Tracking
+type: module
+description: Manage Tracking Variables for Affilate parameters
+core: 8.x
+package: Web Composer
+dependencies:
+  - taxonomy_unique

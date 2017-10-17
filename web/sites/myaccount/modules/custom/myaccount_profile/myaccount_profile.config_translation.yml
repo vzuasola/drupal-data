@@ -1,5 +1,0 @@
-myaccount_profile.my_profile:
-  title: 'My Account Profile'
-  base_route_name: myaccount_profile.admin_config_settings
-  names:
-    - myaccount_profile.my_profile

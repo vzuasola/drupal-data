@@ -1,0 +1,21 @@
+uuid: c6308796-0a0b-48b1-ab92-864491978be4
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.feedback
+    - field.storage.contact_message.field_select
+  module:
+    - options
+id: contact_message.feedback.field_select
+field_name: field_select
+entity_type: contact_message
+bundle: feedback
+label: Select
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

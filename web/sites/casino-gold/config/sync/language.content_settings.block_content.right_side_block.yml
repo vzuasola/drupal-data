@@ -1,0 +1,16 @@
+uuid: 50c58c18-1ec4-4df2-b471-3c3c4a33e139
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - block_content.type.right_side_block
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: block_content.right_side_block
+target_entity_type_id: block_content
+target_bundle: right_side_block
+default_langcode: site_default
+language_alterable: true

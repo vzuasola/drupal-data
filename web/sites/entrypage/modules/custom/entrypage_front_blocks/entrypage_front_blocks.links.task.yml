@@ -1,0 +1,22 @@
+# Entrypage front block routing definition
+entrypage_front_block.settings_tab:
+  route_name: entrypage_front_block.settings
+  title: 'Settings'
+  base_route: entrypage_front_block.settings
+
+entity.entrypage_front_block.canonical:
+  route_name: entity.entrypage_front_block.canonical
+  base_route: entity.entrypage_front_block.canonical
+  title: 'View'
+
+entity.entrypage_front_block.edit_form:
+  route_name: entity.entrypage_front_block.edit_form
+  base_route: entity.entrypage_front_block.canonical
+  title: 'Edit'
+
+entity.entrypage_front_block.delete_form:
+  route_name:  entity.entrypage_front_block.delete_form
+  base_route:  entity.entrypage_front_block.canonical
+  title: Delete
+  weight: 10
+

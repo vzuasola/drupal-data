@@ -1,0 +1,8 @@
+trust_element_title: 'Play KENO like never before'
+trust_element_content:
+  value: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent et ultricies augue. Vestibulum tristique, nunc.</p>\r\n"
+  format: basic_html
+lobby_tiles_alignment: left
+keno_background:
+  - '1483'
+keno_background_image_url: 'http://keno.drupal.local/sites/keno/files/bg.jpg'

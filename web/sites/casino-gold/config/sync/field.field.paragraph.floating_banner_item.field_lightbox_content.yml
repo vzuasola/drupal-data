@@ -1,0 +1,21 @@
+uuid: 10f9f050-b984-42c4-bcf2-519dacdde66c
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_lightbox_content
+    - paragraphs.paragraphs_type.floating_banner_item
+  module:
+    - text
+id: paragraph.floating_banner_item.field_lightbox_content
+field_name: field_lightbox_content
+entity_type: paragraph
+bundle: floating_banner_item
+label: 'Lightbox Content'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

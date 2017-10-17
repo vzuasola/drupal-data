@@ -146,7 +146,9 @@ class RestMenuItemsResource extends ResourceBase {
 
       // Set the parameters.
       $parameters = new MenuTreeParameters();
-      $parameters->onlyEnabledLinks();
+      // Comment out this line as this is causing issues for parent-child relationship
+      // in terms of enabled/disabled feature
+      //$parameters->onlyEnabledLinks();
 
       if (!empty($this->maxDepth)) {
         $parameters->setMaxDepth($this->maxDepth);
@@ -156,36 +158,41 @@ class RestMenuItemsResource extends ResourceBase {
 
       // Load the tree based on this set of parameters.
       $tree = $menu_tree->load($menu_name, $parameters);
-      // Transform the tree using the manipulators you want.
-      $manipulators = array(
-        // Only show links that are accessible for the current user.
-        array('callable' => 'menu.default_tree_manipulators:checkAccess'),
-        // Use the default sorting of menu links.
-        array('callable' => 'menu.default_tree_manipulators:generateIndexAndSort'),
-      );
-      $tree = $menu_tree->transform($tree, $manipulators);
 
-      // Finally, build a renderable array from the transformed tree.
-      $menu = $menu_tree->build($tree);
-
-      $this->getMenuItems($menu['#items'], $this->menuItems);
-
-      if (!empty($this->menuItems)) {
-
-        $build = array(
-          '#cache' => array(
-            'max-age' => 0,
-          ),
+      // Only load menu which has an existing tree
+      if (!empty($tree)) {
+        // Transform the tree using the manipulators you want.
+        $manipulators = array(
+          // Only show links that are accessible for the current user.
+          array('callable' => 'menu.default_tree_manipulators:checkAccess'),
+          // Use the default sorting of menu links.
+          array('callable' => 'menu.default_tree_manipulators:generateIndexAndSort'),
         );
 
-        $cacheMetadata = CacheableMetadata::createFromRenderArray($build);
-        $resource = new ResourceResponse(array_values($this->menuItems));
+        $tree = $menu_tree->transform($tree, $manipulators);
 
-        return $resource->addCacheableDependency($build);
+        // Finally, build a renderable array from the transformed tree.
+        $menu = $menu_tree->build($tree);
+
+        $this->getMenuItems($menu['#items'], $this->menuItems);
+
+        if (!empty($this->menuItems)) {
+          $build = array(
+            '#cache' => array(
+              'max-age' => 0,
+            ),
+          );
+
+          $cacheMetadata = CacheableMetadata::createFromRenderArray($build);
+          $resource = new ResourceResponse(array_values($this->menuItems));
+
+          return $resource->addCacheableDependency($build);
+        }
       }
 
       throw new NotFoundHttpException(t('Menu items for menu name @menu were not found', array('@menu' => $menu_name)));
     }
+
     throw new HttpException(t("Menu name was not provided"));
   }
 
@@ -215,17 +222,52 @@ class RestMenuItemsResource extends ResourceBase {
         $external = TRUE;
       }
       else {
-        $uri = $url->getInternalPath();
+        try {
+          $uri = $url->getInternalPath();
+        }
+        catch (\UnexpectedValueException $e) {
+          // if the path is relative in Drupal, but does not exist, we use the
+          // actual menu path as our uri
+          $uri = $url->getUri();
+          $uri = str_replace('base:', '', $uri);
+        }
       }
 
       $alias = $this->aliasManager->getAliasByPath("/$uri");
 
+      // pull the additional attributes
+      $attr = array();
+      $options = $item_value['url']->getOptions();
+
+      if (isset($options['attributes'])) {
+        foreach($options['attributes'] as $key => $value) {
+          $attr[$key] = $value;
+        }
+      }
+
+      // initialize query string 
+      $queryString = '';
+      // only append the query string if the uri is relative
+      if (!$url->isExternal() && isset($options['query'])) {
+        // build query param
+        $query = http_build_query($options['query']);
+        // decode query param 
+        $query = urldecode($query);
+        if (!empty($query)) {
+          $queryString = "?$query";
+        }
+      }
+
+      $final_alias = ltrim($alias, '/');
+      $alias = $final_alias == '' ? '/' : $final_alias;
+
       $items[$item_name] = array(
         'key' => $item_name,
         'title' => $org_link->getTitle(),
-        'uri' => $uri,
-        'alias' => ltrim($alias, '/'),
+        'uri' => "$uri$queryString",
+        'alias' => "$alias$queryString",
         'external' => $external,
+        'attributes' => $attr,
       );
 
       if (!empty($item_value['below'])) {

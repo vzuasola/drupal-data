@@ -1,0 +1,9 @@
+modal_verify_body_text_field: 'A verification code has been sent to you via SMS. To complete your phone number verification, please enter the 6-digit code below within 10 minutes. If you didn''t receive any code, please contact Customer Support.'
+modal_verification_code_placeholder_field: Code
+modal_verification_submit_text_field: SUBMIT
+verification_code_response_field: "SMS_VERIFICATION_SUCCESS|A verification code has been sent to your mobile number.\r\nSMS_VERIFICATION_FAILED|Sorry, there was an error verifying your mobile number. Please try again or you may contact us at the following: <a href=\"{livechat.link}\" class=\"live-chat-popup-trigger\"> Live Chat </a> or <a href=\"mailto:help@indiacsonline.com\"> Email </a> (Code:110)\r\nSMS_VERIFICATION_SUBMIT_SUCCESS|Your mobile number has been successfully verified.\r\nSMS_VERIFICATION_SUBMIT_FAILED| You have entered an invalid verification code. Please try again. (Code:111)\r\nINTERNAL_ERROR|Internal Error (Code: 801)"
+verification_code_min_length_message_field: 'Min 6'
+verification_code_max_length_message_field: 'Max 6'
+mobile_number_field:
+  options: {  }
+server_side_validation_field: "INTERNAL_ERROR|Internal Error (Code: 801)\r\nUPDATE_PROFILE_SUCCESS|Your profile has been updated.\r\nUPDATE_PROFILE_FAILED|There was an error updating your profile. Please try again or you may contact us at the following: <a href=\"{livechat.link}\" class=\"live-chat-popup-trigger\">Live Chat</a> or <a href=\"mailto:help@indiacsonline.com\">Email.</a> (Code: 700)\r\nCHECK_SESSION_PASSWORD_FAILED|There was an error updating your profile. Please try again or you may contact us at the following: <a href=\"{livechat.link}\" class=\"live-chat-popup-trigger\">Live Chat</a> or <a href=\"mailto:help@indiacsonline.com\">Email.</a> (Code: 700)"

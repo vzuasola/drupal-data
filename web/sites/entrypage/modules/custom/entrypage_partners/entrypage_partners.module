@@ -1,0 +1,21 @@
+<?php
+
+/**
+ * @file
+ * Contains entrypage_partners.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+function entrypage_partners_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the entrypage_partners module.
+    case 'help.page.entrypage_partners':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('This module shows entrypage partners.') . '</p>';
+      return $output;
+
+    default:
+  }
+}

@@ -1,0 +1,9 @@
+name: Webcomposer Configs
+type: module
+description: General configuration for all products
+core: 8.x
+package: Web Composer
+dependencies:
+- block_content
+- paragraphs
+- webcomposer_rest_extra

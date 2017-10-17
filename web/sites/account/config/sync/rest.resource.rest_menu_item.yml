@@ -1,0 +1,21 @@
+uuid: c6b1af87-c4d7-455b-94e5-f97058cdf8ad
+langcode: en
+status: true
+dependencies:
+  module:
+    - basic_auth
+    - hal
+    - rest_menu_items
+    - serialization
+    - user
+id: rest_menu_item
+plugin_id: rest_menu_item
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - hal_json
+      - json
+    supported_auth:
+      - basic_auth
+      - cookie

@@ -1,0 +1,306 @@
+uuid: 33de3d3d-3c55-4ad9-a1eb-cf0528717a81
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.promotion.body
+    - field.field.node.promotion.field_banner_content
+    - field.field.node.promotion.field_banner_link
+    - field.field.node.promotion.field_banner_link_target
+    - field.field.node.promotion.field_hide_countdown
+    - field.field.node.promotion.field_hide_promotion
+    - field.field.node.promotion.field_hide_right_side_block
+    - field.field.node.promotion.field_image
+    - field.field.node.promotion.field_link_target
+    - field.field.node.promotion.field_log_in_state
+    - field.field.node.promotion.field_mark_as_featured
+    - field.field.node.promotion.field_product
+    - field.field.node.promotion.field_product_subfilter
+    - field.field.node.promotion.field_promotion_link_target
+    - field.field.node.promotion.field_promotion_summary
+    - field.field.node.promotion.field_promotion_summary_link
+    - field.field.node.promotion.field_ribbon_background_color
+    - field.field.node.promotion.field_ribbon_label
+    - field.field.node.promotion.field_right_side_block_content
+    - field.field.node.promotion.field_right_side_block_link
+    - field.field.node.promotion.field_right_side_block_option
+    - field.field.node.promotion.field_right_side_block_title
+    - field.field.node.promotion.field_summary_image
+    - field.field.node.promotion.field_text_color
+    - field.field.node.promotion.field_thumbnail_image
+    - field.field.node.promotion.field_thumbnail_summary
+    - node.type.promotion
+  module:
+    - color_field
+    - entity_reference_revisions
+    - image
+    - link
+    - options
+    - text
+    - user
+_core:
+  default_config_hash: nwRMH5lBqdFFd9zJdNEpaFTOxqC0A2obNW74N5EU0N4
+id: node.promotion.default
+targetEntityType: node
+bundle: promotion
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_banner_content:
+    weight: 103
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_banner_link:
+    weight: 104
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_banner_link_target:
+    weight: 105
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_full_tile_image:
+    weight: 108
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_full_tile_summary:
+    weight: 109
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_hide_countdown:
+    weight: 132
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_hide_promotion:
+    weight: 122
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_image:
+    weight: 102
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_link_target:
+    weight: 112
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_log_in_state:
+    weight: 106
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_mark_as_featured:
+    weight: 121
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_product:
+    weight: 107
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_product_subfilter:
+    weight: 123
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_promotion_link_target:
+    weight: 129
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_promotion_summary:
+    weight: 131
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_promotion_summary_link:
+    weight: 127
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_ribbon_background_color:
+    weight: 135
+    label: above
+    settings:
+      format: hex
+      opacity: '1'
+    third_party_settings: {  }
+    type: color_field_formatter_text
+    region: content
+  field_ribbon_label:
+    weight: 124
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_right_side_block_content:
+    weight: 119
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_right_side_block_link:
+    weight: 117
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_right_side_block_option:
+    weight: 118
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_right_side_block_title:
+    weight: 120
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_right_side_content:
+    type: entity_reference_revisions_entity_view
+    weight: 133
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_show_inner_page_right_side:
+    weight: 134
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_summary_image:
+    weight: 130
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_text_color:
+    weight: 136
+    label: above
+    settings:
+      format: hex
+      opacity: '1'
+    third_party_settings: {  }
+    type: color_field_formatter_text
+    region: content
+  field_thumbnail_image:
+    weight: 114
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_thumbnail_summary:
+    weight: 115
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_hide_promotion: true
+  field_hide_right_side_block: true
+  langcode: true

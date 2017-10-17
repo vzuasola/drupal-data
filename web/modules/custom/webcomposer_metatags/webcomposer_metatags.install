@@ -1,0 +1,26 @@
+<?php
+
+
+/**
+ * Implements hook_uninstall
+ */
+function webcomposer_metatags_uninstall() {
+   $keys = [
+      'field.field.metatag_entity.metatag_entity.field_abstract',
+      'field.field.metatag_entity.metatag_entity.field_description',
+      'field.field.metatag_entity.metatag_entity.field_keywords',
+      'field.field.metatag_entity.metatag_entity.field_per_page_visibility',
+      'field.storage.metatag_entity.field_abstract',
+      'field.storage.metatag_entity.field_description',
+      'field.storage.metatag_entity.field_keywords',
+      'field.storage.metatag_entity.field_per_page_visibility',
+      'language.content_settings.metatag_entity.metatag_entity',
+      'core.entity_form_display.metatag_entity.metatag_entity.default',
+      'core.entity_view_display.metatag_entity.metatag_entity.default',
+      'views.view.metatags', 
+    ];
+
+    foreach ($keys as $key) {
+      \Drupal::configFactory()->getEditable($key)->delete();
+    }
+}

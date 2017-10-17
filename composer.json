@@ -19,11 +19,15 @@
         "composer/installers": "^1.2",
         "drupal-composer/drupal-scaffold": "^2.2",
         "cweagans/composer-patches": "~1.0",
-        "drupal/core": "~8.0",
+        "drupal/core": "~8.3",
         "drush/drush": "~8.0",
-        "drupal/console": "~1.0"
+        "relaxedws/replicator": "^1.0@alpha",
+        "monolog/monolog": "^1.6",
+        "phpoffice/phpexcel": "^1.8",
+        "squizlabs/php_codesniffer": "^2.7"
     },
     "require-dev": {
+        "drupal/console": "~1.0",
         "behat/mink": "~1.7",
         "behat/mink-goutte-driver": "~1.2",
         "jcalderonzumba/gastonjs": "~1.0.2",
@@ -39,7 +43,8 @@
     "prefer-stable": true,
     "autoload": {
         "classmap": [
-            "scripts/composer/ScriptHandler.php"
+            "scripts/composer/ScriptHandler.php",
+            "scripts/composer/SettingsHandler.php"
         ]
     },
     "scripts": {
@@ -51,20 +56,36 @@
             "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
         ],
         "post-install-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles",
+            "DrupalProject\\composer\\SettingsHandler::syncSettings"
         ],
         "post-update-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles",
+            "DrupalProject\\composer\\SettingsHandler::syncSettings"
+
+        ],
+        "sync-settings": [
+            "DrupalProject\\composer\\SettingsHandler::syncSettings"
+        ],
+        "sync-drush": [
+            "DrupalProject\\composer\\SettingsHandler::syncDrush"
         ]
     },
     "extra": {
         "installer-paths": {
             "web/core": ["type:drupal-core"],
             "drush/contrib/{$name}": ["type:drupal-drush"]
+        },
+        "patches": {
+            "drupal/core": {
+                "Date field all languages title fix": "https://www.drupal.org/files/issues/2652850-17.patch",
+                "Fix CKEditor translation": "web/patches/ckeditor-translation.patch"
+            }
         }
     },
     "enable-patching": true,
     "config": {
-        "secure-http": false
+        "secure-http": false,
+        "cache-dir": ".composer-cache"
     }
 }

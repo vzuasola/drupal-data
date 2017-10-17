@@ -1,0 +1,36 @@
+uuid: 0d660c03-6a40-4dbc-a800-dfd5c06ec3fb
+langcode: zh-hans
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: j5zLMOdJBqC0bMvSdth5UebkprJB8g_2FXHqhfpJzow
+id: anonymous
+label: 'Anonymous user'
+weight: 0
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access my_account config'
+  - 'access site-wide contact form'
+  - 'administer rest resources'
+  - 'restful get Web Composer Token Resource Label'
+  - 'restful get casino_rest_resource'
+  - 'restful get configuration_resource'
+  - 'restful get custom_block_resource'
+  - 'restful get domain_placeholder'
+  - 'restful get entity_bundle_fields_resource'
+  - 'restful get entity_bundle_weight_resource'
+  - 'restful get external_resources'
+  - 'restful get form_resource'
+  - 'restful get language_rest_resource'
+  - 'restful get rest_menu_item'
+  - 'restful get webcomposer_config'
+  - 'restful get webcomposer_token_rest'
+  - 'restful post Web Composer Token Resource Label'
+  - 'restful post casino_provision_rest_resource'
+  - 'restful post contact_message'
+  - 'restful post webcomposer_token_rest'
+  - 'search content'
+  - 'translate promotion node'
+  - 'use text format restricted_html'

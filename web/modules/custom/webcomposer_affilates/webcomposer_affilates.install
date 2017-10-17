@@ -1,0 +1,30 @@
+<?php
+
+/**
+ * Implements hook_install().
+ */
+function webcomposer_affilates_uninstall() {
+
+    $keys = array(
+      'block.block.views_block__affiliates_lists_block_1',
+      'field.field.taxonomy_term.affiliates_parameters.field_active',
+      'language.content_settings.taxonomy_term.affiliates_parameters',
+      'core.entity_form_display.taxonomy_term.affiliates_group.default',
+      'field.field.taxonomy_term.affiliates_parameters.field_select_affiliates_group',
+      'taxonomy.vocabulary.affiliates_group',
+      'core.entity_form_display.taxonomy_term.affiliates_parameters.default',
+      'field.storage.taxonomy_term.field_active',
+      'taxonomy.vocabulary.affiliates_parameters',
+      'core.entity_view_display.taxonomy_term.affiliates_group.default',
+      'field.storage.taxonomy_term.field_select_affiliates_group',
+      'views.view.affiliates_lists',
+      'core.entity_view_display.taxonomy_term.affiliates_parameters.default',
+      'language.content_settings.taxonomy_term.affiliates_group',
+      'views.view.affiliates_rest_views.yml',
+      'webcomposer_config.affiliate_configuration.yml',
+    );
+
+    foreach ($keys as $key) {
+      \Drupal::configFactory()->getEditable($key)->delete();
+    }
+}

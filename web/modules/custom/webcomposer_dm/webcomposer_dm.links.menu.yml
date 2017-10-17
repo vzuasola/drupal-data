@@ -1,0 +1,23 @@
+webcomposer_dm.list:
+  title: 'Webcomposer Domains Configuration'
+  description: 'Provides an interface for managing Domain related information'
+  parent: system.admin_config
+  route_name: webcomposer_dm.admin_settings
+
+webcomposer_dm.list.manage_groups:
+  title: 'Manage Domain Groups'
+  parent: webcomposer_dm.list
+  description: 'Manage Domain Groups'
+  route_name: webcomposer_dm.manage_groups
+
+webcomposer_dm.list.manage_domains:
+  title: 'Manage Domains'
+  parent: webcomposer_dm.list
+  description: 'Manage Domains'
+  route_name: webcomposer_dm.manage_domains
+
+webcomposer_dm.list.manage_placeholders:
+  title: 'Manage Placeholders'
+  parent: webcomposer_dm.list
+  description: 'Manage Placeholders'
+  route_name: webcomposer_dm.manage_placeholders

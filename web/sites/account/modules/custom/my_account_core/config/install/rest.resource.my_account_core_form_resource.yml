@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - basic_auth
+    - hal
+    - my_account_core
+    - serialization
+    - user
+id: my_account_core_form_resource
+plugin_id: my_account_core_form_resource
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - hal_json
+      - json
+      - xml
+    supported_auth:
+      - basic_auth
+      - cookie

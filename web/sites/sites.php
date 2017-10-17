@@ -54,10 +54,43 @@
  * @see https://www.drupal.org/documentation/install/multi-site
  */
 
+// Webcomposer Demo Instances
+$sites['wc.drupal.dev'] = 'webcomposer';
+$sites['wc.drupal.local'] = 'webcomposer';
+$sites['dev-admin.elysium-dfbt.com'] = 'webcomposer';
+
+// Entry page Instances
+$sites['entry.drupal.dev'] = 'entrypage';
+$sites['entry.drupal.local'] = 'entrypage';
+
+$sites['entrypage.drupal.local'] = 'entrypage';
+$sites['entrypage.drupal.dev'] = 'entrypage';
+$sites['dev-entrypage.elysium-dfbt.com'] = 'entrypage';
+$sites['dev-cms-entrypage.elysium-dfbt.com'] = 'entrypage';
+
 // My Account Instances
-$sites['account.drupal.dev'] = 'myaccount';
-$sites['account.drupal.local'] = 'myaccount';
+$sites['account.drupal.dev'] = 'account';
+$sites['account.drupal.local'] = 'account';
+$sites['dev-account.elysium-dfbt.com'] = 'account';
+$sites['dev-cms-account.elysium-dfbt.com'] = 'account';
+
+// Casino classic instance
+$sites['casino.drupal.local'] = 'casino';
+$sites['casino.drupal.dev'] = 'casino';
+
+// Keno instance
+$sites['keno.drupal.local'] = 'keno';
+$sites['keno.drupal.dev'] = 'keno';
+
+// Keno instance
+$sites['registration.drupal.local'] = 'registration';
+$sites['registration.drupal.dev'] = 'registration';
 
 // Casino Site Instances
-$sites['casino.drupal.dev'] = 'casino';
-$sites['casino.drupal.local'] = 'casino';
+$sites['csngold.drupal.dev'] = 'casino-gold';
+$sites['csngold.drupal.local'] = 'casino-gold';
+$sites['dev-casino.elysium-dfbt.com'] = 'casino-gold';
+$sites['dev-cms-casino.elysium-dfbt.com'] = 'casino-gold';
+$sites['dev-csngold.elysium-dfbt.com'] = 'casino-gold';
+$sites['dev-cms-csngold.elysium-dfbt.com'] = 'casino-gold';
+

@@ -1,0 +1,29 @@
+<?php
+
+use Drupal\block\Entity\Block;
+
+use Drupal\webcomposer_config\Install\QuickLinksMenu;
+use Drupal\webcomposer_config\Install\ProductMenu;
+use Drupal\webcomposer_config\Install\SecondaryMenu;
+use Drupal\webcomposer_config\Install\CashierMenu;
+use Drupal\webcomposer_config\Install\ProfileMenu;
+
+/**
+ * Implements hook_install().
+ */
+function webcomposer_config_install() {
+  $menu = new QuickLinksMenu();
+  $menu->createMenu();
+
+  $menu = new ProductMenu();
+  $menu->createMenu();
+
+  $menu = new CashierMenu();
+  $menu->createMenu();
+
+  $menu = new ProfileMenu();
+  $menu->createMenu();
+
+  $menu = new SecondaryMenu();
+  $menu->createMenu();
+}

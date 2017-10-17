@@ -1,0 +1,36 @@
+uuid: 767efdfd-8871-4142-81bc-d7d71a12a450
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - block_content.type.lobby_tile
+    - field.storage.block_content.field_tile
+    - paragraphs.paragraphs_type.lobby_tile
+  module:
+    - entity_reference_revisions
+id: block_content.lobby_tile.field_tile
+field_name: field_tile
+entity_type: block_content
+bundle: lobby_tile
+label: Tile
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      lobby_tile: lobby_tile
+    target_bundles_drag_drop:
+      lobby_tile:
+        enabled: true
+        weight: 4
+      social_media:
+        weight: 5
+        enabled: false
+      sponsorship:
+        weight: 6
+        enabled: false
+field_type: entity_reference_revisions

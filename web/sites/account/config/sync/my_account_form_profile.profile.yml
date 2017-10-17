@@ -1,0 +1,214 @@
+username_field:
+  weight: '0'
+  options:
+    label: Username
+    attr:
+      placeholder: 'Username Placeholder'
+      enable_tooltip: 0
+      tooltip_blurb: test
+    wrapper_class: username
+currency_field:
+  weight: '1'
+  options:
+    label: Currency
+    attr:
+      placeholder: Currency
+      enable_tooltip: 0
+      tooltip_blurb: test
+    error: 'Error Currency Field Error message'
+    wrapper_class: currency_wrapper
+first_name_field:
+  weight: '2'
+  options:
+    label: 'First name'
+    attr:
+      placeholder: 'Enter First Name'
+      enable_tooltip: 0
+      tooltip_blurb: test
+    error: 'Error message for first name field'
+    wrapper_class: first_name
+last_name_field:
+  weight: '3'
+  options:
+    label: 'Last name'
+    attr:
+      placeholder: 'Enter Last Name'
+      enable_tooltip: 0
+      tooltip_blurb: test
+    error: 'Last name field error message'
+    wrapper_class: lastname
+dob_field:
+  weight: '4'
+  options:
+    label: 'Date of Birth'
+    error: 'Error message for dob'
+    wrapper_class: dob
+    attr:
+      enable_tooltip: 0
+      tooltip_blurb: test
+dob_month:
+  weight: '6'
+  options:
+    wrapper_class: dob-month
+dob_day:
+  weight: '5'
+  options:
+    wrapper_class: dob-day
+dob_year:
+  weight: '7'
+  options:
+    wrapper_class: dob-year
+country_field:
+  weight: '9'
+  options:
+    label: Country
+    attr:
+      placeholder: Country
+      enable_tooltip: 0
+      tooltip_blurb: test
+    error: 'Error message for country'
+    wrapper_class: country
+email_field:
+  weight: '8'
+  options:
+    label: 'Email Address'
+    attr:
+      placeholder: '#######@gmail.com'
+      enable_tooltip: 0
+      tooltip_blurb: ''
+    error: 'Error message for Email'
+    wrapper_class: email
+gender_field:
+  weight: '10'
+  options:
+    label: Gender
+    wrapper_class: gender
+    attr:
+      enable_tooltip: 0
+      tooltip_blurb: ''
+communication_detail_field:
+  options:
+    label: 'Communication Details'
+account_field:
+  options:
+    label: 'Account Details'
+home_address_field:
+  options:
+    label: 'Home Address'
+enable_sms_verification_field: '1'
+verify_text_field: Verify
+modal_verify_header_text_field: 'Verify Mobile Number'
+modal_verify_body_text_field: 'A verification code has been sent to you via SMS. To complete your phone number verification, please enter the 6-digit code below within 10 minutes. If you didn''t receive any code, please contact Customer Support. '
+modal_verification_code_placeholder_field: 'Verification Code'
+modal_verification_resend_code_text_field: 'Resend code'
+modal_verification_submit_text_field: Submit
+verification_code_response_field: "SMS_VERIFICATION_SUCCESS|A verification code has been sent to your mobile number.\r\nSMS_VERIFICATION_FAILED|Sorry, there was an error verifying your mobile number. Please try again or you may contact us at the following: <a href=\"{livechat.link}\" class=\"live-chat-popup-trigger\"> Live Chat </a> or <a href=\"mailto:ensupport@dafabet.com\"> Email </a> (Code:110)\r\nSMS_VERIFICATION_SUBMIT_SUCCESS|Your mobile number has been successfully verified.\r\nSMS_VERIFICATION_SUBMIT_FAILED| You have entered an invalid verification code. Please try again. (Code:111)\r\nINTERNAL_ERROR|Internal Error (Code: 801)"
+verification_code_required_message_field: 'This is a required field.'
+verification_code_min_length_message_field: 'Please enter at least 6 characters.'
+verification_code_max_length_message_field: 'Please enter no more than 6 characters.'
+mobile_number_field:
+  weight: '11'
+  options:
+    label: 'Mobile Number'
+    attr:
+      placeholder: '123456789'
+      enable_tooltip: 1
+      tooltip_blurb: 'Enter your mobile number with country code (e.g. +60123456789)'
+    error: 'Error message for Mobile'
+    wrapper_class: mobile_number
+mobile_number_1_field:
+  weight: '12'
+  options:
+    label: ''
+    attr:
+      placeholder: ''
+    error: 'Error message for Mobile'
+    wrapper_class: mobile_number_1
+language_field:
+  weight: '13'
+  options:
+    label: Language
+    attr:
+      placeholder: 'Enter Language'
+      enable_tooltip: 0
+      tooltip_blurb: ''
+    help_text: 'Help text for Language'
+    error: 'Error field for Language'
+    wrapper_class: language
+address_field:
+  weight: '14'
+  options:
+    label: Address
+    attr:
+      placeholder: Address
+      enable_tooltip: 0
+      tooltip_blurb: ''
+    wrapper_class: address
+city_field:
+  weight: '15'
+  options:
+    label: City
+    attr:
+      placeholder: City
+      enable_tooltip: 0
+      tooltip_blurb: ''
+    wrapper_class: city
+postal_code_field:
+  weight: '16'
+  options:
+    label: 'Postal Code'
+    attr:
+      placeholder: 'Postal Code'
+      enable_tooltip: 0
+      tooltip_blurb: ''
+    wrapper_class: postal_code
+save_changes_field: 'Save Changes'
+cancel_field: Cancel
+country_code_mapping_field: "AF|93\r\nAX|358\r\nAL|355\r\nDZ|213\r\nAD|376\r\nAO|244\r\nAI|1264\r\nAQ|672\r\nAR|54\r\nAM|374\r\nAW|297\r\nAU|61\r\nAT|43\r\nAZ|994\r\nBS|1242\r\nBH|973\r\nBD|880\r\nBB|1246\r\nBY|375\r\nBZ|501\r\nBJ|229\r\nBT|975\r\nBO|591\r\nBT|599\r\nBA|387\r\nBW|267\r\nBV|55\r\nBR|55\r\nIO|246\r\nBN|673\r\nBF|226\r\nBI|257\r\nKH|855\r\nCM|237\r\nCA|1\r\nCV|238\r\nKY|1345\r\nCF|236\r\nTD|235\r\nCL|56\r\nCN|86\r\nCX|618\r\nCC|618\r\nCO|57\r\nKM|269\r\nCG|242\r\nCG|243\r\nCK|682\r\nCR|506\r\nCI|225\r\nHR|385\r\nCU|53\r\nDK|45\r\nDJ|253\r\nDM|1767\r\nDO|1809\r\nEC|593\r\nEG|20\r\nSV|503\r\nGQ|240\r\nER|291\r\nET|251\r\nFK|500\r\nFO|298\r\nFJ|679\r\nFI|358\r\nGF|594\r\nPF|689\r\nTF|262\r\nGA|241\r\nGM|220\r\nGE|995\r\nDE|49\r\nGH|233\r\nGI|350\r\nGR|30\r\nGL|299\r\nGD|1473\r\nGP|590\r\nGT|502\r\nGG|44\r\nGN|224\r\nGW|245\r\nGY|592\r\nHT|509\r\nHM|0\r\nVA|379\r\nHN|504\r\nHU|36\r\nIS|354\r\nIN|91\r\nID|62\r\nIM|44\r\nJM|1876\r\nJP|81\r\nJE|44\r\nJO|962\r\nKZ|7\r\nKE|254\r\nKI|686\r\nKR|82\r\nKW|965\r\nKG|996\r\nLA|856\r\nLV|371\r\nLB|961\r\nLS|266\r\nLR|231\r\nLY|218\r\nLI|423\r\nLT|370\r\nLU|352\r\nMK|389\r\nMG|261\r\nMW|265\r\nMY|60\r\nMV|960\r\nML|223\r\nMT|356\r\nMQ|596\r\nMR|222\r\nMU|230\r\nYT|262\r\nMX|52\r\nMD|373\r\nMC|377\r\nMN|978\r\nME|382\r\nMS|1664\r\nMA|212\r\nMZ|258\r\nMM|95\r\nNA|264\r\nNR|674\r\nNP|977\r\nNL|31\r\nNC|687\r\nNZ|64\r\nNI|505\r\nNG|227\r\nNG|234\r\nNU|683\r\nNF|672\r\nNO|47\r\nOM|968\r\nPK|92\r\nPS|970\r\nPA|507\r\nPG|675\r\nPY|595\r\nPE|51\r\nPN|870\r\nPL|48\r\nQA|974\r\nRE|262\r\nRU|7\r\nRW|250\r\nBL|590\r\nSH|290\r\nKN|1869\r\nLC|1758\r\nMF|1\r\nPM|508\r\nVC|1784\r\nAS|685\r\nSM|378\r\nST|239\r\nSA|966\r\nSN|221\r\nRS|381\r\nSC|248\r\nSL|232\r\nSX|1\r\nSK|421\r\nSI|386\r\nSB|677\r\nSO|252\r\nZA|27\r\nGS|500\r\nLK|94\r\nSD|249\r\nSR|597\r\nSJ|47\r\nSZ|268\r\nSE|46\r\nSY|963\r\nTJ|992\r\nTZ|255\r\nTH|66\r\nTL|670\r\nTG|228\r\nTK|690\r\nTO|676\r\nTT|1868\r\nTN|216\r\nTM|993\r\nTC|1649\r\nTV|688\r\nUG|256\r\nUA|380\r\nAE|971\r\nUY|598\r\nUZ|998\r\nVU|678\r\nVE|58\r\nVN|84\r\nVG|1284\r\nWF|681\r\nEH|212\r\nYE|967\r\nZM|260\r\nZW|263"
+country_mapping_field: "Christmas Island|1\r\nCocos(Keeling)Islands|2\r\nAndorra|3\r\nUnitedArabEmirates|4\r\nAfghanistan|5\r\nAntiguaandBarbuda|6\r\nAnguilla|7\r\nAlbania|8\r\nArmenia|9\r\nAngola|11\r\nAntarctica|12\r\nArgentina|13\r\nAmericanSamoa|14\r\nAustria|15\r\nAustralia|16\r\nAruba|17\r\nAlandIslands|18\r\nAzerbaijan|19\r\nBosniaandHerzegovina|20\r\nBarbados|21\r\nBangladesh|22\r\nBelgium|23\r\nBurkinaFaso|24\r\nBulgaria|25\r\nBahrain|26\r\nBurundi|27\r\nBenin|28\r\nBermuda|29\r\nBruneiDarussalam|30\r\nBolivia|31\r\nBrazil|32\r\nBahamas|33\r\nBhutan|34\r\nBouvetIsland|35\r\nBotswana|36\r\nBelarus|37\r\nBelize|38\r\nCanada|39\r\nCongo,TheDemocraticRepublicofthe|40\r\nCentralAfricanRepublic|41\r\nCongo|42\r\nSwitzerland|43\r\nCoteD'Ivoire|44\r\nCookIslands|45\r\nChile|46\r\nCameroon|47\r\nChina|48\r\nColombia|49\r\nCostaRica|50\r\nCuba|51\r\nCapeVerde|52\r\nCyprus|53\r\nCzechRepublic|54\r\nGermany|55\r\nDjibouti|56\r\nDenmark|57\r\nDominica|58\r\nDominicanRepublic|59\r\nAlgeria|60\r\nEcuador|61\r\nEstonia|62\r\nEgypt|63\r\nEritrea|64\r\nSpain|65\r\nEthiopia|66\r\nFinland|67\r\nFiji|68\r\nFalklandIslands(Malvinas)|69\r\nMicronesia,FederatedStatesof|70\r\nFaroeIslands|71\r\nFrance|72\r\nGabon|73\r\nUnitedKingdom|74\r\nGrenada|75\r\nGeorgia|76\r\nFrenchGuiana|77\r\nGuernsey|78\r\nGhana|79\r\nGibraltar|80\r\nGreenland|81\r\nGambia|82\r\nGuinea|83\r\nGuadeloupe|84\r\nEquatorialGuinea|85\r\nGreece|86\r\nGuatemala|87\r\nGuam|88\r\nGuinea-Bissau|89\r\nGuyana|90\r\nHongKong|91\r\nHonduras|92\r\nCroatia|93\r\nHaiti|94\r\nHungary|95\r\nIndonesia|96\r\nIreland|97\r\nIsrael|98\r\nIsleofMan|99\r\nIndia|100\r\nBritishIndianOceanTerritory|101\r\nIraq|102\r\nIran,IslamicRepublicof|103\r\nIceland|104\r\nItaly|105\r\nJersey|106\r\nJamaica|107\r\nJordan|108\r\nJapan|109\r\nKenya|110\r\nKyrgyzstan|111\r\nCambodia|112\r\nKiribati|113\r\nComoros|114\r\nSaintKittsandNevis|115\r\nKorea,DemocraticPeople'sRepublicof|116\r\nKorea,Republicof|117\r\nKuwait|118\r\nCaymanIslands|119\r\nKazakhstan|120\r\nLaoPeople'sDemocraticRepublic|121\r\nLebanon|122\r\nSaintLucia|123\r\nLiechtenstein|124\r\nSriLanka|125\r\nLiberia|126\r\nLesotho|127\r\nLithuania|128\r\nLuxembourg|129\r\nLatvia|130\r\nLibyanArabJamahiriya|131\r\nMorocco|132\r\nMonaco|133\r\nMoldova,Republicof|134\r\nMontenegro|135\r\nSaintMartin|136\r\nMadagascar|137\r\nMarshallIslands|138\r\nMacedonia|139\r\nMali|140\r\nMyanmar|141\r\nMongolia|142\r\nMacau|143\r\nNorthernMarianaIslands|144\r\nMartinique|145\r\nMauritania|146\r\nMontserrat|147\r\nMalta|148\r\nMauritius|149\r\nMaldives|150\r\nMalawi|151\r\nMexico|152\r\nMalaysia|153\r\nMozambique|154\r\nNamibia|155\r\nNewCaledonia|156\r\nNiger|157\r\nNorfolkIsland|158\r\nNigeria|159\r\nNicaragua|160\r\nNetherlands|161\r\nNorway|162\r\nNepal|163\r\nNauru|164\r\nNiue|165\r\nNewZealand|166\r\nOman|167\r\nPanama|168\r\nPeru|169\r\nFrenchPolynesia|170\r\nPapuaNewGuinea|171\r\nPhilippines|172\r\nPakistan|173\r\nPoland|174\r\nSaintPierreandMiquelon|175\r\nPitcairnIslands|176\r\nPuertoRico|177\r\nPalestinianTerritory,Occupied|178\r\nPortugal|179\r\nPalau|180\r\nParaguay|181\r\nQatar|182\r\nReunion|183\r\nRomania|184\r\nSerbia|185\r\nRussianFederation|186\r\nRwanda|187\r\nSaudiArabia|188\r\nSolomonIslands|189\r\nSeychelles|190\r\nSudan|191\r\nSweden|192\r\nSingapore|193\r\nSlovenia|194\r\nSlovakia|195\r\nSierraLeone|196\r\nSanMarino|197\r\nSenegal|198\r\nSomalia|199\r\nSuriname|200\r\nSaoTomeandPrincipe|201\r\nElSalvador|202\r\nSyrianArabRepublic|203\r\nSwaziland|204\r\nTurksandCaicosIslands|205\r\nChad|206\r\nTogo|207\r\nThailand|208\r\nTajikistan|209\r\nTokelau|210\r\nTimor-Leste|211\r\nTurkmenistan|212\r\nTunisia|213\r\nTonga|214\r\nTurkey|215\r\nTrinidadandTobago|216\r\nTuvalu|217\r\nTaiwan|218\r\nTanzania,UnitedRepublicof|219\r\nUkraine|220\r\nUganda|221\r\nUnitedStatesMinorOutlyingIslands|222\r\nUnitedStates|223\r\nUruguay|224\r\nUzbekistan|225\r\nHolySeat(VaticanCityState)|226\r\nSaintVincentandtheGrenadines|227\r\nVenezuela|228\r\nVirginIslands,British|229\r\nVirginIslands,U.S.|230\r\nVietnam|231\r\nVanuatu|232\r\nWallisandFutuna|233\r\nSamoa|234\r\nYemen|235\r\nMayotte|236\r\nSouthAfrica|237\r\nZambia|238\r\nZimbabwe|239\r\nFrenchSouthernTerritories|240\r\nHeardIslandandMcDonaldIslands|241\r\nSaintBarthelemy|242\r\nSaintHelena,AscensionandTristandaCunha|243\r\nSouthGeorgiaandtheSouthSandwichIslands|244\r\nSvalbardandJanMayen|245\r\nWesternSahara|246\r\nBonaire,SaintEustatiusandSaba|247\r\nCuracao|248\r\nSintMaarten(Dutchpart)|249\r\nNetherlandsAntilles|250\r\nUnknown|251"
+server_side_validation_field: "INTERNAL_ERROR|Internal Error (Code: 801)\r\nUPDATE_PROFILE_SUCCESS|Your profile has been updated.\r\nUPDATE_PROFILE_FAILED|There was an error updating your profile. Please try again or you may contact us at the following: <a href=\"{livechat.link}\" class=\"live-chat-popup-trigger\">Live Chat</a> or <a href=\"mailto:ensupport@dafabet.com\">Email.</a> (Code: 700)\r\nCHECK_SESSION_PASSWORD_FAILED|There was an error updating your profile. Please try again or you may contact us at the following: <a href=\"{livechat.link}\" class=\"live-chat-popup-trigger\">Live Chat</a> or <a href=\"mailto:ensupport@dafabet.com\">Email.</a> (Code: 700)"
+required_validation_field: 'This is a required field'
+mobile_number_format_validation_field: 'This field can only contain plus sign (+) and numeric values. '
+mobile_number_min_length_validation_field: 'Please enter at least 11 characters. '
+mobile_number_max_length_validation_field: 'Please enter no more than 14 characters.'
+address_max_length_validation_field: 'Please enter no more than 100 characters.'
+address_min_length_validation_field: 'Please enter at least 2 characters. '
+address_format_validation_field: 'This field can only contain alphanumeric values and ()_-/\&#,.'
+city_max_length_validation_field: 'Please enter no more than 30 characters.'
+city_min_length_validation_field: 'Please enter at least 2 characters. '
+city_format_validation_field: 'This field can only contain alphanumeric values and ()_-/\&#,.'
+postal_code_max_length_validation_field: 'Please enter no more than 10 characters.'
+postal_code_max_length_value_field: '10'
+postal_code_format_validation_field: 'This field can only contain dash (-) and alphanumeric values. '
+password_max_length_validation_field: 'Please enter no more than 10 characters.'
+password_min_length_validation_field: 'Please enter at least 6 characters. '
+password_format_validation_field: 'This field can only contain alphanumeric values. '
+primary_label_field: Primary
+add_mobile_label_field: 'Add mobile number'
+no_changed_detected_message_field: 'No changes have been detected'
+contact_preference_top_blurb_field: 'Would you like to get the latest promos, updates, and offers?'
+contact_preference_bottom_blurb_field: '*All promotions, updates and offers will be sent to your registered email address.'
+contact_preference_field:
+  weight: '17'
+  options:
+    label: 'Yes. Send me the latest promotions, updates and offers.'
+    wrapper_class: contact_preference
+    attr:
+      enable_tooltip: 0
+      tooltip_blurb: test
+contact_preference_label:
+  options:
+    label: 'Contact Preference'
+modal_preview_header_field: 'Save Account Changes'
+modal_preview_top_blurb_field: 'Please review list of changes. '
+modal_preview_current_label_field: Current
+modal_preview_new_label_field: New
+modal_preview_bottom_blurb_field: 'Enter your password to save changes to your account'
+modal_preview_placeholder_field: Password
+modal_preview_btn_field: 'Save Changes'
+contact_preference_yes_label_field: 'Yes'
+contact_preference_no_label_field: 'No'
+_core:
+  default_config_hash: TjvnuS4nsfoXfX8HYPQYjPSDmFbidr8O7YmETrrIcDI
+male_label_field: Male
+female_label_field: Female

@@ -285,7 +285,7 @@ $config_directories = array();
  *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt');
  * @endcode
  */
-$settings['hash_salt'] = 'J9kEzyLFK-ZgmWHgJkJogJQy6Vi3_MV6-M0Y8QunthBXNaAl0QKyEYmVQriPoZ0FjxND5UQ3sw';
+$settings['hash_salt'] = 'fwjKBRlyzPwDBPb1FDstyHYrQzH-Eh4khQtBJOiIBRy8U_m4Xb1LnqVQBUGubkWy89KCgBf83w';
 
 /**
  * Deployment identifier.
@@ -506,7 +506,9 @@ if ($settings['hash_salt']) {
  * security by serving user-uploaded files from a different domain or subdomain
  * pointing to the same server. Do not include a trailing slash.
  */
-# $settings['file_public_base_url'] = 'http://downloads.example.com/files';
+if (isset($_SERVER['HTTP_X_FE_BASE_URI'])) {
+  $settings['file_public_base_url'] =  $_SERVER['HTTP_X_FE_BASE_URI'];
+}
 
 /**
  * Public file path:
@@ -515,7 +517,7 @@ if ($settings['hash_salt']) {
  * must exist and be writable by Drupal. This directory must be relative to
  * the Drupal installation directory and be accessible over the web.
  */
-# $settings['file_public_path'] = 'sites/default/files';
+ #$settings['file_public_path'] = 'casino/sites';
 
 /**
  * Private file path:
@@ -749,18 +751,13 @@ $settings['file_scan_ignore_directories'] = [
  *
  * Keep this code block at the end of this file to take full effect.
  */
-# if (file_exists(__DIR__ . '/settings.local.php')) {
-#   include __DIR__ . '/settings.local.php';
-# }
-$databases['default']['default'] = array (
-  'database' => 'wbc-casino',
-  'username' => 'admin',
-  'password' => 'admin',
-  'prefix' => '',
-  'host' => 'localhost',
-  'port' => '3306',
-  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
-  'driver' => 'mysql',
-);
-$settings['install_profile'] = 'standard';
-$config_directories['sync'] = 'sites/casino/files/config_-bCj0idci9bZZQ-RcGLB6ewJMddpIXEt1y55kO6_NFT5e3gC2oNba7d8BdR6EfrDk1n86uGL3A/sync';
+if (file_exists(__DIR__ . '/database.php')) {
+  include __DIR__ . '/database.php';
+}
+
+$settings['install_profile'] = 'config_installer';
+$config_directories['sync'] = 'sites/casino/config/sync';
+
+// The primary site of front end
+$settings['primary_site_prefix'] = 'casino';
+$settings['ck_editor_inline_image_prefix'] = '/en/casino';

@@ -1,0 +1,14 @@
+casino_config.unsupp_language_tab:
+  route_name: casino_config.unsupp_language_form
+  title: 'Unsupported language'
+  base_route: casino_config.unsupp_language_form
+
+casino_config.promo_right_block_configuration_tab:
+  route_name: casino_config.promo_right_block_form
+  title: 'Promo Right Block configuration'
+  base_route: casino_config.promo_right_block_form
+
+casino_config.provisioning_configuration_tab:
+  route_name: casino_config.provisioning_config_form
+  title: 'Auto Logout configurations'
+  base_route: casino_config.provisioning_config_form

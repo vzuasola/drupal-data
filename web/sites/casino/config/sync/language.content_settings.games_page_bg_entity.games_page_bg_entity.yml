@@ -1,0 +1,15 @@
+uuid: 128a1713-029b-4d9a-8d7b-931b87918ef8
+langcode: en
+status: true
+dependencies:
+  module:
+    - casino_games_page_background
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: games_page_bg_entity.games_page_bg_entity
+target_entity_type_id: games_page_bg_entity
+target_bundle: games_page_bg_entity
+default_langcode: site_default
+language_alterable: true

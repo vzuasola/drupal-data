@@ -1,0 +1,16 @@
+uuid: 639d538c-0096-4b3e-913b-93dad4abc64e
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - node.type.sitemap
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.sitemap
+target_entity_type_id: node
+target_bundle: sitemap
+default_langcode: site_default
+language_alterable: true

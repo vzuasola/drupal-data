@@ -1,0 +1,22 @@
+uuid: 4bd62dcd-92b6-41a2-9328-2852b5ad5755
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_mobile_blurb_content
+    - node.type.mobile
+  module:
+    - text
+id: node.mobile.field_mobile_blurb_content
+field_name: field_mobile_blurb_content
+entity_type: node
+bundle: mobile
+label: 'Mobile Blurb Content'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

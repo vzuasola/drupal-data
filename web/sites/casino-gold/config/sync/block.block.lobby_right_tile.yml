@@ -1,0 +1,31 @@
+uuid: 72eb3737-4f10-46f0-a03e-d03aa7c15e09
+langcode: zh-hans
+status: true
+dependencies:
+  content:
+    - 'block_content:lobby_tile:be72efb2-4661-4f40-9fb6-8e147d0519a5'
+  module:
+    - block_content
+    - system
+  theme:
+    - bartik
+id: lobby_right_tile
+theme: bartik
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:be72efb2-4661-4f40-9fb6-8e147d0519a5'
+settings:
+  id: 'block_content:be72efb2-4661-4f40-9fb6-8e147d0519a5'
+  label: 'Lobby Right Tile'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: "/banner-slider\r\n/basic-page"
+    negate: true
+    context_mapping: {  }

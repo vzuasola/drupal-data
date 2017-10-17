@@ -1,0 +1,642 @@
+# Change password form schema configuration
+my_account_form_profile.change_password:
+  type: config_object
+  label: 'My Account Change Password Configuration'
+  mapping:
+    current_password_field:
+      type: mapping
+      label: 'Current Password'
+      mapping:
+        options:
+          type: mapping
+          label: 'Field label'
+          mapping:
+            label:
+              type: label
+              label: 'Default value for current password'
+            help:
+              type: label
+              label: 'Help text for field'
+            attr:
+              type: mapping
+              label: 'Field Placeholder'
+              mapping:
+                placeholder:
+                  type: label
+                  label: 'Placeholder value for field'
+    new_password_field:
+      type: mapping
+      label: 'New Password'
+      mapping:
+        options:
+          type: mapping
+          label: 'Field label'
+          mapping:
+            label:
+              type: label
+              label: 'Default value for new password'
+            help:
+              type: label
+              label: 'Help text for field'
+            attr:
+              type: mapping
+              label: 'Field Placeholder'
+              mapping:
+                placeholder:
+                  type: label
+                  label: 'Placeholder value for field'
+    confirm_password_field:
+      type: mapping
+      label: 'Confirm Password'
+      mapping:
+        options:
+          type: mapping
+          label: 'Field label'
+          mapping:
+            label:
+              type: label
+              label: 'Default value for confirm password'
+            help:
+              type: label
+              label: 'Help text for field'
+            attr:
+              type: mapping
+              label: 'Placeholder value for field'
+              mapping:
+                placeholder:
+                  type: label
+                  label: 'Placeholder value for field'
+    validation_error:
+      type: mapping
+      label: 'Validation Error Messages'
+      mapping:
+        required_error:
+          type: label
+          label: 'This is a required field.'
+        minlength_error:
+          type: label
+          label: 'Please enter at least 6 characters.'
+        maxlength_error:
+          type: label
+          label: 'Please enter no more than 10 characters.'
+        mismatch:
+          type: label
+          label: 'Please enter the same value.'
+        not_username:
+          type: label
+          label: 'Must not be the same with username.'
+        not_password:
+          type: label
+          label: 'Must not be the same as Password.'
+        format_error:
+          type: text
+          label: 'Password must contain 6-10 alphanumeric characters only with no special characters and spaces.'
+    integration_error_messages:
+      type: mapping
+      label: 'Integration Message Translation'
+      mapping:
+        key_messages:
+          type: text
+          label: 'key|Error message'
+    submit_button_label_field:
+      type: mapping
+      label: 'Submit Button Label'
+      mapping:
+        options:
+          type: mapping
+          mapping:
+            label:
+              type: label
+              label: 'Default value for current password submit button'
+  langcode: 'en'
+
+# Change password form schema configuration
+my_account_form_profile.profile:
+  type: config_object
+  label: 'My Account Profile Configuration'
+  mapping:
+    username_field:
+      type: mapping
+      label: 'Username field'
+      mapping:
+        options:
+          type: mapping
+          label: 'Field label'
+          mapping:
+            label:
+              type: label
+              label: 'Field label'
+            error:
+              type: label
+              label: 'Error message'
+            attr:
+              type: mapping
+              label: 'Attributes Fields'
+              mapping:
+                placeholder:
+                  type: label
+                  label: 'Placeholder value for field'
+                tooltip_blurb:
+                  type: label
+                  label: 'Tooltip Blurb'
+    currency_field:
+      type: mapping
+      label: 'Currency'
+      mapping:
+        options:
+          type: mapping
+          label: 'Field label'
+          mapping:
+            label:
+              type: label
+              label: 'Field label'
+            error:
+              type: label
+              label: 'Error message'
+            attr:
+              type: mapping
+              label: 'Attributes Fields'
+              mapping:
+                placeholder:
+                  type: label
+                  label: 'Placeholder value for field'
+                tooltip_blurb:
+                  type: label
+                  label: 'Tooltip Blurb'
+    first_name_field:
+      type: mapping
+      label: 'First Name'
+      mapping:
+        weight:
+          type: label
+          label: 'Weight for First name field'
+        options:
+          type: mapping
+          label: 'Field label'
+          mapping:
+            label:
+              type: label
+              label: 'Field label'
+            error:
+              type: label
+              label: 'Error message'
+            attr:
+              type: mapping
+              label: 'Attributes Fields'
+              mapping:
+                placeholder:
+                  type: label
+                  label: 'Placeholder value for field'
+                tooltip_blurb:
+                  type: label
+                  label: 'Tooltip Blurb'
+    last_name_field:
+      type: mapping
+      label: 'Last Name'
+      mapping:
+        weight:
+          type: label
+          label: 'Weight for Last name field'
+        options:
+          type: mapping
+          label: 'Field label'
+          mapping:
+            label:
+              type: label
+              label: 'Field label'
+            error:
+              type: label
+              label: 'Error message'
+            attr:
+              type: mapping
+              label: 'Attributes fields'
+              mapping:
+                placeholder:
+                  type: label
+                  label: 'Placeholder value for field'
+                tooltip_blurb:
+                  type: label
+                  label: 'Tooltip Blurb'
+    dob_field:
+      type: mapping
+      label: 'DOB'
+      mapping:
+        options:
+          type: mapping
+          label: 'Field label'
+          mapping:
+            label:
+              type: label
+              label: 'Field label'
+            error:
+              type: label
+              label: 'Error message'
+            attr:
+              type: mapping
+              label: 'Attributes Fields'
+              mapping:
+                placeholder:
+                  type: label
+                  label: 'Placeholder value for field'
+                tooltip_blurb:
+                  type: label
+                  label: 'Tooltip Blurb'
+    dob_month:
+      type: mapping
+      label: 'DOB Month Weight'
+      mapping:
+        weight:
+          type: label
+          label: 'Weight for DOB month field'
+    dob_day:
+      type: mapping
+      label: 'DOB Day Weight'
+      mapping:
+        weight:
+          type: label
+          label: 'Weight for DOB day field'
+    dob_year:
+      type: mapping
+      label: 'DOB Year Weight'
+      mapping:
+        weight:
+          type: label
+          label: 'Weight for DOB year field'
+    country_field:
+      type: mapping
+      label: 'Country field translation'
+      mapping:
+        options:
+          type: mapping
+          label: 'Field label'
+          mapping:
+            label:
+              type: label
+              label: 'Field label'
+            error:
+              type: label
+              label: 'Error message'
+            attr:
+              type: mapping
+              label: 'Attributes Fields'
+              mapping:
+                placeholder:
+                  type: label
+                  label: 'Placeholder value for field'
+                tooltip_blurb:
+                  type: label
+                  label: 'Tooltip Blurb'
+    email_field:
+      type: mapping
+      label: 'Email'
+      mapping:
+        options:
+          type: mapping
+          label: 'Field label'
+          mapping:
+            label:
+              type: label
+              label: 'Field label'
+            error:
+              type: label
+              label: 'Error message'
+            attr:
+              type: mapping
+              label: 'Attributes Fields'
+              mapping:
+                placeholder:
+                  type: label
+                  label: 'Placeholder value for field'
+                tooltip_blurb:
+                  type: label
+                  label: 'Tooltip Blurb'
+    gender_field:
+      type: mapping
+      label: 'Gender'
+      mapping:
+        options:
+          type: mapping
+          label: 'Field label'
+          mapping:
+            label:
+              type: label
+              label: 'Field label'
+              attr:
+                type: mapping
+                label: 'Attributes Fields'
+                mapping:
+                  tooltip_blurb:
+                    type: label
+                    label: 'Tooltip Blurb'
+    address_field:
+      type: mapping
+      label: 'Address field'
+      mapping:
+        options:
+          type: mapping
+          label: 'Field label'
+          mapping:
+            label:
+              type: label
+              label: 'Field label'
+            attr:
+              type: mapping
+              label: 'Attributes Fields'
+              mapping:
+                placeholder:
+                  type: label
+                  label: 'Placeholder value for field'
+                tooltip_blurb:
+                  type: label
+                  label: 'Tooltip Blurb'
+    city_field:
+      type: mapping
+      label: 'City field'
+      mapping:
+        options:
+          type: mapping
+          label: 'Field label'
+          mapping:
+            label:
+              type: label
+              label: 'Field label'
+            attr:
+              type: mapping
+              label: 'Attributes Fields'
+              mapping:
+                placeholder:
+                  type: label
+                  label: 'Placeholder value for field'
+                tooltip_blurb:
+                  type: label
+                  label: 'Tooltip Blurb'
+    postal_code_field:
+      type: mapping
+      label: 'Postal Code field'
+      mapping:
+        options:
+          type: mapping
+          label: 'Field label'
+          mapping:
+            label:
+              type: label
+              label: 'Field label'
+            attr:
+              type: mapping
+              label: 'Attributes Fields'
+              mapping:
+                placeholder:
+                  type: label
+                  label: 'Placeholder value for field'
+                tooltip_blurb:
+                  type: label
+                  label: 'Tooltip Blurb'
+    communication_detail_field:
+      type: mapping
+      label: 'Communication header label translation'
+      mapping:
+        options:
+          type: mapping
+          label: 'Field label'
+          mapping:
+            label:
+              type: label
+              label: 'Field label'
+    account_field:
+      type: mapping
+      label: 'Account header label translation'
+      mapping:
+        options:
+          type: mapping
+          label: 'Field label'
+          mapping:
+            label:
+              type: label
+              label: 'Field label'
+    home_address_field:
+      type: mapping
+      label: 'Home Address header label translation'
+      mapping:
+        options:
+          type: mapping
+          label: 'Field label'
+          mapping:
+            label:
+              type: label
+              label: 'Field label'
+    enable_sms_verification_field:
+      type: label
+      label: 'Enable SMS Verification'
+    verify_text_field:
+      type: label
+      label: 'Verify text translation'
+    modal_verify_header_text_field:
+      type: label
+      label: 'Modal Verify Header text translation'
+    modal_verify_body_text_field:
+      type: text
+      label: 'Modal Verify Body text translation'
+    modal_verification_code_placeholder_field:
+      type: label
+      label: 'Modal Verification Code Placeholer translation'
+    modal_verification_resend_code_text_field:
+      type: label
+      label: 'Modal Resend Verification Code Text translation'
+    modal_verification_submit_text_field:
+      type: label
+      label: 'Modal Submit Verification Code Text translation'
+    verification_code_response_field:
+      type: text
+      label: 'Response from ICore'
+    verification_code_required_message_field:
+      type: label
+      label: 'Required field error message'
+    verification_code_min_length_message_field:
+      type: label
+      label: 'Minimum Length error message'
+    verification_code_max_length_message_field:
+      type: label
+      label: 'Maximum Length error message'  
+    mobile_number_field:
+      type: mapping
+      label: 'Contact'
+      mapping:
+        options:
+          type: mapping
+          label: 'Field label'
+          mapping:
+            label:
+              type: label
+              label: 'Field label'
+            error:
+              type: label
+              label: 'Error message'
+            attr:
+              type: mapping
+              label: 'Attributes Fields'
+              mapping:
+                placeholder:
+                  type: label
+                  label: 'Placeholder value for field'
+                tooltip_blurb:
+                  type: label
+                  label: 'Tooltip Blurb'
+    language_field:
+      type: mapping
+      label: 'Language'
+      mapping:
+        options:
+          type: mapping
+          label: 'Field label'
+          mapping:
+            label:
+              type: label
+              label: 'Field label'
+            error:
+              type: label
+              label: 'Error message'
+            attr:
+              type: mapping
+              label: 'Attributes Fields'
+              mapping:
+                placeholder:
+                  type: label
+                  label: 'Placeholder value for field'
+                tooltip_blurb:
+                  type: label
+                  label: 'Tooltip Blurb'
+    contact_preference_field:
+      type: mapping
+      label: 'Contact Preference'
+      mapping:
+        options:
+          type: mapping
+          label: 'Field label'
+          mapping:
+            label:
+              type: label
+              label: 'Field label'
+            attr:
+              type: mapping
+              label: 'Attributes Fields'
+              mapping:
+                tooltip_blurb:
+                  type: label
+                  label: 'Tooltip Blurb'
+    contact_preference_label:
+      type: mapping
+      label: 'Contact Preference header label translation'
+      mapping:
+        options:
+          type: mapping
+          label: 'Field label'
+          mapping:
+            label:
+              type: label
+              label: 'Field label'
+    contact_preference_top_blurb_field:
+      type: text
+      label: 'Contact Preference Top Blurb translation'
+    contact_preference_bottom_blurb_field:
+      type: text
+      label: 'Contact Preference Bottom Blurb translation'             
+    save_changes_field:
+      type: label
+      label: 'Save Changes Button translation'
+    cancel_field:
+      type: label
+      label: 'Cancel Button translation'
+    modal_preview_header_field:
+      type: label
+      label: 'Modal Preview Header Field translation'
+    modal_preview_top_blurb_field:
+      type: text
+      label: 'Modal Preview Top Blurb Field translation'
+    modal_preview_current_label_field:
+      type: label
+      label: 'Modal Preview Current Label Field translation'
+    modal_preview_new_label_field:
+      type: label
+      label: 'Modal Preview New Label Field translation'
+    modal_preview_bottom_blurb_field:
+      type: text
+      label: 'Modal Preview Bottom Blurb Field translation'
+    modal_preview_placeholder_field:
+      type: label
+      label: 'Modal Preview Placeholder Field translation'
+    modal_preview_btn_field:
+      type: label
+      label: 'Modal Preview Button Field translation'
+    server_side_validation_field:
+      type: text
+      label: 'Server Side Validation Field translation'
+    primary_label_field:
+      type: label
+      label: 'Primary Label Field translation'
+    add_mobile_label_field:
+      type: label
+      label: 'Add Mobile Label Field translation'
+    no_changed_detected_message_field:
+      type: label
+      label: 'No change message translation'
+    female_label_field:
+      type: label
+      label: 'Female label translation'
+    male_label_field:
+      type: label
+      label: 'Male label translation'
+    required_validation_field:
+      type: label
+      label: 'Required Validation translation'
+    mobile_number_format_validation_field:
+      type: label
+      label: 'Mobile Number Format Validation Message translation'
+    mobile_number_min_length_validation_field:
+      type: label
+      label: 'Mobile number minimum length error message translation'
+    mobile_number_max_length_validation_field:
+      type: label
+      label: 'Mobile number maximum length error message translation'
+    address_max_length_validation_field:
+      type: label
+      label: 'Address maximum length error message translation'
+    address_min_length_validation_field:
+      type: label
+      label: 'Address minimum length error message translation'
+    address_format_validation_field:
+      type: label
+      label: 'Address format error message translation'
+    city_max_length_validation_field:
+      type: label
+      label: 'City maximum length error message translation'
+    city_min_length_validation_field:
+      type: label
+      label: 'City minimum length error message translation'
+    city_format_validation_field:
+      type: label
+      label: 'City format error message translation'
+    postal_code_max_length_validation_field:
+      type: label
+      label: 'Postal Code maximum length error message translation'
+    postal_code_max_length_value_field:
+      type: label
+      label: 'Postal Code maximum length value translation'
+    postal_code_format_validation_field:
+      type: label
+      label: 'Postal Code format error message translation'
+    password_max_length_validation_field:
+      type: label
+      label: 'Password maximum length error message translation'
+    password_min_length_validation_field:
+      type: label
+      label: 'Password minimum length error message translation'
+    password_format_validation_field:
+      type: label
+      label: 'Password format error message translation'
+    contact_preference_yes_label_field:
+      type: label
+      label: 'True translation'
+    contact_preference_no_label_field:
+      type: label
+      label: 'False translation'
+  langcode: 'en'

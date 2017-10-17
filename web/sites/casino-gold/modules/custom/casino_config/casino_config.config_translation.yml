@@ -1,0 +1,17 @@
+casino_config.unsupp_language_form_schema:
+  title: 'Unsupported language'
+  base_route_name: casino_config.unsupp_language_form
+  names:
+    - 'casino_config.unsupported_language'
+
+casino_config.casino_promo_right_block_schema:
+  title: 'Right Side Block configurations'
+  base_route_name: casino_config.promo_right_block_form
+  names:
+    - 'casino_config.promo_right_block'
+
+casino_config.provisioning_config_schema:
+  title: 'Provisioning LightBox configurations'
+  base_route_name: casino_config.provisioning_config_form
+  names:
+    - 'casino_config.provisioning_config'
