@@ -19,6 +19,14 @@ class ValidationManager {
       'title' => 'Alphanumeric',
       'description' => 'Only accept alpha numeric characters',
       'error' => 'Field should be alphanumeric',
+      'parameters' => [
+        'spaces' => [
+          '#title' => 'Accept Spaces',
+          '#description' => 'Checks whether this validation should accept spaces or not',
+          '#type' => 'checkbox',
+          '#default_value' => true,
+        ],
+      ],
     ],
     'numeric' => [
       'title' => 'Numeric',

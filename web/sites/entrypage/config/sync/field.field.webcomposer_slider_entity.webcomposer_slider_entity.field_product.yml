@@ -1,0 +1,26 @@
+uuid: 9200127d-f159-4fa2-b928-febb98b32ee7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.webcomposer_slider_entity.field_product
+  module:
+    - webcomposer_slider
+id: webcomposer_slider_entity.webcomposer_slider_entity.field_product
+field_name: field_product
+entity_type: webcomposer_slider_entity
+bundle: webcomposer_slider_entity
+label: Product
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: product
+      display_name: entity_reference_1
+      arguments: {  }
+field_type: entity_reference
