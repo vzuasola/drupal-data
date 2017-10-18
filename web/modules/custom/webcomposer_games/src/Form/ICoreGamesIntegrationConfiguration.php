@@ -84,11 +84,26 @@ class ICoreGamesIntegrationConfiguration extends ConfigFormBase {
       '#default_value' => $config->get('unsupported_currencies_button')
     );
 
-    $form['message']['fallback_error'] = array(
+    $form['message']['fallback_error_title'] = array(
       '#type' => 'textfield',
-      '#title' => t('Fallback error'),
-      '#description' => $this->t('Fallback error.'),
-      '#default_value' => $config->get('fallback_error')
+      '#title' => t('Fallback Error Title'),
+      '#description' => $this->t('Fallback error Title.'),
+      '#default_value' => $config->get('fallback_error_title')
+    );
+
+    $config_message = $config->get('fallback_error_message');
+    $form['message']['fallback_error_message'] = array(
+      '#type' => 'text_format',
+      '#title' => $this->t('Fallback Error Message'),
+      '#default_value' => $config_message['value'],
+      '#format' => $config_message['format'],
+    );
+
+    $form['message']['fallback_error_button'] = array(
+      '#type' => 'textfield',
+      '#title' => t('Fallback error button'),
+      '#description' => $this->t('Fallback Error LightBox Ok button'),
+      '#default_value' => $config->get('fallback_error_button')
     );
 
     return parent::buildForm($form, $form_state);
@@ -112,7 +127,9 @@ class ICoreGamesIntegrationConfiguration extends ConfigFormBase {
       'unsupported_currencies_title',
       'unsupported_currencies_message',
       'unsupported_currencies_button',
-      'fallback_error'
+      'fallback_error_title',
+      'fallback_error_message',
+      'fallback_error_button',
     ];
 
     $result = array_merge($providers, $keys);
