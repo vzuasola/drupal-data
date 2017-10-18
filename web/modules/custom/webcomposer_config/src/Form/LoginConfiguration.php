@@ -202,6 +202,21 @@ class LoginConfiguration extends ConfigFormBase {
       '#required' => TRUE,
     ];
 
+    $form['mobile_login'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Mobile Login'),
+      '#collapsible' => TRUE,
+      '#group' => 'advanced',
+    ];
+
+    $form['mobile_login']['mobile_login_url'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Mobile Login URL'),
+      '#description' => $this->t('URL to be used in login button for mobile'),
+      '#default_value' => $config->get('mobile_login_url'),
+      '#required' => TRUE,
+    ];
+
     return parent::buildForm($form, $form_state);
   }
 
@@ -229,6 +244,7 @@ class LoginConfiguration extends ConfigFormBase {
       'notification_window_title',
       'notification_content',
       'lightbox_blurb',
+      'mobile_login_url',
     ];
 
     foreach ($loginValuesKeys as $keys) {

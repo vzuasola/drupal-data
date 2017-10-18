@@ -78,6 +78,10 @@ webcomposer_config.footer_configuration:
     social_media_title:
       type: label
       label: 'Social Media Title'
+    sponsor_mobile_desc:
+      type: label
+      label: 'Sponsor Mobile Description'
+      translatable: true
 
 webcomposer_config.login_configuration:
   type: config_object
@@ -140,6 +144,9 @@ webcomposer_config.login_configuration:
     notification_content:
       type: text_format
       label: 'Notification Box Content'
+    mobile_login_url:
+      type: label
+      label: 'Mobile Login URL'
 
 webcomposer_config.browser_configuration:
   type: config_object

@@ -1,0 +1,22 @@
+uuid: 6fc5ed35-f20d-4cea-8f98-1d164d9cbdab
+langcode: en
+status: true
+dependencies:
+  module:
+    - basic_auth
+    - registration_config
+    - serialization
+    - user
+_core:
+  default_config_hash: MWsP6jMc9CDmoZDBbQCpzGjy4THPJD8nQX5d-eoLdck
+id: registration_config_form_resource
+plugin_id: registration_config_form_resource
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      1: json
+      2: xml
+    supported_auth:
+      - basic_auth
+      - cookie
