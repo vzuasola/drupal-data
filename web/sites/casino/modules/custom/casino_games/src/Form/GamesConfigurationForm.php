@@ -39,6 +39,12 @@ class GamesConfigurationForm extends ConfigFormBase {
       '#group' => 'games_configuration_tab',
     );
 
+    $form['thumbnail_group']['disable_jackpot_ticker'] = array(
+      '#type' => 'checkbox',
+      '#title' => t('Disable Game Thumbnail Jackpot Ticker'),
+      '#default_value' => $config->get('disable_jackpot_ticker')
+    );
+
     $form['thumbnail_group']['play_text'] = array(
       '#type' => 'textfield',
       '#title' => $this->t('Play Now Button Text'),
@@ -53,12 +59,6 @@ class GamesConfigurationForm extends ConfigFormBase {
       '#description' => $this->t('The text to display on play for fun link.'),
       '#default_value' => $config->get('play_for_fun_text'),
       '#required' => TRUE,
-    );
-
-    $form['thumbnail_group']['disable_jackpot_ticker'] = array(
-      '#type' => 'checkbox',
-      '#title' => t('Disable Game Thumbnail Jackpot Ticker'),
-      '#default_value' => $config->get('disable_jackpot_ticker')
     );
 
     $form['thumbnail_group']['game_info_text'] = array(
