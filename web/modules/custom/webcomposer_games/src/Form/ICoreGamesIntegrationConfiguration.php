@@ -54,6 +54,12 @@ class ICoreGamesIntegrationConfiguration extends ConfigFormBase {
         '#description' => $this->t("Currency mapping for {$value}."),
         '#default_value' => $config->get("{$key}_currency")
       );
+      $form[$key]["{$key}_language_mapping"] = array(
+        '#type' => 'textarea',
+        '#title' => t('Language Mapping'),
+        '#description' => $this->t("Language mapping for {$value}."),
+        '#default_value' => $config->get("{$key}_language_mapping")
+      );
     }
 
     $form['message'] = array(
@@ -121,6 +127,7 @@ class ICoreGamesIntegrationConfiguration extends ConfigFormBase {
     $providers = [];
     foreach (self::ICORE_GAME_PROVIDERS as $key => $value) {
       $providers[] = "{$key}_currency";
+      $providers[] = "{$key}_language_mapping";
     }
 
     $keys = [
