@@ -16,3 +16,4 @@ html5_lightbox_title: 'HTML 5 TItle'
 html5_lightbox_content:
   value: "<p>html 5 message</p>\r\n"
   format: basic_html
+disable_jackpot_ticker: 0
