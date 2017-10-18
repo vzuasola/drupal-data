@@ -1,4 +1,4 @@
-uuid: c7deafe4-7dd5-485f-8c41-a435bc7316c5
+uuid: 4f780861-a433-45f3-af77-ee61e18b752d
 langcode: en
 status: true
 dependencies:
@@ -6,18 +6,16 @@ dependencies:
     - field.storage.entrypage_front_block.field_link_text_hover_1
   module:
     - entrypage_front_blocks
-    - link
+    - text
 id: entrypage_front_block.entrypage_front_block.field_link_text_hover_1
 field_name: field_link_text_hover_1
 entity_type: entrypage_front_block
 bundle: entrypage_front_block
-label: 'Link Text Hover 1'
+label: 'Link text Hover 1'
 description: ''
 required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''
-settings:
-  link_type: 17
-  title: 1
-field_type: link
+settings: {  }
+field_type: text
