@@ -55,6 +55,12 @@ class GamesConfigurationForm extends ConfigFormBase {
       '#required' => TRUE,
     );
 
+    $form['thumbnail_group']['disable_jackpot_ticker'] = array(
+      '#type' => 'checkbox',
+      '#title' => t('Disable Game Thumbnail Jackpot Ticker'),
+      '#default_value' => $config->get('disable_jackpot_ticker')
+    );
+
     $form['thumbnail_group']['game_info_text'] = array(
       '#type' => 'textfield',
       '#title' => $this->t('Game Info Link Text'),
@@ -111,12 +117,6 @@ class GamesConfigurationForm extends ConfigFormBase {
       '#type' => 'checkbox',
       '#title' => t('Disable Announcement Icon'),
       '#default_value' => $config->get('disable_announcement_icon')
-    );
-
-    $form['thumbnail_group']['disable_jackpot_ticker'] = array(
-      '#type' => 'checkbox',
-      '#title' => t('Disable Game Thumbnail Jackpot Ticker'),
-      '#default_value' => $config->get('disable_jackpot_ticker')
     );
 
     $form['lightbox_group'] = array(
