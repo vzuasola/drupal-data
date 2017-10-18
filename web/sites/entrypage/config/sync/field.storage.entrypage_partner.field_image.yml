@@ -1,0 +1,32 @@
+uuid: dbcfc26f-f69b-49d0-bafe-86a0f1f52620
+langcode: en
+status: true
+dependencies:
+  module:
+    - entrypage_partners
+    - file
+    - image
+_core:
+  default_config_hash: JwLL3ItKG0Cqt5ObLvR4lpOMFHBwKaEt4WX8PSj0e0c
+id: entrypage_partner.field_image
+field_name: field_image
+entity_type: entrypage_partner
+type: image
+settings:
+  uri_scheme: public
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  target_type: file
+  display_field: false
+  display_default: false
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -5,7 +5,11 @@ namespace Drupal\webcomposer_config\Form;
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
 
+/**
+ * Config form for Login configuration.
+ */
 class LoginConfiguration extends ConfigFormBase {
+
   /**
    * {@inheritdoc}
    */
@@ -20,95 +24,95 @@ class LoginConfiguration extends ConfigFormBase {
     return 'login_config_settings_form';
   }
 
-  /**`
+  /**
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
     $config = $this->config('webcomposer_config.login_configuration');
 
-    $form['advanced'] = array(
+    $form['advanced'] = [
       '#type' => 'vertical_tabs',
       '#title' => t('Settings'),
-    );
+    ];
 
-    $form['login_form_details'] = array(
+    $form['login_form_details'] = [
       '#type' => 'details',
       '#title' => t('Login Form Settings'),
       '#group' => 'advanced',
-    );
+    ];
 
-    $form['login_form_details'] ['username_placeholder'] = array(
+    $form['login_form_details']['username_placeholder'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Username Placeholder'),
       '#default_value' => $config->get('username_placeholder'),
-    );
+    ];
 
-    $form['login_form_details'] ['password_placeholder'] = array(
+    $form['login_form_details']['password_placeholder'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Password Placeholder'),
       '#default_value' => $config->get('password_placeholder'),
-    );
+    ];
 
-    $form['login_form_details'] ['login_bottom_label'] = array(
+    $form['login_form_details']['login_bottom_label'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Login Button Label'),
       '#default_value' => $config->get('login_bottom_label'),
-    );
+    ];
 
-    $form['login_form_details'] ['lightbox_blurb'] = array(
+    $form['login_form_details']['lightbox_blurb'] = [
       '#type' => 'textarea',
       '#title' => $this->t('Login lightbox blurb'),
       '#default_value' => $config->get('lightbox_blurb'),
-    );
+    ];
 
-    $form['login_form_error_messages_details'] = array(
+    $form['login_form_error_messages_details'] = [
       '#type' => 'details',
       '#title' => t('Error Messages'),
       '#group' => 'advanced',
-    );
+    ];
 
-    $form['login_form_error_messages_details']['error_message_blank_username'] = array(
+    $form['login_form_error_messages_details']['error_message_blank_username'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Blank Username'),
       '#default_value' => $config->get('error_message_blank_username'),
-    );
+    ];
 
-    $form['login_form_error_messages_details']['error_message_blank_password'] = array(
+    $form['login_form_error_messages_details']['error_message_blank_password'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Blank Password'),
       '#default_value' => $config->get('error_message_blank_password'),
-    );
+    ];
 
-    $form['login_form_error_messages_details']['error_message_blank_passname'] = array(
+    $form['login_form_error_messages_details']['error_message_blank_passname'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Blank Username and Password'),
       '#default_value' => $config->get('error_message_blank_passname'),
-    );
+    ];
 
-    $form['login_form_error_messages_details']['error_message_invalid_passname'] = array(
+    $form['login_form_error_messages_details']['error_message_invalid_passname'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Invalid Username and Password'),
       '#default_value' => $config->get('error_message_invalid_passname'),
-    );
+    ];
 
-    $form['login_form_error_messages_details']['error_message_account_suspended'] = array(
+    $form['login_form_error_messages_details']['error_message_account_suspended'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Player account is Suspended/Closed'),
       '#default_value' => $config->get('error_message_account_suspended'),
-    );
+    ];
 
-    $form['login_form_error_messages_details']['error_message_account_locked'] = array(
+    $form['login_form_error_messages_details']['error_message_account_locked'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('  Player account is locked after (X) consecutive login attempt'),
+      '#title' => $this->t('Player account is locked after (X) consecutive login attempt'),
       '#description' => $this->t('Note: number of attempts (X) and number of minutes (Y) configuration is located at the middleware.'),
       '#default_value' => $config->get('error_message_account_locked'),
-    );
+    ];
 
-    $form['login_form_error_messages_details']['error_message_service_not_available'] = array(
+    $form['login_form_error_messages_details']['error_message_service_not_available'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Error thrown by services'),
       '#default_value' => $config->get('error_message_service_not_available'),
-    );
+    ];
 
     $form['session_timeout_details'] = [
       '#type' => 'details',
@@ -205,7 +209,7 @@ class LoginConfiguration extends ConfigFormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    $loginValuesKeys = array(
+    $loginValuesKeys = [
       'username_placeholder',
       'password_placeholder',
       'login_bottom_label',
@@ -224,8 +228,8 @@ class LoginConfiguration extends ConfigFormBase {
       'notification_title',
       'notification_window_title',
       'notification_content',
-      'lightbox_blurb'
-    );
+      'lightbox_blurb',
+    ];
 
     foreach ($loginValuesKeys as $keys) {
       $this->config('webcomposer_config.login_configuration')->set($keys, $form_state->getValue($keys))->save();
@@ -233,4 +237,5 @@ class LoginConfiguration extends ConfigFormBase {
 
     parent::submitForm($form, $form_state);
   }
+
 }

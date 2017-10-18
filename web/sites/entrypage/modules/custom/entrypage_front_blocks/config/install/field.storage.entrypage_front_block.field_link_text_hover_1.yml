@@ -1,0 +1,19 @@
+uuid: 24d9b23c-f4e1-4d73-bff7-191e9f81037f
+langcode: en
+status: true
+dependencies:
+  module:
+    - entrypage_front_blocks
+    - link
+id: entrypage_front_block.field_link_text_hover_1
+field_name: field_link_text_hover_1
+entity_type: entrypage_front_block
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

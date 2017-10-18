@@ -1,0 +1,31 @@
+<?php
+
+/**
+ * Implements hook_uninstall
+ */
+function entrypage_front_blocks_uninstall()
+{
+   $keys = [
+      'core.base_field_override.entrypage_front_block.entrypage_front_block.user_id.yml',
+      'core.entity_form_display.entrypage_front_block.entrypage_front_block.default.yml',
+      'core.entity_view_display.entrypage_front_block.entrypage_front_block.default.yml',
+      'field.field.entrypage_front_block.entrypage_front_block.field_body.yml',
+      'field.field.entrypage_front_block.entrypage_front_block.field_featured_tag.yml',
+      'field.field.entrypage_front_block.entrypage_front_block.field_image.yml',
+      'field.field.entrypage_front_block.entrypage_front_block.field_short_title.yml',
+      'field.field.entrypage_front_block.entrypage_front_block.field_title.yml',
+      'field.field.entrypage_front_block.entrypage_front_block.field_url.yml',
+      'field.storage.entrypage_front_block.field_body.yml',
+      'field.storage.entrypage_front_block.field_featured_tag.yml',
+      'field.storage.entrypage_front_block.field_image.yml',
+      'field.storage.entrypage_front_block.field_short_title.yml',
+      'field.storage.entrypage_front_block.field_title.yml',
+      'field.storage.entrypage_front_block.field_url.yml',
+      'language.content_settings.entrypage_front_block.entrypage_front_block.yml',
+      'views.view.entrypage_front_blocks_cmi.yml'
+    ];
+
+    foreach ($keys as $key) {
+      \Drupal::configFactory()->getEditable($key)->delete();
+    }
+}

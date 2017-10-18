@@ -1,0 +1,7 @@
+entrypage_partners.admin_settings:
+  path: 'admin/config/entrypage_partners'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Entrypage partner blocks'
+  requirements:
+    _permission: 'administer site configuration'

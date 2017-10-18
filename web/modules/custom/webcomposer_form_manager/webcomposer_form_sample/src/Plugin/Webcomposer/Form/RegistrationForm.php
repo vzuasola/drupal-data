@@ -19,10 +19,10 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
    */
   public function getSettings() {
     return [
-      'teaser' => [
-        '#title' => 'Form teaser',
+      'header' => [
+        '#title' => 'Form header',
         '#type' => 'textarea',
-        '#description' => 'Teaser for this form',
+        '#description' => 'Header text for this form',
       ],
     ];
   }
@@ -32,28 +32,143 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
    */
   public function getFields() {
     return [
-      'firstname' => [
-        'name' => 'First name',
+      'username' => [
+        'name' => 'Username',
         'type' => 'textfield',
         'settings' => [
-          'placeholder' => [
-            '#title' => 'Placeholder',
+          'label' => [
+            '#title' => 'Label',
             '#type' => 'textfield',
-            '#description' => 'Placeholder for the fistname',
-            '#default_value' => 'Leandrew',
+            '#description' => 'Label for this field',
+            '#default_value' => 'Username',
           ],
         ],
       ],
 
-      'lastname' => [
-        'name' => 'Last name',
+      'password' => [
+        'name' => 'Password',
+        'type' => 'password',
+        'settings' => [
+          'label' => [
+            '#title' => 'Label',
+            '#type' => 'textfield',
+            '#description' => 'Label for this field',
+            '#default_value' => 'Password',
+          ],
+        ],
+      ],
+
+      'email' => [
+        'name' => 'Email',
         'type' => 'textfield',
         'settings' => [
-          'placeholder' => [
-            '#title' => 'Placeholder',
+          'label' => [
+            '#title' => 'Label',
             '#type' => 'textfield',
-            '#description' => 'Placeholder for the lastname',
-            '#default_value' => 'ViCarpio',
+            '#description' => 'Label for this field',
+            '#default_value' => 'Email',
+          ],
+        ],
+      ],
+
+      'comments' => [
+        'name' => 'Comment',
+        'type' => 'textarea',
+        'settings' => [
+          'label' => [
+            '#title' => 'Label',
+            '#type' => 'textfield',
+            '#description' => 'Label for this field',
+            '#default_value' => 'Comments',
+          ],
+        ],
+      ],
+
+      'gender' => [
+        'name' => 'Gender',
+        'type' => 'radios',
+        'settings' => [
+          'label' => [
+            '#title' => 'Label',
+            '#type' => 'textfield',
+            '#description' => 'The label for this field',
+            '#default_value' => 'Gender',
+          ],
+          'choices' => [
+            '#title' => 'Gender Choices',
+            '#type' => 'textarea',
+            '#description' => 'Provide a pipe separated key value pair. <br> <small>Example key|My Value</small>',
+            '#default_value' => implode(PHP_EOL, ['male|Male', 'female|Female']),
+          ],
+        ],
+      ],
+
+      'foods' => [
+        'name' => 'Foods',
+        'type' => 'checkboxes',
+        'settings' => [
+          'label' => [
+            '#title' => 'Label',
+            '#type' => 'textfield',
+            '#description' => 'The label for this field',
+            '#default_value' => 'Foods',
+          ],
+          'choices' => [
+            '#title' => 'Food Choices',
+            '#type' => 'textarea',
+            '#description' => 'Provide a pipe separated key value pair. <br> <small>Example key|My Value</small>',
+            '#default_value' => implode(PHP_EOL, ['pizza|Pizza', 'donut|Donut']),
+          ],
+        ],
+      ],
+
+      'countries' => [
+        'name' => 'Countries',
+        'type' => 'select',
+        'settings' => [
+          'label' => [
+            '#title' => 'Label',
+            '#type' => 'textfield',
+            '#description' => 'The label for this field',
+            '#default_value' => 'Country',
+          ],
+          'placeholder' => [
+            '#title' => 'Choose a country',
+            '#type' => 'textfield',
+            '#description' => 'Placeholder value for this textfield',
+            '#default_value' => 'Select your country...',
+          ],
+          'choices' => [
+            '#title' => 'Country Choices',
+            '#type' => 'textarea',
+            '#description' => 'Provide a pipe separated key value pair. <br> <small>Example key|My Value</small>',
+            '#default_value' => implode(PHP_EOL, ['ch|China', 'us|United States']),
+          ],
+        ],
+      ],
+
+      'age' => [
+        'name' => 'Age',
+        'type' => 'checkbox',
+        'settings' => [
+          'label' => [
+            '#title' => 'Label',
+            '#type' => 'textfield',
+            '#description' => 'The label for this checkbox',
+            '#default_value' => 'I am sure that I am above 18 years old',
+          ],
+        ],
+      ],
+
+      'submit' => [
+        'name' => 'Submit',
+        'type' => 'submit',
+        'settings' => [
+          'label' => [
+            '#title' => 'Submit Label',
+            '#type' => 'textfield',
+            '#description' => 'Label for the submit button',
+            '#default_value' => 'Submit',
           ],
         ],
       ],

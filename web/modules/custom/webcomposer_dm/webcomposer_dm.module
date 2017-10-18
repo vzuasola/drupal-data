@@ -5,9 +5,9 @@
  * Contains webcomposer_dm.module.
  */
 
-define('DOMAIN_GROUP_VOCAB', 'domain_groups');
-define('DOMAIN_VOCAB', 'domain');
-define('MASTER_PLACEHOLDER', 'master_placeholder');
+define('WEBCOMPOSER_DM_DOMAIN_GROUP_VOCAB', 'domain_groups');
+define('WEBCOMPOSER_DM_DOMAIN_VOCAB', 'domain');
+define('WEBCOMPOSER_DM_MASTER_PLACEHOLDER', 'master_placeholder');
 
 use Drupal\Core\Routing\RouteMatchInterface;
 

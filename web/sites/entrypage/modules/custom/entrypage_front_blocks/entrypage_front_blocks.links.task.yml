@@ -14,11 +14,6 @@ entity.entrypage_front_block.edit_form:
   base_route: entity.entrypage_front_block.canonical
   title: 'Edit'
 
-entity.entrypage_front_block.version_history:
-  route_name: entity.entrypage_front_block.version_history
-  base_route: entity.entrypage_front_block.canonical
-  title: 'Revisions'
-
 entity.entrypage_front_block.delete_form:
   route_name:  entity.entrypage_front_block.delete_form
   base_route:  entity.entrypage_front_block.canonical

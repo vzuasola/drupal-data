@@ -10,5 +10,9 @@ freeplay_lightbox_content:
   format: basic_html
 disable_language_selector: 1
 disable_announcement_icon: 1
-game_promotion_link: /promotions
+game_promotion_link: '{domain:entry}/{lang}/promotions'
 game_promotion_link_target: _self
+html5_lightbox_title: 'HTML 5 TItle'
+html5_lightbox_content:
+  value: "<p>html 5 message</p>\r\n"
+  format: basic_html

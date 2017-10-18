@@ -1,6 +1,9 @@
 <?php
 
-use Drupal\block\Entity\Block;
+/**
+ * @file
+ * Create the menu, block and paragraph on module installation.
+ */
 
 use Drupal\webcomposer_config\Install\QuickLinksMenu;
 use Drupal\webcomposer_config\Install\ProductMenu;

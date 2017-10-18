@@ -1,12 +1,16 @@
 services: 
   webcomposer_form_manager.form_manager: 
-    class: Drupal\webcomposer_form_manager\WebcomposerForm 
-    arguments: [@plugin.manager.webcomposer_form, @webcomposer_form_manager.validation_manager] 
+    class: Drupal\webcomposer_form_manager\WebcomposerForm
+    arguments: ['@plugin.manager.webcomposer_form', '@webcomposer_form_manager.validation_manager']
 
-  webcomposer_form_manager.validation_manager: 
-    class: Drupal\webcomposer_form_manager\Validation\ValidationManager 
-    arguments: [@module_handler] 
+  webcomposer_form_manager.settings: 
+    class: Drupal\webcomposer_form_manager\WebcomposerFormSettings
+    arguments: ['@webcomposer_form_manager.form_manager', '@config.factory']
+
+  webcomposer_form_manager.validation_manager:
+    class: Drupal\webcomposer_form_manager\Validation\ValidationManager
+    arguments: ['@module_handler']
  
-  plugin.manager.webcomposer_form: 
-    class: Drupal\webcomposer_form_manager\WebcomposerFormManager 
-    parent: default_plugin_manager 
+  plugin.manager.webcomposer_form:
+    class: Drupal\webcomposer_form_manager\WebcomposerFormManager
+    parent: default_plugin_manager
