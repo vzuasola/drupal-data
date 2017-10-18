@@ -42,3 +42,12 @@ webcomposer_config.icore_games_integration:
     fallback_error:
       type: text
       label: 'Fallback Error'
+    fallback_error_title:
+      type: text
+      label: 'Fallback Error Title'
+    fallback_error_message:
+      type: text_format
+      label: 'Fallback Error Message'
+    fallback_error_button:
+      type: text
+      label: 'Fallback Error Button'
