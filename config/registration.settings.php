@@ -759,5 +759,5 @@ $settings['install_profile'] = 'config_installer';
 $config_directories['sync'] = 'sites/registration/config/sync';
 
 // The primary site of front end
-$settings['primary_site_prefix'] = 'join';
-$settings['ck_editor_inline_image_prefix'] = '/en/join';
+$settings['primary_site_prefix'] = 'registration';
+$settings['ck_editor_inline_image_prefix'] = '/en/registration';
