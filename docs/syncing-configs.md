@@ -73,5 +73,6 @@ $ drupal --uri=entrypage.drupal.dev ce
 Depending on how unsynced the site is, you may experience errors after syncing
 
 * `Syncing error before 100%`
+
 This is common, if you got an error syncing your configs, go back to the Syncing page,
 then `Clear Cache`. If `Clear Cache` does not work try doing `update.php`. Then try to sync again.
