@@ -1,5 +1,4 @@
 uuid: 1ef0909c-5e33-4ba1-a23e-e66e19b32878
-# added
 langcode: en
 status: true
 dependencies:
@@ -8,6 +7,8 @@ dependencies:
   module:
     - entrypage_front_blocks
     - options
+_core:
+  default_config_hash: 7bgVz8CaQto336Hv6MMQLshxTk1hOhum3oterkCLYr0
 id: entrypage_front_block.entrypage_front_block.field_image_target
 field_name: field_image_target
 entity_type: entrypage_front_block
