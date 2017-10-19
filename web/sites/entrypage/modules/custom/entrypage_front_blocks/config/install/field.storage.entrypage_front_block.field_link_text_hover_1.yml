@@ -1,10 +1,12 @@
-uuid: 782bcc55-3cbe-4835-9db7-a3a55bf0752d
+uuid: 6fc504f6-e78e-4d4f-ae8d-8feeee3c9779
 langcode: en
 status: true
 dependencies:
   module:
     - entrypage_front_blocks
     - text
+_core:
+  default_config_hash: 0UJEasWUatFkOeo0TOiP7tKrDLR2hxPn-pB5rqHJNGg
 id: entrypage_front_block.field_link_text_hover_1
 field_name: field_link_text_hover_1
 entity_type: entrypage_front_block
