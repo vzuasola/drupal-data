@@ -1,19 +1,19 @@
-uuid: 7ed01fd8-d639-4b0b-88f7-3be46ad74108
+uuid: 026a1f72-2ba2-4176-9d19-a007fe0fd2f1
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.entrypage_front_block.field_url
+    - field.storage.entrypage_front_block.field_link_text_hover_2
   module:
     - entrypage_front_blocks
     - link
 _core:
-  default_config_hash: _rtXJnkQfThHDYEMyTEnb-AfjqmuhkYiCCYal0FA8i4
-id: entrypage_front_block.entrypage_front_block.field_url
-field_name: field_url
+  default_config_hash: 5_08wIWVsv5SBXQqj_8SoQHO7LUEw8WoW6uZrswhnQg
+id: entrypage_front_block.entrypage_front_block.field_link_text_hover_2
+field_name: field_link_text_hover_2
 entity_type: entrypage_front_block
 bundle: entrypage_front_block
-label: URL
+label: 'Link Text Hover 2'
 description: ''
 required: false
 translatable: true

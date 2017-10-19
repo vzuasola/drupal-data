@@ -1,0 +1,32 @@
+uuid: 59704a20-4212-4eca-abc6-c448ed2a8e30
+langcode: en
+status: true
+dependencies:
+  module:
+    - entrypage_front_blocks
+    - options
+_core:
+  default_config_hash: gdHRjfjq7rgC_tNJ_I0pzLNGc0BbGYaP039TrmpfxKo
+id: entrypage_front_block.field_text_hover_2_link_target
+field_name: field_text_hover_2_link_target
+entity_type: entrypage_front_block
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: _top
+      label: 'Same Window'
+    -
+      value: _blank
+      label: 'New Tab'
+    -
+      value: window
+      label: 'New Window'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

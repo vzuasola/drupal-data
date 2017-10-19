@@ -1,18 +1,18 @@
-uuid: da9cc3d0-74cd-44f3-87db-5921f613c01b
+uuid: 258b692a-ebcc-42a7-9dd0-ed752ef8a297
 langcode: en
 status: true
 dependencies:
   module:
     - entrypage_front_blocks
-    - text
+    - link
 _core:
-  default_config_hash: m5ZgP8D1s2FW5drYhqAgR2UA4BXPdEh5ZWQ-iIydFNc
-id: entrypage_front_block.field_body
-field_name: field_body
+  default_config_hash: n1K9NUizFf9mHH8fz__icoxXtohCBlnmY-z3vGFR4Uo
+id: entrypage_front_block.field_link
+field_name: field_link
 entity_type: entrypage_front_block
-type: text_long
+type: link
 settings: {  }
-module: text
+module: link
 locked: false
 cardinality: 1
 translatable: true
