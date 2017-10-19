@@ -8,16 +8,54 @@ dependencies:
     - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_banner_link_target
     - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_blurb
     - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_log_in_state
+    - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_product
     - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_publish_date
+    - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_ribbon_background_color
+    - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_ribbon_label_color
+    - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_ribbon_product_label
     - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_title
     - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_unpublish_date
     - image.style.thumbnail
   module:
+    - color_field
     - datetime
+    - field_group
     - image
     - link
     - text
     - webcomposer_slider
+third_party_settings:
+  field_group:
+    group_product_ribbon:
+      children:
+        - field_product
+        - field_ribbon_product_label
+        - field_ribbon_label_color
+        - field_ribbon_background_color
+      parent_name: ''
+      weight: 7
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Product Ribbon'
+    group_scheduler_settings:
+      children:
+        - field_publish_date
+        - field_unpublish_date
+      parent_name: ''
+      weight: 8
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Scheduler Settings'
 _core:
   default_config_hash: b621MhiBvHrNfQr-lokUrjvuv5EyjHCvwScBGyqAEFM
 id: webcomposer_slider_entity.webcomposer_slider_entity.default
@@ -26,7 +64,7 @@ bundle: webcomposer_slider_entity
 mode: default
 content:
   field_banner_image:
-    weight: 2
+    weight: 3
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -34,7 +72,7 @@ content:
     type: image_image
     region: content
   field_banner_link:
-    weight: 3
+    weight: 4
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -42,13 +80,13 @@ content:
     type: link_default
     region: content
   field_banner_link_target:
-    weight: 4
+    weight: 5
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_blurb:
-    weight: 5
+    weight: 6
     settings:
       rows: 5
       placeholder: ''
@@ -61,12 +99,38 @@ content:
     third_party_settings: {  }
     type: options_buttons
     region: content
+  field_product:
+    type: options_select
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_publish_date:
-    weight: 7
+    weight: 9
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
     region: content
+  field_ribbon_background_color:
+    type: color_field_widget_html5
+    weight: 14
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_ribbon_label_color:
+    type: color_field_widget_html5
+    weight: 13
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_ribbon_product_label:
+    type: text_textfield
+    weight: 12
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_title:
     weight: 0
     settings:
@@ -76,19 +140,20 @@ content:
     type: string_textfield
     region: content
   field_unpublish_date:
-    weight: 8
+    weight: 10
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
     region: content
   langcode:
     type: language_select
-    weight: 9
+    weight: 2
     region: content
-    settings: {  }
+    settings:
+      include_locked: true
     third_party_settings: {  }
   translation:
-    weight: 6
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }
