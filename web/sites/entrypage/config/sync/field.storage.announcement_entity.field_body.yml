@@ -1,15 +1,15 @@
-uuid: da9cc3d0-74cd-44f3-87db-5921f613c01b
+uuid: fedf996f-266e-4c18-9815-eccf3574a336
 langcode: en
 status: true
 dependencies:
   module:
-    - entrypage_front_blocks
     - text
+    - webcomposer_announcements
 _core:
-  default_config_hash: m5ZgP8D1s2FW5drYhqAgR2UA4BXPdEh5ZWQ-iIydFNc
-id: entrypage_front_block.field_body
+  default_config_hash: Iin2fTjQSmG3HhwRRwIr7QkL75axrZc8jO1cPYqBla4
+id: announcement_entity.field_body
 field_name: field_body
-entity_type: entrypage_front_block
+entity_type: announcement_entity
 type: text_long
 settings: {  }
 module: text

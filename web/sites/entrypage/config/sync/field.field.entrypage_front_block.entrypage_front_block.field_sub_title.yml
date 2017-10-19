@@ -1,0 +1,20 @@
+uuid: bb0f6c6d-e51b-4148-9e5c-4cd8c86dda14
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.entrypage_front_block.field_sub_title
+  module:
+    - entrypage_front_blocks
+id: entrypage_front_block.entrypage_front_block.field_sub_title
+field_name: field_sub_title
+entity_type: entrypage_front_block
+bundle: entrypage_front_block
+label: 'Sub Title'
+description: 'Header title on the right side.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
