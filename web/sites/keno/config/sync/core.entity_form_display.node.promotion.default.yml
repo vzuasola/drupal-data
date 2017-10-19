@@ -413,3 +413,4 @@ content:
     third_party_settings: {  }
 hidden:
   field_hide_right_side_block: true
+  field_meta_tags: true
