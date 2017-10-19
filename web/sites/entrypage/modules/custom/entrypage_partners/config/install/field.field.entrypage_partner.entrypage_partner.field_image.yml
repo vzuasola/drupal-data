@@ -15,14 +15,14 @@ third_party_settings:
       alt: '0'
       title: '0'
 _core:
-  default_config_hash: FnvGWvK2T9ESlNpcVkgd_HOJoAhBjYH-aniQSbzsKoM
+  default_config_hash: 91BAh1AYhZbktXoYbMVyBP1oqZz8o3cxrDDDC-Q73TU
 id: entrypage_partner.entrypage_partner.field_image
 field_name: field_image
 entity_type: entrypage_partner
 bundle: entrypage_partner
 label: Image
 description: ''
-required: true
+required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''

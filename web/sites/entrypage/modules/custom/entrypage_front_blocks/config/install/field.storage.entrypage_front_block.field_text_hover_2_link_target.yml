@@ -1,12 +1,12 @@
-uuid: 40173e77-0795-4683-b692-2769a623f60d
+uuid: 59704a20-4212-4eca-abc6-c448ed2a8e30
 langcode: en
 status: true
 dependencies:
   module:
     - entrypage_front_blocks
     - options
-id: entrypage_front_block.field_link_target
-field_name: field_link_target
+id: entrypage_front_block.field_text_hover_2_link_target
+field_name: field_text_hover_2_link_target
 entity_type: entrypage_front_block
 type: list_string
 settings:

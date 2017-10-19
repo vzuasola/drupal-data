@@ -8,15 +8,18 @@ dependencies:
     - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_banner_link_target
     - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_blurb
     - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_log_in_state
+    - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_publish_date
     - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_title
+    - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_unpublish_date
     - image.style.thumbnail
   module:
+    - datetime
     - image
     - link
     - text
     - webcomposer_slider
 _core:
-  default_config_hash: 4pu6bDg2YHaNO6HDMXOPWM5JrbWMacX7OmVPKgObv7s
+  default_config_hash: b621MhiBvHrNfQr-lokUrjvuv5EyjHCvwScBGyqAEFM
 id: webcomposer_slider_entity.webcomposer_slider_entity.default
 targetEntityType: webcomposer_slider_entity
 bundle: webcomposer_slider_entity
@@ -58,6 +61,12 @@ content:
     third_party_settings: {  }
     type: options_buttons
     region: content
+  field_publish_date:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
   field_title:
     weight: 0
     settings:
@@ -65,6 +74,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_unpublish_date:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
     region: content
   translation:
     weight: 6

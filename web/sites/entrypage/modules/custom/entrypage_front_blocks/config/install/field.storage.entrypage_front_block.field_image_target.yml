@@ -1,13 +1,13 @@
-uuid: a931d989-4406-4155-86d2-83c78612c15c
+uuid: 7d4c6402-744e-41d9-ae71-025bb6fbaca8
 langcode: en
 status: true
 dependencies:
   module:
-    - entrypage_partners
+    - entrypage_front_blocks
     - options
-id: entrypage_partner.field_target_link
-field_name: field_target_link
-entity_type: entrypage_partner
+id: entrypage_front_block.field_image_target
+field_name: field_image_target
+entity_type: entrypage_front_block
 type: list_string
 settings:
   allowed_values:
