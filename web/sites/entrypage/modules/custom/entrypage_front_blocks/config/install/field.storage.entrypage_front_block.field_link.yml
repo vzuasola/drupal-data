@@ -1,10 +1,12 @@
-uuid: 258b692a-ebcc-42a7-9dd0-ed752ef8a297
+uuid: 2095c130-587f-4673-8e79-49170a11e377
 langcode: en
 status: true
 dependencies:
   module:
     - entrypage_front_blocks
     - link
+_core:
+  default_config_hash: bAUOjbYQXO0L7f_1IOXJ-zuBqmpDZKHPm1wI3rysqp8
 id: entrypage_front_block.field_link
 field_name: field_link
 entity_type: entrypage_front_block
