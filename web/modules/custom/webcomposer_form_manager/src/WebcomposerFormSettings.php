@@ -80,8 +80,10 @@ class WebcomposerFormSettings {
     $formFields = $this->formManager->getFormById($id)->getFields();
 
     foreach ($formFields as $key => $value) {
+      $defaultConfig = $this->configFactory->getEditable("webcomposer_form_manager.form.$id.$key");
       $config = $this->configFactory->get("webcomposer_form_manager.form.$id.$key");
-      $data['fields'][$key] = $config->get();
+
+      $data['fields'][$key] = array_replace_recursive($defaultConfig->get(), $config->get());
       $data['fields'][$key]['type'] = $value->getType();
     }
 

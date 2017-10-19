@@ -327,6 +327,12 @@ class ManageField extends FormBase {
 
     foreach ($keys as $key) {
       $data[$key] = $fieldValidations[$key];
+
+      // if we are translating a value, do not save the enable flag, so that the
+      // enable flag will be fetched from the default language
+      if ($this->isConfigValueOverride()) {
+        unset($data[$key]['enable']);
+      }
     }
 
     $this->saveRawConfigValue($name, 'field_validations', $data);
