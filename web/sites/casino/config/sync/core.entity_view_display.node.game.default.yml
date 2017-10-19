@@ -12,6 +12,8 @@ dependencies:
     - field.field.node.game.field_game_title
     - field.field.node.game.field_game_type
     - field.field.node.game.field_games_category
+    - field.field.node.game.field_jackpot_code
+    - field.field.node.game.field_jackpot_ticker
     - field.field.node.game.field_play_for_fun_toggle
     - field.field.node.game.field_ribbon_configuration
     - node.type.game
@@ -92,6 +94,15 @@ content:
     third_party_settings: {  }
     type: list_default
     region: content
+  field_jackpot_ticker:
+    weight: 112
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
   field_play_for_fun_toggle:
     weight: 107
     label: above
@@ -115,4 +126,5 @@ content:
     region: content
 hidden:
   field_games_category: true
+  field_jackpot_code: true
   langcode: true

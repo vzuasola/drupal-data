@@ -3,7 +3,6 @@ status: true
 dependencies:
   module:
     - basic_auth
-    - hal
     - my_account_core
     - serialization
     - user
@@ -13,7 +12,6 @@ granularity: method
 configuration:
   GET:
     supported_formats:
-      - hal_json
       - json
       - xml
     supported_auth:

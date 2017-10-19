@@ -257,6 +257,9 @@ class ManageField extends FormBase {
       if ($this->isConfigValueOverride()) {
         $form[$key]['enable']['#disabled'] = TRUE;
         $form[$key]['parameters_wrapper']['#disabled'] = TRUE;
+
+        $defaultValidations = $this->getDefaultConfigValues($name, 'field_validations');
+        $form[$key]['enable']['#default_value'] = $defaultValidations[$key]['enable'] ?? FALSE;
       }
     }
   }
