@@ -4,6 +4,8 @@ status: true
 dependencies:
   module:
     - entrypage_partners
+_core:
+  default_config_hash: nKfeAJszZBAyn3fjeKOfIX1z_hO7ydyVvL1rAqXrZIM
 id: entrypage_partner.entrypage_partner.user_id
 field_name: user_id
 entity_type: entrypage_partner
