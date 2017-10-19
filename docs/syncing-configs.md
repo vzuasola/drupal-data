@@ -18,11 +18,11 @@ This guide will show you how to sync and manage your configurations
 Config has two parts
 * `Active Configs`
 
-** They are configs stored on your database, and will reflect on the site
+They are configs stored on your database, and will reflect on the site
 
 * `Staged Configs`
 
-** They are configs stored on the YAML, and are on the filesystem
+They are configs stored on the YAML, and are on the filesystem
 
 ## What Happens when you Sync
 
