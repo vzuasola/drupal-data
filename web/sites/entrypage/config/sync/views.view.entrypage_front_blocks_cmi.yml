@@ -7,6 +7,8 @@ dependencies:
     - rest
     - serialization
     - webcomposer_rest_extra
+_core:
+  default_config_hash: XlY9aWo-hFuxehJgmeFgSXEXf6OpvTJo-IxqCclOiQI
 id: entrypage_front_blocks_cmi
 label: 'Entrypage Front Blocks CMI'
 module: views

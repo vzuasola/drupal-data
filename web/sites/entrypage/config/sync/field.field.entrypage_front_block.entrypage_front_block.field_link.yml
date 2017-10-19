@@ -1,19 +1,19 @@
-uuid: 7ed01fd8-d639-4b0b-88f7-3be46ad74108
+uuid: bde89c59-e729-4828-b669-0322abad4a61
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.entrypage_front_block.field_url
+    - field.storage.entrypage_front_block.field_link
   module:
     - entrypage_front_blocks
     - link
 _core:
-  default_config_hash: _rtXJnkQfThHDYEMyTEnb-AfjqmuhkYiCCYal0FA8i4
-id: entrypage_front_block.entrypage_front_block.field_url
-field_name: field_url
+  default_config_hash: ZE0cyiNY_jcr17O7H5xDqt1BLbBSTRuKJfMccO20Wgg
+id: entrypage_front_block.entrypage_front_block.field_link
+field_name: field_link
 entity_type: entrypage_front_block
 bundle: entrypage_front_block
-label: URL
+label: 'Image Link'
 description: ''
 required: false
 translatable: true
@@ -21,5 +21,5 @@ default_value: {  }
 default_value_callback: ''
 settings:
   link_type: 17
-  title: 1
+  title: 0
 field_type: link

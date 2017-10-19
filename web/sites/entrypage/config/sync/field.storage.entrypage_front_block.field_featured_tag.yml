@@ -5,6 +5,8 @@ dependencies:
   module:
     - entrypage_front_blocks
     - taxonomy
+_core:
+  default_config_hash: ASBuDfKaywMYnOzDvVnf3NZ0inyYWDBbmxW1WjIkulA
 id: entrypage_front_block.field_featured_tag
 field_name: field_featured_tag
 entity_type: entrypage_front_block

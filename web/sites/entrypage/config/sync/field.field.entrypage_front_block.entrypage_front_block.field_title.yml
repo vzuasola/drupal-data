@@ -6,12 +6,14 @@ dependencies:
     - field.storage.entrypage_front_block.field_title
   module:
     - entrypage_front_blocks
+_core:
+  default_config_hash: iYbYTbh6A9QFNdmOzIDfYJEx5qTmrNp5pzA5ZPjgcPk
 id: entrypage_front_block.entrypage_front_block.field_title
 field_name: field_title
 entity_type: entrypage_front_block
 bundle: entrypage_front_block
 label: Title
-description: ''
+description: 'Header title on the left side.'
 required: false
 translatable: true
 default_value: {  }

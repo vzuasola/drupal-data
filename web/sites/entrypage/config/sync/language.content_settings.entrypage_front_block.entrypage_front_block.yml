@@ -8,6 +8,8 @@ dependencies:
 third_party_settings:
   content_translation:
     enabled: true
+_core:
+  default_config_hash: s-jMSOcIk80ux2NMsbWyWemLZtslK7km8Qa3EKa_I8s
 id: entrypage_front_block.entrypage_front_block
 target_entity_type_id: entrypage_front_block
 target_bundle: entrypage_front_block
