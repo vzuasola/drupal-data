@@ -332,6 +332,7 @@ class ManageField extends FormBase {
       // enable flag will be fetched from the default language
       if ($this->isConfigValueOverride()) {
         unset($data[$key]['enable']);
+        unset($data[$key]['parameters']);
       }
     }
 
