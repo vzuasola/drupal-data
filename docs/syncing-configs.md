@@ -17,9 +17,11 @@ This guide will show you how to sync and manage your configurations
 
 Config has two parts
 * `Active Configs`
+
 ** They are configs stored on your database, and will reflect on the site
 
 * `Staged Configs`
+
 ** They are configs stored on the YAML, and are on the filesystem
 
 ## What Happens when you Sync
@@ -28,15 +30,16 @@ Simple. It takes the `Staged Configs` and `override` the `Active Configs`
 
 ## Responsible Syncing
 
-![](../assets/sync-page.png)
-
 * `Clear Cache before Syncing`
+
 This is to rule out cached processes that might interfere with the syncing.
 
 * `Backup the current Database`
+
 Backup. Backup. Backup.
 
 * `Always check the Syncing page`
+
 The Syncing page will display what changes will be added, modified or deleted before
 you sync.
 
@@ -45,6 +48,7 @@ you sync.
 > Suppose you need to add configuration changes, you need to follow this workflow
 
 * Make sure to `git pull` first, be sure that you have your team's changes
+
 * Sync the configs, you can either use the Syncing page or using console
 
 ```bash
@@ -52,6 +56,7 @@ $ drupal --uri=entrypage.drupal.dev ci
 ```
 
 * Do your config changes
+
 * When you are done, you can use the Syncing page to export the current tar, then import it, or using console
 
 ```bash
