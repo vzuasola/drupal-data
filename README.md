@@ -7,7 +7,7 @@ dependencies with [Composer](https://getcomposer.org/).
 
 ### General Guidelines
 
-* [Configuration Synchronization](docs/syncing-configs.md)
+* [Syncing Configurations](docs/syncing-configs.md)
 
 ### Module
 
