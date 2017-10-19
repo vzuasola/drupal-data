@@ -1,4 +1,5 @@
-uuid: bde89c59-e729-4828-b669-0322abad4a61
+uuid: f04c8558-e561-4b16-8d2b-60d391d935d1
+# added
 langcode: en
 status: true
 dependencies:
@@ -11,7 +12,7 @@ id: entrypage_front_block.entrypage_front_block.field_link
 field_name: field_link
 entity_type: entrypage_front_block
 bundle: entrypage_front_block
-label: link
+label: 'Image Link'
 description: ''
 required: false
 translatable: true

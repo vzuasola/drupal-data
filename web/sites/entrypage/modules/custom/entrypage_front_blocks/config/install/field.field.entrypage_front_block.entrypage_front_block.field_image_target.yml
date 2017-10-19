@@ -1,4 +1,5 @@
-uuid: a18849c4-6630-490f-bdc8-b9ca041f4686
+uuid: 1ef0909c-5e33-4ba1-a23e-e66e19b32878
+# added
 langcode: en
 status: true
 dependencies:
@@ -11,13 +12,13 @@ id: entrypage_front_block.entrypage_front_block.field_image_target
 field_name: field_image_target
 entity_type: entrypage_front_block
 bundle: entrypage_front_block
-label: 'Image Link target'
+label: 'Image Target'
 description: ''
 required: false
 translatable: true
 default_value:
   -
-    value: _blank
+    value: _top
 default_value_callback: ''
 settings: {  }
 field_type: list_string
