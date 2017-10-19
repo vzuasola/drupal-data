@@ -6,6 +6,7 @@ dependencies:
     - field.storage.taxonomy_term.field_select_domain_group
     - taxonomy.vocabulary.domain
     - user.role.administrator
+    - user.role.authenticated
   module:
     - content_translation
     - taxonomy
@@ -31,6 +32,7 @@ display:
         type: role
         options:
           role:
+            authenticated: authenticated
             administrator: administrator
       cache:
         type: tag
