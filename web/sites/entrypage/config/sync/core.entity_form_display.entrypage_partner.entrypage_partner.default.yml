@@ -5,20 +5,21 @@ dependencies:
   config:
     - field.field.entrypage_partner.entrypage_partner.field_image
     - field.field.entrypage_partner.entrypage_partner.field_partner_link
+    - field.field.entrypage_partner.entrypage_partner.field_partner_link_target
     - image.style.thumbnail
   module:
     - entrypage_partners
     - image
     - link
 _core:
-  default_config_hash: D4gDRJ1SVt4VFXH1woa3EA6keY8Uo1JB4hXQ_kfrUxs
+  default_config_hash: 5W3-0PnutEBuMk2XgBNc5qwS1oKiYEUQjWWBPtKG8m4
 id: entrypage_partner.entrypage_partner.default
 targetEntityType: entrypage_partner
 bundle: entrypage_partner
 mode: default
 content:
   field_image:
-    weight: 4
+    weight: 3
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -26,12 +27,18 @@ content:
     type: image_image
     region: content
   field_partner_link:
-    weight: 3
+    weight: 4
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
+    region: content
+  field_partner_link_target:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   langcode:
     type: language_select
