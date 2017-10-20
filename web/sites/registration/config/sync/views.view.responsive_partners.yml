@@ -1,20 +1,18 @@
-uuid: d8a24cbf-706e-49be-9b39-5588ebc3d75e
+uuid: 60a7c174-bd3f-47f1-bdd6-d047267dac20
 langcode: en
 status: true
 dependencies:
-  config:
-    - paragraphs.paragraphs_type.responsive_sponsor
   module:
-    - paragraphs
     - rest
     - serialization
+    - webcomposer_partner_responsive
     - webcomposer_rest_extra
-id: responsive_sponsor_rest
-label: 'Responsive sponsor'
+id: responsive_partners
+label: 'Responsive Partners'
 module: views
 description: ''
 tag: ''
-base_table: paragraphs_item_field_data
+base_table: partner_responsive_entity_field_data
 base_field: id
 core: 8.x
 display:
@@ -76,12 +74,12 @@ display:
           hide_empty: false
           default_field_elements: true
       fields:
-        id:
-          table: paragraphs_item_field_data
-          field: id
-          id: id
+        name:
+          table: partner_responsive_entity_field_data
+          field: name
+          id: name
           entity_type: null
-          entity_field: id
+          entity_field: name
           plugin_id: field
           relationship: none
           group_type: group
@@ -128,7 +126,7 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: number_integer
+          type: string
           settings: {  }
           group_column: value
           group_columns: {  }
@@ -141,18 +139,9 @@ display:
           separator: ', '
           field_api_classes: false
       filters:
-        type:
-          id: type
-          table: paragraphs_item_field_data
-          field: type
-          value:
-            responsive_sponsor: responsive_sponsor
-          entity_type: paragraph
-          entity_field: type
-          plugin_id: bundle
         langcode:
           id: langcode
-          table: paragraphs_item_field_data
+          table: partner_responsive_entity_field_data
           field: langcode
           relationship: none
           group_type: group
@@ -187,7 +176,7 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          entity_type: paragraph
+          entity_type: partner_responsive_entity
           entity_field: langcode
           plugin_id: language
       sorts: {  }
@@ -212,11 +201,10 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: api/sponsors
+      path: api/partners
       pager:
-        type: some
+        type: none
         options:
-          items_per_page: 10
           offset: 0
       style:
         type: node_list_serializer
