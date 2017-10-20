@@ -7,12 +7,14 @@ dependencies:
     - taxonomy.vocabulary.ribbon_labels
   module:
     - entrypage_front_blocks
+_core:
+  default_config_hash: JWqIn7gKTH5lMHEHDLpAiRgm4F9Rbhgpl1XGogRoIUk
 id: entrypage_front_block.entrypage_front_block.field_featured_tag
 field_name: field_featured_tag
 entity_type: entrypage_front_block
 bundle: entrypage_front_block
 label: 'Featured Tag'
-description: ''
+description: 'Header Ribbon'
 required: false
 translatable: true
 default_value: {  }

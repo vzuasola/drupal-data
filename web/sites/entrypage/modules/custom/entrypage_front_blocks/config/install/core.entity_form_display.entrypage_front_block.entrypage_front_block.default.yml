@@ -6,22 +6,94 @@ dependencies:
     - field.field.entrypage_front_block.entrypage_front_block.field_body
     - field.field.entrypage_front_block.entrypage_front_block.field_featured_tag
     - field.field.entrypage_front_block.entrypage_front_block.field_image
+    - field.field.entrypage_front_block.entrypage_front_block.field_image_target
+    - field.field.entrypage_front_block.entrypage_front_block.field_image_with_top_border
+    - field.field.entrypage_front_block.entrypage_front_block.field_link
+    - field.field.entrypage_front_block.entrypage_front_block.field_link_target
+    - field.field.entrypage_front_block.entrypage_front_block.field_link_text_hover_1
+    - field.field.entrypage_front_block.entrypage_front_block.field_link_text_hover_2
     - field.field.entrypage_front_block.entrypage_front_block.field_short_title
+    - field.field.entrypage_front_block.entrypage_front_block.field_sub_title
     - field.field.entrypage_front_block.entrypage_front_block.field_title
     - field.field.entrypage_front_block.entrypage_front_block.field_url
     - image.style.thumbnail
   module:
     - entrypage_front_blocks
+    - field_group
     - image
     - link
     - text
+third_party_settings:
+  field_group:
+    group_image_settings:
+      children:
+        - field_image
+        - field_image_with_top_border
+        - field_link
+        - field_image_target
+      parent_name: ''
+      weight: 3
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Image Settings'
+    group_hover_settings:
+      children:
+        - field_url
+        - field_link_target
+      parent_name: ''
+      weight: 5
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Hover Settings'
+    group_header_settings:
+      children:
+        - field_title
+        - field_sub_title
+        - field_featured_tag
+      parent_name: ''
+      weight: 4
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Header Settings'
+    group_media_tile_hover_settings:
+      children:
+        - field_link_text_hover_1
+        - field_text_hover_2_link_target
+        - field_link_text_hover_2
+      parent_name: ''
+      weight: 7
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Media Tile Hover Settings'
+_core:
+  default_config_hash: VDEdKx72GffaSqufsK_uq5jOErHv0k-tgOrHlio1HqU
 id: entrypage_front_block.entrypage_front_block.default
 targetEntityType: entrypage_front_block
 bundle: entrypage_front_block
 mode: default
 content:
   field_body:
-    weight: 8
+    weight: 6
     settings:
       rows: 5
       placeholder: ''
@@ -29,29 +101,72 @@ content:
     type: text_textarea
     region: content
   field_featured_tag:
-    weight: 7
+    weight: 11
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_image:
-    weight: 3
+    weight: 4
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
     region: content
-  field_short_title:
-    weight: 4
+  field_image_target:
+    type: options_select
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_image_with_top_border:
+    weight: 5
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_link:
+    type: link_default
+    weight: 6
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_link_target:
+    type: options_select
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_link_text_hover_1:
+    type: text_textfield
+    weight: 8
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_link_text_hover_2:
+    weight: 12
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: text_textfield
     region: content
+  field_sub_title:
+    weight: 9
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_title:
-    weight: 5
+    weight: 8
     settings:
       size: 60
       placeholder: ''
@@ -59,7 +174,7 @@ content:
     type: string_textfield
     region: content
   field_url:
-    weight: 6
+    weight: 10
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -86,4 +201,5 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_short_title: true
   user_id: true
