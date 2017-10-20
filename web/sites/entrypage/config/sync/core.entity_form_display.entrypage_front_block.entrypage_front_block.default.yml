@@ -7,6 +7,7 @@ dependencies:
     - field.field.entrypage_front_block.entrypage_front_block.field_featured_tag
     - field.field.entrypage_front_block.entrypage_front_block.field_image
     - field.field.entrypage_front_block.entrypage_front_block.field_image_target
+    - field.field.entrypage_front_block.entrypage_front_block.field_image_with_top_border
     - field.field.entrypage_front_block.entrypage_front_block.field_link
     - field.field.entrypage_front_block.entrypage_front_block.field_link_target
     - field.field.entrypage_front_block.entrypage_front_block.field_link_text_hover_1
@@ -28,6 +29,7 @@ third_party_settings:
     group_image_settings:
       children:
         - field_image
+        - field_image_with_top_border
         - field_link
         - field_image_target
       parent_name: ''
@@ -72,8 +74,8 @@ third_party_settings:
     group_media_tile_hover_settings:
       children:
         - field_link_text_hover_1
-        - field_link_text_hover_2
         - field_text_hover_2_link_target
+        - field_link_text_hover_2
       parent_name: ''
       weight: 7
       format_type: tab
@@ -119,9 +121,16 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_image_with_top_border:
+    weight: 5
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
   field_link:
     type: link_default
-    weight: 5
+    weight: 6
     region: content
     settings:
       placeholder_url: ''

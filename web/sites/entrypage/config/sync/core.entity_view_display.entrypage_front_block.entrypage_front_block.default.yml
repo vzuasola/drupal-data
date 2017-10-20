@@ -7,6 +7,7 @@ dependencies:
     - field.field.entrypage_front_block.entrypage_front_block.field_featured_tag
     - field.field.entrypage_front_block.entrypage_front_block.field_image
     - field.field.entrypage_front_block.entrypage_front_block.field_image_target
+    - field.field.entrypage_front_block.entrypage_front_block.field_image_with_top_border
     - field.field.entrypage_front_block.entrypage_front_block.field_link
     - field.field.entrypage_front_block.entrypage_front_block.field_link_target
     - field.field.entrypage_front_block.entrypage_front_block.field_link_text_hover_1
@@ -51,6 +52,16 @@ content:
       image_link: ''
     third_party_settings: {  }
     type: image
+    region: content
+  field_image_with_top_border:
+    weight: 8
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
     region: content
   field_short_title:
     weight: 3
