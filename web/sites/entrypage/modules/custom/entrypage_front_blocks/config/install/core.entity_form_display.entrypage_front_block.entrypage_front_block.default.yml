@@ -49,12 +49,13 @@ third_party_settings:
       weight: 5
       format_type: tab
       format_settings:
-        id: ''
-        classes: ''
+        label: 'CTA Button Hover Settings'
         formatter: closed
         description: ''
         required_fields: true
-      label: 'Hover Settings'
+        id: ''
+        classes: ''
+      label: 'CTA Button Hover Settings'
     group_header_settings:
       children:
         - field_title
@@ -70,21 +71,21 @@ third_party_settings:
         description: ''
         required_fields: true
       label: 'Header Settings'
-    group_media_tile_hover_settings:
+    group_text_hove_sett:
       children:
         - field_link_text_hover_1
-        - field_text_hover_2_link_target
         - field_link_text_hover_2
       parent_name: ''
-      weight: 7
+      weight: 6
       format_type: tab
       format_settings:
-        id: ''
-        classes: ''
+        label: 'Text Hover Settings'
         formatter: closed
         description: ''
         required_fields: true
-      label: 'Media Tile Hover Settings'
+        id: ''
+        classes: ''
+      label: 'Text Hover Settings'
 _core:
   default_config_hash: VDEdKx72GffaSqufsK_uq5jOErHv0k-tgOrHlio1HqU
 id: entrypage_front_block.entrypage_front_block.default
@@ -93,9 +94,9 @@ bundle: entrypage_front_block
 mode: default
 content:
   field_body:
-    weight: 6
+    weight: 7
     settings:
-      rows: 5
+      rows: 1
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
@@ -150,7 +151,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_link_text_hover_2:
-    weight: 12
+    weight: 9
     settings:
       size: 60
       placeholder: ''
