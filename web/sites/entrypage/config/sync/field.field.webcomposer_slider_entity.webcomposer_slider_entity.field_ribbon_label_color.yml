@@ -1,0 +1,22 @@
+uuid: 4452eb60-8f96-472a-bc41-63694fac8b22
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.webcomposer_slider_entity.field_ribbon_label_color
+  module:
+    - color_field
+    - webcomposer_slider
+id: webcomposer_slider_entity.webcomposer_slider_entity.field_ribbon_label_color
+field_name: field_ribbon_label_color
+entity_type: webcomposer_slider_entity
+bundle: webcomposer_slider_entity
+label: 'Ribbon Label Color'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  opacity: 0
+field_type: color_field_type

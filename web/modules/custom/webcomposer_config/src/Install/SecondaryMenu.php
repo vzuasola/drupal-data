@@ -4,15 +4,21 @@ namespace Drupal\webcomposer_config\Install;
 
 use Drupal\webcomposer_config\WebcomposerConfig;
 
+/**
+ * Secondary Menu.
+ */
 class SecondaryMenu {
 
-  public function createMenu()
-  {
-    $menu = array(
+  /**
+   * Create Secondary Menu.
+   */
+  public function createMenu() {
+    $menu = [
       '/promotions' => 'Promotions',
-      '/mobile' => 'Mobile'
-    );
+      '/mobile' => 'Mobile',
+    ];
 
     WebcomposerConfig::createMenu('secondary-menu', $menu);
   }
+
 }

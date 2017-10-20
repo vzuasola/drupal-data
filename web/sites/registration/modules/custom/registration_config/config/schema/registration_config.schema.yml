@@ -1,0 +1,13 @@
+registration_config.general_configuration:
+  type: config_object
+  label: 'Registration General Configuration'
+  mapping:
+    step_one_text:
+      type: label
+      label: 'Step One Text'
+      translatable: true
+    step_two_text:
+      type: text
+      label: 'Step Two Text'
+      translatable: true
+  langcode: 'en'

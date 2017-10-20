@@ -21,4 +21,3 @@ webcomposer_config.affiliate_configuration_form:
     _title: 'Affiliate Configuration'
   requirements:
     _permission: 'administer site configuration'
-

@@ -39,6 +39,12 @@ class GamesConfigurationForm extends ConfigFormBase {
       '#group' => 'games_configuration_tab',
     );
 
+    $form['thumbnail_group']['disable_jackpot_ticker'] = array(
+      '#type' => 'checkbox',
+      '#title' => t('Disable Game Thumbnail Jackpot Ticker'),
+      '#default_value' => $config->get('disable_jackpot_ticker')
+    );
+
     $form['thumbnail_group']['play_text'] = array(
       '#type' => 'textfield',
       '#title' => $this->t('Play Now Button Text'),
@@ -120,10 +126,10 @@ class GamesConfigurationForm extends ConfigFormBase {
       '#group' => 'games_configuration_tab'
     );
 
-    $lightbox_group_title = $this->t('Direct access free play on Post login (Lightbox)');
+    $freePlayLightboxGroupTitle = $this->t('Direct access free play on Post login (Lightbox)');
     $form['lightbox_group']['freeplay'] = array(
         '#type' => 'details',
-        '#title' => $lightboxGroupTitle,
+        '#title' => $freePlayLightboxGroupTitle,
         '#open' => TRUE
     );
 
@@ -144,6 +150,32 @@ class GamesConfigurationForm extends ConfigFormBase {
       '#format' => $freePlayLightboxContent['format'],
       '#required' => TRUE,
     );
+
+    $html5LightboxGroupTitle = $this->t('HTML5 Alert (Lightbox)');
+    $form['lightbox_group']['html5'] = array(
+        '#type' => 'details',
+        '#title' => $html5LightboxGroupTitle,
+        '#open' => TRUE
+    );
+
+    $form['lightbox_group']['html5']['html5_lightbox_title'] = array(
+      '#type' => 'textfield',
+      '#title' => $this->t('Title'),
+      '#description' => $this->t('The text that will be displayed as title of the lightbox.'),
+      '#default_value' => $config->get('html5_lightbox_title'),
+      '#required' => TRUE,
+    );
+
+    $html5LightboxContent = $config->get('html5_lightbox_content');
+    $form['lightbox_group']['html5']['html5_lightbox_content'] = array(
+      '#type' => 'text_format',
+      '#title' => $this->t('Content'),
+      '#description' => $this->t('The text that will be displayed as content of the lightbox.'),
+      '#default_value' => $html5LightboxContent['value'],
+      '#format' => $html5LightboxContent['format'],
+      '#required' => TRUE,
+    );
+
     $form['game_promotion'] = array(
       '#type' => 'details',
       '#title' => $this->t('Promotions'),
@@ -188,8 +220,11 @@ class GamesConfigurationForm extends ConfigFormBase {
       'load_more_disabled',
       'freeplay_lightbox_title',
       'freeplay_lightbox_content',
+      'html5_lightbox_title',
+      'html5_lightbox_content',
       'disable_language_selector',
       'disable_announcement_icon',
+      'disable_jackpot_ticker',
       'game_promotion_link',
       'game_promotion_link_target'
     );

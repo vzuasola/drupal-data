@@ -1,0 +1,7 @@
+webcomposer_partner_responsive.admin_settings:
+  path: 'admin/config/webcomposer/partners'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Webcomposer Partners'
+  requirements:
+    _permission: 'administer site configuration'

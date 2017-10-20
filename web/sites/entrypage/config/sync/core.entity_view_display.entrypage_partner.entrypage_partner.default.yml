@@ -5,13 +5,15 @@ dependencies:
   config:
     - field.field.entrypage_partner.entrypage_partner.field_image
     - field.field.entrypage_partner.entrypage_partner.field_partner_link
+    - field.field.entrypage_partner.entrypage_partner.field_partner_link_target
   module:
     - entrypage_partners
     - image
     - link
+    - options
     - user
 _core:
-  default_config_hash: '-1zSesgz6r_JqR6p44vhNFP-xxWui86lXOOm8LtGZO4'
+  default_config_hash: uxB2sy-qq797YGVzgYRKiamiUX1eB_3_iM48sFe3geA
 id: entrypage_partner.entrypage_partner.default
 targetEntityType: entrypage_partner
 bundle: entrypage_partner
@@ -37,6 +39,13 @@ content:
       target: ''
     third_party_settings: {  }
     type: link
+    region: content
+  field_partner_link_target:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
   name:
     label: above

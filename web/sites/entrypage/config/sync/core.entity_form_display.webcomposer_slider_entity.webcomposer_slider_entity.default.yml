@@ -8,9 +8,12 @@ dependencies:
     - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_banner_link_target
     - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_blurb
     - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_log_in_state
+    - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_publish_date
     - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_title
+    - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_unpublish_date
     - image.style.thumbnail
   module:
+    - datetime
     - image
     - link
     - text
@@ -58,6 +61,12 @@ content:
     third_party_settings: {  }
     type: options_buttons
     region: content
+  field_publish_date:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
   field_title:
     weight: 0
     settings:
@@ -66,12 +75,23 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
+  field_unpublish_date:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  langcode:
+    type: language_select
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   translation:
     weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
-  langcode: true
   name: true
   user_id: true

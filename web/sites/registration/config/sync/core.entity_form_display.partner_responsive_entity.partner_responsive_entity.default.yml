@@ -1,0 +1,37 @@
+uuid: 20dddefe-9301-4d45-9dc2-ac6671612ff1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.partner_responsive_entity.partner_responsive_entity.field_responsive_partners
+  module:
+    - paragraphs
+    - webcomposer_partner_responsive
+id: partner_responsive_entity.partner_responsive_entity.default
+targetEntityType: partner_responsive_entity
+bundle: partner_responsive_entity
+mode: default
+content:
+  field_responsive_partners:
+    type: entity_reference_paragraphs
+    weight: 1
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  langcode: true
+  user_id: true

@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - basic_auth
+    - hal
+    - registration_config
+    - serialization
+    - user
+id: registration_config_form_resource
+plugin_id: registration_config_form_resource
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - hal_json
+      - json
+      - xml
+    supported_auth:
+      - basic_auth
+      - cookie

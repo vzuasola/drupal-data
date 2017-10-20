@@ -8,7 +8,7 @@ dependencies:
     - serialization
     - webcomposer_rest_extra
 _core:
-  default_config_hash: vm_T8Zzq0rBtFfFmhG5evBDxeUFYvXe8aIsiR0EwvS4
+  default_config_hash: h8TDRphsyesj-tXuc_5UaODzsvBh6oMiXPQmsRl6qDo
 id: entrypage_partners_api
 label: 'Entrypage Partners CMI'
 module: views
