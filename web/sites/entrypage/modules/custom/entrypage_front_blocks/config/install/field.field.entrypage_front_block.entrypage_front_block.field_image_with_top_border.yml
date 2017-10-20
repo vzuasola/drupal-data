@@ -10,7 +10,7 @@ id: entrypage_front_block.entrypage_front_block.field_image_with_top_border
 field_name: field_image_with_top_border
 entity_type: entrypage_front_block
 bundle: entrypage_front_block
-label: 'Image with Top Border'
+label: 'Top Border'
 description: ''
 required: false
 translatable: true
