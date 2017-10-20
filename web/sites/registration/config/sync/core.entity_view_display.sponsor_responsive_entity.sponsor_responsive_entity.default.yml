@@ -6,7 +6,6 @@ dependencies:
     - field.field.sponsor_responsive_entity.sponsor_responsive_entity.field_responsive_sponsor
   module:
     - entity_reference_revisions
-    - user
     - webcomposer_sponsor_responsive
 id: sponsor_responsive_entity.sponsor_responsive_entity.default
 targetEntityType: sponsor_responsive_entity
@@ -22,20 +21,15 @@ content:
       link: ''
     third_party_settings: {  }
     region: content
-  name:
-    label: above
-    type: string
-    weight: -4
-    region: content
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-  user_id:
-    label: hidden
-    type: author
+  langcode:
+    type: language
     weight: 0
     region: content
-    settings: {  }
+    label: above
+    settings:
+      link_to_entity: false
+      native_language: false
     third_party_settings: {  }
 hidden:
-  langcode: true
+  name: true
+  user_id: true

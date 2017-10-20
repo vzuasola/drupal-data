@@ -1,20 +1,18 @@
-uuid: 97abae19-d3d3-4189-8db3-1436ce83e2f0
+uuid: a18f7b36-1173-4a6b-8095-032fa8d1b2e5
 langcode: en
 status: true
 dependencies:
-  config:
-    - paragraphs.paragraphs_type.responsive_partner
   module:
-    - paragraphs
     - rest
     - serialization
     - webcomposer_rest_extra
-id: responsive_partner
-label: 'Responsive Partner'
+    - webcomposer_sponsor_responsive
+id: sponsors
+label: 'Responsive Sponsors'
 module: views
 description: ''
 tag: ''
-base_table: paragraphs_item_field_data
+base_table: sponsor_responsive_entity_field_data
 base_field: id
 core: 8.x
 display:
@@ -67,7 +65,12 @@ display:
             previous: ‹‹
             next: ››
       style:
-        type: serializer
+        type: default
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
+          uses_fields: false
       row:
         type: fields
         options:
@@ -76,12 +79,12 @@ display:
           hide_empty: false
           default_field_elements: true
       fields:
-        id:
-          table: paragraphs_item_field_data
-          field: id
-          id: id
+        name:
+          table: sponsor_responsive_entity_field_data
+          field: name
+          id: name
           entity_type: null
-          entity_field: id
+          entity_field: name
           plugin_id: field
           relationship: none
           group_type: group
@@ -128,7 +131,7 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: number_integer
+          type: string
           settings: {  }
           group_column: value
           group_columns: {  }
@@ -141,49 +144,9 @@ display:
           separator: ', '
           field_api_classes: false
       filters:
-        type:
-          id: type
-          table: paragraphs_item_field_data
-          field: type
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: in
-          value:
-            responsive_partner: responsive_partner
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          entity_type: paragraph
-          entity_field: type
-          plugin_id: bundle
         langcode:
           id: langcode
-          table: paragraphs_item_field_data
+          table: sponsor_responsive_entity_field_data
           field: langcode
           relationship: none
           group_type: group
@@ -218,7 +181,7 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          entity_type: paragraph
+          entity_type: sponsor_responsive_entity
           entity_field: langcode
           plugin_id: language
       sorts: {  }
@@ -233,7 +196,6 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - request_format
         - url.query_args
       tags: {  }
   rest_export_1:
@@ -243,11 +205,10 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: api/partners
+      path: api/sponsors
       pager:
-        type: some
+        type: none
         options:
-          items_per_page: 10
           offset: 0
       style:
         type: node_list_serializer
@@ -255,9 +216,6 @@ display:
           uses_fields: false
           formats:
             json: json
-      row:
-        type: data_entity
-        options: {  }
     cache_metadata:
       max-age: -1
       contexts:

@@ -1,0 +1,15 @@
+uuid: f9a31826-bcdb-4112-a683-ec7aca74b333
+langcode: en
+status: true
+dependencies:
+  module:
+    - content_translation
+    - webcomposer_partner_responsive
+third_party_settings:
+  content_translation:
+    enabled: true
+id: partner_responsive_entity.partner_responsive_entity
+target_entity_type_id: partner_responsive_entity
+target_bundle: partner_responsive_entity
+default_langcode: site_default
+language_alterable: true
