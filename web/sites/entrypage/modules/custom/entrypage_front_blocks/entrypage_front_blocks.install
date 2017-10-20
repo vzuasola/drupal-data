@@ -18,7 +18,6 @@ function entrypage_front_blocks_uninstall()
       'field.field.entrypage_front_block.entrypage_front_block.field_link_text_hover_2.yml',
       'field.field.entrypage_front_block.entrypage_front_block.field_link.yml',
       'field.field.entrypage_front_block.entrypage_front_block.field_short_title.yml',
-      'field.field.entrypage_front_block.entrypage_front_block.field_text_hover_2_link_target.yml',
       'field.field.entrypage_front_block.entrypage_front_block.field_title.yml',
       'field.field.entrypage_front_block.entrypage_front_block.field_url.yml',
       'field.storage.entrypage_front_block.field_body.yml',
@@ -30,11 +29,12 @@ function entrypage_front_blocks_uninstall()
       'field.storage.entrypage_front_block.field_link_text_hover_2.yml',
       'field.storage.entrypage_front_block.field_link.yml',
       'field.storage.entrypage_front_block.field_short_title.yml',
-      'field.storage.entrypage_front_block.field_text_hover_2_link_target.yml',
       'field.storage.entrypage_front_block.field_title.yml',
       'field.storage.entrypage_front_block.field_url.yml',
       'language.content_settings.entrypage_front_block.entrypage_front_block.yml',
       'views.view.entrypage_front_blocks_cmi.yml',
+      'field.field.entrypage_front_block.entrypage_front_block.field_image_with_top_border.yml',
+      'field.storage.entrypage_front_block.field_image_with_top_border.yml',
     ];
 
     foreach ($keys as $key) {

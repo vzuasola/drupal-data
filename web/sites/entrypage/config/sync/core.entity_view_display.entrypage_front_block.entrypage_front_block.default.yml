@@ -7,13 +7,13 @@ dependencies:
     - field.field.entrypage_front_block.entrypage_front_block.field_featured_tag
     - field.field.entrypage_front_block.entrypage_front_block.field_image
     - field.field.entrypage_front_block.entrypage_front_block.field_image_target
+    - field.field.entrypage_front_block.entrypage_front_block.field_image_with_top_border
     - field.field.entrypage_front_block.entrypage_front_block.field_link
     - field.field.entrypage_front_block.entrypage_front_block.field_link_target
     - field.field.entrypage_front_block.entrypage_front_block.field_link_text_hover_1
     - field.field.entrypage_front_block.entrypage_front_block.field_link_text_hover_2
     - field.field.entrypage_front_block.entrypage_front_block.field_short_title
     - field.field.entrypage_front_block.entrypage_front_block.field_sub_title
-    - field.field.entrypage_front_block.entrypage_front_block.field_text_hover_2_link_target
     - field.field.entrypage_front_block.entrypage_front_block.field_title
     - field.field.entrypage_front_block.entrypage_front_block.field_url
   module:
@@ -51,6 +51,16 @@ content:
       image_link: ''
     third_party_settings: {  }
     type: image
+    region: content
+  field_image_with_top_border:
+    weight: 8
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
     region: content
   field_short_title:
     weight: 3
@@ -101,6 +111,5 @@ hidden:
   field_link_target: true
   field_link_text_hover_1: true
   field_link_text_hover_2: true
-  field_text_hover_2_link_target: true
   langcode: true
   user_id: true
