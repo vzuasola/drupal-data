@@ -5,6 +5,8 @@ dependencies:
   config:
     - field.field.entrypage_front_block.entrypage_front_block.field_body
     - field.field.entrypage_front_block.entrypage_front_block.field_featured_tag
+    - field.field.entrypage_front_block.entrypage_front_block.field_featured_tag_bg_color
+    - field.field.entrypage_front_block.entrypage_front_block.field_featured_tag_label_color
     - field.field.entrypage_front_block.entrypage_front_block.field_image
     - field.field.entrypage_front_block.entrypage_front_block.field_image_target
     - field.field.entrypage_front_block.entrypage_front_block.field_image_with_top_border
@@ -17,6 +19,7 @@ dependencies:
     - field.field.entrypage_front_block.entrypage_front_block.field_title
     - field.field.entrypage_front_block.entrypage_front_block.field_url
   module:
+    - color_field
     - entrypage_front_blocks
     - image
     - link
@@ -36,12 +39,29 @@ content:
     type: text_default
     region: content
   field_featured_tag:
-    weight: 5
+    weight: 9
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_featured_tag_bg_color:
+    weight: 11
     label: above
     settings:
-      link: true
+      format: hex
+      opacity: '1'
     third_party_settings: {  }
-    type: entity_reference_label
+    type: color_field_formatter_text
+    region: content
+  field_featured_tag_label_color:
+    weight: 10
+    label: above
+    settings:
+      format: hex
+      opacity: '1'
+    third_party_settings: {  }
+    type: color_field_formatter_text
     region: content
   field_image:
     weight: 2
