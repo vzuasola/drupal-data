@@ -13,6 +13,8 @@ function entrypage_partners_uninstall()
       'field.field.entrypage_partner.entrypage_partner.field_partner_link.yml',
       'field.storage.entrypage_partner.field_image.yml',
       'field.storage.entrypage_partner.field_partner_link.yml',
+      'field.field.entrypage_partner.entrypage_partner.field_partner_link_target.yml',
+      'field.storage.entrypage_partner.field_partner_link_target.yml',
       'language.content_settings.entrypage_partner.entrypage_partner.yml',
       'views.view.entrypage_partners_api.yml'
     ];
