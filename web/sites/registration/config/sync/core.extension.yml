@@ -53,6 +53,7 @@ module:
   quickedit: 0
   rdf: 0
   registration_config: 0
+  registration_theme: 0
   rest: 0
   rest_menu_items: 0
   restui: 0
@@ -68,15 +69,18 @@ module:
   user: 0
   views_ui: 0
   webcomposer_affilates: 0
+  webcomposer_announcements: 0
   webcomposer_avaya: 0
   webcomposer_config: 0
   webcomposer_connector: 0
   webcomposer_dm: 0
+  webcomposer_domain_import: 0
   webcomposer_downloadables: 0
   webcomposer_editor: 0
   webcomposer_floating_banners: 0
   webcomposer_language_hierarchy: 0
   webcomposer_marketing_script: 0
+  webcomposer_metatags: 0
   webcomposer_partner_responsive: 0
   webcomposer_promotions: 0
   webcomposer_rest_extra: 0
