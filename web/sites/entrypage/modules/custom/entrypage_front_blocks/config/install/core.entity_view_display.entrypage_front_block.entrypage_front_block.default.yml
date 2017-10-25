@@ -1,0 +1,135 @@
+uuid: 779fbc4b-e0e8-4f30-90f8-90b085fcc053
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.entrypage_front_block.entrypage_front_block.field_body
+    - field.field.entrypage_front_block.entrypage_front_block.field_featured_tag
+    - field.field.entrypage_front_block.entrypage_front_block.field_featured_tag_bg_color
+    - field.field.entrypage_front_block.entrypage_front_block.field_featured_tag_label_color
+    - field.field.entrypage_front_block.entrypage_front_block.field_image
+    - field.field.entrypage_front_block.entrypage_front_block.field_image_target
+    - field.field.entrypage_front_block.entrypage_front_block.field_image_with_top_border
+    - field.field.entrypage_front_block.entrypage_front_block.field_link
+    - field.field.entrypage_front_block.entrypage_front_block.field_link_target
+    - field.field.entrypage_front_block.entrypage_front_block.field_link_text_hover_1
+    - field.field.entrypage_front_block.entrypage_front_block.field_link_text_hover_2
+    - field.field.entrypage_front_block.entrypage_front_block.field_short_title
+    - field.field.entrypage_front_block.entrypage_front_block.field_sub_title
+    - field.field.entrypage_front_block.entrypage_front_block.field_title
+    - field.field.entrypage_front_block.entrypage_front_block.field_url
+  module:
+    - color_field
+    - entrypage_front_blocks
+    - image
+    - link
+    - text
+_core:
+  default_config_hash: RuWJ4gYozw2xYw6HERNcH1hk0SsV43W-oR3QoPI7MFk
+id: entrypage_front_block.entrypage_front_block.default
+targetEntityType: entrypage_front_block
+bundle: entrypage_front_block
+mode: default
+content:
+  field_body:
+    weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_featured_tag:
+    weight: 9
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_featured_tag_bg_color:
+    weight: 11
+    label: above
+    settings:
+      format: hex
+      opacity: '1'
+    third_party_settings: {  }
+    type: color_field_formatter_text
+    region: content
+  field_featured_tag_label_color:
+    weight: 10
+    label: above
+    settings:
+      format: hex
+      opacity: '1'
+    third_party_settings: {  }
+    type: color_field_formatter_text
+    region: content
+  field_image:
+    weight: 2
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_image_with_top_border:
+    weight: 8
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_short_title:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_sub_title:
+    weight: 7
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_title:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_url:
+    weight: 4
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  name:
+    label: above
+    type: string
+    weight: 0
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  field_image_target: true
+  field_link: true
+  field_link_target: true
+  field_link_text_hover_1: true
+  field_link_text_hover_2: true
+  langcode: true
+  user_id: true

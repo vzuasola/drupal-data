@@ -1,0 +1,25 @@
+uuid: c833ad6d-cdfd-435e-b90c-61781e3296c6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.entrypage_front_block.field_featured_tag_bg_color
+  module:
+    - color_field
+    - entrypage_front_blocks
+id: entrypage_front_block.entrypage_front_block.field_featured_tag_bg_color
+field_name: field_featured_tag_bg_color
+entity_type: entrypage_front_block
+bundle: entrypage_front_block
+label: 'Featured Tag Background Color'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    color: '#ffe000'
+    opacity: null
+default_value_callback: ''
+settings:
+  opacity: 0
+field_type: color_field_type

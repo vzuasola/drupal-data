@@ -1,0 +1,21 @@
+uuid: 1174f8fb-8db6-4ec6-84c5-5be6a88eb26a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.entrypage_front_block.field_featured_tag
+  module:
+    - entrypage_front_blocks
+    - text
+id: entrypage_front_block.entrypage_front_block.field_featured_tag
+field_name: field_featured_tag
+entity_type: entrypage_front_block
+bundle: entrypage_front_block
+label: 'Featured Tag'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

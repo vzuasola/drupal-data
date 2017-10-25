@@ -19,6 +19,14 @@ class ValidationManager {
       'title' => 'Alphanumeric',
       'description' => 'Only accept alpha numeric characters',
       'error' => 'Field should be alphanumeric',
+      'parameters' => [
+        'spaces' => [
+          '#title' => 'Accept Spaces',
+          '#description' => 'Checks whether this validation should accept spaces or not',
+          '#type' => 'checkbox',
+          '#default_value' => true,
+        ],
+      ],
     ],
     'numeric' => [
       'title' => 'Numeric',
@@ -40,7 +48,7 @@ class ValidationManager {
       'description' => 'Make this field accept only valid email characters',
       'error' => 'Field does not contain a valid email address',
     ],
-    'min' => [
+    'min_length' => [
       'title' => 'Min Length',
       'description' => 'Accept only a minimum character',
       'error' => 'Minimum requirement not met',
@@ -53,7 +61,7 @@ class ValidationManager {
         ],
       ],
     ],
-    'max' => [
+    'max_length' => [
       'title' => 'Max Length',
       'description' => 'Accept only a maximum character',
       'error' => 'Maximum requirement not met',

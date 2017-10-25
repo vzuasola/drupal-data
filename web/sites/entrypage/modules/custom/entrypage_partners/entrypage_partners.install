@@ -1,0 +1,25 @@
+<?php
+
+/**
+ * Implements hook_uninstall
+ */
+function entrypage_partners_uninstall()
+{
+   $keys = [
+      'core.base_field_override.entrypage_partner.entrypage_partner.user_id.yml',
+      'core.entity_form_display.entrypage_partner.entrypage_partner.default.yml',
+      'core.entity_view_display.entrypage_partner.entrypage_partner.default.yml',
+      'field.field.entrypage_partner.entrypage_partner.field_image.yml',
+      'field.field.entrypage_partner.entrypage_partner.field_partner_link.yml',
+      'field.storage.entrypage_partner.field_image.yml',
+      'field.storage.entrypage_partner.field_partner_link.yml',
+      'field.field.entrypage_partner.entrypage_partner.field_partner_link_target.yml',
+      'field.storage.entrypage_partner.field_partner_link_target.yml',
+      'language.content_settings.entrypage_partner.entrypage_partner.yml',
+      'views.view.entrypage_partners_api.yml'
+    ];
+
+    foreach ($keys as $key) {
+      \Drupal::configFactory()->getEditable($key)->delete();
+    }
+}

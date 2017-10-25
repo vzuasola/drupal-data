@@ -5,6 +5,10 @@ dependencies with [Composer](https://getcomposer.org/).
 
 ## Documentations
 
+### General Guidelines
+
+* [Syncing Configurations](docs/syncing-configs.md)
+
 ### Module
 
 * [Generating a Module Skeleton](docs/generate-module.md)

@@ -1,0 +1,5 @@
+registration_config.general_configuration_schema:
+  title: 'General Configuration'
+  base_route_name: registration_config.general_configuration_form
+  names:
+    - 'registration_config.general_configuration'

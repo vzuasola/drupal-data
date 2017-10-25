@@ -13,8 +13,6 @@ use Drupal\Component\Annotation\Plugin;
  * @Annotation
  */
 class WebcomposerForm extends Plugin {
-
-
   /**
    * The plugin ID.
    *

@@ -257,6 +257,9 @@ class ManageField extends FormBase {
       if ($this->isConfigValueOverride()) {
         $form[$key]['enable']['#disabled'] = TRUE;
         $form[$key]['parameters_wrapper']['#disabled'] = TRUE;
+
+        $defaultValidations = $this->getDefaultConfigValues($name, 'field_validations');
+        $form[$key]['enable']['#default_value'] = $defaultValidations[$key]['enable'] ?? FALSE;
       }
     }
   }
@@ -272,10 +275,23 @@ class ManageField extends FormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    parent::submitForm($form, $form_state);
-
     $this->saveFieldSettings($form, $form_state);
     $this->saveValidations($form, $form_state);
+
+    $id = $this->entity->getId();
+    $field = $this->field->getId();
+    $language = $this->languageManager->getCurrentLanguage();
+
+    drupal_set_message($this->t("The configuration for field <strong>$field</strong> has been saved."));
+
+    $uri = new Url('webcomposer_form_manager.form.view', [
+      'form' => $id,
+      'language' => $language->getId(),
+    ], [
+      'language' => $language,
+    ]);
+
+    $form_state->setRedirectUrl($uri);
   }
 
   /**
@@ -311,6 +327,13 @@ class ManageField extends FormBase {
 
     foreach ($keys as $key) {
       $data[$key] = $fieldValidations[$key];
+
+      // if we are translating a value, do not save the enable flag, so that the
+      // enable flag will be fetched from the default language
+      if ($this->isConfigValueOverride()) {
+        unset($data[$key]['enable']);
+        unset($data[$key]['parameters']);
+      }
     }
 
     $this->saveRawConfigValue($name, 'field_validations', $data);

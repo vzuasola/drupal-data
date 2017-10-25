@@ -1,0 +1,21 @@
+uuid: 2095c130-587f-4673-8e79-49170a11e377
+langcode: en
+status: true
+dependencies:
+  module:
+    - entrypage_front_blocks
+    - link
+_core:
+  default_config_hash: bAUOjbYQXO0L7f_1IOXJ-zuBqmpDZKHPm1wI3rysqp8
+id: entrypage_front_block.field_link
+field_name: field_link
+entity_type: entrypage_front_block
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

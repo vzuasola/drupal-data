@@ -2,10 +2,7 @@
 
 namespace Drupal\entrypage_front_blocks\Entity;
 
-use Drupal\Core\Entity\RevisionLogInterface;
-use Drupal\Core\Entity\RevisionableInterface;
-use Drupal\Component\Utility\Xss;
-use Drupal\Core\Url;
+use Drupal\Core\Entity\ContentEntityInterface;
 use Drupal\Core\Entity\EntityChangedInterface;
 use Drupal\user\EntityOwnerInterface;
 
@@ -14,7 +11,7 @@ use Drupal\user\EntityOwnerInterface;
  *
  * @ingroup entrypage_front_blocks
  */
-interface EntrypageFrontBlockInterface extends RevisionableInterface, RevisionLogInterface, EntityChangedInterface, EntityOwnerInterface {
+interface EntrypageFrontBlockInterface extends  ContentEntityInterface, EntityChangedInterface, EntityOwnerInterface {
 
   // Add get/set methods for your configuration properties here.
 
@@ -76,43 +73,5 @@ interface EntrypageFrontBlockInterface extends RevisionableInterface, RevisionLo
    *   The called Entrypage front block entity.
    */
   public function setPublished($published);
-
-  /**
-   * Gets the Entrypage front block revision creation timestamp.
-   *
-   * @return int
-   *   The UNIX timestamp of when this revision was created.
-   */
-  public function getRevisionCreationTime();
-
-  /**
-   * Sets the Entrypage front block revision creation timestamp.
-   *
-   * @param int $timestamp
-   *   The UNIX timestamp of when this revision was created.
-   *
-   * @return \Drupal\entrypage_front_blocks\Entity\EntrypageFrontBlockInterface
-   *   The called Entrypage front block entity.
-   */
-  public function setRevisionCreationTime($timestamp);
-
-  /**
-   * Gets the Entrypage front block revision author.
-   *
-   * @return \Drupal\user\UserInterface
-   *   The user entity for the revision author.
-   */
-  public function getRevisionUser();
-
-  /**
-   * Sets the Entrypage front block revision author.
-   *
-   * @param int $uid
-   *   The user ID of the revision author.
-   *
-   * @return \Drupal\entrypage_front_blocks\Entity\EntrypageFrontBlockInterface
-   *   The called Entrypage front block entity.
-   */
-  public function setRevisionUserId($uid);
 
 }

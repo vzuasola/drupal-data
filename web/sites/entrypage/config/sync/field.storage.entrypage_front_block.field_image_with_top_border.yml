@@ -1,0 +1,18 @@
+uuid: af95b643-12a5-4fd1-ac3b-18e4d862606d
+langcode: en
+status: true
+dependencies:
+  module:
+    - entrypage_front_blocks
+id: entrypage_front_block.field_image_with_top_border
+field_name: field_image_with_top_border
+entity_type: entrypage_front_block
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

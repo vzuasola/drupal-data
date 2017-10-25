@@ -13,6 +13,7 @@ dependencies:
     - field.field.node.game.field_game_type
     - field.field.node.game.field_games_category
     - field.field.node.game.field_jackpot_code
+    - field.field.node.game.field_jackpot_ticker
     - field.field.node.game.field_play_for_fun_toggle
     - field.field.node.game.field_ribbon_configuration
     - image.style.thumbnail
@@ -45,7 +46,6 @@ third_party_settings:
         - field_play_for_fun_toggle
         - field_game_code
         - field_game_type
-        - field_fim
       parent_name: ''
       weight: 10
       format_type: details
@@ -59,6 +59,7 @@ third_party_settings:
     group_jackpot:
       children:
         - field_jackpot_code
+        - field_jackpot_ticker
       parent_name: ''
       weight: 11
       format_type: tab
@@ -76,31 +77,6 @@ targetEntityType: node
 bundle: game
 mode: default
 content:
-  field_fim:
-    weight: 14
-    settings:
-      display_label: true
-    third_party_settings:
-      conditional_fields:
-        e8cb606c-ceee-43d1-bea6-6048b1e2a6cd:
-          dependee: field_game_type
-          settings:
-            state: visible
-            condition: value
-            grouping: AND
-            values_set: 1
-            value: ''
-            values: {  }
-            value_form:
-              -
-                value: '1'
-            effect: show
-            effect_options: {  }
-            selector: ''
-          entity_type: node
-          bundle: game
-    type: boolean_checkbox
-    region: content
   field_game_code:
     weight: 12
     settings:
@@ -177,6 +153,13 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_jackpot_ticker:
+    weight: 1
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
   field_play_for_fun_toggle:
     weight: 11
     settings:
@@ -186,12 +169,9 @@ content:
     region: content
   field_ribbon_configuration:
     weight: 12
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: options_select
     region: content
   langcode:
     type: language_select
@@ -233,6 +213,7 @@ content:
 hidden:
   body: true
   created: true
+  field_fim: true
   promote: true
   sticky: true
   translation: true

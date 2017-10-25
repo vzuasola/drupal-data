@@ -20,14 +20,3 @@ view published entrypage front block entities:
 
 view unpublished entrypage front block entities:
   title: 'View unpublished Entrypage front block entities'
-
-view all entrypage front block revisions:
-  title: 'View all Entrypage front block revisions'
-
-revert all entrypage front block revisions:
-  title: 'Revert all Entrypage front block revisions'
-  description: 'Role requires permission <em>view Entrypage front block revisions</em> and <em>edit rights</em> for entrypage front block entities in question or <em>administer entrypage front block entities</em>.'
-
-delete all entrypage front block revisions:
-  title: 'Delete all revisions'
-  description: 'Role requires permission to <em>view Entrypage front block revisions</em> and <em>delete rights</em> for entrypage front block entities in question or <em>administer entrypage front block entities</em>.'

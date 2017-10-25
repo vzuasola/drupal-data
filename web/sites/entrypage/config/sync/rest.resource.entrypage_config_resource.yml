@@ -1,0 +1,17 @@
+uuid: a9ea057b-85ab-40f4-bf16-5f45011878a3
+langcode: en    
+status: true    
+dependencies:   
+  module:   
+    - entrypage_config    
+    - serialization   
+    - user    
+id: entrypage_config_resource 
+plugin_id: entrypage_config_resource    
+granularity: method   
+configuration:
+  GET:    
+    supported_formats:    
+      - json    
+    supported_auth:   
+      - cookie

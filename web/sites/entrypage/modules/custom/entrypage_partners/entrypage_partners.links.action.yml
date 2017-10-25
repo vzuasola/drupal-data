@@ -1,0 +1,5 @@
+entity.entrypage_partner.add_form:
+  route_name: entity.entrypage_partner.add_form
+  title: 'Add Entrypage partner'
+  appears_on:
+    - entity.entrypage_partner.collection

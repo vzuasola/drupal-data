@@ -1,0 +1,21 @@
+uuid: 669db251-f4e9-4dc8-b7cb-bf0dc94154d6
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_reference_revisions
+    - paragraphs
+    - webcomposer_sponsor_responsive
+id: sponsor_responsive_entity.field_responsive_sponsor
+field_name: field_responsive_sponsor
+entity_type: sponsor_responsive_entity
+type: entity_reference_revisions
+settings:
+  target_type: paragraph
+module: entity_reference_revisions
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

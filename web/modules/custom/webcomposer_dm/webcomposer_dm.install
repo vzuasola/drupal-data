@@ -1,23 +1,27 @@
 <?php
 
+/**
+ * @file
+ * Uninstall all config during un-installation.
+ */
 
 /**
- * Implements hook_uninstall
+ * Implements hook_uninstall().
  */
 function webcomposer_dm_uninstall() {
-   $keys = [
-      'taxonomy.vocabulary.domain.yml',
-      'taxonomy.vocabulary.domain_groups.yml',
-      'taxonomy.vocabulary.master_placeholder.yml',
-      'core.entity_form_display.paragraph.domain_management_configuration.default.yml',
-      'core.entity_view_display.paragraph.domain_management_configuration.default.yml',
-      'field.field.paragraph.domain_management_configuration.field_default_value.yml',
-      'field.field.paragraph.domain_management_configuration.field_description.yml',
-      'field.field.paragraph.domain_management_configuration.field_placeholder_key.yml',
+  $keys = [
+    'taxonomy.vocabulary.domain.yml',
+    'taxonomy.vocabulary.domain_groups.yml',
+    'taxonomy.vocabulary.master_placeholder.yml',
+    'core.entity_form_display.paragraph.domain_management_configuration.default.yml',
+    'core.entity_view_display.paragraph.domain_management_configuration.default.yml',
+    'field.field.paragraph.domain_management_configuration.field_default_value.yml',
+    'field.field.paragraph.domain_management_configuration.field_description.yml',
+    'field.field.paragraph.domain_management_configuration.field_placeholder_key.yml',
 
-    ];
+  ];
 
-    foreach ($keys as $key) {
-      \Drupal::configFactory()->getEditable($key)->delete();
-    }
+  foreach ($keys as $key) {
+    \Drupal::configFactory()->getEditable($key)->delete();
+  }
 }
