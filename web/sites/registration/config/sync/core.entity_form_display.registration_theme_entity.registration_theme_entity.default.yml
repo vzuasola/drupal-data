@@ -1,0 +1,100 @@
+uuid: 5bb43ca7-2d33-4fa2-aa9f-a26274886c4d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.registration_theme_entity.registration_theme_entity.field_background_color
+    - field.field.registration_theme_entity.registration_theme_entity.field_background_image
+    - field.field.registration_theme_entity.registration_theme_entity.field_form_font_color
+    - field.field.registration_theme_entity.registration_theme_entity.field_login_destination_url
+    - field.field.registration_theme_entity.registration_theme_entity.field_registration_button_font_c
+    - field.field.registration_theme_entity.registration_theme_entity.field_registration_button_form_c
+    - field.field.registration_theme_entity.registration_theme_entity.field_registration_button_form_h
+    - field.field.registration_theme_entity.registration_theme_entity.field_registration_theme_code
+    - image.style.thumbnail
+  module:
+    - color_field
+    - image
+    - link
+    - registration_theme
+id: registration_theme_entity.registration_theme_entity.default
+targetEntityType: registration_theme_entity
+bundle: registration_theme_entity
+mode: default
+content:
+  field_background_color:
+    weight: 4
+    settings:
+      placeholder_color: ''
+      placeholder_opacity: ''
+    third_party_settings: {  }
+    type: color_field_widget_default
+    region: content
+  field_background_image:
+    weight: 1
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_form_font_color:
+    weight: 5
+    settings:
+      placeholder_color: ''
+      placeholder_opacity: ''
+    third_party_settings: {  }
+    type: color_field_widget_default
+    region: content
+  field_login_destination_url:
+    weight: 3
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_registration_button_font_c:
+    weight: 8
+    settings:
+      placeholder_color: ''
+      placeholder_opacity: ''
+    third_party_settings: {  }
+    type: color_field_widget_default
+    region: content
+  field_registration_button_form_c:
+    weight: 6
+    settings:
+      placeholder_color: ''
+      placeholder_opacity: ''
+    third_party_settings: {  }
+    type: color_field_widget_default
+    region: content
+  field_registration_button_form_h:
+    weight: 7
+    settings:
+      placeholder_color: ''
+      placeholder_opacity: ''
+    third_party_settings: {  }
+    type: color_field_widget_default
+    region: content
+  field_registration_theme_code:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  langcode: true
+  translation: true
+  user_id: true
