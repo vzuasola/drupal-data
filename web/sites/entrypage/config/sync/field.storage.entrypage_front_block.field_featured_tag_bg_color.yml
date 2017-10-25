@@ -1,17 +1,17 @@
-uuid: d99e6e33-6f6e-472e-ba1b-61bdf09b1740
+uuid: d473695b-74ff-47ef-a2f3-3c77b7614a85
 langcode: en
 status: true
 dependencies:
   module:
+    - color_field
     - entrypage_front_blocks
-    - text
-id: entrypage_front_block.field_featured_tag
-field_name: field_featured_tag
+id: entrypage_front_block.field_featured_tag_bg_color
+field_name: field_featured_tag_bg_color
 entity_type: entrypage_front_block
-type: text
+type: color_field_type
 settings:
-  max_length: 255
-module: text
+  format: '#HEXHEX'
+module: color_field
 locked: false
 cardinality: 1
 translatable: true
