@@ -16,7 +16,7 @@ function registration_theme_help($route_name, RouteMatchInterface $route_match) 
     case 'help.page.registration_theme':
       $output = '';
       $output .= '<h3>' . t('About') . '</h3>';
-      $output .= '<p>' . t('My Awesome Module') . '</p>';
+      $output .= '<p>' . t('Themeable Registration Configuration') . '</p>';
       return $output;
 
     default:

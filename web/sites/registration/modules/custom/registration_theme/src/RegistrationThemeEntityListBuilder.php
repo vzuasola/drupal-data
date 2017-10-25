@@ -2,20 +2,24 @@
 
 namespace Drupal\registration_theme;
 
-use Drupal\Core\Config\Entity\ConfigEntityListBuilder;
 use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Entity\EntityListBuilder;
+use Drupal\Core\Link;
 
 /**
- * Provides a listing of Registration Theme entities.
+ * Defines a class to build a listing of Registration theme entity entities.
+ *
+ * @ingroup registration_theme
  */
-class RegistrationThemeEntityListBuilder extends ConfigEntityListBuilder {
+class RegistrationThemeEntityListBuilder extends EntityListBuilder {
+
 
   /**
    * {@inheritdoc}
    */
   public function buildHeader() {
-    $header['label'] = $this->t('Registration Theme');
-    $header['id'] = $this->t('Machine name');
+    $header['id'] = $this->t('Registration theme entity ID');
+    $header['name'] = $this->t('Name');
     return $header + parent::buildHeader();
   }
 
@@ -23,9 +27,13 @@ class RegistrationThemeEntityListBuilder extends ConfigEntityListBuilder {
    * {@inheritdoc}
    */
   public function buildRow(EntityInterface $entity) {
-    $row['label'] = $entity->label();
+    /* @var $entity \Drupal\registration_theme\Entity\RegistrationThemeEntity */
     $row['id'] = $entity->id();
-    // You probably want a few more properties here...
+    $row['name'] = Link::createFromRoute(
+      $entity->label(),
+      'entity.registration_theme_entity.edit_form',
+      ['registration_theme_entity' => $entity->id()]
+    );
     return $row + parent::buildRow($entity);
   }
 

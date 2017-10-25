@@ -1,0 +1,22 @@
+# Registration theme entity routing definition
+registration_theme_entity.settings_tab:
+  route_name: registration_theme_entity.settings
+  title: 'Settings'
+  base_route: registration_theme_entity.settings
+
+entity.registration_theme_entity.canonical:
+  route_name: entity.registration_theme_entity.canonical
+  base_route: entity.registration_theme_entity.canonical
+  title: 'View'
+
+entity.registration_theme_entity.edit_form:
+  route_name: entity.registration_theme_entity.edit_form
+  base_route: entity.registration_theme_entity.canonical
+  title: 'Edit'
+
+entity.registration_theme_entity.delete_form:
+  route_name:  entity.registration_theme_entity.delete_form
+  base_route:  entity.registration_theme_entity.canonical
+  title: Delete
+  weight: 10
+
