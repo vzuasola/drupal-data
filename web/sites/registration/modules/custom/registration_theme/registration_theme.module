@@ -20,10 +20,10 @@ function registration_theme_help($route_name, RouteMatchInterface $route_match) 
   }
 }
 
-// function registration_theme_theme() {
-//   return [
-//     'registration_theme' => [
-//       'render element' => 'children',
-//     ],
-//   ];
-// }
+function registration_theme_theme() {
+  return [
+    'registration_theme' => [
+      'render element' => 'children',
+    ],
+  ];
+}
