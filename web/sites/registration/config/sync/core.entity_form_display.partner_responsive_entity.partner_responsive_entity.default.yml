@@ -32,6 +32,9 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
 hidden:
   langcode: true
   user_id: true

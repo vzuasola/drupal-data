@@ -24,11 +24,9 @@ mode: default
 content:
   field_background_color:
     weight: 4
-    settings:
-      placeholder_color: ''
-      placeholder_opacity: ''
+    settings: {  }
     third_party_settings: {  }
-    type: color_field_widget_default
+    type: color_field_widget_html5
     region: content
   field_background_image:
     weight: 1
@@ -40,11 +38,9 @@ content:
     region: content
   field_form_font_color:
     weight: 5
-    settings:
-      placeholder_color: ''
-      placeholder_opacity: ''
+    settings: {  }
     third_party_settings: {  }
-    type: color_field_widget_default
+    type: color_field_widget_html5
     region: content
   field_login_destination_url:
     weight: 3
@@ -56,27 +52,21 @@ content:
     region: content
   field_registration_button_font_c:
     weight: 8
-    settings:
-      placeholder_color: ''
-      placeholder_opacity: ''
+    settings: {  }
     third_party_settings: {  }
-    type: color_field_widget_default
+    type: color_field_widget_html5
     region: content
   field_registration_button_form_c:
     weight: 6
-    settings:
-      placeholder_color: ''
-      placeholder_opacity: ''
+    settings: {  }
     third_party_settings: {  }
-    type: color_field_widget_default
+    type: color_field_widget_html5
     region: content
   field_registration_button_form_h:
     weight: 7
-    settings:
-      placeholder_color: ''
-      placeholder_opacity: ''
+    settings: {  }
     third_party_settings: {  }
-    type: color_field_widget_default
+    type: color_field_widget_html5
     region: content
   field_registration_theme_code:
     weight: 2
