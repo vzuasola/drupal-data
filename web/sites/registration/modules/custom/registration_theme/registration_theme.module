@@ -7,9 +7,6 @@
 
 use Drupal\Core\Routing\RouteMatchInterface;
 
-/**
- * Implements hook_help().
- */
 function registration_theme_help($route_name, RouteMatchInterface $route_match) {
   switch ($route_name) {
     // Main module help for the registration_theme module.
@@ -23,13 +20,10 @@ function registration_theme_help($route_name, RouteMatchInterface $route_match) 
   }
 }
 
-/**
- * Implements hook_theme().
- */
-function registration_theme_theme() {
-  return [
-    'registration_theme' => [
-      'render element' => 'children',
-    ],
-  ];
-}
+// function registration_theme_theme() {
+//   return [
+//     'registration_theme' => [
+//       'render element' => 'children',
+//     ],
+//   ];
+// }

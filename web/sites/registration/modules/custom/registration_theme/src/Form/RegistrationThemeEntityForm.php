@@ -44,7 +44,7 @@ class RegistrationThemeEntityForm extends ContentEntityForm {
           '%label' => $entity->label(),
         ]));
     }
-    $form_state->setRedirect('entity.registration_theme_entity.canonical', ['registration_theme_entity' => $entity->id()]);
+    $form_state->setRedirectUrl($entity->urlInfo('collection'));
   }
 
 }

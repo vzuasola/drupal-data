@@ -18,7 +18,6 @@ class RegistrationThemeEntityListBuilder extends EntityListBuilder {
    * {@inheritdoc}
    */
   public function buildHeader() {
-    $header['id'] = $this->t('Registration theme entity ID');
     $header['name'] = $this->t('Name');
     return $header + parent::buildHeader();
   }
@@ -28,7 +27,6 @@ class RegistrationThemeEntityListBuilder extends EntityListBuilder {
    */
   public function buildRow(EntityInterface $entity) {
     /* @var $entity \Drupal\registration_theme\Entity\RegistrationThemeEntity */
-    $row['id'] = $entity->id();
     $row['name'] = Link::createFromRoute(
       $entity->label(),
       'entity.registration_theme_entity.edit_form',
