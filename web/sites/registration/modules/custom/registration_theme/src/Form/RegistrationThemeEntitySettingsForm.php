@@ -12,6 +12,8 @@ use Drupal\Core\Form\FormStateInterface;
  */
 class RegistrationThemeEntitySettingsForm extends FormBase {
 
+  const SETTINS_DESCRIPTION = 'Settings form for Registration theme entity entities. Manage field settings here.';
+
   /**
    * Returns a unique string identifying the form.
    *
@@ -46,7 +48,7 @@ class RegistrationThemeEntitySettingsForm extends FormBase {
    *   Form definition array.
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    $form['registrationthemeentity_settings']['#markup'] = 'Settings form for Registration theme entity entities. Manage field settings here.';
+    $form['registrationthemeentity_settings']['#markup'] = self::SETTINS_DESCRIPTION;
     return $form;
   }
 
