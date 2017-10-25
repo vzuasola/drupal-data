@@ -1,0 +1,20 @@
+uuid: d473695b-74ff-47ef-a2f3-3c77b7614a85
+langcode: en
+status: true
+dependencies:
+  module:
+    - color_field
+    - entrypage_front_blocks
+id: entrypage_front_block.field_featured_tag_bg_color
+field_name: field_featured_tag_bg_color
+entity_type: entrypage_front_block
+type: color_field_type
+settings:
+  format: '#HEXHEX'
+module: color_field
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

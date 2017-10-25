@@ -1,0 +1,5 @@
+entrypage_config.entrypage_configuration:
+  title: 'Entrypage Custom Configuration Translation'
+  base_route_name: entrypage_config.entrypage_configuration
+  names:
+    - entrypage_config.entrypage_configuration

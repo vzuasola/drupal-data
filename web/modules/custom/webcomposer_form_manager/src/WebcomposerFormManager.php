@@ -10,8 +10,6 @@ use Drupal\Core\Extension\ModuleHandlerInterface;
  * Provides the Form manager plugin manager.
  */
 class WebcomposerFormManager extends DefaultPluginManager {
-
-
   /**
    * Constructor for FormManagerManager objects.
    *

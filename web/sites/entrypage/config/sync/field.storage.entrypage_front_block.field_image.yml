@@ -1,0 +1,32 @@
+uuid: 92886ca8-1503-49a1-baca-0495da945ff9
+langcode: en
+status: true
+dependencies:
+  module:
+    - entrypage_front_blocks
+    - file
+    - image
+_core:
+  default_config_hash: qv1_JACfsc4O9XQulFDxFGHZc3w7mo0Uhoys7yn0Xus
+id: entrypage_front_block.field_image
+field_name: field_image
+entity_type: entrypage_front_block
+type: image
+settings:
+  uri_scheme: public
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  target_type: file
+  display_field: false
+  display_default: false
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

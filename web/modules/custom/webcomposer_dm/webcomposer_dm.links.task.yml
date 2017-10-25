@@ -10,4 +10,3 @@ webcomposer_dm.manage_placeholders:
   route_name: webcomposer_dm.manage_placeholders  
   title: 'Manage Placeholders'
   base_route: webcomposer_dm.domain_management
-

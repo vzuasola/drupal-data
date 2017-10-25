@@ -1,0 +1,22 @@
+uuid: d64a1ff0-954a-4356-a1bf-526c9cb9b7de
+langcode: en
+status: true
+dependencies:
+  module:
+    - entrypage_front_blocks
+    - text
+_core:
+  default_config_hash: RDPnnI0hjIoYzRN1-9Ri3l4KNHfwHdlvMty05cn47HA
+id: entrypage_front_block.field_short_title
+field_name: field_short_title
+entity_type: entrypage_front_block
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,21 @@
+uuid: 610637d2-14fa-4da3-b703-a18e3f2b23a1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.entrypage_partner.field_partner_link_target
+  module:
+    - entrypage_partners
+    - options
+id: entrypage_partner.entrypage_partner.field_partner_link_target
+field_name: field_partner_link_target
+entity_type: entrypage_partner
+bundle: entrypage_partner
+label: 'Partner Link Target'
+description: 'The link behavior when clicked'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

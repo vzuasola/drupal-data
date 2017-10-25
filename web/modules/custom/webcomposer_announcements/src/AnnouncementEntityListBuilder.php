@@ -20,7 +20,7 @@ class AnnouncementEntityListBuilder extends EntityListBuilder {
    * {@inheritdoc}
    */
   public function buildHeader() {
-    // $header['id'] = $this->t('Announcement ID');
+    // $header['id'] = $this->t('Announcement ID');.
     $header['name'] = $this->t('Name');
     return $header + parent::buildHeader();
   }
@@ -34,9 +34,9 @@ class AnnouncementEntityListBuilder extends EntityListBuilder {
     $row['name'] = $this->l(
       $entity->label(),
       new Url(
-        'entity.announcement_entity.edit_form', array(
+        'entity.announcement_entity.edit_form', [
           'announcement_entity' => $entity->id(),
-        )
+        ]
       )
     );
     return $row + parent::buildRow($entity);

@@ -2,7 +2,6 @@
 webcomposer_domain_import.webcomposer_domain_import:
   path: 'admin/config/webcomposer/domains/Import'
   defaults:
-    #_controller: '\Drupal\webcomposer_domain_import\Controller\WebcomposerDomainImport::DomainImport'
     _form: '\Drupal\webcomposer_domain_import\Form\ImportForm'
     _title: 'Domain Import'
   requirements:
@@ -13,7 +12,6 @@ webcomposer_domain_import.webcomposer_domain_import:
 webcomposer_domain_import.webcomposer_domain_export:
   path: 'admin/config/webcomposer/domains/Export'
   defaults:
-    # _controller: '\Drupal\webcomposer_domain_import\Controller\WebcomposerDomainExport::DomainExport'
      _form: '\Drupal\webcomposer_domain_import\Form\ExportForm'
      _title: 'Domain Export'
   requirements:

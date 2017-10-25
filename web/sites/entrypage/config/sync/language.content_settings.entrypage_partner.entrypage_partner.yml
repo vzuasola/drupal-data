@@ -1,0 +1,17 @@
+uuid: 095cd33e-9860-4040-8aec-613e37b989a8
+langcode: en
+status: true
+dependencies:
+  module:
+    - content_translation
+    - entrypage_partners
+third_party_settings:
+  content_translation:
+    enabled: true
+_core:
+  default_config_hash: AqKb5aKfRP7m7eaUGEnHb0UcWuRlA75VvzgYbUMJbf0
+id: entrypage_partner.entrypage_partner
+target_entity_type_id: entrypage_partner
+target_bundle: entrypage_partner
+default_langcode: site_default
+language_alterable: true

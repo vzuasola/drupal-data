@@ -3,7 +3,7 @@
 namespace Drupal\webcomposer_domain_import\Parser;
 
 /**
- * Class for creating and reading Matterhorn Domains Excel Spreadsheet file using PHP Excel.
+ * Class for creating and reading Excel Spreadsheet file using PHP Excel.
  *
  * @package Matterhorn Domains
  * @author alex <alexandernikko.tenepere@bayviewtechnology.com>
@@ -12,40 +12,43 @@ class ExcelParser {
 
   /**
    * Main PHP excel object.
+   *
+   * @var excel
    */
   private $excel;
   /**
    * The filename of the excel file.
+   *
+   * @var filename
    */
   private $filename;
   /**
    * Number of sheets.
+   *
+   * @var sheetNumber
    */
-  private $sheet_number;
+  private $sheetNumber;
 
   /**
-   * Constructor function
-   * Passing the excel object to the class instance.
-   *
-   * @param array $rows
-   *   - the phpexcel array object.
+   * Constructor function Passing the excel object to the class instance.
    */
   public function __construct() {
     // Initialize PHP excel object.
     $this->excel = new \PHPExcel();
     // Set filename.
-    $this->sheet_number = 0;
+    $this->sheetNumber = 0;
   }
 
   /**
    * Reads and parses an excel file into a array of worksheets.
    *
-   * @author alex <alexandernikko.tenepere@bayviewtechnology.com>
-   * @param array $path
+   * @param string $path
+   *   File path uri.
    *
-   * @return array $sheets
+   * @return array
+   *   Return sheets of excel file.
    */
-  public function read_excel($path) {
+  public function readExcel($path) {
     try {
       // Attempt to read excel file.
       $excelReader = \PHPExcel_IOFactory::createReaderForFile($path);
@@ -73,47 +76,47 @@ class ExcelParser {
   /**
    * Creates an excel sheet based on the given worksheet data.
    *
-   * @author alex <alexandernikko.tenepere@bayviewtechnology.com>
    * @param array $data
-   *   - the array containing a single worksheet data.
-   * @param array $sheet_name
-   *   - the name of the worksheet.
+   *   The array containing a single worksheet data.
+   * @param string $sheet_name
+   *   The name of the worksheet.
    */
-  public function create_sheet($data, $sheet_name) {
+  public function createSheet(array $data, $sheet_name) {
     // Create a new worksheet.
     $this->excel->createSheet();
     // Populate sheet with data and add sheet name.
-    $this->excel->setActiveSheetIndex($this->sheet_number);
+    $this->excel->setActiveSheetIndex($this->sheetNumber);
     $this->excel->getActiveSheet()->fromArray($data);
     $this->excel->getActiveSheet()->setTitle($sheet_name);
 
     // Calls the stlyer function.
-    $this->style_excel($data);
+    $this->styleExcel($data);
 
     // Increment sheet count.
-    $this->sheet_number = $this->sheet_number + 1;
+    $this->sheetNumber = $this->sheetNumber + 1;
   }
 
   /**
    * Generate the excel file and invoke download operation.
    *
-   * @author alex <alexandernikko.tenepere@bayviewtechnology.com>
-   * @param array $excel_version
-   *   - the excel version of the generated excel.
+   * @param string $filename
+   *   Name of the excel file.
+   * @param string $excel_version
+   *   The excel version of the generated excel.
    * @param bool $headers
-   *   - check if download will be invoked from browser.
-   * @param array $output
-   *   - the URL to output the file.
+   *   Check if download will be invoked from browser.
+   * @param string $output
+   *   The URL to output the file.
    */
   public function save($filename, $excel_version = 'Excel2007', $headers = TRUE, $output = 'php://output') {
     // Removes the blank worksheet set by PHP excel.
-    $this->excel->removeSheetByIndex($this->sheet_number);
+    $this->excel->removeSheetByIndex($this->sheetNumber);
     // Create writer for excel object.
     $excelWriter = \PHPExcel_IOFactory::createWriter($this->excel, $excel_version);
 
     // Set the headers so that browser will invoke an upload.
     if ($headers) {
-      $this->set_headers($filename);
+      $this->setHeaders($filename);
     }
 
     // Output the excel file.
@@ -125,7 +128,7 @@ class ExcelParser {
    *
    * @author alex <alexandernikko.tenepere@bayviewtechnology.com>
    */
-  private function set_headers($filename) {
+  private function setHeaders($filename) {
     header("Content-Type: application/force-download");
     header("Content-Type: application/octet-stream");
     header("Content-Type: application/download");
@@ -138,7 +141,7 @@ class ExcelParser {
    *
    * @author alex <alexandernikko.tenepere@bayviewtechnology.com>
    */
-  private function style_excel() {
+  private function styleExcel() {
     // Column and row dimension.
     $column = $this->excel->getActiveSheet()->getHighestColumn();
 

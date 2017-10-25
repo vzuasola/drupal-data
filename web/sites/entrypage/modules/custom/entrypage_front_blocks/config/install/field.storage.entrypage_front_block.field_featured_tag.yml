@@ -1,0 +1,20 @@
+uuid: d99e6e33-6f6e-472e-ba1b-61bdf09b1740
+langcode: en
+status: true
+dependencies:
+  module:
+    - entrypage_front_blocks
+    - text
+id: entrypage_front_block.field_featured_tag
+field_name: field_featured_tag
+entity_type: entrypage_front_block
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

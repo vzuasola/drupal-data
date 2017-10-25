@@ -1,0 +1,21 @@
+uuid: 03ade0c4-7af9-46eb-aeb5-2ca8ea686b53
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.entrypage_front_block.field_link_text_hover_2
+  module:
+    - entrypage_front_blocks
+    - text
+id: entrypage_front_block.entrypage_front_block.field_link_text_hover_2
+field_name: field_link_text_hover_2
+entity_type: entrypage_front_block
+bundle: entrypage_front_block
+label: 'Link Text Hover 2'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

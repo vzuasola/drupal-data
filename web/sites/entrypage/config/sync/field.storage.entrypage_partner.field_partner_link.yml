@@ -1,0 +1,21 @@
+uuid: 30eb036a-880e-40c8-8c08-b15401f9541d
+langcode: en
+status: true
+dependencies:
+  module:
+    - entrypage_partners
+    - link
+_core:
+  default_config_hash: RA_9b5s53AGCwAJQnig_jc80kA4N1K2QQdPzILbezVo
+id: entrypage_partner.field_partner_link
+field_name: field_partner_link
+entity_type: entrypage_partner
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

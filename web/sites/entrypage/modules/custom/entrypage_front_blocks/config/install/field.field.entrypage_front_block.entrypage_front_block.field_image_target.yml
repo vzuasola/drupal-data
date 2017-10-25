@@ -1,0 +1,25 @@
+uuid: 1ef0909c-5e33-4ba1-a23e-e66e19b32878
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.entrypage_front_block.field_image_target
+  module:
+    - entrypage_front_blocks
+    - options
+_core:
+  default_config_hash: 7bgVz8CaQto336Hv6MMQLshxTk1hOhum3oterkCLYr0
+id: entrypage_front_block.entrypage_front_block.field_image_target
+field_name: field_image_target
+entity_type: entrypage_front_block
+bundle: entrypage_front_block
+label: 'Image Target'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: _top
+default_value_callback: ''
+settings: {  }
+field_type: list_string

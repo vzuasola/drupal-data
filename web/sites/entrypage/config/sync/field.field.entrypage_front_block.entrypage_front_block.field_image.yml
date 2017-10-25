@@ -1,0 +1,47 @@
+uuid: b603c740-e513-40c4-968b-5a12eb7c32a4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.entrypage_front_block.field_image
+  module:
+    - content_translation
+    - entrypage_front_blocks
+    - image
+third_party_settings:
+  content_translation:
+    translation_sync:
+      file: file
+      alt: '0'
+      title: '0'
+_core:
+  default_config_hash: LmDsOEDF70vGvAY3UyI7XehTpzM-4IdiWa2xQFHrwhI
+id: entrypage_front_block.entrypage_front_block.field_image
+field_name: field_image
+entity_type: entrypage_front_block
+bundle: entrypage_front_block
+label: Image
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: false
+  alt_field_required: false
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

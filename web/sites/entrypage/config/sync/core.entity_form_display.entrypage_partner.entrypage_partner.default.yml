@@ -1,0 +1,63 @@
+uuid: b9383804-f62c-42c9-b7dd-77b528c6f39c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.entrypage_partner.entrypage_partner.field_image
+    - field.field.entrypage_partner.entrypage_partner.field_partner_link
+    - field.field.entrypage_partner.entrypage_partner.field_partner_link_target
+    - image.style.thumbnail
+  module:
+    - entrypage_partners
+    - image
+    - link
+_core:
+  default_config_hash: 5W3-0PnutEBuMk2XgBNc5qwS1oKiYEUQjWWBPtKG8m4
+id: entrypage_partner.entrypage_partner.default
+targetEntityType: entrypage_partner
+bundle: entrypage_partner
+mode: default
+content:
+  field_image:
+    weight: 3
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_partner_link:
+    weight: 4
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_partner_link_target:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  user_id: true

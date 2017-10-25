@@ -7,7 +7,8 @@ function webcomposer_games_uninstall() {
     $keys = [
         'webcomposer_config.games_playtech_provider',
         'webcomposer_config.games_fim_provider',
-        'webcomposer_config.games_opus_provider'
+        'webcomposer_config.games_opus_provider',
+        'webcomposer_config.icore_games_integration'
     ];
 
     foreach ($keys as $key) {
