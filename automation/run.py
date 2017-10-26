@@ -30,6 +30,7 @@ def parse_cli():
 def main():
     args = parse_cli()
     stage = args.stage
+
     try:
         project_name = os.environ['CI_PROJECT_NAME']
     except KeyError:
@@ -37,8 +38,8 @@ def main():
     project_config = read_configuration(DEFAULT_CONFIG_FILE)
     steps = project_config[stage]['steps']
 
-    git.get_sonar_sha()
     get_version()
+    git.get_sonar_sha()
 
     for step in steps:
         if skip_step(stage, step) :
@@ -51,13 +52,17 @@ def main():
         options = steps[step]['options']
         command = steps[step]['command']
         volumes = steps[step]['volumes']
+        other_vars = None
+        if 'other_vars' in steps[step]:
+            other_vars = steps[step]['other_vars']
+
         try:
             output = steps[step]['output']
         except KeyError:
             output = None
         docker.execute(image_name=image_name, dockerfile=dockerfile,
                        options=options, command=command, volumes=volumes,
-                       output=output)
+                       output=output, pipeline_stage=stage, other_vars=other_vars)
         docker.cleanup_volumes('/app')
 
 
