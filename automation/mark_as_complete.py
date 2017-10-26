@@ -11,15 +11,18 @@ from lib.logger import logger
 
 
 def main():
-    if 'CREATES' not in os.environ:
-        msg = "{0} is not defined in your environment".format('CREATES')
-        raise PipelineError(msg)
-    for create in os.environ['CREATES'].split(','):
-        data = {'date': str(datetime.date.today())}
-        with open(create, 'a') as data_out:
-            data_out.write(json.dumps(data))
-    
+    create_dependency_file()
     logger.info('stage complete')
+
+
+def create_dependency_file():
+    """
+    Creates dependency file for a given stage
+    """
+    dependency_file = '/app/automation/deployed/' + os.environ['PIPELINE_STAGE'] + '.jsonl'
+    data = {'date': str(datetime.date.today())}
+    with open(dependency_file, 'a') as data_out:
+        data_out.write(json.dumps(data))
 
 
 if __name__ == '__main__':
