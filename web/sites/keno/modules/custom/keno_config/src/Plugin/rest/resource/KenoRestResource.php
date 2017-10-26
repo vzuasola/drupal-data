@@ -8,6 +8,9 @@ use Drupal\rest\ResourceResponse;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
 use Psr\Log\LoggerInterface;
+use Drupal\Component\Utility\Html;
+use Drupal\Core\Site\Settings;
+use Drupal\webcomposer_rest_extra\FilterHtmlTrait;
 
 /**
  * Provides a resource to get view modes by entity and bundle.
@@ -22,6 +25,7 @@ use Psr\Log\LoggerInterface;
  */
 class KenoRestResource extends ResourceBase {
 
+  use FilterHtmlTrait;
   /**
    * A current user instance.
    *
@@ -90,6 +94,12 @@ class KenoRestResource extends ResourceBase {
     try {
       $config = \Drupal::config("keno_config.$id");
       $data = $config->get();
+      foreach ($data as $key => $value) {
+        // replace the images src for text formats
+        if (isset($value['format']) && isset($value['value'])) {
+            $data[$key]['value'] = $this->filterHtml($value['value']);
+        }
+      }
     } catch (\Exception $e) {
       $data = [
         'error' => $this->t('Configuration not found')
