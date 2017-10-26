@@ -3,6 +3,8 @@
 A Webcomposer Form Plugin allows you to define a configurable form, that can be exposed
 as data.
 
+> Make sure that the Webcomposer Form Manager Rest Resource has permissions for Anonymous users
+
 It has the following functionality:
 * Defining form
 * Defining fields per form
