@@ -9,7 +9,7 @@
         "BASELINE_BRANCH": "master",
         "PHPUNIT_COVERAGE_REPORT_PATH": "coverage/clover.xml",
         "PHPUNIT_TESTS_REPORT_PATH": "coverage/junit.xml",
-        "SKIP_STEPS": "phpunit-sonarqube|composer,package|yarn-install,package|yarn-dist",
+        "SKIP_STEPS": "package|yarn-install,package|yarn-dist",
         "PHPMD_SRC": "web/sites/",
         "PHPMD_RULES": "codesize,cleancode,unusedcode,naming,design,controversial",
         "DEPLOY_DEVELOPMENT": "CMS: deploy - development environment",
