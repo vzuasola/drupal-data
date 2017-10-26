@@ -72,7 +72,6 @@ dev:
   script:
     - python -u automation/run.py --stage deploy-development
   when: manual
-  allow_failure: false
   dependencies:
     - create package
   artifacts:
