@@ -12,7 +12,7 @@ except ImportError:
     # python 3
     from urllib.parse import urlparse
 import requests
-from .utils import SUCCESS, FAILED, md5, sha1
+from .utils import SUCCESS, FAILED, md5, sha1, INFO
 from .error import PipelineError
 from .logger import logger
 
@@ -39,6 +39,12 @@ def upload(url, username, password, file_to_upload):
                "Content-Length": file_len,
                "X-Checksum-Md5": md5_,
                "X-Checksum-Sha1": sha1_}
+
+    # Check if the package has already been uploaded.
+    check_file = requests.head(url)
+    if(check_file.status_code == 200):
+        logger.info('{0} {1} already exists. It will not be updated. If you need to update the package, push a new commit.'.format(INFO, url))
+        return
 
     with open(file_to_upload, 'rb') as upload_me:
         try:
