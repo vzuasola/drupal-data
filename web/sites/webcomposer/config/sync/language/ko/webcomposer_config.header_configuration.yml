@@ -1,0 +1,12 @@
+lobby_page_title: '온라인 베팅 – 스포츠 베팅, 온라인 카지노 및 포커를 다파벳에서'
+join_now_text: '가입 하기'
+login_issue_text: '로그인이 안 되시나요?'
+balance_error_text: '에러가 발생했습니다.'
+profile_icon_hover_text: '내 프로필'
+cashier_icon_hover_text: 은행
+product_menu_new_tag: 새로운
+welcome_text: '{username} '
+profile_link: 'https://stg-cashier.elysium-dfbt.com/kr/?ticket={auth.token}&product=dafabet{tracking.token}'
+profile_logout_text: 로그아웃
+balance_label_mapping: "4|OW 스포츠\r\n6|다파 스포츠\r\n1|카지노 클래식\r\n2|카지노 골드\r\n5|라이브 딜러 & 게임\r\n3|포커\r\n7|낚시의 신"
+balance_error_text_product: N/A

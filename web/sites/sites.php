@@ -55,8 +55,8 @@
  */
 
 // Webcomposer Demo Instances
-$sites['wc.drupal.dev'] = 'webcomposer';
-$sites['wc.drupal.local'] = 'webcomposer';
+$sites['webcomposer.drupal.dev'] = 'webcomposer';
+$sites['webcomposer.drupal.local'] = 'webcomposer';
 $sites['dev-admin.elysium-dfbt.com'] = 'webcomposer';
 
 // Entry page Instances
