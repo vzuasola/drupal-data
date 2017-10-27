@@ -17,18 +17,25 @@ class WithArgs extends JoinPluginBase {
    */
   public function buildJoin($select_query, $table, $view_query) {
     $language = \Drupal::languageManager()->getCurrentLanguage(LanguageInterface::TYPE_CONTENT)->getId();
-    $view_args = $language;
+    $view_args = [];
+    // check if there are view args
+    if (!empty($view_query->view->args)) {
+        $view_args = $view_query->view->args;
+    }
+    // get the expose filters
     $exposedInput = $view_query->view->getExposedInput();
-    // unset format for rest
+    // unset format for rest views
     unset($exposedInput['_format']);
-
     if (!empty($exposedInput)) {
-        $view_args = $exposedInput;
+        $view_args += $exposedInput;
         $view_args['language'] = $language;
-        $view_args = json_encode($view_args);
     }
 
-    \Drupal::logger('draggableviews')->error('Failed with @message', ['@message' => $view_args]);
+    if (!empty($view_args)) {
+        $view_args = json_encode($view_args);
+    } else {
+        $view_args = $language;
+    }
 
     if (!isset($this->extra)) {
       $this->extra = [];

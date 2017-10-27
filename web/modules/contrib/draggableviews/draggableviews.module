@@ -174,15 +174,24 @@ function draggableviews_views_submit(&$form, \Drupal\Core\Form\FormStateInterfac
   $view_name = $view->id();
   $view_display = $view->current_display;
   $language = \Drupal::languageManager()->getCurrentLanguage(LanguageInterface::TYPE_CONTENT)->getId();
-  $view_args = $language;
+  $view_args = [];
+  // check if there are view args
+  if (!empty($view->args)) {
+      $view_args = $view->args;
+  }
+  // get the expose filters
   $exposedInput = $view->getExposedInput();
-  // unset format for rest
+  // unset format for rest views
   unset($exposedInput['_format']);
-
   if (!empty($exposedInput)) {
-    $view_args = $exposedInput;
-    $view_args['language'] = $language;
-    $view_args = json_encode($view_args);
+      $view_args += $exposedInput;
+      $view_args['language'] = $language;
+  }
+
+  if (!empty($view_args)) {
+      $view_args = json_encode($view_args);
+  } else {
+      $view_args = $language;
   }
 
   $weight = 0;
