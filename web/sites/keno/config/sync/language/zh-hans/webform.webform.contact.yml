@@ -1,7 +1,6 @@
 settings:
   form_close_message: 'This form is closed. Try next year! sc'
   limit_total_message: 'Limit has now been reached sc'
-  confirmation_message: 'Your message has been sent.'
 third_party_settings:
   webcomposer_webform:
     webcomposer_webform_layout:

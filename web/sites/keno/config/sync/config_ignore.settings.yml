@@ -6,6 +6,6 @@ ignored_config_entities:
   8: 'block.*'
   10: 'devel.*'
   12: 'webcomposer_config.*'
-  14: 'language.*'
+  14: 'languange.*'
 _core:
   default_config_hash: UVH1aJ4b44UM-VdPVN7hNNuuVqfReJxwfVeDQH1Hvsk
