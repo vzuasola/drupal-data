@@ -45,7 +45,8 @@ content:
   langcode:
     type: language_select
     weight: 4
-    settings: {  }
+    settings:
+      include_locked: true
     third_party_settings: {  }
     region: content
   translation:

@@ -13,7 +13,7 @@ bundle: keno_lobby_tile_entity
 label: 'Enable Keno Game Launching'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value:
   -
     value: 0

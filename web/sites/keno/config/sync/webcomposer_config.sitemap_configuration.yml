@@ -1,6 +1,6 @@
 sitemap_title: Sitemap
 sitemap_content:
-  value: "<p>Sitemap Blurb</p>\r\n"
+  value: ''
   format: basic_html
 sitemap_home_label: Home
 sitemap_home_link: /
