@@ -9,7 +9,7 @@ use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
  * RegistrationForm
  *
  * @WebcomposerForm(
- *   id = "registration",
+ *   id = "registration_form",
  *   name = "Registration Form",
  * )
  */
@@ -41,14 +41,11 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
             'username' => [
                 'name' => 'Username',
                 'type' => 'textfield',
-                'options' => [
-                  'default_value' => 'Leandrew',
-                ],
                 'settings' => [
-                    'alias' => [
-                        '#title' => 'Username alias',
+                    'label' => [
+                        '#title' => 'Username label',
                         '#type' => 'textfield',
-                        '#description' => 'Default name for Username field',
+                        '#description' => 'label for Username field',
                     ],
                 ],
             ],
@@ -57,10 +54,23 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
                 'name' => 'Password',
                 'type' => 'textfield',
                 'settings' => [
-                    'alias' => [
-                        '#title' => 'Password alias',
+                    'label' => [
+                        '#title' => 'Password label',
                         '#type' => 'textfield',
-                        '#description' => 'Default name for Password field',
+                        '#description' => 'The Label for Password field',
+                    ],
+                ],
+            ],
+
+            'breakline_1' => [
+                'name' => 'Break Line Markup',
+                'type' => 'markup',
+                'settings' => [
+                    'markup' => [
+                        '#title' => 'Horizontal Line Markup',
+                        '#type' => 'textarea',
+                        '#description' => 'A Markup text breakline for registration form',
+                        '#default_value' => '<hr>',
                     ],
                 ],
             ],
@@ -69,10 +79,10 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
                 'name' => 'Email',
                 'type' => 'textfield',
                 'settings' => [
-                    'alias' => [
-                        '#title' => 'Email alias',
+                    'label' => [
+                        '#title' => 'Email Label',
                         '#type' => 'textfield',
-                        '#description' => 'Default Name for Email field',
+                        '#description' => 'The Label for Email field',
                     ],
                 ],
             ],
@@ -81,10 +91,23 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
                 'name' => 'Mobile Number',
                 'type' => 'textfield',
                 'settings' => [
-                    'name' => [
-                        '#title' => 'Mobile Number',
+                    'label' => [
+                        '#title' => 'Mobile Number Label',
                         '#type' => 'textfield',
-                        '#description' => 'The default name for the Mobile Number field',
+                        '#description' => 'The label for the Mobile Number field',
+                    ],
+                ],
+            ],
+
+            'breakline_2' => [
+                'name' => 'Break Line Markup',
+                'type' => 'markup',
+                'settings' => [
+                    'markup' => [
+                        '#title' => 'Horizontal Line Markup',
+                        '#type' => 'textarea',
+                        '#description' => 'A Markup text breakline for registration form',
+                        '#default_value' => '<hr>',
                     ],
                 ],
             ],
@@ -93,10 +116,10 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
                 'name' => 'First Name',
                 'type' => 'textfield',
                 'settings' => [
-                    'name' => [
-                        '#title' => 'First Name',
+                    'label' => [
+                        '#title' => 'First Name Label',
                         '#type' => 'textfield',
-                        '#description' => 'The default name for the First Name field',
+                        '#description' => 'The label for the First Name field',
                     ],
                 ],
             ],
@@ -105,10 +128,22 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
                 'name' => 'Last Name',
                 'type' => 'textfield',
                 'settings' => [
-                    'name' => [
-                        '#title' => 'Last Name',
+                    'label' => [
+                        '#title' => 'Last Name Label',
                         '#type' => 'textfield',
-                        '#description' => 'The default name for the Last Name field',
+                        '#description' => 'The label for the Last Name field',
+                    ],
+                ],
+            ],
+
+            'birthdate' => [
+                'name' => 'Date of birth',
+                'type' => 'textfield',
+                'settings' => [
+                    'label' => [
+                        '#title' => 'Date of Birth Label',
+                        '#type' => 'textfield',
+                        '#description' => 'The Label for the Birthdate field',
                     ],
                 ],
             ],
@@ -117,15 +152,25 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
                 'name' => 'Currency',
                 'type' => 'select',
                 'settings' => [
-                    'name' => [
-                        '#title' => 'Currency',
+                    'label' => [
+                        '#title' => 'Currency Label',
                         '#type' => 'textfield',
-                        '#description' => 'The default name for the Currency field',
+                        '#description' => 'The dLabel for the Currency field',
                     ],
-                    'default_name' => [
-                        '#title' => 'Default Name',
+                    'placeholder' => [
+                        '#title' => 'Choose a currency',
                         '#type' => 'textfield',
-                        '#description' => 'The Empty value name for the Currency dropdown field',
+                        '#description' => 'Placeholder value for this textfield',
+                        '#default_value' => 'Select your currency...',
+                    ],
+                    'choices' => [
+                        '#title' => 'Country Choices',
+                        '#type' => 'textarea',
+                        '#description' => 'Provide a pipe separated key value pair. <br> <small>Example key|My Value</small>',
+                        '#default_value' => implode(PHP_EOL, [
+                            'rmb|CNY (Chinese Yuan)',
+                            'usd|US Dollars'
+                         ]),
                     ],
                 ],
             ],
@@ -134,15 +179,76 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
                 'name' => 'Country',
                 'type' => 'select',
                 'settings' => [
-                    'name' => [
-                        '#title' => 'Country',
+                    'label' => [
+                        '#title' => 'Country Label',
                         '#type' => 'textfield',
-                        '#description' => 'The default name for the Country field',
+                        '#description' => 'The Label for the Country field',
                     ],
-                    'default_name' => [
-                        '#title' => 'Default Name',
+                    'placeholder' => [
+                        '#title' => 'Choose a country',
                         '#type' => 'textfield',
-                        '#description' => 'The Empty value name for the Country dropdown field',
+                        '#description' => 'Placeholder value for this textfield',
+                        '#default_value' => 'Select your country...',
+                    ],
+                    'choices' => [
+                        '#title' => 'Country Choices',
+                        '#type' => 'textarea',
+                        '#description' => 'Provide a pipe separated key value pair. <br> <small>Example key|My Value</small>',
+                        '#default_value' => implode(PHP_EOL, [
+                            'ch|China',
+                            'us|United States'
+                         ]),
+                    ],
+                ],
+            ],
+
+            'breakline_3' => [
+                'name' => 'Break Line Markup',
+                'type' => 'markup',
+                'settings' => [
+                    'markup' => [
+                        '#title' => 'Horizontal Line Markup',
+                        '#type' => 'textarea',
+                        '#description' => 'A Markup text breakline for registration form',
+                        '#default_value' => '<hr>',
+                    ],
+                ],
+            ],
+
+            'bonus_code' => [
+                'name' => 'Bonus Code',
+                'type' => 'textfield',
+                'settings' => [
+                    'label' => [
+                        '#title' => 'Bonus Code label',
+                        '#type' => 'textfield',
+                        '#description' => 'label for Bonus Code field',
+                    ],
+                ],
+            ],
+
+            'accept_terms' => [
+                'name' => 'Accept Terms Markup',
+                'type' => 'markup',
+                'settings' => [
+                    'markup' => [
+                        '#title' => 'Accept Terms Text',
+                        '#type' => 'textarea',
+                        '#description' => 'A Markup text for accept terms and conditions beside the submit button',
+                        '#default_value' => 'I am at least 18 years old and have read and accept the Terms and Condition',
+                    ],
+                ],
+            ],
+
+            'submit' => [
+                'name' => 'Submit',
+                'type' => 'submit',
+                'settings' => [
+                    'label' => [
+                        '#title' => 'Submit Label',
+                        '#type' => 'textfield',
+                        '#description' => 'Label for the submit button',
+                        '#default_value' => 'Submit',
                     ],
                 ],
             ],
