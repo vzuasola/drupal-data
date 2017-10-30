@@ -42,6 +42,14 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
             '#description' => 'Label for this field',
             '#default_value' => 'Username',
           ],
+          'attr' => [
+            'placeholder' => [
+              '#title' => 'Username placeholder label',
+              '#type' => 'textfield',
+              '#description' => 'label for username field placeholder',
+              '#default_value' => '',
+            ],
+          ],
         ],
       ],
 
