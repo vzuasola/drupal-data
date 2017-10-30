@@ -25,6 +25,7 @@ BUILD_DIR = os.path.abspath(os.path.join(CURRENT_DIR, os.pardir))
 PROJECT_DIR = os.path.abspath(os.path.join(BUILD_DIR, os.pardir))
 DEFAULT_CONFIG_FILE = os.path.join(BUILD_DIR, 'pipeline.json')
 PACKAGE_CONFIG = os.path.join(PROJECT_DIR, 'pipeline-package.json')
+DEPENDENCY_CONFIG = os.path.join(PROJECT_DIR, 'pipeline-dependency.json')
 
 
 def artifactory_urls():
@@ -195,7 +196,7 @@ def base_directory():
     return os.path.join(PROJECT_DIR, 'final_package')
 
 
-def create_archive(package_config):
+def create_archive(package_config, archive_name=None):
     """
     create a tar.gz archive from base_dir excluding items
     provided in exclude
@@ -208,7 +209,9 @@ def create_archive(package_config):
     # execute the pre archive steps
     _pre_archive(package_config)
 
-    archive_name = _archive_name()
+    if archive_name is None:
+        archive_name = _archive_name()
+
     base_dir = base_directory()
 
     if os.path.exists(archive_name):
@@ -299,7 +302,7 @@ def get_version():
     Retrieves the version based on the branch name and add it on the env variable VERSION.
     """
     if 'CI_COMMIT_REF_NAME' not in os.environ:
-        msg = "{0} is not defined in your environment".format('CI_COMMIT_REF_NAME')
+        msg = '{0} is not defined in your environment'.format('CI_COMMIT_REF_NAME')
         raise PipelineError(msg)
     branch_name = os.environ['CI_COMMIT_REF_NAME'].replace('release-v', '')
     logger.debug(branch_name)

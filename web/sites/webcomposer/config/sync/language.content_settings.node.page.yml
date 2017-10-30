@@ -1,4 +1,4 @@
-uuid: d549d6d4-78e7-44e8-adf7-903b5d479af0
+uuid: 9ba4f5cf-c4ce-4292-bc65-d1c6d583395d
 langcode: en
 status: true
 dependencies:
@@ -13,4 +13,4 @@ id: node.page
 target_entity_type_id: node
 target_bundle: page
 default_langcode: site_default
-language_alterable: false
+language_alterable: true

@@ -14,6 +14,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
 use Psr\Log\LoggerInterface;
 use Drupal\file\Entity\File;
+use Drupal\webcomposer_rest_extra\FilterHtmlTrait;
 
 /**
  * Provides a resource to get view of configuration.
@@ -27,6 +28,7 @@ use Drupal\file\Entity\File;
  * )
  */
 class ConfigurationResource extends ResourceBase {
+  use FilterHtmlTrait;
 
   /**
    * A current user instance.
@@ -107,6 +109,7 @@ class ConfigurationResource extends ResourceBase {
       $data = $config->get();
 
       // Get relative path for the configuration images.
+      // @todo To be standardized
       switch ($id) {
         case 'footer_configuration':
           $file_id = $data['partners_logo'][0];
@@ -131,27 +134,5 @@ class ConfigurationResource extends ResourceBase {
     ];
 
     return (new ResourceResponse($data))->addCacheableDependency($build);
-  }
-
-  /**
-   * Load file by the file id.
-   *
-   * @param  String $fid
-   *  file id to get the file object.
-   * @return String
-   *  file relative path.
-   */
-  private function getFileRelativePath($fid) {
-    $file_url;
-
-    if (isset($fid)) {
-      $file = File::load($fid);
-
-      if ($file) {
-        $file_url = preg_replace('/public:\/\//', '', $file->getFileUri());
-      }
-    }
-
-    return $file_url;
   }
 }
