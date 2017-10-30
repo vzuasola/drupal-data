@@ -12,7 +12,6 @@ module:
   color: 0
   color_field: 0
   comment: 0
-  conditional_fields: 0
   config: 0
   config_filter: 0
   config_ignore: 0
@@ -53,6 +52,7 @@ module:
   quickedit: 0
   rdf: 0
   registration_config: 0
+  registration_form: 0
   registration_theme: 0
   rest: 0
   rest_menu_items: 0
@@ -78,6 +78,7 @@ module:
   webcomposer_downloadables: 0
   webcomposer_editor: 0
   webcomposer_floating_banners: 0
+  webcomposer_form_manager: 0
   webcomposer_language_hierarchy: 0
   webcomposer_marketing_script: 0
   webcomposer_metatags: 0
