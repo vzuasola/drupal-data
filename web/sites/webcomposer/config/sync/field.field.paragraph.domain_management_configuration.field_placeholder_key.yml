@@ -1,0 +1,21 @@
+uuid: 3e8c04bc-2ca3-4885-a59d-f78d9296d025
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_placeholder_key
+    - paragraphs.paragraphs_type.domain_management_configuration
+_core:
+  default_config_hash: 2grtY2nIAi7Ca29nXLz5ibdCDhOGeDFhv2lT0NhXZGU
+id: paragraph.domain_management_configuration.field_placeholder_key
+field_name: field_placeholder_key
+entity_type: paragraph
+bundle: domain_management_configuration
+label: 'Placeholder Key'
+description: 'Unique identifier for the placeholder. Use only numbers, letters, -, and -'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
