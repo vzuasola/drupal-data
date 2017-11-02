@@ -7,6 +7,8 @@ dependencies:
   module:
     - entrypage_front_blocks
     - text
+_core:
+  default_config_hash: '-DFhKURl1Uqg3Ki79YOGFToA0GKYrAU-N7IUi9tjZXU'
 id: entrypage_front_block.entrypage_front_block.field_body
 field_name: field_body
 entity_type: entrypage_front_block

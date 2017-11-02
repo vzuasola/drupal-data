@@ -21,3 +21,4 @@ notification_content:
   value: "<p>Your session has timed out due to inactivity.</p>\r\n"
   format: basic_html
 lightbox_blurb: ''
+mobile_login_url : 'https://m.dafabet.com/login'

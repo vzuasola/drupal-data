@@ -1,0 +1,25 @@
+uuid: a18849c4-6630-490f-bdc8-b9ca041f4686
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.entrypage_front_block.field_image_target
+  module:
+    - entrypage_front_blocks
+    - options
+_core:
+  default_config_hash: ghjGO_WYjfw2IWIwtGP034fgYZtCk5tg0OC9O4soxBg
+id: entrypage_front_block.entrypage_front_block.field_image_target
+field_name: field_image_target
+entity_type: entrypage_front_block
+bundle: entrypage_front_block
+label: 'Image Link target'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: _blank
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -65,9 +65,9 @@ class AnnouncementEntity extends ContentEntityBase implements AnnouncementEntity
    */
   public static function preCreate(EntityStorageInterface $storage_controller, array &$values) {
     parent::preCreate($storage_controller, $values);
-    $values += array(
+    $values += [
       'user_id' => \Drupal::currentUser()->id(),
-    );
+    ];
   }
 
   /**
@@ -158,21 +158,21 @@ class AnnouncementEntity extends ContentEntityBase implements AnnouncementEntity
       ->setSetting('target_type', 'user')
       ->setSetting('handler', 'default')
       ->setTranslatable(TRUE)
-      ->setDisplayOptions('view', array(
+      ->setDisplayOptions('view', [
         'label' => 'hidden',
         'type' => 'author',
         'weight' => 0,
-      ))
-      ->setDisplayOptions('form', array(
+      ])
+      ->setDisplayOptions('form', [
         'type' => 'entity_reference_autocomplete',
         'weight' => 5,
-        'settings' => array(
+        'settings' => [
           'match_operator' => 'CONTAINS',
           'size' => '60',
           'autocomplete_type' => 'tags',
           'placeholder' => '',
-        ),
-      ))
+        ],
+      ])
       ->setDisplayConfigurable('form', TRUE)
       ->setDisplayConfigurable('view', TRUE);
 
@@ -180,20 +180,20 @@ class AnnouncementEntity extends ContentEntityBase implements AnnouncementEntity
       ->setLabel(t('Name'))
       ->setRequired(TRUE)
       ->setDescription(t('The name of the Announcement entity.'))
-      ->setSettings(array(
+      ->setSettings([
         'max_length' => 50,
         'text_processing' => 0,
-      ))
+      ])
       ->setDefaultValue('')
-      ->setDisplayOptions('view', array(
+      ->setDisplayOptions('view', [
         'label' => 'above',
         'type' => 'string',
         'weight' => -4,
-      ))
-      ->setDisplayOptions('form', array(
+      ])
+      ->setDisplayOptions('form', [
         'type' => 'string_textfield',
         'weight' => -4,
-      ))
+      ])
       ->setDisplayConfigurable('form', TRUE)
       ->setDisplayConfigurable('view', TRUE);
 

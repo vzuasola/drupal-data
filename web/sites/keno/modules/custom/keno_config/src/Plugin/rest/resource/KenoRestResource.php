@@ -8,6 +8,9 @@ use Drupal\rest\ResourceResponse;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
 use Psr\Log\LoggerInterface;
+use Drupal\Component\Utility\Html;
+use Drupal\Core\Site\Settings;
+use Drupal\webcomposer_rest_extra\FilterHtmlTrait;
 
 /**
  * Provides a resource to get view modes by entity and bundle.
@@ -21,6 +24,7 @@ use Psr\Log\LoggerInterface;
  * )
  */
 class KenoRestResource extends ResourceBase {
+  use FilterHtmlTrait;
 
   /**
    * A current user instance.
@@ -81,7 +85,6 @@ class KenoRestResource extends ResourceBase {
    *   Throws exception expected.
    */
   public function get($id) {
-
     if (!$this->currentUser->hasPermission('access content')) {
       throw new AccessDeniedHttpException();
     }
@@ -90,6 +93,23 @@ class KenoRestResource extends ResourceBase {
     try {
       $config = \Drupal::config("keno_config.$id");
       $data = $config->get();
+
+      // replace the images src for text formats
+      foreach ($data as $key => $value) {
+        if (isset($value['format']) && isset($value['value'])) {
+            $data[$key]['value'] = $this->filterHtml($value['value']);
+        }
+      }
+
+      // Get relative path for the configuration images.
+      // @todo To be standardized
+      switch ($id) {
+        case 'keno_configuration':
+          $file_id = $data['keno_background'][0];
+          $data['keno_background_image_url'] = $this->getFileRelativePath($file_id);
+          break;
+      }
+
     } catch (\Exception $e) {
       $data = [
         'error' => $this->t('Configuration not found')

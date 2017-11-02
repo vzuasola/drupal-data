@@ -4,6 +4,8 @@ status: true
 dependencies:
   module:
     - entrypage_front_blocks
+_core:
+  default_config_hash: 0z_jDNI5ZAlncKjBGrBQjmbG092BF4FsmGYKxtPfD2I
 id: entrypage_front_block.entrypage_front_block.user_id
 field_name: user_id
 entity_type: entrypage_front_block

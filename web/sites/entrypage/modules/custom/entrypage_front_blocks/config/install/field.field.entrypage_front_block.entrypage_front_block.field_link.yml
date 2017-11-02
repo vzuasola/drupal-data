@@ -1,0 +1,25 @@
+uuid: f04c8558-e561-4b16-8d2b-60d391d935d1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.entrypage_front_block.field_link
+  module:
+    - entrypage_front_blocks
+    - link
+_core:
+  default_config_hash: Z3Dy6Eqr0KEj13_bli9ITexFZN-Tet25o9OUp3B8pPs
+id: entrypage_front_block.entrypage_front_block.field_link
+field_name: field_link
+entity_type: entrypage_front_block
+bundle: entrypage_front_block
+label: 'Image Link'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

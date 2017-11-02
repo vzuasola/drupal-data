@@ -68,7 +68,8 @@ content:
     type: language_select
     weight: 2
     region: content
-    settings: {  }
+    settings:
+      include_locked: true
     third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
@@ -81,6 +82,13 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 121
+    third_party_settings: {  }
+    region: content
   title:
     type: string_textfield
     weight: 1

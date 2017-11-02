@@ -1,0 +1,30 @@
+uuid: 8b34d605-d2f7-4504-9fd5-85476bd5abbe
+langcode: en
+status: true
+dependencies:
+  module:
+    - entrypage_partners
+    - options
+id: entrypage_partner.field_partner_link_target
+field_name: field_partner_link_target
+entity_type: entrypage_partner
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: _top
+      label: 'Same Window'
+    -
+      value: _blank
+      label: 'New Tab'
+    -
+      value: window
+      label: 'New Window'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

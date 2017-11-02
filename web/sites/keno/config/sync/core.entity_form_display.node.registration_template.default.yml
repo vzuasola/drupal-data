@@ -5,8 +5,10 @@ dependencies:
   config:
     - field.field.node.registration_template.body
     - field.field.node.registration_template.field_log_in_state
+    - field.field.node.registration_template.field_meta_tags
     - node.type.registration_template
   module:
+    - metatag
     - path
     - text
 id: node.registration_template.default
@@ -29,11 +31,18 @@ content:
     third_party_settings: {  }
     type: options_buttons
     region: content
+  field_meta_tags:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_firehose
+    region: content
   langcode:
     type: language_select
     weight: 2
     region: content
-    settings: {  }
+    settings:
+      include_locked: true
     third_party_settings: {  }
   path:
     type: path
@@ -41,6 +50,13 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 121
+    third_party_settings: {  }
+    region: content
   title:
     type: string_textfield
     weight: 1
@@ -49,6 +65,9 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
 hidden:
   created: true
   promote: true

@@ -14,6 +14,8 @@ third_party_settings:
       file: file
       alt: '0'
       title: '0'
+_core:
+  default_config_hash: LmDsOEDF70vGvAY3UyI7XehTpzM-4IdiWa2xQFHrwhI
 id: entrypage_front_block.entrypage_front_block.field_image
 field_name: field_image
 entity_type: entrypage_front_block

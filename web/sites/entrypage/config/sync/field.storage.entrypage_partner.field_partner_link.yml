@@ -6,7 +6,7 @@ dependencies:
     - entrypage_partners
     - link
 _core:
-  default_config_hash: gc19I2I8ZjOwadgP8hvIMyD_IBAbHt_CNPLTtw69cgc
+  default_config_hash: RA_9b5s53AGCwAJQnig_jc80kA4N1K2QQdPzILbezVo
 id: entrypage_partner.field_partner_link
 field_name: field_partner_link
 entity_type: entrypage_partner

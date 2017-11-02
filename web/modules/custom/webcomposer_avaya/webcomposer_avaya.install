@@ -1,14 +1,19 @@
 <?php
 
 /**
- * Implements hook_uninstall
+ * @file
+ * Filesource Uninstall the configs.
+ */
+
+/**
+ * Implements hook_uninstall().
  */
 function webcomposer_avaya_uninstall() {
-    $keys = [
-      'webcomposer_config.avaya_configuration',
-    ];
+  $keys = [
+    'webcomposer_config.avaya_configuration',
+  ];
 
-    foreach ($keys as $key) {
-      \Drupal::configFactory()->getEditable($key)->delete();
-    }
+  foreach ($keys as $key) {
+    \Drupal::configFactory()->getEditable($key)->delete();
+  }
 }

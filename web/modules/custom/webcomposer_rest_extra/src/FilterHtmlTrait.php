@@ -4,13 +4,14 @@ namespace Drupal\webcomposer_rest_extra;
 
 use Drupal\Component\Utility\Html;
 use Drupal\Core\Site\Settings;
+use Drupal\file\Entity\File;
 
 /**
  * Provide a trait to filter html
  */
 trait FilterHtmlTrait {
 
-    /**
+   /**
     * Filtered Html for Image Source.
     */
     public function filterHtml($markup) {
@@ -34,5 +35,27 @@ trait FilterHtmlTrait {
         $processedHtml = trim($htmlMarkup);
 
         return $processedHtml;
+    }
+
+    /**
+     * Load file by the file id.
+     *
+     * @param  String $fid
+     *  file id to get the file object.
+     * @return String
+     *  file relative path.
+     */
+    public function getFileRelativePath($fid) {
+      $file_url;
+
+      if (isset($fid)) {
+        $file = File::load($fid);
+
+        if ($file) {
+          $file_url = preg_replace('/public:\/\//', '', $file->getFileUri());
+        }
+      }
+
+      return $file_url;
     }
 }

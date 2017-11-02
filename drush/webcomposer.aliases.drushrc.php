@@ -109,7 +109,7 @@ $aliases['entrypage'] = array (
 );
 
 $aliases['webcomposer'] = array (
-  'uri' => 'drupal.local',
+  'uri' => 'webcomposer.drupal.local',
   'root' => '/var/www/html/web-composer/drupal/web/',
   'path-aliases' => array(
     '%dump-dir' => '/tmp',
@@ -157,7 +157,7 @@ $aliases['entrypage'] = array (
     ),
   ),
 );
-  
+
 $aliases['entrypage'] = array (
   'uri' => 'entry.drupal.dev',
   'root' => '/var/www/html/web-composer/drupal/web/',

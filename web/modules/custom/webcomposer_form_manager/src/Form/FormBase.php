@@ -47,6 +47,15 @@ class FormBase extends ConfigFormBase {
   }
 
   /**
+   * Get default config values
+   */
+  public function getDefaultConfigValues($name, $key) {
+    $config = $this->config($name);
+
+    return $config->get($key);
+  }
+
+  /**
    * Get mutable config values
    */
   public function getConfigValues($name, $key) {

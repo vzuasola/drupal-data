@@ -1,0 +1,20 @@
+webcomposer_partner_responsive.list:
+  title: 'Webcomposer Responsive Partners'
+  description: 'Configure the Footer Partners'
+  parent: system.admin_config
+  route_name: webcomposer_partner_responsive.admin_settings
+  weight: 1500
+
+# Partner menu items definition
+entity.partner_responsive_entity.collection:
+  title: 'Responsive Partner list'
+  route_name: entity.partner_responsive_entity.collection
+  description: 'List Partner entities'
+  parent: webcomposer_partner_responsive.list
+
+partner_responsive_entity.admin.structure.settings:
+  title: 'Responsive Partner settings'
+  description: 'Configure Partner entities'
+  route_name: partner_responsive_entity.settings
+  parent: webcomposer_partner_responsive.list
+  weight: 100

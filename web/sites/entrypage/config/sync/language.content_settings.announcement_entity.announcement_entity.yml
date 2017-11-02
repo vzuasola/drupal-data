@@ -1,0 +1,15 @@
+uuid: 8fb2cbc8-fe12-444b-b215-bf86b555b230
+langcode: en
+status: true
+dependencies:
+  module:
+    - content_translation
+    - webcomposer_announcements
+third_party_settings:
+  content_translation:
+    enabled: true
+id: announcement_entity.announcement_entity
+target_entity_type_id: announcement_entity
+target_bundle: announcement_entity
+default_langcode: site_default
+language_alterable: true

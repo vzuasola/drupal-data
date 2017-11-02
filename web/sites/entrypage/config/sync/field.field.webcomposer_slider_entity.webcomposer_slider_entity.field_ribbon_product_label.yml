@@ -1,0 +1,21 @@
+uuid: 42441508-d135-490b-9877-d58edf4dd83f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.webcomposer_slider_entity.field_ribbon_product_label
+  module:
+    - text
+    - webcomposer_slider
+id: webcomposer_slider_entity.webcomposer_slider_entity.field_ribbon_product_label
+field_name: field_ribbon_product_label
+entity_type: webcomposer_slider_entity
+bundle: webcomposer_slider_entity
+label: 'Ribbon Product Label'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text
