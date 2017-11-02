@@ -1,4 +1,4 @@
-name: WebComposer Domain Import/Export
+name: Webcomposer Domain Import/Export
 type: module
 description: This module take care of domain import and export.
 core: 8.x
