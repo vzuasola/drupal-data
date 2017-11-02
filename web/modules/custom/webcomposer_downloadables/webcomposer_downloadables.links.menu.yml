@@ -1,5 +1,5 @@
 webcomposer_downloadables.admin_settings:
-  title: 'WebComposer Downloadables'
+  title: 'Webcomposer Downloadables'
   description: 'Manage file downloadables'
   parent: system.admin_config
   route_name: webcomposer_downloadables.admin_settings
@@ -7,13 +7,13 @@ webcomposer_downloadables.admin_settings:
 
 # Downloadable entity menu items definition
 entity.downloadable_entity.collection:
-  title: 'Downloadable entity list'
+  title: 'Downloadable List'
   route_name: entity.downloadable_entity.collection
   description: 'List Downloadable entity entities'
   parent: webcomposer_downloadables.admin_settings
 
 downloadable_entity.admin.structure.settings:
-  title: Downloadable entity settings
+  title: Downloadable Settings
   description: 'Configure Downloadable entity entities'
   route_name: downloadable_entity.settings
   parent: webcomposer_downloadables.admin_settings
