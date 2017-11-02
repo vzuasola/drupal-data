@@ -89,7 +89,7 @@ class TerritoryBlockingForm extends ConfigFormBase {
 
     $form['field_configuration'] = [
       '#type' => 'details',
-      '#title' => 'Field Configuration',
+      '#title' => 'Balance Configuration',
       '#group' => 'territory_blocking',
       '#open' => true,
       '#tree' => true,
@@ -99,7 +99,13 @@ class TerritoryBlockingForm extends ConfigFormBase {
       '#type' => 'textarea',
       '#title' => t('Territory Blocking'),
       '#required' => true,
-      '#description' => $this->t('Territory Blocking'),
+      '#description' => $this->t("Add a key value pair of balance mapping
+        <br>
+        Format is balance, then comma separated country codes, separated by pipe
+        <br>
+        <br>
+        Example <strong>5|US,CH,PH,SG</strong>
+      "),
       '#default_value' => $restricted_countries
     ];
 
