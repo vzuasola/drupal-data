@@ -144,11 +144,6 @@
  * @code
  *   'prefix' => 'main_',
  * @endcode
- *
- * Per-table prefixes are deprecated as of Drupal 8.2, and will be removed in
- * Drupal 9.0. After that, only a single prefix for all tables will be
- * supported.
- *
  * To provide prefixes for specific tables, set 'prefix' as an array.
  * The array's keys are the table names and the values are the prefixes.
  * The 'default' element is mandatory and holds the prefix for any tables
@@ -270,11 +265,6 @@ $config_directories = array();
  * by the user.
  *
  * @see install_select_profile()
- *
- * @deprecated in Drupal 8.3.0 and will be removed before Drupal 9.0.0. The
- *   install profile is written to the core.extension configuration. If a
- *   service requires the install profile use the 'install_profile' container
- *   parameter. Functional code can use \Drupal::installProfile().
  */
 # $settings['install_profile'] = '';
 
@@ -295,7 +285,7 @@ $config_directories = array();
  *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt');
  * @endcode
  */
-$settings['hash_salt'] = '7HFF2WSjHfDm--JkphFfnDKQfWwynEpZq0mv923SBjR15G2_s-PK24a6diTm9OucHKRrU5dKvw';
+$settings['hash_salt'] = 'fwjKBRlyzPwDBPb1FDstyHYrQzH-Eh4khQtBJOiIBRy8U_m4Xb1LnqVQBUGubkWy89KCgBf83w';
 
 /**
  * Deployment identifier.
@@ -516,7 +506,9 @@ if ($settings['hash_salt']) {
  * security by serving user-uploaded files from a different domain or subdomain
  * pointing to the same server. Do not include a trailing slash.
  */
-# $settings['file_public_base_url'] = 'http://downloads.example.com/files';
+if (isset($_SERVER['HTTP_X_FE_BASE_URI'])) {
+  $settings['file_public_base_url'] =  $_SERVER['HTTP_X_FE_BASE_URI'];
+}
 
 /**
  * Public file path:
@@ -525,7 +517,7 @@ if ($settings['hash_salt']) {
  * must exist and be writable by Drupal. This directory must be relative to
  * the Drupal installation directory and be accessible over the web.
  */
-# $settings['file_public_path'] = 'sites/default/files';
+ #$settings['file_public_path'] = 'casino/sites';
 
 /**
  * Private file path:
@@ -677,7 +669,7 @@ if ($settings['hash_salt']) {
 /**
  * Load services definition file.
  */
-$settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
+$settings['container_yamls'][] = __DIR__ . '/services.yml';
 
 /**
  * Override the default service container class.
@@ -759,19 +751,13 @@ $settings['file_scan_ignore_directories'] = [
  *
  * Keep this code block at the end of this file to take full effect.
  */
-#
-# if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
-#   include $app_root . '/' . $site_path . '/settings.local.php';
-# }
-$databases['default']['default'] = array (
-  'database' => 'ow_sports',
-  'username' => 'root',
-  'password' => 'root',
-  'prefix' => '',
-  'host' => 'localhost',
-  'port' => '3306',
-  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
-  'driver' => 'mysql',
-);
+if (file_exists(__DIR__ . '/database.php')) {
+  include __DIR__ . '/database.php';
+}
+
 $settings['install_profile'] = 'config_installer';
-$config_directories['sync'] = 'sites/ow-sports/files/config_5dMD0YupC7qChEmL5JTCSHOivUYq6JvAsDGZYqzWDYleTyiMxGKWwzvjcxOntq_FQZJtCt2zqw/sync';
+$config_directories['sync'] = 'sites/ow-sports/config/sync';
+
+// The primary site of front end
+$settings['primary_site_prefix'] = 'sports';
+$settings['ck_editor_inline_image_prefix'] = '/en/sports';
