@@ -312,4 +312,3 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
   }
 
 }
-}
