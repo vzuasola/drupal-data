@@ -8,6 +8,7 @@ dependencies with [Composer](https://getcomposer.org/).
 ### General Guidelines
 
 * [Syncing Configurations](docs/syncing-configs.md)
+* [Creating a new multisite instance](docs/generate-site.md)
 
 ### Module
 
