@@ -53,8 +53,8 @@ class SettingsHandler
             $fs->chmod("$directory/settings.php", 0666);
         }
     }
-    
-   /**
+
+    /**
      * Syncs the files in the config directory to their respective sites
      * directory
      */
