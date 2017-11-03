@@ -1,9 +1,0 @@
-uuid: 204cd6d6-989e-488d-ac0f-aeef0e53cb69
-langcode: en
-status: true
-dependencies: {  }
-_core:
-  default_config_hash: 207fZeIxDIiiR8ioV00Kabk14dOYUa6_myePlTbhZV8
-id: social_media_cmi
-label: 'Social Media CMI'
-behavior_plugins: {  }

@@ -1,8 +1,0 @@
-uuid: 25a350ad-164b-4315-b7d6-03464deb2cc7
-langcode: id
-status: true
-dependencies: {  }
-id: secondary-menu-id
-label: 'Secondary Menu ID'
-description: ''
-locked: false
