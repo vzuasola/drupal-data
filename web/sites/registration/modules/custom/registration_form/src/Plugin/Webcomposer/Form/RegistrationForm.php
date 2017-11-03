@@ -6,26 +6,26 @@ use Drupal\webcomposer_form_manager\WebcomposerFormBase;
 use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
 
 /**
- * RegistrationForm
- *
- * @WebcomposerForm(
- *   id = "registration_form",
- *   name = "Registration Form",
- * )
- */
+* RegistrationForm
+*
+* @WebcomposerForm(
+*   id = "registration_form",
+*   name = "Registration Form",
+* )
+*/
 class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInterface {
 
-  /**
-   *
-   */
+    /**
+    *
+    */
     public function getSettings() {
         return [
-                'show' => [
+            'show' => [
                 '#title' => 'Show this form',
                 '#type' => 'checkbox',
                 '#default_value' => true
             ],
-                'alias' => [
+            'alias' => [
                 '#title' => 'Registration Form',
                 '#type' => 'textfield',
                 '#description' => 'Registration Alias',
@@ -52,7 +52,6 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
                             '#title' => 'Username placeholder label',
                             '#type' => 'textfield',
                             '#description' => 'label for Username field placeholder',
-                            '#default_value' => '',
                         ],
                     ],
                 ],
@@ -60,7 +59,7 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
 
             'password' => [
                 'name' => 'Password',
-                'type' => 'textfield',
+                'type' => 'password',
                 'settings' => [
                     'label' => [
                         '#title' => 'Password label',
@@ -72,14 +71,13 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
                             '#title' => 'Password placeholder label',
                             '#type' => 'textfield',
                             '#description' => 'label for Password field placeholder',
-                            '#default_value' => '',
                         ],
                     ],
                 ],
             ],
 
             'breakline_1' => [
-                'name' => 'Break Line Markup',
+               'name' => 'Break Line Markup',
                 'type' => 'markup',
                 'settings' => [
                     'markup' => [
@@ -98,14 +96,13 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
                     'label' => [
                         '#title' => 'Email Label',
                         '#type' => 'textfield',
-                        '#description' => 'The Label for Email field',
+                       '#description' => 'The Label for Email field',
                     ],
                     'attr' => [
                         'placeholder' => [
                             '#title' => 'Email placeholder label',
                             '#type' => 'textfield',
                             '#description' => 'label for Email field placeholder',
-                            '#default_value' => '',
                         ],
                     ],
                 ],
@@ -125,7 +122,6 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
                             '#title' => 'Mobile Number placeholder label',
                             '#type' => 'textfield',
                             '#description' => 'label for Mobile number field placeholder',
-                            '#default_value' => '',
                         ],
                     ],
                 ],
@@ -158,7 +154,6 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
                             '#title' => 'First name placeholder label',
                             '#type' => 'textfield',
                             '#description' => 'label for First name field placeholder',
-                            '#default_value' => '',
                         ],
                     ],
                 ],
@@ -178,15 +173,6 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
                             '#title' => 'Last name placeholder label',
                             '#type' => 'textfield',
                             '#description' => 'label for Last name field placeholder',
-                            '#default_value' => '',
-                        ],
-                    ],
-                    'attr' => [
-                        'placeholder' => [
-                            '#title' => 'Birthdate placeholder label',
-                            '#type' => 'textfield',
-                            '#description' => 'label for Birthdate field placeholder',
-                            '#default_value' => '',
                         ],
                     ],
                 ],
@@ -200,6 +186,13 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
                         '#title' => 'Date of Birth Label',
                         '#type' => 'textfield',
                         '#description' => 'The Label for the Birthdate field',
+                    ],
+                    'attr' => [
+                        'placeholder' => [
+                            '#title' => 'Birthdate placeholder label',
+                            '#type' => 'textfield',
+                            '#description' => 'label for Birthdate field placeholder',
+                        ],
                     ],
                 ],
             ],
@@ -220,7 +213,7 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
                         '#default_value' => 'Select your currency...',
                     ],
                     'choices' => [
-                        '#title' => 'Country Choices',
+                        '#title' => 'Currency Choices',
                         '#type' => 'textarea',
                         '#description' => 'Provide a pipe separated key value pair. <br> <small>Example key|My Value</small>',
                         '#default_value' => implode(PHP_EOL, [
@@ -285,7 +278,6 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
                             '#title' => 'Bonus code placeholder label',
                             '#type' => 'textfield',
                             '#description' => 'label for Bonus code field placeholder',
-                            '#default_value' => '',
                         ],
                     ],
                 ],
