@@ -13,7 +13,7 @@ entity_type: node
 bundle: mobile
 label: 'Mobile Main Content'
 description: ''
-required: true
+required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''

@@ -102,7 +102,6 @@ class FooterConfiguration extends ConfigFormBase {
       '#title' => $this->t('Social Media Title'),
       '#description' => $this->t('Text to be displayed above the Social Media Links.'),
       '#default_value' => $config->get('social_media_title'),
-      '#required' => TRUE,
     ];
 
     $form['back_to_top'] = [
