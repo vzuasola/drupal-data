@@ -31,6 +31,7 @@ $sites['mysite.drupal.local'] = 'mysite';
 * On the config selection page, the config sync path should already be populated, just click next
 * Wait for the synchronization to finish
 * Configure site account, please put this values for consistency across all products
+
     * Username: `master`
     * Password: `master`
     * Email: `admin@drupal.com`
