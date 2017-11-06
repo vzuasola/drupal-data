@@ -1,6 +1,6 @@
-name: Web Composer CKEditor Plugins
+name: Webcomposer Editor Plugins
 type: module
-description: "Custom plugins for CKEditor"
+description: Custom plugins for Webcomposer
 package: Web Composer
 
 dependencies:
