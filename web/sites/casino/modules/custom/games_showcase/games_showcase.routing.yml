@@ -1,0 +1,7 @@
+games_showcase.admin_settings:
+  path: 'admin/config/games_showcase'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Games Showcase'
+  requirements:
+    _permission: 'administer site configuration'

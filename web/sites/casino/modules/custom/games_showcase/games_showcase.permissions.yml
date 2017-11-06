@@ -1,0 +1,22 @@
+add games showcase entity entities:
+  title: 'Create new Games Showcase entity entities'
+
+administer games showcase entity entities:
+  title: 'Administer Games Showcase entity entities'
+  description: 'Allow to access the administration form to configure Games Showcase entity entities.'
+  restrict access: true
+
+delete games showcase entity entities:
+  title: 'Delete Games Showcase entity entities'
+
+edit games showcase entity entities:
+  title: 'Edit Games Showcase entity entities'
+
+access games showcase entity overview:
+  title: 'Access the Games Showcase entity overview page'
+
+view published games showcase entity entities:
+  title: 'View published Games Showcase entity entities'
+
+view unpublished games showcase entity entities:
+  title: 'View unpublished Games Showcase entity entities'
