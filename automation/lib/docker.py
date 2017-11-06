@@ -8,6 +8,7 @@ from __future__ import print_function
 from __future__ import absolute_import
 import os
 import subprocess
+import json
 from .logger import logger
 from .progressbar import ProgressBar
 from .error import PipelineError
@@ -237,7 +238,7 @@ def run_command(cmd, output_file):
     return process.poll()
 
 
-def expand_variables(string):
+def expand_variables(string, return_error=False):
     """
     takes a string and expands $XXXXXXX into an environment variable
     if the variable is not available, it will throw a gigantic exception
@@ -258,6 +259,8 @@ def expand_variables(string):
     # remove any space from the string
     if env_variable not in os.environ:
         msg = "{0} is not defined in your environment".format(env_variable)
+        if return_error:
+            return False
         raise PipelineError(msg)
     string = string.replace('${0}'.format(env_variable), os.environ[env_variable])
     if "$" in string:
@@ -265,14 +268,15 @@ def expand_variables(string):
     return string
 
 
-def execute(image_name, dockerfile, options, command, volumes, output):
+def execute(image_name, dockerfile, options, command, volumes, output, pipeline_stage, other_vars=None):
 
     create_image(image_name=image_name, docker_file=dockerfile)
 
     cmd = [docker_executable(),
            'run',
            '--rm', '-t', '--security-opt', 'label:type:unconfined_t',
-           '-v', '{0}:/root/.ssh/:ro'.format(ssh_dir())]
+           '-v', '{0}:/root/.ssh/:ro'.format(ssh_dir()),
+           '--env', 'PIPELINE_STAGE={0}'.format(pipeline_stage)]
 
     for volume in volumes:
         cmd.append('-v')
@@ -291,5 +295,39 @@ def execute(image_name, dockerfile, options, command, volumes, output):
         for cmmd in command:
             cmd.append(expand_variables(cmmd))
 
+    # append variablized --extra-vars
+    if other_vars:
+        other_vars_list = convert_to_extra_vars(expand_variables(other_vars, True))
+        logger.debug('Value of other_vars: {0}'.format(other_vars_list));
+        for other_var in other_vars_list:
+            cmd.append(expand_variables(other_var))
+
     if run_command(cmd, output) != 0:
         raise PipelineError('{0} failed'.format(' '.join(cmd)))
+
+
+def convert_to_extra_vars(other_vars):
+    """
+    Converts one-liner JSON string to dict.
+    """
+    logger.debug('other vars= {0}'.format(other_vars))
+    other_vars_list = []
+    if not other_vars:
+        return other_vars_list
+
+    try:
+        from json.decoder import JSONDecodeError
+    except ImportError:
+        JSONDecodeError = ValueError
+
+    try:
+        other_vars_dict = json.loads(other_vars)
+        for other_var_key, other_var_value in other_vars_dict.items():
+            other_vars_list.append('--extra-vars')
+            other_vars_list.append(other_var_key + ': ' + other_var_value)
+
+    except JSONDecodeError as error:
+        msg = 'Your other_vars is not a proper JSON: {0}'.format(error)
+        raise PipelineError(msg)
+
+    return other_vars_list

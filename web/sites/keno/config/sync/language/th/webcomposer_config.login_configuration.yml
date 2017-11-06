@@ -1,11 +1,11 @@
 autologout_box_content:
+  value: "<p>การทำรายการของคุณจะสิ้นสุดภายใน {seconds} คุณต้องการทำรายการต่อหรือไม่?</p>\r\n"
   format: basic_html
-  value: "<p>การทำรายการของคุณจะสิ้นสุดภายใน {seconds} คุณต้องการทำรายการต่อหรือไม่?\r\n</p>\r\n"
 notification_content:
+  value: "<p>การทำรายการของคุณสิ้นสุดลงเนื่องจากไม่มีการดำเนินการใดๆ</p>\r\n"
   format: basic_html
-  value: "<p>การทำรายการของคุณสิ้นสุดลงเนื่องจากไม่มีการดำเนินการใดๆ\r\n</p>\r\n"
 lightbox_blurb: 'ยังไม่เป็นสมาชิก?'
-username_placeholder: Username
+username_placeholder: ยูสเซอร์เนม
 password_placeholder: รหัสผ่าน
 login_bottom_label: เข้าสู่ระบบ
 error_message_blank_username: กรุณากรอกยูสเซอร์เนม

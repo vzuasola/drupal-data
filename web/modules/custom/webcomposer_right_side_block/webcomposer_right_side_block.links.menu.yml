@@ -6,14 +6,14 @@ webcomposer_right_side_block.list:
 
 # Inner Page Right Side Block menu items definition
 entity.right_side_block_entity.collection:
-  title: 'Inner Page Right Side Block list'
+  title: 'Inner Page Right Side Block List'
   route_name: entity.right_side_block_entity.collection
   description: 'List Inner Page Right Side Block entities'
   parent: webcomposer_right_side_block.list
   weight: 100
 
 right_side_block_entity.admin.structure.settings:
-  title: Inner Page Right Side Block settings
+  title: Inner Page Right Side Block Settings
   description: 'Configure Inner Page Right Side Block entities'
   route_name: right_side_block_entity.settings
   parent: webcomposer_right_side_block.list

@@ -6,20 +6,28 @@ stages:
   - package
   - deploy-dev
   - integration-tests-development
+  - performance-tests-development
+  - security-tests-development
   - deploy-test
   - integration-tests-test
+  - performance-tests-test
+  - security-tests-test
+  - testing-signoff
   - deploy-staging
   - integration-tests-staging
+  - performance-tests-staging
+  - security-tests-staging
   - staging-signoff
-  - deploy-internal-production
-  - internal-production-signoff
   - deploy-production
+
+cache:
+  paths:
+  - public/
 
 static code analysis:
   stage: tests
   script:
     - python -u automation/run.py --stage phpunit-sonarqube
-  allow_failure: true
 
 php code sniffer:
   stage: tests
@@ -47,18 +55,20 @@ create package:
     paths:
       - "*.tar.gz"
       - automation/deployed/*.jsonl
-    expire_in: 1 day
+    expire_in: 1 month
   when: manual
   cache:
     key: v2
     paths:
+      - devtool/.bower-cache/
+      - devtool/.node-cache/
       - .composer-cache/
+      - devtool/.yarn-cache/
 
 dev:
   stage: deploy-dev
   environment:
     name: development
-    url: https://rodwin.fix.me
   script:
     - python -u automation/run.py --stage deploy-development
   when: manual
@@ -67,25 +77,62 @@ dev:
   artifacts:
     paths:
       - automation/deployed/*.jsonl
+    expire_in: 1 month
+
+selenium tests development:
+  stage: integration-tests-development
+  script:
+    - python -u automation/run.py --stage integration-tests-development
+  when: manual
+  dependencies:
+    - dev
+  artifacts:
+    paths:
+      - automation/deployed/*.jsonl
+    expire_in: 1 month
+
+jmeter development:
+  stage: performance-tests-development
+  script:
+    - python -u automation/run.py --stage performance-tests-dev
+  when: manual
+  dependencies:
+    - dev
+  artifacts:
+    paths:
+      - automation/deployed/*.jsonl
+    expire_in: 1 month
+  tags:
+    - jmeter
 
 qa1:
   stage: deploy-test
   environment:
     name: testing
-    url: https://rodwin.fix.me
   script:
     - python -u automation/run.py --stage deploy-testing
   when: manual
+  dependencies:
+    - dev
   artifacts:
     paths:
       - automation/deployed/*.jsonl
-  only:
-    - /^working$/
-    - /^release-.*$/
-    - tags
+    expire_in: 1 month
+
+selenium tests qa1:
+  stage: integration-tests-test
+  script:
+    - python -u automation/run.py --stage integration-tests-test
+  when: manual
+  dependencies:
+    - qa1
+  artifacts:
+    paths:
+      - automation/deployed/*.jsonl
+    expire_in: 1 month
 
 hp fortify scan qa1:
-  stage: integration-tests-test
+  stage: security-tests-test
   script:
     - python -u automation/run.py --stage code-scan-testing
   when: manual
@@ -94,24 +141,76 @@ hp fortify scan qa1:
   artifacts:
     paths:
       - automation/deployed/*.jsonl
-  only:
-    - /^working$/
-    - /^release-.*$/
-    - tags
+    expire_in: 1 month
+
+jmeter qa1:
+  stage: performance-tests-test
+  script:
+    - python -u automation/run.py --stage performance-tests-test
+  when: manual
+  dependencies:
+    - qa1
+  artifacts:
+    paths:
+      - automation/deployed/*.jsonl
+    expire_in: 1 month
+  tags:
+    - jmeter
 
 tct:
   stage: deploy-test
   environment:
     name: tct
-    url: https://rodwin.fix.me
   script:
     - python -u automation/run.py --stage deploy-tct
   when: manual
+  dependencies:
+    - dev
   artifacts:
     paths:
       - automation/deployed/*.jsonl
+    expire_in: 1 month
+
+selenium tests tct:
+  stage: integration-tests-test
+  script:
+    - python -u automation/run.py --stage integration-tests-tct
+  when: manual
+  dependencies:
+    - tct
+  artifacts:
+    paths:
+      - automation/deployed/*.jsonl
+    expire_in: 1 month
+
+jmeter tct:
+  stage: performance-tests-test
+  script:
+    - python -u automation/run.py --stage performance-tests-tct
+  when: manual
+  dependencies:
+    - tct
+  artifacts:
+    paths:
+      - automation/deployed/*.jsonl
+    expire_in: 1 month
+  tags:
+    - jmeter
+
+testing signoff:
+  stage: testing-signoff
+  script:
+    - python -u automation/run.py --stage testing-signoff
+  when: manual
+  dependencies:
+    - qa1
+    - tct
+    - hp fortify scan qa1
+  artifacts:
+    paths:
+      - automation/deployed/*.jsonl
+    expire_in: 1 month
   only:
-    - /^working$/
     - /^release-.*$/
     - tags
 
@@ -119,83 +218,127 @@ uat:
   stage: deploy-staging
   environment:
     name: uat
-    url: https://rodwin.fix.me
   script:
     - python -u automation/run.py --stage deploy-uat
   when: manual
   dependencies:
-    - qa1
-    - tct
+    - testing signoff
   artifacts:
     paths:
       - automation/deployed/*.jsonl
+    expire_in: 1 month
   only:
     - /^release-.*$/
     - tags
+
+selenium tests uat:
+  stage: integration-tests-staging
+  script:
+    - python -u automation/run.py --stage integration-tests-uat
+  when: manual
+  dependencies:
+    - uat
+  artifacts:
+    paths:
+      - automation/deployed/*.jsonl
+    expire_in: 1 month
+  only:
+    - /^release-.*$/
+    - tags
+
+jmeter uat:
+  stage: performance-tests-staging
+  script:
+    - python -u automation/run.py --stage performance-tests-uat
+  when: manual
+  dependencies:
+    - uat
+  artifacts:
+    paths:
+      - automation/deployed/*.jsonl
+    expire_in: 1 month
+  only:
+    - /^release-.*$/
+    - tags
+  tags:
+    - jmeter
 
 staging:
   stage: deploy-staging
   environment:
     name: staging
-    url: https://rodwin.fix.me
   script:
     - python -u automation/run.py --stage deploy-staging
   when: manual
   dependencies:
-    - qa1
-    - tct
+    - testing signoff
   artifacts:
     paths:
       - automation/deployed/*.jsonl
+    expire_in: 1 month
   only:
     - /^release-.*$/
     - tags
 
-staging signoff:
-  stage: staging-signoff
-  environment:
-    name: staging-signoff
+selenium tests staging:
+  stage: integration-tests-staging
   script:
-    - python -u automation/run.py --stage staging-signoff
+    - python -u automation/run.py --stage integration-tests-stg
   when: manual
   dependencies:
     - staging
   artifacts:
     paths:
       - automation/deployed/*.jsonl
+    expire_in: 1 month
   only:
     - /^release-.*$/
     - tags
 
-internal prod:
-  stage: deploy-internal-production
-  environment:
-    name: internal-production
-    url: https://rodwin.fix.me
+jmeter staging:
+  stage: performance-tests-staging
   script:
-    - python -u automation/run.py --stage deploy-internal-production
+    - python -u automation/run.py --stage performance-tests-staging
   when: manual
   dependencies:
-   - staging signoff
+    - staging
   artifacts:
     paths:
       - automation/deployed/*.jsonl
+    expire_in: 1 month
+  only:
+    - /^release-.*$/
+    - tags
+  tags:
+    - jmeter
+
+acunetix staging:
+  stage: security-tests-staging
+  script:
+    - python -u automation/run.py --stage acunetix-scan
+  when: manual
+  dependencies:
+    - staging
+  artifacts:
+    paths:
+      - automation/deployed/*.jsonl
+    expire_in: 1 month
   only:
     - /^release-.*$/
     - tags
 
-internal prod signoff:
-  stage: internal-production-signoff
-  environment:
-    name: internal-production-signoff
+staging signoff:
+  stage: staging-signoff
   script:
-    - python -u automation/run.py --stage internal-prod-signoff
+    - python -u automation/run.py --stage staging-signoff
   when: manual
   dependencies:
-    - internal prod
+    - staging
+    - uat
   artifacts:
     paths:
       - automation/deployed/*.jsonl
+    expire_in: 1 month
   only:
     - /^release-.*$/
     - tags
@@ -204,15 +347,15 @@ production:
   stage: deploy-production
   environment:
     name: production
-    url: https://www.dafabet.com/en/sports-df/
   script:
     - python -u automation/run.py --stage deploy-production
   when: manual
   dependencies:
-   - internal prod signoff
+   - staging signoff
   artifacts:
     paths:
       - automation/deployed/*.jsonl
+    expire_in: 1 month
   only:
     - /^release-.*$/
     - tags

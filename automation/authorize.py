@@ -9,6 +9,8 @@ Later this module will be extended to use LDAP/AD authentication
 import os
 import sys
 from lib.logger import logger
+from lib.utils import read_configuration
+from lib.utils import DEPENDENCY_CONFIG
 
 
 def is_user_authorized():
@@ -25,14 +27,26 @@ def is_user_authorized():
 
 
 def are_requirements_met():
-    if 'DEPENDS_ON' not in os.environ:
+    if check_requirements():
         return True
-    for dependency in os.environ['DEPENDS_ON'].split(','):
-        if not os.path.exists(dependency):
-            msg = ('dependencies are not met: this stage depends on {0}'
-                   'but {0} does not exist.'.format(dependency))
-            logger.error(msg)
-            return False
+    return False
+
+
+def check_requirements():
+    """
+    Checks dependency per stage based on configured pipeline-dependency.json on the root of your project.
+    """
+    dependency_config = read_configuration(DEPENDENCY_CONFIG)
+    pipeline_stage = os.environ['PIPELINE_STAGE']
+    
+    if pipeline_stage not in dependency_config:
+        return True
+    pipeline_stage_file = '/app/automation/deployed/' + dependency_config[pipeline_stage] + '.jsonl'
+    if not os.path.exists(pipeline_stage_file):
+        msg = ('dependencies are not met: this stage depends on {0}'
+                   ' but {0} does not exist.'.format(pipeline_stage_file))
+        logger.error(msg)
+        return False
     return True
 
 
