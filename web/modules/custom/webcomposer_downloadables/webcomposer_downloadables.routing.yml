@@ -2,6 +2,6 @@ webcomposer_downloadables.admin_settings:
   path: 'admin/config/webcomposer/downloadable'
   defaults:
     _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
-    _title: 'WebComposer Downloadables'
+    _title: 'Webcomposer Downloadables'
   requirements:
     _permission: 'administer site configuration'

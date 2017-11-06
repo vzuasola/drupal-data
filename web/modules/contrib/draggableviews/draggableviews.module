@@ -71,14 +71,13 @@ function draggableviews_views_data_alter(&$data) {
       );
       // Explain to every entity how to join with draggableviews structure table.
       $data['draggableviews_structure']['table']['join'][$base_table] = array(
-        'handler' => 'draggableviews_join_handler',
+        'join_id' => 'draggableviews_with_args',
         // Because this is a direct link it could be left out.
         'left_table' => $base_table,
         'left_field' => $entity_keys['id'],
         'field' => 'entity_id',
         'extra' => array(
-          array('field' => 'args', 'value' => '***LANGUAGE***'),
-          array('field' => 'view_name', 'value' => '***VIEW_ID***'),
+          array('field' => 'view_name', 'value' => '***VIEW_ID***')
         ),
       );
     }
@@ -174,10 +173,29 @@ function draggableviews_views_submit(&$form, \Drupal\Core\Form\FormStateInterfac
   $view = $form_state->getBuildInfo()['args'][0];
   $view_name = $view->id();
   $view_display = $view->current_display;
+  $language = \Drupal::languageManager()->getCurrentLanguage(LanguageInterface::TYPE_CONTENT)->getId();
+  $view_args = [];
+  // check if there are view args
+  if (!empty($view->args)) {
+      $view_args = $view->args;
+  }
+  // get the expose filters
+  $exposedInput = $view->getExposedInput();
+  // unset format for rest views
+  unset($exposedInput['_format']);
+  if (!empty($exposedInput)) {
+      $view_args += $exposedInput;
+      $view_args['language'] = $language;
+  }
+
+  if (!empty($view_args)) {
+      $view_args = json_encode($view_args);
+  } else {
+      $view_args = $language;
+  }
 
   $weight = 0;
 
-  $language = \Drupal::languageManager()->getCurrentLanguage(LanguageInterface::TYPE_CONTENT)->getId();
   $connection = \Drupal\Core\Database\Database::getConnection();
 
   $transaction = $connection->startTransaction();
@@ -187,7 +205,7 @@ function draggableviews_views_submit(&$form, \Drupal\Core\Form\FormStateInterfac
       $connection->delete('draggableviews_structure')
         ->condition('view_name', $view_name)
         ->condition('view_display', $view_display)
-        ->condition('args', $language)
+        ->condition('args', $view_args)
         ->condition('entity_id', $item['id'])
         ->execute();
 
@@ -195,7 +213,7 @@ function draggableviews_views_submit(&$form, \Drupal\Core\Form\FormStateInterfac
       $record = [
         'view_name' => $view_name,
         'view_display' => $view_display,
-        'args' => $language,
+        'args' => $view_args,
         'entity_id' => $item['id'],
         'weight' => $weight,
       ];

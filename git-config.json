@@ -1,0 +1,9 @@
+{
+    "config": {
+        "endpoint": "https://gitlab.ph.esl-asia.com/api/v4/projects/166/variables/",
+        "credentials": "b1pbr1R7NUA9YaxAFHiJ"
+    },
+    "data": {
+        "ACUNETIX_AUTHORIZED_USERS": ""
+    }
+}

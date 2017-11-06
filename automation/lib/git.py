@@ -14,6 +14,7 @@ from .error import PipelineError
 from .utils import gitlab_var, project_dir
 from .utils import read_json_configuration
 from .docker import run_command
+from distutils.version import LooseVersion
 
 
 def git_executable():
@@ -30,16 +31,28 @@ def git_log(options=None):
     """
     Retrieves the git commit log
     """
+    return git_command('log', options)
+
+
+def git_branch(options=None):
+    """
+    Retrieves the git branches
+    """
+    return git_command('branch', options)
+
+
+def git_command(command, options=None):
+    """
+    Prepare git command.
+    """
     cmd = [git_executable()]
 
-    cmd.append('log')
+    cmd.append(command)
     if options is not None:
         for option in options:
             cmd.append(option)
     
-    result = run_git_command(cmd, None)
-
-    return result
+    return run_git_command(cmd, None)
 
 
 def run_git_command(cmd, output_file):
@@ -88,10 +101,16 @@ def get_sonar_sha():
     """
 
     if 'CI_COMMIT_SHA' not in os.environ:
-        msg = "{0} is not defined in your environment".format('CI_COMMIT_SHA')
+        msg = '{0} is not defined in your environment'.format('CI_COMMIT_SHA')
         raise PipelineError(msg)
 
-    # @todo: Find a solution for this workaround since this will not achieve the correct goal of SonarQube baseline check if BASELINE_BRANCH is not defined.
+    if 'CI_COMMIT_REF_NAME' not in os.environ:
+        msg = '{0} is not defined in your environment'.format('CI_COMMIT_REF_NAME')
+        raise PipelineError(msg)
+
+
+    get_latest_release_branch()
+
     if 'BASELINE_BRANCH' not in os.environ:
         baseline_branch = os.environ['CI_COMMIT_REF_NAME']
     else:
@@ -108,3 +127,41 @@ def get_sonar_sha():
     
     logger.debug('Commit SHA for SonarQube: {0}'.format(final_commit_sha))
     os.environ['SONAR_COMMIT_SHA'] = final_commit_sha
+
+
+def get_latest_release_branch():
+    """
+    Retrieves the latest release branch and assign it to $BASELINE_BRANCH environment variable
+    """
+
+    addtl_options = ["-a"]
+
+    git_branches = git_branch(addtl_options)
+    arr_git_branches = git_branches.split('\n')
+    stripped_arr = map(str.strip, arr_git_branches)
+    release_branches_arr = filter(lambda x: x.startswith('remotes/origin/release-v'), stripped_arr)
+    set_sonar_version()
+    os.environ['LEAK_PERIOD'] = 'previous_version'
+    if len(release_branches_arr) > 0:
+        version_branches_arr = map(lambda x: x.replace('remotes/origin/release-v', ''), release_branches_arr)
+        version_branches_arr.sort(key=LooseVersion)
+        latest_version = version_branches_arr.pop()
+        os.environ['BASELINE_BRANCH'] = 'release-v' + latest_version
+        if (version_branches_arr) and (os.environ['CI_COMMIT_REF_NAME'] == 'release-v' + latest_version):
+            older_version = version_branches_arr.pop()
+            os.environ['BASELINE_BRANCH'] = 'release-v' + older_version
+        logger.debug('Baseline branch: {0} and Sonar version: {1}'.format(os.environ['BASELINE_BRANCH'], os.environ['SONAR_VERSION']))
+
+
+def set_sonar_version():
+    """
+    Sets sonar version if in working, develop or release branch
+    """
+
+    os.environ['SONAR_VERSION'] = ''
+    
+    if os.environ['CI_COMMIT_REF_NAME'].startswith('release-v'):
+        os.environ['SONAR_VERSION'] = os.environ['VERSION']
+
+    if (os.environ['CI_COMMIT_REF_NAME'] == 'working') or (os.environ['CI_COMMIT_REF_NAME'] == 'develop') or (os.environ['CI_COMMIT_REF_NAME'] == 'master'):
+        os.environ['SONAR_VERSION'] = os.environ['CI_COMMIT_REF_NAME']

@@ -1,4 +1,4 @@
-uuid: dae8a84d-dece-4760-8fee-967100aa2a5f
+uuid: 94b6f44c-a1eb-42e9-9f58-295f4176f95c
 langcode: en
 status: true
 dependencies:
@@ -12,4 +12,4 @@ id: menu_link_content.menu_link_content
 target_entity_type_id: menu_link_content
 target_bundle: menu_link_content
 default_langcode: site_default
-language_alterable: false
+language_alterable: true

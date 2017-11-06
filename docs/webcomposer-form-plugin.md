@@ -3,6 +3,8 @@
 A Webcomposer Form Plugin allows you to define a configurable form, that can be exposed
 as data.
 
+> Make sure that the Webcomposer Form Manager Rest Resource has permissions for Anonymous users
+
 It has the following functionality:
 * Defining form
 * Defining fields per form
@@ -69,19 +71,19 @@ Form settings are just associative array of form API elements
  * @{inheritdoc}
  */
 public function getSettings() {
-    return [
-      'show' => [
-        '#title' => 'Show this form',
-        '#type' => 'checkbox',
-        '#default_value' => true
-      ],
-      'alias' => [
-        '#title' => 'Form alias',
-        '#type' => 'textfield',
-        '#description' => 'The alias for this form',
-      ],
-    ];
-  }
+  return [
+    'show' => [
+      '#title' => 'Show this form',
+      '#type' => 'checkbox',
+      '#default_value' => true
+    ],
+    'alias' => [
+      '#title' => 'Form alias',
+      '#type' => 'textfield',
+      '#description' => 'The alias for this form',
+    ],
+  ];
+}
 ```
 
 > If you do not have form settings, just return an empty array.
@@ -103,43 +105,45 @@ is an associative array (the array `key` serves as the field ID) that has the fo
  */
 public function getFields() {
   return [
-    'username' => [
-      'name' => 'Username',
+    'firstname' => [
+      'name' => 'First name',
       'type' => 'textfield',
-      'options' => [
-        'default_value' => 'Leandrew',
-      ],
       'settings' => [
-        'alias' => [
-          '#title' => 'Username alias',
+        'label' => [
+          '#title' => 'Label',
           '#type' => 'textfield',
-          '#description' => 'The alias for this username',
+          '#description' => 'Label for this field',
+          '#default_value' => 'Leandrew',
         ],
       ],
     ],
 
-    'password' => [
-      'name' => 'Password',
-      'type' => 'textfield',
-    ],
-
-    'email' => [
-      'name' => 'Email',
-      'type' => 'textfield',
-    ],
-
-    'comments' => [
-      'name' => 'Comment',
+    'lastname' => [
+      'name' => 'Last name',
       'type' => 'textfield',
       'settings' => [
-        'name' => [
-          '#title' => 'Default name',
+        'label' => [
+          '#title' => 'Label',
           '#type' => 'textfield',
-          '#description' => 'The default name for the comment',
+          '#description' => 'Label for this field',
+          '#default_value' => 'ViCarpio',
         ],
       ],
     ],
-  ];
+
+    'submit' => [
+      'name' => 'Submit',
+      'type' => 'submit',
+      'settings' => [
+        'label' => [
+          '#title' => 'Submit Label',
+          '#type' => 'textfield',
+          '#description' => 'Label for the submit button',
+          '#default_value' => 'Submit',
+        ],
+      ],
+    ],
+  ],
 }
 ```
 ## Result
@@ -153,7 +157,7 @@ use Drupal\webcomposer_form_manager\WebcomposerFormBase;
 use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
 
 /**
- * RegistrationForm
+ * LoginForm
  *
  * @WebcomposerForm(
  *   id = "login",
@@ -184,46 +188,46 @@ class LoginForm extends WebcomposerFormBase implements WebcomposerFormInterface 
    */
   public function getFields() {
     return [
-      'username' => [
-        'name' => 'Username',
+      'firstname' => [
+        'name' => 'First name',
         'type' => 'textfield',
-        'options' => [
-          'default_value' => 'Leandrew',
-        ],
         'settings' => [
-          'alias' => [
-            '#title' => 'Username alias',
+          'label' => [
+            '#title' => 'Label',
             '#type' => 'textfield',
-            '#description' => 'The alias for this username',
+            '#description' => 'Label for this field',
+            '#default_value' => 'Leandrew',
           ],
         ],
       ],
 
-      'password' => [
-        'name' => 'Password',
-        'type' => 'textfield',
-      ],
-
-      'email' => [
-        'name' => 'Email',
-        'type' => 'textfield',
-      ],
-
-      'comments' => [
-        'name' => 'Comment',
+      'lastname' => [
+        'name' => 'Last name',
         'type' => 'textfield',
         'settings' => [
-          'name' => [
-            '#title' => 'Default name',
+          'label' => [
+            '#title' => 'Label',
             '#type' => 'textfield',
-            '#description' => 'The default name for the comment',
+            '#description' => 'Label for this field',
+            '#default_value' => 'ViCarpio',
           ],
         ],
       ],
-    ];
+
+      'submit' => [
+        'name' => 'Submit',
+        'type' => 'submit',
+        'settings' => [
+          'label' => [
+            '#title' => 'Submit Label',
+            '#type' => 'textfield',
+            '#description' => 'Label for the submit button',
+            '#default_value' => 'Submit',
+          ],
+        ],
+      ],
   }
 }
-
 ```
 
 ## Best practices
@@ -252,3 +256,8 @@ function my_module_uninstall() {
     }
 }
 ```
+
+# Live Module Example
+
+You can refer to this module for a
+[live working example](../web/modules/custom/webcomposer_form_manager/webcomposer_form_sample)

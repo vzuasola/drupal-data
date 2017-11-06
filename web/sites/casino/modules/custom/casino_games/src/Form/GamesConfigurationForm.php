@@ -32,46 +32,64 @@ class GamesConfigurationForm extends ConfigFormBase {
       '#title' => t('Settings'),
     );
 
-    $form['thumbnail_group'] = array(
+    $form['header_group'] = array(
       '#type' => 'details',
-      '#title' => $this->t('Thumbnail'),
+      '#title' => $this->t('Game Page Header Icons'),
       '#collapsible' => TRUE,
-      '#group' => 'games_configuration_tab',
+      '#group' => 'games_configuration_tab'
     );
 
-    $form['thumbnail_group']['disable_jackpot_ticker'] = array(
+    $form['header_group']['game_promotion'] = array(
+      '#type' => 'fieldset',
+      '#title' => $this->t('Promotion Icon'),
+    );
+
+    $form['header_group']['game_promotion']['game_promotion_link'] = array(
+      '#type' => 'textfield',
+      '#title' => $this->t('Promotions Link'),
+      '#description' => $this->t('Add redirection to Centralized Promotions page'),
+      '#default_value' => $config->get('game_promotion_link'),
+      '#required' => TRUE,
+      '#prefix' => '<p>Configure the promotion icon link and target window.</p>',
+    );
+
+    $form['header_group']['game_promotion']['game_promotion_link_target'] = array(
+      '#type' => 'select',
+      '#options' => [
+          '_blank' => 'New Tab',
+          '_self' => 'Same Window',
+          'window' => 'New Window'
+      ],
+      '#title' => $this->t('Promotions Link Target'),
+      '#description' => $this->t('Select Target for the promotions link'),
+      '#default_value' => $config->get('game_promotion_link_target'),
+      '#required' => TRUE,
+    );
+
+    $form['header_group']['game_real_play'] = array(
+      '#type' => 'fieldset',
+      '#title' => $this->t('Real Play Button'),
+    );
+
+    $form['header_group']['game_real_play']['game_real_play_text'] = array(
+      '#type' => 'textfield',
+      '#title' => $this->t('Real Play Button Label'),
+      '#description' => $this->t('The text to display on real play button.'),
+      '#default_value' => $config->get('game_real_play_text'),
+      '#required' => TRUE,
+    );
+
+    $form['header_group']['game_real_play']['game_real_play_disabled'] = array(
       '#type' => 'checkbox',
-      '#title' => t('Disable Game Thumbnail Jackpot Ticker'),
-      '#default_value' => $config->get('disable_jackpot_ticker')
-    );
-
-    $form['thumbnail_group']['play_text'] = array(
-      '#type' => 'textfield',
-      '#title' => $this->t('Play Now Button Text'),
-      '#description' => $this->t('The text to display on play button.'),
-      '#default_value' => $config->get('play_text'),
-      '#required' => TRUE,
-    );
-
-    $form['thumbnail_group']['play_for_fun_text'] = array(
-      '#type' => 'textfield',
-      '#title' => $this->t('Play For Fun Link Text'),
-      '#description' => $this->t('The text to display on play for fun link.'),
-      '#default_value' => $config->get('play_for_fun_text'),
-      '#required' => TRUE,
-    );
-
-    $form['thumbnail_group']['game_info_text'] = array(
-      '#type' => 'textfield',
-      '#title' => $this->t('Game Info Link Text'),
-      '#description' => $this->t('The text to display on game info link.'),
-      '#default_value' => $config->get('game_info_text'),
-      '#required' => TRUE,
+      '#title' => $this->t('Disable Real Play Button'),
+      '#description' => $this->t('If checked the real play button on pre-login state will not be displayed.'),
+      '#default_value' => $config->get('game_real_play_disabled'),
+      '#required' => FALSE,
     );
 
     $form['category_group'] = array(
       '#type' => 'details',
-      '#title' => $this->t('Category'),
+      '#title' => $this->t('Games Category Settings'),
       '#collapsible' => TRUE,
       '#group' => 'games_configuration_tab',
     );
@@ -100,28 +118,47 @@ class GamesConfigurationForm extends ConfigFormBase {
       '#required' => FALSE,
     );
 
-    $form['header_group'] = array(
+    $form['thumbnail_group'] = array(
       '#type' => 'details',
-      '#title' => $this->t('Header Section'),
+      '#title' => $this->t('Game Thumbnail Settings'),
       '#collapsible' => TRUE,
-      '#group' => 'games_configuration_tab'
+      '#group' => 'games_configuration_tab',
     );
 
-    $form['header_group']['disable_language_selector'] = array(
+    $form['thumbnail_group']['disable_jackpot_ticker'] = array(
       '#type' => 'checkbox',
-      '#title' => t('Disable Language Selector'),
-      '#default_value' => $config->get('disable_language_selector')
+      '#title' => $this->t('Disable Game Thumbnail Jackpot Ticker'),
+      '#default_value' => $config->get('disable_jackpot_ticker'),
+      '#description' => $this->t('If checked all jackpot ticker on game thumbnails will not be displayed.')
     );
 
-    $form['header_group']['disable_announcement_icon'] = array(
-      '#type' => 'checkbox',
-      '#title' => t('Disable Announcement Icon'),
-      '#default_value' => $config->get('disable_announcement_icon')
+    $form['thumbnail_group']['play_text'] = array(
+      '#type' => 'textfield',
+      '#title' => $this->t('Play Now Button Text'),
+      '#description' => $this->t('The text to display on play button.'),
+      '#default_value' => $config->get('play_text'),
+      '#required' => TRUE,
+    );
+
+    $form['thumbnail_group']['play_for_fun_text'] = array(
+      '#type' => 'textfield',
+      '#title' => $this->t('Play For Fun Link Text'),
+      '#description' => $this->t('The text to display on play for fun link.'),
+      '#default_value' => $config->get('play_for_fun_text'),
+      '#required' => TRUE,
+    );
+
+    $form['thumbnail_group']['game_info_text'] = array(
+      '#type' => 'textfield',
+      '#title' => $this->t('Game Info Link Text'),
+      '#description' => $this->t('The text to display on game info link.'),
+      '#default_value' => $config->get('game_info_text'),
+      '#required' => TRUE,
     );
 
     $form['lightbox_group'] = array(
       '#type' => 'details',
-      '#title' => $this->t('Lightbox'),
+      '#title' => $this->t('Game Page Lightbox'),
       '#collapsible' => TRUE,
       '#group' => 'games_configuration_tab'
     );
@@ -130,7 +167,8 @@ class GamesConfigurationForm extends ConfigFormBase {
     $form['lightbox_group']['freeplay'] = array(
         '#type' => 'details',
         '#title' => $freePlayLightboxGroupTitle,
-        '#open' => TRUE
+        '#open' => TRUE,
+        '#description' => 'This lightbox will appear when a player access free play mode on post-login state.'
     );
 
     $form['lightbox_group']['freeplay']['freeplay_lightbox_title'] = array(
@@ -155,7 +193,9 @@ class GamesConfigurationForm extends ConfigFormBase {
     $form['lightbox_group']['html5'] = array(
         '#type' => 'details',
         '#title' => $html5LightboxGroupTitle,
-        '#open' => TRUE
+        '#open' => TRUE,
+        '#description' => '<p>This lightbox will appear if player access an html5 game '
+                        . 'on a browser that do not support html5.</p>'
     );
 
     $form['lightbox_group']['html5']['html5_lightbox_title'] = array(
@@ -176,32 +216,6 @@ class GamesConfigurationForm extends ConfigFormBase {
       '#required' => TRUE,
     );
 
-    $form['game_promotion'] = array(
-      '#type' => 'details',
-      '#title' => $this->t('Promotions'),
-      '#collapsible' => TRUE,
-      '#group' => 'games_configuration_tab',
-    );
-
-    $form['game_promotion']['game_promotion_link'] = array(
-      '#type' => 'textfield',
-      '#title' => $this->t('Promotions Link'),
-      '#description' => $this->t('Add redirection to Centralized Promotions page'),
-      '#default_value' => $config->get('game_promotion_link'),
-      '#required' => TRUE,
-    );
-    $form['game_promotion']['game_promotion_link_target'] = array(
-      '#type' => 'select',
-      '#options' => [
-          '_blank' => 'New Tab',
-          '_self' => 'Same Window',
-          'window' => 'New Window'
-      ],
-      '#title' => $this->t('Promotions Link Target'),
-      '#description' => $this->t('Select Target for the promotions link'),
-      '#default_value' => $config->get('game_promotion_link_target'),
-      '#required' => TRUE,
-    );
     return parent::buildForm($form, $form_state);
   }
 
@@ -222,11 +236,11 @@ class GamesConfigurationForm extends ConfigFormBase {
       'freeplay_lightbox_content',
       'html5_lightbox_title',
       'html5_lightbox_content',
-      'disable_language_selector',
-      'disable_announcement_icon',
       'disable_jackpot_ticker',
       'game_promotion_link',
-      'game_promotion_link_target'
+      'game_promotion_link_target',
+      'game_real_play_text',
+      'game_real_play_disabled',
     );
 
     foreach ($keys as $key) {

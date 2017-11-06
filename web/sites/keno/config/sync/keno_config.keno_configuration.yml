@@ -1,8 +1,8 @@
 trust_element_title: 'Play KENO like never before'
 trust_element_content:
-  value: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent et ultricies augue. Vestibulum tristique, nunc.</p>\r\n"
+  value: "<p>There are lots of ways to win and play. With over 9 regions and 7 bet types each with their own payout calculations and rates to choose from, you can get the chance to make big winnings every 2 minutes!</p>\r\n"
   format: basic_html
-lobby_tiles_alignment: left
+lobby_tiles_alignment: center
 keno_background:
-  - '1483'
-keno_background_image_url: 'http://keno.drupal.local/sites/keno/files/bg.jpg'
+  - '1690'
+keno_background_image_url: 'http://prd-keno.elysium-dfbt.com/sites/keno/files/bg_1.jpg'

@@ -1,11 +1,11 @@
 autologout_box_content:
+  value: "<p>세션이 {seconds} 안에 만료됩니다. 세션을 계속 하시겠습니까?</p>\r\n"
   format: basic_html
-  value: "<p>세션이 {seconds} 안에 만료됩니다. 세션을 계속 하시겠습니까?\r\n</p>\r\n"
 notification_content:
+  value: "<p>활동이 없어 세션 시간이 초과되었습니다.</p>\r\n"
   format: basic_html
-  value: "<p>활동이 없어 세션 시간이 초과되었습니다.\r\n</p>\r\n"
 lightbox_blurb: '아직 다파벳 멤버가 아니시라구요?'
-username_placeholder: Username
+username_placeholder: 아이디
 password_placeholder: 비밀번호
 login_bottom_label: 로그인
 error_message_blank_username: '아이디는 필수 항목입니다.'
