@@ -32,7 +32,7 @@ class SitemapConfiguration extends ConfigFormBase {
 
     $form['enable_sitemap'] = [
       '#type' => 'checkbox',
-      '#title' => $this->t('Enable /  Disable of Sitemap'),
+      '#title' => $this->t('Enable Sitemap'),
       '#default_value' => $config->get('enable_sitemap'),
     ];
 
@@ -50,49 +50,123 @@ class SitemapConfiguration extends ConfigFormBase {
       '#format' => $data['format'],
     ];
 
-    $form['sitemap_home_label'] = [
+    $form['dynamic_links'] = [
+      '#type' => 'details',
+      '#title' => 'Custom Links',
+      '#open' => true,
+    ];
+
+    $form['dynamic_links']['sitemap_links'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Sitemap Links'),
+      '#default_value' => $config->get('sitemap_links'),
+      '#description' => "Provide a pipe separated key value pair of links. Slash can be ommited
+        for relative paths
+        <br>
+        <br>
+        Example:
+        <br>
+        <strong>Home|/</strong>
+        <br>
+        <strong>Promotions|promotions</strong>
+        <br>
+        <strong>Promo|promotions/promo</strong>
+      ",
+    ];
+
+    $form['static_links'] = [
+      '#type' => 'details',
+      '#title' => 'Deprecated Links',
+    ];
+
+    $form['static_links']['sitemap_home_label'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Home Title'),
       '#default_value' => $config->get('sitemap_home_label'),
     ];
 
-    $form['sitemap_home_link'] = [
+    $form['static_links']['sitemap_home_link'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Home Link'),
       '#default_value' => $config->get('sitemap_home_link'),
     ];
 
-    $form['sitemap_promotions_label'] = [
+    $form['static_links']['sitemap_promotions_label'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Promotions Label'),
       '#default_value' => $config->get('sitemap_promotions_label'),
     ];
 
-    $form['sitemap_promotions_link'] = [
+    $form['static_links']['sitemap_promotions_link'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Promotions Link'),
       '#default_value' => $config->get('sitemap_promotions_link'),
     ];
 
-    $form['sitemap_mobile_label'] = [
+    $form['static_links']['sitemap_mobile_label'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Mobile Label'),
       '#default_value' => $config->get('sitemap_mobile_label'),
     ];
 
-    $form['sitemap_mobile_link'] = [
+    $form['static_links']['sitemap_mobile_link'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Mobile Link'),
       '#default_value' => $config->get('sitemap_mobile_link'),
     ];
 
-    $form['sitemap_basic_pages_label'] = [
+    $form['static_links']['sitemap_basic_pages_label'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Basic Page Label'),
       '#default_value' => $config->get('sitemap_basic_pages_label'),
     ];
 
+    $this->generateContentTypeForm($form, $form_state);
+
     return parent::buildForm($form, $form_state);
+  }
+
+  /**
+   *
+   */
+  private function generateContentTypeForm(array &$form, FormStateInterface $form_state) {
+    $config = $this->config('webcomposer_config.sitemap_configuration')->get('content_types');
+
+    $form['content_types_wrapper'] = [
+      '#type' => 'vertical_tabs',
+      '#title' => 'Configure content types to show on site map',
+      '#tree' => TRUE,
+    ];
+
+    $contentTypes = \Drupal::service('entity.manager')->getStorage('node_type')->loadMultiple();
+
+    foreach ($contentTypes as $contentType) {
+      $key = $contentType->id();
+      $label = $contentType->label();
+
+      $form["content_types_$key"] = [
+        '#type' => 'details',
+        '#title' => $contentType->label(),
+        '#group' => 'content_types_wrapper',
+        '#tree' => TRUE,
+      ];
+
+      $form["content_types_$key"]['enable'] = [
+        '#type' => 'checkbox',
+        '#title' => "Enable",
+        '#description' => 'If enabled, the content type will show up on the sitemap page',
+        '#parents' => ['content_types', $key, 'enable'],
+        '#default_value' => isset($config[$key]['enable']) ? $config[$key]['enable'] : NULL,
+      ];
+
+      $form["content_types_$key"]['label'] = [
+        '#type' => 'textfield',
+        '#title' => "Label for $label",
+        '#description' => 'The label of the parent tree for this content type',
+        '#parents' => ['content_types', $key, 'label'],
+        '#default_value' => isset($config[$key]['label']) ? $config[$key]['label'] : NULL,
+      ];
+    }
   }
 
   /**
@@ -110,10 +184,16 @@ class SitemapConfiguration extends ConfigFormBase {
       'sitemap_mobile_label',
       'sitemap_mobile_link',
       'sitemap_basic_pages_label',
+      'sitemap_links',
     ];
+
     foreach ($sitemapConfig as $keys) {
         $this->config('webcomposer_config.sitemap_configuration')->set($keys, $form_state->getValue($keys))->save();
     }
+
+    // save content type values
+    $this->config('webcomposer_config.sitemap_configuration')->set('content_types', $form_state->getValue('content_types'))->save();
+
     parent::submitForm($form, $form_state);
   }
 }
