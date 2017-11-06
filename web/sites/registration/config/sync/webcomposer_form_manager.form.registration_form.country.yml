@@ -1,7 +1,7 @@
 field_settings:
   label: ''
-  attr:
-    placeholder: ''
+  placeholder: 'Select your country...'
+  choices: "ch|China\r\nus|United States"
 field_validations:
   required:
     enable: 0
