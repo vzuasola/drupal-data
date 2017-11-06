@@ -94,6 +94,10 @@ $sites['dev-cms-casino.elysium-dfbt.com'] = 'casino-gold';
 $sites['dev-csngold.elysium-dfbt.com'] = 'casino-gold';
 $sites['dev-cms-csngold.elysium-dfbt.com'] = 'casino-gold';
 
+// Virtuals instance
+$sites['virtuals.drupal.local'] = 'virtuals';
+$sites['virtuals.drupal.dev'] = 'virtuals';
+
 // Owsports Site Instances
 $sites['ow-sports.drupal.local'] = 'ow-sports';
 $sites['ow-sports.drupal.dev'] = 'ow-sports';
