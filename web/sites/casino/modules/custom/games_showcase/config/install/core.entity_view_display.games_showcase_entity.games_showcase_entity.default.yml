@@ -1,0 +1,86 @@
+uuid: c8e070dc-908c-42dd-8e65-3bf85375f671
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.games_showcase_entity.games_showcase_entity.field_games_category
+    - field.field.games_showcase_entity.games_showcase_entity.field_log_in_state
+    - field.field.games_showcase_entity.games_showcase_entity.field_showcase_body
+    - field.field.games_showcase_entity.games_showcase_entity.field_showcase_image
+    - field.field.games_showcase_entity.games_showcase_entity.field_showcase_ribbon
+    - field.field.games_showcase_entity.games_showcase_entity.field_title
+  module:
+    - games_showcase
+    - image
+    - options
+    - text
+    - user
+id: games_showcase_entity.games_showcase_entity.default
+targetEntityType: games_showcase_entity
+bundle: games_showcase_entity
+mode: default
+content:
+  field_games_category:
+    weight: 7
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_log_in_state:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_showcase_body:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_showcase_image:
+    weight: 1
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_showcase_ribbon:
+    weight: 6
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_title:
+    weight: 5
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  name:
+    label: above
+    type: string
+    weight: -4
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  user_id:
+    label: hidden
+    type: author
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true
