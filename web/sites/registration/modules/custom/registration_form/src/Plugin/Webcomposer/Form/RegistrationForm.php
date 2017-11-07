@@ -193,6 +193,11 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
               '#type' => 'textfield',
               '#description' => 'label for Birthdate field placeholder',
             ],
+            'date-format' => [
+              '#title' => 'Birthdate format',
+              '#type' => 'textfield',
+              '#description' => 'Date Format for Birthdate',
+            ],
           ],
         ],
       ],
