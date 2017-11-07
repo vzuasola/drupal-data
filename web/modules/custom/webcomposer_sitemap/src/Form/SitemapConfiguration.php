@@ -9,7 +9,6 @@ use Drupal\Core\Form\FormStateInterface;
  * Configuration Form for Sitemap Configuration.
  */
 class SitemapConfiguration extends ConfigFormBase {
-
   /**
    * {@inheritdoc}
    */
