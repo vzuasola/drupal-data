@@ -1,0 +1,20 @@
+uuid: fa4331b1-8bc9-4101-9028-e490d36f5b56
+langcode: en
+status: true
+dependencies:
+  module:
+    - games_showcase
+id: games_showcase_entity.games_showcase_entity.user_id
+field_name: user_id
+entity_type: games_showcase_entity
+bundle: games_showcase_entity
+label: 'Authored by'
+description: 'The user ID of author of the Games Showcase entity entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference
