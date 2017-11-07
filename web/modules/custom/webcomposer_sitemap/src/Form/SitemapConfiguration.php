@@ -149,15 +149,15 @@ class SitemapConfiguration extends ConfigFormBase {
       '#tree' => TRUE,
     ];
 
-    $contentTypes = \Drupal::service('entity.manager')->getStorage('node_type')->loadMultiple();
+    $content_types = \Drupal::service('entity.manager')->getStorage('node_type')->loadMultiple();
 
-    foreach ($contentTypes as $contentType) {
-      $key = $contentType->id();
-      $label = $contentType->label();
+    foreach ($content_types as $content_type) {
+      $key = $content_type->id();
+      $label = $content_type->label();
 
       $form["content_types_$key"] = [
         '#type' => 'details',
-        '#title' => $contentType->label(),
+        '#title' => $content_type->label(),
         '#group' => 'content_types_wrapper',
         '#tree' => TRUE,
       ];
