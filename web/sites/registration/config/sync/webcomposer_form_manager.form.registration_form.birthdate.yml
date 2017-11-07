@@ -1,7 +1,5 @@
 field_settings:
   label: ''
-  attr:
-    placeholder: ''
 field_validations:
   required:
     enable: 0

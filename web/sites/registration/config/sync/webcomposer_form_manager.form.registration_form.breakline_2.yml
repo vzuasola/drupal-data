@@ -1,7 +1,5 @@
 field_settings:
-  label: ''
-  attr:
-    placeholder: ''
+  markup: '<hr>'
 field_validations:
   required:
     enable: 0
