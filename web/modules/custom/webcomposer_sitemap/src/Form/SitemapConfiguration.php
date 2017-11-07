@@ -34,6 +34,7 @@ class SitemapConfiguration extends ConfigFormBase {
       '#type' => 'checkbox',
       '#title' => $this->t('Enable Sitemap'),
       '#default_value' => $config->get('enable_sitemap'),
+      '#description' => 'When checked, sitemap page will be accessible',
     ];
 
     $form['sitemap_title'] = [
@@ -50,6 +51,9 @@ class SitemapConfiguration extends ConfigFormBase {
       '#format' => $data['format'],
     ];
 
+    // form elements for the deprecated static links, to be removed
+    $this->generateStaticLinks($form, $form_state);
+
     $form['dynamic_links'] = [
       '#type' => 'details',
       '#title' => 'Custom Links',
@@ -62,8 +66,7 @@ class SitemapConfiguration extends ConfigFormBase {
       '#default_value' => $config->get('sitemap_links'),
       '#description' => "Provide a pipe separated key value pair of links. Slash can be ommited
         for relative paths
-        <br>
-        <br>
+        <br><br>
         Example:
         <br>
         <strong>Home|/</strong>
@@ -74,9 +77,22 @@ class SitemapConfiguration extends ConfigFormBase {
       ",
     ];
 
+    $this->generateContentTypeForm($form, $form_state);
+
+    return parent::buildForm($form, $form_state);
+  }
+
+  /**
+   *
+   */
+  private function generateStaticLinks(array &$form, FormStateInterface $form_state) {
+    $config = $this->config('webcomposer_config.sitemap_configuration');
+
     $form['static_links'] = [
       '#type' => 'details',
       '#title' => 'Deprecated Links',
+      '#description' => 'Links used for the old sitemap implementation. On newer products,
+        this are not used anymore.',
     ];
 
     $form['static_links']['sitemap_home_label'] = [
@@ -120,10 +136,6 @@ class SitemapConfiguration extends ConfigFormBase {
       '#title' => $this->t('Basic Page Label'),
       '#default_value' => $config->get('sitemap_basic_pages_label'),
     ];
-
-    $this->generateContentTypeForm($form, $form_state);
-
-    return parent::buildForm($form, $form_state);
   }
 
   /**
@@ -164,7 +176,7 @@ class SitemapConfiguration extends ConfigFormBase {
         '#title' => "Label for $label",
         '#description' => 'The label of the parent tree for this content type',
         '#parents' => ['content_types', $key, 'label'],
-        '#default_value' => isset($config[$key]['label']) ? $config[$key]['label'] : NULL,
+        '#default_value' => isset($config[$key]['label']) ? $config[$key]['label'] : $label,
       ];
     }
   }
