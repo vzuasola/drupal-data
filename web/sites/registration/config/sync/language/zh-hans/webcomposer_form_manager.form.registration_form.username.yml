@@ -1,7 +1,6 @@
 field_settings:
   label: ' 用户名'
-  attr:
-    placeholder: ' 用户名'
+  placeholder: Username
 field_validations:
   required:
     error_message: 'Field should be required'

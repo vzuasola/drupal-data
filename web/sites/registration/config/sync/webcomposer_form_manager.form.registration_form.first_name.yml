@@ -1,7 +1,6 @@
 field_settings:
   label: 'First Name'
-  attr:
-    placeholder: 'First Name'
+  placeholder: 'First Name'
 field_validations:
   required:
     enable: 1

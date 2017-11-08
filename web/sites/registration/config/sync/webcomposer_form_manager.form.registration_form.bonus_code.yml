@@ -1,7 +1,6 @@
 field_settings:
   label: 'Bonus Code'
-  attr:
-    placeholder: 'Bonus Code'
+  placeholder: 'Bonus Code'
 field_validations:
   required:
     enable: 0

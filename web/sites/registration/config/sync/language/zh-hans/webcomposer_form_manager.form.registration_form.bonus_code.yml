@@ -1,4 +1,2 @@
 field_settings:
   label: 奖金代码
-  attr:
-    placeholder: 'Bonus Code'
