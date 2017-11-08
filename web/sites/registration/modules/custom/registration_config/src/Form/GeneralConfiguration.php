@@ -58,6 +58,36 @@ class GeneralConfiguration extends ConfigFormBase {
       '#required' => TRUE,
     ];
 
+    $form['integration'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Integration'),
+      '#collapsible' => TRUE,
+      '#group' => 'general_settings_tab',
+    ];
+
+    $form['integration']['registraton_api_url'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Registration API URL'),
+      '#description' => $this->t('Endpoint for registration API'),
+      '#default_value' => $config->get('registraton_api_url'),
+      '#required' => TRUE,
+    ];
+
+    $form['integration']['registraton_portal_id_to_product_name'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Registration Portal ID mapping to product name'),
+      '#description' => $this->t('Mapping that will be used for portal ID to Product Name e.g. 2|dafabet-entry'),
+      '#default_value' => $config->get('registraton_api_url'),
+      '#required' => TRUE,
+    ];
+
+    $form['integration']['registraton_product_id_to_portal_id'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Registration Portal ID to product ID mapping'),
+      '#description' => $this->t('Mapping that will be used for Product Type ID  to portal ID mapping upon registration e.g. "1|4,11,18" where 1 is the product type ID and the 4,11,18 is the portal IDs'),
+      '#default_value' => $config->get('registraton_api_url'),
+      '#required' => TRUE,
+    ];
 
     return parent::buildForm($form, $form_state);
   }
