@@ -77,7 +77,7 @@ class GeneralConfiguration extends ConfigFormBase {
       '#type' => 'textarea',
       '#title' => $this->t('Registration Portal ID mapping to product name'),
       '#description' => $this->t('Mapping that will be used for portal ID to Product Name e.g. 2|dafabet-entry'),
-      '#default_value' => $config->get('registraton_api_url'),
+      '#default_value' => $config->get('registraton_portal_id_to_product_name'),
       '#required' => TRUE,
     ];
 
@@ -85,7 +85,7 @@ class GeneralConfiguration extends ConfigFormBase {
       '#type' => 'textarea',
       '#title' => $this->t('Registration Portal ID to product ID mapping'),
       '#description' => $this->t('Mapping that will be used for Product Type ID  to portal ID mapping upon registration e.g. "1|4,11,18" where 1 is the product type ID and the 4,11,18 is the portal IDs'),
-      '#default_value' => $config->get('registraton_api_url'),
+      '#default_value' => $config->get('registraton_product_id_to_portal_id'),
       '#required' => TRUE,
     ];
 
@@ -99,6 +99,9 @@ class GeneralConfiguration extends ConfigFormBase {
     $keys = [
       'step_one_text',
       'step_two_text',
+      'registraton_api_url',
+      'registraton_portal_id_to_product_name',
+      'registraton_product_id_to_portal_id',
     ];
 
     foreach ($keys as $key) {
