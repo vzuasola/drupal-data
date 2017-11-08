@@ -63,7 +63,9 @@ class WebComposerConfigResource extends ResourceBase {
     $plugin_definition,
     array $serializer_formats,
     LoggerInterface $logger,
-    AccountProxyInterface $current_user, $configFactory) {
+    AccountProxyInterface $current_user,
+    $configFactory
+  ) {
     parent::__construct($configuration, $plugin_id, $plugin_definition, $serializer_formats, $logger);
 
     $this->currentUser = $current_user;
