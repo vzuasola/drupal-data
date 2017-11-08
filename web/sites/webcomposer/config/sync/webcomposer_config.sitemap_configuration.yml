@@ -1,12 +1,25 @@
-enable_sitemap: 1
 sitemap_title: Sitemap
 sitemap_content:
   value: ''
   format: basic_html
 sitemap_home_label: Home
-sitemap_home_link: ''
+sitemap_home_link: /
 sitemap_promotions_label: Promotions
-sitemap_promotions_link: ''
+sitemap_promotions_link: /promotions
 sitemap_mobile_label: Mobile
-sitemap_mobile_link: ''
-sitemap_basic_pages_label: 'Basic Page'
+sitemap_mobile_link: /mobile
+sitemap_basic_pages_label: 'Basic Pages'
+enable_sitemap: 1
+_core:
+  default_config_hash: 670aKxzwZcs7v2eST8rlm21MFsNpuRzE7xwBFLrK1ys
+sitemap_links: "Home|/\r\nPromotions|promotions\r\nMobile|mobile"
+content_types:
+  article:
+    enable: 1
+    label: Article
+  blog:
+    enable: 1
+    label: Blog
+  page:
+    enable: 0
+    label: 'Basic page'
