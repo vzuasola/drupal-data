@@ -1,0 +1,4 @@
+field_settings:
+  label: ' 姓'
+  attr:
+    placeholder: 'Last Name'

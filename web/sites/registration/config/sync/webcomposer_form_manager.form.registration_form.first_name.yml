@@ -1,10 +1,10 @@
 field_settings:
-  label: ''
+  label: 'First Name'
   attr:
-    placeholder: ''
+    placeholder: 'First Name'
 field_validations:
   required:
-    enable: 0
+    enable: 1
     error_message: 'Field should be required'
   alphanumeric:
     enable: 0

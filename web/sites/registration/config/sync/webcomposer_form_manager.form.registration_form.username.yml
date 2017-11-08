@@ -1,10 +1,10 @@
 field_settings:
-  label: ''
+  label: Username
   attr:
-    placeholder: ''
+    placeholder: Username
 field_validations:
   required:
-    enable: 0
+    enable: 1
     error_message: 'Field should be required'
   alphanumeric:
     enable: 0

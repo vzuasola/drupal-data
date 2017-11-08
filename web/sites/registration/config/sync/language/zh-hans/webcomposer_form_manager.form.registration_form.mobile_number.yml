@@ -1,0 +1,4 @@
+field_settings:
+  label: 手机号码
+  attr:
+    placeholder: 'Mobile Number'

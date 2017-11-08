@@ -1,0 +1,4 @@
+field_settings:
+  label: 名字
+  attr:
+    placeholder: 'First Name'
