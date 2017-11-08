@@ -1,10 +1,10 @@
 field_settings:
-  label: ''
+  label: Currency
   placeholder: 'Select your currency...'
-  choices: "rmb|CNY (Chinese Yuan)\r\nusd|US Dollars"
+  choices: "117|RMB\r\n2|USD\r\n1|EUR\r\n3|GBP\r\n111|IDR\r\n104|KRW\r\n113|JPY\r\n102|MYR\r\n109|SGD\r\n103|THB\r\n108|TWD\r\n116|RUB\r\n105|VND\r\n112|INR\r\n114|PLN\r\n115|RON"
 field_validations:
   required:
-    enable: 0
+    enable: 1
     error_message: 'Field should be required'
   alphanumeric:
     enable: 0

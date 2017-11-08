@@ -1,8 +1,10 @@
 field_settings:
-  label: ''
+  label: 'Date of Birth'
+  placeholder: DD/MM/YYYY
+  date-format: DD/MM/YYYY
 field_validations:
   required:
-    enable: 0
+    enable: 1
     error_message: 'Field should be required'
   alphanumeric:
     enable: 0
