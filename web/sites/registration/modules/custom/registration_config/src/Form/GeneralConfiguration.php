@@ -32,7 +32,7 @@ class GeneralConfiguration extends ConfigFormBase {
 
     $form['general_settings_tab'] = [
       '#type' => 'vertical_tabs',
-      '#title' => t('Settings'),
+      '#title' => $this->t('Settings'),
     ];
 
     $form['general'] = [
@@ -45,7 +45,7 @@ class GeneralConfiguration extends ConfigFormBase {
     $form['general']['step_one_text'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Step one text'),
-      '#description' => $this->t('Text that will be displayed at the top of the form '),
+      '#description' => $this->t('Text that will be displayed at the top of the form'),
       '#default_value' => $config->get('step_one_text'),
       '#required' => TRUE,
     ];
@@ -55,6 +55,20 @@ class GeneralConfiguration extends ConfigFormBase {
       '#title' => $this->t('Step two text'),
       '#description' => $this->t('Text that will be displayed at the top of step 2 banner'),
       '#default_value' => $config->get('step_two_text'),
+      '#required' => TRUE,
+    ];
+
+    $form['general']['home_title'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Home Title'),
+      '#default_value' => $config->get('home_title'),
+      '#required' => TRUE,
+    ];
+
+    $form['general']['success_title'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Success Title'),
+      '#default_value' => $config->get('success_title'),
       '#required' => TRUE,
     ];
 
@@ -102,6 +116,8 @@ class GeneralConfiguration extends ConfigFormBase {
       'registraton_api_url',
       'registraton_portal_id_to_product_name',
       'registraton_product_id_to_portal_id',
+      'success_title',
+      'home_title',
     ];
 
     foreach ($keys as $key) {
