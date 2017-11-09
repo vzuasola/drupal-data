@@ -25,7 +25,6 @@ use Drupal\file\Entity\File;
  * ) 
  */ 
 class BlockResource extends ResourceBase { 
- 
   /** 
    * A current user instance. 
    * 
@@ -128,8 +127,7 @@ class BlockResource extends ResourceBase {
    * 
    * @return object 
    */ 
-  private function getBlockDefinition($id) 
-  { 
+  private function getBlockDefinition($id) { 
     $block = $this->entityManager->getStorage('block')->load($id); 
  
     if ($block) { 
