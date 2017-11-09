@@ -47,12 +47,15 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
             '#type' => 'textfield',
             '#description' => 'label for Username field',
           ],
-          'attr' => [
-            'placeholder' => [
-              '#title' => 'Username placeholder label',
-              '#type' => 'textfield',
-              '#description' => 'label for Username field placeholder',
-            ],
+          'placeholder' => [
+            '#title' => 'Username placeholder label',
+            '#type' => 'textfield',
+            '#description' => 'label for Username field placeholder',
+          ],
+          'annotation' => [
+            '#title' => 'Username Annotation text',
+            '#type' => 'textarea',
+            '#description' => 'field annotation that will be displayed on focus',
           ],
         ],
       ],
@@ -72,6 +75,11 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
               '#type' => 'textfield',
               '#description' => 'label for Password field placeholder',
             ],
+          ],
+          'annotation' => [
+            '#title' => 'Password Annotation text',
+            '#type' => 'textarea',
+            '#description' => 'field annotation that will be displayed on focus',
           ],
         ],
       ],
@@ -105,6 +113,11 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
               '#description' => 'label for Email field placeholder',
             ],
           ],
+          'annotation' => [
+            '#title' => 'Email Annotation text',
+            '#type' => 'textarea',
+            '#description' => 'field annotation that will be displayed on focus',
+          ],
         ],
       ],
 
@@ -123,6 +136,11 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
               '#type' => 'textfield',
               '#description' => 'label for Mobile number field placeholder',
             ],
+          ],
+          'annotation' => [
+            '#title' => 'Mobile Number Annotation text',
+            '#type' => 'textarea',
+            '#description' => 'field annotation that will be displayed on focus',
           ],
         ],
       ],
@@ -156,6 +174,11 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
               '#description' => 'label for First name field placeholder',
             ],
           ],
+          'annotation' => [
+            '#title' => 'First Name Annotation text',
+            '#type' => 'textarea',
+            '#description' => 'field annotation that will be displayed on focus',
+          ],
         ],
       ],
 
@@ -174,6 +197,11 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
               '#type' => 'textfield',
               '#description' => 'label for Last name field placeholder',
             ],
+          ],
+          'annotation' => [
+            '#title' => 'Last Name Annotation text',
+            '#type' => 'textarea',
+            '#description' => 'field annotation that will be displayed on focus',
           ],
         ],
       ],
@@ -198,6 +226,11 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
               '#type' => 'textfield',
               '#description' => 'Date Format for Birthdate',
             ],
+          ],
+          'annotation' => [
+            '#title' => 'Birthdate Annotation text',
+            '#type' => 'textarea',
+            '#description' => 'field annotation that will be displayed on focus',
           ],
         ],
       ],
@@ -284,6 +317,11 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
               '#type' => 'textfield',
               '#description' => 'label for Bonus code field placeholder',
             ],
+          ],
+          'annotation' => [
+            '#title' => 'Bonus code Annotation text',
+            '#type' => 'textarea',
+            '#description' => 'field annotation that will be displayed on focus',
           ],
         ],
       ],
