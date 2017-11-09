@@ -60,7 +60,7 @@ create package:
     paths:
       - "*.tar.gz"
       - automation/deployed/*.jsonl
-    expire_in: 1 day
+    expire_in: 1 month
   when: manual
   cache:
     key: v2
@@ -83,7 +83,7 @@ dev:
   artifacts:
     paths:
       - automation/deployed/*.jsonl
-    expire_in: 1 day
+    expire_in: 1 month
 
 selenium tests development:
   stage: integration-tests-development
@@ -95,7 +95,7 @@ selenium tests development:
   artifacts:
     paths:
       - automation/deployed/*.jsonl
-    expire_in: 1 day
+    expire_in: 1 month
 
 jmeter development:
   stage: performance-tests-development
@@ -107,7 +107,7 @@ jmeter development:
   artifacts:
     paths:
       - automation/deployed/*.jsonl
-    expire_in: 1 day
+    expire_in: 1 month
   tags:
     - jmeter
 
@@ -123,7 +123,7 @@ qa1:
   artifacts:
     paths:
       - automation/deployed/*.jsonl
-    expire_in: 1 day
+    expire_in: 1 month
 
 selenium tests qa1:
   stage: integration-tests-test
@@ -135,7 +135,7 @@ selenium tests qa1:
   artifacts:
     paths:
       - automation/deployed/*.jsonl
-    expire_in: 1 day
+    expire_in: 1 month
 
 hp fortify scan qa1:
   stage: security-tests-test
@@ -147,7 +147,7 @@ hp fortify scan qa1:
   artifacts:
     paths:
       - automation/deployed/*.jsonl
-    expire_in: 1 day
+    expire_in: 1 month
 
 jmeter qa1:
   stage: performance-tests-test
@@ -159,7 +159,7 @@ jmeter qa1:
   artifacts:
     paths:
       - automation/deployed/*.jsonl
-    expire_in: 1 day
+    expire_in: 1 month
   tags:
     - jmeter
 
@@ -175,7 +175,7 @@ tct:
   artifacts:
     paths:
       - automation/deployed/*.jsonl
-    expire_in: 1 day
+    expire_in: 1 month
 
 selenium tests tct:
   stage: integration-tests-test
@@ -187,7 +187,7 @@ selenium tests tct:
   artifacts:
     paths:
       - automation/deployed/*.jsonl
-    expire_in: 1 day
+    expire_in: 1 month
 
 jmeter tct:
   stage: performance-tests-test
@@ -199,7 +199,7 @@ jmeter tct:
   artifacts:
     paths:
       - automation/deployed/*.jsonl
-    expire_in: 1 day
+    expire_in: 1 month
   tags:
     - jmeter
 
@@ -215,7 +215,7 @@ testing signoff:
   artifacts:
     paths:
       - automation/deployed/*.jsonl
-    expire_in: 1 day
+    expire_in: 1 month
   only:
     - /^release-.*$/
     - tags
@@ -232,7 +232,7 @@ uat:
   artifacts:
     paths:
       - automation/deployed/*.jsonl
-    expire_in: 1 day
+    expire_in: 1 month
   only:
     - /^release-.*$/
     - tags
@@ -247,7 +247,7 @@ selenium tests uat:
   artifacts:
     paths:
       - automation/deployed/*.jsonl
-    expire_in: 1 day
+    expire_in: 1 month
   only:
     - /^release-.*$/
     - tags
@@ -262,7 +262,7 @@ jmeter uat:
   artifacts:
     paths:
       - automation/deployed/*.jsonl
-    expire_in: 1 day
+    expire_in: 1 month
   only:
     - /^release-.*$/
     - tags
@@ -281,7 +281,7 @@ staging:
   artifacts:
     paths:
       - automation/deployed/*.jsonl
-    expire_in: 1 day
+    expire_in: 1 month
   only:
     - /^release-.*$/
     - tags
@@ -296,7 +296,7 @@ selenium tests staging:
   artifacts:
     paths:
       - automation/deployed/*.jsonl
-    expire_in: 1 day
+    expire_in: 1 month
   only:
     - /^release-.*$/
     - tags
@@ -311,7 +311,7 @@ jmeter staging:
   artifacts:
     paths:
       - automation/deployed/*.jsonl
-    expire_in: 1 day
+    expire_in: 1 month
   only:
     - /^release-.*$/
     - tags
@@ -328,7 +328,7 @@ acunetix staging:
   artifacts:
     paths:
       - automation/deployed/*.jsonl
-    expire_in: 1 day
+    expire_in: 1 month
   only:
     - /^release-.*$/
     - tags
@@ -344,7 +344,7 @@ staging signoff:
   artifacts:
     paths:
       - automation/deployed/*.jsonl
-    expire_in: 1 day
+    expire_in: 1 month
   only:
     - /^release-.*$/
     - tags
@@ -375,7 +375,7 @@ internal prod signoff:
   artifacts:
     paths:
       - automation/deployed/*.jsonl
-    expire_in: 1 day
+    expire_in: 1 month
   only:
     - /^release-.*$/
     - tags
@@ -392,7 +392,7 @@ production:
   artifacts:
     paths:
       - automation/deployed/*.jsonl
-    expire_in: 1 day
+    expire_in: 1 month
   only:
     - /^release-.*$/
     - tags

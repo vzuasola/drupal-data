@@ -6,5 +6,6 @@ ignored_config_entities:
   8: 'filter.*'
   10: 'block.*'
   12: 'language.*'
+  14: 'entrypage_config.*'
 _core:
   default_config_hash: UVH1aJ4b44UM-VdPVN7hNNuuVqfReJxwfVeDQH1Hvsk

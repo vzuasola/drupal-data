@@ -5,6 +5,8 @@ dependencies:
   module:
     - entrypage_front_blocks
     - link
+_core:
+  default_config_hash: 1J1EjrJUEO_ztAwKhkd6k9QNzF5UJAa8vMP3juiXQWQ
 id: entrypage_front_block.field_url
 field_name: field_url
 entity_type: entrypage_front_block

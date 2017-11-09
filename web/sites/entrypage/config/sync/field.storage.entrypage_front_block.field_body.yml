@@ -5,6 +5,8 @@ dependencies:
   module:
     - entrypage_front_blocks
     - text
+_core:
+  default_config_hash: m5ZgP8D1s2FW5drYhqAgR2UA4BXPdEh5ZWQ-iIydFNc
 id: entrypage_front_block.field_body
 field_name: field_body
 entity_type: entrypage_front_block

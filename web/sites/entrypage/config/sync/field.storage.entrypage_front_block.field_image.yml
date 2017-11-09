@@ -6,6 +6,8 @@ dependencies:
     - entrypage_front_blocks
     - file
     - image
+_core:
+  default_config_hash: qv1_JACfsc4O9XQulFDxFGHZc3w7mo0Uhoys7yn0Xus
 id: entrypage_front_block.field_image
 field_name: field_image
 entity_type: entrypage_front_block

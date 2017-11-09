@@ -1,0 +1,13 @@
+# Registration theme entity menu items definition
+entity.registration_theme_entity.collection:
+  title: 'Registration theme entity list'
+  route_name: entity.registration_theme_entity.collection
+  description: 'List Registration theme entity entities'
+  parent: registration_config.list
+  weight: 100
+
+registration_theme_entity.admin.structure.settings:
+  title: Registration theme entity settings
+  description: 'Configure Registration theme entity entities'
+  route_name: registration_theme_entity.settings
+  parent: registration_config.list

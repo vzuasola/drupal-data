@@ -1,0 +1,20 @@
+uuid: 2afe3474-b5fb-4903-b7f5-37c51f92cebd 
+langcode: en    
+status: true    
+dependencies:   
+  module:   
+   - webcomposer_metatags    
+id: metatag_entity.metatag_entity.user_id   
+field_name: user_id   
+entity_type: metatag_entity   
+bundle: metatag_entity    
+label: 'Authored by'    
+description: 'The user ID of author of the Metatag entity entity.'    
+required: false   
+translatable: true    
+default_value: { }    
+default_value_callback: ''    
+settings:   
+  handler: default    
+  handler_settings: { }   
+field_type: entity_reference

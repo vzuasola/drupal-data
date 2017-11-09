@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_game_image
+    - field.storage.node.field_games_category
     - image.style.thumbnail
     - node.type.game
     - taxonomy.vocabulary.games_category
@@ -64,86 +65,22 @@ display:
           summary: ''
           description: ''
           columns:
-            node_bulk_form: node_bulk_form
             title: title
-            type: type
-            name: name
-            status: status
-            changed: changed
-            edit_node: edit_node
-            delete_node: delete_node
-            dropbutton: dropbutton
-            timestamp: title
+            draggableviews: draggableviews
           info:
-            node_bulk_form:
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
             title:
-              sortable: true
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            type:
-              sortable: true
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            name:
-              sortable: false
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: priority-low
-            status:
-              sortable: true
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            changed:
-              sortable: true
-              default_sort_order: desc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: priority-low
-            edit_node:
               sortable: false
               default_sort_order: asc
               align: ''
               separator: ''
               empty_column: false
               responsive: ''
-            delete_node:
-              sortable: false
-              default_sort_order: asc
+            draggableviews:
               align: ''
               separator: ''
               empty_column: false
               responsive: ''
-            dropbutton:
-              sortable: false
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            timestamp:
-              sortable: false
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-          default: changed
+          default: '-1'
           empty_table: true
       row:
         type: fields
@@ -276,7 +213,12 @@ display:
           empty: true
           content: 'No content available.'
           plugin_id: text_custom
-      arguments: {  }
+      arguments:
+        field_games_category_target_id:
+          id: field_games_category_target_id
+          table: node__field_games_category
+          field: field_games_category_target_id
+          plugin_id: numeric
       relationships: {  }
       show_admin_links: false
       filter_groups:
@@ -292,7 +234,7 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - url.query_args
+        - url
         - user
         - 'user.node_grants:view'
         - user.permissions
@@ -324,7 +266,75 @@ display:
         filters: false
         filter_groups: false
         sorts: false
+        relationships: false
+        show_admin_links: false
+        group_by: false
+        arguments: false
       fields:
+        field_game_image:
+          id: field_game_image
+          table: node__field_game_image
+          field: field_game_image
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Game Thumbnail Image'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: image
+          settings:
+            image_style: thumbnail
+            image_link: ''
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
         title:
           id: title
           table: node_field_data
@@ -390,6 +400,69 @@ display:
           entity_type: node
           entity_field: title
           plugin_id: field
+        field_games_category:
+          id: field_games_category
+          table: node__field_games_category
+          field: field_games_category
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Games Category'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: true
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
         draggableviews:
           id: draggableviews
           table: node_field_data
@@ -444,70 +517,6 @@ display:
           entity_type: node
           entity_field: nid
           plugin_id: draggable_views_field
-        field_game_image:
-          id: field_game_image
-          table: node__field_game_image
-          field: field_game_image
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: 'Game Thumbnail Image'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: image
-          settings:
-            image_style: thumbnail
-            image_link: ''
-          group_column: ''
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
       filters:
         status:
           id: status
@@ -608,18 +617,21 @@ display:
           group: 1
           exposed: false
           expose:
-            operator_id: ''
-            label: ''
+            operator_id: langcode_op
+            label: 'Translation language'
             description: ''
             use_operator: false
-            operator: ''
-            identifier: ''
-            required: false
+            operator: langcode_op
+            identifier: langcode
+            required: true
             remember: false
             multiple: false
             remember_roles:
               authenticated: authenticated
-            reduce: false
+              anonymous: '0'
+              administrator: '0'
+              e: '0'
+            reduce: true
           is_grouped: false
           group_info:
             label: ''
@@ -648,7 +660,7 @@ display:
           exposed: true
           expose:
             operator_id: field_games_category_target_id_op
-            label: 'Game Category'
+            label: 'Games Category'
             description: ''
             use_operator: false
             operator: field_games_category_target_id_op
@@ -698,23 +710,42 @@ display:
           expose:
             label: ''
           plugin_id: standard
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: DESC
+          exposed: false
+          expose:
+            label: ''
+          granularity: second
+          entity_type: node
+          entity_field: created
+          plugin_id: date
       exposed_block: false
+      relationships: {  }
+      show_admin_links: false
+      group_by: false
+      rendering_language: '***LANGUAGE_language_interface***'
+      arguments: {  }
     display_plugin: page
     display_title: 'Games - Sorting'
     id: page_games_sorting
     position: 1
     cache_metadata:
       contexts:
-        - 'languages:language_content'
         - 'languages:language_interface'
         - url
-        - url.query_args
         - user
         - 'user.node_grants:view'
         - user.permissions
       max-age: 0
       tags:
         - 'config:field.storage.node.field_game_image'
+        - 'config:field.storage.node.field_games_category'
   rest_export_1:
     display_plugin: rest_export
     id: rest_export_1
@@ -734,6 +765,7 @@ display:
         access: false
         arguments: false
         relationships: false
+        group_by: false
       fields:
         title:
           id: title
@@ -936,6 +968,52 @@ display:
           entity_type: node
           entity_field: langcode
           plugin_id: language
+        tid_1:
+          id: tid_1
+          table: taxonomy_index
+          field: tid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: tid_1_op
+            label: 'Has taxonomy term'
+            description: ''
+            use_operator: false
+            operator: tid_1_op
+            identifier: category
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              e: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: games_category
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
       filter_groups:
         operator: AND
         groups:
@@ -975,44 +1053,7 @@ display:
         type: none
         options:
           offset: 0
-      arguments:
-        field_games_category_target_id:
-          id: field_games_category_target_id
-          table: node__field_games_category
-          field: field_games_category_target_id
-          relationship: none
-          group_type: group
-          admin_label: ''
-          default_action: default
-          exception:
-            value: category
-            title_enable: false
-            title: All
-          title_enable: false
-          title: ''
-          default_argument_type: query_parameter
-          default_argument_options:
-            query_param: category
-            fallback: ''
-            multiple: or
-          default_argument_skip_url: false
-          summary_options:
-            base_path: ''
-            count: true
-            items_per_page: 25
-            override: false
-          summary:
-            sort_order: asc
-            number_of_records: 0
-            format: default_summary
-          specify_validation: false
-          validate:
-            type: none
-            fail: 'not found'
-          validate_options: {  }
-          break_phrase: true
-          not: false
-          plugin_id: numeric
+      arguments: {  }
       relationships: {  }
       style:
         type: node_list_serializer
@@ -1020,12 +1061,14 @@ display:
           uses_fields: false
           formats:
             json: json
+      group_by: false
     cache_metadata:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
         - request_format
         - url
+        - user
         - 'user.node_grants:view'
       max-age: 0
       tags: {  }
@@ -1254,18 +1297,6 @@ display:
         groups:
           1: AND
       sorts:
-        weight:
-          id: weight
-          table: draggableviews_structure
-          field: weight
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: ASC
-          exposed: false
-          expose:
-            label: ''
-          plugin_id: standard
         created:
           id: created
           table: node_field_data
