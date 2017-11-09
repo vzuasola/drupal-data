@@ -33,7 +33,7 @@ class RobotsConfiguration extends ConfigFormBase {
       '#type' => 'textarea',
       '#title' => $this->t('Robots.txt configuration'),
       '#rows' => 15,
-      '#description' => $this->t('This is config only applicable main domain eg: www.dafabet.com/robots.txt'),
+      '#description' => $this->t('This is config only applicable for any main domain eg: www.dafabet.com/robots.txt'),
       '#default_value' => $config->get('robots_configuration'),
     ];
 
