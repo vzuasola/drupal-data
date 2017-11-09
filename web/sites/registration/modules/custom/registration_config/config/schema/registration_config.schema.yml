@@ -7,7 +7,13 @@ registration_config.general_configuration:
       label: 'Step One Text'
       translatable: true
     step_two_text:
-      type: text
+      type: label
       label: 'Step Two Text'
       translatable: true
+    home_title:
+      type: label
+      label: 'Homepage title'
+    success_title:
+      type: label
+      label: 'Success page title'
   langcode: 'en'
