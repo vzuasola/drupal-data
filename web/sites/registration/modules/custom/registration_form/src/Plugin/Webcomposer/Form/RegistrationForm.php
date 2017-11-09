@@ -69,12 +69,10 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
             '#type' => 'textfield',
             '#description' => 'The Label for Password field',
           ],
-          'attr' => [
-            'placeholder' => [
-              '#title' => 'Password placeholder label',
-              '#type' => 'textfield',
-              '#description' => 'label for Password field placeholder',
-            ],
+          'placeholder' => [
+            '#title' => 'Password placeholder label',
+            '#type' => 'textfield',
+            '#description' => 'label for Password field placeholder',
           ],
           'annotation' => [
             '#title' => 'Password Annotation text',
@@ -106,12 +104,10 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
             '#type' => 'textfield',
             '#description' => 'The Label for Email field',
           ],
-          'attr' => [
-            'placeholder' => [
-              '#title' => 'Email placeholder label',
-              '#type' => 'textfield',
-              '#description' => 'label for Email field placeholder',
-            ],
+          'placeholder' => [
+            '#title' => 'Email placeholder label',
+            '#type' => 'textfield',
+            '#description' => 'label for Email field placeholder',
           ],
           'annotation' => [
             '#title' => 'Email Annotation text',
@@ -130,12 +126,10 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
             '#type' => 'textfield',
             '#description' => 'The label for the Mobile Number field',
           ],
-          'attr' => [
-            'placeholder' => [
-              '#title' => 'Mobile Number placeholder label',
-              '#type' => 'textfield',
-              '#description' => 'label for Mobile number field placeholder',
-            ],
+          'placeholder' => [
+            '#title' => 'Mobile Number placeholder label',
+            '#type' => 'textfield',
+            '#description' => 'label for Mobile number field placeholder',
           ],
           'annotation' => [
             '#title' => 'Mobile Number Annotation text',
@@ -167,12 +161,10 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
             '#type' => 'textfield',
             '#description' => 'The label for the First Name field',
           ],
-          'attr' => [
-            'placeholder' => [
-              '#title' => 'First name placeholder label',
-              '#type' => 'textfield',
-              '#description' => 'label for First name field placeholder',
-            ],
+          'placeholder' => [
+            '#title' => 'First name placeholder label',
+            '#type' => 'textfield',
+            '#description' => 'label for First name field placeholder',
           ],
           'annotation' => [
             '#title' => 'First Name Annotation text',
@@ -191,12 +183,10 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
             '#type' => 'textfield',
             '#description' => 'The label for the Last Name field',
           ],
-          'attr' => [
-            'placeholder' => [
-              '#title' => 'Last name placeholder label',
-              '#type' => 'textfield',
-              '#description' => 'label for Last name field placeholder',
-            ],
+          'placeholder' => [
+            '#title' => 'Last name placeholder label',
+            '#type' => 'textfield',
+            '#description' => 'label for Last name field placeholder',
           ],
           'annotation' => [
             '#title' => 'Last Name Annotation text',
@@ -215,17 +205,15 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
             '#type' => 'textfield',
             '#description' => 'The Label for the Birthdate field',
           ],
-          'attr' => [
-            'placeholder' => [
-              '#title' => 'Birthdate placeholder label',
-              '#type' => 'textfield',
-              '#description' => 'label for Birthdate field placeholder',
-            ],
-            'date-format' => [
-              '#title' => 'Birthdate format',
-              '#type' => 'textfield',
-              '#description' => 'Date Format for Birthdate',
-            ],
+          'placeholder' => [
+            '#title' => 'Birthdate placeholder label',
+            '#type' => 'textfield',
+            '#description' => 'label for Birthdate field placeholder',
+          ],
+          'date-format' => [
+            '#title' => 'Birthdate format',
+            '#type' => 'textfield',
+            '#description' => 'Date Format for Birthdate',
           ],
           'annotation' => [
             '#title' => 'Birthdate Annotation text',
@@ -311,12 +299,10 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
             '#type' => 'textfield',
             '#description' => 'label for Bonus Code field',
           ],
-          'attr' => [
-            'placeholder' => [
-              '#title' => 'Bonus code placeholder label',
-              '#type' => 'textfield',
-              '#description' => 'label for Bonus code field placeholder',
-            ],
+          'placeholder' => [
+            '#title' => 'Bonus code placeholder label',
+            '#type' => 'textfield',
+            '#description' => 'label for Bonus code field placeholder',
           ],
           'annotation' => [
             '#title' => 'Bonus code Annotation text',
