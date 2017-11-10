@@ -5,11 +5,11 @@ dependencies:
   config:
     - field.storage.taxonomy_term.field_select_domain_group
     - taxonomy.vocabulary.domain
-    - user.role.administrator
   module:
     - content_translation
     - taxonomy
-    - user
+_core:
+  default_config_hash: CwwS_GcsfEZh74HaGSoIJ5TT6gBJbS5DFrO-wOiOewk
 id: domain_listing
 label: 'Domain Listing'
 module: views
@@ -26,10 +26,8 @@ display:
     position: 0
     display_options:
       access:
-        type: role
-        options:
-          role:
-            administrator: administrator
+        type: none
+        options: {  }
       cache:
         type: tag
         options: {  }
@@ -423,7 +421,6 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - user.roles
       tags:
         - 'config:field.storage.taxonomy_term.field_select_domain_group'
   domain_listing:
@@ -439,6 +436,5 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - user.roles
       tags:
         - 'config:field.storage.taxonomy_term.field_select_domain_group'
