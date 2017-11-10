@@ -14,9 +14,9 @@ use Drupal\webcomposer_rest_extra\FilterHtmlTrait;
 /**
  * Converts typed data objects to arrays.
  */
-class NodeEntityNormalizer extends ContentEntityNormalizer
-{
+class NodeEntityNormalizer extends ContentEntityNormalizer {
   use FilterHtmlTrait;
+
   /**
    * The interface or class that this Normalizer supports.
    *
@@ -30,6 +30,7 @@ class NodeEntityNormalizer extends ContentEntityNormalizer
   public function normalize($entity, $format = NULL, array $context = []) {
     $entityData = $entity->toArray();
     $attributes = parent::normalize($entity, $format, $context);
+
     foreach ($entityData as $key => $value) {
       // replace the images src for text formats
       if (isset($value[0]['format'])) {
@@ -52,6 +53,7 @@ class NodeEntityNormalizer extends ContentEntityNormalizer
           case 'taxonomy_term':
             foreach ($value as $id => $item) {
               $term = $this->loadTermById($item['target_id']);
+
               if ($term === false) {
                 unset($attributes[$key][$id]);
               } else {
@@ -107,7 +109,6 @@ class NodeEntityNormalizer extends ContentEntityNormalizer
    */
   private function loadTermById($tid) {
     $lang = \Drupal::languageManager()->getCurrentLanguage(\Drupal\Core\Language\LanguageInterface::TYPE_CONTENT)->getId();
-
     $term = \Drupal\taxonomy\Entity\Term::load($tid);
 
     if (!$term) {
@@ -136,15 +137,14 @@ class NodeEntityNormalizer extends ContentEntityNormalizer
    */
   private function loadNodeById($id) {
     $lang = \Drupal::languageManager()->getCurrentLanguage(\Drupal\Core\Language\LanguageInterface::TYPE_CONTENT)->getId();
-
     $node = \Drupal::entityManager()->getStorage('node')->load($id);
 
-    if($node->isPublished()) {
-         $nodeTranslated = \Drupal::service('entity.repository')->getTranslationFromContext($node, $lang);
-         $nodeTranslatedArray = $nodeTranslated->toArray();
+    if ($node->isPublished()) {
+      $nodeTranslated = \Drupal::service('entity.repository')->getTranslationFromContext($node, $lang);
+      $nodeTranslatedArray = $nodeTranslated->toArray();
 
-          foreach ($nodeTranslatedArray as $field => $item) {
-           $setting = $nodeTranslated->get($field)->getSettings();
+      foreach ($nodeTranslatedArray as $field => $item) {
+        $setting = $nodeTranslated->get($field)->getSettings();
 
         if (isset($setting['target_type'])) {
           if ($setting['target_type'] == 'file') {
@@ -154,6 +154,7 @@ class NodeEntityNormalizer extends ContentEntityNormalizer
         }
       }
     }
+
     return $nodeTranslatedArray;
   }
 

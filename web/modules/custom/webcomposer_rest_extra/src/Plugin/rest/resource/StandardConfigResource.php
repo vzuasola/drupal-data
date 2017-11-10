@@ -13,19 +13,22 @@ use Drupal\rest\ResourceResponse;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
 use Psr\Log\LoggerInterface;
+use Drupal\file\Entity\File;
+use Drupal\webcomposer_rest_extra\FilterHtmlTrait;
 
 /**
- * Provides a resource to get view of configurations.
+ * Provides a resource to get standardized configuration.
  *
  * @RestResource(
- *   id = "webcomposer_config",
- *   label = @Translation("Web Composer Configuration Resource (Do not use)"),
+ *   id = "standard_config_resource",
+ *   label = @Translation("Standardized Configuration Resource"),
  *   uri_paths = {
- *     "canonical" = "/api/webcomposer/configuration/{id}"
+ *     "canonical" = "/api/standard/configuration/{id}"
  *   }
  * )
  */
-class WebComposerConfigResource extends ResourceBase {
+class StandardConfigResource extends ResourceBase {
+  use FilterHtmlTrait;
 
   /**
    * A current user instance.
@@ -63,11 +66,13 @@ class WebComposerConfigResource extends ResourceBase {
     $plugin_definition,
     array $serializer_formats,
     LoggerInterface $logger,
-    AccountProxyInterface $current_user, $configFactory) {
+    AccountProxyInterface $current_user, 
+    $config_factory
+  ) {
     parent::__construct($configuration, $plugin_id, $plugin_definition, $serializer_formats, $logger);
 
     $this->currentUser = $current_user;
-    $this->configFactory = $configFactory;
+    $this->configFactory = $config_factory;
   }
 
   /**
@@ -88,26 +93,23 @@ class WebComposerConfigResource extends ResourceBase {
   /**
    * Responds to GET requests.
    *
-   * Returns a list of bundles for specified entity.
-   *
    * @throws \Symfony\Component\HttpKernel\Exception\HttpException
    *   Throws exception expected.
    */
   public function get($id) {
-
     if (!$this->currentUser->hasPermission('access content')) {
       throw new AccessDeniedHttpException();
     }
 
-    $data = array();
+    $data = [];
 
     try {
-      $config = $this->configFactory->get("webcomposer_config.$id");
+      $config = $this->configFactory->get($id);
       $data = $config->get();
     } catch (\Exception $e) {
-      $data = array(
+      $data = [
         'error' => $this->t('Configuration not found')
-      );
+      ];
     }
 
     $build = [

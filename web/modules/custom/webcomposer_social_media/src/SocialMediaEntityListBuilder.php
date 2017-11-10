@@ -17,6 +17,7 @@ class SocialMediaEntityListBuilder extends EntityListBuilder {
    */
   public function buildHeader() {
     $header['name'] = $this->t('Name');
+
     return $header + parent::buildHeader();
   }
 
@@ -24,7 +25,9 @@ class SocialMediaEntityListBuilder extends EntityListBuilder {
    * {@inheritdoc}
    */
   public function buildRow(EntityInterface $entity) {
-    $row['name'] = $entity->label();
+    $name = $entity->label();
+    $row['name'] = $name ?: 'Social Media';
+
     return $row + parent::buildRow($entity);
   }
 
