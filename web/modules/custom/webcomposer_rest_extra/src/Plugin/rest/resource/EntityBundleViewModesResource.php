@@ -30,7 +30,6 @@ use Psr\Log\LoggerInterface;
  * )
  */
 class EntityBundleViewModesResource extends ResourceBase {
-
   /**
    * A curent user instance.
    *

@@ -15,7 +15,7 @@ bundle: sponsor_responsive_entity
 label: 'Responsive sponsor'
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
@@ -32,6 +32,9 @@ settings:
         enabled: false
       floating_banner_item:
         weight: 9
+        enabled: false
+      responsive_partner:
+        weight: 10
         enabled: false
       right_side_block_content:
         weight: 10

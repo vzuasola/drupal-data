@@ -23,7 +23,6 @@ use Drupal\field\Entity\FieldConfig;
  * )
  */
 class FormResource extends ResourceBase {
-
   /**
    * A current user instance.
    *
@@ -119,9 +118,8 @@ class FormResource extends ResourceBase {
    * @param string $id
    * @return array
    */
-  private function getFieldDefinition($id)
-  {
-    $definition = array();
+  private function getFieldDefinition($id) {
+    $definition = [];
 
     $formDisplay = entity_get_form_display('contact_message', $id, 'default');
     $components = $formDisplay->getComponents();

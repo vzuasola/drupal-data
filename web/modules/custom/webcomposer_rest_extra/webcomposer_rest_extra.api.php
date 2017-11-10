@@ -1,6 +1,7 @@
 <?php
 
 use Drupal\Core\Site\Settings;
+
 /**
  * Respond to inline image url being changed.
  *

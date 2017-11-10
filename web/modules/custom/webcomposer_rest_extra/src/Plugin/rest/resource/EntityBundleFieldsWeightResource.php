@@ -29,9 +29,7 @@ use Psr\Log\LoggerInterface;
  *   }
  * )
  */
-class EntityBundleFieldsWeightResource extends ResourceBase
-{
-
+class EntityBundleFieldsWeightResource extends ResourceBase {
   /**
    *  A curent user instance.
    *
@@ -91,7 +89,6 @@ class EntityBundleFieldsWeightResource extends ResourceBase
    */
   public function get($entity = NULL, $bundle = NULL) {
     if ($entity && $bundle) {
-
       if (!empty($bundle)) {
         $weights = entity_get_form_display($entity, $bundle, 'default');
         $build = array(

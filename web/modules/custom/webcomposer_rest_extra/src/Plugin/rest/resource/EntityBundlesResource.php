@@ -29,13 +29,11 @@ use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
  * )
  */
 class EntityBundlesResource extends ResourceBase {
-
   /**
    *  A curent user instance.
    *
    * @var \Drupal\Core\Session\AccountProxyInterface
    */
-
   protected $currentUser;
 
   /**
@@ -43,7 +41,6 @@ class EntityBundlesResource extends ResourceBase {
    *
    * @var \Drupal\Core\Entity\EntityManagerInterface
    */
-
   protected $entityManager;
 
   /**
@@ -101,10 +98,9 @@ class EntityBundlesResource extends ResourceBase {
    */
   public function get($entity = NULL) {
     if ($entity) {
-
+      $bundles = [];
       $bundles_entities = $this->entityManager->getStorage($entity .'_type')->loadMultiple();
 
-      $bundles = array();
       foreach ($bundles_entities as $entity) {
         $bundles[$entity->id()] = $entity->label();
       }

@@ -53,3 +53,11 @@ webcomposer_config.pushnx_configuration_form:
     _title: 'Push Notification Configuration'
   requirements:
     _permission: 'administer site configuration'
+
+webcomposer_config.robots_configuration_form:
+  path: 'admin/config/webcomposer/config/robots'
+  defaults:
+    _form: 'Drupal\webcomposer_config\Form\RobotsConfiguration'
+    _title: 'Robots Configuration'
+  requirements:
+    _permission: 'administer site configuration'

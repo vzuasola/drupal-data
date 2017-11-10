@@ -29,8 +29,7 @@ use Psr\Log\LoggerInterface;
  *   }
  * )
  */
-class EntityBundleFieldsResource extends ResourceBase
-{
+class EntityBundleFieldsResource extends ResourceBase {
   /**
    *  A curent user instance.
    *
@@ -99,7 +98,6 @@ class EntityBundleFieldsResource extends ResourceBase
    */
   public function get($entity = NULL, $bundle = NULL) {
     if ($entity && $bundle) {
-
       // Query by filtering on the ID by entity and bundle.
       $ids = $this->entityQuery->get('field_config', 'AND')
         ->condition('id', $entity . '.' . $bundle . '.', 'STARTS_WITH')
