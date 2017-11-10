@@ -5,12 +5,10 @@ dependencies:
   config:
     - field.storage.taxonomy_term.field_add_master_placeholder
     - taxonomy.vocabulary.master_placeholder
-    - user.role.administrator
   module:
     - content_translation
     - entity_reference_revisions
     - taxonomy
-    - user
 _core:
   default_config_hash: ClogObVeV0ssTn85zGVg7otEaQ4I26BI3IiiaV8L2eM
 id: master_placeholder_listing
@@ -29,10 +27,8 @@ display:
     position: 0
     display_options:
       access:
-        type: role
-        options:
-          role:
-            administrator: administrator
+        type: none
+        options: {  }
       cache:
         type: tag
         options: {  }
@@ -350,7 +346,6 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - user.roles
       tags:
         - 'config:field.storage.taxonomy_term.field_add_master_placeholder'
   placeholder_listing:
@@ -366,6 +361,5 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - user.roles
       tags:
         - 'config:field.storage.taxonomy_term.field_add_master_placeholder'
