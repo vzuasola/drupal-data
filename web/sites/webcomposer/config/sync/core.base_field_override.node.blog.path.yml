@@ -1,22 +1,20 @@
-uuid: cbd872f0-175c-41c2-a202-24464fa61893
+uuid: 27bc1c5c-dc2e-4da7-a9e1-63d3036fe975
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.body
     - node.type.blog
   module:
-    - text
-id: node.blog.body
-field_name: body
+    - path
+id: node.blog.path
+field_name: path
 entity_type: node
 bundle: blog
-label: Body
+label: 'URL alias'
 description: ''
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
-settings:
-  display_summary: true
-field_type: text_with_summary
+settings: {  }
+field_type: path
