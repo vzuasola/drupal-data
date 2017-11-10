@@ -48,7 +48,7 @@ class WebcomposerSliderEntitySettingsForm extends ConfigFormBase {
     $form['WebcomposerSliderEntity_settings']['#markup'] = 'Settings form for Webcomposer slider entity entities. Manage field settings here.';
 
     $form['WebcomposerSliderEntity_settings']['enable_collapsible_slider'] = [
-      '#type' => 'checkbox', 
+      '#type' => 'checkbox',
       '#title' => $this->t('Enable Collapsible Slider.'),
       '#default_value' => $config->get('enable_collapsible_slider'),
     ];
@@ -87,4 +87,5 @@ class WebcomposerSliderEntitySettingsForm extends ConfigFormBase {
 
     return parent::submitForm($form, $form_state);
   }
+
 }
