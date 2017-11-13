@@ -1,6 +1,7 @@
 field_settings:
   label: 'First Name'
   placeholder: 'First Name'
+  annotation: 'Please enter your Given Name, example: <u>Joe</u> Smith. We will be unable to process card deposits, cheques or bankwires if the name entered is different from the account holder.Test Edit'
 field_validations:
   required:
     enable: 1
@@ -14,7 +15,7 @@ field_validations:
     enable: 0
     error_message: 'Field should be numeric'
   no_symbols:
-    enable: 0
+    enable: 1
     error_message: 'Field contains invalid special characters'
   numeric_symbols:
     enable: 0

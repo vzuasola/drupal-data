@@ -1,5 +1,5 @@
-uuid: 70bed80a-e484-4666-9e46-21fe245f29b8
-langcode: zh-hant
+uuid: a8e6003c-03a4-4ce4-b7e1-556540f31ce5
+langcode: eu
 status: true
 dependencies:
   module:
@@ -7,9 +7,8 @@ dependencies:
 third_party_settings:
   webcomposer_language_hierarchy:
     webcomposer_fallback_langcode: ''
-    webcomposer_language_custom_label: 繁體中文
-id: zh-hant
-label: 'Traditional Chinese'
+id: eu
+label: 'English EU'
 direction: ltr
-weight: -7
+weight: -9
 locked: false
