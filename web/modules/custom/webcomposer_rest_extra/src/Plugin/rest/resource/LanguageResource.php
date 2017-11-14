@@ -26,7 +26,6 @@ use Psr\Log\LoggerInterface;
  * )
  */
 class LanguageResource extends ResourceBase {
-
   /**
    * A current user instance.
    *
@@ -107,7 +106,7 @@ class LanguageResource extends ResourceBase {
    *   Throws exception expected.
    */
   public function get() {
-    $data = array();
+    $data = [];
 
     try {
       $lang_obj = $this->languageManager->getLanguages();

@@ -1,0 +1,4 @@
+single_signon_server: 'http://demo.dafabet.dev'
+supported_domains: "*.dafabet.com\r\n*.elysium-dfbt.com"
+_core:
+  default_config_hash: 8kjuwsnc9X1mWINl70u0ktM3cigz_yGxWw35zraLNlY
