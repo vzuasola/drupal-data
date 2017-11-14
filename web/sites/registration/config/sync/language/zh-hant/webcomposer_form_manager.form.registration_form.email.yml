@@ -1,0 +1,21 @@
+field_settings:
+  label: Email
+  placeholder: Email
+  annotation: 'Please ensure that you are using an active email address for verification and bank transaction purposes (such as MoneyBookers /Skrill). Mismatched and/or invalid email addresses used may result in delays in processing your transactions. Important messages and notifications will also be sent to your email address, including password recovery and/or account related information. CH'
+field_validations:
+  required:
+    error_message: 'Field should be required'
+  alphanumeric:
+    error_message: 'Field should be alphanumeric'
+  numeric:
+    error_message: 'Field should be numeric'
+  no_symbols:
+    error_message: 'Field contains invalid special characters'
+  numeric_symbols:
+    error_message: 'Field contains invalid special characters'
+  email:
+    error_message: 'Field does not contain a valid email address'
+  min_length:
+    error_message: 'Minimum requirement not met'
+  max_length:
+    error_message: 'Maximum requirement not met'

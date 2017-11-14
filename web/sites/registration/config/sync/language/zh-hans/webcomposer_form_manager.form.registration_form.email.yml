@@ -1,2 +1,21 @@
 field_settings:
   label: 电子邮件
+  placeholder: Email
+  annotation: 请输入真实有效的邮箱地址，以便进行账户验证。包含重要信息的通知也将会通过邮件发送，如：密码找回等。
+field_validations:
+  required:
+    error_message: 'Field should be required'
+  alphanumeric:
+    error_message: 'Field should be alphanumeric'
+  numeric:
+    error_message: 'Field should be numeric'
+  no_symbols:
+    error_message: 'Field contains invalid special characters'
+  numeric_symbols:
+    error_message: 'Field contains invalid special characters'
+  email:
+    error_message: 'Field does not contain a valid email address'
+  min_length:
+    error_message: 'Minimum requirement not met'
+  max_length:
+    error_message: 'Maximum requirement not met'

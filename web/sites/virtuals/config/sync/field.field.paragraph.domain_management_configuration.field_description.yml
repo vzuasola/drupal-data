@@ -6,7 +6,7 @@ dependencies:
     - field.storage.paragraph.field_description
     - paragraphs.paragraphs_type.domain_management_configuration
 _core:
-  default_config_hash: 18WWDz05gJTGFmTcP1J0EjwoTx9lKiP-P5qRWkdLxZY
+  default_config_hash: acJ48HF50OBpPlVeJuJEbs0mNf2hzo8pVH05nEuuroA
 id: paragraph.domain_management_configuration.field_description
 field_name: field_description
 entity_type: paragraph
@@ -14,7 +14,7 @@ bundle: domain_management_configuration
 label: Description
 description: 'Describe what this placeholder is used for, e.g. for GA codes or for CDN paths.'
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }

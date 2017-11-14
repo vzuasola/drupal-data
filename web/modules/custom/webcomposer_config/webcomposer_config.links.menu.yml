@@ -39,3 +39,9 @@ webcomposer_config.admin_pushnx_configuration:
   parent: webcomposer_config.list
   description: 'Provides configuration for Push Notification.'
   route_name: webcomposer_config.pushnx_configuration_form
+
+webcomposer_config.admin_robots_configuration:
+  title: 'Robots Configuration'
+  parent: webcomposer_config.list
+  description: 'Provides configuration for Robots.txt.'
+  route_name: webcomposer_config.robots_configuration_form
