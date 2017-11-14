@@ -2,6 +2,7 @@ field_settings:
   label: 'Date of Birth'
   placeholder: DD/MM/YYYY
   date-format: DD/MM/YYYY
+  annotation: 'Should be at least 18 years old.'
 field_validations:
   required:
     enable: 1

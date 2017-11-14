@@ -1,2 +1,21 @@
 field_settings:
   label: ' 姓'
+  placeholder: 'Last Name'
+  annotation: '请输入您的姓氏，例如：张 。如果您输入的姓氏和银行开户人/身份证姓名不一样，我们将无法处理您的取款申请。 '
+field_validations:
+  required:
+    error_message: 'Field should be required'
+  alphanumeric:
+    error_message: 'Field should be alphanumeric'
+  numeric:
+    error_message: 'Field should be numeric'
+  no_symbols:
+    error_message: 'Field contains invalid special characters'
+  numeric_symbols:
+    error_message: 'Field contains invalid special characters'
+  email:
+    error_message: 'Field does not contain a valid email address'
+  min_length:
+    error_message: 'Minimum requirement not met'
+  max_length:
+    error_message: 'Maximum requirement not met'

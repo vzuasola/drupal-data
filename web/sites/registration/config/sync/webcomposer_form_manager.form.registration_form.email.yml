@@ -1,6 +1,7 @@
 field_settings:
   label: Email
   placeholder: Email
+  annotation: 'Please ensure that you are using an active email address for verification and bank transaction purposes (such as MoneyBookers /Skrill). Mismatched and/or invalid email addresses used may result in delays in processing your transactions. Important messages and notifications will also be sent to your email address, including password recovery and/or account related information.'
 field_validations:
   required:
     enable: 1
