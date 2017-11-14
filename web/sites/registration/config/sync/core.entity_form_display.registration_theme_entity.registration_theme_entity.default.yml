@@ -6,6 +6,7 @@ dependencies:
     - field.field.registration_theme_entity.registration_theme_entity.field_background_color
     - field.field.registration_theme_entity.registration_theme_entity.field_background_image
     - field.field.registration_theme_entity.registration_theme_entity.field_form_font_color
+    - field.field.registration_theme_entity.registration_theme_entity.field_is_legacy
     - field.field.registration_theme_entity.registration_theme_entity.field_login_destination_url
     - field.field.registration_theme_entity.registration_theme_entity.field_registration_button_font_c
     - field.field.registration_theme_entity.registration_theme_entity.field_registration_button_form_c
@@ -14,22 +15,55 @@ dependencies:
     - image.style.thumbnail
   module:
     - color_field
+    - field_group
     - image
     - link
     - registration_theme
+third_party_settings:
+  field_group:
+    group_login:
+      children:
+        - field_is_legacy
+        - field_login_destination_url
+      parent_name: ''
+      weight: 3
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: Login
+    group_forms:
+      children:
+        - field_background_image
+        - field_background_color
+        - field_registration_button_font_c
+        - field_form_font_color
+        - field_registration_button_form_h
+        - field_registration_button_form_c
+      parent_name: ''
+      weight: 5
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: Forms
 id: registration_theme_entity.registration_theme_entity.default
 targetEntityType: registration_theme_entity
 bundle: registration_theme_entity
 mode: default
 content:
   field_background_color:
-    weight: 4
+    weight: 5
     settings: {  }
     third_party_settings: {  }
     type: color_field_widget_html5
     region: content
   field_background_image:
-    weight: 1
+    weight: 4
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -37,10 +71,17 @@ content:
     type: image_image
     region: content
   field_form_font_color:
-    weight: 5
+    weight: 7
     settings: {  }
     third_party_settings: {  }
     type: color_field_widget_html5
+    region: content
+  field_is_legacy:
+    weight: 2
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
     region: content
   field_login_destination_url:
     weight: 3
@@ -51,25 +92,25 @@ content:
     type: link_default
     region: content
   field_registration_button_font_c:
-    weight: 8
-    settings: {  }
-    third_party_settings: {  }
-    type: color_field_widget_html5
-    region: content
-  field_registration_button_form_c:
     weight: 6
     settings: {  }
     third_party_settings: {  }
     type: color_field_widget_html5
     region: content
+  field_registration_button_form_c:
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    type: color_field_widget_html5
+    region: content
   field_registration_button_form_h:
-    weight: 7
+    weight: 8
     settings: {  }
     third_party_settings: {  }
     type: color_field_widget_html5
     region: content
   field_registration_theme_code:
-    weight: 2
+    weight: 1
     settings:
       size: 60
       placeholder: ''
