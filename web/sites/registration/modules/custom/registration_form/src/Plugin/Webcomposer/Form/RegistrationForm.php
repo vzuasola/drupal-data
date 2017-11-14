@@ -309,6 +309,11 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
             '#type' => 'textarea',
             '#description' => 'field annotation that will be displayed on focus',
           ],
+          'is_hidden' => [
+            '#title' => 'Hide Bonus Code',
+            '#type' => 'checkbox',
+            '#description' => 'Enable or disable bonus code',
+          ],
         ],
       ],
 

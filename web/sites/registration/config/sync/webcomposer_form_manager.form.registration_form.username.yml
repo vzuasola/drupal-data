@@ -1,15 +1,16 @@
 field_settings:
   label: Username
   placeholder: Username
+  annotation: 'Sample: Dafa12'
 field_validations:
   required:
     enable: 1
     error_message: 'Field should be required'
   alphanumeric:
-    enable: 0
+    enable: 1
     error_message: 'Field should be alphanumeric'
     parameters:
-      spaces: 1
+      spaces: 0
   numeric:
     enable: 0
     error_message: 'Field should be numeric'
@@ -23,12 +24,12 @@ field_validations:
     enable: 0
     error_message: 'Field does not contain a valid email address'
   min_length:
-    enable: 0
+    enable: 1
     error_message: 'Minimum requirement not met'
     parameters:
-      length: '2'
+      length: '3'
   max_length:
-    enable: 0
+    enable: 1
     error_message: 'Maximum requirement not met'
     parameters:
-      length: '10'
+      length: '15'

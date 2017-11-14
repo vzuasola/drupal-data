@@ -1,0 +1,24 @@
+uuid: 079c0984-bdb3-4a3a-82f5-6cb960f4dcd5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.registration_theme_entity.field_is_legacy
+  module:
+    - registration_theme
+id: registration_theme_entity.registration_theme_entity.field_is_legacy
+field_name: field_is_legacy
+entity_type: registration_theme_entity
+bundle: registration_theme_entity
+label: 'is Legacy'
+description: 'check this field if site is not yet webcomposer'
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

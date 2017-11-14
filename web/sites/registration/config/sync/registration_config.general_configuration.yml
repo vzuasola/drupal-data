@@ -3,5 +3,7 @@ step_two_text: Deposit
 _core:
   default_config_hash: e3hn0uvuv-BJxFFYiLi7_S3p1_xJVxeXLrChy6s_WYE
 registraton_api_url: 'https://qa1-www.elysium-dfbt.com/api/v1/registration/player'
-registraton_portal_id_to_product_name: "4|casino\r\n2|entry\r\n19|casino-gold\r\n55|keno\r\n3|sports"
+registraton_portal_id_to_product_name: "4|casino\r\n2|entry\r\n19|casino-gold\r\n55|keno\r\n3|sports\r\n8|games"
 registraton_product_id_to_portal_id: "1|4,11,18,23\r\n2|5,12,17\r\n3|3,10\r\n4|6\r\n5|8"
+success_title: Success
+home_title: Home
