@@ -7,7 +7,7 @@
 /**
  * Implements hook_webcomposer_form_validation_alter().
  *
- * Registration form custom validation.
+ * Registration form - USername and Email validation.
  */
 function registration_form_webcomposer_form_validation_alter(&$validations) {
   $validations['username_availability'] = [
