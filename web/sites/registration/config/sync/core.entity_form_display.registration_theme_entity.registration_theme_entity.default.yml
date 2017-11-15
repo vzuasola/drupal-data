@@ -5,6 +5,8 @@ dependencies:
   config:
     - field.field.registration_theme_entity.registration_theme_entity.field_background_color
     - field.field.registration_theme_entity.registration_theme_entity.field_background_image
+    - field.field.registration_theme_entity.registration_theme_entity.field_banner_font_color
+    - field.field.registration_theme_entity.registration_theme_entity.field_banner_highlight
     - field.field.registration_theme_entity.registration_theme_entity.field_form_font_color
     - field.field.registration_theme_entity.registration_theme_entity.field_is_legacy
     - field.field.registration_theme_entity.registration_theme_entity.field_login_destination_url
@@ -12,6 +14,9 @@ dependencies:
     - field.field.registration_theme_entity.registration_theme_entity.field_registration_button_form_c
     - field.field.registration_theme_entity.registration_theme_entity.field_registration_button_form_h
     - field.field.registration_theme_entity.registration_theme_entity.field_registration_theme_code
+    - field.field.registration_theme_entity.registration_theme_entity.field_steptwo_banner
+    - field.field.registration_theme_entity.registration_theme_entity.field_steptwo_content
+    - field.field.registration_theme_entity.registration_theme_entity.field_success_message
     - image.style.thumbnail
   module:
     - color_field
@@ -19,6 +24,7 @@ dependencies:
     - image
     - link
     - registration_theme
+    - text
 third_party_settings:
   field_group:
     group_login:
@@ -26,7 +32,7 @@ third_party_settings:
         - field_is_legacy
         - field_login_destination_url
       parent_name: ''
-      weight: 3
+      weight: 2
       format_type: details
       format_settings:
         id: ''
@@ -43,7 +49,7 @@ third_party_settings:
         - field_registration_button_form_h
         - field_registration_button_form_c
       parent_name: ''
-      weight: 5
+      weight: 3
       format_type: details
       format_settings:
         id: ''
@@ -51,6 +57,33 @@ third_party_settings:
         open: false
         required_fields: true
       label: Forms
+    group_registration_steps:
+      children:
+        - field_banner_highlight
+        - field_banner_font_color
+      parent_name: ''
+      weight: 4
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: 'Registration Steps'
+    group_step_2:
+      children:
+        - field_success_message
+        - field_steptwo_content
+        - field_steptwo_banner
+      parent_name: ''
+      weight: 20
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: 'Step 2'
 id: registration_theme_entity.registration_theme_entity.default
 targetEntityType: registration_theme_entity
 bundle: registration_theme_entity
@@ -69,6 +102,18 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+    region: content
+  field_banner_font_color:
+    type: color_field_widget_html5
+    weight: 22
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_banner_highlight:
+    weight: 21
+    settings: {  }
+    third_party_settings: {  }
+    type: color_field_widget_html5
     region: content
   field_form_font_color:
     weight: 7
@@ -111,6 +156,30 @@ content:
     region: content
   field_registration_theme_code:
     weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_steptwo_banner:
+    weight: 25
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_steptwo_content:
+    weight: 24
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_success_message:
+    weight: 23
     settings:
       size: 60
       placeholder: ''
