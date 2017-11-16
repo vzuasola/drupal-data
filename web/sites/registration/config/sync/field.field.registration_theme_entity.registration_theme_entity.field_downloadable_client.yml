@@ -1,0 +1,24 @@
+uuid: b4dc6b21-1af8-48a0-843b-74b7d4cebb33
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.registration_theme_entity.field_downloadable_client
+  module:
+    - registration_theme
+id: registration_theme_entity.registration_theme_entity.field_downloadable_client
+field_name: field_downloadable_client
+entity_type: registration_theme_entity
+bundle: registration_theme_entity
+label: 'Downloadable Client'
+description: 'Is this theme will be used for Downloadable Client? This will removed unnecessary components for the registration form in the client, will redirect to another page that will automatically close the registration form and automatically logged in the registered player.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
