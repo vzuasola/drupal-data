@@ -1,0 +1,32 @@
+uuid: f3f1c0a1-888d-4fed-a710-630c5d53d73d
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - webcomposer_slider
+_core:
+  default_config_hash: KR_Jiw3uFXoIk8PRNxQ4I-Hx8lU_PE2TrUPtrsFjcZA
+id: webcomposer_slider_entity.field_log_in_state
+field_name: field_log_in_state
+entity_type: webcomposer_slider_entity
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '0'
+      label: 'Pre Login'
+    -
+      value: '1'
+      label: 'Post Login'
+    -
+      value: '2'
+      label: Both
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

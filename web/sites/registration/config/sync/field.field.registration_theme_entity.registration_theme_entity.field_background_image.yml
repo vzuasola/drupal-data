@@ -20,7 +20,7 @@ entity_type: registration_theme_entity
 bundle: registration_theme_entity
 label: 'Background Image'
 description: ''
-required: true
+required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''

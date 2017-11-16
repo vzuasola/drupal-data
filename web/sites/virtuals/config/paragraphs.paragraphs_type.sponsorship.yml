@@ -1,0 +1,9 @@
+uuid: ecbeb5b6-d560-4ee1-863e-5116b154ddf3
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: CnEAXB5mcp-j_DIhmMGrGaKUhYp-urSYMaiWxX4brOo
+id: sponsorship
+label: Sponsorship
+behavior_plugins: {  }
