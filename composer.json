@@ -44,7 +44,8 @@
     "autoload": {
         "classmap": [
             "scripts/composer/ScriptHandler.php",
-            "scripts/composer/SettingsHandler.php"
+            "scripts/composer/SettingsHandler.php",
+            "scripts/custom/ProductHandler.php"
         ]
     },
     "scripts": {
@@ -62,13 +63,12 @@
         "post-update-cmd": [
             "DrupalProject\\composer\\ScriptHandler::createRequiredFiles",
             "DrupalProject\\composer\\SettingsHandler::syncSettings"
-
         ],
         "sync-settings": [
             "DrupalProject\\composer\\SettingsHandler::syncSettings"
         ],
-        "sync-drush": [
-            "DrupalProject\\composer\\SettingsHandler::syncDrush"
+        "new:product": [
+            "DrupalProject\\custom\\ProductHandler::createNewInstance"
         ]
     },
     "extra": {

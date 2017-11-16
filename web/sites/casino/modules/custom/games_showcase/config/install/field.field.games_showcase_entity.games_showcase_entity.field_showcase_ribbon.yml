@@ -1,0 +1,29 @@
+uuid: c47faff4-5062-48ff-b969-ae099d504912
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.games_showcase_entity.field_showcase_ribbon
+    - taxonomy.vocabulary.ribbon_labels
+  module:
+    - games_showcase
+id: games_showcase_entity.games_showcase_entity.field_showcase_ribbon
+field_name: field_showcase_ribbon
+entity_type: games_showcase_entity
+bundle: games_showcase_entity
+label: 'Showcase Ribbon'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      ribbon_labels: ribbon_labels
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

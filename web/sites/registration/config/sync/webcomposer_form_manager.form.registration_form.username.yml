@@ -1,0 +1,35 @@
+field_settings:
+  label: Username
+  placeholder: Username
+  annotation: 'Sample: Dafa12'
+field_validations:
+  required:
+    enable: 1
+    error_message: 'Field should be required'
+  alphanumeric:
+    enable: 1
+    error_message: 'Field should be alphanumeric'
+    parameters:
+      spaces: 0
+  numeric:
+    enable: 0
+    error_message: 'Field should be numeric'
+  no_symbols:
+    enable: 0
+    error_message: 'Field contains invalid special characters'
+  numeric_symbols:
+    enable: 0
+    error_message: 'Field contains invalid special characters'
+  email:
+    enable: 0
+    error_message: 'Field does not contain a valid email address'
+  min_length:
+    enable: 1
+    error_message: 'Minimum requirement not met'
+    parameters:
+      length: '3'
+  max_length:
+    enable: 1
+    error_message: 'Maximum requirement not met'
+    parameters:
+      length: '15'

@@ -55,8 +55,8 @@
  */
 
 // Webcomposer Demo Instances
-$sites['wc.drupal.dev'] = 'webcomposer';
-$sites['wc.drupal.local'] = 'webcomposer';
+$sites['demo.drupal.dev'] = 'webcomposer';
+$sites['demo.drupal.local'] = 'webcomposer';
 $sites['dev-admin.elysium-dfbt.com'] = 'webcomposer';
 
 // Entry page Instances
@@ -82,7 +82,7 @@ $sites['casino.drupal.dev'] = 'casino';
 $sites['keno.drupal.local'] = 'keno';
 $sites['keno.drupal.dev'] = 'keno';
 
-// Keno instance
+// Registration instance
 $sites['registration.drupal.local'] = 'registration';
 $sites['registration.drupal.dev'] = 'registration';
 
@@ -93,6 +93,10 @@ $sites['dev-casino.elysium-dfbt.com'] = 'casino-gold';
 $sites['dev-cms-casino.elysium-dfbt.com'] = 'casino-gold';
 $sites['dev-csngold.elysium-dfbt.com'] = 'casino-gold';
 $sites['dev-cms-csngold.elysium-dfbt.com'] = 'casino-gold';
+
+// Virtuals instance
+$sites['virtuals.drupal.local'] = 'virtuals';
+$sites['virtuals.drupal.dev'] = 'virtuals';
 
 // Owsports Site Instances
 $sites['ow-sports.drupal.local'] = 'ow-sports';

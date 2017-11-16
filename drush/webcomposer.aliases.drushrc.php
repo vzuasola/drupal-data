@@ -109,7 +109,7 @@ $aliases['entrypage'] = array (
 );
 
 $aliases['webcomposer'] = array (
-  'uri' => 'drupal.local',
+  'uri' => 'webcomposer.drupal.local',
   'root' => '/var/www/html/web-composer/drupal/web/',
   'path-aliases' => array(
     '%dump-dir' => '/tmp',
@@ -157,7 +157,7 @@ $aliases['entrypage'] = array (
     ),
   ),
 );
-  
+
 $aliases['entrypage'] = array (
   'uri' => 'entry.drupal.dev',
   'root' => '/var/www/html/web-composer/drupal/web/',
@@ -257,6 +257,83 @@ $aliases['registration'] = array (
     ),
   ),
 );
+
+$aliases['virtuals'] = array (
+  'uri' => 'virtuals.drupal.local',
+  'root' => '/var/www/html/web-composer/drupal/web/',
+  'path-aliases' => array(
+    '%dump-dir' => '/tmp',
+  ),
+  'source-command-specific' => array (
+    'sql-sync' => array (
+      'no-cache' => TRUE,
+      'structure-tables-key' => 'common',
+    ),
+  ),
+  // No need to modify the following settings
+  'command-specific' => array (
+    'sql-sync' => array (
+      'sanitize' => TRUE,
+      'no-ordered-dump' => TRUE,
+      'structure-tables' => array(
+       // You can add more tables which contain data to be ignored by the database dump
+        'common' => array(''),
+      ),
+    ),
+  ),
+);
+
+$aliases['ow-sports'] = array (
+  'uri' => 'ow-sports.drupal.local',
+  'root' => '/var/www/html/web-composer/drupal/web/',
+  'path-aliases' => array(
+    '%dump-dir' => '/tmp',
+  ),
+  'source-command-specific' => array (
+    'sql-sync' => array (
+      'no-cache' => TRUE,
+      'structure-tables-key' => 'common',
+    ),
+  ),
+  // No need to modify the following settings
+  'command-specific' => array (
+    'sql-sync' => array (
+      'sanitize' => TRUE,
+      'no-ordered-dump' => TRUE,
+      'structure-tables' => array(
+       // You can add more tables which contain data to be ignored by the database dump
+        'common' => array(''),
+      ),
+    ),
+  ),
+);
+
+
+$aliases['ow-sports'] = array (
+  'uri' => 'ow-sports.drupal.dev',
+  'root' => '/var/www/html/web-composer/drupal/web/',
+  'path-aliases' => array(
+    '%dump-dir' => '/tmp',
+  ),
+  'source-command-specific' => array (
+    'sql-sync' => array (
+      'no-cache' => TRUE,
+      'structure-tables-key' => 'common',
+    ),
+  ),
+  // No need to modify the following settings
+  'command-specific' => array (
+    'sql-sync' => array (
+      'sanitize' => TRUE,
+      'no-ordered-dump' => TRUE,
+      'structure-tables' => array(
+       // You can add more tables which contain data to be ignored by the database dump
+        'common' => array(''),
+      ),
+    ),
+  ),
+);
+
 
 
 $aliases['ow-sports'] = array (

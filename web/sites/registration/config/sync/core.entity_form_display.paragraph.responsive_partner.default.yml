@@ -55,6 +55,9 @@ content:
     third_party_settings: {  }
     type: image_image
     region: content
+  translation:
+    weight: 10
+    region: content
 hidden:
   created: true
   status: true

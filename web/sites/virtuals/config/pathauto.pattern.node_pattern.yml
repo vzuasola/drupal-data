@@ -1,0 +1,25 @@
+uuid: 4df40dcf-d0f9-4a00-9f03-afe183918527
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node_pattern
+label: 'node pattern'
+type: 'canonical_entities:node'
+pattern: '/[node:title]'
+selection_criteria:
+  3355d6b6-d94a-4f2b-99d0-ed692600aa62:
+    id: node_type
+    bundles:
+      game: game
+      page: page
+      promotion: promotion
+      vip_page: vip_page
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 3355d6b6-d94a-4f2b-99d0-ed692600aa62
+selection_logic: and
+weight: -5
+relationships: {  }

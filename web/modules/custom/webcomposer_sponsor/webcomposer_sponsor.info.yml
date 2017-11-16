@@ -1,5 +1,5 @@
 name: Webcomposer Sponsor
 type: module
-description: Standardized Sponsors saved to CMI
+description: Manages list of Sponsors
 core: 8.x
 package: Web Composer

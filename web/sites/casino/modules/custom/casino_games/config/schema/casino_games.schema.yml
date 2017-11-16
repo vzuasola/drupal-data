@@ -11,6 +11,9 @@ casino_games.games_configuration:
     game_info_text:
       type: label
       label: 'Game Info Link Text'
+    game_real_play_text:
+      type: label
+      label: 'Real Play Button Text'
     kebab_menu_text:
       type: label
       label: 'Category Kebab Menu Text'

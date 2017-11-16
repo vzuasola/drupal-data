@@ -22,8 +22,7 @@ use Drupal\taxonomy\Entity\Term;
  *   }
  * )
  */
-class DomainPlaceholderResource extends ResourceBase
-{
+class DomainPlaceholderResource extends ResourceBase {
   /**
    * @var string $currentLanguage
    *    Current language
@@ -101,8 +100,7 @@ class DomainPlaceholderResource extends ResourceBase
    * @throws \Symfony\Component\HttpKernel\Exception\HttpException
    *   Throws exception expected.
    */
-  public function get($domain)
-  {
+  public function get($domain) {
       $build = array(
         '#cache' => array(
           'max-age' => 0,
@@ -118,146 +116,145 @@ class DomainPlaceholderResource extends ResourceBase
       return (new ResourceResponse($data))->addCacheableDependency($build);
   }
 
-    /**
-     * Gets the field definition.
-     *
-     * @param <string> $domain The domain
-     *
-     * @throws \Symfony\Component\HttpKernel\Exception\NotFoundHttpException  (if term do not get loaded)
-     *
-     * @return array                                                          The field definition.
-     */
-    private function getFieldDefinition($domain)
-    {
-      $definition = array();
+  /**
+   * Gets the field definition.
+   *
+   * @param <string> $domain The domain
+   *
+   * @throws \Symfony\Component\HttpKernel\Exception\NotFoundHttpException  (if term do not get loaded)
+   *
+   * @return array                                                          The field definition.
+   */
+  private function getFieldDefinition($domain) {
+    $definition = array();
 
-      // You must to implement the logic of your REST Resource here.
-      $term = $this->entityTypeManager->getStorage('taxonomy_term')->loadByProperties(['name' => $domain]);
+    // You must to implement the logic of your REST Resource here.
+    $term = $this->entityTypeManager->getStorage('taxonomy_term')->loadByProperties(['name' => $domain]);
 
-      if (empty($term)) {
-          throw new NotFoundHttpException(t('Term namex with ID @id was not found', array('@id' => $domain)));
+    if (empty($term)) {
+        throw new NotFoundHttpException(t('Term namex with ID @id was not found', array('@id' => $domain)));
+    }
+
+    // Append master placeholder list
+    $definition = $this->getMasterPlaceholder();
+
+    $term = reset($term);
+
+    $group = $term->get('field_select_domain_group')->referencedEntities();
+    $domainGroupPlaceholder = $this->getGroupDomainPlaceholder($group[0]->id());
+
+    $definition = array_merge($definition, $domainGroupPlaceholder);
+    $getEntities = $term->get('field_add_placeholder')->referencedEntities();
+
+    foreach ($getEntities as $getEntity) {
+      $value = NULL;
+
+      if ($getEntity->hasTranslation($this->currentLanguage)) {
+        $translatedEntity = $getEntity->getTranslation($this->currentLanguage);
+
+        $value = $translatedEntity->field_default_value->value;
+        $definition[$translatedEntity->field_placeholder_key->value] = $translatedEntity->field_default_value->value;
       }
 
-      // Append master placeholder list
-      $definition = $this->getMasterPlaceholder();
+      if (empty($value)) {
+        // check the value in domain group
+        $domainGroup = 'domain_groups';
+        $fallback = $this->webcomposerPlaceholderFallback($domainGroup);
 
-      $term = reset($term);
+        $key = $getEntity->field_placeholder_key->value;
 
-      $group = $term->get('field_select_domain_group')->referencedEntities();
-      $domainGroupPlaceholder = $this->getGroupDomainPlaceholder($group[0]->id());
+        $checkIfKeyExits = array_key_exists($key, $fallback) ? true : false;
+        if ($checkIfKeyExits == true) {
+          $definition = array_merge($definition, $fallback);
+        }
 
-      $definition = array_merge($definition, $domainGroupPlaceholder);
-      $getEntities = $term->get('field_add_placeholder')->referencedEntities();
+        // check in master placeholder list
+        $masterPlaceholderList = 'master_placeholder';
+        $fallback = $this->webcomposerPlaceholderFallback($masterPlaceholderList);
+        $checkIfKeyExits = array_key_exists($key, $fallback) ? true : false;
+
+        if ($checkIfKeyExits == true) {
+          $definition = array_merge($definition, $fallback);
+        }
+      }
+    }
+
+    return $definition;
+  }
+
+  /**
+   * Returns all the placeholder list from domain group and placeholder list
+   *
+   * @param <index> $key The key
+   *
+   * @return <array> fallback array of domain and master placeholder list
+   */
+  private function webcomposerPlaceholderFallback($vid) {
+    $field = !empty(($vid == 'domain_groups')) ? 'field_add_placeholder' : 'field_add_master_placeholder';
+    $definition = array();
+    $query = $this->entityQuery->get('taxonomy_term', 'AND');
+    $query->condition('vid', "$vid");
+    $tids = $query->execute();
+    $terms = Term::loadMultiple($tids);
+
+    if ($terms) {
+      $term = reset($terms);
+      $getEntities = $term->get("$field")->referencedEntities();
 
       foreach ($getEntities as $getEntity) {
-        $value = NULL;
+        $key = $getEntity->field_placeholder_key->value;
+        $value = $getEntity->field_default_value->value;
 
-        if ($getEntity->hasTranslation($this->currentLanguage)) {
-          $translatedEntity = $getEntity->getTranslation($this->currentLanguage);
+        $definition[$key] = $value;
+      }
+    }
 
-          $value = $translatedEntity->field_default_value->value;
-          $definition[$translatedEntity->field_placeholder_key->value] = $translatedEntity->field_default_value->value;
-        }
+    return $definition;
+  }
 
-        if (empty($value)) {
-          // check the value in domain group
-          $domainGroup = 'domain_groups';
-          $fallback = $this->webcomposerPlaceholderFallback($domainGroup);
+  /**
+   * Get Master Placeholder Lists
+   */
+  private function getMasterPlaceholder() {
+    $masterLists = [];
+    $placeholders = \Drupal::entityManager()->getStorage('taxonomy_term')->loadTree('master_placeholder');
 
-          $key = $getEntity->field_placeholder_key->value;
+    foreach ($placeholders as $value) {
+      $token = taxonomy_term_load($value->tid);
 
-          $checkIfKeyExits = array_key_exists($key, $fallback) ? true : false;
-          if ($checkIfKeyExits == true) {
-            $definition = array_merge($definition, $fallback);
-          }
+      if ($token->hasTranslation($this->currentLanguage)) {
+        $getTranslation = $token->getTranslation($this->currentLanguage);
+        $paragraph = $getTranslation->get('field_add_master_placeholder')->getValue(FALSE)[0]['target_id'];
+        $paragraphs = \Drupal::entityManager()->getStorage('paragraph')->load($paragraph);
 
-          // check in master placeholder list
-          $masterPlaceholderList = 'master_placeholder';
-          $fallback = $this->webcomposerPlaceholderFallback($masterPlaceholderList);
-          $checkIfKeyExits = array_key_exists($key, $fallback) ? true : false;
-
-          if ($checkIfKeyExits == true) {
-            $definition = array_merge($definition, $fallback);
-          }
+        if ($paragraphs->hasTranslation($this->currentLanguage)) {
+          $translated = $paragraphs->getTranslation($this->currentLanguage);
+          $placeholder_key = $translated->field_placeholder_key->value;
+          $placeholder_desc = $translated->field_default_value->value;
+          $masterLists[$placeholder_key] = $placeholder_desc;
         }
       }
-
-      return $definition;
     }
 
-    /**
-     * Returns all the placeholder list from domain group and placeholder list
-     *
-     * @param <index> $key The key
-     *
-     * @return <array> fallback array of domain and master placeholder list
-     */
-    private function webcomposerPlaceholderFallback($vid)
-    {
-      $field = !empty(($vid == 'domain_groups')) ? 'field_add_placeholder' : 'field_add_master_placeholder';
-      $definition = array();
-      $query = $this->entityQuery->get('taxonomy_term', 'AND');
-      $query->condition('vid', "$vid");
-      $tids = $query->execute();
-      $terms = Term::loadMultiple($tids);
+    return $masterLists;
+  }
 
-      if ($terms) {
-        $term = reset($terms);
-        $getEntities = $term->get("$field")->referencedEntities();
+  /**
+   * @var int $tid Taxonomy term ID
+   */
+  private function getGroupDomainPlaceholder($tid) {
+    $placeHolder = [];
 
-        foreach ($getEntities as $getEntity) {
-          $key = $getEntity->field_placeholder_key->value;
-          $value = $getEntity->field_default_value->value;
+    $term = Term::load($tid);
+    $termEntities = $term->get('field_add_placeholder')->referencedEntities();
 
-          $definition[$key] = $value;
-        }
+    foreach ($termEntities as $termEntity) {
+      if ($termEntity->hasTranslation($this->currentLanguage)) {
+        $translatedEntity = $termEntity->getTranslation($this->currentLanguage);
+        $placeHolder[$translatedEntity->field_placeholder_key->value] = $translatedEntity->field_default_value->value;
       }
-
-      return $definition;
     }
 
-    /**
-     * Get Master Placeholder Lists
-     */
-    private function getMasterPlaceholder()
-    {
-      $masterLists = [];
-      $placeholders = \Drupal::entityManager()->getStorage('taxonomy_term')->loadTree('master_placeholder');
-      foreach ($placeholders as $value) {
-        $token = taxonomy_term_load($value->tid);
-        if ($token->hasTranslation($this->currentLanguage)) {
-          $getTranslation = $token->getTranslation($this->currentLanguage);
-          $paragraph = $getTranslation->get('field_add_master_placeholder')->getValue(FALSE)[0]['target_id'];
-          $paragraphs = \Drupal::entityManager()->getStorage('paragraph')->load($paragraph);
-          if ($paragraphs->hasTranslation($this->currentLanguage)) {
-            $translated = $paragraphs->getTranslation($this->currentLanguage);
-            $placeholder_key = $translated->field_placeholder_key->value;
-            $placeholder_desc = $translated->field_default_value->value;
-            $masterLists[$placeholder_key] = $placeholder_desc;
-         }
-       }
-    }
-      return $masterLists;
-    }
-
-
-    /**
-     * @var int $tid Taxonomy term ID
-     */
-    private function getGroupDomainPlaceholder($tid)
-    {
-      $placeHolder = [];
-
-      $term = Term::load($tid);
-      $termEntities = $term->get('field_add_placeholder')->referencedEntities();
-
-      foreach ($termEntities as $termEntity) {
-        if ($termEntity->hasTranslation($this->currentLanguage)) {
-          $translatedEntity = $termEntity->getTranslation($this->currentLanguage);
-          $placeHolder[$translatedEntity->field_placeholder_key->value] = $translatedEntity->field_default_value->value;
-        }
-      }
-
-      return $placeHolder;
-    }
+    return $placeHolder;
+  }
 }
