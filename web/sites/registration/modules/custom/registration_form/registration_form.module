@@ -15,7 +15,7 @@ function registration_form_webcomposer_form_validation_alter(&$validations) {
     'description' => 'Validate username if already exist',
     'error' => 'Username not available',
   ];
-  $validations['email_avilability'] = [
+  $validations['email_availability'] = [
     'title' => 'Email Availability',
     'description' => 'Validate user email if already exist',
     'error' => 'Email not available',
