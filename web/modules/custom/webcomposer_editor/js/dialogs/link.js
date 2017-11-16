@@ -17,15 +17,15 @@ CKEDITOR.dialog.add("link", function(editor) {
                 type: "text",
                 label: "Link",
                 id: "edp-URL",
-                validate: CKEDITOR.dialog.validate.regex(/^(\/|http(|s)|mailto\:|\#).*/i, "Please enter a valid url." ),
+                validate: CKEDITOR.dialog.validate.regex(/^(\/|http(|s)|mailto\:|{domain\:|\#).*/i, "Please enter a valid url." ),
                 setup: function(data) {
                     this.setValue(data.href);
                 },
                 commit: function(data) {
                     var url = this.getValue();
-                    if (/^(http(|s)|\#)/.test(url.toLowerCase()) == false) {
+                    if (/^(http(|s)|\#)/.test(url.toLowerCase()) == false && /^{domain:/.test(url.toLowerCase()) == false) {
                         var segments = url.replace(/^\/|\/$/g, '').split('/');
-                        if (segments && editor.config.allowedLanguages.indexOf(segments[0]) == -1) {
+                        if (segments && editor.config.allowedLanguages.indexOf(segmentss[0]) == -1) {
                             url = '/' + editor.config.language + '/' + editor.config.site + url;
                         }
                     }
