@@ -25,7 +25,7 @@ CKEDITOR.dialog.add("link", function(editor) {
                     var url = this.getValue();
                     if (/^(http(|s)|\#)/.test(url.toLowerCase()) == false && /^{domain:/.test(url.toLowerCase()) == false) {
                         var segments = url.replace(/^\/|\/$/g, '').split('/');
-                        if (segments && editor.config.allowedLanguages.indexOf(segmentss[0]) == -1) {
+                        if (segments && editor.config.allowedLanguages.indexOf(segments[0]) == -1) {
                             url = '/' + editor.config.language + '/' + editor.config.site + url;
                         }
                     }
