@@ -1,6 +1,8 @@
 field_settings:
   label: 'Bonus Code'
   placeholder: 'Bonus Code'
+  annotation: ''
+  is_hidden: 0
 field_validations:
   required:
     enable: 0
