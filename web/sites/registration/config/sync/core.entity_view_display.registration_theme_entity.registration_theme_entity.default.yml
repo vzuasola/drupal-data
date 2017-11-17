@@ -3,18 +3,21 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.registration_theme_entity.registration_theme_entity.field_asterisk_color
     - field.field.registration_theme_entity.registration_theme_entity.field_background_color
     - field.field.registration_theme_entity.registration_theme_entity.field_background_image
     - field.field.registration_theme_entity.registration_theme_entity.field_banner_font_color
     - field.field.registration_theme_entity.registration_theme_entity.field_banner_highlight
-    - field.field.registration_theme_entity.registration_theme_entity.field_downloadable_client
+    - field.field.registration_theme_entity.registration_theme_entity.field_error_color
     - field.field.registration_theme_entity.registration_theme_entity.field_form_font_color
     - field.field.registration_theme_entity.registration_theme_entity.field_is_legacy
+    - field.field.registration_theme_entity.registration_theme_entity.field_link_color
     - field.field.registration_theme_entity.registration_theme_entity.field_login_destination_url
     - field.field.registration_theme_entity.registration_theme_entity.field_registration_button_font_c
     - field.field.registration_theme_entity.registration_theme_entity.field_registration_button_form_c
     - field.field.registration_theme_entity.registration_theme_entity.field_registration_button_form_h
     - field.field.registration_theme_entity.registration_theme_entity.field_registration_theme_code
+    - field.field.registration_theme_entity.registration_theme_entity.field_separator_color
     - field.field.registration_theme_entity.registration_theme_entity.field_steptwo_banner
     - field.field.registration_theme_entity.registration_theme_entity.field_steptwo_content
     - field.field.registration_theme_entity.registration_theme_entity.field_success_message
@@ -29,6 +32,15 @@ targetEntityType: registration_theme_entity
 bundle: registration_theme_entity
 mode: default
 content:
+  field_asterisk_color:
+    weight: 17
+    label: above
+    settings:
+      format: hex
+      opacity: '1'
+    third_party_settings: {  }
+    type: color_field_formatter_text
+    region: content
   field_background_color:
     weight: 4
     label: above
@@ -65,15 +77,14 @@ content:
     third_party_settings: {  }
     type: color_field_formatter_text
     region: content
-  field_downloadable_client:
-    weight: 15
+  field_error_color:
+    weight: 16
     label: above
     settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
+      format: hex
+      opacity: '1'
     third_party_settings: {  }
-    type: boolean
+    type: color_field_formatter_text
     region: content
   field_form_font_color:
     weight: 5
@@ -93,6 +104,15 @@ content:
       format_custom_true: ''
     third_party_settings: {  }
     type: boolean
+    region: content
+  field_link_color:
+    weight: 15
+    label: above
+    settings:
+      format: hex
+      opacity: '1'
+    third_party_settings: {  }
+    type: color_field_formatter_text
     region: content
   field_login_destination_url:
     weight: 3
@@ -140,6 +160,15 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_separator_color:
+    weight: 18
+    label: above
+    settings:
+      format: hex
+      opacity: '1'
+    third_party_settings: {  }
+    type: color_field_formatter_text
     region: content
   field_steptwo_banner:
     weight: 13
