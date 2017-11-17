@@ -8,6 +8,7 @@ dependencies:
     - field.field.registration_theme_entity.registration_theme_entity.field_background_image
     - field.field.registration_theme_entity.registration_theme_entity.field_banner_font_color
     - field.field.registration_theme_entity.registration_theme_entity.field_banner_highlight
+    - field.field.registration_theme_entity.registration_theme_entity.field_downloadable_client
     - field.field.registration_theme_entity.registration_theme_entity.field_error_color
     - field.field.registration_theme_entity.registration_theme_entity.field_form_font_color
     - field.field.registration_theme_entity.registration_theme_entity.field_is_legacy
@@ -36,7 +37,7 @@ third_party_settings:
         - field_is_legacy
         - field_login_destination_url
       parent_name: ''
-      weight: 2
+      weight: 3
       format_type: details
       format_settings:
         id: ''
@@ -57,7 +58,7 @@ third_party_settings:
         - field_registration_button_form_h
         - field_registration_button_form_c
       parent_name: ''
-      weight: 3
+      weight: 4
       format_type: details
       format_settings:
         id: ''
@@ -70,7 +71,7 @@ third_party_settings:
         - field_banner_highlight
         - field_banner_font_color
       parent_name: ''
-      weight: 4
+      weight: 5
       format_type: details
       format_settings:
         id: ''
@@ -84,7 +85,7 @@ third_party_settings:
         - field_steptwo_content
         - field_steptwo_banner
       parent_name: ''
-      weight: 20
+      weight: 6
       format_type: details
       format_settings:
         id: ''
@@ -130,6 +131,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: color_field_widget_html5
+    region: content
+  field_downloadable_client:
+    weight: 2
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
     region: content
   field_error_color:
     weight: 8
