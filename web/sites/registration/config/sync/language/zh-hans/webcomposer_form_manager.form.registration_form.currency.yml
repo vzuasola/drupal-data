@@ -1,0 +1,21 @@
+field_settings:
+  label: 货币
+  placeholder: 'Select your 货币...'
+  choices: "117|RMB\r\n2|USD\r\n1|EUR\r\n3|GBP\r\n111|IDR\r\n104|KRW\r\n113|JPY\r\n102|MYR\r\n109|SGD\r\n103|THB\r\n108|TWD\r\n116|RUB\r\n105|VND\r\n112|INR\r\n114|PLN\r\n115|RON"
+field_validations:
+  required:
+    error_message: 'Field should be required'
+  alphanumeric:
+    error_message: 'Field should be alphanumeric'
+  numeric:
+    error_message: 'Field should be numeric'
+  no_symbols:
+    error_message: 'Field contains invalid special characters'
+  numeric_symbols:
+    error_message: 'Field contains invalid special characters'
+  email:
+    error_message: 'Field does not contain a valid email address'
+  min_length:
+    error_message: 'Minimum requirement not met'
+  max_length:
+    error_message: 'Maximum requirement not met'

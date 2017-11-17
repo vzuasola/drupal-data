@@ -35,7 +35,6 @@ use Symfony\Component\HttpKernel\Exception\HttpException;
  * )
  */
 class ContactMessageResource extends ResourceBase {
-
   /**
    * A curent user instance.
    *

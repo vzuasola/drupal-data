@@ -1,0 +1,25 @@
+uuid: 43be828e-d13f-4a18-b102-711011c80e69
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_link_target
+    - paragraphs.paragraphs_type.sponsorship
+  module:
+    - options
+_core:
+  default_config_hash: XikMcFO8eimz5-aWvAWOX4_xOIISxCrAmRePfPui3vc
+id: paragraph.sponsorship.field_link_target
+field_name: field_link_target
+entity_type: paragraph
+bundle: sponsorship
+label: 'Link Target'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: _self
+default_value_callback: ''
+settings: {  }
+field_type: list_string
