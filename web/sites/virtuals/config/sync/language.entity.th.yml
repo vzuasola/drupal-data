@@ -11,5 +11,5 @@ third_party_settings:
 id: th
 label: 'Thai Language'
 direction: ltr
-weight: -7
+weight: -8
 locked: false
