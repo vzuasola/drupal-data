@@ -1,0 +1,6 @@
+content_types:
+  page:
+    label: '기본 페이지'
+sitemap_title: 사이트맵
+sitemap_basic_pages_label: 'Basic Page'
+sitemap_links: "홈|/\r\n프로모션|/promotions\r\n모바일|/{domain:entry}/{domain:lang_token}/mobile{tracking.token}"
