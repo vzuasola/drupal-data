@@ -1,7 +1,0 @@
-name: Games Search Recommendation
-type: module
-description: Casino Games Search Recommendation Configuration
-core: 8.x
-package: Custom
-dependencies:
-  - casino_games

@@ -1,5 +1,0 @@
-casino_games_search_recommendation.recommendation_configuration:
-  title: 'Games Custom Configuration'
-  base_route_name: casino_games_search_recommendation.recommendation_configuration
-  names:
-    - 'casino_games_search_recommendation.recommendation_configuration'

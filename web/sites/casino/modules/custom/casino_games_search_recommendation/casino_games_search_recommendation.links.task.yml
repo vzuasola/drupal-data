@@ -1,4 +1,0 @@
-casino_games_search_recommendation.recommendation_configuration_tab:
-  route_name: casino_games_search_recommendation.recommendation_configuration
-  title: 'Configure Games Search Recommendation'
-  base_route: casino_games_search_recommendation.recommendation_configuration

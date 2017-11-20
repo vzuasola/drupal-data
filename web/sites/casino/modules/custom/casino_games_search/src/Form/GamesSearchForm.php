@@ -1,33 +1,33 @@
 <?php
 
-namespace Drupal\casino_games_search_recommendation\Form;
+namespace Drupal\casino_games_search\Form;
 
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\file\Entity\File;
 
-class GamesRecommendationForm extends ConfigFormBase {
+class GamesSearchForm extends ConfigFormBase {
   /**
    * {@inheritdoc}
    */
   protected function getEditableConfigNames() {
-    return ['casino_games_search_recommendation.recommendation_configuration'];
+    return ['casino_games_search.search_configuration'];
   }
 
   /**
    * {@inheritdoc}
    */
   public function getFormId() {
-    return 'casino_games_search_recommendation.recommendation_configuration_form';
+    return 'casino_games_search.search_configuration_form';
   }
 
   /**
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    $config = $this->config('casino_games_search_recommendation.recommendation_configuration');
+    $config = $this->config('casino_games_search.search_configuration');
 
-    $form['recommendation_configuration_tab'] = array(
+    $form['search_configuration_tab'] = array(
       '#type' => 'vertical_tabs',
       '#title' => t('Settings'),
     );
@@ -36,15 +36,7 @@ class GamesRecommendationForm extends ConfigFormBase {
       '#type' => 'details',
       '#title' => $this->t('Recommendation Settings'),
       '#collapsible' => TRUE,
-      '#group' => 'recommendation_configuration_tab'
-    );
-
-    $form['recommendations']['recommendation_category_tid'] = array(
-      '#type' => 'textfield',
-      '#title' => $this->t('Recommendation Category Taxonomy ID'),
-      '#description' => $this->t('Recommendation Category Taxonomy ID'),
-      '#default_value' => $config->get('recommendation_category_tid'),
-      '#required' => TRUE,
+      '#group' => 'search_configuration_tab'
     );
 
     $recommendation_message = $config->get('recommendation_message');
@@ -77,13 +69,12 @@ class GamesRecommendationForm extends ConfigFormBase {
     parent::submitForm($form, $form_state);
 
     $keys = array(
-      'recommendation_category_tid',
       'recommendation_message',
       'recommendation_message_negative',
     );
 
     foreach ($keys as $key) {
-      $this->config('casino_games_search_recommendation.recommendation_configuration')->set($key, $form_state->getValue($key))->save();
+      $this->config('casino_games_search.search_configuration')->set($key, $form_state->getValue($key))->save();
     }
   }
 

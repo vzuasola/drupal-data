@@ -4,6 +4,6 @@
 /**
  * Implements hook_uninstall
  */
-function casino_games_search_recommendation_uninstall() {
+function casino_games_search_uninstall() {
   // Do nothing
 }

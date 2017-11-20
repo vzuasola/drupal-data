@@ -6,7 +6,7 @@ module:
   breakpoint: 0
   casino_games: 0
   casino_games_page_background: 0
-  casino_games_search_recommendation: 0
+  casino_games_search: 0
   ckeditor: 0
   ckeditor_accordion: 0
   ckeditor_codemirror: 0
