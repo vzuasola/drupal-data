@@ -16,3 +16,11 @@ marketing_script_entity.admin.structure.settings:
   description: 'Configure Marketing Script entities'
   route_name: marketing_script_entity.settings
   parent: webcomposer_marketing_script.list
+
+# AdElement menu items definition 
+webcomposer_marketing_script.providers_adelement_settings_form:
+  title: AdElement Configuration
+  description: 'Configure AdElement settings and tools'
+  route_name: webcomposer_marketing_script.providers_adelement_settings_form
+  parent: webcomposer_marketing_script.list
+  weight: 3
