@@ -5,3 +5,23 @@ webcomposer_marketing_script.admin_settings:
     _title: 'Webcomposer Marketing Script'
   requirements:
     _permission: 'administer site configuration'
+
+webcomposer_marketing_script.providers_adelement_settings_form:
+  path: 'admin/config/webcomposer/marketing_script/providers/adelement/settings'
+  defaults:
+    _form: 'Drupal\webcomposer_marketing_script\Form\Providers\AdElement\AdElementSettingsForm'
+    _title: 'AdElement Settings'
+  requirements:
+    _permission: 'administer marketing script entities'
+  options:
+    _admin_route: TRUE
+
+webcomposer_marketing_script.providers_adelement_parser_form:
+  path: 'admin/config/webcomposer/marketing_script/providers/adelement/parser'
+  defaults:
+    _form: 'Drupal\webcomposer_marketing_script\Form\Providers\AdElement\AdElementParser'
+    _title: 'AdElement Parser'
+  requirements:
+    _permission: 'administer marketing script entities'
+  options:
+    _admin_route: TRUE
