@@ -73,7 +73,7 @@ class AdElementParser extends ConfigFormBase {
 
   private  function safe_b64encode($string) {
       $data = base64_encode($string);
-      $data = str_replace(array('+', '/', '='),array('-','_',''),$data);
+      $data = str_replace(array('+', '/', '='), array('-', '_', ''), $data);
       return $data;
   }
 
