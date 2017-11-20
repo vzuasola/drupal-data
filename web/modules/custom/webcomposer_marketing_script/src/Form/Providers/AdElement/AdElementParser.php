@@ -57,11 +57,10 @@ class AdElementParser extends ConfigFormBase {
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $encrypted = explode(PHP_EOL, trim($form_state->getValue('decrypt')));
-    if (!empty($encrypted) && count($encrypted) > 1) {
+    if (!empty($encrypted) && count($encrypted) > 0) {
         $data = "Encrypted Username,Decrypted Username\n";
         foreach ($encrypted as $username) {
-            $eusername = $this->encode(trim($username), self::SALT);
-            $data .= trim($username) . ',' . $this->decode(trim($eusername), self::SALT) . "\n";
+            $data .= trim($username) . ',' . $this->decode(trim($username), self::SALT) . "\n";
         }
 
         header('Content-type: text/csv');
