@@ -71,8 +71,7 @@ class GamesConfigurationForm extends ConfigFormBase {
     }
   }
 
-  private function gamePageheaderSection(&$form, $config)
-  {
+  private function gamePageheaderSection(&$form, $config) {
     $form['header_group'] = array(
       '#type' => 'details',
       '#title' => $this->t('Game Page Header Icons'),
@@ -124,8 +123,7 @@ class GamesConfigurationForm extends ConfigFormBase {
     );
   }
 
-  private function gameCategorySection(&$form, $config)
-  {
+  private function gameCategorySection(&$form, $config) {
     $form['category_group'] = array(
       '#type' => 'details',
       '#title' => $this->t('Games Category Settings'),
@@ -177,8 +175,7 @@ class GamesConfigurationForm extends ConfigFormBase {
     );
   }
 
-  private function gamsThumbnailSection(&$form, $config)
-  {
+  private function gamsThumbnailSection(&$form, $config) {
     $form['thumbnail_group'] = array(
       '#type' => 'details',
       '#title' => $this->t('Game Thumbnail Settings'),
@@ -218,8 +215,7 @@ class GamesConfigurationForm extends ConfigFormBase {
     );
   }
 
-  private function gamePageLightboxSection(&$form, $config)
-  {
+  private function gamePageLightboxSection(&$form, $config) {
     $form['lightbox_group'] = array(
       '#type' => 'details',
       '#title' => $this->t('Game Page Lightbox'),
