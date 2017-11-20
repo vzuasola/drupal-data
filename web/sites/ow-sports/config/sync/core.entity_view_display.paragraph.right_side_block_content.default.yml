@@ -3,21 +3,31 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.right_side_block_content.field_blurb_content
     - field.field.paragraph.right_side_block_content.field_enable
     - field.field.paragraph.right_side_block_content.field_image
     - field.field.paragraph.right_side_block_content.field_link
     - field.field.paragraph.right_side_block_content.field_link_target
+    - field.field.paragraph.right_side_block_content.field_link_title
     - field.field.paragraph.right_side_block_content.field_title
     - paragraphs.paragraphs_type.right_side_block_content
   module:
     - image
     - link
     - options
+    - text
 id: paragraph.right_side_block_content.default
 targetEntityType: paragraph
 bundle: right_side_block_content
 mode: default
 content:
+  field_blurb_content:
+    weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
   field_enable:
     weight: 4
     label: above
@@ -55,6 +65,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: list_default
+    region: content
+  field_link_title:
+    weight: 5
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
     region: content
   field_title:
     weight: 0
