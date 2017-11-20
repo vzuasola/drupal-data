@@ -2,14 +2,13 @@
 
 namespace Drupal\webcomposer_marketing_script\Form\Providers\AdElement;
 
-use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\webcomposer_marketing_script\Form\Providers\MarketingScriptProviderBase;
 
 /**
  * AdElement Settings Class.
  */
-class AdElementSettingsForm extends ConfigFormBase {
-
+class AdElementSettingsForm extends MarketingScriptProviderBase {
   /**
    * {@inheritdoc}
    */
@@ -20,30 +19,22 @@ class AdElementSettingsForm extends ConfigFormBase {
   /**
    * {@inheritdoc}
    */
-  protected function getEditableConfigNames() {
-    return ['webcomposer_marketing_script.providers_adelement_settings'];
+  protected function getMarketingScriptConfigName() {
+    return 'adelement';
   }
 
   /**
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    // Get Form configuration.
-    $config = $this->config('webcomposer_marketing_script.providers_adelement_settings');
-
-    $form['switch'] = [
-      '#type' => 'checkbox',
-      '#title' => $this->t('Enable AdElement'),
-      '#description' => $this->t('This will enable/disable the AdElement retargeting'),
-      '#default_value' => $config->get('switch')
-    ];
+    $form = parent::buildForm($form, $form_state);
 
     $form['depth'] = [
-      '#type' => 'textfield',
+      '#type' => 'number',
       '#title' => $this->t('Account Creation Confirmation Depth'),
       '#description' => $this->t('Depth value for account creation confirmation page'),
       '#size' => 255,
-      '#default_value' => $config->get('depth'),
+      '#default_value' => $this->getConfig('depth'),
     ];
 
     $form['page'] = [
@@ -51,7 +42,7 @@ class AdElementSettingsForm extends ConfigFormBase {
       '#title' => t('Account Creation Confirmation Page Path'),
       '#description' => $this->t('Page path of account creation confirmation page'),
       '#size' => 255,
-      '#default_value' => $config->get('page'),
+      '#default_value' => $this->getConfig('page'),
     ];
 
     $form['actions'] = ['#type' => 'actions'];
@@ -66,23 +57,13 @@ class AdElementSettingsForm extends ConfigFormBase {
   }
 
   /**
-   * Implements a form submit handler.
-   *
-   * @param array $form
-   *   The render array of the currently built form.
-   * @param \Drupal\Core\Form\FormStateInterface $form_state
-   *   Object describing the current state of the form.
+   * {@inheritdoc}
    */
-  public function submitForm(array &$form, FormStateInterface $form_state) {
-    $keys = [
-      'switch',
+  protected function submitValues()
+  {
+    return [
       'depth',
       'page'
     ];
-
-    foreach ($keys as $key) {
-      $this->config('webcomposer_marketing_script.providers_adelement_settings')->set($key, $form_state->getValue($key))->save();
-    }
   }
-
 }

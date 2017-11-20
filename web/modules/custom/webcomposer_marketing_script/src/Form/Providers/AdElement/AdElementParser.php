@@ -68,6 +68,8 @@ class AdElementParser extends ConfigFormBase {
         header('Content-Disposition: attachment; filename="Player-List(' . date("Y-m-d") . ').csv"');
         echo $data;
         exit();
+    } else {
+      drupal_set_message('Decryption failed. Invalid username values.', 'error');
     }
   }
 
