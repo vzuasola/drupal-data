@@ -22,6 +22,7 @@ dependencies:
     - field.field.registration_theme_entity.registration_theme_entity.field_steptwo_banner
     - field.field.registration_theme_entity.registration_theme_entity.field_steptwo_content
     - field.field.registration_theme_entity.registration_theme_entity.field_success_message
+    - field.field.registration_theme_entity.registration_theme_entity.field_success_message_color
   module:
     - color_field
     - image
@@ -204,6 +205,15 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_success_message_color:
+    weight: 20
+    label: above
+    settings:
+      format: hex
+      opacity: '1'
+    third_party_settings: {  }
+    type: color_field_formatter_text
     region: content
   name:
     label: above
