@@ -1,0 +1,15 @@
+casino_games_search_recommendation.recommendation_configuration:
+  type: config_object
+  label: 'Games Search Recommendation Custom Configurations'
+  mapping:
+    recommendation_category_tid:
+      type: label
+      label: 'Recommendation Category Taxonomy ID'
+    recommendation_message:
+      type: text_format
+      label: 'Recommendation Message'
+      translatable: true
+    recommendation_message_negative:
+      type: text_format
+      label: 'Recommendation Not Set Message'
+      translatable: true
