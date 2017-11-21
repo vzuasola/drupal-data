@@ -10,3 +10,5 @@ domain_groups: 1
 domain_groups_message: 'Term @term already exists in vocabulary @vocabulary.'
 games_category: 1
 games_category_message: 'Term @term already exists in vocabulary @vocabulary.'
+game_filter: 1
+game_filter_message: 'Term @term already exists in vocabulary @vocabulary.'

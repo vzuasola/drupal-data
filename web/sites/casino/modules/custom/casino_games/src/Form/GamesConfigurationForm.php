@@ -36,6 +36,7 @@ class GamesConfigurationForm extends ConfigFormBase {
     $this->gameCategorySection($form, $config);
     $this->gamsThumbnailSection($form, $config);
     $this->gamePageLightboxSection($form, $config);
+    $this->gameFilterSection($form, $config);
 
     return parent::buildForm($form, $form_state);
   }
@@ -64,6 +65,10 @@ class GamesConfigurationForm extends ConfigFormBase {
       'game_promotion_link_target',
       'game_real_play_text',
       'game_real_play_disabled',
+      'filter_icon',
+      'filter_header',
+      'filter_submit',
+      'filter_clear',
     );
 
     foreach ($keys as $key) {
@@ -269,6 +274,47 @@ class GamesConfigurationForm extends ConfigFormBase {
       '#description' => $this->t('The text that will be displayed as content of the lightbox.'),
       '#default_value' => $html5LightboxContent['value'],
       '#format' => $html5LightboxContent['format'],
+      '#required' => TRUE,
+    );
+  }
+
+  private function gameFilterSection(&$form, $config){
+    $form['filter_group'] = array(
+      '#type' => 'details',
+      '#title' => $this->t('Game Filter'),
+      '#collapsible' => TRUE,
+      '#group' => 'games_configuration_tab',
+    );
+
+    $form['filter_group']['filter_icon'] = array(
+      '#type' => 'textfield',
+      '#title' => $this->t('Game Filter Icon Text'),
+      '#default_value' => $config->get('filter_icon'),
+      '#description' => $this->t('The test to display in the front'),
+        '#required' => TRUE,
+    );
+
+    $form['filter_group']['filter_header'] = array(
+      '#type' => 'textfield',
+      '#title' => $this->t('Game Filter Lightbox Header Text'),
+      '#description' => $this->t('The text to display on the header of lightbox'),
+      '#default_value' => $config->get('filter_header'),
+      '#required' => TRUE,
+    );
+
+    $form['filter_group']['filter_submit'] = array(
+      '#type' => 'textfield',
+      '#title' => $this->t('Game Filter Lightbox Submit Botton Text'),
+      '#description' => $this->t('The text to display on the submit botton of filter lightbox'),
+      '#default_value' => $config->get('filter_submit'),
+      '#required' => TRUE,
+    );
+
+    $form['filter_group']['filter_clear'] = array(
+      '#type' => 'textfield',
+      '#title' => $this->t('Game Filter Lightbox Clear Botton Text'),
+      '#description' => $this->t('The text to display on clear botton of filter lightbox'),
+      '#default_value' => $config->get('filter_clear'),
       '#required' => TRUE,
     );
   }
