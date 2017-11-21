@@ -1,8 +1,8 @@
 field_settings:
-  label: 奖金代码
-  placeholder: 'Bonus Code'
-  annotation: ''
-  is_hidden: 1
+  label: 'Date of Birth'
+  placeholder: MM/DD/YYYY
+  date-format: MM/DD/YYYY
+  annotation: 'Should be at least 18 years old.'
 field_validations:
   required:
     error_message: 'Field should be required'
@@ -20,3 +20,9 @@ field_validations:
     error_message: 'Minimum requirement not met'
   max_length:
     error_message: 'Maximum requirement not met'
+  username_availability:
+    error_message: 'Username not available'
+  email_availability:
+    error_message: 'Email not available'
+  invalid_words:
+    error_message: 'Invalid/not allowed characters'

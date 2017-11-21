@@ -34,3 +34,9 @@ field_validations:
     error_message: 'Maximum requirement not met'
     parameters:
       length: '10'
+  username_availability:
+    enable: 0
+    error_message: 'Username not available'
+  email_availability:
+    enable: 0
+    error_message: 'Email not available'
