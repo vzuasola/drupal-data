@@ -1,0 +1,7 @@
+name: Games Search
+type: module
+description: Casino Games Search Configuration
+core: 8.x
+package: Custom
+dependencies:
+  - casino_games

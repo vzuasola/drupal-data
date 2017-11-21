@@ -1,0 +1,12 @@
+casino_games_search.search_configuration:
+  type: config_object
+  label: 'Games Search Custom Configurations'
+  mapping:
+    recommendation_message:
+      type: text_format
+      label: 'Recommendation Message'
+      translatable: true
+    recommendation_message_negative:
+      type: text_format
+      label: 'Recommendation Not Set Message'
+      translatable: true
