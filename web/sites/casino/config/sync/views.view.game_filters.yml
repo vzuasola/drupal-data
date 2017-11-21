@@ -9,6 +9,7 @@ dependencies:
     - serialization
     - taxonomy
     - user
+    - webcomposer_rest_extra
 id: game_filters
 label: 'Game - Filters'
 module: views
@@ -29,7 +30,7 @@ display:
         options:
           perm: 'access content'
       cache:
-        type: tag
+        type: none
         options: {  }
       query:
         type: views_query
@@ -81,7 +82,7 @@ display:
           id: tid
           table: taxonomy_term_field_data
           field: tid
-          relationship: parent
+          relationship: none
           group_type: group
           admin_label: ''
           label: ''
@@ -147,7 +148,7 @@ display:
           id: name_1
           table: taxonomy_term_field_data
           field: name
-          relationship: parent
+          relationship: none
           group_type: group
           admin_label: ''
           label: ''
@@ -417,18 +418,15 @@ display:
         options:
           offset: 0
       style:
-        type: serializer
+        type: taxonomy_list_serializer
         options:
-          grouping: {  }
           uses_fields: false
-          formats: {  }
+          formats:
+            json: json
+            xml: xml
       row:
-        type: data_field
-        options:
-          field_options:
-            name:
-              alias: ''
-              raw_output: false
+        type: data_entity
+        options: {  }
     cache_metadata:
       max-age: -1
       contexts:
