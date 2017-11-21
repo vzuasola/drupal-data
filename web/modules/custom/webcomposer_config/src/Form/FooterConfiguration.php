@@ -75,6 +75,16 @@ class FooterConfiguration extends ConfigFormBase {
       ],
     ];
 
+    $form['partners_details']['tablet_partners_logo'] = [
+      '#type' => 'managed_file',
+      '#title' => $this->t('Tablet - Partners logo'),
+      '#default_value' => $config->get('tablet_partners_logo'),
+      '#upload_location' => 'public://',
+      '#upload_validators' => [
+        'file_validate_extensions' => ['gif png jpg jpeg'],
+      ],
+    ];
+
     $form['quicklinks_group'] = [
       '#type' => 'details',
       '#title' => $this->t('Quicklinks Title'),
@@ -154,6 +164,7 @@ class FooterConfiguration extends ConfigFormBase {
       'social_media_title',
       'back_to_top_title',
       'sponsor_mobile_desc',
+      'tablet_partners_logo',
     ];
 
     foreach ($keys as $key) {
