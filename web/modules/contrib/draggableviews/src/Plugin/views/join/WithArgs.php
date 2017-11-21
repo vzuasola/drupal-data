@@ -32,6 +32,8 @@ class WithArgs extends JoinPluginBase {
         $view_args += $exposedInput;
         $view_args['language'] = $language;
     }
+    // remove empty arguments
+    $view_args = array_diff($view_args, ['']);
 
     if (!empty($view_args)) {
         $view_args = json_encode($view_args);
