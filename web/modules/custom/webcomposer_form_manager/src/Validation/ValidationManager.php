@@ -41,7 +41,7 @@ class ValidationManager {
         ],
       ],
     ],
-    'alpha_multi' => [
+    'alpha_multi' => [ // accepts alpha and other multilingual characters
       'title' => 'Alpha Numeric (Multilingual)',
       'description' => 'Only accept multilingual alphabet letters as input',
       'error' => 'Value is not a valid multilingual character',
