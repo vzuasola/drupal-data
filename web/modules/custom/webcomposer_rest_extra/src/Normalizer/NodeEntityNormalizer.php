@@ -129,6 +129,9 @@ class NodeEntityNormalizer extends ContentEntityNormalizer {
       }
     }
 
+    $parent = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadParents($tid);
+    $translatedArray['parent'] = array_values($parent);
+
     return $translatedArray;
   }
 

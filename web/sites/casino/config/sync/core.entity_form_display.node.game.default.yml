@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.game.body
     - field.field.node.game.field_fim
     - field.field.node.game.field_game_code
+    - field.field.node.game.field_game_filter
     - field.field.node.game.field_game_image
     - field.field.node.game.field_game_info
     - field.field.node.game.field_game_info_toggle
@@ -84,6 +85,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_game_filter:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   field_game_image:
     weight: 8
