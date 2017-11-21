@@ -12,13 +12,6 @@ class AdElementSettingsForm extends MarketingScriptProviderBase {
   /**
    * {@inheritdoc}
    */
-  public function getFormId() {
-    return 'MarketingScript_providers_adelement_settings';
-  }
-
-  /**
-   * {@inheritdoc}
-   */
   protected function getMarketingScriptConfigName() {
     return 'adelement';
   }
@@ -59,8 +52,7 @@ class AdElementSettingsForm extends MarketingScriptProviderBase {
   /**
    * {@inheritdoc}
    */
-  protected function submitValues()
-  {
+  protected function submitValues() {
     return [
       'depth',
       'page'

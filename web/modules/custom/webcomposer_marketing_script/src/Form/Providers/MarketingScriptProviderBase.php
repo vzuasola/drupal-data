@@ -14,10 +14,26 @@ abstract class MarketingScriptProviderBase extends ConfigFormBase {
   abstract protected function getMarketingScriptConfigName();
 
   /**
+   * Defines the editable config names
+   *
+   * @return array List of editable config names
+   */
+  abstract protected function submitValues();
+
+  /**
    * {@inheritdoc}
    */
   protected function getEditableConfigNames() {
     return ['webcomposer_marketing_script.providers'];
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function getFormId() {
+    $id = $this->getMarketingScriptConfigName();
+
+    return "MarketingScript_providers_$id_settings";
   }
 
   /**
