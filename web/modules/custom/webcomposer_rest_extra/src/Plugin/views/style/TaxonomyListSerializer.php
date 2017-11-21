@@ -34,7 +34,6 @@ class TaxonomyListSerializer extends Serializer {
       $tid = $rowAssoc['tid'][0]['value'];
 
       $parent = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadParents($tid);
-      $rowAssoc['parent'] = array_values($parent);
 
       $parent_id = array_keys($parent);
 
