@@ -32,6 +32,12 @@ casino_games.games_configuration:
     load_more_text:
       type: label
       label: 'Load More Text'
+    favorites_text:
+      type: label
+      label: 'Favorites Tab Text'
+    recently_played_text:
+      type: label
+      label: 'Recently Played Text'
     freeplay_lightbox_title:
       type: label
       label: 'Free Play Lightbox Title'
