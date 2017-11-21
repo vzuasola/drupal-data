@@ -49,7 +49,7 @@ trait FilterHtmlTrait {
    *
    */
   private function getInlineBasePath() {
-    $path = $_SERVER['HTTP_X_FE_BASE_URI'];
+    $path = isset($_SERVER['HTTP_X_FE_BASE_URI']) ? $_SERVER['HTTP_X_FE_BASE_URI'] : NULL;
 
     \Drupal::moduleHandler()->alter('inline_image_url_change', $path);
 
