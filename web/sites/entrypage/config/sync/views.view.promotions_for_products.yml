@@ -1081,17 +1081,17 @@ display:
           admin_label: ''
           default_action: default
           exception:
-            value: product_name
+            value: field_product_target_id
             title_enable: false
             title: All
           title_enable: false
           title: ''
           default_argument_type: query_parameter
           default_argument_options:
-            query_param: product_name
+            query_param: field_product_target_id
             fallback: ''
             multiple: or
-          default_argument_skip_url: false
+          default_argument_skip_url: true
           summary_options:
             base_path: ''
             count: true
