@@ -9,7 +9,6 @@ use Drupal\Core\Form\FormStateInterface;
  * Config form for Header Configuration.
  */
 class RobotsConfiguration extends ConfigFormBase {
-
   /**
    * {@inheritdoc}
    */
@@ -29,11 +28,14 @@ class RobotsConfiguration extends ConfigFormBase {
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
     $config = $this->config('webcomposer_config.robots_configuration');
+
     $form['robots_configuration'] = [
       '#type' => 'textarea',
-      '#title' => $this->t('Robots.txt configuration'),
+      '#title' => $this->t('Robots Configuration'),
       '#rows' => 15,
-      '#description' => $this->t('This is config only applicable for any main domain eg: www.dafabet.com/robots.txt'),
+      '#description' => $this->t("Appends the Robots value for your site.
+        <br>
+        Should only be applicable for main domains like <strong>www.dafabet.com/robots.txt</strong>"),
       '#default_value' => $config->get('robots_configuration'),
     ];
 
