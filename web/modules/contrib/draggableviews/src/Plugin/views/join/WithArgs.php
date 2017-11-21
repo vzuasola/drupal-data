@@ -18,9 +18,11 @@ class WithArgs extends JoinPluginBase {
   public function buildJoin($select_query, $table, $view_query) {
     $language = \Drupal::languageManager()->getCurrentLanguage(LanguageInterface::TYPE_CONTENT)->getId();
     $view_args = [];
-    // check if there are view args
-    if (!empty($view_query->view->args)) {
-        $view_args = $view_query->view->args;
+    // check if there are view args - only include if not skipped.
+    foreach ($view_query->view->argument as $arg) {
+      if (!$arg->options['default_argument_skip_url']) {
+        $view_args[] = $arg->argument;
+      }
     }
     // get the expose filters
     $exposedInput = $view_query->view->getExposedInput();
