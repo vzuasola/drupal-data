@@ -13,3 +13,7 @@ casino_games_search.search_configuration:
     search_placeholder:
       type: label
       label: 'Search Field Placeholder'
+    search_result_message:
+      type: text_format
+      label: 'Search Result Message'
+      translatable: true

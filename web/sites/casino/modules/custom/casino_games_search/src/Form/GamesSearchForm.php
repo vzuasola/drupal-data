@@ -61,16 +61,25 @@ class GamesSearchForm extends ConfigFormBase {
 
     $form['search'] = array(
       '#type' => 'details',
-      '#title' => $this->t('Search Field Settings'),
+      '#title' => $this->t('Search Settings'),
       '#collapsible' => TRUE,
       '#group' => 'search_configuration_tab'
     );
 
-    $form['search']['placeholder'] = array(
+    $form['search']['search_placeholder'] = array(
       '#type' => 'textfield',
       '#title' => $this->t('Search Field Placeholder'),
       '#description' => $this->t('The text to display as placeholder for search field.'),
       '#default_value' => $config->get('search_placeholder'),
+      '#required' => TRUE,
+    );
+    $search_result_message = $config->get('search_result_message');
+    $form['search']['search_result_message'] = array(
+      '#type' => 'text_format',
+      '#title' => $this->t('Search Result Message'),
+      '#description' => $this->t('The text to display when search has result.'),
+      '#default_value' => $search_result_message['value'],
+      '#format' => $search_result_message['format'],
       '#required' => TRUE,
     );
 
@@ -87,6 +96,7 @@ class GamesSearchForm extends ConfigFormBase {
       'recommendation_message',
       'recommendation_message_negative',
       'search_placeholder',
+      'search_result_message',
     );
 
     foreach ($keys as $key) {
