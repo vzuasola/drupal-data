@@ -2,7 +2,7 @@
 
 * Translatability of Enable/Disable validation flags
 
-Sicne we are using configs, in a sense everything is persisted to a language as a snapshot. Since the
+Since we are using configs, in a sense everything is persisted to a language as a snapshot. Since the
 validation flags is part of that snapshot, I did some things to override this behavior.
 
 When I save in EN, I save all configs. But when I try to translate and save it, I modify
