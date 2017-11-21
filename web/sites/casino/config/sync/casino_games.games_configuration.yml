@@ -17,3 +17,7 @@ html5_lightbox_content:
   value: "<p>html 5 message</p>\r\n\r\n<p><a class=\"btn btn-ok-launch btn-large btn-yellow\" href=\"#\" target=\"_blank\">Launch Anyway</a></p>\r\n"
   format: basic_html
 disable_jackpot_ticker: 0
+filter_icon: Filter
+filter_header: Filter
+filter_submit: Submit
+filter_clear: 'Clear Selection'
