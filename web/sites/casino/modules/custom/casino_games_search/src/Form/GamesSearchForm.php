@@ -59,6 +59,21 @@ class GamesSearchForm extends ConfigFormBase {
       '#required' => TRUE,
     );
 
+    $form['search'] = array(
+      '#type' => 'details',
+      '#title' => $this->t('Search Field Settings'),
+      '#collapsible' => TRUE,
+      '#group' => 'search_configuration_tab'
+    );
+
+    $form['search']['placeholder'] = array(
+      '#type' => 'textfield',
+      '#title' => $this->t('Search Field Placeholder'),
+      '#description' => $this->t('The text to display as placeholder for search field.'),
+      '#default_value' => $config->get('search_placeholder'),
+      '#required' => TRUE,
+    );
+
     return parent::buildForm($form, $form_state);
   }
 
@@ -71,6 +86,7 @@ class GamesSearchForm extends ConfigFormBase {
     $keys = array(
       'recommendation_message',
       'recommendation_message_negative',
+      'search_placeholder',
     );
 
     foreach ($keys as $key) {

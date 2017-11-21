@@ -10,3 +10,6 @@ casino_games_search.search_configuration:
       type: text_format
       label: 'Recommendation Not Set Message'
       translatable: true
+    search_placeholder:
+      type: label
+      label: 'Search Field Placeholder'
