@@ -5,7 +5,7 @@ field_settings:
 field_validations:
   required:
     enable: 1
-    error_message: 'Field should be required'
+    error_message: 'Make sure your Username is as unique as possible. Your Username will be used for all products. Only 3-15 Alphanumeric characters are allowed in this field.'
   alphanumeric:
     enable: 1
     error_message: 'Field should be alphanumeric'
@@ -25,11 +25,22 @@ field_validations:
     error_message: 'Field does not contain a valid email address'
   min_length:
     enable: 1
-    error_message: 'Minimum requirement not met'
+    error_message: 'Only 3-15 Alphanumeric characters are allowed in this field.'
     parameters:
       length: '3'
   max_length:
     enable: 1
-    error_message: 'Maximum requirement not met'
+    error_message: 'Only 3-15 Alphanumeric characters are allowed in this field.'
     parameters:
       length: '15'
+  username_availability:
+    enable: 1
+    error_message: 'Please use a unique username.'
+  email_availability:
+    enable: 0
+    error_message: 'Please use a unique email.'
+  invalid_words:
+    enable: 0
+    error_message: 'Invalid/not allowed characters'
+    parameters:
+      invalid_words_list: 'username, test'
