@@ -28,12 +28,12 @@ class WithArgs extends JoinPluginBase {
     $exposedInput = $view_query->view->getExposedInput();
     // unset format for rest views
     unset($exposedInput['_format']);
+    // remove empty arguments
+    $exposedInput = array_diff($exposedInput, ['']);
     if (!empty($exposedInput)) {
         $view_args += $exposedInput;
         $view_args['language'] = $language;
     }
-    // remove empty arguments
-    $view_args = array_diff($view_args, ['']);
 
     if (!empty($view_args)) {
         $view_args = json_encode($view_args);
