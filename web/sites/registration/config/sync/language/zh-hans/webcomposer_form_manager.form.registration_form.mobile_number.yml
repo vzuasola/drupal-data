@@ -1,2 +1,25 @@
 field_settings:
   label: 手机号码
+  placeholder: 'Mobile Number'
+  annotation: ''
+field_validations:
+  required:
+    error_message: 这是必填栏。
+  alphanumeric:
+    error_message: 'Field should be alphanumeric'
+  numeric:
+    error_message: 'Field should be numeric'
+  no_symbols:
+    error_message: 'Field contains invalid special characters'
+  numeric_symbols:
+    error_message: 'Field contains invalid special characters'
+  email:
+    error_message: 'Field does not contain a valid email address'
+  min_length:
+    error_message: 'Minimum requirement not met'
+  max_length:
+    error_message: 'Maximum requirement not met'
+  username_availability:
+    error_message: 'Username not available'
+  email_availability:
+    error_message: 'Email not available'

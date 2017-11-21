@@ -1,11 +1,12 @@
 field_settings:
   label: ' 用户名'
   placeholder: Username
+  annotation: 'Sample: Dafa12'
 field_validations:
   required:
-    error_message: 'Field should be required'
+    error_message: 请确保您的用户名独一无二。在所有产品中您都将使用这个用户名。本栏中您只能填写3-15个字母和数字。
   alphanumeric:
-    error_message: 'Field should be alphanumeric'
+    error_message: 'Make sure your Username is as unique as possible. Your Username will be used for all products. Only 3-15 Alphanumeric characters are allowed in this field.'
   numeric:
     error_message: 'Field should be numeric'
   no_symbols:
@@ -15,6 +16,10 @@ field_validations:
   email:
     error_message: 'Field does not contain a valid email address'
   min_length:
-    error_message: 'Minimum requirement not met'
+    error_message: 本栏中您只能填写3-15个字母和数字。
   max_length:
-    error_message: 'Maximum requirement not met'
+    error_message: 本栏中您只能填写3-15个字母和数字。
+  username_availability:
+    error_message: 请确保您的用户名独一无二。在所有产品中您都将使用这个用户名。
+  email_availability:
+    error_message: 'Please use a unique email.'

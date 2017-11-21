@@ -5,7 +5,7 @@ field_settings:
 field_validations:
   required:
     enable: 1
-    error_message: 'Field should be required'
+    error_message: 'Please enter your valid and active Email Address for communication purposes. (e.g. name@domain.com)'
   alphanumeric:
     enable: 0
     error_message: 'Field should be alphanumeric'
@@ -21,8 +21,8 @@ field_validations:
     enable: 0
     error_message: 'Field contains invalid special characters'
   email:
-    enable: 0
-    error_message: 'Field does not contain a valid email address'
+    enable: 1
+    error_message: 'Please enter your valid and active Email Address for communication purposes. (e.g. name@domain.com)'
   min_length:
     enable: 0
     error_message: 'Minimum requirement not met'
@@ -33,3 +33,9 @@ field_validations:
     error_message: 'Maximum requirement not met'
     parameters:
       length: '10'
+  username_availability:
+    enable: 0
+    error_message: 'Username not available'
+  email_availability:
+    enable: 1
+    error_message: 'Please use a unique email address (e.g. test@domain.com).'

@@ -1,10 +1,10 @@
 field_settings:
   label: 电子邮件
   placeholder: Email
-  annotation: 请输入真实有效的邮箱地址，以便进行账户验证。包含重要信息的通知也将会通过邮件发送，如：密码找回等。
+  annotation: 请输入您的有效的目前正处于激活状态的电子邮件地址（如name@domain.com）。请不要在您的电子邮件地址末尾使用额外的空格。
 field_validations:
   required:
-    error_message: 'Field should be required'
+    error_message: 请不要在您的电子邮件地址末尾使用额外的空格。
   alphanumeric:
     error_message: 'Field should be alphanumeric'
   numeric:
@@ -14,8 +14,12 @@ field_validations:
   numeric_symbols:
     error_message: 'Field contains invalid special characters'
   email:
-    error_message: 'Field does not contain a valid email address'
+    error_message: 请输入您的有效的目前正处于激活状态的电子邮件地址（如name@domain.com）。
   min_length:
     error_message: 'Minimum requirement not met'
   max_length:
     error_message: 'Maximum requirement not met'
+  username_availability:
+    error_message: 'Username not available'
+  email_availability:
+    error_message: 请输入您的有效的目前正处于激活状态的电子邮件地址（如name@domain.com）。请不要在您的电子邮件地址末尾使用额外的空格。
