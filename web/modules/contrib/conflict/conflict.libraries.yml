@@ -1,0 +1,13 @@
+drupal.conflict_resolution:
+  version: VERSION
+  css:
+    theme:
+      css/conflict_resolution.css: {}
+  js:
+    js/conflict_resolution.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
+    - core/drupal.dialog
+    - core/drupal.ajax
