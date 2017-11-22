@@ -35,5 +35,5 @@ function casino_games_search_form_alter(&$form, $form_state, $form_id) {
 }
 
 function casino_games_search_form_submit($form, &$form_state) {
-	$form_state->setRedirect('casino_games_search.list.games');
+	$form_state->setRedirect('casino_games.list.games');
 }
