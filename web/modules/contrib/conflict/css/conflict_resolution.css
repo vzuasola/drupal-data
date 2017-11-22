@@ -1,0 +1,8 @@
+#conflict-overview-form {
+    display: none;
+}
+
+.conflict-overview-form-description {
+    color: red;
+    font-size: 1.1em;
+}
