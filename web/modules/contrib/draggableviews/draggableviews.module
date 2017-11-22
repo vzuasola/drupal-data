@@ -175,9 +175,11 @@ function draggableviews_views_submit(&$form, \Drupal\Core\Form\FormStateInterfac
   $view_display = $view->current_display;
   $language = \Drupal::languageManager()->getCurrentLanguage(LanguageInterface::TYPE_CONTENT)->getId();
   $view_args = [];
-  // check if there are view args
-  if (!empty($view->args)) {
-      $view_args = $view->args;
+  // check if there are view args - only include if not skipped.
+  foreach ($view_query->view->argument as $arg) {
+    if (!$arg->options['default_argument_skip_url']) {
+      $view_args[] = $arg->argument;
+    }
   }
   // get the expose filters
   $exposedInput = $view->getExposedInput();
