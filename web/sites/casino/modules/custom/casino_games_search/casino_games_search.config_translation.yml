@@ -1,5 +1,5 @@
-casino_games_search.search_configuration:
+casino_games.search_configuration:
   title: 'Games Custom Configuration'
   base_route_name: casino_games_search.search_configuration
   names:
-    - 'casino_games_search.search_configuration'
+    - 'casino_games.search_configuration'

@@ -1,4 +1,4 @@
-casino_games_search.search_configuration:
+casino_games.search_configuration:
   type: config_object
   label: 'Games Search Custom Configurations'
   mapping:
