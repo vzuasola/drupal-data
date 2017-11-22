@@ -63,6 +63,13 @@ class ICoreGamesIntegrationConfiguration extends ConfigFormBase {
       );
     }
 
+    $form['kiron_virtual_sports']['virtual_sports_iframe_url'] = array(
+      '#type' => 'textfield',
+      '#title' => t('Kiron Virtual Sports Iframe URL'),
+      '#description' => $this->t('Kiron Virtual Sports Iframe URL.'),
+      '#default_value' => $config->get('virtual_sports_iframe_url'),
+    );
+
     $form['message'] = array(
       '#type' => 'details',
       '#title' => t('Default Message'),
@@ -138,6 +145,7 @@ class ICoreGamesIntegrationConfiguration extends ConfigFormBase {
       'fallback_error_title',
       'fallback_error_message',
       'fallback_error_button',
+      'virtual_sports_iframe_url',
     ];
 
     $result = array_merge($providers, $keys);
