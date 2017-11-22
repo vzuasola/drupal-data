@@ -77,31 +77,31 @@ dev:
       - automation/deployed/*.jsonl
     expire_in: 1 month
 
-#selenium tests development:
-#  stage: integration-tests-development
-#  script:
-#    - python -u automation/run.py --stage integration-tests-development
-#  when: manual
-#  dependencies:
-#    - dev
-#  artifacts:
-#    paths:
-#      - automation/deployed/*.jsonl
-#    expire_in: 1 month
+.selenium tests development:
+  stage: integration-tests-development
+  script:
+    - python -u automation/run.py --stage integration-tests-development
+  when: manual
+  dependencies:
+    - dev
+  artifacts:
+    paths:
+      - automation/deployed/*.jsonl
+    expire_in: 1 month
 
-#jmeter development:
-#  stage: performance-tests-development
-#  script:
-#    - python -u automation/run.py --stage performance-tests-dev
-#  when: manual
-#  dependencies:
-#    - dev
-#  artifacts:
-#    paths:
-#      - automation/deployed/*.jsonl
-#    expire_in: 1 month
-#  tags:
-#    - jmeter
+.jmeter development:
+  stage: performance-tests-development
+  script:
+    - python -u automation/run.py --stage performance-tests-dev
+  when: manual
+  dependencies:
+    - dev
+  artifacts:
+    paths:
+      - automation/deployed/*.jsonl
+    expire_in: 1 month
+  tags:
+    - jmeter
 
 qa1:
   stage: deploy-test
@@ -117,17 +117,17 @@ qa1:
       - automation/deployed/*.jsonl
     expire_in: 1 month
 
-#selenium tests qa1:
-#  stage: integration-tests-test
-#  script:
-#    - python -u automation/run.py --stage integration-tests-test
-#  when: manual
-#  dependencies:
-#    - qa1
-#  artifacts:
-#    paths:
-#      - automation/deployed/*.jsonl
-#    expire_in: 1 month
+.selenium tests qa1:
+  stage: integration-tests-test
+  script:
+    - python -u automation/run.py --stage integration-tests-test
+  when: manual
+  dependencies:
+    - qa1
+  artifacts:
+    paths:
+      - automation/deployed/*.jsonl
+    expire_in: 1 month
 
 hp fortify scan qa1:
   stage: security-tests-test
@@ -141,19 +141,19 @@ hp fortify scan qa1:
       - automation/deployed/*.jsonl
     expire_in: 1 month
 
-#jmeter qa1:
-#  stage: performance-tests-test
-#  script:
-#    - python -u automation/run.py --stage performance-tests-test
-#  when: manual
-#  dependencies:
-#    - qa1
-#  artifacts:
-#    paths:
-#      - automation/deployed/*.jsonl
-#    expire_in: 1 month
-#  tags:
-#    - jmeter
+.jmeter qa1:
+  stage: performance-tests-test
+  script:
+    - python -u automation/run.py --stage performance-tests-test
+  when: manual
+  dependencies:
+    - qa1
+  artifacts:
+    paths:
+      - automation/deployed/*.jsonl
+    expire_in: 1 month
+  tags:
+    - jmeter
 
 tct:
   stage: deploy-test
@@ -169,31 +169,31 @@ tct:
       - automation/deployed/*.jsonl
     expire_in: 1 month
 
-#selenium tests tct:
-#  stage: integration-tests-test
-#  script:
-#    - python -u automation/run.py --stage integration-tests-tct
-#  when: manual
-#  dependencies:
-#    - tct
-#  artifacts:
-#    paths:
-#      - automation/deployed/*.jsonl
-#    expire_in: 1 month
+.selenium tests tct:
+  stage: integration-tests-test
+  script:
+    - python -u automation/run.py --stage integration-tests-tct
+  when: manual
+  dependencies:
+    - tct
+  artifacts:
+    paths:
+      - automation/deployed/*.jsonl
+    expire_in: 1 month
 
-#jmeter tct:
-#  stage: performance-tests-test
-#  script:
-#    - python -u automation/run.py --stage performance-tests-tct
-#  when: manual
-#  dependencies:
-#    - tct
-#  artifacts:
-#    paths:
-#      - automation/deployed/*.jsonl
-#    expire_in: 1 month
-#  tags:
-#    - jmeter
+.jmeter tct:
+  stage: performance-tests-test
+  script:
+    - python -u automation/run.py --stage performance-tests-tct
+  when: manual
+  dependencies:
+    - tct
+  artifacts:
+    paths:
+      - automation/deployed/*.jsonl
+    expire_in: 1 month
+  tags:
+    - jmeter
 
 testing signoff:
   stage: testing-signoff
@@ -229,37 +229,37 @@ uat:
     - /^release-.*$/
     - tags
 
-#selenium tests uat:
-#  stage: integration-tests-staging
-#  script:
-#    - python -u automation/run.py --stage integration-tests-uat
-#  when: manual
-#  dependencies:
-#    - uat
-#  artifacts:
-#    paths:
-#      - automation/deployed/*.jsonl
-#    expire_in: 1 month
-#  only:
-#    - /^release-.*$/
-#    - tags
+.selenium tests uat:
+  stage: integration-tests-staging
+  script:
+    - python -u automation/run.py --stage integration-tests-uat
+  when: manual
+  dependencies:
+    - uat
+  artifacts:
+    paths:
+      - automation/deployed/*.jsonl
+    expire_in: 1 month
+  only:
+    - /^release-.*$/
+    - tags
 
-#jmeter uat:
-#  stage: performance-tests-staging
-#  script:
-#    - python -u automation/run.py --stage performance-tests-uat
-#  when: manual
-#  dependencies:
-#    - uat
-#  artifacts:
-#    paths:
-#      - automation/deployed/*.jsonl
-#    expire_in: 1 month
-#  only:
-#    - /^release-.*$/
-#    - tags
-#  tags:
-#    - jmeter
+.jmeter uat:
+  stage: performance-tests-staging
+  script:
+    - python -u automation/run.py --stage performance-tests-uat
+  when: manual
+  dependencies:
+    - uat
+  artifacts:
+    paths:
+      - automation/deployed/*.jsonl
+    expire_in: 1 month
+  only:
+    - /^release-.*$/
+    - tags
+  tags:
+    - jmeter
 
 staging:
   stage: deploy-staging
@@ -278,52 +278,52 @@ staging:
     - /^release-.*$/
     - tags
 
-#selenium tests staging:
-#  stage: integration-tests-staging
-#  script:
-#    - python -u automation/run.py --stage integration-tests-stg
-#  when: manual
-#  dependencies:
-#    - staging
-#  artifacts:
-#    paths:
-#      - automation/deployed/*.jsonl
-#    expire_in: 1 month
-#  only:
-#    - /^release-.*$/
-#    - tags
+.selenium tests staging:
+  stage: integration-tests-staging
+  script:
+    - python -u automation/run.py --stage integration-tests-stg
+  when: manual
+  dependencies:
+    - staging
+  artifacts:
+    paths:
+      - automation/deployed/*.jsonl
+    expire_in: 1 month
+  only:
+    - /^release-.*$/
+    - tags
 
-#jmeter staging:
-#  stage: performance-tests-staging
-#  script:
-#    - python -u automation/run.py --stage performance-tests-staging
-#  when: manual
-#  dependencies:
-#    - staging
-#  artifacts:
-#    paths:
-#      - automation/deployed/*.jsonl
-#    expire_in: 1 month
-#  only:
-#    - /^release-.*$/
-#    - tags
-#  tags:
-#    - jmeter
+.jmeter staging:
+  stage: performance-tests-staging
+  script:
+    - python -u automation/run.py --stage performance-tests-staging
+  when: manual
+  dependencies:
+    - staging
+  artifacts:
+    paths:
+      - automation/deployed/*.jsonl
+    expire_in: 1 month
+  only:
+    - /^release-.*$/
+    - tags
+  tags:
+    - jmeter
 
-#acunetix staging:
-#  stage: security-tests-staging
-#  script:
-#    - python -u automation/run.py --stage acunetix-scan
-#  when: manual
-# dependencies:
-#    - staging
-#  artifacts:
-#    paths:
-#      - automation/deployed/*.jsonl
-#    expire_in: 1 month
-#  only:
-#    - /^release-.*$/
-#    - tags
+.acunetix staging:
+  stage: security-tests-staging
+  script:
+    - python -u automation/run.py --stage acunetix-scan
+  when: manual
+  dependencies:
+    - staging
+  artifacts:
+    paths:
+      - automation/deployed/*.jsonl
+    expire_in: 1 month
+  only:
+    - /^release-.*$/
+    - tags
 
 staging signoff:
   stage: staging-signoff
