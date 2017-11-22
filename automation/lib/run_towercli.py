@@ -50,7 +50,6 @@ def tower_authenticate(job_template, extra_vars):
     subprocess.call(['tower-cli', 'config', 'username', username])
     subprocess.call(['tower-cli', 'config', 'password', password])
     subprocess.call(['tower-cli', 'config', 'verify_ssl', 'no'])
-    subprocess.call(['tower-cli', 'config'])
 
     print(extra_vars)
 
