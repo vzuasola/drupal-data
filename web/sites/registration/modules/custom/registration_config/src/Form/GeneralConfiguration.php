@@ -103,14 +103,6 @@ class GeneralConfiguration extends ConfigFormBase {
       '#required' => TRUE,
     ];
 
-    $form['integration']['registraton_product_id_to_portal_id'] = [
-      '#type' => 'textarea',
-      '#title' => $this->t('Registration Portal ID to product ID mapping'),
-      '#description' => $this->t('Mapping that will be used for Product Type ID  to portal ID mapping upon registration e.g. "1|4,11,18" where 1 is the product type ID and the 4,11,18 is the portal IDs'),
-      '#default_value' => $config->get('registraton_product_id_to_portal_id'),
-      '#required' => TRUE,
-    ];
-
     $form['integration']['registraton_portal_id_to_dafaconnect_portal_id'] = [
       '#type' => 'textarea',
       '#title' => $this->t('Registration Portal ID to Dafabet connect portal ID mapping'),
