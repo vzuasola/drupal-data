@@ -97,7 +97,6 @@ class ConfigurationResource extends ResourceBase {
    *   Throws exception expected.
    */
   public function get($id) {
-
     if (!$this->currentUser->hasPermission('access content')) {
       throw new AccessDeniedHttpException();
     }
@@ -108,9 +107,28 @@ class ConfigurationResource extends ResourceBase {
       $config = $this->configFactory->get("webcomposer_config.$id");
       $data = $config->get();
 
-      // Get relative path for the configuration images.
-      // @todo To be standardized
-      switch ($id) {
+      $this->resolveFieldImages($id, $data);
+      $this->resolveImages($data);
+    } catch (\Exception $e) {
+      $data = [
+        'error' => $this->t('Configuration not found')
+      ];
+    }
+
+    $build = [
+      '#cache' => [
+        'max-age' => 0,
+      ],
+    ];
+
+    return (new ResourceResponse($data))->addCacheableDependency($build);
+  }
+
+  /**
+   * Temporary solution for fields not using standard naming schemes
+   */
+  private function resolveFieldImages($id, &$data) {
+    switch ($id) {
         case 'footer_configuration':
           $file_id = $data['partners_logo'][0];
           $data['partners_image_url'] = $this->getFileRelativePath($file_id);
@@ -121,18 +139,23 @@ class ConfigurationResource extends ResourceBase {
           $data['page_not_found_image_url'] = $this->getFileRelativePath($file_id);
           break;
       }
-    } catch (\Exception $e) {
-      $data = array(
-        'error' => $this->t('Configuration not found')
-      );
+  }
+
+  /**
+   *
+   */
+  private function resolveImages(&$data) {
+    foreach ($data as $key => $value) {
+      if (is_array($value)) {
+        $this->resolveImages($value);
+      }
+
+      if (0 === strpos($key, 'file_image') && isset($value[0])) {
+        $file = File::load($value[0]);
+        if ($file) {
+          $data[$key] = $this->generateUrlFromFile($file);
+        }
+      }
     }
-
-    $build = [
-      '#cache' => [
-        'max-age' => 0,
-      ],
-    ];
-
-    return (new ResourceResponse($data))->addCacheableDependency($build);
   }
 }

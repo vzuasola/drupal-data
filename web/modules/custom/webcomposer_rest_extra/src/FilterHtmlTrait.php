@@ -33,7 +33,7 @@ trait FilterHtmlTrait {
     } else {
       // make them absolute, so that it will work on front end
       foreach ($images as $image) {
-          $drupal_uri = \Drupal::request()->getSchemeAndHttpHost();
+          $drupal_uri = $this->getDrupalHost();
           $image['src'] = $drupal_uri . $image['src'];
       }
 
@@ -48,10 +48,16 @@ trait FilterHtmlTrait {
   /**
    *
    */
-  private function getInlineBasePath() {
-    $path = isset($_SERVER['HTTP_X_FE_BASE_URI']) ? $_SERVER['HTTP_X_FE_BASE_URI'] : NULL;
+  protected function generateUrlFromFile($file) {
+    $path = NULL;
+    $base_path = $this->getInlineBasePath();
 
-    \Drupal::moduleHandler()->alter('inline_image_url_change', $path);
+    if ($base_path) {
+      $path = $this->getFileRelativeFilename($file->getFileUri());
+      $path = $base_path . '/' . $path;
+    } else {
+      $path = file_create_url($file->getFileUri());
+    }
 
     return $path;
   }
@@ -64,17 +70,36 @@ trait FilterHtmlTrait {
    * @return String
    *  file relative path.
    */
-  public function getFileRelativePath($fid) {
-    $file_url;
+  protected function getFileRelativePath($fid) {
+    $file = File::load($fid);
 
-    if (isset($fid)) {
-      $file = File::load($fid);
-
-      if ($file) {
-        $file_url = preg_replace('/public:\/\//', '', $file->getFileUri());
-      }
+    if ($file) {
+      return $this->generateUrlFromFile($file);
     }
+  }
 
-    return $file_url;
+  /**
+   *
+   */
+  protected function getInlineBasePath() {
+    $path = isset($_SERVER['HTTP_X_FE_BASE_URI']) ? $_SERVER['HTTP_X_FE_BASE_URI'] : NULL;
+
+    \Drupal::moduleHandler()->alter('inline_image_url_change', $path);
+
+    return $path;
+  }
+
+  /**
+   *
+   */
+  protected function getDrupalHost() {
+    return \Drupal::request()->getSchemeAndHttpHost();
+  }
+
+  /**
+   *
+   */
+  protected function getFileRelativeFilename($filename) {
+    return preg_replace('/public:\/\//', '', $filename);
   }
 }
