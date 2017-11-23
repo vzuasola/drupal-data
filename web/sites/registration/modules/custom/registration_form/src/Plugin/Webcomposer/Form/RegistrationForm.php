@@ -136,6 +136,12 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
             '#type' => 'textarea',
             '#description' => 'field annotation that will be displayed on focus',
           ],
+          'country_area_code' => [
+            '#title' => 'Country Area Codes',
+            '#type' => 'textarea',
+            '#description' => 'List of area codes that will appear beside the mobile number ' .
+              '(take note: must be a valid area code or the image will not appear beside the are code)',
+          ],
         ],
       ],
 
