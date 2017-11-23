@@ -9,7 +9,7 @@
     "performance-tests-uat": "deploy-uat",
     "performance-tests-staging": "deploy-staging",
     "acunetix-scan": "deploy-staging",
-    "code-scan-testing": "deploy-testing",
+    "code-scan-testing": "package",
     "deploy-tct": "package",
     "integration-tests-tct": "deploy-tct",
     "testing-signoff": "code-scan-testing",
