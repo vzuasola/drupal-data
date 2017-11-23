@@ -125,7 +125,12 @@ class ConfigurationResource extends ResourceBase {
   }
 
   /**
-   * Temporary solution for fields not using standard naming schemes
+   * Temporary solution for fields not using standard naming schemes.
+   *
+   * @param string $id
+   *   The configuration resource ID.
+   * @param array $data
+   *   The configuration data.
    */
   private function resolveFieldImages($id, &$data) {
     switch ($id) {
@@ -142,7 +147,10 @@ class ConfigurationResource extends ResourceBase {
   }
 
   /**
+   * Resolve images do their respective absolute URLs.
    *
+   * @param array $data
+   *   The configuration data.
    */
   private function resolveImages(&$data) {
     foreach ($data as $key => $value) {

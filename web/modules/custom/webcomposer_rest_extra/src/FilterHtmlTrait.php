@@ -33,7 +33,7 @@ trait FilterHtmlTrait {
     } else {
       // make them absolute, so that it will work on front end
       foreach ($images as $image) {
-          $drupal_uri = $this->getDrupalHost();
+          $drupal_uri = \Drupal::request()->getSchemeAndHttpHost();
           $image['src'] = $drupal_uri . $image['src'];
       }
 
@@ -46,9 +46,15 @@ trait FilterHtmlTrait {
   }
 
   /**
+   * Generate the resolved URL of a file object.
    *
+   * @param File $file
+   *   The file entity object.
+   *
+   * @return string
+   *   The resolved absolute path.
    */
-  protected function generateUrlFromFile($file) {
+  protected function generateUrlFromFile(File $file) {
     $path = NULL;
     $base_path = $this->getInlineBasePath();
 
@@ -65,10 +71,11 @@ trait FilterHtmlTrait {
   /**
    * Load file by the file id.
    *
-   * @param  String $fid
-   *  file id to get the file object.
-   * @return String
-   *  file relative path.
+   * @param integer $fid
+   *   The file id to get the file object.
+   *
+   * @return string
+   *   The file relative path.
    */
   protected function getFileRelativePath($fid) {
     $file = File::load($fid);
@@ -79,7 +86,10 @@ trait FilterHtmlTrait {
   }
 
   /**
+   * Gets the inline base path.
+   * Supports alter via hook_inline_image_url_change_alter().
    *
+   * @return string
    */
   protected function getInlineBasePath() {
     $path = isset($_SERVER['HTTP_X_FE_BASE_URI']) ? $_SERVER['HTTP_X_FE_BASE_URI'] : NULL;
@@ -90,14 +100,12 @@ trait FilterHtmlTrait {
   }
 
   /**
+   * Gets the filename of from the file URI
    *
-   */
-  protected function getDrupalHost() {
-    return \Drupal::request()->getSchemeAndHttpHost();
-  }
-
-  /**
+   * @param string $filename
+   *   The file entity URI file path
    *
+   * @return string
    */
   protected function getFileRelativeFilename($filename) {
     return preg_replace('/public:\/\//', '', $filename);
