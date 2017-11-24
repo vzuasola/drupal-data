@@ -27,7 +27,7 @@ third_party_settings:
         - field_publish_date
         - field_unpublish_date
       parent_name: ''
-      weight: 9
+      weight: 5
       format_type: tab
       format_settings:
         id: ''
@@ -36,6 +36,35 @@ third_party_settings:
         description: ''
         required_fields: true
       label: 'Scheduler Settings'
+    group_banner_settings:
+      children:
+        - field_banner_image
+        - field_banner_link
+        - field_banner_link_target
+      parent_name: ''
+      weight: 3
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Banner Settings'
+    group_blurb_settings:
+      children:
+        - field_blurb
+        - field_content_position
+      parent_name: ''
+      weight: 4
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Blurb Settings'
 _core:
   default_config_hash: 4pu6bDg2YHaNO6HDMXOPWM5JrbWMacX7OmVPKgObv7s
 id: webcomposer_slider_entity.webcomposer_slider_entity.default
@@ -44,7 +73,7 @@ bundle: webcomposer_slider_entity
 mode: default
 content:
   field_banner_image:
-    weight: 3
+    weight: 4
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -52,7 +81,7 @@ content:
     type: image_image
     region: content
   field_banner_link:
-    weight: 4
+    weight: 5
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -60,13 +89,13 @@ content:
     type: link_default
     region: content
   field_banner_link_target:
-    weight: 5
+    weight: 6
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_blurb:
-    weight: 6
+    weight: 5
     settings:
       rows: 5
       placeholder: ''
@@ -74,13 +103,13 @@ content:
     type: text_textarea
     region: content
   field_content_position:
-    weight: 8
+    weight: 6
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_log_in_state:
-    weight: 1
+    weight: 2
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
@@ -92,7 +121,7 @@ content:
     type: datetime_default
     region: content
   field_title:
-    weight: 0
+    weight: 1
     settings:
       size: 60
       placeholder: ''
@@ -107,12 +136,12 @@ content:
     region: content
   langcode:
     type: language_select
-    weight: 2
+    weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
   translation:
-    weight: 7
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
