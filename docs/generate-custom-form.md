@@ -107,9 +107,13 @@ webcomposer_module.list:
   }
 ```
 
+> **Important notes** If you are to define a field with a file image type, you can prefix your field name
+> with `file_image`. Example is `file_image_profile_logo`. An alter in the Rest system will automatically
+> resolve file IDs to their actual absolute paths
+
 ## Making a field translatable
 
-To be populated soon
+Please contribute to complete this section
 
 ## Adding a installation config and uninstall hook
 

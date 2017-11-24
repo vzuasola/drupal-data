@@ -1,8 +1,6 @@
 {
         "include_directories": [
-            "base",
             "app",
-            "base"
             "assets",
             "cache",
             "core",

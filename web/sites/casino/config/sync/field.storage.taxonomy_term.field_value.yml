@@ -1,0 +1,21 @@
+uuid: 64ea10b0-fb4c-4767-aa76-7071ed403df0
+langcode: zh-hans
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.field_value
+field_name: field_value
+entity_type: taxonomy_term
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
