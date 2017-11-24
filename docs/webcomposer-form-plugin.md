@@ -230,6 +230,24 @@ class LoginForm extends WebcomposerFormBase implements WebcomposerFormInterface 
 }
 ```
 
+## Extending Validations
+
+> Please note that the even though you can define any data for your parameters,
+> the front end validation library does not support special characters as parameters.
+
+The default list of validations can be found on `Drupal\webcomposer_form_manager\Validation\ValidationManager`
+
+To alter this list, you just need to create an alter hook for `webcomposer_form_validation`.
+
+```php
+/**
+ * Implements hook_webcomposer_form_validation_alter().
+ */
+function my_module_webcomposer_form_validation_alter(&$validations) {
+  // do alter
+}
+```
+
 ## Best practices
 
 If you are defining your own module, with forms, it is recommended that you

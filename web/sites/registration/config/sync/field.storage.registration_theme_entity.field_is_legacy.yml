@@ -1,0 +1,18 @@
+uuid: 10cda1a3-9cc6-4fb4-a9ac-65f31975e0c4
+langcode: en
+status: true
+dependencies:
+  module:
+    - registration_theme
+id: registration_theme_entity.field_is_legacy
+field_name: field_is_legacy
+entity_type: registration_theme_entity
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,4 @@
+casino_games_search.search_configuration_tab:
+  route_name: casino_games_search.search_configuration
+  title: 'Configure Games Search'
+  base_route: casino_games_search.search_configuration

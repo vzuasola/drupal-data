@@ -86,3 +86,6 @@ $sites['dev-casino.elysium-dfbt.com'] = 'casino-gold';
 $sites['dev-cms-casino.elysium-dfbt.com'] = 'casino-gold';
 $sites['dev-csngold.elysium-dfbt.com'] = 'casino-gold';
 $sites['dev-cms-csngold.elysium-dfbt.com'] = 'casino-gold';
+$sites['dev-demo.elysium-dfbt.com'] = 'demo';
+$sites['dev-cms-demo.elysium-dfbt.com'] = 'demo';
+

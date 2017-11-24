@@ -12,6 +12,10 @@ url:
     ko: kr
     hi: in
     '': null
+    el: el
+    pl: pl
+    ja: ja
+    eu: eu
   domains:
     en: ''
     zh-hans: ''
@@ -21,6 +25,10 @@ url:
     id: ''
     ko: ''
     hi: ''
+    el: ''
+    pl: ''
+    ja: ''
+    eu: ''
 selected_langcode: site_default
 _core:
   default_config_hash: uEePITI9tV6WqzmsTb7MfPCi5yPWXSxAN1xeLcYFQbM

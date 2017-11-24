@@ -20,3 +20,13 @@ entity.marketing_script_entity.delete_form:
   title: Delete
   weight: 10
 
+# AdElement provider
+webcomposer_marketing_script.providers_adelement_settings_form:
+  route_name: webcomposer_marketing_script.providers_adelement_settings_form
+  title: 'Configuration'
+  base_route: webcomposer_marketing_script.providers_adelement_settings_form
+
+webcomposer_marketing_script.providers_adelement_parser_form:
+  route_name: webcomposer_marketing_script.providers_adelement_parser_form
+  title: 'Parser'
+  base_route: webcomposer_marketing_script.providers_adelement_settings_form

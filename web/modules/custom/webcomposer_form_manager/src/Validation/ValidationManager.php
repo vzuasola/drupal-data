@@ -15,6 +15,19 @@ class ValidationManager {
       'description' => 'Make this field required. Does not accept empty string inputs such as nulls and whitespace only.',
       'error' => 'Field should be required',
     ],
+    'alpha' => [
+      'title' => 'Alpha',
+      'description' => 'Only accept Alphabet characters',
+      'error' => 'Field should be Alphabet characters only',
+      'parameters' => [
+        'spaces' => [
+          '#title' => 'Accept Spaces',
+          '#description' => 'Checks whether this validation should accept spaces or not',
+          '#type' => 'checkbox',
+          '#default_value' => true,
+        ],
+      ],
+    ],
     'alphanumeric' => [
       'title' => 'Alphanumeric',
       'description' => 'Only accept alpha numeric characters',
@@ -25,6 +38,43 @@ class ValidationManager {
           '#description' => 'Checks whether this validation should accept spaces or not',
           '#type' => 'checkbox',
           '#default_value' => true,
+        ],
+      ],
+    ],
+    'alpha_multi' => [ // accepts alpha and other multilingual characters
+      'title' => 'Alpha Numeric (Multilingual)',
+      'description' => 'Only accept multilingual alphabet letters as input',
+      'error' => 'Value is not a valid multilingual character',
+      'parameters' => [
+        'space' => [
+            '#title' => 'Accept spaces',
+            '#description' => 'If checked will accept spaces as part of the formatting',
+            '#type' => 'checkbox',
+            '#default_value' => true,
+        ],
+        'numeric' => [
+            '#title' => 'Accept numeric characters',
+            '#description' => 'If checked will accept numeric as part of the formatting',
+            '#type' => 'checkbox',
+            '#default_value' => true,
+        ],
+        'allow' => [
+            '#title' => 'Allow listed special characters',
+            '#description' => 'If checked will allow listed special characters as part of the formatting',
+            '#type' => 'checkbox',
+            '#default_value' => false,
+        ],
+        'disallow' => [
+            '#title' => 'Disallow listed special characters',
+            '#description' => 'If checked will disallow listed special characters in the formatting and allow any other character regardless of options set',
+            '#type' => 'checkbox',
+            '#default_value' => false,
+        ],
+        'special' => [
+            '#title' => 'Special Characters',
+            '#type' => 'textarea',
+            '#description' => 'The special characters to allow or disallow. If left blank and allow or disallow is checked will still disallow all special characters ',
+            '#default_value' => '',
         ],
       ],
     ],

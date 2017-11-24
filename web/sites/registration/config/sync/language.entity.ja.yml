@@ -1,0 +1,12 @@
+uuid: 46d8ee4e-c42c-47f3-b942-ca3b68bd4bae
+langcode: en
+status: true
+dependencies: {  }
+third_party_settings:
+  webcomposer_language_hierarchy:
+    webcomposer_fallback_langcode: en
+id: ja
+label: Japanese
+direction: ltr
+weight: 1
+locked: false

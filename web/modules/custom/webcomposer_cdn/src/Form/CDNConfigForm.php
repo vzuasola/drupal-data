@@ -11,7 +11,6 @@ use Drupal\Core\Form\ConfigFormBase;
  * @package Drupal\webcomposer_cdn\Form
  */
 class CDNConfigForm extends ConfigFormBase {
-
   /**
    * {@inheritdoc}
    */
@@ -41,18 +40,13 @@ class CDNConfigForm extends ConfigFormBase {
       '#type' => 'textarea',
       '#title' => $this->t('CDN Domain Configuration'),
       '#default_value' => $config->get('cdn_domain_configuration'),
-      '#description' => $this->t('Add the CDN domain to specific country here.
-        please follow the following format. Country Code|Domain;
-        Example: PH|example.cdn.com'),
+      '#description' => $this->t("Add the CDN domain mapping. Mapping should consist of
+        country code to CDN domain.
+        <br>
+        Example <strong>PH|example.cdn.com</strong>"),
     ];
 
     return parent::buildForm($form, $form_state);
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  public function validateForm(array &$form, FormStateInterface $form_state) {
   }
 
   /**

@@ -14,12 +14,30 @@ casino_games.games_configuration:
     game_real_play_text:
       type: label
       label: 'Real Play Button Text'
+    filter_icon:
+      type: label
+      label: 'Game Filter Icon Text'
+    filter_header:
+      type: label
+      label: 'Filter Lightbox Header Text'
+    filter_submit:
+      type: label
+      label: 'Filter Lightbox Submit Botton Text'
+    filter_clear:
+      type: label
+      label: 'Filter Lightbox Header Text'
     kebab_menu_text:
       type: label
       label: 'Category Kebab Menu Text'
     load_more_text:
       type: label
       label: 'Load More Text'
+    favorites_text:
+      type: label
+      label: 'Favorites Tab Text'
+    recently_played_text:
+      type: label
+      label: 'Recently Played Text'
     freeplay_lightbox_title:
       type: label
       label: 'Free Play Lightbox Title'

@@ -2,6 +2,7 @@ field_settings:
   label: 'Date of Birth'
   placeholder: DD/MM/YYYY
   date-format: DD/MM/YYYY
+  annotation: 'Should be at least 18 years old.'
 field_validations:
   required:
     enable: 1
@@ -33,3 +34,9 @@ field_validations:
     error_message: 'Maximum requirement not met'
     parameters:
       length: '10'
+  username_availability:
+    enable: 0
+    error_message: 'Username not available'
+  email_availability:
+    enable: 0
+    error_message: 'Email not available'
