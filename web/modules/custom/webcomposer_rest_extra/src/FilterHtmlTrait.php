@@ -46,9 +46,52 @@ trait FilterHtmlTrait {
   }
 
   /**
+   * Generate the resolved URL of a file object.
    *
+   * @param File $file
+   *   The file entity object.
+   *
+   * @return string
+   *   The resolved absolute path.
    */
-  private function getInlineBasePath() {
+  protected function generateUrlFromFile(File $file) {
+    $path = NULL;
+    $base_path = $this->getInlineBasePath();
+
+    if ($base_path) {
+      $path = $this->getFileRelativeFilename($file->getFileUri());
+      $path = $base_path . '/' . $path;
+    } else {
+      $path = file_create_url($file->getFileUri());
+    }
+
+    return $path;
+  }
+
+  /**
+   * Load file by the file id.
+   *
+   * @param integer $fid
+   *   The file id to get the file object.
+   *
+   * @return string
+   *   The file relative path.
+   */
+  protected function getFileRelativePath($fid) {
+    $file = File::load($fid);
+
+    if ($file) {
+      return $this->generateUrlFromFile($file);
+    }
+  }
+
+  /**
+   * Gets the inline base path.
+   * Supports alter via hook_inline_image_url_change_alter().
+   *
+   * @return string
+   */
+  protected function getInlineBasePath() {
     $path = isset($_SERVER['HTTP_X_FE_BASE_URI']) ? $_SERVER['HTTP_X_FE_BASE_URI'] : NULL;
 
     \Drupal::moduleHandler()->alter('inline_image_url_change', $path);
@@ -57,24 +100,14 @@ trait FilterHtmlTrait {
   }
 
   /**
-   * Load file by the file id.
+   * Gets the filename of from the file URI
    *
-   * @param  String $fid
-   *  file id to get the file object.
-   * @return String
-   *  file relative path.
+   * @param string $filename
+   *   The file entity URI file path
+   *
+   * @return string
    */
-  public function getFileRelativePath($fid) {
-    $file_url;
-
-    if (isset($fid)) {
-      $file = File::load($fid);
-
-      if ($file) {
-        $file_url = preg_replace('/public:\/\//', '', $file->getFileUri());
-      }
-    }
-
-    return $file_url;
+  protected function getFileRelativeFilename($filename) {
+    return preg_replace('/public:\/\//', '', $filename);
   }
 }

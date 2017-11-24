@@ -517,7 +517,7 @@ if (isset($_SERVER['HTTP_X_FE_BASE_URI'])) {
  * must exist and be writable by Drupal. This directory must be relative to
  * the Drupal installation directory and be accessible over the web.
  */
- #$settings['file_public_path'] = 'webcomposer/sites';
+ #$settings['file_public_path'] = 'casino/sites';
 
 /**
  * Private file path:
@@ -756,15 +756,8 @@ if (file_exists(__DIR__ . '/database.php')) {
 }
 
 $settings['install_profile'] = 'config_installer';
-$config_directories['sync'] = 'sites/webcomposer/config/sync';
+$config_directories['sync'] = 'sites/demo/config/sync';
 
-$databases['default']['default'] = array (
-  'database' => 'webcomposer',
-  'username' => 'admin',
-  'password' => 'admin',
-  'prefix' => '',
-  'host' => 'localhost',
-  'port' => '3306',
-  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
-  'driver' => 'mysql',
-);
+// The primary site of front end
+$settings['primary_site_prefix'] = 'demo';
+$settings['ck_editor_inline_image_prefix'] = '/en/demo';

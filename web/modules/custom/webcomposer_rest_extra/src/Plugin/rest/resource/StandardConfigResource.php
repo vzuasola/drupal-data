@@ -106,6 +106,9 @@ class StandardConfigResource extends ResourceBase {
     try {
       $config = $this->configFactory->get($id);
       $data = $config->get();
+
+      $this->resolveFieldImages($id, $data);
+      $this->resolveImages($data);
     } catch (\Exception $e) {
       $data = [
         'error' => $this->t('Configuration not found')
@@ -119,5 +122,48 @@ class StandardConfigResource extends ResourceBase {
     ];
 
     return (new ResourceResponse($data))->addCacheableDependency($build);
+  }
+
+  /**
+   * Temporary solution for fields not using standard naming schemes.
+   *
+   * @param string $id
+   *   The configuration resource ID.
+   * @param array $data
+   *   The configuration data.
+   */
+  private function resolveFieldImages($id, &$data) {
+    switch ($id) {
+        case 'webcomposer_config.footer_configuration':
+          $file_id = $data['partners_logo'][0];
+          $data['partners_image_url'] = $this->getFileRelativePath($file_id);
+          break;
+
+        case 'webcomposer_config.page_not_found':
+          $file_id = $data['page_not_found_image'][0];
+          $data['page_not_found_image_url'] = $this->getFileRelativePath($file_id);
+          break;
+      }
+  }
+
+  /**
+   * Resolve images do their respective absolute URLs.
+   *
+   * @param array $data
+   *   The configuration data.
+   */
+  private function resolveImages(&$data) {
+    foreach ($data as $key => $value) {
+      if (is_array($value)) {
+        $this->resolveImages($value);
+      }
+
+      if (0 === strpos($key, 'file_image') && isset($value[0])) {
+        $file = File::load($value[0]);
+        if ($file) {
+          $data[$key] = $this->generateUrlFromFile($file);
+        }
+      }
+    }
   }
 }
