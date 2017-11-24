@@ -72,6 +72,16 @@ class GeneralConfiguration extends ConfigFormBase {
       '#required' => TRUE,
     ];
 
+    $form['general']['geoip_to_default_currency_country'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Default Currency and Country base on Geo IP'),
+      '#description' => $this->t('Mapping of default currency and country based on Geo IP ' .
+        'registration form e.g. "PH|117,48" where PH is the Geo IP value, 117 is the ' .
+        'default currency RMB and the 48 is the default country china'),
+      '#default_value' => $config->get('geoip_to_default_currency_country'),
+      '#required' => TRUE,
+    ];
+
     $form['integration'] = [
       '#type' => 'details',
       '#title' => $this->t('Integration'),
@@ -152,6 +162,7 @@ class GeneralConfiguration extends ConfigFormBase {
       'success_title',
       'home_title',
       'portal_id_country_restriction',
+      'geoip_to_default_currency_country',
     ];
 
     foreach ($keys as $key) {
