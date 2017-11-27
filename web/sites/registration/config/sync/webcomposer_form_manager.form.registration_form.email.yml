@@ -6,11 +6,25 @@ field_validations:
   required:
     enable: 1
     error_message: 'Please enter your valid and active Email Address for communication purposes. (e.g. name@domain.com)'
+  alpha:
+    enable: 0
+    error_message: 'Field should be Alphabet characters only'
+    parameters:
+      spaces: 1
   alphanumeric:
     enable: 0
     error_message: 'Field should be alphanumeric'
     parameters:
       spaces: 1
+  alpha_multi:
+    enable: 0
+    error_message: 'Value is not a valid multilingual character'
+    parameters:
+      space: 1
+      numeric: 1
+      allow: 0
+      disallow: 0
+      special: ''
   numeric:
     enable: 0
     error_message: 'Field should be numeric'
@@ -24,18 +38,23 @@ field_validations:
     enable: 1
     error_message: 'Please enter your valid and active Email Address for communication purposes. (e.g. name@domain.com)'
   min_length:
-    enable: 0
+    enable: 1
     error_message: 'Minimum requirement not met'
     parameters:
-      length: '2'
+      length: '5'
   max_length:
-    enable: 0
+    enable: 1
     error_message: 'Maximum requirement not met'
     parameters:
-      length: '10'
+      length: '50'
   username_availability:
     enable: 0
     error_message: 'Username not available'
   email_availability:
     enable: 1
     error_message: 'Please use a unique email address (e.g. test@domain.com).'
+  invalid_words:
+    enable: 0
+    error_message: 'Invalid/not allowed characters'
+    parameters:
+      invalid_words_list: ''

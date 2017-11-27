@@ -9,7 +9,7 @@ profile_icon_hover_text: 'My Profile'
 cashier_icon_hover_text: Cashier
 product_menu_new_tag: NEW
 welcome_text: '{username}'
-profile_link: 'https://stg-accountwww.elysium-dfbt.com/en/my-profile'
+profile_link: '/{domain:myaccount_domain}/{domain:lang_token}/my-profile'
 profile_logout_text: Logout
 _core:
   default_config_hash: Ynx2hkfeSTtNe4GyBQ1t4lBkrV4wrazLGjX_M7Mk3mg
