@@ -4,6 +4,7 @@ url:
   source: path_prefix
   prefixes:
     en: en
+    eu: eu
     zh-hans: sc
     zh-hant: ch
     th: th
@@ -11,13 +12,12 @@ url:
     id: id
     ko: kr
     hi: in
-    '': null
-    el: el
+    el: gr
     pl: pl
-    ja: ja
-    eu: eu
+    ja: jp
   domains:
     en: ''
+    eu: ''
     zh-hans: ''
     zh-hant: ''
     th: ''
@@ -28,7 +28,6 @@ url:
     el: ''
     pl: ''
     ja: ''
-    eu: ''
 selected_langcode: site_default
 _core:
   default_config_hash: uEePITI9tV6WqzmsTb7MfPCi5yPWXSxAN1xeLcYFQbM

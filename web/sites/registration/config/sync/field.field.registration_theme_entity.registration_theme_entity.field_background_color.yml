@@ -15,10 +15,7 @@ label: 'Background Color'
 description: ''
 required: true
 translatable: false
-default_value:
-  -
-    color: '#e6e7e8'
-    opacity: null
+default_value: {  }
 default_value_callback: ''
 settings:
   opacity: 0

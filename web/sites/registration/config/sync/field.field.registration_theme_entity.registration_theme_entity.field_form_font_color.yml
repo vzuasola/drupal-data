@@ -15,10 +15,7 @@ label: 'Form Font Color'
 description: ''
 required: true
 translatable: false
-default_value:
-  -
-    color: '#424242'
-    opacity: null
+default_value: {  }
 default_value_callback: ''
 settings:
   opacity: 0

@@ -5,12 +5,26 @@ field_settings:
 field_validations:
   required:
     enable: 1
-    error_message: 'Field should be required'
+    error_message: 'This field is required.'
+  alpha:
+    enable: 0
+    error_message: 'Field should be Alphabet characters only'
+    parameters:
+      spaces: 1
   alphanumeric:
     enable: 0
     error_message: 'Field should be alphanumeric'
     parameters:
       spaces: 1
+  alpha_multi:
+    enable: 1
+    error_message: 'Value is not a valid multilingual character'
+    parameters:
+      space: 1
+      numeric: 0
+      allow: 1
+      disallow: 0
+      special: '\-'''
   numeric:
     enable: 0
     error_message: 'Field should be numeric'
@@ -43,4 +57,4 @@ field_validations:
     enable: 1
     error_message: 'Invalid/not allowed characters'
     parameters:
-      invalid_words_list: "First Name\r\n名字"
+      invalid_words_list: 'First Name'
