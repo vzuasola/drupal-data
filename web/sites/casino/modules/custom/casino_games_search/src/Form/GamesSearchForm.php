@@ -83,6 +83,33 @@ class GamesSearchForm extends ConfigFormBase {
       '#required' => TRUE,
     );
 
+    $form['filter'] = array(
+      '#type' => 'details',
+      '#title' => $this->t('Filter Settings'),
+      '#collapsible' => TRUE,
+      '#group' => 'search_configuration_tab'
+    );
+
+    $filter_message = $config->get('filter_message');
+    $form['filter']['filter_message'] = array(
+      '#type' => 'text_format',
+      '#title' => $this->t('No Result on Filter (with Recommendation)'),
+      '#description' => $this->t('The text to display when there are no result for filter and recommendation is set.'),
+      '#default_value' => $filter_message['value'],
+      '#format' => $filter_message['format'],
+      '#required' => TRUE,
+    );
+
+    $filter_message_negative = $config->get('filter_message_negative');
+    $form['filter']['filter_message_negative'] = array(
+      '#type' => 'text_format',
+      '#title' => $this->t('No Result on Filter (No Recommendation)'),
+      '#description' => $this->t('The text to display when there are no result for filter and no recommendation.'),
+      '#default_value' => $filter_message_negative['value'],
+      '#format' => $filter_message_negative['format'],
+      '#required' => TRUE,
+    );
+
     return parent::buildForm($form, $form_state);
   }
 
@@ -95,6 +122,8 @@ class GamesSearchForm extends ConfigFormBase {
     $keys = array(
       'recommendation_message',
       'recommendation_message_negative',
+      'filter_message',
+      'filter_message_negative',
       'search_placeholder',
       'search_result_message',
     );
