@@ -129,7 +129,7 @@ class FooterConfiguration extends ConfigFormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Sponsor Mobile Description'),
       '#description' => $this->t('Text to be displayed in mobile devices below the sponsor logos.'),
-      '#default_value' => $config->get('sponsor_mobile_desc'),
+      '#default_value' => $config->get('sponsor_mobile_desc') ?? 'Official Main Club Sponsors',
       '#required' => TRUE,
     ];
 

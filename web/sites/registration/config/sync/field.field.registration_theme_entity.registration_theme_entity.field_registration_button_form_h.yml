@@ -15,7 +15,10 @@ label: 'Registration Button Highlight Color'
 description: 'Highlighted Background Color for registration buttons'
 required: true
 translatable: false
-default_value: {  }
+default_value:
+  -
+    color: '#fce470'
+    opacity: null
 default_value_callback: ''
 settings:
   opacity: 0
