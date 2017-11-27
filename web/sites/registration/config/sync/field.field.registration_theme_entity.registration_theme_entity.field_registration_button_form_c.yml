@@ -11,11 +11,14 @@ id: registration_theme_entity.registration_theme_entity.field_registration_butto
 field_name: field_registration_button_form_c
 entity_type: registration_theme_entity
 bundle: registration_theme_entity
-label: 'Registration Button Color'
+label: 'Registration Button Background Color'
 description: 'Button color for registration page'
 required: true
 translatable: false
-default_value: {  }
+default_value:
+  -
+    color: '#ffe000'
+    opacity: null
 default_value_callback: ''
 settings:
   opacity: 0
