@@ -2,10 +2,12 @@ lobby_page_title: '在线投注—— 在Dafabet畅享体育投注、娱乐场�
 join_now_text: '立即加入 SC'
 join_now_link: '/{domain:entry}/{domain:lang_token}/cant-login{tracking.token}'
 login_issue_text: '无法登录？ Sc'
+login_issue_link: '/{domain:entry}/{domain:lang_token}/cant-login{tracking.token}'
 balance_error_text: 错误检索
 profile_icon_hover_text: 我的账户
 cashier_icon_hover_text: 出纳柜台
 product_menu_new_tag: '新 SC'
+welcome_text: '{username}'
 profile_link: 'https://stg-cashier.elysium-dfbt.com/sc/?ticket={auth.token}&product=dafabet{tracking.token}'
 profile_logout_text: 登出
 balance_label_mapping: "4|沙巴体育\r\n6|大发体育\r\n1|娱乐场经典版\r\n2|娱乐场黄金版\r\n5|现场荷官&老虎机网页版\r\n3|扑克\r\n7|捕鱼王"

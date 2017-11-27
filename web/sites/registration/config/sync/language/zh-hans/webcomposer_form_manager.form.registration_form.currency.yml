@@ -19,7 +19,3 @@ field_validations:
     error_message: 'Minimum requirement not met'
   max_length:
     error_message: 'Maximum requirement not met'
-  username_availability:
-    error_message: 'Username not available'
-  email_availability:
-    error_message: 'Email not available'

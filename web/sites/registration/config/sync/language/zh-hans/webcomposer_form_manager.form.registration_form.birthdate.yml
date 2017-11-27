@@ -24,5 +24,3 @@ field_validations:
     error_message: 'Username not available'
   email_availability:
     error_message: 'Email not available'
-  invalid_words:
-    error_message: 'Invalid/not allowed characters'
