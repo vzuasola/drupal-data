@@ -1,0 +1,3 @@
+default_value:
+  -
+    value: '/{domain:myaccount_domain}/{domain:lang_token}/my-profile'
