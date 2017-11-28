@@ -1,5 +1,5 @@
-uuid: 91438369-b1e5-4d54-8c23-43a65fcb8aa4
-langcode: id
+uuid: d8b09810-ec84-437d-b38d-809558f81113
+langcode: eu
 status: true
 dependencies:
   module:
@@ -7,8 +7,8 @@ dependencies:
 third_party_settings:
   webcomposer_language_hierarchy:
     webcomposer_fallback_langcode: en
-id: id
-label: 'Bahasa Indonesia'
+id: eu
+label: 'English (Europe)'
 direction: ltr
-weight: -4
+weight: -9
 locked: false
