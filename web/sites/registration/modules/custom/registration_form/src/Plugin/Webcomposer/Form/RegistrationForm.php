@@ -254,14 +254,6 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
               '1|EUR',
             ]),
           ],
-          'top_choices' => [
-            '#title' => 'Top Currency Choices',
-            '#type' => 'textarea',
-            '#description' => 'Top Currencies that will appear at dropdown',
-            '#default_value' => implode(PHP_EOL, [
-              '117',
-            ]),
-          ],
           'portal_id_to_currency_mapping' => [
             '#title' => 'Mapping of portal IDs to list of currencies',
             '#type' => 'textarea',
