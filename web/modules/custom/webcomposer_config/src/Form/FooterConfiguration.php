@@ -187,12 +187,14 @@ class FooterConfiguration extends ConfigFormBase {
    * Set the URL image.
    */
   private function setImageStatus($fid) {
-    $file = File::load($fid[0]);
-    $file->setPermanent();
-    $file->save();
+    if ($fid) {
+      $file = File::load($fid[0]);
+      $file->setPermanent();
+      $file->save();
 
-    $file_usage = \Drupal::service('file.usage');
-    $file_usage->add($file, 'webcomposer_config', 'image', $fid[0]);
+      $file_usage = \Drupal::service('file.usage');
+      $file_usage->add($file, 'webcomposer_config', 'image', $fid[0]);
+    }
   }
 
 }
