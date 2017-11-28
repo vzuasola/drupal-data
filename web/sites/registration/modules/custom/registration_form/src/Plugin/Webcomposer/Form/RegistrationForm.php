@@ -249,8 +249,27 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
             '#type' => 'textarea',
             '#description' => 'Provide a pipe separated key value pair. <br> <small>Example key|My Value</small>',
             '#default_value' => implode(PHP_EOL, [
-              'rmb|CNY (Chinese Yuan)',
-              'usd|US Dollars',
+              '117|RMB/CNY',
+              '2|USD',
+              '1|EUR',
+            ]),
+          ],
+          'top_choices' => [
+            '#title' => 'Top Currency Choices',
+            '#type' => 'textarea',
+            '#description' => 'Top Currencies that will appear at dropdown',
+            '#default_value' => implode(PHP_EOL, [
+              '117',
+            ]),
+          ],
+          'portal_id_to_currency_mapping' => [
+            '#title' => 'Mapping of portal IDs to list of currencies',
+            '#type' => 'textarea',
+            '#description' => 'Mapping of icore portal IDs to the list of currencies, e.g 2|117,2,1 where 2 is the' .
+              'entrypage portal ID and 117,2,1 are the list of currencies that will appear on it',
+            '#default_value' => implode(PHP_EOL, [
+              '2|117,2,1',
+              '3|117,2,1',
             ]),
           ],
         ],
@@ -276,8 +295,16 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
             '#type' => 'textarea',
             '#description' => 'Provide a pipe separated key value pair. <br> <small>Example key|My Value</small>',
             '#default_value' => implode(PHP_EOL, [
-              'ch|China',
-              'us|United States',
+              '48|China',
+              '208|Thailand',
+            ]),
+          ],
+          'top_choices' => [
+            '#title' => 'Top Country Choices',
+            '#type' => 'textarea',
+            '#description' => 'Top Countries that will appear at dropdown',
+            '#default_value' => implode(PHP_EOL, [
+              '48',
             ]),
           ],
         ],
