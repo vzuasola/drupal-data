@@ -170,23 +170,36 @@ class FooterConfiguration extends ConfigFormBase {
     foreach ($keys as $key) {
       if ($key == 'partners_logo') {
         $fid = $form_state->getValue('partners_logo');
-        if ($fid) {
-          $file = File::load($fid[0]);
-          $file->setPermanent();
-          $file->save();
-
-          $file_usage = \Drupal::service('file.usage');
-          $file_usage->add($file, 'webcomposer_config', 'image', $fid[0]);
-
-          $this->config('webcomposer_config.footer_configuration')->set("partners_image_url", file_create_url($file->getFileUri()))->save();
-        }
-        else {
-          $this->config('webcomposer_config.footer_configuration')->set("partners_image_url", NULL);
-        }
+        $this->setImageUrl($fid, 'partners_image_url');
       }
+
+      if ($key == 'tablet_partners_logo') {
+        $fid = $form_state->getValue('tablet_partners_logo');
+        $this->setImageUrl($fid, 'tablet_partners_logo_url');
+      }
+
       $this->config('webcomposer_config.footer_configuration')->set($key, $form_state->getValue($key))->save();
     }
     parent::submitForm($form, $form_state);
+  }
+
+  /**
+   * Set the URL image.
+   */
+  private function setImageUrl($fid, $configKey) {
+    if ($fid) {
+      $file = File::load($fid[0]);
+      $file->setPermanent();
+      $file->save();
+
+      $file_usage = \Drupal::service('file.usage');
+      $file_usage->add($file, 'webcomposer_config', 'image', $fid[0]);
+
+      $this->config('webcomposer_config.footer_configuration')->set($configKey, file_create_url($file->getFileUri()))->save();
+    }
+    else {
+      $this->config('webcomposer_config.footer_configuration')->set($configKey, NULL);
+    }
   }
 
 }
