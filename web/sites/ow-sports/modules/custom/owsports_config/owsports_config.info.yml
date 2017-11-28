@@ -1,0 +1,5 @@
+name: OW-Sports Configuration
+description: OW-Sports Custom Configuration
+package: Custom
+type: module
+core: 8.x

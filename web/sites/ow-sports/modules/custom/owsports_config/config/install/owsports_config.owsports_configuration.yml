@@ -1,0 +1,14 @@
+pre_transaction_subdomain: 'sunplus'
+pre_login_uri: 'vender.aspx'
+post_transaction_subdomain: 'sunplus'
+post_login_uri: 'Deposit_ProcessLogin.aspx'
+language_mapping: "en|lang=en,\r\nsc|lang=cs,\r\nch|lang=ch,\r\nth|lang=th,\r\nvn|lang=vn,\r\nid|lang=id,\r\njp|lang=jp,\r\nkr|lang=ko,\r\nin|lang=hien,\r\neu|lang=eu,\r\ngr|lang=el,\r\npl|lang=pl,\r\nuk|lang=eu,\r\nro|lang=ro,\r\nru|lang=eu"
+euro_pre_login_uri: 'vender.aspx'
+euro_post_login_uri: 'Deposit_ProcessLogin.aspx'
+euro_template: 'eu,gr,pl,uk,ro,ru'
+singbet_pre_login_uri: 'onebook'
+singbet_post_login_uri: 'Deposit_ProcessLogin.aspx'
+singbet_template: 'sc,ch'
+redirect_page_url: 'sports-betting'
+iframe_js_source: "document|inject-to-sunplus.js\r\n#topFrame|inject-to-top.js"
+iframe_css_source: "#topFrame|ow-sunplus-sports-styles.scss"
