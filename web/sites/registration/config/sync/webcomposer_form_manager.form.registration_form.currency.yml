@@ -2,6 +2,7 @@ field_settings:
   label: Currency
   placeholder: 'Select your currency...'
   choices: "117|RMB/CNY\r\n2|USD\r\n1|EUR\r\n3|GBP\r\n111|IDR\r\n104|KRW\r\n102|MYR\r\n103|THB\r\n116|RUB\r\n105|VND\r\n112|INR\r\n114|PLN"
+  portal_id_to_currency_mapping: "2|117,2,1\r\n3|117,2,1"
 field_validations:
   required:
     enable: 1
