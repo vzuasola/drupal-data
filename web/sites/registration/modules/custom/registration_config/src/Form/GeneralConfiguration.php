@@ -143,6 +143,40 @@ class GeneralConfiguration extends ConfigFormBase {
       '#required' => TRUE,
     ];
 
+    $form['error_settings'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Error Settings'),
+      '#collapsible' => TRUE,
+      '#group' => 'general_settings_tab',
+    ];
+    $form['error_settings']['generic_error_message'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Generic Form Error Message'),
+      '#description' => $this->t('Generic error form message that will appear at the top of ' .
+        'the form with appended error code on it. This will be used if there are unhandled ' .
+        'exceptions on the form e.g unsupported currency on specific portal ID.'),
+      '#default_value' => $config->get('generic_error_message'),
+      '#required' => TRUE,
+    ];
+    $form['error_settings']['error_code_mapping'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Error Code Mapping'),
+      '#description' => $this->t('Mapping of error codes returned by reg API, ' .
+        'particularly the error codes returned by icore which cannot be handled by ' .
+        'the registration form itself e.g ExternalPlayerAccountCreationFailed|-20. ' .
+        'where ExternalPlayerAccountCreationFailed is the icore status code and -20 ' .
+        'is the error code that will appear beside the generic error message'),
+      '#default_value' => $config->get('error_code_mapping'),
+      '#required' => TRUE,
+    ];
+    $form['error_settings']['unauthenticated_error_message'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Unauthenticated Form Error Message'),
+      '#description' => $this->t('Unauthenticated error form message that will appear at the top of ' .
+        'the form if the player is not successfully authenticated after successful registration.'),
+      '#default_value' => $config->get('unauthenticated_error_message'),
+      '#required' => TRUE,
+    ];
 
 
     return parent::buildForm($form, $form_state);
@@ -163,6 +197,9 @@ class GeneralConfiguration extends ConfigFormBase {
       'home_title',
       'portal_id_country_restriction',
       'geoip_to_default_currency_country',
+      'generic_error_message',
+      'error_code_mapping',
+      'unauthenticated_error_message',
     ];
 
     foreach ($keys as $key) {
