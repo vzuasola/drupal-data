@@ -1,0 +1,21 @@
+uuid: 17f98651-ae64-489d-a8ed-f63d70aac8c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.webcomposer_slider_entity.field_post_blurb
+  module:
+    - text
+    - webcomposer_slider
+id: webcomposer_slider_entity.webcomposer_slider_entity.field_post_blurb
+field_name: field_post_blurb
+entity_type: webcomposer_slider_entity
+bundle: webcomposer_slider_entity
+label: 'Post Login Blurb'
+description: 'The body for this banner Post Login'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
