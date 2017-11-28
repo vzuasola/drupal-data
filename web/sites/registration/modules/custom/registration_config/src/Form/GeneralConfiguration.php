@@ -72,6 +72,16 @@ class GeneralConfiguration extends ConfigFormBase {
       '#required' => TRUE,
     ];
 
+    $form['general']['geoip_to_default_currency_country'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Default Currency and Country base on Geo IP'),
+      '#description' => $this->t('Mapping of default currency and country based on Geo IP ' .
+        'registration form e.g. "PH|117,48" where PH is the Geo IP value, 117 is the ' .
+        'default currency RMB and the 48 is the default country china'),
+      '#default_value' => $config->get('geoip_to_default_currency_country'),
+      '#required' => TRUE,
+    ];
+
     $form['integration'] = [
       '#type' => 'details',
       '#title' => $this->t('Integration'),
@@ -103,6 +113,38 @@ class GeneralConfiguration extends ConfigFormBase {
       '#required' => TRUE,
     ];
 
+    $form['integration']['registraton_portal_id_to_dafaconnect_portal_id'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Registration Portal ID to Dafabet connect portal ID mapping'),
+      '#description' => $this->t('Mapping that will be used for Portal ID to dafa connect portal ID ' .
+        'mapping upon registration e.g. "4|30" where 4 is the portal ID of casino and 30 is the casino ' .
+        'connect portal ID. (Take note that the said mapping will override the regvia parameter on the url ' .
+        'if the application detect that it is using a dafa-connect app)'),
+      '#default_value' => $config->get('registraton_portal_id_to_dafaconnect_portal_id'),
+      '#required' => TRUE,
+    ];
+
+    $form['restriction'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Restriction'),
+      '#collapsible' => TRUE,
+      '#group' => 'general_settings_tab',
+    ];
+
+    $form['restriction']['portal_id_country_restriction'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Country Restriction per Portal ID'),
+      '#description' => $this->t('Mapping that will be used for restricting players after ' .
+        'registration to view product-specific contents e.g. 24|27,39,23 where 24 is the ' .
+        'portal ID of fish hunter and 27,39,23 are the icore country codes that was ' .
+        'selected by the player. This will redirect the player on entrypage post-registration ' .
+        'with notification that he is restricted on his selected country.'),
+      '#default_value' => $config->get('portal_id_country_restriction'),
+      '#required' => TRUE,
+    ];
+
+
+
     return parent::buildForm($form, $form_state);
   }
 
@@ -116,8 +158,11 @@ class GeneralConfiguration extends ConfigFormBase {
       'registraton_api_url',
       'registraton_portal_id_to_product_name',
       'registraton_product_id_to_portal_id',
+      'registraton_portal_id_to_dafaconnect_portal_id',
       'success_title',
       'home_title',
+      'portal_id_country_restriction',
+      'geoip_to_default_currency_country',
     ];
 
     foreach ($keys as $key) {

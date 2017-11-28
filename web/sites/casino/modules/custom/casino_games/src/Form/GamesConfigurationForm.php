@@ -278,7 +278,7 @@ class GamesConfigurationForm extends ConfigFormBase {
     );
   }
 
-  private function gameFilterSection(&$form, $config){
+  private function gameFilterSection(&$form, $config) {
     $form['filter_group'] = array(
       '#type' => 'details',
       '#title' => $this->t('Game Filter'),
