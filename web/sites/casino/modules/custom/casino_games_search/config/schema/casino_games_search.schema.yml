@@ -10,6 +10,14 @@ casino_games.search_configuration:
       type: text_format
       label: 'Recommendation Not Set Message'
       translatable: true
+    filter_message:
+      type: text_format
+      label: 'No Result on Filter (with Recommendation)'
+      translatable: true
+    filter_message_negative:
+      type: text_format
+      label: 'No Result on Filter (no Recommendation)'
+      translatable: true
     search_placeholder:
       type: label
       label: 'Search Field Placeholder'
