@@ -186,7 +186,7 @@ class FooterConfiguration extends ConfigFormBase {
   /**
    * Set the URL image.
    */
-  private function setImageUrl($fid, $configKey) {
+  private function setImageUrl($fid, $key) {
     if ($fid) {
       $file = File::load($fid[0]);
       $file->setPermanent();
@@ -195,10 +195,10 @@ class FooterConfiguration extends ConfigFormBase {
       $file_usage = \Drupal::service('file.usage');
       $file_usage->add($file, 'webcomposer_config', 'image', $fid[0]);
 
-      $this->config('webcomposer_config.footer_configuration')->set($configKey, file_create_url($file->getFileUri()))->save();
+      $this->config('webcomposer_config.footer_configuration')->set($key, file_create_url($file->getFileUri()))->save();
     }
     else {
-      $this->config('webcomposer_config.footer_configuration')->set($configKey, NULL);
+      $this->config('webcomposer_config.footer_configuration')->set($key, NULL);
     }
   }
 
