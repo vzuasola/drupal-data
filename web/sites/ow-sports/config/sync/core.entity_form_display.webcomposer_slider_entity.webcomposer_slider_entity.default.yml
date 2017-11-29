@@ -8,6 +8,7 @@ dependencies:
     - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_banner_link_target
     - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_blurb
     - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_content_position
+    - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_content_position_post
     - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_log_in_state
     - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_post_blurb
     - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_publish_date
@@ -55,8 +56,9 @@ third_party_settings:
     group_blurb_settings:
       children:
         - field_blurb
-        - field_post_blurb
         - field_content_position
+        - field_post_blurb
+        - field_content_position_post
       parent_name: ''
       weight: 4
       format_type: tab
@@ -105,7 +107,13 @@ content:
     type: text_textarea
     region: content
   field_content_position:
-    weight: 7
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_content_position_post:
+    weight: 8
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -117,7 +125,7 @@ content:
     type: options_buttons
     region: content
   field_post_blurb:
-    weight: 6
+    weight: 7
     settings:
       rows: 5
       placeholder: ''
