@@ -32,4 +32,17 @@ function registration_form_webcomposer_form_validation_alter(&$validations) {
       ],
     ],
   ];
+  $validations['valid_languages'] = [
+    'title' => 'Valid Languages',
+    'description' => 'Validation to allow or disallow specific languages based on regex value',
+    'error' => "This field only accepts specific characters.",
+    'parameters' => [
+      'regex_value' => [
+        '#title' => 'Regex String',
+        '#description' => 'Regex value that will be tested on the front end. ' .
+          '(Only configure this if you know how to code a regex)',
+        '#type' => 'textarea',
+      ],
+    ],
+  ];
 }
