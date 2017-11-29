@@ -2,6 +2,9 @@ owsports_config.owsports_configuration:
   type: config_object
   label: 'OW-Sports Custom Configuration'
   mapping:
+    iframe_container:
+      type: text_format
+      label: 'iFrame Container'
     pre_transaction_subdomain:
       type: label
       label: 'Pre Transaction Subdomain'

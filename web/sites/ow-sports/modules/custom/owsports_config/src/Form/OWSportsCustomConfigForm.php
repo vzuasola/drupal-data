@@ -40,6 +40,13 @@ class OWSportsCustomConfigForm extends ConfigFormBase {
       '#group' => 'owsports_settings_tab',
     ];
 
+    $form['default_config_group']['iframe_container'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Container ID'),
+      '#description' => $this->t('ID of iFrame container.'),
+      '#default_value' => $config->get('iframe_container'),
+    ];
+
     $form['default_config_group']['subdomain_group'] = [
       '#type' => 'details',
       '#title' => $this->t('Transaction Subdomain'),
@@ -183,6 +190,7 @@ class OWSportsCustomConfigForm extends ConfigFormBase {
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $keys = [
+      'iframe_container',
       'pre_transaction_subdomain',
       'pre_login_uri',
       'post_transaction_subdomain',
