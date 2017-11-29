@@ -7,9 +7,9 @@ dependencies:
     - webcomposer_announcements
 third_party_settings:
   content_translation:
-    enabled: true
+    enabled: false
 id: announcement_entity.announcement_entity
 target_entity_type_id: announcement_entity
 target_bundle: announcement_entity
 default_langcode: site_default
-language_alterable: true
+language_alterable: false
