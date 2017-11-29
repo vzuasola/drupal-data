@@ -1,0 +1,25 @@
+uuid: 79f9ef2c-9522-48d6-b12b-e48c179956b6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.registration_theme_entity.field_annotation_bg_colo
+  module:
+    - color_field
+    - registration_theme
+id: registration_theme_entity.registration_theme_entity.field_annotation_bg_colo
+field_name: field_annotation_bg_colo
+entity_type: registration_theme_entity
+bundle: registration_theme_entity
+label: 'Annotation Background Color'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    color: '#545454'
+    opacity: null
+default_value_callback: ''
+settings:
+  opacity: 0
+field_type: color_field_type
