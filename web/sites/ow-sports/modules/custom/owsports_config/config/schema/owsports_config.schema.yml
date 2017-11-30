@@ -38,12 +38,3 @@ owsports_config.owsports_configuration:
     singbet_template: 
       type: text_format
       label: 'Singbet Template'
-    redirect_page_url:
-      type: label
-      label: 'Redirect Page URLs'
-    iframe_js_source:
-      type: text_format
-      label: 'iFrame JS Source'
-    iframe_css_source:
-      type: text_format
-      label: 'iFrame CSS Source'

@@ -9,6 +9,3 @@ euro_template: 'eu,gr,pl,uk,ro,ru'
 singbet_pre_login_uri: 'onebook'
 singbet_post_login_uri: 'Deposit_ProcessLogin.aspx'
 singbet_template: 'sc,ch'
-redirect_page_url: 'sports-betting'
-iframe_js_source: "document|inject-to-sunplus.js\r\n#topFrame|inject-to-top.js"
-iframe_css_source: "#topFrame|ow-sunplus-sports-styles.scss"
