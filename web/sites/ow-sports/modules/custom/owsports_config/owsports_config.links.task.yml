@@ -1,0 +1,4 @@
+owsports_config.owsports_configuration:
+  route_name: owsports_config.owsports_configuration
+  base_route: owsports_config.owsports_configuration
+  title: 'OW-Sports custom configuration'
