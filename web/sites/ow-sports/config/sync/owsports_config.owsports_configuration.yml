@@ -1,0 +1,23 @@
+pre_transaction_subdomain: poc
+pre_login_uri: iframe-A.html
+post_transaction_subdomain: sunplustest
+post_login_uri: Deposit_ProcessLogin.aspx
+language_mapping: "en|en\r\nsc|cs\r\nch|ch\r\nth|th\r\nvn|vn\r\nid|id\r\njp|jp\r\nkr|ko\r\nin|hien\r\neu|eu\r\ngr|el\r\npl|pl\r\nuk|eu\r\nro|ro\r\nru|eu"
+euro_pre_login_uri: vender.aspx
+euro_post_login_uri: Deposit_ProcessLogin.aspx
+euro_template: 'eu,gr,pl,uk,ro,ru'
+singbet_pre_login_uri: onebook
+singbet_post_login_uri: Deposit_ProcessLogin.aspx
+singbet_template: 'sc,ch'
+redirect_page_url: sports-betting
+iframe_js_source: null
+iframe_css_source: null
+_core:
+  default_config_hash: eq06lVY_EO26YIZp8-gsLZO8-yULblkh-Ie4s306ces
+singbet_pre_login: null
+redirect_url: null
+iframe_container: iframe-container
+colossus_uri: null
+override_domain: dafabet.com
+colossus_pre_uri: ''
+colossus_post_uri: 'https://prices.dafabet.com/Deposit_Processlogin.aspx'

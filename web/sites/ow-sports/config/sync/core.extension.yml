@@ -21,6 +21,7 @@ module:
   contextual: 0
   ctools: 0
   datetime: 0
+  devel: 0
   draggableviews: 0
   dynamic_page_cache: 0
   editor: 0
@@ -43,6 +44,7 @@ module:
   menu_ui: 0
   node: 0
   options: 0
+  owsports_config: 0
   paragraphs: 0
   paragraphs_type_permissions: 0
   path: 0
