@@ -82,6 +82,19 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
         ],
       ],
 
+      'password_meter' => [
+        'name' => 'Password Meter',
+        'type' => 'markup',
+        'settings' => [
+          'markup' => [
+            '#title' => 'Password meter markup',
+            '#type' => 'textarea',
+            '#description' => 'HTML markup for password meter.',
+            '#default_value' => '<div class="password_meter_wrapper password-meter-hidden grid mb-0"></div>',
+          ],
+        ],
+      ],
+
       'breakline_1' => [
         'name' => 'Break Line Markup',
         'type' => 'markup',
@@ -140,7 +153,7 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
             '#title' => 'Country Area Codes',
             '#type' => 'textarea',
             '#description' => 'List of area codes that will appear beside the mobile number ' .
-              '(take note: must be a valid area code or the image will not appear beside the are code)',
+            '(take note: must be a valid area code or the image will not appear beside the are code)',
           ],
         ],
       ],
@@ -258,7 +271,7 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
             '#title' => 'Mapping of portal IDs to list of currencies',
             '#type' => 'textarea',
             '#description' => 'Mapping of icore portal IDs to the list of currencies, e.g 2|117,2,1 where 2 is the' .
-              'entrypage portal ID and 117,2,1 are the list of currencies that will appear on it',
+            'entrypage portal ID and 117,2,1 are the list of currencies that will appear on it',
             '#default_value' => implode(PHP_EOL, [
               '2|117,2,1',
               '3|117,2,1',
