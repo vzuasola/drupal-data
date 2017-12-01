@@ -1,5 +1,5 @@
-pre_transaction_subdomain: poc
-pre_login_uri: iframe-A.html
+pre_transaction_subdomain: sunplustest
+pre_login_uri: vender.aspx
 post_transaction_subdomain: sunplustest
 post_login_uri: Deposit_ProcessLogin.aspx
 language_mapping: "en|en\r\nsc|cs\r\nch|ch\r\nth|th\r\nvn|vn\r\nid|id\r\njp|jp\r\nkr|ko\r\nin|hien\r\neu|eu\r\ngr|el\r\npl|pl\r\nuk|eu\r\nro|ro\r\nru|eu"
