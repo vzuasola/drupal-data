@@ -1,0 +1,17 @@
+uuid: 0a243603-e04b-49ea-af16-8cfbc601adc6
+langcode: en
+status: true
+dependencies:
+  module:
+    - owsports_config
+    - serialization
+    - user
+id: owsports_config_resource
+plugin_id: owsports_config_resource
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+    supported_auth:
+      - cookie
