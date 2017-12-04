@@ -1,0 +1,31 @@
+field_settings:
+  label: Imię
+  placeholder: Imię
+  annotation: "Proszę podać swoje prawdziwe imię i nazwisko, na przykład: <u>Joe</u> Smith. Nie będziemy w stanie przetworzyć depozytu karty, czeków lub przelewów bankowych, jeśli wprowadzona nazwa będzie inna niż nazwa właściciela konta.\r\n"
+field_validations:
+  required:
+    error_message: "Twoje Imię musi zostać wprowadzone poprawnie\r\n"
+  alpha:
+    error_message: 'Field should be Alphabet characters only'
+  alphanumeric:
+    error_message: "Your First Name must be entered correctly.\r\n"
+  alpha_multi:
+    error_message: "Twoje Imię musi zostać wprowadzone poprawnie\r\n"
+  numeric:
+    error_message: 'Field should be numeric'
+  no_symbols:
+    error_message: "Twoje Imię musi zostać wprowadzone poprawnie\r\n"
+  numeric_symbols:
+    error_message: 'Field contains invalid special characters'
+  email:
+    error_message: 'Field does not contain a valid email address'
+  min_length:
+    error_message: "Twoje Imię musi zostać wprowadzone poprawnie\r\n"
+  max_length:
+    error_message: "Twoje Imię musi zostać wprowadzone poprawnie\r\n"
+  username_availability:
+    error_message: 'Username not available'
+  email_availability:
+    error_message: 'Email not available'
+  invalid_words:
+    error_message: "Twoje Imię musi zostać wprowadzone poprawnie\r\n"

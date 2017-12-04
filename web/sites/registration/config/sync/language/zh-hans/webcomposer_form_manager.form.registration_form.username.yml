@@ -1,12 +1,16 @@
 field_settings:
-  label: ' 用户名'
-  placeholder: Username
-  annotation: 'Sample: Dafa12'
+  label: 用户名
+  placeholder: 用户名
+  annotation: ''
 field_validations:
   required:
-    error_message: 请确保您的用户名独一无二。在所有产品中您都将使用这个用户名。本栏中您只能填写3-15个字母和数字。
+    error_message: "请确保您的用户名独一无二。在所有产品中您都将使用这个用户名。本栏中您只能填写3-15个数字或字母。\r\n"
+  alpha:
+    error_message: 'Field should be Alphabet characters only'
   alphanumeric:
-    error_message: 'Make sure your Username is as unique as possible. Your Username will be used for all products. Only 3-15 Alphanumeric characters are allowed in this field.'
+    error_message: "请确保您的用户名独一无二。在所有产品中您都将使用这个用户名。本栏中您只能填写3-15个数字或字母。\r\n"
+  alpha_multi:
+    error_message: 'Value is not a valid multilingual character'
   numeric:
     error_message: 'Field should be numeric'
   no_symbols:
@@ -16,10 +20,12 @@ field_validations:
   email:
     error_message: 'Field does not contain a valid email address'
   min_length:
-    error_message: 本栏中您只能填写3-15个字母和数字。
+    error_message: "请确保您的用户名独一无二。在所有产品中您都将使用这个用户名。本栏中您只能填写3-15个数字或字母。\r\n"
   max_length:
-    error_message: 本栏中您只能填写3-15个字母和数字。
+    error_message: "请确保您的用户名独一无二。在所有产品中您都将使用这个用户名。本栏中您只能填写3-15个数字或字母。\r\n"
   username_availability:
-    error_message: 请确保您的用户名独一无二。在所有产品中您都将使用这个用户名。
+    error_message: "请确保您的用户名独一无二。在所有产品中您都将使用这个用户名。本栏中您只能填写3-15个数字或字母。\r\n"
   email_availability:
-    error_message: 'Please use a unique email.'
+    error_message: ''
+  invalid_words:
+    error_message: 'Invalid/not allowed characters'

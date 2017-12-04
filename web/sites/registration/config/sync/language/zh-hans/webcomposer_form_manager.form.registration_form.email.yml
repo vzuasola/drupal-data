@@ -1,12 +1,16 @@
 field_settings:
-  label: 电子邮件
-  placeholder: Email
-  annotation: 请输入您的有效的目前正处于激活状态的电子邮件地址（如name@domain.com）。请不要在您的电子邮件地址末尾使用额外的空格。
+  label: 电子邮箱地址
+  placeholder: 电子邮箱地址
+  annotation: 请输入真实有效电子邮箱地址以便于进行账户验证及银行交易（例如，Moneybookers/Skrill）。不匹配和/或无效的邮箱地址可能会导致交易进程延迟。重要的信息和通知将通过邮件发送给您，其中包括密码找回和/或与账户相关的信息等。
 field_validations:
   required:
-    error_message: 请不要在您的电子邮件地址末尾使用额外的空格。
+    error_message: "请输入您的有效的目前正处于激活状态的电子邮件地址（如name@domain.com）。请不要在您的电子邮件地址末尾使用额外的空格。\r\n"
+  alpha:
+    error_message: 'Field should be Alphabet characters only'
   alphanumeric:
     error_message: 'Field should be alphanumeric'
+  alpha_multi:
+    error_message: 'Value is not a valid multilingual character'
   numeric:
     error_message: 'Field should be numeric'
   no_symbols:
@@ -22,4 +26,6 @@ field_validations:
   username_availability:
     error_message: 'Username not available'
   email_availability:
-    error_message: 请输入您的有效的目前正处于激活状态的电子邮件地址（如name@domain.com）。请不要在您的电子邮件地址末尾使用额外的空格。
+    error_message: '该邮箱已被使用。点击<a href="{domain:entry}/{domain:lang_token}/cant-login{tracking.token}" target="new">此处</a>找回用户名/密码。'
+  invalid_words:
+    error_message: 'Invalid/not allowed characters'
