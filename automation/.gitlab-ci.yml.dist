@@ -112,6 +112,7 @@ qa1:
   when: manual
   dependencies:
     - dev
+    - create package
   artifacts:
     paths:
       - automation/deployed/*.jsonl
@@ -164,6 +165,7 @@ tct:
   when: manual
   dependencies:
     - dev
+    - create package
   artifacts:
     paths:
       - automation/deployed/*.jsonl

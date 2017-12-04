@@ -16,4 +16,10 @@ registration_config.general_configuration:
     success_title:
       type: label
       label: 'Success page title'
+    generic_error_message:
+      type: label
+      label: 'Generic Form Error Message'
+    unauthenticated_error_message:
+      type: label
+      label: 'Unauthenticated Form Error Message'
   langcode: 'en'

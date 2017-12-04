@@ -16,6 +16,7 @@ dependencies:
     - field.field.registration_theme_entity.registration_theme_entity.field_is_legacy
     - field.field.registration_theme_entity.registration_theme_entity.field_link_color
     - field.field.registration_theme_entity.registration_theme_entity.field_login_destination_url
+    - field.field.registration_theme_entity.registration_theme_entity.field_meta_tags
     - field.field.registration_theme_entity.registration_theme_entity.field_registration_button_font_c
     - field.field.registration_theme_entity.registration_theme_entity.field_registration_button_form_c
     - field.field.registration_theme_entity.registration_theme_entity.field_registration_button_form_h
@@ -29,6 +30,7 @@ dependencies:
     - color_field
     - image
     - link
+    - metatag
     - registration_theme
     - text
 id: registration_theme_entity.registration_theme_entity.default
@@ -157,6 +159,13 @@ content:
       target: ''
     third_party_settings: {  }
     type: link
+    region: content
+  field_meta_tags:
+    weight: 23
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
     region: content
   field_registration_button_font_c:
     weight: 8

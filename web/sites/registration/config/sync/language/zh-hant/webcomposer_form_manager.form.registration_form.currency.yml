@@ -1,0 +1,31 @@
+field_settings:
+  label: 貨幣
+  placeholder: 選擇您的貨幣
+  choices: "117|人民幣\r\n2|美元\r\n1|歐元\r\n3|英鎊\r\n102|馬幣\r\n103|泰銖\r\n105|越南盾\r\n111|印尼盾\r\n112|印度盧比\r\n104|韓元\r\n116|俄羅斯盧比"
+field_validations:
+  required:
+    error_message: "請選擇正確的貨幣種類，否則我們無法提供您準確的存款方式\r\n"
+  alpha:
+    error_message: 'Field should be Alphabet characters only'
+  alphanumeric:
+    error_message: 'Field should be alphanumeric'
+  alpha_multi:
+    error_message: 'Value is not a valid multilingual character'
+  numeric:
+    error_message: 'Field should be numeric'
+  no_symbols:
+    error_message: 'Field contains invalid special characters'
+  numeric_symbols:
+    error_message: 'Field contains invalid special characters'
+  email:
+    error_message: 'Field does not contain a valid email address'
+  min_length:
+    error_message: 'Minimum requirement not met'
+  max_length:
+    error_message: 'Maximum requirement not met'
+  username_availability:
+    error_message: 'Username not available'
+  email_availability:
+    error_message: 'Email not available'
+  invalid_words:
+    error_message: 'Invalid/not allowed characters'

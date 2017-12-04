@@ -44,6 +44,8 @@ module:
   locale: 0
   menu_link_attributes: 0
   menu_ui: 0
+  metatag: 0
+  metatag_open_graph: 0
   node: 0
   options: 0
   paragraphs: 0
@@ -86,6 +88,7 @@ module:
   webcomposer_promotions: 0
   webcomposer_rest_extra: 0
   webcomposer_right_side_block: 0
+  webcomposer_sitemap: 0
   webcomposer_social_media: 0
   webcomposer_sponsor_responsive: 0
   webcomposer_territory_blocking: 0

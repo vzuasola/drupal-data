@@ -1,0 +1,14 @@
+uuid: 08be5232-f435-4756-86d0-bf56c1e1cd00
+langcode: el
+status: true
+dependencies:
+  module:
+    - webcomposer_language_hierarchy
+third_party_settings:
+  webcomposer_language_hierarchy:
+    webcomposer_fallback_langcode: en
+id: el
+label: Ελληνικά
+direction: ltr
+weight: 0
+locked: false

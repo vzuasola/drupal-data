@@ -1,12 +1,16 @@
 field_settings:
   label: 货币
-  placeholder: 'Select your 货币...'
-  choices: "117|RMB\r\n2|USD\r\n1|EUR\r\n3|GBP\r\n111|IDR\r\n104|KRW\r\n113|JPY\r\n102|MYR\r\n109|SGD\r\n103|THB\r\n108|TWD\r\n116|RUB\r\n105|VND\r\n112|INR\r\n114|PLN\r\n115|RON"
+  placeholder: 选择您的货币
+  choices: "117|人民币\r\n2|美元\r\n1|欧元\r\n3|英镑\r\n102|马币\r\n103|泰铢\r\n105|越南盾\r\n111|印尼盾\r\n112|印度卢比\r\n104|韩元\r\n116|俄罗斯卢比"
 field_validations:
   required:
-    error_message: 这是必填栏。
+    error_message: "请选择正确的货币种类，否则我们无法提供您准确的存款方式\r\n"
+  alpha:
+    error_message: 'Field should be Alphabet characters only'
   alphanumeric:
     error_message: 'Field should be alphanumeric'
+  alpha_multi:
+    error_message: 'Value is not a valid multilingual character'
   numeric:
     error_message: 'Field should be numeric'
   no_symbols:
@@ -23,3 +27,5 @@ field_validations:
     error_message: 'Username not available'
   email_availability:
     error_message: 'Email not available'
+  invalid_words:
+    error_message: 'Invalid/not allowed characters'

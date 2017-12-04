@@ -1,16 +1,31 @@
 field_settings:
   label: Currency
   placeholder: 'Select your currency...'
-  choices: "117|RMB\r\n2|USD\r\n1|EUR\r\n3|GBP\r\n111|IDR\r\n104|KRW\r\n113|JPY\r\n102|MYR\r\n109|SGD\r\n103|THB\r\n108|TWD\r\n116|RUB\r\n105|VND\r\n112|INR\r\n114|PLN\r\n115|RON"
+  choices: "117|RMB/CNY\r\n2|USD\r\n1|EUR\r\n3|GBP\r\n111|IDR\r\n104|KRW\r\n102|MYR\r\n103|THB\r\n116|RUB\r\n105|VND\r\n112|INR\r\n114|PLN"
+  portal_id_to_currency_mapping: "2|117,2,1\r\n3|117,2,1"
 field_validations:
   required:
     enable: 1
-    error_message: 'Field should be required'
+    error_message: 'This field is required.'
+  alpha:
+    enable: 0
+    error_message: 'Field should be Alphabet characters only'
+    parameters:
+      spaces: 1
   alphanumeric:
     enable: 0
     error_message: 'Field should be alphanumeric'
     parameters:
       spaces: 1
+  alpha_multi:
+    enable: 0
+    error_message: 'Value is not a valid multilingual character'
+    parameters:
+      space: 1
+      numeric: 1
+      allow: 0
+      disallow: 0
+      special: ''
   numeric:
     enable: 0
     error_message: 'Field should be numeric'
@@ -33,3 +48,14 @@ field_validations:
     error_message: 'Maximum requirement not met'
     parameters:
       length: '10'
+  username_availability:
+    enable: 0
+    error_message: 'Username not available'
+  email_availability:
+    enable: 0
+    error_message: 'Email not available'
+  invalid_words:
+    enable: 0
+    error_message: 'Invalid/not allowed characters'
+    parameters:
+      invalid_words_list: ''

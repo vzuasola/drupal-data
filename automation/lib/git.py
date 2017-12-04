@@ -142,6 +142,8 @@ def get_latest_release_branch():
     release_branches_arr = filter(lambda x: x.startswith('remotes/origin/release-v'), stripped_arr)
     set_sonar_version()
     os.environ['LEAK_PERIOD'] = 'previous_version'
+    return True
+
     if len(release_branches_arr) > 0:
         version_branches_arr = map(lambda x: x.replace('remotes/origin/release-v', ''), release_branches_arr)
         version_branches_arr.sort(key=LooseVersion)

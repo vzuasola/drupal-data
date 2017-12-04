@@ -2,12 +2,16 @@ field_settings:
   label: 出生日期
   placeholder: YYYY/DD/MM
   date-format: YYYY/DD/MM
-  annotation: 'Should be at least 18 years old.'
+  annotation: ''
 field_validations:
   required:
-    error_message: 这是必填栏。
+    error_message: "请选择您的出生年份。您须年满18周岁才可注册账户。\r\n"
+  alpha:
+    error_message: 'Field should be Alphabet characters only'
   alphanumeric:
     error_message: 'Field should be alphanumeric'
+  alpha_multi:
+    error_message: 'Value is not a valid multilingual character'
   numeric:
     error_message: 'Field should be numeric'
   no_symbols:

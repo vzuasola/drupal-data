@@ -1,13 +1,17 @@
 field_settings:
-  label: 'Date of Birth'
-  placeholder: MM/DD/YYYY
-  date-format: MM/DD/YYYY
-  annotation: 'Should be at least 18 years old.'
+  label: วันเกิด
+  placeholder: DD/MM/YYYY
+  date-format: DD/MM/YYYY
+  annotation: ''
 field_validations:
   required:
-    error_message: 'Field should be required'
+    error_message: 'กรุณาระบุปีเกิด การสมัครสมาชิกกับเราคุณจะต้องมีอายุ 18 ปีบริบูรณ์ขึ้นไป'
+  alpha:
+    error_message: 'Field should be Alphabet characters only'
   alphanumeric:
     error_message: 'Field should be alphanumeric'
+  alpha_multi:
+    error_message: 'Value is not a valid multilingual character'
   numeric:
     error_message: 'Field should be numeric'
   no_symbols:

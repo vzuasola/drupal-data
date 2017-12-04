@@ -1429,6 +1429,7 @@ display:
         filters: false
         filter_groups: false
         sorts: false
+        cache: false
       filter_groups:
         operator: OR
         groups:
@@ -1464,6 +1465,9 @@ display:
           entity_type: webcomposer_slider_entity
           entity_field: changed
           plugin_id: date
+      cache:
+        type: none
+        options: {  }
     cache_metadata:
       max-age: -1
       contexts:

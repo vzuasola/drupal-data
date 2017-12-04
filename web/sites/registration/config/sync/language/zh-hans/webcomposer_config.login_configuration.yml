@@ -1,9 +1,9 @@
 autologout_box_content:
+  format: basic_html
   value: "<p>您的登錄將於<span class=\"sessionTimer\"></span>過期。您想繼續登錄嗎？</p>\r\n"
-  format: basic_html
 notification_content:
-  value: "<p>因沒有任何在線活動，您的登錄已超時失效。</p>\r\n"
   format: basic_html
+  value: "<p>因沒有任何在線活動，您的登錄已超時失效。</p>\r\n"
 lightbox_blurb: 还不是大发会员？
 username_placeholder: '用户名 SC'
 password_placeholder: 密码

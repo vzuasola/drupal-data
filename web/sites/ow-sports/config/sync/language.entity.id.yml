@@ -7,9 +7,8 @@ dependencies:
 third_party_settings:
   webcomposer_language_hierarchy:
     webcomposer_fallback_langcode: en
-    webcomposer_language_custom_label: 'Bahasa Indonesia'
 id: id
 label: 'Bahasa Indonesia'
 direction: ltr
-weight: -3
+weight: -4
 locked: false
