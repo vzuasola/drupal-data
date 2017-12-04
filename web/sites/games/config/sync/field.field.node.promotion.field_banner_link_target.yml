@@ -1,0 +1,25 @@
+uuid: 95c06c21-d1b0-4610-9a2c-8e0b6fae9e17
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_banner_link_target
+    - node.type.promotion
+  module:
+    - options
+_core:
+  default_config_hash: qj6XKaRM0HUl0yrlptc_mtFTkz4j92MmMV26G8a6LIA
+id: node.promotion.field_banner_link_target
+field_name: field_banner_link_target
+entity_type: node
+bundle: promotion
+label: 'Banner Link Target'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: _top
+default_value_callback: ''
+settings: {  }
+field_type: list_string
