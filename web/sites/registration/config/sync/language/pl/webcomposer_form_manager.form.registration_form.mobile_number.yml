@@ -1,8 +1,11 @@
 field_settings:
-  markup: '本人已满18周岁，已阅读并接受该 <strong><u><a href="/{lang}/terms-of-use{tracking.token}" target="_blank"> 规则和条款</a></u></strong>。'
+  label: 'Numer Telefonu'
+  placeholder: 'Numer Telefonu'
+  annotation: ''
+  country_area_code: ''
 field_validations:
   required:
-    error_message: 'Field should be required'
+    error_message: "Wprowadź swój Numer Telefonu\r\n"
   alpha:
     error_message: 'Field should be Alphabet characters only'
   alphanumeric:
@@ -14,13 +17,13 @@ field_validations:
   no_symbols:
     error_message: 'Field contains invalid special characters'
   numeric_symbols:
-    error_message: 'Field contains invalid special characters'
+    error_message: "Wprowadź swój Numer Telefonu\r\n"
   email:
     error_message: 'Field does not contain a valid email address'
   min_length:
-    error_message: 'Minimum requirement not met'
+    error_message: "Wprowadź swój Numer Telefonu\r\n"
   max_length:
-    error_message: 'Maximum requirement not met'
+    error_message: "Wprowadź swój Numer Telefonu\r\n"
   username_availability:
     error_message: 'Username not available'
   email_availability:

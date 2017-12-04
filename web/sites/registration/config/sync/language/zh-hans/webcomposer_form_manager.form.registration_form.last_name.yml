@@ -1,27 +1,31 @@
 field_settings:
-  label: ' 姓'
-  placeholder: 'Last Name'
-  annotation: '请输入您的姓氏，例如：张 。如果您输入的姓氏和银行开户人/身份证姓名不一样，我们将无法处理您的取款申请。 '
+  label: 输入您的姓
+  placeholder: 输入您的姓
+  annotation: 请输入您的姓，例如：乔.<u>史密斯</u>。如果您输入的名字和银行开户人/身份证姓名不一样，我们将无法处理您的提款申请。
 field_validations:
   required:
-    error_message: 这是必填栏。
+    error_message: "您必须输入正确的姓氏。\r\n"
+  alpha:
+    error_message: 'Field should be Alphabet characters only'
   alphanumeric:
     error_message: 'Field should be alphanumeric'
+  alpha_multi:
+    error_message: "您必须输入正确的姓氏。\r\n"
   numeric:
     error_message: 'Field should be numeric'
   no_symbols:
-    error_message: 'Field contains invalid special characters'
+    error_message: "您必须输入正确的姓氏。\r\n"
   numeric_symbols:
     error_message: 'Field contains invalid special characters'
   email:
     error_message: 'Field does not contain a valid email address'
   min_length:
-    error_message: 'Minimum requirement not met'
+    error_message: "您必须输入正确的姓氏。\r\n"
   max_length:
-    error_message: 'Maximum requirement not met'
+    error_message: "您必须输入正确的姓氏。\r\n"
   username_availability:
     error_message: 'Username not available'
   email_availability:
     error_message: 'Email not available'
   invalid_words:
-    error_message: 无效/不允许的字符
+    error_message: "您必须输入正确的姓氏。\r\n"

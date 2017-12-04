@@ -1,12 +1,16 @@
 field_settings:
-  label: Email
-  placeholder: Email
-  annotation: 'Please ensure that you are using an active email address for verification and bank transaction purposes (such as MoneyBookers /Skrill). Mismatched and/or invalid email addresses used may result in delays in processing your transactions. Important messages and notifications will also be sent to your email address, including password recovery and/or account related information. TH'
+  label: อีเมล
+  placeholder: อีเมล
+  annotation: "กรุณาตรวจสอบให้แน่ใจว่าอีเมลของคุณใช้งานได้จริงเพื่อการตรวจสอบการทำธุรกรรมการเงิน (เช่น Moneybookers/Skrill)\r\nหากอีเมลไม่ตรง หรือไม่สามารถใช้งานได้ จะส่งผลให้การทำ\r\nธุรกรรมการเงินมีความล่าช้า ข้อความสำคัญและการแจ้งเตือนจะ\r\nส่งเข้าอีเมลของคุณ รวมถึงการเปลี่ยนรหัสผ่าน และ/หรือ ข้อมูลที่เกี่ยวข้องกับบัญชีใช้งาน"
 field_validations:
   required:
-    error_message: 'Field should be required'
+    error_message: "โปรดกรอกที่อยู่อีเมลที่ถูกต้องและใช้งานได้เพื่อการติดต่อสื่อสาร (เช่น name@domain.com)\r\n"
+  alpha:
+    error_message: 'Field should be Alphabet characters only'
   alphanumeric:
     error_message: 'Field should be alphanumeric'
+  alpha_multi:
+    error_message: 'Value is not a valid multilingual character'
   numeric:
     error_message: 'Field should be numeric'
   no_symbols:
@@ -19,3 +23,9 @@ field_validations:
     error_message: 'Minimum requirement not met'
   max_length:
     error_message: 'Maximum requirement not met'
+  username_availability:
+    error_message: 'Username not available'
+  email_availability:
+    error_message: 'อีเมลนี้ใช้สมัครสมาชิกแล้วคลิก<a href="{domain:entry}/{domain:lang_token}/cant-login{tracking.token}" target="new">ที่นี่</a>พื่อกู้ยูสเซอร์เนมและรหัสผ่าน'
+  invalid_words:
+    error_message: 'Invalid/not allowed characters'
