@@ -13,8 +13,8 @@ id: webcomposer_slider_entity.webcomposer_slider_entity.field_blurb
 field_name: field_blurb
 entity_type: webcomposer_slider_entity
 bundle: webcomposer_slider_entity
-label: Blurb
-description: 'The body for this banner'
+label: 'Pre Login Blurb'
+description: 'The body for this banner pre Login Blurb'
 required: false
 translatable: true
 default_value: {  }

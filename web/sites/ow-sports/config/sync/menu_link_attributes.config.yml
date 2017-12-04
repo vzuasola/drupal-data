@@ -6,7 +6,7 @@ attributes:
     label: ''
     description: ''
     options:
-      _blank: 'New window (_blank)'
+      _blank: 'New Tab (_blank)'
       _self: 'Same window (_self)'
       window: 'New Window'
   menuTag:
