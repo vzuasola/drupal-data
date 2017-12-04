@@ -1,0 +1,7 @@
+name: Casino Games Page Background
+type: module
+description: Allow to add Games Page Background for Casino Classic
+core: 8.x
+package: custom
+dependencies:
+  - games_config

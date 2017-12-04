@@ -1,0 +1,25 @@
+uuid: 60a2ad81-902a-49b1-a413-033c00ac12ab
+langcode: zh-hant
+status: true
+dependencies:
+  config:
+    - block_content.type.sponsorship_block
+    - field.storage.block_content.field_block_enable
+_core:
+  default_config_hash: PvW2bMMf0CM_-SARVGcosgm0r0NF2FxgN3W7JW8AIBI
+id: block_content.sponsorship_block.field_block_enable
+field_name: field_block_enable
+entity_type: block_content
+bundle: sponsorship_block
+label: Enable/Disable
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Enable
+  off_label: Disable
+field_type: boolean

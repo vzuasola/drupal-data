@@ -1,0 +1,52 @@
+uuid: a04da4ec-7b80-493a-87b5-84f5a4590a30
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.vip_page
+  module:
+    - user
+id: node.vip_page.teaser
+targetEntityType: node
+bundle: vip_page
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_column_1_lightbox_title_cb: true
+  field_column_1_lightbox_title_sc: true
+  field_column_2_lightbox_title_cb: true
+  field_column_2_lightbox_title_sc: true
+  field_column_3_lightbox_title_cb: true
+  field_column_3_lightbox_title_sc: true
+  field_vip_banner_content: true
+  field_vip_banner_content_pos: true
+  field_vip_banner_image: true
+  field_vip_cash_back_column_1_lb: true
+  field_vip_cash_back_column_2_lb: true
+  field_vip_cash_back_column_3_lb: true
+  field_vip_cb_bot_blurb_content: true
+  field_vip_cb_col_1: true
+  field_vip_cb_col_2: true
+  field_vip_cb_col_3: true
+  field_vip_cb_enable: true
+  field_vip_cb_title: true
+  field_vip_cp_content: true
+  field_vip_cp_enable: true
+  field_vip_cp_title: true
+  field_vip_sc_bot_blurb_content: true
+  field_vip_sc_col_1: true
+  field_vip_sc_col_2: true
+  field_vip_sc_col_3: true
+  field_vip_sc_enable: true
+  field_vip_sc_title: true
+  field_vip_slots_club_column_1_lb: true
+  field_vip_slots_club_column_2_lb: true
+  field_vip_slots_club_column_3_lb: true
+  field_vip_structure_content: true
+  field_vip_structure_enable: true
+  field_vip_structure_title: true
+  langcode: true

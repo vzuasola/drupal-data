@@ -1,0 +1,3 @@
+toolbar_items:
+  - devel.cache_clear
+  - devel.execute_php

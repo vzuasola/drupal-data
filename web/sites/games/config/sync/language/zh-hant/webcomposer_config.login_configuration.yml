@@ -1,0 +1,22 @@
+autologout_box_content:
+  format: basic_html
+  value: "<p>您的登錄將於{seconds}過期。您想繼續登錄嗎？\r\n</p>\r\n"
+notification_content:
+  format: basic_html
+  value: "<p>因沒有任何在線活動，您的登錄已超時失效。\r\n</p>\r\n"
+lightbox_blurb: 還不是大發會員？
+username_placeholder: Username
+password_placeholder: 密碼
+login_bottom_label: 登錄
+error_message_blank_username: 你的用戶名爲必填項。
+error_message_blank_password: 你的密碼爲必填項。
+error_message_blank_passname: 請檢查所有字段，再試一次。
+error_message_invalid_passname: 對不起，您輸入了無效的用戶名和/或密碼。請再試一次。
+error_message_service_not_available: 服務暫不可用。
+error_message_account_suspended: 帳戶已被鎖定。請聯系我們的客戶支持。
+error_message_account_locked: 帳戶已被鎖定。請聯系我們的客戶支持。
+autologout_box_title: 提示
+affirmative_button_text: 是
+negative_button_text: 不
+notification_title: 通知
+notification_window_title: 登錄超時

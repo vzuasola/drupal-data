@@ -1,0 +1,10 @@
+game.add_form:
+  route_name: 'node.add'
+  title: 'Add Game'
+  route_parameters:
+      node_type: 'game'
+  options:
+      query:
+          destination: '/admin/games/manage'
+  appears_on:
+      - games_config.list.games
