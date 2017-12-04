@@ -1,0 +1,31 @@
+field_settings:
+  label: 用戶名
+  placeholder: 用戶名
+  annotation: ''
+field_validations:
+  required:
+    error_message: "請確保您的用戶名獨一無二。在所有產品中您都將使用這個用戶名。本欄中您只能填寫3-15個數字或字母。\r\n"
+  alpha:
+    error_message: 'Field should be Alphabet characters only'
+  alphanumeric:
+    error_message: "請確保您的用戶名獨一無二。在所有產品中您都將使用這個用戶名。本欄中您只能填寫3-15個數字或字母。\r\n"
+  alpha_multi:
+    error_message: 'Value is not a valid multilingual character'
+  numeric:
+    error_message: 'Field should be numeric'
+  no_symbols:
+    error_message: 'Field contains invalid special characters'
+  numeric_symbols:
+    error_message: 'Field contains invalid special characters'
+  email:
+    error_message: 'Field does not contain a valid email address'
+  min_length:
+    error_message: "請確保您的用戶名獨一無二。在所有產品中您都將使用這個用戶名。本欄中您只能填寫3-15個數字或字母。\r\n"
+  max_length:
+    error_message: "請確保您的用戶名獨一無二。在所有產品中您都將使用這個用戶名。本欄中您只能填寫3-15個數字或字母。\r\n"
+  username_availability:
+    error_message: "請確保您的用戶名獨一無二。在所有產品中您都將使用這個用戶名。本欄中您只能填寫3-15個數字或字母。\r\n"
+  email_availability:
+    error_message: 'Please use a unique email.'
+  invalid_words:
+    error_message: 'Invalid/not allowed characters'

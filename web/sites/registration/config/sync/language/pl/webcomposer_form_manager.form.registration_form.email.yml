@@ -1,0 +1,31 @@
+field_settings:
+  label: 'Adres Mailowy'
+  placeholder: 'Adres Mailowy'
+  annotation: "Upewnij się, że używasz aktywnego adresu e-mail, będzie potrzebny w celach weryfikacji i realizacji transakcji bankowych (takich jak Moneybookers / Skrill). Niedopasowane i / lub nieprawidłowe adresy e-mail mogą powodować opóźnienia w przetwarzaniu transakcji. Ważne wiadomości i powiadomienia będą również wysyłane na Twój adres e-mail, w tym linki do odzyskiwania haseł i / lub informacjie związanych z kontem.\r\n\r\n"
+field_validations:
+  required:
+    error_message: "Wprowadź swój prawdziwy i aktywny adres mailowy w celach komunikacyjnych. (e.g. name@domain.com)\r\n"
+  alpha:
+    error_message: 'Field should be Alphabet characters only'
+  alphanumeric:
+    error_message: 'Field should be alphanumeric'
+  alpha_multi:
+    error_message: 'Value is not a valid multilingual character'
+  numeric:
+    error_message: 'Field should be numeric'
+  no_symbols:
+    error_message: 'Field contains invalid special characters'
+  numeric_symbols:
+    error_message: 'Field contains invalid special characters'
+  email:
+    error_message: 'Please enter your valid and active Email Address for communication purposes. (e.g. name@domain.com)'
+  min_length:
+    error_message: 'Minimum requirement not met'
+  max_length:
+    error_message: 'Maximum requirement not met'
+  username_availability:
+    error_message: 'Username not available'
+  email_availability:
+    error_message: 'Email jest już w uzyciu. Kliknij <a href="{domain:entry}/{domain:lang_token}/cant-login{tracking.token}" target="new">tutaj</a>, aby odzyskać username/hasło'
+  invalid_words:
+    error_message: 'Invalid/not allowed characters'

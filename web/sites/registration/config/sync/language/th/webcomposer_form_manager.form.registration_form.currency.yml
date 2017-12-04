@@ -1,8 +1,10 @@
 field_settings:
-  markup: '本人已满18周岁，已阅读并接受该 <strong><u><a href="/{lang}/terms-of-use{tracking.token}" target="_blank"> 规则和条款</a></u></strong>。'
+  label: สกุลเงิน
+  placeholder: เลือกสกุลเงิน
+  choices: "117|หยวน(จีน)\r\n2|ดอลล่าร์(สหรัฐ)\r\n1|ยูโร\r\n3|ปอนด์\r\n102|ริงกิต(มาเลเซีย)\r\n103|บาท(ไทย)\r\n105|ดอง\r\n111|รูเปีย\r\n112|รูปี\r\n104|วอน\r\n116|รูเบิล"
 field_validations:
   required:
-    error_message: 'Field should be required'
+    error_message: "ทางเราจะไม่สามารถดำเนินรายการฝาก/ถอน หรือธุรกรรมการเงินอื่นๆให้คุณได้ หากคุณไม่ได้ระบุสกุลเงินที่ต้องการ\r\n"
   alpha:
     error_message: 'Field should be Alphabet characters only'
   alphanumeric:

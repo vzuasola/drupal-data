@@ -1,8 +1,10 @@
 field_settings:
-  markup: '本人已满18周岁，已阅读并接受该 <strong><u><a href="/{lang}/terms-of-use{tracking.token}" target="_blank"> 规则和条款</a></u></strong>。'
+  label: Waluta
+  placeholder: 'Wybierz swoją Walutę'
+  choices: "117|RMB/CNY\r\n2|USD\r\n1|EUR\r\n3|GBP\r\n102|MYR\r\n103|THB\r\n105|VND\r\n111|IDR\r\n112|INR\r\n104|KRW\r\n116|RUB"
 field_validations:
   required:
-    error_message: 'Field should be required'
+    error_message: "Nie będziemy w stanie przetworzyć depozytu, czeków, przelewów bankowych jeśli nie wybierzesz preferowanej waluty. Wybierz walutę z dostępnych opcji. \r\n"
   alpha:
     error_message: 'Field should be Alphabet characters only'
   alphanumeric:
