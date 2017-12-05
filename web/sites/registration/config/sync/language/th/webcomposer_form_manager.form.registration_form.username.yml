@@ -1,0 +1,31 @@
+field_settings:
+  label: ยูสเซอร์เนม
+  placeholder: ยูสเซอร์เนม
+  annotation: ''
+field_validations:
+  required:
+    error_message: "กรุณากรอกยูสเซอร์เนมที่คุณคิดว่ามีความปลอดภัยที่สุด ยูสเซอร์เนมนี้จะใช้งานได้กับทุกผลิตภัณฑ์ของดาฟาเบท สามารถใช้ได้ทั้งตัวเลขและตัวอักษรความยาว 3-15 ตัวอักษร\r\n"
+  alpha:
+    error_message: 'Field should be Alphabet characters only'
+  alphanumeric:
+    error_message: "กรุณากรอกยูสเซอร์เนมที่คุณคิดว่ามีความปลอดภัยที่สุด ยูสเซอร์เนมนี้จะใช้งานได้กับทุกผลิตภัณฑ์ของดาฟาเบท สามารถใช้ได้ทั้งตัวเลขและตัวอักษรความยาว 3-15 ตัวอักษร\r\n"
+  alpha_multi:
+    error_message: 'Value is not a valid multilingual character'
+  numeric:
+    error_message: 'Field should be numeric'
+  no_symbols:
+    error_message: 'Field contains invalid special characters'
+  numeric_symbols:
+    error_message: 'Field contains invalid special characters'
+  email:
+    error_message: 'Field does not contain a valid email address'
+  min_length:
+    error_message: "กรุณากรอกยูสเซอร์เนมที่คุณคิดว่ามีความปลอดภัยที่สุด ยูสเซอร์เนมนี้จะใช้งานได้กับทุกผลิตภัณฑ์ของดาฟาเบท สามารถใช้ได้ทั้งตัวเลขและตัวอักษรความยาว 3-15 ตัวอักษร\r\n"
+  max_length:
+    error_message: "กรุณากรอกยูสเซอร์เนมที่คุณคิดว่ามีความปลอดภัยที่สุด ยูสเซอร์เนมนี้จะใช้งานได้กับทุกผลิตภัณฑ์ของดาฟาเบท สามารถใช้ได้ทั้งตัวเลขและตัวอักษรความยาว 3-15 ตัวอักษร\r\n"
+  username_availability:
+    error_message: "กรุณากรอกยูสเซอร์เนมที่คุณคิดว่ามีความปลอดภัยที่สุด ยูสเซอร์เนมนี้จะใช้งานได้กับทุกผลิตภัณฑ์ของดาฟาเบท สามารถใช้ได้ทั้งตัวเลขและตัวอักษรความยาว 3-15 ตัวอักษร\r\n"
+  email_availability:
+    error_message: 'Please use a unique email.'
+  invalid_words:
+    error_message: 'Invalid/not allowed characters'

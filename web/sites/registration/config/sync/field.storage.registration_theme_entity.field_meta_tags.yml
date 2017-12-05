@@ -1,0 +1,19 @@
+uuid: 03534579-f261-40e2-807f-044e3df0e083
+langcode: en
+status: true
+dependencies:
+  module:
+    - metatag
+    - registration_theme
+id: registration_theme_entity.field_meta_tags
+field_name: field_meta_tags
+entity_type: registration_theme_entity
+type: metatag
+settings: {  }
+module: metatag
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

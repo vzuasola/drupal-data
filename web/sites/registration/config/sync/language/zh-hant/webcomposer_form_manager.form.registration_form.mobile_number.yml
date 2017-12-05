@@ -1,0 +1,32 @@
+field_settings:
+  label: 手機號碼
+  placeholder: 手機號碼
+  annotation: ''
+  country_area_code: ''
+field_validations:
+  required:
+    error_message: "請輸入您的手機號碼\r\n"
+  alpha:
+    error_message: 'Field should be Alphabet characters only'
+  alphanumeric:
+    error_message: 'Field should be alphanumeric'
+  alpha_multi:
+    error_message: 'Value is not a valid multilingual character'
+  numeric:
+    error_message: 'Field should be numeric'
+  no_symbols:
+    error_message: 'Field contains invalid special characters'
+  numeric_symbols:
+    error_message: 請輸入您的手機號碼
+  email:
+    error_message: 'Field does not contain a valid email address'
+  min_length:
+    error_message: "請輸入您的手機號碼\r\n"
+  max_length:
+    error_message: "請輸入您的手機號碼\r\n"
+  username_availability:
+    error_message: 'Username not available'
+  email_availability:
+    error_message: 'Email not available'
+  invalid_words:
+    error_message: 'Invalid/not allowed characters'

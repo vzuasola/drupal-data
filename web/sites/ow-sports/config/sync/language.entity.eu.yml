@@ -1,0 +1,14 @@
+uuid: d8b09810-ec84-437d-b38d-809558f81113
+langcode: eu
+status: true
+dependencies:
+  module:
+    - webcomposer_language_hierarchy
+third_party_settings:
+  webcomposer_language_hierarchy:
+    webcomposer_fallback_langcode: en
+id: eu
+label: 'English (Europe)'
+direction: ltr
+weight: -9
+locked: false

@@ -1,0 +1,31 @@
+field_settings:
+  label: 'Tên đăng nhập'
+  placeholder: 'Tên đăng nhập'
+  annotation: ''
+field_validations:
+  required:
+    error_message: "Hãy chắc chắn tên đăng nhập của bạn là duy nhất có thể. Tên đăng nhập của bạn sẽ được sử dụng cho tất cả các sản phẩm. Giới hạn từ 3-15 ký tự chữ và số.\r\n"
+  alpha:
+    error_message: 'Field should be Alphabet characters only'
+  alphanumeric:
+    error_message: "Hãy chắc chắn tên đăng nhập của bạn là duy nhất có thể. Tên đăng nhập của bạn sẽ được sử dụng cho tất cả các sản phẩm. Giới hạn từ 3-15 ký tự chữ và số.\r\n"
+  alpha_multi:
+    error_message: 'Value is not a valid multilingual character'
+  numeric:
+    error_message: 'Field should be numeric'
+  no_symbols:
+    error_message: 'Field contains invalid special characters'
+  numeric_symbols:
+    error_message: 'Field contains invalid special characters'
+  email:
+    error_message: 'Field does not contain a valid email address'
+  min_length:
+    error_message: "Hãy chắc chắn tên đăng nhập của bạn là duy nhất có thể. Tên đăng nhập của bạn sẽ được sử dụng cho tất cả các sản phẩm. Giới hạn từ 3-15 ký tự chữ và số.\r\n"
+  max_length:
+    error_message: "Hãy chắc chắn tên đăng nhập của bạn là duy nhất có thể. Tên đăng nhập của bạn sẽ được sử dụng cho tất cả các sản phẩm. Giới hạn từ 3-15 ký tự chữ và số.\r\n"
+  username_availability:
+    error_message: "Hãy chắc chắn tên đăng nhập của bạn là duy nhất có thể. Tên đăng nhập của bạn sẽ được sử dụng cho tất cả các sản phẩm. Giới hạn từ 3-15 ký tự chữ và số.\r\n"
+  email_availability:
+    error_message: 'Please use a unique email.'
+  invalid_words:
+    error_message: 'Invalid/not allowed characters'

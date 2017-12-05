@@ -1,0 +1,31 @@
+field_settings:
+  label: 'Địa chỉ Email'
+  placeholder: 'Địa chỉ Email'
+  annotation: "Hãy đảm bảo rằng bạn đang sử dụng địa chỉ email đang hoạt động để xác thực và các mục đích giao dịch ngân hàng (ví dụ như Moneybookers / Skrill). Sử dụng địa chỉ email không trùng khớp và/hoặc không hợp lệ có thể dẫn đến sự chậm trễ trong việc xử lý các giao dịch của bạn. Các thông báo và tin nhắn quan trọng cũng sẽ được gửi đến địa chỉ email của bạn, bao gồm cả việc khôi phục mật khẩu và/hoặc thông tin liên quan đến tài khoản.\r\n\r\n"
+field_validations:
+  required:
+    error_message: "Vui lòng nhập Địa Chỉ Email hợp lệ và đang hoạt động cho mục đích liên hệ. (vd: name@domain.com)\r\n"
+  alpha:
+    error_message: 'Field should be Alphabet characters only'
+  alphanumeric:
+    error_message: 'Field should be alphanumeric'
+  alpha_multi:
+    error_message: 'Value is not a valid multilingual character'
+  numeric:
+    error_message: 'Field should be numeric'
+  no_symbols:
+    error_message: 'Field contains invalid special characters'
+  numeric_symbols:
+    error_message: 'Field contains invalid special characters'
+  email:
+    error_message: 'Please enter your valid and active Email Address for communication purposes. (e.g. name@domain.com)'
+  min_length:
+    error_message: 'Minimum requirement not met'
+  max_length:
+    error_message: 'Maximum requirement not met'
+  username_availability:
+    error_message: 'Username not available'
+  email_availability:
+    error_message: "Email đã được sử dụng. Vui lòng nhấn <a href=\"{domain:entry}/{domain:lang_token}/cant-login{tracking.token}\" target=\"new\">đây</a> để lấy lại tên người dùng/mật khẩu.\r\n"
+  invalid_words:
+    error_message: 'Invalid/not allowed characters'
