@@ -1,12 +1,11 @@
 field_settings:
   label: Currency
-  placeholder: 'Select your currency...'
-  choices: "117|RMB/CNY\r\n2|USD\r\n1|EUR\r\n3|GBP\r\n111|IDR\r\n104|KRW\r\n102|MYR\r\n103|THB\r\n116|RUB\r\n105|VND\r\n112|INR\r\n114|PLN"
-  portal_id_to_currency_mapping: "2|117,2,1\r\n3|117,2,1"
+  placeholder: 'Select your Currency'
+  choices: "117|RMB/CNY\r\n2|USD\r\n1|EUR\r\n3|GBP\r\n102|MYR\r\n103|THB\r\n105|VND\r\n111|IDR\r\n112|INR\r\n104|KRW\r\n116|RUB"
 field_validations:
   required:
     enable: 1
-    error_message: 'This field is required.'
+    error_message: 'We will be unable to process card deposits, cheques, or bankwires if you will not indicate your preferred currency. Please select one from the available currencies.'
   alpha:
     enable: 0
     error_message: 'Field should be Alphabet characters only'

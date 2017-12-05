@@ -1,16 +1,30 @@
 field_settings:
   label: Username
   placeholder: Username
-  annotation: 'Sample: Dafa12'
+  annotation: ''
 field_validations:
   required:
     enable: 1
-    error_message: 'Make sure your Username is as unique as possible. Your Username will be used for all products. Only 3-15 Alphanumeric characters are allowed in this field.'
+    error_message: 'Make sure your Username is as unique as possible. Your Username will be used for all products. Only 3-15 alphanumeric characters are allowed in this field.'
+  alpha:
+    enable: 0
+    error_message: 'Field should be Alphabet characters only'
+    parameters:
+      spaces: 1
   alphanumeric:
     enable: 1
-    error_message: 'Field should be alphanumeric'
+    error_message: 'Make sure your Username is as unique as possible. Your Username will be used for all products. Only 3-15 alphanumeric characters are allowed in this field.'
     parameters:
       spaces: 0
+  alpha_multi:
+    enable: 0
+    error_message: 'Value is not a valid multilingual character'
+    parameters:
+      space: 1
+      numeric: 1
+      allow: 0
+      disallow: 0
+      special: ''
   numeric:
     enable: 0
     error_message: 'Field should be numeric'
@@ -25,17 +39,17 @@ field_validations:
     error_message: 'Field does not contain a valid email address'
   min_length:
     enable: 1
-    error_message: 'Only 3-15 Alphanumeric characters are allowed in this field.'
+    error_message: 'Make sure your Username is as unique as possible. Your Username will be used for all products. Only 3-15 alphanumeric characters are allowed in this field.'
     parameters:
       length: '3'
   max_length:
     enable: 1
-    error_message: 'Only 3-15 Alphanumeric characters are allowed in this field.'
+    error_message: 'Make sure your Username is as unique as possible. Your Username will be used for all products. Only 3-15 alphanumeric characters are allowed in this field.'
     parameters:
       length: '15'
   username_availability:
     enable: 1
-    error_message: 'Please use a unique username.'
+    error_message: 'Make sure your Username is as unique as possible. Your Username will be used for all products. Only 3-15 alphanumeric characters are allowed in this field.'
   email_availability:
     enable: 0
     error_message: 'Please use a unique email.'

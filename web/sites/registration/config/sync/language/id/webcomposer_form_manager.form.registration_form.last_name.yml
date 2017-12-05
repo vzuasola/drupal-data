@@ -1,0 +1,31 @@
+field_settings:
+  label: 'Nama Belakang'
+  placeholder: 'Nama Belakang'
+  annotation: 'Harap masukkan Nama Belakang Anda, contoh: Joe <u>Smith</u>. Kami tidak dapat memproses card deposit, cek, transfer bank, apabila nama yang dimasukkan berbeda dengan nama pemegang akun.'
+field_validations:
+  required:
+    error_message: "Nama Belakang Anda harus diisi dengan benar.\r\n"
+  alpha:
+    error_message: 'Field should be Alphabet characters only'
+  alphanumeric:
+    error_message: 'Field should be alphanumeric'
+  alpha_multi:
+    error_message: "Nama Belakang Anda harus diisi dengan benar.\r\n"
+  numeric:
+    error_message: 'Field should be numeric'
+  no_symbols:
+    error_message: "Nama Belakang Anda harus diisi dengan benar.\r\n"
+  numeric_symbols:
+    error_message: 'Field contains invalid special characters'
+  email:
+    error_message: 'Field does not contain a valid email address'
+  min_length:
+    error_message: "Nama Belakang Anda harus diisi dengan benar.\r\n"
+  max_length:
+    error_message: "Nama Belakang Anda harus diisi dengan benar.\r\n"
+  username_availability:
+    error_message: 'Username not available'
+  email_availability:
+    error_message: 'Email not available'
+  invalid_words:
+    error_message: "Nama Belakang Anda harus diisi dengan benar.\r\n"

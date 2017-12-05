@@ -1,0 +1,31 @@
+field_settings:
+  label: Username
+  placeholder: Username
+  annotation: ''
+field_validations:
+  required:
+    error_message: "Pastikan Username Anda belum pernah terdaftar disini. Username Anda akan digunakan untuk semua produk. Kolom ini hanya dapat diisi dengan 3-15 karakter huruf dan angka.\r\n"
+  alpha:
+    error_message: 'Field should be Alphabet characters only'
+  alphanumeric:
+    error_message: "Pastikan Username Anda belum pernah terdaftar disini. Username Anda akan digunakan untuk semua produk. Kolom ini hanya dapat diisi dengan 3-15 karakter huruf dan angka.\r\n"
+  alpha_multi:
+    error_message: 'Value is not a valid multilingual character'
+  numeric:
+    error_message: 'Field should be numeric'
+  no_symbols:
+    error_message: 'Field contains invalid special characters'
+  numeric_symbols:
+    error_message: 'Field contains invalid special characters'
+  email:
+    error_message: 'Field does not contain a valid email address'
+  min_length:
+    error_message: "Pastikan Username Anda belum pernah terdaftar disini. Username Anda akan digunakan untuk semua produk. Kolom ini hanya dapat diisi dengan 3-15 karakter huruf dan angka.\r\n"
+  max_length:
+    error_message: "Pastikan Username Anda belum pernah terdaftar disini. Username Anda akan digunakan untuk semua produk. Kolom ini hanya dapat diisi dengan 3-15 karakter huruf dan angka.\r\n"
+  username_availability:
+    error_message: "Pastikan Username Anda belum pernah terdaftar disini. Username Anda akan digunakan untuk semua produk. Kolom ini hanya dapat diisi dengan 3-15 karakter huruf dan angka.\r\n"
+  email_availability:
+    error_message: 'Please use a unique email.'
+  invalid_words:
+    error_message: 'Invalid/not allowed characters'

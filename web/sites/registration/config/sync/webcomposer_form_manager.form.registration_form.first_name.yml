@@ -1,11 +1,11 @@
 field_settings:
   label: 'First Name'
   placeholder: 'First Name'
-  annotation: 'Please enter your Given Name, example: <u>Joe</u> Smith. We will be unable to process card deposits, cheques or bankwires if the name entered is different from the account holder.Test Edit'
+  annotation: 'Please enter your Given Name, example: <u>Joe</u> Smith. We will be unable to process card deposits, cheques, or bankwires if the name entered is different from the account holder.'
 field_validations:
   required:
     enable: 1
-    error_message: 'This field is required.'
+    error_message: "Your First Name must be entered correctly.\r\n"
   alpha:
     enable: 0
     error_message: 'Field should be Alphabet characters only'
@@ -13,12 +13,12 @@ field_validations:
       spaces: 1
   alphanumeric:
     enable: 0
-    error_message: 'Field should be alphanumeric'
+    error_message: "Your First Name must be entered correctly.\r\n"
     parameters:
       spaces: 1
   alpha_multi:
     enable: 1
-    error_message: 'Value is not a valid multilingual character'
+    error_message: 'Your First Name must be entered correctly.'
     parameters:
       space: 1
       numeric: 0
@@ -39,12 +39,12 @@ field_validations:
     error_message: 'Field does not contain a valid email address'
   min_length:
     enable: 1
-    error_message: 'Minimum requirement not met'
+    error_message: 'Your First Name must be entered correctly.'
     parameters:
       length: '1'
   max_length:
     enable: 1
-    error_message: 'Maximum requirement not met'
+    error_message: 'Your First Name must be entered correctly.'
     parameters:
       length: '50'
   username_availability:
