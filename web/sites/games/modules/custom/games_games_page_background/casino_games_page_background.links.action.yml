@@ -1,5 +1,0 @@
-entity.games_page_bg_entity.add_form:
-  route_name: entity.games_page_bg_entity.add_form
-  title: 'Add Casino Games Page Background'
-  appears_on:
-    - entity.games_page_bg_entity.collection

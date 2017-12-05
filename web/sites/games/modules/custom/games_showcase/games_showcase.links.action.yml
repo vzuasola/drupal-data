@@ -1,5 +1,0 @@
-entity.games_showcase_entity.add_form:
-  route_name: entity.games_showcase_entity.add_form
-  title: 'Add Games Showcase entity'
-  appears_on:
-    - entity.games_showcase_entity.collection
