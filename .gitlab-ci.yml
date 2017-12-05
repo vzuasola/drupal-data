@@ -130,13 +130,11 @@ hp fortify scan qa1:
   stage: security-tests-test
   script:
     - python -u automation/run.py --stage code-scan-testing
-  when: manual
-  dependencies:
-    - qa1
   artifacts:
     paths:
       - automation/deployed/*.jsonl
     expire_in: 1 month
+  allow_failure: true
 
 .jmeter qa1:
   stage: performance-tests-test
