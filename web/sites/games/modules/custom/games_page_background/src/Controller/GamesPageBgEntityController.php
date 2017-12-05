@@ -67,8 +67,10 @@ class GamesPageBgEntityController extends ControllerBase implements ContainerInj
     $build['#title'] = $has_translations ? $this->t('@langname revisions for %title', ['@langname' => $langname, '%title' => $games_page_bg_entity->label()]) : $this->t('Revisions for %title', ['%title' => $games_page_bg_entity->label()]);
     $header = array($this->t('Revision'), $this->t('Operations'));
 
-    $revert_permission = (($account->hasPermission("revert all games page background revisions") || $account->hasPermission('administer games page background entities')));
-    $delete_permission = (($account->hasPermission("delete all games page background revisions") || $account->hasPermission('administer games page background entities')));
+    $revert_permission = (($account->hasPermission("revert all games page background revisions")
+                        || $account->hasPermission('administer games page background entities')));
+    $delete_permission = (($account->hasPermission("delete all games page background revisions")
+                        || $account->hasPermission('administer games page background entities')));
 
     $rows = array();
 

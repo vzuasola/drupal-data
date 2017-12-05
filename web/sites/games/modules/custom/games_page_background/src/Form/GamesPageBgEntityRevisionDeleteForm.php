@@ -106,8 +106,14 @@ class GamesPageBgEntityRevisionDeleteForm extends ConfirmFormBase {
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $this->GamesPageBgEntityStorage->deleteRevision($this->revision->getRevisionId());
 
-    $this->logger('content')->notice('Games Page Background: deleted %title revision %revision.', array('%title' => $this->revision->label(), '%revision' => $this->revision->getRevisionId()));
-    drupal_set_message(t('Revision from %revision-date of Games Page Background %title has been deleted.', array('%revision-date' => format_date($this->revision->getRevisionCreationTime()), '%title' => $this->revision->label())));
+    $this->logger('content')->notice('Games Page Background: deleted %title revision %revision.', array(
+        '%title' => $this->revision->label(),
+        '%revision' => $this->revision->getRevisionId()
+    ));
+    drupal_set_message(t('Revision from %revision-date of Games Page Background %title has been deleted.', array(
+        '%revision-date' => format_date($this->revision->getRevisionCreationTime()),
+        '%title' => $this->revision->label()
+    )));
     $form_state->setRedirect(
       'entity.games_page_bg_entity.canonical',
        array('games_page_bg_entity' => $this->revision->id())
