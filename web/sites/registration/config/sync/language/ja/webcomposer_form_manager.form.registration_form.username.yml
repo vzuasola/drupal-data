@@ -1,0 +1,31 @@
+field_settings:
+  label: Username
+  placeholder: Username
+  annotation: ''
+field_validations:
+  required:
+    error_message: "Upewnij się, że Twój username jest tak unikatowy jak  to tylko możliwe. Twój Username będzie taki sam, dla wszystkich produktów. Dozowolone jest 3-15 alfanumerycznych znaków.\r\n"
+  alpha:
+    error_message: 'Field should be Alphabet characters only'
+  alphanumeric:
+    error_message: "Upewnij się, że Twój username jest tak unikatowy jak  to tylko możliwe. Twój Username będzie taki sam, dla wszystkich produktów. Dozowolone jest 3-15 alfanumerycznych znaków.\r\n"
+  alpha_multi:
+    error_message: 'Value is not a valid multilingual character'
+  numeric:
+    error_message: 'Field should be numeric'
+  no_symbols:
+    error_message: 'Field contains invalid special characters'
+  numeric_symbols:
+    error_message: 'Field contains invalid special characters'
+  email:
+    error_message: 'Field does not contain a valid email address'
+  min_length:
+    error_message: "Upewnij się, że Twój username jest tak unikatowy jak  to tylko możliwe. Twój Username będzie taki sam, dla wszystkich produktów. Dozowolone jest 3-15 alfanumerycznych znaków.\r\n"
+  max_length:
+    error_message: "Upewnij się, że Twój username jest tak unikatowy jak  to tylko możliwe. Twój Username będzie taki sam, dla wszystkich produktów. Dozowolone jest 3-15 alfanumerycznych znaków.\r\n"
+  username_availability:
+    error_message: "Upewnij się, że Twój username jest tak unikatowy jak  to tylko możliwe. Twój Username będzie taki sam, dla wszystkich produktów. Dozowolone jest 3-15 alfanumerycznych znaków.\r\n"
+  email_availability:
+    error_message: 'Please use a unique email.'
+  invalid_words:
+    error_message: 'Invalid/not allowed characters'
