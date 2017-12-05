@@ -1,7 +1,2 @@
 notification_content:
   format: basic_html
-error_message_account_suspended: 'Account locked. Please contact our customer support.'
-error_message_account_locked: 'Account locked. Please contact our customer support.'
-autologout_box_title: REMINDER
-notification_title: 'Session Timeout'
-notification_window_title: 'Session Timeout'

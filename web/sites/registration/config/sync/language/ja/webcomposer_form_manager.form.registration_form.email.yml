@@ -1,0 +1,31 @@
+field_settings:
+  label: Eメールアドレス
+  placeholder: Eメールアドレス
+  annotation: '確認や銀行取引（Moneybookers, Skrillなど）に利用されているEメールアドレスが有効である事をご確認ください。Eメールアドレスが一致しない場合や、無効なEメールアドレスを利用されている場合、入出金処理が遅れる場合がございます。パスワードの変更やアカウント関連情報等の重要なメッセージやお知らせもご登録のメールアドレスに送信されます。'
+field_validations:
+  required:
+    error_message: "ご連絡手段として、有効でご利用中のメールアドレスを入力してください。 （例： name@domain.com）\r\n"
+  alpha:
+    error_message: 'Field should be Alphabet characters only'
+  alphanumeric:
+    error_message: 'Field should be alphanumeric'
+  alpha_multi:
+    error_message: 'Value is not a valid multilingual character'
+  numeric:
+    error_message: 'Field should be numeric'
+  no_symbols:
+    error_message: 'Field contains invalid special characters'
+  numeric_symbols:
+    error_message: 'Field contains invalid special characters'
+  email:
+    error_message: 'Please enter your valid and active Email Address for communication purposes. (e.g. name@domain.com)'
+  min_length:
+    error_message: 'Minimum requirement not met'
+  max_length:
+    error_message: 'Maximum requirement not met'
+  username_availability:
+    error_message: 'Username not available'
+  email_availability:
+    error_message: 'Eメールアドレスは既に使用されています。ユーザー名、パスワードを取得するには<a href="{domain:entry}/{domain:lang_token}/cant-login{tracking.token}" target="new">ここを</a>クリックして下さい。'
+  invalid_words:
+    error_message: 'Invalid/not allowed characters'

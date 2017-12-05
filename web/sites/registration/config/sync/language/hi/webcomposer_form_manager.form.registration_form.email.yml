@@ -1,0 +1,31 @@
+field_settings:
+  label: 'Email Address'
+  placeholder: 'Email Address'
+  annotation: 'Please ensure that your are using an active email address for verification and bank transaction purposes (such as Moneybookers/Skrill). Mismatched and/or invalid email addresses used may result in delays in processing your transactions. Important messages and notifications will also be sent to your email address, including password recovery and/or account related information.'
+field_validations:
+  required:
+    error_message: "Please enter your valid and active Email Address for communication purposes. (e.g. name@domain.com)\r\n"
+  alpha:
+    error_message: 'Field should be Alphabet characters only'
+  alphanumeric:
+    error_message: 'Field should be alphanumeric'
+  alpha_multi:
+    error_message: 'Value is not a valid multilingual character'
+  numeric:
+    error_message: 'Field should be numeric'
+  no_symbols:
+    error_message: 'Field contains invalid special characters'
+  numeric_symbols:
+    error_message: 'Field contains invalid special characters'
+  email:
+    error_message: 'Please enter your valid and active Email Address for communication purposes. (e.g. name@domain.com)'
+  min_length:
+    error_message: 'Minimum requirement not met'
+  max_length:
+    error_message: 'Maximum requirement not met'
+  username_availability:
+    error_message: 'Username not available'
+  email_availability:
+    error_message: 'Email is already in use. Click <a href="{domain:entry}/{domain:lang_token}/cant-login{tracking.token}" target="new">here</a> to retrieve username/password.'
+  invalid_words:
+    error_message: 'Invalid/not allowed characters'

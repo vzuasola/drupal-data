@@ -3,6 +3,3 @@ autologout_box_content:
 notification_content:
   format: basic_html
 lightbox_blurb: 'Dafabet へご登録はお済みですか？'
-error_message_account_suspended: 'Account locked. Please contact our customer support.'
-error_message_account_locked: 'Account locked. Please contact our customer support.'
-autologout_box_title: REMINDER
