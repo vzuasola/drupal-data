@@ -58,3 +58,8 @@ field_validations:
     error_message: 'Invalid/not allowed characters'
     parameters:
       invalid_words_list: 'First Name'
+  valid_languages:
+    enable: 1
+    error_message: 'This field only accepts specific characters.'
+    parameters:
+      regex_value: '^(?!\s)[a-zA-Z\u4E00-\uFA29\uAC00-\uD7AF\s]+$'

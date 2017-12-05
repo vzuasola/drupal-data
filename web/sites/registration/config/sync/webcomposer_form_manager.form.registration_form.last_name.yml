@@ -58,3 +58,8 @@ field_validations:
     error_message: 'Your Last Name must be entered correctly.'
     parameters:
       invalid_words_list: 'last name'
+  valid_languages:
+    enable: 1
+    error_message: 'This field only accepts specific characters.'
+    parameters:
+      regex_value: '^(?!\s)[a-zA-Z\u4E00-\uFA29\uAC00-\uD7AF\s]+$'
