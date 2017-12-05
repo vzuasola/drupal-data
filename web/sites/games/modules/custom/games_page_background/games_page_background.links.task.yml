@@ -1,4 +1,4 @@
-# Casino Games Page Background routing definition
+# Games Page Background routing definition
 games_page_bg_entity.settings_tab:
   route_name: games_page_bg_entity.settings
   title: 'Settings'

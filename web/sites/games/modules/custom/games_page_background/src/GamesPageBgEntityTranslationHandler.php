@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\casino_games_page_background;
+namespace Drupal\games_page_background;
 
 use Drupal\content_translation\ContentTranslationHandler;
 

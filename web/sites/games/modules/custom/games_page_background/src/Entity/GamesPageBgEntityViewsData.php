@@ -1,11 +1,11 @@
 <?php
 
-namespace Drupal\casino_games_page_background\Entity;
+namespace Drupal\games_page_background\Entity;
 
 use Drupal\views\EntityViewsData;
 
 /**
- * Provides Views data for Casino Games Page Background entities.
+ * Provides Views data for Games Page Background entities.
  */
 class GamesPageBgEntityViewsData extends EntityViewsData {
 

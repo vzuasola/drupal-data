@@ -1,32 +1,32 @@
 <?php
 
-namespace Drupal\casino_games_page_background\Form;
+namespace Drupal\games_page_background\Form;
 
 use Drupal\Core\Datetime\DateFormatterInterface;
 use Drupal\Core\Entity\EntityStorageInterface;
 use Drupal\Core\Form\ConfirmFormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Url;
-use Drupal\casino_games_page_background\Entity\GamesPageBgEntityInterface;
+use Drupal\games_page_background\Entity\GamesPageBgEntityInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
- * Provides a form for reverting a Casino Games Page Background revision.
+ * Provides a form for reverting a Games Page Background revision.
  *
- * @ingroup casino_games_page_background
+ * @ingroup games_page_background
  */
 class GamesPageBgEntityRevisionRevertForm extends ConfirmFormBase {
 
 
   /**
-   * The Casino Games Page Background revision.
+   * The Games Page Background revision.
    *
-   * @var \Drupal\casino_games_page_background\Entity\GamesPageBgEntityInterface
+   * @var \Drupal\games_page_background\Entity\GamesPageBgEntityInterface
    */
   protected $revision;
 
   /**
-   * The Casino Games Page Background storage.
+   * The Games Page Background storage.
    *
    * @var \Drupal\Core\Entity\EntityStorageInterface
    */
@@ -43,7 +43,7 @@ class GamesPageBgEntityRevisionRevertForm extends ConfirmFormBase {
    * Constructs a new GamesPageBgEntityRevisionRevertForm.
    *
    * @param \Drupal\Core\Entity\EntityStorageInterface $entity_storage
-   *   The Casino Games Page Background storage.
+   *   The Games Page Background storage.
    * @param \Drupal\Core\Datetime\DateFormatterInterface $date_formatter
    *   The date formatter service.
    */
@@ -119,8 +119,8 @@ class GamesPageBgEntityRevisionRevertForm extends ConfirmFormBase {
     $this->revision->revision_log = t('Copy of the revision from %date.', ['%date' => $this->dateFormatter->format($original_revision_timestamp)]);
     $this->revision->save();
 
-    $this->logger('content')->notice('Casino Games Page Background: reverted %title revision %revision.', ['%title' => $this->revision->label(), '%revision' => $this->revision->getRevisionId()]);
-    drupal_set_message(t('Casino Games Page Background %title has been reverted to the revision from %revision-date.', ['%title' => $this->revision->label(), '%revision-date' => $this->dateFormatter->format($original_revision_timestamp)]));
+    $this->logger('content')->notice('Games Page Background: reverted %title revision %revision.', ['%title' => $this->revision->label(), '%revision' => $this->revision->getRevisionId()]);
+    drupal_set_message(t('Games Page Background %title has been reverted to the revision from %revision-date.', ['%title' => $this->revision->label(), '%revision-date' => $this->dateFormatter->format($original_revision_timestamp)]));
     $form_state->setRedirect(
       'entity.games_page_bg_entity.version_history',
       array('games_page_bg_entity' => $this->revision->id())
@@ -130,12 +130,12 @@ class GamesPageBgEntityRevisionRevertForm extends ConfirmFormBase {
   /**
    * Prepares a revision to be reverted.
    *
-   * @param \Drupal\casino_games_page_background\Entity\GamesPageBgEntityInterface $revision
+   * @param \Drupal\games_page_background\Entity\GamesPageBgEntityInterface $revision
    *   The revision to be reverted.
    * @param \Drupal\Core\Form\FormStateInterface $form_state
    *   The current state of the form.
    *
-   * @return \Drupal\casino_games_page_background\Entity\GamesPageBgEntityInterface
+   * @return \Drupal\games_page_background\Entity\GamesPageBgEntityInterface
    *   The prepared revision ready to be stored.
    */
   protected function prepareRevertedRevision(GamesPageBgEntityInterface $revision, FormStateInterface $form_state) {

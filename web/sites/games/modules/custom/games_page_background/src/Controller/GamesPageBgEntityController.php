@@ -1,27 +1,27 @@
 <?php
 
-namespace Drupal\casino_games_page_background\Controller;
+namespace Drupal\games_page_background\Controller;
 
 use Drupal\Component\Utility\Xss;
 use Drupal\Core\Controller\ControllerBase;
 use Drupal\Core\DependencyInjection\ContainerInjectionInterface;
 use Drupal\Core\Url;
-use Drupal\casino_games_page_background\Entity\GamesPageBgEntityInterface;
+use Drupal\games_page_background\Entity\GamesPageBgEntityInterface;
 
 /**
  * Class GamesPageBgEntityController.
  *
- *  Returns responses for Casino Games Page Background routes.
+ *  Returns responses for Games Page Background routes.
  *
- * @package Drupal\casino_games_page_background\Controller
+ * @package Drupal\games_page_background\Controller
  */
 class GamesPageBgEntityController extends ControllerBase implements ContainerInjectionInterface {
 
   /**
-   * Displays a Casino Games Page Background  revision.
+   * Displays a Games Page Background  revision.
    *
    * @param int $games_page_bg_entity_revision
-   *   The Casino Games Page Background  revision ID.
+   *   The Games Page Background  revision ID.
    *
    * @return array
    *   An array suitable for drupal_render().
@@ -34,10 +34,10 @@ class GamesPageBgEntityController extends ControllerBase implements ContainerInj
   }
 
   /**
-   * Page title callback for a Casino Games Page Background  revision.
+   * Page title callback for a Games Page Background  revision.
    *
    * @param int $games_page_bg_entity_revision
-   *   The Casino Games Page Background  revision ID.
+   *   The Games Page Background  revision ID.
    *
    * @return string
    *   The page title.
@@ -48,10 +48,10 @@ class GamesPageBgEntityController extends ControllerBase implements ContainerInj
   }
 
   /**
-   * Generates an overview table of older revisions of a Casino Games Page Background .
+   * Generates an overview table of older revisions of a Games Page Background .
    *
-   * @param \Drupal\casino_games_page_background\Entity\GamesPageBgEntityInterface $games_page_bg_entity
-   *   A Casino Games Page Background  object.
+   * @param \Drupal\games_page_background\Entity\GamesPageBgEntityInterface $games_page_bg_entity
+   *   A Games Page Background  object.
    *
    * @return array
    *   An array as expected by drupal_render().
@@ -67,8 +67,8 @@ class GamesPageBgEntityController extends ControllerBase implements ContainerInj
     $build['#title'] = $has_translations ? $this->t('@langname revisions for %title', ['@langname' => $langname, '%title' => $games_page_bg_entity->label()]) : $this->t('Revisions for %title', ['%title' => $games_page_bg_entity->label()]);
     $header = array($this->t('Revision'), $this->t('Operations'));
 
-    $revert_permission = (($account->hasPermission("revert all casino games page background revisions") || $account->hasPermission('administer casino games page background entities')));
-    $delete_permission = (($account->hasPermission("delete all casino games page background revisions") || $account->hasPermission('administer casino games page background entities')));
+    $revert_permission = (($account->hasPermission("revert all games page background revisions") || $account->hasPermission('administer games page background entities')));
+    $delete_permission = (($account->hasPermission("delete all games page background revisions") || $account->hasPermission('administer games page background entities')));
 
     $rows = array();
 
@@ -77,7 +77,7 @@ class GamesPageBgEntityController extends ControllerBase implements ContainerInj
     $latest_revision = TRUE;
 
     foreach (array_reverse($vids) as $vid) {
-      /** @var \Drupal\casino_games_page_background\GamesPageBgEntityInterface $revision */
+      /** @var \Drupal\games_page_background\GamesPageBgEntityInterface $revision */
       $revision = $games_page_bg_entity_storage->loadRevision($vid);
       // Only show revisions that are affected by the language that is being
       // displayed.

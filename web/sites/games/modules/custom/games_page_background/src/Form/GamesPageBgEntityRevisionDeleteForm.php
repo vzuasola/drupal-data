@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\casino_games_page_background\Form;
+namespace Drupal\games_page_background\Form;
 
 use Drupal\Core\Database\Connection;
 use Drupal\Core\Entity\EntityStorageInterface;
@@ -10,22 +10,22 @@ use Drupal\Core\Url;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
- * Provides a form for deleting a Casino Games Page Background revision.
+ * Provides a form for deleting a Games Page Background revision.
  *
- * @ingroup casino_games_page_background
+ * @ingroup games_page_background
  */
 class GamesPageBgEntityRevisionDeleteForm extends ConfirmFormBase {
 
 
   /**
-   * The Casino Games Page Background revision.
+   * The Games Page Background revision.
    *
-   * @var \Drupal\casino_games_page_background\Entity\GamesPageBgEntityInterface
+   * @var \Drupal\games_page_background\Entity\GamesPageBgEntityInterface
    */
   protected $revision;
 
   /**
-   * The Casino Games Page Background storage.
+   * The Games Page Background storage.
    *
    * @var \Drupal\Core\Entity\EntityStorageInterface
    */
@@ -106,8 +106,8 @@ class GamesPageBgEntityRevisionDeleteForm extends ConfirmFormBase {
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $this->GamesPageBgEntityStorage->deleteRevision($this->revision->getRevisionId());
 
-    $this->logger('content')->notice('Casino Games Page Background: deleted %title revision %revision.', array('%title' => $this->revision->label(), '%revision' => $this->revision->getRevisionId()));
-    drupal_set_message(t('Revision from %revision-date of Casino Games Page Background %title has been deleted.', array('%revision-date' => format_date($this->revision->getRevisionCreationTime()), '%title' => $this->revision->label())));
+    $this->logger('content')->notice('Games Page Background: deleted %title revision %revision.', array('%title' => $this->revision->label(), '%revision' => $this->revision->getRevisionId()));
+    drupal_set_message(t('Revision from %revision-date of Games Page Background %title has been deleted.', array('%revision-date' => format_date($this->revision->getRevisionCreationTime()), '%title' => $this->revision->label())));
     $form_state->setRedirect(
       'entity.games_page_bg_entity.canonical',
        array('games_page_bg_entity' => $this->revision->id())

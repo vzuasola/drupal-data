@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\casino_games_page_background;
+namespace Drupal\games_page_background;
 
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Entity\EntityListBuilder;
@@ -8,9 +8,9 @@ use Drupal\Core\Routing\LinkGeneratorTrait;
 use Drupal\Core\Url;
 
 /**
- * Defines a class to build a listing of Casino Games Page Background entities.
+ * Defines a class to build a listing of Games Page Background entities.
  *
- * @ingroup casino_games_page_background
+ * @ingroup games_page_background
  */
 class GamesPageBgEntityListBuilder extends EntityListBuilder {
 
@@ -20,7 +20,7 @@ class GamesPageBgEntityListBuilder extends EntityListBuilder {
    * {@inheritdoc}
    */
   public function buildHeader() {
-    $header['id'] = $this->t('Casino Games Page Background ID');
+    $header['id'] = $this->t('Games Page Background ID');
     $header['name'] = $this->t('Name');
     return $header + parent::buildHeader();
   }
@@ -29,7 +29,7 @@ class GamesPageBgEntityListBuilder extends EntityListBuilder {
    * {@inheritdoc}
    */
   public function buildRow(EntityInterface $entity) {
-    /* @var $entity \Drupal\casino_games_page_background\Entity\GamesPageBgEntity */
+    /* @var $entity \Drupal\games_page_background\Entity\GamesPageBgEntity */
     $row['id'] = $entity->id();
     $row['name'] = $this->l(
       $entity->label(),

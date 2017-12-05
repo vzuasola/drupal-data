@@ -1,14 +1,14 @@
 <?php
 
-namespace Drupal\casino_games_page_background\Form;
+namespace Drupal\games_page_background\Form;
 
 use Drupal\Core\Entity\ContentEntityForm;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Form controller for Casino Games Page Background edit forms.
+ * Form controller for Games Page Background edit forms.
  *
- * @ingroup casino_games_page_background
+ * @ingroup games_page_background
  */
 class GamesPageBgEntityForm extends ContentEntityForm {
 
@@ -16,7 +16,7 @@ class GamesPageBgEntityForm extends ContentEntityForm {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    /* @var $entity \Drupal\casino_games_page_background\Entity\GamesPageBgEntity */
+    /* @var $entity \Drupal\games_page_background\Entity\GamesPageBgEntity */
     $form = parent::buildForm($form, $form_state);
 
     if (!$this->entity->isNew()) {
@@ -55,13 +55,13 @@ class GamesPageBgEntityForm extends ContentEntityForm {
 
     switch ($status) {
       case SAVED_NEW:
-        drupal_set_message($this->t('Created the %label Casino Games Page Background.', [
+        drupal_set_message($this->t('Created the %label Games Page Background.', [
           '%label' => $entity->label(),
         ]));
         break;
 
       default:
-        drupal_set_message($this->t('Saved the %label Casino Games Page Background.', [
+        drupal_set_message($this->t('Saved the %label Games Page Background.', [
           '%label' => $entity->label(),
         ]));
     }

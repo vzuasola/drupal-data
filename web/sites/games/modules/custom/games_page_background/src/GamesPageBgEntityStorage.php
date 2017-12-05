@@ -1,19 +1,19 @@
 <?php
 
-namespace Drupal\casino_games_page_background;
+namespace Drupal\games_page_background;
 
 use Drupal\Core\Entity\Sql\SqlContentEntityStorage;
 use Drupal\Core\Session\AccountInterface;
 use Drupal\Core\Language\LanguageInterface;
-use Drupal\casino_games_page_background\Entity\GamesPageBgEntityInterface;
+use Drupal\games_page_background\Entity\GamesPageBgEntityInterface;
 
 /**
- * Defines the storage handler class for Casino Games Page Background entities.
+ * Defines the storage handler class for Games Page Background entities.
  *
  * This extends the base storage class, adding required special handling for
- * Casino Games Page Background entities.
+ * Games Page Background entities.
  *
- * @ingroup casino_games_page_background
+ * @ingroup games_page_background
  */
 class GamesPageBgEntityStorage extends SqlContentEntityStorage implements GamesPageBgEntityStorageInterface {
 

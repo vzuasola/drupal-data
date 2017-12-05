@@ -1,18 +1,18 @@
 <?php
 
-namespace Drupal\casino_games_page_background\Form;
+namespace Drupal\games_page_background\Form;
 
 use Drupal\Core\Datetime\DateFormatterInterface;
 use Drupal\Core\Entity\EntityStorageInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Language\LanguageManagerInterface;
-use Drupal\casino_games_page_background\Entity\GamesPageBgEntityInterface;
+use Drupal\games_page_background\Entity\GamesPageBgEntityInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
- * Provides a form for reverting a Casino Games Page Background revision for a single translation.
+ * Provides a form for reverting a Games Page Background revision for a single translation.
  *
- * @ingroup casino_games_page_background
+ * @ingroup games_page_background
  */
 class GamesPageBgEntityRevisionRevertTranslationForm extends GamesPageBgEntityRevisionRevertForm {
 
@@ -35,7 +35,7 @@ class GamesPageBgEntityRevisionRevertTranslationForm extends GamesPageBgEntityRe
    * Constructs a new GamesPageBgEntityRevisionRevertTranslationForm.
    *
    * @param \Drupal\Core\Entity\EntityStorageInterface $entity_storage
-   *   The Casino Games Page Background storage.
+   *   The Games Page Background storage.
    * @param \Drupal\Core\Datetime\DateFormatterInterface $date_formatter
    *   The date formatter service.
    * @param \Drupal\Core\Language\LanguageManagerInterface $language_manager
@@ -93,7 +93,7 @@ class GamesPageBgEntityRevisionRevertTranslationForm extends GamesPageBgEntityRe
   protected function prepareRevertedRevision(GamesPageBgEntityInterface $revision, FormStateInterface $form_state) {
     $revert_untranslated_fields = $form_state->getValue('revert_untranslated_fields');
 
-    /** @var \Drupal\casino_games_page_background\Entity\GamesPageBgEntityInterface $default_revision */
+    /** @var \Drupal\games_page_background\Entity\GamesPageBgEntityInterface $default_revision */
     $latest_revision = $this->GamesPageBgEntityStorage->load($revision->id());
     $latest_revision_translation = $latest_revision->getTranslation($this->langcode);
 

@@ -1,13 +1,13 @@
 <?php
 
-namespace Drupal\casino_games_page_background;
+namespace Drupal\games_page_background;
 
 use Drupal\Core\Entity\EntityTypeInterface;
 use Drupal\Core\Entity\Routing\AdminHtmlRouteProvider;
 use Symfony\Component\Routing\Route;
 
 /**
- * Provides routes for Casino Games Page Background entities.
+ * Provides routes for Games Page Background entities.
  *
  * @see Drupal\Core\Entity\Routing\AdminHtmlRouteProvider
  * @see Drupal\Core\Entity\Routing\DefaultHtmlRouteProvider
@@ -71,7 +71,7 @@ class GamesPageBgEntityHtmlRouteProvider extends AdminHtmlRouteProvider {
           '_entity_list' => $entity_type_id,
           '_title' => "{$entity_type->getLabel()} list",
         ])
-        ->setRequirement('_permission', 'access casino games page background overview')
+        ->setRequirement('_permission', 'access games page background overview')
         ->setOption('_admin_route', TRUE);
 
       return $route;
@@ -93,9 +93,9 @@ class GamesPageBgEntityHtmlRouteProvider extends AdminHtmlRouteProvider {
       $route
         ->setDefaults([
           '_title' => "{$entity_type->getLabel()} revisions",
-          '_controller' => '\Drupal\casino_games_page_background\Controller\GamesPageBgEntityController::revisionOverview',
+          '_controller' => '\Drupal\games_page_background\Controller\GamesPageBgEntityController::revisionOverview',
         ])
-        ->setRequirement('_permission', 'access casino games page background revisions')
+        ->setRequirement('_permission', 'access games page background revisions')
         ->setOption('_admin_route', TRUE);
 
       return $route;
@@ -116,10 +116,10 @@ class GamesPageBgEntityHtmlRouteProvider extends AdminHtmlRouteProvider {
       $route = new Route($entity_type->getLinkTemplate('revision'));
       $route
         ->setDefaults([
-          '_controller' => '\Drupal\casino_games_page_background\Controller\GamesPageBgEntityController::revisionShow',
-          '_title_callback' => '\Drupal\casino_games_page_background\Controller\GamesPageBgEntityController::revisionPageTitle',
+          '_controller' => '\Drupal\games_page_background\Controller\GamesPageBgEntityController::revisionShow',
+          '_title_callback' => '\Drupal\games_page_background\Controller\GamesPageBgEntityController::revisionPageTitle',
         ])
-        ->setRequirement('_permission', 'access casino games page background revisions')
+        ->setRequirement('_permission', 'access games page background revisions')
         ->setOption('_admin_route', TRUE);
 
       return $route;
@@ -140,10 +140,10 @@ class GamesPageBgEntityHtmlRouteProvider extends AdminHtmlRouteProvider {
       $route = new Route($entity_type->getLinkTemplate('revision_revert'));
       $route
         ->setDefaults([
-          '_form' => '\Drupal\casino_games_page_background\Form\GamesPageBgEntityRevisionRevertForm',
+          '_form' => '\Drupal\games_page_background\Form\GamesPageBgEntityRevisionRevertForm',
           '_title' => 'Revert to earlier revision',
         ])
-        ->setRequirement('_permission', 'revert all casino games page background revisions')
+        ->setRequirement('_permission', 'revert all games page background revisions')
         ->setOption('_admin_route', TRUE);
 
       return $route;
@@ -164,10 +164,10 @@ class GamesPageBgEntityHtmlRouteProvider extends AdminHtmlRouteProvider {
       $route = new Route($entity_type->getLinkTemplate('revision_delete'));
       $route
         ->setDefaults([
-          '_form' => '\Drupal\casino_games_page_background\Form\GamesPageBgEntityRevisionDeleteForm',
+          '_form' => '\Drupal\games_page_background\Form\GamesPageBgEntityRevisionDeleteForm',
           '_title' => 'Delete earlier revision',
         ])
-        ->setRequirement('_permission', 'delete all casino games page background revisions')
+        ->setRequirement('_permission', 'delete all games page background revisions')
         ->setOption('_admin_route', TRUE);
 
       return $route;
@@ -188,10 +188,10 @@ class GamesPageBgEntityHtmlRouteProvider extends AdminHtmlRouteProvider {
       $route = new Route($entity_type->getLinkTemplate('translation_revert'));
       $route
         ->setDefaults([
-          '_form' => '\Drupal\casino_games_page_background\Form\GamesPageBgEntityRevisionRevertTranslationForm',
+          '_form' => '\Drupal\games_page_background\Form\GamesPageBgEntityRevisionRevertTranslationForm',
           '_title' => 'Revert to earlier revision of a translation',
         ])
-        ->setRequirement('_permission', 'revert all casino games page background revisions')
+        ->setRequirement('_permission', 'revert all games page background revisions')
         ->setOption('_admin_route', TRUE);
 
       return $route;
@@ -212,7 +212,7 @@ class GamesPageBgEntityHtmlRouteProvider extends AdminHtmlRouteProvider {
       $route = new Route("/admin/structure/{$entity_type->id()}/settings");
       $route
         ->setDefaults([
-          '_form' => 'Drupal\casino_games_page_background\Form\GamesPageBgEntitySettingsForm',
+          '_form' => 'Drupal\games_page_background\Form\GamesPageBgEntitySettingsForm',
           '_title' => "{$entity_type->getLabel()} settings",
         ])
         ->setRequirement('_permission', $entity_type->getAdminPermission())

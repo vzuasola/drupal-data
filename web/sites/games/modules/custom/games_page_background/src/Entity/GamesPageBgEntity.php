@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\casino_games_page_background\Entity;
+namespace Drupal\games_page_background\Entity;
 
 use Drupal\Core\Entity\EntityStorageInterface;
 use Drupal\Core\Field\BaseFieldDefinition;
@@ -10,29 +10,29 @@ use Drupal\Core\Entity\EntityTypeInterface;
 use Drupal\user\UserInterface;
 
 /**
- * Defines the Casino Games Page Background entity.
+ * Defines the Games Page Background entity.
  *
- * @ingroup casino_games_page_background
+ * @ingroup games_page_background
  *
  * @ContentEntityType(
  *   id = "games_page_bg_entity",
- *   label = @Translation("Casino Games Page Background"),
+ *   label = @Translation("Games Page Background"),
  *   handlers = {
- *     "storage" = "Drupal\casino_games_page_background\GamesPageBgEntityStorage",
+ *     "storage" = "Drupal\games_page_background\GamesPageBgEntityStorage",
  *     "view_builder" = "Drupal\Core\Entity\EntityViewBuilder",
- *     "list_builder" = "Drupal\casino_games_page_background\GamesPageBgEntityListBuilder",
- *     "views_data" = "Drupal\casino_games_page_background\Entity\GamesPageBgEntityViewsData",
- *     "translation" = "Drupal\casino_games_page_background\GamesPageBgEntityTranslationHandler",
+ *     "list_builder" = "Drupal\games_page_background\GamesPageBgEntityListBuilder",
+ *     "views_data" = "Drupal\games_page_background\Entity\GamesPageBgEntityViewsData",
+ *     "translation" = "Drupal\games_page_background\GamesPageBgEntityTranslationHandler",
  *
  *     "form" = {
- *       "default" = "Drupal\casino_games_page_background\Form\GamesPageBgEntityForm",
- *       "add" = "Drupal\casino_games_page_background\Form\GamesPageBgEntityForm",
- *       "edit" = "Drupal\casino_games_page_background\Form\GamesPageBgEntityForm",
- *       "delete" = "Drupal\casino_games_page_background\Form\GamesPageBgEntityDeleteForm",
+ *       "default" = "Drupal\games_page_background\Form\GamesPageBgEntityForm",
+ *       "add" = "Drupal\games_page_background\Form\GamesPageBgEntityForm",
+ *       "edit" = "Drupal\games_page_background\Form\GamesPageBgEntityForm",
+ *       "delete" = "Drupal\games_page_background\Form\GamesPageBgEntityDeleteForm",
  *     },
- *     "access" = "Drupal\casino_games_page_background\GamesPageBgEntityAccessControlHandler",
+ *     "access" = "Drupal\games_page_background\GamesPageBgEntityAccessControlHandler",
  *     "route_provider" = {
- *       "html" = "Drupal\casino_games_page_background\GamesPageBgEntityHtmlRouteProvider",
+ *       "html" = "Drupal\games_page_background\GamesPageBgEntityHtmlRouteProvider",
  *     },
  *   },
  *   base_table = "games_page_bg_entity",
@@ -40,7 +40,7 @@ use Drupal\user\UserInterface;
  *   revision_table = "games_page_bg_entity_revision",
  *   revision_data_table = "games_page_bg_entity_field_revision",
  *   translatable = TRUE,
- *   admin_permission = "administer casino games page background entities",
+ *   admin_permission = "administer games page background entities",
  *   entity_keys = {
  *     "id" = "id",
  *     "revision" = "vid",
@@ -214,7 +214,7 @@ class GamesPageBgEntity extends RevisionableContentEntityBase implements GamesPa
 
     $fields['user_id'] = BaseFieldDefinition::create('entity_reference')
       ->setLabel(t('Authored by'))
-      ->setDescription(t('The user ID of author of the Casino Games Page Background entity.'))
+      ->setDescription(t('The user ID of author of the Games Page Background entity.'))
       ->setRevisionable(TRUE)
       ->setSetting('target_type', 'user')
       ->setSetting('handler', 'default')
@@ -239,7 +239,7 @@ class GamesPageBgEntity extends RevisionableContentEntityBase implements GamesPa
 
     $fields['name'] = BaseFieldDefinition::create('string')
       ->setLabel(t('Name'))
-      ->setDescription(t('The name of the Casino Games Page Background entity.'))
+      ->setDescription(t('The name of the Games Page Background entity.'))
       ->setRevisionable(TRUE)
       ->setSettings(array(
         'max_length' => 50,
@@ -260,7 +260,7 @@ class GamesPageBgEntity extends RevisionableContentEntityBase implements GamesPa
 
     $fields['status'] = BaseFieldDefinition::create('boolean')
       ->setLabel(t('Publishing status'))
-      ->setDescription(t('A boolean indicating whether the Casino Games Page Background is published.'))
+      ->setDescription(t('A boolean indicating whether the Games Page Background is published.'))
       ->setRevisionable(TRUE)
       ->setDefaultValue(TRUE);
 
