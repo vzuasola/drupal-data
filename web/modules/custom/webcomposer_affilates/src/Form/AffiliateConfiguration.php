@@ -9,7 +9,6 @@ use Drupal\Core\Form\FormStateInterface;
  * Config form for Affiliate Configuration.
  */
 class AffiliateConfiguration extends ConfigFormBase {
-
   /**
    * {@inheritdoc}
    */
@@ -32,19 +31,19 @@ class AffiliateConfiguration extends ConfigFormBase {
 
     $form['affiliate_settings_tab'] = [
       '#type' => 'vertical_tabs',
-      '#title' => t('Settings'),
+      '#title' => t('Affiliate Settings'),
     ];
 
     $form['affiliate_group'] = [
       '#type' => 'details',
-      '#title' => $this->t('Affiliates Settings'),
+      '#title' => $this->t('Expiration'),
       '#collapsible' => TRUE,
       '#group' => 'affiliate_settings_tab',
     ];
 
     $form['affiliate_group']['affiliate_expiration'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Affiliate Parameter expiration'),
+      '#type' => 'number',
+      '#title' => $this->t('Expiration Time'),
       '#description' => $this->t('The expiration time of the Tracking variables in Minutes.'),
       '#default_value' => $config->get('affiliate_expiration'),
       '#required' => TRUE,
@@ -67,5 +66,4 @@ class AffiliateConfiguration extends ConfigFormBase {
 
     return parent::submitForm($form, $form_state);
   }
-
 }
