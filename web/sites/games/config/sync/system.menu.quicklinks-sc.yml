@@ -1,8 +1,0 @@
-uuid: 4bd7d713-77d4-45b2-b28c-12d8ac497dd0
-langcode: zh-hans
-status: true
-dependencies: {  }
-id: quicklinks-sc
-label: 'Quicklinks SC'
-description: ''
-locked: false
