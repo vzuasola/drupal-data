@@ -17,10 +17,10 @@ registration_config.general_configuration:
       type: label
       label: 'Success page title'
     generic_error_message:
-      type: label
+      type: text
       label: 'Generic Form Error Message'
     unauthenticated_error_message:
-      type: label
+      type: text
       label: 'Unauthenticated Form Error Message'
     portal_id_to_product_name_mapping:
       type: text
