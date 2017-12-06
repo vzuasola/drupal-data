@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains games_page_background.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function games_page_background_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the games_page_background module.
+    case 'help.page.games_page_background':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Allow to add Games Page Background') . '</p>';
+      return $output;
+
+    default:
+  }
+}

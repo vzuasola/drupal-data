@@ -1,0 +1,5 @@
+name: Games Showcase
+type: module
+description: Handles Games Showcase Configuration
+core: 8.x
+package: custom
