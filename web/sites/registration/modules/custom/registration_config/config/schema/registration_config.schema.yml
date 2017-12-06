@@ -22,4 +22,10 @@ registration_config.general_configuration:
     unauthenticated_error_message:
       type: label
       label: 'Unauthenticated Form Error Message'
+    portal_id_to_product_name_mapping:
+      type: label
+      label: 'Portal ID to Product Name Mapping'
+    country_restriction_message:
+      type: label
+      label: 'Country Restriction Message'
   langcode: 'en'

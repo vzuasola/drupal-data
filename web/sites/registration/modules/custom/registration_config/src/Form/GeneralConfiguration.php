@@ -143,6 +143,26 @@ class GeneralConfiguration extends ConfigFormBase {
       '#required' => TRUE,
     ];
 
+    $form['restriction']['portal_id_to_product_name_mapping'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Portal ID to Product Name Mapping'),
+      '#description' => $this->t('Mapping that will be used in getting the ' .
+        'product name for each portal ID registered which is translatable.'),
+      '#default_value' => $config->get('portal_id_to_product_name_mapping'),
+      '#required' => TRUE,
+    ];
+
+    $form['restriction']['country_restriction_message'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Country Restriction Message'),
+      '#description' => $this->t('Message that will appear on step 2 after successful ' .
+        'registration that the player is restricted on the country that he selected ' .
+        'you can use the "[product]" as a placeholder to specify the product he is ' .
+        'restricted to.'),
+      '#default_value' => $config->get('country_restriction_message'),
+      '#required' => TRUE,
+    ];
+
     $form['error_settings'] = [
       '#type' => 'details',
       '#title' => $this->t('Error Settings'),
@@ -196,6 +216,8 @@ class GeneralConfiguration extends ConfigFormBase {
       'success_title',
       'home_title',
       'portal_id_country_restriction',
+      'portal_id_to_product_name_mapping',
+      'country_restriction_message',
       'geoip_to_default_currency_country',
       'generic_error_message',
       'error_code_mapping',
