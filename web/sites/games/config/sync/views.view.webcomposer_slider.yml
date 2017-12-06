@@ -9,8 +9,6 @@ dependencies:
     - field.storage.webcomposer_slider_entity.field_title
     - field.storage.webcomposer_slider_entity.field_unpublish_date
     - image.style.thumbnail
-    - user.role.administrator
-    - user.role.site_admin
   module:
     - datetime
     - draggableviews
@@ -950,18 +948,16 @@ display:
           content: 'No content available.'
           plugin_id: text_custom
       access:
-        type: role
+        type: perm
         options:
-          role:
-            administrator: administrator
-            site_admin: site_admin
+          perm: 'access content overview'
     cache_metadata:
       max-age: 0
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
-        - user.roles
+        - user.permissions
       tags:
         - 'config:field.storage.webcomposer_slider_entity.field_banner_image'
         - 'config:field.storage.webcomposer_slider_entity.field_log_in_state'
