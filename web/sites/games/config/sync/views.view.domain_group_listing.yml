@@ -5,15 +5,12 @@ dependencies:
   config:
     - field.storage.taxonomy_term.field_add_placeholder
     - taxonomy.vocabulary.domain_groups
-    - user.role.administrator
-    - user.role.site_admin
   module:
     - content_translation
     - entity_reference_revisions
     - taxonomy
-    - user
 _core:
-  default_config_hash: 1D9Ff8Q-RYUbzAds3DJQXzzRKNqwHbQPhbSvIqk04fQ
+  default_config_hash: KutW4o7M-2pcc-y2oE3zAPaMjZbws5m8u-BLsmg6ZNA
 id: domain_group_listing
 label: 'Domain Group Listing'
 module: views
@@ -30,11 +27,8 @@ display:
     position: 0
     display_options:
       access:
-        type: role
-        options:
-          role:
-            administrator: administrator
-            site_admin: site_admin
+        type: none
+        options: {  }
       cache:
         type: tag
         options: {  }
@@ -431,7 +425,6 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - user.roles
       tags:
         - 'config:field.storage.taxonomy_term.field_add_placeholder'
   domain_group_listing:
@@ -447,6 +440,5 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - user.roles
       tags:
         - 'config:field.storage.taxonomy_term.field_add_placeholder'
