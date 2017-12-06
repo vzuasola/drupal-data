@@ -118,7 +118,12 @@ class GamesPageBgEntityRevisionDeleteForm extends ConfirmFormBase {
       'entity.games_page_bg_entity.canonical',
        array('games_page_bg_entity' => $this->revision->id())
     );
-    if ($this->connection->query('SELECT COUNT(DISTINCT vid) FROM {games_page_bg_entity_field_revision} WHERE id = :id', array(':id' => $this->revision->id()))->fetchField() > 1) {
+    if ($this->connection->query('
+        SELECT COUNT(DISTINCT vid)
+        FROM {games_page_bg_entity_field_revision}
+        WHERE id = :id',
+        array(':id' => $this->revision->id())
+      )->fetchField() > 1) {
       $form_state->setRedirect(
         'entity.games_page_bg_entity.version_history',
          array('games_page_bg_entity' => $this->revision->id())

@@ -92,7 +92,10 @@ class GamesPageBgEntityController extends ControllerBase implements ContainerInj
         // Use revision link to link to revisions that are not active.
         $date = \Drupal::service('date.formatter')->format($revision->revision_timestamp->value, 'short');
         if ($vid != $games_page_bg_entity->getRevisionId()) {
-          $link = $this->l($date, new Url('entity.games_page_bg_entity.revision', ['games_page_bg_entity' => $games_page_bg_entity->id(), 'games_page_bg_entity_revision' => $vid]));
+          $link = $this->l($date, new Url('entity.games_page_bg_entity.revision', [
+              'games_page_bg_entity' => $games_page_bg_entity->id(),
+              'games_page_bg_entity_revision' => $vid
+          ]));
         }
         else {
           $link = $games_page_bg_entity->link($date);
@@ -102,7 +105,8 @@ class GamesPageBgEntityController extends ControllerBase implements ContainerInj
         $column = [
           'data' => [
             '#type' => 'inline_template',
-            '#template' => '{% trans %}{{ date }} by {{ username }}{% endtrans %}{% if message %}<p class="revision-log">{{ message }}</p>{% endif %}',
+            '#template' => '{% trans %}{{ date }} by {{ username }}{% endtrans %}
+                {% if message %}<p class="revision-log">{{ message }}</p>{% endif %}',
             '#context' => [
               'date' => $link,
               'username' => \Drupal::service('renderer')->renderPlain($username),
@@ -131,15 +135,25 @@ class GamesPageBgEntityController extends ControllerBase implements ContainerInj
             $links['revert'] = [
               'title' => $this->t('Revert'),
               'url' => $has_translations ?
-              Url::fromRoute('entity.games_page_bg_entity.translation_revert', ['games_page_bg_entity' => $games_page_bg_entity->id(), 'games_page_bg_entity_revision' => $vid, 'langcode' => $langcode]) :
-              Url::fromRoute('entity.games_page_bg_entity.revision_revert', ['games_page_bg_entity' => $games_page_bg_entity->id(), 'games_page_bg_entity_revision' => $vid]),
+              Url::fromRoute('entity.games_page_bg_entity.translation_revert', [
+                  'games_page_bg_entity' => $games_page_bg_entity->id(),
+                  'games_page_bg_entity_revision' => $vid,
+                  'langcode' => $langcode
+              ]) :
+              Url::fromRoute('entity.games_page_bg_entity.revision_revert', [
+                  'games_page_bg_entity' => $games_page_bg_entity->id(),
+                  'games_page_bg_entity_revision' => $vid
+              ]),
             ];
           }
 
           if ($delete_permission) {
             $links['delete'] = [
               'title' => $this->t('Delete'),
-              'url' => Url::fromRoute('entity.games_page_bg_entity.revision_delete', ['games_page_bg_entity' => $games_page_bg_entity->id(), 'games_page_bg_entity_revision' => $vid]),
+              'url' => Url::fromRoute('entity.games_page_bg_entity.revision_delete', [
+                  'games_page_bg_entity' => $games_page_bg_entity->id(),
+                  'games_page_bg_entity_revision' => $vid
+              ]),
             ];
           }
 
