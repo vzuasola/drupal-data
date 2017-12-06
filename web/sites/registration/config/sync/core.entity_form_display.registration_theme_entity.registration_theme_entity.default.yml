@@ -10,10 +10,10 @@ dependencies:
     - field.field.registration_theme_entity.registration_theme_entity.field_background_image
     - field.field.registration_theme_entity.registration_theme_entity.field_banner_font_color
     - field.field.registration_theme_entity.registration_theme_entity.field_banner_highlight
+    - field.field.registration_theme_entity.registration_theme_entity.field_default_regvia
     - field.field.registration_theme_entity.registration_theme_entity.field_downloadable_client
     - field.field.registration_theme_entity.registration_theme_entity.field_error_color
     - field.field.registration_theme_entity.registration_theme_entity.field_form_font_color
-    - field.field.registration_theme_entity.registration_theme_entity.field_is_legacy
     - field.field.registration_theme_entity.registration_theme_entity.field_link_color
     - field.field.registration_theme_entity.registration_theme_entity.field_login_destination_url
     - field.field.registration_theme_entity.registration_theme_entity.field_meta_tags
@@ -149,6 +149,14 @@ content:
     third_party_settings: {  }
     type: color_field_widget_html5
     region: content
+  field_default_regvia:
+    weight: 27
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_downloadable_client:
     weight: 2
     settings:
@@ -167,13 +175,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: color_field_widget_html5
-    region: content
-  field_is_legacy:
-    weight: 2
-    settings:
-      display_label: true
-    third_party_settings: {  }
-    type: boolean_checkbox
     region: content
   field_link_color:
     weight: 7
