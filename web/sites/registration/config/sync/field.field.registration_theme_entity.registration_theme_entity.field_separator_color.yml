@@ -17,7 +17,7 @@ required: false
 translatable: true
 default_value:
   -
-    color: '#e6e7e8'
+    color: '#a8a8a8'
     opacity: null
 default_value_callback: ''
 settings:
