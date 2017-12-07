@@ -1,0 +1,31 @@
+field_settings:
+  label: Όνομα
+  placeholder: Όνομα
+  annotation: 'Παρακαλούμε εισάγετε το Πλήρες Όνομά σας, για παράδειγμα: <u>Νικόλαος</u> Παπαδόπουλος. Δεν θα μπορούμε να επεξεργαστούμε καταθέσεις καρτών, τσεκ ή εμβασμάτων αν το όνομα που συμπληρώσατε είναι διαφορετικό με αυτό του κατόχου του λογαριασμού.'
+field_validations:
+  required:
+    error_message: "Το Όνομά σας πρέπει να εισαχθεί σωστά.\r\n"
+  alpha:
+    error_message: 'Field should be Alphabet characters only'
+  alphanumeric:
+    error_message: "Your First Name must be entered correctly.\r\n"
+  alpha_multi:
+    error_message: "Το Όνομά σας πρέπει να εισαχθεί σωστά.\r\n"
+  numeric:
+    error_message: 'Field should be numeric'
+  no_symbols:
+    error_message: "Το Όνομά σας πρέπει να εισαχθεί σωστά.\r\n"
+  numeric_symbols:
+    error_message: 'Field contains invalid special characters'
+  email:
+    error_message: 'Field does not contain a valid email address'
+  min_length:
+    error_message: "Το Όνομά σας πρέπει να εισαχθεί σωστά.\r\n"
+  max_length:
+    error_message: "Το Όνομά σας πρέπει να εισαχθεί σωστά.\r\n"
+  username_availability:
+    error_message: 'Username not available'
+  email_availability:
+    error_message: 'Email not available'
+  invalid_words:
+    error_message: "Το Όνομά σας πρέπει να εισαχθεί σωστά.\r\n"

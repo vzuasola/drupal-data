@@ -1,0 +1,31 @@
+field_settings:
+  label: Νόμισμα
+  placeholder: 'Επιλέξτε το Νόμισμά σας'
+  choices: "117|RMB/CNY\r\n2|USD\r\n1|EUR\r\n3|GBP\r\n102|MYR\r\n103|THB\r\n105|VND\r\n111|IDR\r\n112|INR\r\n104|KRW\r\n116|RUB"
+field_validations:
+  required:
+    error_message: "Δεν θα είμαστε σε θέση να επεξεργαστούμε καταθέσεις με κάρτες, τσεκ ή έμβασμα αν δεν επιλέξετε το νόμισμα προτίμησής σας. Παρακαλούμε επιλέξτε ένα από τα διαθέσιμα νομίσματα.\r\n"
+  alpha:
+    error_message: 'Field should be Alphabet characters only'
+  alphanumeric:
+    error_message: 'Field should be alphanumeric'
+  alpha_multi:
+    error_message: 'Value is not a valid multilingual character'
+  numeric:
+    error_message: 'Field should be numeric'
+  no_symbols:
+    error_message: 'Field contains invalid special characters'
+  numeric_symbols:
+    error_message: 'Field contains invalid special characters'
+  email:
+    error_message: 'Field does not contain a valid email address'
+  min_length:
+    error_message: 'Minimum requirement not met'
+  max_length:
+    error_message: 'Maximum requirement not met'
+  username_availability:
+    error_message: 'Username not available'
+  email_availability:
+    error_message: 'Email not available'
+  invalid_words:
+    error_message: 'Invalid/not allowed characters'
