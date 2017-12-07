@@ -110,7 +110,7 @@ function draggableviews_preprocess_views_view_table(&$variables) {
 
   // Add hierarchy.
   foreach ($variables['rows'] as $key => $row) {
-    $title = isset($row['columns']['title']) ? $row['columns']['title']['content'][0]['field_output']['#markup'] : '';
+    $title = $row['columns']['title']['content'][0]['field_output']['#markup'];
     $indent = [
       '#theme' => 'indentation',
       '#size' => $draggableviews->getDepth($key),
@@ -168,9 +168,6 @@ function draggableviews_form_alter(&$form, \Drupal\Core\Form\FormStateInterface 
  */
 function draggableviews_views_submit(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
   $input = $form_state->getUserInput();
-  // kint_require();
-  // d($view_query);
-  // ddd($form_state);
 
   /** @var \Drupal\views\ViewExecutable $view */
   $view = $form_state->getBuildInfo()['args'][0];
@@ -178,11 +175,8 @@ function draggableviews_views_submit(&$form, \Drupal\Core\Form\FormStateInterfac
   $view_display = $view->current_display;
   $language = \Drupal::languageManager()->getCurrentLanguage(LanguageInterface::TYPE_CONTENT)->getId();
   $view_args = [];
-
-  // ddd($view);
-
   // check if there are view args - only include if not skipped.
-  foreach ($view->argument as $arg) {
+  foreach ($view_query->view->argument as $arg) {
     if (!$arg->options['default_argument_skip_url']) {
       $view_args[] = $arg->argument;
     }
