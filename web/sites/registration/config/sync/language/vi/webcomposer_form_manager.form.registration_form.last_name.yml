@@ -1,7 +1,7 @@
 field_settings:
   label: 'Nhập Họ'
   placeholder: 'Nhập Họ'
-  annotation: "Vui lòng nhập HỌ, ví dụ: Joe <u>Smith</u>. Chúng tôi sẽ không thể xử lý tiền nạp qua thẻ, séc, hoặc ngân hàng điện tử nếu bạn nhập Họ khác với Họ chủ tài khoản.\r\n"
+  annotation: "Vui lòng nhập HỌ, ví dụ: <u>Nguyen</u> Van A. Chúng tôi sẽ không thể xử lý tiền nạp qua thẻ, séc, hoặc ngân hàng điện tử nếu bạn nhập Họ khác với Họ chủ tài khoản.\r\n"
 field_validations:
   required:
     error_message: "Bạn phải nhập đúng Họ.\r\n"
@@ -14,18 +14,20 @@ field_validations:
   numeric:
     error_message: 'Field should be numeric'
   no_symbols:
-    error_message: "Bạn phải nhập đúng Họ.\r\n"
+    error_message: "Tên chứa các ký tự không hợp lệ (ví dụ:., @, #,%, ^, *, (), [], /)\r\n"
   numeric_symbols:
     error_message: 'Field contains invalid special characters'
   email:
     error_message: 'Field does not contain a valid email address'
   min_length:
-    error_message: "Bạn phải nhập đúng Họ.\r\n"
+    error_message: "Tên phải bao gồm từ 1-50 ký tự\r\n"
   max_length:
-    error_message: "Bạn phải nhập đúng Họ.\r\n"
+    error_message: "Tên phải bao gồm từ 1-50 ký tự\r\n"
   username_availability:
     error_message: 'Username not available'
   email_availability:
     error_message: 'Email not available'
   invalid_words:
     error_message: "Bạn phải nhập đúng Họ.\r\n"
+  valid_languages:
+    error_message: "Vui lòng chỉ sử dụng các ký tự tiếng Anh/ Trung Quốc/ Hàn Quốc / Hy Lạp.\r\n"

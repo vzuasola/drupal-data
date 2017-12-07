@@ -14,18 +14,20 @@ field_validations:
   numeric:
     error_message: 'Field should be numeric'
   no_symbols:
-    error_message: "Το Όνομά σας πρέπει να εισαχθεί σωστά.\r\n"
+    error_message: "\_Το όνομα περιέχει μη έγκυρους χαρακτήρες (πχ: .,@,#,%,^,*,( ),[],/)\r\n"
   numeric_symbols:
     error_message: 'Field contains invalid special characters'
   email:
     error_message: 'Field does not contain a valid email address'
   min_length:
-    error_message: "Το Όνομά σας πρέπει να εισαχθεί σωστά.\r\n"
+    error_message: "\_Το όνομα πρέπει να είναι μεταξύ 1-50 χαρακτήρες\r\n"
   max_length:
-    error_message: "Το Όνομά σας πρέπει να εισαχθεί σωστά.\r\n"
+    error_message: "\_Το όνομα πρέπει να είναι μεταξύ 1-50 χαρακτήρες\r\n"
   username_availability:
     error_message: 'Username not available'
   email_availability:
     error_message: 'Email not available'
   invalid_words:
     error_message: "Το Όνομά σας πρέπει να εισαχθεί σωστά.\r\n"
+  valid_languages:
+    error_message: "\_Παρακαλούμε χρησιμοποιήστε μόνο Αγγλικούς/Κινέζικους/Κορεάτικους/Ελληνικούς χαρακτήρες.\r\n"

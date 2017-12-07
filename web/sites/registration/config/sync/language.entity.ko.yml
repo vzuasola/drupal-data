@@ -9,7 +9,7 @@ third_party_settings:
     webcomposer_fallback_langcode: en
     webcomposer_language_custom_label: 한국어
 id: ko
-label: Korean
+label: 한국어
 direction: ltr
-weight: -3
+weight: -2
 locked: false

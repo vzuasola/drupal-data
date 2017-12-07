@@ -14,18 +14,20 @@ field_validations:
   numeric:
     error_message: 'Field should be numeric'
   no_symbols:
-    error_message: "Your First Name must be entered correctly.\r\n"
+    error_message: "Name contains invalid characters (example: .,@,#,%,^,*,( ),[],/)\r\n"
   numeric_symbols:
     error_message: 'Field contains invalid special characters'
   email:
     error_message: 'Field does not contain a valid email address'
   min_length:
-    error_message: "Your First Name must be entered correctly.\r\n"
+    error_message: "Name must be between 1-50 characters long\r\n"
   max_length:
-    error_message: "Your First Name must be entered correctly.\r\n"
+    error_message: "Name must be between 1-50 characters long\r\n"
   username_availability:
     error_message: 'Username not available'
   email_availability:
     error_message: 'Email not available'
   invalid_words:
     error_message: "Your First Name must be entered correctly.\r\n"
+  valid_languages:
+    error_message: "Please use English/Chinese/Korean/Greek characters only.\r\n"
