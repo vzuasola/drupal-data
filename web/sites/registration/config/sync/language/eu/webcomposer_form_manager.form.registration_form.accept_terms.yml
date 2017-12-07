@@ -1,5 +1,5 @@
 field_settings:
-  markup: "By clicking \"Submit\", I certify that I am at least 18 years old <br>\r\nand have read and accept the <strong><u><a href=\"/{lang}/terms-of-use{tracking.token}\" target=\"_blank\">Terms and Conditions</a></u></strong>."
+  markup: 'By clicking "Submit", I certify that I am at least 18 years old and have read and accept the <strong><u><a href="/{lang}/terms-of-use{tracking.token}" target="_blank">Terms and Conditions</a></u></strong>.'
 field_validations:
   required:
     error_message: 'Field should be required'
@@ -27,3 +27,5 @@ field_validations:
     error_message: 'Email not available'
   invalid_words:
     error_message: 'Invalid/not allowed characters'
+  valid_languages:
+    error_message: 'This field only accepts specific characters.'

@@ -14,18 +14,20 @@ field_validations:
   numeric:
     error_message: 'Field should be numeric'
   no_symbols:
-    error_message: "성을 올바르게 입력해야 합니다.\r\n"
+    error_message: "이름에 유효하지 않은 문자 (예:.,@,#,%,^,*,(),[],/)가 있습니다.\r\n"
   numeric_symbols:
     error_message: 'Field contains invalid special characters'
   email:
     error_message: 'Field does not contain a valid email address'
   min_length:
-    error_message: "성을 올바르게 입력해야 합니다.\r\n"
+    error_message: "이름은 1-50자 사이여야 합니다.\r\n"
   max_length:
-    error_message: "성을 올바르게 입력해야 합니다.\r\n"
+    error_message: "이름은 1-50자 사이여야 합니다.\r\n"
   username_availability:
     error_message: 'Username not available'
   email_availability:
     error_message: 'Email not available'
   invalid_words:
     error_message: "성을 올바르게 입력해야 합니다.\r\n"
+  valid_languages:
+    error_message: "영어/중국어/한국어/그리스어 문자만 사용하십시오.\r\n"

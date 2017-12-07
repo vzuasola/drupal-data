@@ -14,18 +14,20 @@ field_validations:
   numeric:
     error_message: 'Field should be numeric'
   no_symbols:
-    error_message: "Twoje Imię musi zostać wprowadzone poprawnie\r\n"
+    error_message: "Imię zawiera niedozwolone znaki (na przykład: .,@,#,%,^,*,( ),[],/)\r\n"
   numeric_symbols:
     error_message: 'Field contains invalid special characters'
   email:
     error_message: 'Field does not contain a valid email address'
   min_length:
-    error_message: "Twoje Imię musi zostać wprowadzone poprawnie\r\n"
+    error_message: "Imię musi zawierać 1-50 znaków\r\n"
   max_length:
-    error_message: "Twoje Imię musi zostać wprowadzone poprawnie\r\n"
+    error_message: "Imię musi zawierać 1-50 znaków\r\n"
   username_availability:
     error_message: 'Username not available'
   email_availability:
     error_message: 'Email not available'
   invalid_words:
     error_message: "Twoje Imię musi zostać wprowadzone poprawnie\r\n"
+  valid_languages:
+    error_message: "Proszę używaj tylko znaków angielskich/chińskich/koreańskich/greckich\r\n"
