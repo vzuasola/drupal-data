@@ -39,12 +39,12 @@ field_validations:
     error_message: "Please enter your valid and active Email Address for communication purposes. (e.g. name@domain.com)\r\n"
   min_length:
     enable: 1
-    error_message: 'Minimum requirement not met'
+    error_message: 'Please enter your valid and active Email Address for communication purposes. (e.g. name@domain.com)'
     parameters:
       length: '5'
   max_length:
     enable: 1
-    error_message: 'Maximum requirement not met'
+    error_message: 'Please enter your valid and active Email Address for communication purposes. (e.g. name@domain.com)'
     parameters:
       length: '50'
   username_availability:
@@ -58,3 +58,8 @@ field_validations:
     error_message: 'Invalid/not allowed characters'
     parameters:
       invalid_words_list: ''
+  valid_languages:
+    enable: 0
+    error_message: 'This field only accepts specific characters.'
+    parameters:
+      regex_value: ''

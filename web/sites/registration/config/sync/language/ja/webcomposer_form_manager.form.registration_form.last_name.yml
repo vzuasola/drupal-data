@@ -14,18 +14,20 @@ field_validations:
   numeric:
     error_message: 'Field should be numeric'
   no_symbols:
-    error_message: "正しい苗字をご入力ください。\r\n"
+    error_message: "氏名に無効な記号（例：.,@,#,%,^,*,( ),[],/）が含まれています。\r\n"
   numeric_symbols:
     error_message: 'Field contains invalid special characters'
   email:
     error_message: 'Field does not contain a valid email address'
   min_length:
-    error_message: "正しい苗字をご入力ください。\r\n"
+    error_message: "氏名は半角英字にて1～50文字にてご入力下さい。\r\n"
   max_length:
-    error_message: "正しい苗字をご入力ください。\r\n"
+    error_message: "氏名は半角英字にて1～50文字にてご入力下さい。\r\n"
   username_availability:
     error_message: 'Username not available'
   email_availability:
     error_message: 'Email not available'
   invalid_words:
     error_message: "正しい苗字をご入力ください。\r\n"
+  valid_languages:
+    error_message: "半角英字のみにてご入力下さい。\r\n"

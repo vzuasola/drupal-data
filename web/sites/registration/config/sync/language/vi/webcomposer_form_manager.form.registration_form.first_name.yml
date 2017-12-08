@@ -1,7 +1,7 @@
 field_settings:
-  label: 'Tên đăng nhập'
-  placeholder: 'Tên đăng nhập'
-  annotation: 'Vui lòng nhập TÊN, ví dụ: <u>Joe</u> Smith. Chúng tôi sẽ không thể xử lý tiền nạp qua thẻ, séc, hoặc ngân hàng điện tử nếu bạn nhập Tên khác với Tên chủ tài khoản.'
+  label: 'Nhập Tên Đệm và Tên'
+  placeholder: 'Nhập Tên Đệm và Tên'
+  annotation: 'Vui lòng nhập TÊN, ví dụ: Nguyen <u>Van A</u>. Chúng tôi sẽ không thể xử lý tiền nạp qua thẻ, séc, hoặc ngân hàng điện tử nếu bạn nhập Tên khác với Tên chủ tài khoản.'
 field_validations:
   required:
     error_message: "Bạn phải nhập đúng Tên.\r\n"
@@ -14,18 +14,20 @@ field_validations:
   numeric:
     error_message: 'Field should be numeric'
   no_symbols:
-    error_message: "Bạn phải nhập đúng Tên.\r\n"
+    error_message: "Tên chứa các ký tự không hợp lệ (ví dụ:., @, #,%, ^, *, (), [], /)\r\n"
   numeric_symbols:
     error_message: 'Field contains invalid special characters'
   email:
     error_message: 'Field does not contain a valid email address'
   min_length:
-    error_message: "Bạn phải nhập đúng Tên.\r\n"
+    error_message: "Tên phải bao gồm từ 1-50 ký tự\r\n"
   max_length:
-    error_message: "Bạn phải nhập đúng Tên.\r\n"
+    error_message: "Tên phải bao gồm từ 1-50 ký tự\r\n"
   username_availability:
     error_message: 'Username not available'
   email_availability:
     error_message: 'Email not available'
   invalid_words:
     error_message: "Bạn phải nhập đúng Tên.\r\n"
+  valid_languages:
+    error_message: "Vui lòng chỉ sử dụng các ký tự tiếng Anh/ Trung Quốc/ Hàn Quốc / Hy Lạp.\r\n"
