@@ -1,4 +1,4 @@
-uuid: 3adf1ca0-d366-42c6-bc9a-f8ee8d4bacd2
+uuid: 98f92045-d221-4bfc-af9b-34b03eab073b
 langcode: en
 status: true
 dependencies:
@@ -11,7 +11,7 @@ field_name: field_default_regvia
 entity_type: registration_theme_entity
 bundle: registration_theme_entity
 label: 'Default Regvia'
-description: 'This will be used if regvia didn''t exist in the URL'
+description: ''
 required: false
 translatable: false
 default_value:

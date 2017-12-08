@@ -15,7 +15,10 @@ label: Content
 description: ''
 required: false
 translatable: true
-default_value: {  }
+default_value:
+  -
+    value: "<p class=\"banner-header mb-0 text-24 text-white\"><strong>Welcome to Dafabet, {username}</strong>\r\n  <br />\r\n  You have completed your account registration!\r\n</p>\r\n<p class=\"banner-promotion text-white\">To join in the excitement of real money action,\r\n  <br />\r\n  make your deposit with our selection of secured payment methods!\r\n</p>\r\n<div class=\"button-deposit-now\"><a class=\"btn desktop-btn-medium tablet-btn-medium mobile-btn-medium btn-yellow\" href=\"{domain:cashier_domain}/{domain:lang_token}/payment-options?ticket={auth.token}\" target=\"window\">Deposit Now</a>\r\n</div>\r\n<p><u><span class=\"skip-link\"><a class=\"text-white\" href=\"{domain:entry}/{domain:lang_token}{tracking.token}\" target=\"_self\">Skip</a></span></u>\r\n</p>\r\n"
+    format: basic_html
 default_value_callback: ''
 settings: {  }
 field_type: text_long

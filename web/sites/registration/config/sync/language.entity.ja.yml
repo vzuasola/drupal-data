@@ -1,12 +1,15 @@
 uuid: 46d8ee4e-c42c-47f3-b942-ca3b68bd4bae
-langcode: en
+langcode: ja
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - webcomposer_language_hierarchy
 third_party_settings:
   webcomposer_language_hierarchy:
     webcomposer_fallback_langcode: en
+    webcomposer_language_custom_label: 日本語
 id: ja
-label: Japanese
+label: 日本語
 direction: ltr
-weight: 1
+weight: -3
 locked: false
