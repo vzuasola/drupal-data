@@ -78,6 +78,14 @@ class OWSportsCustomConfigForm extends ConfigFormBase {
       '#default_value' => $config->get('override_domain'),
     ];
 
+    $form['owsports_config_group']['cdn_mapping'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('CDN Mapping'),
+      '#description' => $this->t('CDN Mapping for Legacy Site. Default is prd.'),
+      '#default_value' => $config->get('cdn_mapping'),
+      '#required' => TRUE,
+    ];
+
     $form['jackpotbet_config_group'] = [
       '#type' => 'details',
       '#title' => $this->t('Jackpot Bet'),
@@ -204,7 +212,8 @@ class OWSportsCustomConfigForm extends ConfigFormBase {
       'singbet_template',
       'override_domain',
       'colossus_pre_uri',
-      'colossus_post_uri'
+      'colossus_post_uri',
+      'cdn_mapping'
     ];
 
     foreach ($keys as $key) {
