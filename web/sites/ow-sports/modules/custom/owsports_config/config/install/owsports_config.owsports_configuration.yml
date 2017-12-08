@@ -9,4 +9,4 @@ euro_template: 'eu,gr,pl,uk,ro,ru'
 singbet_pre_login_uri: 'onebook'
 singbet_post_login_uri: 'Deposit_ProcessLogin.aspx'
 singbet_template: 'sc,ch'
-cdn_mapping: "qa1-www|test\r\ntct-www|stg\r\nuat-www|stg\r\nprd3|prd"
+cdn_mapping: "qa1-www|test\r\ntct-www|stg\r\nuat-www|stg\r\n"
