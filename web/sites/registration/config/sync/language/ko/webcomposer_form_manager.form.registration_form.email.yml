@@ -18,14 +18,16 @@ field_validations:
   numeric_symbols:
     error_message: 'Field contains invalid special characters'
   email:
-    error_message: 'Please enter your valid and active Email Address for communication purposes. (e.g. name@domain.com)'
+    error_message: "연락이 가능하고 유효한 이메일 주소를 입력하십시오. (예. name@domain.com)\r\n"
   min_length:
-    error_message: 'Minimum requirement not met'
+    error_message: "연락이 가능하고 유효한 이메일 주소를 입력하십시오. (예. name@domain.com)\r\n"
   max_length:
-    error_message: 'Maximum requirement not met'
+    error_message: "연락이 가능하고 유효한 이메일 주소를 입력하십시오. (예. name@domain.com)\r\n"
   username_availability:
     error_message: 'Username not available'
   email_availability:
     error_message: '이 이메일은 이미 사용 중입니다. 아이디/비밀번호를 되찾으려면 <a href="{domain:entry}/{domain:lang_token}/cant-login{tracking.token}" target="new">여기</a>를 클릭하십시오.'
   invalid_words:
     error_message: 'Invalid/not allowed characters'
+  valid_languages:
+    error_message: 'This field only accepts specific characters.'

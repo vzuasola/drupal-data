@@ -14,18 +14,20 @@ field_validations:
   numeric:
     error_message: 'Field should be numeric'
   no_symbols:
-    error_message: "Nama Depan Anda harus diisi dengan benar.\r\n"
+    error_message: "Kolom Nama tidak boleh diisi dengan karakter khusus (contoh: . @ # % ^ * ( ) [ ] / )\r\n"
   numeric_symbols:
     error_message: 'Field contains invalid special characters'
   email:
     error_message: 'Field does not contain a valid email address'
   min_length:
-    error_message: "Nama Depan Anda harus diisi dengan benar.\r\n"
+    error_message: "Kolom Nama harus diisi dengan 1-50 karakter\r\n"
   max_length:
-    error_message: "Nama Depan Anda harus diisi dengan benar.\r\n"
+    error_message: "Kolom Nama harus diisi dengan 1-50 karakter\r\n"
   username_availability:
     error_message: 'Username not available'
   email_availability:
     error_message: 'Email not available'
   invalid_words:
     error_message: "Nama Depan Anda harus diisi dengan benar.\r\n"
+  valid_languages:
+    error_message: "Harap gunakan aksara Latin/Cina/Korea/Yunani saja\r\n"

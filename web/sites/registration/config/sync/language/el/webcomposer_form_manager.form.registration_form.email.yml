@@ -18,14 +18,16 @@ field_validations:
   numeric_symbols:
     error_message: 'Field contains invalid special characters'
   email:
-    error_message: 'Please enter your valid and active Email Address for communication purposes. (e.g. name@domain.com)'
+    error_message: "Παρακαλούμε χρησιμοποιήστε την έγκυρη και ενεργή Διεύθυνση Email σας για λόγους επικοινωνίας. (π.χ. name@domain.com)\r\n"
   min_length:
-    error_message: 'Minimum requirement not met'
+    error_message: "Παρακαλούμε χρησιμοποιήστε την έγκυρη και ενεργή Διεύθυνση Email σας για λόγους επικοινωνίας. (π.χ. name@domain.com)\r\n"
   max_length:
-    error_message: 'Maximum requirement not met'
+    error_message: "Παρακαλούμε χρησιμοποιήστε την έγκυρη και ενεργή Διεύθυνση Email σας για λόγους επικοινωνίας. (π.χ. name@domain.com)\r\n"
   username_availability:
     error_message: 'Username not available'
   email_availability:
     error_message: "Το Email αυτό χρησιμοποιείται ήδη. Πατήστε <a href=\"{domain:entry}/{domain:lang_token}/cant-login{tracking.token}\" target=\"new\">εδώ</a> για ανάκτηση ονόματος χρήστη/κωδικού πρόσβασης.\r\n"
   invalid_words:
     error_message: 'Invalid/not allowed characters'
+  valid_languages:
+    error_message: 'This field only accepts specific characters.'

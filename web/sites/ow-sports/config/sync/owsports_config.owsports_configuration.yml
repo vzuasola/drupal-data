@@ -21,3 +21,4 @@ colossus_uri: null
 override_domain: dafabet.com
 colossus_pre_uri: ''
 colossus_post_uri: 'https://prices.dafabet.com/Deposit_Processlogin.aspx'
+cdn_mapping: "qa1-www|test\r\ntct-www|stg\r\nuat-www|stg"

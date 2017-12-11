@@ -9,7 +9,7 @@ third_party_settings:
     webcomposer_fallback_langcode: ''
     webcomposer_language_custom_label: 繁體中文
 id: zh-hant
-label: 'Traditional Chinese'
+label: 繁體中文
 direction: ltr
 weight: -7
 locked: false

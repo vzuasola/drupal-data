@@ -5,7 +5,7 @@ field_settings:
   annotation: ''
 field_validations:
   required:
-    error_message: "Vui lòng chọn Năm sinh. Bạn phải từ 18 tuổi trở lên để đăng ký tài khoản.\r\n"
+    error_message: "Vui lòng nhập ngày sinh chính xác. Bạn phải từ 18 tuổi trở lên để đăng ký tài khoản.\r\n"
   alpha:
     error_message: 'Field should be Alphabet characters only'
   alphanumeric:
@@ -30,3 +30,5 @@ field_validations:
     error_message: 'Email not available'
   invalid_words:
     error_message: 'Invalid/not allowed characters'
+  valid_languages:
+    error_message: 'This field only accepts specific characters.'

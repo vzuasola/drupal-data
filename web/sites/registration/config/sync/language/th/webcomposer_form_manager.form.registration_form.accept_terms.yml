@@ -1,5 +1,5 @@
 field_settings:
-  markup: 'ฉันมีอายุ 18 ปีบริบูรณ์ขึ้นไป เข้าใจและยอมรับ <strong><u><a href="/{lang}/terms-of-use{tracking.token}" target="_blank">เงื่อนไขและข้อกำหนด </a></u></strong>'
+  markup: 'ฉันมีอายุ18 ปีบริบูรณ์ขึ้นไป ฉันอ่านและยอมรับใน<strong><u><a href="/{lang}/terms-of-use{tracking.token}" target="_blank">ข้อกำหนดและเงื่อนไข</a></u></strong>'
 field_validations:
   required:
     error_message: 'Field should be required'
