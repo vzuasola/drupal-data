@@ -41,8 +41,11 @@ class GamesPageBgEntityStorage extends SqlContentEntityStorage implements GamesP
    * {@inheritdoc}
    */
   public function countDefaultLanguageRevisions(GamesPageBgEntityInterface $entity) {
-    return $this->database->query('SELECT COUNT(*) FROM {games_page_bg_entity_field_revision} WHERE id = :id AND default_langcode = 1', array(':id' => $entity->id()))
-      ->fetchField();
+    return $this->database->query('SELECT COUNT(*) FROM {games_page_bg_entity_field_revision}
+        WHERE id = :id
+        AND default_langcode = 1',
+        array(':id' => $entity->id()))
+        ->fetchField();
   }
 
   /**

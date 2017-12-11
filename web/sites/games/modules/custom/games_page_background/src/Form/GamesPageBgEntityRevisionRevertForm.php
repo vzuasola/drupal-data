@@ -30,7 +30,7 @@ class GamesPageBgEntityRevisionRevertForm extends ConfirmFormBase {
    *
    * @var \Drupal\Core\Entity\EntityStorageInterface
    */
-  protected $GamesPageBgEntityStorage;
+  protected $gamesPageBgEntityStorage;
 
   /**
    * The date formatter service.
@@ -48,7 +48,7 @@ class GamesPageBgEntityRevisionRevertForm extends ConfirmFormBase {
    *   The date formatter service.
    */
   public function __construct(EntityStorageInterface $entity_storage, DateFormatterInterface $date_formatter) {
-    $this->GamesPageBgEntityStorage = $entity_storage;
+    $this->gamesPageBgEntityStorage = $entity_storage;
     $this->dateFormatter = $date_formatter;
   }
 
@@ -73,7 +73,9 @@ class GamesPageBgEntityRevisionRevertForm extends ConfirmFormBase {
    * {@inheritdoc}
    */
   public function getQuestion() {
-    return t('Are you sure you want to revert to the revision from %revision-date?', ['%revision-date' => $this->dateFormatter->format($this->revision->getRevisionCreationTime())]);
+    return t('Are you sure you want to revert to the revision from %revision-date?', [
+        '%revision-date' => $this->dateFormatter->format($this->revision->getRevisionCreationTime())
+    ]);
   }
 
   /**
@@ -101,7 +103,7 @@ class GamesPageBgEntityRevisionRevertForm extends ConfirmFormBase {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state, $games_page_bg_entity_revision = NULL) {
-    $this->revision = $this->GamesPageBgEntityStorage->loadRevision($games_page_bg_entity_revision);
+    $this->revision = $this->gamesPageBgEntityStorage->loadRevision($games_page_bg_entity_revision);
     $form = parent::buildForm($form, $form_state);
 
     return $form;
@@ -116,7 +118,9 @@ class GamesPageBgEntityRevisionRevertForm extends ConfirmFormBase {
     $original_revision_timestamp = $this->revision->getRevisionCreationTime();
 
     $this->revision = $this->prepareRevertedRevision($this->revision, $form_state);
-    $this->revision->revision_log = t('Copy of the revision from %date.', ['%date' => $this->dateFormatter->format($original_revision_timestamp)]);
+    $this->revision->revision_log = t('Copy of the revision from %date.', [
+        '%date' => $this->dateFormatter->format($original_revision_timestamp)
+    ]);
     $this->revision->save();
 
     $this->logger('content')->notice('Games Page Background: reverted %title revision %revision.', [
