@@ -83,7 +83,6 @@ class OWSportsCustomConfigForm extends ConfigFormBase {
       '#title' => $this->t('CDN Mapping'),
       '#description' => $this->t('CDN Mapping for Legacy Site. Default is prd.'),
       '#default_value' => $config->get('cdn_mapping'),
-      '#required' => TRUE,
     ];
 
     $form['jackpotbet_config_group'] = [

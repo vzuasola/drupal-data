@@ -38,3 +38,6 @@ owsports_config.owsports_configuration:
     singbet_template: 
       type: text_format
       label: 'Singbet Template'
+    cdn_mapping:
+      type: text_format
+      label: 'CDN Mapping'
