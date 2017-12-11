@@ -41,7 +41,9 @@ class GamesPageBgEntityRevisionRevertTranslationForm extends GamesPageBgEntityRe
    * @param \Drupal\Core\Language\LanguageManagerInterface $language_manager
    *   The language manager.
    */
-  public function __construct(EntityStorageInterface $entity_storage, DateFormatterInterface $date_formatter, LanguageManagerInterface $language_manager) {
+  public function __construct(EntityStorageInterface $entity_storage,
+      DateFormatterInterface $date_formatter,
+      LanguageManagerInterface $language_manager) {
     parent::__construct($entity_storage, $date_formatter);
     $this->languageManager = $language_manager;
   }
@@ -68,7 +70,10 @@ class GamesPageBgEntityRevisionRevertTranslationForm extends GamesPageBgEntityRe
    * {@inheritdoc}
    */
   public function getQuestion() {
-    return t('Are you sure you want to revert @language translation to the revision from %revision-date?', ['@language' => $this->languageManager->getLanguageName($this->langcode), '%revision-date' => $this->dateFormatter->format($this->revision->getRevisionCreationTime())]);
+    return t('Are you sure you want to revert @language translation to the revision from %revision-date?', [
+        '@language' => $this->languageManager->getLanguageName($this->langcode),
+        '%revision-date' => $this->dateFormatter->format($this->revision->getRevisionCreationTime())
+    ]);
   }
 
   /**
@@ -94,7 +99,7 @@ class GamesPageBgEntityRevisionRevertTranslationForm extends GamesPageBgEntityRe
     $revert_untranslated_fields = $form_state->getValue('revert_untranslated_fields');
 
     /** @var \Drupal\games_page_background\Entity\GamesPageBgEntityInterface $default_revision */
-    $latest_revision = $this->GamesPageBgEntityStorage->load($revision->id());
+    $latest_revision = $this->gamesPageBgEntityStorage->load($revision->id());
     $latest_revision_translation = $latest_revision->getTranslation($this->langcode);
 
     $revision_translation = $revision->getTranslation($this->langcode);

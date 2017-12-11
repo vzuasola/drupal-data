@@ -18,7 +18,7 @@ use Drupal\user\UserInterface;
  *   id = "games_page_bg_entity",
  *   label = @Translation("Games Page Background"),
  *   handlers = {
- *     "storage" = "Drupal\games_page_background\GamesPageBgEntityStorage",
+ *     "storage" = "Drupal\games_page_background\gamesPageBgEntityStorage",
  *     "view_builder" = "Drupal\Core\Entity\EntityViewBuilder",
  *     "list_builder" = "Drupal\games_page_background\GamesPageBgEntityListBuilder",
  *     "views_data" = "Drupal\games_page_background\Entity\GamesPageBgEntityViewsData",
@@ -58,7 +58,8 @@ use Drupal\user\UserInterface;
  *     "version-history" = "/admin/structure/games_page_bg_entity/{games_page_bg_entity}/revisions",
  *     "revision" = "/admin/structure/games_page_bg_entity/{games_page_bg_entity}/revisions/{games_page_bg_entity_revision}/view",
  *     "revision_revert" = "/admin/structure/games_page_bg_entity/{games_page_bg_entity}/revisions/{games_page_bg_entity_revision}/revert",
- *     "translation_revert" = "/admin/structure/games_page_bg_entity/{games_page_bg_entity}/revisions/{games_page_bg_entity_revision}/revert/{langcode}",
+ *     "translation_revert" = "/admin/structure/games_page_bg_entity/{games_page_bg_entity}/revisions/
+ *            {games_page_bg_entity_revision}/revert/{langcode}",
  *     "revision_delete" = "/admin/structure/games_page_bg_entity/{games_page_bg_entity}/revisions/{games_page_bg_entity_revision}/delete",
  *     "collection" = "/admin/structure/games_page_bg_entity",
  *   },

@@ -44,7 +44,10 @@ class GamesPageBgEntityController extends ControllerBase implements ContainerInj
    */
   public function revisionPageTitle($games_page_bg_entity_revision) {
     $games_page_bg_entity = $this->entityManager()->getStorage('games_page_bg_entity')->loadRevision($games_page_bg_entity_revision);
-    return $this->t('Revision of %title from %date', array('%title' => $games_page_bg_entity->label(), '%date' => format_date($games_page_bg_entity->getRevisionCreationTime())));
+    return $this->t('Revision of %title from %date', array(
+        '%title' => $games_page_bg_entity->label(),
+        '%date' => format_date($games_page_bg_entity->getRevisionCreationTime())
+    ));
   }
 
   /**
@@ -64,7 +67,11 @@ class GamesPageBgEntityController extends ControllerBase implements ContainerInj
     $has_translations = (count($languages) > 1);
     $games_page_bg_entity_storage = $this->entityManager()->getStorage('games_page_bg_entity');
 
-    $build['#title'] = $has_translations ? $this->t('@langname revisions for %title', ['@langname' => $langname, '%title' => $games_page_bg_entity->label()]) : $this->t('Revisions for %title', ['%title' => $games_page_bg_entity->label()]);
+    $build['#title'] = $has_translations ? $this->t('@langname revisions for %title', [
+        '@langname' => $langname,
+        '%title' => $games_page_bg_entity->label()]) : $this->t('Revisions for %title', [
+            '%title' => $games_page_bg_entity->label()
+        ]);
     $header = array($this->t('Revision'), $this->t('Operations'));
 
     $revert_permission = (($account->hasPermission("revert all games page background revisions")
