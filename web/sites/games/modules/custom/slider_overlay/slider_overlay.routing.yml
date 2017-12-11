@@ -1,0 +1,7 @@
+slider_overlay.admin_settings:
+  path: 'admin/config/main_banner/slider_overlay'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Main Banner Slider Overlay'
+  requirements:
+    _permission: 'administer site configuration'
