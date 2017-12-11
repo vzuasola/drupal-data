@@ -15,7 +15,7 @@ use Drupal\games_page_background\Entity\GamesPageBgEntityInterface;
  *
  * @ingroup games_page_background
  */
-class gamesPageBgEntityStorage extends SqlContentEntityStorage implements gamesPageBgEntityStorageInterface {
+class GamesPageBgEntityStorage extends SqlContentEntityStorage implements GamesPageBgEntityStorageInterface {
 
   /**
    * {@inheritdoc}

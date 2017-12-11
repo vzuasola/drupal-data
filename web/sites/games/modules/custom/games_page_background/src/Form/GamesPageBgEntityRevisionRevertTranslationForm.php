@@ -99,7 +99,7 @@ class GamesPageBgEntityRevisionRevertTranslationForm extends GamesPageBgEntityRe
     $revert_untranslated_fields = $form_state->getValue('revert_untranslated_fields');
 
     /** @var \Drupal\games_page_background\Entity\GamesPageBgEntityInterface $default_revision */
-    $latest_revision = $this->gamesPageBgEntityStorage->load($revision->id());
+    $latest_revision = $this->GamesPageBgEntityStorage->load($revision->id());
     $latest_revision_translation = $latest_revision->getTranslation($this->langcode);
 
     $revision_translation = $revision->getTranslation($this->langcode);

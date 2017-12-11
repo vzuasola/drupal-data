@@ -29,7 +29,7 @@ class GamesPageBgEntityRevisionDeleteForm extends ConfirmFormBase {
    *
    * @var \Drupal\Core\Entity\EntityStorageInterface
    */
-  protected $gamesPageBgEntityStorage;
+  protected $GamesPageBgEntityStorage;
 
   /**
    * The database connection.
@@ -47,7 +47,7 @@ class GamesPageBgEntityRevisionDeleteForm extends ConfirmFormBase {
    *   The database connection.
    */
   public function __construct(EntityStorageInterface $entity_storage, Connection $connection) {
-    $this->gamesPageBgEntityStorage = $entity_storage;
+    $this->GamesPageBgEntityStorage = $entity_storage;
     $this->connection = $connection;
   }
 
@@ -96,7 +96,7 @@ class GamesPageBgEntityRevisionDeleteForm extends ConfirmFormBase {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state, $games_page_bg_entity_revision = NULL) {
-    $this->revision = $this->gamesPageBgEntityStorage->loadRevision($games_page_bg_entity_revision);
+    $this->revision = $this->GamesPageBgEntityStorage->loadRevision($games_page_bg_entity_revision);
     $form = parent::buildForm($form, $form_state);
 
     return $form;
@@ -106,7 +106,7 @@ class GamesPageBgEntityRevisionDeleteForm extends ConfirmFormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    $this->gamesPageBgEntityStorage->deleteRevision($this->revision->getRevisionId());
+    $this->GamesPageBgEntityStorage->deleteRevision($this->revision->getRevisionId());
 
     $this->logger('content')->notice('Games Page Background: deleted %title revision %revision.', array(
         '%title' => $this->revision->label(),
