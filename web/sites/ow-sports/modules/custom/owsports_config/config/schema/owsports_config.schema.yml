@@ -41,3 +41,6 @@ owsports_config.owsports_configuration:
     cdn_mapping:
       type: text_format
       label: 'CDN Mapping'
+    act_mapping:
+      type: text_format
+      label: 'Bet Type Mapping'
