@@ -6,6 +6,8 @@ dependencies:
     - taxonomy.vocabulary.affiliates_group
   module:
     - text
+_core:
+  default_config_hash: UEBsnn22uqs1HrqD4WO4WO05Rjo_MY40ttFZ-XONbvM
 id: taxonomy_term.affiliates_group.default
 targetEntityType: taxonomy_term
 bundle: affiliates_group

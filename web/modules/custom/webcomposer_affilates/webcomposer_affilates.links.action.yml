@@ -1,0 +1,10 @@
+affilates.add:
+  route_name: 'entity.taxonomy_term.add_form'
+  title: 'Add Affilate'
+  route_parameters:
+      taxonomy_vocabulary: 'affiliates_parameters'
+  options:
+      query:
+          destination: '/admin/config/webcomposer/config/affilates-list'
+  appears_on:
+      - view.affiliates_lists.page_1
