@@ -46,7 +46,6 @@ module:
   menu_ui: 0
   migrate: 0
   migrate_drupal: 0
-  multiversion: 0
   node: 0
   options: 0
   paragraphs: 0

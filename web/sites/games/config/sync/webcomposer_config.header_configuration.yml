@@ -1,14 +1,14 @@
-join_now_text: 'Join Nows'
-join_now_link: 'https://qa1-www.elysium-dfbt.com/en/casino/join{tracking.token}'
+join_now_text: 'Join Now'
+join_now_link: 'http://dev-registrationwww.elysium-dfbt.com/{lang}/join'
 login_issue_text: 'Cant login?'
-login_issue_link: '/{domain:entry}/{domain:lang_token}/cant-login{tracking.token}'
+login_issue_link: 'https://stg-www.elysium-dfbt.com/{lang}/cant-login?title=cantLogin'
 sc_lang_text: SC
 ch_lang_text: CH
 balance_error_text: 'Error Retrieving.'
 profile_icon_hover_text: 'My Profile'
 cashier_icon_hover_text: Cashier
 product_menu_new_tag: NEW
-welcome_text: '{username}'
+welcome_text: 'Hola! {username}'
 profile_link: 'https://stg-accountwww.elysium-dfbt.com/en/my-profile'
 profile_logout_text: Logout
 _core:

@@ -206,9 +206,8 @@ display:
       display_extenders: {  }
       path: api/registration_theme
       pager:
-        type: some
+        type: none
         options:
-          items_per_page: 10
           offset: 0
       style:
         type: serializer

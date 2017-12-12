@@ -1,0 +1,15 @@
+opus_game_loader_content:
+  value: "<p>An unexpected error occurred.\r\nThis window will close in few seconds.\r\n\r\nPlease try again soon.<p>"
+  format: basic_html
+opus_game_url: 'https://www.opus-casino.com'
+opus_game_free_play_url: 'https://opus-casino.co.in'
+opus_alternative_game_url: 'https://opus-casino.co.in'
+languages: "sc|zh-cn\r\nch|zh-cn\r\nkr|ko\r\nvn|en\r\njp|en\r\neu|en\r\nid|en\r\nin|en\r\ngr|en\r\npl|en"
+currency: "USD\r\nMYR\r\nTHB\r\nKRW\r\nVND"
+opus_unsupported_currencies_title: 'Currency not supported'
+opus_unsupported_currencies_message:
+  value: "<p>Sorry, your currency is not supported.\r\nPlease choose other gaming rooms.</p>"
+  format: basic_html
+opus_unsupported_currencies_button: Ok
+_core:
+  default_config_hash: G2EkAHHrlzlaDAI79drl3aNYQ8-WYdqUAqCN2XqWH2c
