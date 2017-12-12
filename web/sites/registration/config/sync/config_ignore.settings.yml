@@ -3,5 +3,7 @@ ignored_config_entities:
   2: 'system.menu.*'
   4: 'filter.*'
   6: 'devel.*'
+  8: 'webcomposer_config.*'
+  10: 'languange.*'
 _core:
   default_config_hash: UVH1aJ4b44UM-VdPVN7hNNuuVqfReJxwfVeDQH1Hvsk
