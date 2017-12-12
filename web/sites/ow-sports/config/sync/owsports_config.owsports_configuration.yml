@@ -18,7 +18,8 @@ singbet_pre_login: null
 redirect_url: null
 iframe_container: iframe-container
 colossus_uri: null
-override_domain: dafabet.com
+override_domain: ''
 colossus_pre_uri: ''
 colossus_post_uri: 'https://prices.dafabet.com/Deposit_Processlogin.aspx'
-cdn_mapping: "qa1-www|test\r\ntct-www|stg\r\nuat-www|stg"
+cdn_mapping: "qa1-www|test\r\ntct-www|stg\r\nuat-www|stg\r\now-sports|stg"
+act_mapping: "hdpou\r\nonextwo\r\ncs\r\nhtftcs\r\noetg\r\nhtft\r\nfglg\r\nsocceroutright\r\nbasketball\r\nbacketballoutright\r\ntennis\r\ntennisoutright\r\noutright\r\nnumbergame\r\nvirtualsports\r\nvirtualhorse\r\nvirtualgreyhounds\r\nvirtualtennis\r\nvirtualmotorsports\r\nvirturlspeedway\r\nbadminton\r\nbaseball\r\nbilliard\r\nesports\r\nfootball\r\ngolf\r\nicehockey\r\nindiancricket\r\nmotorsports\r\nmuaythai\r\nnetball\r\nrugby\r\nvolleyball"
