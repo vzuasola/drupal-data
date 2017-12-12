@@ -104,6 +104,7 @@ permissions:
   - 'translate left_floating_banner_entity'
   - 'translate marketing_script_entity'
   - 'translate master_placeholder taxonomy_term'
+  - 'translate menu_link_content'
   - 'translate partner_responsive_entity'
   - 'translate registration_theme_entity'
   - 'translate social_media_entity'
