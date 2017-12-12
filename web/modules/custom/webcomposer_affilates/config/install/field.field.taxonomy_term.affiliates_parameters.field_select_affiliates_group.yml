@@ -6,6 +6,8 @@ dependencies:
     - field.storage.taxonomy_term.field_select_affiliates_group
     - taxonomy.vocabulary.affiliates_group
     - taxonomy.vocabulary.affiliates_parameters
+_core:
+  default_config_hash: vBewz0923aT7VEVXWgmXL9lGB8u34Fcwa3gc_HEur48
 id: taxonomy_term.affiliates_parameters.field_select_affiliates_group
 field_name: field_select_affiliates_group
 entity_type: taxonomy_term

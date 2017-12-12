@@ -4,6 +4,8 @@ status: true
 dependencies:
   config:
     - taxonomy.vocabulary.affiliates_group
+_core:
+  default_config_hash: 58j0S7DskPKIxsG2RUgidfpNk5JiMtktncAOA8ziTq4
 id: taxonomy_term.affiliates_group.default
 targetEntityType: taxonomy_term
 bundle: affiliates_group

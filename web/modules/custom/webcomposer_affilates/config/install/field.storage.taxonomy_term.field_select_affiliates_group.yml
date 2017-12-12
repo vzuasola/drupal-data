@@ -4,6 +4,8 @@ status: true
 dependencies:
   module:
     - taxonomy
+_core:
+  default_config_hash: eaT5da9BLeK9iHs6MINA0HGCuD1RgXnLYwR9i1ZRkwA
 id: taxonomy_term.field_select_affiliates_group
 field_name: field_select_affiliates_group
 entity_type: taxonomy_term
