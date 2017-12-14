@@ -90,7 +90,8 @@ class OWSportsCustomConfigForm extends ConfigFormBase {
       '#type' => 'select',
       '#title' => $this->t('Legacy CDN Source'),
       '#description' => $this->t('Legacy iFrame CDN environment source.'),
-      '#options' => [$this->t('QA1'), $this->t('TCT'), $this->t('UAT')],
+      '#options' => [$this->t('QA1'), $this->t('TCT'), $this->t('UAT'), $this->t('STG'), $this->t('PRD')],
+      '#default_value' => $config->get('legacy_cdn'),
     ];
 
     $form['jackpotbet_config_group'] = [
@@ -221,7 +222,8 @@ class OWSportsCustomConfigForm extends ConfigFormBase {
       'colossus_pre_uri',
       'colossus_post_uri',
       'cdn_mapping',
-      'act_mapping'
+      'act_mapping',
+      'legacy_cdn'
     ];
 
     foreach ($keys as $key) {
