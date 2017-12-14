@@ -1,0 +1,15 @@
+uuid: 737ac4af-934c-4b9c-a7f3-539dc4828509
+langcode: en
+status: true
+dependencies:
+  module:
+    - content_translation
+    - esports
+third_party_settings:
+  content_translation:
+    enabled: false
+id: e_sports_channel_entity.e_sports_channel_entity
+target_entity_type_id: e_sports_channel_entity
+target_bundle: e_sports_channel_entity
+default_langcode: site_default
+language_alterable: false
