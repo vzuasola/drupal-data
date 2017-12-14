@@ -1,9 +1,9 @@
-lobby_page_title: 'オンラインベッティング－Dafabet では、スポーツでベット、オンラインカジノとポーカーでのプレイをお楽しみいただけます'
-join_now_text: 'Join Now'
-join_now_link: '/{domain:entry}/{domain:lang_token}/cant-login{tracking.token}'
-login_issue_text: 'Cant login?'
-login_issue_link: '/{domain:entry}/{domain:lang_token}/cant-login{tracking.token}'
-balance_error_text: 'Error Retrieving.'
-welcome_text: '{username}'
-profile_link: 'https://stg-accountwww.elysium-dfbt.com/en/my-profile'
-profile_logout_text: Logout
+lobby_page_title: アジアで絶大な信頼と人気を誇るDafabet
+join_now_text: 登録する
+login_issue_text: ログインができない場合は？
+balance_error_text: エラーが検出されました。
+welcome_text: 'ようこそ {username} 様'
+profile_logout_text: ログアウト
+profile_icon_hover_text: お客様情報
+cashier_icon_hover_text: バンキング
+product_menu_new_tag: 新しい登録情報

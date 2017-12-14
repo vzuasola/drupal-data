@@ -1,0 +1,31 @@
+field_settings:
+  label: 통화
+  placeholder: '화폐를 선택하세요'
+  choices: "117|중국 위엔화\r\n2|미국 달러\r\n1|유럽 유로\r\n3|영국 파운드\r\n102|말레이시아 링깃\r\n103|태국 바트\r\n105|베트남 동\r\n111|인도네시아 루피\r\n112|인도 루피\r\n104|한국 원\r\n116|러시아 루블"
+field_validations:
+  required:
+    error_message: "원하는 통화를 지정하지 않으면 카드 입금, 수표 또는 은행 송금을 처리할 수 없습니다. 사용 가능한 통화 중 하나를 선택하십시오.\r\n"
+  alpha:
+    error_message: 'Field should be Alphabet characters only'
+  alphanumeric:
+    error_message: 'Field should be alphanumeric'
+  alpha_multi:
+    error_message: 'Value is not a valid multilingual character'
+  numeric:
+    error_message: 'Field should be numeric'
+  no_symbols:
+    error_message: 'Field contains invalid special characters'
+  numeric_symbols:
+    error_message: 'Field contains invalid special characters'
+  email:
+    error_message: 'Field does not contain a valid email address'
+  min_length:
+    error_message: 'Minimum requirement not met'
+  max_length:
+    error_message: 'Maximum requirement not met'
+  username_availability:
+    error_message: 'Username not available'
+  email_availability:
+    error_message: 'Email not available'
+  invalid_words:
+    error_message: 'Invalid/not allowed characters'

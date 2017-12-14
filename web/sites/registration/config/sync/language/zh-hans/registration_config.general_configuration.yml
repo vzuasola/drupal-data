@@ -1,2 +1,7 @@
-step_one_text: Register
-step_two_text: Deposit
+country_restriction_message: '[product] 不适用于您所在的地区'
+unauthenticated_error_message: 您的账户已退出，我们无法验证您的身份。请重新登录账户。
+step_one_text: 注册
+step_two_text: 存款
+success_title: 注册成功
+home_title: '畅享在线投注体验-包括体育投注，在线娱乐场&扑克投注游戏，尽在大发'
+generic_error_message: '账户注册失败。如需帮助，请联系我们的 <a href="mailto:cnsupport@dafabet.com">客服</a>。 (i-1000)'

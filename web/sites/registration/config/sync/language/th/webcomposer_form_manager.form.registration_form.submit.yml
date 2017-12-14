@@ -1,5 +1,5 @@
 field_settings:
-  label: 'สร้างบัญชี '
+  label: ลงทะเบียน
 field_validations:
   required:
     error_message: 'Field should be required'
@@ -27,3 +27,5 @@ field_validations:
     error_message: 'Email not available'
   invalid_words:
     error_message: 'Invalid/not allowed characters'
+  valid_languages:
+    error_message: 'This field only accepts specific characters.'

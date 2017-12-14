@@ -1,0 +1,33 @@
+field_settings:
+  label: Email
+  placeholder: Email
+  annotation: "Harap pastikan Anda menggunakan email yang aktif untuk kegunaan verifikasi dan transaksi perbankan (contohnya Moneybookers/Skrill). Penggunaan email yang salah dan/atau tidak aktif dapat berakibat pada penundaan dalam memproses transaksi Anda. Pesan penting dan pemberitahuan juga akan dikirim ke email Anda, termasuk pemulihan kata sandi dan/atau informasi mengenai akun Anda.\r\n\r\n"
+field_validations:
+  required:
+    error_message: "Harap masukkan Email Anda yang benar dan aktif, untuk kegunaan komunikasi. (e.g. nama@domain.com)\r\n"
+  alpha:
+    error_message: 'Field should be Alphabet characters only'
+  alphanumeric:
+    error_message: 'Field should be alphanumeric'
+  alpha_multi:
+    error_message: 'Value is not a valid multilingual character'
+  numeric:
+    error_message: 'Field should be numeric'
+  no_symbols:
+    error_message: 'Field contains invalid special characters'
+  numeric_symbols:
+    error_message: 'Field contains invalid special characters'
+  email:
+    error_message: "Harap masukkan Email Anda yang benar dan aktif, untuk kegunaan komunikasi. (e.g. nama@domain.com)\r\n"
+  min_length:
+    error_message: "Harap masukkan Email Anda yang benar dan aktif, untuk kegunaan komunikasi. (e.g. nama@domain.com)\r\n"
+  max_length:
+    error_message: "Harap masukkan Email Anda yang benar dan aktif, untuk kegunaan komunikasi. (e.g. nama@domain.com)\r\n"
+  username_availability:
+    error_message: 'Username not available'
+  email_availability:
+    error_message: "Email sudah terdaftar. Klik <a href=\"{domain:entry}/{domain:lang_token}/cant-login{tracking.token}\" target=\"new\">disini</a> untuk mendapatkan kembali username/kata sandi.\r\n"
+  invalid_words:
+    error_message: 'Invalid/not allowed characters'
+  valid_languages:
+    error_message: 'This field only accepts specific characters.'

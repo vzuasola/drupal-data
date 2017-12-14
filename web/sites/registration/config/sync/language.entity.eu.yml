@@ -8,7 +8,7 @@ third_party_settings:
   webcomposer_language_hierarchy:
     webcomposer_fallback_langcode: ''
 id: eu
-label: 'English EU'
+label: 'English (Europe)'
 direction: ltr
 weight: -9
 locked: false

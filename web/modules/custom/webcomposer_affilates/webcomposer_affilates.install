@@ -9,7 +9,6 @@
  * Implements hook_install().
  */
 function webcomposer_affilates_uninstall() {
-
   $keys = [
     'block.block.views_block__affiliates_lists_block_1',
     'field.field.taxonomy_term.affiliates_parameters.field_active',
@@ -25,8 +24,8 @@ function webcomposer_affilates_uninstall() {
     'views.view.affiliates_lists',
     'core.entity_view_display.taxonomy_term.affiliates_parameters.default',
     'language.content_settings.taxonomy_term.affiliates_group',
-    'views.view.affiliates_rest_views.yml',
-    'webcomposer_config.affiliate_configuration.yml',
+    'views.view.affiliates_rest_views',
+    'webcomposer_config.affiliate_configuration',
   ];
 
   foreach ($keys as $key) {

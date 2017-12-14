@@ -1,31 +1,33 @@
 field_settings:
-  label: ' 輸入您的姓'
-  placeholder: ' 輸入您的姓'
-  annotation: 請輸入真實有效電子郵箱地址以便於進行賬戶驗證及銀行交易（例如，Moneybookers/Skrill）。不匹配和/或無效的郵箱地址可能會導致交易進程延遲。重要的信息和通知將通過郵件發送給您，其中包括密碼找回和/或與賬戶相關的信息等。
+  label: 輸入您的姓
+  placeholder: 輸入您的姓
+  annotation: 請輸入您的姓，例如：<u>陳</u>美麗。如果您輸入的名字和銀行開戶人/身份證姓名不一樣，我們將無法處理您的提款申請。
 field_validations:
   required:
-    error_message: "您必須輸入正確的姓氏。\r\n"
+    error_message: 您必須輸入正確的姓氏。
   alpha:
     error_message: 'Field should be Alphabet characters only'
   alphanumeric:
     error_message: 'Field should be alphanumeric'
   alpha_multi:
-    error_message: "您必須輸入正確的姓氏。\r\n"
+    error_message: 您必須輸入正確的姓氏。
   numeric:
     error_message: 'Field should be numeric'
   no_symbols:
-    error_message: "您必須輸入正確的姓氏。\r\n"
+    error_message: "姓名包含無效字符 (如: .,@,#,%,^,*,( ),[],/)\r\n"
   numeric_symbols:
     error_message: 'Field contains invalid special characters'
   email:
     error_message: 'Field does not contain a valid email address'
   min_length:
-    error_message: "您必須輸入正確的姓氏。\r\n"
+    error_message: "姓名須在1-50個字符以內\r\n"
   max_length:
-    error_message: "您必須輸入正確的姓氏。\r\n"
+    error_message: "姓名須在1-50個字符以內\r\n"
   username_availability:
     error_message: 'Username not available'
   email_availability:
     error_message: 'Email not available'
   invalid_words:
-    error_message: "您必須輸入正確的姓氏。\r\n"
+    error_message: 您必須輸入正確的姓氏。
+  valid_languages:
+    error_message: "僅可輸入英文/數字字符。\r\n"

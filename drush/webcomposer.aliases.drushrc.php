@@ -412,3 +412,27 @@ $aliases['ow-sports'] = array (
   ),
 );
 
+$aliases['games'] = array (
+  'uri' => 'games.drupal.local',
+  'root' => '/var/www/html/web-composer/drupal/web/',
+  'path-aliases' => array(
+    '%dump-dir' => '/tmp',
+  ),
+  'source-command-specific' => array (
+    'sql-sync' => array (
+      'no-cache' => TRUE,
+      'structure-tables-key' => 'common',
+    ),
+  ),
+  // No need to modify the following settings
+  'command-specific' => array (
+    'sql-sync' => array (
+      'sanitize' => TRUE,
+      'no-ordered-dump' => TRUE,
+      'structure-tables' => array(
+       // You can add more tables which contain data to be ignored by the database dump
+        'common' => array(''),
+      ),
+    ),
+  ),
+);

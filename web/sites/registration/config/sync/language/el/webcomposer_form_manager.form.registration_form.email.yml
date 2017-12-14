@@ -1,0 +1,33 @@
+field_settings:
+  label: 'Διεύθυνση Email'
+  placeholder: 'Διεύθυνση Email'
+  annotation: 'Παρακαλούμε βεβαιωθείτε ότι χρησιμοποιείτε μία ενεργή διεύθυνση email για λόγους επαλήθευσης και τραπεζικών συναλλαγών (όπως Moneybookers/Skrill). Αταίριαστες και/ή μη έγκυρες διευθύνσεις email μπορεί να έχουν ως αποτέλεσμα καθυστερήσεις στην επεξεργασία των συναλλαγών σας. Σημαντικά μηνύματα και ειδοποιήσεις θα στέλνονται επίσης στο email σας, όπως ανάκτηση κωδικού πρόσβασης και/ή πληροφορίες σχετικά με το λογαριασμό σας.'
+field_validations:
+  required:
+    error_message: "Παρακαλούμε χρησιμοποιήστε την έγκυρη και ενεργή Διεύθυνση Email σας για λόγους επικοινωνίας. (π.χ. name@domain.com)\r\n"
+  alpha:
+    error_message: 'Field should be Alphabet characters only'
+  alphanumeric:
+    error_message: 'Field should be alphanumeric'
+  alpha_multi:
+    error_message: 'Value is not a valid multilingual character'
+  numeric:
+    error_message: 'Field should be numeric'
+  no_symbols:
+    error_message: 'Field contains invalid special characters'
+  numeric_symbols:
+    error_message: 'Field contains invalid special characters'
+  email:
+    error_message: "Παρακαλούμε χρησιμοποιήστε την έγκυρη και ενεργή Διεύθυνση Email σας για λόγους επικοινωνίας. (π.χ. name@domain.com)\r\n"
+  min_length:
+    error_message: "Παρακαλούμε χρησιμοποιήστε την έγκυρη και ενεργή Διεύθυνση Email σας για λόγους επικοινωνίας. (π.χ. name@domain.com)\r\n"
+  max_length:
+    error_message: "Παρακαλούμε χρησιμοποιήστε την έγκυρη και ενεργή Διεύθυνση Email σας για λόγους επικοινωνίας. (π.χ. name@domain.com)\r\n"
+  username_availability:
+    error_message: 'Username not available'
+  email_availability:
+    error_message: "Το Email αυτό χρησιμοποιείται ήδη. Πατήστε <a href=\"{domain:entry}/{domain:lang_token}/cant-login{tracking.token}\" target=\"new\">εδώ</a> για ανάκτηση ονόματος χρήστη/κωδικού πρόσβασης.\r\n"
+  invalid_words:
+    error_message: 'Invalid/not allowed characters'
+  valid_languages:
+    error_message: 'This field only accepts specific characters.'
