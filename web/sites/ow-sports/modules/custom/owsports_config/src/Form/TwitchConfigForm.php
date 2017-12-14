@@ -64,8 +64,16 @@ class TwitchConfigForm extends ConfigFormBase {
     $form['twitch_config_group']['twitch_url'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Twitch URL'),
-      '#description' => $this->t('Twitch API URL'),
+      '#description' => $this->t('Twitch API URL (with trailing slash).'),
       '#default_value' => $config->get('twitch_url'),
+      '#required' => TRUE,
+    ];
+
+    $form['twitch_config_group']['twitch_player_js'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Twitch Player JS URL'),
+      '#description' => $this->t('Twitch Player JS URL (with trailing slash).'),
+      '#default_value' => $config->get('twitch_player_js'),
       '#required' => TRUE,
     ];
 
@@ -76,15 +84,6 @@ class TwitchConfigForm extends ConfigFormBase {
       '#default_value' => $config->get('twitch_client_id'),
       '#required' => TRUE,
     ];
-
-    $form['twitch_config_group']['twitch_player_js'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Twitch Player JS URL'),
-      '#description' => $this->t('Twitch Player JS URL'),
-      '#default_value' => $config->get('twitch_player_js'),
-      '#required' => TRUE,
-    ];
-
 
     return parent::buildForm($form, $form_state);
   }
