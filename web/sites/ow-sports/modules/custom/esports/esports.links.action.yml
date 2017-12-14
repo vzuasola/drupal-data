@@ -1,0 +1,5 @@
+entity.e_sports_channel_entity.add_form:
+  route_name: entity.e_sports_channel_entity.add_form
+  title: 'Add E-Sports channel entity'
+  appears_on:
+    - entity.e_sports_channel_entity.collection

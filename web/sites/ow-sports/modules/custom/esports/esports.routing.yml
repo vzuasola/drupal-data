@@ -1,0 +1,7 @@
+e_sports_channel_entity.admin_settings:
+  path: 'admin/config/e_sports_channel'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'E-Sports Channels'
+  requirements:
+    _permission: 'administer site configuration'

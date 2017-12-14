@@ -1,0 +1,20 @@
+uuid: 5f4cd073-51ca-4722-9a33-9621032ac54d
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime
+    - esports
+id: e_sports_channel_entity.field_unpublish_date
+field_name: field_unpublish_date
+entity_type: e_sports_channel_entity
+type: datetime
+settings:
+  datetime_type: datetime
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
