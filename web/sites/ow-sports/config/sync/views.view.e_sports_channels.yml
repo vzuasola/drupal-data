@@ -10,10 +10,10 @@ dependencies:
     - field.storage.e_sports_channel_entity.field_unpublish_date
     - taxonomy.vocabulary.e_sports_categories
   content:
-    - 'taxonomy_term:e_sports_categories:41e931e6-fd77-418c-994f-5aa3d8e8b2c5'
-    - 'taxonomy_term:e_sports_categories:6caa2336-8627-4328-89aa-a8ba25265a1f'
-    - 'taxonomy_term:e_sports_categories:9844994e-14dc-46cc-934f-7407a691b241'
-    - 'taxonomy_term:e_sports_categories:b71bc3de-6291-4d31-9855-e473a4ce3205'
+    - 'taxonomy_term:e_sports_categories:0289cc95-a2a1-4fe0-a53f-48e576de864f'
+    - 'taxonomy_term:e_sports_categories:2dc8e71a-617b-42e8-bb1e-ac6554b9ac94'
+    - 'taxonomy_term:e_sports_categories:400ee7ee-75db-4339-aff4-a301b6ce7def'
+    - 'taxonomy_term:e_sports_categories:e69b5490-9862-46ce-8808-c317c76e2464'
   module:
     - datetime
     - esports
@@ -594,14 +594,14 @@ display:
           operator: or
           value:
             297: 297
-            296: 296
-            298: 298
+            299: 299
             300: 300
+            298: 298
           group: 1
           exposed: true
           expose:
             operator_id: field_game_code_target_id_op
-            label: 'Game Code (field_game_code)'
+            label: 'Filter by Category'
             description: ''
             use_operator: false
             operator: field_game_code_target_id_op
