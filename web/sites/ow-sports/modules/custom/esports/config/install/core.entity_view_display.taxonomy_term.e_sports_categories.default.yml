@@ -1,0 +1,31 @@
+uuid: 26fbf5d6-a7c9-4248-91b2-04e9af712071
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.e_sports_categories.field_id
+    - taxonomy.vocabulary.e_sports_categories
+  module:
+    - text
+id: taxonomy_term.e_sports_categories.default
+targetEntityType: taxonomy_term
+bundle: e_sports_categories
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_id:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  langcode: true
