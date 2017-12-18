@@ -15,7 +15,7 @@ entity_type: taxonomy_term
 bundle: affiliates_parameters
 label: Active State
 description: 'Checks whether this parameter is active or not'
-required: false
+required: true
 translatable: false
 default_value:
   -
