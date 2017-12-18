@@ -19,7 +19,6 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
  * )
  */
 class AffilatesGroupList extends ResourceBase {
-
   /**
    * Responds to GET requests.
    *
@@ -29,20 +28,17 @@ class AffilatesGroupList extends ResourceBase {
    *   Throws exception expected.
    */
   public function get() {
+    $data = $this->getFieldDefinition();
+
+    if (!$data) {
+      throw new NotFoundHttpException();
+    }
 
     $build = [
       '#cache' => [
         'max-age' => 0,
       ],
     ];
-
-    $data = $this->getFieldDefinition();
-
-    if (!$data) {
-      $errorMessage = t('No Affilate has been added');
-      \Drupal::logger('wbc_rest_resource')->error($errorMessage);
-      throw new NotFoundHttpException($errorMessage);
-    }
 
     return (new ResourceResponse($data))->addCacheableDependency($build);
 
@@ -58,12 +54,12 @@ class AffilatesGroupList extends ResourceBase {
    *   The field definition.
    */
   private function getFieldDefinition() {
+    $tids = \Drupal::entityQuery('taxonomy_term')
+      ->condition('vid', "affiliates_parameters")
+      ->condition('field_active', '1')
+      ->sort('weight', 'ASC')
+      ->execute();
 
-    // You must to implement the logic of your REST Resource here.
-    $query = \Drupal::entityQuery('taxonomy_term');
-    $query->condition('vid', "affiliates_parameters");
-    $query->condition('field_active', '1');
-    $query->sort('weight', 'ASC');
     $tids = $query->execute();
     $terms = Term::loadMultiple($tids);
 
@@ -73,14 +69,14 @@ class AffilatesGroupList extends ResourceBase {
 
     foreach ($terms as $term) {
       $getEntities = $term->get('field_select_affiliates_group')->referencedEntities();
+
       foreach ($getEntities as $getEntity) {
         $name = $getEntity->getName();
       }
 
-      $key = $term->id();
       $data[] = [
         'parameter_name' => $term->getName(),
-        'id' => $key,
+        'id' => $term->id(),
         'weight' => $term->getWeight(),
         'group_name' => $name,
       ];
@@ -88,5 +84,4 @@ class AffilatesGroupList extends ResourceBase {
 
     return $data;
   }
-
 }

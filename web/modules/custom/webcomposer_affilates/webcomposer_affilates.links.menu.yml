@@ -2,16 +2,16 @@ webcomposer_affiliates.admin:
   title: 'Webcomposer Affiliates Configuration'
   description: 'Provides an interface for managing Affiliates Parameters'
   parent: system.admin_config
-  route_name: webcomposer_config.affilates_admin_settings
-
-webcomposer_affiliates.list:
-  title: 'Affiliate Tracking'
-  parent: webcomposer_affiliates.admin
-  description: 'Manage Tracking Parameters'
-  route_name: webcomposer_config.affilates_form
+  route_name: webcomposer_config.affiliates_admin_settings
 
 webcomposer_affiliates.config:
-  title: 'Affiliate Configuration Form'
+  title: 'Affiliate Settings'
   parent: webcomposer_affiliates.admin
-  description: 'Affiliates Configuration'
+  description: 'Manage affiliates configuration'
   route_name: webcomposer_config.affiliate_configuration_form
+
+webcomposer_affiliates.manage:
+  title: 'Manage Affiliates'
+  parent: webcomposer_affiliates.admin
+  description: 'Manage tracking parameters'
+  route_name: webcomposer_config.affiliates_manage

@@ -15,10 +15,10 @@ settings:
   allowed_values:
     -
       value: 1
-      label: active
+      label: Active
     -
       value: 0
-      label: inactive
+      label: Inactive
   allowed_values_function: ''
 module: options
 locked: false

@@ -364,7 +364,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: active
+          label: Active
           exclude: false
           alter:
             alter_text: false
@@ -572,7 +572,7 @@ display:
     position: 2
     display_options:
       display_extenders: {  }
-      path: admin/config/webcomposer/config/affilates-list
+      path: admin/config/webcomposer/config/affiliates/manage
     cache_metadata:
       max-age: 0
       contexts:
