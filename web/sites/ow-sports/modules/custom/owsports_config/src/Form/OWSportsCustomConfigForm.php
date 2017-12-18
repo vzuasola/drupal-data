@@ -71,6 +71,14 @@ class OWSportsCustomConfigForm extends ConfigFormBase {
       '#required' => TRUE,
     ];
 
+    $form['owsports_config_group']['act_mapping'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Bet Type Mapping'),
+      '#description' => $this->t('Bet Type Mapping. e.g. act={keyword}'),
+      '#default_value' => $config->get('act_mapping'),
+      '#required' => TRUE,
+    ];
+
     $form['owsports_config_group']['override_domain'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Override Domain'),
@@ -78,12 +86,12 @@ class OWSportsCustomConfigForm extends ConfigFormBase {
       '#default_value' => $config->get('override_domain'),
     ];
 
-    $form['owsports_config_group']['act_mapping'] = [
-      '#type' => 'textarea',
-      '#title' => $this->t('Bet Type Mapping'),
-      '#description' => $this->t('Bet Type Mapping. e.g. act={keyword}'),
-      '#default_value' => $config->get('act_mapping'),
-      '#required' => TRUE,
+    $form['owsports_config_group']['legacy_cdn'] = [
+      '#type' => 'select',
+      '#title' => $this->t('Legacy CDN Source'),
+      '#description' => $this->t('Legacy iFrame CDN environment source.'),
+      '#options' => [$this->t('QA1'), $this->t('TCT'), $this->t('UAT'), $this->t('STG'), $this->t('PRD')],
+      '#default_value' => $config->get('legacy_cdn'),
     ];
 
     $form['jackpotbet_config_group'] = [
@@ -186,20 +194,6 @@ class OWSportsCustomConfigForm extends ConfigFormBase {
       '#default_value' => $config->get('singbet_template'),
     ];
 
-    $form['legacy_config_group'] = [
-      '#type' => 'details',
-      '#title' => $this->t('Legacy Config'),
-      '#collapsible' => TRUE,
-      '#group' => 'owsports_settings_tab',
-    ];
-
-    $form['legacy_config_group']['cdn_mapping'] = [
-      '#type' => 'textarea',
-      '#title' => $this->t('CDN Mapping'),
-      '#description' => $this->t('CDN Mapping for Legacy Site. Default is prd.'),
-      '#default_value' => $config->get('cdn_mapping'),
-    ];
-
     return parent::buildForm($form, $form_state);
   }
 
@@ -228,7 +222,8 @@ class OWSportsCustomConfigForm extends ConfigFormBase {
       'colossus_pre_uri',
       'colossus_post_uri',
       'cdn_mapping',
-      'act_mapping'
+      'act_mapping',
+      'legacy_cdn'
     ];
 
     foreach ($keys as $key) {
