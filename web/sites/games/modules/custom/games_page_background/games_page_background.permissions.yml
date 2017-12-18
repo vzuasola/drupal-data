@@ -1,0 +1,33 @@
+add games page background entities:
+  title: 'Create new Games Page Background entities'
+
+administer games page background entities:
+  title: 'Administer Games Page Background entities'
+  description: 'Allow to access the administration form to configure Games Page Background entities.'
+  restrict access: true
+
+delete games page background entities:
+  title: 'Delete Games Page Background entities'
+
+edit games page background entities:
+  title: 'Edit Games Page Background entities'
+
+access games page background overview:
+  title: 'Access the Games Page Background overview page'
+
+view published games page background entities:
+  title: 'View published Games Page Background entities'
+
+view unpublished games page background entities:
+  title: 'View unpublished Games Page Background entities'
+
+view all games page background revisions:
+  title: 'View all Games Page Background revisions'
+
+revert all games page background revisions:
+  title: 'Revert all Games Page Background revisions'
+  description: 'Role requires permission <em>view Games Page Background revisions</em> and <em>edit rights</em> for games page background entities in question or <em>administer games page background entities</em>.'
+
+delete all games page background revisions:
+  title: 'Delete all revisions'
+  description: 'Role requires permission to <em>view Games Page Background revisions</em> and <em>delete rights</em> for games page background entities in question or <em>administer games page background entities</em>.'

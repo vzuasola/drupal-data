@@ -1,0 +1,17 @@
+affilates.add:
+  route_name: 'webcomposer_config.affiliates_form'
+  title: 'Add parameters'
+  options:
+      query:
+          destination: '/admin/config/webcomposer/config/affiliates/manage'
+  appears_on:
+      - view.affiliates_lists.page_1
+
+affilates.manage_group:
+  route_name: 'webcomposer_config.affiliates_group_form'
+  title: 'Manage Groups'
+  options:
+      query:
+          destination: '/admin/config/webcomposer/config/affiliates/manage'
+  appears_on:
+      - view.affiliates_lists.page_1

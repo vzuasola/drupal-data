@@ -8,6 +8,8 @@ dependencies:
     - taxonomy.vocabulary.affiliates_parameters
   module:
     - options
+_core:
+  default_config_hash: QKtpjwUXXzdfehFq1oxDyU6v6z8zRXCbX9VJfGAndQI
 id: taxonomy_term.affiliates_parameters.default
 targetEntityType: taxonomy_term
 bundle: affiliates_parameters
