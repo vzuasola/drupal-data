@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains games_search.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function games_search_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the games_search module.
+    case 'help.page.games_search':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Games Search Recommendation Module') . '</p>';
+      return $output;
+
+    default:
+  }
+}

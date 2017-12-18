@@ -5,6 +5,8 @@ dependencies:
   module:
     - options
     - taxonomy
+_core:
+  default_config_hash: E2F5EC_Aa6FaFcmVw01WIgNGK4zaXt1s6tiA_JQmhes
 id: taxonomy_term.field_active
 field_name: field_active
 entity_type: taxonomy_term
@@ -13,10 +15,10 @@ settings:
   allowed_values:
     -
       value: 1
-      label: active
+      label: Active
     -
       value: 0
-      label: inactive
+      label: Inactive
   allowed_values_function: ''
 module: options
 locked: false

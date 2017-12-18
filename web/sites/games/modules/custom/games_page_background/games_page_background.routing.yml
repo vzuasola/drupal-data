@@ -1,0 +1,7 @@
+games_page_background.admin_settings:
+  path: 'admin/config/webcomposer/games_page_background'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Games Page Background'
+  requirements:
+    _permission: 'administer site configuration'

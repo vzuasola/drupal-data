@@ -1,24 +1,19 @@
-uuid: 47ee63ff-e474-4eec-baf4-d5618d554035
-langcode: zh-hans
+uuid: b238c963-304d-4e3c-be7a-219a192585b4
+langcode: en
 status: true
 dependencies:
-  config:
-    - taxonomy.vocabulary.affiliates_parameters
   module:
-    - options
     - rest
     - serialization
-    - taxonomy
-    - user
-_core:
-  default_config_hash: Jik3aW1aTiunqy9iBDejLv8iifhJwqX8CrvNVp3pqJc
-id: affiliates_rest_views
-label: 'Affiliates Rest Views'
+    - slider_overlay
+    - webcomposer_rest_extra
+id: slider_overlay_rest_cmi
+label: 'Slider Overlay CMI'
 module: views
-description: ''
+description: 'Slider Overlay CMI view for rest export'
 tag: ''
-base_table: taxonomy_term_field_data
-base_field: tid
+base_table: slider_overlay_entity_field_data
+base_field: id
 core: 8.x
 display:
   default:
@@ -28,11 +23,10 @@ display:
     position: 0
     display_options:
       access:
-        type: perm
-        options:
-          perm: 'access content'
-      cache:
         type: none
+        options: {  }
+      cache:
+        type: tag
         options: {  }
       query:
         type: views_query
@@ -80,10 +74,13 @@ display:
           hide_empty: false
           default_field_elements: true
       fields:
-        name_1:
-          id: name_1
-          table: taxonomy_term_field_data
+        name:
+          table: slider_overlay_entity_field_data
           field: name
+          id: name
+          entity_type: null
+          entity_field: name
+          plugin_id: field
           relationship: none
           group_type: group
           admin_label: ''
@@ -120,7 +117,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: false
+          element_label_colon: true
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -130,8 +127,7 @@ display:
           hide_alter_empty: true
           click_sort_column: value
           type: string
-          settings:
-            link_to_entity: false
+          settings: {  }
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -142,96 +138,17 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          convert_spaces: false
-          entity_type: taxonomy_term
-          entity_field: name
-          plugin_id: term_name
-        name:
-          id: name
-          table: taxonomy_term_field_data
-          field: name
-          relationship: field_select_affiliates_group
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: false
-            ellipsis: false
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: string
-          settings:
-            link_to_entity: false
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          convert_spaces: false
-          entity_type: taxonomy_term
-          entity_field: name
-          plugin_id: term_name
       filters:
-        vid:
-          id: vid
-          table: taxonomy_term_field_data
-          field: vid
-          value:
-            affiliates_parameters: affiliates_parameters
-          entity_type: taxonomy_term
-          entity_field: vid
-          plugin_id: bundle
-        field_active_value:
-          id: field_active_value
-          table: taxonomy_term__field_active
-          field: field_active_value
+        langcode:
+          id: langcode
+          table: slider_overlay_entity_field_data
+          field: langcode
           relationship: none
           group_type: group
           admin_label: ''
-          operator: or
+          operator: in
           value:
-            1: '1'
+            '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
           group: 1
           exposed: false
           expose:
@@ -259,48 +176,14 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          reduce_duplicates: false
-          plugin_id: list_field
-      sorts:
-        weight:
-          id: weight
-          table: draggableviews_structure
-          field: weight
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: ASC
-          exposed: false
-          expose:
-            label: ''
-          plugin_id: standard
-        weight_1:
-          id: weight_1
-          table: taxonomy_term_field_data
-          field: weight
-          relationship: field_select_affiliates_group
-          group_type: group
-          admin_label: ''
-          order: ASC
-          exposed: false
-          expose:
-            label: ''
-          entity_type: taxonomy_term
-          entity_field: weight
-          plugin_id: standard
+          entity_type: slider_overlay_entity
+          entity_field: langcode
+          plugin_id: language
+      sorts: {  }
       header: {  }
       footer: {  }
       empty: {  }
-      relationships:
-        field_select_affiliates_group:
-          id: field_select_affiliates_group
-          table: taxonomy_term__field_select_affiliates_group
-          field: field_select_affiliates_group
-          relationship: none
-          group_type: group
-          admin_label: 'field_select_affiliates_group: Taxonomy term'
-          required: false
-          plugin_id: standard
+      relationships: {  }
       arguments: {  }
       display_extenders: {  }
     cache_metadata:
@@ -310,38 +193,32 @@ display:
         - 'languages:language_interface'
         - request_format
         - url.query_args
-        - user.permissions
       tags: {  }
-  rest_export_1:
+  rest_export_slider_overlay_cmi:
     display_plugin: rest_export
-    id: rest_export_1
+    id: rest_export_slider_overlay_cmi
     display_title: 'REST export'
     position: 1
     display_options:
       display_extenders: {  }
-      path: api/affiliates_rest_views
+      path: api/slider_overlay
       pager:
         type: none
         options:
           offset: 0
       style:
-        type: serializer
+        type: node_list_serializer
         options:
-          grouping: {  }
           uses_fields: false
-          formats: {  }
+          formats:
+            json: json
       row:
-        type: data_field
-        options:
-          field_options:
-            name:
-              alias: ''
-              raw_output: false
+        type: data_entity
+        options: {  }
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
         - request_format
-        - user.permissions
       tags: {  }
