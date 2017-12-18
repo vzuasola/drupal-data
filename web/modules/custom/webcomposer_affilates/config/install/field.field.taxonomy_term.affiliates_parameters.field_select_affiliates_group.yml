@@ -13,8 +13,8 @@ field_name: field_select_affiliates_group
 entity_type: taxonomy_term
 bundle: affiliates_parameters
 label: 'Select Affiliates Group'
-description: ''
-required: false
+description: 'Select from an existing group. You can add groups using the <strong>Affiliate Groups</strong> section'
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''

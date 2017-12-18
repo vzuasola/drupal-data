@@ -13,9 +13,9 @@ id: taxonomy_term.affiliates_parameters.field_active
 field_name: field_active
 entity_type: taxonomy_term
 bundle: affiliates_parameters
-label: active
-description: ''
-required: false
+label: Active State
+description: 'Checks whether this parameter is active or not'
+required: true
 translatable: false
 default_value:
   -

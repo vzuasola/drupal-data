@@ -1,29 +1,24 @@
 <?php
 
 /**
- * @file
- * It takes of uninstalling the configs of module during uninstall.
- */
-
-/**
- * Implements hook_install().
+ * Implements hook_uninstall().
  */
 function webcomposer_affilates_uninstall() {
   $keys = [
-    'core.entity_form_display.taxonomy_term.affiliates_group.default.yml',
-    'core.entity_form_display.taxonomy_term.affiliates_parameters.default.yml',
-    'core.entity_view_display.taxonomy_term.affiliates_group.default.yml',
-    'core.entity_view_display.taxonomy_term.affiliates_parameters.default.yml',
-    'field.field.taxonomy_term.affiliates_parameters.field_active.yml',
-    'field.field.taxonomy_term.affiliates_parameters.field_select_affiliates_group.yml',
-    'field.storage.taxonomy_term.field_active.yml',
-    'field.storage.taxonomy_term.field_select_affiliates_group.yml',
-    'language.content_settings.taxonomy_term.affiliates_group.yml',
-    'language.content_settings.taxonomy_term.affiliates_parameters.yml',
-    'taxonomy.vocabulary.affiliates_group.yml',
-    'taxonomy.vocabulary.affiliates_parameters.yml',
-    'views.view.affiliates_lists.yml',
-    'webcomposer_config.affiliate_configuration.yml'
+    'core.entity_form_display.taxonomy_term.affiliates_group.default',
+    'core.entity_form_display.taxonomy_term.affiliates_parameters.default',
+    'core.entity_view_display.taxonomy_term.affiliates_group.default',
+    'core.entity_view_display.taxonomy_term.affiliates_parameters.default',
+    'field.field.taxonomy_term.affiliates_parameters.field_active',
+    'field.field.taxonomy_term.affiliates_parameters.field_select_affiliates_group',
+    'field.storage.taxonomy_term.field_active',
+    'field.storage.taxonomy_term.field_select_affiliates_group',
+    'language.content_settings.taxonomy_term.affiliates_group',
+    'language.content_settings.taxonomy_term.affiliates_parameters',
+    'taxonomy.vocabulary.affiliates_group',
+    'taxonomy.vocabulary.affiliates_parameters',
+    'views.view.affiliates_lists',
+    'webcomposer_config.affiliate_configuration'
   ];
 
   foreach ($keys as $key) {
