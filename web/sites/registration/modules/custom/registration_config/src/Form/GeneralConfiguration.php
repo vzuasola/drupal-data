@@ -200,7 +200,7 @@ class GeneralConfiguration extends ConfigFormBase {
 
     $form['avaya_settings'] = [
       '#type' => 'details',
-      '#title' => $this->t('General Settings'),
+      '#title' => $this->t('Avaya Proactive Livechat'),
       '#collapsible' => TRUE,
       '#group' => 'general_settings_tab',
     ];
