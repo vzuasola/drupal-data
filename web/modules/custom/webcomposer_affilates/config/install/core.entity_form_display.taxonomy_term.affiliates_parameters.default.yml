@@ -6,6 +6,8 @@ dependencies:
     - field.field.taxonomy_term.affiliates_parameters.field_active
     - field.field.taxonomy_term.affiliates_parameters.field_select_affiliates_group
     - taxonomy.vocabulary.affiliates_parameters
+_core:
+  default_config_hash: mKAdujvHPT2NBm9tGzJwqesrsYLSnucSVf1gF85-pyI
 id: taxonomy_term.affiliates_parameters.default
 targetEntityType: taxonomy_term
 bundle: affiliates_parameters

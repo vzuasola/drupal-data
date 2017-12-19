@@ -1,0 +1,72 @@
+uuid: e09cda9e-770f-4acc-86e4-1a7f40329cc2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.e_sports_channel_entity.e_sports_channel_entity.field_channel
+    - field.field.e_sports_channel_entity.e_sports_channel_entity.field_enabled
+    - field.field.e_sports_channel_entity.e_sports_channel_entity.field_game_code
+    - field.field.e_sports_channel_entity.e_sports_channel_entity.field_publish_date
+    - field.field.e_sports_channel_entity.e_sports_channel_entity.field_unpublish_date
+  module:
+    - datetime
+    - esports
+    - field_group
+third_party_settings:
+  field_group:
+    group_scheduler_settings:
+      children:
+        - field_publish_date
+        - field_unpublish_date
+      parent_name: ''
+      weight: 3
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Scheduler Settings'
+id: e_sports_channel_entity.e_sports_channel_entity.default
+targetEntityType: e_sports_channel_entity
+bundle: e_sports_channel_entity
+mode: default
+content:
+  field_channel:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_enabled:
+    weight: 0
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_game_code:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_publish_date:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_unpublish_date:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+hidden:
+  langcode: true
+  name: true
+  user_id: true

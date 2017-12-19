@@ -9,3 +9,9 @@ owsports_config.owsports_config_form:
   description: 'Configure the OW-Sports custom configuration'
   route_name: owsports_config.owsports_configuration
   parent: owsports_config.list
+
+owsports_config.twitch_config_form:
+  title: 'Twitch Configuration'
+  description: 'Configure Twitch Settings'
+  route_name: owsports_config.twitch_configuration
+  parent: owsports_config.list

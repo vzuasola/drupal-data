@@ -8,10 +8,12 @@ dependencies:
   module:
     - draggableviews
     - options
+    - rest
+    - serialization
     - taxonomy
     - user
 _core:
-  default_config_hash: U9NguMKPw5I08nJKSNmZm6BVE_qwsQ83aPeK49blOgw
+  default_config_hash: Pr-EY8AqbmRoUNfEVBV1xIsmXrzGM_SY6-excFYJmgw
 id: affiliates_lists
 label: 'Affiliates Lists'
 module: views
@@ -362,7 +364,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: active
+          label: Active
           exclude: false
           alter:
             alter_text: false
@@ -563,14 +565,14 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.taxonomy_term.field_active'
-  block_1:
-    display_plugin: block
-    id: block_1
-    display_title: Block
-    position: 1
+  page_1:
+    display_plugin: page
+    id: page_1
+    display_title: Page
+    position: 2
     display_options:
       display_extenders: {  }
-      block_hide_empty: true
+      path: admin/config/webcomposer/config/affiliates/manage
     cache_metadata:
       max-age: 0
       contexts:
@@ -579,3 +581,176 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.taxonomy_term.field_active'
+  rest_export_1:
+    display_plugin: rest_export
+    id: rest_export_1
+    display_title: 'REST export'
+    position: 3
+    display_options:
+      display_extenders: {  }
+      row:
+        type: data_field
+        options:
+          field_options:
+            name:
+              alias: ''
+              raw_output: false
+            name_1:
+              alias: ''
+              raw_output: false
+            edit_taxonomy_term:
+              alias: ''
+              raw_output: false
+            delete_taxonomy_term:
+              alias: ''
+              raw_output: false
+            field_active:
+              alias: ''
+              raw_output: false
+            draggableviews:
+              alias: ''
+              raw_output: false
+      fields:
+        name_1:
+          id: name_1
+          table: taxonomy_term_field_data
+          field: name
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          convert_spaces: false
+          entity_type: taxonomy_term
+          entity_field: name
+          plugin_id: term_name
+        name:
+          id: name
+          table: taxonomy_term_field_data
+          field: name
+          relationship: field_select_affiliates_group
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          convert_spaces: false
+          entity_type: taxonomy_term
+          entity_field: name
+          plugin_id: term_name
+      defaults:
+        fields: false
+      path: api/affiliates_rest_views
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - request_format
+        - user.permissions
+      tags: {  }

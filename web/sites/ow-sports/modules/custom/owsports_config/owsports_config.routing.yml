@@ -13,3 +13,11 @@ owsports_config.owsports_configuration:
     _form: '\Drupal\owsports_config\Form\OWSportsCustomConfigForm'
   requirements:
     _permission: 'administer site configuration'
+
+owsports_config.twitch_configuration:
+  path: '/admin/config/owsports_config/twitch'
+  defaults:
+    _title: 'Twitch Configuration Form'
+    _form: '\Drupal\owsports_config\Form\TwitchConfigForm'
+  requirements:
+    _permission: 'administer site configuration'
