@@ -17,13 +17,13 @@ use Drupal\webcomposer_rest_extra\FilterHtmlTrait;
  *
  * @RestResource(
  *   id = "games_config_rest_resource",
- *   label = @Translation("Casino Config Rest Resource"),
+ *   label = @Translation("Games Config Rest Resource"),
  *   uri_paths = {
  *     "canonical" = "/api/configuration/{id}"
  *   }
  * )
  */
-class CasinoConfigRestResource extends ResourceBase {
+class GamesConfigRestResource extends ResourceBase {
 
   use FilterHtmlTrait;
   /**
