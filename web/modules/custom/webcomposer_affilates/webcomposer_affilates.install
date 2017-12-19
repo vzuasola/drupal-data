@@ -1,5 +1,7 @@
 <?php
 
+use Drupal\taxonomy\Entity\Vocabulary;
+
 /**
  * Implements hook_uninstall().
  */
@@ -22,6 +24,23 @@ function webcomposer_affilates_uninstall() {
   ];
 
   foreach ($keys as $key) {
-    \Drupal::configFactory()->getEditable($key)->delete();
+    $config = \Drupal::configFactory()->getEditable($key);
+
+    if ($config) {
+      $config->delete();
+    }
+  }
+
+  $vocabularies = [
+    'affiliates_parameters',
+    'affiliates_group',
+  ];
+
+  foreach ($vocabularies as $key) {
+    $vocab = Vocabulary::load($key);
+
+    if ($vocab) {
+      $vocab->delete();
+    }
   }
 }
