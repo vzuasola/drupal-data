@@ -1,0 +1,12 @@
+webcomposer_affilates.affiliate_entity.*:
+  type: config_entity
+  label: 'Affiliate entity config'
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    label:
+      type: label
+      label: 'Label'
+    uuid:
+      type: string
