@@ -12,8 +12,9 @@ dependencies:
     - serialization
     - taxonomy
     - user
+    - webcomposer_rest_extra
 _core:
-  default_config_hash: Pr-EY8AqbmRoUNfEVBV1xIsmXrzGM_SY6-excFYJmgw
+  default_config_hash: XWZcHJud9u_C_4x-9P-7TU9Id6BU6Hz-UenE49EoC2M
 id: affiliates_lists
 label: 'Affiliates Lists'
 module: views
@@ -578,6 +579,29 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - user.permissions
+      tags:
+        - 'config:field.storage.taxonomy_term.field_active'
+  rest:
+    display_plugin: rest_export
+    id: rest
+    display_title: REST
+    position: 3
+    display_options:
+      display_extenders: {  }
+      display_description: ''
+      style:
+        type: taxonomy_list_serializer
+        options:
+          uses_fields: false
+          formats: {  }
+      path: api/affiliates
+    cache_metadata:
+      max-age: 0
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - request_format
         - user.permissions
       tags:
         - 'config:field.storage.taxonomy_term.field_active'
