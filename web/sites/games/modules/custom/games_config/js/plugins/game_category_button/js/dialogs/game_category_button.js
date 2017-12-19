@@ -90,9 +90,6 @@ CKEDITOR.dialog.add("game_category_button", function(editor) {
             this.setupContent(this.element);
         },
         onOk: function() {
-            var dialog = this;
-            var anchorElement = this.element;
-
             this.commitContent(this.element);
 
             if(this.insertMode) {

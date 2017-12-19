@@ -25,8 +25,6 @@
             icons: 'game_category_button',
             lang: 'en',
             init: function (editor) {
-                var config = editor.config;
-
                 editor.addCommand( 'game_category_button', new CKEDITOR.dialogCommand( 'game_category_button' , {
                     startDisabled: true
                 }));
