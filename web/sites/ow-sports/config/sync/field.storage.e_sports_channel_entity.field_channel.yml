@@ -1,0 +1,21 @@
+uuid: e825a370-fddc-415b-ab0e-30436dd932a3
+langcode: en
+status: true
+dependencies:
+  module:
+    - esports
+id: e_sports_channel_entity.field_channel
+field_name: field_channel
+entity_type: e_sports_channel_entity
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

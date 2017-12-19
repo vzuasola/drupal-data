@@ -1,0 +1,21 @@
+uuid: 0cfb056f-edea-4585-bae1-53cb52c91961
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.e_sports_channel_entity.field_unpublish_date
+  module:
+    - datetime
+    - esports
+id: e_sports_channel_entity.e_sports_channel_entity.field_unpublish_date
+field_name: field_unpublish_date
+entity_type: e_sports_channel_entity
+bundle: e_sports_channel_entity
+label: 'Unpublish Date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

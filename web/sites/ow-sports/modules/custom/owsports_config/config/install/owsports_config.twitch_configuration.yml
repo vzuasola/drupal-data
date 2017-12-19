@@ -1,0 +1,5 @@
+twitch_url: 'https://api.twitch.tv/kraken/streams/'
+twitch_player_js: 'https://player.twitch.tv/'
+twitch_client_id: 4hi14xgler2mcuf7uc49sx94captzrb
+twitch_viewers: Viewers
+twitch_disclaimer: 'DISCLAIMER: DAFABET IS NOT RESPONSIBLE FOR THE CONTENT STREAMED VIA TWITCH. FIREFOX USERS WILL NEED AN ADDITIONAL PLUGIN TO PLAY CONTENT.'

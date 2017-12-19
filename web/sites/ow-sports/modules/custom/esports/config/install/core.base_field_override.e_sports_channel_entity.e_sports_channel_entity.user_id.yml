@@ -1,0 +1,20 @@
+uuid: 3541bbf1-d1b7-48f6-adce-815593c9eb98
+langcode: en
+status: true
+dependencies:
+  module:
+    - esports
+id: e_sports_channel_entity.e_sports_channel_entity.user_id
+field_name: user_id
+entity_type: e_sports_channel_entity
+bundle: e_sports_channel_entity
+label: 'Authored by'
+description: 'The user ID of author of the Esports channel entity entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

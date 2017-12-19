@@ -1,0 +1,9 @@
+uuid: 65037869-9b9d-47fd-93b0-fe318b2d0e6a
+langcode: en
+status: true
+dependencies: {  }
+name: 'E-Sports Categories'
+vid: e_sports_categories
+description: 'List of E-Sports Categories'
+hierarchy: 0
+weight: 0

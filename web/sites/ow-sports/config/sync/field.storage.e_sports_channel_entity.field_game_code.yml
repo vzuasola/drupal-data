@@ -1,0 +1,20 @@
+uuid: 06218dbb-61cd-4cda-be82-1f006174b2f6
+langcode: en
+status: true
+dependencies:
+  module:
+    - esports
+    - taxonomy
+id: e_sports_channel_entity.field_game_code
+field_name: field_game_code
+entity_type: e_sports_channel_entity
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

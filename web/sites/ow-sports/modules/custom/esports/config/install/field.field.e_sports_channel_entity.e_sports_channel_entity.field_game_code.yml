@@ -1,0 +1,26 @@
+uuid: 45ab3a9a-2d12-4043-8651-4e7210f7feb0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.e_sports_channel_entity.field_game_code
+  module:
+    - esports
+id: e_sports_channel_entity.e_sports_channel_entity.field_game_code
+field_name: field_game_code
+entity_type: e_sports_channel_entity
+bundle: e_sports_channel_entity
+label: 'Game Code'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: e_sports_game_categories
+      display_name: entity_reference_1
+      arguments: {  }
+field_type: entity_reference
