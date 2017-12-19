@@ -1,0 +1,39 @@
+<?php
+
+/**
+ * @file
+ * Contains games_config.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function games_config_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the games_config module.
+    case 'help.page.games_config':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Games Config Module') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+
+function games_config_form_alter(&$form, $form_state, $form_id) {
+  	if ($form_id == 'node_game_form' || $form_id == 'node_game_edit_form') {
+ 		foreach (array_keys($form['actions']) as $action) {
+		    if ($action != 'preview' && isset($form['actions'][$action]['#type']) && $form['actions'][$action]['#type'] === 'submit') {
+		      $form['actions'][$action]['#submit'][] = 'games_config_form_submit';
+		    }
+  		}
+  	}
+}
+
+function games_config_form_submit($form, &$form_state) {
+	$form_state->setRedirect('games_config.list.games');
+}
