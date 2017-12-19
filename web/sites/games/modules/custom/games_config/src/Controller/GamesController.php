@@ -11,11 +11,11 @@ use Drupal\Component\Utility\Html;
  */
 class GamesController extends ControllerBase {
 
-	public function getList(Request $request) {
-	    return array(
-	      '#type' => 'markup',
-	      '#markup' => "",
-	    );
-  	}
+    public function getList(Request $request) {
+        return array(
+            '#type' => 'markup',
+            '#markup' => "",
+        );
+    }
 
 }
