@@ -1,3 +1,8 @@
-profile_logout_text: ออกจากระบบ
 join_now_text: สมัครสมาชิก
+join_now_link: 'https://stg-www.elysium-dfbt.com/{lang}/cant-login?title=cantLogin'
 login_issue_text: 'ลืมรหัสผ่าน?'
+login_issue_link: 'https://stg-www.elysium-dfbt.com/{lang}/cant-login?title=cantLogin'
+balance_error_text: 'Error Retrieving.'
+welcome_text: 'Hola! {username}'
+profile_link: 'https://stg-accountwww.elysium-dfbt.com/en/my-profile'
+profile_logout_text: ออกจากระบบ
