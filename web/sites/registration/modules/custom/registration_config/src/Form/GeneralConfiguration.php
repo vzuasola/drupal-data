@@ -198,6 +198,32 @@ class GeneralConfiguration extends ConfigFormBase {
       '#required' => TRUE,
     ];
 
+    $form['avaya_settings'] = [
+      '#type' => 'details',
+      '#title' => $this->t('General Settings'),
+      '#collapsible' => TRUE,
+      '#group' => 'general_settings_tab',
+    ];
+    $form['avaya_settings']['enable_avaya_proactive'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable Proactive Livechat'),
+      '#description' => $this->t('Check this is you want to enable proactive livechat'),
+      '#default_value' => $config->get('enable_avaya_proactive'),
+    ];
+    $form['avaya_settings']['livechat_timeout'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Timeout Proactive livechat'),
+      '#description' => $this->t('Amount of time the live chat will show (in seconds)'),
+      '#default_value' => $config->get('livechat_timeout'),
+      '#required' => TRUE,
+    ];
+    $form['avaya_settings']['livechat_header'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Live Chat Header Text'),
+      '#description' => $this->t('Text that will be displayed at the top of the chatbox'),
+      '#default_value' => $config->get('livechat_header'),
+      '#required' => TRUE,
+    ];
 
     return parent::buildForm($form, $form_state);
   }
@@ -222,6 +248,9 @@ class GeneralConfiguration extends ConfigFormBase {
       'generic_error_message',
       'error_code_mapping',
       'unauthenticated_error_message',
+      'enable_avaya_proactive',
+      'livechat_timeout',
+      'livechat_header',
     ];
 
     foreach ($keys as $key) {
