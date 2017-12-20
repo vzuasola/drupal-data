@@ -28,4 +28,10 @@ registration_config.general_configuration:
     country_restriction_message:
       type: label
       label: 'Country Restriction Message'
+    livechat_header:
+      type: label
+      label: 'Live Chat Header Text'
+    livechat_text:
+      type: label
+      label: 'Live Chat Text'
   langcode: 'en'
