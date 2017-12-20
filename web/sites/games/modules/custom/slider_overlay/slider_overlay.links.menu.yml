@@ -11,7 +11,6 @@ entity.slider_overlay_entity.collection:
   route_name: entity.slider_overlay_entity.collection
   description: 'List Slider Overlay entities'
   parent: slider_overlay.list
-  weight: 100
 
 slider_overlay_entity.admin.structure.settings:
   title: Slider Overlay settings
