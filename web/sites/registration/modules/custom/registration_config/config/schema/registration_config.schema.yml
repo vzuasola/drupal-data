@@ -31,4 +31,7 @@ registration_config.general_configuration:
     livechat_header:
       type: label
       label: 'Live Chat Header Text'
+    livechat_text:
+      type: label
+      label: 'Live Chat Text'
   langcode: 'en'

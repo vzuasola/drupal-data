@@ -224,6 +224,13 @@ class GeneralConfiguration extends ConfigFormBase {
       '#default_value' => $config->get('livechat_header'),
       '#required' => TRUE,
     ];
+      $form['avaya_settings']['livechat_text'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Live Chat Text'),
+      '#description' => $this->t('Text that will be displayed inside the chatbox'),
+      '#default_value' => $config->get('livechat_text'),
+      '#required' => TRUE,
+    ];
 
     return parent::buildForm($form, $form_state);
   }
@@ -251,6 +258,7 @@ class GeneralConfiguration extends ConfigFormBase {
       'enable_avaya_proactive',
       'livechat_timeout',
       'livechat_header',
+      'livechat_text',
     ];
 
     foreach ($keys as $key) {
