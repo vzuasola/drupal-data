@@ -205,7 +205,7 @@ class GeneralConfiguration extends ConfigFormBase {
       '#group' => 'general_settings_tab',
     ];
     $form['avaya_settings']['enable_avaya_proactive'] = [
-      '#type' => 'checkbox',
+      '#type' => 'number',
       '#title' => $this->t('Enable Proactive Livechat'),
       '#description' => $this->t('Check this is you want to enable proactive livechat'),
       '#default_value' => $config->get('enable_avaya_proactive'),
