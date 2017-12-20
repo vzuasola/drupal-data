@@ -26,13 +26,7 @@ class SliderOverlayEntityListBuilder extends EntityListBuilder {
    * {@inheritdoc}
    */
   public function buildRow(EntityInterface $entity) {
-    /* @var $entity \Drupal\slider_overlay\Entity\SliderOverlayEntity */
-    $row['name'] = Link::createFromRoute(
-      $entity->label(),
-      'entity.slider_overlay_entity.edit_form',
-      ['slider_overlay_entity' => $entity->id()]
-    );
+    $row['name'] = $entity->label();
     return $row + parent::buildRow($entity);
   }
-
 }

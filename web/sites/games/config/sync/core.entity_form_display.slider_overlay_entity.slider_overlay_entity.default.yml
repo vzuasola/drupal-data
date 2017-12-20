@@ -1,20 +1,20 @@
-uuid: f1314d07-1974-40d2-bcd7-c644d664be5e
+uuid: 7028c0df-4953-47a8-89d9-684b57a17817
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.sponsor_entity.sponsor_entity.field_sponsor_cmi
+    - field.field.slider_overlay_entity.slider_overlay_entity.field_slider_overlay_cmi
   module:
     - paragraphs
-    - webcomposer_sponsor
+    - slider_overlay
 _core:
-  default_config_hash: 0Mzj_OSp_Monm3obq-yGXQpjSvTepCKn2m6L6i4ctB0
-id: sponsor_entity.sponsor_entity.default
-targetEntityType: sponsor_entity
-bundle: sponsor_entity
+  default_config_hash: 8qwdHvPmR1lzZh6yPhvUWPHMStKzFvvzc3LbrPhXXXs
+id: slider_overlay_entity.slider_overlay_entity.default
+targetEntityType: slider_overlay_entity
+bundle: slider_overlay_entity
 mode: default
 content:
-  field_sponsor_cmi:
+  field_slider_overlay_cmi:
     type: entity_reference_paragraphs
     weight: 1
     settings:

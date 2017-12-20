@@ -1,17 +1,18 @@
-uuid: f0352cad-d6c9-45a7-a86a-9759648540e3
+uuid: 319ed36c-d545-439d-843f-892400e5d1e8
 langcode: en
 status: true
 dependencies:
   module:
+    - link
     - paragraphs
 _core:
-  default_config_hash: _Rn2tlumcwOkFaPJjk3pUd4duj8GgWAy6UHnvxPO2xE
-id: paragraph.field_slideroverlay_cmi_enable
-field_name: field_slideroverlay_cmi_enable
+  default_config_hash: Vc4Pe69D_j0WPJPYcms5ubXMufgE4qprmnuXZojLjDY
+id: paragraph.field_link
+field_name: field_link
 entity_type: paragraph
-type: boolean
+type: link
 settings: {  }
-module: core
+module: link
 locked: false
 cardinality: 1
 translatable: true
