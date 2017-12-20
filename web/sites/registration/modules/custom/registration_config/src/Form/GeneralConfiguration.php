@@ -200,7 +200,7 @@ class GeneralConfiguration extends ConfigFormBase {
 
     $form['avaya_settings'] = [
       '#type' => 'details',
-      '#title' => $this->t('General Settings'),
+      '#title' => $this->t('Avaya Proactive Livechat'),
       '#collapsible' => TRUE,
       '#group' => 'general_settings_tab',
     ];
@@ -222,6 +222,13 @@ class GeneralConfiguration extends ConfigFormBase {
       '#title' => $this->t('Live Chat Header Text'),
       '#description' => $this->t('Text that will be displayed at the top of the chatbox'),
       '#default_value' => $config->get('livechat_header'),
+      '#required' => TRUE,
+    ];
+      $form['avaya_settings']['livechat_text'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Live Chat Text'),
+      '#description' => $this->t('Text that will be displayed inside the chatbox'),
+      '#default_value' => $config->get('livechat_text'),
       '#required' => TRUE,
     ];
 
@@ -251,6 +258,7 @@ class GeneralConfiguration extends ConfigFormBase {
       'enable_avaya_proactive',
       'livechat_timeout',
       'livechat_header',
+      'livechat_text',
     ];
 
     foreach ($keys as $key) {
