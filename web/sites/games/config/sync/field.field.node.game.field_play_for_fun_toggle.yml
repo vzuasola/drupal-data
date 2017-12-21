@@ -1,0 +1,23 @@
+uuid: 09404ea0-2991-4ca1-9a2e-a8b0c3ffb056
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_play_for_fun_toggle
+    - node.type.game
+id: node.game.field_play_for_fun_toggle
+field_name: field_play_for_fun_toggle
+entity_type: node
+bundle: game
+label: 'Show Play for Fun Button'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
