@@ -1,0 +1,31 @@
+uuid: 1dd039d3-d4d6-4d19-8080-26b5e29e2cf9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.home_games_category.field_alias
+    - taxonomy.vocabulary.home_games_category
+  module:
+    - text
+id: taxonomy_term.home_games_category.default
+targetEntityType: taxonomy_term
+bundle: home_games_category
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_alias:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  langcode: true
