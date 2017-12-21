@@ -45,7 +45,7 @@ class WebcomposerSliderV2EntitySettingsForm extends ConfigFormBase {
   public function buildForm(array $form, FormStateInterface $form_state) {
     $config = $this->config('webcomposer_config.slider_v2_configuration');
 
-    $form['WebcomposerSliderV2Entity_settings']['#markup'] = 'Settings form for Webcomposer slider 2.0 entity entities. Manage field settings here.';
+    $form['WebcomposerSliderV2Entity_settings']['#markup'] ='Webcomposer slider 2.0 entity entities. Manage field settings here.';
 
     $form['WebcomposerSliderV2Entity_settings']['enable_collapsible_slider'] = [
       '#type' => 'checkbox',

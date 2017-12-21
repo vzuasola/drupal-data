@@ -5,6 +5,7 @@
  */
 function webcomposer_slider_v2_uninstall() {
   $keys = [
+    'core.base_field_override.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.user_id.yml',
     'core.entity_form_display.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.default.yml',
     'core.entity_view_display.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.default.yml',
     'field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_banner_blurb.yml',
