@@ -1,0 +1,21 @@
+uuid: 4d7e606d-c53a-43fd-86da-365b35b900bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.webcomposer_slider_v2_entity.field_post_banner_blurb_
+  module:
+    - text
+    - webcomposer_slider_v2
+id: webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_post_banner_blurb_
+field_name: field_post_banner_blurb_
+entity_type: webcomposer_slider_v2_entity
+bundle: webcomposer_slider_v2_entity
+label: 'Post Banner Blurb '
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
