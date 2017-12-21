@@ -6,3 +6,4 @@ balance_error_text: 'Error Retrieving.'
 welcome_text: 'Hola! {username}'
 profile_link: 'https://stg-accountwww.elysium-dfbt.com/en/my-profile'
 profile_logout_text: Logout
+balance_label_mapping: "4|OW Sports\r\n6|Dafa Sports\r\n1|Kasino Klasik\r\n2|Kasino Gold\r\n5|Dealer Langsung & Games\r\n8|Opus Live Dealer\r\n9|Keno\r\n3|Poker\r\n7|Fish Hunter"

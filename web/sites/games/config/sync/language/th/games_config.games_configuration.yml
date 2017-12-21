@@ -1,0 +1,9 @@
+kebab_menu_text: มากกว่า
+favorites_text: สิ่งที่ฉันชอบ
+recently_played_text: เพิ่งเล่น
+game_info_text: ข้อมูลเกม
+play_text: เล่นตอนนี้
+html5_lightbox_content:
+  value: "<p>เบราเซอร์ของคุณไม่รองรับเกมส์ HTML5 กรุณาอัพเดตเบราเซอร์ให้เป็นเวอร์ชั่นล่าสุดเพื่อการเดิมพันอย่างต่อเนื่อง</p>\r\n\r\n<p><a class=\"btn btn-yellow btn-small btn-ok-launch\" href=\"#\" target=\"_blank\">Launch Anyway</a></p>\r\n"
+  format: basic_html
+html5_lightbox_title: 'TH- Alert!'
