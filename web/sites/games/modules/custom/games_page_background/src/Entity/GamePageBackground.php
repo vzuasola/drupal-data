@@ -51,17 +51,17 @@ use Drupal\user\UserInterface;
  *     "status" = "status",
  *   },
  *   links = {
- *     "canonical" = "/admin/structuregame_page_background/{game_page_background}",
- *     "add-form" = "/admin/structuregame_page_background/add",
- *     "edit-form" = "/admin/structuregame_page_background/{game_page_background}/edit",
- *     "delete-form" = "/admin/structuregame_page_background/{game_page_background}/delete",
- *     "version-history" = "/admin/structuregame_page_background/{game_page_background}/revisions",
- *     "revision" = "/admin/structuregame_page_background/{game_page_background}/revisions/{game_page_background_revision}/view",
- *     "revision_revert" = "/admin/structuregame_page_background/{game_page_background}/revisions/{game_page_background_revision}/revert",
- *     "revision_delete" = "/admin/structuregame_page_background/{game_page_background}/revisions/{game_page_background_revision}/delete",
- *     "translation_revert" = "/admin/structuregame_page_background/{game_page_background}/
+ *     "canonical" = "/admin/structure/game_page_background/{game_page_background}",
+ *     "add-form" = "/admin/structure/game_page_background/add",
+ *     "edit-form" = "/admin/structure/game_page_background/{game_page_background}/edit",
+ *     "delete-form" = "/admin/structure/game_page_background/{game_page_background}/delete",
+ *     "version-history" = "/admin/structure/game_page_background/{game_page_background}/revisions",
+ *     "revision" = "/admin/structure/game_page_background/{game_page_background}/revisions/{game_page_background_revision}/view",
+ *     "revision_revert" = "/admin/structure/game_page_background/{game_page_background}/revisions/{game_page_background_revision}/revert",
+ *     "revision_delete" = "/admin/structure/game_page_background/{game_page_background}/revisions/{game_page_background_revision}/delete",
+ *     "translation_revert" = "/admin/structure/game_page_background/{game_page_background}/
  *            revisions/{game_page_background_revision}/revert/{langcode}",
- *     "collection" = "/admin/structuregame_page_background",
+ *     "collection" = "/admin/structure/game_page_background",
  *   },
  *   field_ui_base_route = "game_page_background.settings"
  * )
