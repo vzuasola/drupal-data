@@ -6,13 +6,11 @@ use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Class GamesPageBgEntitySettingsForm.
- *
- * @package Drupal\games_page_background\Form
+ * Class GamePageBackgroundSettingsForm.
  *
  * @ingroup games_page_background
  */
-class GamesPageBgEntitySettingsForm extends FormBase {
+class GamePageBackgroundSettingsForm extends FormBase {
 
   /**
    * Returns a unique string identifying the form.
@@ -21,7 +19,7 @@ class GamesPageBgEntitySettingsForm extends FormBase {
    *   The unique string identifying the form.
    */
   public function getFormId() {
-    return 'GamesPageBgEntity_settings';
+    return 'gamepagebackground_settings';
   }
 
   /**
@@ -37,7 +35,7 @@ class GamesPageBgEntitySettingsForm extends FormBase {
   }
 
   /**
-   * Defines the settings form for Games Page Background entities.
+   * Defines the settings form for Game Page Background entities.
    *
    * @param array $form
    *   An associative array containing the structure of the form.
@@ -48,7 +46,7 @@ class GamesPageBgEntitySettingsForm extends FormBase {
    *   Form definition array.
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    $form['GamesPageBgEntity_settings']['#markup'] = 'Settings form for Games Page Background entities. Manage field settings here.';
+    $form['gamepagebackground_settings']['#markup'] = 'Settings form for Game Page Background entities. Manage field settings here.';
     return $form;
   }
 

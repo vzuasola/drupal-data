@@ -5,9 +5,9 @@ namespace Drupal\games_page_background\Entity;
 use Drupal\views\EntityViewsData;
 
 /**
- * Provides Views data for Games Page Background entities.
+ * Provides Views data for Game Page Background entities.
  */
-class GamesPageBgEntityViewsData extends EntityViewsData {
+class GamePageBackgroundViewsData extends EntityViewsData {
 
   /**
    * {@inheritdoc}

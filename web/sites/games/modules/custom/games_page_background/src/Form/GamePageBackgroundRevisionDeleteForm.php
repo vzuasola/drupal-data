@@ -10,26 +10,26 @@ use Drupal\Core\Url;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
- * Provides a form for deleting a Games Page Background revision.
+ * Provides a form for deleting a Game Page Background revision.
  *
  * @ingroup games_page_background
  */
-class GamesPageBgEntityRevisionDeleteForm extends ConfirmFormBase {
+class GamePageBackgroundRevisionDeleteForm extends ConfirmFormBase {
 
 
   /**
-   * The Games Page Background revision.
+   * The Game Page Background revision.
    *
-   * @var \Drupal\games_page_background\Entity\GamesPageBgEntityInterface
+   * @var \Drupal\games_page_background\Entity\GamePageBackgroundInterface
    */
   protected $revision;
 
   /**
-   * The Games Page Background storage.
+   * The Game Page Background storage.
    *
    * @var \Drupal\Core\Entity\EntityStorageInterface
    */
-  protected $gamesPageBgEntityStorage;
+  protected $GamePageBackgroundStorage;
 
   /**
    * The database connection.
@@ -39,7 +39,7 @@ class GamesPageBgEntityRevisionDeleteForm extends ConfirmFormBase {
   protected $connection;
 
   /**
-   * Constructs a new GamesPageBgEntityRevisionDeleteForm.
+   * Constructs a new GamePageBackgroundRevisionDeleteForm.
    *
    * @param \Drupal\Core\Entity\EntityStorageInterface $entity_storage
    *   The entity storage.
@@ -47,7 +47,7 @@ class GamesPageBgEntityRevisionDeleteForm extends ConfirmFormBase {
    *   The database connection.
    */
   public function __construct(EntityStorageInterface $entity_storage, Connection $connection) {
-    $this->gamesPageBgEntityStorage = $entity_storage;
+    $this->GamePageBackgroundStorage = $entity_storage;
     $this->connection = $connection;
   }
 
@@ -57,7 +57,7 @@ class GamesPageBgEntityRevisionDeleteForm extends ConfirmFormBase {
   public static function create(ContainerInterface $container) {
     $entity_manager = $container->get('entity.manager');
     return new static(
-      $entity_manager->getStorage('games_page_bg_entity'),
+      $entity_manager->getStorage('game_page_background'),
       $container->get('database')
     );
   }
@@ -66,23 +66,23 @@ class GamesPageBgEntityRevisionDeleteForm extends ConfirmFormBase {
    * {@inheritdoc}
    */
   public function getFormId() {
-    return 'games_page_bg_entity_revision_delete_confirm';
+    return 'game_page_background_revision_delete_confirm';
   }
 
   /**
    * {@inheritdoc}
    */
   public function getQuestion() {
-    return t('Are you sure you want to delete the revision from %revision-date?', array(
+    return t('Are you sure you want to delete the revision from %revision-date?', [
         '%revision-date' => format_date($this->revision->getRevisionCreationTime())
-    ));
+    ]);
   }
 
   /**
    * {@inheritdoc}
    */
   public function getCancelUrl() {
-    return new Url('entity.games_page_bg_entity.version_history', array('games_page_bg_entity' => $this->revision->id()));
+    return new Url('entity.game_page_background.version_history', ['game_page_background' => $this->revision->id()]);
   }
 
   /**
@@ -95,8 +95,8 @@ class GamesPageBgEntityRevisionDeleteForm extends ConfirmFormBase {
   /**
    * {@inheritdoc}
    */
-  public function buildForm(array $form, FormStateInterface $form_state, $games_page_bg_entity_revision = NULL) {
-    $this->revision = $this->gamesPageBgEntityStorage->loadRevision($games_page_bg_entity_revision);
+  public function buildForm(array $form, FormStateInterface $form_state, $game_page_background_revision = NULL) {
+    $this->revision = $this->GamePageBackgroundStorage->loadRevision($game_page_background_revision);
     $form = parent::buildForm($form, $form_state);
 
     return $form;
@@ -106,29 +106,27 @@ class GamesPageBgEntityRevisionDeleteForm extends ConfirmFormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    $this->gamesPageBgEntityStorage->deleteRevision($this->revision->getRevisionId());
+    $this->GamePageBackgroundStorage->deleteRevision($this->revision->getRevisionId());
 
-    $this->logger('content')->notice('Games Page Background: deleted %title revision %revision.', array(
+    $this->logger('content')->notice('Game Page Background: deleted %title revision %revision.', [
         '%title' => $this->revision->label(),
         '%revision' => $this->revision->getRevisionId()
-    ));
-    drupal_set_message(t('Revision from %revision-date of Games Page Background %title has been deleted.', array(
+    ]);
+    drupal_set_message(t('Revision from %revision-date of Game Page Background %title has been deleted.', [
         '%revision-date' => format_date($this->revision->getRevisionCreationTime()),
         '%title' => $this->revision->label()
-    )));
+    ]));
     $form_state->setRedirect(
-      'entity.games_page_bg_entity.canonical',
-       array('games_page_bg_entity' => $this->revision->id())
+      'entity.game_page_background.canonical',
+       ['game_page_background' => $this->revision->id()]
     );
     if ($this->connection->query('
-        SELECT COUNT(DISTINCT vid)
-        FROM {games_page_bg_entity_field_revision}
-        WHERE id = :id',
-        array(':id' => $this->revision->id())
-      )->fetchField() > 1) {
+        SELECT COUNT(DISTINCT vid) FROM {game_page_background_field_revision}
+        WHERE id = :id', [':id' => $this->revision->id()])
+        ->fetchField() > 1) {
       $form_state->setRedirect(
-        'entity.games_page_bg_entity.version_history',
-         array('games_page_bg_entity' => $this->revision->id())
+        'entity.game_page_background.version_history',
+         ['game_page_background' => $this->revision->id()]
       );
     }
   }

@@ -4,23 +4,21 @@ namespace Drupal\games_page_background;
 
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Entity\EntityListBuilder;
-use Drupal\Core\Routing\LinkGeneratorTrait;
-use Drupal\Core\Url;
+use Drupal\Core\Link;
 
 /**
- * Defines a class to build a listing of Games Page Background entities.
+ * Defines a class to build a listing of Game Page Background entities.
  *
  * @ingroup games_page_background
  */
-class GamesPageBgEntityListBuilder extends EntityListBuilder {
+class GamePageBackgroundListBuilder extends EntityListBuilder {
 
-  use LinkGeneratorTrait;
 
   /**
    * {@inheritdoc}
    */
   public function buildHeader() {
-    $header['id'] = $this->t('Games Page Background ID');
+    $header['id'] = $this->t('Game Page Background ID');
     $header['name'] = $this->t('Name');
     return $header + parent::buildHeader();
   }
@@ -29,15 +27,12 @@ class GamesPageBgEntityListBuilder extends EntityListBuilder {
    * {@inheritdoc}
    */
   public function buildRow(EntityInterface $entity) {
-    /* @var $entity \Drupal\games_page_background\Entity\GamesPageBgEntity */
+    /* @var $entity \Drupal\games_page_background\Entity\GamePageBackground */
     $row['id'] = $entity->id();
-    $row['name'] = $this->l(
+    $row['name'] = Link::createFromRoute(
       $entity->label(),
-      new Url(
-        'entity.games_page_bg_entity.edit_form', array(
-          'games_page_bg_entity' => $entity->id(),
-        )
-      )
+      'entity.game_page_background.edit_form',
+      ['game_page_background' => $entity->id()]
     );
     return $row + parent::buildRow($entity);
   }
