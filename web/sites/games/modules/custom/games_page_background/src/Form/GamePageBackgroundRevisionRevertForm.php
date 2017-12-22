@@ -7,30 +7,30 @@ use Drupal\Core\Entity\EntityStorageInterface;
 use Drupal\Core\Form\ConfirmFormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Url;
-use Drupal\games_page_background\Entity\GamesPageBgEntityInterface;
+use Drupal\games_page_background\Entity\GamePageBackgroundInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
- * Provides a form for reverting a Games Page Background revision.
+ * Provides a form for reverting a Game Page Background revision.
  *
  * @ingroup games_page_background
  */
-class GamesPageBgEntityRevisionRevertForm extends ConfirmFormBase {
+class GamePageBackgroundRevisionRevertForm extends ConfirmFormBase {
 
 
   /**
-   * The Games Page Background revision.
+   * The Game Page Background revision.
    *
-   * @var \Drupal\games_page_background\Entity\GamesPageBgEntityInterface
+   * @var \Drupal\games_page_background\Entity\GamePageBackgroundInterface
    */
   protected $revision;
 
   /**
-   * The Games Page Background storage.
+   * The Game Page Background storage.
    *
    * @var \Drupal\Core\Entity\EntityStorageInterface
    */
-  protected $gamesPageBgEntityStorage;
+  protected $GamePageBackgroundStorage;
 
   /**
    * The date formatter service.
@@ -40,15 +40,15 @@ class GamesPageBgEntityRevisionRevertForm extends ConfirmFormBase {
   protected $dateFormatter;
 
   /**
-   * Constructs a new GamesPageBgEntityRevisionRevertForm.
+   * Constructs a new GamePageBackgroundRevisionRevertForm.
    *
    * @param \Drupal\Core\Entity\EntityStorageInterface $entity_storage
-   *   The Games Page Background storage.
+   *   The Game Page Background storage.
    * @param \Drupal\Core\Datetime\DateFormatterInterface $date_formatter
    *   The date formatter service.
    */
   public function __construct(EntityStorageInterface $entity_storage, DateFormatterInterface $date_formatter) {
-    $this->gamesPageBgEntityStorage = $entity_storage;
+    $this->GamePageBackgroundStorage = $entity_storage;
     $this->dateFormatter = $date_formatter;
   }
 
@@ -57,7 +57,7 @@ class GamesPageBgEntityRevisionRevertForm extends ConfirmFormBase {
    */
   public static function create(ContainerInterface $container) {
     return new static(
-      $container->get('entity.manager')->getStorage('games_page_bg_entity'),
+      $container->get('entity.manager')->getStorage('game_page_background'),
       $container->get('date.formatter')
     );
   }
@@ -66,23 +66,21 @@ class GamesPageBgEntityRevisionRevertForm extends ConfirmFormBase {
    * {@inheritdoc}
    */
   public function getFormId() {
-    return 'games_page_bg_entity_revision_revert_confirm';
+    return 'game_page_background_revision_revert_confirm';
   }
 
   /**
    * {@inheritdoc}
    */
   public function getQuestion() {
-    return t('Are you sure you want to revert to the revision from %revision-date?', [
-        '%revision-date' => $this->dateFormatter->format($this->revision->getRevisionCreationTime())
-    ]);
+    return t('Are you sure you want to revert to the revision from %revision-date?', ['%revision-date' => $this->dateFormatter->format($this->revision->getRevisionCreationTime())]);
   }
 
   /**
    * {@inheritdoc}
    */
   public function getCancelUrl() {
-    return new Url('entity.games_page_bg_entity.version_history', array('games_page_bg_entity' => $this->revision->id()));
+    return new Url('entity.game_page_background.version_history', ['game_page_background' => $this->revision->id()]);
   }
 
   /**
@@ -102,8 +100,8 @@ class GamesPageBgEntityRevisionRevertForm extends ConfirmFormBase {
   /**
    * {@inheritdoc}
    */
-  public function buildForm(array $form, FormStateInterface $form_state, $games_page_bg_entity_revision = NULL) {
-    $this->revision = $this->gamesPageBgEntityStorage->loadRevision($games_page_bg_entity_revision);
+  public function buildForm(array $form, FormStateInterface $form_state, $game_page_background_revision = NULL) {
+    $this->revision = $this->GamePageBackgroundStorage->loadRevision($game_page_background_revision);
     $form = parent::buildForm($form, $form_state);
 
     return $form;
@@ -118,37 +116,29 @@ class GamesPageBgEntityRevisionRevertForm extends ConfirmFormBase {
     $original_revision_timestamp = $this->revision->getRevisionCreationTime();
 
     $this->revision = $this->prepareRevertedRevision($this->revision, $form_state);
-    $this->revision->revision_log = t('Copy of the revision from %date.', [
-        '%date' => $this->dateFormatter->format($original_revision_timestamp)
-    ]);
+    $this->revision->revision_log = t('Copy of the revision from %date.', ['%date' => $this->dateFormatter->format($original_revision_timestamp)]);
     $this->revision->save();
 
-    $this->logger('content')->notice('Games Page Background: reverted %title revision %revision.', [
-        '%title' => $this->revision->label(),
-        '%revision' => $this->revision->getRevisionId()
-    ]);
-    drupal_set_message(t('Games Page Background %title has been reverted to the revision from %revision-date.', [
-        '%title' => $this->revision->label(),
-        '%revision-date' => $this->dateFormatter->format($original_revision_timestamp)
-    ]));
+    $this->logger('content')->notice('Game Page Background: reverted %title revision %revision.', ['%title' => $this->revision->label(), '%revision' => $this->revision->getRevisionId()]);
+    drupal_set_message(t('Game Page Background %title has been reverted to the revision from %revision-date.', ['%title' => $this->revision->label(), '%revision-date' => $this->dateFormatter->format($original_revision_timestamp)]));
     $form_state->setRedirect(
-      'entity.games_page_bg_entity.version_history',
-      array('games_page_bg_entity' => $this->revision->id())
+      'entity.game_page_background.version_history',
+      ['game_page_background' => $this->revision->id()]
     );
   }
 
   /**
    * Prepares a revision to be reverted.
    *
-   * @param \Drupal\games_page_background\Entity\GamesPageBgEntityInterface $revision
+   * @param \Drupal\games_page_background\Entity\GamePageBackgroundInterface $revision
    *   The revision to be reverted.
    * @param \Drupal\Core\Form\FormStateInterface $form_state
    *   The current state of the form.
    *
-   * @return \Drupal\games_page_background\Entity\GamesPageBgEntityInterface
+   * @return \Drupal\games_page_background\Entity\GamePageBackgroundInterface
    *   The prepared revision ready to be stored.
    */
-  protected function prepareRevertedRevision(GamesPageBgEntityInterface $revision, FormStateInterface $form_state) {
+  protected function prepareRevertedRevision(GamePageBackgroundInterface $revision, FormStateInterface $form_state) {
     $revision->setNewRevision();
     $revision->isDefaultRevision(TRUE);
     $revision->setRevisionCreationTime(REQUEST_TIME);

@@ -7,12 +7,12 @@ use Drupal\Core\Entity\Routing\AdminHtmlRouteProvider;
 use Symfony\Component\Routing\Route;
 
 /**
- * Provides routes for Games Page Background entities.
+ * Provides routes for Game Page Background entities.
  *
- * @see Drupal\Core\Entity\Routing\AdminHtmlRouteProvider
- * @see Drupal\Core\Entity\Routing\DefaultHtmlRouteProvider
+ * @see \Drupal\Core\Entity\Routing\AdminHtmlRouteProvider
+ * @see \Drupal\Core\Entity\Routing\DefaultHtmlRouteProvider
  */
-class GamesPageBgEntityHtmlRouteProvider extends AdminHtmlRouteProvider {
+class GamePageBackgroundHtmlRouteProvider extends AdminHtmlRouteProvider {
 
   /**
    * {@inheritdoc}
@@ -21,10 +21,6 @@ class GamesPageBgEntityHtmlRouteProvider extends AdminHtmlRouteProvider {
     $collection = parent::getRoutes($entity_type);
 
     $entity_type_id = $entity_type->id();
-
-    if ($collection_route = $this->getCollectionRoute($entity_type)) {
-      $collection->add("entity.{$entity_type_id}.collection", $collection_route);
-    }
 
     if ($history_route = $this->getHistoryRoute($entity_type)) {
       $collection->add("entity.{$entity_type_id}.version_history", $history_route);
@@ -54,31 +50,6 @@ class GamesPageBgEntityHtmlRouteProvider extends AdminHtmlRouteProvider {
   }
 
   /**
-   * Gets the collection route.
-   *
-   * @param \Drupal\Core\Entity\EntityTypeInterface $entity_type
-   *   The entity type.
-   *
-   * @return \Symfony\Component\Routing\Route|null
-   *   The generated route, if available.
-   */
-  protected function getCollectionRoute(EntityTypeInterface $entity_type) {
-    if ($entity_type->hasLinkTemplate('collection') && $entity_type->hasListBuilderClass()) {
-      $entity_type_id = $entity_type->id();
-      $route = new Route($entity_type->getLinkTemplate('collection'));
-      $route
-        ->setDefaults([
-          '_entity_list' => $entity_type_id,
-          '_title' => "{$entity_type->getLabel()} list",
-        ])
-        ->setRequirement('_permission', 'access games page background overview')
-        ->setOption('_admin_route', TRUE);
-
-      return $route;
-    }
-  }
-
-  /**
    * Gets the version history route.
    *
    * @param \Drupal\Core\Entity\EntityTypeInterface $entity_type
@@ -93,9 +64,9 @@ class GamesPageBgEntityHtmlRouteProvider extends AdminHtmlRouteProvider {
       $route
         ->setDefaults([
           '_title' => "{$entity_type->getLabel()} revisions",
-          '_controller' => '\Drupal\games_page_background\Controller\GamesPageBgEntityController::revisionOverview',
+          '_controller' => '\Drupal\games_page_background\Controller\GamePageBackgroundController::revisionOverview',
         ])
-        ->setRequirement('_permission', 'access games page background revisions')
+        ->setRequirement('_permission', 'access game page Background revisions')
         ->setOption('_admin_route', TRUE);
 
       return $route;
@@ -116,10 +87,10 @@ class GamesPageBgEntityHtmlRouteProvider extends AdminHtmlRouteProvider {
       $route = new Route($entity_type->getLinkTemplate('revision'));
       $route
         ->setDefaults([
-          '_controller' => '\Drupal\games_page_background\Controller\GamesPageBgEntityController::revisionShow',
-          '_title_callback' => '\Drupal\games_page_background\Controller\GamesPageBgEntityController::revisionPageTitle',
+          '_controller' => '\Drupal\games_page_background\Controller\GamePageBackgroundController::revisionShow',
+          '_title_callback' => '\Drupal\games_page_background\Controller\GamePageBackgroundController::revisionPageTitle',
         ])
-        ->setRequirement('_permission', 'access games page background revisions')
+        ->setRequirement('_permission', 'access game page Background revisions')
         ->setOption('_admin_route', TRUE);
 
       return $route;
@@ -140,10 +111,10 @@ class GamesPageBgEntityHtmlRouteProvider extends AdminHtmlRouteProvider {
       $route = new Route($entity_type->getLinkTemplate('revision_revert'));
       $route
         ->setDefaults([
-          '_form' => '\Drupal\games_page_background\Form\GamesPageBgEntityRevisionRevertForm',
+          '_form' => '\Drupal\games_page_background\Form\GamePageBackgroundRevisionRevertForm',
           '_title' => 'Revert to earlier revision',
         ])
-        ->setRequirement('_permission', 'revert all games page background revisions')
+        ->setRequirement('_permission', 'revert all game page Background revisions')
         ->setOption('_admin_route', TRUE);
 
       return $route;
@@ -164,10 +135,10 @@ class GamesPageBgEntityHtmlRouteProvider extends AdminHtmlRouteProvider {
       $route = new Route($entity_type->getLinkTemplate('revision_delete'));
       $route
         ->setDefaults([
-          '_form' => '\Drupal\games_page_background\Form\GamesPageBgEntityRevisionDeleteForm',
+          '_form' => '\Drupal\games_page_background\Form\GamePageBackgroundRevisionDeleteForm',
           '_title' => 'Delete earlier revision',
         ])
-        ->setRequirement('_permission', 'delete all games page background revisions')
+        ->setRequirement('_permission', 'delete all game page Background revisions')
         ->setOption('_admin_route', TRUE);
 
       return $route;
@@ -188,10 +159,10 @@ class GamesPageBgEntityHtmlRouteProvider extends AdminHtmlRouteProvider {
       $route = new Route($entity_type->getLinkTemplate('translation_revert'));
       $route
         ->setDefaults([
-          '_form' => '\Drupal\games_page_background\Form\GamesPageBgEntityRevisionRevertTranslationForm',
+          '_form' => '\Drupal\games_page_background\Form\GamePageBackgroundRevisionRevertTranslationForm',
           '_title' => 'Revert to earlier revision of a translation',
         ])
-        ->setRequirement('_permission', 'revert all games page background revisions')
+        ->setRequirement('_permission', 'revert all game page Background revisions')
         ->setOption('_admin_route', TRUE);
 
       return $route;
@@ -209,10 +180,10 @@ class GamesPageBgEntityHtmlRouteProvider extends AdminHtmlRouteProvider {
    */
   protected function getSettingsFormRoute(EntityTypeInterface $entity_type) {
     if (!$entity_type->getBundleEntityType()) {
-      $route = new Route("/admin/structure/{$entity_type->id()}/settings");
+      $route = new Route("/admin/structure{$entity_type->id()}/settings");
       $route
         ->setDefaults([
-          '_form' => 'Drupal\games_page_background\Form\GamesPageBgEntitySettingsForm',
+          '_form' => 'Drupal\games_page_background\Form\GamePageBackgroundSettingsForm',
           '_title' => "{$entity_type->getLabel()} settings",
         ])
         ->setRequirement('_permission', $entity_type->getAdminPermission())

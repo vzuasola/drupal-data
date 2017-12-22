@@ -2,26 +2,26 @@
 
 /**
  * @file
- * Contains games_page_bg_entity.page.inc.
+ * Contains game_page_background.page.inc.
  *
- * Page callback for Games Page Background entities.
+ * Page callback for Game Page Background entities.
  */
 
 use Drupal\Core\Render\Element;
 
 /**
- * Prepares variables for Games Page Background templates.
+ * Prepares variables for Game Page Background templates.
  *
- * Default template: games_page_bg_entity.html.twig.
+ * Default template: game_page_background.html.twig.
  *
  * @param array $variables
  *   An associative array containing:
  *   - elements: An associative array containing the user information and any
  *   - attributes: HTML attributes for the containing element.
  */
-function template_preprocess_games_page_bg_entity(array &$variables) {
-  // Fetch GamesPageBgEntity Entity Object.
-  $games_page_bg_entity = $variables['elements']['#games_page_bg_entity'];
+function template_preprocess_game_page_background(array &$variables) {
+  // Fetch GamePageBackground Entity Object.
+  $game_page_background = $variables['elements']['#game_page_background'];
 
   // Helpful $content variable for templates.
   foreach (Element::children($variables['elements']) as $key) {

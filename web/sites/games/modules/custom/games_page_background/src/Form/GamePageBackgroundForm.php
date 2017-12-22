@@ -6,26 +6,26 @@ use Drupal\Core\Entity\ContentEntityForm;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Form controller for Games Page Background edit forms.
+ * Form controller for Game Page Background edit forms.
  *
  * @ingroup games_page_background
  */
-class GamesPageBgEntityForm extends ContentEntityForm {
+class GamePageBackgroundForm extends ContentEntityForm {
 
   /**
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    /* @var $entity \Drupal\games_page_background\Entity\GamesPageBgEntity */
+    /* @var $entity \Drupal\games_page_background\Entity\GamePageBackground */
     $form = parent::buildForm($form, $form_state);
 
     if (!$this->entity->isNew()) {
-      $form['new_revision'] = array(
+      $form['new_revision'] = [
         '#type' => 'checkbox',
         '#title' => $this->t('Create new revision'),
         '#default_value' => FALSE,
         '#weight' => 10,
-      );
+      ];
     }
 
     $entity = $this->entity;
@@ -55,17 +55,17 @@ class GamesPageBgEntityForm extends ContentEntityForm {
 
     switch ($status) {
       case SAVED_NEW:
-        drupal_set_message($this->t('Created the %label Games Page Background.', [
+        drupal_set_message($this->t('Created the %label Game Page Background.', [
           '%label' => $entity->label(),
         ]));
         break;
 
       default:
-        drupal_set_message($this->t('Saved the %label Games Page Background.', [
+        drupal_set_message($this->t('Saved the %label Game Page Background.', [
           '%label' => $entity->label(),
         ]));
     }
-    $form_state->setRedirectUrl($entity->urlInfo('collection'));
+    $form_state->setRedirect('entity.game_page_background.canonical', ['game_page_background' => $entity->id()]);
   }
 
 }

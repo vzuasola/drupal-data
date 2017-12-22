@@ -10,37 +10,37 @@ use Drupal\Core\Entity\EntityTypeInterface;
 use Drupal\user\UserInterface;
 
 /**
- * Defines the Games Page Background entity.
+ * Defines the Game Page Background entity.
  *
  * @ingroup games_page_background
  *
  * @ContentEntityType(
- *   id = "games_page_bg_entity",
- *   label = @Translation("Games Page Background"),
+ *   id = "game_page_background",
+ *   label = @Translation("Game Page Background"),
  *   handlers = {
- *     "storage" = "Drupal\games_page_background\gamesPageBgEntityStorage",
+ *     "storage" = "Drupal\games_page_background\GamePageBackgroundStorage",
  *     "view_builder" = "Drupal\Core\Entity\EntityViewBuilder",
- *     "list_builder" = "Drupal\games_page_background\GamesPageBgEntityListBuilder",
- *     "views_data" = "Drupal\games_page_background\Entity\GamesPageBgEntityViewsData",
- *     "translation" = "Drupal\games_page_background\GamesPageBgEntityTranslationHandler",
+ *     "list_builder" = "Drupal\games_page_background\GamePageBackgroundListBuilder",
+ *     "views_data" = "Drupal\games_page_background\Entity\GamePageBackgroundViewsData",
+ *     "translation" = "Drupal\games_page_background\GamePageBackgroundTranslationHandler",
  *
  *     "form" = {
- *       "default" = "Drupal\games_page_background\Form\GamesPageBgEntityForm",
- *       "add" = "Drupal\games_page_background\Form\GamesPageBgEntityForm",
- *       "edit" = "Drupal\games_page_background\Form\GamesPageBgEntityForm",
- *       "delete" = "Drupal\games_page_background\Form\GamesPageBgEntityDeleteForm",
+ *       "default" = "Drupal\games_page_background\Form\GamePageBackgroundForm",
+ *       "add" = "Drupal\games_page_background\Form\GamePageBackgroundForm",
+ *       "edit" = "Drupal\games_page_background\Form\GamePageBackgroundForm",
+ *       "delete" = "Drupal\games_page_background\Form\GamePageBackgroundDeleteForm",
  *     },
- *     "access" = "Drupal\games_page_background\GamesPageBgEntityAccessControlHandler",
+ *     "access" = "Drupal\games_page_background\GamePageBackgroundAccessControlHandler",
  *     "route_provider" = {
- *       "html" = "Drupal\games_page_background\GamesPageBgEntityHtmlRouteProvider",
+ *       "html" = "Drupal\games_page_background\GamePageBackgroundHtmlRouteProvider",
  *     },
  *   },
- *   base_table = "games_page_bg_entity",
- *   data_table = "games_page_bg_entity_field_data",
- *   revision_table = "games_page_bg_entity_revision",
- *   revision_data_table = "games_page_bg_entity_field_revision",
+ *   base_table = "game_page_background",
+ *   data_table = "game_page_background_field_data",
+ *   revision_table = "game_page_background_revision",
+ *   revision_data_table = "game_page_background_field_revision",
  *   translatable = TRUE,
- *   admin_permission = "administer games page background entities",
+ *   admin_permission = "administer game page Background entities",
  *   entity_keys = {
  *     "id" = "id",
  *     "revision" = "vid",
@@ -51,22 +51,21 @@ use Drupal\user\UserInterface;
  *     "status" = "status",
  *   },
  *   links = {
- *     "canonical" = "/admin/structure/games_page_bg_entity/{games_page_bg_entity}",
- *     "add-form" = "/admin/structure/games_page_bg_entity/add",
- *     "edit-form" = "/admin/structure/games_page_bg_entity/{games_page_bg_entity}/edit",
- *     "delete-form" = "/admin/structure/games_page_bg_entity/{games_page_bg_entity}/delete",
- *     "version-history" = "/admin/structure/games_page_bg_entity/{games_page_bg_entity}/revisions",
- *     "revision" = "/admin/structure/games_page_bg_entity/{games_page_bg_entity}/revisions/{games_page_bg_entity_revision}/view",
- *     "revision_revert" = "/admin/structure/games_page_bg_entity/{games_page_bg_entity}/revisions/{games_page_bg_entity_revision}/revert",
- *     "translation_revert" = "/admin/structure/games_page_bg_entity/{games_page_bg_entity}/revisions/
- *            {games_page_bg_entity_revision}/revert/{langcode}",
- *     "revision_delete" = "/admin/structure/games_page_bg_entity/{games_page_bg_entity}/revisions/{games_page_bg_entity_revision}/delete",
- *     "collection" = "/admin/structure/games_page_bg_entity",
+ *     "canonical" = "/admin/structuregame_page_background/{game_page_background}",
+ *     "add-form" = "/admin/structuregame_page_background/add",
+ *     "edit-form" = "/admin/structuregame_page_background/{game_page_background}/edit",
+ *     "delete-form" = "/admin/structuregame_page_background/{game_page_background}/delete",
+ *     "version-history" = "/admin/structuregame_page_background/{game_page_background}/revisions",
+ *     "revision" = "/admin/structuregame_page_background/{game_page_background}/revisions/{game_page_background_revision}/view",
+ *     "revision_revert" = "/admin/structuregame_page_background/{game_page_background}/revisions/{game_page_background_revision}/revert",
+ *     "revision_delete" = "/admin/structuregame_page_background/{game_page_background}/revisions/{game_page_background_revision}/delete",
+ *     "translation_revert" = "/admin/structuregame_page_background/{game_page_background}/revisions/{game_page_background_revision}/revert/{langcode}",
+ *     "collection" = "/admin/structuregame_page_background",
  *   },
- *   field_ui_base_route = "games_page_bg_entity.settings"
+ *   field_ui_base_route = "game_page_background.settings"
  * )
  */
-class GamesPageBgEntity extends RevisionableContentEntityBase implements GamesPageBgEntityInterface {
+class GamePageBackground extends RevisionableContentEntityBase implements GamePageBackgroundInterface {
 
   use EntityChangedTrait;
 
@@ -75,9 +74,9 @@ class GamesPageBgEntity extends RevisionableContentEntityBase implements GamesPa
    */
   public static function preCreate(EntityStorageInterface $storage_controller, array &$values) {
     parent::preCreate($storage_controller, $values);
-    $values += array(
+    $values += [
       'user_id' => \Drupal::currentUser()->id(),
-    );
+    ];
   }
 
   /**
@@ -95,7 +94,7 @@ class GamesPageBgEntity extends RevisionableContentEntityBase implements GamesPa
       }
     }
 
-    // If no revision author has been set explicitly, make the games_page_bg_entity owner the
+    // If no revision author has been set explicitly, make the game_page_background owner the
     // revision author.
     if (!$this->getRevisionUser()) {
       $this->setRevisionUserId($this->getOwnerId());
@@ -180,88 +179,58 @@ class GamesPageBgEntity extends RevisionableContentEntityBase implements GamesPa
   /**
    * {@inheritdoc}
    */
-  public function getRevisionCreationTime() {
-    return $this->get('revision_timestamp')->value;
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  public function setRevisionCreationTime($timestamp) {
-    $this->set('revision_timestamp', $timestamp);
-    return $this;
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  public function getRevisionUser() {
-    return $this->get('revision_uid')->entity;
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  public function setRevisionUserId($uid) {
-    $this->set('revision_uid', $uid);
-    return $this;
-  }
-
-  /**
-   * {@inheritdoc}
-   */
   public static function baseFieldDefinitions(EntityTypeInterface $entity_type) {
     $fields = parent::baseFieldDefinitions($entity_type);
 
     $fields['user_id'] = BaseFieldDefinition::create('entity_reference')
       ->setLabel(t('Authored by'))
-      ->setDescription(t('The user ID of author of the Games Page Background entity.'))
+      ->setDescription(t('The user ID of author of the Game Page Background entity.'))
       ->setRevisionable(TRUE)
       ->setSetting('target_type', 'user')
       ->setSetting('handler', 'default')
       ->setTranslatable(TRUE)
-      ->setDisplayOptions('view', array(
+      ->setDisplayOptions('view', [
         'label' => 'hidden',
         'type' => 'author',
         'weight' => 0,
-      ))
-      ->setDisplayOptions('form', array(
+      ])
+      ->setDisplayOptions('form', [
         'type' => 'entity_reference_autocomplete',
         'weight' => 5,
-        'settings' => array(
+        'settings' => [
           'match_operator' => 'CONTAINS',
           'size' => '60',
           'autocomplete_type' => 'tags',
           'placeholder' => '',
-        ),
-      ))
+        ],
+      ])
       ->setDisplayConfigurable('form', TRUE)
       ->setDisplayConfigurable('view', TRUE);
 
     $fields['name'] = BaseFieldDefinition::create('string')
       ->setLabel(t('Name'))
-      ->setDescription(t('The name of the Games Page Background entity.'))
+      ->setDescription(t('The name of the Game Page Background entity.'))
       ->setRevisionable(TRUE)
-      ->setSettings(array(
+      ->setSettings([
         'max_length' => 50,
         'text_processing' => 0,
-      ))
+      ])
       ->setDefaultValue('')
-      ->setDisplayOptions('view', array(
+      ->setDisplayOptions('view', [
         'label' => 'above',
         'type' => 'string',
         'weight' => -4,
-      ))
-      ->setDisplayOptions('form', array(
+      ])
+      ->setDisplayOptions('form', [
         'type' => 'string_textfield',
         'weight' => -4,
-      ))
+      ])
       ->setDisplayConfigurable('form', TRUE)
       ->setDisplayConfigurable('view', TRUE);
 
     $fields['status'] = BaseFieldDefinition::create('boolean')
       ->setLabel(t('Publishing status'))
-      ->setDescription(t('A boolean indicating whether the Games Page Background is published.'))
+      ->setDescription(t('A boolean indicating whether the Game Page Background is published.'))
       ->setRevisionable(TRUE)
       ->setDefaultValue(TRUE);
 
@@ -272,19 +241,6 @@ class GamesPageBgEntity extends RevisionableContentEntityBase implements GamesPa
     $fields['changed'] = BaseFieldDefinition::create('changed')
       ->setLabel(t('Changed'))
       ->setDescription(t('The time that the entity was last edited.'));
-
-    $fields['revision_timestamp'] = BaseFieldDefinition::create('created')
-      ->setLabel(t('Revision timestamp'))
-      ->setDescription(t('The time that the current revision was created.'))
-      ->setQueryable(FALSE)
-      ->setRevisionable(TRUE);
-
-    $fields['revision_uid'] = BaseFieldDefinition::create('entity_reference')
-      ->setLabel(t('Revision user ID'))
-      ->setDescription(t('The user ID of the author of the current revision.'))
-      ->setSetting('target_type', 'user')
-      ->setQueryable(FALSE)
-      ->setRevisionable(TRUE);
 
     $fields['revision_translation_affected'] = BaseFieldDefinition::create('boolean')
       ->setLabel(t('Revision translation affected'))
