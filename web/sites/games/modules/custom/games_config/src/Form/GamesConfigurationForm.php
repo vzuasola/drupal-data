@@ -54,6 +54,7 @@ class GamesConfigurationForm extends ConfigFormBase {
       'kebab_menu_text',
       'load_more_text',
       'load_more_disabled',
+      'home_categories_text',
       'favorites_text',
       'recently_played_text',
       'freeplay_lightbox_title',
@@ -163,6 +164,13 @@ class GamesConfigurationForm extends ConfigFormBase {
     $form['category_group']['special_categories'] = array(
       '#type' => 'fieldset',
       '#title' => $this->t('Special Categories'),
+    );
+    $form['category_group']['special_categories']['home_categories_text'] = array(
+      '#type' => 'textfield',
+      '#title' => $this->t('Home Categories Text'),
+      '#description' => $this->t('The text to display for the home category.'),
+      '#default_value' => $config->get('home_categories_text'),
+      '#required' => TRUE,
     );
     $form['category_group']['special_categories']['favorites_text'] = array(
       '#type' => 'textfield',

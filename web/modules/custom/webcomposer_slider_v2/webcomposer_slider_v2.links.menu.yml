@@ -1,0 +1,18 @@
+webcomposer_slider_v2.list:
+  title: 'Webcomposer Slider 2.0 Configuration'
+  description: 'List Web composer slider entities'
+  parent: system.admin_config
+  route_name: webcomposer_slider_v2.admin_settings
+
+# Webcomposer slider Version 2.0 entity menu items definition
+entity.webcomposer_slider_v2_entity.collection:
+  title: 'Web Composer Slider 2.0 List'
+  route_name: entity.webcomposer_slider_v2_entity.collection
+  description: 'List Webcomposer slider entity entities'
+  parent: webcomposer_slider_v2.list
+
+webcomposer_slider_v2_entity.admin.structure.settings:
+  title: 'Web Composer Slider 2.0 Settings'
+  description: 'Configure Webcomposer slider entity entities'
+  route_name: webcomposer_slider_v2_entity.settings
+  parent: webcomposer_slider_v2.list

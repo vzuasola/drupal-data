@@ -1,0 +1,22 @@
+add webcomposer slider 2.0 entity entities:
+  title: 'Create new Webcomposer slider 2.0 entity entities'
+
+administer webcomposer slider 2.0 entity entities:
+  title: 'Administer Webcomposer slider 2.0 entity entities'
+  description: 'Allow to access the administration form to configure Webcomposer slider 2.0 entity entities.'
+  restrict access: true
+
+delete webcomposer slider 2.0 entity entities:
+  title: 'Delete Webcomposer slider 2.0 entity entities'
+
+edit webcomposer slider entity 2.0 entities:
+  title: 'Edit Webcomposer slider 2.0 entity entities'
+
+access webcomposer slider 2.0 entity overview:
+  title: 'Access the Webcomposer slider 2.0 entity overview page'
+
+view published webcomposer slider 2.0 entity entities:
+  title: 'View published Webcomposer slider 2.0 entity entities'
+
+view unpublished webcomposer slider 2.0 entity entities:
+  title: 'View unpublished Webcomposer slider 2.0 entity entities'

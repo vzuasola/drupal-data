@@ -1,0 +1,16 @@
+uuid: d7fe3007-741c-4944-ae6c-28146a1ca361
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - node.type.game
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.game
+target_entity_type_id: node
+target_bundle: game
+default_langcode: site_default
+language_alterable: true

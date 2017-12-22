@@ -1,0 +1,44 @@
+<?php
+
+/**
+ * Implements hook_uninstall
+ */
+function webcomposer_slider_v2_uninstall() {
+  $keys = [
+    'core.base_field_override.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.user_id.yml',
+    'core.entity_form_display.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.default.yml',
+    'core.entity_view_display.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.default.yml',
+    'field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_banner_blurb.yml',
+    'field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_banner_image.yml',
+    'field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_banner_link.yml',
+    'field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_banner_link_target.yml',
+    'field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_content_position.yml',
+    'field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_log_in_state.yml',
+    'field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_post_banner_blurb_.yml',
+    'field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_post_banner_link.yml',
+    'field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_post_banner_link_target.yml',
+    'field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_post_content_position.yml',
+    'field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_publish_date.yml',
+    'field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_title.yml',
+    'field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_unpublish_date.yml',
+    'field.storage.webcomposer_slider_v2_entity.field_banner_blurb.yml',
+    'field.storage.webcomposer_slider_v2_entity.field_banner_image.yml',
+    'field.storage.webcomposer_slider_v2_entity.field_banner_link.yml',
+    'field.storage.webcomposer_slider_v2_entity.field_banner_link_target.yml',
+    'field.storage.webcomposer_slider_v2_entity.field_content_position.yml',
+    'field.storage.webcomposer_slider_v2_entity.field_log_in_state.yml',
+    'field.storage.webcomposer_slider_v2_entity.field_post_banner_blurb_.yml',
+    'field.storage.webcomposer_slider_v2_entity.field_post_banner_link.yml',
+    'field.storage.webcomposer_slider_v2_entity.field_post_banner_link_target.yml',
+    'field.storage.webcomposer_slider_v2_entity.field_post_content_position.yml',
+    'field.storage.webcomposer_slider_v2_entity.field_publish_date.yml',
+    'field.storage.webcomposer_slider_v2_entity.field_title.yml',
+    'field.storage.webcomposer_slider_v2_entity.field_unpublish_date.yml',
+    'language.content_settings.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.yml',
+    'views.view.webcomposer_slider_ver2.yml',
+  ];
+
+  foreach ($keys as $key) {
+    \Drupal::configFactory()->getEditable($key)->delete();
+  }
+}
