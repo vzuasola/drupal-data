@@ -1,0 +1,15 @@
+opus_game_loader_content:
+  value: "<p>An unexpected error occurred. This window will close in a few seconds. Please try again soon.</p>\r\n\r\n<p>&nbsp;</p>\r\n"
+  format: basic_html
+opus_game_url: 'https://playkno.df888ok.com/login.aspx'
+opus_alternative_game_url: 'https://ivalice.df888ok.com/'
+languages: "en|en-US\r\nsc|zh-CN\r\nth|th-TH\r\nkr|ko-KR\r\nid|id-ID\r\nvn|vi-VN"
+currency: "MYR\r\nTHB\r\nKRW\r\nVND\r\nRMB\r\nUSD\r\nIDR\r\nINR\r\nEUR"
+opus_unsupported_currencies_title: 'Currency not supported'
+opus_unsupported_currencies_message:
+  value: "<p>Sorry, your currency is not supported. Please choose other gaming rooms.</p>\r\n"
+  format: basic_html
+_core:
+  default_config_hash: eBg0CiGFt3xHc9Wkch-7BKqAdElb6b57iAgtX4yviuM
+opus_game_free_play_url: 'https://playkno.df888ok.com/login_pff.aspx'
+opus_unsupported_currencies_button: Ok

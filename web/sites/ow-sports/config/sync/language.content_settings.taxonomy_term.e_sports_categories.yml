@@ -1,0 +1,16 @@
+uuid: 52e90239-b448-4b6a-aaf3-0d9e9f123e85
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.e_sports_categories
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.e_sports_categories
+target_entity_type_id: taxonomy_term
+target_bundle: e_sports_categories
+default_langcode: site_default
+language_alterable: false
