@@ -41,7 +41,10 @@ class GamePageBackgroundStorage extends SqlContentEntityStorage implements GameP
    * {@inheritdoc}
    */
   public function countDefaultLanguageRevisions(GamePageBackgroundInterface $entity) {
-    return $this->database->query('SELECT COUNT(*) FROM {game_page_background_field_revision} WHERE id = :id AND default_langcode = 1', [':id' => $entity->id()])
+    return $this->database->query('
+        SELECT COUNT(*) FROM {game_page_background_field_revision}
+        WHERE id = :id
+        AND default_langcode = 1', [':id' => $entity->id()])
       ->fetchField();
   }
 

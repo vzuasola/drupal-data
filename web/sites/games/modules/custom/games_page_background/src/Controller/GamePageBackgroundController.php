@@ -42,7 +42,10 @@ class GamePageBackgroundController extends ControllerBase implements ContainerIn
    */
   public function revisionPageTitle($game_page_background_revision) {
     $game_page_background = $this->entityManager()->getStorage('game_page_background')->loadRevision($game_page_background_revision);
-    return $this->t('Revision of %title from %date', ['%title' => $game_page_background->label(), '%date' => format_date($game_page_background->getRevisionCreationTime())]);
+    return $this->t('Revision of %title from %date', [
+        '%title' => $game_page_background->label(),
+        '%date' => format_date($game_page_background->getRevisionCreationTime())
+    ]);
   }
 
   /**
@@ -62,11 +65,17 @@ class GamePageBackgroundController extends ControllerBase implements ContainerIn
     $has_translations = (count($languages) > 1);
     $game_page_background_storage = $this->entityManager()->getStorage('game_page_background');
 
-    $build['#title'] = $has_translations ? $this->t('@langname revisions for %title', ['@langname' => $langname, '%title' => $game_page_background->label()]) : $this->t('Revisions for %title', ['%title' => $game_page_background->label()]);
+    $build['#title'] = $has_translations ? $this->t('@langname revisions for %title', [
+        '@langname' => $langname,
+        '%title' => $game_page_background->label()
+      ]) :
+      $this->t('Revisions for %title', ['%title' => $game_page_background->label()]);
     $header = [$this->t('Revision'), $this->t('Operations')];
 
-    $revert_permission = (($account->hasPermission("revert all game page Background revisions") || $account->hasPermission('administer game page Background entities')));
-    $delete_permission = (($account->hasPermission("delete all game page Background revisions") || $account->hasPermission('administer game page Background entities')));
+    $revert_permission = (($account->hasPermission("revert all game page Background revisions") ||
+        $account->hasPermission('administer game page Background entities')));
+    $delete_permission = (($account->hasPermission("delete all game page Background revisions") ||
+        $account->hasPermission('administer game page Background entities')));
 
     $rows = [];
 
@@ -88,7 +97,10 @@ class GamePageBackgroundController extends ControllerBase implements ContainerIn
         // Use revision link to link to revisions that are not active.
         $date = \Drupal::service('date.formatter')->format($revision->getRevisionCreationTime(), 'short');
         if ($vid != $game_page_background->getRevisionId()) {
-          $link = $this->l($date, new Url('entity.game_page_background.revision', ['game_page_background' => $game_page_background->id(), 'game_page_background_revision' => $vid]));
+          $link = $this->l($date, new Url('entity.game_page_background.revision', [
+              'game_page_background' => $game_page_background->id(),
+              'game_page_background_revision' => $vid
+          ]));
         }
         else {
           $link = $game_page_background->link($date);
@@ -98,7 +110,8 @@ class GamePageBackgroundController extends ControllerBase implements ContainerIn
         $column = [
           'data' => [
             '#type' => 'inline_template',
-            '#template' => '{% trans %}{{ date }} by {{ username }}{% endtrans %}{% if message %}<p class="revision-log">{{ message }}</p>{% endif %}',
+            '#template' => '{% trans %}{{ date }} by {{ username }}{% endtrans %}
+                {% if message %}<p class="revision-log">{{ message }}</p>{% endif %}',
             '#context' => [
               'date' => $link,
               'username' => \Drupal::service('renderer')->renderPlain($username),
@@ -127,15 +140,25 @@ class GamePageBackgroundController extends ControllerBase implements ContainerIn
             $links['revert'] = [
               'title' => $this->t('Revert'),
               'url' => $has_translations ?
-              Url::fromRoute('entity.game_page_background.translation_revert', ['game_page_background' => $game_page_background->id(), 'game_page_background_revision' => $vid, 'langcode' => $langcode]) :
-              Url::fromRoute('entity.game_page_background.revision_revert', ['game_page_background' => $game_page_background->id(), 'game_page_background_revision' => $vid]),
+              Url::fromRoute('entity.game_page_background.translation_revert', [
+                  'game_page_background' => $game_page_background->id(),
+                  'game_page_background_revision' => $vid,
+                  'langcode' => $langcode
+              ]) :
+              Url::fromRoute('entity.game_page_background.revision_revert', [
+                  'game_page_background' => $game_page_background->id(),
+                  'game_page_background_revision' => $vid
+              ]),
             ];
           }
 
           if ($delete_permission) {
             $links['delete'] = [
               'title' => $this->t('Delete'),
-              'url' => Url::fromRoute('entity.game_page_background.revision_delete', ['game_page_background' => $game_page_background->id(), 'game_page_background_revision' => $vid]),
+              'url' => Url::fromRoute('entity.game_page_background.revision_delete', [
+                  'game_page_background' => $game_page_background->id(),
+                  'game_page_background_revision' => $vid
+              ]),
             ];
           }
 

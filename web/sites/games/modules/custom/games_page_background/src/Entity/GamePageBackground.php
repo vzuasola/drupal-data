@@ -59,7 +59,8 @@ use Drupal\user\UserInterface;
  *     "revision" = "/admin/structuregame_page_background/{game_page_background}/revisions/{game_page_background_revision}/view",
  *     "revision_revert" = "/admin/structuregame_page_background/{game_page_background}/revisions/{game_page_background_revision}/revert",
  *     "revision_delete" = "/admin/structuregame_page_background/{game_page_background}/revisions/{game_page_background_revision}/delete",
- *     "translation_revert" = "/admin/structuregame_page_background/{game_page_background}/revisions/{game_page_background_revision}/revert/{langcode}",
+ *     "translation_revert" = "/admin/structuregame_page_background/{game_page_background}/
+ *            revisions/{game_page_background_revision}/revert/{langcode}",
  *     "collection" = "/admin/structuregame_page_background",
  *   },
  *   field_ui_base_route = "game_page_background.settings"
