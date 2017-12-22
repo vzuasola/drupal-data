@@ -1,0 +1,5 @@
+name: Webcomposer Slider 2.0
+type: module
+description: Handles Webcomposer Slider Configuration Version 2.0
+core: 8.x
+package: Web Composer

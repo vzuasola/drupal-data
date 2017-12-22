@@ -1,0 +1,19 @@
+uuid: 05689cda-7d59-4133-a118-7514beb86661
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_game_title
+    - node.type.game
+id: node.game.field_game_title
+field_name: field_game_title
+entity_type: node
+bundle: game
+label: 'Game Title'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

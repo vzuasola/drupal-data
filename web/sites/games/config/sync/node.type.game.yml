@@ -1,0 +1,29 @@
+uuid: 689a4e10-b639-4a63-b5a5-d5cc949981c6
+langcode: zh-hans
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - scheduler
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+  scheduler:
+    expand_fieldset: when_required
+    fields_display_mode: vertical_tab
+    publish_enable: true
+    publish_past_date: error
+    publish_required: false
+    publish_revision: true
+    publish_touch: false
+    unpublish_enable: true
+    unpublish_required: false
+    unpublish_revision: true
+name: Game
+type: game
+description: 'Use game for game listing entry.'
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: true

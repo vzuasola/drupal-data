@@ -1,0 +1,9 @@
+uuid: 16c54891-2154-4233-a7de-3b0b7fa1b83b
+langcode: en
+status: true
+dependencies: {  }
+name: 'Home Games Category'
+vid: home_games_category
+description: 'Home games category on the lobby'
+hierarchy: 0
+weight: 0
