@@ -1,0 +1,20 @@
+uuid: 92eda2e6-7cbc-4043-983e-1220dd75204e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.game_page_background.field_include_on_listed_pages
+  module:
+    - games_page_background
+id: game_page_background.game_page_background.field_include_on_listed_pages
+field_name: field_include_on_listed_pages
+entity_type: game_page_background
+bundle: game_page_background
+label: 'Include on listed pages'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long
