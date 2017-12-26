@@ -9,8 +9,6 @@ dependencies:
 third_party_settings:
   content_translation:
     enabled: true
-_core:
-  default_config_hash: d8cUEfiitsb0elOXea__miFgpAW8XR4_azuUqSgaEuI
 id: paragraph.slider_overlay_cmi
 target_entity_type_id: paragraph
 target_bundle: slider_overlay_cmi
