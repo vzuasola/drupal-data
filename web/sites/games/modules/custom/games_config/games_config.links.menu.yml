@@ -22,6 +22,12 @@ games_config.sort.games:
   description: 'Sort Games'
   route_name: games_config.sort.games
 
+games_config.home.sort.games:
+  title: 'Sort Games (Home Tab)'
+  parent: games_config.admin_settings
+  description: 'Sort Games'
+  route_name: view.games_home_tab_api_and_sorting.page_games_sorting
+
 games_config.list.categories:
   title: 'Manage Categories'
   parent: games_config.admin_settings
