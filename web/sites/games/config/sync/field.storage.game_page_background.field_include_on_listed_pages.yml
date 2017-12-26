@@ -1,0 +1,19 @@
+uuid: ec1e47df-8c88-49d7-9c14-b5bfa6d14123
+langcode: en
+status: true
+dependencies:
+  module:
+    - games_page_background
+id: game_page_background.field_include_on_listed_pages
+field_name: field_include_on_listed_pages
+entity_type: game_page_background
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

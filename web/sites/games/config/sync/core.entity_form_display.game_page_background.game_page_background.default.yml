@@ -1,0 +1,46 @@
+uuid: 7e915c0d-907a-4cd3-983b-db5caeb980d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.game_page_background.game_page_background.field_game_page_background
+    - field.field.game_page_background.game_page_background.field_include_on_listed_pages
+    - image.style.thumbnail
+  module:
+    - games_page_background
+    - image
+id: game_page_background.game_page_background.default
+targetEntityType: game_page_background
+bundle: game_page_background
+mode: default
+content:
+  field_game_page_background:
+    weight: 2
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_include_on_listed_pages:
+    weight: 3
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  langcode:
+    type: language_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  translation:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  name: true
+  user_id: true
