@@ -91,4 +91,5 @@ content:
     weight: 100
     region: content
 hidden:
+  field_home_category: true
   langcode: true
