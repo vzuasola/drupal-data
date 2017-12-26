@@ -6,4 +6,3 @@ balance_error_text: 'Error Retrieving.'
 welcome_text: 'Hola! {username}'
 profile_link: 'https://stg-accountwww.elysium-dfbt.com/en/my-profile'
 profile_logout_text: 로그아웃
-balance_label_mapping: "4|OW 스포츠\r\n6|다파 스포츠\r\n1|카지노 클래식\r\n2|카지노 골드\r\n5|라이브 딜러 & 게임\r\n8|Opus 라이브 딜러\r\n9|키노\r\n3|포커\r\n7|낚시의 신"

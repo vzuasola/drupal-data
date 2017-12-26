@@ -1,10 +1,9 @@
 join_now_text: 立即加入
-join_now_link: '{domain:entry}/{lang}/cant-login?title=cantLogin{tracking.token}'
+join_now_link: 'https://stg-www.elysium-dfbt.com/{lang}/cant-login?title=cantLogin'
 login_issue_text: 无法登录？
-login_issue_link: '{domain:entry}/{lang}/cant-login?title=cantLogin{tracking.token}'
+login_issue_link: 'https://stg-www.elysium-dfbt.com/{lang}/cant-login?title=cantLogin'
 balance_error_text: 'Error Retrieving.'
 welcome_text: 'Hola!sc {username}'
-profile_link: 'https://dev-accountwww.elysium-dfbt.com/en/my-profile'
+profile_link: 'https://stg-accountwww.elysium-dfbt.com/en/my-profile'
 profile_logout_text: 登出
-balance_label_mapping: "4|沙巴体育\r\n6|大发体育\r\n1|娱乐场经典版\r\n2|娱乐场黄金版\r\n5|Common WalletSC\r\n8|OPUS现场荷官\r\n9|快乐彩\r\n3|扑克\r\n7|捕鱼王"
-balance_error_text_product: 'N/A sc'
+balance_label_mapping: "4|OW Sports SC\r\n6|Dafa Sports SC\r\n1|Casino Classic SC\r\n2|Casino Gold SC\r\n5|Live Dealer & Games SC\r\n3|Poker SC\r\n7|Fish Hunter SC"

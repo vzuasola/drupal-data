@@ -32,6 +32,9 @@ games_config.games_configuration:
     load_more_text:
       type: label
       label: 'Load More Text'
+    home_categories_text:
+      type: label
+      label: 'Home Tab Text'
     favorites_text:
       type: label
       label: 'Favorites Tab Text'

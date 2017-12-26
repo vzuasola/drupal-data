@@ -6,4 +6,3 @@ balance_error_text: 'Error Retrieving.'
 welcome_text: 'Hola! {username}'
 profile_link: 'https://stg-accountwww.elysium-dfbt.com/en/my-profile'
 profile_logout_text: ออกจากระบบ
-balance_label_mapping: "4|กีฬา\r\n6|กีฬาเอเชีย\r\n1|คาสิโน คลาสสิค\r\n2|คาสิโนโกลด์\r\n5|Common WalletTH\r\n8|บัญชีดีลเลอร์สด (Opus)\r\n9|คีโน\r\n3|โป๊กเกอร์\r\n7|Fish Hunter"
