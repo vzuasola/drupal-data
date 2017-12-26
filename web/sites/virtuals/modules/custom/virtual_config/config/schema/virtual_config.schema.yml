@@ -1,0 +1,8 @@
+virtual_config.virtual_configuration:
+  type: config_object
+  label: 'virtual Configuration'
+  mapping:
+    base_url:
+      type: text
+      label: 'Mobile Site  URL'
+      translatable: true
