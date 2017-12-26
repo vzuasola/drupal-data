@@ -25,7 +25,7 @@ class AffiliateEntityForm extends EntityForm {
       '#title' => $this->t('Tracking code'),
       '#maxlength' => 255,
       '#default_value' => $affiliate_entity->label(),
-      '#description' => $this->t("The tracking code that will be tracked, example are 
+      '#description' => $this->t("The tracking code that will be tracked, example are
         <strong>btag</strong>. Make sure that code is the same with machine name."),
       '#required' => TRUE,
     ];
