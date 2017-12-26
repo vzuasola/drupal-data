@@ -1,0 +1,20 @@
+uuid: 71788b0a-8a08-4a31-9073-b010c350a01d
+langcode: en
+status: true
+dependencies:
+  module:
+    - games_page_background
+id: game_page_background.game_page_background.user_id
+field_name: user_id
+entity_type: game_page_background
+bundle: game_page_background
+label: 'Authored by'
+description: 'The user ID of author of the Game Page Background entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference
