@@ -1,0 +1,30 @@
+uuid: 17be44b3-08c3-48b6-a610-fc37d3dde54a
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+    - games_page_background
+    - image
+id: game_page_background.field_game_page_background
+field_name: field_game_page_background
+entity_type: game_page_background
+type: image
+settings:
+  uri_scheme: public
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  target_type: file
+  display_field: false
+  display_default: false
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
