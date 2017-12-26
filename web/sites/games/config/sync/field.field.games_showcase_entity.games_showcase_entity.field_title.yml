@@ -1,0 +1,22 @@
+uuid: c35db0d3-0845-4ec3-b345-24d72d2b27ba
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.games_showcase_entity.field_title
+  module:
+    - games_showcase
+_core:
+  default_config_hash: FA0UojnRaDyDpfLAdo6__eyoOibiVFfMvNkfhL1Q2m8
+id: games_showcase_entity.games_showcase_entity.field_title
+field_name: field_title
+entity_type: games_showcase_entity
+bundle: games_showcase_entity
+label: Title
+description: 'The title of this showcase.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
