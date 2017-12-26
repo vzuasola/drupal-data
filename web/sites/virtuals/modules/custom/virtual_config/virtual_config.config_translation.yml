@@ -1,0 +1,5 @@
+virtual_config.virtual_configuration_schema:
+  title: 'virtual Configuration'
+  base_route_name: virtual_config.virtual_config_form
+  names:
+    - virtual_config.virtual_configuration
