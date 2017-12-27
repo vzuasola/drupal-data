@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.games_showcase_entity.games_showcase_entity.field_games_category
     - field.field.games_showcase_entity.games_showcase_entity.field_home_sub_category
+    - field.field.games_showcase_entity.games_showcase_entity.field_home_tab_ribbon
     - field.field.games_showcase_entity.games_showcase_entity.field_log_in_state
     - field.field.games_showcase_entity.games_showcase_entity.field_showcase_body
     - field.field.games_showcase_entity.games_showcase_entity.field_showcase_image
@@ -33,6 +34,12 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
+    region: content
+  field_home_tab_ribbon:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   field_log_in_state:
     weight: 2
@@ -78,7 +85,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   translation:
-    weight: 8
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }
