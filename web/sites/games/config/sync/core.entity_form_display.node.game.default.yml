@@ -13,6 +13,7 @@ dependencies:
     - field.field.node.game.field_home_category
     - field.field.node.game.field_play_for_fun_toggle
     - field.field.node.game.field_ribbon_configuration
+    - field.field.node.game.field_ribbon_label
     - image.style.thumbnail
     - node.type.game
   module:
@@ -118,6 +119,12 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_ribbon_label:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   langcode:
     type: language_select
     weight: 1
