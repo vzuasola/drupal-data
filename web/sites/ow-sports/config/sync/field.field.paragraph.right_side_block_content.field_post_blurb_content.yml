@@ -1,19 +1,21 @@
-uuid: 80d2f3c6-b946-413c-9e69-5c1590903bb1
+uuid: 8eeb43e7-91f9-414c-bec2-5c4cd2e6b99d
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_link_title
+    - field.storage.paragraph.field_post_blurb_content
     - paragraphs.paragraphs_type.right_side_block_content
-id: paragraph.right_side_block_content.field_link_title
-field_name: field_link_title
+  module:
+    - text
+id: paragraph.right_side_block_content.field_post_blurb_content
+field_name: field_post_blurb_content
 entity_type: paragraph
 bundle: right_side_block_content
-label: 'Link Title'
+label: 'Post blurb Content'
 description: ''
 required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: string
+field_type: text_long

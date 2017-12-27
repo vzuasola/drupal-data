@@ -11,7 +11,7 @@ id: paragraph.right_side_block_content.field_link
 field_name: field_link
 entity_type: paragraph
 bundle: right_side_block_content
-label: Link
+label: 'Image Link'
 description: ''
 required: false
 translatable: true

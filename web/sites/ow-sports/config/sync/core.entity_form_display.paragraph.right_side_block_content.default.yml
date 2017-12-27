@@ -8,7 +8,7 @@ dependencies:
     - field.field.paragraph.right_side_block_content.field_image
     - field.field.paragraph.right_side_block_content.field_link
     - field.field.paragraph.right_side_block_content.field_link_target
-    - field.field.paragraph.right_side_block_content.field_link_title
+    - field.field.paragraph.right_side_block_content.field_post_blurb_content
     - field.field.paragraph.right_side_block_content.field_title
     - image.style.thumbnail
     - paragraphs.paragraphs_type.right_side_block_content
@@ -22,12 +22,8 @@ third_party_settings:
     group_innerpage_right_side_block:
       children:
         - field_title
-        - translation
-        - field_image
-        - field_blurb_content
-        - field_link_title
-        - field_link
-        - field_link_target
+        - group_image
+        - group_blurb_content
       parent_name: ''
       weight: 1
       format_type: details
@@ -37,6 +33,36 @@ third_party_settings:
         open: false
         required_fields: true
       label: 'Inner Page right-side block'
+    group_image:
+      children:
+        - field_image
+        - field_link_title
+        - field_link
+        - field_link_target
+      parent_name: group_innerpage_right_side_block
+      weight: 2
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Image
+    group_blurb_content:
+      children:
+        - field_blurb_content
+        - field_post_blurb_content
+      parent_name: group_innerpage_right_side_block
+      weight: 3
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Blurb Content'
 id: paragraph.right_side_block_content.default
 targetEntityType: paragraph
 bundle: right_side_block_content
@@ -58,7 +84,7 @@ content:
     type: boolean_checkbox
     region: content
   field_image:
-    weight: 3
+    weight: 4
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -79,13 +105,13 @@ content:
     third_party_settings: {  }
     type: options_select
     region: content
-  field_link_title:
+  field_post_blurb_content:
     weight: 5
     settings:
-      size: 60
+      rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
+    type: text_textarea
     region: content
   field_title:
     weight: 1
