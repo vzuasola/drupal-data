@@ -1,0 +1,23 @@
+uuid: f442f8b3-b592-4f1b-b0af-29a8e40b017d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_disable
+    - taxonomy.vocabulary.games_category
+id: taxonomy_term.games_category.field_disable
+field_name: field_disable
+entity_type: taxonomy_term
+bundle: games_category
+label: Disable
+description: 'If checked, this category will not be displayed.'
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

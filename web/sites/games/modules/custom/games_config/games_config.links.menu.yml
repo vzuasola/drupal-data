@@ -35,6 +35,15 @@ games_config.list.categories:
   route_name: entity.taxonomy_vocabulary.overview_form
   route_parameters:
     taxonomy_vocabulary: 'games_category'
+
+games_config.list.home_categories:
+  title: 'Manage Home Sub Categories'
+  parent: games_config.admin_settings
+  description: 'Manage Home Sub Categories'
+  route_name: entity.taxonomy_vocabulary.overview_form
+  route_parameters:
+    taxonomy_vocabulary: 'home_games_category'
+
 games_config.list.ribbons:
   title: 'Manage Ribbons'
   parent: games_config.admin_settings
