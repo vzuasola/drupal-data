@@ -1,0 +1,28 @@
+uuid: 2b116c30-995a-4302-be82-3ea50df473da
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ribbon_label
+    - node.type.game
+    - taxonomy.vocabulary.ribbon_labels
+id: node.game.field_ribbon_label
+field_name: field_ribbon_label
+entity_type: node
+bundle: game
+label: 'Home Tab Ribbon'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      ribbon_labels: ribbon_labels
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
