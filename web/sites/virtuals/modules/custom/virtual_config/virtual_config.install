@@ -1,0 +1,19 @@
+<?php
+
+/**
+ * @file
+ * Filesource Uninstall the configs.
+ */
+
+/**
+ * Implements hook_uninstall().
+ */
+function virtual_config_uninstall() {
+  $keys = [
+    'virtual_config.virtual_configuration',
+  ];
+
+  foreach ($keys as $key) {
+    \Drupal::configFactory()->getEditable($key)->delete();
+  }
+}
