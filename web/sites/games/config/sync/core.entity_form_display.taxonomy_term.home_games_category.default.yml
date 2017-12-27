@@ -3,20 +3,19 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.taxonomy_term.home_games_category.field_alias
+    - field.field.taxonomy_term.home_games_category.field_disable
     - taxonomy.vocabulary.home_games_category
 id: taxonomy_term.home_games_category.default
 targetEntityType: taxonomy_term
 bundle: home_games_category
 mode: default
 content:
-  field_alias:
+  field_disable:
     weight: 2
     settings:
-      size: 60
-      placeholder: ''
+      display_label: true
     third_party_settings: {  }
-    type: string_textfield
+    type: boolean_checkbox
     region: content
   name:
     type: string_textfield

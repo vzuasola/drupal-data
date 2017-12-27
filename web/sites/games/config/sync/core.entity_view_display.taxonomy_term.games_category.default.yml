@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.taxonomy_term.games_category.field_alias
+    - field.field.taxonomy_term.games_category.field_disable
     - field.field.taxonomy_term.games_category.field_show_to_kebab
     - taxonomy.vocabulary.games_category
   module:
@@ -27,6 +28,16 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_disable:
+    weight: 3
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
     region: content
   field_show_to_kebab:
     weight: 2
