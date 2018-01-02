@@ -14,16 +14,35 @@ class AffilateListing extends ControllerBase {
    * @return array
    *   The taxonomy form.
    */
-  public function getTaxonomyForm() {
-    $taxonomyTerm = $this->entityManager()->getStorage('taxonomy_term')->create([
+  public function getList() {
+    $terms = $this->entityManager()->getStorage('taxonomy_term')->create([
       'vid' => 'affiliates_parameters',
     ]);
 
-    $taxonomyAddForm = $this->entityFormBuilder()->getForm($taxonomyTerm);
+    $form = $this->entityFormBuilder()->getForm($terms);
 
     return [
       '#type' => 'markup',
-      '#markup' => render($taxonomyAddForm),
+      '#markup' => render($form),
+    ];
+  }
+
+    /**
+   * Returns the Taxonomy Form.
+   *
+   * @return array
+   *   The taxonomy form.
+   */
+  public function getGroupList() {
+    $terms = $this->entityManager()->getStorage('taxonomy_term')->create([
+      'vid' => 'affiliates_group',
+    ]);
+
+    $form = $this->entityFormBuilder()->getForm($terms);
+
+    return [
+      '#type' => 'markup',
+      '#markup' => render($form),
     ];
   }
 }

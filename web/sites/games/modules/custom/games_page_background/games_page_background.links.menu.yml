@@ -1,0 +1,20 @@
+games_page_background.list:
+  title: 'Games Page Background Configuration'
+  description: 'List games page background entities'
+  parent: system.admin_config
+  route_name: games_page_background.admin_settings
+
+# Games Page Background menu items definition
+entity.games_page_bg_entity.collection:
+  title: 'Games Page Background list'
+  route_name: entity.games_page_bg_entity.collection
+  description: 'List Games Page Background entities'
+  parent: games_page_background.list
+  weight: 100
+
+games_page_bg_entity.admin.structure.settings:
+  title: Games Page Background settings
+  description: 'Configure Games Page Background entities'
+  route_name: games_page_bg_entity.settings
+  parent: games_page_background.list
+  weight: 101

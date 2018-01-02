@@ -1,0 +1,5 @@
+autologout_box_content:
+  format: basic_html
+notification_content:
+  format: basic_html
+lightbox_blurb: 还不是大发会员？

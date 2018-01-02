@@ -1,0 +1,5 @@
+games.search_configuration:
+  title: 'Games Custom Configuration'
+  base_route_name: games_search.search_configuration
+  names:
+    - 'games.search_configuration'

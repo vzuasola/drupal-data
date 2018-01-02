@@ -1,0 +1,27 @@
+games.search_configuration:
+  type: config_object
+  label: 'Games Search Custom Configurations'
+  mapping:
+    recommendation_message:
+      type: text_format
+      label: 'Recommendation Message'
+      translatable: true
+    recommendation_message_negative:
+      type: text_format
+      label: 'Recommendation Not Set Message'
+      translatable: true
+    filter_message:
+      type: text_format
+      label: 'No Result on Filter (with Recommendation)'
+      translatable: true
+    filter_message_negative:
+      type: text_format
+      label: 'No Result on Filter (no Recommendation)'
+      translatable: true
+    search_placeholder:
+      type: label
+      label: 'Search Field Placeholder'
+    search_result_message:
+      type: text_format
+      label: 'Search Result Message'
+      translatable: true

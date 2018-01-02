@@ -1,0 +1,5 @@
+autologout_box_content:
+  format: basic_html
+notification_content:
+  format: basic_html
+lightbox_blurb: '아직 다파벳 멤버가 아니시라구요?'

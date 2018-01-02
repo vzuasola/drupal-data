@@ -1,0 +1,8 @@
+join_now_text: '가입 하기'
+join_now_link: 'https://stg-www.elysium-dfbt.com/{lang}/cant-login?title=cantLogin'
+login_issue_text: '로그인이 안 되시나요?'
+login_issue_link: 'https://stg-www.elysium-dfbt.com/{lang}/cant-login?title=cantLogin'
+balance_error_text: 'Error Retrieving.'
+welcome_text: 'Hola! {username}'
+profile_link: 'https://stg-accountwww.elysium-dfbt.com/en/my-profile'
+profile_logout_text: 로그아웃

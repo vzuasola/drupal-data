@@ -1,0 +1,17 @@
+uuid: ec12737f-fa62-47c9-86b9-32fce64574ae
+langcode: en
+status: true
+dependencies:
+  module:
+    - content_translation
+    - slider_overlay
+third_party_settings:
+  content_translation:
+    enabled: true
+_core:
+  default_config_hash: exQWX0bYhs998thCiDY19k7zZTm0uQHAJV2N4ulBnmM
+id: slider_overlay_entity.slider_overlay_entity
+target_entity_type_id: slider_overlay_entity
+target_bundle: slider_overlay_entity
+default_langcode: site_default
+language_alterable: true

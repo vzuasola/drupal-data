@@ -118,6 +118,9 @@ To configure/add manually, go to your projects `Settings` -> `Pipeline`. On the 
 | **JMETER_USERNAME_DEV**                   | `leandrew`                                                              | Username to be used by JMeter. Default value is `AutoQaVip17RMB`                                       |
 | **JMETER_LOAD_DEV**                   | `5`                                                              | No. of users that will be simulated by JMeter.                                       |
 | **JMETER_DEV_AUTHORIZED_USERS**     | `any`, or comma-separated emails                                                             | List of users that are authorized to execute a stage in `pipeline.json`                                    |
+| **JMETER_ENTRY_PAGE_DEV** | qa1/tct/stg/stg3-www.elysium-dfbt.com | Site to be feed into Jmeter script |
+| **JMETER_LOOP_COUNT_DEV** | 10 | Loop count for Jmeter script |
+| **JMETER_UNAME_START_COUNT_DEV** | 1 | Start count for Jmeter |
 | **DEPLOY_QA**                    | `CMS: deploy - testing environment (QA)`                                                     | Ansible tower job name to execute deployment to QA1 environment.                                           |
 | **DEPLOY_QA_VARS**               | `{"email": "email@bayview.com"}`                                                         | Additional `--extra-vars` to be passed to your ansible job.                                                          |
 | **DEPLOY_QA_AUTHORIZED_USERS**     | `any`, or comma-separated emails                                                             | List of users that are authorized to execute a stage in `pipeline.json`                                    |
@@ -134,6 +137,9 @@ To configure/add manually, go to your projects `Settings` -> `Pipeline`. On the 
 | **JMETER_USERNAME_QA1**                   | `leandrew`                                                              | Username to be used by JMeter. Default value is `AutoQaVip17RMB`                                       |
 | **JMETER_LOAD_QA1**                   | `5`                                                              | No. of users that will be simulated by JMeter.                                       |
 | **JMETER_QA1_AUTHORIZED_USERS**     | `any`, or comma-separated emails                                                             | List of users that are authorized to execute a stage in `pipeline.json`                                    |
+| **JMETER_ENTRY_PAGE_QA1** | qa1/tct/stg/stg3-www.elysium-dfbt.com | Site to be feed into Jmeter script |
+| **JMETER_LOOP_COUNT_QA1** | 10 | Loop count for Jmeter script |
+| **JMETER_UNAME_START_COUNT_QA1** | 1 | Start count for Jmeter |
 | **DEPLOY_TCT**                   | `CMS: deploy - TCT environment`                                                              | Ansible tower job name to execute deployment to QA2/TCT environment.                                       |
 | **DEPLOY_TCT_VARS**               | `{"email": "email@bayview.com"}`                                                         | Additional `--extra-vars` to be passed to your ansible job.                                                          |
 | **DEPLOY_TCT_AUTHORIZED_USERS**     | `any`, or comma-separated emails                                                             | List of users that are authorized to execute a stage in `pipeline.json`                                    |
@@ -150,6 +156,9 @@ To configure/add manually, go to your projects `Settings` -> `Pipeline`. On the 
 | **JMETER_USERNAME_TCT**                   | `leandrew`                                                              | Username to be used by JMeter. Default value is `AutoQaVip17RMB`                                       |
 | **JMETER_LOAD_TCT**                   | `5`                                                              | No. of users that will be simulated by JMeter.                                       |
 | **JMETER_TCT_AUTHORIZED_USERS**     | `any`, or comma-separated emails                                                             | List of users that are authorized to execute a stage in `pipeline.json`                                    |
+| **JMETER_ENTRY_PAGE_TCT** | qa1/tct/stg/stg3-www.elysium-dfbt.com | Site to be feed into Jmeter script |
+| **JMETER_LOOP_COUNT_TCT** | 10 | Loop count for Jmeter script |
+| **JMETER_UNAME_START_COUNT_TCT** | 1 | Start count for Jmeter |
 | **CODE_SCAN**                    | `execute-code-scan`                                                                          | Ansible tower job name to execute HP Fortify scans.                                                        |
 | **CODE_SCAN_VARS**               | `{"email": "email@bayview.com"}`                                                         | Additional `--extra-vars` to be passed to your ansible job.                                                          |
 | **CODE_SCAN_AUTHORIZED_USERS**     | `any`, or comma-separated emails                                                             | List of users that are authorized to execute a stage in `pipeline.json`                                    |
@@ -174,6 +183,9 @@ To configure/add manually, go to your projects `Settings` -> `Pipeline`. On the 
 | **JMETER_USERNAME_UAT**                   | `leandrew`                                                              | Username to be used by JMeter. Default value is `AutoQaVip17RMB`                                       |
 | **JMETER_LOAD_UAT**                   | `5`                                                              | No. of users that will be simulated by JMeter.                                       |
 | **JMETER_UAT_AUTHORIZED_USERS**     | `any`, or comma-separated emails                                                             | List of users that are authorized to execute a stage in `pipeline.json`                                    |
+| **JMETER_ENTRY_PAGE_UAT** | qa1/tct/stg/stg3-www.elysium-dfbt.com | Site to be feed into Jmeter script |
+| **JMETER_LOOP_COUNT_UAT** | 10 | Loop count for Jmeter script |
+| **JMETER_UNAME_START_COUNT_UAT** | 1 | Start count for Jmeter |
 | **DEPLOY_STG**                   | `CMS: deploy - account - staging`                                                          | Ansible tower job name to execute deployment to STG environment.                                           |
 | **DEPLOY_STG_VARS**               | `{"email": "email@bayview.com"}`                                                         | Additional `--extra-vars` to be passed to your ansible job.                                                          |
 | **DEPLOY_STG_AUTHORIZED_USERS**     | `any`, or comma-separated emails                                                             | List of users that are authorized to execute a stage in `pipeline.json`                                    |
@@ -190,6 +202,9 @@ To configure/add manually, go to your projects `Settings` -> `Pipeline`. On the 
 | **JMETER_USERNAME_STG**                   | `leandrew`                                                              | Username to be used by JMeter. Default value is `AutoQaVip17RMB`                                       |
 | **JMETER_LOAD_STG**                   | `5`                                                              | No. of users that will be simulated by JMeter.                                       |
 | **JMETER_STG_AUTHORIZED_USERS**     | `any`, or comma-separated emails                                                             | List of users that are authorized to execute a stage in `pipeline.json`                                    |
+| **JMETER_ENTRY_PAGE_STG** | qa1/tct/stg/stg3-www.elysium-dfbt.com | Site to be feed into Jmeter script |
+| **JMETER_LOOP_COUNT_STG** | 10 | Loop count for Jmeter script |
+| **JMETER_UNAME_START_COUNT_STG** | 1 | Start count for Jmeter |
 | **STAGING_SIGNOFF_USERS**        | `any`, or comma-separated emails                                                             | List of users that are authorized to sign-off internal-production deployment                                           |
 | **DEPLOY_INTERNAL_PROD**                   | `CMS: deploy - INTERNAL PROD environment`                                                              | Ansible tower job name to execute deployment to INTERNAL PRODUCTION environment.                                       |
 | **DEPLOY_INTERNAL_PROD_VARS**               | `{"email": "email@bayview.com"}`                                                         | Additional `--extra-vars` to be passed to your ansible job.                                                          |

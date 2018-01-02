@@ -80,7 +80,12 @@
             "mvn-clean-test-Pcoverage": {
                 "dockerfile": "automation/Dockerfile.maven",
                 "docker-image-suffix": "-maven",
-                "options": [],
+                "options": [
+                    "--env",
+                    "VERSION=$VERSION",
+                    "--env",
+                    "CI_PIPELINE_ID=$CI_PIPELINE_ID"
+		],
                 "command": [
                     "mvn",
                     "clean",
@@ -96,7 +101,12 @@
             "mvn-sonar-preview": {
                 "dockerfile": "automation/Dockerfile.maven",
                 "docker-image-suffix": "-maven",
-                "options": [],
+                "options": [
+                    "--env",
+                    "VERSION=$VERSION",
+                    "--env",
+                    "CI_PIPELINE_ID=$CI_PIPELINE_ID"
+		],
                 "command": [
                     "mvn",
                     "sonar:sonar",
@@ -126,7 +136,12 @@
             "mvn-sonar": {
                 "dockerfile": "automation/Dockerfile.maven",
                 "docker-image-suffix": "-maven",
-                "options": [],
+                "options": [
+                    "--env",
+                    "VERSION=$VERSION",
+                    "--env",
+                    "CI_PIPELINE_ID=$CI_PIPELINE_ID"
+		],
                 "command": [
                     "mvn",
                     "sonar:sonar",
@@ -232,7 +247,12 @@
             "mvn-clean-install": {
                 "dockerfile": "automation/Dockerfile.maven",
                 "docker-image-suffix": "-maven",
-                "options": [],
+                "options": [
+                    "--env",
+                    "VERSION=$VERSION",
+                    "--env",
+                    "CI_PIPELINE_ID=$CI_PIPELINE_ID"
+		],
                 "command": [
                     "mvn",
                     "clean",
@@ -255,13 +275,122 @@
                     "--env",
                     "CI_PROJECT_NAME=$CI_PROJECT_NAME",
                     "--env",
-                    "ARTIFACTORY_PASSWORD=$ARTIFACTORY_PASSWORD"
+                    "ARTIFACTORY_PASSWORD=$ARTIFACTORY_PASSWORD",
+                    "--env",
+                    "VERSION=$VERSION",
+                    "--env",
+                    "CI_PIPELINE_ID=$CI_PIPELINE_ID"
                 ],
                 "command": [
                     "mvn",
                     "clean",
                     "deploy",
                     "--batch-mode"
+                ],
+                "volumes": [
+                  "$PWD:/app",
+                  "/home/gitlab-runner/mavendocker/config/settings.xml:/usr/share/maven/conf/settings.xml",
+                  "/home/gitlab-runner/mavendocker/repository:/shared/repository"
+                ]
+            }
+        }
+    },
+    "testng-dev": {
+        "steps": {
+            "mvn-testng": {
+                "dockerfile": "automation/Dockerfile.maven",
+                "docker-image-suffix": "-maven",
+                "options": [
+                ],
+                "command": [
+                    "mvn",
+                    "test",
+                    "-pl",
+		    "dafabet-desktop"
+                ],
+                "volumes": [
+                  "$PWD:/app",
+                  "/home/gitlab-runner/mavendocker/config/settings.xml:/usr/share/maven/conf/settings.xml",
+                  "/home/gitlab-runner/mavendocker/repository:/shared/repository"
+                ]
+            }
+        }
+    },
+    "testng-tst": {
+        "steps": {
+            "mvn-testng": {
+                "dockerfile": "automation/Dockerfile.maven",
+                "docker-image-suffix": "-maven",
+                "options": [
+                ],
+                "command": [
+                    "mvn",
+                    "test",
+                    "-pl",
+		    "dafabet-desktop"
+                ],
+                "volumes": [
+                  "$PWD:/app",
+                  "/home/gitlab-runner/mavendocker/config/settings.xml:/usr/share/maven/conf/settings.xml",
+                  "/home/gitlab-runner/mavendocker/repository:/shared/repository"
+                ]
+            }
+        }
+    },
+    "testng-tct": {
+        "steps": {
+            "mvn-testng": {
+                "dockerfile": "automation/Dockerfile.maven",
+                "docker-image-suffix": "-maven",
+                "options": [
+                ],
+                "command": [
+                    "mvn",
+                    "test",
+                    "-pl",
+		    "dafabet-desktop"
+                ],
+                "volumes": [
+                  "$PWD:/app",
+                  "/home/gitlab-runner/mavendocker/config/settings.xml:/usr/share/maven/conf/settings.xml",
+                  "/home/gitlab-runner/mavendocker/repository:/shared/repository"
+                ]
+            }
+        }
+    },
+    "testng-uat": {
+        "steps": {
+            "mvn-testng": {
+                "dockerfile": "automation/Dockerfile.maven",
+                "docker-image-suffix": "-maven",
+                "options": [
+                ],
+                "command": [
+                    "mvn",
+                    "test",
+                    "-pl",
+		    "dafabet-desktop"
+                ],
+                "volumes": [
+                  "$PWD:/app",
+                  "/home/gitlab-runner/mavendocker/config/settings.xml:/usr/share/maven/conf/settings.xml",
+                  "/home/gitlab-runner/mavendocker/repository:/shared/repository"
+                ]
+            }
+        }
+    },
+    "testng-stg": {
+        "steps": {
+            "mvn-testng": {
+                "dockerfile": "automation/Dockerfile.maven",
+                "docker-image-suffix": "-maven",
+                "options": [
+                ],
+                "command": [
+                    "mvn",
+                    "test",
+                    "-pl",
+		    "dafabet-desktop"
                 ],
                 "volumes": [
                   "$PWD:/app",
@@ -758,6 +887,101 @@
             }
         }
     },
+    "java-performance-tests-dev": {
+        "steps": {
+            "authorize": {
+                "dockerfile": "automation/Dockerfile.authorize",
+                "docker-image-suffix": "-authorize",
+                "options": [
+                    "--env",
+                    "USER=$GITLAB_USER_EMAIL",
+                    "--env",
+                    "AUTHORIZED_USERS=$JMETER_DEV_AUTHORIZED_USERS"
+                ],
+                "command": [
+                    "python",
+                    "/app/automation/authorize.py"
+                ],
+                "volumes": [
+                    "$PWD:/app"
+                ]
+            },
+            "checkout jmeter scripts": {
+                "dockerfile": "automation/Dockerfile.composer",
+                "docker-image-suffix": "-composer",
+                "options": [
+                    "--entrypoint=git"
+                ],
+                "command": [
+                    "clone",
+                    "-b",
+                    "master",
+                    "git@gitlab.ph.esl-asia.com:Automation/droidle-jmeter.git",
+                    "jmeter"
+                ],
+                "volumes": [
+                    "$PWD:/var/www/html/app"
+                ]
+            },
+            "trigger performance tests": {
+                "dockerfile": "automation/Dockerfile.jmeter",
+                "docker-image-suffix": "-jmeter",
+                "options": [],
+                "command": [
+                    "-n",
+                    "-t",
+                    "/app/jmeter/jmx/$JMETER_SCRIPT_DEV",
+                    "-Jentrypage=$JMETER_ENTRY_PAGE_DEV",
+                    "-Jloops=$JMETER_LOOP_COUNT_DEV",
+                    "-Junamestartcount=$JMETER_UNAME_START_COUNT_DEV",
+                    "-Jusers=$JMETER_LOAD_DEV",
+                    "-l",
+                    "load_tests_results_logs/load_tests_results.csv",
+                    "-e",
+                    "-o",
+                    "load_tests_results_logs/load_tests_graphs",
+                    "-j",
+                    "load_tests_results_logs/load_tests_results.log",
+                    "-LDEBUG"
+                ],
+                "volumes": [
+                    "$PWD:/app"
+                ]
+            },
+            "package": {
+                "dockerfile": "automation/Dockerfile.package",
+                "docker-image-suffix": "-package",
+                "options": [
+                    "--env", "CI_PROJECT_NAME=$CI_PROJECT_NAME",
+                    "--env", "VERSION=$VERSION",
+                    "--env", "CI_PIPELINE_ID=$CI_PIPELINE_ID",
+                    "--env", "ARTIFACTORY_PASSWORD=$ARTIFACTORY_PASSWORD"
+                ],
+                "command": [
+                    "python",
+                    "/app/automation/jmeter_reports.py"
+                ],
+                "volumes": [
+                    "$PWD:/app"
+                ]
+            },
+            "mark as complete": {
+                "dockerfile": "automation/Dockerfile.authorize",
+                "docker-image-suffix": "-mark-as-complete",
+                "options": [
+                    "--env",
+                    "USER=$GITLAB_USER_EMAIL"
+                ],
+                "command": [
+                    "python",
+                    "/app/automation/mark_as_complete.py"
+                ],
+                "volumes": [
+                    "$PWD:/app"
+                ]
+            }
+        }
+    },
     "performance-tests-test": {
         "steps": {
             "authorize": {
@@ -810,6 +1034,101 @@
                     "-e",
                     "-o",
                     "load_tests_results",
+                    "-j",
+                    "load_tests_results_logs/load_tests_results.log",
+                    "-LDEBUG"
+                ],
+                "volumes": [
+                    "$PWD:/app"
+                ]
+            },
+            "package": {
+                "dockerfile": "automation/Dockerfile.package",
+                "docker-image-suffix": "-package",
+                "options": [
+                    "--env", "CI_PROJECT_NAME=$CI_PROJECT_NAME",
+                    "--env", "VERSION=$VERSION",
+                    "--env", "CI_PIPELINE_ID=$CI_PIPELINE_ID",
+                    "--env", "ARTIFACTORY_PASSWORD=$ARTIFACTORY_PASSWORD"
+                ],
+                "command": [
+                    "python",
+                    "/app/automation/jmeter_reports.py"
+                ],
+                "volumes": [
+                    "$PWD:/app"
+                ]
+            },
+            "mark as complete": {
+                "dockerfile": "automation/Dockerfile.authorize",
+                "docker-image-suffix": "-mark-as-complete",
+                "options": [
+                    "--env",
+                    "USER=$GITLAB_USER_EMAIL"
+                ],
+                "command": [
+                    "python",
+                    "/app/automation/mark_as_complete.py"
+                ],
+                "volumes": [
+                    "$PWD:/app"
+                ]
+            }
+        }
+    },
+    "java-performance-tests-test": {
+        "steps": {
+            "authorize": {
+                "dockerfile": "automation/Dockerfile.authorize",
+                "docker-image-suffix": "-authorize",
+                "options": [
+                    "--env",
+                    "USER=$GITLAB_USER_EMAIL",
+                    "--env",
+                    "AUTHORIZED_USERS=$JMETER_QA1_AUTHORIZED_USERS"
+                ],
+                "command": [
+                    "python",
+                    "/app/automation/authorize.py"
+                ],
+                "volumes": [
+                    "$PWD:/app"
+                ]
+            },
+            "checkout jmeter scripts": {
+                "dockerfile": "automation/Dockerfile.composer",
+                "docker-image-suffix": "-composer",
+                "options": [
+                    "--entrypoint=git"
+                ],
+                "command": [
+                    "clone",
+                    "-b",
+                    "master",
+                    "git@gitlab.ph.esl-asia.com:Automation/droidle-jmeter.git",
+                    "jmeter"
+                ],
+                "volumes": [
+                    "$PWD:/var/www/html/app"
+                ]
+            },
+            "trigger performance tests": {
+                "dockerfile": "automation/Dockerfile.jmeter",
+                "docker-image-suffix": "-jmeter",
+                "options": [],
+                "command": [
+                    "-n",
+                    "-t",
+                    "/app/jmeter/jmx/$JMETER_SCRIPT_QA1",
+                    "-Jentrypage=$JMETER_ENTRY_PAGE_QA1",
+                    "-Jloops=$JMETER_LOOP_COUNT_QA1",
+                    "-Junamestartcount=$JMETER_UNAME_START_COUNT_QA1",
+                    "-Jusers=$JMETER_LOAD_QA1",
+                    "-l",
+                    "load_tests_results_logs/load_tests_results.csv",
+                    "-e",
+                    "-o",
+                    "load_tests_results_logs/load_tests_graphs",
                     "-j",
                     "load_tests_results_logs/load_tests_results.log",
                     "-LDEBUG"
@@ -946,6 +1265,101 @@
             }
         }
     },
+    "java-performance-tests-tct": {
+        "steps": {
+            "authorize": {
+                "dockerfile": "automation/Dockerfile.authorize",
+                "docker-image-suffix": "-authorize",
+                "options": [
+                    "--env",
+                    "USER=$GITLAB_USER_EMAIL",
+                    "--env",
+                    "AUTHORIZED_USERS=$JMETER_TCT_AUTHORIZED_USERS"
+                ],
+                "command": [
+                    "python",
+                    "/app/automation/authorize.py"
+                ],
+                "volumes": [
+                    "$PWD:/app"
+                ]
+            },
+            "checkout jmeter scripts": {
+                "dockerfile": "automation/Dockerfile.composer",
+                "docker-image-suffix": "-composer",
+                "options": [
+                    "--entrypoint=git"
+                ],
+                "command": [
+                    "clone",
+                    "-b",
+                    "master",
+                    "git@gitlab.ph.esl-asia.com:Automation/droidle-jmeter.git",
+                    "jmeter"
+                ],
+                "volumes": [
+                    "$PWD:/var/www/html/app"
+                ]
+            },
+            "trigger performance tests": {
+                "dockerfile": "automation/Dockerfile.jmeter",
+                "docker-image-suffix": "-jmeter",
+                "options": [],
+                "command": [
+                    "-n",
+                    "-t",
+                    "/app/jmeter/jmx/$JMETER_SCRIPT_TCT",
+                    "-Jentrypage=$JMETER_ENTRY_PAGE_TCT",
+                    "-Jloops=$JMETER_LOOP_COUNT_TCT",
+                    "-Junamestartcount=$JMETER_UNAME_START_COUNT_TCT",
+                    "-Jusers=$JMETER_LOAD_TCT",
+                    "-l",
+                    "load_tests_results_logs/load_tests_results.csv",
+                    "-e",
+                    "-o",
+                    "load_tests_results_logs/load_tests_graphs",
+                    "-j",
+                    "load_tests_results_logs/load_tests_results.log",
+                    "-LDEBUG"
+                ],
+                "volumes": [
+                    "$PWD:/app"
+                ]
+            },
+            "package": {
+                "dockerfile": "automation/Dockerfile.package",
+                "docker-image-suffix": "-package",
+                "options": [
+                    "--env", "CI_PROJECT_NAME=$CI_PROJECT_NAME",
+                    "--env", "VERSION=$VERSION",
+                    "--env", "CI_PIPELINE_ID=$CI_PIPELINE_ID",
+                    "--env", "ARTIFACTORY_PASSWORD=$ARTIFACTORY_PASSWORD"
+                ],
+                "command": [
+                    "python",
+                    "/app/automation/jmeter_reports.py"
+                ],
+                "volumes": [
+                    "$PWD:/app"
+                ]
+            },
+            "mark as complete": {
+                "dockerfile": "automation/Dockerfile.authorize",
+                "docker-image-suffix": "-mark-as-complete",
+                "options": [
+                    "--env",
+                    "USER=$GITLAB_USER_EMAIL"
+                ],
+                "command": [
+                    "python",
+                    "/app/automation/mark_as_complete.py"
+                ],
+                "volumes": [
+                    "$PWD:/app"
+                ]
+            }
+        }
+    },
     "performance-tests-uat": {
         "steps": {
             "authorize": {
@@ -1040,6 +1454,101 @@
             }
         }
     },
+    "java-performance-tests-uat": {
+        "steps": {
+            "authorize": {
+                "dockerfile": "automation/Dockerfile.authorize",
+                "docker-image-suffix": "-authorize",
+                "options": [
+                    "--env",
+                    "USER=$GITLAB_USER_EMAIL",
+                    "--env",
+                    "AUTHORIZED_USERS=$JMETER_UAT_AUTHORIZED_USERS"
+                ],
+                "command": [
+                    "python",
+                    "/app/automation/authorize.py"
+                ],
+                "volumes": [
+                    "$PWD:/app"
+                ]
+            },
+            "checkout jmeter scripts": {
+                "dockerfile": "automation/Dockerfile.composer",
+                "docker-image-suffix": "-composer",
+                "options": [
+                    "--entrypoint=git"
+                ],
+                "command": [
+                    "clone",
+                    "-b",
+                    "master",
+                    "git@gitlab.ph.esl-asia.com:Automation/droidle-jmeter.git",
+                    "jmeter"
+                ],
+                "volumes": [
+                    "$PWD:/var/www/html/app"
+                ]
+            },
+            "trigger performance tests": {
+                "dockerfile": "automation/Dockerfile.jmeter",
+                "docker-image-suffix": "-jmeter",
+                "options": [],
+                "command": [
+                    "-n",
+                    "-t",
+                    "/app/jmeter/jmx/$JMETER_SCRIPT_UAT",
+                    "-Jentrypage=$JMETER_ENTRY_PAGE_UAT",
+                    "-Jloops=$JMETER_LOOP_COUNT_UAT",
+                    "-Junamestartcount=$JMETER_UNAME_START_COUNT_UAT",
+                    "-Jusers=$JMETER_LOAD_UAT",
+                    "-l",
+                    "load_tests_results_logs/load_tests_results.csv",
+                    "-e",
+                    "-o",
+                    "load_tests_results_logs/load_tests_graphs",
+                    "-j",
+                    "load_tests_results_logs/load_tests_results.log",
+                    "-LDEBUG"
+                ],
+                "volumes": [
+                    "$PWD:/app"
+                ]
+            },
+            "package": {
+                "dockerfile": "automation/Dockerfile.package",
+                "docker-image-suffix": "-package",
+                "options": [
+                    "--env", "CI_PROJECT_NAME=$CI_PROJECT_NAME",
+                    "--env", "VERSION=$VERSION",
+                    "--env", "CI_PIPELINE_ID=$CI_PIPELINE_ID",
+                    "--env", "ARTIFACTORY_PASSWORD=$ARTIFACTORY_PASSWORD"
+                ],
+                "command": [
+                    "python",
+                    "/app/automation/jmeter_reports.py"
+                ],
+                "volumes": [
+                    "$PWD:/app"
+                ]
+            },
+            "mark as complete": {
+                "dockerfile": "automation/Dockerfile.authorize",
+                "docker-image-suffix": "-mark-as-complete",
+                "options": [
+                    "--env",
+                    "USER=$GITLAB_USER_EMAIL"
+                ],
+                "command": [
+                    "python",
+                    "/app/automation/mark_as_complete.py"
+                ],
+                "volumes": [
+                    "$PWD:/app"
+                ]
+            }
+        }
+    },
     "performance-tests-staging": {
         "steps": {
             "authorize": {
@@ -1092,6 +1601,101 @@
                     "-e",
                     "-o",
                     "load_tests_results",
+                    "-j",
+                    "load_tests_results_logs/load_tests_results.log",
+                    "-LDEBUG"
+                ],
+                "volumes": [
+                    "$PWD:/app"
+                ]
+            },
+            "package": {
+                "dockerfile": "automation/Dockerfile.package",
+                "docker-image-suffix": "-package",
+                "options": [
+                    "--env", "CI_PROJECT_NAME=$CI_PROJECT_NAME",
+                    "--env", "VERSION=$VERSION",
+                    "--env", "CI_PIPELINE_ID=$CI_PIPELINE_ID",
+                    "--env", "ARTIFACTORY_PASSWORD=$ARTIFACTORY_PASSWORD"
+                ],
+                "command": [
+                    "python",
+                    "/app/automation/jmeter_reports.py"
+                ],
+                "volumes": [
+                    "$PWD:/app"
+                ]
+            },
+            "mark as complete": {
+                "dockerfile": "automation/Dockerfile.authorize",
+                "docker-image-suffix": "-mark-as-complete",
+                "options": [
+                    "--env",
+                    "USER=$GITLAB_USER_EMAIL"
+                ],
+                "command": [
+                    "python",
+                    "/app/automation/mark_as_complete.py"
+                ],
+                "volumes": [
+                    "$PWD:/app"
+                ]
+            }
+        }
+    },
+    "java-performance-tests-staging": {
+        "steps": {
+            "authorize": {
+                "dockerfile": "automation/Dockerfile.authorize",
+                "docker-image-suffix": "-authorize",
+                "options": [
+                    "--env",
+                    "USER=$GITLAB_USER_EMAIL",
+                    "--env",
+                    "AUTHORIZED_USERS=$JMETER_STG_AUTHORIZED_USERS"
+                ],
+                "command": [
+                    "python",
+                    "/app/automation/authorize.py"
+                ],
+                "volumes": [
+                    "$PWD:/app"
+                ]
+            },
+            "checkout jmeter scripts": {
+                "dockerfile": "automation/Dockerfile.composer",
+                "docker-image-suffix": "-composer",
+                "options": [
+                    "--entrypoint=git"
+                ],
+                "command": [
+                    "clone",
+                    "-b",
+                    "master",
+                    "git@gitlab.ph.esl-asia.com:Automation/droidle-jmeter.git",
+                    "jmeter"
+                ],
+                "volumes": [
+                    "$PWD:/var/www/html/app"
+                ]
+            },
+            "trigger performance tests": {
+                "dockerfile": "automation/Dockerfile.jmeter",
+                "docker-image-suffix": "-jmeter",
+                "options": [],
+                "command": [
+                    "-n",
+                    "-t",
+                    "/app/jmeter/jmx/$JMETER_SCRIPT_STG",
+                    "-Jentrypage=$JMETER_ENTRY_PAGE_STG",
+                    "-Jloops=$JMETER_LOOP_COUNT_STG",
+                    "-Junamestartcount=$JMETER_UNAME_START_COUNT_STG",
+                    "-Jusers=$JMETER_LOAD_STG",
+                    "-l",
+                    "load_tests_results_logs/load_tests_results.csv",
+                    "-e",
+                    "-o",
+                    "load_tests_results_logs/load_tests_graphs",
                     "-j",
                     "load_tests_results_logs/load_tests_results.log",
                     "-LDEBUG"
