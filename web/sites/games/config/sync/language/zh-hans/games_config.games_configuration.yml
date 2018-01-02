@@ -7,3 +7,4 @@ html5_lightbox_content:
   value: "<p>您当前的浏览器不支持HTML5游戏。请将您的浏览器更新至最新版本，再试一次。sc</p>\r\n\r\n<p><a class=\"btn btn-yellow btn-small btn-ok-launch\" href=\"#\" target=\"_blank\">Launch Anyway</a></p>\r\n"
   format: basic_html
 html5_lightbox_title: 'SC _ Alert!'
+home_categories_text: 'Home - SC'

@@ -1,0 +1,6 @@
+name: Virtual Configurations Module
+description: Virtual specific module.
+package: Virtual
+
+type: module
+core: 8.x

@@ -26,4 +26,12 @@ content:
     weight: 100
     region: content
 hidden:
+  field_game_code: true
+  field_game_image: true
+  field_game_info: true
+  field_game_info_toggle: true
+  field_game_title: true
+  field_games_category: true
+  field_home_category: true
+  field_play_for_fun_toggle: true
   langcode: true

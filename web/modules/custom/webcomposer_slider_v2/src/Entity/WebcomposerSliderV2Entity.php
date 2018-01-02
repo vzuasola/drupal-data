@@ -47,7 +47,7 @@ use Drupal\user\UserInterface;
  *     "status" = "status",
  *   },
  *   links = {
- *     "canonical" = "/admin/structure/webcomposer_slider_entity/{webcomposer_slider_v2_entity}",
+ *     "canonical" = "/admin/structure/webcomposer_slider_v2_entity/{webcomposer_slider_v2_entity}",
  *     "add-form" = "/admin/structure/webcomposer_slider_v2_entity/add",
  *     "edit-form" = "/admin/structure/webcomposer_slider_v2_entity/{webcomposer_slider_v2_entity}/edit",
  *     "delete-form" = "/admin/structure/webcomposer_slider_v2_entity/{webcomposer_slider_v2_entity}/delete",

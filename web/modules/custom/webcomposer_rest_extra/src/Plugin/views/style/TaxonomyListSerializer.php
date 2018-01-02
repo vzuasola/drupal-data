@@ -20,6 +20,7 @@ use Drupal\webcomposer_rest_extra\FilterHtmlTrait;
  */
 class TaxonomyListSerializer extends Serializer {
   use FilterHtmlTrait;
+
   /**
    * {@inheritdoc}
    */
@@ -28,16 +29,24 @@ class TaxonomyListSerializer extends Serializer {
 
     foreach ($this->view->result as $row_index => $row) {
       $this->view->row_index = $row_index;
-      // converting current row into array
-      $rowAssoc = $this->serializer->normalize($this->view->rowPlugin->render($row));
 
+      $rowAssoc = $this->serializer->normalize($this->view->rowPlugin->render($row));
       $tid = $rowAssoc['tid'][0]['value'];
 
       $parent = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadParents($tid);
 
-      $parent_id = array_keys($parent);
+      if (!empty($parent)) {
+        $parent_id = array_keys($parent);
+        $rowAssoc['parent'] = $this->loadTerm($parent_id[0]);
+      }
 
-      $rowAssoc['parent'] = $this->loadTerm($parent_id);
+      foreach ($rowAssoc as $key => $value) {
+        // loading the term object onto the rest export
+        if (isset($value[0]['target_type']) && $value[0]['target_type'] == 'taxonomy_term') {
+          $term = $this->loadTerm($value[0]['target_id']);
+          $rowAssoc[$key][0] = $term;
+        }
+      }
 
       $rows[] = $rowAssoc;
     }
@@ -55,13 +64,16 @@ class TaxonomyListSerializer extends Serializer {
     return $this->serializer->serialize($rows, $content_type, ['views_style_plugin' => $this]);
   }
 
+  /**
+   * Load terms by taxonomy ID
+   */
   private function loadTerm($tid) {
     $lang = \Drupal::languageManager()->getCurrentLanguage(\Drupal\Core\Language\LanguageInterface::TYPE_CONTENT)->getId();
-
-    $term = \Drupal\taxonomy\Entity\Term::load($tid[0]);
+    $term = \Drupal\taxonomy\Entity\Term::load($tid);
     $term_translated = \Drupal::service('entity.repository')->getTranslationFromContext($term, $lang);
-    $term_alias = \Drupal::service('path.alias_manager')->getAliasByPath('/taxonomy/term/' . $tid[0]);
+    $term_alias = \Drupal::service('path.alias_manager')->getAliasByPath('/taxonomy/term/' . $tid);
     $term_translated->set('path', $term_alias);
+
     return $term_translated;
   }
 }

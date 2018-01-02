@@ -1,0 +1,18 @@
+uuid: 4431fc24-79be-4e42-9ca8-17769fe05727
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.ribbon_labels
+id: taxonomy_term.ribbon_labels.name
+field_name: name
+entity_type: taxonomy_term
+bundle: ribbon_labels
+label: Name
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

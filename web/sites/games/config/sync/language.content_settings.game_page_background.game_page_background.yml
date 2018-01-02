@@ -1,0 +1,15 @@
+uuid: 7bcd813b-ca7e-4724-9afa-f7b1e45c3e15
+langcode: en
+status: true
+dependencies:
+  module:
+    - content_translation
+    - games_page_background
+third_party_settings:
+  content_translation:
+    enabled: true
+id: game_page_background.game_page_background
+target_entity_type_id: game_page_background
+target_bundle: game_page_background
+default_langcode: site_default
+language_alterable: true
