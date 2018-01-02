@@ -8,7 +8,7 @@ dependencies:
     - field.field.paragraph.right_side_block_content.field_image
     - field.field.paragraph.right_side_block_content.field_link
     - field.field.paragraph.right_side_block_content.field_link_target
-    - field.field.paragraph.right_side_block_content.field_link_title
+    - field.field.paragraph.right_side_block_content.field_post_blurb_content
     - field.field.paragraph.right_side_block_content.field_title
     - paragraphs.paragraphs_type.right_side_block_content
   module:
@@ -66,13 +66,12 @@ content:
     third_party_settings: {  }
     type: list_default
     region: content
-  field_link_title:
-    weight: 5
+  field_post_blurb_content:
+    weight: 7
     label: above
-    settings:
-      link_to_entity: false
+    settings: {  }
     third_party_settings: {  }
-    type: string
+    type: text_default
     region: content
   field_title:
     weight: 0
