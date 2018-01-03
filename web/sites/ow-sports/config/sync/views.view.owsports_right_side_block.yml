@@ -615,7 +615,7 @@ display:
     position: 2
     display_options:
       display_extenders: {  }
-      path: api/inner_page_right_side_block
+      path: api/right_side_block
       style:
         type: node_list_serializer
         options:
