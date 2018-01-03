@@ -11,7 +11,7 @@ class GamesSearchForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   protected function getEditableConfigNames() {
-    return ['games.search_configuration'];
+    return ['games_config.search_configuration'];
   }
 
   /**
@@ -25,7 +25,7 @@ class GamesSearchForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    $config = $this->config('games.search_configuration');
+    $config = $this->config('games_config.search_configuration');
 
     $form['search_configuration_tab'] = array(
       '#type' => 'vertical_tabs',
@@ -129,7 +129,7 @@ class GamesSearchForm extends ConfigFormBase {
     );
 
     foreach ($keys as $key) {
-      $this->config('games.search_configuration')->set($key, $form_state->getValue($key))->save();
+      $this->config('games_config.search_configuration')->set($key, $form_state->getValue($key))->save();
     }
   }
 
