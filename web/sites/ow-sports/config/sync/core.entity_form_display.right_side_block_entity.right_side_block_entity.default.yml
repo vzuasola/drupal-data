@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.right_side_block_entity.right_side_block_entity.field_exclude_these_pages
     - field.field.right_side_block_entity.right_side_block_entity.field_image
     - field.field.right_side_block_entity.right_side_block_entity.field_image_link
     - field.field.right_side_block_entity.right_side_block_entity.field_image_link_target
@@ -79,32 +78,11 @@ third_party_settings:
         description: ''
         required_fields: true
       label: 'Language Settings'
-    group_display_settings:
-      children:
-        - field_exclude_these_pages
-      parent_name: ''
-      weight: 6
-      format_type: tab
-      format_settings:
-        id: ''
-        classes: ''
-        formatter: closed
-        description: ''
-        required_fields: true
-      label: 'Display Settings'
 id: right_side_block_entity.right_side_block_entity.default
 targetEntityType: right_side_block_entity
 bundle: right_side_block_entity
 mode: default
 content:
-  field_exclude_these_pages:
-    weight: 27
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textarea
-    region: content
   field_image:
     weight: 21
     settings:
