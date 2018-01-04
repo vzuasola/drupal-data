@@ -1,5 +1,5 @@
 field_settings:
-  markup: 'By clicking "Submit", I certify that I am at least 18 years old and have read and accept the <strong><u><a href="/{lang}/terms-of-use{tracking.token}" target="_blank">Terms and Conditions</a></u></strong>.'
+  markup: 'I am at least 18 years old and have read and accepted the <strong><u><a href="/{lang}/terms-of-use{tracking.token}" target="_blank">Terms and Conditions</a></u></strong>.'
 field_validations:
   required:
     error_message: 'Field should be required'

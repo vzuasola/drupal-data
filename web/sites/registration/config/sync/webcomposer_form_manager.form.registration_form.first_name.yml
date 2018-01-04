@@ -17,7 +17,7 @@ field_validations:
     parameters:
       spaces: 1
   alpha_multi:
-    enable: 1
+    enable: 0
     error_message: 'Your First Name must be entered correctly.'
     parameters:
       space: 1
@@ -29,7 +29,7 @@ field_validations:
     enable: 0
     error_message: 'Field should be numeric'
   no_symbols:
-    enable: 1
+    enable: 0
     error_message: "Name contains invalid characters (example: .,@,#,%,^,*,( ),[],/)\r\n"
   numeric_symbols:
     enable: 0
@@ -62,4 +62,4 @@ field_validations:
     enable: 1
     error_message: "Please use English/Chinese/Korean/Greek characters only.\r\n"
     parameters:
-      regex_value: '^(?!\s)[a-zA-Z\u4E00-\uFA29\uAC00-\uD7AF\s]+$'
+      regex_value: '^(?!\s)[a-zA-Z\\\-''\u4E00-\uFA29\uAC00-\uD7AF\s]+$'
