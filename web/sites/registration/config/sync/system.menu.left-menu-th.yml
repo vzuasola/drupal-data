@@ -1,0 +1,8 @@
+uuid: a1740f69-003f-41fa-be5f-58acd82980df
+langcode: en
+status: true
+dependencies: {  }
+id: left-menu-th
+label: 'Left Menu TH'
+description: ''
+locked: false

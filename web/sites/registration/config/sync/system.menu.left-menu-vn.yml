@@ -1,0 +1,8 @@
+uuid: beaa43bd-0e5d-4d28-8a04-b948d2ea9889
+langcode: en
+status: true
+dependencies: {  }
+id: left-menu-vn
+label: 'Left Menu VN'
+description: ''
+locked: false
