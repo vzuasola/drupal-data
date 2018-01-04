@@ -52,7 +52,7 @@ field_validations:
     error_message: 'Username not available'
   email_availability:
     enable: 1
-    error_message: "Email is already in use. Click <a href=\"{domain:entry}/{domain:lang_token}/cant-login{tracking.token}\" target=\"new\">here</a> to retrieve username/password.\r\n"
+    error_message: 'Email is already in use. Click <a href="/en/cant-login" target="window">here</a> to retrieve username/password.'
   invalid_words:
     enable: 0
     error_message: 'Invalid/not allowed characters'

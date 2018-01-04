@@ -26,7 +26,7 @@ field_validations:
   username_availability:
     error_message: 'Username not available'
   email_availability:
-    error_message: "Email đã được sử dụng. Vui lòng nhấn <a href=\"{domain:entry}/{domain:lang_token}/cant-login{tracking.token}\" target=\"new\">đây</a> để lấy lại tên người dùng/mật khẩu.\r\n"
+    error_message: "Email đã được sử dụng. Vui lòng nhấn <a href=\"/vn/cant-login\" target=\"popup\" onclick=\"window.open('/vn/cant-login','popup','width=820,height=810,scrollbars=no,resizable=no'); return false;\">đây</a> để lấy lại tên người dùng/mật khẩu.\r\n"
   invalid_words:
     error_message: 'Invalid/not allowed characters'
   valid_languages:
