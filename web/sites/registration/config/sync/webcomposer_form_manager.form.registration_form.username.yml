@@ -58,3 +58,8 @@ field_validations:
     error_message: 'Invalid/not allowed characters'
     parameters:
       invalid_words_list: 'username, test'
+  valid_languages:
+    enable: 0
+    error_message: 'This field only accepts specific characters.'
+    parameters:
+      regex_value: ''

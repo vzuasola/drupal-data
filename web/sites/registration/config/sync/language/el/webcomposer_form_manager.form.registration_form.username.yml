@@ -1,14 +1,14 @@
 field_settings:
-  label: Username
-  placeholder: Username
+  label: 'Όνομα Χρήστη'
+  placeholder: 'Όνομα Χρήστη'
   annotation: ''
 field_validations:
   required:
-    error_message: 'Make sure your Username is as unique as possible. Your Username will be used for all products. Only 3-15 alphanumeric characters are allowed in this field.'
+    error_message: "Βεβαιωθείτε ότι το Όνομα Χρήστη σας είναι όσο πιο μοναδικό γίνεται. Το Όνομα Χρήστη σας θα χρησιμοποιείται για όλα τα προϊόντα. Μόνο 3-15 αλφαριθμητικοί χαρακτήρες επιτρέπονται σε αυτό το πεδίο.\r\n"
   alpha:
     error_message: 'Field should be Alphabet characters only'
   alphanumeric:
-    error_message: 'Make sure your Username is as unique as possible. Your Username will be used for all products. Only 3-15 alphanumeric characters are allowed in this field.'
+    error_message: "Βεβαιωθείτε ότι το Όνομα Χρήστη σας είναι όσο πιο μοναδικό γίνεται. Το Όνομα Χρήστη σας θα χρησιμοποιείται για όλα τα προϊόντα. Μόνο 3-15 αλφαριθμητικοί χαρακτήρες επιτρέπονται σε αυτό το πεδίο.\r\n"
   alpha_multi:
     error_message: 'Value is not a valid multilingual character'
   numeric:
@@ -20,12 +20,14 @@ field_validations:
   email:
     error_message: 'Field does not contain a valid email address'
   min_length:
-    error_message: 'Make sure your Username is as unique as possible. Your Username will be used for all products. Only 3-15 alphanumeric characters are allowed in this field.'
+    error_message: "Βεβαιωθείτε ότι το Όνομα Χρήστη σας είναι όσο πιο μοναδικό γίνεται. Το Όνομα Χρήστη σας θα χρησιμοποιείται για όλα τα προϊόντα. Μόνο 3-15 αλφαριθμητικοί χαρακτήρες επιτρέπονται σε αυτό το πεδίο.\r\n"
   max_length:
-    error_message: 'Make sure your Username is as unique as possible. Your Username will be used for all products. Only 3-15 alphanumeric characters are allowed in this field.'
+    error_message: "Βεβαιωθείτε ότι το Όνομα Χρήστη σας είναι όσο πιο μοναδικό γίνεται. Το Όνομα Χρήστη σας θα χρησιμοποιείται για όλα τα προϊόντα. Μόνο 3-15 αλφαριθμητικοί χαρακτήρες επιτρέπονται σε αυτό το πεδίο.\r\n"
   username_availability:
-    error_message: 'Make sure your Username is as unique as possible. Your Username will be used for all products. Only 3-15 alphanumeric characters are allowed in this field.'
+    error_message: "Βεβαιωθείτε ότι το Όνομα Χρήστη σας είναι όσο πιο μοναδικό γίνεται. Το Όνομα Χρήστη σας θα χρησιμοποιείται για όλα τα προϊόντα. Μόνο 3-15 αλφαριθμητικοί χαρακτήρες επιτρέπονται σε αυτό το πεδίο.\r\n"
   email_availability:
     error_message: 'Please use a unique email.'
   invalid_words:
     error_message: 'Invalid/not allowed characters'
+  valid_languages:
+    error_message: 'This field only accepts specific characters.'

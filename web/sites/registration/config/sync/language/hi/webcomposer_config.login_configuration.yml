@@ -4,3 +4,4 @@ error_message_account_locked: 'Account locked. Please contact our customer suppo
 autologout_box_title: REMINDER
 notification_title: 'Session Timeout'
 notification_window_title: 'Session has timed out'
+mobile_login_url: 'https://m.dafabet.com/login'

@@ -4,3 +4,4 @@ critical_announcement_content:
 news_announcement_content:
   value: ''
   format: basic_html
+join_now_link: '/{domain:entry}/{domain:lang_token}/cant-login{tracking.token}'

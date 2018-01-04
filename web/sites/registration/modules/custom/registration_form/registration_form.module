@@ -45,4 +45,10 @@ function registration_form_webcomposer_form_validation_alter(&$validations) {
       ],
     ],
   ];
+  $validations['valid_date'] = [
+    'title' => 'Valid Date',
+    'description' => 'Validation to check if the inputted date is correct based on format' .
+      '(must have a Birthdate format on field settings)',
+    'error' => 'Date is invalid',
+  ];
 }

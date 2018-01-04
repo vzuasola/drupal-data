@@ -26,7 +26,7 @@ field_validations:
   username_availability:
     error_message: 'Username not available'
   email_availability:
-    error_message: "Email sudah terdaftar. Klik <a href=\"{domain:entry}/{domain:lang_token}/cant-login{tracking.token}\" target=\"new\">disini</a> untuk mendapatkan kembali username/kata sandi.\r\n"
+    error_message: "Email sudah terdaftar. Klik <a href=\"/id/cant-login\" target=\"popup\" onclick=\"window.open('/id/cant-login','popup','width=820,height=810,scrollbars=no,resizable=no'); return false;\">disini</a> untuk mendapatkan kembali username/kata sandi.\r\n"
   invalid_words:
     error_message: 'Invalid/not allowed characters'
   valid_languages:

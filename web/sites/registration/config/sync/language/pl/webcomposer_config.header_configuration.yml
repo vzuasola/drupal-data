@@ -1,8 +1,9 @@
 lobby_page_title: 'Dafabet - Najlepsza Firma Bukmacherska Online w Azji.'
 join_now_text: 'DOŁĄCZ TERAZ'
+join_now_link: '/{domain:entry}/{domain:lang_token}/cant-login{tracking.token}'
 login_issue_text: 'Problem z logowaniem?'
 balance_error_text: 'Błąd pobierania. '
-welcome_text: 'Witaj {username}'
-profile_logout_text: Wyloguj
 profile_icon_hover_text: 'Mój profil'
 product_menu_new_tag: Nowy
+welcome_text: 'Witaj {username}'
+profile_logout_text: Wyloguj
