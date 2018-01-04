@@ -1,0 +1,18 @@
+uuid: 1134848c-5118-402d-b71a-e504cbb0f1e7
+langcode: en
+status: true
+dependencies:
+  module:
+    - webcomposer_announcements
+id: announcement_entity.announcement_entity.metatag
+field_name: metatag
+entity_type: announcement_entity
+bundle: announcement_entity
+label: Metatags
+description: 'The metatags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map
