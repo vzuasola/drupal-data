@@ -44,6 +44,9 @@ owsports_config.owsports_configuration:
     exclude_these_page:
       type: text
       label: 'Right Block Exclude These Pages'
+    euro_asia_switch:
+      type: text
+      label: 'Switch Euro to Asia Link'
 
 owsports_config.twitch_configuration:
   type: config_object
