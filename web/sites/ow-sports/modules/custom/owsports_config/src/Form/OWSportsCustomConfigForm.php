@@ -194,6 +194,20 @@ class OWSportsCustomConfigForm extends ConfigFormBase {
       '#default_value' => $config->get('singbet_template'),
     ];
 
+    $form['right_side_block'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Right Side Block Config'),
+      '#collapsible' => TRUE,
+      '#group' => 'owsports_settings_tab',
+    ];
+
+    $form['right_side_block']['exclude_these_page'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Exclude These Pages'),
+      '#description' => $this->t('List the pages, that right side block should be hide.'),
+      '#default_value' => $config->get('exclude_these_page'),
+    ];
+
     return parent::buildForm($form, $form_state);
   }
 
@@ -223,7 +237,8 @@ class OWSportsCustomConfigForm extends ConfigFormBase {
       'colossus_post_uri',
       'cdn_mapping',
       'act_mapping',
-      'legacy_cdn'
+      'legacy_cdn',
+      'exclude_these_page'
     ];
 
     foreach ($keys as $key) {

@@ -1,14 +1,16 @@
-uuid: 4cad5646-1249-4a64-904e-d4e9f40529b7
+uuid: 5ab93e2f-6e9a-48e9-96bd-6a5e7ec98597
 langcode: en
 status: true
 dependencies:
   module:
     - webcomposer_right_side_block
-id: right_side_block_entity.field_exclude_these_pages
-field_name: field_exclude_these_pages
+id: right_side_block_entity.field_title
+field_name: field_title
 entity_type: right_side_block_entity
-type: string_long
+type: string
 settings:
+  max_length: 255
+  is_ascii: false
   case_sensitive: false
 module: core
 locked: false

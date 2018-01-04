@@ -1,0 +1,30 @@
+uuid: 9394a97d-a8f9-4960-acfe-931a2f9595a8
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+    - image
+    - webcomposer_right_side_block
+id: right_side_block_entity.field_image
+field_name: field_image
+entity_type: right_side_block_entity
+type: image
+settings:
+  uri_scheme: public
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  target_type: file
+  display_field: false
+  display_default: false
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
