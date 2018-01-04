@@ -210,8 +210,8 @@ class OWSportsCustomConfigForm extends ConfigFormBase {
 
     $form['right_side_block']['euro_asia_switch'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('Switch to Asia Link'),
-      '#description' => $this->t('Add link for switch to asia.'),
+      '#title' => $this->t('Switch Euro to Asia Link'),
+      '#description' => $this->t('Add link / token for switch Euro to Asia. Only visible in the Euro template.'),
       '#default_value' => $config->get('euro_asia_switch'),
     ];
 
