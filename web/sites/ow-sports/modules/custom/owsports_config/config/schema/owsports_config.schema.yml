@@ -3,7 +3,7 @@ owsports_config.owsports_configuration:
   label: 'OW-Sports Custom Configuration'
   mapping:
     iframe_container:
-      type: text_format
+      type: text
       label: 'iFrame Container'
     pre_transaction_subdomain:
       type: label
@@ -18,7 +18,7 @@ owsports_config.owsports_configuration:
       type: label
       label: 'Post Login URI'
     language_mapping:
-      type: text_format
+      type: text
       label: 'Language Mapping'
     euro_pre_login_uri:
       type: label
@@ -27,7 +27,7 @@ owsports_config.owsports_configuration:
       type: label
       label: 'Euro Post Login'
     euro_template:
-      type: text_format
+      type: text
       label: 'Euro Template'
     singbet_pre_login_uri:
       type: label
@@ -36,11 +36,14 @@ owsports_config.owsports_configuration:
       type: label
       label: 'Singbet Post Login'
     singbet_template: 
-      type: text_format
+      type: text
       label: 'Singbet Template'
     act_mapping:
-      type: text_format
+      type: text
       label: 'Bet Type Mapping'
+    exclude_these_page:
+      type: text
+      label: 'Right Block Exclude These Pages'
 
 owsports_config.twitch_configuration:
   type: config_object
