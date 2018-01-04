@@ -208,6 +208,13 @@ class OWSportsCustomConfigForm extends ConfigFormBase {
       '#default_value' => $config->get('exclude_these_page'),
     ];
 
+    $form['right_side_block']['euro_asia_switch'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Switch to Asia Link'),
+      '#description' => $this->t('Add link for switch to asia.'),
+      '#default_value' => $config->get('euro_asia_switch'),
+    ];
+
     return parent::buildForm($form, $form_state);
   }
 
@@ -241,7 +248,8 @@ class OWSportsCustomConfigForm extends ConfigFormBase {
       'cdn_mapping',
       'act_mapping',
       'legacy_cdn',
-      'exclude_these_page'
+      'exclude_these_page',
+      'euro_asia_switch'
     ];
 
     foreach ($keys as $key) {
