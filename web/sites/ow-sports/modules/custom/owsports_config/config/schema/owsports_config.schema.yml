@@ -2,51 +2,6 @@ owsports_config.owsports_configuration:
   type: config_object
   label: 'OW-Sports Custom Configuration'
   mapping:
-    iframe_container:
-      type: text
-      label: 'iFrame Container'
-    pre_transaction_subdomain:
-      type: label
-      label: 'Pre Transaction Subdomain'
-    pre_login_uri:
-      type: label
-      label: 'Pre Login URI'
-    post_transaction_subdomain:
-      type: label
-      label: 'Post Transaction Subdomain'
-    post_login_uri:
-      type: label
-      label: 'Post Login URI'
-    language_mapping:
-      type: text
-      label: 'Language Mapping'
-    euro_pre_login_uri:
-      type: label
-      label: 'Euro Pre Login'
-    euro_post_login_uri:
-      type: label
-      label: 'Euro Post Login'
-    euro_template:
-      type: text
-      label: 'Euro Template'
-    singbet_pre_login_uri:
-      type: label
-      label: 'Singbet Pre Login'
-    singbet_post_login_uri:
-      type: label
-      label: 'Singbet Post Login'
-    singbet_template: 
-      type: text
-      label: 'Singbet Template'
-    act_mapping:
-      type: text
-      label: 'Bet Type Mapping'
-    exclude_these_page:
-      type: text
-      label: 'Right Block Exclude These Pages'
-    euro_asia_switch:
-      type: text
-      label: 'Switch Euro to Asia Link'
 
 owsports_config.twitch_configuration:
   type: config_object
