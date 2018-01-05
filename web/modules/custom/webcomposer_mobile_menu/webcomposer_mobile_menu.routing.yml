@@ -1,0 +1,7 @@
+webcomposer_mobile_menu.admin_settings:
+  path: 'admin/config/webcomposer/mobile-menu'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Webcomposer Mobile Menu'
+  requirements:
+    _permission: 'administer site configuration'
