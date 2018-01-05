@@ -29,5 +29,3 @@ field_validations:
     error_message: 'Please use a unique email.'
   invalid_words:
     error_message: 'Invalid/not allowed characters'
-  valid_languages:
-    error_message: 'This field only accepts specific characters.'

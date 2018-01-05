@@ -26,7 +26,7 @@ field_validations:
   username_availability:
     error_message: 'Username not available'
   email_availability:
-    error_message: 'อีเมลนี้ใช้สมัครสมาชิกแล้วคลิก<a href="{domain:entry}/{domain:lang_token}/cant-login{tracking.token}" target="new">ที่นี่</a>พื่อกู้ยูสเซอร์เนมและรหัสผ่าน'
+    error_message: 'อีเมลนี้ใช้สมัครสมาชิกแล้วคลิก<a href="/th/cant-login" target="popup" onclick="window.open(''/th/cant-login'',''popup'',''width=820,height=810,scrollbars=no,resizable=no''); return false;">ที่นี่</a>พื่อกู้ยูสเซอร์เนมและรหัสผ่าน'
   invalid_words:
     error_message: 'Invalid/not allowed characters'
   valid_languages:

@@ -37,12 +37,12 @@ class PlaytechProviderConfiguration extends ConfigFormBase {
       '#default_value' => $config->get('javascript_assets')
     ];
 
-    $form['playtech_pas_endpoint'] = [
-      '#type' => 'textfield',
-      '#title' => t('Playtech PAS Endpoint'),
-      '#description' => $this->t('Defines the endpoint used for authenticating PAS'),
-      '#default_value' => $config->get('playtech_pas_endpoint')
-    ];
+    // $form['playtech_pas_endpoint'] = [
+    //   '#type' => 'textfield',
+    //   '#title' => t('Playtech PAS Endpoint'),
+    //   '#description' => $this->t('Defines the endpoint used for authenticating PAS'),
+    //   '#default_value' => $config->get('playtech_pas_endpoint')
+    // ];
 
     $form['playtech_pas_casino'] = [
       '#type' => 'textfield',
@@ -51,12 +51,12 @@ class PlaytechProviderConfiguration extends ConfigFormBase {
       '#default_value' => $config->get('playtech_pas_casino')
     ];
 
-    $form['lobby_url'] = [
-      '#type' => 'textfield',
-      '#title' => t('Lobby URL'),
-      '#description' => $this->t('The Playtech Lobby URL'),
-      '#default_value' => $config->get('lobby_url')
-    ];
+    // $form['lobby_url'] = [
+    //   '#type' => 'textfield',
+    //   '#title' => t('Lobby URL'),
+    //   '#description' => $this->t('The Playtech Lobby URL'),
+    //   '#default_value' => $config->get('lobby_url')
+    // ];
 
     $form['languages'] = [
       '#type' => 'textarea',
@@ -64,10 +64,22 @@ class PlaytechProviderConfiguration extends ConfigFormBase {
       '#size' => 500,
       '#description' => $this->t('Define the language mapping for Playtech games. Pipe separated language code and value, one per line.
           <br>
-          If no mapping specified will use the front end language prefix as is.
+          If no mapping specified, it will use the front end language prefix as is.
           <br>
           <strong>en|en-us</strong>'),
       '#default_value' => $config->get('languages')
+    ];
+
+    $form['iapiconf_override'] = [
+      '#type' => 'textarea',
+      '#title' => t('iapiConf Override'),
+      '#size' => 500,
+      '#description' => $this->t('Define iapiConf to be overrided prior PAS initalization
+          <br>
+          If no mapping specified, it will use the the default config from Playtech
+          <br>
+          <strong>clientUrl_casino|https://cachebanner.9bonus.com/casinoclient.html</strong>'),
+      '#default_value' => $config->get('iapiconf_override')
     ];
 
     $form['actions'] = ['#type' => 'actions'];
@@ -91,10 +103,11 @@ class PlaytechProviderConfiguration extends ConfigFormBase {
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $keys = [
       'javascript_assets',
-      'playtech_pas_endpoint',
-      'lobby_url',
+      // 'playtech_pas_endpoint',
+      // 'lobby_url',
       'playtech_pas_casino',
-      'languages'
+      'languages',
+      'iapiconf_override'
     ];
 
     foreach ($keys as $key) {

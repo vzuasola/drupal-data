@@ -1,9 +1,10 @@
 lobby_page_title: 'Online Στοίχημα - Στοιχηματίστε σε Αθλήματα, Παίξτε Online Καζίνο και Πόκερ στη Dafabet'
 join_now_text: ΕΓΓΡΑΦΗ
+join_now_link: '/{domain:entry}/{domain:lang_token}/cant-login{tracking.token}'
 login_issue_text: 'Δε μπορείτε να συνδεθείτε'
 balance_error_text: 'Σφάλμα κατά την Ανάκτηση.'
-welcome_text: 'Καλώς ήρθατε {username}'
-profile_logout_text: Έξοδος
 profile_icon_hover_text: 'Το Προφίλ μου'
 cashier_icon_hover_text: Ταμείο
 product_menu_new_tag: Νέος
+welcome_text: 'Καλώς ήρθατε {username}'
+profile_logout_text: Έξοδος

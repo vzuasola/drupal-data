@@ -1,4 +1,4 @@
-games.search_configuration:
+games_config.search_configuration:
   type: config_object
   label: 'Games Search Custom Configurations'
   mapping:
