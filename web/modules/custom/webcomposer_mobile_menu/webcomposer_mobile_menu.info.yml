@@ -1,0 +1,5 @@
+name: Webcomposer Mobile Menu
+type: module
+description: This module provides configuration for mobile menu.
+core: 8.x
+package: Web Composer
