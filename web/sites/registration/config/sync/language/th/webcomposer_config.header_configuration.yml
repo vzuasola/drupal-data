@@ -2,10 +2,12 @@ lobby_page_title: ดาฟาเบทคือเว็บไซต์เด�
 join_now_text: สมัครสมาชิก
 join_now_link: '/{domain:entry}/{domain:lang_token}/cant-login{tracking.token}'
 login_issue_text: 'ลืมรหัสผ่าน?'
+login_issue_link: '/{domain:entry}/{domain:lang_token}/cant-login{tracking.token}'
 balance_error_text: เกิดความผิดพลาดในการเรียกดู
 profile_icon_hover_text: บัญชีของฉัน
 cashier_icon_hover_text: แคชเชียร์
 product_menu_new_tag: 'ใหม่ '
 welcome_text: 'ยินดีต้อนรับ {username}'
+profile_link: '/{domain:myaccount_domain}/{lang}/my-profile?title=headerPopup&width=820&height=700&token={legacy.credentials}'
 profile_logout_text: ออกจากระบบ
 balance_label_mapping: "4|กีฬา\r\n6|กีฬาเอเชีย\r\n1|คาสิโน คลาสสิค\r\n2|คาสิโนโกลด์\r\n5|ดีลเลอร์สด/ เกมส์/ เกมส์จำลอง\r\n8|บัญชีดีลเลอร์สด (Opus)\r\n9|คีโน\r\n3|โป๊กเกอร์\r\n7|Fish Hunter"
