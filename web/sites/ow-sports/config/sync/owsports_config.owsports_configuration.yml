@@ -18,4 +18,4 @@ colossus_pre_uri: ''
 colossus_post_uri: 'https://play.dafabet.com/Deposit_Processlogin.aspx'
 act_mapping: "hdpou\r\nonextwo\r\ncs\r\nhtftcs\r\noetg\r\nhtft\r\nfglg\r\nsocceroutright\r\nbasketball\r\nbacketballoutright\r\ntennis\r\ntennisoutright\r\noutright\r\nnumbergame\r\nvirtualsports\r\nvirtualhorse\r\nvirtualgreyhounds\r\nvirtualtennis\r\nvirtualmotorsports\r\nvirturlspeedway\r\nbadminton\r\nbaseball\r\nbilliard\r\nesports\r\nfootball\r\ngolf\r\nicehockey\r\nindiancricket\r\nmotorsports\r\nmuaythai\r\nnetball\r\nrugby\r\nvolleyball"
 legacy_cdn: '4'
-how_to_bet_uri: '/{domain:sports}/{domain:lang_token}/getting-started{legacy.params}{tracking.token}{domain:how-to-bet}'
+how_to_bet_uri: {domain:sports}/{domain:lang_token}/getting-started{legacy.params}{tracking.token}{domain:how-to-bet}
