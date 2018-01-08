@@ -61,6 +61,8 @@ class GamesConfigurationForm extends ConfigFormBase {
       'freeplay_lightbox_content',
       'html5_lightbox_title',
       'html5_lightbox_content',
+      'pas_error_lightbox_title',
+      'pas_error_lightbox_content',
       'disable_jackpot_ticker',
       'game_promotion_link',
       'game_promotion_link_target',
@@ -282,6 +284,22 @@ class GamesConfigurationForm extends ConfigFormBase {
       '#description' => $this->t('The text that will be displayed as content of the lightbox.'),
       '#default_value' => $html5LightboxContent['value'],
       '#format' => $html5LightboxContent['format'],
+      '#required' => TRUE,
+    );
+    $form['lightbox_group']['pas']['pas_error_lightbox_title'] = array(
+      '#type' => 'textfield',
+      '#title' => $this->t('Title'),
+      '#description' => $this->t('The text that will be displayed as title of the lightbox.'),
+      '#default_value' => $config->get('pas_error_lightbox_title'),
+      '#required' => FALSE,
+    );
+    $pasErrorLightboxContent = $config->get('pas_error_lightbox_content');
+    $form['lightbox_group']['pas']['pas_error_lightbox_content'] = array(
+      '#type' => 'text_format',
+      '#title' => $this->t('Content'),
+      '#description' => $this->t('The text that will be displayed as content of the lightbox.'),
+      '#default_value' => $pasErrorLightboxContent['value'],
+      '#format' => $pasErrorLightboxContent['format'],
       '#required' => TRUE,
     );
   }
