@@ -52,13 +52,6 @@ casino_games.games_configuration:
       type: text_format
       label: 'HTML5 Lightbox Content'
       translatable: true
-    html5_lightbox_title:
-      type: label
-      label: 'HTML5 Lightbox Title'
-    html5_lightbox_content:
-      type: text_format
-      label: 'HTML5 Lightbox Content'
-      translatable: true
     pas_error_lightbox_title:
       type: label
       label: 'PAS Error Lightbox Title'
