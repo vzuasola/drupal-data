@@ -173,6 +173,12 @@ class OWSportsCustomConfigForm extends ConfigFormBase {
       '#group' => 'owsports_settings_tab',
     ];
 
+    $form['singbet_config_group']['singbet_default_asia'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Use Asia template as default'),
+      '#default_value' => $config->get('singbet_default_asia')
+    ];
+
     $form['singbet_config_group']['singbet_pre_login_uri'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Pre-Login URI'),
@@ -192,20 +198,6 @@ class OWSportsCustomConfigForm extends ConfigFormBase {
       '#title' => $this->t('Template'),
       '#description' => $this->t('Language that uses skin template. This will add "webskin=2" to the query string.'),
       '#default_value' => $config->get('singbet_template'),
-    ];
-
-    $form['right_side_block'] = [
-      '#type' => 'details',
-      '#title' => $this->t('Right Side Block Config'),
-      '#collapsible' => TRUE,
-      '#group' => 'owsports_settings_tab',
-    ];
-
-    $form['right_side_block']['exclude_these_page'] = [
-      '#type' => 'textarea',
-      '#title' => $this->t('Exclude These Pages'),
-      '#description' => $this->t('List the pages, that right side block should be hide.'),
-      '#default_value' => $config->get('exclude_these_page'),
     ];
 
     return parent::buildForm($form, $form_state);
@@ -232,6 +224,7 @@ class OWSportsCustomConfigForm extends ConfigFormBase {
       'euro_template',
       'euro_pre_login_uri',
       'euro_post_login_uri',
+      'singbet_default_asia',
       'singbet_pre_login_uri',
       'singbet_post_login_uri',
       'singbet_template',
@@ -240,8 +233,7 @@ class OWSportsCustomConfigForm extends ConfigFormBase {
       'colossus_post_uri',
       'cdn_mapping',
       'act_mapping',
-      'legacy_cdn',
-      'exclude_these_page'
+      'legacy_cdn'
     ];
 
     foreach ($keys as $key) {
