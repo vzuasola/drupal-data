@@ -8,6 +8,8 @@ dependencies:
     - entity_reference_revisions
     - user
     - webcomposer_mobile_menu
+_core:
+  default_config_hash: l-TRh4CiOaIpyZ99d1m9OuN4Ty5aF6vVENlTBHLS7cQ
 id: mobile_menu_entity.mobile_menu_entity.default
 targetEntityType: mobile_menu_entity
 bundle: mobile_menu_entity

@@ -7,6 +7,8 @@ dependencies:
     - serialization
     - webcomposer_mobile_menu
     - webcomposer_rest_extra
+_core:
+  default_config_hash: UGPg6_OtbR9ckHCwF2PGrISPGZb-cRLTKmYecwzrbfE
 id: mobile_menu
 label: 'Mobile Menu'
 module: views

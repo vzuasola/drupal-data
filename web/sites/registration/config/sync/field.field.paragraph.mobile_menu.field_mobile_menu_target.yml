@@ -7,6 +7,8 @@ dependencies:
     - paragraphs.paragraphs_type.mobile_menu
   module:
     - options
+_core:
+  default_config_hash: SE3WRBWdifW3XGjBB29ct54ygj0AXp80tzNIsIEEQRA
 id: paragraph.mobile_menu.field_mobile_menu_target
 field_name: field_mobile_menu_target
 entity_type: paragraph

@@ -13,6 +13,8 @@ dependencies:
   module:
     - link
     - options
+_core:
+  default_config_hash: 9P8hQobPJX80ySIHldytu8gDh9llCesaGhP_CMykAak
 id: paragraph.mobile_menu.default
 targetEntityType: paragraph
 bundle: mobile_menu
