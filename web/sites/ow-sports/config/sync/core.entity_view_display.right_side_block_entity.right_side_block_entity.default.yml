@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.right_side_block_entity.right_side_block_entity.field_exclude_these_pages
     - field.field.right_side_block_entity.right_side_block_entity.field_image
     - field.field.right_side_block_entity.right_side_block_entity.field_image_link
     - field.field.right_side_block_entity.right_side_block_entity.field_image_link_target
@@ -24,6 +25,13 @@ targetEntityType: right_side_block_entity
 bundle: right_side_block_entity
 mode: default
 content:
+  field_exclude_these_pages:
+    weight: 10
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
   field_image:
     weight: 3
     label: above

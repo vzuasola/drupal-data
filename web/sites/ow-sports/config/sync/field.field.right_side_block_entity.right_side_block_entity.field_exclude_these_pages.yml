@@ -1,0 +1,20 @@
+uuid: 7220505f-efb4-4cca-a1ae-192f552f1fc2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.right_side_block_entity.field_exclude_these_pages
+  module:
+    - webcomposer_right_side_block
+id: right_side_block_entity.right_side_block_entity.field_exclude_these_pages
+field_name: field_exclude_these_pages
+entity_type: right_side_block_entity
+bundle: right_side_block_entity
+label: 'Exclude these Pages'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long
