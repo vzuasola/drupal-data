@@ -17,7 +17,7 @@ bundle: domain
 label: 'Add Placeholder'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
@@ -29,4 +29,25 @@ settings:
       domain_management_configuration:
         enabled: true
         weight: 2
+      floating_banner_item:
+        weight: 10
+        enabled: false
+      mobile_menu:
+        weight: 11
+        enabled: false
+      responsive_partner:
+        weight: 12
+        enabled: false
+      responsive_sponsor:
+        weight: 13
+        enabled: false
+      right_side_block_content:
+        weight: 14
+        enabled: false
+      slider_overlay_cmi:
+        weight: 15
+        enabled: false
+      social_media_cmi:
+        weight: 16
+        enabled: false
 field_type: entity_reference_revisions
