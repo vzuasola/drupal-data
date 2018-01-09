@@ -40,4 +40,12 @@ registration_config.general_configuration:
     enable_cashier_payment_methods:
       type: label
       label: 'Enable Cashier Payment Methods'
+    with_payment_method:
+      type: text_format
+      label: 'With Payment Method'
+      translatable: true
+    without_payment_method:
+      type: text_format
+      label: 'Without Payment Method'
+      translatable: true
   langcode: 'en'
