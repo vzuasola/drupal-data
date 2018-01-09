@@ -173,6 +173,12 @@ class OWSportsCustomConfigForm extends ConfigFormBase {
       '#group' => 'owsports_settings_tab',
     ];
 
+    $form['singbet_config_group']['singbet_default_asia'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Use Asia template as default'),
+      '#default_value' => $config->get('singbet_default_asia')
+    ];
+
     $form['singbet_config_group']['singbet_pre_login_uri'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Pre-Login URI'),
@@ -216,7 +222,11 @@ class OWSportsCustomConfigForm extends ConfigFormBase {
       'post_login_uri',
       'language_mapping',
       'euro_template',
-      'singbet_pre_login',
+      'euro_pre_login_uri',
+      'euro_post_login_uri',
+      'singbet_default_asia',
+      'singbet_pre_login_uri',
+      'singbet_post_login_uri',
       'singbet_template',
       'override_domain',
       'colossus_pre_uri',
