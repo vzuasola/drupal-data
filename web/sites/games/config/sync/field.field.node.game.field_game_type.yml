@@ -1,0 +1,23 @@
+uuid: 9e6d4889-6477-48b7-8a44-9f698ea32124
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_game_type
+    - node.type.game
+  module:
+    - options
+id: node.game.field_game_type
+field_name: field_game_type
+entity_type: node
+bundle: game
+label: 'Game Type'
+description: 'Check the Game type HTML5 or FLASH.'
+required: true
+translatable: true
+default_value:
+  -
+    value: '0'
+default_value_callback: ''
+settings: {  }
+field_type: list_string
