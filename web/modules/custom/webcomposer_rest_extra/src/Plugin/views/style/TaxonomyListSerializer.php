@@ -42,7 +42,7 @@ class TaxonomyListSerializer extends Serializer {
 
       foreach ($rowAssoc as $key => $value) {
         // loading the term object onto the rest export
-        if (isset($value[0]['target_type']) && $value[0]['target_type'] == 'taxonomy_term') {
+        if (is_array($value) && isset($value[0]['target_type']) && $value[0]['target_type'] == 'taxonomy_term') {
           $term = $this->loadTerm($value[0]['target_id']);
           $rowAssoc[$key][0] = $term;
         }
