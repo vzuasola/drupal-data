@@ -48,4 +48,7 @@ registration_config.general_configuration:
       type: text_format
       label: 'Without Payment Method'
       translatable: true
+    payment_method_headers:
+      type: label
+      label: 'Payment Method Headers'
   langcode: 'en'

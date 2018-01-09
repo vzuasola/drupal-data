@@ -244,6 +244,13 @@ class GeneralConfiguration extends ConfigFormBase {
       '#description' => $this->t('Input 1 to enable Cashier Payment Methods on step 2, 0 to disable'),
       '#default_value' => $config->get('enable_cashier_payment_methods'),
     ];
+    $form['cashier_settings']['payment_method_headers'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Payment Method Headers'),
+      '#description' => $this->t('Consist of 4 header, "Icon Header", "DescriptionHeader", ' .
+        ' "Min/Max Header", and "Action Header". This will be separated by "|" character.'),
+      '#default_value' => $config->get('payment_method_headers'),
+    ];
 
     $withPaymentMethod = $config->get('with_payment_method');
     $form['cashier_settings']['with_payment_method'] = [
@@ -293,6 +300,7 @@ class GeneralConfiguration extends ConfigFormBase {
       'enable_cashier_payment_methods',
       'with_payment_method',
       'without_payment_method',
+      'payment_method_headers'
     ];
 
     foreach ($keys as $key) {
