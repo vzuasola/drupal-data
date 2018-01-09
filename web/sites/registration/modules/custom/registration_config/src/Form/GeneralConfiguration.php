@@ -239,10 +239,17 @@ class GeneralConfiguration extends ConfigFormBase {
       '#group' => 'general_settings_tab',
     ];
     $form['cashier_settings']['enable_cashier_payment_methods'] = [
-      '#type' => 'number',
+      '#type' => 'checkbox',
       '#title' => $this->t('Enable Cashier Payment Methods'),
       '#description' => $this->t('Input 1 to enable Cashier Payment Methods on step 2, 0 to disable'),
       '#default_value' => $config->get('enable_cashier_payment_methods'),
+    ];
+    $form['cashier_settings']['payment_method_headers'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Payment Method Headers'),
+      '#description' => $this->t('Consist of 4 header, "Icon Header", "DescriptionHeader", ' .
+        ' "Min/Max Header", and "Action Header". This will be separated by "|" character.'),
+      '#default_value' => $config->get('payment_method_headers'),
     ];
 
     return parent::buildForm($form, $form_state);
@@ -273,6 +280,7 @@ class GeneralConfiguration extends ConfigFormBase {
       'livechat_header',
       'livechat_text',
       'enable_cashier_payment_methods',
+      'payment_method_headers'
     ];
 
     foreach ($keys as $key) {
