@@ -3,9 +3,11 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.right_side_block_entity.right_side_block_entity.field_exclude_these_pages
     - field.field.right_side_block_entity.right_side_block_entity.field_image
     - field.field.right_side_block_entity.right_side_block_entity.field_image_link
     - field.field.right_side_block_entity.right_side_block_entity.field_image_link_target
+    - field.field.right_side_block_entity.right_side_block_entity.field_log_in_state
     - field.field.right_side_block_entity.right_side_block_entity.field_post_blurb_content
     - field.field.right_side_block_entity.right_side_block_entity.field_pre_blurb_content
     - field.field.right_side_block_entity.right_side_block_entity.field_publish_date
@@ -26,7 +28,7 @@ third_party_settings:
         - field_publish_date
         - field_unpublish_date
       parent_name: ''
-      weight: 4
+      weight: 6
       format_type: tab
       format_settings:
         id: ''
@@ -41,7 +43,7 @@ third_party_settings:
         - field_image_link
         - field_image_link_target
       parent_name: ''
-      weight: 2
+      weight: 3
       format_type: tab
       format_settings:
         id: ''
@@ -55,20 +57,6 @@ third_party_settings:
         - field_pre_blurb_content
         - field_post_blurb_content
       parent_name: ''
-      weight: 3
-      format_type: tab
-      format_settings:
-        id: ''
-        classes: ''
-        formatter: closed
-        description: ''
-        required_fields: true
-      label: 'Blurb Settings'
-    group_language_setting:
-      children:
-        - translation
-        - langcode
-      parent_name: ''
       weight: 5
       format_type: tab
       format_settings:
@@ -77,12 +65,46 @@ third_party_settings:
         formatter: closed
         description: ''
         required_fields: true
-      label: 'Language Settings'
+      label: 'Blurb Settings'
+    group_page_display_settings:
+      children:
+        - field_exclude_these_pages
+      parent_name: ''
+      weight: 7
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Page Display Settings'
+    group_log_in_state:
+      children:
+        - field_log_in_state
+      parent_name: ''
+      weight: 4
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Log In State'
 id: right_side_block_entity.right_side_block_entity.default
 targetEntityType: right_side_block_entity
 bundle: right_side_block_entity
 mode: default
 content:
+  field_exclude_these_pages:
+    weight: 6
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
   field_image:
     weight: 21
     settings:
@@ -103,7 +125,13 @@ content:
     weight: 23
     settings: {  }
     third_party_settings: {  }
-    type: options_select
+    type: options_buttons
+    region: content
+  field_log_in_state:
+    weight: 27
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
     region: content
   field_post_blurb_content:
     weight: 26
@@ -128,7 +156,7 @@ content:
     type: datetime_default
     region: content
   field_title:
-    weight: 1
+    weight: 2
     settings:
       size: 60
       placeholder: ''
@@ -143,20 +171,20 @@ content:
     region: content
   langcode:
     type: language_select
-    weight: 3
+    weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
   name:
     type: string_textfield
-    weight: 0
+    weight: 1
     region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 2
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
