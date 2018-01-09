@@ -3,8 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.registration_theme_entity.registration_theme_entity.field_annotation_bg_colo
-    - field.field.registration_theme_entity.registration_theme_entity.field_annotation_font_color
     - field.field.registration_theme_entity.registration_theme_entity.field_asterisk_color
     - field.field.registration_theme_entity.registration_theme_entity.field_background_color
     - field.field.registration_theme_entity.registration_theme_entity.field_background_image
@@ -103,18 +101,6 @@ targetEntityType: registration_theme_entity
 bundle: registration_theme_entity
 mode: default
 content:
-  field_annotation_bg_colo:
-    weight: 14
-    settings: {  }
-    third_party_settings: {  }
-    type: color_field_widget_html5
-    region: content
-  field_annotation_font_color:
-    weight: 15
-    settings: {  }
-    third_party_settings: {  }
-    type: color_field_widget_html5
-    region: content
   field_asterisk_color:
     weight: 9
     settings: {  }
