@@ -37,4 +37,7 @@ registration_config.general_configuration:
     livechat_text:
       type: label
       label: 'Live Chat Text'
+    enable_cashier_payment_methods:
+      type: label
+      label: 'Enable Cashier Payment Methods'
   langcode: 'en'
