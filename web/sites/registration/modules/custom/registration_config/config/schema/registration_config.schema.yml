@@ -51,4 +51,7 @@ registration_config.general_configuration:
     payment_method_headers:
       type: label
       label: 'Payment Method Headers'
+    deposit_now_text:
+      type: label
+      label: 'Deposit Now Button Text'
   langcode: 'en'
