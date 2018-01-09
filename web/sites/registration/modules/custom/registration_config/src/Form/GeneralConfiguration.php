@@ -252,6 +252,24 @@ class GeneralConfiguration extends ConfigFormBase {
       '#default_value' => $config->get('payment_method_headers'),
     ];
 
+    $withPaymentMethod = $config->get('with_payment_method');
+    $form['cashier_settings']['with_payment_method'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('With Payment Method'),
+      '#description' => $this->t("Message to be displayed if payment method is available."),
+      '#default_value' => $withPaymentMethod['value'],
+      '#format' => $withPaymentMethod['format'],
+    ];
+
+    $withoutPaymentMethod = $config->get('without_payment_method');
+    $form['cashier_settings']['without_payment_method'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('Without Payment Method'),
+      '#description' => $this->t("Message to be displayed if payment method is not available."),
+      '#default_value' => $withoutPaymentMethod['value'],
+      '#format' => $withoutPaymentMethod['format'],
+    ];
+
     return parent::buildForm($form, $form_state);
   }
 
@@ -280,6 +298,8 @@ class GeneralConfiguration extends ConfigFormBase {
       'livechat_header',
       'livechat_text',
       'enable_cashier_payment_methods',
+      'with_payment_method',
+      'without_payment_method',
       'payment_method_headers'
     ];
 
