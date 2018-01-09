@@ -207,7 +207,7 @@ class GeneralConfiguration extends ConfigFormBase {
     $form['avaya_settings']['enable_avaya_proactive'] = [
       '#type' => 'number',
       '#title' => $this->t('Enable Proactive Livechat'),
-      '#description' => $this->t('Check this is you want to enable proactive livechat'),
+      '#description' => $this->t('Input 1 to enable avaya proactive, 0 to disable'),
       '#default_value' => $config->get('enable_avaya_proactive'),
     ];
     $form['avaya_settings']['livechat_timeout'] = [
@@ -224,12 +224,25 @@ class GeneralConfiguration extends ConfigFormBase {
       '#default_value' => $config->get('livechat_header'),
       '#required' => TRUE,
     ];
-      $form['avaya_settings']['livechat_text'] = [
+    $form['avaya_settings']['livechat_text'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Live Chat Text'),
       '#description' => $this->t('Text that will be displayed inside the chatbox'),
       '#default_value' => $config->get('livechat_text'),
       '#required' => TRUE,
+    ];
+
+    $form['cashier_settings'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Cashier Settings'),
+      '#collapsible' => TRUE,
+      '#group' => 'general_settings_tab',
+    ];
+    $form['cashier_settings']['enable_cashier_payment_methods'] = [
+      '#type' => 'number',
+      '#title' => $this->t('Enable Cashier Payment Methods'),
+      '#description' => $this->t('Input 1 to enable Cashier Payment Methods on step 2, 0 to disable'),
+      '#default_value' => $config->get('enable_cashier_payment_methods'),
     ];
 
     return parent::buildForm($form, $form_state);
@@ -259,6 +272,7 @@ class GeneralConfiguration extends ConfigFormBase {
       'livechat_timeout',
       'livechat_header',
       'livechat_text',
+      'enable_cashier_payment_methods',
     ];
 
     foreach ($keys as $key) {
