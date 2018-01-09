@@ -138,6 +138,12 @@ class OWSportsCustomConfigForm extends ConfigFormBase {
       '#required' => TRUE,
     ];
 
+    $form['asia_config_group']['how_to_bet_uri'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('How to bet URI'),
+      '#default_value' => $config->get('how_to_bet_uri'),
+    ];
+
     $form['euro_config_group'] = [
       '#type' => 'details',
       '#title' => $this->t('Euro Template'),
@@ -161,7 +167,7 @@ class OWSportsCustomConfigForm extends ConfigFormBase {
 
     $form['euro_config_group']['euro_template'] = [
       '#type' => 'textarea',
-      '#title' => $this->t('Template'),
+      '#title' => $this->t('Supported Language'),
       '#description' => $this->t('Language that uses skin template. This will add "webskin=1" to the query string.'),
       '#default_value' => $config->get('euro_template'),
     ];
@@ -195,7 +201,7 @@ class OWSportsCustomConfigForm extends ConfigFormBase {
 
     $form['singbet_config_group']['singbet_template'] = [
       '#type' => 'textarea',
-      '#title' => $this->t('Template'),
+      '#title' => $this->t('Supported Language'),
       '#description' => $this->t('Language that uses skin template. This will add "webskin=2" to the query string.'),
       '#default_value' => $config->get('singbet_template'),
     ];
@@ -216,6 +222,7 @@ class OWSportsCustomConfigForm extends ConfigFormBase {
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $keys = [
       'iframe_container',
+      'how_to_bet_uri',
       'pre_transaction_subdomain',
       'pre_login_uri',
       'post_transaction_subdomain',
