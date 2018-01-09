@@ -4,6 +4,8 @@ status: true
 dependencies:
   config:
     - paragraphs.paragraphs_type.mobile_menu
+_core:
+  default_config_hash: TUzAnJMHw4qpjxAj05rHW0KMkQ9LiBhygv0g25wSb0I
 id: paragraph.mobile_menu.uid
 field_name: uid
 entity_type: paragraph

@@ -6,6 +6,8 @@ dependencies:
     - entity_reference_revisions
     - paragraphs
     - webcomposer_mobile_menu
+_core:
+  default_config_hash: d7HhbjGe0qMqAqHbWeVVWzZ0FFD5oGEa64LovZWZNTE
 id: mobile_menu_entity.field_mobile_menu_item
 field_name: field_mobile_menu_item
 entity_type: mobile_menu_entity

@@ -4,6 +4,8 @@ status: true
 dependencies:
   module:
     - paragraphs
+_core:
+  default_config_hash: 1oknOHhJujFVN6vmyHzWbxZkcM-kdyfGBeIN0Q677uU
 id: paragraph.field_mobile_menu_label
 field_name: field_mobile_menu_label
 entity_type: paragraph

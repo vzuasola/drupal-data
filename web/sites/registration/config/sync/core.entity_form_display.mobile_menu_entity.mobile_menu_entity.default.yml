@@ -7,6 +7,8 @@ dependencies:
   module:
     - paragraphs
     - webcomposer_mobile_menu
+_core:
+  default_config_hash: E8CO2INYdvMtuZ0DAlbI503n-l_QMkeq137Y-h14vn0
 id: mobile_menu_entity.mobile_menu_entity.default
 targetEntityType: mobile_menu_entity
 bundle: mobile_menu_entity
@@ -32,6 +34,9 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
 hidden:
   langcode: true
   user_id: true

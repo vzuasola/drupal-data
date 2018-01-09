@@ -8,6 +8,8 @@ dependencies:
   module:
     - entity_reference_revisions
     - webcomposer_mobile_menu
+_core:
+  default_config_hash: VGBR_ZxNsmrxqUgPjMdQWRT5AyYveGwVI_o-45BWbb8
 id: mobile_menu_entity.mobile_menu_entity.field_mobile_menu_item
 field_name: field_mobile_menu_item
 entity_type: mobile_menu_entity

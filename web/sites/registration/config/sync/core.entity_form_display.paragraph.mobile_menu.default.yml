@@ -12,6 +12,8 @@ dependencies:
     - paragraphs.paragraphs_type.mobile_menu
   module:
     - link
+_core:
+  default_config_hash: iNLTlHcvQmshlrFPaStloCaH0eWag-u0Va4dUzBuIMg
 id: paragraph.mobile_menu.default
 targetEntityType: paragraph
 bundle: mobile_menu
