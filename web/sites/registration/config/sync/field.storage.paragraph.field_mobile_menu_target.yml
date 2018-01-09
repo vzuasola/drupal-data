@@ -5,6 +5,8 @@ dependencies:
   module:
     - options
     - paragraphs
+_core:
+  default_config_hash: 1XJyevegSY0CGiQ8wNwdzaN4x-LIMDQ_OXTATD9G9y0
 id: paragraph.field_mobile_menu_target
 field_name: field_mobile_menu_target
 entity_type: paragraph

@@ -5,6 +5,8 @@ dependencies:
   config:
     - field.storage.paragraph.field_mobile_menu_label
     - paragraphs.paragraphs_type.mobile_menu
+_core:
+  default_config_hash: uvD26yxeKyp6MVkpGCcDXzKFBBS6GKsIm6hX0TNpRfM
 id: paragraph.mobile_menu.field_mobile_menu_label
 field_name: field_mobile_menu_label
 entity_type: paragraph
