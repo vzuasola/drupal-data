@@ -3,7 +3,7 @@ play_for_fun_text: 'Free Play'
 game_info_text: 'Game Info'
 kebab_menu_text: More
 load_more_text: 'Load More Games'
-load_more_disabled: 0
+load_more_disabled: 1
 freeplay_lightbox_title: NOTIFICATION
 freeplay_lightbox_content:
   value: "<p>Free play is not available.<br />\r\nYou may play on real money instead.</p>\r\n\r\n<p><a class=\"btn btn-ok btn-medium btn-yellow\" href=\"#\" target=\"_blank\">PLAY FOR REAL</a>&nbsp; &nbsp;<a class=\"btn btn-gray btn-medium\" href=\"{domain:entry}/{lang}/games/\" target=\"_self\">GO BACK TO LOBBY</a></p>\r\n"
@@ -26,3 +26,7 @@ filter_header: Fliter
 filter_submit: Submit
 filter_clear: 'Clear Selection'
 home_categories_text: 'Home - EN'
+pas_error_lightbox_title: ''
+pas_error_lightbox_content:
+  value: "<table>\r\n\t<tbody>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\r\n\t\t\t<p>Unable to launch game due to login authentication error. Please re-login.Unable to launch game due to login authentication error. Please re-login.</p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t</tbody>\r\n</table>\r\n\r\n<p><a class=\"btn-ok btn\" href=\"#\" target=\"_blank\">OK</a>&nbsp;</p>\r\n"
+  format: basic_html
