@@ -5,3 +5,11 @@ webcomposer_mobile_menu.admin_settings:
     _title: 'Webcomposer Mobile Menu'
   requirements:
     _permission: 'administer site configuration'
+
+webcomposer_mobile_menu.mobile_menu_form:
+  path: 'admin/config/webcomposer/mobile-menu/config'
+  defaults:
+    _form: 'Drupal\webcomposer_mobile_menu\Form\MobileMenuConfiguration'
+    _title: 'Mobile Menu Configuration'
+  requirements:
+    _permission: 'administer site configuration'
