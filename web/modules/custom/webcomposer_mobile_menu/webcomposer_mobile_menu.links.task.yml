@@ -4,6 +4,11 @@ mobile_menu_entity.settings_tab:
   title: 'Settings'
   base_route: mobile_menu_entity.settings
 
+webcomposer_mobile_menu.mobile_menu_configuration_tab:
+  route_name: webcomposer_mobile_menu.mobile_menu_form
+  title: 'Mobile Menu Configuration'
+  base_route: webcomposer_mobile_menu.mobile_menu_form
+
 entity.mobile_menu_entity.canonical:
   route_name: entity.mobile_menu_entity.canonical
   base_route: entity.mobile_menu_entity.canonical
