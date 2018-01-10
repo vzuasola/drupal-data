@@ -278,6 +278,7 @@ display:
         sorts: false
         cache: false
         show_admin_links: false
+        header: false
       fields:
         name:
           table: games_showcase_entity_field_data
@@ -958,6 +959,18 @@ display:
         type: none
         options: {  }
       show_admin_links: false
+      header:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content: "<p>\n<b>Note</b>\nWhen sorting showcase for Games Category please choose <b>Any</b> on Home Sub Category filter.<br>\nWhen sorting showcase for Home Sub Category choose <b>Any</b> on Games Category filter.\n</p>"
+          plugin_id: text_custom
     cache_metadata:
       max-age: 0
       contexts:
