@@ -1,0 +1,5 @@
+webcomposer_mobile_menu.mobile_menu_config_schema:
+  title: 'Mobile Menu Configuration'
+  base_route_name: webcomposer_mobile_menu.mobile_menu_form
+  names:
+    - 'webcomposer_config.mobile_menu_config'
