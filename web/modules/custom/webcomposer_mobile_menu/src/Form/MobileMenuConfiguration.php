@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Drupal\webcomposer_mobile_menu\Form;
 
 use Drupal\Core\Form\ConfigFormBase;
@@ -11,7 +10,7 @@ use Drupal\Core\Form\FormStateInterface;
  */
 class MobileMenuConfiguration extends ConfigFormBase {
 
-    /**
+  /**
    * {@inheritdoc}
    */
   protected function getEditableConfigNames() {
@@ -50,7 +49,7 @@ class MobileMenuConfiguration extends ConfigFormBase {
       '#required' => TRUE,
     ];
 
-    # User Account Group
+    // User Account Group.
     $form['account'] = [
       '#type' => 'details',
       '#title' => $this->t('User account links'),
@@ -59,7 +58,7 @@ class MobileMenuConfiguration extends ConfigFormBase {
       '#description' => $this->t('Cashier and My Account buttons menu'),
     ];
 
-    # Cashier Link
+    // Cashier Link.
     $form['account']['mobile_menu_cashier_links_label'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Cashier label'),
@@ -76,7 +75,7 @@ class MobileMenuConfiguration extends ConfigFormBase {
       '#maxlength' => 256,
     ];
 
-    # My Account Link
+    // My Account Link.
     $form['account']['mobile_menu_account_links_label'] = [
       '#type' => 'textfield',
       '#title' => $this->t('My Account label'),
@@ -105,7 +104,7 @@ class MobileMenuConfiguration extends ConfigFormBase {
       'mobile_menu_cashier_links_label',
       'mobile_menu_cashier_links',
       'mobile_menu_account_links_label',
-      'mobile_menu_account_links'
+      'mobile_menu_account_links',
     ];
 
     foreach ($keys as $key) {
@@ -114,6 +113,5 @@ class MobileMenuConfiguration extends ConfigFormBase {
 
     return parent::submitForm($form, $form_state);
   }
-
 
 }
