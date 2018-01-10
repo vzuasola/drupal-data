@@ -286,13 +286,6 @@ class GamesConfigurationForm extends ConfigFormBase {
       '#format' => $html5LightboxContent['format'],
       '#required' => TRUE,
     );
-    $pasLightboxGroupTitle = $this->t('PAS Error (Lightbox)');
-    $form['lightbox_group']['pas'] = array(
-        '#type' => 'details',
-        '#title' => $pasLightboxGroupTitle,
-        '#open' => TRUE,
-        '#description' => '<p>This lightbox will appear if pas authentication failed on game launch.</p>'
-    );
     $form['lightbox_group']['pas']['pas_error_lightbox_title'] = array(
       '#type' => 'textfield',
       '#title' => $this->t('Title'),

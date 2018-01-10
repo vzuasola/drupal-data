@@ -8,7 +8,3 @@ html5_lightbox_content:
   format: basic_html
 html5_lightbox_title: 'SC _ Alert!'
 home_categories_text: 'Home - SC'
-pas_error_lightbox_title: 'PAS Error! - sc'
-pas_error_lightbox_content:
-  value: "<table>\r\n\t<tbody>\r\n\t\t<tr>\r\n\t\t\t<td>Unable to launch game due to login authentication error. Please re-login.Unable to launch game due to login authentication error. Please re-login. - sc</td>\r\n\t\t</tr>\r\n\t</tbody>\r\n</table>\r\n"
-  format: basic_html
