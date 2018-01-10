@@ -61,6 +61,9 @@ field_validations:
       invalid_words_list: ''
   valid_languages:
     enable: 1
-    error_message: 'This field only accepts specific characters.'
+    error_message: 'Please enter your Date of Birth in this format: DD/MM/YYYY'
     parameters:
       regex_value: '^[0-9/]+$'
+  valid_date:
+    enable: 1
+    error_message: 'Please enter your Date of Birth in this format: DD/MM/YYYY'
