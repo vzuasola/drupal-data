@@ -9,7 +9,9 @@ dependencies:
     - field.field.node.game.field_game_info
     - field.field.node.game.field_game_info_toggle
     - field.field.node.game.field_game_keywords
+    - field.field.node.game.field_game_provider
     - field.field.node.game.field_game_title
+    - field.field.node.game.field_game_type
     - field.field.node.game.field_games_category
     - field.field.node.game.field_home_category
     - field.field.node.game.field_play_for_fun_toggle
@@ -18,6 +20,7 @@ dependencies:
     - node.type.game
   module:
     - image
+    - options
     - text
     - user
 id: node.game.default
@@ -74,12 +77,26 @@ content:
     third_party_settings: {  }
     type: string
     region: content
+  field_game_provider:
+    weight: 111
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
   field_game_title:
     weight: 104
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
+    region: content
+  field_game_type:
+    weight: 112
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
   field_games_category:
     weight: 107
