@@ -19,3 +19,11 @@ enable_avaya_proactive: '1'
 livechat_timeout: '120'
 livechat_header: 'Need Help?'
 livechat_text: 'How can we help you?'
+enable_cashier_payment_methods: '0'
+with_payment_method:
+  value: "<div class=\"payment-option-header background-light-gray text-center\"><strong>Deposit Made Easy</strong>\r\n</div>\r\n<p class=\"payment-option-desc text-14 text-center hidden-mobile mt-15 mb-15\">Learn the different payment methods you can use to be able to enjoy betting at Dafabet.\r\n</p>\r\n"
+  format: basic_html
+without_payment_method:
+  value: "<div class=\"content-header background-light-gray text-center pt-10 pb-10\"><strong class=\"text-20\">How to Deposit?</strong>\r\n  <p class=\"text-16 mb-0\">Contact our Customer Support 24/7\r\n  </p>\r\n</div>\r\n<div class=\"container-contact-us p-10 text-center\">\r\n  <div class=\"image-contact-us-item inline-block mr-30\">\r\n    <picture> \r\n      <source media=\"(min-width: 768px)\" srcset=\"http://via.placeholder.com/220x120\" /> \r\n      <source media=\"(min-width: 320px)\" srcset=\"http://via.placeholder.com/120x80\" /> <img alt=\"\" data-entity-type=\"\" data-entity-uuid=\"\" src=\"http://via.placeholder.com/220x120\" /> \r\n    </picture>\r\n  </div>\r\n  <div class=\"image-contact-us-item inline-block\">\r\n    <picture> \r\n      <source media=\"(min-width: 768px)\" srcset=\"http://via.placeholder.com/220x120\" /> \r\n      <source media=\"(min-width: 320px)\" srcset=\"http://via.placeholder.com/120x80\" /> <img alt=\"\" data-entity-type=\"\" data-entity-uuid=\"\" src=\"http://via.placeholder.com/220x120\" /> \r\n    </picture>\r\n  </div>\r\n  <div><a href=\"https://www.google.com\"><img alt=\"masters.png\" data-entity-type=\"\" data-entity-uuid=\"\" height=\"44\" src=\"/sites/registration/files/2017-11/masters.png\" width=\"56\" /></a>\r\n  </div>\r\n</div>\r\n"
+  format: basic_html
+payment_method_headers: 'Payment Options|Description|Min/Max| '
