@@ -244,6 +244,11 @@ class GeneralConfiguration extends ConfigFormBase {
       '#description' => $this->t('Input 1 to enable Cashier Payment Methods on step 2, 0 to disable'),
       '#default_value' => $config->get('enable_cashier_payment_methods'),
     ];
+    $form['cashier_settings']['deposit_now_text'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Deposit Now Button Text'),
+      '#default_value' => $config->get('deposit_now_text'),
+    ];
     $form['cashier_settings']['payment_method_headers'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Payment Method Headers'),
@@ -251,7 +256,6 @@ class GeneralConfiguration extends ConfigFormBase {
         ' "Min/Max Header", and "Action Header". This will be separated by "|" character.'),
       '#default_value' => $config->get('payment_method_headers'),
     ];
-
     $withPaymentMethod = $config->get('with_payment_method');
     $form['cashier_settings']['with_payment_method'] = [
       '#type' => 'text_format',
@@ -260,7 +264,6 @@ class GeneralConfiguration extends ConfigFormBase {
       '#default_value' => $withPaymentMethod['value'],
       '#format' => $withPaymentMethod['format'],
     ];
-
     $withoutPaymentMethod = $config->get('without_payment_method');
     $form['cashier_settings']['without_payment_method'] = [
       '#type' => 'text_format',
@@ -300,7 +303,8 @@ class GeneralConfiguration extends ConfigFormBase {
       'enable_cashier_payment_methods',
       'with_payment_method',
       'without_payment_method',
-      'payment_method_headers'
+      'payment_method_headers',
+      'deposit_now_text'
     ];
 
     foreach ($keys as $key) {
