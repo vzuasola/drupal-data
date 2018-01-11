@@ -1,0 +1,19 @@
+uuid: 00a3765d-e8af-4026-a210-50c995b35394
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_jackpot_code
+    - node.type.game
+id: node.game.field_jackpot_code
+field_name: field_jackpot_code
+entity_type: node
+bundle: game
+label: 'Jackpot Code'
+description: "This field is used for Jackpot Counter in the game lobby and game page.\r\nEmpty field will no longer display the Jackpot."
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
