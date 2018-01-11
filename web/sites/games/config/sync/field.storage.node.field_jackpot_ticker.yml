@@ -1,0 +1,20 @@
+uuid: c69731d6-a555-4be8-bbeb-2a8e9e43d0d9
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_jackpot_ticker
+field_name: field_jackpot_ticker
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
