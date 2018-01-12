@@ -1,0 +1,23 @@
+uuid: 6d1c8217-9aa6-4e2e-a5ea-ddf925f8cf44
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_jackpot_ticker
+    - node.type.game
+id: node.game.field_jackpot_ticker
+field_name: field_jackpot_ticker
+entity_type: node
+bundle: game
+label: 'Jackpot Ticker'
+description: 'This field is used for Game Thumbnail Jackpot Ticker Timer, use milliseconds only.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer
