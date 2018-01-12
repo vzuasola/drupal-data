@@ -3,8 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.registration_theme_entity.registration_theme_entity.field_annotation_bg_colo
-    - field.field.registration_theme_entity.registration_theme_entity.field_annotation_font_color
     - field.field.registration_theme_entity.registration_theme_entity.field_asterisk_color
     - field.field.registration_theme_entity.registration_theme_entity.field_background_color
     - field.field.registration_theme_entity.registration_theme_entity.field_background_image
@@ -16,7 +14,6 @@ dependencies:
     - field.field.registration_theme_entity.registration_theme_entity.field_form_font_color
     - field.field.registration_theme_entity.registration_theme_entity.field_link_color
     - field.field.registration_theme_entity.registration_theme_entity.field_login_destination_url
-    - field.field.registration_theme_entity.registration_theme_entity.field_meta_tags
     - field.field.registration_theme_entity.registration_theme_entity.field_registration_button_font_c
     - field.field.registration_theme_entity.registration_theme_entity.field_registration_button_form_c
     - field.field.registration_theme_entity.registration_theme_entity.field_registration_button_form_h
@@ -38,7 +35,6 @@ third_party_settings:
   field_group:
     group_login:
       children:
-        - field_is_legacy
         - field_login_destination_url
       parent_name: ''
       weight: 3
@@ -105,18 +101,6 @@ targetEntityType: registration_theme_entity
 bundle: registration_theme_entity
 mode: default
 content:
-  field_annotation_bg_colo:
-    weight: 14
-    settings: {  }
-    third_party_settings: {  }
-    type: color_field_widget_html5
-    region: content
-  field_annotation_font_color:
-    weight: 15
-    settings: {  }
-    third_party_settings: {  }
-    type: color_field_widget_html5
-    region: content
   field_asterisk_color:
     weight: 9
     settings: {  }
@@ -150,7 +134,7 @@ content:
     type: color_field_widget_html5
     region: content
   field_default_regvia:
-    weight: 27
+    weight: 7
     settings:
       size: 60
       placeholder: ''
@@ -252,6 +236,12 @@ content:
     third_party_settings: {  }
     type: color_field_widget_html5
     region: content
+  langcode:
+    type: language_select
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   name:
     type: string_textfield
     weight: 0
@@ -260,8 +250,10 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  translation:
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
-  field_meta_tags: true
-  langcode: true
-  translation: true
   user_id: true

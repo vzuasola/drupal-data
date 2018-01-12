@@ -30,3 +30,7 @@ field_validations:
     error_message: 'Email not available'
   invalid_words:
     error_message: 'Invalid/not allowed characters'
+  valid_languages:
+    error_message: "Silahkan masukkan Tanggal Lahir Anda dalam format: DD/MM/YYYY\r\n"
+  valid_date:
+    error_message: "Silahkan masukkan Tanggal Lahir Anda dalam format: DD/MM/YYYY\r\n"

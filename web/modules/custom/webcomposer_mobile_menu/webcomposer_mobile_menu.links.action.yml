@@ -1,0 +1,5 @@
+entity.mobile_menu_entity.add_form:
+  route_name: entity.mobile_menu_entity.add_form
+  title: 'Add Mobile menu entity'
+  appears_on:
+    - entity.mobile_menu_entity.collection

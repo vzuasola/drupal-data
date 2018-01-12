@@ -1,0 +1,94 @@
+uuid: 3cd955e1-c3f1-49ac-9de4-d97506f61241
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.games_showcase_entity.games_showcase_entity.field_games_category
+    - field.field.games_showcase_entity.games_showcase_entity.field_home_sub_category
+    - field.field.games_showcase_entity.games_showcase_entity.field_home_tab_ribbon
+    - field.field.games_showcase_entity.games_showcase_entity.field_log_in_state
+    - field.field.games_showcase_entity.games_showcase_entity.field_showcase_body
+    - field.field.games_showcase_entity.games_showcase_entity.field_showcase_image
+    - field.field.games_showcase_entity.games_showcase_entity.field_showcase_ribbon
+    - field.field.games_showcase_entity.games_showcase_entity.field_title
+    - image.style.thumbnail
+  module:
+    - games_showcase
+    - image
+    - text
+_core:
+  default_config_hash: PSZa9vcZ2_1vft-zVmYsX9sXBMQkeoKQ53gmxdYClts
+id: games_showcase_entity.games_showcase_entity.default
+targetEntityType: games_showcase_entity
+bundle: games_showcase_entity
+mode: default
+content:
+  field_games_category:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_home_sub_category:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_home_tab_ribbon:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_log_in_state:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_showcase_body:
+    weight: 6
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea_with_summary
+    region: content
+  field_showcase_image:
+    weight: 5
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_showcase_ribbon:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  translation:
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  name: true
+  user_id: true

@@ -1,0 +1,25 @@
+uuid: 538e7121-dea4-42ed-98b8-a1f0cafe6022
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_home_category
+    - node.type.game
+id: node.game.field_home_category
+field_name: field_home_category
+entity_type: node
+bundle: game
+label: 'Home Sub Category'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: home_categories_reference_
+      display_name: entity_reference_1
+      arguments: {  }
+field_type: entity_reference

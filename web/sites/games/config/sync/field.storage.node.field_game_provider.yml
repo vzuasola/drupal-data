@@ -1,0 +1,30 @@
+uuid: 91f42c4b-417d-4adc-9308-b3a2f17b91c3
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_game_provider
+field_name: field_game_provider
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: playtech
+      label: Playtech
+    -
+      value: skywind
+      label: Skywind
+    -
+      value: voidbridge
+      label: Voidbridge
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

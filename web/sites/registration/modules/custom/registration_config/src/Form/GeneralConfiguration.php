@@ -207,7 +207,7 @@ class GeneralConfiguration extends ConfigFormBase {
     $form['avaya_settings']['enable_avaya_proactive'] = [
       '#type' => 'number',
       '#title' => $this->t('Enable Proactive Livechat'),
-      '#description' => $this->t('Check this is you want to enable proactive livechat'),
+      '#description' => $this->t('Input 1 to enable avaya proactive, 0 to disable'),
       '#default_value' => $config->get('enable_avaya_proactive'),
     ];
     $form['avaya_settings']['livechat_timeout'] = [
@@ -224,12 +224,53 @@ class GeneralConfiguration extends ConfigFormBase {
       '#default_value' => $config->get('livechat_header'),
       '#required' => TRUE,
     ];
-      $form['avaya_settings']['livechat_text'] = [
+    $form['avaya_settings']['livechat_text'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Live Chat Text'),
       '#description' => $this->t('Text that will be displayed inside the chatbox'),
       '#default_value' => $config->get('livechat_text'),
       '#required' => TRUE,
+    ];
+
+    $form['cashier_settings'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Cashier Settings'),
+      '#collapsible' => TRUE,
+      '#group' => 'general_settings_tab',
+    ];
+    $form['cashier_settings']['enable_cashier_payment_methods'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable Cashier Payment Methods'),
+      '#description' => $this->t('Input 1 to enable Cashier Payment Methods on step 2, 0 to disable'),
+      '#default_value' => $config->get('enable_cashier_payment_methods'),
+    ];
+    $form['cashier_settings']['deposit_now_text'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Deposit Now Button Text'),
+      '#default_value' => $config->get('deposit_now_text'),
+    ];
+    $form['cashier_settings']['payment_method_headers'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Payment Method Headers'),
+      '#description' => $this->t('Consist of 4 header, "Icon Header", "DescriptionHeader", ' .
+        ' "Min/Max Header", and "Action Header". This will be separated by "|" character.'),
+      '#default_value' => $config->get('payment_method_headers'),
+    ];
+    $withPaymentMethod = $config->get('with_payment_method');
+    $form['cashier_settings']['with_payment_method'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('With Payment Method'),
+      '#description' => $this->t("Message to be displayed if payment method is available."),
+      '#default_value' => $withPaymentMethod['value'],
+      '#format' => $withPaymentMethod['format'],
+    ];
+    $withoutPaymentMethod = $config->get('without_payment_method');
+    $form['cashier_settings']['without_payment_method'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('Without Payment Method'),
+      '#description' => $this->t("Message to be displayed if payment method is not available."),
+      '#default_value' => $withoutPaymentMethod['value'],
+      '#format' => $withoutPaymentMethod['format'],
     ];
 
     return parent::buildForm($form, $form_state);
@@ -259,6 +300,11 @@ class GeneralConfiguration extends ConfigFormBase {
       'livechat_timeout',
       'livechat_header',
       'livechat_text',
+      'enable_cashier_payment_methods',
+      'with_payment_method',
+      'without_payment_method',
+      'payment_method_headers',
+      'deposit_now_text'
     ];
 
     foreach ($keys as $key) {

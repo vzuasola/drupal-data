@@ -1,4 +1,4 @@
-uuid: 4a7516b9-298a-4910-aad0-937b257c3da8
+uuid: 7220505f-efb4-4cca-a1ae-192f552f1fc2
 langcode: en
 status: true
 dependencies:
@@ -11,7 +11,7 @@ field_name: field_exclude_these_pages
 entity_type: right_side_block_entity
 bundle: right_side_block_entity
 label: 'Exclude these Pages'
-description: 'Specify page to exclude. One page per line, wildcard <strong>*</strong> is also accepted.'
+description: ''
 required: false
 translatable: true
 default_value: {  }

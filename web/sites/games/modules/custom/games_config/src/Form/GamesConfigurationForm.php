@@ -54,12 +54,15 @@ class GamesConfigurationForm extends ConfigFormBase {
       'kebab_menu_text',
       'load_more_text',
       'load_more_disabled',
+      'home_categories_text',
       'favorites_text',
       'recently_played_text',
       'freeplay_lightbox_title',
       'freeplay_lightbox_content',
       'html5_lightbox_title',
       'html5_lightbox_content',
+      'pas_error_lightbox_title',
+      'pas_error_lightbox_content',
       'disable_jackpot_ticker',
       'game_promotion_link',
       'game_promotion_link_target',
@@ -163,6 +166,13 @@ class GamesConfigurationForm extends ConfigFormBase {
     $form['category_group']['special_categories'] = array(
       '#type' => 'fieldset',
       '#title' => $this->t('Special Categories'),
+    );
+    $form['category_group']['special_categories']['home_categories_text'] = array(
+      '#type' => 'textfield',
+      '#title' => $this->t('Home Categories Text'),
+      '#description' => $this->t('The text to display for the home category.'),
+      '#default_value' => $config->get('home_categories_text'),
+      '#required' => TRUE,
     );
     $form['category_group']['special_categories']['favorites_text'] = array(
       '#type' => 'textfield',
@@ -274,6 +284,29 @@ class GamesConfigurationForm extends ConfigFormBase {
       '#description' => $this->t('The text that will be displayed as content of the lightbox.'),
       '#default_value' => $html5LightboxContent['value'],
       '#format' => $html5LightboxContent['format'],
+      '#required' => TRUE,
+    );
+    $pasLightboxGroupTitle = $this->t('PAS Error (Lightbox)');
+    $form['lightbox_group']['pas'] = array(
+        '#type' => 'details',
+        '#title' => $pasLightboxGroupTitle,
+        '#open' => TRUE,
+        '#description' => '<p>This lightbox will appear if pas authentication failed on game launch.</p>'
+    );
+    $form['lightbox_group']['pas']['pas_error_lightbox_title'] = array(
+      '#type' => 'textfield',
+      '#title' => $this->t('Title'),
+      '#description' => $this->t('The text that will be displayed as title of the lightbox.'),
+      '#default_value' => $config->get('pas_error_lightbox_title'),
+      '#required' => FALSE,
+    );
+    $pasErrorLightboxContent = $config->get('pas_error_lightbox_content');
+    $form['lightbox_group']['pas']['pas_error_lightbox_content'] = array(
+      '#type' => 'text_format',
+      '#title' => $this->t('Content'),
+      '#description' => $this->t('The text that will be displayed as content of the lightbox.'),
+      '#default_value' => $pasErrorLightboxContent['value'],
+      '#format' => $pasErrorLightboxContent['format'],
       '#required' => TRUE,
     );
   }

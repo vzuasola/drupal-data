@@ -3,9 +3,11 @@ langcode: en
 status: true
 dependencies:
   module:
+    - datetime
     - rest
     - serialization
     - webcomposer_announcements
+    - webcomposer_rest_extra
 _core:
   default_config_hash: AG4LU4uxddxhqu5_6PdgSo2odSwtTSO-WAEoxknPbxY
 id: announcements
@@ -670,11 +672,11 @@ display:
         options:
           offset: 0
       style:
-        type: serializer
+        type: node_list_serializer
         options:
-          grouping: {  }
           uses_fields: false
-          formats: {  }
+          formats:
+            json: json
       row:
         type: data_entity
         options: {  }

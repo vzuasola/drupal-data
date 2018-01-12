@@ -1,33 +1,30 @@
-add games page background entities:
-  title: 'Create new Games Page Background entities'
+add game page Background entities:
+  title: 'Create new Game Page Background entities'
 
-administer games page background entities:
-  title: 'Administer Games Page Background entities'
-  description: 'Allow to access the administration form to configure Games Page Background entities.'
+administer game page Background entities:
+  title: 'Administer Game Page Background entities'
+  description: 'Allow to access the administration form to configure Game Page Background entities.'
   restrict access: true
 
-delete games page background entities:
-  title: 'Delete Games Page Background entities'
+delete game page Background entities:
+  title: 'Delete Game Page Background entities'
 
-edit games page background entities:
-  title: 'Edit Games Page Background entities'
+edit game page Background entities:
+  title: 'Edit Game Page Background entities'
 
-access games page background overview:
-  title: 'Access the Games Page Background overview page'
+view published game page Background entities:
+  title: 'View published Game Page Background entities'
 
-view published games page background entities:
-  title: 'View published Games Page Background entities'
+view unpublished game page Background entities:
+  title: 'View unpublished Game Page Background entities'
 
-view unpublished games page background entities:
-  title: 'View unpublished Games Page Background entities'
+view all game page Background revisions:
+  title: 'View all Game Page Background revisions'
 
-view all games page background revisions:
-  title: 'View all Games Page Background revisions'
+revert all game page Background revisions:
+  title: 'Revert all Game Page Background revisions'
+  description: 'Role requires permission <em>view Game Page Background revisions</em> and <em>edit rights</em> for game page Background entities in question or <em>administer game page Background entities</em>.'
 
-revert all games page background revisions:
-  title: 'Revert all Games Page Background revisions'
-  description: 'Role requires permission <em>view Games Page Background revisions</em> and <em>edit rights</em> for games page background entities in question or <em>administer games page background entities</em>.'
-
-delete all games page background revisions:
+delete all game page Background revisions:
   title: 'Delete all revisions'
-  description: 'Role requires permission to <em>view Games Page Background revisions</em> and <em>delete rights</em> for games page background entities in question or <em>administer games page background entities</em>.'
+  description: 'Role requires permission to <em>view Game Page Background revisions</em> and <em>delete rights</em> for game page Background entities in question or <em>administer game page Background entities</em>.'

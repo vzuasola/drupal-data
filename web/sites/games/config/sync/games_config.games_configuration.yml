@@ -1,0 +1,28 @@
+play_text: 'PLAY NOW'
+play_for_fun_text: 'Free Play'
+game_info_text: 'Game Info'
+kebab_menu_text: More
+load_more_text: 'Load More Games'
+load_more_disabled: 0
+freeplay_lightbox_title: NOTIFICATION
+freeplay_lightbox_content:
+  value: "<p>Free play is not available.<br />\r\nYou may play on real money instead.</p>\r\n\r\n<p><a class=\"btn btn-ok btn-medium btn-yellow\" href=\"#\" target=\"_blank\">PLAY FOR REAL</a>&nbsp; &nbsp;<a class=\"btn btn-gray btn-medium\" href=\"{domain:entry}/{lang}/games/\" target=\"_self\">GO BACK TO LOBBY</a></p>\r\n"
+  format: basic_html
+disable_language_selector: 1
+disable_announcement_icon: 1
+game_promotion_link: '{domain:entry}/{lang}/promotions?product=casino'
+game_promotion_link_target: _blank
+html5_lightbox_title: Alert!
+html5_lightbox_content:
+  value: "<p>Your current browser version does not support HTML5 games. Please update your browser to the latest version to continue playing. EN</p>\r\n\r\n<p><a class=\"btn btn-yellow btn-small btn-ok-launch\" href=\"#\" target=\"_blank\">Launch Anyway</a></p>\r\n"
+  format: basic_html
+disable_jackpot_ticker: 0
+favorites_text: 'My Favorites'
+recently_played_text: 'Recently Played'
+game_real_play_text: 'Play For Real'
+game_real_play_disabled: 0
+filter_icon: Fliter
+filter_header: Fliter
+filter_submit: Submit
+filter_clear: 'Clear Selection'
+home_categories_text: 'Home - EN'

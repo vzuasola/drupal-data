@@ -31,4 +31,6 @@ field_validations:
   invalid_words:
     error_message: 'Invalid/not allowed characters'
   valid_languages:
-    error_message: 'This field only accepts specific characters.'
+    error_message: "กรุณาใส่วันเดือนปีเกิดของคุณตามนี้ วัน/เดือน/ปี\r\n"
+  valid_date:
+    error_message: "กรุณาใส่วันเดือนปีเกิดของคุณตามนี้ วัน/เดือน/ปี\r\n"

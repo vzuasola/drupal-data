@@ -2,6 +2,7 @@ pre_transaction_subdomain: 'sunplus'
 pre_login_uri: 'vender.aspx'
 post_transaction_subdomain: 'sunplus'
 post_login_uri: 'Deposit_ProcessLogin.aspx'
+how_to_bet_uri: '{domain:sports}/{domain:lang_token}/getting-started{legacy.params}{tracking.token}'
 language_mapping: "en|en\r\nsc|cs\r\nch|ch\r\nth|th\r\nvn|vn\r\nid|id\r\njp|jp\r\nkr|ko\r\nin|hien\r\neu|eu\r\ngr|el\r\npl|pl\r\nuk|eu\r\nro|ro\r\nru|eu"
 euro_pre_login_uri: 'vender.aspx'
 euro_post_login_uri: 'Deposit_ProcessLogin.aspx'

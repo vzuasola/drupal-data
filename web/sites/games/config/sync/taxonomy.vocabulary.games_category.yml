@@ -1,0 +1,9 @@
+uuid: 5a089948-1a4c-48fc-bbcd-6335914749ed
+langcode: en
+status: true
+dependencies: {  }
+name: 'Games Category'
+vid: games_category
+description: 'Categories for games.'
+hierarchy: 0
+weight: 0

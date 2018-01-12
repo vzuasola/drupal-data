@@ -1,0 +1,32 @@
+uuid: 1dcfef33-d1b6-46f7-9ecc-74a2e4ed15ce
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+_core:
+  default_config_hash: 1XJyevegSY0CGiQ8wNwdzaN4x-LIMDQ_OXTATD9G9y0
+id: paragraph.field_mobile_menu_target
+field_name: field_mobile_menu_target
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: _blank
+      label: 'New window (_blank)'
+    -
+      value: _self
+      label: 'Same window (_self)'
+    -
+      value: window
+      label: 'New Window'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

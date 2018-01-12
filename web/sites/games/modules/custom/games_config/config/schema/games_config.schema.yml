@@ -32,6 +32,9 @@ games_config.games_configuration:
     load_more_text:
       type: label
       label: 'Load More Text'
+    home_categories_text:
+      type: label
+      label: 'Home Tab Text'
     favorites_text:
       type: label
       label: 'Favorites Tab Text'
@@ -51,4 +54,11 @@ games_config.games_configuration:
     html5_lightbox_content:
       type: text_format
       label: 'HTML5 Lightbox Content'
+      translatable: true
+    pas_error_lightbox_title:
+      type: label
+      label: 'PAS Error Lightbox Title'
+    pas_error_lightbox_content:
+      type: text_format
+      label: 'PAS Error Lightbox Content'
       translatable: true

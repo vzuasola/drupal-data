@@ -11,7 +11,7 @@ id: paragraph.right_side_block_content.field_blurb_content
 field_name: field_blurb_content
 entity_type: paragraph
 bundle: right_side_block_content
-label: 'Blurb Content'
+label: 'Pre Blurb Content'
 description: ''
 required: false
 translatable: true

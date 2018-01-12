@@ -26,7 +26,7 @@ field_validations:
   username_availability:
     error_message: 'Username not available'
   email_availability:
-    error_message: "Το Email αυτό χρησιμοποιείται ήδη. Πατήστε <a href=\"{domain:entry}/{domain:lang_token}/cant-login{tracking.token}\" target=\"new\">εδώ</a> για ανάκτηση ονόματος χρήστη/κωδικού πρόσβασης.\r\n"
+    error_message: "Το Email αυτό χρησιμοποιείται ήδη. Πατήστε <a href=\"/gr/cant-login\" target=\"popup\" onclick=\"window.open('/gr/cant-login','popup','width=820,height=810,scrollbars=no,resizable=no'); return false;\">εδώ</a> για ανάκτηση ονόματος χρήστη/κωδικού πρόσβασης.\r\n"
   invalid_words:
     error_message: 'Invalid/not allowed characters'
   valid_languages:
