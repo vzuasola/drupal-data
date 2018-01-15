@@ -6,6 +6,8 @@ dependencies:
     - field.storage.partner_entity.field_id
   module:
     - webcomposer_partner
+_core:
+  default_config_hash: QN9IE27mdMBth3EBRtSIdBPqIRg69j-BAQDp8SYq5rg
 id: partner_entity.partner_entity.field_id
 field_name: field_id
 entity_type: partner_entity
