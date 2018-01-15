@@ -4,6 +4,8 @@ status: true
 dependencies:
   module:
     - webcomposer_partner
+_core:
+  default_config_hash: RzRx3fdnzpfrlDrQsM84H-Fp_BKB3ECNIeqMfnjPIrU
 id: partner_entity.field_id
 field_name: field_id
 entity_type: partner_entity

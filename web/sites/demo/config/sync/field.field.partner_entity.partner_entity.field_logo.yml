@@ -7,13 +7,15 @@ dependencies:
   module:
     - image
     - webcomposer_partner
+_core:
+  default_config_hash: WFQ_SKSSxcvDka-Tcz5dRsOyZ2mthwsEO2RedA1Rnw8
 id: partner_entity.partner_entity.field_logo
 field_name: field_logo
 entity_type: partner_entity
 bundle: partner_entity
 label: Logo
 description: 'The logo image of this specific partner entry.'
-required: true
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''

@@ -6,6 +6,8 @@ dependencies:
     - file
     - image
     - webcomposer_partner
+_core:
+  default_config_hash: 2C1ylPwdvOmW1apJSMhniv1YpxIqHIYypgPzmYi64V4
 id: partner_entity.field_logo
 field_name: field_logo
 entity_type: partner_entity

@@ -6,6 +6,8 @@ dependencies:
     - rest
     - serialization
     - webcomposer_partner
+_core:
+  default_config_hash: ooftllmgxB9bxCBUqemN9VMZ3yBVUXhuIlc-i8PQEPo
 id: webcomposer_partner_entity_api
 label: 'Webcomposer Partner Entity API'
 module: views
@@ -160,7 +162,7 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: api/partner_entity
+      path: api/partner
       pager:
         type: none
         options:
