@@ -1,0 +1,5 @@
+entity.partner_entity.add_form:
+  route_name: entity.partner_entity.add_form
+  title: 'Add Partner entity'
+  appears_on:
+    - entity.partner_entity.collection
