@@ -160,7 +160,7 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: api/partner_entity
+      path: api/partner
       pager:
         type: none
         options:
