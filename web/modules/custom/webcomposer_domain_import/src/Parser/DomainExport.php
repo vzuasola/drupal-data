@@ -218,10 +218,18 @@ class DomainExport {
       }
     }
 
+    $domain_array = [];
+
     foreach ($domains as $domain_tid => $domain) {
       $group_domain = $this->service->get_domain_group_id($domain_tid);
       if (array_key_exists($group_domain, $domains_groups)) {
         $group_name = $domains_groups[$group_domain];
+      }
+      if (! array_key_exists($group_name, $domain_array)) {
+        $domain_array[$group_name] = [];
+      }
+      if (! array_key_exists($domain, $domain_array[$group_name])) {
+        $domain_array[$group_name][$domain] = [];
       }
       $field_placeholder = $this->service->get_add_placeholder_target_id($domain_tid, $language);
       if (!empty($field_placeholder)) {
