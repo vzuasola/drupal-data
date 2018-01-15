@@ -1,0 +1,7 @@
+webcomposer_partner.admin_settings:
+  path: 'admin/config/webcomposer/webcomposer_partner'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Webcomposer Footer Partners'
+  requirements:
+    _permission: 'administer site configuration'
