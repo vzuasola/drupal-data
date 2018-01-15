@@ -70,12 +70,19 @@ display:
           description: ''
           columns:
             name: name
+            field_select_domain_group: field_select_domain_group
             translation_link: translation_link
             edit_taxonomy_term: edit_taxonomy_term
             delete_taxonomy_term: delete_taxonomy_term
-            field_select_domain_group: field_select_domain_group
           info:
             name:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_select_domain_group:
               sortable: false
               default_sort_order: asc
               align: ''
@@ -97,13 +104,6 @@ display:
               empty_column: false
               responsive: ''
             delete_taxonomy_term:
-              sortable: false
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            field_select_domain_group:
               sortable: false
               default_sort_order: asc
               align: ''
