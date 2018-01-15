@@ -144,6 +144,10 @@ $ drupal --uri=entrypage.drupal.dev ce
 * On `git status`, you should see files added to your `site/config/sync` folder
 * Add those to the `config/install` of your module
 
+> If you need the git export, this might come in handy
+> 
+> git diff-tree -r --no-commit-id --name-only --diff-filter=ACMRT $commit_id | xargs tar -rf mytarfile.tar
+
 ## Put an uninstall hook
 
 * Create a `webcomposer_module.install` and put an uninstall hook. Change the keys to all the files on your
