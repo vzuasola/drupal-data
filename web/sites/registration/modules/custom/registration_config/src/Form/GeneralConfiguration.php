@@ -278,16 +278,6 @@ class GeneralConfiguration extends ConfigFormBase {
       '#collapsible' => TRUE,
       '#group' => 'general_settings_tab',
     ];
-    $form['logging_settings']['enable_logging'] = [
-      '#type' => 'checkbox',
-      '#title' => $this->t('Enable Metrics logging'),
-      '#default_value' => $config->get('enable_logging'),
-    ];
-    $form['logging_settings']['logging_url'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('URL where to log'),
-      '#default_value' => $config->get('logging_url'),
-    ];
     $form['logging_settings']['enable_rs_logging'] = [
       '#type' => 'checkbox',
       '#title' => $this->t('Enable RS logging'),
