@@ -272,6 +272,27 @@ class GeneralConfiguration extends ConfigFormBase {
       '#default_value' => $withoutPaymentMethod['value'],
       '#format' => $withoutPaymentMethod['format'],
     ];
+    $form['logging_settings'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Metrics Logging'),
+      '#collapsible' => TRUE,
+      '#group' => 'general_settings_tab',
+    ];
+    $form['logging_settings']['enable_logging'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable Metrics logging'),
+      '#default_value' => $config->get('enable_logging'),
+    ];
+    $form['logging_settings']['logging_url'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('URL where to log'),
+      '#default_value' => $config->get('logging_url'),
+    ];
+    $form['logging_settings']['enable_rs_logging'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable RS logging'),
+      '#default_value' => $config->get('enable_logging'),
+    ];
 
     return parent::buildForm($form, $form_state);
   }
@@ -304,7 +325,9 @@ class GeneralConfiguration extends ConfigFormBase {
       'with_payment_method',
       'without_payment_method',
       'payment_method_headers',
-      'deposit_now_text'
+      'deposit_now_text',
+      'enable_logging',
+      'logging_url'
     ];
 
     foreach ($keys as $key) {

@@ -45,3 +45,9 @@ webcomposer_config.admin_robots_configuration:
   parent: webcomposer_config.list
   description: 'Provides configuration for Robots.txt.'
   route_name: webcomposer_config.robots_configuration_form
+
+webcomposer_config.admin_log_configuration:
+  title: 'Log Configuration'
+  parent: webcomposer_config.list
+  description: 'Provides configuration for Logging.'
+  route_name: webcomposer_config.log_configuration_form

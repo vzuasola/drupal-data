@@ -32,3 +32,8 @@ webcomposer_config.robots_configuration_tab:
   route_name: webcomposer_config.robots_configuration_form
   title: 'Robots Configuration'
   base_route: webcomposer_config.robots_configuration_form
+
+webcomposer_config.log_configuration_tab:
+  route_name: webcomposer_config.log_configuration_form
+  title: 'Log Configuration'
+  base_route: webcomposer_config.log_configuration_form
