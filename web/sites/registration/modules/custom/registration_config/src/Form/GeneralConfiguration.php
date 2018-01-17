@@ -281,7 +281,7 @@ class GeneralConfiguration extends ConfigFormBase {
     $form['logging_settings']['enable_rs_logging'] = [
       '#type' => 'checkbox',
       '#title' => $this->t('Enable RS logging'),
-      '#default_value' => $config->get('enable_logging'),
+      '#default_value' => $config->get('enable_rs_logging'),
     ];
 
     return parent::buildForm($form, $form_state);
@@ -316,8 +316,7 @@ class GeneralConfiguration extends ConfigFormBase {
       'without_payment_method',
       'payment_method_headers',
       'deposit_now_text',
-      'enable_logging',
-      'logging_url'
+      'enable_rs_logging'
     ];
 
     foreach ($keys as $key) {
