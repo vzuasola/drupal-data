@@ -1,0 +1,21 @@
+uuid: c11ffe7d-ffde-4500-af10-e919efcc8973
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_vip_cp_content
+    - node.type.vip_page
+  module:
+    - text
+id: node.vip_page.field_vip_cp_content
+field_name: field_vip_cp_content
+entity_type: node
+bundle: vip_page
+label: 'VIP Cash Points Content'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

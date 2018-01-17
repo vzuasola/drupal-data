@@ -1,0 +1,19 @@
+uuid: 1fdcfe96-c246-4c9b-b37c-0ffaf2644c8f
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_vip_slots_club_column_2_lb
+field_name: field_vip_slots_club_column_2_lb
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
