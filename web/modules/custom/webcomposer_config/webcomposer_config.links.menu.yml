@@ -51,3 +51,9 @@ webcomposer_config.admin_log_configuration:
   parent: webcomposer_config.list
   description: 'Provides configuration for Logging.'
   route_name: webcomposer_config.log_configuration_form
+
+webcomposer_config.admin_curacao_configuration:
+  title: 'Curacao'
+  parent: webcomposer_config.list
+  description: 'Configure Curacao'
+  route_name: webcomposer_config.curacao_configuration_form
