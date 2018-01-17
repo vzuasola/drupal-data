@@ -69,3 +69,11 @@ webcomposer_config.log_configuration_form:
     _title: 'Log Configuration'
   requirements:
     _permission: 'administer site configuration'
+
+webcomposer_config.curacao_configuration_form:
+  path: 'admin/config/webcomposer/config/curacao'
+  defaults:
+    _form: 'Drupal\webcomposer_config\Form\CuracaoConfiguration'
+    _title: 'Curacao Configuration'
+  requirements:
+    _permission: 'administer site configuration'

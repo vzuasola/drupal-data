@@ -39,13 +39,15 @@ class LogConfiguration extends ConfigFormBase {
       '#type' => 'details',
       '#title' => $this->t('Metrics Logging'),
       '#collapsible' => TRUE,
-      '#group' => 'general_settings_tab',
+      '#group' => 'advanced',
     ];
+
     $form['logging_settings']['disable_logging'] = [
       '#type' => 'checkbox',
       '#title' => $this->t('Disable Metrics logging'),
       '#default_value' => $config->get('disable_logging'),
     ];
+
     $form['logging_settings']['logging_url'] = [
       '#type' => 'textfield',
       '#title' => $this->t('URL where to log'),
@@ -59,13 +61,13 @@ class LogConfiguration extends ConfigFormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    $LogValuesKeys = [
+    $keys = [
       'disable_logging',
       'logging_url',
     ];
 
-    foreach ($LogValuesKeys as $keys) {
-      $this->config('webcomposer_config.log_configuration')->set($keys, $form_state->getValue($keys))->save();
+    foreach ($keys as $key) {
+      $this->config('webcomposer_config.log_configuration')->set($key, $form_state->getValue($key))->save();
     }
 
     return parent::submitForm($form, $form_state);
