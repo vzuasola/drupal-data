@@ -5,3 +5,6 @@ webcomposer_partner.admin_settings:
     _title: 'Webcomposer Footer Partners'
   requirements:
     _permission: 'administer site configuration'
+
+webcomposer_partner.manage:
+  path: 'admin/structure/webcomposer_partner/partner_entity/manage'
