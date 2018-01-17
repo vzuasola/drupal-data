@@ -61,3 +61,11 @@ webcomposer_config.robots_configuration_form:
     _title: 'Robots Configuration'
   requirements:
     _permission: 'administer site configuration'
+
+webcomposer_config.log_configuration_form:
+  path: 'admin/config/webcomposer/config/log'
+  defaults:
+    _form: 'Drupal\webcomposer_config\Form\LogConfiguration'
+    _title: 'Log Configuration'
+  requirements:
+    _permission: 'administer site configuration'
