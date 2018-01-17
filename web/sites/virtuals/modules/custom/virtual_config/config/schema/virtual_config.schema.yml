@@ -1,8 +1,13 @@
 virtual_config.virtual_configuration:
   type: config_object
   label: 'virtual Configuration'
+  label: 'virtual Metatag Mobile Configuration '
   mapping:
     base_url:
       type: text
       label: 'Mobile Site  URL'
+      translatable: true
+    product_name_seo:
+      type: text
+      label: 'Product Name in Canonical Tag'
       translatable: true
