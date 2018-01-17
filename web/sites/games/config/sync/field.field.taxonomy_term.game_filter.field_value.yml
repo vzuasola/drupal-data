@@ -1,0 +1,19 @@
+uuid: ee0cf847-3f42-46c0-944a-c5915c1b377b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_value
+    - taxonomy.vocabulary.game_filter
+id: taxonomy_term.game_filter.field_value
+field_name: field_value
+entity_type: taxonomy_term
+bundle: game_filter
+label: Value
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

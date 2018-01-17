@@ -30,8 +30,15 @@ hidden:
   field_game_image: true
   field_game_info: true
   field_game_info_toggle: true
+  field_game_keywords: true
+  field_game_provider: true
   field_game_title: true
+  field_game_type: true
   field_games_category: true
   field_home_category: true
+  field_jackpot_code: true
+  field_jackpot_ticker: true
   field_play_for_fun_toggle: true
+  field_ribbon_configuration: true
+  field_ribbon_label: true
   langcode: true
