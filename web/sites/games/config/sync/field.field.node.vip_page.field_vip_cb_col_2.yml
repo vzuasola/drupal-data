@@ -1,0 +1,21 @@
+uuid: ee26f4b5-b185-4c58-a83a-c49e9dec96d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_vip_cb_col_2
+    - node.type.vip_page
+  module:
+    - text
+id: node.vip_page.field_vip_cb_col_2
+field_name: field_vip_cb_col_2
+entity_type: node
+bundle: vip_page
+label: 'VIP Cash Back Column 2'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

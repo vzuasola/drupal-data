@@ -1,0 +1,19 @@
+uuid: fa601da5-bad2-4df5-b7e2-ba47c66722b8
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_vip_sc_bot_blurb_content
+field_name: field_vip_sc_bot_blurb_content
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

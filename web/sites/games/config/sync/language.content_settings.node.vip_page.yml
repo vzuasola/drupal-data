@@ -1,0 +1,16 @@
+uuid: c2aaa746-c854-4d5c-955c-f5f8078dcacd
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.vip_page
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.vip_page
+target_entity_type_id: node
+target_bundle: vip_page
+default_langcode: site_default
+language_alterable: true
