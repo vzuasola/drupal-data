@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.game.body
     - field.field.node.game.field_game_code
+    - field.field.node.game.field_game_filter
     - field.field.node.game.field_game_image
     - field.field.node.game.field_game_info
     - field.field.node.game.field_game_info_toggle
@@ -84,6 +85,12 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
+  field_game_filter:
+    weight: 15
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_game_image:
     weight: 5
     settings:
@@ -108,7 +115,7 @@ content:
     type: boolean_checkbox
     region: content
   field_game_keywords:
-    weight: 15
+    weight: 16
     settings:
       size: 100
       placeholder: 'e.g., slots, top, live'

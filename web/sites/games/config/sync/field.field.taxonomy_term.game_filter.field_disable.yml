@@ -1,0 +1,23 @@
+uuid: 8a0c12be-b298-48b6-a148-7424217edca6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_disable
+    - taxonomy.vocabulary.game_filter
+id: taxonomy_term.game_filter.field_disable
+field_name: field_disable
+entity_type: taxonomy_term
+bundle: game_filter
+label: Disable
+description: 'If checked, this filter will not be displayed.'
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

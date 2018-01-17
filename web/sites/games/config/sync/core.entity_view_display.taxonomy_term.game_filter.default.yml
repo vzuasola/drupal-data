@@ -1,0 +1,42 @@
+uuid: 9d556fb9-1b10-42bf-8f5a-4efb33d06b74
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.game_filter.field_disable
+    - field.field.taxonomy_term.game_filter.field_value
+    - taxonomy.vocabulary.game_filter
+  module:
+    - text
+id: taxonomy_term.game_filter.default
+targetEntityType: taxonomy_term
+bundle: game_filter
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_disable:
+    weight: 2
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_value:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  langcode: true
