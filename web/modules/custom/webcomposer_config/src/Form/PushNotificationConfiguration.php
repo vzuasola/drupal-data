@@ -73,6 +73,12 @@ class PushNotificationConfiguration extends ConfigFormBase {
       '#default_value' => $config->get('enable'),
       '#description' => $this->t('Enable/Disable Push Notification.'),
     ];
+    $form['connection_settings']['disableBonusAward'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Hide Bonus Was Awarded'),
+      '#default_value' => $config->get('disableBonusAward'),
+      '#description' => $this->t('Hide Bonus Was Awarded notification.'),
+    ];
     $form['connection_settings']['domain'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Domain'),
@@ -197,6 +203,7 @@ class PushNotificationConfiguration extends ConfigFormBase {
       'debug_logging',
       'debug_display_all',
       'debug_display_expirydate',
+      'disableBonusAward',
     ];
 
     $config = $this->config('webcomposer_config.pushnx_configuration');
