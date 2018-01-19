@@ -9,6 +9,8 @@ dependencies:
   module:
     - image
     - webcomposer_partner
+_core:
+  default_config_hash: vLKPILtdxTkaZS85TVDnY-FqCA4SnrM3rYdAikLJDHA
 id: partner_entity.partner_entity.default
 targetEntityType: partner_entity
 bundle: partner_entity

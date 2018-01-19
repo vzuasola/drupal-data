@@ -5,8 +5,15 @@ dependencies:
   config:
     - field.storage.right_side_block_entity.field_image
   module:
+    - content_translation
     - image
     - webcomposer_right_side_block
+third_party_settings:
+  content_translation:
+    translation_sync:
+      alt: alt
+      title: title
+      file: '0'
 id: right_side_block_entity.right_side_block_entity.field_image
 field_name: field_image
 entity_type: right_side_block_entity
