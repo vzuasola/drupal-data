@@ -27,3 +27,9 @@ webcomposer_games.admin_icore_games_integration:
   parent: webcomposer_games.list
   description: 'Provides configuration for icore games integration'
   route_name: webcomposer_games.icore_games_integration_form
+
+webcomposer_games.admin_icore_playtech_provider:
+  title: 'ICore Playtech Provider Configuration'
+  parent: webcomposer_games.list
+  description: 'Provides configuration for icore playtech provider integration'
+  route_name: webcomposer_games.icore_playtech_provider_form
