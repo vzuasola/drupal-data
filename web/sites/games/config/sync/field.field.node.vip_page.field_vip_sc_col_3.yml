@@ -1,14 +1,14 @@
-uuid: 7073107c-b23a-4517-b50a-72c74224b644
+uuid: d25b3af6-b0b4-4489-80a5-5eb6cc96360b
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_vip_slots_club_column_3vip
+    - field.storage.node.field_vip_sc_col_3
     - node.type.vip_page
   module:
     - text
-id: node.vip_page.field_vip_slots_club_column_3vip
-field_name: field_vip_slots_club_column_3vip
+id: node.vip_page.field_vip_sc_col_3
+field_name: field_vip_sc_col_3
 entity_type: node
 bundle: vip_page
 label: 'VIP Slots Club Column 3'

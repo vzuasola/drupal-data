@@ -16,6 +16,8 @@ class ICoreGamesIntegrationConfiguration extends ConfigFormBase {
     const ICORE_GAME_PROVIDERS = [
         'fish_hunter' => 'Fish Hunter',
         'kiron_virtual_sports' => 'Virtual Sports',
+        'skywind' => 'Skywind',
+        'voidbridge' => 'Voidbridge',
     ];
 
   /**
