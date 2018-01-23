@@ -1,5 +1,0 @@
-name: Webcomposer Integration Services
-type: module
-description: Allows to expose different integration points as service.
-core: 8.x
-package: webcomposer
