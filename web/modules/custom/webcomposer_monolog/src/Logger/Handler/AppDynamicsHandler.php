@@ -81,7 +81,7 @@ class AppDynamicsHandler extends AbstractProcessingHandler {
    *
    * @return     string  ( name of level strictly for appdynamics )
    */
-  protected function LogSeverityHandling($severity){
+  protected function LogSeverityHandling($severity) {
      $level_name = NULL;
       switch ($severity) {
         case 'WARNING':
