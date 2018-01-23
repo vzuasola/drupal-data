@@ -27,12 +27,12 @@ dependencies:
     - field.field.node.vip_page.field_vip_sc_bot_blurb_content
     - field.field.node.vip_page.field_vip_sc_col_1
     - field.field.node.vip_page.field_vip_sc_col_2
+    - field.field.node.vip_page.field_vip_sc_col_3
     - field.field.node.vip_page.field_vip_sc_enable
     - field.field.node.vip_page.field_vip_sc_title
     - field.field.node.vip_page.field_vip_slots_club_column_1_lb
     - field.field.node.vip_page.field_vip_slots_club_column_2_lb
     - field.field.node.vip_page.field_vip_slots_club_column_3_lb
-    - field.field.node.vip_page.field_vip_slots_club_column_3vip
     - field.field.node.vip_page.field_vip_structure_content
     - field.field.node.vip_page.field_vip_structure_enable
     - field.field.node.vip_page.field_vip_structure_title
@@ -361,6 +361,13 @@ content:
     third_party_settings: {  }
     type: text_default
     region: content
+  field_vip_sc_col_3:
+    weight: 17
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
   field_vip_sc_enable:
     weight: 9
     label: above
@@ -395,13 +402,6 @@ content:
     region: content
   field_vip_slots_club_column_3_lb:
     weight: 8
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
-    region: content
-  field_vip_slots_club_column_3vip:
-    weight: 14
     label: above
     settings: {  }
     third_party_settings: {  }
