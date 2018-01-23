@@ -1,10 +1,24 @@
-kebab_menu_text: 更多
-favorites_text: 我最喜欢的
-recently_played_text: 最近播放
-game_info_text: 游戏信息
+kebab_menu_text: 更多信息
+favorites_text: 最喜欢
+recently_played_text: 最近游戏
+game_info_text: 游戏详情
 play_text: 开始游戏
 html5_lightbox_content:
-  value: "<p>您当前的浏览器不支持HTML5游戏。请将您的浏览器更新至最新版本，再试一次。sc</p>\r\n\r\n<p><a class=\"btn btn-yellow btn-small btn-ok-launch\" href=\"#\" target=\"_blank\">Launch Anyway</a></p>\r\n"
+  value: "<p>您当前使用的浏览器版本不支持HTML5游戏。请将浏览器更新至最新版本继续游戏。</p>\r\n\r\n<p><a class=\"btn btn-yellow btn-small btn-ok-launch\" href=\"#\" target=\"_blank\">发送</a></p>\r\n"
   format: basic_html
-html5_lightbox_title: 'SC _ Alert!'
-home_categories_text: 'Home - SC'
+html5_lightbox_title: 提醒！
+game_real_play_text: 玩真钱游戏
+home_categories_text: 主页
+play_for_fun_text: 免费参与
+pas_error_lightbox_content:
+  value: "<p>&nbsp;</p>\r\n\r\n<p>登录验证错误，无法启动游戏。请重新登录。</p>\r\n\r\n<p><a class=\"btn btn-ok btn-small btn-yellow\" href=\"#\" target=\"_blank\">OK</a></p>\r\n"
+  format: basic_html
+freeplay_lightbox_content:
+  value: "<p>免费游戏暂无法使用。<br />\r\n您仍可进行真钱游戏。</p>\r\n\r\n<p><a class=\"btn btn-ok btn-medium btn-yellow\" href=\"#\" target=\"_blank\">进入真钱游戏</a>&nbsp; &nbsp;<a class=\"btn btn-gray btn-medium\" href=\"{domain:entry}/{lang}/games/\" target=\"_self\">返回游戏大厅</a></p>\r\n"
+  format: basic_html
+filter_icon: 筛选
+filter_header: 筛选游戏ss
+filter_submit: 提交ss
+filter_clear: 清除ss
+load_more_text: 加载更多游戏
+freeplay_lightbox_title: 通知
