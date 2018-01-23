@@ -111,6 +111,13 @@ class HeaderConfiguration extends ConfigFormBase {
       '#group' => 'header_settings_tab',
     ];
 
+    $form['balance_group']['balance_toggle'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable Balance Toggle'),
+      '#description' => $this->t('If checked will allow balance toggle to be visible to the players.'),
+      '#default_value' => $config->get('balance_toggle'),
+    ];
+
     $form['balance_group']['balance_error_text'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Balance Error Message.'),
@@ -290,6 +297,7 @@ class HeaderConfiguration extends ConfigFormBase {
       'login_issue_link',
       'sc_lang_text',
       'ch_lang_text',
+      'balance_toggle',
       'balance_error_text',
       'balance_error_text_product',
       'balance_label_mapping',
