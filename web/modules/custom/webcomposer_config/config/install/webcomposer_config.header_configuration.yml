@@ -4,6 +4,7 @@ login_issue_text: 'Cant login'
 login_issue_link: 'http://google.com'
 sc_lang_text: SC
 ch_lang_text: CH
+balance_toggle: false
 balance_error_text: 'Error fetching balances'
 profile_icon_hover_text: 'My Profile'
 cashier_icon_hover_text: 'Cashier'
