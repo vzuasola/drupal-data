@@ -137,31 +137,33 @@ class DomainPlaceholderResource extends ResourceBase {
 
     // Append master placeholder list
     $definition = $this->getMasterPlaceholder();
-
     $term = reset($term);
-
     $group = $term->get('field_select_domain_group')->referencedEntities();
     $domainGroupPlaceholder = $this->getGroupDomainPlaceholder($group[0]->id());
-
     $definition = array_merge($definition, $domainGroupPlaceholder);
-    $getEntities = $term->get('field_add_placeholder')->referencedEntities();
+    $getID = $term->id();
 
-    foreach ($getEntities as $getEntity) {
+    if (!empty($term)) {
+      $query = \Drupal::database()->select('taxonomy_term__field_add_placeholder', 'p');
+      $query->fields('p', ['field_add_placeholder_target_id', 'langcode']);
+      $query->condition('p.entity_id', $getID, '=');
+      $query->condition('p.langcode', $this->currentLanguage, '=');
+      $result = $query->execute()->fetchAll();
+    }
+
+    foreach ($result as $getEntity) {
       $value = NULL;
-
-      if ($getEntity->hasTranslation($this->currentLanguage)) {
-        $translatedEntity = $getEntity->getTranslation($this->currentLanguage);
-
+      if ($getEntity->langcode === $this->currentLanguage) {
+        $translatedEntity  = \Drupal\paragraphs\Entity\Paragraph::load($getEntity->field_add_placeholder_target_id);
         $value = $translatedEntity->field_default_value->value;
         $definition[$translatedEntity->field_placeholder_key->value] = $translatedEntity->field_default_value->value;
       }
 
       if (empty($value)) {
         // check the value in domain group
+        $key = $translatedEntity->field_placeholder_key->value;
         $domainGroup = 'domain_groups';
-        $fallback = $this->webcomposerPlaceholderFallback($domainGroup);
-
-        $key = $getEntity->field_placeholder_key->value;
+        $fallback = $this->webcomposerPlaceholderFallback($domainGroup, $key);
 
         $checkIfKeyExits = array_key_exists($key, $fallback) ? true : false;
         if ($checkIfKeyExits == true) {
@@ -170,9 +172,9 @@ class DomainPlaceholderResource extends ResourceBase {
 
         // check in master placeholder list
         $masterPlaceholderList = 'master_placeholder';
-        $fallback = $this->webcomposerPlaceholderFallback($masterPlaceholderList);
-        $checkIfKeyExits = array_key_exists($key, $fallback) ? true : false;
+        $fallback = $this->webcomposerPlaceholderFallback($masterPlaceholderList, $key);
 
+        $checkIfKeyExits = array_key_exists($key, $fallback) ? true : false;
         if ($checkIfKeyExits == true) {
           $definition = array_merge($definition, $fallback);
         }
@@ -189,24 +191,30 @@ class DomainPlaceholderResource extends ResourceBase {
    *
    * @return <array> fallback array of domain and master placeholder list
    */
-  private function webcomposerPlaceholderFallback($vid) {
-    $field = !empty(($vid == 'domain_groups')) ? 'field_add_placeholder' : 'field_add_master_placeholder';
-    $definition = array();
-    $query = $this->entityQuery->get('taxonomy_term', 'AND');
-    $query->condition('vid', "$vid");
-    $tids = $query->execute();
-    $terms = Term::loadMultiple($tids);
+  private function webcomposerPlaceholderFallback($vid, $term) {
+    $table = !empty(($vid == 'domain_groups')) ? 'field_add_placeholder' : 'field_add_master_placeholder';
+    $field = !empty(($vid == 'domain_groups')) ? 'field_add_placeholder_target_id' : 'field_add_master_placeholder_target_id';
+     $term = $this->entityTypeManager->getStorage('taxonomy_term')->loadByProperties(['name' => $term]);
+     $term = reset($term);
 
-    if ($terms) {
-      $term = reset($terms);
-      $getEntities = $term->get("$field")->referencedEntities();
+     $getID = $term->id();
 
-      foreach ($getEntities as $getEntity) {
-        $key = $getEntity->field_placeholder_key->value;
-        $value = $getEntity->field_default_value->value;
+    if (!empty($term)) {
+      $query = \Drupal::database()->select("taxonomy_term__$table", 'p');
+      $query->fields('p', ["$field", 'langcode']);
+      $query->condition('p.entity_id', $getID, '=');
+      $query->condition('p.langcode', $this->currentLanguage, '=');
+      $result = $query->execute()->fetchAll();
 
-        $definition[$key] = $value;
-      }
+    }
+
+    foreach ($result as $getEntity) {
+      $translatedEntity  = \Drupal\paragraphs\Entity\Paragraph::load($getEntity->$field);
+      $key = $translatedEntity->field_placeholder_key->value;
+      $value = $translatedEntity->field_default_value->value;
+
+      $definition[$key] = $value;
+
     }
 
     return $definition;
