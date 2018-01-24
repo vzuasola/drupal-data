@@ -7,6 +7,12 @@ dependencies:
     - node.type.vip_page
   module:
     - image
+third_party_settings:
+  content_translation:
+    translation_sync:
+      alt: alt
+      title: title
+      file: '0'
 id: node.vip_page.field_vip_banner_image
 field_name: field_vip_banner_image
 entity_type: node
