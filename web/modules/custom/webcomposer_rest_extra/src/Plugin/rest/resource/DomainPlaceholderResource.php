@@ -226,8 +226,7 @@ class DomainPlaceholderResource extends ResourceBase {
         $getTranslation = $token->getTranslation($this->currentLanguage);
         $paragraph = $getTranslation->get('field_add_master_placeholder')->getValue(FALSE)[0]['target_id'];
         $paragraphs = \Drupal::entityManager()->getStorage('paragraph')->load($paragraph);
-
-        if ($paragraphs->hasTranslation($this->currentLanguage)) {
+        if ($paragraphs && $paragraphs->hasTranslation($this->currentLanguage)) {
           $translated = $paragraphs->getTranslation($this->currentLanguage);
           $placeholder_key = $translated->field_placeholder_key->value;
           $placeholder_desc = $translated->field_default_value->value;
