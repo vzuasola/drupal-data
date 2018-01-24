@@ -143,7 +143,7 @@ class DomainPlaceholderResource extends ResourceBase {
     $definition = array_merge($definition, $domainGroupPlaceholder);
     $getID = $term->id();
 
-    if(!empty($term)) {
+    if (!empty($term)) {
       $query = \Drupal::database()->select('taxonomy_term__field_add_placeholder', 'p');
       $query->fields('p', ['field_add_placeholder_target_id', 'langcode']);
       $query->condition('p.entity_id', $getID, '=');
@@ -199,7 +199,7 @@ class DomainPlaceholderResource extends ResourceBase {
 
      $getID = $term->id();
 
-    if(!empty($term)) {
+    if (!empty($term)) {
       $query = \Drupal::database()->select("taxonomy_term__$table", 'p');
       $query->fields('p', ["$field", 'langcode']);
       $query->condition('p.entity_id', $getID, '=');
@@ -209,7 +209,6 @@ class DomainPlaceholderResource extends ResourceBase {
     }
 
     foreach ($result as $getEntity) {
-      # code...
       $translatedEntity  = \Drupal\paragraphs\Entity\Paragraph::load($getEntity->$field);
       $key = $translatedEntity->field_placeholder_key->value;
       $value = $translatedEntity->field_default_value->value;
