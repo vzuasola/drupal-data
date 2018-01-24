@@ -139,7 +139,6 @@ class HeaderConfiguration extends ConfigFormBase {
       '#title' => $this->t('Product Balance ID.'),
       '#description' => $this->t('The ID of the balance to be shown as the product balance'),
       '#default_value' => $config->get('product_balance_id'),
-      '#required' => TRUE,
     ];
 
     $form['balance_group']['balance_error_text'] = [
@@ -164,6 +163,13 @@ class HeaderConfiguration extends ConfigFormBase {
       '#description' => $this->t('Labels and ordering for the balance breakdown'),
       '#default_value' => $config->get('balance_label_mapping'),
       '#required' => TRUE,
+    ];
+
+    $form['balance_group']['excluded_balance_mapping'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Excluded Balance Mapping'),
+      '#description' => $this->t('Define product IDs one per line'),
+      '#default_value' => $config->get('excluded_balance_mapping'),
     ];
 
     $form['newtag_group'] = [
@@ -328,6 +334,7 @@ class HeaderConfiguration extends ConfigFormBase {
       'balance_error_text',
       'balance_error_text_product',
       'balance_label_mapping',
+      'excluded_balance_mapping',
       'lobby_page_title',
       'profile_icon_hover_text',
       'cashier_icon_hover_text',
