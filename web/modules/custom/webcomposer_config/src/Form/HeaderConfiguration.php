@@ -118,6 +118,30 @@ class HeaderConfiguration extends ConfigFormBase {
       '#default_value' => $config->get('balance_toggle'),
     ];
 
+    $form['balance_group']['product_balance_label'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Product Balance Label.'),
+      '#description' => $this->t('The label for the product specific balance'),
+      '#default_value' => $config->get('product_balance_label'),
+      '#required' => TRUE,
+    ];
+
+    $form['balance_group']['total_balance_label'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Total Balance Label.'),
+      '#description' => $this->t('The label for the total balance'),
+      '#default_value' => $config->get('total_balance_label'),
+      '#required' => TRUE,
+    ];
+
+    $form['balance_group']['product_balance_id'] = [
+      '#type' => 'number',
+      '#title' => $this->t('Product Balance ID.'),
+      '#description' => $this->t('The ID of the balance to be shown as the product balance'),
+      '#default_value' => $config->get('product_balance_id'),
+      '#required' => TRUE,
+    ];
+
     $form['balance_group']['balance_error_text'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Balance Error Message.'),
@@ -298,6 +322,9 @@ class HeaderConfiguration extends ConfigFormBase {
       'sc_lang_text',
       'ch_lang_text',
       'balance_toggle',
+      'product_balance_label',
+      'total_balance_label',
+      'product_balance_id',
       'balance_error_text',
       'balance_error_text_product',
       'balance_label_mapping',

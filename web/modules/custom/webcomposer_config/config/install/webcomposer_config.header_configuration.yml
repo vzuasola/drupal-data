@@ -5,6 +5,9 @@ login_issue_link: 'http://google.com'
 sc_lang_text: SC
 ch_lang_text: CH
 balance_toggle: false
+product_balance_label: 'Product Account Balance'
+total_balance_label: 'Total Account Balance'
+product_balance_id: 1
 balance_error_text: 'Error fetching balances'
 profile_icon_hover_text: 'My Profile'
 cashier_icon_hover_text: 'Cashier'

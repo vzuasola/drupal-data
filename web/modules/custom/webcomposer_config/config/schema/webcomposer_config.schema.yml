@@ -14,6 +14,12 @@ webcomposer_config.header_configuration:
     login_issue_link:
       type: label
       label: 'Login Issue Link'
+    product_balance_label:
+      type: label
+      label: 'Product Balance Label'
+    total_balance_label:
+      type: label
+      label: 'Total Balance Label'
     balance_error_text:
       type: label
       label: 'Balance Error Message'
