@@ -6,6 +6,7 @@ language_mapping: "en|en\r\nsc|cs\r\nch|ch\r\nth|th\r\nvn|vn\r\nid|id\r\njp|jp\r
 euro_pre_login_uri: vender.aspx
 euro_post_login_uri: Deposit_ProcessLogin.aspx
 euro_template: 'eu,gr,pl,uk,ro,ru'
+euro_switch_redirect: '{domain:sports}/en/{legacy.params}{tracking.token}'
 singbet_pre_login_uri: onebook
 singbet_post_login_uri: Deposit_ProcessLogin.aspx
 singbet_template: 'sc,ch'
