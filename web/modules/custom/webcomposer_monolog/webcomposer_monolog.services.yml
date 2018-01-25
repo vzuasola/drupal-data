@@ -5,16 +5,11 @@ parameters:
     default: ['file']
     # Log php channel to web server's error log.
     php: ['error_log']
-    # Appdynamics channel to log in AppDynamics app.
-    appdynamics: ['appdynamics']
   # Enabled processors.
   monolog.processors: ['message_placeholder', 'current_user', 'request_uri', 'ip', 'referer']
 
 services:
   # Monolog handlers.
-  monolog.handler.appdynamics:
-    class:  Drupal\webcomposer_monolog\Logger\Handler\AppDynamicsHandler
-    arguments: ['@webcomposer_connector.appdynamics_connector']
   monolog.handler.file:
     class:  Monolog\Handler\StreamHandler
     arguments: ['/var/log/cms/webcomposer.log', '200', false]

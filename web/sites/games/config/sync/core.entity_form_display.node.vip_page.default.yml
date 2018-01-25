@@ -27,12 +27,12 @@ dependencies:
     - field.field.node.vip_page.field_vip_sc_bot_blurb_content
     - field.field.node.vip_page.field_vip_sc_col_1
     - field.field.node.vip_page.field_vip_sc_col_2
+    - field.field.node.vip_page.field_vip_sc_col_3
     - field.field.node.vip_page.field_vip_sc_enable
     - field.field.node.vip_page.field_vip_sc_title
     - field.field.node.vip_page.field_vip_slots_club_column_1_lb
     - field.field.node.vip_page.field_vip_slots_club_column_2_lb
     - field.field.node.vip_page.field_vip_slots_club_column_3_lb
-    - field.field.node.vip_page.field_vip_slots_club_column_3vip
     - field.field.node.vip_page.field_vip_structure_content
     - field.field.node.vip_page.field_vip_structure_enable
     - field.field.node.vip_page.field_vip_structure_title
@@ -155,7 +155,7 @@ third_party_settings:
       children:
         - field_vip_sc_col_1
         - field_vip_sc_col_2
-        - field_vip_slots_club_column_3vip
+        - field_vip_sc_col_3
       parent_name: group_vip_slots_club_tab
       weight: 23
       format_type: details
@@ -381,6 +381,14 @@ content:
     third_party_settings: {  }
     type: text_textarea
     region: content
+  field_vip_sc_col_3:
+    weight: 17
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
   field_vip_sc_enable:
     weight: 21
     settings:
@@ -414,14 +422,6 @@ content:
     region: content
   field_vip_slots_club_column_3_lb:
     weight: 19
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    type: text_textarea
-    region: content
-  field_vip_slots_club_column_3vip:
-    weight: 17
     settings:
       rows: 5
       placeholder: ''

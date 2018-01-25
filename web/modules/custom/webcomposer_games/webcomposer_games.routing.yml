@@ -37,3 +37,11 @@ webcomposer_games.icore_games_integration_form:
     _title: 'ICore Games Integration Configuration Form'
   requirements:
     _permission: 'administer site configuration'
+
+webcomposer_games.icore_playtech_provider_form:
+  path: 'admin/config/webcomposer/games/icore/playtech'
+  defaults:
+    _form: 'Drupal\webcomposer_games\Form\ICorePlaytechProviderConfiguration'
+    _title: 'ICore Playtech Provider Configuration Form'
+  requirements:
+    _permission: 'administer site configuration'

@@ -20,6 +20,9 @@ settings:
     -
       value: voidbridge
       label: Voidbridge
+    -
+      value: gold_deluxe
+      label: 'Gold Deluxe'
   allowed_values_function: ''
 module: options
 locked: false

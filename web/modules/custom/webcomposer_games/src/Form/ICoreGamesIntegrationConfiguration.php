@@ -18,6 +18,7 @@ class ICoreGamesIntegrationConfiguration extends ConfigFormBase {
         'kiron_virtual_sports' => 'Virtual Sports',
         'skywind' => 'Skywind',
         'voidbridge' => 'Voidbridge',
+        'gold_deluxe' => 'Gold Deluxe',
     ];
 
   /**

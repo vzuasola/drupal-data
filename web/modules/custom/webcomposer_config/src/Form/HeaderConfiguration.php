@@ -111,6 +111,36 @@ class HeaderConfiguration extends ConfigFormBase {
       '#group' => 'header_settings_tab',
     ];
 
+    $form['balance_group']['balance_toggle'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable Balance Toggle'),
+      '#description' => $this->t('If checked will allow balance toggle to be visible to the players.'),
+      '#default_value' => $config->get('balance_toggle'),
+    ];
+
+    $form['balance_group']['product_balance_label'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Product Balance Label.'),
+      '#description' => $this->t('The label for the product specific balance'),
+      '#default_value' => $config->get('product_balance_label'),
+      '#required' => TRUE,
+    ];
+
+    $form['balance_group']['total_balance_label'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Total Balance Label.'),
+      '#description' => $this->t('The label for the total balance'),
+      '#default_value' => $config->get('total_balance_label'),
+      '#required' => TRUE,
+    ];
+
+    $form['balance_group']['product_balance_id'] = [
+      '#type' => 'number',
+      '#title' => $this->t('Product Balance ID.'),
+      '#description' => $this->t('The ID of the balance to be shown as the product balance'),
+      '#default_value' => $config->get('product_balance_id'),
+    ];
+
     $form['balance_group']['balance_error_text'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Balance Error Message.'),
@@ -133,6 +163,13 @@ class HeaderConfiguration extends ConfigFormBase {
       '#description' => $this->t('Labels and ordering for the balance breakdown'),
       '#default_value' => $config->get('balance_label_mapping'),
       '#required' => TRUE,
+    ];
+
+    $form['balance_group']['excluded_balance_mapping'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Excluded Balance Mapping'),
+      '#description' => $this->t('Define product IDs one per line'),
+      '#default_value' => $config->get('excluded_balance_mapping'),
     ];
 
     $form['newtag_group'] = [
@@ -290,9 +327,14 @@ class HeaderConfiguration extends ConfigFormBase {
       'login_issue_link',
       'sc_lang_text',
       'ch_lang_text',
+      'balance_toggle',
+      'product_balance_label',
+      'total_balance_label',
+      'product_balance_id',
       'balance_error_text',
       'balance_error_text_product',
       'balance_label_mapping',
+      'excluded_balance_mapping',
       'lobby_page_title',
       'profile_icon_hover_text',
       'cashier_icon_hover_text',

@@ -1,4 +1,0 @@
-services:
-  webcomposer_connector.appdynamics_connector:
-    class: Drupal\webcomposer_connector\Connection\AppDynamicsConnector
-    factory: Drupal\webcomposer_connector\Connection\AppDynamicsConnector::getConnection
