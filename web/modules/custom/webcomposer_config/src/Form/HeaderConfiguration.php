@@ -165,6 +165,21 @@ class HeaderConfiguration extends ConfigFormBase {
       '#required' => TRUE,
     ];
 
+    $form['balance_group']['currency_balance_mapping'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Currency Balance Mapping'),
+      '#description' => $this->t("Define a mapping of product to currency. A product that
+        appears on this configuration will be filtered according to the currencies
+        defined.
+        <br><br>
+        Example
+        <br>
+        7|RMB,USD,KRW
+
+      "),
+      '#default_value' => $config->get('currency_balance_mapping'),
+    ];
+
     $form['balance_group']['excluded_balance_mapping'] = [
       '#type' => 'textarea',
       '#title' => $this->t('Excluded Balance Mapping'),
@@ -334,6 +349,7 @@ class HeaderConfiguration extends ConfigFormBase {
       'balance_error_text',
       'balance_error_text_product',
       'balance_label_mapping',
+      'currency_balance_mapping',
       'excluded_balance_mapping',
       'lobby_page_title',
       'profile_icon_hover_text',
