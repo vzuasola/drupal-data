@@ -1,5 +1,5 @@
 enable: 1
-producttype_id: ''
+producttype_id: '3'
 retry_count: '34'
 delay_count: '500'
 expiry_delay_count: '10000'
@@ -10,8 +10,8 @@ date_format: "en-US|dd/mm/yyyy HH:MM\r\nzh-TW|yyyy/mm/dd HH:MM\r\nel|dd/mm/yyyy 
 date_offset: "en-US|+8\r\nzh-TW|+8\r\nel|+3\r\nid|+7\r\nhi|+8\r\nja|+9\r\nko-KR|+9\r\npl|+2\r\nru|+3\r\nzh-CN|+8\r\nth|+7\r\nen-GB||+1\r\nvi|+7"
 login_selector: null
 debug_logging: 0
-debug_display_all: 0
-debug_display_expirydate: 1
+debug_display_all: 1
+debug_display_expirydate: 0
 text_: ''
 text_notifications: "en-US|Notifications\r\nzh-TW|通知\r\nel|Ειδοποιήσεις\r\nid|Notifikasi\r\nhi|Notifications\r\nja|お知らせ\r\nko-KR|공지\r\npl|Powiadomienia\r\nru|Notifications_ru\r\nzh-CN|通知\r\nth|การแจ้งเตือน\r\nen-GB|Notifications\r\nvi|Thông báo"
 text_ok: "en-US|OK\r\nzh-TW|確定\r\nel|OK\r\nid|OK\r\nhi|OK\r\nja|OK\r\nko-KR|확인\r\npl|OK\r\nru|OK\r\nzh-CN|确定\r\nth|ตกลง\r\nen-GB|OK\r\nvi|OK"

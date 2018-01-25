@@ -13,7 +13,7 @@ settings:
   allowed_values:
     -
       value: _top
-      label: 'Same Tab'
+      label: 'Same Window'
     -
       value: _blank
       label: 'New Tab'
