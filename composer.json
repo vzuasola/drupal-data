@@ -58,14 +58,9 @@
         ],
         "post-install-cmd": [
             "DrupalProject\\composer\\ScriptHandler::createRequiredFiles",
-            "DrupalProject\\composer\\SettingsHandler::syncSettings"
         ],
         "post-update-cmd": [
             "DrupalProject\\composer\\ScriptHandler::createRequiredFiles",
-            "DrupalProject\\composer\\SettingsHandler::syncSettings"
-        ],
-        "sync-settings": [
-            "DrupalProject\\composer\\SettingsHandler::syncSettings"
         ],
         "new:product": [
             "DrupalProject\\custom\\ProductHandler::createNewInstance"
