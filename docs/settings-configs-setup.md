@@ -19,7 +19,7 @@ This should allow Drupal to identify the current environment.
 
 ## Settings Definition
 
-### **All site specific settings.php must require the base settings.php**
+### All site specific settings.php must require the base settings.php
 
 An example settings.php
 
@@ -45,7 +45,7 @@ of all setting values that concerns all site instances.
 
 You only need to put override values in your site's `settings.php`.
 
-### **All setting values that concerns all site instances must be on base settings.php**
+### All setting values that concerns all site instances must be on base settings.php
 
 The base settings file is located on `config/base.settings.php`.
 An example of this scenario is a file alter URI that is applicable for all products.
@@ -67,7 +67,7 @@ if (isset($_SERVER['HTTP_X_FE_BASE_URI'])) {
 }
 ```
 
-### **Local settings values can be stored on the local base settings.php**
+### Local settings values can be stored on the local base settings.php
 
 The local base settings file is located on `config/base.settings.local.php`.
 
@@ -84,7 +84,7 @@ verbosity on local only.
 $config['system.logging']['error_level'] = 'verbose';
 ```
 
-### **Local database values can be stored on database.php**
+### Local database values can be stored on database.php
 
 You can define `web/sites/{product}/database.local.php` to put your local
 database credentials. Drupal will automatically pick this up when found.
