@@ -171,13 +171,6 @@ class OWSportsCustomConfigForm extends ConfigFormBase {
       '#default_value' => $config->get('euro_template'),
     ];
 
-    $form['euro_config_group']['euro_switch_redirect'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Override Switch Template'),
-      '#description' => $this->t('Override switch template via page redirection. Default switch template via iframe.'),
-      '#default_value' => $config->get('euro_switch_redirect'),
-    ];
-
     $form['singbet_config_group'] = [
       '#type' => 'details',
       '#title' => $this->t('Singbet Template'),
