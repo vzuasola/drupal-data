@@ -10,7 +10,10 @@ dependencies:
     - field.storage.e_sports_channel_entity.field_unpublish_date
     - taxonomy.vocabulary.e_sports_categories
   content:
-    - 'taxonomy_term:e_sports_categories:0c5fbc63-e0f5-46a7-a51d-2db6ce30e09c'
+    - 'taxonomy_term:e_sports_categories:0289cc95-a2a1-4fe0-a53f-48e576de864f'
+    - 'taxonomy_term:e_sports_categories:2dc8e71a-617b-42e8-bb1e-ac6554b9ac94'
+    - 'taxonomy_term:e_sports_categories:400ee7ee-75db-4339-aff4-a301b6ce7def'
+    - 'taxonomy_term:e_sports_categories:e69b5490-9862-46ce-8808-c317c76e2464'
   module:
     - datetime
     - esports
@@ -590,9 +593,12 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          operator: not
+          operator: or
           value:
-            296: 296
+            297: 297
+            299: 299
+            300: 300
+            298: 298
           group: 1
           exposed: true
           expose:
