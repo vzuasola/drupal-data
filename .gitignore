@@ -14,7 +14,7 @@ web/sites/*/files/*
 console/log
 
 # Ignore settings files
-web/sites/*/settings.php
+web/sites/*/database.local.php
 
 # files created by the build process
 *.pyc

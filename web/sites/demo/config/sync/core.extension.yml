@@ -67,6 +67,7 @@ module:
   webcomposer_affilates: 0
   webcomposer_announcements: 0
   webcomposer_avaya: 0
+  webcomposer_cdn: 0
   webcomposer_config: 0
   webcomposer_connector: 0
   webcomposer_dm: 0
