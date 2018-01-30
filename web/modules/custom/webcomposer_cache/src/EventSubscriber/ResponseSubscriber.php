@@ -22,6 +22,11 @@ class ResponseSubscriber implements EventSubscriberInterface {
    */
   const PRIORITY = -100;
 
+  /**
+   * The signature manager
+   *
+   * @var SignatureStorageInterface
+   */
   private $signatureManager;
 
   /**
