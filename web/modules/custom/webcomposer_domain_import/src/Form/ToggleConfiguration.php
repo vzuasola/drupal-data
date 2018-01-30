@@ -45,7 +45,6 @@ class ToggleConfiguration extends ConfigFormBase {
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $keys = [
       'domain_toggle',
-      'domain_toggle1',
     ];
 
     foreach ($keys as $key) {
