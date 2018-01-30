@@ -7,3 +7,8 @@ webcomposer_domain_import.webcomposer_domain_export:
   route_name: webcomposer_domain_import.webcomposer_domain_export
   title: 'Domain Export'
   base_route: webcomposer_dm.domain_management
+
+webcomposer_domain_import.webcomposer_domain_toggle:
+  route_name: webcomposer_domain_import.webcomposer_domain_toggle
+  title: 'Domain Feature Toggle'
+  base_route: webcomposer_dm.domain_management

@@ -9,3 +9,9 @@ webcomposer_domain_import.webcomposer_domain_export:
   parent: webcomposer_dm.list
   description: 'Export domains here'
   route_name: webcomposer_domain_import.webcomposer_domain_export
+
+webcomposer_domain_import.webcomposer_domain_toggle:
+  title: 'Domain Toggle'
+  parent: webcomposer_dm.list
+  description: 'Domain Feature Toggle'
+  route_name: webcomposer_domain_import.webcomposer_domain_toggle
