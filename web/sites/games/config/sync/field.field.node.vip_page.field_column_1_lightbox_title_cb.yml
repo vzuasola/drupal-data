@@ -1,0 +1,19 @@
+uuid: 5bb65983-b01c-4c1a-bfc3-ec38eb5f3390
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_column_1_lightbox_title_cb
+    - node.type.vip_page
+id: node.vip_page.field_column_1_lightbox_title_cb
+field_name: field_column_1_lightbox_title_cb
+entity_type: node
+bundle: vip_page
+label: 'Column 1 Lightbox Title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

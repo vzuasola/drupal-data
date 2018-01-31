@@ -40,13 +40,6 @@ class OWSportsCustomConfigForm extends ConfigFormBase {
       '#group' => 'owsports_settings_tab',
     ];
 
-    $form['owsports_config_group']['iframe_container'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Container ID'),
-      '#description' => $this->t('ID of iFrame container.'),
-      '#default_value' => $config->get('iframe_container'),
-    ];
-
     $form['owsports_config_group']['pre_transaction_subdomain'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Pre-Transaction Subdomain'),
@@ -151,6 +144,12 @@ class OWSportsCustomConfigForm extends ConfigFormBase {
       '#group' => 'owsports_settings_tab',
     ];
 
+    $form['euro_config_group']['euro_default_asia'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Use Asia template as default'),
+      '#default_value' => $config->get('euro_default_asia')
+    ];
+
     $form['euro_config_group']['euro_pre_login_uri'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Pre-Login URI'),
@@ -221,16 +220,17 @@ class OWSportsCustomConfigForm extends ConfigFormBase {
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $keys = [
-      'iframe_container',
       'how_to_bet_uri',
       'pre_transaction_subdomain',
       'pre_login_uri',
       'post_transaction_subdomain',
       'post_login_uri',
       'language_mapping',
+      'euro_default_asia',
       'euro_template',
       'euro_pre_login_uri',
       'euro_post_login_uri',
+      'euro_switch_redirect',
       'singbet_default_asia',
       'singbet_pre_login_uri',
       'singbet_post_login_uri',

@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.game.body
     - field.field.node.game.field_game_code
+    - field.field.node.game.field_game_filter
     - field.field.node.game.field_game_image
     - field.field.node.game.field_game_info
     - field.field.node.game.field_game_info_toggle
@@ -14,6 +15,8 @@ dependencies:
     - field.field.node.game.field_game_type
     - field.field.node.game.field_games_category
     - field.field.node.game.field_home_category
+    - field.field.node.game.field_jackpot_code
+    - field.field.node.game.field_jackpot_ticker
     - field.field.node.game.field_play_for_fun_toggle
     - field.field.node.game.field_ribbon_configuration
     - field.field.node.game.field_ribbon_label
@@ -42,6 +45,14 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_game_filter:
+    weight: 115
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
     region: content
   field_game_image:
     weight: 103
@@ -105,6 +116,23 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
+    region: content
+  field_jackpot_code:
+    weight: 113
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_jackpot_ticker:
+    weight: 114
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
     region: content
   field_play_for_fun_toggle:
     weight: 106

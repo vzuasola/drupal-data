@@ -1,15 +1,15 @@
 join_now_text: 'Join Now'
-join_now_link: 'http://dev-registrationwww.elysium-dfbt.com/{lang}/join'
+join_now_link: '{domain:registration_link}[query:({credentials.params})][query:({tracking})]'
 login_issue_text: 'Cant login?'
-login_issue_link: 'https://stg-www.elysium-dfbt.com/{lang}/cant-login?title=cantLogin'
+login_issue_link: '{domain:entry}/{lang}/cant-login?title=cantLogin{tracking.token}'
 sc_lang_text: SC
 ch_lang_text: CH
-balance_error_text: 'Error Retrieving.'
+balance_error_text: 'Error Retrieving. QA'
 profile_icon_hover_text: 'My Profile'
 cashier_icon_hover_text: Cashier
 product_menu_new_tag: NEW
-welcome_text: 'Hola! {username}'
-profile_link: 'https://stg-accountwww.elysium-dfbt.com/en/my-profile'
+welcome_text: 'Welcome {username}'
+profile_link: 'https://tct-accountwww.elysium-dfbt.com/en/my-profile?title=headerPopup&width=820&height=700&token={legacy.credentials}&pvia=gam'
 profile_logout_text: Logout
 _core:
   default_config_hash: Ynx2hkfeSTtNe4GyBQ1t4lBkrV4wrazLGjX_M7Mk3mg
@@ -23,4 +23,4 @@ news_announcement_content:
   value: "<p>test</p>\r\n"
   format: basic_html
 balance_label_mapping: "4|OW Sports\r\n6|Dafa Sports\r\n1|Casino Classic\r\n2|Casino Gold\r\n5|Live Dealer & Games\r\n3|Poker\r\n7|Fish Hunter"
-balance_error_text_product: N/A
+balance_error_text_product: 'N/A - QA'

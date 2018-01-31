@@ -13,6 +13,7 @@ permissions:
   - 'access content'
   - 'access site-wide contact form'
   - 'administer rest resources'
+  - 'restful get affiliate_rest_resource'
   - 'restful get casino_config_rest_resource'
   - 'restful get configuration_resource'
   - 'restful get custom_block_resource'

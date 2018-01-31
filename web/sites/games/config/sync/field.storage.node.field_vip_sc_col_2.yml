@@ -1,0 +1,19 @@
+uuid: 985a908e-cbe1-471f-9bd3-283105a5e210
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_vip_sc_col_2
+field_name: field_vip_sc_col_2
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

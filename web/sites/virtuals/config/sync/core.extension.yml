@@ -63,6 +63,7 @@ module:
   toolbar: 0
   user: 0
   views_ui: 0
+  virtual_config: 0
   webcomposer_affilates: 0
   webcomposer_announcements: 0
   webcomposer_avaya: 0
@@ -76,6 +77,7 @@ module:
   webcomposer_games: 0
   webcomposer_language_hierarchy: 0
   webcomposer_marketing_script: 0
+  webcomposer_partner: 0
   webcomposer_promotions: 0
   webcomposer_registration_landing_page: 0
   webcomposer_rest_extra: 0

@@ -36,6 +36,7 @@ module:
   filter: 0
   games_config: 0
   games_page_background: 0
+  games_page_loading: 0
   games_search: 0
   games_showcase: 0
   image: 0
@@ -76,7 +77,6 @@ module:
   webcomposer_announcements: 0
   webcomposer_avaya: 0
   webcomposer_config: 0
-  webcomposer_connector: 0
   webcomposer_dm: 0
   webcomposer_domain_import: 0
   webcomposer_downloadables: 0
@@ -85,6 +85,7 @@ module:
   webcomposer_games: 0
   webcomposer_language_hierarchy: 0
   webcomposer_marketing_script: 0
+  webcomposer_partner: 0
   webcomposer_promotions: 0
   webcomposer_registration_landing_page: 0
   webcomposer_rest_extra: 0

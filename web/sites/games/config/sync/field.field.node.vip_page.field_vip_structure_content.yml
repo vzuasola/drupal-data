@@ -1,0 +1,21 @@
+uuid: 01e0fd4c-e472-4d65-927e-7e9420bbfe18
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_vip_structure_content
+    - node.type.vip_page
+  module:
+    - text
+id: node.vip_page.field_vip_structure_content
+field_name: field_vip_structure_content
+entity_type: node
+bundle: vip_page
+label: 'VIP Structure Content'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

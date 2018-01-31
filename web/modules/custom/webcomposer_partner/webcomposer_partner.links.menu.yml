@@ -1,0 +1,24 @@
+webcomposer_partner.list:
+  title: 'Webcomposer Footer Partners Configuration'
+  description: 'Configure footer partners'
+  parent: system.admin_config
+  route_name: webcomposer_partner.admin_settings
+
+entity.partner_entity.manage:
+  title: 'Manage Partners'
+  route_name: webcomposer_partner.manage
+  description: 'Manage or sort partner entities'
+  parent: webcomposer_partner.list
+
+# Partner entity menu items definition
+entity.partner_entity.collection:
+  title: 'Partner List'
+  route_name: entity.partner_entity.collection
+  description: 'List partner entities'
+  parent: webcomposer_partner.list
+
+partner_entity.admin.structure.settings:
+  title: Partner Settings
+  description: 'Configure partner entities'
+  route_name: partner_entity.settings
+  parent: webcomposer_partner.list

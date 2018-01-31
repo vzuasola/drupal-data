@@ -1,0 +1,23 @@
+uuid: 5f29ef26-2414-477c-9481-51f46887f290
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_vip_structure_enable
+    - node.type.vip_page
+id: node.vip_page.field_vip_structure_enable
+field_name: field_vip_structure_enable
+entity_type: node
+bundle: vip_page
+label: 'Enable VIP Structure'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

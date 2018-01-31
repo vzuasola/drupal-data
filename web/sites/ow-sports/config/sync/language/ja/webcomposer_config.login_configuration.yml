@@ -5,7 +5,7 @@ notification_content:
   format: basic_html
   value: "<p>長時間ご操作がなかったためセッションは時間切れとなりました。\r\n</p>\r\n"
 lightbox_blurb: 'Dafabet へご登録はお済みですか？'
-username_placeholder: ユーザーネーム
+username_placeholder: Username
 password_placeholder: パスワード
 login_bottom_label: ログイン
 error_message_blank_username: ユーザーネームを入力して下さい。
