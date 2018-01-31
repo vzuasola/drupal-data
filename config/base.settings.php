@@ -14,18 +14,20 @@ $config_directories = [];
  * Fetch values from env and parse Sentinel hosts
  */
 
-$clients = \DrupalProject\helper\Sentinel::resolve($_SERVER['REDIS_SERVER']);
-$redisService = $_SERVER['REDIS_SERVICE'];
+if (isset($_SERVER['REDIS_SERVER']) && isset($_SERVER['REDIS_SERVICE'])) {
+  $clients = \DrupalProject\helper\Sentinel::resolve($_SERVER['REDIS_SERVER']);
+  $redisService = $_SERVER['REDIS_SERVICE'];
 
-$settings['webcomposer_cache']['redis'] = [
-  'clients' => $clients,
-    'options' => [
-        'replication' => 'sentinel',
-        'service' => $redisService,
-        'parameters' => ['database' => 2],
-        'prefix' => "cache:page:",
-    ],
-];
+  $settings['webcomposer_cache']['redis'] = [
+    'clients' => $clients,
+      'options' => [
+          'replication' => 'sentinel',
+          'service' => $redisService,
+          'parameters' => ['database' => 2],
+          'prefix' => "cache:page:",
+      ],
+  ];
+}
 
 /**
  * Access control for update.php script.

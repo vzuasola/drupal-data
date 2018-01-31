@@ -17,6 +17,8 @@ use Drupal\webcomposer_cache\Storage\SignatureStorageInterface;
  * Provides ResponseSubscriber.
  */
 class ResponseSubscriber implements EventSubscriberInterface {
+  const HEADER = 'Cache-Signature';
+
   /**
    * Subscriber priority
    */
@@ -56,6 +58,6 @@ class ResponseSubscriber implements EventSubscriberInterface {
     $request = $event->getRequest();
     $response = $event->getResponse();
 
-    $response->headers->set('Cache-Signature', $this->signatureManager->getSignature());
+    $response->headers->set(self::HEADER, $this->signatureManager->getSignature());
   }
 }
