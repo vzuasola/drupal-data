@@ -110,7 +110,7 @@ function draggableviews_preprocess_views_view_table(&$variables) {
 
   // Add hierarchy.
   foreach ($variables['rows'] as $key => $row) {
-    $title = $row['columns']['title']['content'][0]['field_output']['#markup'];
+    $title = isset($row['columns']['title']['content'][0]['field_output']['#markup']) ? $row['columns']['title']['content'][0]['field_output']['#markup'] : 'Draggable Views';
     $indent = [
       '#theme' => 'indentation',
       '#size' => $draggableviews->getDepth($key),
