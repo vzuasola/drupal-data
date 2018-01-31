@@ -9,6 +9,27 @@ $databases = [];
 $config_directories = [];
 
 /**
+ * Dynamic Sentinel Redis
+ *
+ * Fetch values from env and parse Sentinel hosts
+ */
+
+if (isset($_SERVER['REDIS_SERVER']) && isset($_SERVER['REDIS_SERVICE'])) {
+  $clients = \DrupalProject\helper\Sentinel::resolve($_SERVER['REDIS_SERVER']);
+  $redisService = $_SERVER['REDIS_SERVICE'];
+
+  $settings['webcomposer_cache']['redis'] = [
+    'clients' => $clients,
+      'options' => [
+          'replication' => 'sentinel',
+          'service' => $redisService,
+          'parameters' => ['database' => 2],
+          'prefix' => "cache:page:",
+      ],
+  ];
+}
+
+/**
  * Access control for update.php script.
  *
  * If you are updating your Drupal installation using the update.php script but

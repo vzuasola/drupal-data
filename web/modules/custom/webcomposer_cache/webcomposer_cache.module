@@ -1,0 +1,17 @@
+<?php
+
+/**
+ * @file
+ * Contains webcomposer_cache.module.
+ */
+
+/**
+ * Implements hook_cache_flush().
+ */
+function webcomposer_cache_cache_flush() {
+  try {
+    \Drupal::service('webcomposer_cache.signature_manager')->renewSignature();
+  } catch (Exception $e) {
+    // do nothing
+  }
+}
