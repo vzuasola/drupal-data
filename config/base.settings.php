@@ -23,8 +23,7 @@ if (isset($_SERVER['REDIS_SERVER']) && isset($_SERVER['REDIS_SERVICE'])) {
       'options' => [
           'replication' => 'sentinel',
           'service' => $redisService,
-          'parameters' => ['database' => 2],
-          'prefix' => "cache:page:",
+          'parameters' => ['database' => 1],
       ],
   ];
 }
