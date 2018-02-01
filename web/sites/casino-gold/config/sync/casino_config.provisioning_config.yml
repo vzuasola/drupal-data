@@ -2,7 +2,7 @@ langcode: zh-hans
 _core:
   default_config_hash: _-cfI71ymuhVf2WhjxUk5wUvCWlpDfTnQC4jfbOoOYQ
 app_top_blurb:
-  value: "<p>sdfsad</p>\r\n"
+  value: "<p>sdfsad {tracking.token}</p>\r\n"
   format: basic_html
 app_middle_blurb:
   value: "<p>sdc</p>\r\n"

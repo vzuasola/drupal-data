@@ -1,8 +1,0 @@
-uuid: c2254a58-102f-4e92-87d2-b99edbb390bf
-langcode: zh-hans
-status: true
-dependencies: {  }
-id: floating_banner_left
-label: 'Floating Banner (Left)'
-revision: 0
-description: 'Custom block for the left floating banner'
