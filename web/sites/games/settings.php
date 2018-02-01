@@ -4,6 +4,11 @@
 require $app_root . '/../config/base.settings.php';
 
 /**
+ * The product code
+ */
+$settings['product'] = 'games';
+
+/**
  * The main URL prefix for this site instance
  */
 $settings['primary_site_prefix'] = 'games';
