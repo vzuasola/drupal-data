@@ -105,10 +105,11 @@ class ConfigurationResource extends ResourceBase {
 
     try {
       $config = $this->configFactory->get("webcomposer_config.$id");
+
       $data = $config->get();
 
       $this->resolveFieldImages($id, $data);
-      $this->resolveImages($data);
+      $this->resolveRecursive($data);
     } catch (\Exception $e) {
       $data = [
         'error' => $this->t('Configuration not found')
@@ -155,17 +156,26 @@ class ConfigurationResource extends ResourceBase {
    * @param array $data
    *   The configuration data.
    */
-  private function resolveImages(&$data) {
+  private function resolveRecursive(&$data) {
     foreach ($data as $key => $value) {
       if (is_array($value)) {
-        $this->resolveImages($value);
+        $this->resolveRecursive($value);
       }
 
+      // replacements for field with uploaded images
       if (0 === strpos($key, 'file_image') && isset($value[0])) {
         $file = File::load($value[0]);
         if ($file) {
           $data[$key] = $this->generateUrlFromFile($file);
         }
+      }
+
+      // replacement for configs with HTML markup field formats
+      if (isset($value['value']) &&
+        isset($value['format']) &&
+        $value['format'] == 'basic_html'
+      ) {
+        $data[$key]['value'] = $this->filterHtml($value['value']);
       }
     }
   }
