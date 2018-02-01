@@ -1,0 +1,20 @@
+uuid: e8216e5e-090d-4156-91a4-b6dfd3bd3e15
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime
+    - games_showcase
+id: games_showcase_entity.field_publish_date
+field_name: field_publish_date
+entity_type: games_showcase_entity
+type: datetime
+settings:
+  datetime_type: datetime
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

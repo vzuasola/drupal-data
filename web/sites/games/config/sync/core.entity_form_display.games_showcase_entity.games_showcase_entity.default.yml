@@ -7,15 +7,36 @@ dependencies:
     - field.field.games_showcase_entity.games_showcase_entity.field_home_sub_category
     - field.field.games_showcase_entity.games_showcase_entity.field_home_tab_ribbon
     - field.field.games_showcase_entity.games_showcase_entity.field_log_in_state
+    - field.field.games_showcase_entity.games_showcase_entity.field_publish_date
     - field.field.games_showcase_entity.games_showcase_entity.field_showcase_body
     - field.field.games_showcase_entity.games_showcase_entity.field_showcase_image
     - field.field.games_showcase_entity.games_showcase_entity.field_showcase_ribbon
     - field.field.games_showcase_entity.games_showcase_entity.field_title
+    - field.field.games_showcase_entity.games_showcase_entity.field_unpublish_date
     - image.style.thumbnail
   module:
+    - datetime
+    - field_group
     - games_showcase
     - image
     - text
+third_party_settings:
+  field_group:
+    group_scheduler:
+      children:
+        - field_publish_date
+        - field_unpublish_date
+      parent_name: ''
+      weight: 10
+      format_type: tab
+      format_settings:
+        label: 'Scheduler Settings'
+        formatter: closed
+        description: ''
+        required_fields: true
+        id: ''
+        classes: ''
+      label: 'Scheduler Settings'
 _core:
   default_config_hash: PSZa9vcZ2_1vft-zVmYsX9sXBMQkeoKQ53gmxdYClts
 id: games_showcase_entity.games_showcase_entity.default
@@ -47,6 +68,12 @@ content:
     third_party_settings: {  }
     type: options_buttons
     region: content
+  field_publish_date:
+    weight: 11
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
   field_showcase_body:
     weight: 6
     settings:
@@ -77,6 +104,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_unpublish_date:
+    weight: 12
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
     region: content
   langcode:
     type: language_select
