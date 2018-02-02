@@ -1,0 +1,50 @@
+uuid: 7a17aa8e-f25f-4813-9131-938ec49ea0ca
+langcode: zh-hant
+status: true
+dependencies:
+  module:
+    - lang_dropdown
+    - system
+  theme:
+    - seven
+id: languagedropdownswitcherinterfacetext
+theme: seven
+region: content
+weight: 0
+provider: null
+plugin: 'language_dropdown_block:language_interface'
+settings:
+  id: 'language_dropdown_block:language_interface'
+  label: 'Language dropdown switcher'
+  provider: lang_dropdown
+  label_display: '0'
+  showall: 0
+  tohome: 0
+  width: '165'
+  display: '1'
+  widget: '0'
+  msdropdown:
+    visible_rows: '5'
+    rounded: 1
+    animation: slideDown
+    event: click
+    skin: ldsSkin
+    custom_skin: ''
+  chosen:
+    disable_search: 1
+    no_results_text: 'No language match'
+  ddslick:
+    ddslick_height: '0'
+    showSelectedHTML: 1
+    imagePosition: left
+    skin: ddsDefault
+    custom_skin: ''
+  languageicons:
+    flag_position: 1
+  hidden_languages: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: /admin/structure/webcomposer_slider_v2_entity
+    negate: false
+    context_mapping: {  }
