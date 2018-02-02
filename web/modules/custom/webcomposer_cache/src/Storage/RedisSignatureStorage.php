@@ -8,8 +8,10 @@ use Predis\Client as Redis;
 class RedisSignatureStorage implements SignatureStorageInterface {
   /**
    * The cache key
+   *
+   * @var string
    */
-  const CACHE_KEY = 'cache:signature:drupal';
+  private $cacheKey;
 
   /**
    * Predis client instance
@@ -17,9 +19,20 @@ class RedisSignatureStorage implements SignatureStorageInterface {
   private $redis;
 
   /**
+   * The product code
+   *
+   * @var string
+   */
+  private $product;
+
+  /**
    * Public constructor
    */
   public function __construct() {
+    $product = Settings::get('product');
+
+    $this->cacheKey = "cache:signature:drupal:$product";
+
     $settings = Settings::get('webcomposer_cache');
 
     if (!empty($settings['redis'])) {
@@ -33,7 +46,7 @@ class RedisSignatureStorage implements SignatureStorageInterface {
   public function getSignature() {
     try {
       if ($this->redis) {
-        $signature = $this->redis->get(self::CACHE_KEY);
+        $signature = $this->redis->get($this->cacheKey);
 
         if (!$signature) {
           $signature = $this->renewSignature();
@@ -51,7 +64,7 @@ class RedisSignatureStorage implements SignatureStorageInterface {
    * {@inheritdoc}
    */
   public function setSignature($signature) {
-    $this->redis->set(self::CACHE_KEY, $signature);
+    $this->redis->set($this->cacheKey, $signature);
   }
 
   /**
