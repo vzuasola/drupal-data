@@ -1,6 +1,4 @@
 autologout_box_content:
-  value: "<p>this is the text fo the notification box.<span class=\"sessionTimer\"></span>&nbsp;seconds.</p>\r\n"
   format: basic_html
 notification_content:
-  value: "<p>This is notification Box</p>\r\n"
   format: basic_html

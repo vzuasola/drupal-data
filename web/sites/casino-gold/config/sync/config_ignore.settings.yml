@@ -2,3 +2,4 @@ ignored_config_entities:
   0: 'block.*'
   2: 'casino_config.*'
   4: 'webcomposer_config.*'
+langcode: zh-hans

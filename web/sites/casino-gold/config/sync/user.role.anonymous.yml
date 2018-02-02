@@ -15,6 +15,7 @@ permissions:
   - 'access site-wide contact form'
   - 'administer rest resources'
   - 'restful get Web Composer Token Resource Label'
+  - 'restful get affiliate_rest_resource'
   - 'restful get casino_rest_resource'
   - 'restful get configuration_resource'
   - 'restful get custom_block_resource'

@@ -32,10 +32,12 @@ class RedisSignatureStorage implements SignatureStorageInterface {
    */
   public function getSignature() {
     try {
-      $signature = $this->redis->get(self::CACHE_KEY);
+      if ($this->redis) {
+        $signature = $this->redis->get(self::CACHE_KEY);
 
-      if (!$signature) {
-        $signature = $this->renewSignature();
+        if (!$signature) {
+          $signature = $this->renewSignature();
+        }
       }
     } catch (\Exception $e) {
       // if signature cannot be created, just return a new signature

@@ -1,0 +1,11 @@
+uuid: a1b9f205-1222-4f11-b196-8f989c4f56cb
+langcode: zh-hans
+status: true
+dependencies:
+  module:
+    - webcomposer_partner
+id: partner_entity.partner_entity
+target_entity_type_id: partner_entity
+target_bundle: partner_entity
+default_langcode: site_default
+language_alterable: false
