@@ -1,7 +1,0 @@
-uuid: 0acdc468-8b0f-4aa9-a075-67b972a1f52f
-langcode: zh-hans
-status: true
-dependencies: {  }
-id: floating_banner_item_right
-label: 'Floating Banner Item (Right)'
-behavior_plugins: {  }

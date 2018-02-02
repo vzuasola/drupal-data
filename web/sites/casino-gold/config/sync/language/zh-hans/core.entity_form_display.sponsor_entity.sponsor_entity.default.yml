@@ -28,5 +28,4 @@ content:
     region: content
 hidden:
   langcode: true
-  name: true
   user_id: true
