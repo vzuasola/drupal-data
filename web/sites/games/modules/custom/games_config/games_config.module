@@ -26,6 +26,7 @@ function games_config_help($route_name, RouteMatchInterface $route_match) {
 
 
 function games_config_form_alter(&$form, $form_state, $form_id) {
+  kint($form_id);
   	if ($form_id == 'node_game_form' || $form_id == 'node_game_edit_form') {
  		foreach (array_keys($form['actions']) as $action) {
 		    if ($action != 'preview' && isset($form['actions'][$action]['#type']) && $form['actions'][$action]['#type'] === 'submit') {
@@ -41,8 +42,11 @@ function games_config_form_alter(&$form, $form_state, $form_id) {
     $term_alias = _games_config_taxonomy_vocabulary_load();
     if ($form_id == 'taxonomy_term_games_category_form' && $term_alias == "home") {
       $form['actions']['delete']['#access'] = FALSE;
+      drupal_set_message(t("This term cannot be deleted."), 'error');
+      // $form['description']['#markup'] = $markup;
     } elseif ($form_id == 'taxonomy_term_games_category_delete_form' && $term_alias == "home") {
               $form['actions']['submit']['#access'] = FALSE;
+              drupal_set_message(t("This term cannot be deleted."), 'error');
     }
 }
 
