@@ -42,7 +42,6 @@ webcomposer_config.icore_games_integration:
     game_provider_mapping:
       type: text
       label: 'Game Provider Mapping'
-      translatable: true
     fallback_error:
       type: text
       label: 'Fallback Error'
