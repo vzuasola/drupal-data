@@ -35,7 +35,7 @@ class PartnerResponsiveEntitySettingsForm extends FormBase {
   }
 
   /**
-   * Defines the settings form for Partner - Responsive entities.
+   * Defines the settings form for Partner entities.
    *
    * @param array $form
    *   An associative array containing the structure of the form.

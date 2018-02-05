@@ -7,70 +7,68 @@ use Drupal\Core\Entity\EntityChangedInterface;
 use Drupal\user\EntityOwnerInterface;
 
 /**
- * Provides an interface for defining Partner - Responsive entities.
+ * Provides an interface for defining Partner entities.
  *
  * @ingroup webcomposer_partner_responsive
  */
-interface PartnerResponsiveEntityInterface extends  ContentEntityInterface, EntityChangedInterface, EntityOwnerInterface {
-
-  // Add get/set methods for your configuration properties here.
+interface PartnerResponsiveEntityInterface extends ContentEntityInterface, EntityChangedInterface, EntityOwnerInterface {
 
   /**
-   * Gets the Partner - Responsive name.
+   * Gets the Partner name.
    *
    * @return string
-   *   Name of the Partner - Responsive.
+   *   Name of the Partner.
    */
   public function getName();
 
   /**
-   * Sets the Partner - Responsive name.
+   * Sets the Partner name.
    *
    * @param string $name
-   *   The Partner - Responsive name.
+   *   The Partner name.
    *
    * @return \Drupal\webcomposer_partner_responsive\Entity\PartnerResponsiveEntityInterface
-   *   The called Partner - Responsive entity.
+   *   The called Partner entity.
    */
   public function setName($name);
 
   /**
-   * Gets the Partner - Responsive creation timestamp.
+   * Gets the Partner creation timestamp.
    *
    * @return int
-   *   Creation timestamp of the Partner - Responsive.
+   *   Creation timestamp of the Partner.
    */
   public function getCreatedTime();
 
   /**
-   * Sets the Partner - Responsive creation timestamp.
+   * Sets the Partner creation timestamp.
    *
    * @param int $timestamp
-   *   The Partner - Responsive creation timestamp.
+   *   The Partner creation timestamp.
    *
    * @return \Drupal\webcomposer_partner_responsive\Entity\PartnerResponsiveEntityInterface
-   *   The called Partner - Responsive entity.
+   *   The called Partner entity.
    */
   public function setCreatedTime($timestamp);
 
   /**
-   * Returns the Partner - Responsive published status indicator.
+   * Returns the Partner published status indicator.
    *
-   * Unpublished Partner - Responsive are only visible to restricted users.
+   * Unpublished Partner are only visible to restricted users.
    *
    * @return bool
-   *   TRUE if the Partner - Responsive is published.
+   *   TRUE if the Partner is published.
    */
   public function isPublished();
 
   /**
-   * Sets the published status of a Partner - Responsive.
+   * Sets the published status of a Partner.
    *
    * @param bool $published
-   *   TRUE to set this Partner - Responsive to published, FALSE to set it to unpublished.
+   *   TRUE to set this Partner to published, FALSE to set it to unpublished.
    *
    * @return \Drupal\webcomposer_partner_responsive\Entity\PartnerResponsiveEntityInterface
-   *   The called Partner - Responsive entity.
+   *   The called Partner entity.
    */
   public function setPublished($published);
 

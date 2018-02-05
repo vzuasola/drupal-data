@@ -7,11 +7,12 @@ use Drupal\Core\Entity\EntityListBuilder;
 use Drupal\Core\Link;
 
 /**
- * Defines a class to build a listing of Partner - Responsive entities.
+ * Defines a class to build a listing of Partner entities.
  *
  * @ingroup webcomposer_partner_responsive
  */
 class PartnerResponsiveEntityListBuilder extends EntityListBuilder {
+
   /**
    * {@inheritdoc}
    */

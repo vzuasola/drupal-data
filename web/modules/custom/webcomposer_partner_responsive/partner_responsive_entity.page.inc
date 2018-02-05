@@ -4,13 +4,13 @@
  * @file
  * Contains partner_responsive_entity.page.inc.
  *
- * Page callback for Partner - Responsive entities.
+ * Page callback for Partner responsive entities.
  */
 
 use Drupal\Core\Render\Element;
 
 /**
- * Prepares variables for Partner - Responsive templates.
+ * Prepares variables for Partner templates.
  *
  * Default template: partner_responsive_entity.html.twig.
  *

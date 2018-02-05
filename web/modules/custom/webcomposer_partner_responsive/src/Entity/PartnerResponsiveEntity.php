@@ -10,13 +10,13 @@ use Drupal\Core\Entity\EntityTypeInterface;
 use Drupal\user\UserInterface;
 
 /**
- * Defines the Partner - Responsive entity.
+ * Defines the Partner entity.
  *
  * @ingroup webcomposer_partner_responsive
  *
  * @ContentEntityType(
  *   id = "partner_responsive_entity",
- *   label = @Translation("Partner - Responsive"),
+ *   label = @Translation("Responsive Partner"),
  *   handlers = {
  *     "view_builder" = "Drupal\Core\Entity\EntityViewBuilder",
  *     "list_builder" = "Drupal\webcomposer_partner_responsive\PartnerResponsiveEntityListBuilder",
@@ -37,7 +37,7 @@ use Drupal\user\UserInterface;
  *   base_table = "partner_responsive_entity",
  *   data_table = "partner_responsive_entity_field_data",
  *   translatable = TRUE,
- *   admin_permission = "administer partner - responsive entities",
+ *   admin_permission = "administer partner entities",
  *   entity_keys = {
  *     "id" = "id",
  *     "label" = "name",
@@ -153,7 +153,7 @@ class PartnerResponsiveEntity extends ContentEntityBase implements PartnerRespon
 
     $fields['user_id'] = BaseFieldDefinition::create('entity_reference')
       ->setLabel(t('Authored by'))
-      ->setDescription(t('The user ID of author of the Partner - Responsive entity.'))
+      ->setDescription(t('The user ID of author of the Partner entity.'))
       ->setRevisionable(TRUE)
       ->setSetting('target_type', 'user')
       ->setSetting('handler', 'default')
@@ -178,7 +178,7 @@ class PartnerResponsiveEntity extends ContentEntityBase implements PartnerRespon
 
     $fields['name'] = BaseFieldDefinition::create('string')
       ->setLabel(t('Name'))
-      ->setDescription(t('The name of the Partner - Responsive entity.'))
+      ->setDescription(t('The name of the Partner entity.'))
       ->setSettings([
         'max_length' => 50,
         'text_processing' => 0,
@@ -198,7 +198,7 @@ class PartnerResponsiveEntity extends ContentEntityBase implements PartnerRespon
 
     $fields['status'] = BaseFieldDefinition::create('boolean')
       ->setLabel(t('Publishing status'))
-      ->setDescription(t('A boolean indicating whether the Partner - Responsive is published.'))
+      ->setDescription(t('A boolean indicating whether the Partner is published.'))
       ->setDefaultValue(TRUE);
 
     $fields['created'] = BaseFieldDefinition::create('created')

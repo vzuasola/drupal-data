@@ -6,7 +6,7 @@ use Drupal\Core\Entity\ContentEntityForm;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Form controller for Partner - Responsive edit forms.
+ * Form controller for Partner edit forms.
  *
  * @ingroup webcomposer_partner_responsive
  */

@@ -8,7 +8,7 @@ use Drupal\Core\Session\AccountInterface;
 use Drupal\Core\Access\AccessResult;
 
 /**
- * Access controller for the Partner - Responsive entity.
+ * Access controller for the Partner entity.
  *
  * @see \Drupal\webcomposer_partner_responsive\Entity\PartnerResponsiveEntity.
  */
