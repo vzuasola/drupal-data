@@ -94,6 +94,13 @@ class ICoreGamesIntegrationConfiguration extends ConfigFormBase {
       '#default_value' => $config->get('unsupported_currencies_button')
     );
 
+    $form['message']['game_provider_mapping'] = array(
+      '#type' => 'textarea',
+      '#title' => t('Game Provider Mapping for Unsupported Currency'),
+      '#description' => $this->t('Game provider mapping. Pattern should be {game_provider_key}|{game provider name}'),
+      '#default_value' => $config->get('game_provider_mapping')
+    );
+
     $form['message']['fallback_error_title'] = array(
       '#type' => 'textfield',
       '#title' => t('Fallback Error Title'),
@@ -138,6 +145,7 @@ class ICoreGamesIntegrationConfiguration extends ConfigFormBase {
       'unsupported_currencies_title',
       'unsupported_currencies_message',
       'unsupported_currencies_button',
+      'game_provider_mapping',
       'fallback_error_title',
       'fallback_error_message',
       'fallback_error_button',
