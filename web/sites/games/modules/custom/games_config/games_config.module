@@ -26,7 +26,6 @@ function games_config_help($route_name, RouteMatchInterface $route_match) {
 
 
 function games_config_form_alter(&$form, $form_state, $form_id) {
-  kint($form_id);
   	if ($form_id == 'node_game_form' || $form_id == 'node_game_edit_form') {
  		foreach (array_keys($form['actions']) as $action) {
 		    if ($action != 'preview' && isset($form['actions'][$action]['#type']) && $form['actions'][$action]['#type'] === 'submit') {
