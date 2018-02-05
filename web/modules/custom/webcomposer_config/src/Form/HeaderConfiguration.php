@@ -328,6 +328,14 @@ class HeaderConfiguration extends ConfigFormBase {
       '#required' => TRUE,
     ];
 
+    $form['header_other_group']['cashier_link'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Cashier Link'),
+      '#description' => $this->t('Cashier Link'),
+      '#default_value' => $config->get('cashier_link'),
+      '#required' => TRUE,
+    ];
+
     return parent::buildForm($form, $form_state);
   }
 
@@ -362,6 +370,7 @@ class HeaderConfiguration extends ConfigFormBase {
       'news_announcement_content',
       'profile_link',
       'profile_logout_text',
+      'cashier_link',
     ];
 
     foreach ($keys as $key) {
