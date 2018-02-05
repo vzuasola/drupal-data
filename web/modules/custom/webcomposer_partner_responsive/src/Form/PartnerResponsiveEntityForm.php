@@ -6,7 +6,7 @@ use Drupal\Core\Entity\ContentEntityForm;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Form controller for Partner edit forms.
+ * Form controller for Partner - Responsive edit forms.
  *
  * @ingroup webcomposer_partner_responsive
  */
@@ -47,4 +47,5 @@ class PartnerResponsiveEntityForm extends ContentEntityForm {
 
     $form_state->setRedirectUrl($entity->urlInfo('collection'));
   }
+
 }

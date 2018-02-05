@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains webcomposer_partner_responsive.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function webcomposer_partner_responsive_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the webcomposer_partner_responsive module.
+    case 'help.page.webcomposer_partner_responsive':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Partners Logo Configuration - Responsive version') . '</p>';
+      return $output;
+
+    default:
+  }
+}

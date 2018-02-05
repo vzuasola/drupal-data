@@ -19,7 +19,7 @@ class PartnerResponsiveEntitySettingsForm extends FormBase {
    *   The unique string identifying the form.
    */
   public function getFormId() {
-    return 'PartnerResponsiveEntity_settings';
+    return 'partnerresponsiveentity_settings';
   }
 
   /**
@@ -35,7 +35,7 @@ class PartnerResponsiveEntitySettingsForm extends FormBase {
   }
 
   /**
-   * Defines the settings form for Partner entities.
+   * Defines the settings form for Partner - Responsive entities.
    *
    * @param array $form
    *   An associative array containing the structure of the form.
@@ -46,7 +46,7 @@ class PartnerResponsiveEntitySettingsForm extends FormBase {
    *   Form definition array.
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    $form['PartnerResponsiveEntity_settings']['#markup'] = 'Settings form for Partner entities. Manage field settings here.';
+    $form['partnerresponsiveentity_settings']['#markup'] = 'Settings form for Partner entities. Manage field settings here.';
     return $form;
   }
 

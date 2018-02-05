@@ -1,7 +1,10 @@
 webcomposer_partner_responsive.admin_settings:
-  path: 'admin/config/webcomposer/partners'
+  path: 'admin/config/webcomposer/partner-repsponsive;'
   defaults:
     _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
-    _title: 'Webcomposer Partners'
+    _title: 'Webcomposer Sponsors'
   requirements:
     _permission: 'administer site configuration'
+
+webcomposer_partner_responsive.manage:
+  path: 'admin/structure/webcomposer_partner_responsive/partner_entity/manage'

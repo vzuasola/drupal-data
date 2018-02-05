@@ -1,20 +1,26 @@
 webcomposer_partner_responsive.list:
-  title: 'Webcomposer Responsive Partners'
-  description: 'Configure the Footer Partners'
+  title: 'Webcomposer Footer Partner - Responsive'
+  description: 'Configure the Footer Sponsors'
   parent: system.admin_config
-  route_name: webcomposer_partner_responsive.admin_settings
+  route_name: webcomposer_sponsor_responsive.admin_settings
   weight: 1500
 
-# Partner menu items definition
-entity.partner_responsive_entity.collection:
-  title: 'Responsive Partner list'
-  route_name: entity.partner_responsive_entity.collection
-  description: 'List Partner entities'
+entity.partner_responsive_entity.manage:
+  title: 'Manage Partners - Responsive'
+  route_name: webcomposer_partner_responsive.manage
+  description: 'Manage or sort partner entities'
   parent: webcomposer_partner_responsive.list
 
-partner_responsive_entity.admin.structure.settings:
-  title: 'Responsive Partner settings'
-  description: 'Configure Partner entities'
-  route_name: partner_responsive_entity.settings
+# Partner - Responsive menu items definition
+entity.partner_responsive_entity.collection:
+  title: 'Partner - Responsive list'
+  route_name: entity.partner_responsive_entity.collection
+  description: 'List Partner - Responsive entities'
   parent: webcomposer_partner_responsive.list
   weight: 100
+
+partner_responsive_entity.admin.structure.settings:
+  title: Partner - Responsive settings
+  description: 'Configure Partner - Responsive entities'
+  route_name: partner_responsive_entity.settings
+  parent: webcomposer_partner_responsive.list

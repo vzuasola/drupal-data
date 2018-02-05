@@ -10,13 +10,13 @@ use Drupal\Core\Entity\EntityTypeInterface;
 use Drupal\user\UserInterface;
 
 /**
- * Defines the Partner entity.
+ * Defines the Partner - Responsive entity.
  *
  * @ingroup webcomposer_partner_responsive
  *
  * @ContentEntityType(
  *   id = "partner_responsive_entity",
- *   label = @Translation("Responsive Partner"),
+ *   label = @Translation("Partner - Responsive"),
  *   handlers = {
  *     "view_builder" = "Drupal\Core\Entity\EntityViewBuilder",
  *     "list_builder" = "Drupal\webcomposer_partner_responsive\PartnerResponsiveEntityListBuilder",
@@ -37,7 +37,7 @@ use Drupal\user\UserInterface;
  *   base_table = "partner_responsive_entity",
  *   data_table = "partner_responsive_entity_field_data",
  *   translatable = TRUE,
- *   admin_permission = "administer partner entities",
+ *   admin_permission = "administer partner - responsive entities",
  *   entity_keys = {
  *     "id" = "id",
  *     "label" = "name",
@@ -47,11 +47,11 @@ use Drupal\user\UserInterface;
  *     "status" = "status",
  *   },
  *   links = {
- *     "canonical" = "/admin/structure/partner-responsive/partner_responsive_entity/{partner_responsive_entity}",
- *     "add-form" = "/admin/structure/partner-responsive/partner_responsive_ntity/add",
- *     "edit-form" = "/admin/structure/partner-responsive/partner_responsive_entity/{partner_responsive_entity}/edit",
- *     "delete-form" = "/admin/structure/partner-responsive/partner_responsive_entity/{partner_responsive_entity}/delete",
- *     "collection" = "/admin/structure/partner-responsive/partner_responsive_entity",
+ *     "canonical" = "/admin/structure/partner_responsive_entity/{partner_responsive_entity}",
+ *     "add-form" = "/admin/structure/partner_responsive_entity/add",
+ *     "edit-form" = "/admin/structure/partner_responsive_entity/{partner_responsive_entity}/edit",
+ *     "delete-form" = "/admin/structure/partner_responsive_entity/{partner_responsive_entity}/delete",
+ *     "collection" = "/admin/structure/partner_responsive_entity",
  *   },
  *   field_ui_base_route = "partner_responsive_entity.settings"
  * )
@@ -153,7 +153,7 @@ class PartnerResponsiveEntity extends ContentEntityBase implements PartnerRespon
 
     $fields['user_id'] = BaseFieldDefinition::create('entity_reference')
       ->setLabel(t('Authored by'))
-      ->setDescription(t('The user ID of author of the Partner entity.'))
+      ->setDescription(t('The user ID of author of the Partner - Responsive entity.'))
       ->setRevisionable(TRUE)
       ->setSetting('target_type', 'user')
       ->setSetting('handler', 'default')
@@ -178,7 +178,7 @@ class PartnerResponsiveEntity extends ContentEntityBase implements PartnerRespon
 
     $fields['name'] = BaseFieldDefinition::create('string')
       ->setLabel(t('Name'))
-      ->setDescription(t('The name of the Partner entity.'))
+      ->setDescription(t('The name of the Partner - Responsive entity.'))
       ->setSettings([
         'max_length' => 50,
         'text_processing' => 0,
@@ -198,7 +198,7 @@ class PartnerResponsiveEntity extends ContentEntityBase implements PartnerRespon
 
     $fields['status'] = BaseFieldDefinition::create('boolean')
       ->setLabel(t('Publishing status'))
-      ->setDescription(t('A boolean indicating whether the Partner is published.'))
+      ->setDescription(t('A boolean indicating whether the Partner - Responsive is published.'))
       ->setDefaultValue(TRUE);
 
     $fields['created'] = BaseFieldDefinition::create('created')

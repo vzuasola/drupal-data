@@ -8,7 +8,7 @@ use Drupal\Core\Session\AccountInterface;
 use Drupal\Core\Access\AccessResult;
 
 /**
- * Access controller for the Partner entity.
+ * Access controller for the Partner - Responsive entity.
  *
  * @see \Drupal\webcomposer_partner_responsive\Entity\PartnerResponsiveEntity.
  */
@@ -22,15 +22,15 @@ class PartnerResponsiveEntityAccessControlHandler extends EntityAccessControlHan
     switch ($operation) {
       case 'view':
         if (!$entity->isPublished()) {
-          return AccessResult::allowedIfHasPermission($account, 'view unpublished partner entities');
+          return AccessResult::allowedIfHasPermission($account, 'view unpublished partner - responsive entities');
         }
-        return AccessResult::allowedIfHasPermission($account, 'view published partner entities');
+        return AccessResult::allowedIfHasPermission($account, 'view published partner - responsive entities');
 
       case 'update':
-        return AccessResult::allowedIfHasPermission($account, 'edit partner entities');
+        return AccessResult::allowedIfHasPermission($account, 'edit partner - responsive entities');
 
       case 'delete':
-        return AccessResult::allowedIfHasPermission($account, 'delete partner entities');
+        return AccessResult::allowedIfHasPermission($account, 'delete partner - responsive entities');
     }
 
     // Unknown operation, no opinion.
@@ -41,7 +41,7 @@ class PartnerResponsiveEntityAccessControlHandler extends EntityAccessControlHan
    * {@inheritdoc}
    */
   protected function checkCreateAccess(AccountInterface $account, array $context, $entity_bundle = NULL) {
-    return AccessResult::allowedIfHasPermission($account, 'add partner entities');
+    return AccessResult::allowedIfHasPermission($account, 'add partner - responsive entities');
   }
 
 }

@@ -1,0 +1,20 @@
+uuid: 6a5c135b-7394-44b6-ae76-c1910a132dd2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.partner_responsive_entity.field_partner_id
+  module:
+    - webcomposer_partner_responsive
+id: partner_responsive_entity.partner_responsive_entity.field_partner_id
+field_name: field_partner_id
+entity_type: partner_responsive_entity
+bundle: partner_responsive_entity
+label: ID
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,13 +1,26 @@
 <?php
 
-
 /**
  * Implements hook_uninstall
  */
-// function webcomposer_partner_responsive_uninstall() {
-//    $keys = [];
+function webcomposer_partner_responsive_uninstall() {
+    $keys = [
+        'core.entity_form_display.partner_responsive_entity.partner_responsive_entity.default',
+        'core.entity_view_display.partner_responsive_entity.partner_responsive_entity.default',
+        'language.content_settings.partner_responsive_entity.partner_responsive_entity',
+        'core.base_field_override.partner_responsive_entity.partner_responsive_entity.metatag',
+        'field.field.partner_responsive_entity.partner_responsive_entity.field_partner_id',
+        'field.field.partner_responsive_entity.partner_responsive_entity.field_res_partner_desktop_logo',
+        'field.field.partner_responsive_entity.partner_responsive_entity.field_res_partner_mobile_logo',
+        'field.field.partner_responsive_entity.partner_responsive_entity.field_res_partner_tablet_logo',
+        'field.storage.partner_responsive_entity.field_partner_id',
+        'field.storage.partner_responsive_entity.field_res_partner_desktop_logo',
+        'field.storage.partner_responsive_entity.field_res_partner_mobile_logo',
+        'field.storage.partner_responsive_entity.field_res_partner_tablet_logo',
+        'views.view.webcomposer_responsive_partner_entity_api'
+    ];
 
-//     foreach ($keys as $key) {
-//       \Drupal::configFactory()->getEditable($key)->delete();
-//     }
-// }
+    foreach ($keys as $key) {
+      \Drupal::configFactory()->getEditable($key)->delete();
+    }
+}

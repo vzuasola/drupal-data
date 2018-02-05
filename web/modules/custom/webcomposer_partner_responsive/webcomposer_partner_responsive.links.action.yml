@@ -1,5 +1,5 @@
 entity.partner_responsive_entity.add_form:
   route_name: entity.partner_responsive_entity.add_form
-  title: 'Add partner'
+  title: 'Add Partner - Responsive'
   appears_on:
     - entity.partner_responsive_entity.collection
