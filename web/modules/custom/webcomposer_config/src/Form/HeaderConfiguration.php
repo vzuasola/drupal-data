@@ -331,7 +331,7 @@ class HeaderConfiguration extends ConfigFormBase {
     $form['header_other_group']['cashier_link'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Cashier Link'),
-      '#description' => $this->t('Cashier Link'),
+      '#description' => $this->t('Cashier Link For Header'),
       '#default_value' => $config->get('cashier_link'),
       '#required' => TRUE,
     ];
