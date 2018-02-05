@@ -42,7 +42,6 @@ function games_config_form_alter(&$form, $form_state, $form_id) {
     if ($form_id == 'taxonomy_term_games_category_form' && $term_alias == "home") {
       $form['actions']['delete']['#access'] = FALSE;
       drupal_set_message(t("This term cannot be deleted."), 'error');
-      // $form['description']['#markup'] = $markup;
     } elseif ($form_id == 'taxonomy_term_games_category_delete_form' && $term_alias == "home") {
               $form['actions']['submit']['#access'] = FALSE;
               drupal_set_message(t("This term cannot be deleted."), 'error');
