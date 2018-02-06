@@ -21,7 +21,8 @@ use Drupal\Core\Render\Element;
  */
 function template_preprocess_partner_responsive_entity(array &$variables) {
   // Fetch PartnerResponsiveEntity Entity Object.
-  // $variables['elements']['#partner_responsive_entity'];.
+  $partner_responsive_entity = $variables['elements']['#partner_responsive_entity'];
+
   // Helpful $content variable for templates.
   foreach (Element::children($variables['elements']) as $key) {
     $variables['content'][$key] = $variables['elements'][$key];
