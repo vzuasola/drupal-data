@@ -8,6 +8,8 @@ dependencies:
 third_party_settings:
   content_translation:
     enabled: true
+_core:
+  default_config_hash: psklx6AYv2U5Sn4V0GbQrO0Y1dzbeB3XCzHmy83oQ3o
 id: partner_responsive_entity.partner_responsive_entity
 target_entity_type_id: partner_responsive_entity
 target_bundle: partner_responsive_entity

@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.partner_responsive_entity.partner_responsive_entity.field_partner_id
+    - field.field.partner_responsive_entity.partner_responsive_entity.field_id
     - field.field.partner_responsive_entity.partner_responsive_entity.field_res_partner_desktop_logo
     - field.field.partner_responsive_entity.partner_responsive_entity.field_res_partner_mobile_logo
     - field.field.partner_responsive_entity.partner_responsive_entity.field_res_partner_tablet_logo
@@ -11,13 +11,15 @@ dependencies:
     - image
     - user
     - webcomposer_partner_responsive
+_core:
+  default_config_hash: 5ZNCVe5e2UNEELG87xVD29wq17XdiTyQQjtr1g9BGec
 id: partner_responsive_entity.partner_responsive_entity.default
 targetEntityType: partner_responsive_entity
 bundle: partner_responsive_entity
 mode: default
 content:
-  field_partner_id:
-    weight: 1
+  field_id:
+    weight: 5
     label: above
     settings:
       link_to_entity: false
