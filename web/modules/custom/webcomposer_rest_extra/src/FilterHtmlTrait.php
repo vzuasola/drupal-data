@@ -32,7 +32,7 @@ trait FilterHtmlTrait {
 
           \Drupal::moduleHandler()->alter('inline_image_url_change', $replace, $base_path, $src);
 
-          $image['src'] = $replace;
+          $image['src'] = (string) $replace;
       }
     } else {
       // make them absolute, so that it will work on front end
@@ -43,7 +43,7 @@ trait FilterHtmlTrait {
 
           \Drupal::moduleHandler()->alter('inline_image_url_change', $replace, $drupal_uri, $image['src']);
 
-          $image['src'] = $replace;
+          $image['src'] = (string) $replace;
       }
 
     }
