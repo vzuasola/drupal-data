@@ -1,26 +1,57 @@
-uuid: 4f3b1392-884b-48e6-a869-0689cbd529ed
+uuid: 5fe8664c-508e-4920-83f8-c345c2967505
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.partner_responsive_entity.partner_responsive_entity.field_responsive_partners
+    - field.field.partner_responsive_entity.partner_responsive_entity.field_id
+    - field.field.partner_responsive_entity.partner_responsive_entity.field_res_partner_desktop_logo
+    - field.field.partner_responsive_entity.partner_responsive_entity.field_res_partner_mobile_logo
+    - field.field.partner_responsive_entity.partner_responsive_entity.field_res_partner_tablet_logo
   module:
-    - entity_reference_revisions
+    - image
     - user
     - webcomposer_partner_responsive
+_core:
+  default_config_hash: s3IGsM9SZGgXA2jNfQN26TxuIn5kEbhJqzLq1xGVCcA
 id: partner_responsive_entity.partner_responsive_entity.default
 targetEntityType: partner_responsive_entity
 bundle: partner_responsive_entity
 mode: default
 content:
-  field_responsive_partners:
-    type: entity_reference_revisions_entity_view
-    weight: 1
+  field_id:
+    weight: 5
     label: above
     settings:
-      view_mode: default
-      link: ''
+      link_to_entity: false
     third_party_settings: {  }
+    type: string
+    region: content
+  field_res_partner_desktop_logo:
+    weight: 2
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_res_partner_mobile_logo:
+    weight: 4
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_res_partner_tablet_logo:
+    weight: 3
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
     region: content
   name:
     label: above

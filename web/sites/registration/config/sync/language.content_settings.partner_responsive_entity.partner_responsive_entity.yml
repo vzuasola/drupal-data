@@ -1,4 +1,4 @@
-uuid: f9a31826-bcdb-4112-a683-ec7aca74b333
+uuid: 12dafbfd-4edc-4fe7-b2fa-5b61c5226038
 langcode: en
 status: true
 dependencies:
@@ -8,6 +8,8 @@ dependencies:
 third_party_settings:
   content_translation:
     enabled: true
+_core:
+  default_config_hash: S9mFgmAUmJHmZGNSC5I8KAsOUhzJq_AwRg2DwQRqok8
 id: partner_responsive_entity.partner_responsive_entity
 target_entity_type_id: partner_responsive_entity
 target_bundle: partner_responsive_entity
