@@ -20,6 +20,8 @@ dependencies:
     - field.field.registration_theme_entity.registration_theme_entity.field_registration_theme_code
     - field.field.registration_theme_entity.registration_theme_entity.field_separator_color
     - field.field.registration_theme_entity.registration_theme_entity.field_steptwo_banner
+    - field.field.registration_theme_entity.registration_theme_entity.field_steptwo_banner_mobile
+    - field.field.registration_theme_entity.registration_theme_entity.field_steptwo_banner_tablet
     - field.field.registration_theme_entity.registration_theme_entity.field_steptwo_content
     - field.field.registration_theme_entity.registration_theme_entity.field_success_message
     - field.field.registration_theme_entity.registration_theme_entity.field_success_message_color
@@ -182,6 +184,24 @@ content:
     region: content
   field_steptwo_banner:
     weight: 13
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_steptwo_banner_mobile:
+    weight: 26
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_steptwo_banner_tablet:
+    weight: 25
     label: above
     settings:
       image_style: ''
