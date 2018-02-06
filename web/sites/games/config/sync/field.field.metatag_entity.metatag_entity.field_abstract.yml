@@ -1,0 +1,22 @@
+uuid: 7958506f-dd01-4c88-b3d8-854aaf140ab1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.metatag_entity.field_abstract
+  module:
+    - webcomposer_metatags
+_core:
+  default_config_hash: ulRL7fmcJcdNbcLP_ivzMR7aMjbHHJLZfFVY0iC7Uk0
+id: metatag_entity.metatag_entity.field_abstract
+field_name: field_abstract
+entity_type: metatag_entity
+bundle: metatag_entity
+label: Abstract
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long
