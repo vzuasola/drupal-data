@@ -1,4 +1,4 @@
-uuid: c52b040b-d0bc-4680-be94-1b3c0e8ad6ab
+uuid: 5fe8664c-508e-4920-83f8-c345c2967505
 langcode: en
 status: true
 dependencies:
@@ -7,62 +7,66 @@ dependencies:
     - field.field.partner_responsive_entity.partner_responsive_entity.field_res_partner_desktop_logo
     - field.field.partner_responsive_entity.partner_responsive_entity.field_res_partner_mobile_logo
     - field.field.partner_responsive_entity.partner_responsive_entity.field_res_partner_tablet_logo
-    - image.style.thumbnail
   module:
     - image
+    - user
     - webcomposer_partner_responsive
 _core:
-  default_config_hash: rZf8wYUTou0EfPOZ-jrOWUFnwCLbcA0DsKYBC2cC6xs
+  default_config_hash: 5ZNCVe5e2UNEELG87xVD29wq17XdiTyQQjtr1g9BGec
 id: partner_responsive_entity.partner_responsive_entity.default
 targetEntityType: partner_responsive_entity
 bundle: partner_responsive_entity
 mode: default
 content:
   field_id:
-    weight: 1
+    weight: 5
+    label: above
     settings:
-      size: 60
-      placeholder: ''
+      link_to_entity: false
     third_party_settings: {  }
-    type: string_textfield
+    type: string
     region: content
   field_res_partner_desktop_logo:
     weight: 2
+    label: above
     settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
+      image_style: ''
+      image_link: ''
     third_party_settings: {  }
-    type: image_image
+    type: image
     region: content
   field_res_partner_mobile_logo:
     weight: 4
+    label: above
     settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
+      image_style: ''
+      image_link: ''
     third_party_settings: {  }
-    type: image_image
+    type: image
     region: content
   field_res_partner_tablet_logo:
     weight: 3
+    label: above
     settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
+      image_style: ''
+      image_link: ''
     third_party_settings: {  }
-    type: image_image
+    type: image
     region: content
   name:
-    type: string_textfield
-    weight: 0
+    label: above
+    type: string
+    weight: -4
     region: content
     settings:
-      size: 60
-      placeholder: ''
+      link_to_entity: false
     third_party_settings: {  }
-  translation:
-    weight: 5
+  user_id:
+    label: hidden
+    type: author
+    weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
   langcode: true
-  user_id: true

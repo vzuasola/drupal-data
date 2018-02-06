@@ -47,11 +47,11 @@ use Drupal\user\UserInterface;
  *     "status" = "status",
  *   },
  *   links = {
- *     "canonical" = "/admin/structure/partner-responsive/partner_responsive_entity/{partner_responsive_entity}",
- *     "add-form" = "/admin/structure/partner-responsive/partner_responsive_ntity/add",
- *     "edit-form" = "/admin/structure/partner-responsive/partner_responsive_entity/{partner_responsive_entity}/edit",
- *     "delete-form" = "/admin/structure/partner-responsive/partner_responsive_entity/{partner_responsive_entity}/delete",
- *     "collection" = "/admin/structure/partner-responsive/partner_responsive_entity",
+ *     "canonical" = "/admin/structure/partner_responsive_entity/{partner_responsive_entity}",
+ *     "add-form" = "/admin/structure/partner_responsive_entity/add",
+ *     "edit-form" = "/admin/structure/partner_responsive_entity/{partner_responsive_entity}/edit",
+ *     "delete-form" = "/admin/structure/partner_responsive_entity/{partner_responsive_entity}/delete",
+ *     "collection" = "/admin/structure/partner_responsive_entity",
  *   },
  *   field_ui_base_route = "partner_responsive_entity.settings"
  * )

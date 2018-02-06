@@ -12,14 +12,14 @@ dependencies:
     - image
     - webcomposer_partner_responsive
 _core:
-  default_config_hash: rZf8wYUTou0EfPOZ-jrOWUFnwCLbcA0DsKYBC2cC6xs
+  default_config_hash: 6BTZi6QnZOYw7WZnY5luBIlh208utvds1aaJ6wiqsek
 id: partner_responsive_entity.partner_responsive_entity.default
 targetEntityType: partner_responsive_entity
 bundle: partner_responsive_entity
 mode: default
 content:
   field_id:
-    weight: 1
+    weight: 6
     settings:
       size: 60
       placeholder: ''
