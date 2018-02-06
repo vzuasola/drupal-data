@@ -1,17 +1,17 @@
-uuid: b19db6ad-40c7-4b00-92b7-1eea5914f31a
+uuid: fef55138-a914-447d-8b70-b2e939e25379
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.registration_theme_entity.field_steptwo_banner
+    - field.storage.registration_theme_entity.field_steptwo_banner_tablet
   module:
     - image
     - registration_theme
-id: registration_theme_entity.registration_theme_entity.field_steptwo_banner
-field_name: field_steptwo_banner
+id: registration_theme_entity.registration_theme_entity.field_steptwo_banner_tablet
+field_name: field_steptwo_banner_tablet
 entity_type: registration_theme_entity
 bundle: registration_theme_entity
-label: Banner
+label: 'Banner Tablet'
 description: ''
 required: false
 translatable: true
