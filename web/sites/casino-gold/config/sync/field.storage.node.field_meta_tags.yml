@@ -1,0 +1,19 @@
+uuid: 5719f84e-390b-4edc-b250-8f660ac1ef55
+langcode: zh-hans
+status: true
+dependencies:
+  module:
+    - metatag
+    - node
+id: node.field_meta_tags
+field_name: field_meta_tags
+entity_type: node
+type: metatag
+settings: {  }
+module: metatag
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
