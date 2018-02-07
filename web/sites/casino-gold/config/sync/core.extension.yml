@@ -48,6 +48,8 @@ module:
   locale: 0
   menu_link_attributes: 0
   menu_ui: 0
+  metatag: 0
+  metatag_open_graph: 0
   node: 0
   options: 0
   paragraphs: 0
@@ -81,6 +83,7 @@ module:
   webcomposer_floating_banners: 0
   webcomposer_games: 0
   webcomposer_language_hierarchy: 0
+  webcomposer_metatags: 0
   webcomposer_partner: 0
   webcomposer_rest_extra: 0
   webcomposer_slider_v2: 0
