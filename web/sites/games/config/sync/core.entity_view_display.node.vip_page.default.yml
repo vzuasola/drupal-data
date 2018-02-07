@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.vip_page.field_column_2_lightbox_title_sc
     - field.field.node.vip_page.field_column_3_lightbox_title_cb
     - field.field.node.vip_page.field_column_3_lightbox_title_sc
+    - field.field.node.vip_page.field_meta_tags
     - field.field.node.vip_page.field_vip_banner_content
     - field.field.node.vip_page.field_vip_banner_content_pos
     - field.field.node.vip_page.field_vip_banner_image
@@ -40,6 +41,7 @@ dependencies:
   module:
     - field_group
     - image
+    - metatag
     - options
     - text
     - user
@@ -224,6 +226,13 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_meta_tags:
+    weight: 18
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
     region: content
   field_vip_banner_content:
     weight: 2
