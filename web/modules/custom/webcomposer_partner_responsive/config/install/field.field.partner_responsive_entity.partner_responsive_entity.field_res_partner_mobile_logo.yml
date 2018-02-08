@@ -5,15 +5,10 @@ dependencies:
   config:
     - field.storage.partner_responsive_entity.field_res_partner_mobile_logo
   module:
-    - content_translation
     - image
     - webcomposer_partner_responsive
-third_party_settings:
-  content_translation:
-    translation_sync:
-      file: file
-      alt: '0'
-      title: '0'
+_core:
+  default_config_hash: BgDklAIE1ryOvVmclShD1yjh76u-EjPxz8Kbds0JaQE
 id: partner_responsive_entity.partner_responsive_entity.field_res_partner_mobile_logo
 field_name: field_res_partner_mobile_logo
 entity_type: partner_responsive_entity
@@ -21,7 +16,7 @@ bundle: partner_responsive_entity
 label: 'Mobile Logo'
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
