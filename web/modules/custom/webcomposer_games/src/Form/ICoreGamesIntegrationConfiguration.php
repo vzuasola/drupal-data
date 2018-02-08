@@ -19,6 +19,7 @@ class ICoreGamesIntegrationConfiguration extends ConfigFormBase {
         'skywind' => 'Skywind',
         'voidbridge' => 'Voidbridge',
         'gold_deluxe' => 'Gold Deluxe',
+        'video_racing' => 'Video Racing '
     ];
 
   /**
