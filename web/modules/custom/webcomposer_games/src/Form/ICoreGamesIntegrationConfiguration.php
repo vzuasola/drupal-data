@@ -11,7 +11,7 @@ use Drupal\Core\Form\FormStateInterface;
 class ICoreGamesIntegrationConfiguration extends ConfigFormBase {
 
   /**
-   * ICore Game Providers definition
+   * ICore Game Providers definitions
    */
     const ICORE_GAME_PROVIDERS = [
         'fish_hunter' => 'Fish Hunter',
