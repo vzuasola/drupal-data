@@ -233,7 +233,7 @@ class GeneralConfiguration extends ConfigFormBase {
     ];
     $form['avaya_settings']['livechat_kr_link'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('Live Chat Text'),
+      '#title' => $this->t('Live Person KR URL'),
       '#description' => $this->t('Live person link for KR Language (this will always override the current avaya KR URL)'),
       '#default_value' => $config->get('livechat_kr_link'),
       '#required' => TRUE,
