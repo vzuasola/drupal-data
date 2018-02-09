@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.page.body
     - field.field.node.page.field_banner_content
+    - field.field.node.page.field_banner_content_position
     - field.field.node.page.field_banner_link
     - field.field.node.page.field_banner_link_target
     - field.field.node.page.field_image
@@ -28,6 +29,7 @@ third_party_settings:
         - body
         - field_image
         - field_banner_content
+        - field_banner_content_position
         - field_banner_link
         - field_banner_link_target
       parent_name: ''
@@ -84,8 +86,14 @@ content:
       conditional_fields: {  }
     type: text_textarea
     region: content
-  field_banner_link:
+  field_banner_content_position:
     weight: 14
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_banner_link:
+    weight: 15
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -94,7 +102,7 @@ content:
     type: link_default
     region: content
   field_banner_link_target:
-    weight: 15
+    weight: 16
     settings: {  }
     third_party_settings:
       conditional_fields: {  }
