@@ -1,25 +1,25 @@
-uuid: 2e9da154-e6a4-43a3-9a8a-bcc0414b8328
+uuid: 9dbe317f-281b-415c-9bb7-1efebe4afdb5
 langcode: en
 status: true
 dependencies:
   module:
     - node
     - options
-id: node.field_post_banner_link_target
-field_name: field_post_banner_link_target
+id: node.field_banner_content_position
+field_name: field_banner_content_position
 entity_type: node
 type: list_string
 settings:
   allowed_values:
     -
-      value: _top
-      label: 'Same Window'
+      value: left
+      label: Left
     -
-      value: _blank
-      label: 'New Tab'
+      value: right
+      label: Right
     -
-      value: window
-      label: 'New Window'
+      value: center
+      label: Center
   allowed_values_function: ''
 module: options
 locked: false

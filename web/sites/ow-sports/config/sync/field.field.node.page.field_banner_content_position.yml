@@ -1,23 +1,23 @@
-uuid: e9f49cb7-687b-44ea-9fcb-35b5c0c475de
+uuid: 773274fa-81f2-478e-8b3c-9da5f9d518e8
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_post_banner_link_target
+    - field.storage.node.field_banner_content_position
     - node.type.page
   module:
     - options
-id: node.page.field_post_banner_link_target
-field_name: field_post_banner_link_target
+id: node.page.field_banner_content_position
+field_name: field_banner_content_position
 entity_type: node
 bundle: page
-label: 'Banner Link Target'
+label: 'Banner Content Position'
 description: ''
 required: false
 translatable: true
 default_value:
   -
-    value: _top
+    value: center
 default_value_callback: ''
 settings: {  }
 field_type: list_string
