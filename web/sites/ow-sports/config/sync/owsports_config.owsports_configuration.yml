@@ -21,3 +21,4 @@ singbet_default_asia: 0
 cdn_mapping: null
 how_to_bet_uri: '{domain:sports}/{domain:lang_token}/getting-started{legacy.params}{tracking.token}'
 euro_default_asia: 0
+banner_content_position: right

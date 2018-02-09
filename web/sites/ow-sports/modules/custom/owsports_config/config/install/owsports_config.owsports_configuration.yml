@@ -11,3 +11,4 @@ singbet_pre_login_uri: 'onebook'
 singbet_post_login_uri: 'Deposit_ProcessLogin.aspx'
 singbet_template: 'sc,ch'
 act_mapping: "hdpou\r\nonextwo\r\ncs\r\nhtftcs\r\noetg\r\nhtft\r\nfglg\r\nsocceroutright\r\nbasketball\r\nbacketballoutright\r\ntennis\r\ntennisoutright\r\noutright\r\nnumbergame\r\nvirtualsports\r\nvirtualhorse\r\nvirtualgreyhounds\r\nvirtualtennis\r\nvirtualmotorsports\r\nvirturlspeedway\r\nbadminton\r\nbaseball\r\nbilliard\r\nesports\r\nfootball\r\ngolf\r\nicehockey\r\nindiancricket\r\nmotorsports\r\nmuaythai\r\nnetball\r\nrugby\r\nvolleyball"
+banner_content_position: right

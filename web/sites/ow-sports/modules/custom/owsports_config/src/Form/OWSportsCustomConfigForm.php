@@ -205,6 +205,25 @@ class OWSportsCustomConfigForm extends ConfigFormBase {
       '#default_value' => $config->get('singbet_template'),
     ];
 
+    $form['banner_config'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Banner Configuration'),
+      '#collapsible' => TRUE,
+      '#group' => 'owsports_settings_tab',
+    ];
+
+    $form['banner_config']['banner_content_position'] = [
+      '#type' => 'select',
+      '#description' => $this->t('Set your own banner content position. Default is right.'),
+      '#options' => [
+                      'left' => 'Left',
+                      'center' => 'Center',
+                      'right' => 'Right',
+                    ],
+      '#title' => $this->t('Banner Content Position'),
+      '#default_value' => $config->get('banner_content_position'),
+    ];
+
     return parent::buildForm($form, $form_state);
   }
 
@@ -240,7 +259,8 @@ class OWSportsCustomConfigForm extends ConfigFormBase {
       'colossus_post_uri',
       'cdn_mapping',
       'act_mapping',
-      'legacy_cdn'
+      'legacy_cdn',      
+      'banner_content_position'
     ];
 
     foreach ($keys as $key) {
