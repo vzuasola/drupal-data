@@ -1,0 +1,24 @@
+uuid: 9b1d32de-063b-407f-be68-7f48c4d09b19
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.keno_lobby_tile_entity.field_enable_scheduler
+  module:
+    - keno_lobby_tile
+id: keno_lobby_tile_entity.keno_lobby_tile_entity.field_enable_scheduler
+field_name: field_enable_scheduler
+entity_type: keno_lobby_tile_entity
+bundle: keno_lobby_tile_entity
+label: 'Enable Scheduler'
+description: 'Maintenance page shall be displayed if enabled.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Enable
+  off_label: Disable
+field_type: boolean
