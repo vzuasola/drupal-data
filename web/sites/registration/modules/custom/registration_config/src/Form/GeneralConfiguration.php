@@ -231,6 +231,13 @@ class GeneralConfiguration extends ConfigFormBase {
       '#default_value' => $config->get('livechat_text'),
       '#required' => TRUE,
     ];
+    $form['avaya_settings']['livechat_kr_link'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Live Person KR URL'),
+      '#description' => $this->t('Live person link for KR Language (this will always override the current avaya KR URL)'),
+      '#default_value' => $config->get('livechat_kr_link'),
+      '#required' => TRUE,
+    ];
 
     $form['cashier_settings'] = [
       '#type' => 'details',
@@ -311,6 +318,7 @@ class GeneralConfiguration extends ConfigFormBase {
       'livechat_timeout',
       'livechat_header',
       'livechat_text',
+      'livechat_kr_link',
       'enable_cashier_payment_methods',
       'with_payment_method',
       'without_payment_method',

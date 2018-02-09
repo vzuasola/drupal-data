@@ -4,6 +4,11 @@
 require $app_root . '/../config/base.settings.php';
 
 /**
+ * The product code
+ */
+$settings['product'] = 'casino-gold';
+
+/**
  * The main URL prefix for this site instance
  */
 $settings['primary_site_prefix'] = 'casino-gold';

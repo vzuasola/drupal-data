@@ -1,4 +1,4 @@
-uuid: 9f33da86-5390-49e3-adb0-87d48b19d211
+uuid: 26d81bd4-0c15-4d6b-91ec-97dd6c66b70c
 langcode: zh-hans
 status: true
 dependencies:
@@ -7,6 +7,8 @@ dependencies:
     - paragraphs.paragraphs_type.floating_banner_item
   module:
     - options
+_core:
+  default_config_hash: XFRanY4syRq0g3IcByMF5rt-cjcCcbOKplJ69MMs9_g
 id: paragraph.floating_banner_item.field_link_target
 field_name: field_link_target
 entity_type: paragraph
