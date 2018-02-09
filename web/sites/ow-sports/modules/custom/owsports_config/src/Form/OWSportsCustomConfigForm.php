@@ -259,7 +259,7 @@ class OWSportsCustomConfigForm extends ConfigFormBase {
       'colossus_post_uri',
       'cdn_mapping',
       'act_mapping',
-      'legacy_cdn',      
+      'legacy_cdn',
       'banner_content_position'
     ];
 
