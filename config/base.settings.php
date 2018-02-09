@@ -96,6 +96,13 @@ if (isset($_SERVER['HTTP_X_FE_BASE_URI'])) {
 }
 
 /**
+ * The product code
+ *
+ * This should be overriden by implementing products
+ */
+$settings['product'] = $site_path;
+
+/**
  * The default installation profile
  */
 $settings['install_profile'] = 'config_installer';

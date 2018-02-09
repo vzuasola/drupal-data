@@ -1,0 +1,21 @@
+uuid: 16e212ad-a5da-455a-87cd-fd5105a774ba
+langcode: zh-hant
+status: true
+dependencies:
+  config:
+    - field.storage.webcomposer_slider_v2_entity.field_gold_only
+  module:
+    - options
+    - webcomposer_slider_v2
+id: webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_gold_only
+field_name: field_gold_only
+entity_type: webcomposer_slider_v2_entity
+bundle: webcomposer_slider_v2_entity
+label: 'Gold Only'
+description: 'This setting will not work if <b>Post Login State</b> is not checked.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

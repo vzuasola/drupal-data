@@ -1,28 +1,54 @@
-uuid: 20dddefe-9301-4d45-9dc2-ac6671612ff1
+uuid: c52b040b-d0bc-4680-be94-1b3c0e8ad6ab
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.partner_responsive_entity.partner_responsive_entity.field_responsive_partners
+    - field.field.partner_responsive_entity.partner_responsive_entity.field_id
+    - field.field.partner_responsive_entity.partner_responsive_entity.field_res_partner_desktop_logo
+    - field.field.partner_responsive_entity.partner_responsive_entity.field_res_partner_mobile_logo
+    - field.field.partner_responsive_entity.partner_responsive_entity.field_res_partner_tablet_logo
+    - image.style.thumbnail
   module:
-    - paragraphs
+    - image
     - webcomposer_partner_responsive
+_core:
+  default_config_hash: rZf8wYUTou0EfPOZ-jrOWUFnwCLbcA0DsKYBC2cC6xs
 id: partner_responsive_entity.partner_responsive_entity.default
 targetEntityType: partner_responsive_entity
 bundle: partner_responsive_entity
 mode: default
 content:
-  field_responsive_partners:
-    type: entity_reference_paragraphs
+  field_id:
     weight: 1
     settings:
-      title: Paragraph
-      title_plural: Paragraphs
-      edit_mode: open
-      add_mode: dropdown
-      form_display_mode: default
-      default_paragraph_type: ''
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_res_partner_desktop_logo:
+    weight: 2
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_res_partner_mobile_logo:
+    weight: 4
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_res_partner_tablet_logo:
+    weight: 3
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
     region: content
   name:
     type: string_textfield
@@ -33,8 +59,10 @@ content:
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 10
+    weight: 5
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   langcode: true
   user_id: true
