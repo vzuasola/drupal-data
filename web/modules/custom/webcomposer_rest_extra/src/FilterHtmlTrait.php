@@ -92,7 +92,8 @@ trait FilterHtmlTrait {
     $file = File::load($fid);
 
     if ($file) {
-      return $this->generateUrlFromFile($file);
+      $path = $file->getFileUri();
+      return $this->getFileRelativeFilename($path);
     }
   }
 
