@@ -13,7 +13,7 @@ bundle: keno_lobby_tile_entity
 label: 'Lobby Game'
 description: 'Sets whether the Lobby Tile is a game or not.'
 required: false
-translatable: false
+translatable: true
 default_value:
   -
     value: 1

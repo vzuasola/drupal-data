@@ -14,7 +14,7 @@ bundle: keno_lobby_tile_entity
 label: 'Maintenance Content'
 description: 'Maintenance page content, may include the following: Logo, Title, and Content.'
 required: false
-translatable: false
+translatable: true
 default_value:
   -
     value: "<p>This is a <strong>sample</strong> maintenance page.</p>\r\n"

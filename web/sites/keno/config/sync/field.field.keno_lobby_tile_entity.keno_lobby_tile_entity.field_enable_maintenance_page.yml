@@ -13,7 +13,7 @@ bundle: keno_lobby_tile_entity
 label: 'Enable Maintenance Page'
 description: 'Maintenance page shall be displayed if enabled otherwise the game will launch in pre-login (after logging in via log-in lightbox) and post-login state.'
 required: false
-translatable: false
+translatable: true
 default_value:
   -
     value: 1

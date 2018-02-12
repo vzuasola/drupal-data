@@ -11,12 +11,12 @@ field_name: field_enable_scheduler
 entity_type: keno_lobby_tile_entity
 bundle: keno_lobby_tile_entity
 label: 'Enable Scheduler'
-description: 'Maintenance page shall be displayed if enabled.'
+description: 'Maintenance page shall be displayed if enabled. Indicator will be in ACTIVE state if End Date is not set, or is in the past, and also if Start Date is not set, or is in the future.'
 required: false
-translatable: false
+translatable: true
 default_value:
   -
-    value: 0
+    value: 1
 default_value_callback: ''
 settings:
   on_label: Enable

@@ -14,7 +14,7 @@ bundle: keno_lobby_tile_entity
 label: 'Maintenance Start Date'
 description: 'Maintenance start date and time.'
 required: false
-translatable: false
+translatable: true
 default_value:
   -
     default_date_type: now
