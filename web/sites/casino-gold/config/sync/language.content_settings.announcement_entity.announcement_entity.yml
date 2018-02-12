@@ -1,0 +1,15 @@
+uuid: 1534f154-e942-4a14-acd0-ef2d7ae91f04
+langcode: zh-hans
+status: true
+dependencies:
+  module:
+    - content_translation
+    - webcomposer_announcements
+third_party_settings:
+  content_translation:
+    enabled: false
+id: announcement_entity.announcement_entity
+target_entity_type_id: announcement_entity
+target_bundle: announcement_entity
+default_langcode: site_default
+language_alterable: false

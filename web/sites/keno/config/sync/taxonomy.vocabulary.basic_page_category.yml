@@ -1,0 +1,9 @@
+uuid: a7e2e209-f037-4077-98e5-cd3cbe24e38c
+langcode: en
+status: true
+dependencies: {  }
+name: 'Basic Page Category'
+vid: basic_page_category
+description: ''
+hierarchy: 0
+weight: 0

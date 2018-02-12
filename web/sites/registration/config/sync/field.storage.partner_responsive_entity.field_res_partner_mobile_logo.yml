@@ -1,0 +1,32 @@
+uuid: 1c211e99-dc02-4841-8430-00c3f18490cb
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+    - image
+    - webcomposer_partner_responsive
+_core:
+  default_config_hash: snzbcYYkAxBa4rMVVN0xq0PNa77_dpidEsFkEl2rItE
+id: partner_responsive_entity.field_res_partner_mobile_logo
+field_name: field_res_partner_mobile_logo
+entity_type: partner_responsive_entity
+type: image
+settings:
+  uri_scheme: public
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  target_type: file
+  display_field: false
+  display_default: false
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -26,4 +26,7 @@ content:
     weight: 100
     region: content
 hidden:
+  field_basic_page_group_label: true
+  field_promotions_group_label: true
+  field_right_side_block: true
   langcode: true

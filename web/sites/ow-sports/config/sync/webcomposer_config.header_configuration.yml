@@ -16,17 +16,17 @@ _core:
 lobby_page_title: 'Dafabet: The leading online sports betting site in Asia'
 critical_announcement: '0'
 critical_announcement_content:
-  value: "<p>This is a critical announcement test test test</p>\r\n"
+  value: ""
   format: basic_html
 news_announcement: '0'
 news_announcement_content:
-  value: "<p>test</p>\r\n"
+  value: ""
   format: basic_html
 balance_label_mapping: "4|OW Sports\r\n6|Dafa Sports\r\n1|Casino Classic\r\n2|Casino Gold\r\n5|Live Dealer, Games, & Virtuals\r\n8|Opus Live Dealer\r\n9|Keno\r\n3|Poker\r\n7|Fish Hunter"
 balance_error_text_product: N/A
-balance_toggle: 0
-product_balance_label: Balance
-total_balance_label: Balance
-product_balance_id: ''
-currency_balance_mapping: ''
-excluded_balance_mapping: ''
+balance_toggle: 1
+product_balance_label: 'Account Balance'
+total_balance_label: 'Total Account Balance'
+product_balance_id: '4'
+currency_balance_mapping: 7|RMB
+excluded_balance_mapping: '7'
