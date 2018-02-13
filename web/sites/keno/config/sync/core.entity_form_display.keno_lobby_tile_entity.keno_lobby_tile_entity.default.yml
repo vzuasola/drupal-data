@@ -11,6 +11,7 @@ dependencies:
     - field.field.keno_lobby_tile_entity.keno_lobby_tile_entity.field_enable_keno_game_launching
     - field.field.keno_lobby_tile_entity.keno_lobby_tile_entity.field_enable_maintenance_page
     - field.field.keno_lobby_tile_entity.keno_lobby_tile_entity.field_enable_scheduler
+    - field.field.keno_lobby_tile_entity.keno_lobby_tile_entity.field_game_provider
     - field.field.keno_lobby_tile_entity.keno_lobby_tile_entity.field_lobby_game
     - field.field.keno_lobby_tile_entity.keno_lobby_tile_entity.field_lobby_status
     - field.field.keno_lobby_tile_entity.keno_lobby_tile_entity.field_log_in_state
@@ -48,7 +49,7 @@ third_party_settings:
         - field_enable_maintenance_page
         - field_maintenance_content
       parent_name: ''
-      weight: 17
+      weight: 15
       format_type: fieldset
       format_settings:
         id: ''
@@ -56,6 +57,20 @@ third_party_settings:
         description: 'Miscellaneous Lobby Tile Status Configurations'
         required_fields: true
       label: 'Lobby Tile Status'
+    group_game_launching:
+      children:
+        - field_enable_keno_game_launching
+        - field_enable_keno_free_play
+        - field_game_provider
+      parent_name: ''
+      weight: 13
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Game Launching'
 _core:
   default_config_hash: ILFRo5rHCqg379rQSZXM8gt4GzukQFgXssTIqLG9Vj8
 id: keno_lobby_tile_entity.keno_lobby_tile_entity.default
@@ -94,14 +109,14 @@ content:
     type: string_textfield
     region: content
   field_enable_keno_free_play:
-    weight: 13
+    weight: 15
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
   field_enable_keno_game_launching:
-    weight: 12
+    weight: 14
     settings:
       display_label: true
     third_party_settings: {  }
@@ -142,6 +157,13 @@ content:
           entity_type: keno_lobby_tile_entity
           bundle: keno_lobby_tile_entity
     type: boolean_checkbox
+    region: content
+  field_game_provider:
+    weight: 16
+    settings: {  }
+    third_party_settings:
+      conditional_fields: {  }
+    type: options_select
     region: content
   field_lobby_game:
     weight: 22

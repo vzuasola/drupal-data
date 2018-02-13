@@ -11,6 +11,7 @@ dependencies:
     - field.field.keno_lobby_tile_entity.keno_lobby_tile_entity.field_enable_keno_game_launching
     - field.field.keno_lobby_tile_entity.keno_lobby_tile_entity.field_enable_maintenance_page
     - field.field.keno_lobby_tile_entity.keno_lobby_tile_entity.field_enable_scheduler
+    - field.field.keno_lobby_tile_entity.keno_lobby_tile_entity.field_game_provider
     - field.field.keno_lobby_tile_entity.keno_lobby_tile_entity.field_lobby_game
     - field.field.keno_lobby_tile_entity.keno_lobby_tile_entity.field_lobby_status
     - field.field.keno_lobby_tile_entity.keno_lobby_tile_entity.field_log_in_state
@@ -113,6 +114,13 @@ content:
       format_custom_true: ''
     third_party_settings: {  }
     type: boolean
+    region: content
+  field_game_provider:
+    weight: 24
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
   field_lobby_game:
     weight: 23
