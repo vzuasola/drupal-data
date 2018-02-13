@@ -1,22 +1,22 @@
-add partner entities:
-  title: 'Create new Partner entities'
+add partner - responsive entities:
+  title: 'Create new Partner - Responsive entities'
 
-administer partner entities:
-  title: 'Administer Partner entities'
-  description: 'Allow to access the administration form to configure Partner entities.'
+administer partner - responsive entities:
+  title: 'Administer Partner - Responsive entities'
+  description: 'Allow to access the administration form to configure Partner - Responsive entities.'
   restrict access: true
 
-delete partner entities:
-  title: 'Delete Partner entities'
+delete partner - responsive entities:
+  title: 'Delete Partner - Responsive entities'
 
-edit partner entities:
-  title: 'Edit Partner entities'
+edit partner - responsive entities:
+  title: 'Edit Partner - Responsive entities'
 
-access partner overview:
-  title: 'Access the Partner overview page'
+access partner - responsive overview:
+  title: 'Access the Partner - Responsive overview page'
 
-view published partner entities:
-  title: 'View published Partner entities'
+view published partner - responsive entities:
+  title: 'View published Partner - Responsive entities'
 
-view unpublished partner entities:
-  title: 'View unpublished Partner entities'
+view unpublished partner - responsive entities:
+  title: 'View unpublished Partner - Responsive entities'

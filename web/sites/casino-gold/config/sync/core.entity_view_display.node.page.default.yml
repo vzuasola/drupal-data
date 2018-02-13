@@ -10,11 +10,13 @@ dependencies:
     - field.field.node.page.field_gold_only
     - field.field.node.page.field_image
     - field.field.node.page.field_log_in_state
+    - field.field.node.page.field_meta_tags
     - field.field.node.page.field_right_side_block
     - node.type.page
   module:
     - image
     - link
+    - metatag
     - options
     - text
     - user
@@ -80,6 +82,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: list_default
+    region: content
+  field_meta_tags:
+    weight: 113
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
     region: content
   field_right_side_block:
     weight: 111

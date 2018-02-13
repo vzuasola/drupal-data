@@ -15,6 +15,7 @@ function webcomposer_cdn_inline_image_url_change_alter(&$uri, $base_path, $path)
   $cdn_is_enabled = $config->get('enable_cdn');
 
   if ($cdn_is_enabled === 1) {
+    $path = ltrim($path, '/');
     $uri = "[uri:($path)]";
   }
 }

@@ -335,6 +335,15 @@ class HeaderConfiguration extends ConfigFormBase {
       '#required' => TRUE,
     ];
 
+    $form['header_other_group']['cashier_link'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Cashier Link'),
+      '#description' => $this->t('Cashier Link For Header'),
+      '#default_value' => $config->get('cashier_link'),
+      '#maxlength' => 255,
+      '#required' => TRUE,
+    ];
+
     return parent::buildForm($form, $form_state);
   }
 
@@ -370,6 +379,7 @@ class HeaderConfiguration extends ConfigFormBase {
       'profile_link',
       'profile_logout_text',
       'balance_mapping',
+      'cashier_link',
     ];
 
     foreach ($keys as $key) {

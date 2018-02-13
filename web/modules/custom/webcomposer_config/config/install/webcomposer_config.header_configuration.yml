@@ -20,3 +20,4 @@ currency_balance_mapping: "7|RMB"
 excluded_balance_mapping: '7'
 balance_error_text_product: "N/A"
 balance_mapping: "5|Live Dealer & Games\r\n3|Poker"
+cashier_link: "N/A"
