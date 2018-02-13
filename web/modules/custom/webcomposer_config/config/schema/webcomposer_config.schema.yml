@@ -29,6 +29,9 @@ webcomposer_config.header_configuration:
     balance_label_mapping:
       type: text
       label: 'Balances label mapping'
+    balance_mapping:
+      type: text
+      label: 'Product Balance mapping'
     lobby_page_title:
       type: label
       label: 'Lobby Page Title'

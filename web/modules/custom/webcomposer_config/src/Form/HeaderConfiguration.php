@@ -141,6 +141,13 @@ class HeaderConfiguration extends ConfigFormBase {
       '#default_value' => $config->get('product_balance_id'),
     ];
 
+    $form['balance_group']['balance_mapping'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Product Balance mapping'),
+      '#description' => $this->t('Labels and product Id to display balance.'),
+      '#default_value' => $config->get('balance_mapping'),
+    ];
+
     $form['balance_group']['balance_error_text'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Balance Error Message.'),
@@ -362,6 +369,7 @@ class HeaderConfiguration extends ConfigFormBase {
       'news_announcement_content',
       'profile_link',
       'profile_logout_text',
+      'balance_mapping',
     ];
 
     foreach ($keys as $key) {
