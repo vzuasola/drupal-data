@@ -1,0 +1,21 @@
+uuid: e26ae7a4-4529-4b69-981e-17f62c96b94d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.games_showcase_entity.field_unpublish_date
+  module:
+    - datetime
+    - games_showcase
+id: games_showcase_entity.games_showcase_entity.field_unpublish_date
+field_name: field_unpublish_date
+entity_type: games_showcase_entity
+bundle: games_showcase_entity
+label: 'Unpublish Date (optional)'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

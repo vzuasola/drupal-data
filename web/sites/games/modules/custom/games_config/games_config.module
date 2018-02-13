@@ -6,6 +6,7 @@
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\taxonomy\Entity\Term;
 
 /**
  * Implements hook_help().
@@ -32,8 +33,44 @@ function games_config_form_alter(&$form, $form_state, $form_id) {
 		    }
   		}
   	}
+    //Hide the Both select option of Log-in State from Basic Page Template.
+    if ($form_id == 'node_page_form' || $form_id == 'node_page_edit_form'){
+    unset($form['field_log_in_state']['widget']['#options'][2]);
+    }
+    //Restrict Home Category Taxonomy Deletion.
+    $term_alias = _games_config_taxonomy_vocabulary_load();
+    if ($form_id == 'taxonomy_term_games_category_form' && $term_alias == "home") {
+      $form['actions']['delete']['#access'] = FALSE;
+      drupal_set_message(t("This term cannot be deleted."), 'error');
+    } elseif ($form_id == 'taxonomy_term_games_category_delete_form' && $term_alias == "home") {
+              $form['actions']['submit']['#access'] = FALSE;
+              drupal_set_message(t("This term cannot be deleted."), 'error');
+    }
 }
 
 function games_config_form_submit($form, &$form_state) {
 	$form_state->setRedirect('games_config.list.games');
+}
+
+/**
+ *
+ * Hide the Delete option from the Home Taxonomy.
+ */
+function _games_config_taxonomy_vocabulary_load() {
+  $request = \Drupal::request();
+  $current_path = $request->getPathInfo();
+  $path_args = explode('/', $current_path);
+  $tid = $path_args[4];
+  if($path_args[2] == "taxonomy" && $path_args[3] == "term") {
+    $query = \Drupal::entityQuery('taxonomy_term');
+    $query->condition('vid', 'games_category');
+    $tids = $query->execute();
+
+    $check = in_array($tid, $tids);
+    if($check == TRUE) {
+      $term_data = Term::load($tid);
+
+      return $term_data->get('field_alias')->getValue()[0]['value'];
+    }
+  }
 }

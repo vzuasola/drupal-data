@@ -1,9 +1,11 @@
-uuid: cfbce2cb-798a-4315-93ac-ea84e2a50a69
+uuid: 6574c0bf-9292-48e9-9fed-8c91637cdd11
 langcode: zh-hans
 status: true
 dependencies:
   module:
     - paragraphs
+_core:
+  default_config_hash: XgWzpHptnynvtscJW6I8dvz2lmSoe9gOns5jawQ-ZJk
 id: paragraph.field_lightbox_title
 field_name: field_lightbox_title
 entity_type: paragraph

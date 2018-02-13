@@ -24,7 +24,8 @@
         "relaxedws/replicator": "^1.0@alpha",
         "monolog/monolog": "^1.6",
         "phpoffice/phpexcel": "^1.8",
-        "squizlabs/php_codesniffer": "^2.7"
+        "squizlabs/php_codesniffer": "^2.7",
+        "predis/predis": "^1.1"
     },
     "require-dev": {
         "drupal/console": "~1.0",
@@ -45,7 +46,8 @@
         "classmap": [
             "scripts/composer/ScriptHandler.php",
             "scripts/composer/SettingsHandler.php",
-            "scripts/custom/ProductHandler.php"
+            "scripts/custom/ProductHandler.php",
+            "scripts/helper/Sentinel.php"
         ]
     },
     "scripts": {
@@ -57,15 +59,10 @@
             "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
         ],
         "post-install-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles",
-            "DrupalProject\\composer\\SettingsHandler::syncSettings"
+            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
         ],
         "post-update-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles",
-            "DrupalProject\\composer\\SettingsHandler::syncSettings"
-        ],
-        "sync-settings": [
-            "DrupalProject\\composer\\SettingsHandler::syncSettings"
+            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
         ],
         "new:product": [
             "DrupalProject\\custom\\ProductHandler::createNewInstance"

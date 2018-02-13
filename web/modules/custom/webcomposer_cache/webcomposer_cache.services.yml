@@ -1,0 +1,9 @@
+services:
+  webcomposer_cache.signature_manager:
+    class: '\Drupal\webcomposer_cache\Storage\RedisSignatureStorage'
+
+  webcomposer_cache.response:
+    class: '\Drupal\webcomposer_cache\EventSubscriber\ResponseSubscriber'
+    arguments: ['@webcomposer_cache.signature_manager']
+    tags:
+      - { name: 'event_subscriber' }

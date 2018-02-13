@@ -182,7 +182,8 @@
                     "--fail-on-risky",
                     "--log-junit=coverage/junit.xml",
                     "--coverage-clover=coverage/clover.xml",
-                    "--coverage-text"
+                    "--coverage-text",
+                    "--colors=never"
                 ],
                 "volumes": [
                     "$PWD:/app"
