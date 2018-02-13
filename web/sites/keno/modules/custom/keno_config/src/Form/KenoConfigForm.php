@@ -97,7 +97,7 @@ class KenoConfigForm extends ConfigFormBase {
 
     $form['basic_page']['basic_page_background'] = [
       '#type' => 'managed_file',
-      '#title' => $this->t('Basic Page Background'),
+      '#title' => $this->t('Basic Page Background Image'),
       '#default_value' => $config->get('basic_page_background'),
       '#upload_location' => 'public://',
       '#upload_validators' => [
