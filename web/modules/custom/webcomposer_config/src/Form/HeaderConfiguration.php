@@ -333,6 +333,7 @@ class HeaderConfiguration extends ConfigFormBase {
       '#title' => $this->t('Cashier Link'),
       '#description' => $this->t('Cashier Link For Header'),
       '#default_value' => $config->get('cashier_link'),
+      '#maxlength' => 255,
       '#required' => TRUE,
     ];
 

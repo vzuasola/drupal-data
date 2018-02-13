@@ -28,6 +28,7 @@ static code analysis:
   stage: tests
   script:
     - python -u automation/run.py --stage phpunit-sonarqube
+  coverage: '/^\s*Lines:\s*\d+.\d+\%/'
 
 php code sniffer:
   stage: tests
@@ -62,6 +63,8 @@ create package:
       - devtool/.node-cache/
       - .composer-cache/
       - devtool/.yarn-cache/
+  tags:
+    - devrunner
 
 dev:
   stage: deploy-dev

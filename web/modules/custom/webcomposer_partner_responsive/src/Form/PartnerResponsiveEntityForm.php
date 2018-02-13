@@ -47,4 +47,5 @@ class PartnerResponsiveEntityForm extends ContentEntityForm {
 
     $form_state->setRedirectUrl($entity->urlInfo('collection'));
   }
+
 }
