@@ -89,6 +89,21 @@ class KenoConfigForm extends ConfigFormBase {
       '#default_value' => $config->get('lobby_tiles_alignment'),
     ];
 
+    $form['basic_page'] = [
+      '#type' => 'details',
+      '#title' => t('Basic Page'),
+      '#group' => 'advanced',
+    ];
+
+    $form['basic_page']['basic_page_background'] = [
+      '#type' => 'managed_file',
+      '#title' => $this->t('Basic Page Background Image'),
+      '#default_value' => $config->get('basic_page_background'),
+      '#upload_location' => 'public://',
+      '#upload_validators' => [
+        'file_validate_extensions' => ['gif png jpg jpeg'],
+      ],
+    ];
     return parent::buildForm($form, $form_state);
   }
 
@@ -101,6 +116,7 @@ class KenoConfigForm extends ConfigFormBase {
       'trust_element_content',
       'lobby_tiles_alignment',
       'keno_background',
+      'basic_page_background',
     ];
     foreach ($kenoConfig as $keys) {
       if ($keys == 'keno_background') {
@@ -116,6 +132,21 @@ class KenoConfigForm extends ConfigFormBase {
           $this->config('keno_config.keno_configuration')->set("keno_background_image_url", file_create_url($file->getFileUri()))->save();
         } else {
           $this->config('keno_config.keno_configuration')->set("keno_background_image_url", null);
+        }
+      }
+      if ($keys == 'basic_page_background') {
+        $fid = $form_state->getValue('basic_page_background');
+        if ($fid) {
+          $file = File::load($fid[0]);
+          $file->setPermanent();
+          $file->save();
+
+          $file_usage = \Drupal::service('file.usage');
+          $file_usage->add($file, 'keno_config', 'image', $fid[0]);
+
+          $this->config('keno_config.keno_configuration')->set("basic_page_background_image_url", file_create_url($file->getFileUri()))->save();
+        } else {
+          $this->config('keno_config.keno_configuration')->set("basic_page_background_image_url", null);
         }
       }
       $this->config('keno_config.keno_configuration')->set($keys, $form_state->getValue($keys))->save();
