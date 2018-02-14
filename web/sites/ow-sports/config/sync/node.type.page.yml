@@ -9,6 +9,18 @@ third_party_settings:
   menu_ui:
     available_menus:
       - main
+      - owsports-menu
+      - owsports-menu-ch
+      - owsports-menu-en
+      - owsports-menu-eu
+      - owsports-menu-gr
+      - owsports-menu-id
+      - owsports-menu-in
+      - owsports-menu-jp
+      - owsports-menu-kr
+      - owsports-menu-pl
+      - owsports-menu-sc
+      - owsports-menu-th
     parent: 'main:'
   scheduler:
     expand_fieldset: when_required
