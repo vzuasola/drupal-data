@@ -10,7 +10,7 @@ id: keno_lobby_tile_entity.keno_lobby_tile_entity.field_enable_keno_game_launchi
 field_name: field_enable_keno_game_launching
 entity_type: keno_lobby_tile_entity
 bundle: keno_lobby_tile_entity
-label: 'Enable Keno Game Launching'
+label: 'Enable Game Launching'
 description: ''
 required: false
 translatable: true

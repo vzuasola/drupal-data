@@ -14,7 +14,7 @@ bundle: keno_lobby_tile_entity
 label: 'Log-in State'
 description: ''
 required: true
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

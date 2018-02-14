@@ -17,3 +17,7 @@ keno_config.keno_configuration:
       type: managed_file
       label: 'Lobby Tiles Background'
       translatable: true
+    basic_page_background:
+      type: managed_file
+      label: 'Basic Page Background'
+      translatable: true  
