@@ -20,4 +20,7 @@ keno_config.keno_configuration:
     basic_page_background:
       type: managed_file
       label: 'Basic Page Background'
-      translatable: true  
+      translatable: true
+    basic_page_title:
+      type: label
+      label: 'Basic Page Title'    

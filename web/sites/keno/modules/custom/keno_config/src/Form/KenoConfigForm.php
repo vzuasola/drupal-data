@@ -104,6 +104,13 @@ class KenoConfigForm extends ConfigFormBase {
         'file_validate_extensions' => ['gif png jpg jpeg'],
       ],
     ];
+
+    $form['basic_page']['basic_page_title'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Basic Page Titles'),
+      '#default_value' => $config->get('basic_page_title'),
+    ];
+
     return parent::buildForm($form, $form_state);
   }
 
@@ -117,6 +124,7 @@ class KenoConfigForm extends ConfigFormBase {
       'lobby_tiles_alignment',
       'keno_background',
       'basic_page_background',
+      'basic_page_title',
     ];
     foreach ($kenoConfig as $keys) {
       if ($keys == 'keno_background') {
