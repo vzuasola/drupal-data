@@ -33,7 +33,7 @@ class OpusProviderConfiguration extends ConfigFormBase {
     $message = $config->get('opus_unsupported_currencies_message');
     $form['opus_fallback_error'] = array(
       '#type' => 'textfield',
-      '#title' => t('Opus FallBack eror'),
+      '#title' => t('Opus FallBack error'),
       '#description' => $this->t('Opus FallBack Error'),
       '#default_value' => $config->get('opus_fallback_error')
     );
