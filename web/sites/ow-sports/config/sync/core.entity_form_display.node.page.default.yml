@@ -42,18 +42,6 @@ third_party_settings:
         classes: ''
         required_fields: false
       label: Fields
-    group_post_login_fields:
-      children: {  }
-      parent_name: ''
-      weight: 13
-      format_type: fieldset
-      format_settings:
-        label: 'Post-Login Fields'
-        description: ''
-        id: ''
-        classes: ''
-        required_fields: false
-      label: 'Post-Login Fields'
 _core:
   default_config_hash: sWCotip3wyA0CvZUxyo-StTDU8TyTAhx5fcfOiHS6s4
 id: node.page.default
