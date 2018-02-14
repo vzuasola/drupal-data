@@ -107,7 +107,7 @@ class KenoConfigForm extends ConfigFormBase {
 
     $form['basic_page']['basic_page_title'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('Basic Page Title'),
+      '#title' => $this->t('Basic Page Titles'),
       '#default_value' => $config->get('basic_page_title'),
     ];
 
