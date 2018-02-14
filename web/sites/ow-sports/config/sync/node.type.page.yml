@@ -21,19 +21,6 @@ third_party_settings:
       - owsports-menu-sc
       - owsports-menu-th
       - owsports-menu-vn
-      - quicklinks
-      - quicklinks-ch
-      - quicklinks-en
-      - quicklinks-eu
-      - quicklinks-gr
-      - quicklinks-id
-      - quicklinks-in
-      - quicklinks-jp
-      - quicklinks-kr
-      - quicklinks-pl
-      - quicklinks-sc
-      - quicklinks-th
-      - quicklinks-vn
     parent: 'owsports-menu:'
   scheduler:
     expand_fieldset: when_required
