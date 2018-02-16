@@ -6,6 +6,7 @@ dependencies:
     - registration_theme
     - rest
     - serialization
+    - webcomposer_rest_extra
 id: registration_theme
 label: 'Registration Theme'
 module: views
@@ -187,8 +188,7 @@ display:
       display_extenders: {  }
       filter_groups:
         operator: AND
-        groups:
-          1: AND
+        groups: {  }
     cache_metadata:
       max-age: -1
       contexts:
@@ -210,11 +210,11 @@ display:
         options:
           offset: 0
       style:
-        type: serializer
+        type: node_list_serializer
         options:
-          grouping: {  }
           uses_fields: false
-          formats: {  }
+          formats:
+            json: json
       row:
         type: data_entity
         options: {  }

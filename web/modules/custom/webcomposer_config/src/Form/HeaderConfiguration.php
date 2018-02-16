@@ -111,6 +111,43 @@ class HeaderConfiguration extends ConfigFormBase {
       '#group' => 'header_settings_tab',
     ];
 
+    $form['balance_group']['balance_toggle'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable Balance Toggle'),
+      '#description' => $this->t('If checked will allow balance toggle to be visible to the players.'),
+      '#default_value' => $config->get('balance_toggle'),
+    ];
+
+    $form['balance_group']['product_balance_label'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Product Balance Label.'),
+      '#description' => $this->t('The label for the product specific balance'),
+      '#default_value' => $config->get('product_balance_label'),
+      '#required' => TRUE,
+    ];
+
+    $form['balance_group']['total_balance_label'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Total Balance Label.'),
+      '#description' => $this->t('The label for the total balance'),
+      '#default_value' => $config->get('total_balance_label'),
+      '#required' => TRUE,
+    ];
+
+    $form['balance_group']['product_balance_id'] = [
+      '#type' => 'number',
+      '#title' => $this->t('Product Balance ID.'),
+      '#description' => $this->t('The ID of the balance to be shown as the product balance'),
+      '#default_value' => $config->get('product_balance_id'),
+    ];
+
+    $form['balance_group']['balance_mapping'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Product Balance mapping'),
+      '#description' => $this->t('Labels and product Id to display balance.'),
+      '#default_value' => $config->get('balance_mapping'),
+    ];
+
     $form['balance_group']['balance_error_text'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Balance Error Message.'),
@@ -133,6 +170,28 @@ class HeaderConfiguration extends ConfigFormBase {
       '#description' => $this->t('Labels and ordering for the balance breakdown'),
       '#default_value' => $config->get('balance_label_mapping'),
       '#required' => TRUE,
+    ];
+
+    $form['balance_group']['currency_balance_mapping'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Currency Balance Mapping'),
+      '#description' => $this->t("Define a mapping of product to currency. A product that
+        appears on this configuration will be filtered according to the currencies
+        defined.
+        <br><br>
+        Example
+        <br>
+        7|RMB,USD,KRW
+
+      "),
+      '#default_value' => $config->get('currency_balance_mapping'),
+    ];
+
+    $form['balance_group']['excluded_balance_mapping'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Excluded Balance Mapping'),
+      '#description' => $this->t('Define product IDs one per line'),
+      '#default_value' => $config->get('excluded_balance_mapping'),
     ];
 
     $form['newtag_group'] = [
@@ -276,6 +335,15 @@ class HeaderConfiguration extends ConfigFormBase {
       '#required' => TRUE,
     ];
 
+    $form['header_other_group']['cashier_link'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Cashier Link'),
+      '#description' => $this->t('Cashier Link For Header'),
+      '#default_value' => $config->get('cashier_link'),
+      '#maxlength' => 255,
+      '#required' => TRUE,
+    ];
+
     return parent::buildForm($form, $form_state);
   }
 
@@ -290,9 +358,15 @@ class HeaderConfiguration extends ConfigFormBase {
       'login_issue_link',
       'sc_lang_text',
       'ch_lang_text',
+      'balance_toggle',
+      'product_balance_label',
+      'total_balance_label',
+      'product_balance_id',
       'balance_error_text',
       'balance_error_text_product',
       'balance_label_mapping',
+      'currency_balance_mapping',
+      'excluded_balance_mapping',
       'lobby_page_title',
       'profile_icon_hover_text',
       'cashier_icon_hover_text',
@@ -304,6 +378,8 @@ class HeaderConfiguration extends ConfigFormBase {
       'news_announcement_content',
       'profile_link',
       'profile_logout_text',
+      'balance_mapping',
+      'cashier_link',
     ];
 
     foreach ($keys as $key) {

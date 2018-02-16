@@ -1,6 +1,6 @@
 uuid: 133b88d7-9ad4-4b12-a0cc-d9540f66c4c8
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - field.storage.node.field_gold_only

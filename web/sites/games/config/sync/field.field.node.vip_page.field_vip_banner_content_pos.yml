@@ -1,0 +1,21 @@
+uuid: 708f1264-0720-4707-bcb1-7c84d337dfd9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_vip_banner_content_pos
+    - node.type.vip_page
+  module:
+    - options
+id: node.vip_page.field_vip_banner_content_pos
+field_name: field_vip_banner_content_pos
+entity_type: node
+bundle: vip_page
+label: 'Banner Content Position'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

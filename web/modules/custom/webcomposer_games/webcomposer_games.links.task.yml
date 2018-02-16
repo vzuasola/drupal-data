@@ -12,3 +12,8 @@ webcomposer_games.admin_icore_games_integration_tab:
   route_name: webcomposer_games.icore_games_integration_form
   title: 'ICore Games Integration Configuration'
   base_route: webcomposer_games.icore_games_integration_form
+
+webcomposer_games.admin_icore_playtech_provider_tab:
+  route_name: webcomposer_games.icore_playtech_provider_form
+  title: 'ICore Playtech Provider Configuration'
+  base_route: webcomposer_games.icore_playtech_provider_form

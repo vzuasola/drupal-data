@@ -1,0 +1,53 @@
+uuid: dcc537c2-2667-4dc7-8c9c-ec28cb006f81
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.mobile_menu_entity.field_mobile_menu_item
+    - paragraphs.paragraphs_type.mobile_menu
+  module:
+    - entity_reference_revisions
+    - webcomposer_mobile_menu
+_core:
+  default_config_hash: VGBR_ZxNsmrxqUgPjMdQWRT5AyYveGwVI_o-45BWbb8
+id: mobile_menu_entity.mobile_menu_entity.field_mobile_menu_item
+field_name: field_mobile_menu_item
+entity_type: mobile_menu_entity
+bundle: mobile_menu_entity
+label: 'Menu Item'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      mobile_menu: mobile_menu
+    target_bundles_drag_drop:
+      mobile_menu:
+        enabled: true
+        weight: 9
+      domain_management_configuration:
+        weight: 10
+        enabled: false
+      floating_banner_item:
+        weight: 11
+        enabled: false
+      responsive_partner:
+        weight: 12
+        enabled: false
+      responsive_sponsor:
+        weight: 13
+        enabled: false
+      right_side_block_content:
+        weight: 14
+        enabled: false
+      slider_overlay_cmi:
+        weight: 15
+        enabled: false
+      social_media_cmi:
+        weight: 16
+        enabled: false
+field_type: entity_reference_revisions

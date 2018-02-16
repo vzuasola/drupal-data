@@ -30,3 +30,7 @@ field_validations:
     error_message: 'Email not available'
   invalid_words:
     error_message: 'Invalid/not allowed characters'
+  valid_languages:
+    error_message: 请按照该格式输入您的出生日期：日/月/年
+  valid_date:
+    error_message: 请按照该格式输入您的出生日期：日/月/年

@@ -1,0 +1,25 @@
+uuid: 7d1b56e1-d374-4109-9311-df575ea007c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_mobile_menu_new_tag
+    - paragraphs.paragraphs_type.mobile_menu
+_core:
+  default_config_hash: ZPeVCd-d0XiEenoX6qu_iJlrGBYT2lr4d2FUTfm0qX8
+id: paragraph.mobile_menu.field_mobile_menu_new_tag
+field_name: field_mobile_menu_new_tag
+entity_type: paragraph
+bundle: mobile_menu
+label: 'New Product'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

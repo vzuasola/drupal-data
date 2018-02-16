@@ -1,1 +1,10 @@
 lobby_page_title: 'Dafabet is The Best Online Betting Company in Asia'
+join_now_text: 'JOIN NOW'
+join_now_link: '/{domain:entry}/{domain:lang_token}/cant-login{tracking.token}'
+login_issue_text: 'Cant login?'
+login_issue_link: '/{domain:entry}/{domain:lang_token}/cant-login{tracking.token}'
+balance_error_text: 'Error Retrieving.'
+welcome_text: 'Welcome {username}'
+profile_link: '/{domain:myaccount_domain}/{lang}/my-profile?title=headerPopup&width=820&height=700&token={legacy.credentials}'
+profile_logout_text: Logout
+balance_label_mapping: "4|OW Sports\r\n6|Dafa Sports\r\n1|Casino Classic\r\n2|Casino Gold\r\n5|Live Dealer, Games, & Virtuals\r\n8|Opus Live Dealer\r\n9|Keno\r\n3|Poker\r\n7|Fish Hunter"

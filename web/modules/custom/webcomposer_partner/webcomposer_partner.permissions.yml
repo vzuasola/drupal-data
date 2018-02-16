@@ -1,0 +1,22 @@
+add partner entity entities:
+  title: 'Create new Partner entity entities'
+
+administer partner entity entities:
+  title: 'Administer Partner entity entities'
+  description: 'Allow to access the administration form to configure Partner entity entities.'
+  restrict access: true
+
+delete partner entity entities:
+  title: 'Delete Partner entity entities'
+
+edit partner entity entities:
+  title: 'Edit Partner entity entities'
+
+access partner entity overview:
+  title: 'Access the Partner entity overview page'
+
+view published partner entity entities:
+  title: 'View published Partner entity entities'
+
+view unpublished partner entity entities:
+  title: 'View unpublished Partner entity entities'

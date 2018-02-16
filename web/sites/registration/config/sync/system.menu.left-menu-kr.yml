@@ -1,0 +1,8 @@
+uuid: 403793cb-5644-4032-89a0-b682e871349d
+langcode: en
+status: true
+dependencies: {  }
+id: left-menu-kr
+label: 'Left Menu KR'
+description: ''
+locked: false

@@ -1,0 +1,26 @@
+webcomposer_mobile_menu.list:
+  title: 'Webcomposer Mobile Menu'
+  description: 'Configure Mobile Menu'
+  parent: system.admin_config
+  route_name: webcomposer_mobile_menu.admin_settings
+  weight: 1500
+
+webcomposer_mobile_menu.admin_mobile_menu_configuration:
+  title: 'Configuration'
+  description: 'Mobile Menu settings'
+  route_name: webcomposer_mobile_menu.mobile_menu_form
+  parent: webcomposer_mobile_menu.list
+
+# Mobile menu entity menu items definition
+entity.mobile_menu_entity.collection:
+  title: 'Mobile menu entity list'
+  route_name: entity.mobile_menu_entity.collection
+  description: 'List Mobile menu entity entities'
+  parent: webcomposer_mobile_menu.list
+  weight: 100
+
+mobile_menu_entity.admin.structure.settings:
+  title: Mobile menu entity settings
+  description: 'Configure Mobile menu entity entities'
+  route_name: mobile_menu_entity.settings
+  parent: webcomposer_mobile_menu.list

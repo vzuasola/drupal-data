@@ -4,44 +4,65 @@ webcomposer_config.list:
   parent: system.admin_config
   route_name: webcomposer_config.admin_settings
 
-webcomposer_config.admin_footer_configuration:
-  title: 'Footer Configuration'
-  parent: webcomposer_config.list
-  description: 'Provides configuration for Footer Section.'
-  route_name: webcomposer_config.footer_configuration_form
-
 webcomposer_config.admin_header_configuration:
   title: 'Header Configuration'
   parent: webcomposer_config.list
   description: 'Provides configuration for Header Section.'
   route_name: webcomposer_config.header_configuration_form
+  weight: 5
+
+webcomposer_config.admin_footer_configuration:
+  title: 'Footer Configuration'
+  parent: webcomposer_config.list
+  description: 'Provides configuration for Footer Section.'
+  route_name: webcomposer_config.footer_configuration_form
+  weight: 10
 
 webcomposer_config.admin_login_configuration:
   title: 'Login Configuration'
   parent: webcomposer_config.list
   description: 'Provides configuration for Header (Login form) Section.'
   route_name: webcomposer_config.login_configuration_form
+  weight: 15
 
 webcomposer_config.admin_outdate_browser_configuration:
   title: 'Outdated Browser Configuration'
   parent: webcomposer_config.list
   description: 'Provides configuration for outdate browser messages.'
   route_name: webcomposer_config.outdated_browser_configuration_form
+  weight: 20
 
 webcomposer_config.admin_page_not_found_configuration:
   title: 'Page Not Found'
   parent: webcomposer_config.list
   description: 'Page not found configuration.'
   route_name: entrypage_config.page_not_found_form
-
-webcomposer_config.admin_pushnx_configuration:
-  title: 'Push Notification Configuration'
-  parent: webcomposer_config.list
-  description: 'Provides configuration for Push Notification.'
-  route_name: webcomposer_config.pushnx_configuration_form
+  weight: 25
 
 webcomposer_config.admin_robots_configuration:
   title: 'Robots Configuration'
   parent: webcomposer_config.list
   description: 'Provides configuration for Robots.txt.'
   route_name: webcomposer_config.robots_configuration_form
+  weight: 30
+
+webcomposer_config.admin_pushnx_configuration:
+  title: 'Push Notification Configuration'
+  parent: webcomposer_config.list
+  description: 'Provides configuration for Push Notification.'
+  route_name: webcomposer_config.pushnx_configuration_form
+  weight: 35
+
+webcomposer_config.admin_log_configuration:
+  title: 'Log Configuration'
+  parent: webcomposer_config.list
+  description: 'Provides configuration for Logging.'
+  route_name: webcomposer_config.log_configuration_form
+  weight: 40
+
+webcomposer_config.admin_curacao_configuration:
+  title: 'Curacao'
+  parent: webcomposer_config.list
+  description: 'Configure Curacao'
+  route_name: webcomposer_config.curacao_configuration_form
+  weight: 45

@@ -1,0 +1,8 @@
+uuid: 4305d01e-0641-4105-9226-4daf1ad64e92
+langcode: en
+status: true
+dependencies: {  }
+id: left-menu-ch
+label: 'Left Menu CH'
+description: ''
+locked: false

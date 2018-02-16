@@ -1,4 +1,8 @@
 ignored_config_entities:
-  0: 'block.*'
-  2: 'casino_config.*'
-  4: 'webcomposer_config.*'
+  0: 'system.menu.*'
+  2: 'filter.*'
+  4: 'devel.*'
+  6: 'casino_config.*'
+  8: 'webcomposer_config.*'
+  10: 'block.*'
+langcode: zh-hans

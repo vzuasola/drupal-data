@@ -1,0 +1,8 @@
+uuid: a9da14c7-9cdf-4afe-a57d-901a238753ed
+langcode: en
+status: true
+dependencies: {  }
+id: left-menu-pl
+label: 'Left Menu PL'
+description: ''
+locked: false

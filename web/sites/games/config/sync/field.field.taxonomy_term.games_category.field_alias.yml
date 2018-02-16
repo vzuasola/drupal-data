@@ -10,7 +10,7 @@ field_name: field_alias
 entity_type: taxonomy_term
 bundle: games_category
 label: Alias
-description: 'Unique identifier for game category. Please use only letters, numbers, underscore and dash.'
+description: "Unique identifier for game category. Please use only letters, numbers, underscore and dash.\r\n<br><b>Don't Use home as a alias it's already attached to Home category.</b>"
 required: true
 translatable: true
 default_value: {  }

@@ -5,7 +5,7 @@ notification_content:
   format: basic_html
   value: "<p>Lượt truy cập của Quý Khách đã kết thúc vì không có hoạt động.\r\n</p>\r\n"
 lightbox_blurb: 'Bạn chưa phải thành viên Dafabet?'
-username_placeholder: 'Tên đăng nhập'
+username_placeholder: Username
 password_placeholder: 'Mật khẩu'
 login_bottom_label: 'ĐĂNG NHẬP'
 error_message_blank_username: 'Điền Tên đăng nhập là bắt buộc.'

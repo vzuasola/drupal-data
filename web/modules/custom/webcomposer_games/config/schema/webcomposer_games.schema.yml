@@ -11,6 +11,10 @@ webcomposer_config.games_opus_provider:
   type: config_object
   label: 'Opus Provider Configuration'
   mapping:
+    opus_fallback_error:
+      type: text
+      label: 'FallBack Error'
+      translatable: true
     opus_game_loader_content:
       type: text_format
       label: 'Content'
@@ -39,6 +43,9 @@ webcomposer_config.icore_games_integration:
     unsupported_currencies_button:
       type: text
       label: 'Unsupported Currencies Button'
+    game_provider_mapping:
+      type: text
+      label: 'Game Provider Mapping'
     fallback_error:
       type: text
       label: 'Fallback Error'

@@ -1,0 +1,9 @@
+<?php
+
+
+/**
+ * Implements hook_uninstall
+ */
+function games_page_loading_uninstall() {
+  // Do nothing
+}

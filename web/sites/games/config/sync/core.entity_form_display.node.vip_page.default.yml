@@ -1,0 +1,510 @@
+uuid: f807a8d1-407b-4eeb-96db-f0d206c6f8aa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.vip_page.field_column_1_lightbox_title_cb
+    - field.field.node.vip_page.field_column_1_lightbox_title_sc
+    - field.field.node.vip_page.field_column_2_lightbox_title_cb
+    - field.field.node.vip_page.field_column_2_lightbox_title_sc
+    - field.field.node.vip_page.field_column_3_lightbox_title_cb
+    - field.field.node.vip_page.field_column_3_lightbox_title_sc
+    - field.field.node.vip_page.field_meta_tags
+    - field.field.node.vip_page.field_vip_banner_content
+    - field.field.node.vip_page.field_vip_banner_content_pos
+    - field.field.node.vip_page.field_vip_banner_image
+    - field.field.node.vip_page.field_vip_cash_back_column_1_lb
+    - field.field.node.vip_page.field_vip_cash_back_column_2_lb
+    - field.field.node.vip_page.field_vip_cash_back_column_3_lb
+    - field.field.node.vip_page.field_vip_cb_bot_blurb_content
+    - field.field.node.vip_page.field_vip_cb_col_1
+    - field.field.node.vip_page.field_vip_cb_col_2
+    - field.field.node.vip_page.field_vip_cb_col_3
+    - field.field.node.vip_page.field_vip_cb_enable
+    - field.field.node.vip_page.field_vip_cb_title
+    - field.field.node.vip_page.field_vip_cp_content
+    - field.field.node.vip_page.field_vip_cp_enable
+    - field.field.node.vip_page.field_vip_cp_title
+    - field.field.node.vip_page.field_vip_sc_bot_blurb_content
+    - field.field.node.vip_page.field_vip_sc_col_1
+    - field.field.node.vip_page.field_vip_sc_col_2
+    - field.field.node.vip_page.field_vip_sc_col_3
+    - field.field.node.vip_page.field_vip_sc_enable
+    - field.field.node.vip_page.field_vip_sc_title
+    - field.field.node.vip_page.field_vip_slots_club_column_1_lb
+    - field.field.node.vip_page.field_vip_slots_club_column_2_lb
+    - field.field.node.vip_page.field_vip_slots_club_column_3_lb
+    - field.field.node.vip_page.field_vip_structure_content
+    - field.field.node.vip_page.field_vip_structure_enable
+    - field.field.node.vip_page.field_vip_structure_title
+    - image.style.thumbnail
+    - node.type.vip_page
+  module:
+    - field_group
+    - image
+    - metatag
+    - path
+    - scheduler
+    - text
+third_party_settings:
+  field_group:
+    group_banner_section:
+      children:
+        - field_vip_banner_image
+        - field_vip_banner_content_pos
+        - field_vip_banner_content
+      parent_name: ''
+      weight: 8
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: false
+      label: 'Banner Section'
+    group_vip_structure_tab:
+      children:
+        - field_vip_structure_enable
+        - field_vip_structure_title
+        - field_vip_structure_content
+      parent_name: ''
+      weight: 9
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: false
+      label: 'VIP Structure Tab'
+    group_vip_cash_points_tab:
+      children:
+        - field_vip_cp_enable
+        - field_vip_cp_title
+        - field_vip_cp_content
+      parent_name: ''
+      weight: 10
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: false
+      label: 'VIP Cash Points Tab'
+    group_vip_cash_back_tab:
+      children:
+        - field_vip_cb_enable
+        - field_vip_cb_title
+        - group_vip_cash_back_content
+        - group_vip_cash_back_content_ligh
+        - field_vip_cb_bot_blurb_content
+      parent_name: ''
+      weight: 11
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: false
+      label: 'VIP Cash Back Tab'
+    group_vip_cash_back_content:
+      children:
+        - field_vip_cb_col_1
+        - field_vip_cb_col_2
+        - field_vip_cb_col_3
+      parent_name: group_vip_cash_back_tab
+      weight: 22
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: false
+      label: 'VIP Cash Back Content'
+    group_vip_cash_back_content_ligh:
+      children:
+        - field_column_1_lightbox_title_cb
+        - field_vip_cash_back_column_1_lb
+        - field_column_2_lightbox_title_cb
+        - field_vip_cash_back_column_2_lb
+        - field_column_3_lightbox_title_cb
+        - field_vip_cash_back_column_3_lb
+      parent_name: group_vip_cash_back_tab
+      weight: 23
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: false
+      label: 'VIP Cash Back Content Lightbox'
+    group_vip_slots_club_tab:
+      children:
+        - field_vip_sc_enable
+        - field_vip_sc_title
+        - group_vip_slots_club_content
+        - group_vip_slots_club_content_lig
+        - field_vip_sc_bot_blurb_content
+      parent_name: ''
+      weight: 20
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: false
+      label: 'VIP Slots Club Tab'
+    group_vip_slots_club_content:
+      children:
+        - field_vip_sc_col_1
+        - field_vip_sc_col_2
+        - field_vip_sc_col_3
+      parent_name: group_vip_slots_club_tab
+      weight: 23
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: false
+      label: 'VIP Slots Club Content'
+    group_vip_slots_club_content_lig:
+      children:
+        - field_column_1_lightbox_title_sc
+        - field_vip_slots_club_column_1_lb
+        - field_column_2_lightbox_title_sc
+        - field_vip_slots_club_column_2_lb
+        - field_column_3_lightbox_title_sc
+        - field_vip_slots_club_column_3_lb
+      parent_name: group_vip_slots_club_tab
+      weight: 24
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: false
+      label: 'VIP Slots Club Content Lightbox'
+id: node.vip_page.default
+targetEntityType: node
+bundle: vip_page
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_column_1_lightbox_title_cb:
+    weight: 11
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_column_1_lightbox_title_sc:
+    weight: 14
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_column_2_lightbox_title_cb:
+    weight: 13
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_column_2_lightbox_title_sc:
+    weight: 16
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_column_3_lightbox_title_cb:
+    weight: 15
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_column_3_lightbox_title_sc:
+    weight: 18
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_meta_tags:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_firehose
+    region: content
+  field_vip_banner_content:
+    weight: 14
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_vip_banner_content_pos:
+    weight: 13
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_vip_banner_image:
+    weight: 12
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_vip_cash_back_column_1_lb:
+    weight: 12
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_vip_cash_back_column_2_lb:
+    weight: 14
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_vip_cash_back_column_3_lb:
+    weight: 16
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_vip_cb_bot_blurb_content:
+    weight: 24
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_vip_cb_col_1:
+    weight: 15
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_vip_cb_col_2:
+    weight: 16
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_vip_cb_col_3:
+    weight: 17
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_vip_cb_enable:
+    weight: 20
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_vip_cb_title:
+    weight: 21
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_vip_cp_content:
+    weight: 22
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_vip_cp_enable:
+    weight: 20
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_vip_cp_title:
+    weight: 21
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_vip_sc_bot_blurb_content:
+    weight: 25
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_vip_sc_col_1:
+    weight: 15
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_vip_sc_col_2:
+    weight: 16
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_vip_sc_col_3:
+    weight: 17
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_vip_sc_enable:
+    weight: 21
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_vip_sc_title:
+    weight: 22
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_vip_slots_club_column_1_lb:
+    weight: 15
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_vip_slots_club_column_2_lb:
+    weight: 17
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_vip_slots_club_column_3_lb:
+    weight: 19
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_vip_structure_content:
+    weight: 25
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_vip_structure_enable:
+    weight: 23
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_vip_structure_title:
+    weight: 24
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  publish_on:
+    type: datetime_timestamp_no_default
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+  unpublish_on:
+    type: datetime_timestamp_no_default
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  promote: true
+  sticky: true

@@ -40,13 +40,6 @@ class OWSportsCustomConfigForm extends ConfigFormBase {
       '#group' => 'owsports_settings_tab',
     ];
 
-    $form['owsports_config_group']['iframe_container'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Container ID'),
-      '#description' => $this->t('ID of iFrame container.'),
-      '#default_value' => $config->get('iframe_container'),
-    ];
-
     $form['owsports_config_group']['pre_transaction_subdomain'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Pre-Transaction Subdomain'),
@@ -138,11 +131,23 @@ class OWSportsCustomConfigForm extends ConfigFormBase {
       '#required' => TRUE,
     ];
 
+    $form['asia_config_group']['how_to_bet_uri'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('How to bet URI'),
+      '#default_value' => $config->get('how_to_bet_uri'),
+    ];
+
     $form['euro_config_group'] = [
       '#type' => 'details',
       '#title' => $this->t('Euro Template'),
       '#collapsible' => TRUE,
       '#group' => 'owsports_settings_tab',
+    ];
+
+    $form['euro_config_group']['euro_default_asia'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Use Asia template as default'),
+      '#default_value' => $config->get('euro_default_asia')
     ];
 
     $form['euro_config_group']['euro_pre_login_uri'] = [
@@ -161,7 +166,7 @@ class OWSportsCustomConfigForm extends ConfigFormBase {
 
     $form['euro_config_group']['euro_template'] = [
       '#type' => 'textarea',
-      '#title' => $this->t('Template'),
+      '#title' => $this->t('Supported Language'),
       '#description' => $this->t('Language that uses skin template. This will add "webskin=1" to the query string.'),
       '#default_value' => $config->get('euro_template'),
     ];
@@ -171,6 +176,12 @@ class OWSportsCustomConfigForm extends ConfigFormBase {
       '#title' => $this->t('Singbet Template'),
       '#collapsible' => TRUE,
       '#group' => 'owsports_settings_tab',
+    ];
+
+    $form['singbet_config_group']['singbet_default_asia'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Use Asia template as default'),
+      '#default_value' => $config->get('singbet_default_asia')
     ];
 
     $form['singbet_config_group']['singbet_pre_login_uri'] = [
@@ -189,7 +200,7 @@ class OWSportsCustomConfigForm extends ConfigFormBase {
 
     $form['singbet_config_group']['singbet_template'] = [
       '#type' => 'textarea',
-      '#title' => $this->t('Template'),
+      '#title' => $this->t('Supported Language'),
       '#description' => $this->t('Language that uses skin template. This will add "webskin=2" to the query string.'),
       '#default_value' => $config->get('singbet_template'),
     ];
@@ -209,14 +220,20 @@ class OWSportsCustomConfigForm extends ConfigFormBase {
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $keys = [
-      'iframe_container',
+      'how_to_bet_uri',
       'pre_transaction_subdomain',
       'pre_login_uri',
       'post_transaction_subdomain',
       'post_login_uri',
       'language_mapping',
+      'euro_default_asia',
       'euro_template',
-      'singbet_pre_login',
+      'euro_pre_login_uri',
+      'euro_post_login_uri',
+      'euro_switch_redirect',
+      'singbet_default_asia',
+      'singbet_pre_login_uri',
+      'singbet_post_login_uri',
       'singbet_template',
       'override_domain',
       'colossus_pre_uri',

@@ -1,0 +1,21 @@
+uuid: 482d8e9b-33a3-4ced-8c77-939833958b1c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.right_side_block_entity.field_unpublish_date
+  module:
+    - datetime
+    - webcomposer_right_side_block
+id: right_side_block_entity.right_side_block_entity.field_unpublish_date
+field_name: field_unpublish_date
+entity_type: right_side_block_entity
+bundle: right_side_block_entity
+label: 'Unpublish Date'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

@@ -1,6 +1,6 @@
 username_placeholder: Username
 password_placeholder: Password
-login_bottom_label: Login
+login_bottom_label: LOGIN
 error_message_blank_username: 'Username is required.'
 error_message_blank_password: 'Password is required.'
 error_message_blank_passname: 'Username and Password is required.'
@@ -23,4 +23,5 @@ lightbox_blurb: 'Not yet a Dafabet member?'
 _core:
   default_config_hash: LDw8PW9wswSVGgpFjaaHESQeB7QVJEtmV2mGoR4ANVY
 notification_window_title: 'Session Timeout'
-mobile_login_url: 'https://qa1-casino.elysium-dfbt.com/'
+mobile_login_url: 'https://m.dafabet.com/'
+tablet_login_button_label: ''

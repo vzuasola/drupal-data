@@ -7,6 +7,7 @@ dependencies with [Composer](https://getcomposer.org/).
 
 ### General Guidelines
 
+* [Settings Configuration Setup](docs/settings-configs-setup.md)
 * [Syncing Configurations](docs/syncing-configs.md)
 * [Creating a New Multsite Instance](docs/generate-site.md)
 

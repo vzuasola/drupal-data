@@ -26,7 +26,7 @@ field_validations:
   username_availability:
     error_message: 'Username not available'
   email_availability:
-    error_message: "Email is already in use. Click <a href=\"{domain:entry}/{domain:lang_token}/cant-login{tracking.token}\" target=\"new\">here</a> to retrieve username/password.\r\n"
+    error_message: "Email is already in use. Click <a href=\"/eu/cant-login\" target=\"popup\" onclick=\"window.open('/eu/cant-login','popup','width=820,height=810,scrollbars=no,resizable=no'); return false;\">here</a> to retrieve username/password.\r\n"
   invalid_words:
     error_message: 'Invalid/not allowed characters'
   valid_languages:

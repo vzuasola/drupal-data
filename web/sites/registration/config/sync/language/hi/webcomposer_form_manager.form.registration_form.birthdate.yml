@@ -30,3 +30,7 @@ field_validations:
     error_message: 'Email not available'
   invalid_words:
     error_message: 'Invalid/not allowed characters'
+  valid_languages:
+    error_message: 'Please enter your Date of Birth in this format: DD/MM/YYYY'
+  valid_date:
+    error_message: 'Please enter your Date of Birth in this format: DD/MM/YYYY'

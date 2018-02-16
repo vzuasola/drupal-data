@@ -14,6 +14,12 @@ webcomposer_config.header_configuration:
     login_issue_link:
       type: label
       label: 'Login Issue Link'
+    product_balance_label:
+      type: label
+      label: 'Product Balance Label'
+    total_balance_label:
+      type: label
+      label: 'Total Balance Label'
     balance_error_text:
       type: label
       label: 'Balance Error Message'
@@ -23,6 +29,9 @@ webcomposer_config.header_configuration:
     balance_label_mapping:
       type: text
       label: 'Balances label mapping'
+    balance_mapping:
+      type: text
+      label: 'Product Balance mapping'
     lobby_page_title:
       type: label
       label: 'Lobby Page Title'
@@ -60,6 +69,9 @@ webcomposer_config.header_configuration:
     profile_logout_text:
       type: label
       label: 'Profile Logout Text'
+    cashier_link:
+      type: label
+      label: 'Cashier Link'
 
 webcomposer_config.footer_configuration:
   type: config_object

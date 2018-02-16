@@ -48,6 +48,12 @@ class VirtualConfigForm extends ConfigFormBase {
       '#required' => true,
     ];
 
+    $form['virtual_configuration_mobile']['product_name_seo'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Product Name in Canonical'),
+      '#default_value' => $config->get('product_name_seo') ?? 'N/A',
+      '#required' => true,
+    ];
 
     return parent::buildForm($form, $form_state);
   }
@@ -57,7 +63,7 @@ class VirtualConfigForm extends ConfigFormBase {
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $keys = [
-      'base_url',
+      'base_url','product_name_seo'
     ];
 
     foreach ($keys as $key) {

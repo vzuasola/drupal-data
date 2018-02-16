@@ -1,0 +1,23 @@
+uuid: 514a370d-c5fe-448a-914c-2ae8f890b8d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_mobile_menu_target
+    - paragraphs.paragraphs_type.mobile_menu
+  module:
+    - options
+_core:
+  default_config_hash: SE3WRBWdifW3XGjBB29ct54ygj0AXp80tzNIsIEEQRA
+id: paragraph.mobile_menu.field_mobile_menu_target
+field_name: field_mobile_menu_target
+entity_type: paragraph
+bundle: mobile_menu
+label: Target
+description: 'Select Target'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

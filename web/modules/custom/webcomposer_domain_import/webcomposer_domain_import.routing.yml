@@ -18,3 +18,13 @@ webcomposer_domain_import.webcomposer_domain_export:
     _permission: 'administer site configuration'
   options:
     _admin_route: TRUE
+
+webcomposer_domain_import.webcomposer_domain_toggle:
+  path: 'admin/config/webcomposer/domains/toggle'
+  defaults:
+     _form: '\Drupal\webcomposer_domain_import\Form\ToggleConfiguration'
+     _title: 'Domain Feature Toggle'
+  requirements:
+    _permission: 'administer site configuration'
+  options:
+    _admin_route: TRUE

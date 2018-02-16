@@ -22,19 +22,28 @@ trait FilterHtmlTrait {
 
     // replace the images src for text formats
     $images = $domObject->xpath('//img');
-    $basePath = $this->getInlineBasePath();
+    $base_path = $this->getInlineBasePath();
 
-    if ($basePath) {
+    if ($base_path) {
       // if base path is available, make them relative of front end
       foreach ($images as $image) {
-          $replace = preg_replace('/\/sites\/[a-z\-]+\/files/', $basePath, $image['src']);
-          $image['src'] = $replace;
+          $src = preg_replace('/\/sites\/[a-z\-]+\/files/', '', $image['src']);
+          $replace = $base_path . $src;
+
+          \Drupal::moduleHandler()->alter('inline_image_url_change', $replace, $base_path, $src);
+
+          $image['src'] = (string) $replace;
       }
     } else {
       // make them absolute, so that it will work on front end
       foreach ($images as $image) {
           $drupal_uri = \Drupal::request()->getSchemeAndHttpHost();
-          $image['src'] = $drupal_uri . $image['src'];
+
+          $replace = $drupal_uri . $image['src'];
+
+          \Drupal::moduleHandler()->alter('inline_image_url_change', $replace, $drupal_uri, $image['src']);
+
+          $image['src'] = (string) $replace;
       }
 
     }
@@ -59,8 +68,10 @@ trait FilterHtmlTrait {
     $base_path = $this->getInlineBasePath();
 
     if ($base_path) {
-      $path = $this->getFileRelativeFilename($file->getFileUri());
-      $path = $base_path . '/' . $path;
+      $pre = $this->getFileRelativeFilename($file->getFileUri());
+      $path = $base_path . '/' . $pre;
+
+      \Drupal::moduleHandler()->alter('inline_image_url_change', $path, $base_path, $pre);
     } else {
       $path = file_create_url($file->getFileUri());
     }
@@ -81,7 +92,8 @@ trait FilterHtmlTrait {
     $file = File::load($fid);
 
     if ($file) {
-      return $this->generateUrlFromFile($file);
+      $path = $file->getFileUri();
+      return $this->getFileRelativeFilename($path);
     }
   }
 
@@ -92,11 +104,7 @@ trait FilterHtmlTrait {
    * @return string
    */
   protected function getInlineBasePath() {
-    $path = isset($_SERVER['HTTP_X_FE_BASE_URI']) ? $_SERVER['HTTP_X_FE_BASE_URI'] : NULL;
-
-    \Drupal::moduleHandler()->alter('inline_image_url_change', $path);
-
-    return $path;
+    return isset($_SERVER['HTTP_X_FE_BASE_URI']) ? $_SERVER['HTTP_X_FE_BASE_URI'] : NULL;
   }
 
   /**

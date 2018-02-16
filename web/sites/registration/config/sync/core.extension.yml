@@ -74,7 +74,6 @@ module:
   webcomposer_announcements: 0
   webcomposer_avaya: 0
   webcomposer_config: 0
-  webcomposer_connector: 0
   webcomposer_dm: 0
   webcomposer_domain_import: 0
   webcomposer_downloadables: 0
@@ -85,6 +84,7 @@ module:
   webcomposer_language_hierarchy: 0
   webcomposer_marketing_script: 0
   webcomposer_metatags: 0
+  webcomposer_mobile_menu: 0
   webcomposer_partner_responsive: 0
   webcomposer_promotions: 0
   webcomposer_rest_extra: 0

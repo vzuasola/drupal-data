@@ -1,0 +1,21 @@
+uuid: 0afb731e-2ff5-442f-ab5f-c6f61d78aa22
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_mobile_menu_label
+    - paragraphs.paragraphs_type.mobile_menu
+_core:
+  default_config_hash: uvD26yxeKyp6MVkpGCcDXzKFBBS6GKsIm6hX0TNpRfM
+id: paragraph.mobile_menu.field_mobile_menu_label
+field_name: field_mobile_menu_label
+entity_type: paragraph
+bundle: mobile_menu
+label: Label
+description: 'The text to be used for this link in the menu.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,9 @@
+uuid: a118a78d-8d8b-4ed3-bb0e-d7d72d0d25a8
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: dv7l_1b-vWDLGk-oG8JQ3r-TUVG5BSRb-mnGXdHPNJM
+id: mobile_menu
+label: 'Mobile Menu Item'
+behavior_plugins: {  }

@@ -5,12 +5,19 @@ dependencies:
   config:
     - field.field.node.game.body
     - field.field.node.game.field_game_code
+    - field.field.node.game.field_game_filter
     - field.field.node.game.field_game_image
     - field.field.node.game.field_game_info
     - field.field.node.game.field_game_info_toggle
+    - field.field.node.game.field_game_keywords
+    - field.field.node.game.field_game_provider
     - field.field.node.game.field_game_title
+    - field.field.node.game.field_game_type
     - field.field.node.game.field_games_category
     - field.field.node.game.field_home_category
+    - field.field.node.game.field_jackpot_code
+    - field.field.node.game.field_jackpot_ticker
+    - field.field.node.game.field_meta_tags
     - field.field.node.game.field_play_for_fun_toggle
     - field.field.node.game.field_ribbon_configuration
     - field.field.node.game.field_ribbon_label
@@ -19,6 +26,7 @@ dependencies:
   module:
     - field_group
     - image
+    - metatag
     - path
     - scheduler
     - text
@@ -41,6 +49,8 @@ third_party_settings:
       children:
         - field_play_for_fun_toggle
         - field_game_code
+        - field_game_provider
+        - field_game_type
       parent_name: ''
       weight: 7
       format_type: fieldset
@@ -50,6 +60,20 @@ third_party_settings:
         description: ''
         required_fields: false
       label: 'Game Launching'
+    group_jackpot:
+      children:
+        - field_jackpot_code
+        - field_jackpot_ticker
+      parent_name: ''
+      weight: 8
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: open
+        description: ''
+        required_fields: true
+      label: Jackpot
 id: node.game.default
 targetEntityType: node
 bundle: game
@@ -62,6 +86,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_game_filter:
+    weight: 15
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   field_game_image:
     weight: 5
@@ -86,6 +116,20 @@ content:
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
+  field_game_keywords:
+    weight: 16
+    settings:
+      size: 100
+      placeholder: 'e.g., slots, top, live'
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_game_provider:
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
   field_game_title:
     weight: 2
     settings:
@@ -93,6 +137,30 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textarea
+    region: content
+  field_game_type:
+    weight: 11
+    settings: {  }
+    third_party_settings:
+      conditional_fields:
+        51cbe025-0531-4b9f-957a-e09cc6c54127:
+          dependee: field_game_provider
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: playtech
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: node
+          bundle: game
+    type: options_buttons
     region: content
   field_games_category:
     weight: 3
@@ -106,6 +174,27 @@ content:
     third_party_settings: {  }
     type: options_buttons
     region: content
+  field_jackpot_code:
+    weight: 16
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_jackpot_ticker:
+    weight: 17
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_meta_tags:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_firehose
+    region: content
   field_play_for_fun_toggle:
     weight: 7
     settings:
@@ -115,12 +204,12 @@ content:
     region: content
   field_ribbon_configuration:
     type: options_select
-    weight: 12
+    weight: 13
     region: content
     settings: {  }
     third_party_settings: {  }
   field_ribbon_label:
-    weight: 26
+    weight: 14
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -133,18 +222,18 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 11
+    weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
-    weight: 10
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
   scheduler_settings:
-    weight: 8
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -158,7 +247,7 @@ content:
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp_no_default
-    weight: 9
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }

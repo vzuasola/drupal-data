@@ -30,3 +30,7 @@ field_validations:
     error_message: 'Email not available'
   invalid_words:
     error_message: 'Invalid/not allowed characters'
+  valid_languages:
+    error_message: "생년월일을 다음의 형식으로 입력해주세요: YYYY/MM/DD\r\n"
+  valid_date:
+    error_message: "생년월일을 다음의 형식으로 입력해주세요: YYYY/MM/DD\r\n"

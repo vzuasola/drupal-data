@@ -26,7 +26,7 @@ field_validations:
   username_availability:
     error_message: 'Username not available'
   email_availability:
-    error_message: '该邮箱已被使用。点击<a href="{domain:entry}/{domain:lang_token}/cant-login{tracking.token}" target="new">此处</a>找回用户名/密码。'
+    error_message: '该邮箱已被使用。点击<a href="/sc/cant-login" target="popup" onclick="window.open(''/sc/cant-login'',''popup'',''width=820,height=810,scrollbars=no,resizable=no''); return false;">此处</a>找回用户名/密码。'
   invalid_words:
     error_message: 'Invalid/not allowed characters'
   valid_languages:

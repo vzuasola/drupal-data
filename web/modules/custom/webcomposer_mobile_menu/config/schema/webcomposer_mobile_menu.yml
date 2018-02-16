@@ -1,0 +1,13 @@
+webcomposer_config.mobile_menu_config:
+  type: config_object
+  label: 'Mobile Menu Config'
+  mapping:
+    mobile_menu_language_lightbox_title:
+      type: label
+      label: 'Language lightbox title'
+    mobile_menu_cashier_links_label:
+      type: label
+      label: 'Cashier label'
+    mobile_menu_account_links_label:
+      type: label
+      label: 'My Account label'

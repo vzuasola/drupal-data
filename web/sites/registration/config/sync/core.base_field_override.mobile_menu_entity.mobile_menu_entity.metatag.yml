@@ -1,0 +1,20 @@
+uuid: e49afd5f-ad87-4e53-b4d6-6db0ce0cd8c3
+langcode: en
+status: true
+dependencies:
+  module:
+    - webcomposer_mobile_menu
+_core:
+  default_config_hash: VyOpztmAcX5Cplmp8B9pm10EeBO9-PWo5LvTaZcY0a4
+id: mobile_menu_entity.mobile_menu_entity.metatag
+field_name: metatag
+entity_type: mobile_menu_entity
+bundle: mobile_menu_entity
+label: Metatags
+description: 'The metatags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

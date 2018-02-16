@@ -1,0 +1,24 @@
+uuid: 6db5ea19-4c3c-4d34-8261-9242ef2f9e70
+langcode: zh-hant
+status: true
+dependencies:
+  module:
+    - options
+    - webcomposer_slider_v2
+id: webcomposer_slider_v2_entity.field_gold_only
+field_name: field_gold_only
+entity_type: webcomposer_slider_v2_entity
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '1'
+      label: 'Gold Only'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 2
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

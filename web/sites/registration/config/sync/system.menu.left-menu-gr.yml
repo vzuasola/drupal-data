@@ -1,0 +1,8 @@
+uuid: 5e03c807-4d32-44a6-86e5-6e745335f7cb
+langcode: en
+status: true
+dependencies: {  }
+id: left-menu-gr
+label: 'Left Menu GR'
+description: ''
+locked: false

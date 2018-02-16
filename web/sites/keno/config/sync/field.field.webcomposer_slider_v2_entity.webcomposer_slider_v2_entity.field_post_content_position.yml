@@ -1,0 +1,25 @@
+uuid: 8c3453c9-e706-4b6c-ba25-109bbfc73313
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.webcomposer_slider_v2_entity.field_post_content_position
+  module:
+    - options
+    - webcomposer_slider_v2
+_core:
+  default_config_hash: cmZRZzNBsdguOKaMc51UmgXTaefzCdMWw63HSikrC08
+id: webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_post_content_position
+field_name: field_post_content_position
+entity_type: webcomposer_slider_v2_entity
+bundle: webcomposer_slider_v2_entity
+label: 'Post Content Position'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: right
+default_value_callback: ''
+settings: {  }
+field_type: list_string

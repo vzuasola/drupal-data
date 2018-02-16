@@ -31,6 +31,13 @@ class OpusProviderConfiguration extends ConfigFormBase {
 
     $content = $config->get('opus_game_loader_content');
     $message = $config->get('opus_unsupported_currencies_message');
+    $form['opus_fallback_error'] = array(
+      '#type' => 'textfield',
+      '#title' => t('Opus Fallback error'),
+      '#description' => $this->t('Opus Fallback Error'),
+      '#default_value' => $config->get('opus_fallback_error')
+    );
+
     $form['opus_game_loader_content'] = [
       '#type' => 'text_format',
       '#title' => $this->t('Game Loader Content'),
@@ -126,7 +133,8 @@ class OpusProviderConfiguration extends ConfigFormBase {
       'languages','currency',
       'opus_unsupported_currencies_title',
       'opus_unsupported_currencies_message',
-      'opus_unsupported_currencies_button'
+      'opus_unsupported_currencies_button',
+      'opus_fallback_error',
     ];
 
     foreach ($keys as $key) {
