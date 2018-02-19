@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\webcomposer_dropdown_menu\Plugin\Webcomposer\DropdownMenu;
+namespace Drupal\webcomposer_dropdown_promotion\Plugin\Webcomposer\DropdownMenu;
 
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Form\ConfigFormBase;
@@ -36,10 +36,17 @@ class Promotion extends ConfigFormBase implements DropdownMenuPluginInterface {
   public function buildForm(array $form, FormStateInterface $form_state) {
     $config = $this->config('webcomposer_dropdown_menu.dropdown_menu.section.promotion');
 
+    $form['title'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Title'),
+      '#description' => $this->t('The tile title'),
+      '#default_value' => $config->get('title'),
+    ];
+
     $form['markup'] = [
       '#type' => 'textarea',
       '#title' => $this->t('Markup'),
-      '#description' => $this->t('The markup that will be used as substitute to Curacao'),
+      '#description' => $this->t('The markup for the paragraph text'),
       '#default_value' => $config->get('markup'),
     ];
 
@@ -51,6 +58,7 @@ class Promotion extends ConfigFormBase implements DropdownMenuPluginInterface {
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $keys = [
+      'title',
       'markup',
     ];
 

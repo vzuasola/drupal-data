@@ -2,6 +2,9 @@ webcomposer_dropdown_menu.dropdown_menu.section.promotion:
   type: config_object
   label: 'Promotions'
   mapping:
-    markup:
+    title:
       type: label
+      label: 'Title'
+    markup:
+      type: text
       label: 'Markup'
