@@ -5,15 +5,35 @@ dependencies:
   config:
     - field.field.games_showcase_entity.games_showcase_entity.field_games_category
     - field.field.games_showcase_entity.games_showcase_entity.field_log_in_state
+    - field.field.games_showcase_entity.games_showcase_entity.field_publish_date
     - field.field.games_showcase_entity.games_showcase_entity.field_showcase_body
     - field.field.games_showcase_entity.games_showcase_entity.field_showcase_image
     - field.field.games_showcase_entity.games_showcase_entity.field_showcase_ribbon
     - field.field.games_showcase_entity.games_showcase_entity.field_title
+    - field.field.games_showcase_entity.games_showcase_entity.field_unpublish_date
     - image.style.thumbnail
   module:
+    - datetime
+    - field_group
     - games_showcase
     - image
     - text
+third_party_settings:
+  field_group:
+    group_scheduler_settings:
+      children:
+        - field_publish_date
+        - field_unpublish_date
+      parent_name: ''
+      weight: 20
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Scheduler Settings'
 id: games_showcase_entity.games_showcase_entity.default
 targetEntityType: games_showcase_entity
 bundle: games_showcase_entity
@@ -30,6 +50,12 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
+    region: content
+  field_publish_date:
+    weight: 11
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
     region: content
   field_showcase_body:
     weight: 5
@@ -61,6 +87,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_unpublish_date:
+    weight: 12
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
     region: content
   langcode:
     type: language_select
