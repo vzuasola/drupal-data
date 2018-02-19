@@ -1,0 +1,8 @@
+services:
+  plugin.manager.dropdown_menu_plugin:
+    class: Drupal\webcomposer_dropdown_menu\Plugin\DropdownMenuPluginManager
+    parent: default_plugin_manager
+
+  webcomposer_dropdown_menu.dropdown_menu_manager:
+    class: Drupal\webcomposer_dropdown_menu\DropdownMenuManager
+    arguments: ['@plugin.manager.dropdown_menu_plugin', '@config.factory']
