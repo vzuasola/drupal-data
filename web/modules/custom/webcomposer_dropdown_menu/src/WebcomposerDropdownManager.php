@@ -44,6 +44,12 @@ class WebcomposerDropdownManager {
     $i = 0;
     $sections = [];
 
+    $this->schemaBase->setEditableConfigNames([
+      'webcomposer_dropdown_menu.dropdown_menu',
+    ]);
+
+    $data = $this->schemaBase->getConfigValues('webcomposer_dropdown_menu.dropdown_menu', 'sort');
+
     $definitions = $this->pluginManager->getDefinitions();
 
     foreach ($definitions as $section => $definition) {
@@ -58,6 +64,20 @@ class WebcomposerDropdownManager {
         $weight = $data[$section]['weight'];
       }
 
+      // attempt to fetch settings
+      try {
+        $this->schemaBase->setEditableConfigNames([
+          "webcomposer_dropdown_menu.dropdown_menu.section.$section",
+        ]);
+
+        $settings = $this->schemaBase
+          ->getConfigValuesAll("webcomposer_dropdown_menu.dropdown_menu.section.$section");
+
+      } catch (\Exception $e) {
+        $settings = [];
+      }
+
+      $definition['settings'] = $settings;
       $definition['weight'] = $weight;
       $definition['region'] = $region;
 
@@ -71,7 +91,6 @@ class WebcomposerDropdownManager {
    *
    */
   public function getSectionsByRegions() {
-    kint_require();
     $result = [];
     $sections = [];
 

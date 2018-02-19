@@ -16,7 +16,7 @@ use Psr\Log\LoggerInterface;
  *   id = "webcomposer_dropdown_menu_rest_resource",
  *   label = @Translation("Webcomposer Dropdown Menu Rest Resource"),
  *   uri_paths = {
- *     "canonical" = "/api/webcomposer_dropdown_menu/all"
+ *     "canonical" = "/api/webcomposer_dropdown_menu"
  *   }
  * )
  */
@@ -78,7 +78,7 @@ class WebcomposerFormRestResource extends ResourceBase {
       throw new AccessDeniedHttpException();
     }
 
-    $data = $this->manager->getSectionsByRegions();
+    $data = $this->manager->getSections();
 
     $build = [
       '#cache' => [
