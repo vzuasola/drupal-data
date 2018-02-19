@@ -1,13 +1,15 @@
-uuid: 9d43c3ef-84f5-4f8b-9c74-7a329382aff8
+uuid: fdadb32c-4c8c-4680-89dc-a83aefb9fa7d
 langcode: en
 status: true
 dependencies:
   module:
     - options
-    - webcomposer_slider
-id: webcomposer_slider_entity.field_banner_link_target
+    - webcomposer_slider_v2
+_core:
+  default_config_hash: 5VN9VQ6MmVtw-2zt50Yz8_y2o1eYXai_NP3W8LzXljc
+id: webcomposer_slider_v2_entity.field_banner_link_target
 field_name: field_banner_link_target
-entity_type: webcomposer_slider_entity
+entity_type: webcomposer_slider_v2_entity
 type: list_string
 settings:
   allowed_values:

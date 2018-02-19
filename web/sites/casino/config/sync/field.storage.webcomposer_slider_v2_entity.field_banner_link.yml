@@ -1,15 +1,15 @@
-uuid: ff5a4d6b-778e-4d34-ac1b-da1dbc9af493
+uuid: f688bb16-2954-49ea-83a9-c92f56d5f75a
 langcode: en
 status: true
 dependencies:
   module:
     - link
-    - webcomposer_slider
+    - webcomposer_slider_v2
 _core:
-  default_config_hash: '-3sTToTdPg87HZX2djdMOyS0XrIDBWhjTCDPymqUQgQ'
-id: webcomposer_slider_entity.field_banner_link
+  default_config_hash: '-vxJwlmvH2umnNgvyaAwDfOHd1zMpNXKcbC01ty2SkQ'
+id: webcomposer_slider_v2_entity.field_banner_link
 field_name: field_banner_link
-entity_type: webcomposer_slider_entity
+entity_type: webcomposer_slider_v2_entity
 type: link
 settings: {  }
 module: link
