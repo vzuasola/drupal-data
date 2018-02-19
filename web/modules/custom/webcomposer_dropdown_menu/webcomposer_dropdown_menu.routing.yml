@@ -13,3 +13,6 @@ webcomposer_dropdown_menu.overview_form:
     _title: 'Dropdown Menu Manager'
   requirements:
     _permission: 'administer site configuration'
+
+route_callbacks:
+  - 'Drupal\webcomposer_dropdown_menu\Routing\ConfigFormRoutes::getRoutes'

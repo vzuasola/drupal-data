@@ -2,23 +2,23 @@
 
 namespace Drupal\webcomposer_dropdown_menu\Form;
 
-use Drupal\Core\Form\FormStateInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
+use Drupal\Core\Form\ConfigFormBase;
+use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Url;
+
 
 /**
  * Sortable Form Base
  *
  * @package Drupal\webcomposer_dropdown_menu\Form
  */
-class SortableFormBase extends FormBase {
-  const DEFAULT_REGION = 'disable';
-
+class SortableFormBase extends ConfigFormBase {
   /**
    * Class constructor.
    */
-  public function __construct($typed_config_manager, $language_manager, $drop_down_manager) {
-    parent::__construct($typed_config_manager, $language_manager);
+  public function __construct($schema_base, $drop_down_manager) {
+    $this->schemaBase = $schema_base;
     $this->dropDownManager = $drop_down_manager;
   }
 
@@ -27,8 +27,7 @@ class SortableFormBase extends FormBase {
    */
   public static function create(ContainerInterface $container) {
     return new static(
-      $container->get('config.typed'),
-      $container->get('language_manager'),
+      $container->get('webcomposer_dropdown_menu.schema'),
       $container->get('webcomposer_dropdown_menu.dropdown_menu_manager')
     );
   }
@@ -40,13 +39,6 @@ class SortableFormBase extends FormBase {
     return [
       'webcomposer_dropdown_menu.dropdown_menu',
     ];
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  protected function getDefaultConfigName() {
-    return 'webcomposer_dropdown_menu.dropdown_menu';
   }
 
   /**
@@ -78,17 +70,8 @@ class SortableFormBase extends FormBase {
 
     $form['#attached']['library'][] = 'block/drupal.block';
 
-    // reorganize the sort data according to the fetched saved data
-    // although this can be moved to the managers, put it here for now
-
-    $name = $this->getDefaultConfigName();
-    $sort_data = $this->getConfigValues($name, 'sort');
-
-    $groupList = $this->dropDownManager->getSectionsByRegions($sort_data);
+    $groupList = $this->dropDownManager->getSectionsByRegions();
     $regions = array_combine(array_keys($groupList), array_keys($groupList));
-
-    // kint_require();
-    // d($groupList);
 
     foreach ($groupList as $key => $tiles) {
       $form['table']['#tabledrag'][] = [
@@ -175,9 +158,7 @@ class SortableFormBase extends FormBase {
           ],
         ];
 
-        $url = new Url('webcomposer_domain.domain.view', [
-          'domain' => 'alex',
-        ]);
+        $url = new Url("webcomposer_dropdown_menu.{$tile}_form");
 
         $form['table'][$tile]['actions'] = [
           'data' => [
@@ -207,10 +188,7 @@ class SortableFormBase extends FormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    kint_require();
     parent::submitForm($form, $form_state);
-
-    $name = $this->getDefaultConfigName();
 
     $sort = [];
     $data = $form_state->getValue('table');
@@ -219,6 +197,7 @@ class SortableFormBase extends FormBase {
       $sort[$key] = $value;
     }
 
-    $this->saveRawConfigValue($name, 'sort', $sort);
+    $this->schemaBase->setEditableConfigNames($this->getEditableConfigNames());
+    $this->schemaBase->saveRawConfigValue('webcomposer_dropdown_menu.dropdown_menu', 'sort', $sort);
   }
 }

@@ -10,8 +10,6 @@ use Drupal\Core\Extension\ModuleHandlerInterface;
  * Provides the Dropdown Menu plugin manager.
  */
 class DropdownMenuPluginManager extends DefaultPluginManager {
-
-
   /**
    * Constructs a new DropdownMenuPluginManager object.
    *

@@ -7,7 +7,7 @@ use Drupal\Component\Utility\SortArray;
 /**
  *
  */
-class DropdownMenuManager {
+class WebcomposerDropdownManager {
   /**
    * Initial list of regions
    */
@@ -24,9 +24,10 @@ class DropdownMenuManager {
   /**
    * Class constructor.
    */
-  public function __construct($plugin_manager, $config_factory) {
+  public function __construct($plugin_manager, $schema_base) {
     $this->pluginManager = $plugin_manager;
-    $this->configFactory = $config_factory;
+
+    $this->schemaBase = $schema_base;
   }
 
   /**
@@ -39,9 +40,46 @@ class DropdownMenuManager {
   /**
    *
    */
-  public function getSectionsByRegions($data = []) {
+  public function getSections() {
+    $i = 0;
+    $sections = [];
+
+    $definitions = $this->pluginManager->getDefinitions();
+
+    foreach ($definitions as $section => $definition) {
+      $weight = ++ $i;
+      $region = self::DEFAULT_REGION;
+
+      if (isset($data[$section]['region'])) {
+        $region = $data[$section]['region'];
+      }
+
+      if (isset($data[$section]['weight'])) {
+        $weight = $data[$section]['weight'];
+      }
+
+      $definition['weight'] = $weight;
+      $definition['region'] = $region;
+
+      $sections[$section] = $definition;
+    }
+
+    return $sections;
+  }
+
+  /**
+   *
+   */
+  public function getSectionsByRegions() {
+    kint_require();
     $result = [];
     $sections = [];
+
+    $this->schemaBase->setEditableConfigNames([
+      'webcomposer_dropdown_menu.dropdown_menu',
+    ]);
+
+    $data = $this->schemaBase->getConfigValues('webcomposer_dropdown_menu.dropdown_menu', 'sort');
 
     $definitions = $this->pluginManager->getDefinitions();
 
@@ -59,6 +97,20 @@ class DropdownMenuManager {
         $weight = $data[$section]['weight'];
       }
 
+      // attempt to fetch settings
+      try {
+        $this->schemaBase->setEditableConfigNames([
+          "webcomposer_dropdown_menu.dropdown_menu.section.$section",
+        ]);
+
+        $settings = $this->schemaBase
+          ->getConfigValuesAll("webcomposer_dropdown_menu.dropdown_menu.section.$section");
+
+      } catch (\Exception $e) {
+        $settings = [];
+      }
+
+      $definition['settings'] = $settings;
       $definition['weight'] = $weight;
       $definition['region'] = $region;
 
