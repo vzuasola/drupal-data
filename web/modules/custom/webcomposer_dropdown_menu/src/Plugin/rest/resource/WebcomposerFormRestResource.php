@@ -78,7 +78,7 @@ class WebcomposerFormRestResource extends ResourceBase {
       throw new AccessDeniedHttpException();
     }
 
-    $data = $this->manager->getSections();
+    $data = $this->manager->getEnabledSections();
 
     $build = [
       '#cache' => [

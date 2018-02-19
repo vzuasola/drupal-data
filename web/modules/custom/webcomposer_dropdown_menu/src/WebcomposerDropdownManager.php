@@ -40,6 +40,21 @@ class WebcomposerDropdownManager {
   /**
    *
    */
+  public function getEnabledSections() {
+    $sections = $this->getSections();
+
+    $disabled = self::DEFAULT_REGION;
+
+    $sections = array_filter($sections, function ($value) use ($disabled) {
+      return $value['region'] !== $disabled;
+    });
+
+    return $sections;
+  }
+
+  /**
+   *
+   */
   public function getSections() {
     $i = 0;
     $sections = [];
