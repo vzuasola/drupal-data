@@ -20,6 +20,7 @@ dependencies with [Composer](https://getcomposer.org/).
 ### Plugins
 
 * [Creating a Webcomposer Form Plugin](docs/webcomposer-form-plugin.md)
+* [Creating a Webcomposer Dropdown Menu Widget Plugin](docs/webcomposer-menu-widget-plugin.md)
 
 ## Updating Drupal Core
 

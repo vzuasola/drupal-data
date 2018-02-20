@@ -1,0 +1,14 @@
+<?php
+
+/**
+ * Implements hook_uninstall
+ */
+function webcomposer_dropdown_menu_uninstall() {
+    $keys = [
+      'webcomposer_dropdown_menu'
+    ];
+
+    foreach ($keys as $key) {
+      \Drupal::configFactory()->getEditable($key)->delete();
+    }
+}

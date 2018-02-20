@@ -1,0 +1,11 @@
+webcomposer_dropdown_menu.admin_list:
+  title: 'Webcomposer Dropdown Manager'
+  parent: system.admin_config
+  route_name: webcomposer_dropdown_menu.admin_settings
+  description: 'Manages Webcomposer Dropdown entries'
+
+webcomposer_dropdown_menu.admin_overview_list:
+  title: 'Dropdown List'
+  parent: webcomposer_dropdown_menu.admin_list
+  route_name: webcomposer_dropdown_menu.overview_form
+  description: 'Manages Webcomposer Dropdown entries'

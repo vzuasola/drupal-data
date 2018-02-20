@@ -5,11 +5,14 @@ dependencies:
   config:
     - field.field.games_showcase_entity.games_showcase_entity.field_games_category
     - field.field.games_showcase_entity.games_showcase_entity.field_log_in_state
+    - field.field.games_showcase_entity.games_showcase_entity.field_publish_date
     - field.field.games_showcase_entity.games_showcase_entity.field_showcase_body
     - field.field.games_showcase_entity.games_showcase_entity.field_showcase_image
     - field.field.games_showcase_entity.games_showcase_entity.field_showcase_ribbon
     - field.field.games_showcase_entity.games_showcase_entity.field_title
+    - field.field.games_showcase_entity.games_showcase_entity.field_unpublish_date
   module:
+    - datetime
     - games_showcase
     - image
     - options
@@ -34,6 +37,15 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: list_default
+    region: content
+  field_publish_date:
+    weight: 8
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
     region: content
   field_showcase_body:
     weight: 2
@@ -66,6 +78,15 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_unpublish_date:
+    weight: 9
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
     region: content
   name:
     label: above
