@@ -23,4 +23,9 @@ interface SignatureStorageInterface {
    * @return string The new signature
    */
   public function renewSignature();
+
+  /**
+   * Deletes the current signature
+   */
+  public function deleteSignature();
 }
