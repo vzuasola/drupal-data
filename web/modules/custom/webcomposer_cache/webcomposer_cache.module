@@ -10,7 +10,11 @@
  */
 function webcomposer_cache_cache_flush() {
   try {
-    \Drupal::service('webcomposer_cache.signature_manager')->renewSignature();
+    $enable = \Drupal::config('webcomposer_cache.settings')->get('enable');
+
+    if ($enable) {
+      \Drupal::service('webcomposer_cache.signature_manager')->renewSignature();
+    }
   } catch (Exception $e) {
     // do nothing
   }

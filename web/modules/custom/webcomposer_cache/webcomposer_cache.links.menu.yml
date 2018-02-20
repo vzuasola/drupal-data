@@ -1,0 +1,12 @@
+webcomposer_cache.admin_list:
+  title: 'Webcomposer Cache'
+  parent: system.admin_config
+  route_name: webcomposer_cache.admin_settings
+  description: 'Manages Webcomposer Cache'
+
+webcomposer_cache.settings_form:
+  title: 'Cache Settings'
+  route_name: webcomposer_cache.settings_form
+  description: 'Manage cache behavior and settings'
+  parent: webcomposer_cache.admin_list
+

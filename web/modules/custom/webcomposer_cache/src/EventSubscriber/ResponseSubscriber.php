@@ -55,9 +55,13 @@ class ResponseSubscriber implements EventSubscriberInterface {
       return;
     }
 
-    $request = $event->getRequest();
-    $response = $event->getResponse();
+    $enable = \Drupal::config('webcomposer_cache.settings')->get('enable');
 
-    $response->headers->set(self::HEADER, $this->signatureManager->getSignature());
+    if ($enable) {
+      $request = $event->getRequest();
+      $response = $event->getResponse();
+
+      $response->headers->set(self::HEADER, $this->signatureManager->getSignature());
+    }
   }
 }
