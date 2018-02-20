@@ -93,6 +93,21 @@ class SettingsForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
+    // check to see if we are turning off the cache
+
+    $config = $this->config('webcomposer_cache.settings');
+
+    $enable = $config->get('enable');
+    $next = $form_state->getValue('enable');
+
+    if ($enable && !$next) {
+      try {
+        \Drupal::service('webcomposer_cache.signature_manager')->deleteSignature();
+      } catch (\Exception $e) {
+        // do nothing
+      }
+    }
+
     $keys = [
       'enable',
     ];

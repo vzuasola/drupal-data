@@ -78,6 +78,13 @@ class RedisSignatureStorage implements SignatureStorageInterface {
   }
 
   /**
+   * {@inheritdoc}
+   */
+  public function deleteSignature() {
+    $this->redis->del($this->cacheKey);
+  }
+
+  /**
    * Creates a new signature
    */
   private function createSignature() {
