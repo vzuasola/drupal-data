@@ -1,0 +1,4 @@
+sort:
+  promotion:
+    region: content
+    weight: '0'

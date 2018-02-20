@@ -1,0 +1,18 @@
+webcomposer_dropdown_menu.admin_settings:
+  path: 'admin/config/webcomposer/form'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Webcomposer Dropdown Menu Configuration'
+  requirements:
+    _permission: 'administer site configuration'
+
+webcomposer_dropdown_menu.overview_form:
+  path: '/admin/config/webcomposer/dropdown/manage'
+  defaults:
+    _form: '\Drupal\webcomposer_dropdown_menu\Form\SortableFormBase'
+    _title: 'Dropdown Menu Manager'
+  requirements:
+    _permission: 'administer site configuration'
+
+route_callbacks:
+  - 'Drupal\webcomposer_dropdown_menu\Routing\ConfigFormRoutes::getRoutes'

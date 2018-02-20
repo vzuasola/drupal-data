@@ -1,4 +1,4 @@
-join_now_text: 'Join Nows'
+join_now_text: 'Join Now Alex'
 join_now_link: 'https://qa1-www.elysium-dfbt.com/en/casino/join{tracking.token}'
 login_issue_text: 'Cant login?'
 login_issue_link: '/{domain:entry}/{domain:lang_token}/cant-login{tracking.token}'
@@ -24,3 +24,10 @@ news_announcement_content:
   format: basic_html
 balance_label_mapping: "4|OW Sports\r\n6|Dafa Sports\r\n1|Casino Classic\r\n2|Casino Gold\r\n5|Live Dealer & Games\r\n3|Poker\r\n7|Fish Hunter"
 balance_error_text_product: N/A
+balance_toggle: 1
+product_balance_label: 'Casino Classic Account Balance'
+total_balance_label: 'Total Account Balance'
+product_balance_id: '1'
+excluded_balance_mapping: "7\r\n2"
+currency_balance_mapping: ''
+cashier_link: 'http://google.com/'

@@ -118,12 +118,27 @@ class HeaderConfiguration extends ConfigFormBase {
       '#default_value' => $config->get('balance_toggle'),
     ];
 
-    $form['balance_group']['product_balance_label'] = [
+    $form['balance_group']['deprecated'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Deprecated'),
+      '#description' => $this->t('These are deprecated fields to support old products.'),
+      '#collapsible' => TRUE,
+      '#open' => FALSE,
+    ];
+
+    $form['balance_group']['deprecated']['product_balance_label'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Product Balance Label.'),
       '#description' => $this->t('The label for the product specific balance'),
       '#default_value' => $config->get('product_balance_label'),
       '#required' => TRUE,
+    ];
+
+    $form['balance_group']['deprecated']['product_balance_id'] = [
+      '#type' => 'number',
+      '#title' => $this->t('Product Balance ID.'),
+      '#description' => $this->t('The ID of the balance to be shown as the product balance'),
+      '#default_value' => $config->get('product_balance_id'),
     ];
 
     $form['balance_group']['total_balance_label'] = [
@@ -134,11 +149,11 @@ class HeaderConfiguration extends ConfigFormBase {
       '#required' => TRUE,
     ];
 
-    $form['balance_group']['product_balance_id'] = [
-      '#type' => 'number',
-      '#title' => $this->t('Product Balance ID.'),
-      '#description' => $this->t('The ID of the balance to be shown as the product balance'),
-      '#default_value' => $config->get('product_balance_id'),
+    $form['balance_group']['balance_mapping'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Product Balance Mapping'),
+      '#description' => $this->t('Provide a product mapping that will show up below the username'),
+      '#default_value' => $config->get('balance_mapping'),
     ];
 
     $form['balance_group']['balance_error_text'] = [
@@ -159,7 +174,7 @@ class HeaderConfiguration extends ConfigFormBase {
 
     $form['balance_group']['balance_label_mapping'] = [
       '#type' => 'textarea',
-      '#title' => $this->t('Balances label mapping'),
+      '#title' => $this->t('Balances Label Mapping'),
       '#description' => $this->t('Labels and ordering for the balance breakdown'),
       '#default_value' => $config->get('balance_label_mapping'),
       '#required' => TRUE,
@@ -333,6 +348,7 @@ class HeaderConfiguration extends ConfigFormBase {
       '#title' => $this->t('Cashier Link'),
       '#description' => $this->t('Cashier Link For Header'),
       '#default_value' => $config->get('cashier_link'),
+      '#maxlength' => 255,
       '#required' => TRUE,
     ];
 
@@ -370,6 +386,7 @@ class HeaderConfiguration extends ConfigFormBase {
       'news_announcement_content',
       'profile_link',
       'profile_logout_text',
+      'balance_mapping',
       'cashier_link',
     ];
 

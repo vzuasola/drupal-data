@@ -1,0 +1,18 @@
+uuid: 7556e9c1-c17e-486f-892e-b2d74a4ec6c8
+langcode: en
+status: true
+dependencies:
+  module:
+    - serialization
+    - user
+    - webcomposer_dropdown_menu
+id: webcomposer_dropdown_menu_rest_resource
+plugin_id: webcomposer_dropdown_menu_rest_resource
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+      - xml
+    supported_auth:
+      - cookie
