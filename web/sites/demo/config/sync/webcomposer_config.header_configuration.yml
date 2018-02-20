@@ -31,3 +31,4 @@ product_balance_id: '1'
 excluded_balance_mapping: "7\r\n2"
 currency_balance_mapping: ''
 cashier_link: 'http://google.com/'
+balance_mapping: ''
