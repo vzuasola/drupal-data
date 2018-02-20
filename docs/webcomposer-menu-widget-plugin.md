@@ -110,3 +110,13 @@ There are two regions defined
 * **Disabled**
 
 Disabled widgets won't show up on the front end.
+
+### Enable Rest Resource and Permission
+
+Make sure that the rest resource for Webcomposer Dropdown Menu is enabled and
+anonymous permission is granted unto it.
+
+### Important Guidelines
+
+* **Site specific widget should be defined on site specific modules**
+* **Widgets that can be reused across multiple product should be on a web/modules/custom**
