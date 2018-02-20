@@ -1,0 +1,4 @@
+webcomposer_dropdown_menu.dropdown_menu.section.promotion:
+  route_name: webcomposer_dropdown_menu.promotion_form
+  title: 'Promotions Widget'
+  base_route: webcomposer_dropdown_menu.promotion_form

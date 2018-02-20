@@ -1,0 +1,14 @@
+<?php
+
+/**
+ * @file
+ * Contains webcomposer_dropdown_menu.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function webcomposer_dropdown_menu_help($route_name, RouteMatchInterface $route_match) {
+}
