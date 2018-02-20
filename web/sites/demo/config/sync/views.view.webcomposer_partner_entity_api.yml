@@ -8,7 +8,7 @@ dependencies:
     - serialization
     - webcomposer_partner
 _core:
-  default_config_hash: ooftllmgxB9bxCBUqemN9VMZ3yBVUXhuIlc-i8PQEPo
+  default_config_hash: Vax_jczLOSBsajI8FwkRg3SWfD7DaywUUM-AMJSCISA
 id: webcomposer_partner_entity_api
 label: 'Webcomposer Partner Entity API'
 module: views
@@ -340,7 +340,7 @@ display:
           group_type: group
           admin_label: ''
           label: 'Partner entity'
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
