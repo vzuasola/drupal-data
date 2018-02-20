@@ -5,7 +5,7 @@ webcomposer_games.games_playtech_provider_schema:
     - 'webcomposer_config.games_playtech_provider'
 
 webcomposer_games.games_opus_provider_schema:
-  title: 'Opus Provider Configuration'
+  title: 'Keno & Lottery Game Configuration'
   base_route_name: webcomposer_games.games_opus_provider_form
   names:
     - 'webcomposer_config.games_opus_provider'
