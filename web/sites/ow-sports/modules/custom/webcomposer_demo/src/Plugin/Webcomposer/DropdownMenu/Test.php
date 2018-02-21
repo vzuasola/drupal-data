@@ -51,7 +51,7 @@ class Test extends ConfigFormBase implements DropdownMenuPluginInterface {
     ];
 
     $form['markup'] = [
-      '#type' => 'text_format',
+      '#type' => 'textarea',
       '#title' => $this->t('Markup'),
       '#description' => $this->t('The markup for the paragraph text'),
       '#default_value' => $config->get('markup'),
