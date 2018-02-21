@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.storage.taxonomy_term.field_alias
+    - field.storage.taxonomy_term.field_disable
     - field.storage.taxonomy_term.field_show_to_kebab
     - node.type.game
   module:
@@ -409,6 +410,71 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
+        field_disable:
+          id: field_disable
+          table: taxonomy_term__field_disable
+          field: field_disable
+          relationship: field_games_category
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: boolean
+          settings:
+            format: boolean
+            format_custom_true: ''
+            format_custom_false: ''
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
       filters:
         status:
           value: '1'
@@ -525,6 +591,20 @@ display:
           entity_type: taxonomy_term
           entity_field: weight
           plugin_id: standard
+        name:
+          id: name
+          table: taxonomy_term_field_data
+          field: name
+          relationship: field_games_category
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          entity_type: taxonomy_term
+          entity_field: name
+          plugin_id: standard
       header: {  }
       footer: {  }
       empty: {  }
@@ -551,6 +631,7 @@ display:
         - 'user.node_grants:view'
       tags:
         - 'config:field.storage.taxonomy_term.field_alias'
+        - 'config:field.storage.taxonomy_term.field_disable'
         - 'config:field.storage.taxonomy_term.field_show_to_kebab'
   rest_export_game_categories:
     display_plugin: rest_export
@@ -589,6 +670,9 @@ display:
             field_alias:
               alias: alias
               raw_output: false
+            field_disable:
+              alias: disable
+              raw_output: false
     cache_metadata:
       max-age: -1
       contexts:
@@ -598,4 +682,5 @@ display:
         - 'user.node_grants:view'
       tags:
         - 'config:field.storage.taxonomy_term.field_alias'
+        - 'config:field.storage.taxonomy_term.field_disable'
         - 'config:field.storage.taxonomy_term.field_show_to_kebab'
