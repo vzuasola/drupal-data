@@ -179,6 +179,7 @@ class MobileMenuEntity extends ContentEntityBase implements MobileMenuEntityInte
     $fields['name'] = BaseFieldDefinition::create('string')
       ->setLabel(t('Name'))
       ->setDescription(t('The name of the Mobile menu entity entity.'))
+      ->setTranslatable(TRUE)
       ->setSettings([
         'max_length' => 50,
         'text_processing' => 0,
