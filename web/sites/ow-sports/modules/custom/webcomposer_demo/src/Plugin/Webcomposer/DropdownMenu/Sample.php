@@ -11,30 +11,30 @@ use Drupal\webcomposer_dropdown_menu\Plugin\DropdownMenuPluginInterface;
  * About menu widget plugin
  *
  * @DropdownMenuPlugin(
- *   id = "test",
- *   name = "Test Widget",
+ *   id = "sample",
+ *   name = "Sample Widget",
  * )
  */
-class Test extends ConfigFormBase implements DropdownMenuPluginInterface {
+class Sample extends ConfigFormBase implements DropdownMenuPluginInterface {
   /**
    * {@inheritdoc}
    */
   protected function getEditableConfigNames() {
-    return ['webcomposer_dropdown_menu.dropdown_menu.section.test'];
+    return ['webcomposer_dropdown_menu.dropdown_menu.section.sample'];
   }
 
   /**
    * {@inheritdoc}
    */
   public function getFormId() {
-    return 'about_settings_form';
+    return 'sample_settings_form';
   }
 
   /**
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    $config = $this->config('webcomposer_dropdown_menu.dropdown_menu.section.test');
+    $config = $this->config('webcomposer_dropdown_menu.dropdown_menu.section.sample');
 
     $form['title'] = [
       '#type' => 'textfield',
@@ -71,7 +71,7 @@ class Test extends ConfigFormBase implements DropdownMenuPluginInterface {
     ];
 
     foreach ($keys as $key) {
-      $this->config('webcomposer_dropdown_menu.dropdown_menu.section.test')->set($key, $form_state->getValue($key))->save();
+      $this->config('webcomposer_dropdown_menu.dropdown_menu.section.sample')->set($key, $form_state->getValue($key))->save();
     }
 
     return parent::submitForm($form, $form_state);

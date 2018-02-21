@@ -1,4 +1,4 @@
 sort:
-  test:
+  sample:
     region: content
-    weight: '0'
+    weight: '-10'
