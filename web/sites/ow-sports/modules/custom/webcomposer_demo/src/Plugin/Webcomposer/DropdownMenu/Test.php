@@ -11,16 +11,16 @@ use Drupal\webcomposer_dropdown_menu\Plugin\DropdownMenuPluginInterface;
  * About menu widget plugin
  *
  * @DropdownMenuPlugin(
- *   id = "about",
- *   name = "About Widget",
+ *   id = "test",
+ *   name = "Test Widget",
  * )
  */
-class About extends ConfigFormBase implements DropdownMenuPluginInterface {
+class Test extends ConfigFormBase implements DropdownMenuPluginInterface {
   /**
    * {@inheritdoc}
    */
   protected function getEditableConfigNames() {
-    return ['webcomposer_dropdown_menu.dropdown_menu.section.about'];
+    return ['webcomposer_dropdown_menu.dropdown_menu.section.test'];
   }
 
   /**
@@ -34,7 +34,7 @@ class About extends ConfigFormBase implements DropdownMenuPluginInterface {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    $config = $this->config('webcomposer_dropdown_menu.dropdown_menu.section.about');
+    $config = $this->config('webcomposer_dropdown_menu.dropdown_menu.section.test');
 
     $form['title'] = [
       '#type' => 'textfield',
@@ -71,7 +71,7 @@ class About extends ConfigFormBase implements DropdownMenuPluginInterface {
     ];
 
     foreach ($keys as $key) {
-      $this->config('webcomposer_dropdown_menu.dropdown_menu.section.about')->set($key, $form_state->getValue($key))->save();
+      $this->config('webcomposer_dropdown_menu.dropdown_menu.section.test')->set($key, $form_state->getValue($key))->save();
     }
 
     return parent::submitForm($form, $form_state);
