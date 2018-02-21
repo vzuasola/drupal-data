@@ -1,0 +1,4 @@
+sort:
+  about:
+    region: content
+    weight: '0'
