@@ -1,5 +1,9 @@
-join_now_link: 'http://www.dafabet.com/en/cant-login'
+lobby_page_title: 'dafabet娛樂場 - 最好的在線娛樂場dafabet超級大獎等你來！'
+product_balance_label: 'Balance ch'
+total_balance_label: 總余額ch
 balance_error_text: 'Cannot Load Balance'
 profile_logout_text: Logout
-balance_label_mapping: "4|沙巴體育\r\n6|大發體育\r\n1|娛樂場金典版\r\n2|娛樂場黃金版\r\n5|現場荷官&遊戲\r\n3|撲克\r\n7|捕魚王\r\n8|OPUS現場荷官\r\n9|快樂彩"
+balance_label_mapping: "4|沙巴體育\r\n6|大發體育\r\n1|娛樂場金典版\r\n2|娛樂場黃金版\r\n5|Common Wallet CH\r\n3|撲克\r\n7|捕魚王\r\n8|OPUS現場荷官\r\n9|快樂彩"
 balance_error_text_product: 無
+cashier_link: '{domain:cashier_domain}/{lang}[query:(ticket={auth.token}&product=casino-gold&title=headerPopup&width=820&height=700)]'
+login_issue_link: 'https://tct-www.elysium-dfbt.com/sc/join'

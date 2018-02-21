@@ -2,23 +2,23 @@ langcode: zh-hans
 _core:
   default_config_hash: _-cfI71ymuhVf2WhjxUk5wUvCWlpDfTnQC4jfbOoOYQ
 app_top_blurb:
-  value: "<p>sdfsad {tracking.token}</p>\r\n"
+  value: "<p>感谢您，我们已收到您提交的的大发黄金版账户激活请求。</p>\r\n"
   format: basic_html
 app_middle_blurb:
-  value: "<p>sdc</p>\r\n"
+  value: "<p>您的请求正在审核中，<br />\r\n我们将于10天内予以回复。</p>\r\n"
   format: basic_html
 reapp_top_blurb:
-  value: "<p>sdc</p>\r\n"
+  value: "<p>感谢您，我们已收到您提交的的大发黄金版账户激活请求。</p>\r\n"
   format: basic_html
 reapp_middle_blurb:
-  value: "<p>dcdc</p>\r\n"
+  value: "<p>您的请求正在审核中，<br />\r\n我们将于10天内予以回复。</p>\r\n"
   format: basic_html
 gold_player_top_blurb:
-  value: "<p>sdcx</p>\r\n"
+  value: "<p>您已成为大发黄金版用户！</p>\r\n"
   format: basic_html
 gold_player_middle_blurb:
-  value: "<p>dc</p>\r\n"
+  value: "<p>下载<a href=\"https://cachedownload.huangjindafa.com/cgi-bin/SetupCasino.exe\" target=\"_self\">大发黄金版软件</a>并使用现有大发用户名及密码登录进行游戏。\r\n</p>\r\n"
   format: basic_html
 bottom_blurb_content:
-  value: "<p>scd</p>\r\n"
+  value: "<p><span class=\"text-16\"><span class=\"text-white\">如果您有任何疑问，<br />\r\n请联系在线客服寻求协助。</span></span></p>\r\n"
   format: basic_html
