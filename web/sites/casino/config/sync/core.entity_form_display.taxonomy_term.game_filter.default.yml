@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.taxonomy_term.game_filter.field_disable
     - field.field.taxonomy_term.game_filter.field_value
     - taxonomy.vocabulary.game_filter
 id: taxonomy_term.game_filter.default
@@ -10,6 +11,13 @@ targetEntityType: taxonomy_term
 bundle: game_filter
 mode: default
 content:
+  field_disable:
+    weight: 2
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
   field_value:
     weight: 1
     settings:
