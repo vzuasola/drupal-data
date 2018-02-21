@@ -15,6 +15,7 @@ dependencies:
     - field.field.node.promotion.field_image
     - field.field.node.promotion.field_link_target
     - field.field.node.promotion.field_log_in_state
+    - field.field.node.promotion.field_meta_tags
     - field.field.node.promotion.field_promote_to_lobby
     - field.field.node.promotion.field_right_side_block
     - field.field.node.promotion.field_right_side_block_link
@@ -25,6 +26,7 @@ dependencies:
   module:
     - image
     - link
+    - metatag
     - options
     - text
     - user
@@ -127,6 +129,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: list_default
+    region: content
+  field_meta_tags:
+    weight: 20
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
     region: content
   field_right_side_block:
     weight: 17
