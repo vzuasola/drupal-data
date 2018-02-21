@@ -1,12 +1,13 @@
-uuid: 266d7cf2-7f1c-4ab0-a440-2b2946246acf
+uuid: 487a0d1c-90d5-4e0d-95db-6104f4087a67
 langcode: zh-hans
 status: true
 dependencies:
   module:
-    - basic_auth
     - serialization
     - user
     - webcomposer_affilates
+_core:
+  default_config_hash: '-jJN3LiPCkvFaQozgONhckf37MCD04Pv8DnqUW4rL1A'
 id: affiliate_rest_resource
 plugin_id: affiliate_rest_resource
 granularity: method
@@ -14,7 +15,5 @@ configuration:
   GET:
     supported_formats:
       - json
-      - xml
     supported_auth:
-      - basic_auth
       - cookie

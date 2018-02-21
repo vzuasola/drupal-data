@@ -1,16 +1,16 @@
-uuid: 2c24d84e-9f06-4ddb-8d6e-88d25d2bf83b
+uuid: 9a0d8e0e-f36d-44dc-81a3-6b879949a04c
 langcode: zh-hant
 status: true
 dependencies:
   config:
     - field.storage.node.field_meta_tags
-    - node.type.page
+    - node.type.promotion
   module:
     - metatag
-id: node.page.field_meta_tags
+id: node.promotion.field_meta_tags
 field_name: field_meta_tags
 entity_type: node
-bundle: page
+bundle: promotion
 label: 'Meta Tags'
 description: ''
 required: false
