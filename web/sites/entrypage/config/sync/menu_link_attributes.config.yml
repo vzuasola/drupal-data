@@ -15,4 +15,4 @@ attributes:
       new: 'New Product'
   dropDownMenu:
     label: 'Drop Down Menu API URL'
-    description: 'Specify the URL that the drop down menu will call'
+    description: 'Specify the API URL that the drop down menu will call'
