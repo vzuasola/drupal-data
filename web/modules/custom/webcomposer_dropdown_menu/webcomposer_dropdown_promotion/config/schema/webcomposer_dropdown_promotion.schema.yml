@@ -5,6 +5,9 @@ webcomposer_dropdown_menu.dropdown_menu.section.promotion:
     title:
       type: label
       label: 'Title'
-    markup:
-      type: text
-      label: 'Markup'
+    promotion_link:
+      type: label
+      label: 'Promotion Link'
+    promotion_link_text:
+      type: label
+      label: 'Promotion Link Text'

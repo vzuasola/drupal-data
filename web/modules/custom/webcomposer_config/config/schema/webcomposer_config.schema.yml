@@ -70,7 +70,7 @@ webcomposer_config.header_configuration:
       type: label
       label: 'Profile Logout Text'
     cashier_link:
-      type: label
+      type: text
       label: 'Cashier Link'
 
 webcomposer_config.footer_configuration:
