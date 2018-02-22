@@ -8,7 +8,7 @@ use Drupal\Core\Form\ConfigFormBase;
 use Drupal\webcomposer_dropdown_menu\Plugin\DropdownMenuPluginInterface;
 
 /**
- * About menu widget plugin
+ * Sample menu widget plugin
  *
  * @DropdownMenuPlugin(
  *   id = "sample",
