@@ -6,6 +6,7 @@ use Drupal\webform\Entity\Webform;
 use Drupal\webform\WebformSubmissionForm;
 use Drupal\rest\Plugin\ResourceBase;
 use Drupal\rest\ResourceResponse;
+use Drupal\rest\ModifiedResourceResponse;
 use Symfony\Component\HttpFoundation\Response;
 
 
@@ -36,7 +37,7 @@ class WebformSubmitResource extends ResourceBase {
    *   Throws HttpException in case of error.
    */
   public function post(array $webform_data) {
-
+// return new ResourceResponse($webform_data);
     // Basic check for webform ID.
     if (empty($webform_data['webform_id'])) {
       return new Response('', 500);
@@ -71,7 +72,7 @@ class WebformSubmitResource extends ResourceBase {
         $errors = [
         'error' => $errors, 
         'form_exception_message' => $webformSetting['form_exception_message']];
-        return new ResourceResponse($errors);
+        return new ModifiedResourceResponse($errors);
       }
       else {
         // Return submission ID.
@@ -82,7 +83,7 @@ class WebformSubmitResource extends ResourceBase {
         'confirmation_message' => $webformSetting['confirmation_message'],
 
         ];
-        return new ResourceResponse($response);
+        return new ModifiedResourceResponse($response);
       }
     }
     elseif($is_closed === TRUE){
