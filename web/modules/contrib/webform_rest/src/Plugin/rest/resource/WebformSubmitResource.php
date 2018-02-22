@@ -92,7 +92,7 @@ class WebformSubmitResource extends ResourceBase {
         'form_close_message' => $webformSetting['form_close_message'],
 
         ];
-        return new ResourceResponse($response);
+        return new ModifiedResourceResponse($response);
 
     }
     else {
@@ -100,7 +100,7 @@ class WebformSubmitResource extends ResourceBase {
         'limit_total_message' => $webformSetting['limit_total_message'],
 
         ];
-        return new ResourceResponse($response);
+        return new ModifiedResourceResponse($response);
     }
   }
 
