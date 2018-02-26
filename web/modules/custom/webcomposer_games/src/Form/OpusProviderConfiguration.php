@@ -33,8 +33,8 @@ class OpusProviderConfiguration extends ConfigFormBase {
     $message = $config->get('opus_unsupported_currencies_message');
     $form['opus_fallback_error'] = array(
       '#type' => 'textfield',
-      '#title' => t('Opus Fallback error'),
-      '#description' => $this->t('Opus Fallback Error'),
+      '#title' => t('Fallback error'),
+      '#description' => $this->t('Fallback Error'),
       '#default_value' => $config->get('opus_fallback_error')
     );
 
@@ -89,14 +89,14 @@ class OpusProviderConfiguration extends ConfigFormBase {
 
     $form['opus_unsupported_currencies_title'] = array(
       '#type' => 'textfield',
-      '#title' => t('Opus Unsupported Currency title'),
+      '#title' => t('Unsupported Currency title'),
       '#description' => $this->t('Defines the Unsupported Currency LightBox title'),
       '#default_value' => $config->get('opus_unsupported_currencies_title')
     );
 
     $form['opus_unsupported_currencies_message'] = array(
       '#type' => 'text_format',
-      '#title' => $this->t('Opus Unsupported Currency Message'),
+      '#title' => $this->t('Unsupported Currency Message'),
       '#default_value' => $message['value'],
       '#format' => $message['format'],
     );
