@@ -99,6 +99,10 @@ class WebcomposerDropdownManager {
       $sections[$section] = $definition;
     }
 
+    uasort($sections, function ($a, $b) {
+      return SortArray::sortByKeyInt($a, $b, 'weight');
+    });
+
     return $sections;
   }
 
