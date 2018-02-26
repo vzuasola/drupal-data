@@ -75,19 +75,19 @@ class MobileMenuConfiguration extends ConfigFormBase {
       '#maxlength' => 256,
     ];
 
-    // My Account Link.
-    $form['account']['mobile_menu_account_links_label'] = [
+    // Promotion Link.
+    $form['account']['mobile_menu_promotion_label'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('My Account label'),
-      '#default_value' => $config->get('mobile_menu_account_links_label'),
+      '#title' => $this->t('Promotion Label'),
+      '#default_value' => $config->get('mobile_menu_promotion_links_label'),
       '#required' => TRUE,
     ];
 
-    $form['account']['mobile_menu_account_links'] = [
+    $form['account']['mobile_menu_promotion_links'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('My Account Links'),
-      '#default_value' => $config->get('mobile_menu_account_links'),
-      '#description' => $this->t('Enter my account URL'),
+      '#title' => $this->t('Promotion  Links'),
+      '#default_value' => $config->get('mobile_menu_promotion_links'),
+      '#description' => $this->t('Enter promotion URL'),
       '#required' => TRUE,
       '#maxlength' => 256,
     ];
@@ -103,8 +103,8 @@ class MobileMenuConfiguration extends ConfigFormBase {
       'mobile_menu_language_lightbox_title',
       'mobile_menu_cashier_links_label',
       'mobile_menu_cashier_links',
-      'mobile_menu_account_links_label',
-      'mobile_menu_account_links',
+      'mobile_menu_promotion_label',
+      'mobile_menu_promotion_links',
     ];
 
     foreach ($keys as $key) {
