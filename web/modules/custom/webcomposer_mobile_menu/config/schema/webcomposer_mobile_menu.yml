@@ -8,6 +8,6 @@ webcomposer_config.mobile_menu_config:
     mobile_menu_cashier_links_label:
       type: label
       label: 'Cashier label'
-    mobile_menu_account_links_label:
+    mobile_menu_promotion_label:
       type: label
-      label: 'My Account label'
+      label: 'Promotion label'
