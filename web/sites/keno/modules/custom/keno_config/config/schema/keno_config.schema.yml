@@ -23,4 +23,7 @@ keno_config.keno_configuration:
       translatable: true
     basic_page_title:
       type: label
-      label: 'Basic Page Title'    
+      label: 'Basic Page Title' 
+    balance_mapping_keno:
+      type: text
+      label: 'Product Balance mapping for SC and RMB'     
