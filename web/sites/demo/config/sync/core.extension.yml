@@ -20,6 +20,7 @@ module:
   contextual: 0
   ctools: 0
   datetime: 0
+  dblog: 0
   devel: 0
   devel_generate: 0
   draggableviews: 0
@@ -67,12 +68,14 @@ module:
   webcomposer_affilates: 0
   webcomposer_announcements: 0
   webcomposer_avaya: 0
+  webcomposer_cache: 0
   webcomposer_cdn: 0
   webcomposer_config: 0
-  webcomposer_connector: 0
+  webcomposer_demo: 0
   webcomposer_dm: 0
   webcomposer_domain_import: 0
   webcomposer_downloadables: 0
+  webcomposer_dropdown_menu: 0
   webcomposer_editor: 0
   webcomposer_floating_banners: 0
   webcomposer_form_manager: 0
@@ -80,6 +83,7 @@ module:
   webcomposer_games: 0
   webcomposer_language_hierarchy: 0
   webcomposer_marketing_script: 0
+  webcomposer_metatags: 0
   webcomposer_partner: 0
   webcomposer_promotions: 0
   webcomposer_registration_landing_page: 0

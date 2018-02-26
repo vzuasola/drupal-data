@@ -11,16 +11,20 @@ error_message_blank_password: 'Password is required.'
 error_message_blank_passname: 'Username and Password is required.'
 error_message_invalid_passname: 'Sorry the Username and Password you entered does not match. Please try again.'
 error_message_service_not_available: 'Service not available.'
-error_message_account_suspended: ''
-error_message_account_locked: ''
-session_maxtime: '1'
+error_message_account_suspended: 'Account Locked'
+error_message_account_locked: 'Account Locked'
+session_maxtime: '60'
 autologout_box_title: Reminder-title
 autologout_box_content:
-  value: "<p>this is the text fo the notification box.<span class=\"sessionTimer\"></span>&nbsp;seconds.\r\n</p>\r\n"
+  value: "<p>this is the text fo the notification box.<span class=\"sessionTimer\"></span>&nbsp;seconds.</p>\r\n"
   format: basic_html
 affirmative_button_text: Yes-sc
 negative_button_text: No-sc
 notification_title: 'notification title'
 notification_content:
-  value: "<p>This is notification Box\r\n</p>\r\n"
+  value: "<p>This is notification Box</p>\r\n"
   format: basic_html
+notification_window_title: Notification
+lightbox_blurb: ''
+mobile_login_url: aaaaa
+tablet_login_button_label: ''

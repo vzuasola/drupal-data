@@ -15,7 +15,7 @@ third_party_settings:
       alt: '0'
       title: '0'
 _core:
-  default_config_hash: WlP718dwwxVEgI2ERDG9P4qQPzFtFjKCizLqwlu5sRk
+  default_config_hash: 6aiDsJ3DLI_cFHK0PRi059k-4vt8Kft4Ze5AOgpsyqY
 id: paragraph.sponsor_cmi.field_sponsor_cmi_logo
 field_name: field_sponsor_cmi_logo
 entity_type: paragraph
@@ -32,8 +32,8 @@ settings:
   max_filesize: ''
   max_resolution: ''
   min_resolution: ''
-  alt_field: false
-  alt_field_required: false
+  alt_field: true
+  alt_field_required: true
   title_field: false
   title_field_required: false
   default_image:

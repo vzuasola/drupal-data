@@ -1,0 +1,17 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - serialization
+    - user
+    - webcomposer_dropdown_menu
+id: webcomposer_dropdown_menu_rest_resource
+plugin_id: webcomposer_dropdown_menu_rest_resource
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+      - xml
+    supported_auth:
+      - cookie

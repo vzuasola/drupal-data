@@ -15,6 +15,7 @@ dependencies:
     - field.field.node.promotion.field_image
     - field.field.node.promotion.field_link_target
     - field.field.node.promotion.field_log_in_state
+    - field.field.node.promotion.field_meta_tags
     - field.field.node.promotion.field_promote_to_lobby
     - field.field.node.promotion.field_right_side_block
     - field.field.node.promotion.field_right_side_block_link
@@ -27,6 +28,7 @@ dependencies:
     - field_group
     - image
     - link
+    - metatag
     - path
     - scheduler
     - text
@@ -182,6 +184,12 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
+    region: content
+  field_meta_tags:
+    weight: 31
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_firehose
     region: content
   field_promote_to_lobby:
     type: options_buttons

@@ -6,7 +6,14 @@ dependencies:
     - field.storage.node.field_vip_banner_image
     - node.type.vip_page
   module:
+    - content_translation
     - image
+third_party_settings:
+  content_translation:
+    translation_sync:
+      alt: alt
+      title: title
+      file: '0'
 id: node.vip_page.field_vip_banner_image
 field_name: field_vip_banner_image
 entity_type: node
@@ -23,8 +30,8 @@ settings:
   max_filesize: ''
   max_resolution: 1920x500
   min_resolution: 1920x500
-  alt_field: false
-  alt_field_required: true
+  alt_field: true
+  alt_field_required: false
   title_field: false
   title_field_required: false
   default_image:
