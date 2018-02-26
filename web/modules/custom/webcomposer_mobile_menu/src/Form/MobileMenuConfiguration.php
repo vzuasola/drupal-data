@@ -79,14 +79,14 @@ class MobileMenuConfiguration extends ConfigFormBase {
     $form['account']['mobile_menu_promotion_label'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Promotion Label'),
-      '#default_value' => $config->get('mobile_menu_promotion_links_label'),
+      '#default_value' => $config->get('mobile_menu_promotion_label'),
       '#required' => TRUE,
     ];
 
-    $form['account']['mobile_menu_promotion_links'] = [
+    $form['account']['mobile_menu_promotion_url'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Promotion  Links'),
-      '#default_value' => $config->get('mobile_menu_promotion_links'),
+      '#default_value' => $config->get('mobile_menu_promotion_url'),
       '#description' => $this->t('Enter promotion URL'),
       '#required' => TRUE,
       '#maxlength' => 256,
@@ -104,7 +104,7 @@ class MobileMenuConfiguration extends ConfigFormBase {
       'mobile_menu_cashier_links_label',
       'mobile_menu_cashier_links',
       'mobile_menu_promotion_label',
-      'mobile_menu_promotion_links',
+      'mobile_menu_promotion_url',
     ];
 
     foreach ($keys as $key) {
