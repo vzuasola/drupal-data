@@ -216,11 +216,11 @@ class LoginConfiguration extends ConfigFormBase {
       '#default_value' => $config->get('mobile_login_url'),
       '#required' => TRUE,
     ];
-    $form['mobile_login']['tablet_login_button_label'] = [
+    $form['mobile_login']['mobile_login_button_label'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('Tablet Login Button Label'),
-      '#description' => $this->t('Label to be used in tablet.'),
-      '#default_value' => $config->get('tablet_login_button_label'),
+      '#title' => $this->t('Mobile Login Button Label'),
+      '#description' => $this->t('Label to be used in mobile.'),
+      '#default_value' => $config->get('mobile_login_button_label'),
     ];
 
     return parent::buildForm($form, $form_state);
@@ -251,7 +251,7 @@ class LoginConfiguration extends ConfigFormBase {
       'notification_content',
       'lightbox_blurb',
       'mobile_login_url',
-      'tablet_login_button_label',
+      'mobile_login_button_label',
     ];
 
     foreach ($loginValuesKeys as $keys) {
