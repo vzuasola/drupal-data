@@ -1,0 +1,32 @@
+uuid: 408b1c5f-6f92-461e-884d-4c1a6b2e6644
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+    - image
+    - webcomposer_slider
+_core:
+  default_config_hash: tdFdaL7BQewSJ-qaeLyr-1NNmgP2QnAzba8tAxfS7pQ
+id: webcomposer_slider_entity.field_banner_image
+field_name: field_banner_image
+entity_type: webcomposer_slider_entity
+type: image
+settings:
+  uri_scheme: public
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  target_type: file
+  display_field: false
+  display_default: false
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
