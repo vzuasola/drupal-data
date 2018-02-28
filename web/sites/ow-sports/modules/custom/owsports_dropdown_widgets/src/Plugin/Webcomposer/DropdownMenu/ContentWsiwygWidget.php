@@ -55,7 +55,8 @@ class ContentWsiwygWidget extends ConfigFormBase implements DropdownMenuPluginIn
     ];
 
     foreach ($keys as $key) {
-      $this->config('webcomposer_dropdown_menu.dropdown_menu.section.content_wysiwyg_widget')->set($key, $form_state->getValue($key))->save();
+      $this->config('webcomposer_dropdown_menu.dropdown_menu.section.content_wysiwyg_widget')
+      ->set($key, $form_state->getValue($key))->save();
     }
 
     return parent::submitForm($form, $form_state);
