@@ -142,7 +142,6 @@ class SortableFormBase extends ConfigFormBase {
           '#title_display' => 'invisible',
           '#options' => $regions,
           '#default_value' => $definition['region'],
-          '#default_value' => 'content',
           '#attributes' => [
             'class' => ['block-region-select', 'block-region-' . $key],
           ],
