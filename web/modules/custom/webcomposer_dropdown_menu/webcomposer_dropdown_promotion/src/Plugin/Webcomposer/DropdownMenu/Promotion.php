@@ -12,7 +12,7 @@ use Drupal\webcomposer_dropdown_menu\Plugin\DropdownMenuPluginInterface;
  *
  * @DropdownMenuPlugin(
  *   id = "promotion",
- *   name = "Promotions",
+ *   name = "Promotions Widget",
  * )
  */
 class Promotion extends ConfigFormBase implements DropdownMenuPluginInterface {
