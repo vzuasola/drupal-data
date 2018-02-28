@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.mobile_menu_entity.mobile_menu_entity.field_menu_id
     - field.field.mobile_menu_entity.mobile_menu_entity.field_mobile_menu_item
   module:
     - paragraphs
@@ -14,9 +15,17 @@ targetEntityType: mobile_menu_entity
 bundle: mobile_menu_entity
 mode: default
 content:
+  field_menu_id:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_mobile_menu_item:
     type: entity_reference_paragraphs
-    weight: 1
+    weight: 2
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -35,8 +44,10 @@ content:
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 10
+    weight: 3
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   langcode: true
   user_id: true
