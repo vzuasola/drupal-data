@@ -63,7 +63,6 @@ class MobileMenuConfiguration extends ConfigFormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Cashier label'),
       '#default_value' => $config->get('mobile_menu_cashier_links_label'),
-      '#required' => TRUE,
     ];
 
     $form['account']['mobile_menu_cashier_links'] = [
@@ -71,7 +70,6 @@ class MobileMenuConfiguration extends ConfigFormBase {
       '#title' => $this->t('Cashier Links'),
       '#default_value' => $config->get('mobile_menu_cashier_links'),
       '#description' => $this->t('Enter cashier URL'),
-      '#required' => TRUE,
       '#maxlength' => 256,
     ];
 
@@ -80,7 +78,6 @@ class MobileMenuConfiguration extends ConfigFormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Promotion Label'),
       '#default_value' => $config->get('mobile_menu_promotion_label'),
-      '#required' => TRUE,
     ];
 
     $form['account']['mobile_menu_promotion_url'] = [
@@ -88,7 +85,6 @@ class MobileMenuConfiguration extends ConfigFormBase {
       '#title' => $this->t('Promotion  Links'),
       '#default_value' => $config->get('mobile_menu_promotion_url'),
       '#description' => $this->t('Enter promotion URL'),
-      '#required' => TRUE,
       '#maxlength' => 256,
     ];
 
