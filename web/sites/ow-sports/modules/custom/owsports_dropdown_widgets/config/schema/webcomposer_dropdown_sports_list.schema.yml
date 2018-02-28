@@ -1,0 +1,7 @@
+webcomposer_dropdown_menu.dropdown_menu.section.sports_list:
+  type: config_object
+  label: 'Sports List Widget'
+  mapping:
+    title:
+      type: label
+      label: 'Title'
