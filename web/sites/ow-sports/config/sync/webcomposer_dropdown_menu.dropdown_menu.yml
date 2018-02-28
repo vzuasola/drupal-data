@@ -1,4 +1,13 @@
 sort:
-  sample:
+  sports_list:
+    region: content
+    weight: '-10'
+  content_widget:
+    region: content
+    weight: '-9'
+  promotion:
+    region: content
+    weight: '-8'
+  content_wysiwyg_widget:
     region: disable
-    weight: '0'
+    weight: '-1'
