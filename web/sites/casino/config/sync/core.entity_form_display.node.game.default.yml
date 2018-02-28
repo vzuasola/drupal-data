@@ -16,6 +16,7 @@ dependencies:
     - field.field.node.game.field_games_category
     - field.field.node.game.field_jackpot_code
     - field.field.node.game.field_jackpot_ticker
+    - field.field.node.game.field_meta_tags
     - field.field.node.game.field_play_for_fun_toggle
     - field.field.node.game.field_ribbon_configuration
     - image.style.thumbnail
@@ -24,6 +25,7 @@ dependencies:
     - conditional_fields
     - field_group
     - image
+    - metatag
     - path
     - scheduler
     - text
@@ -175,6 +177,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: number
+    region: content
+  field_meta_tags:
+    weight: 28
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_firehose
     region: content
   field_play_for_fun_toggle:
     weight: 11

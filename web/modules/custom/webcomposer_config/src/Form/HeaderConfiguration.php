@@ -156,6 +156,13 @@ class HeaderConfiguration extends ConfigFormBase {
       '#default_value' => $config->get('balance_mapping'),
     ];
 
+    $form['balance_group']['balance_label_override'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Lottery Balance Label Override in Tooltip'),
+      '#description' => $this->t('Provide a label to override LD and Lottery label specific for SC and RMB currency'),
+      '#default_value' => $config->get('balance_label_override'),
+    ];
+
     $form['balance_group']['balance_error_text'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Balance Error Message.'),
@@ -388,6 +395,7 @@ class HeaderConfiguration extends ConfigFormBase {
       'profile_logout_text',
       'balance_mapping',
       'cashier_link',
+      'balance_label_override',
     ];
 
     foreach ($keys as $key) {

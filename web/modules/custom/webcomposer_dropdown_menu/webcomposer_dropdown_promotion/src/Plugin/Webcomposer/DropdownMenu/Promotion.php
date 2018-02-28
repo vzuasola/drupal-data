@@ -41,13 +41,31 @@ class Promotion extends ConfigFormBase implements DropdownMenuPluginInterface {
       '#title' => $this->t('Title'),
       '#description' => $this->t('The tile title'),
       '#default_value' => $config->get('title'),
+      '#required' => true,
     ];
 
-    $form['markup'] = [
-      '#type' => 'textarea',
-      '#title' => $this->t('Markup'),
-      '#description' => $this->t('The markup for the paragraph text'),
-      '#default_value' => $config->get('markup'),
+    $form['promotion_endpoint'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Promotion Endpoint'),
+      '#description' => $this->t('The path wherein promotion data will be fetched from'),
+      '#default_value' => $config->get('promotion_endpoint'),
+      '#required' => true,
+    ];
+
+    $form['promotion_link'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Promotion Link'),
+      '#description' => $this->t('The link that redirects to the promotion page'),
+      '#default_value' => $config->get('promotion_link'),
+      '#required' => true,
+    ];
+
+    $form['promotion_link_text'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Promotion Link Text'),
+      '#description' => $this->t('The label for the promotion link'),
+      '#default_value' => $config->get('promotion_link_text'),
+      '#required' => true,
     ];
 
     return parent::buildForm($form, $form_state);
@@ -59,7 +77,9 @@ class Promotion extends ConfigFormBase implements DropdownMenuPluginInterface {
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $keys = [
       'title',
-      'markup',
+      'promotion_endpoint',
+      'promotion_link',
+      'promotion_link_text',
     ];
 
     foreach ($keys as $key) {
