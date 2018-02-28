@@ -1,15 +1,15 @@
-webcomposer_dropdown_menu.dropdown_menu.section.sportslist_schema:
+webcomposer_dropdown_menu.dropdown_menu.section.sports_list_schema:
   title: 'SportsLists Widget'
-  base_route_name: webcomposer_dropdown_menu.sportslist_form
+  base_route_name: webcomposer_dropdown_menu.sports_list_form
   names:
-    - 'webcomposer_dropdown_menu.dropdown_menu.section.sportslist'
-webcomposer_dropdown_menu.dropdown_menu.section.contentwidget_schema:
+    - 'webcomposer_dropdown_menu.dropdown_menu.section.sports_list'
+webcomposer_dropdown_menu.dropdown_menu.section.content_widget_schema:
   title: 'Content Widget'
-  base_route_name: webcomposer_dropdown_menu.contentwidget_form
+  base_route_name: webcomposer_dropdown_menu.content_widget_form
   names:
-    - 'webcomposer_dropdown_menu.dropdown_menu.section.contentwidget'
-webcomposer_dropdown_menu.dropdown_menu.section.contentwysiwygwidget_schema:
+    - 'webcomposer_dropdown_menu.dropdown_menu.section.content_widget'
+webcomposer_dropdown_menu.dropdown_menu.section.content_wysiwyg_widget_schema:
   title: 'Content WYSIWYG Widget'
-  base_route_name: webcomposer_dropdown_menu.contentwysiwygwidget_form
+  base_route_name: webcomposer_dropdown_menu.content_wysiwyg_widget_form
   names:
-    - 'webcomposer_dropdown_menu.dropdown_menu.section.contentwysiwygwidget'
+    - 'webcomposer_dropdown_menu.dropdown_menu.section.content_wysiwyg_widget'
