@@ -1,0 +1,7 @@
+name: OWS Dropdown Menu - All Widgets Manager
+type: module
+description: OWS Dropdown Menu Widgets Manager
+core: 8.x
+package: Web Composer
+dependencies:
+  - webcomposer_dropdown_menu

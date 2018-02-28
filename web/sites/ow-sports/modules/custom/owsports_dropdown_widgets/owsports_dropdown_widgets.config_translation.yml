@@ -1,0 +1,15 @@
+webcomposer_dropdown_menu.dropdown_menu.section.sportslist_schema:
+  title: 'SportsLists Widget'
+  base_route_name: webcomposer_dropdown_menu.sportslist_form
+  names:
+    - 'webcomposer_dropdown_menu.dropdown_menu.section.sportslist'
+webcomposer_dropdown_menu.dropdown_menu.section.contentwidget_schema:
+  title: 'Content Widget'
+  base_route_name: webcomposer_dropdown_menu.contentwidget_form
+  names:
+    - 'webcomposer_dropdown_menu.dropdown_menu.section.contentwidget'
+webcomposer_dropdown_menu.dropdown_menu.section.contentwysiwygwidget_schema:
+  title: 'Content WYSIWYG Widget'
+  base_route_name: webcomposer_dropdown_menu.contentwysiwygwidget_form
+  names:
+    - 'webcomposer_dropdown_menu.dropdown_menu.section.contentwysiwygwidget'
