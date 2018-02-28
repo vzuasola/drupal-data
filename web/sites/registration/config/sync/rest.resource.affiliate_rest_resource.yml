@@ -1,0 +1,17 @@
+uuid: 95a0d3b3-12e3-44d5-90b2-af22f66e3a27
+langcode: en
+status: true
+dependencies:
+  module:
+    - basic_auth
+    - serialization
+    - webcomposer_affilates
+id: affiliate_rest_resource
+plugin_id: affiliate_rest_resource
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+    supported_auth:
+      - basic_auth

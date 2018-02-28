@@ -15,6 +15,7 @@ permissions:
   - 'access site-wide contact form'
   - 'administer rest resources'
   - 'post comments'
+  - 'restful get affiliate_rest_resource'
   - 'restful get configuration_resource'
   - 'restful get custom_block_resource'
   - 'restful get domain_placeholder'
