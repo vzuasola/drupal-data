@@ -1,0 +1,4 @@
+webcomposer_config.dropdown_menu_settings_tab:
+  route_name: webcomposer_dropdown_menu.settings_form
+  title: 'Dropdown Menu Settings'
+  base_route: webcomposer_dropdown_menu.settings_form
