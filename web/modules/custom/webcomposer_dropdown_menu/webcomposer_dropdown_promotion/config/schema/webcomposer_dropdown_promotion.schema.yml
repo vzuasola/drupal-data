@@ -11,3 +11,6 @@ webcomposer_dropdown_menu.dropdown_menu.section.promotion:
     promotion_link_text:
       type: label
       label: 'Promotion Link Text'
+    promotion_error_message:
+      type: text
+      label: 'Promotion Error Message'
