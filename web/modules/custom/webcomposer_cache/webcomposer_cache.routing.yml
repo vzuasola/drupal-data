@@ -7,7 +7,7 @@ webcomposer_cache.admin_settings:
     _permission: 'administer site configuration'
 
 webcomposer_cache.settings_form:
-  path: '/admin/config/webcompose/cache/settings'
+  path: '/admin/config/webcomposer/cache/settings'
   defaults:
     _form: '\Drupal\webcomposer_cache\Form\SettingsForm'
     _title: 'Cache Settings'

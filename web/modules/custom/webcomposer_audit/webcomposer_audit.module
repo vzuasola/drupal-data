@@ -1,0 +1,20 @@
+<?php
+
+/**
+ * @file
+ * Contains webcomposer_audit.module.
+ */
+
+use Drupal\Core\Entity\EntityInterface;
+
+/**
+ *
+ */
+function webcomposer_audit_entity_presave(EntityInterface $entity) {
+}
+
+/**
+ *
+ */
+function webcomposer_audit_entity_update(EntityInterface $entity) {
+}

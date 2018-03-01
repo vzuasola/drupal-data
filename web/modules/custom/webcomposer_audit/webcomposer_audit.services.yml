@@ -1,0 +1,3 @@
+services:
+  webcomposer_audit.database_storage:
+    class: '\Drupal\webcomposer_audit\Storage\DatabaseAuditStorage'
