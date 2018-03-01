@@ -12,7 +12,7 @@ use Drupal\webcomposer_dropdown_menu\Plugin\DropdownMenuPluginInterface;
  *
  * @DropdownMenuPlugin(
  *   id = "promotion",
- *   name = "Promotions",
+ *   name = "Promotions Widget",
  * )
  */
 class Promotion extends ConfigFormBase implements DropdownMenuPluginInterface {
@@ -68,6 +68,14 @@ class Promotion extends ConfigFormBase implements DropdownMenuPluginInterface {
       '#required' => true,
     ];
 
+    $form['promotion_error_message'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Promotion Error Message'),
+      '#description' => $this->t('The error message to show'),
+      '#default_value' => $config->get('promotion_error_message'),
+      '#required' => true,
+    ];
+
     return parent::buildForm($form, $form_state);
   }
 
@@ -80,6 +88,7 @@ class Promotion extends ConfigFormBase implements DropdownMenuPluginInterface {
       'promotion_endpoint',
       'promotion_link',
       'promotion_link_text',
+      'promotion_error_message'
     ];
 
     foreach ($keys as $key) {

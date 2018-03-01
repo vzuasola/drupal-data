@@ -14,5 +14,13 @@ webcomposer_dropdown_menu.overview_form:
   requirements:
     _permission: 'administer site configuration'
 
+webcomposer_dropdown_menu.settings_form:
+  path: '/admin/config/webcomposer/dropdown/settings'
+  defaults:
+    _form: '\Drupal\webcomposer_dropdown_menu\Form\SettingsForm'
+    _title: 'Dropdown Menu Settings'
+  requirements:
+    _permission: 'administer site configuration'
+
 route_callbacks:
   - 'Drupal\webcomposer_dropdown_menu\Routing\ConfigFormRoutes::getRoutes'

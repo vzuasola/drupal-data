@@ -1,0 +1,20 @@
+uuid: d0a8108d-36ed-46ce-8585-3fbf1ad45b5c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.mobile_menu_entity.field_menu_id
+  module:
+    - webcomposer_mobile_menu
+id: mobile_menu_entity.mobile_menu_entity.field_menu_id
+field_name: field_menu_id
+entity_type: mobile_menu_entity
+bundle: mobile_menu_entity
+label: 'Menu ID'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

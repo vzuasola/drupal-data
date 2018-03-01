@@ -9,3 +9,9 @@ webcomposer_dropdown_menu.admin_overview_list:
   parent: webcomposer_dropdown_menu.admin_list
   route_name: webcomposer_dropdown_menu.overview_form
   description: 'Manages Webcomposer Dropdown entries'
+
+webcomposer_dropdown_menu.settings:
+  title: 'Dropdown Settings'
+  parent: webcomposer_dropdown_menu.admin_list
+  route_name: webcomposer_dropdown_menu.settings_form
+  description: 'Manages Webcomposer Dropdown settings'
