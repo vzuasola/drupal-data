@@ -24,4 +24,3 @@ _core:
   default_config_hash: LDw8PW9wswSVGgpFjaaHESQeB7QVJEtmV2mGoR4ANVY
 notification_window_title: 'Session Timeout'
 mobile_login_url: 'https://qa1-casino.elysium-dfbt.com/'
-langcode: hi
