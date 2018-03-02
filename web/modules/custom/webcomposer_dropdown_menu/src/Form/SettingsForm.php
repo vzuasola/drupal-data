@@ -48,8 +48,8 @@ class SettingsForm extends ConfigFormBase {
 
     $form['error']['error_title'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('Error Title'),
-      '#description' => $this->t('Manage the error title.'),
+      '#title' => $this->t('Generic Error Message'),
+      '#description' => $this->t('Add text that will display as a message when player encounters an error.'),
       '#default_value' => $config->get('error_title'),
       '#required' => TRUE,
     ];
