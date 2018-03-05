@@ -1,0 +1,63 @@
+<?php
+
+/**
+ * Implements hook_schema().
+ */
+function webcomposer_audit_schema() {
+  $schema['webcomposer_audit'] = [
+    'description' => 'Table that contains Webcomposer Audit Logs.',
+    'fields' => [
+      'id' => [
+        'type' => 'serial',
+        'not null' => TRUE,
+        'description' => 'The unique event ID',
+      ],
+      'uid' => [
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => 'The {users}.uid of the user who triggered the event.',
+      ],
+      'entity' => [
+        'type' => 'varchar_ascii',
+        'length' => 64,
+        'not null' => TRUE,
+        'default' => '',
+        'description' => 'Type of entity',
+      ],
+      'action' => [
+        'type' => 'varchar_ascii',
+        'length' => 64,
+        'not null' => TRUE,
+        'default' => '',
+        'description' => 'The type of action made',
+      ],
+      'title'  => [
+        'type' => 'text',
+        'not null' => TRUE,
+        'default' => '',
+        'description' => 'The title of the entity',
+      ],
+      'location'  => [
+        'type' => 'text',
+        'not null' => TRUE,
+        'description' => 'URL of the origin of the event.',
+      ],
+      'timestamp' => [
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => 'Unix timestamp of when event occurred.',
+      ],
+    ],
+    'primary key' => ['id'],
+    'indexes' => [
+      'entity' => ['entity'],
+      'action' => ['action'],
+      'uid' => ['uid'],
+    ],
+  ];
+
+  return $schema;
+}

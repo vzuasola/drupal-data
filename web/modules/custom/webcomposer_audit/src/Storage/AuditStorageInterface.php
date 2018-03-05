@@ -2,10 +2,28 @@
 
 namespace Drupal\webcomposer_audit\Storage;
 
+use Drupal\Core\Entity\EntityInterface;
+
 /**
  *
  */
 interface AuditStorageInterface {
+  /**
+   * List of all available actions
+   */
+  const ACTIONS = [
+    self::SAVE,
+    self::UPDATE,
+    self::DELETE,
+  ];
+
+  /**
+   * Individual actions
+   */
+  const SAVE = 'save';
+  const UPDATE = 'update';
+  const DELETE = 'delete';
+
   /**
    *
    */
@@ -14,7 +32,7 @@ interface AuditStorageInterface {
   /**
    *
    */
-  public function add($index, $data);
+  public function add(EntityInterface $entity);
 
   /**
    *

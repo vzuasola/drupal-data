@@ -21,23 +21,48 @@ class AuditForm extends FormBase {
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
     $header = [
-      'Action',
-      'Type',
-      'Name',
-      'Manage'
+      [
+        'data' => $this->t('Title'),
+        'field' => 'w.title',
+        'class' => [RESPONSIVE_PRIORITY_MEDIUM]
+      ],
+      [
+        'data' => $this->t('Entity'),
+        'field' => 'w.entity',
+        'class' => [RESPONSIVE_PRIORITY_MEDIUM]
+      ],
+      [
+        'data' => $this->t('Action'),
+        'field' => 'w.action',
+        'class' => [RESPONSIVE_PRIORITY_MEDIUM]
+      ],
+      [
+        'data' => $this->t('User'),
+        'field' => 'ufd.name',
+        'class' => [RESPONSIVE_PRIORITY_MEDIUM]
+      ],
+      [
+        'data' => $this->t('Date'),
+        'field' => 'w.timestamp',
+        'class' => [RESPONSIVE_PRIORITY_MEDIUM]
+      ],
     ];
 
     $storage = \Drupal::service('webcomposer_audit.database_storage');
 
     $rows = [];
-    $entries = $storage->all();
+
+    $entries = $storage->all([
+      'header' => $header,
+    ]);
 
     foreach ($entries as $key => $value) {
       $rows[$key] = [
-        'action' => $value['action'],
-        'type' => $value['type'],
-        'name' => $value['name'],
-        'manage' => 'Manage',
+        'title' => $value->title,
+        'entity' => $value->entity,
+        'action' => $value->action,
+        'user' => $value->uid,
+        'date' => $value->timestamp,
       ]; 
     }
 
