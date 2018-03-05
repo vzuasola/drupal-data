@@ -34,6 +34,7 @@ class DatabaseAuditStorage implements AuditStorageInterface {
       'entity',
       'action',
       'title',
+      'link',
       'location',
       'timestamp',
     ]);
@@ -51,7 +52,7 @@ class DatabaseAuditStorage implements AuditStorageInterface {
   /**
    * {@inheritdoc}
    */
-  public function add(EntityInterface $entity) {
+  public function insert(EntityInterface $entity) {
     $id = $entity->id();
 
     try {
@@ -62,6 +63,7 @@ class DatabaseAuditStorage implements AuditStorageInterface {
           'entity' => $entity->getEntityTypeId(),
           'action' => AuditStorageInterface::ADD,
           'title' => $entity->label(),
+          'link' => $entity->toUrl()->toString(),
           'location' => $this->path->getPath(),
           'timestamp' => time(),
         ])
@@ -94,6 +96,7 @@ class DatabaseAuditStorage implements AuditStorageInterface {
             'entity' => $entity->getEntityTypeId(),
             'action' => AuditStorageInterface::UPDATE,
             'title' => $entity->label(),
+            'link' => $entity->toUrl()->toString(),
             'location' => $this->path->getPath(),
             'timestamp' => time(),
           ])
@@ -102,6 +105,30 @@ class DatabaseAuditStorage implements AuditStorageInterface {
       catch (\Exception $e) {
         // do nothing
       }
+    }
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function delete(EntityInterface $entity) {
+    $id = $entity->id();
+
+    try {
+      $this->database
+        ->insert('webcomposer_audit')
+        ->fields([
+          'uid' => $this->user->id(),
+          'entity' => $entity->getEntityTypeId(),
+          'action' => AuditStorageInterface::DELETE,
+          'title' => $entity->label(),
+          'location' => $this->path->getPath(),
+          'timestamp' => time(),
+        ])
+        ->execute();
+    }
+    catch (\Exception $e) {
+      // do nothing
     }
   }
 

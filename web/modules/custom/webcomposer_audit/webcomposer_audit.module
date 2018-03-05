@@ -24,6 +24,13 @@ function webcomposer_audit_entity_update(EntityInterface $entity) {
 /**
  *
  */
-function webcomposer_audit_entity_save(EntityInterface $entity) {
-  \Drupal::service('webcomposer_audit.database_storage')->add($entity);
+function webcomposer_audit_entity_insert(EntityInterface $entity) {
+  \Drupal::service('webcomposer_audit.database_storage')->insert($entity);
+}
+
+/**
+ *
+ */
+function webcomposer_audit_entity_delete(EntityInterface $entity) {
+  \Drupal::service('webcomposer_audit.database_storage')->delete($entity);
 }

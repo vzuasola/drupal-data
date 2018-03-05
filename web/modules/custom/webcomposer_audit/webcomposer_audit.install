@@ -39,6 +39,11 @@ function webcomposer_audit_schema() {
         'default' => '',
         'description' => 'The title of the entity',
       ],
+      'link' => [
+        'type' => 'text',
+        'not null' => FALSE,
+        'description' => 'Link to view the result of the event.',
+      ],
       'location'  => [
         'type' => 'text',
         'not null' => TRUE,

@@ -32,12 +32,17 @@ interface AuditStorageInterface {
   /**
    *
    */
-  public function add(EntityInterface $entity);
+  public function insert(EntityInterface $entity);
 
   /**
    *
    */
   public function update(EntityInterface $entity);
+
+  /**
+   *
+   */
+  public function delete(EntityInterface $entity);
 
   /**
    *

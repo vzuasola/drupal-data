@@ -4,6 +4,7 @@ namespace Drupal\webcomposer_audit\Form;
 
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Url;
 
 /**
  *
@@ -44,25 +45,31 @@ class OverviewForm extends FormBase {
       [
         'data' => $this->t('Date'),
         'field' => 'w.timestamp',
-        'class' => [RESPONSIVE_PRIORITY_MEDIUM]
+        'class' => [RESPONSIVE_PRIORITY_HIGH],
+        'sort' => 'desc'
       ],
     ];
 
-    $storage = \Drupal::service('webcomposer_audit.database_storage');
-
     $rows = [];
+    $storage = \Drupal::service('webcomposer_audit.database_storage');
 
     $entries = $storage->all([
       'header' => $header,
     ]);
 
     foreach ($entries as $key => $value) {
+      $title = ucwords($value->title);
+
+      if ($value->link) {
+        $title = $this->l($title, Url::fromUri('internal:' . $value->link));
+      }
+
       $rows[$key] = [
-        'title' => $value->title,
-        'entity' => $value->entity,
-        'action' => $value->action,
+        'title' => $title,
+        'entity' => ucwords(str_replace('_', ' ', $value->entity)),
+        'action' => ucwords(str_replace('_', ' ', $value->action)),
         'user' => $value->uid,
-        'date' => $value->timestamp,
+        'date' => \Drupal::service('date.formatter')->format($value->timestamp, 'short'),
       ]; 
     }
 
