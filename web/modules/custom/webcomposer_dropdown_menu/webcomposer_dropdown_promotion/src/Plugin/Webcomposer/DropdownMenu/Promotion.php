@@ -38,40 +38,39 @@ class Promotion extends ConfigFormBase implements DropdownMenuPluginInterface {
 
     $form['title'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('Title'),
-      '#description' => $this->t('The tile title'),
+      '#title' => $this->t('Section Title'),
+      '#description' => $this->t('Add text to display title of promotions.'),
       '#default_value' => $config->get('title'),
-      '#required' => true,
-    ];
-
-    $form['promotion_endpoint'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Promotion Endpoint'),
-      '#description' => $this->t('The path wherein promotion data will be fetched from'),
-      '#default_value' => $config->get('promotion_endpoint'),
-      '#required' => true,
-    ];
-
-    $form['promotion_link'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Promotion Link'),
-      '#description' => $this->t('The link that redirects to the promotion page'),
-      '#default_value' => $config->get('promotion_link'),
       '#required' => true,
     ];
 
     $form['promotion_link_text'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('Promotion Link Text'),
-      '#description' => $this->t('The label for the promotion link'),
+      '#title' => $this->t('Trailing Text'),
+      '#description' => $this->t('Add text to display trailing text for the promotions.'),
       '#default_value' => $config->get('promotion_link_text'),
+    ];
+
+    $form['promotion_link'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Trailing Text Link'),
+      '#description' => $this->t('Add trailing text link that redirects to the promotion page.'),
+      '#default_value' => $config->get('promotion_link'),
+      '#required' => true,
+    ];
+
+    $form['promotion_endpoint'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Promotions API URL'),
+      '#description' => $this->t('The path wherein promotion data will be fetched from.'),
+      '#default_value' => $config->get('promotion_endpoint'),
       '#required' => true,
     ];
 
     $form['promotion_error_message'] = [
       '#type' => 'textarea',
-      '#title' => $this->t('Promotion Error Message'),
-      '#description' => $this->t('The error message to show'),
+      '#title' => $this->t('Error Message'),
+      '#description' => $this->t('Add text to show player the error message when there is an error fetching data.'),
       '#default_value' => $config->get('promotion_error_message'),
       '#required' => true,
     ];

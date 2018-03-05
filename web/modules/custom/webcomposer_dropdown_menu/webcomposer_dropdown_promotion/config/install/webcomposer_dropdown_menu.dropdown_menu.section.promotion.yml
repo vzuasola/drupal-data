@@ -1,5 +1,5 @@
 title: Promotion
 promotion_endpoint: 'http://entry.dafabet.local/en/api/promotion/widgets'
-promotion_link: 'http://entry.dafabet.local/en/promotions'
 promotion_link_text: 'More promotions'
+promotion_link: 'http://entry.dafabet.local/en/promotions'
 promotion_error_message: 'Error retrieving promotions'
