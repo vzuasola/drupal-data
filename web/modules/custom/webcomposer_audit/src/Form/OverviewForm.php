@@ -8,12 +8,12 @@ use Drupal\Core\Form\FormStateInterface;
 /**
  *
  */
-class AuditForm extends FormBase {
+class OverviewForm extends FormBase {
   /**
    * {@inheritdoc}
    */
   public function getFormId() {
-    return 'audit_form';
+    return 'webcomposer_audit_form';
   }
 
   /**
@@ -70,7 +70,7 @@ class AuditForm extends FormBase {
       '#type' => 'table',
       '#header' => $header,
       '#rows' => $rows,
-      '#empty' => t('No users found'),
+      '#empty' => $this->t('No available log entries found'),
     ];
 
     $form['pager'] = [

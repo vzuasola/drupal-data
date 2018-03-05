@@ -13,9 +13,10 @@ class DatabaseAuditStorage implements AuditStorageInterface {
   /**
    *
    */
-  public function __construct($database, $user) {
+  public function __construct($database, $user, $path) {
     $this->database = $database;
     $this->user = $user;
+    $this->path = $path;
   }
 
   /**
@@ -48,6 +49,30 @@ class DatabaseAuditStorage implements AuditStorageInterface {
   }
 
   /**
+   * {@inheritdoc}
+   */
+  public function add(EntityInterface $entity) {
+    $id = $entity->id();
+
+    try {
+      $this->database
+        ->insert('webcomposer_audit')
+        ->fields([
+          'uid' => $this->user->id(),
+          'entity' => $entity->getEntityTypeId(),
+          'action' => AuditStorageInterface::ADD,
+          'title' => $entity->label(),
+          'location' => $this->path->getPath(),
+          'timestamp' => time(),
+        ])
+        ->execute();
+    }
+    catch (\Exception $e) {
+      // do nothing
+    }
+  }
+
+  /**
    * Adds the presave data
    */
   public function preSave($entity) {
@@ -57,7 +82,7 @@ class DatabaseAuditStorage implements AuditStorageInterface {
   /**
    * {@inheritdoc}
    */
-  public function add(EntityInterface $entity) {
+  public function update(EntityInterface $entity) {
     $id = $entity->id();
 
     if (isset($this->entities[$id])) {
@@ -69,7 +94,7 @@ class DatabaseAuditStorage implements AuditStorageInterface {
             'entity' => $entity->getEntityTypeId(),
             'action' => AuditStorageInterface::UPDATE,
             'title' => $entity->label(),
-            'location' => 'Drupal admin',
+            'location' => $this->path->getPath(),
             'timestamp' => time(),
           ])
           ->execute();

@@ -9,8 +9,18 @@ webcomposer_audit.admin_settings:
 webcomposer_audit.audit_form:
   path: '/admin/config/webcomposer/audit/view'
   defaults:
-    _form: '\Drupal\webcomposer_audit\Form\AuditForm'
+    _form: '\Drupal\webcomposer_audit\Form\OverviewForm'
     _title: 'Audit Logs'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE
+
+webcomposer_audit.audit_reset:
+  path: '/admin/config/webcomposer/audit/reset'
+  defaults:
+    _form: '\Drupal\webcomposer_audit\Form\ResetForm'
+    _title: 'Reset Audit Logs'
   requirements:
     _permission: 'access administration pages'
   options:

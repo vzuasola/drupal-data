@@ -12,7 +12,7 @@ interface AuditStorageInterface {
    * List of all available actions
    */
   const ACTIONS = [
-    self::SAVE,
+    self::ADD,
     self::UPDATE,
     self::DELETE,
   ];
@@ -20,7 +20,7 @@ interface AuditStorageInterface {
   /**
    * Individual actions
    */
-  const SAVE = 'save';
+  const ADD = 'add';
   const UPDATE = 'update';
   const DELETE = 'delete';
 
@@ -33,6 +33,11 @@ interface AuditStorageInterface {
    *
    */
   public function add(EntityInterface $entity);
+
+  /**
+   *
+   */
+  public function update(EntityInterface $entity);
 
   /**
    *
