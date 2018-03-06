@@ -113,7 +113,6 @@ class ExchangeConfigForm extends ConfigFormBase {
 
           $file_usage = \Drupal::service('file.usage');
           $file_usage->add($file, 'exchange_config', 'image', $fid[0]);
-
           $this->config('exchange_config.exchange_configuration')->set("exchange_background_image_url", file_create_url($file->getFileUri()))->save();
         } else {
           $this->config('exchange_config.exchange_configuration')->set("exchange_background_image_url", null);
