@@ -45,9 +45,12 @@ class OverviewForm extends FormBase {
       [
         'data' => $this->t('Date'),
         'field' => 'w.timestamp',
-        'class' => [RESPONSIVE_PRIORITY_HIGH],
+        'class' => [RESPONSIVE_PRIORITY_MEDIUM],
         'sort' => 'desc'
       ],
+      [
+        'data' => 'Operations',
+      ]
     ];
 
     $rows = [];
@@ -60,16 +63,39 @@ class OverviewForm extends FormBase {
     foreach ($entries as $key => $value) {
       $title = ucwords($value->title);
 
-      if ($value->link) {
-        $title = $this->l($title, Url::fromUri('internal:' . $value->link));
+      if ($value->eid) {
+        $entity = \Drupal::entityManager()->getStorage($value->entity)->load($value->eid);
+        $title = $this->l($title, $entity->toUrl());
       }
+
+      $username = [
+        '#theme' => 'username',
+        '#account' => \Drupal::entityManager()->getStorage('user')->load($value->uid),
+      ];
+
+      $url = new Url('webcomposer_audit.audit_item_view', [
+        'id' => $value->id,
+      ]);
+
+      $operations = [
+        'data' => [
+          '#type' => 'operations',
+          '#links' => [
+            'edit' => [
+              'url' => $url,
+              'title' => 'View'
+            ],
+          ],
+        ],
+      ];
 
       $rows[$key] = [
         'title' => $title,
         'entity' => ucwords(str_replace('_', ' ', $value->entity)),
         'action' => ucwords(str_replace('_', ' ', $value->action)),
-        'user' => $value->uid,
+        'user' => ['data' => $username],
         'date' => \Drupal::service('date.formatter')->format($value->timestamp, 'short'),
+        'operations' => $operations,
       ]; 
     }
 

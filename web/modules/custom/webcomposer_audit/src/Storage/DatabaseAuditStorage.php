@@ -8,8 +8,6 @@ use Drupal\Core\Entity\EntityInterface;
  *
  */
 class DatabaseAuditStorage implements AuditStorageInterface {
-  private $entities = [];
-
   /**
    *
    */
@@ -32,9 +30,9 @@ class DatabaseAuditStorage implements AuditStorageInterface {
       'id',
       'uid',
       'entity',
+      'eid',
       'action',
       'title',
-      'link',
       'location',
       'timestamp',
     ]);
@@ -52,6 +50,27 @@ class DatabaseAuditStorage implements AuditStorageInterface {
   /**
    * {@inheritdoc}
    */
+  public function get($id) {
+    return $this->database
+      ->select('webcomposer_audit', 'w')
+      ->fields('w', [
+        'id',
+        'uid',
+        'entity',
+        'eid',
+        'action',
+        'title',
+        'location',
+        'timestamp',
+      ])
+      ->condition('w.id', $id)
+      ->execute()
+      ->fetchAssoc();
+  }
+
+  /**
+   * {@inheritdoc}
+   */
   public function insert(EntityInterface $entity) {
     $id = $entity->id();
 
@@ -61,9 +80,9 @@ class DatabaseAuditStorage implements AuditStorageInterface {
         ->fields([
           'uid' => $this->user->id(),
           'entity' => $entity->getEntityTypeId(),
+          'eid' => $id,
           'action' => AuditStorageInterface::ADD,
           'title' => $entity->label(),
-          'link' => $entity->toUrl()->toString(),
           'location' => $this->path->getPath(),
           'timestamp' => time(),
         ])
@@ -75,36 +94,27 @@ class DatabaseAuditStorage implements AuditStorageInterface {
   }
 
   /**
-   * Adds the presave data
-   */
-  public function preSave($entity) {
-    $this->entities[$entity->id()] = $entity;
-  }
-
-  /**
    * {@inheritdoc}
    */
-  public function update(EntityInterface $entity) {
+  public function update(EntityInterface $entity, EntityInterface $preEntity) {
     $id = $entity->id();
 
-    if (isset($this->entities[$id])) {
-      try {
-        $this->database
-          ->insert('webcomposer_audit')
-          ->fields([
-            'uid' => $this->user->id(),
-            'entity' => $entity->getEntityTypeId(),
-            'action' => AuditStorageInterface::UPDATE,
-            'title' => $entity->label(),
-            'link' => $entity->toUrl()->toString(),
-            'location' => $this->path->getPath(),
-            'timestamp' => time(),
-          ])
-          ->execute();
-      }
-      catch (\Exception $e) {
-        // do nothing
-      }
+    try {
+      $this->database
+        ->insert('webcomposer_audit')
+        ->fields([
+          'uid' => $this->user->id(),
+          'entity' => $entity->getEntityTypeId(),
+          'eid' => $id,
+          'action' => AuditStorageInterface::UPDATE,
+          'title' => $entity->label(),
+          'location' => $this->path->getPath(),
+          'timestamp' => time(),
+        ])
+        ->execute();
+    }
+    catch (\Exception $e) {
+      // do nothing
     }
   }
 
@@ -120,6 +130,7 @@ class DatabaseAuditStorage implements AuditStorageInterface {
         ->fields([
           'uid' => $this->user->id(),
           'entity' => $entity->getEntityTypeId(),
+          'eid' => $id,
           'action' => AuditStorageInterface::DELETE,
           'title' => $entity->label(),
           'location' => $this->path->getPath(),

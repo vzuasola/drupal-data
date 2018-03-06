@@ -25,9 +25,20 @@ interface AuditStorageInterface {
   const DELETE = 'delete';
 
   /**
+   * Fetches all log entries
    *
+   * @return Iterable
    */
   public function all();
+
+  /**
+   * Gets a log entry data
+   *
+   * @param integer $id
+   *
+   * @return array
+   */
+  public function get($id);
 
   /**
    *
@@ -37,7 +48,7 @@ interface AuditStorageInterface {
   /**
    *
    */
-  public function update(EntityInterface $entity);
+  public function update(EntityInterface $entity, EntityInterface $preEntity);
 
   /**
    *

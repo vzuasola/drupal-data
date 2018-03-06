@@ -26,6 +26,12 @@ function webcomposer_audit_schema() {
         'default' => '',
         'description' => 'Type of entity',
       ],
+      'eid' => [
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => FALSE,
+        'description' => 'The entity ID',
+      ],
       'action' => [
         'type' => 'varchar_ascii',
         'length' => 64,
@@ -38,11 +44,6 @@ function webcomposer_audit_schema() {
         'not null' => TRUE,
         'default' => '',
         'description' => 'The title of the entity',
-      ],
-      'link' => [
-        'type' => 'text',
-        'not null' => FALSE,
-        'description' => 'Link to view the result of the event.',
       ],
       'location'  => [
         'type' => 'text',
