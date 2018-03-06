@@ -46,7 +46,7 @@ class ExchangeLobbyTileEntitySettingsForm extends FormBase {
    *   Form definition array.
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    $form['exchangelobbytileentity_settings']['#markup'] = 'Settings form for Exchange lobby tile entity entities. Manage field settings here.';
+    $form['exchangelobbytileentity_settings']['#markup'] = 'Settings form for Exchange lobby tile entity entities';
     return $form;
   }
 
