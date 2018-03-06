@@ -1,7 +1,0 @@
-title: Promotion
-promotion_endpoint: 'http://entrypage.dafabet.local/en/api/promotion/widgets'
-promotion_link: 'http://entrypage.dafabet.local/en/promotions'
-promotion_link_text: 'More promotions'
-_core:
-  default_config_hash: yvnFcvtgt4pUc_MlP2ABZrfcDu3ctQ9xdfysqVHsoyI
-promotion_error_message: 'Error Retrieving Promotions'
