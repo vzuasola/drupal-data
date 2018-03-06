@@ -1,0 +1,18 @@
+exchange_lobby_tile.list:
+  title: 'exchange Lobby Tiles Configuration'
+  description: 'List exchange lobby tile entities'
+  parent: system.admin_config
+  route_name: exchange_lobby_tile.admin_settings
+
+# exchange lobby tile entity menu items definition
+entity.exchange_lobby_tile_entity.collection:
+  title: 'exchange lobby tile entity list'
+  route_name: entity.exchange_lobby_tile_entity.collection
+  description: 'List exchange lobby tile entity entities'
+  parent: exchange_lobby_tile.list
+
+exchange_lobby_tile_entity.admin.structure.settings:
+  title: exchange lobby tile entity settings
+  description: 'Configure exchange lobby tile entity entities'
+  route_name: exchange_lobby_tile_entity.settings
+  parent: exchange_lobby_tile.list

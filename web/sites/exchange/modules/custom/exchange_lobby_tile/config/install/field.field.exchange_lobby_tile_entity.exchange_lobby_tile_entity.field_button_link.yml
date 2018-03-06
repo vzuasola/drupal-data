@@ -1,0 +1,23 @@
+uuid: 386f942a-5577-4053-bde0-a7e73436b7bb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.exchange_lobby_tile_entity.field_button_link
+  module:
+    - exchange_lobby_tile
+    - link
+id: exchange_lobby_tile_entity.exchange_lobby_tile_entity.field_button_link
+field_name: field_button_link
+entity_type: exchange_lobby_tile_entity
+bundle: exchange_lobby_tile_entity
+label: 'Button Link'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+field_type: link

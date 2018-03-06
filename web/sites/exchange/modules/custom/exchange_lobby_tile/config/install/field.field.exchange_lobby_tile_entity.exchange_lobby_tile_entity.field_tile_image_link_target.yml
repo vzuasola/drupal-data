@@ -1,0 +1,21 @@
+uuid: 739cf4ed-058f-4a95-ade8-9bec592ec0e8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.exchange_lobby_tile_entity.field_tile_image_link_target
+  module:
+    - exchange_lobby_tile
+    - options
+id: exchange_lobby_tile_entity.exchange_lobby_tile_entity.field_tile_image_link_target
+field_name: field_tile_image_link_target
+entity_type: exchange_lobby_tile_entity
+bundle: exchange_lobby_tile_entity
+label: 'Tile Image Link Target'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
