@@ -4,13 +4,13 @@ webcomposer_dropdown_menu.dropdown_menu.section.promotion:
   mapping:
     title:
       type: label
-      label: 'Title'
-    promotion_link:
-      type: label
-      label: 'Promotion Link'
+      label: 'Section Title'
     promotion_link_text:
       type: label
-      label: 'Promotion Link Text'
+      label: 'Trailing Text'
+    promotion_link:
+      type: label
+      label: 'Trailing Text Link'
     promotion_error_message:
       type: text
-      label: 'Promotion Error Message'
+      label: 'Error Message'

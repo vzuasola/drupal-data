@@ -4,4 +4,4 @@ webcomposer_config.dropdown_menu_settings:
   mapping:
     error_title:
       type: label
-      label: 'Error Title'
+      label: 'Generic Error Message'
