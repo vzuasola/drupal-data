@@ -13,6 +13,3 @@ attributes:
     label: 'Menu Tag'
     options:
       new: 'New Product'
-  dropDownMenu:
-    label: 'Drop Down Menu API URL'
-    description: 'Specify the API URL that the drop down menu will call'
