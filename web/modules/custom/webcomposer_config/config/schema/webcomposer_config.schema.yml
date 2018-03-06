@@ -159,7 +159,7 @@ webcomposer_config.login_configuration:
     mobile_login_url:
       type: label
       label: 'Mobile Login URL'
-    tablet_login_button_label:
+    mobile_login_button_label:
       type: label
       label: 'Tablet login button label'
 

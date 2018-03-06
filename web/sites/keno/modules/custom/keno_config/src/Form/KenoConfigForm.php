@@ -111,6 +111,19 @@ class KenoConfigForm extends ConfigFormBase {
       '#default_value' => $config->get('basic_page_title'),
     ];
 
+    $form['balance_keno'] = [
+      '#type' => 'details',
+      '#title' => t('Balance Keno for SC and RMB'),
+      '#group' => 'advanced',
+    ];
+
+    $form['balance_keno']['balance_mapping_keno'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Product Balance Mapping'),
+      '#description' => $this->t('Provide a product mapping that will show up below the username in SC and RMB'),
+      '#default_value' => $config->get('balance_mapping_keno'),
+    ];
+
     return parent::buildForm($form, $form_state);
   }
 
@@ -125,6 +138,7 @@ class KenoConfigForm extends ConfigFormBase {
       'keno_background',
       'basic_page_background',
       'basic_page_title',
+      'balance_mapping_keno',
     ];
     foreach ($kenoConfig as $keys) {
       if ($keys == 'keno_background') {
