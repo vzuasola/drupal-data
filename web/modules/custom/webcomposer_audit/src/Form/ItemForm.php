@@ -42,6 +42,18 @@ class ItemForm extends FormBase {
 
     $rows = [];
 
+    $title = ucwords($item['title']);
+
+    if (isset($item['eid'])) {
+      $entity = \Drupal::entityManager()->getStorage($item['entity'])->load($item['eid']);
+      $title = $this->l($title, $entity->toUrl());
+    }
+
+    $rows['title'] = [
+      ['data' => ['#markup' => '<strong>Title</strong>']],
+      $title,
+    ];
+
     $rows['entity'] = [
       ['data' => ['#markup' => '<strong>Entity</strong>']],
       ucwords(str_replace('_', ' ', $item['entity'])),
