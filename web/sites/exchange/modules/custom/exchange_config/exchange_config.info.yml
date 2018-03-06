@@ -1,0 +1,6 @@
+name: Exchange Configurations Module
+description: Exchange specific module.
+package: Exchange
+
+type: module
+core: 8.x
