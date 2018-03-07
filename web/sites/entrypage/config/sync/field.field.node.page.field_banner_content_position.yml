@@ -1,0 +1,21 @@
+uuid: 90f99e52-b97d-4fb7-90c9-d892b3766b94
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_banner_content_position
+    - node.type.page
+  module:
+    - options
+id: node.page.field_banner_content_position
+field_name: field_banner_content_position
+entity_type: node
+bundle: page
+label: 'Banner Content Position'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
