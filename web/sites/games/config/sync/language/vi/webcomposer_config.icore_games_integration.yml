@@ -1,0 +1,4 @@
+unsupported_currencies_title: 'Loại tiền không được hỗ trợ'
+unsupported_currencies_message:
+  value: "<p>Rất tiếc, loại tiền bạn đang sử dụng không được hỗ trợ bởi nhà cung cấp <b>{game_provider}&nbsp;</b>khi chơi <b>{game_name}</b>.<br />\r\nVui lòng thử lại với trò chơi khác.</p>\r\n"
+  format: basic_html

@@ -1,0 +1,25 @@
+play_text: 'CHƠI NGAY'
+play_for_fun_text: 'Lượt Chơi Miễn Phí'
+game_info_text: 'Thông Tin Trò Chơi'
+kebab_menu_text: 'Xem Thêm'
+load_more_text: 'Thêm Trò Chơi'
+freeplay_lightbox_title: 'THÔNG BÁO'
+freeplay_lightbox_content:
+  value: "<p>Bạn không thể chơi miễn phí.\r\n  <br />\r\n  Bạn có thể chơi bằng tiền thật thay thế.\r\n</p>\r\n<p><a class=\"btn btn-ok btn-medium btn-yellow\" href=\"#\" target=\"_blank\">CHƠI BẰNG TIỀN THẬT</a>&nbsp; &nbsp;<a class=\"btn btn-gray btn-medium\" href=\"{domain:entry}/{lang}/games/\" target=\"_self\">TRỞ LẠI SẢNH</a>\r\n</p>\r\n"
+  format: basic_html
+html5_lightbox_title: 'Chú ý!'
+html5_lightbox_content:
+  value: "<p>Trình duyệt hiện tại của bạn không hỗ trợ những trò chơi HTML5. Vui lòng cập nhật trình duyệt của bạn với phiên bản mới nhất để tiếp tục chơi.</p>\r\n\r\n<p><a class=\"btn btn-yellow btn-small btn-ok-launch\" href=\"#\" target=\"_blank\">Khởi Động Ngay</a></p>\r\n"
+  format: basic_html
+favorites_text: 'Yêu Thích'
+recently_played_text: 'Chơi Gần Đây'
+game_real_play_text: 'Play for Real'
+filter_icon: Lọc
+filter_header: 'Lọc trò chơi'
+filter_submit: Gửi
+filter_clear: "Xóa\_"
+home_categories_text: 'Trang Chủ'
+pas_error_lightbox_title: ''
+pas_error_lightbox_content:
+  value: "<p>&nbsp;</p>\r\n\r\n<p>Chúng tôi không thể khởi động trò chơi vì lỗi xác thực khi đăng nhập. Vui lòng đăng nhập lại.</p>\r\n\r\n<p><a class=\"btn btn-ok btn-small btn-yellow\" href=\"#\" target=\"_blank\">OK</a></p>\r\n"
+  format: basic_html

@@ -5,6 +5,7 @@ notification_content:
   format: basic_html
   value: "<p>因沒有任何在線活動，您的登錄已超時失效。</p>\r\n"
 lightbox_blurb: 还不是大发会员？
+username_placeholder: 用户名
 password_placeholder: 密码
 login_bottom_label: 登录
 error_message_blank_username: 你的用户名为必填项。

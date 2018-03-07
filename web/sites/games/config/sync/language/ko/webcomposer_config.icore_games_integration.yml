@@ -1,0 +1,5 @@
+unsupported_currencies_title: '지원되지 않는 통화'
+unsupported_currencies_message:
+  value: "<p>죄송합니다. 회원님의 계정 통화는 <b>{game_provider}&nbsp;</b>의&nbsp; <b>{game_name}</b>.<br />\r\n게임을 지원하지 않습니다 다른 게임을 사용부탁드립니다.</p>\r\n"
+  format: basic_html
+unsupported_currencies_button: OK
