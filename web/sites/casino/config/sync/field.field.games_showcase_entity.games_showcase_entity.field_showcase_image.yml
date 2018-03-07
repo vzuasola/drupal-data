@@ -14,6 +14,8 @@ third_party_settings:
       alt: alt
       title: title
       file: '0'
+_core:
+  default_config_hash: '-umKoDtBu_PZCVkg33a-sswwuytvB8ZZIptd8477kJs'
 id: games_showcase_entity.games_showcase_entity.field_showcase_image
 field_name: field_showcase_image
 entity_type: games_showcase_entity

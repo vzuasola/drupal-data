@@ -1,0 +1,16 @@
+recommendation_message:
+  value: "<p><span class=\"text-18\">ไม่พบเกมส์ที่้่คุณค้นหา&nbsp;<strong>\"{search_key}\"</strong></span></p>\r\n\r\n<p>ลองเล่นเกมส์ที่เราแนะนำ</p>\r\n"
+  format: basic_html
+recommendation_message_negative:
+  value: "<p><span class=\"text-18\">ไม่พบเกมส์ที่้่คุณค้นหา <strong>\"{search_key}\"</strong></span></p>\r\n"
+  format: basic_html
+search_placeholder: ค้นหา
+search_result_message:
+  value: "<p><span class=\"text-18\">ปรากฏ <strong><em><u>{total}</u></em>&nbsp;</strong>ผลการค้นหาจำนวนเกมส์ <strong>\"{keyword}\"</strong></span></p>\r\n"
+  format: basic_html
+filter_message:
+  value: "<p><span class=\"text-18\">ไม่พบผลการค้นหา</span></p>\r\n\r\n<p>ลองเล่นเกมส์ที่เราแนะนำ</p>\r\n"
+  format: basic_html
+filter_message_negative:
+  value: "<p><span class=\"text-18\">ไม่พบผลการค้นหา</span></p>\r\n"
+  format: basic_html

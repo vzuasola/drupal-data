@@ -5,6 +5,8 @@ dependencies:
   module:
     - games_showcase
     - taxonomy
+_core:
+  default_config_hash: axefLv2dp7mVM67xmC65weCbyZ2VyAnc56-VKyoKKys
 id: games_showcase_entity.field_games_category
 field_name: field_games_category
 entity_type: games_showcase_entity

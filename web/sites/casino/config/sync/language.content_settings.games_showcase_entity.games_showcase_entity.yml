@@ -8,6 +8,8 @@ dependencies:
 third_party_settings:
   content_translation:
     enabled: true
+_core:
+  default_config_hash: noE6mZdTC_eiv6MtFrwhRbwcjooaNNXB8IlYIV2yKAE
 id: games_showcase_entity.games_showcase_entity
 target_entity_type_id: games_showcase_entity
 target_bundle: games_showcase_entity
