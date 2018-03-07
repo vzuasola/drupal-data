@@ -44,7 +44,7 @@ class DatabaseAuditStorage implements AuditStorageInterface {
 
     if (isset($options['where'])) {
       foreach ($options['where'] as $key => $value) {
-        $query->condition($key, $value);
+        $query->condition($key, "%$value%", 'like');
       }
     }
 
@@ -97,6 +97,8 @@ class DatabaseAuditStorage implements AuditStorageInterface {
         'location',
         'timestamp',
         'language',
+        'data_before',
+        'data_after',
       ])
       ->condition('w.id', $id)
       ->execute()
@@ -121,6 +123,7 @@ class DatabaseAuditStorage implements AuditStorageInterface {
           'location' => $this->path->getPath(),
           'timestamp' => time(),
           'language' => \Drupal::languageManager()->getCurrentLanguage()->getId(),
+          'data_after' => serialize($entity),
         ])
         ->execute();
     }
@@ -147,6 +150,8 @@ class DatabaseAuditStorage implements AuditStorageInterface {
           'location' => $this->path->getPath(),
           'timestamp' => time(),
           'language' => \Drupal::languageManager()->getCurrentLanguage()->getId(),
+          'data_before' => serialize($preEntity),
+          'data_after' => serialize($entity),
         ])
         ->execute();
     }
@@ -173,6 +178,7 @@ class DatabaseAuditStorage implements AuditStorageInterface {
           'location' => $this->path->getPath(),
           'timestamp' => time(),
           'language' => \Drupal::languageManager()->getCurrentLanguage()->getId(),
+          'data_before' => serialize($entity),
         ])
         ->execute();
     }

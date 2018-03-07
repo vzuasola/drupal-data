@@ -91,6 +91,9 @@ class ItemForm extends FormBase {
       strtoupper($item['language']),
     ];
 
+    $before = unserialize($item['data_before']);
+    $after = unserialize($item['data_after']);
+
     $form['table'] = [
       '#type' => 'table',
       '#rows' => $rows,
