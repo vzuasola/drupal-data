@@ -68,7 +68,7 @@ class FooterConfiguration extends ConfigFormBase {
     $form['partners_details']['deprecated'] = [
       '#type' => 'details',
       '#title' => $this->t('Deprecated'),
-      '#description' => $this->t('Deprecated Partners fields since New Curacao
+      '#description' => $this->t('Deprecated Partners fields due to New Curacao
         implementation, this is just to support old products.'),
       '#collapsible' => TRUE,
       '#open' => FALSE,
