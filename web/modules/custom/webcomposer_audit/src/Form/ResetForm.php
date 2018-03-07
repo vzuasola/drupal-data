@@ -12,33 +12,6 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  * Provides a confirmation form before clearing out the logs.
  */
 class ResetForm extends ConfirmFormBase {
-
-  /**
-   * The database connection.
-   *
-   * @var \Drupal\Core\Database\Connection
-   */
-  protected $connection;
-
-  /**
-   * Constructs a new DblogClearLogConfirmForm.
-   *
-   * @param \Drupal\Core\Database\Connection $connection
-   *   The database connection.
-   */
-  public function __construct(Connection $connection) {
-    $this->connection = $connection;
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  public static function create(ContainerInterface $container) {
-    return new static(
-      $container->get('database')
-    );
-  }
-
   /**
    * {@inheritdoc}
    */
@@ -64,7 +37,7 @@ class ResetForm extends ConfirmFormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    $this->connection->truncate('webcomposer_audit')->execute();
+    \Drupal::service('webcomposer_audit.database_storage')->truncate();
 
     drupal_set_message($this->t('Audit log cleared.'));
 

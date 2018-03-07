@@ -41,6 +41,15 @@ interface AuditStorageInterface {
   public function get($id);
 
   /**
+   * Get distince data from a column
+   *
+   * @param string $column The column name
+   *
+   * @return array
+   */
+  public function getDistinct($column);
+
+  /**
    *
    */
   public function insert(EntityInterface $entity);

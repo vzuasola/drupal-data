@@ -44,9 +44,11 @@ class ItemForm extends FormBase {
 
     $title = ucwords($item['title']);
 
-    if (isset($item['eid'])) {
+    if (isset($item['eid']) && isset($item['entity'])) {
       $entity = \Drupal::entityManager()->getStorage($item['entity'])->load($item['eid']);
-      $title = $this->l($title, $entity->toUrl());
+      if ($entity) {
+        $title = $this->l($title, $entity->toUrl());
+      }
     }
 
     $rows['title'] = [
@@ -82,6 +84,11 @@ class ItemForm extends FormBase {
     $rows['location'] = [
       ['data' => ['#markup' => '<strong>Location</strong>']],
       $item['location'],
+    ];
+
+    $rows['location'] = [
+      ['data' => ['#markup' => '<strong>Language</strong>']],
+      strtoupper($item['language']),
     ];
 
     $form['table'] = [

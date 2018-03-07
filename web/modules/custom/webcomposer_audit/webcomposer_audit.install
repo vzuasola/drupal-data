@@ -56,11 +56,19 @@ function webcomposer_audit_schema() {
         'default' => 0,
         'description' => 'Unix timestamp of when event occurred.',
       ],
+      'language' => [
+        'type' => 'varchar_ascii',
+        'length' => 64,
+        'not null' => TRUE,
+        'default' => '',
+        'description' => 'The language of the entity',
+      ],
     ],
     'primary key' => ['id'],
     'indexes' => [
       'entity' => ['entity'],
       'action' => ['action'],
+      'title' => ['title'],
       'uid' => ['uid'],
     ],
   ];

@@ -21,6 +21,94 @@ class OverviewForm extends FormBase {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
+    $this->buildFilterForm($form, $form_state);
+    $this->buildTableForm($form, $form_state);
+
+    return $form;
+  }
+
+  /**
+   *
+   */
+  private function buildFilterForm(array &$form, FormStateInterface $form_state) {
+    $form['filters'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Filter log messages'),
+      '#open' => TRUE,
+    ];
+
+    $form['filters']['wrapper'] = [
+      '#type' => 'container',
+      '#attributes' => [
+        'class' => 'form--inline',
+      ],
+    ];
+
+    $form['filters']['wrapper']['title'] = [
+      '#title' => 'Title',
+      '#type' => 'textfield',
+      '#size' => 30,
+    ];
+
+    $form['filters']['wrapper']['entity'] = [
+      '#title' => 'Entity',
+      '#type' => 'select',
+      '#options' => ['any' => '-- Any --'] + \Drupal::service('webcomposer_audit.database_storage')->getDistinct('entity', [
+        'callback' => function (&$item) {
+          $item = ucwords(str_replace('_', ' ', $item));
+        }
+      ]),
+      '#attributes' => [
+        'style' => 'padding-top: 5px; padding-bottom: 5px;',
+      ],
+    ];
+
+    $form['filters']['wrapper']['action'] = [
+      '#title' => 'Action',
+      '#type' => 'select',
+      '#options' => ['any' => '-- Any --'] + \Drupal::service('webcomposer_audit.database_storage')->getDistinct('action', [
+        'callback' => function (&$item) {
+          $item = ucwords(str_replace('_', ' ', $item));
+        }
+      ]),
+      '#attributes' => [
+        'style' => 'padding-top: 5px; padding-bottom: 5px;',
+      ],
+    ];
+
+    $form['filters']['wrapper']['user'] = [
+      '#title' => 'User',
+      '#type' => 'select',
+      '#options' => ['any' => '-- Any --'] + \Drupal::service('webcomposer_audit.database_storage')->getDistinct('uid', [
+        'callback' => function (&$item) {
+          $item = \Drupal::entityManager()->getStorage('user')->load($item)->getUsername();
+        }
+      ]),
+      '#attributes' => [
+        'style' => 'padding-top: 5px; padding-bottom: 5px;',
+      ],
+    ];
+
+    $form['filters']['wrapper']['actions'] = [
+      '#type' => 'actions',
+    ];
+
+    $form['filters']['wrapper']['actions']['submit'] = [
+      '#type' => 'submit',
+      '#value' => $this->t('Filter'),
+    ];
+
+    $form['filters']['wrapper']['actions']['reset'] = [
+      '#type' => 'submit',
+      '#value' => $this->t('Reset'),
+      '#submit' => ['::reset'],
+    ];
+  }
+
+  /**
+   *
+   */
+  private function buildTableForm(array &$form, FormStateInterface $form_state) {
     $header = [
       [
         'data' => $this->t('Title'),
@@ -49,6 +137,9 @@ class OverviewForm extends FormBase {
         'sort' => 'desc'
       ],
       [
+        'data' => 'Language',
+      ],
+      [
         'data' => 'Operations',
       ]
     ];
@@ -63,9 +154,12 @@ class OverviewForm extends FormBase {
     foreach ($entries as $key => $value) {
       $title = ucwords($value->title);
 
-      if ($value->eid) {
+      if ($value->eid && $value->entity) {
         $entity = \Drupal::entityManager()->getStorage($value->entity)->load($value->eid);
-        $title = $this->l($title, $entity->toUrl());
+
+        if ($entity) {
+          $title = $this->l($title, $entity->toUrl());
+        }
       }
 
       $username = [
@@ -95,6 +189,7 @@ class OverviewForm extends FormBase {
         'action' => ucwords(str_replace('_', ' ', $value->action)),
         'user' => ['data' => $username],
         'date' => \Drupal::service('date.formatter')->format($value->timestamp, 'short'),
+        'language' => strtoupper($value->language),
         'operations' => $operations,
       ]; 
     }
@@ -109,8 +204,6 @@ class OverviewForm extends FormBase {
     $form['pager'] = [
       '#type' => 'pager'
     ];
-
-    return $form;
   }
 
   /**
@@ -124,5 +217,11 @@ class OverviewForm extends FormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
+  }
+
+  /**
+   *
+   */
+  public function reset(array &$form, FormStateInterface $form_state) {
   }
 }

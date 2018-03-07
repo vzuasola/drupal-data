@@ -8,6 +8,8 @@ use Drupal\Core\Entity\EntityInterface;
  *
  */
 class DatabaseAuditStorage implements AuditStorageInterface {
+  const TABLE = 'webcomposer_audit';
+
   /**
    *
    */
@@ -22,7 +24,7 @@ class DatabaseAuditStorage implements AuditStorageInterface {
    */
   public function all($options = []) {
     $query = $this->database
-      ->select('webcomposer_audit', 'w')
+      ->select(self::TABLE, 'w')
       ->extend('\Drupal\Core\Database\Query\PagerSelectExtender')
       ->extend('\Drupal\Core\Database\Query\TableSortExtender');
 
@@ -35,9 +37,16 @@ class DatabaseAuditStorage implements AuditStorageInterface {
       'title',
       'location',
       'timestamp',
+      'language',
     ]);
 
     $query->leftJoin('users_field_data', 'ufd', 'w.uid = ufd.uid');
+
+    if (isset($options['where'])) {
+      foreach ($options['where'] as $key => $value) {
+        $query->condition($key, $value);
+      }
+    }
 
     $result = $query
       ->limit(50)
@@ -50,9 +59,34 @@ class DatabaseAuditStorage implements AuditStorageInterface {
   /**
    * {@inheritdoc}
    */
+  public function getDistinct($column, $options = []) {
+    $data = [];
+
+    $result = $this->database
+      ->select(self::TABLE, 'w')
+      ->fields('w', [$column])
+      ->distinct()
+      ->execute()
+      ->fetchAllAssoc($column);
+
+    if ($result) {
+      $data = array_keys($result);
+      $data = array_combine($data, $data);
+    }
+
+    if (isset($options['callback'])) {
+      array_walk($data, $options['callback']);
+    }
+
+    return $data;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
   public function get($id) {
     return $this->database
-      ->select('webcomposer_audit', 'w')
+      ->select(self::TABLE, 'w')
       ->fields('w', [
         'id',
         'uid',
@@ -62,6 +96,7 @@ class DatabaseAuditStorage implements AuditStorageInterface {
         'title',
         'location',
         'timestamp',
+        'language',
       ])
       ->condition('w.id', $id)
       ->execute()
@@ -76,7 +111,7 @@ class DatabaseAuditStorage implements AuditStorageInterface {
 
     try {
       $this->database
-        ->insert('webcomposer_audit')
+        ->insert(self::TABLE)
         ->fields([
           'uid' => $this->user->id(),
           'entity' => $entity->getEntityTypeId(),
@@ -85,6 +120,7 @@ class DatabaseAuditStorage implements AuditStorageInterface {
           'title' => $entity->label(),
           'location' => $this->path->getPath(),
           'timestamp' => time(),
+          'language' => \Drupal::languageManager()->getCurrentLanguage()->getId(),
         ])
         ->execute();
     }
@@ -101,7 +137,7 @@ class DatabaseAuditStorage implements AuditStorageInterface {
 
     try {
       $this->database
-        ->insert('webcomposer_audit')
+        ->insert(self::TABLE)
         ->fields([
           'uid' => $this->user->id(),
           'entity' => $entity->getEntityTypeId(),
@@ -110,6 +146,7 @@ class DatabaseAuditStorage implements AuditStorageInterface {
           'title' => $entity->label(),
           'location' => $this->path->getPath(),
           'timestamp' => time(),
+          'language' => \Drupal::languageManager()->getCurrentLanguage()->getId(),
         ])
         ->execute();
     }
@@ -126,7 +163,7 @@ class DatabaseAuditStorage implements AuditStorageInterface {
 
     try {
       $this->database
-        ->insert('webcomposer_audit')
+        ->insert(self::TABLE)
         ->fields([
           'uid' => $this->user->id(),
           'entity' => $entity->getEntityTypeId(),
@@ -135,6 +172,7 @@ class DatabaseAuditStorage implements AuditStorageInterface {
           'title' => $entity->label(),
           'location' => $this->path->getPath(),
           'timestamp' => time(),
+          'language' => \Drupal::languageManager()->getCurrentLanguage()->getId(),
         ])
         ->execute();
     }
@@ -147,6 +185,8 @@ class DatabaseAuditStorage implements AuditStorageInterface {
    * {@inheritdoc}
    */
   public function truncate() {
-    return true;
+    $this->database
+      ->truncate(self::TABLE)
+      ->execute();
   }
 }
