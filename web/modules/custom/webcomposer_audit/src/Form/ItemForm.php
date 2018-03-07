@@ -47,7 +47,7 @@ class ItemForm extends FormBase {
     if (isset($item['eid']) && isset($item['entity'])) {
       $entity = \Drupal::entityManager()->getStorage($item['entity'])->load($item['eid']);
       if ($entity) {
-        $title = $this->l($title, $entity->toUrl());
+        $title = $this->l($title, $entity->toUrl('edit-form'));
       }
     }
 

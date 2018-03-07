@@ -33,7 +33,7 @@ class OverviewForm extends FormBase {
   private function buildFilterForm(array &$form, FormStateInterface $form_state) {
     $form['filters'] = [
       '#type' => 'details',
-      '#title' => $this->t('Filter log messages'),
+      '#title' => $this->t('Filter Audit Logs'),
       '#open' => TRUE,
     ];
 
@@ -48,12 +48,15 @@ class OverviewForm extends FormBase {
       '#title' => 'Title',
       '#type' => 'textfield',
       '#size' => 30,
+      '#default_value' => isset($_SESSION['webcomposer_audit_filter']['title']) ? $_SESSION['webcomposer_audit_filter']['title'] : '',
     ];
+
+    $options = ['any' => '- Any -'];
 
     $form['filters']['wrapper']['entity'] = [
       '#title' => 'Entity',
       '#type' => 'select',
-      '#options' => ['any' => '-- Any --'] + \Drupal::service('webcomposer_audit.database_storage')->getDistinct('entity', [
+      '#options' => $options + \Drupal::service('webcomposer_audit.database_storage')->getDistinct('entity', [
         'callback' => function (&$item) {
           $item = ucwords(str_replace('_', ' ', $item));
         }
@@ -61,12 +64,13 @@ class OverviewForm extends FormBase {
       '#attributes' => [
         'style' => 'padding-top: 5px; padding-bottom: 5px;',
       ],
+      '#default_value' => isset($_SESSION['webcomposer_audit_filter']['entity']) ? $_SESSION['webcomposer_audit_filter']['entity'] : 'any',
     ];
 
     $form['filters']['wrapper']['action'] = [
       '#title' => 'Action',
       '#type' => 'select',
-      '#options' => ['any' => '-- Any --'] + \Drupal::service('webcomposer_audit.database_storage')->getDistinct('action', [
+      '#options' => $options + \Drupal::service('webcomposer_audit.database_storage')->getDistinct('action', [
         'callback' => function (&$item) {
           $item = ucwords(str_replace('_', ' ', $item));
         }
@@ -74,12 +78,13 @@ class OverviewForm extends FormBase {
       '#attributes' => [
         'style' => 'padding-top: 5px; padding-bottom: 5px;',
       ],
+      '#default_value' => isset($_SESSION['webcomposer_audit_filter']['action']) ? $_SESSION['webcomposer_audit_filter']['action'] : 'any',
     ];
 
-    $form['filters']['wrapper']['user'] = [
+    $form['filters']['wrapper']['uid'] = [
       '#title' => 'User',
       '#type' => 'select',
-      '#options' => ['any' => '-- Any --'] + \Drupal::service('webcomposer_audit.database_storage')->getDistinct('uid', [
+      '#options' => $options + \Drupal::service('webcomposer_audit.database_storage')->getDistinct('uid', [
         'callback' => function (&$item) {
           $item = \Drupal::entityManager()->getStorage('user')->load($item)->getUsername();
         }
@@ -87,6 +92,7 @@ class OverviewForm extends FormBase {
       '#attributes' => [
         'style' => 'padding-top: 5px; padding-bottom: 5px;',
       ],
+      '#default_value' => isset($_SESSION['webcomposer_audit_filter']['user']) ? $_SESSION['webcomposer_audit_filter']['user'] : 'any',
     ];
 
     $form['filters']['wrapper']['actions'] = [
@@ -149,6 +155,7 @@ class OverviewForm extends FormBase {
 
     $entries = $storage->all([
       'header' => $header,
+      'where' => $this->getOverviewFilter(),
     ]);
 
     foreach ($entries as $key => $value) {
@@ -158,7 +165,7 @@ class OverviewForm extends FormBase {
         $entity = \Drupal::entityManager()->getStorage($value->entity)->load($value->eid);
 
         if ($entity) {
-          $title = $this->l($title, $entity->toUrl());
+          $title = $this->l($title, $entity->toUrl('edit-form'));
         }
       }
 
@@ -207,6 +214,21 @@ class OverviewForm extends FormBase {
   }
 
   /**
+   *
+   */
+  private function getOverviewFilter() {
+    $filter = [];
+
+    foreach ($_SESSION['webcomposer_audit_filter'] as $key => $value) {
+      if (!empty($value) && $value !== 'any') {
+        $filter[$key] = $value;
+      }
+    }
+
+    return $filter;
+  }
+
+  /**
    * {@inheritdoc}
    */
   public function validateForm(array &$form, FormStateInterface $form_state) {
@@ -217,11 +239,22 @@ class OverviewForm extends FormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
+    $keys = [
+      'title',
+      'entity',
+      'action',
+      'uid',
+    ];
+
+    foreach ($keys as $key) {
+      $_SESSION['webcomposer_audit_filter'][$key] = $form_state->getValue($key);
+    }
   }
 
   /**
    *
    */
   public function reset(array &$form, FormStateInterface $form_state) {
+    $_SESSION['webcomposer_audit_filter'] = [];
   }
 }
