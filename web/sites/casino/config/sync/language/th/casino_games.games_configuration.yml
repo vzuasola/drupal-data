@@ -1,0 +1,23 @@
+play_text: เล่นตอนนี้
+play_for_fun_text: "\_เดิมพันฟรี"
+game_info_text: "ข้อมูลเกมส์\_"
+kebab_menu_text: เพิ่มเติม
+load_more_text: โหลดเกมส์อื่นๆ
+freeplay_lightbox_title: 'แจ้งเตือน '
+freeplay_lightbox_content:
+  value: "<p>การทดลองเล่นไม่สามารถใช้งานได้<br />\r\nกรุณาสามารถเดิมพันด้วยเงินจริง</p>\r\n\r\n<p><a class=\"btn btn-ok btn-medium btn-yellow\" href=\"#\" target=\"_blank\">เดิมพันเงินจริง</a>&nbsp; &nbsp;<a class=\"btn btn-gray btn-medium\" href=\"{domain:entry}/{lang}/casino/\" target=\"_self\">กลับสู่หน้าหลัก</a></p>\r\n"
+  format: basic_html
+game_real_play_text: เดิมพันด้วยเงินจริง
+favorites_text: เกมส์ยอดนิยม
+recently_played_text: เกมส์ล่าสุดที่เล่น
+filter_icon: ค้นหา
+filter_header: "ค้นหาเกมส์\_"
+filter_submit: "\_ยืนยัน"
+filter_clear: ล้าง
+pas_error_lightbox_content:
+  value: "<p>&nbsp;</p>\r\n\r\n<p>ไม่สามารถใช้งานเกมส์ได้เนื่องจากการล็อกอินมีข้อผิดพลาด กรุณาล็อกอินอีกครั้ง</p>\r\n"
+  format: basic_html
+html5_lightbox_title: 'โปรดทราบ! '
+html5_lightbox_content:
+  value: "<p>เบราเซอร์เวอร์ชั่นล่าสุดของคุณไม่รองรับการใช้งานเกมส์ HTML5 &nbsp;<br />\r\nกรุณาอัพเดตเบราเซอร์ของคุณให้เป็นเวอร์ชั่นล่าสุดเพื่อเดิมพันอย่างต่อเนื่อง&nbsp;</p>\r\n\r\n<p><a class=\"btn btn-yellow btn-small btn-ok-launch\" href=\"#\" target=\"_blank\">ลองใช้งาน</a></p>\r\n"
+  format: basic_html

@@ -1,0 +1,20 @@
+play_text: 'MAIN SEKARANG'
+game_info_text: 'Info Permainan'
+kebab_menu_text: Lainnya
+load_more_text: 'Load Game Lainnya'
+freeplay_lightbox_title: NOTIFIKASI
+freeplay_lightbox_content:
+  value: "<p>Free play tidak tersedia.<br />\r\nAKEMBALI KE LOBBYnda bisa main dengan uang riil.</p>\r\n\r\n<p><a class=\"btn btn-ok btn-medium btn-yellow\" href=\"#\" target=\"_blank\">PLAY FOR REAL</a>&nbsp; &nbsp;<a class=\"btn btn-gray btn-medium\" href=\"{domain:entry}/{lang}/casino/\" target=\"_self\">KEMBALI KE LOBBY</a></p>\r\n"
+  format: basic_html
+favorites_text: Favoritku
+recently_played_text: 'Baru Dimainkan'
+filter_header: 'Filter Permainan'
+filter_submit: Kirim
+filter_clear: Hapus
+pas_error_lightbox_content:
+  value: "<p>&nbsp;</p>\r\n\r\n<p>Permainan tidak dapat dibuka karena error pada login. Silahkan login ulang.</p>\r\n"
+  format: basic_html
+html5_lightbox_title: Perhatian!
+html5_lightbox_content:
+  value: "<p>Versi browser Anda yang sekarang tidak mendukung permainan HTML5. Silahkan update browser Anda ke versi terbaru, untuk lanjut bermain.</p>\r\n\r\n<p><a class=\"btn btn-yellow btn-small btn-ok-launch\" href=\"#\" target=\"_blank\">Tetap Luncurkan</a></p>\r\n"
+  format: basic_html

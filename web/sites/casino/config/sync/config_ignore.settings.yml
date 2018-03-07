@@ -1,10 +1,16 @@
 ignored_config_entities:
   0: 'webform.webform.*'
-  1: 'webcomposer_config.*'
   2: 'system.menu.*'
-  3: 'block.*'
   4: 'filter.*'
-  5: 'language.*'
   6: 'devel.*'
+  8: 'webcomposer_config.*'
+  10: system.action.user_add_role_action.site_admin
+  12: system.action.user_remove_role_action.site_admin
+  14: user.role.site_admin
+  16: config_ignore.settings
+  18: imce.settings
+  20: 'views.view.*'
+  22: field.field.downloadable_entity.downloadable_entity.field_include_in_page
+  24: field.field.downloadable_entity.downloadable_entity.field_downloadable_file_link
 _core:
   default_config_hash: UVH1aJ4b44UM-VdPVN7hNNuuVqfReJxwfVeDQH1Hvsk

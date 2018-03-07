@@ -1,23 +1,31 @@
-play_text: 'Play Now - eeen'
+play_text: 'PLAY NOW'
 play_for_fun_text: 'Free Play'
 game_info_text: 'Game Info'
 kebab_menu_text: More
 load_more_text: 'Load More Games'
 load_more_disabled: 0
-freeplay_lightbox_title: Sample
+freeplay_lightbox_title: NOTIFICATION
 freeplay_lightbox_content:
-  value: "<p>Nulla porttitor accumsan tincidunt. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.</p>\r\n"
+  value: "<p>Free play is not available.<br />\r\nYou may play on real money instead.</p>\r\n\r\n<p><a class=\"btn btn-ok btn-medium btn-yellow\" href=\"#\" target=\"_blank\">PLAY FOR REAL</a>&nbsp; &nbsp;<a class=\"btn btn-gray btn-medium\" href=\"{domain:entry}/{lang}/casino/\" target=\"_self\">GO BACK TO LOBBY</a></p>\r\n"
   format: basic_html
 disable_language_selector: 1
 disable_announcement_icon: 1
-game_promotion_link: '{domain:entry}/{lang}/promotions'
-game_promotion_link_target: _self
-html5_lightbox_title: 'HTML 5 TItle'
+game_promotion_link: '{domain:entry}/{lang}/promotions[query:({tracking}&product=casino)]'
+game_promotion_link_target: _blank
+html5_lightbox_title: Alert!
 html5_lightbox_content:
-  value: "<p>html 5 message</p>\r\n\r\n<p><a class=\"btn btn-ok-launch btn-large btn-yellow\" href=\"#\" target=\"_blank\">Launch Anyway</a></p>\r\n"
+  value: "<p>Your current browser version does not support HTML5 games. Please update your browser to the latest version to continue playing.</p>\r\n\r\n<p><a class=\"btn btn-yellow btn-small btn-ok-launch\" href=\"#\" target=\"_blank\">Launch Anyway</a></p>\r\n"
   format: basic_html
 disable_jackpot_ticker: 0
+game_real_play_text: 'Play for Real'
+game_real_play_disabled: 0
+favorites_text: Favorites
+recently_played_text: 'Recently Played'
 filter_icon: Filter
-filter_header: Filter
+filter_header: 'Filter Games'
 filter_submit: Submit
-filter_clear: 'Clear Selection'
+filter_clear: Clear
+pas_error_lightbox_title: ''
+pas_error_lightbox_content:
+  value: "<p>&nbsp;</p>\r\n\r\n<p>Unable to launch game due to login authentication error. Please re-login.</p>\r\n"
+  format: basic_html

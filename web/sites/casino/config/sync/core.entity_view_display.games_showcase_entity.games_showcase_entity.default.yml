@@ -18,6 +18,8 @@ dependencies:
     - options
     - text
     - user
+_core:
+  default_config_hash: vdTzKOT8gTTK0D7w1rKBEMXOIOPuf47W0GrBYBkGr4o
 id: games_showcase_entity.games_showcase_entity.default
 targetEntityType: games_showcase_entity
 bundle: games_showcase_entity

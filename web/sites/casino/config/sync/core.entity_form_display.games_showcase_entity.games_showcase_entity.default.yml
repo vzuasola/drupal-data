@@ -34,6 +34,8 @@ third_party_settings:
         description: ''
         required_fields: true
       label: 'Scheduler Settings'
+_core:
+  default_config_hash: PSZa9vcZ2_1vft-zVmYsX9sXBMQkeoKQ53gmxdYClts
 id: games_showcase_entity.games_showcase_entity.default
 targetEntityType: games_showcase_entity
 bundle: games_showcase_entity

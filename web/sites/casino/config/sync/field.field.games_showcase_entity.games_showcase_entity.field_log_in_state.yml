@@ -7,6 +7,8 @@ dependencies:
   module:
     - games_showcase
     - options
+_core:
+  default_config_hash: _1NCnqd7ie8Y88ciyWGIcD_oyZ6rDtBWrQ-2-3Y28c8
 id: games_showcase_entity.games_showcase_entity.field_log_in_state
 field_name: field_log_in_state
 entity_type: games_showcase_entity

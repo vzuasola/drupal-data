@@ -8,7 +8,6 @@ dependencies:
     - rest
     - serialization
     - taxonomy
-    - user
     - webcomposer_rest_extra
 id: game_filters
 label: 'Game - Filters'
@@ -26,9 +25,8 @@ display:
     position: 0
     display_options:
       access:
-        type: perm
-        options:
-          perm: 'access content'
+        type: none
+        options: {  }
       cache:
         type: none
         options: {  }
@@ -518,7 +516,6 @@ display:
         - 'languages:language_interface'
         - request_format
         - url.query_args
-        - user.permissions
       tags: {  }
   rest_export_1:
     display_plugin: rest_export
@@ -549,5 +546,4 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - request_format
-        - user.permissions
       tags: {  }
