@@ -17,8 +17,8 @@ freeplay_lightbox_content:
   value: "<p>免费游戏暂无法使用。<br />\r\n您仍可进行真钱游戏。</p>\r\n\r\n<p><a class=\"btn btn-ok btn-medium btn-yellow\" href=\"#\" target=\"_blank\">进入真钱游戏</a>&nbsp; &nbsp;<a class=\"btn btn-gray btn-medium\" href=\"{domain:entry}/{lang}/games/\" target=\"_self\">返回游戏大厅</a></p>\r\n"
   format: basic_html
 filter_icon: 筛选
-filter_header: 筛选游戏ss
-filter_submit: 提交ss
-filter_clear: 清除ss
+filter_header: 筛选游戏
+filter_submit: 提交
+filter_clear: 清除
 load_more_text: 加载更多游戏
 freeplay_lightbox_title: 通知

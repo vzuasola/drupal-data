@@ -27,7 +27,6 @@ content:
     region: content
 hidden:
   field_game_code: true
-  field_game_filter: true
   field_game_image: true
   field_game_info: true
   field_game_info_toggle: true

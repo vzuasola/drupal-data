@@ -9,8 +9,8 @@ id: node.game.field_game_code
 field_name: field_game_code
 entity_type: node
 bundle: game
-label: 'Game Code'
-description: ''
+label: 'Game Code (refer to iCore game detail)'
+description: "iCore game detail to use per provider:\r\n<ul>\r\n <li>Playtech: GameId or Game name (lower-cased)</li>\r\n <li>Gold Deluxe: External Game ID</li>\r\n <li>Voidbridge: External Game ID</li>\r\n <li>Skywind: GameId or Game name (lower-cased)</li>\r\n</ul>"
 required: true
 translatable: true
 default_value: {  }

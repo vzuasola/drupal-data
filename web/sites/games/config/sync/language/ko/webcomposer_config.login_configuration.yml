@@ -5,6 +5,7 @@ notification_content:
   format: basic_html
   value: "<p>활동이 없어 세션 시간이 초과되었습니다.</p>\r\n"
 lightbox_blurb: '아직 다파벳 멤버가 아니시라구요?'
+username_placeholder: 아이디
 password_placeholder: 비밀번호
 login_bottom_label: 로그인
 error_message_blank_username: '아이디는 필수 항목입니다.'

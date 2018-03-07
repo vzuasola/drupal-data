@@ -1,0 +1,25 @@
+play_for_fun_text: '무료 플레이'
+play_text: '지금 플레이 하기'
+game_info_text: '게임 정보'
+kebab_menu_text: '더 보기'
+load_more_text: '더 많은 게임 불러오기'
+freeplay_lightbox_title: 알림
+freeplay_lightbox_content:
+  value: "<p>무료 플레이 이용이 불가능합니다.<br />\r\n대신 리얼 머니로 플레이하실 수 있습니다.</p>\r\n\r\n<p><a class=\"btn btn-ok btn-medium btn-yellow\" href=\"#\" target=\"_blank\">리얼 머니로 플레이하기</a>&nbsp; &nbsp;<a class=\"btn btn-gray btn-medium\" href=\"{domain:entry}/{lang}/games/\" target=\"_self\">로비로 돌아가기</a></p>\r\n"
+  format: basic_html
+html5_lightbox_title: 경고!
+html5_lightbox_content:
+  value: "<p>회원님의 현재 브라우저 버전은 HTML5 게임을 지원하지 않습니다. 플레이를 계속하시려면 브라우저를 최신 버전으로 업데이트하시기 바랍니다.</p>\r\n\r\n<p><a class=\"btn btn-yellow btn-small btn-ok-launch\" href=\"#\" target=\"_blank\">업데이트 없이 실행하기</a></p>\r\n"
+  format: basic_html
+favorites_text: 즐겨찾기
+recently_played_text: '최근 플레이'
+game_real_play_text: '리얼 머니로 플레이'
+filter_icon: 필터
+filter_header: '게임 분류'
+filter_submit: 제출
+filter_clear: 초기화
+home_categories_text: 홈
+pas_error_lightbox_title: ''
+pas_error_lightbox_content:
+  value: "<p>&nbsp;</p>\r\n\r\n<p>로그인 인증 오류로 인해 게임을 실행할 수 없습니다. 다시 로그인해 주십시오.</p>\r\n\r\n<p><a class=\"btn btn-ok btn-small btn-yellow\" href=\"#\" target=\"_blank\">OK</a></p>\r\n"
+  format: basic_html

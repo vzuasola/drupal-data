@@ -1,0 +1,6 @@
+loading_error_message:
+  value: "<p class=\"mt-80 text-center\">&nbsp;</p>\r\n\r\n<p class=\"mt-100 text-center\"><img alt=\"loading-logo-chinese.png\" data-entity-type=\"file\" data-entity-uuid=\"96847be0-9bc8-4d30-a057-effadb6decb6\" height=\"101\" src=\"/sites/games/files/inline-images/dafabet_logo_chinese.png\" width=\"436\" /></p>\r\n\r\n<p><span class=\"text-black\">出现意外错误。<br />\r\n窗口即将关闭。</span></p>\r\n\r\n<p><span class=\"text-black\">请稍后重试。</span></p>\r\n"
+  format: basic_html
+loading_message_content:
+  value: "<p class=\"mt-80 text-center\">&nbsp;</p>\r\n\r\n<p class=\"mt-100 text-center\"><img alt=\"loading-logo-chinese.png\" data-entity-type=\"file\" data-entity-uuid=\"96847be0-9bc8-4d30-a057-effadb6decb6\" height=\"101\" src=\"/sites/games/files/inline-images/dafabet_logo_chinese.png\" width=\"436\" /></p>\r\n"
+  format: basic_html
