@@ -1,0 +1,16 @@
+recommendation_message:
+  value: "<p><span class=\"text-18\"><strong>\"{search_key}\"</strong>와/과 일치하는 항목을 찾지 못했습니다</span></p>\r\n\r\n<p>추천 게임을 이용해보세요.</p>\r\n"
+  format: basic_html
+recommendation_message_negative:
+  value: "<p><span class=\"text-18\"><strong>\"{search_key}\"</strong>와/과 일치하는 항목을 찾지 못했습니다</span></p>\r\n"
+  format: basic_html
+search_placeholder: 검색
+search_result_message:
+  value: "<p><span class=\"text-18\"><strong>\"{keyword}\"</strong>에 대한 검색 결과&nbsp;</span><strong><em><u>{total}&nbsp;</u></em></strong>개</p>\r\n"
+  format: basic_html
+filter_message:
+  value: "<p><span class=\"text-18\">필터 결과 없음</span></p>\r\n\r\n<p>추천 게임을 이용해보세요.</p>\r\n"
+  format: basic_html
+filter_message_negative:
+  value: "<p><span class=\"text-18\">필터 결과 없음</span></p>\r\n"
+  format: basic_html

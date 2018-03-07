@@ -7,6 +7,8 @@ dependencies:
     - taxonomy.vocabulary.ribbon_labels
   module:
     - games_showcase
+_core:
+  default_config_hash: rMiJ5z5F9brirw0Pq3bXXnqK2Zm0lfE8Cq7x9_FRSvo
 id: games_showcase_entity.games_showcase_entity.field_showcase_ribbon
 field_name: field_showcase_ribbon
 entity_type: games_showcase_entity

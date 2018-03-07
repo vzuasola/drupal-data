@@ -7,6 +7,8 @@ dependencies:
   module:
     - games_showcase
     - text
+_core:
+  default_config_hash: lmImFNl0egn_zHSi75niWBp6sDpP1hMtoHVW0XNprt8
 id: games_showcase_entity.games_showcase_entity.field_showcase_body
 field_name: field_showcase_body
 entity_type: games_showcase_entity

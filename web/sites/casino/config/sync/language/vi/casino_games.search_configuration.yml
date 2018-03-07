@@ -1,0 +1,16 @@
+recommendation_message:
+  value: "<p><span class=\"text-18\">Không có kết quả cho <strong>\"{search_key}\"</strong></span></p>\r\n\r\n<p>Có thể bạn muốn trải nghiệm những trò chơi sau.</p>\r\n"
+  format: basic_html
+recommendation_message_negative:
+  value: "<p><span class=\"text-18\">Không có kết quả cho <strong>\"{search_key}\"</strong></span></p>\r\n"
+  format: basic_html
+search_placeholder: 'Tìm Kiếm'
+search_result_message:
+  value: "<p><span class=\"text-18\">Hiển thị&nbsp;<strong><em><u>{total}</u></em>&nbsp;</strong>kết quả cho <strong>\"{keyword}\"</strong></span></p>\r\n"
+  format: basic_html
+filter_message:
+  value: "<p><span class=\"text-18\">Không có kết quả nào</span></p>\r\n\r\n<p>Có thể bạn muốn trải nghiệm những trò chơi sau.</p>\r\n"
+  format: basic_html
+filter_message_negative:
+  value: "<p><span class=\"text-18\">Không có kết quả nào</span></p>\r\n"
+  format: basic_html

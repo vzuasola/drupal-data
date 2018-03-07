@@ -1,0 +1,21 @@
+autologout_box_content:
+  format: basic_html
+  value: "<p>Twoja sesja wygaśnie {seconds}. Czy chcesz kontynuować swoją sesję?\r\n</p>\r\n"
+notification_content:
+  format: basic_html
+  value: "<p>Z powodu braku aktywności Twoja sesja wygasła.\r\n</p>\r\n"
+lightbox_blurb: 'Nie jesteś jeszcze członkiem Dafabet?'
+password_placeholder: Hasło
+login_bottom_label: LOGOWANIE
+error_message_blank_username: 'Twój username jest wymagany.'
+error_message_blank_password: 'Twoje hasło jest wymagane.'
+error_message_blank_passname: 'Prosimy sprawdzić wszystkie pola i spróbować ponownie.'
+error_message_invalid_passname: 'Przepraszamy, niewłaściwy username lub/i hasło. Prosimy spróbować ponownie.'
+error_message_service_not_available: 'Serwis nie jest dostępny.'
+error_message_account_suspended: 'Konto zablokowane. Prosimy o kontakt z Obsługą Klienta.'
+error_message_account_locked: 'Konto zablokowane. Prosimy o kontakt z Obsługą Klienta.'
+autologout_box_title: PRZYPOMNIENIE
+affirmative_button_text: TAK
+negative_button_text: NIE
+notification_title: POWIADOMIENIA
+notification_window_title: 'Session has timed out'
