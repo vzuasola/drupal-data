@@ -20,6 +20,6 @@ fallback_error_message:
 fallback_error_button: ''
 video_racing_currency: ''
 video_racing_language_mapping: ''
-game_provider_mapping: "playtech|Playtech\r\ngold_deluxe|Gold Deluxe\r\nskywind|Skywind\r\nvoidbridge|Voidbridge"
+game_provider_mapping: "playtech|Playtech\r\ngold_deluxe|Gold Deluxe\r\nskywind|Skywind\r\nvoidbridge|Voidbridge\r\nsa_gaming|SA Gaming"
 sa_gaming_currency: "EUR\r\nUSD\r\nCNY\r\nMYR\r\nTHB\r\nVND\r\nIDR\r\nRMB"
 sa_gaming_language_mapping: "en|en-US\r\nsc|zh-CN\r\nch|zh-TW\r\nid|id\r\njp|ja\r\nth|th\r\nvn|vi"
