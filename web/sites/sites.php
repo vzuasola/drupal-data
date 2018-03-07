@@ -46,3 +46,7 @@ $sites['ow-sports.drupal.dev'] = 'ow-sports';
 // Games instance
 $sites['games.drupal.local'] = 'games';
 $sites['games.drupal.dev'] = 'games';
+
+// Live Dealer instance
+$sites['live-dealer.drupal.local'] = 'live-dealer';
+$sites['live-dealer.drupal.dev'] = 'live-dealer';
