@@ -1,0 +1,30 @@
+uuid: de548f26-bb5d-43ab-ae4e-4ef34d09c538
+langcode: en
+status: true
+dependencies:
+  module:
+    - exchange_lobby_tile
+    - file
+    - image
+id: exchange_lobby_tile_entity.field_tile_image
+field_name: field_tile_image
+entity_type: exchange_lobby_tile_entity
+type: image
+settings:
+  uri_scheme: public
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  target_type: file
+  display_field: false
+  display_default: false
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

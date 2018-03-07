@@ -1,0 +1,21 @@
+uuid: 91ad247c-08a8-402c-b930-8061e21573ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.exchange_lobby_tile_entity.field_button_link_target
+  module:
+    - exchange_lobby_tile
+    - options
+id: exchange_lobby_tile_entity.exchange_lobby_tile_entity.field_button_link_target
+field_name: field_button_link_target
+entity_type: exchange_lobby_tile_entity
+bundle: exchange_lobby_tile_entity
+label: 'Button Link Target'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

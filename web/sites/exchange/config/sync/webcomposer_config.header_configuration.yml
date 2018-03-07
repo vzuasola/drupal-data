@@ -1,5 +1,5 @@
 join_now_text: 'Join Nows'
-join_now_link: 'https://qa1-www.elysium-dfbt.com/en/casino/join{tracking.token}'
+join_now_link: 'https://tct-www.elysium-dfbt.com/en/exchange/join{tracking.token}'
 login_issue_text: 'Cant login?'
 login_issue_link: '/{domain:entry}/{domain:lang_token}/cant-login{tracking.token}'
 sc_lang_text: SC

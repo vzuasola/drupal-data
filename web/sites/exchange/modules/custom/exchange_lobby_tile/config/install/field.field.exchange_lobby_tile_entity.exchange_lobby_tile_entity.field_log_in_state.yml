@@ -1,0 +1,21 @@
+uuid: 530a518f-f6c9-4c64-a7e8-4d83d27a55d1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.exchange_lobby_tile_entity.field_log_in_state
+  module:
+    - exchange_lobby_tile
+    - options
+id: exchange_lobby_tile_entity.exchange_lobby_tile_entity.field_log_in_state
+field_name: field_log_in_state
+entity_type: exchange_lobby_tile_entity
+bundle: exchange_lobby_tile_entity
+label: 'Log-in State'
+description: "0|Pre Login\r\n1|Post Login\r\n2|Both"
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

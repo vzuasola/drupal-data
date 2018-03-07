@@ -1,0 +1,19 @@
+uuid: e6ec920e-8a56-4d99-9e69-660bfa71a4c0
+langcode: en
+status: true
+dependencies:
+  module:
+    - exchange_lobby_tile
+    - link
+id: exchange_lobby_tile_entity.field_tile_image_link
+field_name: field_tile_image_link
+entity_type: exchange_lobby_tile_entity
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
