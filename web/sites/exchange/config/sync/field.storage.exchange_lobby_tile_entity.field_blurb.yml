@@ -1,0 +1,19 @@
+uuid: 3e1cb2f4-fd59-42a1-a4bc-df60b4691494
+langcode: hi
+status: true
+dependencies:
+  module:
+    - exchange_lobby_tile
+    - text
+id: exchange_lobby_tile_entity.field_blurb
+field_name: field_blurb
+entity_type: exchange_lobby_tile_entity
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

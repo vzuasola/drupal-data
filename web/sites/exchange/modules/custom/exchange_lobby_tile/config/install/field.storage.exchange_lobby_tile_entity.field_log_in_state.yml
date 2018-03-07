@@ -1,0 +1,30 @@
+uuid: 64f62a9b-1ad2-49c8-ad25-c5b9f6691a5f
+langcode: en
+status: true
+dependencies:
+  module:
+    - exchange_lobby_tile
+    - options
+id: exchange_lobby_tile_entity.field_log_in_state
+field_name: field_log_in_state
+entity_type: exchange_lobby_tile_entity
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '0'
+      label: 'Pre Login'
+    -
+      value: '1'
+      label: 'Post Login'
+    -
+      value: '2'
+      label: Both
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

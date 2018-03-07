@@ -1,0 +1,40 @@
+<?php
+
+
+/**
+ * Implements hook_uninstall
+ */
+function exchange_lobby_tile_uninstall() {
+  $keys = [
+    'core.entity_form_display.exchange_lobby_tile_entity.exchange_lobby_tile_entity.default.yml',
+    'core.entity_view_display.exchange_lobby_tile_entity.exchange_lobby_tile_entity.default.yml',
+    'field.field.exchange_lobby_tile_entity.exchange_lobby_tile_entity.field_blurb.yml',
+    'field.field.exchange_lobby_tile_entity.exchange_lobby_tile_entity.field_button_link.yml',
+    'field.field.exchange_lobby_tile_entity.exchange_lobby_tile_entity.field_button_link_target.yml',
+    'field.field.exchange_lobby_tile_entity.exchange_lobby_tile_entity.field_button_text.yml',
+    'field.field.exchange_lobby_tile_entity.exchange_lobby_tile_entity.field_enable_game_launching.yml',
+    'field.field.exchange_lobby_tile_entity.exchange_lobby_tile_entity.field_log_in_state.yml',
+    'field.field.exchange_lobby_tile_entity.exchange_lobby_tile_entity.field_tile_image.uml',
+    'field.field.exchange_lobby_tile_entity.exchange_lobby_tile_entity.field_tile_image_link_target.yml',
+    'field.field.exchange_lobby_tile_entity.exchange_lobby_tile_entity.field_tile_image_link.yml',
+    'field.field.exchange_lobby_tile_entity.exchange_lobby_tile_entity.field_tile_video.yml',
+    'field.field.exchange_lobby_tile_entity.exchange_lobby_tile_entity.field_title.yml',
+    'field.storage.exchange_lobby_tile_entity.field_blurb.yml',
+    'field.storage.exchange_lobby_tile_entity.field_button_link.yml',
+    'field.storage.exchange_lobby_tile_entity.field_button_link_target.yml',
+    'field.storage.exchange_lobby_tile_entity.field_enable_game_launching.yml',
+    'field.storage.exchange_lobby_tile_entity.field_button_text.yml',
+    'field.storage.exchange_lobby_tile_entity.field_log_in_state.yml',
+    'field.storage.exchange_lobby_tile_entity.field_tile_image.yml',
+    'field.storage.exchange_lobby_tile_entity.field_tile_image_link.yml',
+    'field.storage.exchange_lobby_tile_entity.field_tile_image_link_target.yml',
+    'field.storage.exchange_lobby_tile_entity.field_tile_video.yml',
+    'field.storage.exchange_lobby_tile_entity.field_title.yml',
+    'language.content_settings.exchange_lobby_tile_entity.exchange_lobby_tile_entity.yml',
+    'views.view.exchange_lobby_tile.yml',
+    ];
+
+    foreach ($keys as $key) {
+      \Drupal::configFactory()->getEditable($key)->delete();
+    }
+}

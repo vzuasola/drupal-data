@@ -1,0 +1,15 @@
+exchange_config.admin_settings:
+  path: 'admin/config/exchange'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'exchange trust element Configuration'
+  requirements:
+    _permission: 'administer site configuration'
+
+exchange_config.exchange_config_form:
+  path: 'admin/config/exchange/virtualconfig'
+  defaults:
+    _form: 'Drupal\exchange_config\Form\ExchangeConfigForm'
+    _title: 'exchange trust element Configuration'
+  requirements:
+    _permission: 'administer site configuration'

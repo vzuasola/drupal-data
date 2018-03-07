@@ -1,0 +1,30 @@
+uuid: 91610925-d221-40a5-bef9-e5d81ce84f38
+langcode: en
+status: true
+dependencies:
+  module:
+    - exchange_lobby_tile
+    - options
+id: exchange_lobby_tile_entity.field_tile_image_link_target
+field_name: field_tile_image_link_target
+entity_type: exchange_lobby_tile_entity
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: _top
+      label: 'Same Window'
+    -
+      value: _blank
+      label: 'New Tab'
+    -
+      value: window
+      label: 'New Window'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains exchange_lobby_tile.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function exchange_lobby_tile_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main modules help for the exchange_lobby_tile module.
+    case 'help.page.exchange_lobby_tile':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Handles exchange lobby tile configurations') . '</p>';
+      return $output;
+
+    default:
+  }
+}

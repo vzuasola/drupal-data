@@ -1,0 +1,21 @@
+uuid: d7e8303b-06a1-403c-937b-e28e2fe93e1b
+langcode: hi
+status: true
+dependencies:
+  config:
+    - field.storage.exchange_lobby_tile_entity.field_blurb
+  module:
+    - exchange_lobby_tile
+    - text
+id: exchange_lobby_tile_entity.exchange_lobby_tile_entity.field_blurb
+field_name: field_blurb
+entity_type: exchange_lobby_tile_entity
+bundle: exchange_lobby_tile_entity
+label: Blurb
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

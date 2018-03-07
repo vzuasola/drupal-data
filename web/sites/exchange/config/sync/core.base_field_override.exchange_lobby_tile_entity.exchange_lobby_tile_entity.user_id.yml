@@ -1,0 +1,20 @@
+uuid: 7dd897a6-75c5-41bf-8c90-a034ee2bfc50
+langcode: en
+status: true
+dependencies:
+  module:
+    - exchange_lobby_tile
+id: exchange_lobby_tile_entity.exchange_lobby_tile_entity.user_id
+field_name: user_id
+entity_type: exchange_lobby_tile_entity
+bundle: exchange_lobby_tile_entity
+label: 'Authored by'
+description: 'The user ID of author of the exchange lobby tile entity entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference
