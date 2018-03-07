@@ -4,10 +4,80 @@ status: true
 dependencies:
   config:
     - field.field.node.page.body
+    - field.field.node.page.field_banner_content
+    - field.field.node.page.field_banner_content_position
+    - field.field.node.page.field_banner_link
+    - field.field.node.page.field_banner_link_target
+    - field.field.node.page.field_image
+    - field.field.node.page.field_log_in_state
+    - image.style.thumbnail
     - node.type.page
   module:
+    - field_group
+    - image
+    - link
     - path
+    - scheduler
     - text
+third_party_settings:
+  field_group:
+    group_fields:
+      children:
+        - group_login_state_settings
+        - group_banner_settings
+        - group_page_content_settings
+      parent_name: ''
+      weight: 20
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: Fields
+    group_banner_settings:
+      children:
+        - field_image
+        - field_banner_link
+        - field_banner_link_target
+        - field_banner_content
+        - field_banner_content_position
+      parent_name: group_fields
+      weight: 22
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Banner Settings'
+    group_page_content_settings:
+      children:
+        - body
+      parent_name: group_fields
+      weight: 23
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Page Content Settings'
+    group_login_state_settings:
+      children:
+        - field_log_in_state
+      parent_name: group_fields
+      weight: 20
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Login State Settings'
 _core:
   default_config_hash: sWCotip3wyA0CvZUxyo-StTDU8TyTAhx5fcfOiHS6s4
 id: node.page.default
@@ -30,6 +100,48 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_banner_content:
+    weight: 41
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_banner_content_position:
+    weight: 42
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_banner_link:
+    weight: 39
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_banner_link_target:
+    weight: 40
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_image:
+    weight: 38
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_log_in_state:
+    weight: 21
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
   langcode:
     type: language_select
     weight: 2
@@ -55,6 +167,11 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  scheduler_settings:
+    weight: 20
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
@@ -73,6 +190,8 @@ content:
   translation:
     weight: 10
     region: content
+    settings: {  }
+    third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
     weight: 5
