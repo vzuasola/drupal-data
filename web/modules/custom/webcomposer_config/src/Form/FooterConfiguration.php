@@ -65,7 +65,16 @@ class FooterConfiguration extends ConfigFormBase {
       '#group' => 'advanced',
     ];
 
-    $form['partners_details']['partners_logo'] = [
+    $form['partners_details']['deprecated'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Deprecated'),
+      '#description' => $this->t('Deprecated Partners fields due to New Curacao
+        implementation, this is just to support old products.'),
+      '#collapsible' => TRUE,
+      '#open' => FALSE,
+    ];
+
+    $form['partners_details']['deprecated']['partners_logo'] = [
       '#type' => 'managed_file',
       '#title' => $this->t('Partners logo'),
       '#default_value' => $config->get('partners_logo'),

@@ -1,0 +1,16 @@
+recommendation_message:
+  value: "<p><span class=\"text-18\">No search results for <strong>\"{search_key}\"</strong></span></p>\r\n\r\n<p>You might want to try our recommended games.</p>\r\n"
+  format: basic_html
+recommendation_message_negative:
+  value: "<p><span class=\"text-18\">No match found for <strong>\"{search_key}\"</strong></span></p>\r\n"
+  format: basic_html
+filter_message:
+  value: "<p><span class=\"text-18\">No Filter Resultss</span></p>\r\n\r\n<p>You might want to try our recommended games.</p>\r\n"
+  format: basic_html
+filter_message_negative:
+  value: "<p><span class=\"text-18\">No Filter Results</span></p>\r\n"
+  format: basic_html
+search_placeholder: Search
+search_result_message:
+  value: "<p><span class=\"text-18\">Showing <strong><em><u>{total}</u></em>&nbsp;</strong>result/s for <strong>\"{keyword}\"</strong></span></p>\r\n"
+  format: basic_html

@@ -50,3 +50,7 @@ $sites['games.drupal.dev'] = 'games';
 // Exchange instance
 $sites['exchange.drupal.local'] = 'exchange';
 $sites['exchange.drupal.dev'] = 'exchange';
+
+// Live Dealer instance
+$sites['live-dealer.drupal.local'] = 'live-dealer';
+$sites['live-dealer.drupal.dev'] = 'live-dealer';

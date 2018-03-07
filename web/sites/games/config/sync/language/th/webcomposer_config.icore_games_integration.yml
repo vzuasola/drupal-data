@@ -1,0 +1,5 @@
+unsupported_currencies_title: ไม่รองรับสกุลเงินนี้
+unsupported_currencies_message:
+  value: "<p>ขออภัยค่ะ สกุลเงินในบัญชีของคุณไม่สามารถใช้งานในเกมส์ <b>{game_provider}&nbsp;</b><b>{game_name}</b>.<br />\r\nกรุณาลองใช้เกมส์อื่น</p>\r\n"
+  format: basic_html
+unsupported_currencies_button: ตกลง

@@ -10,7 +10,7 @@ freeplay_lightbox_content:
   format: basic_html
 disable_language_selector: 1
 disable_announcement_icon: 1
-game_promotion_link: '{domain:entry}/{lang}/promotions?product=games'
+game_promotion_link: '{domain:entry}/{lang}/promotions[query:(product=games&{tracking})]'
 game_promotion_link_target: _blank
 html5_lightbox_title: Alert!
 html5_lightbox_content:
@@ -21,10 +21,10 @@ favorites_text: Favorites
 recently_played_text: 'Recently Played'
 game_real_play_text: 'Play For Real'
 game_real_play_disabled: 0
-filter_icon: Filterr
-filter_header: 'Filter Gamess'
-filter_submit: Submitt
-filter_clear: Clearr
+filter_icon: Filter
+filter_header: 'Filter Games'
+filter_submit: Submit
+filter_clear: Clear
 home_categories_text: Home
 pas_error_lightbox_title: ''
 pas_error_lightbox_content:

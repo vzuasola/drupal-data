@@ -1,0 +1,4 @@
+unsupported_currencies_message:
+  value: "<p>很抱歉，<b>{game_provider}</b> 游戏 <b>{game_name}</b> 不支您的账户默认货币。</p>\r\n"
+  format: basic_html
+unsupported_currencies_title: 不支持该货币
