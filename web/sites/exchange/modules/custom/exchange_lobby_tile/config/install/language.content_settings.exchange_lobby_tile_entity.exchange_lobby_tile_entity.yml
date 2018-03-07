@@ -1,0 +1,15 @@
+uuid: b3049712-93a6-4015-a4b6-65afe4f76b4d
+langcode: en
+status: true
+dependencies:
+  module:
+    - content_translation
+    - exchange_lobby_tile
+third_party_settings:
+  content_translation:
+    enabled: true
+id: exchange_lobby_tile_entity.exchange_lobby_tile_entity
+target_entity_type_id: exchange_lobby_tile_entity
+target_bundle: exchange_lobby_tile_entity
+default_langcode: site_default
+language_alterable: true

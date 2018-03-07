@@ -1,0 +1,20 @@
+uuid: b8e40980-dfeb-4544-be5f-cebf80894035
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.downloadable_entity.field_downloadable_file_link
+  module:
+    - webcomposer_downloadables
+id: downloadable_entity.downloadable_entity.field_downloadable_file_link
+field_name: field_downloadable_file_link
+entity_type: downloadable_entity
+bundle: downloadable_entity
+label: 'Downloadable File Link'
+description: 'Link url of the file to be downloaded by the user'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

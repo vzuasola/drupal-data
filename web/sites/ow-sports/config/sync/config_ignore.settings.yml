@@ -7,6 +7,5 @@ ignored_config_entities:
   10: 'language.*'
   12: 'devel.*'
   14: 'owsports_config.*'
-  16: 'webcomposer_dropdown_menu.*'
 _core:
   default_config_hash: UVH1aJ4b44UM-VdPVN7hNNuuVqfReJxwfVeDQH1Hvsk
