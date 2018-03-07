@@ -165,7 +165,11 @@ class OverviewForm extends FormBase {
         $entity = \Drupal::entityManager()->getStorage($value->entity)->load($value->eid);
 
         if ($entity) {
-          $title = $this->l($title, $entity->toUrl('edit-form'));
+          try {
+            $title = $this->l($title, $entity->toUrl('edit-form'));
+          } catch (\Exception $e) {
+            // do nothing
+          }
         }
       }
 

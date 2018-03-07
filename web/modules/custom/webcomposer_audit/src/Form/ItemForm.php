@@ -4,6 +4,7 @@ namespace Drupal\webcomposer_audit\Form;
 
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
+use Drupal\Component\Diff\Diff;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Url;
@@ -47,9 +48,14 @@ class ItemForm extends FormBase {
     if (isset($item['eid']) && isset($item['entity'])) {
       $entity = \Drupal::entityManager()->getStorage($item['entity'])->load($item['eid']);
       if ($entity) {
-        $title = $this->l($title, $entity->toUrl('edit-form'));
+        try {
+          $title = $this->l($title, $entity->toUrl('edit-form'));
+        } catch (\Exception $e) {
+          // do nothing
+        }
       }
     }
+
 
     $rows['title'] = [
       ['data' => ['#markup' => '<strong>Title</strong>']],
@@ -94,9 +100,57 @@ class ItemForm extends FormBase {
     $before = unserialize($item['data_before']);
     $after = unserialize($item['data_after']);
 
+    $form['#attached']['library'][] = 'system/diff';
+
     $form['table'] = [
       '#type' => 'table',
+      '#prefix' => '
+        <h4 style="margin-top: 50px;">Details</h4>
+        <p>Event description and details</p>
+      ',
       '#rows' => $rows,
+    ];
+
+    $textBefore = var_export($before->toArray(), TRUE);
+    $textAfter = var_export($after->toArray(), TRUE);
+
+    $textBefore = explode(PHP_EOL, $textBefore);
+    $textAfter = explode(PHP_EOL, $textAfter);
+
+    $textBefore = array_filter($textBefore, function ($item) {
+      return !empty(($item));
+    });
+
+    $textAfter = array_filter($textAfter, function ($item) {
+      return !empty(($item));
+    });
+
+    $diff = new Diff($textBefore, $textAfter);
+
+    $formatter = \Drupal::service('diff.formatter');
+    $formatter->show_header = FALSE;
+
+    $form['diff_wrapper'] = [
+      '#type' => 'container',
+      '#attributes' => [
+        'style' => 'margin-top: 50px;',
+      ],
+    ];
+
+    $form['diff_wrapper']['diff'] = [
+      '#type' => 'table',
+      '#prefix' => '
+        <h4 style="margin-top: 50px;">Comparison</h4>
+        <p>Differences during this audit event</p>
+      ',
+      '#attributes' => [
+        'class' => ['diff'],
+      ],
+      '#header' => [
+        ['data' => t('Before'), 'colspan' => '2'],
+        ['data' => t('After'), 'colspan' => '2'],
+      ],
+      '#rows' => $formatter->format($diff),
     ];
 
     return $form;
