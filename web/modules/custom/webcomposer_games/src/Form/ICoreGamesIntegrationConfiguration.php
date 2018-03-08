@@ -70,7 +70,7 @@ class ICoreGamesIntegrationConfiguration extends ConfigFormBase {
 
     $form['message'] = [
       '#type' => 'details',
-      '#title' => t('Default Message'),
+      '#title' => t('Unsupported Currency Message'),
       '#group' => 'advanced',
     ];
 
@@ -125,6 +125,20 @@ class ICoreGamesIntegrationConfiguration extends ConfigFormBase {
       '#default_value' => $config->get('fallback_error_button')
     ];
 
+    $form['safari_notif'] = [
+      '#type' => 'details',
+      '#title' => t('Safari Notification Message'),
+      '#group' => 'advanced',
+    ];
+
+    $config_safari = $config->get('safari_notif_message');
+    $form['safari_notif']['safari_notif_message'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('Safari Notification Message.'),
+      '#default_value' => $config_safari['value'],
+      '#format' => $config_safari['format'],
+    ];
+
     return parent::buildForm($form, $form_state);
   }
 
@@ -151,6 +165,7 @@ class ICoreGamesIntegrationConfiguration extends ConfigFormBase {
       'fallback_error_title',
       'fallback_error_message',
       'fallback_error_button',
+      'safari_notif_message',
     ];
 
     $result = array_merge($providers, $keys);
