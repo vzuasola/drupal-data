@@ -214,7 +214,7 @@ class OverviewForm extends FormBase {
         'date' => \Drupal::service('date.formatter')->format($value->timestamp, 'short'),
         'language' => strtoupper($value->language),
         'operations' => $operations,
-      ]; 
+      ];
     }
 
     $form['table'] = [

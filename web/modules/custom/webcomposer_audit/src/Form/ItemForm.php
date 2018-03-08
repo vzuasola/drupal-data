@@ -254,7 +254,7 @@ class ItemForm extends FormBase {
       $form['diff_wrapper'] += $rows;
     }
 
-    $form['#attached']['library'][] = 'system/diff'; 
+    $form['#attached']['library'][] = 'system/diff';
   }
 
   /**
