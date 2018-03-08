@@ -463,7 +463,7 @@ $aliases['exchange'] = array (
 );
 
 $aliases['live-dealer'] = array (
-  'uri' => 'live-dealer.drupal.dev',
+  'uri' => 'live-dealer.drupal.local',
   'root' => '/var/www/html/web-composer/drupal/web/',
   'path-aliases' => array(
     '%dump-dir' => '/tmp',
