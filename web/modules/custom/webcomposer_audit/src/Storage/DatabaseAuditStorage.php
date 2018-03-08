@@ -31,13 +31,14 @@ class DatabaseAuditStorage implements AuditStorageInterface {
     $query->fields('w', [
       'id',
       'uid',
-      'entity',
+      'type',
       'eid',
       'action',
       'title',
       'location',
       'timestamp',
       'language',
+      'entity',
     ]);
 
     $query->leftJoin('users_field_data', 'ufd', 'w.uid = ufd.uid');
@@ -90,15 +91,14 @@ class DatabaseAuditStorage implements AuditStorageInterface {
       ->fields('w', [
         'id',
         'uid',
-        'entity',
+        'type',
         'eid',
         'action',
         'title',
         'location',
         'timestamp',
         'language',
-        'data_before',
-        'data_after',
+        'entity',
       ])
       ->condition('w.id', $id)
       ->execute()
@@ -116,14 +116,14 @@ class DatabaseAuditStorage implements AuditStorageInterface {
         ->insert(self::TABLE)
         ->fields([
           'uid' => $this->user->id(),
-          'entity' => $entity->getEntityTypeId(),
+          'type' => $entity->getEntityTypeId(),
           'eid' => $id,
           'action' => AuditStorageInterface::ADD,
           'title' => $entity->label(),
           'location' => $this->path->getPath(),
           'timestamp' => time(),
           'language' => \Drupal::languageManager()->getCurrentLanguage()->getId(),
-          'data_after' => serialize($entity),
+          'entity' => serialize($entity),
         ])
         ->execute();
     }
@@ -135,7 +135,7 @@ class DatabaseAuditStorage implements AuditStorageInterface {
   /**
    * {@inheritdoc}
    */
-  public function update(EntityInterface $entity, EntityInterface $preEntity) {
+  public function update(EntityInterface $entity) {
     $id = $entity->id();
 
     try {
@@ -143,15 +143,14 @@ class DatabaseAuditStorage implements AuditStorageInterface {
         ->insert(self::TABLE)
         ->fields([
           'uid' => $this->user->id(),
-          'entity' => $entity->getEntityTypeId(),
+          'type' => $entity->getEntityTypeId(),
           'eid' => $id,
           'action' => AuditStorageInterface::UPDATE,
           'title' => $entity->label(),
           'location' => $this->path->getPath(),
           'timestamp' => time(),
           'language' => \Drupal::languageManager()->getCurrentLanguage()->getId(),
-          'data_before' => serialize($preEntity),
-          'data_after' => serialize($entity),
+          'entity' => serialize($entity),
         ])
         ->execute();
     }
@@ -171,14 +170,14 @@ class DatabaseAuditStorage implements AuditStorageInterface {
         ->insert(self::TABLE)
         ->fields([
           'uid' => $this->user->id(),
-          'entity' => $entity->getEntityTypeId(),
+          'type' => $entity->getEntityTypeId(),
           'eid' => $id,
           'action' => AuditStorageInterface::DELETE,
           'title' => $entity->label(),
           'location' => $this->path->getPath(),
           'timestamp' => time(),
           'language' => \Drupal::languageManager()->getCurrentLanguage()->getId(),
-          'data_before' => serialize($entity),
+          'entity' => serialize($entity),
         ])
         ->execute();
     }

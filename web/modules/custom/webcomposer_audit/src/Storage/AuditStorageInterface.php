@@ -57,7 +57,7 @@ interface AuditStorageInterface {
   /**
    *
    */
-  public function update(EntityInterface $entity, EntityInterface $preEntity);
+  public function update(EntityInterface $entity);
 
   /**
    *

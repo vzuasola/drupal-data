@@ -11,7 +11,7 @@ use Drupal\Core\Entity\EntityInterface;
  *
  */
 function webcomposer_audit_entity_update(EntityInterface $entity) {
-  \Drupal::service('webcomposer_audit.database_storage')->update($entity, $entity->original);
+  \Drupal::service('webcomposer_audit.database_storage')->update($entity);
 }
 
 /**

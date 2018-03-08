@@ -19,7 +19,7 @@ function webcomposer_audit_schema() {
         'default' => 0,
         'description' => 'The {users}.uid of the user who triggered the event.',
       ],
-      'entity' => [
+      'type' => [
         'type' => 'varchar_ascii',
         'length' => 64,
         'not null' => TRUE,
@@ -63,24 +63,17 @@ function webcomposer_audit_schema() {
         'default' => '',
         'description' => 'The language of the entity',
       ],
-      'data_before' => [
+      'entity' => [
         'type' => 'blob',
         'not null' => FALSE,
-        'description' => 'Data before the changes where made',
-        'serialize' => TRUE,
-        'size' => 'big',
-      ],
-      'data_after' => [
-        'type' => 'blob',
-        'not null' => FALSE,
-        'description' => 'Data after the changes where made',
+        'description' => 'The entity data',
         'serialize' => TRUE,
         'size' => 'big',
       ],
     ],
     'primary key' => ['id'],
     'indexes' => [
-      'entity' => ['entity'],
+      'type' => ['type'],
       'action' => ['action'],
       'title' => ['title'],
       'uid' => ['uid'],

@@ -53,10 +53,10 @@ class OverviewForm extends FormBase {
 
     $options = ['any' => '- Any -'];
 
-    $form['filters']['wrapper']['entity'] = [
-      '#title' => 'Entity',
+    $form['filters']['wrapper']['type'] = [
+      '#title' => 'Type',
       '#type' => 'select',
-      '#options' => $options + \Drupal::service('webcomposer_audit.database_storage')->getDistinct('entity', [
+      '#options' => $options + \Drupal::service('webcomposer_audit.database_storage')->getDistinct('type', [
         'callback' => function (&$item) {
           $item = ucwords(str_replace('_', ' ', $item));
         }
@@ -64,7 +64,7 @@ class OverviewForm extends FormBase {
       '#attributes' => [
         'style' => 'padding-top: 5px; padding-bottom: 5px;',
       ],
-      '#default_value' => isset($_SESSION['webcomposer_audit_filter']['entity']) ? $_SESSION['webcomposer_audit_filter']['entity'] : 'any',
+      '#default_value' => isset($_SESSION['webcomposer_audit_filter']['type']) ? $_SESSION['webcomposer_audit_filter']['type'] : 'any',
     ];
 
     $form['filters']['wrapper']['action'] = [
@@ -122,8 +122,8 @@ class OverviewForm extends FormBase {
         'class' => [RESPONSIVE_PRIORITY_MEDIUM]
       ],
       [
-        'data' => $this->t('Entity'),
-        'field' => 'w.entity',
+        'data' => $this->t('Type'),
+        'field' => 'w.type',
         'class' => [RESPONSIVE_PRIORITY_MEDIUM]
       ],
       [
@@ -161,8 +161,8 @@ class OverviewForm extends FormBase {
     foreach ($entries as $key => $value) {
       $title = ucwords($value->title);
 
-      if ($value->eid && $value->entity) {
-        $entity = \Drupal::entityManager()->getStorage($value->entity)->load($value->eid);
+      if ($value->eid && $value->type) {
+        $entity = \Drupal::entityManager()->getStorage($value->type)->load($value->eid);
 
         if ($entity) {
           try {
@@ -196,7 +196,7 @@ class OverviewForm extends FormBase {
 
       $rows[$key] = [
         'title' => $title,
-        'entity' => ucwords(str_replace('_', ' ', $value->entity)),
+        'type' => ucwords(str_replace('_', ' ', $value->type)),
         'action' => ucwords(str_replace('_', ' ', $value->action)),
         'user' => ['data' => $username],
         'date' => \Drupal::service('date.formatter')->format($value->timestamp, 'short'),
@@ -245,7 +245,7 @@ class OverviewForm extends FormBase {
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $keys = [
       'title',
-      'entity',
+      'type',
       'action',
       'uid',
     ];

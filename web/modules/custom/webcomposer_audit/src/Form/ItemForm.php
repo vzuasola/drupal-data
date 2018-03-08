@@ -9,6 +9,8 @@ use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Url;
 
+use Drupal\webcomposer_audit\Storage\AuditStorageInterface;
+
 /**
  *
  */
@@ -21,6 +23,9 @@ class ItemForm extends FormBase {
     $this->database = \Drupal::service('database');
     $this->storage = \Drupal::service('webcomposer_audit.database_storage');
     $this->user = \Drupal::entityManager()->getStorage('user');
+
+    $id = $this->route->getParameter('id');
+    $this->item = $this->storage->get($id);
   }
 
   /**
@@ -34,19 +39,27 @@ class ItemForm extends FormBase {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    $id = $this->route->getParameter('id');
-    $item = $this->storage->get($id);
-
-    if (empty($item)) {
+    if (empty($this->item)) {
       throw new NotFoundHttpException();
     }
 
+    $this->buildInfoForm($form, $form_state);
+    $this->buildComparisonForm($form, $form_state);
+
+    return $form;
+  }
+
+  /**
+   *
+   */
+  private function buildInfoForm(array &$form, FormStateInterface $form_state) {
     $rows = [];
 
+    $item = $this->item;
     $title = ucwords($item['title']);
 
-    if (isset($item['eid']) && isset($item['entity'])) {
-      $entity = \Drupal::entityManager()->getStorage($item['entity'])->load($item['eid']);
+    if (isset($item['eid']) && isset($item['type'])) {
+      $entity = \Drupal::entityManager()->getStorage($item['type'])->load($item['eid']);
       if ($entity) {
         try {
           $title = $this->l($title, $entity->toUrl('edit-form'));
@@ -56,7 +69,6 @@ class ItemForm extends FormBase {
       }
     }
 
-
     $rows['title'] = [
       ['data' => ['#markup' => '<strong>Title</strong>']],
       $title,
@@ -64,7 +76,7 @@ class ItemForm extends FormBase {
 
     $rows['entity'] = [
       ['data' => ['#markup' => '<strong>Entity</strong>']],
-      ucwords(str_replace('_', ' ', $item['entity'])),
+      ucwords(str_replace('_', ' ', $item['type'])),
     ];
 
     $rows['action'] = [
@@ -97,11 +109,6 @@ class ItemForm extends FormBase {
       strtoupper($item['language']),
     ];
 
-    $before = unserialize($item['data_before']);
-    $after = unserialize($item['data_after']);
-
-    $form['#attached']['library'][] = 'system/diff';
-
     $form['table'] = [
       '#type' => 'table',
       '#prefix' => '
@@ -110,20 +117,38 @@ class ItemForm extends FormBase {
       ',
       '#rows' => $rows,
     ];
+  }
 
-    $textBefore = var_export($before->toArray(), TRUE);
-    $textAfter = var_export($after->toArray(), TRUE);
+  /**
+   *
+   */
+  private function buildComparisonForm(array &$form, FormStateInterface $form_state) {
+    $item = $this->item;
 
-    $textBefore = explode(PHP_EOL, $textBefore);
-    $textAfter = explode(PHP_EOL, $textAfter);
+    $entity = unserialize($this->item['entity']);
 
-    $textBefore = array_filter($textBefore, function ($item) {
-      return !empty(($item));
-    });
+    switch ($item['action']) {
+      case AuditStorageInterface::UPDATE:
+        $before = $entity->original;
 
-    $textAfter = array_filter($textAfter, function ($item) {
-      return !empty(($item));
-    });
+        $textBefore = $this->getLineChangesFromEntity($before);
+        $textAfter = $this->getLineChangesFromEntity($entity);
+        break;
+
+      case AuditStorageInterface::ADD:
+        $textBefore = [];
+        $textAfter = $this->getLineChangesFromEntity($entity);
+        break;
+
+      case AuditStorageInterface::DELETE:
+        $textBefore = $this->getLineChangesFromEntity($entity);
+        $textAfter = [];
+        break;
+      
+      default:
+        // we do not know what type of action this is so we skip diff generation
+        return;
+    }
 
     $diff = new Diff($textBefore, $textAfter);
 
@@ -153,7 +178,7 @@ class ItemForm extends FormBase {
       '#rows' => $formatter->format($diff),
     ];
 
-    return $form;
+    $form['#attached']['library'][] = 'system/diff'; 
   }
 
   /**
@@ -167,5 +192,19 @@ class ItemForm extends FormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
+  }
+
+  /**
+   * 
+   */
+  private function getLineChangesFromEntity($entity) {
+    $map = var_export($entity->toArray(), TRUE);
+    $lines = explode(PHP_EOL, $map);
+
+    return $lines;
+
+    // return array_filter($lines, function ($item) {
+    //   return !empty(trim($item));
+    // });
   }
 }
