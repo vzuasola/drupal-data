@@ -58,6 +58,10 @@ webcomposer_config.icore_games_integration:
       type: text
       label: 'Fallback Error Button'
 
+    safari_notif_message:
+      type: text_format
+      label: 'Safari Notification Message'
+
 webcomposer_config.games_exchange_provider:
   type: config_object
   label: 'Exchange Integration Configuration'
