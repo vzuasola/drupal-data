@@ -15,3 +15,10 @@ webcomposer_games.icore_games_integration_schema:
   base_route_name: webcomposer_games.icore_games_integration_form
   names:
     - 'webcomposer_config.icore_games_integration'
+
+webcomposer_games.games_exchange_provider_schema:
+  title: 'exchange Game Configuration'
+  base_route_name: webcomposer_games.games_exchange_provider_form
+  names:
+    - 'webcomposer_config.games_exchange_provider'
+
