@@ -21,6 +21,18 @@ class OverviewForm extends FormBase {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
+    if (!empty($_SESSION['webcomposer_audit_filter'])) {
+      $message = "Filters are applied for this view. You may see fewer results. Reset the filter to view all entries.";
+
+      $form['message'] = [
+        '#theme' => 'status_messages',
+        '#message_list' => [
+          'warning' => [$message],
+        ],
+      ];
+    }
+
+
     $this->buildFilterForm($form, $form_state);
     $this->buildTableForm($form, $form_state);
 

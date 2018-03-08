@@ -122,7 +122,7 @@ class ItemForm extends FormBase {
   /**
    *
    */
-  private function buildComparisonForm(array &$form, FormStateInterface $form_state) {
+  private function xbuildComparisonForm(array &$form, FormStateInterface $form_state) {
     $item = $this->item;
 
     $entity = unserialize($this->item['entity']);
@@ -182,6 +182,85 @@ class ItemForm extends FormBase {
   }
 
   /**
+   *
+   */
+  private function buildComparisonForm(array &$form, FormStateInterface $form_state) {
+    $item = $this->item;
+
+    $entity = unserialize($this->item['entity']);
+
+    switch ($item['action']) {
+      case AuditStorageInterface::UPDATE:
+        $compare = $this->generateCompareDiff($entity->original, $entity);
+        break;
+
+      case AuditStorageInterface::ADD:
+        $compare = $this->generateCompareDiff([], $entity);
+        break;
+
+      case AuditStorageInterface::DELETE:
+        $compare = $this->generateCompareDiff($entity, []);
+        break;
+
+      default:
+        // we do not know what type of action this is so we skip diff generation
+        return;
+    }
+
+    $formatter = \Drupal::service('diff.formatter');
+    $formatter->show_header = FALSE;
+
+
+    foreach ($compare as $key => $value) {
+      $diff = new Diff($value['left'], $value['right']);
+
+      if (!$diff->isEmpty()) {
+        $rows[$key] = [
+          '#type' => 'table',
+          '#attributes' => [
+            'class' => ['diff'],
+          ],
+          '#header' => [
+            ['data' => ucwords($key), 'colspan' => '4', 'style' => 'padding: 5px 12px;'],
+          ],
+          '#rows' => $formatter->format($diff),
+        ];
+      }
+    }
+
+    if (!empty($rows)) {
+      $form['diff_wrapper'] = [
+        '#type' => 'container',
+        '#attributes' => [
+          'style' => 'margin-top: 50px;',
+        ],
+      ];
+
+      $form['diff_wrapper']['diff'] = [
+        '#type' => 'table',
+        '#prefix' => '
+          <h4 style="margin-top: 50px;">Comparison</h4>
+          <p>Differences during this audit event</p>
+        ',
+        '#attributes' => [
+          'class' => ['diff'],
+          'style' => 'margin-bottom: 0;'
+        ],
+        '#header' => [
+          ['data' => t('Before'), 'colspan' => '2', 'style' => 'border: solid transparent'],
+          ['data' => t('After'), 'colspan' => '2', 'style' => 'border: solid transparent'],
+        ],
+      ];
+
+      $form['diff_wrapper'] += $rows;
+    }
+
+    $form['#attached']['library'][] = 'system/diff'; 
+  }
+
+  
+
+  /**
    * {@inheritdoc}
    */
   public function validateForm(array &$form, FormStateInterface $form_state) {
@@ -197,14 +276,47 @@ class ItemForm extends FormBase {
   /**
    * 
    */
+  private function generateCompareDiff($before, $after) {
+    $map = [];
+
+    $before = $this->getLineChangesFromEntity($before);
+    $after = $this->getLineChangesFromEntity($after);
+
+    $before_keys = array_keys($before);
+    $after_keys = array_keys($after);
+
+    $keys = array_replace($before_keys, $after_keys);
+
+    foreach ($keys as $key) {
+      $map[$key]['left'] = [""];
+      $map[$key]['right'] = [""];
+
+      if (!empty($before[$key])) {
+        $map[$key]['left'] = [
+          $before[$key]
+        ];
+      }
+
+      if (!empty($after[$key])) {
+        $map[$key]['right'] = [
+          $after[$key]
+        ];
+      }
+    }
+
+    return $map;
+  }
+
+  /**
+   * 
+   */
   private function getLineChangesFromEntity($entity) {
-    $map = var_export($entity->toArray(), TRUE);
-    $lines = explode(PHP_EOL, $map);
+    $map = [];
 
-    return $lines;
+    foreach ($entity as $key => $value) {
+      $map[$value->getName()] = $value->getString();
+    }
 
-    // return array_filter($lines, function ($item) {
-    //   return !empty(trim($item));
-    // });
+    return $map;
   }
 }
