@@ -45,7 +45,7 @@ class DatabaseAuditStorage implements AuditStorageInterface {
 
     if (isset($options['where'])) {
       foreach ($options['where'] as $key => $value) {
-        $query->condition($key, "%$value%", 'like');
+        $query->condition("w.$key", "%$value%", 'like');
       }
     }
 
