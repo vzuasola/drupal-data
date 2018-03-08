@@ -144,7 +144,7 @@ class ItemForm extends FormBase {
         $textBefore = $this->getLineChangesFromEntity($entity);
         $textAfter = [];
         break;
-      
+
       default:
         // we do not know what type of action this is so we skip diff generation
         return;
@@ -210,7 +210,6 @@ class ItemForm extends FormBase {
     $formatter = \Drupal::service('diff.formatter');
     $formatter->show_header = FALSE;
 
-
     foreach ($compare as $key => $value) {
       $diff = new Diff($value['left'], $value['right']);
 
@@ -258,8 +257,6 @@ class ItemForm extends FormBase {
     $form['#attached']['library'][] = 'system/diff'; 
   }
 
-  
-
   /**
    * {@inheritdoc}
    */
@@ -274,7 +271,7 @@ class ItemForm extends FormBase {
   }
 
   /**
-   * 
+   *
    */
   private function generateCompareDiff($before, $after) {
     $map = [];
@@ -308,7 +305,7 @@ class ItemForm extends FormBase {
   }
 
   /**
-   * 
+   *
    */
   private function getLineChangesFromEntity($entity) {
     $map = [];
