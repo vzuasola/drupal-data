@@ -1,0 +1,21 @@
+uuid: a55db20d-4361-483b-9bba-29730de5d43a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_banner_link_target
+    - node.type.page
+  module:
+    - options
+id: node.page.field_banner_link_target
+field_name: field_banner_link_target
+entity_type: node
+bundle: page
+label: 'Banner Link Target'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
