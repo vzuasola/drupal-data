@@ -1,0 +1,37 @@
+webcomposer_audit.admin_settings:
+  path: 'admin/config/webcomposer/audit'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Webcomposer Audit'
+  requirements:
+    _permission: 'administer site configuration'
+
+webcomposer_audit.audit_form:
+  path: '/admin/config/webcomposer/audit/view'
+  defaults:
+    _form: '\Drupal\webcomposer_audit\Form\OverviewForm'
+    _title: 'Audit Logs'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE
+
+webcomposer_audit.audit_item_view:
+  path: '/admin/config/webcomposer/audit/view/{id}'
+  defaults:
+    _form: '\Drupal\webcomposer_audit\Form\ItemForm'
+    _title: 'Log Item'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE
+
+webcomposer_audit.audit_reset:
+  path: '/admin/config/webcomposer/audit/reset'
+  defaults:
+    _form: '\Drupal\webcomposer_audit\Form\ResetForm'
+    _title: 'Reset Audit Logs'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE
