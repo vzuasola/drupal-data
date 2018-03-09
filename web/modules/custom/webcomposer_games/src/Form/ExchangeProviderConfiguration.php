@@ -4,7 +4,7 @@ namespace Drupal\webcomposer_games\Form;
 
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
-
+c
 /**
  * Exchange configuration class
  */
