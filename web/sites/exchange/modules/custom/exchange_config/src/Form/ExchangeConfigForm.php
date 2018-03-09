@@ -192,8 +192,9 @@ class ExchangeConfigForm extends ConfigFormBase {
           $file->save();
           $file_usage = \Drupal::service('file.usage');
           $file_usage->add($file, 'exchange_config', 'image', $fid[0]);
+          $file_image_url = file_create_url($file->getFileUri());
 
-          $this->config('exchange_config.exchange_configuration')->set("blocking_country_not_found_image_url", file_create_url($file->getFileUri()))->save();
+          $this->config('exchange_config.exchange_configuration')->set("blocking_country_not_found_image_url", $file_image_url)->save();
         }
         else {
           $this->config('exchange_config.exchange_configuration')->set("blocking_country_not_found_image_url", null);
@@ -207,8 +208,9 @@ class ExchangeConfigForm extends ConfigFormBase {
           $file->save();
           $file_usage = \Drupal::service('file.usage');
           $file_usage->add($file, 'exchange_config', 'image', $fid[0]);
+          $file_currency_url = file_create_url($file->getFileUri());
 
-          $this->config('exchange_config.exchange_configuration')->set("blocking_currency_not_found_image_url", file_create_url($file->getFileUri()))->save();
+          $this->config('exchange_config.exchange_configuration')->set("blocking_currency_not_found_image_url", $file_currency_url)->save();
         }
         else {
           $this->config('exchange_config.exchange_configuration')->set("blocking_currency_not_found_image_url", null);
