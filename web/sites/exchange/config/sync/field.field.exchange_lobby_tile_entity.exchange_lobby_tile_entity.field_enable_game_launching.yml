@@ -1,0 +1,24 @@
+uuid: 5ad72bf8-0d1b-4c5e-a010-c0ad265102cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.exchange_lobby_tile_entity.field_enable_game_launching
+  module:
+    - exchange_lobby_tile
+id: exchange_lobby_tile_entity.exchange_lobby_tile_entity.field_enable_game_launching
+field_name: field_enable_game_launching
+entity_type: exchange_lobby_tile_entity
+bundle: exchange_lobby_tile_entity
+label: 'Enable Game Launching'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

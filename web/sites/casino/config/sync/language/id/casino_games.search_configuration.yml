@@ -1,0 +1,16 @@
+recommendation_message:
+  value: "<p><span class=\"text-18\"><strong>\"{search_key}\"</strong>tidak ditemukan</span></p>\r\n\r\n<p>Silahkan coba permainan yang kami usulkan ini</p>\r\n"
+  format: basic_html
+recommendation_message_negative:
+  value: "<p><span class=\"text-18\"><strong>\"{search_key}\"</strong>tidak ditemukan</span></p>\r\n"
+  format: basic_html
+search_placeholder: Cari
+search_result_message:
+  value: "<p><span class=\"text-18\">Menampilkan&nbsp;<strong><em><u>{total}</u></em>&nbsp;</strong>hasil pencarian untuk <strong>\"{keyword}\"</strong></span></p>\r\n"
+  format: basic_html
+filter_message:
+  value: "<p><span class=\"text-18\">Hasil Filter Tidak Ditemukan</span></p>\r\n\r\n<p>Silahkan coba permainan yang kami usulkan ini</p>\r\n"
+  format: basic_html
+filter_message_negative:
+  value: "<p><span class=\"text-18\">Hasil Filter Tidak Ditemukan</span></p>\r\n"
+  format: basic_html

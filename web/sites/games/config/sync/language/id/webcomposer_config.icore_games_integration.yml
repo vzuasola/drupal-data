@@ -1,0 +1,4 @@
+unsupported_currencies_title: 'Mata Uang Tidak Didukung'
+unsupported_currencies_message:
+  value: "<p>Maaf, <b>{game_name}</b> dari <b>{game_provider}</b> tidak mendukung mata uang Anda.<br />\r\nSilakan coba permainan lainnya.</p>\r\n"
+  format: basic_html

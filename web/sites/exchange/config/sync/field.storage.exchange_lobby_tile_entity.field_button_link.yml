@@ -1,0 +1,19 @@
+uuid: be10ce1d-d800-48a5-89d8-a6c103c4a66e
+langcode: en
+status: true
+dependencies:
+  module:
+    - exchange_lobby_tile
+    - link
+id: exchange_lobby_tile_entity.field_button_link
+field_name: field_button_link
+entity_type: exchange_lobby_tile_entity
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -60,7 +60,7 @@ function _games_config_taxonomy_vocabulary_load() {
   $request = \Drupal::request();
   $current_path = $request->getPathInfo();
   $path_args = explode('/', $current_path);
-  $tid = $path_args[4];
+  $tid = $path_args[4] ?? null;
   if($path_args[2] == "taxonomy" && $path_args[3] == "term") {
     $query = \Drupal::entityQuery('taxonomy_term');
     $query->condition('vid', 'games_category');

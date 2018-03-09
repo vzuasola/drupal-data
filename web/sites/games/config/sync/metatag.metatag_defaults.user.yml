@@ -1,0 +1,11 @@
+uuid: c19a5486-f184-4041-8904-2354b2d9b002
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: JONk1mhmB2Bpji-kyLf3JBBVro-w1dBtN2CuxmvEimU
+id: user
+label: User
+tags:
+  title: '[user:name] | [site:name]'
+  description: '[site:name]'

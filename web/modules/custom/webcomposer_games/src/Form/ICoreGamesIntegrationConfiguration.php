@@ -19,7 +19,8 @@ class ICoreGamesIntegrationConfiguration extends ConfigFormBase {
         'skywind' => 'Skywind',
         'voidbridge' => 'Voidbridge',
         'gold_deluxe' => 'Gold Deluxe',
-        'video_racing' => 'Video Racing '
+        'video_racing' => 'Video Racing',
+        'sa_gaming' => 'SA Gaming'
     ];
 
   /**
@@ -42,87 +43,101 @@ class ICoreGamesIntegrationConfiguration extends ConfigFormBase {
   public function buildForm(array $form, FormStateInterface $form_state) {
     $config = $this->config('webcomposer_config.icore_games_integration');
 
-    $form['advanced'] = array(
+    $form['advanced'] = [
       '#type' => 'vertical_tabs',
       '#title' => t('ICore Games Integration'),
-    );
+    ];
 
     foreach (self::ICORE_GAME_PROVIDERS as $key => $value) {
-      $form[$key] = array(
+      $form[$key] = [
         '#type' => 'details',
         '#title' => t($value),
         '#group' => 'advanced',
-      );
-      $form[$key]["{$key}_currency"] = array(
+      ];
+      $form[$key]["{$key}_currency"] = [
         '#type' => 'textarea',
         '#title' => t('Supported Currencies'),
         '#description' => $this->t("Currency mapping for {$value}."),
         '#default_value' => $config->get("{$key}_currency")
-      );
-      $form[$key]["{$key}_language_mapping"] = array(
+      ];
+      $form[$key]["{$key}_language_mapping"] = [
         '#type' => 'textarea',
         '#title' => t('Language Mapping'),
         '#description' => $this->t("Language mapping for {$value}."),
         '#default_value' => $config->get("{$key}_language_mapping")
-      );
+      ];
     }
 
-    $form['message'] = array(
+    $form['message'] = [
       '#type' => 'details',
-      '#title' => t('Default Message'),
+      '#title' => t('Unsupported Currency Message'),
       '#group' => 'advanced',
-    );
+    ];
 
-    $form['message']['unsupported_currencies_title'] = array(
+    $form['message']['unsupported_currencies_title'] = [
       '#type' => 'textfield',
       '#title' => t('Not supported currency title'),
       '#description' => $this->t('Not allowed message title for currency.'),
       '#default_value' => $config->get('unsupported_currencies_title')
-    );
+    ];
 
     $config_message = $config->get('unsupported_currencies_message');
-    $form['message']['unsupported_currencies_message'] = array(
+    $form['message']['unsupported_currencies_message'] = [
       '#type' => 'text_format',
       '#title' => $this->t('Not allowed message for currency.'),
       '#default_value' => $config_message['value'],
       '#format' => $config_message['format'],
-    );
+    ];
 
-    $form['message']['unsupported_currencies_button'] = array(
+    $form['message']['unsupported_currencies_button'] = [
       '#type' => 'textfield',
       '#title' => t('Unsupported Currency button'),
       '#description' => $this->t('Defines the Unsupported Currency LightBox Ok button'),
       '#default_value' => $config->get('unsupported_currencies_button')
-    );
+    ];
 
-    $form['message']['game_provider_mapping'] = array(
+    $form['message']['game_provider_mapping'] = [
       '#type' => 'textarea',
       '#title' => t('Game Provider Mapping for Unsupported Currency'),
       '#description' => $this->t('Game provider mapping. Pattern should be {game_provider_key}|{game provider name}'),
       '#default_value' => $config->get('game_provider_mapping')
-    );
+    ];
 
-    $form['message']['fallback_error_title'] = array(
+    $form['message']['fallback_error_title'] = [
       '#type' => 'textfield',
       '#title' => t('Fallback Error Title'),
       '#description' => $this->t('Fallback error Title.'),
       '#default_value' => $config->get('fallback_error_title')
-    );
+    ];
 
     $config_message = $config->get('fallback_error_message');
-    $form['message']['fallback_error_message'] = array(
+    $form['message']['fallback_error_message'] = [
       '#type' => 'text_format',
       '#title' => $this->t('Fallback Error Message'),
       '#default_value' => $config_message['value'],
       '#format' => $config_message['format'],
-    );
+    ];
 
-    $form['message']['fallback_error_button'] = array(
+    $form['message']['fallback_error_button'] = [
       '#type' => 'textfield',
       '#title' => t('Fallback error button'),
       '#description' => $this->t('Fallback Error LightBox Ok button'),
       '#default_value' => $config->get('fallback_error_button')
-    );
+    ];
+
+    $form['safari_notif'] = [
+      '#type' => 'details',
+      '#title' => t('Safari Notification Message'),
+      '#group' => 'advanced',
+    ];
+
+    $config_safari = $config->get('safari_notif_message');
+    $form['safari_notif']['safari_notif_message'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('Safari Notification Message.'),
+      '#default_value' => $config_safari['value'],
+      '#format' => $config_safari['format'],
+    ];
 
     return parent::buildForm($form, $form_state);
   }
@@ -150,6 +165,7 @@ class ICoreGamesIntegrationConfiguration extends ConfigFormBase {
       'fallback_error_title',
       'fallback_error_message',
       'fallback_error_button',
+      'safari_notif_message',
     ];
 
     $result = array_merge($providers, $keys);

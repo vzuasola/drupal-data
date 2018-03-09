@@ -1,5 +1,5 @@
-uuid: 1e2a1e6b-b904-4175-bece-66fb30e20bf6
-langcode: en
+uuid: 63dded5f-dc89-4774-827a-4abadf9a4705
+langcode: zh-hans
 status: true
 dependencies:
   config:
@@ -13,7 +13,7 @@ bundle: games_category
 mode: default
 content:
   field_alias:
-    weight: 4
+    weight: 3
     settings:
       size: 60
       placeholder: ''
@@ -21,14 +21,7 @@ content:
     type: string_textfield
     region: content
   field_disable:
-    weight: 5
-    settings:
-      display_label: true
-    third_party_settings: {  }
-    type: boolean_checkbox
-    region: content
-  field_show_to_kebab:
-    weight: 3
+    weight: 4
     settings:
       display_label: true
     third_party_settings: {  }
@@ -55,4 +48,5 @@ content:
     third_party_settings: {  }
 hidden:
   description: true
+  field_show_to_kebab: true
   path: true

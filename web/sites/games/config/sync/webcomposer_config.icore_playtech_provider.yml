@@ -1,0 +1,3 @@
+dafabetgames_currency: "RMB\r\nCNY\r\nMYR\r\nTHB\r\nKRW\r\nINR\r\nIDR\r\nVND\r\nUSD\r\nEUR\r\nGBP\r\nPLN"
+dafabetgames_language_mapping: "en|en\r\nsc|zh-cn\r\nch|ch\r\nth|th\r\nvn|en\r\nkr|ko\r\nid|en"
+dafabetgames_iapiconf_override: "loginServer|login.megaims2.com\r\ncasinoname|dafabetgames\r\nclientSkin|dafabetgames\r\nclientType|casino\r\nsystemId|82\r\nserviceType|GamePlay\r\nclientUrl_casino|https://cachebanner-ew5.megaims2.com/casinoclient.html"

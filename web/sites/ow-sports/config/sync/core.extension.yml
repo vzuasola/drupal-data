@@ -47,7 +47,6 @@ module:
   node: 0
   options: 0
   owsports_config: 0
-  owsports_dropdown_widgets: 0
   paragraphs: 0
   paragraphs_type_permissions: 0
   path: 0
@@ -74,8 +73,6 @@ module:
   webcomposer_dm: 0
   webcomposer_domain_import: 0
   webcomposer_downloadables: 0
-  webcomposer_dropdown_menu: 0
-  webcomposer_dropdown_promotion: 0
   webcomposer_editor: 0
   webcomposer_floating_banners: 0
   webcomposer_games: 0

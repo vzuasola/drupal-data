@@ -1,0 +1,21 @@
+uuid: f9989874-c75e-426a-afd4-7f268dd4f7ab
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_banner_content
+    - node.type.page
+  module:
+    - text
+id: node.page.field_banner_content
+field_name: field_banner_content
+entity_type: node
+bundle: page
+label: 'Banner content'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

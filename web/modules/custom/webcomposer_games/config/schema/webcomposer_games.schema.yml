@@ -1,4 +1,3 @@
-
 webcomposer_config.games_playtech_provider:
   type: config_object
   label: 'Playtech Provider Configuration'
@@ -58,3 +57,15 @@ webcomposer_config.icore_games_integration:
     fallback_error_button:
       type: text
       label: 'Fallback Error Button'
+
+    safari_notif_message:
+      type: text_format
+      label: 'Safari Notification Message'
+
+webcomposer_config.games_exchange_provider:
+  type: config_object
+  label: 'Exchange Integration Configuration'
+  mapping:
+    exchange_game_url:
+      type: text
+      label: 'Exchange Game Url'

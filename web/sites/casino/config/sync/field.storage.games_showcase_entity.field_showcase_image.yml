@@ -6,6 +6,8 @@ dependencies:
     - file
     - games_showcase
     - image
+_core:
+  default_config_hash: 5Ba0wgxGN87K3k8p9EgVthCkSFiUkGG4et89mlwkcdc
 id: games_showcase_entity.field_showcase_image
 field_name: field_showcase_image
 entity_type: games_showcase_entity

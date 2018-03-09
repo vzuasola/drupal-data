@@ -4,6 +4,8 @@ status: true
 dependencies:
   module:
     - games_showcase
+_core:
+  default_config_hash: jnD5VysW0Yd2kZQFY0dOhAxKsJ2m72U6gHfgMXW_AkQ
 id: games_showcase_entity.field_title
 field_name: field_title
 entity_type: games_showcase_entity

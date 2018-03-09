@@ -1,0 +1,8 @@
+uuid: 142ea926-f1e0-44ee-b2f2-9e0ff2456322
+langcode: en
+status: true
+dependencies: {  }
+id: mobile-quicklinks-kr
+label: 'Mobile Quicklinks KR'
+description: ''
+locked: false

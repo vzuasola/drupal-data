@@ -1,0 +1,27 @@
+uuid: 78d6366f-9d74-4e26-a46b-8cdc665453e5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.exchange_lobby_tile_entity.field_tile_video
+  module:
+    - exchange_lobby_tile
+    - file
+id: exchange_lobby_tile_entity.exchange_lobby_tile_entity.field_tile_video
+field_name: field_tile_video
+entity_type: exchange_lobby_tile_entity
+bundle: exchange_lobby_tile_entity
+label: 'Tile Video'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: txt
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

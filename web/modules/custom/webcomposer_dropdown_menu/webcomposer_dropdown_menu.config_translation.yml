@@ -1,0 +1,5 @@
+webcomposer_config.dropdown_menu_settings_schema:
+  title: 'Dropdown Menu Settings'
+  base_route_name: webcomposer_dropdown_menu.settings_form
+  names:
+    - 'webcomposer_config.dropdown_menu_settings'

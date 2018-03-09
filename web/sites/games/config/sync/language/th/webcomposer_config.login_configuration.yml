@@ -5,6 +5,7 @@ notification_content:
   format: basic_html
   value: "<p>การทำรายการของคุณสิ้นสุดลงเนื่องจากไม่มีการดำเนินการใดๆ</p>\r\n"
 lightbox_blurb: 'ยังไม่เป็นสมาชิก?'
+username_placeholder: ยูสเซอร์เนม/ไอดี
 password_placeholder: รหัสผ่าน
 login_bottom_label: เข้าสู่ระบบ
 error_message_blank_username: กรุณากรอกยูสเซอร์เนม

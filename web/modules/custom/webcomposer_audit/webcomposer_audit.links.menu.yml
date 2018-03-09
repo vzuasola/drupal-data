@@ -1,0 +1,12 @@
+webcomposer_audit.admin_list:
+  title: 'Webcomposer Audit Log'
+  parent: system.admin_config
+  route_name: webcomposer_audit.admin_settings
+  description: 'Manages Webcomposer Cache'
+
+webcomposer_audit.audit_form:
+  title: 'Audit Logs'
+  route_name: webcomposer_audit.audit_form
+  description: 'Views audit log entries'
+  parent: webcomposer_audit.admin_list
+

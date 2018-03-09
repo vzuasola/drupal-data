@@ -1,0 +1,24 @@
+play_text: 開始遊戲
+play_for_fun_text: 免費參與
+game_info_text: 遊戲詳情
+kebab_menu_text: 更多信息
+load_more_text: 加載更多遊戲
+freeplay_lightbox_title: 通知
+freeplay_lightbox_content:
+  value: "<p>免費遊戲暫無法使用。<br />\r\n您仍可進行真錢遊戲。</p>\r\n\r\n<p><a class=\"btn btn-ok btn-medium btn-yellow\" href=\"#\" target=\"_blank\">進入真錢遊戲</a>&nbsp; &nbsp;<a class=\"btn btn-gray btn-medium\" href=\"{domain:entry}/{lang}/casino/\" target=\"_self\">返回遊戲大廳</a></p>\r\n"
+  format: basic_html
+game_real_play_text: 玩真錢遊戲
+favorites_text: 最喜歡
+recently_played_text: 最近遊戲
+filter_icon: 篩選
+filter_header: 篩選遊戲
+filter_submit: 提交
+pas_error_lightbox_title: 清除
+filter_clear: 清除
+pas_error_lightbox_content:
+  value: "<p>&nbsp;</p>\r\n\r\n<p>登錄驗證錯誤，無法啟動遊戲。請重新登錄。</p>\r\n"
+  format: basic_html
+html5_lightbox_title: 提醒！
+html5_lightbox_content:
+  value: "<p>您當前使用的瀏覽器版本不支持HTML5遊戲。請將瀏覽器更新至最新版本繼續遊戲。</p>\r\n\r\n<p><a class=\"btn btn-yellow btn-small btn-ok-launch\" href=\"#\" target=\"_blank\">發送</a></p>\r\n"
+  format: basic_html
