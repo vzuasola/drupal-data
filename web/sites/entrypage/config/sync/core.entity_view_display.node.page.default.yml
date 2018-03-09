@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.page.field_banner_content_position
     - field.field.node.page.field_banner_link
     - field.field.node.page.field_banner_link_target
+    - field.field.node.page.field_hide_right_side_block
     - field.field.node.page.field_image
     - field.field.node.page.field_log_in_state
     - node.type.page
@@ -63,6 +64,16 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: list_default
+    region: content
+  field_hide_right_side_block:
+    weight: 108
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
     region: content
   field_image:
     weight: 104
