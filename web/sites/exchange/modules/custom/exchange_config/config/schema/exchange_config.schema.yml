@@ -5,6 +5,7 @@ exchange_config.exchange_configuration:
     trust_element_title:
       type: label
       label: 'Trust Element Title'
+      translatable: true
     trust_element_content:
       type: text_format
       label: 'Trust Element Content'
@@ -17,3 +18,27 @@ exchange_config.exchange_configuration:
       type: managed_file
       label: 'Lobby Tiles Background'
       translatable: true
+    blocking_country_not_found_title:
+      type: label
+      label: 'Exchange Blocking Title'
+      translatable: true
+    blocking_country_not_found_content:
+      type: text_format
+      label: 'Exchange Blocking Content'
+      translatable: true
+    blocking_country_not_found_image:
+      type: managed_file
+      label: 'Exchange Blocking Background'
+      translatable: true
+    blocking_currency_not_found_title:
+      type: label
+      label: 'Exchange Blocking Title'
+      translatable: true
+    blocking_currency_not_found_content:
+      type: text_format
+      label: 'Exchange Blocking Content'
+      translatable: true
+    blocking_currency_not_found_image:
+      type: managed_file
+      label: 'Exchange Blocking Background'
+      translatable: true  

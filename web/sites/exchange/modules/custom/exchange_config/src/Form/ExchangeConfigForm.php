@@ -38,7 +38,7 @@ class ExchangeConfigForm extends ConfigFormBase {
 
     $form['exchange_gen_config'] = [
       '#type' => 'details',
-      '#title' => t('exchange General Configurations'),
+      '#title' => t('Exchange General Configurations'),
       '#group' => 'advanced',
     ];
 
@@ -89,6 +89,65 @@ class ExchangeConfigForm extends ConfigFormBase {
       '#default_value' => $config->get('lobby_tiles_alignment'),
     ];
 
+   $form['exchange_blocking_country'] = [
+      '#type' => 'details',
+      '#title' => t('Blocking Country'),
+      '#group' => 'advanced',
+    ];
+    $form['exchange_blocking_country']['blocking_country_not_found_title'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Title'),
+      '#default_value' => $config->get('blocking_country_not_found_title'),
+    ];
+
+    $form['exchange_blocking_country']['blocking_country_not_found_image'] = [
+      '#type' => 'managed_file',
+      '#title' => $this->t('Image'),
+      '#default_value' => $config->get('blocking_country_not_found_image'),
+      '#upload_location' => 'public://',
+      '#upload_validators' => [
+        'file_validate_extensions' => ['gif png jpg jpeg'],
+      ],
+    ];
+
+    $exchange = $config->get('blocking_country_not_found_content');
+    $form['exchange_blocking_country']['blocking_country_not_found_content'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('Content'),
+      '#default_value' => $exchange['value'],
+      '#format' => $exchange['format'],
+    ];
+
+     $form['exchange_blocking_currency'] = [
+      '#type' => 'details',
+      '#title' => t('Blocking Currency'),
+      '#group' => 'advanced',
+    ];
+    $form['exchange_blocking_currency']['blocking_currency_not_found_title'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Title'),
+      '#default_value' => $config->get('blocking_currency_not_found_title'),
+    ];
+
+    $form['exchange_blocking_currency']['blocking_currency_not_found_image'] = [
+      '#type' => 'managed_file',
+      '#title' => $this->t('Image'),
+      '#default_value' => $config->get('blocking_currency_not_found_image'),
+      '#upload_location' => 'public://',
+      '#upload_validators' => [
+        'file_validate_extensions' => ['gif png jpg jpeg'],
+      ],
+    ];
+
+    $exchangecurrency = $config->get('blocking_currency_not_found_content');
+    $form['exchange_blocking_currency']['blocking_currency_not_found_content'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('Content'),
+      '#default_value' => $exchangecurrency['value'],
+      '#format' => $exchangecurrency['format'],
+    ];
+
+
 
     return parent::buildForm($form, $form_state);
   }
@@ -102,6 +161,12 @@ class ExchangeConfigForm extends ConfigFormBase {
       'trust_element_content',
       'lobby_tiles_alignment',
       'exchange_background',
+      'blocking_country_not_found_title',
+      'blocking_country_not_found_content',
+      'blocking_country_not_found_image',
+      'blocking_currency_not_found_title',
+      'blocking_currency_not_found_content',
+      'blocking_currency_not_found_image',
     ];
     foreach ($exchangeConfig as $keys) {
       if ($keys == 'exchange_background') {
@@ -117,6 +182,36 @@ class ExchangeConfigForm extends ConfigFormBase {
           $this->config('exchange_config.exchange_configuration')->set("exchange_background_image_url", $file_background_url)->save();
         } else {
           $this->config('exchange_config.exchange_configuration')->set("exchange_background_image_url", null);
+        }
+      }
+      if ($keys == 'blocking_country_not_found_image') {
+        $fid = $form_state->getValue('blocking_country_not_found_image');
+        if ($fid) {
+          $file = File::load($fid[0]);
+          $file->setPermanent();
+          $file->save();
+          $file_usage = \Drupal::service('file.usage');
+          $file_usage->add($file, 'exchange_config', 'image', $fid[0]);
+
+          $this->config('exchange_config.exchange_configuration')->set("blocking_country_not_found_image_url", file_create_url($file->getFileUri()))->save();
+        }
+        else {
+          $this->config('exchange_config.exchange_configuration')->set("blocking_country_not_found_image_url", null);
+        }
+      }
+      if ($keys == 'blocking_currency_not_found_image') {
+        $fid = $form_state->getValue('blocking_currency_not_found_image');
+        if ($fid) {
+          $file = File::load($fid[0]);
+          $file->setPermanent();
+          $file->save();
+          $file_usage = \Drupal::service('file.usage');
+          $file_usage->add($file, 'exchange_config', 'image', $fid[0]);
+
+          $this->config('exchange_config.exchange_configuration')->set("blocking_currency_not_found_image_url", file_create_url($file->getFileUri()))->save();
+        }
+        else {
+          $this->config('exchange_config.exchange_configuration')->set("blocking_currency_not_found_image_url", null);
         }
       }
       $this->config('exchange_config.exchange_configuration')->set($keys, $form_state->getValue($keys))->save();

@@ -105,7 +105,7 @@ class ExchangeRestResource extends ResourceBase {
       switch ($id) {
         case 'exchange_configuration':
           $file_id = $data['exchange_background'][0];
-          $data['exchange_background_image_url'] = $this->getFileRelativePath($file_id);
+          $data['exchange_background'] = $this->getFileRelativePath($file_id);
           break;
       }
     } catch (\Exception $e) {
