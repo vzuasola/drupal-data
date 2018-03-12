@@ -1,0 +1,8 @@
+uuid: 0fede396-1a98-462a-b1db-5440a766849d
+langcode: en
+status: true
+dependencies: {  }
+id: customer-support-jp
+label: 'Customer Support JP'
+description: ''
+locked: false
