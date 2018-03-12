@@ -97,3 +97,4 @@ class ExchangeProviderConfiguration extends ConfigFormBase {
     parent::submitForm($form, $form_state);
   }
 }
+
