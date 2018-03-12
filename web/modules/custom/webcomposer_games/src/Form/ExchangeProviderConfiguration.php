@@ -32,7 +32,7 @@ class ExchangeProviderConfiguration extends ConfigFormBase {
     $form['exchange_game_url'] = array(
       '#type' => 'textfield',
       '#title' => t('exchange Game url'),
-      '#description' => $this->t('Defines the exchange Game Url'),
+      '#description' => $this->t('Defines the exchange Game Urls'),
       '#default_value' => $config->get('exchange_game_url')
     );
 
