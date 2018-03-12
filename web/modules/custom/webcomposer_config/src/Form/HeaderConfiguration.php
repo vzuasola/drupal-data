@@ -359,6 +359,12 @@ class HeaderConfiguration extends ConfigFormBase {
       '#required' => TRUE,
     ];
 
+    $form['header_other_group']['password_mask_toggle'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable login form password mask/unmask'),
+      '#default_value' => $config->get('password_mask_toggle') ?? 1,
+    ];
+
     return parent::buildForm($form, $form_state);
   }
 
@@ -396,6 +402,7 @@ class HeaderConfiguration extends ConfigFormBase {
       'balance_mapping',
       'cashier_link',
       'balance_label_override',
+      'password_mask_toggle'
     ];
 
     foreach ($keys as $key) {
