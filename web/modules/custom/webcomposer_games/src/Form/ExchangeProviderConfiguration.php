@@ -4,7 +4,7 @@ namespace Drupal\webcomposer_games\Form;
 
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
-c
+
 /**
  * Exchange configuration class
  */
@@ -97,3 +97,4 @@ class ExchangeProviderConfiguration extends ConfigFormBase {
     parent::submitForm($form, $form_state);
   }
 }
+
