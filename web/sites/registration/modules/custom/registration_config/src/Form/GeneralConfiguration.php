@@ -132,6 +132,14 @@ class GeneralConfiguration extends ConfigFormBase {
       '#required' => TRUE,
     ];
 
+    $form['integration']['mobile_native_app_command'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Mobile Native App CMD'),
+      '#description' => $this->t('Mobile Native App Command that will run after successful Registration'),
+      '#default_value' => $config->get('mobile_native_app_command'),
+      '#required' => TRUE,
+    ];
+
     $form['restriction'] = [
       '#type' => 'details',
       '#title' => $this->t('Restriction'),
@@ -333,7 +341,8 @@ class GeneralConfiguration extends ConfigFormBase {
       'payment_method_headers',
       'deposit_now_text',
       'enable_rs_logging',
-      'native_app_title'
+      'native_app_title',
+      'mobile_native_app_command'
     ];
 
     foreach ($keys as $key) {
