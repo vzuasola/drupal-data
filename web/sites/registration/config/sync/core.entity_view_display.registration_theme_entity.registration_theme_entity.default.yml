@@ -10,7 +10,6 @@ dependencies:
     - field.field.registration_theme_entity.registration_theme_entity.field_banner_font_color
     - field.field.registration_theme_entity.registration_theme_entity.field_banner_highlight
     - field.field.registration_theme_entity.registration_theme_entity.field_default_regvia
-    - field.field.registration_theme_entity.registration_theme_entity.field_downloadable_client
     - field.field.registration_theme_entity.registration_theme_entity.field_error_color
     - field.field.registration_theme_entity.registration_theme_entity.field_form_font_color
     - field.field.registration_theme_entity.registration_theme_entity.field_link_color
@@ -97,16 +96,6 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
-    region: content
-  field_downloadable_client:
-    weight: 19
-    label: above
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    type: boolean
     region: content
   field_error_color:
     weight: 16
