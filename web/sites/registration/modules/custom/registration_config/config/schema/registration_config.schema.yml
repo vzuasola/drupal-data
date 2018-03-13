@@ -54,4 +54,7 @@ registration_config.general_configuration:
     deposit_now_text:
       type: label
       label: 'Deposit Now Button Text'
+    native_app_title:
+      type: label
+      label: 'Native App Page Title'
   langcode: 'en'
