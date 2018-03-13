@@ -82,6 +82,14 @@ class GeneralConfiguration extends ConfigFormBase {
       '#required' => TRUE,
     ];
 
+    $form['general']['native_app_title'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Native App Page Title'),
+      '#description' => $this->t('Header text above the form for native app'),
+      '#default_value' => $config->get('native_app_title'),
+      '#maxlength' => 255,
+    ];
+
     $form['integration'] = [
       '#type' => 'details',
       '#title' => $this->t('Integration'),
@@ -324,7 +332,8 @@ class GeneralConfiguration extends ConfigFormBase {
       'without_payment_method',
       'payment_method_headers',
       'deposit_now_text',
-      'enable_rs_logging'
+      'enable_rs_logging',
+      'native_app_title'
     ];
 
     foreach ($keys as $key) {
