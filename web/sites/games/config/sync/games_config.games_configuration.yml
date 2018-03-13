@@ -30,3 +30,4 @@ pas_error_lightbox_title: ''
 pas_error_lightbox_content:
   value: "<p>&nbsp;</p>\r\n\r\n<p>Unable to launch game due to login authentication error. Please re-login..</p>\r\n\r\n<p><a class=\"btn btn-ok btn-small btn-yellow\" href=\"#\" target=\"_blank\">OK</a></p>\r\n"
   format: basic_html
+drawer_switch: 1

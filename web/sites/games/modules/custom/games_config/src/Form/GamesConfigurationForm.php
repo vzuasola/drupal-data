@@ -37,6 +37,7 @@ class GamesConfigurationForm extends ConfigFormBase {
     $this->gamsThumbnailSection($form, $config);
     $this->gamePageLightboxSection($form, $config);
     $this->gameFilterSection($form, $config);
+    $this->gameDrawerSection($form, $config);
 
     return parent::buildForm($form, $form_state);
   }
@@ -72,6 +73,7 @@ class GamesConfigurationForm extends ConfigFormBase {
       'filter_header',
       'filter_submit',
       'filter_clear',
+      'drawer_switch'
     );
 
     foreach ($keys as $key) {
@@ -349,6 +351,23 @@ class GamesConfigurationForm extends ConfigFormBase {
       '#description' => $this->t('The text to display on clear botton of filter lightbox'),
       '#default_value' => $config->get('filter_clear'),
       '#required' => TRUE,
+    );
+  }
+
+  private function gameDrawerSection(&$form, $config) {
+    $form['drawer'] = array(
+      '#type' => 'details',
+      '#title' => $this->t('Game Drawer'),
+      '#collapsible' => TRUE,
+      '#group' => 'games_configuration_tab',
+    );
+
+    $form['drawer']['drawer_switch'] = array(
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable Game Drawer'),
+      '#description' => $this->t('Enable Game Drawer feature'),
+      '#default_value' => $config->get('drawer_switch'),
+      '#required' => FALSE,
     );
   }
 }
