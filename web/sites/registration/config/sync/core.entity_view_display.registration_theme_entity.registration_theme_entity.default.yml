@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.registration_theme_entity.registration_theme_entity.field_application
     - field.field.registration_theme_entity.registration_theme_entity.field_asterisk_color
     - field.field.registration_theme_entity.registration_theme_entity.field_background_color
     - field.field.registration_theme_entity.registration_theme_entity.field_background_image
@@ -29,6 +30,7 @@ dependencies:
     - color_field
     - image
     - link
+    - options
     - registration_theme
     - text
 id: registration_theme_entity.registration_theme_entity.default
@@ -36,6 +38,13 @@ targetEntityType: registration_theme_entity
 bundle: registration_theme_entity
 mode: default
 content:
+  field_application:
+    weight: 27
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
   field_asterisk_color:
     weight: 17
     label: above
