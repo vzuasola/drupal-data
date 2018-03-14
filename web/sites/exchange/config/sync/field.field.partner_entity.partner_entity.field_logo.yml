@@ -1,29 +1,22 @@
-uuid: 2241ec9d-6b22-488d-9d42-5cab87bdeebe
+uuid: 7a19be6a-40ea-4716-9ce2-a0ca2a1c9783
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_sponsor_logo
-    - paragraphs.paragraphs_type.sponsorship
+    - field.storage.partner_entity.field_logo
   module:
-    - content_translation
     - image
-third_party_settings:
-  content_translation:
-    translation_sync:
-      file: file
-      alt: '0'
-      title: '0'
+    - webcomposer_partner
 _core:
-  default_config_hash: kmtMyziochIXKVG1rxltQuM8wKS8h1q1xf58pyHRhrY
-id: paragraph.sponsorship.field_sponsor_logo
-field_name: field_sponsor_logo
-entity_type: paragraph
-bundle: sponsorship
-label: 'Sponsor Logo'
-description: ''
+  default_config_hash: xQI92ZFPpA3P6sJTC4Xm8SAG3VMtuijEMT5e2eBHOVs
+id: partner_entity.partner_entity.field_logo
+field_name: field_logo
+entity_type: partner_entity
+bundle: partner_entity
+label: Logo
+description: 'The logo image of this specific partner entry.'
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
