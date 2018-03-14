@@ -4,7 +4,6 @@ namespace Drupal\webcomposer_config\Form;
 
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\file\Entity\File;
 
 /**
  * Config form for Footer.
@@ -81,7 +80,7 @@ class FooterConfiguration extends ConfigFormBase {
 
     $form['quicklinks_group'] = [
       '#type' => 'details',
-      '#title' => $this->t('Quicklinks Title'),
+      '#title' => $this->t('Quicklinks'),
       '#collapsible' => TRUE,
       '#group' => 'advanced',
     ];
@@ -103,7 +102,7 @@ class FooterConfiguration extends ConfigFormBase {
 
     $form['social_group'] = [
       '#type' => 'details',
-      '#title' => $this->t('Social Media Title'),
+      '#title' => $this->t('Social Media'),
       '#collapsible' => TRUE,
       '#group' => 'advanced',
     ];
@@ -145,7 +144,7 @@ class FooterConfiguration extends ConfigFormBase {
 
     $form['responsive_footer'] = [
       '#type' => 'details',
-      '#title' => $this->t('Responsive Footer'),
+      '#title' => $this->t('Responsive'),
       '#collapsible' => TRUE,
       '#group' => 'advanced',
     ];
@@ -156,16 +155,6 @@ class FooterConfiguration extends ConfigFormBase {
       '#description' => $this->t('Text to be displayed in mobile devices below the sponsor logos.'),
       '#default_value' => $config->get('sponsor_mobile_desc') ?? 'Official Main Club Sponsors',
       '#required' => TRUE,
-    ];
-
-    $form['responsive_footer']['tablet_partners_logo'] = [
-      '#type' => 'managed_file',
-      '#title' => $this->t('Tablet - Partners logo'),
-      '#default_value' => $config->get('tablet_partners_logo'),
-      '#upload_location' => 'public://',
-      '#upload_validators' => [
-        'file_validate_extensions' => ['gif png jpg jpeg'],
-      ],
     ];
   }
 
@@ -195,17 +184,7 @@ class FooterConfiguration extends ConfigFormBase {
 
       // Responsive Section
       'sponsor_mobile_desc',
-      'tablet_partners_logo',
     ];
-
-    foreach ($keys as $key) {
-      if ($key == 'tablet_partners_logo') {
-        $fid = $form_state->getValue('tablet_partners_logo');
-        $this->setImageStatus($fid);
-      }
-
-      $this->config('webcomposer_config.footer_configuration')->set($key, $form_state->getValue($key))->save();
-    }
 
     parent::submitForm($form, $form_state);
   }
