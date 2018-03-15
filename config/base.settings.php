@@ -113,6 +113,11 @@ $settings['install_profile'] = 'config_installer';
 $config_directories['sync'] = $app_root . '/' . $site_path . '/config/sync';
 
 /**
+ * Monolog path
+ */
+$settings['monolog_path'] = '/var/log/cms/webcomposer.log';
+
+/**
  * Attempt to load database configuration
  */
 if (file_exists($app_root . '/' . $site_path . '/database.php')) {

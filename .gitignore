@@ -3,6 +3,10 @@ drush/contrib
 vendor
 web/core
 
+# Custom
+/logs/*
+!/logs/.gitkeep
+
 # Ignore Drupal's file directory
 web/sites/*/files/*
 !web/sites/*/files/.htaccess

@@ -16,6 +16,11 @@ $settings['webcomposer_cache']['redis'] = [
 ];
 
 /**
+ * Monolog path
+ */
+$settings['monolog_path'] = DRUPAL_ROOT . '/../logs/webcomposer.log';
+
+/**
  * Attempt to load local database configuration
  */
 if (file_exists($app_root . '/' . $site_path . '/database.local.php')) {
