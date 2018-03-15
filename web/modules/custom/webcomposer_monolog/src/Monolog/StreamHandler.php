@@ -12,7 +12,8 @@ class StreamHandler extends Base {
    *
    */
   public function __construct($level = Logger::DEBUG, $bubble = true, $filePermission = null, $useLocking = false) {
-    $path = Settings::get('monolog_path');
-    parent::__construct($path, $level, $bubble, $filePermission, $useLocking);
+    $config = Settings::get('monolog');
+
+    parent::__construct($config['path'], $config['level'], $bubble, $filePermission, $useLocking);
   }
 }

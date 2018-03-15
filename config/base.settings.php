@@ -113,9 +113,12 @@ $settings['install_profile'] = 'config_installer';
 $config_directories['sync'] = $app_root . '/' . $site_path . '/config/sync';
 
 /**
- * Monolog path
+ * Monolog settings
  */
-$settings['monolog_path'] = '/var/log/cms/webcomposer.log';
+$settings['monolog'] = [
+  'path' => DRUPAL_ROOT . '/var/log/cms/webcomposer.log',
+  'level' => \Monolog\Logger::INFO,
+];
 
 /**
  * Attempt to load database configuration

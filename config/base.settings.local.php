@@ -16,9 +16,12 @@ $settings['webcomposer_cache']['redis'] = [
 ];
 
 /**
- * Monolog path
+ * Monolog settings
  */
-$settings['monolog_path'] = DRUPAL_ROOT . '/../logs/webcomposer.log';
+$settings['monolog'] = [
+  'path' => DRUPAL_ROOT . '/../logs/webcomposer.log',
+  'level' => \Monolog\Logger::DEBUG,
+];
 
 /**
  * Attempt to load local database configuration
