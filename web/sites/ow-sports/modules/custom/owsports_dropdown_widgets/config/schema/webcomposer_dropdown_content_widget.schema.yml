@@ -1,7 +1,0 @@
-webcomposer_dropdown_menu.dropdown_menu.section.content_widget:
-  type: config_object
-  label: 'Content Widget'
-  mapping:
-    title:
-      type: label
-      label: 'Title'

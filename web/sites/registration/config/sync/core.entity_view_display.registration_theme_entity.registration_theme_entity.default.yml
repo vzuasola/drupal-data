@@ -3,13 +3,13 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.registration_theme_entity.registration_theme_entity.field_application
     - field.field.registration_theme_entity.registration_theme_entity.field_asterisk_color
     - field.field.registration_theme_entity.registration_theme_entity.field_background_color
     - field.field.registration_theme_entity.registration_theme_entity.field_background_image
     - field.field.registration_theme_entity.registration_theme_entity.field_banner_font_color
     - field.field.registration_theme_entity.registration_theme_entity.field_banner_highlight
     - field.field.registration_theme_entity.registration_theme_entity.field_default_regvia
-    - field.field.registration_theme_entity.registration_theme_entity.field_downloadable_client
     - field.field.registration_theme_entity.registration_theme_entity.field_error_color
     - field.field.registration_theme_entity.registration_theme_entity.field_form_font_color
     - field.field.registration_theme_entity.registration_theme_entity.field_link_color
@@ -29,6 +29,7 @@ dependencies:
     - color_field
     - image
     - link
+    - options
     - registration_theme
     - text
 id: registration_theme_entity.registration_theme_entity.default
@@ -36,6 +37,13 @@ targetEntityType: registration_theme_entity
 bundle: registration_theme_entity
 mode: default
 content:
+  field_application:
+    weight: 27
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
   field_asterisk_color:
     weight: 17
     label: above
@@ -88,16 +96,6 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
-    region: content
-  field_downloadable_client:
-    weight: 19
-    label: above
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    type: boolean
     region: content
   field_error_color:
     weight: 16

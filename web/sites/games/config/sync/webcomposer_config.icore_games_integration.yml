@@ -24,5 +24,5 @@ game_provider_mapping: "playtech|Playtech\r\ngold_deluxe|Gold Deluxe\r\nskywind|
 sa_gaming_currency: "EUR\r\nUSD\r\nCNY\r\nMYR\r\nTHB\r\nVND\r\nIDR\r\nRMB\r\nINR\r\nRUB"
 sa_gaming_language_mapping: "en|en-US\r\nsc|zh-CN\r\nch|zh-TW\r\nid|id\r\njp|ja\r\nth|th\r\nvn|vi"
 safari_notif_message:
-  value: "<p class="mb-0">Safari unsupported to modify settings please <a class="btn-yellow btn-small ml-5" href="#"> Click Here</a><a class="btn-close" href="#" id="safari-notif-close">close</a></p>"
+  value: '<p class="mb-0">Safari unsupported to modify settings please <a class="btn-yellow btn-small ml-5" href="#"> Click Here</a><a class="btn-close" href="#" id="safari-notif-close">close</a></p>'
   format: basic_html
