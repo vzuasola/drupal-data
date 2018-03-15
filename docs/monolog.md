@@ -12,4 +12,4 @@ $settings['monolog'] = [
 ];
 ```
 
-Current monolog configurations are **base.settings.php** and **base.settings.local.php**
+Current monolog configurations are stored on **base.settings.php** and **base.settings.local.php**
