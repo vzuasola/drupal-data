@@ -5,5 +5,5 @@ parameters:
 
 services:
   monolog.handler.file:
-    class:  Drupal\webcomposer_monolog\Monolog\StreamHandler
+    class:  Drupal\webcomposer_monolog\Monolog\Handler\StreamHandler
     arguments: ['200', false]
