@@ -116,7 +116,7 @@ $config_directories['sync'] = $app_root . '/' . $site_path . '/config/sync';
  * Monolog settings
  */
 $settings['monolog'] = [
-  'path' => DRUPAL_ROOT . '/var/log/cms/webcomposer.log',
+  'path' => '/var/log/cms/webcomposer.log',
   'level' => \Monolog\Logger::INFO,
 ];
 

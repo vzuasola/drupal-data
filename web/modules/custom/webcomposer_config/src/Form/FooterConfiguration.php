@@ -186,20 +186,10 @@ class FooterConfiguration extends ConfigFormBase {
       'sponsor_mobile_desc',
     ];
 
-    parent::submitForm($form, $form_state);
-  }
-
-  /**
-   * Set the URL image.
-   */
-  private function setImageStatus($fid) {
-    if ($fid) {
-      $file = File::load($fid[0]);
-      $file->setPermanent();
-      $file->save();
-
-      $file_usage = \Drupal::service('file.usage');
-      $file_usage->add($file, 'webcomposer_config', 'image', $fid[0]);
+    foreach ($keys as $key) {
+      $this->config('webcomposer_config.footer_configuration')->set($key, $form_state->getValue($key))->save();
     }
+
+    parent::submitForm($form, $form_state);
   }
 }
