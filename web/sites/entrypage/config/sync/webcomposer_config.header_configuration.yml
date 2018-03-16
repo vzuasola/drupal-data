@@ -1,5 +1,5 @@
 join_now_text: 'JOIN NOW'
-join_now_link: '{domain:registration_link}[query:({tracking})]'
+join_now_link: '/{domain:registration_link}[query:({tracking})]'
 login_issue_text: 'Cant login?'
 login_issue_link: '/{domain:entry}/{domain:lang_token}/cant-login[query:({credentials.params}&{tracking})]'
 sc_lang_text: SC
@@ -9,11 +9,11 @@ profile_icon_hover_text: 'My Profile'
 cashier_icon_hover_text: Cashier
 product_menu_new_tag: NEW
 welcome_text: 'Welcome {username}'
-profile_link: '{domain:myaccount_domain}/{lang}/my-profile[query:(title=headerPopup&width=820&height=700&token={legacy.credentials})]'
+profile_link: '/{domain:myaccount_domain}/{lang}/my-profile[query:(title=headerPopup&width=820&height=700&token={legacy.credentials})]'
 profile_logout_text: Logout
 _core:
   default_config_hash: Ynx2hkfeSTtNe4GyBQ1t4lBkrV4wrazLGjX_M7Mk3mg
-lobby_page_title: '{domain:homepage_title}'
+lobby_page_title: 'Dafabet: The leading online sports betting site in Asia'
 critical_announcement: '0'
 critical_announcement_content:
   value: ''
@@ -34,6 +34,6 @@ logo_title: Home
 password_mask_toggle: 1
 caps_lock_toggle: 1
 capslock_notification: 'Capslock is on'
-cashier_link: '{domain:cashier_domain}/{lang}[query:(ticket={auth.token}&product=dafabet&title=headerPopup&width=820&height=700})]'
+cashier_link: '/{domain:cashier_domain}/{lang}[query:(ticket={auth.token}&product=dafabet&title=headerPopup&width=820&height=700})]'
 balance_label_override: ''
 balance_mapping: ''
