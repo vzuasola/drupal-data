@@ -44,6 +44,7 @@ module:
   locale: 0
   menu_link_attributes: 0
   menu_ui: 0
+  monolog: 0
   node: 0
   options: 0
   paragraphs: 0
@@ -67,6 +68,7 @@ module:
   views_ui: 0
   webcomposer_affilates: 0
   webcomposer_announcements: 0
+  webcomposer_audit: 0
   webcomposer_avaya: 0
   webcomposer_cache: 0
   webcomposer_cdn: 0
@@ -75,7 +77,6 @@ module:
   webcomposer_dm: 0
   webcomposer_domain_import: 0
   webcomposer_downloadables: 0
-  webcomposer_dropdown_menu: 0
   webcomposer_editor: 0
   webcomposer_floating_banners: 0
   webcomposer_form_manager: 0
@@ -84,6 +85,7 @@ module:
   webcomposer_language_hierarchy: 0
   webcomposer_marketing_script: 0
   webcomposer_metatags: 0
+  webcomposer_monolog: 0
   webcomposer_partner: 0
   webcomposer_promotions: 0
   webcomposer_registration_landing_page: 0
