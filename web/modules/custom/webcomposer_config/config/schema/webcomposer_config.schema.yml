@@ -17,6 +17,9 @@ webcomposer_config.header_configuration:
     login_issue_link:
       type: label
       label: 'Login Issue Link'
+    capslock_notification:
+      type: label
+      label: 'Caps Lock Notification Message'
     product_balance_label:
       type: label
       label: 'Product Balance Label'
