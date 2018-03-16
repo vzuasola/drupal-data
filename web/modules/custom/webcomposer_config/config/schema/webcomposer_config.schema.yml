@@ -2,6 +2,9 @@ webcomposer_config.header_configuration:
   type: config_object
   label: 'Header Configurations'
   mapping:
+    logo_title:
+      type: label
+      label: 'Logo Title'
     join_now_text:
       type: label
       label: 'Join Now Text'

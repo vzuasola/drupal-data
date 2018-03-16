@@ -1,10 +1,5 @@
 <?php
 
-/**
- * @file
- * Contains \Drupal\Core\Logger\MonologLoggerChannelFactory.
- */
-
 namespace Drupal\monolog\Logger;
 
 use Drupal\Core\Logger\LoggerChannelFactoryInterface;
@@ -12,8 +7,6 @@ use Psr\Log\LoggerInterface;
 use Psr\Log\NullLogger;
 use Symfony\Component\DependencyInjection\ContainerAwareInterface;
 use Symfony\Component\DependencyInjection\ContainerAwareTrait;
-use Monolog\Formatter\JsonFormatter;
-
 
 /**
  * Defines a factory for logging channels.
@@ -59,6 +52,7 @@ class MonologLoggerChannelFactory implements LoggerChannelFactoryInterface, Cont
    */
   public function addLogger(LoggerInterface $logger, $priority = 0) {
     // No-op, we have handlers which are services and configured in the services.yml file.
+    // @see https://www.drupal.org/node/2411683
   }
 
   /**
@@ -87,10 +81,7 @@ class MonologLoggerChannelFactory implements LoggerChannelFactoryInterface, Cont
     $handlers = array_key_exists($channel_name, $parameters) ? $parameters[$channel_name] : $parameters['default'];
 
     foreach ($handlers as $handler) {
-      $stream = $this->container->get('monolog.handler.' . $handler);
-      $format = new JsonFormatter();
-      $stream->setFormatter($format);
-      $logger->pushHandler($stream);
+      $logger->pushHandler($this->container->get('monolog.handler.' . $handler));
     }
 
     foreach ($this->container->getParameter('monolog.processors') as $processor) {

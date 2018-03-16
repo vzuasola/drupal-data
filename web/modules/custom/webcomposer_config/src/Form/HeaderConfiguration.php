@@ -28,16 +28,54 @@ class HeaderConfiguration extends ConfigFormBase {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    $config = $this->config('webcomposer_config.header_configuration');
-
     $form['header_settings_tab'] = [
       '#type' => 'vertical_tabs',
-      '#title' => t('Settings'),
+      '#title' => t('Header Configuration'),
     ];
+
+    $this->sectionLogo($form);
+    $this->sectionJoinNow($form);
+    $this->sectionLogin($form);
+    $this->sectionBalance($form);
+    $this->sectionNewtag($form);
+    $this->sectionWelcome($form);
+    $this->sectionAnnouncement($form);
+    $this->sectionOther($form);
+
+    return parent::buildForm($form, $form_state);
+  }
+
+  /**
+   *
+   */
+  private function sectionLogo(array &$form) {
+    $config = $this->config('webcomposer_config.header_configuration');
+
+    $form['logo_group'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Logo'),
+      '#collapsible' => TRUE,
+      '#group' => 'header_settings_tab',
+    ];
+
+    $form['logo_group']['logo_title'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Logo Title'),
+      '#description' => $this->t('The title attribute for the main logo.'),
+      '#default_value' => $config->get('logo_title'),
+      '#required' => TRUE,
+    ];
+  }
+
+  /**
+   *
+   */
+  private function sectionJoinNow(array &$form) {
+    $config = $this->config('webcomposer_config.header_configuration');
 
     $form['join_now_group'] = [
       '#type' => 'details',
-      '#title' => $this->t('Join Now Button Settings'),
+      '#title' => $this->t('Registration'),
       '#collapsible' => TRUE,
       '#group' => 'header_settings_tab',
     ];
@@ -57,12 +95,26 @@ class HeaderConfiguration extends ConfigFormBase {
       '#default_value' => $config->get('join_now_link'),
       '#required' => TRUE,
     ];
+  }
+
+  /**
+   *
+   */
+  private function sectionLogin(array &$form) {
+    $config = $this->config('webcomposer_config.header_configuration');
 
     $form['login_group'] = [
       '#type' => 'details',
-      '#title' => $this->t('Login Issue Settings'),
+      '#title' => $this->t('Login'),
       '#collapsible' => TRUE,
       '#group' => 'header_settings_tab',
+    ];
+
+    $form['login_group']['password_mask_toggle'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable Password Mask/Unmask'),
+      '#description' => $this->t('Allow masking of the password field.'),
+      '#default_value' => $config->get('password_mask_toggle'),
     ];
 
     $form['login_group']['login_issue_text'] = [
@@ -81,32 +133,49 @@ class HeaderConfiguration extends ConfigFormBase {
       '#required' => TRUE,
     ];
 
-    $form['lang_group'] = [
-      '#type' => 'details',
-      '#title' => $this->t('Language Switcher Settings'),
-      '#collapsible' => TRUE,
-      '#group' => 'header_settings_tab',
-    ];
-
-    $form['lang_group']['sc_lang_text'] = [
+    $form['login_group']['profile_logout_text'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('Text for simplified chinese langauge'),
-      '#description' => $this->t('Text for simplified chinese langauge'),
-      '#default_value' => $config->get('sc_lang_text'),
+      '#title' => $this->t('Logout Link Text.'),
+      '#description' => $this->t('Logout Link Text.'),
+      '#default_value' => $config->get('profile_logout_text'),
       '#required' => TRUE,
     ];
 
-    $form['lang_group']['ch_lang_text'] = [
+    $form['login_group']['cashier_icon_hover_text'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('Text for Traditional chinese langauge'),
-      '#description' => $this->t('Text for traditional chinese langauge.'),
-      '#default_value' => $config->get('ch_lang_text'),
+      '#title' => $this->t('Cashier Icon Hover Text.'),
+      '#description' => $this->t('Cashier Icon Hover Text.'),
+      '#default_value' => $config->get('cashier_icon_hover_text'),
       '#required' => TRUE,
     ];
+
+    $form['login_group']['profile_icon_hover_text'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('My Profile Icon Hover Text.'),
+      '#description' => $this->t('My Profile Icon Hover Text.'),
+      '#default_value' => $config->get('profile_icon_hover_text'),
+      '#required' => TRUE,
+    ];
+
+    $form['login_group']['cashier_link'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Cashier Link'),
+      '#description' => $this->t('Cashier Link For Header'),
+      '#default_value' => $config->get('cashier_link'),
+      '#maxlength' => 255,
+      '#required' => TRUE,
+    ];
+  }
+
+  /**
+   *
+   */
+  private function sectionBalance(array &$form) {
+    $config = $this->config('webcomposer_config.header_configuration');
 
     $form['balance_group'] = [
       '#type' => 'details',
-      '#title' => $this->t('Balance Settings'),
+      '#title' => $this->t('Balance'),
       '#collapsible' => TRUE,
       '#group' => 'header_settings_tab',
     ];
@@ -208,10 +277,17 @@ class HeaderConfiguration extends ConfigFormBase {
       '#description' => $this->t('Define product IDs one per line'),
       '#default_value' => $config->get('excluded_balance_mapping'),
     ];
+  }
+
+  /**
+   *
+   */
+  private function sectionNewtag(array &$form) {
+    $config = $this->config('webcomposer_config.header_configuration');
 
     $form['newtag_group'] = [
       '#type' => 'details',
-      '#title' => $this->t('New Tag Settings'),
+      '#title' => $this->t('New Tag'),
       '#collapsible' => TRUE,
       '#group' => 'header_settings_tab',
     ];
@@ -223,33 +299,45 @@ class HeaderConfiguration extends ConfigFormBase {
       '#default_value' => $config->get('product_menu_new_tag'),
       '#required' => TRUE,
     ];
+  }
+
+  /**
+   *
+   */
+  private function sectionWelcome(array &$form) {
+    $config = $this->config('webcomposer_config.header_configuration');
 
     $form['welcome_text_group'] = [
-      '#type' => 'details',
-      '#title' => $this->t('Welcome Text Settings'),
-      '#collapsible' => TRUE,
-      '#group' => 'header_settings_tab',
-    ];
+        '#type' => 'details',
+        '#title' => $this->t('Welcome Text'),
+        '#collapsible' => TRUE,
+        '#group' => 'header_settings_tab',
+      ];
 
-    $form['welcome_text_group']['welcome_text'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Welcome Text'),
-      '#description' => $this->t('{username} will be replaced with account username'),
-      '#default_value' => $config->get('welcome_text'),
-      '#required' => TRUE,
-    ];
+      $form['welcome_text_group']['welcome_text'] = [
+        '#type' => 'textfield',
+        '#title' => $this->t('Welcome Text'),
+        '#description' => $this->t('{username} will be replaced with account username'),
+        '#default_value' => $config->get('welcome_text'),
+        '#required' => TRUE,
+      ];
 
-    $form['welcome_text_group']['profile_link'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Profile Link'),
-      '#description' => $this->t('Profile Link'),
-      '#default_value' => $config->get('profile_link'),
-      '#required' => TRUE,
-    ];
+      $form['welcome_text_group']['profile_link'] = [
+        '#type' => 'textfield',
+        '#title' => $this->t('Profile Link'),
+        '#description' => $this->t('Profile Link'),
+        '#default_value' => $config->get('profile_link'),
+        '#required' => TRUE,
+      ];
+  }
 
-    // For default display in text format and text area.
+  /**
+   *
+   */
+  private function sectionAnnouncement(array &$form) {
+    $config = $this->config('webcomposer_config.header_configuration');
+
     $default_news_announcement = $config->get('news_announcement_content');
-
     $default_critical_announcement = $config->get('critical_announcement_content');
 
     $form['announcement_group'] = [
@@ -310,10 +398,17 @@ class HeaderConfiguration extends ConfigFormBase {
         ],
       ],
     ];
+  }
+
+  /**
+   *
+   */
+  private function sectionOther(array &$form) {
+    $config = $this->config('webcomposer_config.header_configuration');
 
     $form['header_other_group'] = [
       '#type' => 'details',
-      '#title' => $this->t('Other Settings'),
+      '#title' => $this->t('Others'),
       '#collapsible' => TRUE,
       '#group' => 'header_settings_tab',
     ];
@@ -325,47 +420,6 @@ class HeaderConfiguration extends ConfigFormBase {
       '#default_value' => $config->get('lobby_page_title'),
       '#required' => TRUE,
     ];
-
-    $form['header_other_group']['profile_logout_text'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Logout Link Text.'),
-      '#description' => $this->t('Logout Link Text.'),
-      '#default_value' => $config->get('profile_logout_text'),
-      '#required' => TRUE,
-    ];
-
-    $form['header_other_group']['cashier_icon_hover_text'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Cashier Icon Hover Text.'),
-      '#description' => $this->t('Cashier Icon Hover Text.'),
-      '#default_value' => $config->get('cashier_icon_hover_text'),
-      '#required' => TRUE,
-    ];
-
-    $form['header_other_group']['profile_icon_hover_text'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('My Profile Icon Hover Text.'),
-      '#description' => $this->t('My Profile Icon Hover Text.'),
-      '#default_value' => $config->get('profile_icon_hover_text'),
-      '#required' => TRUE,
-    ];
-
-    $form['header_other_group']['cashier_link'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Cashier Link'),
-      '#description' => $this->t('Cashier Link For Header'),
-      '#default_value' => $config->get('cashier_link'),
-      '#maxlength' => 255,
-      '#required' => TRUE,
-    ];
-
-    $form['header_other_group']['password_mask_toggle'] = [
-      '#type' => 'checkbox',
-      '#title' => $this->t('Enable login form password mask/unmask'),
-      '#default_value' => $config->get('password_mask_toggle') ?? 1,
-    ];
-
-    return parent::buildForm($form, $form_state);
   }
 
   /**
@@ -373,12 +427,23 @@ class HeaderConfiguration extends ConfigFormBase {
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $keys = [
+      // Logo Section
+      'logo_title',
+
+      // Join now Section
       'join_now_text',
       'join_now_link',
+
+      // Login Section
+      'password_mask_toggle',
       'login_issue_text',
       'login_issue_link',
-      'sc_lang_text',
-      'ch_lang_text',
+      'profile_logout_text',
+      'cashier_icon_hover_text',
+      'profile_icon_hover_text',
+      'cashier_link',
+
+      // Balance Section
       'balance_toggle',
       'product_balance_label',
       'total_balance_label',
@@ -388,21 +453,24 @@ class HeaderConfiguration extends ConfigFormBase {
       'balance_label_mapping',
       'currency_balance_mapping',
       'excluded_balance_mapping',
-      'lobby_page_title',
-      'profile_icon_hover_text',
-      'cashier_icon_hover_text',
+      'balance_label_override',
+      'balance_mapping',
+
+      // New tag Section
       'product_menu_new_tag',
+
+      // Welcome text Section
       'welcome_text',
+      'profile_link',
+
+      // Announcement Section
       'critical_announcement',
       'critical_announcement_content',
       'news_announcement',
       'news_announcement_content',
-      'profile_link',
-      'profile_logout_text',
-      'balance_mapping',
-      'cashier_link',
-      'balance_label_override',
-      'password_mask_toggle'
+
+      // Others Section
+      'lobby_page_title',
     ];
 
     foreach ($keys as $key) {
@@ -411,5 +479,4 @@ class HeaderConfiguration extends ConfigFormBase {
 
     return parent::submitForm($form, $form_state);
   }
-
 }
