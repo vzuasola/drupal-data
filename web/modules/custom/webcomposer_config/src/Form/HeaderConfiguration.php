@@ -117,6 +117,20 @@ class HeaderConfiguration extends ConfigFormBase {
       '#default_value' => $config->get('password_mask_toggle'),
     ];
 
+    $form['login_group']['caps_lock_toggle'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable Caps lock Notification'),
+      '#description' => $this->t('Notify user if caps lock is on when entering the password field.'),
+      '#default_value' => $config->get('caps_lock_toggle'),
+    ];
+
+    $form['login_group']['capslock_notification'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Caps Lock Notification Message'),
+      '#description' => $this->t('The text to be displayed when user keyboard is on.'),
+      '#default_value' => $config->get('capslock_notification'),
+    ];
+
     $form['login_group']['login_issue_text'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Login Issue Text'),
@@ -436,6 +450,8 @@ class HeaderConfiguration extends ConfigFormBase {
 
       // Login Section
       'password_mask_toggle',
+      'caps_lock_toggle',
+      'capslock_notification',
       'login_issue_text',
       'login_issue_link',
       'profile_logout_text',
