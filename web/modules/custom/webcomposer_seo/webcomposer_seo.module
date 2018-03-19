@@ -4,21 +4,3 @@
  * @file
  * Contains webcomposer_seo.module.
  */
-
-use Drupal\Core\Routing\RouteMatchInterface;
-
-/**
- * Implements hook_help().
- */
-function webcomposer_seo_help($route_name, RouteMatchInterface $route_match) {
-  switch ($route_name) {
-    // Main module help for the webcomposer_seo module.
-    case 'help.page.webcomposer_seo':
-      $output = '';
-      $output .= '<h3>' . t('About') . '</h3>';
-      $output .= '<p>' . t('Provides SEO related configurations') . '</p>';
-      return $output;
-
-    default:
-  }
-}

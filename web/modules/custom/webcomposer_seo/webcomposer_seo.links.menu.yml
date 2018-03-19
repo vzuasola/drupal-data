@@ -6,13 +6,15 @@ webcomposer_seo.list:
 
 # Webcomposer meta entity menu items definition
 entity.webcomposer_meta_entity.collection:
-  title: 'Webcomposer SEO Entity List'
+  title: 'Metatag List'
   route_name: entity.webcomposer_meta_entity.collection
   description: 'List Webcomposer meta entity entities'
   parent: webcomposer_seo.list
+  weight: 5
 
 webcomposer_meta_entity.admin.structure.settings:
-  title: Webcomposer SEO Entity Settings
+  title: Metatag Entity Settings
   description: 'Configure Webcomposer meta entity entities'
   route_name: webcomposer_meta_entity.settings
   parent: webcomposer_seo.list
+  weight: 10

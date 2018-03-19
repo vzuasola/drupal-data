@@ -4,4 +4,24 @@
  * Implements hook_uninstall
  */
 function webcomposer_seo_uninstall() {
+  $keys = [
+    'core.entity_form_display.paragraph.metatag.default.yml',
+    'core.entity_form_display.webcomposer_meta_entity.webcomposer_meta_entity.default.yml',
+    'core.entity_view_display.paragraph.metatag.default.yml',
+    'core.entity_view_display.webcomposer_meta_entity.webcomposer_meta_entity.default.yml',
+    'field.field.paragraph.metatag.field_attribute_value.yml',
+    'field.field.paragraph.metatag.field_meta_name.yml',
+    'field.field.webcomposer_meta_entity.webcomposer_meta_entity.field_meta.yml',
+    'field.storage.paragraph.field_attribute_value.yml',
+    'field.storage.paragraph.field_meta_name.yml',
+    'field.storage.webcomposer_meta_entity.field_meta.yml',
+    'paragraphs.paragraphs_type.metatag.yml',
+  ];
+
+  foreach ($keys as $key) {
+    \Drupal::configFactory()->getEditable($key)->delete();
+  }
+
+  $paragraph = \Drupal\paragraphs\Entity\ParagraphsType::load('metatag');
+  $paragraph->delete();
 }
