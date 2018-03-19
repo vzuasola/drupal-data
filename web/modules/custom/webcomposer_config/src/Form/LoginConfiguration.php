@@ -65,6 +65,12 @@ class LoginConfiguration extends ConfigFormBase {
       '#default_value' => $config->get('lightbox_blurb'),
     ];
 
+    $form['login_form_details']['login_page_blurb'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Login Page blurb'),
+      '#default_value' => $config->get('login_page_blurb'),
+    ];
+
     $form['login_form_error_messages_details'] = [
       '#type' => 'details',
       '#title' => t('Error Messages'),
@@ -250,6 +256,7 @@ class LoginConfiguration extends ConfigFormBase {
       'notification_window_title',
       'notification_content',
       'lightbox_blurb',
+      'login_page_blurb',
       'mobile_login_url',
       'mobile_login_button_label',
     ];
