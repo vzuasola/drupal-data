@@ -4,9 +4,12 @@ status: true
 dependencies:
   config:
     - field.field.webcomposer_meta_entity.webcomposer_meta_entity.field_meta
+    - field.field.webcomposer_meta_entity.webcomposer_meta_entity.field_per_page_visibility
   module:
     - paragraphs
     - webcomposer_seo
+_core:
+  default_config_hash: syKu1saoiUXM24w81pAg_wZwA0r3ytY6cv-SCg_u6A8
 id: webcomposer_meta_entity.webcomposer_meta_entity.default
 targetEntityType: webcomposer_meta_entity
 bundle: webcomposer_meta_entity
@@ -23,6 +26,14 @@ content:
       form_display_mode: default
       default_paragraph_type: ''
     third_party_settings: {  }
+    region: content
+  field_per_page_visibility:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
     region: content
   name:
     type: string_textfield

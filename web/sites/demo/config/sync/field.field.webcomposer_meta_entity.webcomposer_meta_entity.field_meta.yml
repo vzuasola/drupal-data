@@ -8,6 +8,8 @@ dependencies:
   module:
     - entity_reference_revisions
     - webcomposer_seo
+_core:
+  default_config_hash: J5BnXYsJs9dcgs8o20UzEtqlIlD2c1sXCTn4ruZ-2jg
 id: webcomposer_meta_entity.webcomposer_meta_entity.field_meta
 field_name: field_meta
 entity_type: webcomposer_meta_entity
@@ -15,7 +17,7 @@ bundle: webcomposer_meta_entity
 label: Meta
 description: ''
 required: true
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
