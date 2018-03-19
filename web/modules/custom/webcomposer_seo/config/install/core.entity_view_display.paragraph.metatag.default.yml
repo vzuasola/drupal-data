@@ -7,7 +7,7 @@ dependencies:
     - field.field.paragraph.metatag.field_meta_name
     - paragraphs.paragraphs_type.metatag
 _core:
-  default_config_hash: Gu_AO5IdfWps56aRkaUmQ5Kotv5yLybhgJbsprsguCw
+  default_config_hash: VzMn_ptCmKVt1l8T_wTmR4QZF02-aneeHFIdhPxBC1A
 id: paragraph.metatag.default
 targetEntityType: paragraph
 bundle: metatag

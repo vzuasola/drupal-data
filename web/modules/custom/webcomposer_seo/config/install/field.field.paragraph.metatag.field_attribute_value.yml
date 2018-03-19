@@ -6,7 +6,7 @@ dependencies:
     - field.storage.paragraph.field_attribute_value
     - paragraphs.paragraphs_type.metatag
 _core:
-  default_config_hash: 4oKid0dHD8-zpGByPCmD5UQTbSe8o9u1aNzKA9d7568
+  default_config_hash: L9J75v6TKI_os9PRJVQzCDfce4aqIZWwSCUKPAfaY1Y
 id: paragraph.metatag.field_attribute_value
 field_name: field_attribute_value
 entity_type: paragraph
@@ -14,7 +14,7 @@ bundle: metatag
 label: Value
 description: 'The attribute value'
 required: true
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

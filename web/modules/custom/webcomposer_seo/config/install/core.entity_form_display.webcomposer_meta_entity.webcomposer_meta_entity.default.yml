@@ -9,7 +9,7 @@ dependencies:
     - paragraphs
     - webcomposer_seo
 _core:
-  default_config_hash: syKu1saoiUXM24w81pAg_wZwA0r3ytY6cv-SCg_u6A8
+  default_config_hash: R6OjJ8unVmctpMTP2WuRVzMyn_2WxJ9Pf22ipQ-DfgU
 id: webcomposer_meta_entity.webcomposer_meta_entity.default
 targetEntityType: webcomposer_meta_entity
 bundle: webcomposer_meta_entity
@@ -43,6 +43,9 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
 hidden:
   langcode: true
   user_id: true
