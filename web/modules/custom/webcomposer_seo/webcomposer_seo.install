@@ -5,6 +5,9 @@
  */
 function webcomposer_seo_uninstall() {
   $keys = [
+    'core.base_field_override.paragraph.metatag.created.yml',
+    'core.base_field_override.paragraph.metatag.status.yml',
+    'core.base_field_override.paragraph.metatag.uid.yml',
     'core.entity_form_display.paragraph.metatag.default.yml',
     'core.entity_form_display.webcomposer_meta_entity.webcomposer_meta_entity.default.yml',
     'core.entity_view_display.paragraph.metatag.default.yml',
@@ -12,10 +15,15 @@ function webcomposer_seo_uninstall() {
     'field.field.paragraph.metatag.field_attribute_value.yml',
     'field.field.paragraph.metatag.field_meta_name.yml',
     'field.field.webcomposer_meta_entity.webcomposer_meta_entity.field_meta.yml',
+    'field.field.webcomposer_meta_entity.webcomposer_meta_entity.field_per_page_visibility.yml',
     'field.storage.paragraph.field_attribute_value.yml',
     'field.storage.paragraph.field_meta_name.yml',
     'field.storage.webcomposer_meta_entity.field_meta.yml',
+    'field.storage.webcomposer_meta_entity.field_per_page_visibility.yml',
+    'language.content_settings.paragraph.metatag.yml',
+    'language.content_settings.webcomposer_meta_entity.webcomposer_meta_entity.yml',
     'paragraphs.paragraphs_type.metatag.yml',
+    'views.view.webcomposer_seo_metatag_entity_api.yml',
   ];
 
   foreach ($keys as $key) {
