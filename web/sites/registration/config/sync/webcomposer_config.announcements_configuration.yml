@@ -1,4 +1,4 @@
-title: Attention!
-default_message: 'This is an announcement.'
+title: ANNOUNCEMENTS
+default_message: 'There are no new announcements'
 _core:
   default_config_hash: z7-YoOL5He3EXNRbDh4J7N8hRFx2iMDWHGsvf7CDYtg

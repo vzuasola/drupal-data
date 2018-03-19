@@ -1,13 +1,11 @@
 lobby_page_title: アジアで絶大な信頼と人気を誇るDafabet
 join_now_text: 登録する
-join_now_link: '/{domain:entry}/{domain:lang_token}/cant-login{tracking.token}'
 login_issue_text: ログインができない場合は？
-login_issue_link: '/{domain:entry}/{domain:lang_token}/cant-login{tracking.token}'
 balance_error_text: エラーが検出されました。
 profile_icon_hover_text: お客様情報
 cashier_icon_hover_text: バンキング
 product_menu_new_tag: 新
 welcome_text: 'ようこそ {username} 様'
-profile_link: '/{domain:myaccount_domain}/{lang}/my-profile?title=headerPopup&width=820&height=700&token={legacy.credentials}'
 profile_logout_text: ログアウト
-balance_label_mapping: "4|OW Sports\r\n6|Dafa Sports\r\n1|Casino Classic\r\n2|Casino Gold\r\n5|Live Dealer, Games, & Virtuals\r\n8|Opus Live Dealer\r\n9|Keno\r\n3|Poker\r\n7|Fish Hunter"
+balance_label_mapping: "4|OWスポーツ\r\n6|Dafaスポーツ\r\n1|カジノ クラシック\r\n2|カジノ ゴールド\r\n5|ライブディーラー、ゲーム＆ヴァーチャル\r\n8|Opus ライブディーラー\r\n9|ケノ\r\n3|ポーカー\r\n7|フィッシュハンター"
+total_balance_label: 総残高
