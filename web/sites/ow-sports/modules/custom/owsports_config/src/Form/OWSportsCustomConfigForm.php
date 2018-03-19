@@ -40,19 +40,11 @@ class OWSportsCustomConfigForm extends ConfigFormBase {
       '#group' => 'owsports_settings_tab',
     ];
 
-    $form['owsports_config_group']['pre_transaction_subdomain'] = [
+    $form['owsports_config_group']['transaction_subdomain'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('Pre-Transaction Subdomain'),
-      '#description' => $this->t('Pre-transactions subdomain.'),
-      '#default_value' => $config->get('pre_transaction_subdomain'),
-      '#required' => TRUE,
-    ];
-
-    $form['owsports_config_group']['post_transaction_subdomain'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Post-Transaction Subdomain'),
-      '#description' => $this->t('Post-transactions subdomain.'),
-      '#default_value' => $config->get('post_transaction_subdomain'),
+      '#title' => $this->t('Transaction Subdomain'),
+      '#description' => $this->t('transactions subdomain.'),
+      '#default_value' => $config->get('transaction_subdomain'),
       '#required' => TRUE,
     ];
 
@@ -64,27 +56,11 @@ class OWSportsCustomConfigForm extends ConfigFormBase {
       '#required' => TRUE,
     ];
 
-    $form['owsports_config_group']['act_mapping'] = [
+    $form['owsports_config_group']['url_param'] = [
       '#type' => 'textarea',
-      '#title' => $this->t('Bet Type Mapping'),
-      '#description' => $this->t('Bet Type Mapping. e.g. act={keyword}'),
-      '#default_value' => $config->get('act_mapping'),
-      '#required' => TRUE,
-    ];
-
-    $form['owsports_config_group']['override_domain'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Override Domain'),
-      '#description' => $this->t('Override the domain to be used as a target. Add the domain name only, no need to add the protocol.'),
-      '#default_value' => $config->get('override_domain'),
-    ];
-
-    $form['owsports_config_group']['legacy_cdn'] = [
-      '#type' => 'select',
-      '#title' => $this->t('Legacy CDN Source'),
-      '#description' => $this->t('Legacy iFrame CDN environment source.'),
-      '#options' => [$this->t('QA1'), $this->t('TCT'), $this->t('UAT'), $this->t('STG'), $this->t('PRD')],
-      '#default_value' => $config->get('legacy_cdn'),
+      '#title' => $this->t('iFrame URL parameters'),
+      '#description' => $this->t('query parameters for iFrame. To add use key=value, keyword|key=value'),
+      '#default_value' => $config->get('url_param'),
     ];
 
     $form['jackpotbet_config_group'] = [
@@ -221,9 +197,8 @@ class OWSportsCustomConfigForm extends ConfigFormBase {
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $keys = [
       'how_to_bet_uri',
-      'pre_transaction_subdomain',
+      'transaction_subdomain',
       'pre_login_uri',
-      'post_transaction_subdomain',
       'post_login_uri',
       'language_mapping',
       'euro_default_asia',
@@ -235,12 +210,9 @@ class OWSportsCustomConfigForm extends ConfigFormBase {
       'singbet_pre_login_uri',
       'singbet_post_login_uri',
       'singbet_template',
-      'override_domain',
       'colossus_pre_uri',
       'colossus_post_uri',
-      'cdn_mapping',
-      'act_mapping',
-      'legacy_cdn'
+      'url_param',
     ];
 
     foreach ($keys as $key) {

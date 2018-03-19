@@ -1,8 +1,6 @@
-pre_transaction_subdomain: prices
 pre_login_uri: vender.aspx
-post_transaction_subdomain: prices
 post_login_uri: Deposit_ProcessLogin.aspx
-language_mapping: "en|en\r\nsc|cs\r\nch|ch\r\nth|th\r\nvn|vn\r\nid|id\r\njp|jp\r\nkr|ko\r\nin|hien\r\neu|eu\r\ngr|el\r\npl|pl\r\nuk|eu\r\nro|ro\r\nru|eu"
+language_mapping: "en|en\r\nsc|cs\r\nch|ch\r\nth|th\r\nvn|vn\r\nid|id\r\njp|jp\r\nkr|ko\r\nin|hien\r\neu|en_eu\r\ngr|el\r\npl|pl\r\nuk|eu\r\nro|ro\r\nru|eu"
 euro_pre_login_uri: vender.aspx
 euro_post_login_uri: Deposit_ProcessLogin.aspx
 euro_template: 'eu,gr,pl,uk,ro,ru'
@@ -11,13 +9,10 @@ singbet_post_login_uri: Deposit_ProcessLogin.aspx
 singbet_template: 'sc,ch'
 _core:
   default_config_hash: eq06lVY_EO26YIZp8-gsLZO8-yULblkh-Ie4s306ces
-iframe_container: iframe-container
-override_domain: ''
 colossus_pre_uri: ''
-colossus_post_uri: 'https://prices.dafabet.com/Deposit_Processlogin.aspx'
-act_mapping: "hdpou\r\nonextwo\r\ncs\r\nhtftcs\r\noetg\r\nhtft\r\nfglg\r\nsocceroutright\r\nbasketball\r\nbacketballoutright\r\ntennis\r\ntennisoutright\r\noutright\r\nnumbergame\r\nvirtualsports\r\nvirtualhorse\r\nvirtualgreyhounds\r\nvirtualtennis\r\nvirtualmotorsports\r\nvirturlspeedway\r\nbadminton\r\nbaseball\r\nbilliard\r\nesports\r\nfootball\r\ngolf\r\nicehockey\r\nindiancricket\r\nmotorsports\r\nmuaythai\r\nnetball\r\nrugby\r\nvolleyball"
-legacy_cdn: '4'
-singbet_default_asia: 0
-cdn_mapping: null
+colossus_post_uri: 'https://prices.map.domain/Deposit_Processlogin.aspx'
+singbet_default_asia: 1
 how_to_bet_uri: '{domain:sports}/{domain:lang_token}/getting-started{legacy.params}{tracking.token}'
 euro_default_asia: 0
+transaction_subdomain: prices
+url_param: "world-cup|menutype=2\r\nworld-cup|market=T"

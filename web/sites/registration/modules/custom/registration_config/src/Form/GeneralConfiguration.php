@@ -82,6 +82,14 @@ class GeneralConfiguration extends ConfigFormBase {
       '#required' => TRUE,
     ];
 
+    $form['general']['native_app_title'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Native App Page Title'),
+      '#description' => $this->t('Header text above the form for native app'),
+      '#default_value' => $config->get('native_app_title'),
+      '#maxlength' => 255,
+    ];
+
     $form['integration'] = [
       '#type' => 'details',
       '#title' => $this->t('Integration'),
@@ -121,6 +129,14 @@ class GeneralConfiguration extends ConfigFormBase {
         'connect portal ID. (Take note that the said mapping will override the regvia parameter on the url ' .
         'if the application detect that it is using a dafa-connect app)'),
       '#default_value' => $config->get('registraton_portal_id_to_dafaconnect_portal_id'),
+      '#required' => TRUE,
+    ];
+
+    $form['integration']['mobile_native_app_command'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Mobile Native App CMD'),
+      '#description' => $this->t('Mobile Native App Command that will run after successful Registration'),
+      '#default_value' => $config->get('mobile_native_app_command'),
       '#required' => TRUE,
     ];
 
@@ -324,7 +340,9 @@ class GeneralConfiguration extends ConfigFormBase {
       'without_payment_method',
       'payment_method_headers',
       'deposit_now_text',
-      'enable_rs_logging'
+      'enable_rs_logging',
+      'native_app_title',
+      'mobile_native_app_command'
     ];
 
     foreach ($keys as $key) {
