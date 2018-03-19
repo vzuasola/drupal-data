@@ -1,0 +1,4 @@
+label: Published
+settings:
+  on_label: 开启
+  off_label: 关闭
