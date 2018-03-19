@@ -5,9 +5,10 @@ dependencies:
   module:
     - rest
     - serialization
+    - webcomposer_rest_extra
     - webcomposer_seo
 _core:
-  default_config_hash: 7YXf58QBlgyngQCSr1PKadVFAPAVvfqM3iYbPKk0xhQ
+  default_config_hash: FiSk5wmHWkKnteAsR2UaXHOXKq-ymQYrotvrFyWKEfw
 id: webcomposer_seo_metatag_entity_api
 label: 'Webcomposer SEO Metatag Entity API'
 module: views
@@ -168,11 +169,12 @@ display:
         options:
           offset: 0
       style:
-        type: serializer
+        type: node_list_serializer
         options:
-          grouping: {  }
           uses_fields: false
-          formats: {  }
+          formats:
+            json: json
+            xml: xml
       row:
         type: data_entity
         options: {  }
