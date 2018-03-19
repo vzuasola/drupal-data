@@ -7,7 +7,7 @@ dependencies:
     - paragraphs
     - webcomposer_seo
 _core:
-  default_config_hash: GvfZGs955Y0aRyTfMGQ6LoTACNUt1UMfGa0Zwik_M2M
+  default_config_hash: AmQ_nZfoTnDQj6Q6DoHgVrP2jFPOeidNqw8GBV2q7dY
 id: webcomposer_meta_entity.field_meta
 field_name: field_meta
 entity_type: webcomposer_meta_entity

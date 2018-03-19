@@ -6,6 +6,8 @@ dependencies:
     - rest
     - serialization
     - webcomposer_seo
+_core:
+  default_config_hash: 7YXf58QBlgyngQCSr1PKadVFAPAVvfqM3iYbPKk0xhQ
 id: webcomposer_seo_metatag_entity_api
 label: 'Webcomposer SEO Metatag Entity API'
 module: views

@@ -4,6 +4,8 @@ status: true
 dependencies:
   config:
     - paragraphs.paragraphs_type.metatag
+_core:
+  default_config_hash: TC9c5MTEkWBdj3u2SUW9P5OMFQC7mk2t42hyRCKN1TE
 id: paragraph.metatag.uid
 field_name: uid
 entity_type: paragraph
@@ -11,7 +13,7 @@ bundle: metatag
 label: 'Authored by'
 description: 'The user ID of the paragraphs author.'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: 'Drupal\paragraphs\Entity\Paragraph::getCurrentUserId'
 settings:

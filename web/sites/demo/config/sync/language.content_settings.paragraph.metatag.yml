@@ -8,9 +8,11 @@ dependencies:
     - content_translation
 third_party_settings:
   content_translation:
-    enabled: false
+    enabled: true
+_core:
+  default_config_hash: ajSwRjdPRa-xL3ymAiBmOHZC7BsJZIlUfvPpwO0UEeQ
 id: paragraph.metatag
 target_entity_type_id: paragraph
 target_bundle: metatag
 default_langcode: site_default
-language_alterable: false
+language_alterable: true
