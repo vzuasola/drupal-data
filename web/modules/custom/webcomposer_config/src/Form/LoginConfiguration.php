@@ -67,7 +67,7 @@ class LoginConfiguration extends ConfigFormBase {
 
     $form['login_form_details']['login_page_blurb'] = [
       '#type' => 'textarea',
-      '#title' => $this->t('Login Page blurb'),
+      '#title' => $this->t('Login Page Blurb'),
       '#default_value' => $config->get('login_page_blurb'),
     ];
 
