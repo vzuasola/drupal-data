@@ -1,0 +1,7 @@
+webcomposer_seo.admin_settings:
+  path: 'admin/config/webcomposer/webcomposer_seo'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Webcomposer SEO'
+  requirements:
+    _permission: 'administer site configuration'
