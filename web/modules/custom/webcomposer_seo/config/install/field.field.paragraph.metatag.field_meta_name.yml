@@ -5,6 +5,8 @@ dependencies:
   config:
     - field.storage.paragraph.field_meta_name
     - paragraphs.paragraphs_type.metatag
+_core:
+  default_config_hash: '-LCJJW2SK5VWV71ounsijRnCa-4G7kobpyzk3qrQlqo'
 id: paragraph.metatag.field_meta_name
 field_name: field_meta_name
 entity_type: paragraph
