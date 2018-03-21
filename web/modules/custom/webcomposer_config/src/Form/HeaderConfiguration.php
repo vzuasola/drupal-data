@@ -129,6 +129,7 @@ class HeaderConfiguration extends ConfigFormBase {
       '#title' => $this->t('Caps Lock Notification Message'),
       '#description' => $this->t('The text to be displayed when user keyboard is on.'),
       '#default_value' => $config->get('capslock_notification'),
+      '#required' => TRUE,
     ];
 
     $form['login_group']['login_issue_text'] = [
