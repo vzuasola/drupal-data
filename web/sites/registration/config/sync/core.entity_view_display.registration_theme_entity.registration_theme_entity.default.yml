@@ -30,6 +30,7 @@ dependencies:
     - color_field
     - image
     - link
+    - options
     - registration_theme
     - text
 id: registration_theme_entity.registration_theme_entity.default
@@ -37,8 +38,15 @@ targetEntityType: registration_theme_entity
 bundle: registration_theme_entity
 mode: default
 content:
+  field_application:
+    type: list_default
+    weight: 23
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
   field_asterisk_color:
-    weight: 17
+    weight: 16
     label: above
     settings:
       format: hex
@@ -65,15 +73,6 @@ content:
     type: image
     region: content
   field_banner_font_color:
-    weight: 11
-    label: above
-    settings:
-      format: hex
-      opacity: '1'
-    third_party_settings: {  }
-    type: color_field_formatter_text
-    region: content
-  field_banner_highlight:
     weight: 10
     label: above
     settings:
@@ -82,8 +81,17 @@ content:
     third_party_settings: {  }
     type: color_field_formatter_text
     region: content
+  field_banner_highlight:
+    weight: 9
+    label: above
+    settings:
+      format: hex
+      opacity: '1'
+    third_party_settings: {  }
+    type: color_field_formatter_text
+    region: content
   field_default_regvia:
-    weight: 24
+    weight: 19
     label: above
     settings:
       link_to_entity: false
@@ -91,7 +99,7 @@ content:
     type: string
     region: content
   field_error_color:
-    weight: 16
+    weight: 15
     label: above
     settings:
       format: hex
@@ -109,7 +117,7 @@ content:
     type: color_field_formatter_text
     region: content
   field_link_color:
-    weight: 15
+    weight: 14
     label: above
     settings:
       format: hex
@@ -165,7 +173,7 @@ content:
     type: string
     region: content
   field_separator_color:
-    weight: 18
+    weight: 17
     label: above
     settings:
       format: hex
@@ -174,7 +182,7 @@ content:
     type: color_field_formatter_text
     region: content
   field_steptwo_banner:
-    weight: 13
+    weight: 12
     label: above
     settings:
       image_style: ''
@@ -183,7 +191,7 @@ content:
     type: image
     region: content
   field_steptwo_banner_mobile:
-    weight: 26
+    weight: 21
     label: above
     settings:
       image_style: ''
@@ -192,7 +200,7 @@ content:
     type: image
     region: content
   field_steptwo_banner_tablet:
-    weight: 25
+    weight: 20
     label: above
     settings:
       image_style: ''
@@ -201,14 +209,14 @@ content:
     type: image
     region: content
   field_steptwo_content:
-    weight: 14
+    weight: 13
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_success_message:
-    weight: 12
+    weight: 11
     label: above
     settings:
       link_to_entity: false
@@ -216,7 +224,7 @@ content:
     type: string
     region: content
   field_success_message_color:
-    weight: 20
+    weight: 18
     label: above
     settings:
       format: hex
@@ -225,7 +233,7 @@ content:
     type: color_field_formatter_text
     region: content
   field_theme_alternative_text:
-    weight: 27
+    weight: 22
     label: above
     settings:
       link_to_entity: false
@@ -241,6 +249,5 @@ content:
       link_to_entity: false
     third_party_settings: {  }
 hidden:
-  field_application: true
   langcode: true
   user_id: true
