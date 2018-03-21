@@ -89,11 +89,12 @@ class HeaderConfiguration extends ConfigFormBase {
     ];
 
     $form['join_now_group']['join_now_link'] = [
-      '#type' => 'textfield',
+      '#type' => 'textarea',
       '#title' => $this->t('Join Now Link'),
       '#description' => $this->t('The link for user redirection when clicked on Join Now Button.'),
       '#default_value' => $config->get('join_now_link'),
       '#required' => TRUE,
+      '#rows' => 1
     ];
   }
 
@@ -141,11 +142,12 @@ class HeaderConfiguration extends ConfigFormBase {
     ];
 
     $form['login_group']['login_issue_link'] = [
-      '#type' => 'textfield',
+      '#type' => 'textarea',
       '#title' => $this->t('Login Issue Link'),
       '#description' => $this->t('The link for user redirection when clicked on Login Issue Text.'),
       '#default_value' => $config->get('login_issue_link'),
       '#required' => TRUE,
+      '#rows' => 1
     ];
 
     $form['login_group']['profile_logout_text'] = [
@@ -173,12 +175,12 @@ class HeaderConfiguration extends ConfigFormBase {
     ];
 
     $form['login_group']['cashier_link'] = [
-      '#type' => 'textfield',
+      '#type' => 'textarea',
       '#title' => $this->t('Cashier Link'),
       '#description' => $this->t('Cashier Link For Header'),
       '#default_value' => $config->get('cashier_link'),
-      '#maxlength' => 255,
       '#required' => TRUE,
+      '#rows' => 1
     ];
   }
 
@@ -338,11 +340,12 @@ class HeaderConfiguration extends ConfigFormBase {
       ];
 
       $form['welcome_text_group']['profile_link'] = [
-        '#type' => 'textfield',
+        '#type' => 'textarea',
         '#title' => $this->t('Profile Link'),
         '#description' => $this->t('Profile Link'),
         '#default_value' => $config->get('profile_link'),
         '#required' => TRUE,
+        '#rows' => 1
       ];
   }
 
