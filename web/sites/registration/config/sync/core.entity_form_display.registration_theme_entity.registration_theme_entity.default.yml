@@ -90,6 +90,7 @@ third_party_settings:
         - field_steptwo_banner
         - field_steptwo_banner_tablet
         - field_steptwo_banner_mobile
+        - field_theme_alternative_text
       parent_name: ''
       weight: 7
       format_type: details
@@ -255,7 +256,7 @@ content:
     type: color_field_widget_html5
     region: content
   field_theme_alternative_text:
-    weight: 10
+    weight: 29
     settings:
       size: 60
       placeholder: ''

@@ -10,7 +10,7 @@ id: registration_theme_entity.registration_theme_entity.field_theme_alternative_
 field_name: field_theme_alternative_text
 entity_type: registration_theme_entity
 bundle: registration_theme_entity
-label: 'Alternative text'
+label: 'Banner Alternative text'
 description: ''
 required: true
 translatable: true
