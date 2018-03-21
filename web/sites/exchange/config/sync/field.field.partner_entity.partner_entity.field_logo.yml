@@ -1,27 +1,22 @@
-uuid: 4d1e3676-5a34-4e9a-a405-5298df4fd814
+uuid: 7a19be6a-40ea-4716-9ce2-a0ca2a1c9783
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_image
-    - node.type.page
+    - field.storage.partner_entity.field_logo
   module:
-    - content_translation
     - image
-third_party_settings:
-  content_translation:
-    translation_sync:
-      alt: alt
-      title: title
-      file: '0'
-id: node.page.field_image
-field_name: field_image
-entity_type: node
-bundle: page
-label: 'Banner Image'
-description: ''
+    - webcomposer_partner
+_core:
+  default_config_hash: xQI92ZFPpA3P6sJTC4Xm8SAG3VMtuijEMT5e2eBHOVs
+id: partner_entity.partner_entity.field_logo
+field_name: field_logo
+entity_type: partner_entity
+bundle: partner_entity
+label: Logo
+description: 'The logo image of this specific partner entry.'
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
@@ -31,7 +26,7 @@ settings:
   max_resolution: ''
   min_resolution: ''
   alt_field: true
-  alt_field_required: false
+  alt_field_required: true
   title_field: false
   title_field_required: false
   default_image:
