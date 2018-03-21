@@ -1,14 +1,14 @@
-uuid: eb987c96-2938-4e30-9892-739d45edb256
+uuid: b2e1c913-ef34-45fb-9f2a-3c4dd99c6275
 langcode: en
 status: true
 dependencies:
   module:
-    - webcomposer_metatags
+    - webcomposer_seo
 _core:
-  default_config_hash: 3N05WeF7mDYUeEKZnlhwC9DRcJXHEIoSAQHh3Y1O7lM
-id: metatag_entity.field_per_page_visibility
+  default_config_hash: bHs7jQyyENRaANke2g2jiiQTv2yHiKqutZ3B6vPlceE
+id: webcomposer_meta_entity.field_per_page_visibility
 field_name: field_per_page_visibility
-entity_type: metatag_entity
+entity_type: webcomposer_meta_entity
 type: string_long
 settings:
   case_sensitive: false
