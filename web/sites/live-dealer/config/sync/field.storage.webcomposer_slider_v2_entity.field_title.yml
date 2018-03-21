@@ -1,0 +1,23 @@
+uuid: 851a0ce1-12a4-4557-b45a-1938b52e7d83
+langcode: en
+status: true
+dependencies:
+  module:
+    - webcomposer_slider_v2
+_core:
+  default_config_hash: _3PTLoSZj3r3suQPhK7QcSdAtVSLC88mWopkjJWlhG0
+id: webcomposer_slider_v2_entity.field_title
+field_name: field_title
+entity_type: webcomposer_slider_v2_entity
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
