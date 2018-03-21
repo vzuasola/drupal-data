@@ -819,6 +819,7 @@ display:
         empty: false
         access: false
         pager: false
+        title: false
       filter_groups:
         operator: OR
         groups:
@@ -1446,6 +1447,7 @@ display:
         type: none
         options:
           offset: 0
+      title: 'Webcomposer Slider 2.0 List'
     cache_metadata:
       max-age: 0
       contexts:
