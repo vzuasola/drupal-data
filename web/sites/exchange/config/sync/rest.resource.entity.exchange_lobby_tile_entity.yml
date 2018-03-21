@@ -1,0 +1,17 @@
+uuid: 77d7a831-6cfe-4881-a474-a8e4af46448a
+langcode: en
+status: true
+dependencies:
+  module:
+    - exchange_lobby_tile
+    - serialization
+    - user
+id: entity.exchange_lobby_tile_entity
+plugin_id: 'entity:exchange_lobby_tile_entity'
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+    supported_auth:
+      - cookie
