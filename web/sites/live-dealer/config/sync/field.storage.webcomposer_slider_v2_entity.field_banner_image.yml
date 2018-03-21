@@ -1,16 +1,16 @@
-uuid: 408b1c5f-6f92-461e-884d-4c1a6b2e6644
+uuid: b028280a-41a3-4510-8a75-6d0622275474
 langcode: en
 status: true
 dependencies:
   module:
     - file
     - image
-    - webcomposer_slider
+    - webcomposer_slider_v2
 _core:
-  default_config_hash: tdFdaL7BQewSJ-qaeLyr-1NNmgP2QnAzba8tAxfS7pQ
-id: webcomposer_slider_entity.field_banner_image
+  default_config_hash: lMiEZHhgL7Qj6K6tTvx0twGJP46DzMrB8OKGHgKgZz4
+id: webcomposer_slider_v2_entity.field_banner_image
 field_name: field_banner_image
-entity_type: webcomposer_slider_entity
+entity_type: webcomposer_slider_v2_entity
 type: image
 settings:
   uri_scheme: public
