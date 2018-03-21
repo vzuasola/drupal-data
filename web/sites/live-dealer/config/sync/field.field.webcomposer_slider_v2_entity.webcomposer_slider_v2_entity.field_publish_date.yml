@@ -1,16 +1,18 @@
-uuid: d9cfe489-28cc-4292-9978-ec0cadb0fb8c
+uuid: 0cc7d23e-141c-43df-ad24-8c2764a24be1
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.webcomposer_slider_entity.field_publish_date
+    - field.storage.webcomposer_slider_v2_entity.field_publish_date
   module:
     - datetime
-    - webcomposer_slider
-id: webcomposer_slider_entity.webcomposer_slider_entity.field_publish_date
+    - webcomposer_slider_v2
+_core:
+  default_config_hash: MyZsGqSCR7iHQZ6V1lL8RhHPlNkqgNjDkOYDe9Ynls0
+id: webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_publish_date
 field_name: field_publish_date
-entity_type: webcomposer_slider_entity
-bundle: webcomposer_slider_entity
+entity_type: webcomposer_slider_v2_entity
+bundle: webcomposer_slider_v2_entity
 label: 'Publish Date (optional)'
 description: "<p>If this is set the slider will be available from this date up until the date set on <strong>Unpublish Date</strong>.\r\n<br>Otherwise, the slider will be available upon saving.</p>"
 required: false
