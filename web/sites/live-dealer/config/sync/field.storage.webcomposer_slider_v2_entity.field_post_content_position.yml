@@ -1,13 +1,15 @@
-uuid: ac3ef473-d8e3-49b6-b008-c5ca7c06bf9f
+uuid: 6e18934e-4e44-4906-af54-ebb76b39a212
 langcode: en
 status: true
 dependencies:
   module:
     - options
-    - webcomposer_slider
-id: webcomposer_slider_entity.field_content_position
-field_name: field_content_position
-entity_type: webcomposer_slider_entity
+    - webcomposer_slider_v2
+_core:
+  default_config_hash: _OqC0k8d0POh6dLEgFB3ANXyTrEl-mnLLpUQNHE_s9I
+id: webcomposer_slider_v2_entity.field_post_content_position
+field_name: field_post_content_position
+entity_type: webcomposer_slider_v2_entity
 type: list_string
 settings:
   allowed_values:
