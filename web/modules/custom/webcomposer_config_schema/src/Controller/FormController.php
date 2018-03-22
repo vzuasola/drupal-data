@@ -5,6 +5,8 @@ namespace Drupal\webcomposer_config_schema\Controller;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
+use Drupal\Core\Url;
+use Drupal\Core\Link;
 use Drupal\Core\Controller\ControllerBase;
 
 /**
@@ -62,11 +64,42 @@ class FormController extends ControllerBase {
    *
    */
   public function form() {
+    $base = [];
+
     $class = $this->entity['class'];
     $form = \Drupal::service('form_builder')->getForm($class);
 
+    if (\Drupal::service('webcomposer_config_schema.schema')->isConfigValueOverride()) {
+      $message = $this->getInfoMessage();
+
+      $base['message'] = [
+        '#theme' => 'status_messages',
+        '#message_list' => [
+          'warning' => [$message],
+        ],
+      ];
+    }
+
     return [
-      'form,' => $form
+      'form,' => $base + $form
     ];
+  }
+
+  /**
+   *
+   */
+  private function getInfoMessage() {
+    $lang = \Drupal::service('language_manager')->getCurrentLanguage()->getId();
+    $language = \Drupal::service('language_manager')->getDefaultLanguage();
+
+    $id = $this->entity['id'];
+
+    $uri = new Url("webcomposer_config_schema.form_{$id}", [], [
+      'language' => $language,
+    ]);
+
+    $link = Link::fromTextAndUrl(t('Cancel translating'), $uri)->toString();
+
+    return t("You are translating this configuration to language <strong>$lang</strong>. Go back by <strong>$link</strong>");
   }
 }

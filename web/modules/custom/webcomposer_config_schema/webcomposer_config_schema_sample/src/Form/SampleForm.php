@@ -5,6 +5,8 @@ namespace Drupal\webcomposer_config_schema_sample\Form;
 use Drupal\webcomposer_config_schema\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 
+use Drupal\webcomposer_config_schema\Plugin\WebcomposerConfigPluginInterface;
+
 /**
  * Promotion plugin
  *

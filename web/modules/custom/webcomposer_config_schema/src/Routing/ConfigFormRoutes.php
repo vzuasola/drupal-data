@@ -34,17 +34,6 @@ class ConfigFormRoutes {
             '_permission'  => 'administer site configuration',
           ]
         );
-
-        // $routes[$routename] = new Route(
-        //   $routeURI,
-        //   [
-        //     '_form' => $definition['class'],
-        //     '_title' => $definition['route']['title'],
-        //   ],
-        //   [
-        //     '_permission'  => 'administer site configuration',
-        //   ]
-        // );
       }
     }
 
