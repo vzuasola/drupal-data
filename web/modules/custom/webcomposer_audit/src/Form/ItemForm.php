@@ -59,7 +59,12 @@ class ItemForm extends FormBase {
     $title = ucwords($item['title']);
 
     if (isset($item['eid']) && isset($item['type'])) {
-      $entity = \Drupal::entityManager()->getStorage($item['type'])->load($item['eid']);
+      try {
+        $entity = \Drupal::entityManager()->getStorage($item['type'])->load($item['eid']);
+      } catch (\Exception $e) {
+        $entity = NULL;
+      }
+
       if ($entity) {
         try {
           $title = $this->l($title, $entity->toUrl('edit-form'));

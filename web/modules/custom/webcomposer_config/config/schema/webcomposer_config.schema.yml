@@ -9,13 +9,13 @@ webcomposer_config.header_configuration:
       type: label
       label: 'Join Now Text'
     join_now_link:
-      type: label
+      type: text
       label: 'Join Now Link'
     login_issue_text:
       type: label
       label: 'Login Issue Text'
     login_issue_link:
-      type: label
+      type: text
       label: 'Login Issue Link'
     capslock_notification:
       type: label
@@ -70,7 +70,7 @@ webcomposer_config.header_configuration:
       type: label
       label: 'Welcome Text'
     profile_link:
-      type: label
+      type: text
       label: 'Profile Link'
     profile_logout_text:
       type: label

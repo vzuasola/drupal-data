@@ -1,9 +1,9 @@
 notification_content:
+  value: "<p>Η συνεδρία σας έχει λήξει λόγω αδράνειας.</p>\r\n"
   format: basic_html
-  value: "<p>Η συνεδρία σας έχει λήξει λόγω αδράνειας.\r\n</p>\r\n"
 autologout_box_content:
+  value: "<p>Η συνεδρία σας θα λήξει σε {seconds} δευτερόλεπτα. Θέλετε να συνεχίσετε τη συνεδρία σας;</p>\r\n"
   format: basic_html
-  value: "<p>Η συνεδρία σας θα λήξει σε {seconds} δευτερόλεπτα. Θέλετε να συνεχίσετε τη συνεδρία σας;\r\n</p>\r\n"
 lightbox_blurb: 'Δεν είστε ακόμη μέλος της Dafabet?'
 username_placeholder: 'Όνομα Χρήστη'
 password_placeholder: 'Κωδικός Πρόσβασης'
@@ -13,10 +13,11 @@ error_message_blank_password: 'Υποχρεωτικό πεδίο ο Κωδικό
 error_message_blank_passname: 'Παρακαλώ ελέγξτε όλα τα πεδία και προσπαθήστε ξανά.'
 error_message_invalid_passname: 'Λυπούμαστε, μη έγκυρο όνομα χρήστη ή / και κωδικός πρόσβασης. ΠΑΡΑΚΑΛΩ προσπαθησε ξανα.'
 error_message_service_not_available: 'Η Υπηρεσία δεν είναι διαθέσιμη.'
-error_message_account_suspended: 'Ο λογαριασμός είναι κλειδωμένος. Επικοινωνήστε με την υποστήριξη πελατών μας.'
-error_message_account_locked: 'Ο λογαριασμός είναι κλειδωμένος. Επικοινωνήστε με την υποστήριξη πελατών μας.'
+error_message_account_suspended: 'Ο λογαριασμός σας έχει κλειδωθεί. Παρακαλώ επικοινωνήστε με την εξυπηρέτηση πελατών.'
+error_message_account_locked: 'Ο λογαριασμός σας έχει κλειδωθεί. Παρακαλώ επικοινωνήστε με την εξυπηρέτηση πελατών.'
 autologout_box_title: PRZYPOMNIENIE
 affirmative_button_text: Ναι
 negative_button_text: Όχι
 notification_title: POWIADOMIENIA
 notification_window_title: 'Twoja sesja wygasła'
+mobile_login_button_label: ΕΙΣΟΔΟΣ/ΕΓΓΡΑΦΗ

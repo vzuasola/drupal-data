@@ -1,0 +1,5 @@
+entity.webcomposer_meta_entity.add_form:
+  route_name: entity.webcomposer_meta_entity.add_form
+  title: 'Add Webcomposer meta entity'
+  appears_on:
+    - entity.webcomposer_meta_entity.collection
