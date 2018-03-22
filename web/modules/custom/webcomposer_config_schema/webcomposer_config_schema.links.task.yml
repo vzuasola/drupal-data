@@ -1,0 +1,3 @@
+webcomposer_config_schema.form_local_tasks:
+  deriver: 'Drupal\webcomposer_config_schema\Plugin\Derivative\ConfigFormLocalTasks'
+  weight: 100
