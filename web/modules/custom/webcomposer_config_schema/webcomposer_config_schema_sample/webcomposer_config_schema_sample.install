@@ -5,7 +5,8 @@
  */
 function webcomposer_config_schema_sample_uninstall() {
   $keys = [
-    'webcomposer_config.sample'
+    'webcomposer_config_schema_sample.sample',
+    'webcomposer_config_schema_sample.description',
   ];
 
   foreach ($keys as $key) {

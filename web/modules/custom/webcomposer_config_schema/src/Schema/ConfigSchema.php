@@ -156,7 +156,11 @@ class ConfigSchema {
       $configEditable->set($key, $data[$key]);
     }
 
-    $this->moduleHandler->invokeAll('webcomposer_config_schema_save', [$data, $before]);
+    if (empty($before)) {
+      $this->moduleHandler->invokeAll('webcomposer_config_schema_insert', [$data]);
+    } else {
+      $this->moduleHandler->invokeAll('webcomposer_config_schema_update', [$data, $before]);
+    }
 
     $configEditable->save();
   }
@@ -191,7 +195,7 @@ class ConfigSchema {
    * Delete methods
    *
    */
-  
+
   /**
    * Delete mutable config values
    */
