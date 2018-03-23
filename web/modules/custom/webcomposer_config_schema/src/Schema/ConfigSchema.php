@@ -8,10 +8,18 @@ class ConfigSchema {
   /**
    *
    */
-  public function __construct($config_typed, $language_manager, $config_factory) {
+  public function __construct($config_typed, $language_manager, $config_factory, $module_handler) {
     $this->typedConfigManager = $config_typed;
     $this->languageManager = $language_manager;
     $this->configFactory = $config_factory;
+    $this->moduleHandler = $module_handler;
+  }
+
+  /**
+   *
+   */
+  public function getEditableConfigNames() {
+    return $this->configNames;
   }
 
   /**
@@ -26,14 +34,17 @@ class ConfigSchema {
   /**
    *
    */
-  protected function getEditableConfigNames() {
-    return $this->configNames;
+  public function isConfigValueOverride() {
+    $currentLanguage = $this->languageManager->getCurrentLanguage()->getId();
+    $defaultLanguage = $this->languageManager->getDefaultLanguage()->getId();
+
+    return $defaultLanguage !== $currentLanguage;
   }
 
   /**
    * Retrieves a configuration object.
    */
-  public function config($name) {
+  public function getEditable($name) {
     $config_factory = $this->configFactory;
 
     if (in_array($name, $this->getEditableConfigNames())) {
@@ -49,7 +60,7 @@ class ConfigSchema {
    * Get default config values
    */
   public function getDefaultConfigValues($name, $key) {
-    $config = $this->config($name);
+    $config = $this->getEditable($name);
 
     return $config->get($key);
   }
@@ -65,7 +76,7 @@ class ConfigSchema {
       return $this->configFactory->get($name)->get();
     }
 
-    $config = $this->config($name);
+    $config = $this->getEditable($name);
 
     return $config->get();
   }
@@ -83,7 +94,7 @@ class ConfigSchema {
       return $config[$key];
     }
 
-    $config = $this->config($name);
+    $config = $this->getEditable($name);
 
     return $config->get($key);
   }
@@ -91,34 +102,53 @@ class ConfigSchema {
   /**
    *
    */
-  public function saveConfigValue($name, $key, $data) {
+  public function saveConfigValues($name, $data) {
     if ($this->isConfigValueOverride()) {
-      $language = $this->languageManager->getCurrentLanguage();
-      $configTranslation = $this->languageManager->getLanguageConfigOverride($language->getId(), $name);
-
-      $configTranslation->set($key, $data)->save();
-
-      $savedConfig = $configTranslation->get();
-
-      if (empty($savedConfig)) {
-        $configTranslation->delete();
-      } else {
-        $configTranslation->save();
-      }
-
-      return;
+      $this->doConfigTranslate($name, $data);
+    } else {
+      $this->doConfigSave($name, $data);
     }
-
-    $this->config($name)->set($key, $data)->save();
   }
 
   /**
    *
    */
-  public function isConfigValueOverride() {
-    $currentLanguage = $this->languageManager->getCurrentLanguage()->getId();
-    $defaultLanguage = $this->languageManager->getDefaultLanguage()->getId();
+  private function doConfigSave($name, $data) {
+    $configEditable = $this->getEditable($name);
+    $before = $configEditable->get();
 
-    return $defaultLanguage !== $currentLanguage;
+    foreach ($data as $key => $value) {
+      $configEditable->set($key, $data[$key]);
+    }
+
+    $this->moduleHandler->invokeAll('webcomposer_config_schema_save', [$data, $before]);
+
+    $configEditable->save();
+  }
+
+  /**
+   *
+   */
+  private function doConfigTranslate($name, $data) {
+    $language = $this->languageManager->getCurrentLanguage();
+    
+    $configTranslation = $this->languageManager->getLanguageConfigOverride($language->getId(), $name);
+    $before = $configTranslation->get();
+
+    foreach ($data as $key => $value) {
+      $configTranslation->set($key, $data[$key]);
+    }
+
+    $configTranslation->save();
+
+    $savedConfig = $configTranslation->get();
+
+    if (empty($savedConfig)) {
+      $configTranslation->delete();
+    } else {
+      $configTranslation->save();
+    }
+
+    $this->moduleHandler->invokeAll('webcomposer_config_schema_translate', [$data, $before]);
   }
 }

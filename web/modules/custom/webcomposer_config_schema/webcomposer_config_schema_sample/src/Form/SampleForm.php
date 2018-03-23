@@ -29,35 +29,54 @@ class SampleForm extends FormBase {
    * {@inheritdoc}
    */
   protected function getEditableConfigNames() {
-    return ['webcomposer_config.sample'];
+    return ['webcomposer_config_schema_sample.sample'];
   }
 
   /**
    * {@inheritdoc}
    */
-  public function buildForm(array $form, FormStateInterface $form_state) {
-    $form['sample_text'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Sample Text'),
-      '#default_value' => $this->get('sample_text'),
-      '#translate' => TRUE,
+  public function form(array $form, FormStateInterface $form_state) {
+    $form['tab'] = [
+      '#type' => 'vertical_tabs',
+      '#title' => t('Sample Configuration'),
     ];
 
-    return parent::buildForm($form, $form_state);
+    $form['teaser'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Teaser'),
+      '#collapsible' => TRUE,
+      '#group' => 'tab',
+    ];
+
+    $form['teaser']['title'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Title'),
+      '#default_value' => $this->get('title'),
+    ];
+
+    $form['teaser']['description'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Description'),
+      '#default_value' => $this->get('description'),
+      '#translatable' => TRUE,
+    ];
+
+    return $form;
   }
 
   /**
    * {@inheritdoc}
    */
-  public function submitForm(array &$form, FormStateInterface $form_state) {
+  public function submit(array &$form, FormStateInterface $form_state) {
     $keys = [
-      'sample_text',
+      'title',
+      'description',
     ];
 
     foreach ($keys as $key) {
-      $this->save($key, $form_state->getValue($key));
+      $data[$key] = $form_state->getValue($key);
     }
 
-    return parent::submitForm($form, $form_state);
+    $this->save($data);
   }
 }

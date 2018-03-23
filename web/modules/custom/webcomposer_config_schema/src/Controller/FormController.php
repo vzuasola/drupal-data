@@ -81,7 +81,7 @@ class FormController extends ControllerBase {
     }
 
     return [
-      'form,' => $base + $form
+      'form' => $base + $form
     ];
   }
 

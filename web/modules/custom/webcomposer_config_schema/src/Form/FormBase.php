@@ -7,12 +7,34 @@ use Drupal\Core\Form\FormStateInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 abstract class FormBase extends ConfigFormBase {
+  use SchemaTrait;
+
   /**
-   * {@inheritdoc}
+   * Flag to disable auto translate
+   *
+   * @var boolean
    */
-  protected function getEditableConfigNames() {
-    return [];
-  }
+  protected $disableAutoTranslateOnSave = false;
+
+  /**
+   * The abstracted form definition method
+   *
+   * @param array $form
+   * @param FormStateInterface $form_state
+   *
+   * @return array
+   */
+  abstract public function form(array $form, FormStateInterface $form_state);
+
+  /**
+   * The abstracted form submit method
+   *
+   * @param array $form
+   * @param FormStateInterface $form_state
+   *
+   * @return array
+   */
+  abstract public function submit(array &$form, FormStateInterface $form_state);
 
   /**
    * {@inheritdoc}
@@ -51,52 +73,58 @@ abstract class FormBase extends ConfigFormBase {
   }
 
   /**
-   * Gets the schema object
    *
-   * @return object
    */
-  protected function schema() {
-    return $this->schemaBase;
+  public function buildForm(array $form, FormStateInterface $form_state) {
+    $form = $this->form($form, $form_state);
+
+    if ($this->isTranslated()) {
+      $this->processForm($form);
+    }
+
+    return parent::buildForm($form, $form_state);
   }
 
   /**
-   * Getters and Setters
    *
    */
+  public function submitForm(array &$form, FormStateInterface $form_state) {
+    if ($this->isTranslated() && !$this->disableAutoTranslateOnSave) {
+      $this->processFormState($this->form([], $form_state), $form_state);
+    }
 
-  /**
-   * Abstracted config method
-   *
-   * @return object
-   */
-  protected function get($name) {
-    $editables = $this->getEditableConfigNames();
-    $main = reset($editables);
+    $this->submit($form, $form_state);
 
-    return $this->schemaBase->getConfigValue($main, $name);
+    return parent::submitForm($form, $form_state);
   }
 
   /**
-   * Abstracted config method
    *
-   * @return object
    */
-  protected function getAll() {
-    $editables = $this->getEditableConfigNames();
-    $main = reset($editables);
+  private function processFormState($form, FormStateInterface $form_state) {
+    foreach ($form as $key => $value) {
+      if (is_array($value)) {
+        if (isset($value['#type']) && isset($value['#default_value']) && empty($value['#translatable'])) {
+          $form_state->unsetValue($key);
+        }
 
-    return $this->schemaBase->getConfigValues($main);
+        $this->processFormState($form[$key], $form_state);
+      }
+    }
   }
 
   /**
-   * Abstracted save method
    *
-   * @return object
    */
-  protected function save($name, $value) {
-    $editables = $this->getEditableConfigNames();
-    $main = reset($editables);
+  private function processForm(&$form) {
+    foreach ($form as $key => $value) {
+      if (is_array($value)) {
+        if (isset($value['#type']) && isset($value['#default_value']) && empty($value['#translatable'])) {
+          $form[$key]['#disabled'] = TRUE;
+        }
 
-    return $this->schemaBase->saveConfigValue($main, $name, $value);
+        $this->processForm($form[$key]);
+      }
+    }
   }
 }
