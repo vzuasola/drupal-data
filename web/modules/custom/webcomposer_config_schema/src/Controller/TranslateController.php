@@ -69,9 +69,13 @@ class TranslateController extends ControllerBase {
     $languages = $this->languageManager->getLanguages();
     $rows = [];
 
+    $class = $this->entity['class'];
+    $form = \Drupal::service('form_builder')->getForm($class);
+
+    $main = reset($form['#editable_config_names']);
+
     foreach ($languages as $language) {
       $languageName = $language->getName();
-      $status = 'Published';
 
       $id = $this->entity['id'];
 
@@ -80,6 +84,15 @@ class TranslateController extends ControllerBase {
       ], [
         'language' => $language,
       ]);
+
+      // check if values are published or not
+
+      $status = 'Empty';
+      $values = \Drupal::service('webcomposer_config_schema.schema')->getConfigValuesByLanguage($main, $language->getId());
+
+      if (!empty($values)) {
+        $status = 'Published';
+      }
 
       $operations = [
         'data' => [

@@ -89,7 +89,7 @@ class FormController extends ControllerBase {
    *
    */
   private function getInfoMessage() {
-    $lang = \Drupal::service('language_manager')->getCurrentLanguage()->getId();
+    $lang = \Drupal::service('language_manager')->getCurrentLanguage()->getName();
     $language = \Drupal::service('language_manager')->getDefaultLanguage();
 
     $id = $this->entity['id'];

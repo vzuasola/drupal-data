@@ -66,6 +66,11 @@ class ConfigSchema {
   }
 
   /**
+   * Getter methods
+   *
+   */
+
+  /**
    * Get mutable config values
    */
   public function getConfigValues($name) {
@@ -98,6 +103,36 @@ class ConfigSchema {
 
     return $config->get($key);
   }
+
+  /**
+   * Translated Getter methods
+   *
+   */
+
+  /**
+   * Get mutable config values
+   */
+  public function getConfigValuesByLanguage($name, $id) {
+    $default = $this->languageManager->getCurrentLanguage();
+    $language = $this->languageManager->getLanguage($id);
+
+    $base_config = $this->getConfigValues($name);
+
+    if ($default->getId() === $language->getId()) {
+      return $base_config;
+    }
+
+    $this->languageManager->setConfigOverrideLanguage($language);
+
+    $config = $this->configFactory->get($name)->get();
+
+    return array_diff($base_config, $config);
+  }
+
+  /**
+   * Setter methods
+   *
+   */
 
   /**
    *

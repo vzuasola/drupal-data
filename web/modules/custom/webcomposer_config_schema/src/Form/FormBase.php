@@ -78,6 +78,8 @@ abstract class FormBase extends ConfigFormBase {
   public function buildForm(array $form, FormStateInterface $form_state) {
     $form = $this->form($form, $form_state);
 
+    $form['#editable_config_names'] = $this->getEditableConfigNames();
+
     if ($this->isTranslated()) {
       $this->processForm($form);
     }
