@@ -11,12 +11,14 @@ dependencies:
     - field.field.node.page.field_hide_right_side_block
     - field.field.node.page.field_image
     - field.field.node.page.field_log_in_state
+    - field.field.node.page.field_meta_tags
     - image.style.thumbnail
     - node.type.page
   module:
     - field_group
     - image
     - link
+    - metatag
     - path
     - scheduler
     - text
@@ -163,6 +165,12 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
+    region: content
+  field_meta_tags:
+    weight: 44
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_firehose
     region: content
   langcode:
     type: language_select
