@@ -1,0 +1,94 @@
+uuid: b70789dc-dad9-4dfd-870f-93c6c7ba6aa1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.games.body
+    - field.field.node.games.field_game_icon
+    - field.field.node.games.field_game_image
+    - field.field.node.games.field_game_image_large
+    - field.field.node.games.field_game_info
+    - field.field.node.games.field_game_title
+    - field.field.node.games.field_image_size
+    - field.field.node.games.field_show_game_info_toggle
+    - node.type.games
+  module:
+    - image
+    - options
+    - text
+    - user
+id: node.games.default
+targetEntityType: node
+bundle: games
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_game_icon:
+    weight: 110
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_game_image:
+    weight: 108
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_game_image_large:
+    weight: 109
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_game_info:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_game_title:
+    weight: 105
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_image_size:
+    weight: 107
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_show_game_info_toggle:
+    weight: 106
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true
