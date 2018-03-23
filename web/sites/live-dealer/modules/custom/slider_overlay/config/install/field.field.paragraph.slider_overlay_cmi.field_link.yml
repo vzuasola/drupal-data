@@ -7,8 +7,6 @@ dependencies:
     - paragraphs.paragraphs_type.slider_overlay_cmi
   module:
     - link
-_core:
-  default_config_hash: ZJw8xstPl1e-y23U_hodnjlfw_Ck0GWKyB488YC11Lw
 id: paragraph.slider_overlay_cmi.field_link
 field_name: field_link
 entity_type: paragraph

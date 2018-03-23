@@ -14,8 +14,6 @@ third_party_settings:
       file: file
       alt: '0'
       title: '0'
-_core:
-  default_config_hash: n2OAzDkzGNe42uVBQ3G2XlMutijkr3KybCl7-2Q546M
 id: paragraph.slider_overlay_cmi.field_slideroverlay_image
 field_name: field_slideroverlay_image
 entity_type: paragraph
