@@ -16,7 +16,7 @@ mode: default
 content:
   field_slider_overlay_cmi:
     type: entity_reference_paragraphs
-    weight: 0
+    weight: 1
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -26,12 +26,19 @@ content:
       default_paragraph_type: ''
     third_party_settings: {  }
     region: content
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   translation:
-    weight: 1
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
   langcode: true
-  name: true
   user_id: true
