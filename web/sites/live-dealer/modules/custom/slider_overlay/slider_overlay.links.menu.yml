@@ -1,0 +1,19 @@
+slider_overlay.list:
+  title: 'Slider Overlay'
+  description: 'Configure the Main Banner Slider Overlay'
+  parent: system.admin_config
+  route_name: slider_overlay.admin_settings
+  weight: 1500
+
+# Social Media menu items definition
+entity.slider_overlay_entity.collection:
+  title: 'Slider Overlay list'
+  route_name: entity.slider_overlay_entity.collection
+  description: 'List Slider Overlay entities'
+  parent: slider_overlay.list
+
+slider_overlay_entity.admin.structure.settings:
+  title: Slider Overlay settings
+  description: 'Configure Slider Overlay entities'
+  route_name: slider_overlay_entity.settings
+  parent: slider_overlay.list
