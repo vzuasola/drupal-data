@@ -11,48 +11,42 @@ use Drupal\webcomposer_config_schema\Plugin\WebcomposerConfigPluginInterface;
  * Promotion plugin
  *
  * @WebcomposerConfigPlugin(
- *   id = "webcomposer_config_schema_sample_sample",
+ *   id = "webcomposer_config_schema_sample_description",
  *   route = {
- *     "title" = "Sample Form Configuration",
- *     "path" = "/admin/config/webcomposer/config/sample",
+ *     "title" = "Description Form Configuration",
+ *     "path" = "/admin/config/webcomposer/config/description",
  *   },
  *   menu = {
- *     "title" = "Sample Configuration",
+ *     "title" = "Description Configuration",
  *     "description" = "Provides sample configuration",
  *     "parent" = "webcomposer_config_schema_sample.list",
  *     "weight" = 30
  *   },
  * )
  */
-class SampleForm extends FormBase {
+class DescriptionForm extends FormBase {
   /**
    * {@inheritdoc}
    */
   protected function getEditableConfigNames() {
-    return ['webcomposer_config_schema_sample.sample'];
+    return ['webcomposer_config_schema_sample.description'];
   }
 
   /**
    * {@inheritdoc}
    */
   public function form(array $form, FormStateInterface $form_state) {
-    $form['teaser'] = [
-      '#type' => 'details',
-      '#title' => $this->t('Teaser'),
-      '#collapsible' => TRUE,
-      '#open' => TRUE,
-    ];
-
-    $form['teaser']['title'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Title'),
-      '#default_value' => $this->get('title'),
-    ];
-
-    $form['teaser']['description'] = [
+    $form['description'] = [
       '#type' => 'textarea',
       '#title' => $this->t('Description'),
       '#default_value' => $this->get('description'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['another_description'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Another Description'),
+      '#default_value' => $this->get('another_description'),
       '#translatable' => TRUE,
     ];
 
@@ -64,8 +58,8 @@ class SampleForm extends FormBase {
    */
   public function submit(array &$form, FormStateInterface $form_state) {
     $keys = [
-      'title',
       'description',
+      'another_description',
     ];
 
     foreach ($keys as $key) {

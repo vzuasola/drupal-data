@@ -113,7 +113,7 @@ class ConfigSchema {
    * Get mutable config values
    */
   public function getConfigValuesByLanguage($name, $id) {
-    $default = $this->languageManager->getCurrentLanguage();
+    $default = $this->languageManager->getDefaultLanguage();
     $language = $this->languageManager->getLanguage($id);
 
     $base_config = $this->getConfigValues($name);
@@ -185,5 +185,30 @@ class ConfigSchema {
     }
 
     $this->moduleHandler->invokeAll('webcomposer_config_schema_translate', [$data, $before]);
+  }
+
+  /**
+   * Delete methods
+   *
+   */
+  
+  /**
+   * Delete mutable config values
+   */
+  public function deleteConfigValues($name) {
+    $default = $this->languageManager->getDefaultLanguage();
+    $language = $this->languageManager->getCurrentLanguage();
+
+    $base_config = $this->getConfigValues($name);
+
+    if ($default->getId() === $language->getId()) {
+      return;
+    }
+
+    $this->languageManager
+      ->getLanguageConfigOverride($language->getId(), $name)
+      ->delete();
+
+    return TRUE;
   }
 }

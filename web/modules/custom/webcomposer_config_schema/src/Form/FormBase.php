@@ -84,7 +84,29 @@ abstract class FormBase extends ConfigFormBase {
       $this->processForm($form);
     }
 
-    return parent::buildForm($form, $form_state);
+    $build = parent::buildForm($form, $form_state);
+
+    if ($this->isTranslated()) {
+      $build['actions']['reset'] = [
+        '#type' => 'submit',
+        '#value' => 'Reset Translation',
+        '#submit' => ['::resetForm'],
+      ];
+    }
+
+    return $build;
+  }
+
+  /**
+   *
+   */
+  public function resetForm(array $form, FormStateInterface $form_state) {
+    $editables = $this->getEditableConfigNames();
+    $main = reset($editables);
+
+    $this->schemaBase->deleteConfigValues($main);
+
+    drupal_set_message($this->t('The translation has been deleted.'));
   }
 
   /**
