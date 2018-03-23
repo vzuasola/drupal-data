@@ -174,6 +174,12 @@ class ConfigSchema {
     $configTranslation = $this->languageManager->getLanguageConfigOverride($language->getId(), $name);
     $before = $configTranslation->get();
 
+    // if the translation is empty, use the config editable of EN
+    if (empty($before)) {
+      $configEditable = $this->getEditable($name);
+      $before = $configEditable->get();
+    }
+
     foreach ($data as $key => $value) {
       $configTranslation->set($key, $data[$key]);
     }
