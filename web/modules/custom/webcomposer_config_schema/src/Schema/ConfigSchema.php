@@ -157,9 +157,9 @@ class ConfigSchema {
     }
 
     if (empty($before)) {
-      $this->moduleHandler->invokeAll('webcomposer_config_schema_insert', [$data]);
+      $this->moduleHandler->invokeAll('webcomposer_config_schema_insert', [$name, $data]);
     } else {
-      $this->moduleHandler->invokeAll('webcomposer_config_schema_update', [$data, $before]);
+      $this->moduleHandler->invokeAll('webcomposer_config_schema_update', [$name, $data, $before]);
     }
 
     $configEditable->save();
@@ -188,7 +188,7 @@ class ConfigSchema {
       $configTranslation->save();
     }
 
-    $this->moduleHandler->invokeAll('webcomposer_config_schema_translate', [$data, $before]);
+    $this->moduleHandler->invokeAll('webcomposer_config_schema_translate', [$name, $data, $before]);
   }
 
   /**
