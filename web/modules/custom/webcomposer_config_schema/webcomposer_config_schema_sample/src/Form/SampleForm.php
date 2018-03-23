@@ -19,7 +19,7 @@ use Drupal\webcomposer_config_schema\Plugin\WebcomposerConfigPluginInterface;
  *   menu = {
  *     "title" = "Sample Configuration",
  *     "description" = "Provides sample configuration",
- *     "parent" = "webcomposer_config.list",
+ *     "parent" = "webcomposer_config_schema_sample.list",
  *     "weight" = 30
  *   },
  * )
