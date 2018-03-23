@@ -9,6 +9,9 @@ use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Url;
 
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\TypedData\TypedDataInterface;
+
 use Drupal\webcomposer_audit\Storage\AuditStorageInterface;
 
 /**
@@ -284,7 +287,13 @@ class ItemForm extends FormBase {
     $map = [];
 
     foreach ($entity as $key => $value) {
-      $map[$value->getName()] = $value->getString();
+      if ($value instanceof TypedDataInterface) {
+        $map[$value->getName()] = $value->getString();
+      } else if ($value instanceof EntityInterface) {
+        $map[$key] = $this->getLineChangesFromEntity($value->toArray());
+      } else {
+        $map[$key] = $value;
+      }
     }
 
     return $map;
