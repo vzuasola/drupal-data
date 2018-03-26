@@ -70,6 +70,12 @@ class OWSportsCustomConfigForm extends ConfigFormBase {
       '#group' => 'owsports_settings_tab',
     ];
 
+    $form['jackpotbet_config_group']['colossus_toggle'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable Open Colossus Page (Pre-Login)'),
+      '#default_value' => $config->get('colossus_toggle'),
+    ];
+
     $form['jackpotbet_config_group']['colossus_pre_uri'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Pre-login'),
@@ -212,6 +218,7 @@ class OWSportsCustomConfigForm extends ConfigFormBase {
       'singbet_template',
       'colossus_pre_uri',
       'colossus_post_uri',
+      'colossus_toggle',
       'url_param',
     ];
 
