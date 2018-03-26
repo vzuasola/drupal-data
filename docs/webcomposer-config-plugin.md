@@ -21,9 +21,9 @@ does it.
 * **Structure**
 
 It contains the mandatory methods
-* **getEditableConfigNames**
-* **form**
-* **submit**
+    * **getEditableConfigNames**
+    * **form**
+    * **submit**
 
 * **Annotation**
 
