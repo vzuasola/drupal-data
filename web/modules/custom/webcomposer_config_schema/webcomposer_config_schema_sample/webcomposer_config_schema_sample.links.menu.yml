@@ -1,5 +1,5 @@
 webcomposer_config_schema_sample.list:
   title: 'Webcomposer Sample Configuration'
-  description: 'Provides an API for defining custom sample configuration'
+  description: 'Provides a form for defining custom sample configuration'
   parent: system.admin_config
   route_name: webcomposer_config_schema_sample.admin_settings
