@@ -33,10 +33,10 @@ function webcomposer_slider_v2_validate(&$form, FormStateInterface $form_state) 
   }
   // Validation for pre bammer image.
   if ($loginState[0]['value'] == 0 && $bannerImage[0]['fids'] == NULL) {
-    $form_state->setErrorByName('$bannerImage', t('Pre Banner image field is required.'));
+    $form_state->setErrorByName('$bannerImage', t('Pre Banner Image field is required.'));
   }
   // Validation for pre bammer image.
   if ($loginState[1]['value'] == 1 && $bannerImagePost[0]['fids'] == NULL) {
-    $form_state->setErrorByName('$bannerImagePost', t('Post Banner image field is required.'));
+    $form_state->setErrorByName('$bannerImagePost', t('Post Banner Image field is required.'));
   }
 }
