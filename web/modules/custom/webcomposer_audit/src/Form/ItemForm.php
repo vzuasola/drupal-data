@@ -9,6 +9,9 @@ use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Url;
 
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\TypedData\TypedDataInterface;
+
 use Drupal\webcomposer_audit\Storage\AuditStorageInterface;
 
 /**
@@ -57,6 +60,16 @@ class ItemForm extends FormBase {
 
     $item = $this->item;
     $title = ucwords($item['title']);
+
+    if (isset($item['type']) && $item['type'] == 'config') {
+      $title = $item['title'];
+
+      $title = [
+        'data' => [
+          '#markup' => "<strong>$title</strong>"
+        ]
+      ];
+    }
 
     if (isset($item['eid']) && isset($item['type'])) {
       try {
@@ -127,68 +140,6 @@ class ItemForm extends FormBase {
   /**
    *
    */
-  private function xbuildComparisonForm(array &$form, FormStateInterface $form_state) {
-    $item = $this->item;
-
-    $entity = unserialize($this->item['entity']);
-
-    switch ($item['action']) {
-      case AuditStorageInterface::UPDATE:
-        $before = $entity->original;
-
-        $textBefore = $this->getLineChangesFromEntity($before);
-        $textAfter = $this->getLineChangesFromEntity($entity);
-        break;
-
-      case AuditStorageInterface::ADD:
-        $textBefore = [];
-        $textAfter = $this->getLineChangesFromEntity($entity);
-        break;
-
-      case AuditStorageInterface::DELETE:
-        $textBefore = $this->getLineChangesFromEntity($entity);
-        $textAfter = [];
-        break;
-
-      default:
-        // we do not know what type of action this is so we skip diff generation
-        return;
-    }
-
-    $diff = new Diff($textBefore, $textAfter);
-
-    $formatter = \Drupal::service('diff.formatter');
-    $formatter->show_header = FALSE;
-
-    $form['diff_wrapper'] = [
-      '#type' => 'container',
-      '#attributes' => [
-        'style' => 'margin-top: 50px;',
-      ],
-    ];
-
-    $form['diff_wrapper']['diff'] = [
-      '#type' => 'table',
-      '#prefix' => '
-        <h4 style="margin-top: 50px;">Comparison</h4>
-        <p>Differences during this audit event</p>
-      ',
-      '#attributes' => [
-        'class' => ['diff'],
-      ],
-      '#header' => [
-        ['data' => t('Before'), 'colspan' => '2'],
-        ['data' => t('After'), 'colspan' => '2'],
-      ],
-      '#rows' => $formatter->format($diff),
-    ];
-
-    $form['#attached']['library'][] = 'system/diff'; 
-  }
-
-  /**
-   *
-   */
   private function buildComparisonForm(array &$form, FormStateInterface $form_state) {
     $item = $this->item;
 
@@ -196,7 +147,14 @@ class ItemForm extends FormBase {
 
     switch ($item['action']) {
       case AuditStorageInterface::UPDATE:
-        $compare = $this->generateCompareDiff($entity->original, $entity);
+        // for non standard entities
+        if (method_exists($entity, 'getOriginal')) {
+          $original = $entity->getOriginal();
+        } else {
+          $original = $entity->original;
+        }
+
+        $compare = $this->generateCompareDiff($original, $entity);
         break;
 
       case AuditStorageInterface::ADD:
@@ -232,14 +190,14 @@ class ItemForm extends FormBase {
       }
     }
 
-    if (!empty($rows)) {
-      $form['diff_wrapper'] = [
-        '#type' => 'container',
-        '#attributes' => [
-          'style' => 'margin-top: 50px;',
-        ],
-      ];
+    $form['diff_wrapper'] = [
+      '#type' => 'container',
+      '#attributes' => [
+        'style' => 'margin-top: 50px;',
+      ],
+    ];
 
+    if (!empty($rows)) {
       $form['diff_wrapper']['diff'] = [
         '#type' => 'table',
         '#prefix' => '
@@ -257,6 +215,19 @@ class ItemForm extends FormBase {
       ];
 
       $form['diff_wrapper'] += $rows;
+    } else {
+      // if the form is empty then show this message
+
+      $form['diff_wrapper']['text'] = [
+        '#prefix' => '
+          <h4 style="margin-top: 50px;">Comparison</h4>
+          <p>Differences during this audit event</p>
+        ',
+        '#theme' => 'status_messages',
+        '#message_list' => [
+          'warning' => ['There has been no changes for this event.'],
+        ],
+      ];
     }
 
     $form['#attached']['library'][] = 'system/diff';
@@ -316,7 +287,13 @@ class ItemForm extends FormBase {
     $map = [];
 
     foreach ($entity as $key => $value) {
-      $map[$value->getName()] = $value->getString();
+      if ($value instanceof TypedDataInterface) {
+        $map[$value->getName()] = $value->getString();
+      } elseif ($value instanceof EntityInterface) {
+        $map[$key] = $this->getLineChangesFromEntity($value->toArray());
+      } else {
+        $map[$key] = $value;
+      }
     }
 
     return $map;

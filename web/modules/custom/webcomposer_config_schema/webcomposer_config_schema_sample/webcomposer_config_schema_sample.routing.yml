@@ -1,0 +1,7 @@
+webcomposer_config_schema_sample.admin_settings:
+  path: 'admin/config/webcomposer/sample'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Webcomposer Sample Configuration'
+  requirements:
+    _permission: 'administer site configuration'
