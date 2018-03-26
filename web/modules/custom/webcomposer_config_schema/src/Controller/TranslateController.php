@@ -38,15 +38,18 @@ class TranslateController extends ControllerBase {
    *
    */
   private function getEntity() {
-    $id = $this->route->getParameter('form');
+    $path = $this->route->getCurrentRouteMatch()->getRouteObject()->getPath();
+    $path = trim($path, '/');
 
-    try {
-      $entity = $this->pluginManager->getDefinition($id);
-    } catch (\Exception $e) {
-      throw new NotFoundHttpException();
+    $definitions = $this->pluginManager->getDefinitions();
+
+    foreach ($definitions as $key => $definition) {
+      if ($path === "admin/config/webcomposer/translate/$key") {
+        return $definition;
+      }
     }
 
-    return $entity;
+    throw new NotFoundHttpException();
   }
 
   /**
