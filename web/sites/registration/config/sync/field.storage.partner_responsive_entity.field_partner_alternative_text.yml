@@ -1,0 +1,21 @@
+uuid: 4d9d2d3f-f2ec-477d-8705-f4f00fb9ca79
+langcode: en
+status: true
+dependencies:
+  module:
+    - webcomposer_partner_responsive
+id: partner_responsive_entity.field_partner_alternative_text
+field_name: field_partner_alternative_text
+entity_type: partner_responsive_entity
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
