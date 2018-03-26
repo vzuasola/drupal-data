@@ -43,17 +43,17 @@ class AvayaChatConfiguration extends ConfigFormBase {
     $form['field_configuration']['base_url'] = [
       '#type' => 'textarea',
       '#title' => t('Avaya Chat Base URL'),
-      '#size' => 500,
       '#description' => $this->t('Link for Live Chat.'),
       '#default_value' => $config->get('base_url'),
+      '#rows' => 3
     ];
 
     $form['field_configuration']['url_post'] = [
-      '#type' => 'url',
+      '#type' => 'textarea',
       '#title' => $this->t('URL Post'),
       '#description' => $this->t('Avaya API url'),
-      '#maxlength' => 255,
       '#default_value' => $config->get('url_post'),
+      '#rows' => 1
     ];
 
     $form['field_configuration']['url_post_timout'] = [
@@ -81,13 +81,13 @@ class AvayaChatConfiguration extends ConfigFormBase {
     ];
 
     $form['field_configuration']['xdomain_proxy'] = [
-      '#type' => 'url',
+      '#type' => 'textarea',
       '#title' => $this->t('XDomain Proxy'),
       '#description' => $this->t(
         'The protocol and domain of the XDomain proxy for CORS support (eg. https://www.cs-livechat.com)'
       ),
-      '#maxlength' => 255,
       '#default_value' => $config->get('xdomain_proxy'),
+      '#rows' => 1
     ];
 
     $form['actions'] = ['#type' => 'actions'];
