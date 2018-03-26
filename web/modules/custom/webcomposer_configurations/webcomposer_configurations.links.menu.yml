@@ -1,0 +1,5 @@
+webcomposer_configurations.list:
+  title: 'Webcomposer Configurations'
+  description: 'Provides Webcomposer common configurations'
+  parent: system.admin_config
+  route_name: webcomposer_configurations.admin_settings

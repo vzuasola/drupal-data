@@ -1,0 +1,7 @@
+webcomposer_configurations.admin_settings:
+  path: 'admin/config/webcomposer/configurations'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Webcomposer Configurations'
+  requirements:
+    _permission: 'administer site configuration'
