@@ -1,0 +1,8 @@
+name: Webcomposer Config Schema Sample Form
+type: module
+description: Webcomposer config schema sample form
+core: 8.x
+package: Web Composer
+
+dependencies:
+  - webcomposer_config_schema

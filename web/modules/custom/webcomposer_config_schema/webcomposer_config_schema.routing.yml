@@ -1,0 +1,10 @@
+webcomposer_config_schema.form_translate:
+  path: '/admin/config/webcomposer/translate/{form}'
+  defaults:
+    _controller: '\Drupal\webcomposer_config_schema\Controller\TranslateController::translate'
+    _title_callback: '\Drupal\webcomposer_config_schema\Controller\TranslateController::title'
+  requirements:
+    _permission: 'administer site configuration'
+
+route_callbacks:
+  - 'Drupal\webcomposer_config_schema\Routing\ConfigFormRoutes::getRoutes'
