@@ -4,12 +4,12 @@
  * Implements hook_uninstall
  */
 function webcomposer_form_sample_uninstall() {
-    $keys = [
-        'webcomposer_form_manager.form.registration',
-        'webcomposer_form_manager.form.login',
-    ];
+  $keys = [
+    'webcomposer_form_manager.form.registration',
+    'webcomposer_form_manager.form.login',
+  ];
 
-    foreach ($keys as $key) {
-      \Drupal::configFactory()->getEditable($key)->delete();
-    }
+  foreach ($keys as $key) {
+    \Drupal::configFactory()->getEditable($key)->delete();
+  }
 }

@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.responsive_partner.field_link_target
+    - field.field.paragraph.responsive_partner.field_partner_alternative_text
     - field.field.paragraph.responsive_partner.field_res_sponsor_image
     - field.field.paragraph.responsive_partner.field_res_sponsor_link
     - field.field.paragraph.responsive_partner.field_res_sponsor_mobile_logo
@@ -22,6 +23,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
+  field_partner_alternative_text:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
   field_res_sponsor_image:
     weight: 2
@@ -56,8 +65,10 @@ content:
     type: image_image
     region: content
   translation:
-    weight: 10
+    weight: 6
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   created: true
   status: true
