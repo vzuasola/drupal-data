@@ -20,10 +20,7 @@ does it.
 
 * **Structure**
 
-It contains the mandatory methods
-    * **getEditableConfigNames**
-    * **form**
-    * **submit**
+It contains the mandatory methods, see below code example.
 
 * **Annotation**
 
