@@ -59,10 +59,10 @@ class ConfigSchema {
   /**
    * Get default config values
    */
-  public function getDefaultConfigValues($name, $key) {
+  public function getDefaultConfigValues($name) {
     $config = $this->getEditable($name);
 
-    return $config->get($key);
+    return $config->get();
   }
 
   /**
@@ -116,7 +116,7 @@ class ConfigSchema {
     $default = $this->languageManager->getDefaultLanguage();
     $language = $this->languageManager->getLanguage($id);
 
-    $base_config = $this->getConfigValues($name);
+    $base_config = $this->getDefaultConfigValues($name);
 
     if ($default->getId() === $language->getId()) {
       return $base_config;
@@ -126,7 +126,33 @@ class ConfigSchema {
 
     $config = $this->configFactory->get($name)->get();
 
-    return array_diff($base_config, $config);
+    return $this->arrayDiff($config, $base_config);
+  }
+
+  /**
+   * Array diff
+   */
+  private function arrayDiff($new, $old) {
+    $result = [];
+
+    foreach ($new as $key => $value) {
+      if (!is_array($old) || !array_key_exists($key, $old)) {
+        $result[$key] = $value;
+        continue;
+      }
+      if (is_array($value)) {
+        $recursiveArrayDiff = $this->arrayDiff($value, $old[$key]);
+        if (count($recursiveArrayDiff)) {
+          $result[$key] = $recursiveArrayDiff;
+        }
+        continue;
+      }
+      if ($value != $old[$key]) {
+        $result[$key] = $value;
+      }
+    }
+
+    return $result;
   }
 
   /**

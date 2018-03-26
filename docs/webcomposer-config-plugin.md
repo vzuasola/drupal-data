@@ -16,6 +16,7 @@ does it.
 > Working concrete example can be found on the sample module **webcomposer_config_schema_sample**
 > which lives inside **webcomposer_config_schema** module
 
+
 ### Define a Form Plugin Class
 
 * **Structure**
@@ -85,23 +86,6 @@ class SampleForm extends FormBase {
 
     return $form;
   }
-
-  /**
-   * {@inheritdoc}
-   */
-  public function submit(array &$form, FormStateInterface $form_state) {
-    $keys = [
-      'title',
-      'description',
-    ];
-
-    foreach ($keys as $key) {
-      $data[$key] = $form_state->getValue($key);
-    }
-
-    $this->save($data);
-  }
-}
 ```
 
 * **Defining the form definition**
@@ -129,9 +113,18 @@ To retrieve saved data, you just need to call the **get** method.
 $this->get('my_property');
 ```
 
-* **Saving values**
+* **Auto saving values**
 
-This is done on the submit method, and is done a little bit different.
+There are two ways to achieve this. If done right, the module can automatically
+guess what you want to save and how you want to store it using Artificial Intelligence
+and machine learning (just kidding, it's just using loops and pattern matching).
+
+As long as you match your field indeces, this shouldn't be a problem.
+
+* **Manual saving behavior**
+
+If you don't want the module to automatically guess what to save for you,
+then you can define the **submit** method.
 
 ```php
 /**
@@ -156,6 +149,26 @@ what data you need to persist by defining an associative array (in this case the
 then passing it to the save.
 
 
+However, even if you choose to save manually, the module still does some post data processing.
+The module tries to remove values from the **form_state** that are not tagged as
+translatable when trying to translate the values. To disable this behavior, declare
+this property on your form.
+
+```php
+namespace Drupal\my_module\Form;
+
+use Drupal\webcomposer_config_schema\Form\FormBase;
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ *
+ */
+class SampleForm extends FormBase {
+  protected $disableAutoTranslateOnSave = TRUE;
+}
+```
+
+
 ### Provide a installtion configs and hook uninstall
 
 You can put generates yml inside **config/install** to have the values
@@ -178,6 +191,7 @@ function webcomposer_config_schema_sample_uninstall() {
   }
 }
 ```
+
 
 ## Best Practices
 

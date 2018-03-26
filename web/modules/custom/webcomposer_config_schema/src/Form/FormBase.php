@@ -8,13 +8,14 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 
 abstract class FormBase extends ConfigFormBase {
   use SchemaTrait;
+  use SubmitTrait;
 
   /**
    * Flag to disable auto translate
    *
    * @var boolean
    */
-  protected $disableAutoTranslateOnSave = false;
+  protected $disableAutoTranslateOnSave = FALSE;
 
   /**
    * The abstracted form definition method
@@ -34,7 +35,7 @@ abstract class FormBase extends ConfigFormBase {
    *
    * @return array
    */
-  abstract public function submit(array &$form, FormStateInterface $form_state);
+  // abstract public function submit(array &$form, FormStateInterface $form_state);
 
   /**
    * {@inheritdoc}
