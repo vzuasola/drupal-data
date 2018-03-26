@@ -6,14 +6,14 @@ use Symfony\Component\Routing\Route;
 
 class ConfigFormRoutes {
   /**
-   * 
+   *
    */
   public function __construct() {
     $this->pluginManager = \Drupal::service('plugin.manager.webcomposer_config_plugin');
   }
 
   /**
-   * 
+   *
    */
   public function getRoutes() {
     $routes = [];

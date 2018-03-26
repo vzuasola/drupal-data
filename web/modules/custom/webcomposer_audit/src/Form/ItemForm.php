@@ -289,7 +289,7 @@ class ItemForm extends FormBase {
     foreach ($entity as $key => $value) {
       if ($value instanceof TypedDataInterface) {
         $map[$value->getName()] = $value->getString();
-      } else if ($value instanceof EntityInterface) {
+      } elseif ($value instanceof EntityInterface) {
         $map[$key] = $this->getLineChangesFromEntity($value->toArray());
       } else {
         $map[$key] = $value;

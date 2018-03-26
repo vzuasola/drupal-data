@@ -1,7 +1,7 @@
 <?php
- 
+
 namespace Drupal\webcomposer_config_schema\Plugin\Derivative;
- 
+
 use Drupal\Component\Plugin\Derivative\DeriverBase;
 
 /**
