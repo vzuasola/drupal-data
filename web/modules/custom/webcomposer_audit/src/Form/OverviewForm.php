@@ -173,6 +173,16 @@ class OverviewForm extends FormBase {
     foreach ($entries as $key => $value) {
       $title = ucwords($value->title);
 
+      if (isset($value->type) && $value->type == 'config') {
+        $title = $value->title;
+
+        $title = [
+          'data' => [
+            '#markup' => "<strong>$title</strong>"
+          ]
+        ];
+      }
+
       if ($value->eid && $value->type) {
         try {
           $entity = \Drupal::entityManager()->getStorage($value->type)->load($value->eid);
