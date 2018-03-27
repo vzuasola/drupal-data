@@ -1,5 +1,7 @@
 join_now_text: 立即加入
+join_now_link: '/{domain:entry}/{lang}/join/live-dealer[query:({tracking})]'
 login_issue_text: 无法登录？
+login_issue_link: '/{domain:entry}/{lang}/cant-login?title=cantLogin{tracking.token}'
 balance_error_text: 错误检索
 profile_icon_hover_text: 我的账户
 cashier_icon_hover_text: 出纳柜台
