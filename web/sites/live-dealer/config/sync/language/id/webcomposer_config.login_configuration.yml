@@ -1,0 +1,21 @@
+username_placeholder: Masuk
+password_placeholder: 'Kata Sandi'
+error_message_blank_username: 'Username Anda wajib diisi.'
+error_message_blank_password: 'Kata sandi Anda wajib diisi.'
+error_message_blank_passname: 'Silahkan periksa semua kolom dan coba lagi.'
+error_message_invalid_passname: 'Maaf, username dan/atau kata sandi salah. Silahkan coba lagi.'
+error_message_service_not_available: 'Layanan tidak tersedia.'
+error_message_account_suspended: 'Akun Anda telah dikunci. Silahkan hubungi layanan pelanggan.'
+error_message_account_locked: 'Akun Anda telah dikunci. Silahkan hubungi layanan pelanggan.'
+autologout_box_title: PERINGATAN
+autologout_box_content:
+  value: "<p>Sesi Anda akan habis dalam {seconds}. Apakah Anda ingin melanjutkan sesi Anda?\r\n</p>\r\n"
+  format: basic_html
+affirmative_button_text: YA
+negative_button_text: TIDAK
+notification_title: NOTIFIKASI
+notification_content:
+  value: "<p>Sesi Anda telah habis karena tidak aktif.\r\n</p>\r\n"
+  format: basic_html
+lightbox_blurb: 'Belum menjadi anggota Dafabet?'
+notification_window_title: 'Sesi Berakhir'
