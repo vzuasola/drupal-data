@@ -1,0 +1,7 @@
+webcomposer.admin:
+  path: '/admin/webcomposer'
+  defaults:
+    _controller: '\Drupal\webcomposer_config_schema\Controller\SystemController::overview'
+    _title: 'Webcomposer'
+  requirements:
+    _permission: 'access administration pages'

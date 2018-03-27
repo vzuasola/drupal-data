@@ -1,0 +1,34 @@
+<?php
+
+/**
+ * @file
+ * Contains webcomposer_dashboard.module.
+ */
+
+use Drupal\Core\Url;
+
+/**
+ * Implements hook_toolbar().
+ */
+function webcomposer_config_schema_toolbar() {
+  $items['webcomposer'] = [
+    '#type' => 'toolbar_item',
+    'tab' => [
+      '#type' => 'link',
+      '#title' => t('Webcomposer'),
+      '#url' => Url::fromRoute('webcomposer.admin'),
+      '#attributes' => [
+        'title' => t('Webcomposer'),
+        'class' => ['toolbar-icon', 'toolbar-icon-webcomposer'],
+      ],
+    ],
+    '#attached' => [
+      'library' => [
+        'webcomposer_config_schema/webcomposer.toolbar',
+      ],
+    ],
+    '#weight' => 900,
+  ];
+
+  return $items;
+}

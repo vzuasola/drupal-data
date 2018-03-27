@@ -1,8 +1,3 @@
-webcomposer.admin:
-  title: Webcomposer
-  description: 'Administer Webcomposer Settings.'
-  route_name: webcomposer.admin
-
 webcomposer_config_schema.form_menu_links:
   class: Drupal\webcomposer_config_schema\Plugin\Menu\FormMenuLink
   deriver: Drupal\webcomposer_config_schema\Plugin\Derivative\FormMenuLink
