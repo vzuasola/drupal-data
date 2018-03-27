@@ -1,0 +1,17 @@
+uuid: da7b887c-83c8-456e-ae3d-b1350cdab0b2
+langcode: en
+status: true
+dependencies:
+  module:
+    - serialization
+    - user
+    - webcomposer_affilates
+id: entity.affiliate_entity
+plugin_id: 'entity:affiliate_entity'
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+    supported_auth:
+      - cookie
