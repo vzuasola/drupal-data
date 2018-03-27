@@ -35,6 +35,11 @@ class ExchangeProviderConfiguration extends ConfigFormBase {
       '#description' => $this->t('Defines the exchange Game Urls'),
       '#default_value' => $config->get('exchange_game_url')
     );
+    $form['transaction_subdomain'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('transaction  Domain'),
+      '#default_value' => $config->get('transaction_subdomain'),
+    ];
 
     $form['languages'] = array(
       '#type' => 'textarea',
@@ -87,7 +92,8 @@ class ExchangeProviderConfiguration extends ConfigFormBase {
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $keys = [
       'exchange_game_url',
-      'languages','currency','country'
+      'languages','currency','country',
+      'transaction_subdomain',
     ];
 
     foreach ($keys as $key) {
