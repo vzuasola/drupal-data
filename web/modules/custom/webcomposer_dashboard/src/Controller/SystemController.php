@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\webcomposer_config_schema\Controller;
+namespace Drupal\webcomposer_dashboard\Controller;
 
 use Drupal\Core\Cache\CacheableMetadata;
 use Drupal\Core\Controller\ControllerBase;

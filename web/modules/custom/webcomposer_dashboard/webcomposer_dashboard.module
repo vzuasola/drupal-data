@@ -10,7 +10,7 @@ use Drupal\Core\Url;
 /**
  * Implements hook_toolbar().
  */
-function webcomposer_config_schema_toolbar() {
+function webcomposer_dashboard_toolbar() {
   $items['webcomposer'] = [
     '#type' => 'toolbar_item',
     'tab' => [
@@ -24,7 +24,7 @@ function webcomposer_config_schema_toolbar() {
     ],
     '#attached' => [
       'library' => [
-        'webcomposer_config_schema/webcomposer.toolbar',
+        'webcomposer_dashboard/webcomposer.toolbar',
       ],
     ],
     '#weight' => 900,
