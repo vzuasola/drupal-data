@@ -37,7 +37,7 @@ class ExchangeProviderConfiguration extends ConfigFormBase {
     );
     $form['transaction_subdomain'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('Sub Domain'),
+      '#title' => $this->t('transaction  Domain'),
       '#default_value' => $config->get('transaction_subdomain'),
     ];
 
