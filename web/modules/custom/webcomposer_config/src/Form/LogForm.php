@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\webcomposer_configurations\Form;
+namespace Drupal\webcomposer_config\Form;
 
 use Drupal\webcomposer_config_schema\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
@@ -9,7 +9,7 @@ use Drupal\Core\Form\FormStateInterface;
  * Log configuration plugin
  *
  * @WebcomposerConfigPlugin(
- *   id = "webcomposer_configurations_log",
+ *   id = "webcomposer_config_log",
  *   route = {
  *     "title" = "Log Configuration",
  *     "path" = "/admin/config/webcomposer/configurations/log",
@@ -17,7 +17,7 @@ use Drupal\Core\Form\FormStateInterface;
  *   menu = {
  *     "title" = "Log Configuration",
  *     "description" = "Provides configuration for logging mechanisms",
- *     "parent" = "webcomposer_configurations.list",
+ *     "parent" = "webcomposer_config.list",
  *   },
  * )
  */

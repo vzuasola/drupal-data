@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\webcomposer_configurations\Form;
+namespace Drupal\webcomposer_config\Form;
 
 use Drupal\webcomposer_config_schema\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
@@ -9,7 +9,7 @@ use Drupal\Core\Form\FormStateInterface;
  * Browser configuration plugin
  *
  * @WebcomposerConfigPlugin(
- *   id = "webcomposer_configurations_browser",
+ *   id = "webcomposer_config_browser",
  *   route = {
  *     "title" = "Browser Configuration",
  *     "path" = "/admin/config/webcomposer/configurations/browser",
@@ -17,7 +17,7 @@ use Drupal\Core\Form\FormStateInterface;
  *   menu = {
  *     "title" = "Browser Configuration",
  *     "description" = "Provides configuration for browser behaviors",
- *     "parent" = "webcomposer_configurations.list",
+ *     "parent" = "webcomposer_config.list",
  *   },
  * )
  */

@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\webcomposer_configurations\Form;
+namespace Drupal\webcomposer_config\Form;
 
 use Drupal\webcomposer_config_schema\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
@@ -9,7 +9,7 @@ use Drupal\Core\Form\FormStateInterface;
  * Exception configuration plugin
  *
  * @WebcomposerConfigPlugin(
- *   id = "webcomposer_configurations_exception",
+ *   id = "webcomposer_config_exception",
  *   route = {
  *     "title" = "Exception Configuration",
  *     "path" = "/admin/config/webcomposer/configurations/exception",
@@ -17,7 +17,7 @@ use Drupal\Core\Form\FormStateInterface;
  *   menu = {
  *     "title" = "Exception Configuration",
  *     "description" = "Provides configuration for exception pages",
- *     "parent" = "webcomposer_configurations.list",
+ *     "parent" = "webcomposer_config.list",
  *   },
  * )
  */

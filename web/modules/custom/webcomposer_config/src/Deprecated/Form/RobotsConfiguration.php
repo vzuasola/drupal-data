@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\webcomposer_config\Form;
+namespace Drupal\webcomposer_config\Deprecated\Form;
 
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;

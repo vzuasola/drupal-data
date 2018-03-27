@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\webcomposer_configurations\Form;
+namespace Drupal\webcomposer_config\Form;
 
 use Drupal\webcomposer_config_schema\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
@@ -9,7 +9,7 @@ use Drupal\Core\Form\FormStateInterface;
  * Footer configuration plugin
  *
  * @WebcomposerConfigPlugin(
- *   id = "webcomposer_configurations_footer",
+ *   id = "webcomposer_config_footer",
  *   route = {
  *     "title" = "Footer Configuration",
  *     "path" = "/admin/config/webcomposer/configurations/footer",
@@ -17,7 +17,7 @@ use Drupal\Core\Form\FormStateInterface;
  *   menu = {
  *     "title" = "Footer Configuration",
  *     "description" = "Provides configuration for footer components",
- *     "parent" = "webcomposer_configurations.list",
+ *     "parent" = "webcomposer_config.list",
  *   },
  * )
  */

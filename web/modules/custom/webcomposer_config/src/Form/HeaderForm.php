@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\webcomposer_configurations\Form;
+namespace Drupal\webcomposer_config\Form;
 
 use Drupal\webcomposer_config_schema\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
@@ -9,7 +9,7 @@ use Drupal\Core\Form\FormStateInterface;
  * Header configuration plugin
  *
  * @WebcomposerConfigPlugin(
- *   id = "webcomposer_configurations_header",
+ *   id = "webcomposer_config_header",
  *   route = {
  *     "title" = "Header Configuration",
  *     "path" = "/admin/config/webcomposer/configurations/header",
@@ -17,7 +17,7 @@ use Drupal\Core\Form\FormStateInterface;
  *   menu = {
  *     "title" = "Header Configuration",
  *     "description" = "Provides configuration for header components",
- *     "parent" = "webcomposer_configurations.list",
+ *     "parent" = "webcomposer_config.list",
  *   },
  * )
  */
