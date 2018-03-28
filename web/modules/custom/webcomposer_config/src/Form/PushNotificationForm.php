@@ -101,7 +101,7 @@ class PushNotificationForm extends FormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Product Type Id'),
       '#default_value' => $this->get('producttype_id'),
-      '#description' => $this->t('Set Product Type Id to receive product notification. 
+      '#description' => $this->t('Set Product Type Id to receive product notification.
         Player will receive Manual Notification by default.'
       ),
     ];

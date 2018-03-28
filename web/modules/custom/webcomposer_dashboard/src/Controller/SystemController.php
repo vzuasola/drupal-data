@@ -68,7 +68,13 @@ class SystemController extends ControllerBase {
    * @param \Drupal\Core\Menu\MenuLinkTreeInterface $menu_link_tree
    *   The menu link tree service.
    */
-  public function __construct(SystemManager $systemManager, ThemeAccessCheck $theme_access, FormBuilderInterface $form_builder, ThemeHandlerInterface $theme_handler, MenuLinkTreeInterface $menu_link_tree) {
+  public function __construct(
+    SystemManager $systemManager,
+    ThemeAccessCheck $theme_access,
+    FormBuilderInterface $form_builder,
+    ThemeHandlerInterface $theme_handler,
+    MenuLinkTreeInterface $menu_link_tree
+  ) {
     $this->systemManager = $systemManager;
     $this->themeAccess = $theme_access;
     $this->formBuilder = $form_builder;

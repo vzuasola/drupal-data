@@ -89,7 +89,9 @@ class PushNotificationConfiguration extends ConfigFormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Product Type Id'),
       '#default_value' => $config->get('producttype_id'),
-      '#description' => $this->t('Set Product Type Id to receive product notification. Player will receive Manual Notification by default.'),
+      '#description' => $this->t('Set Product Type Id to receive product notification.
+        Player will receive Manual Notification by default.'
+      ),
     ];
     $form['connection_settings']['retry_count'] = [
       '#type' => 'textfield',
@@ -133,7 +135,9 @@ class PushNotificationConfiguration extends ConfigFormBase {
       '#type' => 'textarea',
       '#title' => $this->t('Exclude Pages'),
       '#default_value' => $config->get('exclude_pages'),
-      '#description' => $this->t('Enter the list of path to be excluded. If this fields is left empty, all path can show notification. Enter one path per line.'),
+      '#description' => $this->t('Enter the list of path to be excluded. If this
+        fields is left empty, all path can show notification. Enter one path per line.'
+      ),
     ];
     // Translate Texts.
     $form['translated_texts_settings']['translated_texts'] = [
