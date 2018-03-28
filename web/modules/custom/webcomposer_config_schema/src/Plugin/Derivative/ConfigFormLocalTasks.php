@@ -27,15 +27,14 @@ class ConfigFormLocalTasks extends DeriverBase {
         $this->derivatives[$name]['route_name'] = "webcomposer_config_schema.form_{$id}";
         $this->derivatives[$name]['base_route'] = "webcomposer_config_schema.form_{$id}";
 
+        // translate tasks
+
         $name = "webcomposer_config_schema.form_{$id}_translate_tab";
 
         $this->derivatives[$name] = $base_plugin_definition;
         $this->derivatives[$name]['title'] = 'Translate';
-        $this->derivatives[$name]['route_name'] = "webcomposer_config_schema.form_translate";
+        $this->derivatives[$name]['route_name'] = "webcomposer_config_schema.form_{$id}_translate";
         $this->derivatives[$name]['base_route'] = "webcomposer_config_schema.form_{$id}";
-        $this->derivatives[$name]['route_parameters'] = [
-          'form' => $id,
-        ];
       }
     }
 

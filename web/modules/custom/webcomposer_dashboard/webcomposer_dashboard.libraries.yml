@@ -1,0 +1,5 @@
+webcomposer.toolbar:
+  version: VERSION
+  css:
+    component:
+      css/webcomposer.toolbar.css: {}
