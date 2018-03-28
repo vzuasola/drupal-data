@@ -35,7 +35,7 @@ Once you get this update for your product site, you need to **migrate** immediat
 
 These steps are optional, but you will mostly likely need to do so.
 
-* Migrate all site specific configuration forms to **Webcomposer Config Pluin**
+* Migrate all site specific configuration forms to **Webcomposer Config Plugin**
 
 Without this optional migration steps, your custom config forms will not get
 registered on the audit logs. And you won't reap the advantages that
