@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.games.field_game_image
     - field.field.node.games.field_game_image_large
     - field.field.node.games.field_game_info
+    - field.field.node.games.field_game_provider
     - field.field.node.games.field_game_title
     - field.field.node.games.field_image_size
     - field.field.node.games.field_show_game_info_toggle
@@ -66,6 +67,19 @@ third_party_settings:
         description: ''
         required_fields: true
       label: 'Game Room Title & Icon'
+    group_game_launching:
+      children:
+        - field_game_provider
+      parent_name: ''
+      weight: 20
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: open
+        description: ''
+        required_fields: false
+      label: 'Game Launching'
 id: node.games.default
 targetEntityType: node
 bundle: games
@@ -155,6 +169,12 @@ content:
           entity_type: node
           bundle: games
     type: text_textarea
+    region: content
+  field_game_provider:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
     region: content
   field_game_title:
     weight: 2
