@@ -12,7 +12,7 @@ use Drupal\Core\Form\FormStateInterface;
  *   id = "webcomposer_config_curacao",
  *   route = {
  *     "title" = "Curacao Configuration",
- *     "path" = "/admin/config/webcomposer/configurations/curacao",
+ *     "path" = "/admin/config/webcomposer/config/curacao",
  *   },
  *   menu = {
  *     "title" = "Curacao Configuration",

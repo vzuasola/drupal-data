@@ -12,7 +12,7 @@ use Drupal\Core\Form\FormStateInterface;
  *   id = "webcomposer_config_footer",
  *   route = {
  *     "title" = "Footer Configuration",
- *     "path" = "/admin/config/webcomposer/configurations/footer",
+ *     "path" = "/admin/config/webcomposer/config/footer",
  *   },
  *   menu = {
  *     "title" = "Footer Configuration",

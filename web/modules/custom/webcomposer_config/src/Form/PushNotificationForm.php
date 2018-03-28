@@ -12,7 +12,7 @@ use Drupal\Core\Form\FormStateInterface;
  *   id = "webcomposer_config_pushnx",
  *   route = {
  *     "title" = "Push Notification Configuration",
- *     "path" = "/admin/config/webcomposer/configurations/pushnx",
+ *     "path" = "/admin/config/webcomposer/config/pushnx",
  *   },
  *   menu = {
  *     "title" = "Push Notification Configuration",

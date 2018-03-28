@@ -12,7 +12,7 @@ use Drupal\Core\Form\FormStateInterface;
  *   id = "webcomposer_config_browser",
  *   route = {
  *     "title" = "Browser Configuration",
- *     "path" = "/admin/config/webcomposer/configurations/browser",
+ *     "path" = "/admin/config/webcomposer/config/browser",
  *   },
  *   menu = {
  *     "title" = "Browser Configuration",

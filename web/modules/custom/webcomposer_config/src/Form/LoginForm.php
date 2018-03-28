@@ -12,7 +12,7 @@ use Drupal\Core\Form\FormStateInterface;
  *   id = "webcomposer_config_session",
  *   route = {
  *     "title" = "Login Configuration",
- *     "path" = "/admin/config/webcomposer/configurations/login",
+ *     "path" = "/admin/config/webcomposer/config/login",
  *   },
  *   menu = {
  *     "title" = "Login Configuration",

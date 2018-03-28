@@ -12,7 +12,7 @@ use Drupal\Core\Form\FormStateInterface;
  *   id = "webcomposer_config_header",
  *   route = {
  *     "title" = "Header Configuration",
- *     "path" = "/admin/config/webcomposer/configurations/header",
+ *     "path" = "/admin/config/webcomposer/config/header",
  *   },
  *   menu = {
  *     "title" = "Header Configuration",

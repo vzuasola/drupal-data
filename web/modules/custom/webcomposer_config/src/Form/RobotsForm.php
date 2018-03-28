@@ -12,7 +12,7 @@ use Drupal\Core\Form\FormStateInterface;
  *   id = "webcomposer_config_robots",
  *   route = {
  *     "title" = "Robots Configuration",
- *     "path" = "/admin/config/webcomposer/configurations/robots",
+ *     "path" = "/admin/config/webcomposer/config/robots",
  *   },
  *   menu = {
  *     "title" = "Robots Configuration",

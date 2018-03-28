@@ -12,7 +12,7 @@ use Drupal\Core\Form\FormStateInterface;
  *   id = "webcomposer_config_log",
  *   route = {
  *     "title" = "Log Configuration",
- *     "path" = "/admin/config/webcomposer/configurations/log",
+ *     "path" = "/admin/config/webcomposer/config/log",
  *   },
  *   menu = {
  *     "title" = "Log Configuration",
