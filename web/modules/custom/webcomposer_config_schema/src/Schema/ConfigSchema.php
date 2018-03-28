@@ -196,7 +196,7 @@ class ConfigSchema {
    */
   private function doConfigTranslate($name, $data) {
     $language = $this->languageManager->getCurrentLanguage();
-    
+
     $configTranslation = $this->languageManager->getLanguageConfigOverride($language->getId(), $name);
     $before = $configTranslation->get();
 
