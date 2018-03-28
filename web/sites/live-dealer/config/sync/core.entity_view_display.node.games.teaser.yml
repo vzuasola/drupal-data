@@ -26,4 +26,11 @@ content:
     weight: 100
     region: content
 hidden:
+  field_game_icon: true
+  field_game_image: true
+  field_game_image_large: true
+  field_game_info: true
+  field_game_title: true
+  field_image_size: true
+  field_show_game_info_toggle: true
   langcode: true
