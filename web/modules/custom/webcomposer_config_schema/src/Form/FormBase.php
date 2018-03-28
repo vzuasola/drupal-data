@@ -8,13 +8,14 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 
 abstract class FormBase extends ConfigFormBase {
   use SchemaTrait;
+  use SubmitTrait;
 
   /**
    * Flag to disable auto translate
    *
    * @var boolean
    */
-  protected $disableAutoTranslateOnSave = false;
+  protected $disableAutoTranslateOnSave = FALSE;
 
   /**
    * The abstracted form definition method
@@ -34,7 +35,7 @@ abstract class FormBase extends ConfigFormBase {
    *
    * @return array
    */
-  abstract public function submit(array &$form, FormStateInterface $form_state);
+  // abstract public function submit(array &$form, FormStateInterface $form_state);
 
   /**
    * {@inheritdoc}
@@ -46,9 +47,10 @@ abstract class FormBase extends ConfigFormBase {
   /**
    * Class constructor.
    */
-  public function __construct($schema_base, $plugin_manager) {
+  public function __construct($schema_base, $plugin_manager, $language_manager) {
     $this->schemaBase = $schema_base;
     $this->pluginManager = $plugin_manager;
+    $this->languageManager = $language_manager;
 
     $this->processConfigObject();
   }
@@ -59,7 +61,8 @@ abstract class FormBase extends ConfigFormBase {
   public static function create(ContainerInterface $container) {
     return new static(
       $container->get('webcomposer_config_schema.schema'),
-      $container->get('plugin.manager.webcomposer_config_plugin')
+      $container->get('plugin.manager.webcomposer_config_plugin'),
+      $container->get('language_manager')
     );
   }
 
@@ -77,8 +80,9 @@ abstract class FormBase extends ConfigFormBase {
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
     $form = $this->form($form, $form_state);
+    $editables = $this->getEditableConfigNames();
 
-    $form['#editable_config_names'] = $this->getEditableConfigNames();
+    $form['#editable_config_names'] = $editables;
 
     if ($this->isTranslated()) {
       $this->processForm($form);
@@ -86,7 +90,11 @@ abstract class FormBase extends ConfigFormBase {
 
     $build = parent::buildForm($form, $form_state);
 
-    if ($this->isTranslated()) {
+    $main = reset($editables);
+    $lang = $this->languageManager->getCurrentLanguage()->getId();
+    $hasTranslations = $this->schemaBase->getConfigValuesByLanguage($main, $lang);
+
+    if ($this->isTranslated() && !empty($hasTranslations)) {
       $build['actions']['reset'] = [
         '#type' => 'submit',
         '#value' => 'Reset Translation',

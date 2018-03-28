@@ -78,6 +78,22 @@ class FormController extends ControllerBase {
           'warning' => [$message],
         ],
       ];
+
+      $main = reset($form['#editable_config_names']);
+      $language = $this->languageManager->getCurrentLanguage();
+      $values = \Drupal::service('webcomposer_config_schema.schema')->getConfigValuesByLanguage($main, $language->getId());
+
+      if (empty($values)) {
+        $message = "The translation for this language is still empty. It is still using default language values.";
+
+        $base['untranslated'] = [
+          '#theme' => 'status_messages',
+          '#message_list' => [
+            'error' => [$message],
+          ],
+          '#attributes' => ['style' => 'margin-top: 9px;']
+        ];
+      }
     }
 
     return [

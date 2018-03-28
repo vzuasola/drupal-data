@@ -9,7 +9,7 @@ use Drupal\Component\Plugin\Derivative\DeriverBase;
  */
 class FormMenuLink extends DeriverBase {
   /**
-   * 
+   *
    */
   public function __construct() {
     $this->pluginManager = \Drupal::service('plugin.manager.webcomposer_config_plugin');
