@@ -9,14 +9,17 @@ webcomposer_config.header_configuration:
       type: label
       label: 'Join Now Text'
     join_now_link:
-      type: label
+      type: text
       label: 'Join Now Link'
     login_issue_text:
       type: label
       label: 'Login Issue Text'
     login_issue_link:
-      type: label
+      type: text
       label: 'Login Issue Link'
+    capslock_notification:
+      type: label
+      label: 'Caps Lock Notification Message'
     product_balance_label:
       type: label
       label: 'Product Balance Label'
@@ -67,7 +70,7 @@ webcomposer_config.header_configuration:
       type: label
       label: 'Welcome Text'
     profile_link:
-      type: label
+      type: text
       label: 'Profile Link'
     profile_logout_text:
       type: label
@@ -114,6 +117,9 @@ webcomposer_config.login_configuration:
     lightbox_blurb:
       type: label
       label: 'Login lightbox blurb'
+    login_page_blurb:
+      type: label
+      label: 'Login page blurb'
     error_message_blank_username:
       type: label
       label: 'Blank Username'

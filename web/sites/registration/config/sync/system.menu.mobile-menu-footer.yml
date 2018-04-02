@@ -1,0 +1,8 @@
+uuid: 1100ac84-40ce-4337-b5eb-dcd2565529e7
+langcode: en
+status: true
+dependencies: {  }
+id: mobile-menu-footer
+label: 'Mobile Menu Footer'
+description: ''
+locked: false

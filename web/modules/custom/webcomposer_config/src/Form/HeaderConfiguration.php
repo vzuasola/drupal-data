@@ -89,11 +89,12 @@ class HeaderConfiguration extends ConfigFormBase {
     ];
 
     $form['join_now_group']['join_now_link'] = [
-      '#type' => 'textfield',
+      '#type' => 'textarea',
       '#title' => $this->t('Join Now Link'),
       '#description' => $this->t('The link for user redirection when clicked on Join Now Button.'),
       '#default_value' => $config->get('join_now_link'),
       '#required' => TRUE,
+      '#rows' => 1
     ];
   }
 
@@ -117,6 +118,21 @@ class HeaderConfiguration extends ConfigFormBase {
       '#default_value' => $config->get('password_mask_toggle'),
     ];
 
+    $form['login_group']['caps_lock_toggle'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable Caps lock Notification'),
+      '#description' => $this->t('Notify user if caps lock is on when entering the password field.'),
+      '#default_value' => $config->get('caps_lock_toggle'),
+    ];
+
+    $form['login_group']['capslock_notification'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Caps Lock Notification Message'),
+      '#description' => $this->t('The text to be displayed when user keyboard is on.'),
+      '#default_value' => $config->get('capslock_notification'),
+      '#required' => TRUE,
+    ];
+
     $form['login_group']['login_issue_text'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Login Issue Text'),
@@ -126,11 +142,12 @@ class HeaderConfiguration extends ConfigFormBase {
     ];
 
     $form['login_group']['login_issue_link'] = [
-      '#type' => 'textfield',
+      '#type' => 'textarea',
       '#title' => $this->t('Login Issue Link'),
       '#description' => $this->t('The link for user redirection when clicked on Login Issue Text.'),
       '#default_value' => $config->get('login_issue_link'),
       '#required' => TRUE,
+      '#rows' => 1
     ];
 
     $form['login_group']['profile_logout_text'] = [
@@ -158,12 +175,12 @@ class HeaderConfiguration extends ConfigFormBase {
     ];
 
     $form['login_group']['cashier_link'] = [
-      '#type' => 'textfield',
+      '#type' => 'textarea',
       '#title' => $this->t('Cashier Link'),
       '#description' => $this->t('Cashier Link For Header'),
       '#default_value' => $config->get('cashier_link'),
-      '#maxlength' => 255,
       '#required' => TRUE,
+      '#rows' => 1
     ];
   }
 
@@ -323,11 +340,12 @@ class HeaderConfiguration extends ConfigFormBase {
       ];
 
       $form['welcome_text_group']['profile_link'] = [
-        '#type' => 'textfield',
+        '#type' => 'textarea',
         '#title' => $this->t('Profile Link'),
         '#description' => $this->t('Profile Link'),
         '#default_value' => $config->get('profile_link'),
         '#required' => TRUE,
+        '#rows' => 1
       ];
   }
 
@@ -436,6 +454,8 @@ class HeaderConfiguration extends ConfigFormBase {
 
       // Login Section
       'password_mask_toggle',
+      'caps_lock_toggle',
+      'capslock_notification',
       'login_issue_text',
       'login_issue_link',
       'profile_logout_text',

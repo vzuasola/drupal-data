@@ -1,15 +1,9 @@
 parameters:
-  # Handlers per channel.
   monolog.channel_handlers:
-    # Set default channel to use syslog handler
-    default: ['file']
-    # Log php channel to web server's error log.
-    php: ['error_log']
-  # Enabled processors.
-  monolog.processors: ['message_placeholder', 'current_user', 'request_uri', 'ip', 'referer']
+    default: ['file', 'drupal.dblog']
+    php: ['file', 'drupal.dblog']
 
 services:
-  # Monolog handlers.
   monolog.handler.file:
-    class:  Monolog\Handler\StreamHandler
-    arguments: ['/var/log/cms/webcomposer.log', '200', false]
+    class:  Drupal\webcomposer_monolog\Monolog\Handler\StreamHandler
+    arguments: ['200', false]

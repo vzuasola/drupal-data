@@ -1,7 +1,0 @@
-sort:
-  game:
-    region: content
-    weight: '0'
-  about:
-    region: content
-    weight: '1'

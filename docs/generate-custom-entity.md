@@ -1,5 +1,7 @@
 # Generating a custom content entity
 
+> Please make sure that the module skeleton is already created, as this will only target existing modules
+
 It is recommended that we follow `only one custom entity per module`.
 This is to ensure that entities can be easily installed/uninstalled by limiting
 the scope of the module.

@@ -1,0 +1,32 @@
+uuid: b574c01d-adc3-45aa-88e2-8a600efceb1c
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - webcomposer_slider_v2
+_core:
+  default_config_hash: NtO7a3KaUKZDrnsO9ymaEAgzdQ6C-BaxXpbmsZAMyvU
+id: webcomposer_slider_v2_entity.field_post_banner_link_target
+field_name: field_post_banner_link_target
+entity_type: webcomposer_slider_v2_entity
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: _top
+      label: 'Same Window'
+    -
+      value: _blank
+      label: 'New Tab'
+    -
+      value: window
+      label: 'New Window'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

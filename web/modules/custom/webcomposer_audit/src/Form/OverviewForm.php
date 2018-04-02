@@ -174,7 +174,11 @@ class OverviewForm extends FormBase {
       $title = ucwords($value->title);
 
       if ($value->eid && $value->type) {
-        $entity = \Drupal::entityManager()->getStorage($value->type)->load($value->eid);
+        try {
+          $entity = \Drupal::entityManager()->getStorage($value->type)->load($value->eid);
+        } catch (\Exception $e) {
+          $entity = NULL;
+        }
 
         if ($entity) {
           try {
@@ -235,9 +239,11 @@ class OverviewForm extends FormBase {
   private function getOverviewFilter() {
     $filter = [];
 
-    foreach ($_SESSION['webcomposer_audit_filter'] as $key => $value) {
-      if (!empty($value) && $value !== 'any') {
-        $filter[$key] = $value;
+    if (isset($_SESSION['webcomposer_audit_filter'])) {
+      foreach ($_SESSION['webcomposer_audit_filter'] as $key => $value) {
+        if (!empty($value) && $value !== 'any') {
+          $filter[$key] = $value;
+        }
       }
     }
 
