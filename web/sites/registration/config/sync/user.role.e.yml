@@ -116,6 +116,7 @@ permissions:
   - 'translate marketing_script_entity'
   - 'translate master_placeholder taxonomy_term'
   - 'translate menu_link_content'
+  - 'translate metatag_entity'
   - 'translate mobile_menu_entity'
   - 'translate partner_responsive_entity'
   - 'translate registration_theme_entity'
