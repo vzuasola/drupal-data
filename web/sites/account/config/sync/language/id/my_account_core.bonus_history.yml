@@ -1,5 +1,6 @@
-no_result: 'Saat ini Anda tidak memiliki bonus untuk produk ini.'
+no_result: N/A
 service_unavailable: 'Kesalahan dalam pengambilan data'
+zero_display: N/A
 page_title: 'Bonus Pending'
 next_label: Berikutnya
 prev_label: Sebelumnya
