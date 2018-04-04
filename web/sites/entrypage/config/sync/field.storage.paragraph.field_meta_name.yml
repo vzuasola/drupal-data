@@ -1,0 +1,23 @@
+uuid: afb21566-fae6-4b10-bc0d-ed616e04ca89
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+_core:
+  default_config_hash: WKa-g6vmRE3V9HxM6cwE_k7u_K8E61BTdM1X8NksSBg
+id: paragraph.field_meta_name
+field_name: field_meta_name
+entity_type: paragraph
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
