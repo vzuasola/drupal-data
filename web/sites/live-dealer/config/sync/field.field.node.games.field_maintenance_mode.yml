@@ -1,0 +1,23 @@
+uuid: 739f8338-73e6-443c-96de-7a7bd66fb6bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_maintenance_mode
+    - node.type.games
+id: node.games.field_maintenance_mode
+field_name: field_maintenance_mode
+entity_type: node
+bundle: games
+label: 'Maintenance Mode'
+description: 'if checked and the game is unpublished the maintenance overlay will be displayed otherwise the game will not be shown in the lobby.'
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
