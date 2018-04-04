@@ -1,6 +1,13 @@
+mobile_number_field:
+  options:
+    attr:
+      tooltip_blurb: 'Nhập số điện thoại di động của bạn với mã quốc gia (ví dụ: +8412345678). Chỉ cho phép các giá trị chữ số và dấu cộng.'
+    label: 'Số Điện Thoại'
 username_field:
   options:
     label: 'Tên đăng nhập'
+    attr:
+      placeholder: 'Username Placeholder'
 currency_field:
   options:
     label: 'Tiền tệ'
@@ -25,36 +32,31 @@ country_field:
 email_field:
   options:
     label: 'Địa chỉ Email'
+gender_field:
+  options:
+    label: 'Giới tính'
 communication_detail_field:
   options:
     label: 'Thông Tin Liên Lạc'
 account_field:
   options:
     label: 'Chi Tiết Tài Khoản'
+home_address_field:
+  options:
+    label: 'Địa chỉ'
 verify_text_field: 'Xác thực'
 modal_verify_header_text_field: 'Xác thực Số Điện Thoại Di Động'
-modal_verify_body_text_field: 'Mã xác thực đã được gửi đến bạn qua Tin Nhắn. Hãy nhập mã 6 chữ số vào mục bên dưới để hoàn tất việc xác thực số điện thoại trong vòng 10 phút. Nếu không nhận được mã xác thực, vui lòng liên hệ Hỗ Trợ Trực Tuyến.'
+modal_verify_body_text_field: "Mã xác minh đã được gửi tới bạn qua tin nhắn SMS. Để hoàn thành hoạt động xác minh số điện thoại của bạn, vui lòng nhập mã 6 ký tự bên dưới trong vòng 10 phút. Vui lòng đảm bảo bạn đã nhập đúng định dạng số điện thoại di động với mã quốc gia (ví dụ: +84928637881). Nếu sự cố vẫn tiếp diễn, vui lòng liên hệ Bộ phận Hỗ trợ Khách hàng.\r\n"
 modal_verification_code_placeholder_field: Mã
 modal_verification_resend_code_text_field: 'Gửi lại Mã'
 modal_verification_submit_text_field: GỬI
 verification_code_response_field: "SMS_VERIFICATION_SUCCESS|Mã xác thực đã được gửi đến Số ĐTDĐ bạn đăng ký.\r\nSMS_VERIFICATION_FAILED|Rất tiếc, đã có lỗi trong quá trình xác thực số điện thoại của bạn. Vui lòng thử lại hoặc liên hệ với chúng tôi thông qua<a href=\"{livechat.link}\" class=\"live-chat-popup-trigger\"> Live Chat </a> hoặc <a href=\"mailto:vnsupport@dafabet.com\"> Email </a> (Mã:110)\r\nSMS_VERIFICATION_SUBMIT_SUCCESS|Số Điện Thoại Di Động của bạn đã được xác thực thành công.\r\nSMS_VERIFICATION_SUBMIT_FAILED| Mã vừa được nhập không chính xác. Vui lòng thử lại. (Mã:111)\r\nINTERNAL_ERROR|Lỗi hệ thống (Mã: 801) "
 verification_code_required_message_field: 'Mục này là bắt buộc.'
 verification_code_min_length_message_field: 'Vui lòng nhập ít nhất 6 ký tự.'
-mobile_number_field:
-  options:
-    label: 'Số Điện Thoại'
-    attr:
-      tooltip_blurb: 'Nhập số điện thoại di động của bạn với mã quốc gia (ví dụ: +8412345678). Chỉ cho phép các giá trị chữ số và dấu cộng.'
+verification_code_max_length_message_field: 'Vui lòng nhập Mã 6 chữ số.'
 language_field:
   options:
     label: 'Ngôn Ngữ'
-contact_preference_bottom_blurb_field: '*Tất cả các khuyến mãi, cập nhật và ưu đãi sẽ được gửi đến địa chỉ email đăng ký của bạn'
-contact_preference_field:
-  options:
-    label: 'Tôi đồng ý nhận email về các khuyến mãi, cập nhật và ưu đãi mới nhất'
-home_address_field:
-  options:
-    label: 'Địa chỉ'
 address_field:
   options:
     label: 'Địa chỉ'
@@ -90,7 +92,17 @@ password_min_length_validation_field: 'Vui lòng nhập ít nhất 6 ký tự.'
 password_format_validation_field: 'Phần này chỉ có thể bao gồm các ký tự chữ và số.'
 primary_label_field: 'Mặc định'
 add_mobile_label_field: 'Thêm số ĐTDĐ'
+no_changed_detected_message_field: 'Không có thay đổi nào được thực hiện.'
+male_label_field: 'Nam '
+female_label_field: Nữ
 contact_preference_top_blurb_field: 'Bạn có muốn nhận email về các khuyến mãi, cập nhật và ưu đãi mới nhất không?'
+contact_preference_bottom_blurb_field: '*Tất cả các khuyến mãi, cập nhật và ưu đãi sẽ được gửi đến địa chỉ email đăng ký của bạn'
+contact_preference_field:
+  options:
+    label: 'Tôi đồng ý nhận email về các khuyến mãi, cập nhật và ưu đãi mới nhất'
+contact_preference_label:
+  options:
+    label: 'Thông Tin Liên hệ'
 modal_preview_header_field: 'Lưu Thay đổi Tài khoản'
 modal_preview_top_blurb_field: 'Vui lòng xem lại danh sách các thay đổi.'
 modal_preview_current_label_field: 'Hiện tại '
@@ -98,14 +110,5 @@ modal_preview_new_label_field: Mới
 modal_preview_bottom_blurb_field: "Nhập mật khẩu để lưu các thay đổi cho tài khoản của bạn.\r\n"
 modal_preview_placeholder_field: 'Mật khẩu'
 modal_preview_btn_field: 'Lưu thay đổi'
-gender_field:
-  options:
-    label: 'Giới tính'
-no_changed_detected_message_field: 'Không có thay đổi nào được thực hiện.'
-contact_preference_label:
-  options:
-    label: 'Thông Tin Liên hệ'
 contact_preference_yes_label_field: 'Có '
 contact_preference_no_label_field: Không
-male_label_field: 'Nam '
-female_label_field: Nữ
