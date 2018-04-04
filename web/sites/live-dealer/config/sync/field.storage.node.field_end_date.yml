@@ -1,15 +1,17 @@
-uuid: d78a09bf-5868-48b4-9e29-4967d59ef23e
+uuid: 82f1b040-17b7-4a08-acee-f8de026558d3
 langcode: en
 status: true
 dependencies:
   module:
+    - datetime
     - node
-id: node.field_maintenance_mode
-field_name: field_maintenance_mode
+id: node.field_end_date
+field_name: field_end_date
 entity_type: node
-type: boolean
-settings: {  }
-module: core
+type: datetime
+settings:
+  datetime_type: datetime
+module: datetime
 locked: false
 cardinality: 1
 translatable: true

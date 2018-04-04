@@ -11,7 +11,7 @@ id: node.games.field_maintenance_blurb
 field_name: field_maintenance_blurb
 entity_type: node
 bundle: games
-label: 'Maintenance Blurb'
+label: 'Maintenance/Coming Soon Blurb'
 description: ''
 required: false
 translatable: true
