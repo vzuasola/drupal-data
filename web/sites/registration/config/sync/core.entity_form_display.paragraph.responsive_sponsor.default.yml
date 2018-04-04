@@ -8,6 +8,7 @@ dependencies:
     - field.field.paragraph.responsive_sponsor.field_res_sponsor_link_target
     - field.field.paragraph.responsive_sponsor.field_res_sponsor_mobile_logo
     - field.field.paragraph.responsive_sponsor.field_res_sponsor_tablet_logo
+    - field.field.paragraph.responsive_sponsor.field_sponsor_alternative_text
     - image.style.thumbnail
     - paragraphs.paragraphs_type.responsive_sponsor
   module:
@@ -55,9 +56,19 @@ content:
     third_party_settings: {  }
     type: image_image
     region: content
-  translation:
-    weight: 10
+  field_sponsor_alternative_text:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
+  translation:
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   created: true
   status: true

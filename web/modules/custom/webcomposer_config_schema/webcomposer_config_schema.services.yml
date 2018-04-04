@@ -1,0 +1,8 @@
+services:
+  webcomposer_config_schema.schema:
+    class: Drupal\webcomposer_config_schema\Schema\ConfigSchema
+    arguments: ['@config.typed', '@language_manager', '@config.factory', '@module_handler']
+
+  plugin.manager.webcomposer_config_plugin:
+    class: Drupal\webcomposer_config_schema\Plugin\WebcomposerConfigPluginManager
+    parent: default_plugin_manager

@@ -27,8 +27,8 @@ function webcomposer_audit_schema() {
         'description' => 'Type of entity',
       ],
       'eid' => [
-        'type' => 'int',
-        'unsigned' => TRUE,
+        'type' => 'varchar_ascii',
+        'length' => 64,
         'not null' => FALSE,
         'description' => 'The entity ID',
       ],

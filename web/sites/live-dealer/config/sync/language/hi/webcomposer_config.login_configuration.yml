@@ -1,0 +1,7 @@
+error_message_invalid_passname: 'Sorry the Username and Password you entered does not match. Please try again.'
+autologout_box_title: Reminder
+notification_title: Notification
+notification_content:
+  value: "<p>Your session has timed out due to inactivity.</p>\r\n"
+  format: basic_html
+notification_window_title: 'Session has timed out'
