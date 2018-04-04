@@ -1,3 +1,12 @@
+username_field:
+  options:
+    attr:
+      placeholder: 'Username Placeholder'
+currency_field:
+  options:
+    label: Currency
+    attr:
+      placeholder: Currency
 first_name_field:
   options:
     label: Imię
@@ -23,23 +32,20 @@ account_field:
     label: Konto
 verify_text_field: Weryfikuj
 modal_verify_header_text_field: 'Zweryfikuj numer telefonu'
-modal_verify_body_text_field: 'Kod weryfikacyjny został wysłany w postaci SMS. Aby zakończyć weryfikację twojego numeru telefonu, prosimy wpisać 6-ścio cyfrowy kod w przeciągu 10 minut. Jeżeli nie otrzymałeś żadnego kodu, prosimy o kontakt z Obsługą Klienta.'
+modal_verify_body_text_field: "SMS z kodem weryfikacyjny został wysłany na Twój numer. Aby w pełni zweryfikować Twój numer telefonu, prosimy podać 6-ścio cyfrowy kod poniżej w przeciągu 10 minut. Prosimy się upewnić, że podałeś prawidłowy numer wraz z kierunkowym kraju (np. +48605539874). W przypadku wystąpienia jakichkolwiek problemów, skontaktuj się z Działem Obsługi Klienta. \r\n"
 modal_verification_code_placeholder_field: Kod
 modal_verification_resend_code_text_field: 'Prześlij kod ponownie'
 modal_verification_submit_text_field: WYŚLIJ
 verification_code_response_field: "SMS_VERIFICATION_SUCCESS|Kod weryfikacyjny został wysłany na Twój numer komórkowy.\r\nSMS_VERIFICATION_FAILED|Przepraszamy, wystąpił błąd podczas weryfikacji Twojego numeru. Prosimy spróbować ponownie lub skontaktować się z nami popez<a href=\"mailto:plsupport@dafabet.com\"> Email </a> (Kod:110)\r\nSMS_VERIFICATION_SUBMIT_SUCCESS|Twój numer komórkowy został pomyślnie zweryfikowany.\r\nSMS_VERIFICATION_SUBMIT_FAILED| Wpisany kod jest nieprawidłowy. Prosimy spróbować ponownie. (Kod:111)\r\nINTERNAL_ERROR|Błąd wewnętrzny (Kod: 801)"
 verification_code_required_message_field: 'Pole musi być wypełnione.'
 verification_code_min_length_message_field: 'Prosimy wpisać przynajmniej 6 znaków.'
+verification_code_max_length_message_field: 'Prosimy wpisać sześciocyfrowy kod.'
 mobile_number_field:
   options:
     label: 'Numer  Telefonu'
 language_field:
   options:
     label: Język
-contact_preference_bottom_blurb_field: '*Wszystkie promocje, aktualizacje oraz oferty będą wysyłane na Twój zarejestrowany adres mailowy.'
-contact_preference_field:
-  options:
-    label: 'Tak, chcę otrzymywać najnowsze oferty, promocje oraz aktualizacje. '
 address_field:
   options:
     label: Adres
@@ -71,6 +77,10 @@ password_min_length_validation_field: 'Prosimy wpisać przynajmniej 6 znaków.'
 primary_label_field: Podstawowy
 add_mobile_label_field: 'Dodaj Numer Telefonu'
 contact_preference_top_blurb_field: "Czy chcesz otrzymywać najnowsze oferty, promocje oraz aktualizacje?\r\n"
+contact_preference_bottom_blurb_field: '*Wszystkie promocje, aktualizacje oraz oferty będą wysyłane na Twój zarejestrowany adres mailowy.'
+contact_preference_field:
+  options:
+    label: 'Tak, chcę otrzymywać najnowsze oferty, promocje oraz aktualizacje. '
 modal_preview_header_field: 'Zapisz Zmiany na Koncie'
 modal_preview_top_blurb_field: 'Proszę sprawdzić listę zmian. '
 modal_preview_current_label_field: 'Obecny '

@@ -1,3 +1,17 @@
+mobile_number_field:
+  options:
+    attr:
+      tooltip_blurb: 'Masukkan nomor HP Anda dengan kode negara (e.g. +6212345678). Kolom ini hanya bisa diisi dengan karakter angka dan tanda tambah '
+    label: 'Nomor HP'
+username_field:
+  options:
+    attr:
+      placeholder: 'Username Placeholder'
+currency_field:
+  options:
+    label: Currency
+    attr:
+      placeholder: Currency
 first_name_field:
   weight: '3'
   options:
@@ -17,36 +31,31 @@ country_field:
 email_field:
   options:
     label: 'Alamat Email'
+gender_field:
+  options:
+    label: 'Jenis Kelamin'
 communication_detail_field:
   options:
     label: 'Nomor Kontak'
 account_field:
   options:
     label: 'Data Akun'
+home_address_field:
+  options:
+    label: Alamat
 verify_text_field: Cek
 modal_verify_header_text_field: 'Konfirmasi Nomor HP'
-modal_verify_body_text_field: 'Kode verifikasi telah dikirim kepada Anda via SMS. Untuk menyelesaikan verifikasi nomor telepon Anda, silahkan masukkan kode 6 angka dibawah ini, dalam 10 menit. Jika Anda tidak menerima kode, silahkan hubungi Layanan Pelanggan.'
+modal_verify_body_text_field: "Kode verifikasi telah dikirim ke Anda via SMS. Untuk menyelesaikan verifikasi nomor HP Anda, silahkan masukkan kode 6 angka dibawah ini dalam 10 menit. Harap pastikan Anda memasukkan nomor HP yang benar beserta kode negara (e.g. +622602598637). Jika Anda masih mengalami masalah yang sama, silahkan hubungi Layanan Pelanggan kami.\r\n"
 modal_verification_code_placeholder_field: Kode
 modal_verification_resend_code_text_field: 'Kirim ulang kode'
 modal_verification_submit_text_field: KIRIM
 verification_code_response_field: "SMS_VERIFICATION_SUCCESS|Kode verifikasi telah dikirim ke nomor HP Anda.\r\nSMS_VERIFICATION_FAILED|Maaf, telah terjadi kesalahan pada verifikasi nomor HP Anda. Silahkan coba lagi atau hubungi kami melalui:  <a href=\"{livechat.link}\" class=\"live-chat-popup-trigger\"> Live Chat </a> atau <a href=\"mailto:idsupport@dafabet.com\"> Email </a> (Kode:110)\r\nSMS_VERIFICATION_SUBMIT_SUCCESS|Nomor HP Anda telah sukses diverifikasi.\r\nSMS_VERIFICATION_SUBMIT_FAILED| Anda telah memasukkan kode verifikasi yang salah. Silahkan coba lagi. (Kode:111)\r\nINTERNAL_ERROR|Kesalahan internal (Kode: 801)"
 verification_code_required_message_field: 'Kolom ini wajib diisi.'
 verification_code_min_length_message_field: 'Silahkan masukkan minimal 6 karakter.'
-mobile_number_field:
-  options:
-    label: 'Nomor HP'
-    attr:
-      tooltip_blurb: 'Masukkan nomor HP Anda dengan kode negara (e.g. +6212345678). Kolom ini hanya bisa diisi dengan karakter angka dan tanda tambah '
+verification_code_max_length_message_field: 'Silahkan masukkan kode 6 angka.'
 language_field:
   options:
     label: Bahasa
-contact_preference_bottom_blurb_field: "*Semua promosi, kabar, dan penawaran akan dikirim ke email terdaftar Anda.\r\n"
-contact_preference_field:
-  options:
-    label: 'Iya. Kirimkan saya promosi, kabar, dan penawaran terbaru.'
-home_address_field:
-  options:
-    label: Alamat
 address_field:
   options:
     label: Alamat
@@ -82,7 +91,16 @@ password_min_length_validation_field: 'Silahkan masukkan minimal 6 karakter.'
 password_format_validation_field: 'Kolom ini hanya dapat diisi dengan karakter huruf dan angka.'
 primary_label_field: Utama
 add_mobile_label_field: 'Tambah Nomor HP'
+male_label_field: 'Laki-laki '
+female_label_field: Perempuan
 contact_preference_top_blurb_field: "Apa Anda ingin menerima promo, kabar, dan penawaran terbaru?\r\n"
+contact_preference_bottom_blurb_field: "*Semua promosi, kabar, dan penawaran akan dikirim ke email terdaftar Anda.\r\n"
+contact_preference_field:
+  options:
+    label: 'Iya. Kirimkan saya promosi, kabar, dan penawaran terbaru.'
+contact_preference_label:
+  options:
+    label: 'Pilihan Jalur Kontak'
 modal_preview_header_field: 'Simpan Perubahan Akun'
 modal_preview_top_blurb_field: "Silahkan tinjau daftar perubahan.\r\n"
 modal_preview_current_label_field: 'Lama '
@@ -90,16 +108,5 @@ modal_preview_new_label_field: Baru
 modal_preview_bottom_blurb_field: "Masukkan kata sandi Anda untuk menyimpan perubahan pada akun Anda.\r\n"
 modal_preview_placeholder_field: 'Kata Sandi'
 modal_preview_btn_field: 'Simpan Pengaturan Baru'
-contact_preference_label:
-  options:
-    label: 'Pilihan Jalur Kontak'
 contact_preference_yes_label_field: 'Ya '
 contact_preference_no_label_field: Tidak
-male_label_field: 'Laki-laki '
-female_label_field: Perempuan
-currency_field:
-  options:
-    label: 'Mata Uang'
-gender_field:
-  options:
-    label: 'Jenis Kelamin'

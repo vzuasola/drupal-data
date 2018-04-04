@@ -1,6 +1,13 @@
+mobile_number_field:
+  options:
+    attr:
+      tooltip_blurb: '국가 코드를 포함한 핸드폰 번호를 입력해주십시오. (예: +821012345678) 숫자 및 더하기표 (+) 만 입력하실 수 있습니다. '
+    label: '휴대폰 번호'
 username_field:
   options:
     label: 아이디
+    attr:
+      placeholder: 'Username Placeholder'
 currency_field:
   options:
     label: '화폐 단위'
@@ -29,37 +36,31 @@ country_field:
 email_field:
   options:
     label: '이메일 주소'
+gender_field:
+  options:
+    label: 성별
 communication_detail_field:
   options:
     label: '연락처 정보'
 account_field:
   options:
     label: '계정 정보'
+home_address_field:
+  options:
+    label: 주소
 verify_text_field: 인증
 modal_verify_header_text_field: '휴대폰 번호 인증'
-modal_verify_body_text_field: "SMS 인증번호가 휴대폰으로 전송되었습니다. 휴대번호 인증을 완료하기 위해, 전송받은 6자리 인증번호를 10 분 안에 입력해주세요. 코드를 받지 못하셨으면 고객지원팀으로 문의해주십시오.\r\n"
+modal_verify_body_text_field: "인증 코드가 SMS를 통해 전송되었습니다. 전화번호 확인을 완료하시려면 10 분 이내에 6자리 코드를 입력하십시오. 국가 코드와 함께 올바른 휴대 전화번호 형식(예 : + 8210658936)을 입력했는지 확인하십시오. 문제가 지속되면 고객 지원팀에 문의하십시오.\r\n"
 modal_verification_code_placeholder_field: 코드
 modal_verification_resend_code_text_field: '코드 재발송'
 modal_verification_submit_text_field: 제출하기
 verification_code_response_field: "SMS_VERIFICATION_SUCCESS|인증 번호가 문자로 발송되었습니다.\r\nSMS_VERIFICATION_FAILED|죄송합니다, 휴대폰 번호 인증에 오류가 발생했습니다. 다시 시도해주시거나<a href=\"{livechat.link}\" class=\"live-chat-popup-trigger\"> 라이브 채팅</a> 또는 <a href=\"mailto:krsupport@dafabet.com\"> 이메일</a>로 연락주시길 바랍니다. (코드:110)\r\nSMS_VERIFICATION_SUBMIT_SUCCESS|휴대폰 번호가 성공적으로 인증되었습니다.\r\nSMS_VERIFICATION_SUBMIT_FAILED| 유효하지 않은 인증 번호를 입력하셨습니다. 다시 시도해주십시오.(코드:111)\r\nINTERNAL_ERROR|내부 오류 (코드: 801)"
 verification_code_required_message_field: '본 항목은 필수 항목입니다.'
 verification_code_min_length_message_field: '최소 6자 이상으로 입력해주십시오.'
-mobile_number_field:
-  options:
-    label: '휴대폰 번호'
-    attr:
-      tooltip_blurb: '국가 코드를 포함한 핸드폰 번호를 입력해주십시오. (예: +821012345678) 숫자 및 더하기표 (+) 만 입력하실 수 있습니다. '
+verification_code_max_length_message_field: '최소 6자 이상으로 입력해주십시오.'
 language_field:
   options:
     label: 언어
-contact_preference_bottom_blurb_field: '* 모든 프로모션, 업데이트 및 혜택은 등록된 이메일 주소로 발송됩니다.'
-contact_preference_field:
-  options:
-    label: '네. 최신 프로모션, 업데이트 및 혜택을 보내주십시오.'
-home_address_field:
-  options:
-    label: 주소
-verification_code_max_length_message_field: '최소 6자 이상으로 입력해주십시오.'
 address_field:
   options:
     label: 주소
@@ -95,7 +96,17 @@ password_min_length_validation_field: '최소 6자 이상으로 입력해주십�
 password_format_validation_field: '본 항복에는 숫자만 입력하실 수 있습니다. '
 primary_label_field: 기본
 add_mobile_label_field: '휴대폰 번호 추가하기'
+no_changed_detected_message_field: '변경된 사항이 없습니다.'
+male_label_field: '남성 '
+female_label_field: 여성
 contact_preference_top_blurb_field: "최신 프로모션, 업데이트 및 헤택에 대한 안내를 받으시겠습니까?\r\n"
+contact_preference_bottom_blurb_field: '* 모든 프로모션, 업데이트 및 혜택은 등록된 이메일 주소로 발송됩니다.'
+contact_preference_field:
+  options:
+    label: '네. 최신 프로모션, 업데이트 및 혜택을 보내주십시오.'
+contact_preference_label:
+  options:
+    label: '연락 가능 여부'
 modal_preview_header_field: '계정 변경사항 저장'
 modal_preview_top_blurb_field: "변경사항 목록을 검토하십시오.\r\n"
 modal_preview_current_label_field: '현재 '
@@ -103,14 +114,5 @@ modal_preview_new_label_field: 새로운
 modal_preview_bottom_blurb_field: '계정 변경사항을 저장하려면 비밀번호를 입력하세요.'
 modal_preview_placeholder_field: 비밀번호
 modal_preview_btn_field: '변경사항 저장'
-gender_field:
-  options:
-    label: 성별
-no_changed_detected_message_field: '변경된 사항이 없습니다.'
-contact_preference_label:
-  options:
-    label: '연락 가능 여부'
 contact_preference_yes_label_field: '예 '
 contact_preference_no_label_field: 아니오
-male_label_field: '남성 '
-female_label_field: 여성

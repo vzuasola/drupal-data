@@ -6,6 +6,7 @@ dependencies:
     - field.storage.taxonomy_term.field_add_placeholder
     - taxonomy.vocabulary.domain_groups
     - user.role.administrator
+    - user.role.config_admin
   module:
     - content_translation
     - entity_reference_revisions
@@ -33,6 +34,7 @@ display:
         options:
           role:
             administrator: administrator
+            config_admin: config_admin
       cache:
         type: tag
         options: {  }
