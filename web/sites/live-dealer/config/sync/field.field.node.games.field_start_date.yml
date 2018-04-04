@@ -12,7 +12,7 @@ field_name: field_start_date
 entity_type: node
 bundle: games
 label: 'Start Date'
-description: 'UTC +00:00'
+description: ''
 required: false
 translatable: false
 default_value: {  }
