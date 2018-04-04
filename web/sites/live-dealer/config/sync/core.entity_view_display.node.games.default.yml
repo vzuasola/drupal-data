@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.games.body
+    - field.field.node.games.field_end_date
     - field.field.node.games.field_game_icon
     - field.field.node.games.field_game_image
     - field.field.node.games.field_game_image_large
@@ -11,9 +12,12 @@ dependencies:
     - field.field.node.games.field_game_provider
     - field.field.node.games.field_game_title
     - field.field.node.games.field_image_size
+    - field.field.node.games.field_maintenance_blurb
     - field.field.node.games.field_show_game_info_toggle
+    - field.field.node.games.field_start_date
     - node.type.games
   module:
+    - datetime
     - image
     - options
     - text
@@ -29,6 +33,15 @@ content:
     weight: 101
     settings: {  }
     third_party_settings: {  }
+    region: content
+  field_end_date:
+    weight: 118
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
     region: content
   field_game_icon:
     weight: 110
@@ -86,6 +99,13 @@ content:
     third_party_settings: {  }
     type: list_default
     region: content
+  field_maintenance_blurb:
+    weight: 115
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
   field_show_game_info_toggle:
     weight: 106
     label: above
@@ -95,6 +115,15 @@ content:
       format_custom_true: ''
     third_party_settings: {  }
     type: boolean
+    region: content
+  field_start_date:
+    weight: 117
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
     region: content
   links:
     weight: 100
