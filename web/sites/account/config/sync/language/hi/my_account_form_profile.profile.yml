@@ -1,9 +1,68 @@
-modal_verify_body_text_field: 'A verification code has been sent to you via SMS. To complete your phone number verification, please enter the 6-digit code below within 10 minutes. If you didn''t receive any code, please contact Customer Support.'
+username_field:
+  options:
+    label: Username
+    attr:
+      placeholder: 'Username Placeholder'
+currency_field:
+  options:
+    label: Currency
+    attr:
+      placeholder: Currency
+first_name_field:
+  options:
+    label: 'First name'
+last_name_field:
+  options:
+    label: 'Last name'
+dob_field:
+  options:
+    label: 'Date of Birth'
+country_field:
+  options:
+    label: Country
+    attr:
+      placeholder: Country
+email_field:
+  options:
+    label: 'Email Address'
+communication_detail_field:
+  options:
+    label: 'Communication Details'
+account_field:
+  options:
+    label: 'Account Details'
+modal_verify_body_text_field: "A verification code has been sent to you via SMS. To complete your phone number verification, please enter the 6-digit code below within 10 minutes. Please make sure you have entered the correct mobile number format with country code (e.g. +91751986351). If the problem persists, please contact Customer Support.\r\n"
 modal_verification_code_placeholder_field: Code
 modal_verification_submit_text_field: SUBMIT
 verification_code_response_field: "SMS_VERIFICATION_SUCCESS|A verification code has been sent to your mobile number.\r\nSMS_VERIFICATION_FAILED|Sorry, there was an error verifying your mobile number. Please try again or you may contact us at the following: <a href=\"{livechat.link}\" class=\"live-chat-popup-trigger\"> Live Chat </a> or <a href=\"mailto:help@indiacsonline.com\"> Email </a> (Code:110)\r\nSMS_VERIFICATION_SUBMIT_SUCCESS|Your mobile number has been successfully verified.\r\nSMS_VERIFICATION_SUBMIT_FAILED| You have entered an invalid verification code. Please try again. (Code:111)\r\nINTERNAL_ERROR|Internal Error (Code: 801)"
 verification_code_min_length_message_field: 'Min 6'
 verification_code_max_length_message_field: 'Max 6'
 mobile_number_field:
-  options: {  }
+  options:
+    label: 'Mobile Number'
+    attr:
+      placeholder: '+00123456789'
+language_field:
+  options:
+    label: Language
 server_side_validation_field: "INTERNAL_ERROR|Internal Error (Code: 801)\r\nUPDATE_PROFILE_SUCCESS|Your profile has been updated.\r\nUPDATE_PROFILE_FAILED|There was an error updating your profile. Please try again or you may contact us at the following: <a href=\"{livechat.link}\" class=\"live-chat-popup-trigger\">Live Chat</a> or <a href=\"mailto:help@indiacsonline.com\">Email.</a> (Code: 700)\r\nCHECK_SESSION_PASSWORD_FAILED|There was an error updating your profile. Please try again or you may contact us at the following: <a href=\"{livechat.link}\" class=\"live-chat-popup-trigger\">Live Chat</a> or <a href=\"mailto:help@indiacsonline.com\">Email.</a> (Code: 700)"
+mobile_number_format_validation_field: 'This field can only contain plus sign (+) and numeric values. '
+mobile_number_min_length_validation_field: 'Please enter at least 11 characters. '
+mobile_number_max_length_validation_field: 'Please enter no more than 14 characters.'
+address_max_length_validation_field: 'Please enter no more than 100 characters.'
+address_min_length_validation_field: 'Please enter at least 2 characters. '
+address_format_validation_field: 'This field can only contain alphanumeric values and ()_-/\&#,.'
+city_max_length_validation_field: 'Please enter no more than 30 characters.'
+city_min_length_validation_field: 'Please enter at least 2 characters. '
+city_format_validation_field: 'This field can only contain alphanumeric values and ()_-/\&#,.'
+postal_code_max_length_validation_field: 'Please enter no more than 10 characters.'
+postal_code_format_validation_field: 'This field can only contain dash (-) and alphanumeric values. '
+password_max_length_validation_field: 'Please enter no more than 10 characters.'
+password_min_length_validation_field: 'Please enter at least 6 characters. '
+password_format_validation_field: 'This field can only contain alphanumeric values. '
+contact_preference_top_blurb_field: 'Would you like to get the latest promos, updates, and offers?'
+contact_preference_bottom_blurb_field: '*All promotions, updates and offers will be sent to your registered email address.'
+contact_preference_field:
+  options:
+    label: 'Yes. Send me the latest promotions, updates and offers.'
+modal_preview_top_blurb_field: 'Please review list of changes. '

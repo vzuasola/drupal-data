@@ -98,7 +98,7 @@ home_address_field:
 enable_sms_verification_field: '1'
 verify_text_field: Verify
 modal_verify_header_text_field: 'Verify Mobile Number'
-modal_verify_body_text_field: 'A verification code has been sent to you via SMS. To complete your phone number verification, please enter the 6-digit code below within 10 minutes. If you didn''t receive any code, please contact Customer Support. '
+modal_verify_body_text_field: 'A verification code has been sent to you via SMS. To complete your phone number verification, please enter the 6-digit code below within 10 minutes. Please make sure you have entered the correct mobile number format with country code (e.g. +60312345678). If the problem persists, please contact Customer Support.'
 modal_verification_code_placeholder_field: 'Verification Code'
 modal_verification_resend_code_text_field: 'Resend code'
 modal_verification_submit_text_field: Submit
