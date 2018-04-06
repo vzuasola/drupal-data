@@ -1,0 +1,12 @@
+.toolbar-icon-webcomposer-admin:before {
+    background-image: url(../icons/cog.svg);
+}
+
+.toolbar .toolbar-bar .toolbar-icon-webcomposer:before{
+    background-image: url(../icons/cog.svg);
+}
+
+.toolbar-bar .toolbar-icon-webcomposer:active:before,
+.toolbar-bar .toolbar-icon-webcomposer.is-active:before {
+    background-image: url(../icons/cog.white.svg);
+}

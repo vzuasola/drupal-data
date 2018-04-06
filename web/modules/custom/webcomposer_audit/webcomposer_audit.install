@@ -41,8 +41,6 @@ function webcomposer_audit_schema() {
       ],
       'title'  => [
         'type' => 'text',
-        'not null' => TRUE,
-        'default' => '',
         'description' => 'The title of the entity',
       ],
       'location'  => [

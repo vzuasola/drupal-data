@@ -4,6 +4,6 @@ webcomposer_audit.admin_settings_tab:
   base_route: webcomposer_audit.audit_form
 
 webcomposer_audit.audit_reset_tab:
-  title: 'Reset'
+  title: 'Delete'
   route_name: webcomposer_audit.audit_reset
   base_route: webcomposer_audit.audit_form

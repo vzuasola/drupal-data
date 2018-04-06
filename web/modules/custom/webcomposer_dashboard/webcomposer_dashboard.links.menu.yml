@@ -1,0 +1,4 @@
+webcomposer.admin:
+  title: Webcomposer
+  description: 'Administer Webcomposer Settings.'
+  route_name: webcomposer.admin

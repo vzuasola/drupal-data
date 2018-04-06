@@ -38,15 +38,18 @@ class TranslateController extends ControllerBase {
    *
    */
   private function getEntity() {
-    $id = $this->route->getParameter('form');
+    $path = $this->route->getCurrentRouteMatch()->getRouteObject()->getPath();
+    $path = trim($path, '/');
 
-    try {
-      $entity = $this->pluginManager->getDefinition($id);
-    } catch (\Exception $e) {
-      throw new NotFoundHttpException();
+    $definitions = $this->pluginManager->getDefinitions();
+
+    foreach ($definitions as $key => $definition) {
+      if ($path === "admin/config/webcomposer/translate/$key") {
+        return $definition;
+      }
     }
 
-    return $entity;
+    throw new NotFoundHttpException();
   }
 
   /**
@@ -66,6 +69,7 @@ class TranslateController extends ControllerBase {
       $this->t('Operations'),
     ];
 
+    $default = $this->languageManager->getDefaultLanguage();
     $languages = $this->languageManager->getLanguages();
     $rows = [];
 
@@ -75,7 +79,7 @@ class TranslateController extends ControllerBase {
     $main = reset($form['#editable_config_names']);
 
     foreach ($languages as $language) {
-      $languageName = $language->getName();
+      $name = $language->getName();
 
       $id = $this->entity['id'];
 
@@ -108,7 +112,7 @@ class TranslateController extends ControllerBase {
       ];
 
       $rows[] = [
-        $languageName,
+        $name,
         $status,
         $operations,
       ];

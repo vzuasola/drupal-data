@@ -1,0 +1,33 @@
+<?php
+
+use Drupal\Core\Session\AccountInterface;
+
+/**
+ * Implements hook_install().
+ */
+function webcomposer_config_schema_install() {
+  // remove this unused rest resource from rest extra
+  $keys = [
+    'rest.resource.standard_config_resource',
+  ];
+
+  foreach ($keys as $key) {
+    \Drupal::configFactory()->getEditable($key)->delete();
+  }
+
+  user_role_grant_permissions(AccountInterface::ANONYMOUS_ROLE, ['restful get webcomposer_config_resource']);
+  user_role_grant_permissions(AccountInterface::AUTHENTICATED_ROLE, ['restful get webcomposer_config_resource']);
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function webcomposer_config_schema_uninstall() {
+  $keys = [
+    'rest.resource.webcomposer_config_resource',
+  ];
+
+  foreach ($keys as $key) {
+    \Drupal::configFactory()->getEditable($key)->delete();
+  }
+}
