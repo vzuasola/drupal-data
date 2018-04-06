@@ -3,6 +3,10 @@
 This project template should provide a kickstart for managing your site
 dependencies with [Composer](https://getcomposer.org/).
 
+## Important
+
+* [New Implementation for Drupal Configuration Forms](docs/news/2018-03-28-new-config-form-implementation.md)
+
 ## Documentations
 
 ### General Guidelines

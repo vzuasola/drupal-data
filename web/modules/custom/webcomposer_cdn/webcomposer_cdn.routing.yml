@@ -1,6 +1,13 @@
+webcomposer_cdn.admin_settings:
+  path: 'admin/config/webcomposer/cdn'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'CDN Configuration'
+  requirements:
+    _permission: 'administer site configuration'
 
 webcomposer_cdn.cdn_config_form:
-  path: '/admin/config/cdn_settings/cdn_config'
+  path: '/admin/config/webcomposer/cdn/settings'
   defaults:
     _form: '\Drupal\webcomposer_cdn\Form\CDNConfigForm'
     _title: 'CDN Configuration'

@@ -4,17 +4,22 @@ status: true
 dependencies:
   config:
     - field.field.node.games.body
+    - field.field.node.games.field_end_date
     - field.field.node.games.field_game_icon
     - field.field.node.games.field_game_image
     - field.field.node.games.field_game_image_large
     - field.field.node.games.field_game_info
+    - field.field.node.games.field_game_provider
     - field.field.node.games.field_game_title
     - field.field.node.games.field_image_size
+    - field.field.node.games.field_maintenance_blurb
     - field.field.node.games.field_show_game_info_toggle
+    - field.field.node.games.field_start_date
     - image.style.thumbnail
     - node.type.games
   module:
     - conditional_fields
+    - datetime
     - field_group
     - image
     - path
@@ -66,11 +71,48 @@ third_party_settings:
         description: ''
         required_fields: true
       label: 'Game Room Title & Icon'
+    group_game_launching:
+      children:
+        - field_game_provider
+      parent_name: ''
+      weight: 20
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: open
+        description: ''
+        required_fields: false
+      label: 'Game Launching'
+    group_game_room_maintenance:
+      children:
+        - field_maintenance_mode
+        - field_maintenance_blurb
+        - field_start_date
+        - field_end_date
+      parent_name: ''
+      weight: 20
+      format_type: tab
+      format_settings:
+        label: 'Game Room Maintenance/Coming Soon'
+        formatter: open
+        description: ''
+        id: ''
+        classes: ''
+        required_fields: false
+      label: 'Game Room Maintenance/Coming Soon'
 id: node.games.default
 targetEntityType: node
 bundle: games
 mode: default
 content:
+  field_end_date:
+    weight: 37
+    settings: {  }
+    third_party_settings:
+      conditional_fields: {  }
+    type: datetime_default
+    region: content
   field_game_icon:
     weight: 3
     settings:
@@ -156,6 +198,12 @@ content:
           bundle: games
     type: text_textarea
     region: content
+  field_game_provider:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
   field_game_title:
     weight: 2
     settings:
@@ -170,12 +218,28 @@ content:
     third_party_settings: {  }
     type: options_buttons
     region: content
+  field_maintenance_blurb:
+    weight: 35
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings:
+      conditional_fields: {  }
+    type: text_textarea
+    region: content
   field_show_game_info_toggle:
     weight: 5
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
+    region: content
+  field_start_date:
+    weight: 36
+    settings: {  }
+    third_party_settings:
+      conditional_fields: {  }
+    type: datetime_default
     region: content
   langcode:
     type: language_select

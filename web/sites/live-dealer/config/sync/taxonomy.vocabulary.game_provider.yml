@@ -1,0 +1,9 @@
+uuid: 3b62a3d9-9609-4f4f-a5c3-691bdd8a1317
+langcode: en
+status: true
+dependencies: {  }
+name: 'Game Provider'
+vid: game_provider
+description: 'List of Live Dealer''s Game Provider'
+hierarchy: 0
+weight: 0

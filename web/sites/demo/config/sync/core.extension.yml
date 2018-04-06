@@ -44,6 +44,7 @@ module:
   locale: 0
   menu_link_attributes: 0
   menu_ui: 0
+  metatag: 0
   monolog: 0
   node: 0
   options: 0
@@ -73,6 +74,8 @@ module:
   webcomposer_cache: 0
   webcomposer_cdn: 0
   webcomposer_config: 0
+  webcomposer_config_schema: 0
+  webcomposer_dashboard: 0
   webcomposer_demo: 0
   webcomposer_dm: 0
   webcomposer_domain_import: 0
@@ -80,7 +83,6 @@ module:
   webcomposer_editor: 0
   webcomposer_floating_banners: 0
   webcomposer_form_manager: 0
-  webcomposer_form_sample: 0
   webcomposer_games: 0
   webcomposer_language_hierarchy: 0
   webcomposer_marketing_script: 0
