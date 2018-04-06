@@ -23,7 +23,7 @@ class ResetForm extends ConfirmFormBase {
    * {@inheritdoc}
    */
   public function getQuestion() {
-    return $this->t('Are you sure you want to delete the recent logs?');
+    return $this->t('Are you sure you want to delete the all audit logs?');
   }
 
   /**

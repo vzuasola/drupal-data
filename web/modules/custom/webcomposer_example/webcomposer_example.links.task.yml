@@ -1,4 +1,0 @@
-webcomposer_example.sample_form:
-  route_name: webcomposer_example.sample_form
-  base_route: webcomposer_example.sample_form
-  title: 'Web Composer Sample Form configuration'

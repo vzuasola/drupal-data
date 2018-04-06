@@ -1,6 +1,0 @@
-name: WebComposer Example Config Form
-description: Web Composer Example Form
-package: Web Composer
-type: module
-core: 8.x
-version: '8.x-1.x-dev'

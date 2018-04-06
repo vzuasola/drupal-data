@@ -34,6 +34,22 @@ class ConfigFormRoutes {
             '_permission'  => 'administer site configuration',
           ]
         );
+
+        // translation routes
+
+        $routename = "webcomposer_config_schema.form_{$id}_translate";
+        $routeURI = "/admin/config/webcomposer/translate/{$id}";
+
+        $routes[$routename] = new Route(
+          $routeURI,
+          [
+            '_controller' => '\Drupal\webcomposer_config_schema\Controller\TranslateController::translate',
+            '_title_callback' => '\Drupal\webcomposer_config_schema\Controller\TranslateController::title',
+          ],
+          [
+            '_permission'  => 'administer site configuration',
+          ]
+        );
       }
     }
 

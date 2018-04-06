@@ -1,0 +1,5 @@
+name: Webcomposer Dashboard
+type: module
+description: Provides Webcomposer dashboard functionality
+core: 8.x
+package: Web Composer

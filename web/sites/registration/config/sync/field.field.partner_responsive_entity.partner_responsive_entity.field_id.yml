@@ -15,7 +15,7 @@ bundle: partner_responsive_entity
 label: ID
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

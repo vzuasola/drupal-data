@@ -1,7 +1,7 @@
-no_result: 'W tej chwili nie masz żadnych bonusów'
+sportsbook_expirydate_display: 'Nie dotyczy'
+no_result: 'Nie dotyczy'
+service_unavailable: 'Błąd pobierania danych'
 zero_display: 'Nie dotyczy'
 page_title: 'Aktywny Bonus'
 next_label: Następny
-service_unavailable: 'Błąd pobierania danych'
 prev_label: Poprzedni
-sportsbook_expirydate_display: 'Nie dotyczy'

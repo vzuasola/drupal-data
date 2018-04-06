@@ -1,5 +1,6 @@
-no_result: 'Αυτή τη στιγμή δεν έχετε κανένα μπόνους σε αυτό το προϊόν.'
+no_result: N/A
 service_unavailable: 'Błąd pobierania danych'
+zero_display: N/A
 page_title: 'Ενεργό Μπόνους'
 next_label: Επόμενο
 prev_label: Poprzedni

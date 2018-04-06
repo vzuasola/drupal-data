@@ -59,7 +59,7 @@ class ItemForm extends FormBase {
     $rows = [];
 
     $item = $this->item;
-    $title = ucwords($item['title']);
+    $title = trim(trim(ucwords($item['title'])), '>');
 
     if (isset($item['type']) && $item['type'] == 'config') {
       $title = $item['title'];
