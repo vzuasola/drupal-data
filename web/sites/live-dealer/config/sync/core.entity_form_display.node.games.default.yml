@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.games.body
     - field.field.node.games.field_end_date
+    - field.field.node.games.field_game_code
     - field.field.node.games.field_game_icon
     - field.field.node.games.field_game_image
     - field.field.node.games.field_game_image_large
@@ -74,6 +75,7 @@ third_party_settings:
     group_game_launching:
       children:
         - field_game_provider
+        - field_game_code
       parent_name: ''
       weight: 20
       format_type: tab
@@ -86,7 +88,6 @@ third_party_settings:
       label: 'Game Launching'
     group_game_room_maintenance:
       children:
-        - field_maintenance_mode
         - field_maintenance_blurb
         - field_start_date
         - field_end_date
@@ -112,6 +113,14 @@ content:
     third_party_settings:
       conditional_fields: {  }
     type: datetime_default
+    region: content
+  field_game_code:
+    weight: 27
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
   field_game_icon:
     weight: 3
