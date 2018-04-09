@@ -31,5 +31,8 @@ function webcomposer_seo_uninstall() {
   }
 
   $paragraph = \Drupal\paragraphs\Entity\ParagraphsType::load('metatag');
-  $paragraph->delete();
+
+  if ($paragraph) {
+    $paragraph->delete();
+  }
 }

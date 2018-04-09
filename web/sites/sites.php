@@ -54,3 +54,7 @@ $sites['exchange.drupal.dev'] = 'exchange';
 // Live Dealer instance
 $sites['live-dealer.drupal.local'] = 'live-dealer';
 $sites['live-dealer.drupal.dev'] = 'live-dealer';
+
+// Casino Jamboree
+$sites['casino-jamboree.drupal.dev'] = 'casino-jamboree';
+$sites['casino-jamboree.drupal.local'] = 'casino-jamboree';
