@@ -1,27 +1,22 @@
-uuid: e9a44909-229f-4017-9e3f-8bf96f8e78bd
+uuid: 6295377a-8834-4a94-bb9a-3794976f69d3
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.right_side_block_entity.right_side_block_entity.field_exclude_these_pages
-    - field.field.right_side_block_entity.right_side_block_entity.field_innerpage_right_side_block
+    - field.field.webcomposer_meta_entity.webcomposer_meta_entity.field_meta
+    - field.field.webcomposer_meta_entity.webcomposer_meta_entity.field_per_page_visibility
   module:
     - entity_reference_revisions
     - user
-    - webcomposer_right_side_block
-id: right_side_block_entity.right_side_block_entity.default
-targetEntityType: right_side_block_entity
-bundle: right_side_block_entity
+    - webcomposer_seo
+_core:
+  default_config_hash: 8eNVme4ER1AlAbtFwCtzvk5-Qt9il_0AeCCNtyM56xM
+id: webcomposer_meta_entity.webcomposer_meta_entity.default
+targetEntityType: webcomposer_meta_entity
+bundle: webcomposer_meta_entity
 mode: default
 content:
-  field_exclude_these_pages:
-    weight: 2
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: basic_string
-    region: content
-  field_innerpage_right_side_block:
+  field_meta:
     type: entity_reference_revisions_entity_view
     weight: 1
     label: above
@@ -29,6 +24,13 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
+    region: content
+  field_per_page_visibility:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
     region: content
   name:
     label: above
