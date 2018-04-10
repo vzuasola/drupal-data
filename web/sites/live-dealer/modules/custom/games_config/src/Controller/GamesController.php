@@ -17,5 +17,4 @@ class GamesController extends ControllerBase {
             '#markup' => "",
         );
     }
-
 }
