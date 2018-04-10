@@ -6,5 +6,4 @@ require $app_root . '/../config/base.settings.php';
 /**
  * The product code
  */
-$settings['product'] = 'casino-jamboree';
-
+$settings['product'] = 'jamboree-casino';

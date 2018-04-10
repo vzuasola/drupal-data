@@ -16,6 +16,10 @@ use Drupal\Core\Entity\EntityInterface;
  *
  */
 function webcomposer_audit_entity_update(EntityInterface $entity) {
+  if (defined('MAINTENANCE_MODE')) {
+    return;
+  }
+
   try {
     \Drupal::service('webcomposer_audit.database_storage')->update($entity);
   } catch (\Exception $e) {
@@ -27,6 +31,10 @@ function webcomposer_audit_entity_update(EntityInterface $entity) {
  *
  */
 function webcomposer_audit_entity_insert(EntityInterface $entity) {
+  if (defined('MAINTENANCE_MODE')) {
+    return;
+  }
+
   try {
     \Drupal::service('webcomposer_audit.database_storage')->insert($entity);
   } catch (\Exception $e) {
@@ -38,6 +46,10 @@ function webcomposer_audit_entity_insert(EntityInterface $entity) {
  *
  */
 function webcomposer_audit_entity_delete(EntityInterface $entity) {
+  if (defined('MAINTENANCE_MODE')) {
+    return;
+  }
+
   try {
     \Drupal::service('webcomposer_audit.database_storage')->delete($entity);
   } catch (\Exception $e) {
