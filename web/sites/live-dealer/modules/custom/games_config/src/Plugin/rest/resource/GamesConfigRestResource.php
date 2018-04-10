@@ -79,7 +79,7 @@ class GamesConfigRestResource extends ResourceBase {
   /**
    * Responds to GET requests.
    *
-   * Returns a list of bundles for specified entity.
+   * Returns a list of bundles for specified entity
    *
    * @throws \Symfony\Component\HttpKernel\Exception\HttpException
    *   Throws exception expected.
