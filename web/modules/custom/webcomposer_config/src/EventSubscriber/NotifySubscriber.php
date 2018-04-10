@@ -13,7 +13,7 @@ class NotifySubscriber implements EventSubscriberInterface {
   /**
    * {@inheritdoc}
    */
-  static function getSubscribedEvents() {
+  public static function getSubscribedEvents() {
     $events[KernelEvents::REQUEST][] = ['notifySchema'];
     return $events;
   }
