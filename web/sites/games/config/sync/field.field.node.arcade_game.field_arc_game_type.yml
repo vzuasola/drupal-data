@@ -1,0 +1,23 @@
+uuid: ddc62976-2e46-4005-bb1e-95fc242ba867
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_arc_game_type
+    - node.type.arcade_game
+  module:
+    - options
+id: node.arcade_game.field_arc_game_type
+field_name: field_arc_game_type
+entity_type: node
+bundle: arcade_game
+label: 'Game Type'
+description: 'Check the Game type HTML5 or FLASH.'
+required: true
+translatable: true
+default_value:
+  -
+    value: '0'
+default_value_callback: ''
+settings: {  }
+field_type: list_float
