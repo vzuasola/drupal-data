@@ -1,0 +1,11 @@
+games_config.admin_settings:
+  title: 'Games Configuration'
+  description: 'Provides an interface for managing games.'
+  parent: system.admin_config
+  route_name: games_config.admin_settings
+
+games_config.games_configuration:
+  title: 'Games Custom Configuration'
+  route_name: games_config.games_configuration
+  description: 'Configure the Games'
+  parent: games_config.admin_settings

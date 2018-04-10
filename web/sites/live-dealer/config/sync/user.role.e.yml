@@ -6,4 +6,5 @@ id: e
 label: 'Editorial board'
 weight: 3
 is_admin: null
-permissions: {  }
+permissions:
+  - 'restful get games_config_rest_resource'

@@ -1,0 +1,23 @@
+uuid: ac8b072e-4b3b-4f51-b168-9812957e98ca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_social_media_link_class
+    - paragraphs.paragraphs_type.social_media
+  module:
+    - options
+_core:
+  default_config_hash: W7atDrV9Sp1XriwZWv70VIAC4QLwWVSZ6n1PXgg8Dog
+id: paragraph.social_media.field_social_media_link_class
+field_name: field_social_media_link_class
+entity_type: paragraph
+bundle: social_media
+label: 'Link Class'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
