@@ -1,0 +1,16 @@
+uuid: c84bb191-1a5c-41df-84b6-e8a4253b8a75
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.arcade_ribbon_label
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.arcade_ribbon_label
+target_entity_type_id: taxonomy_term
+target_bundle: arcade_ribbon_label
+default_langcode: site_default
+language_alterable: true

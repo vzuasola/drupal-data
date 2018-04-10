@@ -23,9 +23,6 @@ settings:
     -
       value: gold_deluxe
       label: 'Gold Deluxe'
-    -
-      value: sa_gaming
-      label: 'SA Gaming'
   allowed_values_function: ''
 module: options
 locked: false

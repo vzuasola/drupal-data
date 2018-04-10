@@ -1,0 +1,28 @@
+uuid: 9fb9b09e-e6bd-4136-91e6-104c352f860e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_arc_game_ribbon
+    - node.type.arcade_game
+    - taxonomy.vocabulary.arcade_ribbon_label
+id: node.arcade_game.field_arc_game_ribbon
+field_name: field_arc_game_ribbon
+entity_type: node
+bundle: arcade_game
+label: 'Game Ribbon'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      arcade_ribbon_label: arcade_ribbon_label
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
