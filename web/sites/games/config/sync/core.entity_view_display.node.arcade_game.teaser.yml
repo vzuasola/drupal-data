@@ -1,0 +1,29 @@
+uuid: adb4753f-e6ba-4c54-a294-f00c6871558f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.arcade_game.body
+    - node.type.arcade_game
+  module:
+    - text
+    - user
+id: node.arcade_game.teaser
+targetEntityType: node
+bundle: arcade_game
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true
