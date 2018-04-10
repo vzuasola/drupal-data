@@ -12,9 +12,9 @@ use Drupal\Component\Utility\Html;
 class GamesController extends ControllerBase {
 
     public function getList(Request $request) {
-        return array(
+        return [
             '#type' => 'markup',
             '#markup' => "",
-        );
+        ];
     }
 }
