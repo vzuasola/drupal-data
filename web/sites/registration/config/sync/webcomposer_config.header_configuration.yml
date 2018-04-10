@@ -33,3 +33,7 @@ excluded_balance_mapping: '7'
 cashier_link: '{domain:cashier_domain}/{domain:lang_token}/payment-options[query:(ticket={auth.token}&{tracking}&width=820&height=700)]'
 balance_mapping: ''
 balance_label_override: ''
+logo_title: Logo
+password_mask_toggle: 0
+caps_lock_toggle: 0
+capslock_notification: Casplock

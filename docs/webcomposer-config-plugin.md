@@ -105,7 +105,7 @@ $form['teaser']['description'] = [
 
 > (**IMPORTANT**) To make translation work, the **form field index and the index you pass on the
 get and submit method should be the same**.
-> Just like on the example, _description_ is the field index, so does the on the get.
+> Just like on the example, _description_ is the field index, so does the one on the get.
 
 To retrieve saved data, you just need to call the **get** method.
 

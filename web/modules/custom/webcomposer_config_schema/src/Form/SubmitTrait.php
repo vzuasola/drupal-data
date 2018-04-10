@@ -29,7 +29,7 @@ trait SubmitTrait {
 
       if (is_array($value)) {
         if (isset($value['#type']) &&
-          isset($value['#default_value']) &&
+          array_key_exists('#default_value', $value) &&
           !in_array($value['#type'], $excluded_types)
         ) {
           $data[$key] = $form_state->getValue($key);

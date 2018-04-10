@@ -70,10 +70,10 @@ class OWSportsCustomConfigForm extends ConfigFormBase {
       '#group' => 'owsports_settings_tab',
     ];
 
-    $form['jackpotbet_config_group']['colossus_toggle'] = [
+    $form['jackpotbet_config_group']['colossus_login_lightbox'] = [
       '#type' => 'checkbox',
-      '#title' => $this->t('Enable Open Colossus Page (Pre-Login)'),
-      '#default_value' => $config->get('colossus_toggle'),
+      '#title' => $this->t('Launch login lightbox on pre-login'),
+      '#default_value' => $config->get('colossus_login_lightbox'),
     ];
 
     $form['jackpotbet_config_group']['colossus_pre_uri'] = [
@@ -81,6 +81,7 @@ class OWSportsCustomConfigForm extends ConfigFormBase {
       '#title' => $this->t('Pre-login'),
       '#description' => $this->t('Pre Login URI.'),
       '#default_value' => $config->get('colossus_pre_uri'),
+      '#required' => TRUE,
     ];
 
     $form['jackpotbet_config_group']['colossus_post_uri'] = [
@@ -88,6 +89,7 @@ class OWSportsCustomConfigForm extends ConfigFormBase {
       '#title' => $this->t('Post-login'),
       '#description' => $this->t('Post Login URI.'),
       '#default_value' => $config->get('colossus_post_uri'),
+      '#required' => TRUE,
     ];
 
     $form['asia_config_group'] = [
@@ -218,7 +220,7 @@ class OWSportsCustomConfigForm extends ConfigFormBase {
       'singbet_template',
       'colossus_pre_uri',
       'colossus_post_uri',
-      'colossus_toggle',
+      'colossus_login_lightbox',
       'url_param',
     ];
 
