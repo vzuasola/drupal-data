@@ -52,6 +52,8 @@ class RedisSignatureStorage implements SignatureStorageInterface {
           $signature = $this->renewSignature();
         }
       }
+
+      throw new \Exception('Missing Redis data store instance');
     } catch (\Exception $e) {
       // if signature cannot be created, just return a new signature
       $signature = $this->createSignature();

@@ -7,7 +7,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Drupal\Component\Utility\Html;
 
 /**
- * Provides route responses for the Example module.
+ * Provides route responses for the Game module.
  */
 class GamesController extends ControllerBase {
 

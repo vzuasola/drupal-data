@@ -1,0 +1,17 @@
+uuid: b2db5011-b3d9-4f93-a7b2-1ce72f9f0d86
+langcode: en
+status: true
+dependencies:
+  module:
+    - games_config
+    - serialization
+    - user
+id: games_config_rest_resource
+plugin_id: games_config_rest_resource
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+    supported_auth:
+      - cookie
