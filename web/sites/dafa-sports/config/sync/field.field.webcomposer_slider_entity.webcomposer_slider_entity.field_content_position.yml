@@ -1,0 +1,23 @@
+uuid: 3cf4de57-6f9e-4e38-a765-cb156426eedd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.webcomposer_slider_entity.field_content_position
+  module:
+    - options
+    - webcomposer_slider
+id: webcomposer_slider_entity.webcomposer_slider_entity.field_content_position
+field_name: field_content_position
+entity_type: webcomposer_slider_entity
+bundle: webcomposer_slider_entity
+label: 'Pre Login Content Position'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: right
+default_value_callback: ''
+settings: {  }
+field_type: list_string

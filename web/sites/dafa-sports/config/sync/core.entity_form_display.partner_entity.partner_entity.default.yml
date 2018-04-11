@@ -1,0 +1,45 @@
+uuid: 83507303-fb76-4c96-8b41-344b2d26fced
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.partner_entity.partner_entity.field_id
+    - field.field.partner_entity.partner_entity.field_logo
+    - image.style.thumbnail
+  module:
+    - image
+    - webcomposer_partner
+_core:
+  default_config_hash: vLKPILtdxTkaZS85TVDnY-FqCA4SnrM3rYdAikLJDHA
+id: partner_entity.partner_entity.default
+targetEntityType: partner_entity
+bundle: partner_entity
+mode: default
+content:
+  field_id:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_logo:
+    weight: 1
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  langcode: true
+  user_id: true

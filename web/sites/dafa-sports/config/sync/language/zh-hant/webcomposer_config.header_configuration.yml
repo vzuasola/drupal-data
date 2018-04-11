@@ -1,0 +1,23 @@
+lobby_page_title: 'dafabet在線投注 - 亞洲最好的在線體育投注平台！'
+critical_announcement_content:
+  value: "<p>为了给我们尊贵的玩家带来更优质的体验，我们将于2月21日上午5:00 – 5:30期间进行网页升级，网页版在线聊天将暂不可用。 请通过其他方式 （如：客户端在线聊天、邮件、电话等）联系我们。给您带来的不便我们深表歉意。</p>\r\n"
+  format: basic_html
+news_announcement_content:
+  value: ''
+  format: basic_html
+join_now_text: 立即加入
+join_now_link: '/{domain:entry}/{domain:lang_token}/cant-login{tracking.token}'
+login_issue_text: 無法登錄？
+login_issue_link: '/{domain:entry}/{domain:lang_token}/cant-login{tracking.token}'
+product_balance_label: 沙巴體育余額
+total_balance_label: 總余額
+balance_error_text: 'Error Retrieving.'
+profile_icon_hover_text: 我的賬戶
+cashier_icon_hover_text: 出納櫃臺
+product_menu_new_tag: 新
+welcome_text: 'Welcome {username}'
+profile_link: '/{domain:myaccount_domain}/{lang}/my-profile?title=headerPopup&width=820&height=700&token={legacy.credentials}'
+profile_logout_text: 登出
+balance_label_mapping: "4|沙巴體育\r\n6|大發體育\r\n1|娛樂場金典版\r\n2|娛樂場黃金版\r\n5|現場荷官、老虎機、虛擬運動和大發彩票\r\n8|OPUS現場荷官\r\n9|快樂彩\r\n3|撲克\r\n7|捕魚王"
+balance_error_text_product: '{domain:cashier_domain}/en?ticket={auth.token}&product=ow-sports&title=headerPopup&width=820&height=700'
+cashier_link: '{domain:cashier_domain}/en?ticket={auth.token}&product=ow-sports&title=headerPopup&width=820&height=700'

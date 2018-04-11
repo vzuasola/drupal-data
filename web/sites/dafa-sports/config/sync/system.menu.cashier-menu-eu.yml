@@ -1,0 +1,8 @@
+uuid: 4e2b3ee1-734e-4390-a038-5e143c691cde
+langcode: eu
+status: true
+dependencies: {  }
+id: cashier-menu-eu
+label: 'Cashier Menu EU'
+description: ''
+locked: false

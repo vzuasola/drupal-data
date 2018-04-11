@@ -1,0 +1,17 @@
+uuid: d0f77854-6d66-46fb-9f31-4746d8e92b4d
+langcode: en
+status: true
+dependencies:
+  module:
+    - serialization
+    - user
+    - webcomposer_rest_extra
+id: language_rest_resource
+plugin_id: language_rest_resource
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+    supported_auth:
+      - cookie

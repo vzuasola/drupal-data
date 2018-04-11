@@ -1,0 +1,45 @@
+uuid: a73f3820-9778-4548-a10a-cde8bf11a292
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.right_side_block_entity.field_image
+  module:
+    - content_translation
+    - image
+    - webcomposer_right_side_block
+third_party_settings:
+  content_translation:
+    translation_sync:
+      file: file
+      alt: '0'
+      title: '0'
+id: right_side_block_entity.right_side_block_entity.field_image
+field_name: field_image
+entity_type: right_side_block_entity
+bundle: right_side_block_entity
+label: Image
+description: 'Recommended minimum width of the image should be 260px for avoiding the blur'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: false
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image
