@@ -13,6 +13,7 @@ dependencies:
     - field.field.node.games.field_game_title
     - field.field.node.games.field_image_size
     - field.field.node.games.field_maintenance_blurb
+    - field.field.node.games.field_ribbon_configuration
     - field.field.node.games.field_show_game_info_toggle
     - field.field.node.games.field_start_date
     - node.type.games
@@ -129,4 +130,5 @@ content:
     weight: 100
     region: content
 hidden:
+  field_ribbon_configuration: true
   langcode: true
