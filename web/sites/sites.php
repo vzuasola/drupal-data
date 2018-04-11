@@ -10,8 +10,6 @@ $sites['demo.drupal.dev'] = 'demo';
 $sites['demo.drupal.local'] = 'demo';
 
 // Entry page Instances
-$sites['entry.drupal.dev'] = 'entrypage';
-$sites['entry.drupal.local'] = 'entrypage';
 $sites['entrypage.drupal.local'] = 'entrypage';
 $sites['entrypage.drupal.dev'] = 'entrypage';
 
@@ -58,3 +56,7 @@ $sites['live-dealer.drupal.dev'] = 'live-dealer';
 // Jamboree Casino
 $sites['jamboree-casino.drupal.dev'] = 'jamboree-casino';
 $sites['jamboree-casino.drupal.local'] = 'jamboree-casino';
+
+// DafaSportsBook Site Instances
+$sites['dafa-sportsbook.drupal.local'] = 'dafa-sportsbook';
+$sites['dafa-sportsbook.drupal.dev'] = 'dafa-sportsbook';
