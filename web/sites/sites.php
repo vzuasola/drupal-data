@@ -58,3 +58,7 @@ $sites['live-dealer.drupal.dev'] = 'live-dealer';
 // Jamboree Casino
 $sites['jamboree-casino.drupal.dev'] = 'jamboree-casino';
 $sites['jamboree-casino.drupal.local'] = 'jamboree-casino';
+
+// Dafasports Site instance
+$sites['dafa-sports.drupal.local'] = 'dafa-sports';
+$sites['dafa-sports.drupal.dev'] = 'dafa-sports';
