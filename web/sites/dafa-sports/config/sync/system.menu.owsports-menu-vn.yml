@@ -1,8 +1,8 @@
-uuid: ce0dc0a3-2731-4e45-a0ae-1e04280cef80
+uuid: 415dc4fa-e857-4d25-806a-00fa6f1740a7
 langcode: en
 status: true
 dependencies: {  }
 id: owsports-menu-vn
-label: 'Owsports Menu VN'
+label: 'OWsports Menu VN'
 description: ''
 locked: false

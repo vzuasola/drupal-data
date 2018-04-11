@@ -28,11 +28,4 @@ content:
     weight: 101
     region: content
 hidden:
-  field_banner_content: true
-  field_banner_content_position: true
-  field_banner_link: true
-  field_banner_link_target: true
-  field_image: true
-  field_log_in_state: true
-  field_meta_tags: true
   langcode: true

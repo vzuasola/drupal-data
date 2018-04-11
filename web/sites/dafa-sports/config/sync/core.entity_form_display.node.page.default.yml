@@ -26,9 +26,9 @@ third_party_settings:
   field_group:
     group_pre:
       children:
-        - group_log_in_state
-        - group_banner_fields
+        - group_page_states
         - group_page_content
+        - group_banner_fields
       parent_name: ''
       weight: 12
       format_type: fieldset
@@ -39,25 +39,12 @@ third_party_settings:
         classes: ''
         required_fields: false
       label: Fields
-    group_log_in_state:
-      children:
-        - field_log_in_state
-      parent_name: group_pre
-      weight: 20
-      format_type: tab
-      format_settings:
-        id: ''
-        classes: ''
-        formatter: closed
-        description: ''
-        required_fields: true
-      label: 'Log-in State'
     group_banner_fields:
       children:
         - group_banner_image
         - group_banner_content
       parent_name: group_pre
-      weight: 21
+      weight: 25
       format_type: tab
       format_settings:
         label: 'Banner Fields'
@@ -73,7 +60,7 @@ third_party_settings:
         - field_banner_link
         - field_banner_link_target
       parent_name: group_banner_fields
-      weight: 20
+      weight: 25
       format_type: tab
       format_settings:
         id: ''
@@ -87,7 +74,7 @@ third_party_settings:
         - field_banner_content
         - field_banner_content_position
       parent_name: group_banner_fields
-      weight: 21
+      weight: 27
       format_type: tab
       format_settings:
         id: ''
@@ -100,7 +87,7 @@ third_party_settings:
       children:
         - body
       parent_name: group_pre
-      weight: 22
+      weight: 24
       format_type: tab
       format_settings:
         id: ''
@@ -109,6 +96,19 @@ third_party_settings:
         description: ''
         required_fields: true
       label: 'Page Content'
+    group_page_states:
+      children:
+        - field_log_in_state
+      parent_name: group_pre
+      weight: 23
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Page States'
 _core:
   default_config_hash: sWCotip3wyA0CvZUxyo-StTDU8TyTAhx5fcfOiHS6s4
 id: node.page.default
@@ -118,7 +118,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 23
+    weight: 25
     region: content
     settings:
       rows: 9
@@ -133,7 +133,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_banner_content:
-    weight: 22
+    weight: 26
     settings:
       rows: 5
       placeholder: ''
@@ -142,13 +142,13 @@ content:
     type: text_textarea
     region: content
   field_banner_content_position:
-    weight: 23
+    weight: 27
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_banner_link:
-    weight: 24
+    weight: 30
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -157,14 +157,14 @@ content:
     type: link_default
     region: content
   field_banner_link_target:
-    weight: 25
+    weight: 31
     settings: {  }
     third_party_settings:
       conditional_fields: {  }
     type: options_select
     region: content
   field_image:
-    weight: 23
+    weight: 29
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -179,7 +179,7 @@ content:
     type: options_buttons
     region: content
   field_meta_tags:
-    weight: 121
+    weight: 16
     settings: {  }
     third_party_settings: {  }
     type: metatag_firehose

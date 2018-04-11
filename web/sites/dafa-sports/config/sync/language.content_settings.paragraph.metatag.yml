@@ -1,4 +1,4 @@
-uuid: b2a50fb2-bc4d-4a58-9091-d5e36e0a0fd1
+uuid: 9acbaa05-3c7a-43c6-89d9-78948daddc03
 langcode: en
 status: true
 dependencies:
@@ -8,9 +8,9 @@ dependencies:
     - content_translation
 third_party_settings:
   content_translation:
-    enabled: false
+    enabled: true
 id: paragraph.metatag
 target_entity_type_id: paragraph
 target_bundle: metatag
 default_langcode: site_default
-language_alterable: false
+language_alterable: true
