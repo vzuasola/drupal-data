@@ -17,4 +17,3 @@ $settings['primary_site_prefix'] = 'dafa-sportsbook';
  * The front end prefix that CKEditor will append for all products
  */
 $settings['ck_editor_inline_image_prefix'] = '/en/dafa-sportsbook';
-$settings['install_profile'] = 'config_installer';
