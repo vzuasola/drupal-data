@@ -1,0 +1,11 @@
+uuid: b311a39e-c14b-4997-a7a0-411a8d039e30
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: EeBAqX1s64XjBuYodhFh7zIkuq3BqIdxag2W-8XFob0
+name: 'Domain Groups'
+vid: domain_groups
+description: 'Allows to add domain groups'
+hierarchy: 0
+weight: 0
