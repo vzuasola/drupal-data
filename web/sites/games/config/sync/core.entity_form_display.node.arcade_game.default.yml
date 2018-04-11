@@ -9,7 +9,6 @@ dependencies:
     - field.field.node.arcade_game.field_arc_game_ribbon
     - field.field.node.arcade_game.field_arc_game_thumbnail_image
     - field.field.node.arcade_game.field_arc_game_title
-    - field.field.node.arcade_game.field_arc_game_type
     - field.field.node.arcade_game.field_arc_meta_tags
     - image.style.thumbnail
     - node.type.arcade_game
@@ -91,12 +90,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textarea
-    region: content
-  field_arc_game_type:
-    weight: 11
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
     region: content
   field_arc_meta_tags:
     weight: 11

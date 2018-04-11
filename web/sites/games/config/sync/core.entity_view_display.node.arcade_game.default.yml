@@ -9,13 +9,11 @@ dependencies:
     - field.field.node.arcade_game.field_arc_game_ribbon
     - field.field.node.arcade_game.field_arc_game_thumbnail_image
     - field.field.node.arcade_game.field_arc_game_title
-    - field.field.node.arcade_game.field_arc_game_type
     - field.field.node.arcade_game.field_arc_meta_tags
     - node.type.arcade_game
   module:
     - image
     - metatag
-    - options
     - text
     - user
 id: node.arcade_game.default
@@ -69,13 +67,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: basic_string
-    region: content
-  field_arc_game_type:
-    weight: 106
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
     region: content
   field_arc_meta_tags:
     weight: 108
