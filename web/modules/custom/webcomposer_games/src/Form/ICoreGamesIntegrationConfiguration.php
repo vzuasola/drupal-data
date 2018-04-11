@@ -2,32 +2,17 @@
 
 namespace Drupal\webcomposer_games\Form;
 
-use Drupal\webcomposer_config_schema\Form\FormBase;
+use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * ICore Games Integration Configuration
- *
- * @WebcomposerConfigPlugin(
- *   id = "webcomposer_games",
- *   route = {
- *     "title" = "ICore Games Integration Configuration",
- *     "path" = "/admin/config/webcomposer/games/icore",
- *   },
- *   menu = {
- *     "title" = "ICore Games Integration Configuration",
- *     "description" = "Provides configuration for icore games integration",
- *     "parent" = "webcomposer_games.list",
- *     "weight" = 30
- *   },
- * )
+ * ICore Games configuration class
  */
+class ICoreGamesIntegrationConfiguration extends ConfigFormBase {
 
-class ICoreGamesIntegrationConfiguration extends FormBase {
-
-    /**
-     * ICore Game Providers definitions
-     */
+  /**
+   * ICore Game Providers definitions
+   */
     const ICORE_GAME_PROVIDERS = [
         'fish_hunter' => 'Fish Hunter',
         'kiron_virtual_sports' => 'Virtual Sports',
@@ -35,42 +20,49 @@ class ICoreGamesIntegrationConfiguration extends FormBase {
         'voidbridge' => 'Voidbridge',
         'gold_deluxe' => 'Gold Deluxe',
         'video_racing' => 'Video Racing',
-        'sa_gaming' => 'SA Gaming',
+        'sa_gaming' => 'SA Gaming'
     ];
-
-    /**
-     * @inheritdoc
-     */
-    protected function getEditableConfigNames() {
-        return ['webcomposer_config.icore_games_integration'];
-    }
 
   /**
    * @inheritdoc
    */
-  public function form(array $form, FormStateInterface $form_state) {
+  public function getFormId() {
+    return 'icore_games_integration_form';
+  }
+
+  /**
+   * @inheritdoc
+   */
+  protected function getEditableConfigNames() {
+    return ['webcomposer_config.icore_games_integration'];
+  }
+
+  /**
+   * @inheritdoc
+   */
+  public function buildForm(array $form, FormStateInterface $form_state) {
     $config = $this->config('webcomposer_config.icore_games_integration');
 
     $form['advanced'] = [
       '#type' => 'vertical_tabs',
-      '#title' => $this->t('ICore Games Integration'),
+      '#title' => t('ICore Games Integration'),
     ];
 
     foreach (self::ICORE_GAME_PROVIDERS as $key => $value) {
       $form[$key] = [
         '#type' => 'details',
-        '#title' => $this->t($value),
+        '#title' => t($value),
         '#group' => 'advanced',
       ];
       $form[$key]["{$key}_currency"] = [
         '#type' => 'textarea',
-        '#title' => $this->t('Supported Currencies'),
+        '#title' => t('Supported Currencies'),
         '#description' => $this->t("Currency mapping for {$value}."),
         '#default_value' => $config->get("{$key}_currency")
       ];
       $form[$key]["{$key}_language_mapping"] = [
         '#type' => 'textarea',
-        '#title' => $this->t('Language Mapping'),
+        '#title' => t('Language Mapping'),
         '#description' => $this->t("Language mapping for {$value}."),
         '#default_value' => $config->get("{$key}_language_mapping")
       ];
@@ -78,13 +70,13 @@ class ICoreGamesIntegrationConfiguration extends FormBase {
 
     $form['message'] = [
       '#type' => 'details',
-      '#title' => $this->t('Unsupported Currency Message'),
+      '#title' => t('Unsupported Currency Message'),
       '#group' => 'advanced',
     ];
 
     $form['message']['unsupported_currencies_title'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('Not supported currency title'),
+      '#title' => t('Not supported currency title'),
       '#description' => $this->t('Not allowed message title for currency.'),
       '#default_value' => $config->get('unsupported_currencies_title')
     ];
@@ -99,21 +91,21 @@ class ICoreGamesIntegrationConfiguration extends FormBase {
 
     $form['message']['unsupported_currencies_button'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('Unsupported Currency button'),
+      '#title' => t('Unsupported Currency button'),
       '#description' => $this->t('Defines the Unsupported Currency LightBox Ok button'),
       '#default_value' => $config->get('unsupported_currencies_button')
     ];
 
     $form['message']['game_provider_mapping'] = [
       '#type' => 'textarea',
-      '#title' => $this->t('Game Provider Mapping for Unsupported Currency'),
+      '#title' => t('Game Provider Mapping for Unsupported Currency'),
       '#description' => $this->t('Game provider mapping. Pattern should be {game_provider_key}|{game provider name}'),
       '#default_value' => $config->get('game_provider_mapping')
     ];
 
     $form['message']['fallback_error_title'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('Fallback Error Title'),
+      '#title' => t('Fallback Error Title'),
       '#description' => $this->t('Fallback error Title.'),
       '#default_value' => $config->get('fallback_error_title')
     ];
@@ -128,14 +120,14 @@ class ICoreGamesIntegrationConfiguration extends FormBase {
 
     $form['message']['fallback_error_button'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('Fallback error button'),
+      '#title' => t('Fallback error button'),
       '#description' => $this->t('Fallback Error LightBox Ok button'),
       '#default_value' => $config->get('fallback_error_button')
     ];
 
     $form['safari_notif'] = [
       '#type' => 'details',
-      '#title' => $this->t('Safari Notification Message'),
+      '#title' => t('Safari Notification Message'),
       '#group' => 'advanced',
     ];
 
@@ -147,6 +139,41 @@ class ICoreGamesIntegrationConfiguration extends FormBase {
       '#format' => $config_safari['format'],
     ];
 
-    return $form;
+    return parent::buildForm($form, $form_state);
+  }
+
+  /**
+   * Implements a form submit handler.
+   *
+   * @param array $form
+   *   The render array of the currently built form.
+   * @param FormStateInterface $form_state
+   *   Object describing the current state of the form.
+   */
+  public function submitForm(array &$form, FormStateInterface $form_state) {
+    $providers = [];
+    foreach (self::ICORE_GAME_PROVIDERS as $key => $value) {
+      $providers[] = "{$key}_currency";
+      $providers[] = "{$key}_language_mapping";
+    }
+
+    $keys = [
+      'unsupported_currencies_title',
+      'unsupported_currencies_message',
+      'unsupported_currencies_button',
+      'game_provider_mapping',
+      'fallback_error_title',
+      'fallback_error_message',
+      'fallback_error_button',
+      'safari_notif_message',
+    ];
+
+    $result = array_merge($providers, $keys);
+
+    foreach ($result as $key) {
+      $this->config('webcomposer_config.icore_games_integration')->set($key, $form_state->getValue($key))->save();
+    }
+
+    parent::submitForm($form, $form_state);
   }
 }
