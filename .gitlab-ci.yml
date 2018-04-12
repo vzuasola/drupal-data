@@ -81,7 +81,7 @@ dev-mobile-stack:
   environment:
     name: development
   script:
-    - python -u automation/run.py --stage deploy-development --env DEPLOY_DEVELOPMENT=$DEPLOY_DEVELOPMENT_MOBILE
+    - DEPLOY_DEVELOPMENT=$DEPLOY_DEVELOPMENT_MOBILE python -u automation/run.py --stage deploy-development 
   when: manual
   dependencies:
     - create package
