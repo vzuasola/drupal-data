@@ -10,8 +10,6 @@ $sites['demo.drupal.dev'] = 'demo';
 $sites['demo.drupal.local'] = 'demo';
 
 // Entry page Instances
-$sites['entry.drupal.dev'] = 'entrypage';
-$sites['entry.drupal.local'] = 'entrypage';
 $sites['entrypage.drupal.local'] = 'entrypage';
 $sites['entrypage.drupal.dev'] = 'entrypage';
 
