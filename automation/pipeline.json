@@ -569,7 +569,7 @@
                     "python",
                     "/app/automation/lib/run_towercli.py",
                     "--job-template",
-                    "$DEPLOY_DEVELOPMENT_JOB",
+                    "$DEPLOY_DEVELOPMENT",
                     "--extra-vars",
                     "version: $VERSION.$CI_PIPELINE_ID",
                     "--extra-vars",

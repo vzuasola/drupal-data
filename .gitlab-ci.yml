@@ -63,8 +63,6 @@ create package:
     - devrunner
 
 dev:
-  variables:
-    DEPLOY_DEVELOPMENT_JOB: $DEPLOY_DEVELOPMENT
   stage: deploy-dev
   environment:
     name: development
@@ -79,13 +77,11 @@ dev:
     expire_in: 1 month
 
 dev-mobile-stack:
-  variables:
-    DEPLOY_DEVELOPMENT_JOB: $DEPLOY_DEVELOPMENT_MOBILE
   stage: deploy-dev
   environment:
     name: development
   script:
-    - python -u automation/run.py --stage deploy-development
+    - python -u automation/run.py --stage deploy-development --env DEPLOY_DEVELOPMENT=$DEPLOY_DEVELOPMENT_MOBILE
   when: manual
   dependencies:
     - create package
