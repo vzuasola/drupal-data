@@ -1,5 +1,5 @@
-fish_hunter_currency: ''
-fish_hunter_language_mapping: ''
+fish_hunter_currency: RMB
+fish_hunter_language_mapping: "en|en-US\r\nzh-hans|zh-CN\r\nzh-hant|zh-TW\r\nth|th\r\nko|ko-KR\r\nvi|vn\r\nid|id\r\nhi|hi"
 kiron_virtual_sports_currency: ''
 kiron_virtual_sports_language_mapping: ''
 skywind_currency: "RMB\r\nCNY\r\nMYR\r\nTHB\r\nKRW\r\nIDR\r\nVND\r\nUSD\r\nEUR\r\nGBP"
