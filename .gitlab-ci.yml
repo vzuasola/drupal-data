@@ -63,6 +63,8 @@ create package:
     - devrunner
 
 dev:
+  variables:
+    DEPLOY_DEVELOPMENT_JOB: $DEPLOY_DEVELOPMENT
   stage: deploy-dev
   environment:
     name: development
@@ -78,7 +80,7 @@ dev:
 
 dev-mobile-stack:
   variables:
-    DEPLOY_DEVELOPMENT: $DEPLOY_DEVELOPMENT_MOBILE
+    DEPLOY_DEVELOPMENT_JOB: $DEPLOY_DEVELOPMENT_MOBILE
   stage: deploy-dev
   environment:
     name: development
