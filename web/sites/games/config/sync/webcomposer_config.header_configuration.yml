@@ -31,3 +31,9 @@ product_balance_id: '5'
 excluded_balance_mapping: '7'
 currency_balance_mapping: 7|RMB
 cashier_link: 'My Profile'
+logo_title: HOME
+password_mask_toggle: 1
+caps_lock_toggle: 1
+capslock_notification: 'Caps Lock is On'
+balance_label_override: 现场荷官、老虎机、虚拟运动和大发彩票
+balance_mapping: '5|Live Dealer, Games, & Virtuals'
