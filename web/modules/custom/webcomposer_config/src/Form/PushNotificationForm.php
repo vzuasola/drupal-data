@@ -187,25 +187,39 @@ class PushNotificationForm extends FormBase {
     }
 
     // Dismiss Notifications.
-    $form['dismiss_notifications_settings']['dismiss_notifications'] = [
-      '#type' => 'textarea',
-      '#title' => $this->t('Dismiss Notifications'),
-      '#default_value' => $this->get('dismiss_notifications'),
-      '#description' => $this->t('Enter the list of text to be translated. Enter one text per line.'),
+    $form['dismiss_notifications_settings']['dismiss_button_label'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Dismiss Button'),
+      '#default_value' => $this->get('dismiss_button_label'),
+      '#description' => $this->t('Dismiss button or link text.'),
+      '#translatable' => TRUE,
     ];
 
-    $texts = array_map('trim', explode(PHP_EOL, $this->get('dismiss_notifications')));
+    $dismiss = $this->get('dismiss_content');
 
-    foreach ($texts as $text) {
-      $text_key = strtolower($text);
+    $form['dismiss_notifications_settings']['dismiss_content'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('Dismiss Message'),
+      '#default_value' => $dismiss['value'],
+      '#format' => $dismiss['format'],
+      '#translatable' => TRUE,
+    ];
 
-      $form['dismiss_notifications_settings']['text_' . $text_key] = [
-        '#type' => 'textarea',
-        '#title' => $text,
-        '#default_value' => $this->get('text_' . $text_key, ''),
-        '#description' => 'Format: ICORE LANGUAGE|TRANSLATION',
-      ];
-    }
+    $form['dismiss_notifications_settings']['dismiss_yes'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Yes'),
+      '#default_value' => $this->get('dismiss_yes'),
+      '#description' => $this->t('Yes button label.'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['dismiss_notifications_settings']['dismiss_no'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('No'),
+      '#default_value' => $this->get('dismiss_no'),
+      '#description' => $this->t('No button label.'),
+      '#translatable' => TRUE,
+    ];
 
     $form['expiry_error_message_settings']['expiry_error_message'] = [
       '#type' => 'textarea',
@@ -244,7 +258,10 @@ class PushNotificationForm extends FormBase {
       'expiry_delay_count',
       'exclude_pages',
       'translated_texts',
-      'dismiss_notifications',
+      'dismiss_button_label',
+      'dismiss_content',
+      'dismiss_yes',
+      'dismiss_no',
       'expiry_error_message',
       'date_format',
       'date_offset',
@@ -256,12 +273,6 @@ class PushNotificationForm extends FormBase {
     ];
 
     $texts = array_map('trim', explode(PHP_EOL, $this->get('translated_texts')));
-
-    foreach ($texts as $text) {
-      $keys[] = 'text_' . strtolower($text);
-    }
-
-    $texts = array_map('trim', explode(PHP_EOL, $config->get('dismiss_notifications')));
 
     foreach ($texts as $text) {
       $keys[] = 'text_' . strtolower($text);
