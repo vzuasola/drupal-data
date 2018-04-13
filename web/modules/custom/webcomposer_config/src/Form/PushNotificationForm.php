@@ -47,7 +47,13 @@ class PushNotificationForm extends FormBase {
 
     $form['translated_texts_settings'] = [
       '#type' => 'details',
-      '#title' => $this->t('Translated Texts'),
+      '#title' => $this->t('Translated Contents'),
+      '#group' => 'pushnx_settings_tab',
+    ];
+
+    $form['dismiss_notifications_settings'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Dismiss Notifications'),
       '#group' => 'pushnx_settings_tab',
     ];
 
@@ -162,7 +168,7 @@ class PushNotificationForm extends FormBase {
     // Translate Texts.
     $form['translated_texts_settings']['translated_texts'] = [
       '#type' => 'textarea',
-      '#title' => $this->t('Translated Texts'),
+      '#title' => $this->t('Translated Contents'),
       '#default_value' => $this->get('translated_texts'),
       '#description' => $this->t('Enter the list of text to be translated. Enter one text per line.'),
     ];
@@ -173,6 +179,27 @@ class PushNotificationForm extends FormBase {
       $text_key = strtolower($text);
 
       $form['translated_texts_settings']['text_' . $text_key] = [
+        '#type' => 'textarea',
+        '#title' => $text,
+        '#default_value' => $this->get('text_' . $text_key, ''),
+        '#description' => 'Format: ICORE LANGUAGE|TRANSLATION',
+      ];
+    }
+
+    // Dismiss Notifications.
+    $form['dismiss_notifications_settings']['dismiss_notifications'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Dismiss Notifications'),
+      '#default_value' => $this->get('dismiss_notifications'),
+      '#description' => $this->t('Enter the list of text to be translated. Enter one text per line.'),
+    ];
+
+    $texts = array_map('trim', explode(PHP_EOL, $this->get('dismiss_notifications')));
+
+    foreach ($texts as $text) {
+      $text_key = strtolower($text);
+
+      $form['dismiss_notifications_settings']['text_' . $text_key] = [
         '#type' => 'textarea',
         '#title' => $text,
         '#default_value' => $this->get('text_' . $text_key, ''),
@@ -217,6 +244,7 @@ class PushNotificationForm extends FormBase {
       'expiry_delay_count',
       'exclude_pages',
       'translated_texts',
+      'dismiss_notifications',
       'expiry_error_message',
       'date_format',
       'date_offset',
@@ -228,6 +256,12 @@ class PushNotificationForm extends FormBase {
     ];
 
     $texts = array_map('trim', explode(PHP_EOL, $this->get('translated_texts')));
+
+    foreach ($texts as $text) {
+      $keys[] = 'text_' . strtolower($text);
+    }
+
+    $texts = array_map('trim', explode(PHP_EOL, $config->get('dismiss_notifications')));
 
     foreach ($texts as $text) {
       $keys[] = 'text_' . strtolower($text);
