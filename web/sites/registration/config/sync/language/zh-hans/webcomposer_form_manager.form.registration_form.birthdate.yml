@@ -1,6 +1,6 @@
 field_settings:
   label: 出生日期
-  placeholder: YYYY/DD/MM
+  placeholder: 年/月/日
   date-format: YYYY/DD/MM
   annotation: ''
 field_validations:

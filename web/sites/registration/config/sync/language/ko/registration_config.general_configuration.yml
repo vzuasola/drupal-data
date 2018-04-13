@@ -1,10 +1,10 @@
 country_restriction_message: '[product] 은/는 해당 지역에서 사용할 수 없습니다'
 unauthenticated_error_message: '회원님의 계정이 로그아웃되어 다파벳에서 회원님을 인증할 수 없습니다. 회원님의 계정에 로그인하십시오.'
 success_title: '가입 성공'
-home_title: '온라인 베팅 - 다파벳에서 스포츠 베팅, 온라인 카지노 및 포커를 플레이하세요.'
+home_title: '오늘 다파벳과 베팅을 시작하세요! 지금 가입하세요!'
 generic_error_message: '계정 등록에 실패했습니다. 도움이 필요하시면  <a href="mailto:krsupport@dafabet.com">고객지원팀</a>에 문의하십시오. (i-1000)'
-portal_id_to_product_name_mapping: "3|OW 스포츠|sports\r\n10|OW 스포츠|sports\r\n28|OW 스포츠|sports\r\n47|OW 스포츠|sports\r\n22|다파 스포츠|sports-df\r\n26|다파 스포츠|sports-df\r\n29|다파 스포츠|sports-df\r\n48|다파 스포츠|sports-df\r\n4|카지노|casino\r\n11|카지노|casino\r\n16|카지노|casino\r\n18|카지노|casino\r\n30|카지노|casino\r\n49|카지노|casino\r\n23|카지노|casino\r\n19|카지노 골드|casino-gold\r\n20|카지노 골드|casino-gold\r\n21|카지노 골드|casino-gold\r\n35|카지노 골드|casino-gold\r\n54|카지노 골드|casino-gold\r\n6|라이브 딜러|live-dealer\r\n15|라이브 딜러|live-dealer\r\n33|라이브 딜러|live-dealer\r\n52|라이브 딜러|live-dealer\r\n5|포커|poker\r\n12|포커|poker\r\n17|포커|poker\r\n31|포커|poker\r\n50|포커|poker\r\n24|피쉬 헌터|fish-hunter\r\n25|피쉬 헌터|fish-hunter\r\n34|피쉬 헌터|fish-hunter\r\n53|피쉬 헌터|fish-hunter\r\n8|게임|games\r\n14|게임|games\r\n32|게임|games\r\n51|게임|games\r\n56|가상 스포츠|virtuals\r\n57|가상 스포츠|virtuals\r\n58|가상 스포츠|virtuals\r\n59|가상 스포츠|virtuals\r\n55|키노|keno\r\n45|키노|keno"
-step_one_text: 가입
-step_two_text: 입금
+portal_id_to_product_name_mapping: "3|OW 스포츠|sports\r\n10|OW 스포츠|sports\r\n28|OW 스포츠|sports\r\n47|OW 스포츠|sports\r\n22|다파 스포츠|sports-df\r\n26|다파 스포츠|sports-df\r\n29|다파 스포츠|sports-df\r\n48|다파 스포츠|sports-df\r\n4|카지노|casino\r\n11|카지노|casino\r\n16|카지노|casino\r\n18|카지노|casino\r\n30|카지노|casino\r\n49|카지노|casino\r\n23|카지노|casino\r\n19|카지노 골드|casino-gold\r\n20|카지노 골드|casino-gold\r\n21|카지노 골드|casino-gold\r\n35|카지노 골드|casino-gold\r\n54|카지노 골드|casino-gold\r\n6|라이브 딜러|live-dealer\r\n15|라이브 딜러|live-dealer\r\n33|라이브 딜러|live-dealer\r\n52|라이브 딜러|live-dealer\r\n5|포커|poker\r\n12|포커|poker\r\n17|포커|poker\r\n31|포커|poker\r\n50|포커|poker\r\n24|피쉬 헌터|fish-hunter\r\n25|피쉬 헌터|fish-hunter\r\n34|피쉬 헌터|fish-hunter\r\n53|피쉬 헌터|fish-hunter\r\n8|게임|games\r\n14|게임|games\r\n32|게임|games\r\n51|게임|games\r\n56|가상 스포츠|virtuals\r\n57|가상 스포츠|virtuals\r\n58|가상 스포츠|virtuals\r\n59|가상 스포츠|virtuals\r\n55|키노|keno\r\n45|키노|keno\r\n66|베팅 익스체인지|exchange\r\n67|베팅 익스체인지|exchange\r\n68|베팅 익스체인지|exchange\r\n69|베팅 익스체인지|exchange"
 livechat_header: '도움이 필요하세요?'
 livechat_text: '어떻게 도와드릴까요?'
+step_one_text: 가입
+step_two_text: 입금

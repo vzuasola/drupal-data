@@ -6,13 +6,20 @@ critical_announcement_content:
 news_announcement_content:
   value: ''
   format: basic_html
+capslock_notification: 大寫鎖定已開啟
 join_now_text: 立即加入
+join_now_link: '/{domain:entry}/{domain:lang_token}/cant-login[query:({credentials.params}&{tracking})]'
 login_issue_text: 無法登錄？
+login_issue_link: '/{domain:entry}/{domain:lang_token}/cant-login[query:({credentials.params}&{tracking})]'
+product_balance_label: 'Account Balance'
+total_balance_label: 總余額
+balance_error_text: 'Error Retrieving.'
 profile_icon_hover_text: 我的賬戶
 cashier_icon_hover_text: 出納櫃臺
 product_menu_new_tag: 新
 welcome_text: '歡迎 {username}'
+profile_link: '/{domain:myaccount_domain}/{lang}/my-profile[query:(ticket={auth.token}&{tracking}&width=820&height=700)]'
 profile_logout_text: 登出
-balance_label_mapping: "4|沙巴體育\r\n6|大發體育\r\n1|娛樂場金典版\r\n2|娛樂場黃金版\r\n5|现场荷官，老虎机，& 虚拟运动\r\n8|OPUS現場荷官\r\n9|快樂彩\r\n3|撲克\r\n7|捕魚王"
-balance_error_text_product: 無
-total_balance_label: 總余額
+balance_label_mapping: "4|沙巴體育\r\n6|大發體育\r\n10|交易所\r\n1|娛樂場金典版\r\n2|娛樂場黃金版\r\n5|现场荷官，老虎机，& 虚拟运动\r\n8|OPUS現場荷官\r\n9|快樂彩\r\n3|撲克\r\n7|捕魚王"
+balance_error_text_product: '{domain:cashier_domain}/{domain:lang_token}/payment-options[query:(ticket={auth.token}&{tracking}&width=820&height=700)]'
+cashier_link: '{domain:cashier_domain}/{domain:lang_token}/payment-options[query:(ticket={auth.token}&{tracking}&width=820&height=700)]'

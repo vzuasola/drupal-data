@@ -1,5 +1,5 @@
 field_settings:
-  markup: 'Tôi đã đủ 18 tuổi. Tôi đã đọc và chấp thuận các <strong><u><a href="/{lang}/terms-of-use{tracking.token}" target="_blank">Điều khoản & Điều kiện</a></u></strong>.'
+  markup: "Tôi đã đủ 18 tuổi. Tôi đã đọc và chấp thuận các <strong><u>\r\n<a href=\"/{lang}/terms-of-use[query:({tracking})]\" target=\"_blank\" class=\"visible-desktop\">Điều khoản & Điều kiện</a>\r\n<a href=\"{domain:mobile}/{lang}/terms-use[query:({credentials.params}&{tracking})]\" target=\"_blank\" class=\"visible-mobile\">Điều khoản & Điều kiện</a>\r\n<a href=\"{domain:mobile}/{lang}/terms-use[query:({credentials.params}&{tracking})]\" target=\"_blank\" class=\"visible-tablet\">Điều khoản & Điều kiện</a>\r\n<a href=\"{domain:mobile}/{lang}/terms-use[query:(clientflag=1&{tracking.token})]\" target=\"_blank\" class=\"visible-app\">Điều khoản & Điều kiện</a>\r\n</u></strong>."
 field_validations:
   required:
     error_message: 'Field should be required'
@@ -27,3 +27,7 @@ field_validations:
     error_message: 'Email not available'
   invalid_words:
     error_message: 'Invalid/not allowed characters'
+  valid_languages:
+    error_message: 'This field only accepts specific characters.'
+  valid_date:
+    error_message: 'Date is invalid'

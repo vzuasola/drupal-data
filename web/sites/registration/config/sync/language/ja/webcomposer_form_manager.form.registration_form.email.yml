@@ -26,8 +26,10 @@ field_validations:
   username_availability:
     error_message: 'Username not available'
   email_availability:
-    error_message: 'Eメールアドレスは既に使用されています。ユーザー名、パスワードを取得するには<a href="/jp/cant-login" target="popup" onclick="window.open(''/jp/cant-login'',''popup'',''width=820,height=810,scrollbars=no,resizable=no''); return false;">ここを</a>クリックして下さい。'
+    error_message: "<span class=\"visible-desktop\">Eメールアドレスは既に使用されています。ユーザー名、パスワードを取得するには<a href=\"/jp/cant-login\" target=\"popup\" onclick=\"window.open('/jp/cant-login','popup','width=820,height=810,scrollbars=no,resizable=no'); return false;\" class=\"visible-desktop\">ここを</a>クリックして下さい。</span>\r\n<span class=\"visible-tablet\">Eメールアドレスは既に使用されています。ユーザー名、パスワードを取得するには<a href=\"/jp/cant-login\" target=\"_blank\" class=\"visible-tablet\">ここを</a>クリックして下さい。</span>\r\n<span class=\"visible-mobile\">Eメールアドレスは既に使用されています。ユーザー名、パスワードを取得するには<a href=\"/jp/cant-login\" target=\"_blank\" class=\"visible-mobile\">ここを</a>クリックして下さい。</span>\r\n<span class=\"visible-app\">Eメールアドレスは既に使用されています。ユーザー名、パスワードを取得するには<a href=\"https://m.dafawin.com/jp/cant-login?clientflag=1\" target=\"_blank\" class=\"visible-app\">ここを</a>クリックして下さい。</span>"
   invalid_words:
     error_message: 'Invalid/not allowed characters'
   valid_languages:
     error_message: 'This field only accepts specific characters.'
+  valid_date:
+    error_message: 'Date is invalid'

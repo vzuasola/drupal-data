@@ -52,7 +52,7 @@ field_validations:
     error_message: 'Username not available'
   email_availability:
     enable: 1
-    error_message: 'Email is already in use. Click <a href="/en/cant-login" target="window">here</a> to retrieve username/password.'
+    error_message: "<span class=\"visible-desktop\">Email is already in use. Click <a href=\"/en/cant-login\" target=\"popup\" onclick=\"window.open('/en/cant-login','popup','width=820,height=810,scrollbars=no,resizable=no'); return false;\">here</a> to retrieve username/password.</span>\r\n<span class=\"visible-tablet\">Email is already in use. Click<a href=\"/en/cant-login\" target=\"_blank\">here</a> to retrieve username/password.</span>\r\n<span class=\"visible-mobile\">Email is already in use. Click<a href=\"/en/cant-login\" target=\"_blank\">here</a> to retrieve username/password.</span>\r\n<span class=\"visible-app\">Email is already in use. Click<a href=\"https://m.dafawin.com/en/cant-login?clientflag=1\" target=\"_blank\">here</a> to retrieve username/password.</span>\r\n"
   invalid_words:
     enable: 0
     error_message: 'Invalid/not allowed characters'
@@ -63,3 +63,6 @@ field_validations:
     error_message: 'This field only accepts specific characters.'
     parameters:
       regex_value: ''
+  valid_date:
+    enable: 0
+    error_message: 'Date is invalid'

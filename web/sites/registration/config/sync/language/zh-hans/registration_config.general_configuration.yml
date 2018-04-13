@@ -1,10 +1,10 @@
 country_restriction_message: '[product] 不适用于您所在的地区'
 unauthenticated_error_message: 您的账户已退出，我们无法验证您的身份。请重新登录账户。
 success_title: 注册成功
-home_title: '畅享在线投注体验-包括体育投注，在线娱乐场&扑克投注游戏，尽在大发'
+home_title: 投注就在dafabet!马上注册！
 generic_error_message: '账户注册失败。如需帮助，请联系我们的 <a href="mailto:cnsupport@dafabet.com">客服</a>。 (i-1000)'
-portal_id_to_product_name_mapping: "3|沙巴体育|sports\r\n10|沙巴体育|sports\r\n28|沙巴体育|sports\r\n47|沙巴体育|sports\r\n22|大发体育|sports-df\r\n26|大发体育|sports-df\r\n29|大发体育|sports-df\r\n48|大发体育|sports-df\r\n4|娱乐场|casino\r\n11|娱乐场|casino\r\n16|娱乐场|casino\r\n18|娱乐场|casino\r\n30|娱乐场|casino\r\n49|娱乐场|casino\r\n23|娱乐场|casino\r\n19|娱乐场黄金版|casino-gold\r\n20|娱乐场黄金版|casino-gold\r\n21|娱乐场黄金版|casino-gold\r\n35|娱乐场黄金版|casino-gold\r\n54|娱乐场黄金版|casino-gold\r\n6|现场荷官|live-dealer\r\n15|现场荷官|live-dealer\r\n33|现场荷官|live-dealer\r\n52|现场荷官|live-dealer\r\n5|扑克|poker\r\n12|扑克|poker\r\n17|扑克|poker\r\n31|扑克|poker\r\n50|扑克|poker\r\n24|扑鱼王|fish-hunter\r\n25|扑鱼王|fish-hunter\r\n34|扑鱼王|fish-hunter\r\n53|扑鱼王|fish-hunter\r\n8|老虎机|games\r\n14|老虎机|games\r\n32|老虎机|games\r\n51|老虎机|games\r\n56|虚拟运动|virtuals\r\n57|虚拟运动|virtuals\r\n58|虚拟运动|virtuals\r\n59|虚拟运动|virtuals\r\n55|快乐彩|keno\r\n45|快乐彩|keno"
-step_one_text: 注册
-step_two_text: 存款
+portal_id_to_product_name_mapping: "3|沙巴体育|sports\r\n10|沙巴体育|sports\r\n28|沙巴体育|sports\r\n47|沙巴体育|sports\r\n22|大发体育|sports-df\r\n26|大发体育|sports-df\r\n29|大发体育|sports-df\r\n48|大发体育|sports-df\r\n4|娱乐场|casino\r\n11|娱乐场|casino\r\n16|娱乐场|casino\r\n18|娱乐场|casino\r\n30|娱乐场|casino\r\n49|娱乐场|casino\r\n23|娱乐场|casino\r\n19|娱乐场黄金版|casino-gold\r\n20|娱乐场黄金版|casino-gold\r\n21|娱乐场黄金版|casino-gold\r\n35|娱乐场黄金版|casino-gold\r\n54|娱乐场黄金版|casino-gold\r\n6|现场荷官|live-dealer\r\n15|现场荷官|live-dealer\r\n33|现场荷官|live-dealer\r\n52|现场荷官|live-dealer\r\n5|扑克|poker\r\n12|扑克|poker\r\n17|扑克|poker\r\n31|扑克|poker\r\n50|扑克|poker\r\n24|扑鱼王|fish-hunter\r\n25|扑鱼王|fish-hunter\r\n34|扑鱼王|fish-hunter\r\n53|扑鱼王|fish-hunter\r\n8|老虎机|games\r\n14|老虎机|games\r\n32|老虎机|games\r\n51|老虎机|games\r\n56|虚拟运动|virtuals\r\n57|虚拟运动|virtuals\r\n58|虚拟运动|virtuals\r\n59|虚拟运动|virtuals\r\n55|快乐彩|keno\r\n45|快乐彩|keno\r\n66|交易所|exchange\r\n67|交易所|exchange\r\n68|交易所|exchange\r\n69|交易所|exchange"
 livechat_header: 需要帮助？
 livechat_text: 请问有什么可以帮到您？
+step_one_text: 注册
+step_two_text: 存款

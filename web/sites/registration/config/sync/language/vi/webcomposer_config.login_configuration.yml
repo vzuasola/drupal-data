@@ -1,10 +1,11 @@
 autologout_box_content:
+  format: basic_html
   value: "<p>Lượt truy cập của Quý Khách sẽ kết thúc trong vòng {seconds}. Quý Khách có muốn tiếp tục truy cập?</p>\r\n"
-  format: basic_html
 notification_content:
-  value: "<p>Lượt truy cập của Quý Khách đã kết thúc vì không có hoạt động.</p>\r\n"
   format: basic_html
+  value: "<p>Lượt truy cập của Quý Khách đã kết thúc vì không có hoạt động.</p>\r\n"
 lightbox_blurb: 'Bạn chưa phải thành viên Dafabet?'
+mobile_login_button_label: 'ĐĂNG NHẬP/ĐĂNG KÝ'
 username_placeholder: 'Tên đăng nhập'
 password_placeholder: 'Mật khẩu'
 login_bottom_label: 'ĐĂNG NHẬP'
@@ -20,4 +21,3 @@ affirmative_button_text: 'CÓ '
 negative_button_text: KHÔNG
 notification_title: 'THÔNG BÁO'
 notification_window_title: 'Phiên truy cập kết thúc'
-mobile_login_button_label: 'ĐĂNG NHẬP/ĐĂNG KÝ'
