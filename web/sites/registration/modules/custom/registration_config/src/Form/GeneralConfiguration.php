@@ -214,45 +214,69 @@ class GeneralConfiguration extends ConfigFormBase {
       '#required' => TRUE,
     ];
 
-    $form['avaya_settings'] = [
+    $form['proactive_settings'] = [
       '#type' => 'details',
-      '#title' => $this->t('Avaya Proactive Livechat'),
+      '#title' => $this->t('Proactive Livechat'),
       '#collapsible' => TRUE,
       '#group' => 'general_settings_tab',
     ];
-    $form['avaya_settings']['enable_avaya_proactive'] = [
+    $form['proactive_settings']['enable_avaya_proactive'] = [
       '#type' => 'number',
       '#title' => $this->t('Enable Proactive Livechat'),
       '#description' => $this->t('Input 1 to enable avaya proactive, 0 to disable'),
       '#default_value' => $config->get('enable_avaya_proactive'),
     ];
-    $form['avaya_settings']['livechat_timeout'] = [
+    $form['proactive_settings']['livechat_timeout'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Timeout Proactive livechat'),
       '#description' => $this->t('Amount of time the live chat will show (in seconds)'),
       '#default_value' => $config->get('livechat_timeout'),
       '#required' => TRUE,
     ];
-    $form['avaya_settings']['livechat_header'] = [
+    $form['proactive_settings']['livechat_header'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Live Chat Header Text'),
       '#description' => $this->t('Text that will be displayed at the top of the chatbox'),
       '#default_value' => $config->get('livechat_header'),
       '#required' => TRUE,
     ];
-    $form['avaya_settings']['livechat_text'] = [
+    $form['proactive_settings']['livechat_text'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Live Chat Text'),
       '#description' => $this->t('Text that will be displayed inside the chatbox'),
       '#default_value' => $config->get('livechat_text'),
       '#required' => TRUE,
     ];
-    $form['avaya_settings']['livechat_kr_link'] = [
+    $form['proactive_settings']['livechat_kr_link'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Live Person KR URL'),
       '#description' => $this->t('Live person link for KR Language (this will always override the current avaya KR URL)'),
       '#default_value' => $config->get('livechat_kr_link'),
       '#required' => TRUE,
+    ];
+    $form['proactive_settings']['enable_proactive_mobile'] = [
+      '#type' => 'number',
+      '#title' => $this->t('Enable Proactive Mobile'),
+      '#description' => $this->t('Input 1 to enable proactiveo Social App on Mobile, 0 to disable'),
+      '#default_value' => $config->get('enable_proactive_mobile'),
+    ];
+    $form['proactive_settings']['proactive_mobile_class'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Proactive Mobile Class Icon'),
+      '#description' => $this->t('Proactive mobile class icon to be used that will be shown to player'),
+      '#default_value' => $config->get('proactive_mobile_class'),
+    ];
+    $form['proactive_settings']['proactive_mobile_url'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Proactive Mobile URL'),
+      '#description' => $this->t('Proactive mobile URL where the player will be redirected'),
+      '#default_value' => $config->get('proactive_mobile_url'),
+    ];
+    $form['proactive_settings']['proactive_mobile_url_ios'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Proactive Mobile URL iOS'),
+      '#description' => $this->t('Proactive mobile URL for iOS (if applicable) where the player will be redirected'),
+      '#default_value' => $config->get('proactive_mobile_url_ios'),
     ];
 
     $form['cashier_settings'] = [
@@ -342,7 +366,11 @@ class GeneralConfiguration extends ConfigFormBase {
       'deposit_now_text',
       'enable_rs_logging',
       'native_app_title',
-      'mobile_native_app_command'
+      'mobile_native_app_command',
+      'enable_proactive_mobile',
+      'proactive_mobile_class',
+      'proactive_mobile_url',
+      'proactive_mobile_url_ios'
     ];
 
     foreach ($keys as $key) {
