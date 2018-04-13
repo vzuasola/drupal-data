@@ -57,4 +57,16 @@ registration_config.general_configuration:
     native_app_title:
       type: label
       label: 'Native App Page Title'
+    enable_proactive_mobile:
+      type: label
+      label: 'Enable Proactive Mobile'
+    proactive_mobile_class:
+      type: label
+      label: 'Proactive Mobile Class Icon'
+    proactive_mobile_url:
+      type: label
+      label: 'Proactive Mobile URL'
+    proactive_mobile_url_ios:
+      type: label
+      label: 'Proactive Mobile URL iOS'
   langcode: 'en'
