@@ -145,6 +145,36 @@ qa1:
       - automation/deployed/*.jsonl
     expire_in: 1 month
 
+qa1-mobile-stack:
+  stage: deploy-test
+  environment:
+    name: testing
+  script:
+    - DEPLOY_QA=$DEPLOY_QA_MOBILE python -u automation/run.py --stage deploy-testing
+  when: manual
+  dependencies:
+    - dev
+    - create package
+  artifacts:
+    paths:
+      - automation/deployed/*.jsonl
+    expire_in: 1 month
+
+qa1-japan-stack:
+  stage: deploy-test
+  environment:
+    name: testing
+  script:
+    - DEPLOY_QA=$DEPLOY_QA_JAPAN python -u automation/run.py --stage deploy-testing
+  when: manual
+  dependencies:
+    - dev
+    - create package
+  artifacts:
+    paths:
+      - automation/deployed/*.jsonl
+    expire_in: 1 month
+
 .selenium tests qa1:
   stage: integration-tests-test
   script:
