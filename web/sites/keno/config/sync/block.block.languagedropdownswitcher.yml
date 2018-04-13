@@ -45,6 +45,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: "/admin/config/promotions\r\n/admin/config/promotions-for-products\r\n/admin/config/webcomposer/domains/*\r\n/admin/config/webcomposer/product-kebab-tabs"
+    pages: "/admin/config/promotions\r\n/admin/config/promotions-for-products\r\n/admin/config/webcomposer/domains/*\r\n/admin/config/webcomposer/product-kebab-tabs\r\n/admin/structure/webcomposer_partner/partner_entity\r\n/admin/structure/webcomposer_partner/partner_entity/manage\r\n/admin/structure/webcomposer_slider_v2_entity"
     negate: false
     context_mapping: {  }
