@@ -7,6 +7,12 @@ dependencies:
   module:
     - image
     - webcomposer_slider_v2
+third_party_settings:
+  content_translation:
+    translation_sync:
+      alt: alt
+      title: title
+      file: '0'
 _core:
   default_config_hash: 3Y-JKKm5B_1b2hQF77f7Cwgu5uuyxr5Py4Coc_brMZg
 id: webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_post_banner_image

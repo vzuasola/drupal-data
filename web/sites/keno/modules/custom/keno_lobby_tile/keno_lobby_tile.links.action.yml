@@ -1,5 +1,0 @@
-entity.keno_lobby_tile_entity.add_form:
-  route_name: entity.keno_lobby_tile_entity.add_form
-  title: 'Add Keno lobby tile entity'
-  appears_on:
-    - entity.keno_lobby_tile_entity.collection

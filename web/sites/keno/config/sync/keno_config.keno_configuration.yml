@@ -5,4 +5,9 @@ trust_element_content:
 lobby_tiles_alignment: center
 keno_background:
   - '1690'
-keno_background_image_url: 'http://prd-keno.elysium-dfbt.com/sites/keno/files/bg_1.jpg'
+keno_background_image_url: 'http://stg-keno.elysium-dfbt.com/sites/keno/files/bg_1.jpg'
+basic_page_background_image_url: 'http://stg-keno.elysium-dfbt.com/sites/keno/files/Inner-page-bag.png'
+basic_page_background:
+  - '1807'
+basic_page_title: ''
+balance_mapping_keno: "9|快乐彩\r\n5|现场荷官、老虎机、虚拟运动和大发彩票"

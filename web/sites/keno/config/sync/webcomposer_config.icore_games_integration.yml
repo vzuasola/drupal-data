@@ -1,0 +1,28 @@
+fish_hunter_currency: ''
+fish_hunter_language_mapping: ''
+kiron_virtual_sports_currency: ''
+kiron_virtual_sports_language_mapping: ''
+skywind_currency: ''
+skywind_language_mapping: ''
+voidbridge_currency: ''
+voidbridge_language_mapping: ''
+gold_deluxe_currency: ''
+gold_deluxe_language_mapping: ''
+video_racing_currency: RMB
+video_racing_language_mapping: sc|zh-CN
+sa_gaming_currency: ''
+sa_gaming_language_mapping: ''
+unsupported_currencies_title: ''
+unsupported_currencies_message:
+  value: ''
+  format: basic_html
+unsupported_currencies_button: ''
+game_provider_mapping: ''
+fallback_error_title: ''
+fallback_error_message:
+  value: ''
+  format: basic_html
+fallback_error_button: ''
+safari_notif_message:
+  value: ''
+  format: basic_html
