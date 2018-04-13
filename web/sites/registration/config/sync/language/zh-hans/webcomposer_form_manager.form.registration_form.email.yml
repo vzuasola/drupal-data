@@ -26,8 +26,10 @@ field_validations:
   username_availability:
     error_message: 'Username not available'
   email_availability:
-    error_message: '该邮箱已被使用。点击<a href="/sc/cant-login" target="popup" onclick="window.open(''/sc/cant-login'',''popup'',''width=820,height=810,scrollbars=no,resizable=no''); return false;">此处</a>找回用户名/密码。'
+    error_message: "<span class=\"visible-desktop\">该邮箱已被使用。点击<a href=\"/sc/cant-login\" target=\"popup\" onclick=\"window.open('/sc/cant-login','popup','width=820,height=810,scrollbars=no,resizable=no'); return false;\">此处</a>找回用户名/密码。</span>\r\n<span class=\"visible-tablet\"><a href=\"/sc/cant-login\" target=\"_blank\">此处</a>找回用户名/密码。</span>\r\n<span class=\"visible-mobile\"><a href=\"/sc/cant-login\" target=\"_blank\">此处</a>找回用户名/密码。</span>\r\n<span class=\"visible-app\"><a href=\"https://m.dafawin.com/sc/cant-login?clientflag=1\" target=\"_blank\">此处</a>找回用户名/密码。</span>"
   invalid_words:
     error_message: 'Invalid/not allowed characters'
   valid_languages:
     error_message: 'This field only accepts specific characters.'
+  valid_date:
+    error_message: 'Date is invalid'

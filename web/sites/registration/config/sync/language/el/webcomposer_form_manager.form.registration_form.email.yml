@@ -26,8 +26,10 @@ field_validations:
   username_availability:
     error_message: 'Username not available'
   email_availability:
-    error_message: "Το Email αυτό χρησιμοποιείται ήδη. Πατήστε <a href=\"/gr/cant-login\" target=\"popup\" onclick=\"window.open('/gr/cant-login','popup','width=820,height=810,scrollbars=no,resizable=no'); return false;\">εδώ</a> για ανάκτηση ονόματος χρήστη/κωδικού πρόσβασης.\r\n"
+    error_message: "<span class=\"visible-desktop\">Το Email αυτό χρησιμοποιείται ήδη. Πατήστε <a href=\"/gr/cant-login\" target=\"popup\" onclick=\"window.open('/gr/cant-login','popup','width=820,height=810,scrollbars=no,resizable=no'); return false;\" class=\"visible-desktop\">εδώ</a> για ανάκτηση ονόματος χρήστη/κωδικού πρόσβασης.</span>\r\n<span class=\"visible-tablet\">Το Email αυτό χρησιμοποιείται ήδη. Πατήστε <a href=\"/gr/cant-login\" target=\"_blank\" class=\"visible-tablet\">εδώ</a> για ανάκτηση ονόματος χρήστη/κωδικού πρόσβασης.</span>\r\n<span class=\"visible-mobile\">Το Email αυτό χρησιμοποιείται ήδη. Πατήστε <a href=\"/gr/cant-login\" target=\"_blank\" class=\"visible-mobile\">εδώ</a> για ανάκτηση ονόματος χρήστη/κωδικού πρόσβασης.</span>\r\n<span class=\"visible-app\">Το Email αυτό χρησιμοποιείται ήδη. Πατήστε <a href=\"https://m.dafawin.com/gr/cant-login?clientflag=1\" target=\"_blank\" class=\"visible-app\">εδώ</a> για ανάκτηση ονόματος χρήστη/κωδικού πρόσβασης.</span>\r\n"
   invalid_words:
     error_message: 'Invalid/not allowed characters'
   valid_languages:
     error_message: 'This field only accepts specific characters.'
+  valid_date:
+    error_message: 'Date is invalid'

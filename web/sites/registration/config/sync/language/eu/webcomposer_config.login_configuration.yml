@@ -1,1 +1,7 @@
+login_bottom_label: LOGIN
+error_message_account_suspended: 'Your account has been locked. Please contact customer support.'
+error_message_account_locked: 'Your account has been locked. Please contact customer support.'
+autologout_box_title: REMINDER
+notification_title: 'Session Timeout'
 notification_window_title: 'Session has timed out'
+mobile_login_url: 'https://m.dafabet.com/login'

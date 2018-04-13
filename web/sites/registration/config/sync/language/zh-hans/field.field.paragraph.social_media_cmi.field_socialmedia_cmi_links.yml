@@ -1,3 +1,3 @@
 default_value:
   -
-    value: '/{domain:cashier_domain}/{domain:cashier_lang}/?ticket={auth.token}&product=dafabet{tracking.token}'
+    value: '/{domain:myaccount_domain}/{lang}/my-profile[query:(ticket={auth.token}&{tracking}&width=820&height=700)]'

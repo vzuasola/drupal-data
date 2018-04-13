@@ -1,10 +1,11 @@
 autologout_box_content:
+  format: basic_html
   value: "<p>Twoja sesja wygaśnie {seconds}. Czy chcesz kontynuować swoją sesję?</p>\r\n"
-  format: basic_html
 notification_content:
-  value: "<p>Z powodu braku aktywności Twoja sesja wygasła.</p>\r\n"
   format: basic_html
+  value: "<p>Z powodu braku aktywności Twoja sesja wygasła.</p>\r\n"
 lightbox_blurb: 'Nie jesteś jeszcze członkiem Dafabet?'
+mobile_login_button_label: 'LOGOWANIE/ REJESTRACJA'
 password_placeholder: Hasło
 login_bottom_label: LOGOWANIE
 error_message_blank_username: 'Twój username jest wymagany.'
@@ -19,4 +20,3 @@ affirmative_button_text: TAK
 negative_button_text: NIE
 notification_title: POWIADOMIENIA
 notification_window_title: 'Session has timed out'
-mobile_login_button_label: 'ZALOGUJ SIĘ/REJESTRACJA'

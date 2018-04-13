@@ -1,19 +1,20 @@
-uuid: f1e31adc-252b-4eb6-af77-958ac1eb1d18
+uuid: 395efeee-2e87-4a5e-959f-665d7fc0adc0
 langcode: en
 status: true
 dependencies:
   module:
     - rest
     - serialization
-    - webcomposer_metatags
+    - webcomposer_rest_extra
+    - webcomposer_seo
 _core:
-  default_config_hash: z4oVAIQTPuet8CLEhp7ePMl7keu9JI_CScUY6flwGXA
-id: metatags
-label: metatags
+  default_config_hash: a820XyAXHRd6nSyjHxI1L3724WqL2FgRo6zqXCnfFBk
+id: webcomposer_seo_metatag_entity_api
+label: 'Webcomposer SEO Metatag Entity API'
 module: views
 description: ''
 tag: ''
-base_table: metatag_entity_field_data
+base_table: webcomposer_meta_entity_field_data
 base_field: id
 core: 8.x
 display:
@@ -76,7 +77,7 @@ display:
           default_field_elements: true
       fields:
         name:
-          table: metatag_entity_field_data
+          table: webcomposer_meta_entity_field_data
           field: name
           id: name
           entity_type: null
@@ -142,7 +143,7 @@ display:
       filters:
         langcode:
           id: langcode
-          table: metatag_entity_field_data
+          table: webcomposer_meta_entity_field_data
           field: langcode
           relationship: none
           group_type: group
@@ -177,7 +178,7 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          entity_type: metatag_entity
+          entity_type: webcomposer_meta_entity
           entity_field: langcode
           plugin_id: language
       sorts: {  }
@@ -202,17 +203,18 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: api/meta_tags
+      path: api/metatag_entity
       pager:
         type: none
         options:
-          offset: null
+          offset: 0
       style:
-        type: serializer
+        type: node_list_serializer
         options:
-          grouping: {  }
           uses_fields: false
-          formats: {  }
+          formats:
+            json: json
+            xml: xml
       row:
         type: data_entity
         options: {  }
