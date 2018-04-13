@@ -1,0 +1,8 @@
+uuid: a6a08910-8e28-4d70-bced-df63b571c6a5
+langcode: en
+status: true
+dependencies: {  }
+id: mobile-footer-button
+label: 'Mobile Footer Button'
+description: ''
+locked: false

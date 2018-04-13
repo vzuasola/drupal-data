@@ -1,0 +1,51 @@
+uuid: 3683aaf7-e5ca-418f-8ac4-11d44db9d408
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.webcomposer_meta_entity.webcomposer_meta_entity.field_meta
+    - field.field.webcomposer_meta_entity.webcomposer_meta_entity.field_per_page_visibility
+  module:
+    - paragraphs
+    - webcomposer_seo
+_core:
+  default_config_hash: xrWtTF0AZn0X8G4zuJ1Xh3MoqALHsLh43JJvRrLmIOk
+id: webcomposer_meta_entity.webcomposer_meta_entity.default
+targetEntityType: webcomposer_meta_entity
+bundle: webcomposer_meta_entity
+mode: default
+content:
+  field_meta:
+    type: entity_reference_paragraphs
+    weight: 1
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_per_page_visibility:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
+hidden:
+  langcode: true
+  user_id: true
