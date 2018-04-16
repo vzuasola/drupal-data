@@ -272,11 +272,25 @@ class GeneralConfiguration extends ConfigFormBase {
       '#description' => $this->t('Proactive mobile URL where the player will be redirected'),
       '#default_value' => $config->get('proactive_mobile_url'),
     ];
+    $form['proactive_settings']['proactive_mobile_url_playstore'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Proactive Mobile URL Play Store'),
+      '#description' => $this->t('Proactive mobile URL playstore where the player will be redirected' .
+        'if the app is not installed'),
+      '#default_value' => $config->get('proactive_mobile_url_playstore'),
+    ];
     $form['proactive_settings']['proactive_mobile_url_ios'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Proactive Mobile URL iOS'),
       '#description' => $this->t('Proactive mobile URL for iOS (if applicable) where the player will be redirected'),
       '#default_value' => $config->get('proactive_mobile_url_ios'),
+    ];
+    $form['proactive_settings']['proactive_mobile_url_ios_appstore'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Proactive Mobile URL iOS App Store'),
+      '#description' => $this->t('Proactive mobile URL for iOS (if applicable) appstore where the player will be '.
+        'redirected if the app is not installed'),
+      '#default_value' => $config->get('proactive_mobile_url_ios_appstore'),
     ];
 
     $form['cashier_settings'] = [
@@ -370,7 +384,9 @@ class GeneralConfiguration extends ConfigFormBase {
       'enable_proactive_mobile',
       'proactive_mobile_class',
       'proactive_mobile_url',
-      'proactive_mobile_url_ios'
+      'proactive_mobile_url_ios',
+      'proactive_mobile_url_playstore',
+      'proactive_mobile_url_ios_appstore'
     ];
 
     foreach ($keys as $key) {
