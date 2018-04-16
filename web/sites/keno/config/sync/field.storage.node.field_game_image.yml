@@ -1,4 +1,4 @@
-uuid: a9a5d68e-731e-4ff8-839e-31be4f3fde66
+uuid: 0d7d0d4e-fae8-4595-9f51-ed29effd56a3
 langcode: en
 status: true
 dependencies:
@@ -11,9 +11,8 @@ field_name: field_game_image
 entity_type: node
 type: image
 settings:
-  uri_scheme: public
   default_image:
-    uuid: ''
+    uuid: null
     alt: ''
     title: ''
     width: null
@@ -21,6 +20,7 @@ settings:
   target_type: file
   display_field: false
   display_default: false
+  uri_scheme: public
 module: image
 locked: false
 cardinality: 1

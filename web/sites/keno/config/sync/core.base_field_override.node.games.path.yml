@@ -1,0 +1,20 @@
+uuid: 05c84e14-b1cc-4d2e-bbab-1a8c4636f29f
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.games
+  module:
+    - path
+id: node.games.path
+field_name: path
+entity_type: node
+bundle: games
+label: 'URL alias'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path
