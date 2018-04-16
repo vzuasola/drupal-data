@@ -5,6 +5,25 @@ namespace Drupal\games_page_loading\Form;
 use Drupal\webcomposer_config_schema\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 
+/**
+ * Games Page Loading form plugin
+ *
+ * @WebcomposerConfigPlugin(
+ *   id = "games_page_loading",
+ *   route = {
+ *     "title" = "Games Page Loading Configuration",
+ *     "path" = "/admin/games/page-loading-config",
+ *   },
+ *   menu = {
+ *     "title" = "Games Page Loading Custom Configuration",
+ *     "description" = "Configure the Games Page Loading Messages",
+ *     "parent" = "games_config.admin_settings",
+ *     "weight" = 11
+ *   },
+ * )
+ */
+
+
 class GamesPageLoadingForm extends FormBase {
   /**
    * {@inheritdoc}
@@ -60,22 +79,6 @@ class GamesPageLoadingForm extends FormBase {
     ];
 
     return $form;
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  public function submit(array &$form, FormStateInterface $form_state) {
-    $keys = [
-      'loading_message_content',
-      'loading_error_message',
-    ];
-  foreach ($keys as $key) {
-    $data[$key] = $form_state->getValue($key);
-  }
-
-  $this->save($data);
-
   }
 
 }
