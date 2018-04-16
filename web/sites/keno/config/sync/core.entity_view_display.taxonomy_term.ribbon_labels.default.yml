@@ -1,4 +1,4 @@
-uuid: 8a214b7f-0ffe-4ca6-b0be-8c6b46918b4b
+uuid: 7dcafde3-dd41-4e6a-b0ab-9d242855f843
 langcode: en
 status: true
 dependencies:
@@ -15,43 +15,29 @@ bundle: ribbon_labels
 mode: default
 content:
   description:
-    type: text_textarea
-    weight: 1
-    region: content
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-  field_ribbon_background_color:
-    weight: 4
-    settings: {  }
-    third_party_settings: {  }
-    type: color_field_widget_html5
-    region: content
-  field_text_color:
-    weight: 5
-    settings: {  }
-    third_party_settings: {  }
-    type: color_field_widget_html5
-    region: content
-  langcode:
-    type: language_select
-    weight: 2
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  name:
-    type: string_textfield
+    label: hidden
+    type: text_default
     weight: 0
     region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  translation:
-    weight: 3
-    region: content
     settings: {  }
     third_party_settings: {  }
+  field_ribbon_background_color:
+    weight: 1
+    label: above
+    settings:
+      format: hex
+      opacity: '1'
+    third_party_settings: {  }
+    type: color_field_formatter_text
+    region: content
+  field_text_color:
+    weight: 2
+    label: above
+    settings:
+      format: hex
+      opacity: '1'
+    third_party_settings: {  }
+    type: color_field_formatter_text
+    region: content
 hidden:
-  path: true
+  langcode: true
