@@ -1,0 +1,27 @@
+username_placeholder: Username
+password_placeholder: Password
+login_bottom_label: LOGIN
+error_message_blank_username: 'Username is required.'
+error_message_blank_password: 'Password is required.'
+error_message_blank_passname: 'Username and Password is required.'
+error_message_invalid_passname: 'Sorry, invalid username and/or password. Please try again.'
+error_message_service_not_available: 'Service not available.'
+error_message_account_suspended: 'Account locked. Please contact our customer support.'
+error_message_account_locked: 'Account locked. Please contact our customer support.'
+session_maxtime: '60'
+autologout_box_title: REMINDER
+autologout_box_content:
+  value: "<p>Your session will expire in {seconds} seconds. Do you want to continue your session ?</p>\r\n"
+  format: basic_html
+affirmative_button_text: 'Yes'
+negative_button_text: 'No'
+notification_title: 'Session Timeout'
+notification_content:
+  value: "<p>Your session has timed out due to inactivity.</p>\r\n"
+  format: basic_html
+lightbox_blurb: 'Not yet a Dafabet member?'
+_core:
+  default_config_hash: LDw8PW9wswSVGgpFjaaHESQeB7QVJEtmV2mGoR4ANVY
+notification_window_title: 'Session Timeout'
+mobile_login_url: 'https://m.dafabet.com/'
+tablet_login_button_label: ''

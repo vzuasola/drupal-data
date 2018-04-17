@@ -1,5 +1,7 @@
 join_now_text: สมัครสมาชิก
+join_now_link: '/{domain:entry}/{lang}/join/live-dealer[query:({tracking})]'
 login_issue_text: 'ลืมรหัสผ่าน?'
+login_issue_link: '/{domain:entry}/{lang}/cant-login?title=cantLogin{tracking.token}'
 balance_error_text: เกิดความผิดพลาดในการเรียกดู
 profile_icon_hover_text: บัญชีของฉัน
 cashier_icon_hover_text: แคชเชียร์

@@ -1,0 +1,21 @@
+uuid: c7dc187b-7298-47ae-80a4-f9e02c6a055e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.right_side_block_entity.field_image_link_target
+  module:
+    - options
+    - webcomposer_right_side_block
+id: right_side_block_entity.right_side_block_entity.field_image_link_target
+field_name: field_image_link_target
+entity_type: right_side_block_entity
+bundle: right_side_block_entity
+label: 'Image Link Target'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

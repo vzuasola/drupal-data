@@ -1,5 +1,7 @@
 join_now_text: '가입 하기'
+join_now_link: '/{domain:entry}/{lang}/join/live-dealer[query:({tracking})]'
 login_issue_text: '로그인이 안 되시나요?'
+login_issue_link: '/{domain:entry}/{lang}/cant-login?title=cantLogin{tracking.token}'
 balance_error_text: '에러가 발생했습니다.'
 profile_icon_hover_text: '내 프로필'
 cashier_icon_hover_text: 은행

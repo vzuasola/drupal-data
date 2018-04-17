@@ -1,0 +1,9 @@
+uuid: c296fa64-d2bb-4106-b0f2-799da06e9a35
+langcode: en
+status: true
+dependencies: {  }
+name: 'Game Provider'
+vid: game_provider
+description: 'List of Game Provider'
+hierarchy: 0
+weight: 0

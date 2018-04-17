@@ -1,0 +1,21 @@
+uuid: cf6f1c60-bc9a-4824-b79c-1a43933aea3d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.right_side_block_entity.field_pre_blurb_content
+  module:
+    - text
+    - webcomposer_right_side_block
+id: right_side_block_entity.right_side_block_entity.field_pre_blurb_content
+field_name: field_pre_blurb_content
+entity_type: right_side_block_entity
+bundle: right_side_block_entity
+label: 'Pre Blurb Content'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

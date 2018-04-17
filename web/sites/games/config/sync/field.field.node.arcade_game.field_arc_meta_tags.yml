@@ -1,0 +1,23 @@
+uuid: 3b9fc746-713e-4b50-8439-578443204422
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_arc_meta_tags
+    - node.type.arcade_game
+  module:
+    - metatag
+id: node.arcade_game.field_arc_meta_tags
+field_name: field_arc_meta_tags
+entity_type: node
+bundle: arcade_game
+label: 'Meta Tags'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 'a:0:{}'
+default_value_callback: ''
+settings: {  }
+field_type: metatag

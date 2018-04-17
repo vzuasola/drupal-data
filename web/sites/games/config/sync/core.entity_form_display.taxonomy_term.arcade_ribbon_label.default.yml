@@ -1,0 +1,49 @@
+uuid: 0ed2da4e-a20b-4231-95de-e6e84997654e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.arcade_ribbon_label.field_arc_ribbon_bg_color
+    - field.field.taxonomy_term.arcade_ribbon_label.field_arc_text_color
+    - taxonomy.vocabulary.arcade_ribbon_label
+  module:
+    - color_field
+id: taxonomy_term.arcade_ribbon_label.default
+targetEntityType: taxonomy_term
+bundle: arcade_ribbon_label
+mode: default
+content:
+  field_arc_ribbon_bg_color:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: color_field_widget_html5
+    region: content
+  field_arc_text_color:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: color_field_widget_html5
+    region: content
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true

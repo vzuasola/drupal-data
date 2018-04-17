@@ -30,6 +30,16 @@ content:
     type: string
     region: content
   field_disable:
+    weight: 3
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_show_to_kebab:
     weight: 2
     label: above
     settings:
@@ -40,5 +50,4 @@ content:
     type: boolean
     region: content
 hidden:
-  field_show_to_kebab: true
   langcode: true

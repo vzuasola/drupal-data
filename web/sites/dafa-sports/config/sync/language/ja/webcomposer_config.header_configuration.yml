@@ -1,0 +1,20 @@
+lobby_page_title: 'Dafabet: アジア最高峰のオンラインスポーツベッティングサイトです'
+critical_announcement_content:
+  value: "<p>If there are any concerns, please email us: <a href=\"ensupport@dafabet.com\">ENSupport</a>. Thank you!\r\n</p>\r\n"
+  format: basic_html
+join_now_text: 登録する
+join_now_link: '/{domain:entry}/{domain:lang_token}/cant-login{tracking.token}'
+login_issue_text: ログインができない場合は？
+login_issue_link: '/{domain:entry}/{domain:lang_token}/cant-login{tracking.token}'
+product_balance_label: OWスポーツ残高
+total_balance_label: 総残高
+balance_error_text: エラーが検出されました。
+profile_icon_hover_text: お客様情報
+cashier_icon_hover_text: バンキング
+product_menu_new_tag: 新
+welcome_text: 'ようこそ {username} 様'
+profile_link: '/{domain:myaccount_domain}/{lang}/my-profile?title=headerPopup&width=820&height=700&token={legacy.credentials}'
+profile_logout_text: ログアウト
+balance_label_mapping: "4|OWスポーツ\r\n6|Dafaスポーツ\r\n1|カジノ クラシック\r\n2|カジノ ゴールド\r\n5|ライブディーラー、ゲーム＆ヴァーチャル\r\n8|Opus ライブディーラー\r\n9|ケノ\r\n3|ポーカー\r\n7|フィッシュハンター"
+balance_error_text_product: '{domain:cashier_domain}/{lang}?ticket={auth.token}&product=ow-sports&title=headerPopup&width=820&height=700'
+cashier_link: '{domain:cashier_domain}/{lang}?ticket={auth.token}&product=ow-sports&title=headerPopup&width=820&height=700'

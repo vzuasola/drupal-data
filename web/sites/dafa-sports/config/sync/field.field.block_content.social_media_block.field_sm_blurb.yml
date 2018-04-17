@@ -1,0 +1,21 @@
+uuid: 0794480b-4f8d-43af-8dd3-56d76235ef6a
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.social_media_block
+    - field.storage.block_content.field_sm_blurb
+_core:
+  default_config_hash: fiMLuiY2jQAEPXa64v-8wm32LHR-dmvR5nVrCedEANE
+id: block_content.social_media_block.field_sm_blurb
+field_name: field_sm_blurb
+entity_type: block_content
+bundle: social_media_block
+label: Blurb
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

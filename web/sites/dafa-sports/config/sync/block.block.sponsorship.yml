@@ -1,0 +1,25 @@
+uuid: d543b722-41a2-4a27-84fe-4750f7772cc6
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:sponsorship_block:f9838f0e-41dd-4955-a364-a5ec8cd71e49'
+  module:
+    - block_content
+  theme:
+    - bartik
+id: sponsorship
+theme: bartik
+region: footer_first
+weight: 0
+provider: null
+plugin: 'block_content:f9838f0e-41dd-4955-a364-a5ec8cd71e49'
+settings:
+  id: 'block_content:f9838f0e-41dd-4955-a364-a5ec8cd71e49'
+  label: 'Sponsorship Block'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

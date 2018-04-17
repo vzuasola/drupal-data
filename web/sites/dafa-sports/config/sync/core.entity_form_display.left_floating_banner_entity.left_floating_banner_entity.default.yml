@@ -1,0 +1,108 @@
+uuid: 0a6a38ae-a17f-4f60-98d2-5fbaa6f44b85
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.left_floating_banner_entity.left_floating_banner_entity.field_banner_item
+    - field.field.left_floating_banner_entity.left_floating_banner_entity.field_floating_banner_type
+    - field.field.left_floating_banner_entity.left_floating_banner_entity.field_image
+    - field.field.left_floating_banner_entity.left_floating_banner_entity.field_link
+    - field.field.left_floating_banner_entity.left_floating_banner_entity.field_link_target
+    - field.field.left_floating_banner_entity.left_floating_banner_entity.field_link_text
+    - field.field.left_floating_banner_entity.left_floating_banner_entity.field_per_page_config
+    - field.field.left_floating_banner_entity.left_floating_banner_entity.field_title
+    - field.field.left_floating_banner_entity.left_floating_banner_entity.field_title_layout
+    - image.style.thumbnail
+  module:
+    - image
+    - paragraphs
+    - webcomposer_floating_banners
+_core:
+  default_config_hash: gqe-SURSFMW7PX2rDQiLlavv8l3TRTB5fSW1kFoGkMc
+id: left_floating_banner_entity.left_floating_banner_entity.default
+targetEntityType: left_floating_banner_entity
+bundle: left_floating_banner_entity
+mode: default
+content:
+  field_banner_item:
+    type: entity_reference_paragraphs
+    weight: 9
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_floating_banner_type:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_image:
+    weight: 4
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_link:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_link_target:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_link_text:
+    weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_per_page_config:
+    type: string_textarea
+    weight: 8
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_title_layout:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  langcode: true
+  translation: true
+  user_id: true

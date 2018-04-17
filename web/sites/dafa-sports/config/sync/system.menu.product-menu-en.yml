@@ -1,0 +1,8 @@
+uuid: 45069ca7-ba1e-4621-b0ae-bfa6048df5e0
+langcode: en
+status: true
+dependencies: {  }
+id: product-menu-en
+label: 'Product Menu EN'
+description: ''
+locked: false

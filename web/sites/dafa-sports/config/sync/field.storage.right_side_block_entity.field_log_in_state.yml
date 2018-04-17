@@ -1,0 +1,30 @@
+uuid: f32cd64e-6836-4c15-9376-23427bee85c4
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - webcomposer_right_side_block
+id: right_side_block_entity.field_log_in_state
+field_name: field_log_in_state
+entity_type: right_side_block_entity
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '0'
+      label: 'Pre Login'
+    -
+      value: '1'
+      label: 'Post Login'
+    -
+      value: '2'
+      label: Both
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

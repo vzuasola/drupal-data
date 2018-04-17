@@ -1,0 +1,19 @@
+uuid: b3cbe9b4-89e3-41a1-89e3-2cffe671fbef
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_arc_game_code
+    - node.type.arcade_game
+id: node.arcade_game.field_arc_game_code
+field_name: field_arc_game_code
+entity_type: node
+bundle: arcade_game
+label: 'Game Code (refer to iCore game detail)'
+description: "iCore game detail to use per provider:\r\n<ul>\r\n <li>Playtech: GameId or Game name (lower-cased)</li>\r\n <li>Gold Deluxe: External Game ID</li>\r\n <li>Voidbridge: External Game ID</li>\r\n <li>Skywind: GameId or Game name (lower-cased)</li>\r\n</ul>"
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

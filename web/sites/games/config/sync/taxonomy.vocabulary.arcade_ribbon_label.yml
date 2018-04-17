@@ -1,0 +1,9 @@
+uuid: 0204e164-0361-4a3c-90e7-a3429ba89d15
+langcode: en
+status: true
+dependencies: {  }
+name: 'Arcade Ribbon Label'
+vid: arcade_ribbon_label
+description: 'Arcade specific game ribbon'
+hierarchy: 0
+weight: 0

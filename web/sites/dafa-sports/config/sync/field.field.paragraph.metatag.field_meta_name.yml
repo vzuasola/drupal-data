@@ -1,0 +1,21 @@
+uuid: 2bbaecce-2f8d-4cfd-b6d7-36cbc74bd5cf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_meta_name
+    - paragraphs.paragraphs_type.metatag
+_core:
+  default_config_hash: mLMrVHqnD1-oVX0gTx7H2wMPxorLcVukvY2-SrC5TYg
+id: paragraph.metatag.field_meta_name
+field_name: field_meta_name
+entity_type: paragraph
+bundle: metatag
+label: Name
+description: 'The attribute name'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

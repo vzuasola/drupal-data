@@ -1,0 +1,10 @@
+uuid: 7c2342e9-6c66-4e47-919b-3f72cb5e9972
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: KD54CEBcJwaWOEzduvTD8_ssW_qOW6w_CPVpSM3w3L8
+id: sponsorship_block
+label: 'Sponsorship Block'
+revision: 0
+description: '<i>Note: Need to configure at least 1 item<i>'

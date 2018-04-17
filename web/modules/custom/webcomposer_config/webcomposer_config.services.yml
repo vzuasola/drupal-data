@@ -1,0 +1,7 @@
+services:
+  webcomposer_config.notify:
+    class: Drupal\webcomposer_config\EventSubscriber\NotifySubscriber
+    arguments: []
+    tags:
+      - { name: event_subscriber }
+

@@ -1,5 +1,7 @@
 join_now_text: 'THAM GIA NGAY'
+join_now_link: '/{domain:entry}/{lang}/join/live-dealer[query:({tracking})]'
 login_issue_text: 'Quên mật khẩu?'
+login_issue_link: '/{domain:entry}/{lang}/cant-login?title=cantLogin{tracking.token}'
 balance_error_text: 'Đã xảy ra lỗi'
 profile_icon_hover_text: 'Thông Tin Cá Nhân'
 cashier_icon_hover_text: 'Thu Ngân'

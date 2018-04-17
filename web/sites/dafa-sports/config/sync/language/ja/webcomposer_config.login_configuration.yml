@@ -1,0 +1,22 @@
+autologout_box_content:
+  format: basic_html
+  value: "<p>お客様のセッションはあと{seconds}で時間切れとなります。このセッションを継続されますか？</p>\r\n"
+notification_content:
+  format: basic_html
+  value: "<p>長時間ご操作がなかったためセッションは時間切れとなりました。</p>\r\n"
+lightbox_blurb: 'Dafabet へご登録はお済みですか？'
+username_placeholder: Username
+password_placeholder: パスワード
+login_bottom_label: ログイン
+error_message_blank_username: ユーザーネームを入力して下さい。
+error_message_blank_password: パスワードを入力して下さい。
+error_message_blank_passname: 全ての欄をご確認の上、再度お試し下さい。
+error_message_invalid_passname: 申し訳ございません。ユーザーネームまたはパスワードが無効です。再度お試し下さい。
+error_message_service_not_available: 現在サービスがご利用いただけません。
+error_message_account_suspended: 'お客様のアカウントはロックされました。 カスタマーサポートへご連絡ください。'
+error_message_account_locked: 'お客様のアカウントはロックされました。 カスタマーサポートへご連絡ください。'
+autologout_box_title: お知らせ
+affirmative_button_text: はい
+negative_button_text: いいえ
+notification_title: セッションが時間切れです
+notification_window_title: セッションが時間切れです

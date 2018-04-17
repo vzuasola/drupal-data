@@ -1,0 +1,82 @@
+uuid: 49a9c6e0-8ba2-4467-8fad-e9bfd4d2fce6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.arcade_game.body
+    - field.field.node.arcade_game.field_arc_game_code
+    - field.field.node.arcade_game.field_arc_game_provider
+    - field.field.node.arcade_game.field_arc_game_ribbon
+    - field.field.node.arcade_game.field_arc_game_thumbnail_image
+    - field.field.node.arcade_game.field_arc_game_title
+    - field.field.node.arcade_game.field_arc_meta_tags
+    - node.type.arcade_game
+  module:
+    - image
+    - metatag
+    - text
+    - user
+id: node.arcade_game.default
+targetEntityType: node
+bundle: arcade_game
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_arc_game_code:
+    weight: 102
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_arc_game_provider:
+    weight: 103
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_arc_game_ribbon:
+    weight: 107
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_arc_game_thumbnail_image:
+    weight: 104
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_arc_game_title:
+    weight: 105
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_arc_meta_tags:
+    weight: 108
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

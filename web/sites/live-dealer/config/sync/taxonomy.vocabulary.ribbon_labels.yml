@@ -1,0 +1,9 @@
+uuid: 9fd93d13-7a7f-4d9a-939d-12cc4b38fc48
+langcode: en
+status: true
+dependencies: {  }
+name: 'Ribbon labels'
+vid: ribbon_labels
+description: ''
+hierarchy: 0
+weight: 0

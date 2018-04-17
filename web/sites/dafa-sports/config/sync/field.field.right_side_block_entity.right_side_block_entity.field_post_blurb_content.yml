@@ -1,0 +1,21 @@
+uuid: 71b2539d-dbf1-4dd7-ae6c-8e26cc6fe775
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.right_side_block_entity.field_post_blurb_content
+  module:
+    - text
+    - webcomposer_right_side_block
+id: right_side_block_entity.right_side_block_entity.field_post_blurb_content
+field_name: field_post_blurb_content
+entity_type: right_side_block_entity
+bundle: right_side_block_entity
+label: 'Post Blurb Content'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

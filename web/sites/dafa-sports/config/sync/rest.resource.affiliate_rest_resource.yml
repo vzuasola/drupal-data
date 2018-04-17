@@ -1,0 +1,17 @@
+uuid: 487a0d1c-90d5-4e0d-95db-6104f4087a67
+langcode: en
+status: true
+dependencies:
+  module:
+    - serialization
+    - user
+    - webcomposer_affilates
+id: affiliate_rest_resource
+plugin_id: affiliate_rest_resource
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+    supported_auth:
+      - cookie

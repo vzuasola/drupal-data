@@ -1,0 +1,23 @@
+uuid: 082ec3ea-2b3c-4ee7-a6e0-8e781a368cd4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.webcomposer_slider_entity.field_content_position_post
+  module:
+    - options
+    - webcomposer_slider
+id: webcomposer_slider_entity.webcomposer_slider_entity.field_content_position_post
+field_name: field_content_position_post
+entity_type: webcomposer_slider_entity
+bundle: webcomposer_slider_entity
+label: 'Post Login Content Position'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: right
+default_value_callback: ''
+settings: {  }
+field_type: list_string

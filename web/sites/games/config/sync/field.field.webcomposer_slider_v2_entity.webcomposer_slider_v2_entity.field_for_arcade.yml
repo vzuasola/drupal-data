@@ -1,0 +1,24 @@
+uuid: a1bce6c1-bf8e-4b54-96da-bf0e1f99c69b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.webcomposer_slider_v2_entity.field_for_arcade
+  module:
+    - webcomposer_slider_v2
+id: webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_for_arcade
+field_name: field_for_arcade
+entity_type: webcomposer_slider_v2_entity
+bundle: webcomposer_slider_v2_entity
+label: 'For Arcade'
+description: 'If checked, this slider will only be shown in Arcade.'
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

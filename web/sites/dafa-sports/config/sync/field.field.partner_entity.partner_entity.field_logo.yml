@@ -1,0 +1,40 @@
+uuid: 7a19be6a-40ea-4716-9ce2-a0ca2a1c9783
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.partner_entity.field_logo
+  module:
+    - image
+    - webcomposer_partner
+_core:
+  default_config_hash: WFQ_SKSSxcvDka-Tcz5dRsOyZ2mthwsEO2RedA1Rnw8
+id: partner_entity.partner_entity.field_logo
+field_name: field_logo
+entity_type: partner_entity
+bundle: partner_entity
+label: Logo
+description: 'The logo image of this specific partner entry.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: false
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

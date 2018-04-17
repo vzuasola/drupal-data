@@ -1,0 +1,14 @@
+uuid: cae2d609-ae44-4ae0-acea-335df0f59377
+langcode: th
+status: true
+dependencies:
+  module:
+    - webcomposer_language_hierarchy
+third_party_settings:
+  webcomposer_language_hierarchy:
+    webcomposer_fallback_langcode: en
+id: th
+label: ภาษาไทย
+direction: ltr
+weight: -6
+locked: false

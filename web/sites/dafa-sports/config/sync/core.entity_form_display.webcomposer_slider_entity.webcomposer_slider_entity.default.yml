@@ -1,0 +1,217 @@
+uuid: 9314845d-06b0-4227-ac36-94f35f91e5cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_banner_image
+    - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_banner_link
+    - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_banner_link_target
+    - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_blurb
+    - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_content_position
+    - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_content_position_post
+    - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_log_in_state
+    - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_post_blurb
+    - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_publish_date
+    - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_title
+    - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_unpublish_date
+    - image.style.thumbnail
+  module:
+    - datetime
+    - field_group
+    - image
+    - link
+    - text
+    - webcomposer_slider
+third_party_settings:
+  field_group:
+    group_scheduler_settings:
+      children:
+        - field_publish_date
+        - field_unpublish_date
+      parent_name: group_fields
+      weight: 23
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Scheduler Settings'
+    group_banner_settings:
+      children:
+        - group_banner_image
+        - group_blurb_settings
+      parent_name: group_fields
+      weight: 22
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Banner Settings'
+    group_blurb_settings:
+      children:
+        - field_blurb
+        - field_content_position
+        - field_post_blurb
+        - field_content_position_post
+      parent_name: group_banner_settings
+      weight: 22
+      format_type: tab
+      format_settings:
+        label: 'Banner Blurb Settings'
+        formatter: closed
+        description: ''
+        required_fields: true
+        id: ''
+        classes: ''
+      label: 'Banner Blurb Settings'
+    group_fields:
+      children:
+        - group_log_in_state
+        - group_banner_settings
+        - group_scheduler_settings
+      parent_name: ''
+      weight: 7
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: Fields
+    group_log_in_state:
+      children:
+        - field_log_in_state
+      parent_name: group_fields
+      weight: 20
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Log-in State'
+    group_banner_image:
+      children:
+        - field_banner_image
+        - field_banner_link
+        - field_banner_link_target
+      parent_name: group_banner_settings
+      weight: 20
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Banner Image'
+_core:
+  default_config_hash: 4pu6bDg2YHaNO6HDMXOPWM5JrbWMacX7OmVPKgObv7s
+id: webcomposer_slider_entity.webcomposer_slider_entity.default
+targetEntityType: webcomposer_slider_entity
+bundle: webcomposer_slider_entity
+mode: default
+content:
+  field_banner_image:
+    weight: 21
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_banner_link:
+    weight: 22
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_banner_link_target:
+    weight: 23
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_blurb:
+    weight: 5
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_content_position:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_content_position_post:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_log_in_state:
+    weight: 21
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_post_blurb:
+    weight: 7
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_publish_date:
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_unpublish_date:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  user_id: true

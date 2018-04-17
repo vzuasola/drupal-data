@@ -26,7 +26,7 @@ class RobotsForm extends FormBase {
    * {@inheritdoc}
    */
   protected function getEditableConfigNames() {
-    return ['webcomposer_config.curacao'];
+    return ['webcomposer_config.robots_configuration'];
   }
 
   /**

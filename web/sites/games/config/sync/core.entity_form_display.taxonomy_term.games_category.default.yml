@@ -21,6 +21,13 @@ content:
     type: string_textfield
     region: content
   field_disable:
+    weight: 5
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_show_to_kebab:
     weight: 4
     settings:
       display_label: true
@@ -48,5 +55,4 @@ content:
     third_party_settings: {  }
 hidden:
   description: true
-  field_show_to_kebab: true
   path: true
