@@ -37,7 +37,7 @@ class VipForm extends FormBase {
     $form['vip_mapping_configuration'] = [
       '#type' => 'textarea',
       '#title' => $this->t('VIP Configuration'),
-      '#default_value' => isset($this->get('vip_mapping_configuration')) ? $this->get('vip_mapping_configuration') : 'bronze|14',
+      '#default_value' => $this->get('vip_mapping_configuration') ?: 'bronze|14',
       '#description' => $this->t('VIP Level Mapping. e.g."bronze|14,16" where bronze is the key. 14 is the iCore VIP ID.'),
     ];
 
