@@ -25,7 +25,6 @@ class ICoreGamesIntegrationConfiguration extends ConfigFormBase {
         'tgp' => 'TGP',
         'evo_gaming' => 'Evolution Gaming',
         'ebet' => 'eBet',
-
     ];
 
   /**
