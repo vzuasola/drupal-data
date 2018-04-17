@@ -1,0 +1,25 @@
+uuid: 46f4016f-ac0a-441c-9f16-f615da70c052
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_socialmedia_cmi_linktarget
+    - paragraphs.paragraphs_type.social_media_cmi
+  module:
+    - options
+_core:
+  default_config_hash: 6toRYVaZ0MyUIFcpj-TLP_PugNeOvia8A5seojuVO50
+id: paragraph.social_media_cmi.field_socialmedia_cmi_linktarget
+field_name: field_socialmedia_cmi_linktarget
+entity_type: paragraph
+bundle: social_media_cmi
+label: 'Link Target'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: window
+default_value_callback: ''
+settings: {  }
+field_type: list_string
