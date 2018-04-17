@@ -1,0 +1,27 @@
+uuid: 7539b1c5-283f-4220-b71e-5440353af612
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_image_size
+field_name: field_image_size
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: small
+      label: Small
+    -
+      value: large
+      label: Large
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
