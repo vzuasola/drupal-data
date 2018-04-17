@@ -260,6 +260,12 @@ class GeneralConfiguration extends ConfigFormBase {
       '#description' => $this->t('Input 1 to enable proactiveo Social App on Mobile, 0 to disable'),
       '#default_value' => $config->get('enable_proactive_mobile'),
     ];
+    $form['proactive_settings']['proactive_mobile_timeout'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Timeout Proactive Mobile'),
+      '#description' => $this->t('Amount of time the Proactive mobile chat will show (in seconds)'),
+      '#default_value' => $config->get('proactive_mobile_timeout'),
+    ];
     $form['proactive_settings']['proactive_mobile_class'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Proactive Mobile Class Icon'),
@@ -386,7 +392,8 @@ class GeneralConfiguration extends ConfigFormBase {
       'proactive_mobile_url',
       'proactive_mobile_url_ios',
       'proactive_mobile_url_playstore',
-      'proactive_mobile_url_ios_appstore'
+      'proactive_mobile_url_ios_appstore',
+      'proactive_mobile_timeout'
     ];
 
     foreach ($keys as $key) {
