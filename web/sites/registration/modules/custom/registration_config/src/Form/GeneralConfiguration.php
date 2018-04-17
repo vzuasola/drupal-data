@@ -350,6 +350,21 @@ class GeneralConfiguration extends ConfigFormBase {
       '#title' => $this->t('Enable RS logging'),
       '#default_value' => $config->get('enable_rs_logging'),
     ];
+    $form['s2s_tracking'] = [
+      '#type' => 'details',
+      '#title' => $this->t('S2S tracking'),
+      '#collapsible' => TRUE,
+      '#group' => 'general_settings_tab',
+    ];
+    $form['s2s_tracking']['s2s_config'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('S2S Config'),
+      '#description' => $this->t('Config of s2s implementation that will integrate to affiliate ' .
+        'where the first parameter seperated by "|" symbol is the postback URL ' .
+        'and the second parameter is the dynamic value from the query parameter  ' .
+        'that will be passed along the URL'),
+      '#default_value' => $config->get('s2s_config'),
+    ];
 
     return parent::buildForm($form, $form_state);
   }
@@ -393,7 +408,8 @@ class GeneralConfiguration extends ConfigFormBase {
       'proactive_mobile_url_ios',
       'proactive_mobile_url_playstore',
       'proactive_mobile_url_ios_appstore',
-      'proactive_mobile_timeout'
+      'proactive_mobile_timeout',
+      's2s_config'
     ];
 
     foreach ($keys as $key) {
