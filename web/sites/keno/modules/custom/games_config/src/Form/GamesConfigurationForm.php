@@ -2,11 +2,30 @@
 
 namespace Drupal\games_config\Form;
 
-use Drupal\Core\Form\ConfigFormBase;
+use Drupal\webcomposer_config_schema\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\file\Entity\File;
 
-class GamesConfigurationForm extends ConfigFormBase {
+
+/**
+ * Games Page Loading form plugin
+ *
+ * @WebcomposerConfigPlugin(
+ *   id = "games_config_button",
+ *   route = {
+ *     "title" = "Games Configuration",
+ *     "path" = "/admin/config/games/button",
+ *   },
+ *   menu = {
+ *     "title" = "Games Custom Configuration",
+ *     "description" = "Configure the Games Button",
+ *     "parent" = "games_config.list",
+ *     "weight" = 30
+ *   },
+ * )
+ */
+
+
+class GamesConfigurationForm extends FormBase  {
   /**
    * {@inheritdoc}
    */
@@ -24,69 +43,35 @@ class GamesConfigurationForm extends ConfigFormBase {
   /**
    * {@inheritdoc}
    */
-  public function buildForm(array $form, FormStateInterface $form_state) {
-    $config = $this->config('games_config.games_configuration');
+  public function form(array $form, FormStateInterface $form_state) {
 
-    $form['games_configuration_tab'] = [
-      '#type' => 'vertical_tabs',
-      '#title' => t('Settings'),
-    ];
-    $this->gamsThumbnailSection($form, $config);
-
-    return parent::buildForm($form, $form_state);
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  public function submitForm(array &$form, FormStateInterface $form_state) {
-    parent::submitForm($form, $form_state);
-
-    $keys = [
-      'play_text',
-      'game_info_text',
-      'free_play_text'
-    ];
-
-    foreach ($keys as $key) {
-      $this->config('games_config.games_configuration')->set($key, $form_state->getValue($key))->save();
-    }
-  }
-
-  private function gamsThumbnailSection(&$form, $config) {
-    $form['thumbnail_group'] = [
-      '#type' => 'details',
-      '#title' => $this->t('Game Thumbnail Settings'),
-      '#collapsible' => TRUE,
-      '#group' => 'games_configuration_tab',
-    ];
-
-    $form['thumbnail_group']['play_text'] = [
+    $form['play_text'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Play Now Button Text'),
       '#description' => $this->t('The text to display on play button.'),
-      '#default_value' => $config->get('play_text'),
+      '#default_value' => $this->get('play_text'),
       '#required' => TRUE,
       '#translatable' => TRUE,
     ];
 
-    $form['thumbnail_group']['game_info_text'] = [
+    $form['game_info_text'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Game Info Link Text'),
       '#description' => $this->t('The text to display on game info link.'),
-      '#default_value' => $config->get('game_info_text'),
+      '#default_value' => $this->get('game_info_text'),
       '#required' => TRUE,
       '#translatable' => TRUE,
     ];
 
-    $form['thumbnail_group']['free_play_text'] = [
+    $form['free_play_text'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Free Play Text'),
       '#description' => $this->t('The text to display on Free Play Link.'),
-      '#default_value' => $config->get('free_play_text'),
+      '#default_value' => $this->get('free_play_text'),
       '#required' => TRUE,
       '#translatable' => TRUE,
     ];
-
+     return $form;
   }
+
 }
