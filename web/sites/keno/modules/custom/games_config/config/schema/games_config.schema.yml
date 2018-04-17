@@ -1,0 +1,16 @@
+games_config.games_configuration:
+  type: config_object
+  label: 'Games Custom Configurations'
+  mapping:
+    play_text:
+      type: label
+      label: 'Play Button Text'
+      translatable: true
+    game_info_text:
+      type: label
+      label: 'Game Info Link Text'
+      translatable: true
+    free_play_text:
+      type: label
+      label: 'Free Play Text'
+      translatable: true
