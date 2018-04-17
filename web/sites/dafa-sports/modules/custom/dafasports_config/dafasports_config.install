@@ -6,6 +6,7 @@
 function dafasports_config_uninstall() {
   $keys = [
     'dafasports_config.dafasports_configuration',
+    'rest.resource.dafasports_config_resource',
   ];
 
   foreach ($keys as $key) {

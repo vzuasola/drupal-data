@@ -20,6 +20,7 @@ module:
   content_translation: 0
   contextual: 0
   ctools: 0
+  dafasports_config: 0
   datetime: 0
   draggableviews: 0
   dynamic_page_cache: 0

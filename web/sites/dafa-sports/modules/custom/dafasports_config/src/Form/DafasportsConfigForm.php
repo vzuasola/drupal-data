@@ -4,7 +4,7 @@ namespace Drupal\dafasports_config\Form;
 
 use Drupal\webcomposer_config_schema\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
-
+use Drupal\file\Entity\File;
 /**
  * Sample form plugin
  *
@@ -48,18 +48,18 @@ class DafasportsConfigForm extends FormBase {
    *
    */
   private function sectionBg(array &$form) {
-    $form['not_found'] = [
+    $form['background_config'] = [
       '#type' => 'details',
       '#title' => $this->t('Background Configuration'),
       '#collapsible' => TRUE,
       '#group' => 'advanced',
     ];
 
-    $form['not_found']['bg_image'] = [
+    $form['background_config']['file_image_bg'] = [
       '#type' => 'managed_file',
       '#title' => $this->t('Background Image'),
       '#description' => $this->t('Adds Background Image'),
-      '#default_value' => $this->get('bg_image'),
+      '#default_value' => $this->get('file_image_bg'),
       '#upload_location' => 'public://',
       '#upload_validators' => [
         'file_validate_extensions' => ['gif png jpg jpeg'],
