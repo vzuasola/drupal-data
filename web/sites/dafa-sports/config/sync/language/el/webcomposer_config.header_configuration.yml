@@ -1,6 +1,6 @@
 lobby_page_title: 'Dafabet - Asia''s No.1 Sports Betting Portal'
 join_now_text: ΕΓΓΡΑΦΗ
-join_now_link: '/{domain:entry}/{domain:lang_token}/cant-login{tracking.token}'
+join_now_link: '{domain:entry}/{domain:lang_token}/join/sports-df[query:({tracking})]'
 login_issue_text: 'Δε μπορείτε να συνδεθείτε'
 login_issue_link: '/{domain:entry}/{domain:lang_token}/cant-login{tracking.token}'
 product_balance_label: 'Υπόλοιπο OW Sports'
@@ -12,6 +12,19 @@ product_menu_new_tag: Νέος
 welcome_text: 'Καλώς ήρθατε {username}'
 profile_link: '/{domain:myaccount_domain}/{lang}/my-profile?title=headerPopup&width=820&height=700&token={legacy.credentials}'
 profile_logout_text: Έξοδος
-balance_label_mapping: "4|OW Αθλήματα\r\n6|Dafa Αθλήματα\r\n1|Casino Classic\r\n2|Casino Gold\r\n5|Live Dealer, Παιχνίδια & Virtuals\r\n8|Opus Live Dealer\r\n9|Keno\r\n3|Poker\r\n7|Fish Hunter"
-balance_error_text_product: '{domain:cashier_domain}/{lang}?ticket={auth.token}&product=ow-sports&title=headerPopup&width=820&height=700'
-cashier_link: '{domain:cashier_domain}/{lang}?ticket={auth.token}&product=ow-sports&title=headerPopup&width=820&height=700'
+balance_label_mapping: "4|OW Αθλήματα\r\n6|Dafa Αθλήματα\r\n10|Ανταλλακτηρίου\r\n1|Casino Classic\r\n2|Casino Gold\r\n5|\_Live Dealer, Παιχνίδια, & Virtuals\r\n8|Opus Live Dealer\r\n9|Keno\r\n3|Poker\r\n7|Fish Hunter"
+balance_error_text_product: N/A
+cashier_link: '{domain:cashier_domain}/{lang}?ticket={auth.token}&product=dafa-sports&title=headerPopup&width=820&height=700'
+header_settings_tab__active_tab: edit-logo-group
+logo_title: Dafabet
+capslock_notification: 'Το Caps Lock είναι ενεργοποιημένο'
+balance_mapping: ''
+balance_label_override: 现场荷官、老虎机、虚拟运动和大发彩票
+critical_announcement: 0
+critical_announcement_content:
+  value: "<p>If there are any concerns, please email us: <a href=\"ensupport@dafabet.com\">ENSupport</a>. Thank you!</p>\r\n"
+  format: basic_html
+news_announcement: 0
+news_announcement_content:
+  value: "<p>If there are any concerns, please email us: <a href=\"ensupport@dafabet.com\">ENSupport</a>. Thank you!</p>\r\n"
+  format: basic_html
