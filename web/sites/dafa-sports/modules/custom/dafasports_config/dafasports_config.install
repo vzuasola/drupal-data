@@ -1,0 +1,14 @@
+<?php
+
+/**
+ * Implements hook_uninstall
+ */
+function dafasports_config_uninstall() {
+  $keys = [
+    'dafasports_config.dafasports_configuration',
+  ];
+
+  foreach ($keys as $key) {
+    \Drupal::configFactory()->getEditable($key)->delete();
+  }
+}
