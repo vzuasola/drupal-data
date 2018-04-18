@@ -1,0 +1,22 @@
+{#
+/**
+ * @file content_block_entity.html.twig
+ * Default theme implementation to present Content block entity data.
+ *
+ * This template is used when viewing Content block entity pages.
+ *
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_content_block_entity()
+ *
+ * @ingroup themeable
+ */
+#}
+<div{{ attributes.addClass('content_block_entity') }}>
+  {% if content %}
+    {{- content -}}
+  {% endif %}
+</div>
