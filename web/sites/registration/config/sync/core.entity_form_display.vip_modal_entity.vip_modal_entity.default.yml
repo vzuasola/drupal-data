@@ -1,0 +1,42 @@
+uuid: 23981fd4-a424-426c-9668-4c924cf5a3f8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.vip_modal_entity.vip_modal_entity.field_vip_modal_content
+    - field.field.vip_modal_entity.vip_modal_entity.field_vip_modal_id
+  module:
+    - text
+    - vip_modal
+id: vip_modal_entity.vip_modal_entity.default
+targetEntityType: vip_modal_entity
+bundle: vip_modal_entity
+mode: default
+content:
+  field_vip_modal_content:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_vip_modal_id:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  langcode: true
+  user_id: true
