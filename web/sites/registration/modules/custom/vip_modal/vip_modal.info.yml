@@ -1,0 +1,5 @@
+name: VIP Modal Content
+type: module
+description: This module provides configuration to upload modal contents for VIP
+core: 8.x
+package: VIP

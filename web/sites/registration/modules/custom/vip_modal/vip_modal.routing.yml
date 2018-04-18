@@ -1,0 +1,7 @@
+vip_modal.admin_settings:
+  path: 'admin/config/webcomposer/vip_modal'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'VIP Modal Contents'
+  requirements:
+    _permission: 'administer site configuration'
