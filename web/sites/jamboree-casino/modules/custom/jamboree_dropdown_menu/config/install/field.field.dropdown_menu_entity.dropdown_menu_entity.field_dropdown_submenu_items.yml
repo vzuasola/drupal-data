@@ -1,0 +1,57 @@
+uuid: c179a98d-1571-46ec-a1b1-ba23d3627af5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.dropdown_menu_entity.field_dropdown_submenu_items
+    - paragraphs.paragraphs_type.dropdown_menu_item
+  module:
+    - entity_reference_revisions
+    - jamboree_dropdown_menu
+id: dropdown_menu_entity.dropdown_menu_entity.field_dropdown_submenu_items
+field_name: field_dropdown_submenu_items
+entity_type: dropdown_menu_entity
+bundle: dropdown_menu_entity
+label: 'Dropdown Submenu Items'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      dropdown_menu_item: dropdown_menu_item
+    target_bundles_drag_drop:
+      dropdown_menu_item:
+        enabled: true
+        weight: 11
+      domain_management_configuration:
+        weight: 12
+        enabled: false
+      floating_banner_item:
+        weight: 13
+        enabled: false
+      metatag:
+        weight: 14
+        enabled: false
+      right_side_block_content:
+        weight: 15
+        enabled: false
+      slider_overlay_cmi:
+        weight: 16
+        enabled: false
+      social_media:
+        weight: 17
+        enabled: false
+      social_media_cmi:
+        weight: 18
+        enabled: false
+      sponsor_cmi:
+        weight: 19
+        enabled: false
+      sponsorship:
+        weight: 20
+        enabled: false
+field_type: entity_reference_revisions

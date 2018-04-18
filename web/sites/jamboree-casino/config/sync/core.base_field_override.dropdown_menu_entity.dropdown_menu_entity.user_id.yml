@@ -1,0 +1,20 @@
+uuid: 8b2192bc-e461-4dda-81da-907e715e5a95
+langcode: en
+status: true
+dependencies:
+  module:
+    - jamboree_dropdown_menu
+id: dropdown_menu_entity.dropdown_menu_entity.user_id
+field_name: user_id
+entity_type: dropdown_menu_entity
+bundle: dropdown_menu_entity
+label: 'Authored by'
+description: 'The user ID of author of the Dropdown menu entity entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

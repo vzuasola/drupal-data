@@ -1,0 +1,18 @@
+jamboree_dropdown_menu.list:
+  title: 'Jamboree Dropdown menu Configuration'
+  description: 'List Dropdown Menu entities'
+  parent: system.admin_config
+  route_name: jamboree_dropdown_menu.admin_settings
+
+# Default entity menu items definition
+entity.dropdown_menu_entity.collection:
+  title: 'Dropdown Menu List'
+  route_name: entity.dropdown_menu_entity.collection
+  description: 'List Dropdown menu entity entities'
+  parent: jamboree_dropdown_menu.list
+
+jamboree_dropdown_menu.admin.structure.settings:
+  title: Dropdown Menu Entity Settings
+  description: 'Configure Dropdown entity entities'
+  route_name: dropdown_menu_entity.settings
+  parent: jamboree_dropdown_menu.list
