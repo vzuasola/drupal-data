@@ -1,10 +1,11 @@
 autologout_box_content:
+  format: basic_html
   value: "<p>您的登錄將於{seconds}過期。您想繼續登錄嗎？</p>\r\n"
-  format: basic_html
 notification_content:
-  value: "<p>因沒有任何在線活動，您的登錄已超時失效。</p>\r\n"
   format: basic_html
+  value: "<p>因沒有任何在線活動，您的登錄已超時失效。</p>\r\n"
 lightbox_blurb: 還不是大發會員？
+mobile_login_button_label: 登錄/加入
 username_placeholder: 用戶名
 password_placeholder: 密碼
 login_bottom_label: 登錄
@@ -20,4 +21,3 @@ affirmative_button_text: 是
 negative_button_text: 不
 notification_title: 通知
 notification_window_title: 登錄超時
-mobile_login_button_label: 登錄/加入

@@ -1,10 +1,11 @@
 autologout_box_content:
+  format: basic_html
   value: "<p>お客様のセッションはあと{seconds}で時間切れとなります。このセッションを継続されますか？</p>\r\n"
-  format: basic_html
 notification_content:
-  value: "<p>長時間ご操作がなかったためセッションは時間切れとなりました。</p>\r\n"
   format: basic_html
+  value: "<p>長時間ご操作がなかったためセッションは時間切れとなりました。</p>\r\n"
 lightbox_blurb: 'Dafabet へご登録はお済みですか？'
+mobile_login_button_label: ログイン/ご登録
 username_placeholder: ユーザーネーム
 password_placeholder: パスワード
 login_bottom_label: ログイン
@@ -20,4 +21,3 @@ affirmative_button_text: はい
 negative_button_text: いいえ
 notification_title: セッションが時間切れです
 notification_window_title: セッションが時間切れです
-mobile_login_button_label: ログイン/ご登録

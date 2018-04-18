@@ -1,9 +1,9 @@
 country_restriction_message: '[product] はお客様の地域ではご利用いただけません'
 unauthenticated_error_message: Dafabetからログアウトされているようです。お手数ですが再度ログインして下さい。
 success_title: ご登録が完了しました
-home_title: 'オンラインベッティング – Dafabetのスポーツでのベットや、オンラインカジノ＆ポーカーでのプレイをお楽しみ下さい。'
+home_title: さっそくDafabetでベットを始めよう！今すぐ登録しよう！
 generic_error_message: '登録に失敗しました。サポートが必要な場合は<a href="mailto:jpsupport@dafabet.com">カスタマーサポート</a>までお問い合わせください。 (i-1000)'
-portal_id_to_product_name_mapping: "3|OWスポーツ|sports\r\n10|OWスポーツ|sports\r\n28|OWスポーツ|sports\r\n47|OWスポーツ|sports\r\n22|Dafa スポーツ|sports-df\r\n26|Dafa スポーツ|sports-df\r\n29|Dafa スポーツ|sports-df\r\n48|Dafa スポーツ|sports-df\r\n4|カジノ|casino\r\n11|カジノ|casino\r\n16|カジノ|casino\r\n18|カジノ|casino\r\n30|カジノ|casino\r\n49|カジノ|casino\r\n23|カジノ|casino\r\n19|カジノ ゴールド|casino-gold\r\n20|カジノ ゴールド|casino-gold\r\n21|カジノ ゴールド|casino-gold\r\n35|カジノ ゴールド|casino-gold\r\n54|カジノ ゴールド|casino-gold\r\n6|ライブディーラー|live-dealer\r\n15|ライブディーラー|live-dealer\r\n33|ライブディーラー|live-dealer\r\n52|ライブディーラー|live-dealer\r\n5|ポーカー|poker\r\n12|ポーカー|poker\r\n17|ポーカー|poker\r\n31|ポーカー|poker\r\n50|ポーカー|poker\r\n24|フィッシュハンター|fish-hunter\r\n25|フィッシュハンター|fish-hunter\r\n34|フィッシュハンター|fish-hunter\r\n53|フィッシュハンター|fish-hunter\r\n8|ゲーム|games\r\n14|ゲーム|games\r\n32|ゲーム|games\r\n51|ゲーム|games\r\n56|ヴァーチャル|virtuals\r\n57|ヴァーチャル|virtuals\r\n58|ヴァーチャル|virtuals\r\n59|ヴァーチャル|virtuals\r\n55|ケノ|keno\r\n45|ケノ|keno"
+portal_id_to_product_name_mapping: "3|OWスポーツ|sports\r\n10|OWスポーツ|sports\r\n28|OWスポーツ|sports\r\n47|OWスポーツ|sports\r\n22|Dafa スポーツ|sports-df\r\n26|Dafa スポーツ|sports-df\r\n29|Dafa スポーツ|sports-df\r\n48|Dafa スポーツ|sports-df\r\n4|カジノ|casino\r\n11|カジノ|casino\r\n16|カジノ|casino\r\n18|カジノ|casino\r\n30|カジノ|casino\r\n49|カジノ|casino\r\n23|カジノ|casino\r\n19|カジノ ゴールド|casino-gold\r\n20|カジノ ゴールド|casino-gold\r\n21|カジノ ゴールド|casino-gold\r\n35|カジノ ゴールド|casino-gold\r\n54|カジノ ゴールド|casino-gold\r\n6|ライブディーラー|live-dealer\r\n15|ライブディーラー|live-dealer\r\n33|ライブディーラー|live-dealer\r\n52|ライブディーラー|live-dealer\r\n5|ポーカー|poker\r\n12|ポーカー|poker\r\n17|ポーカー|poker\r\n31|ポーカー|poker\r\n50|ポーカー|poker\r\n24|フィッシュハンター|fish-hunter\r\n25|フィッシュハンター|fish-hunter\r\n34|フィッシュハンター|fish-hunter\r\n53|フィッシュハンター|fish-hunter\r\n8|ゲーム|games\r\n14|ゲーム|games\r\n32|ゲーム|games\r\n51|ゲーム|games\r\n56|ヴァーチャル|virtuals\r\n57|ヴァーチャル|virtuals\r\n58|ヴァーチャル|virtuals\r\n59|ヴァーチャル|virtuals\r\n55|ケノ|keno\r\n45|ケノ|keno\r\n66|交換|exchange\r\n67|交換|exchange\r\n68|交換|exchange\r\n69|交換|exchange"
+enable_avaya_proactive: '0'
 step_one_text: 登録
 step_two_text: ご入金
-enable_avaya_proactive: '0'

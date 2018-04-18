@@ -11,7 +11,6 @@
     "acunetix-scan": "deploy-staging",
     "deploy-tct": "package",
     "integration-tests-tct": "deploy-tct",
-    "testing-signoff": "code-scan-testing",
     "deploy-uat": "testing-signoff",
     "integration-tests-uat": "deploy-uat",
     "deploy-staging": "testing-signoff",

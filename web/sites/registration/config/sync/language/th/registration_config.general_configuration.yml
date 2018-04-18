@@ -1,10 +1,10 @@
 country_restriction_message: '[product] ไม่สามารถใช้งานได้ในพื้นที่ของคุณ'
 unauthenticated_error_message: "\"ไม่สามารถใช้งานได้ขณะนี้เนื่องจากบัญชีของคุณอาจออกจากระบบแล้ว\r\nกรุณาล็อกอินใหม่อีกครั้ง \""
 success_title: การสมัครสมาชิกเสร็จสมบูรณ์
-home_title: สมัครสมาชิก
+home_title: 'เดิมพันวันนี้ ที่ดาฟาเบท! สมัครสมาชิก!'
 generic_error_message: 'สมัครสมาชิกไม่สำเร็จ  (i-1000) หากต้องการความช่ว<a href="mailto:thaisupport@dafabet.com">แชทสด 24 ชั่วโมง</a>'
-portal_id_to_product_name_mapping: "3|กีฬา|sports\r\n10|กีฬา|sports\r\n28|กีฬา|sports\r\n47|กีฬา|sports\r\n22|กีฬาเอเชีย|sports-df\r\n26|กีฬาเอเชีย|sports-df\r\n29|กีฬาเอเชีย|sports-df\r\n48|กีฬาเอเชีย|sports-df\r\n4|คาสิโน|casino\r\n11|คาสิโน|casino\r\n16|คาสิโน|casino\r\n18|คาสิโน|casino\r\n30|คาสิโน|casino\r\n49|คาสิโน|casino\r\n23|คาสิโน|casino\r\n19|คาสิโนโกลด์|casino-gold\r\n20|คาสิโนโกลด์|casino-gold\r\n21|คาสิโนโกลด์|casino-gold\r\n35|คาสิโนโกลด์|casino-gold\r\n54|คาสิโนโกลด์|casino-gold\r\n6|ดีลเลอร์สด|live-dealer\r\n15|ดีลเลอร์สด|live-dealer\r\n33|ดีลเลอร์สด|live-dealer\r\n52|ดีลเลอร์สด|live-dealer\r\n5|โป๊กเกอร์|poker\r\n12|โป๊กเกอร์|poker\r\n17|โป๊กเกอร์|poker\r\n31|โป๊กเกอร์|poker\r\n50|โป๊กเกอร์|poker\r\n24|Fish Hunter|fish-hunter\r\n25|Fish Hunter|fish-hunter\r\n34|Fish Hunter|fish-hunter\r\n53|Fish Hunter|fish-hunter\r\n8|เกมส์|games\r\n14|เกมส์|games\r\n32|เกมส์|games\r\n51|เกมส์|games\r\n56|เกมส์จำลอง|virtuals\r\n57|เกมส์จำลอง|virtuals\r\n58|เกมส์จำลอง|virtuals\r\n59|เกมส์จำลอง|virtuals\r\n55|คีโน|keno\r\n45|คีโน|keno"
-step_one_text: สมัครสมาชิก
-step_two_text: ฝากเงิน
+portal_id_to_product_name_mapping: "3|กีฬา|sports\r\n10|กีฬา|sports\r\n28|กีฬา|sports\r\n47|กีฬา|sports\r\n22|กีฬาเอเชีย|sports-df\r\n26|กีฬาเอเชีย|sports-df\r\n29|กีฬาเอเชีย|sports-df\r\n48|กีฬาเอเชีย|sports-df\r\n4|คาสิโน|casino\r\n11|คาสิโน|casino\r\n16|คาสิโน|casino\r\n18|คาสิโน|casino\r\n30|คาสิโน|casino\r\n49|คาสิโน|casino\r\n23|คาสิโน|casino\r\n19|คาสิโนโกลด์|casino-gold\r\n20|คาสิโนโกลด์|casino-gold\r\n21|คาสิโนโกลด์|casino-gold\r\n35|คาสิโนโกลด์|casino-gold\r\n54|คาสิโนโกลด์|casino-gold\r\n6|ดีลเลอร์สด|live-dealer\r\n15|ดีลเลอร์สด|live-dealer\r\n33|ดีลเลอร์สด|live-dealer\r\n52|ดีลเลอร์สด|live-dealer\r\n5|โป๊กเกอร์|poker\r\n12|โป๊กเกอร์|poker\r\n17|โป๊กเกอร์|poker\r\n31|โป๊กเกอร์|poker\r\n50|โป๊กเกอร์|poker\r\n24|Fish Hunter|fish-hunter\r\n25|Fish Hunter|fish-hunter\r\n34|Fish Hunter|fish-hunter\r\n53|Fish Hunter|fish-hunter\r\n8|เกมส์|games\r\n14|เกมส์|games\r\n32|เกมส์|games\r\n51|เกมส์|games\r\n56|เกมส์จำลอง|virtuals\r\n57|เกมส์จำลอง|virtuals\r\n58|เกมส์จำลอง|virtuals\r\n59|เกมส์จำลอง|virtuals\r\n55|คีโน|keno\r\n45|คีโน|keno\r\n66|ริกเก็ต|exchange\r\n67|ริกเก็ต|exchange\r\n68|ริกเก็ต|exchange\r\n69|ริกเก็ต|exchange"
 livechat_header: 'ต้องการความช่วยเหลือ? '
 livechat_text: 'ให้เราช่วยเหลือเรื่องใด? '
+step_one_text: สมัครสมาชิก
+step_two_text: ฝากเงิน

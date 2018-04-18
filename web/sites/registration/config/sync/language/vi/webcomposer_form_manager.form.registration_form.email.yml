@@ -26,8 +26,10 @@ field_validations:
   username_availability:
     error_message: 'Username not available'
   email_availability:
-    error_message: "Email đã được sử dụng. Vui lòng nhấn <a href=\"/vn/cant-login\" target=\"popup\" onclick=\"window.open('/vn/cant-login','popup','width=820,height=810,scrollbars=no,resizable=no'); return false;\">đây</a> để lấy lại tên người dùng/mật khẩu.\r\n"
+    error_message: "<span class=\"visible-desktop\">Email đã được sử dụng. Vui lòng nhấn <a href=\"/vn/cant-login\" target=\"popup\" onclick=\"window.open('/vn/cant-login','popup','width=820,height=810,scrollbars=no,resizable=no'); return false;\" class=\"visible-desktop\">đây</a> để lấy lại tên người dùng/mật khẩu.</span>\r\n<span class=\"visible-tablet\">Email đã được sử dụng. Vui lòng nhấn <a href=\"/vn/cant-login\" target=\"_blank\" class=\"visible-tablet\">đây</a> để lấy lại tên người dùng/mật khẩu.</span>\r\n<span class=\"visible-mobile\">Email đã được sử dụng. Vui lòng nhấn <a href=\"/vn/cant-login\" target=\"_blank\" class=\"visible-mobile\">đây</a> để lấy lại tên người dùng/mật khẩu.</span>\r\n<span class=\"visible-app\">Email đã được sử dụng. Vui lòng nhấn <a href=\"https://m.dafawin.com/vn/cant-login?clientflag=1\" target=\"_blank\" class=\"visible-app\">đây</a> để lấy lại tên người dùng/mật khẩu.</span>\r\n"
   invalid_words:
     error_message: 'Invalid/not allowed characters'
   valid_languages:
     error_message: 'This field only accepts specific characters.'
+  valid_date:
+    error_message: 'Date is invalid'

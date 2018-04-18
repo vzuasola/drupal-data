@@ -45,6 +45,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: "/admin/config/webcomposer/domains/*\r\n/admin/structure/webcomposer_slider_entity\r\n/admin/structure/taxonomy/manage/ribbon_labels/overview\r\n/admin/structure/right_side_block_entity\r\n/admin/structure/partner_entity\r\n/admin/structure/webcomposer_partner/partner_entity/manage\r\n/admin/config/webcomposer/config/browser\r\n/admin/config/webcomposer/config/exception\r\n/admin/config/webcomposer/config/footer\r\n/admin/config/webcomposer/config/header\r\n/admin/config/webcomposer/config/log\r\n/admin/config/webcomposer/config/login\r\n/admin/config/webcomposer/config/promotion_configuration\r\n/admin/config/webcomposer/config/robots"
+    pages: "/admin/config/webcomposer/domains/*\r\n/admin/structure/webcomposer_slider_entity\r\n/admin/structure/taxonomy/manage/ribbon_labels/overview\r\n/admin/structure/right_side_block_entity\r\n/admin/structure/partner_entity\r\n/admin/structure/webcomposer_partner/partner_entity/manage\r\n/admin/config/webcomposer/config/browser\r\n/admin/config/webcomposer/config/exception\r\n/admin/config/webcomposer/config/footer\r\n/admin/config/webcomposer/config/header\r\n/admin/config/webcomposer/config/log\r\n/admin/config/webcomposer/config/login\r\n/admin/config/webcomposer/config/robots"
     negate: false
     context_mapping: {  }

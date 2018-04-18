@@ -6,18 +6,25 @@ news_announcement_content:
   value: "<p>Test Test</p>\r\n"
   format: basic_html
 join_now_text: GABUNG
-join_now_link: '/{domain:entry}/{domain:lang_token}/cant-login{tracking.token}'
+join_now_link: '{domain:entry}/{domain:lang_token}/join/sports-df[query:({tracking})]'
 login_issue_text: 'Tidak bisa Login?'
 login_issue_link: '/{domain:entry}/{domain:lang_token}/cant-login{tracking.token}'
 product_balance_label: 'Saldo OW Sports'
 total_balance_label: 'Total Saldo'
-balance_error_text: '"Pesan Error Total Saldo"  Error.'
+balance_error_text: N/A
 profile_icon_hover_text: 'Profil Saya'
 cashier_icon_hover_text: Kasir
 product_menu_new_tag: Baru
 welcome_text: 'Selamat Datang {username}'
 profile_link: '/{domain:myaccount_domain}/{lang}/my-profile?title=headerPopup&width=820&height=700&token={legacy.credentials}'
 profile_logout_text: Logout
-balance_label_mapping: "4|OW Sports\r\n6|Dafa Sports\r\n1|Kasino Klasik\r\n2|Kasino Gold\r\n5|Live Dealer, Games, & Virtual\r\n8|Opus Live Dealer\r\n9|Keno\r\n3|Poker\r\n7|Fish Hunter"
-balance_error_text_product: '{domain:cashier_domain}/{lang}?ticket={auth.token}&product=ow-sports&title=headerPopup&width=820&height=700'
-cashier_link: '{domain:cashier_domain}/{lang}?ticket={auth.token}&product=ow-sports&title=headerPopup&width=820&height=700'
+balance_label_mapping: "4|OW Sports\r\n6|Dafa Sports\r\n10|Barter\r\n1|Kasino Klasik\r\n2|Kasino Gold\r\n5|Live Dealer, Games, & Virtual\r\n8|Opus Live Dealer\r\n9|Keno\r\n3|Poker\r\n7|Fish Hunter"
+balance_error_text_product: N/A
+cashier_link: '{domain:cashier_domain}/{lang}?ticket={auth.token}&product=dafa-sports&title=headerPopup&width=820&height=700'
+header_settings_tab__active_tab: edit-logo-group
+logo_title: Dafabet
+capslock_notification: 'Caps Lock aktif'
+balance_mapping: "6|Dafa Sports Balance\r\n4|E Sports Balance"
+balance_label_override: 现场荷官、老虎机、虚拟运动和大发彩票
+critical_announcement: 0
+news_announcement: 0
