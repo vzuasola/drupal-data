@@ -1,0 +1,19 @@
+uuid: b17b05ad-e563-4a5e-b379-9b6efa63abb1
+langcode: en
+status: true
+dependencies:
+  module:
+    - text
+    - vip_modal
+id: vip_modal_entity.field_vip_modal_content
+field_name: field_vip_modal_content
+entity_type: vip_modal_entity
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

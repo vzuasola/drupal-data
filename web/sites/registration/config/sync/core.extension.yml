@@ -71,6 +71,7 @@ module:
   toolbar: 0
   user: 0
   views_ui: 0
+  vip_modal: 0
   webcomposer_affilates: 0
   webcomposer_announcements: 0
   webcomposer_avaya: 0
