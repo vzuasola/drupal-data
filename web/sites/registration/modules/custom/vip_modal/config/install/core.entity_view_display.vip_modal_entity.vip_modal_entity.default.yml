@@ -1,0 +1,48 @@
+uuid: f4385ce2-ce02-4942-adbc-a532695764ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.vip_modal_entity.vip_modal_entity.field_vip_modal_content
+    - field.field.vip_modal_entity.vip_modal_entity.field_vip_modal_id
+  module:
+    - text
+    - user
+    - vip_modal
+id: vip_modal_entity.vip_modal_entity.default
+targetEntityType: vip_modal_entity
+bundle: vip_modal_entity
+mode: default
+content:
+  field_vip_modal_content:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_vip_modal_id:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  name:
+    label: above
+    type: string
+    weight: -4
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  user_id:
+    label: hidden
+    type: author
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * Implements hook_uninstall
+ */
+function vip_modal_uninstall() {
+    $keys = [
+        'views.view.vip_modal_rest',
+        'core.base_field_override.vip_modal_entity.vip_modal_entity.metatag',
+        'core.entity_form_display.vip_modal_entity.vip_modal_entity.default',
+        'core.entity_view_display.vip_modal_entity.vip_modal_entity.default',
+        'field.field.vip_modal_entity.vip_modal_entity.field_vip_modal_content',
+        'field.field.vip_modal_entity.vip_modal_entity.field_vip_modal_id',
+        'field.storage.vip_modal_entity.field_vip_modal_content',
+        'field.storage.vip_modal_entity.field_vip_modal_id',
+        'language.content_settings.vip_modal_entity.vip_modal_entity',
+    ];
+
+    foreach ($keys as $key) {
+      \Drupal::configFactory()->getEditable($key)->delete();
+    }
+}
