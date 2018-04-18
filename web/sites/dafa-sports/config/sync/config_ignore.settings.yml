@@ -18,6 +18,5 @@ ignored_config_entities:
   32: 'devel.*'
   34: 'webcomposer_affilates.*'
   36: 'dafasports_config.*'
-  38: 'webcomposer_config.*'
 _core:
   default_config_hash: UVH1aJ4b44UM-VdPVN7hNNuuVqfReJxwfVeDQH1Hvsk
