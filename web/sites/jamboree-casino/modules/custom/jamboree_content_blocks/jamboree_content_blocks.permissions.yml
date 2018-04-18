@@ -1,0 +1,22 @@
+add content block entity entities:
+  title: 'Create new Content block entity entities'
+
+administer content block entity entities:
+  title: 'Administer Content block entity entities'
+  description: 'Allow to access the administration form to configure Content block entity entities.'
+  restrict access: true
+
+delete content block entity entities:
+  title: 'Delete Content block entity entities'
+
+edit content block entity entities:
+  title: 'Edit Content block entity entities'
+
+access content block entity overview:
+  title: 'Access the Content block entity overview page'
+
+view published content block entity entities:
+  title: 'View published Content block entity entities'
+
+view unpublished content block entity entities:
+  title: 'View unpublished Content block entity entities'

@@ -1,0 +1,18 @@
+uuid: 0626c01b-dd3a-4039-b3a7-7340b1181f11
+langcode: en
+status: true
+dependencies:
+  module:
+    - jamboree_content_blocks
+id: content_block_entity.content_block_entity.metatag
+field_name: metatag
+entity_type: content_block_entity
+bundle: content_block_entity
+label: Metatags
+description: 'The metatags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

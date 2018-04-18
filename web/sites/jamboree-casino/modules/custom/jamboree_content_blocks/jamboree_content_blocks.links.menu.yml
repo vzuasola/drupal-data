@@ -1,0 +1,18 @@
+jamboree_content_blocks.list:
+  title: 'Jamboree Content Blocks Configuration'
+  description: 'List Jamboree default entities'
+  parent: system.admin_config
+  route_name: jamboree_content_blocks.admin_settings
+
+# Content block entity menu items definition
+entity.content_block_entity.collection:
+  title: 'Content block entity list'
+  route_name: entity.content_block_entity.collection
+  description: 'List Content block entity entities'
+  parent: jamboree_content_blocks.list
+
+content_block_entity.admin.structure.settings:
+  title: Content block entity settings
+  description: 'Configure Content block entity entities'
+  route_name: content_block_entity.settings
+  parent: jamboree_content_blocks.list

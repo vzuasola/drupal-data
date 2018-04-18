@@ -1,0 +1,24 @@
+uuid: 5f675ec7-3f53-4f9b-a84e-f640b7bab2a2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.content_block_entity.field_hide_title
+  module:
+    - jamboree_content_blocks
+id: content_block_entity.content_block_entity.field_hide_title
+field_name: field_hide_title
+entity_type: content_block_entity
+bundle: content_block_entity
+label: 'Hide Title'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
