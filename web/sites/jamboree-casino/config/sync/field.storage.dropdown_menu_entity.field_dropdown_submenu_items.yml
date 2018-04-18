@@ -1,0 +1,21 @@
+uuid: 81c652fb-2960-48f5-94a2-3537ea23263b
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_reference_revisions
+    - jamboree_dropdown_menu
+    - paragraphs
+id: dropdown_menu_entity.field_dropdown_submenu_items
+field_name: field_dropdown_submenu_items
+entity_type: dropdown_menu_entity
+type: entity_reference_revisions
+settings:
+  target_type: paragraph
+module: entity_reference_revisions
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
