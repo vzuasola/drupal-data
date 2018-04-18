@@ -14,6 +14,8 @@ function vip_modal_uninstall() {
         'field.storage.vip_modal_entity.field_vip_modal_content',
         'field.storage.vip_modal_entity.field_vip_modal_id',
         'language.content_settings.vip_modal_entity.vip_modal_entity',
+        'field.field.vip_modal_entity.vip_modal_entity.field_vip_modal_title',
+        'field.storage.vip_modal_entity.field_vip_modal_title'
     ];
 
     foreach ($keys as $key) {
