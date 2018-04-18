@@ -1,0 +1,18 @@
+uuid: 8395e3fb-239f-4356-981a-2f44f1f7b1c5
+langcode: en
+status: true
+dependencies:
+  module:
+    - dafasports_config
+    - serialization
+    - user
+id: dafasports_config_resource
+plugin_id: dafasports_config_resource
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+      - xml
+    supported_auth:
+      - cookie

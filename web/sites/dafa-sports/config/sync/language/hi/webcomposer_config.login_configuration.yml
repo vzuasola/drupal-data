@@ -6,3 +6,21 @@ autologout_box_title: Reminder
 notification_title: Notification
 notification_window_title: 'Session has timed out'
 mobile_login_url: 'https://m.dafabet.com/'
+advanced__active_tab: edit-login-form-details
+username_placeholder: Username
+password_placeholder: Password
+lightbox_blurb: 'Not yet a Dafabet member?'
+login_page_blurb: ''
+error_message_blank_username: 'Username is required.'
+error_message_blank_password: 'Password is required.'
+error_message_blank_passname: 'Username and Password is required.'
+error_message_service_not_available: 'Service not available.'
+autologout_box_content:
+  value: "<p>Your session will expire in {seconds} seconds. Do you want to continue your session ?</p>\r\n"
+  format: basic_html
+affirmative_button_text: 'Yes'
+negative_button_text: 'No'
+notification_content:
+  value: "<p>Your session has timed out due to inactivity.</p>\r\n"
+  format: basic_html
+mobile_login_button_label: ''

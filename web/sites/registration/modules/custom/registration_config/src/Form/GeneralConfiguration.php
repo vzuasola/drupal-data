@@ -260,6 +260,12 @@ class GeneralConfiguration extends ConfigFormBase {
       '#description' => $this->t('Input 1 to enable proactiveo Social App on Mobile, 0 to disable'),
       '#default_value' => $config->get('enable_proactive_mobile'),
     ];
+    $form['proactive_settings']['proactive_mobile_timeout'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Timeout Proactive Mobile'),
+      '#description' => $this->t('Amount of time the Proactive mobile chat will show (in seconds)'),
+      '#default_value' => $config->get('proactive_mobile_timeout'),
+    ];
     $form['proactive_settings']['proactive_mobile_class'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Proactive Mobile Class Icon'),
@@ -272,11 +278,25 @@ class GeneralConfiguration extends ConfigFormBase {
       '#description' => $this->t('Proactive mobile URL where the player will be redirected'),
       '#default_value' => $config->get('proactive_mobile_url'),
     ];
+    $form['proactive_settings']['proactive_mobile_url_playstore'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Proactive Mobile URL Play Store'),
+      '#description' => $this->t('Proactive mobile URL playstore where the player will be redirected' .
+        'if the app is not installed'),
+      '#default_value' => $config->get('proactive_mobile_url_playstore'),
+    ];
     $form['proactive_settings']['proactive_mobile_url_ios'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Proactive Mobile URL iOS'),
       '#description' => $this->t('Proactive mobile URL for iOS (if applicable) where the player will be redirected'),
       '#default_value' => $config->get('proactive_mobile_url_ios'),
+    ];
+    $form['proactive_settings']['proactive_mobile_url_ios_appstore'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Proactive Mobile URL iOS App Store'),
+      '#description' => $this->t('Proactive mobile URL for iOS (if applicable) appstore where the player will be '.
+        'redirected if the app is not installed'),
+      '#default_value' => $config->get('proactive_mobile_url_ios_appstore'),
     ];
 
     $form['cashier_settings'] = [
@@ -330,6 +350,21 @@ class GeneralConfiguration extends ConfigFormBase {
       '#title' => $this->t('Enable RS logging'),
       '#default_value' => $config->get('enable_rs_logging'),
     ];
+    $form['s2s_tracking'] = [
+      '#type' => 'details',
+      '#title' => $this->t('S2S tracking'),
+      '#collapsible' => TRUE,
+      '#group' => 'general_settings_tab',
+    ];
+    $form['s2s_tracking']['s2s_config'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('S2S Config'),
+      '#description' => $this->t('Config of s2s implementation that will integrate to affiliate ' .
+        'where the first parameter seperated by "|" symbol is the postback URL ' .
+        'and the second parameter is the dynamic value from the query parameter  ' .
+        'that will be passed along the URL'),
+      '#default_value' => $config->get('s2s_config'),
+    ];
 
     return parent::buildForm($form, $form_state);
   }
@@ -370,7 +405,11 @@ class GeneralConfiguration extends ConfigFormBase {
       'enable_proactive_mobile',
       'proactive_mobile_class',
       'proactive_mobile_url',
-      'proactive_mobile_url_ios'
+      'proactive_mobile_url_ios',
+      'proactive_mobile_url_playstore',
+      'proactive_mobile_url_ios_appstore',
+      'proactive_mobile_timeout',
+      's2s_config'
     ];
 
     foreach ($keys as $key) {

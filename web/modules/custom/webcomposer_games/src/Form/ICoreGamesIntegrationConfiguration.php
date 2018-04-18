@@ -20,7 +20,11 @@ class ICoreGamesIntegrationConfiguration extends ConfigFormBase {
         'voidbridge' => 'Voidbridge',
         'gold_deluxe' => 'Gold Deluxe',
         'video_racing' => 'Video Racing',
-        'sa_gaming' => 'SA Gaming'
+        'sa_gaming' => 'SA Gaming',
+        'allbet' => 'AllBet',
+        'tgp' => 'TGP',
+        'evo_gaming' => 'Evolution Gaming',
+        'ebet' => 'eBet',
     ];
 
   /**

@@ -1,9 +1,9 @@
 autologout_box_content:
-  format: basic_html
   value: "<p>Sesi Anda akan habis dalam {seconds}. Apakah Anda ingin melanjutkan sesi Anda?</p>\r\n"
-notification_content:
   format: basic_html
+notification_content:
   value: "<p>Sesi Anda telah habis karena tidak aktif.</p>\r\n"
+  format: basic_html
 lightbox_blurb: 'Belum menjadi anggota Dafabet?'
 username_placeholder: Masuk
 password_placeholder: 'Kata Sandi'
@@ -20,3 +20,7 @@ affirmative_button_text: YA
 negative_button_text: TIDAK
 notification_title: NOTIFIKASI
 notification_window_title: 'Sesi Berakhir'
+advanced__active_tab: edit-login-form-details
+login_page_blurb: ''
+mobile_login_url: 'https://m.dafabet.com/'
+mobile_login_button_label: ''

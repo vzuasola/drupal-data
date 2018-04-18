@@ -1,5 +1,5 @@
 join_now_text: 'JOIN NOW'
-join_now_link: '{domain:entry}/{domain:lang_token}/join/sports[query:({tracking}&{tracking.adavice})]'
+join_now_link: '{domain:entry}/{domain:lang_token}/join/sports-df[query:({tracking})]'
 login_issue_text: 'Can''t login?'
 login_issue_link: '/{domain:entry}/{domain:lang_token}/cant-login{tracking.token}'
 sc_lang_text: SC
@@ -22,18 +22,21 @@ news_announcement: '0'
 news_announcement_content:
   value: "<p>If there are any concerns, please email us: <a href=\"ensupport@dafabet.com\">ENSupport</a>. Thank you!</p>\r\n"
   format: basic_html
-balance_label_mapping: "4|OW Sports\r\n6|Dafa Sports\r\n1|Casino Classic\r\n2|Casino Gold\r\n5|Live Dealer, Games, & Virtuals\r\n8|Opus Live Dealer\r\n9|Keno\r\n3|Poker\r\n7|Fish Hunter"
+balance_label_mapping: "4|OW Sports\r\n6|Dafa Sports\r\n10|Exchange\r\n1|Casino Classic\r\n2|Casino Gold\r\n5|Live Dealer, Games, & Virtuals\r\n8|Opus Live Dealer\r\n9|Keno\r\n3|Poker\r\n7|Fish Hunter"
 balance_error_text_product: N/A
 balance_toggle: 1
 product_balance_label: 'OW Sports Balance'
 total_balance_label: 'Total Balance'
 product_balance_id: '4'
-currency_balance_mapping: "9|RMB,MYR,THB,KRW,VND,USD,IDR,INR,EUR\r\n7|RMB\r\n8|RMB,MYR,THB,KRW,VND,USD,IDR,INR,EUR,KRW"
+currency_balance_mapping: "9|RMB,MYR,THB,KRW,VND,USD,IDR,INR,EUR\r\n7|RMB\r\n8|RMB,MYR,THB,KRW,VND,USD,IDR,INR,EUR,KRW\r\n10|USD,INR"
 excluded_balance_mapping: '7'
-cashier_link: '{domain:cashier_domain}/{lang}?ticket={auth.token}&product=ow-sports&title=headerPopup&width=820&height=700'
+cashier_link: '{domain:cashier_domain}/{lang}?ticket={auth.token}&product=dafa-sports&title=headerPopup&width=820&height=700'
 balance_mapping: ''
-balance_label_override: ''
+balance_label_override: 现场荷官、老虎机、虚拟运动和大发彩票
 logo_title: Dafabet
-password_mask_toggle: 0
-caps_lock_toggle: 0
-capslock_notification: Message
+password_mask_toggle: 1
+caps_lock_toggle: 1
+capslock_notification: 'Caps Lock is on'
+header_settings_tab__active_tab: edit-logo-group
+value: null
+format: null
