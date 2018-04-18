@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.vip_modal_entity.vip_modal_entity.field_vip_modal_content
     - field.field.vip_modal_entity.vip_modal_entity.field_vip_modal_id
+    - field.field.vip_modal_entity.vip_modal_entity.field_vip_modal_title
   module:
     - text
     - user
@@ -23,6 +24,14 @@ content:
     region: content
   field_vip_modal_id:
     weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_vip_modal_title:
+    weight: 3
     label: above
     settings:
       link_to_entity: false
