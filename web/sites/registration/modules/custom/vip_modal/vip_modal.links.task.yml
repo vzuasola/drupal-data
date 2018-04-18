@@ -1,0 +1,22 @@
+# Vip Modal Content Entity routing definition
+vip_modal_entity.settings_tab:
+  route_name: vip_modal_entity.settings
+  title: 'Settings'
+  base_route: vip_modal_entity.settings
+
+entity.vip_modal_entity.canonical:
+  route_name: entity.vip_modal_entity.canonical
+  base_route: entity.vip_modal_entity.canonical
+  title: 'View'
+
+entity.vip_modal_entity.edit_form:
+  route_name: entity.vip_modal_entity.edit_form
+  base_route: entity.vip_modal_entity.canonical
+  title: 'Edit'
+
+entity.vip_modal_entity.delete_form:
+  route_name:  entity.vip_modal_entity.delete_form
+  base_route:  entity.vip_modal_entity.canonical
+  title: Delete
+  weight: 10
+
