@@ -6,6 +6,8 @@ dependencies:
     - field.storage.vip_modal_entity.field_vip_modal_title
   module:
     - vip_modal
+_core:
+  default_config_hash: LhAFoTSFQSyyyQVt30GQwt_6ntXFGEs0FQZvU6Cenak
 id: vip_modal_entity.vip_modal_entity.field_vip_modal_title
 field_name: field_vip_modal_title
 entity_type: vip_modal_entity

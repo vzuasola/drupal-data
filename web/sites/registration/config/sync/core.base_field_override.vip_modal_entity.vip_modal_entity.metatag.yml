@@ -4,6 +4,8 @@ status: true
 dependencies:
   module:
     - vip_modal
+_core:
+  default_config_hash: z7od2gu_mJIZmczPh0PUpjwuvLaThaq49VZulQPpNdI
 id: vip_modal_entity.vip_modal_entity.metatag
 field_name: metatag
 entity_type: vip_modal_entity

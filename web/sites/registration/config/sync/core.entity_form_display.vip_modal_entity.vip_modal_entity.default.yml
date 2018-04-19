@@ -9,6 +9,8 @@ dependencies:
   module:
     - text
     - vip_modal
+_core:
+  default_config_hash: WYO8fLaGxKCuSz0UmS9CcYuRyHdiSE9H1uHvhkxeq2g
 id: vip_modal_entity.vip_modal_entity.default
 targetEntityType: vip_modal_entity
 bundle: vip_modal_entity

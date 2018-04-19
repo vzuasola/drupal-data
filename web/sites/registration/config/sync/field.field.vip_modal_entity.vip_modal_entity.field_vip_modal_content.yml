@@ -7,6 +7,8 @@ dependencies:
   module:
     - text
     - vip_modal
+_core:
+  default_config_hash: tKL4ro42AyxhZi3FpKXeHmkK_tKuw5UeAiDU_Npn1N4
 id: vip_modal_entity.vip_modal_entity.field_vip_modal_content
 field_name: field_vip_modal_content
 entity_type: vip_modal_entity

@@ -7,6 +7,8 @@ dependencies:
     - serialization
     - vip_modal
     - webcomposer_rest_extra
+_core:
+  default_config_hash: BIjrsXPiFyzfPMS00KWjCK9zZD_XZ7TAm6KIiri_vFg
 id: vip_modal_rest
 label: 'VIP Modal Rest'
 module: views
