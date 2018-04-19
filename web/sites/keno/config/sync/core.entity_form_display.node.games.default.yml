@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.field.node.games.body
     - field.field.node.games.field_end_date
-    - field.field.node.games.field_game_icon
     - field.field.node.games.field_game_image
     - field.field.node.games.field_game_image_large
     - field.field.node.games.field_game_info
@@ -13,6 +12,7 @@ dependencies:
     - field.field.node.games.field_game_title
     - field.field.node.games.field_image_size
     - field.field.node.games.field_maintenance_blurb
+    - field.field.node.games.field_playing_type
     - field.field.node.games.field_ribbon_configuration
     - field.field.node.games.field_show_game_info_toggle
     - field.field.node.games.field_start_date
@@ -110,14 +110,6 @@ content:
     third_party_settings: {  }
     type: datetime_default
     region: content
-  field_game_icon:
-    weight: 6
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    type: image_image
-    region: content
   field_game_image:
     weight: 12
     settings:
@@ -198,7 +190,8 @@ content:
   field_game_provider:
     weight: 16
     settings: {  }
-    third_party_settings: {  }
+    third_party_settings:
+      conditional_fields: {  }
     type: options_select
     region: content
   field_game_title:
@@ -222,6 +215,30 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
+    region: content
+  field_playing_type:
+    weight: 26
+    settings: {  }
+    third_party_settings:
+      conditional_fields:
+        008c2696-c03e-41e9-902c-653e93fe12ef:
+          dependee: field_game_provider
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                target_id: '302'
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: node
+          bundle: games
+    type: options_select
     region: content
   field_ribbon_configuration:
     weight: 11
