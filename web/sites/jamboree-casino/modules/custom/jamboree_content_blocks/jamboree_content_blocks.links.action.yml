@@ -1,0 +1,5 @@
+entity.content_block_entity.add_form:
+  route_name: entity.content_block_entity.add_form
+  title: 'Add Content block entity'
+  appears_on:
+    - entity.content_block_entity.collection

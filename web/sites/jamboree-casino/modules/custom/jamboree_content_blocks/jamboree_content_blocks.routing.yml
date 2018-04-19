@@ -1,0 +1,7 @@
+jamboree_content_blocks.admin_settings:
+  path: 'admin/config/jamboree/content_block'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Jamboree content Block'
+  requirements:
+    _permission: 'administer site configuration'
