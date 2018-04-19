@@ -10,6 +10,8 @@ dependencies:
     - text
     - user
     - vip_modal
+_core:
+  default_config_hash: TLgEgrxQH_3fYmVp-FCPKEBdfveMjdS0jxi_3xEZTx8
 id: vip_modal_entity.vip_modal_entity.default
 targetEntityType: vip_modal_entity
 bundle: vip_modal_entity
