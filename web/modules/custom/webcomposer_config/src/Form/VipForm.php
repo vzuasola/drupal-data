@@ -44,7 +44,8 @@ class VipForm extends FormBase {
       '#type' => 'textarea',
       '#title' => $this->t('VIP badge tooltip'),
       '#default_value' => $this->get('vip_badge_tooltip') ?: "bronze|You're a Bronze VIP Member",
-      '#description' => $this->t('VIP Level Mapping. e.g."bronze|You are a Bronze VIP Member" where bronze is the key and the former is the text that will be displayed'),
+      '#description' => $this->t('VIP Level Mapping. e.g."bronze|You are a Bronze VIP Member" where bronze is the ' . 
+        'key and the former is the text that will be displayed'),
       '#translatable' => TRUE,
     ];
 
