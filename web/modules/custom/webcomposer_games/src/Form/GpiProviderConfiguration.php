@@ -15,7 +15,7 @@ class GpiProviderConfiguration extends ConfigFormBase {
   /**
    * Gpi Game Providers definitions
    */
-    const gpi_GAME_PROVIDERS = [
+    const GPI_GAME_PROVIDERS = [
         'gpi_keno' => 'GPI Keno',
         'gpi_pk10' => 'GPI PK10',
         'gpi_thai_lottey' => 'GPI Thai Lottey',
@@ -42,7 +42,7 @@ class GpiProviderConfiguration extends ConfigFormBase {
       '#title' => t('Gpi Configurations'),
     ];
 
-    foreach (self::gpi_GAME_PROVIDERS as $key => $value) {
+    foreach (self::GPI_GAME_PROVIDERS as $key => $value) {
       $form[$key] = [
         '#type' => 'details',
         '#title' => t($value),
@@ -62,13 +62,12 @@ class GpiProviderConfiguration extends ConfigFormBase {
       ];
     }
 
-
     $form['gpi_gen_config'] = [
       '#type' => 'details',
       '#title' => t('Gpi General Configurations'),
       '#group' => 'advanced',
+      '#weight' => '0',
     ];
-
 
     $form['gpi_gen_config']['gpi_game_url'] = array(
       '#type' => 'textfield',
@@ -109,7 +108,7 @@ class GpiProviderConfiguration extends ConfigFormBase {
   public function submitForm(array &$form, FormStateInterface $form_state) {
 
     $providers = [];
-    foreach (self::gpi_GAME_PROVIDERS as $key => $value) {
+    foreach (self::GPI_GAME_PROVIDERS as $key => $value) {
       $providers[] = "{$key}_currency";
       $providers[] = "{$key}_language_mapping";
     }
