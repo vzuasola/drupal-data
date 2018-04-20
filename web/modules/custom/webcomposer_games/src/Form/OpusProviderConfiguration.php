@@ -33,7 +33,7 @@ class OpusProviderConfiguration extends ConfigFormBase {
     $message = $config->get('opus_unsupported_currencies_message');
     $form['advanced'] = [
       '#type' => 'vertical_tabs',
-      '#title' => t('Opus and Gpi Configurations'),
+      '#title' => t('Opus Configurations'),
     ];
 
     $form['opus_gen_config'] = [
@@ -116,29 +116,6 @@ class OpusProviderConfiguration extends ConfigFormBase {
       '#description' => $this->t('Defines the Unsupported Currency LightBox Ok button'),
       '#default_value' => $config->get('opus_unsupported_currencies_button')
     );
-    $form['gpi_lottey_gen_config'] = [
-      '#type' => 'details',
-      '#title' => t('GPI Lottery General Configurations'),
-      '#group' => 'advanced',
-    ];
-    $form['gpi_lottey_gen_config']['gpi_lottery_game_url'] = array(
-      '#type' => 'textfield',
-      '#title' => t('Gpi Lottery Game url'),
-      '#description' => $this->t('Defines the  GPI lottery Game Url'),
-      '#default_value' => $config->get('gpi_lottery_game_url')
-    );
-    $form['gpi_lottey_gen_config']['gpi_lottery_keno_version_no'] = array(
-      '#type' => 'textfield',
-      '#title' => t('Gpi Lottery Keno Version Number'),
-      '#description' => $this->t('Defines the  GPI lottery Keno Version Number'),
-      '#default_value' => $config->get('gpi_lottery_keno_version_no')
-    );
-    $form['gpi_lottey_gen_config']['gpi_lottery_vendor_id'] = array(
-      '#type' => 'textfield',
-      '#title' => t('Gpi Lottery Vendor Id'),
-      '#description' => $this->t('Defines the  GPI lottery Vendor Id'),
-      '#default_value' => $config->get('gpi_lottery_vendor_id')
-    );
     $form['actions'] = ['#type' => 'actions'];
 
     $form['actions']['submit'] = [
@@ -168,9 +145,6 @@ class OpusProviderConfiguration extends ConfigFormBase {
       'opus_unsupported_currencies_message',
       'opus_unsupported_currencies_button',
       'opus_fallback_error',
-      'gpi_lottery_game_url',
-      'gpi_lottery_keno_version_no',
-      'gpi_lottery_vendor_id',
     ];
 
     foreach ($keys as $key) {
