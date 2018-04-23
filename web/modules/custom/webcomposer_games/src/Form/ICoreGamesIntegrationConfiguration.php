@@ -25,6 +25,9 @@ class ICoreGamesIntegrationConfiguration extends ConfigFormBase {
         'tgp' => 'TGP',
         'evo_gaming' => 'Evolution Gaming',
         'ebet' => 'eBet',
+        'gpi_keno' => 'GPI Keno',
+        'gpi_pk10' => 'GPI PK10',
+        'gpi_thai_lottery' => 'GPI Thai Lottey',
     ];
 
   /**

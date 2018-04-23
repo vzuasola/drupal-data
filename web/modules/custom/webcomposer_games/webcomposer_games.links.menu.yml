@@ -39,3 +39,10 @@ webcomposer_games.admin_games_exchange_provider:
   parent: webcomposer_games.list
   description: 'Provides configuration for Exchange Lottery Game '
   route_name: webcomposer_games.games_exchange_provider_form  
+
+webcomposer_games.admin_games_gpi_provider:
+  title: 'Gpi Game Configuration'
+  parent: webcomposer_games.list
+  description: 'Provides configuration for gpi Game '
+  route_name: webcomposer_games.games_gpi_provider_form  
+

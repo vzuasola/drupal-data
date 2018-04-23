@@ -1,0 +1,20 @@
+uuid: c47c14b9-dcf2-4846-9f11-c0b7b76d85bc
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+    - webcomposer_slider_v2
+id: webcomposer_slider_v2_entity.field_prelogin_slider_ribbon
+field_name: field_prelogin_slider_ribbon
+entity_type: webcomposer_slider_v2_entity
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
