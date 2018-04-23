@@ -1,0 +1,22 @@
+{#
+/**
+ * @file lobby_product_tiles.html.twig
+ * Default theme implementation to present Lobby Product Tiles data.
+ *
+ * This template is used when viewing Lobby Product Tiles pages.
+ *
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_lobby_product_tiles()
+ *
+ * @ingroup themeable
+ */
+#}
+<div{{ attributes.addClass('lobby_product_tiles') }}>
+  {% if content %}
+    {{- content -}}
+  {% endif %}
+</div>
