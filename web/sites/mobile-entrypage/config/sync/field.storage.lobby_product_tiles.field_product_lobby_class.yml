@@ -4,6 +4,8 @@ status: true
 dependencies:
   module:
     - lobby_product_tiles
+_core:
+  default_config_hash: RU06EO9ZeJ6GdjJXg3enHG8Tf2WPXO00kJbDKyDHdR4
 id: lobby_product_tiles.field_product_lobby_class
 field_name: field_product_lobby_class
 entity_type: lobby_product_tiles

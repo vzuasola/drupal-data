@@ -5,6 +5,8 @@ dependencies:
   module:
     - lobby_product_tiles
     - options
+_core:
+  default_config_hash: nsUCEaQoYQ-stV3D0A7QodvHH2w2x8wqr8atC94ziMI
 id: lobby_product_tiles.field_product_lobby_tag
 field_name: field_product_lobby_tag
 entity_type: lobby_product_tiles
