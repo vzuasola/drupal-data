@@ -112,6 +112,13 @@ class PushNotificationForm extends FormBase {
       ),
     ];
 
+    $form['connection_settings']['producttype_id_mapping'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Product Type Id Mapping'),
+      '#default_value' => $this->get('producttype_id_mapping'),
+      '#description' => $this->t('Product Type Id | Title | Icon'),
+    ];
+
     $form['connection_settings']['retry_count'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Retry Count'),
@@ -177,6 +184,7 @@ class PushNotificationForm extends FormBase {
 
     foreach ($texts as $text) {
       $text_key = strtolower($text);
+      $text_key = str_replace(' ', '', $text_key);
 
       $form['translated_texts_settings']['text_' . $text_key] = [
         '#type' => 'textarea',
@@ -252,6 +260,7 @@ class PushNotificationForm extends FormBase {
     $keys = [
       'enable',
       'producttype_id',
+      'producttype_id_mapping',
       'domain',
       'retry_count',
       'delay_count',
@@ -273,6 +282,7 @@ class PushNotificationForm extends FormBase {
     ];
 
     $texts = array_map('trim', explode(PHP_EOL, $this->get('translated_texts')));
+    $texts = str_replace(' ', '', $texts);
 
     foreach ($texts as $text) {
       $keys[] = 'text_' . strtolower($text);
