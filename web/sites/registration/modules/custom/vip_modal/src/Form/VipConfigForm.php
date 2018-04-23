@@ -55,6 +55,14 @@ class VipConfigForm extends FormBase {
       '#group' => 'vip_settings_tab',
     ];
 
+    $form['rewards_section']['rewards_recognition_title'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Badge title'),
+      '#default_value' => $this->get('rewards_recognition_title') ?: '',
+      '#description' => $this->t('Rewards and Recognition badge title'),
+      '#translatable' => TRUE,
+    ];
+
     $dv = $this->get('rewards_recognition_content');
     $form['rewards_section']['rewards_recognition_content'] = [
       '#type' => 'text_format',
