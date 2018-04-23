@@ -7,6 +7,8 @@ dependencies:
   module:
     - link
     - lobby_product_tiles
+_core:
+  default_config_hash: Vxvpy-s85JQ29ihZlMlRoSfvD1RSxEf8RSTiBxVueIg
 id: lobby_product_tiles.lobby_product_tiles.field_product_lobby_url_pre_log
 field_name: field_product_lobby_url_pre_log
 entity_type: lobby_product_tiles
@@ -14,7 +16,7 @@ bundle: lobby_product_tiles
 label: 'Product Lobby Url Pre Login'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

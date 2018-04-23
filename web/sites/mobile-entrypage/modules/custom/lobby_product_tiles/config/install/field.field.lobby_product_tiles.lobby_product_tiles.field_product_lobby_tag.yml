@@ -7,6 +7,8 @@ dependencies:
   module:
     - lobby_product_tiles
     - options
+_core:
+  default_config_hash: XuhRsrw-Ji_yJrCSA2TU8MYgVynOTWwhLrkD_twCBvA
 id: lobby_product_tiles.lobby_product_tiles.field_product_lobby_tag
 field_name: field_product_lobby_tag
 entity_type: lobby_product_tiles
@@ -14,7 +16,7 @@ bundle: lobby_product_tiles
 label: 'Product Lobby Tag'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

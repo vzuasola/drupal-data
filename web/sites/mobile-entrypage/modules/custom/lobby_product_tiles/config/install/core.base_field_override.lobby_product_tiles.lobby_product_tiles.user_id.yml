@@ -4,6 +4,8 @@ status: true
 dependencies:
   module:
     - lobby_product_tiles
+_core:
+  default_config_hash: ALLbK9qZVsQg5IJT6SGL0XEikVmqndvDMxSiV-T9rvM
 id: lobby_product_tiles.lobby_product_tiles.user_id
 field_name: user_id
 entity_type: lobby_product_tiles
@@ -11,7 +13,7 @@ bundle: lobby_product_tiles
 label: 'Authored by'
 description: 'The user ID of author of the Lobby Product Tiles entity.'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

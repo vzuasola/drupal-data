@@ -6,6 +6,8 @@ dependencies:
     - field.storage.lobby_product_tiles.field_product_lobby_enable
   module:
     - lobby_product_tiles
+_core:
+  default_config_hash: glOC3BPlxo4G3lWcBiuGVsvss0RLgRK9LArqCgxbgAY
 id: lobby_product_tiles.lobby_product_tiles.field_product_lobby_enable
 field_name: field_product_lobby_enable
 entity_type: lobby_product_tiles
@@ -13,7 +15,7 @@ bundle: lobby_product_tiles
 label: 'Product Lobby Enable'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value:
   -
     value: 0

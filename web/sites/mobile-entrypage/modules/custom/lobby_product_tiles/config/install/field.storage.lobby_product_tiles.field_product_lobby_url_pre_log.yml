@@ -5,6 +5,8 @@ dependencies:
   module:
     - link
     - lobby_product_tiles
+_core:
+  default_config_hash: s1y3zgjNrb_IL19ry9xXNKqcoZ8U57QjwbNFy-_l6gE
 id: lobby_product_tiles.field_product_lobby_url_pre_log
 field_name: field_product_lobby_url_pre_log
 entity_type: lobby_product_tiles

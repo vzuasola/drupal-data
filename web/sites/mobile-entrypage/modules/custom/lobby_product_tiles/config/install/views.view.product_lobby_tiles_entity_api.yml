@@ -6,6 +6,8 @@ dependencies:
     - lobby_product_tiles
     - rest
     - serialization
+_core:
+  default_config_hash: CCiTon1tS_lQshNJN4nw0_s_Byg6MYOsQnwg8ut-TZc
 id: product_lobby_tiles_entity_api
 label: 'Product Lobby Tiles Entity API'
 module: views

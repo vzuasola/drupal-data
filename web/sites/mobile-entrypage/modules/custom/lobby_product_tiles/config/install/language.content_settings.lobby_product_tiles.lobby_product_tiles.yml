@@ -7,9 +7,11 @@ dependencies:
     - lobby_product_tiles
 third_party_settings:
   content_translation:
-    enabled: false
+    enabled: true
+_core:
+  default_config_hash: Nbug2u1TyT_bgX-WUBpiPrdQJncnIc2z5MYaMmY0O2o
 id: lobby_product_tiles.lobby_product_tiles
 target_entity_type_id: lobby_product_tiles
 target_bundle: lobby_product_tiles
 default_langcode: site_default
-language_alterable: false
+language_alterable: true
