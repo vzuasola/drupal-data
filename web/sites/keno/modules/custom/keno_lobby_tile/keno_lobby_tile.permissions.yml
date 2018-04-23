@@ -1,0 +1,22 @@
+add keno lobby tile entity entities:
+  title: 'Create new Keno lobby tile entity entities'
+
+administer keno lobby tile entity entities:
+  title: 'Administer Keno lobby tile entity entities'
+  description: 'Allow to access the administration form to configure Keno lobby tile entity entities.'
+  restrict access: true
+
+delete keno lobby tile entity entities:
+  title: 'Delete Keno lobby tile entity entities'
+
+edit keno lobby tile entity entities:
+  title: 'Edit Keno lobby tile entity entities'
+
+access keno lobby tile entity overview:
+  title: 'Access the Keno lobby tile entity overview page'
+
+view published keno lobby tile entity entities:
+  title: 'View published Keno lobby tile entity entities'
+
+view unpublished keno lobby tile entity entities:
+  title: 'View unpublished Keno lobby tile entity entities'

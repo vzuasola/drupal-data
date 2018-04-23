@@ -1,0 +1,18 @@
+uuid: f25b110f-9aba-40d4-b9e5-ff192c2f06b4
+langcode: en
+status: true
+dependencies:
+  module:
+    - keno_lobby_tile
+id: keno_lobby_tile_entity.field_enable_keno_game_launching
+field_name: field_enable_keno_game_launching
+entity_type: keno_lobby_tile_entity
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,27 @@
+uuid: 314148b6-4883-4639-9d1a-ec4e157eef36
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.keno_lobby_tile_entity.field_tile_video
+  module:
+    - file
+    - keno_lobby_tile
+id: keno_lobby_tile_entity.keno_lobby_tile_entity.field_tile_video
+field_name: field_tile_video
+entity_type: keno_lobby_tile_entity
+bundle: keno_lobby_tile_entity
+label: 'Tile Video'
+description: '<i>Note: Upload a separate video with <b>swf</b> format for IE8 browser support</i>'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'mp4 webm ogv swf'
+  max_filesize: '12 MB'
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

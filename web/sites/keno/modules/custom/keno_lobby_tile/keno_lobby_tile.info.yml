@@ -1,0 +1,5 @@
+name: Keno Lobby Tile
+type: module
+description: Handles keno lobby tile configurations
+core: 8.x
+package: Keno
