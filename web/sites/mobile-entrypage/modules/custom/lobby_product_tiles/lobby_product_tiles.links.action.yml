@@ -1,0 +1,5 @@
+entity.lobby_product_tiles.add_form:
+  route_name: entity.lobby_product_tiles.add_form
+  title: 'Add Lobby Product Tiles'
+  appears_on:
+    - entity.lobby_product_tiles.collection
