@@ -1,0 +1,15 @@
+uuid: 1e888a0c-7afc-4de9-bbea-aa1b8b5284fb
+langcode: en
+status: true
+dependencies:
+  module:
+    - content_translation
+    - keno_lobby_tile
+third_party_settings:
+  content_translation:
+    enabled: true
+id: keno_lobby_tile_entity.keno_lobby_tile_entity
+target_entity_type_id: keno_lobby_tile_entity
+target_bundle: keno_lobby_tile_entity
+default_langcode: site_default
+language_alterable: true

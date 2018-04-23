@@ -1,0 +1,7 @@
+keno_lobby_tile.admin_settings:
+  path: 'admin/config/keno/lobby_tile'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Keno Lobby Tile'
+  requirements:
+    _permission: 'administer site configuration'

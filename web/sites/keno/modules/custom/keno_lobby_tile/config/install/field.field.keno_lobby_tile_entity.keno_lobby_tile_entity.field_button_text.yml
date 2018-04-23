@@ -1,0 +1,22 @@
+uuid: f85a83fd-fcab-41b2-be50-26f975bd2d54
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.keno_lobby_tile_entity.field_button_text
+  module:
+    - keno_lobby_tile
+_core:
+  default_config_hash: tz0Djcc_8Fj0PD7MRZuYypqRr1OQw3YzJBgHCf2LzIM
+id: keno_lobby_tile_entity.keno_lobby_tile_entity.field_button_text
+field_name: field_button_text
+entity_type: keno_lobby_tile_entity
+bundle: keno_lobby_tile_entity
+label: 'Button Text'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
