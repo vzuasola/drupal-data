@@ -40,6 +40,7 @@ class VipConfigForm extends FormBase {
     ];
 
     $this->rewardsAndRecognitionSection($form);
+    $this->levelCardSection($form);
 
     return $form;
   }
@@ -72,6 +73,79 @@ class VipConfigForm extends FormBase {
       '#description' => $this->t('VIP rewards and recognition content'),
       '#translatable' => TRUE,
     ];
+  }
+
+  /**
+   * Level Cards Section.
+   */
+  private function levelCardSection(array &$form) {
+
+    $vipConfig = \Drupal::config('webcomposer_config.vip_configuration')->get('vip_mapping_configuration');
+    $vipLevels = explode(PHP_EOL, $vipConfig);
+
+    foreach ($vipLevels as $configValue) {
+      $vipKeys = explode('|', $configValue);
+      $group = "$vipKeys[0]_level_card_section";
+
+      $form[$group] = [
+        '#type' => 'details',
+        '#title' => "$vipKeys[0] Level Card",
+        '#collapsible' => TRUE,
+        '#group' => 'vip_settings_tab',
+      ];
+
+      $form[$group]["$vipKeys[0]_level_card_title"] = [
+        '#type' => 'textfield',
+        '#title' => $this->t('Card title'),
+        '#default_value' => $this->get("$vipKeys[0]_level_card_title") ?: '',
+        '#translatable' => TRUE,
+      ];
+
+      $dv = $this->get("$vipKeys[0]_level_pre_content");
+      $form[$group]["$vipKeys[0]_level_pre_content"] = [
+        '#type' => 'text_format',
+        '#title' => $this->t('Pre Login Content'),
+        '#default_value' => $dv['value'] ?: '',
+        '#format' => $dv['format'],
+        '#translatable' => TRUE,
+      ];
+
+      $dv = $this->get("$vipKeys[0]_level_post_description");
+      $form[$group]["$vipKeys[0]_level_post_description"] = [
+        '#type' => 'text_format',
+        '#title' => $this->t('Post Login Content'),
+        '#default_value' => $dv['value'] ?: '',
+        '#format' => $dv['format'],
+        '#translatable' => TRUE,
+      ];
+
+      $form[$group]["$vipKeys[0]_button_label"] = [
+        '#type' => 'textfield',
+        '#title' => $this->t('Button label'),
+        '#default_value' => $this->get("$vipKeys[0]_button_label") ?: '',
+        '#translatable' => TRUE,
+      ];
+
+      $form[$group]["$vipKeys[0]_button_link"] = [
+        '#type' => 'textfield',
+        '#title' => $this->t('Button link'),
+        '#default_value' => $this->get("$vipKeys[0]_button_link") ?: '',
+        '#translatable' => TRUE,
+      ];
+
+      $form[$group]["$vipKeys[0]_button_target"] = [
+        '#type' => 'select',
+        '#title' => $this->t('Button link target'),
+        '#default_value' => $this->get("$vipKeys[0]_button_target") ?: '',
+        '#translatable' => TRUE,
+        '#options' => [
+          '_blank' => $this->t('New Window'),
+          '_self' => $this->t('Same Window'),
+          'window' => $this->t('New Window'),
+          'modal' => $this->t('Modal'),
+        ],
+      ];
+    }
   }
 
 }
