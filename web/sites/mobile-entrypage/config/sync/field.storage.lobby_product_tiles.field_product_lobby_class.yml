@@ -1,0 +1,21 @@
+uuid: dfbd061e-fe0b-4783-b9b1-19a6601334e0
+langcode: en
+status: true
+dependencies:
+  module:
+    - lobby_product_tiles
+id: lobby_product_tiles.field_product_lobby_class
+field_name: field_product_lobby_class
+entity_type: lobby_product_tiles
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

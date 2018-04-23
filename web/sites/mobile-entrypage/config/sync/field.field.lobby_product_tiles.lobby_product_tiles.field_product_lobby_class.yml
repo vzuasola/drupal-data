@@ -1,0 +1,20 @@
+uuid: 28538212-a441-4ffc-8160-49dc74f28041
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.lobby_product_tiles.field_product_lobby_class
+  module:
+    - lobby_product_tiles
+id: lobby_product_tiles.lobby_product_tiles.field_product_lobby_class
+field_name: field_product_lobby_class
+entity_type: lobby_product_tiles
+bundle: lobby_product_tiles
+label: 'Product Lobby Class'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

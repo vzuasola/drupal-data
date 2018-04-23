@@ -1,0 +1,15 @@
+uuid: e9ca7730-be9a-46a6-adfd-53af8c2e3917
+langcode: en
+status: true
+dependencies:
+  module:
+    - content_translation
+    - lobby_product_tiles
+third_party_settings:
+  content_translation:
+    enabled: false
+id: lobby_product_tiles.lobby_product_tiles
+target_entity_type_id: lobby_product_tiles
+target_bundle: lobby_product_tiles
+default_langcode: site_default
+language_alterable: false

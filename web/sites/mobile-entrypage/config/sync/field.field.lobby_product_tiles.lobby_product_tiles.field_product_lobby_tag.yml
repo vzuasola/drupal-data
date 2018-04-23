@@ -1,0 +1,21 @@
+uuid: 7f64905c-0aab-4ae6-9665-f0f9febc12ae
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.lobby_product_tiles.field_product_lobby_tag
+  module:
+    - lobby_product_tiles
+    - options
+id: lobby_product_tiles.lobby_product_tiles.field_product_lobby_tag
+field_name: field_product_lobby_tag
+entity_type: lobby_product_tiles
+bundle: lobby_product_tiles
+label: 'Product Lobby Tag'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

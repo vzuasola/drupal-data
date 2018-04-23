@@ -1,0 +1,23 @@
+uuid: b77b9416-9d7e-4091-88fe-e5a6ca188090
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.lobby_product_tiles.field_product_lobby_login_state
+  module:
+    - lobby_product_tiles
+    - options
+id: lobby_product_tiles.lobby_product_tiles.field_product_lobby_login_state
+field_name: field_product_lobby_login_state
+entity_type: lobby_product_tiles
+bundle: lobby_product_tiles
+label: 'Product Lobby Login State'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: Pre
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,24 @@
+uuid: 2a5e2c9e-ae8c-4e26-a794-a6056b7acc73
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.lobby_product_tiles.field_product_lobby_enable
+  module:
+    - lobby_product_tiles
+id: lobby_product_tiles.lobby_product_tiles.field_product_lobby_enable
+field_name: field_product_lobby_enable
+entity_type: lobby_product_tiles
+bundle: lobby_product_tiles
+label: 'Product Lobby Enable'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: '1'
+  off_label: '0'
+field_type: boolean
