@@ -39,10 +39,47 @@ class VipConfigForm extends FormBase {
       '#type' => 'vertical_tabs',
     ];
 
+    $this->generalConfig($form);
     $this->rewardsAndRecognitionSection($form);
     $this->levelCardSection($form);
 
     return $form;
+  }
+
+  /**
+   * General Configuration for VIP.
+   */
+  private function generalConfig(array &$form) {
+    $form['general_config_section'] = [
+      '#type' => 'details',
+      '#title' => $this->t('General Config'),
+      '#collapsible' => TRUE,
+      '#group' => 'vip_settings_tab',
+    ];
+    $form['general_config_section']['vip_home_title'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Home title'),
+      '#default_value' => $this->get("vip_home_title") ?: '',
+      '#translatable' => TRUE,
+    ];
+    $form['general_config_section']['vip_level_card_ribbon_title'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Level card ribbon title'),
+      '#default_value' => $this->get("vip_level_card_ribbon_title") ?: '',
+      '#translatable' => TRUE,
+    ];
+    $form['general_config_section']['vip_level_card_blurb'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Level card blurb'),
+      '#default_value' => $this->get("vip_level_card_blurb") ?: '',
+      '#translatable' => TRUE,
+    ];
+    $form['general_config_section']['vip_level_card_unlocked'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('VIP unlocked blurb'),
+      '#default_value' => $this->get("vip_level_card_unlocked") ?: '',
+      '#translatable' => TRUE,
+    ];
   }
 
   /**
@@ -141,7 +178,7 @@ class VipConfigForm extends FormBase {
         '#options' => [
           '_blank' => $this->t('New Window'),
           '_self' => $this->t('Same Window'),
-          'window' => $this->t('New Window'),
+          'window' => $this->t('Popup Window'),
           'modal' => $this->t('Modal'),
         ],
       ];
