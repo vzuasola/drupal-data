@@ -1,0 +1,20 @@
+uuid: 0a04237b-8bb1-45c5-9635-7236748b82d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.left_floating_banner_entity.field_link
+  module:
+    - webcomposer_floating_banners
+id: left_floating_banner_entity.left_floating_banner_entity.field_link
+field_name: field_link
+entity_type: left_floating_banner_entity
+bundle: left_floating_banner_entity
+label: Link
+description: 'Please add the link of text.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

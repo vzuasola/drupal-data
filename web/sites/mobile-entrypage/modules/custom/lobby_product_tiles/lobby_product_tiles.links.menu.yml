@@ -1,0 +1,19 @@
+lobby_product_tiles.list:
+  title: 'Mobile Porduct Tiles'
+  description: 'List Product Tiles entities'
+  parent: system.admin_config
+  route_name: product_tiles.admin_settings
+
+
+# Lobby Product Tiles menu items definition
+entity.lobby_product_tiles.collection:
+  title: 'Lobby Product Tiles list'
+  route_name: entity.lobby_product_tiles.collection
+  description: 'List Lobby Product Tiles entities'
+  parent: lobby_product_tiles.list
+
+lobby_product_tiles.admin.structure.settings:
+  title: Lobby Product Tiles settings
+  description: 'Configure Lobby Product Tiles entities'
+  route_name: lobby_product_tiles.settings
+  parent: lobby_product_tiles.list
