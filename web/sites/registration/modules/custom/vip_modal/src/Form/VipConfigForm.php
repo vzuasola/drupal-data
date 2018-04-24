@@ -156,6 +156,15 @@ class VipConfigForm extends FormBase {
         '#translatable' => TRUE,
       ];
 
+      $dv = $this->get("$vipKeys[0]_level_unlocked_content");
+      $form[$group]["$vipKeys[0]_level_unlocked_content"] = [
+        '#type' => 'text_format',
+        '#title' => $this->t('Unlocked Content'),
+        '#default_value' => $dv['value'] ?: '',
+        '#format' => $dv['format'],
+        '#translatable' => TRUE,
+      ];
+
       $form[$group]["$vipKeys[0]_button_label"] = [
         '#type' => 'textfield',
         '#title' => $this->t('Button label'),
