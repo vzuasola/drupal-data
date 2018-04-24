@@ -1,0 +1,27 @@
+uuid: 201c0901-4dca-401a-a6f1-b1f960801461
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - webcomposer_announcements
+id: announcement_entity.field_availability
+field_name: field_availability
+entity_type: announcement_entity
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '0'
+      label: 'Pre Login'
+    -
+      value: '1'
+      label: 'Post Login'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 2
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
