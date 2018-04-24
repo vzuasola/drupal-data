@@ -5,6 +5,8 @@ namespace Drupal\keno_config\Form;
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\file\Entity\File;
+use Drupal\Core\Url;
+use Drupal\Core\Link;
 
 /**
  * Configuration Form for Keno Configuration.
@@ -109,6 +111,7 @@ class KenoConfigForm extends ConfigFormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Basic Page Titles'),
       '#default_value' => $config->get('basic_page_title'),
+      '#description' => $this->t('For sorting of Basic Pages in Page list go to '. Link::fromTextAndUrl(t('this link'), Url::fromUri('internal:/admin/structure/sort-page-list',array()))->toString() . '.'),
     ];
 
     $form['balance_keno'] = [
