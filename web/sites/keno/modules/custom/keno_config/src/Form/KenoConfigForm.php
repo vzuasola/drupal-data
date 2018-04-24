@@ -107,7 +107,7 @@ class KenoConfigForm extends ConfigFormBase {
       ],
     ];
 
-    $pageListSortUrl = Url::fromUri('internal:/admin/structure/sort-page-list', array());
+    $pageListSortUrl = Url::fromUri('internal:/admin/structure/sort-page-list', []);
     $pageListSortLink = Link::fromTextAndUrl(t('this link'), $pageListSortUrl);
 
     $form['basic_page']['basic_page_title'] = [
