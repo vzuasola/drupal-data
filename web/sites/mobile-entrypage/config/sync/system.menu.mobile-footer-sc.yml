@@ -1,0 +1,8 @@
+uuid: 503fad98-4b32-49d6-adf6-d97e0bd1b589
+langcode: zh-hans
+status: true
+dependencies: {  }
+id: mobile-footer-sc
+label: 'Mobile Footer SC'
+description: ''
+locked: false
