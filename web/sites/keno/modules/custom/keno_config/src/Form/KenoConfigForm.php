@@ -107,11 +107,14 @@ class KenoConfigForm extends ConfigFormBase {
       ],
     ];
 
+    $pageListSortUrl = Url::fromUri('internal:/admin/structure/sort-page-list', array());
+    $pageListSortLink = Link::fromTextAndUrl(t('this link'), $pageListSortUrl);
+
     $form['basic_page']['basic_page_title'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Basic Page Titles'),
       '#default_value' => $config->get('basic_page_title'),
-      '#description' => $this->t('For sorting of Basic Pages in Page list go to '. Link::fromTextAndUrl(t('this link'), Url::fromUri('internal:/admin/structure/sort-page-list',array()))->toString() . '.'),
+      '#description' => $this->t('For sorting Basic Pages in a Page List go to '. $pageListSortLink->toString() . '.'),
     ];
 
     $form['balance_keno'] = [
