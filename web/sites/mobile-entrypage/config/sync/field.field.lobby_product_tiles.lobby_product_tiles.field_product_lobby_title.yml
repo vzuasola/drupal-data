@@ -12,7 +12,7 @@ entity_type: lobby_product_tiles
 bundle: lobby_product_tiles
 label: 'Product Lobby Title'
 description: ''
-required: false
+required: true
 translatable: true
 default_value: {  }
 default_value_callback: ''
