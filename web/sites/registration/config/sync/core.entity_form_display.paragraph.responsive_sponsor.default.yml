@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.responsive_sponsor.field_mobile_sponsor_text
     - field.field.paragraph.responsive_sponsor.field_res_sponsor_image
     - field.field.paragraph.responsive_sponsor.field_res_sponsor_link
     - field.field.paragraph.responsive_sponsor.field_res_sponsor_link_target
@@ -18,6 +19,14 @@ targetEntityType: paragraph
 bundle: responsive_sponsor
 mode: default
 content:
+  field_mobile_sponsor_text:
+    weight: 7
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_res_sponsor_image:
     weight: 2
     settings:
