@@ -1,0 +1,8 @@
+name: Dafa Sports Custom Configuration
+type: module
+description: Dafa Sports Custom Configuration Form
+core: 8.x
+package: Web Composer
+
+dependencies:
+  - webcomposer_config_schema

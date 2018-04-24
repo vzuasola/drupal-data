@@ -1,0 +1,22 @@
+# Content block entity routing definition
+content_block_entity.settings_tab:
+  route_name: content_block_entity.settings
+  title: 'Settings'
+  base_route: content_block_entity.settings
+
+entity.content_block_entity.canonical:
+  route_name: entity.content_block_entity.canonical
+  base_route: entity.content_block_entity.canonical
+  title: 'View'
+
+entity.content_block_entity.edit_form:
+  route_name: entity.content_block_entity.edit_form
+  base_route: entity.content_block_entity.canonical
+  title: 'Edit'
+
+entity.content_block_entity.delete_form:
+  route_name:  entity.content_block_entity.delete_form
+  base_route:  entity.content_block_entity.canonical
+  title: Delete
+  weight: 10
+

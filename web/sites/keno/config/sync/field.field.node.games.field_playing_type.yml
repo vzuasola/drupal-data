@@ -1,0 +1,23 @@
+uuid: 1d4c9047-081b-400d-afeb-22b1d338462c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_playing_type
+    - node.type.games
+  module:
+    - options
+id: node.games.field_playing_type
+field_name: field_playing_type
+entity_type: node
+bundle: games
+label: 'Playing Type'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: '1'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

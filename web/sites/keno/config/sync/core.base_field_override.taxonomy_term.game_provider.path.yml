@@ -1,0 +1,20 @@
+uuid: f461c95b-2304-4fb5-abb6-38c8c61dc68a
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.game_provider
+  module:
+    - path
+id: taxonomy_term.game_provider.path
+field_name: path
+entity_type: taxonomy_term
+bundle: game_provider
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

@@ -155,28 +155,30 @@ $ drupal --uri=entrypage.drupal.dev ce
 * Create a `webcomposer_module.install` and put an uninstall hook. Change the keys to all the files on your
 `config/install` folder
 
+Make sure to ommit the .yml file extension when listing the configs
+
 ```php
 /**
  * Implements hook_uninstall
  */
 function webcomposer_slider_uninstall() {
   $keys = [
-    'core.entity_form_display.webcomposer_slider_entity.webcomposer_slider_entity.default.yml',
-    'core.entity_view_display.webcomposer_slider_entity.webcomposer_slider_entity.default.yml',
-    'field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_banner_image.yml',
-    'field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_banner_link_target.yml',
-    'field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_banner_link.yml',
-    'field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_blurb.yml',
-    'field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_log_in_state.yml',
-    'field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_title.yml',
-    'field.storage.webcomposer_slider_entity.field_banner_image.yml',
-    'field.storage.webcomposer_slider_entity.field_banner_link_target.yml',
-    'field.storage.webcomposer_slider_entity.field_banner_link.yml',
-    'field.storage.webcomposer_slider_entity.field_blurb.yml',
-    'field.storage.webcomposer_slider_entity.field_log_in_state.yml',
-    'field.storage.webcomposer_slider_entity.field_title.yml',
-    'language.content_settings.webcomposer_slider_entity.webcomposer_slider_entity.yml',
-    'views.view.webcomposer_slider.yml',
+    'core.entity_form_display.webcomposer_slider_entity.webcomposer_slider_entity.default',
+    'core.entity_view_display.webcomposer_slider_entity.webcomposer_slider_entity.default',
+    'field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_banner_image',
+    'field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_banner_link_target',
+    'field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_banner_link',
+    'field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_blurb',
+    'field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_log_in_state',
+    'field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_title',
+    'field.storage.webcomposer_slider_entity.field_banner_image',
+    'field.storage.webcomposer_slider_entity.field_banner_link_target',
+    'field.storage.webcomposer_slider_entity.field_banner_link',
+    'field.storage.webcomposer_slider_entity.field_blurb',
+    'field.storage.webcomposer_slider_entity.field_log_in_state',
+    'field.storage.webcomposer_slider_entity.field_title',
+    'language.content_settings.webcomposer_slider_entity.webcomposer_slider_entity',
+    'views.view.webcomposer_slider',
   ];
 
   foreach ($keys as $key) {

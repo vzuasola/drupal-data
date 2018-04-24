@@ -1,0 +1,56 @@
+uuid: d56df07b-ae6a-443d-80dd-1ae39932408c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.dropdown_menu_entity.dropdown_menu_entity.field_dropdown_submenu_items
+    - field.field.dropdown_menu_entity.dropdown_menu_entity.field_main_menu
+  module:
+    - entity_reference_revisions
+    - jamboree_dropdown_menu
+    - link
+id: dropdown_menu_entity.dropdown_menu_entity.default
+targetEntityType: dropdown_menu_entity
+bundle: dropdown_menu_entity
+mode: default
+content:
+  field_dropdown_submenu_items:
+    type: entity_reference_revisions_entity_view
+    weight: 3
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_main_menu:
+    weight: 1
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  langcode:
+    type: language
+    weight: 2
+    region: content
+    label: above
+    settings:
+      link_to_entity: true
+      native_language: false
+    third_party_settings: {  }
+  name:
+    label: above
+    type: string
+    weight: 0
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  user_id: true

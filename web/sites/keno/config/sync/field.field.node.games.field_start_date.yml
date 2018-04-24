@@ -1,0 +1,21 @@
+uuid: c0867237-0519-4cb2-887f-10824bf12c64
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_start_date
+    - node.type.games
+  module:
+    - datetime
+id: node.games.field_start_date
+field_name: field_start_date
+entity_type: node
+bundle: games
+label: 'Start Date'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

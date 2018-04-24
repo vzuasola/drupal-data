@@ -5,12 +5,20 @@ critical_announcement_content:
 news_announcement_content:
   value: "<p>Test Test</p>\r\n"
   format: basic_html
+capslock_notification: 'Caps Lock aktif'
 join_now_text: GABUNG
+join_now_link: '/{domain:entry}/{domain:lang_token}/cant-login[query:({credentials.params}&{tracking})]'
 login_issue_text: 'Tidak bisa Login?'
+login_issue_link: '/{domain:entry}/{domain:lang_token}/cant-login[query:({credentials.params}&{tracking})]'
+product_balance_label: 'Account Balance'
+total_balance_label: 'Total Saldo'
 balance_error_text: '"Pesan Error Total Saldo"  Error.'
 profile_icon_hover_text: 'Profil Saya'
 cashier_icon_hover_text: Kasir
 product_menu_new_tag: Baru
 welcome_text: 'Selamat Datang {username}'
-balance_label_mapping: "4|OW Sports\r\n6|Dafa Sports\r\n1|Kasino Klasik\r\n2|Kasino Gold\r\n5|Live Dealer, Games, & Virtual\r\n8|Opus Live Dealer\r\n9|Keno\r\n3|Poker\r\n7|Fish Hunter"
-total_balance_label: 'Total Saldo'
+profile_link: '/{domain:myaccount_domain}/{lang}/my-profile[query:(ticket={auth.token}&{tracking}&width=820&height=700)]'
+profile_logout_text: Logout
+balance_label_mapping: "4|OW Sports\r\n6|Dafa Sports\r\n10|Barter\r\n1|Kasino Klasik\r\n2|Kasino Gold\r\n5|Live Dealer, Games, & Virtual\r\n8|Opus Live Dealer\r\n9|Keno\r\n3|Poker\r\n7|Fish Hunter"
+balance_error_text_product: '{domain:cashier_domain}/{domain:lang_token}/payment-options[query:(ticket={auth.token}&{tracking}&width=820&height=700)]'
+cashier_link: '{domain:cashier_domain}/{domain:lang_token}/payment-options[query:(ticket={auth.token}&{tracking}&width=820&height=700)]'

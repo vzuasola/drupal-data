@@ -1,0 +1,7 @@
+product_tiles.admin_settings:
+  path: 'admin/config/mobile/product_tiles'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Product Tiles'
+  requirements:
+    _permission: 'administer product tiles configuration'

@@ -1,0 +1,20 @@
+uuid: 175c694c-1401-4710-8746-061cc00327cd
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+    - webcomposer_slider_v2
+id: webcomposer_slider_v2_entity.field_postlogin_slider_ribbon
+field_name: field_postlogin_slider_ribbon
+entity_type: webcomposer_slider_v2_entity
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

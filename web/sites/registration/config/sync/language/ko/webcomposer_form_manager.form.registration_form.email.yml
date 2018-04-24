@@ -26,8 +26,10 @@ field_validations:
   username_availability:
     error_message: 'Username not available'
   email_availability:
-    error_message: '이 이메일은 이미 사용 중입니다. 아이디/비밀번호를 되찾으려면 <a href="/kr/cant-login" target="popup" onclick="window.open(''/kr/cant-login'',''popup'',''width=820,height=810,scrollbars=no,resizable=no''); return false;">여기</a>를 클릭하십시오.'
+    error_message: "<span class=\"visible-desktop\">이 이메일은 이미 사용 중입니다. 아이디/비밀번호를 되찾으려면 <a href=\"/kr/cant-login\" target=\"popup\" onclick=\"window.open('/kr/cant-login','popup','width=820,height=810,scrollbars=no,resizable=no'); return false;\" class=\"visible-desktop\">여기</a>를 클릭하십시오.</span>\r\n<span class=\"visible-tablet\">이 이메일은 이미 사용 중입니다. 아이디/비밀번호를 되찾으려면 <a href=\"/kr/cant-login\" target=\"_blank\" class=\"visible-tablet\">여기</a>를 클릭하십시오.</span>\r\n<span class=\"visible-mobile\">이 이메일은 이미 사용 중입니다. 아이디/비밀번호를 되찾으려면 <a href=\"/kr/cant-login\" target=\"_blank\" class=\"visible-mobile\">여기</a>를 클릭하십시오.</span>\r\n<span class=\"visible-app\">이 이메일은 이미 사용 중입니다. 아이디/비밀번호를 되찾으려면 <a href=\"https://m.dafawin.com/kr/cant-login?clientflag=1\" target=\"_blank\" class=\"visible-app\">여기</a>를 클릭하십시오.</span>"
   invalid_words:
     error_message: 'Invalid/not allowed characters'
   valid_languages:
     error_message: 'This field only accepts specific characters.'
+  valid_date:
+    error_message: 'Date is invalid'

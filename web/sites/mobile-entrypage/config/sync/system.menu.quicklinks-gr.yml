@@ -1,0 +1,8 @@
+uuid: bc6cdc45-1556-4ee5-b43b-68b65b5015f7
+langcode: el
+status: true
+dependencies: {  }
+id: quicklinks-gr
+label: 'Quicklinks GR'
+description: ''
+locked: false
