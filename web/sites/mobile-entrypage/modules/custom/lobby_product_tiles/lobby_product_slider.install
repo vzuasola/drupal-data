@@ -21,6 +21,8 @@ function lobby_product_tiles_uninstall() {
     'field.storage.lobby_product_tiles.field_product_lobby_url_pre_log',
     'language.content_settings.lobby_product_tiles.lobby_product_tiles',
     'views.view.product_lobby_tiles_entity_api',
+    'field.field.lobby_product_tiles.lobby_product_tiles.field_product_lobby_title',
+    'field.storage.lobby_product_tiles.field_product_lobby_title'
   ];
 
   foreach ($keys as $key) {
