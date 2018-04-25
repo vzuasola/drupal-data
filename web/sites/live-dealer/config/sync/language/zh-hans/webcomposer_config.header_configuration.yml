@@ -1,15 +1,30 @@
+lobby_page_title: dafabet娱乐场-最好的在线娱乐场dafabet超级大奖等你来！
 join_now_text: 立即加入
-join_now_link: '/{domain:entry}/{lang}/join/live-dealer[query:({tracking})]'
+join_now_link: '/{domain:entry}/{lang}/cant-login?title=cantLogin{tracking.token}'
 login_issue_text: 无法登录？
 login_issue_link: '/{domain:entry}/{lang}/cant-login?title=cantLogin{tracking.token}'
+product_balance_label: Balance
+total_balance_label: 总余额
 balance_error_text: 错误检索
 profile_icon_hover_text: 我的账户
 cashier_icon_hover_text: 出纳柜台
 product_menu_new_tag: '新 '
 welcome_text: '欢迎 {username}'
+profile_link: '#'
 profile_logout_text: 登出
-lobby_page_title: dafabet娱乐场-最好的在线娱乐场dafabet超级大奖等你来！
 balance_label_mapping: "4|沙巴体育\r\n6|大发体育\r\n1|娱乐场经典版\r\n2|娱乐场黄金版\r\n5|现场荷官，老虎机，& 虚拟运动\r\n8|OPUS现场荷官\r\n9|快乐彩\r\n3|扑克\r\n7|捕鱼王"
-balance_error_text_product: 无
-total_balance_label: 总余额
+balance_error_text_product: '{domain:cashier_domain}/{lang}[query:(ticket={auth.token}&{tracking}&product=live-dealer&title=headerPopup)]'
 balance_mapping: '5|现场荷官，老虎机，& 虚拟运动'
+cashier_link: '{domain:cashier_domain}/{lang}[query:(ticket={auth.token}&{tracking}&product=live-dealer&title=headerPopup)]'
+header_settings_tab__active_tab: edit-login-group
+logo_title: Home
+capslock_notification: 大写锁定已开启
+balance_label_override: 现场荷官、老虎机、虚拟运动和大发彩票lottery
+critical_announcement: 0
+critical_announcement_content:
+  value: "<p>This is a critical announcement test test test</p>\r\n"
+  format: basic_html
+news_announcement: 0
+news_announcement_content:
+  value: "<p>test</p>\r\n"
+  format: basic_html
