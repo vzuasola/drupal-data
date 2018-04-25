@@ -1,0 +1,16 @@
+lobby_page_title: Dafabetでバーチャルスポーツベットを始めましょう！
+critical_announcement_content:
+  value: "<p>現在お知らせはございません。</p>\r\n"
+  format: basic_html
+join_now_text: 登録する
+join_now_link: '/{domain:entry}/{domain:lang_token}/join/virtual-sports{tracking.token}'
+login_issue_text: ログインができない場合は？
+product_balance_label: ライブディーラー、ゲーム、アーケード＆バーチャル
+total_balance_label: 総残高
+balance_error_text: エラーが検出されました。
+profile_icon_hover_text: お客様情報
+cashier_icon_hover_text: バンキング
+product_menu_new_tag: 新
+welcome_text: 'ようこそ{username} 様'
+profile_logout_text: ログアウト
+balance_error_text_product: なし

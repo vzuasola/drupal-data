@@ -1,26 +1,39 @@
 join_now_text: 'JOIN NOW'
-join_now_link: '/{domain:registration_link}{tracking.token}'
+join_now_link: '/{domain:entry}/{lang}/join/virtual-sports{tracking.token}'
 login_issue_text: 'Cant login?'
 login_issue_link: '/{domain:entry}/{domain:lang_token}/cant-login{tracking.token}'
 sc_lang_text: SC
 ch_lang_text: CH
-balance_error_text: 'Error Retrieving.'
+balance_error_text: N/A
 profile_icon_hover_text: 'My Profile'
 cashier_icon_hover_text: Cashier
 product_menu_new_tag: NEW
 welcome_text: 'Welcome {username}'
-profile_link: '{domain:myaccount_domain}/{domain:lang_token}/my-profile'
+profile_link: '/{domain:myaccount_domain}/{lang}/my-profile?title=headerPopup&width=820&height=700&token={legacy.credentials}'
 profile_logout_text: Logout
 _core:
   default_config_hash: Ynx2hkfeSTtNe4GyBQ1t4lBkrV4wrazLGjX_M7Mk3mg
-lobby_page_title: 'Online Betting - Bet on Sports, Play Online Casino and Poker at Dafabet'
-critical_announcement: '0'
+lobby_page_title: 'Start placing your Virtual Sports Bets with Dafabet!'
+critical_announcement: '1'
 critical_announcement_content:
-  value: "<p>This is a critical announcement test test test</p>\r\n"
+  value: "<p>Our Webchat will not be available on February 21 5:00-5:30AM GMT+8, as we upgrade our site in order to make your experience with us much better. You may contact us in our other communication channels-social media and downloadable client chat or you may send us an email. Thank you.</p>\r\n"
   format: basic_html
 news_announcement: '0'
 news_announcement_content:
   value: "<p>test</p>\r\n"
   format: basic_html
-balance_label_mapping: "4|OW Sports\r\n6|Dafa Sports\r\n1|Casino Classic\r\n2|Casino Gold\r\n5|Live Dealer & Games\r\n3|Poker\r\n7|Fish Hunter\r\n8|Virtuals"
+balance_label_mapping: "4|OW Sports\r\n6|Dafa Sports\r\n10|Exchange\r\n1|Casino Classic\r\n2|Casino Gold\r\n5|Live Dealer, Games, Arcade, & Virtuals\r\n3|Poker\r\n7|AG Fish Hunter\r\n8|Opus Live Dealer\r\n9|Keno"
 balance_error_text_product: N/A
+balance_toggle: 1
+product_balance_label: 'Live Dealer, Games, & Virtuals'
+total_balance_label: 'Total Balance '
+product_balance_id: '5'
+currency_balance_mapping: "9|RMB,MYR,THB,KRW,VND,USD,IDR,INR,EUR\r\n7|RMB\r\n8|RMB,MYR,THB,KRW,VND,USD,IDR,INR,EUR\r\n10|USD,INR"
+excluded_balance_mapping: '7'
+cashier_link: '{domain:cashier_domain}/{lang}?ticket={auth.token}&product=virtuals&title=headerPopup&width=820&height=700'
+balance_mapping: '5|Live Dealer, Games, Arcade, & Virtuals'
+balance_label_override: 现场荷官、老虎机、街机、虚拟运动、和大发彩票
+logo_title: Dafabet
+password_mask_toggle: 0
+caps_lock_toggle: 0
+capslock_notification: test

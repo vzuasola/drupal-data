@@ -1,0 +1,20 @@
+uuid: da17431a-da31-46a7-a07d-2b6880ba957a
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.affiliates_group
+  module:
+    - path
+id: taxonomy_term.affiliates_group.path
+field_name: path
+entity_type: taxonomy_term
+bundle: affiliates_group
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path
