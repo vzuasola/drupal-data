@@ -6,6 +6,7 @@ dependencies:
     - field.field.lobby_product_tiles.lobby_product_tiles.field_product_lobby_class
     - field.field.lobby_product_tiles.lobby_product_tiles.field_product_lobby_enable
     - field.field.lobby_product_tiles.lobby_product_tiles.field_product_lobby_tag
+    - field.field.lobby_product_tiles.lobby_product_tiles.field_product_lobby_title
     - field.field.lobby_product_tiles.lobby_product_tiles.field_product_lobby_url_post_log
     - field.field.lobby_product_tiles.lobby_product_tiles.field_product_lobby_url_pre_log
   module:
@@ -19,7 +20,7 @@ bundle: lobby_product_tiles
 mode: default
 content:
   field_product_lobby_class:
-    weight: 4
+    weight: 5
     settings:
       size: 60
       placeholder: ''
@@ -27,20 +28,28 @@ content:
     type: string_textfield
     region: content
   field_product_lobby_enable:
-    weight: 1
+    weight: 2
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
   field_product_lobby_tag:
-    weight: 5
+    weight: 6
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
+  field_product_lobby_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_product_lobby_url_post_log:
-    weight: 3
+    weight: 4
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -48,7 +57,7 @@ content:
     type: link_default
     region: content
   field_product_lobby_url_pre_log:
-    weight: 2
+    weight: 3
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -64,8 +73,10 @@ content:
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 10
+    weight: 7
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   langcode: true
   user_id: true
