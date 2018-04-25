@@ -9,7 +9,7 @@ administer webcomposer slider 2.0 entity entities:
 delete webcomposer slider 2.0 entity entities:
   title: 'Delete Webcomposer slider 2.0 entity entities'
 
-edit webcomposer slider entity 2.0 entities:
+edit webcomposer slider 2.0 entity entities:
   title: 'Edit Webcomposer slider 2.0 entity entities'
 
 access webcomposer slider 2.0 entity overview:
