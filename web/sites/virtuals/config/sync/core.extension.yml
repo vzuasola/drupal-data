@@ -21,6 +21,7 @@ module:
   contextual: 0
   ctools: 0
   datetime: 0
+  dblog: 0
   devel: 0
   draggableviews: 0
   dynamic_page_cache: 0
@@ -42,6 +43,9 @@ module:
   locale: 0
   menu_link_attributes: 0
   menu_ui: 0
+  metatag: 0
+  metatag_open_graph: 0
+  metatag_views: 0
   node: 0
   options: 0
   paragraphs: 0
@@ -68,7 +72,6 @@ module:
   webcomposer_announcements: 0
   webcomposer_avaya: 0
   webcomposer_config: 0
-  webcomposer_connector: 0
   webcomposer_dm: 0
   webcomposer_domain_import: 0
   webcomposer_downloadables: 0
@@ -77,6 +80,7 @@ module:
   webcomposer_games: 0
   webcomposer_language_hierarchy: 0
   webcomposer_marketing_script: 0
+  webcomposer_metatags: 0
   webcomposer_partner: 0
   webcomposer_promotions: 0
   webcomposer_registration_landing_page: 0

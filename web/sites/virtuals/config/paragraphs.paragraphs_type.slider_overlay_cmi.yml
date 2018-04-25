@@ -1,7 +1,0 @@
-uuid: 8e64bf3f-947f-48a8-a8e2-54d4ad03e316
-langcode: en
-status: true
-dependencies: {  }
-id: slider_overlay_cmi
-label: 'Slider Overlay CMI'
-behavior_plugins: {  }

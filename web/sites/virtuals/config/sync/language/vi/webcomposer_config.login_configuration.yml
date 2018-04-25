@@ -1,0 +1,22 @@
+autologout_box_content:
+  format: basic_html
+  value: "<p>Lượt truy cập của Quý Khách sẽ kết thúc trong vòng {seconds}. Quý Khách có muốn tiếp tục truy cập?</p>\r\n"
+notification_content:
+  format: basic_html
+  value: "<p>Lượt truy cập của Quý Khách đã kết thúc vì không có hoạt động.</p>\r\n"
+lightbox_blurb: 'Bạn chưa phải thành viên Dafabet?'
+username_placeholder: 'Tên đăng nhập'
+password_placeholder: 'Mật khẩu'
+login_bottom_label: 'ĐĂNG NHẬP'
+error_message_blank_username: 'Điền Tên đăng nhập là bắt buộc.'
+error_message_blank_password: 'Điền Mật khẩu là bắt buộc.'
+error_message_blank_passname: 'Vui lòng kiểm tra tất cả các mục và thử lại.'
+error_message_invalid_passname: 'Rất tiếc, Tên đăng nhập và Mật khẩu bạn vừa nhập không đúng. Vui lòng thử lại.'
+error_message_service_not_available: 'Dịch vụ không có sẵn.'
+error_message_account_suspended: 'Tài khoản đã bị khóa. Vui lòng liên hệ Bộ phận hỗ trợ khách hàng của chúng tôi.'
+error_message_account_locked: 'Tài khoản đã bị khóa. Vui lòng liên hệ Bộ phận hỗ trợ khách hàng của chúng tôi.'
+autologout_box_title: 'LƯU Ý'
+affirmative_button_text: 'CÓ '
+negative_button_text: KHÔNG
+notification_title: 'THÔNG BÁO'
+notification_window_title: 'Phiên truy cập kết thúc'
