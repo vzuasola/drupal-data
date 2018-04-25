@@ -1,8 +1,8 @@
 lobby_page_title: "ดาฟาเบทคาสิโน – เดิมพันเกมส์คาสิโนออนไลน์และลุ้นรับแจ็คพ็อตสุดยิ่งใหญ่\_"
 join_now_text: สมัครสมาชิก
-join_now_link: '/{domain:entry}/{lang}/cant-login?title=cantLogin{tracking.token}'
+join_now_link: '/{domain:entry}/{lang}/join/live-dealer[query:({tracking})]'
 login_issue_text: 'ลืมรหัสผ่าน?'
-login_issue_link: '/{domain:entry}/{lang}/cant-login?title=cantLogin{tracking.token}'
+login_issue_link: '/{domain:entry}/{lang}/cant-login[query:(title=cantLogin&{tracking})]'
 product_balance_label: Balance
 total_balance_label: 'ยอดคงเหลือทั้งหมด '
 balance_error_text: เกิดความผิดพลาดในการเรียกดู
@@ -13,10 +13,10 @@ welcome_text: 'ยินดีต้อนรับ {username}'
 profile_link: '#'
 profile_logout_text: ออกจากระบบ
 balance_label_mapping: "4|กีฬา\r\n6|กีฬาเอเชีย\r\n1|คาสิโน คลาสสิค\r\n2|คาสิโนโกลด์\r\n5|ดีลเลอร์สด/ เกมส์/ เกมส์จำลอง\r\n8|บัญชีดีลเลอร์สด (Opus)\r\n9|คีโน\r\n3|โป๊กเกอร์\r\n7|Fish Hunter"
-balance_error_text_product: '{domain:cashier_domain}/{lang}[query:(ticket={auth.token}&{tracking}&product=live-dealer&title=headerPopup)]'
+balance_error_text_product: N/A
 balance_mapping: '5|ดีลเลอร์สด/ เกมส์/ เกมส์จำลอง'
 cashier_link: '{domain:cashier_domain}/{lang}[query:(ticket={auth.token}&{tracking}&product=live-dealer&title=headerPopup)]'
-header_settings_tab__active_tab: edit-login-group
+header_settings_tab__active_tab: edit-balance-group
 logo_title: Home
 capslock_notification: 'ปิดปุ่ม Caps Lock'
 balance_label_override: 现场荷官、老虎机、虚拟运动和大发彩票lottery

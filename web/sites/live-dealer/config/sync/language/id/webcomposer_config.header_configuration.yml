@@ -1,7 +1,7 @@
 join_now_text: GABUNG
-join_now_link: '/{domain:entry}/{domain:lang_token}/cant-login{tracking.token}'
+join_now_link: '/{domain:entry}/{lang}/join/live-dealer[query:({tracking})]'
 login_issue_text: 'Tidak bisa Login?'
-login_issue_link: '/{domain:entry}/{domain:lang_token}/cant-login{tracking.token}'
+login_issue_link: '/{domain:entry}/{lang}/cant-login[query:(title=cantLogin&{tracking})]'
 product_balance_label: 'Salso Kasino Klasik'
 total_balance_label: 'Total Saldo'
 balance_error_text: '"Pesan Error Total Saldo"  Error.'
@@ -13,7 +13,7 @@ profile_link: '#'
 profile_logout_text: Logout
 balance_label_mapping: "4|OW Sports\r\n6|Dafa Sports\r\n1|Kasino Klasik\r\n2|Kasino Gold\r\n5|Live Dealer, Games, & Virtual\r\n8|Opus Live Dealer\r\n9|Keno\r\n3|Poker\r\n7|Fish Hunter"
 balance_mapping: '5|Live Dealer, Games, & Virtual'
-header_settings_tab__active_tab: edit-login-group
+header_settings_tab__active_tab: edit-balance-group
 logo_title: Home
 capslock_notification: 'Caps Lock aktif'
 cashier_link: '{domain:cashier_domain}/{lang}[query:(ticket={auth.token}&{tracking}&product=live-dealer&title=headerPopup)]'

@@ -1,7 +1,7 @@
 join_now_text: 'Join Now'
 join_now_link: '/{domain:entry}/{lang}/join/live-dealer[query:({tracking})]'
 login_issue_text: 'Cant login?'
-login_issue_link: '/{domain:entry}/{lang}/cant-login?title=cantLogin{tracking.token}'
+login_issue_link: '/{domain:entry}/{lang}/cant-login[query:(title=cantLogin&{tracking})]'
 sc_lang_text: SC
 ch_lang_text: CH
 balance_error_text: 'Error Retrieving.'
@@ -37,6 +37,6 @@ currency_balance_mapping: 7|RMB
 excluded_balance_mapping: '7'
 balance_label_override: 现场荷官、老虎机、虚拟运动和大发彩票lottery
 balance_mapping: '5|Live Dealer, Games, & Virtuals'
-header_settings_tab__active_tab: edit-login-group
+header_settings_tab__active_tab: edit-balance-group
 value: null
 format: null

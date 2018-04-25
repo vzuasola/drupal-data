@@ -1,8 +1,8 @@
 lobby_page_title: '다파벳 카지노 - 온라인 카지노 게임을 플레이하고 큰 잭팟에 당첨되기'
 join_now_text: '가입 하기'
-join_now_link: '/{domain:entry}/{domain:lang_token}/cant-login{tracking.token}'
+join_now_link: '/{domain:entry}/{lang}/join/live-dealer[query:({tracking})]'
 login_issue_text: '로그인이 안 되시나요?'
-login_issue_link: '/{domain:entry}/{domain:lang_token}/cant-login{tracking.token}'
+login_issue_link: '/{domain:entry}/{lang}/cant-login[query:(title=cantLogin&{tracking})]'
 total_balance_label: '전체 잔액'
 balance_error_text: '에러가 발생했습니다.'
 profile_icon_hover_text: '내 프로필'
@@ -13,7 +13,7 @@ profile_link: '#'
 profile_logout_text: 로그아웃
 balance_label_mapping: "4|OW 스포츠\r\n6|다파 스포츠\r\n1|카지노 클래식\r\n2|카지노 골드\r\n5|라이브 딜러, 게임, 가상 스포츠\r\n8|Opus 라이브 딜러\r\n9|키노\r\n3|포커\r\n7|낚시의 신"
 balance_mapping: '5|라이브 딜러, 게임, 가상 스포츠'
-header_settings_tab__active_tab: edit-login-group
+header_settings_tab__active_tab: edit-balance-group
 logo_title: Home
 capslock_notification: 'Caps Lock이 켜져 있습니다'
 cashier_link: '{domain:cashier_domain}/{lang}[query:(ticket={auth.token}&{tracking}&product=live-dealer&title=headerPopup)]'
