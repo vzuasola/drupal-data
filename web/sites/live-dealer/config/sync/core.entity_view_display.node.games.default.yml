@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.games.body
     - field.field.node.games.field_end_date
+    - field.field.node.games.field_game_code
     - field.field.node.games.field_game_icon
     - field.field.node.games.field_game_image
     - field.field.node.games.field_game_image_large
@@ -43,6 +44,14 @@ content:
       timezone_override: ''
     third_party_settings: {  }
     type: datetime_default
+    region: content
+  field_game_code:
+    weight: 119
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
     region: content
   field_game_icon:
     weight: 110
