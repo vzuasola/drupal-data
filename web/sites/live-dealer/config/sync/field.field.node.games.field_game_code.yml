@@ -1,0 +1,19 @@
+uuid: e8bd1923-0f57-4bc3-81de-910d4d8c70b7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_game_code
+    - node.type.games
+id: node.games.field_game_code
+field_name: field_game_code
+entity_type: node
+bundle: games
+label: 'Game Code'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
