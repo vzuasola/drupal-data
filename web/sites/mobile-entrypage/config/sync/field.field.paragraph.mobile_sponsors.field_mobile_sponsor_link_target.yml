@@ -1,0 +1,21 @@
+uuid: 3d4ecf11-de36-4f95-bc76-548aa5764d07
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_mobile_sponsor_link_target
+    - paragraphs.paragraphs_type.mobile_sponsors
+  module:
+    - options
+id: paragraph.mobile_sponsors.field_mobile_sponsor_link_target
+field_name: field_mobile_sponsor_link_target
+entity_type: paragraph
+bundle: mobile_sponsors
+label: 'Link Target'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
