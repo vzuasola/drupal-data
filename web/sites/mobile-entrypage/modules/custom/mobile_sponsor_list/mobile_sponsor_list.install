@@ -1,0 +1,43 @@
+<?php
+
+/**
+ * Implements hook_uninstall
+ */
+function mobile_sponsor_list_uninstall() {
+  $keys = [
+    'web/sites/mobile-entrypage/config/sync/core.base_field_override.mobile_sponsor_list.mobile_sponsor_list.metatag',
+    'web/sites/mobile-entrypage/config/sync/core.base_field_override.paragraph.mobile_sponsors.created',
+    'web/sites/mobile-entrypage/config/sync/core.base_field_override.paragraph.mobile_sponsors.status',
+    'web/sites/mobile-entrypage/config/sync/core.base_field_override.paragraph.mobile_sponsors.uid',
+    'web/sites/mobile-entrypage/config/sync/core.entity_form_display.mobile_sponsor_list.mobile_sponsor_list.default',
+    'web/sites/mobile-entrypage/config/sync/core.entity_form_display.paragraph.mobile_sponsors.default',
+    'web/sites/mobile-entrypage/config/sync/core.entity_view_display.mobile_sponsor_list.mobile_sponsor_list.default',
+    'web/sites/mobile-entrypage/config/sync/core.entity_view_display.paragraph.mobile_sponsors.default',
+    'web/sites/mobile-entrypage/config/sync/field.field.mobile_sponsor_list.mobile_sponsor_list.field_mobile_full_row',
+    'web/sites/mobile-entrypage/config/sync/field.field.mobile_sponsor_list.mobile_sponsor_list.field_mobile_sponsor_row_enable',
+    'web/sites/mobile-entrypage/config/sync/field.field.mobile_sponsor_list.mobile_sponsor_list.field_sponsors_row',
+    'web/sites/mobile-entrypage/config/sync/field.field.mobile_sponsor_list.mobile_sponsor_list.field_sponsors_row_title',
+    'web/sites/mobile-entrypage/config/sync/field.field.paragraph.mobile_sponsors.field_mobile_sponsor_enable',
+    'web/sites/mobile-entrypage/config/sync/field.field.paragraph.mobile_sponsors.field_mobile_sponsor_image',
+    'web/sites/mobile-entrypage/config/sync/field.field.paragraph.mobile_sponsors.field_mobile_sponsor_image_link',
+    'web/sites/mobile-entrypage/config/sync/field.field.paragraph.mobile_sponsors.field_mobile_sponsor_link_target',
+    'web/sites/mobile-entrypage/config/sync/field.field.paragraph.mobile_sponsors.field_sponsors_column_title',
+    'web/sites/mobile-entrypage/config/sync/field.storage.mobile_sponsor_list.field_mobile_full_row',
+    'web/sites/mobile-entrypage/config/sync/field.storage.mobile_sponsor_list.field_mobile_sponsor_row_enable',
+    'web/sites/mobile-entrypage/config/sync/field.storage.mobile_sponsor_list.field_sponsors_row',
+    'web/sites/mobile-entrypage/config/sync/field.storage.mobile_sponsor_list.field_sponsors_row_title',
+    'web/sites/mobile-entrypage/config/sync/field.storage.paragraph.field_mobile_sponsor_enable',
+    'web/sites/mobile-entrypage/config/sync/field.storage.paragraph.field_mobile_sponsor_image',
+    'web/sites/mobile-entrypage/config/sync/field.storage.paragraph.field_mobile_sponsor_image_link',
+    'web/sites/mobile-entrypage/config/sync/field.storage.paragraph.field_mobile_sponsor_link_target',
+    'web/sites/mobile-entrypage/config/sync/field.storage.paragraph.field_sponsors_column_title',
+    'web/sites/mobile-entrypage/config/sync/language.content_settings.mobile_sponsor_list.mobile_sponsor_list',
+    'web/sites/mobile-entrypage/config/sync/language.content_settings.paragraph.mobile_sponsors',
+    'web/sites/mobile-entrypage/config/sync/paragraphs.paragraphs_type.mobile_sponsors',
+    'web/sites/mobile-entrypage/config/sync/views.view.mobile_sponsors',
+  ];
+
+  foreach ($keys as $key) {
+    \Drupal::configFactory()->getEditable($key)->delete();
+  }
+}
