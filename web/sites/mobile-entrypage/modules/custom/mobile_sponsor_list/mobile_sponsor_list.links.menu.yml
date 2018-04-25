@@ -6,7 +6,7 @@ mobile_sponsor_list.list:
 
 # Mobile sponsor list menu items definition
 entity.mobile_sponsor_list.collection:
-  title: 'Mobile sponsor list list'
+  title: 'Mobile sponsor lists'
   route_name: entity.mobile_sponsor_list.collection
   description: 'List Mobile sponsor list entities'
   parent: mobile_sponsor_list.list
