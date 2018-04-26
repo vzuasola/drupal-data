@@ -17,7 +17,7 @@ webcomposer_games.admin_games_fim_provider:
   route_name: webcomposer_games.games_fim_provider_form
 
 webcomposer_games.admin_games_opus_provider:
-  title: 'Keno & Lottery Game Configuration'
+  title: 'Keno, Lottery, Opus Live Dealer Game Configuration'
   parent: webcomposer_games.list
   description: 'Provides configuration for Keno & Lottery Game '
   route_name: webcomposer_games.games_opus_provider_form
