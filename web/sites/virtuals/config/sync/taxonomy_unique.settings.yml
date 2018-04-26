@@ -16,3 +16,5 @@ affiliates_parameters: 0
 affiliates_parameters_message: 'Term @term already exists in vocabulary @vocabulary.'
 affiliates_group: 0
 affiliates_group_message: 'Term @term already exists in vocabulary @vocabulary.'
+game_provider: 0
+game_provider_message: 'Term @term already exists in vocabulary @vocabulary.'

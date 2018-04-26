@@ -1,0 +1,23 @@
+uuid: 7f78cb2e-070e-4bf0-92d3-53d2d5eb01f8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_show_game_info_toggle
+    - node.type.games
+id: node.games.field_show_game_info_toggle
+field_name: field_show_game_info_toggle
+entity_type: node
+bundle: games
+label: 'Show Game Info Button'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

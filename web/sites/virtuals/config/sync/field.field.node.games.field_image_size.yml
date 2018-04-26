@@ -1,0 +1,23 @@
+uuid: 184ee10f-df36-47d5-b136-00d3e55b3990
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_image_size
+    - node.type.games
+  module:
+    - options
+id: node.games.field_image_size
+field_name: field_image_size
+entity_type: node
+bundle: games
+label: 'Select Image Size'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: small
+default_value_callback: ''
+settings: {  }
+field_type: list_string
