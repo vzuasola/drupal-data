@@ -1,19 +1,22 @@
-lobby_page_title: 'Dafabet Casino - Chơi trò chơi Casino trực tuyến và thắng lớn với Jackpot'
-news_announcement: '1'
-news_announcement_content:
-  value: "<p>Đặc Biệt Giáng Sinh: Tổng Thưởng Casino tới 16 Tỷ đồng, cùng ưu đãi mỗi ngày:&nbsp;<a href=\"https://dafakhuyenmai.com/2017/red-hot-christmas/dafa888/week1/vn/\" target=\"_blank\"><b>Nhấn đây</b></a>&nbsp;** Sưu Tập Huy Hiệu giành thưởng đặc biệt: tham gia<a href=\"https://www.sportdafa.net/vn/red-hot-collectibles\" target=\"_blank\">&nbsp;<b>tại đây</b>&nbsp;</a></p>\r\n"
-  format: basic_html
 join_now_text: 'THAM GIA NGAY'
+join_now_link: '/{domain:entry}/{lang}/join/casino[query:({tracking})]'
 login_issue_text: 'Quên mật khẩu?'
-login_issue_link: '{domain:entry}/{lang}/cant-login[query:(title=cantLogin&{tracking})]'
+login_issue_link: '{domain:entry}/{lang}/cant-login[query:({tracking})]'
 balance_error_text: 'Đã xảy ra lỗi'
 profile_icon_hover_text: 'Thông Tin Cá Nhân'
-cashier_icon_hover_text: 'Thu Ngân'
+cashier_icon_hover_text: Thu Ngân
 product_menu_new_tag: Mới
 welcome_text: 'Chào mừng {username}'
-profile_logout_text: 'Đăng xuất'
-balance_label_mapping: "4|Thể Thao OW\r\n6|Thể Thao Dafa\r\n1|Casino Classic\r\n2|Casino Gold\r\n5|Casino Trực Tuyến, Trò Chơi, & Trò Chơi Ảo\r\n8|Casino Trực Tuyến Opus\r\n9|Keno\r\n3|Poker\r\n7|Fish Hunter"
-balance_error_text_product: 'Không có'
-total_balance_label: 'Tổng Số Dư'
+profile_link: '/{domain:myaccount_domain}/{lang}/my-profile[query:(title=headerPopup&width=820&height=820&{credentials.params}&pvia=casino)]'
+profile_logout_text: Đăng xuất
+_core:
+  default_config_hash: Ynx2hkfeSTtNe4GyBQ1t4lBkrV4wrazLGjX_M7Mk3mg
+lobby_page_title: 'Dafabet Casino - Chơi trò chơi Casino trực tuyến và thắng lớn với Jackpot'
+balance_label_mapping: "4|Thể Thao OW\r\n6|Thể Thao Dafa\r\n10|Exchange\r\n1|Casino Classic\r\n2|Casino Gold\r\n5|Casino Trực Tuyến, Trò chơi, Arcade, & Thể thao ảo\r\n8|Casino Trực Tuyến Opus\r\n9|Keno\r\n3|Poker\r\n7|AG Fish Hunter"
+balance_error_text_product: Không có
 product_balance_label: 'Số Dư Casino Classic'
+total_balance_label: 'Tổng Số Dư'
+cashier_link: '{domain:cashier_domain}/{lang}[query:(ticket={auth.token}&{tracking}&product=casino&title=headerPopup)]'
 balance_mapping: '1|Số Dư Casino Classic'
+logo_title: Home
+capslock_notification: 'Đang bật CAP LOCK'
