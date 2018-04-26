@@ -1,10 +1,11 @@
 autologout_box_content:
+  format: basic_html
   value: "<p>การทำรายการของคุณจะสิ้นสุดภายใน {seconds} คุณต้องการทำรายการต่อหรือไม่?</p>\r\n"
-  format: basic_html
 notification_content:
-  value: "<p>การทำรายการของคุณสิ้นสุดลงเนื่องจากไม่มีการดำเนินการใดๆ</p>\r\n"
   format: basic_html
+  value: "<p>การทำรายการของคุณสิ้นสุดลงเนื่องจากไม่มีการดำเนินการใดๆ</p>\r\n"
 lightbox_blurb: 'ยังไม่เป็นสมาชิก?'
+mobile_login_button_label: เข้าสู่ระบบ/สมัคร
 username_placeholder: ยูสเซอร์เนม/ไอดี
 password_placeholder: รหัสผ่าน
 login_bottom_label: เข้าสู่ระบบ
@@ -20,4 +21,3 @@ affirmative_button_text: 'ใช่ '
 negative_button_text: 'ไม่ใช่ '
 notification_title: 'แจ้งเตือน '
 notification_window_title: หมดเวลาเชื่อมต่อ
-mobile_login_button_label: เข้าสู่ระบบ/สมัคร

@@ -1,10 +1,11 @@
 notification_content:
+  format: basic_html
   value: "<p>Η συνεδρία σας έχει λήξει λόγω αδράνειας.</p>\r\n"
-  format: basic_html
 autologout_box_content:
-  value: "<p>Η συνεδρία σας θα λήξει σε {seconds} δευτερόλεπτα. Θέλετε να συνεχίσετε τη συνεδρία σας;</p>\r\n"
   format: basic_html
+  value: "<p>Η συνεδρία σας θα λήξει σε {seconds} δευτερόλεπτα. Θέλετε να συνεχίσετε τη συνεδρία σας;</p>\r\n"
 lightbox_blurb: 'Δεν είστε ακόμη μέλος της Dafabet?'
+mobile_login_button_label: ΕΙΣΟΔΟΣ/ΕΓΓΡΑΦΗ
 username_placeholder: 'Όνομα Χρήστη'
 password_placeholder: 'Κωδικός Πρόσβασης'
 login_bottom_label: ΕΊΣΟΔΟΣ
@@ -20,4 +21,3 @@ affirmative_button_text: Ναι
 negative_button_text: Όχι
 notification_title: POWIADOMIENIA
 notification_window_title: 'Twoja sesja wygasła'
-mobile_login_button_label: ΕΙΣΟΔΟΣ/ΕΓΓΡΑΦΗ

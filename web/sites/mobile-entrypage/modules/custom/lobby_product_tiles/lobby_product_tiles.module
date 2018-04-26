@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains lobby_product_tiles.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function lobby_product_tiles_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the lobby_product_tiles module.
+    case 'help.page.lobby_product_tiles':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Custom Module for product lobby tiles') . '</p>';
+      return $output;
+
+    default:
+  }
+}

@@ -1,11 +1,11 @@
 autologout_box_content:
-  format: basic_html
   value: "<p>Lượt truy cập của Quý Khách sẽ kết thúc trong vòng {seconds}. Quý Khách có muốn tiếp tục truy cập?</p>\r\n"
-notification_content:
   format: basic_html
+notification_content:
   value: "<p>Lượt truy cập của Quý Khách đã kết thúc vì không có hoạt động.</p>\r\n"
+  format: basic_html
 lightbox_blurb: 'Bạn chưa phải thành viên Dafabet?'
-username_placeholder: Username
+username_placeholder: 'Tên đăng nhập'
 password_placeholder: 'Mật khẩu'
 login_bottom_label: 'ĐĂNG NHẬP'
 error_message_blank_username: 'Điền Tên đăng nhập là bắt buộc.'
@@ -20,3 +20,7 @@ affirmative_button_text: 'CÓ '
 negative_button_text: KHÔNG
 notification_title: 'THÔNG BÁO'
 notification_window_title: 'Phiên truy cập kết thúc'
+advanced__active_tab: edit-login-form-details
+login_page_blurb: ''
+mobile_login_url: 'https://m.dafabet.com/'
+mobile_login_button_label: ''

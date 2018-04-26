@@ -1,0 +1,22 @@
+uuid: a16a6e98-ccb5-4227-aead-5ed0ce109204
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.games
+  module:
+    - text
+id: node.games.body
+field_name: body
+entity_type: node
+bundle: games
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

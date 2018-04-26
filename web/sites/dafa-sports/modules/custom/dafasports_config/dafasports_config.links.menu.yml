@@ -1,0 +1,5 @@
+dafasports_config.list:
+  title: 'Dafa Sports Custom Configuration'
+  description: 'Provides a form for defining custom sample configuration'
+  parent: system.admin_config
+  route_name: dafasports_config.admin_settings

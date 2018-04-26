@@ -1,0 +1,18 @@
+uuid: ce741b3f-7456-41e9-8ffc-3426f341160d
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.games
+id: node.games.metatag
+field_name: metatag
+entity_type: node
+bundle: games
+label: Metatags
+description: 'The metatags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

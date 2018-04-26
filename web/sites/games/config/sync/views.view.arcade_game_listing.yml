@@ -13,6 +13,7 @@ dependencies:
     - rest
     - serialization
     - user
+    - webcomposer_rest_extra
 id: arcade_game_listing
 label: 'Arcade Game Listing'
 module: views
@@ -549,9 +550,8 @@ display:
           items_per_page: 10
           offset: 0
       style:
-        type: serializer
+        type: node_list_serializer
         options:
-          grouping: {  }
           uses_fields: false
           formats: {  }
       row:

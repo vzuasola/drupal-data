@@ -3,8 +3,11 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.taxonomy_term.ribbon_labels.field_ribbon_background_color
+    - field.field.taxonomy_term.ribbon_labels.field_text_color
     - taxonomy.vocabulary.ribbon_labels
   module:
+    - color_field
     - text
 id: taxonomy_term.ribbon_labels.default
 targetEntityType: taxonomy_term
@@ -19,12 +22,23 @@ content:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
+  field_ribbon_background_color:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: color_field_widget_html5
+    region: content
+  field_text_color:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: color_field_widget_html5
+    region: content
   langcode:
     type: language_select
     weight: 2
     region: content
-    settings:
-      include_locked: true
+    settings: {  }
     third_party_settings: {  }
   name:
     type: string_textfield

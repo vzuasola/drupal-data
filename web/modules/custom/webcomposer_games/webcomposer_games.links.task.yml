@@ -21,4 +21,9 @@ webcomposer_games.admin_icore_playtech_provider_tab:
 webcomposer_games.admin_games_exchange_provider_tab:
   route_name: webcomposer_games.games_exchange_provider_form
   title: 'Exchange Game Configuration'
-  base_route: webcomposer_games.games_exchange_provider_form  
+  base_route: webcomposer_games.games_exchange_provider_form 
+
+webcomposer_games.admin_games_gpi_provider_tab:
+  route_name: webcomposer_games.games_gpi_provider_form
+  title: 'Gpi Game Configuration'
+  base_route: webcomposer_games.games_gpi_provider_form     

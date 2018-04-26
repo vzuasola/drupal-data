@@ -19,6 +19,7 @@ permissions:
   - 'restful get entity_bundle_fields_resource'
   - 'restful get entity_bundle_weight_resource'
   - 'restful get form_resource'
+  - 'restful get games_config_rest_resource'
   - 'restful get keno_rest_resource'
   - 'restful get language_rest_resource'
   - 'restful get marketing_script'

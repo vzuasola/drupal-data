@@ -14,6 +14,7 @@ dependencies:
     - field.field.node.promotion.field_link_target
     - field.field.node.promotion.field_log_in_state
     - field.field.node.promotion.field_mark_as_featured
+    - field.field.node.promotion.field_meta_tags
     - field.field.node.promotion.field_product
     - field.field.node.promotion.field_product_subfilter
     - field.field.node.promotion.field_promotion_link_target
@@ -37,6 +38,7 @@ dependencies:
     - field_group
     - image
     - link
+    - metatag
     - path
     - scheduler
     - text
@@ -213,6 +215,12 @@ content:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
+    region: content
+  field_meta_tags:
+    weight: 83
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_firehose
     region: content
   field_product:
     weight: 3

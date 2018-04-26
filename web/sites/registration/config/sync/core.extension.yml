@@ -70,10 +70,13 @@ module:
   toolbar: 0
   user: 0
   views_ui: 0
+  vip_modal: 0
   webcomposer_affilates: 0
   webcomposer_announcements: 0
   webcomposer_avaya: 0
   webcomposer_config: 0
+  webcomposer_config_schema: 0
+  webcomposer_dashboard: 0
   webcomposer_dm: 0
   webcomposer_domain_import: 0
   webcomposer_downloadables: 0
@@ -83,13 +86,14 @@ module:
   webcomposer_games: 0
   webcomposer_language_hierarchy: 0
   webcomposer_marketing_script: 0
-  webcomposer_metatags: 0
   webcomposer_mobile_menu: 0
   webcomposer_partner_responsive: 0
   webcomposer_promotions: 0
   webcomposer_rest_extra: 0
   webcomposer_right_side_block: 0
+  webcomposer_seo: 0
   webcomposer_sitemap: 0
+  webcomposer_slider_v2: 0
   webcomposer_social_media: 0
   webcomposer_sponsor_responsive: 0
   webcomposer_territory_blocking: 0

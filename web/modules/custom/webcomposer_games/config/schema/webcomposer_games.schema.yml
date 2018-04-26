@@ -69,3 +69,11 @@ webcomposer_config.games_exchange_provider:
     exchange_game_url:
       type: text
       label: 'Exchange Game Url'
+
+webcomposer_config.games_gpi_provider:
+  type: config_object
+  label: 'Gpi Integration Configuration'
+  mapping:
+    gpi_game_url:
+      type: text
+      label: 'Gpi Game Url'      

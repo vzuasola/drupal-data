@@ -1,0 +1,5 @@
+name: Jamboree Dropdown Menu
+type: module
+description: Main Menu for Jamboree Casino site
+core: 8.x
+package: Jamboree

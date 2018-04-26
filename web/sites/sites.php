@@ -60,3 +60,8 @@ $sites['jamboree-casino.drupal.local'] = 'jamboree-casino';
 // Dafasports Site instance
 $sites['dafa-sports.drupal.local'] = 'dafa-sports';
 $sites['dafa-sports.drupal.dev'] = 'dafa-sports';
+
+// Mobile Entrypage Revamp instance
+$sites['mobile-entrypage.drupal.dev'] = 'mobile-entrypage';
+$sites['mobile-entrypage.drupal.local'] = 'mobile-entrypage';
+
