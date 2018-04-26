@@ -1,0 +1,18 @@
+mobile_sponsor_list.list:
+  title: 'Mobile Sponsor List'
+  description: 'Mobile Sponsor and Partner list'
+  parent: system.admin_config
+  route_name: mobile_sponsor_list.admin_settings
+
+# Mobile sponsor list menu items definition
+entity.mobile_sponsor_list.collection:
+  title: 'Mobile sponsor lists'
+  route_name: entity.mobile_sponsor_list.collection
+  description: 'List Mobile sponsor list entities'
+  parent: mobile_sponsor_list.list
+
+mobile_sponsor_list.admin.structure.settings:
+  title: Mobile sponsor list settings
+  description: 'Configure Mobile sponsor list entities'
+  route_name: mobile_sponsor_list.settings
+  parent: mobile_sponsor_list.list

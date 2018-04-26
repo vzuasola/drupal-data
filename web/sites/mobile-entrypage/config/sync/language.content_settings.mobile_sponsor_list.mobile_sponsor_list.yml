@@ -1,0 +1,15 @@
+uuid: ba9c8145-6432-4e53-828b-0797193742f8
+langcode: en
+status: true
+dependencies:
+  module:
+    - content_translation
+    - mobile_sponsor_list
+third_party_settings:
+  content_translation:
+    enabled: true
+id: mobile_sponsor_list.mobile_sponsor_list
+target_entity_type_id: mobile_sponsor_list
+target_bundle: mobile_sponsor_list
+default_langcode: site_default
+language_alterable: true

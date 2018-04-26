@@ -1,0 +1,60 @@
+uuid: 6e7722bc-56a3-4869-8ec9-44d5154926ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.mobile_sponsor_list.field_sponsors_row
+    - paragraphs.paragraphs_type.mobile_sponsors
+  module:
+    - entity_reference_revisions
+    - mobile_sponsor_list
+id: mobile_sponsor_list.mobile_sponsor_list.field_sponsors_row
+field_name: field_sponsors_row
+entity_type: mobile_sponsor_list
+bundle: mobile_sponsor_list
+label: 'Sponsors Column'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      mobile_sponsors: mobile_sponsors
+    target_bundles_drag_drop:
+      domain_management_configuration:
+        weight: 10
+        enabled: false
+      floating_banner_item:
+        weight: 11
+        enabled: false
+      mobile_sponsors:
+        enabled: true
+        weight: 11
+      mobile_sponsors_image:
+        weight: 12
+        enabled: false
+      metatag:
+        weight: 12
+        enabled: false
+      right_side_block_content:
+        weight: 13
+        enabled: false
+      slider_overlay_cmi:
+        weight: 14
+        enabled: false
+      social_media:
+        weight: 15
+        enabled: false
+      social_media_cmi:
+        weight: 16
+        enabled: false
+      sponsorship:
+        weight: 17
+        enabled: false
+      sponsor_cmi:
+        weight: 18
+        enabled: false
+field_type: entity_reference_revisions
