@@ -1,0 +1,24 @@
+uuid: 74978889-4ad5-4cfe-8b0d-e452edec5f8e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.mobile_sponsor_list.field_mobile_full_row
+  module:
+    - mobile_sponsor_list
+id: mobile_sponsor_list.mobile_sponsor_list.field_mobile_full_row
+field_name: field_mobile_full_row
+entity_type: mobile_sponsor_list
+bundle: mobile_sponsor_list
+label: 'Mobile Full Row'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: '1'
+  off_label: '0'
+field_type: boolean
