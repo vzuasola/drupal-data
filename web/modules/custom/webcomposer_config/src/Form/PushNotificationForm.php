@@ -55,6 +55,7 @@ class PushNotificationForm extends FormBase {
       '#type' => 'details',
       '#title' => $this->t('Dismiss Notifications'),
       '#group' => 'pushnx_settings_tab',
+      '#disabled' => TRUE,
     ];
 
     $form['expiry_error_message_settings'] = [
