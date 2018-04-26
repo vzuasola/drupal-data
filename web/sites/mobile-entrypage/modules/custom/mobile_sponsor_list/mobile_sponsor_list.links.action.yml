@@ -1,0 +1,5 @@
+entity.mobile_sponsor_list.add_form:
+  route_name: entity.mobile_sponsor_list.add_form
+  title: 'Add Mobile sponsor list'
+  appears_on:
+    - entity.mobile_sponsor_list.collection
