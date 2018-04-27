@@ -227,14 +227,6 @@ class HeaderConfiguration extends ConfigFormBase {
       '#default_value' => $config->get('product_balance_id'),
     ];
 
-    $form['balance_group']['deprecated']['product_balance_label'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Product Balance Label.'),
-      '#description' => $this->t('The label for the product specific balance'),
-      '#default_value' => $config->get('product_balance_label'),
-      '#required' => TRUE,
-    ];
-
     $form['balance_group']['total_balance_label'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Total Balance Label.'),
