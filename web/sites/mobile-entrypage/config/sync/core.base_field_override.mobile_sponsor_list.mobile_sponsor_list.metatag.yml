@@ -1,0 +1,18 @@
+uuid: c580e6c8-0d59-47fc-8465-e30d9c7ca6ae
+langcode: en
+status: true
+dependencies:
+  module:
+    - mobile_sponsor_list
+id: mobile_sponsor_list.mobile_sponsor_list.metatag
+field_name: metatag
+entity_type: mobile_sponsor_list
+bundle: mobile_sponsor_list
+label: Metatags
+description: 'The metatags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

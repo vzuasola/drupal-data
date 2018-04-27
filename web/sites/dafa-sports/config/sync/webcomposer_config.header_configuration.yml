@@ -31,7 +31,7 @@ product_balance_id: '4'
 currency_balance_mapping: "9|RMB,MYR,THB,KRW,VND,USD,IDR,INR,EUR\r\n7|RMB\r\n8|RMB,MYR,THB,KRW,VND,USD,IDR,INR,EUR,KRW\r\n10|USD,INR"
 excluded_balance_mapping: '7'
 cashier_link: '{domain:cashier_domain}/{lang}?ticket={auth.token}&product=dafa-sports&title=headerPopup&width=820&height=700'
-balance_mapping: "6|Dafa Sports Balance\r\n4|E Sports Balance"
+balance_mapping: "6|Dafa Sports Balance\r\n11|E Sports Balance"
 balance_label_override: 现场荷官、老虎机、虚拟运动和大发彩票
 logo_title: Dafabet
 password_mask_toggle: 1
