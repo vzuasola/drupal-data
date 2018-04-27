@@ -227,6 +227,14 @@ class HeaderConfiguration extends ConfigFormBase {
       '#default_value' => $config->get('product_balance_id'),
     ];
 
+    $form['balance_group']['deprecated']['product_balance_label'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Product Balance Label.'),
+      '#description' => $this->t('The label for the product specific balance'),
+      '#default_value' => $config->get('product_balance_label'),
+      '#required' => TRUE,
+    ];
+
     $form['balance_group']['total_balance_label'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Total Balance Label.'),
@@ -242,7 +250,7 @@ class HeaderConfiguration extends ConfigFormBase {
       '#default_value' => $config->get('balance_mapping'),
     ];
 
-    $form['balance_group']['balance_label_override'] = [
+    $form['balance_group']['deprecated']['balance_label_override'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Lottery Balance Label Override in Tooltip'),
       '#description' => $this->t('Provide a label to override LD and Lottery label specific for SC and RMB currency'),
