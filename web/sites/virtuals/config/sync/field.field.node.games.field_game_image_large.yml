@@ -6,7 +6,14 @@ dependencies:
     - field.storage.node.field_game_image_large
     - node.type.games
   module:
+    - content_translation
     - image
+third_party_settings:
+  content_translation:
+    translation_sync:
+      alt: alt
+      title: title
+      file: '0'
 id: node.games.field_game_image_large
 field_name: field_game_image_large
 entity_type: node
