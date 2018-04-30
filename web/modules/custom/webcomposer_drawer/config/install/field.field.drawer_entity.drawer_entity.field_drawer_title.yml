@@ -1,0 +1,20 @@
+uuid: b136c10d-3fce-401f-9858-08fda9603e7d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.drawer_entity.field_drawer_title
+  module:
+    - webcomposer_drawer
+id: drawer_entity.drawer_entity.field_drawer_title
+field_name: field_drawer_title
+entity_type: drawer_entity
+bundle: drawer_entity
+label: 'Drawer Title'
+description: 'The title that will appear on your the actual drawer'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

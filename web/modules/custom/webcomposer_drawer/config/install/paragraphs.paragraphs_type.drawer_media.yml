@@ -1,0 +1,7 @@
+uuid: 345acb2b-0ab5-47ff-a078-c3c5fe284edb
+langcode: en
+status: true
+dependencies: {  }
+id: drawer_media
+label: 'Drawer Media'
+behavior_plugins: {  }

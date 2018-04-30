@@ -1,0 +1,36 @@
+uuid: 9a18dc4f-9ec2-46cb-9e4e-e21a892af649
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.drawer_media.field_drawer_image
+    - field.field.paragraph.drawer_media.field_drawer_video
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.drawer_media
+  module:
+    - file
+    - image
+id: paragraph.drawer_media.default
+targetEntityType: paragraph
+bundle: drawer_media
+mode: default
+content:
+  field_drawer_image:
+    weight: 0
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_drawer_video:
+    weight: 1
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

@@ -1,0 +1,27 @@
+uuid: 36e3e30b-c375-4f6f-84f4-abb89bf77dd6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_drawer_video
+    - paragraphs.paragraphs_type.drawer_media
+  module:
+    - file
+id: paragraph.drawer_media.field_drawer_video
+field_name: field_drawer_video
+entity_type: paragraph
+bundle: drawer_media
+label: 'Drawer Video'
+description: "Video support for drawer items\r\n<br>\r\n<i>Note: Upload a separate video with <b>swf</b> format for IE8 browser support</i>"
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'mp4 webm ogv swf'
+  max_filesize: '12 MB'
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

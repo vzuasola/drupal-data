@@ -1,0 +1,33 @@
+uuid: 55c37121-7f47-41f8-b571-e0f4a087fdb0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.drawer_media.field_drawer_image
+    - field.field.paragraph.drawer_media.field_drawer_video
+    - paragraphs.paragraphs_type.drawer_media
+  module:
+    - file
+    - image
+id: paragraph.drawer_media.default
+targetEntityType: paragraph
+bundle: drawer_media
+mode: default
+content:
+  field_drawer_image:
+    weight: 0
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_drawer_video:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: file_default
+    region: content
+hidden: {  }
