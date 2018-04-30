@@ -11,7 +11,7 @@ cashier_icon_hover_text: Cashier
 welcome_text: 'Welcome {username}'
 profile_link: '/{domain:myaccount_domain}/{lang}/my-profile?title=headerPopup&width=820&height=700&token={legacy.credentials}'
 profile_logout_text: Logout
-balance_label_mapping: "4|OW Sports\r\n6|Dafa Sports\r\n10|Exchange\r\n1|Casino Classic\r\n2|Casino Gold\r\n5|Live Dealer, Games, & Virtuals\r\n8|Opus Live Dealer\r\n9|Keno\r\n3|Poker\r\n7|Fish Hunter"
+balance_label_mapping: "4|OW Sports\r\n6|Dafa Sports\r\n10|Exchange\r\n1|Casino Classic\r\n2|Casino Gold\r\n5|Live Dealer, Games, Arcade, Virtuals, & Lottery\r\n8|Opus Live Dealer\r\n9|Keno\r\n3|Poker\r\n7|Fish Hunter"
 balance_error_text_product: N/A
 cashier_link: '{domain:cashier_domain}/{lang}?ticket={auth.token}&product=dafa-sports&title=headerPopup&width=820&height=700'
 header_settings_tab__active_tab: edit-logo-group
