@@ -1,0 +1,57 @@
+uuid: 73104668-d5ed-4aa0-a7eb-75da3bc9a905
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.drawer_entity.field_drawer_media
+    - paragraphs.paragraphs_type.drawer_media
+  module:
+    - entity_reference_revisions
+    - webcomposer_drawer
+id: drawer_entity.drawer_entity.field_drawer_media
+field_name: field_drawer_media
+entity_type: drawer_entity
+bundle: drawer_entity
+label: 'Drawer Media'
+description: 'The media assets for the drawer'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      drawer_media: drawer_media
+    target_bundles_drag_drop:
+      drawer_media:
+        enabled: true
+        weight: 11
+      domain_management_configuration:
+        weight: 12
+        enabled: false
+      floating_banner_item:
+        weight: 13
+        enabled: false
+      metatag:
+        weight: 14
+        enabled: false
+      right_side_block_content:
+        weight: 15
+        enabled: false
+      slider_overlay_cmi:
+        weight: 16
+        enabled: false
+      social_media:
+        weight: 17
+        enabled: false
+      social_media_cmi:
+        weight: 18
+        enabled: false
+      sponsor_cmi:
+        weight: 19
+        enabled: false
+      sponsorship:
+        weight: 20
+        enabled: false
+field_type: entity_reference_revisions

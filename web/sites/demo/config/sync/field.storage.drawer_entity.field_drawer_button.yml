@@ -1,0 +1,19 @@
+uuid: f4457e09-23f4-4795-9002-b6caf7a6609b
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - webcomposer_drawer
+id: drawer_entity.field_drawer_button
+field_name: field_drawer_button
+entity_type: drawer_entity
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
