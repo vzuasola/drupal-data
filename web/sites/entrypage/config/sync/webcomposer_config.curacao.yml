@@ -1,4 +1,3 @@
 script_path: 'https://e2e82a2c-05fe-4ad9-be2f-be3874730cd4.snippet.antillephone.com/apg-seal.js'
 markup: '<div id="apg-seal-container" data-apg-seal-id="e2e82a2c-05fe-4ad9-be2f-be3874730cd4" data-apg-image-size="128" data-apg-image-type="basic-small"></div>'
 advanced__active_tab: edit-curacao
-robots_configuration: test
