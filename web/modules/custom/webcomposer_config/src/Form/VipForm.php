@@ -47,6 +47,7 @@ class VipForm extends FormBase {
       '#description' => $this->t('VIP Level Mapping. e.g."bronze|You are a Bronze VIP Member" where bronze is the ' .
         'key and the former is the text that will be displayed'),
       '#translatable' => TRUE,
+      '#required' => TRUE,
     ];
 
     return $form;
