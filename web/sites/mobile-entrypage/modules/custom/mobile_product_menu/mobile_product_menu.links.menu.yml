@@ -1,0 +1,18 @@
+mobile_product_menu.list:
+  title: 'Webcomposer Default Configuration'
+  description: 'List Product Menu entities'
+  parent: system.admin_config
+  route_name: mobile_product_menu.admin_settings
+
+# Mobile Product Menu menu items definition
+entity.mobile_product_menu.collection:
+  title: 'Mobile Product Menu list'
+  route_name: entity.mobile_product_menu.collection
+  description: 'List Mobile Product Menu entities'
+  parent: mobile_product_menu.list
+
+mobile_product_menu.admin.structure.settings:
+  title: Mobile Product Menu settings
+  description: 'Configure Mobile Product Menu entities'
+  route_name: mobile_product_menu.settings
+  parent: mobile_product_menu.list
