@@ -1,0 +1,20 @@
+uuid: 7e658f38-d66a-4963-9f1f-c5fad95ff4f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.mobile_product_menu.field_product_menu_title
+  module:
+    - mobile_product_menu
+id: mobile_product_menu.mobile_product_menu.field_product_menu_title
+field_name: field_product_menu_title
+entity_type: mobile_product_menu
+bundle: mobile_product_menu
+label: 'Product Menu Title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
