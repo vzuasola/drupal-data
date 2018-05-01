@@ -45,6 +45,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: "/admin/config/promotions\r\n/admin/config/promotions-for-products\r\n/admin/config/webcomposer/domains/*\r\n/admin/config/webcomposer/product-kebab-tabs\r\n/admin/structure/webcomposer_slider_entity\r\n/admin/structure/webcomposer_partner/partner_entity/manage\r\n/admin/structure/entrypage_front_block\r\n/admin/config/webcomposer/config/browser\r\n/admin/config/webcomposer/config/exception\r\n/admin/config/webcomposer/config/footer\r\n/admin/config/webcomposer/config/header\r\n/admin/config/webcomposer/config/log\r\n/admin/config/webcomposer/config/login\r\n/admin/config/webcomposer/config/robots\r\n/admin/config/webcomposer/config/vip"
+    pages: "/admin/config/promotions\r\n/admin/config/promotions-for-products\r\n/admin/config/webcomposer/domains/*\r\n/admin/config/webcomposer/product-kebab-tabs\r\n/admin/structure/webcomposer_slider_entity\r\n/admin/structure/webcomposer_partner/partner_entity/manage\r\n/admin/structure/entrypage_front_block\r\n/admin/config/webcomposer/config/browser\r\n/admin/config/webcomposer/config/exception\r\n/admin/config/webcomposer/config/footer\r\n/admin/config/webcomposer/config/header\r\n/admin/config/webcomposer/config/log\r\n/admin/config/webcomposer/config/login\r\n/admin/config/webcomposer/config/vip"
     negate: false
     context_mapping: {  }
