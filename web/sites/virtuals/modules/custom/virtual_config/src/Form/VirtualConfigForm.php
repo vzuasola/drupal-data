@@ -121,7 +121,9 @@ class VirtualConfigForm extends ConfigFormBase {
                 $file_usage = \Drupal::service('file.usage');
                 $file_usage->add($file, 'virtual_config', 'image', $fid[0]);
 
-                $this->config('virtual_config.virtual_configuration')->set("virtuals_background_image_url", file_create_url($file->getFileUri()))->save();
+                $virtualConfig = $this->config('virtual_config.virtual_configuration');
+
+                $virtualConfig->set("virtuals_background_image_url", file_create_url($file->getFileUri()))->save();
             } else {
                 $this->config('virtual_config.virtual_configuration')->set("virtuals_background_image_url", null);
             }
@@ -137,7 +139,9 @@ class VirtualConfigForm extends ConfigFormBase {
                 $file_usage = \Drupal::service('file.usage');
                 $file_usage->add($file, 'virtual_config', 'image', $fid[0]);
 
-                $this->config('virtual_config.virtual_configuration')->set("basic_page_background_image_url", file_create_url($file->getFileUri()))->save();
+                $virtualConfig = $this->config('virtual_config.virtual_configuration');
+
+                $virtualConfig->set("basic_page_background_image_url", file_create_url($file->getFileUri()))->save();
             } else {
                 $this->config('virtual_config.virtual_configuration')->set("basic_page_background_image_url", null);
             }
