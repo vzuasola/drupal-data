@@ -1,0 +1,22 @@
+# Mobile sponsor list routing definition
+mobile_sponsor_list.settings_tab:
+  route_name: mobile_sponsor_list.settings
+  title: 'Settings'
+  base_route: mobile_sponsor_list.settings
+
+entity.mobile_sponsor_list.canonical:
+  route_name: entity.mobile_sponsor_list.canonical
+  base_route: entity.mobile_sponsor_list.canonical
+  title: 'View'
+
+entity.mobile_sponsor_list.edit_form:
+  route_name: entity.mobile_sponsor_list.edit_form
+  base_route: entity.mobile_sponsor_list.canonical
+  title: 'Edit'
+
+entity.mobile_sponsor_list.delete_form:
+  route_name:  entity.mobile_sponsor_list.delete_form
+  base_route:  entity.mobile_sponsor_list.canonical
+  title: Delete
+  weight: 10
+

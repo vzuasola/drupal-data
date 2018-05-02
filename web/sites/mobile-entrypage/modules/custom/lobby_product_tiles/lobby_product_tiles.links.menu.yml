@@ -1,5 +1,5 @@
 lobby_product_tiles.list:
-  title: 'Mobile Porduct Tiles'
+  title: 'Mobile Product Tiles'
   description: 'List Product Tiles entities'
   parent: system.admin_config
   route_name: product_tiles.admin_settings

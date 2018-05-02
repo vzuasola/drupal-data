@@ -1,20 +1,22 @@
-lobby_page_title: 'dafabet娛樂場 - 最好的在線娛樂場dafabet超級大獎等你來！'
-critical_announcement_content:
-  value: ''
-  format: basic_html
-news_announcement_content:
-  value: ''
-  format: basic_html
-join_now_text: 立即加入
-login_issue_text: 無法登錄？
-login_issue_link: '{domain:entry}/{lang}/cant-login[query:(title=cantLogin&{tracking})]'
-profile_icon_hover_text: 我的賬戶
+join_now_text: '立即加入'
+join_now_link: '/{domain:entry}/{lang}/join/casino[query:({tracking})]'
+login_issue_text: '無法登錄？'
+login_issue_link: '{domain:entry}/{lang}/cant-login[query:({tracking})]'
+balance_error_text: '錯誤檢索.'
+profile_icon_hover_text: '我的賬戶'
 cashier_icon_hover_text: 出納櫃臺
 product_menu_new_tag: 新
 welcome_text: '歡迎 {username}'
+profile_link: '/{domain:myaccount_domain}/{lang}/my-profile[query:(title=headerPopup&width=820&height=820&{credentials.params}&pvia=casino)]'
 profile_logout_text: 登出
-balance_label_mapping: "4|沙巴體育\r\n6|大發體育\r\n1|娛樂場金典版\r\n2|娛樂場黃金版\r\n5|现场荷官，老虎机，& 虚拟运动\r\n8|OPUS現場荷官\r\n9|快樂彩\r\n3|撲克\r\n7|捕魚王"
-balance_error_text_product: 無
-balance_mapping: 1|娛樂場經典版余額
-total_balance_label: 總余額
-product_balance_label: 娛樂場經典版余額
+_core:
+  default_config_hash: Ynx2hkfeSTtNe4GyBQ1t4lBkrV4wrazLGjX_M7Mk3mg
+lobby_page_title: 'dafabet娛樂場 - 最好的在線娛樂場dafabet超級大獎等你來！'
+balance_label_mapping: "4|沙巴體育\r\n6|大發體育\r\n10|交易所\r\n1|娛樂場金典版\r\n2|娛樂場黃金版\r\n5|現場荷官，老虎機，街機，和虛擬運動\r\n8|OPUS現場荷官\r\n9|快樂彩\r\n3|撲克\r\n\r\n7|AG 捕魚王"
+balance_error_text_product: '無'
+product_balance_label: '娛樂場經典版余額'
+total_balance_label: '總余額'
+cashier_link: '{domain:cashier_domain}/{lang}[query:(ticket={auth.token}&{tracking}&product=casino&title=headerPopup)]'
+balance_mapping: '1|娛樂場經典版余額'
+logo_title: Home
+capslock_notification: '大寫鎖定已開啟'

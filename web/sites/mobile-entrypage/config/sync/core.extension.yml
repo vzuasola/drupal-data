@@ -44,6 +44,7 @@ module:
   menu_link_attributes: 0
   menu_ui: 0
   metatag: 0
+  mobile_sponsor_list: 0
   node: 0
   options: 0
   paragraphs: 0

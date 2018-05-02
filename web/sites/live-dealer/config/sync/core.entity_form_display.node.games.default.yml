@@ -121,24 +121,7 @@ content:
       size: 60
       placeholder: ''
     third_party_settings:
-      conditional_fields:
-        8c618add-9db7-4d6d-9d7e-a51bd35d1e2c:
-          dependee: field_game_provider
-          settings:
-            state: visible
-            condition: value
-            grouping: AND
-            values_set: 1
-            value: ''
-            values: {  }
-            value_form:
-              -
-                target_id: '1'
-            effect: show
-            effect_options: {  }
-            selector: ''
-          entity_type: node
-          bundle: games
+      conditional_fields: {  }
     type: string_textfield
     region: content
   field_game_icon:

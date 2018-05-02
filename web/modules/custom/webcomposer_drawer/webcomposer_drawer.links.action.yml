@@ -1,0 +1,5 @@
+entity.drawer_entity.add_form:
+  route_name: entity.drawer_entity.add_form
+  title: 'Add Drawer entity'
+  appears_on:
+    - entity.drawer_entity.collection

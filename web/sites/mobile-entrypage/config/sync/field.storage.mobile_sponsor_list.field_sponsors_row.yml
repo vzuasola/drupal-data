@@ -1,0 +1,21 @@
+uuid: 1a976b48-b5a4-48f6-8d81-f8b3b214fee8
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_reference_revisions
+    - mobile_sponsor_list
+    - paragraphs
+id: mobile_sponsor_list.field_sponsors_row
+field_name: field_sponsors_row
+entity_type: mobile_sponsor_list
+type: entity_reference_revisions
+settings:
+  target_type: paragraph
+module: entity_reference_revisions
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
