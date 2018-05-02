@@ -10,7 +10,7 @@ dependencies:
     - serialization
     - webcomposer_rest_extra
 id: all_games_api
-label: 'All Games API'
+label: 'Games - Listing API'
 module: views
 description: ''
 tag: ''
@@ -249,7 +249,7 @@ display:
   rest_export_all_games:
     display_plugin: rest_export
     id: rest_export_all_games
-    display_title: 'All Games API'
+    display_title: 'Games - Listing API'
     position: 1
     display_options:
       display_extenders: {  }
