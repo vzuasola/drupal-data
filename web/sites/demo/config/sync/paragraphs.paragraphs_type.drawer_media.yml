@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies: {  }
 _core:
-  default_config_hash: qqtLUR4ZY_3wnMp-xUqNyak7dnOs65nN_3qIdRcuvu0
+  default_config_hash: 959LFLb5OaGJjCKNaGqNg_gDOZkpq-CX6HV1u9p67EY
 id: drawer_media
 label: 'Drawer Media'
 behavior_plugins: {  }

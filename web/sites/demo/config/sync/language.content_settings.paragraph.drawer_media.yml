@@ -10,7 +10,7 @@ third_party_settings:
   content_translation:
     enabled: true
 _core:
-  default_config_hash: k-3CcdFYqX58Ig26q0pBULuH85QjQcEzCvVRc4LbT-4
+  default_config_hash: 4N_EhXyTLqb1T2pn-d9b7V2_d28AH_KRtAp5Em-bGKQ
 id: paragraph.drawer_media
 target_entity_type_id: paragraph
 target_bundle: drawer_media

@@ -6,7 +6,7 @@ dependencies:
     - file
     - paragraphs
 _core:
-  default_config_hash: ak19AY_EXNgavNYmN-PIaHl1Cw2GkS2SW3z_5wjGQPc
+  default_config_hash: DO2QcVlK1GNQ5SWgpF0zlVQ5cPCFg0eJoHwH3mePWBQ
 id: paragraph.field_drawer_video
 field_name: field_drawer_video
 entity_type: paragraph

@@ -5,7 +5,7 @@ dependencies:
   module:
     - webcomposer_drawer
 _core:
-  default_config_hash: 5ursPMUxzcV5SAD4yjXNuHWyiBzP5qG1TR5IBw3pO0Y
+  default_config_hash: FTvlt6INzjASaGaFU72Lasv34_SOIivAS8DVEluqxIg
 id: drawer_entity.drawer_entity.metatag
 field_name: metatag
 entity_type: drawer_entity

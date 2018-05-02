@@ -7,7 +7,7 @@ dependencies:
     - image
     - paragraphs
 _core:
-  default_config_hash: 9BS6HrEYokU6tTYElRlDbXIujcCBG0ifyA5Ak8KOeMU
+  default_config_hash: 7mCJmNqfm4zWNAAU03VvHaZDkLKJj698_GWoWgbRFYk
 id: paragraph.field_drawer_image
 field_name: field_drawer_image
 entity_type: paragraph

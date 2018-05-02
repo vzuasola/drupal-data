@@ -7,6 +7,8 @@ dependencies:
     - serialization
     - webcomposer_drawer
     - webcomposer_rest_extra
+_core:
+  default_config_hash: EQMmpx-boIvK46_j1UnShBKBTQApKtL9Ri4pFgj30Fc
 id: webcomposer_drawer_entity_api
 label: 'Webcomposer Drawer Entity API'
 module: views

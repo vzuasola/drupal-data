@@ -15,7 +15,7 @@ dependencies:
     - text
     - webcomposer_drawer
 _core:
-  default_config_hash: tqFMFzny0TxtlgDHorbbbh_RGqQN3LRkL45AemQ7k6Y
+  default_config_hash: MC9GhJ0-qyYfpe4zxFF159VMfwF7BlMhs8QD_61lYpg
 id: drawer_entity.drawer_entity.default
 targetEntityType: drawer_entity
 bundle: drawer_entity

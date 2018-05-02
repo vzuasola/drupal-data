@@ -10,7 +10,7 @@ dependencies:
     - file
     - image
 _core:
-  default_config_hash: bki-2XpN0VGY49Tf8LtA09uzYk2yRDNuY3A-NKFGXHI
+  default_config_hash: PwMK4etxDdloKgsMiiQRoign8WLt2eWL_iyWXQlXbUE
 id: paragraph.drawer_media.default
 targetEntityType: paragraph
 bundle: drawer_media

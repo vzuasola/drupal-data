@@ -11,7 +11,7 @@ dependencies:
     - file
     - image
 _core:
-  default_config_hash: 1AFONPRql2145HZV3YDVsEmS4ENCQmDyrCSSPydy9is
+  default_config_hash: Ye96Gt_7TEsCQvUzecanUBdwe16fZxWahg2ZmckYHBs
 id: paragraph.drawer_media.default
 targetEntityType: paragraph
 bundle: drawer_media

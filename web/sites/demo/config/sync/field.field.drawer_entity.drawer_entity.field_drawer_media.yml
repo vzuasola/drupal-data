@@ -9,7 +9,7 @@ dependencies:
     - entity_reference_revisions
     - webcomposer_drawer
 _core:
-  default_config_hash: v0ghFOLzLXsZj2U1xjEK0PyZWECGtR3nLP2jFSL1AEU
+  default_config_hash: m-mKTNRWpAGt8Fer3Un1EckLvNXh7BQ9q3ntXz13hWk
 id: drawer_entity.drawer_entity.field_drawer_media
 field_name: field_drawer_media
 entity_type: drawer_entity
