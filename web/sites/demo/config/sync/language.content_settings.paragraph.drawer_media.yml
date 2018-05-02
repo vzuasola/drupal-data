@@ -9,6 +9,8 @@ dependencies:
 third_party_settings:
   content_translation:
     enabled: true
+_core:
+  default_config_hash: k-3CcdFYqX58Ig26q0pBULuH85QjQcEzCvVRc4LbT-4
 id: paragraph.drawer_media
 target_entity_type_id: paragraph
 target_bundle: drawer_media

@@ -4,6 +4,8 @@ status: true
 dependencies:
   module:
     - webcomposer_drawer
+_core:
+  default_config_hash: BOybKKTkMZRW5Pqn-sXWvGk3HT1ORMRZ7ZD3hpd0gF8
 id: drawer_entity.field_drawer_id
 field_name: field_drawer_id
 entity_type: drawer_entity

@@ -1,14 +1,14 @@
-uuid: 0b3d5ef5-aaa1-4638-846d-7fdf88644366
+uuid: 9ab5b54f-a3ef-4d52-904f-92b88c0ed132
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.drawer_entity.field_drawe
+    - field.storage.drawer_entity.field_drawer_summary
   module:
     - text
     - webcomposer_drawer
-id: drawer_entity.drawer_entity.field_drawe
-field_name: field_drawe
+id: drawer_entity.drawer_entity.field_drawer_summary
+field_name: field_drawer_summary
 entity_type: drawer_entity
 bundle: drawer_entity
 label: 'Drawer Summary'

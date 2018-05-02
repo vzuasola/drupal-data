@@ -6,6 +6,8 @@ dependencies:
     - entity_reference_revisions
     - paragraphs
     - webcomposer_drawer
+_core:
+  default_config_hash: bxBZoJcNq-0sv9YOFPbTyVD1QZbuCeTnlmIhlXUN_9g
 id: drawer_entity.field_drawer_media
 field_name: field_drawer_media
 entity_type: drawer_entity

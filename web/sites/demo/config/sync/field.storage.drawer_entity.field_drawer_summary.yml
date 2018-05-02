@@ -1,12 +1,12 @@
-uuid: 1cb18e4b-1681-4b4a-a2aa-23878bab9dad
+uuid: 329b3460-b785-4c66-9a24-9ac51076c26b
 langcode: en
 status: true
 dependencies:
   module:
     - text
     - webcomposer_drawer
-id: drawer_entity.field_drawe
-field_name: field_drawe
+id: drawer_entity.field_drawer_summary
+field_name: field_drawer_summary
 entity_type: drawer_entity
 type: text_long
 settings: {  }

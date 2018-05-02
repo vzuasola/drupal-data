@@ -14,6 +14,8 @@ third_party_settings:
       alt: alt
       title: title
       file: '0'
+_core:
+  default_config_hash: 9sUtOthIYV9CznrjGWGkGLaGPMT1-ZrSt0vl7GzfftQ
 id: paragraph.drawer_media.field_drawer_image
 field_name: field_drawer_image
 entity_type: paragraph
