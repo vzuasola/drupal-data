@@ -3,11 +3,11 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.drawer_entity.drawer_entity.field_drawe
     - field.field.drawer_entity.drawer_entity.field_drawer_button
     - field.field.drawer_entity.drawer_entity.field_drawer_class
     - field.field.drawer_entity.drawer_entity.field_drawer_id
     - field.field.drawer_entity.drawer_entity.field_drawer_media
+    - field.field.drawer_entity.drawer_entity.field_drawer_summary
     - field.field.drawer_entity.drawer_entity.field_drawer_title
   module:
     - entity_reference_revisions
@@ -15,18 +15,13 @@ dependencies:
     - text
     - user
     - webcomposer_drawer
+_core:
+  default_config_hash: hqT_kTgc6hoarQMVseaYZ8WH_Qzs2Xz3HB5_1vM0j2M
 id: drawer_entity.drawer_entity.default
 targetEntityType: drawer_entity
 bundle: drawer_entity
 mode: default
 content:
-  field_drawe:
-    weight: 3
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
-    region: content
   field_drawer_button:
     weight: 4
     label: above
@@ -63,6 +58,13 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
+    region: content
+  field_drawer_summary:
+    weight: 7
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
     region: content
   field_drawer_title:
     weight: 2

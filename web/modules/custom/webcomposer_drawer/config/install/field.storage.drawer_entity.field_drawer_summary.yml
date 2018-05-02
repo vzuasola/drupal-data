@@ -1,18 +1,16 @@
-uuid: f4457e09-23f4-4795-9002-b6caf7a6609b
+uuid: 329b3460-b785-4c66-9a24-9ac51076c26b
 langcode: en
 status: true
 dependencies:
   module:
-    - link
+    - text
     - webcomposer_drawer
-_core:
-  default_config_hash: tY6euh5QMEJk0S9wnOcqpFwgNvdgm0_47KtUPiQ4RZE
-id: drawer_entity.field_drawer_button
-field_name: field_drawer_button
+id: drawer_entity.field_drawer_summary
+field_name: field_drawer_summary
 entity_type: drawer_entity
-type: link
+type: text_long
 settings: {  }
-module: link
+module: text
 locked: false
 cardinality: 1
 translatable: true

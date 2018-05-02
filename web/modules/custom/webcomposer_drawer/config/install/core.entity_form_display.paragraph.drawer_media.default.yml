@@ -10,6 +10,8 @@ dependencies:
   module:
     - file
     - image
+_core:
+  default_config_hash: 1AFONPRql2145HZV3YDVsEmS4ENCQmDyrCSSPydy9is
 id: paragraph.drawer_media.default
 targetEntityType: paragraph
 bundle: drawer_media
@@ -29,6 +31,9 @@ content:
       progress_indicator: throbber
     third_party_settings: {  }
     type: file_generic
+    region: content
+  translation:
+    weight: 10
     region: content
 hidden:
   created: true

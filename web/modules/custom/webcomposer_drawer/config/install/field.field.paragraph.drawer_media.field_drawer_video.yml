@@ -7,6 +7,8 @@ dependencies:
     - paragraphs.paragraphs_type.drawer_media
   module:
     - file
+_core:
+  default_config_hash: mxTvDnYMRRDeCVZziWk9ADRMP3LonZ43HtTnqjHCidE
 id: paragraph.drawer_media.field_drawer_video
 field_name: field_drawer_video
 entity_type: paragraph
