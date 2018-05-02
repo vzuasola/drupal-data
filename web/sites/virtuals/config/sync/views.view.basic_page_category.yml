@@ -1,4 +1,4 @@
-uuid: 9dd23670-9390-4539-8b2a-225397ea21c8
+uuid: 23410139-e44c-41d6-bc3f-4af8c5f15dad
 langcode: en
 status: true
 dependencies:
@@ -48,7 +48,7 @@ display:
         type: basic
         options:
           submit_button: Apply
-          reset_button: true
+          reset_button: false
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
           expose_sort_order: true
@@ -112,13 +112,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        draggableviews:
-          id: draggableviews
-          table: node_field_data
-          field: draggableviews
-          entity_type: node
-          entity_field: nid
-          plugin_id: draggable_views_field
       filters:
         status:
           value: '1'
@@ -208,10 +201,10 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: false
-          type: select
+          type: textfield
           limit: true
           vid: basic_page_category
-          hierarchy: true
+          hierarchy: false
           error_message: true
           plugin_id: taxonomy_index_tid
         langcode:
@@ -289,12 +282,8 @@ display:
       relationships: {  }
       arguments: {  }
       display_extenders: {  }
-      filter_groups:
-        operator: AND
-        groups:
-          1: AND
     cache_metadata:
-      max-age: 0
+      max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
@@ -308,10 +297,11 @@ display:
     display_title: Page
     position: 1
     display_options:
-      display_extenders: {  }
+      display_extenders:
+        metatag_display_extender: {  }
       path: page-list
     cache_metadata:
-      max-age: 0
+      max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
@@ -325,9 +315,8 @@ display:
     display_title: 'Sort Basic Page List'
     position: 3
     display_options:
-      display_extenders: {  }
-      path: admin/structure/sort-page-list
-      exposed_block: false
+      display_extenders:
+        metatag_display_extender: {  }
       display_description: ''
       style:
         type: table
@@ -342,16 +331,10 @@ display:
           description: ''
           columns:
             title: title
-            draggableviews: draggableviews
           info:
             title:
-              sortable: true
+              sortable: false
               default_sort_order: asc
-              align: views-align-left
-              separator: ''
-              empty_column: false
-              responsive: ''
-            draggableviews:
               align: ''
               separator: ''
               empty_column: false
@@ -362,10 +345,9 @@ display:
         style: false
         row: false
         fields: false
-        sorts: false
         filters: false
         filter_groups: false
-        title: false
+        pager: false
       row:
         type: 'entity:node'
         options:
@@ -438,38 +420,27 @@ display:
           id: title
           table: node_field_data
           field: title
+          entity_type: node
+          entity_field: title
+          label: ''
+          alter:
+            alter_text: false
+            make_link: false
+            absolute: false
+            trim: false
+            word_boundary: false
+            ellipsis: false
+            strip_tags: false
+            html: false
+          hide_empty: false
+          empty_zero: false
+          settings:
+            link_to_entity: true
+          plugin_id: field
           relationship: none
           group_type: group
           admin_label: ''
-          label: Title
           exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
           element_type: ''
           element_class: ''
           element_label_type: ''
@@ -479,13 +450,9 @@ display:
           element_wrapper_class: ''
           element_default_classes: true
           empty: ''
-          hide_empty: false
-          empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
           type: string
-          settings:
-            link_to_entity: true
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -496,9 +463,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: title
-          plugin_id: field
         draggableviews:
           id: draggableviews
           table: node_field_data
@@ -553,34 +517,6 @@ display:
           entity_type: node
           entity_field: nid
           plugin_id: draggable_views_field
-      sorts:
-        weight:
-          id: weight
-          table: draggableviews_structure
-          field: weight
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: ASC
-          exposed: false
-          expose:
-            label: 'DraggableViews Weight'
-          plugin_id: standard
-        created:
-          id: created
-          table: node_field_data
-          field: created
-          order: DESC
-          entity_type: node
-          entity_field: created
-          plugin_id: date
-          relationship: none
-          group_type: group
-          admin_label: ''
-          exposed: false
-          expose:
-            label: ''
-          granularity: second
       filters:
         type:
           id: type
@@ -659,14 +595,14 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: false
-          type: select
+          type: textfield
           limit: true
           vid: basic_page_category
           hierarchy: false
           error_message: true
           plugin_id: taxonomy_index_tid
-        langcode_1:
-          id: langcode_1
+        langcode:
+          id: langcode
           table: node_field_data
           field: langcode
           relationship: none
@@ -720,13 +656,16 @@ display:
         operator: AND
         groups:
           1: AND
-      title: 'Sort FAQ Page List'
+      path: admin/structure/sort-page-list
+      pager:
+        type: none
+        options:
+          offset: 0
     cache_metadata:
       max-age: 0
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - url.query_args
         - user
         - 'user.node_grants:view'
         - user.permissions
@@ -738,7 +677,8 @@ display:
     display_title: 'REST export'
     position: 2
     display_options:
-      display_extenders: {  }
+      display_extenders:
+        metatag_display_extender: {  }
       path: api/page-list
       style:
         type: serializer
@@ -754,7 +694,7 @@ display:
           items_per_page: 10
           offset: 0
     cache_metadata:
-      max-age: 0
+      max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
