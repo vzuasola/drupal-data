@@ -251,7 +251,7 @@ class HeaderForm extends FormBase {
       '#translatable' => TRUE,
     ];
 
-    $form['balance_group']['deprecated']['balance_label_override'] = [
+    $form['balance_group']['balance_label_override'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Lottery Balance Label Override in Tooltip'),
       '#description' => $this->t('Provide a label to override LD and Lottery label specific for SC and RMB currency'),
