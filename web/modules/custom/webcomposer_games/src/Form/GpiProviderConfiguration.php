@@ -19,6 +19,7 @@ class GpiProviderConfiguration extends ConfigFormBase {
         'gpi_keno' => 'GPI Keno',
         'gpi_pk10' => 'GPI PK10',
         'gpi_thai_lottey' => 'GPI Thai Lottey',
+        'gpi_live_dealer' => 'GPI Live Casino',
     ];
   public function getFormId() {
     return 'gpi_provider_settings_form';
@@ -39,7 +40,7 @@ class GpiProviderConfiguration extends ConfigFormBase {
     $config = $this->config('webcomposer_config.games_gpi_provider');
     $form['advanced'] = [
       '#type' => 'vertical_tabs',
-      '#title' => t('Gpi Configurations'),
+      '#title' => t('GPI Configurations'),
     ];
 
     foreach (self::GPI_GAME_PROVIDERS as $key => $value) {
@@ -64,26 +65,26 @@ class GpiProviderConfiguration extends ConfigFormBase {
 
     $form['gpi_gen_config'] = [
       '#type' => 'details',
-      '#title' => t('Gpi General Configurations'),
+      '#title' => t('GPI General Configurations'),
       '#group' => 'advanced',
       '#weight' => '0',
     ];
 
     $form['gpi_gen_config']['gpi_game_url'] = array(
       '#type' => 'textfield',
-      '#title' => t('Gpi Game url'),
+      '#title' => t('GPI Game url'),
       '#description' => $this->t('Defines the  GPI  Game Url'),
       '#default_value' => $config->get('gpi_game_url')
     );
     $form['gpi_gen_config']['gpi_lottery_keno_version_no'] = array(
       '#type' => 'textfield',
-      '#title' => t('Gpi Lottery Keno Version Number'),
+      '#title' => t('GPI Lottery Keno Version Number'),
       '#description' => $this->t('Defines the  GPI lottery Keno Version Number'),
       '#default_value' => $config->get('gpi_lottery_keno_version_no')
     );
     $form['gpi_gen_config']['gpi_vendor_id'] = array(
       '#type' => 'textfield',
-      '#title' => t('Gpi  Vendor Id'),
+      '#title' => t('GPI  Vendor Id'),
       '#description' => $this->t('Defines the  GPI  Vendor Id'),
       '#default_value' => $config->get('gpi_vendor_id')
     );
