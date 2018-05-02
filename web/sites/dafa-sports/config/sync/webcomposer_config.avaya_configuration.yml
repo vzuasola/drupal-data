@@ -1,4 +1,4 @@
-base_url: 'https://www.cs-livechat.com/c/en/mc-desktop?brand=Dafa&height=760&width=360&title=avayaChatWindow&product=sports'
+base_url: 'https://www.cs-livechat.com/c/en/mc-desktop?brand=Dafa&height=760&width=360&title=avayaChatWindow&product=dafa-sports'
 url_post: 'https://www.cs-livechat.com/s/jwt'
 url_post_timout: '5000'
 jwt_key: secret-jwt-key
