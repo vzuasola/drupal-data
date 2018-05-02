@@ -9,7 +9,7 @@ third_party_settings:
   content_translation:
     enabled: true
 _core:
-  default_config_hash: G_ruNCZL2vn2ATJcKsyzZ7M_LnBNtTzLzoioKGfEpIE
+  default_config_hash: 6dXRHpX68D0k5jIAwWOtfpME-kJ3nRoDqpTaEt7Dtfc
 id: webcomposer_meta_entity.webcomposer_meta_entity
 target_entity_type_id: webcomposer_meta_entity
 target_bundle: webcomposer_meta_entity

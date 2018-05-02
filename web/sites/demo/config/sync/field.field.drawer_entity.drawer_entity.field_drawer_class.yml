@@ -1,0 +1,22 @@
+uuid: 9e54a4ec-faa5-4141-8f48-5bf7a549dcec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.drawer_entity.field_drawer_class
+  module:
+    - webcomposer_drawer
+_core:
+  default_config_hash: osQhupQ47TPHmN0Szj_QtNJXl8R0tSzHRYbEnniTZEE
+id: drawer_entity.drawer_entity.field_drawer_class
+field_name: field_drawer_class
+entity_type: drawer_entity
+bundle: drawer_entity
+label: 'Drawer Class'
+description: 'Additional classes to bind to this drawer'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

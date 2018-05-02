@@ -125,6 +125,9 @@ $settings['monolog'] = [
  */
 if (file_exists($app_root . '/' . $site_path . '/database.php')) {
   require $app_root . '/' . $site_path . '/database.php';
+} elseif (file_exists($app_root . '/' . $site_path . '/database.local.php')) {
+  // special handling for local
+  require $app_root . '/' . $site_path . '/database.local.php';
 }
 
 /**

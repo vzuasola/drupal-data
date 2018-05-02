@@ -10,7 +10,7 @@ dependencies:
     - user
     - webcomposer_seo
 _core:
-  default_config_hash: qP-ZTMRIujk3hykkp1V2hukgvYw8iPL415YbSxNs0_8
+  default_config_hash: 8eNVme4ER1AlAbtFwCtzvk5-Qt9il_0AeCCNtyM56xM
 id: webcomposer_meta_entity.webcomposer_meta_entity.default
 targetEntityType: webcomposer_meta_entity
 bundle: webcomposer_meta_entity
