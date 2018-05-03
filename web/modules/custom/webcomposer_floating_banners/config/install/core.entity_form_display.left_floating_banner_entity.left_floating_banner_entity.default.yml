@@ -8,13 +8,14 @@ dependencies:
     - field.field.left_floating_banner_entity.left_floating_banner_entity.field_image
     - field.field.left_floating_banner_entity.left_floating_banner_entity.field_link
     - field.field.left_floating_banner_entity.left_floating_banner_entity.field_link_target
+    - field.field.left_floating_banner_entity.left_floating_banner_entity.field_link_text
     - field.field.left_floating_banner_entity.left_floating_banner_entity.field_per_page_config
+    - field.field.left_floating_banner_entity.left_floating_banner_entity.field_platform
     - field.field.left_floating_banner_entity.left_floating_banner_entity.field_title
     - field.field.left_floating_banner_entity.left_floating_banner_entity.field_title_layout
     - image.style.thumbnail
   module:
     - image
-    - link
     - paragraphs
     - webcomposer_floating_banners
 _core:
@@ -26,7 +27,7 @@ mode: default
 content:
   field_banner_item:
     type: entity_reference_paragraphs
-    weight: 7
+    weight: 10
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -37,13 +38,13 @@ content:
     third_party_settings: {  }
     region: content
   field_floating_banner_type:
-    weight: 2
+    weight: 4
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_image:
-    weight: 3
+    weight: 5
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -51,29 +52,43 @@ content:
     type: image_image
     region: content
   field_link:
-    weight: 4
+    weight: 6
     settings:
-      placeholder_url: ''
-      placeholder_title: ''
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
-    type: link_default
+    type: string_textfield
     region: content
   field_link_target:
-    weight: 5
+    weight: 8
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
+  field_link_text:
+    weight: 7
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_per_page_config:
     type: string_textarea
-    weight: 6
+    weight: 9
     region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
+  field_platform:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_title:
-    weight: 0
+    weight: 2
     settings:
       size: 60
       placeholder: ''
@@ -81,13 +96,20 @@ content:
     type: string_textfield
     region: content
   field_title_layout:
-    weight: 1
+    weight: 3
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
 hidden:
   langcode: true
-  name: true
   translation: true
   user_id: true
