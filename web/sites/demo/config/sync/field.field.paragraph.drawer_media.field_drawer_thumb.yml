@@ -1,9 +1,9 @@
-uuid: fcae1746-fad1-4a64-bde3-2966ca9763df
+uuid: 11ef3b87-5bc4-4cff-ab6c-d1c16389a587
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_drawer_image
+    - field.storage.paragraph.field_drawer_thumb
     - paragraphs.paragraphs_type.drawer_media
   module:
     - content_translation
@@ -14,14 +14,12 @@ third_party_settings:
       alt: alt
       title: title
       file: '0'
-_core:
-  default_config_hash: gUd5yypnIxCFgEbmxiA_Gs9fnMG34kOIpYX8I-Qb8RY
-id: paragraph.drawer_media.field_drawer_image
-field_name: field_drawer_image
+id: paragraph.drawer_media.field_drawer_thumb
+field_name: field_drawer_thumb
 entity_type: paragraph
 bundle: drawer_media
-label: 'Drawer Image'
-description: '<strong>The main banner drawer image</strong>'
+label: 'Drawer Thumb'
+description: '<strong>The thumbnail image that will be used. If this is omitted, the banner will be used as the thumbnail</strong>'
 required: false
 translatable: true
 default_value: {  }

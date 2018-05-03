@@ -4,13 +4,15 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.drawer_media.field_drawer_image
+    - field.field.paragraph.drawer_media.field_drawer_thumb
     - field.field.paragraph.drawer_media.field_drawer_video
+    - field.field.paragraph.drawer_media.field_drawer_video_fallback
     - paragraphs.paragraphs_type.drawer_media
   module:
     - file
     - image
 _core:
-  default_config_hash: bki-2XpN0VGY49Tf8LtA09uzYk2yRDNuY3A-NKFGXHI
+  default_config_hash: PwMK4etxDdloKgsMiiQRoign8WLt2eWL_iyWXQlXbUE
 id: paragraph.drawer_media.default
 targetEntityType: paragraph
 bundle: drawer_media
@@ -25,8 +27,24 @@ content:
     third_party_settings: {  }
     type: image
     region: content
+  field_drawer_thumb:
+    weight: 2
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
   field_drawer_video:
     weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: file_default
+    region: content
+  field_drawer_video_fallback:
+    weight: 3
     label: above
     settings: {  }
     third_party_settings: {  }
