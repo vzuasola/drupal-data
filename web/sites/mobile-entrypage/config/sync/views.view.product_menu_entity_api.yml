@@ -1,18 +1,17 @@
-uuid: f37de3bf-9f89-43df-8732-787e83149745
+uuid: be0020dc-c85f-4552-afe1-0bf526878055
 langcode: en
 status: true
 dependencies:
   module:
-    - mobile_sponsor_list
+    - mobile_product_menu
     - rest
     - serialization
-    - webcomposer_rest_extra
-id: mobile_sponsors
-label: 'Mobile Sponsors'
+id: product_menu_entity_api
+label: 'Product Menu Entity API'
 module: views
 description: ''
 tag: ''
-base_table: mobile_sponsor_list_field_data
+base_table: mobile_product_menu_field_data
 base_field: id
 core: 8.x
 display:
@@ -75,7 +74,7 @@ display:
           default_field_elements: true
       fields:
         name:
-          table: mobile_sponsor_list_field_data
+          table: mobile_product_menu_field_data
           field: name
           id: name
           entity_type: null
@@ -141,7 +140,7 @@ display:
       filters:
         langcode:
           id: langcode
-          table: mobile_sponsor_list_field_data
+          table: mobile_product_menu_field_data
           field: langcode
           relationship: none
           group_type: group
@@ -176,7 +175,7 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          entity_type: mobile_sponsor_list
+          entity_type: mobile_product_menu
           entity_field: langcode
           plugin_id: language
       sorts: {  }
@@ -201,18 +200,18 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: api/mobile_sponsor_list
+      path: api/mobile_product_menu
       pager:
         type: some
         options:
           items_per_page: 10
           offset: 0
       style:
-        type: node_list_serializer
+        type: serializer
         options:
+          grouping: {  }
           uses_fields: false
-          formats:
-            json: json
+          formats: {  }
       row:
         type: data_entity
         options: {  }
