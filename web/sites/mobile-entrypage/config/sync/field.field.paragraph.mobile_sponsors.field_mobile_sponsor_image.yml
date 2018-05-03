@@ -6,7 +6,14 @@ dependencies:
     - field.storage.paragraph.field_mobile_sponsor_image
     - paragraphs.paragraphs_type.mobile_sponsors
   module:
+    - content_translation
     - image
+third_party_settings:
+  content_translation:
+    translation_sync:
+      alt: alt
+      title: title
+      file: '0'
 id: paragraph.mobile_sponsors.field_mobile_sponsor_image
 field_name: field_mobile_sponsor_image
 entity_type: paragraph

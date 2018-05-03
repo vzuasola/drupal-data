@@ -1,14 +1,22 @@
-lobby_page_title: '在线投注—— 在Dafabet畅享体育投注、娱乐场和扑克游戏带来的无限乐趣'
+lobby_page_title: 大发虚拟游戏-最好的在线虚拟游戏投注就在dafabet虚拟游戏！
+critical_announcement_content:
+  value: "<p class=\"MsoNormal\"><span lang=\"EN-US\" style=\"mso-ansi-language:EN-US\"><span lang=\"ZH-CN\" style=\"font-size:10.0pt\"><span style=\"font-family:&quot;Microsoft JhengHei&quot;,&quot;sans-serif&quot;\"><span style=\"color:black\">为了给我们尊贵的玩家带来更优质的体验，我们将于</span></span></span><span lang=\"EN-US\" style=\"font-size:10.0pt\"><span style=\"font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;\"><span style=\"color:black\">2</span></span></span><span lang=\"ZH-CN\" style=\"font-size:10.0pt\"><span style=\"font-family:&quot;MS Gothic&quot;\"><span style=\"color:black\">月</span></span></span><span lang=\"EN-US\" style=\"font-size:10.0pt\"><span style=\"font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;\"><span style=\"color:black\">21</span></span></span><span lang=\"ZH-CN\" style=\"font-size:10.0pt\"><span style=\"font-family:&quot;MS Gothic&quot;\"><span style=\"color:black\">日上午</span></span></span><span lang=\"EN-US\" style=\"font-size:10.0pt\"><span style=\"font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;\"><span style=\"color:black\">5:00 – 5:30</span></span></span><span lang=\"ZH-CN\" style=\"font-size:10.0pt\"><span style=\"font-family:&quot;MS Gothic&quot;\"><span style=\"color:black\">期</span></span></span><span lang=\"ZH-CN\" style=\"font-size:10.0pt\"><span style=\"font-family:&quot;Microsoft JhengHei&quot;,&quot;sans-serif&quot;\"><span style=\"color:black\">间进行网页升级，网页版在线聊天将暂不可用。</span></span></span> <span lang=\"ZH-CN\" style=\"font-size:10.0pt\"><span style=\"font-family:&quot;Microsoft JhengHei&quot;,&quot;sans-serif&quot;\"><span style=\"color:black\">请通过其他方式</span></span></span> <span lang=\"ZH-CN\" style=\"font-size:10.0pt\"><span style=\"font-family:&quot;MS Gothic&quot;\"><span style=\"color:black\">（如：客</span></span></span><span lang=\"ZH-CN\" style=\"font-size:10.0pt\"><span style=\"font-family:&quot;Microsoft JhengHei&quot;,&quot;sans-serif&quot;\"><span style=\"color:black\">户端在线聊天、邮件、电话等）联系我们。给您带来的不便我们深表歉意。</span></span></span><span lang=\"EN-US\" style=\"font-size:10.0pt\"><span style=\"font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;\"><span style=\"color:black\"></span></span></span><o:p></o:p></span></p>\r\n"
+  format: basic_html
+news_announcement_content:
+  value: ''
+  format: basic_html
 join_now_text: 立即加入
-join_now_link: '/{domain:entry}/{domain:lang_token}/cant-login{tracking.token}'
+join_now_link: '/{domain:entry}/{domain:lang_token}/join/virtual-sports{tracking.token}'
 login_issue_text: 无法登录？
-login_issue_link: '/{domain:entry}/{domain:lang_token}/cant-login{tracking.token}'
+product_balance_label: 现场荷官、老虎机、街机、和虚拟运动
+total_balance_label: 总余额
 balance_error_text: 错误检索
 profile_icon_hover_text: 我的账户
 cashier_icon_hover_text: 出纳柜台
 product_menu_new_tag: '新 '
 welcome_text: '欢迎 {username}'
-profile_link: '{domain:cashier_domain}/{lang}?ticket={auth.token}&title=cashierMyAccount&product=casino{tracking.token}'
+profile_link: '/{domain:cashier_domain}/{domain:cashier_lang}/?ticket={auth.token}&product=dafabet{tracking.token}'
 profile_logout_text: 登出
-balance_label_mapping: "4|沙巴体育\r\n6|大发体育\r\n1|娱乐场经典版\r\n2|娱乐场黄金版\r\n5|现场荷官&老虎机网页版\r\n8|OPUS现场荷官\r\n9|快乐彩\r\n3|扑克\r\n7|捕鱼王"
+balance_label_mapping: "4|沙巴体育\r\n6|大发体育\r\n10|交易所\r\n1|娱乐场经典版\r\n2|娱乐场黄金版\r\n5|现场荷官、老虎机、街机、和虚拟运动\r\n8|OPUS现场荷官\r\n9|快乐彩\r\n3|扑克\r\n7|AG 捕鱼王"
 balance_error_text_product: 无
+balance_mapping: 5|现场荷官、老虎机、街机、和虚拟运动

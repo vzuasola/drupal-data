@@ -1,0 +1,7 @@
+game_config.admin_settings:
+  path: 'admin/config/game'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Game Configuration'
+  requirements:
+    _permission: 'administer site configuration'

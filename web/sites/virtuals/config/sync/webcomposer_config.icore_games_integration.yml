@@ -1,6 +1,9 @@
+langcode: en
+_core:
+  default_config_hash: zrDzV-6LU1cRUG3p_gAd8_FHy7pnRz8SS-D4uOGgb04
 fish_hunter_currency: ''
 fish_hunter_language_mapping: ''
-kiron_virtual_sports_currency: ''
+kiron_virtual_sports_currency: "MYR\r\nTHB\r\nKRW\r\nVND\r\nRMB\r\nUSD\r\nIDR\r\nINR\r\nEUR"
 kiron_virtual_sports_language_mapping: "en|en-US\r\nsc|zh-CN\r\nch|zh-TW\r\nth|th\r\nkr|ko-KR\r\nid|id\r\nvn|vi\r\njp|ja\r\nin|hi"
 unsupported_currencies_title: ''
 unsupported_currencies_message:
