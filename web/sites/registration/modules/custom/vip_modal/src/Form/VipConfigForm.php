@@ -138,6 +138,26 @@ class VipConfigForm extends FormBase {
         '#translatable' => TRUE,
       ];
 
+      $form[$group]["$vipKeys[0]_level_card_link"] = [
+        '#type' => 'textfield',
+        '#title' => $this->t('Card link'),
+        '#default_value' => $this->get("$vipKeys[0]_level_card_link") ?: '',
+        '#translatable' => TRUE,
+      ];
+
+      $form[$group]["$vipKeys[0]_level_card_target"] = [
+        '#type' => 'select',
+        '#title' => $this->t('Link target'),
+        '#default_value' => $this->get("$vipKeys[0]_level_card_target") ?: '',
+        '#translatable' => TRUE,
+        '#options' => [
+          '_blank' => $this->t('New Window'),
+          '_self' => $this->t('Same Window'),
+          'window' => $this->t('Popup Window'),
+          'modal' => $this->t('Modal'),
+        ],
+      ];
+
       $form[$group]['pre'] = [
         '#type' => 'details',
         '#title' => $this->t('Pre Login Content'),
