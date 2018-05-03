@@ -1,4 +1,4 @@
-uuid: 5114fdb9-ed6c-424d-9111-3be933ef2749
+uuid: 5c3527fc-0b76-496d-bb31-d54fdf787334
 langcode: en
 status: true
 dependencies:
@@ -13,6 +13,5 @@ configuration:
   GET:
     supported_formats:
       - json
-      - xml
     supported_auth:
       - cookie

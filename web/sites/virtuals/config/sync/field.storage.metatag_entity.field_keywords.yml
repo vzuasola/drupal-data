@@ -1,0 +1,21 @@
+uuid: 221e3785-185a-47de-9db7-39a0eed92400
+langcode: en
+status: true
+dependencies:
+  module:
+    - webcomposer_metatags
+_core:
+  default_config_hash: ne7q2OEIpkBlm4Wu3VyEg_bi-_VK7z9-7OLHQbOHn18
+id: metatag_entity.field_keywords
+field_name: field_keywords
+entity_type: metatag_entity
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
