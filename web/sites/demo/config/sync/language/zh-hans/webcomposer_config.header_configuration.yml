@@ -1,11 +1,26 @@
+header_settings_tab__active_tab: edit-logo-group
+logo_title: 'Dafabet SC'
+capslock_notification: 'Caps lock is enabled SC'
+balance_label_override: ''
+critical_announcement: 0
+critical_announcement_content:
+  value: "<p>This is a critical announcement test test test</p>\r\n"
+  format: basic_html
+news_announcement: 0
+news_announcement_content:
+  value: "<p>test</p>\r\n"
+  format: basic_html
+lobby_page_title: 'Online Betting - Bet on Sports, Play Online Casino and Poker at Dafabet'
 join_now_text: 'Join Nows SC SC'
 join_now_link: '/{domain:entry}/{domain:lang_token}/cant-login{tracking.token}'
-login_issue_text: 'Cant login?'
+login_issue_text: 'Cant login SC?'
 login_issue_link: '/{domain:entry}/{domain:lang_token}/cant-login{tracking.token}'
 product_balance_label: 'Casino Classic Account Balance'
 balance_error_text: 'Error Retrieving.'
+profile_icon_hover_text: 'My Profile SC'
+cashier_icon_hover_text: 'Cashier SC'
 welcome_text: '{username}'
 profile_link: 'https://stg-accountwww.elysium-dfbt.com/en/my-profile'
-profile_logout_text: Logout
-balance_error_text_product: N/A
-cashier_link: N/A
+profile_logout_text: 'Logout SC'
+balance_error_text_product: 'N/A SC'
+cashier_link: 'N/A SC'

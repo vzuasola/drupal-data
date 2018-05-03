@@ -7,7 +7,7 @@ dependencies:
   module:
     - webcomposer_seo
 _core:
-  default_config_hash: 2OkyEgdHflI7dPI2LZ_vRQuEA2U7HQo_gVO5IJPAcyk
+  default_config_hash: BHCwVqUunyF8Zc4t5E0trbiAJIYc5YB_9II_D8BSWzU
 id: webcomposer_meta_entity.webcomposer_meta_entity.field_per_page_visibility
 field_name: field_per_page_visibility
 entity_type: webcomposer_meta_entity
