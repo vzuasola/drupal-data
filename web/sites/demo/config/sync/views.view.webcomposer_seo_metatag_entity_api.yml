@@ -5,9 +5,10 @@ dependencies:
   module:
     - rest
     - serialization
+    - webcomposer_rest_extra
     - webcomposer_seo
 _core:
-  default_config_hash: 7YXf58QBlgyngQCSr1PKadVFAPAVvfqM3iYbPKk0xhQ
+  default_config_hash: cOssIHH5rqBO-1CixJ0vm5Bh_bVNCRpbeFrBoFDPJ0Y
 id: webcomposer_seo_metatag_entity_api
 label: 'Webcomposer SEO Metatag Entity API'
 module: views
@@ -139,7 +140,47 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-      filters: {  }
+      filters:
+        langcode:
+          id: langcode
+          table: webcomposer_meta_entity_field_data
+          field: langcode
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: webcomposer_meta_entity
+          entity_field: langcode
+          plugin_id: language
       sorts: {  }
       header: {  }
       footer: {  }
@@ -147,6 +188,9 @@ display:
       relationships: {  }
       arguments: {  }
       display_extenders: {  }
+      filter_groups:
+        operator: AND
+        groups: {  }
     cache_metadata:
       max-age: -1
       contexts:
@@ -168,11 +212,12 @@ display:
         options:
           offset: 0
       style:
-        type: serializer
+        type: node_list_serializer
         options:
-          grouping: {  }
           uses_fields: false
-          formats: {  }
+          formats:
+            json: json
+            xml: xml
       row:
         type: data_entity
         options: {  }

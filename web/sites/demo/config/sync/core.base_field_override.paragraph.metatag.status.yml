@@ -5,7 +5,7 @@ dependencies:
   config:
     - paragraphs.paragraphs_type.metatag
 _core:
-  default_config_hash: pCd-vpDUYVJgWzBv_hfkvX8xdb-4dZoV6b2VTrUfd3Y
+  default_config_hash: YsaseS_4QCuj45qkXA1iAVXA9fKcnmO-x3Y5k7h3NqI
 id: paragraph.metatag.status
 field_name: status
 entity_type: paragraph

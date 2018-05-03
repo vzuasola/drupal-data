@@ -1,0 +1,21 @@
+uuid: 9ab5b54f-a3ef-4d52-904f-92b88c0ed132
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.drawer_entity.field_drawer_summary
+  module:
+    - text
+    - webcomposer_drawer
+id: drawer_entity.drawer_entity.field_drawer_summary
+field_name: field_drawer_summary
+entity_type: drawer_entity
+bundle: drawer_entity
+label: 'Drawer Summary'
+description: 'The description blurb that will show up on your drawer'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
