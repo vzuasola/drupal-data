@@ -57,7 +57,7 @@ class GamesConfigurationForm extends FormBase  {
     $form['game_info_text'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Game Info Link Text'),
-      '#description' => $this->t('The text to display on game info link.'),
+      '#description' => $this->t('This text to display on game info link.'),
       '#default_value' => $this->get('game_info_text'),
       '#required' => TRUE,
       '#translatable' => TRUE,
