@@ -62,6 +62,15 @@ class GamesConfigurationForm extends FormBase  {
       '#required' => TRUE,
       '#translatable' => TRUE,
     ];
+
+    $form['free_play_text'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Free Play Text'),
+      '#description' => $this->t('The text to display on Free Play Link.'),
+      '#default_value' => $this->get('free_play_text'),
+      '#required' => TRUE,
+      '#translatable' => TRUE,
+    ];
      return $form;
   }
 
