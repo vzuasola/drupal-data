@@ -1,48 +1,47 @@
 <?php
 
-
 /**
  * Implements hook_uninstall
  */
 function webcomposer_floating_banners_uninstall() {
    $keys = [
-      'language.content_settings.left_floating_banner_entity.left_floating_banner_entity.yml',
-      'language.content_settings.paragraph.floating_banner_item.yml',
       'core.base_field_override.left_floating_banner_entity.left_floating_banner_entity.user_id.yml',
       'core.entity_form_display.left_floating_banner_entity.left_floating_banner_entity.default.yml',
-      'core.entity_form_display.paragraph.floating_banner_item.default.yml',
       'core.entity_view_display.left_floating_banner_entity.left_floating_banner_entity.default.yml',
       'field.field.left_floating_banner_entity.left_floating_banner_entity.field_banner_item.yml',
       'field.field.left_floating_banner_entity.left_floating_banner_entity.field_floating_banner_type.yml',
       'field.field.left_floating_banner_entity.left_floating_banner_entity.field_image.yml',
-      'field.field.left_floating_banner_entity.left_floating_banner_entity.field_link_target.yml',
       'field.field.left_floating_banner_entity.left_floating_banner_entity.field_link.yml',
-      'field.field.left_floating_banner_entity.left_floating_banner_entity.field_title_layout.yml',
+      'field.field.left_floating_banner_entity.left_floating_banner_entity.field_link_target.yml',
+      'field.field.left_floating_banner_entity.left_floating_banner_entity.field_link_text.yml',
+      'field.field.left_floating_banner_entity.left_floating_banner_entity.field_per_page_config.yml',
       'field.field.left_floating_banner_entity.left_floating_banner_entity.field_title.yml',
-      'field.field.paragraph.floating_banner_item.field_button_text.yml',
-      'field.field.paragraph.floating_banner_item.field_enable.yml',
-      'field.field.paragraph.floating_banner_item.field_lightbox_content.yml',
-      'field.field.paragraph.floating_banner_item.field_lightbox_title.yml',
-      'field.field.paragraph.floating_banner_item.field_link_class.yml',
-      'field.field.paragraph.floating_banner_item.field_link_target.yml',
-      'field.field.paragraph.floating_banner_item.field_link.yml',
+      'field.field.left_floating_banner_entity.left_floating_banner_entity.field_title_layout.yml',
       'field.storage.left_floating_banner_entity.field_banner_item.yml',
       'field.storage.left_floating_banner_entity.field_floating_banner_type.yml',
       'field.storage.left_floating_banner_entity.field_image.yml',
-      'field.storage.left_floating_banner_entity.field_link_target.yml',
       'field.storage.left_floating_banner_entity.field_link.yml',
-      'field.storage.left_floating_banner_entity.field_title_layout.yml',
+      'field.storage.left_floating_banner_entity.field_link_target.yml',
+      'field.storage.left_floating_banner_entity.field_link_text.yml',
+      'field.storage.left_floating_banner_entity.field_per_page_config.yml',
       'field.storage.left_floating_banner_entity.field_title.yml',
-      'field.storage.paragraph.field_button_text.yml',
-      'field.storage.paragraph.field_lightbox_content.yml',
-      'field.storage.paragraph.field_lightbox_title.yml',
-      'field.storage.paragraph.field_link_class.yml',
-      'field.storage.paragraph.field_link.yml',
-      'paragraphs.paragraphs_type.floating_banner_item.yml',
+      'field.storage.left_floating_banner_entity.field_title_layout.yml',
+      'language.content_settings.left_floating_banner_entity.left_floating_banner_entity.yml',
       'views.view.floating_banner.yml',
     ];
 
     foreach ($keys as $key) {
       \Drupal::configFactory()->getEditable($key)->delete();
     }
+}
+
+/**
+ * Implements hook_update_N
+ *
+ * Changes:
+ * - Add platform field
+ * - Add new views page to list floating banners with exposed platform filter
+ */
+function webcomposer_floating_banners_update_8001() {
+   \Drupal::service('config.installer')->installDefaultConfig('module', 'webcomposer_floating_banners');
 }

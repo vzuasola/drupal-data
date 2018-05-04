@@ -5,6 +5,8 @@ dependencies:
   module:
     - options
     - webcomposer_floating_banners
+_core:
+  default_config_hash: S99JfEPI8CWnNVMUWz9wc-nL5VpPAmX7b1FKGEiuvpo
 id: left_floating_banner_entity.field_floating_banner_type
 field_name: field_floating_banner_type
 entity_type: left_floating_banner_entity

@@ -1,16 +1,18 @@
-uuid: 7febc9b0-9e9a-46fb-b905-ae3985df3ee1
+uuid: f48c6dd1-630e-4462-bd6e-195e1dbf8798
 langcode: en
 status: true
 dependencies:
   module:
-    - link
     - webcomposer_floating_banners
 id: left_floating_banner_entity.field_link
 field_name: field_link
 entity_type: left_floating_banner_entity
-type: link
-settings: {  }
-module: link
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
 locked: false
 cardinality: 1
 translatable: true
