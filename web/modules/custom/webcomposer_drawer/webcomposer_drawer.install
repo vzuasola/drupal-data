@@ -1,0 +1,42 @@
+<?php
+
+/**
+ * Implements hook_uninstall
+ */
+function webcomposer_drawer_uninstall() {
+  $keys = [
+    'core.base_field_override.drawer_entity.drawer_entity.metatag',
+    'core.entity_form_display.drawer_entity.drawer_entity.default',
+    'core.entity_form_display.paragraph.drawer_media.default',
+    'core.entity_view_display.drawer_entity.drawer_entity.default',
+    'core.entity_view_display.paragraph.drawer_media.default',
+    'field.field.drawer_entity.drawer_entity.field_drawer_button',
+    'field.field.drawer_entity.drawer_entity.field_drawer_class',
+    'field.field.drawer_entity.drawer_entity.field_drawer_id',
+    'field.field.drawer_entity.drawer_entity.field_drawer_media',
+    'field.field.drawer_entity.drawer_entity.field_drawer_summary',
+    'field.field.drawer_entity.drawer_entity.field_drawer_title',
+    'field.field.paragraph.drawer_media.field_drawer_image',
+    'field.field.paragraph.drawer_media.field_drawer_thumb',
+    'field.field.paragraph.drawer_media.field_drawer_video_fallback',
+    'field.field.paragraph.drawer_media.field_drawer_video',
+    'field.storage.drawer_entity.field_drawer_button',
+    'field.storage.drawer_entity.field_drawer_class',
+    'field.storage.drawer_entity.field_drawer_id',
+    'field.storage.drawer_entity.field_drawer_media',
+    'field.storage.drawer_entity.field_drawer_summary',
+    'field.storage.drawer_entity.field_drawer_title',
+    'field.storage.paragraph.field_drawer_image',
+    'field.storage.paragraph.field_drawer_thumb',
+    'field.storage.paragraph.field_drawer_video_fallback',
+    'field.storage.paragraph.field_drawer_video',
+    'language.content_settings.drawer_entity.drawer_entity',
+    'language.content_settings.paragraph.drawer_media',
+    'paragraphs.paragraphs_type.drawer_media',
+    'views.view.webcomposer_drawer_entity_api',
+  ];
+
+  foreach ($keys as $key) {
+    \Drupal::configFactory()->getEditable($key)->delete();
+  }
+}

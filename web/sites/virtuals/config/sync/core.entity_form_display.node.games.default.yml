@@ -1,0 +1,282 @@
+uuid: 9efe6433-1969-4f00-b39d-978f796cbc5a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.games.body
+    - field.field.node.games.field_end_date
+    - field.field.node.games.field_game_image
+    - field.field.node.games.field_game_image_large
+    - field.field.node.games.field_game_info
+    - field.field.node.games.field_game_provider
+    - field.field.node.games.field_game_title
+    - field.field.node.games.field_image_size
+    - field.field.node.games.field_maintenance_blurb
+    - field.field.node.games.field_ribbon_configuration
+    - field.field.node.games.field_show_game_info_toggle
+    - field.field.node.games.field_start_date
+    - image.style.thumbnail
+    - node.type.games
+  module:
+    - conditional_fields
+    - datetime
+    - field_group
+    - image
+    - path
+    - scheduler
+    - text
+third_party_settings:
+  field_group:
+    group_game_room_title_icon:
+      children:
+        - field_game_title
+      parent_name: ''
+      weight: 2
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: open
+        description: ''
+        required_fields: true
+      label: 'Game Room Title & Icon'
+    group_game_room_thumbnail_image:
+      children:
+        - field_image_size
+        - field_game_image
+        - field_game_image_large
+      parent_name: ''
+      weight: 3
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: open
+        description: ''
+        required_fields: true
+      label: 'Game Room Thumbnail Image'
+    group_game_information:
+      children:
+        - field_show_game_info_toggle
+        - field_game_info
+      parent_name: ''
+      weight: 4
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: open
+        description: ''
+        required_fields: true
+      label: 'GAME INFORMATION'
+    group_game_launching:
+      children:
+        - field_game_provider
+      parent_name: ''
+      weight: 9
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: open
+        description: ''
+        required_fields: true
+      label: 'Game Launching'
+    group_game_room_maintenance_comi:
+      children:
+        - field_maintenance_blurb
+        - field_start_date
+        - field_end_date
+      parent_name: ''
+      weight: 11
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: open
+        description: ''
+        required_fields: true
+      label: 'Game Room Maintenance/Coming Soon'
+id: node.games.default
+targetEntityType: node
+bundle: games
+mode: default
+content:
+  field_end_date:
+    weight: 20
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_game_image:
+    weight: 5
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings:
+      conditional_fields:
+        2adbecfc-63de-44c6-8508-2c59daa60603:
+          dependee: field_image_size
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: small
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: node
+          bundle: games
+    type: image_image
+    region: content
+  field_game_image_large:
+    weight: 6
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings:
+      conditional_fields:
+        1fb5b5bc-3900-4c56-98ae-8b3bbfd71906:
+          dependee: field_image_size
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: large
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: node
+          bundle: games
+    type: image_image
+    region: content
+  field_game_info:
+    weight: 13
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings:
+      conditional_fields:
+        46df9bcc-4c52-4236-8ba4-e137af7d7a4e:
+          dependee: field_show_game_info_toggle
+          settings:
+            state: visible
+            condition: checked
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              value: 1
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: node
+          bundle: games
+    type: text_textarea
+    region: content
+  field_game_provider:
+    weight: 17
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_game_title:
+    weight: 8
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_image_size:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_maintenance_blurb:
+    weight: 18
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_ribbon_configuration:
+    weight: 12
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_show_game_info_toggle:
+    weight: 12
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_start_date:
+    weight: 19
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  publish_on:
+    type: datetime_timestamp_no_default
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  scheduler_settings:
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  unpublish_on:
+    type: datetime_timestamp_no_default
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  body: true
+  created: true
+  promote: true
+  sticky: true
+  uid: true

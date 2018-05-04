@@ -1,0 +1,20 @@
+webcomposer_drawer.list:
+  title: 'Webcomposer Drawer Configuration'
+  description: 'List Web composer drawer entities'
+  parent: system.admin_config
+  route_name: webcomposer_drawer.admin_settings
+
+# Drawer entity menu items definition
+entity.drawer_entity.collection:
+  title: 'Drawer Entity List'
+  route_name: entity.drawer_entity.collection
+  description: 'List Drawer entity entities'
+  parent: webcomposer_drawer.list
+  weight: 100
+
+drawer_entity.admin.structure.settings:
+  title: Drawer Entity Settings
+  description: 'Configure Drawer entity entities'
+  route_name: drawer_entity.settings
+  parent: webcomposer_drawer.list
+  weight: 110

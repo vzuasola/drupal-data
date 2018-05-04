@@ -15,6 +15,24 @@ server parameters on your virtual hosts
 fastcgi_param DRUPAL_ENV "local";
 ```
 
+So your vhost might look like this
+
+```nginx
+location ~ '\.php$|^/update.php' {
+    fastcgi_split_path_info ^(.+?\.php)(|/.*)$;
+    include fastcgi_params;
+    fastcgi_param HTTP_PROXY "";
+    fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+    fastcgi_param PATH_INFO $fastcgi_path_info;
+    fastcgi_param QUERY_STRING $query_string;
+
+    fastcgi_param DRUPAL_ENV "local";
+
+    fastcgi_intercept_errors on;
+    fastcgi_pass  php-fpm-drupal:9000;
+}
+```
+
 This should allow Drupal to identify the current environment.
 
 ## Settings Definition
