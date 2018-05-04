@@ -1,14 +1,12 @@
-uuid: 21cb651f-9413-4174-9459-f9c209ece116
+uuid: 7611894e-6cf3-407b-9237-ba7a75990021
 langcode: en
 status: true
 dependencies:
   module:
     - file
     - paragraphs
-_core:
-  default_config_hash: DO2QcVlK1GNQ5SWgpF0zlVQ5cPCFg0eJoHwH3mePWBQ
-id: paragraph.field_drawer_video
-field_name: field_drawer_video
+id: paragraph.field_drawer_video_fallback
+field_name: field_drawer_video_fallback
 entity_type: paragraph
 type: file
 settings:
