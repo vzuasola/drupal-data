@@ -211,7 +211,16 @@ class VipConfigForm extends FormBase {
       $dv = $this->get("$vipKeys[0]_level_post_description");
       $form[$group]['post']["$vipKeys[0]_level_post_description"] = [
         '#type' => 'text_format',
-        '#title' => $this->t('Post Login Content'),
+        '#title' => ($vipKeys[0] == 'bronze') ? $this->t('Unlocked Content') : $this->t('Locked Content'),
+        '#default_value' => $dv['value'] ?: '',
+        '#format' => $dv['format'],
+        '#translatable' => TRUE,
+      ];
+
+      $dv = $this->get("$vipKeys[0]_current_level_content");
+      $form[$group]['post']["$vipKeys[0]_current_level_content"] = [
+        '#type' => 'text_format',
+        '#title' => $this->t('Current Level Content'),
         '#default_value' => $dv['value'] ?: '',
         '#format' => $dv['format'],
         '#translatable' => TRUE,
@@ -220,11 +229,12 @@ class VipConfigForm extends FormBase {
       $dv = $this->get("$vipKeys[0]_level_unlocked_content");
       $form[$group]['post']["$vipKeys[0]_level_unlocked_content"] = [
         '#type' => 'text_format',
-        '#title' => $this->t('Unlocked Content'),
+        '#title' => ($vipKeys[0] == 'bronze') ? $this->t('Blurb') : $this->t('Unlocked Content'),
         '#default_value' => $dv['value'] ?: '',
         '#format' => $dv['format'],
         '#translatable' => TRUE,
       ];
+
       $form[$group]['post']["$vipKeys[0]_post_button_label"] = [
         '#type' => 'textfield',
         '#title' => $this->t('Button label'),
