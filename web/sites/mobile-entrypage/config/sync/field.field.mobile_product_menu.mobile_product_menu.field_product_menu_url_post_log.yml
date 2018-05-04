@@ -1,0 +1,23 @@
+uuid: e14f9eb4-c774-4aa4-bdcc-645c80233123
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.mobile_product_menu.field_product_menu_url_post_log
+  module:
+    - link
+    - mobile_product_menu
+id: mobile_product_menu.mobile_product_menu.field_product_menu_url_post_log
+field_name: field_product_menu_url_post_log
+entity_type: mobile_product_menu
+bundle: mobile_product_menu
+label: 'Product Menu URL Post Login'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+field_type: link

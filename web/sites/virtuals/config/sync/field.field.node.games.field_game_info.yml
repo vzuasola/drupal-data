@@ -1,0 +1,21 @@
+uuid: 1c89b29a-cb93-43ab-95d8-1a2ce139451f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_game_info
+    - node.type.games
+  module:
+    - text
+id: node.games.field_game_info
+field_name: field_game_info
+entity_type: node
+bundle: games
+label: 'Game Info Content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

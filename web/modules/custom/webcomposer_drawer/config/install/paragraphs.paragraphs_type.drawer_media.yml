@@ -1,0 +1,9 @@
+uuid: 345acb2b-0ab5-47ff-a078-c3c5fe284edb
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: qqtLUR4ZY_3wnMp-xUqNyak7dnOs65nN_3qIdRcuvu0
+id: drawer_media
+label: 'Drawer Media'
+behavior_plugins: {  }

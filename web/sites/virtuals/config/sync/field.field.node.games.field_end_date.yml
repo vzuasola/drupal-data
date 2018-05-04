@@ -1,0 +1,21 @@
+uuid: 2f7c57f8-c1e1-4ad8-92db-a9bd2fc61d5a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_end_date
+    - node.type.games
+  module:
+    - datetime
+id: node.games.field_end_date
+field_name: field_end_date
+entity_type: node
+bundle: games
+label: 'End Date'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

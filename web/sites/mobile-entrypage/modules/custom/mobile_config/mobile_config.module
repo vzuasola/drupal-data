@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains mobile_config.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function mobile_config_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the mobile_config module.
+    case 'help.page.mobile_config':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Custom module for mobile specific updates') . '</p>';
+      return $output;
+
+    default:
+  }
+}
