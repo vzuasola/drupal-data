@@ -12,27 +12,14 @@ dependencies:
     - paragraphs.paragraphs_type.slider_overlay_cmi
   module:
     - image
-    - link
     - text
+_core:
+  default_config_hash: KCmK2xL231Qjp4Wtol_cqNWyNQnVEk9zz4E_9GbwpiI
 id: paragraph.slider_overlay_cmi.default
 targetEntityType: paragraph
 bundle: slider_overlay_cmi
 mode: default
 content:
-  field_link:
-    weight: 11
-    settings:
-      placeholder_url: ''
-      placeholder_title: ''
-    third_party_settings: {  }
-    type: link_default
-    region: content
-  field_link_target:
-    weight: 12
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
   field_slideroverlay_blurb:
     weight: 2
     settings:
@@ -60,9 +47,9 @@ content:
   translation:
     weight: 10
     region: content
-    settings: {  }
-    third_party_settings: {  }
 hidden:
   created: true
+  field_link: true
+  field_link_target: true
   status: true
   uid: true

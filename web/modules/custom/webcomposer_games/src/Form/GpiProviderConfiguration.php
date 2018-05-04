@@ -19,7 +19,7 @@ class GpiProviderConfiguration extends ConfigFormBase {
         'gpi_keno' => 'GPI Keno',
         'gpi_pk10' => 'GPI PK10',
         'gpi_thai_lottey' => 'GPI Thai Lottey',
-        'gpi_live_dealer' => 'GPI Live Casino',
+        'gpi_live_dealer' => 'GPI Live Dealer',
     ];
   public function getFormId() {
     return 'gpi_provider_settings_form';

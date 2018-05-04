@@ -21,7 +21,7 @@ field_name: field_drawer_image
 entity_type: paragraph
 bundle: drawer_media
 label: 'Drawer Image'
-description: 'Media for '
+description: '<strong>The main banner drawer image</strong>'
 required: false
 translatable: true
 default_value: {  }

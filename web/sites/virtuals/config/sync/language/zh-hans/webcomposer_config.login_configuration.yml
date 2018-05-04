@@ -1,0 +1,22 @@
+autologout_box_content:
+  format: basic_html
+  value: "<p>您的登錄將於<span class=\"sessionTimer\"></span>過期。您想繼續登錄嗎？</p>\r\n"
+notification_content:
+  format: basic_html
+  value: "<p>因沒有任何在線活動，您的登錄已超時失效。</p>\r\n"
+lightbox_blurb: 还不是大发会员？
+username_placeholder: 用户名
+password_placeholder: 密码
+login_bottom_label: 登录
+error_message_blank_username: 你的用户名为必填项。
+error_message_blank_password: 你的密码为必填项。
+error_message_blank_passname: 请检查所有字段，再试一次。
+error_message_invalid_passname: 对不起，您输入了无效的用户名和/或密码。请再试一次。
+error_message_service_not_available: 服务暂不可用。
+error_message_account_suspended: 帐户已被锁定。请联系我们的客户支持。
+error_message_account_locked: 帐户已被锁定。请联系我们的客户支持。
+autologout_box_title: 提示
+affirmative_button_text: 是
+negative_button_text: 不
+notification_title: 登录超时
+notification_window_title: 登录超时
