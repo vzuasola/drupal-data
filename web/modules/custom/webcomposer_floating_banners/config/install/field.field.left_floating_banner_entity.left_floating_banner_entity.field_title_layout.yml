@@ -8,7 +8,7 @@ dependencies:
     - options
     - webcomposer_floating_banners
 _core:
-  default_config_hash: PJhwilfpBZswZD88KI494Zzyn0dufwUNm0dSZ15hVbk
+  default_config_hash: GkDlIFXrr5p1MJ1cb6PpkhRT0U5g8H_5ZyQlCQF_RnU
 id: left_floating_banner_entity.left_floating_banner_entity.field_title_layout
 field_name: field_title_layout
 entity_type: left_floating_banner_entity
