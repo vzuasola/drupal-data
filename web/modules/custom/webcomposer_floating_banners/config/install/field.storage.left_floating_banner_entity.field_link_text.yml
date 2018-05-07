@@ -1,12 +1,12 @@
-uuid: b66c6982-e1e6-42a7-ab7e-cf7633c753d3
+uuid: 9d8c89df-314f-453c-9b00-f008cd2790e9
 langcode: en
 status: true
 dependencies:
   module:
-    - paragraphs
-id: paragraph.field_button_text
-field_name: field_button_text
-entity_type: paragraph
+    - webcomposer_floating_banners
+id: left_floating_banner_entity.field_link_text
+field_name: field_link_text
+entity_type: left_floating_banner_entity
 type: string
 settings:
   max_length: 255
