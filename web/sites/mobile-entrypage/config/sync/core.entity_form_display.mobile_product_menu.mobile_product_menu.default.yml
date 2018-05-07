@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.mobile_product_menu.mobile_product_menu.field_mobile_product_menu_target
     - field.field.mobile_product_menu.mobile_product_menu.field_product_menu_class
     - field.field.mobile_product_menu.mobile_product_menu.field_product_menu_enable
     - field.field.mobile_product_menu.mobile_product_menu.field_product_menu_tag
@@ -17,6 +18,12 @@ targetEntityType: mobile_product_menu
 bundle: mobile_product_menu
 mode: default
 content:
+  field_mobile_product_menu_target:
+    weight: 11
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_product_menu_class:
     weight: 5
     settings:
@@ -70,6 +77,9 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
 hidden:
   langcode: true
   user_id: true

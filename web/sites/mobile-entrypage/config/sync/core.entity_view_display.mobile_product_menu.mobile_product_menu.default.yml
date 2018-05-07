@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.mobile_product_menu.mobile_product_menu.field_mobile_product_menu_target
     - field.field.mobile_product_menu.mobile_product_menu.field_product_menu_class
     - field.field.mobile_product_menu.mobile_product_menu.field_product_menu_enable
     - field.field.mobile_product_menu.mobile_product_menu.field_product_menu_tag
@@ -19,6 +20,13 @@ targetEntityType: mobile_product_menu
 bundle: mobile_product_menu
 mode: default
 content:
+  field_mobile_product_menu_target:
+    weight: 7
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
   field_product_menu_class:
     weight: 1
     label: above
