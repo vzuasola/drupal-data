@@ -1,0 +1,6 @@
+unsupported_currencies_title: 'แจ้งเตือน '
+unsupported_currencies_message:
+  value: "<p>สกุลเงินของคุณไม่สามารถใช้งานเกมส์ Fish Hunter ได้</p>\r\n"
+  format: basic_html
+unsupported_currencies_button: ตกลง
+fallback_error_button: ตกลง
