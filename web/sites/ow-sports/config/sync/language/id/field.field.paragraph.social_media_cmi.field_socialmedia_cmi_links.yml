@@ -1,3 +1,0 @@
-default_value:
-  -
-    value: '/{domain:myaccount_domain}/{lang}/my-profile?title=headerPopup&width=820&height=700&token={legacy.credentials}'
