@@ -24,6 +24,9 @@ function mobile_product_menu_uninstall() {
     'views.view.product_menu_entity_api',
     'field.field.mobile_product_menu.mobile_product_menu.field_mobile_product_menu_target',
     'field.storage.mobile_product_menu.field_mobile_product_menu_target',
+    'field.field.mobile_product_menu.mobile_product_menu.field_product_menu_id',
+    'field.storage.mobile_product_menu.field_product_menu_id',
+
   ];
 
   foreach ($keys as $key) {
