@@ -1,24 +1,22 @@
-uuid: 4dd25438-96d1-423c-a915-1c5e72a47908
+uuid: 7382c6b5-722b-41c7-a162-0e4b3d6fb6ef
 langcode: en
 status: true
 dependencies:
   module:
     - options
     - webcomposer_floating_banners
-_core:
-  default_config_hash: S99JfEPI8CWnNVMUWz9wc-nL5VpPAmX7b1FKGEiuvpo
-id: left_floating_banner_entity.field_floating_banner_type
-field_name: field_floating_banner_type
+id: left_floating_banner_entity.field_platform
+field_name: field_platform
 entity_type: left_floating_banner_entity
 type: list_string
 settings:
   allowed_values:
     -
-      value: '0'
-      label: 'Floating Banner Left'
+      value: desktop
+      label: Desktop
     -
-      value: '1'
-      label: 'Floating Banner Right'
+      value: mobile
+      label: Mobile
   allowed_values_function: ''
 module: options
 locked: false
