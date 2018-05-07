@@ -22,7 +22,11 @@ function lobby_product_tiles_uninstall() {
     'language.content_settings.lobby_product_tiles.lobby_product_tiles',
     'views.view.product_lobby_tiles_entity_api',
     'field.field.lobby_product_tiles.lobby_product_tiles.field_product_lobby_title',
-    'field.storage.lobby_product_tiles.field_product_lobby_title'
+    'field.storage.lobby_product_tiles.field_product_lobby_title',
+    'field.field.lobby_product_tiles.lobby_product_tiles.field_product_lobby_id',
+    'field.field.lobby_product_tiles.lobby_product_tiles.field_product_lobby_target',
+    'field.storage.lobby_product_tiles.field_product_lobby_id',
+    'field.storage.lobby_product_tiles.field_product_lobby_target',
   ];
 
   foreach ($keys as $key) {
