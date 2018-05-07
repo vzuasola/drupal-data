@@ -1,0 +1,21 @@
+uuid: 69f02d70-2293-4ffa-b703-f84f8685389a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.mobile_product_menu.field_mobile_product_menu_target
+  module:
+    - mobile_product_menu
+    - options
+id: mobile_product_menu.mobile_product_menu.field_mobile_product_menu_target
+field_name: field_mobile_product_menu_target
+entity_type: mobile_product_menu
+bundle: mobile_product_menu
+label: Target
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
