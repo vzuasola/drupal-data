@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.games.field_game_title
     - field.field.node.games.field_image_size
     - field.field.node.games.field_maintenance_blurb
+    - field.field.node.games.field_playing_type
     - field.field.node.games.field_ribbon_configuration
     - field.field.node.games.field_show_game_info_toggle
     - field.field.node.games.field_start_date
@@ -72,6 +73,7 @@ third_party_settings:
     group_game_launching:
       children:
         - field_game_provider
+        - field_playing_type
       parent_name: ''
       weight: 9
       format_type: tab
@@ -186,7 +188,7 @@ content:
     type: text_textarea
     region: content
   field_game_provider:
-    weight: 17
+    weight: 27
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -212,6 +214,30 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
+    region: content
+  field_playing_type:
+    weight: 28
+    settings: {  }
+    third_party_settings:
+      conditional_fields:
+        95ba498d-9df9-474d-85af-7991cb45fdbf:
+          dependee: field_game_provider
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                target_id: '202'
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: node
+          bundle: games
+    type: options_select
     region: content
   field_ribbon_configuration:
     weight: 12

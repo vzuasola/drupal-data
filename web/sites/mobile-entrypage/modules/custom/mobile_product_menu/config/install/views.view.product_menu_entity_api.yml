@@ -567,9 +567,8 @@ display:
       display_extenders: {  }
       path: api/mobile_product_menu
       pager:
-        type: some
+        type: none
         options:
-          items_per_page: 10
           offset: 0
       style:
         type: serializer

@@ -9,7 +9,7 @@ dependencies:
     - field.field.node.games.field_game_icon
     - field.field.node.games.field_game_image
     - field.field.node.games.field_game_image_large
-    - field.field.node.games.field_game_info
+    - field.field.node.games.field_game_info_id
     - field.field.node.games.field_game_provider
     - field.field.node.games.field_game_title
     - field.field.node.games.field_image_size
@@ -80,12 +80,13 @@ content:
     third_party_settings: {  }
     type: image
     region: content
-  field_game_info:
-    weight: 102
+  field_game_info_id:
+    weight: 120
     label: above
-    settings: {  }
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
-    type: text_default
+    type: string
     region: content
   field_game_provider:
     weight: 111
