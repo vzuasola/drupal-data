@@ -31,7 +31,11 @@ function webcomposer_cache_cache_flush() {
 function webcomposer_cache_scheduler_nid_list_alter(array &$nids, $action) {
   // Regenerate cache signature if we have nids in queue on scheduler.
   if ($nids) {
-    \Drupal::service('webcomposer_cache.signature_manager')->renewSignature();
+    try {
+      \Drupal::service('webcomposer_cache.signature_manager')->renewSignature();
+    } catch (Exception $e) {
+      // do nothing
+    }
   }
 
   return $nids;
