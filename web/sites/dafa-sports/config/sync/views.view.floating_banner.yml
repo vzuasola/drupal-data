@@ -12,7 +12,7 @@ dependencies:
     - webcomposer_floating_banners
     - webcomposer_rest_extra
 _core:
-  default_config_hash: jzUetiUIk2DX8x7n3HuaTwT4iS0fBE3TD05sF734w2s
+  default_config_hash: 4lbsgBhGZn1Y1j5G26kInBzDBeXVlS2YNcdUvKPdAA8
 id: floating_banner
 label: 'Floating Banner'
 module: views
@@ -144,6 +144,100 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
       tags: {  }
+  attachment_add_button:
+    display_plugin: attachment
+    id: attachment_add_button
+    display_title: Attachment
+    position: 4
+    display_options:
+      display_extenders: {  }
+      displays:
+        manage: manage
+      rendering_language: '***LANGUAGE_language_interface***'
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content:
+            value: "<ul class=\"action-links\">\n  <li>\n  \t<a href=\"[site:url]/admin/structure/left_floating_banner_entity/add\" class=\"button button-action button--primary button--small\" data-drupal-link-system-path=\"admin/structure/left_floating_banner_entity/add\">Add Floating Banner</a>\n  </li>\n</ul>"
+            format: basic_html
+          plugin_id: text
+      defaults:
+        header: false
+        style: false
+        row: false
+        fields: false
+      style:
+        type: default
+        options: {  }
+      row:
+        type: fields
+        options:
+          default_field_elements: true
+          inline: {  }
+          separator: ''
+          hide_empty: false
+      fields:
+        nothing:
+          id: nothing
+          table: views
+          field: nothing
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: false
+          plugin_id: custom
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_interface'
+      tags: {  }
   block_1:
     display_plugin: block
     id: block_1
@@ -193,6 +287,7 @@ display:
         fields: false
         filters: false
         filter_groups: false
+        exposed_form: false
       row:
         type: 'entity:left_floating_banner_entity'
         options:
@@ -464,6 +559,16 @@ display:
         groups:
           1: AND
       path: admin/structure/webcomposer_floating_banners_entity_list
+      exposed_form:
+        type: basic
+        options:
+          submit_button: Apply
+          reset_button: false
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
     cache_metadata:
       max-age: 0
       contexts:
