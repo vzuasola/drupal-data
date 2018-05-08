@@ -20,12 +20,6 @@ settings:
     -
       value: center
       label: Center
-    -
-      value: top
-      label: Top
-    -
-      value: bottom
-      label: Bottom
   allowed_values_function: ''
 module: options
 locked: false

@@ -22,3 +22,8 @@ webcomposer_games.games_exchange_provider_schema:
   names:
     - 'webcomposer_config.games_exchange_provider'
 
+webcomposer_games.unsupported_currency_schema:
+  title: 'Unsupported Currency Configuration'
+  base_route_name: webcomposer_games.unsupported_currency_configuration_form
+  names:
+    - 'webcomposer_config.unsupported_currency'

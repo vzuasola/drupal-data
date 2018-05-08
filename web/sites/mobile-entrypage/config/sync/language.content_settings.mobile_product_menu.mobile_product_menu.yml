@@ -1,0 +1,15 @@
+uuid: 0876799a-0a13-4e9e-b95e-6a4ce18d7e5a
+langcode: en
+status: true
+dependencies:
+  module:
+    - content_translation
+    - mobile_product_menu
+third_party_settings:
+  content_translation:
+    enabled: true
+id: mobile_product_menu.mobile_product_menu
+target_entity_type_id: mobile_product_menu
+target_bundle: mobile_product_menu
+default_langcode: site_default
+language_alterable: true

@@ -94,12 +94,22 @@ class VirtualRestResource extends ResourceBase {
     try {
       $config = \Drupal::config("virtual_config.$id");
       $data = $config->get();
-           foreach ($data as $key => $value) {
+      foreach ($data as $key => $value) {
         // replace the images src for text formats
         if (isset($value['format']) && isset($value['value'])) {
             $data[$key]['value'] = $this->filterHtml($value['value']);
         }
       }
+
+      // Get relative path for the configuration images.
+      // @todo To be standardized
+      switch ($id) {
+        case 'virtual_configuration':
+          $file_id = $data['virtuals_background'][0];
+          $data['virtuals_background_image_url'] = $this->getFileRelativePath($file_id);
+          break;
+      }
+
     } catch (\Exception $e) {
       $data = [
         'error' => $this->t('Configuration not found')

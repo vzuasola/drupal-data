@@ -1,0 +1,31 @@
+header_settings_tab__active_tab: edit-balance-group
+logo_title: Dafabet
+password_mask_toggle: 0
+caps_lock_toggle: 0
+capslock_notification: QWERTY
+balance_toggle: 0
+product_balance_id: ''
+balance_label_override: ''
+currency_balance_mapping: ''
+excluded_balance_mapping: ''
+critical_announcement: 0
+critical_announcement_content:
+  value: "<p>This is a critical announcement test test test</p>\r\n"
+  format: basic_html
+news_announcement: 0
+news_announcement_content:
+  value: "<p>test</p>\r\n"
+  format: basic_html
+lobby_page_title: 'Online Betting - Bet on Sports, Play Online Casino and Poker at Dafabet'
+join_now_text: 'Join Nows'
+join_now_link: '/{domain:entry}/{domain:lang_token}/cant-login{tracking.token}'
+login_issue_text: 'Cant login?'
+login_issue_link: '/{domain:entry}/{domain:lang_token}/cant-login{tracking.token}'
+product_balance_label: QWERTY
+total_balance_label: QWERTY
+balance_error_text: 'Error Retrieving.'
+welcome_text: '{username}'
+profile_link: '#'
+profile_logout_text: Logout
+balance_error_text_product: QWERTY
+cashier_link: QWERTY

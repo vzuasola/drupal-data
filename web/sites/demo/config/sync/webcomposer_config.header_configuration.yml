@@ -32,6 +32,11 @@ excluded_balance_mapping: "7\r\n2"
 currency_balance_mapping: ''
 cashier_link: 'http://google.com/'
 balance_mapping: ''
-password_mask_toggle: 0
+password_mask_toggle: 1
 balance_label_override: ''
-logo_title: Dafabet
+logo_title: 'Dafabet EN'
+header_settings_tab__active_tab: edit-balance-group
+caps_lock_toggle: 1
+capslock_notification: 'Caps lock is enabled'
+value: null
+format: null

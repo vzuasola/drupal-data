@@ -1,0 +1,22 @@
+# Mobile Product Menu routing definition
+mobile_product_menu.settings_tab:
+  route_name: mobile_product_menu.settings
+  title: 'Settings'
+  base_route: mobile_product_menu.settings
+
+entity.mobile_product_menu.canonical:
+  route_name: entity.mobile_product_menu.canonical
+  base_route: entity.mobile_product_menu.canonical
+  title: 'View'
+
+entity.mobile_product_menu.edit_form:
+  route_name: entity.mobile_product_menu.edit_form
+  base_route: entity.mobile_product_menu.canonical
+  title: 'Edit'
+
+entity.mobile_product_menu.delete_form:
+  route_name:  entity.mobile_product_menu.delete_form
+  base_route:  entity.mobile_product_menu.canonical
+  title: Delete
+  weight: 10
+

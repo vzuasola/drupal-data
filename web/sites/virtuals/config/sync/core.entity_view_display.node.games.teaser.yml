@@ -1,0 +1,40 @@
+uuid: 0e3456a2-468c-41a3-b893-3775c7804541
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.games.body
+    - node.type.games
+  module:
+    - text
+    - user
+id: node.games.teaser
+targetEntityType: node
+bundle: games
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_end_date: true
+  field_game_image: true
+  field_game_image_large: true
+  field_game_info: true
+  field_game_provider: true
+  field_game_title: true
+  field_image_size: true
+  field_maintenance_blurb: true
+  field_ribbon_configuration: true
+  field_show_game_info_toggle: true
+  field_start_date: true
+  langcode: true

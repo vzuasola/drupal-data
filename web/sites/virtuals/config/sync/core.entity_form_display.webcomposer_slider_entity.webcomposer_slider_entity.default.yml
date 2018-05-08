@@ -109,8 +109,7 @@ content:
     type: language_select
     weight: 2
     region: content
-    settings:
-      include_locked: true
+    settings: {  }
     third_party_settings: {  }
   translation:
     weight: 7

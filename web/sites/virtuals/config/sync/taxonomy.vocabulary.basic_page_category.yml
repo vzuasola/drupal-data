@@ -1,0 +1,9 @@
+uuid: 8b130a32-f380-4979-9bd8-e4f0bce9ef38
+langcode: en
+status: true
+dependencies: {  }
+name: 'Basic Page Category'
+vid: basic_page_category
+description: 'List of categories for Page List'
+hierarchy: 0
+weight: 0

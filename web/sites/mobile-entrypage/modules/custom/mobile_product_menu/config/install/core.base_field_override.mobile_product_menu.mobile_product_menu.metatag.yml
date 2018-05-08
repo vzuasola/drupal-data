@@ -1,0 +1,18 @@
+uuid: b4221658-3061-408f-8d7a-9809902d8bf9
+langcode: en
+status: true
+dependencies:
+  module:
+    - mobile_product_menu
+id: mobile_product_menu.mobile_product_menu.metatag
+field_name: metatag
+entity_type: mobile_product_menu
+bundle: mobile_product_menu
+label: Metatags
+description: 'The metatags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

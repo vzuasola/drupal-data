@@ -43,7 +43,12 @@ class PushNotificationConfiguration extends ConfigFormBase {
     ];
     $form['translated_texts_settings'] = [
       '#type' => 'details',
-      '#title' => $this->t('Translated Texts'),
+      '#title' => $this->t('Translated Contents'),
+      '#group' => 'pushnx_settings_tab',
+    ];
+    $form['dismiss_notifications_settings'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Dismiss Notifications'),
       '#group' => 'pushnx_settings_tab',
     ];
     $form['expiry_error_message_settings'] = [
@@ -142,7 +147,7 @@ class PushNotificationConfiguration extends ConfigFormBase {
     // Translate Texts.
     $form['translated_texts_settings']['translated_texts'] = [
       '#type' => 'textarea',
-      '#title' => $this->t('Translated Texts'),
+      '#title' => $this->t('Translated Contents'),
       '#default_value' => $config->get('translated_texts'),
       '#description' => $this->t('Enter the list of text to be translated. Enter one text per line.'),
     ];
@@ -152,6 +157,25 @@ class PushNotificationConfiguration extends ConfigFormBase {
       $text_key = strtolower($text);
 
       $form['translated_texts_settings']['text_' . $text_key] = [
+        '#type' => 'textarea',
+        '#title' => $text,
+        '#default_value' => $config->get('text_' . $text_key, ''),
+        '#description' => 'Format: ICORE LANGUAGE|TRANSLATION',
+      ];
+    }
+    // Dismiss Notifications.
+    $form['dismiss_notifications_settings']['dismiss_notifications'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Dismiss Notifications'),
+      '#default_value' => $config->get('dismiss_notifications'),
+      '#description' => $this->t('Enter the list of text to be translated. Enter one text per line.'),
+    ];
+
+    $texts = array_map('trim', explode(PHP_EOL, $config->get('dismiss_notifications')));
+    foreach ($texts as $text) {
+      $text_key = strtolower($text);
+
+      $form['dismiss_notifications_settings']['text_' . $text_key] = [
         '#type' => 'textarea',
         '#title' => $text,
         '#default_value' => $config->get('text_' . $text_key, ''),
@@ -200,6 +224,7 @@ class PushNotificationConfiguration extends ConfigFormBase {
       'expiry_delay_count',
       'exclude_pages',
       'translated_texts',
+      'dismiss_notifications',
       'expiry_error_message',
       'date_format',
       'date_offset',
@@ -212,6 +237,11 @@ class PushNotificationConfiguration extends ConfigFormBase {
 
     $config = $this->config('webcomposer_config.pushnx_configuration');
     $texts = array_map('trim', explode(PHP_EOL, $config->get('translated_texts')));
+    foreach ($texts as $text) {
+      $keys[] = 'text_' . strtolower($text);
+    }
+
+    $texts = array_map('trim', explode(PHP_EOL, $config->get('dismiss_notifications')));
     foreach ($texts as $text) {
       $keys[] = 'text_' . strtolower($text);
     }
