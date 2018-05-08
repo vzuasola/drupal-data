@@ -5,7 +5,9 @@ dependencies:
   config:
     - field.field.lobby_product_tiles.lobby_product_tiles.field_product_lobby_class
     - field.field.lobby_product_tiles.lobby_product_tiles.field_product_lobby_enable
+    - field.field.lobby_product_tiles.lobby_product_tiles.field_product_lobby_id
     - field.field.lobby_product_tiles.lobby_product_tiles.field_product_lobby_tag
+    - field.field.lobby_product_tiles.lobby_product_tiles.field_product_lobby_target
     - field.field.lobby_product_tiles.lobby_product_tiles.field_product_lobby_title
     - field.field.lobby_product_tiles.lobby_product_tiles.field_product_lobby_url_post_log
     - field.field.lobby_product_tiles.lobby_product_tiles.field_product_lobby_url_pre_log
@@ -20,7 +22,7 @@ bundle: lobby_product_tiles
 mode: default
 content:
   field_product_lobby_class:
-    weight: 5
+    weight: 6
     settings:
       size: 60
       placeholder: ''
@@ -34,8 +36,22 @@ content:
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
+  field_product_lobby_id:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_product_lobby_tag:
-    weight: 6
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_product_lobby_target:
+    weight: 8
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -73,7 +89,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 7
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }

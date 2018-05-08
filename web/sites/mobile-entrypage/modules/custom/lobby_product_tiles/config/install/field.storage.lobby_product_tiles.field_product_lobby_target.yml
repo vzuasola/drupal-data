@@ -1,0 +1,27 @@
+uuid: 0dc9925a-65f2-44bf-947b-2a1ab2350651
+langcode: en
+status: true
+dependencies:
+  module:
+    - lobby_product_tiles
+    - options
+id: lobby_product_tiles.field_product_lobby_target
+field_name: field_product_lobby_target
+entity_type: lobby_product_tiles
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: _blank
+      label: 'New Window'
+    -
+      value: _self
+      label: 'Same Window'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
