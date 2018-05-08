@@ -42,6 +42,15 @@ function mobile_config_form_webcomposer_config_schema_form_base_alter(&$form, \D
         '#required' => TRUE,
         '#translatable' => TRUE
       ];
+
+      $form['balance_group']['mobile_total_balance'] = [
+        '#type' => 'textfield',
+        '#title' => 'Total Balance Text',
+        '#description' => 'Total balance text for left nav.',
+        '#default_value' => \Drupal::service('webcomposer_config_schema.schema')->getConfigValue('webcomposer_config.header_configuration', 'mobile_total_balance') ?? 'Total Balance:',
+        '#required' => TRUE,
+        '#translatable' => TRUE
+      ];
     }
 
     if ($form['#editable_config_names'][0] == 'webcomposer_config.footer_configuration') {
