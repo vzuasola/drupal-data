@@ -1,11 +1,11 @@
 autologout_box_content:
+  value: "<p>การทำรายการของคุณจะสิ้นสุดภายใน {seconds} คุณต้องการทำรายการต่อหรือไม่?</p>\r\n"
   format: basic_html
-  value: "<p>การทำรายการของคุณจะสิ้นสุดภายใน {seconds} คุณต้องการทำรายการต่อหรือไม่?\r\n</p>\r\n"
 notification_content:
+  value: "<p>การทำรายการของคุณสิ้นสุดลงเนื่องจากไม่มีการดำเนินการใดๆ</p>\r\n"
   format: basic_html
-  value: "<p>การทำรายการของคุณสิ้นสุดลงเนื่องจากไม่มีการดำเนินการใดๆ\r\n</p>\r\n"
 lightbox_blurb: 'ยังไม่เป็นสมาชิก?'
-username_placeholder: Username
+username_placeholder: ยูสเซอร์เนม/ไอดี
 password_placeholder: รหัสผ่าน
 login_bottom_label: เข้าสู่ระบบ
 error_message_blank_username: กรุณากรอกยูสเซอร์เนม
@@ -20,3 +20,7 @@ affirmative_button_text: 'ใช่ '
 negative_button_text: 'ไม่ใช่ '
 notification_title: 'แจ้งเตือน '
 notification_window_title: หมดเวลาเชื่อมต่อ
+advanced__active_tab: edit-login-form-details
+login_page_blurb: ''
+mobile_login_url: 'https://m.dafabet.com/'
+mobile_login_button_label: ''

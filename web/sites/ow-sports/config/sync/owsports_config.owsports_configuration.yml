@@ -9,10 +9,12 @@ singbet_post_login_uri: Deposit_ProcessLogin.aspx
 singbet_template: 'sc,ch'
 _core:
   default_config_hash: eq06lVY_EO26YIZp8-gsLZO8-yULblkh-Ie4s306ces
-colossus_pre_uri: ''
+colossus_pre_uri: 'https://dafabet.colossusbets.com/pools/13029'
 colossus_post_uri: 'https://prices.map.domain/Deposit_Processlogin.aspx'
 singbet_default_asia: 1
-how_to_bet_uri: '{domain:sports}/{domain:lang_token}/getting-started{legacy.params}{tracking.token}'
+how_to_bet_uri: '{domain:entry}/{domain:lang_token}/sports/getting-started[query:({credentials.params}&{tracking})]'
 euro_default_asia: 0
 transaction_subdomain: prices
 url_param: "world-cup|menutype=2\r\nworld-cup|market=T"
+euro_switch_redirect: null
+colossus_login_lightbox: 1
