@@ -28,8 +28,8 @@ function mobile_config_form_webcomposer_config_schema_form_base_alter(&$form, \D
       $form['login_group']['mobile_remember'] = [
         '#type' => 'textfield',
         '#title' => 'Remember Username Text',
-        '#description' => 'Rembmer username text for login lightbox.',
-        '#default_value' => \Drupal::service('webcomposer_config_schema.schema')->getConfigValue('webcomposer_config.header_configuration', 'mobile_remember'),
+        '#description' => 'Remember username text for login lightbox.',
+        '#default_value' => \Drupal::service('webcomposer_config_schema.schema')->getConfigValue('webcomposer_config.header_configuration', 'mobile_remember') ?? 'Remember Username',
         '#required' => TRUE,
         '#translatable' => TRUE
       ];
@@ -38,7 +38,7 @@ function mobile_config_form_webcomposer_config_schema_form_base_alter(&$form, \D
         '#type' => 'textfield',
         '#title' => 'Login and Registration Button Text',
         '#description' => 'Combination field for Login and Registration',
-        '#default_value' => \Drupal::service('webcomposer_config_schema.schema')->getConfigValue('webcomposer_config.header_configuration', 'mobile_login_reg'),
+        '#default_value' => \Drupal::service('webcomposer_config_schema.schema')->getConfigValue('webcomposer_config.header_configuration', 'mobile_login_reg') ?? 'Join Now',
         '#required' => TRUE,
         '#translatable' => TRUE
       ];
@@ -56,8 +56,7 @@ function mobile_config_form_webcomposer_config_schema_form_base_alter(&$form, \D
         '#type' => 'textfield',
         '#title' => 'Select Language Text',
         '#description' => 'Select Language text for language lightbox.',
-        '#default_value' => \Drupal::service('webcomposer_config_schema.schema')->getConfigValue('webcomposer_config.footer_configuration', 'mobile_language_select'),
-        '#required' => TRUE,
+        '#default_value' => \Drupal::service('webcomposer_config_schema.schema')->getConfigValue('webcomposer_config.footer_configuration', 'mobile_language_select') ?? 'Select Language',
         '#translatable' => TRUE
       ];
     }
