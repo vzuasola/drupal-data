@@ -22,3 +22,40 @@ function mobile_config_help($route_name, RouteMatchInterface $route_match) {
     default:
   }
 }
+
+function mobile_config_form_webcomposer_config_schema_form_base_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+    if ($form['#editable_config_names'][0] == 'webcomposer_config.header_configuration') {
+        $form['login_group']['mobile_remember'] = [
+            '#type' => 'textfield',
+            '#title' => 'Remember Username Text',
+            '#description' => 'Rembmer username text for login lightbox.',
+            '#default_value' => \Drupal::service('webcomposer_config_schema.schema')->getConfigValue('webcomposer_config.header_configuration', 'mobile_remember'),
+            '#translatable' => true
+        ];
+
+        $form['login_group']['mobile_login_reg'] = [
+            '#type' => 'textfield',
+            '#title' => 'Login and Registration Button Text',
+            '#description' => 'Combination field for Login and Registration',
+            '#default_value' => \Drupal::service('webcomposer_config_schema.schema')->getConfigValue('webcomposer_config.header_configuration', 'mobile_login_reg'),
+            '#translatable' => true
+        ];
+    }
+
+    if ($form['#editable_config_names'][0] == 'webcomposer_config.footer_configuration') {
+        $form['mobile_footer'] = [
+            '#type' => 'details',
+            '#title' => 'Mobile Footer Menu',
+            '#collapsible' => TRUE,
+            '#group' => 'advanced'
+        ];
+
+        $form['mobile_footer']['mobile_language_select'] = [
+            '#type' => 'textfield',
+            '#title' => 'Select Language Text',
+            '#description' => 'Select Language text for language lightbox.',
+            '#default_value' => \Drupal::service('webcomposer_config_schema.schema')->getConfigValue('webcomposer_config.footer_configuration', 'mobile_language_select'),
+            '#translatable' => true
+        ];
+    }
+}
