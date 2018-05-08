@@ -1,0 +1,6 @@
+unsupported_currencies_title: 通知
+unsupported_currencies_message:
+  value: "<p>非常抱歉，扑鱼王游戏不支持您当前使用的货币。</p>\r\n"
+  format: basic_html
+unsupported_currencies_button: 确定
+fallback_error_button: 确定
