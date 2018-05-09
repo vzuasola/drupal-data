@@ -17,7 +17,6 @@ dependencies:
     - field.field.node.page.field_image
     - field.field.node.page.field_log_in_state
     - field.field.node.page.field_meta_tags
-    - field.field.node.page.field_meta_tags_post
     - image.style.thumbnail
     - node.type.page
   module:
@@ -306,12 +305,6 @@ content:
     region: content
   field_meta_tags:
     weight: 26
-    settings: {  }
-    third_party_settings: {  }
-    type: metatag_firehose
-    region: content
-  field_meta_tags_post:
-    weight: 22
     settings: {  }
     third_party_settings: {  }
     type: metatag_firehose
