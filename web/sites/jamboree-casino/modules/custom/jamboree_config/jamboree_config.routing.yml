@@ -1,0 +1,7 @@
+jamboree_config.admin_settings:
+  path: 'admin/config/jamboree'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Jamboree Configuration'
+  requirements:
+    _permission: 'aminister site configuration'
