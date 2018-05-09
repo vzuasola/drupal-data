@@ -1,0 +1,4 @@
+unsupported_currencies_title: 'THÔNG BÁO'
+unsupported_currencies_message:
+  value: "<p>Rất tiếc, loại tiền bạn lựa chọn không được hỗ trợ ở trò chơi Fish Hunter.</p>\r\n"
+  format: basic_html
