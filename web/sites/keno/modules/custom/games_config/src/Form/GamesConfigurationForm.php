@@ -5,9 +5,8 @@ namespace Drupal\games_config\Form;
 use Drupal\webcomposer_config_schema\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 
-
 /**
- * Games Page Loading form plugin
+ * Games Page Loading form plugin.
  *
  * @WebcomposerConfigPlugin(
  *   id = "games_config_button",
@@ -23,9 +22,8 @@ use Drupal\Core\Form\FormStateInterface;
  *   },
  * )
  */
+class GamesConfigurationForm extends FormBase {
 
-
-class GamesConfigurationForm extends FormBase  {
   /**
    * {@inheritdoc}
    */
@@ -71,7 +69,7 @@ class GamesConfigurationForm extends FormBase  {
       '#required' => TRUE,
       '#translatable' => TRUE,
     ];
-     return $form;
+    return $form;
   }
 
 }

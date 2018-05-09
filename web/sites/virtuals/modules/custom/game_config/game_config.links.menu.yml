@@ -1,0 +1,5 @@
+game_config.list:
+  title: 'Games Configuration'
+  description: 'Provides a form for defining custom sample configuration'
+  parent: system.admin_config
+  route_name: game_config.admin_settings

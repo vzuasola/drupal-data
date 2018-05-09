@@ -37,8 +37,7 @@ content:
     type: language_select
     weight: 1
     region: content
-    settings:
-      include_locked: true
+    settings: {  }
     third_party_settings: {  }
   name:
     type: string_textfield

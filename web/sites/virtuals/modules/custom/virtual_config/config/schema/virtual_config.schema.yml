@@ -1,7 +1,7 @@
 virtual_config.virtual_configuration:
   type: config_object
-  label: 'virtual Configuration'
-  label: 'virtual Metatag Mobile Configuration '
+  label: 'Virtuals Configuration'
+  label: 'Virtuals Configuration '
   mapping:
     base_url:
       type: text
@@ -11,3 +11,14 @@ virtual_config.virtual_configuration:
       type: text
       label: 'Product Name in Canonical Tag'
       translatable: true
+    virtuals_background:
+      type: managed_file
+      label: 'Lobby Tiles Background'
+      translatable: true
+    basic_page_background:
+      type: managed_file
+      label: 'Basic Page Background'
+      translatable: true
+    basic_page_title:
+      type: label
+      label: 'Basic Page Title'

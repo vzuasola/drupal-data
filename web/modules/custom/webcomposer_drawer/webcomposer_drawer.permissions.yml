@@ -1,0 +1,22 @@
+add drawer entity entities:
+  title: 'Create new Drawer entity entities'
+
+administer drawer entity entities:
+  title: 'Administer Drawer entity entities'
+  description: 'Allow to access the administration form to configure Drawer entity entities.'
+  restrict access: true
+
+delete drawer entity entities:
+  title: 'Delete Drawer entity entities'
+
+edit drawer entity entities:
+  title: 'Edit Drawer entity entities'
+
+access drawer entity overview:
+  title: 'Access the Drawer entity overview page'
+
+view published drawer entity entities:
+  title: 'View published Drawer entity entities'
+
+view unpublished drawer entity entities:
+  title: 'View unpublished Drawer entity entities'

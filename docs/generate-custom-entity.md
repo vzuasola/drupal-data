@@ -133,6 +133,7 @@ Your entity needs an exposed view to fetch the data
     * Check `Provide a REST export` and put a path `api/default_entity`. Adjust path as follow
 
 * Set views page to `Show All`
+* Set Format Serializer to `Node List Serializer`
 * Set filter criteria to `Translation language` set to `is one of` then value of `Interface text language selected for page`
 
 ## Put everything on the Install of your module

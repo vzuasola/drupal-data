@@ -22,10 +22,3 @@ $settings['monolog'] = [
   'path' => DRUPAL_ROOT . '/../logs/webcomposer.log',
   'level' => \Monolog\Logger::DEBUG,
 ];
-
-/**
- * Attempt to load local database configuration
- */
-if (file_exists($app_root . '/' . $site_path . '/database.local.php')) {
-  require $app_root . '/' . $site_path . '/database.local.php';
-}

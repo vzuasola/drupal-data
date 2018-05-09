@@ -16,6 +16,7 @@ class ICoreGamesIntegrationConfiguration extends ConfigFormBase {
     const ICORE_GAME_PROVIDERS = [
         'fish_hunter' => 'Fish Hunter',
         'kiron_virtual_sports' => 'Virtual Sports',
+        'gb_virtual_sports' => 'Global Bet Virtual Sports',
         'skywind' => 'Skywind',
         'voidbridge' => 'Voidbridge',
         'gold_deluxe' => 'Gold Deluxe',
@@ -25,9 +26,6 @@ class ICoreGamesIntegrationConfiguration extends ConfigFormBase {
         'tgp' => 'TGP',
         'evo_gaming' => 'Evolution Gaming',
         'ebet' => 'eBet',
-        'gpi_keno' => 'GPI Keno',
-        'gpi_pk10' => 'GPI PK10',
-        'gpi_thai_lottery' => 'GPI Thai Lottey',
     ];
 
   /**

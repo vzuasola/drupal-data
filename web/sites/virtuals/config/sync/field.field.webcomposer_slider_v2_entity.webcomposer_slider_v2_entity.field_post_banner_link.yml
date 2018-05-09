@@ -1,0 +1,25 @@
+uuid: 0dd694f7-0593-406b-bdc7-ae8e40b966db
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.webcomposer_slider_v2_entity.field_post_banner_link
+  module:
+    - link
+    - webcomposer_slider_v2
+_core:
+  default_config_hash: A9CXIpRzsLYBCV3-5UlCwsH0k4V7CIS8JN85_m57wSE
+id: webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_post_banner_link
+field_name: field_post_banner_link
+entity_type: webcomposer_slider_v2_entity
+bundle: webcomposer_slider_v2_entity
+label: 'Post Banner Link'
+description: 'The link when this banner is clicked'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+field_type: link

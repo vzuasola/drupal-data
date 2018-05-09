@@ -9,7 +9,7 @@ dependencies:
     - entity_reference_revisions
     - webcomposer_seo
 _core:
-  default_config_hash: s11Hhx1kZZwqyl7zrPZ_P4d2_YjhT68W-fw8wpoMwfU
+  default_config_hash: afudE-XmkVkIBjE0-_6yZ6s7v0vXOCDA-lEqaCdLHdA
 id: webcomposer_meta_entity.webcomposer_meta_entity.field_meta
 field_name: field_meta
 entity_type: webcomposer_meta_entity
