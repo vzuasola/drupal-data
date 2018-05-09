@@ -1,0 +1,22 @@
+autologout_box_content:
+  format: basic_html
+  value: "<p>การทำรายการของคุณจะสิ้นสุดภายใน {seconds} คุณต้องการทำรายการต่อหรือไม่?</p>\r\n"
+notification_content:
+  format: basic_html
+  value: "<p>การทำรายการของคุณสิ้นสุดลงเนื่องจากไม่มีการดำเนินการใดๆ</p>\r\n"
+lightbox_blurb: 'ยังไม่เป็นสมาชิก?'
+username_placeholder: ยูสเซอร์เนม/ไอดี
+password_placeholder: รหัสผ่าน
+login_bottom_label: เข้าสู่ระบบ
+error_message_blank_username: กรุณากรอกยูสเซอร์เนม
+error_message_blank_password: กรุณากรอกรหัสผ่าน
+error_message_blank_passname: 'กรุณาตรวจสอบข้อมูลที่กรอกทั้งหมด และลองอีกครั้ง'
+error_message_invalid_passname: 'ขออภัย ยูสเซอร์เนมและ/หรือรหัสผ่านไม่ถูกต้อง กรุณาลองอีกครั้ง'
+error_message_service_not_available: ไม่สามารถให้บริการได้ในขณะนี้
+error_message_account_suspended: 'บัญชีนี้ถูกระงับ กรุณาติดต่อเจ้าหน้าที่ฝ่ายบริการลูกค้า'
+error_message_account_locked: 'บัญชีนี้ถูกระงับ กรุณาติดต่อเจ้าหน้าที่ฝ่ายบริการลูกค้า'
+autologout_box_title: 'แจ้งเตือน '
+affirmative_button_text: 'ใช่ '
+negative_button_text: 'ไม่ใช่ '
+notification_title: 'แจ้งเตือน '
+notification_window_title: หมดเวลาเชื่อมต่อ

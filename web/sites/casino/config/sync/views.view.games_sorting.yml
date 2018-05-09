@@ -1326,6 +1326,7 @@ display:
           uses_fields: false
           formats:
             json: json
+      enabled: false
     cache_metadata:
       contexts:
         - 'languages:language_content'

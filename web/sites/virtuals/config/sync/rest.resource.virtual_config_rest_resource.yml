@@ -1,0 +1,17 @@
+uuid: f7f2f9ab-b80d-460a-bde1-b104215674a1
+langcode: en
+status: true
+dependencies:
+  module:
+    - serialization
+    - user
+    - virtual_config
+id: virtual_config_rest_resource
+plugin_id: virtual_config_rest_resource
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+    supported_auth:
+      - cookie

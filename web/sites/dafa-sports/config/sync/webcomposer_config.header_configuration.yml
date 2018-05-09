@@ -22,7 +22,7 @@ news_announcement: '0'
 news_announcement_content:
   value: "<p>If there are any concerns, please email us: <a href=\"ensupport@dafabet.com\">ENSupport</a>. Thank you!</p>\r\n"
   format: basic_html
-balance_label_mapping: "4|OW Sports\r\n6|Dafa Sports\r\n10|Exchange\r\n1|Casino Classic\r\n2|Casino Gold\r\n5|Live Dealer, Games, & Virtuals\r\n8|Opus Live Dealer\r\n9|Keno\r\n3|Poker\r\n7|Fish Hunter"
+balance_label_mapping: "4|OW Sports\r\n6|Dafa Sports\r\n10|Exchange\r\n1|Casino Classic\r\n2|Casino Gold\r\n5|Live Dealer, Games, Arcade, Virtuals, & Lottery\r\n8|Opus Live Dealer\r\n9|Keno\r\n3|Poker\r\n7|Fish Hunter"
 balance_error_text_product: N/A
 balance_toggle: 1
 product_balance_label: 'OW Sports Balance'

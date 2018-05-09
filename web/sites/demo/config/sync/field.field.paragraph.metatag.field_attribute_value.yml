@@ -6,7 +6,7 @@ dependencies:
     - field.storage.paragraph.field_attribute_value
     - paragraphs.paragraphs_type.metatag
 _core:
-  default_config_hash: L9J75v6TKI_os9PRJVQzCDfce4aqIZWwSCUKPAfaY1Y
+  default_config_hash: '-AJFC9ys5RIcXGsjNBUAgvrkcoJUK9KqiE-3kBqh-m4'
 id: paragraph.metatag.field_attribute_value
 field_name: field_attribute_value
 entity_type: paragraph

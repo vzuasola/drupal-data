@@ -1,0 +1,18 @@
+uuid: bd72e2da-785b-4b35-8546-7e3b2f1d3026
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.affiliates_parameters
+id: taxonomy_term.affiliates_parameters.changed
+field_name: changed
+entity_type: taxonomy_term
+bundle: affiliates_parameters
+label: Changed
+description: 'The time that the term was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

@@ -5,7 +5,7 @@ dependencies:
   config:
     - paragraphs.paragraphs_type.metatag
 _core:
-  default_config_hash: TC9c5MTEkWBdj3u2SUW9P5OMFQC7mk2t42hyRCKN1TE
+  default_config_hash: kHWiHt4FIriBrXlqfhwRY2jnF-I4Vtmm-8QPn1SevEk
 id: paragraph.metatag.uid
 field_name: uid
 entity_type: paragraph
