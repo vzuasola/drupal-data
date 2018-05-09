@@ -1,12 +1,14 @@
-uuid: 9d8c89df-314f-453c-9b00-f008cd2790e9
+uuid: 2dd1a57f-7e8f-4047-acb0-434d4e580fe1
 langcode: en
 status: true
 dependencies:
   module:
-    - webcomposer_floating_banners
-id: left_floating_banner_entity.field_link_text
-field_name: field_link_text
-entity_type: left_floating_banner_entity
+    - webcomposer_drawer
+_core:
+  default_config_hash: OR-quU5NYp5zThWLTML0m12iYujarbP_3-nXcs_1kYg
+id: drawer_entity.field_drawer_class
+field_name: field_drawer_class
+entity_type: drawer_entity
 type: string
 settings:
   max_length: 255

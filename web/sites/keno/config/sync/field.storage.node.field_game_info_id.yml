@@ -1,12 +1,12 @@
-uuid: 9d8c89df-314f-453c-9b00-f008cd2790e9
+uuid: 34aedb7a-212d-4abf-b6f6-608572452503
 langcode: en
 status: true
 dependencies:
   module:
-    - webcomposer_floating_banners
-id: left_floating_banner_entity.field_link_text
-field_name: field_link_text
-entity_type: left_floating_banner_entity
+    - node
+id: node.field_game_info_id
+field_name: field_game_info_id
+entity_type: node
 type: string
 settings:
   max_length: 255
