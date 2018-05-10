@@ -62,10 +62,18 @@ webcomposer_games.games_gpi_provider_form:
   requirements:
     _permission: 'administer site configuration'
 
+webcomposer_games.unsupported_currency_configuration_form:
+  path: 'admin/config/webcomposer/games/unsupported-currency'
+  defaults:
+    _form: 'Drupal\webcomposer_games\Form\UnsupportedCurrencyConfiguration'
+    _title: 'Unsupported Currency Configuration Form'
+  requirements:
+    _permission: 'administer site configuration'
+
 webcomposer_games.games_goldenrace_provider_form:
   path: 'admin/config/webcomposer/games/goldenrace'
   defaults:
     _form: 'Drupal\webcomposer_games\Form\GoldenRaceProviderConfiguration'
     _title: 'GoldenRace Configuration Form'
   requirements:
-    _permission: 'administer site configuration'            
+    _permission: 'administer site configuration'     

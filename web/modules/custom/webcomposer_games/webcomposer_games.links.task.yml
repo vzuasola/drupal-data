@@ -28,6 +28,11 @@ webcomposer_games.admin_games_gpi_provider_tab:
   title: 'Gpi Game Configuration'
   base_route: webcomposer_games.games_gpi_provider_form     
 
+webcomposer_games.admin_unsupported_currency_tab:
+  route_name: webcomposer_games.unsupported_currency_configuration_form
+  title: 'Unsupported Currency Configuration'
+  base_route: webcomposer_games.unsupported_currency_configuration_form
+  
 webcomposer_games.admin_games_goldenrace_provider_tab:
   route_name: webcomposer_games.games_goldenrace_provider_form
   title: 'GoldenRace Game Configuration'
