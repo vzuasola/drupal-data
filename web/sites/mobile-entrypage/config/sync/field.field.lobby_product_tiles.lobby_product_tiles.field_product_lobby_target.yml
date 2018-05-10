@@ -1,0 +1,21 @@
+uuid: a1cb61ea-3bd9-4cc9-80c6-3e754f40b7f7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.lobby_product_tiles.field_product_lobby_target
+  module:
+    - lobby_product_tiles
+    - options
+id: lobby_product_tiles.lobby_product_tiles.field_product_lobby_target
+field_name: field_product_lobby_target
+entity_type: lobby_product_tiles
+bundle: lobby_product_tiles
+label: Target
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

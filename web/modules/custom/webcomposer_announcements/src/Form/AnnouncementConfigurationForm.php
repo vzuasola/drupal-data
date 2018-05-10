@@ -46,6 +46,22 @@ class AnnouncementConfigurationForm extends ConfigFormBase {
       '#required' => TRUE,
     ];
 
+    $form['see_all'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('See all text'),
+      '#description' => $this->t('Announcement see all text.'),
+      '#default_value' => $config->get('see_all'),
+      '#required' => TRUE,
+    ];
+
+    $form['dismiss_all'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Dismiss all text'),
+      '#description' => $this->t('Announcement dismiss all text.'),
+      '#default_value' => $config->get('dismiss_all'),
+      '#required' => TRUE,
+    ];
+
     return parent::buildForm($form, $form_state);
   }
 
@@ -58,6 +74,8 @@ class AnnouncementConfigurationForm extends ConfigFormBase {
     $keys = [
       'title',
       'default_message',
+      'see_all',
+      'dismiss_all'
     ];
 
     foreach ($keys as $key) {

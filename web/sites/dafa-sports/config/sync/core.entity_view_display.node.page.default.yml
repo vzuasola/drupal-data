@@ -17,7 +17,6 @@ dependencies:
     - field.field.node.page.field_image
     - field.field.node.page.field_log_in_state
     - field.field.node.page.field_meta_tags
-    - field.field.node.page.field_meta_tags_post
     - node.type.page
   module:
     - image
@@ -140,13 +139,6 @@ content:
     region: content
   field_meta_tags:
     weight: 112
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: metatag_empty_formatter
-    region: content
-  field_meta_tags_post:
-    weight: 120
     label: above
     settings: {  }
     third_party_settings: {  }

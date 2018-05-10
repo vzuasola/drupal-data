@@ -1,11 +1,7 @@
 uuid: d543b722-41a2-4a27-84fe-4750f7772cc6
 langcode: en
-status: true
+status: false
 dependencies:
-  content:
-    - 'block_content:sponsorship_block:f9838f0e-41dd-4955-a364-a5ec8cd71e49'
-  module:
-    - block_content
   theme:
     - bartik
 id: sponsorship

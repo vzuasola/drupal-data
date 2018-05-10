@@ -25,3 +25,8 @@ _core:
 notification_window_title: 'Session Timeout'
 mobile_login_url: 'https://m.dafabet.com/'
 tablet_login_button_label: ''
+advanced__active_tab: edit-login-form-details
+login_page_blurb: ''
+value: null
+format: null
+mobile_login_button_label: ''

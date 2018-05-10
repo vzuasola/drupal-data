@@ -44,6 +44,8 @@ module:
   menu_link_attributes: 0
   menu_ui: 0
   metatag: 0
+  mobile_config: 0
+  mobile_product_menu: 0
   mobile_sponsor_list: 0
   node: 0
   options: 0
@@ -86,6 +88,7 @@ module:
   webcomposer_rest_extra: 0
   webcomposer_seo: 0
   webcomposer_sitemap: 0
+  webcomposer_slider_v2: 0
   webcomposer_social_media: 0
   webcomposer_sponsor: 0
   webcomposer_territory_blocking: 0

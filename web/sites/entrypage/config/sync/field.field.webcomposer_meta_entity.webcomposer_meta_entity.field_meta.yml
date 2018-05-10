@@ -38,9 +38,6 @@ settings:
       right_side_block_content:
         weight: 13
         enabled: false
-      slider_overlay_cmi:
-        weight: 14
-        enabled: false
       social_media:
         weight: 15
         enabled: false
@@ -51,6 +48,6 @@ settings:
         weight: 17
         enabled: false
       sponsorship:
-        weight: 18
+        weight: -17
         enabled: false
 field_type: entity_reference_revisions

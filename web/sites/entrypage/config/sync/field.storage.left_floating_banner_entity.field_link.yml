@@ -4,6 +4,8 @@ status: true
 dependencies:
   module:
     - webcomposer_floating_banners
+_core:
+  default_config_hash: JUwgMjEi-I6VUOYhqrOwMN42jpZfPlfgRiEccrObWXE
 id: left_floating_banner_entity.field_link
 field_name: field_link
 entity_type: left_floating_banner_entity
