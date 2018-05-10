@@ -1,0 +1,27 @@
+uuid: 13a2fcca-cc87-413f-ab74-a673c837ec54
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_playing_type
+field_name: field_playing_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '0'
+      label: 'Free Play'
+    -
+      value: '1'
+      label: 'Real Play'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

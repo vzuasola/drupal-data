@@ -1,0 +1,6 @@
+unsupported_currencies_title: 通知
+unsupported_currencies_message:
+  value: "<p>非常抱歉，撲魚王遊戲不支持您當前使用的貨幣。</p>\r\n"
+  format: basic_html
+unsupported_currencies_button: 確定
+fallback_error_button: 確定

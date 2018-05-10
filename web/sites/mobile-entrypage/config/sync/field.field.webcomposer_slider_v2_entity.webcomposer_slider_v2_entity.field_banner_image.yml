@@ -21,7 +21,7 @@ field_name: field_banner_image
 entity_type: webcomposer_slider_v2_entity
 bundle: webcomposer_slider_v2_entity
 label: 'Banner Image'
-description: ''
+description: 'Recommended dimension of image is 640px x 310px.'
 required: true
 translatable: true
 default_value: {  }

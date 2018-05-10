@@ -155,6 +155,12 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
             '#description' => 'List of area codes that will appear beside the mobile number ' .
             '(take note: must be a valid area code or the image will not appear beside the are code)',
           ],
+          'country_area_code_validation' => [
+            '#title' => 'Country Area Code Custom Validation',
+            '#type' => 'textarea',
+            '#description' => 'List of area codes that will be validated upon submission in which it had' .
+            ' different min and max character allowed per country code and custom message validation for it',
+          ],
         ],
       ],
 
