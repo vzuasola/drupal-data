@@ -1,0 +1,7 @@
+mobile_owsports.admin_settings:
+  path: 'admin/config/mobile/owsports'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'OWSports Configuration'
+  requirements:
+    _permission: 'administer owsports'

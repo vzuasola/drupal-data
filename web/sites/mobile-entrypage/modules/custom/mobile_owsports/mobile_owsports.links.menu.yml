@@ -1,0 +1,5 @@
+mobile_owsports.list:
+  title: 'OWSports Configuration'
+  description: 'Provides configuration for OWSports'
+  parent: system.admin_config
+  route_name: mobile_owsports.admin_settings
