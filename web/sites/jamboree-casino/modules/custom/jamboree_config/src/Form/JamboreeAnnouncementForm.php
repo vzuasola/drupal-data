@@ -230,7 +230,8 @@ class JamboreeAnnouncementForm extends FormBase {
       '#resizable' => $this->t('vertical'),
       '#translatable' => TRUE,
       '#default_value' => $this->get('announcement_pages'),
-      '#description' => $this->t('Specify pages by using their paths. Enter one path per line. The \'*\' character is a wildcard. An example path is /promotion/* for every user page.'),
+      '#description' => $this->t('Specify pages by using their paths. Enter one path per line.
+        The \'*\' character is a wildcard. An example path is /promotion/* for every user page.'),
     ];
   }
 
