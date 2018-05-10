@@ -45,6 +45,7 @@ module:
   menu_ui: 0
   metatag: 0
   mobile_config: 0
+  mobile_owsports: 0
   mobile_product_menu: 0
   mobile_sponsor_list: 0
   node: 0
