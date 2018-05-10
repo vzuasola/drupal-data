@@ -4,7 +4,9 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.drawer_media.field_drawer_image
+    - field.field.paragraph.drawer_media.field_drawer_thumb
     - field.field.paragraph.drawer_media.field_drawer_video
+    - field.field.paragraph.drawer_media.field_drawer_video_fallback
     - image.style.thumbnail
     - paragraphs.paragraphs_type.drawer_media
   module:
@@ -25,16 +27,33 @@ content:
     third_party_settings: {  }
     type: image_image
     region: content
-  field_drawer_video:
+  field_drawer_thumb:
     weight: 1
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_drawer_video:
+    weight: 2
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+    region: content
+  field_drawer_video_fallback:
+    weight: 3
     settings:
       progress_indicator: throbber
     third_party_settings: {  }
     type: file_generic
     region: content
   translation:
-    weight: 10
+    weight: 4
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   created: true
   status: true
