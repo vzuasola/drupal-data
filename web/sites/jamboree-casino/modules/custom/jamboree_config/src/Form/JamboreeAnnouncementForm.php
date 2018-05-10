@@ -12,7 +12,7 @@ use Drupal\Core\Datetime\DrupalDateTime;
  * @WebcomposerConfigPlugin(
  *   id = "jamboree_config",
  *   route = {
- *     "title" = "Jamboree Configuration",
+ *     "title" = "Announcement Configuration",
  *     "path" = "/admin/config/jamboree/announcement_configuration",
  *   },
  *   menu = {
