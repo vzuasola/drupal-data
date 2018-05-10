@@ -57,7 +57,7 @@ class JamboreeAnnouncementForm extends FormBase {
       '#title' => 'Enable Critical Issue announcements',
       '#description' => $this->t('Show/hide Critical Issue announcement. Default value is "Enabled".'),
       '#default_value' => $this->get('critical_announcement'),
-      '#translatable' => true,
+      '#translatable' => TRUE,
     ];
 
     $form['critical_issue']['critical_announcement_add_background'] = [
@@ -66,10 +66,10 @@ class JamboreeAnnouncementForm extends FormBase {
       '#default_value' => $this->get('critical_announcement_add_background'),
       '#states' => [
         'invisible' => [
-          'input[name="critical_announcement"]' => ['checked' => false],
+          'input[name="critical_announcement"]' => ['checked' => FALSE],
         ],
       ],
-      '#translatable' => true,
+      '#translatable' => TRUE,
     ];
 
     $default_critical_announcement = $this->get('critical_announcement_content');
@@ -81,20 +81,20 @@ class JamboreeAnnouncementForm extends FormBase {
       '#format' => $default_critical_announcement['format'],
       '#states' => [
         'invisible' => [
-          'input[name="critical_announcement"]' => ['checked' => false],
+          'input[name="critical_announcement"]' => ['checked' => FALSE],
         ],
       ],
-      '#translatable' => true,
+      '#translatable' => TRUE,
     ];
 
     $form['critical_issue']['critical_announcement_scheduler'] = [
       '#type' => 'checkbox',
       '#title' => 'Enable Critical Issue Scheduler',
       '#default_value' => $this->get('critical_announcement_scheduler'),
-      '#translatable' => true,
+      '#translatable' => TRUE,
       '#states' => [
         'invisible' => [
-          'input[name="critical_announcement"]' => ['checked' => false],
+          'input[name="critical_announcement"]' => ['checked' => FALSE],
         ],
       ],
     ];
@@ -104,7 +104,7 @@ class JamboreeAnnouncementForm extends FormBase {
       '#title' => $this->t('Critical Issue Scheduler'),
       '#states' => [
         'invisible' => [
-          'input[name="critical_announcement_scheduler"]' => ['checked' => false],
+          'input[name="critical_announcement_scheduler"]' => ['checked' => FALSE],
         ],
       ],
     ];
@@ -119,7 +119,7 @@ class JamboreeAnnouncementForm extends FormBase {
       '#date_date_format' => 'Y-m-d',
       '#date_time_format' => 'H:i',
       '#default_value' => $criticalStartDate,
-      '#translatable' => true,
+      '#translatable' => TRUE,
     ];
 
     $criticalEndDate = $this->get('critical_issue_end_date');
@@ -132,7 +132,7 @@ class JamboreeAnnouncementForm extends FormBase {
       '#date_date_format' => 'Y-m-d',
       '#date_time_format' => 'H:i',
       '#default_value' => $criticalEndDate,
-      '#translatable' => true,
+      '#translatable' => TRUE,
     ];
 
     $form['news_issue'] = [
@@ -145,7 +145,7 @@ class JamboreeAnnouncementForm extends FormBase {
       '#title' => 'Enable news announcements',
       '#description' => $this->t('Show/hide news announcement. Default value is "Enabled".'),
       '#default_value' => $this->get('news_announcement'),
-      '#translatable' => true,
+      '#translatable' => TRUE,
     ];
 
     $form['news_issue']['news_announcement_add_background'] = [
@@ -154,10 +154,10 @@ class JamboreeAnnouncementForm extends FormBase {
       '#default_value' => $this->get('news_announcement_add_background'),
       '#states' => [
         'invisible' => [
-          'input[name="news_announcement"]' => ['checked' => false],
+          'input[name="news_announcement"]' => ['checked' => FALSE],
         ],
       ],
-      '#translatable' => true,
+      '#translatable' => TRUE,
     ];
 
     $default_news_announcement = $this->get('news_announcement_content');
@@ -169,20 +169,20 @@ class JamboreeAnnouncementForm extends FormBase {
       '#format' => $default_news_announcement['format'],
       '#states' => [
         'invisible' => [
-          'input[name="news_announcement"]' => ['checked' => false],
+          'input[name="news_announcement"]' => ['checked' => FALSE],
         ],
       ],
-      '#translatable' => true,
+      '#translatable' => TRUE,
     ];
 
     $form['news_issue']['news_announcement_scheduler'] = [
       '#type' => 'checkbox',
       '#title' => 'Enable Announcement Scheduler',
       '#default_value' => $this->get('critical_announcement_scheduler'),
-      '#translatable' => true,
+      '#translatable' => TRUE,
       '#states' => [
         'invisible' => [
-          'input[name="news_announcement"]' => ['checked' => false],
+          'input[name="news_announcement"]' => ['checked' => FALSE],
         ],
       ],
     ];
@@ -192,7 +192,7 @@ class JamboreeAnnouncementForm extends FormBase {
       '#title' => $this->t('News Scheduler'),
       '#states' => [
         'invisible' => [
-          'input[name="news_announcement_scheduler"]' => ['checked' => false],
+          'input[name="news_announcement_scheduler"]' => ['checked' => FALSE],
         ],
       ],
     ];
@@ -207,7 +207,7 @@ class JamboreeAnnouncementForm extends FormBase {
       '#date_date_format' => 'Y-m-d',
       '#date_time_format' => 'H:i',
       '#default_value' => $announcementStartDate,
-      '#translatable' => true,
+      '#translatable' => TRUE,
     ];
 
     $announcementEndDate = $this->get('news_announcement_end_date');
@@ -220,7 +220,7 @@ class JamboreeAnnouncementForm extends FormBase {
       '#date_date_format' => 'Y-m-d',
       '#date_time_format' => 'H:i',
       '#default_value' => $announcementEndDate,
-      '#translatable' => true,
+      '#translatable' => TRUE,
     ];
 
     $form['announcement_pages'] = [
@@ -228,7 +228,7 @@ class JamboreeAnnouncementForm extends FormBase {
       '#title' => $this->t('Show announcement on specific pages'),
       '#rows' => 4,
       '#resizable' => $this->t('vertical'),
-      '#translatable' => true,
+      '#translatable' => TRUE,
       '#default_value' => $this->get('announcement_pages'),
       '#description' => $this->t('Specify pages by using their paths. Enter one path per line. The \'*\' character is a wildcard. An example path is /promotion/* for every user page.'),
     ];
