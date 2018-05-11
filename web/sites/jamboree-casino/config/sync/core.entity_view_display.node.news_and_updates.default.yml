@@ -1,0 +1,27 @@
+uuid: 7e2dac70-d0c5-4476-a25f-3d13a6a5e6c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.news_and_updates.body
+    - node.type.news_and_updates
+  module:
+    - text
+    - user
+id: node.news_and_updates.default
+targetEntityType: node
+bundle: news_and_updates
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

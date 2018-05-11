@@ -4,10 +4,12 @@ status: true
 dependencies:
   config:
     - field.field.content_block_entity.content_block_entity.field_add_border
+    - field.field.content_block_entity.content_block_entity.field_block_content_position
     - field.field.content_block_entity.content_block_entity.field_description
     - field.field.content_block_entity.content_block_entity.field_hide_title
     - field.field.content_block_entity.content_block_entity.field_image_banner
     - field.field.content_block_entity.content_block_entity.field_image_banner_link
+    - field.field.content_block_entity.content_block_entity.field_open_in
     - field.field.content_block_entity.content_block_entity.field_position
     - field.field.content_block_entity.content_block_entity.field_title
     - image.style.thumbnail
@@ -26,6 +28,12 @@ content:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
+    region: content
+  field_block_content_position:
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   field_description:
     weight: 5
@@ -57,6 +65,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_open_in:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   field_position:
     weight: 6

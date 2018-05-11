@@ -1,0 +1,18 @@
+uuid: 76790909-16e3-4278-80e8-5933f2c4dab8
+langcode: en
+status: true
+dependencies:
+  module:
+    - jamboree_news_and_updates
+id: news_and_updates_entity.news_and_updates_entity.metatag
+field_name: metatag
+entity_type: news_and_updates_entity
+bundle: news_and_updates_entity
+label: Metatags
+description: 'The metatags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

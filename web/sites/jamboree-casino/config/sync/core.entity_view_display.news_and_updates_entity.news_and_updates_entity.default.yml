@@ -1,0 +1,50 @@
+uuid: e2bbae4b-bdf8-427a-9a7d-9c1f2450db90
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.news_and_updates_entity.news_and_updates_entity.field_authored_on
+    - field.field.news_and_updates_entity.news_and_updates_entity.field_body
+  module:
+    - jamboree_news_and_updates
+    - text
+    - user
+id: news_and_updates_entity.news_and_updates_entity.default
+targetEntityType: news_and_updates_entity
+bundle: news_and_updates_entity
+mode: default
+content:
+  field_authored_on:
+    weight: 2
+    label: above
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+    third_party_settings: {  }
+    type: timestamp
+    region: content
+  field_body:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  name:
+    label: above
+    type: string
+    weight: -4
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  user_id:
+    label: hidden
+    type: author
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

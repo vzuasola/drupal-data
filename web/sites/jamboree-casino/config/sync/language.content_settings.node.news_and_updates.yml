@@ -1,0 +1,16 @@
+uuid: 9dd0d21e-0774-40b5-a3e8-9efc9203218c
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.news_and_updates
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.news_and_updates
+target_entity_type_id: node
+target_bundle: news_and_updates
+default_langcode: site_default
+language_alterable: true

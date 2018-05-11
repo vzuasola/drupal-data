@@ -38,6 +38,7 @@ module:
   jamboree_config: 0
   jamboree_content_blocks: 0
   jamboree_dropdown_menu: 0
+  jamboree_news_and_updates: 0
   lang_dropdown: 0
   language: 0
   libraries: 0

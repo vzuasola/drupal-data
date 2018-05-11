@@ -1,0 +1,7 @@
+jamboree_news_and_updates.admin_settings:
+  path: 'admin/config/jamboree/news_and_updates'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Jamboree News and Updates'
+  requirements:
+    _permission: 'administer site configuration'
