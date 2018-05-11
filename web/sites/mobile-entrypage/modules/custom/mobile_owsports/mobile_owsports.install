@@ -1,0 +1,14 @@
+<?php
+
+
+/**
+ * Implements hook_uninstall
+ */
+function mobile_owsports_uninstall() {
+  $keys = [
+  ];
+
+  foreach ($keys as $key) {
+    \Drupal::configFactory()->getEditable($key)->delete();
+  }
+}

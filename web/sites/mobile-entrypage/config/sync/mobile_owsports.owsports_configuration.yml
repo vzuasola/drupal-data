@@ -1,0 +1,4 @@
+smart_wap: 'https://ismart.[dafabet_mobile:base_domain]/Deposit_ProcessLogin.aspx'
+iwap: 'https://iwap.[dafabet_mobile:base_domain]/Deposit_ProcessLogin.aspx'
+owsports_param: 'lang=en&st={account_token}&homeURL=[dafabet_mobile:dafabet_mobile][dafabet_mobile:language]&extendSessionURL=[dafabet_mobile:dafabet_mobile][dafabet_mobile:language]&OType=01&oddstype=1'
+iwap_agents: "windows\r\nblackberry\r\nsymbian\r\nsymbianOS"
