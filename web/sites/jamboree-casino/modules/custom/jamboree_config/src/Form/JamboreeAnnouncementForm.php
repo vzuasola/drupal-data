@@ -10,7 +10,7 @@ use Drupal\Core\Datetime\DrupalDateTime;
  * My module form plugin
  *
  * @WebcomposerConfigPlugin(
- *   id = "jamboree_config",
+ *   id = "jamboree_announcement",
  *   route = {
  *     "title" = "Announcement Configuration",
  *     "path" = "/admin/config/jamboree/announcement_configuration",
@@ -18,7 +18,7 @@ use Drupal\Core\Datetime\DrupalDateTime;
  *   menu = {
  *     "title" = "Announcement Configuration",
  *     "description" = "Provides announcement configuration",
- *     "parent" = "jamboree_config.jamboree_announcement",
+ *     "parent" = "jamboree_config.jamboree_config",
  *     "weight" = 30
  *   },
  * )
