@@ -1,0 +1,5 @@
+jamboree_config.jamboree_announcement:
+  title: 'Jamboree Configuration'
+  description: Jamboree Configuration
+  parent: system.admin_config
+  route_name: jamboree_config.admin_settings

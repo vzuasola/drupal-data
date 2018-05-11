@@ -27,3 +27,9 @@ webcomposer_games.unsupported_currency_schema:
   base_route_name: webcomposer_games.unsupported_currency_configuration_form
   names:
     - 'webcomposer_config.unsupported_currency'
+
+webcomposer_games.games_goldenrace_provider_schema:
+  title: 'Goldenrace Game Configuration'
+  base_route_name: webcomposer_games.games_goldenrace_provider_form
+  names:
+    - 'webcomposer_config.games_goldenrace_provider'    
