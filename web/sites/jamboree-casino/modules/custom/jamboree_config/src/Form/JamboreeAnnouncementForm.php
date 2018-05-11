@@ -178,7 +178,7 @@ class JamboreeAnnouncementForm extends FormBase {
     $form['news_issue']['news_announcement_scheduler'] = [
       '#type' => 'checkbox',
       '#title' => 'Enable Announcement Scheduler',
-      '#default_value' => $this->get('critical_announcement_scheduler'),
+      '#default_value' => $this->get('news_announcement_scheduler'),
       '#translatable' => TRUE,
       '#states' => [
         'invisible' => [
