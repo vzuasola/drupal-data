@@ -17,7 +17,7 @@ use Drupal\Core\Form\FormStateInterface;
  *   menu = {
  *     "title" = "OWSports Configuration",
  *     "description" = "Provides configuration for OWSports",
- *     "parent" = "mobile_owsports.list",
+ *     "parent" = "mobile_config.list",
  *   },
  * )
  */
