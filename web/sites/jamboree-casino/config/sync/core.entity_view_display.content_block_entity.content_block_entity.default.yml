@@ -89,5 +89,7 @@ content:
       native_language: false
     third_party_settings: {  }
 hidden:
+  field_block_content_position: true
+  field_open_in: true
   name: true
   user_id: true
