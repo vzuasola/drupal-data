@@ -1,0 +1,21 @@
+uuid: f10ec171-60ac-44e0-8a77-603f8df7eb19
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_dropdown_menu_mobile_opt
+    - paragraphs.paragraphs_type.dropdown_menu_item
+  module:
+    - options
+id: paragraph.dropdown_menu_item.field_dropdown_menu_mobile_opt
+field_name: field_dropdown_menu_mobile_opt
+entity_type: paragraph
+bundle: dropdown_menu_item
+label: 'Mobile Menu Link Options'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
