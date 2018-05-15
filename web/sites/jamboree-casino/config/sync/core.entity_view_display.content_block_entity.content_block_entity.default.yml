@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.content_block_entity.content_block_entity.field_add_background
     - field.field.content_block_entity.content_block_entity.field_add_border
     - field.field.content_block_entity.content_block_entity.field_block_content_position
     - field.field.content_block_entity.content_block_entity.field_description
@@ -12,6 +11,7 @@ dependencies:
     - field.field.content_block_entity.content_block_entity.field_image_banner_link
     - field.field.content_block_entity.content_block_entity.field_open_in
     - field.field.content_block_entity.content_block_entity.field_position
+    - field.field.content_block_entity.content_block_entity.field_rightside_content_type
     - field.field.content_block_entity.content_block_entity.field_title
   module:
     - image
@@ -23,16 +23,6 @@ targetEntityType: content_block_entity
 bundle: content_block_entity
 mode: default
 content:
-  field_add_background:
-    weight: 8
-    label: above
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    type: boolean
-    region: content
   field_add_border:
     weight: 5
     label: above
@@ -93,6 +83,13 @@ content:
     region: content
   field_position:
     weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_rightside_content_type:
+    weight: 10
     label: above
     settings: {  }
     third_party_settings: {  }

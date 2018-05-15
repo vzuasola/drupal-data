@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.news_and_updates_entity.news_and_updates_entity.field_authored_on
     - field.field.news_and_updates_entity.news_and_updates_entity.field_body
+    - field.field.news_and_updates_entity.news_and_updates_entity.field_title
   module:
     - jamboree_news_and_updates
     - text
@@ -15,7 +16,7 @@ bundle: news_and_updates_entity
 mode: default
 content:
   field_authored_on:
-    weight: 2
+    weight: 4
     label: above
     settings:
       date_format: medium
@@ -25,26 +26,35 @@ content:
     type: timestamp
     region: content
   field_body:
-    weight: 1
+    weight: 2
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
-  name:
+  field_title:
+    weight: 1
     label: above
-    type: string
-    weight: -4
-    region: content
     settings:
       link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  langcode:
+    type: language
+    weight: 0
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+      native_language: false
     third_party_settings: {  }
   user_id:
     label: hidden
     type: author
-    weight: 0
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
-  langcode: true
+  name: true
