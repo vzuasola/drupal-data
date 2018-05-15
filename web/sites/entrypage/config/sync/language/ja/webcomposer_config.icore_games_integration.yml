@@ -1,0 +1,4 @@
+unsupported_currencies_title: お知らせ
+unsupported_currencies_message:
+  value: "<p>ご利用の通貨はフィッシュハンターではご利用いただけません。</p>\r\n"
+  format: basic_html

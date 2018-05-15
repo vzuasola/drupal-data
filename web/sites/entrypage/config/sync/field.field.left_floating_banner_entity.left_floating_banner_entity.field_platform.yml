@@ -1,0 +1,25 @@
+uuid: 8b267b8e-26b4-452a-91dc-495de1920419
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.left_floating_banner_entity.field_platform
+  module:
+    - options
+    - webcomposer_floating_banners
+_core:
+  default_config_hash: dHa1XCXkTS5CbgIiTFui8vrkhbMtf1iI-GEkfvQ-wT8
+id: left_floating_banner_entity.left_floating_banner_entity.field_platform
+field_name: field_platform
+entity_type: left_floating_banner_entity
+bundle: left_floating_banner_entity
+label: Platform
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: desktop
+default_value_callback: ''
+settings: {  }
+field_type: list_string

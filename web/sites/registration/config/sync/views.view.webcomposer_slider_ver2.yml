@@ -2,8 +2,19 @@ uuid: e0fc1945-8379-48e1-b669-4edc51250cda
 langcode: en
 status: true
 dependencies:
+  config:
+    - field.storage.webcomposer_slider_v2_entity.field_banner_image
+    - field.storage.webcomposer_slider_v2_entity.field_log_in_state
+    - field.storage.webcomposer_slider_v2_entity.field_post_banner_image
+    - field.storage.webcomposer_slider_v2_entity.field_publish_date
+    - field.storage.webcomposer_slider_v2_entity.field_title
+    - field.storage.webcomposer_slider_v2_entity.field_unpublish_date
+    - image.style.thumbnail
   module:
+    - datetime
     - draggableviews
+    - image
+    - options
     - rest
     - serialization
     - user
@@ -1432,7 +1443,7 @@ display:
       access:
         type: perm
         options:
-          perm: 'access content overview'
+          perm: 'administer site configuration'
       pager:
         type: none
         options:
@@ -1442,8 +1453,15 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url
         - user.permissions
-      tags: {  }
+      tags:
+        - 'config:field.storage.webcomposer_slider_v2_entity.field_banner_image'
+        - 'config:field.storage.webcomposer_slider_v2_entity.field_log_in_state'
+        - 'config:field.storage.webcomposer_slider_v2_entity.field_post_banner_image'
+        - 'config:field.storage.webcomposer_slider_v2_entity.field_publish_date'
+        - 'config:field.storage.webcomposer_slider_v2_entity.field_title'
+        - 'config:field.storage.webcomposer_slider_v2_entity.field_unpublish_date'
   rest_export_1:
     display_plugin: rest_export
     id: rest_export_1
