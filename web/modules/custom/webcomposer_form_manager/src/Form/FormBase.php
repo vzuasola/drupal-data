@@ -14,6 +14,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 class FormBase extends ConfigFormBase {
   protected $typedConfigManager;
   protected $languageManager;
+  protected $moduleHandler;
 
   /**
    * {@inheritdoc}
@@ -31,9 +32,10 @@ class FormBase extends ConfigFormBase {
   /**
    * Class constructor.
    */
-  public function __construct($typedConfigManager, $languageManager) {
+  public function __construct($typedConfigManager, $languageManager, $module_handler) {
     $this->typedConfigManager = $typedConfigManager;
     $this->languageManager = $languageManager;
+    $this->moduleHandler = $module_handler;
   }
 
   /**

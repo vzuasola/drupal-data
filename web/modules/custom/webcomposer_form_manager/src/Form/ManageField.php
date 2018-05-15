@@ -37,8 +37,8 @@ class ManageField extends FormBase {
   /**
    * Class constructor.
    */
-  public function __construct($typedConfigManager, $languageManager, $formManager, $route) {
-    parent::__construct($typedConfigManager, $languageManager);
+  public function __construct($typedConfigManager, $languageManager, $formManager, $route, $moduleHandler) {
+    parent::__construct($typedConfigManager, $languageManager, $moduleHandler);
 
     $this->languageManager = $languageManager;
     $this->formManager = $formManager;
@@ -85,7 +85,8 @@ class ManageField extends FormBase {
       $container->get('config.typed'),
       $container->get('language_manager'),
       $container->get('webcomposer_form_manager.form_manager'),
-      $container->get('current_route_match')
+      $container->get('current_route_match'),
+      $container->get('module_handler')
     );
   }
 
@@ -299,7 +300,7 @@ class ManageField extends FormBase {
    */
   protected function saveFieldSettings($form, FormStateInterface $form_state) {
     $name = $this->getDefaultConfigName();
-
+    $before = $this->getConfigValues($name, 'field_settings');
     $settings = $this->field->getSettings();
     $keys = array_keys($settings);
 
@@ -311,6 +312,7 @@ class ManageField extends FormBase {
     }
 
     $this->saveRawConfigValue($name, 'field_settings', $data);
+    $this->moduleHandler->invokeAll('webcomposer_form_config_schema_update', [$name . ".settings", $data, $before]);
   }
 
   /**
@@ -318,7 +320,7 @@ class ManageField extends FormBase {
    */
   protected function saveValidations($form, FormStateInterface $form_state) {
     $name = $this->getDefaultConfigName();
-
+    $before = $this->getConfigValues($name, 'field_validations');
     $validations = $this->formManager->getValidations();
     $keys = array_keys($validations);
 
@@ -337,5 +339,6 @@ class ManageField extends FormBase {
     }
 
     $this->saveRawConfigValue($name, 'field_validations', $data);
+    $this->moduleHandler->invokeAll('webcomposer_form_config_schema_update', [$name . ".validation", $data, $before]);
   }
 }
