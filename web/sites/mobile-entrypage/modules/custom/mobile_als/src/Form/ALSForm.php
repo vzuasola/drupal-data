@@ -61,6 +61,21 @@ class ALSForm extends FormBase {
       '#translatable' => TRUE,
     ];
 
+    $form['domains'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Domain'),
+      '#collapsible' => TRUE,
+      '#open' => TRUE,
+    ];
+
+    $form['domains']['als_enable_domain'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Domain Mapping'),
+      '#default_value' => $this->get('als_enable_domain'),
+      '#description' => 'Auto generate als domain base on the current site domain.',
+      '#translatable' => TRUE,
+    ];
+
     return $form;
   }
 }
