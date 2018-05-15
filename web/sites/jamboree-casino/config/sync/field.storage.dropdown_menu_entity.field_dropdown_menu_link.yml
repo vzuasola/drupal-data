@@ -1,16 +1,18 @@
-uuid: 68859333-351a-425b-9ba5-8cc379e4d5e3
+uuid: 1dd50d6f-2d25-44db-8efc-499c745d7db2
 langcode: en
 status: true
 dependencies:
   module:
     - jamboree_dropdown_menu
-    - link
-id: dropdown_menu_entity.field_main_menu
-field_name: field_main_menu
+id: dropdown_menu_entity.field_dropdown_menu_link
+field_name: field_dropdown_menu_link
 entity_type: dropdown_menu_entity
-type: link
-settings: {  }
-module: link
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
 locked: false
 cardinality: 1
 translatable: true

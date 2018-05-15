@@ -1,4 +1,4 @@
-uuid: b0d809af-e6af-4104-a24a-34ccf06ebbf9
+uuid: 03f2295a-26dc-43bf-a2a7-97812f301a83
 langcode: en
 status: true
 dependencies:
@@ -6,8 +6,8 @@ dependencies:
     - file
     - image
     - paragraphs
-id: paragraph.field_dropdown_submenu_image
-field_name: field_dropdown_submenu_image
+id: paragraph.field_dropdown_menu_icon_image
+field_name: field_dropdown_menu_icon_image
 entity_type: paragraph
 type: image
 settings:
