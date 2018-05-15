@@ -1,0 +1,5 @@
+name: Mobile ALS
+type: module
+description: Mobile ALS specific configurations
+core: 8.x
+package: Web Composer
