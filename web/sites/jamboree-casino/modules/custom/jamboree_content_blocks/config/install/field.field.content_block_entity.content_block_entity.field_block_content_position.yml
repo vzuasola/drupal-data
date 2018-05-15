@@ -1,4 +1,4 @@
-uuid: 1527be59-1aa2-4686-b600-31a8c977cbdc
+uuid: 2707eb99-2a9e-4e19-83a4-8ad34ba24380
 langcode: en
 status: true
 dependencies:
@@ -14,15 +14,8 @@ bundle: content_block_entity
 label: 'Block Content Position'
 description: ''
 required: false
-<<<<<<< HEAD
-translatable: false
-default_value:
-  -
-    value: rightside
-=======
 translatable: true
 default_value: {  }
->>>>>>> e5cb7ab7348b8da50498f0873f61a981011e305d
 default_value_callback: ''
 settings: {  }
 field_type: list_string

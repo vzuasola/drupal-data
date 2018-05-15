@@ -10,7 +10,7 @@ use Drupal\Core\Datetime\DrupalDateTime;
  * My module form plugin
  *
  * @WebcomposerConfigPlugin(
- *   id = "jamboree_config",
+ *   id = "jamboree_announcement",
  *   route = {
  *     "title" = "Announcement Configuration",
  *     "path" = "/admin/config/jamboree/announcement_configuration",
@@ -18,7 +18,7 @@ use Drupal\Core\Datetime\DrupalDateTime;
  *   menu = {
  *     "title" = "Announcement Configuration",
  *     "description" = "Provides announcement configuration",
- *     "parent" = "jamboree_config.jamboree_announcement",
+ *     "parent" = "jamboree_config.jamboree_config",
  *     "weight" = 30
  *   },
  * )
@@ -178,7 +178,7 @@ class JamboreeAnnouncementForm extends FormBase {
     $form['news_issue']['news_announcement_scheduler'] = [
       '#type' => 'checkbox',
       '#title' => 'Enable Announcement Scheduler',
-      '#default_value' => $this->get('critical_announcement_scheduler'),
+      '#default_value' => $this->get('news_announcement_scheduler'),
       '#translatable' => TRUE,
       '#states' => [
         'invisible' => [

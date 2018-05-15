@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.content_block_entity.content_block_entity.field_add_background
     - field.field.content_block_entity.content_block_entity.field_add_border
     - field.field.content_block_entity.content_block_entity.field_block_content_position
     - field.field.content_block_entity.content_block_entity.field_description
@@ -22,6 +23,16 @@ targetEntityType: content_block_entity
 bundle: content_block_entity
 mode: default
 content:
+  field_add_background:
+    weight: 8
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
   field_add_border:
     weight: 5
     label: above
