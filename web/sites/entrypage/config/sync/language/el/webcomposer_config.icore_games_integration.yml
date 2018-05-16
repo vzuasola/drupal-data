@@ -1,0 +1,6 @@
+unsupported_currencies_title: NOTIFICATION
+unsupported_currencies_message:
+  value: "<p>Sorry, your currency is not supported in Fish Hunter.</p>\r\n"
+  format: basic_html
+unsupported_currencies_button: OK
+fallback_error_button: Ok

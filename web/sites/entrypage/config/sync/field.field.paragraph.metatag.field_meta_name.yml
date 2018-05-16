@@ -14,7 +14,7 @@ bundle: metatag
 label: Name
 description: 'The attribute name'
 required: true
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }

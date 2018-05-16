@@ -10,6 +10,9 @@ dependencies:
     - field.field.node.arcade_game.field_arc_game_thumbnail_image
     - field.field.node.arcade_game.field_arc_game_title
     - field.field.node.arcade_game.field_arc_meta_tags
+    - field.field.node.arcade_game.field_game_thumbnail_image_h
+    - field.field.node.arcade_game.field_game_thumbnail_image_v
+    - field.field.node.arcade_game.field_game_thumbnail_size
     - image.style.thumbnail
     - node.type.arcade_game
   module:
@@ -23,7 +26,6 @@ third_party_settings:
     group_game_launching:
       children:
         - field_arc_game_provider
-        - field_arc_game_type
         - field_arc_game_code
       parent_name: ''
       weight: 10
@@ -38,7 +40,10 @@ third_party_settings:
     group_game_thumbnail:
       children:
         - field_arc_game_title
+        - field_game_thumbnail_size
         - field_arc_game_thumbnail_image
+        - field_game_thumbnail_image_v
+        - field_game_thumbnail_image_h
         - field_arc_game_ribbon
       parent_name: ''
       weight: 6
@@ -70,13 +75,13 @@ content:
     type: options_buttons
     region: content
   field_arc_game_ribbon:
-    weight: 9
+    weight: 12
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_arc_game_thumbnail_image:
-    weight: 8
+    weight: 9
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -96,6 +101,28 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: metatag_firehose
+    region: content
+  field_game_thumbnail_image_h:
+    weight: 11
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_game_thumbnail_image_v:
+    weight: 10
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_game_thumbnail_size:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   langcode:
     type: language_select

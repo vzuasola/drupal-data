@@ -1,0 +1,15 @@
+uuid: 0f7417f8-5ff8-4b09-8144-d092f109c932
+langcode: en
+status: true
+dependencies:
+  module:
+    - content_translation
+    - webcomposer_seo
+third_party_settings:
+  content_translation:
+    enabled: true
+id: webcomposer_meta_entity.webcomposer_meta_entity
+target_entity_type_id: webcomposer_meta_entity
+target_bundle: webcomposer_meta_entity
+default_langcode: site_default
+language_alterable: true

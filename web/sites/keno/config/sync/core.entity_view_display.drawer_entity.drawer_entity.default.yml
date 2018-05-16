@@ -1,0 +1,92 @@
+uuid: 97adeffc-d82c-4864-83a6-a7cc1c4429de
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.drawer_entity.drawer_entity.field_drawer_button
+    - field.field.drawer_entity.drawer_entity.field_drawer_class
+    - field.field.drawer_entity.drawer_entity.field_drawer_id
+    - field.field.drawer_entity.drawer_entity.field_drawer_media
+    - field.field.drawer_entity.drawer_entity.field_drawer_summary
+    - field.field.drawer_entity.drawer_entity.field_drawer_title
+  module:
+    - entity_reference_revisions
+    - link
+    - text
+    - user
+    - webcomposer_drawer
+_core:
+  default_config_hash: VbeX-SqXT_pbfVRa5VqVb3eNzm63mY75xT8k8tUlaWs
+id: drawer_entity.drawer_entity.default
+targetEntityType: drawer_entity
+bundle: drawer_entity
+mode: default
+content:
+  field_drawer_button:
+    weight: 4
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_drawer_class:
+    weight: 5
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_drawer_id:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_drawer_media:
+    type: entity_reference_revisions_entity_view
+    weight: 6
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_drawer_summary:
+    weight: 7
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_drawer_title:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  name:
+    label: above
+    type: string
+    weight: -4
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  user_id:
+    label: hidden
+    type: author
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

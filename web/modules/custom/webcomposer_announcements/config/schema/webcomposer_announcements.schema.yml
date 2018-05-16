@@ -8,3 +8,9 @@ webcomposer_config.announcements_configuration:
     default_message:
       type: label
       label: 'Announcements Lightbox Default Message'
+    see_all:
+      type: label
+      label: 'Announcements See all text'
+    dismiss_all:
+      type: label
+      label: 'Announcements Dismiss all text'
