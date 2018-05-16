@@ -1,0 +1,20 @@
+uuid: 0ace3e82-4402-4627-9419-cb57c27a9656
+langcode: ja
+status: true
+dependencies:
+  module:
+    - webcomposer_slider_v2
+id: webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.user_id
+field_name: user_id
+entity_type: webcomposer_slider_v2_entity
+bundle: webcomposer_slider_v2_entity
+label: 'Authored by'
+description: 'The user ID of author of the Webcomposer slider 2.0 entity entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

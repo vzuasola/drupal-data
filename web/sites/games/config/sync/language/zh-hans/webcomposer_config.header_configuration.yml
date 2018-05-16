@@ -1,12 +1,22 @@
-lobby_page_title: 享受世界上最先进的在线游戏！
-join_now_text: 立即加入
-login_issue_text: 无法登录？
-balance_error_text: 错误检索
-profile_icon_hover_text: 我的账户
+join_now_text: '立即加入'
+join_now_link: '/{domain:entry}/{lang}/join/games[query:({tracking})]'
+login_issue_text: '无法登录？'
+login_issue_link: '/{domain:entry}/{lang}/cant-login[query:({tracking})]'
+balance_error_text: '错误检索'
+profile_icon_hover_text: '我的账户'
 cashier_icon_hover_text: 出纳柜台
-product_menu_new_tag: '新 '
+product_menu_new_tag: 新
 welcome_text: '欢迎 {username}'
+profile_link: '/{domain:myaccount_domain}/{lang}/my-profile[query:(title=headerPopup&width=820&height=820&{credentials.params}&pvia=games)]'
 profile_logout_text: 登出
-balance_label_mapping: "4|沙巴体育\r\n6|大发体育\r\n1|娱乐场经典版\r\n2|娱乐场黄金版\r\n5|现场荷官，老虎机，& 虚拟运动\r\n8|OPUS现场荷官\r\n9|快乐彩\r\n3|扑克\r\n7|捕鱼王"
+_core:
+  default_config_hash: Ynx2hkfeSTtNe4GyBQ1t4lBkrV4wrazLGjX_M7Mk3mg
+lobby_page_title: '享受世界上最先进的在线游戏！'
+balance_label_mapping: "4|沙巴体育\r\n6|大发体育\r\n10|交易所\r\n1|娱乐场\r\n2|娱乐场黄金版\r\n5|现场荷官、老虎机、街机、和虚拟运动\r\n8|OPUS现场荷官\r\n7|AG 捕鱼王\r\n9|快乐彩\r\n3|扑克"
 balance_error_text_product: 无
-cashier_link: 无
+product_balance_label: 'Balance'
+total_balance_label: '总余额'
+cashier_link: '{domain:cashier_domain}/{lang}[query:(ticket={auth.token}&product=90&title=headerPopup&width=820&height=820})]'
+balance_mapping: '5|现场荷官、老虎机、街机、和虚拟运动'
+logo_title: Play Online Games
+capslock_notification: '大写锁定已开启'
