@@ -1,12 +1,22 @@
-lobby_page_title: '세계 정상급 온라인 게이밍을 경험해보세요! 지금 가입하세요!'
 join_now_text: '가입 하기'
+join_now_link: '/{domain:entry}/{lang}/join/games[query:({tracking})]'
 login_issue_text: '로그인이 안 되시나요?'
+login_issue_link: '/{domain:entry}/{lang}/cant-login[query:({tracking})]'
 balance_error_text: '에러가 발생했습니다.'
 profile_icon_hover_text: '내 프로필'
 cashier_icon_hover_text: 은행
-product_menu_new_tag: 새로운
+product_menu_new_tag: 새로운 
 welcome_text: '환영합니다 {username} 님'
+profile_link: '/{domain:myaccount_domain}/{lang}/my-profile[query:(title=headerPopup&width=820&height=820&{credentials.params}&pvia=games)]'
 profile_logout_text: 로그아웃
-balance_label_mapping: "4|OW 스포츠\r\n6|다파 스포츠\r\n1|카지노 클래식\r\n2|카지노 골드\r\n5|라이브 딜러, 게임, 가상 스포츠\r\n8|Opus 라이브 딜러\r\n9|키노\r\n3|포커\r\n7|낚시의 신"
-balance_error_text_product: 'N/A - QA'
-cashier_link: '내 프로필'
+_core:
+  default_config_hash: Ynx2hkfeSTtNe4GyBQ1t4lBkrV4wrazLGjX_M7Mk3mg
+lobby_page_title: '세계 정상급 온라인 게이밍을 경험해보세요! 지금 가입하세요!'
+balance_label_mapping: "4|OW 스포츠\r\n6|다파 스포츠\r\n10|베팅 익스체인지\r\n1|카지노\r\n2|카지노 골드\r\n5|라이브 딜러, 게임, 아케이드, & 가상 스포츠\r\n8|Opus 라이브 딜러\r\n7|AG 낚시의 신\r\n9|키노\r\n3|포커"
+balance_error_text_product: N/A
+product_balance_label: 'Balance'
+total_balance_label: '전체 잔액'
+cashier_link: '{domain:cashier_domain}/{lang}[query:(ticket={auth.token}&product=90&title=headerPopup&width=820&height=820})]'
+balance_mapping: '5|라이브 딜러, 게임, 아케이드, & 가상 스포츠'
+logo_title: Play Online Games
+capslock_notification: 'Caps Lock이 켜져 있습니다'
