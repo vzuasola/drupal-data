@@ -1,0 +1,20 @@
+uuid: 3caeb11b-03cc-4dc7-91e2-bffa359f3d8c
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.ribbon_labels
+  module:
+    - path
+id: taxonomy_term.ribbon_labels.path
+field_name: path
+entity_type: taxonomy_term
+bundle: ribbon_labels
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

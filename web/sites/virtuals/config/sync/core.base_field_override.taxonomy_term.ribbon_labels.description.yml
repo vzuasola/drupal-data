@@ -1,0 +1,20 @@
+uuid: 4cc23e01-c952-469c-981c-207f5294c88f
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.ribbon_labels
+  module:
+    - text
+id: taxonomy_term.ribbon_labels.description
+field_name: description
+entity_type: taxonomy_term
+bundle: ribbon_labels
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

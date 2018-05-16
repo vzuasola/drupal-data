@@ -1,0 +1,21 @@
+uuid: 70686f3c-9f57-43b6-b0dd-c1c1b1b02c58
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.content_block_entity.field_open_in
+  module:
+    - jamboree_content_blocks
+    - options
+id: content_block_entity.content_block_entity.field_open_in
+field_name: field_open_in
+entity_type: content_block_entity
+bundle: content_block_entity
+label: 'Image Banner Link Target'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
