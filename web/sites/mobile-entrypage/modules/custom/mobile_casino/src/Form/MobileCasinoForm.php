@@ -59,6 +59,27 @@ class MobileCasinoForm extends FormBase {
       '#default_value' => $this->get('casino_gold_url'),
     ];
 
+    $form['casino_configuration']['casino_text'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Casino Label'),
+      '#default_value' => $this->get('casino_text'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['casino_configuration']['casino_gold_text'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Casino Gold Label'),
+      '#default_value' => $this->get('casino_gold_text'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['casino_configuration']['maintenance_text'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Casino Maintenance Label'),
+      '#default_value' => $this->get('maintenance_text'),
+      '#translatable' => TRUE,
+    ];
+
     return $form;
   }
 }
