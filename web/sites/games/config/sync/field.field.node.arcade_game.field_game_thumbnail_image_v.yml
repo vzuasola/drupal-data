@@ -1,9 +1,9 @@
-uuid: 49783985-de4c-4cd1-b432-30ad82a0554e
+uuid: 29c7df4e-4a80-4b00-9d57-675e4f7a248c
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_arc_game_thumbnail_image
+    - field.storage.node.field_game_thumbnail_image_v
     - node.type.arcade_game
   module:
     - content_translation
@@ -14,12 +14,12 @@ third_party_settings:
       file: file
       alt: '0'
       title: '0'
-id: node.arcade_game.field_arc_game_thumbnail_image
-field_name: field_arc_game_thumbnail_image
+id: node.arcade_game.field_game_thumbnail_image_v
+field_name: field_game_thumbnail_image_v
 entity_type: node
 bundle: arcade_game
-label: 'Game Thumbnail Image Small'
-description: '428px by 330px'
+label: 'Game Thumbnail Image Vertical'
+description: '428px by 661px'
 required: false
 translatable: true
 default_value: {  }
@@ -28,8 +28,8 @@ settings:
   file_directory: '[date:custom:Y]-[date:custom:m]'
   file_extensions: 'png gif jpg jpeg'
   max_filesize: ''
-  max_resolution: 428x330
-  min_resolution: 428x330
+  max_resolution: 428x661
+  min_resolution: 428x661
   alt_field: true
   alt_field_required: true
   title_field: false
