@@ -1,27 +1,20 @@
-uuid: fe9a6afc-9aab-48ce-acff-f0de71e13cfa
+uuid: ed80c5da-50d4-47af-bf24-992b3ea6f24d
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_dropdown_submenu_image
+    - field.storage.paragraph.field_dropdown_menu_icon_image
     - paragraphs.paragraphs_type.dropdown_menu_item
   module:
-    - content_translation
     - image
-third_party_settings:
-  content_translation:
-    translation_sync:
-      file: file
-      alt: '0'
-      title: '0'
-id: paragraph.dropdown_menu_item.field_dropdown_submenu_image
-field_name: field_dropdown_submenu_image
+id: paragraph.dropdown_menu_item.field_dropdown_menu_icon_image
+field_name: field_dropdown_menu_icon_image
 entity_type: paragraph
 bundle: dropdown_menu_item
-label: 'Dropdown Submenu Image'
+label: 'Icon Image'
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

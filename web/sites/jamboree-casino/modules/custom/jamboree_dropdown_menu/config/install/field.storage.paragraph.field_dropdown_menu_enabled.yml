@@ -1,16 +1,15 @@
-uuid: fb6eb4cd-5d2d-4d66-9fa1-ab09b7b9feeb
+uuid: cb873359-88fb-4b64-94d8-95344a2ca1ed
 langcode: en
 status: true
 dependencies:
   module:
-    - link
     - paragraphs
-id: paragraph.field_dropdown_submenu_link
-field_name: field_dropdown_submenu_link
+id: paragraph.field_dropdown_menu_enabled
+field_name: field_dropdown_menu_enabled
 entity_type: paragraph
-type: link
+type: boolean
 settings: {  }
-module: link
+module: core
 locked: false
 cardinality: 1
 translatable: true
