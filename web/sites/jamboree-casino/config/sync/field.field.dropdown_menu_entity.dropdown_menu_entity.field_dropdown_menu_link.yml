@@ -1,0 +1,20 @@
+uuid: b169439d-b149-41e2-b377-878531631db7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.dropdown_menu_entity.field_dropdown_menu_link
+  module:
+    - jamboree_dropdown_menu
+id: dropdown_menu_entity.dropdown_menu_entity.field_dropdown_menu_link
+field_name: field_dropdown_menu_link
+entity_type: dropdown_menu_entity
+bundle: dropdown_menu_entity
+label: Link
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

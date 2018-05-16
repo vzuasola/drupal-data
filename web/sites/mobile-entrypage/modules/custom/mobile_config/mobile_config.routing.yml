@@ -1,0 +1,7 @@
+mobile_config.admin_settings:
+  path: 'admin/config/mobile'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Mobile Configurations'
+  requirements:
+    _permission: 'administer mobile config'
