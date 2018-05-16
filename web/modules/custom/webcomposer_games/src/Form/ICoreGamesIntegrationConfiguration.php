@@ -14,7 +14,7 @@ class ICoreGamesIntegrationConfiguration extends ConfigFormBase {
    * ICore Game Providers definitions
    */
     const ICORE_GAME_PROVIDERS = [
-        'fish_hunter' => 'Fish Hunter',
+        'asia_gaming' => 'Asia Gaming',
         'kiron_virtual_sports' => 'Virtual Sports',
         'gb_virtual_sports' => 'Global Bet Virtual Sports',
         'skywind' => 'Skywind',
