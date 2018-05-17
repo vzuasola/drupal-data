@@ -15,6 +15,8 @@ dependencies:
   module:
     - user
     - webcomposer_floating_banners
+_core:
+  default_config_hash: WUhwP4azbXuZXE_5qpalKbWqhydm6Vr_F89nzYIEsPI
 id: left_floating_banner_entity.left_floating_banner_entity.default
 targetEntityType: left_floating_banner_entity
 bundle: left_floating_banner_entity

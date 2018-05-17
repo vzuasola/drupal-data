@@ -7,20 +7,29 @@ url:
     zh-hans: sc
     zh-hant: ch
     th: th
-    vi: vn
-    id: id
     ko: kr
     hi: in
-    '': null
+    vi: vn
+    id: id
+    el: gr
+    pl: pl
+    ja: ja
+    eu: eu
+    af: af
   domains:
     en: ''
     zh-hans: ''
     zh-hant: ''
     th: ''
-    vi: ''
-    id: ''
     ko: ''
     hi: ''
+    vi: ''
+    id: ''
+    el: ''
+    pl: ''
+    ja: ''
+    eu: ''
+    af: ''
 selected_langcode: site_default
 _core:
   default_config_hash: uEePITI9tV6WqzmsTb7MfPCi5yPWXSxAN1xeLcYFQbM
