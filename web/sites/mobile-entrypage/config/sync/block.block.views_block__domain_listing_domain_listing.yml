@@ -14,7 +14,7 @@ _core:
 id: views_block__domain_listing_domain_listing
 theme: seven
 region: content
-weight: -2
+weight: -1
 provider: null
 plugin: 'views_block:domain_listing-domain_listing'
 settings:

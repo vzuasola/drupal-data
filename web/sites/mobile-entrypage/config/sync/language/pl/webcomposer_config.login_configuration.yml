@@ -1,0 +1,18 @@
+advanced__active_tab: edit-mobile-login
+lightbox_blurb: 'Δεν είστε ακόμα μέλος της Dafabet;'
+login_page_blurb: ''
+autologout_box_content:
+  format: basic_html
+notification_content:
+  format: basic_html
+mobile_login_button_label: 'ZALOGUJ SIĘ/REJESTRACJA'
+username_placeholder: Username
+password_placeholder: 'Κωδικός Πρόσβασης'
+login_bottom_label: 'ZALOGUJ SIĘ/REJESTRACJA'
+error_message_invalid_passname: 'Sorry the Username and Password you entered do not match. Please try again.'
+error_message_account_suspended: 'Your account has been locked due to failed login attempts. Please contact Customer Support'
+error_message_account_locked: 'Your account has been locked due to failed login attempts. Please contact Customer Support'
+autologout_box_title: REMINDER
+notification_title: NOTIFICATION
+notification_window_title: 'Session Timeout'
+mobile_login_url: 'https://qa1-casino.elysium-dfbt.com/'

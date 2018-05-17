@@ -4,6 +4,8 @@ namespace Drupal\webcomposer_floating_banners\Form;
 
 use Drupal\Core\Entity\ContentEntityForm;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Url;
+use Drupal\views\Views;
 
 /**
  * Form controller for Left floating banner entity edit forms.
@@ -44,8 +46,15 @@ class LeftFloatingBannerEntityForm extends ContentEntityForm {
           '%label' => $entity->label(),
         ]));
     }
-    
-    $form_state->setRedirectUrl($entity->urlInfo('collection'));
+
+    $view = Views::getView('floating_banner');
+    $redirectUrl = $entity->urlInfo('collection');
+
+    if (isset($view) && $view->access('manage')) {
+      $redirectUrl = Url::fromRoute('webcomposer_floating_banners.admin_settings_manage');
+    }
+
+    $form_state->setRedirectUrl($redirectUrl);
   }
 
 }

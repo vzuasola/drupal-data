@@ -20,7 +20,7 @@ class WebcomposerFloatingBannersController extends ControllerBase {
         $view->execute();
         $markup = \Drupal::service('renderer')->renderRoot($view->render());
     } else {
-        $markup = $this->t('Feature not available.');
+        return $this->redirect('entity.left_floating_banner_entity.collection');
     }
 
     return [
