@@ -11,8 +11,8 @@ id: content_block_entity.content_block_entity.field_position
 field_name: field_position
 entity_type: content_block_entity
 bundle: content_block_entity
-label: 'Main Content Block Position'
-description: 'NOTE: This field is only applicable for <b>Main Content(s).</b>'
+label: Position
+description: ''
 required: false
 translatable: true
 default_value: {  }
