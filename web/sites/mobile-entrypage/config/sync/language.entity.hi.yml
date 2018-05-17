@@ -11,5 +11,5 @@ third_party_settings:
 id: hi
 label: 'Hindi (India)'
 direction: ltr
-weight: -5
+weight: -1
 locked: false

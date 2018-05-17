@@ -1,4 +1,4 @@
-smart_wap: 'https://ismart.[dafabet_mobile:base_domain]/Deposit_ProcessLogin.aspx'
-iwap: 'https://iwap.[dafabet_mobile:base_domain]/Deposit_ProcessLogin.aspx'
-owsports_param: 'lang=en&st={account_token}&homeURL=[dafabet_mobile:dafabet_mobile][dafabet_mobile:language]&extendSessionURL=[dafabet_mobile:dafabet_mobile][dafabet_mobile:language]&OType=01&oddstype=1'
+smart_wap: 'https://ismart.dafabet.com/Deposit_ProcessLogin.aspx'
+iwap: 'https://iwap.dafabet.com/Deposit_ProcessLogin.aspx'
+owsports_param: 'lang=en&st={auth.token}&homeURL=https://qa1-mobile-entrypagewww.elysium-dfbt.com/en&extendSessionURL=https://qa1-mobile-entrypagewww.elysium-dfbt.com/en&OType=01&oddstype=1'
 iwap_agents: "windows\r\nblackberry\r\nsymbian\r\nsymbianOS"

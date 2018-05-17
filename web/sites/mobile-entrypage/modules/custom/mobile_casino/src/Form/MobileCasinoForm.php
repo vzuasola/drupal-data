@@ -51,12 +51,14 @@ class MobileCasinoForm extends FormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Casino URL'),
       '#default_value' => $this->get('casino_url'),
+      '#required' => TRUE,
     ];
 
     $form['casino_configuration']['casino_gold_url'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Casino Gold URL'),
       '#default_value' => $this->get('casino_gold_url'),
+      '#required' => TRUE,
     ];
 
     $form['casino_configuration']['casino_text'] = [
