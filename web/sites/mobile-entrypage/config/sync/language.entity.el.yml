@@ -1,0 +1,15 @@
+uuid: 22ab9bd3-6fdd-4d75-bab2-8ea6d077b8bf
+langcode: el
+status: true
+dependencies:
+  module:
+    - webcomposer_language_hierarchy
+third_party_settings:
+  webcomposer_language_hierarchy:
+    webcomposer_fallback_langcode: ''
+    webcomposer_language_custom_label: Ελληνικά
+id: el
+label: Greek
+direction: ltr
+weight: 0
+locked: false

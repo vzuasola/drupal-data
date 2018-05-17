@@ -28,7 +28,7 @@ total_balance_label: 'Total Balance'
 product_balance_id: ''
 balance_error_text_product: N/A
 balance_label_mapping: "4|OW Sports\r\n6|Dafa Sports\r\n11|eSports\r\n10|Exchange\r\n1|Casino Classic\r\n2|Casino Gold\r\n5|Live Dealer, Games, Arcade, Virtuals, & Lottery\r\n8|Opus Live Dealer\r\n9|Keno\r\n3|Poker\r\n7|Fish Hunter"
-currency_balance_mapping: "10|USD,INR\r\n9|RMB,MYR,THB,KRW,VND,USD,IDR,INR,EUR\r\n8|RMB,MYR,THB,KRW,VND,USD,IDR,INR,EUR\r\n7|RMB"
+currency_balance_mapping: "11|RMB,MYR,THB,KRW,VND,USD,IDR,INR,EUR,KRW,RUB,GBP\r\n10|USD,INR\r\n9|RMB,MYR,THB,KRW,VND,USD,IDR,INR,EUR\r\n8|RMB,MYR,THB,KRW,VND,USD,IDR,INR,EUR\r\n7|RMB"
 excluded_balance_mapping: '7'
 cashier_link: '{domain:cashier_domain}/{lang}[query:(ticket={auth.token}&product=dafabet&title=headerPopup&width=820&height=820})]'
 logo_title: 'Place Your Online Bets Now!'

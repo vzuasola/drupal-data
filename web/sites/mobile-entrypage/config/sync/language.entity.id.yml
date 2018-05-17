@@ -11,5 +11,5 @@ third_party_settings:
 id: id
 label: 'Bahasa Indonesia'
 direction: ltr
-weight: -3
+weight: -4
 locked: false

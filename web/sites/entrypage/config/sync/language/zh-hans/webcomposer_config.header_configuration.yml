@@ -11,7 +11,7 @@ product_menu_new_tag: '新 '
 welcome_text: '欢迎 {username}'
 profile_link: '{domain:myaccount_domain}/{lang}/my-profile[query:(title=headerPopup&width=820&height=820&token={legacy.credentials})]'
 profile_logout_text: 登出
-balance_label_mapping: "4|沙巴体育\r\n6|大发体育\r\n10|交易所\r\n1|娱乐场经典版\r\n2|娱乐场黄金版\r\n5|现场荷官、老虎机、街机、和虚拟运动\r\n8|OPUS现场荷官\r\n9|快乐彩\r\n3|扑克\r\n7|AG 捕鱼王"
+balance_label_mapping: "4|沙巴体育\r\n6|大发体育\r\n10|交易所\r\n11|eSports\r\n1|娱乐场经典版\r\n2|娱乐场黄金版\r\n5|现场荷官、老虎机、街机、和虚拟运动\r\n8|OPUS现场荷官\r\n9|快乐彩\r\n3|扑克\r\n7|AG 捕鱼王"
 balance_error_text_product: N/A
 cashier_link: '{domain:cashier_domain}/{lang}[query:(ticket={auth.token}&product=dafabet&title=headerPopup&width=820&height=820})]'
 header_settings_tab__active_tab: edit-logo-group

@@ -35,7 +35,6 @@ module:
   filter: 0
   image: 0
   imce: 0
-  jamboree_config: 0
   jamboree_content_blocks: 0
   jamboree_dropdown_menu: 0
   lang_dropdown: 0
@@ -87,7 +86,6 @@ module:
   webcomposer_rest_extra: 0
   webcomposer_seo: 0
   webcomposer_sitemap: 0
-  webcomposer_slider_v2: 0
   webcomposer_social_media: 0
   webcomposer_sponsor: 0
   webcomposer_territory_blocking: 0

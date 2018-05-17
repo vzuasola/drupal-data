@@ -10,7 +10,7 @@ product_menu_new_tag: Mới
 welcome_text: 'Chào mừng {username}'
 profile_link: '{domain:myaccount_domain}/{lang}/my-profile[query:(title=headerPopup&width=820&height=820&token={legacy.credentials})]'
 profile_logout_text: 'Đăng xuất'
-balance_label_mapping: "4|Thể Thao OW\r\n6|Thể Thao Dafa\r\n10|Exchange\r\n1|Casino Classic\r\n2|Casino Gold\r\n5|Casino Trực Tuyến, Trò chơi, Arcade, & Thể thao ảo\r\n8|Casino Trực Tuyến Opus\r\n9|Keno\r\n3|Poker\r\n7|AG Fish Hunter"
+balance_label_mapping: "4|Thể Thao OW\r\n6|Thể Thao Dafa\r\n10|Exchange\r\n11|eSports\r\n1|Casino Classic\r\n2|Casino Gold\r\n5|Casino Trực Tuyến, Trò chơi, Arcade, & Thể thao ảo\r\n8|Casino Trực Tuyến Opus\r\n9|Keno\r\n3|Poker\r\n7|AG Fish Hunter"
 balance_error_text_product: N/A
 cashier_link: '{domain:cashier_domain}/{lang}[query:(ticket={auth.token}&product=dafabet&title=headerPopup&width=820&height=820})]'
 header_settings_tab__active_tab: edit-logo-group

@@ -1,5 +1,5 @@
 uuid: 1e6692a9-f7c8-4e96-8b40-3150a8f46a38
-langcode: en
+langcode: zh-hans
 status: true
 dependencies: {  }
 id: mobile-pre-login-sc

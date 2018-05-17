@@ -1,4 +1,4 @@
-jamboree_config.jamboree_announcement:
+jamboree_config.jamboree_config:
   title: 'Jamboree Configuration'
   description: Jamboree Configuration
   parent: system.admin_config
