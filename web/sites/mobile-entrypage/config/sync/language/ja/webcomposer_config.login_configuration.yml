@@ -1,0 +1,26 @@
+advanced__active_tab: edit-mobile-login
+lightbox_blurb: まだDafabetメンバーではありませんか？
+login_page_blurb: ''
+autologout_box_content:
+  format: basic_html
+  value: "<p>お客様のセッションはあと{seconds}で時間切れとなります。このセッションを継続されますか？</p>\r\n"
+notification_content:
+  format: basic_html
+  value: "<p>長時間ご操作がなかったためセッションは時間切れとなりました。</p>\r\n"
+mobile_login_button_label: ログイン/ご登録
+username_placeholder: Username
+password_placeholder: パスワード
+login_bottom_label: ログイン/ご登録
+error_message_blank_username: ユーザーネームを入力して下さい。
+error_message_blank_password: パスワードを入力して下さい。
+error_message_blank_passname: 全ての欄をご確認の上、再度お試し下さい。
+error_message_invalid_passname: 申し訳ございません。ユーザーネームまたはパスワードが無効です。再度お試し下さい。
+error_message_service_not_available: 現在サービスがご利用いただけません。
+error_message_account_suspended: 'ログイン失敗規定数超の為ロック致しました。 カスタマーサポートまでお問い合わせください。'
+error_message_account_locked: 'ログイン失敗規定数超の為ロック致しました。 カスタマーサポートまでお問い合わせください。'
+autologout_box_title: お知らせ
+affirmative_button_text: はい
+negative_button_text: いいえ
+notification_title: お知らせ
+notification_window_title: セッションが時間切れです
+mobile_login_url: 'https://qa1-casino.elysium-dfbt.com/'
