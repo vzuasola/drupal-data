@@ -24,7 +24,7 @@ news_announcement_content:
   format: basic_html
 balance_label_mapping: "4|OW Sports\r\n6|Dafa Sports\r\n10|Exchange\r\n1|Casino\r\n2|Casino Gold\r\n5|Live Dealer, Games, Arcade, & Virtuals\r\n8|Opus Live Dealer\r\n7|AG Fish Hunter\r\n9|Keno\r\n3|Poker"
 balance_error_text_product: N/A
-header_settings_tab__active_tab: edit-balance-group
+header_settings_tab__active_tab: edit-join-now-group
 logo_title: 'Mobile gambling with Dafabet'
 password_mask_toggle: 0
 caps_lock_toggle: 0
@@ -36,7 +36,7 @@ product_balance_id: ''
 total_balance_label: 'Total Balance:'
 balance_mapping: ''
 balance_label_override: 现场荷官、老虎机、街机、虚拟运动、和大发彩票
-currency_balance_mapping: ''
+currency_balance_mapping: "9|RMB,MYR,THB,KRW,VND,USD,IDR,INR,EUR\r\n8|RMB,MYR,THB,KRW,VND,USD,IDR,INR,EUR\r\n7|RMB\r\n10|USD,INR"
 excluded_balance_mapping: '7'
 value: null
 format: null

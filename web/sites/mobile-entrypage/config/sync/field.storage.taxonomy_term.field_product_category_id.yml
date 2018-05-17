@@ -1,14 +1,12 @@
-uuid: f48c6dd1-630e-4462-bd6e-195e1dbf8798
+uuid: 7ef866da-182d-41f4-982a-ead24b87fb44
 langcode: en
 status: true
 dependencies:
   module:
-    - webcomposer_floating_banners
-_core:
-  default_config_hash: JUwgMjEi-I6VUOYhqrOwMN42jpZfPlfgRiEccrObWXE
-id: left_floating_banner_entity.field_link
-field_name: field_link
-entity_type: left_floating_banner_entity
+    - taxonomy
+id: taxonomy_term.field_product_category_id
+field_name: field_product_category_id
+entity_type: taxonomy_term
 type: string
 settings:
   max_length: 255

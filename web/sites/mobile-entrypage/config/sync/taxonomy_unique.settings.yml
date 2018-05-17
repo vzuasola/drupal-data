@@ -14,3 +14,5 @@ master_placeholder: 0
 master_placeholder_message: 'Term @term already exists in vocabulary @vocabulary.'
 product: 0
 product_message: 'Term @term already exists in vocabulary @vocabulary.'
+promotions_product_filter: 0
+promotions_product_filter_message: 'Term @term already exists in vocabulary @vocabulary.'
