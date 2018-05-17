@@ -1,5 +1,6 @@
-javascript_assets: 'https://login.megasportcasino.com/jswrapper/integration.js.php?casino=mannycasino'
+javascript_assets: 'https://login.wsocdd.com/jswrapper/integration.js.php?casino=dafa888'
 playtech_pas_endpoint: 'https://login.megasportcasino.com/Login.php'
 lobby_url: 'https://www.google-analytics.com/lobby.js'
-playtech_pas_casino: mannycasino
+playtech_pas_casino: dafa888
 languages: "sc|zh-cn\r\nch|zh-cn\r\nkr|ko\r\nvn|en\r\njp|en\r\neu|en\r\nid|en\r\nin|en\r\ngr|en\r\npl|en"
+iapiconf_override: 'clientUrl_casino|https://cachebanner.9bonus.com/casinoclient.html'
