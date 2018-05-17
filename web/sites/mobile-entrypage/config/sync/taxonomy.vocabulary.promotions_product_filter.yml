@@ -2,7 +2,7 @@ uuid: e1231d97-d2b3-4179-8f3d-7e8be67c7335
 langcode: en
 status: true
 dependencies: {  }
-name: 'Promotions Product Filter'
+name: 'Product Promotions'
 vid: promotions_product_filter
 description: 'Promotions product category filter'
 hierarchy: 0
