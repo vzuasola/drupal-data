@@ -1,27 +1,22 @@
-uuid: 09431e3b-f9cb-4446-8244-0d72ffe6ad8e
+uuid: 7a19be6a-40ea-4716-9ce2-a0ca2a1c9783
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.content_block_entity.field_image_banner
+    - field.storage.partner_entity.field_logo
   module:
-    - content_translation
     - image
-    - jamboree_content_blocks
-third_party_settings:
-  content_translation:
-    translation_sync:
-      file: file
-      alt: '0'
-      title: '0'
-id: content_block_entity.content_block_entity.field_image_banner
-field_name: field_image_banner
-entity_type: content_block_entity
-bundle: content_block_entity
-label: 'Image Banner'
-description: ''
+    - webcomposer_partner
+_core:
+  default_config_hash: xQI92ZFPpA3P6sJTC4Xm8SAG3VMtuijEMT5e2eBHOVs
+id: partner_entity.partner_entity.field_logo
+field_name: field_logo
+entity_type: partner_entity
+bundle: partner_entity
+label: Logo
+description: 'The logo image of this specific partner entry.'
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
