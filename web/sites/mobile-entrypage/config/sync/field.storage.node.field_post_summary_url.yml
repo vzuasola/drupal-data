@@ -1,0 +1,19 @@
+uuid: 286ce9c0-4f94-4944-8a82-06e7969a6b27
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_post_summary_url
+field_name: field_post_summary_url
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
