@@ -1,0 +1,27 @@
+uuid: 25dd8dde-db71-48d5-8e1f-ef8b14606f50
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_promo_availability
+field_name: field_promo_availability
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '0'
+      label: 'Pre Login'
+    -
+      value: '1'
+      label: 'Post Login'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 2
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
