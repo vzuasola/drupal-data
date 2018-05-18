@@ -1,0 +1,17 @@
+uuid: 5fab2c05-6d71-4927-b786-4856f2564df8
+langcode: en
+status: true
+dependencies:
+  module:
+    - content_translation
+    - webcomposer_drawer
+third_party_settings:
+  content_translation:
+    enabled: true
+_core:
+  default_config_hash: Gj_7_wR3caTWXyzHGzyAsUKa0-t7N22r6QdBo0vlKoA
+id: drawer_entity.drawer_entity
+target_entity_type_id: drawer_entity
+target_bundle: drawer_entity
+default_langcode: site_default
+language_alterable: true

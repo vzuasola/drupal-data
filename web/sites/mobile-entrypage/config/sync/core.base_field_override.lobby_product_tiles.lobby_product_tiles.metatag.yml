@@ -1,0 +1,18 @@
+uuid: 8cd8538c-ce85-4a82-82fd-d4b78a9d0ce5
+langcode: en
+status: true
+dependencies:
+  module:
+    - lobby_product_tiles
+id: lobby_product_tiles.lobby_product_tiles.metatag
+field_name: metatag
+entity_type: lobby_product_tiles
+bundle: lobby_product_tiles
+label: Metatags
+description: 'The metatags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

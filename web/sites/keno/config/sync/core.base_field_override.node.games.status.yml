@@ -1,0 +1,22 @@
+uuid: e02c7c23-3f9e-4d5b-aa2d-81f8c4a76f26
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.games
+id: node.games.status
+field_name: status
+entity_type: node
+bundle: games
+label: 'Publishing status'
+description: 'A boolean indicating the published state.'
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

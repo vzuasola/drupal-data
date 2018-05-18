@@ -1,0 +1,21 @@
+uuid: d9ef6f35-bf37-4e30-aa09-1d2dbf9157aa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_maintenance_blurb
+    - node.type.games
+  module:
+    - text
+id: node.games.field_maintenance_blurb
+field_name: field_maintenance_blurb
+entity_type: node
+bundle: games
+label: 'Maintenance/Coming Soon Blurb'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

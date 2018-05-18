@@ -145,7 +145,11 @@ class ConfigurationResource extends ResourceBase {
 
         case 'page_not_found':
           $file_id = $data['page_not_found_image'][0];
-          $data['page_not_found_image_url'] = $this->getFileRelativePath($file_id);
+
+          $file = File::load($file_id);
+          if ($file) {
+            $data['page_not_found_image_url'] = $this->generateUrlFromFile($file);
+          }
           break;
       }
   }

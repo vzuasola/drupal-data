@@ -1,5 +1,8 @@
 about_dafabet_content:
-  format: basic_html
   value: "<p>欢迎来到Dafabet，亚洲领先在线娱乐投注网站，为您呈现不一样的在线投注体验，包括体育投注，在线娱乐场，真人娱乐场游戏，快乐彩，在线扑克，老虎机游戏和更多世界顶级投注游戏。</p>\r\n"
+  format: basic_html
 about_dafabet_title: '关于 DAFABET'
 quicklinks_title: 快速链接
+advanced__active_tab: edit-about-dafabet-details
+social_media_title: 'Follow us and receive the latest updates'
+sponsor_mobile_desc: 'Official Main Club Sponsors'

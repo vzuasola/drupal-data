@@ -39,4 +39,13 @@ settings:
       sponsorship:
         weight: 10
         enabled: false
+      slider_overlay_cmi:
+        weight: 12
+        enabled: false
+      social_media_cmi:
+        weight: 14
+        enabled: false
+      sponsor_cmi:
+        weight: 16
+        enabled: false
 field_type: entity_reference_revisions

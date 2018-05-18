@@ -1,0 +1,20 @@
+uuid: 569993e7-c5c1-4e84-b956-f8920fd7c594
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.games
+id: node.games.uid
+field_name: uid
+entity_type: node
+bundle: games
+label: 'Authored by'
+description: 'The username of the content author.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: 'Drupal\node\Entity\Node::getCurrentUserId'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

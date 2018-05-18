@@ -1,0 +1,23 @@
+uuid: e0bca213-c395-4517-8436-78f4cd1d835b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_mobile_sponsor_image_link
+    - paragraphs.paragraphs_type.mobile_sponsors
+  module:
+    - link
+id: paragraph.mobile_sponsors.field_mobile_sponsor_image_link
+field_name: field_mobile_sponsor_image_link
+entity_type: paragraph
+bundle: mobile_sponsors
+label: 'Mobile Sponsor Image Link'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+field_type: link

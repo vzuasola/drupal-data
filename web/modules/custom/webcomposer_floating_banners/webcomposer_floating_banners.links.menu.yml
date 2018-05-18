@@ -6,8 +6,8 @@ webcomposer_floating_banners.list:
 
 # Left floating banner entity menu items definition
 entity.left_floating_banner_entity.collection:
-  title: 'Floating Banners'
-  route_name: entity.left_floating_banner_entity.collection
+  title: 'Floating Banners List'
+  route_name: webcomposer_floating_banners.admin_settings_manage
   description: 'List floating banner entities'
   parent: webcomposer_floating_banners.list
   weight: 100

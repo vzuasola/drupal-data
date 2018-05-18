@@ -10,10 +10,14 @@ dependencies:
     - field.field.node.arcade_game.field_arc_game_thumbnail_image
     - field.field.node.arcade_game.field_arc_game_title
     - field.field.node.arcade_game.field_arc_meta_tags
+    - field.field.node.arcade_game.field_game_thumbnail_image_h
+    - field.field.node.arcade_game.field_game_thumbnail_image_v
+    - field.field.node.arcade_game.field_game_thumbnail_size
     - node.type.arcade_game
   module:
     - image
     - metatag
+    - options
     - text
     - user
 id: node.arcade_game.default
@@ -74,6 +78,31 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: metatag_empty_formatter
+    region: content
+  field_game_thumbnail_image_h:
+    weight: 110
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_game_thumbnail_image_v:
+    weight: 109
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_game_thumbnail_size:
+    weight: 111
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
   links:
     weight: 100

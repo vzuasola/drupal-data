@@ -1,0 +1,9 @@
+uuid: 45bcc47a-7a15-4852-afcb-1399e69e201c
+langcode: en
+status: true
+dependencies: {  }
+id: eu
+label: 'English (Europe)'
+direction: ltr
+weight: -9
+locked: false

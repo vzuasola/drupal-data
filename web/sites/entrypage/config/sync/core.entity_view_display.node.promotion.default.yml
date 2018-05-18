@@ -14,6 +14,7 @@ dependencies:
     - field.field.node.promotion.field_link_target
     - field.field.node.promotion.field_log_in_state
     - field.field.node.promotion.field_mark_as_featured
+    - field.field.node.promotion.field_meta_tags
     - field.field.node.promotion.field_product
     - field.field.node.promotion.field_product_subfilter
     - field.field.node.promotion.field_promotion_link_target
@@ -32,9 +33,9 @@ dependencies:
     - node.type.promotion
   module:
     - color_field
-    - entity_reference_revisions
     - image
     - link
+    - metatag
     - options
     - text
     - user
@@ -146,6 +147,13 @@ content:
       format_custom_true: ''
     third_party_settings: {  }
     type: boolean
+    region: content
+  field_meta_tags:
+    weight: 137
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
     region: content
   field_product:
     weight: 107

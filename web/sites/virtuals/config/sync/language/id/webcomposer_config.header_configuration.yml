@@ -1,0 +1,17 @@
+lobby_page_title: 'Mulai pasang Taruhan Olahraga Virtual Anda di Dafabet!'
+critical_announcement_content:
+  value: "<p>Layanan Chat kami tidak akan tersedia pada 21 Februari, Pk 05:00 - 05:30 GMT+8, dikarenakan pembaharuan sistem untuk kepuasan Anda. Sementara itu, Anda bisa menghubungi kami melalui layanan pesan instan, chat aplikasi, maupun melalui email. Terima kasih.</p>\r\n"
+  format: basic_html
+join_now_text: GABUNG
+join_now_link: '/{domain:entry}/{domain:lang_token}/join/virtual-sports{tracking.token}'
+login_issue_text: 'Tidak bisa Login?'
+product_balance_label: 'Saldo Live Dealer, Games, Arcade, & Virtual'
+total_balance_label: 'Total Saldo'
+balance_error_text: '"Pesan Error Total Saldo"  Error.'
+profile_icon_hover_text: 'Profil Saya'
+cashier_icon_hover_text: Kasir
+product_menu_new_tag: Baru
+welcome_text: 'Selamat Datang {username}'
+profile_link: '/{domain:cashier_domain}/{domain:cashier_lang}/?ticket={auth.token}&product=dafabet{tracking.token}'
+balance_label_mapping: "4|OW Sports\r\n6|Dafa Sports\r\n10|Barter\r\n1|Kasino Klasik\r\n2|Kasino Gold\r\n5|Live Dealer, Games, Arcade, & Virtual\r\n8|Opus Live Dealer\r\n9|Keno\r\n3|Poker\r\n7|AG Fish Hunter"
+balance_mapping: '5|Dealer Langsung, Games, Arcade, & Virtual'

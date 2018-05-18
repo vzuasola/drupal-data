@@ -1,0 +1,23 @@
+uuid: 3871075d-4394-4c58-a425-00dbefadd512
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_enable_disable
+    - taxonomy.vocabulary.promotions_product_filter
+id: taxonomy_term.promotions_product_filter.field_enable_disable
+field_name: field_enable_disable
+entity_type: taxonomy_term
+bundle: promotions_product_filter
+label: Enable/Disable
+description: 'Please check this for enable the filter.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

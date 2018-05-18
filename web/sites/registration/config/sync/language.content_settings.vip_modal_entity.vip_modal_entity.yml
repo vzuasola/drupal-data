@@ -1,0 +1,17 @@
+uuid: 26a4923e-ed44-4b8a-bc20-f83dfa49061d
+langcode: en
+status: true
+dependencies:
+  module:
+    - content_translation
+    - vip_modal
+third_party_settings:
+  content_translation:
+    enabled: true
+_core:
+  default_config_hash: HU55D4dZ2LsQOf_m1KkFTcpkkTdkkRYhqsle8R6YmmM
+id: vip_modal_entity.vip_modal_entity
+target_entity_type_id: vip_modal_entity
+target_bundle: vip_modal_entity
+default_langcode: site_default
+language_alterable: true

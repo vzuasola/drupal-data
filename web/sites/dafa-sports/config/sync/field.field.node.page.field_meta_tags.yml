@@ -11,7 +11,7 @@ id: node.page.field_meta_tags
 field_name: field_meta_tags
 entity_type: node
 bundle: page
-label: 'Meta Tags'
+label: 'Meta Tags for Both Pre and Post Login'
 description: ''
 required: false
 translatable: true

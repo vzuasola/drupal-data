@@ -2,7 +2,7 @@ virtual_config.admin_settings:
   path: 'admin/config/virtual'
   defaults:
     _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
-    _title: 'virtual Metatag Mobile Configuration'
+    _title: 'Virtual Configuration'
   requirements:
     _permission: 'administer site configuration'
 
@@ -10,6 +10,6 @@ virtual_config.virtual_config_form:
   path: 'admin/config/virtual/virtualconfig'
   defaults:
     _form: 'Drupal\virtual_config\Form\VirtualConfigForm'
-    _title: 'virtual Metatag Mobile Configuration'
+    _title: 'Virtual Configuration'
   requirements:
     _permission: 'administer site configuration'

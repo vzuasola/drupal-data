@@ -1,0 +1,25 @@
+uuid: c2ff0316-157d-414d-b8d0-c4f3d50d999f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_text_color
+    - taxonomy.vocabulary.ribbon_labels
+  module:
+    - color_field
+id: taxonomy_term.ribbon_labels.field_text_color
+field_name: field_text_color
+entity_type: taxonomy_term
+bundle: ribbon_labels
+label: 'Text Color'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    color: '#ffffff'
+    opacity: null
+default_value_callback: ''
+settings:
+  opacity: 0
+field_type: color_field_type

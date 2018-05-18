@@ -1,0 +1,11 @@
+<?php
+/**
+ * Implements hook_form_alter().
+ *
+ * Hide the Both select option of Log-in State from Basic Page Template
+ */
+function games_config_form_alter(&$form, $form_state, $form_id) {
+  if ($form_id == 'node_page_form' || $form_id == 'node_page_edit_form'){
+    unset($form['field_log_in_state']['widget']['#options'][2]);
+  }
+}

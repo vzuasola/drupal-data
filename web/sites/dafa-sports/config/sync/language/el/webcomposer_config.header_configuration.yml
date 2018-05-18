@@ -18,7 +18,7 @@ cashier_link: '{domain:cashier_domain}/{lang}?ticket={auth.token}&product=dafa-s
 header_settings_tab__active_tab: edit-logo-group
 logo_title: Dafabet
 capslock_notification: 'Το Caps Lock είναι ενεργοποιημένο'
-balance_mapping: ''
+balance_mapping: "6|Dafa Sports Balance\r\n11|E Sports Balance"
 balance_label_override: 现场荷官、老虎机、虚拟运动和大发彩票
 critical_announcement: 0
 critical_announcement_content:

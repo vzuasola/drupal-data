@@ -1,0 +1,18 @@
+uuid: 88c1fb3c-7024-486c-affb-cc4955e53549
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.games
+id: node.games.publish_on
+field_name: publish_on
+entity_type: node
+bundle: games
+label: 'Publish on'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: timestamp

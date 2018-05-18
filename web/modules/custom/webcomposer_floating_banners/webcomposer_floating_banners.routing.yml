@@ -5,3 +5,11 @@ webcomposer_floating_banners.admin_settings:
     _title: 'Webcomposer Floating Banners'
   requirements:
     _permission: 'administer site configuration'
+
+webcomposer_floating_banners.admin_settings_manage:
+  path: 'admin/config/webcomposer/banners/manage'
+  defaults:
+    _controller: '\Drupal\webcomposer_floating_banners\Controller\WebcomposerFloatingBannersController::manage'
+    _title: 'Manage Floating Banners'
+  requirements:
+    _permission: 'administer site configuration'

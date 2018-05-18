@@ -1,9 +1,9 @@
 autologout_box_content:
+  value: "<p>Twoja sesja wygaśnie {seconds}. Czy chcesz kontynuować swoją sesję?</p>\r\n"
   format: basic_html
-  value: "<p>Twoja sesja wygaśnie {seconds}. Czy chcesz kontynuować swoją sesję?\r\n</p>\r\n"
 notification_content:
+  value: "<p>Z powodu braku aktywności Twoja sesja wygasła.</p>\r\n"
   format: basic_html
-  value: "<p>Z powodu braku aktywności Twoja sesja wygasła.\r\n</p>\r\n"
 lightbox_blurb: 'Nie jesteś jeszcze członkiem Dafabet?'
 password_placeholder: Hasło
 login_bottom_label: LOGOWANIE
@@ -19,3 +19,8 @@ affirmative_button_text: TAK
 negative_button_text: NIE
 notification_title: POWIADOMIENIA
 notification_window_title: 'Session has timed out'
+advanced__active_tab: edit-login-form-details
+username_placeholder: Username
+login_page_blurb: ''
+mobile_login_url: 'https://m.dafabet.com/'
+mobile_login_button_label: ''

@@ -40,6 +40,15 @@ class VipForm extends FormBase {
       '#default_value' => $this->get('vip_mapping_configuration') ?: 'bronze|14',
       '#description' => $this->t('VIP Level Mapping. e.g."bronze|14,16" where bronze is the key. 14 is the iCore VIP ID.'),
     ];
+    $form['vip_badge_tooltip'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('VIP badge tooltip'),
+      '#default_value' => $this->get('vip_badge_tooltip') ?: "bronze|You're a Bronze VIP Member",
+      '#description' => $this->t('VIP Level Mapping. e.g."bronze|You are a Bronze VIP Member" where bronze is the ' .
+        'key and the former is the text that will be displayed'),
+      '#translatable' => TRUE,
+      '#required' => TRUE,
+    ];
 
     return $form;
   }

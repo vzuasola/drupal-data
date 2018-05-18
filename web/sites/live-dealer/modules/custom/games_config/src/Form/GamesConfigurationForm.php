@@ -32,6 +32,7 @@ class GamesConfigurationForm extends ConfigFormBase {
       '#title' => t('Settings'),
     ];
     $this->gamsThumbnailSection($form, $config);
+    $this->gamePageLightboxSection($form, $config);
 
     return parent::buildForm($form, $form_state);
   }
@@ -44,7 +45,9 @@ class GamesConfigurationForm extends ConfigFormBase {
 
     $keys = [
       'play_text',
-      'game_info_text'
+      'game_info_text',
+      'pas_error_lightbox_title',
+      'pas_error_lightbox_content',
     ];
 
     foreach ($keys as $key) {
@@ -75,5 +78,37 @@ class GamesConfigurationForm extends ConfigFormBase {
       '#default_value' => $config->get('game_info_text'),
       '#required' => TRUE,
     ];
+  }
+
+  private function gamePageLightboxSection(&$form, $config) {
+    $form['lightbox_group'] = array(
+      '#type' => 'details',
+      '#title' => $this->t('Game Page Lightbox'),
+      '#collapsible' => TRUE,
+      '#group' => 'games_configuration_tab'
+    );
+    $pasLightboxGroupTitle = $this->t('PAS Error (Lightbox)');
+    $form['lightbox_group']['pas'] = array(
+        '#type' => 'details',
+        '#title' => $pasLightboxGroupTitle,
+        '#open' => TRUE,
+        '#description' => '<p>This lightbox will appear if pas authentication failed on game launch.</p>'
+    );
+    $form['lightbox_group']['pas']['pas_error_lightbox_title'] = array(
+      '#type' => 'textfield',
+      '#title' => $this->t('Title'),
+      '#description' => $this->t('The text that will be displayed as title of the lightbox.'),
+      '#default_value' => $config->get('pas_error_lightbox_title'),
+      '#required' => FALSE,
+    );
+    $pasErrorLightboxContent = $config->get('pas_error_lightbox_content');
+    $form['lightbox_group']['pas']['pas_error_lightbox_content'] = array(
+      '#type' => 'text_format',
+      '#title' => $this->t('Content'),
+      '#description' => $this->t('The text that will be displayed as content of the lightbox.'),
+      '#default_value' => $pasErrorLightboxContent['value'],
+      '#format' => $pasErrorLightboxContent['format'],
+      '#required' => TRUE,
+    );
   }
 }

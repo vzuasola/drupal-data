@@ -8,6 +8,8 @@ dependencies:
   module:
     - entity_reference_revisions
     - webcomposer_floating_banners
+_core:
+  default_config_hash: lfv_8jtmBNCLPMdS7UIzydc9BLe113He3kyMAhUXZVs
 id: left_floating_banner_entity.left_floating_banner_entity.field_banner_item
 field_name: field_banner_item
 entity_type: left_floating_banner_entity

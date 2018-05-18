@@ -1,0 +1,16 @@
+uuid: 636d6754-0e72-4424-a828-cc8b970d2f34
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.mobile_sponsors
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: paragraph.mobile_sponsors
+target_entity_type_id: paragraph
+target_bundle: mobile_sponsors
+default_langcode: site_default
+language_alterable: true
