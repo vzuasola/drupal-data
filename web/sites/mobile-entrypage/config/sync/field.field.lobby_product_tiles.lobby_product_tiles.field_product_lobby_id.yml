@@ -11,8 +11,8 @@ field_name: field_product_lobby_id
 entity_type: lobby_product_tiles
 bundle: lobby_product_tiles
 label: 'Product Lobby ID'
-description: ''
-required: false
+description: 'Specify an ID to identify this item. This is also used to identify the icon.'
+required: true
 translatable: true
 default_value: {  }
 default_value_callback: ''

@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.lobby_product_tiles.lobby_product_tiles.field_product_integration_id
     - field.field.lobby_product_tiles.lobby_product_tiles.field_product_lobby_class
     - field.field.lobby_product_tiles.lobby_product_tiles.field_product_lobby_enable
     - field.field.lobby_product_tiles.lobby_product_tiles.field_product_lobby_id
@@ -11,9 +12,27 @@ dependencies:
     - field.field.lobby_product_tiles.lobby_product_tiles.field_product_lobby_title
     - field.field.lobby_product_tiles.lobby_product_tiles.field_product_lobby_url_post_log
     - field.field.lobby_product_tiles.lobby_product_tiles.field_product_lobby_url_pre_log
+    - field.field.lobby_product_tiles.lobby_product_tiles.field_require_post_login
   module:
+    - field_group
     - link
     - lobby_product_tiles
+third_party_settings:
+  field_group:
+    group_url:
+      children:
+        - field_product_lobby_url_pre_log
+        - field_product_lobby_url_post_log
+      parent_name: ''
+      weight: 6
+      format_type: details
+      format_settings:
+        label: URL
+        open: true
+        required_fields: true
+        id: ''
+        classes: ''
+      label: URL
 _core:
   default_config_hash: rbHmiZVy3AulQOMEWDNeRySqoEmV1B_riL3Ki3DAb5U
 id: lobby_product_tiles.lobby_product_tiles.default
@@ -21,8 +40,14 @@ targetEntityType: lobby_product_tiles
 bundle: lobby_product_tiles
 mode: default
 content:
+  field_product_integration_id:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_product_lobby_class:
-    weight: 6
+    weight: 7
     settings:
       size: 60
       placeholder: ''
@@ -30,33 +55,13 @@ content:
     type: string_textfield
     region: content
   field_product_lobby_enable:
-    weight: 2
+    weight: 3
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
   field_product_lobby_id:
-    weight: 5
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_product_lobby_tag:
-    weight: 7
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
-  field_product_lobby_target:
-    weight: 8
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
-  field_product_lobby_title:
     weight: 1
     settings:
       size: 60
@@ -64,8 +69,28 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
+  field_product_lobby_tag:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_product_lobby_target:
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_product_lobby_title:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_product_lobby_url_post_log:
-    weight: 4
+    weight: 6
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -73,12 +98,19 @@ content:
     type: link_default
     region: content
   field_product_lobby_url_pre_log:
-    weight: 3
+    weight: 5
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
+    region: content
+  field_require_post_login:
+    weight: 4
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
     region: content
   name:
     type: string_textfield
@@ -88,11 +120,7 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  translation:
-    weight: 9
-    region: content
-    settings: {  }
-    third_party_settings: {  }
 hidden:
   langcode: true
+  translation: true
   user_id: true
