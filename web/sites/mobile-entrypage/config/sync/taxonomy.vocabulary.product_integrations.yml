@@ -1,0 +1,9 @@
+uuid: 457efe9d-7fbe-415e-95e9-228f395a9abf
+langcode: en
+status: true
+dependencies: {  }
+name: 'Product Integrations'
+vid: product_integrations
+description: 'Product integration taxonomies'
+hierarchy: 0
+weight: 0

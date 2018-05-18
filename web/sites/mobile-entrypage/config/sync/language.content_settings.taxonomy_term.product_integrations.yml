@@ -1,0 +1,11 @@
+uuid: 960d9548-08f5-4048-bbb5-6119fc616000
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.product_integrations
+id: taxonomy_term.product_integrations
+target_entity_type_id: taxonomy_term
+target_bundle: product_integrations
+default_langcode: site_default
+language_alterable: false

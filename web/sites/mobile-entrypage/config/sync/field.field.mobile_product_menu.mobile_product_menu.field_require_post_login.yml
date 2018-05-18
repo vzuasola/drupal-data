@@ -1,0 +1,24 @@
+uuid: 6279b4e7-7d49-418c-ad60-aafd78e67b05
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.mobile_product_menu.field_require_post_login
+  module:
+    - mobile_product_menu
+id: mobile_product_menu.mobile_product_menu.field_require_post_login
+field_name: field_require_post_login
+entity_type: mobile_product_menu
+bundle: mobile_product_menu
+label: 'Require Post Login'
+description: 'If checked, will require that this item will show the login light box'
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

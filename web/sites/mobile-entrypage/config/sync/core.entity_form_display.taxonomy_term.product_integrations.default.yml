@@ -1,0 +1,50 @@
+uuid: 5249b7ce-339c-4ad8-8db0-a8bb6cee2084
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.product_integrations.field_product_integration_id
+    - field.field.taxonomy_term.product_integrations.field_product_login_via
+    - field.field.taxonomy_term.product_integrations.field_product_reg_via
+    - taxonomy.vocabulary.product_integrations
+id: taxonomy_term.product_integrations.default
+targetEntityType: taxonomy_term
+bundle: product_integrations
+mode: default
+content:
+  field_product_integration_id:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_product_login_via:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_product_reg_via:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  description: true
+  langcode: true
+  path: true
