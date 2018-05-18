@@ -450,19 +450,7 @@ display:
           entity_type: taxonomy_term
           entity_field: langcode
           plugin_id: language
-      sorts:
-        weight:
-          id: weight
-          table: draggableviews_structure
-          field: weight
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: ASC
-          exposed: false
-          expose:
-            label: ''
-          plugin_id: standard
+      sorts: {  }
       title: 'Promotions Product Filter'
       header: {  }
       footer: {  }
@@ -509,6 +497,7 @@ display:
       defaults:
         style: false
         row: false
+        sorts: false
       row:
         type: data_entity
         options: {  }
@@ -517,6 +506,21 @@ display:
         options:
           items_per_page: 10
           offset: 0
+      sorts:
+        weight:
+          id: weight
+          table: taxonomy_term_field_data
+          field: weight
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          entity_type: taxonomy_term
+          entity_field: weight
+          plugin_id: standard
     cache_metadata:
       max-age: -1
       contexts:
