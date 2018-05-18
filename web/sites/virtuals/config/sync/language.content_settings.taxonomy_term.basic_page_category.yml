@@ -1,0 +1,16 @@
+uuid: 0002dd43-ac98-49d1-aa0b-9cb8b137bd18
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.basic_page_category
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.basic_page_category
+target_entity_type_id: taxonomy_term
+target_bundle: basic_page_category
+default_langcode: site_default
+language_alterable: false

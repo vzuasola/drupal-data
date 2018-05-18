@@ -1,1 +1,2 @@
 vip_mapping_configuration: "bronze|14,16\r\nsilver|15,25\r\ngold|17,26\r\nplatinum|13,18"
+vip_badge_tooltip: "bronze|You're a Bronze VIP Member\r\nsilver|You're a Silver VIP Member\r\ngold|You're a Gold VIP Member\r\nplatinum|You're a Platinum VIP Member"

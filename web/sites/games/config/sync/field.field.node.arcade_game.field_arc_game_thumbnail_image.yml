@@ -11,16 +11,16 @@ dependencies:
 third_party_settings:
   content_translation:
     translation_sync:
-      alt: alt
-      title: title
-      file: '0'
+      file: file
+      alt: '0'
+      title: '0'
 id: node.arcade_game.field_arc_game_thumbnail_image
 field_name: field_arc_game_thumbnail_image
 entity_type: node
 bundle: arcade_game
-label: 'Game Thumbnail Image'
-description: ''
-required: true
+label: 'Game Thumbnail Image Small'
+description: '428px by 330px'
+required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''

@@ -18,5 +18,6 @@ ignored_config_entities:
   32: 'language.zh-hant.*'
   34: 'devel.*'
   36: 'webcomposer_affilates.*'
+  38: 'dafasports_config.*'
 _core:
   default_config_hash: UVH1aJ4b44UM-VdPVN7hNNuuVqfReJxwfVeDQH1Hvsk

@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.content_block_entity.content_block_entity.field_add_border
     - field.field.content_block_entity.content_block_entity.field_block_content_position
+    - field.field.content_block_entity.content_block_entity.field_content_block_category
     - field.field.content_block_entity.content_block_entity.field_description
     - field.field.content_block_entity.content_block_entity.field_hide_title
     - field.field.content_block_entity.content_block_entity.field_image_banner
@@ -31,9 +32,21 @@ content:
     type: boolean_checkbox
     region: content
   field_block_content_position:
+<<<<<<< HEAD
     weight: 9
     settings: {  }
     third_party_settings: {  }
+=======
+    type: options_select
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_content_block_category:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+>>>>>>> c8404927f386249ee02b8246ab27207751e85443
     type: options_select
     region: content
   field_description:
@@ -52,7 +65,11 @@ content:
     type: boolean_checkbox
     region: content
   field_image_banner:
+<<<<<<< HEAD
     weight: 3
+=======
+    weight: 6
+>>>>>>> c8404927f386249ee02b8246ab27207751e85443
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -60,13 +77,18 @@ content:
     type: image_image
     region: content
   field_image_banner_link:
+<<<<<<< HEAD
     weight: 4
+=======
+    weight: 7
+>>>>>>> c8404927f386249ee02b8246ab27207751e85443
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
     region: content
+<<<<<<< HEAD
   field_open_in:
     weight: 10
     settings: {  }
@@ -81,6 +103,10 @@ content:
     region: content
   field_rightside_content_type:
     weight: 11
+=======
+  field_position:
+    weight: 5
+>>>>>>> c8404927f386249ee02b8246ab27207751e85443
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -102,10 +128,19 @@ content:
   translation:
     weight: 8
     region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  translation:
+    weight: 11
+    region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
+<<<<<<< HEAD
   field_block_content_position: true
+=======
+>>>>>>> c8404927f386249ee02b8246ab27207751e85443
   field_open_in: true
   name: true
   user_id: true

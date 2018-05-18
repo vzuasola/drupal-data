@@ -1,9 +1,0 @@
-profile_link: 'https://stg-cashier.elysium-dfbt.com/eu/?ticket={auth.token}&product=dafabet{tracking.token}'
-critical_announcement_content:
-  value: ''
-  format: basic_html
-news_announcement_content:
-  value: ''
-  format: basic_html
-balance_label_mapping: "4|OW Sports\r\n6|Dafa Sports\r\n1|Casino Classic\r\n2|Casino Gold\r\n5|Live Dealer & Games\r\n3|Poker\r\n7|Fish Hunter"
-balance_error_text_product: N/A

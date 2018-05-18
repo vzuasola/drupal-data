@@ -1,0 +1,18 @@
+uuid: e2cd988f-0495-4747-b303-16f4a2de4224
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.games
+id: node.games.created
+field_name: created
+entity_type: node
+bundle: games
+label: 'Authored on'
+description: 'The time that the node was created.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

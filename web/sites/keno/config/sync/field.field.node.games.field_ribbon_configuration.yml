@@ -1,0 +1,28 @@
+uuid: 711ef4db-2bb0-413d-8db3-0ca14411ecb3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ribbon_configuration
+    - node.type.games
+    - taxonomy.vocabulary.ribbon_labels
+id: node.games.field_ribbon_configuration
+field_name: field_ribbon_configuration
+entity_type: node
+bundle: games
+label: 'Ribbon Configuration‎'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      ribbon_labels: ribbon_labels
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

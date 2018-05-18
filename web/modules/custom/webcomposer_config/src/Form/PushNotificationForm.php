@@ -47,8 +47,15 @@ class PushNotificationForm extends FormBase {
 
     $form['translated_texts_settings'] = [
       '#type' => 'details',
-      '#title' => $this->t('Translated Texts'),
+      '#title' => $this->t('Translated Contents'),
       '#group' => 'pushnx_settings_tab',
+    ];
+
+    $form['dismiss_notifications_settings'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Dismiss Notifications'),
+      '#group' => 'pushnx_settings_tab',
+      '#disabled' => TRUE,
     ];
 
     $form['expiry_error_message_settings'] = [
@@ -104,6 +111,13 @@ class PushNotificationForm extends FormBase {
       '#description' => $this->t('Set Product Type Id to receive product notification.
         Player will receive Manual Notification by default.'
       ),
+    ];
+
+    $form['connection_settings']['producttype_id_mapping'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Product Type Id Mapping'),
+      '#default_value' => $this->get('producttype_id_mapping'),
+      '#description' => $this->t('Product Type Id | Title | Icon'),
     ];
 
     $form['connection_settings']['retry_count'] = [
@@ -162,7 +176,7 @@ class PushNotificationForm extends FormBase {
     // Translate Texts.
     $form['translated_texts_settings']['translated_texts'] = [
       '#type' => 'textarea',
-      '#title' => $this->t('Translated Texts'),
+      '#title' => $this->t('Translated Contents'),
       '#default_value' => $this->get('translated_texts'),
       '#description' => $this->t('Enter the list of text to be translated. Enter one text per line.'),
     ];
@@ -171,6 +185,7 @@ class PushNotificationForm extends FormBase {
 
     foreach ($texts as $text) {
       $text_key = strtolower($text);
+      $text_key = str_replace(' ', '', $text_key);
 
       $form['translated_texts_settings']['text_' . $text_key] = [
         '#type' => 'textarea',
@@ -179,6 +194,41 @@ class PushNotificationForm extends FormBase {
         '#description' => 'Format: ICORE LANGUAGE|TRANSLATION',
       ];
     }
+
+    // Dismiss Notifications.
+    $form['dismiss_notifications_settings']['dismiss_button_label'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Dismiss Button'),
+      '#default_value' => $this->get('dismiss_button_label'),
+      '#description' => $this->t('Dismiss button or link text.'),
+      '#translatable' => TRUE,
+    ];
+
+    $dismiss = $this->get('dismiss_content');
+
+    $form['dismiss_notifications_settings']['dismiss_content'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('Dismiss Message'),
+      '#default_value' => $dismiss['value'],
+      '#format' => $dismiss['format'],
+      '#translatable' => TRUE,
+    ];
+
+    $form['dismiss_notifications_settings']['dismiss_yes'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Yes'),
+      '#default_value' => $this->get('dismiss_yes'),
+      '#description' => $this->t('Yes button label.'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['dismiss_notifications_settings']['dismiss_no'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('No'),
+      '#default_value' => $this->get('dismiss_no'),
+      '#description' => $this->t('No button label.'),
+      '#translatable' => TRUE,
+    ];
 
     $form['expiry_error_message_settings']['expiry_error_message'] = [
       '#type' => 'textarea',
@@ -211,12 +261,17 @@ class PushNotificationForm extends FormBase {
     $keys = [
       'enable',
       'producttype_id',
+      'producttype_id_mapping',
       'domain',
       'retry_count',
       'delay_count',
       'expiry_delay_count',
       'exclude_pages',
       'translated_texts',
+      'dismiss_button_label',
+      'dismiss_content',
+      'dismiss_yes',
+      'dismiss_no',
       'expiry_error_message',
       'date_format',
       'date_offset',
@@ -228,6 +283,7 @@ class PushNotificationForm extends FormBase {
     ];
 
     $texts = array_map('trim', explode(PHP_EOL, $this->get('translated_texts')));
+    $texts = str_replace(' ', '', $texts);
 
     foreach ($texts as $text) {
       $keys[] = 'text_' . strtolower($text);

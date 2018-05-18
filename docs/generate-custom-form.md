@@ -1,3 +1,5 @@
+### This guide is deprecated, see [Webcomposer Config Plugin](docs/webcomposer-config-plugin.md)
+
 # Generating a custom configuration form
 
 Best practices for generating a custom configuration form

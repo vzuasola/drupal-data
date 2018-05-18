@@ -1,4 +1,4 @@
-uuid: 1527be59-1aa2-4686-b600-31a8c977cbdc
+uuid: 2707eb99-2a9e-4e19-83a4-8ad34ba24380
 langcode: en
 status: true
 dependencies:
@@ -11,13 +11,11 @@ id: content_block_entity.content_block_entity.field_block_content_position
 field_name: field_block_content_position
 entity_type: content_block_entity
 bundle: content_block_entity
-label: 'Block Content Position'
-description: ''
+label: 'Content Block Position'
+description: '<b>Note:</b> This field only applicable for <b>Desktop Category</b>.'
 required: false
-translatable: false
-default_value:
-  -
-    value: rightside
+translatable: true
+default_value: {  }
 default_value_callback: ''
 settings: {  }
 field_type: list_string

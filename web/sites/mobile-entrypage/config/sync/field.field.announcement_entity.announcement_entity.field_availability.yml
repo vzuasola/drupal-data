@@ -1,0 +1,21 @@
+uuid: fcf948cc-7090-44b3-afb3-e25b6e796ab4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.announcement_entity.field_availability
+  module:
+    - options
+    - webcomposer_announcements
+id: announcement_entity.announcement_entity.field_availability
+field_name: field_availability
+entity_type: announcement_entity
+bundle: announcement_entity
+label: Availability
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -23,3 +23,10 @@ lightbox_blurb: 'Not yet a Dafabet member?'
 _core:
   default_config_hash: LDw8PW9wswSVGgpFjaaHESQeB7QVJEtmV2mGoR4ANVY
 notification_window_title: 'Session Timeout'
+mobile_login_url: N/A
+tablet_login_button_label: ''
+login_page_blurb: ''
+mobile_login_button_label: ''
+advanced__active_tab: edit-mobile-login
+value: null
+format: null

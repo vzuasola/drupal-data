@@ -6,8 +6,14 @@ dependencies:
     - field.field.node.page.body
     - field.field.node.page.field_banner_content
     - field.field.node.page.field_banner_content_position
+    - field.field.node.page.field_banner_content_position_po
+    - field.field.node.page.field_banner_content_post
+    - field.field.node.page.field_banner_image_post
     - field.field.node.page.field_banner_link
+    - field.field.node.page.field_banner_link_post
     - field.field.node.page.field_banner_link_target
+    - field.field.node.page.field_banner_link_target_post
+    - field.field.node.page.field_body_post
     - field.field.node.page.field_image
     - field.field.node.page.field_log_in_state
     - field.field.node.page.field_meta_tags
@@ -47,8 +53,43 @@ content:
     third_party_settings: {  }
     type: list_default
     region: content
+  field_banner_content_position_po:
+    weight: 116
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_banner_content_post:
+    weight: 115
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_banner_image_post:
+    weight: 117
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
   field_banner_link:
     weight: 104
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_banner_link_post:
+    weight: 118
     label: above
     settings:
       trim_length: 80
@@ -65,6 +106,20 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: list_default
+    region: content
+  field_banner_link_target_post:
+    weight: 119
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_body_post:
+    weight: 114
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
     region: content
   field_image:
     weight: 103

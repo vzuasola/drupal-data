@@ -1,0 +1,27 @@
+uuid: 4e17c394-6e4d-41c4-9c07-a0251904448e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_drawer_video_fallback
+    - paragraphs.paragraphs_type.drawer_media
+  module:
+    - file
+id: paragraph.drawer_media.field_drawer_video_fallback
+field_name: field_drawer_video_fallback
+entity_type: paragraph
+bundle: drawer_media
+label: 'Drawer Video for IE8'
+description: '<strong>Optional video for IE8 support. Only upload SWF image here to support IE8.</strong>'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'mp4 webm ogv swf'
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

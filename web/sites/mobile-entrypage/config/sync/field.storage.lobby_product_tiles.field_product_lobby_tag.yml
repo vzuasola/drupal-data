@@ -1,0 +1,26 @@
+uuid: bf468ac8-935d-4ca0-aa4b-3f7f0d9632f2
+langcode: en
+status: true
+dependencies:
+  module:
+    - lobby_product_tiles
+    - options
+_core:
+  default_config_hash: nsUCEaQoYQ-stV3D0A7QodvHH2w2x8wqr8atC94ziMI
+id: lobby_product_tiles.field_product_lobby_tag
+field_name: field_product_lobby_tag
+entity_type: lobby_product_tiles
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'New Product'
+      label: 'New Product'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

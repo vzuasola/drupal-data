@@ -1,0 +1,22 @@
+advanced__active_tab: edit-login-form-details
+lightbox_blurb: '还不是 Dafabet 会员? '
+login_page_blurb: ''
+autologout_box_content:
+  format: basic_html
+notification_content:
+  format: basic_html
+mobile_login_button_label: 登录/加入
+username_placeholder: Username
+password_placeholder: 用户名
+login_bottom_label: 登录/加入
+error_message_blank_username: 用户名是必需的。
+error_message_blank_password: 密码是必需的。
+error_message_blank_passname: 用户名是必需的。
+error_message_invalid_passname: 很抱歉，您输入的用户名和密码不匹配。请再试一次。
+error_message_service_not_available: 服务不可用
+error_message_account_suspended: 您的帐户由于登录尝试失败而被锁定。请联系客户支持。
+error_message_account_locked: 您的帐户由于登录尝试失败而被锁定。请联系客户支持。
+autologout_box_title: REMINDER
+notification_title: 'Session Timeout'
+notification_window_title: 'Session Timeout'
+mobile_login_url: 'https://qa1-casino.elysium-dfbt.com/'

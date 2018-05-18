@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.responsive_sponsor.field_mobile_sponsor_text
     - field.field.paragraph.responsive_sponsor.field_res_sponsor_image
     - field.field.paragraph.responsive_sponsor.field_res_sponsor_link
     - field.field.paragraph.responsive_sponsor.field_res_sponsor_link_target
@@ -18,8 +19,16 @@ targetEntityType: paragraph
 bundle: responsive_sponsor
 mode: default
 content:
+  field_mobile_sponsor_text:
+    weight: 5
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
   field_res_sponsor_image:
-    weight: 3
+    weight: 2
     label: above
     settings:
       image_style: ''
@@ -28,7 +37,7 @@ content:
     type: image
     region: content
   field_res_sponsor_link:
-    weight: 2
+    weight: 1
     label: above
     settings:
       link_to_entity: false
@@ -36,14 +45,14 @@ content:
     type: string
     region: content
   field_res_sponsor_link_target:
-    weight: 1
+    weight: 0
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_res_sponsor_mobile_logo:
-    weight: 5
+    weight: 4
     label: above
     settings:
       image_style: ''
@@ -52,7 +61,7 @@ content:
     type: image
     region: content
   field_res_sponsor_tablet_logo:
-    weight: 4
+    weight: 3
     label: above
     settings:
       image_style: ''

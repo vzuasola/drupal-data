@@ -10,3 +10,7 @@ domain_groups: 1
 domain_groups_message: 'Term @term already exists in vocabulary @vocabulary.'
 games_category: 1
 games_category_message: 'Term @term already exists in vocabulary @vocabulary.'
+affiliates_parameters: 0
+affiliates_parameters_message: 'Term @term already exists in vocabulary @vocabulary.'
+game_provider: 0
+game_provider_message: 'Term @term already exists in vocabulary @vocabulary.'
