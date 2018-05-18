@@ -6,6 +6,7 @@ dependencies:
     - field.field.content_block_entity.content_block_entity.field_add_background
     - field.field.content_block_entity.content_block_entity.field_add_border
     - field.field.content_block_entity.content_block_entity.field_block_content_position
+    - field.field.content_block_entity.content_block_entity.field_content_block_category
     - field.field.content_block_entity.content_block_entity.field_description
     - field.field.content_block_entity.content_block_entity.field_hide_title
     - field.field.content_block_entity.content_block_entity.field_image_banner
@@ -42,6 +43,13 @@ content:
       format_custom_true: ''
     third_party_settings: {  }
     type: boolean
+    region: content
+  field_content_block_category:
+    weight: 9
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
   field_description:
     weight: 4
