@@ -1,0 +1,42 @@
+uuid: 29f0ce7e-caed-475a-a8d3-27da9198d2a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.promotions_product_filter.field_enable_disable
+    - field.field.taxonomy_term.promotions_product_filter.field_product_category_id
+    - taxonomy.vocabulary.promotions_product_filter
+  module:
+    - text
+id: taxonomy_term.promotions_product_filter.default
+targetEntityType: taxonomy_term
+bundle: promotions_product_filter
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_enable_disable:
+    weight: 1
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_product_category_id:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  langcode: true
