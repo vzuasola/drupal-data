@@ -1,5 +1,5 @@
 advanced__active_tab: edit-background-config
 file_image_bg:
-  - '2555'
-_core:
-  default_config_hash: fpm-rb5d6XEqPAdO6DA1IfXQj-t7moOk2asIqECV6Zc
+  - '2593'
+bg_image_style: 'no-repeat center top fixed;'
+bg_styles: 'background-size: 100% auto;'
