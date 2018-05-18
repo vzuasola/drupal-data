@@ -65,5 +65,25 @@ class DafasportsConfigForm extends FormBase {
         'file_validate_extensions' => ['gif png jpg jpeg'],
       ],
     ];
+
+    $form['background_config']['bg_image_style'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Background Image Style'),
+      '#description' => $this->t('Add background property for styling above Background Image. Ex:- no-repeat center top fixed;. Note default value is already stored.'),
+      '#default_value' => $this->get('bg_image_style') ?: 'no-repeat center top fixed;',
+      '#translatable' => FALSE,
+      '#required' => TRUE,
+      '#rows' => 1,
+    ];
+
+    $form['background_config']['bg_styles'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Background Image Inline Style'),
+      '#description' => $this->t('Add comma seperated property for styling above Background Image. Ex:- background-size: 100% auto;. Note default value is already stored.'),
+      '#default_value' => $this->get('bg_styles') ?: 'background-size: 100% auto;',
+      '#translatable' => FALSE,
+      '#required' => TRUE,
+      '#rows' => 2,
+    ];
   }
 }
