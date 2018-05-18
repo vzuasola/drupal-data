@@ -1,0 +1,11 @@
+uuid: bec024fc-31a7-4dbf-b635-502f0178ebdf
+langcode: en
+status: true
+dependencies:
+  module:
+    - webcomposer_partner
+id: partner_entity.partner_entity
+target_entity_type_id: partner_entity
+target_bundle: partner_entity
+default_langcode: site_default
+language_alterable: false
