@@ -1,0 +1,21 @@
+uuid: aac1230c-2bb3-4f0e-91fc-a9333eb9dbca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.content_block_entity.field_content_block_category
+  module:
+    - jamboree_content_blocks
+    - options
+id: content_block_entity.content_block_entity.field_content_block_category
+field_name: field_content_block_category
+entity_type: content_block_entity
+bundle: content_block_entity
+label: 'Content Block Category'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

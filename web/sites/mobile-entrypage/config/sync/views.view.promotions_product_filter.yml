@@ -558,6 +558,7 @@ display:
       defaults:
         style: false
         row: false
+        sorts: false
       row:
         type: data_entity
         options: {  }
