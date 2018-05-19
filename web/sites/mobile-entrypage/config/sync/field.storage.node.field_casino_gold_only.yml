@@ -1,0 +1,18 @@
+uuid: 7360a35b-15ae-4d95-b583-ba29bb750a8c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_casino_gold_only
+field_name: field_casino_gold_only
+entity_type: node
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
