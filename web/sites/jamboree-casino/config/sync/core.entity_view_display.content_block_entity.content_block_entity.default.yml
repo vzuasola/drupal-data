@@ -3,11 +3,15 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.content_block_entity.content_block_entity.field_add_background
     - field.field.content_block_entity.content_block_entity.field_add_border
+    - field.field.content_block_entity.content_block_entity.field_block_content_position
+    - field.field.content_block_entity.content_block_entity.field_content_block_category
     - field.field.content_block_entity.content_block_entity.field_description
     - field.field.content_block_entity.content_block_entity.field_hide_title
     - field.field.content_block_entity.content_block_entity.field_image_banner
     - field.field.content_block_entity.content_block_entity.field_image_banner_link
+    - field.field.content_block_entity.content_block_entity.field_open_in
     - field.field.content_block_entity.content_block_entity.field_position
     - field.field.content_block_entity.content_block_entity.field_title
   module:
@@ -20,6 +24,16 @@ targetEntityType: content_block_entity
 bundle: content_block_entity
 mode: default
 content:
+  field_add_background:
+    weight: 8
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
   field_add_border:
     weight: 5
     label: above
@@ -29,6 +43,13 @@ content:
       format_custom_true: ''
     third_party_settings: {  }
     type: boolean
+    region: content
+  field_content_block_category:
+    weight: 9
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
   field_description:
     weight: 4
