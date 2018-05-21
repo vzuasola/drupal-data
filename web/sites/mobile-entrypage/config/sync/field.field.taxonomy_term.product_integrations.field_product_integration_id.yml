@@ -12,7 +12,7 @@ bundle: product_integrations
 label: 'Product Integration ID'
 description: 'Specify the ID that will identify which product this tile will integrate to'
 required: true
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

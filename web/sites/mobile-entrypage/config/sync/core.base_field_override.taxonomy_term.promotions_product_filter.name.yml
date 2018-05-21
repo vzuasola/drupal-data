@@ -1,0 +1,18 @@
+uuid: 8979098d-e627-4a76-b6ca-be3b6c1e1e14
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.promotions_product_filter
+id: taxonomy_term.promotions_product_filter.name
+field_name: name
+entity_type: taxonomy_term
+bundle: promotions_product_filter
+label: Name
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

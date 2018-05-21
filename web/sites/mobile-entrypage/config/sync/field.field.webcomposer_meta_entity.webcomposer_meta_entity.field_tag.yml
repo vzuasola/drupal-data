@@ -12,9 +12,9 @@ field_name: field_tag
 entity_type: webcomposer_meta_entity
 bundle: webcomposer_meta_entity
 label: Tag
-description: ''
+description: 'Specifies the tag type that this SEO entry will use.'
 required: true
-translatable: true
+translatable: false
 default_value:
   -
     value: meta
