@@ -13,10 +13,10 @@ settings:
   allowed_values:
     -
       value: meta
-      label: meta
+      label: Meta
     -
       value: link
-      label: link
+      label: Link
   allowed_values_function: ''
 module: options
 locked: false
