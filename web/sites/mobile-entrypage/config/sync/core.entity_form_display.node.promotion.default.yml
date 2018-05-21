@@ -7,7 +7,6 @@ dependencies:
     - field.field.node.promotion.field_banner_image
     - field.field.node.promotion.field_banner_link
     - field.field.node.promotion.field_banner_link_target
-    - field.field.node.promotion.field_casino_gold_only
     - field.field.node.promotion.field_hide_countdown
     - field.field.node.promotion.field_hide_promotion
     - field.field.node.promotion.field_mark_as_featured
@@ -196,13 +195,6 @@ content:
     third_party_settings: {  }
     type: options_select
     region: content
-  field_casino_gold_only:
-    weight: 11
-    settings:
-      display_label: true
-    third_party_settings: {  }
-    type: boolean_checkbox
-    region: content
   field_hide_countdown:
     weight: 26
     settings:
@@ -326,11 +318,9 @@ content:
     region: content
   field_ribbon_background_color:
     weight: 23
-    settings:
-      placeholder_color: ''
-      placeholder_opacity: ''
+    settings: {  }
     third_party_settings: {  }
-    type: color_field_widget_default
+    type: color_field_widget_html5
     region: content
   field_ribbon_label:
     weight: 22
