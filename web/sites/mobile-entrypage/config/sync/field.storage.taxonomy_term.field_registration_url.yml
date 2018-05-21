@@ -1,11 +1,11 @@
-uuid: 068ebcfc-e7d4-4e7d-8a55-69efaf3d1ec4
+uuid: 6f064d0a-c9ca-4c4b-aa62-7eb0dbfe4d1a
 langcode: en
 status: true
 dependencies:
   module:
     - taxonomy
-id: taxonomy_term.field_product_reg_via
-field_name: field_product_reg_via
+id: taxonomy_term.field_registration_url
+field_name: field_registration_url
 entity_type: taxonomy_term
 type: string
 settings:
