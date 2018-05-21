@@ -8,7 +8,7 @@ dependencies:
     - options
     - webcomposer_floating_banners
 _core:
-  default_config_hash: dHa1XCXkTS5CbgIiTFui8vrkhbMtf1iI-GEkfvQ-wT8
+  default_config_hash: n_0XdcJapFl0QOkzUNO4CQFz1a1p8ucrVvPLORB5W8M
 id: left_floating_banner_entity.left_floating_banner_entity.field_platform
 field_name: field_platform
 entity_type: left_floating_banner_entity
@@ -16,7 +16,7 @@ bundle: left_floating_banner_entity
 label: Platform
 description: ''
 required: true
-translatable: false
+translatable: true
 default_value:
   -
     value: desktop
