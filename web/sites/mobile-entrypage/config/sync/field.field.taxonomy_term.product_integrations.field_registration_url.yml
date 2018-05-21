@@ -12,7 +12,7 @@ bundle: product_integrations
 label: 'Registration URL'
 description: 'Define the URL that will be used to the registration link for this product. This will override the default registration URL.'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }
