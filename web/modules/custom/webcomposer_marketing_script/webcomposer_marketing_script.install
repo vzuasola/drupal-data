@@ -23,3 +23,14 @@ function webcomposer_marketing_script_uninstall() {
       \Drupal::configFactory()->getEditable($key)->delete();
     }
 }
+
+/**
+ * Implements hook_update_N().
+ *
+ * Changes:
+ * - Add Marketing domain field
+ * - Add Domain Option for marketing scirpt to be visible on domains.
+ */
+function webcomposer_marketing_script_update_8004() {
+   \Drupal::service('config.installer')->installDefaultConfig('module', 'webcomposer_marketing_script');
+}

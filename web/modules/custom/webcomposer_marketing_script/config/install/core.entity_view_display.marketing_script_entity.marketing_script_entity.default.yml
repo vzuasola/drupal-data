@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.marketing_script_entity.marketing_script_entity.field_body
+    - field.field.marketing_script_entity.marketing_script_entity.field_marketing_domain
     - field.field.marketing_script_entity.marketing_script_entity.field_per_page_configuratiion
     - field.field.marketing_script_entity.marketing_script_entity.field_position
     - field.field.marketing_script_entity.marketing_script_entity.field_type
@@ -11,6 +12,8 @@ dependencies:
     - options
     - user
     - webcomposer_marketing_script
+_core:
+  default_config_hash: T3Qrl64iG0_lFSJJDximWN4mMRUH9L5ZLc63rmURYPY
 id: marketing_script_entity.marketing_script_entity.default
 targetEntityType: marketing_script_entity
 bundle: marketing_script_entity
@@ -18,6 +21,13 @@ mode: default
 content:
   field_body:
     weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_marketing_domain:
+    weight: 5
     label: above
     settings: {  }
     third_party_settings: {  }
@@ -59,5 +69,7 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+hidden:
+  langcode: true
 hidden:
   langcode: true

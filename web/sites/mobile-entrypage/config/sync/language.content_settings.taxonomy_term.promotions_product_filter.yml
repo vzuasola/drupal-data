@@ -1,4 +1,4 @@
-uuid: 8150c6c2-84db-4529-ab67-8ed195958ee6
+uuid: a1a6c6ac-7dc9-4df7-a529-6a103afa198d
 langcode: en
 status: true
 dependencies:
@@ -8,7 +8,9 @@ dependencies:
     - content_translation
 third_party_settings:
   content_translation:
-    enabled: true
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
 id: taxonomy_term.promotions_product_filter
 target_entity_type_id: taxonomy_term
 target_bundle: promotions_product_filter
