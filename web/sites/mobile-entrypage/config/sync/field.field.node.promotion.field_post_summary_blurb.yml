@@ -11,7 +11,7 @@ id: node.promotion.field_post_summary_blurb
 field_name: field_post_summary_blurb
 entity_type: node
 bundle: promotion
-label: 'Post Summary Blurb'
+label: 'Summary Blurb on Post Login'
 description: ''
 required: false
 translatable: true
