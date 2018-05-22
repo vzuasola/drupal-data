@@ -1,15 +1,15 @@
-uuid: 8c98a3a2-711d-4f22-88a6-9088a8899ff5
+uuid: 9365238b-cacf-4dc9-aaf0-1ebba33ac03e
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_hide_countdown
+    - field.storage.node.field_enable_disable_ribbon_tag
     - node.type.promotion
-id: node.promotion.field_hide_countdown
-field_name: field_hide_countdown
+id: node.promotion.field_enable_disable_ribbon_tag
+field_name: field_enable_disable_ribbon_tag
 entity_type: node
 bundle: promotion
-label: 'Hide Countdown'
+label: 'Enable Ribbon Tag'
 description: ''
 required: false
 translatable: true

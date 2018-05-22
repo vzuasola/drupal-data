@@ -9,10 +9,10 @@ id: node.promotion.field_post_mark_as_featured
 field_name: field_post_mark_as_featured
 entity_type: node
 bundle: promotion
-label: 'Post Mark as Featured'
+label: 'Mark as Featured on Post Login'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value:
   -
     value: 0

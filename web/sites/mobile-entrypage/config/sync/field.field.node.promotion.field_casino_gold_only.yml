@@ -1,15 +1,15 @@
-uuid: 8c98a3a2-711d-4f22-88a6-9088a8899ff5
+uuid: 562ac541-b733-4e5a-84e1-bc040338f706
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_hide_countdown
+    - field.storage.node.field_casino_gold_only
     - node.type.promotion
-id: node.promotion.field_hide_countdown
-field_name: field_hide_countdown
+id: node.promotion.field_casino_gold_only
+field_name: field_casino_gold_only
 entity_type: node
 bundle: promotion
-label: 'Hide Countdown'
+label: 'Casino Gold Only'
 description: ''
 required: false
 translatable: true

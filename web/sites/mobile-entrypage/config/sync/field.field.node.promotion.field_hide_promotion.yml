@@ -12,7 +12,7 @@ bundle: promotion
 label: 'Hide Promotion'
 description: 'Enable this to hide promotion from listing'
 required: false
-translatable: false
+translatable: true
 default_value:
   -
     value: 0
