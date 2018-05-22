@@ -93,4 +93,12 @@ webcomposer_config.unsupported_currency:
       label: 'Unsupported Currencies Button'
     game_provider_mapping:
       type: text
-      label: 'Game Provider Mapping'
+      label: 'Game Provider Mapping' 
+           
+webcomposer_config.games_goldenrace_provider:
+  type: config_object
+  label: 'Gpi Integration Configuration'
+  mapping:
+    javascript_assets:
+      type: text
+      label: 'Javascript'            

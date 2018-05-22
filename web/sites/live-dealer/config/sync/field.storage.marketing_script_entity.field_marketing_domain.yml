@@ -1,0 +1,21 @@
+uuid: c849fe0d-da12-48e5-8fdf-fb07ef0682da
+langcode: en
+status: true
+dependencies:
+  module:
+    - webcomposer_marketing_script
+_core:
+  default_config_hash: qPtEffrVcfmNaURuwEz2dFw-5RuWMQOrZqBUXv7n4xw
+id: marketing_script_entity.field_marketing_domain
+field_name: field_marketing_domain
+entity_type: marketing_script_entity
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

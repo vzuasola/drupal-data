@@ -1,0 +1,27 @@
+uuid: e88331c9-a85e-4f5b-b92c-292ccad87571
+langcode: en
+status: true
+dependencies:
+  module:
+    - jamboree_content_blocks
+    - options
+id: content_block_entity.field_block_content_position
+field_name: field_block_content_position
+entity_type: content_block_entity
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: main
+      label: 'Main Content'
+    -
+      value: rightside
+      label: 'Right Side'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

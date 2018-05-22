@@ -258,14 +258,35 @@ class RestMenuItemsResource extends ResourceBase {
         }
       }
 
+      // initialize fragment
+      $fragment = '';
+      // append the fragment if it exists
+      if (isset($options['fragment'])) {
+        $fragment = '#' . $options['fragment'];
+      }
+
+      // if the URI is blank but a query parameter is introduced
+      if ($uri === "" && empty($options['fragment'])) {
+        try {
+          $route_name = $url->getRoutename();
+
+          if ($route_name === '<none>') {
+            $uri = '#';
+            $alias = '#';
+          }
+        } catch (\Exception $e) {
+          // do nothing
+        }
+      }
+
       $final_alias = ltrim($alias, '/');
       $alias = $final_alias == '' ? '/' : $final_alias;
 
       $items[$item_name] = array(
         'key' => $item_name,
         'title' => $org_link->getTitle(),
-        'uri' => "$uri$queryString",
-        'alias' => "$alias$queryString",
+        'uri' => "$uri$queryString$fragment",
+        'alias' => "$alias$queryString$fragment",
         'external' => $external,
         'attributes' => $attr,
       );

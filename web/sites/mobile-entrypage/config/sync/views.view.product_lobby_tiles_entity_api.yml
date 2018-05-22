@@ -11,6 +11,7 @@ dependencies:
     - lobby_product_tiles
     - rest
     - serialization
+    - webcomposer_rest_extra
 _core:
   default_config_hash: CCiTon1tS_lQshNJN4nw0_s_Byg6MYOsQnwg8ut-TZc
 id: product_lobby_tiles_entity_api
@@ -681,9 +682,8 @@ display:
         options:
           offset: 0
       style:
-        type: serializer
+        type: node_list_serializer
         options:
-          grouping: {  }
           uses_fields: false
           formats: {  }
       row:

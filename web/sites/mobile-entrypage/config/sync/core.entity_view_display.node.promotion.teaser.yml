@@ -1,0 +1,56 @@
+uuid: 7601f767-d79e-40dd-b19a-009bc7d7ab80
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.promotion.body
+    - node.type.promotion
+  module:
+    - text
+    - user
+id: node.promotion.teaser
+targetEntityType: node
+bundle: promotion
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_banner_image: true
+  field_banner_link: true
+  field_banner_link_target: true
+  field_casino_gold_only: true
+  field_hide_countdown: true
+  field_hide_promotion: true
+  field_mark_as_featured: true
+  field_meta_tags: true
+  field_post_banner_image: true
+  field_post_banner_link: true
+  field_post_banner_link_target: true
+  field_post_body: true
+  field_post_hide_countdown: true
+  field_post_hide_promotion: true
+  field_post_mark_as_featured: true
+  field_post_summary_blurb: true
+  field_post_summary_url: true
+  field_post_summary_url_target: true
+  field_post_thumbnail_image: true
+  field_product_category: true
+  field_promo_availability: true
+  field_ribbon_background_color: true
+  field_ribbon_label: true
+  field_summary_blurb: true
+  field_summary_url: true
+  field_summary_url_target: true
+  field_thumbnail_image: true
+  langcode: true

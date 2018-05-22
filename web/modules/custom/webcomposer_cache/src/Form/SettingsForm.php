@@ -48,10 +48,16 @@ class SettingsForm extends ConfigFormBase {
       ];
 
       $signature = \Drupal::service('webcomposer_cache.signature_manager')->getSignature();
-      $case = strtoupper($signature);
+
+      if ($signature) {
+        $case = strtoupper($signature);
+        $message = "Current Redis signature is <strong>$case</strong>";
+      } else {
+        $message = "<strong>Cannot connect to Redis</strong>";
+      }
 
       $form['signature'] = [
-        '#markup' => "<p>Current Redis signature is <strong>$case</strong></p>",
+        '#markup' => "<p>$message</p>",
       ];
     }
 

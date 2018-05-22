@@ -1,0 +1,18 @@
+uuid: 5e659825-5220-425a-a4ec-dd2f282021b6
+langcode: en
+status: true
+dependencies:
+  module:
+    - jamboree_content_blocks
+id: content_block_entity.field_add_background
+field_name: field_add_background
+entity_type: content_block_entity
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

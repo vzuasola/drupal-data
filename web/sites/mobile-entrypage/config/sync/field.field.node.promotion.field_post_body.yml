@@ -1,0 +1,22 @@
+uuid: d7362f4c-86f6-406e-b0ae-1bf016957b1d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_post_body
+    - node.type.promotion
+  module:
+    - text
+id: node.promotion.field_post_body
+field_name: field_post_body
+entity_type: node
+bundle: promotion
+label: 'Post Body'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

@@ -1,7 +1,7 @@
 join_now_text: 'JOIN NOW'
 join_now_link: '/{domain:entry}/{lang}/join/casino[query:({tracking})]'
 login_issue_text: 'Cant login?'
-login_issue_link: '{domain:entry}/{lang}/cant-login[query:({tracking})]'
+login_issue_link: '/{domain:entry}/{lang}/cant-login[query:({tracking})]'
 sc_lang_text: SC
 ch_lang_text: CH
 balance_error_text: 'Error Retrieving.'
@@ -30,7 +30,7 @@ total_balance_label: 'Total Balance'
 product_balance_id: '1'
 currency_balance_mapping: "9|RMB,MYR,THB,KRW,VND,USD,IDR,INR,EUR\r\n7|RMB\r\n8|RMB,MYR,THB,KRW,VND,USD,IDR,INR,EUR,KRW\r\n10|USD,INR"
 excluded_balance_mapping: '7'
-cashier_link: '{domain:cashier_domain}/{lang}[query:(ticket={auth.token}&{tracking}&product=casino&title=headerPopup)]'
+cashier_link: '/{domain:cashier_domain}/{lang}[query:(ticket={auth.token}&{tracking}&product=casino&title=headerPopup)]'
 balance_mapping: '1|Casino Classic Balance'
 balance_label_override: 现场荷官、老虎机、街机、虚拟运动、和大发彩票
 logo_title: Home

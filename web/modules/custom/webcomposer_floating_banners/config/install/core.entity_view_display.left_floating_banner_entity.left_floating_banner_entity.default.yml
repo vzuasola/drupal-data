@@ -9,6 +9,7 @@ dependencies:
     - field.field.left_floating_banner_entity.left_floating_banner_entity.field_link
     - field.field.left_floating_banner_entity.left_floating_banner_entity.field_link_target
     - field.field.left_floating_banner_entity.left_floating_banner_entity.field_link_text
+    - field.field.left_floating_banner_entity.left_floating_banner_entity.field_os_excluded
     - field.field.left_floating_banner_entity.left_floating_banner_entity.field_per_page_config
     - field.field.left_floating_banner_entity.left_floating_banner_entity.field_platform
     - field.field.left_floating_banner_entity.left_floating_banner_entity.field_title
@@ -18,7 +19,7 @@ dependencies:
     - user
     - webcomposer_floating_banners
 _core:
-  default_config_hash: rAQCOJwgUGLaznAcio5p_EkF_DiMaH8DZsysoywHGUg
+  default_config_hash: WUhwP4azbXuZXE_5qpalKbWqhydm6Vr_F89nzYIEsPI
 id: left_floating_banner_entity.left_floating_banner_entity.default
 targetEntityType: left_floating_banner_entity
 bundle: left_floating_banner_entity
@@ -39,6 +40,13 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_os_excluded:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
     region: content
   field_platform:
     weight: 3

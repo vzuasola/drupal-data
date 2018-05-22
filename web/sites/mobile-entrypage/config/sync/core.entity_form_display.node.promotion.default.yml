@@ -1,0 +1,435 @@
+uuid: b0c39812-5ef0-4b71-a389-980f969dd855
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.promotion.body
+    - field.field.node.promotion.field_banner_image
+    - field.field.node.promotion.field_banner_link
+    - field.field.node.promotion.field_banner_link_target
+    - field.field.node.promotion.field_hide_countdown
+    - field.field.node.promotion.field_hide_promotion
+    - field.field.node.promotion.field_mark_as_featured
+    - field.field.node.promotion.field_meta_tags
+    - field.field.node.promotion.field_post_banner_image
+    - field.field.node.promotion.field_post_banner_link
+    - field.field.node.promotion.field_post_banner_link_target
+    - field.field.node.promotion.field_post_body
+    - field.field.node.promotion.field_post_hide_countdown
+    - field.field.node.promotion.field_post_hide_promotion
+    - field.field.node.promotion.field_post_mark_as_featured
+    - field.field.node.promotion.field_post_summary_blurb
+    - field.field.node.promotion.field_post_summary_url
+    - field.field.node.promotion.field_post_summary_url_target
+    - field.field.node.promotion.field_post_thumbnail_image
+    - field.field.node.promotion.field_product_category
+    - field.field.node.promotion.field_promo_availability
+    - field.field.node.promotion.field_ribbon_background_color
+    - field.field.node.promotion.field_ribbon_label
+    - field.field.node.promotion.field_summary_blurb
+    - field.field.node.promotion.field_summary_url
+    - field.field.node.promotion.field_summary_url_target
+    - field.field.node.promotion.field_thumbnail_image
+    - image.style.thumbnail
+    - node.type.promotion
+  module:
+    - color_field
+    - entity_reference_views_select
+    - field_group
+    - image
+    - link
+    - metatag
+    - path
+    - scheduler
+    - text
+third_party_settings:
+  field_group:
+    group_details:
+      children:
+        - field_ribbon_label
+        - field_ribbon_background_color
+      parent_name: ''
+      weight: 6
+      format_type: details
+      format_settings:
+        label: 'Ribbon Tags'
+        required_fields: true
+        id: ''
+        classes: ''
+        open: false
+      label: 'Ribbon Tags'
+    group_pre:
+      children:
+        - group_summary
+        - group_promotion_banner
+        - body
+        - field_hide_promotion
+        - field_mark_as_featured
+        - field_casino_gold_only
+      parent_name: ''
+      weight: 4
+      format_type: details
+      format_settings:
+        label: 'Pre Login Promotion'
+        required_fields: true
+        id: ''
+        classes: ''
+        open: false
+      label: 'Pre Login Promotion'
+    group_post_login_promotion:
+      children:
+        - group_promotion_summary
+        - group_promo
+        - field_post_body
+        - field_post_mark_as_featured
+        - field_post_hide_promotion
+      parent_name: ''
+      weight: 5
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: 'Post Login Promotion'
+    group_promotion_banner:
+      children:
+        - field_banner_image
+        - field_banner_link
+        - field_banner_link_target
+      parent_name: group_pre
+      weight: 6
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: true
+        required_fields: true
+      label: 'Promotion Banner'
+    group_promotion_summary:
+      children:
+        - field_post_thumbnail_image
+        - field_post_summary_blurb
+        - field_post_summary_url
+        - field_post_summary_url_target
+        - field_post_hide_countdown
+      parent_name: group_post_login_promotion
+      weight: 24
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: true
+        required_fields: true
+      label: 'Promotion Summary'
+    group_promo:
+      children:
+        - field_post_banner_image
+        - field_post_banner_link
+        - field_post_banner_link_target
+      parent_name: group_post_login_promotion
+      weight: 25
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: true
+        required_fields: true
+      label: 'Promotion Banner'
+    group_summary:
+      children:
+        - field_thumbnail_image
+        - field_summary_blurb
+        - field_summary_url
+        - field_summary_url_target
+        - field_hide_countdown
+      parent_name: group_pre
+      weight: 5
+      format_type: details
+      format_settings:
+        label: 'Promotion Summary'
+        open: true
+        required_fields: true
+        id: ''
+        classes: ''
+      label: 'Promotion Summary'
+id: node.promotion.default
+targetEntityType: node
+bundle: promotion
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 8
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  created:
+    type: datetime_timestamp
+    weight: 13
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_banner_image:
+    weight: 21
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_banner_link:
+    weight: 22
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_banner_link_target:
+    weight: 24
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_hide_countdown:
+    weight: 26
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_hide_promotion:
+    weight: 9
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_mark_as_featured:
+    weight: 10
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_meta_tags:
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_firehose
+    region: content
+  field_post_banner_image:
+    weight: 7
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_post_banner_link:
+    weight: 8
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_post_banner_link_target:
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_post_body:
+    weight: 26
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea_with_summary
+    region: content
+  field_post_hide_countdown:
+    weight: 24
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_post_hide_promotion:
+    weight: 29
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_post_mark_as_featured:
+    weight: 28
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_post_summary_blurb:
+    weight: 21
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_post_summary_url:
+    weight: 22
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_post_summary_url_target:
+    weight: 23
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_post_thumbnail_image:
+    weight: 20
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_product_category:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: erviews_options_select
+    region: content
+  field_promo_availability:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_ribbon_background_color:
+    weight: 23
+    settings: {  }
+    third_party_settings: {  }
+    type: color_field_widget_html5
+    region: content
+  field_ribbon_label:
+    weight: 22
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_summary_blurb:
+    weight: 23
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_summary_url:
+    weight: 24
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_summary_url_target:
+    weight: 25
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_thumbnail_image:
+    weight: 22
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 14
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    weight: 16
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  publish_on:
+    type: datetime_timestamp_no_default
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  scheduler_settings:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 120
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 17
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 15
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+  unpublish_on:
+    type: datetime_timestamp_no_default
+    weight: 12
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

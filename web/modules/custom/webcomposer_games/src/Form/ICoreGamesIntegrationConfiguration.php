@@ -4,6 +4,7 @@ namespace Drupal\webcomposer_games\Form;
 
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Url;
 
 /**
  * ICore Games configuration class
@@ -14,7 +15,7 @@ class ICoreGamesIntegrationConfiguration extends ConfigFormBase {
    * ICore Game Providers definitions
    */
     const ICORE_GAME_PROVIDERS = [
-        'fish_hunter' => 'Fish Hunter',
+        'asia_gaming' => 'Asia Gaming',
         'kiron_virtual_sports' => 'Virtual Sports',
         'gb_virtual_sports' => 'Global Bet Virtual Sports',
         'skywind' => 'Skywind',
@@ -79,7 +80,21 @@ class ICoreGamesIntegrationConfiguration extends ConfigFormBase {
       '#group' => 'advanced',
     ];
 
-    $form['message']['unsupported_currencies_title'] = [
+    $newUCLFormUrl = Url::fromRoute('webcomposer_games.unsupported_currency_configuration_form');
+    $newUCLFormLink = \Drupal::l(t('here'), $newUCLFormUrl);
+
+    $form['message']['deprecated'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Deprecated'),
+      '#description' => $this->t(
+        'These are deprecated fields for unsupported currencies.
+        Please click @link to access the new form.', array('@link' => $newUCLFormLink)
+      ),
+      '#collapsible' => TRUE,
+      '#open' => FALSE
+    ];
+
+    $form['message']['deprecated']['unsupported_currencies_title'] = [
       '#type' => 'textfield',
       '#title' => t('Not supported currency title'),
       '#description' => $this->t('Not allowed message title for currency.'),
@@ -87,21 +102,21 @@ class ICoreGamesIntegrationConfiguration extends ConfigFormBase {
     ];
 
     $config_message = $config->get('unsupported_currencies_message');
-    $form['message']['unsupported_currencies_message'] = [
+    $form['message']['deprecated']['unsupported_currencies_message'] = [
       '#type' => 'text_format',
       '#title' => $this->t('Not allowed message for currency.'),
       '#default_value' => $config_message['value'],
       '#format' => $config_message['format'],
     ];
 
-    $form['message']['unsupported_currencies_button'] = [
+    $form['message']['deprecated']['unsupported_currencies_button'] = [
       '#type' => 'textfield',
       '#title' => t('Unsupported Currency button'),
       '#description' => $this->t('Defines the Unsupported Currency LightBox Ok button'),
       '#default_value' => $config->get('unsupported_currencies_button')
     ];
 
-    $form['message']['game_provider_mapping'] = [
+    $form['message']['deprecated']['game_provider_mapping'] = [
       '#type' => 'textarea',
       '#title' => t('Game Provider Mapping for Unsupported Currency'),
       '#description' => $this->t('Game provider mapping. Pattern should be {game_provider_key}|{game provider name}'),
