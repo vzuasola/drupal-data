@@ -6,7 +6,7 @@ use Drupal\webcomposer_config_schema\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Header configuration plugin
+ * Mobile Promotion Form
  *
  * @WebcomposerConfigPlugin(
  *   id = "mobile_promotions",
