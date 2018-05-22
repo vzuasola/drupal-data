@@ -11,7 +11,7 @@ id: node.promotion.field_post_banner_link_target
 field_name: field_post_banner_link_target
 entity_type: node
 bundle: promotion
-label: 'Post Banner Link Target'
+label: 'Banner Link Target on Post Login'
 description: ''
 required: false
 translatable: true

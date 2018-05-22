@@ -9,10 +9,10 @@ id: node.promotion.field_post_hide_countdown
 field_name: field_post_hide_countdown
 entity_type: node
 bundle: promotion
-label: 'Post Hide Countdown'
+label: 'Hide Countdown on Post Login'
 description: 'Enable this to hide promotion from listing'
 required: false
-translatable: false
+translatable: true
 default_value:
   -
     value: 0

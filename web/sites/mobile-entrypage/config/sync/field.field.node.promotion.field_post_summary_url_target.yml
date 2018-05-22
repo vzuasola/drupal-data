@@ -11,10 +11,10 @@ id: node.promotion.field_post_summary_url_target
 field_name: field_post_summary_url_target
 entity_type: node
 bundle: promotion
-label: 'Post Summary URL Target'
+label: 'Summary URL Target on Post Login'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

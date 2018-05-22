@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.promotion.field_banner_image
     - field.field.node.promotion.field_banner_link
     - field.field.node.promotion.field_banner_link_target
+    - field.field.node.promotion.field_enable_disable_ribbon_tag
     - field.field.node.promotion.field_hide_countdown
     - field.field.node.promotion.field_hide_promotion
     - field.field.node.promotion.field_mark_as_featured
@@ -26,6 +27,7 @@ dependencies:
     - field.field.node.promotion.field_promo_availability
     - field.field.node.promotion.field_ribbon_background_color
     - field.field.node.promotion.field_ribbon_label
+    - field.field.node.promotion.field_ribbon_text_color
     - field.field.node.promotion.field_summary_blurb
     - field.field.node.promotion.field_summary_url
     - field.field.node.promotion.field_summary_url_target
@@ -46,7 +48,9 @@ third_party_settings:
   field_group:
     group_details:
       children:
+        - field_enable_disable_ribbon_tag
         - field_ribbon_label
+        - field_ribbon_text_color
         - field_ribbon_background_color
       parent_name: ''
       weight: 6
@@ -65,7 +69,6 @@ third_party_settings:
         - body
         - field_hide_promotion
         - field_mark_as_featured
-        - field_casino_gold_only
       parent_name: ''
       weight: 4
       format_type: details
@@ -195,6 +198,13 @@ content:
     third_party_settings: {  }
     type: options_select
     region: content
+  field_enable_disable_ribbon_tag:
+    weight: 10
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
   field_hide_countdown:
     weight: 26
     settings:
@@ -217,7 +227,7 @@ content:
     type: boolean_checkbox
     region: content
   field_meta_tags:
-    weight: 9
+    weight: 8
     settings: {  }
     third_party_settings: {  }
     type: metatag_firehose
@@ -286,7 +296,7 @@ content:
     weight: 22
     settings:
       placeholder_url: ''
-      placeholder_title: ''
+      placeholder_title: 'More Info &raquo;'
     third_party_settings: {  }
     type: link_default
     region: content
@@ -317,18 +327,24 @@ content:
     type: options_buttons
     region: content
   field_ribbon_background_color:
-    weight: 23
+    weight: 13
     settings: {  }
     third_party_settings: {  }
     type: color_field_widget_html5
     region: content
   field_ribbon_label:
-    weight: 22
+    weight: 11
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_ribbon_text_color:
+    weight: 12
+    settings: {  }
+    third_party_settings: {  }
+    type: color_field_widget_html5
     region: content
   field_summary_blurb:
     weight: 23
@@ -342,7 +358,7 @@ content:
     weight: 24
     settings:
       placeholder_url: ''
-      placeholder_title: ''
+      placeholder_title: 'More Info &raquo;'
     third_party_settings: {  }
     type: link_default
     region: content
@@ -386,7 +402,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   scheduler_settings:
-    weight: 10
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }
