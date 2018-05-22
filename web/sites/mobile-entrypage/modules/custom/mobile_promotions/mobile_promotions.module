@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains mobile_promotions_config.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function mobile_promotions_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the mobile_promotions_config module.
+    case 'help.page.mobile_promotions':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Configurations for Promotions Page') . '</p>';
+      return $output;
+
+    default:
+  }
+}

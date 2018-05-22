@@ -11,7 +11,7 @@ id: node.promotion.field_post_summary_url
 field_name: field_post_summary_url
 entity_type: node
 bundle: promotion
-label: 'Post Summary URL'
+label: 'Summary URL on Post Login'
 description: ''
 required: false
 translatable: true
