@@ -1,0 +1,22 @@
+uuid: a53fbdb4-e937-4878-9175-331c0e733d7f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.marketing_script_entity.field_marketing_domain
+  module:
+    - webcomposer_marketing_script
+_core:
+  default_config_hash: maTfh24lse_iYh9nTrtFAmatNLn7oK4ZykUdJ61IUs4
+id: marketing_script_entity.marketing_script_entity.field_marketing_domain
+field_name: field_marketing_domain
+entity_type: marketing_script_entity
+bundle: marketing_script_entity
+label: 'Marketing Domain'
+description: 'Please add domain here where this script should get added. By default it will be available for all domains. for example: "1|dafabet.com"'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

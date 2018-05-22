@@ -4,20 +4,29 @@ status: true
 dependencies:
   config:
     - field.field.marketing_script_entity.marketing_script_entity.field_body
+    - field.field.marketing_script_entity.marketing_script_entity.field_marketing_domain
     - field.field.marketing_script_entity.marketing_script_entity.field_per_page_configuratiion
     - field.field.marketing_script_entity.marketing_script_entity.field_position
     - field.field.marketing_script_entity.marketing_script_entity.field_type
   module:
     - webcomposer_marketing_script
 _core:
-  default_config_hash: bCwUZHhmdt-YmJLlcRRnSCozy2GlpLfHyOOVx_fd48k
+  default_config_hash: IXlXwioBk-nCrjFDy3yU4UzvhnblU5M077KJThyn5jA
 id: marketing_script_entity.marketing_script_entity.default
 targetEntityType: marketing_script_entity
 bundle: marketing_script_entity
 mode: default
 content:
   field_body:
-    weight: 5
+    weight: 6
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_marketing_domain:
+    weight: 4
     settings:
       rows: 5
       placeholder: ''
@@ -46,9 +55,10 @@ content:
     region: content
   langcode:
     type: language_select
-    weight: 4
+    weight: 5
     region: content
-    settings: {  }
+    settings:
+      include_locked: true
     third_party_settings: {  }
   name:
     type: string_textfield
@@ -59,7 +69,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 6
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }

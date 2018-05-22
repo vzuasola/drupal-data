@@ -4,12 +4,14 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_arc_game_thumbnail_image
+    - field.storage.node.field_game_thumbnail_size
     - image.style.thumbnail
     - node.type.arcade_game
   module:
     - draggableviews
     - image
     - node
+    - options
     - rest
     - serialization
     - user
@@ -445,6 +447,68 @@ display:
           entity_type: node
           entity_field: nid
           plugin_id: draggable_views_field
+        field_game_thumbnail_size:
+          id: field_game_thumbnail_size
+          table: node__field_game_thumbnail_size
+          field: field_game_thumbnail_size
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Game Thumbnail Size'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: list_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
       pager:
         type: none
         options:
@@ -536,6 +600,7 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.node.field_arc_game_thumbnail_image'
+        - 'config:field.storage.node.field_game_thumbnail_size'
   rest_export_1:
     display_plugin: rest_export
     id: rest_export_1

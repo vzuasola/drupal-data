@@ -5,7 +5,7 @@ dependencies:
   config:
     - field.field.taxonomy_term.product_integrations.field_product_integration_id
     - field.field.taxonomy_term.product_integrations.field_product_login_via
-    - field.field.taxonomy_term.product_integrations.field_product_reg_via
+    - field.field.taxonomy_term.product_integrations.field_registration_url
     - taxonomy.vocabulary.product_integrations
 id: taxonomy_term.product_integrations.default
 targetEntityType: taxonomy_term
@@ -28,7 +28,7 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_product_reg_via:
+  field_registration_url:
     weight: 3
     settings:
       size: 60
