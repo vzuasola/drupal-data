@@ -265,6 +265,20 @@ class RestMenuItemsResource extends ResourceBase {
         $fragment = '#' . $options['fragment'];
       }
 
+      // if the URI is blank but a query parameter is introduced
+      if ($uri === "" && empty($options['fragment'])) {
+        try {
+          $route_name = $url->getRoutename();
+
+          if ($route_name === '<none>') {
+            $uri = '#';
+            $alias = '#';
+          }
+        } catch (\Exception $e) {
+          // do nothing
+        }
+      }
+
       $final_alias = ltrim($alias, '/');
       $alias = $final_alias == '' ? '/' : $final_alias;
 
