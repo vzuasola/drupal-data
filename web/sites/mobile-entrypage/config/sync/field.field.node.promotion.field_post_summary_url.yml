@@ -1,0 +1,23 @@
+uuid: 62d2a312-3372-4a64-86ee-568e26bf9e5e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_post_summary_url
+    - node.type.promotion
+  module:
+    - link
+id: node.promotion.field_post_summary_url
+field_name: field_post_summary_url
+entity_type: node
+bundle: promotion
+label: 'Summary URL on Post Login'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

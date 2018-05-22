@@ -1,0 +1,21 @@
+uuid: 6f064d0a-c9ca-4c4b-aa62-7eb0dbfe4d1a
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.field_registration_url
+field_name: field_registration_url
+entity_type: taxonomy_term
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

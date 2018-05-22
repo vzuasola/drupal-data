@@ -11,6 +11,7 @@ dependencies:
     - mobile_product_menu
     - rest
     - serialization
+    - webcomposer_rest_extra
 id: product_menu_entity_api
 label: 'Product Menu Entity API'
 module: views
@@ -571,9 +572,8 @@ display:
         options:
           offset: 0
       style:
-        type: serializer
+        type: node_list_serializer
         options:
-          grouping: {  }
           uses_fields: false
           formats: {  }
       row:

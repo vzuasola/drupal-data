@@ -1,0 +1,26 @@
+advanced__active_tab: edit-mobile-login
+lightbox_blurb: 'ยังไม่เป็นสมาชิก?'
+login_page_blurb: ''
+autologout_box_content:
+  format: basic_html
+  value: "<p>การทำรายการของคุณจะสิ้นสุดภายใน {seconds} คุณต้องการทำรายการต่อหรือไม่?</p>\r\n"
+notification_content:
+  format: basic_html
+  value: "<p>การทำรายการของคุณสิ้นสุดลงเนื่องจากไม่มีการดำเนินการใดๆ</p>\r\n"
+mobile_login_button_label: เข้าสู่ระบบ/สมัคร
+username_placeholder: Username
+password_placeholder: รหัสผ่าน
+login_bottom_label: เข้าสู่ระบบ/สมัคร
+error_message_blank_username: กรุณากรอกยูสเซอร์เนม
+error_message_blank_password: กรุณากรอกรหัสผ่าน
+error_message_blank_passname: 'กรุณาตรวจสอบข้อมูลที่กรอกทั้งหมด และลองอีกครั้ง'
+error_message_invalid_passname: 'ขออภัย ยูสเซอร์เนมและ/หรือรหัสผ่านไม่ถูกต้อง กรุณาลองอีกครั้ง'
+error_message_service_not_available: ไม่สามารถให้บริการได้ในขณะนี้
+error_message_account_suspended: 'บัญชีถูกระงับการใช้งานชั่วคราว เพราะล็อกอินผิดเกินกำหนด ติดต่อแชทสด'
+error_message_account_locked: 'บัญชีถูกระงับการใช้งานชั่วคราว เพราะล็อกอินผิดเกินกำหนด ติดต่อแชทสด'
+autologout_box_title: 'แจ้งเตือน '
+affirmative_button_text: 'ใช่ '
+negative_button_text: 'ไม่ใช่ '
+notification_title: 'แจ้งเตือน '
+notification_window_title: 'แจ้งเตือน '
+mobile_login_url: 'https://qa1-casino.elysium-dfbt.com/'

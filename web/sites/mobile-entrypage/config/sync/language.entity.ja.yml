@@ -1,0 +1,15 @@
+uuid: 517b62d3-7595-4886-b55b-1911dc7ffd03
+langcode: ja
+status: true
+dependencies:
+  module:
+    - webcomposer_language_hierarchy
+third_party_settings:
+  webcomposer_language_hierarchy:
+    webcomposer_fallback_langcode: ''
+    webcomposer_language_custom_label: 日本語
+id: ja
+label: Japanese
+direction: ltr
+weight: -3
+locked: false

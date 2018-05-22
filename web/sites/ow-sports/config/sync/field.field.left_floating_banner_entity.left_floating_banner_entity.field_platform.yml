@@ -16,7 +16,7 @@ bundle: left_floating_banner_entity
 label: Platform
 description: ''
 required: true
-translatable: false
+translatable: true
 default_value:
   -
     value: desktop

@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.lobby_product_tiles.lobby_product_tiles.field_product_integration_id
     - field.field.lobby_product_tiles.lobby_product_tiles.field_product_lobby_class
     - field.field.lobby_product_tiles.lobby_product_tiles.field_product_lobby_enable
     - field.field.lobby_product_tiles.lobby_product_tiles.field_product_lobby_id
@@ -11,6 +12,7 @@ dependencies:
     - field.field.lobby_product_tiles.lobby_product_tiles.field_product_lobby_title
     - field.field.lobby_product_tiles.lobby_product_tiles.field_product_lobby_url_post_log
     - field.field.lobby_product_tiles.lobby_product_tiles.field_product_lobby_url_pre_log
+    - field.field.lobby_product_tiles.lobby_product_tiles.field_require_post_login
   module:
     - link
     - lobby_product_tiles
@@ -23,6 +25,14 @@ targetEntityType: lobby_product_tiles
 bundle: lobby_product_tiles
 mode: default
 content:
+  field_product_integration_id:
+    weight: 12
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
   field_product_lobby_class:
     weight: 2
     label: above
@@ -94,6 +104,16 @@ content:
       target: ''
     third_party_settings: {  }
     type: link
+    region: content
+  field_require_post_login:
+    weight: 13
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
     region: content
   name:
     label: above

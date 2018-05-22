@@ -1,0 +1,23 @@
+uuid: 8c98a3a2-711d-4f22-88a6-9088a8899ff5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hide_countdown
+    - node.type.promotion
+id: node.promotion.field_hide_countdown
+field_name: field_hide_countdown
+entity_type: node
+bundle: promotion
+label: 'Hide Countdown'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,21 @@
+uuid: b68299b9-4b00-41cb-8136-6464ff185714
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_summary_url_target
+    - node.type.promotion
+  module:
+    - options
+id: node.promotion.field_summary_url_target
+field_name: field_summary_url_target
+entity_type: node
+bundle: promotion
+label: 'Summary URL Target'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

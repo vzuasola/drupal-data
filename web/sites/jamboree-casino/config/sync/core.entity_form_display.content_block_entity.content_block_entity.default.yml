@@ -6,6 +6,7 @@ dependencies:
     - field.field.content_block_entity.content_block_entity.field_add_background
     - field.field.content_block_entity.content_block_entity.field_add_border
     - field.field.content_block_entity.content_block_entity.field_block_content_position
+    - field.field.content_block_entity.content_block_entity.field_content_block_category
     - field.field.content_block_entity.content_block_entity.field_description
     - field.field.content_block_entity.content_block_entity.field_hide_title
     - field.field.content_block_entity.content_block_entity.field_image_banner
@@ -39,10 +40,16 @@ content:
     region: content
   field_block_content_position:
     type: options_select
-    weight: 3
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_content_block_category:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_description:
     weight: 8
     settings:
@@ -59,7 +66,7 @@ content:
     type: boolean_checkbox
     region: content
   field_image_banner:
-    weight: 5
+    weight: 6
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -67,21 +74,15 @@ content:
     type: image_image
     region: content
   field_image_banner_link:
-    weight: 6
+    weight: 7
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_open_in:
-    type: options_select
-    weight: 7
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   field_position:
-    weight: 4
+    weight: 5
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -98,9 +99,15 @@ content:
     type: language_select
     weight: 2
     region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  translation:
+    weight: 11
+    region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_open_in: true
   name: true
-  translation: true
   user_id: true

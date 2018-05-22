@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.mobile_product_menu.mobile_product_menu.field_mobile_product_menu_target
+    - field.field.mobile_product_menu.mobile_product_menu.field_product_integration_id
     - field.field.mobile_product_menu.mobile_product_menu.field_product_menu_class
     - field.field.mobile_product_menu.mobile_product_menu.field_product_menu_enable
     - field.field.mobile_product_menu.mobile_product_menu.field_product_menu_id
@@ -11,6 +12,7 @@ dependencies:
     - field.field.mobile_product_menu.mobile_product_menu.field_product_menu_title
     - field.field.mobile_product_menu.mobile_product_menu.field_product_menu_url_post_log
     - field.field.mobile_product_menu.mobile_product_menu.field_product_menu_url_pre_log
+    - field.field.mobile_product_menu.mobile_product_menu.field_require_post_login
   module:
     - link
     - mobile_product_menu
@@ -27,6 +29,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: list_default
+    region: content
+  field_product_integration_id:
+    weight: 9
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
     region: content
   field_product_menu_class:
     weight: 1
@@ -92,6 +102,16 @@ content:
       target: ''
     third_party_settings: {  }
     type: link
+    region: content
+  field_require_post_login:
+    weight: 10
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
     region: content
   name:
     label: above

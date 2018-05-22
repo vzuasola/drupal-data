@@ -1,0 +1,26 @@
+advanced__active_tab: edit-mobile-login
+lightbox_blurb: 'Bạn chưa là Thành viên Dafabet?'
+login_page_blurb: ''
+autologout_box_content:
+  format: basic_html
+  value: "<p>Lượt truy cập của Quý Khách sẽ kết thúc trong vòng {seconds}. Quý Khách có muốn tiếp tục truy cập?</p>\r\n"
+notification_content:
+  format: basic_html
+  value: "<p>Lượt truy cập của Quý Khách đã kết thúc vì không có hoạt động.</p>\r\n"
+mobile_login_button_label: 'ĐĂNG NHẬP/ĐĂNG KÝ'
+username_placeholder: Username
+password_placeholder: 'Mật khẩu'
+login_bottom_label: 'ĐĂNG NHẬP/ĐĂNG KÝ'
+error_message_blank_username: 'Điền Tên đăng nhập là bắt buộc.'
+error_message_blank_password: 'Điền Mật khẩu là bắt buộc.'
+error_message_blank_passname: 'Vui lòng kiểm tra tất cả các mục và thử lại.'
+error_message_invalid_passname: 'Rất tiếc, Tên đăng nhập và Mật khẩu bạn vừa nhập không đúng. Vui lòng thử lại.'
+error_message_service_not_available: 'Dịch vụ không có sẵn.'
+error_message_account_suspended: 'Tài khoản của bạn đã bị khóa. Vui lòng liên hệ BP Chăm Sóc Khách Hàng để biết thêm chi tiết'
+error_message_account_locked: 'Tài khoản của bạn đã bị khóa. Vui lòng liên hệ BP Chăm Sóc Khách Hàng để biết thêm chi tiết'
+autologout_box_title: 'LƯU Ý'
+affirmative_button_text: 'CÓ '
+negative_button_text: KHÔNG
+notification_title: 'THÔNG BÁO'
+notification_window_title: 'THÔNG BÁO'
+mobile_login_url: 'https://qa1-casino.elysium-dfbt.com/'

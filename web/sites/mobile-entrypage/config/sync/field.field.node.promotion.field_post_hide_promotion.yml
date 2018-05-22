@@ -1,0 +1,23 @@
+uuid: 17379de0-4d7e-4d4b-a986-1839d55e5ef8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_post_hide_promotion
+    - node.type.promotion
+id: node.promotion.field_post_hide_promotion
+field_name: field_post_hide_promotion
+entity_type: node
+bundle: promotion
+label: 'Hide Promotion on Post Login'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

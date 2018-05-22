@@ -44,9 +44,12 @@ module:
   menu_link_attributes: 0
   menu_ui: 0
   metatag: 0
+  mobile_als: 0
+  mobile_casino: 0
   mobile_config: 0
   mobile_owsports: 0
   mobile_product_menu: 0
+  mobile_promotions: 0
   mobile_sponsor_list: 0
   node: 0
   options: 0
@@ -73,28 +76,23 @@ module:
   webcomposer_announcements: 0
   webcomposer_audit: 0
   webcomposer_avaya: 0
+  webcomposer_cache: 0
   webcomposer_config: 0
   webcomposer_config_schema: 0
   webcomposer_dashboard: 0
   webcomposer_dm: 0
   webcomposer_domain_import: 0
-  webcomposer_downloadables: 0
   webcomposer_editor: 0
-  webcomposer_floating_banners: 0
   webcomposer_games: 0
   webcomposer_language_hierarchy: 0
   webcomposer_marketing_script: 0
-  webcomposer_promotions: 0
   webcomposer_registration_landing_page: 0
   webcomposer_rest_extra: 0
   webcomposer_seo: 0
   webcomposer_sitemap: 0
   webcomposer_slider_v2: 0
-  webcomposer_social_media: 0
-  webcomposer_sponsor: 0
   webcomposer_territory_blocking: 0
   webcomposer_token: 0
-  webcomposer_webform: 0
   webform: 0
   webform_rest: 0
   webform_ui: 0
