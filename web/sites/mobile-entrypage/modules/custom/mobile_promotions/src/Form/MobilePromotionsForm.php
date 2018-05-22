@@ -52,6 +52,7 @@ class MobilePromotionsForm extends FormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Filter Label'),
       '#default_value' => $this->get('filter_label'),
+      '#translatable' => TRUE,
       '#required' => TRUE,
     ];
 
@@ -59,6 +60,7 @@ class MobilePromotionsForm extends FormBase {
       '#type' => 'textfield',
       '#title' => $this->t('No available promotions default message'),
       '#default_value' => $this->get('no_available_msg'),
+      '#translatable' => TRUE,
       '#required' => TRUE,
     ];
 
