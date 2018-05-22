@@ -335,6 +335,8 @@ display:
           text: view
           entity_type: taxonomy_term
           plugin_id: entity_link
+          output_url_as_text: false
+          absolute: false
         draggableviews:
           id: draggableviews
           table: taxonomy_term_field_data

@@ -1,0 +1,20 @@
+uuid: 389890fd-5e85-4891-8f21-147ee4001ac1
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.promotions_product_filter
+  module:
+    - path
+id: taxonomy_term.promotions_product_filter.path
+field_name: path
+entity_type: taxonomy_term
+bundle: promotions_product_filter
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path
