@@ -1,0 +1,23 @@
+uuid: 9ae94384-2078-4d7a-bda4-16b015ffd8f2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hide_promotion
+    - node.type.promotion
+id: node.promotion.field_hide_promotion
+field_name: field_hide_promotion
+entity_type: node
+bundle: promotion
+label: 'Hide Promotion'
+description: 'Enable this to hide promotion from listing'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

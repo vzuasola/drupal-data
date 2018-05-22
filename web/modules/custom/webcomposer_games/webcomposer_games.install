@@ -11,6 +11,7 @@ function webcomposer_games_uninstall() {
         'webcomposer_config.icore_games_integration',
         'webcomposer_config.games_exchange_provider',
         'webcomposer_config.games_gpi_provider',
+        'webcomposer_config.games_goldenrace_provider',
     ];
 
     foreach ($keys as $key) {

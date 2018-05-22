@@ -1,0 +1,8 @@
+uuid: 8f8d4063-080b-449b-97ea-98c2aeb470ca
+langcode: vi
+status: true
+dependencies: {  }
+id: mobile-downloads-vn
+label: 'Mobile Downloads VN'
+description: ''
+locked: false

@@ -1,0 +1,23 @@
+uuid: 71784d79-d70a-4812-bc54-83a0d61991bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.dropdown_menu_entity.field_dropdown_menu_mobile_opt
+  module:
+    - jamboree_dropdown_menu
+    - options
+id: dropdown_menu_entity.dropdown_menu_entity.field_dropdown_menu_mobile_opt
+field_name: field_dropdown_menu_mobile_opt
+entity_type: dropdown_menu_entity
+bundle: dropdown_menu_entity
+label: 'Mobile Menu Link Options'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: desktop
+default_value_callback: ''
+settings: {  }
+field_type: list_string

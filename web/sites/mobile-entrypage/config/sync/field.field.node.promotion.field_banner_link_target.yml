@@ -1,0 +1,21 @@
+uuid: 01a4c795-364a-4ce6-9218-e731d4a1946a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_banner_link_target
+    - node.type.promotion
+  module:
+    - options
+id: node.promotion.field_banner_link_target
+field_name: field_banner_link_target
+entity_type: node
+bundle: promotion
+label: 'Banner Link Target'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

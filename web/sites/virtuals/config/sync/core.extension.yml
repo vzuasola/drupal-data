@@ -75,21 +75,21 @@ module:
   webcomposer_avaya: 0
   webcomposer_config: 0
   webcomposer_config_schema: 0
-  webcomposer_dashboard: 0
   webcomposer_dm: 0
   webcomposer_domain_import: 0
   webcomposer_downloadables: 0
+  webcomposer_drawer: 0
   webcomposer_editor: 0
   webcomposer_floating_banners: 0
   webcomposer_games: 0
   webcomposer_language_hierarchy: 0
   webcomposer_marketing_script: 0
-  webcomposer_metatags: 0
   webcomposer_partner: 0
   webcomposer_promotions: 0
   webcomposer_registration_landing_page: 0
   webcomposer_rest_extra: 0
   webcomposer_right_side_block: 0
+  webcomposer_seo: 0
   webcomposer_sitemap: 0
   webcomposer_slider: 0
   webcomposer_slider_v2: 0

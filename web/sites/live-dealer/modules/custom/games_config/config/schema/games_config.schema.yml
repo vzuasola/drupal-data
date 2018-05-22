@@ -10,3 +10,10 @@ games_config.games_configuration:
       type: label
       label: 'Game Info Link Text'
       translatable: true
+    pas_error_lightbox_title:
+      type: label
+      label: 'PAS Error Lightbox Title'
+    pas_error_lightbox_content:
+      type: text_format
+      label: 'PAS Error Lightbox Content'
+      translatable: true

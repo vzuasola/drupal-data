@@ -1,0 +1,25 @@
+advanced__active_tab: edit-mobile-login
+lightbox_blurb: 還不是大發用戶？
+login_page_blurb: ''
+autologout_box_content:
+  format: basic_html
+  value: "<p>您的登錄將於{seconds}過期。您想繼續登錄嗎？</p>\r\n"
+notification_content:
+  format: basic_html
+  value: "<p>因沒有任何在線活動，您的登錄已超時失效。</p>\r\n"
+mobile_login_button_label: 登錄/加入
+username_placeholder: Username
+password_placeholder: 密碼
+login_bottom_label: 登錄/加入
+error_message_blank_username: 請輸入用戶名。
+error_message_blank_password: 請輸入密碼。
+error_message_blank_passname: 請檢查所有字段，再試一次。
+error_message_invalid_passname: 很抱歉，您輸入的用戶名和密碼不正確，請重新輸入。
+error_message_account_suspended: 您的賬戶因多次登錄失敗已被鎖定，請聯系客服。
+error_message_account_locked: 您的賬戶因多次登錄失敗已被鎖定，請聯系客服。
+autologout_box_title: 提示
+affirmative_button_text: 是
+negative_button_text: 不
+notification_title: 通知
+notification_window_title: 登錄超時
+mobile_login_url: 'https://qa1-casino.elysium-dfbt.com/'

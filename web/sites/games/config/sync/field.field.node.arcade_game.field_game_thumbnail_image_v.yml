@@ -1,0 +1,45 @@
+uuid: 29c7df4e-4a80-4b00-9d57-675e4f7a248c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_game_thumbnail_image_v
+    - node.type.arcade_game
+  module:
+    - content_translation
+    - image
+third_party_settings:
+  content_translation:
+    translation_sync:
+      file: file
+      alt: '0'
+      title: '0'
+id: node.arcade_game.field_game_thumbnail_image_v
+field_name: field_game_thumbnail_image_v
+entity_type: node
+bundle: arcade_game
+label: 'Game Thumbnail Image Vertical'
+description: '428px by 661px'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: 428x661
+  min_resolution: 428x661
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

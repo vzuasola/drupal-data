@@ -1,0 +1,6 @@
+title: 'Please select your preferred casino '
+casino_url: 'https://qa1-m.elysium-dfbt.com/en/casino[query:({credentials.params}&{tracking}&re=casino)]'
+casino_gold_url: 'https://qa1-m.elysium-dfbt.com/sc/casino-gold[query:({credentials.params}&{tracking}&re=casino-gold)]'
+casino_text: 'Casino Classic'
+casino_gold_text: 'Casino Gold'
+maintenance_text: 'Under Maintenance'

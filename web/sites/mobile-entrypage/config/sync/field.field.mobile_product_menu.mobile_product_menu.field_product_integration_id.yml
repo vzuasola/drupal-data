@@ -1,0 +1,30 @@
+uuid: 5a29b642-dea3-46a1-a976-2681b5ea4d6f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.mobile_product_menu.field_product_integration_id
+    - taxonomy.vocabulary.product_integrations
+  module:
+    - mobile_product_menu
+id: mobile_product_menu.mobile_product_menu.field_product_integration_id
+field_name: field_product_integration_id
+entity_type: mobile_product_menu
+bundle: mobile_product_menu
+label: 'Product Integration ID'
+description: "Specify the ID that will identify which product this tile will integrate to.\r\n<br>\r\n<strong>Enabling this might override the pre and post login URL behavior</strong>"
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      product_integrations: product_integrations
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

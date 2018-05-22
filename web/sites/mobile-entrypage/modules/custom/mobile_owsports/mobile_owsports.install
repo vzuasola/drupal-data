@@ -1,0 +1,18 @@
+<?php
+
+
+/**
+ * Implements hook_uninstall
+ */
+function mobile_owsports_uninstall() {
+  $keys = [
+    'webcomposer_form_manager.form.smart_wap',
+    'webcomposer_form_manager.form.iwap',
+    'webcomposer_form_manager.form.owsports_param',
+    'webcomposer_form_manager.form.iwap_agents',
+  ];
+
+  foreach ($keys as $key) {
+    \Drupal::configFactory()->getEditable($key)->delete();
+  }
+}

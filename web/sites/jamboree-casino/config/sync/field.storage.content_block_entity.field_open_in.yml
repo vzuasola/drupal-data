@@ -1,0 +1,27 @@
+uuid: f2b4c845-24bf-40ce-ab4b-eb5926fbe32f
+langcode: en
+status: true
+dependencies:
+  module:
+    - jamboree_content_blocks
+    - options
+id: content_block_entity.field_open_in
+field_name: field_open_in
+entity_type: content_block_entity
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: _target
+      label: 'New Tab'
+    -
+      value: _self
+      label: 'Same Window'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
