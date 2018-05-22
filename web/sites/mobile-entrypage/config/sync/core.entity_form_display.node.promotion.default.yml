@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.promotion.field_banner_image
     - field.field.node.promotion.field_banner_link
     - field.field.node.promotion.field_banner_link_target
+    - field.field.node.promotion.field_casino_gold_only
     - field.field.node.promotion.field_enable_disable_ribbon_tag
     - field.field.node.promotion.field_hide_countdown
     - field.field.node.promotion.field_hide_promotion
@@ -84,6 +85,7 @@ third_party_settings:
         - group_promotion_summary
         - group_promo
         - field_post_body
+        - field_casino_gold_only
         - field_post_mark_as_featured
         - field_post_hide_promotion
       parent_name: ''
@@ -198,6 +200,13 @@ content:
     third_party_settings: {  }
     type: options_select
     region: content
+  field_casino_gold_only:
+    weight: 27
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
   field_enable_disable_ribbon_tag:
     weight: 10
     settings:
@@ -296,7 +305,7 @@ content:
     weight: 22
     settings:
       placeholder_url: ''
-      placeholder_title: 'More Info &raquo;'
+      placeholder_title: ''
     third_party_settings: {  }
     type: link_default
     region: content
@@ -327,7 +336,7 @@ content:
     type: options_buttons
     region: content
   field_ribbon_background_color:
-    weight: 13
+    weight: 14
     settings: {  }
     third_party_settings: {  }
     type: color_field_widget_html5
@@ -358,7 +367,7 @@ content:
     weight: 24
     settings:
       placeholder_url: ''
-      placeholder_title: 'More Info &raquo;'
+      placeholder_title: ''
     third_party_settings: {  }
     type: link_default
     region: content
@@ -397,7 +406,7 @@ content:
     third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
-    weight: 11
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
