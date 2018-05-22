@@ -9,8 +9,7 @@ use Drupal\Core\TypedData\Plugin\DataType\Any;
 /**
  *
  */
-class RawFormEntity extends Entity
-{
+class RawFormEntity extends Entity {
     private $id;
     private $name;
     private $before;
@@ -18,8 +17,7 @@ class RawFormEntity extends Entity
     /**
      *
      */
-    public function __construct($name, array $values)
-    {
+    public function __construct($name, array $values) {
         $this->id = $name;
         $this->name = $name;
 
@@ -30,8 +28,7 @@ class RawFormEntity extends Entity
     /**
      *
      */
-    public function __sleep()
-    {
+    public function __sleep() {
         $vars = get_object_vars($this);
         return array_keys($vars);
     }
@@ -39,15 +36,13 @@ class RawFormEntity extends Entity
     /**
      *
      */
-    public function __wakeup()
-    {
+    public function __wakeup() {
     }
 
     /**
      *
      */
-    private function createData($values)
-    {
+    private function createData($values) {
         $data = [];
 
         foreach ($values as $key => $value) {
@@ -64,40 +59,35 @@ class RawFormEntity extends Entity
     /**
      *
      */
-    public function label()
-    {
+    public function label() {
         return $this->name;
     }
 
     /**
      *
      */
-    public function getName()
-    {
+    public function getName() {
         return $this->name;
     }
 
     /**
      *
      */
-    public function getOriginal()
-    {
+    public function getOriginal() {
         return $this->before;
     }
 
     /**
      *
      */
-    public function setOriginal($before)
-    {
+    public function setOriginal($before) {
         $this->before = $before;
     }
 
     /**
      *
      */
-    private function parseArrayDataToYmlStr($data)
-    {
+    private function parseArrayDataToYmlStr($data) {
         foreach ($data as $key => $value) {
             if (is_array($value)) {
                 $string = "";
