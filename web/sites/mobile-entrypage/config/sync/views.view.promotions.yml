@@ -1347,6 +1347,7 @@ display:
         style: false
         row: false
         arguments: false
+        cache: false
       row:
         type: data_entity
         options: {  }
@@ -1357,6 +1358,9 @@ display:
           offset: 0
       arguments: {  }
       rendering_language: '***LANGUAGE_language_interface***'
+      cache:
+        type: none
+        options: {  }
     cache_metadata:
       max-age: -1
       contexts:
