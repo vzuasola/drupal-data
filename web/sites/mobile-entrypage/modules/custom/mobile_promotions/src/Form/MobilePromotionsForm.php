@@ -12,12 +12,12 @@ use Drupal\Core\Form\FormStateInterface;
  *   id = "mobile_promotions",
  *   route = {
  *     "title" = "Mobile Promotions Configuration",
- *     "path" = "/admin/config/mobile/promotions/configuration",
+ *     "path" = "/admin/config/mobile_promotions/configuration",
  *   },
  *   menu = {
  *     "title" = "Mobile Promotions Configuration",
  *     "description" = "Provides configuration for Promotions",
- *     "parent" = "mobile_config.list",
+ *     "parent" = "mobile_promotions.list",
  *   },
  * )
  */
