@@ -91,6 +91,36 @@ class KenoConfigForm extends ConfigFormBase {
       '#default_value' => $config->get('lobby_tiles_alignment'),
     ];
 
+     $form['games_button'] = [
+      '#type' => 'details',
+      '#title' => t('Game Button'),
+      '#group' => 'virtual',
+    ];
+
+    $form['games_button']['play_text'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Play Now Button Text'),
+      '#description' => $this->t('The text to display on play button.'),
+      '#default_value' => $config->get('play_text'),
+      '#required' => TRUE,
+    ];
+
+    $form['games_button']['game_info_text'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Game Info Link Text'),
+      '#description' => $this->t('This text to display on game info link.'),
+      '#default_value' => $config->get('game_info_text'),
+      '#required' => TRUE,
+    ];
+
+    $form['games_button']['free_play_text'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Free Play Text'),
+      '#description' => $this->t('The text to display on Free Play Link.'),
+      '#default_value' => $config->get('free_play_text'),
+      '#required' => TRUE,
+    ];
+
     $form['basic_page'] = [
       '#type' => 'details',
       '#title' => t('Basic Page'),
@@ -145,6 +175,9 @@ class KenoConfigForm extends ConfigFormBase {
       'basic_page_background',
       'basic_page_title',
       'balance_mapping_keno',
+      'play_text',
+      'game_info_text',
+      'free_play_text'
     ];
     foreach ($kenoConfig as $keys) {
       if ($keys == 'keno_background') {

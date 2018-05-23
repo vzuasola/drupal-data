@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains jamboree_news_and_updates.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function jamboree_news_and_updates_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the jamboree_news_and_updates module.
+    case 'help.page.jamboree_news_and_updates':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Jamboree News and Updates') . '</p>';
+      return $output;
+
+    default:
+  }
+}

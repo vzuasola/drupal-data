@@ -1,4 +1,4 @@
-uuid: 70686f3c-9f57-43b6-b0dd-c1c1b1b02c58
+uuid: 7b8dd1f6-ab64-49b4-84bf-edb40b32168f
 langcode: en
 status: true
 dependencies:
@@ -14,7 +14,7 @@ bundle: content_block_entity
 label: 'Open In'
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }
