@@ -5,7 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_product_category
     - node.type.promotion
-    - system.menu.main
+    - system.menu.admin
     - taxonomy.vocabulary.promotions_product_filter
   module:
     - draggableviews
@@ -412,7 +412,7 @@ display:
           plugin_id: numeric
       display_extenders: {  }
     cache_metadata:
-      max-age: 0
+      max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
@@ -426,10 +426,10 @@ display:
     display_plugin: page
     id: page_1
     display_title: 'Promotions per Product'
-    position: 1
+    position: 2
     display_options:
       display_extenders: {  }
-      path: admin/config/promotions
+      path: admin/config/mobile_promotions/products
       fields:
         title:
           id: title
@@ -803,12 +803,12 @@ display:
       menu:
         type: normal
         title: 'Promotions Per Product'
-        description: ''
+        description: 'Sort promotions per product'
         expanded: false
-        parent: ''
-        weight: 0
+        parent: mobile_promotions.list
+        weight: 10
         context: '0'
-        menu_name: main
+        menu_name: admin
       style:
         type: table
         options:
@@ -866,7 +866,7 @@ display:
     display_plugin: page
     id: page_2
     display_title: 'Featured Promotions'
-    position: 3
+    position: 1
     display_options:
       display_extenders: {  }
       display_description: 'View featured promotions'
@@ -1056,16 +1056,16 @@ display:
         operator: AND
         groups:
           1: AND
-      path: admin/config/promotions/featured
+      path: admin/config/mobile_promotions/featured
       menu:
         type: normal
-        title: 'Featured Promotions'
-        description: ''
+        title: 'Manage Featured Promotions'
+        description: 'Sort featured promotions'
         expanded: false
-        parent: ''
-        weight: 0
+        parent: mobile_promotions.list
+        weight: 5
         context: '0'
-        menu_name: main
+        menu_name: admin
       fields:
         title:
           id: title
@@ -1265,7 +1265,7 @@ display:
     display_plugin: rest_export
     id: rest_export_1
     display_title: 'REST export'
-    position: 2
+    position: 4
     display_options:
       display_extenders: {  }
       path: api/promotions
@@ -1405,7 +1405,7 @@ display:
     display_plugin: rest_export
     id: rest_export_2
     display_title: 'Featured REST'
-    position: 4
+    position: 3
     display_options:
       display_extenders: {  }
       display_description: ''

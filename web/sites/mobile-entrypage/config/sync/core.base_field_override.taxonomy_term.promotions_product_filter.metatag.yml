@@ -1,20 +1,18 @@
-uuid: 389890fd-5e85-4891-8f21-147ee4001ac1
+uuid: eb5eb58e-efcc-4b90-8e68-deba0a314c16
 langcode: en
 status: true
 dependencies:
   config:
     - taxonomy.vocabulary.promotions_product_filter
-  module:
-    - path
-id: taxonomy_term.promotions_product_filter.path
-field_name: path
+id: taxonomy_term.promotions_product_filter.metatag
+field_name: metatag
 entity_type: taxonomy_term
 bundle: promotions_product_filter
-label: 'URL alias'
-description: ''
+label: Metatags
+description: 'The metatags for the entity.'
 required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: path
+field_type: map

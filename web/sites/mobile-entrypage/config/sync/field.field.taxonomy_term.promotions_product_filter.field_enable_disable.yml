@@ -10,12 +10,12 @@ field_name: field_enable_disable
 entity_type: taxonomy_term
 bundle: promotions_product_filter
 label: Enable/Disable
-description: 'Please check this for enable the filter.'
+description: 'Flag to indicate whether this filter is enabled or not.'
 required: false
-translatable: false
+translatable: true
 default_value:
   -
-    value: 0
+    value: 1
 default_value_callback: ''
 settings:
   on_label: 'On'
