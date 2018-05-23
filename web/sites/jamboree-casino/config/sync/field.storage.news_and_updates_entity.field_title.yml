@@ -1,12 +1,12 @@
-uuid: b3dc535f-8e8e-49ec-8903-a54f0aea2fc6
+uuid: 7ecd37b9-12cf-467c-952e-9898d1196f32
 langcode: en
 status: true
 dependencies:
   module:
-    - jamboree_dropdown_menu
-id: dropdown_menu_entity.field_dropdown_menu_description
-field_name: field_dropdown_menu_description
-entity_type: dropdown_menu_entity
+    - jamboree_news_and_updates
+id: news_and_updates_entity.field_title
+field_name: field_title
+entity_type: news_and_updates_entity
 type: string
 settings:
   max_length: 255

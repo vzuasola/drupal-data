@@ -1,22 +1,22 @@
-uuid: 40998b9c-dcdc-490c-8816-62e3d04f484a
+uuid: 167e0c54-45d4-484d-919f-42288482653b
 langcode: en
 status: true
 dependencies:
   module:
     - jamboree_content_blocks
     - options
-id: content_block_entity.field_open_in
-field_name: field_open_in
+id: content_block_entity.field_rightside_content_type
+field_name: field_rightside_content_type
 entity_type: content_block_entity
 type: list_string
 settings:
   allowed_values:
     -
-      value: _blank
-      label: 'New Tab'
+      value: news_updates
+      label: 'News & Updates'
     -
-      value: _self
-      label: 'Same Window'
+      value: image_links
+      label: 'Right Side Image Links'
   allowed_values_function: ''
 module: options
 locked: false

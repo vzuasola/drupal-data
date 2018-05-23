@@ -1,17 +1,17 @@
-uuid: 7b8dd1f6-ab64-49b4-84bf-edb40b32168f
+uuid: 2ca6b11b-76f3-448c-9b69-01781f9d0c9d
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.content_block_entity.field_open_in
+    - field.storage.content_block_entity.field_rightside_content_type
   module:
     - jamboree_content_blocks
     - options
-id: content_block_entity.content_block_entity.field_open_in
-field_name: field_open_in
+id: content_block_entity.content_block_entity.field_rightside_content_type
+field_name: field_rightside_content_type
 entity_type: content_block_entity
 bundle: content_block_entity
-label: 'Open In'
+label: 'Rightside Content Type'
 description: ''
 required: false
 translatable: false
