@@ -6,6 +6,8 @@ dependencies:
     - field.storage.left_floating_banner_entity.field_link
   module:
     - webcomposer_floating_banners
+_core:
+  default_config_hash: U0Iu5k4pOFLQFB68bWqibmt_Q_Vq4-ZtPIDL9DLpkIA
 id: left_floating_banner_entity.left_floating_banner_entity.field_link
 field_name: field_link
 entity_type: left_floating_banner_entity
