@@ -1,0 +1,20 @@
+uuid: 51053038-eb21-44cb-ab5d-a1c48ee9ec4c
+langcode: en
+status: true
+dependencies:
+  module:
+    - color_field
+    - node
+id: node.field_sticky_background_color2
+field_name: field_sticky_background_color2
+entity_type: node
+type: color_field_type
+settings:
+  format: '#HEXHEX'
+module: color_field
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

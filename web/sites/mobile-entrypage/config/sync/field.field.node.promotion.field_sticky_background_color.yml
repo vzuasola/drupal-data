@@ -1,0 +1,22 @@
+uuid: 12900438-8f30-41bb-bf8e-6019b2fecf32
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sticky_background_color
+    - node.type.promotion
+  module:
+    - color_field
+id: node.promotion.field_sticky_background_color
+field_name: field_sticky_background_color
+entity_type: node
+bundle: promotion
+label: 'Sticky Background Color'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  opacity: 0
+field_type: color_field_type

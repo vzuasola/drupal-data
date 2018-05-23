@@ -9,6 +9,8 @@ dependencies:
     - field.field.node.promotion.field_banner_link_target
     - field.field.node.promotion.field_casino_gold_only
     - field.field.node.promotion.field_enable_disable_ribbon_tag
+    - field.field.node.promotion.field_enable_sticky_component
+    - field.field.node.promotion.field_enable_sticky_component2
     - field.field.node.promotion.field_hide_countdown
     - field.field.node.promotion.field_hide_promotion
     - field.field.node.promotion.field_mark_as_featured
@@ -29,6 +31,14 @@ dependencies:
     - field.field.node.promotion.field_ribbon_background_color
     - field.field.node.promotion.field_ribbon_label
     - field.field.node.promotion.field_ribbon_text_color
+    - field.field.node.promotion.field_sticky_background_color
+    - field.field.node.promotion.field_sticky_background_color2
+    - field.field.node.promotion.field_sticky_link_target
+    - field.field.node.promotion.field_sticky_link_target2
+    - field.field.node.promotion.field_sticky_text_color
+    - field.field.node.promotion.field_sticky_text_color2
+    - field.field.node.promotion.field_sticky_url
+    - field.field.node.promotion.field_sticky_url2
     - field.field.node.promotion.field_summary_blurb
     - field.field.node.promotion.field_summary_url
     - field.field.node.promotion.field_summary_url_target
@@ -158,6 +168,52 @@ third_party_settings:
         id: ''
         classes: ''
       label: 'Promotion Summary'
+    group_sticky_component:
+      children:
+        - group_sticky_component_one
+        - group_component_two
+      parent_name: ''
+      weight: 20
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: 'Sticky Component'
+    group_sticky_component_one:
+      children:
+        - field_enable_sticky_component
+        - field_sticky_url
+        - field_sticky_link_target
+        - field_sticky_text_color
+        - field_sticky_background_color
+      parent_name: group_sticky_component
+      weight: 20
+      format_type: details
+      format_settings:
+        label: 'Component One'
+        required_fields: true
+        id: ''
+        classes: ''
+        open: false
+      label: 'Component One'
+    group_component_two:
+      children:
+        - field_enable_sticky_component2
+        - field_sticky_url2
+        - field_sticky_link_target2
+        - field_sticky_text_color2
+        - field_sticky_background_color2
+      parent_name: group_sticky_component
+      weight: 21
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: 'Component Two'
 id: node.promotion.default
 targetEntityType: node
 bundle: promotion
@@ -209,6 +265,20 @@ content:
     region: content
   field_enable_disable_ribbon_tag:
     weight: 10
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_enable_sticky_component:
+    weight: 122
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_enable_sticky_component2:
+    weight: 125
     settings:
       display_label: true
     third_party_settings: {  }
@@ -354,6 +424,58 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: color_field_widget_html5
+    region: content
+  field_sticky_background_color:
+    weight: 126
+    settings: {  }
+    third_party_settings: {  }
+    type: color_field_widget_html5
+    region: content
+  field_sticky_background_color2:
+    weight: 129
+    settings: {  }
+    third_party_settings: {  }
+    type: color_field_widget_html5
+    region: content
+  field_sticky_link_target:
+    weight: 124
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_sticky_link_target2:
+    weight: 127
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_sticky_text_color:
+    weight: 125
+    settings: {  }
+    third_party_settings: {  }
+    type: color_field_widget_html5
+    region: content
+  field_sticky_text_color2:
+    weight: 128
+    settings: {  }
+    third_party_settings: {  }
+    type: color_field_widget_html5
+    region: content
+  field_sticky_url:
+    weight: 123
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_sticky_url2:
+    weight: 126
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
     region: content
   field_summary_blurb:
     weight: 23
