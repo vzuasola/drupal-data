@@ -139,10 +139,6 @@ class ConfigurationResource extends ResourceBase {
           $file_id = $data['partners_logo'][0];
           $data['partners_image_url'] = $this->getFileRelativePath($file_id);
 
-          $fid = $data['tablet_partners_logo'][0];
-          $data['tablet_partners_logo_url'] = $this->getFileRelativePath($fid);
-          break;
-
         case 'page_not_found':
           $file_id = $data['page_not_found_image'][0];
 

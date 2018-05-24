@@ -1,12 +1,12 @@
-uuid: 100e7c97-4fa1-4b5a-901d-f8870ccbbf24
+uuid: 18ee84aa-385e-4a92-9dba-6d28a72ae90e
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_enable_sticky_component2
+    - field.storage.node.field_field_enable_sticky_post
     - node.type.promotion
-id: node.promotion.field_enable_sticky_component2
-field_name: field_enable_sticky_component2
+id: node.promotion.field_field_enable_sticky_post
+field_name: field_field_enable_sticky_post
 entity_type: node
 bundle: promotion
 label: 'Enable sticky component'

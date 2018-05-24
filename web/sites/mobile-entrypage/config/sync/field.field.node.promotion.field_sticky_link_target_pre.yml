@@ -1,14 +1,14 @@
-uuid: da6a12b0-ce44-4345-a477-265d5266eb09
+uuid: d8813b0d-9f3a-4025-9323-c08e5ae0eae0
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_sticky_link_target2
+    - field.storage.node.field_sticky_link_target_pre
     - node.type.promotion
   module:
     - options
-id: node.promotion.field_sticky_link_target2
-field_name: field_sticky_link_target2
+id: node.promotion.field_sticky_link_target_pre
+field_name: field_sticky_link_target_pre
 entity_type: node
 bundle: promotion
 label: 'Sticky Link Target'
