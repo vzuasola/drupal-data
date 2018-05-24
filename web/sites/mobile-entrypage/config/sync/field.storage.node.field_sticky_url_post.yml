@@ -1,15 +1,16 @@
-uuid: de8f3c51-bfe1-4688-b8c8-3307c425f98e
+uuid: 0203027b-0cb7-498b-aa28-a4a5f7262f3d
 langcode: en
 status: true
 dependencies:
   module:
+    - link
     - node
-id: node.field_post_hide_promotion
-field_name: field_post_hide_promotion
+id: node.field_sticky_url_post
+field_name: field_sticky_url_post
 entity_type: node
-type: boolean
+type: link
 settings: {  }
-module: core
+module: link
 locked: false
 cardinality: 1
 translatable: true

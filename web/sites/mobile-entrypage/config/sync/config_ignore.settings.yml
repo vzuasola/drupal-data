@@ -1,10 +1,10 @@
 ignored_config_entities:
-  - 'webform.webform.*'
-  - 'webcomposer_config.*'
-  - 'system.menu.*'
-  - 'block.*'
-  - 'filter.*'
-  - 'language.*'
-  - 'devel.*'
+  0: 'webform.webform.*'
+  2: 'webcomposer_config.*'
+  4: 'system.menu.*'
+  6: 'block.*'
+  8: ~block.block.languagedropdownswitcher
+  10: 'filter.*'
+  12: 'devel.*'
 _core:
   default_config_hash: UVH1aJ4b44UM-VdPVN7hNNuuVqfReJxwfVeDQH1Hvsk

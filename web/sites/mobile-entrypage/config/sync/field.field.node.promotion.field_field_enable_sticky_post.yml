@@ -1,15 +1,15 @@
-uuid: 8eb4fc2a-4932-4252-915f-286fbb140c04
+uuid: 18ee84aa-385e-4a92-9dba-6d28a72ae90e
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_post_mark_as_featured
+    - field.storage.node.field_field_enable_sticky_post
     - node.type.promotion
-id: node.promotion.field_post_mark_as_featured
-field_name: field_post_mark_as_featured
+id: node.promotion.field_field_enable_sticky_post
+field_name: field_field_enable_sticky_post
 entity_type: node
 bundle: promotion
-label: 'Mark as Featured on Post Login'
+label: 'Enable sticky component'
 description: ''
 required: false
 translatable: true

@@ -1,15 +1,16 @@
-uuid: 024b696a-ff4d-445b-80c3-b0f9616a4e16
+uuid: b746c54e-fa39-4377-b0d5-bdc90657543a
 langcode: en
 status: true
 dependencies:
   module:
+    - link
     - node
-id: node.field_post_mark_as_featured
-field_name: field_post_mark_as_featured
+id: node.field_sticky_url_post2
+field_name: field_sticky_url_post2
 entity_type: node
-type: boolean
+type: link
 settings: {  }
-module: core
+module: link
 locked: false
 cardinality: 1
 translatable: true

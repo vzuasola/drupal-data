@@ -1,15 +1,15 @@
-uuid: 17379de0-4d7e-4d4b-a986-1839d55e5ef8
+uuid: 6281cbae-1681-4c7e-95c2-1e1c717c233c
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_post_hide_promotion
+    - field.storage.node.field_field_enable_sticky_pre
     - node.type.promotion
-id: node.promotion.field_post_hide_promotion
-field_name: field_post_hide_promotion
+id: node.promotion.field_field_enable_sticky_pre
+field_name: field_field_enable_sticky_pre
 entity_type: node
 bundle: promotion
-label: 'Hide Promotion on Post Login'
+label: 'Enable sticky component'
 description: ''
 required: false
 translatable: true

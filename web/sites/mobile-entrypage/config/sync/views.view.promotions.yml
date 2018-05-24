@@ -5,7 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_product_category
     - node.type.promotion
-    - system.menu.main
+    - system.menu.admin
     - taxonomy.vocabulary.promotions_product_filter
   module:
     - draggableviews
@@ -412,7 +412,7 @@ display:
           plugin_id: numeric
       display_extenders: {  }
     cache_metadata:
-      max-age: 0
+      max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
@@ -426,10 +426,10 @@ display:
     display_plugin: page
     id: page_1
     display_title: 'Promotions per Product'
-    position: 1
+    position: 2
     display_options:
       display_extenders: {  }
-      path: admin/config/promotions
+      path: admin/config/mobile_promotions/products
       fields:
         title:
           id: title
@@ -760,42 +760,6 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           plugin_id: boolean
-        field_post_hide_promotion_value:
-          id: field_post_hide_promotion_value
-          table: node__field_post_hide_promotion
-          field: field_post_hide_promotion_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: '='
-          value: '0'
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          plugin_id: boolean
       filter_groups:
         operator: AND
         groups:
@@ -803,12 +767,12 @@ display:
       menu:
         type: normal
         title: 'Promotions Per Product'
-        description: ''
+        description: 'Sort promotions per product'
         expanded: false
-        parent: ''
-        weight: 0
+        parent: mobile_promotions.list
+        weight: 10
         context: '0'
-        menu_name: main
+        menu_name: admin
       style:
         type: table
         options:
@@ -866,7 +830,7 @@ display:
     display_plugin: page
     id: page_2
     display_title: 'Featured Promotions'
-    position: 3
+    position: 1
     display_options:
       display_extenders: {  }
       display_description: 'View featured promotions'
@@ -1016,42 +980,6 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           plugin_id: boolean
-        field_post_mark_as_featured_value:
-          id: field_post_mark_as_featured_value
-          table: node__field_post_mark_as_featured
-          field: field_post_mark_as_featured_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: '='
-          value: '1'
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          plugin_id: boolean
         field_hide_promotion_value:
           id: field_hide_promotion_value
           table: node__field_hide_promotion
@@ -1088,56 +1016,20 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           plugin_id: boolean
-        field_post_hide_promotion_value:
-          id: field_post_hide_promotion_value
-          table: node__field_post_hide_promotion
-          field: field_post_hide_promotion_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: '='
-          value: '0'
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          plugin_id: boolean
       filter_groups:
         operator: AND
         groups:
           1: AND
-      path: admin/config/promotions/featured
+      path: admin/config/mobile_promotions/featured
       menu:
         type: normal
-        title: 'Featured Promotions'
-        description: ''
+        title: 'Manage Featured Promotions'
+        description: 'Sort featured promotions'
         expanded: false
-        parent: ''
-        weight: 0
+        parent: mobile_promotions.list
+        weight: 5
         context: '0'
-        menu_name: main
+        menu_name: admin
       fields:
         title:
           id: title
@@ -1337,7 +1229,7 @@ display:
     display_plugin: rest_export
     id: rest_export_1
     display_title: 'REST export'
-    position: 2
+    position: 4
     display_options:
       display_extenders: {  }
       path: api/promotions
@@ -1348,6 +1240,8 @@ display:
         row: false
         arguments: false
         cache: false
+        filters: false
+        filter_groups: false
       row:
         type: data_entity
         options: {  }
@@ -1361,11 +1255,278 @@ display:
       cache:
         type: none
         options: {  }
+      filters:
+        status:
+          value: '1'
+          table: node_field_data
+          field: status
+          plugin_id: boolean
+          entity_type: node
+          entity_field: status
+          id: status
+          expose:
+            operator: ''
+          group: 1
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          value:
+            promotion: promotion
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+        langcode:
+          id: langcode
+          table: node_field_data
+          field: langcode
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: node
+          entity_field: langcode
+          plugin_id: language
+        field_hide_promotion_value:
+          id: field_hide_promotion_value
+          table: node__field_hide_promotion
+          field: field_hide_promotion_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: '0'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: boolean
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_interface'
         - request_format
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_product_category'
+  rest_export_2:
+    display_plugin: rest_export
+    id: rest_export_2
+    display_title: 'Featured REST'
+    position: 3
+    display_options:
+      display_extenders: {  }
+      display_description: ''
+      title: 'Featured REST API'
+      defaults:
+        title: false
+        filters: false
+        filter_groups: false
+      filters:
+        status:
+          value: '1'
+          table: node_field_data
+          field: status
+          plugin_id: boolean
+          entity_type: node
+          entity_field: status
+          id: status
+          expose:
+            operator: ''
+          group: 1
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          value:
+            promotion: promotion
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+        langcode:
+          id: langcode
+          table: node_field_data
+          field: langcode
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: node
+          entity_field: langcode
+          plugin_id: language
+        field_hide_promotion_value:
+          id: field_hide_promotion_value
+          table: node__field_hide_promotion
+          field: field_hide_promotion_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: '0'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: boolean
+        field_mark_as_featured_value:
+          id: field_mark_as_featured_value
+          table: node__field_mark_as_featured
+          field: field_mark_as_featured_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: boolean
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      pager:
+        type: none
+        options:
+          offset: 0
+      path: api/featured_promotions
+      rendering_language: '***LANGUAGE_language_interface***'
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_interface'
+        - request_format
+        - url
         - 'user.node_grants:view'
         - user.permissions
       tags:
