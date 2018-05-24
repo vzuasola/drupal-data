@@ -1,12 +1,12 @@
-uuid: 6af9b2ae-acde-4778-a4be-4588eee8771a
+uuid: a65e8a9c-6ae9-4799-b2b3-d47db78b8650
 langcode: en
 status: true
 dependencies:
   module:
     - color_field
     - node
-id: node.field_sticky_text_color2
-field_name: field_sticky_text_color2
+id: node.field_sticky_background_post
+field_name: field_sticky_background_post
 entity_type: node
 type: color_field_type
 settings:

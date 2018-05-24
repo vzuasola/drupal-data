@@ -1,17 +1,17 @@
-uuid: 12900438-8f30-41bb-bf8e-6019b2fecf32
+uuid: dbc13077-00af-4618-b60a-d339cd21041d
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_sticky_background_color
+    - field.storage.node.field_sticky_text_color_post2
     - node.type.promotion
   module:
     - color_field
-id: node.promotion.field_sticky_background_color
-field_name: field_sticky_background_color
+id: node.promotion.field_sticky_text_color_post2
+field_name: field_sticky_text_color_post2
 entity_type: node
 bundle: promotion
-label: 'Sticky Background Color'
+label: 'Sticky Text Color'
 description: ''
 required: false
 translatable: false

@@ -9,10 +9,10 @@ dependencies:
     - field.field.node.promotion.field_banner_link_target
     - field.field.node.promotion.field_casino_gold_only
     - field.field.node.promotion.field_enable_disable_ribbon_tag
-    - field.field.node.promotion.field_enable_sticky_component
-    - field.field.node.promotion.field_enable_sticky_component2
-    - field.field.node.promotion.field_enable_sticky_pre
-    - field.field.node.promotion.field_enable_sticky_pre2
+    - field.field.node.promotion.field_field_enable_sticky_post
+    - field.field.node.promotion.field_field_enable_sticky_post2
+    - field.field.node.promotion.field_field_enable_sticky_pre
+    - field.field.node.promotion.field_field_enable_sticky_pre2
     - field.field.node.promotion.field_hide_countdown
     - field.field.node.promotion.field_hide_promotion
     - field.field.node.promotion.field_mark_as_featured
@@ -31,20 +31,20 @@ dependencies:
     - field.field.node.promotion.field_ribbon_background_color
     - field.field.node.promotion.field_ribbon_label
     - field.field.node.promotion.field_ribbon_text_color
-    - field.field.node.promotion.field_sticky_background_color
-    - field.field.node.promotion.field_sticky_background_color2
+    - field.field.node.promotion.field_sticky_background_post
+    - field.field.node.promotion.field_sticky_background_post2
     - field.field.node.promotion.field_sticky_background_pre
     - field.field.node.promotion.field_sticky_background_pre2
-    - field.field.node.promotion.field_sticky_link_target
-    - field.field.node.promotion.field_sticky_link_target2
+    - field.field.node.promotion.field_sticky_link_target_post
+    - field.field.node.promotion.field_sticky_link_target_post2
     - field.field.node.promotion.field_sticky_link_target_pre
     - field.field.node.promotion.field_sticky_link_target_pre2
-    - field.field.node.promotion.field_sticky_text_color
-    - field.field.node.promotion.field_sticky_text_color2
+    - field.field.node.promotion.field_sticky_text_color_post
+    - field.field.node.promotion.field_sticky_text_color_post2
     - field.field.node.promotion.field_sticky_text_color_pre
     - field.field.node.promotion.field_sticky_text_color_pre2
-    - field.field.node.promotion.field_sticky_url
-    - field.field.node.promotion.field_sticky_url2
+    - field.field.node.promotion.field_sticky_url_post
+    - field.field.node.promotion.field_sticky_url_post2
     - field.field.node.promotion.field_sticky_url_pre
     - field.field.node.promotion.field_sticky_url_pre2
     - field.field.node.promotion.field_summary_blurb
@@ -120,8 +120,8 @@ content:
     third_party_settings: {  }
     type: boolean
     region: content
-  field_enable_sticky_component:
-    weight: 36
+  field_field_enable_sticky_post:
+    weight: 59
     label: above
     settings:
       format: default
@@ -130,8 +130,8 @@ content:
     third_party_settings: {  }
     type: boolean
     region: content
-  field_enable_sticky_component2:
-    weight: 39
+  field_field_enable_sticky_post2:
+    weight: 61
     label: above
     settings:
       format: default
@@ -140,8 +140,8 @@ content:
     third_party_settings: {  }
     type: boolean
     region: content
-  field_enable_sticky_pre:
-    weight: 47
+  field_field_enable_sticky_pre:
+    weight: 58
     label: above
     settings:
       format: default
@@ -150,8 +150,8 @@ content:
     third_party_settings: {  }
     type: boolean
     region: content
-  field_enable_sticky_pre2:
-    weight: 52
+  field_field_enable_sticky_pre2:
+    weight: 60
     label: above
     settings:
       format: default
@@ -318,8 +318,8 @@ content:
     third_party_settings: {  }
     type: color_field_formatter_text
     region: content
-  field_sticky_background_color:
-    weight: 45
+  field_sticky_background_post:
+    weight: 62
     label: above
     settings:
       format: hex
@@ -327,8 +327,8 @@ content:
     third_party_settings: {  }
     type: color_field_formatter_text
     region: content
-  field_sticky_background_color2:
-    weight: 46
+  field_sticky_background_post2:
+    weight: 63
     label: above
     settings:
       format: hex
@@ -354,15 +354,15 @@ content:
     third_party_settings: {  }
     type: color_field_formatter_text
     region: content
-  field_sticky_link_target:
-    weight: 41
+  field_sticky_link_target_post:
+    weight: 64
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
-  field_sticky_link_target2:
-    weight: 42
+  field_sticky_link_target_post2:
+    weight: 65
     label: above
     settings: {  }
     third_party_settings: {  }
@@ -382,8 +382,8 @@ content:
     third_party_settings: {  }
     type: list_default
     region: content
-  field_sticky_text_color:
-    weight: 43
+  field_sticky_text_color_post:
+    weight: 66
     label: above
     settings:
       format: hex
@@ -391,8 +391,8 @@ content:
     third_party_settings: {  }
     type: color_field_formatter_text
     region: content
-  field_sticky_text_color2:
-    weight: 44
+  field_sticky_text_color_post2:
+    weight: 67
     label: above
     settings:
       format: hex
@@ -418,8 +418,8 @@ content:
     third_party_settings: {  }
     type: color_field_formatter_text
     region: content
-  field_sticky_url:
-    weight: 37
+  field_sticky_url_post:
+    weight: 68
     label: above
     settings:
       trim_length: 80
@@ -430,8 +430,8 @@ content:
     third_party_settings: {  }
     type: link
     region: content
-  field_sticky_url2:
-    weight: 40
+  field_sticky_url_post2:
+    weight: 69
     label: above
     settings:
       trim_length: 80

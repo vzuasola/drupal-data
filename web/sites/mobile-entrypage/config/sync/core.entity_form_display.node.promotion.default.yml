@@ -9,10 +9,10 @@ dependencies:
     - field.field.node.promotion.field_banner_link_target
     - field.field.node.promotion.field_casino_gold_only
     - field.field.node.promotion.field_enable_disable_ribbon_tag
-    - field.field.node.promotion.field_enable_sticky_component
-    - field.field.node.promotion.field_enable_sticky_component2
-    - field.field.node.promotion.field_enable_sticky_pre
-    - field.field.node.promotion.field_enable_sticky_pre2
+    - field.field.node.promotion.field_field_enable_sticky_post
+    - field.field.node.promotion.field_field_enable_sticky_post2
+    - field.field.node.promotion.field_field_enable_sticky_pre
+    - field.field.node.promotion.field_field_enable_sticky_pre2
     - field.field.node.promotion.field_hide_countdown
     - field.field.node.promotion.field_hide_promotion
     - field.field.node.promotion.field_mark_as_featured
@@ -31,20 +31,20 @@ dependencies:
     - field.field.node.promotion.field_ribbon_background_color
     - field.field.node.promotion.field_ribbon_label
     - field.field.node.promotion.field_ribbon_text_color
-    - field.field.node.promotion.field_sticky_background_color
-    - field.field.node.promotion.field_sticky_background_color2
+    - field.field.node.promotion.field_sticky_background_post
+    - field.field.node.promotion.field_sticky_background_post2
     - field.field.node.promotion.field_sticky_background_pre
     - field.field.node.promotion.field_sticky_background_pre2
-    - field.field.node.promotion.field_sticky_link_target
-    - field.field.node.promotion.field_sticky_link_target2
+    - field.field.node.promotion.field_sticky_link_target_post
+    - field.field.node.promotion.field_sticky_link_target_post2
     - field.field.node.promotion.field_sticky_link_target_pre
     - field.field.node.promotion.field_sticky_link_target_pre2
-    - field.field.node.promotion.field_sticky_text_color
-    - field.field.node.promotion.field_sticky_text_color2
+    - field.field.node.promotion.field_sticky_text_color_post
+    - field.field.node.promotion.field_sticky_text_color_post2
     - field.field.node.promotion.field_sticky_text_color_pre
     - field.field.node.promotion.field_sticky_text_color_pre2
-    - field.field.node.promotion.field_sticky_url
-    - field.field.node.promotion.field_sticky_url2
+    - field.field.node.promotion.field_sticky_url_post
+    - field.field.node.promotion.field_sticky_url_post2
     - field.field.node.promotion.field_sticky_url_pre
     - field.field.node.promotion.field_sticky_url_pre2
     - field.field.node.promotion.field_summary_blurb
@@ -189,11 +189,11 @@ third_party_settings:
       label: 'Sticky Component'
     group_sticky_component_one:
       children:
-        - field_enable_sticky_component
-        - field_sticky_url
-        - field_sticky_link_target
-        - field_sticky_text_color
-        - field_sticky_background_color
+        - field_field_enable_sticky_post
+        - field_sticky_url_post
+        - field_sticky_link_target_post
+        - field_sticky_text_color_post
+        - field_sticky_background_post
       parent_name: group_sticky_component
       weight: 20
       format_type: details
@@ -206,11 +206,11 @@ third_party_settings:
       label: 'Component One'
     group_component_two:
       children:
-        - field_enable_sticky_component2
-        - field_sticky_url2
-        - field_sticky_link_target2
-        - field_sticky_text_color2
-        - field_sticky_background_color2
+        - field_field_enable_sticky_post2
+        - field_sticky_url_post2
+        - field_sticky_link_target_post2
+        - field_sticky_text_color_post2
+        - field_sticky_background_post2
       parent_name: group_sticky_component
       weight: 21
       format_type: details
@@ -235,7 +235,7 @@ third_party_settings:
       label: 'Sticky Component'
     group_component_one_pre:
       children:
-        - field_enable_sticky_pre
+        - field_field_enable_sticky_pre
         - field_sticky_url_pre
         - field_sticky_link_target_pre
         - field_sticky_text_color_pre
@@ -251,7 +251,7 @@ third_party_settings:
       label: 'Component One'
     group_component_two_pre:
       children:
-        - field_enable_sticky_pre2
+        - field_field_enable_sticky_pre2
         - field_sticky_url_pre2
         - field_sticky_link_target_pre2
         - field_sticky_text_color_pre2
@@ -321,29 +321,29 @@ content:
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
-  field_enable_sticky_component:
-    weight: 122
+  field_field_enable_sticky_post:
+    weight: 136
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
-  field_enable_sticky_component2:
-    weight: 125
+  field_field_enable_sticky_post2:
+    weight: 138
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
-  field_enable_sticky_pre:
-    weight: 21
+  field_field_enable_sticky_pre:
+    weight: 135
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
-  field_enable_sticky_pre2:
-    weight: 130
+  field_field_enable_sticky_pre2:
+    weight: 137
     settings:
       display_label: true
     third_party_settings: {  }
@@ -476,88 +476,88 @@ content:
     third_party_settings: {  }
     type: color_field_widget_html5
     region: content
-  field_sticky_background_color:
-    weight: 126
+  field_sticky_background_post:
+    weight: 140
     settings: {  }
     third_party_settings: {  }
     type: color_field_widget_html5
     region: content
-  field_sticky_background_color2:
-    weight: 129
+  field_sticky_background_post2:
+    weight: 142
     settings: {  }
     third_party_settings: {  }
     type: color_field_widget_html5
     region: content
   field_sticky_background_pre:
-    weight: 25
+    weight: 139
     settings: {  }
     third_party_settings: {  }
     type: color_field_widget_html5
     region: content
   field_sticky_background_pre2:
-    weight: 134
+    weight: 141
     settings: {  }
     third_party_settings: {  }
     type: color_field_widget_html5
     region: content
-  field_sticky_link_target:
-    weight: 124
+  field_sticky_link_target_post:
+    weight: 138
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
-  field_sticky_link_target2:
-    weight: 127
+  field_sticky_link_target_post2:
+    weight: 140
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_sticky_link_target_pre:
-    weight: 23
+    weight: 137
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_sticky_link_target_pre2:
-    weight: 132
+    weight: 139
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
-  field_sticky_text_color:
-    weight: 125
+  field_sticky_text_color_post:
+    weight: 139
     settings: {  }
     third_party_settings: {  }
     type: color_field_widget_html5
     region: content
-  field_sticky_text_color2:
-    weight: 128
+  field_sticky_text_color_post2:
+    weight: 141
     settings: {  }
     third_party_settings: {  }
     type: color_field_widget_html5
     region: content
   field_sticky_text_color_pre:
-    weight: 24
+    weight: 138
     settings: {  }
     third_party_settings: {  }
     type: color_field_widget_html5
     region: content
   field_sticky_text_color_pre2:
-    weight: 133
+    weight: 140
     settings: {  }
     third_party_settings: {  }
     type: color_field_widget_html5
     region: content
-  field_sticky_url:
-    weight: 123
+  field_sticky_url_post:
+    weight: 137
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
     region: content
-  field_sticky_url2:
-    weight: 126
+  field_sticky_url_post2:
+    weight: 139
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -565,7 +565,7 @@ content:
     type: link_default
     region: content
   field_sticky_url_pre:
-    weight: 22
+    weight: 136
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -573,7 +573,7 @@ content:
     type: link_default
     region: content
   field_sticky_url_pre2:
-    weight: 131
+    weight: 138
     settings:
       placeholder_url: ''
       placeholder_title: ''

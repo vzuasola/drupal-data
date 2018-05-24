@@ -1,14 +1,14 @@
-uuid: b1bc54e9-7036-4211-bfe5-56c05578f0c5
+uuid: 70477381-e5df-47f6-9ead-751a462e1314
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_sticky_url
+    - field.storage.node.field_sticky_url_post
     - node.type.promotion
   module:
     - link
-id: node.promotion.field_sticky_url
-field_name: field_sticky_url
+id: node.promotion.field_sticky_url_post
+field_name: field_sticky_url_post
 entity_type: node
 bundle: promotion
 label: 'Sticky URL'

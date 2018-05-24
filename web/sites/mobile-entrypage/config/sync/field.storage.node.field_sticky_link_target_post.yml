@@ -1,12 +1,12 @@
-uuid: 64edd5f1-2cda-4a66-ba63-6c233a69abd5
+uuid: 85ebb5a3-f63d-41ee-b887-70b14260c687
 langcode: en
 status: true
 dependencies:
   module:
     - node
     - options
-id: node.field_sticky_link_target2
-field_name: field_sticky_link_target2
+id: node.field_sticky_link_target_post
+field_name: field_sticky_link_target_post
 entity_type: node
 type: list_string
 settings:
