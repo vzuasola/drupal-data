@@ -102,3 +102,18 @@ function webcomposer_audit_webcomposer_config_schema_translate($name, $data, $be
     // do nothing
   }
 }
+
+/**
+ *
+ */
+function webcomposer_audit_webcomposer_form_config_schema_update($name, $data, $before)
+{
+  $entity = new \Drupal\webcomposer_audit\Entity\RawFormEntity($name, $data);
+  $entity->setOriginal(new \Drupal\webcomposer_audit\Entity\RawFormEntity($name, $before));
+
+  try {
+    \Drupal::service('webcomposer_audit.database_storage')->update($entity);
+  } catch (\Exception $e) {
+    // do nothing
+  }
+}

@@ -43,15 +43,16 @@ class ManageForm extends FormBase {
       $container->get('config.typed'),
       $container->get('language_manager'),
       $container->get('webcomposer_form_manager.form_manager'),
-      $container->get('current_route_match')
+      $container->get('current_route_match'),
+      $container->get('module_handler')
     );
   }
 
   /**
    * Class constructor.
    */
-  public function __construct($typedConfigManager, $languageManager, $formManager, $route) {
-    parent::__construct($typedConfigManager, $languageManager);
+  public function __construct($typedConfigManager, $languageManager, $formManager, $route, $moduleHandler) {
+    parent::__construct($typedConfigManager, $languageManager, $moduleHandler);
 
     $this->languageManager = $languageManager;
     $this->formManager = $formManager;

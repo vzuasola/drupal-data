@@ -6,7 +6,7 @@ ignored_config_entities:
   8: 'block.*'
   10: 'devel.*'
   12: 'webcomposer_config.*'
-  14: 'languange.*'
+  14: 'language.*'
   16: 'keno_config.*'
 _core:
   default_config_hash: UVH1aJ4b44UM-VdPVN7hNNuuVqfReJxwfVeDQH1Hvsk

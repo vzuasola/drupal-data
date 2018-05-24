@@ -58,7 +58,7 @@ class MobilePromotionsForm extends FormBase {
 
     $form['promotions_configuration']['no_available_msg'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('No available promotions default message'),
+      '#title' => $this->t('No available promotions message'),
       '#default_value' => $this->get('no_available_msg'),
       '#translatable' => TRUE,
       '#required' => TRUE,
