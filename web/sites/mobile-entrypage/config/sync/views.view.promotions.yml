@@ -9,6 +9,12 @@ dependencies:
     - system.menu.admin
     - taxonomy.vocabulary.promotions_product_filter
   content:
+    - 'taxonomy_term:promotions_product_filter:5ea7dad9-6142-4069-8ead-d293485c05c2'
+    - 'taxonomy_term:promotions_product_filter:8cf900e2-e660-4770-b5b8-220eaef5880d'
+    - 'taxonomy_term:promotions_product_filter:c6971ec4-1b52-44f9-a6ad-0aaa9443286e'
+    - 'taxonomy_term:promotions_product_filter:d6327ae7-c356-4b22-8877-b05a373c6550'
+    - 'taxonomy_term:promotions_product_filter:f1b0b99f-5b80-415a-8f55-4e4b340792b1'
+    - 'taxonomy_term:promotions_product_filter:f7ebbd28-251a-42ac-acfc-55a96d8f3951'
     - 'taxonomy_term:promotions_product_filter:f8a212e3-f4de-448f-82e5-c647336ef020'
   module:
     - draggableviews
@@ -740,7 +746,13 @@ display:
           admin_label: ''
           operator: or
           value:
+            15: 15
+            21: 21
             16: 16
+            17: 17
+            19: 19
+            20: 20
+            18: 18
           group: 1
           exposed: true
           expose:
