@@ -17,6 +17,7 @@ function webcomposer_marketing_script_uninstall() {
       'field.storage.marketing_script_entity.field_position.yml',
       'field.storage.marketing_script_entity.field_type.yml',
       'language.content_settings.marketing_script_entity.marketing_script_entity.yml',
+      'views.view.marketing_script_list.yml',
     ];
 
     foreach ($keys as $key) {
@@ -31,6 +32,6 @@ function webcomposer_marketing_script_uninstall() {
  * - Add Marketing domain field
  * - Add Domain Option for marketing scirpt to be visible on domains.
  */
-function webcomposer_marketing_script_update_8004() {
+function webcomposer_marketing_script_update_8005() {
    \Drupal::service('config.installer')->installDefaultConfig('module', 'webcomposer_marketing_script');
 }
