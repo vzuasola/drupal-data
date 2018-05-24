@@ -1,0 +1,22 @@
+uuid: 95cbef48-2529-4e12-84e7-53ae1c53eddc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sticky_text_color
+    - node.type.promotion
+  module:
+    - color_field
+id: node.promotion.field_sticky_text_color
+field_name: field_sticky_text_color
+entity_type: node
+bundle: promotion
+label: 'Sticky Text Color'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  opacity: 0
+field_type: color_field_type
