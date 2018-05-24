@@ -1,0 +1,78 @@
+uuid: 0b9bf232-9d1a-4266-ab44-7999c3e99a42
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.game_category.field_category_image_banner
+    - field.field.taxonomy_term.game_category.field_enable
+    - field.field.taxonomy_term.game_category.field_hide_description
+    - field.field.taxonomy_term.game_category.field_hide_name
+    - image.style.thumbnail
+    - taxonomy.vocabulary.game_category
+  module:
+    - image
+    - text
+id: taxonomy_term.game_category.default
+targetEntityType: taxonomy_term
+bundle: game_category
+mode: default
+content:
+  description:
+    type: text_textarea
+    weight: 4
+    region: content
+    settings:
+      placeholder: ''
+      rows: 5
+    third_party_settings: {  }
+  field_category_image_banner:
+    weight: 6
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_enable:
+    weight: 0
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_hide_description:
+    weight: 5
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_hide_name:
+    weight: 3
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  path: true

@@ -1,0 +1,23 @@
+uuid: ce6f8a64-d3ca-440c-9b3a-15aa25320d09
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_enable
+    - taxonomy.vocabulary.game_category
+id: taxonomy_term.game_category.field_enable
+field_name: field_enable
+entity_type: taxonomy_term
+bundle: game_category
+label: Enable
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
