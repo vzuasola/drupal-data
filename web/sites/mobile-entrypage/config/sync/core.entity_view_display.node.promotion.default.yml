@@ -11,6 +11,8 @@ dependencies:
     - field.field.node.promotion.field_enable_disable_ribbon_tag
     - field.field.node.promotion.field_enable_sticky_component
     - field.field.node.promotion.field_enable_sticky_component2
+    - field.field.node.promotion.field_enable_sticky_pre
+    - field.field.node.promotion.field_enable_sticky_pre2
     - field.field.node.promotion.field_hide_countdown
     - field.field.node.promotion.field_hide_promotion
     - field.field.node.promotion.field_mark_as_featured
@@ -31,12 +33,20 @@ dependencies:
     - field.field.node.promotion.field_ribbon_text_color
     - field.field.node.promotion.field_sticky_background_color
     - field.field.node.promotion.field_sticky_background_color2
+    - field.field.node.promotion.field_sticky_background_pre
+    - field.field.node.promotion.field_sticky_background_pre2
     - field.field.node.promotion.field_sticky_link_target
     - field.field.node.promotion.field_sticky_link_target2
+    - field.field.node.promotion.field_sticky_link_target_pre
+    - field.field.node.promotion.field_sticky_link_target_pre2
     - field.field.node.promotion.field_sticky_text_color
     - field.field.node.promotion.field_sticky_text_color2
+    - field.field.node.promotion.field_sticky_text_color_pre
+    - field.field.node.promotion.field_sticky_text_color_pre2
     - field.field.node.promotion.field_sticky_url
     - field.field.node.promotion.field_sticky_url2
+    - field.field.node.promotion.field_sticky_url_pre
+    - field.field.node.promotion.field_sticky_url_pre2
     - field.field.node.promotion.field_summary_blurb
     - field.field.node.promotion.field_summary_url
     - field.field.node.promotion.field_summary_url_target
@@ -122,6 +132,26 @@ content:
     region: content
   field_enable_sticky_component2:
     weight: 39
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_enable_sticky_pre:
+    weight: 47
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_enable_sticky_pre2:
+    weight: 52
     label: above
     settings:
       format: default
@@ -306,6 +336,24 @@ content:
     third_party_settings: {  }
     type: color_field_formatter_text
     region: content
+  field_sticky_background_pre:
+    weight: 51
+    label: above
+    settings:
+      format: hex
+      opacity: '1'
+    third_party_settings: {  }
+    type: color_field_formatter_text
+    region: content
+  field_sticky_background_pre2:
+    weight: 57
+    label: above
+    settings:
+      format: hex
+      opacity: '1'
+    third_party_settings: {  }
+    type: color_field_formatter_text
+    region: content
   field_sticky_link_target:
     weight: 41
     label: above
@@ -315,6 +363,20 @@ content:
     region: content
   field_sticky_link_target2:
     weight: 42
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_sticky_link_target_pre:
+    weight: 53
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_sticky_link_target_pre2:
+    weight: 55
     label: above
     settings: {  }
     third_party_settings: {  }
@@ -338,6 +400,24 @@ content:
     third_party_settings: {  }
     type: color_field_formatter_text
     region: content
+  field_sticky_text_color_pre:
+    weight: 50
+    label: above
+    settings:
+      format: hex
+      opacity: '1'
+    third_party_settings: {  }
+    type: color_field_formatter_text
+    region: content
+  field_sticky_text_color_pre2:
+    weight: 56
+    label: above
+    settings:
+      format: hex
+      opacity: '1'
+    third_party_settings: {  }
+    type: color_field_formatter_text
+    region: content
   field_sticky_url:
     weight: 37
     label: above
@@ -352,6 +432,30 @@ content:
     region: content
   field_sticky_url2:
     weight: 40
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_sticky_url_pre:
+    weight: 48
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_sticky_url_pre2:
+    weight: 54
     label: above
     settings:
       trim_length: 80

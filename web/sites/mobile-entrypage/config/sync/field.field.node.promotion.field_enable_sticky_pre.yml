@@ -1,0 +1,23 @@
+uuid: 63e05562-586f-4776-9fc4-9045dc8de9d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_enable_sticky_pre
+    - node.type.promotion
+id: node.promotion.field_enable_sticky_pre
+field_name: field_enable_sticky_pre
+entity_type: node
+bundle: promotion
+label: 'Enable sticky component'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
