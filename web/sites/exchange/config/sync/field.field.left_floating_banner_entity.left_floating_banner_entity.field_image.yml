@@ -11,11 +11,11 @@ dependencies:
 third_party_settings:
   content_translation:
     translation_sync:
-      alt: alt
-      title: title
-      file: '0'
+      file: file
+      alt: '0'
+      title: '0'
 _core:
-  default_config_hash: nPUanhcj0GxWT_mPiPyySRT3opyEYI3-bH_KYZbqqu0
+  default_config_hash: NJtO2IHRNPuD6QE5XAfXgvEjLTiFdYxsj6x1UD_Hwcs
 id: left_floating_banner_entity.left_floating_banner_entity.field_image
 field_name: field_image
 entity_type: left_floating_banner_entity
