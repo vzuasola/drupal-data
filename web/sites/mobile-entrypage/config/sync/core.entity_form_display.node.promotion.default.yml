@@ -9,6 +9,10 @@ dependencies:
     - field.field.node.promotion.field_banner_link_target
     - field.field.node.promotion.field_casino_gold_only
     - field.field.node.promotion.field_enable_disable_ribbon_tag
+    - field.field.node.promotion.field_field_enable_sticky_post
+    - field.field.node.promotion.field_field_enable_sticky_post2
+    - field.field.node.promotion.field_field_enable_sticky_pre
+    - field.field.node.promotion.field_field_enable_sticky_pre2
     - field.field.node.promotion.field_hide_countdown
     - field.field.node.promotion.field_hide_promotion
     - field.field.node.promotion.field_mark_as_featured
@@ -27,6 +31,22 @@ dependencies:
     - field.field.node.promotion.field_ribbon_background_color
     - field.field.node.promotion.field_ribbon_label
     - field.field.node.promotion.field_ribbon_text_color
+    - field.field.node.promotion.field_sticky_background_post
+    - field.field.node.promotion.field_sticky_background_post2
+    - field.field.node.promotion.field_sticky_background_pre
+    - field.field.node.promotion.field_sticky_background_pre2
+    - field.field.node.promotion.field_sticky_link_target_post
+    - field.field.node.promotion.field_sticky_link_target_post2
+    - field.field.node.promotion.field_sticky_link_target_pre
+    - field.field.node.promotion.field_sticky_link_target_pre2
+    - field.field.node.promotion.field_sticky_text_color_post
+    - field.field.node.promotion.field_sticky_text_color_post2
+    - field.field.node.promotion.field_sticky_text_color_pre
+    - field.field.node.promotion.field_sticky_text_color_pre2
+    - field.field.node.promotion.field_sticky_url_post
+    - field.field.node.promotion.field_sticky_url_post2
+    - field.field.node.promotion.field_sticky_url_pre
+    - field.field.node.promotion.field_sticky_url_pre2
     - field.field.node.promotion.field_summary_blurb
     - field.field.node.promotion.field_summary_url
     - field.field.node.promotion.field_summary_url_target
@@ -66,6 +86,7 @@ third_party_settings:
         - group_summary
         - group_promotion_banner
         - body
+        - group_sticky_component_pre
       parent_name: ''
       weight: 6
       format_type: details
@@ -82,6 +103,7 @@ third_party_settings:
         - group_promo
         - field_post_body
         - field_casino_gold_only
+        - group_sticky_component
       parent_name: ''
       weight: 7
       format_type: details
@@ -152,6 +174,97 @@ third_party_settings:
         id: ''
         classes: ''
       label: 'Promotion Summary'
+    group_sticky_component:
+      children:
+        - group_sticky_component_one
+        - group_component_two
+      parent_name: group_post_login_promotion
+      weight: 28
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: 'Sticky Component'
+    group_sticky_component_one:
+      children:
+        - field_field_enable_sticky_post
+        - field_sticky_url_post
+        - field_sticky_link_target_post
+        - field_sticky_text_color_post
+        - field_sticky_background_post
+      parent_name: group_sticky_component
+      weight: 20
+      format_type: details
+      format_settings:
+        label: 'Component One'
+        required_fields: true
+        id: ''
+        classes: ''
+        open: false
+      label: 'Component One'
+    group_component_two:
+      children:
+        - field_field_enable_sticky_post2
+        - field_sticky_url_post2
+        - field_sticky_link_target_post2
+        - field_sticky_text_color_post2
+        - field_sticky_background_post2
+      parent_name: group_sticky_component
+      weight: 21
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: 'Component Two'
+    group_sticky_component_pre:
+      children:
+        - group_component_one_pre
+        - group_component_two_pre
+      parent_name: group_pre
+      weight: 13
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: 'Sticky Component'
+    group_component_one_pre:
+      children:
+        - field_field_enable_sticky_pre
+        - field_sticky_url_pre
+        - field_sticky_link_target_pre
+        - field_sticky_text_color_pre
+        - field_sticky_background_pre
+      parent_name: group_sticky_component_pre
+      weight: 20
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: 'Component One'
+    group_component_two_pre:
+      children:
+        - field_field_enable_sticky_pre2
+        - field_sticky_url_pre2
+        - field_sticky_link_target_pre2
+        - field_sticky_text_color_pre2
+        - field_sticky_background_pre2
+      parent_name: group_sticky_component_pre
+      weight: 21
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: 'Component Two'
 id: node.promotion.default
 targetEntityType: node
 bundle: promotion
@@ -203,6 +316,34 @@ content:
     region: content
   field_enable_disable_ribbon_tag:
     weight: 10
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_field_enable_sticky_post:
+    weight: 136
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_field_enable_sticky_post2:
+    weight: 138
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_field_enable_sticky_pre:
+    weight: 135
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_field_enable_sticky_pre2:
+    weight: 137
     settings:
       display_label: true
     third_party_settings: {  }
@@ -334,6 +475,110 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: color_field_widget_html5
+    region: content
+  field_sticky_background_post:
+    weight: 140
+    settings: {  }
+    third_party_settings: {  }
+    type: color_field_widget_html5
+    region: content
+  field_sticky_background_post2:
+    weight: 142
+    settings: {  }
+    third_party_settings: {  }
+    type: color_field_widget_html5
+    region: content
+  field_sticky_background_pre:
+    weight: 139
+    settings: {  }
+    third_party_settings: {  }
+    type: color_field_widget_html5
+    region: content
+  field_sticky_background_pre2:
+    weight: 141
+    settings: {  }
+    third_party_settings: {  }
+    type: color_field_widget_html5
+    region: content
+  field_sticky_link_target_post:
+    weight: 138
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_sticky_link_target_post2:
+    weight: 140
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_sticky_link_target_pre:
+    weight: 137
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_sticky_link_target_pre2:
+    weight: 139
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_sticky_text_color_post:
+    weight: 139
+    settings: {  }
+    third_party_settings: {  }
+    type: color_field_widget_html5
+    region: content
+  field_sticky_text_color_post2:
+    weight: 141
+    settings: {  }
+    third_party_settings: {  }
+    type: color_field_widget_html5
+    region: content
+  field_sticky_text_color_pre:
+    weight: 138
+    settings: {  }
+    third_party_settings: {  }
+    type: color_field_widget_html5
+    region: content
+  field_sticky_text_color_pre2:
+    weight: 140
+    settings: {  }
+    third_party_settings: {  }
+    type: color_field_widget_html5
+    region: content
+  field_sticky_url_post:
+    weight: 137
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_sticky_url_post2:
+    weight: 139
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_sticky_url_pre:
+    weight: 136
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_sticky_url_pre2:
+    weight: 138
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
     region: content
   field_summary_blurb:
     weight: 23

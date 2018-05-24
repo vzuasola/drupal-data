@@ -1,0 +1,30 @@
+uuid: bfd7c492-0bcc-448a-a3bf-73c5d371633a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_sticky_link_target_post2
+field_name: field_sticky_link_target_post2
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: _top
+      label: 'Same Window'
+    -
+      value: _blank
+      label: 'New Tab'
+    -
+      value: window
+      label: 'New Window'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

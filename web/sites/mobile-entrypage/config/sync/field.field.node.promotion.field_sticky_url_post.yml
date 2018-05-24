@@ -1,0 +1,23 @@
+uuid: 70477381-e5df-47f6-9ead-751a462e1314
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sticky_url_post
+    - node.type.promotion
+  module:
+    - link
+id: node.promotion.field_sticky_url_post
+field_name: field_sticky_url_post
+entity_type: node
+bundle: promotion
+label: 'Sticky URL'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

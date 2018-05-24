@@ -1,0 +1,21 @@
+uuid: d8813b0d-9f3a-4025-9323-c08e5ae0eae0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sticky_link_target_pre
+    - node.type.promotion
+  module:
+    - options
+id: node.promotion.field_sticky_link_target_pre
+field_name: field_sticky_link_target_pre
+entity_type: node
+bundle: promotion
+label: 'Sticky Link Target'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
