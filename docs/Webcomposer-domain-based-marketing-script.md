@@ -7,10 +7,9 @@ Our current Marketing script module uses a different structure to manage marketi
 
 **Important**
 
-For Frontend to identify that the marketing script applicable to what domain. We need to configure
-respective domain in CMS while adding marketing script field name "Marketing Domain".
+For Frontend to identify that the marketing script applicable to specific domain or all. We need to configure respective domain in CMS while adding marketing script field name "Marketing Domain".
 
-Please dun update.php to get this field automatically added to your product marketing script configuration.
+Please run update.php to get this field automatically added to your product marketing script configuration.
 
 
 **Configuration format**
