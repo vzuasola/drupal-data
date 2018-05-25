@@ -56,6 +56,22 @@ class MobilePromotionsForm extends FormBase {
       '#required' => TRUE,
     ];
 
+    $form['promotions_configuration']['featured_label'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Featured Filter Text'),
+      '#default_value' => $this->get('featured_label'),
+      '#translatable' => TRUE,
+      '#required' => TRUE,
+    ];
+
+
+    $form['promotions_configuration']['enable_featured'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable Featured Filter'),
+      '#default_value' => $this->get('enable_featured'),
+      '#translatable' => TRUE,
+    ];
+
     $form['promotions_configuration']['no_available_msg'] = [
       '#type' => 'textfield',
       '#title' => $this->t('No available promotions message'),
