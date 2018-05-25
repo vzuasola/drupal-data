@@ -21,10 +21,7 @@ dependencies:
     - field.field.node.promotion.field_post_banner_link
     - field.field.node.promotion.field_post_banner_link_target
     - field.field.node.promotion.field_post_body
-    - field.field.node.promotion.field_post_hide_countdown
     - field.field.node.promotion.field_post_summary_blurb
-    - field.field.node.promotion.field_post_summary_url
-    - field.field.node.promotion.field_post_summary_url_target
     - field.field.node.promotion.field_post_thumbnail_image
     - field.field.node.promotion.field_product_category
     - field.field.node.promotion.field_promo_availability
@@ -72,7 +69,7 @@ third_party_settings:
         - field_ribbon_text_color
         - field_ribbon_background_color
       parent_name: ''
-      weight: 8
+      weight: 11
       format_type: details
       format_settings:
         label: 'Ribbon Tags'
@@ -88,7 +85,7 @@ third_party_settings:
         - body
         - group_sticky_component_pre
       parent_name: ''
-      weight: 6
+      weight: 9
       format_type: details
       format_settings:
         label: 'Pre Login Promotion'
@@ -105,7 +102,7 @@ third_party_settings:
         - field_casino_gold_only
         - group_sticky_component
       parent_name: ''
-      weight: 7
+      weight: 10
       format_type: details
       format_settings:
         id: ''
@@ -131,8 +128,6 @@ third_party_settings:
       children:
         - field_post_thumbnail_image
         - field_post_summary_blurb
-        - field_post_summary_url
-        - field_post_summary_url_target
         - field_post_hide_countdown
       parent_name: group_post_login_promotion
       weight: 24
@@ -161,9 +156,6 @@ third_party_settings:
       children:
         - field_thumbnail_image
         - field_summary_blurb
-        - field_summary_url
-        - field_summary_url_target
-        - field_hide_countdown
       parent_name: group_pre
       weight: 10
       format_type: details
@@ -281,7 +273,7 @@ content:
     region: content
   created:
     type: datetime_timestamp
-    weight: 14
+    weight: 17
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -350,7 +342,7 @@ content:
     type: boolean_checkbox
     region: content
   field_hide_countdown:
-    weight: 26
+    weight: 8
     settings:
       display_label: true
     third_party_settings: {  }
@@ -371,7 +363,7 @@ content:
     type: boolean_checkbox
     region: content
   field_meta_tags:
-    weight: 10
+    weight: 13
     settings: {  }
     third_party_settings: {  }
     type: metatag_firehose
@@ -407,13 +399,6 @@ content:
     third_party_settings: {  }
     type: text_textarea_with_summary
     region: content
-  field_post_hide_countdown:
-    weight: 24
-    settings:
-      display_label: true
-    third_party_settings: {  }
-    type: boolean_checkbox
-    region: content
   field_post_summary_blurb:
     weight: 21
     settings:
@@ -421,20 +406,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
-    region: content
-  field_post_summary_url:
-    weight: 22
-    settings:
-      placeholder_url: ''
-      placeholder_title: ''
-    third_party_settings: {  }
-    type: link_default
-    region: content
-  field_post_summary_url_target:
-    weight: 23
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
     region: content
   field_post_thumbnail_image:
     weight: 20
@@ -589,7 +560,7 @@ content:
     type: text_textarea
     region: content
   field_summary_url:
-    weight: 24
+    weight: 6
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -597,7 +568,7 @@ content:
     type: link_default
     region: content
   field_summary_url_target:
-    weight: 25
+    weight: 7
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -618,25 +589,25 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 15
+    weight: 18
     region: content
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    weight: 17
+    weight: 20
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
-    weight: 12
+    weight: 15
     region: content
     settings: {  }
     third_party_settings: {  }
   scheduler_settings:
-    weight: 11
+    weight: 14
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -649,7 +620,7 @@ content:
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    weight: 18
+    weight: 21
     region: content
     settings:
       display_label: true
@@ -663,13 +634,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 9
+    weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 16
+    weight: 19
     settings:
       match_operator: CONTAINS
       size: 60
@@ -678,7 +649,7 @@ content:
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp_no_default
-    weight: 13
+    weight: 16
     region: content
     settings: {  }
     third_party_settings: {  }
