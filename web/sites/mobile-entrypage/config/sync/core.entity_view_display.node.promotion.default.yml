@@ -21,10 +21,7 @@ dependencies:
     - field.field.node.promotion.field_post_banner_link
     - field.field.node.promotion.field_post_banner_link_target
     - field.field.node.promotion.field_post_body
-    - field.field.node.promotion.field_post_hide_countdown
     - field.field.node.promotion.field_post_summary_blurb
-    - field.field.node.promotion.field_post_summary_url
-    - field.field.node.promotion.field_post_summary_url_target
     - field.field.node.promotion.field_post_thumbnail_image
     - field.field.node.promotion.field_product_category
     - field.field.node.promotion.field_promo_availability
@@ -232,41 +229,12 @@ content:
     third_party_settings: {  }
     type: text_default
     region: content
-  field_post_hide_countdown:
-    weight: 27
-    label: above
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    type: boolean
-    region: content
   field_post_summary_blurb:
     weight: 25
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
-    region: content
-  field_post_summary_url:
-    weight: 23
-    label: above
-    settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
-    third_party_settings: {  }
-    type: link
-    region: content
-  field_post_summary_url_target:
-    weight: 31
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
     region: content
   field_post_thumbnail_image:
     weight: 26
