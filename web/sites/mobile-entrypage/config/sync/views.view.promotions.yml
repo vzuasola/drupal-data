@@ -789,10 +789,11 @@ display:
         options: {  }
       display_description: 'View promotions per product'
       arguments: {  }
-      rendering_language: '***LANGUAGE_language_interface***'
+      rendering_language: '***LANGUAGE_entity_translation***'
     cache_metadata:
       max-age: 0
       contexts:
+        - 'languages:language_content'
         - 'languages:language_interface'
         - url
         - user
@@ -869,7 +870,7 @@ display:
           break_phrase: true
           not: false
           plugin_id: numeric
-      rendering_language: '***LANGUAGE_entity_translation***'
+      rendering_language: '***LANGUAGE_language_interface***'
       cache:
         type: none
         options: {  }
@@ -993,7 +994,6 @@ display:
     cache_metadata:
       max-age: -1
       contexts:
-        - 'languages:language_content'
         - 'languages:language_interface'
         - request_format
         - url
