@@ -1,0 +1,19 @@
+uuid: 90f61689-ddfa-445f-9e8d-09c23632a65a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_product_instance_id
+    - taxonomy.vocabulary.product_integrations
+id: taxonomy_term.product_integrations.field_product_instance_id
+field_name: field_product_instance_id
+entity_type: taxonomy_term
+bundle: product_integrations
+label: 'Product Instance ID'
+description: 'The unique ID to identify this product.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

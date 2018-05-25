@@ -1,16 +1,14 @@
-uuid: 4225bf13-3f8a-406c-8f2b-d41cbc69b3b9
+uuid: 4eea6354-b105-4ec8-a76b-6caa40f8ad3d
 langcode: en
 status: true
 dependencies:
   module:
     - file
     - image
-    - webcomposer_floating_banners
-_core:
-  default_config_hash: dYBTpY5sw3DYlkovkyUIWAqeTVuivqdUwEmKgeQu3dw
-id: left_floating_banner_entity.field_image
-field_name: field_image
-entity_type: left_floating_banner_entity
+    - taxonomy
+id: taxonomy_term.field_category_image_banner
+field_name: field_category_image_banner
+entity_type: taxonomy_term
 type: image
 settings:
   uri_scheme: public

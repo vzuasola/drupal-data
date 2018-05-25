@@ -1,4 +1,4 @@
-uuid: 7b8dd1f6-ab64-49b4-84bf-edb40b32168f
+uuid: 70686f3c-9f57-43b6-b0dd-c1c1b1b02c58
 langcode: en
 status: true
 dependencies:
@@ -11,10 +11,10 @@ id: content_block_entity.content_block_entity.field_open_in
 field_name: field_open_in
 entity_type: content_block_entity
 bundle: content_block_entity
-label: 'Open In'
+label: 'Image Banner Link Target'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

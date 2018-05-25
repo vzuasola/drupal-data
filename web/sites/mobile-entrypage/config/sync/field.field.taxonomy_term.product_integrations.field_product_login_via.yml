@@ -12,7 +12,7 @@ bundle: product_integrations
 label: 'Product Login Via'
 description: 'The login via value that will be used whenever this product integration is used'
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }

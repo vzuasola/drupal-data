@@ -12,7 +12,7 @@ field_name: field_post_summary_url
 entity_type: node
 bundle: promotion
 label: 'Summary URL on Post Login'
-description: ''
+description: '<strong>If URL is left blank, it will automatically use the path alias of this promotion entry.</strong>'
 required: false
 translatable: true
 default_value: {  }
