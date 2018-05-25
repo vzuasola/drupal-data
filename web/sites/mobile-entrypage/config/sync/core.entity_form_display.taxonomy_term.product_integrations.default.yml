@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.taxonomy_term.product_integrations.field_product_instance_id
     - field.field.taxonomy_term.product_integrations.field_product_integration_id
     - field.field.taxonomy_term.product_integrations.field_product_login_via
     - field.field.taxonomy_term.product_integrations.field_registration_url
@@ -12,7 +13,7 @@ targetEntityType: taxonomy_term
 bundle: product_integrations
 mode: default
 content:
-  field_product_integration_id:
+  field_product_instance_id:
     weight: 1
     settings:
       size: 60
@@ -20,7 +21,7 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_product_login_via:
+  field_product_integration_id:
     weight: 2
     settings:
       size: 60
@@ -28,8 +29,16 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_registration_url:
+  field_product_login_via:
     weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_registration_url:
+    weight: 4
     settings:
       size: 60
       placeholder: ''
@@ -45,8 +54,10 @@ content:
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 10
+    weight: 5
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   description: true
   langcode: true
