@@ -13,12 +13,15 @@ Please run update.php to get this field automatically added to your product mark
 
 
 **Configuration format**
+
 1|www.dafabet.com
+
 2|www.liwuxiao.com
 
 Note: The format of adding domain should be same and in new line.
 
 **Default format**
+
 Do not configure domain if you want to make the script applied for all domains.
 
 Feature ticket here : [WBC-579](https://jira.ph.esl-asia.com/browse/WBC-579)
