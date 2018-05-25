@@ -12,15 +12,16 @@ For Frontend to identify that the marketing script applicable to specific domain
 Please run update.php to get this field automatically added to your product marketing script configuration.
 
 
-**Configuration format**
+##Configuration format
 
-1|www.dafabet.com
+* `1|www.dafabet.com`
 
-2|www.liwuxiao.com
+* `2|www.liwuxiao.com`
 
-Note: The format of adding domain should be same and in new line.
 
-**Default format**
+**Note:** The format of adding domain should be same and in new line.
+
+##Default format
 
 Do not configure domain if you want to make the script applied for all domains.
 
