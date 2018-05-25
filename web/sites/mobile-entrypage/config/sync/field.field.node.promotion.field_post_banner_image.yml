@@ -18,7 +18,7 @@ id: node.promotion.field_post_banner_image
 field_name: field_post_banner_image
 entity_type: node
 bundle: promotion
-label: 'Post Banner Image'
+label: 'Banner Image on Post Login'
 description: ''
 required: false
 translatable: true

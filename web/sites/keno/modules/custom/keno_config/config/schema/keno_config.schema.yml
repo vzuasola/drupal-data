@@ -26,4 +26,17 @@ keno_config.keno_configuration:
       label: 'Basic Page Title' 
     balance_mapping_keno:
       type: text
-      label: 'Product Balance mapping for SC and RMB'     
+      label: 'Product Balance mapping for SC and RMB'
+    free_play_text:
+      type: label
+      label: 'Free Play'
+      translatable: true
+    play_text:
+      type: label
+      label: 'Real  Play'
+      translatable: true
+    game_info_text:
+      type: label
+      label: 'More Info'
+      translatable: true
+       

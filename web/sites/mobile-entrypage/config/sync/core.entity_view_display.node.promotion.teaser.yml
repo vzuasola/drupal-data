@@ -30,6 +30,7 @@ hidden:
   field_banner_link: true
   field_banner_link_target: true
   field_casino_gold_only: true
+  field_enable_disable_ribbon_tag: true
   field_hide_countdown: true
   field_hide_promotion: true
   field_mark_as_featured: true
@@ -49,6 +50,7 @@ hidden:
   field_promo_availability: true
   field_ribbon_background_color: true
   field_ribbon_label: true
+  field_ribbon_text_color: true
   field_summary_blurb: true
   field_summary_url: true
   field_summary_url_target: true

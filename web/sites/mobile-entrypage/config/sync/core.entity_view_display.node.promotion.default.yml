@@ -7,6 +7,8 @@ dependencies:
     - field.field.node.promotion.field_banner_image
     - field.field.node.promotion.field_banner_link
     - field.field.node.promotion.field_banner_link_target
+    - field.field.node.promotion.field_casino_gold_only
+    - field.field.node.promotion.field_enable_disable_ribbon_tag
     - field.field.node.promotion.field_hide_countdown
     - field.field.node.promotion.field_hide_promotion
     - field.field.node.promotion.field_mark_as_featured
@@ -26,6 +28,7 @@ dependencies:
     - field.field.node.promotion.field_promo_availability
     - field.field.node.promotion.field_ribbon_background_color
     - field.field.node.promotion.field_ribbon_label
+    - field.field.node.promotion.field_ribbon_text_color
     - field.field.node.promotion.field_summary_blurb
     - field.field.node.promotion.field_summary_url
     - field.field.node.promotion.field_summary_url_target
@@ -78,6 +81,26 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: list_default
+    region: content
+  field_casino_gold_only:
+    weight: 34
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_enable_disable_ribbon_tag:
+    weight: 33
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
     region: content
   field_hide_countdown:
     weight: 18
@@ -247,6 +270,15 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_ribbon_text_color:
+    weight: 32
+    label: above
+    settings:
+      format: hex
+      opacity: '1'
+    third_party_settings: {  }
+    type: color_field_formatter_text
     region: content
   field_summary_blurb:
     weight: 24

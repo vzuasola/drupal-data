@@ -15,8 +15,8 @@ class OverviewForm extends FormBase {
   /**
    * Class constructor.
    */
-  public function __construct($typedConfigManager, $languageManager, $formManager) {
-    parent::__construct($typedConfigManager, $languageManager);
+  public function __construct($typedConfigManager, $languageManager, $formManager, $moduleHandler) {
+    parent::__construct($typedConfigManager, $languageManager, $moduleHandler);
 
     $this->formManager = $formManager;
   }
@@ -28,7 +28,8 @@ class OverviewForm extends FormBase {
     return new static(
       $container->get('config.typed'),
       $container->get('language_manager'),
-      $container->get('webcomposer_form_manager.form_manager')
+      $container->get('webcomposer_form_manager.form_manager'),
+      $container->get('module_handler')
     );
   }
 
