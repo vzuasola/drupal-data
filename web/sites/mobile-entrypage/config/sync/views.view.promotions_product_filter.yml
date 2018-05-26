@@ -474,6 +474,46 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           plugin_id: boolean
+        langcode:
+          id: langcode
+          table: taxonomy_term_field_data
+          field: langcode
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: taxonomy_term
+          entity_field: langcode
+          plugin_id: language
       sorts:
         weight:
           id: weight
@@ -602,60 +642,8 @@ display:
           entity_type: taxonomy_term
           entity_field: weight
           plugin_id: standard
-      arguments:
-        langcode:
-          id: langcode
-          table: node_field_data
-          field: langcode
-          relationship: tid_representative
-          group_type: group
-          admin_label: ''
-          default_action: default
-          exception:
-            value: all
-            title_enable: false
-            title: All
-          title_enable: false
-          title: ''
-          default_argument_type: query_parameter
-          default_argument_options:
-            query_param: langcode
-            fallback: ''
-            multiple: and
-          default_argument_skip_url: true
-          summary_options:
-            base_path: ''
-            count: true
-            items_per_page: 25
-            override: false
-          summary:
-            sort_order: asc
-            number_of_records: 0
-            format: default_summary
-          specify_validation: false
-          validate:
-            type: none
-            fail: 'not found'
-          validate_options: {  }
-          entity_type: node
-          entity_field: langcode
-          plugin_id: language
-      relationships:
-        tid_representative:
-          id: tid_representative
-          table: taxonomy_term_field_data
-          field: tid_representative
-          relationship: none
-          group_type: group
-          admin_label: 'Representative node'
-          required: true
-          subquery_sort: node_field_data.nid
-          subquery_order: DESC
-          subquery_regenerate: false
-          subquery_view: ''
-          subquery_namespace: ''
-          entity_type: taxonomy_term
-          plugin_id: groupwise_max
+      arguments: {  }
+      relationships: {  }
       query:
         type: views_query
         options:
@@ -669,7 +657,6 @@ display:
       contexts:
         - 'languages:language_interface'
         - request_format
-        - url
         - user.permissions
       tags:
         - 'config:field.storage.taxonomy_term.field_enable_disable'
