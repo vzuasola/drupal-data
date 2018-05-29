@@ -7,9 +7,11 @@ dependencies:
     - field.field.taxonomy_term.game_category.field_enable
     - field.field.taxonomy_term.game_category.field_hide_description
     - field.field.taxonomy_term.game_category.field_hide_name
+    - field.field.taxonomy_term.game_category.field_platform
     - taxonomy.vocabulary.game_category
   module:
     - image
+    - options
     - text
 id: taxonomy_term.game_category.default
 targetEntityType: taxonomy_term
@@ -61,6 +63,13 @@ content:
       format_custom_true: ''
     third_party_settings: {  }
     type: boolean
+    region: content
+  field_platform:
+    weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
 hidden:
   langcode: true
