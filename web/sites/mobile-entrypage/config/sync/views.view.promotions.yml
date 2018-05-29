@@ -825,6 +825,7 @@ display:
         filter_groups: false
         relationships: false
         sorts: false
+        query: false
       row:
         type: data_entity
         options: {  }
@@ -895,9 +896,45 @@ display:
           entity_type: node
           entity_field: type
           plugin_id: bundle
+        field_hide_promotion_value:
+          id: field_hide_promotion_value
+          table: node__field_hide_promotion
+          field: field_hide_promotion_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: '0'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: boolean
         langcode:
           id: langcode
-          table: node_field_revision
+          table: node_field_data
           field: langcode
           relationship: none
           group_type: group
@@ -935,42 +972,6 @@ display:
           entity_type: node
           entity_field: langcode
           plugin_id: language
-        field_hide_promotion_value:
-          id: field_hide_promotion_value
-          table: node__field_hide_promotion
-          field: field_hide_promotion_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: '='
-          value: '0'
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          plugin_id: boolean
       filter_groups:
         operator: AND
         groups:
@@ -991,6 +992,14 @@ display:
           expose:
             label: ''
           plugin_id: standard
+      query:
+        type: views_query
+        options:
+          disable_sql_rewrite: false
+          distinct: false
+          replica: false
+          query_comment: ''
+          query_tags: null
     cache_metadata:
       max-age: -1
       contexts:
