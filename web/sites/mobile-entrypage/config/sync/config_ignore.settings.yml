@@ -9,5 +9,6 @@ ignored_config_entities:
   14: 'mobile_als.*'
   16: 'mobile_casino.*'
   18: 'mobile_owsports.*'
+  20: 'webcomposer_cache.*'
 _core:
   default_config_hash: UVH1aJ4b44UM-VdPVN7hNNuuVqfReJxwfVeDQH1Hvsk
