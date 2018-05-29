@@ -6,5 +6,8 @@ ignored_config_entities:
   8: ~block.block.languagedropdownswitcher
   10: 'filter.*'
   12: 'devel.*'
+  14: 'mobile_als.*'
+  16: 'mobile_casino.*'
+  18: 'mobile_owsports.*'
 _core:
   default_config_hash: UVH1aJ4b44UM-VdPVN7hNNuuVqfReJxwfVeDQH1Hvsk
