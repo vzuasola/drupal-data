@@ -1,9 +1,23 @@
+langcode: zh-hant
+join_now_text: '立即加入'
+join_now_link: '/{domain:entry}/{lang}/join/casino[query:({tracking})]'
+login_issue_text: '無法登錄？'
+login_issue_link: '{domain:entry}/{lang}/cant-login[query:({tracking})]'
+balance_error_text: '錯誤檢索.'
+profile_icon_hover_text: '我的賬戶'
+cashier_icon_hover_text: 出納櫃臺
+product_menu_new_tag: 新
+welcome_text: '歡迎 {username}'
+profile_link: '/{domain:myaccount_domain}/{lang}/my-profile[query:(title=headerPopup&width=820&height=820&{credentials.params}&pvia=casino)]'
+profile_logout_text: 登出
+_core:
+  default_config_hash: Ynx2hkfeSTtNe4GyBQ1t4lBkrV4wrazLGjX_M7Mk3mg
 lobby_page_title: 'dafabet娛樂場 - 最好的在線娛樂場dafabet超級大獎等你來！'
-product_balance_label: 'Balance ch'
-total_balance_label: 總余額ch
-balance_error_text: 'Cannot Load Balance'
-profile_logout_text: Logout
-balance_label_mapping: "4|沙巴體育\r\n6|大發體育\r\n1|娛樂場金典版\r\n2|娛樂場黃金版\r\n5|Common Wallet CH\r\n3|撲克\r\n7|捕魚王\r\n8|OPUS現場荷官\r\n9|快樂彩"
-balance_error_text_product: 無
-cashier_link: '{domain:cashier_domain}/{lang}[query:(ticket={auth.token}&product=casino-gold&title=headerPopup&width=820&height=700)]'
-login_issue_link: 'https://tct-www.elysium-dfbt.com/sc/join'
+balance_label_mapping: "4|沙巴體育\r\n6|大發體育\r\n10|交易所\r\n1|娛樂場金典版\r\n2|娛樂場黃金版\r\n5|現場荷官，老虎機，街機，和虛擬運動\r\n8|OPUS現場荷官\r\n9|快樂彩\r\n3|撲克\r\n\r\n7|AG 捕魚王"
+balance_error_text_product: '無'
+product_balance_label: '娛樂場經典版余額'
+total_balance_label: '總余額'
+cashier_link: '{domain:cashier_domain}/{lang}[query:(ticket={auth.token}&{tracking}&product=casino&title=headerPopup)]'
+balance_mapping: '2|娛樂場經典版余額'
+logo_title: Home
+capslock_notification: '大寫鎖定已開啟'
