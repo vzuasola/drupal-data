@@ -1,33 +1,40 @@
 langcode: zh-hans
-lobby_page_title: dafabet娱乐场-最好的在线娱乐场dafabet超级大奖等你来！
-join_now_text: JOIN-NOW
-join_now_link: 'https://tct-www.elysium-dfbt.com/{lang}/join/csngold[query:({tracking.token})]'
-login_issue_text: 'Cant login'
-login_issue_link: 'http://www.dafabet.com/en/cant-login'
-sc_lang_text: chinese-sc-test
-ch_lang_text: chinese-ch-test
-balance_error_text: 错误检索
-profile_icon_hover_text: 'My Account'
-cashier_icon_hover_text: Cashier
-product_menu_new_tag: NEW
-welcome_text: 'Good day! {username}'
-profile_link: '/{domain:myaccount_domain}/{lang}/my-profile?title=headerPopup&width=820&height=700&token={legacy.credentials}&pvia=casino'
+join_now_text: 立即加入
+join_now_link: '/{domain:entry}/{lang}/join/csngold[query:({tracking})]'
+login_issue_text: 无法登录？
+login_issue_link: '/{domain:entry}/{lang}/cant-login[query:({tracking})]'
+sc_lang_text: SC
+ch_lang_text: CH
+balance_error_text: 错误检索.
+profile_icon_hover_text: 我的賬戶
+cashier_icon_hover_text: 出纳柜台
+product_menu_new_tag: 新
+welcome_text: '欢迎 {username}'
+profile_link: '/{domain:myaccount_domain}/{lang}/my-profile[query:(title=headerPopup&width=820&height=820&{credentials.params}&pvia=casino)]'
 profile_logout_text: 登出
-balance_label_mapping: "4|沙巴体育\r\n6|大发体育\r\n1|娱乐场经典版\r\n2|娱乐场黄金版\r\n5|现场荷官，老虎机 & 虚拟运动\r\n8|OPUS现场荷官\r\n9|快乐\r\n3|扑克\r\n7|捕鱼王"
-balance_error_text_product: N/A
-critical_announcement: '0'
+_core:
+  default_config_hash: Ynx2hkfeSTtNe4GyBQ1t4lBkrV4wrazLGjX_M7Mk3mg
+lobby_page_title: dafabet娱乐场-最好的在线娱乐场dafabet超级大奖等你来！
+critical_announcement: '1'
 critical_announcement_content:
-  value: ''
+  value: "<p>This is a critical announcement test test test</p>\r\n"
   format: basic_html
 news_announcement: '0'
 news_announcement_content:
-  value: ''
+  value: "<p>test</p>\r\n"
   format: basic_html
+balance_label_mapping: "4|沙巴体育\r\n6|大发体育\r\n10|交易所\r\n1|娱乐场经典版\r\n2|娱乐场黄金版\r\n5|现场荷官、老虎机、街机、和虚拟运动\r\n8|OPUS现场荷官\r\n9|快乐彩\r\n3|扑克\r\n7|AG 捕鱼王"
+balance_error_text_product: 无
 balance_toggle: 1
-product_balance_label: 'Gold Balance sc'
+product_balance_label: 娱乐场经典版余额
 total_balance_label: 总余额
 product_balance_id: '2'
-currency_balance_mapping: "9|RMB,MYR,THB,KRW,VND,USD,IDR,INR,EUR\r\n7|RMB\r\n8|RMB,MYR,THB,KRW,VND,USD,IDR,INR,EUR,KRW"
+currency_balance_mapping: "9|RMB,MYR,THB,KRW,VND,USD,IDR,INR,EUR\r\n7|RMB\r\n8|RMB,MYR,THB,KRW,VND,USD,IDR,INR,EUR,KRW\r\n10|USD,INR"
 excluded_balance_mapping: '7'
-cashier_link: '{domain:cashier_domain}/{lang}[query:(ticket={auth.token}&{tracking}&product=casino-gold&title=headerPopup&width=820&height=700)]'
-balance_mapping: '2|Casino Gold'
+cashier_link: '/{domain:cashier_domain}/{lang}[query:(ticket={auth.token}&{tracking}&product=casino&title=headerPopup)]'
+balance_mapping: 2|娱乐场经典版余额
+balance_label_override: 现场荷官、老虎机、街机、虚拟运动、和大发彩票
+logo_title: Home
+password_mask_toggle: 1
+caps_lock_toggle: 1
+capslock_notification: 大写锁定已开启

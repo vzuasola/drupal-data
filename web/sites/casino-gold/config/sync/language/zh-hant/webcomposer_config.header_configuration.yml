@@ -7,3 +7,14 @@ balance_label_mapping: "4|沙巴體育\r\n6|大發體育\r\n1|娛樂場金典版
 balance_error_text_product: 無
 cashier_link: '{domain:cashier_domain}/{lang}[query:(ticket={auth.token}&product=casino-gold&title=headerPopup&width=820&height=700)]'
 login_issue_link: 'https://tct-www.elysium-dfbt.com/sc/join'
+logo_title: Home
+join_now_text: 立即加入
+join_now_link: '/{domain:entry}/{lang}/join/casino[query:({tracking})]'
+capslock_notification: '大寫鎖定已開啟 ch '
+login_issue_text: 無法登錄？
+cashier_icon_hover_text: 出納櫃臺
+profile_icon_hover_text: 我的賬戶
+balance_mapping: 1|娛樂場經典版余額
+product_menu_new_tag: 新
+welcome_text: '歡迎 {username}'
+profile_link: '/{domain:myaccount_domain}/{lang}/my-profile[query:(title=headerPopup&width=820&height=820&{credentials.params}&pvia=casino)]'
