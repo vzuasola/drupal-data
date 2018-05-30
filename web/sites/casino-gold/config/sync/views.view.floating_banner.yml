@@ -1,10 +1,12 @@
 uuid: c7343bd8-7e29-485a-bfda-1e6840901d48
-langcode: zh-hans
+langcode: en
 status: true
 dependencies:
   config:
+    - field.storage.left_floating_banner_entity.field_platform
     - field.storage.left_floating_banner_entity.field_title
   module:
+    - options
     - rest
     - serialization
     - webcomposer_floating_banners
@@ -563,6 +565,7 @@ display:
         - 'languages:language_interface'
         - url
       tags:
+        - 'config:field.storage.left_floating_banner_entity.field_platform'
         - 'config:field.storage.left_floating_banner_entity.field_title'
   rest_export_1:
     display_plugin: rest_export
