@@ -1,0 +1,32 @@
+uuid: 4225bf13-3f8a-406c-8f2b-d41cbc69b3b9
+langcode: zh-hans
+status: true
+dependencies:
+  module:
+    - file
+    - image
+    - webcomposer_floating_banners
+_core:
+  default_config_hash: dYBTpY5sw3DYlkovkyUIWAqeTVuivqdUwEmKgeQu3dw
+id: left_floating_banner_entity.field_image
+field_name: field_image
+entity_type: left_floating_banner_entity
+type: image
+settings:
+  uri_scheme: public
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  target_type: file
+  display_field: false
+  display_default: false
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

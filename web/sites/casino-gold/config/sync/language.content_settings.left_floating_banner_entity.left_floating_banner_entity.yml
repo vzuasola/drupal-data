@@ -1,0 +1,17 @@
+uuid: cbed2b85-73a1-404d-bc6a-51e31fa5d3f6
+langcode: zh-hans
+status: true
+dependencies:
+  module:
+    - content_translation
+    - webcomposer_floating_banners
+third_party_settings:
+  content_translation:
+    enabled: true
+_core:
+  default_config_hash: 9G-t263HvN3XsJijjVw96SbUjj8jrFrG1uwLmRar01Y
+id: left_floating_banner_entity.left_floating_banner_entity
+target_entity_type_id: left_floating_banner_entity
+target_bundle: left_floating_banner_entity
+default_langcode: site_default
+language_alterable: true
