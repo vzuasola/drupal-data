@@ -1,9 +1,11 @@
-uuid: 8c18c008-2afb-452c-8901-0b33c3ee7a04
-langcode: zh-hans
+uuid: 9d8c89df-314f-453c-9b00-f008cd2790e9
+langcode: en
 status: true
 dependencies:
   module:
     - webcomposer_floating_banners
+_core:
+  default_config_hash: v9OTRsmmIzUZugNFQAhjlagJjfqzwZPEEba4_aC6C_Y
 id: left_floating_banner_entity.field_link_text
 field_name: field_link_text
 entity_type: left_floating_banner_entity
