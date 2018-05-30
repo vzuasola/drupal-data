@@ -1,0 +1,21 @@
+uuid: 28bf9122-e839-4fe8-baf5-441b1e0de528
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_attribute_value
+    - paragraphs.paragraphs_type.metatag
+_core:
+  default_config_hash: '-AJFC9ys5RIcXGsjNBUAgvrkcoJUK9KqiE-3kBqh-m4'
+id: paragraph.metatag.field_attribute_value
+field_name: field_attribute_value
+entity_type: paragraph
+bundle: metatag
+label: Value
+description: 'The attribute value'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

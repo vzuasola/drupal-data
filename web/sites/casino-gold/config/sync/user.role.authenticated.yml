@@ -29,6 +29,7 @@ permissions:
   - 'restful get language_rest_resource'
   - 'restful get rest_menu_item'
   - 'restful get webcomposer_config'
+  - 'restful get webcomposer_config_resource'
   - 'restful get webcomposer_token_rest'
   - 'restful post Web Composer Token Resource Label'
   - 'restful post casino_provision_rest_resource'
