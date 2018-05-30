@@ -27,6 +27,7 @@ permissions:
   - 'restful get external_resources'
   - 'restful get form_resource'
   - 'restful get language_rest_resource'
+  - 'restful get marketing_script'
   - 'restful get rest_menu_item'
   - 'restful get webcomposer_config'
   - 'restful get webcomposer_config_resource'
