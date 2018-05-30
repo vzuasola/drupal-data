@@ -83,6 +83,7 @@ module:
   webcomposer_dashboard: 0
   webcomposer_dm: 0
   webcomposer_domain_import: 0
+  webcomposer_downloadables: 0
   webcomposer_editor: 0
   webcomposer_floating_banners: 0
   webcomposer_games: 0
