@@ -57,4 +57,5 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_authored_date: true
   name: true
