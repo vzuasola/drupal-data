@@ -6,7 +6,7 @@ use Drupal\webcomposer_config_schema\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Generall Configuration for Registration.
+ * General Configuration for Registration.
  *
  * @WebcomposerConfigPlugin(
  *   id = "registration_general_config",
