@@ -17,7 +17,7 @@ function jamboree_games_uninstall() {
     'field.storage.games_entity.field_free_play.yml',
     'field.storage.games_entity.field_game_code.yml',
     'field.storage.games_entity.field_platform_availability.yml',
-    'field.storage.games_entity.field_title.yml';
+    'field.storage.games_entity.field_title.yml',
     'field.storage.games_entity.field_game_thumbnail_image.yml',
   ];
 
