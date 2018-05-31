@@ -1,5 +1,5 @@
 uuid: ee5392e8-58e6-4814-ab1c-d0da79fd7657
-langcode: zh-hans
+langcode: en
 status: true
 dependencies:
   config:
@@ -9,7 +9,7 @@ dependencies:
     - entity_reference_revisions
     - webcomposer_floating_banners
 _core:
-  default_config_hash: lfv_8jtmBNCLPMdS7UIzydc9BLe113He3kyMAhUXZVs
+  default_config_hash: m8eY2jU977Wzzq_eBAlpkswQq7xlnSBlTV1ZsearGEA
 id: left_floating_banner_entity.left_floating_banner_entity.field_banner_item
 field_name: field_banner_item
 entity_type: left_floating_banner_entity

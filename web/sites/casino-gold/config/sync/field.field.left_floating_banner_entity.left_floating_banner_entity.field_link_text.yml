@@ -1,11 +1,13 @@
-uuid: a0761405-771f-405c-8a6b-763da61fd2bc
-langcode: zh-hans
+uuid: c5a57f23-1e8c-4341-9916-5801453737ff
+langcode: en
 status: true
 dependencies:
   config:
     - field.storage.left_floating_banner_entity.field_link_text
   module:
     - webcomposer_floating_banners
+_core:
+  default_config_hash: 8eoBsIBZJq9TrgFSk7vV8GqYJtb_NwDTXWvZ3MtnWvE
 id: left_floating_banner_entity.left_floating_banner_entity.field_link_text
 field_name: field_link_text
 entity_type: left_floating_banner_entity

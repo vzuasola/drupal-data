@@ -1,0 +1,21 @@
+uuid: d079a4fb-e580-4e21-ba4a-73c928183426
+langcode: zh-hans
+status: true
+dependencies:
+  module:
+    - webcomposer_downloadables
+_core:
+  default_config_hash: 5ivDYegk2TCm5rtHUOIifiBGQL-ZcXDSbQVeRyyP5tY
+id: downloadable_entity.field_downloadable_file_link
+field_name: field_downloadable_file_link
+entity_type: downloadable_entity
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
