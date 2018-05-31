@@ -11,10 +11,10 @@ id: games_entity.games_entity.field_platform_availability
 field_name: field_platform_availability
 entity_type: games_entity
 bundle: games_entity
-label: 'Platform Availability'
+label: Platform
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

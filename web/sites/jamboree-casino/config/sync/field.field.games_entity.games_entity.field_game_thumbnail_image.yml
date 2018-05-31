@@ -5,16 +5,23 @@ dependencies:
   config:
     - field.storage.games_entity.field_game_thumbnail_image
   module:
+    - content_translation
     - image
     - jamboree_games
+third_party_settings:
+  content_translation:
+    translation_sync:
+      title: title
+      file: '0'
+      alt: '0'
 id: games_entity.games_entity.field_game_thumbnail_image
 field_name: field_game_thumbnail_image
 entity_type: games_entity
 bundle: games_entity
 label: 'Game Thumbnail Image'
 description: ''
-required: false
-translatable: false
+required: true
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
