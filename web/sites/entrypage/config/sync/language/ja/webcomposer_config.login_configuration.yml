@@ -6,7 +6,7 @@ error_message_blank_password: パスワードを入力して下さい。
 error_message_blank_passname: 全ての欄をご確認の上、再度お試し下さい。
 error_message_invalid_passname: 申し訳ございません。ユーザーネームまたはパスワードが無効です。再度お試し下さい。
 error_message_service_not_available: 現在サービスがご利用いただけません。
-error_message_account_suspended: 'お客様のアカウントはロックされました。 カスタマーサポートへご連絡ください。'
+error_message_account_suspended: 'ログイン失敗規定数超の為ロック致しました。 カスタマーサポートまでお問い合わせください。'
 error_message_account_locked: 'ログイン失敗規定数超の為ロック致しました。 カスタマーサポートまでお問い合わせください。'
 autologout_box_title: お知らせ
 autologout_box_content:
