@@ -1,0 +1,20 @@
+uuid: 148fb019-1644-4713-9296-2eb6679eef36
+langcode: en
+status: true
+dependencies:
+  module:
+    - jamboree_games
+    - taxonomy
+id: games_entity.field_game_category
+field_name: field_game_category
+entity_type: games_entity
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

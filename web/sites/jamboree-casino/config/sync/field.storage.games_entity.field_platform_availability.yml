@@ -12,6 +12,9 @@ type: list_string
 settings:
   allowed_values:
     -
+      value: both
+      label: Both
+    -
       value: desktop
       label: Desktop
     -

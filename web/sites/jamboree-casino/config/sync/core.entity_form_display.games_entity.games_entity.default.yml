@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.games_entity.games_entity.field_client_type
     - field.field.games_entity.games_entity.field_free_play
+    - field.field.games_entity.games_entity.field_game_category
     - field.field.games_entity.games_entity.field_game_code
     - field.field.games_entity.games_entity.field_game_thumbnail_image
     - field.field.games_entity.games_entity.field_platform_availability
@@ -19,20 +20,26 @@ bundle: games_entity
 mode: default
 content:
   field_client_type:
-    weight: 9
+    weight: 6
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_free_play:
-    weight: 11
+    weight: 7
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
+  field_game_category:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_game_code:
-    weight: 8
+    weight: 5
     settings:
       size: 60
       placeholder: ''
@@ -40,7 +47,7 @@ content:
     type: string_textfield
     region: content
   field_game_thumbnail_image:
-    weight: 7
+    weight: 4
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -48,13 +55,13 @@ content:
     type: image_image
     region: content
   field_platform_availability:
-    weight: 10
+    weight: 1
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_title:
-    weight: 6
+    weight: 2
     settings:
       size: 60
       placeholder: ''
@@ -63,25 +70,16 @@ content:
     region: content
   langcode:
     type: language_select
-    weight: 2
+    weight: 0
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  translation:
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
-  name:
-    type: string_textfield
-    weight: -4
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  user_id:
-    type: entity_reference_autocomplete
-    weight: 5
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    region: content
-    third_party_settings: {  }
-hidden: {  }
+hidden:
+  name: true
+  user_id: true
