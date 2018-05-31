@@ -1,0 +1,27 @@
+<?php
+
+/**
+ * Implements hook_uninstall
+ */
+function jamboree_games_uninstall() {
+  $keys = [
+    'core.entity_form_display.games_entity.games_entity.default.yml',
+    'core.entity_view_display.games_entity.games_entity.default.yml',
+    'field.field.games_entity.games_entity.field_client_type.yml',
+    'field.field.games_entity.games_entity.field_free_play.yml',
+    'field.field.games_entity.games_entity.field_game_code.yml',
+    'field.field.games_entity.games_entity.field_game_thumbnail_image.yml',
+    'field.field.games_entity.games_entity.field_platform_availability.yml',
+    'field.field.games_entity.games_entity.field_title.yml',
+    'field.storage.games_entity.field_client_type.yml',
+    'field.storage.games_entity.field_free_play.yml',
+    'field.storage.games_entity.field_game_code.yml',
+    'field.storage.games_entity.field_platform_availability.yml',
+    'field.storage.games_entity.field_title.yml',
+    'field.storage.games_entity.field_game_thumbnail_image.yml',
+  ];
+
+  foreach ($keys as $key) {
+    \Drupal::configFactory()->getEditable($key)->delete();
+  }
+}
