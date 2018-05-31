@@ -20,7 +20,7 @@ entity_type: taxonomy_term
 bundle: game_category
 label: 'Category Image Banner'
 description: ''
-required: false
+required: true
 translatable: true
 default_value: {  }
 default_value_callback: ''
