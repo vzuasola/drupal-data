@@ -1,0 +1,21 @@
+uuid: e987151d-4e28-4aea-85b2-5c4d2f7cc39f
+langcode: en
+status: true
+dependencies:
+  module:
+    - jamboree_games
+id: games_entity.field_title
+field_name: field_title
+entity_type: games_entity
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

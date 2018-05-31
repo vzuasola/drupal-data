@@ -1,0 +1,7 @@
+jamboree_games.admin_settings:
+  path: 'admin/config/jamboree/games'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Jamboree Game List'
+  requirements:
+    _permission: 'administer site configuration'
