@@ -1,0 +1,32 @@
+uuid: a5b4ad40-7bfd-413e-be75-0aa9e16f5113
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.metatag.field_attribute_value
+    - field.field.paragraph.metatag.field_meta_name
+    - paragraphs.paragraphs_type.metatag
+_core:
+  default_config_hash: ImenUMB5RaGXShFAD2OwdNbZxr7sbnx33WqLiB5YRUo
+id: paragraph.metatag.default
+targetEntityType: paragraph
+bundle: metatag
+mode: default
+content:
+  field_attribute_value:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_meta_name:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

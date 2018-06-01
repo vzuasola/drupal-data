@@ -1,0 +1,30 @@
+uuid: 01641502-c066-4c87-ad46-e931eec2b7b2
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - taxonomy
+id: taxonomy_term.field_platform
+field_name: field_platform
+entity_type: taxonomy_term
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: both
+      label: Both
+    -
+      value: mobile
+      label: Mobile
+    -
+      value: desktop
+      label: Desktop
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

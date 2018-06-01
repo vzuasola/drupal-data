@@ -3,13 +3,16 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.taxonomy_term.game_category.field_category_id
     - field.field.taxonomy_term.game_category.field_category_image_banner
     - field.field.taxonomy_term.game_category.field_enable
     - field.field.taxonomy_term.game_category.field_hide_description
     - field.field.taxonomy_term.game_category.field_hide_name
+    - field.field.taxonomy_term.game_category.field_platform
     - taxonomy.vocabulary.game_category
   module:
     - image
+    - options
     - text
 id: taxonomy_term.game_category.default
 targetEntityType: taxonomy_term
@@ -23,6 +26,14 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_category_id:
+    weight: 7
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
   field_category_image_banner:
     weight: 1
     label: above
@@ -61,6 +72,13 @@ content:
       format_custom_true: ''
     third_party_settings: {  }
     type: boolean
+    region: content
+  field_platform:
+    weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
 hidden:
   langcode: true

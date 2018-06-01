@@ -1,8 +1,0 @@
-uuid: 7c2342e9-6c66-4e47-919b-3f72cb5e9972
-langcode: zh-hans
-status: true
-dependencies: {  }
-id: sponsorship_block
-label: 'Sponsorship Block'
-revision: 0
-description: '<i>Note: Need to configure at least 1 item<i>'

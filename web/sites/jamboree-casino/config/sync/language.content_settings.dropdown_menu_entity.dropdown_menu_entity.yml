@@ -8,6 +8,8 @@ dependencies:
 third_party_settings:
   content_translation:
     enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
 id: dropdown_menu_entity.dropdown_menu_entity
 target_entity_type_id: dropdown_menu_entity
 target_bundle: dropdown_menu_entity

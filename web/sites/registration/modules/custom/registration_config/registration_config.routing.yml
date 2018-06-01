@@ -5,11 +5,3 @@ registration_config.admin_settings:
     _title: 'Registration Configuration'
   requirements:
     _permission: 'administer site configuration'
-
-registration_config.general_configuration_form:
-  path: 'admin/config/registration/general'
-  defaults:
-    _form: 'Drupal\registration_config\Form\GeneralConfiguration'
-    _title: 'General'
-  requirements:
-    _permission: 'administer site configuration'

@@ -1,0 +1,22 @@
+uuid: 3bcf64c7-e1d8-4ff2-8d47-cfe54086032a
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - field.storage.webcomposer_meta_entity.field_per_page_visibility
+  module:
+    - webcomposer_seo
+_core:
+  default_config_hash: BHCwVqUunyF8Zc4t5E0trbiAJIYc5YB_9II_D8BSWzU
+id: webcomposer_meta_entity.webcomposer_meta_entity.field_per_page_visibility
+field_name: field_per_page_visibility
+entity_type: webcomposer_meta_entity
+bundle: webcomposer_meta_entity
+label: 'Per Page Visibility'
+description: 'Specify pages by using their paths. Enter one path per line. The ''''*'''' character is a wildcard. An example path is /promotion/* for every user page.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

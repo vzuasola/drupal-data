@@ -1,0 +1,38 @@
+uuid: 21700ff4-d63e-4258-9fac-12631a796108
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.metatag.field_attribute_value
+    - field.field.paragraph.metatag.field_meta_name
+    - paragraphs.paragraphs_type.metatag
+_core:
+  default_config_hash: hmkcC_b2Mhj9XECRH0YjLNyq7MfJtY-Ug74A4hwD4ds
+id: paragraph.metatag.default
+targetEntityType: paragraph
+bundle: metatag
+mode: default
+content:
+  field_attribute_value:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_meta_name:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  translation:
+    weight: 10
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

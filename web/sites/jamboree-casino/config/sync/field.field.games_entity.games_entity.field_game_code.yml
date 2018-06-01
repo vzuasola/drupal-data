@@ -1,0 +1,20 @@
+uuid: 5d893358-cbe6-4312-832d-44d3338c8ae3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.games_entity.field_game_code
+  module:
+    - jamboree_games
+id: games_entity.games_entity.field_game_code
+field_name: field_game_code
+entity_type: games_entity
+bundle: games_entity
+label: 'Game Code'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

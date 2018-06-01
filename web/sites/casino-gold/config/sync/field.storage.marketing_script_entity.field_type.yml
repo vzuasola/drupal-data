@@ -1,0 +1,29 @@
+uuid: a0ee1339-05d2-45a9-8e38-f7c486b67ff6
+langcode: zh-hans
+status: true
+dependencies:
+  module:
+    - options
+    - webcomposer_marketing_script
+_core:
+  default_config_hash: B7EuTppMcXsiGhy7IHTJ4FJjTO0kO0YaDlJENKkQNWE
+id: marketing_script_entity.field_type
+field_name: field_type
+entity_type: marketing_script_entity
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: css
+      label: css
+    -
+      value: js
+      label: javascript
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
