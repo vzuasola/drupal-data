@@ -1,12 +1,12 @@
-uuid: aec94bab-e78f-47df-8e35-e79ba29fe53a
+uuid: 0ead203a-e90c-4b26-8ed0-d022905050ce
 langcode: en
 status: true
 dependencies:
   module:
-    - taxonomy
-id: taxonomy_term.field_category_id
-field_name: field_category_id
-entity_type: taxonomy_term
+    - jamboree_mobile_games
+id: jamboree_mobile_games_entity.field_ga
+field_name: field_ga
+entity_type: jamboree_mobile_games_entity
 type: string
 settings:
   max_length: 255

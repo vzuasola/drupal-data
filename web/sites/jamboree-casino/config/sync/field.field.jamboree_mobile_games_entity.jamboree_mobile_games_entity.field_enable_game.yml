@@ -1,0 +1,24 @@
+uuid: 44275d64-d948-45a1-bd02-892022f10d59
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.jamboree_mobile_games_entity.field_enable_game
+  module:
+    - jamboree_mobile_games
+id: jamboree_mobile_games_entity.jamboree_mobile_games_entity.field_enable_game
+field_name: field_enable_game
+entity_type: jamboree_mobile_games_entity
+bundle: jamboree_mobile_games_entity
+label: 'Enable Game'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,12 +1,12 @@
-uuid: 73c74aa9-bc6e-4999-964e-6717f1af7400
+uuid: c68c42b8-7bf2-4edc-bd14-7d842f770cc6
 langcode: en
 status: true
 dependencies:
   module:
-    - taxonomy
-id: taxonomy_term.field_hide_name
-field_name: field_hide_name
-entity_type: taxonomy_term
+    - jamboree_desktop_games
+id: jamboree_desktop_games_entity.field_enable_game
+field_name: field_enable_game
+entity_type: jamboree_desktop_games_entity
 type: boolean
 settings: {  }
 module: core

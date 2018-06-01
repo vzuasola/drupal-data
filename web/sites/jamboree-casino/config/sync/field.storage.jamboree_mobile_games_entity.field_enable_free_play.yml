@@ -1,12 +1,12 @@
-uuid: 73c74aa9-bc6e-4999-964e-6717f1af7400
+uuid: fc7076ac-49d4-43de-94ec-c3e99958c4e2
 langcode: en
 status: true
 dependencies:
   module:
-    - taxonomy
-id: taxonomy_term.field_hide_name
-field_name: field_hide_name
-entity_type: taxonomy_term
+    - jamboree_mobile_games
+id: jamboree_mobile_games_entity.field_enable_free_play
+field_name: field_enable_free_play
+entity_type: jamboree_mobile_games_entity
 type: boolean
 settings: {  }
 module: core

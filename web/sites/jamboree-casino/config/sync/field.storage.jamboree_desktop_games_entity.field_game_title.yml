@@ -1,12 +1,12 @@
-uuid: aec94bab-e78f-47df-8e35-e79ba29fe53a
+uuid: 9fb1cf34-f9c1-4199-a858-50d997aa2e09
 langcode: en
 status: true
 dependencies:
   module:
-    - taxonomy
-id: taxonomy_term.field_category_id
-field_name: field_category_id
-entity_type: taxonomy_term
+    - jamboree_desktop_games
+id: jamboree_desktop_games_entity.field_game_title
+field_name: field_game_title
+entity_type: jamboree_desktop_games_entity
 type: string
 settings:
   max_length: 255

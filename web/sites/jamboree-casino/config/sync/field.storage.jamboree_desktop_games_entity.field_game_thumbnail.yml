@@ -1,14 +1,14 @@
-uuid: 080692a2-93b8-4698-9ce8-49fbcada30d5
+uuid: 7f69dfcc-06fb-4cc2-88d2-4fd196ca3b39
 langcode: en
 status: true
 dependencies:
   module:
     - file
     - image
-    - taxonomy
-id: taxonomy_term.field_category_image_banner
-field_name: field_category_image_banner
-entity_type: taxonomy_term
+    - jamboree_desktop_games
+id: jamboree_desktop_games_entity.field_game_thumbnail
+field_name: field_game_thumbnail
+entity_type: jamboree_desktop_games_entity
 type: image
 settings:
   uri_scheme: public
