@@ -5,6 +5,8 @@ namespace Drupal\webcomposer_config\Form;
 use Drupal\webcomposer_config_schema\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 
+use Drupal\file\Entity\File;
+
 /**
  * Exception configuration plugin
  *
@@ -73,5 +75,21 @@ class ExceptionForm extends FormBase {
     ];
 
     return $form;
+  }
+
+  /**
+   *
+   */
+  public function submit(array &$form, FormStateInterface $form_state) {
+    $file = $form_state->getValue('page_not_found_image');
+
+    if ($file && isset($file[0])) {
+      $entity = File::load($file[0]);
+
+      $entity->setPermanent();
+      $entity->save();
+    }
+
+    parent::submit($form, $form_state);
   }
 }

@@ -122,7 +122,7 @@ class ItemForm extends FormBase {
       $item['location'],
     ];
 
-    $rows['location'] = [
+    $rows['language'] = [
       ['data' => ['#markup' => '<strong>Language</strong>']],
       strtoupper($item['language']),
     ];
