@@ -80,8 +80,7 @@ class ExceptionForm extends FormBase {
   /**
    *
    */
-  public function submit(array &$form, FormStateInterface $form_state)
-  {
+  public function submit(array &$form, FormStateInterface $form_state) {
     $file = $form_state->getValue('page_not_found_image');
 
     if ($file && isset($file[0])) {
