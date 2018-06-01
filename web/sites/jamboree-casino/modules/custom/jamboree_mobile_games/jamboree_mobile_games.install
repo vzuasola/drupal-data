@@ -1,0 +1,31 @@
+<?php
+
+/**
+ * Implements hook_uninstall
+ */
+function jamboree_mobile_games_uninstall() {
+  $keys = [
+    'core.base_field_override.jamboree_mobile_games_entity.jamboree_mobile_games_entity.metatag.yml',
+    'core.entity_form_display.jamboree_mobile_games_entity.jamboree_mobile_games_entity.default.yml',
+    'core.entity_view_display.jamboree_mobile_games_entity.jamboree_mobile_games_entity.default.yml',
+    'field.field.jamboree_mobile_games_entity.jamboree_mobile_games_entity.field_enable_free_play.yml',
+    'field.field.jamboree_mobile_games_entity.jamboree_mobile_games_entity.field_enable_game.yml',
+    'field.field.jamboree_mobile_games_entity.jamboree_mobile_games_entity.field_ga.yml',
+    'field.field.jamboree_mobile_games_entity.jamboree_mobile_games_entity.field_game_category.yml',
+    'field.field.jamboree_mobile_games_entity.jamboree_mobile_games_entity.field_game_tag.yml',
+    'field.field.jamboree_mobile_games_entity.jamboree_mobile_games_entity.field_game_thumbnail.yml',
+    'field.field.jamboree_mobile_games_entity.jamboree_mobile_games_entity.field_game_ti.yml',
+    'field.storage.jamboree_mobile_games_entity.field_enable_free_play.yml',
+    'field.storage.jamboree_mobile_games_entity.field_enable_game.yml',
+    'field.storage.jamboree_mobile_games_entity.field_ga.yml',
+    'field.storage.jamboree_mobile_games_entity.field_game_category.yml',
+    'field.storage.jamboree_mobile_games_entity.field_game_tag.yml',
+    'field.storage.jamboree_mobile_games_entity.field_game_thumbnail.yml',
+    'field.storage.jamboree_mobile_games_entity.field_game_ti.yml',
+    'language.content_settings.jamboree_mobile_games_entity.jamboree_mobile_games_entity.yml',
+  ];
+
+  foreach ($keys as $key) {
+    \Drupal::configFactory()->getEditable($key)->delete();
+  }
+}

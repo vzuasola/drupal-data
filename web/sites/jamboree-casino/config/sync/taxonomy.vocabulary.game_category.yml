@@ -1,9 +1,0 @@
-uuid: 8f7ce631-618a-4e5e-9648-05ac73b0fe4b
-langcode: en
-status: true
-dependencies: {  }
-name: 'Game Category'
-vid: game_category
-description: 'Game Category'
-hierarchy: 0
-weight: 0

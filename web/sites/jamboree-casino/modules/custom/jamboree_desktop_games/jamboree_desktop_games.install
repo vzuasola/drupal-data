@@ -1,0 +1,31 @@
+<?php
+
+/**
+ * Implements hook_uninstall
+ */
+function jamboree_desktop_games_uninstall() {
+  $keys = [
+    'core.base_field_override.jamboree_desktop_games_entity.jamboree_desktop_games_entity.metatag.yml',
+    'core.entity_form_display.jamboree_desktop_games_entity.jamboree_desktop_games_entity.default.yml',
+    'core.entity_view_display.jamboree_desktop_games_entity.jamboree_desktop_games_entity.default.yml',
+    'field.field.jamboree_desktop_games_entity.jamboree_desktop_games_entity.field_enable_free_play.yml',
+    'field.field.jamboree_desktop_games_entity.jamboree_desktop_games_entity.field_enable_game.yml',
+    'field.field.jamboree_desktop_games_entity.jamboree_desktop_games_entity.field_game_category.yml',
+    'field.field.jamboree_desktop_games_entity.jamboree_desktop_games_entity.field_game_code.yml',
+    'field.field.jamboree_desktop_games_entity.jamboree_desktop_games_entity.field_game_tag.yml',
+    'field.field.jamboree_desktop_games_entity.jamboree_desktop_games_entity.field_game_thumbnail.yml',
+    'field.field.jamboree_desktop_games_entity.jamboree_desktop_games_entity.field_game_title.yml',
+    'field.storage.jamboree_desktop_games_entity.field_enable_free_play.yml',
+    'field.storage.jamboree_desktop_games_entity.field_enable_game.yml',
+    'field.storage.jamboree_desktop_games_entity.field_game_category.yml',
+    'field.storage.jamboree_desktop_games_entity.field_game_code.yml',
+    'field.storage.jamboree_desktop_games_entity.field_game_tag.yml',
+    'field.storage.jamboree_desktop_games_entity.field_game_thumbnail.yml',
+    'field.storage.jamboree_desktop_games_entity.field_game_title.yml',
+    'language.content_settings.jamboree_desktop_games_entity.jamboree_desktop_games_entity.yml',
+  ];
+
+  foreach ($keys as $key) {
+    \Drupal::configFactory()->getEditable($key)->delete();
+  }
+}

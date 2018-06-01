@@ -1,0 +1,20 @@
+uuid: 7fbc2fd6-b674-44fa-9b68-8a7983c4251d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.jamboree_mobile_games_entity.field_ga
+  module:
+    - jamboree_mobile_games
+id: jamboree_mobile_games_entity.jamboree_mobile_games_entity.field_ga
+field_name: field_ga
+entity_type: jamboree_mobile_games_entity
+bundle: jamboree_mobile_games_entity
+label: 'Game Code'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

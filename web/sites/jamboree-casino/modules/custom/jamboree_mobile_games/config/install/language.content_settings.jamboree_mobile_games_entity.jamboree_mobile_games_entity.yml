@@ -1,0 +1,17 @@
+uuid: a191dbfd-74fa-445b-bd49-3a0c323eb7c4
+langcode: en
+status: true
+dependencies:
+  module:
+    - content_translation
+    - jamboree_mobile_games
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: jamboree_mobile_games_entity.jamboree_mobile_games_entity
+target_entity_type_id: jamboree_mobile_games_entity
+target_bundle: jamboree_mobile_games_entity
+default_langcode: site_default
+language_alterable: true

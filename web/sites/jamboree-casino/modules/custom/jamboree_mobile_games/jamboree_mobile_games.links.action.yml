@@ -1,0 +1,5 @@
+entity.jamboree_mobile_games_entity.add_form:
+  route_name: entity.jamboree_mobile_games_entity.add_form
+  title: 'Add Jamboree mobile games entity'
+  appears_on:
+    - entity.jamboree_mobile_games_entity.collection
