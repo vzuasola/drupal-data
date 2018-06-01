@@ -1,0 +1,18 @@
+uuid: 0f9c7c61-38db-4ab4-afdf-364cb1fc5bf9
+langcode: en
+status: true
+dependencies:
+  module:
+    - jamboree_desktop_games
+id: jamboree_desktop_games_entity.field_enable_free_play
+field_name: field_enable_free_play
+entity_type: jamboree_desktop_games_entity
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
