@@ -44,6 +44,6 @@ class JamboreeMobileGamesEntityForm extends ContentEntityForm {
           '%label' => $entity->label(),
         ]));
     }
-    $form_state->setRedirectUrl($entity->urlInfo('collection'));  
+    $form_state->setRedirectUrl($entity->urlInfo('collection'));
   }
 }
