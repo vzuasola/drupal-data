@@ -46,7 +46,8 @@ class JamboreeMobileGamesEntitySettingsForm extends FormBase {
    *   Form definition array.
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    $form['jamboreemobilegamesentity_settings']['#markup'] = 'Settings form for Jamboree mobile games entity entities. Manage field settings here.';
+    $form['jamboreemobilegamesentity_settings']['#markup'] = 'Settings form for Jamboree mobile games entity entities.
+      Manage field settings here.';
     return $form;
   }
 
