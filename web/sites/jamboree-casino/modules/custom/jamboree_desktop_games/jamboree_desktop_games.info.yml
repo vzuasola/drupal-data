@@ -1,0 +1,5 @@
+name: Jamboree Desktop Games
+type: module
+description: Jamboree Desktop Games Module
+core: 8.x
+package: Jamboree Games

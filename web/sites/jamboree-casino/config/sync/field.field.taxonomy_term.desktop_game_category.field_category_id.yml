@@ -1,0 +1,19 @@
+uuid: bfb6ee03-ef84-4153-adc9-195d8cbdb769
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_category_id
+    - taxonomy.vocabulary.desktop_game_category
+id: taxonomy_term.desktop_game_category.field_category_id
+field_name: field_category_id
+entity_type: taxonomy_term
+bundle: desktop_game_category
+label: 'Category ID'
+description: 'Example: category-id'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
