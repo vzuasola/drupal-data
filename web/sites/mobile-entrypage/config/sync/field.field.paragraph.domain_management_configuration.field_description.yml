@@ -14,7 +14,7 @@ bundle: domain_management_configuration
 label: Description
 description: 'Describe what this placeholder is used for, e.g. for GA codes or for CDN paths.'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }
