@@ -23,6 +23,7 @@ function jamboree_mobile_games_uninstall() {
     'field.storage.jamboree_mobile_games_entity.field_game_thumbnail.yml',
     'field.storage.jamboree_mobile_games_entity.field_game_ti.yml',
     'language.content_settings.jamboree_mobile_games_entity.jamboree_mobile_games_entity.yml',
+    'views.view.mobile_game_list.yml',
   ];
 
   foreach ($keys as $key) {

@@ -204,7 +204,7 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: api/desktop/game_categories
+      path: api/desktop_game_categories
       pager:
         type: some
         options:
@@ -317,7 +317,7 @@ display:
           plugin_id: standard
       defaults:
         sorts: false
-      path: api/mobile/game_categories
+      path: api/mobile_game_categories
     cache_metadata:
       max-age: -1
       contexts:
