@@ -1,0 +1,24 @@
+uuid: 458031e5-916f-4100-b54b-cefa1bdbcd4c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.jamboree_desktop_games_entity.field_enable_free_play
+  module:
+    - jamboree_desktop_games
+id: jamboree_desktop_games_entity.jamboree_desktop_games_entity.field_enable_free_play
+field_name: field_enable_free_play
+entity_type: jamboree_desktop_games_entity
+bundle: jamboree_desktop_games_entity
+label: 'Enable Free Play'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

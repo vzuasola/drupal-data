@@ -1,0 +1,9 @@
+uuid: be4bdf39-b529-4423-8041-b48df61eeef8
+langcode: und
+status: true
+dependencies: {  }
+name: 'Mobile Game Category'
+vid: mobile_game_category
+description: 'Mobile Game Category'
+hierarchy: 0
+weight: 0

@@ -1,0 +1,22 @@
+add jamboree desktop games entity entities:
+  title: 'Create new Jamboree desktop games entity entities'
+
+administer jamboree desktop games entity entities:
+  title: 'Administer Jamboree desktop games entity entities'
+  description: 'Allow to access the administration form to configure Jamboree desktop games entity entities.'
+  restrict access: true
+
+delete jamboree desktop games entity entities:
+  title: 'Delete Jamboree desktop games entity entities'
+
+edit jamboree desktop games entity entities:
+  title: 'Edit Jamboree desktop games entity entities'
+
+access jamboree desktop games entity overview:
+  title: 'Access the Jamboree desktop games entity overview page'
+
+view published jamboree desktop games entity entities:
+  title: 'View published Jamboree desktop games entity entities'
+
+view unpublished jamboree desktop games entity entities:
+  title: 'View unpublished Jamboree desktop games entity entities'

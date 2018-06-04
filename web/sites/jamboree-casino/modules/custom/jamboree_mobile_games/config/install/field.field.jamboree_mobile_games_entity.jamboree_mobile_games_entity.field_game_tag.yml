@@ -1,0 +1,30 @@
+uuid: 15c2794f-afa4-4bf7-b67e-6f52d138ce6e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.jamboree_mobile_games_entity.field_game_tag
+    - taxonomy.vocabulary.game_tag
+  module:
+    - jamboree_mobile_games
+id: jamboree_mobile_games_entity.jamboree_mobile_games_entity.field_game_tag
+field_name: field_game_tag
+entity_type: jamboree_mobile_games_entity
+bundle: jamboree_mobile_games_entity
+label: 'Game Tag'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      game_tag: game_tag
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

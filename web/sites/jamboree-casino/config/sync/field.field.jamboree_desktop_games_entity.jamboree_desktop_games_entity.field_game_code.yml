@@ -1,0 +1,20 @@
+uuid: 446b81a0-eedc-423d-8e4a-4c8291bde614
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.jamboree_desktop_games_entity.field_game_code
+  module:
+    - jamboree_desktop_games
+id: jamboree_desktop_games_entity.jamboree_desktop_games_entity.field_game_code
+field_name: field_game_code
+entity_type: jamboree_desktop_games_entity
+bundle: jamboree_desktop_games_entity
+label: 'Game Code'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
