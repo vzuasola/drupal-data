@@ -173,7 +173,7 @@ class MyProfileForm extends WebcomposerFormBase implements WebcomposerFormInterf
           ],
         ],
       ],
-  
+
       'mobile_number_1' => [
         'name' => 'Mobile Number',
         'type' => 'textfield',
