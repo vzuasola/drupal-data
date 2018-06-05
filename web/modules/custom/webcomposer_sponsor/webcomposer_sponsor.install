@@ -18,7 +18,6 @@ function webcomposer_sponsor_uninstall() {
       'field.field.paragraph.sponsor_cmi.field_sponsor_logo',
       'field.field.paragraph.sponsor_cmi.field_sponsor_logo_link',
       'field.field.sponsor_entity.sponsor_entity.field_sponsors',
-      'field.storage.paragraph.field_link_target',
       'field.storage.paragraph.field_sponsor_logo',
       'field.storage.paragraph.field_sponsor_logo_link',
       'field.storage.sponsor_entity.field_sponsors',
