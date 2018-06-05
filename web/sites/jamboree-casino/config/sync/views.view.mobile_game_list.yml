@@ -5,10 +5,10 @@ dependencies:
   config:
     - field.storage.jamboree_mobile_games_entity.field_enable_free_play
     - field.storage.jamboree_mobile_games_entity.field_enable_game
-    - field.storage.jamboree_mobile_games_entity.field_ga
     - field.storage.jamboree_mobile_games_entity.field_game_category
+    - field.storage.jamboree_mobile_games_entity.field_game_code
     - field.storage.jamboree_mobile_games_entity.field_game_tag
-    - field.storage.jamboree_mobile_games_entity.field_game_ti
+    - field.storage.jamboree_mobile_games_entity.field_game_title
     - taxonomy.vocabulary.game_tag
     - taxonomy.vocabulary.mobile_game_category
   module:
@@ -283,10 +283,10 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_game_ti:
-          id: field_game_ti
-          table: jamboree_mobile_games_entity__field_game_ti
-          field: field_game_ti
+        field_game_title:
+          id: field_game_title
+          table: jamboree_mobile_games_entity__field_game_title
+          field: field_game_title
           relationship: none
           group_type: group
           admin_label: ''
@@ -409,10 +409,10 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_ga:
-          id: field_ga
-          table: jamboree_mobile_games_entity__field_ga
-          field: field_ga
+        field_game_code:
+          id: field_game_code
+          table: jamboree_mobile_games_entity__field_game_code
+          field: field_game_code
           relationship: none
           group_type: group
           admin_label: ''
@@ -966,10 +966,10 @@ display:
       tags:
         - 'config:field.storage.jamboree_mobile_games_entity.field_enable_free_play'
         - 'config:field.storage.jamboree_mobile_games_entity.field_enable_game'
-        - 'config:field.storage.jamboree_mobile_games_entity.field_ga'
         - 'config:field.storage.jamboree_mobile_games_entity.field_game_category'
+        - 'config:field.storage.jamboree_mobile_games_entity.field_game_code'
         - 'config:field.storage.jamboree_mobile_games_entity.field_game_tag'
-        - 'config:field.storage.jamboree_mobile_games_entity.field_game_ti'
+        - 'config:field.storage.jamboree_mobile_games_entity.field_game_title'
   rest_export_1:
     display_plugin: rest_export
     id: rest_export_1
