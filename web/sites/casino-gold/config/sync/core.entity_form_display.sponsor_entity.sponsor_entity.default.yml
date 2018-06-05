@@ -8,7 +8,7 @@ dependencies:
     - paragraphs
     - webcomposer_sponsor
 _core:
-  default_config_hash: 0Mzj_OSp_Monm3obq-yGXQpjSvTepCKn2m6L6i4ctB0
+  default_config_hash: IP-HAhPruUTBZfTiYw5VuarfPSwQlnnGtBdHZ2ZPVDI
 id: sponsor_entity.sponsor_entity.default
 targetEntityType: sponsor_entity
 bundle: sponsor_entity
@@ -16,7 +16,7 @@ mode: default
 content:
   field_sponsor_cmi:
     type: entity_reference_paragraphs
-    weight: 0
+    weight: 1
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -28,14 +28,14 @@ content:
     region: content
   name:
     type: string_textfield
-    weight: -1
+    weight: 0
     region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 1
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
