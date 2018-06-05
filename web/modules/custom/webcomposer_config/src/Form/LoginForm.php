@@ -263,6 +263,13 @@ class LoginForm extends FormBase {
       '#translatable' => TRUE,
     ];
 
+    $form['mobile_login']['mobile_cant_login_url'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Mobile Cant Login URL'),
+      '#default_value' => $this->get('mobile_cant_login_url'),
+      '#translatable' => TRUE,
+    ];
+
     return $form;
   }
 }
