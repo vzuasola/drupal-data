@@ -1,0 +1,18 @@
+uuid: 4f53798d-fc22-4578-9f58-b41aaefc05e7
+langcode: en
+status: true
+dependencies:
+  module:
+    - jamboree_mobile_games
+id: jamboree_mobile_games_entity.jamboree_mobile_games_entity.metatag
+field_name: metatag
+entity_type: jamboree_mobile_games_entity
+bundle: jamboree_mobile_games_entity
+label: Metatags
+description: 'The metatags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

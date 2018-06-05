@@ -1,0 +1,20 @@
+uuid: dd4a1356-3610-4ace-8da1-6427afc9fd84
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.jamboree_mobile_games_entity.field_game_ti
+  module:
+    - jamboree_mobile_games
+id: jamboree_mobile_games_entity.jamboree_mobile_games_entity.field_game_ti
+field_name: field_game_ti
+entity_type: jamboree_mobile_games_entity
+bundle: jamboree_mobile_games_entity
+label: 'Game Title'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
