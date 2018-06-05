@@ -59,6 +59,16 @@ class JamboreeLoginConfigForm extends FormBase {
       '#translatable' => TRUE,
     ];
 
+    $default_login_button = $this->get('login_lightbox_title');
+    $form['login_form']['login_lightbox_title'] = [
+      '#type' => 'textfield',
+      '#title' => t('Login Lightbox Title'),
+      '#default_value' => $default_login_button,
+      '#description' => $this->t('Login Lightbox Title.'),
+      '#format' => $default_login_button['format'],
+      '#translatable' => TRUE,
+    ];
+
     $default_login_username = $this->get('login_username');
     $form['login_form']['login_username'] = [
       '#type' => 'textfield',
@@ -82,9 +92,9 @@ class JamboreeLoginConfigForm extends FormBase {
     $default_remember_username = $this->get('login_remember_username');
     $form['login_form']['login_remember_username'] = [
       '#type' => 'textfield',
-      '#title' => t('Remember Password'),
+      '#title' => t('Remember Username'),
       '#default_value' => $default_remember_username,
-      '#description' => $this->t('Remember Password label.'),
+      '#description' => $this->t('Remember Username label.'),
       '#format' => $default_remember_username['format'],
       '#translatable' => TRUE,
     ];

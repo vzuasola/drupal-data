@@ -1,0 +1,7 @@
+exchange_game_url: 'https://www.opus-casino.com'
+languages: "en|en\r\nin|en"
+currency: "USD\r\nINR"
+country: "IN\r\nSL"
+transaction_subdomain: sunplustest
+_core:
+  default_config_hash: 9rJ-hpOqBpL5uhbUyhhpVXIYSwTZILhA49ACCOX0654
