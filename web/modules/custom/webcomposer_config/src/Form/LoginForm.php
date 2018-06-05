@@ -65,6 +65,13 @@ class LoginForm extends FormBase {
       '#translatable' => TRUE,
     ];
 
+    $form['login_form_details']['rememberme_label'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Remember Me Label'),
+      '#default_value' => $this->get('rememberme_label'),
+      '#translatable' => TRUE,
+    ];
+
     $form['login_form_details']['lightbox_blurb'] = [
       '#type' => 'textarea',
       '#title' => $this->t('Login lightbox blurb'),
