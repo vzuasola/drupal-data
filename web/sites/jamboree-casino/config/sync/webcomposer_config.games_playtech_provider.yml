@@ -1,0 +1,8 @@
+javascript_assets: 'https://login.megasportcasino.com/jswrapper/integration.js.php?casino=casinojamboree'
+lobby_url: 'https://www.google-analytics.com/lobby.js'
+playtech_pas_endpoint: 'https://login.megasportcasino.com/Login.php'
+playtech_pas_casino: casinojamboree
+languages: "en|en\r\njp|ja"
+_core:
+  default_config_hash: 44f16f0qKZJuxkuiP2e1YfOhM2iQbeq5MWa1Qrp3HV8
+iapiconf_override: ''

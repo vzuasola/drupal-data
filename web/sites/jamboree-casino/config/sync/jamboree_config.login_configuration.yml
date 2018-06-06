@@ -1,0 +1,16 @@
+jamboree_settings_tab__active_tab: ''
+login_button: Login
+login_username: Username
+login_password: Password
+login_remember_username: 'Remember Password'
+login_submit_button: Login
+login_forgot_password: 'Forgot Password'
+login_registration: 'Register now'
+login_pt_casino_name: casinojamboree
+login_pt_secret_key: ''
+login_pt_getbalance_url: ''
+login_pt_cashier_url: ''
+login_username_required: 'Username required.'
+login_password_required: 'Password required.'
+login_pt_error_messages: ''
+login_lightbox_title: Login
