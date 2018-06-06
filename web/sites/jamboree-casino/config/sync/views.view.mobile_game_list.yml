@@ -12,7 +12,6 @@ dependencies:
     - taxonomy.vocabulary.game_tag
     - taxonomy.vocabulary.mobile_game_category
   module:
-    - draggableviews
     - jamboree_mobile_games
     - rest
     - serialization
@@ -154,70 +153,6 @@ display:
       display_extenders: {  }
       path: admin/structure/jamboree_mobile_games_entity
       fields:
-        name:
-          table: jamboree_mobile_games_entity_field_data
-          field: name
-          id: name
-          entity_type: null
-          entity_field: name
-          plugin_id: field
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: Name
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: string
-          settings: {  }
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
         field_enable_game:
           id: field_enable_game
           table: jamboree_mobile_games_entity__field_enable_game
@@ -651,60 +586,6 @@ display:
           destination: false
           entity_type: jamboree_mobile_games_entity
           plugin_id: entity_operations
-        draggableviews:
-          id: draggableviews
-          table: jamboree_mobile_games_entity_field_data
-          field: draggableviews
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: 'Jamboree mobile games entity'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          action_title: Action
-          include_exclude: exclude
-          selected_actions: {  }
-          entity_type: jamboree_mobile_games_entity
-          entity_field: id
-          plugin_id: draggable_views_field
       defaults:
         fields: false
         filters: false
@@ -929,10 +810,10 @@ display:
         groups:
           1: AND
       sorts:
-        weight:
-          id: weight
-          table: draggableviews_structure
-          field: weight
+        field_game_tag_target_id:
+          id: field_game_tag_target_id
+          table: jamboree_mobile_games_entity__field_game_tag
+          field: field_game_tag_target_id
           relationship: none
           group_type: group
           admin_label: ''
@@ -941,23 +822,20 @@ display:
           expose:
             label: ''
           plugin_id: standard
-        changed:
-          id: changed
-          table: jamboree_mobile_games_entity_field_data
-          field: changed
+        field_game_title_value:
+          id: field_game_title_value
+          table: jamboree_mobile_games_entity__field_game_title
+          field: field_game_title_value
           relationship: none
           group_type: group
           admin_label: ''
-          order: DESC
+          order: ASC
           exposed: false
           expose:
             label: ''
-          granularity: second
-          entity_type: jamboree_mobile_games_entity
-          entity_field: changed
-          plugin_id: date
+          plugin_id: standard
     cache_metadata:
-      max-age: 0
+      max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
@@ -1040,10 +918,10 @@ display:
         groups:
           1: AND
       sorts:
-        weight:
-          id: weight
-          table: draggableviews_structure
-          field: weight
+        field_game_tag_target_id:
+          id: field_game_tag_target_id
+          table: jamboree_mobile_games_entity__field_game_tag
+          field: field_game_tag_target_id
           relationship: none
           group_type: group
           admin_label: ''
@@ -1052,21 +930,18 @@ display:
           expose:
             label: ''
           plugin_id: standard
-        changed:
-          id: changed
-          table: jamboree_mobile_games_entity_field_data
-          field: changed
+        field_game_title_value:
+          id: field_game_title_value
+          table: jamboree_mobile_games_entity__field_game_title
+          field: field_game_title_value
           relationship: none
           group_type: group
           admin_label: ''
-          order: DESC
+          order: ASC
           exposed: false
           expose:
             label: ''
-          granularity: second
-          entity_type: jamboree_mobile_games_entity
-          entity_field: changed
-          plugin_id: date
+          plugin_id: standard
     cache_metadata:
       max-age: -1
       contexts:
