@@ -6,6 +6,8 @@ dependencies:
     - entity_reference_revisions
     - paragraphs
     - webcomposer_sponsor
+_core:
+  default_config_hash: 7YAVx5uunLV531omp_n0n3LnIh1nDxztafHHzyKEeJg
 id: sponsor_entity.field_sponsor_cmi
 field_name: field_sponsor_cmi
 entity_type: sponsor_entity
