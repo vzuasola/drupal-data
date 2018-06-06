@@ -3,9 +3,10 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.taxonomy_term.game_tag.field_enable
+    - field.field.taxonomy_term.game_tag.field_game_tag_color
     - taxonomy.vocabulary.game_tag
   module:
+    - options
     - text
 id: taxonomy_term.game_tag.default
 targetEntityType: taxonomy_term
@@ -19,15 +20,12 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_enable:
+  field_game_tag_color:
     weight: 1
     label: above
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
+    settings: {  }
     third_party_settings: {  }
-    type: boolean
+    type: list_default
     region: content
 hidden:
   langcode: true

@@ -17,5 +17,5 @@ $databases['default']['default'] = array (
   'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
   'driver' => 'mysql',
 );
-$settings['hash_salt'] = 'SojQ_oyeDWSW042rXy4KQcf__USxUqDbkbro3iGV7YZ-D6h4lQh2JZqU7qNH8dmhc0UUahyOrA';
+$settings['hash_salt'] = 'pnO-VoySpsE_xaqX0H1so9WnGTmAFzNU1hOSNwnN2_fiZAYY48sS7-zpchYdtmpbQBbXLRjEBA';
 $settings['install_profile'] = 'config_installer';
