@@ -70,7 +70,7 @@ class JamboreeGameIntegrationForm extends FormBase {
     $form['game_integration']['live_games_url'] = [
       '#type' => 'textarea',
       '#title' => t('Live Games Client'),
-      '#default_value' => $this->get('live_games_url'),
+      '#default_value' => $this->get('live_client_url'),
       '#translatable' => TRUE,
       '#required' => TRUE,
     ];
