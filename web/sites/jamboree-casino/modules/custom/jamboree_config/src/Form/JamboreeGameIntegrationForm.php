@@ -51,18 +51,18 @@ class JamboreeGameIntegrationForm extends FormBase {
       '#group' => 'advanced',
     ];
 
-    $form['game_integration']['mobile_ngm_client_url'] = [
+    $form['game_integration']['ngm_client_url'] = [
       '#type' => 'textarea',
       '#title' => t('NGM Client'),
-      '#default_value' => $this->get('mobile_ngm_client_url'),
+      '#default_value' => $this->get('ngm_client_url'),
       '#translatable' => TRUE,
       '#required' => TRUE,
     ];
 
-    $form['game_integration']['desktop_ngm_client_url'] = [
+    $form['game_integration']['ngm2dt_client_url'] = [
       '#type' => 'textarea',
       '#title' => t('NGM2DT Client'),
-      '#default_value' => $this->get('desktop_ngm_client_url'),
+      '#default_value' => $this->get('ngm2dt_client_url'),
       '#translatable' => TRUE,
       '#required' => TRUE,
     ];
