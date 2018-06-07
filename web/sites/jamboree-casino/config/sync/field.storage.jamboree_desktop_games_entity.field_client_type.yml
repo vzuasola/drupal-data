@@ -1,13 +1,13 @@
-uuid: ec762880-4f6d-4eae-88d5-d001a66e5336
+uuid: 4e0b1f76-b014-4a36-b19f-f3a47b61a0cc
 langcode: en
 status: true
 dependencies:
   module:
-    - jamboree_mobile_games
+    - jamboree_desktop_games
     - options
-id: jamboree_mobile_games_entity.field_client_type
+id: jamboree_desktop_games_entity.field_client_type
 field_name: field_client_type
-entity_type: jamboree_mobile_games_entity
+entity_type: jamboree_desktop_games_entity
 type: list_string
 settings:
   allowed_values:
