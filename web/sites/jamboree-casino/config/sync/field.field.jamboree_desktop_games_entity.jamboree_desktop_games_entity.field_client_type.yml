@@ -1,0 +1,21 @@
+uuid: 70052831-7115-4ca7-9300-e9bbddd5b9a0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.jamboree_desktop_games_entity.field_client_type
+  module:
+    - jamboree_desktop_games
+    - options
+id: jamboree_desktop_games_entity.jamboree_desktop_games_entity.field_client_type
+field_name: field_client_type
+entity_type: jamboree_desktop_games_entity
+bundle: jamboree_desktop_games_entity
+label: 'Client Type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
