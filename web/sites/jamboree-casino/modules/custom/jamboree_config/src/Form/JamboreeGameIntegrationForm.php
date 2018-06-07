@@ -45,62 +45,32 @@ class JamboreeGameIntegrationForm extends FormBase {
 
   private function sectionGameIntegration(array &$form) {
 
-    $form['mobile_game_integration'] = [
+    $form['game_integration'] = [
       '#type' => 'details',
-      '#title' => t('Mobile Client Game Configuration'),
+      '#title' => t('Game Client Configuration'),
       '#group' => 'advanced',
     ];
 
-    $form['mobile_game_integration']['mobile_ngm_client_url'] = [
+    $form['game_integration']['ngm_client_url'] = [
       '#type' => 'textarea',
       '#title' => t('NGM Client'),
-      '#default_value' => $this->get('mobile_ngm_client_url'),
+      '#default_value' => $this->get('ngm_client_url'),
       '#translatable' => TRUE,
       '#required' => TRUE,
     ];
 
-    $form['mobile_game_integration']['mobile_html5_client_url'] = [
+    $form['game_integration']['ngm2dt_client_url'] = [
       '#type' => 'textarea',
-      '#title' => t('HTML5 Client'),
-      '#default_value' => $this->get('mobile_html5_client_url'),
+      '#title' => t('NGM2DT Client'),
+      '#default_value' => $this->get('ngm2dt_client_url'),
       '#translatable' => TRUE,
       '#required' => TRUE,
     ];
 
-    $form['mobile_game_integration']['mobile_live_games_url'] = [
-      '#type' => 'textarea',
-      '#title' => t('Live Games Client'),
-      '#default_value' => $this->get('mobile_live_games_url'),
-      '#translatable' => TRUE,
-      '#required' => TRUE,
-    ];
-
-    $form['desktop_game_integration'] = [
-      '#type' => 'details',
-      '#title' => t('Desktop Client Game Configuration'),
-      '#group' => 'advanced',
-    ];
-
-    $form['desktop_game_integration']['desktop_ngm_client_url'] = [
-      '#type' => 'textarea',
-      '#title' => t('NGM Client'),
-      '#default_value' => $this->get('desktop_ngm_client_url'),
-      '#translatable' => TRUE,
-      '#required' => TRUE,
-    ];
-
-    $form['desktop_game_integration']['desktop_html5_client_url'] = [
-      '#type' => 'textarea',
-      '#title' => t('HTML5 Client'),
-      '#default_value' => $this->get('desktop_html5_client_url'),
-      '#translatable' => TRUE,
-      '#required' => TRUE,
-    ];
-
-    $form['desktop_game_integration']['desktop_live_games_url'] = [
+    $form['game_integration']['live_client_url'] = [
       '#type' => 'textarea',
       '#title' => t('Live Games Client'),
-      '#default_value' => $this->get('desktop_live_games_url'),
+      '#default_value' => $this->get('live_client_url'),
       '#translatable' => TRUE,
       '#required' => TRUE,
     ];

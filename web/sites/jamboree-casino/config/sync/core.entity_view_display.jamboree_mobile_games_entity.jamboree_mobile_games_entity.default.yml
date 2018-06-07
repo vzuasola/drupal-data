@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.jamboree_mobile_games_entity.jamboree_mobile_games_entity.field_client_type
     - field.field.jamboree_mobile_games_entity.jamboree_mobile_games_entity.field_enable_free_play
     - field.field.jamboree_mobile_games_entity.jamboree_mobile_games_entity.field_enable_game
     - field.field.jamboree_mobile_games_entity.jamboree_mobile_games_entity.field_game_category
@@ -13,12 +14,20 @@ dependencies:
   module:
     - image
     - jamboree_mobile_games
+    - options
     - user
 id: jamboree_mobile_games_entity.jamboree_mobile_games_entity.default
 targetEntityType: jamboree_mobile_games_entity
 bundle: jamboree_mobile_games_entity
 mode: default
 content:
+  field_client_type:
+    weight: 10
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
   field_enable_free_play:
     weight: 1
     label: above
