@@ -171,7 +171,7 @@ class OverviewForm extends FormBase {
     ]);
 
     foreach ($entries as $key => $value) {
-      $title = trim(trim(ucwords($value->title)), '>');
+      $title = trim(trim($value->title), '>');
 
       if (isset($value->type) && $value->type == 'config') {
         $title = $value->title;
