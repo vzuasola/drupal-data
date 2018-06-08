@@ -12,13 +12,10 @@ type: list_string
 settings:
   allowed_values:
     -
-      value: ngm
-      label: NGM
-    -
       value: ngm2dt
       label: NGM2DT
     -
-      value: live
+      value: live_desktop
       label: Live
   allowed_values_function: ''
 module: options

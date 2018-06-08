@@ -67,10 +67,18 @@ class JamboreeGameIntegrationForm extends FormBase {
       '#required' => TRUE,
     ];
 
-    $form['game_integration']['live_client_url'] = [
+    $form['game_integration']['live_mobile_client_url'] = [
       '#type' => 'textarea',
-      '#title' => t('Live Games Client'),
-      '#default_value' => $this->get('live_client_url'),
+      '#title' => t('Live Mobile Games Client'),
+      '#default_value' => $this->get('live_mobile_client_url'),
+      '#translatable' => TRUE,
+      '#required' => TRUE,
+    ];
+
+    $form['game_integration']['live_desktop_client_url'] = [
+      '#type' => 'textarea',
+      '#title' => t('Live Desktop Games Client'),
+      '#default_value' => $this->get('live_desktop_client_url'),
       '#translatable' => TRUE,
       '#required' => TRUE,
     ];

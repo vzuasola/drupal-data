@@ -15,10 +15,7 @@ settings:
       value: ngm
       label: NGM
     -
-      value: ngm2dt
-      label: NGM2DT
-    -
-      value: live
+      value: live_mobile
       label: Live
   allowed_values_function: ''
 module: options
