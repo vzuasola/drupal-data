@@ -1,0 +1,9 @@
+advanced__active_tab: edit-game-integration
+mobile_ngm_client_url: 'https://ngm-ptstg278.ptstaging.eu/casinoclient.html'
+desktop_ngm_client_url: 'https://cachedownload-ptstg278.ptstaging.eu/ngmdesktop/casinoclient.html'
+live_games_url: 'https://cachedownload-ptstg278.ptstaging.eu/ngmdesktop/casinoclient.html'
+real_play_button: 'Real Play'
+free_play_button: 'Free Play'
+ngm_client_url: 'https://ngm-ptstg278.ptstaging.eu/casinoclient.html'
+ngm2dt_client_url: 'https://cachedownload-ptstg278.ptstaging.eu/ngmdesktop/casinoclient.html'
+live_client_url: 'https://cachedownload-ptstg278.ptstaging.eu/ngmdesktop/casinoclient.html'
