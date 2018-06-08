@@ -191,6 +191,20 @@ class MyProfileForm extends WebcomposerFormBase implements WebcomposerFormInterf
         ],
       ],
 
+      'primary_number_markup' => [
+        'name' => 'Primary Mobile Number markup',
+        'type' => 'markup',
+        'settings' => [
+          'markup' => [
+            '#title' => 'Markup for Mobile number primary',
+            '#type' => 'textarea',
+            '#description' => 'A Markup text my profile form',
+            '#default_value' => '<div class="mobile-primary-wrapper"><input type="checkbox"' .
+              'checked="checked" disabled="disabled"><span class="mobile-primary-text"> Primary </span></div>',
+          ],
+        ],
+      ],
+
       'mobile_number_2' => [
         'name' => 'Mobile Number 2',
         'type' => 'textfield',
