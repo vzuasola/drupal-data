@@ -27,6 +27,6 @@ mobile_login_url: N/A
 tablet_login_button_label: ''
 login_page_blurb: ''
 mobile_login_button_label: ''
-advanced__active_tab: edit-mobile-login
+advanced__active_tab: edit-login-form-details
 value: null
 format: null

@@ -1,0 +1,20 @@
+uuid: 4193af1d-c042-49a8-bf94-c2ac086fa10e
+langcode: zh-hans
+status: true
+dependencies:
+  module:
+    - basic_auth
+    - serialization
+    - user
+    - webcomposer_marketing_script
+id: marketing_script
+plugin_id: marketing_script
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+      - xml
+    supported_auth:
+      - basic_auth
+      - cookie

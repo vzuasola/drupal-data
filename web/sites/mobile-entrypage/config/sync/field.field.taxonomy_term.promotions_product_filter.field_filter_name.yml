@@ -1,0 +1,19 @@
+uuid: 828f3d62-f060-42f1-887b-8e7ae1f5e86c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_filter_name
+    - taxonomy.vocabulary.promotions_product_filter
+id: taxonomy_term.promotions_product_filter.field_filter_name
+field_name: field_filter_name
+entity_type: taxonomy_term
+bundle: promotions_product_filter
+label: 'Filter Name'
+description: 'The text that will appear in the Promotions filter dropdown'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

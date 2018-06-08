@@ -11,7 +11,7 @@ id: content_block_entity.content_block_entity.field_open_in
 field_name: field_open_in
 entity_type: content_block_entity
 bundle: content_block_entity
-label: 'Open In'
+label: 'Image Banner Link Target'
 description: ''
 required: false
 translatable: true

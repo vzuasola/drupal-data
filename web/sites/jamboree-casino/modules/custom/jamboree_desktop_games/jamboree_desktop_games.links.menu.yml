@@ -1,0 +1,18 @@
+jamboree_desktop_games.list:
+  title: 'Jamboree Desktop Games Configuration'
+  description: 'List Jamboree Desktop Games entities'
+  parent: system.admin_config
+  route_name: jamboree_desktop_games.admin_settings
+
+# Jamboree desktop games entity menu items definition
+entity.jamboree_desktop_games_entity.collection:
+  title: 'Jamboree desktop games entity list'
+  route_name: entity.jamboree_desktop_games_entity.collection
+  description: 'List Jamboree desktop games entity entities'
+  parent: jamboree_desktop_games.list
+
+jamboree_desktop_games_entity.admin.structure.settings:
+  title: Jamboree desktop games entity settings
+  description: 'Configure Jamboree desktop games entity entities'
+  route_name: jamboree_desktop_games_entity.settings
+  parent: jamboree_desktop_games.list

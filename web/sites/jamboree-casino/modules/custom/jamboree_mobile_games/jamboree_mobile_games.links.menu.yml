@@ -1,0 +1,18 @@
+jamboree_mobile_games.list:
+  title: 'Jamboree Mobile Games Configuration'
+  description: 'List Jamboree Mobile Games entities'
+  parent: system.admin_config
+  route_name: jamboree_mobile_games.admin_settings
+
+# Jamboree mobile games entity menu items definition
+entity.jamboree_mobile_games_entity.collection:
+  title: 'Jamboree mobile games entity list'
+  route_name: entity.jamboree_mobile_games_entity.collection
+  description: 'List Jamboree mobile games entity entities'
+  parent: jamboree_mobile_games.list
+
+jamboree_mobile_games_entity.admin.structure.settings:
+  title: Jamboree mobile games entity settings
+  description: 'Configure Jamboree mobile games entity entities'
+  route_name: jamboree_mobile_games_entity.settings
+  parent: jamboree_mobile_games.list

@@ -12,12 +12,12 @@ use Drupal\Core\Form\FormStateInterface;
  *   id = "mobile_promotions",
  *   route = {
  *     "title" = "Mobile Promotions Configuration",
- *     "path" = "/admin/config/mobile/promotions/configuration",
+ *     "path" = "/admin/config/mobile_promotions/configuration",
  *   },
  *   menu = {
  *     "title" = "Mobile Promotions Configuration",
  *     "description" = "Provides configuration for Promotions",
- *     "parent" = "mobile_config.list",
+ *     "parent" = "mobile_promotions.list",
  *   },
  * )
  */
@@ -52,13 +52,15 @@ class MobilePromotionsForm extends FormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Filter Label'),
       '#default_value' => $this->get('filter_label'),
+      '#translatable' => TRUE,
       '#required' => TRUE,
     ];
 
     $form['promotions_configuration']['no_available_msg'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('No available promotions default message'),
+      '#title' => $this->t('No available promotions message'),
       '#default_value' => $this->get('no_available_msg'),
+      '#translatable' => TRUE,
       '#required' => TRUE,
     ];
 

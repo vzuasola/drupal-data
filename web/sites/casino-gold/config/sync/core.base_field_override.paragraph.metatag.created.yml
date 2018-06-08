@@ -1,0 +1,20 @@
+uuid: a09d06b4-489c-43f3-9887-42205cccadb7
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.metatag
+_core:
+  default_config_hash: _3gBMwP9-pLt-LpPOlvXwBl9CrR0AixgkPD5Qt8l_ns
+id: paragraph.metatag.created
+field_name: created
+entity_type: paragraph
+bundle: metatag
+label: 'Authored on'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

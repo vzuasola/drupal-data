@@ -1,0 +1,15 @@
+uuid: 6a3b040f-6b33-47b0-8508-21efdc5ae8d1
+langcode: zh-hans
+status: true
+dependencies:
+  module:
+    - content_translation
+    - webcomposer_downloadables
+third_party_settings:
+  content_translation:
+    enabled: false
+id: downloadable_entity.downloadable_entity
+target_entity_type_id: downloadable_entity
+target_bundle: downloadable_entity
+default_langcode: site_default
+language_alterable: false

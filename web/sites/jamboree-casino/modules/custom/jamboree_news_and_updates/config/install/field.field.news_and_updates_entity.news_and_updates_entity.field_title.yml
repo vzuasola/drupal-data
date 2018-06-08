@@ -1,0 +1,20 @@
+uuid: 68ec2174-eddf-4aa0-9a02-daa280bff0fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.news_and_updates_entity.field_title
+  module:
+    - jamboree_news_and_updates
+id: news_and_updates_entity.news_and_updates_entity.field_title
+field_name: field_title
+entity_type: news_and_updates_entity
+bundle: news_and_updates_entity
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

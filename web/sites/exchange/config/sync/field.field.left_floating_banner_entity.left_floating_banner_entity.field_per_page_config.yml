@@ -7,7 +7,7 @@ dependencies:
   module:
     - webcomposer_floating_banners
 _core:
-  default_config_hash: GBFGtcwj7B8oVJUcPvRJ7mg_EdMTYdfFzps5Dgb5-z8
+  default_config_hash: 4KmD7pHhdTMU9Xa3TCk87R4nBu_LGotwxYBo5FmNfRM
 id: left_floating_banner_entity.left_floating_banner_entity.field_per_page_config
 field_name: field_per_page_config
 entity_type: left_floating_banner_entity

@@ -1,0 +1,30 @@
+uuid: 9a5380b0-74c1-491e-ba5a-fb8037acaa18
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.jamboree_desktop_games_entity.field_game_tag
+    - taxonomy.vocabulary.game_tag
+  module:
+    - jamboree_desktop_games
+id: jamboree_desktop_games_entity.jamboree_desktop_games_entity.field_game_tag
+field_name: field_game_tag
+entity_type: jamboree_desktop_games_entity
+bundle: jamboree_desktop_games_entity
+label: 'Game Tag'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      game_tag: game_tag
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

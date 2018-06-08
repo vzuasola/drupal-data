@@ -1,0 +1,58 @@
+uuid: 04d43d4d-cd9a-4882-a14a-e426e23e23b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.news_and_updates_entity.news_and_updates_entity.field_authored_on
+    - field.field.news_and_updates_entity.news_and_updates_entity.field_body
+    - field.field.news_and_updates_entity.news_and_updates_entity.field_title
+  module:
+    - jamboree_news_and_updates
+    - text
+id: news_and_updates_entity.news_and_updates_entity.default
+targetEntityType: news_and_updates_entity
+bundle: news_and_updates_entity
+mode: default
+content:
+  field_authored_on:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_timestamp
+    region: content
+  field_body:
+    weight: 2
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea_with_summary
+    region: content
+  field_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  langcode:
+    type: language_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  user_id:
+    type: entity_reference_autocomplete
+    weight: 3
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+hidden:
+  field_authored_date: true
+  name: true
+  translation: true

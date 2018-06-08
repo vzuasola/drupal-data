@@ -11,7 +11,7 @@ id: content_block_entity.content_block_entity.field_content_block_category
 field_name: field_content_block_category
 entity_type: content_block_entity
 bundle: content_block_entity
-label: 'Content Block Category'
+label: Platform
 description: ''
 required: true
 translatable: false

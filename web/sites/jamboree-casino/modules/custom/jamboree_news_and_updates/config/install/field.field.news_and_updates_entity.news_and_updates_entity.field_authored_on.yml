@@ -1,0 +1,22 @@
+uuid: 57b8bfc5-b3a6-47ce-95d2-856e4614bff6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.news_and_updates_entity.field_authored_on
+  module:
+    - jamboree_news_and_updates
+id: news_and_updates_entity.news_and_updates_entity.field_authored_on
+field_name: field_authored_on
+entity_type: news_and_updates_entity
+bundle: news_and_updates_entity
+label: 'Authored on'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1526004422
+default_value_callback: ''
+settings: {  }
+field_type: timestamp

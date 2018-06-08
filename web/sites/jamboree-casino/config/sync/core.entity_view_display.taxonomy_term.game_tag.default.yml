@@ -1,0 +1,31 @@
+uuid: d28300e2-d82d-4bea-b968-afd0787ac130
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.game_tag.field_game_tag_color
+    - taxonomy.vocabulary.game_tag
+  module:
+    - options
+    - text
+id: taxonomy_term.game_tag.default
+targetEntityType: taxonomy_term
+bundle: game_tag
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_game_tag_color:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+hidden:
+  langcode: true
