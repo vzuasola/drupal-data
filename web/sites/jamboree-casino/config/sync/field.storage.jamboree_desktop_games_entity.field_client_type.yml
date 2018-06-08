@@ -15,7 +15,7 @@ settings:
       value: ngm2dt
       label: NGM2DT
     -
-      value: live
+      value: live_desktop
       label: Live
   allowed_values_function: ''
 module: options
