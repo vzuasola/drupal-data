@@ -15,9 +15,6 @@ settings:
       value: ngm
       label: NGM
     -
-      value: ngm2dt
-      label: NGM2DT
-    -
       value: live
       label: Live
   allowed_values_function: ''
