@@ -145,9 +145,9 @@ class MyProfileForm extends WebcomposerFormBase implements WebcomposerFormInterf
         'type' => 'radios',
         'settings' => [
           'label' => [
-            '#title' => 'Country Label',
+            '#title' => 'Gender Label',
             '#type' => 'textfield',
-            '#description' => 'The Label for the Country field',
+            '#description' => 'The Label for the Gender field',
           ],
           'choices' => [
             '#title' => 'Gender Choices',
@@ -191,16 +191,22 @@ class MyProfileForm extends WebcomposerFormBase implements WebcomposerFormInterf
         ],
       ],
 
-      'primary_number_markup' => [
-        'name' => 'Primary Mobile Number markup',
-        'type' => 'markup',
+      'primary_number' => [
+        'name' => 'Primary Mobile Number checkbox',
+        'type' => 'checkboxes',
         'settings' => [
-          'markup' => [
-            '#title' => 'Markup for Mobile number primary',
+          'label' => [
+            '#title' => 'primary Label',
+            '#type' => 'textfield',
+            '#description' => 'The Label for the primary number field',
+          ],
+          'choices' => [
+            '#title' => 'Primary Choices',
             '#type' => 'textarea',
-            '#description' => 'A Markup text my profile form',
-            '#default_value' => '<div class="mobile-primary-wrapper"><input type="checkbox"' .
-              'checked="checked" disabled="disabled"><span class="mobile-primary-text"> Primary </span></div>',
+            '#description' => 'Provide a pipe separated key value pair. <br> <small>Example key|My Value</small>',
+            '#default_value' => implode(PHP_EOL, [
+              'p|Primary',
+            ]),
           ],
         ],
       ],
@@ -323,15 +329,15 @@ class MyProfileForm extends WebcomposerFormBase implements WebcomposerFormInterf
         ],
       ],
 
-      'button_cancel_markup' => [
-        'name' => 'Button Cancel Markup',
-        'type' => 'markup',
+      'button_cancel' => [
+        'name' => 'Button Cancel',
+        'type' => 'button',
         'settings' => [
-          'markup' => [
-            '#title' => 'Markup Cancel button',
-            '#type' => 'textarea',
-            '#description' => 'A Markup text for Cancel button',
-            '#default_value' => '<button class="btn btn-small btn-gray btn-cancel btn-lower-case">Cancel</button>',
+          'label' => [
+            '#title' => 'Cancel Label',
+            '#type' => 'textfield',
+            '#description' => 'Label for the Cancel button',
+            '#default_value' => 'Cancel',
           ],
         ],
       ],
