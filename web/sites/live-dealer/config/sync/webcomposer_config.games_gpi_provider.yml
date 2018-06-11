@@ -11,4 +11,8 @@ gpi_lottery_keno_version_no: ''
 gpi_vendor_id: DAFABET
 gpi_ladder_currency: ''
 gpi_ladder_language_mapping: ''
-gpi_extra_params: h5selection|0
+gpi_keno_extra_params: ''
+gpi_pk10_extra_params: ''
+gpi_thai_lottey_extra_params: ''
+gpi_live_dealer_extra_params: h5selection|0
+gpi_ladder_extra_params: ''
