@@ -1,0 +1,14 @@
+gpi_keno_currency: ''
+gpi_keno_language_mapping: ''
+gpi_pk10_currency: ''
+gpi_pk10_language_mapping: ''
+gpi_thai_lottey_currency: ''
+gpi_thai_lottey_language_mapping: ''
+gpi_live_dealer_currency: "RMB\r\nCNY\r\nEUR\r\nUSD\r\nGBP\r\nMYR\r\nTHB\r\nKRW\r\nVND\r\nIDR\r\nINR\r\nPLN\r\nRUB"
+gpi_live_dealer_language_mapping: "en|en-us\r\nsc|zh-cn\r\nid|id-id\r\nkr|ko-kr\r\nth|th-th\r\nvn|vi-vn\r\nin|en-us"
+gpi_game_url: 'http://casino.gpiops.com'
+gpi_lottery_keno_version_no: ''
+gpi_vendor_id: DAFABET
+gpi_ladder_currency: ''
+gpi_ladder_language_mapping: ''
+gpi_extra_params: h5selection|0
