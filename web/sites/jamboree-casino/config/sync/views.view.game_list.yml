@@ -188,7 +188,16 @@ display:
       header: {  }
       footer: {  }
       empty: {  }
-      relationships: {  }
+      relationships:
+        field_game_tag:
+          id: field_game_tag
+          table: jamboree_desktop_games_entity__field_game_tag
+          field: field_game_tag
+          relationship: none
+          group_type: group
+          admin_label: 'field_game_tag: Taxonomy term'
+          required: true
+          plugin_id: standard
       arguments: {  }
       display_extenders: {  }
     cache_metadata:
@@ -866,17 +875,19 @@ display:
         groups:
           1: AND
       sorts:
-        field_game_tag_target_id:
-          id: field_game_tag_target_id
-          table: jamboree_desktop_games_entity__field_game_tag
-          field: field_game_tag_target_id
-          relationship: none
+        weight:
+          id: weight
+          table: taxonomy_term_field_data
+          field: weight
+          relationship: field_game_tag
           group_type: group
           admin_label: ''
           order: ASC
           exposed: false
           expose:
             label: ''
+          entity_type: taxonomy_term
+          entity_field: weight
           plugin_id: standard
         field_game_title_value:
           id: field_game_title_value
@@ -930,17 +941,19 @@ display:
       display_description: ''
       title: 'Desktop Game List'
       sorts:
-        field_game_tag_target_id:
-          id: field_game_tag_target_id
-          table: jamboree_desktop_games_entity__field_game_tag
-          field: field_game_tag_target_id
-          relationship: none
+        weight:
+          id: weight
+          table: taxonomy_term_field_data
+          field: weight
+          relationship: field_game_tag
           group_type: group
           admin_label: ''
           order: ASC
           exposed: false
           expose:
             label: ''
+          entity_type: taxonomy_term
+          entity_field: weight
           plugin_id: standard
         field_game_title_value:
           id: field_game_title_value
