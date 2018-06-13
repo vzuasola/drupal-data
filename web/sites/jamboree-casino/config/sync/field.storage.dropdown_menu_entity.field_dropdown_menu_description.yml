@@ -1,13 +1,13 @@
-uuid: 1dd50d6f-2d25-44db-8efc-499c745d7db2
+uuid: b3dc535f-8e8e-49ec-8903-a54f0aea2fc6
 langcode: en
 status: true
 dependencies:
   module:
     - jamboree_dropdown_menu
 _core:
-  default_config_hash: PerpP1k3OzSO9FmA4H2PBsOqgudzk1b84XtadnFA1vU
-id: dropdown_menu_entity.field_dropdown_menu_link
-field_name: field_dropdown_menu_link
+  default_config_hash: JDrXdzlxES0gWjeQv9Y4gHpPcAGZTtQVcgM5CBTnBNc
+id: dropdown_menu_entity.field_dropdown_menu_description
+field_name: field_dropdown_menu_description
 entity_type: dropdown_menu_entity
 type: string
 settings:
