@@ -123,7 +123,7 @@ class MarketingScriptResource extends ResourceBase {
     $build = array( 
       '#cache' => array( 
         'max-age' => 0, 
-      ), 
+      ),
     ); 
 
     return (new ResourceResponse($response))->addCacheableDependency($build);
