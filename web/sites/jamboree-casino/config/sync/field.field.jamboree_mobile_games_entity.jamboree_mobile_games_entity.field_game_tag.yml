@@ -6,7 +6,7 @@ dependencies:
     - field.storage.jamboree_mobile_games_entity.field_game_tag
     - taxonomy.vocabulary.game_tag
   content:
-    - 'taxonomy_term:game_tag:0b990fe1-3a8d-42c3-9736-5aa8808c8c39'
+    - 'taxonomy_term:game_tag:dcc3c5ca-17d6-4b07-93b7-d73c91ae3079'
   module:
     - jamboree_mobile_games
 id: jamboree_mobile_games_entity.jamboree_mobile_games_entity.field_game_tag
@@ -15,11 +15,11 @@ entity_type: jamboree_mobile_games_entity
 bundle: jamboree_mobile_games_entity
 label: 'Game Tag'
 description: ''
-required: true
+required: false
 translatable: true
 default_value:
   -
-    target_uuid: 0b990fe1-3a8d-42c3-9736-5aa8808c8c39
+    target_uuid: dcc3c5ca-17d6-4b07-93b7-d73c91ae3079
 default_value_callback: ''
 settings:
   handler: 'default:taxonomy_term'
