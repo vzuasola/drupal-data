@@ -76,6 +76,7 @@ class DomainImport {
    */
   public function getExcelLanguages($form_state) {
     $this->readExcel($form_state, $context);
+
     return $this->ImportParser->excel_get_languages();
   }
 
@@ -86,6 +87,7 @@ class DomainImport {
    * @param [Array] &$context
    */
   public function importPrepare($form_state, &$context) {
+    $this->setDataFlags();
     $this->readExcel($form_state, $context);
 
     if ($context['sandbox'] === "EXCEL_FORMAT_OK") {
@@ -111,9 +113,10 @@ class DomainImport {
    * @param [Array] $form_state
    * @param [Array] &$context
    */
-  public  function importDomainGroups($form_state, $langcode, &$context) {
-
+  public function importDomainGroups($form_state, $langcode, &$context) {
+    $this->setDataFlags();
     $this->readExcel($form_state, $context);
+
     if ($context['sandbox'] === "EXCEL_FORMAT_OK") {
       $message = 'Importing Domains Groups...';
       $context['message'] = $message;
@@ -204,7 +207,9 @@ class DomainImport {
    * @param [type] $langcode
    */
   public function importDomains($form_state, $langcode, &$context) {
+    $this->setDataFlags();
     $this->readExcel($form_state, $context);
+
     if ($context['sandbox'] === "EXCEL_FORMAT_OK") {
       $message = 'Importing Domains...';
       $context['message'] = $message;
@@ -298,8 +303,9 @@ class DomainImport {
    * @param [Array] &$context
    */
   public function importMasterPlaceholder($form_state, &$context) {
-
+    $this->setDataFlags();
     $this->readExcel($form_state, $context);
+
     if ($context['sandbox'] === "EXCEL_FORMAT_OK") {
       $message = 'Importing Master Placeholder...';
       $context['message'] = $message;
@@ -510,6 +516,13 @@ class DomainImport {
    */
   public function domainImportFinishedCallback() {
     drupal_set_message(t('Import successfully Completed!'), 'status');
+  }
+
+  /**
+   * Sets custom data flag before a batch operation starts
+   */
+  private function setDataFlags() {
+    define('AUDIT_LOG_EXCLUDE_REQUEST', TRUE);
   }
 
 }
