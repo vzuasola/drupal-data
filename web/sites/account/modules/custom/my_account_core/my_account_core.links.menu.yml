@@ -4,12 +4,6 @@ my_account_core.livechat_config:
   route_name: my_account_core.livechat_config
   parent: my_account_form_profile.config
   weight: 4
-my_account_core.header_config:
-  title: 'My Account Header'
-  description: 'My Account Header Configurations'
-  route_name: my_account_core.header_config
-  parent: my_account_form_profile.config
-  weight: 5
 my_account_core.help_config:
   title: 'My Account Help'
   description: 'My Account Help Configurations'
