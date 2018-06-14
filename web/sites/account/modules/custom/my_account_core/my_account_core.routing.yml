@@ -5,13 +5,6 @@ my_account_core.livechat_config:
     _form: '\Drupal\my_account_core\Form\MyAccountLivechatForm'
   requirements:
     _permission: 'administer my_account core'
-my_account_core.header_config:
-  path: '/admin/config/my_account/header'
-  defaults:
-    _title: 'MyAccount Header'
-    _form: '\Drupal\my_account_core\Form\MyAccountHeaderForm'
-  requirements:
-    _permission: 'administer my_account core'
 my_account_core.help_config:
   path: '/admin/config/my_account/help'
   defaults:
