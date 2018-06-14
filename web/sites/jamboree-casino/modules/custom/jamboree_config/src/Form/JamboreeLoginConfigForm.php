@@ -55,7 +55,6 @@ class JamboreeLoginConfigForm extends FormBase {
       '#title' => t('Login Button'),
       '#default_value' => $default_login_button,
       '#description' => $this->t('Login Button label that triggers login lightbox.'),
-      '#format' => $default_login_button['format'],
       '#translatable' => TRUE,
     ];
 
@@ -65,7 +64,6 @@ class JamboreeLoginConfigForm extends FormBase {
       '#title' => t('Login Lightbox Title'),
       '#default_value' => $default_login_button,
       '#description' => $this->t('Login Lightbox Title.'),
-      '#format' => $default_login_button['format'],
       '#translatable' => TRUE,
     ];
 
@@ -75,7 +73,6 @@ class JamboreeLoginConfigForm extends FormBase {
       '#title' => t('Username'),
       '#default_value' => $default_login_username,
       '#description' => $this->t('Username label.'),
-      '#format' => $default_login_username['format'],
       '#translatable' => TRUE,
     ];
 
@@ -85,7 +82,6 @@ class JamboreeLoginConfigForm extends FormBase {
       '#title' => t('Password'),
       '#default_value' => $default_login_password,
       '#description' => $this->t('Password Label.'),
-      '#format' => $default_login_password['format'],
       '#translatable' => TRUE,
     ];
 
@@ -95,7 +91,6 @@ class JamboreeLoginConfigForm extends FormBase {
       '#title' => t('Remember Username'),
       '#default_value' => $default_remember_username,
       '#description' => $this->t('Remember Password label.'),
-      '#format' => $default_remember_username['format'],
       '#translatable' => TRUE,
     ];
 
@@ -105,7 +100,6 @@ class JamboreeLoginConfigForm extends FormBase {
       '#title' => t('Login Submit Button'),
       '#default_value' => $default_submit,
       '#description' => $this->t('Login Submit Button label that initiates login.'),
-      '#format' => $default_submit['format'],
       '#translatable' => TRUE,
     ];
 
@@ -115,7 +109,6 @@ class JamboreeLoginConfigForm extends FormBase {
       '#title' => t('Forgot Password Link Label'),
       '#default_value' => $default_forgot_password,
       '#description' => $this->t('Forgot Password link label.'),
-      '#format' => $default_forgot_password['format'],
       '#translatable' => TRUE,
     ];
 
@@ -125,7 +118,6 @@ class JamboreeLoginConfigForm extends FormBase {
       '#title' => t('Registration Link Label'),
       '#default_value' => $default_registration,
       '#description' => $this->t('Registration link label.'),
-      '#format' => $default_registration['format'],
       '#translatable' => TRUE,
     ];
 
@@ -139,8 +131,6 @@ class JamboreeLoginConfigForm extends FormBase {
       '#type' => 'textfield',
       '#title' => t('Casino Name'),
       '#default_value' => $default_pt_casino_name,
-      '#description' => $this->t('Casino name instance for Playtech.'),
-      '#format' => $default_pt_casino_name['format'],
       '#translatable' => FALSE,
     ];
 
@@ -150,7 +140,6 @@ class JamboreeLoginConfigForm extends FormBase {
       '#title' => t('Secret Key'),
       '#default_value' => $default_pt_secret_key,
       '#description' => $this->t('Secret key to be used for integrating with playtech web apis.'),
-      '#format' => $default_pt_secret_key['format'],
       '#translatable' => FALSE,
     ];
 
@@ -160,7 +149,6 @@ class JamboreeLoginConfigForm extends FormBase {
       '#title' => t('Playtech Getbalance API URL'),
       '#default_value' => $default_pt_getbalance_url,
       '#description' => $this->t('URL to be used to get player balance.'),
-      '#format' => $default_pt_getbalance_url['format'],
       '#translatable' => FALSE,
     ];
 
@@ -170,7 +158,6 @@ class JamboreeLoginConfigForm extends FormBase {
       '#title' => t('Playtech Cashier URL'),
       '#default_value' => $default_pt_cashier_url,
       '#description' => $this->t('Playtech Cashier URL.'),
-      '#format' => $default_pt_cashier_url['format'],
       '#translatable' => FALSE,
     ];
 
@@ -185,7 +172,6 @@ class JamboreeLoginConfigForm extends FormBase {
       '#title' => t('Username required'),
       '#default_value' => $default_username_required,
       '#description' => $this->t('Username required error message.'),
-      '#format' => $default_username_required['format'],
       '#translatable' => TRUE,
     ];
 
@@ -195,7 +181,6 @@ class JamboreeLoginConfigForm extends FormBase {
       '#title' => t('Password required'),
       '#default_value' => $default_password_required,
       '#description' => $this->t('Password required error message.'),
-      '#format' => $default_password_required['format'],
       '#translatable' => TRUE,
     ];
 
@@ -205,7 +190,6 @@ class JamboreeLoginConfigForm extends FormBase {
       '#title' => t('Playtech error messages'),
       '#default_value' => $default_pt_error_messages,
       '#description' => $this->t('Mapping for error messages from playtech. Format errorCode|errorMessage'),
-      '#format' => $default_pt_error_messages['format'],
       '#translatable' => TRUE,
     ];
 
