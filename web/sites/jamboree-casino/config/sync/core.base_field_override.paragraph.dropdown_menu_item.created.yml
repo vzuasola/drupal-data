@@ -4,6 +4,8 @@ status: true
 dependencies:
   config:
     - paragraphs.paragraphs_type.dropdown_menu_item
+_core:
+  default_config_hash: H4K3275KeIFy5hwlOKEk5FenMhsOZiZgL3Vrf8z9FKQ
 id: paragraph.dropdown_menu_item.created
 field_name: created
 entity_type: paragraph

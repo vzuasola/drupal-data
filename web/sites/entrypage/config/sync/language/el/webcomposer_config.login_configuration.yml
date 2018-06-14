@@ -6,7 +6,7 @@ error_message_blank_password: 'Υποχρεωτικό πεδίο ο Κωδικό
 error_message_blank_passname: 'Παρακαλώ ελέγξτε όλα τα πεδία και προσπαθήστε ξανά.'
 error_message_invalid_passname: 'Λυπούμαστε, μη έγκυρο όνομα χρήστη ή / και κωδικός πρόσβασης. ΠΑΡΑΚΑΛΩ προσπαθησε ξανα.'
 error_message_service_not_available: 'Η Υπηρεσία δεν είναι διαθέσιμη.'
-error_message_account_suspended: 'Ο λογαριασμός σας έχει κλειδωθεί. Παρακαλώ επικοινωνήστε με την εξυπηρέτηση πελατών.'
+error_message_account_suspended: 'Κλειδωμένος Λογαριασμός. Παρακαλούμε επικοινωνήστε με την Υπ/ξη Πελατών'
 error_message_account_locked: 'Κλειδωμένος Λογαριασμός. Παρακαλούμε επικοινωνήστε με την Υπ/ξη Πελατών'
 autologout_box_title: PRZYPOMNIENIE
 autologout_box_content:

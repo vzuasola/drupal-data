@@ -1,0 +1,22 @@
+uuid: 1a8e6191-431b-4a3b-9220-920adc031e56
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.dropdown_menu_entity.field_dropdown_menu_description
+  module:
+    - jamboree_dropdown_menu
+_core:
+  default_config_hash: 5TKnp1AC0iymkcC5wsI2JVlENUV9GAW0a-ZAcK3qfco
+id: dropdown_menu_entity.dropdown_menu_entity.field_dropdown_menu_description
+field_name: field_dropdown_menu_description
+entity_type: dropdown_menu_entity
+bundle: dropdown_menu_entity
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

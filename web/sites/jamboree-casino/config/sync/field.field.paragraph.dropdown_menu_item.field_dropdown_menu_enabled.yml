@@ -1,0 +1,25 @@
+uuid: 0fb2d815-cae1-4b01-a4f0-aeda0e78ec1e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_dropdown_menu_enabled
+    - paragraphs.paragraphs_type.dropdown_menu_item
+_core:
+  default_config_hash: 32Mu4R2rx4FZRVCJ3OJgnsbTDjGbHbFnlFRrr8iyGUY
+id: paragraph.dropdown_menu_item.field_dropdown_menu_enabled
+field_name: field_dropdown_menu_enabled
+entity_type: paragraph
+bundle: dropdown_menu_item
+label: Enabled
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

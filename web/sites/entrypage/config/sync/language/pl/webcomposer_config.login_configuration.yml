@@ -5,7 +5,7 @@ error_message_blank_password: 'Twoje hasło jest wymagane.'
 error_message_blank_passname: 'Prosimy sprawdzić wszystkie pola i spróbować ponownie.'
 error_message_invalid_passname: 'Przepraszamy, niewłaściwy username lub/i hasło. Prosimy spróbować ponownie.'
 error_message_service_not_available: 'Serwis nie jest dostępny.'
-error_message_account_suspended: 'Konto zablokowane. Prosimy o kontakt z Obsługą Klienta.'
+error_message_account_suspended: 'Twoje konto zostało zablokowane z powodu nieudanego logowania. Prosimy o kontakt z Obługą Klienta.'
 error_message_account_locked: 'Twoje konto zostało zablokowane z powodu nieudanego logowania. Prosimy o kontakt z Obługą Klienta.'
 autologout_box_title: PRZYPOMNIENIE
 autologout_box_content:

@@ -16,7 +16,7 @@ use Drupal\Core\Entity\EntityInterface;
  *
  */
 function webcomposer_audit_entity_update(EntityInterface $entity) {
-  if (defined('MAINTENANCE_MODE')) {
+  if (!webcomposer_audit_entity_is_valid()) {
     return;
   }
 
@@ -31,7 +31,7 @@ function webcomposer_audit_entity_update(EntityInterface $entity) {
  *
  */
 function webcomposer_audit_entity_insert(EntityInterface $entity) {
-  if (defined('MAINTENANCE_MODE')) {
+  if (!webcomposer_audit_entity_is_valid()) {
     return;
   }
 
@@ -46,7 +46,7 @@ function webcomposer_audit_entity_insert(EntityInterface $entity) {
  *
  */
 function webcomposer_audit_entity_delete(EntityInterface $entity) {
-  if (defined('MAINTENANCE_MODE')) {
+  if (!webcomposer_audit_entity_is_valid()) {
     return;
   }
 
@@ -55,6 +55,17 @@ function webcomposer_audit_entity_delete(EntityInterface $entity) {
   } catch (\Exception $e) {
     // do nothing
   }
+}
+
+/**
+ * Flag to check if request is valid
+ */
+function webcomposer_audit_entity_is_valid() {
+  if (defined('MAINTENANCE_MODE') || defined('AUDIT_LOG_EXCLUDE_REQUEST')) {
+    return false;
+  }
+
+  return true;
 }
 
 /**

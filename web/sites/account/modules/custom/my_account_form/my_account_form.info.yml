@@ -1,0 +1,5 @@
+name: My Account Form
+type: module
+description: Form config for My Account
+core: 8.x
+package: My Account

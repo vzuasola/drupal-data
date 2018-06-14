@@ -1,0 +1,6 @@
+advanced__active_tab: edit-footer
+footer_blurb:
+  value: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mauris ipsum, sollicitudin at consequat in, volutpat eget mauris. Phasellus bibendum.</p>\r\n"
+  format: basic_html
+value: null
+format: null
