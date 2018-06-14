@@ -1,180 +1,142 @@
 <?php
 
-/**
- * @file
- * Contains Drupal\my_account_core\Form\BonusHistoryForm.
- */
 namespace Drupal\my_account_core\Form;
 
-use Drupal\Core\Form\FormBase;
+use Drupal\webcomposer_config_schema\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\Core\Form\ConfigFormBase;
 
 /**
- * Implements the vertical tabs demo form controller.
+ * Bonus History configuration.
  *
- * This example demonstrates the use of \Drupal\Core\Render\Element\VerticalTabs
- * to group input elements according category.
- *
- * @see \Drupal\Core\Form\FormBase
- * @see \Drupal\Core\Form\ConfigFormBase
+ * @WebcomposerConfigPlugin(
+ *   id = "bonus_history",
+ *   route = {
+ *     "title" = "Bonus History Configuration",
+ *     "path" = "/admin/config/my_account/bonus-history",
+ *   },
+ *   menu = {
+ *     "title" = "Bonus History",
+ *     "description" = "Bonus history configuration",
+ *     "parent" = "my_account_form_profile.config",
+ *   },
+ * )
  */
-class BonusHistoryForm extends ConfigFormBase
-{
-  /**
-   * Getter method for Form ID.
-   *
-   * @inheritdoc
-   */
-  public function getFormId()
-  {
-    return 'bonus_histroy_form_config';
-  }
+class BonusHistoryForm extends FormBase {
 
   /**
-   *
-   * @inheritdoc
+   * {@inheritdoc}
    */
-  protected function getEditableConfigNames()
-  {
+  protected function getEditableConfigNames() {
     return ['my_account_core.bonus_history'];
   }
 
   /**
    * {@inheritdoc}
-   *
-   * @param array              $form
-   *   The render array of the currently built form.
-   * @param FormStateInterface $form_state
-   *   Object describing the current state of the form.
    */
-  public function buildForm(array $form, FormStateInterface $form_state)
-  {
-    $config = $this->config('my_account_core.bonus_history');
-
+  public function form(array $form, FormStateInterface $form_state) {
     $form['my_account_group'] = [
       '#type' => 'vertical_tabs',
     ];
 
+    $this->bonusHistoryConfig($form);
+    $this->bonusHistoryPagination($form);
+
+    return $form;
+  }
+
+  /**
+   * Bonus history form configuration.
+   */
+  private function bonusHistoryConfig(array &$form) {
     $form['bonus_history_group'] = [
       '#type' => 'details',
       '#title' => 'Bonus History',
-      '#group' => 'my_account_group'
+      '#group' => 'my_account_group',
     ];
 
     $form['bonus_history_group']['page_title'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Page Title'),
-      '#default_value' => $config->get('page_title') ?? 'Active Bonuses',
-      '#required' => true,
+      '#default_value' => $this->get('page_title') ?: 'Active Bonuses',
+      '#required' => TRUE,
+      '#translatable' => TRUE,
     ];
 
     $form['bonus_history_group']['datetime_format'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Date and Time Format'),
-      '#default_value' => $config->get('datetime_format') ?? 'd/m/Y H:i',
+      '#default_value' => $this->get('datetime_format') ?: 'd/m/Y H:i',
       '#description' => $this->t('A user-defined date format. See the <a href="http://php.net/manual/function.date.php">PHP manual</a> for available options.'),
-      '#required' => true,
+      '#required' => TRUE,
+      '#translatable' => TRUE,
     ];
 
     $form['bonus_history_group']['zero_display'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Zero Display'),
-      '#default_value' => $config->get('zero_display') ?? 'N/A',
-      '#required' => true,
+      '#default_value' => $this->get('zero_display') ?: 'N/A',
+      '#required' => TRUE,
+      '#translatable' => TRUE,
     ];
 
     $form['bonus_history_group']['no_result'] = [
       '#type' => 'textfield',
       '#title' => $this->t('No Result Message'),
-      '#default_value' => $config->get('no_result') ?? 'No Active bonus under this product',
-      '#required' => true,
+      '#default_value' => $this->get('no_result') ?: 'No Active bonus under this product',
+      '#required' => TRUE,
+      '#translatable' => TRUE,
     ];
 
     $form['bonus_history_group']['service_unavailable'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Service not available'),
-      '#default_value' => $config->get('service_unavailable') ?? 'N/A',
-      '#required' => true,
+      '#default_value' => $this->get('service_unavailable') ?: 'N/A',
+      '#required' => TRUE,
+      '#translatable' => TRUE,
     ];
 
     $form['bonus_history_group']['sportsbook_expirydate_display'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Sportsbook expiry date display'),
-      '#default_value' => $config->get('sportsbook_expirydate_display') ?? 'N/A',
-      '#required' => true,
+      '#default_value' => $this->get('sportsbook_expirydate_display') ?: 'N/A',
+      '#required' => TRUE,
+      '#translatable' => TRUE,
     ];
+  }
 
+  /**
+   * Bonus history pagination configuration form.
+   */
+  private function bonusHistoryPagination(array &$form) {
     $form['pagination_group'] = [
       '#type' => 'details',
       '#title' => 'Pagination',
-      '#group' => 'my_account_group'
+      '#group' => 'my_account_group',
     ];
 
     $form['pagination_group']['items_to_display'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Items to display'),
       '#description' => $this->t('Items to display per page.'),
-      '#default_value' => $config->get('items_to_display') ?? '5',
-      '#required' => true,
+      '#default_value' => $this->get('items_to_display') ?: '5',
+      '#required' => TRUE,
     ];
 
     $form['pagination_group']['next_label'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Next Label'),
-      '#default_value' => $config->get('next_label') ?? 'Next',
-      '#required' => true,
+      '#default_value' => $this->get('next_label') ?: 'Next',
+      '#required' => TRUE,
+      '#translatable' => TRUE,
     ];
 
     $form['pagination_group']['prev_label'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Previous Label'),
-      '#default_value' => $config->get('prev_label') ?? 'Prev',
-      '#required' => true,
+      '#default_value' => $this->get('prev_label') ?: 'Prev',
+      '#required' => TRUE,
+      '#translatable' => TRUE,
     ];
-    
-    return parent::buildForm($form, $form_state);
   }
 
-  /**
-   * {@inheritdoc}
-   *
-   * @param array              $form
-   *   The render array of the currently built form.
-   * @param FormStateInterface $form_state
-   *   Object describing the current state of the form.
-   */
-  public function validateForm(array &$form, FormStateInterface $form_state) 
-  {
-    parent::validateForm($form, $form_state);
-  }
-
-  /**
-   * Implements a form submit handler.
-   *
-   * @param array              $form
-   *   The render array of the currently built form.
-   * @param FormStateInterface $form_state
-   *   Object describing the current state of the form.
-   */
-  public function submitForm(array &$form, FormStateInterface $form_state)
-  {
-    $keys = [
-      'page_title',
-      'datetime_format',
-      'no_result',
-      'service_unavailable',
-      'zero_display',
-      'items_to_display',
-      'next_label',
-      'prev_label',
-      'sportsbook_expirydate_display',
-    ];
-    foreach ($keys as $key) {
-        $this->config('my_account_core.bonus_history')
-            ->set($key, $form_state->getValue($key))
-            ->save();
-    }
-    parent::submitForm($form, $form_state);
-  }
 }
