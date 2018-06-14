@@ -1,9 +1,3 @@
-my_account_core.cashier:
-  title: 'My Account Cashier Translation'
-  base_route_name: my_account_core.cashier_config
-  names:
-    - my_account_core.cashier
-
 my_account_core.livechat:
   title: 'My Account Live Chat Translation'
   base_route_name: my_account_core.livechat_config
@@ -21,9 +15,3 @@ my_account_core.help:
   base_route_name: my_account_core.help_config
   names:
     - my_account_core.help
-
-my_account_core.bonus_history:
-  title: 'Bonus History Configuration'
-  base_route_name: my_account_core.bonus_history_config
-  names:
-    - my_account_core.bonus_history
