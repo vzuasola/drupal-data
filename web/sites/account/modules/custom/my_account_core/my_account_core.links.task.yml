@@ -2,7 +2,3 @@ my_account_core.livechat:
   route_name: my_account_core.livechat_config
   base_route: my_account_core.livechat_config
   title: 'My Account Live Chat Configuration'
-my_account_core.help:
-  route_name: my_account_core.help_config
-  base_route: my_account_core.help_config
-  title: 'My Account Help Configuration'
