@@ -16,17 +16,3 @@ my_account_core.livechat:
           type: label
           label: 'Enabled for Language'
   langcode: 'en'
-my_account_core.help:
-  type: config_object
-  label: 'My Account Help Configuration'
-  mapping:
-    help_how_to:
-      type: text_format
-      label: 'How To'
-    help_faq:
-      type: text_format
-      label: 'FAQ'
-    help_error_code:
-      type: text_format
-      label: 'Error Codes'
-  langcode: 'en'
