@@ -1,11 +1,3 @@
-my_account_core.cashier:
-  type: config_object
-  label: 'My Account Cashier Link Configuration'
-  mapping:
-    cashier_domain_mapping:
-      type: label
-      label: 'Cashier Link'
-  langcode: 'en'
 my_account_core.livechat:
   type: config_object
   label: 'My Account Live Chat Configuration'
@@ -23,60 +15,4 @@ my_account_core.livechat:
         jwt_enabled:
           type: label
           label: 'Enabled for Language'
-  langcode: 'en'
-my_account_core.header:
-  type: config_object
-  label: 'My Account Header Configuration'
-  mapping:
-    welcome_text:
-      type: label
-      label: 'Welcome Text'
-    product_menu_new_tag:
-      type: label
-      label: 'New Tag Text'
-    help_tooltip:
-      type: label
-      label: 'Help Tooltip'
-my_account_core.help:
-  type: config_object
-  label: 'My Account Help Configuration'
-  mapping:
-    help_how_to:
-      type: text_format
-      label: 'How To'
-    help_faq:
-      type: text_format
-      label: 'FAQ'
-    help_error_code:
-      type: text_format
-      label: 'Error Codes'
-  langcode: 'en'
-my_account_core.bonus_history:
-  type: config_object
-  label: 'Bonus History Configuration'
-  mapping:
-    page_title:
-      type: label
-      label: 'Page tile'
-    datetime_format:
-      type: label
-      label: 'Date ans Time format'
-    no_result:
-      type: label
-      label: 'No Result Message'
-    service_unavailable:
-      type: label
-      label: 'Service not available'
-    zero_display:
-      type: label
-      label: 'Zero display'
-    next_label:
-      type: label
-      label: 'Next Label'
-    prev_label:
-      type: label
-      label: 'Previous Label'
-    sportsbook_expirydate_display:
-      type: label
-      label: 'Sportbook Expiry Date Display'
   langcode: 'en'
