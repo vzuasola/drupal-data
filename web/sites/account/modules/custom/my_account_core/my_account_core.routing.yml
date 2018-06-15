@@ -1,7 +1,0 @@
-my_account_core.livechat_config:
-  path: '/admin/config/my_account/livechat'
-  defaults:
-    _title: 'MyAccount Live Chat'
-    _form: '\Drupal\my_account_core\Form\MyAccountLivechatForm'
-  requirements:
-    _permission: 'administer my_account core'

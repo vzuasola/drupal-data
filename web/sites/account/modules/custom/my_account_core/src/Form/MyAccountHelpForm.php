@@ -27,7 +27,6 @@ class MyAccountHelpForm extends FormBase {
    * {@inheritdoc}
    */
   protected function getEditableConfigNames() {
-
     return ['my_account_core.help'];
   }
 
