@@ -4,6 +4,7 @@ A Webcomposer Config plugin is an intuitive way to generate custom configuration
 It has it's own implementation which does not deviate that much from how Drupal
 does it.
 
+<br>
 ### Why do you need config plugins instead of using plain Drupal config form
 
 * You just need to define one class
@@ -17,6 +18,7 @@ does it.
 > which lives inside **webcomposer_config_schema** module
 
 
+<br>
 ### Define a Form Plugin Class
 
 * **Structure**
@@ -168,7 +170,7 @@ class SampleForm extends FormBase {
 }
 ```
 
-
+<br>
 ### Provide a installtion configs and hook uninstall
 
 You can put generates yml inside **config/install** to have the values
@@ -192,6 +194,7 @@ function webcomposer_config_schema_sample_uninstall() {
 }
 ```
 
+<br>
 ## How to Fetch Config from Front End
 
 Suppose you define a form
@@ -213,7 +216,7 @@ You can get the form data using config fetcher by passing the complete config na
 $data = $this->configs->getConfig('my_module.sample');
 ```
 
-
+<br>
 ## Best Practices
 
 ### Module Structure
