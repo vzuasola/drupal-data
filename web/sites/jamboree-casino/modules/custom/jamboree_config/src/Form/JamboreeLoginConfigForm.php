@@ -67,6 +67,15 @@ class JamboreeLoginConfigForm extends FormBase {
       '#translatable' => TRUE,
     ];
 
+    $default_login_button = $this->get('login_lightbox_title');
+    $form['login_form']['login_lightbox_title'] = [
+      '#type' => 'textfield',
+      '#title' => t('Login Lightbox Title'),
+      '#default_value' => $default_login_button,
+      '#description' => $this->t('Login Lightbox Title.'),
+      '#translatable' => TRUE,
+    ];
+
     $default_login_username = $this->get('login_username');
     $form['login_form']['login_username'] = [
       '#type' => 'textfield',
@@ -90,7 +99,7 @@ class JamboreeLoginConfigForm extends FormBase {
       '#type' => 'textfield',
       '#title' => t('Remember Username'),
       '#default_value' => $default_remember_username,
-      '#description' => $this->t('Remember Password label.'),
+      '#description' => $this->t('Remember Username label.'),
       '#translatable' => TRUE,
     ];
 
@@ -112,12 +121,30 @@ class JamboreeLoginConfigForm extends FormBase {
       '#translatable' => TRUE,
     ];
 
+    $default_forgot_password_link = $this->get('login_forgot_password_link');
+    $form['login_form']['login_forgot_password_link'] = [
+      '#type' => 'textfield',
+      '#title' => t('Forgot Password Link'),
+      '#default_value' => $default_forgot_password_link,
+      '#description' => $this->t('Forgot Password link.'),
+      '#translatable' => TRUE,
+    ];
+
     $default_registration = $this->get('login_registration');
     $form['login_form']['login_registration'] = [
       '#type' => 'textfield',
       '#title' => t('Registration Link Label'),
       '#default_value' => $default_registration,
       '#description' => $this->t('Registration link label.'),
+      '#translatable' => TRUE,
+    ];
+
+    $default_registration_link = $this->get('login_registration_link');
+    $form['login_form']['login_registration_link'] = [
+      '#type' => 'textfield',
+      '#title' => t('Registration Link'),
+      '#default_value' => $default_registration_link,
+      '#description' => $this->t('Registration link.'),
       '#translatable' => TRUE,
     ];
 
