@@ -73,6 +73,7 @@ module:
   webcomposer_avaya: 0
   webcomposer_config: 0
   webcomposer_config_schema: 0
+  webcomposer_editor: 0
   webcomposer_games: 0
   webcomposer_partner: 0
   webcomposer_rest_extra: 0

@@ -101,7 +101,6 @@ class JamboreeLoginConfigForm extends FormBase {
       '#title' => t('Remember Username'),
       '#default_value' => $default_remember_username,
       '#description' => $this->t('Remember Username label.'),
-      '#format' => $default_remember_username['format'],
       '#translatable' => TRUE,
     ];
 
