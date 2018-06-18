@@ -73,7 +73,6 @@ class JamboreeLoginConfigForm extends FormBase {
       '#title' => t('Login Lightbox Title'),
       '#default_value' => $default_login_button,
       '#description' => $this->t('Login Lightbox Title.'),
-      '#format' => $default_login_button['format'],
       '#translatable' => TRUE,
     ];
 
