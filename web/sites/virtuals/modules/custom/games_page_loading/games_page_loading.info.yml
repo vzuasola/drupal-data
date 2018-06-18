@@ -1,0 +1,6 @@
+name: Games Page Loading
+type: module
+description: Games Page Loading Message Configurations
+core: 8.x
+package: Custom
+
