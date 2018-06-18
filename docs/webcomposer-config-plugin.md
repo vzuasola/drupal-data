@@ -192,6 +192,27 @@ function webcomposer_config_schema_sample_uninstall() {
 }
 ```
 
+## How to Fetch Config from Front End
+
+Suppose you define a form
+
+```php
+class SampleForm extends FormBase {
+  /**
+   * {@inheritdoc}
+   */
+  protected function getEditableConfigNames() {
+    return ['my_module.sample'];
+  }
+}
+```
+
+You can get the form data using config fetcher by passing the complete config namespace
+
+```php
+$data = $this->configs->getConfig('my_module.sample');
+```
+
 
 ## Best Practices
 
