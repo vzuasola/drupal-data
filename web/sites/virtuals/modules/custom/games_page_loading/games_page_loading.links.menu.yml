@@ -1,0 +1,5 @@
+games_page_loading.list:
+  title: 'Games Configuration'
+  description: 'Provides a form for defining custom sample configuration'
+  parent: system.admin_config
+  route_name: games_page_loading.admin_settings
