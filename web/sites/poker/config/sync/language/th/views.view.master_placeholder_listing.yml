@@ -1,0 +1,22 @@
+display:
+  default:
+    display_title: Master
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Apply
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      fields:
+        name:
+          label: Name
+        translation_link:
+          text: Translate
+        edit_taxonomy_term:
+          label: Edit
+          text: edit
+        delete_taxonomy_term:
+          label: Delete
+          text: delete
