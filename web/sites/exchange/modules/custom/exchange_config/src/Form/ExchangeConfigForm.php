@@ -158,7 +158,6 @@ class ExchangeConfigForm extends ConfigFormBase {
       '#default_value' => $config->get('base_url') ?? 'N/A',
       '#required' => true,
     ]; 
-    
     return parent::buildForm($form, $form_state);
   }
 
