@@ -1,0 +1,7 @@
+contact_form.admin_settings:
+  path: 'admin/config/contact-us'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Contact Us Configuration'
+  requirements:
+    _permission: 'administer site configuration'
