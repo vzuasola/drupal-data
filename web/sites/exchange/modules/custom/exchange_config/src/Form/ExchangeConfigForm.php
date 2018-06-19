@@ -146,9 +146,18 @@ class ExchangeConfigForm extends ConfigFormBase {
       '#default_value' => $exchangecurrency['value'],
       '#format' => $exchangecurrency['format'],
     ];
+    $form['exchange_configuration_mobile'] = [
+      '#type' => 'details',
+      '#title' => ' Mobile Site Url',
+      '#group' => 'advanced',
+    ];
 
-
-
+    $form['exchange_configuration_mobile']['base_url'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Mobile Site Url'),
+      '#default_value' => $config->get('base_url') ?? 'N/A',
+      '#required' => true,
+    ]; 
     return parent::buildForm($form, $form_state);
   }
 
@@ -167,6 +176,7 @@ class ExchangeConfigForm extends ConfigFormBase {
       'blocking_currency_not_found_title',
       'blocking_currency_not_found_content',
       'blocking_currency_not_found_image',
+      'base_url',
     ];
     foreach ($exchangeConfig as $keys) {
       if ($keys == 'exchange_background') {
