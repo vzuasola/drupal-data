@@ -23,21 +23,19 @@ use Drupal\Core\Form\FormStateInterface;
  */
 class MyAccountChangePasswordForm extends FormBase {
 
-    /**
-     * {@inheritdoc}
-     */
-    protected function getEditableConfigNames() {
-      return ['my_account_form_profile.change_password'];
-    }
+  /**
+   * {@inheritdoc}
+   */
+  protected function getEditableConfigNames() {
+    return ['my_account_form_profile.change_password'];
+  }
+
   /**
    * Build the form.
    *
    * @inheritdoc
    */
   public function form(array $form, FormStateInterface $form_state) {
-    // Get Form configuration.
-    $myAccountConfig = $this->config('my_account_form_profile.change_password');
-    $myAccountConfigValue = $myAccountConfig->get();
 
     $form['change_password'] = [
       '#type' => 'vertical_tabs',
@@ -53,7 +51,7 @@ class MyAccountChangePasswordForm extends FormBase {
       '#type' => 'textarea',
       '#title' => $this->t('Integration Error Messages'),
       '#description' => $this->t('Integration error list.'),
-      '#default_value' => $this->get('integration_error')
+      '#default_value' => $this->get('integration_error'),
     ];
 
     return $form;
