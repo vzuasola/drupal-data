@@ -64,7 +64,6 @@ class ChangePasswordForm extends WebcomposerFormBase implements WebcomposerFormI
       ],
     ];
 
-
     $fields['verify_password'] = [
       'name' => 'Verify Password',
       'type' => 'password',
@@ -105,4 +104,5 @@ class ChangePasswordForm extends WebcomposerFormBase implements WebcomposerFormI
 
     return $fields;
   }
+
 }
