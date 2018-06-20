@@ -1,0 +1,5 @@
+my_account_form_profile.config:
+  title: 'My Account'
+  route_name: my_account_form_profile.config
+  parent: system.admin
+  description: 'My Account Menu.'
