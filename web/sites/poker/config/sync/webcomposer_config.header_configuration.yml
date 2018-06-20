@@ -8,8 +8,8 @@ balance_error_text: 'Error Retrieving.'
 profile_icon_hover_text: 'My Profile'
 cashier_icon_hover_text: Cashier
 product_menu_new_tag: NEW
-welcome_text: '{username}'
-profile_link: 'https://stg-accountwww.elysium-dfbt.com/en/my-profile'
+welcome_text: 'Welcome {username}'
+profile_link: '/{domain:myaccount_domain}/{lang}/my-profile[query:(title=headerPopup&width=820&height=820&{credentials.params}&pvia=poker)]'
 profile_logout_text: Logout
 _core:
   default_config_hash: Ynx2hkfeSTtNe4GyBQ1t4lBkrV4wrazLGjX_M7Mk3mg
@@ -22,5 +22,21 @@ news_announcement: '0'
 news_announcement_content:
   value: "<p>test</p>\r\n"
   format: basic_html
-balance_label_mapping: "4|OW Sports\r\n6|Dafa Sports\r\n1|Casino Classic\r\n2|Casino Gold\r\n5|Live Dealer & Games\r\n3|Poker\r\n7|Fish Hunter"
+balance_label_mapping: "4|OW Sports\r\n6|Dafa Sports\r\n10|Exchange\r\n1|Casino \r\n2|Casino Gold\r\n5|Common Wallet\r\n8|Opus Live Dealer\r\n7|AG Fish Hunter\r\n9|Opus Keno\r\n3|Poker"
 balance_error_text_product: N/A
+header_settings_tab__active_tab: edit-welcome-text-group
+logo_title: Home
+password_mask_toggle: 0
+caps_lock_toggle: 0
+capslock_notification: 'Caps Lock is on'
+cashier_link: '{domain:cashier_domain}/{lang}[query:(ticket={auth.token}&product=poker&title=headerPopup&width=820&height=820})]'
+balance_toggle: 1
+product_balance_label: Poker
+product_balance_id: '3'
+total_balance_label: 'Total Balance'
+balance_mapping: 3|Poker
+balance_label_override: '综合钱包 '
+currency_balance_mapping: "9|RMB,MYR,THB,KRW,VND,USD,IDR,INR,EUR\r\n7|RMB\r\n8|RMB,MYR,THB,KRW,VND,USD,IDR,INR,EUR,KRW\r\n10|USD,INR"
+excluded_balance_mapping: '7'
+value: null
+format: null
