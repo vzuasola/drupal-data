@@ -12,7 +12,6 @@ dependencies:
     - taxonomy.vocabulary.desktop_game_category
     - taxonomy.vocabulary.game_tag
   module:
-    - draggableviews
     - jamboree_desktop_games
     - rest
     - serialization
@@ -175,30 +174,30 @@ display:
           entity_field: langcode
           plugin_id: language
       sorts:
-        weight:
-          id: weight
-          table: draggableviews_structure
-          field: weight
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: ASC
-          exposed: false
-          expose:
-            label: 'DraggableViews Weight'
+        field_game_tag_target_id:
+          id: field_game_tag_target_id
+          table: jamboree_desktop_games_entity__field_game_tag
+          field: field_game_tag_target_id
           plugin_id: standard
-        changed:
-          id: changed
-          table: jamboree_desktop_games_entity_field_data
-          field: changed
-          entity_type: jamboree_desktop_games_entity
-          entity_field: changed
-          plugin_id: date
+        field_game_title_value:
+          id: field_game_title_value
+          table: jamboree_desktop_games_entity__field_game_title
+          field: field_game_title_value
+          plugin_id: standard
       title: 'Game List'
       header: {  }
       footer: {  }
       empty: {  }
-      relationships: {  }
+      relationships:
+        field_game_tag:
+          id: field_game_tag
+          table: jamboree_desktop_games_entity__field_game_tag
+          field: field_game_tag
+          relationship: none
+          group_type: group
+          admin_label: 'field_game_tag: Taxonomy term'
+          required: true
+          plugin_id: standard
       arguments: {  }
       display_extenders: {  }
     cache_metadata:
@@ -218,70 +217,6 @@ display:
       path: admin/structure/jamboree_desktop_games_entity
       display_description: ''
       fields:
-        name:
-          table: jamboree_desktop_games_entity_field_data
-          field: name
-          id: name
-          entity_type: null
-          entity_field: name
-          plugin_id: field
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: Name
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: string
-          settings: {  }
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
         field_enable_game:
           id: field_enable_game
           table: jamboree_desktop_games_entity__field_enable_game
@@ -715,60 +650,6 @@ display:
           destination: false
           entity_type: jamboree_desktop_games_entity
           plugin_id: entity_operations
-        draggableviews:
-          id: draggableviews
-          table: jamboree_desktop_games_entity_field_data
-          field: draggableviews
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: 'Jamboree desktop games entity'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          action_title: Action
-          include_exclude: exclude
-          selected_actions: {  }
-          entity_type: jamboree_desktop_games_entity
-          entity_field: id
-          plugin_id: draggable_views_field
       defaults:
         fields: false
         filters: false
@@ -996,34 +877,33 @@ display:
       sorts:
         weight:
           id: weight
-          table: draggableviews_structure
+          table: taxonomy_term_field_data
           field: weight
+          relationship: field_game_tag
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          entity_type: taxonomy_term
+          entity_field: weight
+          plugin_id: standard
+        field_game_title_value:
+          id: field_game_title_value
+          table: jamboree_desktop_games_entity__field_game_title
+          field: field_game_title_value
           relationship: none
           group_type: group
           admin_label: ''
           order: ASC
           exposed: false
           expose:
-            label: 'DraggableViews Weight'
-          plugin_id: standard
-        changed:
-          id: changed
-          table: jamboree_desktop_games_entity_field_data
-          field: changed
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: DESC
-          exposed: false
-          expose:
             label: ''
-          granularity: second
-          entity_type: jamboree_desktop_games_entity
-          entity_field: changed
-          plugin_id: date
+          plugin_id: standard
       title: 'Desktop Game List'
     cache_metadata:
-      max-age: 0
+      max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
@@ -1050,6 +930,7 @@ display:
         style: false
         row: false
         title: false
+        sorts: false
       row:
         type: data_entity
         options: {  }
@@ -1059,6 +940,33 @@ display:
           offset: 0
       display_description: ''
       title: 'Desktop Game List'
+      sorts:
+        weight:
+          id: weight
+          table: taxonomy_term_field_data
+          field: weight
+          relationship: field_game_tag
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          entity_type: taxonomy_term
+          entity_field: weight
+          plugin_id: standard
+        field_game_title_value:
+          id: field_game_title_value
+          table: jamboree_desktop_games_entity__field_game_title
+          field: field_game_title_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: standard
     cache_metadata:
       max-age: -1
       contexts:

@@ -1,12 +1,14 @@
-uuid: 0ead203a-e90c-4b26-8ed0-d022905050ce
+uuid: ea38312b-0d03-4953-91a6-1f744f94e1c4
 langcode: en
 status: true
 dependencies:
   module:
-    - jamboree_mobile_games
-id: jamboree_mobile_games_entity.field_ga
-field_name: field_ga
-entity_type: jamboree_mobile_games_entity
+    - paragraphs
+_core:
+  default_config_hash: TkLncvXAIEgEZaExwgVdRaU29tkcOYdtoGA-ma3xPHE
+id: paragraph.field_dropdown_menu_description
+field_name: field_dropdown_menu_description
+entity_type: paragraph
 type: string
 settings:
   max_length: 255
