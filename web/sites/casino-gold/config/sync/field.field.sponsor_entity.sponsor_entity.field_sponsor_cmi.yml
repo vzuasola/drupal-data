@@ -8,6 +8,8 @@ dependencies:
   module:
     - entity_reference_revisions
     - webcomposer_sponsor
+_core:
+  default_config_hash: OE5ANCiruX51Hj3hqPQz5CfHkz0gkU-Yc-5nAT4j3TA
 id: sponsor_entity.sponsor_entity.field_sponsor_cmi
 field_name: field_sponsor_cmi
 entity_type: sponsor_entity
