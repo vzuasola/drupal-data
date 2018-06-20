@@ -41,17 +41,18 @@ class MyAccountChangePasswordForm extends FormBase {
       '#type' => 'vertical_tabs',
     ];
 
-    $form['field_configuration']['field_icore_validation'] = [
+    $form['field_icore_validation'] = [
       '#type' => 'details',
       '#title' => 'Integration Validation',
       '#group' => 'change_password',
     ];
 
-    $form['field_configuration']['field_icore_validation']['integration_error'] = [
+    $form['field_icore_validation']['integration_error'] = [
       '#type' => 'textarea',
       '#title' => $this->t('Integration Error Messages'),
       '#description' => $this->t('Integration error list.'),
       '#default_value' => $this->get('integration_error'),
+      '#translatable' => TRUE,
     ];
 
     return $form;
