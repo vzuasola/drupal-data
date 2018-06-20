@@ -12,5 +12,22 @@ display:
       fields:
         name:
           separator: ', '
+  attachment_1:
+    display_title: Attachment
   block_1:
     display_title: Block
+  manage:
+    display_title: Page
+    display_options:
+      fields:
+        field_title:
+          label: Title
+          separator: ', '
+        field_platform:
+          separator: ', '
+        operations:
+          label: Operations
+      filters:
+        langcode:
+          expose:
+            label: 翻译语言
