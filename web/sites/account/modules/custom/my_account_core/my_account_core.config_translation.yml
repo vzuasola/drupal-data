@@ -1,5 +1,0 @@
-my_account_core.livechat:
-  title: 'My Account Live Chat Translation'
-  base_route_name: my_account_core.livechat_config
-  names:
-    - my_account_core.livechat
