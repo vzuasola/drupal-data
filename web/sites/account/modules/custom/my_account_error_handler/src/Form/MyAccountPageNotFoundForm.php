@@ -2,6 +2,7 @@
 
 namespace Drupal\my_account_error_handler\Form;
 
+use Drupal\webcomposer_config_schema\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
@@ -20,7 +21,7 @@ use Drupal\Core\Form\FormStateInterface;
  *   },
  * )
  */
-class MyAccountPageNotFoundForm extends ConfigFormBase {
+class MyAccountPageNotFoundForm extends FormBase {
 
   /**
    * {@inheritdoc}
