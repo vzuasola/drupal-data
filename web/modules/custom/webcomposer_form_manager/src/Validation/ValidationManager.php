@@ -124,9 +124,9 @@ class ValidationManager {
         ],
       ],
     ],
-    'valid_languages' => [
-      'title' => 'Valid Languages',
-      'description' => 'Validation to allow or disallow specific languages based on regex value',
+    'regex' => [
+      'title' => 'Regex Validation',
+      'description' => 'Validate Field thru regular expressions',
       'error' => "This field only accepts specific characters.",
       'parameters' => [
         'regex_value' => [
