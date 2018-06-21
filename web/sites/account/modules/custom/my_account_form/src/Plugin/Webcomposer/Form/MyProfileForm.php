@@ -281,10 +281,12 @@ class MyProfileForm extends WebcomposerFormBase implements WebcomposerFormInterf
             '#type' => 'textfield',
             '#description' => 'label for Address field',
           ],
-          'placeholder' => [
-            '#title' => 'Address placeholder label',
-            '#type' => 'textfield',
-            '#description' => 'label for address field placeholder',
+          'attr' => [
+            'placeholder' => [
+              '#title' => 'Address placeholder label',
+              '#type' => 'textfield',
+              '#description' => 'label for address field placeholder',
+            ],
           ],
         ],
       ],
