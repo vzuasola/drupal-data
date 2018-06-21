@@ -98,7 +98,11 @@ class OverviewForm extends FormBase {
       '#type' => 'select',
       '#options' => $options + \Drupal::service('webcomposer_audit.database_storage')->getDistinct('uid', [
         'callback' => function (&$item) {
-          $item = \Drupal::entityManager()->getStorage('user')->load($item)->getUsername();
+          $user = \Drupal::entityManager()->getStorage('user')->load($item);
+
+          if ($user) {
+            $item = $user->getUsername();
+          }
         }
       ]),
       '#attributes' => [
