@@ -295,6 +295,7 @@ class MyAccountRegistrationForm extends FormBase
             '#title' => $this->t('Required Error Message'),
             '#required' => true,
             '#default_value' => $this->get('required_validation'),
+            '#translatable' => true,
         ];
 
         $form['field_labels_validation_configuration']['password_validation']['password_format_validation'] = [
