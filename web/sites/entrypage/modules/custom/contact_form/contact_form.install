@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * Implements hook_uninstall
+ */
+function contact_form_uninstall() {
+  $keys = [
+    'contact_form.page',
+    'contact_form.settings',
+  ];
+
+  foreach ($keys as $key) {
+    \Drupal::configFactory()->getEditable($key)->delete();
+  }
+}
