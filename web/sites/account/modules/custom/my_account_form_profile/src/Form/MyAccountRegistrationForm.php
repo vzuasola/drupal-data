@@ -290,6 +290,13 @@ class MyAccountRegistrationForm extends FormBase
             '#open' => False,
         ];
 
+        $form['field_labels_validation_configuration']['password_validation']['required_validation'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Required Error Message'),
+            '#required' => true,
+            '#default_value' => $myAccountConfigValue['required_validation'],
+        ];
+
         $form['field_labels_validation_configuration']['password_validation']['password_format_validation'] = [
             '#type' => 'textfield',
             '#title' => $this->t('Password Format Error Message'),
