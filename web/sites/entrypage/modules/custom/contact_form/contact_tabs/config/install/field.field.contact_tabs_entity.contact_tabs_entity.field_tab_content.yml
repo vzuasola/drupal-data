@@ -1,0 +1,21 @@
+uuid: c8830599-ba1d-45d3-a3e5-3d30f7c34b70
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.contact_tabs_entity.field_tab_content
+  module:
+    - contact_tabs
+    - text
+id: contact_tabs_entity.contact_tabs_entity.field_tab_content
+field_name: field_tab_content
+entity_type: contact_tabs_entity
+bundle: contact_tabs_entity
+label: Content
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

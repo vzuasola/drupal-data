@@ -1,0 +1,33 @@
+uuid: 6debbf43-d689-452a-9ab9-998c57d2c931
+langcode: en
+status: true
+dependencies:
+  module:
+    - contact_tabs
+    - options
+id: contact_tabs_entity.field_tab_class
+field_name: field_tab_class
+entity_type: contact_tabs_entity
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: live-chat
+      label: 'Live Chat'
+    -
+      value: email-us
+      label: 'Email Us'
+    -
+      value: call-us
+      label: 'Call Us'
+    -
+      value: social
+      label: Social
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

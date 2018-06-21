@@ -1,0 +1,21 @@
+uuid: a94d6ea8-c65d-4daf-a2a4-3a710b0f2248
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.contact_tabs_entity.field_tab_class
+  module:
+    - contact_tabs
+    - options
+id: contact_tabs_entity.contact_tabs_entity.field_tab_class
+field_name: field_tab_class
+entity_type: contact_tabs_entity
+bundle: contact_tabs_entity
+label: 'Tab class'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

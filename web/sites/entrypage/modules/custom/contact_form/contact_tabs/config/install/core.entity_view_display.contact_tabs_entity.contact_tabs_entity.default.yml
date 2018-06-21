@@ -1,0 +1,70 @@
+uuid: dfc26e80-e815-4399-8dda-ab9c65c111aa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.contact_tabs_entity.contact_tabs_entity.field_tab_class
+    - field.field.contact_tabs_entity.contact_tabs_entity.field_tab_content
+    - field.field.contact_tabs_entity.contact_tabs_entity.field_tab_default
+    - field.field.contact_tabs_entity.contact_tabs_entity.field_title
+  module:
+    - contact_tabs
+    - options
+    - text
+    - user
+_core:
+  default_config_hash: XUh7bGOx8DLe_Qkc90roauYFVTO6XkdX7yw3pxCLgH4
+id: contact_tabs_entity.contact_tabs_entity.default
+targetEntityType: contact_tabs_entity
+bundle: contact_tabs_entity
+mode: default
+content:
+  field_tab_class:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_tab_content:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_tab_default:
+    weight: 4
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_title:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  name:
+    label: above
+    type: string
+    weight: -4
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  user_id:
+    label: hidden
+    type: author
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true
