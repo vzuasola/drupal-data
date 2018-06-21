@@ -155,7 +155,7 @@ class MenuMultilingualResource extends ResourceBase {
 
       $parameters->setMinDepth($this->minDepth);
 
-      $translated_menu = $menu_name . '-' . $this->getLanguagePrefix(); 
+      $translated_menu = $menu_name . '-' . $this->getLanguagePrefix();
 
       // check for translated version of this menu entry
       $tree = $menu_tree->load($translated_menu, $parameters);
@@ -246,12 +246,12 @@ class MenuMultilingualResource extends ResourceBase {
       $options = $item_value['url']->getOptions();
 
       if (isset($options['attributes'])) {
-        foreach($options['attributes'] as $key => $value) {
+        foreach ($options['attributes'] as $key => $value) {
           $attr[$key] = $value;
         }
       }
 
-      // initialize query string 
+      // initialize query string
       $queryString = '';
       // only append the query string if the uri is relative
       if (!$url->isExternal() && isset($options['query'])) {
