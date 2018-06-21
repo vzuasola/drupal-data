@@ -1,0 +1,24 @@
+uuid: f52e0b0e-7ecd-4ed2-90b7-0b3684638335
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.contact_tabs_entity.field_tab_default
+  module:
+    - contact_tabs
+id: contact_tabs_entity.contact_tabs_entity.field_tab_default
+field_name: field_tab_default
+entity_type: contact_tabs_entity
+bundle: contact_tabs_entity
+label: 'Default tab'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: '1'
+  off_label: '0'
+field_type: boolean
