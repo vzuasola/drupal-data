@@ -1,10 +1,11 @@
 <?php
+
 /**
  * @file
  * Create the menu item REST resource.
  */
 
-namespace Drupal\rest_menu_items\Plugin\rest\resource;
+namespace Drupal\webcomposer_rest_extra\Plugin\rest\resource;
 
 use Drupal\Core\Entity\EntityManagerInterface;
 use Drupal\Core\Menu\MenuTreeParameters;
@@ -23,14 +24,14 @@ use Psr\Log\LoggerInterface;
  * Provides a resource to get bundles by entity.
  *
  * @RestResource(
- *   id = "rest_menu_item",
- *   label = @Translation("Menu items per menu"),
+ *   id = "menu_rest_resource",
+ *   label = @Translation("Menu Multilingual Resource"),
  *   uri_paths = {
- *     "canonical" = "/api/menu_items/{menu_name}"
+ *     "canonical" = "/api/menu_translated/{menu_name}"
  *   }
  * )
  */
-class RestMenuItemsResource extends ResourceBase {
+class MenuMultilingualResource extends ResourceBase {
 
   /**
    * A current user instance.
@@ -58,7 +59,7 @@ class RestMenuItemsResource extends ResourceBase {
    *
    * @var array
    */
-  protected $menuItems = array();
+  protected $menuItems = [];
 
   /**
    * The maximum depth we want to return the tree.
@@ -96,12 +97,17 @@ class RestMenuItemsResource extends ResourceBase {
     LoggerInterface $logger,
     EntityManagerInterface $entity_manager,
     AccountProxyInterface $current_user,
-    AliasManagerInterface $alias_manager) {
+    AliasManagerInterface $alias_manager,
+    $language_manager,
+    $config_factory
+  ) {
     parent::__construct($configuration, $plugin_id, $plugin_definition, $serializer_formats, $logger);
 
     $this->entityManager = $entity_manager;
     $this->currentUser = $current_user;
     $this->aliasManager = $alias_manager;
+    $this->languageManager = $language_manager;
+    $this->configFactory = $config_factory;
   }
 
   /**
@@ -116,7 +122,9 @@ class RestMenuItemsResource extends ResourceBase {
       $container->get('logger.factory')->get('rest'),
       $container->get('entity.manager'),
       $container->get('current_user'),
-      $container->get('path.alias_manager')
+      $container->get('path.alias_manager'),
+      $container->get('language_manager'),
+      $container->get('config.factory')
     );
   }
 
@@ -140,9 +148,6 @@ class RestMenuItemsResource extends ResourceBase {
 
       // Set the parameters.
       $parameters = new MenuTreeParameters();
-      // Comment out this line as this is causing issues for parent-child relationship
-      // in terms of enabled/disabled feature
-      //$parameters->onlyEnabledLinks();
 
       if (!empty($this->maxDepth)) {
         $parameters->setMaxDepth($this->maxDepth);
@@ -150,8 +155,15 @@ class RestMenuItemsResource extends ResourceBase {
 
       $parameters->setMinDepth($this->minDepth);
 
-      // Load the tree based on this set of parameters.
-      $tree = $menu_tree->load($menu_name, $parameters);
+      $translated_menu = $menu_name . '-' . $this->getLanguagePrefix(); 
+
+      // check for translated version of this menu entry
+      $tree = $menu_tree->load($translated_menu, $parameters);
+
+      // otherwise just use the fallback language
+      if (empty($tree)) {
+        $tree = $menu_tree->load($menu_name, $parameters);
+      }
 
       // Only load menu which has an existing tree
       if (!empty($tree)) {
@@ -198,7 +210,7 @@ class RestMenuItemsResource extends ResourceBase {
    * @param array $items
    *   The already created items.
    */
-  private function getMenuItems(array $tree, array &$items = array()) {
+  private function getMenuItems(array $tree, array &$items = []) {
     foreach ($tree as $item_value) {
       /* @var $org_link \Drupal\Core\Menu\MenuLinkDefault */
       $org_link = $item_value['original_link'];
@@ -230,7 +242,7 @@ class RestMenuItemsResource extends ResourceBase {
       $alias = $this->aliasManager->getAliasByPath("/$uri");
 
       // pull the additional attributes
-      $attr = array();
+      $attr = [];
       $options = $item_value['url']->getOptions();
 
       if (isset($options['attributes'])) {
@@ -286,7 +298,7 @@ class RestMenuItemsResource extends ResourceBase {
       );
 
       if (!empty($item_value['below'])) {
-        $items[$item_name]['below'] = array();
+        $items[$item_name]['below'] = [];
         $this->getMenuItems($item_value['below'], $items[$item_name]['below']);
       }
     }
@@ -314,4 +326,13 @@ class RestMenuItemsResource extends ResourceBase {
     }
   }
 
+  private function getLanguagePrefix() {
+    $language = $this->languageManager->getCurrentLanguage()->getId();
+
+    // get the language negotiation URL prefixes
+    $config = $this->configFactory->get('language.negotiation');
+    $prefixes = $config->get('url.prefixes');
+
+    return isset($prefixes[$language]) ? $prefixes[$language] : NULL;
+  }
 }
