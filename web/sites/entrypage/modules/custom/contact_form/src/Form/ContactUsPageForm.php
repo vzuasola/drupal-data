@@ -51,21 +51,35 @@ class ContactUsPageForm extends FormBase {
       '#group' => 'advanced',
     );
 
+    $form['content']['page_title'] = array(
+        '#type' => 'textfield',
+        '#title' => $this->t('Title'),
+        '#required' => TRUE,
+        '#translatable' => TRUE,
+        '#default_value' => $this->get('page_title'),
+        '#description' => 'Contact Us Page Title'
+    );
+
     $body_content = $this->get('body_content');
     $form['content']['body_content'] = array(
         '#type' => 'text_format',
-        '#title' => $this->t('Body'),
+        '#title' => $this->t('Content Blurb'),
+        '#translatable' => TRUE,
         '#default_value' => $body_content['value'],
-        '#format' => $body_content['format']
+        '#format' => $body_content['format'],
+        '#description' => 'Contact Us Blurb'
     );
 
     $success_message = $this->get('success_message');
     $form['success']['success_message'] = array(
         '#type' => 'text_format',
         '#title' => $this->t('Successful Submit Message'),
+        '#translatable' => TRUE,
         '#default_value' => $success_message['value'],
-        '#format' => $success_message['format']
+        '#format' => $success_message['format'],
+        '#description' => 'Contact Us Success Message'
     );
+
     return $form;
   }
 
@@ -74,6 +88,7 @@ class ContactUsPageForm extends FormBase {
    */
   public function submit(array &$form, FormStateInterface $form_state) {
     $keys = [
+      'page_title',
       'body_content',
       'success_message',
     ];
