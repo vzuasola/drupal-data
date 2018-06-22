@@ -197,7 +197,7 @@ class ExchangeConfigForm extends ConfigFormBase {
           $this->config('exchange_config.exchange_configuration')->set("exchange_background_image_url", null);
         }
       }
-  
+
       if ($keys == 'blocking_country_not_found_image') {
         $fid = $form_state->getValue('blocking_country_not_found_image');
         if ($fid) {
