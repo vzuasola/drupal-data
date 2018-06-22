@@ -257,7 +257,7 @@ class MenuMultilingualResource extends ResourceBase {
       if (!$url->isExternal() && isset($options['query'])) {
         // build query param
         $query = http_build_query($options['query']);
-        // decode query param 
+        // decode query param
         $query = urldecode($query);
         if (!empty($query)) {
           $queryString = "?$query";

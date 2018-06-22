@@ -1,0 +1,32 @@
+uuid: ab4df2ab-5f3f-4370-8e28-5fc818658e5e
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - webcomposer_floating_banners
+_core:
+  default_config_hash: PvZqdyj7bJBKkxAlm2orwfjaO0p2C0pBEhZD1S-9A1k
+id: left_floating_banner_entity.field_link_target
+field_name: field_link_target
+entity_type: left_floating_banner_entity
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: _top
+      label: 'Same Window'
+    -
+      value: _blank
+      label: 'New Tab'
+    -
+      value: window
+      label: 'New Window'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
