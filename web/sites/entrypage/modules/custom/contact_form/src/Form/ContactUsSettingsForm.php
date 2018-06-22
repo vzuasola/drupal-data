@@ -49,6 +49,7 @@ class ContactUsSettingsForm extends FormBase {
         '#type' => 'textarea',
         '#title' => $this->t('Email Template'),
         '#default_value' => $this->get('email_template'),
+        '#translatable' => TRUE,
         '#rows' => 15,
         '#description' => 'Tokens:
         <ul>
@@ -74,6 +75,7 @@ class ContactUsSettingsForm extends FormBase {
         '#type' => 'textarea',
         '#title' => t('Generic Error template'),
         '#default_value' => $this->get('generic_error'),
+        '#translatable' => TRUE,
         '#description' => 'This will be used as the generic error message for any system errors that may be encountered.',
         '#rows' => 3
     );
