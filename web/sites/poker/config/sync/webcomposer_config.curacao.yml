@@ -1,0 +1,3 @@
+advanced__active_tab: edit-curacao
+script_path: 'https://e2e82a2c-05fe-4ad9-be2f-be3874730cd4.snippet.antillephone.com/apg-seal.js'
+markup: "<div\r\n    id=\"apg-seal-container\"\r\n    data-apg-seal-id=\"e2e82a2c-05fe-4ad9-be2f-be3874730cd4\"\r\n    data-apg-image-size=\"128\"\r\n    data-apg-image-type=\"basic-small\"\r\n>\r\n</div>\r\n"
