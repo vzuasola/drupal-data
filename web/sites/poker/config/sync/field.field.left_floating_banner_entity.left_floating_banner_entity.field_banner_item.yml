@@ -1,0 +1,38 @@
+uuid: ee5392e8-58e6-4814-ab1c-d0da79fd7657
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.left_floating_banner_entity.field_banner_item
+    - paragraphs.paragraphs_type.floating_banner_item
+  module:
+    - entity_reference_revisions
+    - webcomposer_floating_banners
+_core:
+  default_config_hash: m8eY2jU977Wzzq_eBAlpkswQq7xlnSBlTV1ZsearGEA
+id: left_floating_banner_entity.left_floating_banner_entity.field_banner_item
+field_name: field_banner_item
+entity_type: left_floating_banner_entity
+bundle: left_floating_banner_entity
+label: 'Banner Item'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      floating_banner_item: floating_banner_item
+    target_bundles_drag_drop:
+      floating_banner_item:
+        enabled: true
+        weight: 4
+      social_media:
+        weight: 5
+        enabled: false
+      sponsorship:
+        weight: 6
+        enabled: false
+field_type: entity_reference_revisions
