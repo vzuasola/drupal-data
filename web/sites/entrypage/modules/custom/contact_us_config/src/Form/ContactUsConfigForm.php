@@ -35,9 +35,9 @@ class ContactUsConfigForm extends FormBase {
    */
   public function form(array $form, FormStateInterface $form_state) {
 
-    $form['advanced'] = array(
+    $form['advanced'] = [
       '#type' => 'vertical_tabs',
-    );
+    ];
 
     $this->contactBlurb($form);
     $this->contactSuccess($form);
@@ -50,11 +50,11 @@ class ContactUsConfigForm extends FormBase {
    *
    */
   private function contactBlurb(array &$form) {
-    $form['content'] = array(
+    $form['content'] = [
       '#type' => 'details',
       '#title' => t('Contact Us Blurb'),
       '#group' => 'advanced',
-    );
+    ];
 
     $form['content']['page_title'] = [
       '#type' => 'textfield',
@@ -66,24 +66,24 @@ class ContactUsConfigForm extends FormBase {
     ];
 
     $body_content = $this->get('body_content');
-    $form['content']['body_content'] = array(
+    $form['content']['body_content'] = [
         '#type' => 'text_format',
         '#title' => $this->t('Content Blurb'),
         '#default_value' => $body_content['value'],
         '#format' => $body_content['format'],
         '#translatable' => TRUE,
-    );
+    ];
   }
 
   /**
    *
    */
   private function contactSuccess(array &$form) {
-    $form['success'] = array(
+    $form['success'] = [
       '#type' => 'details',
       '#title' => t('Contact Us Success Page'),
       '#group' => 'advanced',
-    );
+    ];
 
     $form['success']['success_title'] = [
       '#type' => 'textfield',
@@ -95,30 +95,30 @@ class ContactUsConfigForm extends FormBase {
     ];
 
     $success_message = $this->get('success_message');
-    $form['success']['success_message'] = array(
+    $form['success']['success_message'] = [
         '#type' => 'text_format',
         '#title' => $this->t('Content Blurb'),
         '#default_value' => $success_message['value'],
         '#format' => $success_message['format'],
         '#translatable' => TRUE,
-    );
+    ];
   }
 
   /**
    *
    */
   private function contactSettings(array &$form) {
-    $form['advanced'] = array(
+    $form['advanced'] = [
       '#type' => 'vertical_tabs',
-    );
+    ];
 
-    $form['settings'] = array(
+    $form['settings'] = [
       '#type' => 'details',
       '#title' => t('Submit Settings'),
       '#group' => 'advanced',
-    );
+    ];
 
-    $form['settings']['email_template'] = array(
+    $form['settings']['email_template'] = [
         '#type' => 'textarea',
         '#title' => $this->t('Email Template'),
         '#default_value' => $this->get('email_template'),
@@ -135,20 +135,21 @@ class ContactUsConfigForm extends FormBase {
             <li>[-submissiondate-] - This will use the "long" format</li>
             <li>[-ip_address-] - IP address of the player</li>
         </ul>'
-    );
+    ];
 
-    $form['settings']['email_from'] = array(
+    $form['settings']['email_from'] = [
         '#type' => 'textfield',
         '#title' => t('Email from'),
         '#default_value' => $this->get('email_from'),
         '#description' => 'The "Sender" of the email. This will default to the users Firstname and Last Name'
-    );
-    $form['settings']['generic_error'] = array(
+    ];
+
+    $form['settings']['generic_error'] = [
         '#type' => 'textarea',
         '#title' => t('Generic Error template'),
         '#default_value' => $this->get('generic_error'),
         '#description' => 'This will be used as the generic error message for any system errors that may be encountered.',
         '#rows' => 3
-    );
+    ];
   }
 }
