@@ -1,13 +1,13 @@
-uuid: c21ad29e-d242-4bc2-8c47-ea619bdfe28c
+uuid: 8c35ef4a-90ce-4e9c-a9d2-903711580bc4
 langcode: en
 status: true
 dependencies:
   module:
+    - contact_us_config
     - serialization
     - user
-    - webcomposer_form_manager
-id: webcomposer_form_rest_resource
-plugin_id: webcomposer_form_rest_resource
+id: contact_us_config_resource
+plugin_id: contact_us_config_resource
 granularity: method
 configuration:
   GET:
