@@ -1,0 +1,23 @@
+uuid: 8257b8cd-ae06-4e1a-a772-961d1f735c0e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.announcement_entity.field_body
+  module:
+    - text
+    - webcomposer_announcements
+_core:
+  default_config_hash: r8KSQR4_UWuyPwIkKgGq0LUk4qtEpbeyfObzW-tKMQU
+id: announcement_entity.announcement_entity.field_body
+field_name: field_body
+entity_type: announcement_entity
+bundle: announcement_entity
+label: Body
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

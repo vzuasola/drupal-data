@@ -73,7 +73,8 @@ class LanguageResource extends ResourceBase {
     LoggerInterface $logger,
     AccountProxyInterface $current_user,
     LanguageManagerInterface $language_manager,
-    $config) {
+    $config
+  ) {
     parent::__construct($configuration, $plugin_id, $plugin_definition, $serializer_formats, $logger);
 
     $this->languageManager = $language_manager;
