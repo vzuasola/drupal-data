@@ -1,0 +1,14 @@
+advanced__active_tab: edit-content
+page_title: 'Blurb Title'
+body_content:
+  value: "<p>Blurb Content</p>\r\n"
+  format: basic_html
+value: null
+format: null
+success_title: 'Success Title'
+success_message:
+  value: "<p>Success Content</p>\r\n"
+  format: basic_html
+email_template: ''
+email_from: ''
+generic_error: ''

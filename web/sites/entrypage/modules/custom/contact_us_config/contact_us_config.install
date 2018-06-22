@@ -3,10 +3,10 @@
 /**
  * Implements hook_uninstall
  */
-function contact_form_uninstall() {
+function contact_us_config_uninstall() {
   $keys = [
-    'contact_form.page',
-    'contact_form.settings',
+    'contact_us_config.contact_us_configuration',
+    'rest.resource.contact_us_config_resource'
   ];
 
   foreach ($keys as $key) {
