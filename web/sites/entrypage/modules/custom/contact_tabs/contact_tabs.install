@@ -16,6 +16,7 @@ function contact_tabs_uninstall() {
     'field.storage.contact_tabs_entity.field_tab_content',
     'field.storage.contact_tabs_entity.field_tab_default',
     'field.storage.contact_tabs_entity.field_title',
+    'views.view.contact_tabs'
   ];
 
   foreach ($keys as $key) {
