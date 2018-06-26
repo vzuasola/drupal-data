@@ -27,7 +27,6 @@ class MyAccountPageNotFoundForm extends FormBase {
    * {@inheritdoc}
    */
   protected function getEditableConfigNames() {
-
     return ['my_account_error_handler.404'];
   }
 
@@ -47,10 +46,9 @@ class MyAccountPageNotFoundForm extends FormBase {
       '#title' => 'Field Configuration',
       '#group' => 'page_not_found',
       '#open' => TRUE,
-      '#tree' => TRUE,
     ];
 
-    $form['field_configuration']['page_not_found']['top_blurb'] = [
+    $form['field_configuration']['top_blurb'] = [
       '#type' => 'textarea',
       '#title' => t('Top Blurb'),
       '#required' => TRUE,
@@ -59,7 +57,7 @@ class MyAccountPageNotFoundForm extends FormBase {
       '#translatable' => TRUE,
     ];
 
-    $form['field_configuration']['page_not_found']['bottom_blurb'] = [
+    $form['field_configuration']['bottom_blurb'] = [
       '#type' => 'textarea',
       '#title' => t('Bottom Blurb'),
       '#required' => TRUE,
