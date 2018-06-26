@@ -188,6 +188,11 @@ class MyProfileForm extends WebcomposerFormBase implements WebcomposerFormInterf
             '#type' => 'textfield',
             '#description' => 'label for Mobile number field placeholder',
           ],
+          'tooltip-content' => [
+            '#title' => 'Tooltip text',
+            '#type' => 'textarea',
+            '#description' => 'Tooltip text that will be displayed on focus of info icon',
+          ],
         ],
       ],
 
@@ -276,6 +281,13 @@ class MyProfileForm extends WebcomposerFormBase implements WebcomposerFormInterf
             '#type' => 'textfield',
             '#description' => 'label for Address field',
           ],
+          'attr' => [
+            'placeholder' => [
+              '#title' => 'Address placeholder label',
+              '#type' => 'textfield',
+              '#description' => 'label for address field placeholder',
+            ],
+          ],
         ],
       ],
 
@@ -288,6 +300,11 @@ class MyProfileForm extends WebcomposerFormBase implements WebcomposerFormInterf
             '#type' => 'textfield',
             '#description' => 'The label for the City field',
           ],
+          'placeholder' => [
+            '#title' => 'City placeholder label',
+            '#type' => 'textfield',
+            '#description' => 'label for city field placeholder',
+          ],
         ],
       ],
 
@@ -299,6 +316,11 @@ class MyProfileForm extends WebcomposerFormBase implements WebcomposerFormInterf
             '#title' => 'Postal Code Label',
             '#type' => 'textfield',
             '#description' => 'The label for the Postal Code field',
+          ],
+          'placeholder' => [
+            '#title' => 'Postal Code placeholder label',
+            '#type' => 'textfield',
+            '#description' => 'label for postal code field placeholder',
           ],
         ],
       ],
