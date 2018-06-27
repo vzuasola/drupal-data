@@ -25,6 +25,9 @@ settings:
     -
       value: youtube
       label: Youtube
+    -
+      value: linkedin
+      label: LinkedIn
   allowed_values_function: ''
 module: options
 locked: false
