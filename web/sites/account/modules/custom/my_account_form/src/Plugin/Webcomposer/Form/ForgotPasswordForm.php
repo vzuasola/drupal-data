@@ -89,5 +89,4 @@ class ForgotPasswordForm extends WebcomposerFormBase implements WebcomposerFormI
 
     return $fields;
   }
-
 }
