@@ -13,14 +13,12 @@ use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
  *   name = "Forgot Username Form",
  * )
  */
-class ForgotUsernameForm extends WebcomposerFormBase implements WebcomposerFormInterface
-{
+class ForgotUsernameForm extends WebcomposerFormBase implements WebcomposerFormInterface {
 
   /**
    * Get Settings.
    */
-  public function getSettings()
-  {
+  public function getSettings() {
     return [
       'show' => [
         '#title' => 'Show this form',
@@ -38,9 +36,7 @@ class ForgotUsernameForm extends WebcomposerFormBase implements WebcomposerFormI
   /**
    * Set Fields.
    */
-  public function getFields()
-  {
-
+  public function getFields() {
     $fields = [];
 
     $fields['email'] = [
