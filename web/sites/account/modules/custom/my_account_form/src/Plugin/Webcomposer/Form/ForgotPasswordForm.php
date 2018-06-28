@@ -40,6 +40,18 @@ class ForgotPasswordForm extends WebcomposerFormBase implements WebcomposerFormI
 
     $fields = [];
 
+    $fields['header_markup'] = [
+      'name' => 'Header Markup',
+      'type' => 'markup',
+      'settings' => [
+        'markup' => [
+          '#title' => 'Header Blurb',
+          '#type' => 'text_format',
+          '#default_value' => '',
+        ],
+      ],
+    ];
+
     $fields['username'] = [
       'name' => 'Username',
       'type' => 'textfield',
@@ -89,4 +101,5 @@ class ForgotPasswordForm extends WebcomposerFormBase implements WebcomposerFormI
 
     return $fields;
   }
+
 }
