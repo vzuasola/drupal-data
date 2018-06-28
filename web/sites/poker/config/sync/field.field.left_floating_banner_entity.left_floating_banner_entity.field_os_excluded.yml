@@ -1,0 +1,22 @@
+uuid: 81a200d8-c893-4a2f-bd4a-fca927447c8b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.left_floating_banner_entity.field_os_excluded
+  module:
+    - webcomposer_floating_banners
+_core:
+  default_config_hash: qYW7Hwm_Q0ZOBzdR8oGzBEMEHjzbnnRMDVDtqZXGJh8
+id: left_floating_banner_entity.left_floating_banner_entity.field_os_excluded
+field_name: field_os_excluded
+entity_type: left_floating_banner_entity
+bundle: left_floating_banner_entity
+label: 'Excluded OS'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

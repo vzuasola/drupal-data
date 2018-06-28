@@ -1,0 +1,6 @@
+settings:
+  allowed_values:
+    2:
+      label: Left
+    3:
+      label: Right
