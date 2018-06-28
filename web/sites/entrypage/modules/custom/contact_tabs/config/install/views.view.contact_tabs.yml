@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.storage.contact_tabs_entity.field_tab_class
     - field.storage.contact_tabs_entity.field_tab_content
-    - field.storage.contact_tabs_entity.field_tab_default
     - field.storage.contact_tabs_entity.field_title
   module:
     - contact_tabs
@@ -15,6 +14,8 @@ dependencies:
     - serialization
     - text
     - webcomposer_rest_extra
+_core:
+  default_config_hash: RwRoIiX5f_HEJW1sEh6cd_d35n4LzEyol8MH-lbbeqg
 id: contact_tabs
 label: 'Contact Tabs'
 module: views
@@ -163,71 +164,6 @@ display:
           type: string
           settings:
             link_to_entity: false
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_tab_default:
-          id: field_tab_default
-          table: contact_tabs_entity__field_tab_default
-          field: field_tab_default
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: 'Default tab'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: boolean
-          settings:
-            format: custom
-            format_custom_true: 'Yes'
-            format_custom_false: 'No'
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -451,7 +387,6 @@ display:
         - 'languages:language_interface'
         - url
       tags:
-        - 'config:field.storage.contact_tabs_entity.field_tab_default'
         - 'config:field.storage.contact_tabs_entity.field_title'
   page_1:
     display_plugin: page
@@ -468,7 +403,6 @@ display:
         - 'languages:language_interface'
         - url
       tags:
-        - 'config:field.storage.contact_tabs_entity.field_tab_default'
         - 'config:field.storage.contact_tabs_entity.field_title'
   rest_export_1:
     display_plugin: rest_export
@@ -634,71 +568,6 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_tab_default:
-          id: field_tab_default
-          table: contact_tabs_entity__field_tab_default
-          field: field_tab_default
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: boolean
-          settings:
-            format: default
-            format_custom_true: ''
-            format_custom_false: ''
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
         field_tab_content:
           id: field_tab_content
           table: contact_tabs_entity__field_tab_content
@@ -771,5 +640,4 @@ display:
       tags:
         - 'config:field.storage.contact_tabs_entity.field_tab_class'
         - 'config:field.storage.contact_tabs_entity.field_tab_content'
-        - 'config:field.storage.contact_tabs_entity.field_tab_default'
         - 'config:field.storage.contact_tabs_entity.field_title'
