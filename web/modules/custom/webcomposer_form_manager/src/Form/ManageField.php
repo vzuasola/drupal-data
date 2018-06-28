@@ -181,11 +181,15 @@ class ManageField extends FormBase {
 
     foreach ($this->field->getSettings() as $key => $value) {
       $form['field_settings'][$key] = $value;
-
       $defaultValue = $this->field->getOption('default_value');
 
       if (isset($fieldSettings[$key])) {
         $form['field_settings'][$key]['#default_value'] = $fieldSettings[$key];
+
+        if ($value['#type'] == 'text_format') {
+          $form['field_settings'][$key]['#format'] = 'full_html';
+        }
+
       } elseif ($defaultValue) {
         $form['field_settings'][$key]['#default_value'] = $defaultValue;
       }
@@ -309,6 +313,10 @@ class ManageField extends FormBase {
 
     foreach ($keys as $key) {
       $data[$key] = $fieldSettings[$key];
+
+      if (is_array($fieldSettings[$key])) {
+        $data[$key] = $fieldSettings[$key]['value'];
+      }
     }
 
     $this->saveRawConfigValue($name, 'field_settings', $data);
