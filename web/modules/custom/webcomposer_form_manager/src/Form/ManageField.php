@@ -186,7 +186,7 @@ class ManageField extends FormBase {
       if (isset($fieldSettings[$key])) {
         $form['field_settings'][$key]['#default_value'] = $fieldSettings[$key];
 
-        if ($value['#type'] == 'text_format') {
+        if ($value['#type'] === 'text_format') {
           $form['field_settings'][$key]['#format'] = 'full_html';
         }
 
@@ -314,7 +314,7 @@ class ManageField extends FormBase {
     foreach ($keys as $key) {
       $data[$key] = $fieldSettings[$key];
 
-      if (is_array($fieldSettings[$key])) {
+      if (is_array($fieldSettings[$key]) && $settings[$key] === 'text_format') {
         $data[$key] = $fieldSettings[$key]['value'];
       }
     }
