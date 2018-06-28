@@ -15,8 +15,13 @@ class ExportParser {
   public function get_audit_logs() {
     $storage = \Drupal::service('webcomposer_audit_export.database_storage');
 
-    return $storage->all([]);
-
+    return $storage->all([
+      'limit' => 500,
+      'orderby' => [
+        'field' => 'timestamp',
+        'sort' => 'DESC',
+      ],
+    ]);
   }
 
   /**

@@ -12,5 +12,5 @@ services:
     arguments: ['@webcomposer_audit_export.excel_parser','@webcomposer_audit_export.export']
 
   webcomposer_audit_export.database_storage:
-    class: '\Drupal\webcomposer_audit_export\Storage\DatabaseAuditStorage'
+    class: '\Drupal\webcomposer_audit\Storage\DatabaseAuditStorage'
     arguments: ['@database', '@current_user', '@path.current']

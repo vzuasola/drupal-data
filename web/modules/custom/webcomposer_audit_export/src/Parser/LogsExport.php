@@ -7,6 +7,8 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\TypedData\TypedDataInterface;
 
+use Drupal\webcomposer_audit\Storage\AuditStorageInterface;
+
 /**
  * Class which handles domain export.
  */
@@ -32,14 +34,6 @@ class LogsExport {
   public function __construct($excelParser, $service) {
     $this->excelParser = $excelParser;
     $this->service = $service;
-  }
-
-
- public static function create(ContainerInterface $container) {
-    return new static(
-      $excelParser,
-      $service
-    );
   }
 
   /**
@@ -106,6 +100,7 @@ class LogsExport {
    */
   private function postProcessLogsData($logs) {
     $result = [];
+
 
     foreach ($logs as $key => $log) {
 
