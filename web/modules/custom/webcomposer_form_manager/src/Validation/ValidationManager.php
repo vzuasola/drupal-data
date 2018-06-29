@@ -124,6 +124,25 @@ class ValidationManager {
         ],
       ],
     ],
+    'regex' => [
+      'title' => 'Regex Validation',
+      'description' => 'Validate Field thru regular expressions',
+      'error' => "This field only accepts specific characters.",
+      'parameters' => [
+        'regex_value' => [
+          '#title' => 'Regex String',
+          '#description' => 'Regex value that will be tested on the front end. ' .
+            '(Only configure this if you know how to code a regex)',
+          '#type' => 'textarea',
+        ],
+      ],
+    ],
+    'valid_date' => [
+      'title' => 'Valid Date',
+      'description' => 'Validation to check if the inputted date is correct based on format' .
+      '(must have a Birthdate format on field settings)',
+      'error' => 'Date is invalid',
+    ],
   ];
 
   /**
