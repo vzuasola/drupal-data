@@ -39,6 +39,18 @@ class ForgotUsernameForm extends WebcomposerFormBase implements WebcomposerFormI
   public function getFields() {
     $fields = [];
 
+    $fields['header_markup'] = [
+      'name' => 'Header Markup',
+      'type' => 'markup',
+      'settings' => [
+        'markup' => [
+          '#title' => 'Header Blurb',
+          '#type' => 'text_format',
+          '#default_value' => '',
+        ],
+      ],
+    ];
+
     $fields['email'] = [
       'name' => 'Email',
       'type' => 'textfield',
@@ -65,6 +77,18 @@ class ForgotUsernameForm extends WebcomposerFormBase implements WebcomposerFormI
           '#type' => 'textfield',
           '#description' => 'Label for the Submit button',
           '#default_value' => 'Submit',
+        ],
+      ],
+    ];
+
+    $fields['footer_markup'] = [
+      'name' => 'Footer Markup',
+      'type' => 'markup',
+      'settings' => [
+        'markup' => [
+          '#title' => 'Footer Blurb',
+          '#type' => 'text_format',
+          '#default_value' => '',
         ],
       ],
     ];

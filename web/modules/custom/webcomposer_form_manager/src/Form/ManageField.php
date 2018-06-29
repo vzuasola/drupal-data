@@ -314,7 +314,7 @@ class ManageField extends FormBase {
     foreach ($keys as $key) {
       $data[$key] = $fieldSettings[$key];
 
-      if (is_array($fieldSettings[$key]) && $settings[$key] === 'text_format') {
+      if (is_array($fieldSettings[$key]) && $settings[$key]['#type'] === 'text_format') {
         $data[$key] = $fieldSettings[$key]['value'];
       }
     }

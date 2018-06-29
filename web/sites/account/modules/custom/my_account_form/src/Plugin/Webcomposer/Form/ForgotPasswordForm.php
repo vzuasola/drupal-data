@@ -99,6 +99,18 @@ class ForgotPasswordForm extends WebcomposerFormBase implements WebcomposerFormI
       ],
     ];
 
+    $fields['footer_markup'] = [
+      'name' => 'Footer Markup',
+      'type' => 'markup',
+      'settings' => [
+        'markup' => [
+          '#title' => 'Footer Blurb',
+          '#type' => 'text_format',
+          '#default_value' => '',
+        ],
+      ],
+    ];
+
     return $fields;
   }
 
