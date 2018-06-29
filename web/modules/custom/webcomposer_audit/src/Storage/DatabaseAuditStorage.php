@@ -39,6 +39,8 @@ class DatabaseAuditStorage implements AuditStorageInterface {
       'timestamp',
       'language',
       'entity',
+    ])->fields('ufd', [
+      'name',
     ]);
 
     $query->leftJoin('users_field_data', 'ufd', 'w.uid = ufd.uid');
@@ -49,9 +51,20 @@ class DatabaseAuditStorage implements AuditStorageInterface {
       }
     }
 
+    if (!isset($options['limit'])) {
+      $options['limit'] = 50;
+    }
+
+    if (isset($options['header'])) {
+      $query->orderByHeader($options['header']);
+    }
+
+    if (isset($options['orderby'])) {
+      $query->orderBy($options['orderby']['field'], $options['orderby']['sort']);
+    }
+
     $result = $query
-      ->limit(50)
-      ->orderByHeader($options['header'])
+      ->limit($options['limit'])
       ->execute();
 
     return $result;

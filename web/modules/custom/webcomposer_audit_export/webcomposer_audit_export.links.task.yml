@@ -1,0 +1,4 @@
+webcomposer_audit_export.webcomposer_logs_export:
+  route_name: webcomposer_audit_export.webcomposer_logs_export
+  title: 'Audit Logs Export'
+  base_route: webcomposer_audit.audit_form
