@@ -13,7 +13,7 @@ class ExportParser {
    * Returns an array of all domain groups, where the index is the primary key `id`.
    */
   public function get_audit_logs() {
-    $storage = \Drupal::service('webcomposer_audit_export.database_storage');
+    $storage = \Drupal::service('webcomposer_audit.database_storage');
 
     return $storage->all([
       'limit' => 500,
