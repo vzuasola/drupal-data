@@ -135,7 +135,12 @@ display:
       header: {  }
       footer: {  }
       empty: {  }
-      relationships: {  }
+      relationships:
+        field_game_tag:
+          id: field_game_tag
+          table: jamboree_mobile_games_entity__field_game_tag
+          field: field_game_tag
+          plugin_id: standard
       arguments: {  }
       display_extenders: {  }
     cache_metadata:
@@ -591,6 +596,7 @@ display:
         filters: false
         filter_groups: false
         sorts: false
+        relationships: false
       filters:
         langcode:
           id: langcode
@@ -633,6 +639,46 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           entity_type: jamboree_mobile_games_entity
+          entity_field: langcode
+          plugin_id: language
+        langcode_1:
+          id: langcode_1
+          table: taxonomy_term_field_data
+          field: langcode
+          relationship: field_game_tag
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: taxonomy_term
           entity_field: langcode
           plugin_id: language
         field_game_category_target_id:
@@ -724,7 +770,7 @@ display:
           type: select
           limit: true
           vid: game_tag
-          hierarchy: false
+          hierarchy: true
           error_message: true
           plugin_id: taxonomy_index_tid
         field_enable_game_value:
@@ -810,17 +856,19 @@ display:
         groups:
           1: AND
       sorts:
-        field_game_tag_target_id:
-          id: field_game_tag_target_id
-          table: jamboree_mobile_games_entity__field_game_tag
-          field: field_game_tag_target_id
-          relationship: none
+        weight:
+          id: weight
+          table: taxonomy_term_field_data
+          field: weight
+          relationship: field_game_tag
           group_type: group
           admin_label: ''
           order: ASC
           exposed: false
           expose:
             label: ''
+          entity_type: taxonomy_term
+          entity_field: weight
           plugin_id: standard
         field_game_title_value:
           id: field_game_title_value
@@ -833,6 +881,16 @@ display:
           exposed: false
           expose:
             label: ''
+          plugin_id: standard
+      relationships:
+        field_game_tag:
+          id: field_game_tag
+          table: jamboree_mobile_games_entity__field_game_tag
+          field: field_game_tag
+          relationship: none
+          group_type: group
+          admin_label: 'field_game_tag: Taxonomy term'
+          required: true
           plugin_id: standard
     cache_metadata:
       max-age: -1
@@ -870,7 +928,7 @@ display:
       pager:
         type: some
         options:
-          items_per_page: 10
+          items_per_page: 0
           offset: 0
       filters:
         langcode:
@@ -913,22 +971,100 @@ display:
           entity_type: jamboree_mobile_games_entity
           entity_field: langcode
           plugin_id: language
+        langcode_1:
+          id: langcode_1
+          table: taxonomy_term_field_data
+          field: langcode
+          relationship: field_game_tag
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: taxonomy_term
+          entity_field: langcode
+          plugin_id: language
+        field_enable_game_value:
+          id: field_enable_game_value
+          table: jamboree_mobile_games_entity__field_enable_game
+          field: field_enable_game_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: boolean
       filter_groups:
         operator: AND
         groups:
           1: AND
       sorts:
-        field_game_tag_target_id:
-          id: field_game_tag_target_id
-          table: jamboree_mobile_games_entity__field_game_tag
-          field: field_game_tag_target_id
-          relationship: none
+        weight:
+          id: weight
+          table: taxonomy_term_field_data
+          field: weight
+          relationship: field_game_tag
           group_type: group
           admin_label: ''
           order: ASC
           exposed: false
           expose:
             label: ''
+          entity_type: taxonomy_term
+          entity_field: weight
           plugin_id: standard
         field_game_title_value:
           id: field_game_title_value

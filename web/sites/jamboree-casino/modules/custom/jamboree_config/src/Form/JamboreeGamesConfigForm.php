@@ -39,6 +39,7 @@ class JamboreeGamesConfigForm extends FormBase {
     ];
 
     $this->sectionGames($form);
+    $this->sectionPagination($form);
 
     return $form;
   }
@@ -60,6 +61,35 @@ class JamboreeGamesConfigForm extends FormBase {
       '#title' => $this->t('No Result Message'),
       '#default_value' => $d['value'],
       '#format' => $d['format'],
+      '#translatable' => TRUE,
+    ];
+  }
+
+  private function sectionPagination(array &$form) {
+    $form['pagination'] = [
+      '#type' => 'details',
+      '#title' => t('Pagination'),
+      '#group' => 'advanced',
+    ];
+
+    $form['pagination']['items_per_page'] = [
+      '#type' => 'textfield',
+      '#title' => t('Number of items per page'),
+      '#default_value' => $this->get('items_per_page') ?? 16,
+      '#translatable' => TRUE,
+    ];
+
+    $form['pagination']['previous_page_label'] = [
+      '#type' => 'textfield',
+      '#title' => t('Previous Button Label'),
+      '#default_value' => $this->get('previous_page_label') ?? "&#8810;",
+      '#translatable' => TRUE,
+    ];
+
+    $form['pagination']['next_page_label'] = [
+      '#type' => 'textfield',
+      '#title' => t('Next Button Label'),
+      '#default_value' => $this->get('next_page_label') ?? "&#8811;",
       '#translatable' => TRUE,
     ];
   }
