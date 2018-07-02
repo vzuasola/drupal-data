@@ -1,24 +1,17 @@
-uuid: b298873c-5e67-4cb8-9490-ef3089c3c2ea
+uuid: 0e60664d-fc29-48a4-9530-88021b7b049f
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_post_banner_image
+    - field.storage.node.field_thumbnail_image
     - node.type.page
   module:
-    - content_translation
     - image
-third_party_settings:
-  content_translation:
-    translation_sync:
-      file: file
-      alt: '0'
-      title: '0'
-id: node.page.field_post_banner_image
-field_name: field_post_banner_image
+id: node.page.field_thumbnail_image
+field_name: field_thumbnail_image
 entity_type: node
 bundle: page
-label: 'Banner Image'
+label: 'Thumbnail Image'
 description: ''
 required: false
 translatable: true
@@ -30,7 +23,7 @@ settings:
   max_filesize: ''
   max_resolution: ''
   min_resolution: ''
-  alt_field: false
+  alt_field: true
   alt_field_required: true
   title_field: false
   title_field_required: false

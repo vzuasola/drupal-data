@@ -4,6 +4,8 @@ status: true
 dependencies:
   module:
     - paragraphs
+_core:
+  default_config_hash: u6vwiryRo5C9CevlIlPgArJZPcAQ2ALpl3VPLY6XNK0
 id: paragraph.field_dropdown_menu_link_title
 field_name: field_dropdown_menu_link_title
 entity_type: paragraph

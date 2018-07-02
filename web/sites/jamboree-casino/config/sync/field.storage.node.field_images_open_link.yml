@@ -1,26 +1,24 @@
-uuid: b9a04391-3f5c-4062-a696-8eddb8865255
+uuid: ace7030c-d104-4448-96bd-273396c52cf2
 langcode: en
 status: true
 dependencies:
   module:
     - node
     - options
-_core:
-  default_config_hash: YTc7gw7jgkk7Gy1Q1YjEQ5BeYY77S-aJjonzEKNhHxs
-id: node.field_banner_link_target
-field_name: field_banner_link_target
+id: node.field_images_open_link
+field_name: field_images_open_link
 entity_type: node
 type: list_string
 settings:
   allowed_values:
     -
-      value: _top
-      label: 'Same Window'
+      value: same_tab
+      label: Same
     -
-      value: _blank
+      value: new_tab
       label: 'New Tab'
     -
-      value: window
+      value: new_window
       label: 'New Window'
   allowed_values_function: ''
 module: options

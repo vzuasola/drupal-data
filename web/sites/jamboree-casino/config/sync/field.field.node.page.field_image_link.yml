@@ -1,17 +1,17 @@
-uuid: dd7bee6b-360d-4054-89b6-09a5dae1814b
+uuid: dec5fa2c-abbe-44b1-86a5-f99a8915abdc
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_banner_link
+    - field.storage.node.field_image_link
     - node.type.page
   module:
     - link
-id: node.page.field_banner_link
-field_name: field_banner_link
+id: node.page.field_image_link
+field_name: field_image_link
 entity_type: node
 bundle: page
-label: 'Banner Link'
+label: 'Image Link'
 description: ''
 required: false
 translatable: true

@@ -1,25 +1,22 @@
-uuid: 2e9da154-e6a4-43a3-9a8a-bcc0414b8328
+uuid: 07bd48a8-8d34-47bb-8001-9c7aa3e1531f
 langcode: en
 status: true
 dependencies:
   module:
     - node
     - options
-id: node.field_post_banner_link_target
-field_name: field_post_banner_link_target
+id: node.field_button_open_link
+field_name: field_button_open_link
 entity_type: node
 type: list_string
 settings:
   allowed_values:
     -
-      value: _top
-      label: 'Same Window'
+      value: same_tab
+      label: Same
     -
-      value: _blank
+      value: new_tab
       label: 'New Tab'
-    -
-      value: window
-      label: 'New Window'
   allowed_values_function: ''
 module: options
 locked: false
