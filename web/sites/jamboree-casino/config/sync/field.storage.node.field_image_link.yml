@@ -1,12 +1,12 @@
-uuid: 1133c8ed-1d80-4622-a8bd-604309eb1bfb
+uuid: cc7c76c3-4766-4780-a4e8-5cd76dfc9f43
 langcode: en
 status: true
 dependencies:
   module:
     - link
     - node
-id: node.field_post_banner_link
-field_name: field_post_banner_link
+id: node.field_image_link
+field_name: field_image_link
 entity_type: node
 type: link
 settings: {  }

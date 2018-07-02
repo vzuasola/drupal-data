@@ -6,6 +6,8 @@ dependencies:
     - file
     - image
     - paragraphs
+_core:
+  default_config_hash: '-g0yupbJPssmPRx24XNK4344ZeuyCbHirDYyGxafVDo'
 id: paragraph.field_dropdown_menu_icon_image
 field_name: field_dropdown_menu_icon_image
 entity_type: paragraph

@@ -1,16 +1,16 @@
-uuid: 074be73a-63c8-4ce4-b761-f182d781a2b5
+uuid: b46f3914-2c9b-49de-8e55-4095aceda839
 langcode: en
 status: true
 dependencies:
   module:
+    - metatag
     - node
-    - text
-id: node.field_post_banner_content
-field_name: field_post_banner_content
+id: node.field_meta_tag
+field_name: field_meta_tag
 entity_type: node
-type: text_long
+type: metatag
 settings: {  }
-module: text
+module: metatag
 locked: false
 cardinality: 1
 translatable: true

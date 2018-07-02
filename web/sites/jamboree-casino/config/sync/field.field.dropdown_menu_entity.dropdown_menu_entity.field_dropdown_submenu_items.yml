@@ -8,6 +8,8 @@ dependencies:
   module:
     - entity_reference_revisions
     - jamboree_dropdown_menu
+_core:
+  default_config_hash: 04Kcgu_yPIuHwdtZeZ4aYYYeX31P8vhfTh3mhrHdPjQ
 id: dropdown_menu_entity.dropdown_menu_entity.field_dropdown_submenu_items
 field_name: field_dropdown_submenu_items
 entity_type: dropdown_menu_entity
