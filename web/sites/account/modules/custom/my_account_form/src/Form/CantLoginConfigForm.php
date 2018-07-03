@@ -107,12 +107,14 @@ class CantLoginConfigForm extends FormBase {
       '#title' => 'Tab Menu - Title',
       '#default_value' => $this->get('forgot_password_tab_menu'),
       '#translatable' => TRUE,
+      '#required' => TRUE,
     ];
 
     $form['cant_login_tab_menu_config']['forgot_password']['forgot_password_link'] = [
       '#type' => 'textfield',
       '#title' => 'Tab Menu - Link',
       '#default_value' => $this->get('forgot_password_link'),
+      '#required' => TRUE,
     ];
 
     $content = $this->get('forgot_password_success_message');
@@ -136,12 +138,14 @@ class CantLoginConfigForm extends FormBase {
       '#title' => 'Tab Menu - Title',
       '#default_value' => $this->get('forgot_username_tab_menu'),
       '#translatable' => TRUE,
+      '#required' => TRUE,
     ];
 
     $form['cant_login_tab_menu_config']['forgot_username']['forgot_username_link'] = [
       '#type' => 'textfield',
       '#title' => 'Tab Menu - Link',
       '#default_value' => $this->get('forgot_username_link'),
+      '#required' => TRUE,
     ];
 
     $content = $this->get('forgot_username_success_message');
