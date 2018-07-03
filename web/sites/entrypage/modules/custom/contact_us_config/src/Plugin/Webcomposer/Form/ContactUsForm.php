@@ -19,18 +19,6 @@ class ContactUsForm extends WebcomposerFormBase implements WebcomposerFormInterf
    * Get Settings.
    */
   public function getSettings() {
-    return [
-      'show' => [
-        '#title' => 'Show this form',
-        '#type' => 'checkbox',
-        '#default_value' => TRUE,
-      ],
-      'title' => [
-        '#title' => 'Title',
-        '#type' => 'textfield',
-        '#description' => 'Contact Form Title',
-      ],
-    ];
   }
 
   /**
