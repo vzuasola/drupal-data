@@ -46,7 +46,8 @@ class JamboreeMobileBlockEntitySettingsForm extends FormBase {
    *   Form definition array.
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    $form['jamboreemobileblockentity_settings']['#markup'] = 'Settings form for Jamboree mobile block entity entities. Manage field settings here.';
+    $form['jamboreemobileblockentity_settings']['#markup']
+      = 'Settings form for Jamboree mobile block entity entities. Manage field settings here.';
     return $form;
   }
 
