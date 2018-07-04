@@ -1,0 +1,20 @@
+uuid: 0d9023aa-b947-44df-b3a8-b8bc9589c13f
+langcode: en
+status: true
+dependencies:
+  module:
+    - webcomposer_social_media
+id: social_media_entity.social_media_entity.user_id
+field_name: user_id
+entity_type: social_media_entity
+bundle: social_media_entity
+label: 'Authored by'
+description: 'The user ID of author of the Social Media entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

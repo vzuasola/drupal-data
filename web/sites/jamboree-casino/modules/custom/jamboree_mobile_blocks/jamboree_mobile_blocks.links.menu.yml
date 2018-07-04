@@ -1,0 +1,18 @@
+jamboree_mobile_blocks.list:
+  title: 'Jamboree Mobile Blocks Configuration'
+  description: 'List Jamboree Mobile Block entities'
+  parent: system.admin_config
+  route_name: jamboree_mobile_blocks.admin_settings
+
+# Jamboree mobile block entity menu items definition
+entity.jamboree_mobile_block_entity.collection:
+  title: 'Jamboree mobile block entity list'
+  route_name: entity.jamboree_mobile_block_entity.collection
+  description: 'List Jamboree mobile block entity entities'
+  parent: jamboree_mobile_blocks.list
+
+jamboree_mobile_block_entity.admin.structure.settings:
+  title: Jamboree mobile block entity settings
+  description: 'Configure Jamboree mobile block entity entities'
+  route_name: jamboree_mobile_block_entity.settings
+  parent: jamboree_mobile_blocks.list
