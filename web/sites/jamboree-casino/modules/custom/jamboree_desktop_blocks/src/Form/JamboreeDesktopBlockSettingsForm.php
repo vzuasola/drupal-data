@@ -46,7 +46,8 @@ class JamboreeDesktopBlockSettingsForm extends FormBase {
    *   Form definition array.
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    $form['jamboreedesktopblock_settings']['#markup'] = 'Settings form for Jamboree desktop block entities. Manage field settings here.';
+    $form['jamboreedesktopblock_settings']['#markup']
+      = 'Settings form for Jamboree desktop block entities. Manage field settings here.';
     return $form;
   }
 
