@@ -1,0 +1,7 @@
+jamboree_mobile_blocks.admin_settings:
+  path: 'admin/config/jamboree/mobile_block'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Jamboree Mobile Block'
+  requirements:
+    _permission: 'administer site configuration'

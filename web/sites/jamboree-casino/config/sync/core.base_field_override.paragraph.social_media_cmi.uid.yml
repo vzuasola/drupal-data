@@ -1,0 +1,20 @@
+uuid: d42a272b-e352-4974-91a2-ca8e16ae04dd
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.social_media_cmi
+id: paragraph.social_media_cmi.uid
+field_name: uid
+entity_type: paragraph
+bundle: social_media_cmi
+label: 'Authored by'
+description: 'The user ID of the paragraphs author.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\paragraphs\Entity\Paragraph::getCurrentUserId'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference
