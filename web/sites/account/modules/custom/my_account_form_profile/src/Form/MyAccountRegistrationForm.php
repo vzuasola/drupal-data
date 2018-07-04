@@ -91,7 +91,7 @@ class MyAccountRegistrationForm extends FormBase
             '#size' => 25,
             '#required' => TRUE,
             '#description' => $this->t('Text for Verify Link'),
-            '#default_value' => $this->get('verify_text_field'),
+            '#default_value' => $this->get('verify_text'),
             '#translatable' => true,
         ];
 
@@ -288,6 +288,14 @@ class MyAccountRegistrationForm extends FormBase
             '#type' => 'details',
             '#title' => 'Password',
             '#open' => False,
+        ];
+
+        $form['field_labels_validation_configuration']['password_validation']['required_validation'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Required Error Message'),
+            '#required' => true,
+            '#default_value' => $this->get('required_validation'),
+            '#translatable' => true,
         ];
 
         $form['field_labels_validation_configuration']['password_validation']['password_format_validation'] = [
