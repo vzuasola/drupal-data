@@ -39,6 +39,7 @@ module:
   jamboree_content_blocks: 0
   jamboree_desktop_games: 0
   jamboree_dropdown_menu: 0
+  jamboree_mobile_blocks: 0
   jamboree_mobile_games: 0
   jamboree_news_and_updates: 0
   lang_dropdown: 0

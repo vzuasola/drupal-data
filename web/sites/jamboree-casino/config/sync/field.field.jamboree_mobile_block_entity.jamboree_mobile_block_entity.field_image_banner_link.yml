@@ -1,0 +1,20 @@
+uuid: 5c2ce022-6e9f-4e5b-beed-e54d9cb522da
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.jamboree_mobile_block_entity.field_image_banner_link
+  module:
+    - jamboree_mobile_blocks
+id: jamboree_mobile_block_entity.jamboree_mobile_block_entity.field_image_banner_link
+field_name: field_image_banner_link
+entity_type: jamboree_mobile_block_entity
+bundle: jamboree_mobile_block_entity
+label: 'Image Banner Link'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,18 @@
+uuid: 2c458ae5-7897-455e-a994-76a100e21b1d
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.social_media_cmi
+id: paragraph.social_media_cmi.created
+field_name: created
+entity_type: paragraph
+bundle: social_media_cmi
+label: 'Authored on'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created
