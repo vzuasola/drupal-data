@@ -27,7 +27,6 @@ class JamboreeMobileBlockEntityListBuilder extends EntityListBuilder {
    */
   public function buildRow(EntityInterface $entity) {
     /* @var $entity \Drupal\jamboree_mobile_blocks\Entity\JamboreeMobileBlockEntity */
-    $row['id'] = $entity->id();
     $row['name'] = Link::createFromRoute(
       $entity->label(),
       'entity.jamboree_mobile_block_entity.edit_form',
