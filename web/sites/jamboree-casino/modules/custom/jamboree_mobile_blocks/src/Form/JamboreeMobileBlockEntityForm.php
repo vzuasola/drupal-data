@@ -44,7 +44,7 @@ class JamboreeMobileBlockEntityForm extends ContentEntityForm {
           '%label' => $entity->label(),
         ]));
     }
-    $form_state->setRedirect('entity.jamboree_mobile_block_entity.canonical', ['jamboree_mobile_block_entity' => $entity->id()]);
+    $form_state->setRedirectUrl($entity->urlInfo('collection'));
   }
 
 }
