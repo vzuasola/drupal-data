@@ -15,6 +15,7 @@ dependencies:
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_post_banner_link_target
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_post_content_position
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_publish_date
+    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_routes
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_title
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_unpublish_date
     - image.style.thumbnail
@@ -346,6 +347,12 @@ content:
     third_party_settings: {  }
     type: datetime_default
     region: content
+  field_routes:
+    weight: 17
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
   field_title:
     weight: 0
     settings:
@@ -364,7 +371,8 @@ content:
     type: language_select
     weight: 2
     region: content
-    settings: {  }
+    settings:
+      include_locked: true
     third_party_settings: {  }
   translation:
     weight: 10
