@@ -1,0 +1,20 @@
+uuid: c2054efe-6d0e-4e61-84f5-407d20a25f93
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.jamboree_rightside_block_entity.field_title
+  module:
+    - jamboree_rightside_blocks
+id: jamboree_rightside_block_entity.jamboree_rightside_block_entity.field_title
+field_name: field_title
+entity_type: jamboree_rightside_block_entity
+bundle: jamboree_rightside_block_entity
+label: Title
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

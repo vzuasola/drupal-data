@@ -1,0 +1,32 @@
+<?php
+
+/**
+ * Implements hook_uninstall
+ */
+function jamboree_rightside_blocks_uninstall() {
+  $keys = [
+    'core.entity_form_display.jamboree_rightside_block_entity.jamboree_rightside_block_entity.default.yml',
+    'core.entity_view_display.jamboree_rightside_block_entity.jamboree_rightside_block_entity.default.yml',
+    'field.field.content_block_entity.content_block_entity.field_rightside_content_type.yml',
+    'field.field.jamboree_rightside_block_entity.jamboree_rightside_block_entity.field_content_type.yml',
+    'field.field.jamboree_rightside_block_entity.jamboree_rightside_block_entity.field_hide_title.yml',
+    'field.field.jamboree_rightside_block_entity.jamboree_rightside_block_entity.field_image_banner.yml',
+    'field.field.jamboree_rightside_block_entity.jamboree_rightside_block_entity.field_image_banner_link.yml',
+    'field.field.jamboree_rightside_block_entity.jamboree_rightside_block_entity.field_image_banner_link_target.yml',
+    'field.field.jamboree_rightside_block_entity.jamboree_rightside_block_entity.field_log_in_state.yml',
+    'field.field.jamboree_rightside_block_entity.jamboree_rightside_block_entity.field_title.yml',
+    'field.storage.content_block_entity.field_rightside_content_type.yml',
+    'field.storage.jamboree_rightside_block_entity.field_content_type.yml',
+    'field.storage.jamboree_rightside_block_entity.field_hide_title.yml',
+    'field.storage.jamboree_rightside_block_entity.field_image_banner.yml',
+    'field.storage.jamboree_rightside_block_entity.field_image_banner_link.yml',
+    'field.storage.jamboree_rightside_block_entity.field_image_banner_link_target.yml',
+    'field.storage.jamboree_rightside_block_entity.field_log_in_state.yml',
+    'field.storage.jamboree_rightside_block_entity.field_title.yml',
+    'views.view.jamboree_rightside_block.yml',
+  ];
+
+  foreach ($keys as $key) {
+    \Drupal::configFactory()->getEditable($key)->delete();
+  }
+}
