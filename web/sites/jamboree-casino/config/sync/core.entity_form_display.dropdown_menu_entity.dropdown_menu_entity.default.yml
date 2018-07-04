@@ -3,17 +3,37 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.dropdown_menu_entity.dropdown_menu_entity.field_dropdown_menu_description
+    - field.field.dropdown_menu_entity.dropdown_menu_entity.field_dropdown_menu_enabled
     - field.field.dropdown_menu_entity.dropdown_menu_entity.field_dropdown_menu_link
     - field.field.dropdown_menu_entity.dropdown_menu_entity.field_dropdown_menu_link_title
+    - field.field.dropdown_menu_entity.dropdown_menu_entity.field_dropdown_menu_mobile_opt
     - field.field.dropdown_menu_entity.dropdown_menu_entity.field_dropdown_submenu_items
   module:
     - jamboree_dropdown_menu
     - paragraphs
+_core:
+  default_config_hash: itswsoHnoUFw1Jo6ahu5OZH1DoUk2zh9jnvVssm5rcQ
 id: dropdown_menu_entity.dropdown_menu_entity.default
 targetEntityType: dropdown_menu_entity
 bundle: dropdown_menu_entity
 mode: default
 content:
+  field_dropdown_menu_description:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_dropdown_menu_enabled:
+    weight: 2
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
   field_dropdown_menu_link:
     weight: 1
     settings:
@@ -30,9 +50,15 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
+  field_dropdown_menu_mobile_opt:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_dropdown_submenu_items:
     type: entity_reference_paragraphs
-    weight: 2
+    weight: 5
     region: content
     settings:
       title: Paragraph

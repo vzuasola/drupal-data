@@ -92,7 +92,6 @@ class MarketingScriptResource extends ResourceBase {
    *   Throws exception expected.
    */
   public function get() {
-
     $route = $this->currentRequest->query->get('route');
     $response = [];
 
@@ -100,22 +99,31 @@ class MarketingScriptResource extends ResourceBase {
 
     foreach ($results as $value) {
       $result = $value->toArray();   
+
+      $entityId = $result['id'][0]['value'];
       $data = explode(PHP_EOL, $result['field_per_page_configuratiion'][0]['value']);
 
       foreach ($data as $key) {
         $trimmed_key = trim($key);
 
         if (fnmatch($trimmed_key, $route)) {
-          $response[] = $result;
-          break;
+          $response[$entityId] = $result;
+        }
+
+        $pttr = '#^\~#';
+        if (preg_match($pttr, $trimmed_key) === 1) {
+          $excl = trim(preg_replace($pttr, "", $trimmed_key));
+          if (fnmatch($excl, $route)) {
+            unset($response[$entityId]);
+          }
         }
       }
-    } 
+    }
 
     $build = array( 
       '#cache' => array( 
         'max-age' => 0, 
-      ), 
+      ),
     ); 
 
     return (new ResourceResponse($response))->addCacheableDependency($build);

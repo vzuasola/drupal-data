@@ -65,6 +65,13 @@ class LoginForm extends FormBase {
       '#translatable' => TRUE,
     ];
 
+    $form['login_form_details']['rememberme_label'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Remember Me Label'),
+      '#default_value' => $this->get('rememberme_label'),
+      '#translatable' => TRUE,
+    ];
+
     $form['login_form_details']['lightbox_blurb'] = [
       '#type' => 'textarea',
       '#title' => $this->t('Login lightbox blurb'),
@@ -253,6 +260,13 @@ class LoginForm extends FormBase {
       '#title' => $this->t('Mobile Login Button Label'),
       '#description' => $this->t('Label to be used in mobile.'),
       '#default_value' => $this->get('mobile_login_button_label'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['mobile_login']['mobile_cant_login_url'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Mobile Cant Login URL'),
+      '#default_value' => $this->get('mobile_cant_login_url'),
       '#translatable' => TRUE,
     ];
 

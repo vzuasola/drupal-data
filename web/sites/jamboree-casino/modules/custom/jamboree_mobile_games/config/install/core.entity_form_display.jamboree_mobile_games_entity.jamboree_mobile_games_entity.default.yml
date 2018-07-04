@@ -1,0 +1,81 @@
+uuid: c8f5d82d-b099-49a1-923f-2d805b3f474e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.jamboree_mobile_games_entity.jamboree_mobile_games_entity.field_enable_free_play
+    - field.field.jamboree_mobile_games_entity.jamboree_mobile_games_entity.field_enable_game
+    - field.field.jamboree_mobile_games_entity.jamboree_mobile_games_entity.field_ga
+    - field.field.jamboree_mobile_games_entity.jamboree_mobile_games_entity.field_game_category
+    - field.field.jamboree_mobile_games_entity.jamboree_mobile_games_entity.field_game_tag
+    - field.field.jamboree_mobile_games_entity.jamboree_mobile_games_entity.field_game_thumbnail
+    - field.field.jamboree_mobile_games_entity.jamboree_mobile_games_entity.field_game_ti
+    - image.style.thumbnail
+  module:
+    - image
+    - jamboree_mobile_games
+id: jamboree_mobile_games_entity.jamboree_mobile_games_entity.default
+targetEntityType: jamboree_mobile_games_entity
+bundle: jamboree_mobile_games_entity
+mode: default
+content:
+  field_enable_free_play:
+    weight: 7
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_enable_game:
+    weight: 0
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_ga:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_game_category:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_game_tag:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_game_thumbnail:
+    weight: 4
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_game_ti:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+hidden:
+  name: true
+  user_id: true

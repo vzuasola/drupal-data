@@ -41,4 +41,8 @@ exchange_config.exchange_configuration:
     blocking_currency_not_found_image:
       type: managed_file
       label: 'Exchange Blocking Background'
-      translatable: true  
+      translatable: true
+    base_url:
+      type: label
+      label: 'Mobile Url'
+      translatable: true   

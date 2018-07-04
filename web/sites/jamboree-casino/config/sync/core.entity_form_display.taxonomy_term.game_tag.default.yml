@@ -1,0 +1,41 @@
+uuid: b769e546-c48d-405b-9fc0-a7293df6f938
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.game_tag.field_game_tag_color
+    - taxonomy.vocabulary.game_tag
+id: taxonomy_term.game_tag.default
+targetEntityType: taxonomy_term
+bundle: game_tag
+mode: default
+content:
+  field_game_tag_color:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  langcode:
+    type: language_select
+    weight: 0
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true

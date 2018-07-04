@@ -62,6 +62,19 @@ class GpiProviderConfiguration extends ConfigFormBase {
         '#description' => $this->t("Language mapping for {$value}."),
         '#default_value' => $config->get("{$key}_language_mapping")
       ];
+
+
+      $form[$key]["{$key}_extra_params"] = array(
+        '#type' => 'textarea',
+        '#title' => t('Extra Parameters'),
+        '#size' => 500,
+        '#description' => $this->t('Defines extra parameters that will be added to the game url
+            <br>
+            <strong>key1|value1</strong>
+            <br>
+            <strong>key2|value2</strong>'),
+        '#default_value' => $config->get("{$key}_extra_params")
+      );
     }
 
     $form['gpi_gen_config'] = [
@@ -77,18 +90,21 @@ class GpiProviderConfiguration extends ConfigFormBase {
       '#description' => $this->t('Defines the  GPI  Game Url'),
       '#default_value' => $config->get('gpi_game_url')
     );
+
     $form['gpi_gen_config']['gpi_lottery_keno_version_no'] = array(
       '#type' => 'textfield',
       '#title' => t('GPI Lottery Keno Version Number'),
       '#description' => $this->t('Defines the  GPI lottery Keno Version Number'),
       '#default_value' => $config->get('gpi_lottery_keno_version_no')
     );
+
     $form['gpi_gen_config']['gpi_vendor_id'] = array(
       '#type' => 'textfield',
       '#title' => t('GPI  Vendor Id'),
       '#description' => $this->t('Defines the  GPI  Vendor Id'),
       '#default_value' => $config->get('gpi_vendor_id')
     );
+
     $form['actions'] = ['#type' => 'actions'];
 
     $form['actions']['submit'] = [
@@ -113,6 +129,7 @@ class GpiProviderConfiguration extends ConfigFormBase {
     foreach (self::GPI_GAME_PROVIDERS as $key => $value) {
       $providers[] = "{$key}_currency";
       $providers[] = "{$key}_language_mapping";
+      $providers[] = "{$key}_extra_params";
     }
     $keys = [
       'gpi_game_url',

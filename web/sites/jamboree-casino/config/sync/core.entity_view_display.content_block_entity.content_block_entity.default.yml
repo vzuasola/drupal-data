@@ -13,6 +13,7 @@ dependencies:
     - field.field.content_block_entity.content_block_entity.field_image_banner_link
     - field.field.content_block_entity.content_block_entity.field_open_in
     - field.field.content_block_entity.content_block_entity.field_position
+    - field.field.content_block_entity.content_block_entity.field_rightside_content_type
     - field.field.content_block_entity.content_block_entity.field_title
   module:
     - image
@@ -87,6 +88,13 @@ content:
     region: content
   field_position:
     weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_rightside_content_type:
+    weight: 10
     label: above
     settings: {  }
     third_party_settings: {  }

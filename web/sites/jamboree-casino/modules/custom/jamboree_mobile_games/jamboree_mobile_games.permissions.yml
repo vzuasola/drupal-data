@@ -1,0 +1,22 @@
+add jamboree mobile games entity entities:
+  title: 'Create new Jamboree mobile games entity entities'
+
+administer jamboree mobile games entity entities:
+  title: 'Administer Jamboree mobile games entity entities'
+  description: 'Allow to access the administration form to configure Jamboree mobile games entity entities.'
+  restrict access: true
+
+delete jamboree mobile games entity entities:
+  title: 'Delete Jamboree mobile games entity entities'
+
+edit jamboree mobile games entity entities:
+  title: 'Edit Jamboree mobile games entity entities'
+
+access jamboree mobile games entity overview:
+  title: 'Access the Jamboree mobile games entity overview page'
+
+view published jamboree mobile games entity entities:
+  title: 'View published Jamboree mobile games entity entities'
+
+view unpublished jamboree mobile games entity entities:
+  title: 'View unpublished Jamboree mobile games entity entities'

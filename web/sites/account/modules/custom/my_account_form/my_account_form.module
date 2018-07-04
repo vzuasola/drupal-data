@@ -1,0 +1,42 @@
+<?php
+
+/**
+ * @file
+ */
+
+/**
+ * Implements hook_webcomposer_form_validation_alter().
+ */
+function my_account_form_webcomposer_form_validation_alter(&$validations) {
+  $validations['same'] = [
+    'title' => 'Username Availability',
+    'description' => 'Validate username if already exist',
+    'error' => 'Username not available',
+  ];
+
+  $validations['invalid_words'] = [
+    'title' => 'Invalid Words',
+    'description' => 'Validation to disallow specific words in the field',
+    'error' => 'Invalid/not allowed characters',
+    'parameters' => [
+      'invalid_words_list' => [
+        '#title' => 'Invalid Words List',
+        '#description' => 'List of words to disallow',
+        '#type' => 'textarea',
+      ],
+    ],
+  ];
+
+  // password validation
+  $validations['not_match_username'] = [
+    'title' => 'Not Match Username',
+    'description' => 'Validation to disallow current username as password',
+    'error' => 'Password should not equal to username',
+  ];
+
+  $validations['verify_password'] = [
+    'title' => 'Verify Password',
+    'description' => 'Validation to confirm new password.',
+    'error' => 'Password not match.',
+  ];
+}
