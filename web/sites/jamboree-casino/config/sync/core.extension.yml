@@ -37,6 +37,7 @@ module:
   imce: 0
   jamboree_config: 0
   jamboree_content_blocks: 0
+  jamboree_desktop_blocks: 0
   jamboree_desktop_games: 0
   jamboree_dropdown_menu: 0
   jamboree_mobile_blocks: 0

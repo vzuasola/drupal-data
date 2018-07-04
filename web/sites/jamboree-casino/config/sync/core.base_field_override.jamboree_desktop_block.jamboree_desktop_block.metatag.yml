@@ -1,0 +1,18 @@
+uuid: 3a9f25ae-9ed6-40f5-97be-36da33fa4859
+langcode: en
+status: true
+dependencies:
+  module:
+    - jamboree_desktop_blocks
+id: jamboree_desktop_block.jamboree_desktop_block.metatag
+field_name: metatag
+entity_type: jamboree_desktop_block
+bundle: jamboree_desktop_block
+label: Metatags
+description: 'The metatags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map
