@@ -46,7 +46,7 @@ class MailSubmitResource extends ResourceBase {
         // Send email with drupal_mail.
         $mail =  \Drupal::service('plugin.manager.mail')->mail($module, $key, $to, $langcode, $params, $from);
 
-        if($mail['result']) {
+        if ($mail['result']) {
           return new Response('{"200": "Mail Submit Success"}', 200);
         }
 
