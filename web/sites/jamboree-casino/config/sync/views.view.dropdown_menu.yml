@@ -13,6 +13,8 @@ dependencies:
     - serialization
     - user
     - webcomposer_rest_extra
+_core:
+  default_config_hash: MSewbVo7-7GpVI8JRHx8BQlLlhW9kuRwFlF8BtwDAHI
 id: dropdown_menu
 label: 'Dropdown Menu'
 module: views

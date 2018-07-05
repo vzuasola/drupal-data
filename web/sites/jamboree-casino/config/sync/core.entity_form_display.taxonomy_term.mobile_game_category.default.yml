@@ -6,7 +6,6 @@ dependencies:
     - field.field.taxonomy_term.mobile_game_category.field_category_id
     - field.field.taxonomy_term.mobile_game_category.field_category_image_banner
     - field.field.taxonomy_term.mobile_game_category.field_enable
-    - field.field.taxonomy_term.mobile_game_category.field_hide_description
     - field.field.taxonomy_term.mobile_game_category.field_hide_name
     - image.style.thumbnail
     - taxonomy.vocabulary.mobile_game_category
@@ -44,13 +43,6 @@ content:
     region: content
   field_enable:
     weight: 0
-    settings:
-      display_label: true
-    third_party_settings: {  }
-    type: boolean_checkbox
-    region: content
-  field_hide_description:
-    weight: 6
     settings:
       display_label: true
     third_party_settings: {  }

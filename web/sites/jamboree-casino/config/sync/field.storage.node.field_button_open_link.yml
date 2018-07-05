@@ -1,0 +1,27 @@
+uuid: 07bd48a8-8d34-47bb-8001-9c7aa3e1531f
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_button_open_link
+field_name: field_button_open_link
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: same_tab
+      label: Same
+    -
+      value: new_tab
+      label: 'New Tab'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
