@@ -34,19 +34,22 @@ class MailSubmitResource extends ResourceBase {
     public function post(array $data)
     {
 
-        $params['subject'] = $data['subject'];
-        $params['body'] = $data['body'];
         $langcode = $data['langcode'];
         $from = $data['from'];
         $to = $data['to'];
+        $module = $data['module'];
+        $key = $data['key'];
+
+        $params['subject'] = $data['subject'];
+        $params['body'] = $data['body'];
 
         // Send email with drupal_mail.
-        $mail =  \Drupal::service('plugin.manager.mail')->mail('contact_us_config', 'contactus', $to, $langcode, $params, $from);
+        $mail =  \Drupal::service('plugin.manager.mail')->mail($module, $key, $to, $langcode, $params, $from);
 
-        print_r($mail); die();
+        if($mail['result']) {
+          return new Response('{"200": "Mail Submit Success"}', 200);
+        }
 
-        return new Response(json_decode($mail, true), 200);
-        //return new Response('{"400": "Form Submit Failed"}', 400);
-        return new Response('{"200": "Form Submit Ok"}', 200);
+        return new Response('{"400": "Mail Submit Fail"}', 400);
     }
 }
