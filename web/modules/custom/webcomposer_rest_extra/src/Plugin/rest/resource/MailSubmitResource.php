@@ -5,9 +5,8 @@ use Drupal\rest\Plugin\ResourceBase;
 use Drupal\rest\ResourceResponse;
 use Drupal\rest\ModifiedResourceResponse;
 use Symfony\Component\HttpFoundation\Response;
-
 /**
- * Creates a resource for submitting a webform.
+ * Creates a resource for submitting a email.
  *
  * @RestResource(
  *   id = "mail_rest_submit",
@@ -21,10 +20,10 @@ use Symfony\Component\HttpFoundation\Response;
 class MailSubmitResource extends ResourceBase {
 
     /**
-    * Responds to entity POST requests and saves the new entity.
+    * Responds to entity POST requests and email by Drupal mail.
     *
     * @param array $data
-    *   Mail field data and webform ID.
+    *   Mail field data.
     *
     * @return \Drupal\rest\ResourceResponse
     *   The HTTP response object.
@@ -34,7 +33,20 @@ class MailSubmitResource extends ResourceBase {
     */
     public function post(array $data)
     {
-        return new Response('{"200": "Form Submitted Gracefully"}', 200);
-        //return new Response('{"500": "Form Submitted Failed"}', 500);
+
+        $params['subject'] = $data['subject'];
+        $params['body'] = $data['body'];
+        $langcode = $data['langcode'];
+        $from = $data['from'];
+        $to = $data['to'];
+
+        // Send email with drupal_mail.
+        $mail =  \Drupal::service('plugin.manager.mail')->mail('contact_us_config', 'contactus', $to, $langcode, $params, $from);
+
+        print_r($mail); die();
+
+        return new Response(json_decode($mail, true), 200);
+        //return new Response('{"400": "Form Submit Failed"}', 400);
+        return new Response('{"200": "Form Submit Ok"}', 200);
     }
 }
