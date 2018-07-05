@@ -1,0 +1,22 @@
+add jamboree desktop block entities:
+  title: 'Create new Jamboree desktop block entities'
+
+administer jamboree desktop block entities:
+  title: 'Administer Jamboree desktop block entities'
+  description: 'Allow to access the administration form to configure Jamboree desktop block entities.'
+  restrict access: true
+
+delete jamboree desktop block entities:
+  title: 'Delete Jamboree desktop block entities'
+
+edit jamboree desktop block entities:
+  title: 'Edit Jamboree desktop block entities'
+
+access jamboree desktop block overview:
+  title: 'Access the Jamboree desktop block overview page'
+
+view published jamboree desktop block entities:
+  title: 'View published Jamboree desktop block entities'
+
+view unpublished jamboree desktop block entities:
+  title: 'View unpublished Jamboree desktop block entities'

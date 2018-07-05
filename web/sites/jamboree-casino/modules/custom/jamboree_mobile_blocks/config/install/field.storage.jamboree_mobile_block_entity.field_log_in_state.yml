@@ -13,13 +13,13 @@ settings:
   allowed_values:
     -
       value: '0'
-      label: Both
+      label: 'Pre Login'
     -
       value: '1'
-      label: Pre-Login
+      label: 'Post Login'
     -
       value: '2'
-      label: Post-Login
+      label: Both
   allowed_values_function: ''
 module: options
 locked: false

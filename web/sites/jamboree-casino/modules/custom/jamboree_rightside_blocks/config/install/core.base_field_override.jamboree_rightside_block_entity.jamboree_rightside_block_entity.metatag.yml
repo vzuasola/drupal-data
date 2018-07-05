@@ -1,0 +1,18 @@
+uuid: ee424898-4f6f-4a6a-90ac-292fb5946655
+langcode: en
+status: true
+dependencies:
+  module:
+    - jamboree_rightside_blocks
+id: jamboree_rightside_block_entity.jamboree_rightside_block_entity.metatag
+field_name: metatag
+entity_type: jamboree_rightside_block_entity
+bundle: jamboree_rightside_block_entity
+label: Metatags
+description: 'The metatags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map
