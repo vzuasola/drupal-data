@@ -1,0 +1,22 @@
+uuid: e19fe776-882b-47af-a5a5-68e24e831114
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.slider_routes
+  module:
+    - text
+id: taxonomy_term.slider_routes.default
+targetEntityType: taxonomy_term
+bundle: slider_routes
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true
