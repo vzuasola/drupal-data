@@ -1,0 +1,9 @@
+webcomposer_audit_export.webcomposer_logs_export:
+  path: 'admin/config/webcomposer/audit/Export'
+  defaults:
+     _form: '\Drupal\webcomposer_audit_export\Form\ExportForm'
+     _title: 'Audit Logs Export'
+  requirements:
+    _permission: 'administer site configuration'
+  options:
+    _admin_route: TRUE
