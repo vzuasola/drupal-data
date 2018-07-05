@@ -74,7 +74,7 @@ class CantLoginConfigForm extends FormBase {
   private function integrationConfig(&$form) {
     $form['cant_login_integration_config'] = [
       '#type' => 'details',
-      '#title' => t("Integration Configuraiton"),
+      '#title' => t("Integration"),
       '#group' => 'my_account_group',
     ];
 
@@ -93,7 +93,7 @@ class CantLoginConfigForm extends FormBase {
   private function tabMenuConfig(&$form) {
     $form['cant_login_tab_menu_config'] = [
       '#type' => 'details',
-      '#title' => t("Tab Menu Configuraiton"),
+      '#title' => t("Tab Menu"),
       '#group' => 'my_account_group',
     ];
 
@@ -186,14 +186,24 @@ class CantLoginConfigForm extends FormBase {
   private function resetPasswordConfig(&$form) {
     $form['cant_login_reset_password_config'] = [
       '#type' => 'details',
-      '#title' => t("Reset Password Configuraiton"),
+      '#title' => t("Reset Password"),
       '#group' => 'my_account_group',
     ];
 
-    $content = $this->get('reset_password_success_message');
-    $form['cant_login_reset_password_config']['reset_password_success_message'] = [
+    $content = $this->get('desktop_reset_password_success_message');
+    $form['cant_login_reset_password_config']['desktop_reset_password_success_message'] = [
       '#type' => 'text_format',
-      '#title' => $this->t('Success Message'),
+      '#title' => $this->t('Desktop - Success Message'),
+      '#default_value' => $content['value'],
+      '#format' => $content['format'],
+      '#required' => TRUE,
+      '#translatable' => TRUE,
+    ];
+
+    $content = $this->get('mobile_reset_password_success_message');
+    $form['cant_login_reset_password_config']['mobile_reset_password_success_message'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('Mobile - Success Message'),
       '#default_value' => $content['value'],
       '#format' => $content['format'],
       '#required' => TRUE,
