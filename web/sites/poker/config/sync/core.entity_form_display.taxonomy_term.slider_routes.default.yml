@@ -1,0 +1,29 @@
+uuid: 7dcf9a4e-cf0d-4a6c-89ec-b6c52156a9a4
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.slider_routes
+id: taxonomy_term.slider_routes.default
+targetEntityType: taxonomy_term
+bundle: slider_routes
+mode: default
+content:
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true
