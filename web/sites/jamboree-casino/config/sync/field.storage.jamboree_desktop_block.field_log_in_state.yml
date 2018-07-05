@@ -1,13 +1,13 @@
-uuid: 7689056f-aeff-47ad-b15d-5bf5db0859bb
+uuid: f9760fd1-7818-40bf-a211-d385d7ae5d98
 langcode: en
 status: true
 dependencies:
   module:
-    - jamboree_mobile_blocks
+    - jamboree_desktop_blocks
     - options
-id: jamboree_mobile_block_entity.field_log_in_state
+id: jamboree_desktop_block.field_log_in_state
 field_name: field_log_in_state
-entity_type: jamboree_mobile_block_entity
+entity_type: jamboree_desktop_block
 type: list_string
 settings:
   allowed_values:
