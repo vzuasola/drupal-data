@@ -5,6 +5,7 @@
  */
 function jamboree_rightside_blocks_uninstall() {
   $keys = [
+    'core.base_field_override.jamboree_rightside_block_entity.jamboree_rightside_block_entity.metatag.yml',
     'core.entity_form_display.jamboree_rightside_block_entity.jamboree_rightside_block_entity.default.yml',
     'core.entity_view_display.jamboree_rightside_block_entity.jamboree_rightside_block_entity.default.yml',
     'field.field.content_block_entity.content_block_entity.field_rightside_content_type.yml',
@@ -23,6 +24,7 @@ function jamboree_rightside_blocks_uninstall() {
     'field.storage.jamboree_rightside_block_entity.field_image_banner_link_target.yml',
     'field.storage.jamboree_rightside_block_entity.field_log_in_state.yml',
     'field.storage.jamboree_rightside_block_entity.field_title.yml',
+    'language.content_settings.jamboree_rightside_block_entity.jamboree_rightside_block_entity.yml',
     'views.view.jamboree_rightside_block.yml',
   ];
 

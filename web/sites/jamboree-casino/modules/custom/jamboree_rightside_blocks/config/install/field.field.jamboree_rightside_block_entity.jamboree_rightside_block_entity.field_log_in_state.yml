@@ -14,7 +14,7 @@ bundle: jamboree_rightside_block_entity
 label: 'Log-in State'
 description: ''
 required: true
-translatable: false
+translatable: true
 default_value:
   -
     value: '0'

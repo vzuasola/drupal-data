@@ -14,7 +14,7 @@ bundle: jamboree_rightside_block_entity
 label: 'Content Type'
 description: ''
 required: true
-translatable: false
+translatable: true
 default_value:
   -
     value: image
