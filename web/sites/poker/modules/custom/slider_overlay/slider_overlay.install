@@ -1,0 +1,30 @@
+<?php
+
+
+/**
+ * Implements hook_uninstall
+ */
+function slider_overlay_uninstall() {
+	$keys = [
+		'core.entity_form_display.paragraph.slider_overlay_cmi.default.yml',
+		'core.entity_form_display.slider_overlay_entity.slider_overlay_entity.default.yml',
+		'core.entity_view_display.paragraph.slider_overlay_cmi.default.yml',
+		'core.entity_view_display.slider_overlay_entity.slider_overlay_entity.default.yml',
+		'field.field.paragraph.slider_overlay_cmi.field_slideroverlay_blurb.yml',
+		'field.field.paragraph.slider_overlay_cmi.field_slideroverlay_cmi_enable.yml',
+		'field.field.paragraph.slider_overlay_cmi.field_slideroverlay_image.yml',
+		'field.field.slider_overlay_entity.slider_overlay_entity.field_slider_overlay_cmi.yml',
+		'field.storage.paragraph.field_slideroverlay_blurb.yml',
+		'field.storage.paragraph.field_slideroverlay_cmi_enable.yml',
+		'field.storage.paragraph.field_slideroverlay_image.yml',
+		'field.storage.slider_overlay_entity.field_slider_overlay_cmi.yml',
+		'language.content_settings.paragraph.slider_overlay_cmi.yml',
+		'language.content_settings.slider_overlay_entity.slider_overlay_entity.yml',
+		'paragraphs.paragraphs_type.slider_overlay_cmi.yml',
+		'views.view.slider_overlay_rest_cmi.yml'
+    ];
+
+    foreach ($keys as $key) {
+      \Drupal::configFactory()->getEditable($key)->delete();
+    }
+}

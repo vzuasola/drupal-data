@@ -6,8 +6,6 @@ dependencies:
     - file
     - image
     - paragraphs
-_core:
-  default_config_hash: o7-XTurUIXKAWlMiUG2n2P8P9Kfiwk6YWF-yNjxdCNM
 id: paragraph.field_slideroverlay_image
 field_name: field_slideroverlay_image
 entity_type: paragraph

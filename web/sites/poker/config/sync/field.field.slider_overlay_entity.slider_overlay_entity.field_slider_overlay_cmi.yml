@@ -1,0 +1,53 @@
+uuid: a4b27f2b-67e7-41ad-9330-6585d905575c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.slider_overlay_entity.field_slider_overlay_cmi
+    - paragraphs.paragraphs_type.slider_overlay_cmi
+  module:
+    - entity_reference_revisions
+    - slider_overlay
+_core:
+  default_config_hash: 1dmdOCXVXlO1ypEcQC8tRGx5Zcd1nO5rQGWY3uQb7_w
+id: slider_overlay_entity.slider_overlay_entity.field_slider_overlay_cmi
+field_name: field_slider_overlay_cmi
+entity_type: slider_overlay_entity
+bundle: slider_overlay_entity
+label: 'Slider Overlay List'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      slider_overlay_cmi: slider_overlay_cmi
+    target_bundles_drag_drop:
+      slider_overlay_cmi:
+        enabled: true
+        weight: -17
+      domain_management_configuration:
+        weight: -16
+        enabled: false
+      floating_banner_item:
+        weight: -15
+        enabled: false
+      right_side_block_content:
+        weight: -14
+        enabled: false
+      social_media:
+        weight: -13
+        enabled: false
+      social_media_cmi:
+        weight: -12
+        enabled: false
+      sponsor_cmi:
+        weight: -11
+        enabled: false
+      sponsorship:
+        weight: -10
+        enabled: false
+field_type: entity_reference_revisions
