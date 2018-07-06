@@ -152,7 +152,6 @@ class ExchangeConfigForm extends ConfigFormBase {
       '#title' => ' Mobile Site Url',
       '#group' => 'advanced',
     ];
-
     $form['exchange_configuration_mobile']['base_url'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Mobile Site Url'),
