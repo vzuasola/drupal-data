@@ -16,7 +16,6 @@ dependencies:
     - image
     - link
     - metatag
-    - options
     - text
     - user
 id: node.basic_page_type_2.default
@@ -27,13 +26,13 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 101
+    weight: 2
     settings: {  }
     third_party_settings: {  }
     region: content
   field_button_link:
-    weight: 102
-    label: above
+    weight: 4
+    label: hidden
     settings:
       trim_length: 80
       url_only: false
@@ -43,16 +42,9 @@ content:
     third_party_settings: {  }
     type: link
     region: content
-  field_button_open_link:
-    weight: 108
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
-    region: content
   field_image:
-    weight: 103
-    label: above
+    weight: 5
+    label: hidden
     settings:
       image_style: ''
       image_link: ''
@@ -60,8 +52,8 @@ content:
     type: image
     region: content
   field_image_link:
-    weight: 104
-    label: above
+    weight: 1
+    label: hidden
     settings:
       trim_length: 80
       url_only: false
@@ -71,31 +63,26 @@ content:
     third_party_settings: {  }
     type: link
     region: content
-  field_images_open_link:
-    weight: 107
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
-    region: content
   field_meta_tag:
-    weight: 105
+    weight: 6
     label: above
     settings: {  }
     third_party_settings: {  }
     type: metatag_empty_formatter
     region: content
   field_summary:
-    weight: 106
-    label: above
+    weight: 0
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   links:
-    weight: 100
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_button_open_link: true
+  field_images_open_link: true
   langcode: true
