@@ -1,0 +1,30 @@
+uuid: 805dea36-641d-4232-974d-17c1614591b7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.webcomposer_slider_v2_entity.field_routes
+    - taxonomy.vocabulary.slider_routes
+  module:
+    - webcomposer_slider_v2
+id: webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_routes
+field_name: field_routes
+entity_type: webcomposer_slider_v2_entity
+bundle: webcomposer_slider_v2_entity
+label: Routes
+description: 'Assign this slider to <a href="[site:url]/admin/structure/taxonomy/manage/slider_routes/overview" target="_blank">specific routes</a>.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      slider_routes: slider_routes
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
