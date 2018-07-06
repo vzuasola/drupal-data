@@ -31,8 +31,7 @@ class MailSubmitResource extends ResourceBase {
     * @throws \Symfony\Component\HttpKernel\Exception\HttpException
     *   Throws HttpException in case of error.
     */
-    public function post(array $data)
-    {
+    public function post(array $data) {
 
         $langcode = $data['langcode'];
         $from = $data['from'];
@@ -42,14 +41,27 @@ class MailSubmitResource extends ResourceBase {
 
         $params['subject'] = $data['subject'];
         $params['body'] = $data['body'];
+        $params['extra'] = $data['extra'];
 
         // Send email with drupal_mail.
         $mail =  \Drupal::service('plugin.manager.mail')->mail($module, $key, $to, $langcode, $params, $from);
 
+        $build = array(
+          '#cache' => array(
+          'max-age' => 0,
+          ),
+        );
+
         if ($mail['result']) {
-          return new Response('{"200": "Mail Submit Success"}', 200);
+            $data = array(
+              'success' => $this->t('Mail Submit Success.'),
+            );
+          return (new ResourceResponse($data))->addCacheableDependency($build);
         }
 
-        return new Response('{"400": "Mail Submit Fail"}', 400);
+        $data = array(
+          'error' => $this->t('Mail Submit Fail.'),
+        );
+        return (new ResourceResponse($data, 404))->addCacheableDependency($build);
     }
 }
