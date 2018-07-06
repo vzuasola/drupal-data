@@ -4,8 +4,6 @@ status: true
 dependencies:
   module:
     - paragraphs
-_core:
-  default_config_hash: _Rn2tlumcwOkFaPJjk3pUd4duj8GgWAy6UHnvxPO2xE
 id: paragraph.field_slideroverlay_cmi_enable
 field_name: field_slideroverlay_cmi_enable
 entity_type: paragraph
