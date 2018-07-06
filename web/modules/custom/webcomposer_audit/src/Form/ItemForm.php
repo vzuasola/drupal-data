@@ -289,6 +289,10 @@ class ItemForm extends FormBase {
     foreach ($entity as $key => $value) {
       if ($value instanceof TypedDataInterface) {
         $map[$value->getName()] = $value->getString();
+
+        if (is_array($value->getValue())) {
+          $map[$value->getName()] = $value->getValue()['value'];
+        }
       } elseif ($value instanceof EntityInterface) {
         $map[$key] = $this->getLineChangesFromEntity($value->toArray());
       } else {
