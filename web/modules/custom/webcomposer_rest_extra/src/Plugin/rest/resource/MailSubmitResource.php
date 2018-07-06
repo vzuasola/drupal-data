@@ -10,10 +10,10 @@ use Symfony\Component\HttpFoundation\Response;
  *
  * @RestResource(
  *   id = "mail_rest_submit",
- *   label = @Translation("Mail Submit"),
+ *   label = @Translation("Mail Submission"),
  *   uri_paths = {
- *     "canonical" = "/mail_rest/submit",
- *     "https://www.drupal.org/link-relations/create" = "/mail_rest/submit"
+ *     "canonical" = "/email/submission",
+ *     "https://www.drupal.org/link-relations/create" = "/email/submission"
  *   }
  * )
  */
