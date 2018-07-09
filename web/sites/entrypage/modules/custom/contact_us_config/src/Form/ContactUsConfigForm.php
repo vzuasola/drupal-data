@@ -88,7 +88,7 @@ class ContactUsConfigForm extends FormBase {
     $form['success']['success_title'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Title'),
-      '#description' => $this->t('Adds page title to the contact us message.'),
+      '#description' => $this->t('Adds page title to the contact us success message.'),
       '#default_value' => $this->get('success_title'),
       '#required' => TRUE,
       '#translatable' => TRUE,
@@ -114,8 +114,17 @@ class ContactUsConfigForm extends FormBase {
 
     $form['settings'] = [
       '#type' => 'details',
-      '#title' => t('Submit Settings'),
+      '#title' => t('Contact Us Form Settings'),
       '#group' => 'advanced',
+    ];
+
+    $form['settings']['form_title'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Title'),
+      '#description' => $this->t('Adds page title to the contact us form.'),
+      '#default_value' => $this->get('form_title'),
+      '#required' => TRUE,
+      '#translatable' => TRUE,
     ];
 
     $form['settings']['email_template'] = [
