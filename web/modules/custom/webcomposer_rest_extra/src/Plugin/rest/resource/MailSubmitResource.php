@@ -46,22 +46,22 @@ class MailSubmitResource extends ResourceBase {
         // Send email with drupal_mail.
         $mail =  \Drupal::service('plugin.manager.mail')->mail($module, $key, $to, $langcode, $params, $from);
 
-        $build = array(
-          '#cache' => array(
+        $build = [
+          '#cache' => [
           'max-age' => 0,
-          ),
-        );
+          ],
+        ];
 
         if ($mail['result']) {
-            $data = array(
+            $data = [
               'success' => $this->t('Mail Submit Success.'),
-            );
-          return (new ResourceResponse($data))->addCacheableDependency($build);
+            ];
+            return (new ResourceResponse($data))->addCacheableDependency($build);
         }
 
-        $data = array(
+        $data = [
           'error' => $this->t('Mail Submit Fail.'),
-        );
+        ];
         return (new ResourceResponse($data, 404))->addCacheableDependency($build);
     }
 }

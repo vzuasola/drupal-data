@@ -16,7 +16,7 @@ function contact_us_config_mail($key, &$message, $params) {
         case 'contact_us':
             $email_template = \Drupal::config('contact_us_config.contact_us_configuration')->get('email_template');
             $message['subject'] = html::escape($params['subject']);
-            $body = str_replace(array(
+            $body = str_replace([
                         '[-firstname-]',
                         '[-lastname-]',
                         '[-username-]',
@@ -27,7 +27,7 @@ function contact_us_config_mail($key, &$message, $params) {
                         '[-date-]',
                         '[-ip-]',
                         '[-language-]'
-                    ),array(
+                    ],[
                         html::escape($params['firstname']),
                         html::escape($params['lastname']),
                         html::escape($params['username']),
@@ -38,7 +38,7 @@ function contact_us_config_mail($key, &$message, $params) {
                         format_date($params['date'], 'long'),
                         $params['ip'],
                         $message['langcode'],
-                    ), $email_template);
+                    ], $email_template);
 
               $message['body'][] = $body;
         break;
