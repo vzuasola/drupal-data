@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.games.body
+    - field.field.node.games.field_disable_in_tablet
     - field.field.node.games.field_end_date
     - field.field.node.games.field_game_image
     - field.field.node.games.field_game_image_large
@@ -13,9 +14,11 @@ dependencies:
     - field.field.node.games.field_image_size
     - field.field.node.games.field_maintenance_blurb
     - field.field.node.games.field_playing_type
+    - field.field.node.games.field_preview_display_only
     - field.field.node.games.field_ribbon_configuration
     - field.field.node.games.field_show_game_info_toggle
     - field.field.node.games.field_start_date
+    - field.field.node.games.field_status
     - image.style.thumbnail
     - node.type.games
   module:
@@ -75,7 +78,7 @@ third_party_settings:
         - field_game_provider
         - field_playing_type
       parent_name: ''
-      weight: 10
+      weight: 9
       format_type: tab
       format_settings:
         id: ''
@@ -90,7 +93,7 @@ third_party_settings:
         - field_start_date
         - field_end_date
       parent_name: ''
-      weight: 12
+      weight: 11
       format_type: tab
       format_settings:
         id: ''
@@ -99,11 +102,32 @@ third_party_settings:
         description: ''
         required_fields: true
       label: 'Game Room Maintenance/Coming Soon'
+    group_additional_statuses:
+      children:
+        - field_status
+        - field_disable_in_tablet
+        - field_preview_display_only
+      parent_name: ''
+      weight: 13
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Additional Statuses'
 id: node.games.default
 targetEntityType: node
 bundle: games
 mode: default
 content:
+  field_disable_in_tablet:
+    type: boolean_checkbox
+    weight: 1
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
   field_end_date:
     weight: 19
     settings: {  }
@@ -223,8 +247,15 @@ content:
           bundle: games
     type: options_select
     region: content
+  field_preview_display_only:
+    type: boolean_checkbox
+    weight: 2
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
   field_ribbon_configuration:
-    weight: 13
+    weight: 12
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -242,6 +273,12 @@ content:
     third_party_settings: {  }
     type: datetime_default
     region: content
+  field_status:
+    type: options_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   langcode:
     type: language_select
     weight: 1
@@ -251,7 +288,7 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 8
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -282,13 +319,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 11
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp_no_default
-    weight: 9
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }

@@ -1,0 +1,25 @@
+uuid: 7bc502ea-c65c-4a49-ac5a-739be0f7b673
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_disable_in_tablet
+    - node.type.games
+_core:
+  default_config_hash: 62g6gmseOceC_idt9j5kJEVfHdZeZXzsXpo4grL8wZc
+id: node.games.field_disable_in_tablet
+field_name: field_disable_in_tablet
+entity_type: node
+bundle: games
+label: 'Disable in Tablet'
+description: 'Check if the Game Tile is only available in Desktop.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

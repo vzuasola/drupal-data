@@ -44,3 +44,16 @@ function webcomposer_slider_v2_uninstall() {
     \Drupal::configFactory()->getEditable($key)->delete();
   }
 }
+
+
+/**
+ * Implements hook_update_N
+ *
+ * Changes:
+ * - Added Enable Preview field
+ * - Added Tablet View field
+ * - Added Display Status field
+ */
+function webcomposer_slider_v2_update_8001() {
+   \Drupal::service('config.installer')->installDefaultConfig('module', 'webcomposer_slider_v2');
+}
