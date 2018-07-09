@@ -5,6 +5,8 @@ use Drupal\rest\Plugin\ResourceBase;
 use Drupal\rest\ResourceResponse;
 use Drupal\rest\ModifiedResourceResponse;
 use Symfony\Component\HttpFoundation\Response;
+use Drupal\Component\Utility\Html;
+
 /**
  * Creates a resource for submitting a email.
  *
@@ -34,14 +36,12 @@ class MailSubmitResource extends ResourceBase {
     public function post(array $data) {
 
         $langcode = $data['langcode'];
-        $from = $data['from'];
-        $to = $data['to'];
+        $from = filter_var(Html::escape($data['from']), FILTER_SANITIZE_EMAIL);
+        $to = filter_var(Html::escape($data['to']), FILTER_SANITIZE_EMAIL);
         $module = $data['module'];
         $key = $data['key'];
 
-        $params['subject'] = $data['subject'];
-        $params['body'] = $data['body'];
-        $params['extra'] = $data['extra'];
+        $params = $data['params'];
 
         // Send email with drupal_mail.
         $mail =  \Drupal::service('plugin.manager.mail')->mail($module, $key, $to, $langcode, $params, $from);
