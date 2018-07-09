@@ -48,6 +48,7 @@ module:
   paragraphs: 0
   paragraphs_type_permissions: 0
   path: 0
+  poker_config: 0
   quickedit: 0
   rdf: 0
   rest: 0
