@@ -85,8 +85,7 @@ trait FilterHtmlTrait {
   /**
    *
    */
-  private function doParseImage($uri, $base_path, $src)
-  {
+  private function doParseImage($uri, $base_path, $src) {
     $path = ltrim($src, '/');
     $uri = "[uri:($path)]";
 
