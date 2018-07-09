@@ -1,0 +1,21 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for Poker Config module.
+ *
+ * @DCG
+ * This file is no longer required in Drupal 8.
+ * @see https://www.drupal.org/node/2217931
+ */
+
+function poker_config_form_alter(&$form, $form_state, $form_id) {
+    // disable ability to delete home route for slider
+    if ($form_id === 'taxonomy_term_slider_routes_form') {
+        $entity = $form_state->getFormObject()->getEntity();
+        $name = $entity->get('name')->getString();
+        if ($name === 'home') {
+            $form['actions']['delete']['#access'] = FALSE;
+        }
+    }
+}
