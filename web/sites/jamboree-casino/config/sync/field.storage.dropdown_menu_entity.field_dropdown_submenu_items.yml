@@ -6,6 +6,8 @@ dependencies:
     - entity_reference_revisions
     - jamboree_dropdown_menu
     - paragraphs
+_core:
+  default_config_hash: 3AmTPFsijCScQcpVyQCH4-VUgi1rWMNZHDohvNbaD1Y
 id: dropdown_menu_entity.field_dropdown_submenu_items
 field_name: field_dropdown_submenu_items
 entity_type: dropdown_menu_entity

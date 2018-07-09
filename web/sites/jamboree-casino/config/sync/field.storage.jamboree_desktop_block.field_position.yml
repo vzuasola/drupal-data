@@ -1,0 +1,27 @@
+uuid: 91bcf6ab-89dd-4e51-b3c7-055ae86b5019
+langcode: en
+status: true
+dependencies:
+  module:
+    - jamboree_desktop_blocks
+    - options
+id: jamboree_desktop_block.field_position
+field_name: field_position
+entity_type: jamboree_desktop_block
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: left
+      label: Left
+    -
+      value: right
+      label: Right
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

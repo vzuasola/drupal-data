@@ -1,0 +1,21 @@
+uuid: d1496e01-abed-419c-852d-8aa539efcfe8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.jamboree_desktop_block.field_image_banner_link_target
+  module:
+    - jamboree_desktop_blocks
+    - options
+id: jamboree_desktop_block.jamboree_desktop_block.field_image_banner_link_target
+field_name: field_image_banner_link_target
+entity_type: jamboree_desktop_block
+bundle: jamboree_desktop_block
+label: 'Image Banner Link Target'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,5 @@
+name: Jamboree Desktop Blocks
+type: module
+description: Jamboree Desktop Blocks
+core: 8.x
+package: Jamboree

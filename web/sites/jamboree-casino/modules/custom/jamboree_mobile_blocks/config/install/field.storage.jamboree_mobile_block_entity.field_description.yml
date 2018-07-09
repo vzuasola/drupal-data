@@ -1,0 +1,19 @@
+uuid: 29ab5e8f-b87d-4009-90b0-825cadb8b363
+langcode: en
+status: true
+dependencies:
+  module:
+    - jamboree_mobile_blocks
+    - text
+id: jamboree_mobile_block_entity.field_description
+field_name: field_description
+entity_type: jamboree_mobile_block_entity
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
