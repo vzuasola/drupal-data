@@ -1,0 +1,29 @@
+uuid: 5048842d-f572-422e-9f6e-38c6fc0d6e64
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_arcade_category
+    - node.type.arcade_game
+    - taxonomy.vocabulary.arcade_game_category
+id: node.arcade_game.field_arcade_category
+field_name: field_arcade_category
+entity_type: node
+bundle: arcade_game
+label: Category
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      arcade_game_category: arcade_game_category
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

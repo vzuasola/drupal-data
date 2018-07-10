@@ -1,0 +1,20 @@
+uuid: ad59d360-3b22-4f17-a779-b9ea4648b6fd
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_arcade_category
+field_name: field_arcade_category
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

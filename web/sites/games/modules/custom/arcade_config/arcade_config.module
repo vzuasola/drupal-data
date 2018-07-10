@@ -1,0 +1,33 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for Arcade Config module.
+ *
+ * @DCG
+ * This file is no longer required in Drupal 8.
+ * @see https://www.drupal.org/node/2217931
+ */
+
+use Drupal\Core\Url;
+
+/**
+ * Implements hook_toolbar().
+ */
+function arcade_config_toolbar() {
+  $items['arcade'] = [
+    '#type' => 'toolbar_item',
+    'tab' => [
+      '#type' => 'link',
+      '#title' => t('Arcade Settings'),
+      '#url' => Url::fromRoute('arcade_config.admin_settings'),
+      '#attributes' => [
+        'title' => t('Arcade Settings'),
+        'class' => ['toolbar-icon', 'toolbar-icon-devel'],
+      ],
+    ],
+    '#weight' => 900,
+  ];
+
+  return $items;
+}

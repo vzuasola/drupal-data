@@ -1,0 +1,21 @@
+uuid: 78b8b6dc-3e1b-4f4e-8585-3835012ec71e
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.field_arcade_cat_alias
+field_name: field_arcade_cat_alias
+entity_type: taxonomy_term
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

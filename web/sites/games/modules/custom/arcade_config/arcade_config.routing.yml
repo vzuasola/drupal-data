@@ -1,0 +1,7 @@
+arcade_config.admin_settings:
+  path: 'admin/arcade'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Arcade Configuration'
+  requirements:
+    _permission: 'administer site configuration'
