@@ -1,0 +1,5 @@
+webcomposer_audit_export.webcomposer_logs_export:
+  title: 'Audit Logs Export'
+  parent: webcomposer_audit.admin_list
+  description: 'Export audit logs here'
+  route_name: webcomposer_audit_export.webcomposer_logs_export

@@ -1,0 +1,22 @@
+# Jamboree desktop block routing definition
+jamboree_desktop_block.settings_tab:
+  route_name: jamboree_desktop_block.settings
+  title: 'Settings'
+  base_route: jamboree_desktop_block.settings
+
+entity.jamboree_desktop_block.canonical:
+  route_name: entity.jamboree_desktop_block.canonical
+  base_route: entity.jamboree_desktop_block.canonical
+  title: 'View'
+
+entity.jamboree_desktop_block.edit_form:
+  route_name: entity.jamboree_desktop_block.edit_form
+  base_route: entity.jamboree_desktop_block.canonical
+  title: 'Edit'
+
+entity.jamboree_desktop_block.delete_form:
+  route_name:  entity.jamboree_desktop_block.delete_form
+  base_route:  entity.jamboree_desktop_block.canonical
+  title: Delete
+  weight: 10
+

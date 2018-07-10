@@ -4,6 +4,8 @@ status: true
 dependencies:
   module:
     - jamboree_dropdown_menu
+_core:
+  default_config_hash: 9lmXxjR13_bc6NbTDq4LCoa5YlFb4U-ldXdSwebA-YE
 id: dropdown_menu_entity.field_dropdown_menu_link_title
 field_name: field_dropdown_menu_link_title
 entity_type: dropdown_menu_entity

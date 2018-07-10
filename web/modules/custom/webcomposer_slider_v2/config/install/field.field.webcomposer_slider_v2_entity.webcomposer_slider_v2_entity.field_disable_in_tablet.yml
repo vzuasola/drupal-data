@@ -1,0 +1,24 @@
+uuid: d91c1a92-e925-4b26-94c1-db94512ee132
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.webcomposer_slider_v2_entity.field_disable_in_tablet
+  module:
+    - webcomposer_slider_v2
+id: webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_disable_in_tablet
+field_name: field_disable_in_tablet
+entity_type: webcomposer_slider_v2_entity
+bundle: webcomposer_slider_v2_entity
+label: 'Disable in Tablet'
+description: 'Check if the slider entry is only available in Desktop.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

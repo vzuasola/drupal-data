@@ -1,0 +1,18 @@
+uuid: dd241dfb-99e9-438b-bfb8-06abf15fefbe
+langcode: en
+status: true
+dependencies:
+  module:
+    - jamboree_desktop_blocks
+id: jamboree_desktop_block.field_add_background
+field_name: field_add_background
+entity_type: jamboree_desktop_block
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

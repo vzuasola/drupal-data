@@ -1,0 +1,18 @@
+uuid: dfb14b66-7689-46ec-b72e-e91ad984a4f3
+langcode: en
+status: true
+dependencies:
+  module:
+    - jamboree_mobile_blocks
+id: jamboree_mobile_block_entity.jamboree_mobile_block_entity.metatag
+field_name: metatag
+entity_type: jamboree_mobile_block_entity
+bundle: jamboree_mobile_block_entity
+label: Metatags
+description: 'The metatags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

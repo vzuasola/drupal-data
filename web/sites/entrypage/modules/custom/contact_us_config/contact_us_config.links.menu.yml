@@ -1,0 +1,5 @@
+contact_us_config.list:
+  title: 'Contact Us Configuration'
+  description: 'Provides a form for defining custom sample configuration'
+  parent: system.admin_config
+  route_name: contact_us_config.admin_settings

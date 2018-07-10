@@ -1,0 +1,18 @@
+jamboree_desktop_blocks.list:
+  title: 'Jamboree Desktop Block Configuration'
+  description: 'List jamboree desktop blocks entities'
+  parent: system.admin_config
+  route_name: jamboree_desktop_blocks.admin_settings
+
+# Jamboree desktop block menu items definition
+entity.jamboree_desktop_block.collection:
+  title: 'Jamboree desktop block entity list'
+  route_name: entity.jamboree_desktop_block.collection
+  description: 'List Jamboree desktop block entities'
+  parent: jamboree_desktop_blocks.list
+
+jamboree_desktop_block.admin.structure.settings:
+  title: Jamboree desktop block entity settings
+  description: 'Configure Jamboree desktop block entities'
+  route_name: jamboree_desktop_block.settings
+  parent: jamboree_desktop_blocks.list
