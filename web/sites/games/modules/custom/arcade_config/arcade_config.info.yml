@@ -1,0 +1,5 @@
+name: Arcade Config
+type: module
+description: Custom configurations for Arcade.
+package: Custom
+core: 8.x

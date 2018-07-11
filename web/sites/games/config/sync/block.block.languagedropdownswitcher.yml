@@ -10,7 +10,7 @@ dependencies:
 id: languagedropdownswitcher
 theme: seven
 region: content
-weight: -1
+weight: -5
 provider: null
 plugin: 'language_dropdown_block:language_interface'
 settings:
@@ -45,6 +45,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: "/admin/config/promotions\r\n/admin/config/promotions-for-products\r\n/admin/config/webcomposer/domains/*\r\n/admin/config/webcomposer/product-kebab-tabs\r\n/admin/content/game/sorting\r\n/admin/structure/webcomposer_slider_entity\r\n/admin/structure/taxonomy/manage/ribbon_labels/overview\r\n/admin/structure/webcomposer_slider_v2_entity\r\n/admin/structure/games_showcase_entity"
+    pages: "/admin/config/promotions\r\n/admin/config/promotions-for-products\r\n/admin/config/webcomposer/domains/*\r\n/admin/config/webcomposer/product-kebab-tabs\r\n/admin/content/game/sorting\r\n/admin/structure/webcomposer_slider_entity\r\n/admin/structure/taxonomy/manage/ribbon_labels/overview\r\n/admin/structure/webcomposer_slider_v2_entity\r\n/admin/structure/games_showcase_entity\r\n/admin/content/arcade/game_list_sort"
     negate: false
     context_mapping: {  }

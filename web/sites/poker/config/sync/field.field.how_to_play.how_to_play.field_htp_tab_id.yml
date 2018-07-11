@@ -1,0 +1,21 @@
+uuid: c380b172-342c-4dbd-b930-6867c9cdd7c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.how_to_play.field_htp_tab_id
+  module:
+    - custom_inner_pages
+    - options
+id: how_to_play.how_to_play.field_htp_tab_id
+field_name: field_htp_tab_id
+entity_type: how_to_play
+bundle: how_to_play
+label: 'Main Tab'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

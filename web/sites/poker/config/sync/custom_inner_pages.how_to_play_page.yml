@@ -1,0 +1,28 @@
+first_tab_title: 'Game Client Navigation'
+first_tab_id: game_client
+how_to_play: 'http://poker.drupal.local/sites/poker/files/htp-faqs-active.png'
+first_tab_icon:
+  - '1'
+first_tab_icon_hover:
+  - '2'
+first_tab_content:
+  value: "<p><span class=\"text-red\"><strong>Game Client Navigation</strong></span></p>\r\n\r\n<p>Maecenas in pharetra leo. Morbi hendrerit quam ac pellentesque aliquam. Nullam ex nisl, pharetra vitae cursus id, sodales quis arcu. Maecenas ligula lectus, fringilla ac pharetra nec, eleifend in mauris. Fusce tincidunt at nisl sed luctus. Phasellus neque ligula, faucibus at velit at, tristique convallis neque. Donec hendrerit at justo vel tristique. Nunc at dui diam. Vivamus ac lacus sit amet felis porta pulvinar eget sit amet turpis. Suspendisse vel neque neque.</p>\r\n"
+  format: basic_html
+second_tab_title: 'Poker University'
+second_tab_id: poker_university
+second_tab_icon:
+  - '3'
+second_tab_icon_hover:
+  - '4'
+second_tab_content:
+  value: "<p><span class=\"text-red\"><strong>Poker University</strong></span></p>\r\n\r\n<p>Quisque dictum facilisis mauris, sit amet blandit purus tempor a. Integer tortor ante, vehicula sed condimentum id, facilisis et orci. Praesent et lorem a tellus fringilla pretium. Sed fringilla, eros vel ornare lacinia, nisi justo blandit erat, at accumsan libero dui sed justo. Sed rhoncus euismod risus sit amet sagittis. In hac habitasse platea dictumst.</p>\r\n"
+  format: basic_html
+third_tab_title: FAQs
+third_tab_id: faqs
+third_tab_icon:
+  - '5'
+third_tab_icon_hover:
+  - '6'
+third_tab_content:
+  value: "<p><span class=\"text-red\"><strong>FAQs</strong></span></p>\r\n\r\n<p>In et nibh sed lorem vulputate maximus quis sit amet massa. Nullam ultricies orci convallis nibh fermentum, a mattis lorem posuere. Fusce condimentum magna quis viverra auctor. Vivamus lobortis, mauris non auctor iaculis, libero orci sodales nibh, ac porttitor risus felis nec neque. Ut laoreet justo quis ligula lobortis euismod. Curabitur vitae sollicitudin dui. Nullam ut lacinia dui, in elementum lorem. Vestibulum turpis mi, luctus vel tellus eget, pretium bibendum libero. Fusce aliquet porttitor lectus et malesuada.</p>\r\n"
+  format: basic_html

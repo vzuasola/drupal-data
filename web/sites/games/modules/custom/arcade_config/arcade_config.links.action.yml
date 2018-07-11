@@ -1,0 +1,10 @@
+arcade_config.add_form:
+  route_name: 'node.add'
+  title: 'Add Game'
+  route_parameters:
+      node_type: 'arcade_game'
+  options:
+      query:
+          destination: '/admin/content/arcade/game_list_sort'
+  appears_on:
+      - view.arcade_game_listing.page_1

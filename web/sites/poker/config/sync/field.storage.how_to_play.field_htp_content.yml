@@ -1,0 +1,19 @@
+uuid: a0fd751b-9511-4143-8dd8-7da1320dea81
+langcode: en
+status: true
+dependencies:
+  module:
+    - custom_inner_pages
+    - text
+id: how_to_play.field_htp_content
+field_name: field_htp_content
+entity_type: how_to_play
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

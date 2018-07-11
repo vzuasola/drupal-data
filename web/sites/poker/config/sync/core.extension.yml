@@ -20,6 +20,7 @@ module:
   content_translation: 0
   contextual: 0
   ctools: 0
+  custom_inner_pages: 0
   datetime: 0
   devel: 0
   draggableviews: 0
