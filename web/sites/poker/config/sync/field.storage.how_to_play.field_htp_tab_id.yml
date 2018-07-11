@@ -1,0 +1,30 @@
+uuid: cff17060-2860-4d64-95f1-1f24dc02515d
+langcode: en
+status: true
+dependencies:
+  module:
+    - custom_inner_pages
+    - options
+id: how_to_play.field_htp_tab_id
+field_name: field_htp_tab_id
+entity_type: how_to_play
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: game_client
+      label: 'Game Client Navigation'
+    -
+      value: poker_university
+      label: 'Poker University'
+    -
+      value: faqs
+      label: FAQs
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

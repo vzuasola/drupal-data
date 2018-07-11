@@ -1,0 +1,21 @@
+uuid: 4d1e9ccc-2727-4ff6-ac41-ad6c3ca272d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_log_in_state
+    - paragraphs.paragraphs_type.slider_overlay_cmi
+  module:
+    - options
+id: paragraph.slider_overlay_cmi.field_log_in_state
+field_name: field_log_in_state
+entity_type: paragraph
+bundle: slider_overlay_cmi
+label: 'Log-in State'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

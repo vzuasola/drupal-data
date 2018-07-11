@@ -26,4 +26,13 @@ content:
     weight: 100
     region: content
 hidden:
+  field_arc_game_code: true
+  field_arc_game_provider: true
+  field_arc_game_ribbon: true
+  field_arc_game_thumbnail_image: true
+  field_arc_game_title: true
+  field_arc_meta_tags: true
+  field_game_thumbnail_image_h: true
+  field_game_thumbnail_image_v: true
+  field_game_thumbnail_size: true
   langcode: true

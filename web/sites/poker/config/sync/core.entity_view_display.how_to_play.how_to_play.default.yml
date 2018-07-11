@@ -1,0 +1,43 @@
+uuid: 94e81651-83de-42f7-9d10-0dee423f3e5c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.how_to_play.how_to_play.field_htp_content
+    - field.field.how_to_play.how_to_play.field_htp_secondary_title
+    - field.field.how_to_play.how_to_play.field_htp_tab_id
+  module:
+    - custom_inner_pages
+    - options
+    - text
+id: how_to_play.how_to_play.default
+targetEntityType: how_to_play
+bundle: how_to_play
+mode: default
+content:
+  field_htp_content:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_htp_secondary_title:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_htp_tab_id:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+hidden:
+  langcode: true
+  name: true
+  user_id: true

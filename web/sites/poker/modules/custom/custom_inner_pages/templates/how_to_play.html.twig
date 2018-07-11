@@ -1,0 +1,22 @@
+{#
+/**
+ * @file how_to_play.html.twig
+ * Default theme implementation to present How to play data.
+ *
+ * This template is used when viewing How to play pages.
+ *
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_how_to_play()
+ *
+ * @ingroup themeable
+ */
+#}
+<div{{ attributes.addClass('how_to_play') }}>
+  {% if content %}
+    {{- content -}}
+  {% endif %}
+</div>

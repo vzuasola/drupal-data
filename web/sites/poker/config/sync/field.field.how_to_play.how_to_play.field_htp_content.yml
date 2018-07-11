@@ -1,0 +1,21 @@
+uuid: 2b5b09c9-ec39-46ba-bbfc-170980019770
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.how_to_play.field_htp_content
+  module:
+    - custom_inner_pages
+    - text
+id: how_to_play.how_to_play.field_htp_content
+field_name: field_htp_content
+entity_type: how_to_play
+bundle: how_to_play
+label: Content
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

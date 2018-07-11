@@ -5,41 +5,126 @@ dependencies:
   config:
     - field.field.paragraph.slider_overlay_cmi.field_link
     - field.field.paragraph.slider_overlay_cmi.field_link_target
+    - field.field.paragraph.slider_overlay_cmi.field_log_in_state
+    - field.field.paragraph.slider_overlay_cmi.field_post_link
+    - field.field.paragraph.slider_overlay_cmi.field_post_link_target
+    - field.field.paragraph.slider_overlay_cmi.field_post_overlay_blurb
+    - field.field.paragraph.slider_overlay_cmi.field_post_overlay_image
     - field.field.paragraph.slider_overlay_cmi.field_slideroverlay_blurb
     - field.field.paragraph.slider_overlay_cmi.field_slideroverlay_cmi_enable
     - field.field.paragraph.slider_overlay_cmi.field_slideroverlay_image
     - image.style.thumbnail
     - paragraphs.paragraphs_type.slider_overlay_cmi
   module:
+    - conditional_fields
+    - field_group
     - image
     - link
     - text
+third_party_settings:
+  field_group:
+    group_pre_login:
+      children:
+        - field_slideroverlay_image
+        - field_slideroverlay_blurb
+        - field_link
+        - field_link_target
+      parent_name: ''
+      weight: 3
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: false
+      label: 'Pre Login'
+    group_post_login:
+      children:
+        - field_post_overlay_image
+        - field_post_overlay_blurb
+        - field_post_link
+        - field_post_link_target
+      parent_name: ''
+      weight: 20
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: false
+      label: 'Post Login'
+_core:
+  default_config_hash: KCmK2xL231Qjp4Wtol_cqNWyNQnVEk9zz4E_9GbwpiI
 id: paragraph.slider_overlay_cmi.default
 targetEntityType: paragraph
 bundle: slider_overlay_cmi
 mode: default
 content:
   field_link:
-    weight: 11
+    third_party_settings:
+      conditional_fields: {  }
+    weight: 4
     settings:
       placeholder_url: ''
       placeholder_title: ''
-    third_party_settings: {  }
     type: link_default
     region: content
   field_link_target:
-    weight: 12
+    third_party_settings:
+      conditional_fields: {  }
+    weight: 5
     settings: {  }
-    third_party_settings: {  }
     type: options_select
     region: content
-  field_slideroverlay_blurb:
-    weight: 2
+  field_log_in_state:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_post_link:
+    weight: 7
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings:
+      conditional_fields: {  }
+    type: link_default
+    region: content
+  field_post_link_target:
+    weight: 8
+    settings: {  }
+    third_party_settings:
+      conditional_fields: {  }
+    type: options_select
+    region: content
+  field_post_overlay_blurb:
+    weight: 6
     settings:
       rows: 9
       summary_rows: 3
       placeholder: ''
-    third_party_settings: {  }
+    third_party_settings:
+      conditional_fields: {  }
+    type: text_textarea_with_summary
+    region: content
+  field_post_overlay_image:
+    weight: 5
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings:
+      conditional_fields: {  }
+    type: image_image
+    region: content
+  field_slideroverlay_blurb:
+    weight: 3
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings:
+      conditional_fields: {  }
     type: text_textarea_with_summary
     region: content
   field_slideroverlay_cmi_enable:
@@ -50,15 +135,16 @@ content:
     type: boolean_checkbox
     region: content
   field_slideroverlay_image:
-    weight: 1
+    weight: 2
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
-    third_party_settings: {  }
+    third_party_settings:
+      conditional_fields: {  }
     type: image_image
     region: content
   translation:
-    weight: 10
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
