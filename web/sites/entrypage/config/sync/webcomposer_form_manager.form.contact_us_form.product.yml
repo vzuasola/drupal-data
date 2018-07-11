@@ -1,0 +1,57 @@
+field_settings:
+  label: 'Product:'
+  placeholder: '- Select -'
+  choices: "Sports|Sports\r\nCasino|Casino\r\nLiveDealer|Live Dealer\r\nPoker|Poker\r\nGames|Games\r\nKeno|Keno\r\nVirtuals|Virtuals"
+field_validations:
+  required:
+    enable: 1
+    error_message: 'Field should be required'
+  alpha:
+    enable: 0
+    error_message: 'Field should be Alphabet characters only'
+    parameters:
+      spaces: 1
+  alphanumeric:
+    enable: 0
+    error_message: 'Field should be alphanumeric'
+    parameters:
+      spaces: 1
+  alpha_multi:
+    enable: 0
+    error_message: 'Value is not a valid multilingual character'
+    parameters:
+      space: 1
+      numeric: 1
+      allow: 0
+      disallow: 0
+      special: ''
+  numeric:
+    enable: 0
+    error_message: 'Field should be numeric'
+  no_symbols:
+    enable: 0
+    error_message: 'Field contains invalid special characters'
+  numeric_symbols:
+    enable: 0
+    error_message: 'Field contains invalid special characters'
+  email:
+    enable: 0
+    error_message: 'Field does not contain a valid email address'
+  min_length:
+    enable: 0
+    error_message: 'Minimum requirement not met'
+    parameters:
+      length: '2'
+  max_length:
+    enable: 0
+    error_message: 'Maximum requirement not met'
+    parameters:
+      length: '10'
+  regex:
+    enable: 0
+    error_message: 'This field only accepts specific characters.'
+    parameters:
+      regex_value: ''
+  valid_date:
+    enable: 0
+    error_message: 'Date is invalid'
