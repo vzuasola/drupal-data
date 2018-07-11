@@ -1,0 +1,5 @@
+name: 'Poker Grid Menu'
+type: module
+description: 'Manage Poker Grid Menu Items'
+core: 8.x
+package: 'Custom'
