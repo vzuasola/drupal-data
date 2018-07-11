@@ -1,0 +1,39 @@
+uuid: 0ba098c9-d3a2-4539-a4f9-c05b8c6e8699
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.grid_menu_entity.grid_menu_entity.field_body
+  module:
+    - poker_grid_menu
+    - text
+    - user
+id: grid_menu_entity.grid_menu_entity.default
+targetEntityType: grid_menu_entity
+bundle: grid_menu_entity
+mode: default
+content:
+  field_body:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  name:
+    label: above
+    type: string
+    weight: -4
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  user_id:
+    label: hidden
+    type: author
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

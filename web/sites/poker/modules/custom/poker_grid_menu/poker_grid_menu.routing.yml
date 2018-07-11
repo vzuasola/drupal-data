@@ -1,0 +1,7 @@
+poker_grid_menu.admin_settings:
+  path: 'admin/config/poker_grid_menu'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Poker Grid Menu'
+  requirements:
+    _permission: 'administer site configuration'
