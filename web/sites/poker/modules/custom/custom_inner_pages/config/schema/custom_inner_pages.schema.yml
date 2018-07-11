@@ -1,0 +1,11 @@
+custom_inner_pages.how_to_play_page:
+  type: config_object
+  label: 'How to Play Configuration'
+  mapping:
+    first_tab_title:
+      type: label
+      label: 'First Tab Title'
+    first_tab_content:
+      type: text_format
+      label: 'Content'
+      translatable: true

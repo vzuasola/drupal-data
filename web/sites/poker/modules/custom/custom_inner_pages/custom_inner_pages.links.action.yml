@@ -1,0 +1,5 @@
+entity.how_to_play.add_form:
+  route_name: entity.how_to_play.add_form
+  title: 'Add How to play'
+  appears_on:
+    - entity.how_to_play.collection
