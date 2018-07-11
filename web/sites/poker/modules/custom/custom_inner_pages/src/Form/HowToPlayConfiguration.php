@@ -75,7 +75,7 @@ class HowToPlayConfiguration extends ConfigFormBase {
           $key == 'second_tab_icon' ||
           $key == 'second_tab_icon_hover' ||
           $key == 'third_tab_icon' ||
-          $key == 'third_tab_icon_hover' ) {
+          $key == 'third_tab_icon_hover') {
         $fid = $form_state->getValue($key);
         $file = File::load($fid[0]);
         $this->config('custom_inner_pages.how_to_play_page')->set("how_to_play", file_create_url($file->getFileUri()))->save();
