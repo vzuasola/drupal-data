@@ -107,7 +107,7 @@ class HowToPlayConfiguration extends ConfigFormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Tab ID'),
       '#description' => $this->t('Add Tab ID of secondary menu on How to play first tab'),
-      '#default_value' => $config->get('first_tab_title'),
+      '#default_value' => $config->get('first_tab_id'),
       '#required' => TRUE,
     );
 
@@ -166,7 +166,7 @@ class HowToPlayConfiguration extends ConfigFormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Tab ID'),
       '#description' => $this->t('Add Tab ID of secondary menu on How to play second tab'),
-      '#default_value' => $config->get('second_tab_title'),
+      '#default_value' => $config->get('second_tab_id'),
       '#required' => TRUE,
     );
 
@@ -225,7 +225,7 @@ class HowToPlayConfiguration extends ConfigFormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Tab ID'),
       '#description' => $this->t('Add Tab ID of secondary menu on How to play third tab'),
-      '#default_value' => $config->get('third_tab_title'),
+      '#default_value' => $config->get('third_tab_id'),
       '#required' => TRUE,
     );
 
