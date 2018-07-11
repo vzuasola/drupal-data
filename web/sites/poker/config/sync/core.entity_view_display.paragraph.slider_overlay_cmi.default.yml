@@ -5,12 +5,19 @@ dependencies:
   config:
     - field.field.paragraph.slider_overlay_cmi.field_link
     - field.field.paragraph.slider_overlay_cmi.field_link_target
+    - field.field.paragraph.slider_overlay_cmi.field_log_in_state
+    - field.field.paragraph.slider_overlay_cmi.field_post_link
+    - field.field.paragraph.slider_overlay_cmi.field_post_link_target
+    - field.field.paragraph.slider_overlay_cmi.field_post_overlay_blurb
+    - field.field.paragraph.slider_overlay_cmi.field_post_overlay_image
     - field.field.paragraph.slider_overlay_cmi.field_slideroverlay_blurb
     - field.field.paragraph.slider_overlay_cmi.field_slideroverlay_cmi_enable
     - field.field.paragraph.slider_overlay_cmi.field_slideroverlay_image
     - paragraphs.paragraphs_type.slider_overlay_cmi
   module:
     - image
+    - link
+    - options
     - text
 _core:
   default_config_hash: 9o9gelUZLW320IOwk8ux87OwiaI925PNLsUF0MXtZH8
@@ -19,6 +26,48 @@ targetEntityType: paragraph
 bundle: slider_overlay_cmi
 mode: default
 content:
+  field_log_in_state:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_post_link:
+    weight: 7
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_post_link_target:
+    weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_post_overlay_blurb:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_post_overlay_image:
+    weight: 5
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
   field_slideroverlay_blurb:
     weight: 2
     label: above

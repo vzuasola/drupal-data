@@ -1,0 +1,23 @@
+uuid: 6f722c51-6bf0-41d6-824f-8f07119e0bbe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_post_link
+    - paragraphs.paragraphs_type.slider_overlay_cmi
+  module:
+    - link
+id: paragraph.slider_overlay_cmi.field_post_link
+field_name: field_post_link
+entity_type: paragraph
+bundle: slider_overlay_cmi
+label: 'Post Link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+field_type: link
