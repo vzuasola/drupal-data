@@ -12,35 +12,44 @@ use Drupal\Component\Utility\Html;
  */
 function contact_us_config_mail($key, &$message, $params) {
     // format body base from the email template
-    switch ($key) {
-        case 'contact_us':
-            $email_template = \Drupal::config('contact_us_config.contact_us_configuration')->get('email_template');
-            $message['subject'] = html::escape($params['subject']);
-            $body = str_replace([
-                '[-firstname-]',
-                '[-lastname-]',
-                '[-username-]',
-                '[-email-]',
-                '[-product-]',
-                '[-subject-]',
-                '[-message-]',
-                '[-date-]',
-                '[-ip-]',
-                '[-language-]'
-            ],[
-                Html::escape($params['firstname']),
-                Html::escape($params['lastname']),
-                Html::escape($params['username']),
-                Html::escape($message['reply-to']),
-                Html::escape($params['product']),
-                Html::escape($params['subject']),
-                Html::escape($params['body']),
-                format_date($params['date'], 'long'),
-                $params['ip'],
-                $message['langcode'],
-            ], $email_template);
-    
-        $message['body'][] = $body;
-        break;
+    if($key == 'contact_us') {
+        $email_template = \Drupal::config('contact_us_config.contact_us_configuration')->get('email_template');
+
+        $subject = html::escape($params['subject']);
+        $firstName = html::escape($params['firstname']);
+        $lastName = html::escape($params['lastname']);
+        $from = html::escape($message['reply-to']);
+        $userName = Html::escape($params['username']);
+        $product = Html::escape($params['product']);
+        $body = Html::escape($params['body']);
+
+        $message['subject'] = $subject;
+        $message['headers']['From'] = "$firstName $lastName <$from>";
+
+        $messageBody = str_replace([
+            '[-firstname-]',
+            '[-lastname-]',
+            '[-username-]',
+            '[-email-]',
+            '[-product-]',
+            '[-subject-]',
+            '[-message-]',
+            '[-date-]',
+            '[-ip-]',
+            '[-language-]'
+        ], [
+            $firstName,
+            $lastName,
+            $userName,
+            $from,
+            $product,
+            $subject,
+            $body,
+            format_date($params['date'], 'long'),
+            $params['ip'],
+            $message['langcode'],
+        ], $email_template);
+
+        $message['body'][] = $messageBody;
     }
 }
