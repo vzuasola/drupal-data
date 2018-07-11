@@ -13,8 +13,8 @@ entity_type: taxonomy_term
 bundle: desktop_game_category
 label: 'Category Image Banner'
 description: ''
-required: true
-translatable: false
+required: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
