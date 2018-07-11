@@ -1,0 +1,15 @@
+custom_inner_pages.admin_settings:
+  path: 'admin/config/poker/custom-inner-pages'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Poker Custom Inner Pages Configuration'
+  requirements:
+    _permission: 'administer site configuration'
+
+custom_inner_pages.how_to_play_form:
+  path: 'admin/config/poker/custom-inner-pages/how-to-play'
+  defaults:
+    _form: 'Drupal\custom_inner_pages\Form\HowToPlayConfiguration'
+    _title: 'How to Play Inner Page Configuration Form'
+  requirements:
+    _permission: 'administer site configuration'
