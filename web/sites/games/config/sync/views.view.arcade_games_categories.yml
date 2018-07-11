@@ -542,7 +542,7 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: api/arcade-game-categories
+      path: api/arcade-categories
       pager:
         type: none
         options:
