@@ -1,0 +1,23 @@
+uuid: 057ea6bd-2df2-491e-9520-e02aa45ae2f8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_arcade_cat_disable
+    - taxonomy.vocabulary.arcade_game_category
+id: taxonomy_term.arcade_game_category.field_arcade_cat_disable
+field_name: field_arcade_cat_disable
+entity_type: taxonomy_term
+bundle: arcade_game_category
+label: Disable
+description: 'If checked, this category will not be displayed.'
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
