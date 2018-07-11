@@ -154,7 +154,10 @@ class HowToPlayController extends ControllerBase implements ContainerInjectionIn
           if ($delete_permission) {
             $links['delete'] = [
               'title' => $this->t('Delete'),
-              'url' => Url::fromRoute('entity.how_to_play.revision_delete', ['how_to_play' => $how_to_play->id(), 'how_to_play_revision' => $vid]),
+              'url' => Url::fromRoute('entity.how_to_play.revision_delete', [
+                'how_to_play' => $how_to_play->id(),
+                'how_to_play_revision' => $vid
+              ]),
             ];
           }
 
