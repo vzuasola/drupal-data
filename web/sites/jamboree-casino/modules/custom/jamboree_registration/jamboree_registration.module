@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains jamboree_registration.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function jamboree_registration_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the jamboree_registration module.
+    case 'help.page.jamboree_registration':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Casino Jamboree Registration') . '</p>';
+      return $output;
+
+    default:
+  }
+}

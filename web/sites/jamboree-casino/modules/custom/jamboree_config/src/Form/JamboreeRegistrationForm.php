@@ -39,7 +39,6 @@ class JamboreeRegistrationForm extends FormBase {
     ];
 
     $this->sectionRegistrationForm($form);
-    $this->sectionStep2($form);
 
     return $form;
   }
@@ -229,76 +228,5 @@ class JamboreeRegistrationForm extends FormBase {
       '#default_value' => $this->get('submit_button'),
       '#translatable' => TRUE,
     ];
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  private function sectionStep2(array &$form) {
-    $form['step_2'] = [
-      '#type' => 'details',
-      '#title' => t('Registration Step 2'),
-      '#group' => 'advanced',
-    ];
-
-    $form['step_2']['step_2_title'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Title'),
-      '#default_value' => $this->get('step_2_title'),
-      '#translatable' => TRUE,
-    ];
-
-    $d = $this->get('step_2_description');
-    $form['step_2']['step_2_description'] = [
-      '#type' => 'text_format',
-      '#title' => $this->t('Description'),
-      '#description' => $this->t('*Note: use <b>[REG_ID]</b> for the registration ID display.'),
-      '#default_value' => $d['value'],
-      '#format' => $d['format'],
-      '#translatable' => TRUE,
-    ];
-
-    $form['step_2']['promotion_label'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Promotion Label'),
-      '#default_value' => $this->get('promotion_label'),
-      '#translatable' => TRUE,
-    ];
-
-    $form['step_2']['promotion_link'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Promotion Link'),
-      '#default_value' => $this->get('promotion_link'),
-      '#translatable' => TRUE,
-    ];
-
-    $form['step_2']['cashier_label'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Cashier Label'),
-      '#default_value' => $this->get('cashier_label'),
-      '#translatable' => TRUE,
-    ];
-
-    $form['step_2']['cashier_link'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Cashier Link'),
-      '#default_value' => $this->get('cashier_link'),
-      '#translatable' => TRUE,
-    ];
-
-    $form['step_2']['next_button_label'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Next Button Label'),
-      '#default_value' => $this->get('next_button_label'),
-      '#translatable' => TRUE,
-    ];
-
-    $form['step_2']['next_button_link'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Next Button Link'),
-      '#default_value' => $this->get('next_button_link'),
-      '#translatable' => TRUE,
-    ];
-
   }
 }
