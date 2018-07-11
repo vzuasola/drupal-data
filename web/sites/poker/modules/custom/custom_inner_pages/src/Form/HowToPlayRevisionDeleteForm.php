@@ -73,7 +73,9 @@ class HowToPlayRevisionDeleteForm extends ConfirmFormBase {
    * {@inheritdoc}
    */
   public function getQuestion() {
-    return t('Are you sure you want to delete the revision from %revision-date?', ['%revision-date' => format_date($this->revision->getRevisionCreationTime())]);
+    return t('Are you sure you want to delete the revision from %revision-date?', [
+      '%revision-date' => format_date($this->revision->getRevisionCreationTime())
+    ]);
   }
 
   /**
@@ -106,13 +108,21 @@ class HowToPlayRevisionDeleteForm extends ConfirmFormBase {
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $this->HowToPlayStorage->deleteRevision($this->revision->getRevisionId());
 
-    $this->logger('content')->notice('How to play: deleted %title revision %revision.', ['%title' => $this->revision->label(), '%revision' => $this->revision->getRevisionId()]);
-    drupal_set_message(t('Revision from %revision-date of How to play %title has been deleted.', ['%revision-date' => format_date($this->revision->getRevisionCreationTime()), '%title' => $this->revision->label()]));
+    $this->logger('content')->notice('How to play: deleted %title revision %revision.', [
+      '%title' => $this->revision->label(),
+      '%revision' => $this->revision->getRevisionId()
+    ]);
+    drupal_set_message(t('Revision from %revision-date of How to play %title has been deleted.', [
+      '%revision-date' => format_date($this->revision->getRevisionCreationTime()),
+      '%title' => $this->revision->label()
+    ]));
     $form_state->setRedirect(
       'entity.how_to_play.canonical',
        ['how_to_play' => $this->revision->id()]
     );
-    if ($this->connection->query('SELECT COUNT(DISTINCT vid) FROM {how_to_play_field_revision} WHERE id = :id', [':id' => $this->revision->id()])->fetchField() > 1) {
+    if ($this->connection->query('SELECT COUNT(DISTINCT vid) FROM {how_to_play_field_revision} WHERE id = :id', [
+      ':id' => $this->revision->id()
+    ])->fetchField() > 1) {
       $form_state->setRedirect(
         'entity.how_to_play.version_history',
          ['how_to_play' => $this->revision->id()]

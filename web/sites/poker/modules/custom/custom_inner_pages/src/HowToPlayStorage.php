@@ -41,7 +41,8 @@ class HowToPlayStorage extends SqlContentEntityStorage implements HowToPlayStora
    * {@inheritdoc}
    */
   public function countDefaultLanguageRevisions(HowToPlayInterface $entity) {
-    return $this->database->query('SELECT COUNT(*) FROM {how_to_play_field_revision} WHERE id = :id AND default_langcode = 1', [':id' => $entity->id()])
+    return $this->database->query('SELECT COUNT(*) FROM {how_to_play_field_revision}
+      WHERE id = :id AND default_langcode = 1', [':id' => $entity->id()])
       ->fetchField();
   }
 

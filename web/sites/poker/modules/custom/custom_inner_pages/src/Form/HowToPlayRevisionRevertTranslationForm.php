@@ -41,9 +41,11 @@ class HowToPlayRevisionRevertTranslationForm extends HowToPlayRevisionRevertForm
    * @param \Drupal\Core\Language\LanguageManagerInterface $language_manager
    *   The language manager.
    */
-  public function __construct(EntityStorageInterface $entity_storage, DateFormatterInterface $date_formatter, LanguageManagerInterface $language_manager) {
-    parent::__construct($entity_storage, $date_formatter);
-    $this->languageManager = $language_manager;
+  public function __construct(EntityStorageInterface $entity_storage,
+    DateFormatterInterface $date_formatter,
+    LanguageManagerInterface $language_manager) {
+      parent::__construct($entity_storage, $date_formatter);
+      $this->languageManager = $language_manager;
   }
 
   /**
@@ -68,7 +70,10 @@ class HowToPlayRevisionRevertTranslationForm extends HowToPlayRevisionRevertForm
    * {@inheritdoc}
    */
   public function getQuestion() {
-    return t('Are you sure you want to revert @language translation to the revision from %revision-date?', ['@language' => $this->languageManager->getLanguageName($this->langcode), '%revision-date' => $this->dateFormatter->format($this->revision->getRevisionCreationTime())]);
+    return t('Are you sure you want to revert @language translation to the revision from %revision-date?', [
+      '@language' => $this->languageManager->getLanguageName($this->langcode),
+      '%revision-date' => $this->dateFormatter->format($this->revision->getRevisionCreationTime())
+    ]);
   }
 
   /**

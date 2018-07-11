@@ -73,7 +73,9 @@ class HowToPlayRevisionRevertForm extends ConfirmFormBase {
    * {@inheritdoc}
    */
   public function getQuestion() {
-    return t('Are you sure you want to revert to the revision from %revision-date?', ['%revision-date' => $this->dateFormatter->format($this->revision->getRevisionCreationTime())]);
+    return t('Are you sure you want to revert to the revision from %revision-date?', [
+      '%revision-date' => $this->dateFormatter->format($this->revision->getRevisionCreationTime())
+    ]);
   }
 
   /**
@@ -116,11 +118,19 @@ class HowToPlayRevisionRevertForm extends ConfirmFormBase {
     $original_revision_timestamp = $this->revision->getRevisionCreationTime();
 
     $this->revision = $this->prepareRevertedRevision($this->revision, $form_state);
-    $this->revision->revision_log = t('Copy of the revision from %date.', ['%date' => $this->dateFormatter->format($original_revision_timestamp)]);
+    $this->revision->revision_log = t('Copy of the revision from %date.', [
+      '%date' => $this->dateFormatter->format($original_revision_timestamp)
+    ]);
     $this->revision->save();
 
-    $this->logger('content')->notice('How to play: reverted %title revision %revision.', ['%title' => $this->revision->label(), '%revision' => $this->revision->getRevisionId()]);
-    drupal_set_message(t('How to play %title has been reverted to the revision from %revision-date.', ['%title' => $this->revision->label(), '%revision-date' => $this->dateFormatter->format($original_revision_timestamp)]));
+    $this->logger('content')->notice('How to play: reverted %title revision %revision.', [
+      '%title' => $this->revision->label(),
+      '%revision' => $this->revision->getRevisionId()
+    ]);
+    drupal_set_message(t('How to play %title has been reverted to the revision from %revision-date.', [
+      '%title' => $this->revision->label(),
+      '%revision-date' => $this->dateFormatter->format($original_revision_timestamp)
+    ]));
     $form_state->setRedirect(
       'entity.how_to_play.version_history',
       ['how_to_play' => $this->revision->id()]

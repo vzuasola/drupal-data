@@ -42,7 +42,10 @@ class HowToPlayController extends ControllerBase implements ContainerInjectionIn
    */
   public function revisionPageTitle($how_to_play_revision) {
     $how_to_play = $this->entityManager()->getStorage('how_to_play')->loadRevision($how_to_play_revision);
-    return $this->t('Revision of %title from %date', ['%title' => $how_to_play->label(), '%date' => format_date($how_to_play->getRevisionCreationTime())]);
+    return $this->t('Revision of %title from %date', [
+      '%title' => $how_to_play->label(),
+      '%date' => format_date($how_to_play->getRevisionCreationTime())
+    ]);
   }
 
   /**
@@ -62,11 +65,16 @@ class HowToPlayController extends ControllerBase implements ContainerInjectionIn
     $has_translations = (count($languages) > 1);
     $how_to_play_storage = $this->entityManager()->getStorage('how_to_play');
 
-    $build['#title'] = $has_translations ? $this->t('@langname revisions for %title', ['@langname' => $langname, '%title' => $how_to_play->label()]) : $this->t('Revisions for %title', ['%title' => $how_to_play->label()]);
+    $build['#title'] = $has_translations ? $this->t('@langname revisions for %title', [
+      '@langname' => $langname,
+      '%title' => $how_to_play->label()
+    ]) : $this->t('Revisions for %title', ['%title' => $how_to_play->label()]);
     $header = [$this->t('Revision'), $this->t('Operations')];
 
-    $revert_permission = (($account->hasPermission("revert all how to play revisions") || $account->hasPermission('administer how to play entities')));
-    $delete_permission = (($account->hasPermission("delete all how to play revisions") || $account->hasPermission('administer how to play entities')));
+    $revert_permission = (($account->hasPermission("revert all how to play revisions") ||
+      $account->hasPermission('administer how to play entities')));
+    $delete_permission = (($account->hasPermission("delete all how to play revisions") ||
+      $account->hasPermission('administer how to play entities')));
 
     $rows = [];
 
@@ -79,7 +87,8 @@ class HowToPlayController extends ControllerBase implements ContainerInjectionIn
       $revision = $how_to_play_storage->loadRevision($vid);
       // Only show revisions that are affected by the language that is being
       // displayed.
-      if ($revision->hasTranslation($langcode) && $revision->getTranslation($langcode)->isRevisionTranslationAffected()) {
+      if ($revision->hasTranslation($langcode) &&
+        $revision->getTranslation($langcode)->isRevisionTranslationAffected()) {
         $username = [
           '#theme' => 'username',
           '#account' => $revision->getRevisionUser(),
@@ -88,7 +97,9 @@ class HowToPlayController extends ControllerBase implements ContainerInjectionIn
         // Use revision link to link to revisions that are not active.
         $date = \Drupal::service('date.formatter')->format($revision->getRevisionCreationTime(), 'short');
         if ($vid != $how_to_play->getRevisionId()) {
-          $link = $this->l($date, new Url('entity.how_to_play.revision', ['how_to_play' => $how_to_play->id(), 'how_to_play_revision' => $vid]));
+          $link = $this->l($date, new Url('entity.how_to_play.revision', [
+            'how_to_play' => $how_to_play->id(),
+            'how_to_play_revision' => $vid]));
         }
         else {
           $link = $how_to_play->link($date);
@@ -98,7 +109,8 @@ class HowToPlayController extends ControllerBase implements ContainerInjectionIn
         $column = [
           'data' => [
             '#type' => 'inline_template',
-            '#template' => '{% trans %}{{ date }} by {{ username }}{% endtrans %}{% if message %}<p class="revision-log">{{ message }}</p>{% endif %}',
+            '#template' => '{% trans %}{{ date }} by {{ username }}{% endtrans %}{% if message %}
+              <p class="revision-log">{{ message }}</p>{% endif %}',
             '#context' => [
               'date' => $link,
               'username' => \Drupal::service('renderer')->renderPlain($username),
@@ -127,8 +139,15 @@ class HowToPlayController extends ControllerBase implements ContainerInjectionIn
             $links['revert'] = [
               'title' => $this->t('Revert'),
               'url' => $has_translations ?
-              Url::fromRoute('entity.how_to_play.translation_revert', ['how_to_play' => $how_to_play->id(), 'how_to_play_revision' => $vid, 'langcode' => $langcode]) :
-              Url::fromRoute('entity.how_to_play.revision_revert', ['how_to_play' => $how_to_play->id(), 'how_to_play_revision' => $vid]),
+              Url::fromRoute('entity.how_to_play.translation_revert', [
+                'how_to_play' => $how_to_play->id(),
+                'how_to_play_revision' => $vid,
+                'langcode' => $langcode
+              ]) :
+              Url::fromRoute('entity.how_to_play.revision_revert', [
+                'how_to_play' => $how_to_play->id(),
+                'how_to_play_revision' => $vid
+              ]),
             ];
           }
 

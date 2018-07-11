@@ -59,7 +59,8 @@ use Drupal\user\UserInterface;
  *     "revision" = "/admin/structure/how_to_play/{how_to_play}/revisions/{how_to_play_revision}/view",
  *     "revision_revert" = "/admin/structure/how_to_play/{how_to_play}/revisions/{how_to_play_revision}/revert",
  *     "revision_delete" = "/admin/structure/how_to_play/{how_to_play}/revisions/{how_to_play_revision}/delete",
- *     "translation_revert" = "/admin/structure/how_to_play/{how_to_play}/revisions/{how_to_play_revision}/revert/{langcode}",
+ *     "translation_revert" = "/admin/structure/how_to_play/{how_to_play}/revisions/
+ *         {how_to_play_revision}/revert/{langcode}",
  *     "collection" = "/admin/structure/how_to_play",
  *   },
  *   field_ui_base_route = "how_to_play.settings"
