@@ -5,6 +5,12 @@ poker_grid_menu.list:
   route_name: poker_grid_menu.admin_settings
   weight: 1500
 
+poker_grid_menu.settings:
+  title: 'Grid Menu Settings'
+  parent: poker_grid_menu.list
+  description: 'Provides configuration for Grid Menu'
+  route_name: poker_grid_menu.settings_form
+
 # Grid menu entity menu items definition
 entity.grid_menu_entity.collection:
   title: 'Grid menu entity list'

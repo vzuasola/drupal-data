@@ -5,3 +5,11 @@ poker_grid_menu.admin_settings:
     _title: 'Poker Grid Menu'
   requirements:
     _permission: 'administer site configuration'
+
+poker_grid_menu.settings_form:
+  path: 'admin/config/poker_grid_menu/settings'
+  defaults:
+    _form: 'Drupal\poker_grid_menu\Form\GridMenuSettingsForm'
+    _title: 'Grid Menu Configuration Form'
+  requirements:
+    _permission: 'administer site configuration'
