@@ -1,0 +1,21 @@
+uuid: 8d966e60-c107-4583-af08-b799fa3a2ebf
+langcode: en
+status: true
+dependencies:
+  module:
+    - jamboree_rightside_blocks
+id: jamboree_rightside_block_entity.field_image_banner_link
+field_name: field_image_banner_link
+entity_type: jamboree_rightside_block_entity
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

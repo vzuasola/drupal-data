@@ -1,0 +1,24 @@
+uuid: 9624c643-f053-4b37-8a96-2e3bc8aa6b3e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.jamboree_rightside_block_entity.field_hide_title
+  module:
+    - jamboree_rightside_blocks
+id: jamboree_rightside_block_entity.jamboree_rightside_block_entity.field_hide_title
+field_name: field_hide_title
+entity_type: jamboree_rightside_block_entity
+bundle: jamboree_rightside_block_entity
+label: 'Hide Title'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,22 @@
+uuid: 8b87eb77-01b7-4a4e-ad0a-82118f6245cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.social_media_cmi
+id: paragraph.social_media_cmi.status
+field_name: status
+entity_type: paragraph
+bundle: social_media_cmi
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

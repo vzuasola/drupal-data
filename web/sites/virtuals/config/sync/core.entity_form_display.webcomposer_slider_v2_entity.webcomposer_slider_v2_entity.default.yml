@@ -8,6 +8,7 @@ dependencies:
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_banner_link
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_banner_link_target
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_content_position
+    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_disable_in_tablet
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_game_launching
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_log_in_state
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_post_banner_blurb
@@ -17,7 +18,9 @@ dependencies:
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_post_content_position
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_postlogin_slider_ribbon
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_prelogin_slider_ribbon
+    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_preview_display_only
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_publish_date
+    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_status
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_title
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_unpublish_date
     - image.style.thumbnail
@@ -79,6 +82,20 @@ third_party_settings:
         description: ''
         required_fields: true
       label: 'Post Banner Fields'
+    group_additional_statuses:
+      children:
+        - field_status
+        - field_disable_in_tablet
+        - field_preview_display_only
+      parent_name: ''
+      weight: 20
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: 'Enable Preview, Tablet View, and the Slider entry statuses'
+        required_fields: true
+      label: 'Additional Statuses'
 _core:
   default_config_hash: grNge8IdAFipcGU_JTCGQyYAXWDj5WKraQLVYoMygN8
 id: webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.default
@@ -211,6 +228,13 @@ content:
           entity_type: webcomposer_slider_v2_entity
           bundle: webcomposer_slider_v2_entity
     type: options_select
+    region: content
+  field_disable_in_tablet:
+    weight: 21
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
     region: content
   field_game_launching:
     weight: 3
@@ -363,11 +387,24 @@ content:
     third_party_settings: {  }
     type: options_select
     region: content
+  field_preview_display_only:
+    weight: 22
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
   field_publish_date:
     weight: 8
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
+    region: content
+  field_status:
+    weight: 20
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   field_title:
     weight: 0
@@ -387,7 +424,8 @@ content:
     type: language_select
     weight: 2
     region: content
-    settings: {  }
+    settings:
+      include_locked: true
     third_party_settings: {  }
   translation:
     weight: 7

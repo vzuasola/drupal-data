@@ -1,0 +1,23 @@
+uuid: 6834be32-5100-49c6-abac-6ec95166f5e5
+langcode: hi
+status: true
+dependencies:
+  config:
+    - field.storage.exchange_lobby_tile_entity.field_status
+  module:
+    - exchange_lobby_tile
+    - options
+id: exchange_lobby_tile_entity.exchange_lobby_tile_entity.field_status
+field_name: field_status
+entity_type: exchange_lobby_tile_entity
+bundle: exchange_lobby_tile_entity
+label: Status
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: '1'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

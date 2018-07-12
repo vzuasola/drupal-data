@@ -120,6 +120,7 @@ function webcomposer_audit_webcomposer_config_schema_translate($name, $data, $be
 function webcomposer_audit_webcomposer_form_config_schema_update($name, $data, $before)
 {
   $entity = new \Drupal\webcomposer_audit\Entity\RawFormEntity($name, $data);
+  $before = $before ?? [];
   $entity->setOriginal(new \Drupal\webcomposer_audit\Entity\RawFormEntity($name, $before));
 
   try {

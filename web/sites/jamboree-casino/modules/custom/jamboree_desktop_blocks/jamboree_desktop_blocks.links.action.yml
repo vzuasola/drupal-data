@@ -1,0 +1,5 @@
+entity.jamboree_desktop_block.add_form:
+  route_name: entity.jamboree_desktop_block.add_form
+  title: 'Add Jamboree desktop block'
+  appears_on:
+    - entity.jamboree_desktop_block.collection

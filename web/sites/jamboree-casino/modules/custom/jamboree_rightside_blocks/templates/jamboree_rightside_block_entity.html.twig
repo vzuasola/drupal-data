@@ -1,0 +1,22 @@
+{#
+/**
+ * @file jamboree_rightside_block_entity.html.twig
+ * Default theme implementation to present Jamboree rightside block entity data.
+ *
+ * This template is used when viewing Jamboree rightside block entity pages.
+ *
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_jamboree_rightside_block_entity()
+ *
+ * @ingroup themeable
+ */
+#}
+<div{{ attributes.addClass('jamboree_rightside_block_entity') }}>
+  {% if content %}
+    {{- content -}}
+  {% endif %}
+</div>

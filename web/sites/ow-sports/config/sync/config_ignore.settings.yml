@@ -8,5 +8,6 @@ ignored_config_entities:
   12: 'devel.*'
   14: 'owsports_config.*'
   16: 'webcomposer_affilates.*'
+  18: webcomposer_cache.settings
 _core:
   default_config_hash: UVH1aJ4b44UM-VdPVN7hNNuuVqfReJxwfVeDQH1Hvsk

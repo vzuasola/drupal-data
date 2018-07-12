@@ -1,0 +1,23 @@
+uuid: dfb2b1fa-31ee-4147-afec-6f80efba1a6f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.jamboree_desktop_block.field_log_in_state
+  module:
+    - jamboree_desktop_blocks
+    - options
+id: jamboree_desktop_block.jamboree_desktop_block.field_log_in_state
+field_name: field_log_in_state
+entity_type: jamboree_desktop_block
+bundle: jamboree_desktop_block
+label: 'Log-in State'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: '0'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

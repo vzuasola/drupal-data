@@ -1,0 +1,19 @@
+uuid: f13a6cf5-ef5b-4c2c-b0eb-b100b11166a7
+langcode: en
+status: true
+dependencies:
+  module:
+    - jamboree_desktop_blocks
+    - text
+id: jamboree_desktop_block.field_description
+field_name: field_description
+entity_type: jamboree_desktop_block
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
