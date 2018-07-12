@@ -1,0 +1,30 @@
+uuid: 7b9514ca-4076-428d-92ad-90db3b652e28
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+    - image
+    - poker_grid_menu
+id: grid_menu_entity.field_icon
+field_name: field_icon
+entity_type: grid_menu_entity
+type: image
+settings:
+  uri_scheme: public
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  target_type: file
+  display_field: false
+  display_default: false
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

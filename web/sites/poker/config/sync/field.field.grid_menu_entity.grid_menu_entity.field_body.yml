@@ -13,7 +13,7 @@ entity_type: grid_menu_entity
 bundle: grid_menu_entity
 label: Body
 description: ''
-required: true
+required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''

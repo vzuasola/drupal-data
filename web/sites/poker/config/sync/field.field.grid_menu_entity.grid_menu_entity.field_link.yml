@@ -1,0 +1,23 @@
+uuid: 9c7b2c2b-08aa-4b1f-8c10-6fd9e8206c95
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.grid_menu_entity.field_link
+  module:
+    - link
+    - poker_grid_menu
+id: grid_menu_entity.grid_menu_entity.field_link
+field_name: field_link
+entity_type: grid_menu_entity
+bundle: grid_menu_entity
+label: Link
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+field_type: link
