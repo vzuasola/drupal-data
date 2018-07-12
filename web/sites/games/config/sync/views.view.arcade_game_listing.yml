@@ -449,7 +449,7 @@ display:
           group_type: group
           admin_label: ''
           label: Content
-          exclude: true
+          exclude: false
           alter:
             alter_text: false
             text: ''
