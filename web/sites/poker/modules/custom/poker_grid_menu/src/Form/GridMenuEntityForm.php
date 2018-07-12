@@ -65,7 +65,7 @@ class GridMenuEntityForm extends ContentEntityForm {
           '%label' => $entity->label(),
         ]));
     }
-    $form_state->setRedirect('entity.grid_menu_entity.canonical', ['grid_menu_entity' => $entity->id()]);
+    $form_state->setRedirectUrl($entity->urlInfo('collection'));
   }
 
 }

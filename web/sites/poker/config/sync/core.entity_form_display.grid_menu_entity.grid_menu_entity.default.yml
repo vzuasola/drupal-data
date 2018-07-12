@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.grid_menu_entity.grid_menu_entity.field_body
+    - field.field.grid_menu_entity.grid_menu_entity.field_disable
   module:
     - poker_grid_menu
     - text
@@ -13,16 +14,23 @@ bundle: grid_menu_entity
 mode: default
 content:
   field_body:
-    weight: 1
+    weight: 2
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
     region: content
+  field_disable:
+    weight: 1
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
   langcode:
     type: language_select
-    weight: 2
+    weight: 3
     region: content
     settings:
       include_locked: true
@@ -35,9 +43,14 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  translation:
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   user_id:
     type: entity_reference_autocomplete
-    weight: 3
+    weight: 4
     settings:
       match_operator: CONTAINS
       size: 60
