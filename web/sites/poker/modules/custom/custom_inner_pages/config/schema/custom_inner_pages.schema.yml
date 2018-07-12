@@ -1,4 +1,4 @@
-custom_inner_pages.how_to_play_page:
+poker_config.how_to_play_page:
   type: config_object
   label: 'How to Play Configuration'
   mapping:

@@ -21,14 +21,14 @@ class HowToPlayConfiguration extends ConfigFormBase {
    * @inheritdoc
    */
   protected function getEditableConfigNames() {
-    return ['custom_inner_pages.how_to_play_page'];
+    return ['poker_config.how_to_play_page'];
   }
 
   /**
    * @inheritdoc
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    $config = $this->config('custom_inner_pages.how_to_play_page');
+    $config = $this->config('poker_config.how_to_play_page');
 
     $form['how_to_play_page_tab'] = array(
       '#type' => 'vertical_tabs',
@@ -78,10 +78,10 @@ class HowToPlayConfiguration extends ConfigFormBase {
           $key == 'third_tab_icon_hover') {
         $fid = $form_state->getValue($key);
         $file = File::load($fid[0]);
-        $this->config('custom_inner_pages.how_to_play_page')->set("how_to_play", file_create_url($file->getFileUri()))->save();
+        $this->config('poker_config.how_to_play_page')->set($key . '_file', file_create_url($file->getFileUri()))->save();
       }
 
-      $this->config('custom_inner_pages.how_to_play_page')->set($key, $form_state->getValue($key))->save();
+      $this->config('poker_config.how_to_play_page')->set($key, $form_state->getValue($key))->save();
     }
 
     parent::submitForm($form, $form_state);
