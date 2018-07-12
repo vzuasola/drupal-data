@@ -35,6 +35,7 @@ class HowToPlayConfiguration extends ConfigFormBase {
       '#title' => t('Settings'),
     );
 
+    $this->generalConfig($form, $config);
     $this->firstTab($form, $config);
     $this->secondTab($form, $config);
     $this->thirdTab($form, $config);
@@ -52,6 +53,7 @@ class HowToPlayConfiguration extends ConfigFormBase {
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $keys = [
+      'page_title',
       'first_tab_title',
       'first_tab_id',
       'first_tab_icon',
@@ -85,6 +87,23 @@ class HowToPlayConfiguration extends ConfigFormBase {
     }
 
     parent::submitForm($form, $form_state);
+  }
+
+  private function generalConfig(&$form, $config) {
+    $form['gen_config'] = array(
+      '#type' => 'details',
+      '#title' => $this->t('General Configuration'),
+      '#collapsible' => TRUE,
+      '#group' => 'how_to_play_page_tab'
+    );
+
+    $form['gen_config']['page_title'] = array(
+      '#type' => 'textfield',
+      '#title' => $this->t('Page Title'),
+      '#description' => $this->t('This will appear in browser page tab title'),
+      '#default_value' => $config->get('page_title'),
+      '#required' => TRUE,
+    );
   }
 
   private function firstTab(&$form, $config) {
