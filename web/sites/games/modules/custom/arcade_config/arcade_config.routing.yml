@@ -5,3 +5,11 @@ arcade_config.admin_settings:
     _title: 'Arcade Configuration'
   requirements:
     _permission: 'administer site configuration'
+
+arcade_config.games_configuration:
+  path: 'admin/arcade/config'
+  defaults:
+    _form: 'Drupal\arcade_config\Form\ArcadeConfigurationForm'
+    _title: 'Arcade Custom Configuration'
+  requirements:
+    _permission: 'administer site configuration'
