@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.how_to_play.how_to_play.field_htp_content
+    - field.field.how_to_play.how_to_play.field_htp_secondary_tab_id
     - field.field.how_to_play.how_to_play.field_htp_secondary_title
     - field.field.how_to_play.how_to_play.field_htp_tab_id
   module:
@@ -15,12 +16,20 @@ bundle: how_to_play
 mode: default
 content:
   field_htp_content:
-    weight: 3
+    weight: 4
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
+    region: content
+  field_htp_secondary_tab_id:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
   field_htp_secondary_title:
     weight: 1

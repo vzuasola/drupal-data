@@ -1,5 +1,5 @@
-custom_inner_pages.how_to_play_schema:
+poker_config.how_to_play_schema:
   title: 'How to Play Configuration'
   base_route_name: custom_inner_pages.how_to_play_form
   names:
-    - 'custom_inner_pages.how_to_play_page'
+    - 'poker_config.how_to_play_page'

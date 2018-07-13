@@ -81,6 +81,7 @@ content:
   user_id:
     type: entity_reference_autocomplete
     weight: 7
+    weight: 4
     settings:
       match_operator: CONTAINS
       size: 60
