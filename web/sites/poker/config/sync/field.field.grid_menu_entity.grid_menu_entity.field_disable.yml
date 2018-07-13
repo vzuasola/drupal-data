@@ -1,0 +1,24 @@
+uuid: 428ce868-36f7-4227-afa2-78da06e6fc7e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.grid_menu_entity.field_disable
+  module:
+    - poker_grid_menu
+id: grid_menu_entity.grid_menu_entity.field_disable
+field_name: field_disable
+entity_type: grid_menu_entity
+bundle: grid_menu_entity
+label: Disable
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
