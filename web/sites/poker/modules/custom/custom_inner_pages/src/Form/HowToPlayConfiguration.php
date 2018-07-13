@@ -79,8 +79,15 @@ class HowToPlayConfiguration extends ConfigFormBase {
           $key == 'third_tab_icon' ||
           $key == 'third_tab_icon_hover') {
         $fid = $form_state->getValue($key);
-        $file = File::load($fid[0]);
-        $this->config('poker_config.how_to_play_page')->set($key . '_file', file_create_url($file->getFileUri()))->save();
+        if ($fid) {
+            $file = File::load($fid[0]);
+            $file->setPermanent();
+            $file->save();
+            $file_usage = \Drupal::service('file.usage');
+            $file_usage->add($file, 'casino_config', 'image', $fid[0]);
+
+            $this->config('poker_config.how_to_play_page')->set($key . '_file', file_create_url($file->getFileUri()))->save();
+        }
       }
 
       $this->config('poker_config.how_to_play_page')->set($key, $form_state->getValue($key))->save();
@@ -161,7 +168,6 @@ class HowToPlayConfiguration extends ConfigFormBase {
       '#description' => $this->t('The text that will be displayed as short content of the tab.'),
       '#default_value' => $firstTabContent['value'],
       '#format' => $firstTabContent['format'],
-      '#required' => TRUE,
     );
   }
 
@@ -220,7 +226,6 @@ class HowToPlayConfiguration extends ConfigFormBase {
       '#description' => $this->t('The text that will be displayed as short content of the tab.'),
       '#default_value' => $secondTabContent['value'],
       '#format' => $secondTabContent['format'],
-      '#required' => TRUE,
     );
   }
 
@@ -279,7 +284,6 @@ class HowToPlayConfiguration extends ConfigFormBase {
       '#description' => $this->t('The text that will be displayed as short content of the tab.'),
       '#default_value' => $thirdTabContent['value'],
       '#format' => $thirdTabContent['format'],
-      '#required' => TRUE,
     );
   }
 }
