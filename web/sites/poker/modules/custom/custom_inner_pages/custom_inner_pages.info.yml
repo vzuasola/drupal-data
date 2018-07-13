@@ -3,3 +3,5 @@ type: module
 description: Poker Custom Inner Pages Configuration
 core: 8.x
 package: Custom
+dependencies:
+  - poker_config

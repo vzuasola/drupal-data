@@ -1,0 +1,20 @@
+uuid: 5a4a3aa9-2a31-441a-81d6-ed6c20971576
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.how_to_play.field_htp_secondary_tab_id
+  module:
+    - custom_inner_pages
+id: how_to_play.how_to_play.field_htp_secondary_tab_id
+field_name: field_htp_secondary_tab_id
+entity_type: how_to_play
+bundle: how_to_play
+label: 'HTP Secondary Tab ID'
+description: 'No spacing and underscore for ID naming, only dash(-) is allowed. This is required for the secondary tab mapping.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
