@@ -67,9 +67,9 @@ class GridMenuEntityController extends ControllerBase implements ContainerInject
      $grid_menu_entity->label()]) : $this->t('Revisions for %title', ['%title' => $grid_menu_entity->label()]);
     $header = [$this->t('Revision'), $this->t('Operations')];
 
-    $revert_permission = (($account->hasPermission("revert all grid menu entity revisions") || 
+    $revert_permission = (($account->hasPermission("revert all grid menu entity revisions") ||
       $account->hasPermission('administer grid menu entity entities')));
-    $delete_permission = (($account->hasPermission("delete all grid menu entity revisions") || 
+    $delete_permission = (($account->hasPermission("delete all grid menu entity revisions") ||
       $account->hasPermission('administer grid menu entity entities')));
 
     $rows = [];
@@ -92,7 +92,7 @@ class GridMenuEntityController extends ControllerBase implements ContainerInject
         // Use revision link to link to revisions that are not active.
         $date = \Drupal::service('date.formatter')->format($revision->getRevisionCreationTime(), 'short');
         if ($vid != $grid_menu_entity->getRevisionId()) {
-          $link = $this->l($date, new Url('entity.grid_menu_entity.revision', ['grid_menu_entity' => 
+          $link = $this->l($date, new Url('entity.grid_menu_entity.revision', ['grid_menu_entity' =>
             $grid_menu_entity->id(), 'grid_menu_entity_revision' => $vid]));
         }
         else {
@@ -133,7 +133,8 @@ class GridMenuEntityController extends ControllerBase implements ContainerInject
             $links['revert'] = [
               'title' => $this->t('Revert'),
               'url' => $has_translations ?
-              Url::fromRoute('entity.grid_menu_entity.translation_revert', ['grid_menu_entity' => $grid_menu_entity->id(), 'grid_menu_entity_revision' =>
+              Url::fromRoute('entity.grid_menu_entity.translation_revert',
+               ['grid_menu_entity' => $grid_menu_entity->id(), 'grid_menu_entity_revision' =>
                $vid, 'langcode' => $langcode]) :
               Url::fromRoute('entity.grid_menu_entity.revision_revert', ['grid_menu_entity' =>
                $grid_menu_entity->id(), 'grid_menu_entity_revision' => $vid]),
@@ -143,7 +144,7 @@ class GridMenuEntityController extends ControllerBase implements ContainerInject
           if ($delete_permission) {
             $links['delete'] = [
               'title' => $this->t('Delete'),
-              'url' => Url::fromRoute('entity.grid_menu_entity.revision_delete', ['grid_menu_entity' => 
+              'url' => Url::fromRoute('entity.grid_menu_entity.revision_delete', ['grid_menu_entity' =>
                 $grid_menu_entity->id(), 'grid_menu_entity_revision' => $vid]),
             ];
           }
