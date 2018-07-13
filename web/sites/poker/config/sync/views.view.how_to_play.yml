@@ -30,7 +30,7 @@ display:
         type: none
         options: {  }
       cache:
-        type: tag
+        type: none
         options: {  }
       query:
         type: views_query
@@ -455,50 +455,6 @@ display:
           entity_type: how_to_play
           entity_field: langcode
           plugin_id: language
-        field_htp_tab_id_value:
-          id: field_htp_tab_id_value
-          table: how_to_play__field_htp_tab_id
-          field: field_htp_tab_id_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: or
-          value:
-            game_client: game_client
-            poker_university: poker_university
-            faqs: faqs
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_htp_tab_id_value_op
-            label: 'Main Tab (field_htp_tab_id)'
-            description: ''
-            use_operator: false
-            operator: field_htp_tab_id_value_op
-            identifier: field_htp_tab_id_value
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              e: '0'
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          plugin_id: list_field
       defaults:
         filters: false
         filter_groups: false
@@ -511,7 +467,6 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - url
         - url.query_args
       tags:
         - 'config:field.storage.how_to_play.field_htp_secondary_title'
@@ -575,6 +530,10 @@ display:
         operator: AND
         groups:
           1: AND
+      pager:
+        type: none
+        options:
+          offset: 0
     cache_metadata:
       max-age: 0
       contexts:
