@@ -123,8 +123,8 @@ class GridMenuEntityRevisionRevertForm extends ConfirmFormBase {
 
     $this->logger('content')->notice('Grid menu entity: reverted %title revision %revision.', ['%title' => $this->revision->label(),
      '%revision' => $this->revision->getRevisionId()]);
-    drupal_set_message(t('Grid menu entity %title has been reverted to the revision from %revision-date.', 
-      ['%title' => $this->revision->label(), '%revision-date' => $this->dateFormatter->format($original_revision_timestamp)]));
+    drupal_set_message(t('Grid menu entity %title has been reverted to the revision from %revision-date.',
+       ['%title' => $this->revision->label(), '%revision-date' => $this->dateFormatter->format($original_revision_timestamp)]));
     $form_state->setRedirect(
       'entity.grid_menu_entity.version_history',
       ['grid_menu_entity' => $this->revision->id()]

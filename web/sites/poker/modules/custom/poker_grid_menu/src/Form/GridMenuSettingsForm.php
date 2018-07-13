@@ -70,7 +70,8 @@ class GridMenuSettingsForm extends ConfigFormBase {
             $file_usage = \Drupal::service('file.usage');
             $file_usage->add($file, 'poker_config', 'image', $fid[0]);
 
-            $this->config('poker_config.grid_menu_settings')->set($key . '_file',file_create_url($file->getFileUri()))->save();
+            $this->config('poker_config.grid_menu_settings')->set($key . '_file',
+               file_create_url($file->getFileUri()))->save();
         }
       }
       $this->config('poker_config.grid_menu_settings')->set($key, $form_state->getValue($key))->save();
