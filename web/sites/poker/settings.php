@@ -12,8 +12,3 @@ $settings['product'] = 'poker';
  * The main URL prefix for this site instance
  */
 $settings['primary_site_prefix'] = 'poker';
-
-/**
- * The front end prefix that CKEditor will append for all products
- */
-$settings['ck_editor_inline_image_prefix'] = '/en/poker';

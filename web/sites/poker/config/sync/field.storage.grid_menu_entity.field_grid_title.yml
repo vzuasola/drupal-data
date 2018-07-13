@@ -1,0 +1,21 @@
+uuid: b98d1dc7-83f5-442f-a098-9d360bb1d0f9
+langcode: en
+status: true
+dependencies:
+  module:
+    - poker_grid_menu
+id: grid_menu_entity.field_grid_title
+field_name: field_grid_title
+entity_type: grid_menu_entity
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

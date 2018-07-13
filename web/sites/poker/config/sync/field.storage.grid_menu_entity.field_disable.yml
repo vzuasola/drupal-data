@@ -1,0 +1,18 @@
+uuid: 9003cbda-e6e7-453d-9798-dabbc2e3d1b4
+langcode: en
+status: true
+dependencies:
+  module:
+    - poker_grid_menu
+id: grid_menu_entity.field_disable
+field_name: field_disable
+entity_type: grid_menu_entity
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
