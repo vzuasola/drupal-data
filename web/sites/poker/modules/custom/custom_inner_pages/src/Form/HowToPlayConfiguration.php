@@ -21,20 +21,21 @@ class HowToPlayConfiguration extends ConfigFormBase {
    * @inheritdoc
    */
   protected function getEditableConfigNames() {
-    return ['custom_inner_pages.how_to_play_page'];
+    return ['poker_config.how_to_play_page'];
   }
 
   /**
    * @inheritdoc
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    $config = $this->config('custom_inner_pages.how_to_play_page');
+    $config = $this->config('poker_config.how_to_play_page');
 
     $form['how_to_play_page_tab'] = array(
       '#type' => 'vertical_tabs',
       '#title' => t('Settings'),
     );
 
+    $this->generalConfig($form, $config);
     $this->firstTab($form, $config);
     $this->secondTab($form, $config);
     $this->thirdTab($form, $config);
@@ -52,6 +53,7 @@ class HowToPlayConfiguration extends ConfigFormBase {
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $keys = [
+      'page_title',
       'first_tab_title',
       'first_tab_id',
       'first_tab_icon',
@@ -77,14 +79,38 @@ class HowToPlayConfiguration extends ConfigFormBase {
           $key == 'third_tab_icon' ||
           $key == 'third_tab_icon_hover') {
         $fid = $form_state->getValue($key);
-        $file = File::load($fid[0]);
-        $this->config('custom_inner_pages.how_to_play_page')->set("how_to_play", file_create_url($file->getFileUri()))->save();
+        if ($fid) {
+            $file = File::load($fid[0]);
+            $file->setPermanent();
+            $file->save();
+            $file_usage = \Drupal::service('file.usage');
+            $file_usage->add($file, 'casino_config', 'image', $fid[0]);
+
+            $this->config('poker_config.how_to_play_page')->set($key . '_file', file_create_url($file->getFileUri()))->save();
+        }
       }
 
-      $this->config('custom_inner_pages.how_to_play_page')->set($key, $form_state->getValue($key))->save();
+      $this->config('poker_config.how_to_play_page')->set($key, $form_state->getValue($key))->save();
     }
 
     parent::submitForm($form, $form_state);
+  }
+
+  private function generalConfig(&$form, $config) {
+    $form['gen_config'] = array(
+      '#type' => 'details',
+      '#title' => $this->t('General Configuration'),
+      '#collapsible' => TRUE,
+      '#group' => 'how_to_play_page_tab'
+    );
+
+    $form['gen_config']['page_title'] = array(
+      '#type' => 'textfield',
+      '#title' => $this->t('Page Title'),
+      '#description' => $this->t('This will appear in browser page tab title'),
+      '#default_value' => $config->get('page_title'),
+      '#required' => TRUE,
+    );
   }
 
   private function firstTab(&$form, $config) {
@@ -142,7 +168,6 @@ class HowToPlayConfiguration extends ConfigFormBase {
       '#description' => $this->t('The text that will be displayed as short content of the tab.'),
       '#default_value' => $firstTabContent['value'],
       '#format' => $firstTabContent['format'],
-      '#required' => TRUE,
     );
   }
 
@@ -201,7 +226,6 @@ class HowToPlayConfiguration extends ConfigFormBase {
       '#description' => $this->t('The text that will be displayed as short content of the tab.'),
       '#default_value' => $secondTabContent['value'],
       '#format' => $secondTabContent['format'],
-      '#required' => TRUE,
     );
   }
 
@@ -260,7 +284,6 @@ class HowToPlayConfiguration extends ConfigFormBase {
       '#description' => $this->t('The text that will be displayed as short content of the tab.'),
       '#default_value' => $thirdTabContent['value'],
       '#format' => $thirdTabContent['format'],
-      '#required' => TRUE,
     );
   }
 }
