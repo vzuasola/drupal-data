@@ -11,7 +11,7 @@ class ArcadeConfigurationForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   protected function getEditableConfigNames() {
-    return ['games_config.games_configuration'];
+    return ['games_config.arcade_configuration'];
   }
 
   /**
@@ -25,9 +25,9 @@ class ArcadeConfigurationForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    $config = $this->config('games_config.games_configuration');
+    $config = $this->config('games_config.arcade_configuration');
 
-    $form['games_configuration_tab'] = array(
+    $form['arcade_configuration_tab'] = array(
       '#type' => 'vertical_tabs',
       '#title' => t('Settings'),
     );
@@ -48,7 +48,7 @@ class ArcadeConfigurationForm extends ConfigFormBase {
     );
 
     foreach ($keys as $key) {
-      $this->config('games_config.games_configuration')->set($key, $form_state->getValue($key))->save();
+      $this->config('games_config.arcade_configuration')->set($key, $form_state->getValue($key))->save();
     }
   }
 
@@ -57,7 +57,7 @@ class ArcadeConfigurationForm extends ConfigFormBase {
       '#type' => 'details',
       '#title' => $this->t('Arcade Category Settings'),
       '#collapsible' => TRUE,
-      '#group' => 'games_configuration_tab',
+      '#group' => 'arcade_configuration_tab',
     );
 
     $form['category_group']['arcade_category_switch'] = array(
