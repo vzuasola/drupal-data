@@ -14,6 +14,7 @@ dependencies:
     - field.field.node.arcade_game.field_game_thumbnail_image_h
     - field.field.node.arcade_game.field_game_thumbnail_image_v
     - field.field.node.arcade_game.field_game_thumbnail_size
+    - field.field.node.arcade_game.field_preview_display_only
     - image.style.thumbnail
     - node.type.arcade_game
   module:
@@ -131,6 +132,13 @@ content:
     third_party_settings: {  }
     type: options_select
     region: content
+  field_preview_display_only:
+    type: boolean_checkbox
+    weight: 10
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
   langcode:
     type: language_select
     weight: 1
@@ -159,7 +167,7 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 10
+    weight: 11
     region: content
     third_party_settings: {  }
   title:
