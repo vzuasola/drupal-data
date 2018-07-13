@@ -42,7 +42,8 @@ class GridMenuEntityController extends ControllerBase implements ContainerInject
    */
   public function revisionPageTitle($grid_menu_entity_revision) {
     $grid_menu_entity = $this->entityManager()->getStorage('grid_menu_entity')->loadRevision($grid_menu_entity_revision);
-    return $this->t('Revision of %title from %date', ['%title' => $grid_menu_entity->label(), '%date' => format_date($grid_menu_entity->getRevisionCreationTime())]);
+    return $this->t('Revision of %title from %date', ['%title' => $grid_menu_entity->label(), '%date' =>
+     format_date($grid_menu_entity->getRevisionCreationTime())]);
   }
 
   /**
@@ -62,11 +63,14 @@ class GridMenuEntityController extends ControllerBase implements ContainerInject
     $has_translations = (count($languages) > 1);
     $grid_menu_entity_storage = $this->entityManager()->getStorage('grid_menu_entity');
 
-    $build['#title'] = $has_translations ? $this->t('@langname revisions for %title', ['@langname' => $langname, '%title' => $grid_menu_entity->label()]) : $this->t('Revisions for %title', ['%title' => $grid_menu_entity->label()]);
+    $build['#title'] = $has_translations ? $this->t('@langname revisions for %title', ['@langname' => $langname, '%title' =>
+     $grid_menu_entity->label()]) : $this->t('Revisions for %title', ['%title' => $grid_menu_entity->label()]);
     $header = [$this->t('Revision'), $this->t('Operations')];
 
-    $revert_permission = (($account->hasPermission("revert all grid menu entity revisions") || $account->hasPermission('administer grid menu entity entities')));
-    $delete_permission = (($account->hasPermission("delete all grid menu entity revisions") || $account->hasPermission('administer grid menu entity entities')));
+    $revert_permission = (($account->hasPermission("revert all grid menu entity revisions") || 
+      $account->hasPermission('administer grid menu entity entities')));
+    $delete_permission = (($account->hasPermission("delete all grid menu entity revisions") || 
+      $account->hasPermission('administer grid menu entity entities')));
 
     $rows = [];
 
@@ -88,7 +92,8 @@ class GridMenuEntityController extends ControllerBase implements ContainerInject
         // Use revision link to link to revisions that are not active.
         $date = \Drupal::service('date.formatter')->format($revision->getRevisionCreationTime(), 'short');
         if ($vid != $grid_menu_entity->getRevisionId()) {
-          $link = $this->l($date, new Url('entity.grid_menu_entity.revision', ['grid_menu_entity' => $grid_menu_entity->id(), 'grid_menu_entity_revision' => $vid]));
+          $link = $this->l($date, new Url('entity.grid_menu_entity.revision', ['grid_menu_entity' => 
+            $grid_menu_entity->id(), 'grid_menu_entity_revision' => $vid]));
         }
         else {
           $link = $grid_menu_entity->link($date);
@@ -98,7 +103,8 @@ class GridMenuEntityController extends ControllerBase implements ContainerInject
         $column = [
           'data' => [
             '#type' => 'inline_template',
-            '#template' => '{% trans %}{{ date }} by {{ username }}{% endtrans %}{% if message %}<p class="revision-log">{{ message }}</p>{% endif %}',
+            '#template' => '{% trans %}{{ date }} by {{ username }}{% endtrans %}
+            {% if message %}<p class="revision-log">{{ message }}</p>{% endif %}',
             '#context' => [
               'date' => $link,
               'username' => \Drupal::service('renderer')->renderPlain($username),
@@ -127,15 +133,18 @@ class GridMenuEntityController extends ControllerBase implements ContainerInject
             $links['revert'] = [
               'title' => $this->t('Revert'),
               'url' => $has_translations ?
-              Url::fromRoute('entity.grid_menu_entity.translation_revert', ['grid_menu_entity' => $grid_menu_entity->id(), 'grid_menu_entity_revision' => $vid, 'langcode' => $langcode]) :
-              Url::fromRoute('entity.grid_menu_entity.revision_revert', ['grid_menu_entity' => $grid_menu_entity->id(), 'grid_menu_entity_revision' => $vid]),
+              Url::fromRoute('entity.grid_menu_entity.translation_revert', ['grid_menu_entity' => $grid_menu_entity->id(), 'grid_menu_entity_revision' =>
+               $vid, 'langcode' => $langcode]) :
+              Url::fromRoute('entity.grid_menu_entity.revision_revert', ['grid_menu_entity' =>
+               $grid_menu_entity->id(), 'grid_menu_entity_revision' => $vid]),
             ];
           }
 
           if ($delete_permission) {
             $links['delete'] = [
               'title' => $this->t('Delete'),
-              'url' => Url::fromRoute('entity.grid_menu_entity.revision_delete', ['grid_menu_entity' => $grid_menu_entity->id(), 'grid_menu_entity_revision' => $vid]),
+              'url' => Url::fromRoute('entity.grid_menu_entity.revision_delete', ['grid_menu_entity' => 
+                $grid_menu_entity->id(), 'grid_menu_entity_revision' => $vid]),
             ];
           }
 

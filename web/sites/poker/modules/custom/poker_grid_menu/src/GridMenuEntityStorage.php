@@ -41,7 +41,8 @@ class GridMenuEntityStorage extends SqlContentEntityStorage implements GridMenuE
    * {@inheritdoc}
    */
   public function countDefaultLanguageRevisions(GridMenuEntityInterface $entity) {
-    return $this->database->query('SELECT COUNT(*) FROM {grid_menu_entity_field_revision} WHERE id = :id AND default_langcode = 1', [':id' => $entity->id()])
+    return $this->database->query('SELECT COUNT(*) FROM {grid_menu_entity_field_revision} WHERE 
+      id = :id AND default_langcode = 1', [':id' => $entity->id()])
       ->fetchField();
   }
 

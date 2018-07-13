@@ -60,7 +60,8 @@ use Drupal\user\UserInterface;
  *     "revision" = "/admin/structure/grid_menu_entity/{grid_menu_entity}/revisions/{grid_menu_entity_revision}/view",
  *     "revision_revert" = "/admin/structure/grid_menu_entity/{grid_menu_entity}/revisions/{grid_menu_entity_revision}/revert",
  *     "revision_delete" = "/admin/structure/grid_menu_entity/{grid_menu_entity}/revisions/{grid_menu_entity_revision}/delete",
- *     "translation_revert" = "/admin/structure/grid_menu_entity/{grid_menu_entity}/revisions/{grid_menu_entity_revision}/revert/{langcode}",
+ *     "translation_revert" =
+ *      "/admin/structure/grid_menu_entity/{grid_menu_entity}/revisions/{grid_menu_entity_revision}/revert/{langcode}",
  *     "collection" = "/admin/structure/grid_menu_entity",
  *   },
  *   field_ui_base_route = "grid_menu_entity.settings"
