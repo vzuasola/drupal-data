@@ -1,0 +1,31 @@
+custom_inner_pages.how_to_play_page_tab:
+  route_name: custom_inner_pages.how_to_play_form
+  title: 'How to Play Configuration'
+  base_route: custom_inner_pages.how_to_play_form
+# How to play routing definition
+how_to_play.settings_tab:
+  route_name: how_to_play.settings
+  title: 'Settings'
+  base_route: how_to_play.settings
+
+entity.how_to_play.canonical:
+  route_name: entity.how_to_play.canonical
+  base_route: entity.how_to_play.canonical
+  title: 'View'
+
+entity.how_to_play.edit_form:
+  route_name: entity.how_to_play.edit_form
+  base_route: entity.how_to_play.canonical
+  title: 'Edit'
+
+entity.how_to_play.version_history:
+  route_name: entity.how_to_play.version_history
+  base_route: entity.how_to_play.canonical
+  title: 'Revisions'
+
+entity.how_to_play.delete_form:
+  route_name:  entity.how_to_play.delete_form
+  base_route:  entity.how_to_play.canonical
+  title: Delete
+  weight: 10
+

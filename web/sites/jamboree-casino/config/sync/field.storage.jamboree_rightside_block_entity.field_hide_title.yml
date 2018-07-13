@@ -1,0 +1,18 @@
+uuid: 2cae8333-07db-49c4-a4f8-d05a8074acc2
+langcode: en
+status: true
+dependencies:
+  module:
+    - jamboree_rightside_blocks
+id: jamboree_rightside_block_entity.field_hide_title
+field_name: field_hide_title
+entity_type: jamboree_rightside_block_entity
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,28 @@
+poker_config.how_to_play_page:
+  type: config_object
+  label: 'How to Play Configuration'
+  mapping:
+    page_title:
+      type: label
+      label: 'Page Title'
+    first_tab_title:
+      type: label
+      label: 'First Tab Title'
+    first_tab_content:
+      type: text_format
+      label: 'Content'
+      translatable: true
+    second_tab_title:
+      type: label
+      label: 'Second Tab Title'
+    second_tab_content:
+      type: text_format
+      label: 'Content'
+      translatable: true
+    third_tab_title:
+      type: label
+      label: 'Third Tab Title'
+    third_tab_content:
+      type: text_format
+      label: 'Content'
+      translatable: true

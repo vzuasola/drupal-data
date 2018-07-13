@@ -1,0 +1,33 @@
+add how to play entities:
+  title: 'Create new How to play entities'
+
+administer how to play entities:
+  title: 'Administer How to play entities'
+  description: 'Allow to access the administration form to configure How to play entities.'
+  restrict access: true
+
+delete how to play entities:
+  title: 'Delete How to play entities'
+
+edit how to play entities:
+  title: 'Edit How to play entities'
+
+access how to play overview:
+  title: 'Access the How to play overview page'
+
+view published how to play entities:
+  title: 'View published How to play entities'
+
+view unpublished how to play entities:
+  title: 'View unpublished How to play entities'
+
+view all how to play revisions:
+  title: 'View all How to play revisions'
+
+revert all how to play revisions:
+  title: 'Revert all How to play revisions'
+  description: 'Role requires permission <em>view How to play revisions</em> and <em>edit rights</em> for how to play entities in question or <em>administer how to play entities</em>.'
+
+delete all how to play revisions:
+  title: 'Delete all revisions'
+  description: 'Role requires permission to <em>view How to play revisions</em> and <em>delete rights</em> for how to play entities in question or <em>administer how to play entities</em>.'

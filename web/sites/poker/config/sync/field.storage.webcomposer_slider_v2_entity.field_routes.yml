@@ -1,0 +1,20 @@
+uuid: 676c9cb2-8b75-452f-930e-015fe7e36fd5
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+    - webcomposer_slider_v2
+id: webcomposer_slider_v2_entity.field_routes
+field_name: field_routes
+entity_type: webcomposer_slider_v2_entity
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

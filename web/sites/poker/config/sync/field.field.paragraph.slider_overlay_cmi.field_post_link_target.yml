@@ -1,0 +1,21 @@
+uuid: 0000e933-e9e5-4851-a3e9-23aa10ac3b50
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_post_link_target
+    - paragraphs.paragraphs_type.slider_overlay_cmi
+  module:
+    - options
+id: paragraph.slider_overlay_cmi.field_post_link_target
+field_name: field_post_link_target
+entity_type: paragraph
+bundle: slider_overlay_cmi
+label: 'Post Link Target'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

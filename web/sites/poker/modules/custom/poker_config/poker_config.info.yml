@@ -1,0 +1,5 @@
+name: Poker Config
+type: module
+description: Poker Custom Configurations
+package: Custom
+core: 8.x

@@ -1,0 +1,58 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for Arcade Config module.
+ *
+ * @DCG
+ * This file is no longer required in Drupal 8.
+ * @see https://www.drupal.org/node/2217931
+ */
+
+use Drupal\Core\Url;
+
+/**
+ * Implements hook_toolbar().
+ */
+function arcade_config_toolbar() {
+  $items['arcade'] = [
+    '#type' => 'toolbar_item',
+    'tab' => [
+      '#type' => 'link',
+      '#title' => t('Arcade Settings'),
+      '#url' => Url::fromRoute('arcade_config.admin_settings'),
+      '#attributes' => [
+        'title' => t('Arcade Settings'),
+        'class' => ['toolbar-icon', 'toolbar-icon-devel'],
+      ],
+    ],
+    '#weight' => 900,
+  ];
+
+  return $items;
+}
+
+function arcade_config_form_alter(&$form, $form_state, $form_id) {
+    $submitAction = false;
+    switch($form_id) {
+        case 'taxonomy_term_arcade_game_category_form':
+            $submitAction = 'arcade_config_taxonomy_form_submit';
+            break;
+    }
+
+    if ($submitAction !== false) {
+        foreach (array_keys($form['actions']) as $action) {
+            if ($action != 'preview' && isset($form['actions'][$action]['#type']) && 
+                $form['actions'][$action]['#type'] === 'submit') {
+                $form['actions'][$action]['#submit'][] = $submitAction;
+            }
+        }
+    }
+}
+
+function arcade_config_taxonomy_form_submit($form, &$form_state) {
+    $vid = $form_state->getFormObject()->getEntity()->bundle();
+    $form_state->setRedirect('entity.taxonomy_vocabulary.overview_form', [
+        'taxonomy_vocabulary' => $vid
+    ]);
+}

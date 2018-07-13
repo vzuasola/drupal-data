@@ -10,7 +10,6 @@ module:
   color: 0
   color_field: 0
   comment: 0
-  conditional_fields: 0
   config: 0
   config_filter: 0
   config_ignore: 0
@@ -36,12 +35,14 @@ module:
   image: 0
   imce: 0
   jamboree_config: 0
-  jamboree_content_blocks: 0
+  jamboree_desktop_blocks: 0
   jamboree_desktop_games: 0
   jamboree_dropdown_menu: 0
   jamboree_mobile_blocks: 0
   jamboree_mobile_games: 0
   jamboree_news_and_updates: 0
+  jamboree_registration: 0
+  jamboree_rightside_blocks: 0
   lang_dropdown: 0
   language: 0
   libraries: 0
@@ -75,6 +76,7 @@ module:
   webcomposer_config: 0
   webcomposer_config_schema: 0
   webcomposer_editor: 0
+  webcomposer_form_manager: 0
   webcomposer_games: 0
   webcomposer_partner: 0
   webcomposer_rest_extra: 0

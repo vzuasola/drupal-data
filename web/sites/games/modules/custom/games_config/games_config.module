@@ -26,13 +26,21 @@ function games_config_help($route_name, RouteMatchInterface $route_match) {
 
 
 function games_config_form_alter(&$form, $form_state, $form_id) {
-  	if ($form_id == 'node_game_form' || $form_id == 'node_game_edit_form') {
- 		foreach (array_keys($form['actions']) as $action) {
-		    if ($action != 'preview' && isset($form['actions'][$action]['#type']) && $form['actions'][$action]['#type'] === 'submit') {
-		      $form['actions'][$action]['#submit'][] = 'games_config_form_submit';
-		    }
-  		}
-  	}
+    $submitAction = false;
+    switch($form_id) {
+        case 'node_game_form':
+        case 'node_game_edit_form':
+            $submitAction = 'games_config_node_form_submit';
+            break;
+    }
+    if ($submitAction !== false) {
+        foreach (array_keys($form['actions']) as $action) {
+            if ($action != 'preview' && isset($form['actions'][$action]['#type']) && 
+                $form['actions'][$action]['#type'] === 'submit') {
+                $form['actions'][$action]['#submit'][] = $submitAction;
+            }
+        }
+    }
     //Hide the Both select option of Log-in State from Basic Page Template.
     if ($form_id == 'node_page_form' || $form_id == 'node_page_edit_form'){
     unset($form['field_log_in_state']['widget']['#options'][2]);
@@ -48,10 +56,9 @@ function games_config_form_alter(&$form, $form_state, $form_id) {
     }
 }
 
-function games_config_form_submit($form, &$form_state) {
-	$form_state->setRedirect('games_config.list.games');
+function games_config_node_form_submit($form, &$form_state) {
+    $form_state->setRedirect('games_config.list.games');
 }
-
 /**
  *
  * Hide the Delete option from the Home Taxonomy.

@@ -1,0 +1,21 @@
+uuid: 34d06f84-3028-4f6a-81b4-805f7e111554
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.jamboree_rightside_block_entity.field_image_banner_link_target
+  module:
+    - jamboree_rightside_blocks
+    - options
+id: jamboree_rightside_block_entity.jamboree_rightside_block_entity.field_image_banner_link_target
+field_name: field_image_banner_link_target
+entity_type: jamboree_rightside_block_entity
+bundle: jamboree_rightside_block_entity
+label: 'Image Banner Link Target'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

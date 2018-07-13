@@ -1,0 +1,18 @@
+uuid: 22a93239-2e83-4d4a-864b-cfc136f3f1f1
+langcode: en
+status: true
+dependencies:
+  module:
+    - serialization
+    - user
+    - webcomposer_form_manager
+id: webcomposer_form_rest_resource
+plugin_id: webcomposer_form_rest_resource
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+      - xml
+    supported_auth:
+      - cookie

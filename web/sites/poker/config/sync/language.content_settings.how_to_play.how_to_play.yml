@@ -1,0 +1,15 @@
+uuid: efe1582e-0dae-4f40-87a2-fb40064b2b3c
+langcode: en
+status: true
+dependencies:
+  module:
+    - content_translation
+    - custom_inner_pages
+third_party_settings:
+  content_translation:
+    enabled: true
+id: how_to_play.how_to_play
+target_entity_type_id: how_to_play
+target_bundle: how_to_play
+default_langcode: site_default
+language_alterable: true

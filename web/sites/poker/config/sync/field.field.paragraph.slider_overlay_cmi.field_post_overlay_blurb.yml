@@ -1,0 +1,22 @@
+uuid: 66915a51-e5e2-404f-bb66-20165648fbdb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_post_overlay_blurb
+    - paragraphs.paragraphs_type.slider_overlay_cmi
+  module:
+    - text
+id: paragraph.slider_overlay_cmi.field_post_overlay_blurb
+field_name: field_post_overlay_blurb
+entity_type: paragraph
+bundle: slider_overlay_cmi
+label: 'Post Overlay Blurb'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary
