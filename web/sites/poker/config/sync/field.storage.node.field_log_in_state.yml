@@ -19,9 +19,6 @@ settings:
     -
       value: '1'
       label: 'Post Login'
-    -
-      value: '2'
-      label: Both
   allowed_values_function: ''
 module: options
 locked: false
