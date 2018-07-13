@@ -7,8 +7,11 @@ dependencies:
     - field.field.exchange_lobby_tile_entity.exchange_lobby_tile_entity.field_button_link
     - field.field.exchange_lobby_tile_entity.exchange_lobby_tile_entity.field_button_link_target
     - field.field.exchange_lobby_tile_entity.exchange_lobby_tile_entity.field_button_text
+    - field.field.exchange_lobby_tile_entity.exchange_lobby_tile_entity.field_disable_in_tablet
     - field.field.exchange_lobby_tile_entity.exchange_lobby_tile_entity.field_enable_game_launching
     - field.field.exchange_lobby_tile_entity.exchange_lobby_tile_entity.field_log_in_state
+    - field.field.exchange_lobby_tile_entity.exchange_lobby_tile_entity.field_preview_display_only
+    - field.field.exchange_lobby_tile_entity.exchange_lobby_tile_entity.field_status
     - field.field.exchange_lobby_tile_entity.exchange_lobby_tile_entity.field_tile_image
     - field.field.exchange_lobby_tile_entity.exchange_lobby_tile_entity.field_tile_image_link
     - field.field.exchange_lobby_tile_entity.exchange_lobby_tile_entity.field_tile_image_link_target
@@ -17,10 +20,27 @@ dependencies:
     - image.style.thumbnail
   module:
     - exchange_lobby_tile
+    - field_group
     - file
     - image
     - link
     - text
+third_party_settings:
+  field_group:
+    group_display_statuses:
+      children:
+        - field_status
+        - field_disable_in_tablet
+        - field_preview_display_only
+      parent_name: ''
+      weight: 20
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Display Statuses'
 id: exchange_lobby_tile_entity.exchange_lobby_tile_entity.default
 targetEntityType: exchange_lobby_tile_entity
 bundle: exchange_lobby_tile_entity
@@ -56,6 +76,13 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
+  field_disable_in_tablet:
+    weight: 14
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
   field_enable_game_launching:
     weight: 12
     settings:
@@ -65,6 +92,19 @@ content:
     region: content
   field_log_in_state:
     weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_preview_display_only:
+    weight: 15
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_status:
+    weight: 13
     settings: {  }
     third_party_settings: {  }
     type: options_select

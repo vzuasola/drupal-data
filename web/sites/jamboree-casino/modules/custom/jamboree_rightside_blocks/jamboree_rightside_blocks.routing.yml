@@ -1,0 +1,7 @@
+jamboree_rightside_blocks.admin_settings:
+  path: 'admin/config/jamboree/rightside_blocks'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'jamboree Rightside Blocks'
+  requirements:
+    _permission: 'administer site configuration'

@@ -1,0 +1,22 @@
+{#
+/**
+ * @file jamboree_desktop_block.html.twig
+ * Default theme implementation to present Jamboree desktop block data.
+ *
+ * This template is used when viewing Jamboree desktop block pages.
+ *
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_jamboree_desktop_block()
+ *
+ * @ingroup themeable
+ */
+#}
+<div{{ attributes.addClass('jamboree_desktop_block') }}>
+  {% if content %}
+    {{- content -}}
+  {% endif %}
+</div>

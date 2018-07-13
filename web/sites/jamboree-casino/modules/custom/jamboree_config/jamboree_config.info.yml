@@ -1,6 +1,6 @@
 name: Jamboreee Configurations Module
 description: Jamboreee specific module.
-package: Jamboreee
+package: Jamboree
 
 type: module
 core: 8.x

@@ -1,0 +1,18 @@
+jamboree_rightside_blocks.list:
+  title: 'Jamboree Rightside Blocks Configuration'
+  description: 'List jamboree rightside blocks entities'
+  parent: system.admin_config
+  route_name: jamboree_rightside_blocks.admin_settings
+
+# Jamboree rightside block entity menu items definition
+entity.jamboree_rightside_block_entity.collection:
+  title: 'Jamboree rightside block entity list'
+  route_name: entity.jamboree_rightside_block_entity.collection
+  description: 'List Jamboree rightside block entity entities'
+  parent: jamboree_rightside_blocks.list
+
+jamboree_rightside_block_entity.admin.structure.settings:
+  title: Jamboree rightside block entity settings
+  description: 'Configure Jamboree rightside block entity entities'
+  route_name: jamboree_rightside_block_entity.settings
+  parent: jamboree_rightside_blocks.list

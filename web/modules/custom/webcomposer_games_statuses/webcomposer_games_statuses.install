@@ -1,0 +1,16 @@
+<?php
+
+/**
+ * Implements hook_uninstall
+ */
+function webcomposer_games_statuses_uninstall() {
+  $keys = [
+		'field.storage.node.field_disable_in_tablet',
+		'field.storage.node.field_preview_display_only',
+		'field.storage.node.field_status'
+  ];
+
+  foreach ($keys as $key) {
+    \Drupal::configFactory()->getEditable($key)->delete();
+  }
+}

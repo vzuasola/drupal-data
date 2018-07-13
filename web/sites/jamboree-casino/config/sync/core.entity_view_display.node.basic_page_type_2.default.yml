@@ -1,0 +1,88 @@
+uuid: 576e7ee6-0b46-47fd-a94f-5560067cb9bd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.basic_page_type_2.body
+    - field.field.node.basic_page_type_2.field_button_link
+    - field.field.node.basic_page_type_2.field_button_open_link
+    - field.field.node.basic_page_type_2.field_image
+    - field.field.node.basic_page_type_2.field_image_link
+    - field.field.node.basic_page_type_2.field_images_open_link
+    - field.field.node.basic_page_type_2.field_meta_tag
+    - field.field.node.basic_page_type_2.field_summary
+    - node.type.basic_page_type_2
+  module:
+    - image
+    - link
+    - metatag
+    - text
+    - user
+id: node.basic_page_type_2.default
+targetEntityType: node
+bundle: basic_page_type_2
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_button_link:
+    weight: 4
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_image:
+    weight: 5
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_image_link:
+    weight: 1
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_meta_tag:
+    weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
+    region: content
+  field_summary:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  links:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_button_open_link: true
+  field_images_open_link: true
+  langcode: true

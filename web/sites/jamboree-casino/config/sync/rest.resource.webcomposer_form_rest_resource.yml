@@ -1,0 +1,20 @@
+uuid: aeacaf23-66ba-4149-aeca-1e1e02d5bcb8
+langcode: en
+status: true
+dependencies:
+  module:
+    - serialization
+    - user
+    - webcomposer_form_manager
+_core:
+  default_config_hash: Lea_1MJKQSsNaJrUkjR6Gz6owmTalqqs9DCRpY2ann8
+id: webcomposer_form_rest_resource
+plugin_id: webcomposer_form_rest_resource
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+      - xml
+    supported_auth:
+      - cookie
