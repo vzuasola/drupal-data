@@ -33,11 +33,12 @@ class GridMenuSettingsForm extends ConfigFormBase {
     $form['background_image'] = [
       '#type' => 'managed_file',
       '#title' => t('Background Image (Parallax)'),
-      '#description' => t('Upload a file, allowed extensions: jpg, jpeg, png, gif'),
+      '#description' => t('The recommended upload size is between 1920x300 to 1920x500.<br>
+        Allowed types: png gif jpg jpeg'),
       '#upload_location' => 'public://',
       '#upload_validators' => [
-        'file_validate_extensions' => ['png jpg jpeg'],
-        'file_validate_image_resolution' => ['1920x360']
+        'file_validate_extensions' => ['png jpg jpeg gif'],
+        'file_validate_image_resolution' => ['1920x500', '1920x360']
       ],
       '#default_value' => $config->get('background_image'),
       '#required' => TRUE,
@@ -62,10 +63,16 @@ class GridMenuSettingsForm extends ConfigFormBase {
     foreach ($keys as $key) {
       if ($key == 'background_image') {
         $fid = $form_state->getValue($key);
-        $file = File::load($fid[0]);
-        $this->config('poker_config.grid_menu_settings')->set($key . '_file', file_create_url($file->getFileUri()))->save();
+        if ($fid) {
+            $file = File::load($fid[0]);
+            $file->setPermanent();
+            $file->save();
+            $file_usage = \Drupal::service('file.usage');
+            $file_usage->add($file, 'poker_config', 'image', $fid[0]);
+
+            $this->config('poker_config.grid_menu_settings')->set($key . '_file', file_create_url($file->getFileUri()))->save();
+        }
       }
-        
       $this->config('poker_config.grid_menu_settings')->set($key, $form_state->getValue($key))->save();
     }
 
