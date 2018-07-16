@@ -32,9 +32,6 @@ function games_config_form_alter(&$form, $form_state, $form_id) {
         case 'node_game_edit_form':
             $submitAction = 'games_config_node_form_submit';
             break;
-        case 'taxonomy_term_arcade_game_category_form':
-            $submitAction = 'games_config_taxonomy_form_submit';
-            break;
     }
     if ($submitAction !== false) {
         foreach (array_keys($form['actions']) as $action) {
@@ -62,13 +59,6 @@ function games_config_form_alter(&$form, $form_state, $form_id) {
 function games_config_node_form_submit($form, &$form_state) {
     $form_state->setRedirect('games_config.list.games');
 }
-
-function games_config_taxonomy_form_submit($form, &$form_state) {
-    $form_state->setRedirect('entity.taxonomy_vocabulary.overview_form', [
-        'taxonomy_vocabulary' => 'arcade_game_category'
-    ]);
-}
-
 /**
  *
  * Hide the Delete option from the Home Taxonomy.

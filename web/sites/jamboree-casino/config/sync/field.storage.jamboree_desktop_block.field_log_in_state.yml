@@ -1,0 +1,30 @@
+uuid: f9760fd1-7818-40bf-a211-d385d7ae5d98
+langcode: en
+status: true
+dependencies:
+  module:
+    - jamboree_desktop_blocks
+    - options
+id: jamboree_desktop_block.field_log_in_state
+field_name: field_log_in_state
+entity_type: jamboree_desktop_block
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '0'
+      label: 'Pre Login'
+    -
+      value: '1'
+      label: 'Post Login'
+    -
+      value: '2'
+      label: Both
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

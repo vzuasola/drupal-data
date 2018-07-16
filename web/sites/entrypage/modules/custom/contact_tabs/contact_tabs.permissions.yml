@@ -1,0 +1,22 @@
+add contact tabs entity entities:
+  title: 'Create new Contact Tabs entity entities'
+
+administer contact tabs entity entities:
+  title: 'Administer Contact Tabs entity entities'
+  description: 'Allow to access the administration form to configure Contact Tabs entity entities.'
+  restrict access: true
+
+delete contact tabs entity entities:
+  title: 'Delete Contact Tabs entity entities'
+
+edit contact tabs entity entities:
+  title: 'Edit Contact Tabs entity entities'
+
+access contact tabs entity overview:
+  title: 'Access the Contact Tabs entity overview page'
+
+view published contact tabs entity entities:
+  title: 'View published Contact Tabs entity entities'
+
+view unpublished contact tabs entity entities:
+  title: 'View unpublished Contact Tabs entity entities'

@@ -72,6 +72,14 @@ class MobilePromotionsForm extends FormBase {
       '#required' => TRUE,
     ];
 
+    $form['promotions_configuration']['countdown_format'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Countdown Format ([days] days, [hours] remaining)'),
+      '#default_value' => $this->get('countdown_format'),
+      '#translatable' => TRUE,
+      '#required' => TRUE,
+    ];
+
     return $form;
   }
 }

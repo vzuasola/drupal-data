@@ -1,0 +1,127 @@
+uuid: 0f508e09-6414-42b7-8c18-cb34682a7714
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.contact_tabs_entity.contact_tabs_entity.field_tab_class
+    - field.field.contact_tabs_entity.contact_tabs_entity.field_tab_content
+    - field.field.contact_tabs_entity.contact_tabs_entity.field_title
+  module:
+    - contact_tabs
+    - field_group
+    - text
+third_party_settings:
+  field_group:
+    group_manage_active_tab:
+      children:
+        - field_tab_default
+      parent_name: ''
+      weight: 3
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: open
+        description: ''
+        required_fields: true
+      label: 'Manage Active Tab'
+    group_tab_content:
+      children:
+        - field_tab_content
+      parent_name: ''
+      weight: 6
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Tab Content'
+    group_unique_name:
+      children:
+        - name
+      parent_name: ''
+      weight: 1
+      format_type: tab
+      format_settings:
+        label: 'Unique Name'
+        formatter: open
+        description: ''
+        required_fields: true
+        id: ''
+        classes: ''
+      label: 'Unique Name'
+    group_tab:
+      children:
+        - field_title
+        - field_tab_class
+      parent_name: ''
+      weight: 4
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Tab
+_core:
+  default_config_hash: nckyiKCqjmjlLWuNamBKuKanAG2sCjuvVnPGgj2th7k
+id: contact_tabs_entity.contact_tabs_entity.default
+targetEntityType: contact_tabs_entity
+bundle: contact_tabs_entity
+mode: default
+content:
+  field_tab_class:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_tab_content:
+    weight: 6
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_title:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  langcode:
+    type: language_select
+    weight: 0
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  user_id:
+    type: entity_reference_autocomplete
+    weight: 7
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+hidden: {  }

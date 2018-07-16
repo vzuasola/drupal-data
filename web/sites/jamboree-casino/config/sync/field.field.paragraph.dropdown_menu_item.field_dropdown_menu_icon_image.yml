@@ -7,6 +7,8 @@ dependencies:
     - paragraphs.paragraphs_type.dropdown_menu_item
   module:
     - image
+_core:
+  default_config_hash: CpG66LyG3e9HmursxYAXUW7IR4AOpp3-HqmWM6H5acY
 id: paragraph.dropdown_menu_item.field_dropdown_menu_icon_image
 field_name: field_dropdown_menu_icon_image
 entity_type: paragraph

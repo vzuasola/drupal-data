@@ -1,0 +1,25 @@
+<?php
+
+/**
+ * Implements hook_uninstall
+ */
+function contact_tabs_uninstall() {
+  $keys = [
+    'core.entity_form_display.contact_tabs_entity.contact_tabs_entity.default',
+    'core.entity_view_display.contact_tabs_entity.contact_tabs_entity.default',
+    'language.content_settings.contact_tabs_entity.contact_tabs_entity',
+    'field.field.contact_tabs_entity.contact_tabs_entity.field_tab_class',
+    'field.field.contact_tabs_entity.contact_tabs_entity.field_tab_content',
+    'field.field.contact_tabs_entity.contact_tabs_entity.field_tab_default',
+    'field.field.contact_tabs_entity.contact_tabs_entity.field_title',
+    'field.storage.contact_tabs_entity.field_tab_class',
+    'field.storage.contact_tabs_entity.field_tab_content',
+    'field.storage.contact_tabs_entity.field_tab_default',
+    'field.storage.contact_tabs_entity.field_title',
+    'views.view.contact_tabs'
+  ];
+
+  foreach ($keys as $key) {
+    \Drupal::configFactory()->getEditable($key)->delete();
+  }
+}

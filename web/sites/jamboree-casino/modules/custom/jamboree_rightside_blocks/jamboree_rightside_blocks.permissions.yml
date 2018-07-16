@@ -1,0 +1,22 @@
+add jamboree rightside block entity entities:
+  title: 'Create new Jamboree rightside block entity entities'
+
+administer jamboree rightside block entity entities:
+  title: 'Administer Jamboree rightside block entity entities'
+  description: 'Allow to access the administration form to configure Jamboree rightside block entity entities.'
+  restrict access: true
+
+delete jamboree rightside block entity entities:
+  title: 'Delete Jamboree rightside block entity entities'
+
+edit jamboree rightside block entity entities:
+  title: 'Edit Jamboree rightside block entity entities'
+
+access jamboree rightside block entity overview:
+  title: 'Access the Jamboree rightside block entity overview page'
+
+view published jamboree rightside block entity entities:
+  title: 'View published Jamboree rightside block entity entities'
+
+view unpublished jamboree rightside block entity entities:
+  title: 'View unpublished Jamboree rightside block entity entities'

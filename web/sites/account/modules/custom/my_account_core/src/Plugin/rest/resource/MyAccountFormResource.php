@@ -154,6 +154,17 @@ class MyAccountFormResource extends ResourceBase
                     'error' => $this->t('Configuration not found')
                   );
                 }
+                break;
+            case 'cant_login':
+                try {
+                  $config = \Drupal::config('my_account_core.cant_login');
+                  $values = $config->get();
+                } catch (\Exception $e) {
+                  $values = array(
+                    'error' => $this->t('Configuration not found')
+                  );
+                }
+                break;
             default:
         }
 

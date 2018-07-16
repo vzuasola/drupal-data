@@ -7,8 +7,11 @@ dependencies:
     - field.field.exchange_lobby_tile_entity.exchange_lobby_tile_entity.field_button_link
     - field.field.exchange_lobby_tile_entity.exchange_lobby_tile_entity.field_button_link_target
     - field.field.exchange_lobby_tile_entity.exchange_lobby_tile_entity.field_button_text
+    - field.field.exchange_lobby_tile_entity.exchange_lobby_tile_entity.field_disable_in_tablet
     - field.field.exchange_lobby_tile_entity.exchange_lobby_tile_entity.field_enable_game_launching
     - field.field.exchange_lobby_tile_entity.exchange_lobby_tile_entity.field_log_in_state
+    - field.field.exchange_lobby_tile_entity.exchange_lobby_tile_entity.field_preview_display_only
+    - field.field.exchange_lobby_tile_entity.exchange_lobby_tile_entity.field_status
     - field.field.exchange_lobby_tile_entity.exchange_lobby_tile_entity.field_tile_image
     - field.field.exchange_lobby_tile_entity.exchange_lobby_tile_entity.field_tile_image_link
     - field.field.exchange_lobby_tile_entity.exchange_lobby_tile_entity.field_tile_image_link_target
@@ -61,6 +64,16 @@ content:
     third_party_settings: {  }
     type: string
     region: content
+  field_disable_in_tablet:
+    weight: 13
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
   field_enable_game_launching:
     weight: 10
     label: above
@@ -73,6 +86,23 @@ content:
     region: content
   field_log_in_state:
     weight: 11
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_preview_display_only:
+    weight: 14
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_status:
+    weight: 12
     label: above
     settings: {  }
     third_party_settings: {  }
