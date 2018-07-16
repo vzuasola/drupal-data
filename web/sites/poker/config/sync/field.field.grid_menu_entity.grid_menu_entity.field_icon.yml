@@ -5,8 +5,15 @@ dependencies:
   config:
     - field.storage.grid_menu_entity.field_icon
   module:
+    - content_translation
     - image
     - poker_grid_menu
+third_party_settings:
+  content_translation:
+    translation_sync:
+      file: file
+      alt: '0'
+      title: '0'
 id: grid_menu_entity.grid_menu_entity.field_icon
 field_name: field_icon
 entity_type: grid_menu_entity
@@ -14,7 +21,7 @@ bundle: grid_menu_entity
 label: Icon
 description: ''
 required: true
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

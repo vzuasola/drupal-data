@@ -1,0 +1,20 @@
+uuid: e9f24dec-f3f1-44ac-abff-8b0fa469bd5f
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.slider_routes
+  module:
+    - path
+id: taxonomy_term.slider_routes.path
+field_name: path
+entity_type: taxonomy_term
+bundle: slider_routes
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path
