@@ -53,3 +53,23 @@ function contact_us_config_mail($key, &$message, $params) {
         $message['body'][] = $messageBody;
     }
 }
+
+/**
+ * Implements hook_webcomposer_form_validation_alter().
+ *
+ * Contact Us form - Name validation
+ */
+function contact_us_config_webcomposer_form_validation_alter(&$validations) {
+  $validations['invalid_words'] = [
+    'title' => 'Invalid Words',
+    'description' => 'Validation to disallow specific words in the field',
+    'error' => 'Invalid/not allowed characters',
+    'parameters' => [
+      'invalid_words_list' => [
+        '#title' => 'Invalid Words List',
+        '#description' => 'List of words to disallow',
+        '#type' => 'textarea',
+      ],
+    ],
+  ];
+}
