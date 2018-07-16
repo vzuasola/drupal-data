@@ -1,0 +1,19 @@
+uuid: f6dd98e8-64d1-4d2b-8931-0d78e9b5e5d5
+langcode: en
+status: true
+dependencies:
+  module:
+    - poker_download_page
+    - text
+id: download_page_entity.field_body
+field_name: field_body
+entity_type: download_page_entity
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

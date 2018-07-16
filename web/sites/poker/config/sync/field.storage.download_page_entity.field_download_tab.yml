@@ -1,0 +1,27 @@
+uuid: 4fa110be-4dad-43df-b08f-ce3eb82a80b3
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - poker_download_page
+id: download_page_entity.field_download_tab
+field_name: field_download_tab
+entity_type: download_page_entity
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: client
+      label: 'Game Client'
+    -
+      value: mobile
+      label: Mobile
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,23 @@
+uuid: be41cb24-8a34-4bf8-96d1-2ef57ea350fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.download_page_entity.field_download_tab
+  module:
+    - options
+    - poker_download_page
+id: download_page_entity.download_page_entity.field_download_tab
+field_name: field_download_tab
+entity_type: download_page_entity
+bundle: download_page_entity
+label: 'Download Tab'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: client
+default_value_callback: ''
+settings: {  }
+field_type: list_string
