@@ -11,6 +11,7 @@ dependencies:
     - options
     - rest
     - serialization
+    - webcomposer_rest_extra
 id: how_to_play
 label: 'How to Play'
 module: views
@@ -534,6 +535,12 @@ display:
         type: none
         options:
           offset: 0
+      style:
+        type: node_list_serializer
+        options:
+          uses_fields: false
+          formats:
+            json: json
     cache_metadata:
       max-age: 0
       contexts:
