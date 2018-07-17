@@ -1,23 +1,23 @@
-uuid: 55fb7784-fa99-4f0f-8e8d-c50934633291
+uuid: b91eecdc-ea1f-4868-87bc-ba4eeeb84cc4
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.taxonomy_term.field_arcade_cat_alias
-    - node.type.arcade_game
+    - taxonomy.vocabulary.arcade_game_category
   module:
-    - node
     - rest
     - serialization
     - taxonomy
+    - user
     - webcomposer_rest_extra
-id: arcade_games_categories
-label: 'Arcade Games - Categories'
+id: arcade_games_categories_preview
+label: 'Arcade Games - Categories (Preview)'
 module: views
 description: ''
 tag: ''
-base_table: node_field_data
-base_field: nid
+base_table: taxonomy_term_field_data
+base_field: tid
 core: 8.x
 display:
   default:
@@ -27,8 +27,9 @@ display:
     position: 0
     display_options:
       access:
-        type: none
-        options: {  }
+        type: perm
+        options:
+          perm: 'access content'
       cache:
         type: tag
         options: {  }
@@ -82,7 +83,7 @@ display:
           id: tid
           table: taxonomy_term_field_data
           field: tid
-          relationship: field_arcade_category
+          relationship: none
           group_type: group
           admin_label: ''
           label: ''
@@ -130,7 +131,7 @@ display:
           type: number_integer
           settings:
             thousand_separator: ''
-            prefix_suffix: true
+            prefix_suffix: false
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -148,7 +149,7 @@ display:
           id: name
           table: taxonomy_term_field_data
           field: name
-          relationship: field_arcade_category
+          relationship: none
           group_type: group
           admin_label: ''
           label: ''
@@ -171,8 +172,8 @@ display:
             target: ''
             nl2br: false
             max_length: 0
-            word_boundary: true
-            ellipsis: true
+            word_boundary: false
+            ellipsis: false
             more_link: false
             more_link_text: ''
             more_link_path: ''
@@ -210,82 +211,11 @@ display:
           entity_type: taxonomy_term
           entity_field: name
           plugin_id: term_name
-        nid:
-          id: nid
-          table: node_field_data
-          field: nid
-          relationship: none
-          group_type: count_distinct
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          set_precision: false
-          precision: 0
-          decimal: .
-          separator: ', '
-          format_plural: 0
-          format_plural_string: !!binary MQNAY291bnQ=
-          prefix: ''
-          suffix: ''
-          click_sort_column: value
-          type: number_integer
-          settings: {  }
-          group_column: entity_id
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          field_api_classes: false
-          entity_type: node
-          entity_field: nid
-          plugin_id: field
         field_arcade_cat_alias:
           id: field_arcade_cat_alias
           table: taxonomy_term__field_arcade_cat_alias
           field: field_arcade_cat_alias
-          relationship: field_arcade_category
+          relationship: none
           group_type: group
           admin_label: ''
           label: ''
@@ -345,144 +275,20 @@ display:
           field_api_classes: false
           plugin_id: field
       filters:
-        status:
-          value: '1'
-          table: node_field_data
-          field: status
-          plugin_id: boolean
-          entity_type: node
-          entity_field: status
-          id: status
-          expose:
-            operator: ''
-          group: 1
-        type:
-          id: type
-          table: node_field_data
-          field: type
+        vid:
+          id: vid
+          table: taxonomy_term_field_data
+          field: vid
           value:
-            arcade_game: arcade_game
-          entity_type: node
-          entity_field: type
+            arcade_game_category: arcade_game_category
+          entity_type: taxonomy_term
+          entity_field: vid
           plugin_id: bundle
-          group: 1
-        field_preview_display_only_value:
-          id: field_preview_display_only_value
-          table: node__field_preview_display_only
-          field: field_preview_display_only_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: '='
-          value: '0'
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: 'Preview Mode (field_preview_display_only)'
-            description: null
-            use_operator: false
-            operator: field_preview_display_only_value_op
-            identifier: field_preview_display_only_value
-            required: true
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          plugin_id: boolean
-        field_arcade_cat_disable_value:
-          id: field_arcade_cat_disable_value
-          table: taxonomy_term__field_arcade_cat_disable
-          field: field_arcade_cat_disable_value
-          relationship: field_arcade_category
-          group_type: group
-          admin_label: ''
-          operator: '='
-          value: '0'
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          plugin_id: boolean
         langcode:
           id: langcode
-          table: node_field_data
-          field: langcode
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: in
-          value:
-            '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          entity_type: node
-          entity_field: langcode
-          plugin_id: language
-        langcode_1:
-          id: langcode_1
           table: taxonomy_term_field_data
           field: langcode
-          relationship: field_arcade_category
+          relationship: none
           group_type: group
           admin_label: ''
           operator: in
@@ -518,12 +324,48 @@ display:
           entity_type: taxonomy_term
           entity_field: langcode
           plugin_id: language
+        field_arcade_cat_disable_value:
+          id: field_arcade_cat_disable_value
+          table: taxonomy_term__field_arcade_cat_disable
+          field: field_arcade_cat_disable_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: '0'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: boolean
       sorts:
         weight:
           id: weight
           table: taxonomy_term_field_data
           field: weight
-          relationship: field_arcade_category
+          relationship: none
           group_type: group
           admin_label: ''
           order: ASC
@@ -537,7 +379,7 @@ display:
           id: name
           table: taxonomy_term_field_data
           field: name
-          relationship: field_arcade_category
+          relationship: none
           group_type: group
           admin_label: ''
           order: ASC
@@ -550,23 +392,9 @@ display:
       header: {  }
       footer: {  }
       empty: {  }
-      relationships:
-        field_arcade_category:
-          id: field_arcade_category
-          table: node__field_arcade_category
-          field: field_arcade_category
-          relationship: none
-          group_type: group
-          admin_label: 'field_arcade_category: Taxonomy term'
-          required: false
-          plugin_id: standard
+      relationships: {  }
       arguments: {  }
       display_extenders: {  }
-      group_by: true
-      filter_groups:
-        operator: AND
-        groups:
-          1: AND
     cache_metadata:
       max-age: -1
       contexts:
@@ -574,7 +402,7 @@ display:
         - 'languages:language_interface'
         - request_format
         - url.query_args
-        - 'user.node_grants:view'
+        - user.permissions
       tags:
         - 'config:field.storage.taxonomy_term.field_arcade_cat_alias'
   rest_export_1:
@@ -584,7 +412,7 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: api/arcade-categories
+      path: api/arcade-categories-preview
       pager:
         type: none
         options:
@@ -592,6 +420,7 @@ display:
       style:
         type: taxonomy_list_serializer
         options:
+          uses_fields: true
           formats:
             json: json
       row:
@@ -604,9 +433,6 @@ display:
             name:
               alias: ''
               raw_output: false
-            nid:
-              alias: count
-              raw_output: false
             field_arcade_cat_alias:
               alias: alias
               raw_output: false
@@ -616,6 +442,6 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - request_format
-        - 'user.node_grants:view'
+        - user.permissions
       tags:
         - 'config:field.storage.taxonomy_term.field_arcade_cat_alias'

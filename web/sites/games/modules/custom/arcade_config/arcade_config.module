@@ -10,6 +10,7 @@
  */
 
 use Drupal\Core\Url;
+use Drupal\views\ViewExecutable;
 
 /**
  * Implements hook_toolbar().
@@ -55,4 +56,15 @@ function arcade_config_taxonomy_form_submit($form, &$form_state) {
     $form_state->setRedirect('entity.taxonomy_vocabulary.overview_form', [
         'taxonomy_vocabulary' => $vid
     ]);
+}
+
+/**
+ * Implement hook_views_pre_build
+ */
+function arcade_config_views_pre_build(ViewExecutable $view) {
+  if ($view->storage->id() == 'arcade_games_categories') {
+    if ($view->filter['field_preview_display_only_value']->value == 0) {
+      $view->filter['field_preview_display_only_value']->accept_null = TRUE;
+    }
+  }
 }
