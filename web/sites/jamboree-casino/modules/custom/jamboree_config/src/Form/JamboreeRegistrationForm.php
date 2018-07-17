@@ -49,192 +49,28 @@ class JamboreeRegistrationForm extends FormBase {
    * {@inheritdoc}
    */
   private function sectionRegistrationForm(array &$form) {
-    $form['reg_form'] = [
+    $form['reg_form_settings'] = [
       '#type' => 'details',
-      '#title' => t('Registration Form'),
+      '#title' => t('Registration Form Settings'),
       '#group' => 'advanced',
     ];
-
-    $form['reg_form']['title'] = [
+    $form['reg_form_settings']['reg_form_host'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('Title.'),
-      '#default_value' => $this->get('footer_blurb'),
+      '#title' => $this->t('Playtech Registration API Hostname'),
+      '#default_value' => $this->get('reg_form_host'),
       '#translatable' => TRUE,
     ];
-
-    $form['reg_form']['reg_form_title'] = [
+    $form['reg_form_settings']['casino_name'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('Title'),
-      '#default_value' => $this->get('reg_form_title'),
+      '#title' => $this->t('Playtech Casino Name'),
+      '#default_value' => $this->get('casino_name'),
       '#translatable' => TRUE,
     ];
 
-    $form['reg_form']['first_name'] = [
+    $form['reg_form_settings']['secret_key'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('Please enter the label for First Name.'),
-      '#default_value' => $this->get('first_name'),
-      '#translatable' => TRUE,
-    ];
-
-    $form['reg_form']['last_name'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Please enter the label for Last Name.'),
-      '#default_value' => $this->get('last_name'),
-      '#translatable' => TRUE,
-    ];
-
-    $form['reg_form']['password'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Please enter the label for Password.'),
-      '#default_value' => $this->get('password'),
-      '#translatable' => TRUE,
-    ];
-
-    $form['reg_form']['cofirm_password'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Please enter the label for Confirm Password.'),
-      '#default_value' => $this->get('cofirm_password'),
-      '#translatable' => TRUE,
-    ];
-
-    $form['reg_form']['gender'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Please enter the label for Gender.'),
-      '#default_value' => $this->get('gender'),
-      '#translatable' => TRUE,
-    ];
-
-    $form['reg_form']['male'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Please enter the label for Male.'),
-      '#default_value' => $this->get('male'),
-      '#translatable' => TRUE,
-    ];
-
-    $form['reg_form']['female'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Please enter the label for Female.'),
-      '#default_value' => $this->get('female'),
-      '#translatable' => TRUE,
-    ];
-
-    $form['reg_form']['email'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Please enter the label for Email.'),
-      '#default_value' => $this->get('email'),
-      '#translatable' => TRUE,
-    ];
-
-    $form['reg_form']['confirm_email'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Please enter the label for Confirm Email.'),
-      '#default_value' => $this->get('confirm_email'),
-      '#translatable' => TRUE,
-    ];
-
-    $form['reg_form']['date_of_birth'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Please enter the label for Date of Birth.'),
-      '#default_value' => $this->get('date_of_birth'),
-      '#translatable' => TRUE,
-    ];
-
-    $form['reg_form']['contact_number'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Please enter the label for Contact Number.'),
-      '#default_value' => $this->get('contact_number'),
-      '#translatable' => TRUE,
-    ];
-
-    $form['reg_form']['currency_label'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Please enter the label for Currency.'),
-      '#default_value' => $this->get('currency_label'),
-      '#translatable' => TRUE,
-    ];
-
-    $form['reg_form']['currency_value'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Please enter the value for Currency.'),
-      '#default_value' => $this->get('currency_value'),
-      '#translatable' => TRUE,
-    ];
-
-
-    $form['reg_form']['country'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Please enter the label for Country.'),
-      '#default_value' => $this->get('country'),
-      '#translatable' => TRUE,
-    ];
-
-    $form['reg_form']['country_list'] = [
-      '#type' => 'textarea',
-      '#title' => $this->t('Please enter the label for Country List.'),
-      '#default_value' => $this->get('country_list'),
-      '#translatable' => TRUE,
-    ];
-
-    $form['reg_form']['prefecture'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Please enter the label for Prefecture.'),
-      '#default_value' => $this->get('prefecture'),
-      '#translatable' => TRUE,
-    ];
-
-    $form['reg_form']['prefetcher_list'] = [
-      '#type' => 'textarea',
-      '#title' => $this->t('Please enter the label for Prefetcher List.'),
-      '#default_value' => $this->get('prefetcher_list'),
-      '#translatable' => TRUE,
-    ];
-
-    $form['reg_form']['town_and_city'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Please enter the label for Town and City.'),
-      '#default_value' => $this->get('town_and_city'),
-      '#translatable' => TRUE,
-    ];
-
-    $form['reg_form']['zip_code'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Please enter the label for Zip-code.'),
-      '#default_value' => $this->get('zip_code'),
-      '#translatable' => TRUE,
-    ];
-
-    $form['reg_form']['address'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Please enter the label for Address.'),
-      '#default_value' => $this->get('address'),
-      '#translatable' => TRUE,
-    ];
-
-    $form['reg_form']['terms_and_condition'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Please enter the label for Terms and Condition.'),
-      '#default_value' => $this->get('terms_and_condition'),
-      '#translatable' => TRUE,
-    ];
-
-    $form['reg_form']['promotion_and_updates'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Please enter the label for Promotion_and_updates and Updates.'),
-      '#default_value' => $this->get('promotion'),
-      '#translatable' => TRUE,
-    ];
-
-    $form['reg_form']['captcha'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Please enter the label for Captcha.'),
-      '#default_value' => $this->get('captcha'),
-      '#translatable' => TRUE,
-    ];
-
-    $form['reg_form']['submit_button'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Please enter the label for Submit button.'),
-      '#default_value' => $this->get('submit_button'),
+      '#title' => $this->t('Playtech Casino Secret Key'),
+      '#default_value' => $this->get('secret_key'),
       '#translatable' => TRUE,
     ];
   }
