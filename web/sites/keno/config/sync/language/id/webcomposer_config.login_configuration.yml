@@ -1,21 +1,28 @@
 autologout_box_content:
+  format: basic_html
   value: "<p>Sesi Anda akan habis dalam {seconds}. Apakah Anda ingin melanjutkan sesi Anda?</p>\r\n"
-  format: basic_html
 notification_content:
-  value: "<p>Sesi Anda telah habis karena tidak aktif.</p>\r\n"
   format: basic_html
+  value: "<p>Sesi Anda telah habis karena tidak aktif.</p>\r\n"
 lightbox_blurb: 'Belum menjadi anggota Dafabet?'
+advanced__active_tab: edit-login-form-details
+rememberme_label: ''
+login_page_blurb: ''
+mobile_login_button_label: ''
+mobile_cant_login_url: ''
+username_placeholder: Masuk
 password_placeholder: 'Kata Sandi'
+login_bottom_label: LOGIN
 error_message_blank_username: 'Username Anda wajib diisi.'
 error_message_blank_password: 'Kata sandi Anda wajib diisi.'
 error_message_blank_passname: 'Silahkan periksa semua kolom dan coba lagi.'
 error_message_invalid_passname: 'Maaf, username dan/atau kata sandi salah. Silahkan coba lagi.'
 error_message_service_not_available: 'Layanan tidak tersedia.'
-error_message_account_suspended: 'Akun terkunci. Silahkan hubungi Layanan Pelanggan kami.'
-error_message_account_locked: 'Akun terkunci. Silahkan hubungi Layanan Pelanggan kami.'
+error_message_account_suspended: 'Akun anda telah dikunci karena kegagalan login. Silakan hubungi Layanan Pelanggan kami'
+error_message_account_locked: 'Akun anda telah dikunci karena kegagalan login. Silakan hubungi Layanan Pelanggan kami'
 autologout_box_title: PERINGATAN
 affirmative_button_text: YA
 negative_button_text: TIDAK
 notification_title: NOTIFIKASI
 notification_window_title: 'Sesi Berakhir'
-username_placeholder: 'Nama Akun'
+mobile_login_url: 'https://stg-m.elysium-dfbt.com/'

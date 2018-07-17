@@ -1,5 +1,9 @@
+content_types:
+  page:
+    label: 通用页面
 sitemap_title: 网站地图
 sitemap_home_label: 主页
 sitemap_promotions_label: 优惠活动
 sitemap_mobile_label: 手机版
 sitemap_basic_pages_label: 通用页面
+sitemap_links: "主页|/\r\n优惠活动|/promotions\r\n手机版|/{domain:entry}/{domain:lang_token}/mobile{tracking.token}"

@@ -1,7 +1,8 @@
 opus_game_loader_content:
+  format: basic_html
   value: "<p>มีข้อผิดพลาดเกิดขึ้น หน้าต่างนี้จะถูกปิดในอีกสักครู่ กรุณาลองอีกครั้ง</p>\r\n"
-  format: basic_html
-opus_unsupported_currencies_title: ไม่รองรับสกุลเงิน
 opus_unsupported_currencies_message:
-  value: "<p>ขออภัย สกุลเงินของคุณไม่สามารถใช้งานได้ กรุณาเลือกการเดิมพันอื่น</p>\r\n"
   format: basic_html
+  value: "<p>ขออภัย สกุลเงินของคุณไม่สามารถใช้งานได้ กรุณาเลือกการเดิมพันอื่น</p>\r\n"
+opus_unsupported_currencies_title: ไม่รองรับสกุลเงิน
+opus_unsupported_currencies_button: Ok

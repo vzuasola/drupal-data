@@ -1,5 +1,9 @@
+content_types:
+  page:
+    label: ข้อกำหนดทั่วไป
 sitemap_title: แผนผังเวปไซต์
 sitemap_home_label: หน้าแรก
 sitemap_promotions_label: โปรโมชั่น
 sitemap_mobile_label: มือถือ
 sitemap_basic_pages_label: ข้อกำหนดทั่วไป
+sitemap_links: "หน้าแรก|/\r\nโปรโมชั่น|/promotions\r\nมือถือ|/{domain:entry}/{domain:lang_token}/mobile{tracking.token}"

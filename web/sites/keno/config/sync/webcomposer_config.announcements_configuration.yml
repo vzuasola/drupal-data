@@ -1,4 +1,6 @@
-title: Keno
-default_message: 'Write message here'
+title: LOTTERY
+default_message: 'There are no new announcements'
 _core:
   default_config_hash: u-mmj8R74l_Z3n3mLNALgkEAJqs46EdIc6Wi16DO0l4
+see_all: 'See All'
+dismiss_all: Dismiss

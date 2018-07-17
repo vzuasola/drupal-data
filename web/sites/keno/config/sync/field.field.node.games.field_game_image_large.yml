@@ -11,9 +11,9 @@ dependencies:
 third_party_settings:
   content_translation:
     translation_sync:
-      alt: alt
-      title: title
-      file: '0'
+      file: file
+      alt: '0'
+      title: '0'
 id: node.games.field_game_image_large
 field_name: field_game_image_large
 entity_type: node

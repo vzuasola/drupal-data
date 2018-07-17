@@ -2,3 +2,6 @@ trust_element_title: '이전과 다른 키노를 즐겨보세요'
 trust_element_content:
   value: "<p>이기고 플레이할 수 있는 방법이 많이 있어요. 선택할 수 있는 9가지 범위 및 7가지 배팅 유형과 각각의 지불 계산 및 요금으로 2분마다 큰 상금을 받으실 수 있어요!</p>\r\n"
   format: basic_html
+play_text: '지금 플레이하기'
+game_info_text: '더 보기'
+free_play_text: '무료 플레이'
