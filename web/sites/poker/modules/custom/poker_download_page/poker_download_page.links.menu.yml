@@ -1,0 +1,20 @@
+poker_download_page.list:
+  title: 'Poker Download Page'
+  description: 'Configure the Download Page items.'
+  parent: system.admin_config
+  route_name: poker_download_page.admin_settings
+  weight: 1500
+
+# Download page entity menu items definition
+entity.download_page_entity.collection:
+  title: 'Download page entity list'
+  route_name: entity.download_page_entity.collection
+  description: 'List Download page entity entities'
+  parent: poker_download_page.list
+  weight: 100
+
+download_page_entity.admin.structure.settings:
+  title: Download page entity settings
+  description: 'Configure Download page entity entities'
+  route_name: download_page_entity.settings
+  parent: poker_download_page.list
