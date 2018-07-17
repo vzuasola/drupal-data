@@ -1,0 +1,11 @@
+my_account_form_profile.change_password:
+  title: 'My Account Change Password Translation'
+  base_route_name: my_account_form_profile.change_password_form
+  names:
+    - my_account_form_profile.change_password
+
+my_account_form_profile.profile:
+  title: 'My Account Profile Translation'
+  base_route_name: my_account_form_profile.profile
+  names:
+    - my_account_form_profile.profile
