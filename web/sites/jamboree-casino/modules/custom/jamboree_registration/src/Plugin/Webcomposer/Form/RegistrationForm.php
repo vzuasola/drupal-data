@@ -87,6 +87,12 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
               'F|Female',
             ]),
           ],
+          'data' => [
+            '#title' => 'Gender',
+            '#type' => 'textarea',
+            '#description' => 'Default Value for Gender',
+            '#default_value' => "M",
+          ],
         ],
       ],
       'email' => [
@@ -147,6 +153,13 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
             '#type' => 'textfield',
             '#description' => 'The Label for Currency field',
           ],
+          'data' => [
+            '#title' => 'Currency Default Value',
+            '#type' => 'textfield',
+            '#description' => 'Currency Default Value',
+            '#default_value' => 'USD'
+          ],
+
         ],
       ],
       'country' => [
@@ -231,6 +244,18 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
           ],
         ],
       ],
+      'wrapper_start' => [
+        'name' => 'Wrapper Start',
+        'type' => 'markup',
+        'settings' => [
+          'markup' => [
+            '#title' => 'Opening Wrapper',
+            '#type' => 'textarea',
+            '#description' => 'A Markup text breakline for registration form',
+            '#default_value' => '<div class ="fieldset-wrapper">',
+          ],
+        ],
+      ],
       'term_conditions' => [
         'name' => 'Accept Terms',
         'type' => 'checkbox',
@@ -252,6 +277,18 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
             '#type' => 'textarea',
             '#description' => 'A Markup text for Promotions',
             '#default_value' => 'I would like to receive information about promotions and updates.',
+          ],
+        ],
+      ],
+      'wrapper_end' => [
+        'name' => 'Wrapper End',
+        'type' => 'markup',
+        'settings' => [
+          'markup' => [
+            '#title' => 'Wrapper End',
+            '#type' => 'textarea',
+            '#description' => 'Closing wrapper',
+            '#default_value' => '</div>',
           ],
         ],
       ],

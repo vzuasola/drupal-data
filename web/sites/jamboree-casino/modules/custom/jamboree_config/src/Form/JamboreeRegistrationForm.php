@@ -38,6 +38,7 @@ class JamboreeRegistrationForm extends FormBase {
       '#title' => t('Registration Configuration'),
     ];
 
+    $this->sectionRegistrationSettings($form);
     $this->sectionRegistrationForm($form);
     $this->sectionStep2($form);
     $this->sectionStep3($form);
@@ -48,31 +49,164 @@ class JamboreeRegistrationForm extends FormBase {
   /**
    * {@inheritdoc}
    */
-  private function sectionRegistrationForm(array &$form) {
+  private function sectionRegistrationSettings(array &$form) {
     $form['reg_form_settings'] = [
       '#type' => 'details',
-      '#title' => t('Registration Form Settings'),
+      '#title' => t('Registration Form Playtech Settings'),
       '#group' => 'advanced',
     ];
     $form['reg_form_settings']['reg_form_host'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Playtech Registration API Hostname'),
       '#default_value' => $this->get('reg_form_host'),
-      '#translatable' => TRUE,
     ];
     $form['reg_form_settings']['casino_name'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Playtech Casino Name'),
       '#default_value' => $this->get('casino_name'),
-      '#translatable' => TRUE,
     ];
 
     $form['reg_form_settings']['secret_key'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Playtech Casino Secret Key'),
       '#default_value' => $this->get('secret_key'),
+    ];
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  private function sectionRegistrationForm(array &$form) {
+    // form setting
+    $form['reg_form'] = [
+      '#type' => 'details',
+      '#title' => t('Registration Form'),
+      '#group' => 'advanced',
+    ];
+    $form['reg_form']['form'] = [
+      '#type' => 'fieldset',
+      '#title' => t('Registration Form'),
+    ];
+    $form['reg_form']['form']['reg_form_title'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Registration Page Title'),
+      '#default_value' => $this->get('reg_form_title'),
       '#translatable' => TRUE,
     ];
+    // error message setting
+    $form['reg_form']['errors'] = [
+      '#type' => 'fieldset',
+      '#title' => t('Registration Error Messages'),
+    ];
+    $form['reg_form']['errors']['error_firstname'] = [
+      '#type' => 'fieldset',
+      '#title' => t('Registration Error Message for Firstname Field'),
+      '#default_value' => $this->get('error_firstname'),
+      '#translatable' => TRUE,
+    ];
+    $form['reg_form']['errors']['error_lastname'] = [
+      '#type' => 'textfield',
+      '#title' => t('Registration Error Message for Lastname Field'),
+      '#default_value' => $this->get('error_lastname'),
+      '#translatable' => TRUE,
+    ];
+    $form['reg_form']['errors']['error_password'] = [
+      '#type' => 'textfield',
+      '#title' => t('Registration Error Message for Password Field'),
+      '#default_value' => $this->get('error_password'),
+      '#translatable' => TRUE,
+    ];
+    $form['reg_form']['errors']['error_confirm_password'] = [
+      '#type' => 'textfield',
+      '#title' => t('Registration Error Message for Confirm Password Field'),
+      '#default_value' => $this->get('error_confirm_password'),
+      '#translatable' => TRUE,
+    ];
+    $form['reg_form']['errors']['error_email'] = [
+      '#type' => 'textfield',
+      '#title' => t('Registration Error Message for Email Field'),
+      '#default_value' => $this->get('error_email'),
+      '#translatable' => TRUE,
+    ];
+    $form['reg_form']['errors']['error_confirm_email'] = [
+      '#type' => 'textfield',
+      '#title' => t('Registration Error Message for Confirm Email Field'),
+      '#default_value' => $this->get('error_confirm_email'),
+      '#translatable' => TRUE,
+    ];
+    $form['reg_form']['errors']['error_birthdate'] = [
+      '#type' => 'textfield',
+      '#title' => t('Registration Error Message for Birthdate Field'),
+      '#default_value' => $this->get('error_birthdate'),
+      '#translatable' => TRUE,
+    ];
+    $form['reg_form']['errors']['error_phone'] = [
+      '#type' => 'textfield',
+      '#title' => t('Registration Error Message for Phone Field'),
+      '#default_value' => $this->get('error_phone'),
+      '#translatable' => TRUE,
+    ];
+    $form['reg_form']['errors']['error_currency'] = [
+      '#type' => 'textfield',
+      '#title' => t('Registration Error Message for Currency Field'),
+      '#default_value' => $this->get('error_currency'),
+      '#translatable' => TRUE,
+    ];
+    $form['reg_form']['errors']['error_country'] = [
+      '#type' => 'textfield',
+      '#title' => t('Registration Error Message for Country Field'),
+      '#default_value' => $this->get('error_country'),
+      '#translatable' => TRUE,
+    ];
+    $form['reg_form']['errors']['error_firstname'] = [
+      '#type' => 'textfield',
+      '#title' => t('Registration Error Message for Firstname Field'),
+      '#default_value' => $this->get('error_firstname'),
+      '#translatable' => TRUE,
+    ];
+    $form['reg_form']['errors']['error_prefecture'] = [
+      '#type' => 'textfield',
+      '#title' => t('Registration Error Message for Prefecture Field'),
+      '#default_value' => $this->get('error_prefecture'),
+      '#translatable' => TRUE,
+    ];
+    $form['reg_form']['errors']['error_city'] = [
+      '#type' => 'textfield',
+      '#title' => t('Registration Error Message for City Field'),
+      '#default_value' => $this->get('error_city'),
+      '#translatable' => TRUE,
+    ];
+    $form['reg_form']['errors']['error_zipcode'] = [
+      '#type' => 'textfield',
+      '#title' => t('Registration Error Message for Zip code Field'),
+      '#default_value' => $this->get('error_zipcode'),
+      '#translatable' => TRUE,
+    ];
+    $form['reg_form']['errors']['error_address'] = [
+      '#type' => 'textfield',
+      '#title' => t('Registration Error Message for Address Field'),
+      '#default_value' => $this->get('error_address'),
+      '#translatable' => TRUE,
+    ];
+    $form['reg_form']['errors']['error_couponcode'] = [
+      '#type' => 'textfield',
+      '#title' => t('Registration Error Message for Coupon Code Field'),
+      '#default_value' => $this->get('error_couponcode'),
+      '#translatable' => TRUE,
+    ];
+    $form['reg_form']['errors']['error_term_conditions'] = [
+      '#type' => 'textfield',
+      '#title' => t('Registration Error Message for Terms and Conditions Field'),
+      '#default_value' => $this->get('error_term_conditions'),
+      '#translatable' => TRUE,
+    ];
+    $form['reg_form']['errors']['error_promotions'] = [
+      '#type' => 'textfield',
+      '#title' => t('Registration Error Message for Promotions Field'),
+      '#default_value' => $this->get('error_promotions'),
+      '#translatable' => TRUE,
+    ];
+    //captcha error
   }
 
   /**
