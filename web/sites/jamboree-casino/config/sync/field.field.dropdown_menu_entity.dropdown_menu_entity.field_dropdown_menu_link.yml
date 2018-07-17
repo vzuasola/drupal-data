@@ -6,6 +6,8 @@ dependencies:
     - field.storage.dropdown_menu_entity.field_dropdown_menu_link
   module:
     - jamboree_dropdown_menu
+_core:
+  default_config_hash: BHOXOOIMtrzZZIp2i8zk-e4y0xDbeCk3EHhST_ptMyU
 id: dropdown_menu_entity.dropdown_menu_entity.field_dropdown_menu_link
 field_name: field_dropdown_menu_link
 entity_type: dropdown_menu_entity

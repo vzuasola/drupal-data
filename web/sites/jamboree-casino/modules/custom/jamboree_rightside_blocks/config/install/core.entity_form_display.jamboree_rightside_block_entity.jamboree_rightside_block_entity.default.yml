@@ -1,0 +1,80 @@
+uuid: 45a012c3-b5be-4389-b108-4364e0549d05
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.jamboree_rightside_block_entity.jamboree_rightside_block_entity.field_content_type
+    - field.field.jamboree_rightside_block_entity.jamboree_rightside_block_entity.field_hide_title
+    - field.field.jamboree_rightside_block_entity.jamboree_rightside_block_entity.field_image_banner
+    - field.field.jamboree_rightside_block_entity.jamboree_rightside_block_entity.field_image_banner_link
+    - field.field.jamboree_rightside_block_entity.jamboree_rightside_block_entity.field_image_banner_link_target
+    - field.field.jamboree_rightside_block_entity.jamboree_rightside_block_entity.field_log_in_state
+    - field.field.jamboree_rightside_block_entity.jamboree_rightside_block_entity.field_title
+    - image.style.thumbnail
+  module:
+    - image
+    - jamboree_rightside_blocks
+id: jamboree_rightside_block_entity.jamboree_rightside_block_entity.default
+targetEntityType: jamboree_rightside_block_entity
+bundle: jamboree_rightside_block_entity
+mode: default
+content:
+  field_content_type:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_hide_title:
+    weight: 4
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_image_banner:
+    weight: 5
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_image_banner_link:
+    weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_image_banner_link_target:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_log_in_state:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_title:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+hidden:
+  name: true
+  user_id: true

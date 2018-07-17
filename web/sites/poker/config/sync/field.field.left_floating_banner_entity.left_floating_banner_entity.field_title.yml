@@ -1,0 +1,22 @@
+uuid: 47daea8e-57f8-41b2-ba53-cf124322ca9a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.left_floating_banner_entity.field_title
+  module:
+    - webcomposer_floating_banners
+_core:
+  default_config_hash: O0NpOcbc6wsx4cczCjBPlRhg2cCGXsz7D0UVjR-DSZE
+id: left_floating_banner_entity.left_floating_banner_entity.field_title
+field_name: field_title
+entity_type: left_floating_banner_entity
+bundle: left_floating_banner_entity
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

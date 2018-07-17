@@ -59,3 +59,7 @@ casino_games.games_configuration:
       type: text_format
       label: 'PAS Error Lightbox Content'
       translatable: true
+    drawer_switch:
+      type: label
+      label: 'Drawer switch'
+      translatable: true

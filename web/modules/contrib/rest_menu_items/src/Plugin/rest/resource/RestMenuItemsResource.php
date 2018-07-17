@@ -133,12 +133,6 @@ class RestMenuItemsResource extends ResourceBase {
    */
   public function get($menu_name = NULL) {
     if ($menu_name) {
-      // Setup permissions.
-      // $permission = 'View published content';
-      // if (!$this->currentUser->hasPermission($permission)) {
-      //   throw new AccessDeniedHttpException();
-      // }
-
       // Setup variables.
       $this->setup();
 

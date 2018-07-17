@@ -1055,7 +1055,8 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#size' => 25,
             '#required' => TRUE,
             '#description' => $this->t('Text for Verify Link'),
-            '#default_value' => $myAccountConfigValue['verify_text_field'],
+            '#default_value' => $this->get('verify_text'),
+            '#translatable' => true,
         ];
 
         $form['field_configuration']['field_labels_sms_verification']['modal_verify_header_text'] = [
@@ -1385,7 +1386,15 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#tree' => TRUE,
         ];
 
-        $form['field_configuration']['field_labels_validation_configuration']['password_validation']['password_format_validation'] = [
+        $form['field_labels_validation_configuration']['password_validation']['required_validation'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Required Error Message'),
+            '#required' => true,
+            '#default_value' => $this->get('required_validation'),
+            '#translatable' => true,
+        ];
+
+        $form['field_labels_validation_configuration']['password_validation']['password_format_validation'] = [
             '#type' => 'textfield',
             '#title' => $this->t('Password Format Error Message'),
             '#required' => TRUE,

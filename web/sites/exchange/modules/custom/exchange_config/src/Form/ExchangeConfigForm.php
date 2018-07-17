@@ -10,7 +10,6 @@ use Drupal\file\Entity\File;
  * Configuration Form for exchange Configuration.
  */
 class ExchangeConfigForm extends ConfigFormBase {
-
   /**
    * {@inheritdoc}
    */
@@ -94,6 +93,7 @@ class ExchangeConfigForm extends ConfigFormBase {
       '#title' => t('Blocking Country'),
       '#group' => 'advanced',
     ];
+
     $form['exchange_blocking_country']['blocking_country_not_found_title'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Title'),
@@ -146,18 +146,19 @@ class ExchangeConfigForm extends ConfigFormBase {
       '#default_value' => $exchangecurrency['value'],
       '#format' => $exchangecurrency['format'],
     ];
+
     $form['exchange_configuration_mobile'] = [
       '#type' => 'details',
       '#title' => ' Mobile Site Url',
       '#group' => 'advanced',
     ];
-
     $form['exchange_configuration_mobile']['base_url'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Mobile Site Url'),
       '#default_value' => $config->get('base_url') ?? 'N/A',
       '#required' => true,
-    ]; 
+    ];
+
     return parent::buildForm($form, $form_state);
   }
 
@@ -178,6 +179,7 @@ class ExchangeConfigForm extends ConfigFormBase {
       'blocking_currency_not_found_image',
       'base_url',
     ];
+
     foreach ($exchangeConfig as $keys) {
       if ($keys == 'exchange_background') {
         $fid = $form_state->getValue('exchange_background');
@@ -194,6 +196,7 @@ class ExchangeConfigForm extends ConfigFormBase {
           $this->config('exchange_config.exchange_configuration')->set("exchange_background_image_url", null);
         }
       }
+
       if ($keys == 'blocking_country_not_found_image') {
         $fid = $form_state->getValue('blocking_country_not_found_image');
         if ($fid) {
@@ -210,6 +213,7 @@ class ExchangeConfigForm extends ConfigFormBase {
           $this->config('exchange_config.exchange_configuration')->set("blocking_country_not_found_image_url", null);
         }
       }
+
       if ($keys == 'blocking_currency_not_found_image') {
         $fid = $form_state->getValue('blocking_currency_not_found_image');
         if ($fid) {
@@ -226,8 +230,10 @@ class ExchangeConfigForm extends ConfigFormBase {
           $this->config('exchange_config.exchange_configuration')->set("blocking_currency_not_found_image_url", null);
         }
       }
+
       $this->config('exchange_config.exchange_configuration')->set($keys, $form_state->getValue($keys))->save();
     }
+
     parent::submitForm($form, $form_state);
   }
 }

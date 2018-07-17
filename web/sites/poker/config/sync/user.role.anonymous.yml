@@ -1,0 +1,35 @@
+uuid: 96dec2e4-8641-470d-afee-4c26cdb2ffaf
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: j5zLMOdJBqC0bMvSdth5UebkprJB8g_2FXHqhfpJzow
+id: anonymous
+label: 'Anonymous user'
+weight: 0
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access site-wide contact form'
+  - 'administer rest resources'
+  - 'restful get affiliate_rest_resource'
+  - 'restful get casino_config_rest_resource'
+  - 'restful get configuration_resource'
+  - 'restful get custom_block_resource'
+  - 'restful get domain_placeholder'
+  - 'restful get entity_bundle_fields_resource'
+  - 'restful get entity_bundle_weight_resource'
+  - 'restful get form_resource'
+  - 'restful get language_rest_resource'
+  - 'restful get marketing_script'
+  - 'restful get product_tabs'
+  - 'restful get rest_menu_item'
+  - 'restful get webcomposer_config'
+  - 'restful get webcomposer_config_resource'
+  - 'restful get webform_rest_elements'
+  - 'restful get webform_rest_list'
+  - 'restful post user_registration'
+  - 'restful post webform_rest_submit'
+  - 'search content'
+  - 'use text format restricted_html'

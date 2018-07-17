@@ -8,5 +8,6 @@ ignored_config_entities:
   12: 'language.*'
   14: 'entrypage_config.*'
   16: 'webcomposer_affilates.*'
+  18: 'contact_us_config.*'
 _core:
   default_config_hash: UVH1aJ4b44UM-VdPVN7hNNuuVqfReJxwfVeDQH1Hvsk

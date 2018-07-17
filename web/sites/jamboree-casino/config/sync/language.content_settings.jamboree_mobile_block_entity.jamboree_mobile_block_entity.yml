@@ -1,0 +1,17 @@
+uuid: 854ade97-f463-4577-bcb4-0656c20ea8e3
+langcode: en
+status: true
+dependencies:
+  module:
+    - content_translation
+    - jamboree_mobile_blocks
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: jamboree_mobile_block_entity.jamboree_mobile_block_entity
+target_entity_type_id: jamboree_mobile_block_entity
+target_bundle: jamboree_mobile_block_entity
+default_langcode: site_default
+language_alterable: true

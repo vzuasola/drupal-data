@@ -1,0 +1,6 @@
+settings:
+  allowed_values:
+    2:
+      label: 左
+    3:
+      label: 右

@@ -2,6 +2,8 @@ uuid: 49dcd9b6-137a-482a-a80e-692049821f55
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: TG10M55sSUHnR2EP5XOUhNWMTCupHVVRdOQLS_hPRzQ
 id: dropdown_menu_item
 label: 'Dropdown Menu Items'
 behavior_plugins: {  }

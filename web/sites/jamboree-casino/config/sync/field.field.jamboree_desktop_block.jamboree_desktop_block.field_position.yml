@@ -1,0 +1,21 @@
+uuid: fd01253c-aafe-4ea6-ad7e-05f9daabcd24
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.jamboree_desktop_block.field_position
+  module:
+    - jamboree_desktop_blocks
+    - options
+id: jamboree_desktop_block.jamboree_desktop_block.field_position
+field_name: field_position
+entity_type: jamboree_desktop_block
+bundle: jamboree_desktop_block
+label: Position
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
