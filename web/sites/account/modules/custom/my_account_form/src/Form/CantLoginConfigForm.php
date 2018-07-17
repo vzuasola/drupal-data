@@ -57,12 +57,10 @@ class CantLoginConfigForm extends FormBase {
       '#group' => 'my_account_group',
     ];
 
-    $content = $this->get('page_subtitle');
     $form['cant_login_general_config']['page_subtitle'] = [
-      '#type' => 'text_format',
+      '#type' => 'textfield',
       '#title' => $this->t('Page Sub-Title'),
-      '#default_value' => $content['value'],
-      '#format' => $content['format'],
+      '#default_value' => $this->get('page_subtitle'),
       '#required' => TRUE,
       '#translatable' => TRUE,
     ];
