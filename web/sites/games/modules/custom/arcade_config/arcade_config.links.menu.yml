@@ -1,0 +1,25 @@
+arcade_config.admin_settings:
+  title: 'Arcade Configuration'
+  description: 'Provides an interface for managing arcade games.'
+  parent: system.admin_config
+  route_name: arcade_config.admin_settings
+
+arcade_config.arcade_configuration:
+  title: 'Arcade Custom Configuration'
+  route_name: arcade_config.games_configuration
+  description: 'Arcade Custom Configuration'
+  parent: arcade_config.admin_settings
+
+arcade_config.list.games:
+  title: 'Manage Arcade Games'
+  parent: arcade_config.admin_settings
+  description: 'Manage & Sort Arcade Games'
+  route_name: view.arcade_game_listing.page_1
+
+arcade_config.list.categories:
+  title: 'Manage Arcade Game Categories'
+  parent: arcade_config.admin_settings
+  description: 'Manage Arcade Game Categories'
+  route_name: entity.taxonomy_vocabulary.overview_form
+  route_parameters:
+    taxonomy_vocabulary: 'arcade_game_category'

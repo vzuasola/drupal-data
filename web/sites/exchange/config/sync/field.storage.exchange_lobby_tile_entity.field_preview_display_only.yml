@@ -1,0 +1,18 @@
+uuid: e71ec692-4992-4cf4-9660-c4c4572dca18
+langcode: hi
+status: true
+dependencies:
+  module:
+    - exchange_lobby_tile
+id: exchange_lobby_tile_entity.field_preview_display_only
+field_name: field_preview_display_only
+entity_type: exchange_lobby_tile_entity
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

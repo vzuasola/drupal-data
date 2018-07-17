@@ -1,0 +1,30 @@
+add grid menu entity entities:
+  title: 'Create new Grid menu entity entities'
+
+administer grid menu entity entities:
+  title: 'Administer Grid menu entity entities'
+  description: 'Allow to access the administration form to configure Grid menu entity entities.'
+  restrict access: true
+
+delete grid menu entity entities:
+  title: 'Delete Grid menu entity entities'
+
+edit grid menu entity entities:
+  title: 'Edit Grid menu entity entities'
+
+view published grid menu entity entities:
+  title: 'View published Grid menu entity entities'
+
+view unpublished grid menu entity entities:
+  title: 'View unpublished Grid menu entity entities'
+
+view all grid menu entity revisions:
+  title: 'View all Grid menu entity revisions'
+
+revert all grid menu entity revisions:
+  title: 'Revert all Grid menu entity revisions'
+  description: 'Role requires permission <em>view Grid menu entity revisions</em> and <em>edit rights</em> for grid menu entity entities in question or <em>administer grid menu entity entities</em>.'
+
+delete all grid menu entity revisions:
+  title: 'Delete all revisions'
+  description: 'Role requires permission to <em>view Grid menu entity revisions</em> and <em>delete rights</em> for grid menu entity entities in question or <em>administer grid menu entity entities</em>.'

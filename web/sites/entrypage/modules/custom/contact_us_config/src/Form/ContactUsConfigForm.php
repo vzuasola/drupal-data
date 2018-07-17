@@ -88,7 +88,7 @@ class ContactUsConfigForm extends FormBase {
     $form['success']['success_title'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Title'),
-      '#description' => $this->t('Adds page title to the contact us message.'),
+      '#description' => $this->t('Adds page title to the contact us success message.'),
       '#default_value' => $this->get('success_title'),
       '#required' => TRUE,
       '#translatable' => TRUE,
@@ -114,8 +114,17 @@ class ContactUsConfigForm extends FormBase {
 
     $form['settings'] = [
       '#type' => 'details',
-      '#title' => t('Submit Settings'),
+      '#title' => t('Contact Us Form Settings'),
       '#group' => 'advanced',
+    ];
+
+    $form['settings']['form_title'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Title'),
+      '#description' => $this->t('Adds page title to the contact us form.'),
+      '#default_value' => $this->get('form_title'),
+      '#required' => TRUE,
+      '#translatable' => TRUE,
     ];
 
     $form['settings']['email_template'] = [
@@ -128,20 +137,14 @@ class ContactUsConfigForm extends FormBase {
             <li>[-firstname-] - First name of the player</li>
             <li>[-lastname-] - Last name of the player</li>
             <li>[-username-] - Username of the player</li>
-            <li>[-email-] - Email Address the player inputted (for post login this is automatic)</li>
+            <li>[-email-] - Email Address the player inputted</li>
             <li>[-product-] - Product the player selected</li>
             <li>[-subject-] - Subject the player selected</li>
             <li>[-message-] - Main message of the player</li>
-            <li>[-submissiondate-] - This will use the "long" format</li>
-            <li>[-ip_address-] - IP address of the player</li>
+            <li>[-date-] - This date the form is submitted</li>
+            <li>[-ip-] - IP address of the player</li>
+            <li>[-language-] - Selected language of the player</li>
         </ul>'
-    ];
-
-    $form['settings']['email_from'] = [
-        '#type' => 'textfield',
-        '#title' => t('Email from'),
-        '#default_value' => $this->get('email_from'),
-        '#description' => 'The "Sender" of the email. This will default to the users Firstname and Last Name'
     ];
 
     $form['settings']['generic_error'] = [

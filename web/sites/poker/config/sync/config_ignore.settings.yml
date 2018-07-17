@@ -1,4 +1,6 @@
 ignored_config_entities:
-  - config_ignore.settings
+  0: 'webcomposer_config.*'
+  2: 'poker_config.*'
+  4: config_ignore.settings
 _core:
   default_config_hash: UVH1aJ4b44UM-VdPVN7hNNuuVqfReJxwfVeDQH1Hvsk
