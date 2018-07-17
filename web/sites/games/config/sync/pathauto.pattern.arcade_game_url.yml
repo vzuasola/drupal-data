@@ -1,0 +1,22 @@
+uuid: ce99f54d-9a5b-4607-a077-7a61deba9bee
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: arcade_game_url
+label: arcade-game-url
+type: 'canonical_entities:node'
+pattern: '/arcade/[node:title]'
+selection_criteria:
+  94b67463-7920-4f65-9aba-1d4ffdfafef2:
+    id: node_type
+    bundles:
+      arcade_game: arcade_game
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 94b67463-7920-4f65-9aba-1d4ffdfafef2
+selection_logic: and
+weight: -5
+relationships: {  }
