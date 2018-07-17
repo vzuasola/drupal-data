@@ -165,6 +165,18 @@ display:
           entity_field: langcode
           plugin_id: language
       sorts:
+        field_type_value:
+          id: field_type_value
+          table: download_page_entity__field_type
+          field: field_type_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: standard
         weight:
           id: weight
           table: draggableviews_structure

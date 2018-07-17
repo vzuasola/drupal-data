@@ -34,17 +34,24 @@ class DownloadPageConfigurationForm extends FormBase {
    * {@inheritdoc}
    */
   public function form(array $form, FormStateInterface $form_state) {
-    $form['client_tab_label'] = [
+    $form['title'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('Game Client Tab Label'),
-      '#default_value' => $this->get('client_tab_label'),
+      '#title' => $this->t('Page Title'),
+      '#default_value' => $this->get('page_title'),
       '#translatable' => TRUE,
     ];
 
-    $form['mobile_tab_label'] = [
+    $form['client_label'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('Mobile Tab Label'),
-      '#default_value' => $this->get('mobile_tab_label'),
+      '#title' => $this->t('Game Client Label'),
+      '#default_value' => $this->get('client_label'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['mobile_label'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Mobile Label'),
+      '#default_value' => $this->get('mobile_label'),
       '#translatable' => TRUE,
     ];
 
