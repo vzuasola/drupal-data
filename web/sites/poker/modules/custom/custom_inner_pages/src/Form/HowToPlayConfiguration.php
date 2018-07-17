@@ -2,20 +2,28 @@
 
 namespace Drupal\custom_inner_pages\Form;
 
-use Drupal\Core\Form\ConfigFormBase;
+use Drupal\webcomposer_config_schema\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\file\Entity\File;
 
 /**
- * Avaya chat configuration class
+ * How to Play form plugin
+ *
+ * @WebcomposerConfigPlugin(
+ *   id = "how_to_play_form",
+ *   route = {
+ *     "title" = "How to Play Configuration Form",
+ *     "path" = "/admin/config/poker/custom-inner-pages/how-to-play",
+ *   },
+ *   menu = {
+ *     "title" = "How to Play Page Configuration",
+ *     "description" = "Provides configuration for How to Play Page",
+ *     "parent" = "custom_inner_pages.list",
+ *     "weight" = -5
+ *   },
+ * )
  */
-class HowToPlayConfiguration extends ConfigFormBase {
-  /**
-   * @inheritdoc
-   */
-  public function getFormId() {
-    return 'how_to_play_form';
-  }
+class HowToPlayConfiguration extends FormBase {
 
   /**
    * @inheritdoc
@@ -27,7 +35,7 @@ class HowToPlayConfiguration extends ConfigFormBase {
   /**
    * @inheritdoc
    */
-  public function buildForm(array $form, FormStateInterface $form_state) {
+  public function form(array $form, FormStateInterface $form_state) {
     $config = $this->config('poker_config.how_to_play_page');
 
     $form['how_to_play_page_tab'] = array(
@@ -40,61 +48,9 @@ class HowToPlayConfiguration extends ConfigFormBase {
     $this->secondTab($form, $config);
     $this->thirdTab($form, $config);
 
-    return parent::buildForm($form, $form_state);
+    return $form;
   }
 
-  /**
-   * Implements a form submit handler.
-   *
-   * @param array $form
-   *   The render array of the currently built form.
-   * @param FormStateInterface $form_state
-   *   Object describing the current state of the form.
-   */
-  public function submitForm(array &$form, FormStateInterface $form_state) {
-    $keys = [
-      'page_title',
-      'first_tab_title',
-      'first_tab_id',
-      'first_tab_icon',
-      'first_tab_icon_hover',
-      'first_tab_content',
-      'second_tab_title',
-      'second_tab_id',
-      'second_tab_icon',
-      'second_tab_icon_hover',
-      'second_tab_content',
-      'third_tab_title',
-      'third_tab_id',
-      'third_tab_icon',
-      'third_tab_icon_hover',
-      'third_tab_content',
-    ];
-
-    foreach ($keys as $key) {
-      if ($key == 'first_tab_icon' ||
-          $key == 'first_tab_icon_hover' ||
-          $key == 'second_tab_icon' ||
-          $key == 'second_tab_icon_hover' ||
-          $key == 'third_tab_icon' ||
-          $key == 'third_tab_icon_hover') {
-        $fid = $form_state->getValue($key);
-        if ($fid) {
-            $file = File::load($fid[0]);
-            $file->setPermanent();
-            $file->save();
-            $file_usage = \Drupal::service('file.usage');
-            $file_usage->add($file, 'casino_config', 'image', $fid[0]);
-
-            $this->config('poker_config.how_to_play_page')->set($key . '_file', file_create_url($file->getFileUri()))->save();
-        }
-      }
-
-      $this->config('poker_config.how_to_play_page')->set($key, $form_state->getValue($key))->save();
-    }
-
-    parent::submitForm($form, $form_state);
-  }
 
   private function generalConfig(&$form, $config) {
     $form['gen_config'] = array(
@@ -110,6 +66,7 @@ class HowToPlayConfiguration extends ConfigFormBase {
       '#description' => $this->t('This will appear in browser page tab title'),
       '#default_value' => $config->get('page_title'),
       '#required' => TRUE,
+      '#translatable' => TRUE,
     );
   }
 
@@ -127,6 +84,7 @@ class HowToPlayConfiguration extends ConfigFormBase {
       '#description' => $this->t('Add Tab Title to How to play first tab'),
       '#default_value' => $config->get('first_tab_title'),
       '#required' => TRUE,
+      '#translatable' => TRUE,
     );
 
     $form['first_tab']['first_tab_id'] = array(
@@ -135,6 +93,7 @@ class HowToPlayConfiguration extends ConfigFormBase {
       '#description' => $this->t('Add Tab ID of secondary menu on How to play first tab'),
       '#default_value' => $config->get('first_tab_id'),
       '#required' => TRUE,
+      '#translatable' => TRUE,
     );
 
     $form['first_tab']['first_tab_icon'] = [
@@ -168,6 +127,7 @@ class HowToPlayConfiguration extends ConfigFormBase {
       '#description' => $this->t('The text that will be displayed as short content of the tab.'),
       '#default_value' => $firstTabContent['value'],
       '#format' => $firstTabContent['format'],
+      '#translatable' => TRUE,
     );
   }
 
@@ -185,6 +145,7 @@ class HowToPlayConfiguration extends ConfigFormBase {
       '#description' => $this->t('Add Tab Title to How to play second tab'),
       '#default_value' => $config->get('second_tab_title'),
       '#required' => TRUE,
+      '#translatable' => TRUE,
     );
 
     $form['second_tab']['second_tab_id'] = array(
@@ -193,6 +154,7 @@ class HowToPlayConfiguration extends ConfigFormBase {
       '#description' => $this->t('Add Tab ID of secondary menu on How to play second tab'),
       '#default_value' => $config->get('second_tab_id'),
       '#required' => TRUE,
+      '#translatable' => TRUE,
     );
 
     $form['second_tab']['second_tab_icon'] = [
@@ -226,6 +188,7 @@ class HowToPlayConfiguration extends ConfigFormBase {
       '#description' => $this->t('The text that will be displayed as short content of the tab.'),
       '#default_value' => $secondTabContent['value'],
       '#format' => $secondTabContent['format'],
+      '#translatable' => TRUE,
     );
   }
 
@@ -243,6 +206,7 @@ class HowToPlayConfiguration extends ConfigFormBase {
       '#description' => $this->t('Add Tab Title to How to play third tab'),
       '#default_value' => $config->get('third_tab_title'),
       '#required' => TRUE,
+      '#translatable' => TRUE,
     );
 
     $form['third_tab']['third_tab_id'] = array(
@@ -251,6 +215,7 @@ class HowToPlayConfiguration extends ConfigFormBase {
       '#description' => $this->t('Add Tab ID of secondary menu on How to play third tab'),
       '#default_value' => $config->get('third_tab_id'),
       '#required' => TRUE,
+      '#translatable' => TRUE,
     );
 
     $form['third_tab']['third_tab_icon'] = [
@@ -284,6 +249,7 @@ class HowToPlayConfiguration extends ConfigFormBase {
       '#description' => $this->t('The text that will be displayed as short content of the tab.'),
       '#default_value' => $thirdTabContent['value'],
       '#format' => $thirdTabContent['format'],
+      '#translatable' => TRUE,
     );
   }
 }

@@ -4,12 +4,6 @@ custom_inner_pages.list:
   description: 'Configuration for poker custom inner pages'
   route_name: custom_inner_pages.admin_settings
 
-custom_inner_pages.admin_how_to_play:
-  title: 'How to Play Configuration'
-  parent: custom_inner_pages.list
-  description: 'Provides configuration for Poker How to Play Inner Page'
-  route_name: custom_inner_pages.how_to_play_form
-
 # How to play menu items definition
 entity.how_to_play.collection:
   title: 'How to play list'
