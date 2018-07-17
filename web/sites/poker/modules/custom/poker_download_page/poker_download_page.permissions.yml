@@ -1,0 +1,22 @@
+add download page entity entities:
+  title: 'Create new Download page entity entities'
+
+administer download page entity entities:
+  title: 'Administer Download page entity entities'
+  description: 'Allow to access the administration form to configure Download page entity entities.'
+  restrict access: true
+
+delete download page entity entities:
+  title: 'Delete Download page entity entities'
+
+edit download page entity entities:
+  title: 'Edit Download page entity entities'
+
+access download page entity overview:
+  title: 'Access the Download page entity overview page'
+
+view published download page entity entities:
+  title: 'View published Download page entity entities'
+
+view unpublished download page entity entities:
+  title: 'View unpublished Download page entity entities'
