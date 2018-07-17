@@ -1,5 +1,9 @@
+content_types:
+  page:
+    label: 'NHỮNG TRANG CƠ BẢN'
 sitemap_title: 'SƠ ĐỒ WEBSITE'
 sitemap_home_label: 'TRANG CHỦ'
 sitemap_promotions_label: 'KHUYẾN MÃI'
 sitemap_mobile_label: 'DI ĐỘNG'
 sitemap_basic_pages_label: 'NHỮNG TRANG CƠ BẢN'
+sitemap_links: "TRANG CHỦ|/\r\nKHUYẾN MÃI|/promotions\r\nDI ĐỘNG|/{domain:entry}/{domain:lang_token}/mobile{tracking.token}"

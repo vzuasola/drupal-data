@@ -2,3 +2,6 @@ trust_element_title: 'Main KENO dengan cara baru'
 trust_element_content:
   value: "<p>Ada banyak cara untuk main dan menang. Dengan lebih dari 9&nbsp;region dan 7 tipe taruhan, masing-masing dengan rate dan hitungan <i>payout</i> tersendiri, Anda berkesempatan menang banyak setiap 2&nbsp;menit!</p>\r\n"
   format: basic_html
+play_text: Mainkan
+game_info_text: 'Info Lengkap'
+free_play_text: 'Main Gratis'

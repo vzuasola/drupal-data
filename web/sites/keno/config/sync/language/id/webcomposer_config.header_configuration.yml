@@ -1,15 +1,30 @@
-lobby_page_title: 'Taruhan Online – Bertaruhlah pada Olahraga, Main Kasino dan Poker Online di Dafabet'
+lobby_page_title: 'Dafabet Indonesia: Game Keno Online Terbaik di Asia'
 critical_announcement_content:
   value: "<p>Test Test&nbsp;</p>\r\n"
   format: basic_html
 news_announcement_content:
   value: "<p>Test Test</p>\r\n"
   format: basic_html
-join_now_text: 'GABUNG SEKARANG'
+header_settings_tab__active_tab: edit-balance-group
+logo_title: 'Bet on your Keno Winning Numbers at Dafabet'
+capslock_notification: 'Caps Lock aktif'
+balance_label_override: '综合钱包 '
+critical_announcement: 0
+news_announcement: 0
+join_now_text: GABUNG
+join_now_link: '/{domain:entry}/{domain:lang_token}/cant-login{tracking.token}'
 login_issue_text: 'Tidak bisa Login?'
+login_issue_link: '/{domain:entry}/{domain:lang_token}/cant-login{tracking.token}'
+product_balance_label: 'Saldo Keno'
+total_balance_label: 'Total Saldo'
 balance_error_text: '"Pesan Error Total Saldo"  Error.'
 profile_icon_hover_text: 'Profil Saya'
 cashier_icon_hover_text: Kasir
 product_menu_new_tag: Baru
-balance_label_mapping: "4|OW Sports\r\n6|Dafa Sports\r\n1|Kasino Klasik\r\n2|Kasino Gold\r\n5|Dealer Langsung & Games\r\n8|Opus Live Dealer\r\n9|Keno\r\n3|Poker\r\n7|Fish Hunter"
+welcome_text: 'Selamat Datang {username}'
+profile_link: '/{domain:myaccount_domain}/{lang}/my-profile?title=headerPopup&width=820&height=700&token={legacy.credentials}'
 profile_logout_text: Keluar
+balance_label_mapping: "4|OW Sports\r\n6|Dafa Sports\r\n11|eSports\r\n10|Barter\r\n1|Kasino\r\n2|Kasino Gold\r\n5| Dompet Common\r\n8|Opus Live Dealer\r\n7|AG Fish Hunter\r\n9|Opus Keno\r\n3|Poker"
+balance_error_text_product: '{domain:cashier_domain}/{lang}[query:(ticket={auth.token}&product=keno&title=headerPopup&width=820&height=802})]'
+balance_mapping: "9|Saldo Opus Keno\r\n5| Dompet Common"
+cashier_link: '{domain:cashier_domain}/{lang}[query:(ticket={auth.token}&product=keno&title=headerPopup&width=820&height=802})]'

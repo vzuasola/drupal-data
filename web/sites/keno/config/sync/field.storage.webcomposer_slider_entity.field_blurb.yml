@@ -1,0 +1,21 @@
+uuid: c83c77f2-ea74-49ee-b823-72a10c1813c4
+langcode: en
+status: true
+dependencies:
+  module:
+    - text
+    - webcomposer_slider
+_core:
+  default_config_hash: XoVOsZaMwqUQbhGqu98BVfxOYEnWaWrcg_V106qPKME
+id: webcomposer_slider_entity.field_blurb
+field_name: field_blurb
+entity_type: webcomposer_slider_entity
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

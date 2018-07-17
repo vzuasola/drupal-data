@@ -7,7 +7,7 @@ dependencies:
   module:
     - webcomposer_marketing_script
 _core:
-  default_config_hash: yO6vEio3kP5iXt6EkPTY5kKB88Uq23NYestUbzh28Ck
+  default_config_hash: R2mWdswHWi89-c1ITHd-A_Z1rsFDW_ttCourl4DEVbQ
 id: marketing_script_entity.marketing_script_entity.field_body
 field_name: field_body
 entity_type: marketing_script_entity

@@ -1,3 +1,3 @@
 default_value:
   -
-    value: 'https://stg-cashier.elysium-dfbt.com/vn/?ticket={auth.token}&product=dafabet{tracking.token}'
+    value: '/{domain:myaccount_domain}/{lang}/my-profile?title=headerPopup&width=820&height=700&token={legacy.credentials}'

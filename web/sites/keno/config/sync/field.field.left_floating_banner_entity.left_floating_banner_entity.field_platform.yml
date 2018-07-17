@@ -1,4 +1,4 @@
-uuid: 8b267b8e-26b4-452a-91dc-495de1920419
+uuid: 1b653663-0416-4c65-a7e2-112825c33ef5
 langcode: en
 status: true
 dependencies:
@@ -7,8 +7,6 @@ dependencies:
   module:
     - options
     - webcomposer_floating_banners
-_core:
-  default_config_hash: dHa1XCXkTS5CbgIiTFui8vrkhbMtf1iI-GEkfvQ-wT8
 id: left_floating_banner_entity.left_floating_banner_entity.field_platform
 field_name: field_platform
 entity_type: left_floating_banner_entity
@@ -16,7 +14,7 @@ bundle: left_floating_banner_entity
 label: Platform
 description: ''
 required: true
-translatable: false
+translatable: true
 default_value:
   -
     value: desktop
