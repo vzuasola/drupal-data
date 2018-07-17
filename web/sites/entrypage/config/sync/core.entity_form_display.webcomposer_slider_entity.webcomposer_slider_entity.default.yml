@@ -7,7 +7,9 @@ dependencies:
     - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_banner_link
     - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_banner_link_target
     - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_blurb
+    - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_blurb_post
     - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_content_position
+    - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_content_position_post
     - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_log_in_state
     - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_product
     - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_publish_date
@@ -34,7 +36,7 @@ third_party_settings:
         - field_ribbon_label_color
         - field_ribbon_background_color
       parent_name: ''
-      weight: 6
+      weight: 7
       format_type: tab
       format_settings:
         id: ''
@@ -48,7 +50,7 @@ third_party_settings:
         - field_publish_date
         - field_unpublish_date
       parent_name: ''
-      weight: 7
+      weight: 8
       format_type: tab
       format_settings:
         id: ''
@@ -59,10 +61,10 @@ third_party_settings:
       label: 'Scheduler Settings'
     group_blurb:
       children:
-        - field_content_position
-        - field_blurb
+        - group_pre_login
+        - group_post_login
       parent_name: ''
-      weight: 5
+      weight: 6
       format_type: tab
       format_settings:
         label: 'Blurb Settings'
@@ -78,7 +80,7 @@ third_party_settings:
         - field_banner_link
         - field_banner_link_target
       parent_name: ''
-      weight: 4
+      weight: 5
       format_type: tab
       format_settings:
         id: ''
@@ -87,6 +89,75 @@ third_party_settings:
         description: ''
         required_fields: true
       label: 'Banner Settings'
+    group_unique_name:
+      children:
+        - name
+      parent_name: ''
+      weight: 1
+      format_type: tab
+      format_settings:
+        label: 'Unique Name'
+        formatter: open
+        description: ''
+        required_fields: true
+        id: ''
+        classes: ''
+      label: 'Unique Name'
+    group_title:
+      children:
+        - field_title
+      parent_name: ''
+      weight: 2
+      format_type: tab
+      format_settings:
+        label: Title
+        formatter: open
+        description: ''
+        required_fields: true
+        id: ''
+        classes: ''
+      label: Title
+    group_login_state:
+      children:
+        - field_log_in_state
+      parent_name: ''
+      weight: 3
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Login State'
+    group_pre_login:
+      children:
+        - field_blurb
+        - field_content_position
+      parent_name: group_blurb
+      weight: 20
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: open
+        description: ''
+        required_fields: true
+      label: 'Pre Login'
+    group_post_login:
+      children:
+        - field_blurb_post
+        - field_content_position_post
+      parent_name: group_blurb
+      weight: 22
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: open
+        description: ''
+        required_fields: true
+      label: 'Post Login'
 _core:
   default_config_hash: b621MhiBvHrNfQr-lokUrjvuv5EyjHCvwScBGyqAEFM
 id: webcomposer_slider_entity.webcomposer_slider_entity.default
@@ -117,7 +188,15 @@ content:
     type: options_select
     region: content
   field_blurb:
-    weight: 12
+    weight: 21
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_blurb_post:
+    weight: 21
     settings:
       rows: 5
       placeholder: ''
@@ -125,13 +204,19 @@ content:
     type: text_textarea
     region: content
   field_content_position:
-    weight: 11
+    weight: 22
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_content_position_post:
+    weight: 22
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_log_in_state:
-    weight: 3
+    weight: 4
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
@@ -169,7 +254,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_title:
-    weight: 2
+    weight: 3
     settings:
       size: 60
       placeholder: ''
@@ -198,7 +283,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 8
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }

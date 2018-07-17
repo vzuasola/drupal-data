@@ -7,7 +7,9 @@ dependencies:
     - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_banner_link
     - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_banner_link_target
     - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_blurb
+    - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_blurb_post
     - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_content_position
+    - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_content_position_post
     - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_log_in_state
     - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_product
     - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_publish_date
@@ -67,8 +69,22 @@ content:
     third_party_settings: {  }
     type: text_default
     region: content
+  field_blurb_post:
+    weight: 15
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
   field_content_position:
     weight: 14
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_content_position_post:
+    weight: 16
     label: above
     settings: {  }
     third_party_settings: {  }
