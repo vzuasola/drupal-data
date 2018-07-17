@@ -66,7 +66,6 @@ class JamboreeHeaderForm extends FormBase {
       '#type' => 'text_format',
       '#title' => t('Notification Strip Content'),
       '#default_value' => $default_notification_strip['value'],
-      '#description' => $this->t('NOTE: Notifacation Strip content must not be empty and announcement must be enabled to show announcement.'),
       '#format' => $default_notification_strip['format'],
       '#states' => [
         'invisible' => [
