@@ -1,12 +1,12 @@
-uuid: 4fa110be-4dad-43df-b08f-ce3eb82a80b3
+uuid: c054f7af-0cb3-43be-b0cd-cbf69a6ea472
 langcode: en
 status: true
 dependencies:
   module:
     - options
     - poker_download_page
-id: download_page_entity.field_download_tab
-field_name: field_download_tab
+id: download_page_entity.field_type
+field_name: field_type
 entity_type: download_page_entity
 type: list_string
 settings:

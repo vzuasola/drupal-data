@@ -1,17 +1,17 @@
-uuid: be41cb24-8a34-4bf8-96d1-2ef57ea350fe
+uuid: c715ea10-fe14-468f-8b2f-4478571b1281
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.download_page_entity.field_download_tab
+    - field.storage.download_page_entity.field_type
   module:
     - options
     - poker_download_page
-id: download_page_entity.download_page_entity.field_download_tab
-field_name: field_download_tab
+id: download_page_entity.download_page_entity.field_type
+field_name: field_type
 entity_type: download_page_entity
 bundle: download_page_entity
-label: 'Download Tab'
+label: Type
 description: ''
 required: true
 translatable: true

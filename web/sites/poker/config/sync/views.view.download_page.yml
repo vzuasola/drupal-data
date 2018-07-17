@@ -1,9 +1,9 @@
-uuid: 09b8b8bc-e91a-4362-a309-a5876cf9ff3a
+uuid: 874b3935-95c7-4a08-a392-443ef5cee93e
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.download_page_entity.field_download_tab
+    - field.storage.download_page_entity.field_type
   module:
     - draggableviews
     - options
@@ -332,14 +332,14 @@ display:
           entity_type: download_page_entity
           entity_field: id
           plugin_id: draggable_views_field
-        field_download_tab:
-          id: field_download_tab
-          table: download_page_entity__field_download_tab
-          field: field_download_tab
+        field_type:
+          id: field_type
+          table: download_page_entity__field_type
+          field: field_type
           relationship: none
           group_type: group
           admin_label: ''
-          label: Tab
+          label: Type
           exclude: false
           alter:
             alter_text: false
@@ -376,7 +376,7 @@ display:
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
-          empty: N/A
+          empty: ''
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
@@ -447,13 +447,26 @@ display:
           plugin_id: entity_operations
       defaults:
         fields: false
+        empty: false
+      empty:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content: 'No content available.'
+          plugin_id: text_custom
     cache_metadata:
       max-age: 0
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
       tags:
-        - 'config:field.storage.download_page_entity.field_download_tab'
+        - 'config:field.storage.download_page_entity.field_type'
   rest_export_1:
     display_plugin: rest_export
     id: rest_export_1

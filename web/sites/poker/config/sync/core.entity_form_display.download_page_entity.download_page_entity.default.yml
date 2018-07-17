@@ -1,10 +1,10 @@
-uuid: e5099221-d2f6-4b00-ac52-1cddc2856931
+uuid: bf89c0bb-b30d-4b8b-9c3c-8dd0364b16b4
 langcode: en
 status: true
 dependencies:
   config:
     - field.field.download_page_entity.download_page_entity.field_body
-    - field.field.download_page_entity.download_page_entity.field_download_tab
+    - field.field.download_page_entity.download_page_entity.field_type
   module:
     - poker_download_page
     - text
@@ -14,15 +14,15 @@ bundle: download_page_entity
 mode: default
 content:
   field_body:
-    weight: 4
+    weight: 3
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
     region: content
-  field_download_tab:
-    weight: 3
+  field_type:
+    weight: 2
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -42,14 +42,9 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  translation:
-    weight: 2
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   user_id:
     type: entity_reference_autocomplete
-    weight: 5
+    weight: 4
     settings:
       match_operator: CONTAINS
       size: 60

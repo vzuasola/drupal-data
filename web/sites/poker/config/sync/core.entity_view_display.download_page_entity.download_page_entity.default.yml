@@ -1,10 +1,10 @@
-uuid: f186b542-0abc-4340-9aea-065acbffecb9
+uuid: b484d641-496c-49ac-914a-a5703c1cecff
 langcode: en
 status: true
 dependencies:
   config:
     - field.field.download_page_entity.download_page_entity.field_body
-    - field.field.download_page_entity.download_page_entity.field_download_tab
+    - field.field.download_page_entity.download_page_entity.field_type
   module:
     - options
     - poker_download_page
@@ -22,7 +22,7 @@ content:
     third_party_settings: {  }
     type: text_default
     region: content
-  field_download_tab:
+  field_type:
     weight: 2
     label: above
     settings: {  }

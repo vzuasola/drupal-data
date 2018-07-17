@@ -4,7 +4,7 @@ namespace Drupal\poker_download_page\Entity;
 
 use Drupal\Core\Entity\EntityStorageInterface;
 use Drupal\Core\Field\BaseFieldDefinition;
-use Drupal\Core\Entity\RevisionableContentEntityBase;
+use Drupal\Core\Entity\ContentEntityBase;
 use Drupal\Core\Entity\EntityChangedTrait;
 use Drupal\Core\Entity\EntityTypeInterface;
 use Drupal\user\UserInterface;
@@ -18,7 +18,6 @@ use Drupal\user\UserInterface;
  *   id = "download_page_entity",
  *   label = @Translation("Download page entity"),
  *   handlers = {
- *     "storage" = "Drupal\poker_download_page\DownloadPageEntityStorage",
  *     "view_builder" = "Drupal\Core\Entity\EntityViewBuilder",
  *     "list_builder" = "Drupal\poker_download_page\DownloadPageEntityListBuilder",
  *     "views_data" = "Drupal\poker_download_page\Entity\DownloadPageEntityViewsData",
@@ -37,13 +36,10 @@ use Drupal\user\UserInterface;
  *   },
  *   base_table = "download_page_entity",
  *   data_table = "download_page_entity_field_data",
- *   revision_table = "download_page_entity_revision",
- *   revision_data_table = "download_page_entity_field_revision",
  *   translatable = TRUE,
  *   admin_permission = "administer download page entity entities",
  *   entity_keys = {
  *     "id" = "id",
- *     "revision" = "vid",
  *     "label" = "name",
  *     "uuid" = "uuid",
  *     "uid" = "user_id",
@@ -60,7 +56,7 @@ use Drupal\user\UserInterface;
  *   field_ui_base_route = "download_page_entity.settings"
  * )
  */
-class DownloadPageEntity extends RevisionableContentEntityBase implements DownloadPageEntityInterface {
+class DownloadPageEntity extends ContentEntityBase implements DownloadPageEntityInterface {
 
   use EntityChangedTrait;
 
@@ -72,28 +68,6 @@ class DownloadPageEntity extends RevisionableContentEntityBase implements Downlo
     $values += [
       'user_id' => \Drupal::currentUser()->id(),
     ];
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  public function preSave(EntityStorageInterface $storage) {
-    parent::preSave($storage);
-
-    foreach (array_keys($this->getTranslationLanguages()) as $langcode) {
-      $translation = $this->getTranslation($langcode);
-
-      // If no owner has been set explicitly, make the anonymous user the owner.
-      if (!$translation->getOwner()) {
-        $translation->setOwnerId(0);
-      }
-    }
-
-    // If no revision author has been set explicitly, make the download_page_entity owner the
-    // revision author.
-    if (!$this->getRevisionUser()) {
-      $this->setRevisionUserId($this->getOwnerId());
-    }
   }
 
   /**
@@ -205,7 +179,6 @@ class DownloadPageEntity extends RevisionableContentEntityBase implements Downlo
     $fields['name'] = BaseFieldDefinition::create('string')
       ->setLabel(t('Name'))
       ->setDescription(t('The name of the Download page entity entity.'))
-      ->setRevisionable(TRUE)
       ->setSettings([
         'max_length' => 50,
         'text_processing' => 0,
@@ -226,7 +199,6 @@ class DownloadPageEntity extends RevisionableContentEntityBase implements Downlo
     $fields['status'] = BaseFieldDefinition::create('boolean')
       ->setLabel(t('Publishing status'))
       ->setDescription(t('A boolean indicating whether the Download page entity is published.'))
-      ->setRevisionable(TRUE)
       ->setDefaultValue(TRUE);
 
     $fields['created'] = BaseFieldDefinition::create('created')
@@ -236,13 +208,6 @@ class DownloadPageEntity extends RevisionableContentEntityBase implements Downlo
     $fields['changed'] = BaseFieldDefinition::create('changed')
       ->setLabel(t('Changed'))
       ->setDescription(t('The time that the entity was last edited.'));
-
-    $fields['revision_translation_affected'] = BaseFieldDefinition::create('boolean')
-      ->setLabel(t('Revision translation affected'))
-      ->setDescription(t('Indicates if the last edit of a translation belongs to current revision.'))
-      ->setReadOnly(TRUE)
-      ->setRevisionable(TRUE)
-      ->setTranslatable(TRUE);
 
     return $fields;
   }
