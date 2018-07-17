@@ -71,12 +71,21 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
       ],
       'gender' => [
         'name' => 'Gender',
-        'type' => 'radio',
+        'type' => 'radios',
         'settings' => [
           'label' => [
             '#title' => 'Gender label',
             '#type' => 'textfield',
             '#description' => 'The Label for Gender field',
+          ],
+          'choices' => [
+            '#title' => 'Gender',
+            '#type' => 'textarea',
+            '#description' => 'Provide a pipe separated key value pair. <br> <small>Example key|My Value</small>',
+            '#default_value' => implode(PHP_EOL, [
+              'M|Male',
+              'F|Female',
+            ]),
           ],
         ],
       ],
@@ -211,6 +220,17 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
           ],
         ],
       ],
+      'coupon_code' => [
+        'name' => 'Coupon Code',
+        'type' => 'textfield',
+        'settings' => [
+          'label' => [
+            '#title' => 'Coupon Code Label',
+            '#type' => 'textfield',
+            '#description' => 'The Label for Confirm Coupon Code field',
+          ],
+        ],
+      ],
       'term_conditions' => [
         'name' => 'Accept Terms',
         'type' => 'checkbox',
@@ -234,6 +254,10 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
             '#default_value' => 'I would like to receive information about promotions and updates.',
           ],
         ],
+      ],
+      'username' => [
+        'name' => 'Username',
+        'type' => 'hidden',
       ],
       //captcha?
       'submit' => [
