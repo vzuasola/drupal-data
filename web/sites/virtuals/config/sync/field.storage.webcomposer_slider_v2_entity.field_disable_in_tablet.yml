@@ -1,0 +1,18 @@
+uuid: a8f6d27c-bde6-49f4-93da-3d19f23ebff2
+langcode: en
+status: true
+dependencies:
+  module:
+    - webcomposer_slider_v2
+id: webcomposer_slider_v2_entity.field_disable_in_tablet
+field_name: field_disable_in_tablet
+entity_type: webcomposer_slider_v2_entity
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

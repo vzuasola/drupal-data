@@ -1,0 +1,23 @@
+uuid: 18ba1c39-e1ce-417d-b326-827bc2528177
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_preview_display_only
+    - node.type.games
+id: node.games.field_preview_display_only
+field_name: field_preview_display_only
+entity_type: node
+bundle: games
+label: 'Preview Display Only'
+description: 'Enable this field if you want the Game Tile to be viewable on Preview Mode only.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

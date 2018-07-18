@@ -21,7 +21,6 @@ module:
   contextual: 0
   ctools: 0
   datetime: 0
-  dblog: 0
   devel: 0
   draggableviews: 0
   dynamic_page_cache: 0
@@ -83,6 +82,7 @@ module:
   webcomposer_editor: 0
   webcomposer_floating_banners: 0
   webcomposer_games: 0
+  webcomposer_games_statuses: 0
   webcomposer_language_hierarchy: 0
   webcomposer_marketing_script: 0
   webcomposer_partner: 0

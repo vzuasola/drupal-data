@@ -5,6 +5,7 @@ namespace Drupal\webcomposer_rest_extra;
 use Drupal\Component\Utility\Html;
 use Drupal\Core\Site\Settings;
 use Drupal\file\Entity\File;
+use Drupal\Component\Utility\UrlHelper;
 
 /**
 * Provide a trait to filter html
@@ -27,25 +28,27 @@ trait FilterHtmlTrait {
     if ($base_path) {
       // if base path is available, make them relative of front end
       foreach ($images as $image) {
-          $src = preg_replace('/\/sites\/[a-z\-]+\/files/', '', $image['src']);
-          $replace = $base_path . $src;
+        $src = preg_replace('/\/sites\/[a-z\-]+\/files/', '', $image['src']);
+        $replace = $base_path . $src;
 
-          \Drupal::moduleHandler()->alter('inline_image_url_change', $replace, $base_path, $src);
-
-          $image['src'] = (string) $replace;
+        if (UrlHelper::isExternal($src)) {
+          $image['src'] = $src;
+        } else {
+          $image['src'] = $this->doParseImage($replace, $base_path, $src);
+        }
       }
     } else {
       // make them absolute, so that it will work on front end
       foreach ($images as $image) {
-          $drupal_uri = \Drupal::request()->getSchemeAndHttpHost();
+        $drupal_uri = \Drupal::request()->getSchemeAndHttpHost();
+        $replace = $drupal_uri . $image['src'];
 
-          $replace = $drupal_uri . $image['src'];
-
-          \Drupal::moduleHandler()->alter('inline_image_url_change', $replace, $drupal_uri, $image['src']);
-
-          $image['src'] = (string) $replace;
+        if (UrlHelper::isExternal($image['src'])) {
+          $image['src'] = $image['src'];
+        } else {
+          $image['src'] = $replace;
+        }
       }
-
     }
 
     $htmlMarkup = Html::serialize($htmlDoc);
@@ -71,12 +74,24 @@ trait FilterHtmlTrait {
       $pre = $this->getFileRelativeFilename($file->getFileUri());
       $path = $base_path . '/' . $pre;
 
-      \Drupal::moduleHandler()->alter('inline_image_url_change', $path, $base_path, $pre);
+      $this->doParseImage($path, $base_path, $pre);
     } else {
       $path = file_create_url($file->getFileUri());
     }
 
     return $path;
+  }
+
+  /**
+   *
+   */
+  private function doParseImage($uri, $base_path, $src) {
+    $path = ltrim($src, '/');
+    $uri = "[uri:($path)]";
+
+    \Drupal::moduleHandler()->alter('inline_image_url_change', $uri, $base_path, $src);
+
+    return $uri;
   }
 
   /**
