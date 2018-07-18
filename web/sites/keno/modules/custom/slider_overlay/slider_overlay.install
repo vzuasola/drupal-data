@@ -28,3 +28,18 @@ function slider_overlay_uninstall() {
       \Drupal::configFactory()->getEditable($key)->delete();
     }
 }
+
+/**
+ * Implements hook_update_N
+ *
+ * Changes:
+ * - entity update for entities found in status report /admin/reports/status
+ */
+function slider_overlay_update_9001() {
+   try {
+     \Drupal::entityDefinitionUpdateManager()->applyUpdates();
+    }
+    catch (EntityStorageException $e) {
+      print_r($e);
+    }
+}
