@@ -102,3 +102,11 @@ webcomposer_config.games_goldenrace_provider:
     javascript_assets:
       type: text
       label: 'Javascript'            
+      
+webcomposer_config.games_gameworx_provider:
+  type: config_object
+  label: 'Gameworx Integration Configuration'
+  mapping:
+    javascript_assets:
+      type: text
+      label: 'Javascript' 
