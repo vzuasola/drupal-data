@@ -82,6 +82,7 @@ class CantLoginConfigForm extends FormBase {
       '#required' => TRUE,
       '#description' => $this->t('Cant Login API Response Code Mapping'),
       '#default_value' => $this->get('cant_login_response_mapping'),
+      '#translatable' => TRUE,
     ];
   }
 
