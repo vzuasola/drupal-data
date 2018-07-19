@@ -97,7 +97,7 @@ class MailerConfigForm extends FormBase {
       '#description' => $this->t('If checked will allow Anti spam feature.'),
       '#default_value' => $this->get('antispam_enable'),
     ];
-    
+
     $form['antispam']['antispam_limit'] = [
       '#type' => 'number',
       '#title' => $this->t('Request Limit'),
@@ -118,8 +118,10 @@ class MailerConfigForm extends FormBase {
       '#type' => 'textarea',
       '#title' => t('Error message'),
       '#default_value' => $this->get('antispam_error'),
-      '#description' => 'Message to show the user</br>Tokens: <strong>@limit</strong> (Request Limit) <strong>@interval</strong> (Time Interval).',
-      '#rows' => 3
+      '#description' => 'Message to show the user</br>Tokens: 
+                        <strong>@limit</strong> (Request Limit) 
+                        <strong>@interval</strong> (Time Interval).',
+      '#rows' => 3,
     ];
   }
 }

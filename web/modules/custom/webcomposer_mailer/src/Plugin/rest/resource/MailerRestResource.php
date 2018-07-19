@@ -128,7 +128,7 @@ class MailerRestResource extends ResourceBase {
       // Send email with drupal_mail.
       $mail = \Drupal::service('plugin.manager.mail')->mail($module, $key, $to, $langCode, $params, $from, $mailEnable);
       // Register email flood
-      if($antiSpamEnable && $mailEnable) {
+      if ($antiSpamEnable && $mailEnable) {
         $this->flood->register($module, $interval);
       }
       // Check Mail if success
