@@ -23,7 +23,7 @@ class ForgotUsernameForm extends WebcomposerFormBase implements WebcomposerFormI
       'show' => [
         '#title' => 'Show this form',
         '#type' => 'checkbox',
-        '#default_value' => true,
+        '#default_value' => TRUE,
       ],
       'alias' => [
         '#title' => 'Change Password Form Alias',
@@ -64,6 +64,11 @@ class ForgotUsernameForm extends WebcomposerFormBase implements WebcomposerFormI
           '#title' => 'Email placeholder label',
           '#type' => 'textfield',
           '#description' => 'label for Email field placeholder',
+        ],
+        'annotation' => [
+          '#title' => 'Annotation text',
+          '#type' => 'textarea',
+          '#description' => 'field annotation that will be displayed on focus',
         ],
       ],
     ];
