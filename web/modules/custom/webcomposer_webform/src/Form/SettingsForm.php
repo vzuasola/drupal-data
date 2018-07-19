@@ -172,6 +172,35 @@ class SettingsForm {
       '#default_value' => $configs['sms_message'] ?? NULL,
     ];
 
+    $form['third_party_settings']['webcomposer_webform']['webform_sms']['max_per_ip'] = [
+      '#type' => 'number',
+      '#title' => t('Maximum SMS per IP Address'),
+      '#description' => t('The maximum number a unique IP address can opt-in for this day.'),
+      '#maxlength' => 5,
+      '#default_value' => $configs['max_per_ip'] ?? NULL,
+    ];
+
+    $form['third_party_settings']['webcomposer_webform']['webform_sms']['max_per_number'] = [
+      '#type' => 'number',
+      '#title' => t('Maximum SMS per Number'),
+      '#description' => t('The maximum number a unique phone number can opt-in for this day.'),
+      '#attributes' => array (
+        'type' => 'number'
+      ),
+      '#maxlength' => 5,
+      '#default_value' => $configs['max_per_number'] ?? NULL,
+    ];
+
+    $form['third_party_settings']['webcomposer_webform']['webform_sms']['sms_counter'] = [
+      '#type' => 'number',
+      '#title' => t('SMS Counter'),
+      '#attributes' => array(
+        'readonly' => 'readonly'
+      ),
+      '#maxlength' => 5,
+      '#default_value' => $configs['sms_counter'] ?? NULL,
+    ];
+
     $this->tweakForm($form);
 
     $form['#validate'][] = [$this, 'validate'];
