@@ -1,0 +1,21 @@
+uuid: f98ee0ea-4459-4388-a834-48217fcf95b6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.webcomposer_slider_entity.field_blurb_post
+  module:
+    - text
+    - webcomposer_slider
+id: webcomposer_slider_entity.webcomposer_slider_entity.field_blurb_post
+field_name: field_blurb_post
+entity_type: webcomposer_slider_entity
+bundle: webcomposer_slider_entity
+label: 'Blurb Post'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
