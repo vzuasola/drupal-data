@@ -130,16 +130,16 @@ class ContactUsConfigForm extends FormBase {
         '#rows' => 15,
         '#description' => 'Tokens:
         <ul>
-            <li>[-firstname-] - First name of the player</li>
-            <li>[-lastname-] - Last name of the player</li>
-            <li>[-username-] - Username of the player</li>
-            <li>[-email-] - Email Address the player inputted</li>
-            <li>[-product-] - Product the player selected</li>
-            <li>[-subject-] - Subject the player selected</li>
-            <li>[-message-] - Main message of the player</li>
-            <li>[-date-] - This date the form is submitted</li>
-            <li>[-ip-] - IP address of the player</li>
-            <li>[-language-] - Selected language of the player</li>
+            <li>@firstname - First name of the player</li>
+            <li>@lastname - Last name of the player</li>
+            <li>@username - Username of the player</li>
+            <li>@email - Email Address the player inputted</li>
+            <li>@product - Product the player selected</li>
+            <li>@subject - Subject the player selected</li>
+            <li>@message - Main message of the player</li>
+            <li>@date - This date the form is submitted</li>
+            <li>@ip - IP address of the player</li>
+            <li>@language - Selected language of the player</li>
         </ul>'
     ];
   }

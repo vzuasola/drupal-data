@@ -118,8 +118,8 @@ class MailerConfigForm extends FormBase {
       '#type' => 'textarea',
       '#title' => t('Error message'),
       '#default_value' => $this->get('antispam_error'),
-      '#description' => 'Message to show the user</br>Tokens: 
-                        <strong>@limit</strong> (Request Limit) 
+      '#description' => 'Message to show the user</br>Tokens:
+                        <strong>@limit</strong> (Request Limit)
                         <strong>@interval</strong> (Time Interval).',
       '#rows' => 3,
     ];
