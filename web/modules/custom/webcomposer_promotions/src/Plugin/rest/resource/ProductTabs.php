@@ -13,6 +13,7 @@ use Symfony\Component\HttpKernel\Exception\HttpException;
 use Symfony\Component\HttpFoundation\Request;
 use Psr\Log\LoggerInterface;
 use Drupal\node\Entity\Node;
+use Drupal\Core\Cache\CacheableMetadata;
 
 
 /**
