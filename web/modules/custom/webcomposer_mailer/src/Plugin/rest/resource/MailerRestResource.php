@@ -2,11 +2,9 @@
 
 namespace Drupal\webcomposer_mailer\Plugin\rest\resource;
 
-use Drupal\Core\Session\AccountProxyInterface;
 use Drupal\rest\Plugin\ResourceBase;
 use Drupal\rest\ResourceResponse;
 use Symfony\Component\DependencyInjection\ContainerInterface;
-use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
 use Psr\Log\LoggerInterface;
 use Drupal\Core\Flood\FloodInterface;
 use Drupal\Component\Utility\Html;
@@ -18,18 +16,12 @@ use Drupal\Component\Utility\Html;
  *   id = "mailer_rest_resource",
  *   label = @Translation("Mailer rest resource"),
  *   uri_paths = {
- *     "canonical" = "/email/submission"
+ *     "canonical" = "/email/submission",
+ *     "https://www.drupal.org/link-relations/create" = "/email/submission"
  *   }
  * )
  */
 class MailerRestResource extends ResourceBase {
-
-  /**
-   * A current user instance.
-   *
-   * @var \Drupal\Core\Session\AccountProxyInterface
-   */
-  protected $currentUser;
 
   /**
    * The flood control mechanism.
@@ -51,8 +43,6 @@ class MailerRestResource extends ResourceBase {
    *   The available serialization formats.
    * @param \Psr\Log\LoggerInterface $logger
    *   A logger instance.
-   * @param \Drupal\Core\Session\AccountProxyInterface $current_user
-   *   A current user instance.
    * @param \Drupal\Core\Flood\FloodInterface $flood
    *   The flood control mechanism.
    */
@@ -62,11 +52,9 @@ class MailerRestResource extends ResourceBase {
     $plugin_definition,
     array $serializer_formats,
     LoggerInterface $logger,
-    AccountProxyInterface $current_user,
     FloodInterface $flood) {
     parent::__construct($configuration, $plugin_id, $plugin_definition, $serializer_formats, $logger);
 
-    $this->currentUser = $current_user;
     $this->flood = $flood;
   }
 
@@ -80,7 +68,6 @@ class MailerRestResource extends ResourceBase {
       $plugin_definition,
       $container->getParameter('serializer.formats'),
       $container->get('logger.factory')->get('webcomposer_mailer'),
-      $container->get('current_user'),
       $container->get('flood')
     );
   }
@@ -99,12 +86,6 @@ class MailerRestResource extends ResourceBase {
    */
   public function post(array $data) {
 
-    // You must to implement the logic of your REST Resource here.
-    // Use current user after pass authentication to validate access.
-    if (!$this->currentUser->hasPermission('access content')) {
-      throw new AccessDeniedHttpException();
-    }
-
     $langCode = $data['langcode'];
     $from = filter_var(Html::escape($data['from']), FILTER_SANITIZE_EMAIL);
     $to = filter_var(Html::escape($data['to']), FILTER_SANITIZE_EMAIL);
@@ -112,11 +93,11 @@ class MailerRestResource extends ResourceBase {
     $key = $data['key'];
     $params = $data['params'];
 
-    $config = \Drupal::config('webcomposer_config.mailer_configuration')->get();
-    $limit = $config['antispam_limit'];
-    $interval = $config['antispam_interval'];
-    $mailEnable = (bool) $config['mail_enable'];
-    $antiSpamEnable = (bool) $config['antispam_enable'];
+    $config = \Drupal::config('webcomposer_config.mailer_configuration');
+    $limit = $config->get('antispam_limit');
+    $interval = $config->get('antispam_interval');
+    $mailEnable = (bool) $config->get('mail_enable');
+    $antiSpamEnable = (bool) $config->get('antispam_enable');
 
     $build = [
       '#cache' => [
@@ -134,13 +115,13 @@ class MailerRestResource extends ResourceBase {
       // Check Mail if success
       if ($mail['result']) {
         $data = [
-          'success' => $this->t($config['mailer_success']),
+          'success' => $this->t($config->get('mailer_success')),
         ];
         return (new ResourceResponse($data))->addCacheableDependency($build);
       }
     } else {
       $data = [
-        'error' => $this->t($config['antispam_error'], [
+        'error' => $this->t($config->get('antispam_error'), [
                      '@limit' => $limit,
                      '@interval' => $interval,
                    ]),
@@ -149,7 +130,7 @@ class MailerRestResource extends ResourceBase {
     }
     // Mail failed
     $data = [
-      'error' => $this->t($config['mailer_error']),
+      'error' => $this->t($config->get('mailer_error')),
     ];
     return (new ResourceResponse($data))->addCacheableDependency($build);
   }
