@@ -1,0 +1,15 @@
+webcomposer_mailer_config.admin_settings:
+  path: 'admin/config/webcomposer/custom'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Mailer Configuration'
+  requirements:
+    _permission: 'administer site configuration'
+
+webcomposer_mailer_config.mailer_configuration_form:
+  path: 'admin/config/webcomposer/mailer/config'
+  defaults:
+    _form: 'Drupal\webcomposer_mailer\Form\MailerConfigForm'
+    _title: 'Mailer Configuration'
+  requirements:
+    _permission: 'administer site configuration'

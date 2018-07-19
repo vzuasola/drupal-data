@@ -108,10 +108,6 @@ class ContactUsConfigForm extends FormBase {
    *
    */
   private function contactSettings(array &$form) {
-    $form['advanced'] = [
-      '#type' => 'vertical_tabs',
-    ];
-
     $form['settings'] = [
       '#type' => 'details',
       '#title' => t('Contact Us Form Settings'),
@@ -145,14 +141,6 @@ class ContactUsConfigForm extends FormBase {
             <li>[-ip-] - IP address of the player</li>
             <li>[-language-] - Selected language of the player</li>
         </ul>'
-    ];
-
-    $form['settings']['generic_error'] = [
-        '#type' => 'textarea',
-        '#title' => t('Generic Error template'),
-        '#default_value' => $this->get('generic_error'),
-        '#description' => 'This will be used as the generic error message for any system errors that may be encountered.',
-        '#rows' => 3
     ];
   }
 }
