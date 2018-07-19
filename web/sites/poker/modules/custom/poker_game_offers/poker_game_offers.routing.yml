@@ -1,0 +1,7 @@
+poker_game_offers.admin_settings:
+  path: 'admin/game-offers'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Poker Game Offers'
+  requirements:
+    _permission: 'administer site configuration'
