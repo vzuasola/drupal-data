@@ -1,7 +1,5 @@
 <?php
 
-use Drupal\Core\Url;
-
 /**
  * @file
  * Primary module hooks for Poker Config module.
@@ -10,27 +8,6 @@ use Drupal\Core\Url;
  * This file is no longer required in Drupal 8.
  * @see https://www.drupal.org/node/2217931
  */
-
-/**
- * Implements hook_toolbar().
- */
-// function poker_config_toolbar() {
-//   $items['poker'] = [
-//     '#type' => 'toolbar_item',
-//     'tab' => [
-//       '#type' => 'link',
-//       '#title' => t('Poker Settings'),
-//       '#url' => Url::fromRoute('poker_config.admin_settings'),
-//       '#attributes' => [
-//         'title' => t('Poker Settings'),
-//         'class' => ['toolbar-icon', 'toolbar-icon-devel'],
-//       ],
-//     ],
-//     '#weight' => 1000,
-//   ];
-
-//   return $items;
-// }
 
 function poker_config_form_alter(&$form, $form_state, $form_id) {
     $submitAction = false;
