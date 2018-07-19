@@ -149,6 +149,29 @@ class SettingsForm {
       }
     }
 
+    // SMS form
+
+    $configs = $settings->getThirdPartySetting('webcomposer_webform', 'webform_sms');
+
+    $form['third_party_settings']['webcomposer_webform']['webform_sms'] = [
+      '#type' => 'details',
+      '#title' => t('SMS Alert Settings'),
+      '#open' => FALSE,
+    ];
+
+    $form['third_party_settings']['webcomposer_webform']['webform_sms']['sms'] = [
+      '#type' => 'checkbox',
+      '#title' => t('Enable SMS Notification.'),
+      '#default_value' => $configs['sms'] ?? NULL,
+    ];
+
+    $form['third_party_settings']['webcomposer_webform']['webform_sms']['sms_message'] = [
+      '#type' => 'textarea',
+      '#title' => t('SMS Message'),
+      '#maxlength' => 160,
+      '#default_value' => $configs['sms_message'] ?? NULL,
+    ];
+
     $this->tweakForm($form);
 
     $form['#validate'][] = [$this, 'validate'];
