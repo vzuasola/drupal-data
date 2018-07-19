@@ -758,9 +758,8 @@ display:
       display_extenders: {  }
       path: api/arcade-games
       pager:
-        type: some
+        type: none
         options:
-          items_per_page: 10
           offset: 0
       style:
         type: node_list_serializer

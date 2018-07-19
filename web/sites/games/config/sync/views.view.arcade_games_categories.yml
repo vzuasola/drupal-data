@@ -10,6 +10,7 @@ dependencies:
     - rest
     - serialization
     - taxonomy
+    - webcomposer_rest_extra
 id: arcade_games_categories
 label: 'Arcade Games - Categories'
 module: views
@@ -364,6 +365,43 @@ display:
           entity_type: node
           entity_field: type
           plugin_id: bundle
+          group: 1
+        field_preview_display_only_value:
+          id: field_preview_display_only_value
+          table: node__field_preview_display_only
+          field: field_preview_display_only_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: '0'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: 'Preview Mode (field_preview_display_only)'
+            description: null
+            use_operator: false
+            operator: field_preview_display_only_value_op
+            identifier: field_preview_display_only_value
+            required: true
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: boolean
         field_arcade_cat_disable_value:
           id: field_arcade_cat_disable_value
           table: taxonomy_term__field_arcade_cat_disable
@@ -525,6 +563,10 @@ display:
       arguments: {  }
       display_extenders: {  }
       group_by: true
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
     cache_metadata:
       max-age: -1
       contexts:
@@ -548,11 +590,10 @@ display:
         options:
           offset: 0
       style:
-        type: serializer
+        type: taxonomy_list_serializer
         options:
-          grouping: {  }
-          uses_fields: false
-          formats: {  }
+          formats:
+            json: json
       row:
         type: data_field
         options:

@@ -12,6 +12,7 @@ function webcomposer_games_uninstall() {
         'webcomposer_config.games_exchange_provider',
         'webcomposer_config.games_gpi_provider',
         'webcomposer_config.games_goldenrace_provider',
+        'webcomposer_config.games_gameworx_provider',
     ];
 
     foreach ($keys as $key) {

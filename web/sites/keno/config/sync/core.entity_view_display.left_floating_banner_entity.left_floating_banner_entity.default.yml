@@ -9,6 +9,7 @@ dependencies:
     - field.field.left_floating_banner_entity.left_floating_banner_entity.field_link
     - field.field.left_floating_banner_entity.left_floating_banner_entity.field_link_target
     - field.field.left_floating_banner_entity.left_floating_banner_entity.field_link_text
+    - field.field.left_floating_banner_entity.left_floating_banner_entity.field_os_excluded
     - field.field.left_floating_banner_entity.left_floating_banner_entity.field_per_page_config
     - field.field.left_floating_banner_entity.left_floating_banner_entity.field_platform
     - field.field.left_floating_banner_entity.left_floating_banner_entity.field_title
@@ -40,8 +41,15 @@ content:
     third_party_settings: {  }
     type: string
     region: content
+  field_os_excluded:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
   field_platform:
-    weight: 3
+    weight: 5
     label: above
     settings: {  }
     third_party_settings: {  }

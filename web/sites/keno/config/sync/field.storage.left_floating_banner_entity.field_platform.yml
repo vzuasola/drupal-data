@@ -1,12 +1,10 @@
-uuid: 7382c6b5-722b-41c7-a162-0e4b3d6fb6ef
+uuid: 976730cd-ee13-40a7-8d78-96f042adbc5c
 langcode: en
 status: true
 dependencies:
   module:
     - options
     - webcomposer_floating_banners
-_core:
-  default_config_hash: Eqn58409-BjomqAPEcz4EPcqwKtyhaHzlOCbc5xicpY
 id: left_floating_banner_entity.field_platform
 field_name: field_platform
 entity_type: left_floating_banner_entity
