@@ -68,7 +68,8 @@ class MailerConfigForm extends FormBase {
       '#title' => t('Generic success message'),
       '#default_value' => $this->get('mailer_success'),
       '#description' => 'Success message to show the user',
-      '#rows' => 3
+      '#rows' => 3,
+      '#translatable' => TRUE,
     ];
 
     $form['settings']['mailer_error'] = [
@@ -76,7 +77,8 @@ class MailerConfigForm extends FormBase {
       '#title' => t('Generic error message'),
       '#default_value' => $this->get('mailer_error'),
       '#description' => 'Error message to show the user.',
-      '#rows' => 3
+      '#rows' => 3,
+      '#translatable' => TRUE,
     ];
   }
 
@@ -122,6 +124,7 @@ class MailerConfigForm extends FormBase {
                         <strong>@limit</strong> (Request Limit)
                         <strong>@interval</strong> (Time Interval).',
       '#rows' => 3,
+      '#translatable' => TRUE,
     ];
   }
 }

@@ -67,11 +67,11 @@ class ContactUsConfigForm extends FormBase {
 
     $body_content = $this->get('body_content');
     $form['content']['body_content'] = [
-        '#type' => 'text_format',
-        '#title' => $this->t('Content Blurb'),
-        '#default_value' => $body_content['value'],
-        '#format' => $body_content['format'],
-        '#translatable' => TRUE,
+      '#type' => 'text_format',
+      '#title' => $this->t('Content Blurb'),
+      '#default_value' => $body_content['value'],
+      '#format' => $body_content['format'],
+      '#translatable' => TRUE,
     ];
   }
 
@@ -96,11 +96,11 @@ class ContactUsConfigForm extends FormBase {
 
     $success_message = $this->get('success_message');
     $form['success']['success_message'] = [
-        '#type' => 'text_format',
-        '#title' => $this->t('Content Blurb'),
-        '#default_value' => $success_message['value'],
-        '#format' => $success_message['format'],
-        '#translatable' => TRUE,
+      '#type' => 'text_format',
+      '#title' => $this->t('Content Blurb'),
+      '#default_value' => $success_message['value'],
+      '#format' => $success_message['format'],
+      '#translatable' => TRUE,
     ];
   }
 
@@ -124,23 +124,24 @@ class ContactUsConfigForm extends FormBase {
     ];
 
     $form['settings']['email_template'] = [
-        '#type' => 'textarea',
-        '#title' => $this->t('Email Template'),
-        '#default_value' => $this->get('email_template'),
-        '#rows' => 15,
-        '#description' => 'Tokens:
-        <ul>
-            <li>@firstname - First name of the player</li>
-            <li>@lastname - Last name of the player</li>
-            <li>@username - Username of the player</li>
-            <li>@email - Email Address the player inputted</li>
-            <li>@product - Product the player selected</li>
-            <li>@subject - Subject the player selected</li>
-            <li>@message - Main message of the player</li>
-            <li>@date - This date the form is submitted</li>
-            <li>@ip - IP address of the player</li>
-            <li>@language - Selected language of the player</li>
-        </ul>'
+      '#type' => 'textarea',
+      '#title' => $this->t('Email Template'),
+      '#default_value' => $this->get('email_template'),
+      '#rows' => 15,
+      '#description' => 'Tokens:
+      <ul>
+          <li>@firstname - First name of the player</li>
+          <li>@lastname - Last name of the player</li>
+          <li>@username - Username of the player</li>
+          <li>@email - Email Address the player inputted</li>
+          <li>@product - Product the player selected</li>
+          <li>@subject - Subject the player selected</li>
+          <li>@message - Main message of the player</li>
+          <li>@date - This date the form is submitted</li>
+          <li>@ip - IP address of the player</li>
+          <li>@language - Selected language of the player</li>
+      </ul>',
+      '#translatable' => TRUE,
     ];
   }
 }
