@@ -1,5 +1,7 @@
 <?php
 
+use Drupal\Core\Url;
+
 /**
  * @file
  * Primary module hooks for Poker Config module.
@@ -8,6 +10,27 @@
  * This file is no longer required in Drupal 8.
  * @see https://www.drupal.org/node/2217931
  */
+
+/**
+ * Implements hook_toolbar().
+ */
+// function poker_config_toolbar() {
+//   $items['poker'] = [
+//     '#type' => 'toolbar_item',
+//     'tab' => [
+//       '#type' => 'link',
+//       '#title' => t('Poker Settings'),
+//       '#url' => Url::fromRoute('poker_config.admin_settings'),
+//       '#attributes' => [
+//         'title' => t('Poker Settings'),
+//         'class' => ['toolbar-icon', 'toolbar-icon-devel'],
+//       ],
+//     ],
+//     '#weight' => 1000,
+//   ];
+
+//   return $items;
+// }
 
 function poker_config_form_alter(&$form, $form_state, $form_id) {
     $submitAction = false;
@@ -19,6 +42,9 @@ function poker_config_form_alter(&$form, $form_state, $form_id) {
             if ($name === 'home') {
                 $form['actions']['delete']['#access'] = FALSE;
             }
+            break;
+        case 'taxonomy_term_ribbon_labels_form':
+            $submitAction = 'ribbon_submit';
             break;
     }
 
@@ -37,4 +63,8 @@ function poker_config_taxonomy_form_submit($form, &$form_state) {
     $form_state->setRedirect('entity.taxonomy_vocabulary.overview_form', [
         'taxonomy_vocabulary' => $vid
     ]);
+}
+
+function ribbon_submit($form, &$form_state) {
+    $form_state->setRedirect('view.ribbons.overview');
 }
