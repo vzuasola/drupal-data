@@ -1,7 +1,7 @@
 opus_game_loader_content:
+  format: basic_html
   value: "<p>出现意外错误。此窗口将在几秒钟内关闭。请稍后重试。</p>\r\n"
-  format: basic_html
-opus_unsupported_currencies_title: 不支持的货币。
 opus_unsupported_currencies_message:
-  value: "<p>抱歉，不支持该货币。请选择其他游戏大厅。</p>\r\n"
   format: basic_html
+  value: "<p>抱歉，不支持该货币。请选择其他游戏大厅。</p>\r\n"
+opus_unsupported_currencies_title: 不支持的货币。

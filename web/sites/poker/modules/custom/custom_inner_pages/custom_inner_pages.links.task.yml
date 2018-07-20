@@ -1,7 +1,3 @@
-custom_inner_pages.how_to_play_page_tab:
-  route_name: custom_inner_pages.how_to_play_form
-  title: 'How to Play Configuration'
-  base_route: custom_inner_pages.how_to_play_form
 # How to play routing definition
 how_to_play.settings_tab:
   route_name: how_to_play.settings

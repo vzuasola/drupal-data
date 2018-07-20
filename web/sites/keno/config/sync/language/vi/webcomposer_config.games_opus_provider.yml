@@ -1,7 +1,7 @@
 opus_game_loader_content:
+  format: basic_html
   value: "<p>Đã xảy ra lỗi. Cửa sổ này sẽ đóng trong vài giây. Vui lòng thử lại sau.</p>\r\n"
-  format: basic_html
-opus_unsupported_currencies_title: 'Loại tiền không được hỗ trợ.'
 opus_unsupported_currencies_message:
-  value: "<p>Rất tiếc, loại tiền của bạn không được hỗ trợ. Vui lòng chọn Phòng chơi khác.</p>\r\n"
   format: basic_html
+  value: "<p>Rất tiếc, loại tiền của bạn không được hỗ trợ. Vui lòng chọn Phòng chơi khác.</p>\r\n"
+opus_unsupported_currencies_title: 'Loại tiền không được hỗ trợ.'

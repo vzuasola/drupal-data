@@ -12,3 +12,26 @@ sitemap_basic_pages_label: 'Basic Pages'
 enable_sitemap: 1
 _core:
   default_config_hash: 670aKxzwZcs7v2eST8rlm21MFsNpuRzE7xwBFLrK1ys
+sitemap_links: "Home|/\r\nPromotions|/promotions\r\nMobile|/{domain:entry}/{domain:lang_token}/mobile{tracking.token}"
+content_types:
+  article:
+    enable: 0
+    label: Article
+  game:
+    enable: 0
+    label: Game
+  lobby_banner_slider:
+    enable: 0
+    label: 'Lobby - Banner Slider'
+  mobile:
+    enable: 0
+    label: Mobile
+  page:
+    enable: 1
+    label: 'Basic page'
+  promotion:
+    enable: 0
+    label: Promotion
+  registration_template:
+    enable: 0
+    label: Registration

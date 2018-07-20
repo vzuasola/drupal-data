@@ -8,6 +8,8 @@ dependencies:
 third_party_settings:
   content_translation:
     enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
 _core:
   default_config_hash: exQWX0bYhs998thCiDY19k7zZTm0uQHAJV2N4ulBnmM
 id: slider_overlay_entity.slider_overlay_entity

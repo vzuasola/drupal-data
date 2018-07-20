@@ -11,9 +11,9 @@ dependencies:
 third_party_settings:
   content_translation:
     translation_sync:
-      alt: alt
-      title: title
-      file: '0'
+      file: file
+      alt: '0'
+      title: '0'
 _core:
   default_config_hash: xuS2Gk8rMQjYUHXS6zkO1YibF2iSMrhjs_NGFd5PkdU
 id: paragraph.drawer_media.field_drawer_image

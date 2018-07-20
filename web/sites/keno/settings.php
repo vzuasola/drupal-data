@@ -17,3 +17,4 @@ $settings['primary_site_prefix'] = 'keno';
  * The front end prefix that CKEditor will append for all products
  */
 $settings['ck_editor_inline_image_prefix'] = '/en/keno';
+
