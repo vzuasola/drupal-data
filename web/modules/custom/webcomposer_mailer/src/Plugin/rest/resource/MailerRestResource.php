@@ -88,7 +88,7 @@ class MailerRestResource extends ResourceBase {
 
     $langCode = $data['langcode'];
     $from = filter_var(Html::escape($data['from']), FILTER_SANITIZE_EMAIL);
-    $to = filter_var(Html::escape($data['to']), FILTER_SANITIZE_EMAIL);
+    $to = Html::escape($data['to']);
     $module = $data['module'];
     $key = $data['key'];
     $params = $data['params'];
