@@ -114,24 +114,25 @@ class MailerRestResource extends ResourceBase {
       }
       // Check Mail if success
       if ($mail['result']) {
+        // Mail success
         $data = [
           'success' => $this->t($config->get('mailer_success')),
         ];
-        return (new ResourceResponse($data))->addCacheableDependency($build);
+      } else {
+        // Mail failed
+        $data = [
+          'error' => $this->t($config->get('mailer_error')),
+        ];
       }
     } else {
+      //Mail flooded
       $data = [
         'error' => $this->t($config->get('antispam_error'), [
                      '@limit' => $limit,
                      '@interval' => $interval,
                    ]),
       ];
-      return (new ResourceResponse($data))->addCacheableDependency($build);
     }
-    // Mail failed
-    $data = [
-      'error' => $this->t($config->get('mailer_error')),
-    ];
     return (new ResourceResponse($data))->addCacheableDependency($build);
   }
 }
