@@ -12,7 +12,7 @@ type: list_string
 settings:
   allowed_values:
     -
-      value: _top
+      value: _self
       label: 'Same Window'
     -
       value: _blank

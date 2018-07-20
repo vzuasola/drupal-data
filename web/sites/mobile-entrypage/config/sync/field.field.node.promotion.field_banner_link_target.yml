@@ -13,9 +13,11 @@ entity_type: node
 bundle: promotion
 label: 'Banner Link Target'
 description: ''
-required: false
+required: true
 translatable: true
-default_value: {  }
+default_value:
+  -
+    value: none
 default_value_callback: ''
 settings: {  }
 field_type: list_string
