@@ -1,0 +1,17 @@
+uuid: 28253518-856d-4ade-ab76-d3cdaa4eef9c
+langcode: en
+status: true
+dependencies:
+  module:
+    - keno_config
+    - serialization
+    - user
+id: keno_rest_resource
+plugin_id: keno_rest_resource
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+    supported_auth:
+      - cookie
