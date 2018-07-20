@@ -122,10 +122,11 @@ class MailerRestResource extends ResourceBase {
     } else {
       $data = [
         'error' => $this->t($config->get('antispam_error'), [
-                     '@limit' => $limit,
-                     '@interval' => $interval,
-                   ]),
+            '@limit' => $limit,
+            '@interval' => $interval,
+        ]),
       ];
+
       return (new ResourceResponse($data))->addCacheableDependency($build);
     }
     // Mail failed
