@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.promotion.body
     - field.field.node.promotion.field_banner_content
+    - field.field.node.promotion.field_banner_content_post
     - field.field.node.promotion.field_banner_link
     - field.field.node.promotion.field_banner_link_target
     - field.field.node.promotion.field_hide_countdown
@@ -55,6 +56,13 @@ content:
     region: content
   field_banner_content:
     weight: 103
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_banner_content_post:
+    weight: 138
     label: above
     settings: {  }
     third_party_settings: {  }

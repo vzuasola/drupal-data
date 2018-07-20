@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.promotion.body
     - field.field.node.promotion.field_banner_content
+    - field.field.node.promotion.field_banner_content_post
     - field.field.node.promotion.field_banner_link
     - field.field.node.promotion.field_banner_link_target
     - field.field.node.promotion.field_hide_countdown
@@ -47,9 +48,10 @@ third_party_settings:
     group_promotions_banner:
       children:
         - field_image
-        - field_banner_content
         - field_banner_link
         - field_banner_link_target
+        - field_banner_content
+        - field_banner_content_post
       parent_name: ''
       weight: 17
       format_type: details
@@ -154,7 +156,15 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_banner_content:
-    weight: 34
+    weight: 35
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_banner_content_post:
+    weight: 36
     settings:
       rows: 5
       placeholder: ''
@@ -162,7 +172,7 @@ content:
     type: text_textarea
     region: content
   field_banner_link:
-    weight: 35
+    weight: 33
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -170,7 +180,7 @@ content:
     type: link_default
     region: content
   field_banner_link_target:
-    weight: 36
+    weight: 34
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -356,7 +366,8 @@ content:
     type: language_select
     weight: 1
     region: content
-    settings: {  }
+    settings:
+      include_locked: true
     third_party_settings: {  }
   path:
     type: path
@@ -381,6 +392,13 @@ content:
     weight: 11
     region: content
     settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 120
+    region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
