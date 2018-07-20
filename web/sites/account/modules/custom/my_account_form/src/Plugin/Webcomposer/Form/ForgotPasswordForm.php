@@ -66,6 +66,11 @@ class ForgotPasswordForm extends WebcomposerFormBase implements WebcomposerFormI
           '#type' => 'textfield',
           '#description' => 'label for Username field placeholder',
         ],
+        'annotation' => [
+          '#title' => 'Annotation text',
+          '#type' => 'textarea',
+          '#description' => 'field annotation that will be displayed on focus',
+        ],
       ],
     ];
 
@@ -82,6 +87,11 @@ class ForgotPasswordForm extends WebcomposerFormBase implements WebcomposerFormI
           '#title' => 'Email placeholder label',
           '#type' => 'textfield',
           '#description' => 'label for Email field placeholder',
+        ],
+        'annotation' => [
+          '#title' => 'Annotation text',
+          '#type' => 'textarea',
+          '#description' => 'field annotation that will be displayed on focus',
         ],
       ],
     ];

@@ -57,12 +57,18 @@ class CantLoginConfigForm extends FormBase {
       '#group' => 'my_account_group',
     ];
 
-    $content = $this->get('page_subtitle');
-    $form['cant_login_general_config']['page_subtitle'] = [
-      '#type' => 'text_format',
-      '#title' => $this->t('Page Sub-Title'),
-      '#default_value' => $content['value'],
-      '#format' => $content['format'],
+    $form['cant_login_general_config']['cant_login_title'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t("Can't login Header Title"),
+      '#default_value' => $this->get('cant_login_title'),
+      '#required' => TRUE,
+      '#translatable' => TRUE,
+    ];
+
+    $form['cant_login_general_config']['reset_title'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Reset Password Header Title'),
+      '#default_value' => $this->get('reset_title'),
       '#required' => TRUE,
       '#translatable' => TRUE,
     ];
@@ -84,6 +90,7 @@ class CantLoginConfigForm extends FormBase {
       '#required' => TRUE,
       '#description' => $this->t('Cant Login API Response Code Mapping'),
       '#default_value' => $this->get('cant_login_response_mapping'),
+      '#translatable' => TRUE,
     ];
   }
 

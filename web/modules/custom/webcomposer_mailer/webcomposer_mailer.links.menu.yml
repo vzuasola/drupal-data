@@ -1,0 +1,11 @@
+webcomposer_mailer_config.list:
+  title: 'Webcomposer Mailer Configuration'
+  description: 'Provides configuration for drupal mail'
+  parent: system.admin_config
+  route_name: webcomposer_mailer_config.admin_settings
+
+webcomposer_mailer_config.admin_mailer_configuration:
+  title: 'Mailer Configuration'
+  parent: webcomposer_mailer_config.list
+  description: 'Provides configuration for drupal mail'
+  route_name: webcomposer_mailer_config.mailer_configuration_form

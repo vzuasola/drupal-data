@@ -1,0 +1,5 @@
+name: Webcomposer Mailer
+type: module
+description: Provides mailer capability to Webcomposer
+core: 8.x
+package: Web Composer
