@@ -1,0 +1,19 @@
+uuid: f343bc59-4b7f-421f-8e5f-dbda1b330764
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.poker_game
+  module:
+    - user
+id: node.poker_game.teaser
+targetEntityType: node
+bundle: poker_game
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

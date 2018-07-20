@@ -1,4 +1,4 @@
-uuid: 975f273f-832f-4532-bbac-f5d8a4345f28
+uuid: e7d68952-e055-499b-9707-c195d0236091
 langcode: en
 status: true
 dependencies:
@@ -20,9 +20,9 @@ third_party_settings:
     unpublish_enable: true
     unpublish_required: false
     unpublish_revision: true
-name: 'Casino Game'
-type: casino_game
-description: 'Use <em>casino game</em> for game thumbnails that will appear on game offers.'
+name: 'Poker Game'
+type: poker_game
+description: 'Use <em>poker game</em> for game thumbnails that will appear on game offers.'
 help: ''
 new_revision: true
 preview_mode: 0
