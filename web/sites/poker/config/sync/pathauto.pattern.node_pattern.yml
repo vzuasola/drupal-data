@@ -9,15 +9,16 @@ label: 'node pattern'
 type: 'canonical_entities:node'
 pattern: '/[node:title]'
 selection_criteria:
-  98b8a0b0-e71f-491a-9326-55ceec39e403:
+  482ca096-6b86-45a8-abea-caa8646c00b5:
     id: node_type
     bundles:
+      poker_game: poker_game
       casino_game: casino_game
       page: page
     negate: false
     context_mapping:
       node: node
-    uuid: 98b8a0b0-e71f-491a-9326-55ceec39e403
+    uuid: 482ca096-6b86-45a8-abea-caa8646c00b5
 selection_logic: and
 weight: -5
 relationships: {  }

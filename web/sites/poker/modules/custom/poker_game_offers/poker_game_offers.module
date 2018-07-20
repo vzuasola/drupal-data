@@ -31,6 +31,10 @@ function poker_game_offers_form_alter(&$form, $form_state, $form_id) {
         case 'node_casino_game_edit_form':
             $submitAction = 'casino_game_submit';
             break;
+        case 'node_poker_game_form':
+        case 'node_poker_game_edit_form':
+            $submitAction = 'poker_game_submit';
+            break;
         case 'taxonomy_term_casino_categories_form':
             $submitAction = 'casino_category_submit';
             break;
@@ -52,4 +56,8 @@ function casino_category_submit($form, &$form_state) {
 
 function casino_game_submit($form, &$form_state) {
     $form_state->setRedirect('view.game_offers_casino.overview');
+}
+
+function poker_game_submit($form, &$form_state) {
+    $form_state->setRedirect('view.game_offers_poker.overview');
 }
