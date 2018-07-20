@@ -27,16 +27,16 @@ function contact_us_config_mail($key, &$message, $params) {
         $message['headers']['From'] = "$firstName $lastName <$from>";
 
         $messageBody = str_replace([
-            '[-firstname-]',
-            '[-lastname-]',
-            '[-username-]',
-            '[-email-]',
-            '[-product-]',
-            '[-subject-]',
-            '[-message-]',
-            '[-date-]',
-            '[-ip-]',
-            '[-language-]'
+            '@firstname',
+            '@lastname',
+            '@username',
+            '@email',
+            '@product',
+            '@subject',
+            '@message',
+            '@date',
+            '@ip',
+            '@language'
         ], [
             $firstName,
             $lastName,
