@@ -140,7 +140,7 @@ class ContactUsForm extends WebcomposerFormBase implements WebcomposerFormInterf
             '#type' => 'textarea',
             '#description' => 'Provide a pipe separated key value pair.
                               <small><br>Product key|Product Label
-                              <br />Product key can be for deeplinking.
+                              <br />Product key can be used for deeplinking.
                               <i>ex. /{domain:casino}/en/contact-us[query:({tracking}&product=Casino)]</i></small>',
             '#default_value' => '',
           ],
