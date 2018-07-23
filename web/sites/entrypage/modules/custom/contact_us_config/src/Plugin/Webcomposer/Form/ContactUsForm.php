@@ -127,7 +127,7 @@ class ContactUsForm extends WebcomposerFormBase implements WebcomposerFormInterf
           'label' => [
             '#title' => 'Product Label',
             '#type' => 'textfield',
-            '#description' => 'The dLabel for the Product field',
+            '#description' => 'The Label for the Product field',
           ],
           'placeholder' => [
             '#title' => 'Product placeholder label',
@@ -154,7 +154,7 @@ class ContactUsForm extends WebcomposerFormBase implements WebcomposerFormInterf
           'label' => [
             '#title' => 'Subject Label',
             '#type' => 'textfield',
-            '#description' => 'The dLabel for the Product field',
+            '#description' => 'The Label for the Product field',
           ],
           'placeholder' => [
             '#title' => 'Subject placeholder label',
