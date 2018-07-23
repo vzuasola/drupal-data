@@ -1,0 +1,16 @@
+uuid: 56496360-50ed-45d8-93d0-9eaa526a8203
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.casino_game
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.casino_game
+target_entity_type_id: node
+target_bundle: casino_game
+default_langcode: site_default
+language_alterable: true

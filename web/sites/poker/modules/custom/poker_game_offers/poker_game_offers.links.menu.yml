@@ -1,0 +1,24 @@
+poker_game_offers.admin_settings:
+  title: 'Game Offers Page'
+  description: 'Provides an interface for managing games in game offers page.'
+  parent: system.admin_config
+  route_name: poker_game_offers.admin_settings
+  weight: 1500
+
+poker_game_offers.list.casino_games:
+  title: 'Manage Casino Game Offers'
+  parent: poker_game_offers.admin_settings
+  description: 'Manage Casino Game Offers'
+  route_name: view.game_offers_casino.overview
+
+poker_game_offers.list.casino_categories:
+  title: 'Manage Casino Game Categories'
+  parent: poker_game_offers.admin_settings
+  description: 'Manage Casino Game Categories'
+  route_name: view.game_offers_casino_categories.overview
+
+poker_game_offers.list.poker_games:
+  title: 'Manage Poker Game Offers'
+  parent: poker_game_offers.admin_settings
+  description: 'Manage Poker Game Offers'
+  route_name: view.game_offers_poker.overview

@@ -20,6 +20,9 @@ function poker_config_form_alter(&$form, $form_state, $form_id) {
                 $form['actions']['delete']['#access'] = FALSE;
             }
             break;
+        case 'taxonomy_term_ribbon_labels_form':
+            $submitAction = 'ribbon_submit';
+            break;
     }
 
     if ($submitAction !== false) {
@@ -37,4 +40,8 @@ function poker_config_taxonomy_form_submit($form, &$form_state) {
     $form_state->setRedirect('entity.taxonomy_vocabulary.overview_form', [
         'taxonomy_vocabulary' => $vid
     ]);
+}
+
+function ribbon_submit($form, &$form_state) {
+    $form_state->setRedirect('view.ribbons.overview');
 }

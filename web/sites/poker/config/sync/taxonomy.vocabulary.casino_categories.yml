@@ -1,0 +1,9 @@
+uuid: 1670731e-a585-4b66-a544-0d4a6a6b8cdc
+langcode: en
+status: true
+dependencies: {  }
+name: 'Casino Categories'
+vid: casino_categories
+description: 'List of categories which Casino Games can be assigned to.'
+hierarchy: 0
+weight: 0

@@ -1,17 +1,27 @@
 poker_config.admin_settings:
-  title: 'Poker Featured Tiles Configuration'
-  description: 'Provides an interface for managing Featured Tiles.'
+  title: 'Poker Configurations'
+  description: 'Provides an interface for managing poker configurations.'
   parent: system.admin_config
   route_name: poker_config.admin_settings
+  weight: 1500
+
+poker_config.list.ribbons:
+  title: 'Manage Ribbons'
+  parent: poker_config.admin_settings
+  description: 'Manage Ribbons'
+  route_name: view.ribbons.overview
+  weight: 100
 
 poker_config.sort_featured_tiles:
   title: 'Sort Featured Tiles'
   parent: poker_config.admin_settings
   description: 'Sort Featured Tiles'
   route_name: view.featured_tiles.page_1
+  weight: 99
 
 poker_config.manage_featured_tiles:
   title: 'Manage Featured Tiles'
   parent: poker_config.admin_settings
   description: 'Manage Featured Tiles'
   route_name: view.featured_tiles.page_2
+  weight: 98

@@ -1,7 +1,7 @@
 poker_config.admin_settings:
-  path: 'admin/config/poker'
+  path: 'admin/config/poker_config'
   defaults:
     _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
-    _title: 'Poker Custom Configuration'
+    _title: 'Poker Configurations'
   requirements:
     _permission: 'administer site configuration'

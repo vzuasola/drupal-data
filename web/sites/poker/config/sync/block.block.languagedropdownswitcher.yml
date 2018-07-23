@@ -45,6 +45,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: "/admin/config/promotions\r\n/admin/config/promotions-for-products\r\n/admin/config/webcomposer/product-kebab-tabs\r\n/admin/structure/taxonomy/manage/games_category/overview\r\n/admin/content/game/sorting\r\n/admin/structure/webcomposer_slider_entity\r\n/admin/structure/taxonomy/manage/ribbon_labels/overview\r\n/admin/structure/partner_entity\r\n/admin/structure/webcomposer_slider_v2_entity\r\n/admin/structure/grid_menu_entity\r\n/admin/config/poker_download_page/download_page_entity\r\n/admin/structure/featured-tiles\r\n/admin/structure/how_to_play"
+    pages: "/admin/config/promotions\r\n/admin/config/promotions-for-products\r\n/admin/config/webcomposer/product-kebab-tabs\r\n/admin/structure/taxonomy/manage/games_category/overview\r\n/admin/content/game/sorting\r\n/admin/structure/webcomposer_slider_entity\r\n/admin/structure/taxonomy/manage/ribbon_labels/overview\r\n/admin/structure/partner_entity\r\n/admin/structure/webcomposer_slider_v2_entity\r\n/admin/structure/grid_menu_entity\r\n/admin/config/poker_download_page/download_page_entity\r\n/admin/config/poker_config/ribbons\r\n/admin/game-offers/casino\r\n/admin/game-offers/casino-categories\r\n/admin/game-offers/poker\r\n/admin/structure/featured-tiles"
     negate: false
     context_mapping: {  }
