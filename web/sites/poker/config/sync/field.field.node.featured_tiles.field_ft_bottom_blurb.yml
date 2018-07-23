@@ -1,0 +1,19 @@
+uuid: e96006d8-7a63-4d80-9009-e602f4ef24cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ft_bottom_blurb
+    - node.type.featured_tiles
+id: node.featured_tiles.field_ft_bottom_blurb
+field_name: field_ft_bottom_blurb
+entity_type: node
+bundle: featured_tiles
+label: 'Bottom Blurb'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

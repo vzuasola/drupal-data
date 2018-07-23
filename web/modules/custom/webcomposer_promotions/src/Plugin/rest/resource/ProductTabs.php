@@ -13,6 +13,7 @@ use Symfony\Component\HttpKernel\Exception\HttpException;
 use Symfony\Component\HttpFoundation\Request;
 use Psr\Log\LoggerInterface;
 use Drupal\node\Entity\Node;
+use Drupal\Core\Cache\CacheableMetadata;
 
 
 /**
@@ -90,11 +91,10 @@ class ProductTabs extends ResourceBase {
    *   Throws exception expected.
    */
   public function get() {
-    $build = array(
-      '#cache' => array(
-        'max-age' => 0,
-        ),
-      );
+    $build = new CacheableMetadata();
+    $build->setCacheTags([
+      'taxonomy_term_list',
+    ]);
 
     $state = $this->currentRequest->query->get('state');
     $type = $this->currentRequest->query->get('type');

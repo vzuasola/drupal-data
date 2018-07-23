@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains webcomposer_mailer.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function webcomposer_mailer_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the webcomposer_mailer module.
+    case 'help.page.webcomposer_mailer':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Provides mailer capability to Webcomposer') . '</p>';
+      return $output;
+
+    default:
+  }
+}

@@ -1,0 +1,8 @@
+advanced__active_tab: edit-antispam
+mail_enable: 1
+mailer_success: Success.
+mailer_error: 'Service unavailable.'
+antispam_enable: 1
+antispam_limit: '1'
+antispam_interval: '5'
+antispam_error: 'You have exceeded the maximum number of incorrect attempts. Please try again in @interval minutes.'

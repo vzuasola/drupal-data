@@ -60,6 +60,16 @@ class ResetPassword extends WebcomposerFormBase implements WebcomposerFormInterf
           '#type' => 'textfield',
           '#description' => 'New password field label',
         ],
+        'placeholder' => [
+          '#title' => 'New password placeholder label',
+          '#type' => 'textfield',
+          '#description' => 'label for new password field placeholder',
+        ],
+        'annotation' => [
+          '#title' => 'Annotation text',
+          '#type' => 'textarea',
+          '#description' => 'field annotation that will be displayed on focus',
+        ],
       ],
     ];
 
@@ -84,6 +94,16 @@ class ResetPassword extends WebcomposerFormBase implements WebcomposerFormInterf
           '#title' => 'Verify Password Label',
           '#type' => 'textfield',
           '#description' => 'Verify password field label',
+        ],
+        'placeholder' => [
+          '#title' => 'Verify password placeholder label',
+          '#type' => 'textfield',
+          '#description' => 'label for verify password field placeholder',
+        ],
+        'annotation' => [
+          '#title' => 'Annotation text',
+          '#type' => 'textarea',
+          '#description' => 'field annotation that will be displayed on focus',
         ],
       ],
     ];
