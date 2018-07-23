@@ -207,6 +207,11 @@ class JamboreeRegistrationForm extends FormBase {
       '#translatable' => TRUE,
     ];
     //captcha error
+    $form['reg_form']['errors']['service_not_available'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Registration Error Message if Service is not Available'),
+      '#default_value' => $this->get('service_not_available'),
+    ];
   }
 
   /**
