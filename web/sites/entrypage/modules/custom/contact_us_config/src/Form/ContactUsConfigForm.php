@@ -16,7 +16,7 @@ use Drupal\Core\Form\FormStateInterface;
  *   },
  *   menu = {
  *     "title" = "Contact us configuration",
- *     "description" = "Contact Us Configuration",
+ *     "description" = "Configure Contact us Blurb, Success Page and Email Template",
  *     "parent" = "contact_us_config.list",
  *     "weight" = 30
  *   },

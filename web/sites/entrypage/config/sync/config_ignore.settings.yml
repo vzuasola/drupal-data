@@ -9,5 +9,6 @@ ignored_config_entities:
   14: 'entrypage_config.*'
   16: 'webcomposer_affilates.*'
   18: 'contact_us_config.*'
+  20: 'webcomposer_form_manager.*'
 _core:
   default_config_hash: UVH1aJ4b44UM-VdPVN7hNNuuVqfReJxwfVeDQH1Hvsk
