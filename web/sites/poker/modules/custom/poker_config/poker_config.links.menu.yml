@@ -4,10 +4,3 @@ poker_config.admin_settings:
   parent: system.admin_config
   route_name: poker_config.admin_settings
   weight: 1500
-
-poker_config.list.ribbons:
-  title: 'Manage Ribbons'
-  parent: poker_config.admin_settings
-  description: 'Manage Ribbons'
-  route_name: view.ribbons.overview
-  weight: 100
