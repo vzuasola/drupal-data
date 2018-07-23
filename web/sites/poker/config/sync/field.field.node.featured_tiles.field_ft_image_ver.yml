@@ -1,0 +1,38 @@
+uuid: 753ea77e-56dc-498d-8ed4-39cd08697e5c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ft_image_ver
+    - node.type.featured_tiles
+  module:
+    - image
+id: node.featured_tiles.field_ft_image_ver
+field_name: field_ft_image_ver
+entity_type: node
+bundle: featured_tiles
+label: 'Image Tile Vertical'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: 1200x320
+  min_resolution: 1200x320
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

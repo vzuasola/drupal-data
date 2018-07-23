@@ -1,0 +1,21 @@
+uuid: 05af2630-507f-4cc6-81fb-e809f9334636
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.featured_tiles.field_ft_tile_size
+    - node.type.featured_tiles
+  module:
+    - user
+id: node.featured_tiles.teaser
+targetEntityType: node
+bundle: featured_tiles
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_ft_tile_size: true
+  langcode: true
