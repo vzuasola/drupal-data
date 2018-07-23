@@ -139,8 +139,8 @@ class ContactUsForm extends WebcomposerFormBase implements WebcomposerFormInterf
             '#title' => 'Product Choices',
             '#type' => 'textarea',
             '#description' => 'Provide a pipe separated key value pair.
-                              <small><br>Product key|Product Label 
-                              <br />Product key can be for deeplinking. 
+                              <small><br>Product key|Product Label
+                              <br />Product key can be for deeplinking.
                               <i>ex. /{domain:casino}/en/contact-us[query:({tracking}&product=Casino)]</i></small>',
             '#default_value' => '',
           ],
@@ -165,7 +165,7 @@ class ContactUsForm extends WebcomposerFormBase implements WebcomposerFormInterf
           'choices' => [
             '#title' => 'Subject Choices',
             '#type' => 'textarea',
-            '#description' => 'Provide a pipe separated key value pair. 
+            '#description' => 'Provide a pipe separated key value pair.
                                 <small><br />Product key|Email|Label
                                 <br /><i>Emails can be separated by comma.</i></small>',
             '#default_value' => '',
