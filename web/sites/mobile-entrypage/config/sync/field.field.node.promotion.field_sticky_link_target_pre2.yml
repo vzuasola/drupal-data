@@ -12,12 +12,10 @@ field_name: field_sticky_link_target_pre2
 entity_type: node
 bundle: promotion
 label: 'Sticky Link Target'
-description: ''
-required: true
+description: 'Please use " - None - " for Same Window behavior.'
+required: false
 translatable: true
-default_value:
-  -
-    value: _self
+default_value: {  }
 default_value_callback: ''
 settings: {  }
 field_type: list_string
