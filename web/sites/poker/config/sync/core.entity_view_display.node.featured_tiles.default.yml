@@ -1,0 +1,85 @@
+uuid: 34e51f2a-1ab7-4bd5-9ac7-b0d1f746219a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.featured_tiles.field_ft_bottom_blurb
+    - field.field.node.featured_tiles.field_ft_bottom_blurb_hover
+    - field.field.node.featured_tiles.field_ft_image_hor
+    - field.field.node.featured_tiles.field_ft_image_sm
+    - field.field.node.featured_tiles.field_ft_image_ver
+    - field.field.node.featured_tiles.field_ft_link
+    - field.field.node.featured_tiles.field_ft_tile_size
+    - node.type.featured_tiles
+  module:
+    - image
+    - options
+    - user
+id: node.featured_tiles.default
+targetEntityType: node
+bundle: featured_tiles
+mode: default
+content:
+  field_ft_bottom_blurb:
+    weight: 103
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_ft_bottom_blurb_hover:
+    weight: 104
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_ft_image_hor:
+    weight: 106
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_ft_image_sm:
+    weight: 105
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_ft_image_ver:
+    weight: 107
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_ft_link:
+    weight: 108
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_ft_tile_size:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

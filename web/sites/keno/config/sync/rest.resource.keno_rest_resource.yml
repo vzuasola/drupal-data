@@ -1,16 +1,16 @@
-uuid: 81339da6-a5c1-42c0-8197-6ff36033af11
+uuid: 28253518-856d-4ade-ab76-d3cdaa4eef9c
 langcode: en
 status: true
 dependencies:
   module:
+    - keno_config
     - serialization
     - user
-    - webcomposer_rest_extra
-id: mail_rest_submit
-plugin_id: mail_rest_submit
+id: keno_rest_resource
+plugin_id: keno_rest_resource
 granularity: method
 configuration:
-  POST:
+  GET:
     supported_formats:
       - json
     supported_auth:

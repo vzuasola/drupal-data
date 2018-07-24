@@ -1,0 +1,6 @@
+poker_config.admin_settings:
+  title: 'Poker Configurations'
+  description: 'Provides an interface for managing poker configurations.'
+  parent: system.admin_config
+  route_name: poker_config.admin_settings
+  weight: 1500
