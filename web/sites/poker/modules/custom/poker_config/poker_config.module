@@ -8,3 +8,40 @@
  * This file is no longer required in Drupal 8.
  * @see https://www.drupal.org/node/2217931
  */
+
+function poker_config_form_alter(&$form, $form_state, $form_id) {
+    $submitAction = false;
+    switch($form_id) {
+        case 'taxonomy_term_slider_routes_form':
+            $submitAction = 'poker_config_taxonomy_form_submit';
+            $entity = $form_state->getFormObject()->getEntity();
+            $name = $entity->get('name')->getString();
+            if ($name === 'home') {
+                $form['actions']['delete']['#access'] = FALSE;
+            }
+            break;
+        case 'taxonomy_term_ribbon_labels_form':
+            $submitAction = 'ribbon_submit';
+            break;
+    }
+
+    if ($submitAction !== false) {
+        foreach (array_keys($form['actions']) as $action) {
+            if ($action != 'preview' && isset($form['actions'][$action]['#type']) && 
+                $form['actions'][$action]['#type'] === 'submit') {
+                $form['actions'][$action]['#submit'][] = $submitAction;
+            }
+        }
+    }
+}
+
+function poker_config_taxonomy_form_submit($form, &$form_state) {
+    $vid = $form_state->getFormObject()->getEntity()->bundle();
+    $form_state->setRedirect('entity.taxonomy_vocabulary.overview_form', [
+        'taxonomy_vocabulary' => $vid
+    ]);
+}
+
+function ribbon_submit($form, &$form_state) {
+    $form_state->setRedirect('view.ribbons.overview');
+}
