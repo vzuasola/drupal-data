@@ -1,0 +1,45 @@
+advanced__active_tab: edit-reg-form
+reg_form_host: 'https://extstg2-cashier01.ptstaging.eu'
+step_2_title: ''
+step_2_link_title: ''
+success_message: ''
+step_2_body:
+  value: ''
+  format: basic_html
+value: null
+format: null
+promotion_label: ''
+promotion_link: ''
+cashier_label: ''
+cashier_link: ''
+next_button_label: ''
+next_button_link: ''
+step_3_title: ''
+step_3_link_title: ''
+welcome_message: ''
+step_3_body:
+  value: ''
+  format: basic_html
+play_button_label: ''
+play_button_link: ''
+casino_name: ptstaging2.78
+secret_key: ''
+reg_form_title: 'REGISTRATION EN'
+error_firstname: 'Firstname Error'
+error_lastname: 'Lastname Error'
+error_password: 'Password Error'
+error_confirm_password: 'Confirm Password Error'
+error_email: 'Email Error'
+error_confirm_email: 'Confirm Email Error'
+error_birthdate: 'Birthdate Error'
+error_phone: 'Phone Error'
+error_currency: 'Currency Error'
+error_country: 'Country Error'
+error_prefecture: 'Prefecture Error'
+error_city: 'City Error'
+error_zipcode: 'Zip Code Error'
+error_address: 'Address Error'
+error_couponcode: 'Coupon Code Error'
+error_term_conditions: ' Terms and Conditions Error'
+error_promotions: ' Promotions Error'
+service_not_available: 'SERVICE IS NOT AVAILABLE'

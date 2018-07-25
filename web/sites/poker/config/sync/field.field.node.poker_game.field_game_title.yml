@@ -1,0 +1,19 @@
+uuid: aa7ec584-9f86-425d-82e5-1d698b880ccb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_game_title
+    - node.type.poker_game
+id: node.poker_game.field_game_title
+field_name: field_game_title
+entity_type: node
+bundle: poker_game
+label: 'Game Title'
+description: 'Title that will be displayed on the frontend.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -1,0 +1,50 @@
+uuid: aff50b60-68e9-4071-a1c8-6eefb4fb52f0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.ribbon_labels.field_ribbon_background_color
+    - field.field.taxonomy_term.ribbon_labels.field_text_color
+    - taxonomy.vocabulary.ribbon_labels
+  module:
+    - color_field
+id: taxonomy_term.ribbon_labels.default
+targetEntityType: taxonomy_term
+bundle: ribbon_labels
+mode: default
+content:
+  field_ribbon_background_color:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: color_field_widget_html5
+    region: content
+  field_text_color:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: color_field_widget_html5
+    region: content
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true

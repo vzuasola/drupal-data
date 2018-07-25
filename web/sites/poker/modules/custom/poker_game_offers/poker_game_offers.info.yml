@@ -1,0 +1,5 @@
+name: Poker Game Offers
+type: module
+description: Manage Poker Game Offers
+core: 8.x
+package: Custom

@@ -1,0 +1,19 @@
+uuid: f503242f-6fc9-454b-bcac-e8bc2c96513f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ft_link
+    - node.type.featured_tiles
+id: node.featured_tiles.field_ft_link
+field_name: field_ft_link
+entity_type: node
+bundle: featured_tiles
+label: 'Tile Link'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

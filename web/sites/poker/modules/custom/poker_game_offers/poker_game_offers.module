@@ -1,0 +1,63 @@
+<?php
+
+/**
+ * @file
+ * Contains poker_game_offers.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function poker_game_offers_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the poker_game_offers module.
+    case 'help.page.poker_game_offers':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Manage Poker Game Offers') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+function poker_game_offers_form_alter(&$form, $form_state, $form_id) {
+    $submitAction = false;
+
+    switch ($form_id) {
+        case 'node_casino_game_form':
+        case 'node_casino_game_edit_form':
+            $submitAction = 'casino_game_submit';
+            break;
+        case 'node_poker_game_form':
+        case 'node_poker_game_edit_form':
+            $submitAction = 'poker_game_submit';
+            break;
+        case 'taxonomy_term_casino_categories_form':
+            $submitAction = 'casino_category_submit';
+            break;
+    }
+
+    if ($submitAction !== false) {
+        foreach (array_keys($form['actions']) as $action) {
+            if ($action != 'preview' && isset($form['actions'][$action]['#type'])
+                && $form['actions'][$action]['#type'] === 'submit') {
+                $form['actions'][$action]['#submit'][] = $submitAction;
+            }
+        }
+    }
+}
+
+function casino_category_submit($form, &$form_state) {
+    $form_state->setRedirect('view.game_offers_casino_categories.overview');
+}
+
+function casino_game_submit($form, &$form_state) {
+    $form_state->setRedirect('view.game_offers_casino.overview');
+}
+
+function poker_game_submit($form, &$form_state) {
+    $form_state->setRedirect('view.game_offers_poker.overview');
+}
