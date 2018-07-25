@@ -70,6 +70,16 @@ class ResetPassword extends WebcomposerFormBase implements WebcomposerFormInterf
           '#type' => 'textarea',
           '#description' => 'field annotation that will be displayed on focus',
         ],
+        'annotation_weak' => [
+          '#title' => 'Weak Annotation text',
+          '#type' => 'textarea',
+          '#description' => 'Message that will be displayed on lost focus',
+        ],
+        'annotation_average' => [
+          '#title' => 'Average Annotation text',
+          '#type' => 'textarea',
+          '#description' => 'Message that will be displayed on lost focus',
+        ],
       ],
     ];
 
