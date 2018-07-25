@@ -51,6 +51,59 @@ class HowToPlayConfiguration extends FormBase {
     return $form;
   }
 
+  /**
+   * Implements a form submit handler.
+   *
+   * @param array $form
+   *   The render array of the currently built form.
+   * @param FormStateInterface $form_state
+   *   Object describing the current state of the form.
+   */
+  public function submitForm(array &$form, FormStateInterface $form_state) {
+    $keys = [
+      'page_title',
+      'first_tab_title',
+      'first_tab_id',
+      'first_tab_icon',
+      'first_tab_icon_hover',
+      'first_tab_content',
+      'second_tab_title',
+      'second_tab_id',
+      'second_tab_icon',
+      'second_tab_icon_hover',
+      'second_tab_content',
+      'third_tab_title',
+      'third_tab_id',
+      'third_tab_icon',
+      'third_tab_icon_hover',
+      'third_tab_content',
+    ];
+
+    foreach ($keys as $key) {
+      if ($key == 'first_tab_icon' ||
+          $key == 'first_tab_icon_hover' ||
+          $key == 'second_tab_icon' ||
+          $key == 'second_tab_icon_hover' ||
+          $key == 'third_tab_icon' ||
+          $key == 'third_tab_icon_hover') {
+        $fid = $form_state->getValue($key);
+        if ($fid) {
+            $file = File::load($fid[0]);
+            $file->setPermanent();
+            $file->save();
+            $file_usage = \Drupal::service('file.usage');
+            $file_usage->add($file, 'casino_config', 'image', $fid[0]);
+
+            $this->config('poker_config.how_to_play_page')->set($key . '_file', file_create_url($file->getFileUri()))->save();
+        }
+      }
+
+      $this->config('poker_config.how_to_play_page')->set($key, $form_state->getValue($key))->save();
+    }
+
+    parent::submitForm($form, $form_state);
+  }
+
 
   private function generalConfig(&$form, $config) {
     $form['gen_config'] = array(
