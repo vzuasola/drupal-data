@@ -1,0 +1,17 @@
+uuid: c8b1e676-1e3b-43fb-b670-3a5f496072ab
+langcode: en
+status: true
+dependencies:
+  module:
+    - serialization
+    - user
+    - webcomposer_mailer
+id: mailer_rest_resource
+plugin_id: mailer_rest_resource
+granularity: method
+configuration:
+  POST:
+    supported_formats:
+      - json
+    supported_auth:
+      - cookie
