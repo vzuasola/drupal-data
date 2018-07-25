@@ -51,7 +51,6 @@ class HowToPlayConfiguration extends FormBase {
     return $form;
   }
 
-
   private function generalConfig(&$form, $config) {
     $form['gen_config'] = array(
       '#type' => 'details',
@@ -96,7 +95,7 @@ class HowToPlayConfiguration extends FormBase {
       '#translatable' => TRUE,
     );
 
-    $form['first_tab']['first_tab_icon'] = [
+    $form['first_tab']['file_image_first_tab_icon'] = [
       '#type' => 'managed_file',
       '#title' => t('Tab Highlighted Icon'),
       '#description' => t('Upload a file, allowed extensions: jpg, jpeg, png, gif'),
@@ -108,7 +107,7 @@ class HowToPlayConfiguration extends FormBase {
       '#required' => TRUE,
     ];
 
-    $form['first_tab']['first_tab_icon_hover'] = [
+    $form['first_tab']['file_image_first_tab_icon_hover'] = [
       '#type' => 'managed_file',
       '#title' => t('Tab Highlighted Icon'),
       '#description' => t('Upload a file, allowed extensions: jpg, jpeg, png, gif'),
@@ -157,7 +156,7 @@ class HowToPlayConfiguration extends FormBase {
       '#translatable' => TRUE,
     );
 
-    $form['second_tab']['second_tab_icon'] = [
+    $form['second_tab']['file_image_second_tab_icon'] = [
       '#type' => 'managed_file',
       '#title' => t('Tab Highlighted Icon'),
       '#description' => t('Upload a file, allowed extensions: jpg, jpeg, png, gif'),
@@ -169,7 +168,7 @@ class HowToPlayConfiguration extends FormBase {
       '#required' => TRUE,
     ];
 
-    $form['second_tab']['second_tab_icon_hover'] = [
+    $form['second_tab']['file_image_second_tab_icon_hover'] = [
       '#type' => 'managed_file',
       '#title' => t('Tab Highlighted Icon'),
       '#description' => t('Upload a file, allowed extensions: jpg, jpeg, png, gif'),
@@ -218,7 +217,7 @@ class HowToPlayConfiguration extends FormBase {
       '#translatable' => TRUE,
     );
 
-    $form['third_tab']['third_tab_icon'] = [
+    $form['third_tab']['file_image_third_tab_icon'] = [
       '#type' => 'managed_file',
       '#title' => t('Tab Highlighted Icon'),
       '#description' => t('Upload a file, allowed extensions: jpg, jpeg, png, gif'),
@@ -230,7 +229,7 @@ class HowToPlayConfiguration extends FormBase {
       '#required' => TRUE,
     ];
 
-    $form['third_tab']['third_tab_icon_hover'] = [
+    $form['third_tab']['file_image_third_tab_icon_hover'] = [
       '#type' => 'managed_file',
       '#title' => t('Tab Highlighted Icon'),
       '#description' => t('Upload a file, allowed extensions: jpg, jpeg, png, gif'),
