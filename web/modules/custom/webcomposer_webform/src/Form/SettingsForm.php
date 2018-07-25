@@ -162,7 +162,7 @@ class SettingsForm {
     $form['third_party_settings']['webcomposer_webform']['webform_sms']['sms'] = [
       '#type' => 'checkbox',
       '#title' => t('Enable SMS Notification.'),
-      '#default_value' => $configs['sms'] ?? NULL,
+      '#default_value' => $configs['sms'] ?? FALSE,
     ];
 
     $form['third_party_settings']['webcomposer_webform']['webform_sms']['sms_message'] = [
@@ -191,14 +191,11 @@ class SettingsForm {
       '#default_value' => $configs['max_per_number'] ?? NULL,
     ];
 
-    $form['third_party_settings']['webcomposer_webform']['webform_sms']['sms_counter'] = [
-      '#type' => 'number',
-      '#title' => t('SMS Counter'),
-      '#attributes' => array(
-        'readonly' => 'readonly'
-      ),
-      '#maxlength' => 5,
-      '#default_value' => $configs['sms_counter'] ?? NULL,
+    $form['third_party_settings']['webcomposer_webform']['webform_sms']['sms_error'] = [
+      '#type' => 'textfield',
+      '#title' => t('Maximum SMS Reached Error Message'),
+      '#description' => t('Error message when maximum SMS messages has been reached.'),
+      '#default_value' => $configs['sms_error'] ?? NULL,
     ];
 
     $this->tweakForm($form);
