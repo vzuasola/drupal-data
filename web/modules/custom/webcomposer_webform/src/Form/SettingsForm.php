@@ -149,6 +149,55 @@ class SettingsForm {
       }
     }
 
+    // SMS form
+
+    $configs = $settings->getThirdPartySetting('webcomposer_webform', 'webform_sms');
+
+    $form['third_party_settings']['webcomposer_webform']['webform_sms'] = [
+      '#type' => 'details',
+      '#title' => t('SMS Alert Settings'),
+      '#open' => FALSE,
+    ];
+
+    $form['third_party_settings']['webcomposer_webform']['webform_sms']['sms'] = [
+      '#type' => 'checkbox',
+      '#title' => t('Enable SMS Notification.'),
+      '#default_value' => $configs['sms'] ?? FALSE,
+    ];
+
+    $form['third_party_settings']['webcomposer_webform']['webform_sms']['sms_message'] = [
+      '#type' => 'textarea',
+      '#title' => t('SMS Message'),
+      '#maxlength' => 160,
+      '#default_value' => $configs['sms_message'] ?? NULL,
+    ];
+
+    $form['third_party_settings']['webcomposer_webform']['webform_sms']['max_per_ip'] = [
+      '#type' => 'number',
+      '#title' => t('Maximum SMS per IP Address'),
+      '#description' => t('The maximum number a unique IP address can opt-in for this day.'),
+      '#maxlength' => 5,
+      '#default_value' => $configs['max_per_ip'] ?? NULL,
+    ];
+
+    $form['third_party_settings']['webcomposer_webform']['webform_sms']['max_per_number'] = [
+      '#type' => 'number',
+      '#title' => t('Maximum SMS per Number'),
+      '#description' => t('The maximum number a unique phone number can opt-in for this day.'),
+      '#attributes' => array (
+        'type' => 'number'
+      ),
+      '#maxlength' => 5,
+      '#default_value' => $configs['max_per_number'] ?? NULL,
+    ];
+
+    $form['third_party_settings']['webcomposer_webform']['webform_sms']['sms_error'] = [
+      '#type' => 'textfield',
+      '#title' => t('Maximum SMS Reached Error Message'),
+      '#description' => t('Error message when maximum SMS messages has been reached.'),
+      '#default_value' => $configs['sms_error'] ?? NULL,
+    ];
+
     $this->tweakForm($form);
 
     $form['#validate'][] = [$this, 'validate'];
