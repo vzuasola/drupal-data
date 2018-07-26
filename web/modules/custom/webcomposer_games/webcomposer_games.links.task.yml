@@ -37,8 +37,3 @@ webcomposer_games.admin_games_goldenrace_provider_tab:
   route_name: webcomposer_games.games_goldenrace_provider_form
   title: 'GoldenRace Game Configuration'
   base_route: webcomposer_games.games_goldenrace_provider_form
-
-webcomposer_games.admin_games_gameworx_provider_tab:
-  route_name: webcomposer_games.games_gameworx_provider_form
-  title: 'Gameworx Game Configuration'
-  base_route: webcomposer_games.games_gameworx_provider_form 
