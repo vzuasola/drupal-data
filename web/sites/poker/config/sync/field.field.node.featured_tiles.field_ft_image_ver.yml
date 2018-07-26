@@ -6,7 +6,14 @@ dependencies:
     - field.storage.node.field_ft_image_ver
     - node.type.featured_tiles
   module:
+    - content_translation
     - image
+third_party_settings:
+  content_translation:
+    translation_sync:
+      alt: alt
+      title: title
+      file: '0'
 id: node.featured_tiles.field_ft_image_ver
 field_name: field_ft_image_ver
 entity_type: node
@@ -21,8 +28,8 @@ settings:
   file_directory: '[date:custom:Y]-[date:custom:m]'
   file_extensions: 'png gif jpg jpeg'
   max_filesize: ''
-  max_resolution: 1200x320
-  min_resolution: 1200x320
+  max_resolution: 600x641
+  min_resolution: 600x641
   alt_field: true
   alt_field_required: true
   title_field: false
