@@ -32,4 +32,10 @@ webcomposer_games.games_goldenrace_provider_schema:
   title: 'Goldenrace Game Configuration'
   base_route_name: webcomposer_games.games_goldenrace_provider_form
   names:
-    - 'webcomposer_config.games_goldenrace_provider'  
+    - 'webcomposer_config.games_goldenrace_provider'
+
+webcomposer_games.unsupported_country_schema:
+  title: 'Unsupported Country Configuration'
+  base_route_name: webcomposer_games.unsupported_country_configuration_form
+  names:
+    - 'webcomposer_config.unsupported_country'
