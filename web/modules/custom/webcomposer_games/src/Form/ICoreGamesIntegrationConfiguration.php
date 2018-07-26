@@ -125,6 +125,14 @@ class ICoreGamesIntegrationConfiguration extends ConfigFormBase {
         '#description' => $this->t("Please enter Exit Url."),
         '#default_value' => $config->get("{$key}_exit_url")
       ];
+      $form[$key]["{$key}_country"] = [
+        '#type' => 'textarea',
+        '#title' => t('Country'),
+        '#size' => 500,
+        '#description' => $this->t('Define the Country for Gameworx Lottery games.
+           '),
+        '#default_value' => $config->get("{$key}_country")
+       ];
     }
 
     $form['message'] = [
@@ -238,6 +246,8 @@ class ICoreGamesIntegrationConfiguration extends ConfigFormBase {
       $providers[] = "{$key}_plugin_id";
       $providers[] = "{$key}_operator_id";
       $providers[] = "{$key}_lobby_type";
+      $providers[] = "{$key}_country";
+       
     }
 
     $keys = [
