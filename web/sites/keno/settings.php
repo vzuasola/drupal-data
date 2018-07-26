@@ -18,4 +18,3 @@ $settings['primary_site_prefix'] = 'keno';
  */
 $settings['ck_editor_inline_image_prefix'] = '/en/keno';
 
-
