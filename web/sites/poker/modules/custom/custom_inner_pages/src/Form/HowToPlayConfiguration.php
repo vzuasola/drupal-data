@@ -103,7 +103,7 @@ class HowToPlayConfiguration extends FormBase {
       '#upload_validators' => [
         'file_validate_extensions' => ['png jpg jpeg'],
       ],
-      '#default_value' => $config->get('first_tab_icon'),
+      '#default_value' => $config->get('file_image_first_tab_icon'),
       '#required' => TRUE,
     ];
 
@@ -115,7 +115,7 @@ class HowToPlayConfiguration extends FormBase {
       '#upload_validators' => [
         'file_validate_extensions' => ['png jpg jpeg'],
       ],
-      '#default_value' => $config->get('first_tab_icon_hover'),
+      '#default_value' => $config->get('file_image_first_tab_icon_hover'),
       '#required' => TRUE,
     ];
 
@@ -164,7 +164,7 @@ class HowToPlayConfiguration extends FormBase {
       '#upload_validators' => [
         'file_validate_extensions' => ['png jpg jpeg'],
       ],
-      '#default_value' => $config->get('second_tab_icon'),
+      '#default_value' => $config->get('file_image_second_tab_icon'),
       '#required' => TRUE,
     ];
 
@@ -176,7 +176,7 @@ class HowToPlayConfiguration extends FormBase {
       '#upload_validators' => [
         'file_validate_extensions' => ['png jpg jpeg'],
       ],
-      '#default_value' => $config->get('second_tab_icon_hover'),
+      '#default_value' => $config->get('file_image_second_tab_icon_hover'),
       '#required' => TRUE,
     ];
 
@@ -225,7 +225,7 @@ class HowToPlayConfiguration extends FormBase {
       '#upload_validators' => [
         'file_validate_extensions' => ['png jpg jpeg'],
       ],
-      '#default_value' => $config->get('third_tab_icon'),
+      '#default_value' => $config->get('file_image_third_tab_icon'),
       '#required' => TRUE,
     ];
 
@@ -237,7 +237,7 @@ class HowToPlayConfiguration extends FormBase {
       '#upload_validators' => [
         'file_validate_extensions' => ['png jpg jpeg'],
       ],
-      '#default_value' => $config->get('third_tab_icon_hover'),
+      '#default_value' => $config->get('file_image_third_tab_icon_hover'),
       '#required' => TRUE,
     ];
 
