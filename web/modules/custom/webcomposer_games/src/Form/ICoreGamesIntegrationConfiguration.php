@@ -15,27 +15,27 @@ class ICoreGamesIntegrationConfiguration extends ConfigFormBase {
    * ICore Game Providers definitions
    */
     const ICORE_GAME_PROVIDERS = [
-        'asia_gaming' => 'Asia Gaming',
-        'kiron_virtual_sports' => 'Virtual Sports',
-        'gb_virtual_sports' => 'Global Bet Virtual Sports',
-        'skywind' => 'Skywind',
-        'voidbridge' => 'Voidbridge',
-        'gold_deluxe' => 'Gold Deluxe',
-        'video_racing' => 'Video Racing',
-        'sa_gaming' => 'SA Gaming',
-        'allbet' => 'AllBet',
-        'tgp' => 'TGP',
-        'evo_gaming' => 'Evolution Gaming',
-        'ebet' => 'eBet',
-        'cq9' => 'CQ9',
-        'solid_gaming' => 'Solid Gaming',
-        'gameworx_lottery' => 'Gameworx Lottery games',
-        'gameworx_quicklotto' => 'Gameworx Quick Lotto'
+      'asia_gaming' => 'Asia Gaming',
+      'kiron_virtual_sports' => 'Virtual Sports',
+      'gb_virtual_sports' => 'Global Bet Virtual Sports',
+      'skywind' => 'Skywind',
+      'voidbridge' => 'Voidbridge',
+      'gold_deluxe' => 'Gold Deluxe',
+      'video_racing' => 'Video Racing',
+      'sa_gaming' => 'SA Gaming',
+      'allbet' => 'AllBet',
+      'tgp' => 'TGP',
+      'evo_gaming' => 'Evolution Gaming',
+      'ebet' => 'eBet',
+      'cq9' => 'CQ9',
+      'solid_gaming' => 'Solid Gaming',
+      'gameworx_lottery' => 'Gameworx Lottery games',
+      'gameworx_quicklotto' => 'Gameworx Quick Lotto'
     ];
 
     const ICORE_GAME_GX_PROVIDERS = [
-        'gameworx_lottery' => 'Gameworx Lottery games',
-        'gameworx_quicklotto' => 'Gameworx Quick Lotto'
+      'gameworx_lottery' => 'Gameworx Lottery games',
+      'gameworx_quicklotto' => 'Gameworx Quick Lotto'
     ];
 
   /**
@@ -225,6 +225,7 @@ class ICoreGamesIntegrationConfiguration extends ConfigFormBase {
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $providers = [];
+
     foreach (self::ICORE_GAME_PROVIDERS as $key => $value) {
       $providers[] = "{$key}_currency";
       $providers[] = "{$key}_language_mapping";
