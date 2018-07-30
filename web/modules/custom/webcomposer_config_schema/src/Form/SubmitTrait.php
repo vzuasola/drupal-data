@@ -3,6 +3,7 @@
 namespace Drupal\webcomposer_config_schema\Form;
 
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\file\Entity\File;
 
 trait SubmitTrait {
   /**
@@ -12,6 +13,7 @@ trait SubmitTrait {
     $data = [];
 
     $this->constructSaveData($data, $form, $form_state);
+    $this->processUploads($data);
 
     $this->save($data);
   }
@@ -30,8 +32,7 @@ trait SubmitTrait {
       if (is_array($value)) {
         if (isset($value['#type']) &&
           array_key_exists('#default_value', $value) &&
-          !in_array($value['#type'], $excluded_types)
-        ) {
+          !in_array($value['#type'], $excluded_types)) {
           $data[$key] = $form_state->getValue($key);
         }
 
@@ -42,5 +43,21 @@ trait SubmitTrait {
     unset($data['form_token']);
 
     return $data;
+  }
+
+  /**
+   *
+   */
+  private function processUploads($data) {
+    foreach ($data as $key => $value) {
+      if (0 === strpos($key, 'file_image') && isset($value[0])) {
+        $file = File::load($value[0]);
+
+        if ($file) {
+          $file->setPermanent();
+          $file->save();
+        }
+      }
+    }
   }
 }
