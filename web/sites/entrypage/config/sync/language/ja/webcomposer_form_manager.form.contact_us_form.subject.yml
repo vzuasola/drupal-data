@@ -1,0 +1,33 @@
+field_settings:
+  label: 題名
+  placeholder: '- タイトルを選択 -'
+  choices: "sports|jpsupport@dafabet.com|アカウント\r\nsports|jpsupport@dafabet.com|ボーナス/プロモーション\r\nsports|jpsupport@dafabet.com|ご入金/お引出し\r\nsports|jpsupport@dafabet.com|ゲーム\r\nsports|jpsupport@dafabet.com|テクニカルな問題\r\nsports|affiliate@dafabet.com|アフィリエイトに関するお問い合わせ\r\nsports|jpsupport@dafabet.com|その他のお問い合わせ\r\nsports-df|jpsupport@dafabet.com|アカウント\r\nsports-df|jpsupport@dafabet.com|ボーナス/プロモーション\r\nsports-df|jpsupport@dafabet.com|ご入金/お引出し\r\nsports-df|jpsupport@dafabet.com|ゲーム\r\nsports-df|jpsupport@dafabet.com|テクニカルな問題\r\nsports-df|affiliate@dafabet.com|アフィリエイトに関するお問い合わせ\r\nsports-df|jpsupport@dafabet.com|その他のお問い合わせ\r\nexchange|jpsupport@dafabet.com|アカウント\r\nexchange|jpsupport@dafabet.com|ボーナス/プロモーション\r\nexchange|jpsupport@dafabet.com|ご入金/お引出し\r\nexchange|jpsupport@dafabet.com|ゲーム\r\nexchange|jpsupport@dafabet.com|テクニカルな問題\r\nexchange|affiliate@dafabet.com|アフィリエイトに関するお問い合わせ\r\nexchange|jpsupport@dafabet.com|その他のお問い合わせ\r\ncasino|jpsupport@dafabet.com|アカウント\r\ncasino|jpsupport@dafabet.com|ボーナス/プロモーション\r\ncasino|jpsupport@dafabet.com|ご入金/お引出し\r\ncasino|jpsupport@dafabet.com|ゲーム\r\ncasino|jpsupport@dafabet.com|テクニカルな問題\r\ncasino|affiliate@dafabet.com|アフィリエイトに関するお問い合わせ\r\ncasino|jpsupport@dafabet.com|その他のお問い合わせ\r\ncasino-gold|jpsupport@dafabet.com|アカウント\r\ncasino-gold|jpsupport@dafabet.com|ボーナス/プロモーション\r\ncasino-gold|jpsupport@dafabet.com|ご入金/お引出し\r\ncasino-gold|jpsupport@dafabet.com|ゲーム\r\ncasino-gold|jpsupport@dafabet.com|テクニカルな問題\r\ncasino-gold|affiliate@dafabet.com|アフィリエイトに関するお問い合わせ\r\ncasino-gold|jpsupport@dafabet.com|その他のお問い合わせ\r\nlive-dealer|jpsupport@dafabet.com|アカウント\r\nlive-dealer|jpsupport@dafabet.com|ボーナス/プロモーション\r\nlive-dealer|jpsupport@dafabet.com|ご入金/お引出し\r\nlive-dealer|jpsupport@dafabet.com|ゲーム\r\nlive-dealer|jpsupport@dafabet.com|テクニカルな問題\r\nlive-dealer|affiliate@dafabet.com|アフィリエイトに関するお問い合わせ\r\nlive-dealer|jpsupport@dafabet.com|その他のお問い合わせ\r\ngames|jpsupport@dafabet.com|アカウント\r\ngames|jpsupport@dafabet.com|ボーナス/プロモーション\r\ngames|jpsupport@dafabet.com|ご入金/お引出し\r\ngames|jpsupport@dafabet.com|ゲーム\r\ngames|jpsupport@dafabet.com|テクニカルな問題\r\ngames|affiliate@dafabet.com|アフィリエイトに関するお問い合わせ\r\ngames|jpsupport@dafabet.com|その他のお問い合わせ\r\narcade|jpsupport@dafabet.com|アカウント\r\narcade|jpsupport@dafabet.com|ボーナス/プロモーション\r\narcade|jpsupport@dafabet.com|ご入金/お引出し\r\narcade|jpsupport@dafabet.com|ゲーム\r\narcade|jpsupport@dafabet.com|テクニカルな問題\r\narcade|affiliate@dafabet.com|アフィリエイトに関するお問い合わせ\r\narcade|jpsupport@dafabet.com|その他のお問い合わせ\r\nlottery|jpsupport@dafabet.com|アカウント\r\nlottery|jpsupport@dafabet.com|ボーナス/プロモーション\r\nlottery|jpsupport@dafabet.com|ご入金/お引出し\r\nlottery|jpsupport@dafabet.com|ゲーム\r\nlottery|jpsupport@dafabet.com|テクニカルな問題\r\nlottery|affiliate@dafabet.com|アフィリエイトに関するお問い合わせ\r\nlottery|jpsupport@dafabet.com|その他のお問い合わせ\r\npoker|jpsupport@dafabet.com|アカウント\r\npoker|jpsupport@dafabet.com|ボーナス/プロモーション\r\npoker|jpsupport@dafabet.com|ご入金/お引出し\r\npoker|jpsupport@dafabet.com|ゲーム\r\npoker|jpsupport@dafabet.com|テクニカルな問題\r\npoker|affiliate@dafabet.com|アフィリエイトに関するお問い合わせ\r\npoker|jpsupport@dafabet.com|その他のお問い合わせ\r\nvirtual-sports|jpsupport@dafabet.com|アカウント\r\nvirtual-sports|jpsupport@dafabet.com|ボーナス/プロモーション\r\nvirtual-sports|jpsupport@dafabet.com|ご入金/お引出し\r\nvirtual-sports|jpsupport@dafabet.com|ゲーム\r\nvirtual-sports|jpsupport@dafabet.com|テクニカルな問題\r\nvirtual-sports|affiliate@dafabet.com|アフィリエイトに関するお問い合わせ\r\nvirtual-sports|jpsupport@dafabet.com|その他のお問い合わせ"
+field_validations:
+  required:
+    error_message: "題名を入力して下さい。\r\n"
+  alpha:
+    error_message: 'Field should be Alphabet characters only'
+  alphanumeric:
+    error_message: 'Field should be alphanumeric'
+  alpha_multi:
+    error_message: 'Value is not a valid multilingual character'
+  numeric:
+    error_message: 'Field should be numeric'
+  no_symbols:
+    error_message: 'Field contains invalid special characters'
+  numeric_symbols:
+    error_message: 'Field contains invalid special characters'
+  email:
+    error_message: 'Field does not contain a valid email address'
+  min_length:
+    error_message: 'Minimum requirement not met'
+  max_length:
+    error_message: 'Maximum requirement not met'
+  regex:
+    error_message: 'This field only accepts specific characters.'
+  valid_date:
+    error_message: 'Date is invalid'
+  invalid_words:
+    error_message: 'Invalid/not allowed characters'
+  valid_languages:
+    error_message: 'This field only accepts specific characters.'

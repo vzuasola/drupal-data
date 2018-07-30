@@ -1,0 +1,33 @@
+field_settings:
+  label: Temat
+  placeholder: '- Wybierz temat -'
+  choices: "sports|ensupport@dafabet.com|Konto\r\nsports|ensupport@dafabet.com|Bonusy/Promocje\r\nsports|ensupport@dafabet.com|Depozyt/Wypłata\r\nsports|ensupport@dafabet.com|Gry\r\nsports|ensupport@dafabet.com|Zapytania Techniczne\r\nsports|affiliate@dafabet.com|Pytania o program Affiliate\r\nsports-df|ensupport@dafabet.com|Generalne Zapytania\r\nsports-df|df.ensupport@dafabet.com|Konto\r\nsports-df|df.ensupport@dafabet.com|Bonusy/Promocje\r\nsports-df|df.ensupport@dafabet.com|Depozyt/Wypłata\r\nsports-df|df.ensupport@dafabet.com|Gry\r\nsports-df|df.ensupport@dafabet.com|Zapytania Techniczne\r\nexchange|affiliate@dafabet.com|Pytania o program Affiliate\r\nexchange|df.ensupport@dafabet.com|Generalne Zapytania\r\nexchange|ensupport@dafabet.com|Konto\r\nexchange|ensupport@dafabet.com|Bonusy/Promocje\r\nexchange|ensupport@dafabet.com|Depozyt/Wypłata\r\nexchange|ensupport@dafabet.com|Gry\r\ncasino|ensupport@dafabet.com|Zapytania Techniczne\r\ncasino|affiliate@dafabet.com|Pytania o program Affiliate\r\ncasino|ensupport@dafabet.com|Generalne Zapytania\r\ncasino|ensupport@dafabet.com|Konto\r\ncasino|ensupport@dafabet.com|Bonusy/Promocje\r\ncasino|ensupport@dafabet.com|Depozyt/Wypłata\r\ncasino-gold|ensupport@dafabet.com|Gry\r\ncasino-gold|ensupport@dafabet.com|Zapytania Techniczne\r\ncasino-gold|affiliate@dafabet.com|Pytania o program Affiliate\r\ncasino-gold|ensupport@dafabet.com|Generalne Zapytania\r\ncasino-gold|ensupport@dafabet.com|Konto\r\ncasino-gold|ensupport@dafabet.com|Bonusy/Promocje\r\nlive-dealer|ensupport@dafabet.com|Depozyt/Wypłata\r\nlive-dealer|ensupport@dafabet.com|Gry\r\nlive-dealer|ensupport@dafabet.com|Zapytania Techniczne\r\nlive-dealer|affiliate@dafabet.com|Pytania o program Affiliate\r\nlive-dealer|ensupport@dafabet.com|Generalne Zapytania\r\nlive-dealer|ensupport@dafabet.com|Konto\r\ngames|ensupport@dafabet.com|Bonusy/Promocje\r\ngames|ensupport@dafabet.com|Depozyt/Wypłata\r\ngames|ensupport@dafabet.com|Gry\r\ngames|ensupport@dafabet.com|Zapytania Techniczne\r\ngames|affiliate@dafabet.com|Pytania o program Affiliate\r\ngames|ensupport@dafabet.com|Generalne Zapytania\r\narcade|ensupport@dafabet.com|Konto\r\narcade|ensupport@dafabet.com|Bonusy/Promocje\r\narcade|ensupport@dafabet.com|Depozyt/Wypłata\r\narcade|ensupport@dafabet.com|Gry\r\narcade|ensupport@dafabet.com|Zapytania Techniczne\r\narcade|affiliate@dafabet.com|Pytania o program Affiliate\r\nlottery|ensupport@dafabet.com|Generalne Zapytania\r\nlottery|ensupport@dafabet.com|Konto\r\nlottery|ensupport@dafabet.com|Bonusy/Promocje\r\nlottery|ensupport@dafabet.com|Depozyt/Wypłata\r\nlottery|ensupport@dafabet.com|Gry\r\nlottery|ensupport@dafabet.com|Zapytania Techniczne\r\npoker|affiliate@dafabet.com|Pytania o program Affiliate\r\npoker|ensupport@dafabet.com|Generalne Zapytania\r\npoker|ensupport@dafabet.com|Konto\r\npoker|ensupport@dafabet.com|Bonusy/Promocje\r\npoker|ensupport@dafabet.com|Depozyt/Wypłata\r\npoker|ensupport@dafabet.com|Gry\r\nvirtual-sports|ensupport@dafabet.com|Zapytania Techniczne\r\nvirtual-sports|affiliate@dafabet.com|Pytania o program Affiliate\r\nvirtual-sports|ensupport@dafabet.com|Generalne Zapytania\r\nvirtual-sports|ensupport@dafabet.com|Konto\r\nvirtual-sports|ensupport@dafabet.com|Bonusy/Promocje\r\nvirtual-sports|ensupport@dafabet.com|Depozyt/Wypłata\r\nensupport@dafabet.com|Gry\r\nensupport@dafabet.com|Zapytania Techniczne\r\naffiliate@dafabet.com|Pytania o program Affiliate\r\nensupport@dafabet.com|Generalne Zapytania\r\nensupport@dafabet.com|Konto\r\nensupport@dafabet.com|Bonusy/Promocje\r\nensupport@dafabet.com|Depozyt/Wypłata\r\nensupport@dafabet.com|Gry\r\nensupport@dafabet.com|Zapytania Techniczne\r\naffiliate@dafabet.com|Pytania o program Affiliate\r\nensupport@dafabet.com|Generalne Zapytania"
+field_validations:
+  required:
+    error_message: "Temat jest wymagany.\r\n"
+  alpha:
+    error_message: 'Field should be Alphabet characters only'
+  alphanumeric:
+    error_message: 'Field should be alphanumeric'
+  alpha_multi:
+    error_message: 'Value is not a valid multilingual character'
+  numeric:
+    error_message: 'Field should be numeric'
+  no_symbols:
+    error_message: 'Field contains invalid special characters'
+  numeric_symbols:
+    error_message: 'Field contains invalid special characters'
+  email:
+    error_message: 'Field does not contain a valid email address'
+  min_length:
+    error_message: 'Minimum requirement not met'
+  max_length:
+    error_message: 'Maximum requirement not met'
+  regex:
+    error_message: 'This field only accepts specific characters.'
+  valid_date:
+    error_message: 'Date is invalid'
+  invalid_words:
+    error_message: 'Invalid/not allowed characters'
+  valid_languages:
+    error_message: 'This field only accepts specific characters.'

@@ -1,0 +1,4 @@
+advanced__active_tab: edit-antispam
+mailer_success: Success.
+mailer_error: "服务不可用\r\n"
+antispam_error: "您已超过错误次数限制。请在5分钟后再尝试。\r\n"
