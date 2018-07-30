@@ -129,7 +129,7 @@ class ICoreGamesIntegrationConfiguration extends ConfigFormBase {
         '#type' => 'textarea',
         '#title' => t('Country'),
         '#size' => 500,
-        '#description' => $this->t('Define the Country for Gameworx Lottery games.
+        '#description' => $this->t('Define the Unsupported Country code for Gameworx Lottery games.
            '),
         '#default_value' => $config->get("{$key}_country")
        ];
