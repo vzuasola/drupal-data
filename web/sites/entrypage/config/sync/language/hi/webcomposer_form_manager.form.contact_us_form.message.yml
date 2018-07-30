@@ -4,64 +4,30 @@ field_settings:
   annotation: ''
 field_validations:
   required:
-    enable: 1
     error_message: 'Your message is required.'
   alpha:
-    enable: 0
     error_message: 'Field should be Alphabet characters only'
-    parameters:
-      spaces: 1
   alphanumeric:
-    enable: 0
     error_message: 'Field should be alphanumeric'
-    parameters:
-      spaces: 1
   alpha_multi:
-    enable: 0
     error_message: 'Value is not a valid multilingual character'
-    parameters:
-      space: 1
-      numeric: 1
-      allow: 0
-      disallow: 0
-      special: ''
   numeric:
-    enable: 0
     error_message: 'Field should be numeric'
   no_symbols:
-    enable: 0
     error_message: 'Field contains invalid special characters'
   numeric_symbols:
-    enable: 0
     error_message: 'Field contains invalid special characters'
   email:
-    enable: 0
     error_message: 'Field does not contain a valid email address'
   min_length:
-    enable: 1
     error_message: 'Minimum requirement not met'
-    parameters:
-      length: '1'
   max_length:
-    enable: 1
     error_message: 'The message you entered exceeds the maximum characters allowed.'
-    parameters:
-      length: '500'
   regex:
-    enable: 1
     error_message: 'This field can only contain alphanumeric values and ()_-/\&#,.'
-    parameters:
-      regex_value: '^(?!\s)[a-zA-Z0-9_,.&#/\\\-''\u4E00-\uFA29\uAC00-\uD7AF\u0370-\u03FF\u0E00-\u0E7F\s]+$'
   valid_date:
-    enable: 0
     error_message: 'Date is invalid'
   invalid_words:
-    enable: 1
     error_message: 'Invalid/not allowed characters'
-    parameters:
-      invalid_words_list: ":) \r\n㋡\r\n$"
   valid_languages:
-    enable: 0
     error_message: 'This field only accepts specific characters.'
-    parameters:
-      regex_value: ''

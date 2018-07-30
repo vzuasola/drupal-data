@@ -1,0 +1,11 @@
+advanced__active_tab: edit-success
+page_title: 'Επικοινωνήστε μαζί μας'
+body_content:
+  value: ''
+  format: basic_html
+success_title: 'Φόρμα Επικοινωνίας'
+success_message:
+  value: "<p>Σας ευχαριστούμε! Η φόρμα σας έχει υποβληθεί επιτυχώς. Η Εξυπηρέτηση Πελατών μας θα σας απαντήσει σύντομα.</p>\r\n\r\n<p><a href=\"{domain:entry}/{lang}[query:({tracking})]\" target=\"_self\">&lt;&lt; Επιστροφή στην αρχική σελίδα</a></p>\r\n"
+  format: basic_html
+form_title: 'Φόρμα Επικοινωνίας'
+email_template: "Firstname: @firstname\r\nLastname: @lastname\r\nUsername: @username\r\nEmail: @email\r\nProduct: @product\r\nSubject: @subject\r\nMessage: \r\n@message\r\n\r\nIP: @ip\r\nSubmitted on: @date\r\nLanguage: @language"

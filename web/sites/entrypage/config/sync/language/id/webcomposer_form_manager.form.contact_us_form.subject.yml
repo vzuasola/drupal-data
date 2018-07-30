@@ -1,0 +1,33 @@
+field_settings:
+  label: Subyek
+  placeholder: '- Pilih Topik -'
+  choices: "sports|idsupport@dafabet.com|Akun\r\nsports|idsupport@dafabet.com|Bonus/Promosi\r\nsports|idsupport@dafabet.com|Deposit/Penarikan\r\nsports|idsupport@dafabet.com|Permainan\r\nsports|idsupport@dafabet.com|Masalah Teknis\r\nsports|affiliate@dafabet.com|Pertanyaan Terkait Afiliasi\r\nsports|idsupport@dafabet.com|Pertanyaan Umum\r\nsports-df|df.idsupport@dafabet.com|Akun\r\nsports-df|df.idsupport@dafabet.com|Bonus/Promosi\r\nsports-df|df.idsupport@dafabet.com|Deposit/Penarikan\r\nsports-df|df.idsupport@dafabet.com|Permainan\r\nsports-df|df.idsupport@dafabet.com|Masalah Teknis\r\nsports-df|affiliate@dafabet.com|Pertanyaan Terkait Afiliasi\r\nsports-df|df.idsupport@dafabet.com|Pertanyaan Umum\r\nexchange|idsupport@dafabet.com|Akun\r\nexchange|idsupport@dafabet.com|Bonus/Promosi\r\nexchange|idsupport@dafabet.com|Deposit/Penarikan\r\nexchange|idsupport@dafabet.com|Permainan\r\nexchange|idsupport@dafabet.com|Masalah Teknis\r\nexchange|affiliate@dafabet.com|Pertanyaan Terkait Afiliasi\r\nexchange|idsupport@dafabet.com|Pertanyaan Umum\r\ncasino|idsupport@dafabet.com|Akun\r\ncasino|idsupport@dafabet.com|Bonus/Promosi\r\ncasino|idsupport@dafabet.com|Deposit/Penarikan\r\ncasino|idsupport@dafabet.com|Permainan\r\ncasino|idsupport@dafabet.com|Masalah Teknis\r\ncasino|affiliate@dafabet.com|Pertanyaan Terkait Afiliasi\r\ncasino|idsupport@dafabet.com|Pertanyaan Umum\r\ncasino-gold|idsupport@dafabet.com|Akun\r\ncasino-gold|idsupport@dafabet.com|Bonus/Promosi\r\ncasino-gold|idsupport@dafabet.com|Deposit/Penarikan\r\ncasino-gold|idsupport@dafabet.com|Permainan\r\ncasino-gold|idsupport@dafabet.com|Masalah Teknis\r\ncasino-gold|affiliate@dafabet.com|Pertanyaan Terkait Afiliasi\r\ncasino-gold|idsupport@dafabet.com|Pertanyaan Umum\r\nlive-dealer|idsupport@dafabet.com|Akun\r\nlive-dealer|idsupport@dafabet.com|Bonus/Promosi\r\nlive-dealer|idsupport@dafabet.com|Deposit/Penarikan\r\nlive-dealer|idsupport@dafabet.com|Permainan\r\nlive-dealer|idsupport@dafabet.com|Masalah Teknis\r\nlive-dealer|affiliate@dafabet.com|Pertanyaan Terkait Afiliasi\r\nlive-dealer|idsupport@dafabet.com|Pertanyaan Umum\r\ngames|idsupport@dafabet.com|Akun\r\ngames|idsupport@dafabet.com|Bonus/Promosi\r\ngames|idsupport@dafabet.com|Deposit/Penarikan\r\ngames|idsupport@dafabet.com|Permainan\r\ngames|idsupport@dafabet.com|Masalah Teknis\r\ngames|affiliate@dafabet.com|Pertanyaan Terkait Afiliasi\r\ngames|idsupport@dafabet.com|Pertanyaan Umum\r\narcade|idsupport@dafabet.com|Akun\r\narcade|idsupport@dafabet.com|Bonus/Promosi\r\narcade|idsupport@dafabet.com|Deposit/Penarikan\r\narcade|idsupport@dafabet.com|Permainan\r\narcade|idsupport@dafabet.com|Masalah Teknis\r\narcade|affiliate@dafabet.com|Pertanyaan Terkait Afiliasi\r\narcade|idsupport@dafabet.com|Pertanyaan Umum\r\nlottery|idsupport@dafabet.com|Akun\r\nlottery|idsupport@dafabet.com|Bonus/Promosi\r\nlottery|idsupport@dafabet.com|Deposit/Penarikan\r\nlottery|idsupport@dafabet.com|Permainan\r\nlottery|idsupport@dafabet.com|Masalah Teknis\r\nlottery|affiliate@dafabet.com|Pertanyaan Terkait Afiliasi\r\nlottery|idsupport@dafabet.com|Pertanyaan Umum\r\npoker|idsupport@dafabet.com|Akun\r\npoker|idsupport@dafabet.com|Bonus/Promosi\r\npoker|idsupport@dafabet.com|Deposit/Penarikan\r\npoker|idsupport@dafabet.com|Permainan\r\npoker|idsupport@dafabet.com|Masalah Teknis\r\npoker|affiliate@dafabet.com|Pertanyaan Terkait Afiliasi\r\npoker|idsupport@dafabet.com|Pertanyaan Umum\r\nvirtual-sports|idsupport@dafabet.com|Akun\r\nvirtual-sports|idsupport@dafabet.com|Bonus/Promosi\r\nvirtual-sports|idsupport@dafabet.com|Deposit/Penarikan\r\nvirtual-sports|idsupport@dafabet.com|Permainan\r\nvirtual-sports|idsupport@dafabet.com|Masalah Teknis\r\nvirtual-sports|affiliate@dafabet.com|Pertanyaan Terkait Afiliasi\r\nvirtual-sports|idsupport@dafabet.com|Pertanyaan Umum"
+field_validations:
+  required:
+    error_message: "Topik wajib diisi.\r\n"
+  alpha:
+    error_message: 'Field should be Alphabet characters only'
+  alphanumeric:
+    error_message: 'Field should be alphanumeric'
+  alpha_multi:
+    error_message: 'Value is not a valid multilingual character'
+  numeric:
+    error_message: 'Field should be numeric'
+  no_symbols:
+    error_message: 'Field contains invalid special characters'
+  numeric_symbols:
+    error_message: 'Field contains invalid special characters'
+  email:
+    error_message: 'Field does not contain a valid email address'
+  min_length:
+    error_message: 'Minimum requirement not met'
+  max_length:
+    error_message: 'Maximum requirement not met'
+  regex:
+    error_message: 'This field only accepts specific characters.'
+  valid_date:
+    error_message: 'Date is invalid'
+  invalid_words:
+    error_message: 'Invalid/not allowed characters'
+  valid_languages:
+    error_message: 'This field only accepts specific characters.'

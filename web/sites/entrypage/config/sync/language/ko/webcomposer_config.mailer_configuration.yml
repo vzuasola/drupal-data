@@ -1,0 +1,4 @@
+advanced__active_tab: edit-settings
+mailer_success: Success.
+mailer_error: "서비스 이용 불가\r\n"
+antispam_error: "최대 입력 오류 횟수가 초과되었습니다. 5분 뒤에 다시 시도해주십시오.\r\n"

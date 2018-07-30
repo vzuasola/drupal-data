@@ -1,0 +1,4 @@
+advanced__active_tab: edit-antispam
+mailer_success: Success.
+mailer_error: "Dịch vụ không có sẵn\r\n"
+antispam_error: "Bạn đã vượt quá tối đa số lần thử không chính xác. Vui lòng thử lại sau 5 phút.\r\n"

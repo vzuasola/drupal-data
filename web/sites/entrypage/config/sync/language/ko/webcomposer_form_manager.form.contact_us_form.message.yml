@@ -1,0 +1,33 @@
+field_settings:
+  label: 메시지
+  placeholder: '내용을 작성해 주세요…'
+  annotation: ''
+field_validations:
+  required:
+    error_message: "내용을 입력해 주세요.\r\n"
+  alpha:
+    error_message: 'Field should be Alphabet characters only'
+  alphanumeric:
+    error_message: 'Field should be alphanumeric'
+  alpha_multi:
+    error_message: 'Value is not a valid multilingual character'
+  numeric:
+    error_message: 'Field should be numeric'
+  no_symbols:
+    error_message: 'Field contains invalid special characters'
+  numeric_symbols:
+    error_message: 'Field contains invalid special characters'
+  email:
+    error_message: 'Field does not contain a valid email address'
+  min_length:
+    error_message: 'Minimum requirement not met'
+  max_length:
+    error_message: "내용이 허용 가능한 글자 수를 초과하였습니다.\r\n"
+  regex:
+    error_message: "본 항복에는 숫자 및 ()_-/\\&#,.만 입력하실 수 있습니다.\r\n"
+  valid_date:
+    error_message: 'Date is invalid'
+  invalid_words:
+    error_message: "본 항복에는 숫자 및 ()_-/\\&#,.만 입력하실 수 있습니다.\r\n"
+  valid_languages:
+    error_message: 'This field only accepts specific characters.'
