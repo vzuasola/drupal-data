@@ -1,0 +1,67 @@
+field_settings:
+  label: Subject
+  placeholder: '- Select -'
+  choices: "sports|ensupport@dafabet.com|Account\r\nsports|ensupport@dafabet.com|Bonus/Promotions\r\nsports|ensupport@dafabet.com|Deposit/Withdrawal\r\nsports|ensupport@dafabet.com|Games\r\nsports|ensupport@dafabet.com|Technical Issues\r\nsports|affiliate@dafabet.com|Affiliate Related Inquiry\r\nsports|ensupport@dafabet.com|General Inquiries\r\nsports-df|df.ensupport@dafabet.com|Account\r\nsports-df|df.ensupport@dafabet.com|Bonus/Promotions\r\nsports-df|df.ensupport@dafabet.com|Deposit/Withdrawal\r\nsports-df|df.ensupport@dafabet.com|Games\r\nsports-df|df.ensupport@dafabet.com|Technical Issues\r\nsports-df|affiliate@dafabet.com|Affiliate Related Inquiry\r\nsports-df|df.ensupport@dafabet.com|General Inquiries\r\nexchange|ensupport@dafabet.com|Account\r\nexchange|ensupport@dafabet.com|Bonus/Promotions\r\nexchange|ensupport@dafabet.com|Deposit/Withdrawal\r\nexchange|ensupport@dafabet.com|Games\r\nexchange|ensupport@dafabet.com|Technical Issues\r\nexchange|affiliate@dafabet.com|Affiliate Related Inquiry\r\nexchange|ensupport@dafabet.com|General Inquiries\r\ncasino|support@dafa888.com|Account\r\ncasino|support@dafa888.com|Bonus/Promotions\r\ncasino|support@dafa888.com|Deposit/Withdrawal\r\ncasino|support@dafa888.com|Games\r\ncasino|support@dafa888.com|Technical Issues\r\ncasino|affiliate@dafabet.com|Affiliate Related Inquiry\r\ncasino|support@dafa888.com|General Inquiries\r\ncasino-gold|support@dafa888.com|Account\r\ncasino-gold|support@dafa888.com|Bonus/Promotions\r\ncasino-gold|support@dafa888.com|Deposit/Withdrawal\r\ncasino-gold|support@dafa888.com|Games\r\ncasino-gold|support@dafa888.com|Technical Issues\r\ncasino-gold|affiliate@dafabet.com|Affiliate Related Inquiry\r\ncasino-gold|support@dafa888.com|General Inquiries\r\nlive-dealer|ensupport@dafabet.com|Account\r\nlive-dealer|ensupport@dafabet.com|Bonus/Promotions\r\nlive-dealer|ensupport@dafabet.com|Deposit/Withdrawal\r\nlive-dealer|ensupport@dafabet.com|Games\r\nlive-dealer|ensupport@dafabet.com|Technical Issues\r\nlive-dealer|affiliate@dafabet.com|Affiliate Related Inquiry\r\nlive-dealer|ensupport@dafabet.com|General Inquiries\r\ngames|ensupport@dafabet.com|Account\r\ngames|ensupport@dafabet.com|Bonus/Promotions\r\ngames|ensupport@dafabet.com|Deposit/Withdrawal\r\ngames|ensupport@dafabet.com|Games\r\ngames|ensupport@dafabet.com|Technical Issues\r\ngames|ensupport@dafabet.com|Affiliate Related Inquiry\r\ngames|affiliate@dafabet.com|General Inquiries\r\narcade|ensupport@dafabet.com|Account\r\narcade|ensupport@dafabet.com|Bonus/Promotions\r\narcade|ensupport@dafabet.com|Deposit/Withdrawal\r\narcade|ensupport@dafabet.com|Games\r\narcade|ensupport@dafabet.com|Technical Issues\r\narcade|affiliate@dafabet.com|Affiliate Related Inquiry\r\narcade|ensupport@dafabet.com|General Inquiries\r\nlottery|ensupport@dafabet.com|Account\r\nlottery|ensupport@dafabet.com|Bonus/Promotions\r\nlottery|ensupport@dafabet.com|Deposit/Withdrawal\r\nlottery|ensupport@dafabet.com|Games\r\nlottery|ensupport@dafabet.com|Technical Issues\r\nlottery|affiliate@dafabet.com|Affiliate Related Inquiry\r\nlottery|ensupport@dafabet.com|General Inquiries\r\npoker|support@dafapoker.com|Account\r\npoker|support@dafapoker.com|Bonus/Promotions\r\npoker|support@dafapoker.com|Deposit/Withdrawal\r\npoker|support@dafapoker.com|Games\r\npoker|support@dafapoker.com|Technical Issues\r\npoker|affiliate@dafabet.com|Affiliate Related Inquiry\r\npoker|support@dafapoker.com|General Inquiries\r\nvirtual-sports|ensupport@dafabet.com|Account\r\nvirtual-sports|ensupport@dafabet.com|Bonus/Promotions\r\nvirtual-sports|ensupport@dafabet.com|Deposit/Withdrawal\r\nvirtual-sports|ensupport@dafabet.com|Games\r\nvirtual-sports|ensupport@dafabet.com|Technical Issues\r\nvirtual-sports|affiliate@dafabet.com|Affiliate Related Inquiry\r\nvirtual-sports|ensupport@dafabet.com|General Inquiries"
+field_validations:
+  required:
+    enable: 1
+    error_message: "Subject is required.\r\n"
+  alpha:
+    enable: 0
+    error_message: 'Field should be Alphabet characters only'
+    parameters:
+      spaces: 1
+  alphanumeric:
+    enable: 0
+    error_message: 'Field should be alphanumeric'
+    parameters:
+      spaces: 1
+  alpha_multi:
+    enable: 0
+    error_message: 'Value is not a valid multilingual character'
+    parameters:
+      space: 1
+      numeric: 1
+      allow: 0
+      disallow: 0
+      special: ''
+  numeric:
+    enable: 0
+    error_message: 'Field should be numeric'
+  no_symbols:
+    enable: 0
+    error_message: 'Field contains invalid special characters'
+  numeric_symbols:
+    enable: 0
+    error_message: 'Field contains invalid special characters'
+  email:
+    enable: 0
+    error_message: 'Field does not contain a valid email address'
+  min_length:
+    enable: 0
+    error_message: 'Minimum requirement not met'
+    parameters:
+      length: '2'
+  max_length:
+    enable: 0
+    error_message: 'Maximum requirement not met'
+    parameters:
+      length: '10'
+  regex:
+    enable: 0
+    error_message: 'This field only accepts specific characters.'
+    parameters:
+      regex_value: ''
+  valid_date:
+    enable: 0
+    error_message: 'Date is invalid'
+  invalid_words:
+    enable: 0
+    error_message: 'Invalid/not allowed characters'
+    parameters:
+      invalid_words_list: ''
+  valid_languages:
+    enable: 0
+    error_message: 'This field only accepts specific characters.'
+    parameters:
+      regex_value: ''
