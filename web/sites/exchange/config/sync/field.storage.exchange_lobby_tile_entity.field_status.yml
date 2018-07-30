@@ -1,0 +1,27 @@
+uuid: 0c5def08-3a0f-4a47-8343-f54d298ff823
+langcode: hi
+status: true
+dependencies:
+  module:
+    - exchange_lobby_tile
+    - options
+id: exchange_lobby_tile_entity.field_status
+field_name: field_status
+entity_type: exchange_lobby_tile_entity
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '0'
+      label: Disabled
+    -
+      value: '1'
+      label: Enabled
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

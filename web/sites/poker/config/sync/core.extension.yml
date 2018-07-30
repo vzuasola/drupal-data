@@ -20,6 +20,7 @@ module:
   content_translation: 0
   contextual: 0
   ctools: 0
+  custom_inner_pages: 0
   datetime: 0
   devel: 0
   draggableviews: 0
@@ -48,6 +49,10 @@ module:
   paragraphs: 0
   paragraphs_type_permissions: 0
   path: 0
+  poker_config: 0
+  poker_download_page: 0
+  poker_game_offers: 0
+  poker_grid_menu: 0
   quickedit: 0
   rdf: 0
   rest: 0
@@ -56,6 +61,7 @@ module:
   scheduler: 0
   serialization: 0
   shortcut: 0
+  slider_overlay: 0
   system: 0
   taxonomy: 0
   taxonomy_unique: 0

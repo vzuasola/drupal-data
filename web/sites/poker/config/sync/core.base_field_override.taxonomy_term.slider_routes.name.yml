@@ -1,0 +1,18 @@
+uuid: b68dc14a-2b8b-4950-84f7-4d385c367508
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.slider_routes
+id: taxonomy_term.slider_routes.name
+field_name: name
+entity_type: taxonomy_term
+bundle: slider_routes
+label: Name
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

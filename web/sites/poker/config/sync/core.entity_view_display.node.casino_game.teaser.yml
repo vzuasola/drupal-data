@@ -1,0 +1,19 @@
+uuid: fda8bd06-ad50-421f-8507-39bb781efa32
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.casino_game
+  module:
+    - user
+id: node.casino_game.teaser
+targetEntityType: node
+bundle: casino_game
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

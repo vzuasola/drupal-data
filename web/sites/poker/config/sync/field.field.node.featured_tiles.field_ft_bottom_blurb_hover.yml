@@ -1,0 +1,19 @@
+uuid: 6cce21f7-60c5-4b8e-ae35-30cfd0f126b0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ft_bottom_blurb_hover
+    - node.type.featured_tiles
+id: node.featured_tiles.field_ft_bottom_blurb_hover
+field_name: field_ft_bottom_blurb_hover
+entity_type: node
+bundle: featured_tiles
+label: 'Bottom Blurb on Hover'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

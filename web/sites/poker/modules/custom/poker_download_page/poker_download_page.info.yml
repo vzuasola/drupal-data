@@ -1,0 +1,5 @@
+name: Download Page
+type: module
+description: Poker Download Module
+core: 8.x
+package: Custom

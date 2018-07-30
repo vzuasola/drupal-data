@@ -1,0 +1,19 @@
+uuid: b8009c6d-1b4e-4e5b-bad8-e595dc37a280
+langcode: en
+status: true
+dependencies:
+  module:
+    - webcomposer_floating_banners
+id: left_floating_banner_entity.field_os_excluded
+field_name: field_os_excluded
+entity_type: left_floating_banner_entity
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -8,6 +8,8 @@ dependencies:
 third_party_settings:
   content_translation:
     enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
 _core:
   default_config_hash: qy6ieps9-vP2-a2rM6EC43dGAJmv8glk3Qx_qjj0xSs
 id: social_media_entity.social_media_entity

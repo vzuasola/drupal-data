@@ -19,18 +19,6 @@ class ContactUsForm extends WebcomposerFormBase implements WebcomposerFormInterf
    * Get Settings.
    */
   public function getSettings() {
-    return [
-      'show' => [
-        '#title' => 'Show this form',
-        '#type' => 'checkbox',
-        '#default_value' => TRUE,
-      ],
-      'title' => [
-        '#title' => 'Title',
-        '#type' => 'textfield',
-        '#description' => 'Contact Form Title',
-      ],
-    ];
   }
 
   /**
@@ -139,7 +127,7 @@ class ContactUsForm extends WebcomposerFormBase implements WebcomposerFormInterf
           'label' => [
             '#title' => 'Product Label',
             '#type' => 'textfield',
-            '#description' => 'The dLabel for the Product field',
+            '#description' => 'The Label for the Product field',
           ],
           'placeholder' => [
             '#title' => 'Product placeholder label',
@@ -150,7 +138,10 @@ class ContactUsForm extends WebcomposerFormBase implements WebcomposerFormInterf
           'choices' => [
             '#title' => 'Product Choices',
             '#type' => 'textarea',
-            '#description' => 'Provide a pipe separated key value pair. <br> <small>Example key|My Value</small>',
+            '#description' => 'Provide a pipe separated key value pair.
+                              <small><br>Product key|Product Label
+                              <br />Product key can be used for deeplinking.
+                              <i>ex. /{domain:casino}/en/contact-us[query:({tracking}&product=Casino)]</i></small>',
             '#default_value' => '',
           ],
         ],
@@ -163,7 +154,7 @@ class ContactUsForm extends WebcomposerFormBase implements WebcomposerFormInterf
           'label' => [
             '#title' => 'Subject Label',
             '#type' => 'textfield',
-            '#description' => 'The dLabel for the Product field',
+            '#description' => 'The Label for the Product field',
           ],
           'placeholder' => [
             '#title' => 'Subject placeholder label',
@@ -174,7 +165,9 @@ class ContactUsForm extends WebcomposerFormBase implements WebcomposerFormInterf
           'choices' => [
             '#title' => 'Subject Choices',
             '#type' => 'textarea',
-            '#description' => 'Provide a pipe separated key value pair. <br> <small>Example key|My Value</small>',
+            '#description' => 'Provide a pipe separated key value pair.
+                                <small><br />Product key|Email|Label
+                                <br /><i>Emails can be separated by comma.</i></small>',
             '#default_value' => '',
           ],
         ],

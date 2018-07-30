@@ -1,0 +1,16 @@
+uuid: 7224cbd8-0197-4312-9259-43239e0d98e0
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.ribbon_labels
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.ribbon_labels
+target_entity_type_id: taxonomy_term
+target_bundle: ribbon_labels
+default_langcode: site_default
+language_alterable: false

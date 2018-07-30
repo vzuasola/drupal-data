@@ -1,7 +1,7 @@
 opus_game_loader_content:
+  format: basic_html
   value: "<p>예상치 못한 오류가 발생했습니다. 몇 초 뒤 창이 종료됩니다. 나중에 다시 시도해주세요.</p>\r\n"
-  format: basic_html
-opus_unsupported_currencies_title: '해당 화폐는 지원되지 않습니다.'
 opus_unsupported_currencies_message:
-  value: "<p>죄송합니다, 회원님의 화페는 지원되지 않습니다. 다른 게임 방을 선택해주세요.</p>\r\n"
   format: basic_html
+  value: "<p>죄송합니다, 회원님의 화페는 지원되지 않습니다. 다른 게임 방을 선택해주세요.</p>\r\n"
+opus_unsupported_currencies_title: '해당 화폐는 지원되지 않습니다.'

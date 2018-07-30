@@ -16,7 +16,7 @@ use Drupal\Core\Form\FormStateInterface;
  *   },
  *   menu = {
  *     "title" = "Contact us configuration",
- *     "description" = "Contact Us Configuration",
+ *     "description" = "Configure Contact us Blurb, Success Page and Email Template",
  *     "parent" = "contact_us_config.list",
  *     "weight" = 30
  *   },
@@ -67,11 +67,11 @@ class ContactUsConfigForm extends FormBase {
 
     $body_content = $this->get('body_content');
     $form['content']['body_content'] = [
-        '#type' => 'text_format',
-        '#title' => $this->t('Content Blurb'),
-        '#default_value' => $body_content['value'],
-        '#format' => $body_content['format'],
-        '#translatable' => TRUE,
+      '#type' => 'text_format',
+      '#title' => $this->t('Content Blurb'),
+      '#default_value' => $body_content['value'],
+      '#format' => $body_content['format'],
+      '#translatable' => TRUE,
     ];
   }
 
@@ -88,7 +88,7 @@ class ContactUsConfigForm extends FormBase {
     $form['success']['success_title'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Title'),
-      '#description' => $this->t('Adds page title to the contact us message.'),
+      '#description' => $this->t('Adds page title to the contact us success message.'),
       '#default_value' => $this->get('success_title'),
       '#required' => TRUE,
       '#translatable' => TRUE,
@@ -96,11 +96,11 @@ class ContactUsConfigForm extends FormBase {
 
     $success_message = $this->get('success_message');
     $form['success']['success_message'] = [
-        '#type' => 'text_format',
-        '#title' => $this->t('Content Blurb'),
-        '#default_value' => $success_message['value'],
-        '#format' => $success_message['format'],
-        '#translatable' => TRUE,
+      '#type' => 'text_format',
+      '#title' => $this->t('Content Blurb'),
+      '#default_value' => $success_message['value'],
+      '#format' => $success_message['format'],
+      '#translatable' => TRUE,
     ];
   }
 
@@ -108,48 +108,40 @@ class ContactUsConfigForm extends FormBase {
    *
    */
   private function contactSettings(array &$form) {
-    $form['advanced'] = [
-      '#type' => 'vertical_tabs',
-    ];
-
     $form['settings'] = [
       '#type' => 'details',
-      '#title' => t('Submit Settings'),
+      '#title' => t('Contact Us Form Settings'),
       '#group' => 'advanced',
     ];
 
+    $form['settings']['form_title'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Title'),
+      '#description' => $this->t('Adds page title to the contact us form.'),
+      '#default_value' => $this->get('form_title'),
+      '#required' => TRUE,
+      '#translatable' => TRUE,
+    ];
+
     $form['settings']['email_template'] = [
-        '#type' => 'textarea',
-        '#title' => $this->t('Email Template'),
-        '#default_value' => $this->get('email_template'),
-        '#rows' => 15,
-        '#description' => 'Tokens:
-        <ul>
-            <li>[-firstname-] - First name of the player</li>
-            <li>[-lastname-] - Last name of the player</li>
-            <li>[-username-] - Username of the player</li>
-            <li>[-email-] - Email Address the player inputted (for post login this is automatic)</li>
-            <li>[-product-] - Product the player selected</li>
-            <li>[-subject-] - Subject the player selected</li>
-            <li>[-message-] - Main message of the player</li>
-            <li>[-submissiondate-] - This will use the "long" format</li>
-            <li>[-ip_address-] - IP address of the player</li>
-        </ul>'
-    ];
-
-    $form['settings']['email_from'] = [
-        '#type' => 'textfield',
-        '#title' => t('Email from'),
-        '#default_value' => $this->get('email_from'),
-        '#description' => 'The "Sender" of the email. This will default to the users Firstname and Last Name'
-    ];
-
-    $form['settings']['generic_error'] = [
-        '#type' => 'textarea',
-        '#title' => t('Generic Error template'),
-        '#default_value' => $this->get('generic_error'),
-        '#description' => 'This will be used as the generic error message for any system errors that may be encountered.',
-        '#rows' => 3
+      '#type' => 'textarea',
+      '#title' => $this->t('Email Template'),
+      '#default_value' => $this->get('email_template'),
+      '#rows' => 15,
+      '#description' => 'Tokens:
+      <ul>
+          <li>@firstname - First name of the player</li>
+          <li>@lastname - Last name of the player</li>
+          <li>@username - Username of the player</li>
+          <li>@email - Email Address the player inputted</li>
+          <li>@product - Product the player selected</li>
+          <li>@subject - Subject the player selected</li>
+          <li>@message - Main message of the player</li>
+          <li>@date - This date the form is submitted</li>
+          <li>@ip - IP address of the player</li>
+          <li>@language - Selected language of the player</li>
+      </ul>',
+      '#translatable' => TRUE,
     ];
   }
 }

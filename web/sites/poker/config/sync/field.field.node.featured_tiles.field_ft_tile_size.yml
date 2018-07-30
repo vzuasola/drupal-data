@@ -1,0 +1,21 @@
+uuid: fb5788e1-16c4-4717-b061-e5ad0d69cdce
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ft_tile_size
+    - node.type.featured_tiles
+  module:
+    - options
+id: node.featured_tiles.field_ft_tile_size
+field_name: field_ft_tile_size
+entity_type: node
+bundle: featured_tiles
+label: 'Tile Size'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

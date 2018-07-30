@@ -1,0 +1,12 @@
+lobby_page_title: 'オンラインベッティング－Dafabet では、スポーツでベット、オンラインカジノとポーカーでのプレイをお楽しみいただけます'
+join_now_text: 登録する
+login_issue_text: ログインができない場合は？
+balance_error_text: エラーが検出されました。
+profile_icon_hover_text: お客様情報
+cashier_icon_hover_text: バンキング
+product_menu_new_tag: 新しい登録情報
+welcome_text: '{username}'
+profile_link: 'https://stg-cashier.elysium-dfbt.com/jp/?ticket={auth.token}&product=dafabet{tracking.token}'
+profile_logout_text: ログアウト
+balance_label_mapping: "4|OWスポーツ\r\n6|Dafaスポーツ\r\n1|カジノ クラシック\r\n2|カジノ ゴールド\r\n5|ライブ＆ゲーム\r\n\r\n3|ポーカー\r\n7|フィッシュハンター"
+balance_error_text_product: なし

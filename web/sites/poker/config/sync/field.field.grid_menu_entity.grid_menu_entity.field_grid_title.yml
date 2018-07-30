@@ -1,0 +1,20 @@
+uuid: ec6bcc01-851a-4de2-94bd-cb63dcb26d61
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.grid_menu_entity.field_grid_title
+  module:
+    - poker_grid_menu
+id: grid_menu_entity.grid_menu_entity.field_grid_title
+field_name: field_grid_title
+entity_type: grid_menu_entity
+bundle: grid_menu_entity
+label: 'Grid Title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,29 @@
+uuid: 975f273f-832f-4532-bbac-f5d8a4345f28
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - scheduler
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+  scheduler:
+    expand_fieldset: when_required
+    fields_display_mode: vertical_tab
+    publish_enable: true
+    publish_past_date: error
+    publish_required: false
+    publish_revision: true
+    publish_touch: false
+    unpublish_enable: true
+    unpublish_required: false
+    unpublish_revision: true
+name: 'Casino Game'
+type: casino_game
+description: 'Use <em>casino game</em> for game thumbnails that will appear on game offers.'
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: true

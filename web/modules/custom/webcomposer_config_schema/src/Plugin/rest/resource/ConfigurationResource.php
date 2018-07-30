@@ -109,6 +109,7 @@ class ConfigurationResource extends ResourceBase {
 
       $this->resolveFieldImages($id, $data);
       $this->resolveImages($data);
+      $this->resolveInlineImages($data);
     } catch (\Exception $e) {
       $data = [
         'error' => $this->t('Configuration not found')
@@ -163,6 +164,24 @@ class ConfigurationResource extends ResourceBase {
         if ($file) {
           $data[$key] = $this->generateUrlFromFile($file);
         }
+      }
+    }
+  }
+
+  /**
+   * Resolve inline images
+   *
+   * @param array $data
+   *   The configuration data.
+   */
+  private function resolveInlineImages(&$data) {
+    foreach ($data as $key => $value) {
+      if (isset($value['format']) && isset($value['value'])) {
+        $data[$key]['value'] = $this->filterHtml($value['value']);
+      }
+
+      if (is_array($value)) {
+        $this->resolveInlineImages($value);
       }
     }
   }
