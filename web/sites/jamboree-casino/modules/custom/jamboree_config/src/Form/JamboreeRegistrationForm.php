@@ -158,16 +158,16 @@ class JamboreeRegistrationForm extends FormBase {
       '#default_value' => $this->get('error_country'),
       '#translatable' => TRUE,
     ];
-    $form['reg_form']['errors']['error_firstname'] = [
-      '#type' => 'textfield',
-      '#title' => t('Registration Error Message for Firstname Field'),
-      '#default_value' => $this->get('error_firstname'),
-      '#translatable' => TRUE,
-    ];
     $form['reg_form']['errors']['error_prefecture'] = [
       '#type' => 'textfield',
       '#title' => t('Registration Error Message for Prefecture Field'),
       '#default_value' => $this->get('error_prefecture'),
+      '#translatable' => TRUE,
+    ];
+    $form['reg_form']['errors']['error_state'] = [
+      '#type' => 'textfield',
+      '#title' => t('Registration Error Message for State Field'),
+      '#default_value' => $this->get('error_state'),
       '#translatable' => TRUE,
     ];
     $form['reg_form']['errors']['error_city'] = [
