@@ -1,11 +1,9 @@
 field_settings:
-  label: 'Last Name'
-  placeholder: 'Last Name'
-  annotation: ''
+  label: Submit
 field_validations:
   required:
-    enable: 1
-    error_message: 'Your Last Name must be entered correctly.'
+    enable: 0
+    error_message: 'Field should be required'
   alpha:
     enable: 0
     error_message: 'Field should be Alphabet characters only'
@@ -38,30 +36,30 @@ field_validations:
     enable: 0
     error_message: 'Field does not contain a valid email address'
   min_length:
-    enable: 1
-    error_message: "Name must be between 1-50 characters long\r\n"
+    enable: 0
+    error_message: 'Minimum requirement not met'
     parameters:
-      length: '1'
+      length: '2'
   max_length:
-    enable: 1
-    error_message: "Name must be between 1-50 characters long\r\n"
+    enable: 0
+    error_message: 'Maximum requirement not met'
     parameters:
-      length: '50'
+      length: '10'
   regex:
     enable: 0
     error_message: 'This field only accepts specific characters.'
     parameters:
-      regex_value: '^(?!\s)[a-zA-Z\\\-''\u4E00-\uFA29\uAC00-\uD7AF\s]+$'
+      regex_value: ''
   valid_date:
     enable: 0
     error_message: 'Date is invalid'
   invalid_words:
-    enable: 1
-    error_message: 'Your Last Name must be entered correctly.'
+    enable: 0
+    error_message: 'Invalid/not allowed characters'
     parameters:
-      invalid_words_list: 'Last Name'
+      invalid_words_list: ''
   valid_languages:
-    enable: 1
-    error_message: "Please use English/Chinese/Korean/Greek characters only.\r\n"
+    enable: 0
+    error_message: 'This field only accepts specific characters.'
     parameters:
-      regex_value: '^(?!\s)[a-zA-Z\\\-''\u4E00-\uFA29\uAC00-\uD7AF\u0370-\u03FF\s]+$'
+      regex_value: ''
