@@ -1,14 +1,15 @@
-advanced__active_tab: edit-content
-page_title: 'Blurb Title'
+advanced__active_tab: edit-settings
+page_title: 'Contact Us'
 body_content:
-  value: "<p>Blurb Content</p>\r\n"
+  value: ''
   format: basic_html
 value: null
 format: null
-success_title: 'Success Title'
+success_title: 'Contact Form'
 success_message:
-  value: "<p>Success Content</p>\r\n"
+  value: "<p>Thank you! Your form has been successfully submitted. Our Customer Support will get back to you shortly.</p>\r\n\r\n<p><a href=\"{domain:entry}/{lang}[query:({tracking})]\" target=\"_self\">&lt;&lt; Go Back to the Homepage</a></p>\r\n"
   format: basic_html
-email_template: ''
+email_template: "Firstname: @firstname\r\nLastname: @lastname\r\nUsername: @username\r\nEmail: @email\r\nProduct: @product\r\nSubject: @subject\r\nMessage: \r\n@message\r\n\r\nIP: @ip\r\nSubmitted on: @date\r\nLanguage: @language"
 email_from: ''
-generic_error: ''
+generic_error: 'Service unavailable'
+form_title: 'Contact Form'

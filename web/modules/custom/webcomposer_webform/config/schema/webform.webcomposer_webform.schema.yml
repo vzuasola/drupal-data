@@ -33,3 +33,19 @@ webform.settings.third_party.webcomposer_webform:
           type: text
           label: 'Error Background Color'
 
+    webform_sms:
+      label: SMS Alert Settings
+      type: mapping
+      mapping:
+        sms_message:
+          type: text
+          label: SMS Message
+        max_per_ip:
+          type: text
+          label: Maximum SMS per IP Address
+        max_per_number:
+          type: text
+          label: Maximum SMS per Number
+        sms_error:
+          type: text
+          label: Maximum SMS Reached Error Message

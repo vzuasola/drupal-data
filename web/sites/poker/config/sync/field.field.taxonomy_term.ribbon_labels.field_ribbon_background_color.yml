@@ -1,0 +1,22 @@
+uuid: 510fa86d-167f-4672-8008-ad3158677d01
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_ribbon_background_color
+    - taxonomy.vocabulary.ribbon_labels
+  module:
+    - color_field
+id: taxonomy_term.ribbon_labels.field_ribbon_background_color
+field_name: field_ribbon_background_color
+entity_type: taxonomy_term
+bundle: ribbon_labels
+label: 'Ribbon Background Color'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  opacity: 0
+field_type: color_field_type

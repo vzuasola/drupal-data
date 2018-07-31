@@ -15,21 +15,27 @@ class ICoreGamesIntegrationConfiguration extends ConfigFormBase {
    * ICore Game Providers definitions
    */
     const ICORE_GAME_PROVIDERS = [
-        'asia_gaming' => 'Asia Gaming',
-        'kiron_virtual_sports' => 'Virtual Sports',
-        'gb_virtual_sports' => 'Global Bet Virtual Sports',
-        'skywind' => 'Skywind',
-        'voidbridge' => 'Voidbridge',
-        'gold_deluxe' => 'Gold Deluxe',
-        'video_racing' => 'Video Racing',
-        'sa_gaming' => 'SA Gaming',
-        'allbet' => 'AllBet',
-        'tgp' => 'TGP',
-        'evo_gaming' => 'Evolution Gaming',
-        'ebet' => 'eBet',
-        'cq9' => 'CQ9',
-        'solid_gaming' => 'Solid Gaming',
-        'gameworx' => 'Gameworx'
+      'asia_gaming' => 'Asia Gaming',
+      'kiron_virtual_sports' => 'Virtual Sports',
+      'gb_virtual_sports' => 'Global Bet Virtual Sports',
+      'skywind' => 'Skywind',
+      'voidbridge' => 'Voidbridge',
+      'gold_deluxe' => 'Gold Deluxe',
+      'video_racing' => 'Video Racing',
+      'sa_gaming' => 'SA Gaming',
+      'allbet' => 'AllBet',
+      'tgp' => 'TGP',
+      'evo_gaming' => 'Evolution Gaming',
+      'ebet' => 'eBet',
+      'cq9' => 'CQ9',
+      'solid_gaming' => 'Solid Gaming',
+      'gameworx_lottery' => 'Gameworx Lottery games',
+      'gameworx_quicklotto' => 'Gameworx Quick Lotto'
+    ];
+
+    const ICORE_GAME_GX_PROVIDERS = [
+      'gameworx_lottery' => 'Gameworx Lottery games',
+      'gameworx_quicklotto' => 'Gameworx Quick Lotto'
     ];
 
   /**
@@ -75,6 +81,58 @@ class ICoreGamesIntegrationConfiguration extends ConfigFormBase {
         '#description' => $this->t("Language mapping for {$value}."),
         '#default_value' => $config->get("{$key}_language_mapping")
       ];
+    }
+
+    foreach (self::ICORE_GAME_GX_PROVIDERS as $key => $value) {
+      $form[$key]["{$key}_lobby_type"] = [
+        '#type' => 'textfield',
+        '#title' => t('LobbyType'),
+        '#description' => $this->t("Please enter lobby type."),
+        '#default_value' => $config->get("{$key}_lobby_type")
+      ];
+
+      $form[$key]["{$key}_operator_id"] = [
+        '#type' => 'textfield',
+        '#title' => t('Operator ID'),
+        '#description' => $this->t("Please enter Operator ID."),
+        '#default_value' => $config->get("{$key}_operator_id")
+      ];
+
+      $form[$key]["{$key}_plugin_id"] = [
+        '#type' => 'textfield',
+        '#title' => t('Plugin ID'),
+        '#description' => $this->t("Please enter plugin ID."),
+        '#default_value' => $config->get("{$key}_plugin_id")
+      ];
+
+      $form[$key]["{$key}_realitycheck_url"] = [
+        '#type' => 'textfield',
+        '#title' => t('Reality Check URL'),
+        '#description' => $this->t("Please enter Reality CheckUrl."),
+        '#default_value' => $config->get("{$key}_realitycheck_url")
+      ];
+
+      $form[$key]["{$key}_deposit_url"] = [
+        '#type' => 'textfield',
+        '#title' => t('Deposit URL'),
+        '#description' => $this->t("Please enter Deposit Url."),
+        '#default_value' => $config->get("{$key}_deposit_url")
+      ];
+
+      $form[$key]["{$key}_exit_url"] = [
+        '#type' => 'textfield',
+        '#title' => t('Exit URL'),
+        '#description' => $this->t("Please enter Exit Url."),
+        '#default_value' => $config->get("{$key}_exit_url")
+      ];
+      $form[$key]["{$key}_country"] = [
+        '#type' => 'textarea',
+        '#title' => t('Country'),
+        '#size' => 500,
+        '#description' => $this->t('Define the Unsupported Country code for Gameworx Lottery games.
+           '),
+        '#default_value' => $config->get("{$key}_country")
+       ];
     }
 
     $form['message'] = [
@@ -175,9 +233,21 @@ class ICoreGamesIntegrationConfiguration extends ConfigFormBase {
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $providers = [];
+
     foreach (self::ICORE_GAME_PROVIDERS as $key => $value) {
       $providers[] = "{$key}_currency";
       $providers[] = "{$key}_language_mapping";
+    }
+
+    foreach (self::ICORE_GAME_GX_PROVIDERS as $key => $value) {
+      $providers[] = "{$key}_exit_url";
+      $providers[] = "{$key}_deposit_url";
+      $providers[] = "{$key}_realitycheck_url";
+      $providers[] = "{$key}_plugin_id";
+      $providers[] = "{$key}_operator_id";
+      $providers[] = "{$key}_lobby_type";
+      $providers[] = "{$key}_country";
+       
     }
 
     $keys = [

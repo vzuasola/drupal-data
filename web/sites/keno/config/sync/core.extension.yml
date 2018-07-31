@@ -23,6 +23,7 @@ module:
   datetime: 0
   draggableviews: 0
   dynamic_page_cache: 0
+  webcomposer_audit: 0
   editor: 0
   entity_reference_revisions: 0
   entity_reference_views_select: 0

@@ -1,0 +1,4 @@
+advanced__active_tab: edit-antispam
+mailer_success: Success.
+mailer_error: "Layanan tidak tersedia\r\n"
+antispam_error: "Anda telah melampaui jumlah maksimum kesalahan pengisian. Silakan coba lagi dalam 5 menit. \r\n"

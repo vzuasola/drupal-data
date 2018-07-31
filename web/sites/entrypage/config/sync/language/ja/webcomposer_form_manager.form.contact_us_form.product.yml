@@ -1,0 +1,33 @@
+field_settings:
+  label: プロダクト
+  placeholder: '- プロダクトを選択 -'
+  choices: "sports|OWスポーツ\r\nsports-df|Dafaスポーツ\r\ncasino|Casino\r\ngames|ゲーム\r\narcade|アーケード\r\nlottery|宝くじ\r\npoker|Poker\r\nvirtual-sports|ヴァーチャル"
+field_validations:
+  required:
+    error_message: "プロダクトを選択して下さい。\r\n"
+  alpha:
+    error_message: 'Field should be Alphabet characters only'
+  alphanumeric:
+    error_message: 'Field should be alphanumeric'
+  alpha_multi:
+    error_message: 'Value is not a valid multilingual character'
+  numeric:
+    error_message: 'Field should be numeric'
+  no_symbols:
+    error_message: 'Field contains invalid special characters'
+  numeric_symbols:
+    error_message: 'Field contains invalid special characters'
+  email:
+    error_message: 'Field does not contain a valid email address'
+  min_length:
+    error_message: 'Minimum requirement not met'
+  max_length:
+    error_message: 'Maximum requirement not met'
+  regex:
+    error_message: 'This field only accepts specific characters.'
+  valid_date:
+    error_message: 'Date is invalid'
+  invalid_words:
+    error_message: 'Invalid/not allowed characters'
+  valid_languages:
+    error_message: 'This field only accepts specific characters.'

@@ -1,0 +1,33 @@
+field_settings:
+  label: หัวข้อ
+  placeholder: '- เลือกหัวข้อ -'
+  choices: "sports|thaisupport@dafabet.com|บัญชีผู้ใช้\r\nsports|thaisupport@dafabet.com|โบนัส/โปรโมชั่น\r\nsports|thaisupport@dafabet.com|ฝาก/ถอน\r\nsports|thaisupport@dafabet.com|เกมเดิมพัน\r\nsports|thaisupport@dafabet.com|ปัญหาทางเทคนิค\r\nsports|affiliate@dafabet.com|พันธมิตร\r\nsports|thaisupport@dafabet.com|ทั่วไป\r\nsports-df|df.thsupport@dafabet.com|บัญชีผู้ใช้\r\nsports-df|df.thsupport@dafabet.com|โบนัส/โปรโมชั่น\r\nsports-df|df.thsupport@dafabet.com|ฝาก/ถอน\r\nsports-df|df.thsupport@dafabet.com|เกมเดิมพัน\r\nsports-df|df.thsupport@dafabet.com|ปัญหาทางเทคนิค\r\nsports-df|affiliate@dafabet.com|พันธมิตร\r\nsports-df|df.thsupport@dafabet.com|ทั่วไป\r\nexchange|thaisupport@dafabet.com|บัญชีผู้ใช้\r\nexchange|thaisupport@dafabet.com|โบนัส/โปรโมชั่น\r\nexchange|thaisupport@dafabet.com|ฝาก/ถอน\r\nexchange|thaisupport@dafabet.com|เกมเดิมพัน\r\nexchange|thaisupport@dafabet.com|ปัญหาทางเทคนิค\r\nexchange|affiliate@dafabet.com|พันธมิตร\r\nexchange|thaisupport@dafabet.com|ทั่วไป\r\ncasino|thaisupport@dafabet.com|บัญชีผู้ใช้\r\ncasino|thaisupport@dafabet.com|โบนัส/โปรโมชั่น\r\ncasino|thaisupport@dafabet.com|ฝาก/ถอน\r\ncasino|thaisupport@dafabet.com|เกมเดิมพัน\r\ncasino|thaisupport@dafabet.com|ปัญหาทางเทคนิค\r\ncasino|affiliate@dafabet.com|พันธมิตร\r\ncasino|thaisupport@dafabet.com|ทั่วไป\r\ncasino-gold|thaisupport@dafabet.com|บัญชีผู้ใช้\r\ncasino-gold|thaisupport@dafabet.com|โบนัส/โปรโมชั่น\r\ncasino-gold|thaisupport@dafabet.com|ฝาก/ถอน\r\ncasino-gold|thaisupport@dafabet.com|เกมเดิมพัน\r\ncasino-gold|thaisupport@dafabet.com|ปัญหาทางเทคนิค\r\ncasino-gold|affiliate@dafabet.com|พันธมิตร\r\ncasino-gold|thaisupport@dafabet.com|ทั่วไป\r\nlive-dealer|thaisupport@dafabet.com|บัญชีผู้ใช้\r\nlive-dealer|thaisupport@dafabet.com|โบนัส/โปรโมชั่น\r\nlive-dealer|thaisupport@dafabet.com|ฝาก/ถอน\r\nlive-dealer|thaisupport@dafabet.com|เกมเดิมพัน\r\nlive-dealer|thaisupport@dafabet.com|ปัญหาทางเทคนิค\r\nlive-dealer|affiliate@dafabet.com|พันธมิตร\r\nlive-dealer|thaisupport@dafabet.com|ทั่วไป\r\ngames|thaisupport@dafabet.com|บัญชีผู้ใช้\r\ngames|thaisupport@dafabet.com|โบนัส/โปรโมชั่น\r\ngames|thaisupport@dafabet.com|ฝาก/ถอน\r\ngames|thaisupport@dafabet.com|เกมเดิมพัน\r\ngames|thaisupport@dafabet.com|ปัญหาทางเทคนิค\r\ngames|affiliate@dafabet.com|พันธมิตร\r\ngames|thaisupport@dafabet.com|ทั่วไป\r\narcade|thaisupport@dafabet.com|บัญชีผู้ใช้\r\narcade|thaisupport@dafabet.com|โบนัส/โปรโมชั่น\r\narcade|thaisupport@dafabet.com|ฝาก/ถอน\r\narcade|thaisupport@dafabet.com|เกมเดิมพัน\r\narcade|thaisupport@dafabet.com|ปัญหาทางเทคนิค\r\narcade|affiliate@dafabet.com|พันธมิตร\r\narcade|thaisupport@dafabet.com|ทั่วไป\r\nlottery|thaisupport@dafabet.com|บัญชีผู้ใช้\r\nlottery|thaisupport@dafabet.com|โบนัส/โปรโมชั่น\r\nlottery|thaisupport@dafabet.com|ฝาก/ถอน\r\nlottery|thaisupport@dafabet.com|เกมเดิมพัน\r\nlottery|thaisupport@dafabet.com|ปัญหาทางเทคนิค\r\nlottery|affiliate@dafabet.com|พันธมิตร\r\nlottery|thaisupport@dafabet.com|ทั่วไป\r\npoker|thaisupport@dafabet.com|บัญชีผู้ใช้\r\npoker|thaisupport@dafabet.com|โบนัส/โปรโมชั่น\r\npoker|thaisupport@dafabet.com|ฝาก/ถอน\r\npoker|thaisupport@dafabet.com|เกมเดิมพัน\r\npoker|thaisupport@dafabet.com|ปัญหาทางเทคนิค\r\npoker|affiliate@dafabet.com|พันธมิตร\r\npoker|thaisupport@dafabet.com|ทั่วไป\r\nvirtual-sports|thaisupport@dafabet.com|บัญชีผู้ใช้\r\nvirtual-sports|thaisupport@dafabet.com|โบนัส/โปรโมชั่น\r\nvirtual-sports|thaisupport@dafabet.com|ฝาก/ถอน\r\nvirtual-sports|thaisupport@dafabet.com|เกมเดิมพัน\r\nvirtual-sports|thaisupport@dafabet.com|ปัญหาทางเทคนิค\r\nvirtual-sports|affiliate@dafabet.com|พันธมิตร\r\nvirtual-sports|thaisupport@dafabet.com|ทั่วไป"
+field_validations:
+  required:
+    error_message: "กรุณาเลือกหัวข้อ\r\n"
+  alpha:
+    error_message: 'Field should be Alphabet characters only'
+  alphanumeric:
+    error_message: 'Field should be alphanumeric'
+  alpha_multi:
+    error_message: 'Value is not a valid multilingual character'
+  numeric:
+    error_message: 'Field should be numeric'
+  no_symbols:
+    error_message: 'Field contains invalid special characters'
+  numeric_symbols:
+    error_message: 'Field contains invalid special characters'
+  email:
+    error_message: 'Field does not contain a valid email address'
+  min_length:
+    error_message: 'Minimum requirement not met'
+  max_length:
+    error_message: 'Maximum requirement not met'
+  regex:
+    error_message: 'This field only accepts specific characters.'
+  valid_date:
+    error_message: 'Date is invalid'
+  invalid_words:
+    error_message: 'Invalid/not allowed characters'
+  valid_languages:
+    error_message: 'This field only accepts specific characters.'
