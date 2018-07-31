@@ -1,0 +1,27 @@
+uuid: df9f112d-50f0-4e67-8687-8f83f6b1541c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_cta
+field_name: field_cta
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: download
+      label: Download
+    -
+      value: play
+      label: 'Free Play'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
