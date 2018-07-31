@@ -39,6 +39,7 @@ class JamboreeHeaderForm extends FormBase {
     ];
 
     $this->sectionNotificationStrip($form);
+    $this->sectionAccount($form);
 
     return $form;
   }
@@ -47,13 +48,13 @@ class JamboreeHeaderForm extends FormBase {
    * {@inheritdoc}
    */
   private function sectionNotificationStrip(array &$form) {
-    $form['footer'] = [
+    $form['notif_strip'] = [
       '#type' => 'details',
       '#title' => t('Notification Strip'),
       '#group' => 'advanced',
     ];
 
-     $form['footer']['notification_strip'] = [
+     $form['notif_strip']['notification_strip'] = [
       '#type' => 'checkbox',
       '#title' => 'Enable Notification Strip',
       '#description' => $this->t('Show/hide Notification Strip".'),
@@ -62,9 +63,9 @@ class JamboreeHeaderForm extends FormBase {
     ];
 
     $default_notification_strip = $this->get('notification_strip_content');
-    $form['footer']['notification_strip_content'] = [
+    $form['notif_strip']['notification_strip_content'] = [
       '#type' => 'text_format',
-      '#title' => t('Notification Strip Content'),
+      '#title' => $this->t('Notification Strip Content'),
       '#default_value' => $default_notification_strip['value'],
       '#format' => $default_notification_strip['format'],
       '#states' => [
@@ -75,7 +76,24 @@ class JamboreeHeaderForm extends FormBase {
       '#translatable' => TRUE,
     ];
 
-    $form['footer']['notification_strip_scheduler'] = [
+    $form['notif_strip']['notification_platform'] = [
+      '#type' => 'select',
+      '#title' => $this->t('Platorm'),
+      '#options' => [
+        'both' => $this->t('Both'),
+        'mobile' => $this->t('Mobile'),
+        'desktop' => $this->t('Desktop'),
+      ],
+      '#default_value' => $this->get('notification_platform'),
+      '#translatable' => TRUE,
+      '#states' => [
+        'invisible' => [
+          'input[name="notification_strip"]' => ['checked' => FALSE],
+        ],
+      ],
+    ];
+
+    $form['notif_strip']['notification_strip_scheduler'] = [
       '#type' => 'checkbox',
       '#title' => 'Enable Notification Strip Scheduler',
       '#default_value' => $this->get('notification_strip_scheduler'),
@@ -87,7 +105,7 @@ class JamboreeHeaderForm extends FormBase {
       ],
     ];
 
-    $form['footer']['scheduler_fieldset'] = [
+    $form['notif_strip']['scheduler_fieldset'] = [
       '#type' => 'fieldset',
       '#title' => $this->t('Notification Strip Scheduler'),
       '#states' => [
@@ -101,7 +119,7 @@ class JamboreeHeaderForm extends FormBase {
     if ($startDate) {
         $startDate = DrupalDateTime::createFromTimestamp(date($startDate));
     }
-    $form['footer']['scheduler_fieldset']['notif_strip_start_date'] = [
+    $form['notif_strip']['scheduler_fieldset']['notif_strip_start_date'] = [
       '#type' => 'datetime',
       '#title' => $this->t('Start Date'),
       '#date_date_format' => 'Y-m-d',
@@ -114,12 +132,34 @@ class JamboreeHeaderForm extends FormBase {
     if ($endDate) {
         $endDate = DrupalDateTime::createFromTimestamp(date($endDate));
     }
-    $form['footer']['scheduler_fieldset']['notif_strip_end_date'] = [
+    $form['notif_strip']['scheduler_fieldset']['notif_strip_end_date'] = [
       '#type' => 'datetime',
       '#title' => t('End Date'),
       '#date_date_format' => 'Y-m-d',
       '#date_time_format' => 'H:i',
       '#default_value' => $endDate,
+      '#translatable' => TRUE,
+    ];
+  }
+
+  private function sectionAccount(array &$form) {
+    $form['account'] = [
+      '#type' => 'details',
+      '#title' => t('Account'),
+      '#group' => 'advanced',
+    ];
+
+    $form['account']['user_id_label'] = [
+      '#type' => 'textfield',
+      '#title' => t('User ID Label.'),
+      '#default_value' => $this->get('user_id_label'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['account']['balance_label'] = [
+      '#type' => 'textfield',
+      '#title' => t('balance Label.'),
+      '#default_value' => $this->get('balance_label'),
       '#translatable' => TRUE,
     ];
   }
@@ -131,9 +171,12 @@ class JamboreeHeaderForm extends FormBase {
     $keys = [
       'notification_strip',
       'notification_strip_content',
+      'notification_platform',
       'notification_strip_scheduler',
       'notif_strip_start_date',
       'notif_strip_end_date',
+      'user_id_label',
+      'balance_label',
     ];
 
     foreach ($keys as $key) {
