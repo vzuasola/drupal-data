@@ -29,7 +29,7 @@ dependencies:
     - user
     - webcomposer_slider_v2
 _core:
-  default_config_hash: Z86iuDmKH9iyJj8Y_1e159DO3HGyDpfogliuaNMXf0c
+  default_config_hash: lTOa1e37jE2gIy0Alk0YcBDwuKHa3-X2bDXwinqK7S4
 id: webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.default
 targetEntityType: webcomposer_slider_v2_entity
 bundle: webcomposer_slider_v2_entity

@@ -94,7 +94,7 @@ third_party_settings:
         required_fields: true
       label: 'Additional Statuses'
 _core:
-  default_config_hash: grNge8IdAFipcGU_JTCGQyYAXWDj5WKraQLVYoMygN8
+  default_config_hash: OZJ37uq9NXIxbipYTMrqYIn6yXsVaUWLRX1cLOk0Kl0
 id: webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.default
 targetEntityType: webcomposer_slider_v2_entity
 bundle: webcomposer_slider_v2_entity
