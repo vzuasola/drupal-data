@@ -158,16 +158,16 @@ class JamboreeRegistrationForm extends FormBase {
       '#default_value' => $this->get('error_country'),
       '#translatable' => TRUE,
     ];
-    $form['reg_form']['errors']['error_firstname'] = [
-      '#type' => 'textfield',
-      '#title' => t('Registration Error Message for Firstname Field'),
-      '#default_value' => $this->get('error_firstname'),
-      '#translatable' => TRUE,
-    ];
     $form['reg_form']['errors']['error_prefecture'] = [
       '#type' => 'textfield',
       '#title' => t('Registration Error Message for Prefecture Field'),
       '#default_value' => $this->get('error_prefecture'),
+      '#translatable' => TRUE,
+    ];
+    $form['reg_form']['errors']['error_state'] = [
+      '#type' => 'textfield',
+      '#title' => t('Registration Error Message for State Field'),
+      '#default_value' => $this->get('error_state'),
       '#translatable' => TRUE,
     ];
     $form['reg_form']['errors']['error_city'] = [
@@ -207,6 +207,11 @@ class JamboreeRegistrationForm extends FormBase {
       '#translatable' => TRUE,
     ];
     //captcha error
+    $form['reg_form']['errors']['service_not_available'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Registration Error Message if Service is not Available'),
+      '#default_value' => $this->get('service_not_available'),
+    ];
   }
 
   /**

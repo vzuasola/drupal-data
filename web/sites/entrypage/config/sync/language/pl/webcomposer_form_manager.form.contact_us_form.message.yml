@@ -1,0 +1,33 @@
+field_settings:
+  label: Wiadomość
+  placeholder: 'Wprowadź wiadomość'
+  annotation: ''
+field_validations:
+  required:
+    error_message: "Twoja wiadomość jest wymagana.\r\n"
+  alpha:
+    error_message: 'Field should be Alphabet characters only'
+  alphanumeric:
+    error_message: 'Field should be alphanumeric'
+  alpha_multi:
+    error_message: 'Value is not a valid multilingual character'
+  numeric:
+    error_message: 'Field should be numeric'
+  no_symbols:
+    error_message: 'Field contains invalid special characters'
+  numeric_symbols:
+    error_message: 'Field contains invalid special characters'
+  email:
+    error_message: 'Field does not contain a valid email address'
+  min_length:
+    error_message: 'Minimum requirement not met'
+  max_length:
+    error_message: "Wiadomość nie może przekraczać maksymalnej liczby dozwolonych znaków.\r\n"
+  regex:
+    error_message: "To pole może zawierać tylko wartości alfanumeryczne oraz znaki ()_-/\\&#,.\r\n"
+  valid_date:
+    error_message: 'Date is invalid'
+  invalid_words:
+    error_message: "To pole może zawierać tylko wartości alfanumeryczne oraz znaki ()_-/\\&#,.\r\n"
+  valid_languages:
+    error_message: 'This field only accepts specific characters.'

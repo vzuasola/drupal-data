@@ -1,0 +1,11 @@
+advanced__active_tab: edit-success
+page_title: お問い合わせ
+body_content:
+  value: ''
+  format: basic_html
+success_title: お問い合わせフォーム
+success_message:
+  value: "<p>フォームの送信が完了しました。ありがとうございます。カスタマーサポートからできるだけ早急にお返事させて頂きます。</p>\r\n\r\n<p><a href=\"{domain:entry}/{lang}[query:({tracking})]\" target=\"_self\">&lt;&lt; ホームページに戻ります</a></p>\r\n"
+  format: basic_html
+form_title: お問い合わせフォーム
+email_template: "Firstname: @firstname\r\nLastname: @lastname\r\nUsername: @username\r\nEmail: @email\r\nProduct: @product\r\nSubject: @subject\r\nMessage: \r\n@message\r\n\r\nIP: @ip\r\nSubmitted on: @date\r\nLanguage: @language"

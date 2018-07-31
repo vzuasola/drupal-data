@@ -1,0 +1,33 @@
+field_settings:
+  label: 제목
+  placeholder: '- 주제 선택 -'
+  choices: "sports|kruspport@dafabet.com|계정\r\nsports|kruspport@dafabet.com|보너스/프로모션\r\nsports|kruspport@dafabet.com|입금/출금\r\nsports|kruspport@dafabet.com|게임  \r\nsports|kruspport@dafabet.com|기술적 문제\r\nsports|affiliate@dafabet.com|제휴 관련 문의\r\nsports|kruspport@dafabet.com|일반 문의\r\nsports-df|df.krsupport@dafabet.com|계정\r\nsports-df|df.krsupport@dafabet.com|보너스/프로모션\r\nsports-df|df.krsupport@dafabet.com|입금/출금\r\nsports-df|df.krsupport@dafabet.com|게임  \r\nsports-df|df.krsupport@dafabet.com|기술적 문제\r\nsports-df|affiliate@dafabet.com|제휴 관련 문의\r\nsports-df|df.krsupport@dafabet.com|일반 문의\r\nexchange|kruspport@dafabet.com|계정\r\nexchange|kruspport@dafabet.com|보너스/프로모션\r\nexchange|kruspport@dafabet.com|입금/출금\r\nexchange|kruspport@dafabet.com|게임  \r\nexchange|kruspport@dafabet.com|기술적 문제\r\nexchange|affiliate@dafabet.com|제휴 관련 문의\r\nexchange|kruspport@dafabet.com|일반 문의\r\ncasino|kruspport@dafabet.com|계정\r\ncasino|kruspport@dafabet.com|보너스/프로모션\r\ncasino|kruspport@dafabet.com|입금/출금\r\ncasino|kruspport@dafabet.com|게임  \r\ncasino|kruspport@dafabet.com|기술적 문제\r\ncasino|affiliate@dafabet.com|제휴 관련 문의\r\ncasino|kruspport@dafabet.com|일반 문의\r\ncasino-gold|kruspport@dafabet.com|계정\r\ncasino-gold|kruspport@dafabet.com|보너스/프로모션\r\ncasino-gold|kruspport@dafabet.com|입금/출금\r\ncasino-gold|kruspport@dafabet.com|게임  \r\ncasino-gold|kruspport@dafabet.com|기술적 문제\r\ncasino-gold|affiliate@dafabet.com|제휴 관련 문의\r\ncasino-gold|kruspport@dafabet.com|일반 문의\r\nlive-dealer|kruspport@dafabet.com|계정\r\nlive-dealer|kruspport@dafabet.com|보너스/프로모션\r\nlive-dealer|kruspport@dafabet.com|입금/출금\r\nlive-dealer|kruspport@dafabet.com|게임  \r\nlive-dealer|kruspport@dafabet.com|기술적 문제\r\nlive-dealer|affiliate@dafabet.com|제휴 관련 문의\r\nlive-dealer|kruspport@dafabet.com|일반 문의\r\ngames|kruspport@dafabet.com|계정\r\ngames|kruspport@dafabet.com|보너스/프로모션\r\ngames|kruspport@dafabet.com|입금/출금\r\ngames|kruspport@dafabet.com|게임  \r\ngames|kruspport@dafabet.com|기술적 문제\r\ngames|affiliate@dafabet.com|제휴 관련 문의\r\ngames|kruspport@dafabet.com|일반 문의\r\narcade|kruspport@dafabet.com|계정\r\narcade|kruspport@dafabet.com|보너스/프로모션\r\narcade|kruspport@dafabet.com|입금/출금\r\narcade|kruspport@dafabet.com|게임  \r\narcade|kruspport@dafabet.com|기술적 문제\r\narcade|affiliate@dafabet.com|제휴 관련 문의\r\narcade|kruspport@dafabet.com|일반 문의\r\nlottery|kruspport@dafabet.com|계정\r\nlottery|kruspport@dafabet.com|보너스/프로모션\r\nlottery|kruspport@dafabet.com|입금/출금\r\nlottery|kruspport@dafabet.com|게임  \r\nlottery|kruspport@dafabet.com|기술적 문제\r\nlottery|affiliate@dafabet.com|제휴 관련 문의\r\nlottery|kruspport@dafabet.com|일반 문의\r\npoker|kruspport@dafabet.com|계정\r\npoker|kruspport@dafabet.com|보너스/프로모션\r\npoker|kruspport@dafabet.com|입금/출금\r\npoker|kruspport@dafabet.com|게임  \r\npoker|kruspport@dafabet.com|기술적 문제\r\npoker|affiliate@dafabet.com|제휴 관련 문의\r\npoker|kruspport@dafabet.com|일반 문의\r\nvirtual-sports|kruspport@dafabet.com|계정\r\nvirtual-sports|kruspport@dafabet.com|보너스/프로모션\r\nvirtual-sports|kruspport@dafabet.com|입금/출금\r\nvirtual-sports|kruspport@dafabet.com|게임  \r\nvirtual-sports|kruspport@dafabet.com|기술적 문제\r\nvirtual-sports|affiliate@dafabet.com|제휴 관련 문의\r\nvirtual-sports|kruspport@dafabet.com|일반 문의"
+field_validations:
+  required:
+    error_message: "제목을 입력해 주세요.\r\n"
+  alpha:
+    error_message: 'Field should be Alphabet characters only'
+  alphanumeric:
+    error_message: 'Field should be alphanumeric'
+  alpha_multi:
+    error_message: 'Value is not a valid multilingual character'
+  numeric:
+    error_message: 'Field should be numeric'
+  no_symbols:
+    error_message: 'Field contains invalid special characters'
+  numeric_symbols:
+    error_message: 'Field contains invalid special characters'
+  email:
+    error_message: 'Field does not contain a valid email address'
+  min_length:
+    error_message: 'Minimum requirement not met'
+  max_length:
+    error_message: 'Maximum requirement not met'
+  regex:
+    error_message: 'This field only accepts specific characters.'
+  valid_date:
+    error_message: 'Date is invalid'
+  invalid_words:
+    error_message: 'Invalid/not allowed characters'
+  valid_languages:
+    error_message: 'This field only accepts specific characters.'
