@@ -200,6 +200,17 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
           ],
         ],
       ],
+      'state' => [
+        'name' => 'State',
+        'type' => 'textfield',
+        'settings' => [
+          'label' => [
+            '#title' => 'State Label',
+            '#type' => 'textfield',
+            '#description' => 'The Label for the State field',
+          ],
+        ],
+      ],
       'city' => [
         'name' => 'Town/City',
         'type' => 'textfield',
