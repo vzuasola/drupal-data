@@ -1,19 +1,18 @@
-uuid: c348dede-0e21-4833-af2e-881810fb3de2
+uuid: 01d872bb-7b76-4684-91ca-a185ce8e9000
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_summary
     - node.type.basic_page_type_2
-id: node.basic_page_type_2.field_summary
-field_name: field_summary
+id: node.basic_page_type_2.created
+field_name: created
 entity_type: node
 bundle: basic_page_type_2
-label: Summary
-description: ''
+label: 'Authored on'
+description: 'The time that the node was created.'
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: string_long
+field_type: created

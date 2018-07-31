@@ -1,19 +1,18 @@
-uuid: c348dede-0e21-4833-af2e-881810fb3de2
+uuid: fbe5dc7c-829d-493a-95fb-c6c6aaaf8e61
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_summary
     - node.type.basic_page_type_2
-id: node.basic_page_type_2.field_summary
-field_name: field_summary
+id: node.basic_page_type_2.changed
+field_name: changed
 entity_type: node
 bundle: basic_page_type_2
-label: Summary
-description: ''
+label: Changed
+description: 'The time that the node was last edited.'
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: string_long
+field_type: changed
