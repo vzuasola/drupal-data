@@ -4,12 +4,14 @@ status: true
 dependencies:
   config:
     - field.field.node.casino_game.field_category
+    - field.field.node.casino_game.field_cta
     - field.field.node.casino_game.field_game_title
     - field.field.node.casino_game.field_ribbon
     - field.field.node.casino_game.field_thumbnail_image
     - node.type.casino_game
   module:
     - image
+    - options
     - user
 id: node.casino_game.default
 targetEntityType: node
@@ -23,6 +25,13 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
+    region: content
+  field_cta:
+    weight: 105
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
   field_game_title:
     weight: 104
