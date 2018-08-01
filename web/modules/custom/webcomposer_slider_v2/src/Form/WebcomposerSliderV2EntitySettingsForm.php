@@ -69,9 +69,9 @@ class WebcomposerSliderV2EntitySettingsForm extends ConfigFormBase {
       '#title' => $this->t('Slider 2.0 Blurb Animation'),
       '#options' => [
         't-none' => 'none',
-        't-1s' => '1s',
-        't-2s' => '2s',
-        't-3s' => '3s',
+        't-1s' => '.5s',
+        't-2s' => '1s',
+        't-3s' => '2s',
       ],
       '#default_value' => $config->get('enable_transition_slider') ? $config->get('enable_transition_slider') : 'none',
     ];
