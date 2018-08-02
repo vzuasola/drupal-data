@@ -38,39 +38,11 @@ class JamboreeRegistrationForm extends FormBase {
       '#title' => t('Registration Configuration'),
     ];
 
-    $this->sectionRegistrationSettings($form);
     $this->sectionRegistrationForm($form);
     $this->sectionStep2($form);
     $this->sectionStep3($form);
 
     return $form;
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  private function sectionRegistrationSettings(array &$form) {
-    $form['reg_form_settings'] = [
-      '#type' => 'details',
-      '#title' => t('Registration Form Playtech Settings'),
-      '#group' => 'advanced',
-    ];
-    $form['reg_form_settings']['reg_form_host'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Playtech Registration API Hostname'),
-      '#default_value' => $this->get('reg_form_host'),
-    ];
-    $form['reg_form_settings']['casino_name'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Playtech Casino Name'),
-      '#default_value' => $this->get('casino_name'),
-    ];
-
-    $form['reg_form_settings']['secret_key'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Playtech Casino Secret Key'),
-      '#default_value' => $this->get('secret_key'),
-    ];
   }
 
   /**
