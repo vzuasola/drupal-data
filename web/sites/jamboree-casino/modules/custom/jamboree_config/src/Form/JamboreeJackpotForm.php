@@ -33,9 +33,9 @@ class JamboreeJackpotForm extends FormBase {
   }
 
   public function form(array $form, FormStateInterface $form_state) {
-    $form['jamboree_settings_tab'] = [
+    $form['advanced'] = [
       '#type' => 'vertical_tabs',
-      '#title' => t('Jamboree Configurations'),
+      '#title' => t('Jackpot Configuration'),
     ];
 
     $this->sectionJackpot($form);
