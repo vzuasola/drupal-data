@@ -10,9 +10,11 @@ dependencies:
     - field.field.node.arcade_game.field_arc_game_thumbnail_image
     - field.field.node.arcade_game.field_arc_game_title
     - field.field.node.arcade_game.field_arc_meta_tags
+    - field.field.node.arcade_game.field_arcade_category
     - field.field.node.arcade_game.field_game_thumbnail_image_h
     - field.field.node.arcade_game.field_game_thumbnail_image_v
     - field.field.node.arcade_game.field_game_thumbnail_size
+    - field.field.node.arcade_game.field_preview_display_only
     - image.style.thumbnail
     - node.type.arcade_game
   module:
@@ -28,7 +30,7 @@ third_party_settings:
         - field_arc_game_provider
         - field_arc_game_code
       parent_name: ''
-      weight: 10
+      weight: 8
       format_type: tab
       format_settings:
         id: ''
@@ -46,7 +48,7 @@ third_party_settings:
         - field_game_thumbnail_image_h
         - field_arc_game_ribbon
       parent_name: ''
-      weight: 6
+      weight: 7
       format_type: tab
       format_settings:
         id: ''
@@ -97,10 +99,16 @@ content:
     type: string_textarea
     region: content
   field_arc_meta_tags:
-    weight: 11
+    weight: 9
     settings: {  }
     third_party_settings: {  }
     type: metatag_firehose
+    region: content
+  field_arcade_category:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
     region: content
   field_game_thumbnail_image_h:
     weight: 11
@@ -124,11 +132,19 @@ content:
     third_party_settings: {  }
     type: options_select
     region: content
+  field_preview_display_only:
+    type: boolean_checkbox
+    weight: 10
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
   langcode:
     type: language_select
     weight: 1
     region: content
-    settings: {  }
+    settings:
+      include_locked: true
     third_party_settings: {  }
   path:
     type: path
@@ -146,6 +162,13 @@ content:
     weight: 2
     region: content
     settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 11
+    region: content
     third_party_settings: {  }
   title:
     type: string_textfield

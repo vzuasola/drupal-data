@@ -3,4 +3,4 @@ display:
     display_options:
       fields:
         name:
-          label: Username
+          label: 'Tên đăng nhập'

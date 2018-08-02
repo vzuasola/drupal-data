@@ -102,3 +102,17 @@ webcomposer_config.games_goldenrace_provider:
     javascript_assets:
       type: text
       label: 'Javascript'            
+
+webcomposer_config.unsupported_country:
+  type: config_object
+  label: 'Unsupported country Configuration'
+  mapping:
+    unsupported_country_title:
+      type: text
+      label: 'unsupported_country_title'
+    unsupported_country_message:
+      type: text_format
+      label: 'Unsupported country Message'
+    unsupported_country_button:
+      type: text
+      label: 'Unsupported country Button'

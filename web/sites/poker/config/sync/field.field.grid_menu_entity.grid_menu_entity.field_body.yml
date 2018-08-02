@@ -1,0 +1,21 @@
+uuid: 59d48ba9-9437-4afb-b9da-02e233d0df0e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.grid_menu_entity.field_body
+  module:
+    - poker_grid_menu
+    - text
+id: grid_menu_entity.grid_menu_entity.field_body
+field_name: field_body
+entity_type: grid_menu_entity
+bundle: grid_menu_entity
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,45 @@
+uuid: b7c5d06a-79e6-43e5-9f66-4e412daccb37
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_post_overlay_image
+    - paragraphs.paragraphs_type.slider_overlay_cmi
+  module:
+    - content_translation
+    - image
+third_party_settings:
+  content_translation:
+    translation_sync:
+      file: file
+      alt: '0'
+      title: '0'
+id: paragraph.slider_overlay_cmi.field_post_overlay_image
+field_name: field_post_overlay_image
+entity_type: paragraph
+bundle: slider_overlay_cmi
+label: 'Post Overlay Image'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: false
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

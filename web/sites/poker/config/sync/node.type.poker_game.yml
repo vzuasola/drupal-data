@@ -1,0 +1,29 @@
+uuid: e7d68952-e055-499b-9707-c195d0236091
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - scheduler
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+  scheduler:
+    expand_fieldset: when_required
+    fields_display_mode: vertical_tab
+    publish_enable: true
+    publish_past_date: error
+    publish_required: false
+    publish_revision: true
+    publish_touch: false
+    unpublish_enable: true
+    unpublish_required: false
+    unpublish_revision: true
+name: 'Poker Game'
+type: poker_game
+description: 'Use <em>poker game</em> for game thumbnails that will appear on game offers.'
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: true

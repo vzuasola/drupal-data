@@ -1,0 +1,16 @@
+uuid: b3322bf0-5e07-47d7-9374-6d29b2ae5df2
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.poker_game
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.poker_game
+target_entity_type_id: node
+target_bundle: poker_game
+default_langcode: site_default
+language_alterable: true

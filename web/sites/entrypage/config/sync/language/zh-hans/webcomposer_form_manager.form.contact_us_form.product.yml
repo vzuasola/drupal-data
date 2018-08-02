@@ -1,0 +1,33 @@
+field_settings:
+  label: 产品
+  placeholder: '-选择产品-'
+  choices: "sports|沙巴体育\r\nsports-df|大发体育\r\ncasino|娱乐场\r\ncasino-gold|娱乐场黄金版\r\nlive-dealer|现场荷官\r\ngames|老虎机\r\narcade|街机\r\nlottery|大发彩票\r\npoker|扑克\r\nvirtual-sports|虚拟运动"
+field_validations:
+  required:
+    error_message: 产品名称为必填项。
+  alpha:
+    error_message: 'Field should be Alphabet characters only'
+  alphanumeric:
+    error_message: 'Field should be alphanumeric'
+  alpha_multi:
+    error_message: 'Value is not a valid multilingual character'
+  numeric:
+    error_message: 'Field should be numeric'
+  no_symbols:
+    error_message: 'Field contains invalid special characters'
+  numeric_symbols:
+    error_message: 'Field contains invalid special characters'
+  email:
+    error_message: 'Field does not contain a valid email address'
+  min_length:
+    error_message: 'Minimum requirement not met'
+  max_length:
+    error_message: 'Maximum requirement not met'
+  regex:
+    error_message: 'This field only accepts specific characters.'
+  valid_date:
+    error_message: 'Date is invalid'
+  invalid_words:
+    error_message: 'Invalid/not allowed characters'
+  valid_languages:
+    error_message: 'This field only accepts specific characters.'

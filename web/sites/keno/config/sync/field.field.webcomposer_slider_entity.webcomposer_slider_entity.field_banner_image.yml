@@ -1,0 +1,47 @@
+uuid: 3532855e-27a7-4bd3-ba78-31217010cc5d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.webcomposer_slider_entity.field_banner_image
+  module:
+    - content_translation
+    - image
+    - webcomposer_slider
+third_party_settings:
+  content_translation:
+    translation_sync:
+      file: file
+      alt: '0'
+      title: '0'
+_core:
+  default_config_hash: xe1VsfFEzNnStDE7XKBHHI_ioHvuGcnEFeVMx3iegzQ
+id: webcomposer_slider_entity.webcomposer_slider_entity.field_banner_image
+field_name: field_banner_image
+entity_type: webcomposer_slider_entity
+bundle: webcomposer_slider_entity
+label: 'Banner Image'
+description: 'The image for the slider. The recommended upload size is 1920x500.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

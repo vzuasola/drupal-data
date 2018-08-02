@@ -44,6 +44,8 @@ class RedisSignatureStorage implements SignatureStorageInterface {
    * {@inheritdoc}
    */
   public function getSignature() {
+    $signature = NULL;
+
     try {
       if ($this->redis) {
         $signature = $this->redis->get($this->cacheKey);
@@ -53,7 +55,7 @@ class RedisSignatureStorage implements SignatureStorageInterface {
         }
       }
     } catch (\Exception $e) {
-      $signature = NULL;
+      // do nothing
     }
 
     return $signature;

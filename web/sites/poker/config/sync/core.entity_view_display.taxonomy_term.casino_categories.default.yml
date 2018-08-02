@@ -1,0 +1,33 @@
+uuid: d75ec2a8-d6fb-4783-949a-2bbd02065be3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.casino_categories.field_disable
+    - taxonomy.vocabulary.casino_categories
+  module:
+    - text
+id: taxonomy_term.casino_categories.default
+targetEntityType: taxonomy_term
+bundle: casino_categories
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_disable:
+    weight: 1
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+hidden:
+  langcode: true

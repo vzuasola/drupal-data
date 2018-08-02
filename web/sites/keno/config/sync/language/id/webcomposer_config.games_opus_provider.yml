@@ -1,7 +1,7 @@
 opus_game_loader_content:
+  format: basic_html
   value: "<p>Telah terjadi kesalahan tak terduga. Beberapa detik lagi, window ini akan ditutup. Silahkan segera coba kembali.</p>\r\n"
-  format: basic_html
-opus_unsupported_currencies_title: 'Mata uang tidak tersedia.'
 opus_unsupported_currencies_message:
-  value: "<p>Maaf, mata uang pilihan Anda tidak tersedia. Silahkan pilih ruang gaming yang lain.</p>\r\n"
   format: basic_html
+  value: "<p>Maaf, mata uang pilihan Anda tidak tersedia. Silahkan pilih ruang gaming yang lain.</p>\r\n"
+opus_unsupported_currencies_title: 'Mata uang tidak tersedia.'

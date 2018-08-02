@@ -1,0 +1,11 @@
+advanced__active_tab: edit-success
+page_title: 联系我们
+body_content:
+  value: ''
+  format: basic_html
+success_title: 聯系表格
+success_message:
+  value: "<p>谢谢！你的表格已成功提交。我们的客服将尽快联系您。</p>\r\n\r\n<p><a href=\"{domain:entry}/{lang}[query:({tracking})]\" target=\"_self\">&lt;&lt; 返回到首页。</a></p>\r\n"
+  format: basic_html
+form_title: 聯系表格
+email_template: "Firstname: @firstname\r\nLastname: @lastname\r\nUsername: @username\r\nEmail: @email\r\nProduct: @product\r\nSubject: @subject\r\nMessage: \r\n@message\r\n\r\nIP: @ip\r\nSubmitted on: @date\r\nLanguage: @language"

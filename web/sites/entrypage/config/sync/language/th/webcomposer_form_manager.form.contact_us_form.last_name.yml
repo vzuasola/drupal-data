@@ -1,0 +1,33 @@
+field_settings:
+  label: นามสกุล
+  placeholder: นามสกุล
+  annotation: ''
+field_validations:
+  required:
+    error_message: กรุณากรอกนามสกุลเป็นภาษาอังกฤษ
+  alpha:
+    error_message: 'Field should be Alphabet characters only'
+  alphanumeric:
+    error_message: 'Field should be alphanumeric'
+  alpha_multi:
+    error_message: 'Value is not a valid multilingual character'
+  numeric:
+    error_message: 'Field should be numeric'
+  no_symbols:
+    error_message: 'Field contains invalid special characters'
+  numeric_symbols:
+    error_message: 'Field contains invalid special characters'
+  email:
+    error_message: 'Field does not contain a valid email address'
+  min_length:
+    error_message: "กรอกยูสเซอร์เนมได้ 1-50 ตัวอักษรเท่านั้น \r\n"
+  max_length:
+    error_message: "กรอกยูสเซอร์เนมได้ 1-50 ตัวอักษรเท่านั้น \r\n"
+  regex:
+    error_message: 'This field only accepts specific characters.'
+  valid_date:
+    error_message: 'Date is invalid'
+  invalid_words:
+    error_message: กรุณากรอกนามสกุลเป็นภาษาอังกฤษ
+  valid_languages:
+    error_message: "กรุณาใช้ตัวอักษรภาษาอังกฤษเท่านั้น \r\n"

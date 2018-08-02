@@ -1,0 +1,5 @@
+entity.grid_menu_entity.add_form:
+  route_name: entity.grid_menu_entity.add_form
+  title: 'Add Grid menu entity'
+  appears_on:
+    - entity.grid_menu_entity.collection

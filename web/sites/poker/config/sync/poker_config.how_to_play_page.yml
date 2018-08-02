@@ -1,0 +1,35 @@
+first_tab_title: 'Game Client Navigation'
+first_tab_id: game_client
+how_to_play: 'http://poker.drupal.local/sites/poker/files/htp-faqs-active.png'
+first_tab_icon:
+  - '48'
+first_tab_icon_hover:
+  - '49'
+first_tab_content:
+  value: "<p><span class=\"text-red\"><strong>Aliquam et finibus massa</strong></span></p>\r\n\r\n<p>Donec sed lectus convallis tellus imperdiet tincidunt sed eu ipsum. Suspendisse lorem ante, bibendum quis diam vel, dapibus pretium ante. Cras et fermentum arcu. Maecenas congue sapien a varius iaculis. Donec laoreet fringilla lacus. Proin hendrerit sollicitudin libero in dignissim. Quisque in ultricies mauris. Vivamus consequat malesuada ultrices. Curabitur nec sapien interdum, lobortis magna in, molestie nulla.</p>\r\n"
+  format: basic_html
+second_tab_title: 'Poker University'
+second_tab_id: poker_university
+second_tab_icon:
+  - '50'
+second_tab_icon_hover:
+  - '51'
+second_tab_content:
+  value: ''
+  format: basic_html
+third_tab_title: FAQs
+third_tab_id: faqs
+third_tab_icon:
+  - '52'
+third_tab_icon_hover:
+  - '53'
+third_tab_content:
+  value: "<p><span class=\"text-red\"><strong>Fusce semper tempor eleifend</strong></span></p>\r\n\r\n<p>Proin non lacus ut metus egestas porta quis sed augue. Sed auctor nulla et lectus blandit, vitae interdum augue viverra. Quisque sed congue ipsum. Nullam suscipit leo a mauris egestas, ac fringilla leo aliquet. Curabitur placerat lorem turpis, vitae auctor tortor luctus nec. Sed ac elit in lacus scelerisque eleifend. Integer egestas nisl ut dignissim porttitor. In hendrerit libero lacus, at fermentum velit placerat at. Suspendisse fringilla odio eu diam pharetra maximus. Curabitur rutrum lobortis erat, quis ornare ex. Integer urna tortor, interdum in odio at, pretium vulputate orci. Etiam nec euismod ligula, vel condimentum eros. Proin tristique leo nec mi consequat accumsan. Mauris non justo imperdiet, euismod tellus ac, consectetur nunc.</p>\r\n"
+  format: basic_html
+first_tab_icon_file: 'http://poker.drupal.local/sites/poker/files/htp-game-client.png'
+first_tab_icon_hover_file: 'http://poker.drupal.local/sites/poker/files/htp-game-client-active.png'
+second_tab_icon_file: 'http://poker.drupal.local/sites/poker/files/htp-poker-uni.png'
+second_tab_icon_hover_file: 'http://poker.drupal.local/sites/poker/files/htp-poker-uni-active.png'
+third_tab_icon_file: 'http://poker.drupal.local/sites/poker/files/htp-faqs.png'
+third_tab_icon_hover_file: 'http://poker.drupal.local/sites/poker/files/htp-faqs-active.png'
+page_title: 'How to Play'

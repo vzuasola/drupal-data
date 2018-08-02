@@ -1,0 +1,32 @@
+poker_game_offers.add_casino_game:
+  route_name: 'node.add'
+  title: 'Add Game'
+  route_parameters:
+      node_type: 'casino_game'
+  options:
+      query:
+          destination: '/admin/game-offers/casino'
+  appears_on:
+      - view.game_offers_casino.overview
+
+poker_game_offers.add_casino_game_category:
+  route_name: 'entity.taxonomy_term.add_form'
+  title: 'Add Category'
+  route_parameters:
+      taxonomy_vocabulary: 'casino_categories'
+  options:
+      query:
+          destination: '/admin/game-offers/casino/categories'
+  appears_on:
+      - view.game_offers_casino_categories.overview
+
+poker_game_offers.add_poker_game:
+  route_name: 'node.add'
+  title: 'Add Game'
+  route_parameters:
+      node_type: 'poker_game'
+  options:
+      query:
+          destination: '/admin/game-offers/poker'
+  appears_on:
+      - view.game_offers_poker.overview

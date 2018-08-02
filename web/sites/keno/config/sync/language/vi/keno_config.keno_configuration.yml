@@ -2,3 +2,6 @@ trust_element_title: 'Chơi KENO chưa bao giờ hấp dẫn đến thế'
 trust_element_content:
   value: "<p>Có rất nhiều cách để chơi và giành chiến thắng. Với hơn 9 khu vực và 7 kiểu cược mỗi khu vực cùng những thanh toán và tỷ lệ riêng cho bạn chọn lựa, đặc biệt bạn sẽ có cơ hội thắng lớn mỗi 2 phút!</p>\r\n"
   format: basic_html
+play_text: 'Chơi Ngay'
+game_info_text: 'Xem Thêm'
+free_play_text: 'Cược Miễn Phí'

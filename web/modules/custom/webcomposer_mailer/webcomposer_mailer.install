@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * Implements hook_uninstall
+ */
+function webcomposer_mailer_uninstall() {
+  $keys = [
+    'webcomposer_config.mailer_configuration',
+    'rest.resource.mailer_rest_resource'
+  ];
+
+  foreach ($keys as $key) {
+    \Drupal::configFactory()->getEditable($key)->delete();
+  }
+}

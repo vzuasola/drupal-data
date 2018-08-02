@@ -1,0 +1,23 @@
+uuid: 68f082a1-f908-4c00-8971-ea78e3b46643
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - taxonomy
+id: _term_name_
+label: 'casino game category pattern'
+type: 'canonical_entities:taxonomy_term'
+pattern: '/[term:name]'
+selection_criteria:
+  6a79cbb6-6352-4137-a29c-cb080820d255:
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      casino_categories: casino_categories
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    uuid: 6a79cbb6-6352-4137-a29c-cb080820d255
+selection_logic: and
+weight: -5
+relationships: {  }

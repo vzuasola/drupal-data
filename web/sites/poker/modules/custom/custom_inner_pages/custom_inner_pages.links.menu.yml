@@ -1,0 +1,20 @@
+custom_inner_pages.list:
+  title: 'Poker Custom Inner Pages Configuration'
+  parent: system.admin_config
+  description: 'Configuration for poker custom inner pages'
+  route_name: custom_inner_pages.admin_settings
+
+# How to play menu items definition
+entity.how_to_play.collection:
+  title: 'How to play list'
+  route_name: entity.how_to_play.collection
+  description: 'List How to play entities'
+  parent: custom_inner_pages.list
+  weight: 99
+
+how_to_play.admin.structure.settings:
+  title: How to play settings
+  description: 'Configure How to play entities'
+  route_name: how_to_play.settings
+  parent: custom_inner_pages.list
+  weight: 99

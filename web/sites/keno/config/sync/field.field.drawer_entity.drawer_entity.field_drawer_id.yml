@@ -15,7 +15,7 @@ bundle: drawer_entity
 label: 'Drawer ID'
 description: 'The unique identifier for this drawer entity'
 required: true
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

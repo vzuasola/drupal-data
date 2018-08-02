@@ -1,0 +1,20 @@
+uuid: 45ee9114-9209-4d4e-861b-bce65899c8dc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.how_to_play.field_htp_secondary_title
+  module:
+    - custom_inner_pages
+id: how_to_play.how_to_play.field_htp_secondary_title
+field_name: field_htp_secondary_title
+entity_type: how_to_play
+bundle: how_to_play
+label: 'Secondary Tab Title'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

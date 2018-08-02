@@ -1,0 +1,49 @@
+uuid: 61be558a-ac70-47b4-9366-eb540dd03e21
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.casino_categories.field_disable
+    - taxonomy.vocabulary.casino_categories
+  module:
+    - path
+id: taxonomy_term.casino_categories.default
+targetEntityType: taxonomy_term
+bundle: casino_categories
+mode: default
+content:
+  field_disable:
+    weight: 1
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  translation:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  description: true

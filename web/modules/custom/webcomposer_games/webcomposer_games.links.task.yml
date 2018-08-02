@@ -36,4 +36,9 @@ webcomposer_games.admin_unsupported_currency_tab:
 webcomposer_games.admin_games_goldenrace_provider_tab:
   route_name: webcomposer_games.games_goldenrace_provider_form
   title: 'GoldenRace Game Configuration'
-  base_route: webcomposer_games.games_goldenrace_provider_form 
+  base_route: webcomposer_games.games_goldenrace_provider_form
+
+webcomposer_games.admin_unsupported_country_tab:
+  route_name: webcomposer_games.unsupported_country_configuration_form
+  title: 'Unsupported Country Configuration'
+  base_route: webcomposer_games.unsupported_country_configuration_form

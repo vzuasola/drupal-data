@@ -1,0 +1,7 @@
+custom_inner_pages.admin_settings:
+  path: 'admin/config/poker/custom-inner-pages'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Poker Custom Inner Pages Configuration'
+  requirements:
+    _permission: 'administer site configuration'

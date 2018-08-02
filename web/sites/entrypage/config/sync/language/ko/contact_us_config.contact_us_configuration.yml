@@ -1,0 +1,11 @@
+advanced__active_tab: edit-settings
+page_title: 연락처
+body_content:
+  value: ''
+  format: basic_html
+success_title: '문의 메일 양식'
+success_message:
+  value: "<p>감사합니다! 양식이 성공적으로 제출되었습니다. 고객지원팀에서 곧 연락 드리겠습니다.&nbsp;</p>\r\n\r\n<p><a href=\"{domain:entry}/{lang}[query:({tracking})]\" target=\"_self\">&lt;&lt; 홈페이지로 돌아가기</a></p>\r\n"
+  format: basic_html
+form_title: '문의 메일 양식'
+email_template: "Firstname: @firstname\r\nLastname: @lastname\r\nUsername: @username\r\nEmail: @email\r\nProduct: @product\r\nSubject: @subject\r\nMessage: \r\n@message\r\n\r\nIP: @ip\r\nSubmitted on: @date\r\nLanguage: @language"

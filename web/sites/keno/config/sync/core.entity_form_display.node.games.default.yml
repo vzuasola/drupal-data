@@ -102,7 +102,7 @@ third_party_settings:
         description: ''
         required_fields: true
       label: 'Game Room Maintenance/Coming Soon'
-    group_additional_statuses:
+    group_display_statuses:
       children:
         - field_status
         - field_disable_in_tablet
@@ -115,7 +115,7 @@ third_party_settings:
         classes: ''
         description: ''
         required_fields: true
-      label: 'Additional Statuses'
+      label: 'Display Statuses'
 id: node.games.default
 targetEntityType: node
 bundle: games
@@ -123,7 +123,7 @@ mode: default
 content:
   field_disable_in_tablet:
     type: boolean_checkbox
-    weight: 1
+    weight: 23
     region: content
     settings:
       display_label: true
@@ -239,7 +239,7 @@ content:
             values: {  }
             value_form:
               -
-                target_id: '301'
+                target_id: '310'
             effect: show
             effect_options: {  }
             selector: ''
@@ -249,7 +249,7 @@ content:
     region: content
   field_preview_display_only:
     type: boolean_checkbox
-    weight: 2
+    weight: 24
     region: content
     settings:
       display_label: true
@@ -275,7 +275,7 @@ content:
     region: content
   field_status:
     type: options_select
-    weight: 0
+    weight: 22
     region: content
     settings: {  }
     third_party_settings: {  }

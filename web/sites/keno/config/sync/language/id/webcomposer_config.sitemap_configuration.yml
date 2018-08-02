@@ -1,5 +1,9 @@
+content_types:
+  page:
+    label: 'HALAMAN DASAR'
 sitemap_title: MAPA
 sitemap_home_label: DEPAN
 sitemap_promotions_label: PROMOSI
 sitemap_mobile_label: MOBILE
 sitemap_basic_pages_label: 'HALAMAN DASAR'
+sitemap_links: "DEPAN|/\r\nPROMOSI|/promotions\r\nMOBILE|/{domain:entry}/{domain:lang_token}/mobile{tracking.token}"

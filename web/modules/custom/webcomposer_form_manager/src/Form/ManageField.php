@@ -44,14 +44,14 @@ class ManageField extends FormBase {
     $this->formManager = $formManager;
     $this->route = $route;
 
-    $this->entity = $this->getEntity();
+    $this->entity = $this->getFormEntity();
     $this->field = $this->getField();
   }
 
   /**
    *
    */
-  private function getEntity() {
+  private function getFormEntity() {
     $entityId = $this->route->getParameter('form');
     $entity = $this->formManager->getFormById($entityId);
 

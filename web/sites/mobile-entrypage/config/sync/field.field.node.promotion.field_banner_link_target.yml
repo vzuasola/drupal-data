@@ -12,7 +12,7 @@ field_name: field_banner_link_target
 entity_type: node
 bundle: promotion
 label: 'Banner Link Target'
-description: ''
+description: 'Please use " - None - " for Same Window behavior.'
 required: false
 translatable: true
 default_value: {  }

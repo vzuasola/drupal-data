@@ -1,0 +1,4 @@
+advanced__active_tab: edit-antispam
+mailer_success: Success.
+mailer_error: "こちらのサービスは現在ご利用いただけません。\r\n"
+antispam_error: "数回お間違いになられましたので一時的にロックされました。5 分後に再度お試し下さい。\r\n"

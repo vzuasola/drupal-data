@@ -1,0 +1,9 @@
+advanced__active_tab: edit-success
+page_title: 'Contact Us'
+body_content:
+  value: ''
+  format: basic_html
+success_title: 'Contact Form'
+success_message:
+  value: "<p>Thank you for the message. We will reply soon.</p>\r\n\r\n<p><a href=\"{domain:entry}/{lang}[query:({tracking})]\" target=\"_self\">&lt;&lt; Go Back to the Homepage</a></p>\r\n"
+  format: basic_html
