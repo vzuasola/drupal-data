@@ -2,3 +2,5 @@ advanced__active_tab: edit-pt-settings
 pt_host: 'https://extstg2-cashier01.ptstaging.eu'
 casino_name: ptstaging2.78
 secret_key: Kis7Hs57das
+balance_currency_mapping: $|USD
+balance_error: 'error retrieving'

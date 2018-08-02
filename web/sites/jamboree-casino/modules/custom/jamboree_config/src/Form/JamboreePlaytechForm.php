@@ -68,5 +68,17 @@ class JamboreePlaytechForm extends FormBase {
       '#title' => $this->t('Playtech Casino Secret Key'),
       '#default_value' => $this->get('secret_key'),
     ];
+
+    $form['pt_settings']['balance_currency_mapping'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Balance Currency Mapping'),
+      '#default_value' => $this->get('balance_currency_mapping'),
+    ];
+
+    $form['pt_settings']['balance_error'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Balance Error Message'),
+      '#default_value' => $this->get('balance_error'),
+    ];
   }
 }
