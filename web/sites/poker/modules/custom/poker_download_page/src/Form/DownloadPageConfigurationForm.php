@@ -34,10 +34,10 @@ class DownloadPageConfigurationForm extends FormBase {
    * {@inheritdoc}
    */
   public function form(array $form, FormStateInterface $form_state) {
-    $form['page_title'] = [
+    $form['title'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Page Title'),
-      '#default_value' => $this->get('page_title'),
+      '#default_value' => $this->get('title'),
       '#translatable' => TRUE,
     ];
 
