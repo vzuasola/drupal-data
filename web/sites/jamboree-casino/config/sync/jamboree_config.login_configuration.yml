@@ -1,5 +1,4 @@
 jamboree_settings_tab__active_tab: ''
-login_button: Login
 login_username: Username
 login_password: Password
 login_remember_username: 'Remember Password'
@@ -14,3 +13,7 @@ login_username_required: 'Username required.'
 login_password_required: 'Password required.'
 login_pt_error_messages: ''
 login_lightbox_title: Login
+login_forgot_password_link: ''
+login_registration_link: '/registration'
+login_button_label_main: LOGIN
+login_button_label_sub: SUB
