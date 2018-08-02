@@ -43,6 +43,7 @@ class GameOffersConfigurationForm extends FormBase {
 
     $this->casinoGames($form);
     $this->pokerGames($form);
+    $this->common($form);
 
     return $form;
   }
@@ -57,7 +58,7 @@ class GameOffersConfigurationForm extends FormBase {
 
     $form['casino']['casino_label'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('Label'),
+      '#title' => $this->t('Casino Tab Label'),
       '#default_value' => $this->get('casino_label'),
       '#translatable' => TRUE,
       '#required' => TRUE
@@ -74,8 +75,33 @@ class GameOffersConfigurationForm extends FormBase {
 
     $form['poker']['poker_label'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('Label'),
+      '#title' => $this->t('Poker Tab Label'),
       '#default_value' => $this->get('poker_label'),
+      '#translatable' => TRUE,
+      '#required' => TRUE
+    ];
+  }
+
+  private function common(&$form) {
+    $form['common'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Common'),
+      '#collapsible' => TRUE,
+      '#open' => TRUE,
+    ];
+
+    $form['common']['download_label'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Download Button Label'),
+      '#default_value' => $this->get('download_label'),
+      '#translatable' => TRUE,
+      '#required' => TRUE
+    ];
+
+    $form['common']['play_label'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Play Button Label'),
+      '#default_value' => $this->get('play_label'),
       '#translatable' => TRUE,
       '#required' => TRUE
     ];

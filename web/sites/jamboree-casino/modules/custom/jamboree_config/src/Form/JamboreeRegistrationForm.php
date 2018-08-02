@@ -38,39 +38,11 @@ class JamboreeRegistrationForm extends FormBase {
       '#title' => t('Registration Configuration'),
     ];
 
-    $this->sectionRegistrationSettings($form);
     $this->sectionRegistrationForm($form);
     $this->sectionStep2($form);
     $this->sectionStep3($form);
 
     return $form;
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  private function sectionRegistrationSettings(array &$form) {
-    $form['reg_form_settings'] = [
-      '#type' => 'details',
-      '#title' => t('Registration Form Playtech Settings'),
-      '#group' => 'advanced',
-    ];
-    $form['reg_form_settings']['reg_form_host'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Playtech Registration API Hostname'),
-      '#default_value' => $this->get('reg_form_host'),
-    ];
-    $form['reg_form_settings']['casino_name'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Playtech Casino Name'),
-      '#default_value' => $this->get('casino_name'),
-    ];
-
-    $form['reg_form_settings']['secret_key'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Playtech Casino Secret Key'),
-      '#default_value' => $this->get('secret_key'),
-    ];
   }
 
   /**
@@ -158,16 +130,16 @@ class JamboreeRegistrationForm extends FormBase {
       '#default_value' => $this->get('error_country'),
       '#translatable' => TRUE,
     ];
-    $form['reg_form']['errors']['error_firstname'] = [
-      '#type' => 'textfield',
-      '#title' => t('Registration Error Message for Firstname Field'),
-      '#default_value' => $this->get('error_firstname'),
-      '#translatable' => TRUE,
-    ];
     $form['reg_form']['errors']['error_prefecture'] = [
       '#type' => 'textfield',
       '#title' => t('Registration Error Message for Prefecture Field'),
       '#default_value' => $this->get('error_prefecture'),
+      '#translatable' => TRUE,
+    ];
+    $form['reg_form']['errors']['error_state'] = [
+      '#type' => 'textfield',
+      '#title' => t('Registration Error Message for State Field'),
+      '#default_value' => $this->get('error_state'),
       '#translatable' => TRUE,
     ];
     $form['reg_form']['errors']['error_city'] = [
@@ -207,6 +179,11 @@ class JamboreeRegistrationForm extends FormBase {
       '#translatable' => TRUE,
     ];
     //captcha error
+    $form['reg_form']['errors']['service_not_available'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Registration Error Message if Service is not Available'),
+      '#default_value' => $this->get('service_not_available'),
+    ];
   }
 
   /**

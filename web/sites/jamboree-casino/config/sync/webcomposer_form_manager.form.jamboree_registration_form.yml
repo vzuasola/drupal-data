@@ -1,0 +1,46 @@
+form_settings: null
+weights:
+  firstname:
+    weight: '-10'
+  lastname:
+    weight: '-9'
+  password:
+    weight: '-8'
+  confirm_password:
+    weight: '-7'
+  gender:
+    weight: '-6'
+  email:
+    weight: '-5'
+  confirm_email:
+    weight: '-4'
+  birthdate:
+    weight: '-3'
+  phone:
+    weight: '-2'
+  currency:
+    weight: '-1'
+  country:
+    weight: '0'
+  prefecture:
+    weight: '1'
+  city:
+    weight: '2'
+  zipcode:
+    weight: '3'
+  address:
+    weight: '4'
+  coupon_code:
+    weight: '5'
+  wrapper_start:
+    weight: '6'
+  term_conditions:
+    weight: '7'
+  promotions:
+    weight: '8'
+  wrapper_end:
+    weight: '9'
+  username:
+    weight: '10'
+  submit:
+    weight: '10'

@@ -200,6 +200,17 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
           ],
         ],
       ],
+      'state' => [
+        'name' => 'State',
+        'type' => 'textfield',
+        'settings' => [
+          'label' => [
+            '#title' => 'State Label',
+            '#type' => 'textfield',
+            '#description' => 'The Label for the State field',
+          ],
+        ],
+      ],
       'city' => [
         'name' => 'Town/City',
         'type' => 'textfield',
@@ -240,7 +251,13 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
           'label' => [
             '#title' => 'Coupon Code Label',
             '#type' => 'textfield',
-            '#description' => 'The Label for Confirm Coupon Code field',
+            '#description' => 'The Label for Coupon Code field',
+          ],
+          'show' => [
+            '#title' => 'Coupon Code Visible',
+            '#type' => 'checkbox',
+            '#description' => 'Show Coupon Code field',
+            '#default_value' => '1',
           ],
         ],
       ],
