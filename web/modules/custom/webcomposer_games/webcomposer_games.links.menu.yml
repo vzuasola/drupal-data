@@ -58,8 +58,8 @@ webcomposer_games.admin_games_goldenrace_provider:
   description: 'Provides configuration for GoldenRace Game'
   route_name: webcomposer_games.games_goldenrace_provider_form
 
-webcomposer_games.admin_games_gameworx_provider:
-  title: 'Gameworx Game Configuration'
+webcomposer_games.admin_unsupported_country:
+  title: 'Unsupported Country Configuration'
   parent: webcomposer_games.list
-  description: 'Provides configuration for Gameworx Game'
-  route_name: webcomposer_games.games_gameworx_provider_form  
+  description: 'Provides configuration for unsupported country'
+  route_name: webcomposer_games.unsupported_country_configuration_form

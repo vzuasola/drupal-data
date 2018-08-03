@@ -37,7 +37,7 @@ class DownloadPageConfigurationForm extends FormBase {
     $form['title'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Page Title'),
-      '#default_value' => $this->get('page_title'),
+      '#default_value' => $this->get('title'),
       '#translatable' => TRUE,
     ];
 

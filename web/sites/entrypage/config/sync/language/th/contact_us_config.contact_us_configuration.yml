@@ -1,0 +1,11 @@
+advanced__active_tab: edit-success
+page_title: ติดต่อเรา
+body_content:
+  value: ''
+  format: basic_html
+success_title: แบบฟอร์มติดต่อ
+success_message:
+  value: "<p>ขอบคุณค่ะ! แบบฟอร์มของคุณได้รับการยืนยันเรียบร้อยแล้ว ฝ่ายบริการลูกค้าของเราจะติดต่อกลับไปโดยไวที่สุด</p>\r\n\r\n<p><a href=\"{domain:entry}/{lang}[query:({tracking})]\" target=\"_self\">&lt;&lt; กลับไป หน้าแรก</a></p>\r\n"
+  format: basic_html
+form_title: แบบฟอร์มติดต่อ
+email_template: "Firstname: @firstname\r\nLastname: @lastname\r\nUsername: @username\r\nEmail: @email\r\nProduct: @product\r\nSubject: @subject\r\nMessage: \r\n@message\r\n\r\nIP: @ip\r\nSubmitted on: @date\r\nLanguage: @language"

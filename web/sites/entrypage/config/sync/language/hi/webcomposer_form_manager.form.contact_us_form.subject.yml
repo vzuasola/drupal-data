@@ -1,0 +1,33 @@
+field_settings:
+  label: Subject
+  placeholder: '- Select -'
+  choices: "sports|help@indiacsonline.com|Account\r\nsports|help@indiacsonline.com|Bonus/Promotions\r\nsports|help@indiacsonline.com|Deposit/Withdrawal\r\nsports|help@indiacsonline.com|Games\r\nsports|help@indiacsonline.com|Technical Issues\r\nsports|affiliate@dafabet.com|Affiliate Related Inquiry\r\nsports|help@indiacsonline.com|General Inquiries\r\nsports-df|help@indiacsonline.com|Account\r\nsports-df|help@indiacsonline.com|Bonus/Promotions\r\nsports-df|help@indiacsonline.com|Deposit/Withdrawal\r\nsports-df|help@indiacsonline.com|Games\r\nsports-df|help@indiacsonline.com|Technical Issues\r\nsports-df|affiliate@dafabet.com|Affiliate Related Inquiry\r\nsports-df|help@indiacsonline.com|General Inquiries\r\nexchange|help@indiacsonline.com|Account\r\nexchange|help@indiacsonline.com|Bonus/Promotions\r\nexchange|help@indiacsonline.com|Deposit/Withdrawal\r\nexchange|help@indiacsonline.com|Games\r\nexchange|help@indiacsonline.com|Technical Issues\r\nexchange|affiliate@dafabet.com|Affiliate Related Inquiry\r\nexchange|help@indiacsonline.com|General Inquiries\r\ncasino|help@indiacsonline.com|Account\r\ncasino|help@indiacsonline.com|Bonus/Promotions\r\ncasino|help@indiacsonline.com|Deposit/Withdrawal\r\ncasino|help@indiacsonline.com|Games\r\ncasino|help@indiacsonline.com|Technical Issues\r\ncasino|affiliate@dafabet.com|Affiliate Related Inquiry\r\ncasino|help@indiacsonline.com|General Inquiries\r\ncasino-gold|help@indiacsonline.com|Account\r\ncasino-gold|help@indiacsonline.com|Bonus/Promotions\r\ncasino-gold|help@indiacsonline.com|Deposit/Withdrawal\r\ncasino-gold|help@indiacsonline.com|Games\r\ncasino-gold|help@indiacsonline.com|Technical Issues\r\ncasino-gold|affiliate@dafabet.com|Affiliate Related Inquiry\r\ncasino-gold|help@indiacsonline.com|General Inquiries\r\nlive-dealer|help@indiacsonline.com|Account\r\nlive-dealer|help@indiacsonline.com|Bonus/Promotions\r\nlive-dealer|help@indiacsonline.com|Deposit/Withdrawal\r\nlive-dealer|help@indiacsonline.com|Games\r\nlive-dealer|help@indiacsonline.com|Technical Issues\r\nlive-dealer|affiliate@dafabet.com|Affiliate Related Inquiry\r\nlive-dealer|help@indiacsonline.com|General Inquiries\r\ngames|help@indiacsonline.com|Account\r\ngames|help@indiacsonline.com|Bonus/Promotions\r\ngames|help@indiacsonline.com|Deposit/Withdrawal\r\ngames|help@indiacsonline.com|Games\r\ngames|help@indiacsonline.com|Technical Issues\r\ngames|affiliate@dafabet.com|Affiliate Related Inquiry\r\ngames|help@indiacsonline.com|General Inquiries\r\narcade|help@indiacsonline.com|Account\r\narcade|help@indiacsonline.com|Bonus/Promotions\r\narcade|help@indiacsonline.com|Deposit/Withdrawal\r\narcade|help@indiacsonline.com|Games\r\narcade|help@indiacsonline.com|Technical Issues\r\narcade|affiliate@dafabet.com|Affiliate Related Inquiry\r\narcade|help@indiacsonline.com|General Inquiries\r\nlottery|help@indiacsonline.com|Account\r\nlottery|help@indiacsonline.com|Bonus/Promotions\r\nlottery|help@indiacsonline.com|Deposit/Withdrawal\r\nlottery|help@indiacsonline.com|Games\r\nlottery|help@indiacsonline.com|Technical Issues\r\nlottery|affiliate@dafabet.com|Affiliate Related Inquiry\r\nlottery|help@indiacsonline.com|General Inquiries\r\npoker|help@indiacsonline.com|Account\r\npoker|help@indiacsonline.com|Bonus/Promotions\r\npoker|help@indiacsonline.com|Deposit/Withdrawal\r\npoker|help@indiacsonline.com|Games\r\npoker|help@indiacsonline.com|Technical Issues\r\npoker|affiliate@dafabet.com|Affiliate Related Inquiry\r\npoker|help@indiacsonline.com|General Inquiries\r\nvirtual-sports|help@indiacsonline.com|Account\r\nvirtual-sports|help@indiacsonline.com|Bonus/Promotions\r\nvirtual-sports|help@indiacsonline.com|Deposit/Withdrawal\r\nvirtual-sports|help@indiacsonline.com|Games\r\nvirtual-sports|help@indiacsonline.com|Technical Issues\r\nvirtual-sports|affiliate@dafabet.com|Affiliate Related Inquiry\r\nvirtual-sports|help@indiacsonline.com|General Inquiries"
+field_validations:
+  required:
+    error_message: "Subject is required.\r\n"
+  alpha:
+    error_message: 'Field should be Alphabet characters only'
+  alphanumeric:
+    error_message: 'Field should be alphanumeric'
+  alpha_multi:
+    error_message: 'Value is not a valid multilingual character'
+  numeric:
+    error_message: 'Field should be numeric'
+  no_symbols:
+    error_message: 'Field contains invalid special characters'
+  numeric_symbols:
+    error_message: 'Field contains invalid special characters'
+  email:
+    error_message: 'Field does not contain a valid email address'
+  min_length:
+    error_message: 'Minimum requirement not met'
+  max_length:
+    error_message: 'Maximum requirement not met'
+  regex:
+    error_message: 'This field only accepts specific characters.'
+  valid_date:
+    error_message: 'Date is invalid'
+  invalid_words:
+    error_message: 'Invalid/not allowed characters'
+  valid_languages:
+    error_message: 'This field only accepts specific characters.'

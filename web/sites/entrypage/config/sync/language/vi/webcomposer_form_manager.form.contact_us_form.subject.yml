@@ -1,0 +1,33 @@
+field_settings:
+  label: 'Chủ đề'
+  placeholder: '- Lựa chọn mục đích -'
+  choices: "sports|vnsupport@dafabet.com|Tài Khoản\r\nsports|vnsupport@dafabet.com|Tiền Thưởng / Khuyến mãi\r\nsports|vnsupport@dafabet.com|Nạp tiền / rút tiền\r\nsports|vnsupport@dafabet.com|Trò chơi\r\nsports|vnsupport@dafabet.com|Vấn đề kỹ thuật\r\nsports|affiliate@dafabet.com|Thắc mắc liên quan đến đại lý\r\nsports|vnsupport@dafabet.com|Yêu cầu chung\r\nsports-df|df.vnsupport@dafabet.com|Tài Khoản\r\nsports-df|df.vnsupport@dafabet.com|Tiền Thưởng / Khuyến mãi\r\nsports-df|df.vnsupport@dafabet.com|Nạp tiền / rút tiền\r\nsports-df|df.vnsupport@dafabet.com|Trò chơi\r\nsports-df|df.vnsupport@dafabet.com|Vấn đề kỹ thuật\r\nsports-df|affiliate@dafabet.com|Thắc mắc liên quan đến đại lý\r\nsports-df|df.vnsupport@dafabet.com|Yêu cầu chung\r\nexchange|vnsupport@dafabet.com|Tài Khoản\r\nexchange|vnsupport@dafabet.com|Tiền Thưởng / Khuyến mãi\r\nexchange|vnsupport@dafabet.com|Nạp tiền / rút tiền\r\nexchange|vnsupport@dafabet.com|Trò chơi\r\nexchange|vnsupport@dafabet.com|Vấn đề kỹ thuật\r\nexchange|affiliate@dafabet.com|Thắc mắc liên quan đến đại lý\r\nexchange|vnsupport@dafabet.com|Yêu cầu chung\r\ncasino|vnsupport@dafabet.com|Tài Khoản\r\ncasino|vnsupport@dafabet.com|Tiền Thưởng / Khuyến mãi\r\ncasino|vnsupport@dafabet.com|Nạp tiền / rút tiền\r\ncasino|vnsupport@dafabet.com|Trò chơi\r\ncasino|vnsupport@dafabet.com|Vấn đề kỹ thuật\r\ncasino|affiliate@dafabet.com|Thắc mắc liên quan đến đại lý\r\ncasino|vnsupport@dafabet.com|Yêu cầu chung\r\ncasino-gold|vnsupport@dafabet.com|Tài Khoản\r\ncasino-gold|vnsupport@dafabet.com|Tiền Thưởng / Khuyến mãi\r\ncasino-gold|vnsupport@dafabet.com|Nạp tiền / rút tiền\r\ncasino-gold|vnsupport@dafabet.com|Trò chơi\r\ncasino-gold|vnsupport@dafabet.com|Vấn đề kỹ thuật\r\ncasino-gold|affiliate@dafabet.com|Thắc mắc liên quan đến đại lý\r\ncasino-gold|vnsupport@dafabet.com|Yêu cầu chung\r\nlive-dealer|vnsupport@dafabet.com|Tài Khoản\r\nlive-dealer|vnsupport@dafabet.com|Tiền Thưởng / Khuyến mãi\r\nlive-dealer|vnsupport@dafabet.com|Nạp tiền / rút tiền\r\nlive-dealer|vnsupport@dafabet.com|Trò chơi\r\nlive-dealer|vnsupport@dafabet.com|Vấn đề kỹ thuật\r\nlive-dealer|affiliate@dafabet.com|Thắc mắc liên quan đến đại lý\r\nlive-dealer|vnsupport@dafabet.com|Yêu cầu chung\r\ngames|vnsupport@dafabet.com|Tài Khoản\r\ngames|vnsupport@dafabet.com|Tiền Thưởng / Khuyến mãi\r\ngames|vnsupport@dafabet.com|Nạp tiền / rút tiền\r\ngames|vnsupport@dafabet.com|Trò chơi\r\ngames|vnsupport@dafabet.com|Vấn đề kỹ thuật\r\ngames|affiliate@dafabet.com|Thắc mắc liên quan đến đại lý\r\ngames|vnsupport@dafabet.com|Yêu cầu chung\r\narcade|vnsupport@dafabet.com|Tài Khoản\r\narcade|vnsupport@dafabet.com|Tiền Thưởng / Khuyến mãi\r\narcade|vnsupport@dafabet.com|Nạp tiền / rút tiền\r\narcade|vnsupport@dafabet.com|Trò chơi\r\narcade|vnsupport@dafabet.com|Vấn đề kỹ thuật\r\narcade|affiliate@dafabet.com|Thắc mắc liên quan đến đại lý\r\narcade|vnsupport@dafabet.com|Yêu cầu chung\r\nlottery|vnsupport@dafabet.com|Tài Khoản\r\nlottery|vnsupport@dafabet.com|Tiền Thưởng / Khuyến mãi\r\nlottery|vnsupport@dafabet.com|Nạp tiền / rút tiền\r\nlottery|vnsupport@dafabet.com|Trò chơi\r\nlottery|vnsupport@dafabet.com|Vấn đề kỹ thuật\r\nlottery|affiliate@dafabet.com|Thắc mắc liên quan đến đại lý\r\nlottery|vnsupport@dafabet.com|Yêu cầu chung\r\npoker|vnsupport@dafabet.com|Tài Khoản\r\npoker|vnsupport@dafabet.com|Tiền Thưởng / Khuyến mãi\r\npoker|vnsupport@dafabet.com|Nạp tiền / rút tiền\r\npoker|vnsupport@dafabet.com|Trò chơi\r\npoker|vnsupport@dafabet.com|Vấn đề kỹ thuật\r\npoker|affiliate@dafabet.com|Thắc mắc liên quan đến đại lý\r\npoker|vnsupport@dafabet.com|Yêu cầu chung\r\nvirtual-sports|vnsupport@dafabet.com|Tài Khoản\r\nvirtual-sports|vnsupport@dafabet.com|Tiền Thưởng / Khuyến mãi\r\nvirtual-sports|vnsupport@dafabet.com|Nạp tiền / rút tiền\r\nvirtual-sports|vnsupport@dafabet.com|Trò chơi\r\nvirtual-sports|vnsupport@dafabet.com|Vấn đề kỹ thuật\r\nvirtual-sports|affiliate@dafabet.com|Thắc mắc liên quan đến đại lý\r\nvirtual-sports|vnsupport@dafabet.com|Yêu cầu chung"
+field_validations:
+  required:
+    error_message: "Điền Chủ để là bắt buộc.\r\n"
+  alpha:
+    error_message: 'Field should be Alphabet characters only'
+  alphanumeric:
+    error_message: 'Field should be alphanumeric'
+  alpha_multi:
+    error_message: 'Value is not a valid multilingual character'
+  numeric:
+    error_message: 'Field should be numeric'
+  no_symbols:
+    error_message: 'Field contains invalid special characters'
+  numeric_symbols:
+    error_message: 'Field contains invalid special characters'
+  email:
+    error_message: 'Field does not contain a valid email address'
+  min_length:
+    error_message: 'Minimum requirement not met'
+  max_length:
+    error_message: 'Maximum requirement not met'
+  regex:
+    error_message: 'This field only accepts specific characters.'
+  valid_date:
+    error_message: 'Date is invalid'
+  invalid_words:
+    error_message: 'Invalid/not allowed characters'
+  valid_languages:
+    error_message: 'This field only accepts specific characters.'

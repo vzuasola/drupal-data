@@ -11,7 +11,7 @@
 
 function poker_config_form_alter(&$form, $form_state, $form_id) {
     $submitAction = false;
-    switch($form_id) {
+    switch ($form_id) {
         case 'taxonomy_term_slider_routes_form':
             $submitAction = 'poker_config_taxonomy_form_submit';
             $entity = $form_state->getFormObject()->getEntity();

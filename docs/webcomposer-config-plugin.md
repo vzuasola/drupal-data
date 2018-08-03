@@ -195,6 +195,20 @@ function webcomposer_config_schema_sample_uninstall() {
 ```
 
 <br>
+## How to Define File Image Fields
+
+File image fields must be prefixed with **file_image** for the field names.
+
+```php
+$form['file_image_banner'] = [
+  '#type' => 'managed_file',
+  '#title' => $this->t('Custom Banner Image'),
+  '#default_value' => $this->get('file_image_banner'),
+  '#translatable' => TRUE,
+];
+```
+
+<br>
 ## How to Fetch Config from Front End
 
 Suppose you define a form

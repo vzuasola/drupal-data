@@ -1,0 +1,4 @@
+advanced__active_tab: edit-antispam
+mailer_success: Success.
+mailer_error: "ไม่มีบริการนี้ \r\n"
+antispam_error: "คุณกรอกข้อมูลผิดเกินจำนวนครั้งสูงสุดที่กำหนด กรุณาลองอีกครั้งใน 5นาที\r\n"

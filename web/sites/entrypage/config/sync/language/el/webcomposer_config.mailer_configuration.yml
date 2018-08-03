@@ -1,0 +1,4 @@
+advanced__active_tab: edit-antispam
+mailer_success: Success.
+mailer_error: "Υπηρεσία Μη Διαθέσιμη\r\n"
+antispam_error: "Έχετε υπερβεί τον μέγιστο αριθμό αποτυχημένων προσπαθειών. Παρακαλώ δοκιμάστε ξανά σε 5 λεπτά.\r\n"

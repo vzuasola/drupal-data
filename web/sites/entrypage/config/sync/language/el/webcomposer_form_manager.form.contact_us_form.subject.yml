@@ -1,0 +1,33 @@
+field_settings:
+  label: Θέμα
+  placeholder: '- Διαλέξτε Θέμα -'
+  choices: "sports|grsupport@dafabet.com|λογαριασμός\r\nsports|grsupport@dafabet.com|Κατάθεση / Ανάληψη\r\nsports|grsupport@dafabet.com|παιχνίδι\r\nsports|grsupport@dafabet.com|Τεχνικά Θέματα\r\nsports|affiliate@dafabet.com|Συνδεδεμένες Σχετικές μήνυμά σας\r\nsports|grsupport@dafabet.com|Γενικές Πληροφορίες\r\nsports-df|df.grsupport@dafabet.com|λογαριασμός\r\nsports-df|df.grsupport@dafabet.com|Κατάθεση / Ανάληψη\r\nsports-df|df.grsupport@dafabet.com|παιχνίδι\r\nsports-df|df.grsupport@dafabet.com|Τεχνικά Θέματα\r\nsports-df|affiliate@dafabet.com|Συνδεδεμένες Σχετικές μήνυμά σας\r\nsports-df|df.grsupport@dafabet.com|Γενικές Πληροφορίες\r\nexchange|grsupport@dafabet.com|λογαριασμός\r\nexchange|grsupport@dafabet.com|Κατάθεση / Ανάληψη\r\nexchange|grsupport@dafabet.com|παιχνίδι\r\nexchange|grsupport@dafabet.com|Τεχνικά Θέματα\r\nexchange|affiliate@dafabet.com|Συνδεδεμένες Σχετικές μήνυμά σας\r\nexchange|grsupport@dafabet.com|Γενικές Πληροφορίες\r\ncasino|grsupport@dafabet.com|λογαριασμός\r\ncasino|grsupport@dafabet.com|Κατάθεση / Ανάληψη\r\ncasino|grsupport@dafabet.com|παιχνίδι\r\ncasino|grsupport@dafabet.com|Τεχνικά Θέματα\r\ncasino|affiliate@dafabet.com|Συνδεδεμένες Σχετικές μήνυμά σας\r\ncasino|grsupport@dafabet.com|Γενικές Πληροφορίες\r\ncasino-gold|grsupport@dafabet.com|λογαριασμός\r\ncasino-gold|grsupport@dafabet.com|Κατάθεση / Ανάληψη\r\ncasino-gold|grsupport@dafabet.com|παιχνίδι\r\ncasino-gold|grsupport@dafabet.com|Τεχνικά Θέματα\r\ncasino-gold|affiliate@dafabet.com|Συνδεδεμένες Σχετικές μήνυμά σας\r\ncasino-gold|grsupport@dafabet.com|Γενικές Πληροφορίες\r\nlive-dealer|grsupport@dafabet.com|λογαριασμός\r\nlive-dealer|grsupport@dafabet.com|Κατάθεση / Ανάληψη\r\nlive-dealer|grsupport@dafabet.com|παιχνίδι\r\nlive-dealer|grsupport@dafabet.com|Τεχνικά Θέματα\r\nlive-dealer|affiliate@dafabet.com|Συνδεδεμένες Σχετικές μήνυμά σας\r\nlive-dealer|grsupport@dafabet.com|Γενικές Πληροφορίες\r\ngames|grsupport@dafabet.com|λογαριασμός\r\ngames|grsupport@dafabet.com|Κατάθεση / Ανάληψη\r\ngames|grsupport@dafabet.com|παιχνίδι\r\ngames|grsupport@dafabet.com|Τεχνικά Θέματα\r\ngames|affiliate@dafabet.com|Συνδεδεμένες Σχετικές μήνυμά σας\r\ngames|grsupport@dafabet.com|Γενικές Πληροφορίες\r\narcade|grsupport@dafabet.com|λογαριασμός\r\narcade|grsupport@dafabet.com|Κατάθεση / Ανάληψη\r\narcade|grsupport@dafabet.com|παιχνίδι\r\narcade|grsupport@dafabet.com|Τεχνικά Θέματα\r\narcade|affiliate@dafabet.com|Συνδεδεμένες Σχετικές μήνυμά σας\r\narcade|grsupport@dafabet.com|Γενικές Πληροφορίες\r\nlottery|grsupport@dafabet.com|λογαριασμός\r\nlottery|grsupport@dafabet.com|Κατάθεση / Ανάληψη\r\nlottery|grsupport@dafabet.com|παιχνίδι\r\nlottery|grsupport@dafabet.com|Τεχνικά Θέματα\r\nlottery|affiliate@dafabet.com|Συνδεδεμένες Σχετικές μήνυμά σας\r\nlottery|grsupport@dafabet.com|Γενικές Πληροφορίες\r\npoker|grsupport@dafabet.com|λογαριασμός\r\npoker|grsupport@dafabet.com|Κατάθεση / Ανάληψη\r\npoker|grsupport@dafabet.com|παιχνίδι\r\npoker|grsupport@dafabet.com|Τεχνικά Θέματα\r\npoker|affiliate@dafabet.com|Συνδεδεμένες Σχετικές μήνυμά σας\r\npoker|grsupport@dafabet.com|Γενικές Πληροφορίες\r\nvirtual-sports|grsupport@dafabet.com|λογαριασμός\r\nvirtual-sports|grsupport@dafabet.com|Κατάθεση / Ανάληψη\r\nvirtual-sports|grsupport@dafabet.com|παιχνίδι\r\nvirtual-sports|grsupport@dafabet.com|Τεχνικά Θέματα\r\nvirtual-sports|affiliate@dafabet.com|Συνδεδεμένες Σχετικές μήνυμά σας\r\nvirtual-sports|grsupport@dafabet.com|Γενικές Πληροφορίες"
+field_validations:
+  required:
+    error_message: "Υποχρεωτικό Πεδίο το Θέμα.\r\n"
+  alpha:
+    error_message: 'Field should be Alphabet characters only'
+  alphanumeric:
+    error_message: 'Field should be alphanumeric'
+  alpha_multi:
+    error_message: 'Value is not a valid multilingual character'
+  numeric:
+    error_message: 'Field should be numeric'
+  no_symbols:
+    error_message: 'Field contains invalid special characters'
+  numeric_symbols:
+    error_message: 'Field contains invalid special characters'
+  email:
+    error_message: 'Field does not contain a valid email address'
+  min_length:
+    error_message: 'Minimum requirement not met'
+  max_length:
+    error_message: 'Maximum requirement not met'
+  regex:
+    error_message: 'This field only accepts specific characters.'
+  valid_date:
+    error_message: 'Date is invalid'
+  invalid_words:
+    error_message: 'Invalid/not allowed characters'
+  valid_languages:
+    error_message: 'This field only accepts specific characters.'

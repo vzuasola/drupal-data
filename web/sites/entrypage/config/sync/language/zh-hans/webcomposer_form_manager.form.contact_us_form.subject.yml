@@ -1,0 +1,33 @@
+field_settings:
+  label: 主题
+  placeholder: '- 选择主题 -'
+  choices: "sports|cnsupport@dafabet.com|账户\r\nsports|cnsupport@dafabet.com|奖金/促销\r\nsports|cnsupport@dafabet.com|存款/取款\r\nsports|cnsupport@dafabet.com|游戏\r\nsports|cnsupport@dafabet.com|技术问题\r\nsports|affiliate@dafabet.com|代理相关咨询\r\nsports|cnsupport@dafabet.com|一般咨询\r\nsports-df|df.cnsupport@dafabet.com|账户\r\nsports-df|df.cnsupport@dafabet.com|奖金/促销\r\nsports-df|df.cnsupport@dafabet.com|存款/取款\r\nsports-df|df.cnsupport@dafabet.com|游戏\r\nsports-df|df.cnsupport@dafabet.com|技术问题\r\nsports-df|affiliate@dafabet.com|代理相关咨询\r\nsports-df|df.cnsupport@dafabet.com|一般咨询\r\nexchange|cnsupport@dafabet.com|账户\r\nexchange|cnsupport@dafabet.com|奖金/促销\r\nexchange|cnsupport@dafabet.com|存款/取款\r\nexchange|cnsupport@dafabet.com|游戏\r\nexchange|cnsupport@dafabet.com|技术问题\r\nexchange|affiliate@dafabet.com|代理相关咨询\r\nexchange|cnsupport@dafabet.com|一般咨询\r\ncasino|support@dafa888.com|账户\r\ncasino|support@dafa888.com|奖金/促销\r\ncasino|support@dafa888.com|存款/取款\r\ncasino|support@dafa888.com|游戏\r\ncasino|support@dafa888.com|技术问题\r\ncasino|affiliate@dafabet.com|代理相关咨询\r\ncasino|support@dafa888.com|一般咨询\r\ncasino-gold|support@dafa888.com|账户\r\ncasino-gold|support@dafa888.com|奖金/促销\r\ncasino-gold|support@dafa888.com|存款/取款\r\ncasino-gold|support@dafa888.com|游戏\r\ncasino-gold|support@dafa888.com|技术问题\r\ncasino-gold|affiliate@dafabet.com|代理相关咨询\r\ncasino-gold|support@dafa888.com|一般咨询\r\nlive-dealer|cnsupport@dafabet.com|账户\r\nlive-dealer|cnsupport@dafabet.com|奖金/促销\r\nlive-dealer|cnsupport@dafabet.com|存款/取款\r\nlive-dealer|cnsupport@dafabet.com|游戏\r\nlive-dealer|cnsupport@dafabet.com|技术问题\r\nlive-dealer|affiliate@dafabet.com|代理相关咨询\r\nlive-dealer|cnsupport@dafabet.com|一般咨询\r\ngames|cnsupport@dafabet.com|账户\r\ngames|cnsupport@dafabet.com|奖金/促销\r\ngames|cnsupport@dafabet.com|存款/取款\r\ngames|cnsupport@dafabet.com|游戏\r\ngames|cnsupport@dafabet.com|技术问题\r\ngames|affiliate@dafabet.com|代理相关咨询\r\ngames|cnsupport@dafabet.com|一般咨询\r\narcade|cnsupport@dafabet.com|账户\r\narcade|cnsupport@dafabet.com|奖金/促销\r\narcade|cnsupport@dafabet.com|存款/取款\r\narcade|cnsupport@dafabet.com|游戏\r\narcade|cnsupport@dafabet.com|技术问题\r\narcade|affiliate@dafabet.com|代理相关咨询\r\narcade|cnsupport@dafabet.com|一般咨询\r\nlottery|cnsupport@dafabet.com|账户\r\nlottery|cnsupport@dafabet.com|奖金/促销\r\nlottery|cnsupport@dafabet.com|存款/取款\r\nlottery|cnsupport@dafabet.com|游戏\r\nlottery|cnsupport@dafabet.com|技术问题\r\nlottery|affiliate@dafabet.com|代理相关咨询\r\nlottery|cnsupport@dafabet.com|一般咨询\r\npoker|support@dafapoker.com|账户\r\npoker|support@dafapoker.com|奖金/促销\r\npoker|support@dafapoker.com|存款/取款\r\npoker|support@dafapoker.com|游戏\r\npoker|support@dafapoker.com|技术问题\r\npoker|affiliate@dafabet.com|代理相关咨询\r\npoker|support@dafapoker.com|一般咨询\r\nvirtual-sports|cnsupport@dafabet.com|账户\r\nvirtual-sports|cnsupport@dafabet.com|奖金/促销\r\nvirtual-sports|cnsupport@dafabet.com|存款/取款\r\nvirtual-sports|cnsupport@dafabet.com|游戏\r\nvirtual-sports|cnsupport@dafabet.com|技术问题\r\nvirtual-sports|affiliate@dafabet.com|代理相关咨询\r\nvirtual-sports|cnsupport@dafabet.com|一般咨询"
+field_validations:
+  required:
+    error_message: "标题为必填项。\r\n"
+  alpha:
+    error_message: 'Field should be Alphabet characters only'
+  alphanumeric:
+    error_message: 'Field should be alphanumeric'
+  alpha_multi:
+    error_message: 'Value is not a valid multilingual character'
+  numeric:
+    error_message: 'Field should be numeric'
+  no_symbols:
+    error_message: 'Field contains invalid special characters'
+  numeric_symbols:
+    error_message: 'Field contains invalid special characters'
+  email:
+    error_message: 'Field does not contain a valid email address'
+  min_length:
+    error_message: 'Minimum requirement not met'
+  max_length:
+    error_message: 'Maximum requirement not met'
+  regex:
+    error_message: 'This field only accepts specific characters.'
+  valid_date:
+    error_message: 'Date is invalid'
+  invalid_words:
+    error_message: 'Invalid/not allowed characters'
+  valid_languages:
+    error_message: 'This field only accepts specific characters.'
