@@ -4,8 +4,11 @@ status: true
 dependencies:
   config:
     - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_banner_image
+    - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_banner_image_post
     - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_banner_link
+    - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_banner_link_post
     - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_banner_link_target
+    - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_banner_link_target_post
     - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_blurb
     - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_blurb_post
     - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_content_position
@@ -43,6 +46,15 @@ content:
     third_party_settings: {  }
     type: image
     region: content
+  field_banner_image_post:
+    weight: 17
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
   field_banner_link:
     weight: 6
     label: above
@@ -55,8 +67,27 @@ content:
     third_party_settings: {  }
     type: link
     region: content
+  field_banner_link_post:
+    weight: 18
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
   field_banner_link_target:
     weight: 7
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_banner_link_target_post:
+    weight: 19
     label: above
     settings: {  }
     third_party_settings: {  }
