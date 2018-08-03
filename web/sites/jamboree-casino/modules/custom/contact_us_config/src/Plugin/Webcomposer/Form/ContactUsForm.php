@@ -27,30 +27,6 @@ class ContactUsForm extends WebcomposerFormBase implements WebcomposerFormInterf
   public function getFields() {
     return [
 
-      'first_name' => [
-        'name' => 'First Name',
-        'type' => 'textfield',
-        'settings' => [
-          'label' => [
-            '#title' => 'First Name Label',
-            '#type' => 'textfield',
-            '#description' => 'The label for the First Name field',
-            '#default_value' => 'First Name',
-          ],
-          'placeholder' => [
-            '#title' => 'First name placeholder label',
-            '#type' => 'textfield',
-            '#description' => 'label for First name field placeholder',
-            '#default_value' => 'Enter First Name',
-          ],
-          'annotation' => [
-            '#title' => 'First Name Annotation text',
-            '#type' => 'textarea',
-            '#description' => 'field annotation that will be displayed on focus',
-          ],
-        ],
-      ],
-
       'last_name' => [
         'name' => 'Last Name',
         'type' => 'textfield',
@@ -69,6 +45,30 @@ class ContactUsForm extends WebcomposerFormBase implements WebcomposerFormInterf
           ],
           'annotation' => [
             '#title' => 'Last Name Annotation text',
+            '#type' => 'textarea',
+            '#description' => 'field annotation that will be displayed on focus',
+          ],
+        ],
+      ],
+
+      'first_name' => [
+        'name' => 'First Name',
+        'type' => 'textfield',
+        'settings' => [
+          'label' => [
+            '#title' => 'First Name Label',
+            '#type' => 'textfield',
+            '#description' => 'The label for the First Name field',
+            '#default_value' => 'First Name',
+          ],
+          'placeholder' => [
+            '#title' => 'First name placeholder label',
+            '#type' => 'textfield',
+            '#description' => 'label for First name field placeholder',
+            '#default_value' => 'Enter First Name',
+          ],
+          'annotation' => [
+            '#title' => 'First Name Annotation text',
             '#type' => 'textarea',
             '#description' => 'field annotation that will be displayed on focus',
           ],
@@ -116,33 +116,6 @@ class ContactUsForm extends WebcomposerFormBase implements WebcomposerFormInterf
             '#title' => 'Email Annotation text',
             '#type' => 'textarea',
             '#description' => 'field annotation that will be displayed on focus',
-          ],
-        ],
-      ],
-
-      'product' => [
-        'name' => 'Product',
-        'type' => 'select',
-        'settings' => [
-          'label' => [
-            '#title' => 'Product Label',
-            '#type' => 'textfield',
-            '#description' => 'The Label for the Product field',
-          ],
-          'placeholder' => [
-            '#title' => 'Product placeholder label',
-            '#type' => 'textfield',
-            '#description' => 'Placeholder value for this textfield',
-            '#default_value' => '- Select -',
-          ],
-          'choices' => [
-            '#title' => 'Product Choices',
-            '#type' => 'textarea',
-            '#description' => 'Provide a pipe separated key value pair.
-                              <small><br>Product key|Product Label
-                              <br />Product key can be used for deeplinking.
-                              <i>ex. /{domain:casino}/en/contact-us[query:({tracking}&product=Casino)]</i></small>',
-            '#default_value' => '',
           ],
         ],
       ],
