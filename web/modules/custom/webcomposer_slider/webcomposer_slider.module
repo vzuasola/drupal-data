@@ -3,21 +3,22 @@
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Cache\Cache;
 
- /**
-  * Form alter for webcomposer_slider section.
+/**
+ * Form alter for webcomposer_slider section.
  */
 function webcomposer_slider_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   $forms = [
-  'webcomposer_slider_entity_add_form',
-  'webcomposer_slider_entity_edit_form'
+    'webcomposer_slider_entity_add_form',
+    'webcomposer_slider_entity_edit_form'
   ];
+
   if (in_array($form_id, $forms)) {
-     $form['#validate'][] = 'webcomposer_slider_validate';
- }
+    $form['#validate'][] = 'webcomposer_slider_validate';
+  }
 }
 
- /**
-  * Form validation for webcomposer_slider scheduler.
+/**
+ * Form validation for webcomposer_slider scheduler.
  */
 function webcomposer_slider_validate(&$form, FormStateInterface $form_state) {
   $publish = $form_state->getValue('field_publish_date');
@@ -27,12 +28,12 @@ function webcomposer_slider_validate(&$form, FormStateInterface $form_state) {
   $unpublishDate = isset($unpublish[0]['value']) ? $unpublish[0]['value']->format('U') :null;
 
   if ($unpublishDate && $unpublishDate < $publishDate) {
-     $form_state->setErrorByName('field_unpublish_date', t('Unpublish date should be greater than the publish date.'));
- }
+    $form_state->setErrorByName('field_unpublish_date', t('Unpublish date should be greater than the publish date.'));
+  }
 }
 
- /**
-  * hook_cron().
+/**
+ * hook_cron().
  */
 function webcomposer_slider_cron() {
   Cache::invalidateTags(["webcomposer_slider_entity_list"]);
