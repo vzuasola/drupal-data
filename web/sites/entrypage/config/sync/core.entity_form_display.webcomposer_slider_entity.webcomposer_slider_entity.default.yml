@@ -4,8 +4,11 @@ status: true
 dependencies:
   config:
     - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_banner_image
+    - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_banner_image_post
     - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_banner_link
+    - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_banner_link_post
     - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_banner_link_target
+    - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_banner_link_target_post
     - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_blurb
     - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_blurb_post
     - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_content_position
@@ -36,7 +39,7 @@ third_party_settings:
         - field_ribbon_label_color
         - field_ribbon_background_color
       parent_name: ''
-      weight: 7
+      weight: 5
       format_type: tab
       format_settings:
         id: ''
@@ -50,7 +53,7 @@ third_party_settings:
         - field_publish_date
         - field_unpublish_date
       parent_name: ''
-      weight: 8
+      weight: 6
       format_type: tab
       format_settings:
         id: ''
@@ -59,35 +62,20 @@ third_party_settings:
         description: ''
         required_fields: true
       label: 'Scheduler Settings'
-    group_blurb:
-      children:
-        - group_pre_login
-        - group_post_login
-      parent_name: ''
-      weight: 6
-      format_type: tab
-      format_settings:
-        label: 'Blurb Settings'
-        formatter: closed
-        description: ''
-        required_fields: true
-        id: ''
-        classes: ''
-      label: 'Blurb Settings'
     group_banner:
       children:
-        - field_banner_image
-        - field_banner_link
-        - field_banner_link_target
+        - group_pre_login
+        - group_post_login_banner_settings
       parent_name: ''
-      weight: 5
+      weight: 4
       format_type: tab
       format_settings:
-        id: ''
-        classes: ''
-        formatter: closed
+        label: 'Banner Settings'
+        formatter: open
         description: ''
         required_fields: true
+        id: ''
+        classes: ''
       label: 'Banner Settings'
     group_unique_name:
       children:
@@ -132,32 +120,39 @@ third_party_settings:
       label: 'Login State'
     group_pre_login:
       children:
+        - field_banner_image
+        - field_banner_link
+        - field_banner_link_target
         - field_blurb
         - field_content_position
-      parent_name: group_blurb
+      parent_name: group_banner
       weight: 20
       format_type: tab
       format_settings:
-        id: ''
-        classes: ''
-        formatter: open
+        label: 'Pre Login Banner Settings'
+        formatter: closed
         description: ''
         required_fields: true
-      label: 'Pre Login'
-    group_post_login:
+        id: ''
+        classes: ''
+      label: 'Pre Login Banner Settings'
+    group_post_login_banner_settings:
       children:
+        - field_banner_image_post
+        - field_banner_link_post
+        - field_banner_link_target_post
         - field_blurb_post
         - field_content_position_post
-      parent_name: group_blurb
-      weight: 22
+      parent_name: group_banner
+      weight: 21
       format_type: tab
       format_settings:
         id: ''
         classes: ''
-        formatter: open
+        formatter: closed
         description: ''
         required_fields: true
-      label: 'Post Login'
+      label: 'Post Login Banner Settings'
 _core:
   default_config_hash: b621MhiBvHrNfQr-lokUrjvuv5EyjHCvwScBGyqAEFM
 id: webcomposer_slider_entity.webcomposer_slider_entity.default
@@ -166,7 +161,15 @@ bundle: webcomposer_slider_entity
 mode: default
 content:
   field_banner_image:
-    weight: 4
+    weight: 21
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_banner_image_post:
+    weight: 23
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -174,7 +177,15 @@ content:
     type: image_image
     region: content
   field_banner_link:
-    weight: 5
+    weight: 22
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_banner_link_post:
+    weight: 24
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -182,13 +193,19 @@ content:
     type: link_default
     region: content
   field_banner_link_target:
-    weight: 6
+    weight: 23
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_banner_link_target_post:
+    weight: 25
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_blurb:
-    weight: 21
+    weight: 24
     settings:
       rows: 5
       placeholder: ''
@@ -196,7 +213,7 @@ content:
     type: text_textarea
     region: content
   field_blurb_post:
-    weight: 21
+    weight: 26
     settings:
       rows: 5
       placeholder: ''
@@ -204,13 +221,13 @@ content:
     type: text_textarea
     region: content
   field_content_position:
-    weight: 22
+    weight: 25
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_content_position_post:
-    weight: 22
+    weight: 27
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -283,9 +300,17 @@ content:
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 9
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden:
-  user_id: true
+  user_id:
+    type: entity_reference_autocomplete
+    weight: 8
+    region: content
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

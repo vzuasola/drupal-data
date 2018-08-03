@@ -11,11 +11,13 @@ id: webcomposer_slider_entity.webcomposer_slider_entity.field_content_position_p
 field_name: field_content_position_post
 entity_type: webcomposer_slider_entity
 bundle: webcomposer_slider_entity
-label: 'Content Position Post'
+label: 'Blurb Content Position Post'
 description: ''
 required: false
 translatable: true
-default_value: {  }
+default_value:
+  -
+    value: right
 default_value_callback: ''
 settings: {  }
 field_type: list_string
