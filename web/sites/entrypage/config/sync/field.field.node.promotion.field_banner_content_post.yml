@@ -11,7 +11,7 @@ id: node.promotion.field_banner_content_post
 field_name: field_banner_content_post
 entity_type: node
 bundle: promotion
-label: 'Banner content Post Login'
+label: 'Post Login Banner content'
 description: ''
 required: false
 translatable: true

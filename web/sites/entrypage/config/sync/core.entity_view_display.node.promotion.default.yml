@@ -7,11 +7,15 @@ dependencies:
     - field.field.node.promotion.field_banner_content
     - field.field.node.promotion.field_banner_content_post
     - field.field.node.promotion.field_banner_link
+    - field.field.node.promotion.field_banner_link_post
     - field.field.node.promotion.field_banner_link_target
+    - field.field.node.promotion.field_banner_link_target_post
+    - field.field.node.promotion.field_body_post
     - field.field.node.promotion.field_hide_countdown
     - field.field.node.promotion.field_hide_promotion
     - field.field.node.promotion.field_hide_right_side_block
     - field.field.node.promotion.field_image
+    - field.field.node.promotion.field_image_post
     - field.field.node.promotion.field_link_target
     - field.field.node.promotion.field_log_in_state
     - field.field.node.promotion.field_mark_as_featured
@@ -80,12 +84,38 @@ content:
     third_party_settings: {  }
     type: link
     region: content
+  field_banner_link_post:
+    weight: 141
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
   field_banner_link_target:
     weight: 105
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
+    region: content
+  field_banner_link_target_post:
+    weight: 140
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_body_post:
+    weight: 139
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
     region: content
   field_full_tile_image:
     weight: 108
@@ -125,6 +155,15 @@ content:
     region: content
   field_image:
     weight: 102
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_image_post:
+    weight: 142
     label: above
     settings:
       image_style: ''

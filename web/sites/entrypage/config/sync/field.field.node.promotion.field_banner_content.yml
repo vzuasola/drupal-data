@@ -13,7 +13,7 @@ id: node.promotion.field_banner_content
 field_name: field_banner_content
 entity_type: node
 bundle: promotion
-label: 'Banner content Pre Login'
+label: 'Pre Login Banner Content'
 description: ''
 required: false
 translatable: true

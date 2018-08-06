@@ -1,19 +1,17 @@
-uuid: ac8d2e18-3aa8-49da-87fe-6f93c92510bc
+uuid: 315037dd-2db6-490c-b2bd-816e37899f35
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.body
+    - field.storage.node.field_body_post
     - node.type.promotion
   module:
     - text
-_core:
-  default_config_hash: 1P2kJGKAIK5uC6TH8zwvMpJsJkUB8g5eR1RU1GF4Bos
-id: node.promotion.body
-field_name: body
+id: node.promotion.field_body_post
+field_name: field_body_post
 entity_type: node
 bundle: promotion
-label: 'Pre Login Blurb Content'
+label: 'Post Login Blurb Content'
 description: ''
 required: false
 translatable: true
