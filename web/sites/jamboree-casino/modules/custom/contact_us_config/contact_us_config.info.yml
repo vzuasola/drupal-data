@@ -1,0 +1,8 @@
+name: Contact Us Configuration
+type: module
+description: All Custom Configuration of Contact Us Page
+core: 8.x
+package: Custom
+
+dependencies:
+  - webcomposer_config_schema
