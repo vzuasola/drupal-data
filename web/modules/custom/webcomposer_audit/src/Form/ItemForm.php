@@ -285,12 +285,19 @@ class ItemForm extends FormBase {
    */
   private function getLineChangesFromEntity($entity) {
     $map = [];
+    $entityType = "";
+
+    if ($entity->getEntityTypeId()) {
+      $entityType = $entity->getEntityTypeId();
+    }
 
     foreach ($entity as $key => $value) {
       if ($value instanceof TypedDataInterface) {
         $map[$value->getName()] = $value->getString();
 
-        if (is_array($value->getValue())) {
+        // checking if the format text area is under custom config
+        if (is_array($value->getValue()) && $entityType === "config") {
+          // mapping for format text area for custom config
           $map[$value->getName()] = $value->getValue()['value'];
         }
       } elseif ($value instanceof EntityInterface) {
