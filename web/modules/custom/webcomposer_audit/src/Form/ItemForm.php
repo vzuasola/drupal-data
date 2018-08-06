@@ -296,7 +296,7 @@ class ItemForm extends FormBase {
         $map[$value->getName()] = $value->getString();
 
         // checking if the format text area is under custom config
-        if ($entityType === "config") {
+        if (is_array($value->getValue()) && $entityType === "config") {
           // mapping for format text area for custom config
           $map[$value->getName()] = $value->getValue()['value'];
         }
