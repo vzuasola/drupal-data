@@ -38,9 +38,30 @@ class JamboreeDownloadConfigForm extends FormBase {
       '#title' => t('Jamboree Configurations'),
     ];
 
+    $this->sectionDownloadFile($form);
     $this->sectionDownloadPage($form);
 
     return $form;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  private function sectionDownloadFile(array &$form) {
+    $form['download'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Download File'),
+    ];
+
+
+    $default_download_file = $this->get('download_file');
+    $form['download']['download_file'] = [
+      '#type' => 'textfield',
+      '#title' => t('Download File URL'),
+      '#default_value' => $default_download_file,
+      '#description' => $this->t('Download File URL Location'),
+      '#translatable' => TRUE,
+    ];
   }
 
   private function sectionDownloadPage(array &$form) {
