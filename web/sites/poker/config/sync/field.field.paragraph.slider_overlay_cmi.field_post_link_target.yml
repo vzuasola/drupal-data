@@ -1,4 +1,4 @@
-uuid: 0000e933-e9e5-4851-a3e9-23aa10ac3b50
+uuid: 4893977e-6775-4651-89e8-81b361809b80
 langcode: en
 status: true
 dependencies:
@@ -15,7 +15,9 @@ label: 'Post Link Target'
 description: ''
 required: false
 translatable: true
-default_value: {  }
+default_value:
+  -
+    value: _self
 default_value_callback: ''
 settings: {  }
 field_type: list_string
