@@ -1,0 +1,21 @@
+uuid: 4b765b1b-6955-4dc5-9dc7-74e1a641b5a1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cta
+    - node.type.casino_game
+  module:
+    - options
+id: node.casino_game.field_cta
+field_name: field_cta
+entity_type: node
+bundle: casino_game
+label: CTA
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

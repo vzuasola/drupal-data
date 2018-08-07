@@ -64,6 +64,18 @@ class WebcomposerSliderV2EntitySettingsForm extends ConfigFormBase {
       '#default_value' => $config->get('slider_pager_position') ? $config->get('slider_pager_position') : 'center',
     ];
 
+    $form['WebcomposerSliderV2Entity_settings']['enable_transition_slider'] = [
+      '#type' => 'select',
+      '#title' => $this->t('Slider 2.0 Blurb Animation'),
+      '#options' => [
+        't-none' => 'none',
+        't-1s' => '.5s',
+        't-2s' => '1s',
+        't-3s' => '2s',
+      ],
+      '#default_value' => $config->get('enable_transition_slider') ? $config->get('enable_transition_slider') : 'none',
+    ];
+
     return parent::buildForm($form, $form_state);
   }
 
@@ -77,6 +89,7 @@ class WebcomposerSliderV2EntitySettingsForm extends ConfigFormBase {
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $keys = [
+      'enable_transition_slider',
       'slider_pager_position',
       'enable_collapsible_slider',
     ];
