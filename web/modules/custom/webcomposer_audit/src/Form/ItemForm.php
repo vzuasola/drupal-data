@@ -287,6 +287,11 @@ class ItemForm extends FormBase {
     $map = [];
     $entityType = "";
 
+    /**
+     * checking if entity is present. this condition is needed for
+     * add and delete of logs with support of custom config and
+     * entity related format text
+     */
     if (!empty($entity) && $entity->getEntityTypeId()) {
       $entityType = $entity->getEntityTypeId();
     }
