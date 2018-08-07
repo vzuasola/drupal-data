@@ -304,13 +304,5 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  user_id:
-    type: entity_reference_autocomplete
-    weight: 8
-    region: content
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-hidden: {  }
+hidden:
+  user_id: true
