@@ -9,6 +9,7 @@ use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Url;
 
+use Drupal\Core\Entity\Entity;
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\TypedData\TypedDataInterface;
 
@@ -292,7 +293,7 @@ class ItemForm extends FormBase {
      * add and delete of logs with support of custom config and
      * entity related format text
      */
-    if (!empty($entity) && $entity->getEntityTypeId()) {
+    if ($entity instanceof Entity) {
       $entityType = $entity->getEntityTypeId();
     }
 
