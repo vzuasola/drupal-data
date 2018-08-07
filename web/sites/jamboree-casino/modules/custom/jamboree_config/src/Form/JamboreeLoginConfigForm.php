@@ -49,29 +49,29 @@ class JamboreeLoginConfigForm extends FormBase {
       '#title' => $this->t('Jamboree Login Form Configuration'),
     ];
 
-    $default_login_button = $this->get('login_button');
-    $form['login_form']['login_button'] = [
+    $default_login_button_main = $this->get('login_button_label_main');
+    $form['login_form']['login_button_label_main'] = [
       '#type' => 'textfield',
-      '#title' => t('Login Button'),
-      '#default_value' => $default_login_button,
-      '#description' => $this->t('Login Button label that triggers login lightbox.'),
+      '#title' => t('Login Button Label Main'),
+      '#default_value' => $default_login_button_main,
+      '#description' => $this->t('Login Button big label that triggers login lightbox.'),
       '#translatable' => TRUE,
     ];
 
-    $default_login_button = $this->get('login_lightbox_title');
-    $form['login_form']['login_lightbox_title'] = [
+    $default_login_button_sub = $this->get('login_button_label_sub');
+    $form['login_form']['login_button_label_sub'] = [
       '#type' => 'textfield',
-      '#title' => t('Login Lightbox Title'),
-      '#default_value' => $default_login_button,
-      '#description' => $this->t('Login Lightbox Title.'),
+      '#title' => t('Login Button Label Sub'),
+      '#default_value' => $default_login_button_sub,
+      '#description' => $this->t('Login Button small label that triggers login lightbox.'),
       '#translatable' => TRUE,
     ];
 
-    $default_login_button = $this->get('login_lightbox_title');
+    $default_login_title = $this->get('login_lightbox_title');
     $form['login_form']['login_lightbox_title'] = [
       '#type' => 'textfield',
       '#title' => t('Login Lightbox Title'),
-      '#default_value' => $default_login_button,
+      '#default_value' => $default_login_title,
       '#description' => $this->t('Login Lightbox Title.'),
       '#translatable' => TRUE,
     ];
