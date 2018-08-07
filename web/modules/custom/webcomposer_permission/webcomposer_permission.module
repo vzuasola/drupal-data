@@ -1,5 +1,4 @@
 <?php
-kint_require();
 /**
  * Implements hook_form_alter().
  */
@@ -8,7 +7,6 @@ function webcomposer_permission_form_alter(&$form, \Drupal\Core\Form\FormStateIn
   $formObject = $form_state->getFormObject();
   if ($formObject instanceof \Drupal\Core\Entity\EntityFormInterface) {
     $entity = $formObject->getEntity();
-
     // Make sure it's a node.
     if ($entity instanceof \Drupal\node\NodeInterface) {
         // hide author fields in nodes
@@ -21,7 +19,6 @@ function webcomposer_permission_form_alter(&$form, \Drupal\Core\Form\FormStateIn
     }
     // Make sure it's a content entity.
     if ($entity instanceof \Drupal\Core\Entity\ContentEntityInterface) {
-
         // hide author field in content entities
         if (isset($form['user_id'])) {
             $form['user_id']['#access'] = FALSE;
