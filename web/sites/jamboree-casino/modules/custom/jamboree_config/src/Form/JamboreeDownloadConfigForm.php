@@ -61,6 +61,7 @@ class JamboreeDownloadConfigForm extends FormBase {
       '#default_value' => $default_download_file,
       '#description' => $this->t('Download File URL Location'),
       '#translatable' => TRUE,
+      '#required' => TRUE,
     ];
   }
 
