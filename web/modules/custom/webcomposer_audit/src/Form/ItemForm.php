@@ -287,7 +287,7 @@ class ItemForm extends FormBase {
     $map = [];
     $entityType = "";
 
-    if ($entity->getEntityTypeId()) {
+    if (!empty($entity) && $entity->getEntityTypeId()) {
       $entityType = $entity->getEntityTypeId();
     }
 
@@ -297,7 +297,7 @@ class ItemForm extends FormBase {
 
         // checking if the format text area is under custom config
         if (is_array($value->getValue()) && $entityType === "config") {
-          // mapping for format text area for custom config
+          // mapping for format text area of custom config
           $map[$value->getName()] = $value->getValue()['value'];
         }
       } elseif ($value instanceof EntityInterface) {
