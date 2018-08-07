@@ -1,0 +1,8 @@
+uuid: c880471b-f640-42f9-a599-3a522dc866fe
+langcode: en
+status: true
+dependencies: {  }
+id: poker-menu
+label: 'Poker Menu'
+description: 'Menu items that will be displayed below Product tabs.'
+locked: false
