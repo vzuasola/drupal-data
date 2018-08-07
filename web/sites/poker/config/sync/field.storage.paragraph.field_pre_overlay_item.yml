@@ -1,16 +1,14 @@
-uuid: fbb7034f-aa12-4cc7-978f-0f2c220af6a9
+uuid: a9f95a0f-871b-4161-af89-64b1171a323a
 langcode: en
 status: true
 dependencies:
   module:
     - paragraphs
     - text
-_core:
-  default_config_hash: tEMZhPzDCUch24d5mlsSUAVIyX4J0HlRkEwtiFHvBiQ
-id: paragraph.field_slideroverlay_blurb
-field_name: field_slideroverlay_blurb
+id: paragraph.field_pre_overlay_item
+field_name: field_pre_overlay_item
 entity_type: paragraph
-type: text_with_summary
+type: text_long
 settings: {  }
 module: text
 locked: false
