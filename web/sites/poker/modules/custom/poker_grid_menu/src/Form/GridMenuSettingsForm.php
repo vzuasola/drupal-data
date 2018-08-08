@@ -40,12 +40,12 @@ class GridMenuSettingsForm extends FormBase {
     $form['file_image_background_image'] = [
       '#type' => 'managed_file',
       '#title' => t('Background Image (Parallax)'),
-      '#description' => t('The recommended upload size is between 1920x300 to 1920x500.<br>
+      '#description' => t('The recommended upload size is between 1920x500 to 1920x600.<br>
         Allowed types: png gif jpg jpeg'),
       '#upload_location' => 'public://',
       '#upload_validators' => [
         'file_validate_extensions' => ['png jpg jpeg gif'],
-        'file_validate_image_resolution' => ['1920x500', '1920x300']
+        'file_validate_image_resolution' => ['1920x600', '1920x500']
       ],
       '#default_value' => $config->get('file_image_background_image'),
       '#required' => TRUE,
