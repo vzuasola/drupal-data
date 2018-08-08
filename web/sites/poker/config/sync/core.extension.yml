@@ -53,6 +53,7 @@ module:
   poker_download_page: 0
   poker_game_offers: 0
   poker_grid_menu: 0
+  poker_vip_page: 0
   quickedit: 0
   rdf: 0
   rest: 0

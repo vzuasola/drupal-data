@@ -1,0 +1,21 @@
+uuid: 8227e4a4-ef04-4f07-8c77-d2a511ed719a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.poker_vip_entity.field_vip_tab_id
+  module:
+    - options
+    - poker_vip_page
+id: poker_vip_entity.poker_vip_entity.field_vip_tab_id
+field_name: field_vip_tab_id
+entity_type: poker_vip_entity
+bundle: poker_vip_entity
+label: 'Main Tab'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

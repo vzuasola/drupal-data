@@ -7,11 +7,9 @@ dependencies:
     - field.field.grid_menu_entity.grid_menu_entity.field_disable
     - field.field.grid_menu_entity.grid_menu_entity.field_grid_title
     - field.field.grid_menu_entity.grid_menu_entity.field_icon
-    - field.field.grid_menu_entity.grid_menu_entity.field_link
     - image.style.thumbnail
   module:
     - image
-    - link
     - poker_grid_menu
     - text
 id: grid_menu_entity.grid_menu_entity.default
@@ -49,14 +47,6 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
-    region: content
-  field_link:
-    weight: 2
-    settings:
-      placeholder_url: ''
-      placeholder_title: ''
-    third_party_settings: {  }
-    type: link_default
     region: content
   langcode:
     type: language_select

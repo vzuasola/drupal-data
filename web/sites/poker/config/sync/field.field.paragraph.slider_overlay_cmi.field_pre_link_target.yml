@@ -1,17 +1,17 @@
-uuid: 4893977e-6775-4651-89e8-81b361809b80
+uuid: 4ca25d9d-0360-4807-8757-94431031ffd0
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_post_link_target
+    - field.storage.paragraph.field_pre_link_target
     - paragraphs.paragraphs_type.slider_overlay_cmi
   module:
     - options
-id: paragraph.slider_overlay_cmi.field_post_link_target
-field_name: field_post_link_target
+id: paragraph.slider_overlay_cmi.field_pre_link_target
+field_name: field_pre_link_target
 entity_type: paragraph
 bundle: slider_overlay_cmi
-label: 'Post Link Target'
+label: 'Pre Link Target'
 description: ''
 required: false
 translatable: true

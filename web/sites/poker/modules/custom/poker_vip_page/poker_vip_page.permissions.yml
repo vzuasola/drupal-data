@@ -1,0 +1,33 @@
+add poker vip entity entities:
+  title: 'Create new Poker vip entity entities'
+
+administer poker vip entity entities:
+  title: 'Administer Poker vip entity entities'
+  description: 'Allow to access the administration form to configure Poker vip entity entities.'
+  restrict access: true
+
+delete poker vip entity entities:
+  title: 'Delete Poker vip entity entities'
+
+edit poker vip entity entities:
+  title: 'Edit Poker vip entity entities'
+
+access poker vip entity overview:
+  title: 'Access the Poker vip entity overview page'
+
+view published poker vip entity entities:
+  title: 'View published Poker vip entity entities'
+
+view unpublished poker vip entity entities:
+  title: 'View unpublished Poker vip entity entities'
+
+view all poker vip entity revisions:
+  title: 'View all Poker vip entity revisions'
+
+revert all poker vip entity revisions:
+  title: 'Revert all Poker vip entity revisions'
+  description: 'Role requires permission <em>view Poker vip entity revisions</em> and <em>edit rights</em> for poker vip entity entities in question or <em>administer poker vip entity entities</em>.'
+
+delete all poker vip entity revisions:
+  title: 'Delete all revisions'
+  description: 'Role requires permission to <em>view Poker vip entity revisions</em> and <em>delete rights</em> for poker vip entity entities in question or <em>administer poker vip entity entities</em>.'
