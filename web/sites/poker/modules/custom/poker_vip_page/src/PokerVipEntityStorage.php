@@ -41,7 +41,8 @@ class PokerVipEntityStorage extends SqlContentEntityStorage implements PokerVipE
    * {@inheritdoc}
    */
   public function countDefaultLanguageRevisions(PokerVipEntityInterface $entity) {
-    return $this->database->query('SELECT COUNT(*) FROM {poker_vip_entity_field_revision} WHERE id = :id AND default_langcode = 1', [':id' => $entity->id()])
+    return $this->database->query('SELECT COUNT(*) FROM {poker_vip_entity_field_revision}
+      WHERE id = :id AND default_langcode = 1', [':id' => $entity->id()])
       ->fetchField();
   }
 
