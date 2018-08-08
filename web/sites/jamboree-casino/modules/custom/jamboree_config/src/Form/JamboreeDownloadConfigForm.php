@@ -38,10 +38,37 @@ class JamboreeDownloadConfigForm extends FormBase {
       '#title' => t('Jamboree Configurations'),
     ];
 
+    $this->sectionFloatingBanner($form);
     $this->sectionDownloadFile($form);
     $this->sectionDownloadPage($form);
 
     return $form;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  private function sectionFloatingBanner(array &$form) {
+    $form['floating_banner'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Floating Banner'),
+    ];
+
+    $form['floating_banner']['floating_banner_label'] = [
+      '#type' => 'textfield',
+      '#title' => t('Floating Banner Label'),
+      '#default_value' => $this->get('floating_banner_label'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['floating_banner']['floating_banner_link'] = [
+      '#type' => 'textfield',
+      '#title' => t('Floating Banner Link'),
+      '#default_value' => $this->get('floating_banner_link'),
+      '#description' => $this->t('Download Page URL'),
+      '#translatable' => TRUE,
+    ];
+
   }
 
   /**
