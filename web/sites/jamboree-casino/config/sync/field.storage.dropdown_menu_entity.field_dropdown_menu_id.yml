@@ -1,0 +1,21 @@
+uuid: 190abdf8-e221-4ec5-bba5-07b7b01b3efa
+langcode: en
+status: true
+dependencies:
+  module:
+    - jamboree_dropdown_menu
+id: dropdown_menu_entity.field_dropdown_menu_id
+field_name: field_dropdown_menu_id
+entity_type: dropdown_menu_entity
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
