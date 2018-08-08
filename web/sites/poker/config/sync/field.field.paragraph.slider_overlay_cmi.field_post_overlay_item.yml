@@ -1,0 +1,24 @@
+uuid: b92e5b4c-f408-4cdf-b746-3e42b4207fb4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_post_overlay_item
+    - paragraphs.paragraphs_type.slider_overlay_cmi
+  module:
+    - text
+id: paragraph.slider_overlay_cmi.field_post_overlay_item
+field_name: field_post_overlay_item
+entity_type: paragraph
+bundle: slider_overlay_cmi
+label: 'Post Overlay Item'
+description: 'Recommended image size for overlay icons are <strong>35x35px<strong>'
+required: false
+translatable: true
+default_value:
+  -
+    value: "<div class=\"step-indicator\"><span class=\"step-text\">STEP</span> <span class=\"step-number\">1</span></div>\r\n\r\n<div class=\"overlay-image\"><img alt=\"\" data-entity-type=\"\" data-entity-uuid=\"\" height=\"35\" src=\"\" width=\"35\" /></div>\r\n\r\n<div class=\"overlay-text\">Default Text</div>\r\n"
+    format: basic_html
+default_value_callback: ''
+settings: {  }
+field_type: text_long
