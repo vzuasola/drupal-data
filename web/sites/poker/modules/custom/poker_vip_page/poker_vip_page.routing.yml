@@ -1,0 +1,7 @@
+poker_vip_page.admin_settings:
+  path: 'admin/config/poker/vip-page'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Poker VIP Page Configuration'
+  requirements:
+    _permission: 'administer site configuration'
