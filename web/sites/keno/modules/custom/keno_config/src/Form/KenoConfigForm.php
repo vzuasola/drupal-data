@@ -38,42 +38,6 @@ class KenoConfigForm extends ConfigFormBase {
       '#title' => t('Keno Configurations'),
     ];
 
-    /*$form['keno_gen_config'] = [
-      '#type' => 'details',
-      '#title' => t('Keno General Configurations'),
-      '#group' => 'advanced',
-    ];
-
-    $form['keno_gen_config']['keno_background'] = [
-      '#type' => 'managed_file',
-      '#title' => $this->t('Background'),
-      '#default_value' => $config->get('keno_background'),
-      '#upload_location' => 'public://',
-      '#upload_validators' => [
-        'file_validate_extensions' => ['gif png jpg jpeg'],
-      ],
-    ];*/
-
-    /*$form['trust_element'] = [
-      '#type' => 'details',
-      '#title' => t('Trust Element'),
-      '#group' => 'advanced',
-    ];
-
-    $form['trust_element']['trust_element_title'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Title'),
-      '#default_value' => $config->get('trust_element_title'),
-    ];
-
-    $data = $config->get('trust_element_content');
-    $form['trust_element']['trust_element_content'] = [
-      '#type' => 'text_format',
-      '#title' => $this->t('Content'),
-      '#default_value' => $data['value'],
-      '#format' => $data['format'],
-    ];*/
-
     $form['lobby_tiles'] = [
       '#type' => 'details',
       '#title' => t('Lobby Tiles'),
@@ -147,19 +111,6 @@ class KenoConfigForm extends ConfigFormBase {
       '#description' => $this->t('For sorting Basic Pages in a Page List go to '. $pageListSortLink->toString() . '.'),
     ];
 
-    /*$form['balance_keno'] = [
-      '#type' => 'details',
-      '#title' => t('Balance Keno for SC and RMB'),
-      '#group' => 'advanced',
-    ];
-
-    $form['balance_keno']['balance_mapping_keno'] = [
-      '#type' => 'textarea',
-      '#title' => $this->t('Product Balance Mapping'),
-      '#description' => $this->t('Provide a product mapping that will show up below the username in SC and RMB'),
-      '#default_value' => $config->get('balance_mapping_keno'),
-    ];
-*/
     return parent::buildForm($form, $form_state);
   }
 
@@ -168,8 +119,6 @@ class KenoConfigForm extends ConfigFormBase {
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $kenoConfig = [
-      //'trust_element_title',
-      //'trust_element_content',
       'lobby_tiles_alignment',
       'keno_background',
       'basic_page_background',
