@@ -1,12 +1,12 @@
-uuid: e421d6a2-abd6-4bb7-b9d4-a91191349b09
+uuid: fe2ad0a1-7f36-4644-9298-911c83ed5e6b
 langcode: en
 status: true
 dependencies:
   module:
     - options
     - paragraphs
-id: paragraph.field_post_link_target
-field_name: field_post_link_target
+id: paragraph.field_pre_link_target
+field_name: field_pre_link_target
 entity_type: paragraph
 type: list_string
 settings:

@@ -1,14 +1,14 @@
-uuid: 0dc4fead-5bf2-42a9-8e11-f52c0b8fea31
+uuid: 0e8a4992-cbda-461a-ad34-da5616e27e6d
 langcode: en
 status: true
 dependencies:
   module:
     - paragraphs
     - text
-id: paragraph.field_post_overlay_blurb
-field_name: field_post_overlay_blurb
+id: paragraph.field_post_overlay_item
+field_name: field_post_overlay_item
 entity_type: paragraph
-type: text_with_summary
+type: text_long
 settings: {  }
 module: text
 locked: false
