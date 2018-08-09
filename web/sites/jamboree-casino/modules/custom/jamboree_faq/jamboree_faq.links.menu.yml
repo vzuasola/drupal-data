@@ -1,0 +1,18 @@
+jamboree_faq.list:
+  title: 'Jamboree FAQ Configuration'
+  description: 'List Jamboree FAQ Entities'
+  parent: system.admin_config
+  route_name: jamboree_faq.admin_settings
+
+# Jamboree FAQ Entity menu items definition
+entity.jamboree_f_a_q_entity.collection:
+  title: 'Jamboree FAQ Entity list'
+  route_name: entity.jamboree_f_a_q_entity.collection
+  description: 'List Jamboree FAQ Entity entities'
+  parent: jamboree_faq.list
+
+jamboree_f_a_q_entity.admin.structure.settings:
+  title: Jamboree FAQ Entity settings
+  description: 'Configure Jamboree FAQ Entity entities'
+  route_name: jamboree_f_a_q_entity.settings
+  parent: jamboree_faq.list
