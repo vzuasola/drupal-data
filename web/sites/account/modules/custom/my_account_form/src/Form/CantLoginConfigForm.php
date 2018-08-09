@@ -220,7 +220,7 @@ class CantLoginConfigForm extends FormBase {
     $content = $this->get('desktop_reset_expired_message');
     $form['cant_login_reset_password_config']['desktop_reset_expired_message'] = [
       '#type' => 'text_format',
-      '#title' => $this->t('Mobile - Success Message'),
+      '#title' => $this->t('Desktop - Expired Message'),
       '#default_value' => $content['value'],
       '#format' => $content['format'],
       '#required' => TRUE,
@@ -231,7 +231,7 @@ class CantLoginConfigForm extends FormBase {
     $content = $this->get('mobile_reset_expired_message');
     $form['cant_login_reset_password_config']['mobile_reset_expired_message'] = [
       '#type' => 'text_format',
-      '#title' => $this->t('Mobile - Success Message'),
+      '#title' => $this->t('Mobile - Expired Message'),
       '#default_value' => $content['value'],
       '#format' => $content['format'],
       '#required' => TRUE,
