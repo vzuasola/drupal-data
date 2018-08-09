@@ -1,22 +1,22 @@
 vip_page_tab__active_tab: edit-second-tab
 page_title: 'VIP Page'
-first_tab_title: ''
+first_tab_title: 'VIP Club'
 first_tab_id: vip_club
 file_image_first_tab_icon:
-  - '38'
+  - '53'
 file_image_first_tab_icon_hover:
-  - '39'
+  - '54'
 first_tab_content:
   value: ''
   format: basic_html
 value: null
 format: null
-second_tab_title: ''
+second_tab_title: 'Prosperity VIP Club'
 second_tab_id: vip_prosperity_club
 file_image_second_tab_icon:
-  - '40'
+  - '55'
 file_image_second_tab_icon_hover:
-  - '41'
+  - '56'
 second_tab_content:
   value: ''
   format: basic_html
