@@ -82,6 +82,7 @@ class VipPageConfiguration extends FormBase {
       '#description' => $this->t('Add Tab Title to VIP Page first tab'),
       '#default_value' => $config->get('first_tab_title'),
       '#translatable' => TRUE,
+      '#required' => TRUE,
     );
 
     $form['first_tab']['first_tab_id'] = array(
@@ -95,7 +96,7 @@ class VipPageConfiguration extends FormBase {
 
     $form['first_tab']['file_image_first_tab_icon'] = [
       '#type' => 'managed_file',
-      '#title' => t('Tab Highlighted Icon'),
+      '#title' => t('Tab Default Icon'),
       '#description' => t('Upload a file, allowed extensions: jpg, jpeg, png, gif'),
       '#upload_location' => 'public://',
       '#upload_validators' => [
@@ -103,7 +104,6 @@ class VipPageConfiguration extends FormBase {
       ],
       '#default_value' => $config->get('file_image_first_tab_icon'),
       '#required' => TRUE,
-      '#translatable' => TRUE,
     ];
 
     $form['first_tab']['file_image_first_tab_icon_hover'] = [
@@ -116,7 +116,6 @@ class VipPageConfiguration extends FormBase {
       ],
       '#default_value' => $config->get('file_image_first_tab_icon_hover'),
       '#required' => TRUE,
-      '#translatable' => TRUE,
     ];
 
     $firstTabContent = $config->get('first_tab_content');
@@ -144,6 +143,7 @@ class VipPageConfiguration extends FormBase {
       '#description' => $this->t('Add Tab Title to VIP Page second tab'),
       '#default_value' => $config->get('second_tab_title'),
       '#translatable' => TRUE,
+      '#required' => TRUE,
     );
 
     $form['second_tab']['second_tab_id'] = array(
@@ -157,7 +157,7 @@ class VipPageConfiguration extends FormBase {
 
     $form['second_tab']['file_image_second_tab_icon'] = [
       '#type' => 'managed_file',
-      '#title' => t('Tab Highlighted Icon'),
+      '#title' => t('Tab Default Icon'),
       '#description' => t('Upload a file, allowed extensions: jpg, jpeg, png, gif'),
       '#upload_location' => 'public://',
       '#upload_validators' => [
@@ -165,7 +165,6 @@ class VipPageConfiguration extends FormBase {
       ],
       '#default_value' => $config->get('file_image_second_tab_icon'),
       '#required' => TRUE,
-      '#translatable' => TRUE,
     ];
 
     $form['second_tab']['file_image_second_tab_icon_hover'] = [
@@ -178,7 +177,6 @@ class VipPageConfiguration extends FormBase {
       ],
       '#default_value' => $config->get('file_image_second_tab_icon_hover'),
       '#required' => TRUE,
-      '#translatable' => TRUE,
     ];
 
     $secondTabContent = $config->get('second_tab_content');
