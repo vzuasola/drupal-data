@@ -1,0 +1,23 @@
+uuid: dfe75f4a-56e5-437e-8e06-5e5cd6c8b3d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.webcomposer_slider_entity.field_banner_link_post
+  module:
+    - link
+    - webcomposer_slider
+id: webcomposer_slider_entity.webcomposer_slider_entity.field_banner_link_post
+field_name: field_banner_link_post
+entity_type: webcomposer_slider_entity
+bundle: webcomposer_slider_entity
+label: 'Banner Link Post'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+field_type: link

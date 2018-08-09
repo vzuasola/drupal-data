@@ -1,0 +1,19 @@
+uuid: 549c70a8-fa72-4c6f-b228-5de275dbc032
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - webcomposer_slider
+id: webcomposer_slider_entity.field_banner_link_post
+field_name: field_banner_link_post
+entity_type: webcomposer_slider_entity
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

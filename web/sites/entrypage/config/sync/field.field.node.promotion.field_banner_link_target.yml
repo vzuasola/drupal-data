@@ -13,7 +13,7 @@ id: node.promotion.field_banner_link_target
 field_name: field_banner_link_target
 entity_type: node
 bundle: promotion
-label: 'Banner Link Target'
+label: 'Pre Login Banner Link Target'
 description: ''
 required: false
 translatable: true

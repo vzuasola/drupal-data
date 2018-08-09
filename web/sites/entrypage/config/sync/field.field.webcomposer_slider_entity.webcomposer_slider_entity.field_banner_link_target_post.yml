@@ -1,23 +1,23 @@
-uuid: 585706c5-203d-465b-9d71-0fba3a07363e
+uuid: 93a3b641-5b4f-4174-807e-419b57137383
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.webcomposer_slider_entity.field_content_position
+    - field.storage.webcomposer_slider_entity.field_banner_link_target_post
   module:
     - options
     - webcomposer_slider
-id: webcomposer_slider_entity.webcomposer_slider_entity.field_content_position
-field_name: field_content_position
+id: webcomposer_slider_entity.webcomposer_slider_entity.field_banner_link_target_post
+field_name: field_banner_link_target_post
 entity_type: webcomposer_slider_entity
 bundle: webcomposer_slider_entity
-label: 'Blurb Content Position'
+label: 'Banner Link Target Post'
 description: ''
 required: false
 translatable: true
 default_value:
   -
-    value: right
+    value: _top
 default_value_callback: ''
 settings: {  }
 field_type: list_string

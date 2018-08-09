@@ -1,27 +1,25 @@
-uuid: 03cc6521-6435-4cbb-89aa-4bc5bdd93b00
+uuid: f55c4b98-f0cc-49ed-8a27-c6fc228e47da
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_image
-    - node.type.promotion
+    - field.storage.webcomposer_slider_entity.field_banner_image_post
   module:
     - content_translation
     - image
+    - webcomposer_slider
 third_party_settings:
   content_translation:
     translation_sync:
       file: file
       alt: '0'
       title: '0'
-_core:
-  default_config_hash: n93fBTNSs6iS9Zpxc-Euo8aH6XxJg2hOYB0Vr3Il0I8
-id: node.promotion.field_image
-field_name: field_image
-entity_type: node
-bundle: promotion
-label: 'Pre Login Banner Image'
-description: 'The Image upload size is 1920x500 px.'
+id: webcomposer_slider_entity.webcomposer_slider_entity.field_banner_image_post
+field_name: field_banner_image_post
+entity_type: webcomposer_slider_entity
+bundle: webcomposer_slider_entity
+label: 'Banner Image Post'
+description: ''
 required: false
 translatable: true
 default_value: {  }

@@ -1,19 +1,17 @@
-uuid: ebac2757-08d3-477c-b9f8-f8ccaaeda5f2
+uuid: d2751c79-fe83-4c41-81bd-ed0225b7de7e
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_banner_content
+    - field.storage.node.field_banner_content_post
     - node.type.promotion
   module:
     - text
-_core:
-  default_config_hash: Qu163b9UtnNsetfpC25-4pkP_-ZO_ARl6O6S5PMyIoo
-id: node.promotion.field_banner_content
-field_name: field_banner_content
+id: node.promotion.field_banner_content_post
+field_name: field_banner_content_post
 entity_type: node
 bundle: promotion
-label: 'Pre Login Banner Content'
+label: 'Post Login Banner content'
 description: ''
 required: false
 translatable: true

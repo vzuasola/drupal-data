@@ -1,9 +1,9 @@
-uuid: 03cc6521-6435-4cbb-89aa-4bc5bdd93b00
+uuid: 9bc98b63-5114-43cc-85e3-6ef0f9dacdbd
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_image
+    - field.storage.node.field_image_post
     - node.type.promotion
   module:
     - content_translation
@@ -14,14 +14,12 @@ third_party_settings:
       file: file
       alt: '0'
       title: '0'
-_core:
-  default_config_hash: n93fBTNSs6iS9Zpxc-Euo8aH6XxJg2hOYB0Vr3Il0I8
-id: node.promotion.field_image
-field_name: field_image
+id: node.promotion.field_image_post
+field_name: field_image_post
 entity_type: node
 bundle: promotion
-label: 'Pre Login Banner Image'
-description: 'The Image upload size is 1920x500 px.'
+label: 'Post Login Banner Image'
+description: ''
 required: false
 translatable: true
 default_value: {  }
