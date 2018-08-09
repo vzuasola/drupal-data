@@ -1,0 +1,32 @@
+uuid: ff726e31-e0ea-4120-af18-1229cfc3a002
+langcode: en
+status: true
+dependencies:
+  module:
+    - serialization
+    - user
+    - webform
+id: entity.webform_submission
+plugin_id: 'entity:webform_submission'
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+    supported_auth:
+      - cookie
+  POST:
+    supported_formats:
+      - json
+    supported_auth:
+      - cookie
+  DELETE:
+    supported_formats:
+      - json
+    supported_auth:
+      - cookie
+  PATCH:
+    supported_formats:
+      - json
+    supported_auth:
+      - cookie
