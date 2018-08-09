@@ -1,0 +1,30 @@
+uuid: 6d037fe8-5659-498b-b3fe-6fef8d03bec2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.jamboree_f_a_q_entity.field_faq_category
+    - taxonomy.vocabulary.faq_category
+  module:
+    - jamboree_faq
+id: jamboree_f_a_q_entity.jamboree_f_a_q_entity.field_faq_category
+field_name: field_faq_category
+entity_type: jamboree_f_a_q_entity
+bundle: jamboree_f_a_q_entity
+label: 'FAQ Category'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      faq_category: faq_category
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

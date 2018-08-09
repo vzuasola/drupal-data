@@ -8,9 +8,11 @@ dependencies:
     - content_translation
 third_party_settings:
   content_translation:
-    enabled: true
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
 id: node.basic_page_type_2
 target_entity_type_id: node
 target_bundle: basic_page_type_2
 default_langcode: site_default
-language_alterable: true
+language_alterable: false

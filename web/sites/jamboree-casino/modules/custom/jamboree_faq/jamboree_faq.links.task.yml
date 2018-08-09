@@ -1,0 +1,22 @@
+# Jamboree FAQ Entity routing definition
+jamboree_f_a_q_entity.settings_tab:
+  route_name: jamboree_f_a_q_entity.settings
+  title: 'Settings'
+  base_route: jamboree_f_a_q_entity.settings
+
+entity.jamboree_f_a_q_entity.canonical:
+  route_name: entity.jamboree_f_a_q_entity.canonical
+  base_route: entity.jamboree_f_a_q_entity.canonical
+  title: 'View'
+
+entity.jamboree_f_a_q_entity.edit_form:
+  route_name: entity.jamboree_f_a_q_entity.edit_form
+  base_route: entity.jamboree_f_a_q_entity.canonical
+  title: 'Edit'
+
+entity.jamboree_f_a_q_entity.delete_form:
+  route_name:  entity.jamboree_f_a_q_entity.delete_form
+  base_route:  entity.jamboree_f_a_q_entity.canonical
+  title: Delete
+  weight: 10
+

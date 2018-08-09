@@ -1,18 +1,17 @@
-uuid: 18615b3d-a86f-4c76-985e-001d75a3d9b5
+uuid: c70aae3e-bfe4-4b41-9ce7-77c9b96d54be
 langcode: en
 status: true
 dependencies:
-  config:
-    - paragraphs.paragraphs_type.dropdown_menu_item
   module:
     - content_translation
+    - jamboree_faq
 third_party_settings:
   content_translation:
-    enabled: false
+    enabled: true
     bundle_settings:
       untranslatable_fields_hide: '0'
-id: paragraph.dropdown_menu_item
-target_entity_type_id: paragraph
-target_bundle: dropdown_menu_item
+id: jamboree_f_a_q_entity.jamboree_f_a_q_entity
+target_entity_type_id: jamboree_f_a_q_entity
+target_bundle: jamboree_f_a_q_entity
 default_langcode: site_default
 language_alterable: true
