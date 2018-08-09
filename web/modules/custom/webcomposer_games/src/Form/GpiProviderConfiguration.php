@@ -62,7 +62,14 @@ class GpiProviderConfiguration extends ConfigFormBase {
         '#description' => $this->t("Language mapping for {$value}."),
         '#default_value' => $config->get("{$key}_language_mapping")
       ];
-
+      $form[$key]["{$key}_country"] = [
+        '#type' => 'textarea',
+        '#title' => t('Country'),
+        '#size' => 500,
+        '#description' => $this->t("Define the Unsupported Country code for {$value} games.
+           "),
+        '#default_value' => $config->get("{$key}_country")
+       ];
 
       $form[$key]["{$key}_extra_params"] = array(
         '#type' => 'textarea',
@@ -130,6 +137,7 @@ class GpiProviderConfiguration extends ConfigFormBase {
       $providers[] = "{$key}_currency";
       $providers[] = "{$key}_language_mapping";
       $providers[] = "{$key}_extra_params";
+      $providers[] = "{$key}_country";
     }
     $keys = [
       'gpi_game_url',

@@ -48,6 +48,14 @@ class GoldenRaceProviderConfiguration extends ConfigFormBase {
           <strong>en|en-us</strong>'),
       '#default_value' => $config->get('languages')
     ];
+    $form["country"] = [
+        '#type' => 'textarea',
+        '#title' => t('Country'),
+        '#size' => 500,
+        '#description' => $this->t('Define the Unsupported Country code for Golden race Lottery games.
+           '),
+        '#default_value' => $config->get("country")
+       ];
 
     $form['currency'] = array(
       '#type' => 'textarea',
