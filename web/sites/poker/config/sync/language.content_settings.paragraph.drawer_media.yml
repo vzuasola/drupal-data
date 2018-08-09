@@ -1,0 +1,18 @@
+uuid: 7633e097-2c5a-40a9-ba6e-7b35a24fe811
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.drawer_media
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+_core:
+  default_config_hash: 4N_EhXyTLqb1T2pn-d9b7V2_d28AH_KRtAp5Em-bGKQ
+id: paragraph.drawer_media
+target_entity_type_id: paragraph
+target_bundle: drawer_media
+default_langcode: site_default
+language_alterable: true

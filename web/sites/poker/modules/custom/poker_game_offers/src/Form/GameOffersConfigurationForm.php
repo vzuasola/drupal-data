@@ -105,5 +105,13 @@ class GameOffersConfigurationForm extends FormBase {
       '#translatable' => TRUE,
       '#required' => TRUE
     ];
+
+    $form['common']['info_label'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Game Info Label'),
+      '#default_value' => $this->get('info_label'),
+      '#translatable' => TRUE,
+      '#required' => TRUE
+    ];
   }
 }
