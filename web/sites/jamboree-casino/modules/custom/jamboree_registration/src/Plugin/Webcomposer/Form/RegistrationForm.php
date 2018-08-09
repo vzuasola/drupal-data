@@ -309,6 +309,10 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
           ],
         ],
       ],
+      'ip' => [
+        'name' => 'IP address',
+        'type' => 'hidden',
+      ],
       'username' => [
         'name' => 'Username',
         'type' => 'hidden',

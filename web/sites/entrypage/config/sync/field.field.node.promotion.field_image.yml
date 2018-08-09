@@ -20,7 +20,7 @@ id: node.promotion.field_image
 field_name: field_image
 entity_type: node
 bundle: promotion
-label: 'Banner Image'
+label: 'Pre Login Banner Image'
 description: 'The Image upload size is 1920x500 px.'
 required: false
 translatable: true

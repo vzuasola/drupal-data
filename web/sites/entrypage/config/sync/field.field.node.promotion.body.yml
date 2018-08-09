@@ -13,7 +13,7 @@ id: node.promotion.body
 field_name: body
 entity_type: node
 bundle: promotion
-label: Body
+label: 'Pre Login Blurb Content'
 description: ''
 required: false
 translatable: true
