@@ -97,7 +97,7 @@ class HowToPlayConfiguration extends FormBase {
 
     $form['first_tab']['file_image_first_tab_icon'] = [
       '#type' => 'managed_file',
-      '#title' => t('Tab Highlighted Icon'),
+      '#title' => t('Tab Default Icon'),
       '#description' => t('Upload a file, allowed extensions: jpg, jpeg, png, gif'),
       '#upload_location' => 'public://',
       '#upload_validators' => [
@@ -158,7 +158,7 @@ class HowToPlayConfiguration extends FormBase {
 
     $form['second_tab']['file_image_second_tab_icon'] = [
       '#type' => 'managed_file',
-      '#title' => t('Tab Highlighted Icon'),
+      '#title' => t('Tab Default Icon'),
       '#description' => t('Upload a file, allowed extensions: jpg, jpeg, png, gif'),
       '#upload_location' => 'public://',
       '#upload_validators' => [
@@ -219,7 +219,7 @@ class HowToPlayConfiguration extends FormBase {
 
     $form['third_tab']['file_image_third_tab_icon'] = [
       '#type' => 'managed_file',
-      '#title' => t('Tab Highlighted Icon'),
+      '#title' => t('Tab Default Icon'),
       '#description' => t('Upload a file, allowed extensions: jpg, jpeg, png, gif'),
       '#upload_location' => 'public://',
       '#upload_validators' => [
