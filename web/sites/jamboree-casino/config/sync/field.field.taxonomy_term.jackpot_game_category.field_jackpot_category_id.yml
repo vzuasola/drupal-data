@@ -1,0 +1,19 @@
+uuid: ad7faeec-ae3d-4249-b201-010f2d0bf121
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_jackpot_category_id
+    - taxonomy.vocabulary.jackpot_game_category
+id: taxonomy_term.jackpot_game_category.field_jackpot_category_id
+field_name: field_jackpot_category_id
+entity_type: taxonomy_term
+bundle: jackpot_game_category
+label: 'Jackpot Category ID'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -20,3 +20,5 @@ mobile_game_category: 1
 mobile_game_category_message: 'Term @term already exists in vocabulary @vocabulary.'
 game_tag: 1
 game_tag_message: 'Term @term already exists in vocabulary @vocabulary.'
+faq_category: 0
+faq_category_message: 'Term @term already exists in vocabulary @vocabulary.'

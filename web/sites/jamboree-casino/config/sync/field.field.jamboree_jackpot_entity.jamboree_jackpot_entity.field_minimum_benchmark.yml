@@ -1,0 +1,20 @@
+uuid: 87458113-7300-4c2b-80fd-68497079239b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.jamboree_jackpot_entity.field_minimum_benchmark
+  module:
+    - jamboree_jackpot
+id: jamboree_jackpot_entity.jamboree_jackpot_entity.field_minimum_benchmark
+field_name: field_minimum_benchmark
+entity_type: jamboree_jackpot_entity
+bundle: jamboree_jackpot_entity
+label: 'Minimum Benchmark'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

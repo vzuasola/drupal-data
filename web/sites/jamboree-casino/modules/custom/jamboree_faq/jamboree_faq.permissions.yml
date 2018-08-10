@@ -1,0 +1,22 @@
+add jamboree faq entity entities:
+  title: 'Create new Jamboree FAQ Entity entities'
+
+administer jamboree faq entity entities:
+  title: 'Administer Jamboree FAQ Entity entities'
+  description: 'Allow to access the administration form to configure Jamboree FAQ Entity entities.'
+  restrict access: true
+
+delete jamboree faq entity entities:
+  title: 'Delete Jamboree FAQ Entity entities'
+
+edit jamboree faq entity entities:
+  title: 'Edit Jamboree FAQ Entity entities'
+
+access jamboree faq entity overview:
+  title: 'Access the Jamboree FAQ Entity overview page'
+
+view published jamboree faq entity entities:
+  title: 'View published Jamboree FAQ Entity entities'
+
+view unpublished jamboree faq entity entities:
+  title: 'View unpublished Jamboree FAQ Entity entities'
