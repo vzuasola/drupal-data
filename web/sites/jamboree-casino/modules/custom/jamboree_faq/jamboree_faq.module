@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains jamboree_faq.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function jamboree_faq_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the jamboree_faq module.
+    case 'help.page.jamboree_faq':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Jamboree FAQ') . '</p>';
+      return $output;
+
+    default:
+  }
+}

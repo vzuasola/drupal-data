@@ -98,10 +98,26 @@ class GameOffersConfigurationForm extends FormBase {
       '#required' => TRUE
     ];
 
+    $form['common']['download_link'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Download Button Link'),
+      '#default_value' => $this->get('download_link'),
+      '#translatable' => TRUE,
+      '#required' => TRUE
+    ];
+
     $form['common']['play_label'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Play Button Label'),
       '#default_value' => $this->get('play_label'),
+      '#translatable' => TRUE,
+      '#required' => TRUE
+    ];
+
+    $form['common']['info_label'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Game Info Label'),
+      '#default_value' => $this->get('info_label'),
       '#translatable' => TRUE,
       '#required' => TRUE
     ];

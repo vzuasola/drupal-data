@@ -1,0 +1,23 @@
+uuid: 8f87cbda-b73f-411c-9b48-03578e6105e8
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_reference_revisions
+    - paragraphs
+    - webcomposer_drawer
+_core:
+  default_config_hash: Nt5UuqG2OyBXvvUS3JDzs4XQqCIqmk16d0WirVL05GI
+id: drawer_entity.field_drawer_media
+field_name: field_drawer_media
+entity_type: drawer_entity
+type: entity_reference_revisions
+settings:
+  target_type: paragraph
+module: entity_reference_revisions
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

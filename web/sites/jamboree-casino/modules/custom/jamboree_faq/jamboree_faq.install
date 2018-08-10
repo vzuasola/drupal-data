@@ -1,0 +1,32 @@
+<?php
+
+/**
+ * Implements hook_uninstall
+ */
+function webcomposer_slider_uninstall() {
+  $keys = [
+    'core.base_field_override.jamboree_f_a_q_entity.jamboree_f_a_q_entity.metatag.yml',
+    'core.base_field_override.taxonomy_term.faq_category.changed.yml',
+    'core.base_field_override.taxonomy_term.faq_category.description.yml',
+    'core.base_field_override.taxonomy_term.faq_category.metatag.yml',
+    'core.base_field_override.taxonomy_term.faq_category.name.yml',
+    'core.base_field_override.taxonomy_term.faq_category.path.yml',
+    'core.entity_form_display.jamboree_f_a_q_entity.jamboree_f_a_q_entity.default.yml',
+    'core.entity_view_display.jamboree_f_a_q_entity.jamboree_f_a_q_entity.default.yml',
+    'field.field.jamboree_f_a_q_entity.jamboree_f_a_q_entity.field_answers.yml',
+    'field.field.jamboree_f_a_q_entity.jamboree_f_a_q_entity.field_faq_category.yml',
+    'field.field.jamboree_f_a_q_entity.jamboree_f_a_q_entity.field_question.yml',
+    'field.storage.jamboree_f_a_q_entity.field_answers.yml',
+    'field.storage.jamboree_f_a_q_entity.field_faq_category.yml',
+    'field.storage.jamboree_f_a_q_entity.field_question.yml',
+    'language.content_settings.jamboree_f_a_q_entity.jamboree_f_a_q_entity.yml',
+    'language.content_settings.taxonomy_term.faq_category.yml',
+    'taxonomy.vocabulary.faq_category.yml',
+    'views.view.faq_category.yml',
+    'views.view.jamboree_faq.yml',
+  ];
+
+  foreach ($keys as $key) {
+    \Drupal::configFactory()->getEditable($key)->delete();
+  }
+}

@@ -1,0 +1,20 @@
+uuid: 9e5882ac-c98d-49ee-9cfe-031360e6d355
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.jamboree_f_a_q_entity.field_question
+  module:
+    - jamboree_faq
+id: jamboree_f_a_q_entity.jamboree_f_a_q_entity.field_question
+field_name: field_question
+entity_type: jamboree_f_a_q_entity
+bundle: jamboree_f_a_q_entity
+label: Question
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

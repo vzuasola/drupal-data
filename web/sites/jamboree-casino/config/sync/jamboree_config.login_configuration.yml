@@ -14,6 +14,6 @@ login_password_required: 'Password required.'
 login_pt_error_messages: ''
 login_lightbox_title: Login
 login_forgot_password_link: ''
-login_registration_link: '/registration'
+login_registration_link: /registration
 login_button_label_main: LOGIN
 login_button_label_sub: SUB
