@@ -97,6 +97,15 @@ class OpusProviderConfiguration extends ConfigFormBase {
       '#default_value' => $config->get('currency')
     );
 
+   $form['opus_gen_config']['country'] = array(
+        '#type' => 'textarea',
+        '#title' => t('Country'),
+        '#size' => 500,
+        '#description' => $this->t("Define the Unsupported Country code for Opus Keno games.
+           "),
+        '#default_value' => $config->get('country')
+       );
+
     $form['opus_gen_config']['opus_unsupported_currencies_title'] = array(
       '#type' => 'textfield',
       '#title' => t('Unsupported Currency title'),
@@ -140,7 +149,7 @@ class OpusProviderConfiguration extends ConfigFormBase {
       'opus_game_url',
       'opus_game_free_play_url',
       'opus_alternative_game_url',
-      'languages','currency',
+      'languages','currency','country',
       'opus_unsupported_currencies_title',
       'opus_unsupported_currencies_message',
       'opus_unsupported_currencies_button',
