@@ -1,0 +1,18 @@
+uuid: 934df9a5-8f67-4bba-93a2-d70dfc8f0308
+langcode: en
+status: true
+dependencies:
+  module:
+    - jamboree_jackpot
+id: jamboree_jackpot_entity.jamboree_jackpot_entity.metatag
+field_name: metatag
+entity_type: jamboree_jackpot_entity
+bundle: jamboree_jackpot_entity
+label: Metatags
+description: 'The metatags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map
