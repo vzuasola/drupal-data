@@ -1,0 +1,7 @@
+jamboree_jackpot.admin_settings:
+  path: 'admin/config/jamboree-casino/jackpot'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Jamboree Jackpot'
+  requirements:
+    _permission: 'administer site configuration'

@@ -1,0 +1,22 @@
+add jamboree jackpot entity entities:
+  title: 'Create new Jamboree jackpot entity entities'
+
+administer jamboree jackpot entity entities:
+  title: 'Administer Jamboree jackpot entity entities'
+  description: 'Allow to access the administration form to configure Jamboree jackpot entity entities.'
+  restrict access: true
+
+delete jamboree jackpot entity entities:
+  title: 'Delete Jamboree jackpot entity entities'
+
+edit jamboree jackpot entity entities:
+  title: 'Edit Jamboree jackpot entity entities'
+
+access jamboree jackpot entity overview:
+  title: 'Access the Jamboree jackpot entity overview page'
+
+view published jamboree jackpot entity entities:
+  title: 'View published Jamboree jackpot entity entities'
+
+view unpublished jamboree jackpot entity entities:
+  title: 'View unpublished Jamboree jackpot entity entities'
