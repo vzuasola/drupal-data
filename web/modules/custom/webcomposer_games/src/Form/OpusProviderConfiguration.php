@@ -31,6 +31,7 @@ class OpusProviderConfiguration extends ConfigFormBase {
 
     $content = $config->get('opus_game_loader_content');
     $message = $config->get('opus_unsupported_currencies_message');
+
     $form['advanced'] = [
       '#type' => 'vertical_tabs',
       '#title' => t('Opus Configurations'),
@@ -88,23 +89,23 @@ class OpusProviderConfiguration extends ConfigFormBase {
       '#default_value' => $config->get('languages')
     );
 
-   $form['opus_gen_config']['currency'] = array(
+    $form['opus_gen_config']['currency'] = array(
       '#type' => 'textarea',
       '#title' => t('Currency'),
       '#size' => 500,
       '#description' => $this->t('Define the curency for opus games.
-         '),
+          '),
       '#default_value' => $config->get('currency')
     );
 
-   $form['opus_gen_config']['country'] = array(
-        '#type' => 'textarea',
-        '#title' => t('Country'),
-        '#size' => 500,
-        '#description' => $this->t("Define the Unsupported Country code for Opus Keno games.
-           "),
-        '#default_value' => $config->get('country')
-       );
+    $form['opus_gen_config']['country'] = array(
+      '#type' => 'textarea',
+      '#title' => t('Country'),
+      '#size' => 500,
+      '#description' => $this->t("Define the Unsupported Country code for Opus Keno games.
+          "),
+      '#default_value' => $config->get('country')
+    );
 
     $form['opus_gen_config']['opus_unsupported_currencies_title'] = array(
       '#type' => 'textfield',
@@ -119,12 +120,14 @@ class OpusProviderConfiguration extends ConfigFormBase {
       '#default_value' => $message['value'],
       '#format' => $message['format'],
     );
+
     $form['opus_gen_config']['opus_unsupported_currencies_button'] = array(
       '#type' => 'textfield',
       '#title' => t('Lottey Unsupported Currency button'),
       '#description' => $this->t('Defines the Unsupported Currency LightBox Ok button'),
       '#default_value' => $config->get('opus_unsupported_currencies_button')
     );
+
     $form['actions'] = ['#type' => 'actions'];
 
     $form['actions']['submit'] = [
@@ -149,7 +152,9 @@ class OpusProviderConfiguration extends ConfigFormBase {
       'opus_game_url',
       'opus_game_free_play_url',
       'opus_alternative_game_url',
-      'languages','currency','country',
+      'languages',
+      'currency',
+      'country',
       'opus_unsupported_currencies_title',
       'opus_unsupported_currencies_message',
       'opus_unsupported_currencies_button',

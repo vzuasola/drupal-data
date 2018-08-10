@@ -10,18 +10,19 @@ use Drupal\Core\Form\FormStateInterface;
  */
 class GpiProviderConfiguration extends ConfigFormBase {
   /**
-   * @inheritdoc
-   */
-  /**
    * Gpi Game Providers definitions
    */
-    const GPI_GAME_PROVIDERS = [
-        'gpi_keno' => 'GPI Keno',
-        'gpi_pk10' => 'GPI PK10',
-        'gpi_thai_lottey' => 'GPI Thai Lottey',
-        'gpi_live_dealer' => 'GPI Live Dealer',
-        'gpi_ladder' => 'GPI Ladder'
-    ];
+  const GPI_GAME_PROVIDERS = [
+    'gpi_keno' => 'GPI Keno',
+    'gpi_pk10' => 'GPI PK10',
+    'gpi_thai_lottey' => 'GPI Thai Lottey',
+    'gpi_live_dealer' => 'GPI Live Dealer',
+    'gpi_ladder' => 'GPI Ladder'
+  ];
+
+  /**
+   * @inheritdoc
+   */
   public function getFormId() {
     return 'gpi_provider_settings_form';
   }
@@ -131,19 +132,21 @@ class GpiProviderConfiguration extends ConfigFormBase {
    *   Object describing the current state of the form.
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-
     $providers = [];
+
     foreach (self::GPI_GAME_PROVIDERS as $key => $value) {
       $providers[] = "{$key}_currency";
       $providers[] = "{$key}_language_mapping";
       $providers[] = "{$key}_extra_params";
       $providers[] = "{$key}_country";
     }
+
     $keys = [
       'gpi_game_url',
       'gpi_lottery_keno_version_no',
       'gpi_vendor_id',
     ];
+
     $result = array_merge($providers, $keys);
 
     foreach ($result as $key) {
