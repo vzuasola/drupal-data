@@ -38,7 +38,6 @@ class JamboreeSitemapConfigForm extends FormBase {
     ];
 
     $this->sectionSitemap($form);
-    $this->sectionCustomLinks($form);
 
     return $form;
   }
