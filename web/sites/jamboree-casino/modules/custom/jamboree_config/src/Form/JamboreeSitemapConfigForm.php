@@ -51,20 +51,12 @@ class JamboreeSitemapConfigForm extends FormBase {
       '#title' => $this->t('Sitemap'),
     ];
 
-
-    $default_sitemap_enable = $this->get('enable_sitemap');
-    $form['sitemap']['enable_sitemap'] = [
-      '#type' => 'checkbox',
-      '#title' => $this->t('Enable Sitemap'),
-      '#default_value' => $default_sitemap_enable,
-      '#description' => 'When checked, sitemap page will be accessible',
-    ];
-
     $default_sitemap_title = $this->get('sitemap_title');
     $form['sitemap']['sitemap_title'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Title'),
       '#default_value' => $default_sitemap_title,
+      '#translatable' => TRUE,
     ];
 
   }
