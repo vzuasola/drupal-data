@@ -1,0 +1,24 @@
+uuid: a6082680-100b-4b78-a95a-65474a25c433
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.jamboree_jackpot_entity.field_enable_jackpot_game
+  module:
+    - jamboree_jackpot
+id: jamboree_jackpot_entity.jamboree_jackpot_entity.field_enable_jackpot_game
+field_name: field_enable_jackpot_game
+entity_type: jamboree_jackpot_entity
+bundle: jamboree_jackpot_entity
+label: 'Enable Jackpot Game'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
