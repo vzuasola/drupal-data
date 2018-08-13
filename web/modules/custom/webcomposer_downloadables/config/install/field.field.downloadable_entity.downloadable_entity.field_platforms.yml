@@ -1,0 +1,21 @@
+uuid: 519b8923-3210-4e2d-a109-4ebd3286cd5e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.downloadable_entity.field_platforms
+  module:
+    - options
+    - webcomposer_downloadables
+id: downloadable_entity.downloadable_entity.field_platforms
+field_name: field_platforms
+entity_type: downloadable_entity
+bundle: downloadable_entity
+label: Platforms
+description: "Select which platform this downloadable asset will automatically trigger a download request. <br/>\r\nSelect none to trigger to all platform."
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
