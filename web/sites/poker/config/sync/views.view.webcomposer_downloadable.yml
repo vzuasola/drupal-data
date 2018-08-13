@@ -9,7 +9,7 @@ dependencies:
     - user
     - webcomposer_downloadables
 _core:
-  default_config_hash: cSawzGNnZejqSxY908EFLfp5lTiwx0E3rX4zdzfaYIU
+  default_config_hash: h7__BBwQW1XMr_-FQO4uvnfqWhjjnNcFH-kbB4twCOQ
 id: webcomposer_downloadable
 label: 'WebComposer Downloadable'
 module: views
