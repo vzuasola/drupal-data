@@ -63,6 +63,30 @@ class GameOffersConfigurationForm extends FormBase {
       '#translatable' => TRUE,
       '#required' => TRUE
     ];
+
+    $form['casino']['file_image_casino_icon'] = [
+      '#type' => 'managed_file',
+      '#title' => t('Tab Default Icon'),
+      '#description' => t('Upload a file, allowed extensions: jpg, jpeg, png, gif'),
+      '#upload_location' => 'public://',
+      '#upload_validators' => [
+        'file_validate_extensions' => ['png jpg jpeg gif'],
+      ],
+      '#default_value' => $this->get('file_image_casino_icon'),
+      '#required' => TRUE,
+    ];
+
+    $form['casino']['file_image_casino_icon_hover'] = [
+      '#type' => 'managed_file',
+      '#title' => t('Tab Hover/Active Icon'),
+      '#description' => t('Upload a file, allowed extensions: jpg, jpeg, png, gif'),
+      '#upload_location' => 'public://',
+      '#upload_validators' => [
+        'file_validate_extensions' => ['png jpg jpeg gif'],
+      ],
+      '#default_value' => $this->get('file_image_casino_icon_hover'),
+      '#required' => TRUE,
+    ];
   }
 
   private function pokerGames(&$form) {
@@ -79,6 +103,30 @@ class GameOffersConfigurationForm extends FormBase {
       '#default_value' => $this->get('poker_label'),
       '#translatable' => TRUE,
       '#required' => TRUE
+    ];
+
+    $form['poker']['file_image_poker_icon'] = [
+      '#type' => 'managed_file',
+      '#title' => t('Tab Default Icon'),
+      '#description' => t('Upload a file, allowed extensions: jpg, jpeg, png, gif'),
+      '#upload_location' => 'public://',
+      '#upload_validators' => [
+        'file_validate_extensions' => ['png jpg jpeg gif'],
+      ],
+      '#default_value' => $this->get('file_image_poker_icon'),
+      '#required' => TRUE,
+    ];
+
+    $form['poker']['file_image_poker_icon_hover'] = [
+      '#type' => 'managed_file',
+      '#title' => t('Tab Hover/Active Icon'),
+      '#description' => t('Upload a file, allowed extensions: jpg, jpeg, png, gif'),
+      '#upload_location' => 'public://',
+      '#upload_validators' => [
+        'file_validate_extensions' => ['png jpg jpeg gif'],
+      ],
+      '#default_value' => $this->get('file_image_poker_icon_hover'),
+      '#required' => TRUE,
     ];
   }
 
