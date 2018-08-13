@@ -68,5 +68,19 @@ class JamboreeFAQForm extends FormBase {
       '#format' => $d['format'],
       '#translatable' => TRUE,
     ];
+
+    $form['faq']['search_placeholder'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Search Field Placeholder'),
+      '#default_value' => $this->get('search_placeholder'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['faq']['error_message'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('No Result Message'),
+      '#default_value' => $this->get('error_message'),
+      '#translatable' => TRUE,
+    ];
   }
 }
