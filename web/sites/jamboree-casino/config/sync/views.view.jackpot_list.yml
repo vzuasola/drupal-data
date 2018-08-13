@@ -346,7 +346,7 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: admin/structure/jamboree_jackpot_games_entity
+      path: admin/structure/jamboree_jackpot_entity
       fields:
         field_enable_jackpot_game:
           id: field_enable_jackpot_game

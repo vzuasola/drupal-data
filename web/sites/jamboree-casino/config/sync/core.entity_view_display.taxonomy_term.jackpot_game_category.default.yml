@@ -5,11 +5,15 @@ dependencies:
   config:
     - field.field.taxonomy_term.jackpot_game_category.field_enable
     - field.field.taxonomy_term.jackpot_game_category.field_jackpot_category_id
+    - field.field.taxonomy_term.jackpot_game_category.field_jackpot_summary_text
     - field.field.taxonomy_term.jackpot_game_category.field_meta_tag
+    - field.field.taxonomy_term.jackpot_game_category.field_open_in
+    - field.field.taxonomy_term.jackpot_game_category.field_summary_url
     - field.field.taxonomy_term.jackpot_game_category.field_url
     - taxonomy.vocabulary.jackpot_game_category
   module:
     - metatag
+    - options
     - text
 id: taxonomy_term.jackpot_game_category.default
 targetEntityType: taxonomy_term
@@ -41,12 +45,35 @@ content:
     third_party_settings: {  }
     type: string
     region: content
+  field_jackpot_summary_text:
+    weight: 6
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
   field_meta_tag:
     weight: 1
     label: above
     settings: {  }
     third_party_settings: {  }
     type: metatag_empty_formatter
+    region: content
+  field_open_in:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_summary_url:
+    weight: 7
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
     region: content
   field_url:
     weight: 4

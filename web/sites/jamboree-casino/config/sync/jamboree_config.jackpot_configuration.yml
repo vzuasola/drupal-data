@@ -1,0 +1,10 @@
+advanced__active_tab: edit-jackpot-page-config
+casino_hits_benchmark_content: '1000'
+jackpot_xml_url_value: test
+jackpot_ticker_redirect_url_value: /jackpot
+jackpot_graph_main_title_value: ''
+jackpot_amount_title_value: ''
+jackpot_latest_hits_title_value: ''
+jackpot_summary_button: 'Jackpot Summary'
+jackpot_summary_button_link: /jackpot
+jackpot_display_button: 'Display All'

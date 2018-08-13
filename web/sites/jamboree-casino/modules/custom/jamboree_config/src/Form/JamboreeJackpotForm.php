@@ -128,7 +128,6 @@ class JamboreeJackpotForm extends FormBase {
       '#default_value' => $this->get('jackpot_latest_hits_title_value'),
       '#translatable' => TRUE,
     ];
-
   }
 
   /**
