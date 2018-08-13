@@ -1,0 +1,19 @@
+uuid: 15cb6c9b-175d-4828-a878-47e311cf1540
+langcode: ja
+status: true
+dependencies:
+  module:
+    - jamboree_big_winner
+    - text
+id: jamboree_big_winner_entity.field_body
+field_name: field_body
+entity_type: jamboree_big_winner_entity
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

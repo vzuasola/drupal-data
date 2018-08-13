@@ -3,7 +3,7 @@
 /**
  * Implements hook_uninstall
  */
-function webcomposer_slider_uninstall() {
+function jamboree_faq_uninstall() {
   $keys = [
     'core.base_field_override.jamboree_f_a_q_entity.jamboree_f_a_q_entity.metatag.yml',
     'core.base_field_override.taxonomy_term.faq_category.changed.yml',

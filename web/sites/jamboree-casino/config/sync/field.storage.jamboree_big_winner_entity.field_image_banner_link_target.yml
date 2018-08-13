@@ -1,0 +1,27 @@
+uuid: 8b5f42be-c994-4d50-b03b-d0feafefe083
+langcode: ja
+status: true
+dependencies:
+  module:
+    - jamboree_big_winner
+    - options
+id: jamboree_big_winner_entity.field_image_banner_link_target
+field_name: field_image_banner_link_target
+entity_type: jamboree_big_winner_entity
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: _target
+      label: 'New Tab'
+    -
+      value: _self
+      label: 'Same Window'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
