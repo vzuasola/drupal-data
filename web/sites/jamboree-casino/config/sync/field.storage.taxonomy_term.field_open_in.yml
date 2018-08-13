@@ -1,0 +1,27 @@
+uuid: 7a5345c5-22fc-4e3c-87bc-6f243865197c
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - taxonomy
+id: taxonomy_term.field_open_in
+field_name: field_open_in
+entity_type: taxonomy_term
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: _target
+      label: 'New Tab'
+    -
+      value: _self
+      label: 'Same Window'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,23 @@
+uuid: 28532c70-b1a0-4396-8d0a-68d0be3f32a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_open_in
+    - taxonomy.vocabulary.jackpot_game_category
+  module:
+    - options
+id: taxonomy_term.jackpot_game_category.field_open_in
+field_name: field_open_in
+entity_type: taxonomy_term
+bundle: jackpot_game_category
+label: 'Open In'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: _self
+default_value_callback: ''
+settings: {  }
+field_type: list_string
