@@ -17,6 +17,7 @@ module:
   config_translation: 0
   contact: 0
   contact_storage: 0
+  contact_us_config: 0
   content_translation: 0
   contextual: 0
   ctools: 0
@@ -40,6 +41,7 @@ module:
   jamboree_desktop_games: 0
   jamboree_dropdown_menu: 0
   jamboree_faq: 0
+  jamboree_jackpot: 0
   jamboree_mobile_blocks: 0
   jamboree_mobile_games: 0
   jamboree_news_and_updates: 0
@@ -80,6 +82,7 @@ module:
   webcomposer_editor: 0
   webcomposer_form_manager: 0
   webcomposer_games: 0
+  webcomposer_mailer: 0
   webcomposer_partner: 0
   webcomposer_rest_extra: 0
   webcomposer_slider_v2: 0
