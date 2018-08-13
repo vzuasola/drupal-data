@@ -189,12 +189,13 @@ third_party_settings:
       weight: 9
       format_type: tab
       format_settings:
-        id: ''
-        classes: ''
+        label: 'Body Content'
         formatter: open
         description: ''
         required_fields: true
-      label: 'Blurb Content'
+        id: ''
+        classes: ''
+      label: 'Body Content'
     group_pre_login_blurb:
       children:
         - body
@@ -202,12 +203,13 @@ third_party_settings:
       weight: 20
       format_type: tab
       format_settings:
-        id: ''
-        classes: ''
+        label: 'Pre Login Body'
         formatter: closed
         description: ''
         required_fields: true
-      label: 'Pre Login Blurb'
+        id: ''
+        classes: ''
+      label: 'Pre Login Body'
     group_post_login_blurb:
       children:
         - field_body_post
@@ -215,12 +217,13 @@ third_party_settings:
       weight: 21
       format_type: tab
       format_settings:
-        id: ''
-        classes: ''
+        label: 'Post Login Body'
         formatter: closed
         description: ''
         required_fields: true
-      label: 'Post Login Blurb'
+        id: ''
+        classes: ''
+      label: 'Post Login Body'
 _core:
   default_config_hash: REpuDcJgDsDpuU0keFA4HDluTQxvT7wSEcUqidMSEcM
 id: node.promotion.default

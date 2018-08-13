@@ -11,7 +11,7 @@ id: node.promotion.field_body_post
 field_name: field_body_post
 entity_type: node
 bundle: promotion
-label: 'Post Login Blurb Content'
+label: 'Post Login Body Content'
 description: ''
 required: false
 translatable: true
