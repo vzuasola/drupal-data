@@ -1,0 +1,21 @@
+uuid: 61ee18df-f168-4363-8818-ebcfdfbd7c02
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_summary_url
+    - taxonomy.vocabulary.jackpot_game_category
+id: taxonomy_term.jackpot_game_category.field_summary_url
+field_name: field_summary_url
+entity_type: taxonomy_term
+bundle: jackpot_game_category
+label: 'Summary URL'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: /jackpot
+default_value_callback: ''
+settings: {  }
+field_type: string
