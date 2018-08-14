@@ -1,0 +1,47 @@
+<?php
+
+/**
+ * Implements hook_uninstall
+ */
+function jamboree_jackpot_uninstall() {
+  $keys = [
+    'core.base_field_override.jamboree_jackpot_entity.jamboree_jackpot_entity.metatag.yml',
+    'core.entity_form_display.jamboree_jackpot_entity.jamboree_jackpot_entity.default.yml',
+    'core.entity_form_display.taxonomy_term.jackpot_game_category.default.yml',
+    'core.entity_view_display.jamboree_jackpot_entity.jamboree_jackpot_entity.default.yml',
+    'core.entity_view_display.taxonomy_term.jackpot_game_category.default.yml',
+    'field.field.jamboree_jackpot_entity.jamboree_jackpot_entity.field_enable_jackpot_game.yml',
+    'field.field.jamboree_jackpot_entity.jamboree_jackpot_entity.field_hits_benchmark.yml',
+    'field.field.jamboree_jackpot_entity.jamboree_jackpot_entity.field_jackpot_category.yml',
+    'field.field.jamboree_jackpot_entity.jamboree_jackpot_entity.field_jackpot_game_code.yml',
+    'field.field.jamboree_jackpot_entity.jamboree_jackpot_entity.field_jackpot_game_thumbnail.yml',
+    'field.field.jamboree_jackpot_entity.jamboree_jackpot_entity.field_jackpot_game_title.yml',
+    'field.field.jamboree_jackpot_entity.jamboree_jackpot_entity.field_minimum_benchmark.yml',
+    'field.field.taxonomy_term.jackpot_game_category.field_enable.yml',
+    'field.field.taxonomy_term.jackpot_game_category.field_jackpot_category_id.yml',
+    'field.field.taxonomy_term.jackpot_game_category.field_jackpot_summary_text.yml',
+    'field.field.taxonomy_term.jackpot_game_category.field_meta_tag.yml',
+    'field.field.taxonomy_term.jackpot_game_category.field_open_in.yml',
+    'field.field.taxonomy_term.jackpot_game_category.field_summary_url.yml',
+    'field.field.taxonomy_term.jackpot_game_category.field_url.yml',
+    'field.storage.jamboree_jackpot_entity.field_enable_jackpot_game.yml',
+    'field.storage.jamboree_jackpot_entity.field_hits_benchmark.yml',
+    'field.storage.jamboree_jackpot_entity.field_jackpot_category.yml',
+    'field.storage.jamboree_jackpot_entity.field_jackpot_game_code.yml',
+    'field.storage.jamboree_jackpot_entity.field_jackpot_game_thumbnail.yml',
+    'field.storage.jamboree_jackpot_entity.field_jackpot_game_title.yml',
+    'field.storage.jamboree_jackpot_entity.field_minimum_benchmark.yml',
+    'field.storage.taxonomy_term.field_jackpot_category_id.yml',
+    'field.storage.taxonomy_term.field_jackpot_summary_text.yml',
+    'jamboree_config.jackpot_configuration.yml',
+    'language.content_settings.jamboree_jackpot_entity.jamboree_jackpot_entity.yml',
+    'language.content_settings.taxonomy_term.jackpot_game_category.yml',
+    'taxonomy.vocabulary.jackpot_game_category.yml',
+    'views.view.jackpot_category.yml',
+    'views.view.jackpot_list.yml',
+  ];
+
+  foreach ($keys as $key) {
+    \Drupal::configFactory()->getEditable($key)->delete();
+  }
+}
