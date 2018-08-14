@@ -1,6 +1,5 @@
 field_settings:
-  label: 'Date of Birth'
-  date-format: MM/DD/YYYY
+  label: Birthdate
 field_validations:
   required:
     enable: 0
