@@ -128,6 +128,28 @@ class JamboreeJackpotForm extends FormBase {
       '#default_value' => $this->get('jackpot_latest_hits_title_value'),
       '#translatable' => TRUE,
     ];
+
+    $form['jackpot_lobby_custom_block'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Jackpot Lobby Page Custom Block'),
+      '#group' => 'advanced',
+    ];
+
+    $form['jackpot_lobby_custom_block']['jackpot_custom_block_title'] = [
+      '#type' => 'textfield',
+      '#title' => t('Enter Title for Jackpot Lobby Custom Block).'),
+      '#default_value' => $this->get('jackpot_custom_block_title'),
+      '#translatable' => TRUE,
+    ];
+
+    $default_jackpot_content = $this->get('jackpot_custom_block_content');
+    $form['jackpot_lobby_custom_block']['jackpot_custom_block_content'] = [
+      '#type' => 'text_format',
+      '#title' => t('Enter Content for Jackpot Lobby Custom Block).'),
+      '#default_value' => $default_jackpot_content['value'],
+      '#format' => $default_jackpot_content['format'],
+      '#translatable' => TRUE,
+    ];
   }
 
   /**
