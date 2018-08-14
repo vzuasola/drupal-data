@@ -1,0 +1,21 @@
+uuid: e4b6d02b-deea-4eeb-87d9-cd51ffa2ba58
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_display_all
+    - taxonomy.vocabulary.jackpot_game_category
+id: taxonomy_term.jackpot_game_category.field_display_all
+field_name: field_display_all
+entity_type: taxonomy_term
+bundle: jackpot_game_category
+label: 'Display All'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 'View All'
+default_value_callback: ''
+settings: {  }
+field_type: string
