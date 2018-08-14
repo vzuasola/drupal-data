@@ -23,6 +23,9 @@ settings:
     -
       value: ios
       label: iOS
+    -
+      value: linux
+      label: Linux
   allowed_values_function: ''
 module: options
 locked: false
