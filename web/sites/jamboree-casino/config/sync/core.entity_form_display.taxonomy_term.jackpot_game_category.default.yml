@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.taxonomy_term.jackpot_game_category.field_display_all
     - field.field.taxonomy_term.jackpot_game_category.field_enable
     - field.field.taxonomy_term.jackpot_game_category.field_jackpot_category_id
     - field.field.taxonomy_term.jackpot_game_category.field_jackpot_summary_text
@@ -27,6 +28,14 @@ content:
       placeholder: ''
       rows: 5
     third_party_settings: {  }
+  field_display_all:
+    weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_enable:
     weight: 0
     settings:
@@ -43,7 +52,7 @@ content:
     type: string_textfield
     region: content
   field_jackpot_summary_text:
-    weight: 11
+    weight: 8
     settings:
       size: 60
       placeholder: ''
@@ -51,19 +60,19 @@ content:
     type: string_textfield
     region: content
   field_meta_tag:
-    weight: 8
+    weight: 10
     settings: {  }
     third_party_settings: {  }
     type: metatag_firehose
     region: content
   field_open_in:
-    weight: 10
+    weight: 7
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_summary_url:
-    weight: 12
+    weight: 9
     settings:
       size: 60
       placeholder: ''
@@ -94,7 +103,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 9
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }

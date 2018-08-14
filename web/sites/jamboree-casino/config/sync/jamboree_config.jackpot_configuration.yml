@@ -1,4 +1,4 @@
-advanced__active_tab: edit-jackpot-xml-url
+advanced__active_tab: edit-jackpot-lobby-custom-block
 casino_hits_benchmark_content: '1000'
 jackpot_xml_url_value: 'https://tickers.playtech.com/jackpots/new_jackpotxml.php?currency=usd&info=2&casino=zipang'
 jackpot_ticker_redirect_url_value: /jackpot
@@ -8,3 +8,9 @@ jackpot_latest_hits_title_value: ''
 jackpot_summary_button: 'Jackpot Summary'
 jackpot_summary_button_link: /jackpot
 jackpot_display_button: 'Display All'
+jackpot_custom_block_title: 'Test Custom Block Title'
+jackpot_custom_block_content:
+  value: "<p>Test Custom Block Content</p>\r\n"
+  format: basic_html
+value: null
+format: null
