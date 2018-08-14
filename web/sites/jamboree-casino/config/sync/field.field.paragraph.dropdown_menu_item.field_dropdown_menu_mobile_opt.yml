@@ -15,7 +15,7 @@ entity_type: paragraph
 bundle: dropdown_menu_item
 label: 'Mobile Menu Link Options'
 description: ''
-required: false
+required: true
 translatable: false
 default_value:
   -
