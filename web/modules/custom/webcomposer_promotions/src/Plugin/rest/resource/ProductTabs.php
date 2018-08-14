@@ -92,9 +92,8 @@ class ProductTabs extends ResourceBase {
    */
   public function get() {
     $build = new CacheableMetadata();
-    $build->setCacheTags([
-      'taxonomy_term_list',
-    ]);
+    $build->setCacheTags(['taxonomy_term_list']);
+    $build->setCacheContexts(['url.query_args']);
 
     $state = $this->currentRequest->query->get('state');
     $type = $this->currentRequest->query->get('type');
