@@ -5,7 +5,9 @@ dependencies:
   config:
     - field.field.downloadable_entity.downloadable_entity.field_downloadable_file_link
     - field.field.downloadable_entity.downloadable_entity.field_include_in_page
+    - field.field.downloadable_entity.downloadable_entity.field_platforms
   module:
+    - options
     - webcomposer_downloadables
 id: downloadable_entity.downloadable_entity.default
 targetEntityType: downloadable_entity
@@ -25,6 +27,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: basic_string
+    region: content
+  field_platforms:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
   name:
     label: above

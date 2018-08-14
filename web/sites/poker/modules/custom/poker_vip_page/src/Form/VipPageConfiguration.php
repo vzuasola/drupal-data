@@ -71,6 +71,13 @@ class VipPageConfiguration extends FormBase {
       '#group' => 'vip_page_tab'
     );
 
+    $form['first_tab']['first_tab_enable'] = array(
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable First Tab'),
+      '#description' => $this->t('Enable VIP Page first tab'),
+      '#default_value' => $this->get('first_tab_enable'),
+    );
+
     $form['first_tab']['first_tab_title'] = array(
       '#type' => 'textfield',
       '#title' => $this->t('Tab Title'),
@@ -130,6 +137,13 @@ class VipPageConfiguration extends FormBase {
       '#title' => $this->t('Second Tab'),
       '#collapsible' => TRUE,
       '#group' => 'vip_page_tab'
+    );
+
+    $form['second_tab']['second_tab_enable'] = array(
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable Second Tab'),
+      '#description' => $this->t('Enable VIP Page second tab'),
+      '#default_value' => $this->get('second_tab_enable'),
     );
 
     $form['second_tab']['second_tab_title'] = array(
