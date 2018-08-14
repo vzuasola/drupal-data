@@ -61,7 +61,7 @@ class MyAccountChangePasswordForm extends FormBase {
       '#group' => 'change_password',
     ];
 
-    $content = $this->get('desktop_forgot_password_success_message');
+    $content = $this->get('change_password_mobile_success_message');
     $form['field_success_message_group']['change_password_mobile_success_message'] = [
       '#type' => 'text_format',
       '#title' => $this->t('Mobile Success Message'),
