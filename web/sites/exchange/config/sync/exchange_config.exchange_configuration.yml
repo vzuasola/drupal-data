@@ -1,0 +1,23 @@
+trust_element_content:
+  value: "<p>Gives you more flexibility and control to both backing and laying an outcome. Featuring a host of different sports and markets, take your positions now with Dafabet Exchange!</p>\r\n"
+  format: basic_html
+_core:
+  default_config_hash: Kd3HaqTNRO6AQao8WZwmJ8yqWRbIiTPnP0ecsNOHVAM
+trust_element_title: 'TRY OUR NEWEST SPORTS PRODUCT - DAFABET EXCHANGE!'
+lobby_tiles_alignment: center
+exchange_background_image_url: 'http://prd-exchange.elysium-dfbt.com/sites/exchange/files/exchange-bg-optimized.jpg'
+exchange_background:
+  - '203'
+blocking_country_not_found_title: Testing
+blocking_country_not_found_content:
+  value: "<div class=\"page-404-banner-area\"><img alt=\"\" class=\"page-404-banner-image mt-80 lazy-load lazy-loaded\" data-entity-type=\"\" data-entity-uuid=\"\" src=\"/in/exchange/currency-1920x183.png\" /></div>\r\n\r\n<div class=\"page-404-text-area text-center\">\r\n<h2 class=\"text-semibold\">COUNTRY RESTRICTION <!--Ooops, that was unexpected. BLOCKING COUNTRY--></h2>\r\n\r\n<p class=\"mb-5\">You are accessing Exchange from a restricted country.<!--The page doesn't exists.--></p>\r\n\r\n<p class=\"mb-5\">If you have any concerns, please don't hesitate to contact our Customer Services via email at <a href=\" help@indiacsonline.com\">help@indiacsonline.com</a>.</p>\r\n<!--<p class=\"mb-5\">We'll help you get around though.\r\n</p>--></div>\r\n\r\n<div class=\"page-404-icons mt-20 mb-20\">\r\n<ul style=\"overflow:visible;\">\r\n\t<li class=\"ow-sports\"><a class=\"mb-25\" href=\"/in/sports{legacy.params}{tracking.token}\"></a><span>OW Sports</span></li>\r\n\t<li class=\"dafa-sports\"><a class=\"mb-25\" href=\"/in/sports-df{legacy.params}{tracking.token}\"></a><span>Dafa Sports</span></li>\r\n\t<li class=\"casino\"><a class=\"mb-25\" href=\"/in/casino{legacy.params}{tracking.token}\"></a><span>Casino</span></li>\r\n\t<li class=\"live-dealer\"><a class=\"mb-25\" href=\"/in/live-dealer{legacy.params}{tracking.token}\"></a><span>Live Dealer</span></li>\r\n\t<li class=\"poker\"><a class=\"mb-25\" href=\"/en/poker{legacy.params}{tracking.token}\"></a><span>Poker</span></li>\r\n\t<li class=\"games\"><a class=\"mb-25\" href=\"/en/games{legacy.params}{tracking.token}\"></a><span>Games</span></li>\r\n\t<li class=\"keno\"><a class=\"mb-25\" href=\"/en/keno{legacy.params}{tracking.token}\"></a><span>Lottery</span></li>\r\n</ul>\r\n</div>\r\n"
+  format: basic_html
+blocking_country_not_found_image_url: null
+blocking_country_not_found_image: {  }
+blocking_currency_not_found_title: Testing
+blocking_currency_not_found_content:
+  value: "<div class=\"page-404-text-area text-center\">\r\n<h2 class=\"text-semibold\"><!--Ooops, that was unexpected. BLOCKING CURRENCY-->UNSUPPORTED CURRENCY</h2>\r\n\r\n<p class=\"mb-5\">Exchange does not allow the use of your currency at this moment.<!--The page doesn't exists.--></p>\r\n\r\n<p class=\"mb-5\">Please feel free to choose among the list of other Dafabet products that you can use. <!--You may have followed a bad link or typed the address (URL) incorrectly.--></p>\r\n\r\n<p class=\"mb-5\">For more inquiries, you can reach us at <a href=\"mailto:help@indiacsonline.com\">help@indiacsonline.com</a><!--We'll help you get around though.--></p>\r\n</div>\r\n\r\n<div class=\"page-404-icons mt-20 mb-20\">\r\n<ul style=\"overflow:visible;\">\r\n\t<li class=\"ow-sports\"><a class=\"mb-25\" href=\"/in/sports{legacy.params}{tracking.token}\"></a><span>OW Sports</span></li>\r\n\t<li class=\"dafa-sports\"><a class=\"mb-25\" href=\"/in/sports-df{legacy.params}{tracking.token}\"></a><span>Dafa Sports</span></li>\r\n\t<li class=\"casino\"><a class=\"mb-25\" href=\"/in/casino{legacy.params}{tracking.token}\"></a><span>Casino</span></li>\r\n\t<li class=\"live-dealer\"><a class=\"mb-25\" href=\"/in/live-dealer{legacy.params}{tracking.token}\"></a><span>Live Dealer</span></li>\r\n\t<li class=\"poker\"><a class=\"mb-25\" href=\"/en/poker{legacy.params}{tracking.token}\"></a><span>Poker</span></li>\r\n\t<li class=\"games\"><a class=\"mb-25\" href=\"/en/games{legacy.params}{tracking.token}\"></a><span>Games</span></li>\r\n\t<li class=\"keno\"><a class=\"mb-25\" href=\"/en/keno{legacy.params}{tracking.token}\"></a><span>Keno</span></li>\r\n</ul>\r\n</div>\r\n"
+  format: basic_html
+blocking_currency_not_found_image_url: null
+blocking_currency_not_found_image: {  }
+base_url: 'https://m.dafabet.com'
