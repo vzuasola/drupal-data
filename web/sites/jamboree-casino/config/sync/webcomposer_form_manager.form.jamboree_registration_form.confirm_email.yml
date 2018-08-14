@@ -2,7 +2,7 @@ field_settings:
   label: 'Confirm Email Address'
 field_validations:
   required:
-    enable: 1
+    enable: 0
     error_message: 'Field should be required'
   alpha:
     enable: 1
