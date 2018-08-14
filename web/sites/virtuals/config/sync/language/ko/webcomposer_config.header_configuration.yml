@@ -2,17 +2,29 @@ lobby_page_title: '다파벳에서 가상 스포츠 베팅을 시작하세요!'
 critical_announcement_content:
   value: "<p>새로운 공지사항이 없습니다.</p>\r\n"
   format: basic_html
+header_settings_tab__active_tab: edit-balance-group
+logo_title: 'Virtual Sports Betting at Dafabet'
+capslock_notification: 'Caps Lock이 켜져 있습니다'
+balance_label_override: '综合钱包 '
+critical_announcement: 1
+news_announcement: 0
+news_announcement_content:
+  value: "<p>test</p>\r\n"
+  format: basic_html
 join_now_text: '가입 하기'
-join_now_link: '/{domain:entry}/{domain:lang_token}/join/virtual-sports{tracking.token}'
+join_now_link: '/{domain:entry}/{lang}/join/virtual-sports[query:({tracking})]'
 login_issue_text: '로그인이 안 되시나요?'
+login_issue_link: '/{domain:entry}/{domain:lang_token}/cant-login{tracking.token}'
 product_balance_label: '라이브 딜러, 게임, 아케이드, & 가상 스포츠'
 total_balance_label: '전체 잔액 '
 balance_error_text: '에러가 발생했습니다.'
 profile_icon_hover_text: '내 프로필'
-cashier_icon_hover_text: 은행
+cashier_icon_hover_text: 캐쉬어
 product_menu_new_tag: '새 게임'
 welcome_text: ' 환영합니다 {username} 님'
 profile_link: '/{domain:cashier_domain}/{domain:cashier_lang}/?ticket={auth.token}&product=dafabet{tracking.token}'
 profile_logout_text: 로그아웃
-balance_label_mapping: "4|OW 스포츠\r\n6|다파 스포츠\r\n10|베팅 익스체인지\r\n1|카지노 클래식\r\n2|카지노 골드\r\n5|라이브 딜러, 게임, 아케이드, & 가상 스포츠\r\n8|Opus 라이브 딜러\r\n9|키노\r\n3|포커\r\n7|AG 낚시의 신"
-balance_mapping: '5|라이브 딜러, 게임, 아케이드, & 가상 스포츠'
+balance_label_mapping: "4|OW 스포츠\r\n6|다파 스포츠\r\n11|E스프츠\r\n10|베팅 익스체인지\r\n1|카지노\r\n2|카지노 골드\r\n5|공용 지갑\r\n8|Opus 라이브 딜러\r\n7|AG 낚시의 신\r\n9|Opus 키노\r\n3|포커\r\n"
+balance_error_text_product: N/A
+balance_mapping: '5|공용 지갑'
+cashier_link: '{domain:cashier_domain}/{lang}?ticket={auth.token}&product=virtuals&title=headerPopup&width=820&height=820'

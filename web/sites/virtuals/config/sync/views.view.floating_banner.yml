@@ -12,7 +12,7 @@ dependencies:
     - webcomposer_floating_banners
     - webcomposer_rest_extra
 _core:
-  default_config_hash: wNRoxyeMyZgk85rVvbHPHMyzy0hET9XhTFSa1_-fdSk
+  default_config_hash: 4lbsgBhGZn1Y1j5G26kInBzDBeXVlS2YNcdUvKPdAA8
 id: floating_banner
 label: 'Floating Banner'
 module: views
@@ -144,38 +144,21 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
       tags: {  }
-  attachment_add_button:
+  attachment_1:
     display_plugin: attachment
-    id: attachment_add_button
+    id: attachment_1
     display_title: Attachment
     position: 4
     display_options:
       display_extenders: {  }
-      displays:
-        manage: manage
-      rendering_language: '***LANGUAGE_language_interface***'
-      header:
-        area:
-          id: area
-          table: views
-          field: area
-          relationship: none
-          group_type: group
-          admin_label: ''
-          empty: false
-          tokenize: false
-          content:
-            value: "<ul class=\"action-links\">\n  <li>\n  \t<a href=\"[site:url]/admin/structure/left_floating_banner_entity/add\" class=\"button button-action button--primary button--small\" data-drupal-link-system-path=\"admin/structure/left_floating_banner_entity/add\">Add Floating Banner</a>\n  </li>\n</ul>"
-            format: basic_html
-          plugin_id: text
-      defaults:
-        header: false
-        style: false
-        row: false
-        fields: false
       style:
         type: default
         options: {  }
+      defaults:
+        style: false
+        row: false
+        fields: false
+        header: false
       row:
         type: fields
         options:
@@ -183,6 +166,8 @@ display:
           inline: {  }
           separator: ''
           hide_empty: false
+      displays:
+        manage: manage
       fields:
         nothing:
           id: nothing
@@ -233,6 +218,20 @@ display:
           empty_zero: false
           hide_alter_empty: false
           plugin_id: custom
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content:
+            value: "<ul class=\"action-links\">\n  <li>\n  \t<a href=\"[site:url]/admin/structure/left_floating_banner_entity/add\" class=\"button button-action button--primary button--small\" data-drupal-link-system-path=\"admin/structure/left_floating_banner_entity/add\">Add Floating Banner</a>\n  </li>\n</ul>"
+            format: basic_html
+          plugin_id: text
     cache_metadata:
       max-age: -1
       contexts:
@@ -287,7 +286,6 @@ display:
         fields: false
         filters: false
         filter_groups: false
-        exposed_form: false
       row:
         type: 'entity:left_floating_banner_entity'
         options:
@@ -482,19 +480,21 @@ display:
           value:
             '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
           group: 1
-          exposed: false
+          exposed: true
           expose:
-            operator_id: ''
-            label: ''
+            operator_id: langcode_op
+            label: 'Translation language'
             description: ''
             use_operator: false
-            operator: ''
-            identifier: ''
+            operator: langcode_op
+            identifier: langcode
             required: false
             remember: false
             multiple: false
             remember_roles:
               authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
             reduce: false
           is_grouped: false
           group_info:
@@ -531,14 +531,13 @@ display:
             use_operator: false
             operator: field_platform_value_op
             identifier: field_platform_value
-            required: true
+            required: false
             remember: false
             multiple: false
             remember_roles:
               authenticated: authenticated
               anonymous: '0'
               administrator: '0'
-              e: '0'
             reduce: false
           is_grouped: false
           group_info:
@@ -559,16 +558,6 @@ display:
         groups:
           1: AND
       path: admin/structure/webcomposer_floating_banners_entity_list
-      exposed_form:
-        type: basic
-        options:
-          submit_button: Apply
-          reset_button: false
-          reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
-          expose_sort_order: true
-          sort_asc_label: Asc
-          sort_desc_label: Desc
     cache_metadata:
       max-age: 0
       contexts:

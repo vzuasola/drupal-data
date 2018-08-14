@@ -32,6 +32,9 @@ settings:
       domain_management_configuration:
         weight: 11
         enabled: false
+      drawer_media:
+        weight: 12
+        enabled: false
       floating_banner_item:
         weight: 12
         enabled: false

@@ -2,9 +2,19 @@ lobby_page_title: Dafabetでバーチャルスポーツベットを始めまし�
 critical_announcement_content:
   value: "<p>現在お知らせはございません。</p>\r\n"
   format: basic_html
+header_settings_tab__active_tab: edit-balance-group
+logo_title: 'Virtual Sports Betting at Dafabet'
+capslock_notification: 'Caps Lock がオンになっています'
+balance_label_override: '综合钱包 '
+critical_announcement: 1
+news_announcement: 0
+news_announcement_content:
+  value: "<p>test</p>\r\n"
+  format: basic_html
 join_now_text: 登録する
-join_now_link: '/{domain:entry}/{domain:lang_token}/join/virtual-sports{tracking.token}'
+join_now_link: '/{domain:entry}/{lang}/join/virtual-sports[query:({tracking})]'
 login_issue_text: ログインができない場合は？
+login_issue_link: '/{domain:entry}/{domain:lang_token}/cant-login{tracking.token}'
 product_balance_label: ライブディーラー、ゲーム、アーケード＆バーチャル
 total_balance_label: 総残高
 balance_error_text: エラーが検出されました。
@@ -12,5 +22,9 @@ profile_icon_hover_text: お客様情報
 cashier_icon_hover_text: バンキング
 product_menu_new_tag: 新
 welcome_text: 'ようこそ{username} 様'
+profile_link: '/{domain:myaccount_domain}/{lang}/my-profile?title=headerPopup&width=820&height=700&token={legacy.credentials}'
 profile_logout_text: ログアウト
+balance_label_mapping: "4|OWスポーツ\r\n6|Dafaスポーツ\r\n11|eSports\r\n10|交換\r\n1|Casino\r\n2|カジノ ゴールド\r\n5|共通ウォレット\r\n8|Opus ライブディーラー\r\n7|AG フィッシュハンター\r\n9|Opus ケノ\r\n3|ポーカー"
 balance_error_text_product: なし
+balance_mapping: 5|共通ウォレット
+cashier_link: '{domain:cashier_domain}/{lang}?ticket={auth.token}&product=virtuals&title=headerPopup&width=820&height=820'

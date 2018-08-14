@@ -2,3 +2,12 @@ base_url: 'https://m.dafabet.com'
 product_name_seo: virtual-sports
 _core:
   default_config_hash: p-o4EuT41b_1aoeD0RfgeC7uhKLCbnaHUpyn-vAZFQA
+virtuals_background_image_url: null
+virtuals_background: {  }
+basic_page_background_image_url: 'http://stg-virtuals.elysium-dfbt.com/sites/virtuals/files/1800x1200-v3%20NO%20BRANDING.jpg'
+basic_page_background:
+  - '189'
+basic_page_title: FAQs
+play_text: 'PLAY NOW'
+game_info_text: 'MORE INFO'
+free_play_text: 'FREE PLAY'

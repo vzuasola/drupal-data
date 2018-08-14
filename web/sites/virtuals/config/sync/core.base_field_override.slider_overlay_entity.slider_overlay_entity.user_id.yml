@@ -1,0 +1,20 @@
+uuid: a56fa7ca-3a4c-4673-b7d7-ee850fc8e66e
+langcode: en
+status: true
+dependencies:
+  module:
+    - slider_overlay
+id: slider_overlay_entity.slider_overlay_entity.user_id
+field_name: user_id
+entity_type: slider_overlay_entity
+bundle: slider_overlay_entity
+label: 'Authored by'
+description: 'The user ID of author of the Slider Overlay entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

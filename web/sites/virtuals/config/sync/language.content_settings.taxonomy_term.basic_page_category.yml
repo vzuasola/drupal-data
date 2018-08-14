@@ -1,4 +1,4 @@
-uuid: 0002dd43-ac98-49d1-aa0b-9cb8b137bd18
+uuid: 22029a4b-3c50-45fa-8d11-8448ea06730c
 langcode: en
 status: true
 dependencies:
@@ -9,8 +9,10 @@ dependencies:
 third_party_settings:
   content_translation:
     enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
 id: taxonomy_term.basic_page_category
 target_entity_type_id: taxonomy_term
 target_bundle: basic_page_category
 default_langcode: site_default
-language_alterable: false
+language_alterable: true

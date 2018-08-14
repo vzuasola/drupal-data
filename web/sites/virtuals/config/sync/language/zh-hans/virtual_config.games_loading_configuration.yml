@@ -1,0 +1,4 @@
+games_loading_configuration_tab__active_tab: edit-loading-message
+loading_message_content:
+  value: "<p class=\"text-center\"><img alt=\"dafabet_logo_chinese_1.png\" data-entity-type=\"\" data-entity-uuid=\"\" height=\"69\" src=\"/sites/virtuals/files/dafabet_logo_chinese_1.png\" width=\"331\" /></p>\r\n"
+  format: basic_html

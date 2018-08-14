@@ -164,7 +164,7 @@ content:
     type: entity_reference_label
     region: content
   field_preview_display_only:
-    weight: 19
+    weight: 21
     label: above
     settings:
       format: default
@@ -183,7 +183,7 @@ content:
     type: datetime_default
     region: content
   field_status:
-    weight: 21
+    weight: 19
     label: above
     settings: {  }
     third_party_settings: {  }

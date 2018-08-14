@@ -1,0 +1,20 @@
+uuid: be778c10-03ff-4efb-b93a-6309a5571b10
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.basic_page_category
+  module:
+    - path
+id: taxonomy_term.basic_page_category.path
+field_name: path
+entity_type: taxonomy_term
+bundle: basic_page_category
+label: 'URL alias'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path
