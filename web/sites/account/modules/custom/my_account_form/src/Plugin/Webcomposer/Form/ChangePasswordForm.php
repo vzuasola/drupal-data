@@ -49,6 +49,11 @@ class ChangePasswordForm extends WebcomposerFormBase implements WebcomposerFormI
           '#type' => 'textfield',
           '#description' => 'Current password field label',
         ],
+        'placeholder' => [
+          '#title' => 'Current password placeholder label',
+          '#type' => 'textfield',
+          '#description' => 'label for current password field placeholder',
+        ],
       ],
     ];
 
@@ -61,6 +66,11 @@ class ChangePasswordForm extends WebcomposerFormBase implements WebcomposerFormI
           '#type' => 'textfield',
           '#description' => 'New password field label',
         ],
+        'placeholder' => [
+          '#title' => 'New password placeholder label',
+          '#type' => 'textfield',
+          '#description' => 'label for new password field placeholder',
+        ],
       ],
     ];
 
@@ -72,6 +82,11 @@ class ChangePasswordForm extends WebcomposerFormBase implements WebcomposerFormI
           '#title' => 'Verify Password Label',
           '#type' => 'textfield',
           '#description' => 'Verify password field label',
+        ],
+        'placeholder' => [
+          '#title' => 'Verify password placeholder label',
+          '#type' => 'textfield',
+          '#description' => 'label for verify password field placeholder',
         ],
       ],
     ];
