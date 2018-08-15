@@ -8,6 +8,8 @@ dependencies:
 third_party_settings:
   content_translation:
     enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
 _core:
   default_config_hash: TpvLduqzD5nbXhkyLbdDXdlJr77eCTC7UtIBjfI7Aog
 id: webcomposer_slider_entity.webcomposer_slider_entity

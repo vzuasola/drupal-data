@@ -14,7 +14,7 @@ bundle: ribbon_labels
 label: 'Text Color'
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value:
   -
     color: '#000000'

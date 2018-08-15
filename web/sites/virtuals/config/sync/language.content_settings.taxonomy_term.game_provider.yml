@@ -1,4 +1,4 @@
-uuid: aa734d98-2198-4141-b07d-c2f0bb78ec94
+uuid: 4d6a1e8f-a4fc-4f49-ab90-c2ce6cb013e3
 langcode: en
 status: true
 dependencies:
@@ -8,9 +8,11 @@ dependencies:
     - content_translation
 third_party_settings:
   content_translation:
-    enabled: false
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
 id: taxonomy_term.game_provider
 target_entity_type_id: taxonomy_term
 target_bundle: game_provider
 default_langcode: site_default
-language_alterable: false
+language_alterable: true

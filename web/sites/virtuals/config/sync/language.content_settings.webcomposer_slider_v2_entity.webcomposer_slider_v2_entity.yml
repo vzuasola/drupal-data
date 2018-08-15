@@ -1,4 +1,4 @@
-uuid: 58661024-4a5d-402a-bcbd-a8da107bdc75
+uuid: 4dda715d-2ed6-480b-86da-9393d71b464e
 langcode: en
 status: true
 dependencies:
@@ -8,8 +8,8 @@ dependencies:
 third_party_settings:
   content_translation:
     enabled: true
-_core:
-  default_config_hash: 3D4CgS7Px8j0KXXwVc5gvu39T5AMUhk2MrOjoJm3xrM
+    bundle_settings:
+      untranslatable_fields_hide: '0'
 id: webcomposer_slider_v2_entity.webcomposer_slider_v2_entity
 target_entity_type_id: webcomposer_slider_v2_entity
 target_bundle: webcomposer_slider_v2_entity

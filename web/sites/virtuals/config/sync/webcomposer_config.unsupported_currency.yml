@@ -1,0 +1,8 @@
+unsupported_currencies_title: 'Currency not supported'
+unsupported_currencies_message:
+  value: "<p>Sorry, your currency is not supported.\r\nPlease choose other gaming rooms.</p>"
+  format: basic_html
+unsupported_currencies_button: Ok
+game_provider_mapping: "sc|zh-cn\r\nch|zh-cn\r\nkr|ko\r\nvn|en\r\njp|en\r\neu|en\r\nid|en\r\nin|en\r\ngr|en\r\npl|en"
+_core:
+  default_config_hash: w-APpz3lxrOb-rioFQt0JJQL9YLyhCfx-8I4u2HR5_U

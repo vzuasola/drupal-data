@@ -1,4 +1,4 @@
-uuid: 2233ae15-2a66-4f22-8cc8-7276757fe526
+uuid: d2ed5f3d-f0a9-4223-b14e-12dff6909284
 langcode: en
 status: true
 dependencies:
@@ -8,7 +8,9 @@ dependencies:
     - content_translation
 third_party_settings:
   content_translation:
-    enabled: true
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
 id: taxonomy_term.ribbon_labels
 target_entity_type_id: taxonomy_term
 target_bundle: ribbon_labels
