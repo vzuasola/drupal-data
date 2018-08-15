@@ -59,7 +59,6 @@ class ExchangeProviderConfiguration extends ConfigFormBase {
       '#default_value' => $config->get('tablet_game_url')
     );
 
-
     $form['languages'] = array(
       '#type' => 'textarea',
       '#title' => t('Language Mapping'),
