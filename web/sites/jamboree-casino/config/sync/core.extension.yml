@@ -36,6 +36,7 @@ module:
   filter: 0
   image: 0
   imce: 0
+  jamboree_big_winner: 0
   jamboree_config: 0
   jamboree_desktop_blocks: 0
   jamboree_desktop_games: 0

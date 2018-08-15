@@ -1,0 +1,18 @@
+jamboree_big_winner.list:
+  title: 'Jamboree Big Winner Configuration'
+  description: 'List of Jambree Big Winner Entities'
+  parent: system.admin_config
+  route_name: jamboree_big_winner.admin_settings
+
+# Jamboree big winner entity menu items definition
+entity.jamboree_big_winner_entity.collection:
+  title: 'Jamboree big winner entity list'
+  route_name: entity.jamboree_big_winner_entity.collection
+  description: 'List Jamboree big winner entity entities'
+  parent: jamboree_big_winner.list
+
+jamboree_big_winner_entity.admin.structure.settings:
+  title: Jamboree big winner entity settings
+  description: 'Configure Jamboree big winner entity entities'
+  route_name: jamboree_big_winner_entity.settings
+  parent: jamboree_big_winner.list
