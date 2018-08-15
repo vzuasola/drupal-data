@@ -61,5 +61,19 @@ class JamboreeBigWinnerForm extends FormBase {
       '#format' => $d['format'],
       '#translatable' => TRUE,
     ];
+
+    $form['page_setting']['category_text'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Category Text'),
+      '#default_value' => $this->get('category_text'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['page_setting']['read_more_text'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Read More Text'),
+      '#default_value' => $this->get('read_more_text'),
+      '#translatable' => TRUE,
+    ];
   }
 }

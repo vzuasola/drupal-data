@@ -1,16 +1,16 @@
-uuid: 9632d387-3f25-4ba0-a8fb-942d46e64865
+uuid: 72f02d12-fbf6-4c80-9706-c91c59c18f43
 langcode: en
 status: true
 dependencies:
   config:
-    - taxonomy.vocabulary.big_winner_year
+    - taxonomy.vocabulary.game_tag
   module:
     - rest
     - serialization
     - taxonomy
     - user
-id: big_winner_year
-label: 'Big Winner Year'
+id: game_tag
+label: 'Game Tag'
 module: views
 description: ''
 tag: ''
@@ -131,7 +131,7 @@ display:
           table: taxonomy_term_field_data
           field: vid
           value:
-            big_winner_year: big_winner_year
+            game_tag: game_tag
           entity_type: taxonomy_term
           entity_field: vid
           plugin_id: bundle
@@ -172,10 +172,11 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: api/big_winner_year
+      path: api/game_tag
       pager:
-        type: none
+        type: some
         options:
+          items_per_page: 10
           offset: 0
       style:
         type: serializer

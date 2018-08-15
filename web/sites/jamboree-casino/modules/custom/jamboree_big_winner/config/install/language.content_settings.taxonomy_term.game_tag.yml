@@ -1,9 +1,9 @@
-uuid: acc25f71-d4c4-4dbe-9818-476d042d390e
-langcode: ja
+uuid: e91d12e9-2f02-4cad-8031-2e5e75241a06
+langcode: en
 status: true
 dependencies:
   config:
-    - taxonomy.vocabulary.big_winner_year
+    - taxonomy.vocabulary.game_tag
   module:
     - content_translation
 third_party_settings:
@@ -11,8 +11,8 @@ third_party_settings:
     enabled: false
     bundle_settings:
       untranslatable_fields_hide: '0'
-id: taxonomy_term.big_winner_year
+id: taxonomy_term.game_tag
 target_entity_type_id: taxonomy_term
-target_bundle: big_winner_year
+target_bundle: game_tag
 default_langcode: current_interface
 language_alterable: true
