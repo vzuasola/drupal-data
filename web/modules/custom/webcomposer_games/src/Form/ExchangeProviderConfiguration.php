@@ -38,24 +38,24 @@ class ExchangeProviderConfiguration extends ConfigFormBase {
 
     $form['exchange_game_url'] = array(
       '#type' => 'textfield',
-      '#title' => t('Desktop Game url'),
-      '#description' => $this->t('Defines the exchange Game Urls'),
+      '#title' => t('Desktop Url Parameters'),
+      '#description' => $this->t('Defines the exchange Url Parameters'),
       '#default_value' => $config->get('exchange_game_url')
     );
 
     $form['exchange_tablet_url'] = array(
       '#type' => 'textfield',
       '#title' => t('Tablet Transaction  Domain'),
-      '#description' => $this->t('Defines the exchange Tablet Game Urls'),
+      '#description' => $this->t('Defines the exchange Tablet Url Parameters'),
       '#default_value' => $config->get('exchange_tablet_url')
     );
 
     $form['tablet_game_url'] = array(
       '#type' => 'textfield',
-      '#title' => t('Tablet Game url'),
+      '#title' => t('Tablet Url Parameters'),
       '#maxlength' => 300,
       '#size' => 300,
-      '#description' => $this->t('Defines the Tablet Game Urls'),
+      '#description' => $this->t('Defines the Tablet Url Parameters'),
       '#default_value' => $config->get('tablet_game_url')
     );
 
