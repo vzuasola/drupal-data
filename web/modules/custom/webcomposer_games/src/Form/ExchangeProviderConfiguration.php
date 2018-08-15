@@ -12,6 +12,7 @@ class ExchangeProviderConfiguration extends ConfigFormBase {
   /**
    * @inheritdoc
    */
+
   public function getFormId() {
     return 'exchange_provider_settings_form';
   }
@@ -29,17 +30,35 @@ class ExchangeProviderConfiguration extends ConfigFormBase {
   public function buildForm(array $form, FormStateInterface $form_state) {
     $config = $this->config('webcomposer_config.games_exchange_provider');
 
+    $form['transaction_subdomain'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Desktop Transaction  Domain'),
+      '#default_value' => $config->get('transaction_subdomain'),
+    ];
+
     $form['exchange_game_url'] = array(
       '#type' => 'textfield',
-      '#title' => t('exchange Game url'),
+      '#title' => t('Desktop Game url'),
       '#description' => $this->t('Defines the exchange Game Urls'),
       '#default_value' => $config->get('exchange_game_url')
     );
-    $form['transaction_subdomain'] = [
+
+    $form['exchange_tablet_url'] = array(
       '#type' => 'textfield',
-      '#title' => $this->t('transaction  Domain'),
-      '#default_value' => $config->get('transaction_subdomain'),
-    ];
+      '#title' => t('Tablet Transaction  Domain'),
+      '#description' => $this->t('Defines the exchange Tablet Game Urls'),
+      '#default_value' => $config->get('exchange_tablet_url')
+    );
+
+    $form['tablet_game_url'] = array(
+      '#type' => 'textfield',
+      '#title' => t('Tablet Game url'),
+      '#maxlength' => 300,
+      '#size' => 300,
+      '#description' => $this->t('Defines the Tablet Game Urls'),
+      '#default_value' => $config->get('tablet_game_url')
+    );
+
 
     $form['languages'] = array(
       '#type' => 'textarea',
@@ -92,6 +111,8 @@ class ExchangeProviderConfiguration extends ConfigFormBase {
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $keys = [
       'exchange_game_url',
+      'exchange_tablet_url',
+      'tablet_game_url',
       'languages','currency','country',
       'transaction_subdomain',
     ];
@@ -103,4 +124,3 @@ class ExchangeProviderConfiguration extends ConfigFormBase {
     parent::submitForm($form, $form_state);
   }
 }
-
