@@ -1,0 +1,5 @@
+exchange_game_url: 'Deposit_ProcessLogin.aspx?game=exchange'
+languages: "en|en\r\nin|en"
+currency: "INR\r\n"
+country: "IN\r\nLK\r\nBD\r\nPK\r\nPH"
+transaction_subdomain: 'https://prices'

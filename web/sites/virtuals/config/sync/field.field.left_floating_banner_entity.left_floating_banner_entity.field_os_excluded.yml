@@ -1,0 +1,20 @@
+uuid: 85696199-c7e5-4ee7-a91a-7717f8cb9ede
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.left_floating_banner_entity.field_os_excluded
+  module:
+    - webcomposer_floating_banners
+id: left_floating_banner_entity.left_floating_banner_entity.field_os_excluded
+field_name: field_os_excluded
+entity_type: left_floating_banner_entity
+bundle: left_floating_banner_entity
+label: 'Excluded OS'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

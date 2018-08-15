@@ -1,4 +1,4 @@
-uuid: 7633e097-2c5a-40a9-ba6e-7b35a24fe811
+uuid: 580bce7f-fb8e-49aa-a033-b8dd7daf612b
 langcode: en
 status: true
 dependencies:
@@ -8,11 +8,11 @@ dependencies:
     - content_translation
 third_party_settings:
   content_translation:
-    enabled: true
-_core:
-  default_config_hash: 4N_EhXyTLqb1T2pn-d9b7V2_d28AH_KRtAp5Em-bGKQ
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
 id: paragraph.drawer_media
 target_entity_type_id: paragraph
 target_bundle: drawer_media
 default_langcode: site_default
-language_alterable: true
+language_alterable: false
