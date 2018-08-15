@@ -1,0 +1,30 @@
+uuid: 21fa4758-c23a-48d4-ae40-b7a3b0cf3346
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.jamboree_big_winner_entity.field_big_winner_year
+    - taxonomy.vocabulary.big_winner_year
+  module:
+    - jamboree_big_winner
+id: jamboree_big_winner_entity.jamboree_big_winner_entity.field_big_winner_year
+field_name: field_big_winner_year
+entity_type: jamboree_big_winner_entity
+bundle: jamboree_big_winner_entity
+label: 'Big Winner Year'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      big_winner_year: big_winner_year
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
