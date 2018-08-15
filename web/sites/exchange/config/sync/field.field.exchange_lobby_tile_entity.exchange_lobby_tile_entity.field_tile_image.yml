@@ -5,8 +5,15 @@ dependencies:
   config:
     - field.storage.exchange_lobby_tile_entity.field_tile_image
   module:
+    - content_translation
     - exchange_lobby_tile
     - image
+third_party_settings:
+  content_translation:
+    translation_sync:
+      alt: alt
+      title: title
+      file: '0'
 id: exchange_lobby_tile_entity.exchange_lobby_tile_entity.field_tile_image
 field_name: field_tile_image
 entity_type: exchange_lobby_tile_entity

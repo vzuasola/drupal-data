@@ -54,23 +54,9 @@ display:
           sort_asc_label: Asc
           sort_desc_label: Desc
       pager:
-        type: mini
+        type: none
         options:
-          items_per_page: 10
           offset: 0
-          id: 0
-          total_pages: null
-          expose:
-            items_per_page: false
-            items_per_page_label: 'Items per page'
-            items_per_page_options: '5, 10, 25, 50'
-            items_per_page_options_all: false
-            items_per_page_options_all_label: '- All -'
-            offset: false
-            offset_label: Offset
-          tags:
-            previous: ‹‹
-            next: ››
       style:
         type: table
         options:
@@ -461,7 +447,6 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - url.query_args
       tags:
         - 'config:field.storage.exchange_lobby_tile_entity.field_log_in_state'
         - 'config:field.storage.exchange_lobby_tile_entity.field_tile_image'
@@ -474,12 +459,20 @@ display:
     display_options:
       display_extenders: {  }
       path: admin/structure/exchange_lobby_tile_entity
+      menu:
+        type: none
+        title: Sorting
+        description: ''
+        expanded: true
+        parent: entity.exchange_lobby_tile_entity.collection
+        weight: 0
+        context: '0'
+        menu_name: admin
     cache_metadata:
       max-age: 0
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - url.query_args
       tags:
         - 'config:field.storage.exchange_lobby_tile_entity.field_log_in_state'
         - 'config:field.storage.exchange_lobby_tile_entity.field_tile_image'
@@ -506,6 +499,21 @@ display:
       row:
         type: data_entity
         options: {  }
+      sorts:
+        weight:
+          id: weight
+          table: draggableviews_structure
+          field: weight
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: standard
+      defaults:
+        sorts: false
     cache_metadata:
       max-age: 0
       contexts:
