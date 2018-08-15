@@ -20,7 +20,7 @@ entity_type: jamboree_big_winner_entity
 bundle: jamboree_big_winner_entity
 label: Thumbnail
 description: ''
-required: false
+required: true
 translatable: true
 default_value: {  }
 default_value_callback: ''
