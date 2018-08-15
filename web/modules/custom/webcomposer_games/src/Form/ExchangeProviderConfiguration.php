@@ -46,7 +46,7 @@ class ExchangeProviderConfiguration extends ConfigFormBase {
     $form['exchange_tablet_url'] = array(
       '#type' => 'textfield',
       '#title' => t('Tablet Transaction  Domain'),
-      '#description' => $this->t('Defines the exchange Tablet Url Parameters'),
+      '#description' => $this->t('Defines the exchange Tablet Url'),
       '#default_value' => $config->get('exchange_tablet_url')
     );
 
