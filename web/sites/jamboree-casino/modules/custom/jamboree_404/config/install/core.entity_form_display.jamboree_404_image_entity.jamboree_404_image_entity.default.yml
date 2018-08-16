@@ -1,0 +1,27 @@
+uuid: 19c9c7dd-4a82-4361-b0b3-9dceaca50e3b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.jamboree_404_image_entity.jamboree_404_image_entity.field_image
+    - image.style.thumbnail
+  module:
+    - image
+    - jamboree_404
+id: jamboree_404_image_entity.jamboree_404_image_entity.default
+targetEntityType: jamboree_404_image_entity
+bundle: jamboree_404_image_entity
+mode: default
+content:
+  field_image:
+    weight: 0
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+hidden:
+  langcode: true
+  name: true
+  user_id: true
