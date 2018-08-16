@@ -1,0 +1,22 @@
+# Jamboree 404 Image Entity routing definition
+jamboree_404_image_entity.settings_tab:
+  route_name: jamboree_404_image_entity.settings
+  title: 'Settings'
+  base_route: jamboree_404_image_entity.settings
+
+entity.jamboree_404_image_entity.canonical:
+  route_name: entity.jamboree_404_image_entity.canonical
+  base_route: entity.jamboree_404_image_entity.canonical
+  title: 'View'
+
+entity.jamboree_404_image_entity.edit_form:
+  route_name: entity.jamboree_404_image_entity.edit_form
+  base_route: entity.jamboree_404_image_entity.canonical
+  title: 'Edit'
+
+entity.jamboree_404_image_entity.delete_form:
+  route_name:  entity.jamboree_404_image_entity.delete_form
+  base_route:  entity.jamboree_404_image_entity.canonical
+  title: Delete
+  weight: 10
+
