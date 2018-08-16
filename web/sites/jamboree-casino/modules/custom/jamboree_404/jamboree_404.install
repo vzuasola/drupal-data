@@ -1,0 +1,18 @@
+<?php
+/**
+ * Implements hook_uninstall
+ */
+function webcomposer_slider_uninstall() {
+  $keys = [
+    'core.entity_form_display.jamboree_404_image_entity.jamboree_404_image_entity.default.yml',
+    'core.entity_view_display.jamboree_404_image_entity.jamboree_404_image_entity.default.yml',
+    'field.field.jamboree_404_image_entity.jamboree_404_image_entity.field_image.yml',
+    'field.storage.jamboree_404_image_entity.field_image.yml',
+    'language.content_settings.jamboree_404_image_entity.jamboree_404_image_entity.yml',
+    'views.view.jamboree_404_page_images.yml',
+  ];
+
+  foreach ($keys as $key) {
+    \Drupal::configFactory()->getEditable($key)->delete();
+  }
+}

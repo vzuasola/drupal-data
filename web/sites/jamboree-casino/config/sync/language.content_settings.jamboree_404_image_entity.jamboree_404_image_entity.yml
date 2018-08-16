@@ -1,0 +1,17 @@
+uuid: a28e7467-b1e0-4cb6-812e-057363e90619
+langcode: en
+status: true
+dependencies:
+  module:
+    - content_translation
+    - jamboree_404
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: jamboree_404_image_entity.jamboree_404_image_entity
+target_entity_type_id: jamboree_404_image_entity
+target_bundle: jamboree_404_image_entity
+default_langcode: site_default
+language_alterable: true
