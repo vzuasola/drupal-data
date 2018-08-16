@@ -75,5 +75,14 @@ class JamboreeBigWinnerForm extends FormBase {
       '#default_value' => $this->get('read_more_text'),
       '#translatable' => TRUE,
     ];
+
+    $c = $this->get('custom_block');
+    $form['page_setting']['custom_block'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('Custom Block'),
+      '#default_value' => $c['value'],
+      '#format' => $c['format'],
+      '#translatable' => TRUE,
+    ];
   }
 }

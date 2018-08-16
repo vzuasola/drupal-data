@@ -9,6 +9,7 @@ dependencies:
     - serialization
     - taxonomy
     - user
+    - webcomposer_rest_extra
 id: game_tag
 label: 'Game Tag'
 module: views
@@ -179,11 +180,11 @@ display:
           items_per_page: 10
           offset: 0
       style:
-        type: serializer
+        type: taxonomy_list_serializer
         options:
-          grouping: {  }
           uses_fields: false
-          formats: {  }
+          formats:
+            json: json
       row:
         type: data_entity
         options: {  }

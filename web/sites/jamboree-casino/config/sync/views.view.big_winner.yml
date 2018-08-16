@@ -13,6 +13,7 @@ dependencies:
     - rest
     - serialization
     - taxonomy
+    - webcomposer_rest_extra
 id: big_winner
 label: 'Big Winner'
 module: views
@@ -659,7 +660,11 @@ display:
       display_extenders: {  }
       path: api/big_winner
       style:
-        type: serializer
+        type: node_list_serializer
+        options:
+          uses_fields: false
+          formats:
+            json: json
       defaults:
         style: false
         row: false
