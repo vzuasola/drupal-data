@@ -9,6 +9,7 @@ dependencies:
     - serialization
     - taxonomy
     - user
+    - webcomposer_rest_extra
 id: faq_category
 label: 'FAQ Category'
 module: views
@@ -218,11 +219,11 @@ display:
         options:
           offset: 0
       style:
-        type: serializer
+        type: taxonomy_list_serializer
         options:
-          grouping: {  }
           uses_fields: false
-          formats: {  }
+          formats:
+            json: json
       row:
         type: data_entity
         options: {  }
