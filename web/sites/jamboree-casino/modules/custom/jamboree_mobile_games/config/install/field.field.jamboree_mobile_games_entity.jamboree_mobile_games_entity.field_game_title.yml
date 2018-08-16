@@ -1,13 +1,13 @@
-uuid: dd4a1356-3610-4ace-8da1-6427afc9fd84
+uuid: c90eb02c-84e7-47ff-9b9b-4b05c94d7b7e
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.jamboree_mobile_games_entity.field_game_ti
+    - field.storage.jamboree_mobile_games_entity.field_game_title
   module:
     - jamboree_mobile_games
-id: jamboree_mobile_games_entity.jamboree_mobile_games_entity.field_game_ti
-field_name: field_game_ti
+id: jamboree_mobile_games_entity.jamboree_mobile_games_entity.field_game_title
+field_name: field_game_title
 entity_type: jamboree_mobile_games_entity
 bundle: jamboree_mobile_games_entity
 label: 'Game Title'

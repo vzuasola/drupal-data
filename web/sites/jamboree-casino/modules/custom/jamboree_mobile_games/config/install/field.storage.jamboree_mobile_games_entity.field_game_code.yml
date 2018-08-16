@@ -1,11 +1,11 @@
-uuid: 9f4fb270-9613-461f-a748-54c88e65f26e
+uuid: b2178b93-5f8a-4cba-85b3-850f243ebf9c
 langcode: en
 status: true
 dependencies:
   module:
     - jamboree_mobile_games
-id: jamboree_mobile_games_entity.field_game_ti
-field_name: field_game_ti
+id: jamboree_mobile_games_entity.field_game_code
+field_name: field_game_code
 entity_type: jamboree_mobile_games_entity
 type: string
 settings:
