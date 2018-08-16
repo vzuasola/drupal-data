@@ -1,0 +1,7 @@
+jamboree_404.admin_settings:
+  path: 'admin/config/jamboree/jamboree_404'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Jamboree 404 Images'
+  requirements:
+    _permission: 'administer site configuration'
