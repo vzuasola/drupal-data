@@ -18,7 +18,7 @@ class Jamboree404ImageEntityListBuilder extends EntityListBuilder {
    * {@inheritdoc}
    */
   public function buildHeader() {
-    $header['field_image'] = $this->t('image');
+    $header['name'] = $this->t('image');
     return $header + parent::buildHeader();
   }
 
@@ -27,12 +27,11 @@ class Jamboree404ImageEntityListBuilder extends EntityListBuilder {
    */
   public function buildRow(EntityInterface $entity) {
     /* @var $entity \Drupal\jamboree_404\Entity\Jamboree404ImageEntity */
-    $row['field_image'] = Link::createFromRoute(
+    $row['name'] = Link::createFromRoute(
       $entity->label(),
       'entity.jamboree_404_image_entity.edit_form',
       ['jamboree_404_image_entity' => $entity->id()]
     );
-
     return $row + parent::buildRow($entity);
   }
 
