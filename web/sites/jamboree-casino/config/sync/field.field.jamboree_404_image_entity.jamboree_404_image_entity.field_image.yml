@@ -5,8 +5,15 @@ dependencies:
   config:
     - field.storage.jamboree_404_image_entity.field_image
   module:
+    - content_translation
     - image
     - jamboree_404
+third_party_settings:
+  content_translation:
+    translation_sync:
+      alt: alt
+      title: title
+      file: '0'
 id: jamboree_404_image_entity.jamboree_404_image_entity.field_image
 field_name: field_image
 entity_type: jamboree_404_image_entity
@@ -14,7 +21,7 @@ bundle: jamboree_404_image_entity
 label: Image
 description: ''
 required: true
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
