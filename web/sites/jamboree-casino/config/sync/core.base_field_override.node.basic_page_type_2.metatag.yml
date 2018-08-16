@@ -1,20 +1,18 @@
-uuid: b8d7d496-d385-46cf-8c75-f58e2cdee77d
+uuid: afa5c988-0b7b-44de-8022-a25041519422
 langcode: en
 status: true
 dependencies:
   config:
     - node.type.basic_page_type_2
-  module:
-    - path
-id: node.basic_page_type_2.path
-field_name: path
+id: node.basic_page_type_2.metatag
+field_name: metatag
 entity_type: node
 bundle: basic_page_type_2
-label: 'URL alias'
-description: ''
+label: Metatags
+description: 'The metatags for the entity.'
 required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: path
+field_type: map
