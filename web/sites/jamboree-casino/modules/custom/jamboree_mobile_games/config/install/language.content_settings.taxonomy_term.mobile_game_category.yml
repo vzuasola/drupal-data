@@ -1,9 +1,9 @@
-uuid: aa83ac49-97ec-4304-9bbe-85383baa6776
+uuid: eff72a01-322b-449b-be26-573b3cc041f1
 langcode: en
 status: true
 dependencies:
   config:
-    - node.type.basic_page_type_2
+    - taxonomy.vocabulary.mobile_game_category
   module:
     - content_translation
 third_party_settings:
@@ -11,8 +11,8 @@ third_party_settings:
     enabled: false
     bundle_settings:
       untranslatable_fields_hide: '0'
-id: node.basic_page_type_2
-target_entity_type_id: node
-target_bundle: basic_page_type_2
+id: taxonomy_term.mobile_game_category
+target_entity_type_id: taxonomy_term
+target_bundle: mobile_game_category
 default_langcode: site_default
-language_alterable: false
+language_alterable: true

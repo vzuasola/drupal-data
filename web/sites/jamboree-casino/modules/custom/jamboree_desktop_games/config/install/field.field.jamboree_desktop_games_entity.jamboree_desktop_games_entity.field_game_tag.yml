@@ -5,6 +5,8 @@ dependencies:
   config:
     - field.storage.jamboree_desktop_games_entity.field_game_tag
     - taxonomy.vocabulary.game_tag
+  content:
+    - 'taxonomy_term:game_tag:dcc3c5ca-17d6-4b07-93b7-d73c91ae3079'
   module:
     - jamboree_desktop_games
 id: jamboree_desktop_games_entity.jamboree_desktop_games_entity.field_game_tag
@@ -13,9 +15,11 @@ entity_type: jamboree_desktop_games_entity
 bundle: jamboree_desktop_games_entity
 label: 'Game Tag'
 description: ''
-required: false
+required: true
 translatable: true
-default_value: {  }
+default_value:
+  -
+    target_uuid: dcc3c5ca-17d6-4b07-93b7-d73c91ae3079
 default_value_callback: ''
 settings:
   handler: 'default:taxonomy_term'
