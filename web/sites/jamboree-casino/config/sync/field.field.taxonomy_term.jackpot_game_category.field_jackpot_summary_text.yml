@@ -12,7 +12,7 @@ bundle: jackpot_game_category
 label: 'Jackpot Summary Text'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value:
   -
     value: 'Jackpot Summary'
