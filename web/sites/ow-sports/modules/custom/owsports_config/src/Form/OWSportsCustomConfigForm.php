@@ -189,6 +189,20 @@ class OWSportsCustomConfigForm extends ConfigFormBase {
       '#default_value' => $config->get('singbet_template'),
     ];
 
+    $form['right_side_block_group'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Right Side Block'),
+      '#collapsible' => TRUE,
+      '#group' => 'owsports_settings_tab',
+    ];
+
+    $form['right_side_block_group']['right_side_block'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Hide Right Side Block'),
+      '#default_value' => $config->get('right_side_block'),
+      '#description' => $this->t('Enable this feature to hide the right side block below 1330px and lower width of screen.'),
+    ];
+
     return parent::buildForm($form, $form_state);
   }
 
@@ -222,6 +236,7 @@ class OWSportsCustomConfigForm extends ConfigFormBase {
       'colossus_post_uri',
       'colossus_login_lightbox',
       'url_param',
+      'right_side_block',
     ];
 
     foreach ($keys as $key) {

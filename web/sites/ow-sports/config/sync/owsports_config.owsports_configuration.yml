@@ -18,3 +18,4 @@ transaction_subdomain: prices
 url_param: "world-cup|menutype=2\r\nworld-cup|market=T"
 euro_switch_redirect: null
 colossus_login_lightbox: 1
+right_side_block: 0
