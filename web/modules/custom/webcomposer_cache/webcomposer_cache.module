@@ -43,10 +43,12 @@ function webcomposer_cache_scheduler_nid_list_alter(array &$nids, $action) {
 }
 
 function webcomposer_cache_toolbar_alter(&$items) {
-  // Move the User tab to the right.
-  $items['webcomposer']['tray']['wbc_menu']['#items']['configuration'] = [
+  $items['webcomposer']['tray']['webcomposer']['#items']['webcomposer_cache.renew'] = [
     '#type' => 'link',
-    '#title' => t('Configure'),
+    '#title' => t('Generate New Signature'),
     '#url' => Url::fromRoute('webcomposer_cache.new_signature'),
+    '#attributes' => [
+      'class' => ['toolbar-icon'],
+    ],
   ];
 }

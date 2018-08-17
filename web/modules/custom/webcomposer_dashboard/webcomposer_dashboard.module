@@ -24,7 +24,7 @@ function webcomposer_dashboard_toolbar() {
     ],
     'tray' => [
       '#heading' => t('Webcomposer menu'),
-      'wbc_menu' => [
+      'webcomposer' => [
         '#theme' => 'item_list',
         '#items' => [],
       ],
