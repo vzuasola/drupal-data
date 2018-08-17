@@ -16,6 +16,7 @@ dependencies:
     - rest
     - serialization
     - taxonomy
+    - webcomposer_rest_extra
 id: mobile_game_list
 label: 'Mobile Game List'
 module: views
@@ -915,7 +916,11 @@ display:
       display_extenders: {  }
       path: api/mobile_game_list
       style:
-        type: serializer
+        type: node_list_serializer
+        options:
+          uses_fields: false
+          formats:
+            json: json
       defaults:
         style: false
         row: false

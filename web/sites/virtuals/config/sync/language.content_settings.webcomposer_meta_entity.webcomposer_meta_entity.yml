@@ -1,4 +1,4 @@
-uuid: ca29c430-cf6f-4738-bd64-f77cfdb60be8
+uuid: 2c180408-43b4-4aec-a461-fb0007f036f5
 langcode: en
 status: true
 dependencies:
@@ -8,8 +8,8 @@ dependencies:
 third_party_settings:
   content_translation:
     enabled: true
-_core:
-  default_config_hash: 6dXRHpX68D0k5jIAwWOtfpME-kJ3nRoDqpTaEt7Dtfc
+    bundle_settings:
+      untranslatable_fields_hide: '0'
 id: webcomposer_meta_entity.webcomposer_meta_entity
 target_entity_type_id: webcomposer_meta_entity
 target_bundle: webcomposer_meta_entity

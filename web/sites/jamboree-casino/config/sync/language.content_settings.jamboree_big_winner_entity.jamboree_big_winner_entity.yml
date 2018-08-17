@@ -1,0 +1,17 @@
+uuid: 39b1b366-341e-47fa-8a88-d7f68ae3c419
+langcode: ja
+status: true
+dependencies:
+  module:
+    - content_translation
+    - jamboree_big_winner
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: jamboree_big_winner_entity.jamboree_big_winner_entity
+target_entity_type_id: jamboree_big_winner_entity
+target_bundle: jamboree_big_winner_entity
+default_langcode: site_default
+language_alterable: true

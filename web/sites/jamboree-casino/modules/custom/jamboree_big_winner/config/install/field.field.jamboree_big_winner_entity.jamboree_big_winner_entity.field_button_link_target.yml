@@ -1,0 +1,21 @@
+uuid: 057029f7-53ac-448f-bc4a-640ca0fb31ac
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.jamboree_big_winner_entity.field_button_link_target
+  module:
+    - jamboree_big_winner
+    - options
+id: jamboree_big_winner_entity.jamboree_big_winner_entity.field_button_link_target
+field_name: field_button_link_target
+entity_type: jamboree_big_winner_entity
+bundle: jamboree_big_winner_entity
+label: 'Button Link Target'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

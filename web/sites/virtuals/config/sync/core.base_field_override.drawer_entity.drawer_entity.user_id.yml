@@ -1,0 +1,20 @@
+uuid: 7b3817c6-39f0-4ac8-a967-fef0b45d6dca
+langcode: en
+status: true
+dependencies:
+  module:
+    - webcomposer_drawer
+id: drawer_entity.drawer_entity.user_id
+field_name: user_id
+entity_type: drawer_entity
+bundle: drawer_entity
+label: 'Authored by'
+description: 'The user ID of author of the Drawer entity entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

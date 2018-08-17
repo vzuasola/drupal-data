@@ -1,0 +1,21 @@
+uuid: aae55e02-f5ef-4bdf-a1c1-c0fa6c10ddc6
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.jamboree_big_winner_entity.field_image_banner_link_target
+  module:
+    - jamboree_big_winner
+    - options
+id: jamboree_big_winner_entity.jamboree_big_winner_entity.field_image_banner_link_target
+field_name: field_image_banner_link_target
+entity_type: jamboree_big_winner_entity
+bundle: jamboree_big_winner_entity
+label: 'Image Banner Link Target'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

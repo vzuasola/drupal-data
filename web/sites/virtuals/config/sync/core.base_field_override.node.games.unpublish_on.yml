@@ -1,0 +1,18 @@
+uuid: b0840cb3-2f68-4761-8669-a02f17441211
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.games
+id: node.games.unpublish_on
+field_name: unpublish_on
+entity_type: node
+bundle: games
+label: 'Unpublish on'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: timestamp

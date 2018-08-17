@@ -1,10 +1,8 @@
 <?php
-
 namespace Drupal\poker_vip_page\Form;
 
 use Drupal\webcomposer_config_schema\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\file\Entity\File;
 
 /**
  * VIP Page form plugin
@@ -24,7 +22,6 @@ use Drupal\file\Entity\File;
  * )
  */
 class VipPageConfiguration extends FormBase {
-
   /**
    * @inheritdoc
    */
@@ -36,21 +33,19 @@ class VipPageConfiguration extends FormBase {
    * @inheritdoc
    */
   public function form(array $form, FormStateInterface $form_state) {
-    $config = $this->config('poker_config.vip_page');
-
     $form['vip_page_tab'] = array(
       '#type' => 'vertical_tabs',
       '#title' => t('Settings'),
     );
 
-    $this->generalConfig($form, $config);
-    $this->firstTab($form, $config);
-    $this->secondTab($form, $config);
+    $this->generalConfig($form);
+    $this->firstTab($form);
+    $this->secondTab($form);
 
     return $form;
   }
 
-  private function generalConfig(&$form, $config) {
+  private function generalConfig(&$form) {
     $form['gen_config'] = array(
       '#type' => 'details',
       '#title' => $this->t('General Configuration'),
@@ -62,13 +57,13 @@ class VipPageConfiguration extends FormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Page Title'),
       '#description' => $this->t('This will appear in browser page tab title'),
-      '#default_value' => $config->get('page_title'),
+      '#default_value' => $this->get('page_title'),
       '#required' => TRUE,
       '#translatable' => TRUE,
     );
   }
 
-  private function firstTab(&$form, $config) {
+  private function firstTab(&$form) {
     $form['first_tab'] = array(
       '#type' => 'details',
       '#title' => $this->t('First Tab'),
@@ -76,11 +71,18 @@ class VipPageConfiguration extends FormBase {
       '#group' => 'vip_page_tab'
     );
 
+    $form['first_tab']['first_tab_enable'] = array(
+      '#type' => 'checkbox',
+      '#title' => $this->t('Show First Tab'),
+      '#description' => $this->t('Show VIP Page first tab'),
+      '#default_value' => $this->get('first_tab_enable'),
+    );
+
     $form['first_tab']['first_tab_title'] = array(
       '#type' => 'textfield',
       '#title' => $this->t('Tab Title'),
       '#description' => $this->t('Add Tab Title to VIP Page first tab'),
-      '#default_value' => $config->get('first_tab_title'),
+      '#default_value' => $this->get('first_tab_title'),
       '#translatable' => TRUE,
       '#required' => TRUE,
     );
@@ -89,7 +91,7 @@ class VipPageConfiguration extends FormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Tab ID'),
       '#description' => $this->t('Add Tab ID of secondary menu on VIP Page first tab'),
-      '#default_value' => $config->get('first_tab_id'),
+      '#default_value' => $this->get('first_tab_id'),
       '#required' => TRUE,
       '#translatable' => TRUE,
     );
@@ -102,7 +104,7 @@ class VipPageConfiguration extends FormBase {
       '#upload_validators' => [
         'file_validate_extensions' => ['png jpg jpeg'],
       ],
-      '#default_value' => $config->get('file_image_first_tab_icon'),
+      '#default_value' => $this->get('file_image_first_tab_icon'),
       '#required' => TRUE,
     ];
 
@@ -114,11 +116,11 @@ class VipPageConfiguration extends FormBase {
       '#upload_validators' => [
         'file_validate_extensions' => ['png jpg jpeg'],
       ],
-      '#default_value' => $config->get('file_image_first_tab_icon_hover'),
+      '#default_value' => $this->get('file_image_first_tab_icon_hover'),
       '#required' => TRUE,
     ];
 
-    $firstTabContent = $config->get('first_tab_content');
+    $firstTabContent = $this->get('first_tab_content');
     $form['first_tab']['first_tab_content'] = array(
       '#type' => 'text_format',
       '#title' => $this->t('Content'),
@@ -129,7 +131,7 @@ class VipPageConfiguration extends FormBase {
     );
   }
 
-  private function secondTab(&$form, $config) {
+  private function secondTab(&$form) {
     $form['second_tab'] = array(
       '#type' => 'details',
       '#title' => $this->t('Second Tab'),
@@ -137,11 +139,18 @@ class VipPageConfiguration extends FormBase {
       '#group' => 'vip_page_tab'
     );
 
+    $form['second_tab']['second_tab_enable'] = array(
+      '#type' => 'checkbox',
+      '#title' => $this->t('Show Second Tab'),
+      '#description' => $this->t('Show VIP Page second tab'),
+      '#default_value' => $this->get('second_tab_enable'),
+    );
+
     $form['second_tab']['second_tab_title'] = array(
       '#type' => 'textfield',
       '#title' => $this->t('Tab Title'),
       '#description' => $this->t('Add Tab Title to VIP Page second tab'),
-      '#default_value' => $config->get('second_tab_title'),
+      '#default_value' => $this->get('second_tab_title'),
       '#translatable' => TRUE,
       '#required' => TRUE,
     );
@@ -150,7 +159,7 @@ class VipPageConfiguration extends FormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Tab ID'),
       '#description' => $this->t('Add Tab ID of secondary menu on VIP Page second tab'),
-      '#default_value' => $config->get('second_tab_id'),
+      '#default_value' => $this->get('second_tab_id'),
       '#required' => TRUE,
       '#translatable' => TRUE,
     );
@@ -163,7 +172,7 @@ class VipPageConfiguration extends FormBase {
       '#upload_validators' => [
         'file_validate_extensions' => ['png jpg jpeg'],
       ],
-      '#default_value' => $config->get('file_image_second_tab_icon'),
+      '#default_value' => $this->get('file_image_second_tab_icon'),
       '#required' => TRUE,
     ];
 
@@ -175,11 +184,11 @@ class VipPageConfiguration extends FormBase {
       '#upload_validators' => [
         'file_validate_extensions' => ['png jpg jpeg'],
       ],
-      '#default_value' => $config->get('file_image_second_tab_icon_hover'),
+      '#default_value' => $this->get('file_image_second_tab_icon_hover'),
       '#required' => TRUE,
     ];
 
-    $secondTabContent = $config->get('second_tab_content');
+    $secondTabContent = $this->get('second_tab_content');
     $form['second_tab']['second_tab_content'] = array(
       '#type' => 'text_format',
       '#title' => $this->t('Content'),

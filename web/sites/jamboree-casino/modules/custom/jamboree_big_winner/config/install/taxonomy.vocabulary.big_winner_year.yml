@@ -1,0 +1,9 @@
+uuid: 00e26c2d-fdc5-4831-b637-4569242f420c
+langcode: ja
+status: true
+dependencies: {  }
+name: 'Big Winner Year'
+vid: big_winner_year
+description: ''
+hierarchy: 0
+weight: 0

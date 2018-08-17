@@ -1,0 +1,30 @@
+uuid: ba5636cd-3707-4470-b3b1-8a2e18e7db86
+langcode: ja
+status: true
+dependencies:
+  module:
+    - file
+    - image
+    - jamboree_big_winner
+id: jamboree_big_winner_entity.field_image_banner
+field_name: field_image_banner
+entity_type: jamboree_big_winner_entity
+type: image
+settings:
+  uri_scheme: public
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  target_type: file
+  display_field: false
+  display_default: false
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -14,7 +14,7 @@ bundle: basic_page_type_2
 label: 'Where to open images'
 description: ''
 required: true
-translatable: false
+translatable: true
 default_value:
   -
     value: same_tab

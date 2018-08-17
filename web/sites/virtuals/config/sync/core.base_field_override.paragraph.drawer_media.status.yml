@@ -1,0 +1,22 @@
+uuid: 8e510cbc-ec79-452e-8f66-27f634f05b94
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.drawer_media
+id: paragraph.drawer_media.status
+field_name: status
+entity_type: paragraph
+bundle: drawer_media
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

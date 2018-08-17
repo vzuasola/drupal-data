@@ -30,10 +30,12 @@ hidden:
   field_game_image: true
   field_game_image_large: true
   field_game_info: true
+  field_game_info_id: true
   field_game_provider: true
   field_game_title: true
   field_image_size: true
   field_maintenance_blurb: true
+  field_playing_type: true
   field_ribbon_configuration: true
   field_show_game_info_toggle: true
   field_start_date: true

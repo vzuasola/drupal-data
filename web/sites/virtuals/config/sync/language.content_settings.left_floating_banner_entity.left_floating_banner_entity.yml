@@ -8,6 +8,8 @@ dependencies:
 third_party_settings:
   content_translation:
     enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
 _core:
   default_config_hash: 9G-t263HvN3XsJijjVw96SbUjj8jrFrG1uwLmRar01Y
 id: left_floating_banner_entity.left_floating_banner_entity

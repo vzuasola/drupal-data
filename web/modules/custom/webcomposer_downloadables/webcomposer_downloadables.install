@@ -1,0 +1,12 @@
+<?php
+
+/**
+ * Implements hook_update_N
+ *
+ * Changes:
+ * - Added new "Platforms" fields
+ * - Added additional form view for platforms fields
+ */
+function webcomposer_downloadables_update_8001() {
+   \Drupal::service('config.installer')->installDefaultConfig('module', 'webcomposer_downloadables');
+}

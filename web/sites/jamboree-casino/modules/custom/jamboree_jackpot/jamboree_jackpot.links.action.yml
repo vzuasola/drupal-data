@@ -1,0 +1,5 @@
+entity.jamboree_jackpot_entity.add_form:
+  route_name: entity.jamboree_jackpot_entity.add_form
+  title: 'Add Jamboree jackpot entity'
+  appears_on:
+    - entity.jamboree_jackpot_entity.collection

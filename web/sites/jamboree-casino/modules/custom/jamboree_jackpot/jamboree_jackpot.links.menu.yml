@@ -1,0 +1,18 @@
+jamboree_jackpot.list:
+  title: 'Jamboree Jackpot Games Configuration'
+  description: 'List Jamboree Jackpot Games entities'
+  parent: system.admin_config
+  route_name: jamboree_jackpot.admin_settings
+
+# Jamboree jackpot entity menu items definition
+entity.jamboree_jackpot_entity.collection:
+  title: 'Jamboree jackpot entity list'
+  route_name: entity.jamboree_jackpot_entity.collection
+  description: 'List Jamboree jackpot entity entities'
+  parent: jamboree_jackpot.list
+
+jamboree_jackpot_entity.admin.structure.settings:
+  title: Jamboree jackpot entity settings
+  description: 'Configure Jamboree jackpot entity entities'
+  route_name: jamboree_jackpot_entity.settings
+  parent: jamboree_jackpot.list

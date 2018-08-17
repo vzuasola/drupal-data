@@ -9,15 +9,33 @@ dependencies:
     - field.field.left_floating_banner_entity.left_floating_banner_entity.field_link
     - field.field.left_floating_banner_entity.left_floating_banner_entity.field_link_target
     - field.field.left_floating_banner_entity.left_floating_banner_entity.field_link_text
+    - field.field.left_floating_banner_entity.left_floating_banner_entity.field_os_excluded
     - field.field.left_floating_banner_entity.left_floating_banner_entity.field_per_page_config
     - field.field.left_floating_banner_entity.left_floating_banner_entity.field_platform
     - field.field.left_floating_banner_entity.left_floating_banner_entity.field_title
     - field.field.left_floating_banner_entity.left_floating_banner_entity.field_title_layout
     - image.style.thumbnail
   module:
+    - field_group
     - image
     - paragraphs
     - webcomposer_floating_banners
+third_party_settings:
+  field_group:
+    group_platform:
+      children:
+        - field_platform
+        - field_os_excluded
+      parent_name: ''
+      weight: 2
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Platform
 _core:
   default_config_hash: 8_0ih1GSueNVGkXBjXb4r4veOTX4LdxtOiTwB1RG9yI
 id: left_floating_banner_entity.left_floating_banner_entity.default
@@ -27,7 +45,7 @@ mode: default
 content:
   field_banner_item:
     type: entity_reference_paragraphs
-    weight: 10
+    weight: 12
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -38,13 +56,13 @@ content:
     third_party_settings: {  }
     region: content
   field_floating_banner_type:
-    weight: 4
+    weight: 6
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_image:
-    weight: 5
+    weight: 7
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -52,7 +70,7 @@ content:
     type: image_image
     region: content
   field_link:
-    weight: 6
+    weight: 8
     settings:
       size: 60
       placeholder: ''
@@ -60,29 +78,37 @@ content:
     type: string_textfield
     region: content
   field_link_target:
-    weight: 8
+    weight: 10
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_link_text:
-    weight: 7
+    weight: 9
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
     region: content
+  field_os_excluded:
+    weight: 4
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
   field_per_page_config:
     type: string_textarea
-    weight: 9
+    weight: 11
     region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
   field_platform:
-    weight: 2
+    weight: 3
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -96,7 +122,7 @@ content:
     type: string_textfield
     region: content
   field_title_layout:
-    weight: 3
+    weight: 5
     settings: {  }
     third_party_settings: {  }
     type: options_select

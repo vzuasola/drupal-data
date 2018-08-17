@@ -10,8 +10,6 @@ third_party_settings:
     enabled: true
     bundle_settings:
       untranslatable_fields_hide: '0'
-_core:
-  default_config_hash: ovV1arQ-5uXXR00VeP5-rSk9LNaq9OAB-OIwFcQDZrw
 id: dropdown_menu_entity.dropdown_menu_entity
 target_entity_type_id: dropdown_menu_entity
 target_bundle: dropdown_menu_entity

@@ -1,0 +1,14 @@
+opus_game_loader_content:
+  value: "<p>An unexpected error occurred. This window will close in a few seconds. Please try again soon.</p>\r\n"
+  format: basic_html
+opus_game_url: ''
+opus_game_free_play_url: ''
+opus_alternative_game_url: ''
+languages: ''
+currency: ''
+opus_unsupported_currencies_title: ''
+opus_unsupported_currencies_message:
+  value: ''
+  format: basic_html
+opus_unsupported_currencies_button: ''
+opus_fallback_error: ''

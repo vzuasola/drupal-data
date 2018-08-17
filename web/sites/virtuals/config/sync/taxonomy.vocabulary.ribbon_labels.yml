@@ -5,5 +5,5 @@ dependencies: {  }
 name: 'Ribbon labels'
 vid: ribbon_labels
 description: 'Use this taxonomy to add ribbon labels'
-hierarchy: 0
+hierarchy: 1
 weight: 0
