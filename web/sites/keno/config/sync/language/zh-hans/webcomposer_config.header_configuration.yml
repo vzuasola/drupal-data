@@ -1,5 +1,5 @@
 lobby_page_title: dafa在线快乐彩|dafabet彩票正式上线，亚洲最好的在线彩票
-header_settings_tab__active_tab: edit-join-now-group
+header_settings_tab__active_tab: edit-login-group
 logo_title: 在线彩票
 capslock_notification: 大写锁定已开启
 balance_label_override: '综合钱包 '
@@ -12,9 +12,9 @@ news_announcement_content:
   value: "<p>test</p>\r\n"
   format: basic_html
 join_now_text: 立即加入
-join_now_link: '/{domain:entry}/{domain:lang_token}/cant-login{tracking.token}'
+join_now_link: '/{domain:myaccount_domain}/{domain:lang_token}/cant-login[query:({tracking})]'
 login_issue_text: 无法登录？
-login_issue_link: '/{domain:entry}/{domain:lang_token}/cant-login{tracking.token}'
+login_issue_link: '/{domain:myaccount_domain}/{domain:lang_token}/cant-login[query:({tracking})]'
 product_balance_label: 快乐彩余额
 total_balance_label: 总余额
 balance_error_text: 错误检索
@@ -25,6 +25,6 @@ welcome_text: '欢迎 {username}'
 profile_link: '/{domain:myaccount_domain}/{lang}/my-profile?title=headerPopup&width=820&height=700&token={legacy.credentials}'
 profile_logout_text: 登出
 balance_label_mapping: "4|沙巴体育\r\n6|大发体育\r\n11|电竞\r\n10|交易所\r\n1|娱乐场\r\n2|娱乐场黄金版\r\n5|综合钱包\r\n8|OPUS现场荷官\r\n7| AG 捕鱼王\r\n9|Opus快乐彩\r\n3|扑克"
-balance_error_text_product: '{domain:cashier_domain}/{lang}[query:(ticket={auth.token}&product=keno&title=headerPopup&width=820&height=802})]'
+balance_error_text_product: N/A
 balance_mapping: "9|Opus快乐彩余额\r\n5|综合钱包余额"
 cashier_link: '{domain:cashier_domain}/{lang}[query:(ticket={auth.token}&product=keno&title=headerPopup&width=820&height=802})]'
