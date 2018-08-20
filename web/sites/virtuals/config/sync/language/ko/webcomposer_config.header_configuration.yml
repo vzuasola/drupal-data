@@ -2,7 +2,7 @@ lobby_page_title: '다파벳에서 가상 스포츠 베팅을 시작하세요!'
 critical_announcement_content:
   value: "<p>새로운 공지사항이 없습니다.</p>\r\n"
   format: basic_html
-header_settings_tab__active_tab: edit-balance-group
+header_settings_tab__active_tab: edit-login-group
 logo_title: 'Virtual Sports Betting at Dafabet'
 capslock_notification: 'Caps Lock이 켜져 있습니다'
 balance_label_override: '综合钱包 '
@@ -14,7 +14,7 @@ news_announcement_content:
 join_now_text: '가입 하기'
 join_now_link: '/{domain:entry}/{lang}/join/virtual-sports[query:({tracking})]'
 login_issue_text: '로그인이 안 되시나요?'
-login_issue_link: '/{domain:entry}/{domain:lang_token}/cant-login{tracking.token}'
+login_issue_link: '/{domain:myaccount_domain}/{domain:lang_token}/cant-login[query:({tracking})]'
 product_balance_label: '라이브 딜러, 게임, 아케이드, & 가상 스포츠'
 total_balance_label: '전체 잔액 '
 balance_error_text: '에러가 발생했습니다.'

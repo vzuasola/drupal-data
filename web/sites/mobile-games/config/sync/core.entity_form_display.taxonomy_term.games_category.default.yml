@@ -1,0 +1,51 @@
+uuid: 30b5892d-e37a-42e8-8e86-962b6b6ba8f0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.games_category.field_games_alias
+    - field.field.taxonomy_term.games_category.field_games_disable
+    - taxonomy.vocabulary.games_category
+id: taxonomy_term.games_category.default
+targetEntityType: taxonomy_term
+bundle: games_category
+mode: default
+content:
+  field_games_alias:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_games_disable:
+    weight: 4
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true

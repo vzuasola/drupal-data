@@ -1,0 +1,4 @@
+unsupported_country_message:
+  format: basic_html
+  value: "<p>Trò Chơi này hiện không được cung cấp ở quốc gia bạn đang sinh sống. Vui lòng chọn trò chơi Xổ Số khác.</p>\r\n"
+unsupported_country_title: 'Country not supported'
