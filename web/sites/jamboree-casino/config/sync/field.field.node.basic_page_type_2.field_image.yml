@@ -6,6 +6,7 @@ dependencies:
     - field.storage.node.field_image
     - node.type.basic_page_type_2
   module:
+    - content_translation
     - image
 third_party_settings:
   content_translation:
@@ -20,7 +21,7 @@ bundle: basic_page_type_2
 label: 'Banner Image'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains jamboree_404.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function jamboree_404_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the jamboree_404 module.
+    case 'help.page.jamboree_404':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Jamboree 404 Page') . '</p>';
+      return $output;
+
+    default:
+  }
+}

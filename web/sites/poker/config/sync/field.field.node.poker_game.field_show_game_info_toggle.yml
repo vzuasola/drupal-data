@@ -1,0 +1,23 @@
+uuid: f27320fd-585c-4678-a0ca-ed7d4b2a9166
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_show_game_info_toggle
+    - node.type.poker_game
+id: node.poker_game.field_show_game_info_toggle
+field_name: field_show_game_info_toggle
+entity_type: node
+bundle: poker_game
+label: 'Show Game Info Button'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

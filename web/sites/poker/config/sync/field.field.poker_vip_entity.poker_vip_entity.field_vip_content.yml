@@ -1,0 +1,21 @@
+uuid: a6b7d4ce-7b9c-4a2f-8873-d4bbefcd8836
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.poker_vip_entity.field_vip_content
+  module:
+    - poker_vip_page
+    - text
+id: poker_vip_entity.poker_vip_entity.field_vip_content
+field_name: field_vip_content
+entity_type: poker_vip_entity
+bundle: poker_vip_entity
+label: Content
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

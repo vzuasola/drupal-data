@@ -15,3 +15,29 @@ fallback_error_message:
   value: ''
   format: basic_html
 fallback_error_button: ''
+asia_gaming_currency: ''
+asia_gaming_language_mapping: ''
+gb_virtual_sports_currency: "EUR\r\nUSD\r\nGBP\r\nRMB\r\nMYR\r\nTHB\r\nKRW\r\nVND\r\nIDR\r\nINR\r\nPLN\r\nRUB"
+gb_virtual_sports_language_mapping: "en|en-US\r\nsc|zh-CN\r\nch|zh-TW\r\nth|th\r\nkr|ko-KR\r\nid|en-US\r\nvn|en-US\r\njp|ja\r\nin|hi"
+skywind_currency: ''
+skywind_language_mapping: ''
+voidbridge_currency: ''
+voidbridge_language_mapping: ''
+gold_deluxe_currency: ''
+gold_deluxe_language_mapping: ''
+video_racing_currency: ''
+video_racing_language_mapping: ''
+sa_gaming_currency: ''
+sa_gaming_language_mapping: ''
+allbet_currency: ''
+allbet_language_mapping: ''
+tgp_currency: ''
+tgp_language_mapping: ''
+evo_gaming_currency: ''
+evo_gaming_language_mapping: ''
+ebet_currency: ''
+ebet_language_mapping: ''
+game_provider_mapping: ''
+safari_notif_message:
+  value: ''
+  format: basic_html

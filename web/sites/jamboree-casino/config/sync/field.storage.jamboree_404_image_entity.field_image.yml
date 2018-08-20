@@ -1,0 +1,30 @@
+uuid: c7bc8c50-c81d-48a8-8826-bf0bda126344
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+    - image
+    - jamboree_404
+id: jamboree_404_image_entity.field_image
+field_name: field_image
+entity_type: jamboree_404_image_entity
+type: image
+settings:
+  uri_scheme: public
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  target_type: file
+  display_field: false
+  display_default: false
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

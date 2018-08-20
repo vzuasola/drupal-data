@@ -1,0 +1,20 @@
+uuid: 84764b85-92c6-4498-acd2-a60764ee6b25
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.jamboree_big_winner_entity.field_button_label
+  module:
+    - jamboree_big_winner
+id: jamboree_big_winner_entity.jamboree_big_winner_entity.field_button_label
+field_name: field_button_label
+entity_type: jamboree_big_winner_entity
+bundle: jamboree_big_winner_entity
+label: 'Button Label'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

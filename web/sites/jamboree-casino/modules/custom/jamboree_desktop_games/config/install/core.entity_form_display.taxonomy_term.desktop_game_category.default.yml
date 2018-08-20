@@ -1,0 +1,79 @@
+uuid: d407abcc-fc59-4abc-a26c-099bd44f7670
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.desktop_game_category.field_category_id
+    - field.field.taxonomy_term.desktop_game_category.field_category_image_banner
+    - field.field.taxonomy_term.desktop_game_category.field_enable
+    - field.field.taxonomy_term.desktop_game_category.field_hide_name
+    - image.style.thumbnail
+    - taxonomy.vocabulary.desktop_game_category
+  module:
+    - image
+    - text
+id: taxonomy_term.desktop_game_category.default
+targetEntityType: taxonomy_term
+bundle: desktop_game_category
+mode: default
+content:
+  description:
+    type: text_textarea
+    weight: 5
+    region: content
+    settings:
+      placeholder: ''
+      rows: 5
+    third_party_settings: {  }
+  field_category_id:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_category_image_banner:
+    weight: 7
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_enable:
+    weight: 0
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_hide_name:
+    weight: 4
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  path: true

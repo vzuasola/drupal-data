@@ -126,11 +126,6 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
             '#type' => 'textfield',
             '#description' => 'The Label for the Birthdate field',
           ],
-          'date-format' => [
-            '#title' => 'Birthdate format',
-            '#type' => 'textfield',
-            '#description' => 'Date Format for Birthdate',
-          ],
         ],
       ],
       'phone' => [
@@ -308,6 +303,10 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
             '#default_value' => '</div>',
           ],
         ],
+      ],
+      'ip' => [
+        'name' => 'IP address',
+        'type' => 'hidden',
       ],
       'username' => [
         'name' => 'Username',

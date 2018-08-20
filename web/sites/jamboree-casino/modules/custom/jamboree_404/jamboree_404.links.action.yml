@@ -1,0 +1,5 @@
+entity.jamboree_404_image_entity.add_form:
+  route_name: entity.jamboree_404_image_entity.add_form
+  title: 'Add Jamboree 404 Image Entity'
+  appears_on:
+    - entity.jamboree_404_image_entity.collection

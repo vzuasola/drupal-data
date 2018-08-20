@@ -33,6 +33,7 @@ module:
   field_ui: 0
   file: 0
   filter: 0
+  games_page_loading: 0
   image: 0
   imce: 0
   kint: 0
@@ -71,8 +72,9 @@ module:
   virtual_config: 0
   webcomposer_affilates: 0
   webcomposer_announcements: 0
+  webcomposer_audit: 0
+  webcomposer_audit_export: 0
   webcomposer_avaya: 0
-  webcomposer_cache: 0
   webcomposer_config: 0
   webcomposer_config_schema: 0
   webcomposer_dm: 0
@@ -82,7 +84,6 @@ module:
   webcomposer_editor: 0
   webcomposer_floating_banners: 0
   webcomposer_games: 0
-  webcomposer_games_statuses: 0
   webcomposer_language_hierarchy: 0
   webcomposer_marketing_script: 0
   webcomposer_partner: 0

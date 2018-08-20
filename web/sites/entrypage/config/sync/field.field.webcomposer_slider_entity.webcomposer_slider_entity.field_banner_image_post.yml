@@ -1,0 +1,45 @@
+uuid: f55c4b98-f0cc-49ed-8a27-c6fc228e47da
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.webcomposer_slider_entity.field_banner_image_post
+  module:
+    - content_translation
+    - image
+    - webcomposer_slider
+third_party_settings:
+  content_translation:
+    translation_sync:
+      file: file
+      alt: '0'
+      title: '0'
+id: webcomposer_slider_entity.webcomposer_slider_entity.field_banner_image_post
+field_name: field_banner_image_post
+entity_type: webcomposer_slider_entity
+bundle: webcomposer_slider_entity
+label: 'Banner Image Post'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: false
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

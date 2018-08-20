@@ -1,4 +1,4 @@
-uuid: 5fab2c05-6d71-4927-b786-4856f2564df8
+uuid: 6bf0fecc-b683-45c9-b7f3-b37db29a122f
 langcode: en
 status: true
 dependencies:
@@ -8,8 +8,8 @@ dependencies:
 third_party_settings:
   content_translation:
     enabled: true
-_core:
-  default_config_hash: QhAT7EOFJORSwtnTRMlOZmszKVjSugmoLAI0-dhhiF4
+    bundle_settings:
+      untranslatable_fields_hide: '0'
 id: drawer_entity.drawer_entity
 target_entity_type_id: drawer_entity
 target_bundle: drawer_entity

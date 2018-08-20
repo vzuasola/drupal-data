@@ -87,6 +87,7 @@ module:
   webcomposer_mailer: 0
   webcomposer_marketing_script: 0
   webcomposer_partner: 0
+  webcomposer_permission: 0
   webcomposer_promotions: 0
   webcomposer_rest_extra: 0
   webcomposer_right_side_block: 0

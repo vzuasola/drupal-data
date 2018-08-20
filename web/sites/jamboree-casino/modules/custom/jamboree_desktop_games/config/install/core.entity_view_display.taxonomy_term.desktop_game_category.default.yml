@@ -1,0 +1,64 @@
+uuid: a5f94dde-1f12-46b4-988b-d0e8c1400515
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.desktop_game_category.field_category_id
+    - field.field.taxonomy_term.desktop_game_category.field_category_image_banner
+    - field.field.taxonomy_term.desktop_game_category.field_enable
+    - field.field.taxonomy_term.desktop_game_category.field_hide_name
+    - taxonomy.vocabulary.desktop_game_category
+  module:
+    - image
+    - text
+id: taxonomy_term.desktop_game_category.default
+targetEntityType: taxonomy_term
+bundle: desktop_game_category
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_category_id:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_category_image_banner:
+    weight: 5
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_enable:
+    weight: 2
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_hide_name:
+    weight: 3
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+hidden:
+  langcode: true

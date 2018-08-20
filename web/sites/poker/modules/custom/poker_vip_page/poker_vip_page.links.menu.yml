@@ -1,0 +1,20 @@
+poker_vip_page.list:
+  title: 'Poker VIP Page Configuration'
+  parent: system.admin_config
+  description: 'Configuration for poker vip page'
+  route_name: poker_vip_page.admin_settings
+
+# Poker vip entity menu items definition
+entity.poker_vip_entity.collection:
+  title: 'Poker vip entity list'
+  route_name: entity.poker_vip_entity.collection
+  description: 'List Poker vip entity entities'
+  parent: poker_vip_page.list
+  weight: 99
+
+poker_vip_entity.admin.structure.settings:
+  title: Poker vip entity settings
+  description: 'Configure Poker vip entity entities'
+  route_name: poker_vip_entity.settings
+  parent: poker_vip_page.list
+  weight: 100

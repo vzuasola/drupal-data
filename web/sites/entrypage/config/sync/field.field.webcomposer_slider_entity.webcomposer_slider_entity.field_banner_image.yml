@@ -22,7 +22,7 @@ entity_type: webcomposer_slider_entity
 bundle: webcomposer_slider_entity
 label: 'Banner Image'
 description: 'The image for the slider. The recommended upload size is 1920x500.'
-required: true
+required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''

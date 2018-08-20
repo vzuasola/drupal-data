@@ -1,0 +1,5 @@
+name: Poker VIP Pages
+type: module
+description: Poker VIP Pages Configuration
+core: 8.x
+package: Custom

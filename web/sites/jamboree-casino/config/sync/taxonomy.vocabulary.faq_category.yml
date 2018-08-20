@@ -1,0 +1,9 @@
+uuid: e1bf43dd-b8ab-4b9c-8a50-93bfdc6bd8d8
+langcode: und
+status: true
+dependencies: {  }
+name: 'FAQ Category'
+vid: faq_category
+description: ''
+hierarchy: 0
+weight: 0

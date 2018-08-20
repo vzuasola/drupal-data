@@ -1,0 +1,17 @@
+uuid: 741f4402-2d85-46dd-b7a0-70fdf250e6a5
+langcode: en
+status: true
+dependencies:
+  module:
+    - exchange_config
+    - serialization
+    - user
+id: exchange_config_rest_resource
+plugin_id: exchange_config_rest_resource
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+    supported_auth:
+      - cookie

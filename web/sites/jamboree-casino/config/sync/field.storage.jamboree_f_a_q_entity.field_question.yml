@@ -1,0 +1,21 @@
+uuid: df0e0569-72a1-4762-9ed7-92b5836de9a7
+langcode: en
+status: true
+dependencies:
+  module:
+    - jamboree_faq
+id: jamboree_f_a_q_entity.field_question
+field_name: field_question
+entity_type: jamboree_f_a_q_entity
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
