@@ -1,0 +1,18 @@
+uuid: bab1a869-3a7c-4cd9-ac80-e3f152fac27f
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.desktop_game_category
+id: taxonomy_term.desktop_game_category.metatag
+field_name: metatag
+entity_type: taxonomy_term
+bundle: desktop_game_category
+label: Metatags
+description: 'The metatags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map
