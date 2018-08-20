@@ -1,5 +1,5 @@
 lobby_page_title: '아시아 최고의 베팅 회사인 다파벳과 함께 키노를 즐겨보세요!'
-header_settings_tab__active_tab: edit-join-now-group
+header_settings_tab__active_tab: edit-login-group
 logo_title: 'Bet on your Keno Winning Numbers at Dafabet'
 capslock_notification: 'Caps Lock이 켜져 있습니다'
 balance_label_override: '综合钱包 '
@@ -12,9 +12,9 @@ news_announcement_content:
   value: "<p>test</p>\r\n"
   format: basic_html
 join_now_text: '가입 하기'
-join_now_link: '/{domain:entry}/{domain:lang_token}/cant-login{tracking.token}'
+join_now_link: '/{domain:myaccount_domain}/{domain:lang_token}/cant-login[query:({tracking})]'
 login_issue_text: '로그인이 안 되시나요?'
-login_issue_link: '/{domain:entry}/{domain:lang_token}/cant-login{tracking.token}'
+login_issue_link: '/{domain:myaccount_domain}/{domain:lang_token}/cant-login[query:({tracking})]'
 product_balance_label: '키노 잔액'
 total_balance_label: '전체 잔액'
 balance_error_text: '에러가 발생했습니다.'

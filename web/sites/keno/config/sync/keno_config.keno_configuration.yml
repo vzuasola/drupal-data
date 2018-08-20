@@ -1,0 +1,16 @@
+trust_element_title: 'Play KENO like never before'
+trust_element_content:
+  value: "<p>There are lots of ways to win and play. With over 9 regions and 7 bet types each with their own payout calculations and rates to choose from, you can get the chance to make big winnings every 2 minutes!</p>\r\n"
+  format: basic_html
+lobby_tiles_alignment: center
+keno_background:
+  - '1690'
+keno_background_image_url: 'http://prd-keno.elysium-dfbt.com/sites/keno/files/bg_1.jpg'
+basic_page_background_image_url: 'http://prd-keno.elysium-dfbt.com/sites/keno/files/Lottery%20Listing%20Page%20BG%20-%20Latest.jpg'
+basic_page_background:
+  - '2278'
+basic_page_title: ''
+balance_mapping_keno: "9|快乐彩\r\n5|现场荷官、老虎机、虚拟运动和大发彩票"
+play_text: 'Play Now'
+game_info_text: 'More Info'
+free_play_text: 'Free Play'

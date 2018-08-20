@@ -1,5 +1,5 @@
 exchange_game_url: 'https://www.opus-casino.com'
 languages: "en|en\r\nin|en"
-currency:  "USD\r\nINR"
+currency: "USD\r\nINR"
 country: "IN\r\nSL"
-transaction_subdomain: "sunplustest"
+transaction_subdomain: sunplustest

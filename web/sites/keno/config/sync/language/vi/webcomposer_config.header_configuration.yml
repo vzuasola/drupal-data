@@ -1,5 +1,5 @@
 lobby_page_title: 'Chơi Keno tại Dafabet, nhà cái cá cược hàng đầu Châu Á!'
-header_settings_tab__active_tab: edit-join-now-group
+header_settings_tab__active_tab: edit-login-group
 logo_title: 'Bet on your Keno Winning Numbers at Dafabet'
 capslock_notification: 'Đang bật CAP LOCK'
 balance_label_override: '综合钱包 '
@@ -12,9 +12,9 @@ news_announcement_content:
   value: "<p>test</p>\r\n"
   format: basic_html
 join_now_text: 'THAM GIA NGAY'
-join_now_link: '/{domain:entry}/{domain:lang_token}/cant-login{tracking.token}'
+join_now_link: '/{domain:myaccount_domain}/{domain:lang_token}/cant-login[query:({tracking})]'
 login_issue_text: 'Quên mật khẩu?'
-login_issue_link: '/{domain:entry}/{domain:lang_token}/cant-login{tracking.token}'
+login_issue_link: '/{domain:myaccount_domain}/{domain:lang_token}/cant-login[query:({tracking})]'
 product_balance_label: 'Số Dư Keno'
 total_balance_label: 'Tổng Số Dư'
 balance_error_text: 'Đã xảy ra lỗi'
@@ -25,6 +25,6 @@ welcome_text: 'Chào mừng {username}'
 profile_link: '/{domain:myaccount_domain}/{lang}/my-profile?title=headerPopup&width=820&height=700&token={legacy.credentials}'
 profile_logout_text: 'Đăng xuất'
 balance_label_mapping: "4|Thể Thao OW\r\n6|Thể Thao Dafa\r\n11|eSports\r\n10|Exchange\r\n1|Casino \r\n2|Casino Gold\r\n5|Ví Chung\r\n8|Casino Trực Tuyến Opus\r\n7|AG Fish Hunter\r\n9|Keno Opus\r\n3|Poker\r\n"
-balance_error_text_product: '{domain:cashier_domain}/{lang}[query:(ticket={auth.token}&product=keno&title=headerPopup&width=820&height=802})]'
+balance_error_text_product: N/A
 balance_mapping: "9|Số Dư Keno Opus \r\n5|Số Dư Ví Chung"
 cashier_link: '{domain:cashier_domain}/{lang}[query:(ticket={auth.token}&product=keno&title=headerPopup&width=820&height=802})]'
