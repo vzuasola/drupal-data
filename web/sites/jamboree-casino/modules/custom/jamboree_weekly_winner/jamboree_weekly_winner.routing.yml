@@ -1,0 +1,7 @@
+jamboree_weekly_winner.admin_settings:
+  path: 'admin/config/jamboree/weekly_winner'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Jamboree Weekly Winner'
+  requirements:
+    _permission: 'administer site configuration'

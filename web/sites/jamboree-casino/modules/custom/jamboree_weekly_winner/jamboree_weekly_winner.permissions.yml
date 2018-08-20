@@ -1,0 +1,22 @@
+add jamboree weekly winner entity entities:
+  title: 'Create new Jamboree weekly winner entity entities'
+
+administer jamboree weekly winner entity entities:
+  title: 'Administer Jamboree weekly winner entity entities'
+  description: 'Allow to access the administration form to configure Jamboree weekly winner entity entities.'
+  restrict access: true
+
+delete jamboree weekly winner entity entities:
+  title: 'Delete Jamboree weekly winner entity entities'
+
+edit jamboree weekly winner entity entities:
+  title: 'Edit Jamboree weekly winner entity entities'
+
+access jamboree weekly winner entity overview:
+  title: 'Access the Jamboree weekly winner entity overview page'
+
+view published jamboree weekly winner entity entities:
+  title: 'View published Jamboree weekly winner entity entities'
+
+view unpublished jamboree weekly winner entity entities:
+  title: 'View unpublished Jamboree weekly winner entity entities'
