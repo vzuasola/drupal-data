@@ -37,6 +37,6 @@ password_mask_toggle: 1
 balance_label_override: '综合钱包 '
 caps_lock_toggle: 1
 capslock_notification: 'Caps Lock On'
-header_settings_tab__active_tab: edit-login-group
+header_settings_tab__active_tab: edit-logo-group
 value: null
 format: null
