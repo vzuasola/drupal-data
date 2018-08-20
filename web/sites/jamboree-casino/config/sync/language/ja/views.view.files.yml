@@ -1,0 +1,11 @@
+display:
+  default:
+    display_options:
+      fields:
+        count:
+          format_plural_string: '!!binary MSBwbGFjZQNAY291bnQgcGxhY2Vz'
+  page_2:
+    display_options:
+      fields:
+        count:
+          format_plural_string: '!!binary MQNAY291bnQ='

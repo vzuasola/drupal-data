@@ -5,3 +5,4 @@ country: "IN\r\nSL"
 transaction_subdomain: sunplustest
 _core:
   default_config_hash: 9rJ-hpOqBpL5uhbUyhhpVXIYSwTZILhA49ACCOX0654
+langcode: ja

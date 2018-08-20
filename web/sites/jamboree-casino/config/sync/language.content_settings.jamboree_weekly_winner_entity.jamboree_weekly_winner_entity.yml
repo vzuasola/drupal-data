@@ -1,0 +1,17 @@
+uuid: 5d1dfcb9-605b-40a0-9ba0-399e6713803f
+langcode: en
+status: true
+dependencies:
+  module:
+    - content_translation
+    - jamboree_weekly_winner
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: jamboree_weekly_winner_entity.jamboree_weekly_winner_entity
+target_entity_type_id: jamboree_weekly_winner_entity
+target_bundle: jamboree_weekly_winner_entity
+default_langcode: site_default
+language_alterable: true

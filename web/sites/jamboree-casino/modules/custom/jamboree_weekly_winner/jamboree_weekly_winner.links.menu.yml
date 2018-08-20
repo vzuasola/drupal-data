@@ -1,0 +1,18 @@
+jamboree_weekly_winner.list:
+  title: 'Jamboree Weekly Winner'
+  description: 'List of Weekly Winner'
+  parent: system.admin_config
+  route_name: jamboree_weekly_winner.admin_settings
+
+# Jamboree weekly winner entity menu items definition
+entity.jamboree_weekly_winner_entity.collection:
+  title: 'Jamboree weekly winner entity list'
+  route_name: entity.jamboree_weekly_winner_entity.collection
+  description: 'List Jamboree weekly winner entity entities'
+  parent: jamboree_weekly_winner.list
+
+jamboree_weekly_winner_entity.admin.structure.settings:
+  title: Jamboree weekly winner entity settings
+  description: 'Configure Jamboree weekly winner entity entities'
+  route_name: jamboree_weekly_winner_entity.settings
+  parent: jamboree_weekly_winner.list

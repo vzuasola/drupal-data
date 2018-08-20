@@ -1,0 +1,23 @@
+uuid: 2b62a7ec-0ba7-47ad-85ff-e8bddb602d98
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.weekly_winner_year
+id: taxonomy_term.weekly_winner_year.default
+targetEntityType: taxonomy_term
+bundle: weekly_winner_year
+mode: default
+content:
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  description: true
+  langcode: true
+  path: true
