@@ -1,4 +1,4 @@
-javascript_assets: '/jswrapper/integration.js.php?casino=dafa888&main=1'
+javascript_assets: '/jswrapper/integration.js.php?casino=dafa888&min=1'
 lobby_url: ''
 playtech_pas_endpoint: 'https://login.wsocdd.com/Login.php'
 playtech_pas_casino: dafa888
