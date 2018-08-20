@@ -1,0 +1,20 @@
+uuid: f8198c8b-1b97-42c3-920c-15398bcea123
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.weekly_winner_year
+  module:
+    - text
+id: taxonomy_term.weekly_winner_year.description
+field_name: description
+entity_type: taxonomy_term
+bundle: weekly_winner_year
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

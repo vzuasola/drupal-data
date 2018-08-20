@@ -1,0 +1,18 @@
+uuid: 1bbf34ac-ec07-4c2f-bbee-b65129c2aad3
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.weekly_winner_month
+id: taxonomy_term.weekly_winner_month.name
+field_name: name
+entity_type: taxonomy_term
+bundle: weekly_winner_month
+label: Name
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
