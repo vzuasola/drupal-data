@@ -5,14 +5,14 @@ critical_announcement_content:
 news_announcement_content:
   value: "<p>Test Test</p>\r\n"
   format: basic_html
-header_settings_tab__active_tab: edit-login-group
+header_settings_tab__active_tab: edit-header-other-group
 logo_title: 'Bet on your Keno Winning Numbers at Dafabet'
 capslock_notification: 'Caps Lock aktif'
 balance_label_override: '综合钱包 '
 critical_announcement: 0
 news_announcement: 0
 join_now_text: GABUNG
-join_now_link: '/{domain:myaccount_domain}/{domain:lang_token}/cant-login[query:({tracking})]'
+join_now_link: '/{domain:entry}/{domain:lang_token}/join/lottery[query:({tracking})]'
 login_issue_text: 'Tidak bisa Login?'
 login_issue_link: '/{domain:myaccount_domain}/{domain:lang_token}/cant-login[query:({tracking})]'
 product_balance_label: 'Saldo Keno'
