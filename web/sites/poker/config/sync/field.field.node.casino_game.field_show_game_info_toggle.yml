@@ -1,0 +1,23 @@
+uuid: 0ab2b516-4e29-4127-9b42-d09f2e952750
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_show_game_info_toggle
+    - node.type.casino_game
+id: node.casino_game.field_show_game_info_toggle
+field_name: field_show_game_info_toggle
+entity_type: node
+bundle: casino_game
+label: 'Show Game Info Button'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

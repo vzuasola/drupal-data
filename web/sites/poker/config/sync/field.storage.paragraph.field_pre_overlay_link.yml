@@ -1,0 +1,19 @@
+uuid: 875b3ef1-4070-41c8-a14d-eeb47ea22f51
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - paragraphs
+id: paragraph.field_pre_overlay_link
+field_name: field_pre_overlay_link
+entity_type: paragraph
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

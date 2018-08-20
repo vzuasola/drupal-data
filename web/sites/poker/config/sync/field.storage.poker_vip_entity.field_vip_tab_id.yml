@@ -1,0 +1,27 @@
+uuid: ece31f53-8162-4e71-9426-1c7855ac2df8
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - poker_vip_page
+id: poker_vip_entity.field_vip_tab_id
+field_name: field_vip_tab_id
+entity_type: poker_vip_entity
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: vip_club
+      label: 'VIP Club'
+    -
+      value: vip_prosperity_club
+      label: 'VIP Prosperity Club'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

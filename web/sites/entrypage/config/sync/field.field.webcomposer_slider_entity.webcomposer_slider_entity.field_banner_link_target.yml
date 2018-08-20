@@ -15,7 +15,7 @@ entity_type: webcomposer_slider_entity
 bundle: webcomposer_slider_entity
 label: 'Banner Link Target'
 description: 'The link behavior when clicked'
-required: true
+required: false
 translatable: true
 default_value:
   -

@@ -7,10 +7,8 @@ dependencies:
     - field.field.grid_menu_entity.grid_menu_entity.field_disable
     - field.field.grid_menu_entity.grid_menu_entity.field_grid_title
     - field.field.grid_menu_entity.grid_menu_entity.field_icon
-    - field.field.grid_menu_entity.grid_menu_entity.field_link
   module:
     - image
-    - link
     - poker_grid_menu
     - text
     - user
@@ -52,18 +50,6 @@ content:
       image_link: ''
     third_party_settings: {  }
     type: image
-    region: content
-  field_link:
-    weight: 5
-    label: above
-    settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
-    third_party_settings: {  }
-    type: link
     region: content
   name:
     label: above

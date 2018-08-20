@@ -1,0 +1,20 @@
+uuid: 4c2d0cba-f23e-4c83-9fc4-7be2d5a6fc6a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.poker_vip_entity.field_vip_secondary_tab_id
+  module:
+    - poker_vip_page
+id: poker_vip_entity.poker_vip_entity.field_vip_secondary_tab_id
+field_name: field_vip_secondary_tab_id
+entity_type: poker_vip_entity
+bundle: poker_vip_entity
+label: 'VIP Secondary Tab ID'
+description: 'No spacing and underscore for ID naming, only dash(-) is allowed. This is required for the secondary tab mapping.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

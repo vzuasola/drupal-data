@@ -1,0 +1,7 @@
+jamboree_faq.admin_settings:
+  path: 'admin/config/jamboree_casino/faq'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Jamboree FAQ'
+  requirements:
+    _permission: 'administer site configuration'

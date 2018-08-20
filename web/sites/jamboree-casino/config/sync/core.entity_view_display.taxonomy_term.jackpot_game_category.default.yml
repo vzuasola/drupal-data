@@ -1,0 +1,60 @@
+uuid: 3d04ace5-98cd-441b-bc2e-39d487d93194
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.jackpot_game_category.field_enable
+    - field.field.taxonomy_term.jackpot_game_category.field_jackpot_category_id
+    - field.field.taxonomy_term.jackpot_game_category.field_meta_tag
+    - field.field.taxonomy_term.jackpot_game_category.field_url
+    - taxonomy.vocabulary.jackpot_game_category
+  module:
+    - metatag
+    - text
+id: taxonomy_term.jackpot_game_category.default
+targetEntityType: taxonomy_term
+bundle: jackpot_game_category
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_enable:
+    weight: 3
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_jackpot_category_id:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_meta_tag:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
+    region: content
+  field_url:
+    weight: 4
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  langcode: true

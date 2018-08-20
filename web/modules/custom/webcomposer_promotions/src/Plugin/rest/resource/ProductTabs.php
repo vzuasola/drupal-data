@@ -92,9 +92,8 @@ class ProductTabs extends ResourceBase {
    */
   public function get() {
     $build = new CacheableMetadata();
-    $build->setCacheTags([
-      'taxonomy_term_list',
-    ]);
+    $build->setCacheTags(['taxonomy_term_list']);
+    $build->setCacheContexts(['url.query_args']);
 
     $state = $this->currentRequest->query->get('state');
     $type = $this->currentRequest->query->get('type');
@@ -217,47 +216,23 @@ class ProductTabs extends ResourceBase {
    * @return <string> The product promotion count.
    */
   private function getPromotionCount($productId, $langCode, $state) {
-    $query = \Drupal::entityQuery('node')->condition('type', 'promotion');
 
-    $countNids = $query->execute();
-
-    if ($countNids) {
-      // Get a node storage object.
-      $nodeStorage = \Drupal::entityManager()
-        ->getStorage('node')
-        ->loadMultiple((array) $countNids);
-
-      if ($nodeStorage) {
-        $countNid = [];
-
-        foreach ($nodeStorage as $getEntity) {
-          if ($getEntity->hasTranslation($langCode)) {
-            $translation = $getEntity->getTranslation($langCode);
-
-            $status = $translation->status->value;
-            $product = $translation->field_product->target_id;
-            $hidePromotion = $translation->field_hide_promotion->value;
-            $loginState = $translation->field_log_in_state->value;
-
-            if ($status == '1' &&
-              $product == $productId &&
-              $hidePromotion == '0' &&
-              in_array($loginState, array($state, '2'))
-            ) {
-              $countNid[] = $translation->nid->value;
-            }
-          }
-        }
-
-        $result = count($countNid);
-      }
-    }
+    $query = \Drupal::entityQuery('node');
+    $query->condition('type', "promotion", NULL, $langCode);
+    $query->condition('status', 1, NULL, $langCode);
+    $query->condition('field_product.target_id', $productId, NULL, $langCode);
+    $query->condition('field_hide_promotion.value', 0, NULL, $langCode);
+    $group = $query
+      ->orConditionGroup()
+      ->condition('field_log_in_state.value', 2, NULL, $langCode)
+      ->condition('field_log_in_state.value', $state, NULL, $langCode);
+    $query->condition($group);
+    $query->count();
+    $result = $query->execute();
 
     $result = !empty($result) ? $result : "0";
 
-    return $result;
-
-    return $countNids;
+    return (int) $result;
   }
 
   /**
@@ -266,40 +241,22 @@ class ProductTabs extends ResourceBase {
    * @return <string> The product promotion count.
    */
   private function getAllFeaturedPromotionCount($langCode, $state) {
-    $query = \Drupal::entityQuery('node')
-      ->condition('type', 'promotion');
 
-    $countNids = $query->execute();
-
-    // Get a node storage object.
-    $nodeStorage = \Drupal::entityManager()->getStorage('node')->loadMultiple($countNids);
-    if ($nodeStorage) {
-      $countNid = [];
-
-      foreach ($nodeStorage as $getEntity) {
-        if ($getEntity->hasTranslation($langCode)) {
-          $translation = $getEntity->getTranslation($langCode);
-
-          $status = $translation->status->value;
-          $hidePromotion = $translation->field_hide_promotion->value;
-          $checkFeatured = $translation->field_mark_as_featured->value;
-          $loginState = $translation->field_log_in_state->value;
-
-          if ($status == '1' &&
-            $checkFeatured == '1' &&
-            $hidePromotion == '0' &&
-            in_array($loginState, array($state, '2'))
-          ) {
-            $countNid[] = $translation->nid->value;
-          }
-        }
-      }
-
-      $result = count($countNid);
-    }
+    $query = \Drupal::entityQuery('node');
+    $query->condition('type', "promotion", NULL, $langCode);
+    $query->condition('status', 1, NULL, $langCode);
+    $query->condition('field_hide_promotion.value', 0, NULL, $langCode);
+    $query->condition('field_mark_as_featured.value', 1, NULL, $langCode);
+    $group = $query
+      ->orConditionGroup()
+      ->condition('field_log_in_state.value', 2, NULL, $langCode)
+      ->condition('field_log_in_state.value', $state, NULL, $langCode);
+    $query->condition($group);
+    $query->count();
+    $result = $query->execute();
 
     $result = !empty($result) ? $result : "0";
 
-    return $result;
+    return (int) $result;
   }
 }

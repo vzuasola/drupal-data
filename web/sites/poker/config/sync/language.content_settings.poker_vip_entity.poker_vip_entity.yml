@@ -1,0 +1,17 @@
+uuid: e0391b22-cfc0-42f3-9648-717d7d26118b
+langcode: en
+status: true
+dependencies:
+  module:
+    - content_translation
+    - poker_vip_page
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: poker_vip_entity.poker_vip_entity
+target_entity_type_id: poker_vip_entity
+target_bundle: poker_vip_entity
+default_langcode: site_default
+language_alterable: true

@@ -12,7 +12,7 @@ field_name: field_body
 entity_type: download_page_entity
 bundle: download_page_entity
 label: Body
-description: ''
+description: 'The maximum total  width of image/images in one line should not exceed <strong>385px<strong>'
 required: true
 translatable: true
 default_value: {  }

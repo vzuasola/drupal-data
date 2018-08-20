@@ -1,0 +1,20 @@
+uuid: bc1fa6c8-f6f8-42b0-bd72-64de6a23100e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.poker_vip_entity.field_vip_secondary_title
+  module:
+    - poker_vip_page
+id: poker_vip_entity.poker_vip_entity.field_vip_secondary_title
+field_name: field_vip_secondary_title
+entity_type: poker_vip_entity
+bundle: poker_vip_entity
+label: 'Secondary Tab Title'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

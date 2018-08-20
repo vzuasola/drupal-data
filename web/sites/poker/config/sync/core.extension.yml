@@ -53,6 +53,7 @@ module:
   poker_download_page: 0
   poker_game_offers: 0
   poker_grid_menu: 0
+  poker_vip_page: 0
   quickedit: 0
   rdf: 0
   rest: 0
@@ -81,6 +82,7 @@ module:
   webcomposer_dm: 0
   webcomposer_domain_import: 0
   webcomposer_downloadables: 0
+  webcomposer_drawer: 0
   webcomposer_editor: 0
   webcomposer_floating_banners: 0
   webcomposer_games: 0
