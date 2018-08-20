@@ -1,0 +1,21 @@
+uuid: 1cb2c770-9ca9-492f-87dd-e628dd97ac04
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.jamboree_weekly_winner_entity.field_body
+  module:
+    - jamboree_weekly_winner
+    - text
+id: jamboree_weekly_winner_entity.jamboree_weekly_winner_entity.field_body
+field_name: field_body
+entity_type: jamboree_weekly_winner_entity
+bundle: jamboree_weekly_winner_entity
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

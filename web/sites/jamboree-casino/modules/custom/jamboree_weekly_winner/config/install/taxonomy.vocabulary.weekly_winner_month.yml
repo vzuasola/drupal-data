@@ -1,0 +1,9 @@
+uuid: dbb3b1f3-139d-48c2-8215-1966127e81cf
+langcode: en
+status: true
+dependencies: {  }
+name: 'Weekly Winner Month'
+vid: weekly_winner_month
+description: ''
+hierarchy: 0
+weight: 0
