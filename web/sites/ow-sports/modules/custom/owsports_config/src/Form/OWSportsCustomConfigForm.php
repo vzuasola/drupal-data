@@ -63,6 +63,13 @@ class OWSportsCustomConfigForm extends ConfigFormBase {
       '#default_value' => $config->get('url_param'),
     ];
 
+    $form['owsports_config_group']['right_side_block'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Hide Right Side Block'),
+      '#default_value' => $config->get('right_side_block'),
+      '#description' => $this->t('Enable this feature to hide the right side block below 1330px and lower width of screen.'),
+    ];
+
     $form['jackpotbet_config_group'] = [
       '#type' => 'details',
       '#title' => $this->t('Jackpot Bet'),
@@ -222,6 +229,7 @@ class OWSportsCustomConfigForm extends ConfigFormBase {
       'colossus_post_uri',
       'colossus_login_lightbox',
       'url_param',
+      'right_side_block',
     ];
 
     foreach ($keys as $key) {
