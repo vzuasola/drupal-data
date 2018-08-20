@@ -1,5 +1,5 @@
 uuid: e91d12e9-2f02-4cad-8031-2e5e75241a06
-langcode: en
+langcode: ja
 status: true
 dependencies:
   config:
@@ -8,7 +8,7 @@ dependencies:
     - content_translation
 third_party_settings:
   content_translation:
-    enabled: false
+    enabled: true
     bundle_settings:
       untranslatable_fields_hide: '0'
 id: taxonomy_term.game_tag

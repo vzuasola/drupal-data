@@ -1,0 +1,20 @@
+uuid: c629320a-7318-4edb-8a03-03fd2f2c0f76
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.big_winner_year
+  module:
+    - path
+id: taxonomy_term.big_winner_year.path
+field_name: path
+entity_type: taxonomy_term
+bundle: big_winner_year
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path
