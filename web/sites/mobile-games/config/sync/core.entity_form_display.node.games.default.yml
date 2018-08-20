@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.games.field_game_ribbon
     - field.field.node.games.field_games_list_category
     - field.field.node.games.field_games_list_thumb_img_big
     - field.field.node.games.field_games_list_thumb_img_small
@@ -24,6 +25,12 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_game_ribbon:
+    weight: 125
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_games_list_category:
     weight: 121
     settings: {  }
