@@ -1,6 +1,6 @@
 unsupported_country_title: 'Currency not supported'
 unsupported_country_message:
-  value: "<p>Sorry, your currency is not supported.\r\nPlease choose other gaming rooms.</p>"
+  value: "<p>Sorry, your currency is not supported. Please choose other gaming rooms.</p>\r\n"
   format: basic_html
 unsupported_country_button: Ok
 _core:
