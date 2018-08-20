@@ -1,13 +1,13 @@
-uuid: 847c1f96-294b-45b9-85ac-743271cf09db
+uuid: 65e6956c-1c93-493f-80ac-4618e5942225
 langcode: en
 status: true
 dependencies:
   config:
-    - taxonomy.vocabulary.faq_category
-id: taxonomy_term.faq_category.changed
+    - taxonomy.vocabulary.game_tag
+id: taxonomy_term.game_tag.changed
 field_name: changed
 entity_type: taxonomy_term
-bundle: faq_category
+bundle: game_tag
 label: Changed
 description: 'The time that the term was last edited.'
 required: false

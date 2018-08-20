@@ -1,15 +1,15 @@
-uuid: 647adbf8-51f1-4256-a8d4-f6b854b46264
+uuid: a8e8d1cd-1858-41ef-8c94-a0eebac2c4d8
 langcode: en
 status: true
 dependencies:
   config:
-    - taxonomy.vocabulary.faq_category
+    - taxonomy.vocabulary.game_tag
   module:
     - path
-id: taxonomy_term.faq_category.path
+id: taxonomy_term.game_tag.path
 field_name: path
 entity_type: taxonomy_term
-bundle: faq_category
+bundle: game_tag
 label: 'URL alias'
 description: ''
 required: false

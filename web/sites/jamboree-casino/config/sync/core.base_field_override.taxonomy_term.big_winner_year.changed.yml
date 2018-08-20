@@ -1,13 +1,13 @@
-uuid: 847c1f96-294b-45b9-85ac-743271cf09db
+uuid: d31dcbf5-cb90-4d59-a6ec-ebf7af461f5f
 langcode: en
 status: true
 dependencies:
   config:
-    - taxonomy.vocabulary.faq_category
-id: taxonomy_term.faq_category.changed
+    - taxonomy.vocabulary.big_winner_year
+id: taxonomy_term.big_winner_year.changed
 field_name: changed
 entity_type: taxonomy_term
-bundle: faq_category
+bundle: big_winner_year
 label: Changed
 description: 'The time that the term was last edited.'
 required: false

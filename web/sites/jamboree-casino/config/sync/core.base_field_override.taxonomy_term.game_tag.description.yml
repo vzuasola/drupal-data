@@ -1,15 +1,15 @@
-uuid: 2265e107-4ca5-465d-9706-e95eb377b648
+uuid: 0f1abe8b-e2df-4a6b-bc5e-edc4f73130b0
 langcode: en
 status: true
 dependencies:
   config:
-    - taxonomy.vocabulary.faq_category
+    - taxonomy.vocabulary.game_tag
   module:
     - text
-id: taxonomy_term.faq_category.description
+id: taxonomy_term.game_tag.description
 field_name: description
 entity_type: taxonomy_term
-bundle: faq_category
+bundle: game_tag
 label: Description
 description: ''
 required: false

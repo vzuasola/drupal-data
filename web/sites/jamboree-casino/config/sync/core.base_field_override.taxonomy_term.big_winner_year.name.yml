@@ -1,13 +1,13 @@
-uuid: 40f6fdc2-6125-4b8e-b290-3d6cea26438e
+uuid: a4c1943d-a8d4-4e32-9cc7-fa809de100f6
 langcode: en
 status: true
 dependencies:
   config:
-    - taxonomy.vocabulary.faq_category
-id: taxonomy_term.faq_category.name
+    - taxonomy.vocabulary.big_winner_year
+id: taxonomy_term.big_winner_year.name
 field_name: name
 entity_type: taxonomy_term
-bundle: faq_category
+bundle: big_winner_year
 label: Name
 description: ''
 required: true

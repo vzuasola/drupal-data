@@ -1,15 +1,15 @@
-uuid: 647adbf8-51f1-4256-a8d4-f6b854b46264
+uuid: e787bfc5-6ba5-469b-be5a-fa329cdfa440
 langcode: en
 status: true
 dependencies:
   config:
-    - taxonomy.vocabulary.faq_category
+    - taxonomy.vocabulary.big_winner_year
   module:
     - path
-id: taxonomy_term.faq_category.path
+id: taxonomy_term.big_winner_year.path
 field_name: path
 entity_type: taxonomy_term
-bundle: faq_category
+bundle: big_winner_year
 label: 'URL alias'
 description: ''
 required: false
