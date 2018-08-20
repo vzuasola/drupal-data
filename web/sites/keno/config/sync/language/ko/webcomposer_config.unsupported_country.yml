@@ -1,0 +1,4 @@
+unsupported_country_message:
+  format: basic_html
+  value: "<p>본 게임은 현재 이용 중인 국가에서 사용할 수 없습니다. 다른 복권 게임 중 하나를 선택해주세요.</p>\r\n"
+unsupported_country_title: 'Country not supported'

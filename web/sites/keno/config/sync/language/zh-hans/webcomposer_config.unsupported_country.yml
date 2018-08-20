@@ -1,0 +1,4 @@
+unsupported_country_message:
+  format: basic_html
+  value: "<p>本游戏暂时不支持您当前所处国家。请选择我们的其他彩票游戏。</p>\r\n"
+unsupported_country_title: 'Country not supported'

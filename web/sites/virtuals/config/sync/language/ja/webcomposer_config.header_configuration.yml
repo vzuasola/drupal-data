@@ -2,7 +2,7 @@ lobby_page_title: Dafabetでバーチャルスポーツベットを始めまし�
 critical_announcement_content:
   value: "<p>現在お知らせはございません。</p>\r\n"
   format: basic_html
-header_settings_tab__active_tab: edit-balance-group
+header_settings_tab__active_tab: edit-login-group
 logo_title: 'Virtual Sports Betting at Dafabet'
 capslock_notification: 'Caps Lock がオンになっています'
 balance_label_override: '综合钱包 '
@@ -14,7 +14,7 @@ news_announcement_content:
 join_now_text: 登録する
 join_now_link: '/{domain:entry}/{lang}/join/virtual-sports[query:({tracking})]'
 login_issue_text: ログインができない場合は？
-login_issue_link: '/{domain:entry}/{domain:lang_token}/cant-login{tracking.token}'
+login_issue_link: '/{domain:myaccount_domain}/{domain:lang_token}/cant-login[query:({tracking})]'
 product_balance_label: ライブディーラー、ゲーム、アーケード＆バーチャル
 total_balance_label: 総残高
 balance_error_text: エラーが検出されました。

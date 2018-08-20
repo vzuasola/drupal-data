@@ -2,7 +2,7 @@ lobby_page_title: 'Mulai pasang Taruhan Olahraga Virtual Anda di Dafabet!'
 critical_announcement_content:
   value: "<p>Layanan Chat kami tidak akan tersedia pada 21 Februari, Pk 05:00 - 05:30 GMT+8, dikarenakan pembaharuan sistem untuk kepuasan Anda. Sementara itu, Anda bisa menghubungi kami melalui layanan pesan instan, chat aplikasi, maupun melalui email. Terima kasih.</p>\r\n"
   format: basic_html
-header_settings_tab__active_tab: edit-balance-group
+header_settings_tab__active_tab: edit-login-group
 logo_title: 'Virtual Sports Betting at Dafabet'
 capslock_notification: 'Đang bật CAP LOCK'
 balance_label_override: '综合钱包 '
@@ -14,7 +14,7 @@ news_announcement_content:
 join_now_text: GABUNG
 join_now_link: '/{domain:entry}/{lang}/join/virtual-sports[query:({tracking})]'
 login_issue_text: 'Tidak bisa Login?'
-login_issue_link: '/{domain:entry}/{domain:lang_token}/cant-login{tracking.token}'
+login_issue_link: '/{domain:myaccount_domain}/{domain:lang_token}/cant-login[query:({tracking})]'
 product_balance_label: 'Saldo Live Dealer, Games, Arcade, & Virtual'
 total_balance_label: 'Total Saldo'
 balance_error_text: '"Pesan Error Total Saldo"  Error.'

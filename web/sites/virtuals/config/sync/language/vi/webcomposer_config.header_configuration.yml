@@ -2,7 +2,7 @@ lobby_page_title: 'Bắt đầu đặt cược Thể thao ảo với Dafabet!'
 critical_announcement_content:
   value: "<p>Chức năng Chat Trực Tuyến sẽ không hoạt động từ 5:00 AM đến 5:30 AM (GMT+8) vào ngày 21/2 để nâng cấp hệ thống nhằm mang lại trải nghiệm tốt hơn cho người chơi. Trong thời gian này, quý khách có thể liên hệ chúng tôi qua Email hoặc Zalo. Cảm ơn quý khách.</p>\r\n"
   format: basic_html
-header_settings_tab__active_tab: edit-balance-group
+header_settings_tab__active_tab: edit-login-group
 logo_title: 'Virtual Sports Betting at Dafabet'
 capslock_notification: 'Đang bật CAP LOCK'
 balance_label_override: '综合钱包 '
@@ -14,7 +14,7 @@ news_announcement_content:
 join_now_text: 'THAM GIA NGAY'
 join_now_link: '/{domain:entry}/{lang}/join/virtual-sports[query:({tracking})]'
 login_issue_text: 'Không thể đăng nhập?'
-login_issue_link: '/{domain:entry}/{domain:lang_token}/cant-login{tracking.token}'
+login_issue_link: '/{domain:myaccount_domain}/{domain:lang_token}/cant-login[query:({tracking})]'
 product_balance_label: 'Casino Trực Tuyến, Trò chơi, Arcade, & Thể thao ảo'
 total_balance_label: 'Tổng Số Dư'
 balance_error_text: 'Đã xảy ra lỗi'
