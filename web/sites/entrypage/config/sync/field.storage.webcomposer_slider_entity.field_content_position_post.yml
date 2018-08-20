@@ -1,0 +1,33 @@
+uuid: e98c61ab-4004-4857-8ecd-ab9db94c7ba4
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - webcomposer_slider
+id: webcomposer_slider_entity.field_content_position_post
+field_name: field_content_position_post
+entity_type: webcomposer_slider_entity
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: top
+      label: Top
+    -
+      value: bottom
+      label: Bottom
+    -
+      value: left
+      label: Left
+    -
+      value: right
+      label: Right
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

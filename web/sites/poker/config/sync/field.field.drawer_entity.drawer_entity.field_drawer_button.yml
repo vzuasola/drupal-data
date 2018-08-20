@@ -1,0 +1,25 @@
+uuid: 3a25d862-7bc3-4d9a-97e3-8979e069690d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.drawer_entity.field_drawer_button
+  module:
+    - link
+    - webcomposer_drawer
+_core:
+  default_config_hash: l_I9uYt3om1gA0o-ukdcfKMVeRaAUgmJe-GpSzryYC0
+id: drawer_entity.drawer_entity.field_drawer_button
+field_name: field_drawer_button
+entity_type: drawer_entity
+bundle: drawer_entity
+label: 'Drawer Button'
+description: 'The button on the drawer'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

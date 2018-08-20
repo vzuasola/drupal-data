@@ -1,0 +1,16 @@
+uuid: 62f0c3a8-1bec-48fb-b222-d61fd3a48c63
+langcode: en
+status: true
+dependencies:
+  module:
+    - serialization
+    - user
+id: entity.entity_view_display
+plugin_id: 'entity:entity_view_display'
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+    supported_auth:
+      - cookie

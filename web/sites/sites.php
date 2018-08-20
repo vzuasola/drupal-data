@@ -65,6 +65,10 @@ $sites['dafa-sports.drupal.dev'] = 'dafa-sports';
 $sites['mobile-entrypage.drupal.dev'] = 'mobile-entrypage';
 $sites['mobile-entrypage.drupal.local'] = 'mobile-entrypage';
 
+// Mobile Games Revamp instance
+$sites['mobile-games.drupal.dev'] = 'mobile-games';
+$sites['mobile-games.drupal.local'] = 'mobile-games';
+
 // Poker revamp instance
 $sites['poker.drupal.local'] = 'poker';
 $sites['poker.drupal.dev'] = 'poker';

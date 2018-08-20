@@ -1,4 +1,4 @@
-uuid: 541b4e0f-a88d-44a8-a8b1-eb38cdc0cf9f
+uuid: 3783a9e6-17f4-452f-8011-a6bf9758644c
 langcode: en
 status: true
 dependencies:
@@ -9,8 +9,8 @@ dependencies:
 third_party_settings:
   content_translation:
     enabled: true
-_core:
-  default_config_hash: plaJ5juMMm_xCH_YNGwmCWieBrpfRAMEzSlnxRiMHQ8
+    bundle_settings:
+      untranslatable_fields_hide: '0'
 id: paragraph.metatag
 target_entity_type_id: paragraph
 target_bundle: metatag

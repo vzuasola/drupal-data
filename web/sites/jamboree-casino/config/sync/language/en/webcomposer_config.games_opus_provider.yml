@@ -1,0 +1,7 @@
+opus_fallback_error: Error
+opus_game_loader_content:
+  value: "<p>An unexpected error occurred.\r\nThis window will close in few seconds.\r\n\r\nPlease try again soon.<p>"
+opus_unsupported_currencies_title: 'Currency not supported'
+opus_unsupported_currencies_message:
+  value: "<p>Sorry, your currency is not supported.\r\nPlease choose other gaming rooms.</p>"
+opus_unsupported_currencies_button: Ok

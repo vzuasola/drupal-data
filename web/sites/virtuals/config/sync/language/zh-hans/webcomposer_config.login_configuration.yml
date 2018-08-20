@@ -13,8 +13,8 @@ error_message_blank_password: 你的密码为必填项。
 error_message_blank_passname: 请检查所有字段，再试一次。
 error_message_invalid_passname: 对不起，您输入了无效的用户名和/或密码。请再试一次。
 error_message_service_not_available: 服务暂不可用。
-error_message_account_suspended: 帐户已被锁定。请联系我们的客户支持。
-error_message_account_locked: 帐户已被锁定。请联系我们的客户支持。
+error_message_account_suspended: '您的账户由于登录失败已被锁定。 请联系客服处理。 '
+error_message_account_locked: '您的账户由于登录失败已被锁定。 请联系客服处理。 '
 autologout_box_title: 提示
 affirmative_button_text: 是
 negative_button_text: 不

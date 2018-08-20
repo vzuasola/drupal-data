@@ -1,3 +1,3 @@
-javascript_assets: 'https://test-virtual.golden-race.net/web-v2/golden-race-online-loader.js"  id ="golden-race-online-loader'
-languages: "sc|zh_CN\r\nch|zh-cn\r\nkr|ko\r\nvn|en\r\njp|en\r\neu|en\r\nid|en\r\nin|en\r\ngr|en\r\npl|en\r\nen|en-us"
-currency: "RMB\r\nUSD"
+javascript_assets: 'https://admin.mixmoon.net/desktop-v3/default/golden-race-desktop-loader.js"  id ="golden-race-desktop-loader'
+languages: "sc|zh-CN\r\nch|zh-CN\r\nkr|ko-KR\r\nvn|vi-VN\r\njp|ja-JP\r\nen|en-GB\r\nth|th-TH\r\nid|id-ID"
+currency: "USD\r\nGBP\r\nRMB\r\nMYR\r\nTHB\r\nKRW\r\nVND\r\nIDR\r\nPLN\r\nRUB\r\nINR\r\nEUR"

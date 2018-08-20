@@ -1,0 +1,5 @@
+name: Webcomposer Permission
+type: module
+description: Webcomposer Permission Configuration
+core: 8.x
+package: Web Composer

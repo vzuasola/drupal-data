@@ -15,7 +15,7 @@ bundle: drawer_entity
 label: 'Drawer Class'
 description: 'Additional classes to bind to this drawer'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

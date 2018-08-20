@@ -136,5 +136,7 @@ if (file_exists($app_root . '/' . $site_path . '/database.php')) {
 $env = getenv('DRUPAL_ENV');
 
 if ($env && $env == 'local') {
-    require __DIR__ . '/base.settings.local.php';
+  require __DIR__ . '/base.settings.local.php';
+
+  $config['system.logging']['error_level'] = 'verbose';
 }
