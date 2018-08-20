@@ -1,0 +1,19 @@
+uuid: 0424415c-e0cf-4e26-a665-3167e534e31f
+langcode: en
+status: true
+dependencies:
+  module:
+    - text
+    - webcomposer_slider
+id: webcomposer_slider_entity.field_blurb_post
+field_name: field_blurb_post
+entity_type: webcomposer_slider_entity
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

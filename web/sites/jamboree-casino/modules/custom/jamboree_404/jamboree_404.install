@@ -1,0 +1,20 @@
+<?php
+/**
+ * Implements hook_uninstall
+ */
+function jamboree_404_uninstall() {
+  $keys = [
+    'core.base_field_override.jamboree_404_image_entity.jamboree_404_image_entity.metatag.yml',
+    'core.entity_form_display.jamboree_404_image_entity.jamboree_404_image_entity.default.yml',
+    'core.entity_view_display.jamboree_404_image_entity.jamboree_404_image_entity.default.yml',
+    'field.field.jamboree_404_image_entity.jamboree_404_image_entity.field_image.yml',
+    'field.storage.jamboree_404_image_entity.field_image.yml',
+    'language.content_settings.jamboree_404_image_entity.jamboree_404_image_entity.yml',
+    'metatag.metatag_defaults.404.yml',
+    'views.view.jamboree_404_page_images.yml',
+  ];
+
+  foreach ($keys as $key) {
+    \Drupal::configFactory()->getEditable($key)->delete();
+  }
+}

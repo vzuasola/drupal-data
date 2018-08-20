@@ -1,0 +1,17 @@
+uuid: 920cddcc-3e59-4654-8c5c-620ebea071c2
+langcode: en
+status: true
+dependencies:
+  module:
+    - content_translation
+    - jamboree_jackpot
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: jamboree_jackpot_entity.jamboree_jackpot_entity
+target_entity_type_id: jamboree_jackpot_entity
+target_bundle: jamboree_jackpot_entity
+default_langcode: site_default
+language_alterable: true

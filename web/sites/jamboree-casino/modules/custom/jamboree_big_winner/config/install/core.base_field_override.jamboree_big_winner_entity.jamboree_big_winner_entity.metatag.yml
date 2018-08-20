@@ -1,0 +1,18 @@
+uuid: 6b9defe7-4a0c-4ed8-abf3-19418d40c4e6
+langcode: ja
+status: true
+dependencies:
+  module:
+    - jamboree_big_winner
+id: jamboree_big_winner_entity.jamboree_big_winner_entity.metatag
+field_name: metatag
+entity_type: jamboree_big_winner_entity
+bundle: jamboree_big_winner_entity
+label: Metatags
+description: 'The metatags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

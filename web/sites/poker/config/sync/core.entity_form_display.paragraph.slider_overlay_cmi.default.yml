@@ -3,32 +3,26 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.slider_overlay_cmi.field_link
-    - field.field.paragraph.slider_overlay_cmi.field_link_target
     - field.field.paragraph.slider_overlay_cmi.field_log_in_state
     - field.field.paragraph.slider_overlay_cmi.field_post_link
     - field.field.paragraph.slider_overlay_cmi.field_post_link_target
-    - field.field.paragraph.slider_overlay_cmi.field_post_overlay_blurb
-    - field.field.paragraph.slider_overlay_cmi.field_post_overlay_image
-    - field.field.paragraph.slider_overlay_cmi.field_slideroverlay_blurb
+    - field.field.paragraph.slider_overlay_cmi.field_post_overlay_item
+    - field.field.paragraph.slider_overlay_cmi.field_pre_link_target
+    - field.field.paragraph.slider_overlay_cmi.field_pre_overlay_item
+    - field.field.paragraph.slider_overlay_cmi.field_pre_overlay_link
     - field.field.paragraph.slider_overlay_cmi.field_slideroverlay_cmi_enable
-    - field.field.paragraph.slider_overlay_cmi.field_slideroverlay_image
-    - image.style.thumbnail
     - paragraphs.paragraphs_type.slider_overlay_cmi
   module:
-    - conditional_fields
     - field_group
-    - image
     - link
     - text
 third_party_settings:
   field_group:
     group_pre_login:
       children:
-        - field_slideroverlay_image
-        - field_slideroverlay_blurb
-        - field_link
-        - field_link_target
+        - field_pre_overlay_item
+        - field_pre_overlay_link
+        - field_pre_link_target
       parent_name: ''
       weight: 3
       format_type: details
@@ -40,12 +34,11 @@ third_party_settings:
       label: 'Pre Login'
     group_post_login:
       children:
-        - field_post_overlay_image
-        - field_post_overlay_blurb
+        - field_post_overlay_item
         - field_post_link
         - field_post_link_target
       parent_name: ''
-      weight: 20
+      weight: 5
       format_type: details
       format_settings:
         id: ''
@@ -60,22 +53,6 @@ targetEntityType: paragraph
 bundle: slider_overlay_cmi
 mode: default
 content:
-  field_link:
-    third_party_settings:
-      conditional_fields: {  }
-    weight: 4
-    settings:
-      placeholder_url: ''
-      placeholder_title: ''
-    type: link_default
-    region: content
-  field_link_target:
-    third_party_settings:
-      conditional_fields: {  }
-    weight: 5
-    settings: {  }
-    type: options_select
-    region: content
   field_log_in_state:
     weight: 1
     settings: {  }
@@ -83,49 +60,48 @@ content:
     type: options_buttons
     region: content
   field_post_link:
-    weight: 7
+    weight: 8
     settings:
       placeholder_url: ''
       placeholder_title: ''
-    third_party_settings:
-      conditional_fields: {  }
+    third_party_settings: {  }
     type: link_default
     region: content
   field_post_link_target:
-    weight: 8
+    weight: 10
     settings: {  }
-    third_party_settings:
-      conditional_fields: {  }
+    third_party_settings: {  }
     type: options_select
     region: content
-  field_post_overlay_blurb:
-    weight: 6
+  field_post_overlay_item:
+    weight: 7
     settings:
-      rows: 9
-      summary_rows: 3
+      rows: 5
       placeholder: ''
-    third_party_settings:
-      conditional_fields: {  }
-    type: text_textarea_with_summary
+    third_party_settings: {  }
+    type: text_textarea
     region: content
-  field_post_overlay_image:
-    weight: 5
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings:
-      conditional_fields: {  }
-    type: image_image
+  field_pre_link_target:
+    weight: 23
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
-  field_slideroverlay_blurb:
-    weight: 3
+  field_pre_overlay_item:
+    weight: 21
     settings:
-      rows: 9
-      summary_rows: 3
+      rows: 5
       placeholder: ''
-    third_party_settings:
-      conditional_fields: {  }
-    type: text_textarea_with_summary
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_pre_overlay_link:
+    weight: 22
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
     region: content
   field_slideroverlay_cmi_enable:
     weight: 0
@@ -133,15 +109,6 @@ content:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
-    region: content
-  field_slideroverlay_image:
-    weight: 2
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings:
-      conditional_fields: {  }
-    type: image_image
     region: content
   translation:
     weight: 2

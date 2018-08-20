@@ -1,10 +1,8 @@
 <?php
-
 namespace Drupal\custom_inner_pages\Form;
 
 use Drupal\webcomposer_config_schema\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\file\Entity\File;
 
 /**
  * How to Play form plugin
@@ -24,7 +22,6 @@ use Drupal\file\Entity\File;
  * )
  */
 class HowToPlayConfiguration extends FormBase {
-
   /**
    * @inheritdoc
    */
@@ -36,22 +33,20 @@ class HowToPlayConfiguration extends FormBase {
    * @inheritdoc
    */
   public function form(array $form, FormStateInterface $form_state) {
-    $config = $this->config('poker_config.how_to_play_page');
-
     $form['how_to_play_page_tab'] = array(
       '#type' => 'vertical_tabs',
       '#title' => t('Settings'),
     );
 
-    $this->generalConfig($form, $config);
-    $this->firstTab($form, $config);
-    $this->secondTab($form, $config);
-    $this->thirdTab($form, $config);
+    $this->generalConfig($form);
+    $this->firstTab($form);
+    $this->secondTab($form);
+    $this->thirdTab($form);
 
     return $form;
   }
 
-  private function generalConfig(&$form, $config) {
+  private function generalConfig(&$form) {
     $form['gen_config'] = array(
       '#type' => 'details',
       '#title' => $this->t('General Configuration'),
@@ -63,13 +58,13 @@ class HowToPlayConfiguration extends FormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Page Title'),
       '#description' => $this->t('This will appear in browser page tab title'),
-      '#default_value' => $config->get('page_title'),
+      '#default_value' => $this->get('page_title'),
       '#required' => TRUE,
       '#translatable' => TRUE,
     );
   }
 
-  private function firstTab(&$form, $config) {
+  private function firstTab(&$form) {
     $form['first_tab'] = array(
       '#type' => 'details',
       '#title' => $this->t('First Tab'),
@@ -81,7 +76,7 @@ class HowToPlayConfiguration extends FormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Tab Title'),
       '#description' => $this->t('Add Tab Title to How to play first tab'),
-      '#default_value' => $config->get('first_tab_title'),
+      '#default_value' => $this->get('first_tab_title'),
       '#required' => TRUE,
       '#translatable' => TRUE,
     );
@@ -90,20 +85,20 @@ class HowToPlayConfiguration extends FormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Tab ID'),
       '#description' => $this->t('Add Tab ID of secondary menu on How to play first tab'),
-      '#default_value' => $config->get('first_tab_id'),
+      '#default_value' => $this->get('first_tab_id'),
       '#required' => TRUE,
       '#translatable' => TRUE,
     );
 
     $form['first_tab']['file_image_first_tab_icon'] = [
       '#type' => 'managed_file',
-      '#title' => t('Tab Highlighted Icon'),
+      '#title' => t('Tab Default Icon'),
       '#description' => t('Upload a file, allowed extensions: jpg, jpeg, png, gif'),
       '#upload_location' => 'public://',
       '#upload_validators' => [
         'file_validate_extensions' => ['png jpg jpeg'],
       ],
-      '#default_value' => $config->get('file_image_first_tab_icon'),
+      '#default_value' => $this->get('file_image_first_tab_icon'),
       '#required' => TRUE,
     ];
 
@@ -115,11 +110,11 @@ class HowToPlayConfiguration extends FormBase {
       '#upload_validators' => [
         'file_validate_extensions' => ['png jpg jpeg'],
       ],
-      '#default_value' => $config->get('file_image_first_tab_icon_hover'),
+      '#default_value' => $this->get('file_image_first_tab_icon_hover'),
       '#required' => TRUE,
     ];
 
-    $firstTabContent = $config->get('first_tab_content');
+    $firstTabContent = $this->get('first_tab_content');
     $form['first_tab']['first_tab_content'] = array(
       '#type' => 'text_format',
       '#title' => $this->t('Content'),
@@ -130,7 +125,7 @@ class HowToPlayConfiguration extends FormBase {
     );
   }
 
-  private function secondTab(&$form, $config) {
+  private function secondTab(&$form) {
     $form['second_tab'] = array(
       '#type' => 'details',
       '#title' => $this->t('Second Tab'),
@@ -142,7 +137,7 @@ class HowToPlayConfiguration extends FormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Tab Title'),
       '#description' => $this->t('Add Tab Title to How to play second tab'),
-      '#default_value' => $config->get('second_tab_title'),
+      '#default_value' => $this->get('second_tab_title'),
       '#required' => TRUE,
       '#translatable' => TRUE,
     );
@@ -151,20 +146,20 @@ class HowToPlayConfiguration extends FormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Tab ID'),
       '#description' => $this->t('Add Tab ID of secondary menu on How to play second tab'),
-      '#default_value' => $config->get('second_tab_id'),
+      '#default_value' => $this->get('second_tab_id'),
       '#required' => TRUE,
       '#translatable' => TRUE,
     );
 
     $form['second_tab']['file_image_second_tab_icon'] = [
       '#type' => 'managed_file',
-      '#title' => t('Tab Highlighted Icon'),
+      '#title' => t('Tab Default Icon'),
       '#description' => t('Upload a file, allowed extensions: jpg, jpeg, png, gif'),
       '#upload_location' => 'public://',
       '#upload_validators' => [
         'file_validate_extensions' => ['png jpg jpeg'],
       ],
-      '#default_value' => $config->get('file_image_second_tab_icon'),
+      '#default_value' => $this->get('file_image_second_tab_icon'),
       '#required' => TRUE,
     ];
 
@@ -176,11 +171,11 @@ class HowToPlayConfiguration extends FormBase {
       '#upload_validators' => [
         'file_validate_extensions' => ['png jpg jpeg'],
       ],
-      '#default_value' => $config->get('file_image_second_tab_icon_hover'),
+      '#default_value' => $this->get('file_image_second_tab_icon_hover'),
       '#required' => TRUE,
     ];
 
-    $secondTabContent = $config->get('second_tab_content');
+    $secondTabContent = $this->get('second_tab_content');
     $form['second_tab']['second_tab_content'] = array(
       '#type' => 'text_format',
       '#title' => $this->t('Content'),
@@ -191,7 +186,7 @@ class HowToPlayConfiguration extends FormBase {
     );
   }
 
-  private function thirdTab(&$form, $config) {
+  private function thirdTab(&$form) {
     $form['third_tab'] = array(
       '#type' => 'details',
       '#title' => $this->t('Third Tab'),
@@ -203,7 +198,7 @@ class HowToPlayConfiguration extends FormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Tab Title'),
       '#description' => $this->t('Add Tab Title to How to play third tab'),
-      '#default_value' => $config->get('third_tab_title'),
+      '#default_value' => $this->get('third_tab_title'),
       '#required' => TRUE,
       '#translatable' => TRUE,
     );
@@ -212,20 +207,20 @@ class HowToPlayConfiguration extends FormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Tab ID'),
       '#description' => $this->t('Add Tab ID of secondary menu on How to play third tab'),
-      '#default_value' => $config->get('third_tab_id'),
+      '#default_value' => $this->get('third_tab_id'),
       '#required' => TRUE,
       '#translatable' => TRUE,
     );
 
     $form['third_tab']['file_image_third_tab_icon'] = [
       '#type' => 'managed_file',
-      '#title' => t('Tab Highlighted Icon'),
+      '#title' => t('Tab Default Icon'),
       '#description' => t('Upload a file, allowed extensions: jpg, jpeg, png, gif'),
       '#upload_location' => 'public://',
       '#upload_validators' => [
         'file_validate_extensions' => ['png jpg jpeg'],
       ],
-      '#default_value' => $config->get('file_image_third_tab_icon'),
+      '#default_value' => $this->get('file_image_third_tab_icon'),
       '#required' => TRUE,
     ];
 
@@ -237,11 +232,11 @@ class HowToPlayConfiguration extends FormBase {
       '#upload_validators' => [
         'file_validate_extensions' => ['png jpg jpeg'],
       ],
-      '#default_value' => $config->get('file_image_third_tab_icon_hover'),
+      '#default_value' => $this->get('file_image_third_tab_icon_hover'),
       '#required' => TRUE,
     ];
 
-    $thirdTabContent = $config->get('third_tab_content');
+    $thirdTabContent = $this->get('third_tab_content');
     $form['third_tab']['third_tab_content'] = array(
       '#type' => 'text_format',
       '#title' => $this->t('Content'),

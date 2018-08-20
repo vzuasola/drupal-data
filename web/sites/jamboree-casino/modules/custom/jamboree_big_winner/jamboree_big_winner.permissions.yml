@@ -1,0 +1,22 @@
+add jamboree big winner entity entities:
+  title: 'Create new Jamboree big winner entity entities'
+
+administer jamboree big winner entity entities:
+  title: 'Administer Jamboree big winner entity entities'
+  description: 'Allow to access the administration form to configure Jamboree big winner entity entities.'
+  restrict access: true
+
+delete jamboree big winner entity entities:
+  title: 'Delete Jamboree big winner entity entities'
+
+edit jamboree big winner entity entities:
+  title: 'Edit Jamboree big winner entity entities'
+
+access jamboree big winner entity overview:
+  title: 'Access the Jamboree big winner entity overview page'
+
+view published jamboree big winner entity entities:
+  title: 'View published Jamboree big winner entity entities'
+
+view unpublished jamboree big winner entity entities:
+  title: 'View unpublished Jamboree big winner entity entities'

@@ -15,11 +15,11 @@ entity_type: dropdown_menu_entity
 bundle: dropdown_menu_entity
 label: 'Mobile Menu Link Options'
 description: ''
-required: false
+required: true
 translatable: false
 default_value:
   -
-    value: desktop
+    value: both
 default_value_callback: ''
 settings: {  }
 field_type: list_string

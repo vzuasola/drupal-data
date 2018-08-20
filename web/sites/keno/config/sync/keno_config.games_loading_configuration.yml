@@ -1,6 +1,6 @@
 games_loading_configuration_tab__active_tab: edit-loading-message
 loading_message_content:
-  value: "<p class=\"text-center\"><img alt=\"loading-logo_0.png\" data-entity-type=\"\" data-entity-uuid=\"\" height=\"69\" src=\"/sites/keno/files/loading-logo_0.png\" width=\"331\" />\r\n</p>\r\n"
+  value: "<p class=\"text-center\"><img alt=\"loading-logo_0.png\" data-entity-type=\"\" data-entity-uuid=\"\" height=\"69\" src=\"/sites/keno/files/loading-logo_0.png\" width=\"331\" /></p>\r\n"
   format: basic_html
 value: null
 format: null

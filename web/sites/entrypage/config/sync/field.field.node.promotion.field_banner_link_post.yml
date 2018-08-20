@@ -1,0 +1,23 @@
+uuid: caebddd4-b25e-4af6-8151-8d6128361b81
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_banner_link_post
+    - node.type.promotion
+  module:
+    - link
+id: node.promotion.field_banner_link_post
+field_name: field_banner_link_post
+entity_type: node
+bundle: promotion
+label: 'Post Login Banner Link'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+field_type: link

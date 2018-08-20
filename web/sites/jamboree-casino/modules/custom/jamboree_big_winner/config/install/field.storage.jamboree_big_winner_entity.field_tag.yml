@@ -1,0 +1,20 @@
+uuid: b1d01390-2e2f-4ef7-8720-680f700cbb36
+langcode: ja
+status: true
+dependencies:
+  module:
+    - jamboree_big_winner
+    - taxonomy
+id: jamboree_big_winner_entity.field_tag
+field_name: field_tag
+entity_type: jamboree_big_winner_entity
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

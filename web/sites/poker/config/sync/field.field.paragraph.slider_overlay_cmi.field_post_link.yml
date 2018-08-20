@@ -1,4 +1,4 @@
-uuid: 6f722c51-6bf0-41d6-824f-8f07119e0bbe
+uuid: 1ca40f72-0a34-4b6f-a532-1e24b4e19fc8
 langcode: en
 status: true
 dependencies:
@@ -11,7 +11,7 @@ id: paragraph.slider_overlay_cmi.field_post_link
 field_name: field_post_link
 entity_type: paragraph
 bundle: slider_overlay_cmi
-label: 'Post Link'
+label: 'Post overlay Link'
 description: ''
 required: false
 translatable: true

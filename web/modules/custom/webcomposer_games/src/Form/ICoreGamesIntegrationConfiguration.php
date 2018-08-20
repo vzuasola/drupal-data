@@ -81,6 +81,14 @@ class ICoreGamesIntegrationConfiguration extends ConfigFormBase {
         '#description' => $this->t("Language mapping for {$value}."),
         '#default_value' => $config->get("{$key}_language_mapping")
       ];
+      $form[$key]["{$key}_country"] = [
+        '#type' => 'textarea',
+        '#title' => t('Country'),
+        '#size' => 500,
+        '#description' => $this->t("Define the Unsupported Country code for {$value} games.
+           "),
+        '#default_value' => $config->get("{$key}_country")
+       ];
     }
 
     foreach (self::ICORE_GAME_GX_PROVIDERS as $key => $value) {
@@ -125,14 +133,7 @@ class ICoreGamesIntegrationConfiguration extends ConfigFormBase {
         '#description' => $this->t("Please enter Exit Url."),
         '#default_value' => $config->get("{$key}_exit_url")
       ];
-      $form[$key]["{$key}_country"] = [
-        '#type' => 'textarea',
-        '#title' => t('Country'),
-        '#size' => 500,
-        '#description' => $this->t('Define the Unsupported Country code for Gameworx Lottery games.
-           '),
-        '#default_value' => $config->get("{$key}_country")
-       ];
+      
     }
 
     $form['message'] = [
@@ -237,6 +238,7 @@ class ICoreGamesIntegrationConfiguration extends ConfigFormBase {
     foreach (self::ICORE_GAME_PROVIDERS as $key => $value) {
       $providers[] = "{$key}_currency";
       $providers[] = "{$key}_language_mapping";
+      $providers[] = "{$key}_country";
     }
 
     foreach (self::ICORE_GAME_GX_PROVIDERS as $key => $value) {
@@ -246,8 +248,6 @@ class ICoreGamesIntegrationConfiguration extends ConfigFormBase {
       $providers[] = "{$key}_plugin_id";
       $providers[] = "{$key}_operator_id";
       $providers[] = "{$key}_lobby_type";
-      $providers[] = "{$key}_country";
-       
     }
 
     $keys = [

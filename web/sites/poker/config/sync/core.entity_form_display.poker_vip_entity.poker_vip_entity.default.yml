@@ -1,0 +1,58 @@
+uuid: fa0d3d67-3fdc-46c4-a7c4-0c704fec7c03
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.poker_vip_entity.poker_vip_entity.field_vip_content
+    - field.field.poker_vip_entity.poker_vip_entity.field_vip_secondary_tab_id
+    - field.field.poker_vip_entity.poker_vip_entity.field_vip_secondary_title
+    - field.field.poker_vip_entity.poker_vip_entity.field_vip_tab_id
+  module:
+    - poker_vip_page
+    - text
+id: poker_vip_entity.poker_vip_entity.default
+targetEntityType: poker_vip_entity
+bundle: poker_vip_entity
+mode: default
+content:
+  field_vip_content:
+    weight: 4
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_vip_secondary_tab_id:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_vip_secondary_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_vip_tab_id:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  langcode:
+    type: language_select
+    weight: 0
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+hidden:
+  name: true
+  translation: true
+  user_id: true

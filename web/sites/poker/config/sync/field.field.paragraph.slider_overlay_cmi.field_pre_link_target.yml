@@ -1,0 +1,23 @@
+uuid: 4ca25d9d-0360-4807-8757-94431031ffd0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_pre_link_target
+    - paragraphs.paragraphs_type.slider_overlay_cmi
+  module:
+    - options
+id: paragraph.slider_overlay_cmi.field_pre_link_target
+field_name: field_pre_link_target
+entity_type: paragraph
+bundle: slider_overlay_cmi
+label: 'Pre Link Target'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: _self
+default_value_callback: ''
+settings: {  }
+field_type: list_string

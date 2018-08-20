@@ -51,4 +51,10 @@ function registration_form_webcomposer_form_validation_alter(&$validations) {
       '(must have a Birthdate format on field settings)',
     'error' => 'Date is invalid',
   ];
+  // password validation
+  $validations['not_match_username'] = [
+    'title' => 'Not Match Username',
+    'description' => 'Validation to disallow current username as password',
+    'error' => 'Password should not equal to username',
+  ];
 }

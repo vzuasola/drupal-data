@@ -1,0 +1,54 @@
+uuid: 8e409aa8-7e8e-42d0-b711-72b52ed7b519
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.jamboree_f_a_q_entity.jamboree_f_a_q_entity.field_answers
+    - field.field.jamboree_f_a_q_entity.jamboree_f_a_q_entity.field_faq_category
+    - field.field.jamboree_f_a_q_entity.jamboree_f_a_q_entity.field_question
+  module:
+    - jamboree_faq
+    - text
+id: jamboree_f_a_q_entity.jamboree_f_a_q_entity.default
+targetEntityType: jamboree_f_a_q_entity
+bundle: jamboree_f_a_q_entity
+mode: default
+content:
+  field_answers:
+    weight: 2
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea_with_summary
+    region: content
+  field_faq_category:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_question:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  langcode:
+    type: language_select
+    weight: 3
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  name: true
+  user_id: true
