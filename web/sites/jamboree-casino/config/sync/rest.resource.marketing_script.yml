@@ -1,0 +1,17 @@
+uuid: 4e315b95-abe2-45df-af9d-b1a990e88211
+langcode: en
+status: true
+dependencies:
+  module:
+    - serialization
+    - user
+    - webcomposer_marketing_script
+id: marketing_script
+plugin_id: marketing_script
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+    supported_auth:
+      - cookie

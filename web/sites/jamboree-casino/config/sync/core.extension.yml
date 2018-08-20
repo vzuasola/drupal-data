@@ -86,6 +86,7 @@ module:
   webcomposer_form_manager: 0
   webcomposer_games: 0
   webcomposer_mailer: 0
+  webcomposer_marketing_script: 0
   webcomposer_partner: 0
   webcomposer_rest_extra: 0
   webcomposer_seo: 0
