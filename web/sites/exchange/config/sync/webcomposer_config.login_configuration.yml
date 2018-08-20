@@ -26,3 +26,8 @@ notification_window_title: 'Session Timeout'
 mobile_login_url: 'https://qa1-casino.elysium-dfbt.com/'
 mobile_login_button_label: ''
 login_page_blurb: ''
+advanced__active_tab: edit-login-form-details
+rememberme_label: ''
+value: null
+format: null
+mobile_cant_login_url: ''
