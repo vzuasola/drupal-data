@@ -1,8 +1,9 @@
-javascript_assets: 'https://extstg2-login01.ptstaging.eu/jswrapper/integration.js.php?casino=ptstaging2.78'
+javascript_assets: "https://extstg2-login01.ptstaging.eu/jswrapper/integration.js.php?casino=ptstaging2.78\r\n"
 lobby_url: 'https://www.google-analytics.com/lobby.js'
 playtech_pas_endpoint: 'https://login.megasportcasino.com/Login.php'
 playtech_pas_casino: ptstaging2.78
-languages: "en|en\r\njp|ja"
+languages: "en|en\r\nja|ja"
 _core:
   default_config_hash: 44f16f0qKZJuxkuiP2e1YfOhM2iQbeq5MWa1Qrp3HV8
-iapiconf_override: ''
+iapiconf_override: loginDomainRetryCount|3
+langcode: ja

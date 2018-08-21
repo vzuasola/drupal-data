@@ -1,0 +1,18 @@
+uuid: 5d1fa109-bd94-4523-9ac9-fdda1e4b95f2
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.mobile_game_category
+id: taxonomy_term.mobile_game_category.metatag
+field_name: metatag
+entity_type: taxonomy_term
+bundle: mobile_game_category
+label: Metatags
+description: 'The metatags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

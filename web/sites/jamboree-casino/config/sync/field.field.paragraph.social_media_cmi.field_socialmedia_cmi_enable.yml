@@ -14,7 +14,7 @@ bundle: social_media_cmi
 label: Enable
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value:
   -
     value: 1

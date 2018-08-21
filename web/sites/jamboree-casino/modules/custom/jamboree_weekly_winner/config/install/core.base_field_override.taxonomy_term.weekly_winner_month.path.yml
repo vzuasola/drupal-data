@@ -1,0 +1,20 @@
+uuid: c4fb63a3-cd80-44c2-ba01-08ca6345c0a5
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.weekly_winner_month
+  module:
+    - path
+id: taxonomy_term.weekly_winner_month.path
+field_name: path
+entity_type: taxonomy_term
+bundle: weekly_winner_month
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

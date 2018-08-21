@@ -40,6 +40,8 @@ function jamboree_desktop_games_uninstall() {
     'taxonomy.vocabulary.desktop_game_category.yml',
     'taxonomy.vocabulary.game_tag.yml',
     'views.view.game_tag.yml',
+    'views.view.game_list.yml',
+    'views.view.game_category.yml',
   ];
 
   foreach ($keys as $key) {

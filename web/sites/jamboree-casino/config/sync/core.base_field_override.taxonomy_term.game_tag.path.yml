@@ -1,0 +1,20 @@
+uuid: a8e8d1cd-1858-41ef-8c94-a0eebac2c4d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.game_tag
+  module:
+    - path
+id: taxonomy_term.game_tag.path
+field_name: path
+entity_type: taxonomy_term
+bundle: game_tag
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

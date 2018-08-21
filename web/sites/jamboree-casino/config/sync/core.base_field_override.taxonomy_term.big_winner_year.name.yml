@@ -1,0 +1,18 @@
+uuid: a4c1943d-a8d4-4e32-9cc7-fa809de100f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.big_winner_year
+id: taxonomy_term.big_winner_year.name
+field_name: name
+entity_type: taxonomy_term
+bundle: big_winner_year
+label: Name
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
