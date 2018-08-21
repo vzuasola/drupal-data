@@ -1,0 +1,19 @@
+uuid: c035dee0-245d-460f-a679-1dcfc8eda9a8
+langcode: en
+status: true
+dependencies:
+  module:
+    - text
+    - webcomposer_drawer
+id: drawer_entity.field_drawer_summary_post
+field_name: field_drawer_summary_post
+entity_type: drawer_entity
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
