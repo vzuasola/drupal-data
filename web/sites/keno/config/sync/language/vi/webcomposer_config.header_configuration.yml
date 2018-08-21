@@ -1,5 +1,5 @@
 lobby_page_title: 'Chơi Keno tại Dafabet, nhà cái cá cược hàng đầu Châu Á!'
-header_settings_tab__active_tab: edit-login-group
+header_settings_tab__active_tab: edit-header-other-group
 logo_title: 'Bet on your Keno Winning Numbers at Dafabet'
 capslock_notification: 'Đang bật CAP LOCK'
 balance_label_override: '综合钱包 '
@@ -12,7 +12,7 @@ news_announcement_content:
   value: "<p>test</p>\r\n"
   format: basic_html
 join_now_text: 'THAM GIA NGAY'
-join_now_link: '/{domain:myaccount_domain}/{domain:lang_token}/cant-login[query:({tracking})]'
+join_now_link: '/{domain:entry}/{domain:lang_token}/join/lottery[query:({tracking})]'
 login_issue_text: 'Quên mật khẩu?'
 login_issue_link: '/{domain:myaccount_domain}/{domain:lang_token}/cant-login[query:({tracking})]'
 product_balance_label: 'Số Dư Keno'
