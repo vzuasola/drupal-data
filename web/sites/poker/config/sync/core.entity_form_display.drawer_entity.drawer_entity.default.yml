@@ -8,6 +8,7 @@ dependencies:
     - field.field.drawer_entity.drawer_entity.field_drawer_id
     - field.field.drawer_entity.drawer_entity.field_drawer_media
     - field.field.drawer_entity.drawer_entity.field_drawer_summary
+    - field.field.drawer_entity.drawer_entity.field_drawer_summary_post
     - field.field.drawer_entity.drawer_entity.field_drawer_title
   module:
     - link
@@ -22,7 +23,7 @@ bundle: drawer_entity
 mode: default
 content:
   field_drawer_button:
-    weight: 4
+    weight: 5
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -30,7 +31,7 @@ content:
     type: link_default
     region: content
   field_drawer_class:
-    weight: 6
+    weight: 7
     settings:
       size: 60
       placeholder: ''
@@ -47,7 +48,7 @@ content:
     region: content
   field_drawer_media:
     type: entity_reference_paragraphs
-    weight: 7
+    weight: 8
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -59,6 +60,14 @@ content:
     region: content
   field_drawer_summary:
     weight: 3
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_drawer_summary_post:
+    weight: 4
     settings:
       rows: 5
       placeholder: ''
@@ -82,7 +91,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 5
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
