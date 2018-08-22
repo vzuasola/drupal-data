@@ -5,6 +5,7 @@ namespace Drupal\owsports_config\Form;
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\file\Entity\File;
+use Drupal\Core\Datetime\DrupalDateTime;
 
 class OWSportsCustomConfigForm extends ConfigFormBase {
 
@@ -196,6 +197,57 @@ class OWSportsCustomConfigForm extends ConfigFormBase {
       '#default_value' => $config->get('singbet_template'),
     ];
 
+    $form['maintenance_group'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Maintenance Config'),
+      '#collapsible' => TRUE,
+      '#group' => 'owsports_settings_tab',
+    ];
+
+    $form['maintenance_group']['maintenance_feature'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Soft Maintenance Page Status'),
+      '#description' => $this->t('Enable this feature to show the soft maintenance page behaviour in the frontend.'),
+      '#default_value' => $config->get('maintenance_feature'),
+    ];
+
+    $form['maintenance_group']['file_image_maintenance'] = [
+      '#type' => 'managed_file',
+      '#title' => $this->t('Maintenance Image'),
+      '#default_value' => $config->get('file_image_maintenance'),
+      '#upload_location' => 'public://',
+      '#upload_validators' => [
+        'file_validate_extensions' => ['gif png jpg jpeg'],
+      ],
+    ];
+
+    $form['maintenance_group']['maintenance_content'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('Maintenance Content'),
+      '#description' => $this->t('Maintenance blurb content to display.'),
+      '#default_value' => $config->get('maintenance_content')['value'],
+      '#format' => $config->get('maintenance_content')['format'],
+    ];
+
+    $maintenance_publish_date = $config->get('maintenance_publish_date') ? DrupalDateTime::createFromTimestamp(strtotime($config->get('maintenance_publish_date'))) : "";
+    $maintenance_unpublish_date = $config->get('maintenance_unpublish_date') ? DrupalDateTime::createFromTimestamp(strtotime($config->get('maintenance_unpublish_date'))) : "";
+
+    $form['maintenance_group']['maintenance_publish_date'] = [
+      '#type' => 'datetime',
+      '#title' => $this->t('Publish Date'),
+      '#description' => $this->t('Publishing date for the maintenance page.'),
+      '#default_value' => $maintenance_publish_date,
+      '#format' => 'm/d/Y',
+    ];
+
+    $form['maintenance_group']['maintenance_unpublish_date'] = [
+      '#type' => 'datetime',
+      '#title' => $this->t('Unpublish Date'),
+      '#description' => $this->t('Unpublishing date for the maintenance page.'),
+      '#default_value' => $maintenance_unpublish_date,
+      '#format' => 'm/d/Y',
+    ];
+
     return parent::buildForm($form, $form_state);
   }
 
@@ -203,6 +255,21 @@ class OWSportsCustomConfigForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   public function validateForm(array &$form, FormStateInterface $form_state) {
+    $publishDate = $form_state->getValue('maintenance_publish_date') ? strtotime($form_state->getValue('maintenance_publish_date')->format('m/d/Y H:i:s')) : "";
+    $unpublishDate = $form_state->getValue('maintenance_unpublish_date') ? strtotime($form_state->getValue('maintenance_unpublish_date')->format('m/d/Y H:i:s')) : "";
+
+    if ($publishDate && !$unpublishDate) {
+      $form_state->setErrorByName('maintenance_unpublish_date', t('please add unpublish date for maintenance as well.'));
+    }
+
+    if (!$publishDate && $unpublishDate) {
+      $form_state->setErrorByName('maintenance_publish_date', t('please add publish date for maintenance as well.'));
+    }
+
+    if ($unpublishDate < $publishDate) {
+      $form_state->setErrorByName('maintenance_unpublish_date', t('Unpublish date for maintenance should be greater than the publish date.'));
+    }
+
     parent::validateForm($form, $form_state);
   }
 
@@ -230,9 +297,36 @@ class OWSportsCustomConfigForm extends ConfigFormBase {
       'colossus_login_lightbox',
       'url_param',
       'right_side_block',
+      'maintenance_feature',
+      'maintenance_content',
+      'maintenance_publish_date',
+      'maintenance_unpublish_date',
+      'file_image_maintenance',
     ];
 
     foreach ($keys as $key) {
+      if ($key == 'maintenance_publish_date' && !empty($form_state->getValue('maintenance_publish_date'))) {
+        $this->config('owsports_config.owsports_configuration')->set('maintenance_publish_date', $form_state->getValue($key)->format('m/d/Y H:i:s'))->save();
+        continue;
+      }
+
+      if ($key == 'maintenance_unpublish_date' && !empty($form_state->getValue('maintenance_unpublish_date'))) {
+        $this->config('owsports_config.owsports_configuration')->set('maintenance_unpublish_date', $form_state->getValue($key)->format('m/d/Y H:i:s'))->save();
+        continue;
+      }
+
+      if ($key == 'file_image_maintenance') {
+        $fid = $form_state->getValue($key);
+        if ($fid) {
+          $file = File::load($fid[0]);
+          $file->setPermanent();
+          $file->save();
+          $file_usage = \Drupal::service('file.usage');
+          $file_usage->add($file, 'ow-sports', 'image', $fid[0]);
+
+          $this->config('owsports_config.owsports_configuration')->set("file_image_maintenance_url", file_create_url($file->getFileUri()))->save();
+        }
+      }
       $this->config('owsports_config.owsports_configuration')->set($key, $form_state->getValue($key))->save();
     }
 
