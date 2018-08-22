@@ -3,3 +3,5 @@ languages: "en|en\r\nin|en"
 currency: "USD\r\nINR"
 country: "IN\r\nSL"
 transaction_subdomain: sunplustest
+exchange_tablet_url: ''
+tablet_game_url: ''

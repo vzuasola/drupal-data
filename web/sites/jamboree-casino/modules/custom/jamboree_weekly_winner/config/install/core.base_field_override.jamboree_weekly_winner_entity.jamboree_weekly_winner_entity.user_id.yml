@@ -1,0 +1,20 @@
+uuid: e0fc37a6-6d14-4ebd-9b33-ed436c2073e9
+langcode: en
+status: true
+dependencies:
+  module:
+    - jamboree_weekly_winner
+id: jamboree_weekly_winner_entity.jamboree_weekly_winner_entity.user_id
+field_name: user_id
+entity_type: jamboree_weekly_winner_entity
+bundle: jamboree_weekly_winner_entity
+label: 'Authored by'
+description: 'The user ID of author of the Jamboree weekly winner entity entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference
