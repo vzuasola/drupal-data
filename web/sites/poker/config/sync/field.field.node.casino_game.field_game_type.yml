@@ -1,19 +1,19 @@
-uuid: 4b765b1b-6955-4dc5-9dc7-74e1a641b5a1
+uuid: 14ca3550-0e31-415f-9758-301e362d9377
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_cta
+    - field.storage.node.field_game_type
     - node.type.casino_game
   module:
     - options
-id: node.casino_game.field_cta
-field_name: field_cta
+id: node.casino_game.field_game_type
+field_name: field_game_type
 entity_type: node
 bundle: casino_game
-label: CTA
-description: 'Only applies to PRE-LOGIN state.'
-required: false
+label: 'Game Type'
+description: 'Check the Game type HTML5 or FLASH.'
+required: true
 translatable: true
 default_value: {  }
 default_value_callback: ''
