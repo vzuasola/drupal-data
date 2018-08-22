@@ -169,5 +169,26 @@ class GameOffersConfigurationForm extends FormBase {
       '#translatable' => TRUE,
       '#required' => TRUE
     ];
+
+    $form['common']['promo_link'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Promo Button Link'),
+      '#default_value' => $this->get('promo_link'),
+      '#translatable' => TRUE,
+      '#required' => TRUE
+    ];
+
+    $form['common']['promo_link_target'] = [
+      '#type' => 'select',
+      '#title' => $this->t('Promo Button Link Target'),
+      '#default_value' => $this->get('promo_link_target'),
+      '#translatable' => TRUE,
+      '#required' => TRUE,
+      '#options' => [
+        '_blank' => 'New Tab',
+        '_self' => 'Same Window',
+        'window' => 'New Window'
+      ]
+    ];    
   }
 }
