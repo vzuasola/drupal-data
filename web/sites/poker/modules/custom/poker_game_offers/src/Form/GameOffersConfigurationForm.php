@@ -44,9 +44,14 @@ class GameOffersConfigurationForm extends FormBase
           '#required' => true
         ];
 
+        $form['game_offers_settings_tab'] = [
+          '#type' => 'vertical_tabs',
+          '#title' => t('Game Offers Configuration'),
+        ];
+
+        $this->common($form);
         $this->casinoGames($form);
         $this->pokerGames($form);
-        $this->common($form);
 
         return $form;
     }
@@ -55,12 +60,21 @@ class GameOffersConfigurationForm extends FormBase
     {
         $form['casino'] = [
           '#type' => 'details',
-          '#title' => $this->t('Casino Game Offers'),
+          '#title' => $this->t('Game Offers - Casino'),
           '#collapsible' => true,
           '#open' => true,
+          '#group' => 'game_offers_settings_tab',
         ];
 
-        $form['casino']['casino_label'] = [
+        $form['casino']['tab'] = [
+          '#type' => 'details',
+          '#title' => $this->t('Tab Settings'),
+          '#collapsible' => true,
+          '#open' => true,
+          '#group' => 'casino',
+        ];
+
+        $form['casino']['tab']['casino_label'] = [
           '#type' => 'textfield',
           '#title' => $this->t('Casino Tab Label'),
           '#default_value' => $this->get('casino_label'),
@@ -68,7 +82,7 @@ class GameOffersConfigurationForm extends FormBase
           '#required' => true
         ];
 
-        $form['casino']['file_image_casino_icon'] = [
+        $form['casino']['tab']['file_image_casino_icon'] = [
           '#type' => 'managed_file',
           '#title' => t('Tab Default Icon'),
           '#description' => t('Upload a file, allowed extensions: jpg, jpeg, png, gif'),
@@ -80,7 +94,7 @@ class GameOffersConfigurationForm extends FormBase
           '#required' => true,
         ];
 
-        $form['casino']['file_image_casino_icon_hover'] = [
+        $form['casino']['tab']['file_image_casino_icon_hover'] = [
           '#type' => 'managed_file',
           '#title' => t('Tab Hover/Active Icon'),
           '#description' => t('Upload a file, allowed extensions: jpg, jpeg, png, gif'),
@@ -91,18 +105,100 @@ class GameOffersConfigurationForm extends FormBase
           '#default_value' => $this->get('file_image_casino_icon_hover'),
           '#required' => true,
         ];
+
+        $form['casino']['thumb'] = [
+          '#type' => 'details',
+          '#title' => $this->t('Thumbnail Settings'),
+          '#collapsible' => true,
+          '#open' => true,
+          '#group' => 'casino',
+        ];
+
+        $form['casino']['thumb']['play_label'] = [
+          '#type' => 'textfield',
+          '#title' => $this->t('Play Button Label'),
+          '#default_value' => $this->get('play_label'),
+          '#translatable' => true,
+          '#required' => true
+        ];
+
+        $form['casino']['launch'] = [
+          '#type' => 'details',
+          '#title' => $this->t('Game Launch Settings'),
+          '#collapsible' => true,
+          '#open' => true,
+          '#group' => 'casino',
+        ];
+
+        $form['casino']['launch']['promo_link'] = [
+          '#type' => 'textfield',
+          '#title' => $this->t('Promo Button Link'),
+          '#default_value' => $this->get('promo_link'),
+          '#translatable' => true,
+          '#required' => true
+        ];
+
+        $form['casino']['launch']['promo_link_target'] = [
+          '#type' => 'select',
+          '#title' => $this->t('Promo Button Link Target'),
+          '#default_value' => $this->get('promo_link_target'),
+          '#translatable' => true,
+          '#required' => true,
+          '#options' => [
+            '_blank' => 'New Tab',
+            '_self' => 'Same Window',
+            'window' => 'New Window'
+          ]
+        ];
+
+        $html5LightboxGroupTitle = $this->t('HTML5 Alert (Lightbox)');
+        $form['casino']['launch']['html5_lightbox'] = array(
+            '#type' => 'fieldset',
+            '#title' => $html5LightboxGroupTitle,
+            '#description' => '<p>This lightbox will appear if player access an html5 game '
+                            . 'on a browser that do not support html5.</p>'
+        );
+
+        $form['casino']['launch']['html5_lightbox']['html5_lightbox_title'] = [
+          '#type' => 'textfield',
+          '#title' => $this->t('Title'),
+          '#description' => $this->t('The text that will be displayed as title of the lightbox.'),
+          '#default_value' => $this->get('html5_lightbox_title'),
+          '#required' => TRUE,
+          '#translatable' => true,
+        ];
+
+        $html5LightboxContent = $this->get('html5_lightbox_content');
+        $form['casino']['launch']['html5_lightbox']['html5_lightbox_content'] = array(
+          '#type' => 'text_format',
+          '#title' => $this->t('Content'),
+          '#description' => $this->t('The text that will be displayed as content of the lightbox.'),
+          '#default_value' => $html5LightboxContent['value'],
+          '#format' => $html5LightboxContent['format'],
+          '#required' => TRUE,
+          '#translatable' => true,
+        );
     }
 
     private function pokerGames(&$form)
     {
         $form['poker'] = [
           '#type' => 'details',
-          '#title' => $this->t('Poker Game Offers'),
+          '#title' => $this->t('Game Offers - Poker'),
           '#collapsible' => true,
           '#open' => true,
+          '#group' => 'game_offers_settings_tab',
         ];
 
-        $form['poker']['poker_label'] = [
+        $form['poker']['tab'] = [
+          '#type' => 'details',
+          '#title' => $this->t('Tab Settings'),
+          '#collapsible' => true,
+          '#open' => true,
+          '#group' => 'poker',
+        ];
+
+        $form['poker']['tab']['poker_label'] = [
           '#type' => 'textfield',
           '#title' => $this->t('Poker Tab Label'),
           '#default_value' => $this->get('poker_label'),
@@ -110,7 +206,7 @@ class GameOffersConfigurationForm extends FormBase
           '#required' => true
         ];
 
-        $form['poker']['file_image_poker_icon'] = [
+        $form['poker']['tab']['file_image_poker_icon'] = [
           '#type' => 'managed_file',
           '#title' => t('Tab Default Icon'),
           '#description' => t('Upload a file, allowed extensions: jpg, jpeg, png, gif'),
@@ -122,7 +218,7 @@ class GameOffersConfigurationForm extends FormBase
           '#required' => true,
         ];
 
-        $form['poker']['file_image_poker_icon_hover'] = [
+        $form['poker']['tab']['file_image_poker_icon_hover'] = [
           '#type' => 'managed_file',
           '#title' => t('Tab Hover/Active Icon'),
           '#description' => t('Upload a file, allowed extensions: jpg, jpeg, png, gif'),
@@ -142,6 +238,15 @@ class GameOffersConfigurationForm extends FormBase
           '#title' => $this->t('Common'),
           '#collapsible' => true,
           '#open' => true,
+          '#group' => 'game_offers_settings_tab',
+        ];
+
+        $form['common']['info_label'] = [
+          '#type' => 'textfield',
+          '#title' => $this->t('Game Info Label'),
+          '#default_value' => $this->get('info_label'),
+          '#translatable' => true,
+          '#required' => true
         ];
 
         $form['common']['download_label'] = [
@@ -158,43 +263,6 @@ class GameOffersConfigurationForm extends FormBase
           '#default_value' => $this->get('download_link'),
           '#translatable' => true,
           '#required' => true
-        ];
-
-        $form['common']['play_label'] = [
-          '#type' => 'textfield',
-          '#title' => $this->t('Play Button Label'),
-          '#default_value' => $this->get('play_label'),
-          '#translatable' => true,
-          '#required' => true
-        ];
-
-        $form['common']['info_label'] = [
-          '#type' => 'textfield',
-          '#title' => $this->t('Game Info Label'),
-          '#default_value' => $this->get('info_label'),
-          '#translatable' => true,
-          '#required' => true
-        ];
-
-        $form['common']['promo_link'] = [
-          '#type' => 'textfield',
-          '#title' => $this->t('Promo Button Link'),
-          '#default_value' => $this->get('promo_link'),
-          '#translatable' => true,
-          '#required' => true
-        ];
-
-        $form['common']['promo_link_target'] = [
-          '#type' => 'select',
-          '#title' => $this->t('Promo Button Link Target'),
-          '#default_value' => $this->get('promo_link_target'),
-          '#translatable' => true,
-          '#required' => true,
-          '#options' => [
-            '_blank' => 'New Tab',
-            '_self' => 'Same Window',
-            'window' => 'New Window'
-          ]
         ];
     }
 }
