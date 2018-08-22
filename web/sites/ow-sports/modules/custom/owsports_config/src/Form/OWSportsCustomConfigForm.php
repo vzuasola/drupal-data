@@ -229,8 +229,10 @@ class OWSportsCustomConfigForm extends ConfigFormBase {
       '#format' => $config->get('maintenance_content')['format'],
     ];
 
-    $maintenance_publish_date = $config->get('maintenance_publish_date') ? DrupalDateTime::createFromTimestamp(strtotime($config->get('maintenance_publish_date'))) : "";
-    $maintenance_unpublish_date = $config->get('maintenance_unpublish_date') ? DrupalDateTime::createFromTimestamp(strtotime($config->get('maintenance_unpublish_date'))) : "";
+    $maintenance_publish_date = $config->get('maintenance_publish_date') ?
+      DrupalDateTime::createFromTimestamp(strtotime($config->get('maintenance_publish_date'))) : "";
+    $maintenance_unpublish_date = $config->get('maintenance_unpublish_date') ?
+      DrupalDateTime::createFromTimestamp(strtotime($config->get('maintenance_unpublish_date'))) : "";
 
     $form['maintenance_group']['maintenance_publish_date'] = [
       '#type' => 'datetime',
@@ -255,19 +257,24 @@ class OWSportsCustomConfigForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   public function validateForm(array &$form, FormStateInterface $form_state) {
-    $publishDate = $form_state->getValue('maintenance_publish_date') ? strtotime($form_state->getValue('maintenance_publish_date')->format('m/d/Y H:i:s')) : "";
-    $unpublishDate = $form_state->getValue('maintenance_unpublish_date') ? strtotime($form_state->getValue('maintenance_unpublish_date')->format('m/d/Y H:i:s')) : "";
+    $publishDate = $form_state->getValue('maintenance_publish_date') ?
+      strtotime($form_state->getValue('maintenance_publish_date')->format('m/d/Y H:i:s')) : "";
+    $unpublishDate = $form_state->getValue('maintenance_unpublish_date') ?
+      strtotime($form_state->getValue('maintenance_unpublish_date')->format('m/d/Y H:i:s')) : "";
 
     if ($publishDate && !$unpublishDate) {
-      $form_state->setErrorByName('maintenance_unpublish_date', t('please add unpublish date for maintenance as well.'));
+      $form_state->setErrorByName('maintenance_unpublish_date',
+        t('please add unpublish date for maintenance as well.'));
     }
 
     if (!$publishDate && $unpublishDate) {
-      $form_state->setErrorByName('maintenance_publish_date', t('please add publish date for maintenance as well.'));
+      $form_state->setErrorByName('maintenance_publish_date',
+        t('please add publish date for maintenance as well.'));
     }
 
     if ($unpublishDate < $publishDate) {
-      $form_state->setErrorByName('maintenance_unpublish_date', t('Unpublish date for maintenance should be greater than the publish date.'));
+      $form_state->setErrorByName('maintenance_unpublish_date',
+        t('Unpublish date for maintenance should be greater than the publish date.'));
     }
 
     parent::validateForm($form, $form_state);
@@ -306,12 +313,18 @@ class OWSportsCustomConfigForm extends ConfigFormBase {
 
     foreach ($keys as $key) {
       if ($key == 'maintenance_publish_date' && !empty($form_state->getValue('maintenance_publish_date'))) {
-        $this->config('owsports_config.owsports_configuration')->set('maintenance_publish_date', $form_state->getValue($key)->format('m/d/Y H:i:s'))->save();
+        $this->config('owsports_config.owsports_configuration')
+        ->set('maintenance_publish_date', $form_state->getValue($key)
+        ->format('m/d/Y H:i:s'))
+        ->save();
         continue;
       }
 
       if ($key == 'maintenance_unpublish_date' && !empty($form_state->getValue('maintenance_unpublish_date'))) {
-        $this->config('owsports_config.owsports_configuration')->set('maintenance_unpublish_date', $form_state->getValue($key)->format('m/d/Y H:i:s'))->save();
+        $this->config('owsports_config.owsports_configuration')
+        ->set('maintenance_unpublish_date', $form_state->getValue($key)
+        ->format('m/d/Y H:i:s'))
+        ->save();
         continue;
       }
 
@@ -324,10 +337,14 @@ class OWSportsCustomConfigForm extends ConfigFormBase {
           $file_usage = \Drupal::service('file.usage');
           $file_usage->add($file, 'ow-sports', 'image', $fid[0]);
 
-          $this->config('owsports_config.owsports_configuration')->set("file_image_maintenance_url", file_create_url($file->getFileUri()))->save();
+          $this->config('owsports_config.owsports_configuration')
+          ->set("file_image_maintenance_url", file_create_url($file->getFileUri()))
+          ->save();
         }
       }
-      $this->config('owsports_config.owsports_configuration')->set($key, $form_state->getValue($key))->save();
+      $this->config('owsports_config.owsports_configuration')
+      ->set($key, $form_state->getValue($key))
+      ->save();
     }
 
     parent::submitForm($form, $form_state);
