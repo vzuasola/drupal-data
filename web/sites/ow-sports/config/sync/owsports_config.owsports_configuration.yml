@@ -19,3 +19,12 @@ url_param: "world-cup|menutype=2\r\nworld-cup|market=T"
 euro_switch_redirect: null
 colossus_login_lightbox: 1
 right_side_block: 0
+maintenance_feature: 0
+maintenance_content:
+  value: "<p>Maintenance Content</p>\r\n"
+  format: basic_html
+maintenance_publish_date: '08/02/2018 11:11:11'
+maintenance_unpublish_date: '09/02/2018 11:11:11'
+file_image_maintenance_url: 'http://ow-sports.drupal.local/sites/ow-sports/files/Right-Side-Banner-Configuration-Guideline.png'
+file_image_maintenance:
+  - '2217'
