@@ -38,6 +38,7 @@ class JamboreeLoginConfigForm extends FormBase {
     ];
 
     $this->sectionLoginConfig($form);
+    $this->sectionLoginSessionConfig($form);
 
     return $form;
   }
@@ -220,6 +221,31 @@ class JamboreeLoginConfigForm extends FormBase {
       '#translatable' => TRUE,
     ];
 
+  }
+
+  private function sectionLoginSessionConfig(array &$form) {
+    $form['login_session'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Login Session Configuration'),
+    ];
+
+    $default_login_session_time = $this->get('login_session_time');
+    $form['login_session']['login_session_time'] = [
+      '#type' => 'textfield',
+      '#title' => t('Session Timer'),
+      '#default_value' => $default_login_session_time,
+      '#description' => $this->t('Login Session Time in Minutes'),
+      '#translatable' => FALSE,
+    ];
+
+    $default_session_timeout = $this->get('session_timeout');
+    $form['login_session']['session_timeout'] = [
+      '#type' => 'textfield',
+      '#title' => t('Session Timeout Error Message'),
+      '#default_value' => $default_session_timeout,
+      '#description' => $this->t('Session Timeout Error Message'),
+      '#translatable' => TRUE,
+    ];
   }
 
   /**
