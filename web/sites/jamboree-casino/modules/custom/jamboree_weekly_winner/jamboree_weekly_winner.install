@@ -26,12 +26,14 @@ function jamboree_weekly_winner_uninstall() {
     'field.storage.jamboree_weekly_winner_entity.field_title.yml',
     'field.storage.jamboree_weekly_winner_entity.field_weekly_winner_month.yml',
     'field.storage.jamboree_weekly_winner_entity.field_weekly_winner_year.yml',
+    'jamboree_config.weekly_winner_page_configuration.yml',
     'language.content_settings.jamboree_weekly_winner_entity.jamboree_weekly_winner_entity.yml',
     'language.content_settings.taxonomy_term.weekly_winner_month.yml',
     'language.content_settings.taxonomy_term.weekly_winner_year.yml',
     'taxonomy.vocabulary.weekly_winner_month.yml',
     'taxonomy.vocabulary.weekly_winner_year.yml',
     'views.view.weekly_winner.yml',
+    'views.view.weekly_winner_category.yml',
   ];
 
   foreach ($keys as $key) {
