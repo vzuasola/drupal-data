@@ -12,7 +12,10 @@ use Drupal\user\EntityOwnerInterface;
  *
  * @ingroup poker_video_support
  */
-interface VideoEntityInterface extends RevisionableInterface, RevisionLogInterface, EntityChangedInterface, EntityOwnerInterface {
+interface VideoEntityInterface extends RevisionableInterface,
+  RevisionLogInterface,
+  EntityChangedInterface,
+  EntityOwnerInterface {
 
   // Add get/set methods for your configuration properties here.
 

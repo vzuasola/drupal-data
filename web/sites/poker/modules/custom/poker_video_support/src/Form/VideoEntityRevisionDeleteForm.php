@@ -73,7 +73,9 @@ class VideoEntityRevisionDeleteForm extends ConfirmFormBase {
    * {@inheritdoc}
    */
   public function getQuestion() {
-    return t('Are you sure you want to delete the revision from %revision-date?', ['%revision-date' => format_date($this->revision->getRevisionCreationTime())]);
+    return t('Are you sure you want to delete the revision from %revision-date?', [
+      '%revision-date' => format_date($this->revision->getRevisionCreationTime())
+    ]);
   }
 
   /**
@@ -106,13 +108,20 @@ class VideoEntityRevisionDeleteForm extends ConfirmFormBase {
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $this->VideoEntityStorage->deleteRevision($this->revision->getRevisionId());
 
-    $this->logger('content')->notice('Video entity: deleted %title revision %revision.', ['%title' => $this->revision->label(), '%revision' => $this->revision->getRevisionId()]);
-    drupal_set_message(t('Revision from %revision-date of Video entity %title has been deleted.', ['%revision-date' => format_date($this->revision->getRevisionCreationTime()), '%title' => $this->revision->label()]));
+    $this->logger('content')->notice('Video entity: deleted %title revision %revision.', [
+      '%title' => $this->revision->label(),
+      '%revision' => $this->revision->getRevisionId()
+    ]);
+    drupal_set_message(t('Revision from %revision-date of Video entity %title has been deleted.', [
+      '%revision-date' => format_date($this->revision->getRevisionCreationTime()),
+      '%title' => $this->revision->label()
+    ]));
     $form_state->setRedirect(
       'entity.poker_video_entity.canonical',
        ['poker_video_entity' => $this->revision->id()]
     );
-    if ($this->connection->query('SELECT COUNT(DISTINCT vid) FROM {poker_video_entity_field_revision} WHERE id = :id', [':id' => $this->revision->id()])->fetchField() > 1) {
+    if ($this->connection->query('SELECT COUNT(DISTINCT vid) FROM {poker_video_entity_field_revision}
+      WHERE id = :id', [':id' => $this->revision->id()])->fetchField() > 1) {
       $form_state->setRedirect(
         'entity.poker_video_entity.version_history',
          ['poker_video_entity' => $this->revision->id()]

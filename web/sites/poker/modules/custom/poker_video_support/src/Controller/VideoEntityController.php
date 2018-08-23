@@ -25,7 +25,8 @@ class VideoEntityController extends ControllerBase implements ContainerInjection
    *   An array suitable for drupal_render().
    */
   public function revisionShow($poker_video_entity_revision) {
-    $poker_video_entity = $this->entityManager()->getStorage('poker_video_entity')->loadRevision($poker_video_entity_revision);
+    $poker_video_entity = $this->entityManager()->getStorage('poker_video_entity')
+        ->loadRevision($poker_video_entity_revision);
     $view_builder = $this->entityManager()->getViewBuilder('poker_video_entity');
 
     return $view_builder->view($poker_video_entity);
@@ -41,8 +42,12 @@ class VideoEntityController extends ControllerBase implements ContainerInjection
    *   The page title.
    */
   public function revisionPageTitle($poker_video_entity_revision) {
-    $poker_video_entity = $this->entityManager()->getStorage('poker_video_entity')->loadRevision($poker_video_entity_revision);
-    return $this->t('Revision of %title from %date', ['%title' => $poker_video_entity->label(), '%date' => format_date($poker_video_entity->getRevisionCreationTime())]);
+    $poker_video_entity = $this->entityManager()->getStorage('poker_video_entity')
+        ->loadRevision($poker_video_entity_revision);
+    return $this->t('Revision of %title from %date', [
+        '%title' => $poker_video_entity->label(),
+        '%date' => format_date($poker_video_entity->getRevisionCreationTime())
+    ]);
   }
 
   /**
@@ -62,11 +67,16 @@ class VideoEntityController extends ControllerBase implements ContainerInjection
     $has_translations = (count($languages) > 1);
     $poker_video_entity_storage = $this->entityManager()->getStorage('poker_video_entity');
 
-    $build['#title'] = $has_translations ? $this->t('@langname revisions for %title', ['@langname' => $langname, '%title' => $poker_video_entity->label()]) : $this->t('Revisions for %title', ['%title' => $poker_video_entity->label()]);
+    $build['#title'] = $has_translations ? $this->t('@langname revisions for %title', [
+        '@langname' => $langname,
+        '%title' => $poker_video_entity->label()
+    ]) : $this->t('Revisions for %title', ['%title' => $poker_video_entity->label()]);
     $header = [$this->t('Revision'), $this->t('Operations')];
 
-    $revert_permission = (($account->hasPermission("revert all video entity revisions") || $account->hasPermission('administer video entity entities')));
-    $delete_permission = (($account->hasPermission("delete all video entity revisions") || $account->hasPermission('administer video entity entities')));
+    $revert_permission = (($account->hasPermission("revert all video entity revisions") ||
+        $account->hasPermission('administer video entity entities')));
+    $delete_permission = (($account->hasPermission("delete all video entity revisions") ||
+        $account->hasPermission('administer video entity entities')));
 
     $rows = [];
 
@@ -79,7 +89,8 @@ class VideoEntityController extends ControllerBase implements ContainerInjection
       $revision = $poker_video_entity_storage->loadRevision($vid);
       // Only show revisions that are affected by the language that is being
       // displayed.
-      if ($revision->hasTranslation($langcode) && $revision->getTranslation($langcode)->isRevisionTranslationAffected()) {
+      if ($revision->hasTranslation($langcode) && $revision->getTranslation($langcode)
+        ->isRevisionTranslationAffected()) {
         $username = [
           '#theme' => 'username',
           '#account' => $revision->getRevisionUser(),
@@ -88,7 +99,10 @@ class VideoEntityController extends ControllerBase implements ContainerInjection
         // Use revision link to link to revisions that are not active.
         $date = \Drupal::service('date.formatter')->format($revision->getRevisionCreationTime(), 'short');
         if ($vid != $poker_video_entity->getRevisionId()) {
-          $link = $this->l($date, new Url('entity.poker_video_entity.revision', ['poker_video_entity' => $poker_video_entity->id(), 'poker_video_entity_revision' => $vid]));
+          $link = $this->l($date, new Url('entity.poker_video_entity.revision', [
+            'poker_video_entity' => $poker_video_entity->id(),
+            'poker_video_entity_revision' => $vid
+          ]));
         }
         else {
           $link = $poker_video_entity->link($date);
@@ -98,7 +112,8 @@ class VideoEntityController extends ControllerBase implements ContainerInjection
         $column = [
           'data' => [
             '#type' => 'inline_template',
-            '#template' => '{% trans %}{{ date }} by {{ username }}{% endtrans %}{% if message %}<p class="revision-log">{{ message }}</p>{% endif %}',
+            '#template' => '{% trans %}{{ date }} by {{ username }}{% endtrans %}{% if message %}
+                <p class="revision-log">{{ message }}</p>{% endif %}',
             '#context' => [
               'date' => $link,
               'username' => \Drupal::service('renderer')->renderPlain($username),
@@ -127,15 +142,24 @@ class VideoEntityController extends ControllerBase implements ContainerInjection
             $links['revert'] = [
               'title' => $this->t('Revert'),
               'url' => $has_translations ?
-              Url::fromRoute('entity.poker_video_entity.translation_revert', ['poker_video_entity' => $poker_video_entity->id(), 'poker_video_entity_revision' => $vid, 'langcode' => $langcode]) :
-              Url::fromRoute('entity.poker_video_entity.revision_revert', ['poker_video_entity' => $poker_video_entity->id(), 'poker_video_entity_revision' => $vid]),
+              Url::fromRoute('entity.poker_video_entity.translation_revert', [
+                'poker_video_entity' => $poker_video_entity->id(),
+                'poker_video_entity_revision' => $vid, 'langcode' => $langcode
+              ]) :
+              Url::fromRoute('entity.poker_video_entity.revision_revert', [
+                'poker_video_entity' => $poker_video_entity->id(),
+                'poker_video_entity_revision' => $vid
+              ]),
             ];
           }
 
           if ($delete_permission) {
             $links['delete'] = [
               'title' => $this->t('Delete'),
-              'url' => Url::fromRoute('entity.poker_video_entity.revision_delete', ['poker_video_entity' => $poker_video_entity->id(), 'poker_video_entity_revision' => $vid]),
+              'url' => Url::fromRoute('entity.poker_video_entity.revision_delete', [
+                'poker_video_entity' => $poker_video_entity->id(),
+                'poker_video_entity_revision' => $vid
+              ]),
             ];
           }
 

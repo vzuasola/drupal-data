@@ -56,10 +56,14 @@ use Drupal\user\UserInterface;
  *     "edit-form" = "/admin/structure/poker_video_entity/{poker_video_entity}/edit",
  *     "delete-form" = "/admin/structure/poker_video_entity/{poker_video_entity}/delete",
  *     "version-history" = "/admin/structure/poker_video_entity/{poker_video_entity}/revisions",
- *     "revision" = "/admin/structure/poker_video_entity/{poker_video_entity}/revisions/{poker_video_entity_revision}/view",
- *     "revision_revert" = "/admin/structure/poker_video_entity/{poker_video_entity}/revisions/{poker_video_entity_revision}/revert",
- *     "revision_delete" = "/admin/structure/poker_video_entity/{poker_video_entity}/revisions/{poker_video_entity_revision}/delete",
- *     "translation_revert" = "/admin/structure/poker_video_entity/{poker_video_entity}/revisions/{poker_video_entity_revision}/revert/{langcode}",
+ *     "revision" = "/admin/structure/poker_video_entity/{poker_video_entity}
+ *         /revisions/{poker_video_entity_revision}/view",
+ *     "revision_revert" = "/admin/structure/poker_video_entity/{poker_video_entity}
+ *         /revisions/{poker_video_entity_revision}/revert",
+ *     "revision_delete" = "/admin/structure/poker_video_entity/{poker_video_entity}
+ *         /revisions/{poker_video_entity_revision}/delete",
+ *     "translation_revert" = "/admin/structure/poker_video_entity/{poker_video_entity}
+ *         /revisions/{poker_video_entity_revision}/revert/{langcode}",
  *     "collection" = "/admin/structure/poker_video_entity",
  *   },
  *   field_ui_base_route = "poker_video_entity.settings"

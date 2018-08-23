@@ -41,7 +41,8 @@ class VideoEntityStorage extends SqlContentEntityStorage implements VideoEntityS
    * {@inheritdoc}
    */
   public function countDefaultLanguageRevisions(VideoEntityInterface $entity) {
-    return $this->database->query('SELECT COUNT(*) FROM {poker_video_entity_field_revision} WHERE id = :id AND default_langcode = 1', [':id' => $entity->id()])
+    return $this->database->query('SELECT COUNT(*) FROM {poker_video_entity_field_revision}
+      WHERE id = :id AND default_langcode = 1', [':id' => $entity->id()])
       ->fetchField();
   }
 
