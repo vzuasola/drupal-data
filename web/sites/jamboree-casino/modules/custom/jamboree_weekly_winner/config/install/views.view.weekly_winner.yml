@@ -133,7 +133,25 @@ display:
       header: {  }
       footer: {  }
       empty: {  }
-      relationships: {  }
+      relationships:
+        field_weekly_winner_month:
+          id: field_weekly_winner_month
+          table: jamboree_weekly_winner_entity__field_weekly_winner_month
+          field: field_weekly_winner_month
+          relationship: none
+          group_type: group
+          admin_label: 'field_weekly_winner_month: Taxonomy term'
+          required: true
+          plugin_id: standard
+        field_weekly_winner_year:
+          id: field_weekly_winner_year
+          table: jamboree_weekly_winner_entity__field_weekly_winner_year
+          field: field_weekly_winner_year
+          relationship: none
+          group_type: group
+          admin_label: 'field_weekly_winner_year: Taxonomy term'
+          required: true
+          plugin_id: standard
       arguments: {  }
       display_extenders: {  }
     cache_metadata:
@@ -539,32 +557,54 @@ display:
         groups:
           1: AND
       sorts:
-        field_weekly_winner_year_target_id:
-          id: field_weekly_winner_year_target_id
-          table: jamboree_weekly_winner_entity__field_weekly_winner_year
-          field: field_weekly_winner_year_target_id
-          relationship: none
+        name:
+          id: name
+          table: taxonomy_term_field_data
+          field: name
+          relationship: field_weekly_winner_year
           group_type: group
           admin_label: ''
           order: DESC
           exposed: false
           expose:
             label: ''
+          entity_type: taxonomy_term
+          entity_field: name
           plugin_id: standard
-        field_weekly_winner_month_target_id:
-          id: field_weekly_winner_month_target_id
-          table: jamboree_weekly_winner_entity__field_weekly_winner_month
-          field: field_weekly_winner_month_target_id
-          relationship: none
+        name_1:
+          id: name_1
+          table: taxonomy_term_field_data
+          field: name
+          relationship: field_weekly_winner_month
           group_type: group
           admin_label: ''
           order: DESC
           exposed: false
           expose:
             label: ''
+          entity_type: taxonomy_term
+          entity_field: name
           plugin_id: standard
       arguments: {  }
-      relationships: {  }
+      relationships:
+        field_weekly_winner_year:
+          id: field_weekly_winner_year
+          table: jamboree_weekly_winner_entity__field_weekly_winner_year
+          field: field_weekly_winner_year
+          relationship: none
+          group_type: group
+          admin_label: 'field_weekly_winner_year: Taxonomy term'
+          required: true
+          plugin_id: standard
+        field_weekly_winner_month:
+          id: field_weekly_winner_month
+          table: jamboree_weekly_winner_entity__field_weekly_winner_month
+          field: field_weekly_winner_month
+          relationship: none
+          group_type: group
+          admin_label: 'field_weekly_winner_month: Taxonomy term'
+          required: true
+          plugin_id: standard
     cache_metadata:
       max-age: -1
       contexts:
@@ -649,29 +689,33 @@ display:
         groups:
           1: AND
       sorts:
-        field_weekly_winner_year_target_id:
-          id: field_weekly_winner_year_target_id
-          table: jamboree_weekly_winner_entity__field_weekly_winner_year
-          field: field_weekly_winner_year_target_id
-          relationship: none
+        name:
+          id: name
+          table: taxonomy_term_field_data
+          field: name
+          relationship: field_weekly_winner_year
           group_type: group
           admin_label: ''
           order: DESC
           exposed: false
           expose:
             label: ''
+          entity_type: taxonomy_term
+          entity_field: name
           plugin_id: standard
-        field_weekly_winner_month_target_id:
-          id: field_weekly_winner_month_target_id
-          table: jamboree_weekly_winner_entity__field_weekly_winner_month
-          field: field_weekly_winner_month_target_id
-          relationship: none
+        name_1:
+          id: name_1
+          table: taxonomy_term_field_data
+          field: name
+          relationship: field_weekly_winner_month
           group_type: group
           admin_label: ''
           order: DESC
           exposed: false
           expose:
             label: ''
+          entity_type: taxonomy_term
+          entity_field: name
           plugin_id: standard
     cache_metadata:
       max-age: -1
