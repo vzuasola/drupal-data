@@ -1,0 +1,27 @@
+uuid: 2e33a936-440b-494b-a098-813d9fe380aa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.poker_video_entity.field_video_flash
+  module:
+    - file
+    - poker_video_support
+id: poker_video_entity.poker_video_entity.field_video_flash
+field_name: field_video_flash
+entity_type: poker_video_entity
+bundle: poker_video_entity
+label: 'Video (Flash)'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'flv swf'
+  max_filesize: '40 MB'
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file
