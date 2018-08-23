@@ -294,6 +294,7 @@ class MyAccountFormResource extends ResourceBase
             $value['no_changed_detected_message'] = $values['no_changed_detected_message'];
             $value['male_label'] = $values['male_label'];
             $value['female_label'] = $values['female_label'];
+            $value['message_timeout'] = $values['message_timeout'];
         }
         return $value;
     }
