@@ -1,0 +1,19 @@
+poker_video_support.list:
+  title: 'Poker Video Support Configuration'
+  parent: system.admin_config
+  description: 'Configuration for poker video support for inner pages'
+  route_name: poker_video_support.admin_settings
+
+# Video entity menu items definition
+entity.poker_video_entity.collection:
+  title: 'Video entity list'
+  route_name: entity.poker_video_entity.collection
+  description: 'List Video entity entities'
+  parent: poker_video_support.list
+  weight: 100
+
+poker_video_entity.admin.structure.settings:
+  title: Video entity settings
+  description: 'Configure Video entity entities'
+  route_name: poker_video_entity.settings
+  parent: poker_video_support.list

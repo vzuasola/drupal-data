@@ -1,0 +1,7 @@
+poker_video_support.admin_settings:
+  path: 'admin/config/poker/vip-page'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Poker Video Support Configuration'
+  requirements:
+    _permission: 'administer site configuration'
