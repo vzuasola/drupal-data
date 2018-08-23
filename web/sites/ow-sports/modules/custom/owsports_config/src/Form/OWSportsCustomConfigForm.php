@@ -332,7 +332,9 @@ class OWSportsCustomConfigForm extends ConfigFormBase {
       if ($key == 'maintenance_publish_date' && !empty($form_state->getValue('maintenance_publish_date'))) {
         // converting datetime to utc time to match the server time
         $publishDateValue = format_date(strtotime($form_state->getValue($key)->format(self::MAINTENANCE_TIME_FORMAT)),
-          'custom', self::MAINTENANCE_TIME_FORMAT, self::MAINTENANCE_TIMEZONE);
+          'custom',
+          self::MAINTENANCE_TIME_FORMAT,
+          self::MAINTENANCE_TIMEZONE);
         $this->config('owsports_config.owsports_configuration')
         ->set('maintenance_publish_date', $publishDateValue)
         ->save();
