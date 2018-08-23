@@ -34,7 +34,6 @@ class OWSportsConfigFormResource extends ResourceBase {
     try {
       $config = \Drupal::config("owsports_config.$id");
       $data = $config->get();
-      $this->resolveFieldImages($id, $data);
       $this->resolveRecursive($data);
     } catch (\Exception $e) {
       $data = array(
@@ -49,23 +48,6 @@ class OWSportsConfigFormResource extends ResourceBase {
     );
 
     return (new ResourceResponse($data))->addCacheableDependency($build);
-  }
-
-  /**
-   * Temporary solution for fields not using standard naming schemes.
-   *
-   * @param string $id
-   *   The configuration resource ID.
-   * @param array $data
-   *   The configuration data.
-   */
-  private function resolveFieldImages($id, &$data) {
-    $file_id = $data['file_image_maintenance'][0];
-
-    $file = File::load($file_id);
-    if ($file) {
-      $data['file_image_maintenance_url'] = $this->generateUrlFromFile($file);
-    }
   }
 
   /**
