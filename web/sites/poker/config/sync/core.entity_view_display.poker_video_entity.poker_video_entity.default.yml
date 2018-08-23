@@ -1,0 +1,69 @@
+uuid: 786abc48-5d01-46b0-8f19-3c77b125bc58
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.poker_video_entity.poker_video_entity.field_video
+    - field.field.poker_video_entity.poker_video_entity.field_video_flash
+    - field.field.poker_video_entity.poker_video_entity.field_video_image_placeholder
+    - field.field.poker_video_entity.poker_video_entity.field_video_key
+  module:
+    - file
+    - image
+    - poker_video_support
+    - user
+id: poker_video_entity.poker_video_entity.default
+targetEntityType: poker_video_entity
+bundle: poker_video_entity
+mode: default
+content:
+  field_video:
+    weight: 2
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    type: file_default
+    region: content
+  field_video_flash:
+    weight: 4
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    type: file_default
+    region: content
+  field_video_image_placeholder:
+    weight: 5
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_video_key:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  name:
+    label: above
+    type: string
+    weight: -4
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  user_id:
+    label: hidden
+    type: author
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true
