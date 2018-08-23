@@ -6,6 +6,7 @@ use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\file\Entity\File;
 use Drupal\Core\Datetime\DrupalDateTime;
+use Drupal\datetime\Plugin\Field\FieldType\DateTimeItemInterface;
 
 class OWSportsCustomConfigForm extends ConfigFormBase {
 
@@ -229,17 +230,20 @@ class OWSportsCustomConfigForm extends ConfigFormBase {
       '#format' => $config->get('maintenance_content')['format'],
     ];
 
+    // setting and converting utc to locale timezone if set
+    // referenced from https://www.drupal.org/node/1834108
     $maintenance_publish_date = $config->get('maintenance_publish_date') ?
-      DrupalDateTime::createFromTimestamp(strtotime($config->get('maintenance_publish_date'))) : "";
+      $this->convertUTCLocale($config->get('maintenance_publish_date')) : "";
     $maintenance_unpublish_date = $config->get('maintenance_unpublish_date') ?
-      DrupalDateTime::createFromTimestamp(strtotime($config->get('maintenance_unpublish_date'))) : "";
+      $this->convertUTCLocale($config->get('maintenance_unpublish_date')) : "";
 
     $form['maintenance_group']['maintenance_publish_date'] = [
       '#type' => 'datetime',
       '#title' => $this->t('Publish Date'),
       '#description' => $this->t('Publishing date for the maintenance page.'),
       '#default_value' => $maintenance_publish_date,
-      '#format' => 'm/d/Y',
+      '#date_timezone' => drupal_get_user_timezone(),
+      '#format' => 'm/d/Y H:i:s',
     ];
 
     $form['maintenance_group']['maintenance_unpublish_date'] = [
@@ -247,10 +251,17 @@ class OWSportsCustomConfigForm extends ConfigFormBase {
       '#title' => $this->t('Unpublish Date'),
       '#description' => $this->t('Unpublishing date for the maintenance page.'),
       '#default_value' => $maintenance_unpublish_date,
-      '#format' => 'm/d/Y',
+      '#date_timezone' => drupal_get_user_timezone(),
+      '#format' => 'm/d/Y H:i:s',
     ];
 
     return parent::buildForm($form, $form_state);
+  }
+
+  public function convertUTCLocale($date) {
+    $date = new DrupalDateTime($date, 'UTC');
+    $dateConverted = $date->setTimezone(new \DateTimeZone(drupal_get_user_timezone()));
+    return $dateConverted;
   }
 
   /**
@@ -272,7 +283,7 @@ class OWSportsCustomConfigForm extends ConfigFormBase {
         t('please add publish date for maintenance as well.'));
     }
 
-    if ($unpublishDate < $publishDate) {
+    if ($unpublishDate && $unpublishDate < $publishDate) {
       $form_state->setErrorByName('maintenance_unpublish_date',
         t('Unpublish date for maintenance should be greater than the publish date.'));
     }
@@ -313,17 +324,23 @@ class OWSportsCustomConfigForm extends ConfigFormBase {
 
     foreach ($keys as $key) {
       if ($key == 'maintenance_publish_date' && !empty($form_state->getValue('maintenance_publish_date'))) {
+        // converting datetime to utc time to match the server time
+        $publishDateValue = format_date(strtotime($form_state->getValue($key)->format('m/d/Y H:i:s')),
+          'custom', 'm/d/Y H:i:s', DateTimeItemInterface::STORAGE_TIMEZONE);
         $this->config('owsports_config.owsports_configuration')
-        ->set('maintenance_publish_date', $form_state->getValue($key)
-        ->format('m/d/Y H:i:s'))
+        ->set('maintenance_publish_date', $publishDateValue)
         ->save();
         continue;
       }
 
       if ($key == 'maintenance_unpublish_date' && !empty($form_state->getValue('maintenance_unpublish_date'))) {
+        // converting datetime to utc time to match the server time
+        $unpublishDateValue = format_date(strtotime($form_state->getValue($key)->format('m/d/Y H:i:s')),
+          'custom',
+          'm/d/Y H:i:s',
+          DateTimeItemInterface::STORAGE_TIMEZONE);
         $this->config('owsports_config.owsports_configuration')
-        ->set('maintenance_unpublish_date', $form_state->getValue($key)
-        ->format('m/d/Y H:i:s'))
+        ->set('maintenance_unpublish_date', $unpublishDateValue)
         ->save();
         continue;
       }
