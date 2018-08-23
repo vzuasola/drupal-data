@@ -105,14 +105,14 @@ class JamboreeJackpotForm extends FormBase {
 
     $form['jackpot_graph_text']['jackpot_amount_title_value'] = [
       '#type' => 'textfield',
-      '#title' => t('Enter the title for recent jackpot amount on graph).'),
+      '#title' => t('Enter the title for recent jackpot amount on graph.'),
       '#default_value' => $this->get('jackpot_amount_title_value'),
       '#translatable' => TRUE,
     ];
 
     $form['jackpot_graph_text']['jackpot_last_update'] = [
       '#type' => 'textfield',
-      '#title' => t('Enter Last Updated).'),
+      '#title' => t('Enter Last Updated.'),
       '#default_value' => $this->get('jackpot_last_update'),
       '#translatable' => TRUE,
     ];
