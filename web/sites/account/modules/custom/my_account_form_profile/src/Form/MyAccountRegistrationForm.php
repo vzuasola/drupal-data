@@ -369,6 +369,15 @@ class MyAccountRegistrationForm extends FormBase
             '#translatable' => true,
         ];
 
+        $form['field_labels_generic_configuration']['message_timeout'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Message timeout'),
+            '#required' => TRUE,
+            '#default_value' => $this->get('message_timeout'),
+            '#translatable' => true,
+            '#description' => '<strong>[Mobile] </strong> Maximum timeout in minutes to display the Success/Error message.'
+        ];
+
         return $form;
     }
 }
