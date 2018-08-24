@@ -133,25 +133,7 @@ display:
       header: {  }
       footer: {  }
       empty: {  }
-      relationships:
-        field_weekly_winner_month:
-          id: field_weekly_winner_month
-          table: jamboree_weekly_winner_entity__field_weekly_winner_month
-          field: field_weekly_winner_month
-          relationship: none
-          group_type: group
-          admin_label: 'field_weekly_winner_month: Taxonomy term'
-          required: true
-          plugin_id: standard
-        field_weekly_winner_year:
-          id: field_weekly_winner_year
-          table: jamboree_weekly_winner_entity__field_weekly_winner_year
-          field: field_weekly_winner_year
-          relationship: none
-          group_type: group
-          admin_label: 'field_weekly_winner_year: Taxonomy term'
-          required: true
-          plugin_id: standard
+      relationships: {  }
       arguments: {  }
       display_extenders: {  }
     cache_metadata:
@@ -557,54 +539,23 @@ display:
         groups:
           1: AND
       sorts:
-        name:
-          id: name
-          table: taxonomy_term_field_data
-          field: name
-          relationship: field_weekly_winner_year
+        created:
+          id: created
+          table: jamboree_weekly_winner_entity_field_data
+          field: created
+          relationship: none
           group_type: group
           admin_label: ''
           order: DESC
           exposed: false
           expose:
             label: ''
-          entity_type: taxonomy_term
-          entity_field: name
-          plugin_id: standard
-        name_1:
-          id: name_1
-          table: taxonomy_term_field_data
-          field: name
-          relationship: field_weekly_winner_month
-          group_type: group
-          admin_label: ''
-          order: DESC
-          exposed: false
-          expose:
-            label: ''
-          entity_type: taxonomy_term
-          entity_field: name
-          plugin_id: standard
+          granularity: second
+          entity_type: jamboree_weekly_winner_entity
+          entity_field: created
+          plugin_id: date
       arguments: {  }
-      relationships:
-        field_weekly_winner_year:
-          id: field_weekly_winner_year
-          table: jamboree_weekly_winner_entity__field_weekly_winner_year
-          field: field_weekly_winner_year
-          relationship: none
-          group_type: group
-          admin_label: 'field_weekly_winner_year: Taxonomy term'
-          required: true
-          plugin_id: standard
-        field_weekly_winner_month:
-          id: field_weekly_winner_month
-          table: jamboree_weekly_winner_entity__field_weekly_winner_month
-          field: field_weekly_winner_month
-          relationship: none
-          group_type: group
-          admin_label: 'field_weekly_winner_month: Taxonomy term'
-          required: true
-          plugin_id: standard
+      relationships: {  }
     cache_metadata:
       max-age: -1
       contexts:
@@ -689,34 +640,21 @@ display:
         groups:
           1: AND
       sorts:
-        name:
-          id: name
-          table: taxonomy_term_field_data
-          field: name
-          relationship: field_weekly_winner_year
+        created:
+          id: created
+          table: jamboree_weekly_winner_entity_field_data
+          field: created
+          relationship: none
           group_type: group
           admin_label: ''
           order: DESC
           exposed: false
           expose:
             label: ''
-          entity_type: taxonomy_term
-          entity_field: name
-          plugin_id: standard
-        name_1:
-          id: name_1
-          table: taxonomy_term_field_data
-          field: name
-          relationship: field_weekly_winner_month
-          group_type: group
-          admin_label: ''
-          order: DESC
-          exposed: false
-          expose:
-            label: ''
-          entity_type: taxonomy_term
-          entity_field: name
-          plugin_id: standard
+          granularity: second
+          entity_type: jamboree_weekly_winner_entity
+          entity_field: created
+          plugin_id: date
     cache_metadata:
       max-age: -1
       contexts:
