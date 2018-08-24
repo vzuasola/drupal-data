@@ -98,14 +98,14 @@ class JamboreeCasinoConfig extends FormBase {
     $form['page_setting']['registration_step2'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Registration Step 2 Page Title'),
-      '#default_value' => $this->get('registration'),
+      '#default_value' => $this->get('registration_step2'),
       '#translatable' => TRUE,
     ];
 
     $form['page_setting']['registration_step3'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Registration Step 3 Page Title'),
-      '#default_value' => $this->get('registration'),
+      '#default_value' => $this->get('registration_step3'),
       '#translatable' => TRUE,
     ];
 
