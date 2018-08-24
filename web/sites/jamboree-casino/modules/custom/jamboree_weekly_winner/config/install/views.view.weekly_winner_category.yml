@@ -190,19 +190,19 @@ display:
         options: {  }
       display_description: ''
       sorts:
-        name:
-          id: name
+        weight:
+          id: weight
           table: taxonomy_term_field_data
-          field: name
+          field: weight
           relationship: none
           group_type: group
           admin_label: ''
-          order: DESC
+          order: ASC
           exposed: false
           expose:
             label: ''
           entity_type: taxonomy_term
-          entity_field: name
+          entity_field: weight
           plugin_id: standard
       defaults:
         sorts: false
@@ -283,10 +283,10 @@ display:
       display_description: ''
       path: api/weekly_winner_month
       sorts:
-        name:
-          id: name
+        weight:
+          id: weight
           table: taxonomy_term_field_data
-          field: name
+          field: weight
           relationship: none
           group_type: group
           admin_label: ''
@@ -295,7 +295,7 @@ display:
           expose:
             label: ''
           entity_type: taxonomy_term
-          entity_field: name
+          entity_field: weight
           plugin_id: standard
     cache_metadata:
       max-age: -1
