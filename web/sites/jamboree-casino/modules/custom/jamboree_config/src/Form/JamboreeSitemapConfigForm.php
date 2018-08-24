@@ -38,6 +38,7 @@ class JamboreeSitemapConfigForm extends FormBase {
     ];
 
     $this->sectionSitemap($form);
+    $this->sectionSitemapXML($form);
 
     return $form;
   }
@@ -48,15 +49,36 @@ class JamboreeSitemapConfigForm extends FormBase {
   private function sectionSitemap(array &$form) {
     $form['sitemap'] = [
       '#type' => 'details',
-      '#title' => $this->t('Sitemap'),
+      '#title' => $this->t('Sitemap Page'),
     ];
 
     $default_sitemap_title = $this->get('sitemap_title');
     $form['sitemap']['sitemap_title'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('Title'),
+      '#title' => $this->t('Sitemap Page Title'),
       '#default_value' => $default_sitemap_title,
+      '#description' => $this->t('Sitemap Page title.'),
       '#translatable' => TRUE,
+    ];
+
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  private function sectionSitemapXML(array &$form) {
+    $form['sitemap_xml'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Sitemap XML Settings'),
+    ];
+
+    $default_sitemap_xml_paths = $this->get('sitemap_xml_paths');
+    $form['sitemap_xml']['sitemap_xml_paths'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Relative Paths'),
+      '#default_value' => $default_sitemap_xml_paths,
+      '#description' => $this->t("Please specify drupal internal (relative) paths, one per line. Do not forget to prepend the paths with a '/'.<br>Optionally link priority <em>(0.0 - 1.0)</em> can be added by appending it after a space.<br> Optionally link change frequency <em>(always / hourly / daily / weekly / monthly / yearly / never)</em> can be added by appending it after a space.<br><br><strong>Examples:</strong><br><em>/ 1.0 daily</em> -&gt; home page with the highest priority and daily change frequency<br><em>/contact</em> -&gt; contact page with the default priority and no change frequency information."),
+      '#translatable' => FALSE,
     ];
 
   }
