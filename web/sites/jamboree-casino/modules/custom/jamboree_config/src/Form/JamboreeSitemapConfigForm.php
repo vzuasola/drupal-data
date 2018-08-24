@@ -77,8 +77,8 @@ class JamboreeSitemapConfigForm extends FormBase {
       '#type' => 'textarea',
       '#title' => $this->t('Relative Paths'),
       '#default_value' => $default_sitemap_xml_paths,
-      '#description' => $this->t("Please specify drupal internal (relative) paths, one per line. Do not forget to prepend the paths with a '/'.<br>Optionally link priority <em>(0.0 - 1.0)</em> can be added by appending it after a space.<br> Optionally link change frequency <em>(always / hourly / daily / weekly / monthly / yearly / never)</em> can be added by appending it after a space.<br><br><strong>Examples:</strong><br><em>/ 1.0 daily</em> -&gt; home page with the highest priority and daily change frequency<br><em>/contact</em> -&gt; contact page with the default priority and no change frequency information."),
-      '#translatable' => FALSE,
+      '#description' => $this->t("Please specify drupal internal (relative) paths, one per line. Do not forget to prepend the paths with a '/'.<br>Optionally link priority <em>(0.0 - 1.0)</em> can be added by appending it after a space.<br> Optionally link change frequency <em>(always / hourly / daily / weekly / monthly / yearly / never)</em> can be added by appending it after a space."),
+      '#translatable' => TRUE,
     ];
 
   }
