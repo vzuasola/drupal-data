@@ -295,6 +295,8 @@ class MyAccountFormResource extends ResourceBase
             $value['male_label'] = $values['male_label'];
             $value['female_label'] = $values['female_label'];
             $value['message_timeout'] = $values['message_timeout'];
+            $value['message_timeout'] = $values['my_profile_tab'];
+            $value['message_timeout'] = $values['change_password_tab'];
         }
         return $value;
     }
