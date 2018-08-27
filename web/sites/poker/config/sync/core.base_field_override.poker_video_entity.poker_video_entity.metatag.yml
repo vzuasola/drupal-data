@@ -1,0 +1,18 @@
+uuid: 079f4370-3325-467d-8dc4-bc83de7872b9
+langcode: en
+status: true
+dependencies:
+  module:
+    - poker_video_support
+id: poker_video_entity.poker_video_entity.metatag
+field_name: metatag
+entity_type: poker_video_entity
+bundle: poker_video_entity
+label: Metatags
+description: 'The metatags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

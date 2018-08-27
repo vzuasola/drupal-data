@@ -1,0 +1,21 @@
+uuid: 7d2f356f-9b2b-41ab-95d3-4275d183cb8d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.drawer_entity.field_drawer_summary_post
+  module:
+    - text
+    - webcomposer_drawer
+id: drawer_entity.drawer_entity.field_drawer_summary_post
+field_name: field_drawer_summary_post
+entity_type: drawer_entity
+bundle: drawer_entity
+label: 'Drawer Summary (Post Login)'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
