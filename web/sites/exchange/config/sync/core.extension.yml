@@ -71,6 +71,7 @@ module:
   webcomposer_audit: 0
   webcomposer_audit_export: 0
   webcomposer_avaya: 0
+  webcomposer_cache: 0
   webcomposer_config: 0
   webcomposer_config_schema: 0
   webcomposer_dm: 0
