@@ -8,6 +8,7 @@ dependencies:
     - field.field.drawer_entity.drawer_entity.field_drawer_id
     - field.field.drawer_entity.drawer_entity.field_drawer_media
     - field.field.drawer_entity.drawer_entity.field_drawer_summary
+    - field.field.drawer_entity.drawer_entity.field_drawer_summary_post
     - field.field.drawer_entity.drawer_entity.field_drawer_title
   module:
     - entity_reference_revisions
@@ -61,6 +62,13 @@ content:
     region: content
   field_drawer_summary:
     weight: 7
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_drawer_summary_post:
+    weight: 8
     label: above
     settings: {  }
     third_party_settings: {  }

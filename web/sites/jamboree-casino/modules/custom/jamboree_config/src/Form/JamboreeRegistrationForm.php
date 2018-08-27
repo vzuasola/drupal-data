@@ -65,6 +65,12 @@ class JamboreeRegistrationForm extends FormBase {
       '#default_value' => $this->get('reg_form_title'),
       '#translatable' => TRUE,
     ];
+    $form['reg_form']['form']['reg_form_link_title'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Registration Page Link Title (Step 1)'),
+      '#default_value' => $this->get('reg_form_link_title'),
+      '#translatable' => TRUE,
+    ];
     // error message setting
     $form['reg_form']['errors'] = [
       '#type' => 'fieldset',

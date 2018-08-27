@@ -77,7 +77,7 @@ class JamboreeCasinoConfig extends FormBase {
     $form['page_setting']['500'] = [
       '#type' => 'textfield',
       '#title' => $this->t('500 Page Title'),
-      '#default_value' => $this->get('404'),
+      '#default_value' => $this->get('500'),
       '#translatable' => TRUE,
     ];
 
@@ -126,7 +126,7 @@ class JamboreeCasinoConfig extends FormBase {
     $form['page_setting']['faq'] = [
       '#type' => 'textfield',
       '#title' => $this->t('FAQ Page Title'),
-      '#default_value' => $this->get('jackpot'),
+      '#default_value' => $this->get('faq'),
       '#translatable' => TRUE,
     ];
 

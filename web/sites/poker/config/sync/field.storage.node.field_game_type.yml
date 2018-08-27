@@ -1,0 +1,27 @@
+uuid: 5a38b40d-624b-432c-9efc-4e002d1cace6
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_game_type
+field_name: field_game_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '0'
+      label: HTML5
+    -
+      value: '1'
+      label: FLASH
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
