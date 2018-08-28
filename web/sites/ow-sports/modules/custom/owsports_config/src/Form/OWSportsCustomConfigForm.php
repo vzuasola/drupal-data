@@ -272,6 +272,7 @@ class OWSportsCustomConfigForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   public function validateForm(array &$form, FormStateInterface $form_state) {
+    $publishStatus = $form_state->getValue('maintenance_feature');
     $publishDate = $form_state->getValue('maintenance_publish_date')
       ? strtotime($form_state->getValue('maintenance_publish_date')->format(self::MAINTENANCE_TIME_FORMAT))
       : '';
@@ -279,19 +280,30 @@ class OWSportsCustomConfigForm extends ConfigFormBase {
       ? strtotime($form_state->getValue('maintenance_unpublish_date')->format(self::MAINTENANCE_TIME_FORMAT))
       : '';
 
-    if ($publishDate && !$unpublishDate) {
+    if ($publishStatus && !$publishDate && !$unpublishDate) {
+      $form_state->setErrorByName('maintenance_publish_date',
+      'please add unpublish date for maintenance as well; if you are enabling the soft maintenance');
+      $form_state->setErrorByName('maintenance_unpublish_date');
+    }
+
+    if ($publishStatus && $publishDate && !$unpublishDate) {
       $form_state->setErrorByName('maintenance_unpublish_date',
         t('please add unpublish date for maintenance as well.'));
     }
 
-    if (!$publishDate && $unpublishDate) {
+    if ($publishStatus && !$publishDate && $unpublishDate) {
       $form_state->setErrorByName('maintenance_publish_date',
         t('please add publish date for maintenance as well.'));
     }
 
-    if ($unpublishDate && $unpublishDate < $publishDate) {
+    if ($publishStatus && $unpublishDate && $unpublishDate < $publishDate) {
       $form_state->setErrorByName('maintenance_unpublish_date',
         t('Unpublish date for maintenance should be greater than the publish date.'));
+    }
+
+    if (!$publishStatus && $publishDate && $unpublishDate && $unpublishDate > $publishDate) {
+      $form_state->setErrorByName('maintenance_feature',
+        t('Please set soft maintenance feature.'));
     }
 
     parent::validateForm($form, $form_state);
