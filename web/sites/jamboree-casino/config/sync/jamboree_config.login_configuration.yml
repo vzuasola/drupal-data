@@ -17,3 +17,5 @@ login_forgot_password_link: ''
 login_registration_link: /registration
 login_button_label_main: LOGIN
 login_button_label_sub: SUB
+login_session_time: '60'
+session_timeout: 'Session Timeout.'

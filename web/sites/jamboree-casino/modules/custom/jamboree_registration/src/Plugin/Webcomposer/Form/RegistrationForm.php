@@ -312,6 +312,14 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
         'name' => 'Username',
         'type' => 'hidden',
       ],
+      'creferer' => [
+        'name' => 'Creferer',
+        'type' => 'hidden',
+      ],
+      'advertiser' => [
+        'name' => 'Advertiser',
+        'type' => 'hidden',
+      ],
       //captcha?
       'submit' => [
         'name' => 'Submit',
