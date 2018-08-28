@@ -124,6 +124,27 @@ class JamboreeJackpotForm extends FormBase {
       '#translatable' => TRUE,
     ];
 
+    $form['jackpot_graph_text']['jackpot_graph_current_text'] = [
+      '#type' => 'textfield',
+      '#title' => t('Enter the current text for jackpot graph.'),
+      '#default_value' => $this->get('jackpot_graph_current_text'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['jackpot_graph_text']['jackpot_graph_day_ago'] = [
+      '#type' => 'textfield',
+      '#title' => t('Enter the day ago text for jackpot graph.'),
+      '#default_value' => $this->get('jackpot_graph_day_ago'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['jackpot_graph_text']['jackpot_graph_days_ago'] = [
+      '#type' => 'textfield',
+      '#title' => t('Enter the day ago text for jackpot graph.'),
+      '#default_value' => $this->get('jackpot_graph_days_ago'),
+      '#translatable' => TRUE,
+    ];
+
     $form['jackpot_lobby_custom_block'] = [
       '#type' => 'details',
       '#title' => $this->t('Jackpot Lobby Page Custom Block'),
