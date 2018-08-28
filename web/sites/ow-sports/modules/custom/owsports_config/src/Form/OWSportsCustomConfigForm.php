@@ -283,25 +283,25 @@ class OWSportsCustomConfigForm extends ConfigFormBase {
     if ($publishStatus) {
       if (!$publishDate || !$unpublishDate) {
         $form_state->setErrorByName('maintenance_publish_date',
-        'please add publish and unpublish date; if you are enabling the soft maintenance.');
+        t('Please add publish and unpublish date; if you are enabling the soft maintenance.'));
         $form_state->setErrorByName('maintenance_unpublish_date');
       }
       if ($unpublishDate < $publishDate) {
         $form_state->setErrorByName('maintenance_unpublish_date',
-          t('Unpublish date for maintenance should be greater than the publish date.'));
+        t('Unpublish date for maintenance should be greater than the publish date.'));
       }
       if ($publishDate < strtotime('now')) {
         $form_state->setErrorByName('maintenance_publish_date',
-          t('Publish date should be set on future time.'));
+        t('Publish date should be set on future time.'));
       }
       if ($unpublishDate < strtotime('now')) {
         $form_state->setErrorByName('maintenance_publish_date',
-          t('Unpublish date should be set on future time.'));
+        t('Unpublish date should be set on future time.'));
       }
     } else {
       if ($publishDate || $unpublishDate) {
         $form_state->setErrorByName('maintenance_feature',
-          t('Please enable soft maintenance feature.'));
+        t('Please enable soft maintenance feature.'));
       }
     }
 
