@@ -103,41 +103,46 @@ class MarketingScriptResource extends ResourceBase {
     $response = [];
 
     $sets = \Drupal::entityQuery('marketing_script_entity')
-      ->condition('langcode', $this->currentLanguage)
       ->execute();
 
     $results = MarketingScriptEntity::loadMultiple($sets);
 
     foreach ($results as $value) {
-      $result = $value->getTranslation($this->currentLanguage)->toArray();
+      try {
+        $translated = $value->getTranslation($this->currentLanguage)->toArray();
+      } catch (\Exception $e) {
+        // use default fallback
+        $translated = $value->toArray();
+      }
 
-      $entityId = $result['id'][0]['value'];
-      $data = explode(PHP_EOL, $result['field_per_page_configuratiion'][0]['value']);
+      if ($translated) {
+        $entityId = $translated['id'][0]['value'];
+        $data = explode(PHP_EOL, $translated['field_per_page_configuratiion'][0]['value']);
 
-      foreach ($data as $key) {
-        $trimmed_key = trim($key);
+        foreach ($data as $key) {
+          $trimmed_key = trim($key);
 
-        if (fnmatch($trimmed_key, $route)) {
-          $response[$entityId] = $result;
-        }
+          if (fnmatch($trimmed_key, $route)) {
+            $response[$entityId] = $translated;
+          }
 
-        $pttr = '#^\~#';
-        if (preg_match($pttr, $trimmed_key) === 1) {
-          $excl = trim(preg_replace($pttr, "", $trimmed_key));
-          if (fnmatch($excl, $route)) {
-            unset($response[$entityId]);
+          $pttr = '#^\~#';
+          if (preg_match($pttr, $trimmed_key) === 1) {
+            $excl = trim(preg_replace($pttr, "", $trimmed_key));
+            if (fnmatch($excl, $route)) {
+              unset($response[$entityId]);
+            }
           }
         }
       }
     }
 
-    $build = array( 
-      '#cache' => array( 
+    $build = array(
+      '#cache' => array(
         'max-age' => 0, 
       ),
     ); 
 
     return (new ResourceResponse($response))->addCacheableDependency($build);
   }
-
 }
