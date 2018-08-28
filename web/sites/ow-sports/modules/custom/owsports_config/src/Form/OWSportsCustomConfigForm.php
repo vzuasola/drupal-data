@@ -280,8 +280,9 @@ class OWSportsCustomConfigForm extends ConfigFormBase {
       ? strtotime($form_state->getValue('maintenance_unpublish_date')->format(self::MAINTENANCE_TIME_FORMAT))
       : '';
 
-    if($publishStatus && !$publishDate && !$unpublishDate) {
-      $form_state->setErrorByName('maintenance_publish_date','please add unpublish date for maintenance as well; if you are enabling the soft maintenance');
+    if ($publishStatus && !$publishDate && !$unpublishDate) {
+      $form_state->setErrorByName('maintenance_publish_date',
+      'please add unpublish date for maintenance as well; if you are enabling the soft maintenance');
       $form_state->setErrorByName('maintenance_unpublish_date');
     }
 
