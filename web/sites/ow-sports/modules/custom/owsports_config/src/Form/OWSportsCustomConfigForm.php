@@ -280,30 +280,29 @@ class OWSportsCustomConfigForm extends ConfigFormBase {
       ? strtotime($form_state->getValue('maintenance_unpublish_date')->format(self::MAINTENANCE_TIME_FORMAT))
       : '';
 
-    if ($publishStatus && !$publishDate && !$unpublishDate) {
-      $form_state->setErrorByName('maintenance_publish_date',
-      'please add unpublish date for maintenance as well; if you are enabling the soft maintenance');
-      $form_state->setErrorByName('maintenance_unpublish_date');
-    }
-
-    if ($publishStatus && $publishDate && !$unpublishDate) {
-      $form_state->setErrorByName('maintenance_unpublish_date',
-        t('please add unpublish date for maintenance as well.'));
-    }
-
-    if ($publishStatus && !$publishDate && $unpublishDate) {
-      $form_state->setErrorByName('maintenance_publish_date',
-        t('please add publish date for maintenance as well.'));
-    }
-
-    if ($publishStatus && $unpublishDate && $unpublishDate < $publishDate) {
-      $form_state->setErrorByName('maintenance_unpublish_date',
+    if ($publishStatus) {
+      if (!$publishDate || !$unpublishDate) {
+        $form_state->setErrorByName('maintenance_publish_date',
+        t('Please add publish and unpublish date; if you are enabling the soft maintenance.'));
+        $form_state->setErrorByName('maintenance_unpublish_date');
+      }
+      if ($unpublishDate < $publishDate) {
+        $form_state->setErrorByName('maintenance_unpublish_date',
         t('Unpublish date for maintenance should be greater than the publish date.'));
-    }
-
-    if (!$publishStatus && $publishDate && $unpublishDate && $unpublishDate > $publishDate) {
-      $form_state->setErrorByName('maintenance_feature',
-        t('Please set soft maintenance feature.'));
+      }
+      if ($publishDate < strtotime('now')) {
+        $form_state->setErrorByName('maintenance_publish_date',
+        t('Publish date should be set on future time.'));
+      }
+      if ($unpublishDate < strtotime('now')) {
+        $form_state->setErrorByName('maintenance_publish_date',
+        t('Unpublish date should be set on future time.'));
+      }
+    } else {
+      if ($publishDate || $unpublishDate) {
+        $form_state->setErrorByName('maintenance_feature',
+        t('Please enable soft maintenance feature.'));
+      }
     }
 
     parent::validateForm($form, $form_state);
