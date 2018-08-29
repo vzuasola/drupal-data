@@ -5,6 +5,8 @@ dependencies:
   config:
     - field.field.taxonomy_term.games_category.field_games_alias
     - field.field.taxonomy_term.games_category.field_games_disable
+    - field.field.taxonomy_term.games_category.field_isordinarycategory
+    - field.field.taxonomy_term.games_category.field_post_login_only
     - taxonomy.vocabulary.games_category
   module:
     - text
@@ -30,6 +32,26 @@ content:
     region: content
   field_games_disable:
     weight: 2
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_isordinarycategory:
+    weight: 3
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_post_login_only:
+    weight: 4
     label: above
     settings:
       format: default

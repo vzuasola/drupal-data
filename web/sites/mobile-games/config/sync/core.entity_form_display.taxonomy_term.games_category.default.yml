@@ -5,6 +5,8 @@ dependencies:
   config:
     - field.field.taxonomy_term.games_category.field_games_alias
     - field.field.taxonomy_term.games_category.field_games_disable
+    - field.field.taxonomy_term.games_category.field_isordinarycategory
+    - field.field.taxonomy_term.games_category.field_post_login_only
     - taxonomy.vocabulary.games_category
 id: taxonomy_term.games_category.default
 targetEntityType: taxonomy_term
@@ -21,6 +23,20 @@ content:
     region: content
   field_games_disable:
     weight: 4
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_isordinarycategory:
+    weight: 5
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_post_login_only:
+    weight: 6
     settings:
       display_label: true
     third_party_settings: {  }
