@@ -22,3 +22,11 @@ game_tag: 1
 game_tag_message: 'Term @term already exists in vocabulary @vocabulary.'
 faq_category: 0
 faq_category_message: 'Term @term already exists in vocabulary @vocabulary.'
+jackpot_game_category: 1
+jackpot_game_category_message: 'Term @term already exists in vocabulary @vocabulary.'
+big_winner_year: 0
+big_winner_year_message: 'Term @term already exists in vocabulary @vocabulary.'
+weekly_winner_year: 1
+weekly_winner_year_message: 'Term @term already exists in vocabulary @vocabulary.'
+weekly_winner_month: 1
+weekly_winner_month_message: 'Term @term already exists in vocabulary @vocabulary.'

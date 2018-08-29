@@ -1,5 +1,5 @@
-unsupported_country_title: 'Currency not supported'
+unsupported_country_title: 'Country not supported'
 unsupported_country_message:
-  value: "<p>Sorry, your currency is not supported.\r\nPlease choose other gaming rooms.</p>"
+  value: "<p>This game is not available for the country you are currently in. Please choose one of our other Lottery games.&nbsp;</p>\r\n"
   format: basic_html
-unsupported_country_button: 'Ok'
+unsupported_country_button: Ok

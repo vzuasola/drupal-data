@@ -1,0 +1,21 @@
+uuid: 3cc19f89-1feb-41ef-b303-4994118e95e9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.jamboree_mobile_games_entity.field_client_type
+  module:
+    - jamboree_mobile_games
+    - options
+id: jamboree_mobile_games_entity.jamboree_mobile_games_entity.field_client_type
+field_name: field_client_type
+entity_type: jamboree_mobile_games_entity
+bundle: jamboree_mobile_games_entity
+label: 'Client Type'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

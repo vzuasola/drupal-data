@@ -1,0 +1,18 @@
+uuid: 80393ce8-7ece-453f-bf1e-391e856cb201
+langcode: en
+status: true
+dependencies:
+  module:
+    - webcomposer_slider_v2
+id: webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.metatag
+field_name: metatag
+entity_type: webcomposer_slider_v2_entity
+bundle: webcomposer_slider_v2_entity
+label: Metatags
+description: 'The metatags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

@@ -1,0 +1,38 @@
+uuid: 7d104560-c446-4bec-94cc-77dc82722982
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.poker_video_entity.field_video_image_placeholder
+  module:
+    - image
+    - poker_video_support
+id: poker_video_entity.poker_video_entity.field_video_image_placeholder
+field_name: field_video_image_placeholder
+entity_type: poker_video_entity
+bundle: poker_video_entity
+label: 'Video Image Placeholder'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

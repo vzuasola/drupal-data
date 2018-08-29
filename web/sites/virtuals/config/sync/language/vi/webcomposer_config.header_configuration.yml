@@ -2,9 +2,19 @@ lobby_page_title: 'Bắt đầu đặt cược Thể thao ảo với Dafabet!'
 critical_announcement_content:
   value: "<p>Chức năng Chat Trực Tuyến sẽ không hoạt động từ 5:00 AM đến 5:30 AM (GMT+8) vào ngày 21/2 để nâng cấp hệ thống nhằm mang lại trải nghiệm tốt hơn cho người chơi. Trong thời gian này, quý khách có thể liên hệ chúng tôi qua Email hoặc Zalo. Cảm ơn quý khách.</p>\r\n"
   format: basic_html
+header_settings_tab__active_tab: edit-login-group
+logo_title: 'Virtual Sports Betting at Dafabet'
+capslock_notification: 'Đang bật CAP LOCK'
+balance_label_override: '综合钱包 '
+critical_announcement: 1
+news_announcement: 0
+news_announcement_content:
+  value: "<p>test</p>\r\n"
+  format: basic_html
 join_now_text: 'THAM GIA NGAY'
-join_now_link: '/{domain:entry}/{domain:lang_token}/join/virtual-sports{tracking.token}'
+join_now_link: '/{domain:entry}/{lang}/join/virtual-sports[query:({tracking})]'
 login_issue_text: 'Không thể đăng nhập?'
+login_issue_link: '/{domain:myaccount_domain}/{domain:lang_token}/cant-login[query:({tracking})]'
 product_balance_label: 'Casino Trực Tuyến, Trò chơi, Arcade, & Thể thao ảo'
 total_balance_label: 'Tổng Số Dư'
 balance_error_text: 'Đã xảy ra lỗi'
@@ -14,6 +24,7 @@ product_menu_new_tag: Mới
 welcome_text: 'Chào mừng {username}'
 profile_link: '/{domain:cashier_domain}/{domain:cashier_lang}/?ticket={auth.token}&product=dafabet{tracking.token}'
 profile_logout_text: 'Đăng xuất'
-balance_label_mapping: "4|Thể Thao OW\r\n6|Thể Thao Dafa\r\n10|Exchange\r\n1|Casino Classic\r\n2|Casino Gold\r\n5|Casino Trực Tuyến, Trò chơi, Arcade, & Thể thao ảo\r\n8|Casino Trực Tuyến Opus\r\n9|Keno\r\n3|Poker\r\n7|AG Fish Hunter"
+balance_label_mapping: "4|Thể Thao OW\r\n6|Thể Thao Dafa\r\n11|eSports\r\n10|Exchange\r\n1|Casino\r\n2|Casino Gold\r\n5|Ví Chung\r\n8|Casino Trực Tuyến Opus\r\n7|AG Fish Hunter\r\n9|Keno Opus\r\n3|Poker"
 balance_error_text_product: 'Không có'
-balance_mapping: '5|Casino Trực Tuyến, Trò chơi, Arcade, & Thể thao ảo'
+balance_mapping: '5|Ví Chung'
+cashier_link: '{domain:cashier_domain}/{lang}?ticket={auth.token}&product=virtuals&title=headerPopup&width=820&height=820'

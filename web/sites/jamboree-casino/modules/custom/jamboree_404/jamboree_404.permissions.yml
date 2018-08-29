@@ -1,0 +1,22 @@
+add jamboree 404 image entity entities:
+  title: 'Create new Jamboree 404 Image Entity entities'
+
+administer jamboree 404 image entity entities:
+  title: 'Administer Jamboree 404 Image Entity entities'
+  description: 'Allow to access the administration form to configure Jamboree 404 Image Entity entities.'
+  restrict access: true
+
+delete jamboree 404 image entity entities:
+  title: 'Delete Jamboree 404 Image Entity entities'
+
+edit jamboree 404 image entity entities:
+  title: 'Edit Jamboree 404 Image Entity entities'
+
+access jamboree 404 image entity overview:
+  title: 'Access the Jamboree 404 Image Entity overview page'
+
+view published jamboree 404 image entity entities:
+  title: 'View published Jamboree 404 Image Entity entities'
+
+view unpublished jamboree 404 image entity entities:
+  title: 'View unpublished Jamboree 404 Image Entity entities'

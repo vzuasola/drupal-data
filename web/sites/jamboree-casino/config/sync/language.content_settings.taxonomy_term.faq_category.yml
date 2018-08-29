@@ -1,5 +1,5 @@
-uuid: 3856cec4-fc16-4bcb-ad25-4ce646e7ba26
-langcode: en
+uuid: 9a3b730a-addc-4178-8b10-2cf18b865847
+langcode: ja
 status: true
 dependencies:
   config:
@@ -8,11 +8,11 @@ dependencies:
     - content_translation
 third_party_settings:
   content_translation:
-    enabled: true
+    enabled: false
     bundle_settings:
       untranslatable_fields_hide: '0'
 id: taxonomy_term.faq_category
 target_entity_type_id: taxonomy_term
 target_bundle: faq_category
-default_langcode: current_interface
+default_langcode: site_default
 language_alterable: true

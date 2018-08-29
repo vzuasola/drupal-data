@@ -90,45 +90,61 @@ class JamboreeJackpotForm extends FormBase {
       '#required' => TRUE,
     ];
 
-    $form['jackpot_graph_main_title'] = [
+    $form['jackpot_graph_text'] = [
       '#type' => 'details',
-      '#title' => $this->t('Casino Graph Main Title'),
+      '#title' => $this->t('Casino Graph Text Config'),
       '#group' => 'advanced',
     ];
 
-    $form['jackpot_graph_main_title']['jackpot_graph_main_title_value'] = [
+    $form['jackpot_graph_text']['jackpot_graph_main_title_value'] = [
       '#type' => 'textfield',
       '#title' => t('Enter the main title for casino graph page.'),
       '#default_value' => $this->get('jackpot_graph_main_title_value'),
       '#translatable' => TRUE,
     ];
 
-    $form['jackpot_amount_title'] = [
-      '#type' => 'details',
-      '#title' => $this->t('Recent Jackpot Amount Title'),
-      '#group' => 'advanced',
-    ];
-
-    $form['jackpot_amount_title']['jackpot_amount_title_value'] = [
+    $form['jackpot_graph_text']['jackpot_amount_title_value'] = [
       '#type' => 'textfield',
-      '#title' => t('Enter the title for recent jackpot amount on graph).'),
+      '#title' => t('Enter the title for recent jackpot amount on graph.'),
       '#default_value' => $this->get('jackpot_amount_title_value'),
       '#translatable' => TRUE,
     ];
 
-    $form['jackpot_latest_hits_title'] = [
-      '#type' => 'details',
-      '#title' => $this->t('Latest Hits Title'),
-      '#group' => 'advanced',
+    $form['jackpot_graph_text']['jackpot_last_update'] = [
+      '#type' => 'textfield',
+      '#title' => t('Enter Last Updated.'),
+      '#default_value' => $this->get('jackpot_last_update'),
+      '#translatable' => TRUE,
     ];
 
-    $form['jackpot_latest_hits_title']['jackpot_latest_hits_title_value'] = [
+    $form['jackpot_graph_text']['jackpot_latest_hits_title_value'] = [
       '#type' => 'textfield',
       '#title' => t('Enter the title for jackpot hits on graph.'),
       '#default_value' => $this->get('jackpot_latest_hits_title_value'),
       '#translatable' => TRUE,
     ];
 
+    $form['jackpot_lobby_custom_block'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Jackpot Lobby Page Custom Block'),
+      '#group' => 'advanced',
+    ];
+
+    $form['jackpot_lobby_custom_block']['jackpot_custom_block_title'] = [
+      '#type' => 'textfield',
+      '#title' => t('Enter Title for Jackpot Lobby Custom Block).'),
+      '#default_value' => $this->get('jackpot_custom_block_title'),
+      '#translatable' => TRUE,
+    ];
+
+    $default_jackpot_content = $this->get('jackpot_custom_block_content');
+    $form['jackpot_lobby_custom_block']['jackpot_custom_block_content'] = [
+      '#type' => 'text_format',
+      '#title' => t('Enter Content for Jackpot Lobby Custom Block).'),
+      '#default_value' => $default_jackpot_content['value'],
+      '#format' => $default_jackpot_content['format'],
+      '#translatable' => TRUE,
+    ];
   }
 
   /**

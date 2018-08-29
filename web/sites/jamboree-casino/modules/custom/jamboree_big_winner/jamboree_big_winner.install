@@ -1,0 +1,53 @@
+<?php
+
+/**
+ * Implements hook_uninstall
+ */
+function jamboree_big_winner_uninstall() {
+  $keys = [
+    'core.base_field_override.jamboree_big_winner_entity.jamboree_big_winner_entity.metatag.yml',
+    'core.entity_form_display.jamboree_big_winner_entity.jamboree_big_winner_entity.default.yml',
+    'core.entity_form_display.taxonomy_term.big_winner_year.default.yml',
+    'core.entity_form_display.taxonomy_term.game_tag.default.yml',
+    'core.entity_view_display.jamboree_big_winner_entity.jamboree_big_winner_entity.default.yml',
+    'core.entity_view_display.taxonomy_term.game_tag.default.yml',
+    'field.field.jamboree_big_winner_entity.jamboree_big_winner_entity.field_big_winner_year.yml',
+    'field.field.jamboree_big_winner_entity.jamboree_big_winner_entity.field_body.yml',
+    'field.field.jamboree_big_winner_entity.jamboree_big_winner_entity.field_button_label.yml',
+    'field.field.jamboree_big_winner_entity.jamboree_big_winner_entity.field_button_link.yml',
+    'field.field.jamboree_big_winner_entity.jamboree_big_winner_entity.field_button_link_target.yml',
+    'field.field.jamboree_big_winner_entity.jamboree_big_winner_entity.field_image_banner.yml',
+    'field.field.jamboree_big_winner_entity.jamboree_big_winner_entity.field_image_banner_link.yml',
+    'field.field.jamboree_big_winner_entity.jamboree_big_winner_entity.field_image_banner_link_target.yml',
+    'field.field.jamboree_big_winner_entity.jamboree_big_winner_entity.field_summary.yml',
+    'field.field.jamboree_big_winner_entity.jamboree_big_winner_entity.field_tag.yml',
+    'field.field.jamboree_big_winner_entity.jamboree_big_winner_entity.field_thumbnail.yml',
+    'field.field.jamboree_big_winner_entity.jamboree_big_winner_entity.field_title.yml',
+    'field.field.taxonomy_term.game_tag.field_game_tag_color.yml',
+    'field.storage.jamboree_big_winner_entity.field_big_winner_year.yml',
+    'field.storage.jamboree_big_winner_entity.field_body.yml',
+    'field.storage.jamboree_big_winner_entity.field_button_label.yml',
+    'field.storage.jamboree_big_winner_entity.field_button_link.yml',
+    'field.storage.jamboree_big_winner_entity.field_button_link_target.yml',
+    'field.storage.jamboree_big_winner_entity.field_image_banner.yml',
+    'field.storage.jamboree_big_winner_entity.field_image_banner_link.yml',
+    'field.storage.jamboree_big_winner_entity.field_image_banner_link_target.yml',
+    'field.storage.jamboree_big_winner_entity.field_summary.yml',
+    'field.storage.jamboree_big_winner_entity.field_tag.yml',
+    'field.storage.jamboree_big_winner_entity.field_thumbnail.yml',
+    'field.storage.jamboree_big_winner_entity.field_title.yml',
+    'field.storage.taxonomy_term.field_game_tag_color.yml',
+    'language.content_settings.jamboree_big_winner_entity.jamboree_big_winner_entity.yml',
+    'language.content_settings.taxonomy_term.big_winner_year.yml',
+    'language.content_settings.taxonomy_term.game_tag.yml',
+    'taxonomy.vocabulary.big_winner_year.yml',
+    'taxonomy.vocabulary.game_tag.yml',
+    'views.view.big_winner.yml',
+    'views.view.big_winner_year.yml',
+    'views.view.game_tag.yml',
+  ];
+
+  foreach ($keys as $key) {
+    \Drupal::configFactory()->getEditable($key)->delete();
+  }
+}

@@ -1,0 +1,19 @@
+
+# Jamboree 404 Image Entity menu items definition
+jamboree_404_image_entity.list:
+  title: 'Jamboree 404 Image Default Configuration'
+  description: 'List Jamboree 404 Image default entities'
+  parent: system.admin_config
+  route_name: jamboree_404.admin_settings
+
+entity.jamboree_404_image_entity.collection:
+  title: 'Jamboree 404 Image Entity list'
+  route_name: entity.jamboree_404_image_entity.collection
+  description: 'List Jamboree 404 Image Entity entities'
+  parent: jamboree_404_image_entity.list
+
+jamboree_404_image_entity.admin.structure.settings:
+  title: Jamboree 404 Image Entity settings
+  description: 'Configure Jamboree 404 Image Entity entities'
+  route_name: jamboree_404_image_entity.settings
+  parent: jamboree_404_image_entity.list

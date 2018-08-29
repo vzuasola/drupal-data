@@ -1,0 +1,22 @@
+uuid: 61d8ee2f-3b3f-427f-ad2a-a006570a5ee1
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.games
+id: node.games.sticky
+field_name: sticky
+entity_type: node
+bundle: games
+label: 'Sticky at top of lists'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

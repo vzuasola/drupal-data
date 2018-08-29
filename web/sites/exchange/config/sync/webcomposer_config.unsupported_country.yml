@@ -1,0 +1,7 @@
+unsupported_country_title: 'Currency not supported'
+unsupported_country_message:
+  value: "<p>Sorry, your currency is not supported. Please choose other gaming rooms.</p>\r\n"
+  format: basic_html
+unsupported_country_button: Ok
+_core:
+  default_config_hash: F_LQvBrKwy0rYtTVgqhdKc6ntDewC_NP8CaW7xiexuI

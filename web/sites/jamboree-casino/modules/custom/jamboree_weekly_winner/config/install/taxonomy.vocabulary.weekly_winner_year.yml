@@ -1,0 +1,9 @@
+uuid: d67dc4b2-e54d-4224-921a-16eb62d7063b
+langcode: en
+status: true
+dependencies: {  }
+name: 'Weekly Winner Year'
+vid: weekly_winner_year
+description: ''
+hierarchy: 0
+weight: 0

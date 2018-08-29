@@ -14,7 +14,7 @@ bundle: basic_page_type_2
 label: 'Where to open link'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value:
   -
     value: same_tab

@@ -1,0 +1,18 @@
+uuid: ac1596cc-0975-4f5c-8e76-2381710d83bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.mobile_game_category
+id: taxonomy_term.mobile_game_category.name
+field_name: name
+entity_type: taxonomy_term
+bundle: mobile_game_category
+label: Name
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,7 +1,8 @@
-javascript_assets: 'https://login.wsocdd.com/jswrapper/integration.js.php?casino=dafa888'
+javascript_assets: '/jswrapper/integration.js.php?casino=dafa888&min=1'
 lobby_url: ''
 playtech_pas_endpoint: 'https://login.wsocdd.com/Login.php'
 playtech_pas_casino: dafa888
 languages: "sc|zh-cn\r\nch|zh-cn\r\nkr|ko\r\nvn|en\r\njp|en\r\neu|en\r\nid|en\r\nin|en\r\ngr|en\r\npl|en"
 _core:
   default_config_hash: 44f16f0qKZJuxkuiP2e1YfOhM2iQbeq5MWa1Qrp3HV8
+iapiconf_override: 'clientUrl_casino|https://cachebanner.9bonus.com/casinoclient.html'

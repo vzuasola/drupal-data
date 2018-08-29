@@ -1,0 +1,7 @@
+jamboree_big_winner.admin_settings:
+  path: 'admin/config/jamboree/big_winner'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Jamboree Big Winner'
+  requirements:
+    _permission: 'administer site configuration'

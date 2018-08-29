@@ -1,0 +1,23 @@
+uuid: 664c29e1-fc18-45e6-a4c3-861b00b85488
+langcode: ja
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.big_winner_year
+id: taxonomy_term.big_winner_year.default
+targetEntityType: taxonomy_term
+bundle: big_winner_year
+mode: default
+content:
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  description: true
+  langcode: true
+  path: true

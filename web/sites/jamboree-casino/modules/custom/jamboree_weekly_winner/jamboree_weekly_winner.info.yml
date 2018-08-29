@@ -1,0 +1,5 @@
+name: Jamboree Weekly Winner
+type: module
+description: Jamboree Weekly Winner
+core: 8.x
+package: Jamboree

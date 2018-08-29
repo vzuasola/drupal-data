@@ -11,6 +11,7 @@ dependencies:
     - rest
     - serialization
     - taxonomy
+    - webcomposer_rest_extra
 id: jamboree_faq
 label: 'Jamboree FAQ'
 module: views
@@ -570,7 +571,11 @@ display:
       display_extenders: {  }
       path: api/jamboree_faq
       style:
-        type: serializer
+        type: node_list_serializer
+        options:
+          uses_fields: false
+          formats:
+            json: json
       defaults:
         style: false
         row: false

@@ -1,0 +1,20 @@
+uuid: 996da337-f957-4e9d-a866-0e2004c6a590
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.poker_video_entity.field_video_key
+  module:
+    - poker_video_support
+id: poker_video_entity.poker_video_entity.field_video_key
+field_name: field_video_key
+entity_type: poker_video_entity
+bundle: poker_video_entity
+label: 'Video Key'
+description: 'Must not have space, use underscore instead.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

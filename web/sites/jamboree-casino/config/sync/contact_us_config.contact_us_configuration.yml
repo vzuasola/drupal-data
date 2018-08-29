@@ -1,0 +1,13 @@
+advanced__active_tab: edit-settings
+page_title: Test
+body_content:
+  value: ''
+  format: basic_html
+value: null
+format: null
+success_title: 'Test Sucess'
+success_message:
+  value: "<p>Test Success Message</p>\r\n"
+  format: basic_html
+form_title: 'Test Contact'
+email_template: ''

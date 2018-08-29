@@ -1,0 +1,30 @@
+uuid: d2b7adc2-ebf7-4909-b4e2-fc9fa05f960e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.jamboree_weekly_winner_entity.field_weekly_winner_year
+    - taxonomy.vocabulary.weekly_winner_year
+  module:
+    - jamboree_weekly_winner
+id: jamboree_weekly_winner_entity.jamboree_weekly_winner_entity.field_weekly_winner_year
+field_name: field_weekly_winner_year
+entity_type: jamboree_weekly_winner_entity
+bundle: jamboree_weekly_winner_entity
+label: 'Weekly Winner Year'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      weekly_winner_year: weekly_winner_year
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

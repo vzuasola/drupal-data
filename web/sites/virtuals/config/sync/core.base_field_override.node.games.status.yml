@@ -1,0 +1,22 @@
+uuid: cd7c4532-772c-49a2-ad4d-f97382c31be6
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.games
+id: node.games.status
+field_name: status
+entity_type: node
+bundle: games
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

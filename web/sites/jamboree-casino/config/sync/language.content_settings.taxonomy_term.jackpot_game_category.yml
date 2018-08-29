@@ -1,5 +1,5 @@
-uuid: a77c75a7-cac1-455e-9c5a-f876ea64005a
-langcode: en
+uuid: f8814a72-4147-483a-bae6-05a203708d3e
+langcode: ja
 status: true
 dependencies:
   config:
@@ -14,5 +14,5 @@ third_party_settings:
 id: taxonomy_term.jackpot_game_category
 target_entity_type_id: taxonomy_term
 target_bundle: jackpot_game_category
-default_langcode: current_interface
+default_langcode: site_default
 language_alterable: true

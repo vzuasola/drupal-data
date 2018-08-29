@@ -1,0 +1,19 @@
+uuid: b8d49c85-58bb-4efc-9edd-f377706c39f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.games
+  module:
+    - user
+id: node.games.teaser
+targetEntityType: node
+bundle: games
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

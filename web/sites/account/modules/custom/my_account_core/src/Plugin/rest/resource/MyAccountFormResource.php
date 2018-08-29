@@ -289,11 +289,14 @@ class MyAccountFormResource extends ResourceBase
             $value['contact_preference_yes'] = $values['contact_preference_yes_label_field'];
             $value['contact_preference_no'] = $values['contact_preference_no_label_field'];
         } elseif ($key == 'myprofile_general_configuration') {
-            $value['primary_label'] = $values['primary_label_field'];
-            $value['add_mobile_label'] = $values['add_mobile_label_field'];
-            $value['no_changed_detected_message'] = $values['no_changed_detected_message_field'];
-            $value['male_label'] = $values['male_label_field'];
-            $value['female_label'] = $values['female_label_field'];
+            $value['primary_label'] = $values['primary_label'];
+            $value['add_mobile_label'] = $values['add_mobile_label'];
+            $value['no_changed_detected_message'] = $values['no_changed_detected_message'];
+            $value['male_label'] = $values['male_label'];
+            $value['female_label'] = $values['female_label'];
+            $value['message_timeout'] = $values['message_timeout'];
+            $value['my_profile_tab'] = $values['my_profile_tab'];
+            $value['change_password_tab'] = $values['change_password_tab'];
         }
         return $value;
     }

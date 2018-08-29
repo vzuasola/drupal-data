@@ -131,5 +131,8 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_disable_in_tablet: true
+  field_preview_display_only: true
   field_ribbon_configuration: true
+  field_status: true
   langcode: true

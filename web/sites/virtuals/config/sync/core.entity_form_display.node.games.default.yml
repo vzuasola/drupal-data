@@ -76,6 +76,7 @@ third_party_settings:
     group_game_launching:
       children:
         - field_game_provider
+        - field_playing_type
       parent_name: ''
       weight: 9
       format_type: tab
@@ -101,7 +102,7 @@ third_party_settings:
         description: ''
         required_fields: true
       label: 'Game Room Maintenance/Coming Soon'
-    group_additional_statuses:
+    group_display_statuses:
       children:
         - field_status
         - field_disable_in_tablet
@@ -114,19 +115,19 @@ third_party_settings:
         classes: ''
         description: ''
         required_fields: true
-      label: 'Additional Statuses'
+      label: 'Display Statuses'
 id: node.games.default
 targetEntityType: node
 bundle: games
 mode: default
 content:
   field_disable_in_tablet:
-    type: boolean_checkbox
-    weight: 1
-    region: content
+    weight: 122
     settings:
       display_label: true
     third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
   field_end_date:
     weight: 20
     settings: {  }
@@ -221,13 +222,37 @@ content:
     third_party_settings: {  }
     type: text_textarea
     region: content
-  field_preview_display_only:
-    type: boolean_checkbox
-    weight: 2
+  field_playing_type:
+    third_party_settings:
+      conditional_fields:
+        59218c17-017e-45cb-8944-753083b7c7a5:
+          dependee: field_game_provider
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                target_id: '206'
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: node
+          bundle: games
+    weight: 18
+    settings: {  }
+    type: options_select
     region: content
+  field_preview_display_only:
+    weight: 123
     settings:
       display_label: true
     third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
   field_ribbon_configuration:
     weight: 12
     settings: {  }
@@ -248,11 +273,11 @@ content:
     type: datetime_default
     region: content
   field_status:
-    type: options_select
-    weight: 0
-    region: content
+    weight: 121
     settings: {  }
     third_party_settings: {  }
+    type: options_select
+    region: content
   langcode:
     type: language_select
     weight: 1
@@ -306,7 +331,6 @@ content:
 hidden:
   body: true
   created: true
-  field_playing_type: true
   promote: true
   sticky: true
   uid: true

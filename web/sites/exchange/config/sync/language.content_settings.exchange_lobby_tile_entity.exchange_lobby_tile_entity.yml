@@ -8,6 +8,8 @@ dependencies:
 third_party_settings:
   content_translation:
     enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
 id: exchange_lobby_tile_entity.exchange_lobby_tile_entity
 target_entity_type_id: exchange_lobby_tile_entity
 target_bundle: exchange_lobby_tile_entity
