@@ -1,0 +1,23 @@
+uuid: a8c4ffe8-8d21-4715-99c2-865dfef9ea5e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_post_login_only
+    - taxonomy.vocabulary.games_category
+id: taxonomy_term.games_category.field_post_login_only
+field_name: field_post_login_only
+entity_type: taxonomy_term
+bundle: games_category
+label: 'Post Login Only'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
