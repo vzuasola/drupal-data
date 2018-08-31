@@ -1,9 +1,0 @@
-critical_announcement: 1
-news_announcement: 1
-jamboree_settings_tab__active_tab: edit-announcement-group
-critical_announcement_content:
-  value: "<p>Alex JP</p>\r\n"
-  format: basic_html
-news_announcement_content:
-  value: "<p>Alex JP</p>\r\n"
-  format: basic_html
