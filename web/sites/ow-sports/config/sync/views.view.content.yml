@@ -255,7 +255,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Banner Image'
+          label: Image
           exclude: false
           alter:
             alter_text: false
