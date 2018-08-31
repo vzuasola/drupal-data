@@ -227,7 +227,7 @@ display:
           expose:
             label: ''
           granularity: second
-      title: 'Sort Rules Page List'
+      title: 'Sort Rules and Regulations Page List'
       header: {  }
       footer: {  }
       empty: {  }
