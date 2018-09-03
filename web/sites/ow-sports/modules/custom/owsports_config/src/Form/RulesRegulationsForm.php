@@ -82,4 +82,42 @@ class RulesRegulationsForm extends FormBase {
 
     return $form;
   }
+  /**
+   * {@inheritdoc}
+   */
+  public function validateForm(array &$form, FormStateInterface $form_state) {
+    parent::validateForm($form, $form_state);
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function submitForm(array &$form, FormStateInterface $form_state) {
+    $keys = [
+      'rules_page_background',
+    ];
+
+    foreach ($keys as $key) {
+      if ($key == 'rules_page_background') {
+          $fid = $form_state->getValue('rules_page_background');
+
+          if ($fid) {
+              $file = File::load($fid[0]);
+              $file->setPermanent();
+              $file->save();
+
+              $file_usage = \Drupal::service('file.usage');
+              $file_usage->add($file, 'owsports_config', 'image', $fid[0]);
+
+              $this->config('owsports_config.rules_configuration')
+              ->set("rules_page_background_image_url", file_create_url($file->getFileUri()))
+              ->save();
+          } else {
+              $this->config('owsports_config.rules_configuration')->set("rules_page_background_image_url", null);
+          }
+      }
+      $this->config('owsports_config.rules_configuration')->set($key, $form_state->getValue($key))->save();
+    }
+    parent::submitForm($form, $form_state);
+  }
 }
