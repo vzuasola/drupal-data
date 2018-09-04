@@ -72,7 +72,7 @@ class OWSportsCustomConfigForm extends ConfigFormBase {
       '#type' => 'checkbox',
       '#title' => $this->t('Hide Right Side Block'),
       '#default_value' => $config->get('right_side_block'),
-      '#description' => $this->t('Enable this feature to hide the right side block below 1330px and lower width of screen.'),
+      '#description' => $this->t('Enable this feature to hide the right side block below 1370px and lower width of screen.'),
     ];
 
     $form['jackpotbet_config_group'] = [
