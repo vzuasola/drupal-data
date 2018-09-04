@@ -42,9 +42,13 @@ weights:
     weight: '9'
   coupon_code:
     weight: '10'
+  ip:
+    weight: '10'
   username:
     weight: '10'
-  ip:
+  creferer:
+    weight: '10'
+  advertiser:
     weight: '10'
   submit:
     weight: '10'
