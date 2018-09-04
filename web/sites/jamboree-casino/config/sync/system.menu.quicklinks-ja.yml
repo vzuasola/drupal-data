@@ -1,0 +1,8 @@
+uuid: c7d3a2d7-6c3a-490e-9648-afb35f4fa415
+langcode: ja
+status: true
+dependencies: {  }
+id: quicklinks-ja
+label: 'Quicklinks JA'
+description: ''
+locked: false

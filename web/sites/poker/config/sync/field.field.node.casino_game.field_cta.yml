@@ -12,7 +12,7 @@ field_name: field_cta
 entity_type: node
 bundle: casino_game
 label: CTA
-description: ''
+description: 'Only applies to PRE-LOGIN state.'
 required: false
 translatable: true
 default_value: {  }

@@ -11,6 +11,7 @@ opus_unsupported_currencies_message:
   format: basic_html
 _core:
   default_config_hash: eBg0CiGFt3xHc9Wkch-7BKqAdElb6b57iAgtX4yviuM
-opus_game_free_play_url: ' https://playkno.df888ok.com/login_pff.aspx'
+opus_game_free_play_url: 'https://playkno.df888ok.com/login_pff.aspx'
 opus_unsupported_currencies_button: Ok
 opus_fallback_error: ''
+country: ''

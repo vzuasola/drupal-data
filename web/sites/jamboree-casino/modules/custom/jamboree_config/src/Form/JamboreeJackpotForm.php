@@ -90,42 +90,58 @@ class JamboreeJackpotForm extends FormBase {
       '#required' => TRUE,
     ];
 
-    $form['jackpot_graph_main_title'] = [
+    $form['jackpot_graph_text'] = [
       '#type' => 'details',
-      '#title' => $this->t('Casino Graph Main Title'),
+      '#title' => $this->t('Casino Graph Text Config'),
       '#group' => 'advanced',
     ];
 
-    $form['jackpot_graph_main_title']['jackpot_graph_main_title_value'] = [
+    $form['jackpot_graph_text']['jackpot_graph_main_title_value'] = [
       '#type' => 'textfield',
       '#title' => t('Enter the main title for casino graph page.'),
       '#default_value' => $this->get('jackpot_graph_main_title_value'),
       '#translatable' => TRUE,
     ];
 
-    $form['jackpot_amount_title'] = [
-      '#type' => 'details',
-      '#title' => $this->t('Recent Jackpot Amount Title'),
-      '#group' => 'advanced',
-    ];
-
-    $form['jackpot_amount_title']['jackpot_amount_title_value'] = [
+    $form['jackpot_graph_text']['jackpot_amount_title_value'] = [
       '#type' => 'textfield',
-      '#title' => t('Enter the title for recent jackpot amount on graph).'),
+      '#title' => t('Enter the title for recent jackpot amount on graph.'),
       '#default_value' => $this->get('jackpot_amount_title_value'),
       '#translatable' => TRUE,
     ];
 
-    $form['jackpot_latest_hits_title'] = [
-      '#type' => 'details',
-      '#title' => $this->t('Latest Hits Title'),
-      '#group' => 'advanced',
+    $form['jackpot_graph_text']['jackpot_last_update'] = [
+      '#type' => 'textfield',
+      '#title' => t('Enter Last Updated.'),
+      '#default_value' => $this->get('jackpot_last_update'),
+      '#translatable' => TRUE,
     ];
 
-    $form['jackpot_latest_hits_title']['jackpot_latest_hits_title_value'] = [
+    $form['jackpot_graph_text']['jackpot_latest_hits_title_value'] = [
       '#type' => 'textfield',
       '#title' => t('Enter the title for jackpot hits on graph.'),
       '#default_value' => $this->get('jackpot_latest_hits_title_value'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['jackpot_graph_text']['jackpot_graph_current_text'] = [
+      '#type' => 'textfield',
+      '#title' => t('Enter the current text for jackpot graph.'),
+      '#default_value' => $this->get('jackpot_graph_current_text'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['jackpot_graph_text']['jackpot_graph_day_ago'] = [
+      '#type' => 'textfield',
+      '#title' => t('Enter the day ago text for jackpot graph.'),
+      '#default_value' => $this->get('jackpot_graph_day_ago'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['jackpot_graph_text']['jackpot_graph_days_ago'] = [
+      '#type' => 'textfield',
+      '#title' => t('Enter the day ago text for jackpot graph.'),
+      '#default_value' => $this->get('jackpot_graph_days_ago'),
       '#translatable' => TRUE,
     ];
 

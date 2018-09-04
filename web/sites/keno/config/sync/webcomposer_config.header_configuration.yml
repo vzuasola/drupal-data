@@ -1,7 +1,7 @@
 join_now_text: 'JOIN NOW'
 join_now_link: '/{domain:entry}/{domain:lang_token}/join/lottery[query:({tracking})]'
-login_issue_text: 'Cant login?'
-login_issue_link: '/{domain:entry}/{domain:lang_token}/cant-login{tracking.token}'
+login_issue_text: 'Can''t login?'
+login_issue_link: '/{domain:myaccount_domain}/{domain:lang_token}/cant-login[query:({tracking})]'
 sc_lang_text: SC
 ch_lang_text: CH
 balance_error_text: N/A
@@ -37,6 +37,6 @@ password_mask_toggle: 1
 balance_label_override: '综合钱包 '
 caps_lock_toggle: 1
 capslock_notification: 'Caps Lock On'
-header_settings_tab__active_tab: edit-join-now-group
+header_settings_tab__active_tab: edit-logo-group
 value: null
 format: null

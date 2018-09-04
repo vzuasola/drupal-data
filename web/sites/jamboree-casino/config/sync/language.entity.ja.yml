@@ -3,7 +3,7 @@ langcode: ja
 status: true
 dependencies: {  }
 id: ja
-label: Japanese
+label: 'Japanese jp'
 direction: ltr
 weight: -9
 locked: false

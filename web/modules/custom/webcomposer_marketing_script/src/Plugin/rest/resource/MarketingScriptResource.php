@@ -23,20 +23,22 @@ use Drupal\webcomposer_marketing_script\Entity\MarketingScriptEntity;
  * )
  */
 class MarketingScriptResource extends ResourceBase {
+  /**
+   * The current language
+   */
+  private $currentLanguage;
 
   /**
    * A current user instance.
    *
    * @var \Drupal\Core\Session\AccountProxyInterface
    */
-
   protected $currentUser;
 
   /**
    *
    * @var \Symfony\Component\HttpFoundation\Request
    */
-
   protected $currentRequest;
 
   /**
@@ -61,11 +63,15 @@ class MarketingScriptResource extends ResourceBase {
     $plugin_definition,
     array $serializer_formats,
     LoggerInterface $logger,
-    AccountProxyInterface $current_user, Request $current_request) {
+    AccountProxyInterface $current_user,
+    Request $current_request,
+    $language_manager
+  ) {
     parent::__construct($configuration, $plugin_id, $plugin_definition, $serializer_formats, $logger);
 
     $this->currentUser = $current_user;
     $this->currentRequest = $current_request;
+    $this->currentLanguage = $language_manager->getCurrentLanguage()->getId();
   }
 
   /**
@@ -79,7 +85,8 @@ class MarketingScriptResource extends ResourceBase {
       $container->getParameter('serializer.formats'),
       $container->get('logger.factory')->get('rest'), 
       $container->get('current_user'),
-      $container->get('request_stack')->getCurrentRequest()
+      $container->get('request_stack')->getCurrentRequest(),
+      $container->get('language_manager')
     );
   }
 
@@ -95,38 +102,47 @@ class MarketingScriptResource extends ResourceBase {
     $route = $this->currentRequest->query->get('route');
     $response = [];
 
-    $results = MarketingScriptEntity::loadMultiple();
+    $sets = \Drupal::entityQuery('marketing_script_entity')
+      ->execute();
+
+    $results = MarketingScriptEntity::loadMultiple($sets);
 
     foreach ($results as $value) {
-      $result = $value->toArray();   
+      try {
+        $translated = $value->getTranslation($this->currentLanguage)->toArray();
+      } catch (\Exception $e) {
+        // use default fallback
+        $translated = $value->toArray();
+      }
 
-      $entityId = $result['id'][0]['value'];
-      $data = explode(PHP_EOL, $result['field_per_page_configuratiion'][0]['value']);
+      if ($translated) {
+        $entityId = $translated['id'][0]['value'];
+        $data = explode(PHP_EOL, $translated['field_per_page_configuratiion'][0]['value']);
 
-      foreach ($data as $key) {
-        $trimmed_key = trim($key);
+        foreach ($data as $key) {
+          $trimmed_key = trim($key);
 
-        if (fnmatch($trimmed_key, $route)) {
-          $response[$entityId] = $result;
-        }
+          if (fnmatch($trimmed_key, $route)) {
+            $response[$entityId] = $translated;
+          }
 
-        $pttr = '#^\~#';
-        if (preg_match($pttr, $trimmed_key) === 1) {
-          $excl = trim(preg_replace($pttr, "", $trimmed_key));
-          if (fnmatch($excl, $route)) {
-            unset($response[$entityId]);
+          $pttr = '#^\~#';
+          if (preg_match($pttr, $trimmed_key) === 1) {
+            $excl = trim(preg_replace($pttr, "", $trimmed_key));
+            if (fnmatch($excl, $route)) {
+              unset($response[$entityId]);
+            }
           }
         }
       }
     }
 
-    $build = array( 
-      '#cache' => array( 
+    $build = array(
+      '#cache' => array(
         'max-age' => 0, 
       ),
     ); 
 
     return (new ResourceResponse($response))->addCacheableDependency($build);
   }
-
 }

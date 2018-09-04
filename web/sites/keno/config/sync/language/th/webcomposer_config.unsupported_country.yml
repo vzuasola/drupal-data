@@ -1,0 +1,5 @@
+unsupported_country_message:
+  format: basic_html
+  value: "<p>เกมส์นี้ไม่สามารถใช้งานได้ในประเทศที่คุณอยู่ กรุณาเลือกเกมส์ล็อตโต้อื่นๆ</p>\r\n"
+unsupported_country_title: 'Country not supported'
+unsupported_country_button: Ok
