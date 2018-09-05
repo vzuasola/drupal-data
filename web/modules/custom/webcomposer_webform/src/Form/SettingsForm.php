@@ -3,6 +3,7 @@
 namespace Drupal\webcomposer_webform\Form;
 
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\file\Entity\File;
 
 /**
  * Form for adding additional webform settings element
@@ -236,6 +237,24 @@ class SettingsForm {
     //     }
     //   }
     // }
+
+    $default_bg_fid = isset($form['third_party_settings']['webcomposer_webform']['webform_background']['background_image']['fids'])
+    ? $form['third_party_settings']['webcomposer_webform']['webform_background']['background_image']['fids']['#value']
+    : null;
+
+    /* checking if fid is set
+     * note fid will only set when there is an upload of the image
+     * url = https://api.drupal.org/api/drupal
+     * url/core%21modules%21file%21file.services.yml/service/file.usage/8.5.x
+     * url/core%21modules%21file%21file.module/function/file_load/8.5.x
+     */
+    if ($default_bg_fid) {
+      $file = File::load((int) $default_bg_fid[0]);
+      $file->setPermanent();
+      $file->save();
+      $file_usage = \Drupal::service('file.usage');
+      $file_usage->add($file, 'webcomposer_webform', 'image', $default_bg_fid[0]);
+    }
 
     $form_state->setValue('third_party_settings', $third_party_settings);
 
