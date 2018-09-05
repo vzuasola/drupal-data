@@ -1,4 +1,4 @@
-uuid: 9b3a4177-eec6-4183-86eb-28821613bb19
+uuid: 7d1680bb-b93b-4f56-8145-a9a83d2e8df0
 langcode: en
 status: true
 dependencies:
@@ -7,8 +7,8 @@ dependencies:
   module:
     - taxonomy
     - user
-id: home_tab_ribbon_entity_reference
-label: 'Home Tab Ribbon Entity Reference'
+id: arcade_ribbon_entity_reference
+label: 'Arcade Ribbon Entity Reference'
 module: views
 description: ''
 tag: ''
