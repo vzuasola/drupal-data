@@ -6,7 +6,7 @@ use Drupal\webcomposer_form_manager\WebcomposerFormBase;
 use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
 
 /**
- * ChangePasswordForm.
+ * SMS verification form.
  *
  * @WebcomposerForm(
  *   id = "profile_sms_verification_form",
