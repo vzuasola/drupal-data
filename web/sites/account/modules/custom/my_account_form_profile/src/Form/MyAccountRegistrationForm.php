@@ -163,6 +163,16 @@ class MyAccountRegistrationForm extends FormBase
             '#translatable' => true,
         ];
 
+        $form['field_labels_sms_verification']['verification_code_numeric_message'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Numeric Error Message'),
+            '#size' => 25,
+            '#required' => TRUE,
+            '#description' => $this->t('Numeric Field Error Message'),
+            '#default_value' => $this->get('verification_code_numeric_message'),
+            '#translatable' => true,
+        ];
+
         $form['field_labels_sms_verification']['verification_code_min_length_message'] = [
             '#type' => 'textfield',
             '#title' => $this->t('Min Length Field Error Message'),
