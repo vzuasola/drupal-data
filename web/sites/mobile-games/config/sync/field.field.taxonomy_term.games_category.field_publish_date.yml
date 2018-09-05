@@ -1,0 +1,21 @@
+uuid: db4b4c38-bf3d-4ff8-86b4-ef14a823223a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_publish_date
+    - taxonomy.vocabulary.games_category
+  module:
+    - datetime
+id: taxonomy_term.games_category.field_publish_date
+field_name: field_publish_date
+entity_type: taxonomy_term
+bundle: games_category
+label: 'Publish Date (optional)'
+description: "<p>If this is set the category will be available from this date up until the date set on <strong>Unpublish Date</strong>.\r\n<br>Otherwise, the category will be available upon saving unless it's disabled.</p>"
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime
