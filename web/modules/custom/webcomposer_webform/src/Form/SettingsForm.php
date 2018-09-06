@@ -228,7 +228,7 @@ class SettingsForm {
     $default_bg_fid = isset($form['third_party_settings']['webcomposer_webform']['webform_background']
       ['background_image']['fids'])
     ? $form['third_party_settings']['webcomposer_webform']['webform_background']
-      ['background_image']['fids']['#value'] : null;
+      ['background_image']['fids']['#value'] : false;
 
     /* checking if fid is set
      * note fid will only set when there is an upload of the image
@@ -248,24 +248,22 @@ class SettingsForm {
      * respective language field
      */
     foreach ($this->languageManager->getLanguages() as $language) {
-      $bg_image_lang = $langKey = $lang = [];
-
       $lang = $language->getId();
 
       if (isset($this->prefixes[$lang])) {
-        $langKey = $this->prefixes[$lang];
+        $langKey = $this->prefixes[$lang] ?? '';
 
-        $bg_image_lang = isset($form['third_party_settings']['webcomposer_webform']['webform_background']
-          ['translated']["background_image_$langKey"]['fids'])
-        ? $form['third_party_settings']['webcomposer_webform']['webform_background']
-          ['translated']["background_image_$langKey"]['fids']['#value'] : null;
+        if ($langKey) {
+          $bg_image_lang = isset($form['third_party_settings']['webcomposer_webform']['webform_background']
+            ['translated']["background_image_$langKey"]['fids'])
+         ? $form['third_party_settings']['webcomposer_webform']['webform_background']
+            ['translated']["background_image_$langKey"]['fids']['#value'] : false;
+
+          if ($bg_image_lang) {
+            $this->setFilePermanent($bg_image_lang[0]);
+          }
+        }
       }
-
-      if ($bg_image_lang) {
-        $this->setFilePermanent($bg_image_lang[0]);
-      }
-
-      $bg_image_lang = $langKey = [];
     }
 
     $form_state->setValue('third_party_settings', $third_party_settings);
