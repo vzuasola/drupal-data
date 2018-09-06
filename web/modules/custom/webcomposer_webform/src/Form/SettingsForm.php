@@ -225,39 +225,66 @@ class SettingsForm {
     // remove the background image upload on empty background
     $third_party_settings = $form_state->getValue('third_party_settings');
 
-    // remove translated backgrounds
-    // foreach ($this->languageManager->getLanguages() as $language) {
-    //   $lang = $language->getId();
-
-    //   if (isset($this->prefixes[$lang])) {
-    //     $langKey = $this->prefixes[$lang];
-
-    //     if (!empty($third_party_settings['webcomposer_webform']['webform_background']["background_image_$langKey"])) {
-    //       unset($third_party_settings['webcomposer_webform']['webform_background']["background_image_$langKey"]);
-    //     }
-    //   }
-    // }
-
-    $default_bg_fid = isset($form['third_party_settings']['webcomposer_webform']['webform_background']['background_image']['fids'])
-    ? $form['third_party_settings']['webcomposer_webform']['webform_background']['background_image']['fids']['#value']
-    : null;
+    $default_bg_fid = isset($form['third_party_settings']['webcomposer_webform']['webform_background']
+      ['background_image']['fids'])
+    ? $form['third_party_settings']['webcomposer_webform']['webform_background']
+      ['background_image']['fids']['#value'] : false;
 
     /* checking if fid is set
      * note fid will only set when there is an upload of the image
+     * reference link is below
      * url = https://api.drupal.org/api/drupal
      * url/core%21modules%21file%21file.services.yml/service/file.usage/8.5.x
      * url/core%21modules%21file%21file.module/function/file_load/8.5.x
      */
     if ($default_bg_fid) {
-      $file = File::load((int) $default_bg_fid[0]);
-      $file->setPermanent();
-      $file->save();
-      $file_usage = \Drupal::service('file.usage');
-      $file_usage->add($file, 'webcomposer_webform', 'image', $default_bg_fid[0]);
+      $this->setFilePermanent($default_bg_fid[0]);
+    }
+
+    /*
+     * this looping is necessary for the dynamic fields
+     * which are defined in the form according to the languages
+     * this will set file as permanent when we have file id with
+     * respective language field
+     */
+    foreach ($this->languageManager->getLanguages() as $language) {
+      $lang = $language->getId();
+
+      if (isset($this->prefixes[$lang])) {
+        $langKey = $this->prefixes[$lang] ?? '';
+
+        if ($langKey) {
+          $bg_image_lang = isset($form['third_party_settings']['webcomposer_webform']['webform_background']
+            ['translated']["background_image_$langKey"]['fids'])
+         ? $form['third_party_settings']['webcomposer_webform']['webform_background']
+            ['translated']["background_image_$langKey"]['fids']['#value'] : false;
+
+          if ($bg_image_lang) {
+            $this->setFilePermanent($bg_image_lang[0]);
+          }
+        }
+      }
     }
 
     $form_state->setValue('third_party_settings', $third_party_settings);
 
+  }
+
+  /**
+   * Setting the file as permanent
+   * reference link is below
+   * url = https://api.drupal.org/api/drupal
+   * url/core%21modules%21file%21file.services.yml/service/file.usage/8.5.x
+   * url/core%21modules%21file%21file.module/function/file_load/8.5.x
+   */
+  private function setFilePermanent($fileId) {
+    $file = File::load((int) $fileId);
+    $file->setPermanent();
+    $file->save();
+    $file_usage = \Drupal::service('file.usage');
+    $file_usage->add($file, 'webcomposer_webform', 'image', $fileId);
+
+    return;
   }
 
   /**
