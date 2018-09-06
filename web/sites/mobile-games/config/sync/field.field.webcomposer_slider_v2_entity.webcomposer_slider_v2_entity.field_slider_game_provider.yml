@@ -1,0 +1,21 @@
+uuid: 69e53708-5d53-4821-9fd9-78e859f446a0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.webcomposer_slider_v2_entity.field_slider_game_provider
+  module:
+    - options
+    - webcomposer_slider_v2
+id: webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_slider_game_provider
+field_name: field_slider_game_provider
+entity_type: webcomposer_slider_v2_entity
+bundle: webcomposer_slider_v2_entity
+label: 'Game Provider'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
