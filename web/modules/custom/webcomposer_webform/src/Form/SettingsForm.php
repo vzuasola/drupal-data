@@ -3,6 +3,7 @@
 namespace Drupal\webcomposer_webform\Form;
 
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\file\Entity\File;
 
 /**
  * Form for adding additional webform settings element
@@ -27,7 +28,7 @@ class SettingsForm {
   }
 
   /**
-   * 
+   *
    */
   public function getForm(&$form, FormStateInterface $form_state) {
     $settings = $form_state->getFormObject()->getEntity();
@@ -121,7 +122,7 @@ class SettingsForm {
       '#title' => t('Default Form Background Image'),
       '#description' => t('The background image of the form'),
       '#default_value' => $configs['background_image'] ?? NULL,
-      '#upload_location' => 'public://webform-backgrounds',
+      '#upload_location' => 'public://',
     ];
 
     // Translated backgrounds
@@ -144,7 +145,7 @@ class SettingsForm {
           '#title' => "Form Background Image for " . strtoupper($langKey) ,
           '#description' => t('The background image of the form'),
           '#default_value' => $configs["background_image_$langKey"] ?? NULL,
-          '#upload_location' => 'public://webform-backgrounds',
+          '#upload_location' => 'public://',
         ];
       }
     }
@@ -204,41 +205,86 @@ class SettingsForm {
   }
 
   /**
-   * 
+   *
    */
   public function validate(&$form, FormStateInterface $form_state) {
-    $settings = $form_state->getFormObject()->getEntity(); 
+    $settings = $form_state->getFormObject()->getEntity();
 
-    // fix for image uploads breaking due to unknown reasons that the scheduled date 
-    // gets validated on image upload AJAX calls 
-    $date = $settings->get('open')['date']; 
-    if (!$date) { 
-      $settings->set('open', FALSE); 
-    } 
- 
-    $date = $settings->get('close')['date']; 
-    if (!$date) { 
-      $settings->set('close', FALSE); 
-    } 
- 
+    // fix for image uploads breaking due to unknown reasons that the scheduled date
+    // gets validated on image upload AJAX calls
+    $date = $settings->get('open')['date'];
+    if (!$date) {
+      $settings->set('open', FALSE);
+    }
+
+    $date = $settings->get('close')['date'];
+    if (!$date) {
+      $settings->set('close', FALSE);
+    }
+
     // remove the background image upload on empty background
     $third_party_settings = $form_state->getValue('third_party_settings');
 
-    // remove translated backgrounds
-    // foreach ($this->languageManager->getLanguages() as $language) {
-    //   $lang = $language->getId();
+    $default_bg_fid = isset($form['third_party_settings']['webcomposer_webform']['webform_background']
+      ['background_image']['fids'])
+    ? $form['third_party_settings']['webcomposer_webform']['webform_background']
+      ['background_image']['fids']['#value'] : false;
 
-    //   if (isset($this->prefixes[$lang])) {
-    //     $langKey = $this->prefixes[$lang];
+    /* checking if fid is set
+     * note fid will only set when there is an upload of the image
+     * reference link is below
+     * url = https://api.drupal.org/api/drupal
+     * url/core%21modules%21file%21file.services.yml/service/file.usage/8.5.x
+     * url/core%21modules%21file%21file.module/function/file_load/8.5.x
+     */
+    if ($default_bg_fid) {
+      $this->setFilePermanent($default_bg_fid[0]);
+    }
 
-    //     if (!empty($third_party_settings['webcomposer_webform']['webform_background']["background_image_$langKey"])) {
-    //       unset($third_party_settings['webcomposer_webform']['webform_background']["background_image_$langKey"]);
-    //     }
-    //   }
-    // }
+    /*
+     * this looping is necessary for the dynamic fields
+     * which are defined in the form according to the languages
+     * this will set file as permanent when we have file id with
+     * respective language field
+     */
+    foreach ($this->languageManager->getLanguages() as $language) {
+      $lang = $language->getId();
+
+      if (isset($this->prefixes[$lang])) {
+        $langKey = $this->prefixes[$lang] ?? '';
+
+        if ($langKey) {
+          $bg_image_lang = isset($form['third_party_settings']['webcomposer_webform']['webform_background']
+            ['translated']["background_image_$langKey"]['fids'])
+         ? $form['third_party_settings']['webcomposer_webform']['webform_background']
+            ['translated']["background_image_$langKey"]['fids']['#value'] : false;
+
+          if ($bg_image_lang) {
+            $this->setFilePermanent($bg_image_lang[0]);
+          }
+        }
+      }
+    }
 
     $form_state->setValue('third_party_settings', $third_party_settings);
- 
+
+  }
+
+  /**
+   * Setting the file as permanent
+   * reference link is below
+   * url = https://api.drupal.org/api/drupal
+   * url/core%21modules%21file%21file.services.yml/service/file.usage/8.5.x
+   * url/core%21modules%21file%21file.module/function/file_load/8.5.x
+   */
+  private function setFilePermanent($fileId) {
+    $file = File::load((int) $fileId);
+    $file->setPermanent();
+    $file->save();
+    $file_usage = \Drupal::service('file.usage');
+    $file_usage->add($file, 'webcomposer_webform', 'image', $fileId);
+
+    return;
   }
 
   /**
@@ -248,8 +294,8 @@ class SettingsForm {
     // Hide all fields except these
 
     $exclude = [
-      'general_settings', 
-      'submission_limits', 
+      'general_settings',
+      'submission_limits',
       'third_party_settings',
       'confirmation_settings',
       'form_settings',

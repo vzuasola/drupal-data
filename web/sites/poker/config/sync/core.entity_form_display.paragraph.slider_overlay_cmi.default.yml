@@ -7,9 +7,9 @@ dependencies:
     - field.field.paragraph.slider_overlay_cmi.field_post_link
     - field.field.paragraph.slider_overlay_cmi.field_post_link_target
     - field.field.paragraph.slider_overlay_cmi.field_post_overlay_item
+    - field.field.paragraph.slider_overlay_cmi.field_pre_link
     - field.field.paragraph.slider_overlay_cmi.field_pre_link_target
     - field.field.paragraph.slider_overlay_cmi.field_pre_overlay_item
-    - field.field.paragraph.slider_overlay_cmi.field_pre_overlay_link
     - field.field.paragraph.slider_overlay_cmi.field_slideroverlay_cmi_enable
     - paragraphs.paragraphs_type.slider_overlay_cmi
   module:
@@ -21,7 +21,7 @@ third_party_settings:
     group_pre_login:
       children:
         - field_pre_overlay_item
-        - field_pre_overlay_link
+        - field_pre_link
         - field_pre_link_target
       parent_name: ''
       weight: 3
@@ -81,6 +81,14 @@ content:
     third_party_settings: {  }
     type: text_textarea
     region: content
+  field_pre_link:
+    weight: 22
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
   field_pre_link_target:
     weight: 23
     settings: {  }
@@ -94,14 +102,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
-    region: content
-  field_pre_overlay_link:
-    weight: 22
-    settings:
-      placeholder_url: ''
-      placeholder_title: ''
-    third_party_settings: {  }
-    type: link_default
     region: content
   field_slideroverlay_cmi_enable:
     weight: 0

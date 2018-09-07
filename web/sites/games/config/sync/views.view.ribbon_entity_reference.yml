@@ -1,14 +1,14 @@
-uuid: 6af4e883-7e3c-49e7-9ee5-59194148187a
+uuid: 6c0a95d1-2607-4de9-9eb3-2eaff02d4f58
 langcode: en
 status: true
 dependencies:
   config:
-    - taxonomy.vocabulary.games_category
+    - taxonomy.vocabulary.ribbon_labels
   module:
     - taxonomy
     - user
-id: ordinary_games_categories
-label: 'Ordinary Games Categories'
+id: ribbon_entity_reference
+label: 'Ribbon Entity Reference'
 module: views
 description: ''
 tag: ''
@@ -133,20 +133,12 @@ display:
           id: vid
           table: taxonomy_term_field_data
           field: vid
-          value:
-            games_category: games_category
-          entity_type: taxonomy_term
-          entity_field: vid
-          plugin_id: bundle
-        field_isordinarycategory_value:
-          id: field_isordinarycategory_value
-          table: taxonomy_term__field_isordinarycategory
-          field: field_isordinarycategory_value
           relationship: none
           group_type: group
           admin_label: ''
-          operator: '='
-          value: '1'
+          operator: in
+          value:
+            ribbon_labels: ribbon_labels
           group: 1
           exposed: false
           expose:
@@ -161,6 +153,7 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
+            reduce: false
           is_grouped: false
           group_info:
             label: ''
@@ -173,7 +166,9 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          plugin_id: boolean
+          entity_type: taxonomy_term
+          entity_field: vid
+          plugin_id: bundle
         langcode:
           id: langcode
           table: taxonomy_term_field_data
@@ -214,42 +209,6 @@ display:
           entity_type: taxonomy_term
           entity_field: langcode
           plugin_id: language
-        field_games_disable_value:
-          id: field_games_disable_value
-          table: taxonomy_term__field_games_disable
-          field: field_games_disable_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: '='
-          value: '0'
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          plugin_id: boolean
       sorts: {  }
       header: {  }
       footer: {  }
@@ -268,7 +227,7 @@ display:
   entity_reference_1:
     display_plugin: entity_reference
     id: entity_reference_1
-    display_title: 'Ordinary Games Categories'
+    display_title: 'Entity Reference'
     position: 1
     display_options:
       display_extenders: {  }
@@ -277,18 +236,13 @@ display:
         options:
           search_fields:
             name: name
-      row:
-        type: entity_reference
-        options:
-          default_field_elements: true
-          inline: {  }
-          separator: '-'
-          hide_empty: false
-      display_description: ''
       pager:
         type: none
         options:
           offset: 0
+      cache:
+        type: none
+        options: {  }
     cache_metadata:
       max-age: -1
       contexts:

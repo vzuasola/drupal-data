@@ -4,11 +4,13 @@ status: true
 dependencies:
   config:
     - field.field.node.games.field_game_code
+    - field.field.node.games.field_game_provider
     - field.field.node.games.field_game_ribbon
     - field.field.node.games.field_games_list_category
     - field.field.node.games.field_games_list_thumb_img_big
     - field.field.node.games.field_games_list_thumb_img_small
     - field.field.node.games.field_games_list_thumbnail_size
+    - field.field.node.games.field_games_target
     - node.type.games
   module:
     - image
@@ -26,6 +28,13 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_game_provider:
+    weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
   field_game_ribbon:
     weight: 4
@@ -63,6 +72,13 @@ content:
     region: content
   field_games_list_thumbnail_size:
     weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_games_target:
+    weight: 7
     label: above
     settings: {  }
     third_party_settings: {  }
