@@ -1,4 +1,0 @@
-games_config.games_configuration_tab:
-  route_name: games_config.games_configuration
-  title: 'Configure Games'
-  base_route: games_config.games_configuration
