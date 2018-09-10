@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.games.field_games_list_thumb_img_small
     - field.field.node.games.field_games_list_thumbnail_size
     - field.field.node.games.field_keywords
+    - field.field.node.games.field_games_target
     - image.style.thumbnail
     - node.type.games
   module:
@@ -83,6 +84,11 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textarea
+  field_games_target:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   langcode:
     type: language_select
