@@ -2,19 +2,8 @@ uuid: e0fc1945-8379-48e1-b669-4edc51250cda
 langcode: en
 status: true
 dependencies:
-  config:
-    - field.storage.webcomposer_slider_v2_entity.field_banner_image
-    - field.storage.webcomposer_slider_v2_entity.field_log_in_state
-    - field.storage.webcomposer_slider_v2_entity.field_post_banner_image
-    - field.storage.webcomposer_slider_v2_entity.field_publish_date
-    - field.storage.webcomposer_slider_v2_entity.field_title
-    - field.storage.webcomposer_slider_v2_entity.field_unpublish_date
-    - image.style.thumbnail
   module:
-    - datetime
     - draggableviews
-    - image
-    - options
     - rest
     - serialization
     - user
@@ -1453,23 +1442,15 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - url
         - user.permissions
-      tags:
-        - 'config:field.storage.webcomposer_slider_v2_entity.field_banner_image'
-        - 'config:field.storage.webcomposer_slider_v2_entity.field_log_in_state'
-        - 'config:field.storage.webcomposer_slider_v2_entity.field_post_banner_image'
-        - 'config:field.storage.webcomposer_slider_v2_entity.field_publish_date'
-        - 'config:field.storage.webcomposer_slider_v2_entity.field_title'
-        - 'config:field.storage.webcomposer_slider_v2_entity.field_unpublish_date'
+      tags: {  }
   rest_export_1:
     display_plugin: rest_export
     id: rest_export_1
     display_title: 'Slider 2.0'
     position: 1
     display_options:
-      display_extenders:
-        metatag_display_extender: {  }
+      display_extenders: {  }
       path: api/webcomposer_slider_v2
       pager:
         type: none
@@ -1485,55 +1466,6 @@ display:
         type: data_entity
         options: {  }
       display_description: ''
-      filters:
-        langcode:
-          id: langcode
-          table: webcomposer_slider_v2_entity_field_data
-          field: langcode
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: in
-          value:
-            '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          entity_type: webcomposer_slider_v2_entity
-          entity_field: langcode
-          plugin_id: language
-      defaults:
-        filters: false
-        filter_groups: false
-      filter_groups:
-        operator: OR
-        groups:
-          1: AND
-      enabled: true
     cache_metadata:
       max-age: -1
       contexts:
