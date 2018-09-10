@@ -13,7 +13,7 @@ entity_type: webcomposer_slider_v2_entity
 bundle: webcomposer_slider_v2_entity
 label: 'Game Provider'
 description: ''
-required: true
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
