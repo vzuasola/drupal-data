@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.games.field_games_list_thumb_img_big
     - field.field.node.games.field_games_list_thumb_img_small
     - field.field.node.games.field_games_list_thumbnail_size
+    - field.field.node.games.field_keywords
     - field.field.node.games.field_games_target
     - node.type.games
   module:
@@ -77,12 +78,13 @@ content:
     third_party_settings: {  }
     type: list_default
     region: content
+  field_keywords:
   field_games_target:
     weight: 7
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: list_default
+    type: basic_string
     region: content
 hidden:
   langcode: true
