@@ -147,6 +147,13 @@ class GamesConfigurationForm extends FormBase {
       '#required' => TRUE,
       '#translatable' => true,
     );
+    $form['category_group']['special_categories']['allgames_categories_text'] = array(
+      '#type' => 'textfield',
+      '#title' => t('All Games Categories Text'),
+      '#description' => t('The text to display for the all games category. <i>Leave blank to not show.</i>'),
+      '#default_value' => $this->get('allgames_categories_text'),
+      '#translatable' => true,
+    );
   }
 
   private function gamsThumbnailSection(&$form) {
