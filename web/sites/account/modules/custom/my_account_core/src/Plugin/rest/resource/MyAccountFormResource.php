@@ -232,17 +232,18 @@ class MyAccountFormResource extends ResourceBase
 
             $value = $values;
         } elseif ($key == 'sms_verification') {
-            $value['enable_sms_verification'] = $values['enable_sms_verification_field'];
-            $value['verify_text'] = $values['verify_text_field'];
-            $value['modal_verify_header_text'] = $values['modal_verify_header_text_field'];
-            $value['modal_verify_body_text'] = $values['modal_verify_body_text_field'];
-            $value['modal_verification_code_placeholder'] = $values['modal_verification_code_placeholder_field'];
-            $value['modal_verification_resend_code_text'] = $values['modal_verification_resend_code_text_field'];
-            $value['modal_verification_submit_text'] = $values['modal_verification_submit_text_field'];
-            $value['verification_code_response'] = $values['verification_code_response_field'];
-            $value['verification_code_required_message'] = $values['verification_code_required_message_field'];
-            $value['verification_code_min_length_message'] = $values['verification_code_min_length_message_field'];
-            $value['verification_code_max_length_message'] = $values['verification_code_max_length_message_field'];
+            $value['enable_sms_verification'] = $values['enable_sms_verification'];
+            $value['verify_text'] = $values['verify_text'];
+            $value['modal_verify_header_text'] = $values['modal_verify_header_text'];
+            $value['modal_verify_body_text'] = $values['modal_verify_body_text'];
+            $value['modal_verification_code_placeholder'] = $values['modal_verification_code_placeholder'];
+            $value['modal_verification_resend_code_text'] = $values['modal_verification_resend_code_text'];
+            $value['modal_verification_submit_text'] = $values['modal_verification_submit_text'];
+            $value['verification_code_response'] = $values['verification_code_response'];
+            $value['verification_code_required_message'] = $values['verification_code_required_message'];
+            $value['verification_code_min_length_message'] = $values['verification_code_min_length_message'];
+            $value['verification_code_max_length_message'] = $values['verification_code_max_length_message'];
+            $value['verification_code_numeric_message'] = $values['verification_code_numeric_message'];
         } elseif ($key == 'country_mapping') {
             $value['country_mapping'] = $values['country_mapping_field'];
         } elseif ($key == 'country_code_mapping') {

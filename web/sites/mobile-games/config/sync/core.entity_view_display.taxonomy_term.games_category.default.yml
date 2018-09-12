@@ -5,8 +5,12 @@ dependencies:
   config:
     - field.field.taxonomy_term.games_category.field_games_alias
     - field.field.taxonomy_term.games_category.field_games_disable
+    - field.field.taxonomy_term.games_category.field_isordinarycategory
+    - field.field.taxonomy_term.games_category.field_publish_date
+    - field.field.taxonomy_term.games_category.field_unpublish_date
     - taxonomy.vocabulary.games_category
   module:
+    - datetime
     - text
 id: taxonomy_term.games_category.default
 targetEntityType: taxonomy_term
@@ -37,6 +41,34 @@ content:
       format_custom_true: ''
     third_party_settings: {  }
     type: boolean
+    region: content
+  field_isordinarycategory:
+    weight: 3
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_publish_date:
+    weight: 4
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_unpublish_date:
+    weight: 5
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
     region: content
 hidden:
   langcode: true

@@ -1120,7 +1120,17 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#default_value' => $myAccountConfigValue['verification_code_required_message_field'],
         ];
 
-        $form['field_configuration']['field_labels_sms_verification']['verification_code_min_length_message'] = [
+        $form['field_labels_sms_verification']['verification_code_numeric_message'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Numeric Error Message'),
+            '#size' => 25,
+            '#required' => TRUE,
+            '#description' => $this->t('Numeric Field Error Message'),
+            '#default_value' => $this->get('verification_code_numeric_message'),
+            '#translatable' => true,
+        ];
+
+        $form['field_labels_sms_verification']['verification_code_min_length_message'] = [
             '#type' => 'textfield',
             '#title' => $this->t('Min Length Field Error Message'),
             '#size' => 25,
@@ -1463,7 +1473,7 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#required' => TRUE,
             '#default_value' => $this->get('message_timeout'),
             '#translatable' => true,
-            '#description' => '<strong>[Mobile] </strong> Maximum timeout in minutes to display the Success/Error message.'
+            '#description' => '<strong>[Mobile] </strong> Maximum timeout in second to display the Success/Error message.'
         ];
 
         $form['field_labels_generic_configuration']['my_profile_tab'] = [

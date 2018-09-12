@@ -37,9 +37,15 @@ class ResetForm extends ConfirmFormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    \Drupal::service('webcomposer_audit.database_storage')->truncate();
+    $username = \Drupal::currentUser()->getUsername();
 
-    drupal_set_message($this->t('Audit log cleared.'));
+    if ($username === 'master') {
+      \Drupal::service('webcomposer_audit.database_storage')->truncate();
+
+      drupal_set_message($this->t('Audit log cleared.'));
+    } else {
+      drupal_set_message($this->t('Permission denied for clearing the audit logs.'), 'error');
+    }
 
     $form_state->setRedirectUrl($this->getCancelUrl());
   }
