@@ -243,6 +243,7 @@ class MyAccountFormResource extends ResourceBase
             $value['verification_code_required_message'] = $values['verification_code_required_message'];
             $value['verification_code_min_length_message'] = $values['verification_code_min_length_message'];
             $value['verification_code_max_length_message'] = $values['verification_code_max_length_message'];
+            $value['verification_code_numeric_message'] = $values['verification_code_numeric_message'];
         } elseif ($key == 'country_mapping') {
             $value['country_mapping'] = $values['country_mapping'];
         } elseif ($key == 'country_code_mapping') {

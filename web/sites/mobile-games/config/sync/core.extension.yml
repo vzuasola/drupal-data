@@ -33,6 +33,7 @@ module:
   field_ui: 0
   file: 0
   filter: 0
+  games_search: 0
   image: 0
   imce: 0
   lang_dropdown: 0
@@ -68,6 +69,7 @@ module:
   webcomposer_announcements: 0
   webcomposer_audit: 0
   webcomposer_avaya: 0
+  webcomposer_cache: 0
   webcomposer_config: 0
   webcomposer_config_schema: 0
   webcomposer_dashboard: 0

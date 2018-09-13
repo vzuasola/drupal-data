@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.storage.node.field_ribbon_label
     - node.type.game
-    - taxonomy.vocabulary.ribbon_labels
 id: node.game.field_ribbon_label
 field_name: field_ribbon_label
 entity_type: node
@@ -17,12 +16,10 @@ translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:taxonomy_term'
+  handler: views
   handler_settings:
-    target_bundles:
-      ribbon_labels: ribbon_labels
-    sort:
-      field: _none
-    auto_create: false
-    auto_create_bundle: ''
+    view:
+      view_name: ribbon_entity_reference
+      display_name: entity_reference_1
+      arguments: {  }
 field_type: entity_reference

@@ -6,7 +6,27 @@ dependencies:
     - field.field.taxonomy_term.games_category.field_games_alias
     - field.field.taxonomy_term.games_category.field_games_disable
     - field.field.taxonomy_term.games_category.field_isordinarycategory
+    - field.field.taxonomy_term.games_category.field_publish_date
+    - field.field.taxonomy_term.games_category.field_unpublish_date
     - taxonomy.vocabulary.games_category
+  module:
+    - datetime
+    - field_group
+third_party_settings:
+  field_group:
+    group_sc:
+      children:
+        - field_publish_date
+        - field_unpublish_date
+      parent_name: ''
+      weight: 6
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: 'Scheduler Settings'
 id: taxonomy_term.games_category.default
 targetEntityType: taxonomy_term
 bundle: games_category
@@ -33,6 +53,18 @@ content:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
+    region: content
+  field_publish_date:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_unpublish_date:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
     region: content
   langcode:
     type: language_select
