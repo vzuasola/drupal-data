@@ -1,0 +1,24 @@
+uuid: 2956cd83-27f4-4c3b-8e60-aa07e717247c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.webcomposer_slider_v2_entity.field_available_on_tablet
+  module:
+    - webcomposer_slider_v2
+id: webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_available_on_tablet
+field_name: field_available_on_tablet
+entity_type: webcomposer_slider_v2_entity
+bundle: webcomposer_slider_v2_entity
+label: 'Available on Tablet'
+description: 'Check if content will be available on Tablet'
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

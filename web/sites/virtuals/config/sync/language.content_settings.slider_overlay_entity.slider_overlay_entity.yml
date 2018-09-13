@@ -7,11 +7,11 @@ dependencies:
     - slider_overlay
 third_party_settings:
   content_translation:
-    enabled: false
+    enabled: true
     bundle_settings:
       untranslatable_fields_hide: '0'
 id: slider_overlay_entity.slider_overlay_entity
 target_entity_type_id: slider_overlay_entity
 target_bundle: slider_overlay_entity
 default_langcode: site_default
-language_alterable: false
+language_alterable: true
