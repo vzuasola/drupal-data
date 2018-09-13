@@ -26,6 +26,7 @@ content:
     weight: 100
     region: content
 hidden:
+  field_disable_in_tablet: true
   field_end_date: true
   field_game_image: true
   field_game_image_large: true
@@ -36,7 +37,9 @@ hidden:
   field_image_size: true
   field_maintenance_blurb: true
   field_playing_type: true
+  field_preview_display_only: true
   field_ribbon_configuration: true
   field_show_game_info_toggle: true
   field_start_date: true
+  field_status: true
   langcode: true

@@ -1,0 +1,23 @@
+uuid: 6f7b3b66-67b9-46bd-8dc8-fdd68fa574cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_available_on_desktop
+    - node.type.games
+id: node.games.field_available_on_desktop
+field_name: field_available_on_desktop
+entity_type: node
+bundle: games
+label: 'Available on Desktop'
+description: 'Check if content will be available on Desktop'
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
