@@ -24,6 +24,7 @@ $sites['casino.drupal.dev'] = 'casino';
 // Keno instance
 $sites['keno.drupal.local'] = 'keno';
 $sites['keno.drupal.dev'] = 'keno';
+$sites['keno.drupal.env'] = 'keno';
 
 // Registration instance
 $sites['registration.drupal.local'] = 'registration';
@@ -36,6 +37,7 @@ $sites['csngold.drupal.local'] = 'casino-gold';
 // Virtuals instance
 $sites['virtuals.drupal.local'] = 'virtuals';
 $sites['virtuals.drupal.dev'] = 'virtuals';
+$sites['virtuals.drupal.env'] = 'virtuals';
 
 // Owsports Site Instances
 $sites['ow-sports.drupal.local'] = 'ow-sports';
@@ -48,6 +50,7 @@ $sites['games.drupal.dev'] = 'games';
 // Exchange instance
 $sites['exchange.drupal.local'] = 'exchange';
 $sites['exchange.drupal.dev'] = 'exchange';
+$sites['exchange.drupal.env'] = 'exchange';
 
 // Live Dealer instance
 $sites['live-dealer.drupal.local'] = 'live-dealer';
