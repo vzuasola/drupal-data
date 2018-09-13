@@ -51,6 +51,7 @@ class GamesSearchForm extends FormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Search Blurb'),
       '#default_value' => $this->get('search_blurb'),
+      '#translatable' => TRUE,
       '#required' => TRUE,
     ];
 
@@ -58,6 +59,7 @@ class GamesSearchForm extends FormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Default message (for zero results)'),
       '#default_value' => $this->get('no_result_msg'),
+      '#translatable' => TRUE,
       '#required' => TRUE,
     ];
 
