@@ -703,7 +703,7 @@ display:
           click_sort_column: value
           type: boolean
           settings:
-            format: yes-no
+            format: unicode-yes-no
             format_custom_true: ''
             format_custom_false: ''
           group_column: value
@@ -768,7 +768,7 @@ display:
           click_sort_column: value
           type: boolean
           settings:
-            format: yes-no
+            format: unicode-yes-no
             format_custom_true: ''
             format_custom_false: ''
           group_column: value
@@ -833,7 +833,7 @@ display:
           click_sort_column: value
           type: boolean
           settings:
-            format: yes-no
+            format: unicode-yes-no
             format_custom_true: ''
             format_custom_false: ''
           group_column: value

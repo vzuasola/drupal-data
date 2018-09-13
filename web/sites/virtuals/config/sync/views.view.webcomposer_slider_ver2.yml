@@ -1485,9 +1485,9 @@ display:
           click_sort_column: value
           type: boolean
           settings:
-            format: yes-no
-            format_custom_true: ''
-            format_custom_false: ''
+            format: unicode-yes-no
+            format_custom_true: 'YES'
+            format_custom_false: 'NO'
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -1550,9 +1550,9 @@ display:
           click_sort_column: value
           type: boolean
           settings:
-            format: yes-no
-            format_custom_true: 'Available on Tablet'
-            format_custom_false: 'Not Available on Tablet'
+            format: unicode-yes-no
+            format_custom_true: 'YES'
+            format_custom_false: 'NO'
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -1615,9 +1615,9 @@ display:
           click_sort_column: value
           type: boolean
           settings:
-            format: yes-no
-            format_custom_true: ''
-            format_custom_false: ''
+            format: unicode-yes-no
+            format_custom_true: 'YES'
+            format_custom_false: 'NO'
           group_column: value
           group_columns: {  }
           group_rows: true
