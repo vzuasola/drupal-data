@@ -193,6 +193,12 @@ class MyProfileForm extends WebcomposerFormBase implements WebcomposerFormInterf
             '#type' => 'textarea',
             '#description' => 'Tooltip text that will be displayed on focus of info icon',
           ],
+          'country_area_code_validation' => [
+            '#title' => 'Country Area Code Custom Validation',
+            '#type' => 'textarea',
+            '#description' => 'List of country codes that will be validated upon submission in which it had' .
+            ' different min and max character allowed per country code and custom message validation for it',
+          ],
         ],
       ],
 
