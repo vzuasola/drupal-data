@@ -45,11 +45,12 @@ class GamesSearchForm extends FormBase {
       '#title' => $this->t('Title'),
       '#default_value' => $this->get('title'),
       '#translatable' => TRUE,
+      '#required' => TRUE,
     ];
 
     $form['search_configuration']['search_blurb'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('Search Blurb'),
+      '#title' => $this->t('Search Blurb. You may use {keyword}, {count} placeholders.'),
       '#default_value' => $this->get('search_blurb'),
       '#translatable' => TRUE,
       '#required' => TRUE,
@@ -57,7 +58,7 @@ class GamesSearchForm extends FormBase {
 
     $form['search_configuration']['no_result_msg'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('Default message (for zero results)'),
+      '#title' => $this->t('Default message for zero results. You may use {keyword} placeholder.'),
       '#default_value' => $this->get('no_result_msg'),
       '#translatable' => TRUE,
       '#required' => TRUE,
@@ -68,6 +69,7 @@ class GamesSearchForm extends FormBase {
       '#title' => $this->t('Game Title weight'),
       '#default_value' => $this->get('title_weight'),
       '#translatable' => TRUE,
+      '#required' => TRUE,
     ];
 
     $form['search_configuration']['keywords_weight'] = [
@@ -75,6 +77,7 @@ class GamesSearchForm extends FormBase {
       '#title' => $this->t('Keywords weight'),
       '#default_value' => $this->get('keywords_weight'),
       '#translatable' => TRUE,
+      '#required' => TRUE,
     ];
 
     return $form;
