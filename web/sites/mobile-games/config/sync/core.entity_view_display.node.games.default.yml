@@ -78,7 +78,6 @@ content:
     third_party_settings: {  }
     type: list_default
     region: content
-  field_keywords:
   field_games_target:
     weight: 7
     label: above
@@ -87,5 +86,6 @@ content:
     type: basic_string
     region: content
 hidden:
+  field_keywords: true
   langcode: true
   links: true
