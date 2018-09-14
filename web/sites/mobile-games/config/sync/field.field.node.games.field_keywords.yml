@@ -10,7 +10,7 @@ field_name: field_keywords
 entity_type: node
 bundle: games
 label: Keywords
-description: ''
+description: 'Please separate each keyword with a space'
 required: false
 translatable: true
 default_value: {  }
