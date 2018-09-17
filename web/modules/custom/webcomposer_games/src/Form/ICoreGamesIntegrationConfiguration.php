@@ -30,7 +30,8 @@ class ICoreGamesIntegrationConfiguration extends ConfigFormBase {
       'cq9' => 'CQ9',
       'solid_gaming' => 'Solid Gaming',
       'gameworx_lottery' => 'Gameworx Lottery games',
-      'gameworx_quicklotto' => 'Gameworx Quick Lotto'
+      'gameworx_quicklotto' => 'Gameworx Quick Lotto',
+      'betconstruct' => 'BetConstruct'
     ];
 
     const ICORE_GAME_GX_PROVIDERS = [
@@ -135,6 +136,16 @@ class ICoreGamesIntegrationConfiguration extends ConfigFormBase {
       ];
       
     }
+
+    /**
+     * Custom parameter specific to BetConstruct
+     */
+    $form['betconstruct']["betconstruct_container_id"] = [
+      '#type' => 'textfield',
+      '#title' => t('Container ID'),
+      '#description' => $this->t("The ID of html element where BetConstruct will be inserted"),
+      '#default_value' => $config->get("betconstruct_container_id")
+    ];
 
     $form['message'] = [
       '#type' => 'details',
@@ -259,6 +270,7 @@ class ICoreGamesIntegrationConfiguration extends ConfigFormBase {
       'fallback_error_message',
       'fallback_error_button',
       'safari_notif_message',
+      'betconstruct_container_id',
     ];
 
     $result = array_merge($providers, $keys);
