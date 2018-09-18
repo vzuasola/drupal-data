@@ -1,188 +1,159 @@
 <?php
-
 namespace Drupal\virtual_config\Form;
 
-use Drupal\Core\Form\ConfigFormBase;
+use Drupal\webcomposer_config_schema\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\file\Entity\File;
 use Drupal\Core\Url;
 use Drupal\Core\Link;
 
 /**
- * Configuration Form for virtual Configuration.
+ * Virtual Config Form
+ *
+ * @WebcomposerConfigPlugin(
+ *   id = "virtual_config_form",
+ *   route = {
+ *     "title" = "VIP Page Configuration Form",
+ *     "path" = "/admin/config/virtual/virtualconfig",
+ *   },
+ *   menu = {
+ *     "title" = "Poker VIP Page Configuration",
+ *     "description" = "Provides configuration for Poker VIP Page",
+ *     "parent" = "virtual_config.list",
+ *     "weight" = -5
+ *   },
+ * )
  */
-class VirtualConfigForm extends ConfigFormBase {
-
-  /**
-   * {@inheritdoc}
+class VirtualConfigForm extends FormBase {
+ /**
+   * @inheritdoc
    */
+
   protected function getEditableConfigNames() {
     return ['virtual_config.virtual_configuration'];
   }
 
   /**
-   * {@inheritdoc}
+   * @inheritdoc
    */
-  public function getFormId() {
-    return 'virtual_config_form';
+  public function form(array $form, FormStateInterface $form_state) {
+    $form['virtual_config_form'] = array(
+      '#type' => 'vertical_tabs',
+      '#title' => t('Settings'),
+    );
+    $this->mobileSiteTab($form);
+    $this->gameButtonTab($form);
+    $this->basicPageTab($form);
+
+    return $form;
   }
 
-  /**
-   * {@inheritdoc}.
-   */
-  public function buildForm(array $form, FormStateInterface $form_state) {
-
-    $config = $this->config('virtual_config.virtual_configuration');
-
-    $form['virtual'] = [
-      '#type' => 'vertical_tabs',
-    ];
-
-    $form['virtual_configuration_mobile'] = [
+  private function mobileSiteTab(&$form) {
+    $form['virtual_configuration_mobile'] = array(
       '#type' => 'details',
-      '#title' => ' Mobile Site Url',
-      '#group' => 'virtual',
-    ];
+      '#title' => $this->t('Mobile Site Url'),
+      '#collapsible' => true,
+      '#group' => 'virtual_config_form'
+    );
 
-    $form['virtual_configuration_mobile']['base_url'] = [
+    $form['virtual_configuration_mobile']['base_url'] = array(
       '#type' => 'textfield',
       '#title' => $this->t('Mobile Site Url'),
-      '#default_value' => $config->get('base_url') ?? 'N/A',
+      '#description' => $this->t('Mobile Site Url'),
+      '#default_value' => $this->get('base_url'),
       '#required' => true,
-    ];
+      '#translatable' => true,
+    );
 
-    $form['virtual_configuration_mobile']['product_name_seo'] = [
+    $form['virtual_configuration_mobile']['product_name_seo'] = array(
       '#type' => 'textfield',
       '#title' => $this->t('Product Name in Canonical'),
-      '#default_value' => $config->get('product_name_seo') ?? 'N/A',
+      '#description' => $this->t('Product Name in Canonical'),
+      '#default_value' => $this->get('product_name_seo'),
       '#required' => true,
-    ];
+      '#translatable' => true,
+    );
 
-    $form['games_button'] = [
+  }
+
+  private function gameButtonTab(&$form) {
+    $form['games_button'] = array(
       '#type' => 'details',
-      '#title' => t('Game Button'),
-      '#group' => 'virtual',
-    ];
+      '#title' => $this->t('Game Button'),
+      '#collapsible' => TRUE,
+      '#group' => 'virtual_config_form'
+    );
 
-    $form['games_button']['play_text'] = [
+    $form['games_button']['play_text'] = array(
       '#type' => 'textfield',
       '#title' => $this->t('Play Now Button Text'),
       '#description' => $this->t('The text to display on play button.'),
-      '#default_value' => $config->get('play_text'),
-      '#required' => TRUE,
-    ];
+      '#default_value' => $this->get('play_text'),
+      '#required' => true,
+      '#translatable' => true,
+    );
 
-    $form['games_button']['game_info_text'] = [
+    $form['games_button']['game_info_text'] = array(
       '#type' => 'textfield',
       '#title' => $this->t('Game Info Link Text'),
       '#description' => $this->t('This text to display on game info link.'),
-      '#default_value' => $config->get('game_info_text'),
-      '#required' => TRUE,
-    ];
+      '#default_value' => $this->get('game_info_text'),
+      '#required' => true,
+      '#translatable' => true,
+    );
 
-    $form['games_button']['free_play_text'] = [
+    $form['games_button']['free_play_text'] = array(
       '#type' => 'textfield',
       '#title' => $this->t('Free Play Text'),
       '#description' => $this->t('The text to display on Free Play Link.'),
-      '#default_value' => $config->get('free_play_text'),
-      '#required' => TRUE,
-    ];
-    $form['basic_page'] = [
-      '#type' => 'details',
-      '#title' => t('Basic Page'),
-      '#group' => 'virtual',
-    ];
+      '#default_value' => $this->get('free_play_text'),
+      '#required' => false,
+      '#translatable' => true,
+    );
 
-    $form['basic_page']['virtuals_background'] = [
+  }
+
+  private function basicPageTab(&$form) {
+    $form['basic_page'] = array(
+      '#type' => 'details',
+      '#title' => $this->t('Basic page'),
+      '#collapsible' => true,
+      '#group' => 'virtual_config_form'
+    );
+
+    $form['basic_page']['virtuals_background'] = array(
       '#type' => 'managed_file',
       '#title' => $this->t('Virtuals Background'),
-      '#default_value' => $config->get('virtuals_background'),
+      '#default_value' => $this->get('virtuals_background'),
       '#upload_location' => 'public://',
+      '#description' =>  $this->t('Lobby tiles background'),
       '#upload_validators' => [
         'file_validate_extensions' => ['gif png jpg jpeg'],
       ],
-      '#description' => $this->t('Lobby tiles background')
-    ];
+    );
 
-    $form['basic_page']['basic_page_background'] = [
+    $form['basic_page']['basic_page_background'] = array(
       '#type' => 'managed_file',
       '#title' => $this->t('Basic Page Background Image'),
-      '#default_value' => $config->get('basic_page_background'),
+      '#default_value' => $this->get('basic_page_background'),
       '#upload_location' => 'public://',
       '#upload_validators' => [
         'file_validate_extensions' => ['gif png jpg jpeg'],
       ],
-    ];
+    );
 
     $pageListSortUrl = Url::fromUri('internal:/admin/structure/sort-page-list', []);
     $pageListSortLink = Link::fromTextAndUrl(t('this link'), $pageListSortUrl);
 
-    $form['basic_page']['basic_page_title'] = [
+    $form['basic_page']['basic_page_title'] = array(
       '#type' => 'textfield',
       '#title' => $this->t('Basic Page Titles'),
-      '#default_value' => $config->get('basic_page_title'),
       '#description' => $this->t('For sorting Basic Pages in a Page List go to '. $pageListSortLink->toString() . '.'),
-    ];
+      '#default_value' => $this->get('basic_page_title'),
+      '#required' => true,
+      '#translatable' => true,
+    );
 
-    return parent::buildForm($form, $form_state);
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  public function submitForm(array &$form, FormStateInterface $form_state) {
-    $keys = [
-      'base_url',
-      'product_name_seo',
-      'virtuals_background',
-      'basic_page_background',
-      'basic_page_title',
-      'play_text',
-      'game_info_text',
-      'free_play_text'
-    ];
-
-    foreach ($keys as $key) {
-        if ($key == 'virtuals_background') {
-            $fid = $form_state->getValue('virtuals_background');
-            if ($fid) {
-                $file = File::load($fid[0]);
-                $file->setPermanent();
-                $file->save();
-
-                $file_usage = \Drupal::service('file.usage');
-                $file_usage->add($file, 'virtual_config', 'image', $fid[0]);
-
-                $virtualConfig = $this->config('virtual_config.virtual_configuration');
-
-                $virtualConfig->set("virtuals_background_image_url", file_create_url($file->getFileUri()))->save();
-            } else {
-                $this->config('virtual_config.virtual_configuration')->set("virtuals_background_image_url", null);
-            }
-        }
-
-        if ($key == 'basic_page_background') {
-            $fid = $form_state->getValue('basic_page_background');
-            if ($fid) {
-                $file = File::load($fid[0]);
-                $file->setPermanent();
-                $file->save();
-
-                $file_usage = \Drupal::service('file.usage');
-                $file_usage->add($file, 'virtual_config', 'image', $fid[0]);
-
-                $virtualConfig = $this->config('virtual_config.virtual_configuration');
-
-                $virtualConfig->set("basic_page_background_image_url", file_create_url($file->getFileUri()))->save();
-            } else {
-                $this->config('virtual_config.virtual_configuration')->set("basic_page_background_image_url", null);
-            }
-        }
-        $this->config('virtual_config.virtual_configuration')
-            ->set($key, $form_state->getValue($key))
-            ->save();
-    }
-    parent::submitForm($form, $form_state);
 
   }
 
