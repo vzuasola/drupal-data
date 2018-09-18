@@ -91,9 +91,19 @@ class HeaderForm extends FormBase {
       '#translatable' => TRUE,
     ];
 
+    $form['join_now_group']['registration_link'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Registration Link'),
+      '#description' => $this->t('The link for user redirection when clicked on Join Now Button.'),
+      '#default_value' => $this->get('registration_link'),
+      '#rows' => 1,
+      '#required' => true,
+      '#translatable' => true,
+    ];
+
     $form['join_now_group']['join_now_link'] = [
       '#type' => 'textarea',
-      '#title' => $this->t('Join Now Link'),
+      '#title' => $this->t('Join Now Link (Deprecated)'),
       '#description' => $this->t('The link for user redirection when clicked on Join Now Button.'),
       '#default_value' => $this->get('join_now_link'),
       '#rows' => 1,

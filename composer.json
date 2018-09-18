@@ -35,7 +35,8 @@
         "jcalderonzumba/mink-phantomjs-driver": "~0.3.1",
         "mikey179/vfsStream": "~1.2",
         "phpunit/phpunit": "^6.0",
-        "symfony/css-selector": "~2.8"
+        "symfony/css-selector": "~2.8",
+        "kint-php/kint": "^2.2"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -43,12 +44,9 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "autoload": {
-        "classmap": [
-            "scripts/composer/ScriptHandler.php",
-            "scripts/composer/SettingsHandler.php",
-            "scripts/custom/ProductHandler.php",
-            "scripts/helper/Sentinel.php"
-        ]
+        "psr-4": {
+            "DrupalProject\\": "scripts/"
+        }
     },
     "scripts": {
         "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",

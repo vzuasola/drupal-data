@@ -1,0 +1,24 @@
+uuid: 30e6bfc8-ccef-478c-8f8e-43428a0649bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.webcomposer_slider_v2_entity.field_available_on_desktop
+  module:
+    - webcomposer_slider_v2
+id: webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_available_on_desktop
+field_name: field_available_on_desktop
+entity_type: webcomposer_slider_v2_entity
+bundle: webcomposer_slider_v2_entity
+label: 'Available on Desktop'
+description: 'Check if content will be available on Desktop'
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

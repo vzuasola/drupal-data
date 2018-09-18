@@ -4,6 +4,8 @@ status: true
 dependencies:
   config:
     - field.field.node.games.body
+    - field.field.node.games.field_available_on_desktop
+    - field.field.node.games.field_available_on_tablet
     - field.field.node.games.field_disable_in_tablet
     - field.field.node.games.field_end_date
     - field.field.node.games.field_game_image
@@ -34,12 +36,22 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 101
+    weight: 1
     settings: {  }
     third_party_settings: {  }
     region: content
-  field_disable_in_tablet:
-    weight: 116
+  field_available_on_desktop:
+    weight: 16
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_available_on_tablet:
+    weight: 15
     label: above
     settings:
       format: default
@@ -49,7 +61,7 @@ content:
     type: boolean
     region: content
   field_end_date:
-    weight: 102
+    weight: 2
     label: above
     settings:
       format_type: medium
@@ -58,7 +70,7 @@ content:
     type: datetime_default
     region: content
   field_game_image:
-    weight: 107
+    weight: 5
     label: above
     settings:
       image_style: ''
@@ -67,7 +79,7 @@ content:
     type: image
     region: content
   field_game_image_large:
-    weight: 106
+    weight: 4
     label: above
     settings:
       image_style: ''
@@ -76,7 +88,7 @@ content:
     type: image
     region: content
   field_game_info_id:
-    weight: 114
+    weight: 12
     label: above
     settings:
       link_to_entity: false
@@ -84,7 +96,7 @@ content:
     type: string
     region: content
   field_game_provider:
-    weight: 105
+    weight: 3
     label: above
     settings:
       link: true
@@ -92,28 +104,28 @@ content:
     type: entity_reference_label
     region: content
   field_game_title:
-    weight: 108
+    weight: 6
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_image_size:
-    weight: 111
+    weight: 9
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_maintenance_blurb:
-    weight: 109
+    weight: 7
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_preview_display_only:
-    weight: 117
+    weight: 14
     label: above
     settings:
       format: default
@@ -123,7 +135,7 @@ content:
     type: boolean
     region: content
   field_ribbon_configuration:
-    weight: 110
+    weight: 8
     label: above
     settings:
       link: true
@@ -131,7 +143,7 @@ content:
     type: entity_reference_label
     region: content
   field_show_game_info_toggle:
-    weight: 112
+    weight: 10
     label: above
     settings:
       format: default
@@ -141,7 +153,7 @@ content:
     type: boolean
     region: content
   field_start_date:
-    weight: 113
+    weight: 11
     label: above
     settings:
       format_type: medium
@@ -150,15 +162,18 @@ content:
     type: datetime_default
     region: content
   field_status:
-    weight: 115
+    weight: 13
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   links:
-    weight: 100
+    weight: 0
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
+  field_disable_in_tablet: true
   field_playing_type: true
   langcode: true

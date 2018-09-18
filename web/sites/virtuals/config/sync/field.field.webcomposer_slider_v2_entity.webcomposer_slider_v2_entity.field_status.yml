@@ -13,7 +13,7 @@ entity_type: webcomposer_slider_v2_entity
 bundle: webcomposer_slider_v2_entity
 label: Status
 description: ''
-required: false
+required: true
 translatable: false
 default_value:
   -
