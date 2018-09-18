@@ -106,7 +106,7 @@ class ICoreGamesIntegrationConfiguration extends FormBase {
       '#required' => false,
     );
 
-    if($key == 'gameworx_lottery' || $key == 'gameworx_quicklotto') {
+    if( $key == 'gameworx_lottery' || $key == 'gameworx_quicklotto' ) {
 
       $form[$key . '_lobby_type'] = array(
         '#type' => 'textfield',
@@ -162,7 +162,7 @@ class ICoreGamesIntegrationConfiguration extends FormBase {
         '#required' => false,
       );
     }
-    if($key == 'betconstruct') {
+    if( $key == 'betconstruct' ) {
 
       $form[$key . 'betconstruct_container_id'] = array(
         '#type' => 'textfield',
@@ -231,5 +231,5 @@ class ICoreGamesIntegrationConfiguration extends FormBase {
     );
 
   }
-  
+
 }
