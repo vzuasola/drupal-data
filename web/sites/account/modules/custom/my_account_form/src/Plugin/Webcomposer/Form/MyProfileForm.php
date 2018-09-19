@@ -84,6 +84,11 @@ class MyProfileForm extends WebcomposerFormBase implements WebcomposerFormInterf
             '#type' => 'textfield',
             '#description' => 'The label for the First Name field',
           ],
+          'placeholder' => [
+            '#title' => 'First name placeholder label',
+            '#type' => 'textfield',
+            '#description' => 'First name placeholder label',
+          ],
         ],
       ],
 
@@ -95,6 +100,11 @@ class MyProfileForm extends WebcomposerFormBase implements WebcomposerFormInterf
             '#title' => 'Last Name Label',
             '#type' => 'textfield',
             '#description' => 'The label for the Last Name field',
+          ],
+          'placeholder' => [
+            '#title' => 'Last name placeholder label',
+            '#type' => 'textfield',
+            '#description' => 'Last name placeholder label',
           ],
         ],
       ],
