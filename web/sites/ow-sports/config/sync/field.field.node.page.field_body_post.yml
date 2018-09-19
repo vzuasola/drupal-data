@@ -1,19 +1,17 @@
-uuid: 55869593-a503-4307-9915-a0d376c5e927
+uuid: ed33cee8-684c-4851-b2e6-cbd316dc4ef2
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.body
+    - field.storage.node.field_body_post
     - node.type.page
   module:
     - text
-_core:
-  default_config_hash: rUop-8b6hvxxDYbv-KobTfNIBNbPY9qOPl8f6kBNSpw
-id: node.page.body
-field_name: body
+id: node.page.field_body_post
+field_name: field_body_post
 entity_type: node
 bundle: page
-label: 'Pre Login Body'
+label: "Post Login Body\t"
 description: ''
 required: false
 translatable: true

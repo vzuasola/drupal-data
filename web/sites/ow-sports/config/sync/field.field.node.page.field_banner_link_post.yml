@@ -1,17 +1,17 @@
-uuid: dd7bee6b-360d-4054-89b6-09a5dae1814b
+uuid: 03f654b6-40b1-46ac-b8ee-e00f41eb4844
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_banner_link
+    - field.storage.node.field_banner_link_post
     - node.type.page
   module:
     - link
-id: node.page.field_banner_link
-field_name: field_banner_link
+id: node.page.field_banner_link_post
+field_name: field_banner_link_post
 entity_type: node
 bundle: page
-label: 'Pre Login Banner Link'
+label: 'Post Login Banner Link'
 description: ''
 required: false
 translatable: true
