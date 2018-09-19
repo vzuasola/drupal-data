@@ -1,0 +1,4 @@
+browser_title: '{domain:promo_title}'
+read_more: 'More Info'
+countdown: '{days} Days, {hours} Hours remaining'
+all_text: All
