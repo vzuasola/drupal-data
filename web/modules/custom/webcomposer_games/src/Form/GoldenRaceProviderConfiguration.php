@@ -5,7 +5,7 @@ use Drupal\webcomposer_config_schema\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Goldenrace Game Configuration
+ * Golden Race Configuration Form
  *
  * @WebcomposerConfigPlugin(
  *   id = "golden_race_form",
@@ -14,9 +14,9 @@ use Drupal\Core\Form\FormStateInterface;
  *     "path" = "/admin/config/webcomposer/games/goldenrace",
  *   },
  *   menu = {
- *     "title" = "Goldenrace Game Configuration",
- *     "description" = "Provides configuration for GoldenRace Game",
- *     "parent" = "webcomposer_games.list",
+ *     "title" = "Gpi Configuration Form",
+ *     "description" = "Provides Gpi Configuration Form",
+ *     "parent" = "webcomposer_config.list",
  *     "weight" = -5
  *   },
  * )
