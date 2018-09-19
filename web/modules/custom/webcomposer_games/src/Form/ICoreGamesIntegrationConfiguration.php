@@ -5,18 +5,18 @@ use Drupal\webcomposer_config_schema\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Gpi Configuration Form
+ * ICore Games Integration Configuration Form
  *
  * @WebcomposerConfigPlugin(
  *   id = "gpi_config_form",
  *   route = {
- *     "title" = "Gpi Configuration Form",
+ *     "title" = "Webcomposer Games Configuration",
  *     "path" = "/admin/config/webcomposer/games/icore",
  *   },
  *   menu = {
- *     "title" = "Gpi Configuration Form",
- *     "description" = "Provides Gpi Configuration Form",
- *     "parent" = "webcomposer_config.list",
+ *     "title" = "Webcomposer Games Configuration",
+ *     "description" = "Configuration for game providers",
+ *     "parent" = "webcomposer_games.list",
  *     "weight" = -5
  *   },
  * )
@@ -26,10 +26,10 @@ class ICoreGamesIntegrationConfiguration extends FormBase {
    * @inheritdoc
    */
    /**
-   * Gpi Game Providers definitions
+   * Webcomposer Games Configuration
    */
   /**
-   * Gpi Game Providers definitions
+   * Webcomposer Games Configuration
    */
     const ICORE_GAME_PROVIDERS = [
       'asia_gaming' => 'Asia Gaming',
