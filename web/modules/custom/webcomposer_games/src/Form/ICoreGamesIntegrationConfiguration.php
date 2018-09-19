@@ -10,12 +10,12 @@ use Drupal\Core\Form\FormStateInterface;
  * @WebcomposerConfigPlugin(
  *   id = "icore_config_form",
  *   route = {
- *     "title" = "Webcomposer Games Configuration",
+ *     "title" = "ICore Games Integration Configuration",
  *     "path" = "/admin/config/webcomposer/games/icore",
  *   },
  *   menu = {
- *     "title" = "Webcomposer Games Configuration",
- *     "description" = "Configuration for game providers",
+ *     "title" = "ICore Games Integration Configuration",
+ *     "description" = "Provides configuration for icore games integration",
  *     "parent" = "webcomposer_games.list",
  *     "weight" = -5
  *   },
@@ -26,10 +26,10 @@ class ICoreGamesIntegrationConfiguration extends FormBase {
    * @inheritdoc
    */
    /**
-   * Webcomposer Games Configuration
+   * ICore Games Integration Configuration Form
    */
   /**
-   * Webcomposer Games Configuration
+   * ICore Games Integration Configuration Form
    */
     const ICORE_GAME_PROVIDERS = [
       'asia_gaming' => 'Asia Gaming',

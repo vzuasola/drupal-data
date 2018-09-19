@@ -10,7 +10,7 @@ use Drupal\Core\Form\FormStateInterface;
  * @WebcomposerConfigPlugin(
  *   id = "golden_race_form",
  *   route = {
- *     "title" = "Gpi Configuration Form",
+ *     "title" = "Goldenrace Game Configuration",
  *     "path" = "/admin/config/webcomposer/games/goldenrace",
  *   },
  *   menu = {
@@ -26,10 +26,10 @@ class GoldenRaceProviderConfiguration extends FormBase {
    * @inheritdoc
    */
    /**
-   * Gpi Game Providers definitions
+   * Golden race Game Providers definitions
    */
   /**
-   * Gpi Game Providers definitions
+   * Golden race Game Providers definitions
    */
   protected function getEditableConfigNames() {
     return ['webcomposer_config.golden_race_provider'];
@@ -39,7 +39,7 @@ class GoldenRaceProviderConfiguration extends FormBase {
    * @inheritdoc
    */
   public function form(array $form, FormStateInterface $form_state) {
-    $form['gpi_provider_settings_form'] = [
+    $form['games_goldenrace_provider_form'] = [
       '#type' => 'vertical_tabs',
       '#title' => t('Settings'),
     ];

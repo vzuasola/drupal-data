@@ -3,3 +3,51 @@ webcomposer_games.list:
   parent: system.admin_config
   description: 'Configuration for game providers'
   route_name: webcomposer_games.admin_settings
+
+webcomposer_games.admin_games_playtech_provider:
+  title: 'Playtech Provider Configuration'
+  parent: webcomposer_games.list
+  description: 'Provides configuration for Playtech game provider'
+  route_name: webcomposer_games.games_playtech_provider_form
+
+webcomposer_games.admin_games_fim_provider:
+  title: 'FIM Provider Configuration'
+  parent: webcomposer_games.list
+  description: 'Provides configuration for FIM game provider'
+  route_name: webcomposer_games.games_fim_provider_form
+
+webcomposer_games.admin_games_opus_provider:
+  title: 'Keno, Lottery, Opus Live Dealer Game Configuration'
+  parent: webcomposer_games.list
+  description: 'Provides configuration for Keno & Lottery Game'
+  route_name: webcomposer_games.games_opus_provider_form
+
+webcomposer_games.admin_icore_playtech_provider:
+  title: 'ICore Playtech Provider Configuration'
+  parent: webcomposer_games.list
+  description: 'Provides configuration for icore playtech provider integration'
+  route_name: webcomposer_games.icore_playtech_provider_form
+
+webcomposer_games.admin_games_exchange_provider:
+  title: 'Exchange Game Configuration'
+  parent: webcomposer_games.list
+  description: 'Provides configuration for Exchange Lottery Game'
+  route_name: webcomposer_games.games_exchange_provider_form
+
+webcomposer_games.admin_games_gpi_provider:
+  title: 'GPI Game Configuration'
+  parent: webcomposer_games.list
+  description: 'Provides configuration for GPI Game'
+  route_name: webcomposer_games.games_gpi_provider_form
+
+webcomposer_games.admin_unsupported_currency:
+  title: 'Unsupported Currency Configuration'
+  parent: webcomposer_games.list
+  description: 'Provides configuration for unsupported currency'
+  route_name: webcomposer_games.unsupported_currency_configuration_form
+
+webcomposer_games.admin_unsupported_country:
+  title: 'Unsupported Country Configuration'
+  parent: webcomposer_games.list
+  description: 'Provides configuration for unsupported country'
+  route_name: webcomposer_games.unsupported_country_configuration_form
