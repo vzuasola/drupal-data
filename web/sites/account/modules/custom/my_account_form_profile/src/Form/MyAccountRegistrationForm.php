@@ -406,17 +406,36 @@ class MyAccountRegistrationForm extends FormBase
             '#description' => '<strong>[Mobile] </strong> Label for Change Password Tab.'
         ];
 
+        $this->fastRegConfig($form);
+
+        return $form;
+    }
+
+    private function fastRegConfig(&$form) {
+        $form['profile_form_fastreg_config'] = [
+            '#type' => 'details',
+            '#title' => 'Fast Reg Configuration',
+            '#open' => False,
+            '#group' => 'profile',
+        ];
+
+        $form['profile_form_fastreg_config']['fastreg_redirect'] = [
+          '#type' => 'textfield',
+          '#title' => $this->t('Redirect To'),
+          '#default_value' => $this->get('fastreg_redirect'),
+          '#required' => TRUE,
+          '#translatable' => TRUE,
+        ];
+
         $content = $this->get('fast_reg_flash_message');
-        $form['field_labels_generic_configuration']['fast_reg_flash_message'] = [
+        $form['profile_form_fastreg_config']['fast_reg_flash_message'] = [
           '#type' => 'text_format',
-          '#title' => $this->t('Mobile - Expired Message'),
+          '#title' => $this->t('Notification message'),
           '#default_value' => $content['value'] ?? '',
           '#format' => $content['format'] ?? 'full_html',
           '#required' => TRUE,
           '#translatable' => TRUE,
           '#description' => '<strong>[Fast Reg] </strong> Message to be displayed to update First Name and Last Name.'
         ];
-
-        return $form;
     }
 }
