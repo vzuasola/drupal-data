@@ -8,7 +8,7 @@ use Drupal\Core\Form\FormStateInterface;
  * ICore Games Integration Configuration Form
  *
  * @WebcomposerConfigPlugin(
- *   id = "icore_config_form",
+ *   id = "gpi_config_form",
  *   route = {
  *     "title" = "Webcomposer Games Configuration",
  *     "path" = "/admin/config/webcomposer/games/icore",

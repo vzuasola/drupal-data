@@ -1,0 +1,41 @@
+webcomposer_games.games_playtech_provider_schema:
+  title: 'Playtech Provider Configuration'
+  base_route_name: webcomposer_games.games_playtech_provider_form
+  names:
+    - 'webcomposer_config.games_playtech_provider'
+
+webcomposer_games.games_opus_provider_schema:
+  title: 'Keno & Lottery Game Configuration'
+  base_route_name: webcomposer_games.games_opus_provider_form
+  names:
+    - 'webcomposer_config.games_opus_provider'
+
+webcomposer_games.icore_games_integration_schema:
+  title: 'ICore Games Integration Configuration'
+  base_route_name: webcomposer_games.icore_games_integration_form
+  names:
+    - 'webcomposer_config.icore_games_integration'
+
+webcomposer_games.games_exchange_provider_schema:
+  title: 'exchange Game Configuration'
+  base_route_name: webcomposer_games.games_exchange_provider_form
+  names:
+    - 'webcomposer_config.games_exchange_provider'
+
+webcomposer_games.unsupported_currency_schema:
+  title: 'Unsupported Currency Configuration'
+  base_route_name: webcomposer_games.unsupported_currency_configuration_form
+  names:
+    - 'webcomposer_config.unsupported_currency'
+
+webcomposer_games.games_goldenrace_provider_schema:
+  title: 'Goldenrace Game Configuration'
+  base_route_name: webcomposer_games.games_goldenrace_provider_form
+  names:
+    - 'webcomposer_config.games_goldenrace_provider'
+
+webcomposer_games.unsupported_country_schema:
+  title: 'Unsupported Country Configuration'
+  base_route_name: webcomposer_games.unsupported_country_configuration_form
+  names:
+    - 'webcomposer_config.unsupported_country'
