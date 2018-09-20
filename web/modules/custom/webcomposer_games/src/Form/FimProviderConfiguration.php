@@ -1,23 +1,35 @@
 <?php
-
 namespace Drupal\webcomposer_games\Form;
 
-use Drupal\Core\Form\ConfigFormBase;
+use Drupal\webcomposer_config_schema\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Avaya chat configuration class
+ * FIM Provider Configuration
+ *
+ * @WebcomposerConfigPlugin(
+ *   id = "fim_provider_settings_form",
+ *   route = {
+ *     "title" = "FIM Provider Configuration",
+ *     "path" = "/admin/config/webcomposer/games/fim",
+ *   },
+ *   menu = {
+ *     "title" = "FIM Provider Configuration",
+ *     "description" = "Provides configuration for FIM game provider",
+ *     "parent" = "webcomposer_games.list",
+ *     "weight" = 2
+ *   },
+ * )
  */
-class FimProviderConfiguration extends ConfigFormBase {
+class FimProviderConfiguration extends FormBase {
   /**
    * @inheritdoc
    */
-  public function getFormId() {
-    return 'fim_provider_settings_form';
-  }
-
+   /**
+   * FIM Provider Configuration definitions
+   */
   /**
-   * @inheritdoc
+   * FIM Provider Configuration definitions
    */
   protected function getEditableConfigNames() {
     return ['webcomposer_config.games_fim_provider'];
@@ -26,44 +38,27 @@ class FimProviderConfiguration extends ConfigFormBase {
   /**
    * @inheritdoc
    */
-  public function buildForm(array $form, FormStateInterface $form_state) {
-    $config = $this->config('webcomposer_config.games_fim_provider');
-
-
-    $form['playtech_fim_endpoint'] = array(
-      '#type' => 'textfield',
-      '#title' => t('Playtech FIM Endpoint'),
-      '#description' => $this->t('Defines the endpoint used for authenticating FIM'),
-      '#default_value' => $config->get('playtech_fim_endpoint')
-    );
-
-    $form['actions'] = ['#type' => 'actions'];
-
-    $form['actions']['submit'] = [
-      '#type' => 'submit',
-      '#value' => $this->t('Save')
+  public function form(array $form, FormStateInterface $form_state) {
+    $form['games_fim_provider_form'] = [
+      '#type' => 'vertical_tabs',
+      '#title' => t('Settings'),
     ];
 
+    $this->generalConfig($form);
     return $form;
   }
 
-  /**
-   * Implements a form submit handler.
-   *
-   * @param array $form
-   *   The render array of the currently built form.
-   * @param FormStateInterface $form_state
-   *   Object describing the current state of the form.
-   */
-  public function submitForm(array &$form, FormStateInterface $form_state) {
-    $keys = [
-      'playtech_fim_endpoint'
+  private function generalConfig(&$form) {
+
+    $form['gen_config']['playtech_fim_endpoint'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Playtech FIM Endpoint'),
+      '#description' => $this->t('Defines the endpoint used for authenticating FIM'),
+      '#default_value' => $this->get('playtech_fim_endpoint'),
+      '#required' => false,
+      '#translatable' => false,
     ];
 
-    foreach ($keys as $key) {
-      $this->config('webcomposer_config.games_fim_provider')->set($key, $form_state->getValue($key))->save();
-    }
-
-    parent::submitForm($form, $form_state);
   }
+
 }

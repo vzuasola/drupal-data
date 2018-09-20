@@ -17,7 +17,7 @@ use Drupal\Core\Form\FormStateInterface;
  *     "title" = "Goldenrace Game Configuration",
  *     "description" = "Provides configuration for GoldenRace Game",
  *     "parent" = "webcomposer_games.list",
- *     "weight" = -5
+ *     "weight" = 4
  *   },
  * )
  */
@@ -85,7 +85,7 @@ class GoldenRaceProviderConfiguration extends FormBase {
       '#type' => 'textarea',
       '#title' => $this->t('Country'),
       '#description' => $this->t('Define the Unsupported Country code for Asia Gaming games.'),
-      '#default_value' => $this->get('currency'),
+      '#default_value' => $this->get('country'),
       '#required' => false,
       '#translatable' => TRUE,
     ];

@@ -8,7 +8,7 @@ use Drupal\Core\Form\FormStateInterface;
  * ICore Games Integration Configuration Form
  *
  * @WebcomposerConfigPlugin(
- *   id = "icore_config_form",
+ *   id = "icore_games_integration_form",
  *   route = {
  *     "title" = "ICore Games Integration Configuration",
  *     "path" = "/admin/config/webcomposer/games/icore",
@@ -17,7 +17,7 @@ use Drupal\Core\Form\FormStateInterface;
  *     "title" = "ICore Games Integration Configuration",
  *     "description" = "Provides configuration for icore games integration",
  *     "parent" = "webcomposer_games.list",
- *     "weight" = -5
+ *     "weight" = 5
  *   },
  * )
  */
@@ -58,7 +58,7 @@ class ICoreGamesIntegrationConfiguration extends FormBase {
    * @inheritdoc
    */
   public function form(array $form, FormStateInterface $form_state) {
-    $form['gpi_provider_settings_form'] = [
+    $form['icore_games_integration_form'] = [
       '#type' => 'vertical_tabs',
       '#title' => t('Settings'),
     ];
@@ -76,7 +76,7 @@ class ICoreGamesIntegrationConfiguration extends FormBase {
       '#type' => 'details',
       '#title' => $this->t($value),
       '#collapsible' => TRUE,
-      '#group' => 'gpi_provider_settings_form'
+      '#group' => 'icore_games_integration_form'
     ];
 
     $form[$key . '_currency'] = [
@@ -177,14 +177,14 @@ class ICoreGamesIntegrationConfiguration extends FormBase {
   }
 
   private function unsupportedCurrencyTab(&$form) {
-    $form['message'] = [
+    $form['currency'] = [
       '#type' => 'details',
       '#title' => $this->t('Unsupported Currency Message'),
       '#collapsible' => TRUE,
-      '#group' => 'gpi_provider_settings_form'
+      '#group' => 'icore_games_integration_form'
     ];
 
-    $form['message']['fallback_error_title'] = [
+    $form['currency']['fallback_error_title'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Fallback Error Title'),
       '#description' => $this->t('Defines the GPI Game Url'),
@@ -193,7 +193,7 @@ class ICoreGamesIntegrationConfiguration extends FormBase {
       '#translatable' => TRUE,
     ];
 
-   $form['message']['fallback_error_message'] = [
+   $form['currency']['fallback_error_message'] = [
       '#type' => 'text_format',
       '#title' => $this->t('Fallback error button'),
       '#description' => $this->t('Fallback Error Message'),
@@ -202,7 +202,7 @@ class ICoreGamesIntegrationConfiguration extends FormBase {
       '#translatable' => TRUE,
     ];
 
-   $form['message']['fallback_error_button'] = [
+   $form['currency']['fallback_error_button'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Fallback error button'),
       '#description' => $this->t('Fallback Error LightBox Ok button'),
@@ -219,7 +219,7 @@ class ICoreGamesIntegrationConfiguration extends FormBase {
       '#type' => 'details',
       '#title' => $this->t('Safari Notification Message'),
       '#collapsible' => TRUE,
-      '#group' => 'gpi_provider_settings_form'
+      '#group' => 'icore_games_integration_form'
     ];
 
    $form['message']['safari_notif'] = [
