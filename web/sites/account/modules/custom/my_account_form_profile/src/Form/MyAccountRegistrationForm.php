@@ -419,6 +419,15 @@ class MyAccountRegistrationForm extends FormBase
             '#group' => 'profile',
         ];
 
+        $form['profile_form_fastreg_config']['fastreg_timeout_redirect'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Timeout Redirect'),
+            '#required' => TRUE,
+            '#default_value' => $this->get('fastreg_timeout_redirect'),
+            '#translatable' => true,
+            '#description' => '<strong>[Fast Reg] </strong> Timeout in second(s) before player redirected back to Cashier.'
+        ];
+
         $form['profile_form_fastreg_config']['fastreg_redirect'] = [
           '#type' => 'textfield',
           '#title' => $this->t('Redirect To'),
