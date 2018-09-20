@@ -77,5 +77,4 @@ class UnsupportedCountryConfiguration extends FormBase {
     ];
 
   }
-
 }

@@ -85,5 +85,4 @@ class UnsupportedCurrencyConfiguration extends FormBase {
       '#translatable' => TRUE,
     ];
   }
-
 }
