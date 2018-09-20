@@ -1,100 +1,95 @@
 <?php
-
 namespace Drupal\webcomposer_games\Form;
 
-use Drupal\Core\Form\ConfigFormBase;
+use Drupal\webcomposer_config_schema\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * GoldenRace chat configuration class
+ * Golden Race Configuration Form
+ *
+ * @WebcomposerConfigPlugin(
+ *   id = "golden_race_form",
+ *   route = {
+ *     "title" = "Gpi Configuration Form",
+ *     "path" = "/admin/config/webcomposer/games/goldenrace",
+ *   },
+ *   menu = {
+ *     "title" = "Gpi Configuration Form",
+ *     "description" = "Provides Gpi Configuration Form",
+ *     "parent" = "webcomposer_config.list",
+ *     "weight" = -5
+ *   },
+ * )
  */
-class GoldenRaceProviderConfiguration extends ConfigFormBase {
+class GoldenRaceProviderConfiguration extends FormBase {
   /**
    * @inheritdoc
    */
-  public function getFormId() {
-    return 'goldenrace_provider_settings_form';
-  }
-
+   /**
+   * Gpi Game Providers definitions
+   */
   /**
-   * @inheritdoc
+   * Gpi Game Providers definitions
    */
   protected function getEditableConfigNames() {
-    return ['webcomposer_config.games_goldenrace_provider'];
+    return ['webcomposer_config.golden_race_provider'];
   }
 
   /**
    * @inheritdoc
    */
-  public function buildForm(array $form, FormStateInterface $form_state) {
-    $config = $this->config('webcomposer_config.games_goldenrace_provider');
-
-    $form['javascript_assets'] = [
-      '#type' => 'textarea',
-      '#title' => t('Javascript Assets'),
-      '#size' => 500,
-      '#description' => $this->t('Define the GlobalBet scripts that should be included on game launch. Provide one script per line'),
-      '#default_value' => $config->get('javascript_assets')
+  public function form(array $form, FormStateInterface $form_state) {
+    $form['gpi_provider_settings_form'] = [
+      '#type' => 'vertical_tabs',
+      '#title' => t('Settings'),
     ];
 
-    $form['languages'] = [
+    $this->generalConfig($form);
+    return $form;
+  }
+
+  private function generalConfig(&$form) {
+
+    $form['gen_config']['javascript_assets'] = [
       '#type' => 'textarea',
-      '#title' => t('Language Mapping'),
-      '#size' => 500,
+      '#title' => $this->t('Javascript Assets'),
+      '#description' => $this->t('Define the GlobalBet scripts that should be included on game launch. Provide one script per line'),
+      '#default_value' => $this->get('javascript_assets'),
+      '#required' => false,
+      '#translatable' => TRUE,
+    ];
+
+    $form['gen_config']['languages'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Language Mapping'),
       '#description' => $this->t('Define the language mapping for Goldenrace games. Pipe separated language code and value, one per line.
           <br>
           If no mapping specified, it will use the front end language prefix as is.
           <br>
           <strong>en|en-us</strong>'),
-      '#default_value' => $config->get('languages')
+      '#default_value' => $this->get('languages'),
+      '#required' => false,
+      '#translatable' => TRUE,
     ];
 
-    $form['country'] = [
+    $form['gen_config']['currency'] = [
       '#type' => 'textarea',
-      '#title' => t('Country'),
-      '#size' => 500,
-      '#description' => $this->t('Define the Unsupported Country code for Golden race Lottery games.'),
-      '#default_value' => $config->get('country')
+      '#title' => $this->t('Currency'),
+      '#description' => $this->t('Define the curency for goldenrace games.'),
+      '#default_value' => $this->get('currency'),
+      '#required' => false,
+      '#translatable' => TRUE,
     ];
 
-    $form['currency'] = array(
+    $form['gen_config']['country'] = [
       '#type' => 'textarea',
-      '#title' => t('Currency'),
-      '#size' => 500,
-      '#description' => $this->t('Define the curency for goldenrace games.
-         '),
-      '#default_value' => $config->get('currency')
-    );
-
-    $form['actions'] = ['#type' => 'actions'];
-
-    $form['actions']['submit'] = [
-      '#type' => 'submit',
-      '#value' => $this->t('Save')
+      '#title' => $this->t('Country'),
+      '#description' => $this->t('Define the Unsupported Country code for Asia Gaming games.'),
+      '#default_value' => $this->get('currency'),
+      '#required' => false,
+      '#translatable' => TRUE,
     ];
 
-    return $form;
   }
 
-  /**
-   * Implements a form submit handler.
-   *
-   * @param array $form
-   *   The render array of the currently built form.
-   * @param FormStateInterface $form_state
-   *   Object describing the current state of the form.
-   */
-  public function submitForm(array &$form, FormStateInterface $form_state) {
-    $keys = [
-      'javascript_assets',
-      'languages',
-      'currency'
-    ];
-
-    foreach ($keys as $key) {
-      $this->config('webcomposer_config.games_goldenrace_provider')->set($key, $form_state->getValue($key))->save();
-    }
-
-    parent::submitForm($form, $form_state);
-  }
 }
