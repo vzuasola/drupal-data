@@ -17,7 +17,7 @@ use Drupal\Core\Form\FormStateInterface;
  *     "title" = "Unsupported Currency Configuration",
  *     "description" = "Provides configuration for unsupported currency",
  *     "parent" = "webcomposer_games.list",
- *     "weight" = 10 
+ *     "weight" = 10
  *   },
  * )
  */
