@@ -35,15 +35,23 @@ class GamesSearchForm extends FormBase {
   public function form(array $form, FormStateInterface $form_state) {
     $form['search_configuration'] = [
       '#type' => 'details',
-      '#title' => $this->t('Games Search Configuration'),
+      '#title' => $this->t('Games Search & Filter Configuration'),
       '#collapsible' => TRUE,
       '#open' => TRUE,
     ];
 
     $form['search_configuration']['title'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('Title'),
+      '#title' => $this->t('Search Title'),
       '#default_value' => $this->get('title'),
+      '#translatable' => TRUE,
+      '#required' => TRUE,
+    ];
+
+    $form['search_configuration']['games_filter_title'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Filter Title'),
+      '#default_value' => $this->get('games_filter_title'),
       '#translatable' => TRUE,
       '#required' => TRUE,
     ];
