@@ -172,5 +172,4 @@ class OpusProviderConfiguration extends FormBase {
     ];
 
   }
-
 }
