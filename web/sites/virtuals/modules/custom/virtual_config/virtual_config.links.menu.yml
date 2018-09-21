@@ -3,3 +3,9 @@ virtual_config.virtual_config_list:
   description: Virtuals Configuration
   parent: system.admin_config
   route_name: virtual_config.admin_settings
+
+virtual_config.admin_virtual_config:
+  title: 'Virtuals Configuration'
+  parent: virtual_config.virtual_config_list
+  description: 'Virtuals Configuration'
+  route_name: virtual_config.virtual_config_form

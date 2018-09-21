@@ -1,0 +1,36 @@
+virtual_config.virtual_configuration:
+  type: config_object
+  label: 'Virtuals Configuration'
+  label: 'Virtuals Configuration '
+  mapping:
+    base_url:
+      type: text
+      label: 'Mobile Site  URL'
+      translatable: true
+    product_name_seo:
+      type: text
+      label: 'Product Name in Canonical Tag'
+      translatable: true
+    virtuals_background:
+      type: managed_file
+      label: 'Lobby Tiles Background'
+      translatable: true
+    basic_page_background:
+      type: managed_file
+      label: 'Basic Page Background'
+      translatable: true
+    basic_page_title:
+      type: label
+      label: 'Basic Page Title'
+    free_play_text:
+      type: label
+      label: 'Free Play'
+      translatable: true
+    play_text:
+      type: label
+      label: 'Real  Play'
+      translatable: true
+    game_info_text:
+      type: label
+      label: 'More Info'
+      translatable: true   
