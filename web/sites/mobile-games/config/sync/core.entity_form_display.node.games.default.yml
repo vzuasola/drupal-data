@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.games.field_game_code
+    - field.field.node.games.field_game_filter
     - field.field.node.games.field_game_provider
     - field.field.node.games.field_game_ribbon
     - field.field.node.games.field_games_list_category
@@ -36,6 +37,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_game_filter:
+    weight: 27
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
     region: content
   field_game_provider:
     weight: 2
