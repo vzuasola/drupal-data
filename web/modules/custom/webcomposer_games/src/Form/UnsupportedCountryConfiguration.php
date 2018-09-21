@@ -75,6 +75,5 @@ class UnsupportedCountryConfiguration extends FormBase {
       '#required' => false,
       '#translatable' => TRUE,
     ];
-
   }
 }

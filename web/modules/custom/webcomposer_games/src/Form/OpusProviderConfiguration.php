@@ -170,6 +170,5 @@ class OpusProviderConfiguration extends FormBase {
       '#required' => false,
       '#translatable' => TRUE,
     ];
-
   }
 }
