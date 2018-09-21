@@ -11,7 +11,7 @@ use Drupal\Core\Form\FormStateInterface;
  *   id = "unsupported_currency_form",
  *   route = {
  *     "title" = "Unsupported Currency Configuration",
- *     "path" = "/admin/config/webcomposer/games/unsupported-country",
+ *     "path" = "/admin/config/webcomposer/games/unsupported-currency",
  *   },
  *   menu = {
  *     "title" = "Unsupported Currency Configuration",
