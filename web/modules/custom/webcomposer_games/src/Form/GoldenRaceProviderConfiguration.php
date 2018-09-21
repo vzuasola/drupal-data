@@ -5,7 +5,7 @@ use Drupal\webcomposer_config_schema\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Goldenrace Game Configuration
+ * Golden Race Configuration Form
  *
  * @WebcomposerConfigPlugin(
  *   id = "golden_race_form",

@@ -6,3 +6,10 @@ virtual_config.admin_settings:
   requirements:
     _permission: 'administer site configuration'
 
+virtual_config.virtual_config_form:
+  path: 'admin/config/virtual/virtualconfig'
+  defaults:
+    _form: 'Drupal\virtual_config\Form\VirtualConfigForm'
+    _title: 'Virtual Configuration'
+  requirements:
+    _permission: 'administer site configuration'

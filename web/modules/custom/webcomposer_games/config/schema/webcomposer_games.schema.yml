@@ -1,0 +1,118 @@
+webcomposer_config.games_playtech_provider:
+  type: config_object
+  label: 'Playtech Provider Configuration'
+  mapping:
+    lobby_url:
+      type: text
+      label: 'Lobby URL'
+
+webcomposer_config.games_opus_provider:
+  type: config_object
+  label: 'Opus Provider Configuration'
+  mapping:
+    opus_fallback_error:
+      type: text
+      label: 'FallBack Error'
+      translatable: true
+    opus_game_loader_content:
+      type: text_format
+      label: 'Content'
+      translatable: true
+    opus_unsupported_currencies_message:
+      type: text_format
+      label: 'Content'
+      translatable: true
+    opus_unsupported_currencies_title:
+      type: text
+      label: 'Title'
+    opus_unsupported_currencies_button:
+      type: text
+      label: 'Button Ok'
+
+webcomposer_config.icore_games_integration:
+  type: config_object
+  label: 'ICore Games Integration Configuration'
+  mapping:
+    unsupported_currencies_title:
+      type: text
+      label: 'unsupported_currencies_title'
+    unsupported_currencies_message:
+      type: text_format
+      label: 'Unsupported Currencies Message'
+    unsupported_currencies_button:
+      type: text
+      label: 'Unsupported Currencies Button'
+    game_provider_mapping:
+      type: text
+      label: 'Game Provider Mapping'
+    fallback_error:
+      type: text
+      label: 'Fallback Error'
+    fallback_error_title:
+      type: text
+      label: 'Fallback Error Title'
+    fallback_error_message:
+      type: text_format
+      label: 'Fallback Error Message'
+    fallback_error_button:
+      type: text
+      label: 'Fallback Error Button'
+
+    safari_notif_message:
+      type: text_format
+      label: 'Safari Notification Message'
+
+webcomposer_config.games_exchange_provider:
+  type: config_object
+  label: 'Exchange Integration Configuration'
+  mapping:
+    exchange_game_url:
+      type: text
+      label: 'Exchange Game Url'
+
+webcomposer_config.games_gpi_provider:
+  type: config_object
+  label: 'Gpi Integration Configuration'
+  mapping:
+    gpi_game_url:
+      type: text
+      label: 'Gpi Game Url'
+
+webcomposer_config.unsupported_currency:
+  type: config_object
+  label: 'Unsupported Currency Configuration'
+  mapping:
+    unsupported_currencies_title:
+      type: text
+      label: 'unsupported_currencies_title'
+    unsupported_currencies_message:
+      type: text_format
+      label: 'Unsupported Currencies Message'
+    unsupported_currencies_button:
+      type: text
+      label: 'Unsupported Currencies Button'
+    game_provider_mapping:
+      type: text
+      label: 'Game Provider Mapping' 
+           
+webcomposer_config.games_goldenrace_provider:
+  type: config_object
+  label: 'Gpi Integration Configuration'
+  mapping:
+    javascript_assets:
+      type: text
+      label: 'Javascript'            
+
+webcomposer_config.unsupported_country:
+  type: config_object
+  label: 'Unsupported country Configuration'
+  mapping:
+    unsupported_country_title:
+      type: text
+      label: 'unsupported_country_title'
+    unsupported_country_message:
+      type: text_format
+      label: 'Unsupported country Message'
+    unsupported_country_button:
+      type: text
+      label: 'Unsupported country Button'
