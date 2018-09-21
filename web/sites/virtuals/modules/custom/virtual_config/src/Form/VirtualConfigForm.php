@@ -20,7 +20,7 @@ use Drupal\Core\Link;
  *     "title" = "Virtuals Configuration",
  *     "description" = "Virtuals Configuration",
  *     "parent" = "virtual_config.virtual_config_list",
- *     "weight" = -5
+ *     "weight" = 1
  *   },
  * )
  */
@@ -153,8 +153,5 @@ class VirtualConfigForm extends FormBase {
       '#required' => true,
       '#translatable' => true,
     ];
-
-
   }
-
 }
