@@ -1,23 +1,23 @@
-uuid: 773274fa-81f2-478e-8b3c-9da5f9d518e8
+uuid: 1ae137be-d616-43a1-8d7a-9757764848bf
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_banner_content_position
+    - field.storage.node.field_banner_content_postn_post
     - node.type.page
   module:
     - options
-id: node.page.field_banner_content_position
-field_name: field_banner_content_position
+id: node.page.field_banner_content_postn_post
+field_name: field_banner_content_postn_post
 entity_type: node
 bundle: page
-label: 'Pre Login Banner Content Position'
+label: 'Post Login Banner Content Position'
 description: ''
 required: false
 translatable: true
 default_value:
   -
-    value: center
+    value: left
 default_value_callback: ''
 settings: {  }
 field_type: list_string

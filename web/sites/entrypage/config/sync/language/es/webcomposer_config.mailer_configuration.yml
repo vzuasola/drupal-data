@@ -1,0 +1,4 @@
+advanced__active_tab: edit-settings
+mailer_success: Success.
+mailer_error: 'Service unavailable.'
+antispam_error: 'You have exceeded the maximum number of incorrect attempts. Please try again in 5 minutes.'
