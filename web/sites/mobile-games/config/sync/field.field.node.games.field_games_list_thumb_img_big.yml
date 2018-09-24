@@ -11,15 +11,15 @@ dependencies:
 third_party_settings:
   content_translation:
     translation_sync:
-      alt: alt
-      title: title
-      file: '0'
+      file: file
+      alt: '0'
+      title: '0'
 id: node.games.field_games_list_thumb_img_big
 field_name: field_games_list_thumb_img_big
 entity_type: node
 bundle: games
 label: 'Thumbnail Image Large'
-description: ''
+description: 'Recommended dimension: w490xh380'
 required: false
 translatable: true
 default_value: {  }

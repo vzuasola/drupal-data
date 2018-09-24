@@ -6,13 +6,20 @@ dependencies:
     - field.storage.node.field_games_list_thumb_img_small
     - node.type.games
   module:
+    - content_translation
     - image
+third_party_settings:
+  content_translation:
+    translation_sync:
+      file: file
+      alt: '0'
+      title: '0'
 id: node.games.field_games_list_thumb_img_small
 field_name: field_games_list_thumb_img_small
 entity_type: node
 bundle: games
 label: 'Thumbnail Image Small'
-description: ''
+description: 'Recommended dimension: w230xh180'
 required: true
 translatable: true
 default_value: {  }

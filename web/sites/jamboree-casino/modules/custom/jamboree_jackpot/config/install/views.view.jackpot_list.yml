@@ -821,9 +821,8 @@ display:
         type: data_entity
         options: {  }
       pager:
-        type: some
+        type: none
         options:
-          items_per_page: 10
           offset: 0
       filters:
         langcode:

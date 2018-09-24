@@ -68,5 +68,14 @@ class JamboreeWeeklyWinnerForm extends FormBase {
       '#default_value' => $this->get('category_text'),
       '#translatable' => TRUE,
     ];
+
+    $e = $this->get('error_message');
+    $form['page_setting']['error_message'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('Error Message'),
+      '#default_value' => $e['value'],
+      '#format' => $e['format'],
+      '#translatable' => TRUE,
+    ];
   }
 }

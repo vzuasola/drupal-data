@@ -53,6 +53,7 @@ module:
   poker_download_page: 0
   poker_game_offers: 0
   poker_grid_menu: 0
+  poker_video_support: 0
   poker_vip_page: 0
   quickedit: 0
   rdf: 0
@@ -76,6 +77,7 @@ module:
   webcomposer_audit: 0
   webcomposer_audit_export: 0
   webcomposer_avaya: 0
+  webcomposer_cache: 0
   webcomposer_config: 0
   webcomposer_config_schema: 0
   webcomposer_dashboard: 0

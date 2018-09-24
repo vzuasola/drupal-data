@@ -1,0 +1,30 @@
+uuid: 33312f81-1074-4462-a34e-3aa71198f391
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+    - image
+    - poker_video_support
+id: poker_video_entity.field_video_image_placeholder
+field_name: field_video_image_placeholder
+entity_type: poker_video_entity
+type: image
+settings:
+  uri_scheme: public
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  target_type: file
+  display_field: false
+  display_default: false
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

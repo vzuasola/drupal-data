@@ -1,0 +1,23 @@
+uuid: bca69e96-8b6f-4288-b9c8-a6ce59b73188
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_pre_link
+    - paragraphs.paragraphs_type.slider_overlay_cmi
+  module:
+    - link
+id: paragraph.slider_overlay_cmi.field_pre_link
+field_name: field_pre_link
+entity_type: paragraph
+bundle: slider_overlay_cmi
+label: 'Pre Overlay Link'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+field_type: link

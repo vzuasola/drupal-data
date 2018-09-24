@@ -1,0 +1,5 @@
+name: Poker Video Support
+type: module
+description: Poker Video Support for Inner Pages Configuration
+core: 8.x
+package: Custom

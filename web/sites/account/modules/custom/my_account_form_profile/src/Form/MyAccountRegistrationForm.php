@@ -163,6 +163,16 @@ class MyAccountRegistrationForm extends FormBase
             '#translatable' => true,
         ];
 
+        $form['field_labels_sms_verification']['verification_code_numeric_message'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Numeric Error Message'),
+            '#size' => 25,
+            '#required' => TRUE,
+            '#description' => $this->t('Numeric Field Error Message'),
+            '#default_value' => $this->get('verification_code_numeric_message'),
+            '#translatable' => true,
+        ];
+
         $form['field_labels_sms_verification']['verification_code_min_length_message'] = [
             '#type' => 'textfield',
             '#title' => $this->t('Min Length Field Error Message'),
@@ -367,6 +377,33 @@ class MyAccountRegistrationForm extends FormBase
             '#required' => TRUE,
             '#default_value' => $this->get('female_label'),
             '#translatable' => true,
+        ];
+
+        $form['field_labels_generic_configuration']['message_timeout'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Message timeout'),
+            '#required' => TRUE,
+            '#default_value' => $this->get('message_timeout'),
+            '#translatable' => true,
+            '#description' => '<strong>[Mobile] </strong> Maximum timeout in second to display the Success/Error message.'
+        ];
+
+        $form['field_labels_generic_configuration']['my_profile_tab'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('My Profile Tab Label'),
+            '#required' => TRUE,
+            '#default_value' => $this->get('my_profile_tab'),
+            '#translatable' => true,
+            '#description' => '<strong>[Mobile] </strong> Label for My Profile Tab.'
+        ];
+
+        $form['field_labels_generic_configuration']['change_password_tab'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Change Password Tab label'),
+            '#required' => TRUE,
+            '#default_value' => $this->get('change_password_tab'),
+            '#translatable' => true,
+            '#description' => '<strong>[Mobile] </strong> Label for Change Password Tab.'
         ];
 
         return $form;
