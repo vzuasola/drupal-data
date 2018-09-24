@@ -58,8 +58,32 @@ class GamesSearchForm extends FormBase {
 
     $form['search_configuration']['no_result_msg'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('Default message for zero results. You may use {keyword} placeholder.'),
+      '#title' => $this->t('Default message for zero results in search result. You may use {keyword} placeholder.'),
       '#default_value' => $this->get('no_result_msg'),
+      '#translatable' => TRUE,
+      '#required' => TRUE,
+    ];
+
+    $form['search_configuration']['no_result_msg_filter'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Default message for zero results in filter result. You may use {keyword} placeholder.'),
+      '#default_value' => $this->get('no_result_msg_filter'),
+      '#translatable' => TRUE,
+      '#required' => TRUE,
+    ];
+
+    $form['search_configuration']['msg_recommended_available'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Message when Recommended Games are available.'),
+      '#default_value' => $this->get('msg_recommended_available'),
+      '#translatable' => TRUE,
+      '#required' => TRUE,
+    ];
+
+    $form['search_configuration']['msg_no_recommended_available'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Message when No Recommended Games are available.'),
+      '#default_value' => $this->get('msg_no_recommended'),
       '#translatable' => TRUE,
       '#required' => TRUE,
     ];
