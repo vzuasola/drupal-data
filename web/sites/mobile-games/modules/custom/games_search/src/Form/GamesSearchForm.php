@@ -56,6 +56,22 @@ class GamesSearchForm extends FormBase {
       '#required' => TRUE,
     ];
 
+    $form['search_configuration']['games_filter_submit'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Filter Submit Button'),
+      '#default_value' => $this->get('games_filter_submit'),
+      '#translatable' => TRUE,
+      '#required' => TRUE,
+    ];
+
+    $form['search_configuration']['games_filter_cancel'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Filter Cancel Button'),
+      '#default_value' => $this->get('games_filter_cancel'),
+      '#translatable' => TRUE,
+      '#required' => TRUE,
+    ];
+
     $form['search_configuration']['search_blurb'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Search Blurb. You may use {keyword}, {count} placeholders.'),
@@ -74,7 +90,7 @@ class GamesSearchForm extends FormBase {
 
     $form['search_configuration']['filter_no_result_msg'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('Default message for zero results in filter result. You may use {keyword} placeholder.'),
+      '#title' => $this->t('Default message for zero results in filter result.'),
       '#default_value' => $this->get('filter_no_result_msg'),
       '#translatable' => TRUE,
       '#required' => TRUE,
