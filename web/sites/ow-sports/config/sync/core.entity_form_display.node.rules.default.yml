@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.field.node.rules.body
     - field.field.node.rules.field_image
-    - field.field.node.rules.field_log_in_state
     - field.field.node.rules.field_rules_page_category
     - image.style.thumbnail
     - node.type.rules
@@ -41,12 +40,6 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
-    region: content
-  field_log_in_state:
-    weight: 3
-    settings: {  }
-    third_party_settings: {  }
-    type: options_buttons
     region: content
   field_rules_page_category:
     weight: 2

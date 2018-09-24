@@ -5,12 +5,10 @@ dependencies:
   config:
     - field.field.node.rules.body
     - field.field.node.rules.field_image
-    - field.field.node.rules.field_log_in_state
     - field.field.node.rules.field_rules_page_category
     - node.type.rules
   module:
     - image
-    - options
     - text
     - user
 id: node.rules.default
@@ -33,13 +31,6 @@ content:
       image_link: ''
     third_party_settings: {  }
     type: image
-    region: content
-  field_log_in_state:
-    weight: 2
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
     region: content
   field_rules_page_category:
     weight: 1
