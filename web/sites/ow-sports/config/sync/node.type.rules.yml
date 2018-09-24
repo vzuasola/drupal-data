@@ -1,0 +1,29 @@
+uuid: 275a1da4-abe1-4519-b641-3f200b46a287
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - scheduler
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+  scheduler:
+    expand_fieldset: when_required
+    fields_display_mode: vertical_tab
+    publish_enable: true
+    publish_past_date: error
+    publish_required: false
+    publish_revision: false
+    publish_touch: false
+    unpublish_enable: true
+    unpublish_required: false
+    unpublish_revision: false
+name: 'Rules and Regulations'
+type: rules
+description: 'Rules and regulations page'
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false
