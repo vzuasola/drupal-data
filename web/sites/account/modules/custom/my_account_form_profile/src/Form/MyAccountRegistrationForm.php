@@ -430,10 +430,20 @@ class MyAccountRegistrationForm extends FormBase
 
         $form['profile_form_fastreg_config']['fastreg_redirect'] = [
           '#type' => 'textfield',
-          '#title' => $this->t('Redirect To'),
+          '#title' => $this->t('[Desktop] - Redirect To'),
           '#default_value' => $this->get('fastreg_redirect'),
           '#required' => TRUE,
           '#translatable' => TRUE,
+          '#description' => '<strong>[Fast Reg] - </strong>redirect URL for Desktop'
+        ];
+
+        $form['profile_form_fastreg_config']['fastreg_mobile_redirect'] = [
+          '#type' => 'textfield',
+          '#title' => $this->t('[Mobile] - Redirect To'),
+          '#default_value' => $this->get('fastreg_mobile_redirect'),
+          '#required' => TRUE,
+          '#translatable' => TRUE,
+          '#description' => '<strong>[Fast Reg] - </strong>redirect URL for Mobile'
         ];
 
         $content = $this->get('fast_reg_flash_message');
