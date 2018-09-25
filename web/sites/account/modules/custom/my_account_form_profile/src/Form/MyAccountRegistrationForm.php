@@ -434,6 +434,7 @@ class MyAccountRegistrationForm extends FormBase
           '#default_value' => $this->get('fastreg_redirect'),
           '#required' => TRUE,
           '#translatable' => TRUE,
+          '#description' => '<strong>[Fast Reg] - </strong>redirect URL for Desktop'
         ];
 
         $form['profile_form_fastreg_config']['fastreg_mobile_redirect'] = [
@@ -442,6 +443,7 @@ class MyAccountRegistrationForm extends FormBase
           '#default_value' => $this->get('fastreg_mobile_redirect'),
           '#required' => TRUE,
           '#translatable' => TRUE,
+          '#description' => '<strong>[Fast Reg] - </strong>redirect URL for Mobile'
         ];
 
         $content = $this->get('fast_reg_flash_message');
