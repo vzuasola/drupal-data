@@ -113,7 +113,7 @@ class OpusProviderConfiguration extends FormBase {
       '#translatable' => TRUE,
     ];
 
-    $form[$key . 'languages'] = [
+    $form['languages'] = [
       '#type' => 'textarea',
       '#title' => $this->t('Language Mapping'),
       '#description' =>  $this->t('Define the language mapping for Opus games. Pipe separated language code and value, one per line.
@@ -121,25 +121,25 @@ class OpusProviderConfiguration extends FormBase {
           If no mapping specified will use the front end language prefix as is.
           <br>
           <strong>en|en-us</strong>'),
-      '#default_value' => $this->get($key . 'languages'),
+      '#default_value' => $this->get('languages'),
       '#translatable' => TRUE,
       '#required' => false,
     ];
 
-    $form[$key . 'currency'] = [
+    $form['currency'] = [
       '#type' => 'textarea',
       '#title' => $this->t('Currency'),
       '#description' => $this->t("Define the curency for opus games."),
-      '#default_value' => $this->get($key . 'currency'),
+      '#default_value' => $this->get('currency'),
       '#translatable' => TRUE,
       '#required' => false,
     ];
 
-    $form[$key . 'country'] = [
+    $form['country'] = [
       '#type' => 'textarea',
       '#title' => $this->t('Country'),
       '#description' => $this->t("Define the Unsupported Country code for Opus Keno games."),
-      '#default_value' => $this->get($key . 'country'),
+      '#default_value' => $this->get('country'),
       '#translatable' => TRUE,
       '#required' => false,
     ];
