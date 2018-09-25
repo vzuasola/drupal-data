@@ -3,9 +3,3 @@ keno_config.keno_config_list:
   description: Keno Configuration
   parent: system.admin_config
   route_name: keno_config.admin_settings
-
-keno_config.admin_keno_config:
-  title: 'Keno Configuration'
-  parent: keno_config.keno_config_list
-  description: 'Keno Configuration'
-  route_name: keno_config.keno_config_form

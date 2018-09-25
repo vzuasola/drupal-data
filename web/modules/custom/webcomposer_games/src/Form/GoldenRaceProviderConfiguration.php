@@ -32,7 +32,7 @@ class GoldenRaceProviderConfiguration extends FormBase {
    * Golden race Game Providers definitions
    */
   protected function getEditableConfigNames() {
-    return ['webcomposer_config.golden_race_provider'];
+    return ['webcomposer_config.games_goldenrace_provider'];
   }
 
   /**
