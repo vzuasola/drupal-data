@@ -1,13 +1,13 @@
-uuid: e03596f7-8a4a-483a-89b8-763aa609c2c6
+uuid: fbe08cda-2cf7-4774-a1d2-bead48361c2e
 langcode: en
 status: true
 dependencies:
-  module:
-    - webcomposer_seo
-id: webcomposer_meta_entity.webcomposer_meta_entity.metatag
+  config:
+    - taxonomy.vocabulary.games_filter
+id: taxonomy_term.games_filter.metatag
 field_name: metatag
-entity_type: webcomposer_meta_entity
-bundle: webcomposer_meta_entity
+entity_type: taxonomy_term
+bundle: games_filter
 label: Metatags
 description: 'The metatags for the entity.'
 required: false

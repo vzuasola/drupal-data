@@ -1,34 +1,40 @@
 <?php
-
 namespace Drupal\webcomposer_games\Form;
 
-use Drupal\Core\Form\ConfigFormBase;
+use Drupal\webcomposer_config_schema\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * ICore Games configuration class
+ * ICore Playtech Provider Configuration
+ *
+ * @WebcomposerConfigPlugin(
+ *   id = "icore_playtech_provider_form",
+ *   route = {
+ *     "title" = "ICore Playtech Provider Configuration",
+ *     "path" = "/admin/config/webcomposer/games/icore/playtech",
+ *   },
+ *   menu = {
+ *     "title" = "ICore Playtech Provider Configuration",
+ *     "description" = "Provides configuration for Playtech game provider",
+ *     "parent" = "webcomposer_games.list",
+ *     "weight" = 6
+ *   },
+ * )
  */
-class ICorePlaytechProviderConfiguration extends ConfigFormBase {
-
+class ICorePlaytechProviderConfiguration extends FormBase {
   /**
-   * iapiConf casino
-   *
-   * Made this as an array so "future" icore playtech games that will be migrated can just add the casino
+   * @inheritdoc
+   */
+   /**
+   * ICore Playtech Provider Configuration
+   */
+  /**
+   * ICore Playtech Provider Configuration
    */
     const PLAYTECH_CASINO = [
         'dafabetgames' => 'dafabetgames'
     ];
 
-  /**
-   * @inheritdoc
-   */
-  public function getFormId() {
-    return 'icore_playtech_provider_form';
-  }
-
-  /**
-   * @inheritdoc
-   */
   protected function getEditableConfigNames() {
     return ['webcomposer_config.icore_playtech_provider'];
   }
@@ -36,84 +42,72 @@ class ICorePlaytechProviderConfiguration extends ConfigFormBase {
   /**
    * @inheritdoc
    */
-  public function buildForm(array $form, FormStateInterface $form_state) {
-    $config = $this->config('webcomposer_config.icore_playtech_provider');
-
-    $form['advanced'] = array(
+  public function form(array $form, FormStateInterface $form_state) {
+    $form['icore_playtech_provider_form'] = array(
       '#type' => 'vertical_tabs',
-      '#title' => t('ICore Playtech Provider'),
+      '#title' => t('Settings'),
     );
 
     foreach (self::PLAYTECH_CASINO as $key => $value) {
-      $form[$key] = array(
-        '#type' => 'details',
-        '#title' => t($value),
-        '#group' => 'advanced',
-      );
-      $form[$key]["{$key}_currency"] = array(
-        '#type' => 'textarea',
-        '#title' => t('Supported Currencies'),
-        '#description' => $this->t("Currency mapping for {$value}."),
-        '#default_value' => $config->get("{$key}_currency")
-      );
-      $form[$key]["{$key}_language_mapping"] = array(
-        '#type' => 'textarea',
-        '#title' => t('Language Mapping'),
-        '#default_value' => $config->get("{$key}_language_mapping"),
-        '#description' => $this->t("Language mapping for {$value}.<br/>
-          <b>format:</b> sitelang|icore language key<br/>
-        ")
-      );
-      $form[$key]["{$key}_iapiconf_override"] = array(
-        '#type' => 'textarea',
-        '#title' => t('iapiConf Override'),
-        '#description' => $this->t("iapiConf override for {$value} <br/>
-          <b>format:</b> key|value</br>
-          <b>Keys available:</b><br/>
-           - casinoname<br/>
-           - loginServer<br/>
-           - clientSkin<br/>
-           - clientType<br/>
-           - clientPlatform<br/>
-           - clientVersion<br/>
-           - systemId<br/>
-           - serviceType<br/>
-           - loginDomainRetryCount<br/>
-           - loginDomainRequestTimeout<br/>
-           - loginDomainRetryInterval<br/>
-           - fingerprintEnabled<br/>
-           - onlypostrequestsforlogout<br/>
-           - useIframeForGetLoggedInPlayer<br/>
-           - clientUrl_casino<br/>
-        "),
-        '#default_value' => $config->get("{$key}_iapiconf_override"),
-        '#rows' => 10
-      );
+      $this->gpiContentTab($form[$key], $key, $value);
     }
 
-    return parent::buildForm($form, $form_state);
+    return $form;
   }
 
-  /**
-   * Implements a form submit handler.
-   *
-   * @param array $form
-   *   The render array of the currently built form.
-   * @param FormStateInterface $form_state
-   *   Object describing the current state of the form.
-   */
-  public function submitForm(array &$form, FormStateInterface $form_state) {
-    $providers = [];
-    foreach (self::PLAYTECH_CASINO as $key => $value) {
-      $providers[] = "{$key}_currency";
-      $providers[] = "{$key}_language_mapping";
-      $providers[] = "{$key}_iapiconf_override";
-    }
+  private function gpiContentTab(&$form, $key, $value) {
+    $form = array(
+      '#type' => 'details',
+      '#title' => $this->t($value),
+      '#collapsible' => TRUE,
+      '#group' => 'icore_playtech_provider_form'
+    );
 
-    foreach ($providers as $key) {
-      $this->config('webcomposer_config.icore_playtech_provider')->set($key, $form_state->getValue($key))->save();
-    }
+    $form[$key . '_currency'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Supported Currencies'),
+      '#description' => $this->t("Currency mapping for " . $value),
+      '#default_value' => $this->get($key . '_currency'),
+      '#translatable' => TRUE,
+      '#required' => false,
+    ];
 
-    parent::submitForm($form, $form_state);
+    $form[$key . '_language_mapping'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Language Mapping'),
+      '#description' => $this->t("Language mapping for " . $value),
+      '#default_value' => $this->get($key . '_language_mapping'),
+      '#translatable' => TRUE,
+      '#required' => false,
+    ];
+
+    $form[$key . '_iapiconf_override'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('iapiConf Override'),
+      '#description' => $this->t("iapiConf override for ".$value." <br/>
+        <b>format:</b> sitelang|icore language key</br>
+        <b>Keys available:</b><br/>
+         - casinoname<br/>
+         - loginServer<br/>
+         - clientSkin<br/>
+         - clientType<br/>
+         - clientPlatform<br/>
+         - clientVersion<br/>
+         - systemId<br/>
+         - serviceType<br/>
+         - loginDomainRetryCount<br/>
+         - loginDomainRequestTimeout<br/>
+         - loginDomainRetryInterval<br/>
+         - fingerprintEnabled<br/>
+         - onlypostrequestsforlogout<br/>
+         - useIframeForGetLoggedInPlayer<br/>
+         - clientUrl_casino<br/>
+      "),
+      '#default_value' => $this->get($key . '_iapiconf_override'),
+      '#translatable' => TRUE,
+      '#required' => false,
+    ];
+
   }
+
 }

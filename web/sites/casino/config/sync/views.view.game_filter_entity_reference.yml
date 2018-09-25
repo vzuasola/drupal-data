@@ -1,20 +1,19 @@
-uuid: 9f7fb586-7d73-4e6d-bd1d-efb48c22464a
+uuid: ca32b3f5-8fe2-4b51-894d-1ca02dd9fca7
 langcode: en
 status: true
 dependencies:
+  config:
+    - taxonomy.vocabulary.game_filter
   module:
-    - rest
-    - serialization
-    - webcomposer_announcements
-_core:
-  default_config_hash: vgimOMC8KwcM92VPqu3064nNlinS-rlejQVaKOrsN8k
-id: announcements
-label: 'Announcements - REST'
+    - taxonomy
+    - user
+id: game_filter_entity_reference
+label: 'Game Filter Entity Reference'
 module: views
 description: ''
 tag: ''
-base_table: announcement_entity_field_data
-base_field: id
+base_table: taxonomy_term_field_data
+base_field: tid
 core: 8.x
 display:
   default:
@@ -24,10 +23,11 @@ display:
     position: 0
     display_options:
       access:
-        type: none
-        options: {  }
+        type: perm
+        options:
+          perm: 'access content'
       cache:
-        type: none
+        type: tag
         options: {  }
       query:
         type: views_query
@@ -66,7 +66,12 @@ display:
             previous: ‹‹
             next: ››
       style:
-        type: serializer
+        type: default
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
+          uses_fields: false
       row:
         type: fields
         options:
@@ -76,44 +81,31 @@ display:
           default_field_elements: true
       fields:
         name:
-          table: announcement_entity_field_data
-          field: name
           id: name
-          entity_type: null
+          table: taxonomy_term_field_data
+          field: name
+          entity_type: taxonomy_term
           entity_field: name
-          plugin_id: field
+          label: ''
+          alter:
+            alter_text: false
+            make_link: false
+            absolute: false
+            trim: false
+            word_boundary: false
+            ellipsis: false
+            strip_tags: false
+            html: false
+          hide_empty: false
+          empty_zero: false
+          type: string
+          settings:
+            link_to_entity: true
+          plugin_id: term_name
           relationship: none
           group_type: group
           admin_label: ''
-          label: ''
           exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
           element_type: ''
           element_class: ''
           element_label_type: ''
@@ -123,12 +115,8 @@ display:
           element_wrapper_class: ''
           element_default_classes: true
           empty: ''
-          hide_empty: false
-          empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: string
-          settings: {  }
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -139,10 +127,51 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          convert_spaces: false
       filters:
+        vid:
+          id: vid
+          table: taxonomy_term_field_data
+          field: vid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            game_filter: game_filter
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: taxonomy_term
+          entity_field: vid
+          plugin_id: bundle
         langcode:
           id: langcode
-          table: announcement_entity_field_data
+          table: taxonomy_term_field_data
           field: langcode
           relationship: none
           group_type: group
@@ -177,68 +206,47 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          entity_type: announcement_entity
+          entity_type: taxonomy_term
           entity_field: langcode
           plugin_id: language
-      sorts:
-        changed:
-          id: changed
-          table: announcement_entity_field_data
-          field: changed
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: DESC
-          exposed: false
-          expose:
-            label: ''
-          granularity: second
-          entity_type: announcement_entity
-          entity_field: changed
-          plugin_id: date
+      sorts: {  }
       header: {  }
       footer: {  }
       empty: {  }
       relationships: {  }
       arguments: {  }
       display_extenders: {  }
-      filter_groups:
-        operator: OR
-        groups:
-          1: AND
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - request_format
         - url.query_args
+        - user.permissions
       tags: {  }
-  rest_export_1:
-    display_plugin: rest_export
-    id: rest_export_1
-    display_title: 'REST export'
+  entity_reference_1:
+    display_plugin: entity_reference
+    id: entity_reference_1
+    display_title: 'Entity Reference'
     position: 1
     display_options:
       display_extenders: {  }
-      path: api/announcements
+      style:
+        type: entity_reference
+        options:
+          search_fields:
+            name: name
       pager:
         type: none
         options:
           offset: 0
-      style:
-        type: serializer
-        options:
-          grouping: {  }
-          uses_fields: false
-          formats: {  }
-      row:
-        type: data_entity
+      cache:
+        type: none
         options: {  }
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - request_format
+        - user.permissions
       tags: {  }

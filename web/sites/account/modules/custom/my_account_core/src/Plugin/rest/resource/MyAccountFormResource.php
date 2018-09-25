@@ -299,6 +299,8 @@ class MyAccountFormResource extends ResourceBase
             $value['my_profile_tab'] = $values['my_profile_tab'];
             $value['change_password_tab'] = $values['change_password_tab'];
             $value['fast_reg_flash_message'] = $values['fast_reg_flash_message'];
+            $value['fastreg_redirect'] = $values['fastreg_redirect'];
+            $value['fastreg_timeout_redirect'] = $values['fastreg_timeout_redirect'];
         }
         return $value;
     }
