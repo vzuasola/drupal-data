@@ -1,4 +1,0 @@
-keno_config.trust_element_config_tab:
-  route_name: keno_config.keno_config_form
-  title: 'Keno Configuration'
-  base_route: keno_config.keno_config_form
