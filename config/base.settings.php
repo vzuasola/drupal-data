@@ -9,6 +9,14 @@ $databases = [];
 $config_directories = [];
 
 /**
+ * Cache backend settings
+ *
+ */
+
+$settings['container_yamls'][] = DRUPAL_ROOT . '/modules/contrib/redis/redis.services.yml';
+$settings['cache']['default'] = 'cache.backend.redis';
+
+/**
  * Dynamic Sentinel Redis
  *
  * Fetch values from env and parse Sentinel hosts
@@ -18,14 +26,20 @@ if (isset($_SERVER['REDIS_SERVER']) && isset($_SERVER['REDIS_SERVICE'])) {
   $clients = \DrupalProject\helper\Sentinel::resolve($_SERVER['REDIS_SERVER']);
   $redisService = $_SERVER['REDIS_SERVICE'];
 
+  $options = [
+    'replication' => 'sentinel',
+    'service' => $redisService,
+    'parameters' => ['database' => 1],
+  ];
+
   $settings['webcomposer_cache']['redis'] = [
     'clients' => $clients,
-      'options' => [
-          'replication' => 'sentinel',
-          'service' => $redisService,
-          'parameters' => ['database' => 1],
-      ],
+    'options' => $options,
   ];
+
+  $settings['redis.connection']['interface'] = 'Predis';
+  $settings['redis.connection']['host'] = $clients;
+  $settings['redis.connection']['options'] = $options;
 }
 
 /**
