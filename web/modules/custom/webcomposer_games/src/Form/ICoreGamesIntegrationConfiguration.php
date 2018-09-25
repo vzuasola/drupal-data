@@ -128,7 +128,7 @@ class ICoreGamesIntegrationConfiguration extends FormBase {
 
       $form[$key . '_plugin_id'] = [
         '#type' => 'textfield',
-        '#title' => $this->t('Operator ID'),
+        '#title' => $this->t('Plugin ID'),
         '#description' => $this->t("Please enter Operator ID."),
         '#default_value' => $this->get($key . '_plugin_id'),
         '#translatable' => TRUE,
@@ -137,7 +137,7 @@ class ICoreGamesIntegrationConfiguration extends FormBase {
 
       $form[$key . '_realitycheck_url'] = [
         '#type' => 'textfield',
-        '#title' => $this->t('Operator ID'),
+        '#title' => $this->t('Reality Check URL'),
         '#description' => $this->t("Please enter Reality CheckUrl."),
         '#default_value' => $this->get($key . '_realitycheck_url'),
         '#translatable' => TRUE,
@@ -146,7 +146,7 @@ class ICoreGamesIntegrationConfiguration extends FormBase {
 
       $form[$key . '_deposit_url'] = [
         '#type' => 'textfield',
-        '#title' => $this->t('Operator ID'),
+        '#title' => $this->t('Deposit Url'),
         '#description' => $this->t("Please enter Deposit Url."),
         '#default_value' => $this->get($key . '_deposit_url'),
         '#translatable' => TRUE,
@@ -164,11 +164,11 @@ class ICoreGamesIntegrationConfiguration extends FormBase {
     }
     if ($key == 'betconstruct') {
 
-      $form[$key . 'betconstruct_container_id'] = [
+      $form['betconstruct_container_id'] = [
         '#type' => 'textfield',
         '#title' => $this->t('Container ID'),
         '#description' => $this->t("The ID of html element where BetConstruct will be inserted."),
-        '#default_value' => $this->get($key . 'betconstruct_container_id'),
+        '#default_value' => $this->get('betconstruct_container_id'),
         '#translatable' => TRUE,
         '#required' => false,
       ];
