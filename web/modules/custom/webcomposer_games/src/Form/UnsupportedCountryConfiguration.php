@@ -17,7 +17,7 @@ use Drupal\Core\Form\FormStateInterface;
  *     "title" = "Unsupported Country Configuration",
  *     "description" = "Provides configuration for unsupported country",
  *     "parent" = "webcomposer_games.list",
- *     "weight" = 9 
+ *     "weight" = 9
  *   },
  * )
  */
