@@ -1,0 +1,23 @@
+uuid: ac19af83-7219-4d7a-8b99-a0e0141273c2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_banner_link_target_post
+    - node.type.page
+  module:
+    - options
+id: node.page.field_banner_link_target_post
+field_name: field_banner_link_target_post
+entity_type: node
+bundle: page
+label: 'Post Login Banner Link Target'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: _blank
+default_value_callback: ''
+settings: {  }
+field_type: list_string

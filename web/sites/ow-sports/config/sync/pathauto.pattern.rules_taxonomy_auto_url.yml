@@ -1,0 +1,23 @@
+uuid: 0d34c024-ae0e-42d9-9cf8-63d649f75f4d
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - taxonomy
+id: rules_taxonomy_auto_url
+label: rules_taxonomy_auto_url
+type: 'canonical_entities:taxonomy_term'
+pattern: '[term:name]'
+selection_criteria:
+  0b85d026-a641-4958-b86a-ba6a84cfb635:
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      rules_page_category: rules_page_category
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    uuid: 0b85d026-a641-4958-b86a-ba6a84cfb635
+selection_logic: and
+weight: -5
+relationships: {  }

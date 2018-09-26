@@ -10,14 +10,14 @@ use Drupal\Core\Form\FormStateInterface;
  * @WebcomposerConfigPlugin(
  *   id = "golden_race_form",
  *   route = {
- *     "title" = "Gpi Configuration Form",
+ *     "title" = "Goldenrace Game Configuration",
  *     "path" = "/admin/config/webcomposer/games/goldenrace",
  *   },
  *   menu = {
- *     "title" = "Gpi Configuration Form",
- *     "description" = "Provides Gpi Configuration Form",
- *     "parent" = "webcomposer_config.list",
- *     "weight" = -5
+ *     "title" = "Goldenrace Game Configuration",
+ *     "description" = "Provides configuration for GoldenRace Game",
+ *     "parent" = "webcomposer_games.list",
+ *     "weight" = 4
  *   },
  * )
  */
@@ -26,20 +26,20 @@ class GoldenRaceProviderConfiguration extends FormBase {
    * @inheritdoc
    */
    /**
-   * Gpi Game Providers definitions
+   * Golden race Game Providers definitions
    */
   /**
-   * Gpi Game Providers definitions
+   * Golden race Game Providers definitions
    */
   protected function getEditableConfigNames() {
-    return ['webcomposer_config.golden_race_provider'];
+    return ['webcomposer_config.games_goldenrace_provider'];
   }
 
   /**
    * @inheritdoc
    */
   public function form(array $form, FormStateInterface $form_state) {
-    $form['gpi_provider_settings_form'] = [
+    $form['games_goldenrace_provider_form'] = [
       '#type' => 'vertical_tabs',
       '#title' => t('Settings'),
     ];
@@ -85,7 +85,7 @@ class GoldenRaceProviderConfiguration extends FormBase {
       '#type' => 'textarea',
       '#title' => $this->t('Country'),
       '#description' => $this->t('Define the Unsupported Country code for Asia Gaming games.'),
-      '#default_value' => $this->get('currency'),
+      '#default_value' => $this->get('country'),
       '#required' => false,
       '#translatable' => TRUE,
     ];

@@ -13,14 +13,14 @@ use Drupal\Core\Link;
  * @WebcomposerConfigPlugin(
  *   id = "virtual_config_form",
  *   route = {
- *     "title" = "VIP Page Configuration Form",
+ *     "title" = "Virtuals Configuration",
  *     "path" = "/admin/config/virtual/virtualconfig",
  *   },
  *   menu = {
- *     "title" = "Poker VIP Page Configuration",
- *     "description" = "Provides configuration for Poker VIP Page",
- *     "parent" = "virtual_config.list",
- *     "weight" = -5
+ *     "title" = "Virtuals Configuration",
+ *     "description" = "Virtuals Configuration",
+ *     "parent" = "virtual_config.virtual_config_list",
+ *     "weight" = 1
  *   },
  * )
  */
@@ -153,8 +153,5 @@ class VirtualConfigForm extends FormBase {
       '#required' => true,
       '#translatable' => true,
     ];
-
-
   }
-
 }

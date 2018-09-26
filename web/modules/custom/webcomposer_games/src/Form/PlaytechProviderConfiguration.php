@@ -1,23 +1,35 @@
 <?php
-
 namespace Drupal\webcomposer_games\Form;
 
-use Drupal\Core\Form\ConfigFormBase;
+use Drupal\webcomposer_config_schema\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Avaya chat configuration class
+ * Playtech Provider Configuration
+ *
+ * @WebcomposerConfigPlugin(
+ *   id = "playtech_provider_settings_form",
+ *   route = {
+ *     "title" = "Playtech Provider Configuration",
+ *     "path" = "/admin/config/webcomposer/games/playtech",
+ *   },
+ *   menu = {
+ *     "title" = "Playtech Provider Configuration",
+ *     "description" = "Provides configuration for Playtech game provider",
+ *     "parent" = "webcomposer_games.list",
+ *     "weight" = 8
+ *   },
+ * )
  */
-class PlaytechProviderConfiguration extends ConfigFormBase {
+class PlaytechProviderConfiguration extends FormBase {
   /**
    * @inheritdoc
    */
-  public function getFormId() {
-    return 'playtech_provider_settings_form';
-  }
-
+   /**
+   * Playtech Provider Configuration
+   */
   /**
-   * @inheritdoc
+   * Playtech Provider Configuration
    */
   protected function getEditableConfigNames() {
     return ['webcomposer_config.games_playtech_provider'];
@@ -26,94 +38,61 @@ class PlaytechProviderConfiguration extends ConfigFormBase {
   /**
    * @inheritdoc
    */
-  public function buildForm(array $form, FormStateInterface $form_state) {
-    $config = $this->config('webcomposer_config.games_playtech_provider');
+  public function form(array $form, FormStateInterface $form_state) {
+    $form['games_playtech_provider_form'] = [
+      '#type' => 'vertical_tabs',
+      '#title' => t('Settings'),
+    ];
 
-    $form['javascript_assets'] = [
+    $this->generalConfig($form);
+    return $form;
+  }
+
+  private function generalConfig(&$form) {
+
+    $form['gen_config']['javascript_assets'] = [
       '#type' => 'textarea',
-      '#title' => t('Javascript Assets'),
-      '#size' => 500,
+      '#title' => $this->t('Javascript Assets'),
       '#description' => $this->t('Define the Playtech scripts that should be included on game launch. Provide one script per line'),
-      '#default_value' => $config->get('javascript_assets')
+      '#default_value' => $this->get('javascript_assets'),
+      '#required' => false,
+      '#translatable' => TRUE,
     ];
 
-    // $form['playtech_pas_endpoint'] = [
-    //   '#type' => 'textfield',
-    //   '#title' => t('Playtech PAS Endpoint'),
-    //   '#description' => $this->t('Defines the endpoint used for authenticating PAS'),
-    //   '#default_value' => $config->get('playtech_pas_endpoint')
-    // ];
-
-    $form['playtech_pas_casino'] = [
+    $form['gen_config']['playtech_pas_casino'] = [
       '#type' => 'textfield',
-      '#title' => t('Playtech PAS Casino'),
+      '#title' => $this->t('Playtech PAS Casino'),
       '#description' => $this->t('Defines the casino value used for authenticating PAS'),
-      '#default_value' => $config->get('playtech_pas_casino')
+      '#default_value' => $this->get('playtech_pas_casino'),
+      '#required' => false,
+      '#translatable' => TRUE,
     ];
 
-    // $form['lobby_url'] = [
-    //   '#type' => 'textfield',
-    //   '#title' => t('Lobby URL'),
-    //   '#description' => $this->t('The Playtech Lobby URL'),
-    //   '#default_value' => $config->get('lobby_url')
-    // ];
-
-    $form['languages'] = [
+    $form['gen_config']['languages'] = [
       '#type' => 'textarea',
-      '#title' => t('Language Mapping'),
-      '#size' => 500,
+      '#title' => $this->t('Language Mapping'),
       '#description' => $this->t('Define the language mapping for Playtech games. Pipe separated language code and value, one per line.
           <br>
           If no mapping specified, it will use the front end language prefix as is.
           <br>
           <strong>en|en-us</strong>'),
-      '#default_value' => $config->get('languages')
+      '#default_value' => $this->get('languages'),
+      '#required' => false,
+      '#translatable' => TRUE,
     ];
 
-    $form['iapiconf_override'] = [
+    $form['gen_config']['iapiconf_override'] = [
       '#type' => 'textarea',
-      '#title' => t('iapiConf Override'),
-      '#size' => 500,
+      '#title' => $this->t('iapiConf Override'),
       '#description' => $this->t('Define iapiConf to be overrided prior PAS initalization
           <br>
           If no mapping specified, it will use the the default config from Playtech
           <br>
           <strong>clientUrl_casino|https://cachebanner.9bonus.com/casinoclient.html</strong>'),
-      '#default_value' => $config->get('iapiconf_override')
+      '#default_value' => $this->get('iapiconf_override'),
+      '#required' => false,
+      '#translatable' => TRUE,
     ];
-
-    $form['actions'] = ['#type' => 'actions'];
-
-    $form['actions']['submit'] = [
-      '#type' => 'submit',
-      '#value' => $this->t('Save')
-    ];
-
-    return $form;
   }
 
-  /**
-   * Implements a form submit handler.
-   *
-   * @param array $form
-   *   The render array of the currently built form.
-   * @param FormStateInterface $form_state
-   *   Object describing the current state of the form.
-   */
-  public function submitForm(array &$form, FormStateInterface $form_state) {
-    $keys = [
-      'javascript_assets',
-      // 'playtech_pas_endpoint',
-      // 'lobby_url',
-      'playtech_pas_casino',
-      'languages',
-      'iapiconf_override'
-    ];
-
-    foreach ($keys as $key) {
-      $this->config('webcomposer_config.games_playtech_provider')->set($key, $form_state->getValue($key))->save();
-    }
-
-    parent::submitForm($form, $form_state);
-  }
 }

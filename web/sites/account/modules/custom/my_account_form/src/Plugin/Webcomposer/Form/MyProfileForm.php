@@ -89,6 +89,11 @@ class MyProfileForm extends WebcomposerFormBase implements WebcomposerFormInterf
             '#type' => 'textfield',
             '#description' => 'First name placeholder label',
           ],
+          'annotation' => [
+            '#title' => 'Annotation text',
+            '#type' => 'textarea',
+            '#description' => 'field annotation that will be displayed on focus',
+          ],
         ],
       ],
 
@@ -105,6 +110,11 @@ class MyProfileForm extends WebcomposerFormBase implements WebcomposerFormInterf
             '#title' => 'Last name placeholder label',
             '#type' => 'textfield',
             '#description' => 'Last name placeholder label',
+          ],
+          'annotation' => [
+            '#title' => 'Annotation text',
+            '#type' => 'textarea',
+            '#description' => 'field annotation that will be displayed on focus',
           ],
         ],
       ],
