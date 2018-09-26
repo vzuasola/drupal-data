@@ -44,7 +44,7 @@ class GTSForm extends FormBase {
       '#type' => 'checkbox',
       '#title' => $this->t('Enable lobby lazy load (Infinite Scroll)'),
       '#default_value' => $this->get('gts_lobby_infinite_scroll'),
-      '#description' => 'Auto generate als domain base on the current site domain.',
+      '#description' => 'Enable lazy loading for games lobby.',
       '#translatable' => TRUE,
     ];
 
