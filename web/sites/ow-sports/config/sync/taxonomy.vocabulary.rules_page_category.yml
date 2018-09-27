@@ -1,0 +1,9 @@
+uuid: 49b34df3-8ac7-4713-9d91-552ab52f8fce
+langcode: en
+status: true
+dependencies: {  }
+name: 'Rules Page Category'
+vid: rules_page_category
+description: 'Rules and Regulations Categories'
+hierarchy: 0
+weight: 0

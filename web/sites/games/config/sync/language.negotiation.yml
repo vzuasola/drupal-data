@@ -6,17 +6,20 @@ url:
     en: en
     zh-hans: sc
     th: th
+    ko: kr
     vi: vn
     id: id
-    ko: kr
-    '': null
+    es: es
+    pt-br: pt
   domains:
     en: ''
     zh-hans: ''
     th: ''
+    ko: ''
     vi: ''
     id: ''
-    ko: ''
+    es: ''
+    pt-br: ''
 selected_langcode: site_default
 _core:
   default_config_hash: uEePITI9tV6WqzmsTb7MfPCi5yPWXSxAN1xeLcYFQbM

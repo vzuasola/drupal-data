@@ -301,6 +301,7 @@ class MyAccountFormResource extends ResourceBase
             $value['fast_reg_flash_message'] = $values['fast_reg_flash_message'];
             $value['fastreg_redirect'] = $values['fastreg_redirect'];
             $value['fastreg_timeout_redirect'] = $values['fastreg_timeout_redirect'];
+            $value['fastreg_mobile_redirect'] = $values['fastreg_mobile_redirect'];
         }
         return $value;
     }
