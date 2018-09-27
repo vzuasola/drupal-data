@@ -1,0 +1,8 @@
+my_account_error_handler.403:
+  route_name: my_account_error_handler.403_config
+  base_route: my_account_error_handler.403_config
+  title: 'My Account Access Denied Page Configuration'
+my_account_error_handler.404:
+  route_name: my_account_error_handler.404_config
+  base_route: my_account_error_handler.404_config
+  title: 'My Account Page Not Found Configuration'
