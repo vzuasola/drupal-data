@@ -1,0 +1,14 @@
+uuid: 9909ea0d-63fe-43fe-8733-7997d893bcf2
+langcode: en
+status: true
+dependencies: {  }
+id: access_management
+label: 'Access Management'
+weight: 4
+is_admin: null
+permissions:
+  - 'access toolbar'
+  - 'access user profiles'
+  - 'administer permissions'
+  - 'administer users'
+  - 'view the administration theme'

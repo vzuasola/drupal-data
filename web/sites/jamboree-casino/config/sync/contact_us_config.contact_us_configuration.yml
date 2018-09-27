@@ -1,13 +1,13 @@
-advanced__active_tab: edit-settings
-page_title: Test
+advanced__active_tab: edit-content
+page_title: 'Contact Us'
 body_content:
-  value: ''
+  value: "<h1 class=\"js-quickedit-page-title page-title text-align-center\">Contact Us\r\n</h1>\r\n<p class=\"text-align-center\">24 hours Japanese support by Japanese\r\n</p>\r\n<p>We will your support professional Japanese staff in the chat · E-mail phones Casino Jamboree. Any questions, if you have any questions, please feel free to contact us.\r\n</p>\r\n<p>Casino Jamboree is constantly striving to rapid support. We support team, we will support our customers in 24 hours a day, seven days a week.\r\n</p>\r\n<div class=\"contact-info\">\r\n  <div class=\"h2\">Casino Jamboree Japanese support\r\n  </div>\r\n  <ul>\r\n    <li class=\"contact-phone\"><img alt=\"contact-phone.png\" data-entity-type=\"\" data-entity-uuid=\"\" height=\"52\" src=\"/sites/jamboree-casino/files/inline-images/contact-phone.png\" width=\"52\" /> <a href=\"tel:0120-966-722\">0120-966-722 (OK from mobile) </a></li>\r\n    <li class=\"contact-email\"><img alt=\"contact-email.png\" data-entity-type=\"\" data-entity-uuid=\"\" height=\"44\" src=\"/sites/jamboree-casino/files/inline-images/contact-email.png\" width=\"56\" /> <a href=\"mailto:support@casinojamboree.com\">&nbsp;support@casinojamboree.com</a></li>\r\n  </ul>\r\n</div>\r\n<h2 class=\"align-center white large-font text-align-center\">Inquiry form\r\n</h2>\r\n<p class=\"align-center text-align-center\">\r\n  <br />\r\n  On all items under your input,click the [Submit] button.\r\n</p>\r\n<style type=\"text/css\">@media screen and (max-width: 1098px) {\r\n  .br-sp {\r\n    display:none;\r\n  }\r\n  }\r\n  @media screen and (min-width: 768px){\r\n    .rwd-break {\r\n      display: none;\r\n    }\r\n  }\r\n</style>\r\n<p>&nbsp;\r\n</p>\r\n"
   format: basic_html
 value: null
 format: null
-success_title: 'Test Sucess'
+success_title: '【カジノジャンボリー 日本語カスタマーサポート】'
 success_message:
-  value: "<p>Test Success Message</p>\r\n"
+  value: "<p><strong>フォームが正常に送信されました。</strong></p>\r\n\r\n<p>この度のお問合わせ、誠にありがとうございます。折り返し、担当部署よりご連絡いたしますので恐れ入りますが今しばらくお待ちください。何かご不明点がありましたら、遠慮なく<a href=\"mailto:support@casinojamboree.com\">カスタマーサポートまでご連絡ください。</a></p>\r\n"
   format: basic_html
-form_title: 'Test Contact'
-email_template: ''
+form_title: '【カジノジャンボリー 日本語カスタマーサポート】'
+email_template: "@subject\r\n@date\r\n@firstname\r\n@lastname\r\n@username\r\n@email\r\n@message"

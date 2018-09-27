@@ -1,0 +1,5 @@
+gts.list:
+  title: 'Games Mobile Configuration'
+  description: 'Provides configuration for Games Mobile Site'
+  parent: system.admin_config
+  route_name: gts.admin_settings
