@@ -37,9 +37,6 @@ class ExchangeConfigForm extends FormBase {
     return ['exchange_config.exchange_configuration'];
   }
 
-  /**
-   * @inheritdoc
-   */
   public function form(array $form, FormStateInterface $form_state) {
     $form['exchange_config_lobby'] = [
       '#type' => 'vertical_tabs',
