@@ -82,7 +82,6 @@ class ExchangeConfigForm extends FormBase {
       '#collapsible' => TRUE,
       '#group' => 'exchange_config_lobby'
     ];
-
    if($key == 'trust_element') {
       $form['trust_element_title'] = [
         '#type' => 'textfield',
@@ -101,7 +100,6 @@ class ExchangeConfigForm extends FormBase {
         '#translatable' => TRUE,
       ];
     }
-
     if($key == 'lobby_tiles') {
       $form['lobby_tiles_alignment'] = [
         '#type' => 'select',
@@ -117,7 +115,6 @@ class ExchangeConfigForm extends FormBase {
       ];
 
     }
-
     if($key == 'exchange_blocking_country') {
       $form['blocking_country_not_found_title'] = [
         '#type' => 'textfield',
@@ -147,9 +144,7 @@ class ExchangeConfigForm extends FormBase {
         '#required' => false,
         '#translatable' => TRUE,
       ];
-
     }
-
     if($key == 'blocking_currency') {
       $form['blocking_currency_not_found_title'] = [
         '#type' => 'textfield',
@@ -180,7 +175,6 @@ class ExchangeConfigForm extends FormBase {
         '#translatable' => TRUE,
       ];
     }
-    
     if($key == 'exchange_configuration_mobile') {
       $form['base_url'] = [
         '#type' => 'textfield',
