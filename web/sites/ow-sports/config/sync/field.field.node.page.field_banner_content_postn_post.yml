@@ -1,0 +1,23 @@
+uuid: 1ae137be-d616-43a1-8d7a-9757764848bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_banner_content_postn_post
+    - node.type.page
+  module:
+    - options
+id: node.page.field_banner_content_postn_post
+field_name: field_banner_content_postn_post
+entity_type: node
+bundle: page
+label: 'Post Login Banner Content Position'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: left
+default_value_callback: ''
+settings: {  }
+field_type: list_string

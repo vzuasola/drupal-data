@@ -1,0 +1,22 @@
+uuid: ed33cee8-684c-4851-b2e6-cbd316dc4ef2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_body_post
+    - node.type.page
+  module:
+    - text
+id: node.page.field_body_post
+field_name: field_body_post
+entity_type: node
+bundle: page
+label: "Post Login Body\t"
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

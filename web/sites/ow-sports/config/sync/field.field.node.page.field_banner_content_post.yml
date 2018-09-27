@@ -1,0 +1,21 @@
+uuid: 5d7a480a-d20d-4ce6-89ca-8abe69c8d08b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_banner_content_post
+    - node.type.page
+  module:
+    - text
+id: node.page.field_banner_content_post
+field_name: field_banner_content_post
+entity_type: node
+bundle: page
+label: 'Post Login Banner content'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

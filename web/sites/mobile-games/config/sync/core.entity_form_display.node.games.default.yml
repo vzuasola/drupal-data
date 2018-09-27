@@ -4,14 +4,15 @@ status: true
 dependencies:
   config:
     - field.field.node.games.field_game_code
+    - field.field.node.games.field_game_filter
     - field.field.node.games.field_game_provider
     - field.field.node.games.field_game_ribbon
     - field.field.node.games.field_games_list_category
     - field.field.node.games.field_games_list_thumb_img_big
     - field.field.node.games.field_games_list_thumb_img_small
     - field.field.node.games.field_games_list_thumbnail_size
-    - field.field.node.games.field_keywords
     - field.field.node.games.field_games_target
+    - field.field.node.games.field_keywords
     - image.style.thumbnail
     - node.type.games
   module:
@@ -36,6 +37,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_game_filter:
+    weight: 27
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
     region: content
   field_game_provider:
     weight: 2
@@ -77,18 +84,19 @@ content:
     third_party_settings: {  }
     type: options_select
     region: content
-  field_keywords:
-    weight: 26
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textarea
   field_games_target:
     weight: 26
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
+  field_keywords:
+    weight: 26
+    settings:
+      rows: 2
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
     region: content
   langcode:
     type: language_select

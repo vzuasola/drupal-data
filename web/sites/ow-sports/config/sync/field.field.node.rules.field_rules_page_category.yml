@@ -1,0 +1,29 @@
+uuid: 501f8fcb-0e08-4c45-9e37-03613528d2f8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_rules_page_category
+    - node.type.rules
+    - taxonomy.vocabulary.rules_page_category
+id: node.rules.field_rules_page_category
+field_name: field_rules_page_category
+entity_type: node
+bundle: rules
+label: 'Rules Page Category'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      rules_page_category: rules_page_category
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

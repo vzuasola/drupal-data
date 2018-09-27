@@ -18,7 +18,7 @@ id: node.page.field_image
 field_name: field_image
 entity_type: node
 bundle: page
-label: 'Banner Image'
+label: 'Pre Login Banner Image'
 description: 'The image for the banner. The recommended upload size is 1920x500.'
 required: false
 translatable: true

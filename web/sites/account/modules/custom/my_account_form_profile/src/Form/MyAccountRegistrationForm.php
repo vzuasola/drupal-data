@@ -1494,248 +1494,55 @@ class MyAccountRegistrationForm extends ConfigFormBase
             '#description' => '<strong>[Mobile] </strong> Label for Change Password Tab.'
         ];
 
+        $this->fastRegConfig($form);
+
         return $form;
     }
 
-    /**
-     * Getter method for Form ID.
-     *
-     * @inheritdoc
-     */
-    public function getFormId()
-    {
-        return 'fapi_change_password_config';
+    private function fastRegConfig(&$form) {
+        $form['profile_form_fastreg_config'] = [
+            '#type' => 'details',
+            '#title' => 'Fast Reg Configuration',
+            '#open' => False,
+            '#group' => 'profile',
+        ];
+
+        $form['profile_form_fastreg_config']['fastreg_timeout_redirect'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Timeout Redirect'),
+            '#required' => TRUE,
+            '#default_value' => $this->get('fastreg_timeout_redirect'),
+            '#translatable' => true,
+            '#description' => '<strong>[Fast Reg] </strong> Timeout in second(s) before player redirected back to Cashier.'
+        ];
+
+        $form['profile_form_fastreg_config']['fastreg_redirect'] = [
+          '#type' => 'textfield',
+          '#title' => $this->t('[Desktop] - Redirect To'),
+          '#default_value' => $this->get('fastreg_redirect'),
+          '#required' => TRUE,
+          '#translatable' => TRUE,
+          '#description' => '<strong>[Fast Reg] - </strong>redirect URL for Desktop'
+        ];
+
+        $form['profile_form_fastreg_config']['fastreg_mobile_redirect'] = [
+          '#type' => 'textfield',
+          '#title' => $this->t('[Mobile] - Redirect To'),
+          '#default_value' => $this->get('fastreg_mobile_redirect'),
+          '#required' => TRUE,
+          '#translatable' => TRUE,
+          '#description' => '<strong>[Fast Reg] - </strong>redirect URL for Mobile'
+        ];
+
+        $content = $this->get('fast_reg_flash_message');
+        $form['profile_form_fastreg_config']['fast_reg_flash_message'] = [
+          '#type' => 'text_format',
+          '#title' => $this->t('Notification message'),
+          '#default_value' => $content['value'] ?? '',
+          '#format' => $content['format'] ?? 'full_html',
+          '#required' => TRUE,
+          '#translatable' => TRUE,
+          '#description' => '<strong>[Fast Reg] </strong> Message to be displayed to update First Name and Last Name.'
+        ];
     }
-
-    /**
-     *
-     * @inheritdoc
-     */
-    protected function getEditableConfigNames()
-    {
-        return ['my_account_form_profile.profile'];
-    }
-
-
-    /**
-     * Implements a form submit handler.
-     *
-     * @param array $form
-     *   The render array of the currently built form.
-     * @param FormStateInterface $form_state
-     *   Object describing the current state of the form.
-     */
-    public function submitForm(array &$form, FormStateInterface $form_state)
-    {
-        $configuration = $form_state->getValue('field_configuration');
-        $this->config('my_account_form_profile.profile')
-            ->set('username_field.options.label', $configuration['field_labels_user_name']['label'])
-            ->set('username_field.options.attr.placeholder', $configuration['field_labels_user_name']['placeholder'])
-            ->set('username_field.options.attr.enable_tooltip', $configuration['field_labels_user_name']['enable_tooltip'])
-            ->set('username_field.options.attr.tooltip_blurb', $configuration['field_labels_user_name']['tooltip_blurb'])
-            ->set('currency_field.options.attr.enable_tooltip', $configuration['field_labels_currency']['enable_tooltip'])
-            ->set('currency_field.options.attr.tooltip_blurb', $configuration['field_labels_currency']['tooltip_blurb'])
-           ->set('first_name_field.options.attr.enable_tooltip', $configuration['field_labels_first_name']['enable_tooltip'])
-            ->set('first_name_field.options.attr.tooltip_blurb', $configuration['field_labels_first_name']['tooltip_blurb'])
-           ->set('last_name_field.options.attr.enable_tooltip', $configuration['field_labels_last_name']['enable_tooltip'])
-            ->set('last_name_field.options.attr.tooltip_blurb', $configuration['field_labels_last_name']['tooltip_blurb'])
-           ->set('dob_field.options.attr.enable_tooltip', $configuration['field_labels_dob']['enable_tooltip'])
-            ->set('dob_field.options.attr.tooltip_blurb', $configuration['field_labels_dob']['tooltip_blurb'])
-           ->set('country_field.options.attr.enable_tooltip', $configuration['field_labels_country']['enable_tooltip'])
-            ->set('country_field.options.attr.tooltip_blurb', $configuration['field_labels_country']['tooltip_blurb'])
-           ->set('email_field.options.attr.enable_tooltip', $configuration['field_labels_email']['enable_tooltip'])
-            ->set('email_field.options.attr.tooltip_blurb', $configuration['field_labels_email']['tooltip_blurb'])
-           ->set('gender_field.options.attr.enable_tooltip', $configuration['field_labels_gender']['enable_tooltip'])
-            ->set('gender_field.options.attr.tooltip_blurb', $configuration['field_labels_gender']['tooltip_blurb'])
-           ->set('mobile_number_field.options.attr.enable_tooltip', $configuration['field_labels_mobile_number']['enable_tooltip'])
-            ->set('mobile_number_field.options.attr.tooltip_blurb', $configuration['field_labels_mobile_number']['tooltip_blurb'])
-           ->set('language_field.options.attr.enable_tooltip', $configuration['field_labels_language']['enable_tooltip'])
-            ->set('language_field.options.attr.tooltip_blurb', $configuration['field_labels_language']['tooltip_blurb'])
-           ->set('address_field.options.attr.enable_tooltip', $configuration['field_labels_address']['enable_tooltip'])
-            ->set('address_field.options.attr.tooltip_blurb', $configuration['field_labels_address']['tooltip_blurb'])
-           ->set('city_field.options.attr.enable_tooltip', $configuration['field_labels_city']['enable_tooltip'])
-            ->set('city_field.options.attr.tooltip_blurb', $configuration['field_labels_city']['tooltip_blurb'])
-           ->set('postal_code_field.options.attr.enable_tooltip', $configuration['field_labels_postal_code']['enable_tooltip'])
-            ->set('postal_code_field.options.attr.tooltip_blurb', $configuration['field_labels_postal_code']['tooltip_blurb'])
-           ->set('contact_preference_field.options.attr.enable_tooltip', $configuration['field_labels_contact_preference']['enable_tooltip'])
-            ->set('contact_preference_field.options.attr.tooltip_blurb', $configuration['field_labels_contact_preference']['tooltip_blurb'])
-            ->set('username_field.weight', $configuration['field_labels_user_name']['weight'])
-            ->set('dob_month.weight', $configuration['field_labels_dob']['field_labels_dob_month']['weight'])
-            ->set('dob_month.options.wrapper_class', $configuration['field_labels_dob']['field_labels_dob_month']['wrapper_class'])
-            ->set('dob_year.weight', $configuration['field_labels_dob']['field_labels_dob_year']['weight'])
-            ->set('dob_year.options.wrapper_class', $configuration['field_labels_dob']['field_labels_dob_year']['wrapper_class'])
-            ->set('dob_day.weight', $configuration['field_labels_dob']['field_labels_dob_day']['weight'])
-            ->set('dob_day.options.wrapper_class', $configuration['field_labels_dob']['field_labels_dob_day']['wrapper_class'])
-            ->set('username_field.options.wrapper_class', $configuration['field_labels_user_name']['wrapper_class'])
-            ->set('currency_field.options.label', $configuration['field_labels_currency']['label'])
-            ->set('currency_field.options.attr.placeholder', $configuration['field_labels_currency']['placeholder'])
-            ->set('currency_field.options.error', $configuration['field_labels_currency']['error'])
-            ->set('currency_field.weight', $configuration['field_labels_currency']['weight'])
-            ->set('currency_field.options.wrapper_class', $configuration['field_labels_currency']['wrapper_class'])
-            ->set('first_name_field.options.label', $configuration['field_labels_first_name']['label'])
-            ->set('first_name_field.options.attr.placeholder', $configuration['field_labels_first_name']['placeholder'])
-            ->set('first_name_field.options.error', $configuration['field_labels_first_name']['error'])
-            ->set('first_name_field.weight', $configuration['field_labels_first_name']['weight'])
-            ->set('first_name_field.options.wrapper_class', $configuration['field_labels_first_name']['wrapper_class'])
-            ->set('last_name_field.options.label', $configuration['field_labels_last_name']['label'])
-            ->set('last_name_field.options.attr.placeholder', $configuration['field_labels_last_name']['placeholder'])
-            ->set('last_name_field.options.error', $configuration['field_labels_last_name']['error'])
-            ->set('last_name_field.weight', $configuration['field_labels_last_name']['weight'])
-            ->set('last_name_field.options.wrapper_class', $configuration['field_labels_last_name']['wrapper_class'])
-            ->set('dob_field.options.label', $configuration['field_labels_dob']['label'])
-            ->set('dob_field.options.error', $configuration['field_labels_dob']['error'])
-            ->set('dob_field.weight', $configuration['field_labels_dob']['weight'])
-            ->set('dob_field.options.wrapper_class', $configuration['field_labels_dob']['wrapper_class'])
-            ->set('country_field.options.label', $configuration['field_labels_country']['label'])
-            ->set('country_field.options.attr.placeholder', $configuration['field_labels_country']['placeholder'])
-            ->set('country_field.options.error', $configuration['field_labels_country']['error'])
-            ->set('country_field.weight', $configuration['field_labels_country']['weight'])
-            ->set('country_field.options.wrapper_class', $configuration['field_labels_country']['wrapper_class'])
-            ->set('email_field.options.label', $configuration['field_labels_email']['label'])
-            ->set('email_field.options.attr.placeholder', $configuration['field_labels_email']['placeholder'])
-            ->set('email_field.options.error', $configuration['field_labels_email']['error'])
-            ->set('email_field.weight', $configuration['field_labels_email']['weight'])
-            ->set('email_field.options.wrapper_class', $configuration['field_labels_email']['wrapper_class'])
-            ->set('gender_field.options.label', $configuration['field_labels_gender']['label'])
-            ->set('gender_field.weight', $configuration['field_labels_gender']['weight'])
-            ->set('gender_field.options.wrapper_class', $configuration['field_labels_gender']['wrapper_class'])
-            ->set('mobile_number_field.options.label', $configuration['field_labels_mobile_number']['label'])
-            ->set('mobile_number_field.options.attr.placeholder', $configuration['field_labels_mobile_number']['placeholder'])
-            ->set('mobile_number_field.weight', $configuration['field_labels_mobile_number']['weight'])
-            ->set('mobile_number_field.options.wrapper_class', $configuration['field_labels_mobile_number']['wrapper_class'])
-            ->set('mobile_number_1_field.options.label', $configuration['field_labels_mobile_number_1']['label'])
-            ->set('mobile_number_1_field.options.attr.placeholder', $configuration['field_labels_mobile_number_1']['placeholder'])
-            ->set('mobile_number_1_field.weight', $configuration['field_labels_mobile_number_1']['weight'])
-            ->set('mobile_number_1_field.options.wrapper_class', $configuration['field_labels_mobile_number_1']['wrapper_class'])
-            ->set('language_field.options.label', $configuration['field_labels_language']['label'])
-            ->set('language_field.options.attr.placeholder', $configuration['field_labels_language']['placeholder'])
-            ->set('language_field.options.error', $configuration['field_labels_language']['error'])
-            ->set('language_field.weight', $configuration['field_labels_language']['weight'])
-            ->set('language_field.options.help_text', $configuration['field_labels_language']['help_text'])
-            ->set('language_field.options.wrapper_class', $configuration['field_labels_language']['wrapper_class'])
-            ->set('address_field.options.label', $configuration['field_labels_address']['label'])
-            ->set('address_field.options.attr.placeholder', $configuration['field_labels_address']['placeholder'])
-            ->set('address_field.weight', $configuration['field_labels_address']['weight'])
-            ->set('address_field.options.wrapper_class', $configuration['field_labels_address']['wrapper_class'])
-            ->set('city_field.options.label', $configuration['field_labels_city']['label'])
-            ->set('city_field.options.attr.placeholder', $configuration['field_labels_city']['placeholder'])
-            ->set('city_field.weight', $configuration['field_labels_city']['weight'])
-            ->set('city_field.options.wrapper_class', $configuration['field_labels_city']['wrapper_class'])
-            ->set('postal_code_field.options.label', $configuration['field_labels_postal_code']['label'])
-            ->set('postal_code_field.options.attr.placeholder', $configuration['field_labels_postal_code']['placeholder'])
-            ->set('postal_code_field.weight', $configuration['field_labels_postal_code']['weight'])
-            ->set('postal_code_field.options.wrapper_class', $configuration['field_labels_postal_code']['wrapper_class'])
-            ->set('contact_preference_field.options.label', $configuration['field_labels_contact_preference']['label'])
-            ->set('contact_preference_field.weight', $configuration['field_labels_contact_preference']['weight'])
-            ->set('contact_preference_field.options.wrapper_class', $configuration['field_labels_contact_preference']['wrapper_class'])
-            ->set('account_field.options.label', $configuration['field_labels_account']['account_label'])
-            ->set('communication_detail_field.options.label', $configuration['field_labels_account']['communication_label'])
-            ->set('home_address_field.options.label', $configuration['field_labels_account']['home_address_label'])
-            ->set('contact_preference_label.options.label', $configuration['field_labels_account']['contact_preference']['contact_preference_label'])
-            ->set('contact_preference_top_blurb_field', $configuration['field_labels_account']['contact_preference']['contact_preference_top_blurb'])
-            ->set('contact_preference_bottom_blurb_field', $configuration['field_labels_account']['contact_preference']['contact_preference_bottom_blurb'])
-            ->set('contact_preference_yes_label_field', $configuration['field_labels_account']['contact_preference']['contact_preference_yes_label'])
-            ->set('contact_preference_no_label_field', $configuration['field_labels_account']['contact_preference']['contact_preference_no_label'])
-            ->set('enable_sms_verification_field', $configuration['field_labels_sms_verification']['enable_sms_verification'])
-            ->set('verify_text_field', $configuration['field_labels_sms_verification']['verify_text'])
-            ->set('modal_verify_header_text_field', $configuration['field_labels_sms_verification']['modal_verify_header_text'])
-            ->set('modal_verify_body_text_field', $configuration['field_labels_sms_verification']['modal_verify_body_text'])
-            ->set('modal_verification_code_placeholder_field', $configuration['field_labels_sms_verification']['modal_verification_code_placeholder'])
-            ->set('modal_verification_resend_code_text_field', $configuration['field_labels_sms_verification']['modal_verification_resend_code_text'])
-            ->set('modal_verification_submit_text_field', $configuration['field_labels_sms_verification']['modal_verification_submit_text'])
-            ->set('verification_code_response_field', $configuration['field_labels_sms_verification']['verification_code_response'])
-            ->set('verification_code_required_message_field', $configuration['field_labels_sms_verification']['verification_code_required_message'])
-            ->set('verification_code_min_length_message_field', $configuration['field_labels_sms_verification']['verification_code_min_length_message'])
-            ->set('verification_code_max_length_message_field', $configuration['field_labels_sms_verification']['verification_code_max_length_message'])
-            ->set('country_mapping_field', $configuration['field_labels_country_mapping']['country_mapping'])
-            ->set('country_code_mapping_field', $configuration['field_labels_country_code_mapping']['country_code_mapping'])
-            ->set('save_changes_field', $configuration['field_labels_btn_config']['save_changes'])
-            ->set('cancel_field', $configuration['field_labels_btn_config']['cancel'])
-            ->set('modal_preview_header_field', $configuration['field_labels_modal_preview']['modal_preview_header'])
-            ->set('modal_preview_top_blurb_field', $configuration['field_labels_modal_preview']['modal_preview_top_blurb'])
-            ->set('modal_preview_current_label_field', $configuration['field_labels_modal_preview']['modal_preview_current_label'])
-            ->set('modal_preview_new_label_field', $configuration['field_labels_modal_preview']['modal_preview_new_label'])
-            ->set('modal_preview_bottom_blurb_field', $configuration['field_labels_modal_preview']['modal_preview_bottom_blurb'])
-            ->set('modal_preview_placeholder_field', $configuration['field_labels_modal_preview']['modal_preview_placeholder'])
-            ->set('modal_preview_btn_field', $configuration['field_labels_modal_preview']['modal_preview_btn'])
-            ->set('server_side_validation_field', $configuration['field_labels_validation_configuration']['server_side_validation'])
-            ->set('required_validation_field', $configuration['field_labels_validation_configuration']['required_validation'])
-            ->set('mobile_number_format_validation_field', $configuration['field_labels_validation_configuration']['mobile_number_validation']['mobile_number_format_validation'])
-            ->set('mobile_number_min_length_validation_field', $configuration['field_labels_validation_configuration']['mobile_number_validation']['mobile_number_min_length_validation'])
-            ->set('mobile_number_max_length_validation_field', $configuration['field_labels_validation_configuration']['mobile_number_validation']['mobile_number_max_length_validation'])
-            ->set('address_max_length_validation_field', $configuration['field_labels_validation_configuration']['address_validation']['address_max_length_validation'])
-            ->set('address_min_length_validation_field', $configuration['field_labels_validation_configuration']['address_validation']['address_min_length_validation'])
-            ->set('address_format_validation_field', $configuration['field_labels_validation_configuration']['address_validation']['address_format_validation'])
-            ->set('city_max_length_validation_field', $configuration['field_labels_validation_configuration']['city_validation']['city_max_length_validation'])
-            ->set('city_min_length_validation_field', $configuration['field_labels_validation_configuration']['city_validation']['city_min_length_validation'])
-            ->set('city_format_validation_field', $configuration['field_labels_validation_configuration']['city_validation']['city_format_validation'])
-            ->set('postal_code_max_length_validation_field', $configuration['field_labels_validation_configuration']['postal_code_validation']['postal_code_max_length_validation'])
-            ->set('postal_code_max_length_value_field', $configuration['field_labels_validation_configuration']['postal_code_validation']['postal_code_max_length_value'])
-            ->set('postal_code_format_validation_field', $configuration['field_labels_validation_configuration']['postal_code_validation']['postal_code_format_validation'])
-            ->set('password_max_length_validation_field', $configuration['field_labels_validation_configuration']['password_validation']['password_max_length_validation'])
-            ->set('password_min_length_validation_field', $configuration['field_labels_validation_configuration']['password_validation']['password_min_length_validation'])
-            ->set('password_format_validation_field', $configuration['field_labels_validation_configuration']['password_validation']['password_format_validation'])
-            ->set('primary_label_field', $configuration['field_labels_generic_configuration']['primary_label'])
-            ->set('add_mobile_label_field', $configuration['field_labels_generic_configuration']['add_mobile_label'])
-            ->set('no_changed_detected_message_field', $configuration['field_labels_generic_configuration']['no_changed_detected_message'])
-            ->set('male_label_field', $configuration['field_labels_generic_configuration']['male_label'])
-            ->set('female_label_field', $configuration['field_labels_generic_configuration']['female_label'])
-            ->save();
-    }
-
-    /**
-     * The path alias manager.
-     *
-     * @var \Drupal\Core\Path\AliasManagerInterface
-     */
-    protected $aliasManager;
-
-    /**
-     * The path validator.
-     *
-     * @var \Drupal\Core\Path\PathValidatorInterface
-     */
-    protected $pathValidator;
-
-    /**
-     * The request context.
-     *
-     * @var \Drupal\Core\Routing\RequestContext
-     */
-    protected $requestContext;
-
-    /**
-     * Constructs a SiteInformationForm object.
-     *
-     * @param \Drupal\Core\Config\ConfigFactoryInterface $config_factory
-     *   The factory for configuration objects.
-     * @param \Drupal\Core\Path\AliasManagerInterface $alias_manager
-     *   The path alias manager.
-     * @param \Drupal\Core\Path\PathValidatorInterface $path_validator
-     *   The path validator.
-     * @param \Drupal\Core\Routing\RequestContext $request_context
-     *   The request context.
-     */
-    public function __construct(ConfigFactoryInterface $config_factory, AliasManagerInterface $alias_manager, PathValidatorInterface $path_validator, RequestContext $request_context)
-    {
-        parent::__construct($config_factory);
-
-        $this->aliasManager = $alias_manager;
-        $this->pathValidator = $path_validator;
-        $this->requestContext = $request_context;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public static function create(ContainerInterface $container)
-    {
-        return new static(
-            $container->get('config.factory'),
-            $container->get('path.alias_manager'),
-            $container->get('path.validator'),
-            $container->get('router.request_context')
-        );
-    }
-
 }

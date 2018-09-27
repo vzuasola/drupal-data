@@ -1,0 +1,23 @@
+uuid: 06d83509-5766-4500-8752-e69c522db5fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.webcomposer_meta_entity.field_tag
+  module:
+    - options
+    - webcomposer_seo
+id: webcomposer_meta_entity.webcomposer_meta_entity.field_tag
+field_name: field_tag
+entity_type: webcomposer_meta_entity
+bundle: webcomposer_meta_entity
+label: Tag
+description: 'Specifies the tag type that this SEO entry will use.'
+required: true
+translatable: false
+default_value:
+  -
+    value: meta
+default_value_callback: ''
+settings: {  }
+field_type: list_string
