@@ -1,4 +1,0 @@
-exchange_config.trust_element_config_tab:
-  route_name: exchange_config.exchange_config_form
-  title: 'Exchange Configuration'
-  base_route: exchange_config.exchange_config_form
