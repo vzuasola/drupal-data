@@ -1,0 +1,14 @@
+uuid: b377beea-90b5-44e0-8294-a68fd7a93b8b
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.access_management
+  module:
+    - user
+id: user_add_role_action.access_management
+label: 'Add the Access Management role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: access_management
