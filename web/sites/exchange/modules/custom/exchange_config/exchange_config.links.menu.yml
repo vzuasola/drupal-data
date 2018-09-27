@@ -3,9 +3,3 @@ exchange_config.exchange_config_list:
   description: Exchange  Configuration
   parent: system.admin_config
   route_name: exchange_config.admin_settings
-
-exchange_config.admin_exchange_config:
-  title: 'exchange lobby tiles Configuration'
-  parent: exchange_config.exchange_config_list
-  description: 'Exchange  Configuration'
-  route_name: exchange_config.exchange_config_form
