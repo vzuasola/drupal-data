@@ -5,5 +5,5 @@ dependencies: {  }
 name: 'Games Filter'
 vid: games_filter
 description: 'Filters for games under search'
-hierarchy: 1
+hierarchy: 0
 weight: 0

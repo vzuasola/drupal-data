@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.taxonomy_term.games_ribbons.field_games_ribbon_color
+    - field.field.taxonomy_term.games_ribbons.field_games_ribbon_label
     - field.field.taxonomy_term.games_ribbons.field_games_text_color
     - taxonomy.vocabulary.games_ribbons
   module:
@@ -29,6 +30,14 @@ content:
       opacity: '1'
     third_party_settings: {  }
     type: color_field_formatter_text
+    region: content
+  field_games_ribbon_label:
+    weight: 3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
     region: content
   field_games_text_color:
     weight: 2

@@ -7,5 +7,6 @@ ignored_config_entities:
   10: 'language.*'
   12: 'devel.*'
   14: games_search.search_configuration
+  16: gts.gts_configuration
 _core:
   default_config_hash: UVH1aJ4b44UM-VdPVN7hNNuuVqfReJxwfVeDQH1Hvsk
