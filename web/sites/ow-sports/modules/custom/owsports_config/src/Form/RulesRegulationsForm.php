@@ -61,6 +61,7 @@ class RulesRegulationsForm extends FormBase {
       '#upload_validators' => [
         'file_validate_extensions' => ['gif png jpg jpeg'],
       ],
+      '#description' => $this->t('Recommended minimum width is 1920px and height is 800px'),
     ];
 
     $form['rules_regulations']['rules_page_color'] = [
