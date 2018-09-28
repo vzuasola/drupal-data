@@ -78,7 +78,7 @@ class OWSportsCustomConfigForm extends ConfigFormBase {
     $form['owsports_config_group']['user_preference'] = [
       '#type' => 'checkbox',
       '#title' => $this->t('Enable User Preference'),
-      '#default_value' => $config->get('user_preference') ?? 0,
+      '#default_value' => $config->get('user_preference'),
       '#description' => $this->t('Enabling User Preference will automatically save last template visited by Player per language.'),
     ];
 
@@ -118,10 +118,10 @@ class OWSportsCustomConfigForm extends ConfigFormBase {
       '#group' => 'owsports_settings_tab',
     ];
 
-    $form['asia_config_group']['new_template'] = [
+    $form['asia_config_group']['old_template'] = [
       '#type' => 'checkbox',
-      '#title' => $this->t('Use 2018 template as default'),
-      '#default_value' => $config->get('new_template') ?? 0,
+      '#title' => $this->t('Use Old template as default'),
+      '#default_value' => $config->get('old_template')
     ];
 
     $form['asia_config_group']['pre_login_uri'] = [
@@ -328,6 +328,8 @@ class OWSportsCustomConfigForm extends ConfigFormBase {
     $keys = [
       'how_to_bet_uri',
       'transaction_subdomain',
+      'user_preference',
+      'old_template',
       'pre_login_uri',
       'post_login_uri',
       'language_mapping',
