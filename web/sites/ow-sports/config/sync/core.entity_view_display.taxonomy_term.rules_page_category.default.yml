@@ -1,0 +1,33 @@
+uuid: 316f5023-03e0-41d5-884d-637883e7010e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.rules_page_category.field_published
+    - taxonomy.vocabulary.rules_page_category
+  module:
+    - text
+id: taxonomy_term.rules_page_category.default
+targetEntityType: taxonomy_term
+bundle: rules_page_category
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_published:
+    weight: 1
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+hidden:
+  langcode: true

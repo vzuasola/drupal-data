@@ -19,7 +19,7 @@ field_name: field_image
 entity_type: node
 bundle: rules
 label: Image
-description: ''
+description: 'The recommended icon size is 18x18 pixels.'
 required: false
 translatable: false
 default_value: {  }
