@@ -181,7 +181,19 @@ display:
           entity_type: webcomposer_meta_entity
           entity_field: langcode
           plugin_id: language
-      sorts: {  }
+      sorts:
+        field_tag_value:
+          id: field_tag_value
+          table: webcomposer_meta_entity__field_tag
+          field: field_tag_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: DESC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: standard
       header: {  }
       footer: {  }
       empty: {  }

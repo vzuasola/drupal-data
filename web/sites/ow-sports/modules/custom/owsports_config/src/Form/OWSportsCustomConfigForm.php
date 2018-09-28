@@ -75,6 +75,13 @@ class OWSportsCustomConfigForm extends ConfigFormBase {
       '#description' => $this->t('Enable this feature to hide the right side block below 1370px and lower width of screen.'),
     ];
 
+    $form['owsports_config_group']['user_preference'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable User Preference'),
+      '#default_value' => $config->get('user_preference'),
+      '#description' => $this->t('Enabling User Preference will automatically save last template visited by Player per language.'),
+    ];
+
     $form['jackpotbet_config_group'] = [
       '#type' => 'details',
       '#title' => $this->t('Jackpot Bet'),
@@ -109,6 +116,12 @@ class OWSportsCustomConfigForm extends ConfigFormBase {
       '#title' => $this->t('Asia Template (Default)'),
       '#collapsible' => TRUE,
       '#group' => 'owsports_settings_tab',
+    ];
+
+    $form['asia_config_group']['old_template'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Use Old template as default'),
+      '#default_value' => $config->get('old_template')
     ];
 
     $form['asia_config_group']['pre_login_uri'] = [
@@ -315,6 +328,8 @@ class OWSportsCustomConfigForm extends ConfigFormBase {
     $keys = [
       'how_to_bet_uri',
       'transaction_subdomain',
+      'user_preference',
+      'old_template',
       'pre_login_uri',
       'post_login_uri',
       'language_mapping',
