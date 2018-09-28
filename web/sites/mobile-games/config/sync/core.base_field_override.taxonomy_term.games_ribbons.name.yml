@@ -1,17 +1,17 @@
-uuid: ac1596cc-0975-4f5c-8e76-2381710d83bf
+uuid: bcecb6fd-9ecb-4144-a5bc-ba66e831e308
 langcode: en
 status: true
 dependencies:
   config:
-    - taxonomy.vocabulary.mobile_game_category
-id: taxonomy_term.mobile_game_category.name
+    - taxonomy.vocabulary.games_ribbons
+id: taxonomy_term.games_ribbons.name
 field_name: name
 entity_type: taxonomy_term
-bundle: mobile_game_category
+bundle: games_ribbons
 label: Name
 description: ''
 required: true
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }
