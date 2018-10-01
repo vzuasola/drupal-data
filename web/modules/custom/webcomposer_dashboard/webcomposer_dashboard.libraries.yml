@@ -3,3 +3,4 @@ webcomposer.toolbar:
   css:
     component:
       css/webcomposer.toolbar.css: {}
+      css/webcomposer.status.css: {}
