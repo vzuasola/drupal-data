@@ -18,7 +18,6 @@ class EnvironmentResolver {
     $environment = 'LOCAL';
 
     $hostname = $request->getHttpHost();
-    $hostname = 'prd-mobile-entrypage.elysium-dfbt.com';
 
     if (preg_match('/(.*?)-/', $hostname, $matches)) {
       list(, $env) = $matches;
