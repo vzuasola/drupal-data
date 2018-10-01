@@ -1,0 +1,27 @@
+uuid: 2fa8e690-c275-45f8-b4c0-c46e552bd5d9
+langcode: hi
+status: true
+dependencies:
+  module:
+    - options
+    - webcomposer_seo
+id: webcomposer_meta_entity.field_tag
+field_name: field_tag
+entity_type: webcomposer_meta_entity
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: meta
+      label: Meta
+    -
+      value: link
+      label: Link
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
