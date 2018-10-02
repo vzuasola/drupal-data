@@ -6,6 +6,7 @@
  */
 
 use Drupal\Core\Url;
+use DrupalProject\custom\EnvironmentResolver;
 
 /**
  * Implements hook_toolbar().
@@ -31,4 +32,20 @@ function webcomposer_dashboard_toolbar() {
   ];
 
   return $items;
+}
+
+function webcomposer_dashboard_page_top(&$page) {
+  $env = EnvironmentResolver::getEnvironment();
+
+  if ($env === 'PRD') {
+    $message = "You are editing <strong>PRODUCTION</strong> environment";
+
+    $page['webcomposer_warning'] = [
+      '#markup' => "
+        <div class='webcomposer-status-message'>
+          $message
+        </div>
+      ",
+    ];
+  }
 }
