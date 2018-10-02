@@ -111,7 +111,7 @@ class ExchangeProviderConfiguration extends FormBase {
       '#type' => 'textarea',
       '#title' => $this->t('Country'),
       '#description' => $this->t('Define the Unsupported Country code for Asia Gaming games.'),
-      '#default_value' => $this->get('currency'),
+      '#default_value' => $this->get('country'),
       '#required' => false,
       '#translatable' => TRUE,
     ];
