@@ -59,17 +59,16 @@ class ExchangeConfigForm extends FormBase {
       '#group' => 'exchange_config_lobby'
     ];
 
-    $form['gen_config']['exchange_background'] = [
+    $form['gen_config']['file_image_exchange_background'] = [
       '#type' => 'managed_file',
       '#title' => $this->t('Background'),
-      '#default_value' => $this->get('exchange_background'),
+      '#default_value' => $this->get('file_image_exchange_background'),
       '#upload_location' => 'public://',
       '#description' =>  $this->t('Exchange background'),
       '#upload_validators' => [
         'file_validate_extensions' => ['gif png jpg jpeg'],
       ],
     ];
-
   }
 
   private function gpiContentTab(&$form, $key, $value) {
