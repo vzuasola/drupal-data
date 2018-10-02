@@ -109,7 +109,6 @@ class GamesSearchForm extends FormBase {
       '#title' => $this->t('Message when No Recommended Games are available.'),
       '#default_value' => $this->get('msg_no_recommended'),
       '#translatable' => TRUE,
-      '#required' => TRUE,
     ];
 
     $form['search_configuration']['title_weight'] = [

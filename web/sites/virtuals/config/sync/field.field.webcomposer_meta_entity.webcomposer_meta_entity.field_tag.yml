@@ -1,0 +1,21 @@
+uuid: 13348d75-9637-4d62-971e-8b3d0f3908ed
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.webcomposer_meta_entity.field_tag
+  module:
+    - options
+    - webcomposer_seo
+id: webcomposer_meta_entity.webcomposer_meta_entity.field_tag
+field_name: field_tag
+entity_type: webcomposer_meta_entity
+bundle: webcomposer_meta_entity
+label: Tag
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

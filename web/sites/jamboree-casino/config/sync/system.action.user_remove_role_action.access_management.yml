@@ -1,0 +1,14 @@
+uuid: 7261b29a-ec3d-4282-ae76-20e0d1d080df
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.access_management
+  module:
+    - user
+id: user_remove_role_action.access_management
+label: 'Remove the Access Management role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: access_management

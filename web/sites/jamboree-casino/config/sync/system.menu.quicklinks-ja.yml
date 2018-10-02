@@ -1,8 +1,8 @@
-uuid: c7d3a2d7-6c3a-490e-9648-afb35f4fa415
+uuid: 075c7eba-3909-488e-ba0c-f245324ac66b
 langcode: ja
 status: true
 dependencies: {  }
 id: quicklinks-ja
-label: 'Quicklinks JA'
-description: ''
+label: サイトマップ
+description: カジノジャンボリーのサイトマップ
 locked: false
