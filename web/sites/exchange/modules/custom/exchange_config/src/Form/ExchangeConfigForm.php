@@ -70,7 +70,6 @@ class ExchangeConfigForm extends FormBase {
         'file_validate_extensions' => ['gif png jpg jpeg'],
       ],
     ];
-
   }
 
   private function gpiContentTab(&$form, $key, $value) {
