@@ -6,6 +6,7 @@ dependencies:
     - field.field.announcement_entity.announcement_entity.field_availability
     - field.field.announcement_entity.announcement_entity.field_body
     - field.field.announcement_entity.announcement_entity.field_publish_date
+    - field.field.announcement_entity.announcement_entity.field_title
     - field.field.announcement_entity.announcement_entity.field_unpublish_date
   module:
     - datetime
@@ -19,7 +20,7 @@ third_party_settings:
         - field_publish_date
         - field_unpublish_date
       parent_name: ''
-      weight: 4
+      weight: 5
       format_type: details
       format_settings:
         id: ''
@@ -36,12 +37,12 @@ mode: default
 content:
   field_availability:
     type: options_buttons
-    weight: 2
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }
   field_body:
-    weight: 3
+    weight: 4
     settings:
       rows: 5
       placeholder: ''
@@ -54,6 +55,14 @@ content:
     third_party_settings: {  }
     type: datetime_default
     region: content
+  field_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_unpublish_date:
     weight: 6
     settings: {  }
@@ -62,9 +71,10 @@ content:
     region: content
   langcode:
     type: language_select
-    weight: 1
+    weight: 2
     region: content
-    settings: {  }
+    settings:
+      include_locked: true
     third_party_settings: {  }
   name:
     type: string_textfield
