@@ -1024,7 +1024,7 @@ display:
           entity_field: changed
           plugin_id: date
       cache:
-        type: none
+        type: tag
         options: {  }
     cache_metadata:
       max-age: -1
