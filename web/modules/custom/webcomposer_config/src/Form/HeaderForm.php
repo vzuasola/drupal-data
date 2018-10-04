@@ -459,5 +459,14 @@ class HeaderForm extends FormBase {
       '#required' => TRUE,
       '#translatable' => TRUE,
     ];
+
+    $form['header_other_group']['promotion_page_title'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Promotion Page Title.'),
+      '#description' => $this->t('Promotion Page Title.'),
+      '#default_value' => $this->get('promotion_page_title'),
+      '#required' => TRUE,
+      '#translatable' => TRUE,
+    ];
   }
 }

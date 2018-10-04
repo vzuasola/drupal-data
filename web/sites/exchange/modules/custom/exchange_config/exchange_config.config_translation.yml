@@ -1,5 +1,0 @@
-exchange_config.exchange_configuration_schema:
-  title: 'exchange Configuration'
-  base_route_name: exchange_config.exchange_config_form
-  names:
-    - exchange_config.exchange_configuration

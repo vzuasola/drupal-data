@@ -78,7 +78,7 @@ dev-mobile-stack:
   environment:
     name: development
   script:
-    - DEPLOY_DEVELOPMENT=$DEPLOY_DEVELOPMENT_MOBILE python -u automation/run.py --stage deploy-development
+    - DEPLOY_DEVELOPMENT=$DEPLOY_DEVELOPMENT_MOBILE python -u automation/run.py --stage deploy-development 
   when: manual
   dependencies:
     - create package
@@ -92,7 +92,7 @@ dev-japan-stack:
   environment:
     name: development
   script:
-    - DEPLOY_DEVELOPMENT=$DEPLOY_DEVELOPMENT_JAPAN python -u automation/run.py --stage deploy-development
+    - DEPLOY_DEVELOPMENT=$DEPLOY_DEVELOPMENT_JAPAN python -u automation/run.py --stage deploy-development 
   when: manual
   dependencies:
     - create package

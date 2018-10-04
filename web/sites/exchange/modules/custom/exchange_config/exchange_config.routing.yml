@@ -5,11 +5,3 @@ exchange_config.admin_settings:
     _title: 'exchange trust element Configuration'
   requirements:
     _permission: 'administer site configuration'
-
-exchange_config.exchange_config_form:
-  path: 'admin/config/exchange/exchangeconfig'
-  defaults:
-    _form: 'Drupal\exchange_config\Form\ExchangeConfigForm'
-    _title: 'exchange trust element Configuration'
-  requirements:
-    _permission: 'administer site configuration'

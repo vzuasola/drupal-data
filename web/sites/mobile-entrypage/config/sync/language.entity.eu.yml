@@ -1,7 +1,13 @@
 uuid: 45bcc47a-7a15-4852-afcb-1399e69e201c
-langcode: en
+langcode: eu
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - webcomposer_language_hierarchy
+third_party_settings:
+  webcomposer_language_hierarchy:
+    webcomposer_fallback_langcode: en
+    webcomposer_language_custom_label: 'English (Europe)'
 id: eu
 label: 'English (Europe)'
 direction: ltr
