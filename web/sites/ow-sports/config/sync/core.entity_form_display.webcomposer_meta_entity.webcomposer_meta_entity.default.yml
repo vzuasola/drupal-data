@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.webcomposer_meta_entity.webcomposer_meta_entity.field_meta
     - field.field.webcomposer_meta_entity.webcomposer_meta_entity.field_per_page_visibility
+    - field.field.webcomposer_meta_entity.webcomposer_meta_entity.field_tag
   module:
     - paragraphs
     - webcomposer_seo
@@ -34,6 +35,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textarea
+    region: content
+  field_tag:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   langcode:
     type: language_select
