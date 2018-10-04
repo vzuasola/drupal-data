@@ -6,7 +6,7 @@ dependencies:
     - webcomposer_language_hierarchy
 third_party_settings:
   webcomposer_language_hierarchy:
-    webcomposer_fallback_langcode: ''
+    webcomposer_fallback_langcode: en
     webcomposer_language_custom_label: 简体中文
 id: zh-hans
 label: 'Simplified Chinese'
