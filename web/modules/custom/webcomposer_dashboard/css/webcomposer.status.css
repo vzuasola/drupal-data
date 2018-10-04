@@ -1,0 +1,8 @@
+.webcomposer-status-message {
+    background: darkred;
+    font-family: 'Segoe UI', Helvetic, sans-serif;
+    font-size: 14px;
+    color: white;
+    padding: 12px;
+    text-align: center;
+}

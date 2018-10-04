@@ -1,0 +1,23 @@
+uuid: 23154264-a4d9-4d32-9ad9-115db3c6afec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_published
+    - taxonomy.vocabulary.rules_page_category
+id: taxonomy_term.rules_page_category.field_published
+field_name: field_published
+entity_type: taxonomy_term
+bundle: rules_page_category
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: '1'
+  off_label: '0'
+field_type: boolean
