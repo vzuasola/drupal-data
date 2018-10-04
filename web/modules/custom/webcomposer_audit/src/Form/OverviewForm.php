@@ -11,6 +11,50 @@ use Drupal\Core\Url;
  */
 class OverviewForm extends FormBase {
   /**
+   * @inheritdoc
+   */
+   /**
+   * ICore Games Integration Configuration Form
+   */
+  const DATE_FORMAT = 'm/d/Y';
+  const TIME_FORMAT = 'h:i:s A';
+  const DEFAULT_LIMIT = 50;
+  const TIME_FRAMES = [
+    'last_week' => 'P1W',
+    'last_month' => 'P1M',
+  ];
+  const FILTER_KEYS = [
+    'title',
+    'type',
+    'action',
+    'uid',
+  ];
+  const FILTER_DATE_KEYS = [
+    'date_start',
+    'date_end',
+  ];
+  const FILTER_KEYS_OTHERS = [
+    'limit',
+    'date_picker'
+  ];
+  const DATE_PICKER = [
+    '0' => '-none-',
+    '-1 day' => '1 DAY',
+    '-3 day' => '3 DAY',
+    '-1 week' => '1 WEEK',
+    '-2 week' => '2 WEEK',
+    '-1 month' => '1 MONTH',
+    '-2 month' => '2 MONTH',
+  ];
+  const LOGS_PER_PAGE = [
+    '10' => 10,
+    '20' => 20,
+    '50' => 50,
+    '100' => 100,
+  ];
+
+
+  /**
    * {@inheritdoc}
    */
   public function getFormId() {
@@ -111,6 +155,61 @@ class OverviewForm extends FormBase {
       '#default_value' => isset($_SESSION['webcomposer_audit_filter']['user']) ? $_SESSION['webcomposer_audit_filter']['user'] : 'any',
     ];
 
+    $form['filters']['wrapper']['limit'] = [
+      '#title' => 'Logs Per Page',
+      '#type' => 'select',
+      '#options' => self::LOGS_PER_PAGE,
+      '#attributes' => [
+        'style' => 'padding-top: 5px; padding-bottom: 5px;',
+      ],
+      '#default_value' => isset($_SESSION['webcomposer_audit_filter']['limit']) ?
+        $_SESSION['webcomposer_audit_filter']['limit'] : self::DEFAULT_LIMIT,
+    ];
+
+    $form['filters']['wrapper']['date'] = [
+      '#type' => 'fieldset',
+      '#title' => t('Date Filters'),
+      '#collapsible' => TRUE,
+      '#collapsed' => FALSE,
+      '#attributes' => [
+        'style' =>'clear: both; display: inline-block; float: left;',
+      ],
+    ];
+
+    $form['filters']['wrapper']['date']['date_start'] = [
+      '#title' => 'Start Date',
+      '#type' => 'datetime',
+      '#size' => 20,
+      '#default_value' => $this->getDateValue('date_start'),
+      '#date_date_format' => self::DATE_FORMAT,
+      '#date_time_format' => self::TIME_FORMAT,
+      '#prefix' => '<div class="js-form-item form-item js-form-type-select form-type-select js-form-item-uid form-item-uid">',
+      '#suffix' => '</div>',
+    ];
+
+    $form['filters']['wrapper']['date']['date_end'] = [
+      '#title' => 'End Date',
+      '#type' => 'datetime',
+      '#size' => 20,
+      '#default_value' => $this->getDateValue('date_end'),
+      '#date_date_format' => self::DATE_FORMAT,
+      '#date_time_format' => self::TIME_FORMAT,
+      '#prefix' => '<div class="js-form-item form-item js-form-type-select form-type-select js-form-item-uid form-item-uid">',
+      '#suffix' => '</div>',
+    ];
+
+    $form['filters']['wrapper']['date']['date_picker'] = [
+      '#title' => 'Date Picker',
+      '#description' => 'If a value is selected, Start and End Date Filters will be ignored.',
+      '#type' => 'select',
+      '#options' => self::DATE_PICKER,
+      '#attributes' => [
+        'style' => 'margin-top: 10px; padding-top: 5px; padding-bottom: 5px;',
+      ],
+      '#default_value' => isset($_SESSION['webcomposer_audit_filter']['date_picker']) ?
+        $_SESSION['webcomposer_audit_filter']['date_picker'] : '-none-',
+    ];
+
     $form['filters']['wrapper']['actions'] = [
       '#type' => 'actions',
     ];
@@ -168,10 +267,10 @@ class OverviewForm extends FormBase {
 
     $rows = [];
     $storage = \Drupal::service('webcomposer_audit.database_storage');
-
     $entries = $storage->all([
       'header' => $header,
       'where' => $this->getOverviewFilter(),
+      'limit' => $this->getPageLimit(),
     ]);
 
     foreach ($entries as $key => $value) {
@@ -255,10 +354,15 @@ class OverviewForm extends FormBase {
 
     if (isset($_SESSION['webcomposer_audit_filter'])) {
       foreach ($_SESSION['webcomposer_audit_filter'] as $key => $value) {
-        if (!empty($value) && $value !== 'any') {
+        if (!empty($value) && $value !== 'any' && in_array($key, self::FILTER_KEYS)) {
           $filter[$key] = $value;
         }
       }
+    }
+
+    $dateFilter = $this->getDateFilter();
+    if ($dateFilter) {
+      $filter['timestamp'] = $dateFilter;
     }
 
     return $filter;
@@ -275,14 +379,21 @@ class OverviewForm extends FormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    $keys = [
-      'title',
-      'type',
-      'action',
-      'uid',
-    ];
+    foreach (self::FILTER_KEYS as $key) {
+      $_SESSION['webcomposer_audit_filter'][$key] = $form_state->getValue($key);
+    }
 
-    foreach ($keys as $key) {
+    $format = self::DATE_FORMAT . ' ' . self::TIME_FORMAT;
+    foreach (self::FILTER_DATE_KEYS as $key) {
+      if (is_object($form_state->getValue($key))) {
+        $_SESSION['webcomposer_audit_filter'][$key] = $form_state->getValue($key)->format($format);
+      } else {
+        // Delete the session
+        unset($_SESSION['webcomposer_audit_filter'][$key]);
+      }
+    }
+
+    foreach (self::FILTER_KEYS_OTHERS as $key) {
       $_SESSION['webcomposer_audit_filter'][$key] = $form_state->getValue($key);
     }
   }
@@ -292,5 +403,67 @@ class OverviewForm extends FormBase {
    */
   public function reset(array &$form, FormStateInterface $form_state) {
     $_SESSION['webcomposer_audit_filter'] = [];
+  }
+
+  /**
+   * Retrieves the default values for Drupal's DateTime field
+   */
+  private function getDateValue($field) {
+    if (isset($_SESSION['webcomposer_audit_filter'][$field])) {
+      return new \Drupal\Core\Datetime\DrupalDateTime($_SESSION['webcomposer_audit_filter'][$field]);
+    }
+
+    return '';
+  }
+
+  /**
+   * Processes timestamp query depending on date filters set
+   */
+  private function getDateFilter() {
+    $date_picker = $_SESSION['webcomposer_audit_filter']['date_picker'];
+    if ($date_picker && $date_picker !== 0) {
+      return [
+        'value' => strtotime($date_picker),
+        'operator' => '>='
+      ];
+    } else {
+      $date_start = (isset($_SESSION['webcomposer_audit_filter']['date_start'])) ?
+        strtotime($_SESSION['webcomposer_audit_filter']['date_start']) : null;
+      $date_end = (isset($_SESSION['webcomposer_audit_filter']['date_end'])) ?
+        strtotime($_SESSION['webcomposer_audit_filter']['date_end']) : null;
+
+      if ($date_start && $date_end) {
+        return [
+          'value' => [
+            $date_start,
+            $date_end
+          ],
+          'operator' => 'BETWEEN'
+        ];
+      } elseif ($date_start) {
+        return [
+          'value' => $date_start,
+          'operator' => '>='
+        ];
+      } elseif ($date_end) {
+        return [
+          'value' => $date_end,
+          'operator' => '<='
+        ];
+      }
+    }
+
+    return false;
+  }
+
+  /**
+   * Gets the default or set Page Limit
+   */
+  private function getPageLimit() {
+    if (isset($_SESSION['webcomposer_audit_filter']['limit'])) {
+      return $_SESSION['webcomposer_audit_filter']['limit'];
+    }
+
+    return self::DEFAULT_LIMIT;
   }
 }
