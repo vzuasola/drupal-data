@@ -420,7 +420,8 @@ class OverviewForm extends FormBase {
    * Processes timestamp query depending on date filters set
    */
   private function getDateFilter() {
-    $date_picker = $_SESSION['webcomposer_audit_filter']['date_picker'];
+    $date_picker = (isset($_SESSION['webcomposer_audit_filter']['date_picker'])) ?
+      $_SESSION['webcomposer_audit_filter']['date_picker'] : null;
     if ($date_picker && $date_picker !== 0) {
       return [
         'value' => strtotime($date_picker),
