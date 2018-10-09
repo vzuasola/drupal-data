@@ -234,10 +234,17 @@ class JamboreeCasinoConfig extends FormBase {
       '#translatable' => TRUE,
     ];
 
-    $form['inner_breadcrumb']['download_breadcrumb'] = [
+    $form['inner_breadcrumb']['promotion_breadcrumb'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('Download'),
-      '#default_value' => $this->get('download_breadcrumb'),
+      '#title' => $this->t('Promotion'),
+      '#default_value' => $this->get('promotion_breadcrumb'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['inner_breadcrumb']['release_breadcrumb'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Release'),
+      '#default_value' => $this->get('release_breadcrumb'),
       '#translatable' => TRUE,
     ];
   }
