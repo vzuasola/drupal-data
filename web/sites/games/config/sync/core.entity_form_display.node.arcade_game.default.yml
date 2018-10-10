@@ -74,8 +74,8 @@ content:
   field_arc_game_keywords:
     weight: 27
     settings:
-      size: 60
-      placeholder: ''
+      size: 100
+      placeholder: 'e.g., slots, top, live'
     third_party_settings: {  }
     type: string_textfield
     region: content
