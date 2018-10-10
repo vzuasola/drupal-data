@@ -365,18 +365,8 @@ display:
           formats:
             json: json
       row:
-        type: data_field
-        options:
-          field_options:
-            name:
-              alias: ''
-              raw_output: false
-            field_clclient_cat_icon:
-              alias: icon
-              raw_output: false
-            field_clcasino_cat_hicon:
-              alias: hicon
-              raw_output: false
+        type: data_entity
+        options: {  }
     cache_metadata:
       max-age: -1
       contexts:
