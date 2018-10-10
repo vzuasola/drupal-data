@@ -1,0 +1,19 @@
+uuid: 6ef272f3-e1a5-45f6-8359-087e44355a76
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_clcasino_game_title
+    - node.type.client_casino_games
+id: node.client_casino_games.field_clcasino_game_title
+field_name: field_clcasino_game_title
+entity_type: node
+bundle: client_casino_games
+label: 'Game Title'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long
