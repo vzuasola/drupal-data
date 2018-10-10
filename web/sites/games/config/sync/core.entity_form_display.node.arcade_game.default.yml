@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.arcade_game.body
     - field.field.node.arcade_game.field_arc_game_code
+    - field.field.node.arcade_game.field_arc_game_keywords
     - field.field.node.arcade_game.field_arc_game_provider
     - field.field.node.arcade_game.field_arc_game_ribbon
     - field.field.node.arcade_game.field_arc_game_thumbnail_image
@@ -67,6 +68,14 @@ content:
     settings:
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_arc_game_keywords:
+    weight: 27
+    settings:
+      size: 100
+      placeholder: 'e.g., slots, top, live'
     third_party_settings: {  }
     type: string_textfield
     region: content
