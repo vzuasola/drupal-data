@@ -1,0 +1,9 @@
+uuid: 20f02fd6-48a7-4934-ac5f-bc3bac7f5eb4
+langcode: en
+status: true
+dependencies: {  }
+name: 'Fair Gaming Year'
+vid: fair_gaming_year
+description: ''
+hierarchy: 0
+weight: 0
