@@ -151,6 +151,27 @@ class JamboreeCasinoConfig extends FormBase {
       '#translatable' => TRUE,
     ];
 
+    $form['page_setting']['promotion'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Promotion Page Title'),
+      '#default_value' => $this->get('promotion'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['page_setting']['release'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Release Page Title'),
+      '#default_value' => $this->get('release'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['page_setting']['fair_gaming'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Fair Gaming Page Title'),
+      '#default_value' => $this->get('fair_gaming'),
+      '#translatable' => TRUE,
+    ];
+
     $form['inner_breadcrumb'] = [
       '#type' => 'details',
       '#title' => t('InnerPage Breadcrumb'),
@@ -234,10 +255,24 @@ class JamboreeCasinoConfig extends FormBase {
       '#translatable' => TRUE,
     ];
 
-    $form['inner_breadcrumb']['download_breadcrumb'] = [
+    $form['inner_breadcrumb']['promotion_breadcrumb'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('Download'),
-      '#default_value' => $this->get('download_breadcrumb'),
+      '#title' => $this->t('Promotion'),
+      '#default_value' => $this->get('promotion_breadcrumb'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['inner_breadcrumb']['release_breadcrumb'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Release'),
+      '#default_value' => $this->get('release_breadcrumb'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['inner_breadcrumb']['fair_gaming_breadcrumb'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Fair Gaming'),
+      '#default_value' => $this->get('fair_gaming_breadcrumb'),
       '#translatable' => TRUE,
     ];
   }
