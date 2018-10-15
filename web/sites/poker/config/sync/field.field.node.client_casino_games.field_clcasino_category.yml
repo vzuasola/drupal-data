@@ -1,0 +1,25 @@
+uuid: d142b4ec-dca9-47d3-a786-4938c354eb39
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_clcasino_category
+    - node.type.client_casino_games
+id: node.client_casino_games.field_clcasino_category
+field_name: field_clcasino_category
+entity_type: node
+bundle: client_casino_games
+label: Category
+description: 'Assign this game to categories.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: client_casino_category
+      display_name: entity_reference_1
+      arguments: {  }
+field_type: entity_reference

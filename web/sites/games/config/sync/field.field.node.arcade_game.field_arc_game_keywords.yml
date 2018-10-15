@@ -1,0 +1,19 @@
+uuid: eaa73da6-bbb4-44b2-825f-0f1c9e494a72
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_arc_game_keywords
+    - node.type.arcade_game
+id: node.arcade_game.field_arc_game_keywords
+field_name: field_arc_game_keywords
+entity_type: node
+bundle: arcade_game
+label: Keywords
+description: 'Please enter all the game keywords separated by comma (,) that can be used for the game search.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

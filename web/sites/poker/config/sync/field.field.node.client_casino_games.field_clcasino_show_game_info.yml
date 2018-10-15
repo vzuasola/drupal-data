@@ -1,0 +1,23 @@
+uuid: 4eb1ffac-11a0-46f6-b644-ddfa1e5831b7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_clcasino_show_game_info
+    - node.type.client_casino_games
+id: node.client_casino_games.field_clcasino_show_game_info
+field_name: field_clcasino_show_game_info
+entity_type: node
+bundle: client_casino_games
+label: 'Show Game Info'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
