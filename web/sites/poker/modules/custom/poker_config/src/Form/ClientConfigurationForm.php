@@ -8,10 +8,10 @@ use Drupal\Core\Form\FormStateInterface;
  * Poker client form plugin
  *
  * @WebcomposerConfigPlugin(
- *   id = "poker_config",
+ *   id = "poker_client",
  *   route = {
  *     "title" = "Client Configuration",
- *     "path" = "/admin/poker-config/client",
+ *     "path" = "/admin/config/client/settings",
  *   },
  *   menu = {
  *     "title" = "Client Configuration",
@@ -34,23 +34,11 @@ class ClientConfigurationForm extends FormBase
      * {@inheritdoc}
      */
     public function form(array $form, FormStateInterface $form_state) {
-        $form['game_offers_settings_tab'] = [
-          '#type' => 'vertical_tabs',
-          '#title' => t('Client Configuration'),
-        ];
-
-        $this->common($form);
-
-        return $form;
-    }
-
-    private function common(&$form) {
         $form['common'] = [
           '#type' => 'details',
           '#title' => $this->t('Common'),
           '#collapsible' => true,
-          '#open' => true,
-          '#group' => 'game_offers_settings_tab',
+          '#open' => true
         ];
 
         $form['common']['info_label'] = [
@@ -61,12 +49,14 @@ class ClientConfigurationForm extends FormBase
           '#required' => true
         ];
 
-        $form['common']['playe_label'] = [
+        $form['common']['play_label'] = [
           '#type' => 'textfield',
           '#title' => $this->t('Play Button Label'),
-          '#default_value' => $this->get('playe_label'),
+          '#default_value' => $this->get('play_label'),
           '#translatable' => true,
           '#required' => true
         ];
+
+        return $form;
     }
 }
