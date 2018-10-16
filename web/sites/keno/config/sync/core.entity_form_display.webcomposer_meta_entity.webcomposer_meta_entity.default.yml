@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.webcomposer_meta_entity.webcomposer_meta_entity.field_meta
     - field.field.webcomposer_meta_entity.webcomposer_meta_entity.field_per_page_visibility
+    - field.field.webcomposer_meta_entity.webcomposer_meta_entity.field_tag
   module:
     - paragraphs
     - webcomposer_seo
@@ -17,7 +18,7 @@ mode: default
 content:
   field_meta:
     type: entity_reference_paragraphs
-    weight: 2
+    weight: 3
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -28,12 +29,18 @@ content:
     third_party_settings: {  }
     region: content
   field_per_page_visibility:
-    weight: 3
+    weight: 4
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
     type: string_textarea
+    region: content
+  field_tag:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   langcode:
     type: language_select
@@ -44,7 +51,7 @@ content:
     third_party_settings: {  }
   name:
     type: string_textfield
-    weight: 1
+    weight: 2
     region: content
     settings:
       size: 60
