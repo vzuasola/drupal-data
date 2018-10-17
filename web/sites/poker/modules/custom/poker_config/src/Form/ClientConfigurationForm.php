@@ -57,6 +57,14 @@ class ClientConfigurationForm extends FormBase
           '#required' => true
         ];
 
+        $form['common']['more_label'] = [
+          '#type' => 'textfield',
+          '#title' => $this->t('More Category Label'),
+          '#default_value' => $this->get('more_label'),
+          '#translatable' => true,
+          '#required' => true
+        ];
+
         return $form;
     }
 }
