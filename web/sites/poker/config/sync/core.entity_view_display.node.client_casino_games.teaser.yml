@@ -1,0 +1,29 @@
+uuid: 55a3d7f8-36e6-4d92-9576-370176e41c76
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.client_casino_games.field_clcasino_category
+    - field.field.node.client_casino_games.field_clcasino_game_code
+    - field.field.node.client_casino_games.field_clcasino_game_info
+    - field.field.node.client_casino_games.field_clcasino_game_thumbnail
+    - field.field.node.client_casino_games.field_clcasino_show_game_info
+    - node.type.client_casino_games
+  module:
+    - user
+id: node.client_casino_games.teaser
+targetEntityType: node
+bundle: client_casino_games
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_clcasino_category: true
+  field_clcasino_game_code: true
+  field_clcasino_game_info: true
+  field_clcasino_game_thumbnail: true
+  field_clcasino_show_game_info: true
+  langcode: true

@@ -1,33 +1,27 @@
-uuid: 546652b8-0d58-4d6e-8ee8-6a8e2afb19d8
+uuid: d79ee38b-e72c-4f45-a288-dc9f22df0db0
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.e_sports_channel_entity.field_channel
-    - field.storage.e_sports_channel_entity.field_enabled
-    - field.storage.e_sports_channel_entity.field_game_code
-    - field.storage.e_sports_channel_entity.field_publish_date
-    - field.storage.e_sports_channel_entity.field_unpublish_date
-    - taxonomy.vocabulary.e_sports_categories
-  content:
-    - 'taxonomy_term:e_sports_categories:0289cc95-a2a1-4fe0-a53f-48e576de864f'
-    - 'taxonomy_term:e_sports_categories:2dc8e71a-617b-42e8-bb1e-ac6554b9ac94'
-    - 'taxonomy_term:e_sports_categories:400ee7ee-75db-4339-aff4-a301b6ce7def'
-    - 'taxonomy_term:e_sports_categories:e69b5490-9862-46ce-8808-c317c76e2464'
+    - field.storage.taxonomy_term.field_clcasino_cat_alias
+    - field.storage.taxonomy_term.field_clcasino_cat_hicon
+    - field.storage.taxonomy_term.field_clclient_cat_icon
+    - node.type.client_casino_games
   module:
-    - datetime
-    - esports
+    - image
+    - node
     - rest
     - serialization
     - taxonomy
+    - user
     - webcomposer_rest_extra
-id: e_sports_channels
-label: 'E-Sports Channels'
+id: client_casino_category_rest
+label: 'Client Casino Category - REST'
 module: views
 description: ''
 tag: ''
-base_table: e_sports_channel_entity_field_data
-base_field: id
+base_table: node_field_data
+base_field: nid
 core: 8.x
 display:
   default:
@@ -37,8 +31,9 @@ display:
     position: 0
     display_options:
       access:
-        type: none
-        options: {  }
+        type: perm
+        options:
+          perm: 'access content'
       cache:
         type: tag
         options: {  }
@@ -63,13 +58,10 @@ display:
       pager:
         type: mini
         options:
-          items_per_page: 0
+          items_per_page: 10
           offset: 0
           id: 0
           total_pages: null
-          tags:
-            previous: ‹‹
-            next: ››
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
@@ -78,6 +70,9 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
+          tags:
+            previous: ‹‹
+            next: ››
       style:
         type: serializer
       row:
@@ -88,14 +83,11 @@ display:
           hide_empty: false
           default_field_elements: true
       fields:
-        name:
-          table: e_sports_channel_entity_field_data
-          field: name
-          id: name
-          entity_type: null
-          entity_field: name
-          plugin_id: field
-          relationship: none
+        tid:
+          id: tid
+          table: taxonomy_term_field_data
+          field: tid
+          relationship: field_clcasino_category
           group_type: group
           admin_label: ''
           label: ''
@@ -131,7 +123,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: true
+          element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -140,8 +132,10 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: string
-          settings: {  }
+          type: number_integer
+          settings:
+            thousand_separator: ''
+            prefix_suffix: true
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -152,77 +146,17 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-      filters: {  }
-      sorts: {  }
-      header: {  }
-      footer: {  }
-      empty: {  }
-      relationships: {  }
-      arguments: {  }
-      display_extenders: {  }
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - request_format
-        - url.query_args
-      tags: {  }
-  page_1:
-    display_plugin: page
-    id: page_1
-    display_title: Page
-    position: 2
-    display_options:
-      display_extenders: {  }
-      path: admin/structure/e_sports_channel_entity
-      style:
-        type: table
-        options:
-          grouping: {  }
-          row_class: ''
-          default_row_class: true
-          override: true
-          sticky: false
-          caption: ''
-          summary: ''
-          description: ''
-          columns:
-            name: name
-          info:
-            name:
-              sortable: false
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-          default: '-1'
-          empty_table: false
-      defaults:
-        style: false
-        row: false
-        fields: false
-        filters: false
-        filter_groups: false
-        pager: false
-        sorts: false
-      row:
-        type: fields
-        options:
-          inline: {  }
-          separator: ''
-          hide_empty: false
-          default_field_elements: true
-      fields:
-        field_channel:
-          id: field_channel
-          table: e_sports_channel_entity__field_channel
-          field: field_channel
-          relationship: none
+          entity_type: taxonomy_term
+          entity_field: tid
+          plugin_id: field
+        name:
+          id: name
+          table: taxonomy_term_field_data
+          field: name
+          relationship: field_clcasino_category
           group_type: group
           admin_label: ''
-          label: Channel
+          label: ''
           exclude: false
           alter:
             alter_text: false
@@ -255,7 +189,144 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: true
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          convert_spaces: false
+          entity_type: taxonomy_term
+          entity_field: name
+          plugin_id: term_name
+        nid:
+          id: nid
+          table: node_field_data
+          field: nid
+          relationship: none
+          group_type: count_distinct
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          set_precision: false
+          precision: 0
+          decimal: .
+          separator: ', '
+          format_plural: 0
+          format_plural_string: !!binary MQNAY291bnQ=
+          prefix: ''
+          suffix: ''
+          click_sort_column: value
+          type: number_integer
+          settings: {  }
+          group_column: entity_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          field_api_classes: false
+          entity_type: node
+          entity_field: nid
+          plugin_id: field
+        field_clcasino_cat_alias:
+          id: field_clcasino_cat_alias
+          table: taxonomy_term__field_clcasino_cat_alias
+          field: field_clcasino_cat_alias
+          relationship: field_clcasino_category
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -278,14 +349,14 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_enabled:
-          id: field_enabled
-          table: e_sports_channel_entity__field_enabled
-          field: field_enabled
-          relationship: none
+        field_clclient_cat_icon:
+          id: field_clclient_cat_icon
+          table: taxonomy_term__field_clclient_cat_icon
+          field: field_clclient_cat_icon
+          relationship: field_clcasino_category
           group_type: group
           admin_label: ''
-          label: Enabled
+          label: ''
           exclude: false
           alter:
             alter_text: false
@@ -318,72 +389,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: boolean
-          settings:
-            format: default
-            format_custom_true: ''
-            format_custom_false: ''
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_game_code:
-          id: field_game_code
-          table: e_sports_channel_entity__field_game_code
-          field: field_game_code
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: 'Game Code'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
+          element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -392,10 +398,10 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: target_id
-          type: entity_reference_label
+          type: image_url
           settings:
-            link: true
-          group_column: target_id
+            image_style: ''
+          group_column: entity_id
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -406,14 +412,14 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_publish_date:
-          id: field_publish_date
-          table: e_sports_channel_entity__field_publish_date
-          field: field_publish_date
-          relationship: none
+        field_clcasino_cat_hicon:
+          id: field_clcasino_cat_hicon
+          table: taxonomy_term__field_clcasino_cat_hicon
+          field: field_clcasino_cat_hicon
+          relationship: field_clcasino_category
           group_type: group
           admin_label: ''
-          label: 'Publish Date'
+          label: ''
           exclude: false
           alter:
             alter_text: false
@@ -446,7 +452,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: true
+          element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -454,12 +460,11 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: value
-          type: datetime_default
+          click_sort_column: target_id
+          type: image_url
           settings:
-            timezone_override: ''
-            format_type: medium
-          group_column: value
+            image_style: ''
+          group_column: entity_id
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -470,236 +475,36 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_unpublish_date:
-          id: field_unpublish_date
-          table: e_sports_channel_entity__field_unpublish_date
-          field: field_unpublish_date
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: 'Unpublish Date'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: datetime_default
-          settings:
-            timezone_override: ''
-            format_type: medium
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        operations:
-          id: operations
-          table: e_sports_channel_entity
-          field: operations
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: 'Operations links'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          destination: true
-          entity_type: e_sports_channel_entity
-          plugin_id: entity_operations
       filters:
-        field_game_code_target_id:
-          id: field_game_code_target_id
-          table: e_sports_channel_entity__field_game_code
-          field: field_game_code_target_id
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: or
-          value:
-            297: 297
-            299: 299
-            300: 300
-            298: 298
+        status:
+          value: '1'
+          table: node_field_data
+          field: status
+          plugin_id: boolean
+          entity_type: node
+          entity_field: status
+          id: status
+          expose:
+            operator: ''
           group: 1
-          exposed: true
-          expose:
-            operator_id: field_game_code_target_id_op
-            label: 'Filter by Category'
-            description: ''
-            use_operator: false
-            operator: field_game_code_target_id_op
-            identifier: field_game_code_target_id
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              e: '0'
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          type: select
-          limit: true
-          vid: e_sports_categories
-          hierarchy: false
-          error_message: true
-          plugin_id: taxonomy_index_tid
-      filter_groups:
-        operator: AND
-        groups:
-          1: AND
-      pager:
-        type: none
-        options:
-          offset: 0
-      sorts:
-        field_channel_value:
-          id: field_channel_value
-          table: e_sports_channel_entity__field_channel
-          field: field_channel_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: ASC
-          exposed: false
-          expose:
-            label: ''
-          plugin_id: standard
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - url
-        - user
-      tags:
-        - 'config:field.storage.e_sports_channel_entity.field_channel'
-        - 'config:field.storage.e_sports_channel_entity.field_enabled'
-        - 'config:field.storage.e_sports_channel_entity.field_game_code'
-        - 'config:field.storage.e_sports_channel_entity.field_publish_date'
-        - 'config:field.storage.e_sports_channel_entity.field_unpublish_date'
-  rest_export_1:
-    display_plugin: rest_export
-    id: rest_export_1
-    display_title: 'REST export'
-    position: 1
-    display_options:
-      display_extenders: {  }
-      path: api/esports_channels
-      pager:
-        type: none
-        options:
-          offset: 0
-      style:
-        type: node_list_serializer
-        options:
-          uses_fields: false
-          formats: {  }
-      row:
-        type: data_entity
-        options: {  }
-      filters:
-        field_enabled_value:
-          id: field_enabled_value
-          table: e_sports_channel_entity__field_enabled
-          field: field_enabled_value
-          relationship: none
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          value:
+            client_casino_games: client_casino_games
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+        field_clcasino_cat_disable_value:
+          id: field_clcasino_cat_disable_value
+          table: taxonomy_term__field_clcasino_cat_disable
+          field: field_clcasino_cat_disable_value
+          relationship: field_clcasino_category
           group_type: group
           admin_label: ''
           operator: '='
-          value: '1'
+          value: '0'
           group: 1
           exposed: false
           expose:
@@ -727,17 +532,188 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           plugin_id: boolean
-      defaults:
-        filters: false
-        filter_groups: false
-      filter_groups:
-        operator: OR
-        groups:
-          1: AND
+        langcode:
+          id: langcode
+          table: node_field_data
+          field: langcode
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: node
+          entity_field: langcode
+          plugin_id: language
+        langcode_1:
+          id: langcode_1
+          table: taxonomy_term_field_data
+          field: langcode
+          relationship: field_clcasino_category
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: taxonomy_term
+          entity_field: langcode
+          plugin_id: language
+      sorts:
+        weight:
+          id: weight
+          table: taxonomy_term_field_data
+          field: weight
+          relationship: field_clcasino_category
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          entity_type: taxonomy_term
+          entity_field: weight
+          plugin_id: standard
+        name:
+          id: name
+          table: taxonomy_term_field_data
+          field: name
+          relationship: field_clcasino_category
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          entity_type: taxonomy_term
+          entity_field: name
+          plugin_id: standard
+      header: {  }
+      footer: {  }
+      empty: {  }
+      relationships:
+        field_clcasino_category:
+          id: field_clcasino_category
+          table: node__field_clcasino_category
+          field: field_clcasino_category
+          relationship: none
+          group_type: group
+          admin_label: 'field_clcasino_category: Taxonomy term'
+          required: false
+          plugin_id: standard
+      arguments: {  }
+      display_extenders: {  }
+      group_by: true
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
         - request_format
-      tags: {  }
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.taxonomy_term.field_clcasino_cat_alias'
+        - 'config:field.storage.taxonomy_term.field_clcasino_cat_hicon'
+        - 'config:field.storage.taxonomy_term.field_clclient_cat_icon'
+  rest_export_1:
+    display_plugin: rest_export
+    id: rest_export_1
+    display_title: 'REST export'
+    position: 1
+    display_options:
+      display_extenders: {  }
+      path: api/client-casino-categories
+      pager:
+        type: some
+        options:
+          items_per_page: 10
+          offset: 0
+      style:
+        type: taxonomy_list_serializer
+        options:
+          uses_fields: false
+          formats:
+            json: json
+      row:
+        type: data_field
+        options:
+          field_options:
+            tid:
+              alias: ''
+              raw_output: false
+            name:
+              alias: ''
+              raw_output: false
+            field_clcasino_cat_alias:
+              alias: alias
+              raw_output: false
+            nid:
+              alias: count
+              raw_output: false
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - request_format
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.taxonomy_term.field_clcasino_cat_alias'
+        - 'config:field.storage.taxonomy_term.field_clcasino_cat_hicon'
+        - 'config:field.storage.taxonomy_term.field_clclient_cat_icon'

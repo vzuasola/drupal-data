@@ -1,0 +1,23 @@
+uuid: 70076811-91f4-40ea-ad53-d0256fc182a6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_clcasino_cat_disable
+    - taxonomy.vocabulary.client_casino_category
+id: taxonomy_term.client_casino_category.field_clcasino_cat_disable
+field_name: field_clcasino_cat_disable
+entity_type: taxonomy_term
+bundle: client_casino_category
+label: Disable
+description: 'If checked, this category will not be displayed.'
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
