@@ -11,12 +11,16 @@ class ExportParser {
 
   /**
    * Returns an array of all domain groups, where the index is the primary key `id`.
+   *
+   * @param array $filters
+   *   - Audit log filters.
    */
-  public function get_audit_logs() {
+  public function get_audit_logs($filters = []) {
     $storage = \Drupal::service('webcomposer_audit.database_storage');
 
     return $storage->all([
       'limit' => 500,
+      'where' => $filters,
       'orderby' => [
         'field' => 'timestamp',
         'sort' => 'DESC',
