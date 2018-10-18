@@ -29,6 +29,13 @@ class LogsExport {
   protected $service;
 
   /**
+   * Filters for the export parser.
+   *
+   * @var filters
+   */
+  private $filters = [];
+
+  /**
    * Constructor.
    */
   public function __construct($excelParser, $service) {
@@ -39,6 +46,8 @@ class LogsExport {
   /**
    * Gets Matterhorn Audit Log data and invoke export excel operation.
    *
+   * @param array $filters
+   *   - Array of date filters.
    * @author yunyce <yunyce.dejesus@bayviewtechnology.com>
    */
   public function logsExportExcel() {
@@ -55,7 +64,7 @@ class LogsExport {
   public function logsExportGetParsedData() {
     $result = [];
 
-    $logs = $this->service->get_audit_logs();
+    $logs = $this->service->get_audit_logs($this->filters);
 
     // Post process audit log data
     $process_logs = $this->postProcessLogsData($logs);
@@ -233,4 +242,13 @@ class LogsExport {
     return $map;
   }
 
+  /**
+   * Function for setting Audit Log filters
+   *
+   * @param array $filters
+   *   - The array entity data.
+   */
+  public function setAuditFilters($filters) {
+    $this->filters = $filters;
+  }
 }
