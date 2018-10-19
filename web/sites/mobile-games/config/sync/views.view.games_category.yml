@@ -462,10 +462,9 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: datetime_default
+          type: datetime_plain
           settings:
             timezone_override: ''
-            format_type: medium
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -526,10 +525,9 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: datetime_default
+          type: datetime_plain
           settings:
             timezone_override: ''
-            format_type: medium
           group_column: value
           group_columns: {  }
           group_rows: true
