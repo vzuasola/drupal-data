@@ -267,7 +267,7 @@ class PushNotificationV2Form extends FormBase {
 
     $form['cta_settings']['cta_button_helper'] = [
       '#prefix' => '<div>',
-      '#markup' => 'Available action that can be binded on CTA.',
+      '#markup' => 'Available action that can be bind on CTA.',
       '#suffix' => '</div>',
     ];
 
