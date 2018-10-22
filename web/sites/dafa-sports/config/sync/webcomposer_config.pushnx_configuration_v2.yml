@@ -71,3 +71,5 @@ product_exclude_games: 0
 title: 'PUSH NOTIFICATION'
 empty: 'There are no new notifications.'
 expired_message: 'This offer has already expired.'
+product_exclude_dismiss_generic: 0
+product_exclude_dismiss_owsports: 0

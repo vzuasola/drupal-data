@@ -176,8 +176,16 @@ class PushNotificationV2Form extends FormBase {
 
         $form['products_settings'][$text_key]['product_exclude_' . $text_key] = [
           '#type' => 'checkbox',
-          '#title' => $this->t('Exclude this product from filtering'),
+          '#title' => $this->t('Exclude from filtering'),
           '#default_value' => $this->get('product_exclude_' . $text_key),
+          '#description' => $this->t($text . ' messages will not be included on the list.'),
+        ];
+
+        $form['products_settings'][$text_key]['product_exclude_dismiss_' . $text_key] = [
+          '#type' => 'checkbox',
+          '#title' => $this->t('Exclude from dismiss all'),
+          '#default_value' => $this->get('product_exclude_dismiss_' . $text_key),
+          '#description' => $this->t($text . ' messages will not be included on the dismiss all.'),
         ];
       }
     }
@@ -376,6 +384,7 @@ class PushNotificationV2Form extends FormBase {
       $keys[] = 'product_type_id_' . strtolower($text);
       $keys[] = 'product_icon_' . strtolower($text);
       $keys[] = 'product_exclude_' . strtolower($text);
+      $keys[] = 'product_exclude_dismiss_' . strtolower($text);
     }
 
     foreach ($keys as $key) {
