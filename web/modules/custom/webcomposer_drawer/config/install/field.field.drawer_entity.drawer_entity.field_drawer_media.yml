@@ -17,7 +17,7 @@ bundle: drawer_entity
 label: 'Drawer Media'
 description: 'The media assets for the drawer'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
