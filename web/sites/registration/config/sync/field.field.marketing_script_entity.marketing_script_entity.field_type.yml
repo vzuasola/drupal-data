@@ -16,7 +16,7 @@ bundle: marketing_script_entity
 label: Type
 description: 'The type of this entry. Can either be Javascript or CSS.'
 required: true
-translatable: true
+translatable: false
 default_value:
   -
     value: js
