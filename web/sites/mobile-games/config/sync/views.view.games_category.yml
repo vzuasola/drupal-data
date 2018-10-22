@@ -464,7 +464,7 @@ display:
           click_sort_column: value
           type: datetime_plain
           settings:
-            timezone_override: ''
+            timezone_override: UTC
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -527,7 +527,7 @@ display:
           click_sort_column: value
           type: datetime_plain
           settings:
-            timezone_override: ''
+            timezone_override: UTC
           group_column: value
           group_columns: {  }
           group_rows: true
