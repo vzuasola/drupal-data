@@ -75,6 +75,7 @@ module:
   webcomposer_cache: 0 
   webcomposer_config: 0
   webcomposer_config_schema: 0
+  webcomposer_dashboard: 0
   webcomposer_dm: 0
   webcomposer_domain_import: 0
   webcomposer_drawer: 0
