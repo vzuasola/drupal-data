@@ -15,7 +15,7 @@ bundle: marketing_script_entity
 label: 'Per Page Configuratiion'
 description: 'Specify pages by using their paths. Enter one path per line. The ''*'' character is a wildcard. An example path is /promotion/* for every user page.'
 required: true
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }

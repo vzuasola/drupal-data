@@ -1,10 +1,10 @@
 field_settings:
   label: 电子邮箱地址
   placeholder: 电子邮箱地址
-  annotation: 请输入真实有效电子邮箱地址以便于进行账户验证及银行交易（例如，Moneybookers/Skrill）。不匹配和/或无效的邮箱地址可能会导致交易进程延迟。重要的信息和通知将通过邮件发送给您，其中包括密码找回和/或与账户相关的信息等。
+  annotation: 请输入有效的邮箱地址来接收独家奖金优惠及奉送。重要提示及交易相关的信息也将发送至您的注册邮箱。
 field_validations:
   required:
-    error_message: "请输入您的有效的目前正处于激活状态的电子邮件地址（如name@domain.com）。请不要在您的电子邮件地址末尾使用额外的空格。\r\n"
+    error_message: "请输入有效邮箱地址。（例如：123456789@qq.com）\r\n"
   alpha:
     error_message: 'Field should be Alphabet characters only'
   alphanumeric:
@@ -23,13 +23,17 @@ field_validations:
     error_message: "请输入您的有效的目前正处于激活状态的电子邮件地址（如name@domain.com）。请不要在您的电子邮件地址末尾使用额外的空格。\r\n"
   max_length:
     error_message: "请输入您的有效的目前正处于激活状态的电子邮件地址（如name@domain.com）。请不要在您的电子邮件地址末尾使用额外的空格。\r\n"
+  regex:
+    error_message: 'This field only accepts specific characters.'
+  valid_date:
+    error_message: 'Date is invalid'
   username_availability:
     error_message: 'Username not available'
   email_availability:
-    error_message: "<span class=\"visible-desktop\">该邮箱已被使用。点击<a href=\"/sc/cant-login\" target=\"popup\" onclick=\"window.open('/sc/cant-login','popup','width=820,height=810,scrollbars=no,resizable=no'); return false;\">此处</a>找回用户名/密码。</span>\r\n<span class=\"visible-tablet\"><a href=\"/sc/cant-login\" target=\"_blank\">此处</a>找回用户名/密码。</span>\r\n<span class=\"visible-mobile\"><a href=\"/sc/cant-login\" target=\"_blank\">此处</a>找回用户名/密码。</span>\r\n<span class=\"visible-app\"><a href=\"https://m.dafawin.com/sc/cant-login?clientflag=1\" target=\"_blank\">此处</a>找回用户名/密码。</span>"
+    error_message: "<span class=\"visible-desktop\">该邮箱已被使用。点击<a href=\"{domain:myaccount_domain}/sc/cant-login\" target=\"popup\" onclick=\"window.open('{domain:myaccount_domain}/sc/cant-login','popup','width=820,height=810,scrollbars=no,resizable=no'); return false;\">此处</a>找回用户名/密码。</span>\r\n<span class=\"visible-client\">该邮箱已被使用。点击<u><a href=\"{domain:myaccount_domain}/sc/cant-login\" target=\"popup\" onclick=\"window.open('{domain:myaccount_domain}/sc/cant-login','popup','width=820,height=810,scrollbars=no,resizable=no'); return false;\">此处</a></u>找回用户名/密码。</span>\r\n<span class=\"visible-tablet\"><a href=\"{domain:mobile}/sc/cant-login\" target=\"_blank\">此处</a>找回用户名/密码。</span>\r\n<span class=\"visible-mobile\"><a href=\"{domain:mobile}/sc/cant-login\" target=\"_blank\">此处</a>找回用户名/密码。</span>\r\n<span class=\"visible-app\"><a href=\"https://m.dfnba.net/sc/cant-login?clientflag=1\" target=\"_blank\">此处</a>找回用户名/密码。</span>"
   invalid_words:
     error_message: 'Invalid/not allowed characters'
   valid_languages:
     error_message: 'This field only accepts specific characters.'
-  valid_date:
-    error_message: 'Date is invalid'
+  not_match_username:
+    error_message: 'Password should not equal to username'

@@ -2,7 +2,7 @@ field_settings:
   label: 货币
   placeholder: 货币
   choices: "117|人民币\r\n2|美元\r\n1|欧元\r\n3|英镑\r\n102|马币\r\n103|泰铢\r\n105|越南盾\r\n111|印尼盾\r\n112|印度卢比\r\n104|韩元\r\n116|俄罗斯卢比\r\n114|波兰兹罗提"
-  portal_id_to_currency_mapping: "2|117,2,1,3,102,103,105,111,112,104,116,114\r\n3|117,2,1,3,102,103,105,111,112,104,116,114\r\n22|117,2,1,3,102,103,105,111,112,104,116,114\r\n4|117,2,1,3,102,103,105,111,112,104,116,114\r\n19|117,2,1,3,102,103,105,111,112,104,116,114\r\n6|117,2,1,3,102,103,105,111,112,104,116,114\r\n55|117,2,1,102,103,105,111,112,104\r\n5|117,2,1,3,102,103,105,111,112,104,116,114\r\n24|117\r\n8|117,2,1,3,102,103,105,111,112,104,116,114\r\n56|117,2,1,3,102,103,105,111,112,104,116\r\n66|2,112"
+  portal_id_to_currency_mapping: "2|117,2,1,3,102,103,105,111,112,104,116,114\r\n3|117,2,1,3,102,103,105,111,112,104,116,114\r\n22|117,2,1,3,102,103,105,111,112,104,116,114\r\n66|112\r\n4|117,2,1,3,102,103,105,111,112,104,116,114\r\n19|117,2,1,3,102,103,105,111,112,104,116,114\r\n6|117,2,1,3,102,103,105,111,112,104,116,114\r\n8|117,2,1,3,102,103,105,111,112,104,116,114\r\n24|117,2,1,3,102,103,105,111,112,104,116,114\r\n55|117,2,1,102,103,105,111,112,104\r\n5|117,2,1,3,102,103,105,111,112,104,116,114\r\n56|117,2,1,3,102,103,105,111,112,104,116"
 field_validations:
   required:
     error_message: "请选择正确的货币种类，否则我们无法提供您准确的存款方式\r\n"
@@ -24,6 +24,10 @@ field_validations:
     error_message: 'Minimum requirement not met'
   max_length:
     error_message: 'Maximum requirement not met'
+  regex:
+    error_message: 'This field only accepts specific characters.'
+  valid_date:
+    error_message: 'Date is invalid'
   username_availability:
     error_message: 'Username not available'
   email_availability:
@@ -32,5 +36,3 @@ field_validations:
     error_message: 'Invalid/not allowed characters'
   valid_languages:
     error_message: 'This field only accepts specific characters.'
-  valid_date:
-    error_message: 'Date is invalid'
