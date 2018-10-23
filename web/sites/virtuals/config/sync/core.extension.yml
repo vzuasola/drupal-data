@@ -77,6 +77,7 @@ module:
   webcomposer_avaya: 0
   webcomposer_config: 0
   webcomposer_config_schema: 0
+  webcomposer_dashboard: 0
   webcomposer_cache: 0
   webcomposer_dm: 0
   webcomposer_domain_import: 0
