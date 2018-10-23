@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.drawer_media.field_disable
     - field.field.paragraph.drawer_media.field_drawer_image
     - field.field.paragraph.drawer_media.field_drawer_thumb
     - field.field.paragraph.drawer_media.field_drawer_video
@@ -18,6 +19,16 @@ targetEntityType: paragraph
 bundle: drawer_media
 mode: default
 content:
+  field_disable:
+    weight: 4
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
   field_drawer_image:
     weight: 0
     label: above

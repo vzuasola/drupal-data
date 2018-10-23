@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.drawer_media.field_disable
     - field.field.paragraph.drawer_media.field_drawer_image
     - field.field.paragraph.drawer_media.field_drawer_thumb
     - field.field.paragraph.drawer_media.field_drawer_video
@@ -12,12 +13,22 @@ dependencies:
     - file
     - image
 _core:
-  default_config_hash: PwMK4etxDdloKgsMiiQRoign8WLt2eWL_iyWXQlXbUE
+  default_config_hash: u7S3LEtEogA7qewJYol5gi49xoVAPR_CvzHbDwl0oyw
 id: paragraph.drawer_media.default
 targetEntityType: paragraph
 bundle: drawer_media
 mode: default
 content:
+  field_disable:
+    weight: 4
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
   field_drawer_image:
     weight: 0
     label: above
