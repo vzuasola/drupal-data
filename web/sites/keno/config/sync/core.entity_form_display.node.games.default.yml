@@ -4,6 +4,8 @@ status: true
 dependencies:
   config:
     - field.field.node.games.body
+    - field.field.node.games.field_available_on_desktop
+    - field.field.node.games.field_available_on_tablet
     - field.field.node.games.field_disable_in_tablet
     - field.field.node.games.field_end_date
     - field.field.node.games.field_game_image
@@ -105,7 +107,6 @@ third_party_settings:
     group_display_statuses:
       children:
         - field_status
-        - field_disable_in_tablet
         - field_preview_display_only
       parent_name: ''
       weight: 13
@@ -116,18 +117,38 @@ third_party_settings:
         description: ''
         required_fields: true
       label: 'Display Statuses'
+    group_content_availability:
+      children:
+        - field_available_on_desktop
+        - field_available_on_tablet
+      parent_name: ''
+      weight: 15
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Content Availability'
 id: node.games.default
 targetEntityType: node
 bundle: games
 mode: default
 content:
-  field_disable_in_tablet:
-    type: boolean_checkbox
-    weight: 23
-    region: content
+  field_available_on_desktop:
+    weight: 26
     settings:
       display_label: true
     third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_available_on_tablet:
+    weight: 27
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
   field_end_date:
     weight: 19
     settings: {  }
@@ -332,6 +353,7 @@ content:
 hidden:
   body: true
   created: true
+  field_disable_in_tablet: true
   promote: true
   sticky: true
   uid: true
