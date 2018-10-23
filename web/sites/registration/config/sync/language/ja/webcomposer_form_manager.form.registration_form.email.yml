@@ -4,7 +4,7 @@ field_settings:
   annotation: '確認や銀行取引（Moneybookers, Skrillなど）に利用されているEメールアドレスが有効である事をご確認ください。Eメールアドレスが一致しない場合や、無効なEメールアドレスを利用されている場合、入出金処理が遅れる場合がございます。パスワードの変更やアカウント関連情報等の重要なメッセージやお知らせもご登録のメールアドレスに送信されます。'
 field_validations:
   required:
-    error_message: "ご連絡手段として、有効でご利用中のメールアドレスを入力してください。 （例： name@domain.com）\r\n"
+    error_message: "ご利用のメールアドレスを入力して下さい。(例: name@domain.com)\r\n"
   alpha:
     error_message: 'Field should be Alphabet characters only'
   alphanumeric:
@@ -18,18 +18,22 @@ field_validations:
   numeric_symbols:
     error_message: 'Field contains invalid special characters'
   email:
-    error_message: 'Please enter your valid and active Email Address for communication purposes. (e.g. name@domain.com)'
+    error_message: "ご利用のメールアドレスを入力して下さい。(例: name@domain.com)\r\n"
   min_length:
     error_message: 'Minimum requirement not met'
   max_length:
     error_message: 'Maximum requirement not met'
+  regex:
+    error_message: 'This field only accepts specific characters.'
+  valid_date:
+    error_message: 'Date is invalid'
   username_availability:
     error_message: 'Username not available'
   email_availability:
-    error_message: "<span class=\"visible-desktop\">Eメールアドレスは既に使用されています。ユーザー名、パスワードを取得するには<a href=\"/jp/cant-login\" target=\"popup\" onclick=\"window.open('/jp/cant-login','popup','width=820,height=810,scrollbars=no,resizable=no'); return false;\" class=\"visible-desktop\">ここを</a>クリックして下さい。</span>\r\n<span class=\"visible-tablet\">Eメールアドレスは既に使用されています。ユーザー名、パスワードを取得するには<a href=\"/jp/cant-login\" target=\"_blank\" class=\"visible-tablet\">ここを</a>クリックして下さい。</span>\r\n<span class=\"visible-mobile\">Eメールアドレスは既に使用されています。ユーザー名、パスワードを取得するには<a href=\"/jp/cant-login\" target=\"_blank\" class=\"visible-mobile\">ここを</a>クリックして下さい。</span>\r\n<span class=\"visible-app\">Eメールアドレスは既に使用されています。ユーザー名、パスワードを取得するには<a href=\"https://m.dafawin.com/jp/cant-login?clientflag=1\" target=\"_blank\" class=\"visible-app\">ここを</a>クリックして下さい。</span>"
+    error_message: "<span class=\"visible-desktop\">Eメールアドレスは既に使用されています。ユーザー名、パスワードを取得するには<a href=\"{domain:myaccount_domain}/jp/cant-login\" target=\"popup\" onclick=\"window.open('{domain:myaccount_domain}/jp/cant-login','popup','width=820,height=810,scrollbars=no,resizable=no'); return false;\" class=\"visible-desktop\">ここを</a>クリックして下さい。</span>\r\n<span class=\"visible-client\">Eメールアドレスは既に使用されています。ユーザー名、パスワードを取得するには<u><a href=\"{domain:myaccount_domain}/jp/cant-login\" target=\"popup\" onclick=\"window.open('{domain:myaccount_domain}/jp/cant-login','popup','width=820,height=810,scrollbars=no,resizable=no'); return false;\" class=\"visible-desktop\">ここを</a></u>クリックして下さい。</span>\r\n<span class=\"visible-tablet\">Eメールアドレスは既に使用されています。ユーザー名、パスワードを取得するには<a href=\"{domain:mobile}/jp/cant-login\" target=\"_blank\" class=\"visible-tablet\">ここを</a>クリックして下さい。</span>\r\n<span class=\"visible-mobile\">Eメールアドレスは既に使用されています。ユーザー名、パスワードを取得するには<a href=\"{domain:mobile}/jp/cant-login\" target=\"_blank\" class=\"visible-mobile\">ここを</a>クリックして下さい。</span>\r\n<span class=\"visible-app\">Eメールアドレスは既に使用されています。ユーザー名、パスワードを取得するには<a href=\"https://m.dfnba.net/jp/cant-login?clientflag=1\" target=\"_blank\" class=\"visible-app\">ここを</a>クリックして下さい。</span>"
   invalid_words:
     error_message: 'Invalid/not allowed characters'
   valid_languages:
     error_message: 'This field only accepts specific characters.'
-  valid_date:
-    error_message: 'Date is invalid'
+  not_match_username:
+    error_message: 'Password should not equal to username'

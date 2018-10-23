@@ -8,6 +8,8 @@ dependencies:
 third_party_settings:
   content_translation:
     enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
 _core:
   default_config_hash: S9mFgmAUmJHmZGNSC5I8KAsOUhzJq_AwRg2DwQRqok8
 id: partner_responsive_entity.partner_responsive_entity

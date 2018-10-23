@@ -15,7 +15,7 @@ bundle: marketing_script_entity
 label: Body
 description: 'The actual body content.'
 required: true
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }

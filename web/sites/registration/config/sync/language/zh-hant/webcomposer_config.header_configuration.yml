@@ -1,5 +1,5 @@
 lobby_page_title: dafabet在線投注亞洲最好的在線投注網站
-critical_announcement: '1'
+critical_announcement: 1
 critical_announcement_content:
   value: ''
   format: basic_html
@@ -7,10 +7,14 @@ news_announcement_content:
   value: ''
   format: basic_html
 capslock_notification: 大寫鎖定已開啟
+header_settings_tab__active_tab: edit-join-now-group
+logo_title: Dafabet
+balance_label_override: '综合钱包 '
+news_announcement: 0
 join_now_text: 立即加入
-join_now_link: '/{domain:entry}/{domain:lang_token}/cant-login[query:({credentials.params}&{tracking})]'
+join_now_link: '/{domain:registration_link}[query:({tracking})]'
 login_issue_text: 無法登錄？
-login_issue_link: '/{domain:entry}/{domain:lang_token}/cant-login[query:({credentials.params}&{tracking})]'
+login_issue_link: '/{domain:myaccount_domain}/{domain:lang_token}/cant-login[query:({tracking})]'
 product_balance_label: 'Account Balance'
 total_balance_label: 總余額
 balance_error_text: 'Error Retrieving.'
@@ -18,8 +22,9 @@ profile_icon_hover_text: 我的賬戶
 cashier_icon_hover_text: 出納櫃臺
 product_menu_new_tag: 新
 welcome_text: '歡迎 {username}'
-profile_link: '/{domain:myaccount_domain}/{lang}/my-profile[query:(ticket={auth.token}&{tracking}&width=820&height=700)]'
+profile_link: '/{domain:myaccount_domain}/{lang}/my-profile[query:(ticket={auth.token}&{tracking}&width=820&height=820)]'
 profile_logout_text: 登出
-balance_label_mapping: "4|沙巴體育\r\n6|大發體育\r\n10|交易所\r\n1|娛樂場金典版\r\n2|娛樂場黃金版\r\n5|现场荷官，老虎机，& 虚拟运动\r\n8|OPUS現場荷官\r\n9|快樂彩\r\n3|撲克\r\n7|捕魚王"
-balance_error_text_product: '{domain:cashier_domain}/{domain:lang_token}/payment-options[query:(ticket={auth.token}&{tracking}&width=820&height=700)]'
-cashier_link: '{domain:cashier_domain}/{domain:lang_token}/payment-options[query:(ticket={auth.token}&{tracking}&width=820&height=700)]'
+balance_label_mapping: "4|沙巴體育\r\n6|大發體育\r\n11|電競\r\n10|交易所\r\n1|娛樂場金典版\r\n2|娛樂場黃金版\r\n5|综合錢包\r\n8|OPUS現場荷官\r\n9|Opus快樂彩\r\n3|撲克\r\n7|AG 捕魚王"
+balance_error_text_product: '{domain:cashier_domain}/{domain:lang_token}/payment-options[query:(ticket={auth.token}&{tracking}&width=820&height=820)]'
+cashier_link: '{domain:cashier_domain}/{domain:lang_token}/payment-options[query:(ticket={auth.token}&{tracking}&width=820&height=820)]'
+balance_mapping: ''
