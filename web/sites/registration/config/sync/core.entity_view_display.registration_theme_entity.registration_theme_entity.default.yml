@@ -9,7 +9,9 @@ dependencies:
     - field.field.registration_theme_entity.registration_theme_entity.field_background_image
     - field.field.registration_theme_entity.registration_theme_entity.field_banner_font_color
     - field.field.registration_theme_entity.registration_theme_entity.field_banner_highlight
+    - field.field.registration_theme_entity.registration_theme_entity.field_content_two_columns
     - field.field.registration_theme_entity.registration_theme_entity.field_default_regvia
+    - field.field.registration_theme_entity.registration_theme_entity.field_enable_two_columns
     - field.field.registration_theme_entity.registration_theme_entity.field_error_color
     - field.field.registration_theme_entity.registration_theme_entity.field_form_font_color
     - field.field.registration_theme_entity.registration_theme_entity.field_link_color
@@ -90,6 +92,13 @@ content:
     third_party_settings: {  }
     type: color_field_formatter_text
     region: content
+  field_content_two_columns:
+    weight: 25
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
   field_default_regvia:
     weight: 19
     label: above
@@ -97,6 +106,16 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_enable_two_columns:
+    weight: 24
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
     region: content
   field_error_color:
     weight: 15
