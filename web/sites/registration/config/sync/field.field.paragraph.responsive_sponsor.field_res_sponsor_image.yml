@@ -20,7 +20,7 @@ entity_type: paragraph
 bundle: responsive_sponsor
 label: 'Desktop Logo'
 description: ''
-required: false
+required: true
 translatable: true
 default_value: {  }
 default_value_callback: ''
