@@ -1,6 +1,7 @@
 <?php
 
 namespace Drupal\Tests\js_example\Functional;
+
 use Drupal\Tests\examples\Functional\ExamplesBrowserTestBase;
 
 /**
@@ -18,7 +19,7 @@ class JsExampleTest extends ExamplesBrowserTestBase {
    *
    * @var array
    */
-  public static $modules = array('js_example', 'node');
+  public static $modules = ['js_example', 'node'];
 
   /**
    * Test all the paths defined by our module.
