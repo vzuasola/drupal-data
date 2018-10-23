@@ -1,0 +1,18 @@
+uuid: 47a63a41-e8ca-4605-adad-a9baa676aa65
+langcode: en
+status: true
+dependencies:
+  module:
+    - registration_theme
+id: registration_theme_entity.field_enable_two_columns
+field_name: field_enable_two_columns
+entity_type: registration_theme_entity
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
