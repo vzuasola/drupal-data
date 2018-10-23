@@ -268,8 +268,6 @@ class PushNotificationV2Form extends FormBase {
       }
     }
 
-    $list_items[] = 'remove-message (default)';
-    $list_items[] = 'dont-remove-message';
     $list_items[] = 'copy:id';
     $list_items[] = 'redirect:domaintoken';
 
