@@ -15,7 +15,7 @@ entity_type: node
 bundle: games
 label: Status
 description: 'Sets whether to enable or disable display of Game Tile.'
-required: false
+required: true
 translatable: false
 default_value:
   -
