@@ -2,6 +2,8 @@
 
 namespace Drupal\webcomposer_audit_export\Parser;
 
+use Drupal\Core\DependencyInjection\DependencySerializationTrait;
+
 /**
  * Class for parsing Domains data to excel object.
  *
@@ -9,17 +11,20 @@ namespace Drupal\webcomposer_audit_export\Parser;
  */
 class ExportParser {
 
+    use DependencySerializationTrait;
+
   /**
    * Returns an array of all domain groups, where the index is the primary key `id`.
    *
    * @param array $filters
    *   - Audit log filters.
    */
-  public function get_audit_logs($filters = []) {
+  public function get_audit_logs($filters = [], $options = []) {
     $storage = \Drupal::service('webcomposer_audit.database_storage');
 
-    return $storage->all([
+    return $storage->getWithOffset([
       'limit' => 500,
+      'offset' => 50,
       'where' => $filters,
       'orderby' => [
         'field' => 'timestamp',

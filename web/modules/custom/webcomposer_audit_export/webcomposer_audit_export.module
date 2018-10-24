@@ -6,3 +6,7 @@
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;
+
+function sample() {
+    sleep(1);
+}

@@ -193,10 +193,78 @@ class ExportForm extends FormBase {
       }
     }
 
-    // Triggered element: $form_state->getTriggeringElement()['#id']
-    $this->logsExport->setAuditFilters($this->getAllFilters());
-    $this->logsExport->logsExportExcel();
+    $batch = [];
+    $batch = $this->generateExportBatch();
+
+    // d($batch);
+    // die();
+    batch_set($batch);
+    // \Drupal\webcomposer_audit_export\Parser\LogsExport::logsExportExcel([]);
   }
+
+  /**
+   * Export Batch Function
+   */
+  public function generateExportBatch() {
+    // $this->logsExport->setAuditFilters($this->getAllFilters());
+    // $filters = $this->getAllFilters();
+
+    $num_operations = 3;
+    $this->messenger()->addMessage($this->t('Creating an array of @num operations', ['@num' => $num_operations]));
+
+    $operations = [];
+    for ($i = 0; $i < $num_operations; $i++) {
+      // Each operation is an array consisting of
+      // - The function to call.
+      // - An array of arguments to that function.
+      $operations[] = [
+        'sample',
+        [
+          // $filters ?? []
+        ],
+      ];
+    }
+    $batch = [
+      'title' => $this->t('Creating an array of @num operations', ['@num' => $num_operations]),
+      'operations' => $operations,
+      'finished' => 'Drupal\webcomposer_audit_export\Form\ExportForm::batch_example_finished',
+    ];
+
+
+
+    // $this->logsExport->logsExportExcel($filters);
+    return $batch;
+  }
+
+  public function sample($filter) {
+    sleep(1);
+  }
+
+  /**
+ * Batch 'finished' callback used by both batch 1 and batch 2.
+ */
+public function batch_example_finished($success, $results, $operations) {
+  $messenger = \Drupal::messenger();
+  if ($success) {
+    // Here we could do something meaningful with the results.
+    // We just display the number of nodes we processed...
+    $messenger->addMessage(t('@count results processed.', ['@count' => count($results)]));
+    $messenger->addMessage(t('The final result was "%final"', ['%final' => end($results)]));
+  }
+  else {
+    // An error occurred.
+    // $operations contains the operations that remained unprocessed.
+    $error_operation = reset($operations);
+    $messenger->addMessage(
+      t('An error occurred while processing @operation with arguments : @args',
+        [
+          '@operation' => $error_operation[0],
+          '@args' => print_r($error_operation[0], TRUE),
+        ]
+      )
+    );
+  }
+}
 
   /**
    *
