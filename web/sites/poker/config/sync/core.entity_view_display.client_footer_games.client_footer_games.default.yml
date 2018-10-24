@@ -1,0 +1,80 @@
+uuid: 07f81107-1571-42a0-ac63-11cdb3515de4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.client_footer_games.client_footer_games.field_game_code
+    - field.field.client_footer_games.client_footer_games.field_game_thumbnail
+    - field.field.client_footer_games.client_footer_games.field_game_thumbnail_hover
+    - field.field.client_footer_games.client_footer_games.field_game_type
+    - field.field.client_footer_games.client_footer_games.field_publish
+  module:
+    - client_footer_games
+    - image
+    - options
+id: client_footer_games.client_footer_games.default
+targetEntityType: client_footer_games
+bundle: client_footer_games
+mode: default
+content:
+  field_game_code:
+    weight: 4
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_game_thumbnail:
+    weight: 3
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_game_thumbnail_hover:
+    weight: 7
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_game_type:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_publish:
+    weight: 6
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  name:
+    label: above
+    type: string
+    weight: 0
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  user_id:
+    type: entity_reference_label
+    weight: 1
+    region: content
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+hidden:
+  langcode: true

@@ -1,0 +1,38 @@
+uuid: 9388957c-cefd-4ec7-9639-8728efc4d795
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.client_footer_games.field_game_thumbnail
+  module:
+    - client_footer_games
+    - image
+id: client_footer_games.client_footer_games.field_game_thumbnail
+field_name: field_game_thumbnail
+entity_type: client_footer_games
+bundle: client_footer_games
+label: 'Game Thumbnail'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image
