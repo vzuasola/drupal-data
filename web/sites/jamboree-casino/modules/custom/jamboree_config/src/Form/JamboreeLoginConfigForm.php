@@ -39,6 +39,7 @@ class JamboreeLoginConfigForm extends FormBase {
 
     $this->sectionLoginConfig($form);
     $this->sectionLoginSessionConfig($form);
+    $this->sectionChangePassConfig($form);
 
     return $form;
   }
@@ -244,6 +245,40 @@ class JamboreeLoginConfigForm extends FormBase {
       '#title' => t('Session Timeout Error Message'),
       '#default_value' => $default_session_timeout,
       '#description' => $this->t('Session Timeout Error Message'),
+      '#translatable' => TRUE,
+    ];
+  }
+
+  private function sectionChangePassConfig(array &$form) {
+    $form['change_pass'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Change Password Configuration'),
+    ];
+
+    $default_current_password = $this->get('current_password');
+    $form['change_pass']['current_password'] = [
+      '#type' => 'textfield',
+      '#title' => t('Current Password Field Label'),
+      '#default_value' => $default_current_password,
+      '#description' => $this->t('Current Password Field Label'),
+      '#translatable' => FALSE,
+    ];
+
+    $default_new_password = $this->get('new_password');
+    $form['change_pass']['new_password'] = [
+      '#type' => 'textfield',
+      '#title' => t('New Password Field Label'),
+      '#default_value' => $default_new_password,
+      '#description' => $this->t('New Password Field Label'),
+      '#translatable' => TRUE,
+    ];
+
+    $default_confirm_new_password = $this->get('confirm_new_password');
+    $form['change_pass']['confirm_new_password'] = [
+      '#type' => 'textfield',
+      '#title' => t('Confirm New Password Field Label'),
+      '#default_value' => $default_confirm_new_password,
+      '#description' => $this->t('Confirm New Password Field Label'),
       '#translatable' => TRUE,
     ];
   }
