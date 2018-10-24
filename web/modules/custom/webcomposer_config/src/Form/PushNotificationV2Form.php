@@ -70,6 +70,12 @@ class PushNotificationV2Form extends FormBase {
       '#disabled' => false,
     ];
 
+    $form['domain_map_settings'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Domains'),
+      '#group' => 'pushnx_settings_tab',
+    ];
+
     $form['exclude_page_settings'] = [
       '#type' => 'details',
       '#title' => $this->t('Exclude Pages'),
@@ -321,6 +327,14 @@ class PushNotificationV2Form extends FormBase {
       '#translatable' => TRUE,
     ];
 
+    // Domain Mapping.
+    $form['domain_map_settings']['domains'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Mapping'),
+      '#default_value' => $this->get('domains'),
+      '#description' => $this->t('Enter the list of allowed domain on push notification. Format key|domain'),
+    ];
+
     // Exclude Pages.
     $form['exclude_page_settings']['exclude_pages'] = [
       '#type' => 'textarea',
@@ -372,6 +386,7 @@ class PushNotificationV2Form extends FormBase {
       'dismiss_content',
       'dismiss_yes',
       'dismiss_no',
+      'domains',
       'exclude_pages',
       'debug_logging',
       'debug_display_expirydate',
