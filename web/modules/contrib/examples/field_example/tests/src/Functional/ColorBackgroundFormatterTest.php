@@ -2,6 +2,8 @@
 
 namespace Drupal\Tests\field_example\Functional;
 
+use Drupal\Component\Render\FormattableMarkup;
+
 /**
  * Test the basic functionality of Color background  formatter.
  *
@@ -37,14 +39,14 @@ class ColorBackgroundFormatterTest extends FieldExampleBrowserTestBase {
 
     // Details to be submitted for content creation.
     $title = $this->randomMachineName(20);
-    $edit = array(
+    $edit = [
       'title[0][value]' => $title,
       'field_' . $this->fieldName . '[0][value]' => '#00ff00',
-    );
+    ];
 
     // Submit the content creation form.
-    $this->drupalPostForm(NULL, $edit, t('Save'));
-    $assert->pageTextContains(t('@type @title has been created', array('@type' => $this->contentTypeName, '@title' => $title)));
+    $this->drupalPostForm(NULL, $edit, 'Save');
+    $assert->pageTextContains((string) new FormattableMarkup('@type @title has been created', ['@type' => $this->contentTypeName, '@title' => $title]));
 
     // Verify color.
     $assert->pageTextContains('The content area color has been changed to #00ff00');
@@ -73,22 +75,22 @@ class ColorBackgroundFormatterTest extends FieldExampleBrowserTestBase {
 
     // Details to be submitted for content creation.
     $title = $this->randomMachineName(20);
-    $edit = array(
+    $edit = [
       'title[0][value]' => $title,
       'field_' . $this->fieldName . '[0][value]' => '#00ff00',
-    );
+    ];
 
     // Add another field value.
-    $this->drupalPostForm(NULL, $edit, t('Add another item'));
+    $this->drupalPostForm(NULL, $edit, 'Add another item');
 
     // Set value for newly added item.
-    $edit = array(
+    $edit = [
       'field_' . $this->fieldName . '[1][value]' => '#ffff4f',
-    );
+    ];
 
     // Submit the content creation form.
-    $this->drupalPostForm(NULL, $edit, t('Save'));
-    $assert->pageTextContains(t('@type @title has been created', array('@type' => $this->contentTypeName, '@title' => $title)));
+    $this->drupalPostForm(NULL, $edit, 'Save');
+    $assert->pageTextContains((string) new FormattableMarkup('@type @title has been created', ['@type' => $this->contentTypeName, '@title' => $title]));
 
     // Verify color.
     $assert->pageTextContains('The content area color has been changed to #00ff00');

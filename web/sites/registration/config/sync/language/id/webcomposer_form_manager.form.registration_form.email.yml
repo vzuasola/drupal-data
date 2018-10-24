@@ -1,10 +1,10 @@
 field_settings:
   label: Email
   placeholder: Email
-  annotation: "Harap pastikan Anda menggunakan email yang aktif untuk kegunaan verifikasi dan transaksi perbankan (contohnya Moneybookers/Skrill). Penggunaan email yang salah dan/atau tidak aktif dapat berakibat pada penundaan dalam memproses transaksi Anda. Pesan penting dan pemberitahuan juga akan dikirim ke email Anda, termasuk pemulihan kata sandi dan/atau informasi mengenai akun Anda.\r\n\r\n"
+  annotation: "Silakan masukkan alamat email yang valid untuk menerima bonus dan penawaran eksklusif. Pengumuman dan update penting terkait transaksi akan dikirim ke alamat email terdaftar Anda.\r\n"
 field_validations:
   required:
-    error_message: "Harap masukkan Email Anda yang benar dan aktif, untuk kegunaan komunikasi. (e.g. nama@domain.com)\r\n"
+    error_message: "Silakan masukkan alamat email yang valid. (contoh: nama@domain.com)\r\n"
   alpha:
     error_message: 'Field should be Alphabet characters only'
   alphanumeric:
@@ -23,13 +23,17 @@ field_validations:
     error_message: "Harap masukkan Email Anda yang benar dan aktif, untuk kegunaan komunikasi. (e.g. nama@domain.com)\r\n"
   max_length:
     error_message: "Harap masukkan Email Anda yang benar dan aktif, untuk kegunaan komunikasi. (e.g. nama@domain.com)\r\n"
+  regex:
+    error_message: 'This field only accepts specific characters.'
+  valid_date:
+    error_message: 'Date is invalid'
   username_availability:
     error_message: 'Username not available'
   email_availability:
-    error_message: "<span class=\"visible-desktop\">Email sudah terdaftar. Klik <a href=\"/id/cant-login\" target=\"popup\" onclick=\"window.open('/id/cant-login','popup','width=820,height=810,scrollbars=no,resizable=no'); return false;\" class=\"visible-desktop\">disini</a> untuk mendapatkan kembali username/kata sandi.</span>\r\n<span class=\"visible-tablet\">Email sudah terdaftar. Klik <a href=\"/id/cant-login\" target=\"_blank\" class=\"visible-tablet\">disini</a> untuk mendapatkan kembali username/kata sandi.</span>\r\n<span class=\"visible-mobile\">Email sudah terdaftar. Klik <a href=\"/id/cant-login\" target=\"_blank\" class=\"visible-mobile\">disini</a> untuk mendapatkan kembali username/kata sandi.</span>\r\n<span class=\"visible-app\">Email sudah terdaftar. Klik <a href=\"https://m.dafawin.com/id/cant-login?clientflag=1\" target=\"_blank\" class=\"visible-app\">disini</a> untuk mendapatkan kembali username/kata sandi.</span>\r\n"
+    error_message: "<span class=\"visible-desktop\">Email sudah terdaftar. Klik <a href=\"{domain:myaccount_domain}/id/cant-login\" target=\"popup\" onclick=\"window.open('{domain:myaccount_domain}/id/cant-login','popup','width=820,height=810,scrollbars=no,resizable=no'); return false;\" class=\"visible-desktop\">disini</a> untuk mendapatkan kembali username/kata sandi.</span>\r\n<span class=\"visible-client\">Email sudah terdaftar. Klik <u><a href=\"{domain:myaccount_domain}/id/cant-login\" target=\"popup\" onclick=\"window.open('{domain:myaccount_domain}/id/cant-login','popup','width=820,height=810,scrollbars=no,resizable=no'); return false;\" class=\"visible-desktop\">disini</a></u> untuk mendapatkan kembali username/kata sandi.</span>\r\n<span class=\"visible-tablet\">Email sudah terdaftar. Klik <a href=\"{domain:mobile}/id/cant-login\" target=\"_blank\" class=\"visible-tablet\">disini</a> untuk mendapatkan kembali username/kata sandi.</span>\r\n<span class=\"visible-mobile\">Email sudah terdaftar. Klik <a href=\"{domain:mobile}/id/cant-login\" target=\"_blank\" class=\"visible-mobile\">disini</a> untuk mendapatkan kembali username/kata sandi.</span>\r\n<span class=\"visible-app\">Email sudah terdaftar. Klik <a href=\"https://m.dfnba.net/id/cant-login?clientflag=1\" target=\"_blank\" class=\"visible-app\">disini</a> untuk mendapatkan kembali username/kata sandi.</span>\r\n"
   invalid_words:
     error_message: 'Invalid/not allowed characters'
   valid_languages:
     error_message: 'This field only accepts specific characters.'
-  valid_date:
-    error_message: 'Date is invalid'
+  not_match_username:
+    error_message: 'Password should not equal to username'

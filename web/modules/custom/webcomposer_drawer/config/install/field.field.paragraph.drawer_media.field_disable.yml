@@ -1,0 +1,23 @@
+uuid: 157c633c-4815-4258-b8f5-5903aed726ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_disable
+    - paragraphs.paragraphs_type.drawer_media
+id: paragraph.drawer_media.field_disable
+field_name: field_disable
+entity_type: paragraph
+bundle: drawer_media
+label: Disable
+description: 'If checked, this banner item will be hidden/disabled from the site.'
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
