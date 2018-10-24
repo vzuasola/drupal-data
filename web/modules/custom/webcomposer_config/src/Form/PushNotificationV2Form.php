@@ -263,6 +263,7 @@ class PushNotificationV2Form extends FormBase {
           '#type' => 'textfield',
           '#title' => $this->t('Post acknowledged action'),
           '#default_value' => $this->get('cta_actions_' . $button_key),
+          '#maxlength' => 2048,
           '#description' => $this->t('Bind action that will be triggered after acknowledged message.'),
         ];
       }
@@ -270,6 +271,8 @@ class PushNotificationV2Form extends FormBase {
 
     $list_items[] = 'copy:id';
     $list_items[] = 'redirect:domaintoken';
+    $list_items[] = 'popup:domaintoken';
+    $list_items[] = 'newtab:domaintoken';
 
     $form['cta_settings']['cta_button_helper'] = [
       '#prefix' => '<div>',
