@@ -1,0 +1,22 @@
+add client footer games entities:
+  title: 'Create new Client footer games entities'
+
+administer client footer games entities:
+  title: 'Administer Client footer games entities'
+  description: 'Allow to access the administration form to configure Client footer games entities.'
+  restrict access: true
+
+delete client footer games entities:
+  title: 'Delete Client footer games entities'
+
+edit client footer games entities:
+  title: 'Edit Client footer games entities'
+
+access client footer games overview:
+  title: 'Access the Client footer games overview page'
+
+view published client footer games entities:
+  title: 'View published Client footer games entities'
+
+view unpublished client footer games entities:
+  title: 'View unpublished Client footer games entities'
