@@ -2,16 +2,12 @@
 
 namespace Drupal\webcomposer_audit_export\Parser;
 
-use Drupal\Core\DependencyInjection\DependencySerializationTrait;
-
 /**
  * Class for parsing Domains data to excel object.
  *
  * @package Webcomposer Domain Import
  */
 class ExportParser {
-
-    use DependencySerializationTrait;
 
   /**
    * Returns an array of all domain groups, where the index is the primary key `id`.
