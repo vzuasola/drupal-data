@@ -9,11 +9,12 @@ use Drupal\Core\TypedData\TypedDataInterface;
 
 use Drupal\webcomposer_audit\Storage\AuditStorageInterface;
 
+use Symfony\Component\HttpFoundation\RedirectResponse;
+
 /**
  * Class which handles domain export.
  */
 class LogsExport {
-
   /**
    * ExcelParser object.
    *
@@ -50,9 +51,29 @@ class LogsExport {
    *   - Array of date filters.
    * @author yunyce <yunyce.dejesus@bayviewtechnology.com>
    */
-  public function logsExportExcel() {
-    $data = $this->logsExportGetParsedData();
-    $this->logsExportCreateExcel($data);
+  public function logsExportExcel($i, &$context) {
+
+    $offset = ($i*500);
+    $data = $this->logsExportGetParsedData($offset);
+    $context['results'][] = ['data' => $data];
+
+    // Update our progress information.
+    $context['message'] = t('Fetching Audit Logs Batch "@id".',
+      ['@id' => $i+1]
+    );
+  }
+
+  /**
+   * Gets Matterhorn Audit Log data and invoke export excel operation.
+   *
+   * @param array $filters
+   *   - Array of date filters.
+   * @author yunyce <yunyce.dejesus@bayviewtechnology.com>
+   */
+  public function logsCount($filters) {
+    $this->filters = $filters;
+    $logs = $this->service->get_audit_count($this->filters);
+    return count($logs);
   }
 
   /**
@@ -61,10 +82,11 @@ class LogsExport {
    * @return array
    *   The parsed Matterhorn Audit Log data
    */
-  public function logsExportGetParsedData() {
+  public function logsExportGetParsedData($offset) {
     $result = [];
+    $options['offset'] = $offset;
 
-    $logs = $this->service->get_audit_logs($this->filters);
+    $logs = $this->service->get_audit_logs($this->filters, $options);
 
     // Post process audit log data
     $process_logs = $this->postProcessLogsData($logs);
@@ -72,6 +94,47 @@ class LogsExport {
     $result['logs'] = $this->service->excel_get_audit_logs($process_logs);
 
     return $result;
+  }
+
+  /**
+  * Batch 'finished' callback for Audit Log Export
+  */
+  public function logExportBatchFinished($success, $results, $operations) {
+    $messenger = \Drupal::messenger();
+
+    $header[0] = [
+      'title' => 'TITLE',
+      'type' => 'TYPE',
+      'action' => 'ACTION',
+      'user' => 'USER',
+      'date' => 'DATE',
+      'language' => 'LANGUAGE',
+      'entity_before' => 'ENTITY BEFORE',
+      'entity_after' => 'ENTITY AFTER',
+    ];
+
+    if ($success) {
+      $data['logs'] = $header;
+
+      foreach ($results as $result) {
+        $data['logs'] = array_merge($data['logs'], $result['data']['logs']); 
+      }
+
+      $this->logsExportCreateExcel($data);
+    }
+    else {
+      // An error occurred.
+      // $operations contains the operations that remained unprocessed.
+      $error_operation = reset($operations);
+      $messenger->addMessage(
+        t('An error occurred while processing @operation with arguments : @args',
+          [
+            '@operation' => $error_operation[0],
+            '@args' => print_r($error_operation[0], TRUE),
+          ]
+        )
+      );
+    }
   }
 
   /**
@@ -87,6 +150,7 @@ class LogsExport {
    *   - The URL to output the file.
    */
   public function logsExportCreateExcel($data, $excel_version = 'Excel2007', $headers = TRUE, $output = 'php://output') {
+    $messenger = \Drupal::messenger();
 
     // Create token placeholder worksheet.
     $this->excelParser->createSheet($data['logs'], 'Audit Logs');
