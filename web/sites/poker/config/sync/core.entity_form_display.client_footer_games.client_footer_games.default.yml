@@ -26,7 +26,7 @@ content:
     type: string_textfield
     region: content
   field_game_thumbnail:
-    weight: 4
+    weight: 3
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -34,7 +34,7 @@ content:
     type: image_image
     region: content
   field_game_thumbnail_hover:
-    weight: 8
+    weight: 4
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -70,7 +70,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 3
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
