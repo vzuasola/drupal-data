@@ -1,0 +1,23 @@
+uuid: 4de2d986-6eab-4355-8fb0-51155b3de374
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hide
+    - node.type.games
+id: node.games.field_hide
+field_name: field_hide
+entity_type: node
+bundle: games
+label: Hide
+description: 'If checked, this game will be hidden from the game lobby.'
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
