@@ -25,16 +25,16 @@ class TextWidget extends WidgetBase {
    */
   public function formElement(FieldItemListInterface $items, $delta, array $element, array &$form, FormStateInterface $form_state) {
     $value = isset($items[$delta]->value) ? $items[$delta]->value : '';
-    $element += array(
+    $element += [
       '#type' => 'textfield',
       '#default_value' => $value,
       '#size' => 7,
       '#maxlength' => 7,
-      '#element_validate' => array(
-        array($this, 'validate'),
-      ),
-    );
-    return array('value' => $element);
+      '#element_validate' => [
+        [$this, 'validate'],
+      ],
+    ];
+    return ['value' => $element];
   }
 
   /**
@@ -47,7 +47,7 @@ class TextWidget extends WidgetBase {
       return;
     }
     if (!preg_match('/^#([a-f0-9]{6})$/iD', strtolower($value))) {
-      $form_state->setError($element, t("Color must be a 6-digit hexadecimal value, suitable for CSS."));
+      $form_state->setError($element, $this->t("Color must be a 6-digit hexadecimal value, suitable for CSS."));
     }
   }
 

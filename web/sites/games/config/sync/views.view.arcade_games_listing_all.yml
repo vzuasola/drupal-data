@@ -3,20 +3,11 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_arc_game_thumbnail_image
-    - field.storage.node.field_game_thumbnail_size
-    - image.style.thumbnail
     - node.type.arcade_game
-    - taxonomy.vocabulary.arcade_game_category
   module:
-    - draggableviews
-    - image
     - node
-    - options
     - rest
     - serialization
-    - taxonomy
-    - user
     - webcomposer_rest_extra
 id: arcade_games_listing_all
 label: 'Arcade Games - Listing (ALL)'
@@ -34,9 +25,8 @@ display:
     position: 0
     display_options:
       access:
-        type: perm
-        options:
-          perm: 'access content'
+        type: none
+        options: {  }
       cache:
         type: none
         options: {  }
@@ -207,7 +197,6 @@ display:
         - url
         - url.query_args
         - 'user.node_grants:view'
-        - user.permissions
       tags: {  }
   rest_export_1:
     display_plugin: rest_export
@@ -216,7 +205,7 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: api/all-arcade-games
+      path: api/arcade_games
       pager:
         type: none
         options:
@@ -320,5 +309,4 @@ display:
         - 'languages:language_interface'
         - request_format
         - 'user.node_grants:view'
-        - user.permissions
       tags: {  }

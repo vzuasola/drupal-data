@@ -10,12 +10,6 @@ use Drupal\Core\Url;
  *
  */
 class OverviewForm extends FormBase {
-  /**
-   * @inheritdoc
-   */
-   /**
-   * ICore Games Integration Configuration Form
-   */
   const DATE_FORMAT = 'm/d/Y';
   const TIME_FORMAT = 'h:i:s A';
   const DEFAULT_LIMIT = 50;
@@ -53,7 +47,6 @@ class OverviewForm extends FormBase {
     '100' => 100,
   ];
 
-
   /**
    * {@inheritdoc}
    */
@@ -75,7 +68,6 @@ class OverviewForm extends FormBase {
         ],
       ];
     }
-
 
     $this->buildFilterForm($form, $form_state);
     $this->buildTableForm($form, $form_state);

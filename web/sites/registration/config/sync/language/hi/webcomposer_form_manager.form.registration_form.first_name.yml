@@ -1,7 +1,7 @@
 field_settings:
   label: 'First Name'
   placeholder: 'First Name'
-  annotation: 'Please enter your Given Name, example: <u>Joe</u> Smith. We will be unable to process card deposits, cheques, or bankwires if the name entered is different from the account holder.'
+  annotation: 'Please enter your Given Name as indicated in your PAN Card, example: <u>Joe</u> Smith. We will be unable to process card deposits, cheques, or bankwires if the name entered is different from the account holder.'
 field_validations:
   required:
     error_message: "Your First Name must be entered correctly.\r\n"
@@ -31,3 +31,5 @@ field_validations:
     error_message: "Your First Name must be entered correctly.\r\n"
   valid_languages:
     error_message: "Please use English/Chinese/Korean/Greek characters only.\r\n"
+  valid_date:
+    error_message: 'Date is invalid'

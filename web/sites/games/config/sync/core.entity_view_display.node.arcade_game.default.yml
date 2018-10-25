@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.arcade_game.body
     - field.field.node.arcade_game.field_arc_game_code
+    - field.field.node.arcade_game.field_arc_game_keywords
     - field.field.node.arcade_game.field_arc_game_provider
     - field.field.node.arcade_game.field_arc_game_ribbon
     - field.field.node.arcade_game.field_arc_game_thumbnail_image
@@ -14,6 +15,7 @@ dependencies:
     - field.field.node.arcade_game.field_game_thumbnail_image_h
     - field.field.node.arcade_game.field_game_thumbnail_image_v
     - field.field.node.arcade_game.field_game_thumbnail_size
+    - field.field.node.arcade_game.field_preview_display_only
     - node.type.arcade_game
   module:
     - image
@@ -35,6 +37,14 @@ content:
     region: content
   field_arc_game_code:
     weight: 102
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_arc_game_keywords:
+    weight: 114
     label: above
     settings:
       link_to_entity: false
@@ -117,4 +127,5 @@ content:
     weight: 100
     region: content
 hidden:
+  field_preview_display_only: true
   langcode: true

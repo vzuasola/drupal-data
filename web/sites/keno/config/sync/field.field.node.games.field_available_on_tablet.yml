@@ -1,0 +1,23 @@
+uuid: a6a83983-f744-4cd5-b327-a0ed2e38d31b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_available_on_tablet
+    - node.type.games
+id: node.games.field_available_on_tablet
+field_name: field_available_on_tablet
+entity_type: node
+bundle: games
+label: 'Available on Tablet'
+description: 'Check if content will be available on Tablet'
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

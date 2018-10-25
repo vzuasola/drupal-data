@@ -756,7 +756,7 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: api/arcade-games
+      path: api/arcade_games_by_category
       pager:
         type: none
         options:
@@ -880,10 +880,14 @@ display:
       defaults:
         filters: false
         filter_groups: false
+        access: false
       filter_groups:
         operator: AND
         groups:
           1: AND
+      access:
+        type: none
+        options: {  }
     cache_metadata:
       max-age: -1
       contexts:
@@ -893,5 +897,4 @@ display:
         - url
         - user
         - 'user.node_grants:view'
-        - user.permissions
       tags: {  }

@@ -1,7 +1,7 @@
 field_settings:
   label: 'Last Name'
   placeholder: 'Last Name'
-  annotation: "Please enter your Last Name, example: Joe <u>Smith</u>. We will be unable to process card deposits, cheques, or bankwires, if the name entered is different from the account holder.\r\n"
+  annotation: 'Please enter your Last Name as indicated in your PAN Card, example: Joe <u>Smith</u>. We will be unable to process card deposits, cheques, or bankwires, if the name entered is different from the account holder.'
 field_validations:
   required:
     error_message: "Your Last Name must be entered correctly.\r\n"
@@ -31,3 +31,5 @@ field_validations:
     error_message: 'Your Last Name must be entered correctly.'
   valid_languages:
     error_message: "Please use English/Chinese/Korean/Greek characters only.\r\n"
+  valid_date:
+    error_message: 'Date is invalid'

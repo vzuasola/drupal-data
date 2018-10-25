@@ -1,0 +1,20 @@
+client_footer_games.admin_settings:
+  title: 'Client Footer Games'
+  description: 'Configure the client footer games.'
+  parent: system.admin_config
+  route_name: client_footer_games.admin_settings
+  weight: 1500
+
+# Client footer games menu items definition
+entity.client_footer_games.collection:
+  title: 'Client footer games list'
+  route_name: entity.client_footer_games.collection
+  description: 'List Client footer games entities'
+  parent: client_footer_games.admin_settings
+  weight: 100
+
+client_footer_games.admin.structure.settings:
+  title: Client footer games settings
+  description: 'Configure Client footer games entities'
+  route_name: client_footer_games.settings
+  parent: client_footer_games.admin_settings

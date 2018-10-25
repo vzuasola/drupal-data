@@ -1,0 +1,16 @@
+uuid: eccb0e0a-d86a-481a-8de0-68ed7aa8f26e
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.client_casino_category
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.client_casino_category
+target_entity_type_id: taxonomy_term
+target_bundle: client_casino_category
+default_langcode: site_default
+language_alterable: false
