@@ -20,39 +20,28 @@ class LogsExport {
    *
    * @var excelParser
    */
-  protected static $excelParser;
+  protected $excelParser;
 
   /**
    * Service for the export parser.
    *
    * @var service
    */
-  protected static $service;
+  protected $service;
 
   /**
    * Filters for the export parser.
    *
    * @var filters
    */
-  private static $filters = [];
-
-  private static $initialized = false;
+  private $filters = [];
 
   /**
    * Constructor.
    */
-  // public function __construct($excelParser, $service) {
-  //   $this->excelParser = $excelParser;
-  //   $this->service = $service;
-  // }
-
-
-  private static function init() {
-    if (self::$initialized) {
-        return;
-    }
-    self::$excelParser = \Drupal::service('webcomposer_audit_export.excel_parser');
-    self::$service = \Drupal::service('webcomposer_audit_export.export');
+  public function __construct($excelParser, $service) {
+    $this->excelParser = $excelParser;
+    $this->service = $service;
   }
 
   /**
@@ -62,11 +51,10 @@ class LogsExport {
    *   - Array of date filters.
    * @author yunyce <yunyce.dejesus@bayviewtechnology.com>
    */
-  public static function logsExportExcel($i, &$context) {
-    self::init();
+  public function logsExportExcel($i, &$context) {
 
     $offset = ($i*500);
-    $data = self::logsExportGetParsedData($offset);
+    $data = $this->logsExportGetParsedData($offset);
     $context['results'][] = ['data' => $data];
 
     // Update our progress information.
@@ -82,10 +70,9 @@ class LogsExport {
    *   - Array of date filters.
    * @author yunyce <yunyce.dejesus@bayviewtechnology.com>
    */
-  public static function logsCount($filters) {
-    self::init();
-    self::$filters = $filters;
-    $logs = self::$service->get_audit_count(self::$filters);
+  public function logsCount($filters) {
+    $this->filters = $filters;
+    $logs = $this->service->get_audit_count($this->filters);
     return count($logs);
   }
 
@@ -95,16 +82,16 @@ class LogsExport {
    * @return array
    *   The parsed Matterhorn Audit Log data
    */
-  public static function logsExportGetParsedData($offset) {
+  public function logsExportGetParsedData($offset) {
     $result = [];
     $options['offset'] = $offset;
 
-    $logs = self::$service->get_audit_logs(self::$filters, $options);
+    $logs = $this->service->get_audit_logs($this->filters, $options);
 
     // Post process audit log data
-    $process_logs = self::postProcessLogsData($logs);
+    $process_logs = $this->postProcessLogsData($logs);
 
-    $result['logs'] = self::$service->excel_get_audit_logs($process_logs);
+    $result['logs'] = $this->service->excel_get_audit_logs($process_logs);
 
     return $result;
   }
@@ -112,7 +99,7 @@ class LogsExport {
   /**
   * Batch 'finished' callback for Audit Log Export
   */
-  public static function logExportBatchFinished($success, $results, $operations) {
+  public function logExportBatchFinished($success, $results, $operations) {
     $messenger = \Drupal::messenger();
 
     $header[0] = [
@@ -133,8 +120,7 @@ class LogsExport {
         $data['logs'] = array_merge($data['logs'], $result['data']['logs']); 
       }
 
-      self::init();
-      self::logsExportCreateExcel($data);
+      $this->logsExportCreateExcel($data);
     }
     else {
       // An error occurred.
@@ -163,13 +149,13 @@ class LogsExport {
    * @param string $output
    *   - The URL to output the file.
    */
-  public static function logsExportCreateExcel($data, $excel_version = 'Excel2007', $headers = TRUE, $output = 'php://output') {
+  public function logsExportCreateExcel($data, $excel_version = 'Excel2007', $headers = TRUE, $output = 'php://output') {
     $messenger = \Drupal::messenger();
 
     // Create token placeholder worksheet.
-    self::$excelParser->createSheet($data['logs'], 'Audit Logs');
+    $this->excelParser->createSheet($data['logs'], 'Audit Logs');
     // Invoke excel creation and download.
-    self::$excelParser->save('export.xlsx', $excel_version, $headers, $output);
+    $this->excelParser->save('export.xlsx', $excel_version, $headers, $output);
 
     // Stop script only if headers is set to invoke a download.
     if ($headers) {
@@ -185,7 +171,7 @@ class LogsExport {
    * @return array
    *   - The parsed Matterhorn Audit Log data
    */
-  private static function postProcessLogsData($logs) {
+  private function postProcessLogsData($logs) {
     $result = [];
 
 
@@ -205,15 +191,15 @@ class LogsExport {
             $original = $entity->original;
           }
 
-          $compare = self::generateCompareDiff($original, $entity);
+          $compare = $this->generateCompareDiff($original, $entity);
         break;
 
         case 'Add':
-          $compare = self::generateCompareDiff([], $entity);
+          $compare = $this->generateCompareDiff([], $entity);
           break;
 
         case 'Delete':
-          $compare = self::generateCompareDiff($entity, []);
+          $compare = $this->generateCompareDiff($entity, []);
           break;
 
         default:
@@ -245,14 +231,14 @@ class LogsExport {
    * @return array
    *   - The excel readable of entity before and after
    */
-  private static function generateCompareDiff($before, $after) {
+  private function generateCompareDiff($before, $after) {
     $map = [];
     $keyStr = [];
     $entity_before = '';
     $entity_after = '';
 
-    $before = self::getLineChangesFromEntity($before);
-    $after = self::getLineChangesFromEntity($after);
+    $before = $this->getLineChangesFromEntity($before);
+    $after = $this->getLineChangesFromEntity($after);
 
     $before_keys = array_keys($before);
     $after_keys = array_keys($after);
@@ -304,14 +290,14 @@ class LogsExport {
    * @return array
    *   - The converted string value
    */
-  private static function getLineChangesFromEntity($entity) {
+  private function getLineChangesFromEntity($entity) {
     $map = [];
 
     foreach ($entity as $key => $value) {
       if ($value instanceof TypedDataInterface) {
         $map[$value->getName()] = $value->getString();
       } elseif ($value instanceof EntityInterface) {
-        $map[$key] = self::getLineChangesFromEntity($value->toArray());
+        $map[$key] = $this->getLineChangesFromEntity($value->toArray());
       } else {
         $map[$key] = $value;
       }
@@ -326,7 +312,7 @@ class LogsExport {
    * @param array $filters
    *   - The array entity data.
    */
-  public static function setAuditFilters($filters) {
-    self::$filters = $filters;
+  public function setAuditFilters($filters) {
+    $this->filters = $filters;
   }
 }

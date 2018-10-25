@@ -211,7 +211,7 @@ class ExportForm extends FormBase {
     $operations = [];
     for ($i = 0; $i < $num_operations; $i++) {
       $operations[] = [
-        'Drupal\webcomposer_audit_export\Parser\LogsExport::logsExportExcel',
+        [$this->logsExport, 'logsExportExcel'],
         [
           $i
         ],
@@ -220,7 +220,7 @@ class ExportForm extends FormBase {
     $batch = [
       'title' => $this->t('Exporting Audit Logs'),
       'operations' => $operations,
-      'finished' => 'Drupal\webcomposer_audit_export\Parser\LogsExport::logExportBatchFinished',
+      'finished' => [$this->logsExport, 'logExportBatchFinished'],
     ];
 
     return $batch;
