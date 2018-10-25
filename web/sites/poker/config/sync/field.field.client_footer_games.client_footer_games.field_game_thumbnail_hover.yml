@@ -6,13 +6,20 @@ dependencies:
     - field.storage.client_footer_games.field_game_thumbnail_hover
   module:
     - client_footer_games
+    - content_translation
     - image
+third_party_settings:
+  content_translation:
+    translation_sync:
+      file: file
+      alt: '0'
+      title: '0'
 id: client_footer_games.client_footer_games.field_game_thumbnail_hover
 field_name: field_game_thumbnail_hover
 entity_type: client_footer_games
 bundle: client_footer_games
 label: 'Game Thumbnail Hover'
-description: ''
+description: 'Recommended upload size <b>124X70px<b> '
 required: true
 translatable: true
 default_value: {  }
@@ -21,8 +28,8 @@ settings:
   file_directory: '[date:custom:Y]-[date:custom:m]'
   file_extensions: 'png gif jpg jpeg'
   max_filesize: ''
-  max_resolution: ''
-  min_resolution: ''
+  max_resolution: 124x70
+  min_resolution: 120x69
   alt_field: false
   alt_field_required: false
   title_field: false
