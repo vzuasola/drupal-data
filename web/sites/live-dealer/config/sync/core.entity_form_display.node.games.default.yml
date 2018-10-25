@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.games.field_game_info_id
     - field.field.node.games.field_game_provider
     - field.field.node.games.field_game_title
+    - field.field.node.games.field_hide
     - field.field.node.games.field_image_size
     - field.field.node.games.field_maintenance_blurb
     - field.field.node.games.field_ribbon_configuration
@@ -207,6 +208,13 @@ content:
     third_party_settings: {  }
     type: string_textarea
     region: content
+  field_hide:
+    weight: 121
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
   field_image_size:
     weight: 4
     settings: {  }
@@ -267,6 +275,13 @@ content:
     weight: 6
     region: content
     settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 120
+    region: content
     third_party_settings: {  }
   title:
     type: string_textfield
