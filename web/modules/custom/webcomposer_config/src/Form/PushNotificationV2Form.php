@@ -267,10 +267,10 @@ class PushNotificationV2Form extends FormBase {
 
         $form['cta_settings'][$button_key]['cta_actions_' . $button_key] = [
           '#type' => 'textfield',
-          '#title' => $this->t('Post acknowledged action'),
+          '#title' => $this->t('Action'),
           '#default_value' => $this->get('cta_actions_' . $button_key),
           '#maxlength' => 2048,
-          '#description' => $this->t('Bind action that will be triggered after acknowledged message.'),
+          '#description' => $this->t('Bind action that will be triggered before message acknowledge.'),
         ];
       }
     }
