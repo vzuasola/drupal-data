@@ -31,7 +31,7 @@ product_type_id_livedealer: '4'
 product_icon_livedealer: wallet
 product_label_owsports: 'OW Sports'
 product_label_livedealer: 'Live Dealer/Games/Arcade'
-product_type_id_generic: ''
+product_type_id_generic: '0'
 product_icon_generic: generic
 product_label_generic: Notification
 product_type_id_lottery: '7'
@@ -45,10 +45,10 @@ product_exclude_owsports: 0
 product_exclude_livedealer: 0
 product_exclude_lottery: 0
 product_exclude_virtuals: 0
-product_label_payments: ''
-product_type_id_payments: ''
-product_icon_payments: ''
-product_exclude_payments: 1
+product_label_payments: Payments
+product_type_id_payments: '101'
+product_icon_payments: payments
+product_exclude_payments: 0
 product_label_alpine: ''
 product_type_id_alpine: ''
 product_icon_alpine: ''
@@ -73,3 +73,5 @@ empty: 'There are no new notifications.'
 expired_message: 'This offer has already expired.'
 product_exclude_dismiss_generic: 0
 product_exclude_dismiss_owsports: 0
+product_exclude_dismiss_payments: 0
+domains: "cashier|{domain:cashier_domain}/{lang}/payment-options/deposit?ticket={auth.token}&product=ow-sports&title=headerPopup&width=820&height=700{tracking.token}\r\navaya|https://www.cs-livechat/en/mc-desktop?brand=Dafa&product=Dafabet&s={auth.token}&width=360&height=760"
