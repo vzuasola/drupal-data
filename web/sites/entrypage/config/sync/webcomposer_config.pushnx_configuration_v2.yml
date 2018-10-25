@@ -71,5 +71,5 @@ product_exclude_games: 0
 title: 'PUSH NOTIFICATION'
 empty: 'There are no new notifications.'
 expired_message: 'This offer has already expired.'
-domains: "cashier|{domain:cashier_domain}/{lang}/payment-options/deposit?ticket={auth.token}&product=ow-sports&title=headerPopup&width=820&height=700{tracking.token}\r\navaya|{domain:cashier_domain}/{lang}/payment-options/deposit?ticket={auth.token}&product=ow-sports&title=headerPopup&width=820&height=700{tracking.token}"
+domains: "cashier|{domain:cashier_domain}/{lang}/payment-options/deposit?ticket={auth.token}&product=ow-sports&title=headerPopup&width=820&height=700{tracking.token}\r\navaya|https://www.cs-livechat/en/mc-desktop?brand=Dafa&product=Dafabet&s={auth.token}&width=360&height=760"
 product_exclude_dismiss_generic: 0
