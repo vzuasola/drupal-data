@@ -1,0 +1,30 @@
+uuid: 62caece5-80fd-4bcd-8ee2-dfe302a8baab
+langcode: en
+status: true
+dependencies:
+  module:
+    - client_footer_games
+    - file
+    - image
+id: client_footer_games.field_game_thumbnail_hover
+field_name: field_game_thumbnail_hover
+entity_type: client_footer_games
+type: image
+settings:
+  uri_scheme: public
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  target_type: file
+  display_field: false
+  display_default: false
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
