@@ -1,0 +1,18 @@
+uuid: 8788833f-6e50-4f03-843c-ea9095503946
+langcode: en
+status: true
+dependencies:
+  module:
+    - serialization
+    - user
+    - webcomposer_config_schema
+id: webcomposer_config_resource
+plugin_id: webcomposer_config_resource
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+      - xml
+    supported_auth:
+      - cookie
