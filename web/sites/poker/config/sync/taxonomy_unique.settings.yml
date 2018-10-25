@@ -16,3 +16,5 @@ slider_routes: 1
 slider_routes_message: 'Term @term already exists in vocabulary @vocabulary.'
 casino_categories: 1
 casino_categories_message: 'Term @term already exists in vocabulary @vocabulary.'
+client_casino_category: 1
+client_casino_category_message: 'Term @term already exists in vocabulary @vocabulary.'

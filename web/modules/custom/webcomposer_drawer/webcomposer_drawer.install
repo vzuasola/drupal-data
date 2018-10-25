@@ -20,12 +20,14 @@ function webcomposer_drawer_uninstall() {
     'field.field.paragraph.drawer_media.field_drawer_thumb',
     'field.field.paragraph.drawer_media.field_drawer_video_fallback',
     'field.field.paragraph.drawer_media.field_drawer_video',
+    'field.field.paragraph.drawer_media.field_disable',
     'field.storage.drawer_entity.field_drawer_button',
     'field.storage.drawer_entity.field_drawer_class',
     'field.storage.drawer_entity.field_drawer_id',
     'field.storage.drawer_entity.field_drawer_media',
     'field.storage.drawer_entity.field_drawer_summary',
     'field.storage.drawer_entity.field_drawer_title',
+    'field.storage.paragraph.field_disable',
     'field.storage.paragraph.field_drawer_image',
     'field.storage.paragraph.field_drawer_thumb',
     'field.storage.paragraph.field_drawer_video_fallback',
@@ -39,4 +41,14 @@ function webcomposer_drawer_uninstall() {
   foreach ($keys as $key) {
     \Drupal::configFactory()->getEditable($key)->delete();
   }
+}
+
+/**
+ * Implements hook_update_N
+ *
+ * Changes:
+ * - Added disabled field for per language toggle of drawer media
+ */
+function webcomposer_drawer_update_8001() {
+   \Drupal::service('config.installer')->installDefaultConfig('module', 'webcomposer_drawer');
 }

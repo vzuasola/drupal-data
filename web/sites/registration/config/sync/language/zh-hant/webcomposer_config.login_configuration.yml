@@ -6,6 +6,10 @@ notification_content:
   value: "<p>因沒有任何在線活動，您的登錄已超時失效。</p>\r\n"
 lightbox_blurb: 還不是大發會員？
 mobile_login_button_label: 登錄/加入
+advanced__active_tab: edit-mobile-login
+rememberme_label: 记住用户名
+login_page_blurb: ''
+mobile_cant_login_url: '{domain:mobile}/{lang}/cant-login'
 username_placeholder: 用戶名
 password_placeholder: 密碼
 login_bottom_label: 登錄
@@ -14,10 +18,11 @@ error_message_blank_password: 你的密碼爲必填項。
 error_message_blank_passname: 請檢查所有字段，再試一次。
 error_message_invalid_passname: 對不起，您輸入了無效的用戶名和/或密碼。請再試一次。
 error_message_service_not_available: 服務暫不可用。
-error_message_account_suspended: 您的賬戶已被凍結。請聯系客服。
-error_message_account_locked: 您的賬戶已被凍結。請聯系客服。
+error_message_account_suspended: '您的賬戶由于登錄失敗已被鎖定。 請聯系客服處理'
+error_message_account_locked: '您的賬戶由于登錄失敗已被鎖定。 請聯系客服處理'
 autologout_box_title: 提示
 affirmative_button_text: 是
 negative_button_text: 不
 notification_title: 通知
 notification_window_title: 登錄超時
+mobile_login_url: '{domain:mobile}/{lang}/login[query:({credentials.params}&{tracking})]'

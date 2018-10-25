@@ -57,11 +57,11 @@ class ContactListBuilder extends EntityListBuilder {
    * buildHeader() and buildRow() implementations.
    */
   public function render() {
-    $build['description'] = array(
-      '#markup' => $this->t('Content Entity Example implements a Contacts model. These contacts are fieldable entities. You can manage the fields on the <a href="@adminlink">Contacts admin page</a>.', array(
+    $build['description'] = [
+      '#markup' => $this->t('Content Entity Example implements a Contacts model. These contacts are fieldable entities. You can manage the fields on the <a href="@adminlink">Contacts admin page</a>.', [
         '@adminlink' => $this->urlGenerator->generateFromRoute('content_entity_example.contact_settings'),
-      )),
-    );
+      ]),
+    ];
     $build['table'] = parent::render();
     return $build;
   }
@@ -78,7 +78,6 @@ class ContactListBuilder extends EntityListBuilder {
     $header['id'] = $this->t('ContactID');
     $header['name'] = $this->t('Name');
     $header['first_name'] = $this->t('First Name');
-    $header['gender'] = $this->t('Gender');
     $header['role'] = $this->t('Role');
     return $header + parent::buildHeader();
   }
@@ -91,7 +90,6 @@ class ContactListBuilder extends EntityListBuilder {
     $row['id'] = $entity->id();
     $row['name'] = $entity->link();
     $row['first_name'] = $entity->first_name->value;
-    $row['gender'] = $entity->gender->value;
     $row['role'] = $entity->role->value;
     return $row + parent::buildRow($entity);
   }

@@ -1,0 +1,22 @@
+# Client footer games routing definition
+client_footer_games.settings_tab:
+  route_name: client_footer_games.settings
+  title: 'Settings'
+  base_route: client_footer_games.settings
+
+entity.client_footer_games.canonical:
+  route_name: entity.client_footer_games.canonical
+  base_route: entity.client_footer_games.canonical
+  title: 'View'
+
+entity.client_footer_games.edit_form:
+  route_name: entity.client_footer_games.edit_form
+  base_route: entity.client_footer_games.canonical
+  title: 'Edit'
+
+entity.client_footer_games.delete_form:
+  route_name:  entity.client_footer_games.delete_form
+  base_route:  entity.client_footer_games.canonical
+  title: Delete
+  weight: 10
+

@@ -1,18 +1,30 @@
 lobby_page_title: '다파벳은 아시아 최고의 온라인 베팅 업체입니다'
 capslock_notification: 'Caps Lock이 켜져 있습니다'
+header_settings_tab__active_tab: edit-join-now-group
+logo_title: Dafabet
+balance_label_override: '综合钱包 '
+critical_announcement: 0
+critical_announcement_content:
+  value: "<p>This is a critical announcement test test test</p>\r\n"
+  format: basic_html
+news_announcement: 0
+news_announcement_content:
+  value: "<p>test</p>\r\n"
+  format: basic_html
 join_now_text: '가입 하기'
-join_now_link: '/{domain:entry}/{domain:lang_token}/cant-login[query:({credentials.params}&{tracking})]'
+join_now_link: '/{domain:registration_link}[query:({tracking})]'
 login_issue_text: '로그인이 안 되시나요?'
-login_issue_link: '/{domain:entry}/{domain:lang_token}/cant-login[query:({credentials.params}&{tracking})]'
+login_issue_link: '/{domain:myaccount_domain}/{domain:lang_token}/cant-login[query:({tracking})]'
 product_balance_label: 'Account Balance'
 total_balance_label: '전체 잔액'
 balance_error_text: '에러가 발생했습니다.'
 profile_icon_hover_text: '내 프로필'
-cashier_icon_hover_text: 은행
+cashier_icon_hover_text: 캐쉬어
 product_menu_new_tag: 새로운
 welcome_text: '환영합니다 {username} 님'
-profile_link: '/{domain:myaccount_domain}/{lang}/my-profile[query:(ticket={auth.token}&{tracking}&width=820&height=700)]'
+profile_link: '/{domain:myaccount_domain}/{lang}/my-profile[query:(ticket={auth.token}&{tracking}&width=820&height=820)]'
 profile_logout_text: 로그아웃
-balance_label_mapping: "4|OW 스포츠\r\n6|다파 스포츠\r\n10|베팅 익스체인지\r\n1|카지노 클래식\r\n2|카지노 골드\r\n5|라이브 딜러, 게임, 가상 스포츠\r\n8|Opus 라이브 딜러\r\n9|키노\r\n3|포커\r\n7|낚시의 신"
-balance_error_text_product: '{domain:cashier_domain}/{domain:lang_token}/payment-options[query:(ticket={auth.token}&{tracking}&width=820&height=700)]'
-cashier_link: '{domain:cashier_domain}/{domain:lang_token}/payment-options[query:(ticket={auth.token}&{tracking}&width=820&height=700)]'
+balance_label_mapping: "6|다파 스포츠\r\n4|OW 스포츠\r\n11|E스프츠\r\n10|베팅 익스체인지\r\n1|카지노 클래식\r\n2|카지노 골드\r\n5|공용 지갑\r\n8|Opus 라이브 딜러\r\n9|Opus 키노\r\n3|포커\r\n7|AG 낚시의 신"
+balance_error_text_product: '{domain:cashier_domain}/{domain:lang_token}/payment-options[query:(ticket={auth.token}&{tracking}&width=820&height=820)]'
+cashier_link: '{domain:cashier_domain}/{domain:lang_token}/payment-options[query:(ticket={auth.token}&{tracking}&width=820&height=820)]'
+balance_mapping: ''

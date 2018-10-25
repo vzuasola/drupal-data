@@ -50,18 +50,17 @@ class UnsupportedCurrencyConfiguration extends FormBase {
 
   private function generalConfig(&$form) {
 
-    $form['gen_config']['unsupported_country_title'] = [
+    $form['gen_config']['unsupported_currencies_title'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('Not supported country title'),
-      '#description' => $this->t('Not allowed message title for country.'),
-      '#default_value' => $this->get('unsupported_country_title'),
+      '#title' => $this->t('Unsupported Currency Lightbox Title'),
+      '#default_value' => $this->get('unsupported_currencies_title'),
       '#required' => false,
       '#translatable' => TRUE,
     ];
 
     $form['gen_config']['unsupported_currencies_message'] = [
       '#type' => 'text_format',
-      '#title' => $this->t('Not allowed message for currency.'),
+      '#title' => $this->t('Unsupported Currency Lightbox Message'),
       '#default_value' => $this->get('unsupported_currencies_message')['value'],
       '#required' => false,
       '#translatable' => TRUE,
@@ -69,8 +68,8 @@ class UnsupportedCurrencyConfiguration extends FormBase {
 
     $form['gen_config']['unsupported_currencies_button'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('Unsupported Currency button'),
-      '#description' => $this->t('Defines the Unsupported country LightBox Ok button'),
+      '#title' => $this->t('Unsupported Currency Lightbox Button Text'),
+      '#description' => $this->t('Text inside the UCL button'),
       '#default_value' => $this->get('unsupported_currencies_button'),
       '#required' => false,
       '#translatable' => TRUE,

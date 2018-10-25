@@ -1,10 +1,10 @@
 field_settings:
   label: '이메일 주소'
   placeholder: '이메일 주소'
-  annotation: "확인 및 은행 거래 목적(Moneybookers/Skrill)을 위해 실제 사용하는 이메일 주소를 입력하였는지 확인하십시오. 일치하지 않는 이메일 주소나 유효하지 않은 이메일 주소로 인해 거래 처리가 지연될 수 있습니다. 중요한 메시지 및 알림은 비밀번호 복구 및 / 또는 계정 관련 정보를 포함하여 이메일 주소로 전송됩니다.\r\n\r\n"
+  annotation: '특별 보너스 및 혜택을 받으시려면 유효한 이메일 주소를 입력해주십시오. 거래 관련 중요 공지사항 및 업데이트 역시 기입된 이메일 주소로 전송됩니다.'
 field_validations:
   required:
-    error_message: "연락이 가능하고 유효한 이메일 주소를 입력하십시오. (예. name@domain.com)\r\n"
+    error_message: "유효한 이메일 주소를 입력해주세요. (예: name@domain.com)\r\n"
   alpha:
     error_message: 'Field should be Alphabet characters only'
   alphanumeric:
@@ -23,13 +23,17 @@ field_validations:
     error_message: "연락이 가능하고 유효한 이메일 주소를 입력하십시오. (예. name@domain.com)\r\n"
   max_length:
     error_message: "연락이 가능하고 유효한 이메일 주소를 입력하십시오. (예. name@domain.com)\r\n"
+  regex:
+    error_message: 'This field only accepts specific characters.'
+  valid_date:
+    error_message: 'Date is invalid'
   username_availability:
     error_message: 'Username not available'
   email_availability:
-    error_message: "<span class=\"visible-desktop\">이 이메일은 이미 사용 중입니다. 아이디/비밀번호를 되찾으려면 <a href=\"/kr/cant-login\" target=\"popup\" onclick=\"window.open('/kr/cant-login','popup','width=820,height=810,scrollbars=no,resizable=no'); return false;\" class=\"visible-desktop\">여기</a>를 클릭하십시오.</span>\r\n<span class=\"visible-tablet\">이 이메일은 이미 사용 중입니다. 아이디/비밀번호를 되찾으려면 <a href=\"/kr/cant-login\" target=\"_blank\" class=\"visible-tablet\">여기</a>를 클릭하십시오.</span>\r\n<span class=\"visible-mobile\">이 이메일은 이미 사용 중입니다. 아이디/비밀번호를 되찾으려면 <a href=\"/kr/cant-login\" target=\"_blank\" class=\"visible-mobile\">여기</a>를 클릭하십시오.</span>\r\n<span class=\"visible-app\">이 이메일은 이미 사용 중입니다. 아이디/비밀번호를 되찾으려면 <a href=\"https://m.dafawin.com/kr/cant-login?clientflag=1\" target=\"_blank\" class=\"visible-app\">여기</a>를 클릭하십시오.</span>"
+    error_message: "<span class=\"visible-desktop\">이 이메일은 이미 사용 중입니다. 아이디/비밀번호를 되찾으려면 <a href=\"{domain:myaccount_domain}/kr/cant-login\" target=\"popup\" onclick=\"window.open('{domain:myaccount_domain}/kr/cant-login','popup','width=820,height=810,scrollbars=no,resizable=no'); return false;\" class=\"visible-desktop\">여기</a>를 클릭하십시오.</span>\r\n<span class=\"visible-client\">이 이메일은 이미 사용 중입니다. 아이디/비밀번호를 되찾으려면 <u><a href=\"{domain:myaccount_domain}/kr/cant-login\" target=\"popup\" onclick=\"window.open('{domain:myaccount_domain}/kr/cant-login','popup','width=820,height=810,scrollbars=no,resizable=no'); return false;\" class=\"visible-desktop\">여기</a></u>를 클릭하십시오.</span>\r\n<span class=\"visible-tablet\">이 이메일은 이미 사용 중입니다. 아이디/비밀번호를 되찾으려면 <a href=\"{domain:mobile}/kr/cant-login\" target=\"_blank\" class=\"visible-tablet\">여기</a>를 클릭하십시오.</span>\r\n<span class=\"visible-mobile\">이 이메일은 이미 사용 중입니다. 아이디/비밀번호를 되찾으려면 <a href=\"{domain:mobile}/kr/cant-login\" target=\"_blank\" class=\"visible-mobile\">여기</a>를 클릭하십시오.</span>\r\n<span class=\"visible-app\">이 이메일은 이미 사용 중입니다. 아이디/비밀번호를 되찾으려면 <a href=\"https://m.dfnba.net/kr/cant-login?clientflag=1\" target=\"_blank\" class=\"visible-app\">여기</a>를 클릭하십시오.</span>"
   invalid_words:
     error_message: 'Invalid/not allowed characters'
   valid_languages:
     error_message: 'This field only accepts specific characters.'
-  valid_date:
-    error_message: 'Date is invalid'
+  not_match_username:
+    error_message: 'Password should not equal to username'
