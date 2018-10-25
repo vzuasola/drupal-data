@@ -21,10 +21,27 @@ class ExportParser {
    */
   public function get_audit_logs($filters = [], $options = []) {
     $storage = \Drupal::service('webcomposer_audit.database_storage');
-
     return $storage->getWithOffset([
       'limit' => 500,
-      'offset' => 50,
+      'offset' => $options['offset'] ?? 0,
+      'where' => $filters,
+      'orderby' => [
+        'field' => 'timestamp',
+        'sort' => 'DESC',
+      ],
+    ]);
+  }
+
+  /**
+   * Returns an array of all domain groups, where the index is the primary key `id`.
+   *
+   * @param array $filters
+   *   - Audit log filters.
+   */
+  public function get_audit_count($filters = [], $options = []) {
+    $storage = \Drupal::service('webcomposer_audit.database_storage');
+    return $storage->getDistinct('id', [
+      'limit' => 20000,
       'where' => $filters,
       'orderby' => [
         'field' => 'timestamp',
@@ -64,23 +81,8 @@ class ExportParser {
   public function excel_get_audit_logs($logs) {
     $result = [];
 
-    $header = [
-      'title' => 'TITLE',
-      'type' => 'TYPE',
-      'action' => 'ACTION',
-      'user' => 'USER',
-      'date' => 'DATE',
-      'language' => 'LANGUAGE',
-      'entity_before' => 'ENTITY BEFORE',
-      'entity_after' => 'ENTITY AFTER',
-    ];
-
-    $result[0] = $header;
-
     foreach ($logs as $key => $value) {
-      $count = $key + 1;
-
-      $result[$count] = [
+      $result[$key] = [
         'title' => $value['title'],
         'type' => $value['type'],
         'action' => $value['action'],

@@ -80,10 +80,31 @@ class DatabaseAuditStorage implements AuditStorageInterface {
   public function getDistinct($column, $options = []) {
     $data = [];
 
-    $result = $this->database
+    $query = $this->database
       ->select(self::TABLE, 'w')
       ->fields('w', [$column])
-      ->distinct()
+      ->distinct();
+
+    if (isset($options['orderby'])) {
+      $query->orderBy($options['orderby']['field'], $options['orderby']['sort']);
+    }
+
+    if (isset($options['where'])) {
+      foreach ($options['where'] as $key => $value) {
+        if (is_array($value)) {
+          $query->condition("w.$key", $value['value'], $value['operator']);
+        } else {
+          $query->condition("w.$key", "%$value%", 'like');
+        }
+      }
+    }
+
+    if (!isset($options['limit'])) {
+      $options['limit'] = 50;
+    }
+
+    $result = $query
+      ->range(0, $options['limit'])
       ->execute()
       ->fetchAllAssoc($column);
 

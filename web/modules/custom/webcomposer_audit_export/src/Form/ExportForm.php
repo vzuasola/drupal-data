@@ -195,76 +195,36 @@ class ExportForm extends FormBase {
 
     $batch = [];
     $batch = $this->generateExportBatch();
-
-    // d($batch);
-    // die();
     batch_set($batch);
-    // \Drupal\webcomposer_audit_export\Parser\LogsExport::logsExportExcel([]);
   }
 
   /**
    * Export Batch Function
    */
   public function generateExportBatch() {
-    // $this->logsExport->setAuditFilters($this->getAllFilters());
-    // $filters = $this->getAllFilters();
+    $logsDistinct = $this->logsExport->logsCount($this->getAllFilters());
+    $batchNum = 500;
+    $num_operations = intval(ceil($logsDistinct/$batchNum));
 
-    $num_operations = 3;
-    $this->messenger()->addMessage($this->t('Creating an array of @num operations', ['@num' => $num_operations]));
+    $this->messenger()->addMessage($this->t('Exporting Audit Logs'));
 
     $operations = [];
     for ($i = 0; $i < $num_operations; $i++) {
-      // Each operation is an array consisting of
-      // - The function to call.
-      // - An array of arguments to that function.
       $operations[] = [
-        'sample',
+        'Drupal\webcomposer_audit_export\Parser\LogsExport::logsExportExcel',
         [
-          // $filters ?? []
+          $i
         ],
       ];
     }
     $batch = [
-      'title' => $this->t('Creating an array of @num operations', ['@num' => $num_operations]),
+      'title' => $this->t('Exporting Audit Logs'),
       'operations' => $operations,
-      'finished' => 'Drupal\webcomposer_audit_export\Form\ExportForm::batch_example_finished',
+      'finished' => 'Drupal\webcomposer_audit_export\Parser\LogsExport::logExportBatchFinished',
     ];
 
-
-
-    // $this->logsExport->logsExportExcel($filters);
     return $batch;
   }
-
-  public function sample($filter) {
-    sleep(1);
-  }
-
-  /**
- * Batch 'finished' callback used by both batch 1 and batch 2.
- */
-public function batch_example_finished($success, $results, $operations) {
-  $messenger = \Drupal::messenger();
-  if ($success) {
-    // Here we could do something meaningful with the results.
-    // We just display the number of nodes we processed...
-    $messenger->addMessage(t('@count results processed.', ['@count' => count($results)]));
-    $messenger->addMessage(t('The final result was "%final"', ['%final' => end($results)]));
-  }
-  else {
-    // An error occurred.
-    // $operations contains the operations that remained unprocessed.
-    $error_operation = reset($operations);
-    $messenger->addMessage(
-      t('An error occurred while processing @operation with arguments : @args',
-        [
-          '@operation' => $error_operation[0],
-          '@args' => print_r($error_operation[0], TRUE),
-        ]
-      )
-    );
-  }
-}
 
   /**
    *
