@@ -193,37 +193,9 @@ class ExportForm extends FormBase {
       }
     }
 
-    $batch = [];
-    $batch = $this->generateExportBatch();
-    batch_set($batch);
-  }
-
-  /**
-   * Export Batch Function
-   */
-  public function generateExportBatch() {
-    $logsDistinct = $this->logsExport->logsCount($this->getAllFilters());
-    $batchNum = 500;
-    $num_operations = intval(ceil($logsDistinct/$batchNum));
-
-    $this->messenger()->addMessage($this->t('Exporting Audit Logs'));
-
-    $operations = [];
-    for ($i = 0; $i < $num_operations; $i++) {
-      $operations[] = [
-        [$this->logsExport, 'logsExportExcel'],
-        [
-          $i
-        ],
-      ];
-    }
-    $batch = [
-      'title' => $this->t('Exporting Audit Logs'),
-      'operations' => $operations,
-      'finished' => [$this->logsExport, 'logExportBatchFinished'],
-    ];
-
-    return $batch;
+    // Triggered element: $form_state->getTriggeringElement()['#id']
+    $this->logsExport->setAuditFilters($this->getAllFilters());
+    $this->logsExport->logsExportExcel();
   }
 
   /**

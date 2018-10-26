@@ -9,3 +9,9 @@ games_config.games_configuration:
   route_name: games_config.games_configuration
   description: 'Configure the Games'
   parent: games_config.admin_settings
+
+games_config.games_sorting:
+  title: 'Sort Game Rooms'
+  route_name: view.gameroom.page_1
+  description: 'Configure sorting of Game Rooms'
+  parent: games_config.admin_settings
