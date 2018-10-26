@@ -1,0 +1,5 @@
+name: poker_client_promotions
+type: module
+description: Configure Right-side Promotional banners for Poker Client
+core: 8.x
+package: Custom

@@ -1,0 +1,22 @@
+add poker client promotions entities:
+  title: 'Create new Poker client promotions entities'
+
+administer poker client promotions entities:
+  title: 'Administer Poker client promotions entities'
+  description: 'Allow to access the administration form to configure Poker client promotions entities.'
+  restrict access: true
+
+delete poker client promotions entities:
+  title: 'Delete Poker client promotions entities'
+
+edit poker client promotions entities:
+  title: 'Edit Poker client promotions entities'
+
+access poker client promotions overview:
+  title: 'Access the Poker client promotions overview page'
+
+view published poker client promotions entities:
+  title: 'View published Poker client promotions entities'
+
+view unpublished poker client promotions entities:
+  title: 'View unpublished Poker client promotions entities'

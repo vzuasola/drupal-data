@@ -1,0 +1,21 @@
+uuid: 51b5c177-74f4-48fe-8312-7aa40cc61eb7
+langcode: en
+status: true
+dependencies:
+  module:
+    - poker_client_promotions
+id: poker_client_promotions.field_url
+field_name: field_url
+entity_type: poker_client_promotions
+type: string
+settings:
+  max_length: 500
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

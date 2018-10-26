@@ -50,6 +50,7 @@ module:
   paragraphs: 0
   paragraphs_type_permissions: 0
   path: 0
+  poker_client_promotions: 0
   poker_config: 0
   poker_download_page: 0
   poker_game_offers: 0
