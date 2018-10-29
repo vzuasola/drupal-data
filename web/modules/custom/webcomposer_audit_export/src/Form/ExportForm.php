@@ -5,30 +5,12 @@ namespace Drupal\webcomposer_audit_export\Form;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 
+use Drupal\webcomposer_audit\Form\OverviewForm;
+
 /**
  * Contribute form.
  */
 class ExportForm extends FormBase {
-  const DATE_FORMAT = 'm/d/Y';
-  const TIME_FORMAT = 'h:i:s A';
-  const EXPORT_BUTTON = 'export';
-  const FILTER_DATE_KEYS = [
-    'date_start',
-    'date_end',
-  ];
-  const FILTER_KEYS_OTHERS = [
-    'date_picker'
-  ];
-  const DATE_PICKER = [
-    '0' => '-none-',
-    '-1 day' => '1 DAY',
-    '-3 day' => '3 DAYS',
-    '-1 week' => '1 WEEK',
-    '-2 week' => '2 WEEKS',
-    '-1 month' => '1 MONTH',
-    '-2 month' => '2 MONTHS',
-  ];
-
   /**
    * logsExport object.
    *
@@ -74,7 +56,7 @@ class ExportForm extends FormBase {
    *
    */
   private function buildFilterForm(array &$form, FormStateInterface $form_state) {
-    $date = date(self::DATE_FORMAT . ' ' . self::TIME_FORMAT);
+    $date = date(OverviewForm::DATE_FORMAT . ' ' . OverviewForm::TIME_FORMAT);
 
     $form['filters'] = [
       '#type' => 'details',
@@ -106,8 +88,8 @@ class ExportForm extends FormBase {
       '#size' => 20,
       '#description' => 'Sample format: ' . $date,
       '#default_value' => $this->getDateValue('date_start'),
-      '#date_date_format' => self::DATE_FORMAT,
-      '#date_time_format' => self::TIME_FORMAT,
+      '#date_date_format' => OverviewForm::DATE_FORMAT,
+      '#date_time_format' => OverviewForm::TIME_FORMAT,
       '#prefix' => '<div class="js-form-item form-item js-form-type-select form-type-select js-form-item-uid form-item-uid">',
       '#suffix' => '</div>',
     ];
@@ -118,8 +100,8 @@ class ExportForm extends FormBase {
       '#size' => 20,
       '#description' => 'Sample format: ' . $date,
       '#default_value' => $this->getDateValue('date_end'),
-      '#date_date_format' => self::DATE_FORMAT,
-      '#date_time_format' => self::TIME_FORMAT,
+      '#date_date_format' => OverviewForm::DATE_FORMAT,
+      '#date_time_format' => OverviewForm::TIME_FORMAT,
       '#prefix' => '<div class="js-form-item form-item js-form-type-select form-type-select js-form-item-uid form-item-uid">',
       '#suffix' => '</div>',
     ];
@@ -128,7 +110,7 @@ class ExportForm extends FormBase {
       '#title' => 'Date Picker',
       '#description' => 'If a value is selected, Start and End Date Filters will be ignored.',
       '#type' => 'select',
-      '#options' => self::DATE_PICKER,
+      '#options' => OverviewForm::DATE_PICKER,
       '#attributes' => [
         'style' => 'margin-top: 10px; padding-top: 5px; padding-bottom: 5px;',
       ],
@@ -158,7 +140,7 @@ class ExportForm extends FormBase {
     $form['filters']['wrapper']['actions']['submit'] = [
       '#type' => 'submit',
       '#value' => $this->t('Export'),
-      '#id' => self::EXPORT_BUTTON,
+      '#id' => 'export',
     ];
   }
 
@@ -173,9 +155,9 @@ class ExportForm extends FormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    $format = self::DATE_FORMAT . ' ' . self::TIME_FORMAT;
+    $format = OverviewForm::DATE_FORMAT . ' ' . OverviewForm::TIME_FORMAT;
 
-    foreach (self::FILTER_DATE_KEYS as $key) {
+    foreach (OverviewForm::FILTER_DATE_KEYS as $key) {
       if (is_object($form_state->getValue($key))) {
         $_SESSION['webcomposer_audit_export_filter'][$key] = $form_state->getValue($key)->format($format);
       } else {
@@ -184,7 +166,7 @@ class ExportForm extends FormBase {
       }
     }
 
-    foreach (self::FILTER_KEYS_OTHERS as $key) {
+    foreach (OverviewForm::FILTER_KEYS_OTHERS as $key) {
       if ($form_state->getValue($key)) {
         $_SESSION['webcomposer_audit_export_filter'][$key] = $form_state->getValue($key);
       } else {
