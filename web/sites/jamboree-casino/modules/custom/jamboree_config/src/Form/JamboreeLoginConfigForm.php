@@ -40,6 +40,7 @@ class JamboreeLoginConfigForm extends FormBase {
     $this->sectionLoginConfig($form);
     $this->sectionLoginSessionConfig($form);
     $this->sectionChangePassConfig($form);
+    $this->sectionChangePassErrorMessages($form);
 
     return $form;
   }
@@ -190,6 +191,15 @@ class JamboreeLoginConfigForm extends FormBase {
       '#translatable' => FALSE,
     ];
 
+    $default_pt_error_messages = $this->get('login_pt_error_messages');
+    $form['login_pt_settings']['login_pt_error_messages'] = [
+      '#type' => 'textarea',
+      '#title' => t('Playtech error messages'),
+      '#default_value' => $default_pt_error_messages,
+      '#description' => $this->t('Mapping for error messages from playtech. Format errorCode|errorMessage'),
+      '#translatable' => TRUE,
+    ];
+
     $form['login_error_messages'] = [
       '#type' => 'details',
       '#title' => $this->t('Login Error Messages'),
@@ -212,16 +222,6 @@ class JamboreeLoginConfigForm extends FormBase {
       '#description' => $this->t('Password required error message.'),
       '#translatable' => TRUE,
     ];
-
-    $default_pt_error_messages = $this->get('login_pt_error_messages');
-    $form['login_error_messages']['login_pt_error_messages'] = [
-      '#type' => 'textarea',
-      '#title' => t('Playtech error messages'),
-      '#default_value' => $default_pt_error_messages,
-      '#description' => $this->t('Mapping for error messages from playtech. Format errorCode|errorMessage'),
-      '#translatable' => TRUE,
-    ];
-
   }
 
   private function sectionLoginSessionConfig(array &$form) {
@@ -255,8 +255,17 @@ class JamboreeLoginConfigForm extends FormBase {
       '#title' => $this->t('Change Password Configuration'),
     ];
 
-    $default_current_password = $this->get('current_password');
-    $form['change_pass']['current_password'] = [
+    $default_form_title = $this->get('change_pass_form_title');
+    $form['change_pass']['change_pass_form_title'] = [
+      '#type' => 'textfield',
+      '#title' => t('Change Password Form Title'),
+      '#default_value' => $default_form_title,
+      '#description' => $this->t('Current Password Form Title'),
+      '#translatable' => FALSE,
+    ];
+
+    $default_current_password = $this->get('change_pass_current_password');
+    $form['change_pass']['change_pass_current_password'] = [
       '#type' => 'textfield',
       '#title' => t('Current Password Field Label'),
       '#default_value' => $default_current_password,
@@ -264,8 +273,8 @@ class JamboreeLoginConfigForm extends FormBase {
       '#translatable' => FALSE,
     ];
 
-    $default_new_password = $this->get('new_password');
-    $form['change_pass']['new_password'] = [
+    $default_new_password = $this->get('change_pass_new_password');
+    $form['change_pass']['change_pass_new_password'] = [
       '#type' => 'textfield',
       '#title' => t('New Password Field Label'),
       '#default_value' => $default_new_password,
@@ -273,12 +282,55 @@ class JamboreeLoginConfigForm extends FormBase {
       '#translatable' => TRUE,
     ];
 
-    $default_confirm_new_password = $this->get('confirm_new_password');
-    $form['change_pass']['confirm_new_password'] = [
+    $default_confirm_new_password = $this->get('change_pass_confirm_new_password');
+    $form['change_pass']['change_pass_confirm_new_password'] = [
       '#type' => 'textfield',
       '#title' => t('Confirm New Password Field Label'),
       '#default_value' => $default_confirm_new_password,
       '#description' => $this->t('Confirm New Password Field Label'),
+      '#translatable' => TRUE,
+    ];
+
+    $default_submit = $this->get('change_pass_submit');
+    $form['change_pass']['change_pass_submit'] = [
+      '#type' => 'textfield',
+      '#title' => t('Submit button label'),
+      '#default_value' => $default_confirm_new_password,
+      '#description' => $this->t('Submit button label'),
+      '#translatable' => TRUE,
+    ];
+  }
+
+  private function sectionChangePassErrorMessages(array &$form) {
+    $form['change_pass_error_messages'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Change Password Error Messages'),
+    ];
+
+    $default_cp_old_password_required = $this->get('change_pass_old_password_error');
+    $form['change_pass_error_messages']['change_pass_old_password_error'] = [
+      '#type' => 'textfield',
+      '#title' => t('Change Password Old Password error message.'),
+      '#default_value' => $default_cp_old_password_required,
+      '#description' => $this->t('Change Password Old Password error message.'),
+      '#translatable' => TRUE,
+    ];
+
+    $default_cp_new_password_required = $this->get('change_pass_new_password_error');
+    $form['change_pass_error_messages']['change_pass_new_password_error'] = [
+      '#type' => 'textfield',
+      '#title' => t('Change Password New Password error message.'),
+      '#default_value' => $default_cp_new_password_required,
+      '#description' => $this->t('Change Password New Password error message.'),
+      '#translatable' => TRUE,
+    ];
+
+    $default_cp_confirm_new_password_required = $this->get('change_pass_confirm_new_password_error');
+    $form['change_pass_error_messages']['change_pass_confirm_new_password_error'] = [
+      '#type' => 'textfield',
+      '#title' => t('Change Password Confirm New Password error message.'),
+      '#default_value' => $default_cp_confirm_new_password_required,
+      '#description' => $this->t('Change Password Confirm New Password error message.'),
       '#translatable' => TRUE,
     ];
   }
