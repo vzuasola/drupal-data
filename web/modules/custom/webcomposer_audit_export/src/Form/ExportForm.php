@@ -4,6 +4,7 @@ namespace Drupal\webcomposer_audit_export\Form;
 
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Datetime\DrupalDateTime;
 
 use Drupal\webcomposer_audit\Form\OverviewForm;
 
@@ -11,6 +12,9 @@ use Drupal\webcomposer_audit\Form\OverviewForm;
  * Contribute form.
  */
 class ExportForm extends FormBase {
+  const BATCH_COUNT = 200;
+
+
   /**
    * logsExport object.
    *
@@ -177,7 +181,6 @@ class ExportForm extends FormBase {
 
     $this->logsExport->setAuditFilters($this->getAllFilters());
 
-    $batch = [];
     $batch = $this->generateExportBatch();
     batch_set($batch);
   }
@@ -187,20 +190,21 @@ class ExportForm extends FormBase {
    */
   public function generateExportBatch() {
     $logsDistinct = $this->logsExport->logsCount();
-    $batchNum = 500;
-    $num_operations = intval(ceil($logsDistinct/$batchNum));
+
+    $batchNum = self::BATCH_COUNT;
+    $num_operations = intval(ceil($logsDistinct / $batchNum));
 
     $this->messenger()->addMessage($this->t('Exporting Audit Logs'));
 
     $operations = [];
+
     for ($i = 0; $i < $num_operations; $i++) {
       $operations[] = [
         [$this->logsExport, 'logsExportExcel'],
-        [
-          $i
-        ],
+        [$i],
       ];
     }
+
     $batch = [
       'title' => $this->t('Exporting Audit Logs'),
       'operations' => $operations,
@@ -222,10 +226,8 @@ class ExportForm extends FormBase {
    */
   private function getDateValue($field) {
     if (isset($_SESSION['webcomposer_audit_export_filter'][$field])) {
-      return new \Drupal\Core\Datetime\DrupalDateTime($_SESSION['webcomposer_audit_export_filter'][$field]);
+      return new DrupalDateTime($_SESSION['webcomposer_audit_export_filter'][$field]);
     }
-
-    return '';
   }
 
   /**

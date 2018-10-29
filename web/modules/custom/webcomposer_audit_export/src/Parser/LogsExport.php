@@ -49,31 +49,14 @@ class LogsExport {
    *   - Array of date filters.
    * @author yunyce <yunyce.dejesus@bayviewtechnology.com>
    */
-  // public function logsExportExcel($i) {
-
-  //   $offset = ($i*500);
-  //   $data = $this->logsExportGetParsedData($offset);
-
-  //   d($data);
-  //   die();
-  // }
-
-  /**
-   * Gets Matterhorn Audit Log data and invoke export excel operation.
-   *
-   * @param array $filters
-   *   - Array of date filters.
-   * @author yunyce <yunyce.dejesus@bayviewtechnology.com>
-   */
   public function logsExportExcel($i, &$context) {
-
-    $offset = ($i*500);
+    $offset = $i * 500;
     $data = $this->logsExportGetParsedData($offset);
     $context['results'][] = ['data' => $data];
 
     // Update our progress information.
     $context['message'] = t('Fetching Audit Logs Batch "@id".',
-      ['@id' => $i+1]
+      ['@id' => $i + 1]
     );
   }
 
@@ -95,7 +78,7 @@ class LogsExport {
    * @return array
    *   The parsed Matterhorn Audit Log data
    */
-  public function logsExportGetParsedData($offset) {
+  private function logsExportGetParsedData($offset) {
     $result = [];
     $options['offset'] = $offset;
 
@@ -109,7 +92,7 @@ class LogsExport {
     return $result;
   }
 
-  /**
+ /**
   * Batch 'finished' callback for Audit Log Export
   */
   public function logExportBatchFinished($success, $results, $operations) {
@@ -162,16 +145,9 @@ class LogsExport {
    * @param string $output
    *   - The URL to output the file.
    */
-  public function logsExportCreateExcel($data, $excel_version = 'Excel2007', $headers = TRUE, $output = 'php://output') {
-    // Create token placeholder worksheet.
+  private function logsExportCreateExcel($data) {
     $this->excelParser->createSheet($data['logs'], 'Audit Logs');
-    // Invoke excel creation and download.
-    $this->excelParser->save('export.xlsx', $excel_version, $headers, $output);
-
-    // Stop script only if headers is set to invoke a download.
-    if ($headers) {
-      exit;
-    }
+    $this->excelParser->save('export.xlsx');
   }
 
   /**
@@ -302,10 +278,26 @@ class LogsExport {
    */
   private function getLineChangesFromEntity($entity) {
     $map = [];
+    $entityType = false;
+
+    // checking if entity is present. this condition is needed for
+    // add and delete of logs with support of custom config and
+    // entity related format text
+    if ($entity instanceof Entity) {
+      $entityType = $entity->getEntityTypeId();
+    }
 
     foreach ($entity as $key => $value) {
       if ($value instanceof TypedDataInterface) {
-        $map[$value->getName()] = $value->getString();
+        if (is_array($value->getValue())) {
+          if ($entityType === "config") {
+            $map[$value->getName()] = $value->getValue()['value'];
+          } else {
+            $map[$value->getName()] = $value->getValue();
+          }
+        } else {
+          $map[$value->getName()] = $value->getString();
+        }
       } elseif ($value instanceof EntityInterface) {
         $map[$key] = $this->getLineChangesFromEntity($value->toArray());
       } else {
