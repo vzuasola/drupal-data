@@ -1,0 +1,7 @@
+poker_client_promotions.admin_settings:
+  path: 'admin/config/poker_client_promotions'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Poker Client Promotions Configurations'
+  requirements:
+    _permission: 'administer site configuration'

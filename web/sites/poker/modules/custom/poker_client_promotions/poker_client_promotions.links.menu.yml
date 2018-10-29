@@ -1,0 +1,20 @@
+poker_client_promotions.admin_settings:
+  title: 'Poker client promotions'
+  description: 'Configure Poker client promotional banners.'
+  parent: system.admin_config
+  route_name: poker_client_promotions.admin_settings
+  weight: 1500
+
+# Poker client promotions menu items definition
+entity.poker_client_promotions.collection:
+  title: 'Poker client promotions list'
+  route_name: entity.poker_client_promotions.collection
+  description: 'List Poker client promotions entities'
+  parent: poker_client_promotions.admin_settings
+  weight: 100
+
+poker_client_promotions.admin.structure.settings:
+  title: Poker client promotions settings
+  description: 'Configure Poker client promotions entities'
+  route_name: poker_client_promotions.settings
+  parent: poker_client_promotions.admin_settings
