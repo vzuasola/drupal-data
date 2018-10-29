@@ -1,0 +1,15 @@
+<?php
+
+
+/**
+ * Implements hook_uninstall
+ */
+function download_page_uninstall() {
+    $keys = [
+        'views.view.download_page',
+    ];
+
+    foreach ($keys as $key) {
+         \Drupal::configFactory()->getEditable($key)->delete();
+    }
+}
