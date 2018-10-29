@@ -224,7 +224,7 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: admin/config/poker_download_page/download_page_entity
+      path: admin/config/download_page/download_page_entity
       fields:
         name:
           table: download_page_entity_field_data

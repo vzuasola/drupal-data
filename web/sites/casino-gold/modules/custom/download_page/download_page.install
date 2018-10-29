@@ -6,6 +6,14 @@
  */
 function download_page_uninstall() {
     $keys = [
+        'core.base_field_override.download_page_entity.download_page_entity.metatag',
+        'core.entity_form_display.download_page_entity.download_page_entity.default',
+        'core.entity_view_display.download_page_entity.download_page_entity.default',
+        'field.field.download_page_entity.download_page_entity.field_body',
+        'field.field.download_page_entity.download_page_entity.field_type',
+        'field.storage.download_page_entity.field_body',
+        'field.storage.download_page_entity.field_type',
+        'language.content_settings.download_page_entity.download_page_entity',
         'views.view.download_page',
     ];
 
