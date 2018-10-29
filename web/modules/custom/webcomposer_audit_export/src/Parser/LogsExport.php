@@ -163,8 +163,6 @@ class LogsExport {
    *   - The URL to output the file.
    */
   public function logsExportCreateExcel($data, $excel_version = 'Excel2007', $headers = TRUE, $output = 'php://output') {
-    $messenger = \Drupal::messenger();
-
     // Create token placeholder worksheet.
     $this->excelParser->createSheet($data['logs'], 'Audit Logs');
     // Invoke excel creation and download.
@@ -187,11 +185,8 @@ class LogsExport {
   private function postProcessLogsData($logs) {
     $result = [];
 
-
     foreach ($logs as $key => $log) {
-
       $title = trim(trim($log->title), '>');
-
       $entity = unserialize($log->entity);
 
       // Switch case for Action Type
@@ -200,8 +195,10 @@ class LogsExport {
           // for non standard entities
           if (method_exists($entity, 'getOriginal')) {
             $original = $entity->getOriginal();
-          } else {
+          } elseif (isset($entity->original)) {
             $original = $entity->original;
+          } else {
+            continue;
           }
 
           $compare = $this->generateCompareDiff($original, $entity);
