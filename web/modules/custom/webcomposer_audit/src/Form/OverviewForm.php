@@ -32,13 +32,13 @@ class OverviewForm extends FormBase {
     'date_picker'
   ];
   const DATE_PICKER = [
-    '0' => '-none-',
-    '-1 day' => '1 DAY',
-    '-3 day' => '3 DAY',
-    '-1 week' => '1 WEEK',
-    '-2 week' => '2 WEEK',
-    '-1 month' => '1 MONTH',
-    '-2 month' => '2 MONTH',
+    '0' => '-- none --',
+    '-1 day' => '1 days',
+    '-3 day' => '3 days',
+    '-1 week' => '1 week',
+    '-2 week' => '2 weeks',
+    '-1 month' => '1 month',
+    '-2 month' => '2 months',
   ];
   const LOGS_PER_PAGE = [
     '10' => 10,
