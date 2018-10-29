@@ -1,0 +1,26 @@
+uuid: af9b15ae-2c7f-4003-82fe-6f968584fdbb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.poker_client_promotions.field_ribbon_configuration
+  module:
+    - poker_client_promotions
+id: poker_client_promotions.poker_client_promotions.field_ribbon_configuration
+field_name: field_ribbon_configuration
+entity_type: poker_client_promotions
+bundle: poker_client_promotions
+label: 'Ribbon Configuration‎'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: ribbons
+      display_name: entity_reference_1
+      arguments: {  }
+field_type: entity_reference

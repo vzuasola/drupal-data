@@ -12,6 +12,7 @@ dependencies:
     - poker_client_promotions
     - rest
     - serialization
+    - webcomposer_rest_extra
 id: poker_client_promotions_listing
 label: 'Poker Client Promotions Listing'
 module: views
@@ -467,7 +468,10 @@ display:
       display_extenders: {  }
       path: api/client-promotions
       style:
-        type: serializer
+        type: node_list_serializer
+        options:
+          uses_fields: false
+          formats: {  }
       defaults:
         style: false
         row: false
