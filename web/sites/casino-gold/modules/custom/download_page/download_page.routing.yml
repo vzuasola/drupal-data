@@ -1,0 +1,7 @@
+download_page.admin_settings:
+  path: 'admin/config/download_page'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Download Page'
+  requirements:
+    _permission: 'administer site configuration'
