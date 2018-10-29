@@ -1,0 +1,5 @@
+entity.poker_client_promotions.add_form:
+  route_name: entity.poker_client_promotions.add_form
+  title: 'Add Poker client promotions'
+  appears_on:
+    - entity.poker_client_promotions.collection

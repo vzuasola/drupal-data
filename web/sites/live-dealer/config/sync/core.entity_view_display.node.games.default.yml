@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.games.field_game_info_id
     - field.field.node.games.field_game_provider
     - field.field.node.games.field_game_title
+    - field.field.node.games.field_hide
     - field.field.node.games.field_image_size
     - field.field.node.games.field_maintenance_blurb
     - field.field.node.games.field_ribbon_configuration
@@ -102,6 +103,16 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: basic_string
+    region: content
+  field_hide:
+    weight: 121
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
     region: content
   field_image_size:
     weight: 107

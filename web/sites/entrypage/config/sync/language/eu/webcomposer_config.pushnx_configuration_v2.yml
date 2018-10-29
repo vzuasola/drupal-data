@@ -1,0 +1,19 @@
+title: Notifications
+empty: 'There are no new notifications.'
+expired_message: 'This offer has already expired.'
+date_format: 'dd/mm/yyyy HH:MM'
+date_offset: '+1'
+dismiss_button_label: 'Dismiss all'
+dismiss_content:
+  value: "<p class=\"text-align-center\"><strong><span class=\"text-yellow\">ARE YOU SURE YOU WANT<br />\r\nTO DISMISS ALL NOTIFICATIONS?</span></strong></p>\r\n\r\n<p class=\"text-align-center\"><span class=\"text-white\">Dismissing all notifications will also<br />\r\ndecline all promotions you are eligible to</span></p>\r\n"
+  format: basic_html
+dismiss_yes: 'YES'
+dismiss_no: 'NO'
+product_label_generic: Notification
+product_label_owsports: 'OW Sports'
+product_label_livedealer: 'Live Dealer/Games/Arcade'
+product_label_lottery: Lottery
+product_label_virtuals: Virtuals
+cta_label_ok: OK
+cta_label_accept: ACCEPT
+cta_label_decline: DECLINE
