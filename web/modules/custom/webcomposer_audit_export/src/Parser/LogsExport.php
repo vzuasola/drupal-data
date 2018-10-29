@@ -9,8 +9,6 @@ use Drupal\Core\TypedData\TypedDataInterface;
 
 use Drupal\webcomposer_audit\Storage\AuditStorageInterface;
 
-use Symfony\Component\HttpFoundation\RedirectResponse;
-
 /**
  * Class which handles domain export.
  */
@@ -51,6 +49,22 @@ class LogsExport {
    *   - Array of date filters.
    * @author yunyce <yunyce.dejesus@bayviewtechnology.com>
    */
+  // public function logsExportExcel($i) {
+
+  //   $offset = ($i*500);
+  //   $data = $this->logsExportGetParsedData($offset);
+
+  //   d($data);
+  //   die();
+  // }
+
+  /**
+   * Gets Matterhorn Audit Log data and invoke export excel operation.
+   *
+   * @param array $filters
+   *   - Array of date filters.
+   * @author yunyce <yunyce.dejesus@bayviewtechnology.com>
+   */
   public function logsExportExcel($i, &$context) {
 
     $offset = ($i*500);
@@ -70,8 +84,7 @@ class LogsExport {
    *   - Array of date filters.
    * @author yunyce <yunyce.dejesus@bayviewtechnology.com>
    */
-  public function logsCount($filters) {
-    $this->filters = $filters;
+  public function logsCount() {
     $logs = $this->service->get_audit_count($this->filters);
     return count($logs);
   }

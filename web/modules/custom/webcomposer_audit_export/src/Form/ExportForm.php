@@ -193,6 +193,8 @@ class ExportForm extends FormBase {
       }
     }
 
+    $this->logsExport->setAuditFilters($this->getAllFilters());
+
     $batch = [];
     $batch = $this->generateExportBatch();
     batch_set($batch);
@@ -202,7 +204,7 @@ class ExportForm extends FormBase {
    * Export Batch Function
    */
   public function generateExportBatch() {
-    $logsDistinct = $this->logsExport->logsCount($this->getAllFilters());
+    $logsDistinct = $this->logsExport->logsCount();
     $batchNum = 500;
     $num_operations = intval(ceil($logsDistinct/$batchNum));
 
