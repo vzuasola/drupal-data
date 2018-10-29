@@ -1,0 +1,25 @@
+uuid: fa362380-6ccf-4788-b8a0-d015359d5839
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_clcasino_ribbon
+    - node.type.client_casino_games
+id: node.client_casino_games.field_clcasino_ribbon
+field_name: field_clcasino_ribbon
+entity_type: node
+bundle: client_casino_games
+label: Ribbon
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: ribbons
+      display_name: entity_reference_1
+      arguments: {  }
+field_type: entity_reference
