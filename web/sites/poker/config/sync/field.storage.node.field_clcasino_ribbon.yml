@@ -1,0 +1,20 @@
+uuid: 143a74ff-93e1-4a87-a794-a7e2bb0d306e
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_clcasino_ribbon
+field_name: field_clcasino_ribbon
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

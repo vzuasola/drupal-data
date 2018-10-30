@@ -3,6 +3,8 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_available_on_desktop
+    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_available_on_tablet
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_banner_blurb
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_banner_image
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_banner_link
@@ -38,6 +40,26 @@ targetEntityType: webcomposer_slider_v2_entity
 bundle: webcomposer_slider_v2_entity
 mode: default
 content:
+  field_available_on_desktop:
+    weight: 22
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_available_on_tablet:
+    weight: 23
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
   field_banner_blurb:
     weight: 6
     label: above

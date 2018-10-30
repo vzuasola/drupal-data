@@ -15,7 +15,7 @@ use Drupal\Core\Form\FormStateInterface;
  *   },
  *   menu = {
  *     "title" = "Unsupported Country Configuration",
- *     "description" = "Provides configuration for unsupported country",
+ *     "description" = "Provides configuration for unsupported country lightbox",
  *     "parent" = "webcomposer_games.list",
  *     "weight" = 9 
  *   },
@@ -24,9 +24,6 @@ use Drupal\Core\Form\FormStateInterface;
 class UnsupportedCountryConfiguration extends FormBase {
   /**
    * @inheritdoc
-   */
-   /**
-   * Unsupported Country Configuration definitions
    */
   /**
    * Unsupported Country Configuration definitions
@@ -52,8 +49,7 @@ class UnsupportedCountryConfiguration extends FormBase {
 
     $form['gen_config']['unsupported_country_title'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('Not supported country title'),
-      '#description' => $this->t('Not allowed message title for country.'),
+      '#title' => $this->t('Restricted Country Lightbox Title'),
       '#default_value' => $this->get('unsupported_country_title'),
       '#required' => false,
       '#translatable' => TRUE,
@@ -61,7 +57,7 @@ class UnsupportedCountryConfiguration extends FormBase {
 
     $form['gen_config']['unsupported_country_message'] = [
       '#type' => 'text_format',
-      '#title' => $this->t('Not allowed message for country.'),
+      '#title' => $this->t('Restricted Country Lightbox Message'),
       '#default_value' => $this->get('unsupported_country_message')['value'],
       '#required' => false,
       '#translatable' => TRUE,
@@ -69,8 +65,8 @@ class UnsupportedCountryConfiguration extends FormBase {
 
     $form['gen_config']['unsupported_country_button'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('Unsupported Country button'),
-      '#description' => $this->t('Defines the Unsupported country LightBox Ok button'),
+      '#title' => $this->t('Restricted Country Lightbox Button Text'),
+      '#description' => $this->t('Text inside the RCL button'),
       '#default_value' => $this->get('unsupported_country_button'),
       '#required' => false,
       '#translatable' => TRUE,

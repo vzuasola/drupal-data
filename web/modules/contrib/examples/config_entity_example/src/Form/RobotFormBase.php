@@ -3,7 +3,7 @@
 namespace Drupal\config_entity_example\Form;
 
 use Drupal\Core\Entity\EntityForm;
-use Drupal\Core\Entity\Query\QueryFactory;
+use Drupal\Core\Entity\EntityStorageInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Link;
 use Symfony\Component\DependencyInjection\ContainerInterface;
@@ -16,16 +16,14 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  * we create a base class. Drupal never routes to this class directly,
  * but instead through the child classes of RobotAddForm and RobotEditForm.
  *
- * @package Drupal\config_entity_example\Form
- *
  * @ingroup config_entity_example
  */
 class RobotFormBase extends EntityForm {
 
   /**
-   * @var \Drupal\Core\Entity\Query\QueryFactory
+   * @var \Drupal\Core\Entity\EntityStorageInterface
    */
-  protected $entityQueryFactory;
+  protected $entityStorage;
 
   /**
    * Construct the RobotFormBase.
@@ -35,11 +33,11 @@ class RobotFormBase extends EntityForm {
    * from the container. We later use this query factory to build an entity
    * query for the exists() method.
    *
-   * @param \Drupal\Core\Entity\Query\QueryFactory $query_factory
+   * @param \Drupal\Core\Entity\EntityStorageInterface $entity_storage
    *   An entity query factory for the robot entity type.
    */
-  public function __construct(QueryFactory $query_factory) {
-    $this->entityQueryFactory = $query_factory;
+  public function __construct(EntityStorageInterface $entity_storage) {
+    $this->entityStorage = $entity_storage;
   }
 
   /**
@@ -57,7 +55,9 @@ class RobotFormBase extends EntityForm {
    * pass the factory to our class as a constructor parameter.
    */
   public static function create(ContainerInterface $container) {
-    return new static($container->get('entity.query'));
+    $form = new static($container->get('entity_type.manager')->getStorage('robot'));
+    $form->setMessenger($container->get('messenger'));
+    return $form;
   }
 
   /**
@@ -85,29 +85,29 @@ class RobotFormBase extends EntityForm {
     $robot = $this->entity;
 
     // Build the form.
-    $form['label'] = array(
+    $form['label'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Label'),
       '#maxlength' => 255,
       '#default_value' => $robot->label(),
       '#required' => TRUE,
-    );
-    $form['id'] = array(
+    ];
+    $form['id'] = [
       '#type' => 'machine_name',
       '#title' => $this->t('Machine name'),
       '#default_value' => $robot->id(),
-      '#machine_name' => array(
-        'exists' => array($this, 'exists'),
+      '#machine_name' => [
+        'exists' => [$this, 'exists'],
         'replace_pattern' => '([^a-z0-9_]+)|(^custom$)',
         'error' => 'The machine-readable name must be unique, and can only contain lowercase letters, numbers, and underscores. Additionally, it can not be the reserved word "custom".',
-      ),
+      ],
       '#disabled' => !$robot->isNew(),
-    );
-    $form['floopy'] = array(
+    ];
+    $form['floopy'] = [
       '#type' => 'checkbox',
       '#title' => $this->t('Floopy'),
       '#default_value' => $robot->floopy,
-    );
+    ];
 
     // Return the form.
     return $form;
@@ -120,7 +120,7 @@ class RobotFormBase extends EntityForm {
    *   The entity ID.
    * @param array $element
    *   The form element.
-   * @param FormStateInterface $form_state
+   * @param \Drupal\Core\Form\FormStateInterface $form_state
    *   The form state.
    *
    * @return bool
@@ -128,7 +128,7 @@ class RobotFormBase extends EntityForm {
    */
   public function exists($entity_id, array $element, FormStateInterface $form_state) {
     // Use the query factory to build a new robot entity query.
-    $query = $this->entityQueryFactory->get('robot');
+    $query = $this->entityStorage->getQuery();
 
     // Query the entity ID to see if its in use.
     $result = $query->condition('id', $element['#field_prefix'] . $entity_id)
@@ -207,12 +207,12 @@ class RobotFormBase extends EntityForm {
 
     if ($status == SAVED_UPDATED) {
       // If we edited an existing entity...
-      drupal_set_message($this->t('Robot %label has been updated.', array('%label' => $robot->label())));
+      $this->messenger()->addMessage($this->t('Robot %label has been updated.', ['%label' => $robot->label()]));
       $this->logger('contact')->notice('Robot %label has been updated.', ['%label' => $robot->label(), 'link' => $edit_link]);
     }
     else {
       // If we created a new entity...
-      drupal_set_message($this->t('Robot %label has been added.', array('%label' => $robot->label())));
+      $this->messenger()->addMessage($this->t('Robot %label has been added.', ['%label' => $robot->label()]));
       $this->logger('contact')->notice('Robot %label has been added.', ['%label' => $robot->label(), 'link' => $edit_link]);
     }
 

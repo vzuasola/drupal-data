@@ -1,0 +1,20 @@
+uuid: 9db80675-c891-404a-bd87-79af3cbcf2cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.poker_client_promotions.field_url
+  module:
+    - poker_client_promotions
+id: poker_client_promotions.poker_client_promotions.field_url
+field_name: field_url
+entity_type: poker_client_promotions
+bundle: poker_client_promotions
+label: URL
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

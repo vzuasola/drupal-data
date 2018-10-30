@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains download_page.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function download_page_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the download_page module.
+    case 'help.page.download_page':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Poker Download Module') . '</p>';
+      return $output;
+
+    default:
+  }
+}

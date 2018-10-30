@@ -15,35 +15,41 @@ use Drupal\Core\Entity\EntityChangedTrait;
  *
  * @ingroup content_entity_example
  *
- * This is the main definition of the entity type. From it, an entityType is
- * derived. The most important properties in this example are listed below.
+ * This is the main definition of the entity type. From it, an EntityType object
+ * is derived. The most important properties in this example are listed below.
  *
- * id: The unique identifier of this entityType. It follows the pattern
+ * id: The unique identifier of this entity type. It follows the pattern
  * 'moduleName_xyz' to avoid naming conflicts.
  *
  * label: Human readable name of the entity type.
  *
  * handlers: Handler classes are used for different tasks. You can use
- * standard handlers provided by D8 or build your own, most probably derived
- * from the standard class. In detail:
+ * standard handlers provided by Drupal or build your own, most probably derived
+ * from the ones provided by Drupal. In detail:
  *
  * - view_builder: we use the standard controller to view an instance. It is
- *   called when a route lists an '_entity_view' default for the entityType
- *   (see routing.yml for details. The view can be manipulated by using the
- *   standard drupal tools in the settings.
+ *   called when a route lists an '_entity_view' default for the entity type.
+ *   You can see this in the entity.content_entity_example_contact.canonical
+ *   route in the content_entity_example.routing.yml file. The view can be
+ *   manipulated by using the standard Drupal tools in the settings.
  *
- * - list_builder: We derive our own list builder class from the
- *   entityListBuilder to control the presentation.
- *   If there is a view available for this entity from the views module, it
- *   overrides the list builder. @todo: any view? naming convention?
+ * - list_builder: We derive our own list builder class from EntityListBuilder
+ *   to control the presentation. If there is a view available for this entity
+ *   from the views module, it overrides the list builder if the "collection"
+ *   key in the links array in the Entity annotation below is changed to the
+ *   path of the View. In this case the entity collection route will give the
+ *   view path.
  *
  * - form: We derive our own forms to add functionality like additional fields,
- *   redirects etc. These forms are called when the routing list an
- *   '_entity_form' default for the entityType. Depending on the suffix
- *   (.add/.edit/.delete) in the route, the correct form is called.
+ *   redirects etc. These forms are used when the route specifies an
+ *   '_entity_form' or '_entity_create_access' for the entity type. Depending on
+ *   the suffix (.add/.default/.delete) of the '_entity_form' default in the
+ *   route, the form specified in the annotation is used. The suffix then also
+ *   becomes the $operation parameter to the access handler. We use the
+ *   '.default' suffix for all operations that are not 'delete'.
  *
- * - access: Our own accessController where we determine access rights based on
- *   permissions.
+ * - access: Our own access controller, where we determine access rights based
+ *   on permissions.
  *
  * More properties:
  *
@@ -52,10 +58,11 @@ use Drupal\Core\Entity\EntityChangedTrait;
  *    BaseFieldDefinitions below. The table is automatically created during
  *    installation.
  *
- *  - fieldable: Can additional fields be added to the entity via the GUI?
- *    Analog to content types.
+ *  - fieldable: Can additional fields be attached to the entity via the GUI?
+ *    Can the user add fields, like they would to a node?
  *
- *  - entity_keys: How to access the fields. Analog to 'nid' or 'uid'.
+ *  - entity_keys: How to access the fields. Specify fields from
+ *    baseFieldDefinitions() which can be used as keys.
  *
  *  - links: Provide links to do standard tasks. The 'edit-form' and
  *    'delete-form' links are added to the list built by the
@@ -76,15 +83,14 @@ use Drupal\Core\Entity\EntityChangedTrait;
  *     "view_builder" = "Drupal\Core\Entity\EntityViewBuilder",
  *     "list_builder" = "Drupal\content_entity_example\Entity\Controller\ContactListBuilder",
  *     "form" = {
- *       "add" = "Drupal\content_entity_example\Form\ContactForm",
- *       "edit" = "Drupal\content_entity_example\Form\ContactForm",
+ *       "default" = "Drupal\content_entity_example\Form\ContactForm",
  *       "delete" = "Drupal\content_entity_example\Form\ContactDeleteForm",
  *     },
  *     "access" = "Drupal\content_entity_example\ContactAccessControlHandler",
  *   },
  *   list_cache_contexts = { "user" },
  *   base_table = "contact",
- *   admin_permission = "administer content_entity_example entity",
+ *   admin_permission = "administer contact entity",
  *   entity_keys = {
  *     "id" = "id",
  *     "label" = "name",
@@ -102,10 +108,12 @@ use Drupal\Core\Entity\EntityChangedTrait;
  * The 'links' above are defined by their path. For core to find the
  * corresponding route, the route name must follow the correct pattern:
  *
- * entity.<entity-name>.<link-name> (replace dashes with underscores)
- * Example: 'entity.content_entity_example_contact.canonical'
+ * entity.<entity_type>.<link_name>
  *
- * See routing file above for the corresponding implementation
+ * Example: 'entity.content_entity_example_contact.canonical'.
+ *
+ * See the routing file at content_entity_example.routing.yml for the
+ * corresponding implementation.
  *
  * The Contact class defines methods and fields for the contact entity.
  *
@@ -138,23 +146,9 @@ class Contact extends ContentEntityBase implements ContactInterface {
    */
   public static function preCreate(EntityStorageInterface $storage_controller, array &$values) {
     parent::preCreate($storage_controller, $values);
-    $values += array(
+    $values += [
       'user_id' => \Drupal::currentUser()->id(),
-    );
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  public function getCreatedTime() {
-    return $this->get('created')->value;
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  public function getChangedTime() {
-    return $this->get('changed')->value;
+    ];
   }
 
   /**
@@ -217,68 +211,42 @@ class Contact extends ContentEntityBase implements ContactInterface {
     $fields['name'] = BaseFieldDefinition::create('string')
       ->setLabel(t('Name'))
       ->setDescription(t('The name of the Contact entity.'))
-      ->setSettings(array(
+      ->setSettings([
         'max_length' => 255,
         'text_processing' => 0,
-      ))
+      ])
       // Set no default value.
       ->setDefaultValue(NULL)
-      ->setDisplayOptions('view', array(
+      ->setDisplayOptions('view', [
         'label' => 'above',
         'type' => 'string',
         'weight' => -6,
-      ))
-      ->setDisplayOptions('form', array(
+      ])
+      ->setDisplayOptions('form', [
         'type' => 'string_textfield',
         'weight' => -6,
-      ))
+      ])
       ->setDisplayConfigurable('form', TRUE)
       ->setDisplayConfigurable('view', TRUE);
 
     $fields['first_name'] = BaseFieldDefinition::create('string')
       ->setLabel(t('First Name'))
       ->setDescription(t('The first name of the Contact entity.'))
-      ->setSettings(array(
+      ->setSettings([
         'max_length' => 255,
         'text_processing' => 0,
-      ))
+      ])
       // Set no default value.
       ->setDefaultValue(NULL)
-      ->setDisplayOptions('view', array(
+      ->setDisplayOptions('view', [
         'label' => 'above',
         'type' => 'string',
         'weight' => -5,
-      ))
-      ->setDisplayOptions('form', array(
+      ])
+      ->setDisplayOptions('form', [
         'type' => 'string_textfield',
         'weight' => -5,
-      ))
-      ->setDisplayConfigurable('form', TRUE)
-      ->setDisplayConfigurable('view', TRUE);
-
-    // Gender field for the contact.
-    // ListTextType with a drop down menu widget.
-    // The values shown in the menu are 'male' and 'female'.
-    // In the view the field content is shown as string.
-    // In the form the choices are presented as options list.
-    $fields['gender'] = BaseFieldDefinition::create('list_string')
-      ->setLabel(t('Gender'))
-      ->setDescription(t('The gender of the Contact entity.'))
-      ->setSettings(array(
-        'allowed_values' => array(
-          'female' => 'female',
-          'male' => 'male',
-        ),
-      ))
-      ->setDisplayOptions('view', array(
-        'label' => 'above',
-        'type' => 'string',
-        'weight' => -4,
-      ))
-      ->setDisplayOptions('form', array(
-        'type' => 'options_select',
-        'weight' => -4,
-      ))
+      ])
       ->setDisplayConfigurable('form', TRUE)
       ->setDisplayConfigurable('view', TRUE);
 
@@ -291,20 +259,20 @@ class Contact extends ContentEntityBase implements ContactInterface {
       ->setDescription(t('The Name of the associated user.'))
       ->setSetting('target_type', 'user')
       ->setSetting('handler', 'default')
-      ->setDisplayOptions('view', array(
+      ->setDisplayOptions('view', [
         'label' => 'above',
         'type' => 'author',
         'weight' => -3,
-      ))
-      ->setDisplayOptions('form', array(
+      ])
+      ->setDisplayOptions('form', [
         'type' => 'entity_reference_autocomplete',
-        'settings' => array(
+        'settings' => [
           'match_operator' => 'CONTAINS',
           'size' => 60,
           'placeholder' => '',
-        ),
+        ],
         'weight' => -3,
-      ))
+      ])
       ->setDisplayConfigurable('form', TRUE)
       ->setDisplayConfigurable('view', TRUE);
 
@@ -313,23 +281,23 @@ class Contact extends ContentEntityBase implements ContactInterface {
     $fields['role'] = BaseFieldDefinition::create('list_string')
       ->setLabel(t('Role'))
       ->setDescription(t('The role of the Contact entity.'))
-      ->setSettings(array(
-        'allowed_values' => array(
+      ->setSettings([
+        'allowed_values' => [
           'administrator' => 'administrator',
           'user' => 'user',
-        ),
-      ))
+        ],
+      ])
       // Set the default value of this field to 'user'.
       ->setDefaultValue('user')
-      ->setDisplayOptions('view', array(
+      ->setDisplayOptions('view', [
         'label' => 'above',
         'type' => 'string',
         'weight' => -2,
-      ))
-      ->setDisplayOptions('form', array(
+      ])
+      ->setDisplayOptions('form', [
         'type' => 'options_select',
         'weight' => -2,
-      ))
+      ])
       ->setDisplayConfigurable('form', TRUE)
       ->setDisplayConfigurable('view', TRUE);
 
