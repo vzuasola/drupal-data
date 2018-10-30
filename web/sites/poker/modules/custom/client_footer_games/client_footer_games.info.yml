@@ -1,0 +1,5 @@
+name: Client Footer Games
+type: module
+description: To list client casino footer games
+core: 8.x
+package: Custom

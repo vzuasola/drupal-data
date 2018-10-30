@@ -9,8 +9,8 @@ id: node.games.field_game_code
 field_name: field_game_code
 entity_type: node
 bundle: games
-label: 'Game Code (Playtech)'
-description: 'Fill in the game code for playtech live dealer game'
+label: 'Game Code (Playtech & SA Gaming)'
+description: 'Fill out the game code for Playtech & SA gaming.'
 required: false
 translatable: true
 default_value: {  }

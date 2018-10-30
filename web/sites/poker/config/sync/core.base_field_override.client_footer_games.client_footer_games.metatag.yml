@@ -1,0 +1,18 @@
+uuid: a97a18ba-b1b9-4ed4-979c-23910ebd481d
+langcode: en
+status: true
+dependencies:
+  module:
+    - client_footer_games
+id: client_footer_games.client_footer_games.metatag
+field_name: metatag
+entity_type: client_footer_games
+bundle: client_footer_games
+label: Metatags
+description: 'The metatags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

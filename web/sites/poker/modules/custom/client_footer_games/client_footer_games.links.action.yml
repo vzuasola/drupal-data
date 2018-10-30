@@ -1,0 +1,5 @@
+entity.client_footer_games.add_form:
+  route_name: entity.client_footer_games.add_form
+  title: 'Add Client footer games'
+  appears_on:
+    - entity.client_footer_games.collection

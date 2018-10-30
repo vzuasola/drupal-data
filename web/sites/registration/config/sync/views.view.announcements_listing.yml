@@ -3,9 +3,12 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.storage.announcement_entity.field_publish_date
+    - field.storage.announcement_entity.field_unpublish_date
     - user.role.administrator
     - user.role.authenticated
   module:
+    - datetime
     - user
     - webcomposer_announcements
 _core:
@@ -605,6 +608,7 @@ display:
               anonymous: '0'
               administrator: '0'
               e: '0'
+            placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -682,14 +686,16 @@ display:
       arguments: {  }
       display_extenders: {  }
     cache_metadata:
-      max-age: 0
+      max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
         - url.query_args
         - user.roles
-      tags: {  }
+      tags:
+        - 'config:field.storage.announcement_entity.field_publish_date'
+        - 'config:field.storage.announcement_entity.field_unpublish_date'
   page_1:
     display_plugin: page
     id: page_1
@@ -699,11 +705,13 @@ display:
       display_extenders: {  }
       path: admin/config/webcomposer/announcements/announcement_entity
     cache_metadata:
-      max-age: 0
+      max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
         - url.query_args
         - user.roles
-      tags: {  }
+      tags:
+        - 'config:field.storage.announcement_entity.field_publish_date'
+        - 'config:field.storage.announcement_entity.field_unpublish_date'

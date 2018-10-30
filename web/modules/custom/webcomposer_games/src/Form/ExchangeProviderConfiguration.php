@@ -60,8 +60,8 @@ class ExchangeProviderConfiguration extends FormBase {
 
     $form['gen_config']['exchange_game_url'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('Desktop Url Parameters'),
-      '#description' => $this->t('Defines the exchange Url Parameters'),
+      '#title' => $this->t('Desktop URL Parameters'),
+      '#description' => $this->t('Defines the Exchange URL Parameters'),
       '#default_value' => $this->get('exchange_game_url'),
       '#required' => false,
       '#translatable' => TRUE,
@@ -70,7 +70,7 @@ class ExchangeProviderConfiguration extends FormBase {
     $form['gen_config']['exchange_tablet_url'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Tablet Transaction Domain'),
-      '#description' => $this->t('Defines the exchange Tablet Url'),
+      '#description' => $this->t('Defines the Exchange Tablet URL'),
       '#default_value' => $this->get('exchange_tablet_url'),
       '#required' => false,
       '#translatable' => TRUE,
@@ -78,8 +78,8 @@ class ExchangeProviderConfiguration extends FormBase {
 
     $form['gen_config']['tablet_game_url'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('Defines the exchange Tablet Url'),
-      '#description' => $this->t('Defines the Tablet Url Parameters'),
+      '#title' => $this->t('Defines the exchange Tablet URL'),
+      '#description' => $this->t('Defines the Tablet URL Parameters'),
       '#default_value' => $this->get('tablet_game_url'),
       '#required' => false,
       '#translatable' => TRUE,
@@ -100,8 +100,8 @@ class ExchangeProviderConfiguration extends FormBase {
 
     $form['gen_config']['currency'] = [
       '#type' => 'textarea',
-      '#title' => $this->t('Currency'),
-      '#description' => $this->t('Define the curency for exchange games.'),
+      '#title' => $this->t('Supported Currencies'),
+      '#description' => $this->t('Define the supported curencies for Exchange.'),
       '#default_value' => $this->get('currency'),
       '#required' => false,
       '#translatable' => TRUE,
@@ -109,8 +109,8 @@ class ExchangeProviderConfiguration extends FormBase {
 
     $form['gen_config']['country'] = [
       '#type' => 'textarea',
-      '#title' => $this->t('Country'),
-      '#description' => $this->t('Define the Unsupported Country code for Asia Gaming games.'),
+      '#title' => $this->t('Supported Countries'),
+      '#description' => $this->t('Define the supported countries for Exchange.'),
       '#default_value' => $this->get('country'),
       '#required' => false,
       '#translatable' => TRUE,
