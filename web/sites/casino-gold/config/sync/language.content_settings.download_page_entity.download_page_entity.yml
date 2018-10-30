@@ -1,0 +1,17 @@
+uuid: 0776aff9-5ed9-4e5b-85be-d73c9d0c8e49
+langcode: zh-hans
+status: true
+dependencies:
+  module:
+    - content_translation
+    - download_page
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: download_page_entity.download_page_entity
+target_entity_type_id: download_page_entity
+target_bundle: download_page_entity
+default_langcode: site_default
+language_alterable: true

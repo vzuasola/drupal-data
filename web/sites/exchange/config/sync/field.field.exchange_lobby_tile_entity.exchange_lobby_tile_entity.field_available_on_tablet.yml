@@ -1,0 +1,24 @@
+uuid: 3b466573-7498-4f9f-b3ac-b4c2ae0f8e71
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.exchange_lobby_tile_entity.field_available_on_tablet
+  module:
+    - exchange_lobby_tile
+id: exchange_lobby_tile_entity.exchange_lobby_tile_entity.field_available_on_tablet
+field_name: field_available_on_tablet
+entity_type: exchange_lobby_tile_entity
+bundle: exchange_lobby_tile_entity
+label: 'Available on Tablet'
+description: 'Check if content will be available on Tablet'
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

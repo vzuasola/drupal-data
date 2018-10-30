@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.poker_client_promotions.poker_client_promotions.field_promotion_image
     - field.field.poker_client_promotions.poker_client_promotions.field_publish
+    - field.field.poker_client_promotions.poker_client_promotions.field_ribbon_configuration
     - field.field.poker_client_promotions.poker_client_promotions.field_url
     - image.style.thumbnail
   module:
@@ -30,6 +31,12 @@ content:
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
+  field_ribbon_configuration:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_url:
     weight: 2
     settings:
@@ -54,7 +61,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 4
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
