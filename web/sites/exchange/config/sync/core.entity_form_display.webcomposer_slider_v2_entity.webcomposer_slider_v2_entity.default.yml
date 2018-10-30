@@ -3,6 +3,8 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_available_on_desktop
+    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_available_on_tablet
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_banner_blurb
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_banner_image
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_banner_link
@@ -36,7 +38,7 @@ third_party_settings:
         - field_publish_date
         - field_unpublish_date
       parent_name: ''
-      weight: 6
+      weight: 5
       format_type: tab
       format_settings:
         id: ''
@@ -53,7 +55,7 @@ third_party_settings:
         - field_banner_blurb
         - field_content_position
       parent_name: ''
-      weight: 4
+      weight: 3
       format_type: fieldset
       format_settings:
         id: ''
@@ -69,7 +71,7 @@ third_party_settings:
         - field_post_banner_blurb
         - field_post_content_position
       parent_name: ''
-      weight: 5
+      weight: 4
       format_type: fieldset
       format_settings:
         id: ''
@@ -80,8 +82,20 @@ third_party_settings:
     group_display_statuses:
       children:
         - field_status
-        - field_disable_in_tablet
         - field_preview_display_only
+      parent_name: ''
+      weight: 7
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Display Statuses'
+    group_content_availability:
+      children:
+        - field_available_on_desktop
+        - field_available_on_tablet
       parent_name: ''
       weight: 20
       format_type: fieldset
@@ -90,7 +104,7 @@ third_party_settings:
         classes: ''
         description: ''
         required_fields: true
-      label: 'Display Statuses'
+      label: 'Content Availability'
 _core:
   default_config_hash: grNge8IdAFipcGU_JTCGQyYAXWDj5WKraQLVYoMygN8
 id: webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.default
@@ -98,6 +112,20 @@ targetEntityType: webcomposer_slider_v2_entity
 bundle: webcomposer_slider_v2_entity
 mode: default
 content:
+  field_available_on_desktop:
+    weight: 9
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_available_on_tablet:
+    weight: 10
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
   field_banner_blurb:
     weight: 6
     settings:
@@ -223,13 +251,6 @@ content:
           entity_type: webcomposer_slider_v2_entity
           bundle: webcomposer_slider_v2_entity
     type: options_select
-    region: content
-  field_disable_in_tablet:
-    weight: 18
-    settings:
-      display_label: true
-    third_party_settings: {  }
-    type: boolean_checkbox
     region: content
   field_log_in_state:
     weight: 1
@@ -405,10 +426,11 @@ content:
       include_locked: true
     third_party_settings: {  }
   translation:
-    weight: 10
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_disable_in_tablet: true
   name: true
   user_id: true

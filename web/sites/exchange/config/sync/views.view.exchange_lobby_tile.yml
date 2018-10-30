@@ -3,7 +3,11 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.storage.exchange_lobby_tile_entity.field_available_on_desktop
+    - field.storage.exchange_lobby_tile_entity.field_available_on_tablet
     - field.storage.exchange_lobby_tile_entity.field_log_in_state
+    - field.storage.exchange_lobby_tile_entity.field_preview_display_only
+    - field.storage.exchange_lobby_tile_entity.field_status
     - field.storage.exchange_lobby_tile_entity.field_tile_image
     - field.storage.exchange_lobby_tile_entity.field_title
     - image.style.thumbnail
@@ -382,6 +386,26 @@ display:
           entity_type: exchange_lobby_tile_entity
           entity_field: id
           plugin_id: draggable_views_field
+        field_available_on_desktop:
+          id: field_available_on_desktop
+          table: exchange_lobby_tile_entity__field_available_on_desktop
+          field: field_available_on_desktop
+          plugin_id: field
+        field_available_on_tablet:
+          id: field_available_on_tablet
+          table: exchange_lobby_tile_entity__field_available_on_tablet
+          field: field_available_on_tablet
+          plugin_id: field
+        field_preview_display_only:
+          id: field_preview_display_only
+          table: exchange_lobby_tile_entity__field_preview_display_only
+          field: field_preview_display_only
+          plugin_id: field
+        field_status:
+          id: field_status
+          table: exchange_lobby_tile_entity__field_status
+          field: field_status
+          plugin_id: field
       filters:
         langcode:
           id: langcode
@@ -448,7 +472,11 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
       tags:
+        - 'config:field.storage.exchange_lobby_tile_entity.field_available_on_desktop'
+        - 'config:field.storage.exchange_lobby_tile_entity.field_available_on_tablet'
         - 'config:field.storage.exchange_lobby_tile_entity.field_log_in_state'
+        - 'config:field.storage.exchange_lobby_tile_entity.field_preview_display_only'
+        - 'config:field.storage.exchange_lobby_tile_entity.field_status'
         - 'config:field.storage.exchange_lobby_tile_entity.field_tile_image'
         - 'config:field.storage.exchange_lobby_tile_entity.field_title'
   page_1:
@@ -468,13 +496,571 @@ display:
         weight: 0
         context: '0'
         menu_name: admin
+      fields:
+        field_title:
+          id: field_title
+          table: exchange_lobby_tile_entity__field_title
+          field: field_title
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_tile_image:
+          id: field_tile_image
+          table: exchange_lobby_tile_entity__field_tile_image
+          field: field_tile_image
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Tile Image'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: image
+          settings:
+            image_style: thumbnail
+            image_link: ''
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_log_in_state:
+          id: field_log_in_state
+          table: exchange_lobby_tile_entity__field_log_in_state
+          field: field_log_in_state
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Log-in State'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: list_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_status:
+          id: field_status
+          table: exchange_lobby_tile_entity__field_status
+          field: field_status
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Status
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: list_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        draggableviews:
+          id: draggableviews
+          table: exchange_lobby_tile_entity_field_data
+          field: draggableviews
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'exchange lobby tile entity'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          action_title: Action
+          include_exclude: exclude
+          selected_actions: {  }
+          entity_type: exchange_lobby_tile_entity
+          entity_field: id
+          plugin_id: draggable_views_field
+        field_preview_display_only:
+          id: field_preview_display_only
+          table: exchange_lobby_tile_entity__field_preview_display_only
+          field: field_preview_display_only
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Preview Display Only'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: boolean
+          settings:
+            format: unicode-yes-no
+            format_custom_true: ''
+            format_custom_false: ''
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_available_on_desktop:
+          id: field_available_on_desktop
+          table: exchange_lobby_tile_entity__field_available_on_desktop
+          field: field_available_on_desktop
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Available on Desktop'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: boolean
+          settings:
+            format: unicode-yes-no
+            format_custom_true: ''
+            format_custom_false: ''
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_available_on_tablet:
+          id: field_available_on_tablet
+          table: exchange_lobby_tile_entity__field_available_on_tablet
+          field: field_available_on_tablet
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Available on Tablet'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: boolean
+          settings:
+            format: unicode-yes-no
+            format_custom_true: ''
+            format_custom_false: ''
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        operations:
+          id: operations
+          table: exchange_lobby_tile_entity
+          field: operations
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Operations links'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          destination: true
+          entity_type: exchange_lobby_tile_entity
+          plugin_id: entity_operations
+      defaults:
+        fields: false
     cache_metadata:
       max-age: 0
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
       tags:
+        - 'config:field.storage.exchange_lobby_tile_entity.field_available_on_desktop'
+        - 'config:field.storage.exchange_lobby_tile_entity.field_available_on_tablet'
         - 'config:field.storage.exchange_lobby_tile_entity.field_log_in_state'
+        - 'config:field.storage.exchange_lobby_tile_entity.field_preview_display_only'
+        - 'config:field.storage.exchange_lobby_tile_entity.field_status'
         - 'config:field.storage.exchange_lobby_tile_entity.field_tile_image'
         - 'config:field.storage.exchange_lobby_tile_entity.field_title'
   rest_export_1:
@@ -521,6 +1107,10 @@ display:
         - 'languages:language_interface'
         - request_format
       tags:
+        - 'config:field.storage.exchange_lobby_tile_entity.field_available_on_desktop'
+        - 'config:field.storage.exchange_lobby_tile_entity.field_available_on_tablet'
         - 'config:field.storage.exchange_lobby_tile_entity.field_log_in_state'
+        - 'config:field.storage.exchange_lobby_tile_entity.field_preview_display_only'
+        - 'config:field.storage.exchange_lobby_tile_entity.field_status'
         - 'config:field.storage.exchange_lobby_tile_entity.field_tile_image'
         - 'config:field.storage.exchange_lobby_tile_entity.field_title'

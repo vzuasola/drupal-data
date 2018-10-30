@@ -3,6 +3,8 @@ langcode: hi
 status: true
 dependencies:
   config:
+    - field.field.exchange_lobby_tile_entity.exchange_lobby_tile_entity.field_available_on_desktop
+    - field.field.exchange_lobby_tile_entity.exchange_lobby_tile_entity.field_available_on_tablet
     - field.field.exchange_lobby_tile_entity.exchange_lobby_tile_entity.field_blurb
     - field.field.exchange_lobby_tile_entity.exchange_lobby_tile_entity.field_button_link
     - field.field.exchange_lobby_tile_entity.exchange_lobby_tile_entity.field_button_link_target
@@ -30,10 +32,9 @@ third_party_settings:
     group_display_statuses:
       children:
         - field_status
-        - field_disable_in_tablet
         - field_preview_display_only
       parent_name: ''
-      weight: 20
+      weight: 13
       format_type: fieldset
       format_settings:
         id: ''
@@ -41,11 +42,38 @@ third_party_settings:
         description: ''
         required_fields: true
       label: 'Display Statuses'
+    group_content_availability:
+      children:
+        - field_available_on_desktop
+        - field_available_on_tablet
+      parent_name: ''
+      weight: 14
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Content Availability'
 id: exchange_lobby_tile_entity.exchange_lobby_tile_entity.default
 targetEntityType: exchange_lobby_tile_entity
 bundle: exchange_lobby_tile_entity
 mode: default
 content:
+  field_available_on_desktop:
+    weight: 16
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_available_on_tablet:
+    weight: 17
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
   field_blurb:
     weight: 6
     settings:
@@ -75,13 +103,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
-    region: content
-  field_disable_in_tablet:
-    weight: 14
-    settings:
-      display_label: true
-    third_party_settings: {  }
-    type: boolean_checkbox
     region: content
   field_enable_game_launching:
     weight: 12
@@ -159,5 +180,6 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_disable_in_tablet: true
   name: true
   user_id: true
