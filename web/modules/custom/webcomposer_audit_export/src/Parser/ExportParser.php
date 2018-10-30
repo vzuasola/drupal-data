@@ -8,7 +8,6 @@ namespace Drupal\webcomposer_audit_export\Parser;
  * @package Webcomposer Domain Import
  */
 class ExportParser {
-
   /**
    * Returns an array of all domain groups, where the index is the primary key `id`.
    *
@@ -17,6 +16,7 @@ class ExportParser {
    */
   public function get_audit_logs($filters = [], $options = []) {
     $storage = \Drupal::service('webcomposer_audit.database_storage');
+
     return $storage->getWithOffset([
       'limit' => 500,
       'offset' => $options['offset'] ?? 0,
@@ -36,6 +36,7 @@ class ExportParser {
    */
   public function get_audit_count($filters = [], $options = []) {
     $storage = \Drupal::service('webcomposer_audit.database_storage');
+
     return $storage->getDistinct('id', [
       'limit' => 20000,
       'where' => $filters,

@@ -117,11 +117,11 @@ class LogsExport {
       }
 
       $this->logsExportCreateExcel($data);
-    }
-    else {
+    } else {
       // An error occurred.
       // $operations contains the operations that remained unprocessed.
       $error_operation = reset($operations);
+
       $messenger->addMessage(
         t('An error occurred while processing @operation with arguments : @args',
           [
@@ -311,8 +311,7 @@ class LogsExport {
   /**
    * Function for setting Audit Log filters
    *
-   * @param array $filters
-   *   - The array entity data.
+   * @param array $filters Database where filter
    */
   public function setAuditFilters($filters) {
     $this->filters = $filters;
