@@ -86,9 +86,9 @@ $sites['mobile-games.drupal.local'] = 'mobile-games';
 $sites['mobile-games.drupal.env'] = 'mobile-games';
 
 // Mobile Casino Revamp instance
-$sites['mobile-games.drupal.dev'] = 'mobile-games';
-$sites['mobile-games.drupal.local'] = 'mobile-games';
-$sites['mobile-games.drupal.env'] = 'mobile-games';
+$sites['mobile-games.drupal.dev'] = 'mobile-casino';
+$sites['mobile-games.drupal.local'] = 'mobile-casino';
+$sites['mobile-games.drupal.env'] = 'mobile-casino';
 
 // Poker revamp instance
 $sites['poker.drupal.local'] = 'poker';
