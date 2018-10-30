@@ -44,7 +44,7 @@ class DownloadPageEntityForm extends ContentEntityForm {
           '%label' => $entity->label(),
         ]));
     }
-    $form_state->setRedirect('entity.download_page_entity.canonical', ['download_page_entity' => $entity->id()]);
+    $form_state->setRedirectUrl($entity->urlInfo('collection'));
   }
 
 }

@@ -27,7 +27,7 @@ class DownloadPageConfigurationForm extends FormBase {
    * {@inheritdoc}
    */
   protected function getEditableConfigNames() {
-    return ['poker_config.download_page'];
+    return ['casino_config.download_page'];
   }
 
   /**

@@ -1,0 +1,21 @@
+uuid: 1b58d547-d003-4200-a192-b55a8fc9d10e
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - field.storage.download_page_entity.field_body
+  module:
+    - download_page
+    - text
+id: download_page_entity.download_page_entity.field_body
+field_name: field_body
+entity_type: download_page_entity
+bundle: download_page_entity
+label: Body
+description: 'The maximum total  width of image/images in one line should not exceed <strong>385px<strong>'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,23 @@
+uuid: 78600322-f2c5-4dd6-aaa5-74c52a1fb95a
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - field.storage.download_page_entity.field_type
+  module:
+    - download_page
+    - options
+id: download_page_entity.download_page_entity.field_type
+field_name: field_type
+entity_type: download_page_entity
+bundle: download_page_entity
+label: Type
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: client
+default_value_callback: ''
+settings: {  }
+field_type: list_string
