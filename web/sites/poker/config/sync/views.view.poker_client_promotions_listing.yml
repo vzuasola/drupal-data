@@ -400,6 +400,53 @@ display:
           entity_type: poker_client_promotions
           entity_field: langcode
           plugin_id: language
+        id:
+          id: id
+          table: poker_client_promotions_field_data
+          field: id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value:
+            min: ''
+            max: ''
+            value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: id_op
+            label: ID
+            description: ''
+            use_operator: false
+            operator: id_op
+            identifier: id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              e: '0'
+            placeholder: ''
+            min_placeholder: ''
+            max_placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: poker_client_promotions
+          entity_field: id
+          plugin_id: numeric
       sorts:
         weight:
           id: weight
@@ -440,6 +487,7 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url
       tags:
         - 'config:field.storage.poker_client_promotions.field_promotion_image'
         - 'config:field.storage.poker_client_promotions.field_publish'
@@ -456,6 +504,7 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url
       tags:
         - 'config:field.storage.poker_client_promotions.field_promotion_image'
         - 'config:field.storage.poker_client_promotions.field_publish'
@@ -477,6 +526,7 @@ display:
         row: false
         filters: false
         filter_groups: false
+        arguments: false
       row:
         type: data_entity
         options: {  }
@@ -562,16 +612,65 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           plugin_id: boolean
+        id:
+          id: id
+          table: poker_client_promotions_field_data
+          field: id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value:
+            min: ''
+            max: ''
+            value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: id_op
+            label: ID
+            description: ''
+            use_operator: false
+            operator: id_op
+            identifier: id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              e: '0'
+            placeholder: ''
+            min_placeholder: ''
+            max_placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: poker_client_promotions
+          entity_field: id
+          plugin_id: numeric
       filter_groups:
         operator: AND
         groups:
           1: AND
+      arguments: {  }
     cache_metadata:
       max-age: 0
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
         - request_format
+        - url
       tags:
         - 'config:field.storage.poker_client_promotions.field_promotion_image'
         - 'config:field.storage.poker_client_promotions.field_publish'
