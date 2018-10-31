@@ -11,7 +11,7 @@ bundle: downloadable_entity
 label: 'Authored by'
 description: 'The user ID of author of the Downloadable entity entity.'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
