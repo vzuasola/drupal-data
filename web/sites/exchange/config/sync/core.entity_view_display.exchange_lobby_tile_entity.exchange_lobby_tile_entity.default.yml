@@ -3,6 +3,8 @@ langcode: hi
 status: true
 dependencies:
   config:
+    - field.field.exchange_lobby_tile_entity.exchange_lobby_tile_entity.field_available_on_desktop
+    - field.field.exchange_lobby_tile_entity.exchange_lobby_tile_entity.field_available_on_tablet
     - field.field.exchange_lobby_tile_entity.exchange_lobby_tile_entity.field_blurb
     - field.field.exchange_lobby_tile_entity.exchange_lobby_tile_entity.field_button_link
     - field.field.exchange_lobby_tile_entity.exchange_lobby_tile_entity.field_button_link_target
@@ -30,6 +32,26 @@ targetEntityType: exchange_lobby_tile_entity
 bundle: exchange_lobby_tile_entity
 mode: default
 content:
+  field_available_on_desktop:
+    weight: 16
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_available_on_tablet:
+    weight: 15
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
   field_blurb:
     weight: 1
     label: above
