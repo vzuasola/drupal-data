@@ -261,7 +261,7 @@ class JamboreeLoginConfigForm extends FormBase {
       '#title' => t('Change Password Form Title'),
       '#default_value' => $default_form_title,
       '#description' => $this->t('Current Password Form Title'),
-      '#translatable' => FALSE,
+      '#translatable' => TRUE,
     ];
 
     $default_current_password = $this->get('change_pass_current_password');
@@ -270,7 +270,7 @@ class JamboreeLoginConfigForm extends FormBase {
       '#title' => t('Current Password Field Label'),
       '#default_value' => $default_current_password,
       '#description' => $this->t('Current Password Field Label'),
-      '#translatable' => FALSE,
+      '#translatable' => TRUE,
     ];
 
     $default_new_password = $this->get('change_pass_new_password');
