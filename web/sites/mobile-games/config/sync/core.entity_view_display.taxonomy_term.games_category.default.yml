@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.taxonomy_term.games_category.field_games_alias
+    - field.field.taxonomy_term.games_category.field_games_category_logo
     - field.field.taxonomy_term.games_category.field_games_disable
     - field.field.taxonomy_term.games_category.field_isordinarycategory
     - field.field.taxonomy_term.games_category.field_publish_date
@@ -11,6 +12,7 @@ dependencies:
     - taxonomy.vocabulary.games_category
   module:
     - datetime
+    - image
     - text
 id: taxonomy_term.games_category.default
 targetEntityType: taxonomy_term
@@ -31,6 +33,15 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_games_category_logo:
+    weight: 6
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
     region: content
   field_games_disable:
     weight: 2
