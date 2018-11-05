@@ -1,0 +1,18 @@
+uuid: c0bc8ad6-9bc7-47ef-ab5e-3667c008e3ed
+langcode: en
+status: true
+dependencies:
+  module:
+    - exchange_lobby_tile
+id: exchange_lobby_tile_entity.field_available_on_desktop
+field_name: field_available_on_desktop
+entity_type: exchange_lobby_tile_entity
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

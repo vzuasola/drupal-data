@@ -1,0 +1,24 @@
+uuid: b53ff9d3-c87e-43c8-9e99-ab02b5fc1d51
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.exchange_lobby_tile_entity.field_available_on_desktop
+  module:
+    - exchange_lobby_tile
+id: exchange_lobby_tile_entity.exchange_lobby_tile_entity.field_available_on_desktop
+field_name: field_available_on_desktop
+entity_type: exchange_lobby_tile_entity
+bundle: exchange_lobby_tile_entity
+label: 'Available on Desktop'
+description: 'Check if content will be available on Desktop'
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

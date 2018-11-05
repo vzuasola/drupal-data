@@ -13,7 +13,7 @@ entity_type: exchange_lobby_tile_entity
 bundle: exchange_lobby_tile_entity
 label: Status
 description: ''
-required: false
+required: true
 translatable: false
 default_value:
   -
