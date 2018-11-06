@@ -20,24 +20,24 @@ poker_config.add_form:
   appears_on:
       - view.featured_tiles.page_2
 
-poker_config.add_client_game:
-  route_name: 'node.add'
-  title: 'Add Client Casino Games'
-  route_parameters:
-      node_type: 'client_casino_games'
-  options:
-      query:
-          destination: '/admin/content/client/game-list-sort'
-  appears_on:
-      - view.client_casino_games_listing.page_1
+# poker_config.add_client_game:
+#   route_name: 'node.add'
+#   title: 'Add Client Casino Games'
+#   route_parameters:
+#       node_type: 'client_casino_games'
+#   options:
+#       query:
+#           destination: '/admin/content/client/game-list-sort'
+#   appears_on:
+#       - view.client_casino_games_listing.page_1
 
-poker_config.add_client_category:
-  route_name: 'entity.taxonomy_term.add_form'
-  title: 'Add Client Category'
-  route_parameters:
-      taxonomy_vocabulary: 'client_casino_category'
-  options:
-      query:
-          destination: '/admin/config/client/category-manage'
-  appears_on:
-      - view.client_casino_category_icon.page_1
+# poker_config.add_client_category:
+#   route_name: 'entity.taxonomy_term.add_form'
+#   title: 'Add Client Category'
+#   route_parameters:
+#       taxonomy_vocabulary: 'client_casino_category'
+#   options:
+#       query:
+#           destination: '/admin/config/client/category-manage'
+#   appears_on:
+#       - view.client_casino_category_icon.page_1
