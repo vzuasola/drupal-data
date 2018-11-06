@@ -113,7 +113,7 @@ class LogsExport {
       $data['logs'] = $header;
 
       foreach ($results as $result) {
-        $data['logs'] = array_merge($data['logs'], $result['data']['logs']); 
+        $data['logs'] = array_merge($data['logs'], $result['data']['logs']);
       }
 
       $this->logsExportCreateExcel($data);
