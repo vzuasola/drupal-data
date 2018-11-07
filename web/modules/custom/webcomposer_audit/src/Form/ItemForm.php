@@ -286,25 +286,25 @@ class ItemForm extends FormBase {
    */
   private function getLineChangesFromEntity($entity) {
     $map = [];
-    $entityType = FALSE;
+    $entityType = "";
 
-    // checking if entity is present. this condition is needed for
-    // add and delete of logs with support of custom config and
-    // entity related format text
+    /**
+     * checking if entity is present. this condition is needed for
+     * add and delete of logs with support of custom config and
+     * entity related format text
+     */
     if ($entity instanceof Entity) {
       $entityType = $entity->getEntityTypeId();
     }
 
     foreach ($entity as $key => $value) {
       if ($value instanceof TypedDataInterface) {
-        if (is_array($value->getValue())) {
-          if ($entityType === "config") {
-            $map[$value->getName()] = $value->getValue()['value'];
-          } else {
-            $map[$value->getName()] = $value->getValue();
-          }
-        } else {
-          $map[$value->getName()] = $value->getString();
+        $map[$value->getName()] = $value->getString();
+
+        // checking if the format text area is under custom config
+        if (is_array($value->getValue()) && $entityType === "config") {
+          // mapping for format text area of custom config
+          $map[$value->getName()] = $value->getValue()['value'];
         }
       } elseif ($value instanceof EntityInterface) {
         $map[$key] = $this->getLineChangesFromEntity($value->toArray());
