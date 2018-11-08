@@ -91,6 +91,9 @@ class ExportForm extends FormBase {
       '#date_date_format' => OverviewForm::DATE_FORMAT,
       '#prefix' => '<div class="js-form-item form-item js-form-type-select form-type-select js-form-item-uid form-item-uid">',
       '#suffix' => '</div>',
+      '#attributes' => [
+        'style' =>'width: 100%;',
+      ],
     ];
 
     $form['filters']['wrapper']['date']['date_end'] = [
@@ -102,6 +105,9 @@ class ExportForm extends FormBase {
       '#date_date_format' => OverviewForm::DATE_FORMAT,
       '#prefix' => '<div class="js-form-item form-item js-form-type-select form-type-select js-form-item-uid form-item-uid">',
       '#suffix' => '</div>',
+      '#attributes' => [
+        'style' =>'width: 100%;',
+      ],
     ];
 
     $form['filters']['wrapper']['date']['date_picker'] = [
