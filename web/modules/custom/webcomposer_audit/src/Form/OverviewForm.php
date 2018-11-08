@@ -419,7 +419,7 @@ class OverviewForm extends FormBase {
       $date_start = (isset($_SESSION['webcomposer_audit_filter']['date_start'])) ?
         strtotime($_SESSION['webcomposer_audit_filter']['date_start']) : null;
       $date_end = (isset($_SESSION['webcomposer_audit_filter']['date_end'])) ?
-        strtotime($_SESSION['webcomposer_audit_filter']['date_end']) : null;
+         strtotime($_SESSION['webcomposer_audit_filter']['date_end'] . ' 23:59:59'): null;
 
       if ($date_start && $date_end) {
         return [
