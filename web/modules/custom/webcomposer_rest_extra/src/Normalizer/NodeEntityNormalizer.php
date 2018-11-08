@@ -31,6 +31,11 @@ class NodeEntityNormalizer extends ContentEntityNormalizer {
     $entityData = $entity->toArray();
     $attributes = parent::normalize($entity, $format, $context);
 
+    $exposedFilters = [];
+    if (isset($context['view'])) {
+      $exposedFilters = $this->getExposedFilters($context['view']);
+    }
+
     foreach ($entityData as $key => $value) {
       // replace the images src for text formats
       if (isset($value[0]['format'])) {
@@ -52,7 +57,7 @@ class NodeEntityNormalizer extends ContentEntityNormalizer {
 
           case 'taxonomy_term':
             foreach ($value as $id => $item) {
-              $term = $this->loadTermById($item['target_id']);
+              $term = $this->loadTermById($item['target_id'], $entityData, $exposedFilters);
 
               if ($term === false) {
                 unset($attributes[$key][$id]);
@@ -107,7 +112,7 @@ class NodeEntityNormalizer extends ContentEntityNormalizer {
   /**
    * Load terms by taxonomy ID
    */
-  private function loadTermById($tid) {
+  private function loadTermById($tid, $entityData = [], $exposedFilters = []) {
     $lang = \Drupal::languageManager()->getCurrentLanguage(\Drupal\Core\Language\LanguageInterface::TYPE_CONTENT)->getId();
     $term = \Drupal\taxonomy\Entity\Term::load($tid);
 
@@ -125,6 +130,29 @@ class NodeEntityNormalizer extends ContentEntityNormalizer {
         if ($setting['target_type'] == 'file') {
           $field_array = array_merge($translatedArray[$field][0], $this->loadFileById($item[0]['target_id']));
           $translatedArray[$field] = $field_array;
+        }
+      }
+    }
+
+    if (isset($translatedArray['vid'][0]['target_id']) &&
+      isset($entityData['nid'][0]['value'])
+    ) {
+      $nid = $entityData['nid'][0]['value'];
+      $vid = $translatedArray['vid'][0]['target_id'];
+
+      foreach ($exposedFilters as $key => $value) {
+        if ($value['vid'] === $vid) {
+          $weight = \Drupal::service('webcomposer_rest_extra.draggable_views_weight')->getWeight(
+            $value['view_id'],
+            $value['display_id'],
+            [
+              $value['identifier'] => $tid,
+              'language' => $lang,
+            ],
+            $nid
+          );
+
+          $translatedArray['field_draggable_views'][$value['identifier']] = $weight;
         }
       }
     }
@@ -180,5 +208,29 @@ class NodeEntityNormalizer extends ContentEntityNormalizer {
     $result[] = $fileArray;
 
     return $result;
+  }
+
+  private function getExposedFilters($originalView) {
+    $filterSet = [];
+    $lang = \Drupal::languageManager()->getCurrentLanguage(\Drupal\Core\Language\LanguageInterface::TYPE_CONTENT)->getId();
+
+    $view = clone $originalView;
+
+    foreach ($view->storage->get('display') as $filterId => $filterValue) {
+      $view->setDisplay($filterId);
+      $filters = $view->display_handler->getOption('filters');
+
+      foreach ($filters as $key => $value) {
+        if (isset($value['exposed']) && $value['exposed']) {
+          $value['view_id'] = $view->id();
+          $value['display_id'] = $filterId;
+          $value['identifier'] = $value['expose']['identifier'];
+
+          $filterSet[] = $value;
+        }
+      }
+    }
+
+    return $filterSet;
   }
 }
