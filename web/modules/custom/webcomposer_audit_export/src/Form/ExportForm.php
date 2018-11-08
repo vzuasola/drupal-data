@@ -4,7 +4,6 @@ namespace Drupal\webcomposer_audit_export\Form;
 
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\Core\Datetime\DrupalDateTime;
 
 use Drupal\webcomposer_audit\Form\OverviewForm;
 
@@ -12,9 +11,6 @@ use Drupal\webcomposer_audit\Form\OverviewForm;
  * Contribute form.
  */
 class ExportForm extends FormBase {
-  const BATCH_COUNT = 200;
-
-
   /**
    * logsExport object.
    *
@@ -60,7 +56,7 @@ class ExportForm extends FormBase {
    *
    */
   private function buildFilterForm(array &$form, FormStateInterface $form_state) {
-    $date = date(OverviewForm::DATE_FORMAT . ' ' . OverviewForm::TIME_FORMAT);
+    $date = date(OverviewForm::DATE_FORMAT);
 
     $form['filters'] = [
       '#type' => 'details',
@@ -88,24 +84,22 @@ class ExportForm extends FormBase {
 
     $form['filters']['wrapper']['date']['date_start'] = [
       '#title' => 'Start Date',
-      '#type' => 'datetime',
+      '#type' => 'date',
       '#size' => 20,
       '#description' => 'Sample format: ' . $date,
       '#default_value' => $this->getDateValue('date_start'),
       '#date_date_format' => OverviewForm::DATE_FORMAT,
-      '#date_time_format' => OverviewForm::TIME_FORMAT,
       '#prefix' => '<div class="js-form-item form-item js-form-type-select form-type-select js-form-item-uid form-item-uid">',
       '#suffix' => '</div>',
     ];
 
     $form['filters']['wrapper']['date']['date_end'] = [
       '#title' => 'End Date',
-      '#type' => 'datetime',
+      '#type' => 'date',
       '#size' => 20,
       '#description' => 'Sample format: ' . $date,
       '#default_value' => $this->getDateValue('date_end'),
       '#date_date_format' => OverviewForm::DATE_FORMAT,
-      '#date_time_format' => OverviewForm::TIME_FORMAT,
       '#prefix' => '<div class="js-form-item form-item js-form-type-select form-type-select js-form-item-uid form-item-uid">',
       '#suffix' => '</div>',
     ];
@@ -159,11 +153,9 @@ class ExportForm extends FormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    $format = OverviewForm::DATE_FORMAT . ' ' . OverviewForm::TIME_FORMAT;
-
     foreach (OverviewForm::FILTER_DATE_KEYS as $key) {
-      if (is_object($form_state->getValue($key))) {
-        $_SESSION['webcomposer_audit_export_filter'][$key] = $form_state->getValue($key)->format($format);
+      if (!empty($form_state->getValue($key))) {
+        $_SESSION['webcomposer_audit_export_filter'][$key] = $form_state->getValue($key);
       } else {
         // Delete the session
         unset($_SESSION['webcomposer_audit_export_filter'][$key]);
@@ -179,39 +171,9 @@ class ExportForm extends FormBase {
       }
     }
 
+    // Triggered element: $form_state->getTriggeringElement()['#id']
     $this->logsExport->setAuditFilters($this->getAllFilters());
-
-    $batch = $this->generateExportBatch();
-    batch_set($batch);
-  }
-
-  /**
-   * Export Batch Function
-   */
-  public function generateExportBatch() {
-    $logsDistinct = $this->logsExport->logsCount();
-
-    $batchNum = self::BATCH_COUNT;
-    $num_operations = intval(ceil($logsDistinct / $batchNum));
-
-    $this->messenger()->addMessage($this->t('Exporting Audit Logs'));
-
-    $operations = [];
-
-    for ($i = 0; $i < $num_operations; $i++) {
-      $operations[] = [
-        [$this->logsExport, 'logsExportExcel'],
-        [$i],
-      ];
-    }
-
-    $batch = [
-      'title' => $this->t('Exporting Audit Logs'),
-      'operations' => $operations,
-      'finished' => [$this->logsExport, 'logExportBatchFinished'],
-    ];
-
-    return $batch;
+    $this->logsExport->logsExportExcel();
   }
 
   /**
@@ -226,8 +188,10 @@ class ExportForm extends FormBase {
    */
   private function getDateValue($field) {
     if (isset($_SESSION['webcomposer_audit_export_filter'][$field])) {
-      return new DrupalDateTime($_SESSION['webcomposer_audit_export_filter'][$field]);
+      return new \Drupal\Core\Datetime\DrupalDateTime($_SESSION['webcomposer_audit_export_filter'][$field]);
     }
+
+    return '';
   }
 
   /**

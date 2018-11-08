@@ -170,22 +170,20 @@ class OverviewForm extends FormBase {
 
     $form['filters']['wrapper']['date']['date_start'] = [
       '#title' => 'Start Date',
-      '#type' => 'datetime',
+      '#type' => 'date',
       '#size' => 20,
       '#default_value' => $this->getDateValue('date_start'),
       '#date_date_format' => self::DATE_FORMAT,
-      '#date_time_format' => self::TIME_FORMAT,
       '#prefix' => '<div class="js-form-item form-item js-form-type-select form-type-select js-form-item-uid form-item-uid">',
       '#suffix' => '</div>',
     ];
 
     $form['filters']['wrapper']['date']['date_end'] = [
       '#title' => 'End Date',
-      '#type' => 'datetime',
+      '#type' => 'date',
       '#size' => 20,
       '#default_value' => $this->getDateValue('date_end'),
       '#date_date_format' => self::DATE_FORMAT,
-      '#date_time_format' => self::TIME_FORMAT,
       '#prefix' => '<div class="js-form-item form-item js-form-type-select form-type-select js-form-item-uid form-item-uid">',
       '#suffix' => '</div>',
     ];
@@ -375,16 +373,14 @@ class OverviewForm extends FormBase {
       $_SESSION['webcomposer_audit_filter'][$key] = $form_state->getValue($key);
     }
 
-    $format = self::DATE_FORMAT . ' ' . self::TIME_FORMAT;
     foreach (self::FILTER_DATE_KEYS as $key) {
-      if (is_object($form_state->getValue($key))) {
-        $_SESSION['webcomposer_audit_filter'][$key] = $form_state->getValue($key)->format($format);
+      if (!empty($form_state->getValue($key))) {
+        $_SESSION['webcomposer_audit_filter'][$key] = $form_state->getValue($key);
       } else {
         // Delete the session
         unset($_SESSION['webcomposer_audit_filter'][$key]);
       }
     }
-
     foreach (self::FILTER_KEYS_OTHERS as $key) {
       $_SESSION['webcomposer_audit_filter'][$key] = $form_state->getValue($key);
     }
@@ -402,7 +398,7 @@ class OverviewForm extends FormBase {
    */
   private function getDateValue($field) {
     if (isset($_SESSION['webcomposer_audit_filter'][$field])) {
-      return new \Drupal\Core\Datetime\DrupalDateTime($_SESSION['webcomposer_audit_filter'][$field]);
+      return $_SESSION['webcomposer_audit_filter'][$field];
     }
 
     return '';

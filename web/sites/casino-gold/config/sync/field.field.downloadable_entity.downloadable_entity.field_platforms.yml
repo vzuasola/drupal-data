@@ -16,7 +16,7 @@ bundle: downloadable_entity
 label: Platforms
 description: "Select which platform this downloadable asset will automatically trigger a download request. <br/>\r\n<strong>Select none to trigger to all platform.</strong><br/>\r\n<i>NOTE: There is no fool proof way of platform detection on front-end. So browser settings and machine may differ results.</i>"
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

@@ -4,14 +4,17 @@ status: true
 dependencies:
   config:
     - field.field.taxonomy_term.games_category.field_games_alias
+    - field.field.taxonomy_term.games_category.field_games_category_logo
     - field.field.taxonomy_term.games_category.field_games_disable
     - field.field.taxonomy_term.games_category.field_isordinarycategory
     - field.field.taxonomy_term.games_category.field_publish_date
     - field.field.taxonomy_term.games_category.field_unpublish_date
+    - image.style.thumbnail
     - taxonomy.vocabulary.games_category
   module:
     - datetime
     - field_group
+    - image
 third_party_settings:
   field_group:
     group_sc:
@@ -39,6 +42,14 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_games_category_logo:
+    weight: 9
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
     region: content
   field_games_disable:
     weight: 4

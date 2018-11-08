@@ -41,6 +41,7 @@ class HeaderForm extends FormBase {
     $this->sectionLogo($form);
     $this->sectionJoinNow($form);
     $this->sectionLogin($form);
+    $this->sectionCashier($form);
     $this->sectionBalance($form);
     $this->sectionNewtag($form);
     $this->sectionWelcome($form);
@@ -200,6 +201,49 @@ class HeaderForm extends FormBase {
       '#rows' => 1,
       '#required' => TRUE,
       '#translatable' => TRUE,
+    ];
+  }
+
+  /**
+   *
+   */
+  private function sectionCashier(array &$form) {
+    $form['cashier_group'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Cashier'),
+      '#collapsible' => true,
+      '#group' => 'header_settings_tab',
+    ];
+
+    $form['cashier_group']['default_cashier_link'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Default Cashier Link'),
+      '#description' => $this->t('Specify a default cashier link if no one matches the mapping'),
+      '#default_value' => $this->get('default_cashier_link'),
+      '#rows' => 1,
+      '#required' => true,
+      '#translatable' => true,
+    ];
+
+    $form['cashier_group']['cashier_mapping'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Cashier Mapping'),
+      '#description' => $this->t("
+        Define a cashier mapping based on the user's currency and registered country
+        using the format.
+        <br>
+        Use upper case currency and country values (without spaces in between pipes).
+        <br>
+        <strong>currency | country | link</strong>
+        <br><br>
+        Example
+        <br>
+        CNY|CN|http://cashier.dafabet.com/
+      "),
+      '#default_value' => $this->get('cashier_mapping'),
+      '#rows' => 6,
+      '#required' => false,
+      '#translatable' => true,
     ];
   }
 
