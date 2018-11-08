@@ -56,6 +56,14 @@ class GamesSearchForm extends FormBase {
       '#required' => TRUE,
     ];
 
+    $form['search_configuration']['games_transfer_title'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Instant Transfer Title'),
+      '#default_value' => $this->get('games_transfer_title'),
+      '#translatable' => TRUE,
+      '#required' => TRUE,
+    ];
+
     $form['search_configuration']['games_filter_submit'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Filter Submit Button'),
@@ -109,6 +117,14 @@ class GamesSearchForm extends FormBase {
       '#title' => $this->t('Message when No Recommended Games are available.'),
       '#default_value' => $this->get('msg_no_recommended'),
       '#translatable' => TRUE,
+    ];
+
+    $form['search_configuration']['games_transfer_link'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Instant Transfer URL'),
+      '#default_value' => $this->get('games_transfer_link'),
+      '#translatable' => TRUE,
+      '#required' => TRUE,
     ];
 
     $form['search_configuration']['title_weight'] = [

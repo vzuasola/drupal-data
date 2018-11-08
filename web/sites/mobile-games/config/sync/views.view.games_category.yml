@@ -551,7 +551,7 @@ display:
           label: ''
           exclude: false
           alter:
-            alter_text: true
+            alter_text: false
             text: '{{ url(''<front>'') }}{{ field_games_category_logo }}'
             make_link: false
             path: '{{ field_games_category_logo }}'
