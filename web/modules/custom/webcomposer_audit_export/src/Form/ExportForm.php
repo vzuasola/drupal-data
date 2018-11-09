@@ -4,6 +4,7 @@ namespace Drupal\webcomposer_audit_export\Form;
 
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Datetime\DrupalDateTime;
 
 use Drupal\webcomposer_audit\Form\OverviewForm;
 
@@ -11,6 +12,8 @@ use Drupal\webcomposer_audit\Form\OverviewForm;
  * Contribute form.
  */
 class ExportForm extends FormBase {
+  const BATCH_COUNT = 10;
+
   /**
    * logsExport object.
    *
@@ -91,9 +94,6 @@ class ExportForm extends FormBase {
       '#date_date_format' => OverviewForm::DATE_FORMAT,
       '#prefix' => '<div class="js-form-item form-item js-form-type-select form-type-select js-form-item-uid form-item-uid">',
       '#suffix' => '</div>',
-      '#attributes' => [
-        'style' =>'width: 100%;',
-      ],
     ];
 
     $form['filters']['wrapper']['date']['date_end'] = [
@@ -105,9 +105,6 @@ class ExportForm extends FormBase {
       '#date_date_format' => OverviewForm::DATE_FORMAT,
       '#prefix' => '<div class="js-form-item form-item js-form-type-select form-type-select js-form-item-uid form-item-uid">',
       '#suffix' => '</div>',
-      '#attributes' => [
-        'style' =>'width: 100%;',
-      ],
     ];
 
     $form['filters']['wrapper']['date']['date_picker'] = [
@@ -177,9 +174,39 @@ class ExportForm extends FormBase {
       }
     }
 
-    // Triggered element: $form_state->getTriggeringElement()['#id']
     $this->logsExport->setAuditFilters($this->getAllFilters());
-    $this->logsExport->logsExportExcel();
+
+    $batch = $this->generateExportBatch();
+    batch_set($batch);
+  }
+
+  /**
+   * Export Batch Function
+   */
+  public function generateExportBatch() {
+    $logsDistinct = $this->logsExport->logsCount();
+
+    $batchNum = self::BATCH_COUNT;
+    $num_operations = intval(ceil($logsDistinct / $batchNum));
+
+    $this->messenger()->addMessage($this->t('Exporting Audit Logs'));
+
+    $operations = [];
+
+    for ($i = 0; $i < $num_operations; $i++) {
+      $operations[] = [
+        [$this->logsExport, 'logsExportExcel'],
+        [$i],
+      ];
+    }
+
+    $batch = [
+      'title' => $this->t('Exporting Audit Logs'),
+      'operations' => $operations,
+      'finished' => [$this->logsExport, 'logExportBatchFinished'],
+    ];
+
+    return $batch;
   }
 
   /**
@@ -194,10 +221,8 @@ class ExportForm extends FormBase {
    */
   private function getDateValue($field) {
     if (isset($_SESSION['webcomposer_audit_export_filter'][$field])) {
-      return new \Drupal\Core\Datetime\DrupalDateTime($_SESSION['webcomposer_audit_export_filter'][$field]);
+      return new DrupalDateTime($_SESSION['webcomposer_audit_export_filter'][$field]);
     }
-
-    return '';
   }
 
   /**
@@ -230,7 +255,7 @@ class ExportForm extends FormBase {
       $date_start = (isset($_SESSION['webcomposer_audit_export_filter']['date_start'])) ?
         strtotime($_SESSION['webcomposer_audit_export_filter']['date_start']) : null;
       $date_end = (isset($_SESSION['webcomposer_audit_export_filter']['date_end'])) ?
-        strtotime($_SESSION['webcomposer_audit_export_filter']['date_end'] . ' 23:59:59') : null;
+        strtotime($_SESSION['webcomposer_audit_export_filter']['date_end']) : null;
 
       if ($date_start && $date_end) {
         return [
