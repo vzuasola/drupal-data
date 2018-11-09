@@ -1,0 +1,17 @@
+uuid: 054aa3af-3c5e-4dd8-bfcb-7f6b7360c33b
+langcode: en
+status: true
+dependencies:
+  module:
+    - content_translation
+    - promotion_tiles
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: promotion_tiles.promotion_tiles
+target_entity_type_id: promotion_tiles
+target_bundle: promotion_tiles
+default_langcode: site_default
+language_alterable: true

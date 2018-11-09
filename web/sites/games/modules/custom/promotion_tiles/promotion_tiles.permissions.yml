@@ -1,0 +1,22 @@
+add promotion tiles entities:
+  title: 'Create new Promotion tiles entities'
+
+administer promotion tiles entities:
+  title: 'Administer Promotion tiles entities'
+  description: 'Allow to access the administration form to configure Promotion tiles entities.'
+  restrict access: true
+
+delete promotion tiles entities:
+  title: 'Delete Promotion tiles entities'
+
+edit promotion tiles entities:
+  title: 'Edit Promotion tiles entities'
+
+access promotion tiles overview:
+  title: 'Access the Promotion tiles overview page'
+
+view published promotion tiles entities:
+  title: 'View published Promotion tiles entities'
+
+view unpublished promotion tiles entities:
+  title: 'View unpublished Promotion tiles entities'

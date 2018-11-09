@@ -1,0 +1,22 @@
+# Promotion tiles routing definition
+promotion_tiles.settings_tab:
+  route_name: promotion_tiles.settings
+  title: 'Settings'
+  base_route: promotion_tiles.settings
+
+entity.promotion_tiles.canonical:
+  route_name: entity.promotion_tiles.canonical
+  base_route: entity.promotion_tiles.canonical
+  title: 'View'
+
+entity.promotion_tiles.edit_form:
+  route_name: entity.promotion_tiles.edit_form
+  base_route: entity.promotion_tiles.canonical
+  title: 'Edit'
+
+entity.promotion_tiles.delete_form:
+  route_name:  entity.promotion_tiles.delete_form
+  base_route:  entity.promotion_tiles.canonical
+  title: Delete
+  weight: 10
+

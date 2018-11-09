@@ -1,0 +1,5 @@
+entity.promotion_tiles.add_form:
+  route_name: entity.promotion_tiles.add_form
+  title: 'Add Promotion tiles'
+  appears_on:
+    - entity.promotion_tiles.collection

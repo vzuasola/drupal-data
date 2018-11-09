@@ -1,0 +1,295 @@
+uuid: 7696ce80-fbae-4f4d-a978-a4aa237fa9d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.promotion_tiles.promotion_tiles.field_log_in_state
+    - field.field.promotion_tiles.promotion_tiles.field_post_blurb
+    - field.field.promotion_tiles.promotion_tiles.field_post_link_target
+    - field.field.promotion_tiles.promotion_tiles.field_post_promotion_link
+    - field.field.promotion_tiles.promotion_tiles.field_post_tile_image
+    - field.field.promotion_tiles.promotion_tiles.field_pre_blurb
+    - field.field.promotion_tiles.promotion_tiles.field_pre_link_target
+    - field.field.promotion_tiles.promotion_tiles.field_pre_promotion_link
+    - field.field.promotion_tiles.promotion_tiles.field_pre_tile_image
+    - field.field.promotion_tiles.promotion_tiles.field_title
+    - image.style.thumbnail
+  module:
+    - conditional_fields
+    - field_group
+    - image
+    - link
+    - promotion_tiles
+    - text
+third_party_settings:
+  field_group:
+    group_pre_promotion_fields:
+      children:
+        - field_pre_tile_image
+        - field_pre_promotion_link
+        - field_pre_link_target
+        - field_pre_blurb
+      parent_name: ''
+      weight: 3
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Pre Promotion Fields'
+    group_post_promotion_fields:
+      children:
+        - field_post_tile_image
+        - field_post_promotion_link
+        - field_post_link_target
+        - field_post_blurb
+      parent_name: ''
+      weight: 4
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Post Promotion Fields'
+id: promotion_tiles.promotion_tiles.default
+targetEntityType: promotion_tiles
+bundle: promotion_tiles
+mode: default
+content:
+  field_log_in_state:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_post_blurb:
+    weight: 8
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings:
+      conditional_fields:
+        04261d55-412e-4eb2-96ba-7bc5da06cbd7:
+          dependee: field_log_in_state
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: '1'
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: promotion_tiles
+          bundle: promotion_tiles
+    type: text_textarea_with_summary
+    region: content
+  field_post_link_target:
+    weight: 7
+    settings: {  }
+    third_party_settings:
+      conditional_fields:
+        ba70959c-b6bc-4cc6-8404-3724733b7033:
+          dependee: field_log_in_state
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: '1'
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: promotion_tiles
+          bundle: promotion_tiles
+    type: options_select
+    region: content
+  field_post_promotion_link:
+    weight: 6
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings:
+      conditional_fields:
+        565d894b-3f2f-47a5-a8fc-4ac4c8823d72:
+          dependee: field_log_in_state
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: '1'
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: promotion_tiles
+          bundle: promotion_tiles
+    type: link_default
+    region: content
+  field_post_tile_image:
+    weight: 4
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings:
+      conditional_fields:
+        314a08d3-c572-4ee9-ae14-b756b11799d2:
+          dependee: field_log_in_state
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: '1'
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: promotion_tiles
+          bundle: promotion_tiles
+    type: image_image
+    region: content
+  field_pre_blurb:
+    weight: 8
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings:
+      conditional_fields:
+        4727b793-56f0-40ac-9055-2c633d1a1f4b:
+          dependee: field_log_in_state
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: '0'
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: promotion_tiles
+          bundle: promotion_tiles
+    type: text_textarea_with_summary
+    region: content
+  field_pre_link_target:
+    weight: 7
+    settings: {  }
+    third_party_settings:
+      conditional_fields:
+        ad08c4ac-dc3a-4990-9dab-db2db4743ab9:
+          dependee: field_log_in_state
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: '0'
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: promotion_tiles
+          bundle: promotion_tiles
+    type: options_select
+    region: content
+  field_pre_promotion_link:
+    weight: 6
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings:
+      conditional_fields:
+        57bc8fdc-009e-43fa-83a0-4072aac634f3:
+          dependee: field_log_in_state
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: '0'
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: promotion_tiles
+          bundle: promotion_tiles
+    type: link_default
+    region: content
+  field_pre_tile_image:
+    weight: 5
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings:
+      conditional_fields:
+        8c5e515e-1c57-4e6c-a9a4-d7104b63a0fb:
+          dependee: field_log_in_state
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: '0'
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: promotion_tiles
+          bundle: promotion_tiles
+    type: image_image
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  translation:
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  name: true
+  user_id: true

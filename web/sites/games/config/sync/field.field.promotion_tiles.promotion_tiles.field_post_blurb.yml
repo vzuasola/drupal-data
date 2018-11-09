@@ -1,0 +1,22 @@
+uuid: 99f978f9-6959-46a1-843d-9143424e41cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.promotion_tiles.field_post_blurb
+  module:
+    - promotion_tiles
+    - text
+id: promotion_tiles.promotion_tiles.field_post_blurb
+field_name: field_post_blurb
+entity_type: promotion_tiles
+bundle: promotion_tiles
+label: 'Post Blurb'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary
