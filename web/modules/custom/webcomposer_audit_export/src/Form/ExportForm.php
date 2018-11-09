@@ -63,10 +63,10 @@ class ExportForm extends FormBase {
 
     $form['filters'] = [
       '#type' => 'details',
-      '#title' => $this->t('Filter Audit Logs Export'),
+      '#title' => $this->t('Audit Logs Export'),
       '#open' => TRUE,
       '#attributes' => [
-        'style' =>'float: left; width: 100%;',
+        'style' => 'float: left; width: 100%;',
       ],
     ];
 
@@ -75,7 +75,7 @@ class ExportForm extends FormBase {
     ];
 
     $form['filters']['wrapper']['date'] = [
-      '#type' => 'fieldset',
+      '#type' => 'container',
       '#title' => t('Date Filters'),
       '#collapsible' => FALSE,
       '#collapsed' => FALSE,
@@ -119,17 +119,22 @@ class ExportForm extends FormBase {
         $_SESSION['webcomposer_audit_export_filter']['date_picker'] : '-none-',
     ];
 
-
     $form['filters']['wrapper']['actions'] = [
-      '#type' => 'fieldset',
+      '#type' => 'container',
       '#title' => $this->t('Export Audit Logs'),
-      '#description' => $this->t('<ul>
-          <li>Allows you to export audit logs data to a spreadsheet file.</li>
-          <li><b>Reset</b> button fails after a successful <b>Export</b>. Update any
-          filter to reenable <b>Reset</b> button.</li>
-          <li><b>Export</b> button will not refresh the page to generate a spreadsheet
-          file.</li></ul>'),
+      '#attributes' => [
+        'style' => 'float: left; width: 100%; margin-top: 1em; margin-bottom: 1em;',
+      ],
     ];
+
+    // $form['filters']['wrapper']['actions']['label'] = [
+    //   '#type' => 'markup',
+    //   '#markup' => $this->t("
+    //     <p>Allows you to export audit logs data to a spreadsheet file.</p>
+    //     <p><b>Reset</b> button fails after a successful <b>Export</b>. Update any filter to reenable <b>Reset</b> button.</p>
+    //     <p><b>Export</b> button will not refresh the page to generate a spreadsheet file.</p>
+    //   "),
+    // ];
 
     $form['filters']['wrapper']['actions']['reset'] = [
       '#type' => 'submit',
