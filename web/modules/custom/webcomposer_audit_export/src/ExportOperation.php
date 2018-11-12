@@ -44,10 +44,6 @@ class ExportOperation {
     $logsDistinct = $this->storage->getCount([
       'limit' => 20000,
       'where' => $this->filters,
-      'orderby' => [
-        'field' => 'timestamp',
-        'sort' => 'DESC',
-      ],
     ]);
 
     $batchNum = self::BATCH_COUNT;
@@ -79,12 +75,9 @@ class ExportOperation {
   public function logsExportExcel($i, &$context) {
     $offset = $i * 500;
     $data = $this->logsExportGetParsedData($offset);
-    $context['results'][] = ['data' => $data];
 
-    // Update our progress information.
-    $context['message'] = t('Fetching Audit Logs Batch "@id".',
-      ['@id' => $i + 1]
-    );
+    $context['results'][] = ['data' => $data];
+    $context['message'] = t('Fetching Audit Logs Batch "@id".', ['@id' => $i + 1]);
   }
 
   /**
@@ -95,14 +88,10 @@ class ExportOperation {
   private function logsExportGetParsedData($offset) {
     $result = [];
 
-    $logs = $this->storage->getWithOffset([
+    $logs = $this->storage->all([
       'limit' => 500,
       'offset' => $offset,
       'where' => $this->filters,
-      'orderby' => [
-        'field' => 'timestamp',
-        'sort' => 'DESC',
-      ],
     ]);
 
     $result['logs'] = $this->postProcessLogsData($logs);

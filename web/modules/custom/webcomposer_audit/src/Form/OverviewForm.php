@@ -264,6 +264,10 @@ class OverviewForm extends FormBase {
       'header' => $header,
       'where' => $this->getOverviewFilter(),
       'limit' => $this->getPageLimit(),
+      'extend' => [
+        '\Drupal\Core\Database\Query\PagerSelectExtender',
+        '\Drupal\Core\Database\Query\TableSortExtender',
+      ],
     ]);
 
     foreach ($entries as $key => $value) {

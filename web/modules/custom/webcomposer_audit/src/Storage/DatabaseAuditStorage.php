@@ -23,10 +23,13 @@ class DatabaseAuditStorage implements AuditStorageInterface {
    * {@inheritdoc}
    */
   public function all($options = []) {
-    $query = $this->database
-      ->select(self::TABLE, 'w')
-      ->extend('\Drupal\Core\Database\Query\PagerSelectExtender')
-      ->extend('\Drupal\Core\Database\Query\TableSortExtender');
+    $query = $this->database->select(self::TABLE, 'w');
+
+    if (isset($options['extend'])) {
+      foreach ($options['extend'] as $extend) {
+        $query = $query->extend($extend);
+      }
+    }
 
     $query->fields('w', [
       'id',
@@ -67,9 +70,13 @@ class DatabaseAuditStorage implements AuditStorageInterface {
       $query->orderBy($options['orderby']['field'], $options['orderby']['sort']);
     }
 
-    $result = $query
-      ->limit($options['limit'])
-      ->execute();
+    if (isset($options['offset'])) {
+      $query->range($options['offset'], $options['limit']);
+    } else if (isset($options['limit'])) {
+      $query->limit($options['limit']);
+    }
+
+    $result = $query->execute();
 
     return $result;
   }
@@ -118,59 +125,6 @@ class DatabaseAuditStorage implements AuditStorageInterface {
     }
 
     return $data;
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  public function getWithOffset($options = []) {
-    $query = $this->database
-      ->select(self::TABLE, 'w');
-
-    $query->fields('w', [
-      'id',
-      'uid',
-      'type',
-      'eid',
-      'action',
-      'title',
-      'location',
-      'timestamp',
-      'language',
-      'entity',
-    ])->fields('ufd', [
-      'name',
-    ]);
-
-    $query->leftJoin('users_field_data', 'ufd', 'w.uid = ufd.uid');
-
-    if (isset($options['where'])) {
-      foreach ($options['where'] as $key => $value) {
-        if (is_array($value)) {
-          $query->condition("w.$key", $value['value'], $value['operator']);
-        } else {
-          $query->condition("w.$key", "%$value%", 'like');
-        }
-      }
-    }
-
-    if (!isset($options['limit'])) {
-      $options['limit'] = 50;
-    }
-
-    if (!isset($options['offset'])) {
-      $options['offset'] = 0;
-    }
-
-    if (isset($options['orderby'])) {
-      $query->orderBy($options['orderby']['field'], $options['orderby']['sort']);
-    }
-
-    $result = $query
-      ->range($options['offset'], $options['limit'])
-      ->execute();
-
-    return $result;
   }
 
   /**
