@@ -124,7 +124,6 @@ class GamesSearchForm extends FormBase {
       '#title' => $this->t('Instant Transfer URL'),
       '#default_value' => $this->get('games_transfer_link'),
       '#translatable' => TRUE,
-      '#required' => TRUE,
     ];
 
     $form['search_configuration']['title_weight'] = [
