@@ -1,0 +1,75 @@
+enable: 1
+producttype_id: null
+producttype_id_mapping: ''
+domain: ''
+retry_count: '34'
+delay_count: '500'
+expiry_delay_count: '10000'
+exclude_pages: /about
+translated_texts: null
+dismiss_button_label: 'Dismiss all'
+dismiss_content:
+  value: "<p class=\"text-align-center\"><strong><span class=\"text-yellow\">ARE YOU SURE YOU WANT<br />\r\nTO DISMISS ALL NOTIFICATIONS?</span></strong></p>\r\n\r\n<p class=\"text-align-center\"><span class=\"text-white\">Dismissing all notifications will also<br />\r\ndecline all promotions you are eligible to</span></p>\r\n"
+  format: basic_html
+dismiss_yes: 'YES'
+dismiss_no: 'NO'
+expiry_error_message: null
+date_format: 'dd/mm/yyyy HH:MM'
+date_offset: '+8'
+login_selector: null
+debug_logging: 0
+debug_display_all: 1
+debug_display_expirydate: 0
+disableBonusAward: 0
+text_: ''
+product_list: "Generic\r\nAlpine"
+product_type_id: null
+product_icon: null
+product_type_id_owsports: '3'
+product_icon_owsports: owsports
+product_type_id_livedealer: '4'
+product_icon_livedealer: wallet
+product_label_owsports: 'OW Sports'
+product_label_livedealer: 'Live Dealer/Games/Arcade'
+product_type_id_generic: '0'
+product_icon_generic: generic
+product_label_generic: Notifications
+product_type_id_lottery: '7'
+product_icon_lottery: lottery
+product_label_lottery: Lottery
+product_type_id_virtuals: '8'
+product_icon_virtuals: virtuals
+product_label_virtuals: Virtuals
+product_exclude_generic: 0
+product_exclude_owsports: 0
+product_exclude_livedealer: 0
+product_exclude_lottery: 0
+product_exclude_virtuals: 0
+product_label_payments: ''
+product_type_id_payments: ''
+product_icon_payments: ''
+product_exclude_payments: 1
+product_label_alpine: ''
+product_type_id_alpine: ''
+product_icon_alpine: ''
+product_exclude_alpine: 0
+cta_button_list: "Ok\r\nAccept\r\nDecline"
+cta_label_: null
+cta_actions_: null
+cta_label_test: ''
+cta_actions_test: ''
+cta_label_ok: OK
+cta_actions_ok: ''
+cta_label_accept: ACCEPT
+cta_actions_accept: ''
+cta_label_decline: DECLINE
+cta_actions_decline: ''
+product_label_games: ''
+product_type_id_games: ''
+product_icon_games: ''
+product_exclude_games: 0
+title: 'PUSH NOTIFICATION'
+empty: 'There are no new notifications.'
+expired_message: 'This offer has already expired.'
+domains: "cashier|{domain:cashier_domain}/{lang}/payment-options/deposit?ticket={auth.token}&product=ow-sports&title=headerPopup&width=820&height=700{tracking.token}\r\navaya|https://www.cs-livechat/en/mc-desktop?brand=Dafa&product=Dafabet&s={auth.token}&width=360&height=760"
+product_exclude_dismiss_generic: 0
