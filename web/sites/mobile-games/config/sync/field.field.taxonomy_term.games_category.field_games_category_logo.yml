@@ -19,7 +19,7 @@ field_name: field_games_category_logo
 entity_type: taxonomy_term
 bundle: games_category
 label: Logo
-description: ''
+description: 'Note: upload PNG less than 10KB, size 40px x 40px'
 required: false
 translatable: true
 default_value: {  }
