@@ -7,6 +7,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\TypedData\TypedDataInterface;
 use Drupal\Core\DependencyInjection\DependencySerializationTrait;
+use Drupal\Core\Url;
 
 use Drupal\webcomposer_audit\Storage\AuditStorageInterface;
 
@@ -77,7 +78,7 @@ class ExportOperation {
     $data = $this->logsExportGetParsedData($offset);
 
     $context['results'][] = ['data' => $data];
-    $context['message'] = t('Fetching Audit Logs Batch "@id".', ['@id' => $i + 1]);
+    $context['message'] = t('Generating audit logs - Step @id.', ['@id' => $i + 1]);
   }
 
   /**
@@ -151,8 +152,20 @@ class ExportOperation {
    *   - The URL to output the file.
    */
   private function logsExportCreateExcel($data) {
+    $date = date('m-d-Y--H-i-s');
+
     $this->excelParser->createSheet($data['logs'], 'Audit Logs');
-    $this->excelParser->save('export.xlsx');
+    // $this->excelParser->save("export-audit-logs-$date.xlsx");
+
+    $file = $this->excelParser->generateContent();
+
+    $file = file_save_data($file, "public://export-audit-logs-$date.xlsx");
+    $file->status = 0;
+    $file->save();
+
+    $path = Url::fromUri($file->url());
+
+    $_SESSION['webcomposer_audit_export_download'] = $path->getUri();
   }
 
   /**

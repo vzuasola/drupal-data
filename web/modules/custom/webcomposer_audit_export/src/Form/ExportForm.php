@@ -7,6 +7,7 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Datetime\DrupalDateTime;
 
 use Drupal\webcomposer_audit\Form\OverviewForm;
+use Drupal\Core\Render\Markup;
 
 /**
  * Contribute form.
@@ -35,8 +36,26 @@ class ExportForm extends FormBase {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
+    if (!empty($_SESSION['webcomposer_audit_export_download'])) {
+      $filepath = $_SESSION['webcomposer_audit_export_download'];
+
+      $message = Markup::create("
+        Excel file has been generated, please click
+        <a class='excel-download-link' href='$filepath' target='_blank'>here</a>
+      ");
+
+      $form['message'] = [
+        '#theme' => 'status_messages',
+        '#message_list' => [
+          'status' => [$message],
+        ],
+      ];
+
+      unset($_SESSION['webcomposer_audit_export_download']);
+    }
+
     if (!empty($_SESSION['webcomposer_audit_export_filter'])) {
-      $message = "Filters are applied for this export. You may see fewer results. Reset the filter to export all entries.";
+      $message = "Filters are applied for this export. Fewer results will be exported. Reset the filter to export all entries.";
 
       $form['message'] = [
         '#theme' => 'status_messages',

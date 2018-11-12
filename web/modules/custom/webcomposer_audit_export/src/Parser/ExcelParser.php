@@ -119,6 +119,15 @@ class ExcelParser {
   }
 
   /**
+   *
+   */
+  public function generateContent($excel_version = 'Excel2007') {
+    ob_start();
+    $this->save(NULL, $excel_version, FALSE);
+    return ob_get_clean();
+  }
+
+  /**
    * Triggers the browser to invoke download operation.
    */
   private function setHeaders($filename) {
