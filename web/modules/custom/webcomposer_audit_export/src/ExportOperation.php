@@ -1,53 +1,80 @@
 <?php
 
-namespace Drupal\webcomposer_audit_export\Parser;
+namespace Drupal\webcomposer_audit_export;
 
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\TypedData\TypedDataInterface;
+use Drupal\Core\DependencyInjection\DependencySerializationTrait;
 
 use Drupal\webcomposer_audit\Storage\AuditStorageInterface;
 
 /**
  * Class which handles domain export.
  */
-class LogsExport {
-  /**
-   * ExcelParser object.
-   *
-   * @var excelParser
-   */
-  protected $excelParser;
+class ExportOperation {
+  use DependencySerializationTrait;
 
-  /**
-   * Service for the export parser.
-   *
-   * @var service
-   */
-  protected $service;
+  const BATCH_COUNT = 500;
 
-  /**
-   * Filters for the export parser.
-   *
-   * @var filters
-   */
+  private $excelParser;
+  private $storage;
+
   private $filters = [];
 
   /**
    * Constructor.
    */
-  public function __construct($excelParser, $service) {
+  public function __construct($excelParser, $storage) {
     $this->excelParser = $excelParser;
-    $this->service = $service;
+    $this->storage = $storage;
+  }
+
+  /**
+   * Function for setting Audit Log filters
+   *
+   * @param array $filters Database where filter
+   */
+  public function setAuditFilters($filters) {
+    $this->filters = $filters;
+  }
+
+  public function doBatch($filters = []) {
+    $logsDistinct = $this->storage->getCount([
+      'limit' => 20000,
+      'where' => $this->filters,
+      'orderby' => [
+        'field' => 'timestamp',
+        'sort' => 'DESC',
+      ],
+    ]);
+
+    $batchNum = self::BATCH_COUNT;
+    $num_operations = intval(ceil($logsDistinct / $batchNum));
+
+    $operations = [];
+
+    for ($i = 0; $i < $num_operations; $i++) {
+      $operations[] = [
+        [$this, 'logsExportExcel'],
+        [$i],
+      ];
+    }
+
+    $batch = [
+      'title' => t('Exporting Audit Logs'),
+      'operations' => $operations,
+      'finished' => [$this, 'logExportBatchFinished'],
+    ];
+
+    batch_set($batch);
   }
 
   /**
    * Gets Matterhorn Audit Log data and invoke export excel operation.
    *
-   * @param array $filters
-   *   - Array of date filters.
-   * @author yunyce <yunyce.dejesus@bayviewtechnology.com>
+   * @param array $filters Array of date filters
    */
   public function logsExportExcel($i, &$context) {
     $offset = $i * 500;
@@ -61,40 +88,31 @@ class LogsExport {
   }
 
   /**
-   * Gets Matterhorn Audit Log data and invoke export excel operation.
-   *
-   * @param array $filters
-   *   - Array of date filters.
-   * @author yunyce <yunyce.dejesus@bayviewtechnology.com>
-   */
-  public function logsCount() {
-    $logs = $this->service->get_audit_count($this->filters);
-    return count($logs);
-  }
-
-  /**
    * Gets data from Matterhorn Audit Log and parse it to PHP excel readable array.
    *
-   * @return array
-   *   The parsed Matterhorn Audit Log data
+   * @return array The parsed Matterhorn Audit Log data
    */
   private function logsExportGetParsedData($offset) {
     $result = [];
-    $options['offset'] = $offset;
 
-    $logs = $this->service->get_audit_logs($this->filters, $options);
+    $logs = $this->storage->getWithOffset([
+      'limit' => 500,
+      'offset' => $offset,
+      'where' => $this->filters,
+      'orderby' => [
+        'field' => 'timestamp',
+        'sort' => 'DESC',
+      ],
+    ]);
 
-    // Post process audit log data
-    $process_logs = $this->postProcessLogsData($logs);
-
-    $result['logs'] = $this->service->excel_get_audit_logs($process_logs);
+    $result['logs'] = $this->postProcessLogsData($logs);
 
     return $result;
   }
 
- /**
-  * Batch 'finished' callback for Audit Log Export
-  */
+  /**
+   * Batch 'finished' callback for Audit Log Export
+   */
   public function logExportBatchFinished($success, $results, $operations) {
     $messenger = \Drupal::messenger();
 
@@ -118,8 +136,6 @@ class LogsExport {
 
       $this->logsExportCreateExcel($data);
     } else {
-      // An error occurred.
-      // $operations contains the operations that remained unprocessed.
       $error_operation = reset($operations);
 
       $messenger->addMessage(
@@ -306,14 +322,5 @@ class LogsExport {
     }
 
     return $map;
-  }
-
-  /**
-   * Function for setting Audit Log filters
-   *
-   * @param array $filters Database where filter
-   */
-  public function setAuditFilters($filters) {
-    $this->filters = $filters;
   }
 }

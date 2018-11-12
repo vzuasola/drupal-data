@@ -12,20 +12,16 @@ use Drupal\webcomposer_audit\Form\OverviewForm;
  * Contribute form.
  */
 class ExportForm extends FormBase {
-  const BATCH_COUNT = 10;
-
   /**
-   * logsExport object.
    *
-   * @var logsExport
    */
-  private $logsExport;
+  private $exportOperation;
 
   /**
    * Constructor.
    */
   public function __construct() {
-    $this->logsExport = \Drupal::service('webcomposer_audit_export.logs_export');
+    $this->exportOperation = \Drupal::service('webcomposer_audit_export.export_operation');
   }
 
   /**
@@ -165,7 +161,6 @@ class ExportForm extends FormBase {
       if (!empty($form_state->getValue($key))) {
         $_SESSION['webcomposer_audit_export_filter'][$key] = $form_state->getValue($key);
       } else {
-        // Delete the session
         unset($_SESSION['webcomposer_audit_export_filter'][$key]);
       }
     }
@@ -174,44 +169,14 @@ class ExportForm extends FormBase {
       if ($form_state->getValue($key)) {
         $_SESSION['webcomposer_audit_export_filter'][$key] = $form_state->getValue($key);
       } else {
-        // Delete session
         unset($_SESSION['webcomposer_audit_export_filter'][$key]);
       }
     }
 
-    $this->logsExport->setAuditFilters($this->getAllFilters());
+    $filters = $this->getAllFilters();
 
-    $batch = $this->generateExportBatch();
-    batch_set($batch);
-  }
-
-  /**
-   * Export Batch Function
-   */
-  public function generateExportBatch() {
-    $logsDistinct = $this->logsExport->logsCount();
-
-    $batchNum = self::BATCH_COUNT;
-    $num_operations = intval(ceil($logsDistinct / $batchNum));
-
-    $this->messenger()->addMessage($this->t('Exporting Audit Logs'));
-
-    $operations = [];
-
-    for ($i = 0; $i < $num_operations; $i++) {
-      $operations[] = [
-        [$this->logsExport, 'logsExportExcel'],
-        [$i],
-      ];
-    }
-
-    $batch = [
-      'title' => $this->t('Exporting Audit Logs'),
-      'operations' => $operations,
-      'finished' => [$this->logsExport, 'logExportBatchFinished'],
-    ];
-
-    return $batch;
+    $this->exportOperation->setAuditFilters($filters);
+    $this->exportOperation->doBatch();
   }
 
   /**

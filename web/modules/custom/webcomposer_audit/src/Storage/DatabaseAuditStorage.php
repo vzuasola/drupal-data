@@ -174,6 +174,15 @@ class DatabaseAuditStorage implements AuditStorageInterface {
   }
 
   /**
+   *
+   */
+  public function getCount($options = []) {
+    $records = $this->getDistinct('id', $options);
+
+    return count($records);
+  }
+
+  /**
    * {@inheritdoc}
    */
   public function get($id) {
