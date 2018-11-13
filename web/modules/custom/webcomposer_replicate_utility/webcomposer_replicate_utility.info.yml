@@ -3,3 +3,5 @@ type: module
 description: Module for extending replicate apis.
 core: 8.x
 package: Web Composer
+dependencies:
+  - replicate

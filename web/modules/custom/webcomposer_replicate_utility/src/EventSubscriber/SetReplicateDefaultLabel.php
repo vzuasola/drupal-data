@@ -2,10 +2,10 @@
 
 /**
  * @file
- * Contains \Drupal\webcomposer_slider_v2\EventSubscriber\SetReplicateDefaultLabel.
+ * Contains \Drupal\webcomposer_replicate_utility\EventSubscriber\SetReplicateDefaultLabel.
  */
 
-namespace Drupal\webcomposer_slider_v2\EventSubscriber;
+namespace Drupal\webcomposer_replicate_utility\EventSubscriber;
 
 use Drupal\replicate\Events\ReplicatorEvents;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
@@ -15,7 +15,7 @@ use Drupal\Core\Entity\TranslatableInterface;
 /**
  * Class SetReplicateDefaultLabel.
  *
- * @package Drupal\webcomposer_slider_v2\EventSubscriber
+ * @package Drupal\webcomposer_replicate_utility\EventSubscriber
  */
 class SetReplicateDefaultLabel implements EventSubscriberInterface {
 
@@ -29,7 +29,7 @@ class SetReplicateDefaultLabel implements EventSubscriberInterface {
     $entity = $event->getEntity();
     $type = $entity->bundle();
     if ($type == 'webcomposer_slider_v2_entity') {
-      $title = $entity->get('name')->getString() . ' (Copy)';
+      $title = $entity->get('name')->getString();
       $entity->set('field_title', $title);
       $entity->set('name', '');
     }
