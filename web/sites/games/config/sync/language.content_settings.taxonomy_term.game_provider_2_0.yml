@@ -1,0 +1,16 @@
+uuid: 02fd4543-3d4e-44ae-a212-3ab1f616c55a
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.game_provider_2_0
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+id: taxonomy_term.game_provider_2_0
+target_entity_type_id: taxonomy_term
+target_bundle: game_provider_2_0
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,25 @@
+uuid: 4521b9bb-7373-4d24-a067-83a7d54cc346
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_v2_ribbon_configuration
+    - node.type.games_2_0
+id: node.games_2_0.field_v2_ribbon_configuration
+field_name: field_v2_ribbon_configuration
+entity_type: node
+bundle: games_2_0
+label: 'Ribbon Configuration'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: ribbon_entity_reference
+      display_name: entity_reference_1
+      arguments: {  }
+field_type: entity_reference

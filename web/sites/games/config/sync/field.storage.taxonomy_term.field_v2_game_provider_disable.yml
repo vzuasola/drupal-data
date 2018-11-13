@@ -1,0 +1,18 @@
+uuid: e045d7fc-c19c-4f07-a698-cc63c4b327f8
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.field_v2_game_provider_disable
+field_name: field_v2_game_provider_disable
+entity_type: taxonomy_term
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
