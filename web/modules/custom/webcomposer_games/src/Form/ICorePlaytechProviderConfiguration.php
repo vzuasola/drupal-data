@@ -72,6 +72,15 @@ class ICorePlaytechProviderConfiguration extends FormBase {
       '#required' => false,
     ];
 
+    $form[$key . '_country'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Unsupported Countries'),
+      '#description' => $this->t("Define the unsupported countries for " . $value),
+      '#default_value' => $this->get($key . '_country'),
+      '#translatable' => TRUE,
+      '#required' => false,
+    ];
+
     $form[$key . '_language_mapping'] = [
       '#type' => 'textarea',
       '#title' => $this->t('Language Mapping'),
