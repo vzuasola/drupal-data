@@ -29,7 +29,7 @@ class SetReplicateDefaultLabel implements EventSubscriberInterface {
     $entity = $event->getEntity();
     $type = $entity->bundle();
     if ($type == 'webcomposer_slider_v2_entity') {
-      $title = $entity->get('name')->getString();
+      $title = $entity->get('name')->getString() . ' (Copy)';
       $entity->set('field_title', $title);
       $entity->set('name', '');
     }
