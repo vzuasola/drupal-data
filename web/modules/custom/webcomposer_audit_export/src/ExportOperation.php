@@ -155,12 +155,11 @@ class ExportOperation {
     $date = date('m-d-Y--H-i-s');
 
     $this->excelParser->createSheet($data['logs'], 'Audit Logs');
-    // $this->excelParser->save("export-audit-logs-$date.xlsx");
 
     $file = $this->excelParser->generateContent();
 
     $file = file_save_data($file, "public://export-audit-logs-$date.xlsx");
-    $file->status = 0;
+    $file->setTemporary();
     $file->save();
 
     $path = Url::fromUri($file->url());
