@@ -1,0 +1,5 @@
+services:
+  webcomposer_replicate_utility.entity_unpublish:
+    class: \Drupal\webcomposer_replicate_utility\EventSubscriber\EntityUnpublishSubscriber
+    tags:
+      - { name: event_subscriber }
