@@ -1,0 +1,5 @@
+services:
+  webcomposer_slider_v2.set_replicate_default_label:
+    class: \Drupal\webcomposer_slider_v2\EventSubscriber\SetReplicateDefaultLabel
+    tags:
+      - { name: event_subscriber }

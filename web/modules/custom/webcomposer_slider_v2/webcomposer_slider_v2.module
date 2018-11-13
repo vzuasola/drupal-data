@@ -1,6 +1,7 @@
 <?php
 
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Entity\TranslatableInterface;
 
 /**
  * Form alter for webcomposer_slider_v2 section.
@@ -12,6 +13,28 @@ function webcomposer_slider_v2_form_alter(&$form, FormStateInterface $form_state
   ];
   if (in_array($form_id, $forms)) {
     $form['#validate'][] = 'webcomposer_slider_v2_validate';
+  }
+  
+  if ($form_id == 'webcomposer_slider_v2_entity_replicate_form') {
+    $current_path = \Drupal::service('path.current')->getPath();
+    $path_args = explode('/', $current_path);
+    $entity = \Drupal::entityTypeManager()->getStorage('webcomposer_slider_v2_entity')->load($path_args[4]);
+    if ($entity instanceof TranslatableInterface) {
+      foreach ($entity->getTranslationLanguages() as $translation_language) {
+        $langcode = $translation_language->getId();
+        /** @var \Drupal\Core\Entity\TranslatableInterface $translation */
+        $translation = $entity->getTranslation($langcode);
+        $field_name = 'new_label_' . $langcode;
+        $default_value = $form[$field_name]['#default_value'];
+        $title = $translation->get('field_title')->getString();
+        $form[$field_name]['#default_value'] = $title . $default_value;
+      }
+    }
+    else {
+        $default_value = $form['new_label']['#default_value'];
+        $entity = $translation->get('field_title')->getString();
+        $form['new_label']['#default_value'] = $title . $default_value;
+    }
   }
 }
 
@@ -40,3 +63,16 @@ function webcomposer_slider_v2_validate(&$form, FormStateInterface $form_state) 
     $form_state->setErrorByName('$bannerImagePost', t('Post Banner Image field is required.'));
   }
 }
+
+// function webcomposer_slider_v2_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+
+// if ($form_id == 'webcomposer_slider_v2_entity_replicate_form') {
+
+// // change title
+// $form['title']['widget'][0]['value']['#default_value'] ='My New Title';
+
+// // empty field
+// //$form['field_example']['widget'][0]['value']['#default_value'] ='';
+
+// }
+// }
