@@ -10,7 +10,6 @@ namespace Drupal\webcomposer_slider_v2\EventSubscriber;
 use Drupal\replicate\Events\ReplicatorEvents;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Drupal\replicate\Events\ReplicateAlterEvent;
-use Drupal\replicate\Events\AfterSaveEvent;
 use Drupal\Core\Entity\TranslatableInterface;
 
 /**

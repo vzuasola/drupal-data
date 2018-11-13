@@ -27,8 +27,8 @@ class EntityUnpublishSubscriber implements EventSubscriberInterface {
    */
   public function onClone(ReplicateAlterEvent $event) {
     $entity = $event->getEntity();
-    if($entity->hasField('field_status')) {
-      $entity->set('field_status',0);
+    if ($entity->hasField('field_status')) {
+      $entity->set('field_status', 0);
     }
   }
 

@@ -63,16 +63,3 @@ function webcomposer_slider_v2_validate(&$form, FormStateInterface $form_state) 
     $form_state->setErrorByName('$bannerImagePost', t('Post Banner Image field is required.'));
   }
 }
-
-// function webcomposer_slider_v2_form_alter(&$form, FormStateInterface $form_state, $form_id) {
-
-// if ($form_id == 'webcomposer_slider_v2_entity_replicate_form') {
-
-// // change title
-// $form['title']['widget'][0]['value']['#default_value'] ='My New Title';
-
-// // empty field
-// //$form['field_example']['widget'][0]['value']['#default_value'] ='';
-
-// }
-// }
