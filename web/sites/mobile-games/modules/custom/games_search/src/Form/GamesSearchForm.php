@@ -48,10 +48,26 @@ class GamesSearchForm extends FormBase {
       '#required' => FALSE,
     ];
 
+    $form['search_configuration']['title_search_lightbox'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Search Title Lightbox'),
+      '#default_value' => $this->get('title_search_lightbox'),
+      '#translatable' => TRUE,
+      '#required' => FALSE,
+    ];
+
     $form['search_configuration']['games_filter_title'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Filter Title'),
       '#default_value' => $this->get('games_filter_title'),
+      '#translatable' => TRUE,
+      '#required' => FALSE,
+    ];
+
+    $form['search_configuration']['filter_title_lightbox'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Filter Title Lightbox'),
+      '#default_value' => $this->get('filter_title_lightbox'),
       '#translatable' => TRUE,
       '#required' => FALSE,
     ];
