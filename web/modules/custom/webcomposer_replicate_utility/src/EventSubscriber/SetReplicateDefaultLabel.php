@@ -27,15 +27,12 @@ class SetReplicateDefaultLabel implements EventSubscriberInterface {
    */
   public function onClone(ReplicateAlterEvent $event) {
     $entity = $event->getEntity();
-    $type = $entity->bundle();
-    if ($type == 'webcomposer_slider_v2_entity') {
-      if ($entity instanceof TranslatableInterface) {
-        foreach ($entity->getTranslationLanguages() as $translation_language) {
-          $langcode = $translation_language->getId();
-          $translation = $entity->getTranslation($langcode);
-          $translated_title = $translation->get('name')->getString();
-          $translation->set('field_title', $translated_title);
-        }
+    if ($entity->hasField('field_title') && $entity->hasField('name') && $entity instanceof TranslatableInterface) {
+      foreach ($entity->getTranslationLanguages() as $translation_language) {
+        $langcode = $translation_language->getId();
+        $translation = $entity->getTranslation($langcode);
+        $translated_title = $translation->get('name')->getString();
+        $translation->set('field_title', $translated_title);
       }
     }
   }
