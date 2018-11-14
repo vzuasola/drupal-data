@@ -10,7 +10,7 @@ dependencies:
     - taxonomy
     - webcomposer_rest_extra
 id: games_provider_category_2_0
-label: 'Games Provider Category 2.0 - ICON'
+label: 'Games Provider Category 2.0'
 module: views
 description: ''
 tag: ''
@@ -220,7 +220,7 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: api/v2-games-provider-categories-icon
+      path: api/v2-games-provider-categories
       pager:
         type: none
         options:
