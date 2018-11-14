@@ -184,6 +184,7 @@ class WebcomposerSliderV2Entity extends ContentEntityBase implements Webcomposer
         'text_processing' => 0,
       ))
       ->setDefaultValue('')
+      ->setTranslatable(TRUE)
       ->setDisplayOptions('view', array(
         'label' => 'above',
         'type' => 'string',

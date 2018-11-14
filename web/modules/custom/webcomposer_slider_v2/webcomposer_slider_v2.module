@@ -26,8 +26,11 @@ function webcomposer_slider_v2_form_alter(&$form, FormStateInterface $form_state
         $translation = $entity->getTranslation($langcode);
         $field_name = 'new_label_' . $langcode;
         $default_value = $form[$field_name]['#default_value'];
-        $title = $translation->get('field_title')->getString();
-        $form[$field_name]['#default_value'] = $title . $default_value;
+        $name = $translation->get('name')->getValue();
+        if(empty($name)) {
+          $title = $translation->get('field_title')->getString();
+          $form[$field_name]['#default_value'] = $title . $default_value;
+        }
       }
     }
     else {

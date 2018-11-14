@@ -29,9 +29,14 @@ class SetReplicateDefaultLabel implements EventSubscriberInterface {
     $entity = $event->getEntity();
     $type = $entity->bundle();
     if ($type == 'webcomposer_slider_v2_entity') {
-      $title = $entity->get('name')->getString() . ' (Copy)';
-      $entity->set('field_title', $title);
-      $entity->set('name', '');
+      if ($entity instanceof TranslatableInterface) {
+        foreach ($entity->getTranslationLanguages() as $translation_language) {
+          $langcode = $translation_language->getId();
+          $translation = $entity->getTranslation($langcode);
+          $translated_title = $translation->get('name')->getString();
+          $translation->set('field_title', $translated_title);
+        }
+      }
     }
   }
 
