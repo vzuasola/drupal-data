@@ -27,16 +27,16 @@ function webcomposer_slider_v2_form_alter(&$form, FormStateInterface $form_state
         $field_name = 'new_label_' . $langcode;
         $default_value = $form[$field_name]['#default_value'];
         $name = $translation->get('name')->getValue();
-        if(empty($name)) {
+        if (empty($name)) {
           $title = $translation->get('field_title')->getString();
           $form[$field_name]['#default_value'] = $title . $default_value;
         }
       }
     }
     else {
-        $default_value = $form['new_label']['#default_value'];
-        $entity = $translation->get('field_title')->getString();
-        $form['new_label']['#default_value'] = $title . $default_value;
+      $default_value = $form['new_label']['#default_value'];
+      $entity = $translation->get('field_title')->getString();
+      $form['new_label']['#default_value'] = $title . $default_value;
     }
   }
 }
