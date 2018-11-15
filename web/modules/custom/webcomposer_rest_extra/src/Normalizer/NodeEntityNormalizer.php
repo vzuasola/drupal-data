@@ -22,7 +22,7 @@ class NodeEntityNormalizer extends ContentEntityNormalizer {
    *
    * @var string
    */
-  protected $supportedInterfaceOrClass = 'Drupal\node\NodeInterface';
+  // protected $supportedInterfaceOrClass = 'Drupal\node\NodeInterface';
 
   /**
    * {@inheritdoc}
