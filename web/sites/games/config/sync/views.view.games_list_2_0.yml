@@ -630,7 +630,7 @@ display:
           admin_label: ''
           empty: true
           tokenize: false
-          content: "<div class=\"messages messages--warning\">\nNo games found.\n</div>"
+          content: "<div class=\"messages messages--warning\">\nNo content available.\n</div>"
           plugin_id: text_custom
     cache_metadata:
       max-age: 0
