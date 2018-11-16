@@ -50,7 +50,7 @@ class NodeListSerializer extends Serializer {
         // loading the terms or paragraphs object onto the rest export
         foreach ($value as $itemkey => $item) {
           if (isset($item['target_type'])) {
-            switch($item['target_type']) {
+            switch ($item['target_type']) {
               case 'paragraph':
                 $rowAssoc[$key][$itemkey] = $this->loadParagraphById($item['target_id']);
                 break;
