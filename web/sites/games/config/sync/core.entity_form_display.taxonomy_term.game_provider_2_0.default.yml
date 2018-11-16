@@ -8,10 +8,30 @@ dependencies:
     - field.field.taxonomy_term.game_provider_2_0.field_v2_game_provider_hicon
     - field.field.taxonomy_term.game_provider_2_0.field_v2_game_provider_icon
     - field.field.taxonomy_term.game_provider_2_0.field_v2_game_provider_key
+    - field.field.taxonomy_term.game_provider_2_0.field_v2_provider_tooltip
+    - field.field.taxonomy_term.game_provider_2_0.field_v2_show_tooltip
     - image.style.thumbnail
     - taxonomy.vocabulary.game_provider_2_0
   module:
+    - field_group
     - image
+third_party_settings:
+  field_group:
+    group_tooltip:
+      children:
+        - field_v2_show_tooltip
+        - field_v2_provider_tooltip
+      parent_name: ''
+      weight: 6
+      format_type: tab
+      format_settings:
+        label: Tooltip
+        formatter: open
+        description: ''
+        id: ''
+        classes: ''
+        required_fields: false
+      label: Tooltip
 id: taxonomy_term.game_provider_2_0.default
 targetEntityType: taxonomy_term
 bundle: game_provider_2_0
@@ -26,7 +46,7 @@ content:
     type: string_textfield
     region: content
   field_v2_game_provider_disable:
-    weight: 6
+    weight: 7
     settings:
       display_label: true
     third_party_settings: {  }
@@ -55,6 +75,21 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_v2_provider_tooltip:
+    weight: 9
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_v2_show_tooltip:
+    weight: 8
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
     region: content
   langcode:
     type: language_select
