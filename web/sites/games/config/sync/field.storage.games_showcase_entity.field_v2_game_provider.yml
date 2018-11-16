@@ -1,12 +1,12 @@
-uuid: 14026956-2fdb-48e9-99dd-262c55dac4d1
+uuid: a4fe2e5a-56eb-4c2f-9711-c6697211870f
 langcode: en
 status: true
 dependencies:
   module:
     - games_showcase
     - taxonomy
-id: games_showcase_entity.field_home_sub_category
-field_name: field_home_sub_category
+id: games_showcase_entity.field_v2_game_provider
+field_name: field_v2_game_provider
 entity_type: games_showcase_entity
 type: entity_reference
 settings:

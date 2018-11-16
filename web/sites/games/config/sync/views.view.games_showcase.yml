@@ -9,8 +9,7 @@ dependencies:
     - field.storage.games_showcase_entity.field_title
     - field.storage.games_showcase_entity.field_unpublish_date
     - image.style.thumbnail
-    - taxonomy.vocabulary.games_category
-    - taxonomy.vocabulary.home_games_category
+    - taxonomy.vocabulary.game_provider_2_0
   module:
     - datetime
     - draggableviews
@@ -63,23 +62,9 @@ display:
           sort_asc_label: Asc
           sort_desc_label: Desc
       pager:
-        type: mini
+        type: none
         options:
-          items_per_page: 10
           offset: 0
-          id: 0
-          total_pages: null
-          expose:
-            items_per_page: false
-            items_per_page_label: 'Items per page'
-            items_per_page_options: '5, 10, 25, 50'
-            items_per_page_options_all: false
-            items_per_page_options_all_label: '- All -'
-            offset: false
-            offset_label: Offset
-          tags:
-            previous: ‹‹
-            next: ››
       style:
         type: serializer
       row:
@@ -259,7 +244,6 @@ display:
         - 'languages:language_interface'
         - request_format
         - url
-        - url.query_args
       tags: {  }
   page_1:
     display_plugin: page
@@ -347,6 +331,60 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+        draggableviews:
+          id: draggableviews
+          table: games_showcase_entity_field_data
+          field: draggableviews
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Games showcase entity'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          action_title: Action
+          include_exclude: exclude
+          selected_actions: {  }
+          entity_type: games_showcase_entity
+          entity_field: id
+          plugin_id: draggable_views_field
         field_title:
           id: field_title
           table: games_showcase_entity__field_title
@@ -536,72 +574,6 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        langcode:
-          id: langcode
-          table: games_showcase_entity_field_data
-          field: langcode
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: 'Translation language'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: language
-          settings:
-            link_to_entity: false
-            native_language: false
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          entity_type: games_showcase_entity
-          entity_field: langcode
-          plugin_id: field
         field_publish_date:
           id: field_publish_date
           table: games_showcase_entity__field_publish_date
@@ -609,7 +581,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Publish Date (optional)'
+          label: 'Publish on'
           exclude: false
           alter:
             alter_text: false
@@ -646,7 +618,7 @@ display:
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
-          empty: ''
+          empty: '-'
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
@@ -673,7 +645,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Unpublish Date (optional)'
+          label: 'Unpublish on'
           exclude: false
           alter:
             alter_text: false
@@ -710,7 +682,7 @@ display:
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
-          empty: ''
+          empty: '-'
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
@@ -737,7 +709,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Operations links'
+          label: Operations
           exclude: false
           alter:
             alter_text: false
@@ -781,60 +753,6 @@ display:
           destination: true
           entity_type: games_showcase_entity
           plugin_id: entity_operations
-        draggableviews:
-          id: draggableviews
-          table: games_showcase_entity_field_data
-          field: draggableviews
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: 'Games showcase entity'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          action_title: Action
-          include_exclude: exclude
-          selected_actions: {  }
-          entity_type: games_showcase_entity
-          entity_field: id
-          plugin_id: draggable_views_field
       style:
         type: table
         options:
@@ -851,7 +769,6 @@ display:
             field_title: field_title
             field_showcase_image: field_showcase_image
             field_log_in_state: field_log_in_state
-            langcode: langcode
             field_publish_date: field_publish_date
             field_unpublish_date: field_unpublish_date
             operations: operations
@@ -885,13 +802,6 @@ display:
               separator: ''
               empty_column: false
               responsive: ''
-            langcode:
-              sortable: false
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
             field_publish_date:
               sortable: false
               default_sort_order: asc
@@ -917,7 +827,7 @@ display:
               empty_column: false
               responsive: ''
           default: '-1'
-          empty_table: true
+          empty_table: false
       row:
         type: fields
         options:
@@ -966,10 +876,10 @@ display:
           entity_type: games_showcase_entity
           entity_field: langcode
           plugin_id: language
-        field_games_category_target_id:
-          id: field_games_category_target_id
-          table: games_showcase_entity__field_games_category
-          field: field_games_category_target_id
+        field_v2_game_provider_target_id:
+          id: field_v2_game_provider_target_id
+          table: games_showcase_entity__field_v2_game_provider
+          field: field_v2_game_provider_target_id
           relationship: none
           group_type: group
           admin_label: ''
@@ -978,12 +888,12 @@ display:
           group: 1
           exposed: true
           expose:
-            operator_id: field_games_category_target_id_op
-            label: 'Games Category'
+            operator_id: field_v2_game_provider_target_id_op
+            label: 'Game Provider'
             description: ''
             use_operator: false
-            operator: field_games_category_target_id_op
-            identifier: category
+            operator: field_v2_game_provider_target_id_op
+            identifier: provider
             required: false
             remember: false
             multiple: false
@@ -992,6 +902,7 @@ display:
               anonymous: '0'
               administrator: '0'
               e: '0'
+              site_admin: '0'
             reduce: false
           is_grouped: false
           group_info:
@@ -1008,53 +919,7 @@ display:
           reduce_duplicates: false
           type: select
           limit: true
-          vid: games_category
-          hierarchy: false
-          error_message: true
-          plugin_id: taxonomy_index_tid
-        field_home_sub_category_target_id:
-          id: field_home_sub_category_target_id
-          table: games_showcase_entity__field_home_sub_category
-          field: field_home_sub_category_target_id
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: or
-          value: {  }
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_home_sub_category_target_id_op
-            label: 'Home Sub Category'
-            description: ''
-            use_operator: false
-            operator: field_home_sub_category_target_id_op
-            identifier: home_category
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              e: '0'
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          type: select
-          limit: true
-          vid: home_games_category
+          vid: game_provider_2_0
           hierarchy: false
           error_message: true
           plugin_id: taxonomy_index_tid
@@ -1072,7 +937,7 @@ display:
           admin_label: ''
           empty: true
           tokenize: false
-          content: 'No content available.'
+          content: "<div class=\"messages messages--warning\">\nNo content available.\n</div>"
           plugin_id: text_custom
       sorts:
         weight:
@@ -1087,44 +952,17 @@ display:
           expose:
             label: ''
           plugin_id: standard
-        created:
-          id: created
-          table: games_showcase_entity_field_data
-          field: created
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: DESC
-          exposed: false
-          expose:
-            label: ''
-          granularity: second
-          entity_type: games_showcase_entity
-          entity_field: created
-          plugin_id: date
       cache:
         type: none
         options: {  }
       show_admin_links: false
-      header:
-        area_text_custom:
-          id: area_text_custom
-          table: views
-          field: area_text_custom
-          relationship: none
-          group_type: group
-          admin_label: ''
-          empty: true
-          tokenize: false
-          content: "<p>\n<b>Note</b>\nWhen sorting showcase for Games Category please choose <b>Any</b> on Home Sub Category filter.<br>\nWhen sorting showcase for Home Sub Category choose <b>Any</b> on Games Category filter.\n</p>"
-          plugin_id: text_custom
+      header: {  }
     cache_metadata:
       max-age: 0
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
-        - url.query_args
         - user
       tags:
         - 'config:field.storage.games_showcase_entity.field_log_in_state'
@@ -1132,253 +970,6 @@ display:
         - 'config:field.storage.games_showcase_entity.field_showcase_image'
         - 'config:field.storage.games_showcase_entity.field_title'
         - 'config:field.storage.games_showcase_entity.field_unpublish_date'
-  rest_export_1:
-    display_plugin: rest_export
-    id: rest_export_1
-    display_title: 'Games Showcase'
-    position: 1
-    display_options:
-      display_extenders: {  }
-      path: api/games_showcase
-      pager:
-        type: none
-        options:
-          offset: 0
-      style:
-        type: node_list_serializer
-        options:
-          uses_fields: false
-          formats:
-            json: json
-      row:
-        type: data_entity
-        options: {  }
-      display_description: ''
-      filters:
-        langcode:
-          id: langcode
-          table: games_showcase_entity_field_data
-          field: langcode
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: in
-          value:
-            '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          entity_type: games_showcase_entity
-          entity_field: langcode
-          plugin_id: language
-        field_games_category_target_id:
-          id: field_games_category_target_id
-          table: games_showcase_entity__field_games_category
-          field: field_games_category_target_id
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: or
-          value: {  }
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_games_category_target_id_op
-            label: 'Games Category (field_games_category)'
-            description: ''
-            use_operator: false
-            operator: field_games_category_target_id_op
-            identifier: category
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              e: '0'
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          type: select
-          limit: true
-          vid: games_category
-          hierarchy: false
-          error_message: true
-          plugin_id: taxonomy_index_tid
-        langcode_1:
-          id: langcode_1
-          table: games_showcase_entity_field_data
-          field: langcode
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: in
-          value:
-            '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
-          group: 2
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          entity_type: games_showcase_entity
-          entity_field: langcode
-          plugin_id: language
-        field_home_sub_category_target_id:
-          id: field_home_sub_category_target_id
-          table: games_showcase_entity__field_home_sub_category
-          field: field_home_sub_category_target_id
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: or
-          value: {  }
-          group: 2
-          exposed: true
-          expose:
-            operator_id: field_home_sub_category_target_id_op
-            label: 'Home Sub Category (field_home_sub_category)'
-            description: ''
-            use_operator: false
-            operator: field_home_sub_category_target_id_op
-            identifier: home_category
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              e: '0'
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          type: select
-          limit: true
-          vid: home_games_category
-          hierarchy: false
-          error_message: true
-          plugin_id: taxonomy_index_tid
-      defaults:
-        filters: false
-        filter_groups: false
-        sorts: false
-        cache: false
-        arguments: false
-      filter_groups:
-        operator: OR
-        groups:
-          1: AND
-          2: AND
-      sorts:
-        weight:
-          id: weight
-          table: draggableviews_structure
-          field: weight
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: ASC
-          exposed: false
-          expose:
-            label: ''
-          plugin_id: standard
-        created:
-          id: created
-          table: games_showcase_entity_field_data
-          field: created
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: DESC
-          exposed: false
-          expose:
-            label: ''
-          granularity: second
-          entity_type: games_showcase_entity
-          entity_field: created
-          plugin_id: date
-      cache:
-        type: none
-        options: {  }
-      arguments: {  }
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - request_format
-        - url
-        - user
-      tags: {  }
   rest_export_2:
     display_plugin: rest_export
     id: rest_export_2
@@ -1394,26 +985,23 @@ display:
         arguments: false
         sorts: false
         cache: false
+        group_by: false
       arguments: {  }
-      sorts:
-        created:
-          id: created
-          table: games_showcase_entity_field_data
-          field: created
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: DESC
-          exposed: false
-          expose:
-            label: ''
-          granularity: second
-          entity_type: games_showcase_entity
-          entity_field: created
-          plugin_id: date
+      sorts: {  }
       cache:
         type: none
         options: {  }
+      style:
+        type: node_list_serializer
+        options:
+          uses_fields: false
+          formats:
+            json: json
+      pager:
+        type: none
+        options:
+          offset: 0
+      group_by: false
     cache_metadata:
       max-age: -1
       contexts:
