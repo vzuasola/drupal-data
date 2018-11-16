@@ -1,0 +1,19 @@
+uuid: 1c207b6a-21f1-4e50-a238-235779a93d04
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_v2_game_title
+    - node.type.games_2_0
+id: node.games_2_0.field_v2_game_title
+field_name: field_v2_game_title
+entity_type: node
+bundle: games_2_0
+label: 'Game Title'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

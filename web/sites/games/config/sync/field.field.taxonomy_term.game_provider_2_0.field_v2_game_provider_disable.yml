@@ -1,0 +1,23 @@
+uuid: 07f8bba6-6baf-4b6c-886a-e7784f0d6b0a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_v2_game_provider_disable
+    - taxonomy.vocabulary.game_provider_2_0
+id: taxonomy_term.game_provider_2_0.field_v2_game_provider_disable
+field_name: field_v2_game_provider_disable
+entity_type: taxonomy_term
+bundle: game_provider_2_0
+label: Disable
+description: 'If checked, this game provider category will not be displayed.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

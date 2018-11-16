@@ -1,0 +1,29 @@
+uuid: 3d9bd285-dbf3-4559-b2c9-11210d7cf6e2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_v2_game_provider
+    - node.type.games_2_0
+    - taxonomy.vocabulary.game_provider_2_0
+id: node.games_2_0.field_v2_game_provider
+field_name: field_v2_game_provider
+entity_type: node
+bundle: games_2_0
+label: 'Game Provider'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      game_provider_2_0: game_provider_2_0
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

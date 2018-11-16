@@ -1,0 +1,29 @@
+uuid: 5cf01983-102e-4f3b-853d-12d89b95eea3
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - scheduler
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+  scheduler:
+    expand_fieldset: when_required
+    fields_display_mode: vertical_tab
+    publish_enable: true
+    publish_past_date: error
+    publish_required: false
+    publish_revision: true
+    publish_touch: false
+    unpublish_enable: true
+    unpublish_required: false
+    unpublish_revision: true
+name: 'Games 2.0'
+type: games_2_0
+description: 'Use game for game listing entry.'
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: true
