@@ -47,16 +47,17 @@ class NodeListSerializer extends Serializer {
             $rowAssoc[$key][0]['value'] = $this->filterHtml($value[0]['value']);
         }
 
-        // loading the term object onto the rest export
-        if (isset($value[0]['target_type']) && $value[0]['target_type'] == 'taxonomy_term') {
-          $term = $this->loadTerm($value[0]['target_id']);
-          $rowAssoc[$key][0] = $term;
-        }
-
-        // loading the paragraph object onto the rest export
-        foreach ($value as $paragraphKey => $pid) {
-          if (isset($pid['target_type']) && $pid['target_type'] == 'paragraph') {
-            $rowAssoc[$key][$paragraphKey] = $this->loadParagraphById($pid['target_id']);
+        // loading the terms or paragraphs object onto the rest export
+        foreach ($value as $itemkey => $item) {
+          if (isset($item['target_type'])) {
+            switch($item['target_type']) {
+              case 'paragraph':
+                $rowAssoc[$key][$itemkey] = $this->loadParagraphById($item['target_id']);
+                break;
+              case 'taxonomy_term':
+                $rowAssoc[$key][$itemkey] = $this->loadTerm($item['target_id']);
+                break;
+            }
           }
         }
       }
@@ -82,7 +83,6 @@ class NodeListSerializer extends Serializer {
    */
   private function loadTerm($tid) {
     $lang = \Drupal::languageManager()->getCurrentLanguage(\Drupal\Core\Language\LanguageInterface::TYPE_CONTENT)->getId();
-
     $term = \Drupal\taxonomy\Entity\Term::load($tid);
     $term_translated = \Drupal::service('entity.repository')->getTranslationFromContext($term, $lang);
 
