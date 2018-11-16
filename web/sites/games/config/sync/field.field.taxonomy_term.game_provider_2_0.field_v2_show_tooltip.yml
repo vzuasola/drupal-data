@@ -1,0 +1,23 @@
+uuid: 08e6b156-5055-4b02-ada4-01ca0932bdb4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_v2_show_tooltip
+    - taxonomy.vocabulary.game_provider_2_0
+id: taxonomy_term.game_provider_2_0.field_v2_show_tooltip
+field_name: field_v2_show_tooltip
+entity_type: taxonomy_term
+bundle: game_provider_2_0
+label: 'Show Tooltip'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
