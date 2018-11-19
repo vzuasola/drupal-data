@@ -1,13 +1,13 @@
-uuid: a509d226-f0de-43e8-8926-fbd601a4f37b
+uuid: b4b1ed23-d5f5-40b3-a3ad-b9bbe64f6ab4
 langcode: en
 status: true
 dependencies:
   module:
-    - games_showcase
+    - node
     - taxonomy
-id: games_showcase_entity.field_home_tab_ribbon
-field_name: field_home_tab_ribbon
-entity_type: games_showcase_entity
+id: node.field_v2_game_provider
+field_name: field_v2_game_provider
+entity_type: node
 type: entity_reference
 settings:
   target_type: taxonomy_term

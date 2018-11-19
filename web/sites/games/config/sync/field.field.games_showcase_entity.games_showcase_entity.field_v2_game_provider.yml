@@ -1,19 +1,17 @@
-uuid: d3c080a9-4c42-4dd8-8c83-06ee6e02900a
+uuid: bad6aafc-b2e0-44bd-a484-cac2db79583a
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.games_showcase_entity.field_games_category
-    - taxonomy.vocabulary.games_category
+    - field.storage.games_showcase_entity.field_v2_game_provider
+    - taxonomy.vocabulary.game_provider_2_0
   module:
     - games_showcase
-_core:
-  default_config_hash: VJdyVbTTEmOh9O1orudJ0DmIAW0hyoQQK7Mrn33cCcs
-id: games_showcase_entity.games_showcase_entity.field_games_category
-field_name: field_games_category
+id: games_showcase_entity.games_showcase_entity.field_v2_game_provider
+field_name: field_v2_game_provider
 entity_type: games_showcase_entity
 bundle: games_showcase_entity
-label: 'Games Category'
+label: 'Game Provider'
 description: ''
 required: true
 translatable: true
@@ -23,9 +21,10 @@ settings:
   handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      games_category: games_category
+      game_provider_2_0: game_provider_2_0
     sort:
-      field: _none
+      field: name
+      direction: asc
     auto_create: false
     auto_create_bundle: ''
 field_type: entity_reference

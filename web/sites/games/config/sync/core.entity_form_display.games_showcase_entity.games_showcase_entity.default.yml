@@ -3,9 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.games_showcase_entity.games_showcase_entity.field_games_category
-    - field.field.games_showcase_entity.games_showcase_entity.field_home_sub_category
-    - field.field.games_showcase_entity.games_showcase_entity.field_home_tab_ribbon
     - field.field.games_showcase_entity.games_showcase_entity.field_log_in_state
     - field.field.games_showcase_entity.games_showcase_entity.field_publish_date
     - field.field.games_showcase_entity.games_showcase_entity.field_showcase_body
@@ -13,9 +10,11 @@ dependencies:
     - field.field.games_showcase_entity.games_showcase_entity.field_showcase_ribbon
     - field.field.games_showcase_entity.games_showcase_entity.field_title
     - field.field.games_showcase_entity.games_showcase_entity.field_unpublish_date
+    - field.field.games_showcase_entity.games_showcase_entity.field_v2_game_provider
     - image.style.thumbnail
   module:
     - datetime
+    - entity_reference_views_select
     - field_group
     - games_showcase
     - image
@@ -27,7 +26,7 @@ third_party_settings:
         - field_publish_date
         - field_unpublish_date
       parent_name: ''
-      weight: 10
+      weight: 9
       format_type: tab
       format_settings:
         label: 'Scheduler Settings'
@@ -44,24 +43,6 @@ targetEntityType: games_showcase_entity
 bundle: games_showcase_entity
 mode: default
 content:
-  field_games_category:
-    weight: 3
-    settings: {  }
-    third_party_settings: {  }
-    type: options_buttons
-    region: content
-  field_home_sub_category:
-    weight: 4
-    settings: {  }
-    third_party_settings: {  }
-    type: options_buttons
-    region: content
-  field_home_tab_ribbon:
-    weight: 8
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
   field_log_in_state:
     weight: 2
     settings: {  }
@@ -75,7 +56,7 @@ content:
     type: datetime_default
     region: content
   field_showcase_body:
-    weight: 6
+    weight: 5
     settings:
       rows: 9
       summary_rows: 3
@@ -84,7 +65,7 @@ content:
     type: text_textarea_with_summary
     region: content
   field_showcase_image:
-    weight: 5
+    weight: 4
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -92,7 +73,7 @@ content:
     type: image_image
     region: content
   field_showcase_ribbon:
-    weight: 7
+    weight: 6
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -111,14 +92,21 @@ content:
     third_party_settings: {  }
     type: datetime_default
     region: content
+  field_v2_game_provider:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: erviews_options_select
+    region: content
   langcode:
     type: language_select
     weight: 1
     region: content
-    settings: {  }
+    settings:
+      include_locked: true
     third_party_settings: {  }
   translation:
-    weight: 9
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
