@@ -1,0 +1,24 @@
+uuid: f23cc83a-fa5f-458e-8685-e6441b72ec9b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.poker_client_promotions.field_publish
+  module:
+    - poker_client_promotions
+id: poker_client_promotions.poker_client_promotions.field_publish
+field_name: field_publish
+entity_type: poker_client_promotions
+bundle: poker_client_promotions
+label: Publish
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

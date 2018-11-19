@@ -1,0 +1,48 @@
+uuid: cfeeaec4-88b0-489d-abe6-deb23d47d0c5
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - field.field.download_page_entity.download_page_entity.field_body
+    - field.field.download_page_entity.download_page_entity.field_type
+  module:
+    - download_page
+    - options
+    - text
+    - user
+id: download_page_entity.download_page_entity.default
+targetEntityType: download_page_entity
+bundle: download_page_entity
+mode: default
+content:
+  field_body:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_type:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  name:
+    label: above
+    type: string
+    weight: -4
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  user_id:
+    label: hidden
+    type: author
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

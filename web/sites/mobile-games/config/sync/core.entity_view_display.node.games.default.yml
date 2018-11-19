@@ -1,0 +1,100 @@
+uuid: 641d0855-1f90-47cc-9c51-bbf4ab7a4f0b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.games.field_game_code
+    - field.field.node.games.field_game_filter
+    - field.field.node.games.field_game_provider
+    - field.field.node.games.field_game_ribbon
+    - field.field.node.games.field_games_list_category
+    - field.field.node.games.field_games_list_thumb_img_big
+    - field.field.node.games.field_games_list_thumb_img_small
+    - field.field.node.games.field_games_list_thumbnail_size
+    - field.field.node.games.field_games_target
+    - field.field.node.games.field_keywords
+    - node.type.games
+  module:
+    - image
+    - options
+    - user
+id: node.games.default
+targetEntityType: node
+bundle: games
+mode: default
+content:
+  field_game_code:
+    weight: 5
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_game_filter:
+    weight: 8
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_game_provider:
+    weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_game_ribbon:
+    weight: 4
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_games_list_category:
+    weight: 0
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_games_list_thumb_img_big:
+    weight: 3
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_games_list_thumb_img_small:
+    weight: 2
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_games_list_thumbnail_size:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_games_target:
+    weight: 7
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+hidden:
+  field_keywords: true
+  langcode: true
+  links: true

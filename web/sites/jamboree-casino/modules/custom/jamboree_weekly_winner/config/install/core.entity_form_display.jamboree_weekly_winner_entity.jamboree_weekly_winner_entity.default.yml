@@ -1,0 +1,55 @@
+uuid: 78d4244c-ae48-4dab-8033-562d1d0b8503
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.jamboree_weekly_winner_entity.jamboree_weekly_winner_entity.field_body
+    - field.field.jamboree_weekly_winner_entity.jamboree_weekly_winner_entity.field_title
+    - field.field.jamboree_weekly_winner_entity.jamboree_weekly_winner_entity.field_weekly_winner_month
+    - field.field.jamboree_weekly_winner_entity.jamboree_weekly_winner_entity.field_weekly_winner_year
+  module:
+    - jamboree_weekly_winner
+    - text
+id: jamboree_weekly_winner_entity.jamboree_weekly_winner_entity.default
+targetEntityType: jamboree_weekly_winner_entity
+bundle: jamboree_weekly_winner_entity
+mode: default
+content:
+  field_body:
+    weight: 3
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_weekly_winner_month:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_weekly_winner_year:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  langcode:
+    type: language_select
+    weight: 4
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+hidden:
+  name: true
+  user_id: true

@@ -1,0 +1,24 @@
+uuid: bd50f031-cd64-4bb7-b68e-60bbd63a1328
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.poker_vip_entity.field_vip_secondary_enable
+  module:
+    - poker_vip_page
+id: poker_vip_entity.poker_vip_entity.field_vip_secondary_enable
+field_name: field_vip_secondary_enable
+entity_type: poker_vip_entity
+bundle: poker_vip_entity
+label: Enable
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

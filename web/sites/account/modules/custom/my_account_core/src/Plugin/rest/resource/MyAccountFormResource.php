@@ -243,6 +243,7 @@ class MyAccountFormResource extends ResourceBase
             $value['verification_code_required_message'] = $values['verification_code_required_message'];
             $value['verification_code_min_length_message'] = $values['verification_code_min_length_message'];
             $value['verification_code_max_length_message'] = $values['verification_code_max_length_message'];
+            $value['verification_code_numeric_message'] = $values['verification_code_numeric_message'];
         } elseif ($key == 'country_mapping') {
             $value['country_mapping'] = $values['country_mapping'];
         } elseif ($key == 'country_code_mapping') {
@@ -294,6 +295,13 @@ class MyAccountFormResource extends ResourceBase
             $value['no_changed_detected_message'] = $values['no_changed_detected_message'];
             $value['male_label'] = $values['male_label'];
             $value['female_label'] = $values['female_label'];
+            $value['message_timeout'] = $values['message_timeout'];
+            $value['my_profile_tab'] = $values['my_profile_tab'];
+            $value['change_password_tab'] = $values['change_password_tab'];
+            $value['fast_reg_flash_message'] = $values['fast_reg_flash_message'];
+            $value['fastreg_redirect'] = $values['fastreg_redirect'];
+            $value['fastreg_timeout_redirect'] = $values['fastreg_timeout_redirect'];
+            $value['fastreg_mobile_redirect'] = $values['fastreg_mobile_redirect'];
         }
         return $value;
     }

@@ -47,7 +47,11 @@ class DatabaseAuditStorage implements AuditStorageInterface {
 
     if (isset($options['where'])) {
       foreach ($options['where'] as $key => $value) {
-        $query->condition("w.$key", "%$value%", 'like');
+        if (is_array($value)) {
+          $query->condition("w.$key", $value['value'], $value['operator']);
+        } else {
+          $query->condition("w.$key", "%$value%", 'like');
+        }
       }
     }
 
@@ -76,10 +80,31 @@ class DatabaseAuditStorage implements AuditStorageInterface {
   public function getDistinct($column, $options = []) {
     $data = [];
 
-    $result = $this->database
+    $query = $this->database
       ->select(self::TABLE, 'w')
       ->fields('w', [$column])
-      ->distinct()
+      ->distinct();
+
+    if (isset($options['orderby'])) {
+      $query->orderBy($options['orderby']['field'], $options['orderby']['sort']);
+    }
+
+    if (isset($options['where'])) {
+      foreach ($options['where'] as $key => $value) {
+        if (is_array($value)) {
+          $query->condition("w.$key", $value['value'], $value['operator']);
+        } else {
+          $query->condition("w.$key", "%$value%", 'like');
+        }
+      }
+    }
+
+    if (!isset($options['limit'])) {
+      $options['limit'] = 50;
+    }
+
+    $result = $query
+      ->range(0, $options['limit'])
       ->execute()
       ->fetchAllAssoc($column);
 
@@ -93,6 +118,59 @@ class DatabaseAuditStorage implements AuditStorageInterface {
     }
 
     return $data;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function getWithOffset($options = []) {
+    $query = $this->database
+      ->select(self::TABLE, 'w');
+
+    $query->fields('w', [
+      'id',
+      'uid',
+      'type',
+      'eid',
+      'action',
+      'title',
+      'location',
+      'timestamp',
+      'language',
+      'entity',
+    ])->fields('ufd', [
+      'name',
+    ]);
+
+    $query->leftJoin('users_field_data', 'ufd', 'w.uid = ufd.uid');
+
+    if (isset($options['where'])) {
+      foreach ($options['where'] as $key => $value) {
+        if (is_array($value)) {
+          $query->condition("w.$key", $value['value'], $value['operator']);
+        } else {
+          $query->condition("w.$key", "%$value%", 'like');
+        }
+      }
+    }
+
+    if (!isset($options['limit'])) {
+      $options['limit'] = 50;
+    }
+
+    if (!isset($options['offset'])) {
+      $options['offset'] = 0;
+    }
+
+    if (isset($options['orderby'])) {
+      $query->orderBy($options['orderby']['field'], $options['orderby']['sort']);
+    }
+
+    $result = $query
+      ->range($options['offset'], $options['limit'])
+      ->execute();
+
+    return $result;
   }
 
   /**

@@ -5,3 +5,5 @@ country: "IN\r\nSL"
 transaction_subdomain: sunplustest
 _core:
   default_config_hash: 9rJ-hpOqBpL5uhbUyhhpVXIYSwTZILhA49ACCOX0654
+exchange_tablet_url: ''
+tablet_game_url: ''

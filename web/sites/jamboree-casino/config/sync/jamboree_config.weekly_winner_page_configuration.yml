@@ -1,0 +1,10 @@
+advanced__active_tab: edit-page-setting
+page_description:
+  value: ''
+  format: basic_html
+value: null
+format: null
+category_text: TEXT
+error_message:
+  value: "<p>Error Message</p>\r\n"
+  format: basic_html

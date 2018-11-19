@@ -26,7 +26,11 @@ CKEDITOR.dialog.add("link", function(editor) {
                     if (/^(http(|s)|\#|{domain:)/.test(url.toLowerCase()) == false) {
                         var segments = url.replace(/^\/|\/$/g, '').split('/');
                         if (segments && editor.config.allowedLanguages.indexOf(segments[0]) == -1) {
-                            url = '/' + editor.config.language + '/' + editor.config.site + url;
+                            if (editor.config.site) {
+                                url = '/' + editor.config.language + '/' + editor.config.site + url;
+                            } else {
+                                url = '/' + editor.config.language + url;
+                            }
                         }
                     }
                     data.href = url;

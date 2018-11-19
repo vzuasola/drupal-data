@@ -1,6 +1,0 @@
-webcomposer_block.api_uuid_id:
-  path: '/api/token'
-  defaults:
-    _controller: '\Drupal\webcomposer_token\Controller\WebComposerTokenController::list'
-  requirements:
-    _permission: 'access webcomposer_token api'

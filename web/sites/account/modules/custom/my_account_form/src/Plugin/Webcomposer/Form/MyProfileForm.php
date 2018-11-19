@@ -84,6 +84,16 @@ class MyProfileForm extends WebcomposerFormBase implements WebcomposerFormInterf
             '#type' => 'textfield',
             '#description' => 'The label for the First Name field',
           ],
+          'placeholder' => [
+            '#title' => 'First name placeholder label',
+            '#type' => 'textfield',
+            '#description' => 'First name placeholder label',
+          ],
+          'annotation' => [
+            '#title' => 'Annotation text',
+            '#type' => 'textarea',
+            '#description' => 'field annotation that will be displayed on focus',
+          ],
         ],
       ],
 
@@ -95,6 +105,16 @@ class MyProfileForm extends WebcomposerFormBase implements WebcomposerFormInterf
             '#title' => 'Last Name Label',
             '#type' => 'textfield',
             '#description' => 'The label for the Last Name field',
+          ],
+          'placeholder' => [
+            '#title' => 'Last name placeholder label',
+            '#type' => 'textfield',
+            '#description' => 'Last name placeholder label',
+          ],
+          'annotation' => [
+            '#title' => 'Annotation text',
+            '#type' => 'textarea',
+            '#description' => 'field annotation that will be displayed on focus',
           ],
         ],
       ],
@@ -192,6 +212,12 @@ class MyProfileForm extends WebcomposerFormBase implements WebcomposerFormInterf
             '#title' => 'Tooltip text',
             '#type' => 'textarea',
             '#description' => 'Tooltip text that will be displayed on focus of info icon',
+          ],
+          'country_area_code_validation' => [
+            '#title' => 'Country Area Code Custom Validation',
+            '#type' => 'textarea',
+            '#description' => 'List of country codes that will be validated upon submission in which it had' .
+            ' different min and max character allowed per country code and custom message validation for it',
           ],
         ],
       ],

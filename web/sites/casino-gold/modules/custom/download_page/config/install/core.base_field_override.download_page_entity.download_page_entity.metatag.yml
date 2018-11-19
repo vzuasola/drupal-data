@@ -1,0 +1,18 @@
+uuid: 5bcf11c6-0b53-4088-b5cc-fe2ea5de139c
+langcode: zh-hans
+status: true
+dependencies:
+  module:
+    - download_page
+id: download_page_entity.download_page_entity.metatag
+field_name: metatag
+entity_type: download_page_entity
+bundle: download_page_entity
+label: Metatags
+description: 'The metatags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

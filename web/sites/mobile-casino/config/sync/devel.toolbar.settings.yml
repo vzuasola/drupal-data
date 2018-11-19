@@ -1,0 +1,5 @@
+toolbar_items:
+  - devel.cache_clear
+  - devel.configs_list
+  - devel.execute_php
+  - devel.reinstall

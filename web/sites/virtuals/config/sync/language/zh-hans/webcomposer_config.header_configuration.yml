@@ -5,7 +5,7 @@ critical_announcement_content:
 news_announcement_content:
   value: ''
   format: basic_html
-header_settings_tab__active_tab: edit-balance-group
+header_settings_tab__active_tab: edit-login-group
 logo_title: 虚拟体育投注
 capslock_notification: 大写锁定已开启
 balance_label_override: '综合钱包 '
@@ -14,7 +14,7 @@ news_announcement: 0
 join_now_text: 立即加入
 join_now_link: '/{domain:entry}/{lang}/join/virtual-sports[query:({tracking})]'
 login_issue_text: 无法登录？
-login_issue_link: '/{domain:entry}/{domain:lang_token}/cant-login{tracking.token}'
+login_issue_link: '/{domain:myaccount_domain}/{domain:lang_token}/cant-login[query:({tracking})]'
 product_balance_label: 现场荷官、老虎机、街机、和虚拟运动
 total_balance_label: 总余额
 balance_error_text: 错误检索

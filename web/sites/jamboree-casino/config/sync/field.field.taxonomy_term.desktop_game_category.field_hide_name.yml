@@ -12,7 +12,7 @@ bundle: desktop_game_category
 label: 'Hide Name'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value:
   -
     value: 0

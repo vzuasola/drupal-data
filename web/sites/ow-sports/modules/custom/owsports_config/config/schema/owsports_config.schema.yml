@@ -2,6 +2,9 @@ owsports_config.owsports_configuration:
   type: config_object
   label: 'OW-Sports Custom Configuration'
   mapping:
+    maintenance_content:
+      type: text_format
+      label: 'Maintenance Content'
 
 owsports_config.twitch_configuration:
   type: config_object

@@ -3,8 +3,26 @@ unauthenticated_error_message: 您的账户已退出，我们无法验证您的�
 success_title: 注册成功
 home_title: 投注就在dafabet!马上注册！
 generic_error_message: '账户注册失败。如需帮助，请联系我们的 <a href="mailto:cnsupport@dafabet.com">客服</a>。 (i-1000)'
-portal_id_to_product_name_mapping: "3|沙巴体育|sports\r\n10|沙巴体育|sports\r\n28|沙巴体育|sports\r\n47|沙巴体育|sports\r\n22|大发体育|sports-df\r\n26|大发体育|sports-df\r\n29|大发体育|sports-df\r\n48|大发体育|sports-df\r\n4|娱乐场|casino\r\n11|娱乐场|casino\r\n16|娱乐场|casino\r\n18|娱乐场|casino\r\n30|娱乐场|casino\r\n49|娱乐场|casino\r\n23|娱乐场|casino\r\n19|娱乐场黄金版|casino-gold\r\n20|娱乐场黄金版|casino-gold\r\n21|娱乐场黄金版|casino-gold\r\n35|娱乐场黄金版|casino-gold\r\n54|娱乐场黄金版|casino-gold\r\n6|现场荷官|live-dealer\r\n15|现场荷官|live-dealer\r\n33|现场荷官|live-dealer\r\n52|现场荷官|live-dealer\r\n5|扑克|poker\r\n12|扑克|poker\r\n17|扑克|poker\r\n31|扑克|poker\r\n50|扑克|poker\r\n24|扑鱼王|fish-hunter\r\n25|扑鱼王|fish-hunter\r\n34|扑鱼王|fish-hunter\r\n53|扑鱼王|fish-hunter\r\n8|老虎机|games\r\n14|老虎机|games\r\n32|老虎机|games\r\n51|老虎机|games\r\n56|虚拟运动|virtuals\r\n57|虚拟运动|virtuals\r\n58|虚拟运动|virtuals\r\n59|虚拟运动|virtuals\r\n55|快乐彩|keno\r\n45|快乐彩|keno\r\n66|交易所|exchange\r\n67|交易所|exchange\r\n68|交易所|exchange\r\n69|交易所|exchange"
+portal_id_to_product_name_mapping: "3|沙巴体育|sports\r\n10|沙巴体育|sports\r\n28|沙巴体育|sports\r\n47|沙巴体育|sports\r\n22|大发体育|sports-df\r\n26|大发体育|sports-df\r\n29|大发体育|sports-df\r\n48|大发体育|sports-df\r\n4|娱乐场|casino\r\n11|娱乐场|casino\r\n16|娱乐场|casino\r\n18|娱乐场|casino\r\n30|娱乐场|casino\r\n49|娱乐场|casino\r\n23|娱乐场|casino\r\n19|娱乐场黄金版|casino-gold\r\n20|娱乐场黄金版|casino-gold\r\n21|娱乐场黄金版|casino-gold\r\n35|娱乐场黄金版|casino-gold\r\n54|娱乐场黄金版|casino-gold\r\n6|现场荷官|live-dealer\r\n15|现场荷官|live-dealer\r\n33|现场荷官|live-dealer\r\n52|现场荷官|live-dealer\r\n5|扑克|poker\r\n12|扑克|poker\r\n17|扑克|poker\r\n31|扑克|poker\r\n50|扑克|poker\r\n24|街机|fish-hunter\r\n25|街机|fish-hunter\r\n34|街机|fish-hunter\r\n53|街机|fish-hunter\r\n8|老虎机|games\r\n14|老虎机|games\r\n32|老虎机|games\r\n51|老虎机|games\r\n56|虚拟运动|virtuals\r\n57|虚拟运动|virtuals\r\n58|虚拟运动|virtuals\r\n59|虚拟运动|virtuals\r\n55|快乐彩|keno\r\n45|快乐彩|keno\r\n60|快乐彩|keno\r\n61|快乐彩|keno\r\n66|交易所|exchange\r\n67|交易所|exchange\r\n68|交易所|exchange\r\n69|交易所|exchange"
 livechat_header: 需要帮助？
 livechat_text: 请问有什么可以帮到您？
 step_one_text: 注册
 step_two_text: 存款
+enable_proactive_mobile: '0'
+general_settings_tab__active_tab: edit-restriction
+native_app_title: ''
+enable_avaya_proactive: '1'
+proactive_mobile_class: proactive-wechat-my
+proactive_mobile_url: 'weixin://dl/chat?DafabetMY1'
+proactive_mobile_url_playstore: 'https://play.google.com/store/apps/details?id=com.tencent.mm'
+proactive_mobile_url_ios: 'weixin://dl/chat?DafabetMY1'
+proactive_mobile_url_ios_appstore: 'https://itunes.apple.com/app/wechat/id414478124?mt=8'
+enable_cashier_payment_methods: 0
+deposit_now_text: ''
+payment_method_headers: 'Payment Options|Description|Min/Max| '
+with_payment_method:
+  value: "<div class=\"payment-option-header background-light-gray text-center\"><strong>Deposit Made Easy</strong></div>\r\n\r\n<p class=\"payment-option-desc text-14 text-center hidden-mobile mt-15 mb-15\">Learn the different payment methods you can use to be able to enjoy betting at Dafabet.</p>\r\n"
+  format: basic_html
+without_payment_method:
+  value: "<div class=\"content-header background-light-gray text-center pt-10 pb-10\"><strong class=\"text-20\">How to Deposit?</strong>\r\n<p class=\"text-16 mb-0\">Contact our Customer Support 24/7</p>\r\n</div>\r\n\r\n<div class=\"container-contact-us p-10 text-center\">\r\n<div class=\"image-contact-us-item inline-block mr-30\"><picture> <source media=\"(min-width: 768px)\" srcset=\"http://via.placeholder.com/220x120\" /> <source media=\"(min-width: 320px)\" srcset=\"http://via.placeholder.com/120x80\" /> <img alt=\"\" data-entity-type=\"\" data-entity-uuid=\"\" src=\"http://via.placeholder.com/220x120\" /> </picture></div>\r\n\r\n<div class=\"image-contact-us-item inline-block\"><picture> <source media=\"(min-width: 768px)\" srcset=\"http://via.placeholder.com/220x120\" /> <source media=\"(min-width: 320px)\" srcset=\"http://via.placeholder.com/120x80\" /> <img alt=\"\" data-entity-type=\"\" data-entity-uuid=\"\" src=\"http://via.placeholder.com/220x120\" /> </picture></div>\r\n\r\n<div><a href=\"https://www.google.com\"><img alt=\"masters.png\" data-entity-type=\"\" data-entity-uuid=\"\" height=\"44\" src=\"/sites/registration/files/2017-11/masters.png\" width=\"56\" /></a></div>\r\n</div>\r\n"
+  format: basic_html

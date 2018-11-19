@@ -11,7 +11,7 @@ id: node.page.field_banner_content_position
 field_name: field_banner_content_position
 entity_type: node
 bundle: page
-label: 'Banner Content Position'
+label: 'Pre Login Banner Content Position'
 description: ''
 required: false
 translatable: true

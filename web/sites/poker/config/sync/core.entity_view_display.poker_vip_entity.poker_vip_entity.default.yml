@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.poker_vip_entity.poker_vip_entity.field_vip_content
+    - field.field.poker_vip_entity.poker_vip_entity.field_vip_secondary_enable
     - field.field.poker_vip_entity.poker_vip_entity.field_vip_secondary_tab_id
     - field.field.poker_vip_entity.poker_vip_entity.field_vip_secondary_title
     - field.field.poker_vip_entity.poker_vip_entity.field_vip_tab_id
@@ -22,6 +23,16 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: text_default
+    region: content
+  field_vip_secondary_enable:
+    weight: 5
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
     region: content
   field_vip_secondary_tab_id:
     weight: 1

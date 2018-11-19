@@ -1,0 +1,18 @@
+uuid: efa470ae-162a-4858-b901-9fb7731923cb
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.field_clcasino_cat_disable
+field_name: field_clcasino_cat_disable
+entity_type: taxonomy_term
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

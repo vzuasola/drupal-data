@@ -54,10 +54,11 @@ class JamboreeDownloadConfigForm extends FormBase {
       '#title' => $this->t('Floating Banner'),
     ];
 
-    $form['floating_banner']['floating_banner_label'] = [
+    $form['floating_banner']['floating_banner_image_url'] = [
       '#type' => 'textfield',
-      '#title' => t('Floating Banner Label'),
-      '#default_value' => $this->get('floating_banner_label'),
+      '#title' => t('Floating Banner Image URL'),
+      '#default_value' => $this->get('floating_banner_image_url'),
+      '#description' => $this->t('Suggested image dimension: 80 x 300 pixels'),
       '#translatable' => TRUE,
     ];
 

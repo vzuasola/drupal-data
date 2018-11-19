@@ -1,0 +1,22 @@
+uuid: f7f9ae6f-16f4-4ff5-8e54-c5c977643558
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: rules_content_auto_url
+label: rules_content_auto_url
+type: 'canonical_entities:node'
+pattern: '[node:title]'
+selection_criteria:
+  4c64a2b2-71dc-4c03-8ad8-d74c83a7748d:
+    id: node_type
+    bundles:
+      rules: rules
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 4c64a2b2-71dc-4c03-8ad8-d74c83a7748d
+selection_logic: and
+weight: -5
+relationships: {  }

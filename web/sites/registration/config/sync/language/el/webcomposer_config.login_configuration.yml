@@ -6,6 +6,10 @@ autologout_box_content:
   value: "<p>Η συνεδρία σας θα λήξει σε {seconds} δευτερόλεπτα. Θέλετε να συνεχίσετε τη συνεδρία σας;</p>\r\n"
 lightbox_blurb: 'Δεν είστε ακόμη μέλος της Dafabet?'
 mobile_login_button_label: ΕΙΣΟΔΟΣ/ΕΓΓΡΑΦΗ
+advanced__active_tab: edit-login-form-details
+login_page_blurb: ''
+rememberme_label: 'Αποθήκευση Ονόματος Χρήστη'
+mobile_cant_login_url: '{domain:mobile}/{lang}/cant-login'
 username_placeholder: 'Όνομα Χρήστη'
 password_placeholder: 'Κωδικός Πρόσβασης'
 login_bottom_label: ΕΊΣΟΔΟΣ
@@ -14,10 +18,11 @@ error_message_blank_password: 'Υποχρεωτικό πεδίο ο Κωδικό
 error_message_blank_passname: 'Παρακαλώ ελέγξτε όλα τα πεδία και προσπαθήστε ξανά.'
 error_message_invalid_passname: 'Λυπούμαστε, μη έγκυρο όνομα χρήστη ή / και κωδικός πρόσβασης. ΠΑΡΑΚΑΛΩ προσπαθησε ξανα.'
 error_message_service_not_available: 'Η Υπηρεσία δεν είναι διαθέσιμη.'
-error_message_account_suspended: 'Ο λογαριασμός σας έχει κλειδωθεί. Παρακαλώ επικοινωνήστε με την εξυπηρέτηση πελατών.'
-error_message_account_locked: 'Ο λογαριασμός σας έχει κλειδωθεί. Παρακαλώ επικοινωνήστε με την εξυπηρέτηση πελατών.'
+error_message_account_suspended: 'Κλειδωμένος Λογαριασμός. Παρακαλούμε επικοινωνήστε με την Υπ/ξη Πελατών'
+error_message_account_locked: 'Κλειδωμένος Λογαριασμός. Παρακαλούμε επικοινωνήστε με την Υπ/ξη Πελατών'
 autologout_box_title: PRZYPOMNIENIE
 affirmative_button_text: Ναι
 negative_button_text: Όχι
 notification_title: POWIADOMIENIA
 notification_window_title: 'Twoja sesja wygasła'
+mobile_login_url: '{domain:mobile}/{lang}/login[query:({credentials.params}&{tracking})]'

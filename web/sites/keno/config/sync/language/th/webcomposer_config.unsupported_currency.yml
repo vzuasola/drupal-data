@@ -1,0 +1,4 @@
+unsupported_currencies_title: 'Country not supported'
+unsupported_currencies_message:
+  value: "<p>เกมส์นี้ไม่สามารถใช้งานได้ในประเทศที่คุณอยู่ กรุณาเลือกเกมส์ล็อตโต้อื่นๆ</p>\r\n"
+unsupported_currencies_button: Ok

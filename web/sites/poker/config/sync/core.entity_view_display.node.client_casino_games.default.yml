@@ -1,0 +1,84 @@
+uuid: 98d56acc-40e9-4f77-aaa9-3f463dfe2d85
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.client_casino_games.field_clcasino_category
+    - field.field.node.client_casino_games.field_clcasino_game_code
+    - field.field.node.client_casino_games.field_clcasino_game_info
+    - field.field.node.client_casino_games.field_clcasino_game_thumbnail
+    - field.field.node.client_casino_games.field_clcasino_game_title
+    - field.field.node.client_casino_games.field_clcasino_ribbon
+    - field.field.node.client_casino_games.field_clcasino_show_game_info
+    - node.type.client_casino_games
+  module:
+    - image
+    - text
+    - user
+id: node.client_casino_games.default
+targetEntityType: node
+bundle: client_casino_games
+mode: default
+content:
+  field_clcasino_category:
+    weight: 102
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_clcasino_game_code:
+    weight: 103
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_clcasino_game_info:
+    weight: 104
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_clcasino_game_thumbnail:
+    weight: 106
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_clcasino_game_title:
+    weight: 107
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_clcasino_ribbon:
+    weight: 108
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_clcasino_show_game_info:
+    weight: 105
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

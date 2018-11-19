@@ -1,0 +1,20 @@
+uuid: 5753e906-04a0-4f2c-8678-49e201a0e8d2
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_game_filter
+field_name: field_game_filter
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,10 +1,10 @@
 field_settings:
   label: 電子郵箱地址
   placeholder: 電子郵箱地址
-  annotation: 請輸入真實有效電子郵箱地址以便於進行賬戶驗證及銀行交易（例如，Moneybookers/Skrill）。不匹配和/或無效的郵箱地址可能會導致交易進程延遲。重要的信息和通知將通過郵件發送給您，其中包括密碼找回和/或與賬戶相關的信息等。
+  annotation: 請輸入有效的郵箱地址來接收獨家獎金優惠及奉送。重要提示及交易相關的信息也將發送至您的注冊郵箱。
 field_validations:
   required:
-    error_message: "請輸入您的有效的目前正處於激活狀態的電子郵件地址（如name@domain.com）。請不要在您的電子郵件地址末尾使用額外的空格。\r\n"
+    error_message: "請輸入有效郵箱地址。（例如：123456789@qq.com）\r\n"
   alpha:
     error_message: 'Field should be Alphabet characters only'
   alphanumeric:
@@ -23,13 +23,17 @@ field_validations:
     error_message: "請輸入您的有效的目前正處於激活狀態的電子郵件地址（如name@domain.com）。請不要在您的電子郵件地址末尾使用額外的空格。\r\n"
   max_length:
     error_message: "請輸入您的有效的目前正處於激活狀態的電子郵件地址（如name@domain.com）。請不要在您的電子郵件地址末尾使用額外的空格。\r\n"
+  regex:
+    error_message: 'This field only accepts specific characters.'
+  valid_date:
+    error_message: 'Date is invalid'
   username_availability:
     error_message: 'Username not available'
   email_availability:
-    error_message: "<span class=\"visible-desktop\">該郵箱已被使用。點擊<a href=\"/ch/cant-login\" target=\"popup\" onclick=\"window.open('/ch/cant-login','popup','width=820,height=810,scrollbars=no,resizable=no'); return false;\" class=\"visible-desktop\">此處</a>找回用戶名/密碼。</span>\r\n<span class=\"visible-tablet\">該郵箱已被使用。點擊<a href=\"/ch/cant-login\" target=\"_blank\" class=\"visible-tablet\">此處</a>找回用戶名/密碼。</span>\r\n<span class=\"visible-mobile\">該郵箱已被使用。點擊<a href=\"/ch/cant-login\" target=\"_blank\" class=\"visible-mobile\">此處</a>找回用戶名/密碼。</span>\r\n<span class=\"visible-app\">該郵箱已被使用。點擊<a href=\"https://m.dafawin.com/ch/cant-login?clientflag=1\" target=\"_blank\" class=\"visible-app\">此處</a>找回用戶名/密碼。</span>\r\n"
+    error_message: "<span class=\"visible-desktop\">該郵箱已被使用。點擊<a href=\"{domain:myaccount_domain}/ch/cant-login\" target=\"popup\" onclick=\"window.open('{domain:myaccount_domain}/ch/cant-login','popup','width=820,height=810,scrollbars=no,resizable=no'); return false;\" class=\"visible-desktop\">此處</a>找回用戶名/密碼。</span>\r\n<span class=\"visible-client\">該郵箱已被使用。點擊<u><a href=\"{domain:myaccount_domain}/ch/cant-login\" target=\"popup\" onclick=\"window.open('{domain:myaccount_domain}/ch/cant-login','popup','width=820,height=810,scrollbars=no,resizable=no'); return false;\" class=\"visible-desktop\">此處</a></u>找回用戶名/密碼。</span>\r\n<span class=\"visible-tablet\">該郵箱已被使用。點擊<a href=\"{domain:mobile}/ch/cant-login\" target=\"_blank\" class=\"visible-tablet\">此處</a>找回用戶名/密碼。</span>\r\n<span class=\"visible-mobile\">該郵箱已被使用。點擊<a href=\"{domain:mobile}/ch/cant-login\" target=\"_blank\" class=\"visible-mobile\">此處</a>找回用戶名/密碼。</span>\r\n<span class=\"visible-app\">該郵箱已被使用。點擊<a href=\"https://m.dfnba.net/ch/cant-login?clientflag=1\" target=\"_blank\" class=\"visible-app\">此處</a>找回用戶名/密碼。</span>\r\n"
   invalid_words:
     error_message: 'Invalid/not allowed characters'
   valid_languages:
     error_message: 'This field only accepts specific characters.'
-  valid_date:
-    error_message: 'Date is invalid'
+  not_match_username:
+    error_message: 'Password should not equal to username'

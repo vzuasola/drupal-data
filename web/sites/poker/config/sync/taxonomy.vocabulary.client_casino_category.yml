@@ -1,0 +1,9 @@
+uuid: f1bf4c04-c885-407c-a026-387763a66d85
+langcode: en
+status: true
+dependencies: {  }
+name: 'Client Casino Category'
+vid: client_casino_category
+description: 'List of categories which Client Casino can be assigned to.'
+hierarchy: 0
+weight: 0

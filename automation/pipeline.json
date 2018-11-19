@@ -78,6 +78,116 @@
             }
         }
     },
+    "lighthouse": {
+        "steps": {
+            "lighthouse": {
+                "dockerfile": "automation/Dockerfile.lighthouse",
+                "docker-image-suffix": "-lighthouse",
+                "options": [],
+                "command": [
+                    "lighthouse-ci",
+                    "$LIGHTHOUSE_DEV_TARGET_URL",
+                    "--report=./automation/deployed",
+                    "--performance=$LIGHTHOUSE_PERFORMANCE_SCORE",
+                    "--pwa=$LIGHTHOUSE_PWA_SCORE",
+                    "--best-practice=$LIGHTHOUSE_BEST_PRACTICES_SCORE",
+                    "--accessibility=$LIGHTHOUSE_ACCESSIBILITY_SCORE",
+                    "--seo=$LIGHTHOUSE_SEO_SCORE"
+                ],
+                "volumes": [
+                    "$PWD:/app"
+                ]
+            }
+        }
+    },
+    "lighthouse-test": {
+        "steps": {
+            "lighthouse": {
+                "dockerfile": "automation/Dockerfile.lighthouse",
+                "docker-image-suffix": "-lighthouse",
+                "options": [],
+                "command": [
+                    "lighthouse-ci",
+                    "$LIGHTHOUSE_QA1_TARGET_URL",
+                    "--report=./automation/deployed",
+                    "--performance=$LIGHTHOUSE_PERFORMANCE_SCORE",
+                    "--pwa=$LIGHTHOUSE_PWA_SCORE",
+                    "--best-practice=$LIGHTHOUSE_BEST_PRACTICES_SCORE",
+                    "--accessibility=$LIGHTHOUSE_ACCESSIBILITY_SCORE",
+                    "--seo=$LIGHTHOUSE_SEO_SCORE"
+                ],
+                "volumes": [
+                    "$PWD:/app"
+                ]
+            }
+        }
+    },
+    "lighthouse-tct": {
+        "steps": {
+            "lighthouse": {
+                "dockerfile": "automation/Dockerfile.lighthouse",
+                "docker-image-suffix": "-lighthouse",
+                "options": [],
+                "command": [
+                    "lighthouse-ci",
+                    "$LIGHTHOUSE_TCT_TARGET_URL",
+                    "--report=./automation/deployed",
+                    "--performance=$LIGHTHOUSE_PERFORMANCE_SCORE",
+                    "--pwa=$LIGHTHOUSE_PWA_SCORE",
+                    "--best-practice=$LIGHTHOUSE_BEST_PRACTICES_SCORE",
+                    "--accessibility=$LIGHTHOUSE_ACCESSIBILITY_SCORE",
+                    "--seo=$LIGHTHOUSE_SEO_SCORE"
+                ],
+                "volumes": [
+                    "$PWD:/app"
+                ]
+            }
+        }
+    },
+    "lighthouse-stg": {
+        "steps": {
+            "lighthouse": {
+                "dockerfile": "automation/Dockerfile.lighthouse",
+                "docker-image-suffix": "-lighthouse",
+                "options": [],
+                "command": [
+                    "lighthouse-ci",
+                    "$LIGHTHOUSE_STG_TARGET_URL",
+                    "--report=./automation/deployed",
+                    "--performance=$LIGHTHOUSE_PERFORMANCE_SCORE",
+                    "--pwa=$LIGHTHOUSE_PWA_SCORE",
+                    "--best-practice=$LIGHTHOUSE_BEST_PRACTICES_SCORE",
+                    "--accessibility=$LIGHTHOUSE_ACCESSIBILITY_SCORE",
+                    "--seo=$LIGHTHOUSE_SEO_SCORE"
+                ],
+                "volumes": [
+                    "$PWD:/app"
+                ]
+            }
+        }
+    },
+    "lighthouse-uat": {
+        "steps": {
+            "lighthouse": {
+                "dockerfile": "automation/Dockerfile.lighthouse",
+                "docker-image-suffix": "-lighthouse",
+                "options": [],
+                "command": [
+                    "lighthouse-ci",
+                    "$LIGHTHOUSE_UAT_TARGET_URL",
+                    "--report=./automation/deployed",
+                    "--performance=$LIGHTHOUSE_PERFORMANCE_SCORE",
+                    "--pwa=$LIGHTHOUSE_PWA_SCORE",
+                    "--best-practice=$LIGHTHOUSE_BEST_PRACTICES_SCORE",
+                    "--accessibility=$LIGHTHOUSE_ACCESSIBILITY_SCORE",
+                    "--seo=$LIGHTHOUSE_SEO_SCORE"
+                ],
+                "volumes": [
+                    "$PWD:/app"
+                ]
+            }
+        }
+    },
     "sensiolab-security-checker": {
         "steps": {
             "sensiolab-security-checker": {
@@ -104,7 +214,7 @@
                     "VERSION=$VERSION",
                     "--env",
                     "CI_PIPELINE_ID=$CI_PIPELINE_ID"
-		],
+        ],
                 "command": [
                     "mvn",
                     "clean",
@@ -125,7 +235,7 @@
                     "VERSION=$VERSION",
                     "--env",
                     "CI_PIPELINE_ID=$CI_PIPELINE_ID"
-		],
+        ],
                 "command": [
                     "mvn",
                     "sonar:sonar",
@@ -160,7 +270,7 @@
                     "VERSION=$VERSION",
                     "--env",
                     "CI_PIPELINE_ID=$CI_PIPELINE_ID"
-		],
+        ],
                 "command": [
                     "mvn",
                     "sonar:sonar",
@@ -170,6 +280,121 @@
                 ],
                 "volumes": [
                     "$PWD:/app",
+                    "/home/gitlab-runner/mavendocker/config/settings.xml:/usr/share/maven/conf/settings.xml",
+                    "/home/gitlab-runner/mavendocker/repository:/shared/repository"
+                ]
+            }
+        }
+    },
+    "deploy-db-dev": {
+        "steps": {
+            "build-code": {
+                "dockerfile": "automation/Dockerfile.kubectl",
+                "docker-image-suffix": "-kubectl",
+                "options": [],
+                "command": [
+                    "kubectl",
+                    "apply",
+                    "--kubeconfig=/app/.kube/config-dev",
+                    "-f",
+                    "/app/devMariadb.yml",
+                    "-n",
+                    "dev"
+                ],
+                "volumes": [
+                    "$PWD:/app",
+                    "$PWD:/usr/share/maven/conf/settings.xml",
+                    "$PWD:/shared/repository"
+                ]
+            }
+        }
+    },
+    "deploy-app-qa1": {
+        "steps": {
+            "build-code": {
+                "dockerfile": "automation/Dockerfile.kubectl",
+                "docker-image-suffix": "-kubectl",
+                "options": [],
+                "command": [
+                    "kubectl",
+                    "apply",
+                    "--kubeconfig=/app/.kube/config-qa1",
+                    "-f",
+                    "/app/qaDeployment.yml",
+                    "-n",
+                    "qa1"
+                ],
+                "volumes": [
+                    "/home/gitlab-runner/builds/0903ea42/0/CMS/dafabet-ghana:/app",
+                    "/home/gitlab-runner/mavendocker/config/settings.xml:/usr/share/maven/conf/settings.xml",
+                    "/home/gitlab-runner/mavendocker/repository:/shared/repository"
+                ]
+            }
+        }
+    },
+    "deploy-db-qa1": {
+        "steps": {
+            "build-code": {
+                "dockerfile": "automation/Dockerfile.kubectl",
+                "docker-image-suffix": "-kubectl",
+                "options": [],
+                "command": [
+                    "kubectl",
+                    "apply",
+                    "--kubeconfig=/app/.kube/config-qa1",
+                    "-f",
+                    "/app/qaMariadb.yml",
+                    "-n",
+                    "qa1"
+                ],
+                "volumes": [
+                    "/home/gitlab-runner/builds/0903ea42/0/CMS/dafabet-ghana:/app",
+                    "/home/gitlab-runner/mavendocker/config/settings.xml:/usr/share/maven/conf/settings.xml",
+                    "/home/gitlab-runner/mavendocker/repository:/shared/repository"
+                ]
+            }
+        }
+    },
+    "deploy-app-tct": {
+        "steps": {
+            "build-code": {
+                "dockerfile": "automation/Dockerfile.kubectl",
+                "docker-image-suffix": "-kubectl",
+                "options": [],
+                "command": [
+                    "kubectl",
+                    "apply",
+                    "--kubeconfig=/app/.kube/config-tct",
+                    "-f",
+                    "/app/testDeployment.yml",
+                    "-n",
+                    "tct"
+                ],
+                "volumes": [
+                    "/home/gitlab-runner/builds/0903ea42/0/CMS/dafabet-ghana:/app",
+                    "/home/gitlab-runner/mavendocker/config/settings.xml:/usr/share/maven/conf/settings.xml",
+                    "/home/gitlab-runner/mavendocker/repository:/shared/repository"
+                ]
+            }
+        }
+    },
+    "deploy-db-tct": {
+        "steps": {
+            "build-code": {
+                "dockerfile": "automation/Dockerfile.kubectl",
+                "docker-image-suffix": "-kubectl",
+                "options": [],
+                "command": [
+                    "kubectl",
+                    "apply",
+                    "--kubeconfig=/app/.kube/config-tct",
+                    "-f",
+                    "/app/testMariadb.yml",
+                    "-n",
+                    "tct"
+                ],
+                "volumes": [
+                    "/home/gitlab-runner/builds/0903ea42/0/CMS/dafabet-ghana:/app",
                     "/home/gitlab-runner/mavendocker/config/settings.xml:/usr/share/maven/conf/settings.xml",
                     "/home/gitlab-runner/mavendocker/repository:/shared/repository"
                 ]
@@ -274,7 +499,7 @@
                     "VERSION=$VERSION",
                     "--env",
                     "CI_PIPELINE_ID=$CI_PIPELINE_ID"
-		],
+        ],
                 "command": [
                     "mvn",
                     "clean",
@@ -328,7 +553,7 @@
                     "mvn",
                     "test",
                     "-pl",
-		    "dafabet-desktop"
+            "dafabet-desktop"
                 ],
                 "volumes": [
                   "$PWD:/app",
@@ -349,7 +574,7 @@
                     "mvn",
                     "test",
                     "-pl",
-		    "dafabet-desktop"
+            "dafabet-desktop"
                 ],
                 "volumes": [
                   "$PWD:/app",
@@ -370,7 +595,7 @@
                     "mvn",
                     "test",
                     "-pl",
-		    "dafabet-desktop"
+            "dafabet-desktop"
                 ],
                 "volumes": [
                   "$PWD:/app",
@@ -391,7 +616,7 @@
                     "mvn",
                     "test",
                     "-pl",
-		    "dafabet-desktop"
+            "dafabet-desktop"
                 ],
                 "volumes": [
                   "$PWD:/app",
@@ -412,7 +637,7 @@
                     "mvn",
                     "test",
                     "-pl",
-		    "dafabet-desktop"
+            "dafabet-desktop"
                 ],
                 "volumes": [
                   "$PWD:/app",
@@ -806,8 +1031,8 @@
                 ],
                 "command": [
                     "python",
-		    "/app/automation/lib/run_towercli.py",
-		    "--job-template",
+            "/app/automation/lib/run_towercli.py",
+            "--job-template",
                     "$DEPLOY_QA",
                     "--extra-vars",
                     "version: $VERSION.$CI_PIPELINE_ID",
@@ -870,8 +1095,8 @@
                 ],
                 "command": [
                     "python",
-		    "/app/automation/lib/run_towercli.py",
-		    "--job-template",
+            "/app/automation/lib/run_towercli.py",
+            "--job-template",
                     "$INTEGRATION_QA",
                     "--extra-vars",
                     "version: $VERSION.$CI_PIPELINE_ID",
@@ -1937,8 +2162,8 @@
                 ],
                 "command": [
                     "python",
-		    "/app/automation/lib/run_towercli.py",
-		    "--job-template",
+            "/app/automation/lib/run_towercli.py",
+            "--job-template",
                     "$CODE_SCAN",
                     "--extra-vars",
                     "version: $VERSION.$CI_PIPELINE_ID",
@@ -2007,8 +2232,8 @@
                 ],
                 "command": [
                     "python",
-		    "/app/automation/lib/run_towercli.py",
-		    "--job-template",
+            "/app/automation/lib/run_towercli.py",
+            "--job-template",
                     "$DEPLOY_TCT",
                     "--extra-vars",
                     "version: $VERSION.$CI_PIPELINE_ID",
@@ -2071,8 +2296,8 @@
                 ],
                 "command": [
                     "python",
-		    "/app/automation/lib/run_towercli.py",
-		    "--job-template",
+            "/app/automation/lib/run_towercli.py",
+            "--job-template",
                     "$INTEGRATION_TCT",
                     "--extra-vars",
                     "version: $VERSION.$CI_PIPELINE_ID",
@@ -2175,8 +2400,8 @@
                 ],
                 "command": [
                     "python",
-		    "/app/automation/lib/run_towercli.py",
-		    "--job-template",
+            "/app/automation/lib/run_towercli.py",
+            "--job-template",
                     "$DEPLOY_UAT",
                     "--extra-vars",
                     "version: $VERSION.$CI_PIPELINE_ID",
@@ -2239,8 +2464,8 @@
                 ],
                 "command": [
                     "python",
-		    "/app/automation/lib/run_towercli.py",
-		    "--job-template",
+            "/app/automation/lib/run_towercli.py",
+            "--job-template",
                     "$INTEGRATION_UAT",
                     "--extra-vars",
                     "version: $VERSION.$CI_PIPELINE_ID",
@@ -2307,8 +2532,8 @@
                 ],
                 "command": [
                     "python",
-		    "/app/automation/lib/run_towercli.py",
-		    "--job-template",
+            "/app/automation/lib/run_towercli.py",
+            "--job-template",
                     "$DEPLOY_STG",
                     "--extra-vars",
                     "version: $VERSION.$CI_PIPELINE_ID",
@@ -2371,8 +2596,8 @@
                 ],
                 "command": [
                     "python",
-		    "/app/automation/lib/run_towercli.py",
-		    "--job-template",
+            "/app/automation/lib/run_towercli.py",
+            "--job-template",
                     "$INTEGRATION_STG",
                     "--extra-vars",
                     "version: $VERSION.$CI_PIPELINE_ID",
@@ -2475,8 +2700,8 @@
                 ],
                 "command": [
                     "python",
-		    "/app/automation/lib/run_towercli.py",
-		    "--job-template",
+            "/app/automation/lib/run_towercli.py",
+            "--job-template",
                     "$DEPLOY_INTERNAL_PROD",
                     "--extra-vars",
                     "version: $VERSION.$CI_PIPELINE_ID",
@@ -2573,8 +2798,8 @@
                 ],
                 "command": [
                     "python",
-		    "/app/automation/lib/run_towercli.py",
-		    "--job-template",
+            "/app/automation/lib/run_towercli.py",
+            "--job-template",
                     "$DEPLOY_PROD",
                     "--extra-vars",
                     "version: $VERSION.$CI_PIPELINE_ID",
@@ -2598,6 +2823,664 @@
                 "command": [
                     "python",
                     "/app/automation/mark_as_complete.py"
+                ],
+                "volumes": [
+                    "$PWD:/app"
+                ]
+            }
+        }
+    },
+        "build-docker-image-app": {
+        "steps": {
+            "copy-files": {
+                "dockerfile": "automation/Dockerfile.python",
+                "docker-image-suffix": "-python",
+                "options": [],
+                "command": [
+                "python",
+            "/app/automation/copy_files.py"
+                ],
+                "volumes": [
+                    "$PWD:/app"
+                ]
+            },
+            "registry-login": {
+                "dockerfile": "automation/Dockerfile.docker",
+                "docker-image-suffix": "-docker",
+                "options": [],
+                "command": [
+                "docker",
+            "login",
+                    "$DEV_DOCKER_REGISTRY_PUSH",
+            "-u",
+            "$DEV_DOCKER_REGISTRY_USER",
+            "-p",
+            "$DEV_DOCKER_REGISTRY_PASSWORD"
+                ],
+                "volumes": [
+                ]
+            },
+            "build-image": {
+                "dockerfile": "automation/Dockerfile.docker",
+                "docker-image-suffix": "-docker",
+                "options": [],
+                "command": [
+            "docker",
+            "build",
+            "-t",
+                    "$DEV_DOCKER_REGISTRY_PUSH/$CI_PROJECT_NAME/app:$CI_COMMIT_REF_NAME-$CI_PIPELINE_ID",
+            "-f",
+            "docker/services/app/Dockerfile",
+            "docker/services/app"
+                ],
+                "volumes": [
+                    "$PWD:/app"
+                ]
+            },
+            "push-image": {
+                "dockerfile": "automation/Dockerfile.docker",
+                "docker-image-suffix": "-docker",
+                "options": [],
+                "command": [
+            "docker",
+            "push",
+            "$DEV_DOCKER_REGISTRY_PUSH/$CI_PROJECT_NAME/app:$CI_COMMIT_REF_NAME-$CI_PIPELINE_ID"
+                ],
+                "volumes": [
+                    "$PWD:/app"
+                ]
+            }
+        }
+    },
+    "build-docker-image-db": {
+        "steps": {
+            "registry-login": {
+                "dockerfile": "automation/Dockerfile.docker",
+                "docker-image-suffix": "-docker",
+                "options": [],
+                "command": [
+                "docker",
+            "login",
+                    "$DEV_DOCKER_REGISTRY_PUSH",
+            "-u",
+            "$DEV_DOCKER_REGISTRY_USER",
+            "-p",
+            "$DEV_DOCKER_REGISTRY_PASSWORD"
+                ],
+                "volumes": [
+                ]
+            },
+            "build-image": {
+                "dockerfile": "automation/Dockerfile.docker",
+                "docker-image-suffix": "-docker",
+                "options": [],
+                "command": [
+            "docker",
+            "build",
+            "-t",
+                    "$DEV_DOCKER_REGISTRY_PUSH/$CI_PROJECT_NAME/db:$CI_COMMIT_REF_NAME-$CI_PIPELINE_ID",
+            "-f",
+            "docker/services/db/Dockerfile",
+            "docker/services/db"
+                ],
+                "volumes": [
+                    "$PWD:/app"
+                ]
+            },
+            "push-image": {
+                "dockerfile": "automation/Dockerfile.docker",
+                "docker-image-suffix": "-docker",
+                "options": [],
+                "command": [
+            "docker",
+            "push",
+            "$DEV_DOCKER_REGISTRY_PUSH/$CI_PROJECT_NAME/db:$CI_COMMIT_REF_NAME-$CI_PIPELINE_ID"
+                ],
+                "volumes": [
+                    "$PWD:/app"
+                ]
+            }
+        }
+    },
+    "deploy-k8-dev": {
+        "steps": {
+            "generate-manifests": {
+                "dockerfile": "automation/Dockerfile.ansible-playbook",
+                "docker-image-suffix": "-ansible-playbook",
+                "options": [],
+                "command": [
+            "kubernetes/generate_k8_manifests.yml",
+                    "-e",
+            "branch_name=$CI_COMMIT_REF_NAME",
+            "-e",
+            "pipeline_id=$CI_PIPELINE_ID",
+            "-e",
+            "project_name=$CI_PROJECT_NAME",
+            "-e",
+            "environment_name=dev"
+                ],
+                "volumes": [
+                    "$PWD:/ansible/playbooks"
+                ]
+            },
+            "launch-manifests": {
+                "dockerfile": "automation/Dockerfile.kubectl",
+                "docker-image-suffix": "-kubectl",
+                "options": [],
+                "command": [
+                    "kubectl",
+                    "apply",
+                    "--kubeconfig=/app/kubernetes/config/config-dev",
+                    "-f",
+                    "/app/kubernetes/manifests/dev"
+                ],
+                "volumes": [
+                    "$PWD:/app"
+                ]
+            }
+        }
+    },
+    "deploy-k8-qa1": {
+        "steps": {
+            "generate-manifests": {
+                "dockerfile": "automation/Dockerfile.ansible-playbook",
+                "docker-image-suffix": "-ansible-playbook",
+                "options": [],
+                "command": [
+            "kubernetes/generate_k8_manifests.yml",
+                    "-e",
+            "branch_name=$CI_COMMIT_REF_NAME",
+            "-e",
+            "pipeline_id=$CI_PIPELINE_ID",
+            "-e",
+            "project_name=$CI_PROJECT_NAME",
+            "-e",
+            "environment_name=qa1"
+                ],
+                "volumes": [
+                    "$PWD:/ansible/playbooks"
+                ]
+            },
+            "launch-manifests": {
+                "dockerfile": "automation/Dockerfile.kubectl",
+                "docker-image-suffix": "-kubectl",
+                "options": [],
+                "command": [
+                    "kubectl",
+                    "apply",
+                    "--kubeconfig=/app/kubernetes/config/config-qa1",
+                    "-f",
+                    "/app/kubernetes/manifests/qa1"
+                ],
+                "volumes": [
+                    "$PWD:/app"
+                ]
+            }
+        }
+    },
+    "deploy-k8-tct": {
+        "steps": {
+            "generate-manifests": {
+                "dockerfile": "automation/Dockerfile.ansible-playbook",
+                "docker-image-suffix": "-ansible-playbook",
+                "options": [],
+                "command": [
+            "kubernetes/generate_k8_manifests.yml",
+                    "-e",
+            "branch_name=$CI_COMMIT_REF_NAME",
+            "-e",
+            "pipeline_id=$CI_PIPELINE_ID",
+            "-e",
+            "project_name=$CI_PROJECT_NAME",
+            "-e",
+            "environment_name=tct"
+                ],
+                "volumes": [
+                    "$PWD:/ansible/playbooks"
+                ]
+            },
+            "launch-manifests": {
+                "dockerfile": "automation/Dockerfile.kubectl",
+                "docker-image-suffix": "-kubectl",
+                "options": [],
+                "command": [
+                    "kubectl",
+                    "apply",
+                    "--kubeconfig=/app/kubernetes/config/config-tct",
+                    "-f",
+                    "/app/kubernetes/manifests/tct"
+                ],
+                "volumes": [
+                    "$PWD:/app"
+                ]
+            }
+        }
+    },
+    "deploy-k8-uat": {
+        "steps": {
+            "generate-manifests": {
+                "dockerfile": "automation/Dockerfile.ansible-playbook",
+                "docker-image-suffix": "-ansible-playbook",
+                "options": [],
+                "command": [
+            "kubernetes/generate_k8_manifests.yml",
+                    "-e",
+            "branch_name=$CI_COMMIT_REF_NAME",
+            "-e",
+            "pipeline_id=$CI_PIPELINE_ID",
+            "-e",
+            "project_name=$CI_PROJECT_NAME",
+            "-e",
+            "environment_name=uat"
+                ],
+                "volumes": [
+                    "$PWD:/ansible/playbooks"
+                ]
+            },
+            "launch-manifests": {
+                "dockerfile": "automation/Dockerfile.kubectl",
+                "docker-image-suffix": "-kubectl",
+                "options": [],
+                "command": [
+                    "kubectl",
+                    "apply",
+                    "--kubeconfig=/app/kubernetes/config/config-uat",
+                    "-f",
+                    "/app/kubernetes/manifests/uat"
+                ],
+                "volumes": [
+                    "$PWD:/app"
+                ]
+            }
+        }
+    },
+    "deploy-k8-stg": {
+        "steps": {
+            "generate-manifests": {
+                "dockerfile": "automation/Dockerfile.ansible-playbook",
+                "docker-image-suffix": "-ansible-playbook",
+                "options": [],
+                "command": [
+            "kubernetes/generate_k8_manifests.yml",
+                    "-e",
+            "branch_name=$CI_COMMIT_REF_NAME",
+            "-e",
+            "pipeline_id=$CI_PIPELINE_ID",
+            "-e",
+            "project_name=$CI_PROJECT_NAME",
+            "-e",
+            "environment_name=stg"
+                ],
+                "volumes": [
+                    "$PWD:/ansible/playbooks"
+                ]
+            },
+            "launch-manifests": {
+                "dockerfile": "automation/Dockerfile.kubectl",
+                "docker-image-suffix": "-kubectl",
+                "options": [],
+                "command": [
+                    "kubectl",
+                    "apply",
+                    "--kubeconfig=/app/kubernetes/config/config-stg",
+                    "-f",
+                    "/app/kubernetes/manifests/stg"
+                ],
+                "volumes": [
+                    "$PWD:/app"
+                ]
+            }
+        }
+    },
+    "deploy-k8-prd": {
+        "steps": {
+            "generate-manifests": {
+                "dockerfile": "automation/Dockerfile.ansible-playbook",
+                "docker-image-suffix": "-ansible-playbook",
+                "options": [],
+                "command": [
+            "kubernetes/generate_k8_manifests.yml",
+                    "-e",
+            "branch_name=$CI_COMMIT_REF_NAME",
+            "-e",
+            "pipeline_id=$CI_PIPELINE_ID",
+            "-e",
+            "project_name=$CI_PROJECT_NAME",
+            "-e",
+            "environment_name=prd"
+                ],
+                "volumes": [
+                    "$PWD:/ansible/playbooks"
+                ]
+            },
+            "launch-manifests": {
+                "dockerfile": "automation/Dockerfile.kubectl",
+                "docker-image-suffix": "-kubectl",
+                "options": [],
+                "command": [
+                    "kubectl",
+                    "apply",
+                    "--kubeconfig=/app/kubernetes/config/config-prd",
+                    "-f",
+                    "/app/kubernetes/manifests/prd"
+                ],
+                "volumes": [
+                    "$PWD:/app"
+                ]
+            }
+        }
+    },
+    "deploy-k8-dev-helm": {
+        "steps": {
+            "generate-manifests": {
+                "dockerfile": "automation/Dockerfile.ansible-playbook",
+                "docker-image-suffix": "-ansible-playbook",
+                "options": [],
+                "command": [
+            "kubernetes/generate_k8_manifests.yml",
+            "-e",
+            "project_name=$CI_PROJECT_NAME",
+            "-e",
+            "environment_name=dev"
+                ],
+                "volumes": [
+                    "$PWD:/ansible/playbooks"
+                ]
+            },
+            "launch-manifests": {
+                "dockerfile": "automation/Dockerfile.kubectl",
+                "docker-image-suffix": "-kubectl",
+                "options": [],
+                "command": [
+                    "kubectl",
+                    "apply",
+                    "--kubeconfig=/app/kubernetes/config/config-dev",
+                    "-f",
+                    "/app/kubernetes/manifests/dev"
+                ],
+                "volumes": [
+                    "$PWD:/app"
+                ]
+            },
+            "install-helm-chart": {
+                "dockerfile": "automation/Dockerfile.helm",
+                "docker-image-suffix": "-helm",
+                "options": [],
+                "command": [
+	            "helm",
+                    "install",
+		    "--repo",
+		    "$HELM_REPO_DEV",
+		    "$CHART_NAME_DEV",
+                    "--kubeconfig=/app/kubernetes/config/config-dev",
+		    "--namespace",
+		    "$NAMESPACE_DEV",
+		    "--name=$CHART_RELEASE_BASE_NAME_DEV-$CI_PIPELINE_ID"
+                ],
+                "volumes": [
+                    "$PWD:/app"
+                ]
+            }
+        }
+    },
+    "deploy-k8-qa1-helm": {
+        "steps": {
+            "generate-manifests": {
+                "dockerfile": "automation/Dockerfile.ansible-playbook",
+                "docker-image-suffix": "-ansible-playbook",
+                "options": [],
+                "command": [
+            "kubernetes/generate_k8_manifests.yml",
+            "-e",
+            "project_name=$CI_PROJECT_NAME",
+            "-e",
+            "environment_name=qa1"
+                ],
+                "volumes": [
+                    "$PWD:/ansible/playbooks"
+                ]
+            },
+            "launch-manifests": {
+                "dockerfile": "automation/Dockerfile.kubectl",
+                "docker-image-suffix": "-kubectl",
+                "options": [],
+                "command": [
+                    "kubectl",
+                    "apply",
+                    "--kubeconfig=/app/kubernetes/config/config-qa1",
+                    "-f",
+                    "/app/kubernetes/manifests/qa1"
+                ],
+                "volumes": [
+                    "$PWD:/app"
+                ]
+            },
+            "install-helm-chart": {
+                "dockerfile": "automation/Dockerfile.helm",
+                "docker-image-suffix": "-helm",
+                "options": [],
+                "command": [
+	            "helm",
+                    "install",
+		    "--repo",
+		    "$HELM_REPO_QA1",
+		    "$CHART_NAME_QA1",
+                    "--kubeconfig=/app/kubernetes/config/config-qa1",
+		    "--namespace",
+		    "$NAMESPACE_QA1",
+		    "--name=$CHART_RELEASE_BASE_NAME_QA1-$CI_PIPELINE_ID"
+                ],
+                "volumes": [
+                    "$PWD:/app"
+                ]
+            }
+        }
+    },
+    "deploy-k8-tct-helm": {
+        "steps": {
+            "generate-manifests": {
+                "dockerfile": "automation/Dockerfile.ansible-playbook",
+                "docker-image-suffix": "-ansible-playbook",
+                "options": [],
+                "command": [
+            "kubernetes/generate_k8_manifests.yml",
+            "-e",
+            "project_name=$CI_PROJECT_NAME",
+            "-e",
+            "environment_name=tct"
+                ],
+                "volumes": [
+                    "$PWD:/ansible/playbooks"
+                ]
+            },
+            "launch-manifests": {
+                "dockerfile": "automation/Dockerfile.kubectl",
+                "docker-image-suffix": "-kubectl",
+                "options": [],
+                "command": [
+                    "kubectl",
+                    "apply",
+                    "--kubeconfig=/app/kubernetes/config/config-tct",
+                    "-f",
+                    "/app/kubernetes/manifests/tct"
+                ],
+                "volumes": [
+                    "$PWD:/app"
+                ]
+            },
+            "install-helm-chart": {
+                "dockerfile": "automation/Dockerfile.helm",
+                "docker-image-suffix": "-helm",
+                "options": [],
+                "command": [
+	            "helm",
+                    "install",
+		    "--repo",
+		    "$HELM_REPO_TCT",
+		    "$CHART_NAME_TCT",
+                    "--kubeconfig=/app/kubernetes/config/config-tct",
+		    "--namespace",
+		    "$NAMESPACE_TCT",
+		    "--name=$CHART_RELEASE_BASE_NAME_TCT-$CI_PIPELINE_ID"
+                ],
+                "volumes": [
+                    "$PWD:/app"
+                ]
+            }
+        }
+    },
+    "deploy-k8-uat-helm": {
+        "steps": {
+            "generate-manifests": {
+                "dockerfile": "automation/Dockerfile.ansible-playbook",
+                "docker-image-suffix": "-ansible-playbook",
+                "options": [],
+                "command": [
+            "kubernetes/generate_k8_manifests.yml",
+            "-e",
+            "project_name=$CI_PROJECT_NAME",
+            "-e",
+            "environment_name=uat"
+                ],
+                "volumes": [
+                    "$PWD:/ansible/playbooks"
+                ]
+            },
+            "launch-manifests": {
+                "dockerfile": "automation/Dockerfile.kubectl",
+                "docker-image-suffix": "-kubectl",
+                "options": [],
+                "command": [
+                    "kubectl",
+                    "apply",
+                    "--kubeconfig=/app/kubernetes/config/config-uat",
+                    "-f",
+                    "/app/kubernetes/manifests/uat"
+                ],
+                "volumes": [
+                    "$PWD:/app"
+                ]
+            },
+            "install-helm-chart": {
+                "dockerfile": "automation/Dockerfile.helm",
+                "docker-image-suffix": "-helm",
+                "options": [],
+                "command": [
+	            "helm",
+                    "install",
+		    "--repo",
+		    "$HELM_REPO_UAT",
+		    "$CHART_NAME_UAT",
+                    "--kubeconfig=/app/kubernetes/config/config-uat",
+		    "--namespace",
+		    "$NAMESPACE_UAT",
+		    "--name=$CHART_RELEASE_BASE_NAME_UAT-$CI_PIPELINE_ID"
+                ],
+                "volumes": [
+                    "$PWD:/app"
+                ]
+            }
+        }
+    },
+    "deploy-k8-stg-helm": {
+        "steps": {
+            "generate-manifests": {
+                "dockerfile": "automation/Dockerfile.ansible-playbook",
+                "docker-image-suffix": "-ansible-playbook",
+                "options": [],
+                "command": [
+            "kubernetes/generate_k8_manifests.yml",
+            "-e",
+            "project_name=$CI_PROJECT_NAME",
+            "-e",
+            "environment_name=stg"
+                ],
+                "volumes": [
+                    "$PWD:/ansible/playbooks"
+                ]
+            },
+            "launch-manifests": {
+                "dockerfile": "automation/Dockerfile.kubectl",
+                "docker-image-suffix": "-kubectl",
+                "options": [],
+                "command": [
+                    "kubectl",
+                    "apply",
+                    "--kubeconfig=/app/kubernetes/config/config-stg",
+                    "-f",
+                    "/app/kubernetes/manifests/stg"
+                ],
+                "volumes": [
+                    "$PWD:/app"
+                ]
+            },
+            "install-helm-chart": {
+                "dockerfile": "automation/Dockerfile.helm",
+                "docker-image-suffix": "-helm",
+                "options": [],
+                "command": [
+	            "helm",
+                    "install",
+		    "--repo",
+		    "$HELM_REPO_STG",
+		    "$CHART_NAME_STG",
+                    "--kubeconfig=/app/kubernetes/config/config-stg",
+		    "--namespace",
+		    "$NAMESPACE_STG",
+		    "--name=$CHART_RELEASE_BASE_NAME_STG-$CI_PIPELINE_ID"
+                ],
+                "volumes": [
+                    "$PWD:/app"
+                ]
+            }
+        }
+    },
+    "deploy-k8-prd-helm": {
+        "steps": {
+            "generate-manifests": {
+                "dockerfile": "automation/Dockerfile.ansible-playbook",
+                "docker-image-suffix": "-ansible-playbook",
+                "options": [],
+                "command": [
+            "kubernetes/generate_k8_manifests.yml",
+            "-e",
+            "project_name=$CI_PROJECT_NAME",
+            "-e",
+            "environment_name=prd"
+                ],
+                "volumes": [
+                    "$PWD:/ansible/playbooks"
+                ]
+            },
+            "launch-manifests": {
+                "dockerfile": "automation/Dockerfile.kubectl",
+                "docker-image-suffix": "-kubectl",
+                "options": [],
+                "command": [
+                    "kubectl",
+                    "apply",
+                    "--kubeconfig=/app/kubernetes/config/config-prd",
+                    "-f",
+                    "/app/kubernetes/manifests/prd"
+                ],
+                "volumes": [
+                    "$PWD:/app"
+                ]
+            },
+            "install-helm-chart": {
+                "dockerfile": "automation/Dockerfile.helm",
+                "docker-image-suffix": "-helm",
+                "options": [],
+                "command": [
+	            "helm",
+                    "install",
+		    "--repo",
+		    "$HELM_REPO_PRD",
+		    "$CHART_NAME_PRD",
+                    "--kubeconfig=/app/kubernetes/config/config-prd",
+		    "--namespace",
+		    "$NAMESPACE_PRD",
+		    "--name=$CHART_RELEASE_BASE_NAME_PRD-$CI_PIPELINE_ID"
                 ],
                 "volumes": [
                     "$PWD:/app"

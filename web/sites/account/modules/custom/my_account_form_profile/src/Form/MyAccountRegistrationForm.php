@@ -163,6 +163,16 @@ class MyAccountRegistrationForm extends FormBase
             '#translatable' => true,
         ];
 
+        $form['field_labels_sms_verification']['verification_code_numeric_message'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Numeric Error Message'),
+            '#size' => 25,
+            '#required' => TRUE,
+            '#description' => $this->t('Numeric Field Error Message'),
+            '#default_value' => $this->get('verification_code_numeric_message'),
+            '#translatable' => true,
+        ];
+
         $form['field_labels_sms_verification']['verification_code_min_length_message'] = [
             '#type' => 'textfield',
             '#title' => $this->t('Min Length Field Error Message'),
@@ -369,6 +379,82 @@ class MyAccountRegistrationForm extends FormBase
             '#translatable' => true,
         ];
 
+        $form['field_labels_generic_configuration']['message_timeout'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Message timeout'),
+            '#required' => TRUE,
+            '#default_value' => $this->get('message_timeout'),
+            '#translatable' => true,
+            '#description' => '<strong>[Mobile] </strong> Maximum timeout in second to display the Success/Error message.'
+        ];
+
+        $form['field_labels_generic_configuration']['my_profile_tab'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('My Profile Tab Label'),
+            '#required' => TRUE,
+            '#default_value' => $this->get('my_profile_tab'),
+            '#translatable' => true,
+            '#description' => '<strong>[Mobile] </strong> Label for My Profile Tab.'
+        ];
+
+        $form['field_labels_generic_configuration']['change_password_tab'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Change Password Tab label'),
+            '#required' => TRUE,
+            '#default_value' => $this->get('change_password_tab'),
+            '#translatable' => true,
+            '#description' => '<strong>[Mobile] </strong> Label for Change Password Tab.'
+        ];
+
+        $this->fastRegConfig($form);
+
         return $form;
+    }
+
+    private function fastRegConfig(&$form) {
+        $form['profile_form_fastreg_config'] = [
+            '#type' => 'details',
+            '#title' => 'Fast Reg Configuration',
+            '#open' => False,
+            '#group' => 'profile',
+        ];
+
+        $form['profile_form_fastreg_config']['fastreg_timeout_redirect'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Timeout Redirect'),
+            '#required' => TRUE,
+            '#default_value' => $this->get('fastreg_timeout_redirect'),
+            '#translatable' => true,
+            '#description' => '<strong>[Fast Reg] </strong> Timeout in second(s) before player redirected back to Cashier.'
+        ];
+
+        $form['profile_form_fastreg_config']['fastreg_redirect'] = [
+          '#type' => 'textfield',
+          '#title' => $this->t('[Desktop] - Redirect To'),
+          '#default_value' => $this->get('fastreg_redirect'),
+          '#required' => TRUE,
+          '#translatable' => TRUE,
+          '#description' => '<strong>[Fast Reg] - </strong>redirect URL for Desktop'
+        ];
+
+        $form['profile_form_fastreg_config']['fastreg_mobile_redirect'] = [
+          '#type' => 'textfield',
+          '#title' => $this->t('[Mobile] - Redirect To'),
+          '#default_value' => $this->get('fastreg_mobile_redirect'),
+          '#required' => TRUE,
+          '#translatable' => TRUE,
+          '#description' => '<strong>[Fast Reg] - </strong>redirect URL for Mobile'
+        ];
+
+        $content = $this->get('fast_reg_flash_message');
+        $form['profile_form_fastreg_config']['fast_reg_flash_message'] = [
+          '#type' => 'text_format',
+          '#title' => $this->t('Notification message'),
+          '#default_value' => $content['value'] ?? '',
+          '#format' => $content['format'] ?? 'full_html',
+          '#required' => TRUE,
+          '#translatable' => TRUE,
+          '#description' => '<strong>[Fast Reg] </strong> Message to be displayed to update First Name and Last Name.'
+        ];
     }
 }

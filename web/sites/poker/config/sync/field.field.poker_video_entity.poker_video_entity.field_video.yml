@@ -1,0 +1,27 @@
+uuid: 882f7371-2cfc-462a-be85-9c317cf8a298
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.poker_video_entity.field_video
+  module:
+    - file
+    - poker_video_support
+id: poker_video_entity.poker_video_entity.field_video
+field_name: field_video
+entity_type: poker_video_entity
+bundle: poker_video_entity
+label: Video
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'mp4 webm ogv'
+  max_filesize: '40 MB'
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

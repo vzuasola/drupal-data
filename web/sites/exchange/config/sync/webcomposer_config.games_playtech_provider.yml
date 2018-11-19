@@ -1,6 +1,6 @@
-javascript_assets: 'https://login.wsocdd.com/jswrapper/integration.js.php?casino=dafa888'
+javascript_assets: '/jswrapper/integration.js.php?casino=dafa888&min=1'
 playtech_pas_endpoint: 'https://login.megasportcasino.com/Login.php'
 lobby_url: 'https://www.google-analytics.com/lobby.js'
 playtech_pas_casino: dafa888
 languages: in|en
-iapiconf_override: ''
+iapiconf_override: 'clientUrl_casino|https://cachebanner.9bonus.com/casinoclient.html'

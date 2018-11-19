@@ -1,0 +1,10 @@
+entity.download_page_entity.add_form:
+  route_name: entity.download_page_entity.add_form
+  title: 'Add Download page entity'
+  appears_on:
+    - entity.download_page_entity.collection
+entity.download_page_entity.add_form:
+  route_name: entity.download_page_entity.add_form
+  title: 'Add Download page entity'
+  appears_on:
+    - entity.download_page_entity.collection

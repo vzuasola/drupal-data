@@ -1,0 +1,22 @@
+{#
+/**
+ * @file poker_client_promotions.html.twig
+ * Default theme implementation to present Poker client promotions data.
+ *
+ * This template is used when viewing Poker client promotions pages.
+ *
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_poker_client_promotions()
+ *
+ * @ingroup themeable
+ */
+#}
+<div{{ attributes.addClass('poker_client_promotions') }}>
+  {% if content %}
+    {{- content -}}
+  {% endif %}
+</div>

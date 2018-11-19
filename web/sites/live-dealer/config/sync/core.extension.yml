@@ -70,7 +70,9 @@ module:
   webcomposer_affilates: 0
   webcomposer_announcements: 0
   webcomposer_audit: 0
+  webcomposer_audit_export: 0
   webcomposer_avaya: 0
+  webcomposer_cache: 0
   webcomposer_config: 0
   webcomposer_config_schema: 0
   webcomposer_dashboard: 0

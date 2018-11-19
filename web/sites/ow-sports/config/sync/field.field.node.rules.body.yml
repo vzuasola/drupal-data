@@ -1,0 +1,22 @@
+uuid: 3ac21666-3966-4b57-9050-9563684cc4b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.rules
+  module:
+    - text
+id: node.rules.body
+field_name: body
+entity_type: node
+bundle: rules
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

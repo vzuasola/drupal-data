@@ -6,10 +6,11 @@ package: Example modules
 # These modules are required by the tests, must be available at bootstrap time
 dependencies:
   - drupal:options
+  - drupal:user
   - examples:examples
 
-# Information added by Drupal.org packaging script on 2017-06-05
+# Information added by Drupal.org packaging script on 2018-09-10
 version: '8.x-1.x-dev'
 core: '8.x'
 project: 'examples'
-datestamp: 1496707146
+datestamp: 1536620584

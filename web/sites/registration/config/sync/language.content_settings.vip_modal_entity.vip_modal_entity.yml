@@ -8,6 +8,8 @@ dependencies:
 third_party_settings:
   content_translation:
     enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
 _core:
   default_config_hash: HU55D4dZ2LsQOf_m1KkFTcpkkTdkkRYhqsle8R6YmmM
 id: vip_modal_entity.vip_modal_entity

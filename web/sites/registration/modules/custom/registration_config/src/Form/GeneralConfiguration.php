@@ -114,6 +114,12 @@ class GeneralConfiguration extends FormBase {
       '#maxlength' => 255,
       '#translatable' => TRUE,
     ];
+    $form['general']['enable_reg_relic_custom_headers'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable Registration Relic Custom Headers'),
+      '#description' => $this->t('If this is checked, this will include custom headers to be passed on REG API'),
+      '#default_value' => $this->get('enable_reg_relic_custom_headers'),
+    ];
   }
 
   /**

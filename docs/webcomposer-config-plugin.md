@@ -5,6 +5,7 @@ It has it's own implementation which does not deviate that much from how Drupal
 does it.
 
 <br>
+
 ### Why do you need config plugins instead of using plain Drupal config form
 
 * You just need to define one class
@@ -19,6 +20,7 @@ does it.
 
 
 <br>
+
 ### Define a Form Plugin Class
 
 * **Structure**
@@ -171,6 +173,7 @@ class SampleForm extends FormBase {
 ```
 
 <br>
+
 ### Provide a installtion configs and hook uninstall
 
 You can put generates yml inside **config/install** to have the values
@@ -195,6 +198,7 @@ function webcomposer_config_schema_sample_uninstall() {
 ```
 
 <br>
+
 ## How to Define File Image Fields
 
 File image fields must be prefixed with **file_image** for the field names.
@@ -209,6 +213,7 @@ $form['file_image_banner'] = [
 ```
 
 <br>
+
 ## How to Fetch Config from Front End
 
 Suppose you define a form
@@ -231,6 +236,7 @@ $data = $this->configs->getConfig('my_module.sample');
 ```
 
 <br>
+
 ## Best Practices
 
 ### Module Structure

@@ -1,23 +1,32 @@
 <?php
-
 namespace Drupal\webcomposer_games\Form;
 
-use Drupal\Core\Form\ConfigFormBase;
+use Drupal\webcomposer_config_schema\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Unsupported country configuration 
+ * Unsupported Country Configuration
+ *
+ * @WebcomposerConfigPlugin(
+ *   id = "unsupported_country_form",
+ *   route = {
+ *     "title" = "Unsupported Country Configuration",
+ *     "path" = "/admin/config/webcomposer/games/unsupported-country",
+ *   },
+ *   menu = {
+ *     "title" = "Unsupported Country Configuration",
+ *     "description" = "Provides configuration for unsupported country lightbox",
+ *     "parent" = "webcomposer_games.list",
+ *     "weight" = 9 
+ *   },
+ * )
  */
-class UnsupportedCountryConfiguration extends ConfigFormBase {
+class UnsupportedCountryConfiguration extends FormBase {
   /**
    * @inheritdoc
    */
-  public function getFormId() {
-    return 'unsupported_country_configuration_form';
-  }
-
   /**
-   * @inheritdoc
+   * Unsupported Country Configuration definitions
    */
   protected function getEditableConfigNames() {
     return ['webcomposer_config.unsupported_country'];
@@ -26,53 +35,41 @@ class UnsupportedCountryConfiguration extends ConfigFormBase {
   /**
    * @inheritdoc
    */
-  public function buildForm(array $form, FormStateInterface $form_state) {
-    $config = $this->config('webcomposer_config.unsupported_country');
-
-    $form['unsupported_country_title'] = [
-      '#type' => 'textfield',
-      '#title' => t('Not supported country title'),
-      '#description' => $this->t('Not allowed message title for country.'),
-      '#default_value' => $config->get('unsupported_country_title')
+  public function form(array $form, FormStateInterface $form_state) {
+    $form['unsupported_country_configuration_form'] = [
+      '#type' => 'vertical_tabs',
+      '#title' => t('Settings'),
     ];
 
-    $config_message = $config->get('unsupported_country_message');
-    $form['unsupported_country_message'] = [
-      '#type' => 'text_format',
-      '#title' => $this->t('Not allowed message for country.'),
-      '#default_value' => $config_message['value'],
-      '#format' => $config_message['format'],
-    ];
-
-    $form['unsupported_country_button'] = [
-      '#type' => 'textfield',
-      '#title' => t('Unsupported Country button'),
-      '#description' => $this->t('Defines the Unsupported country LightBox Ok button'),
-      '#default_value' => $config->get('unsupported_country_button')
-    ];
-
-    return parent::buildForm($form, $form_state);
+    $this->generalConfig($form);
+    return $form;
   }
 
-  /**
-   * Implements a form submit handler.
-   *
-   * @param array $form
-   *   The render array of the currently built form.
-   * @param FormStateInterface $form_state
-   *   Object describing the current state of the form.
-   */
-  public function submitForm(array &$form, FormStateInterface $form_state) {
-    $keys = [
-      'unsupported_country_title',
-      'unsupported_country_message',
-      'unsupported_country_button',
+  private function generalConfig(&$form) {
+
+    $form['gen_config']['unsupported_country_title'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Restricted Country Lightbox Title'),
+      '#default_value' => $this->get('unsupported_country_title'),
+      '#required' => false,
+      '#translatable' => TRUE,
     ];
 
-    foreach ($keys as $key) {
-      $this->config('webcomposer_config.unsupported_country')->set($key, $form_state->getValue($key))->save();
-    }
+    $form['gen_config']['unsupported_country_message'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('Restricted Country Lightbox Message'),
+      '#default_value' => $this->get('unsupported_country_message')['value'],
+      '#required' => false,
+      '#translatable' => TRUE,
+    ];
 
-    parent::submitForm($form, $form_state);
+    $form['gen_config']['unsupported_country_button'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Restricted Country Lightbox Button Text'),
+      '#description' => $this->t('Text inside the RCL button'),
+      '#default_value' => $this->get('unsupported_country_button'),
+      '#required' => false,
+      '#translatable' => TRUE,
+    ];
   }
 }

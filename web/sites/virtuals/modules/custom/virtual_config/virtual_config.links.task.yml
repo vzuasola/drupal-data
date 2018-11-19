@@ -1,4 +1,0 @@
-virtual_config.trust_element_config_tab:
-  route_name: virtual_config.virtual_config_form
-  title: 'virtual Configuration'
-  base_route: virtual_config.virtual_config_form

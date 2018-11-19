@@ -5,11 +5,3 @@ keno_config.admin_settings:
     _title: 'Keno Configuration'
   requirements:
     _permission: 'administer site configuration'
-
-keno_config.keno_config_form:
-  path: 'admin/config/keno/keno_config'
-  defaults:
-    _form: 'Drupal\keno_config\Form\KenoConfigForm'
-    _title: 'Keno Configuration'
-  requirements:
-    _permission: 'administer site configuration'

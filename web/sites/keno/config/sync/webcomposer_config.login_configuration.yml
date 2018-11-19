@@ -27,3 +27,8 @@ mobile_login_url: 'https://stg-m.elysium-dfbt.com/'
 tablet_login_button_label: ''
 login_page_blurb: ''
 mobile_login_button_label: ''
+advanced__active_tab: edit-login-form-details
+rememberme_label: ''
+value: null
+format: null
+mobile_cant_login_url: ''

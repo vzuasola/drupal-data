@@ -1,0 +1,8 @@
+uuid: 075c7eba-3909-488e-ba0c-f245324ac66b
+langcode: ja
+status: true
+dependencies: {  }
+id: quicklinks-ja
+label: サイトマップ
+description: カジノジャンボリーのサイトマップ
+locked: false

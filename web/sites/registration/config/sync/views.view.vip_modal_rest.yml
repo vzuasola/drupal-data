@@ -205,9 +205,8 @@ display:
       display_extenders: {  }
       path: api/vip_modal_list
       pager:
-        type: some
+        type: none
         options:
-          items_per_page: 10
           offset: 0
       style:
         type: node_list_serializer
