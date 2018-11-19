@@ -1,0 +1,5 @@
+games_category.list:
+  title: 'Games Category Provider Configuration'
+  parent: system.admin_config
+  description: 'Configuration for games category provider'
+  route_name: games_category.admin_settings

@@ -1,0 +1,7 @@
+games_category.admin_settings:
+  path: 'admin/config/games/category-provider'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Games Category Provider Configuration'
+  requirements:
+    _permission: 'administer site configuration'
