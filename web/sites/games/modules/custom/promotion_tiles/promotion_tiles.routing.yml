@@ -1,0 +1,7 @@
+promotion_tiles.admin_settings:
+  path: 'admin/config/games_promotions'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Games Promotion Configurations'
+  requirements:
+    _permission: 'administer site configuration'

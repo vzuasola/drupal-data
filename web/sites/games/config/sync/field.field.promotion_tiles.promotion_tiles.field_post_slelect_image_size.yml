@@ -1,0 +1,21 @@
+uuid: 9ddb8de8-411f-42b6-a276-045455b4a368
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.promotion_tiles.field_post_slelect_image_size
+  module:
+    - options
+    - promotion_tiles
+id: promotion_tiles.promotion_tiles.field_post_slelect_image_size
+field_name: field_post_slelect_image_size
+entity_type: promotion_tiles
+bundle: promotion_tiles
+label: 'Post Slelect Image Size'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

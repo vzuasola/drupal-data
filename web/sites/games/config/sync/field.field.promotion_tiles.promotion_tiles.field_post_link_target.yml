@@ -1,0 +1,23 @@
+uuid: b1245d78-c653-4b07-9c83-e60c7f8a40be
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.promotion_tiles.field_post_link_target
+  module:
+    - options
+    - promotion_tiles
+id: promotion_tiles.promotion_tiles.field_post_link_target
+field_name: field_post_link_target
+entity_type: promotion_tiles
+bundle: promotion_tiles
+label: 'Post Link Target'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: _top
+default_value_callback: ''
+settings: {  }
+field_type: list_string
