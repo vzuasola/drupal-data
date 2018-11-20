@@ -1,5 +1,6 @@
 <?php
 
+use Drupal\webcomposer_cache\Toolbar\ToolbarHandler;
 
 /**
  * @file
@@ -39,4 +40,11 @@ function webcomposer_cache_scheduler_nid_list_alter(array &$nids, $action) {
   }
 
   return $nids;
+}
+
+function webcomposer_cache_toolbar_alter(&$items) {
+  $items['webcomposer']['tray']['webcomposer']['#items']['webcomposer_cache.renew'] = [
+    '#lazy_builder' => [ToolbarHandler::class . ':generateToolbar', []],
+    '#create_placeholder' => TRUE,
+  ];
 }
