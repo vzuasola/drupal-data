@@ -12,7 +12,7 @@ entity_type: jamboree_jackpot_entity
 bundle: jamboree_jackpot_entity
 label: 'Jackpot Game Code'
 description: ''
-required: false
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''

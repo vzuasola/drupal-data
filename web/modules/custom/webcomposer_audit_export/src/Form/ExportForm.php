@@ -56,7 +56,7 @@ class ExportForm extends FormBase {
    *
    */
   private function buildFilterForm(array &$form, FormStateInterface $form_state) {
-    $date = date(OverviewForm::DATE_FORMAT . ' ' . OverviewForm::TIME_FORMAT);
+    $date = date(OverviewForm::DATE_FORMAT);
 
     $form['filters'] = [
       '#type' => 'details',
@@ -84,26 +84,30 @@ class ExportForm extends FormBase {
 
     $form['filters']['wrapper']['date']['date_start'] = [
       '#title' => 'Start Date',
-      '#type' => 'datetime',
+      '#type' => 'date',
       '#size' => 20,
       '#description' => 'Sample format: ' . $date,
       '#default_value' => $this->getDateValue('date_start'),
       '#date_date_format' => OverviewForm::DATE_FORMAT,
-      '#date_time_format' => OverviewForm::TIME_FORMAT,
       '#prefix' => '<div class="js-form-item form-item js-form-type-select form-type-select js-form-item-uid form-item-uid">',
       '#suffix' => '</div>',
+      '#attributes' => [
+        'style' =>'width: 100%;',
+      ],
     ];
 
     $form['filters']['wrapper']['date']['date_end'] = [
       '#title' => 'End Date',
-      '#type' => 'datetime',
+      '#type' => 'date',
       '#size' => 20,
       '#description' => 'Sample format: ' . $date,
       '#default_value' => $this->getDateValue('date_end'),
       '#date_date_format' => OverviewForm::DATE_FORMAT,
-      '#date_time_format' => OverviewForm::TIME_FORMAT,
       '#prefix' => '<div class="js-form-item form-item js-form-type-select form-type-select js-form-item-uid form-item-uid">',
       '#suffix' => '</div>',
+      '#attributes' => [
+        'style' =>'width: 100%;',
+      ],
     ];
 
     $form['filters']['wrapper']['date']['date_picker'] = [
@@ -155,11 +159,9 @@ class ExportForm extends FormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    $format = OverviewForm::DATE_FORMAT . ' ' . OverviewForm::TIME_FORMAT;
-
     foreach (OverviewForm::FILTER_DATE_KEYS as $key) {
-      if (is_object($form_state->getValue($key))) {
-        $_SESSION['webcomposer_audit_export_filter'][$key] = $form_state->getValue($key)->format($format);
+      if (!empty($form_state->getValue($key))) {
+        $_SESSION['webcomposer_audit_export_filter'][$key] = $form_state->getValue($key);
       } else {
         // Delete the session
         unset($_SESSION['webcomposer_audit_export_filter'][$key]);
@@ -228,7 +230,7 @@ class ExportForm extends FormBase {
       $date_start = (isset($_SESSION['webcomposer_audit_export_filter']['date_start'])) ?
         strtotime($_SESSION['webcomposer_audit_export_filter']['date_start']) : null;
       $date_end = (isset($_SESSION['webcomposer_audit_export_filter']['date_end'])) ?
-        strtotime($_SESSION['webcomposer_audit_export_filter']['date_end']) : null;
+        strtotime($_SESSION['webcomposer_audit_export_filter']['date_end'] . ' 23:59:59') : null;
 
       if ($date_start && $date_end) {
         return [

@@ -52,6 +52,7 @@ class MobileCasinoForm extends FormBase {
       '#title' => $this->t('Casino URL'),
       '#default_value' => $this->get('casino_url'),
       '#required' => TRUE,
+      '#maxlength' => 1024,
     ];
 
     $form['casino_configuration']['casino_gold_url'] = [
@@ -59,6 +60,7 @@ class MobileCasinoForm extends FormBase {
       '#title' => $this->t('Casino Gold URL'),
       '#default_value' => $this->get('casino_gold_url'),
       '#required' => TRUE,
+      '#maxlength' => 1024,
     ];
 
     $form['casino_configuration']['casino_text'] = [

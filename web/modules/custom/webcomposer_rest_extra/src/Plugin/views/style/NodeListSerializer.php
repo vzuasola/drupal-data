@@ -20,16 +20,20 @@ use Drupal\webcomposer_rest_extra\FilterHtmlTrait;
  */
 class NodeListSerializer extends Serializer {
   use FilterHtmlTrait;
+
   /**
    * {@inheritdoc}
    */
   public function render() {
-    $rows = array();
+    $rows = [];
 
     foreach ($this->view->result as $row_index => $row) {
       $this->view->row_index = $row_index;
+
       // converting current row into array
-      $rowAssoc = $this->serializer->normalize($this->view->rowPlugin->render($row));
+      $rowAssoc = $this->serializer->normalize(
+        $this->view->rowPlugin->render($row), null, ['view' => $this->view]
+      );
 
       // add aliases on the nodes
       if (isset($row->nid)) {
@@ -99,6 +103,7 @@ class NodeListSerializer extends Serializer {
 
     foreach ($pargraphTranslatedArray as $field => $item) {
       $setting = $paragraphTranslated->get($field)->getSettings();
+
       if (isset($setting['target_type'])) {
         if ($setting['target_type'] == 'file') {
           $field_array = array_merge($pargraphTranslatedArray[$field][0], $this->loadFileById($item[0]['target_id']));

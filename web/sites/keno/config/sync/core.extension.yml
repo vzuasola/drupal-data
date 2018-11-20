@@ -52,6 +52,8 @@ module:
   path: 0
   quickedit: 0
   rdf: 0
+  replicate: 0
+  replicate_ui: 0
   rest: 0
   rest_menu_items: 0
   restui: 0
@@ -72,7 +74,7 @@ module:
   webcomposer_audit: 0
   webcomposer_audit_export: 0
   webcomposer_avaya: 0
-  webcomposer_cache: 0 
+  webcomposer_cache: 0
   webcomposer_config: 0
   webcomposer_config_schema: 0
   webcomposer_dashboard: 0
@@ -89,10 +91,11 @@ module:
   webcomposer_promotions: 0
   webcomposer_rest_extra: 0
   webcomposer_right_side_block: 0
+  webcomposer_replicate_utility: 0
   webcomposer_seo: 0
   webcomposer_sitemap: 0
-  webcomposer_slider_v2: 0
   webcomposer_slider: 0
+  webcomposer_slider_v2: 0
   webcomposer_social_media: 0
   webcomposer_sponsor: 0
   webcomposer_territory_blocking: 0

@@ -1,0 +1,18 @@
+uuid: 0322550f-2986-4b47-9a1d-9c38d701fcb7
+langcode: zh-hans
+status: true
+dependencies:
+  module:
+    - webcomposer_downloadables
+id: downloadable_entity.downloadable_entity.metatag
+field_name: metatag
+entity_type: downloadable_entity
+bundle: downloadable_entity
+label: Metatags
+description: 'The metatags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map
