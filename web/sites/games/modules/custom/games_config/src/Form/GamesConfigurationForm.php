@@ -338,6 +338,24 @@ class GamesConfigurationForm extends FormBase {
       '#translatable' => true,
     );
 
+    $form['filter_group']['filter_header_title'] = array(
+      '#type' => 'textfield',
+      '#title' => t('Game filter header text'),
+      '#description' => t('The text to display on the header of filter section'),
+      '#default_value' => $this->get('filter_header_title'),
+      '#required' => TRUE,
+      '#translatable' => true,
+    );
+
+    $form['filter_group']['clear_filters'] = array(
+      '#type' => 'textfield',
+      '#title' => t('Game Filter clear selection button text'),
+      '#description' => t('The text to display on clear botton of filter section'),
+      '#default_value' => $this->get('clear_filters'),
+      '#required' => TRUE,
+      '#translatable' => true,
+    );
+
     $form['filter_group']['userdata_header'] = array(
       '#type' => 'textfield',
       '#title' => t('Userdata Header'),
