@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.games_showcase_entity.games_showcase_entity.field_log_in_state
     - field.field.games_showcase_entity.games_showcase_entity.field_publish_date
+    - field.field.games_showcase_entity.games_showcase_entity.field_show_in_all
     - field.field.games_showcase_entity.games_showcase_entity.field_showcase_body
     - field.field.games_showcase_entity.games_showcase_entity.field_showcase_image
     - field.field.games_showcase_entity.games_showcase_entity.field_showcase_ribbon
@@ -55,8 +56,15 @@ content:
     third_party_settings: {  }
     type: datetime_default
     region: content
+  field_show_in_all:
+    weight: 3
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
   field_showcase_body:
-    weight: 5
+    weight: 6
     settings:
       rows: 9
       summary_rows: 3
@@ -65,7 +73,7 @@ content:
     type: text_textarea_with_summary
     region: content
   field_showcase_image:
-    weight: 4
+    weight: 5
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -73,7 +81,7 @@ content:
     type: image_image
     region: content
   field_showcase_ribbon:
-    weight: 6
+    weight: 7
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -93,7 +101,7 @@ content:
     type: datetime_default
     region: content
   field_v2_game_provider:
-    weight: 3
+    weight: 4
     settings: {  }
     third_party_settings: {  }
     type: erviews_options_select

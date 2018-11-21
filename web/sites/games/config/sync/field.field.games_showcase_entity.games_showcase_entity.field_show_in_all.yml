@@ -1,0 +1,24 @@
+uuid: 91265d00-72c3-4829-b557-0ee42155866c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.games_showcase_entity.field_show_in_all
+  module:
+    - games_showcase
+id: games_showcase_entity.games_showcase_entity.field_show_in_all
+field_name: field_show_in_all
+entity_type: games_showcase_entity
+bundle: games_showcase_entity
+label: 'Show in ALL Tab'
+description: 'If checked, this showcase will be shown in <strong>ALL</strong> Tab.'
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

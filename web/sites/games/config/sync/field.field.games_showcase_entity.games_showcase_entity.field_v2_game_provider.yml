@@ -13,7 +13,7 @@ entity_type: games_showcase_entity
 bundle: games_showcase_entity
 label: 'Game Provider'
 description: ''
-required: true
+required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''
