@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.games_showcase_entity.games_showcase_entity.field_log_in_state
     - field.field.games_showcase_entity.games_showcase_entity.field_publish_date
+    - field.field.games_showcase_entity.games_showcase_entity.field_show_in_all
     - field.field.games_showcase_entity.games_showcase_entity.field_showcase_body
     - field.field.games_showcase_entity.games_showcase_entity.field_showcase_image
     - field.field.games_showcase_entity.games_showcase_entity.field_showcase_ribbon
@@ -40,6 +41,16 @@ content:
       timezone_override: ''
     third_party_settings: {  }
     type: datetime_default
+    region: content
+  field_show_in_all:
+    weight: 13
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
     region: content
   field_showcase_body:
     weight: 2
