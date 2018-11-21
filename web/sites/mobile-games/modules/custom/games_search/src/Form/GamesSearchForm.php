@@ -45,7 +45,15 @@ class GamesSearchForm extends FormBase {
       '#title' => $this->t('Search Title'),
       '#default_value' => $this->get('search_title'),
       '#translatable' => TRUE,
-      '#required' => TRUE,
+      '#required' => FALSE,
+    ];
+
+    $form['search_configuration']['title_search_lightbox'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Search Title Lightbox'),
+      '#default_value' => $this->get('title_search_lightbox'),
+      '#translatable' => TRUE,
+      '#required' => FALSE,
     ];
 
     $form['search_configuration']['games_filter_title'] = [
@@ -53,7 +61,15 @@ class GamesSearchForm extends FormBase {
       '#title' => $this->t('Filter Title'),
       '#default_value' => $this->get('games_filter_title'),
       '#translatable' => TRUE,
-      '#required' => TRUE,
+      '#required' => FALSE,
+    ];
+
+    $form['search_configuration']['filter_title_lightbox'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Filter Title Lightbox'),
+      '#default_value' => $this->get('filter_title_lightbox'),
+      '#translatable' => TRUE,
+      '#required' => FALSE,
     ];
 
     $form['search_configuration']['games_transfer_title'] = [
@@ -61,7 +77,7 @@ class GamesSearchForm extends FormBase {
       '#title' => $this->t('Instant Transfer Title'),
       '#default_value' => $this->get('games_transfer_title'),
       '#translatable' => TRUE,
-      '#required' => TRUE,
+      '#required' => FALSE,
     ];
 
     $form['search_configuration']['games_filter_submit'] = [
