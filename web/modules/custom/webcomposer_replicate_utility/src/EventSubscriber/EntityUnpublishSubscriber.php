@@ -20,13 +20,17 @@ use Drupal\replicate\Events\AfterSaveEvent;
 class EntityUnpublishSubscriber implements EventSubscriberInterface {
 
   /**
-   * Set field_status to FALSE.
+   * Set entity status to FALSE.
    *
    * @param ReplicateAlterEvent $event
    *   The event we're working on.
    */
   public function onClone(ReplicateAlterEvent $event) {
     $entity = $event->getEntity();
+    if (!empty($key = $entity->getEntityType()->getKey('published'))) {
+      $entity->set($key, 0);
+    }
+    
     if ($entity->hasField('field_status')) {
       $entity->set('field_status', 0);
     }
