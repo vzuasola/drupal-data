@@ -44,7 +44,7 @@ class PromotionTilesForm extends ContentEntityForm {
           '%label' => $entity->label(),
         ]));
     }
-    $form_state->setRedirect('entity.promotion_tiles.canonical', ['promotion_tiles' => $entity->id()]);
+    $form_state->setRedirectUrl($entity->urlInfo('collection'));
   }
 
 }
