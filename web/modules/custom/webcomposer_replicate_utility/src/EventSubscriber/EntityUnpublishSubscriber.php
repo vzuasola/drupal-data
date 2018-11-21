@@ -30,7 +30,6 @@ class EntityUnpublishSubscriber implements EventSubscriberInterface {
     if (!empty($key = $entity->getEntityType()->getKey('published'))) {
       $entity->set($key, 0);
     }
-    
     if ($entity->hasField('field_status')) {
       $entity->set('field_status', 0);
     }
