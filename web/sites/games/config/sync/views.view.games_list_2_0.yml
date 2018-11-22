@@ -683,16 +683,7 @@ display:
         sorts: false
         relationships: false
       sorts: {  }
-      relationships:
-        field_v2_game_provider:
-          id: field_v2_game_provider
-          table: node__field_v2_game_provider
-          field: field_v2_game_provider
-          relationship: none
-          group_type: group
-          admin_label: 'field_v2_game_provider: Taxonomy term'
-          required: true
-          plugin_id: standard
+      relationships: {  }
     cache_metadata:
       max-age: -1
       contexts:
