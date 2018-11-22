@@ -2,10 +2,10 @@ fish_hunter_currency: "RMB\r\nCNY"
 fish_hunter_language_mapping: sc|zh-CN
 kiron_virtual_sports_currency: ''
 kiron_virtual_sports_language_mapping: ''
-skywind_currency: "RMB\r\nCNY\r\nMYR\r\nTHB\r\nKRW\r\nIDR\r\nVND\r\nUSD\r\nEUR\r\nGBP\r\nRUB"
-skywind_language_mapping: "en|en\r\nsc|zh-cn\r\nth|th\r\nkr|ko\r\nvn|vn\r\nid|id"
-voidbridge_currency: "CNY\r\nRMB\r\nMYR\r\nTHB\r\nKRW\r\nIDR\r\nINR\r\nVND\r\nUSD\r\nEUR\r\nGBP"
-voidbridge_language_mapping: "en|en-US\r\nsc|zh-CN\r\nth|th\r\nkr|ko\r\nvn|vi\r\nid|id"
+skywind_currency: "RMB\r\nCNY\r\nMYR\r\nTHB\r\nKRW\r\nIDR\r\nVND\r\nUSD\r\nEUR\r\nGBP\r\nRUB\r\nBRL\r\nMXN\r\nCLP\r\nCOP\r\nPEN\r\nARS\r\nVES"
+skywind_language_mapping: "en|en-US\r\nsc|zh-CN\r\nth|th\r\nkr|ko\r\nvn|vi\r\nid|id\r\nes|ES\r\npt|pt-BR"
+voidbridge_currency: "RMB\r\nCNY\r\nMYR\r\nTHB\r\nKRW\r\nIDR\r\nVND\r\nUSD\r\nEUR\r\nGBP\r\nRUB\r\nBRL\r\nMXN\r\nCLP\r\nCOP\r\nPEN\r\nARS\r\nVES"
+voidbridge_language_mapping: "en|en-US\r\nsc|zh-CN\r\nth|th\r\nkr|ko\r\nvn|vi\r\nid|id\r\nes|ES\r\npt|pt-BR"
 gold_deluxe_currency: "CNY\r\nMYR\r\nTHB\r\nIDR\r\nVND\r\nUSD\r\nRMB"
 gold_deluxe_language_mapping: "en|en-US\r\nsc|zh-CN\r\nth|th\r\nkr|ko-KR\r\nvn|vi\r\nid|id"
 unsupported_currencies_title: 'Unsupported Currency'
@@ -60,7 +60,7 @@ gameworx_quicklotto_plugin_id: ''
 gameworx_quicklotto_operator_id: ''
 gameworx_quicklotto_lobby_type: ''
 gameworx_quicklotto_country: ''
-icore_games_integration_form__active_tab: edit-cq9
+icore_games_integration_form__active_tab: edit-fun-gaming
 asia_gaming_country: ''
 kiron_virtual_sports_country: ''
 gb_virtual_sports_country: ''
@@ -84,9 +84,9 @@ format: null
 safari_notif:
   value: ''
   format: basic_html
-fun_gaming_currency: RMB
+fun_gaming_currency: "CNY\r\nRMB"
 fun_gaming_language_mapping: "en|en-US\r\nsc|zh-CN"
 fun_gaming_country: ''
-micro_gaming_currency: ''
-micro_gaming_language_mapping: ''
-micro_gaming_country: ''
+micro_gaming_currency: "EUR\r\nUSD\r\nGBP\r\nRMB\r\nMYR\r\nTHB\r\nKRW\r\nVND\r\nIDR\r\nINR\r\nPLN\r\nRON\r\nRUB\r\nTRY\r\nKES\r\nGHS\r\nBRL\r\nMXN\r\nCLP\r\nCOP\r\nPEN\r\nARS\r\nVES"
+micro_gaming_language_mapping: "en|en-US\r\nsc|zh-CN\r\nth|th\r\nkr|ko\r\nvn|vi\r\nid|id\r\nes|ES\r\npt|pt-BR"
+micro_gaming_country: "AU\r\nFR\r\nHK\r\nPH\r\nSG\r\nZA\r\nTW\r\nUS"
