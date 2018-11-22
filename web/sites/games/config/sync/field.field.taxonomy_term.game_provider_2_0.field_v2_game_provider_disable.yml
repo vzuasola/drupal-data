@@ -12,7 +12,7 @@ bundle: game_provider_2_0
 label: Disable
 description: 'If checked, this game provider category will not be displayed.'
 required: false
-translatable: false
+translatable: true
 default_value:
   -
     value: 0
