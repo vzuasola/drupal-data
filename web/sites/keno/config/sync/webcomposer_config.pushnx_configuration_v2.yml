@@ -35,7 +35,7 @@ product_icon_generic: generic
 product_exclude_generic: 0
 product_exclude_dismiss_generic: 0
 product_label_alpine: Alpine
-product_type_id_alpine: '100'
+product_type_id_alpine: '101'
 product_icon_alpine: ''
 product_exclude_alpine: 0
 product_exclude_dismiss_alpine: 1
