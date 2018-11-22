@@ -19,7 +19,7 @@ date_offset: '+8'
 login_selector: null
 debug_logging: 0
 debug_display_all: 1
-debug_display_expirydate: 0
+debug_display_expirydate: 1
 disableBonusAward: 0
 text_: ''
 product_list: "Generic\r\nAlpine\r\nExchange"
