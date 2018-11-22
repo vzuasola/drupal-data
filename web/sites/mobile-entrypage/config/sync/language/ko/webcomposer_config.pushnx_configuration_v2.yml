@@ -1,0 +1,15 @@
+title: 공지
+empty: '새로운 알림이 없습니다.'
+expired_message: '본 프로모션은 이미 종료되었습니다.'
+date_format: 'dd/mm/yyyy HH:MM'
+date_offset: '+9'
+dismiss_button_label: 'Dismiss All'
+dismiss_content:
+  value: "<p class=\"text-align-center\"><strong><span class=\"text-yellow\">ARE YOU SURE YOU WANT<br />\r\nTO DISMISS ALL NOTIFICATIONS?</span></strong></p>\r\n\r\n<p class=\"text-align-center\"><span class=\"text-white\">Dismissing all notifications will also<br />\r\ndecline all promotions you are eligible to</span></p>\r\n"
+  format: basic_html
+dismiss_yes: 'Yes'
+dismiss_no: 'No'
+product_label_generic: 알림
+cta_label_ok: 확인
+cta_label_accept: 수락
+cta_label_decline: 거부
