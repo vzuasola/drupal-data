@@ -12,7 +12,7 @@ expired_message: 'This offer has already expired.'
 date_format: 'dd/mm/yyyy HH:MM'
 date_offset: '+8'
 cta_button_list: "Ok\r\nAccept\r\nDecline"
-dismiss_button_label: ''
+dismiss_button_label: 'Dismiss all'
 dismiss_content:
   value: "<p class=\"text-align-center\"><strong><span class=\"text-yellow\">ARE YOU SURE YOU WANT<br />\r\nTO DISMISS ALL NOTIFICATIONS?</span></strong></p>\r\n\r\n<p class=\"text-align-center\"><span class=\"text-white\">Dismissing all notifications will also<br />\r\ndecline all promotions you are eligible to</span></p>\r\n"
   format: basic_html
@@ -21,7 +21,7 @@ dismiss_no: 'NO'
 domains: "cashier|{domain:cashier_domain}/{lang}/payment-options/deposit?ticket={auth.token}&product=ow-sports&title=headerPopup&width=820&height=700{tracking.token}\r\navaya|https://www.cs-livechat/en/mc-desktop?brand=Dafa&product=Dafabet&s={auth.token}&width=360&height=760"
 exclude_pages: /about
 debug_logging: 0
-debug_display_expirydate: 0
+debug_display_expirydate: 1
 product_label_: null
 product_type_id_: null
 product_icon_: null
@@ -35,7 +35,7 @@ product_icon_generic: generic
 product_exclude_generic: 0
 product_exclude_dismiss_generic: 0
 product_label_alpine: Alpine
-product_type_id_alpine: '100'
+product_type_id_alpine: '101'
 product_icon_alpine: ''
 product_exclude_alpine: 0
 product_exclude_dismiss_alpine: 1
