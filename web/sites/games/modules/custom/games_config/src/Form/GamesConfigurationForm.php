@@ -358,9 +358,18 @@ class GamesConfigurationForm extends FormBase {
 
     $form['filter_group']['userdata_header'] = array(
       '#type' => 'textfield',
-      '#title' => t('Userdata Header'),
+      '#title' => t('Userdata Filter Header'),
       '#default_value' => $this->get('userdata_header'),
       '#description' => t('Header to be used for userdata filters (Recently Played, Favorites etc.)'),
+      '#required' => TRUE,
+      '#translatable' => true,
+    );
+
+    $form['filter_group']['provider_header'] = array(
+      '#type' => 'textfield',
+      '#title' => t('Provider Filter Header'),
+      '#default_value' => $this->get('provider_header'),
+      '#description' => t('Header to be used for providers filters'),
       '#required' => TRUE,
       '#translatable' => true,
     );
