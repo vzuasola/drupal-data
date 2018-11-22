@@ -11,7 +11,7 @@ id: promotion_tiles.promotion_tiles.field_pre_slelect_image_size
 field_name: field_pre_slelect_image_size
 entity_type: promotion_tiles
 bundle: promotion_tiles
-label: 'Pre Slelect Image Size'
+label: 'Pre Select Image Size'
 description: ''
 required: true
 translatable: true
