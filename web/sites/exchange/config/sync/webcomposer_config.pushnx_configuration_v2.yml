@@ -19,7 +19,7 @@ date_offset: '+8'
 login_selector: null
 debug_logging: 0
 debug_display_all: 1
-debug_display_expirydate: 0
+debug_display_expirydate: 1
 disableBonusAward: 0
 text_: ''
 product_list: "Generic\r\nAlpine\r\nExchange"
@@ -50,7 +50,7 @@ product_type_id_payments: ''
 product_icon_payments: ''
 product_exclude_payments: 1
 product_label_alpine: Notifications
-product_type_id_alpine: '100'
+product_type_id_alpine: '101'
 product_icon_alpine: ''
 product_exclude_alpine: 0
 cta_button_list: "Ok\r\nAccept\r\nDecline"
@@ -75,7 +75,7 @@ domains: "cashier|{domain:cashier_domain}/{lang}/payment-options/deposit?ticket=
 product_exclude_dismiss_generic: 0
 product_exclude_dismiss_alpine: 1
 product_label_exchange: Exchange
-product_type_id_exchange: '10'
+product_type_id_exchange: ''
 product_icon_exchange: ''
 product_exclude_exchange: 0
 product_exclude_dismiss_exchange: 0
