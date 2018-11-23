@@ -14,31 +14,6 @@ function webcomposer_slider_v2_form_alter(&$form, FormStateInterface $form_state
   if (in_array($form_id, $forms)) {
     $form['#validate'][] = 'webcomposer_slider_v2_validate';
   }
-  
-  if ($form_id == 'webcomposer_slider_v2_entity_replicate_form') {
-    $current_path = \Drupal::service('path.current')->getPath();
-    $path_args = explode('/', $current_path);
-    $entity = \Drupal::entityTypeManager()->getStorage('webcomposer_slider_v2_entity')->load($path_args[4]);
-    if ($entity instanceof TranslatableInterface) {
-      foreach ($entity->getTranslationLanguages() as $translation_language) {
-        $langcode = $translation_language->getId();
-        /** @var \Drupal\Core\Entity\TranslatableInterface $translation */
-        $translation = $entity->getTranslation($langcode);
-        $field_name = 'new_label_' . $langcode;
-        $default_value = $form[$field_name]['#default_value'];
-        $name = $translation->get('name')->getValue();
-        if (empty($name)) {
-          $title = $translation->get('field_title')->getString();
-          $form[$field_name]['#default_value'] = $title . $default_value;
-        }
-      }
-    }
-    else {
-      $default_value = $form['new_label']['#default_value'];
-      $entity = $translation->get('field_title')->getString();
-      $form['new_label']['#default_value'] = $title . $default_value;
-    }
-  }
 }
 
 /**
