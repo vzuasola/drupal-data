@@ -4,3 +4,36 @@
  * @file
  * Support module for Replicate module.
  */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Entity\TranslatableInterface;
+use Drupal\Core\Entity\ContentEntityForm;
+
+ /**
+ * Form alter for webcomposer_floating_banners section.
+ */
+function webcomposer_replicate_utility_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if (strpos($form_id, 'replicate_form') !== FALSE) {
+    $form_object = $form_state->getFormObject();
+    if ($form_object instanceof ContentEntityForm && $form_object->getEntity()->hasField('field_title')) {
+      $entity = $form_object->getEntity();
+      if ($entity instanceof TranslatableInterface) {
+        foreach ($entity->getTranslationLanguages() as $translation_language) {  
+          $langcode = $translation_language->getId();
+          /** @var \Drupal\Core\Entity\TranslatableInterface $translation */
+          $translation = $entity->getTranslation($langcode);
+          $field_name = 'new_label_' . $langcode;
+          $default_value = $form[$field_name]['#default_value'];
+          $title = $translation->get('field_title')->getString();
+          if (!empty($title)) {
+            $form[$field_name]['#default_value'] = $title . ' (Copy)';
+          }
+        }
+      }
+      else {
+        $title = $entity->get('field_title')->getString();
+        $form['new_label']['#default_value'] = $title . ' (Copy)';
+      }
+    }
+  }
+}
