@@ -16,3 +16,9 @@ webcomposer_cache.settings_form:
   options:
     _admin_route: TRUE
 
+webcomposer_cache.new_signature:
+  path: 'admin/config/webcomposer/cache/regenerate'
+  defaults:
+    _controller: '\Drupal\webcomposer_cache\Controller\CacheSignatureController::regenerate'
+  requirements:
+    _permission: 'administer site configuration'
