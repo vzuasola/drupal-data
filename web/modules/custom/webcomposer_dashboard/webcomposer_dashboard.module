@@ -31,7 +31,7 @@ function webcomposer_dashboard_toolbar() {
         '#items' => [
           'webcomposer.admin' => [
             '#type' => 'link',
-            '#title' => t('Webcomposer Admin'),
+            '#title' => t('Configuration'),
             '#url' => Url::fromRoute('webcomposer.admin'),
           ],
           'webcomposer_dashboard.clear_cache' => [
