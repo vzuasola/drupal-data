@@ -29,6 +29,11 @@ function webcomposer_dashboard_toolbar() {
       'webcomposer' => [
         '#theme' => 'item_list',
         '#items' => [
+          'webcomposer.admin' => [
+            '#type' => 'link',
+            '#title' => t('Webcomposer Admin'),
+            '#url' => Url::fromRoute('webcomposer.admin'),
+          ],
           'webcomposer_dashboard.clear_cache' => [
             '#lazy_builder' => [ToolbarHandler::class . ':generateToolbar', []],
             '#create_placeholder' => TRUE,

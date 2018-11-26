@@ -36,7 +36,7 @@ class GpiProviderConfiguration extends FormBase {
         'gpi_pk10' => 'GPI PK10',
         'gpi_thai_lottey' => 'GPI Thai Lottey',
         'gpi_live_dealer' => 'GPI Live Dealer',
-        'gpi_ladder' => 'GPI Ladder'
+        'gpi_arcade' => 'GPI Arcade'
     ];
 
   protected function getEditableConfigNames() {
