@@ -1,13 +1,13 @@
-asia_gaming_currency: RMB
-asia_gaming_language_mapping: "en|en-US\r\nzh-hans|zh-CN\r\nzh-hant|zh-TW\r\nth|th\r\nko|ko-KR\r\nvi|vn\r\nid|id\r\nhi|hi"
+fish_hunter_currency: "RMB\r\nCNY"
+fish_hunter_language_mapping: sc|zh-CN
 kiron_virtual_sports_currency: ''
 kiron_virtual_sports_language_mapping: ''
-skywind_currency: "RMB\r\nCNY\r\nMYR\r\nTHB\r\nKRW\r\nIDR\r\nVND\r\nUSD\r\nEUR\r\nGBP"
-skywind_language_mapping: "en|en\r\nsc|zh-cn\r\nth|th\r\nkr|ko\r\nvn|vn\r\nid|id"
-voidbridge_currency: "CNY\r\nRMB\r\nMYR\r\nTHB\r\nKRW\r\nIDR\r\nINR\r\nVND\r\nUSD\r\nEUR\r\nGBP"
-voidbridge_language_mapping: "en|en-US\r\nsc|zh-CN\r\nth|th\r\nkr|ko\r\nvn|vi\r\nid|id"
+skywind_currency: "RMB\r\nCNY\r\nMYR\r\nTHB\r\nKRW\r\nIDR\r\nVND\r\nUSD\r\nEUR\r\nGBP\r\nRUB\r\nBRL\r\nMXN\r\nCLP\r\nCOP\r\nPEN\r\nARS\r\nVES"
+skywind_language_mapping: "en|en-US\r\nsc|zh-CN\r\nth|th\r\nkr|ko\r\nvn|vi\r\nid|id\r\nes|ES\r\npt|pt-BR"
+voidbridge_currency: "RMB\r\nCNY\r\nMYR\r\nTHB\r\nKRW\r\nIDR\r\nVND\r\nUSD\r\nEUR\r\nGBP\r\nRUB\r\nBRL\r\nMXN\r\nCLP\r\nCOP\r\nPEN\r\nARS\r\nVES"
+voidbridge_language_mapping: "en|en-US\r\nsc|zh-CN\r\nth|th\r\nkr|ko\r\nvn|vi\r\nid|id\r\nes|ES\r\npt|pt-BR"
 gold_deluxe_currency: "CNY\r\nMYR\r\nTHB\r\nIDR\r\nVND\r\nUSD\r\nRMB"
-gold_deluxe_language_mapping: "en|en-US\r\nsc|zh-CN\r\nth|th\r\nkr|ko-KR\r\nvn|vn\r\nid|id"
+gold_deluxe_language_mapping: "en|en-US\r\nsc|zh-CN\r\nth|th\r\nkr|ko-KR\r\nvn|vi\r\nid|id"
 unsupported_currencies_title: 'Unsupported Currency'
 unsupported_currencies_message:
   value: "<p>Sorry, your account currency is not supported by this <b>{game_provider}&nbsp;</b>game, <b>{game_name}</b>.<br />\r\nPlease try other games.</p>\r\n"
@@ -20,9 +20,73 @@ fallback_error_message:
 fallback_error_button: ''
 video_racing_currency: ''
 video_racing_language_mapping: ''
-game_provider_mapping: "playtech|Playtech\r\ngold_deluxe|Gold Deluxe\r\nskywind|Skywind\r\nvoidbridge|Voidbridge\r\nsa_gaming|SA Gaming"
+game_provider_mapping: "playtech|Playtech\r\ngold_deluxe|Gold Deluxe\r\nskywind|Skywind\r\nvoidbridge|Voidbridge\r\nsa_gaming|SA Gaming\r\nasia_gaming|Asia Gaming"
 sa_gaming_currency: "EUR\r\nUSD\r\nCNY\r\nMYR\r\nTHB\r\nVND\r\nIDR\r\nRMB\r\nINR\r\nRUB"
 sa_gaming_language_mapping: "en|en-US\r\nsc|zh-CN\r\nch|zh-TW\r\nid|id\r\njp|ja\r\nth|th\r\nvn|vi"
 safari_notif_message:
-  value: '<p class="mb-0">Safari unsupported to modify settings please <a class="btn-yellow btn-small ml-5" href="#"> Click Here</a><a class="btn-close" href="#" id="safari-notif-close">close</a></p>'
+  value: "<p class=\"mb-0\">Need help in launching our games?<a class=\"btn-yellow btn-small ml-5\" href=\"{domain:entry}/{domain:lang_token}/games/safari-notification\">Click Here</a><a class=\"btn-close\" href=\"#\" id=\"safari-notif-close\">close</a></p>\r\n"
   format: basic_html
+gb_virtual_sports_currency: ''
+gb_virtual_sports_language_mapping: ''
+allbet_currency: ''
+allbet_language_mapping: ''
+tgp_currency: ''
+tgp_language_mapping: ''
+evo_gaming_currency: ''
+evo_gaming_language_mapping: ''
+ebet_currency: ''
+ebet_language_mapping: ''
+asia_gaming_currency: "RMB\r\nCNY"
+asia_gaming_language_mapping: sc|zh-CN
+cq9_currency: "RMB\r\nEUR\r\nUSD\r\nGBP\r\nCNY\r\nMYR\r\nTHB\r\nINR\r\nKRW\r\nVND\r\nIDR"
+cq9_language_mapping: "en|en-US\r\nsc|zh-CN\r\nth|th\r\nkr|ko-KR\r\nvn|vi\r\nid|id"
+solid_gaming_currency: "RMB\r\nEUR\r\nUSD\r\nCNY\r\nMYR\r\nTHB\r\nVND\r\nIDR\r\nINR\r\nKRW"
+solid_gaming_language_mapping: "en|en-US\r\nsc|zh-CN\r\nth|th\r\nkr|ko-KR\r\nvn|vi\r\nid|id"
+gameworx_lottery_currency: ''
+gameworx_lottery_language_mapping: ''
+gameworx_quicklotto_currency: ''
+gameworx_quicklotto_language_mapping: ''
+gameworx_lottery_exit_url: ''
+gameworx_lottery_deposit_url: ''
+gameworx_lottery_realitycheck_url: ''
+gameworx_lottery_plugin_id: ''
+gameworx_lottery_operator_id: ''
+gameworx_lottery_lobby_type: ''
+gameworx_lottery_country: ''
+gameworx_quicklotto_exit_url: ''
+gameworx_quicklotto_deposit_url: ''
+gameworx_quicklotto_realitycheck_url: ''
+gameworx_quicklotto_plugin_id: ''
+gameworx_quicklotto_operator_id: ''
+gameworx_quicklotto_lobby_type: ''
+gameworx_quicklotto_country: ''
+icore_games_integration_form__active_tab: edit-fun-gaming
+asia_gaming_country: ''
+kiron_virtual_sports_country: ''
+gb_virtual_sports_country: ''
+skywind_country: ''
+voidbridge_country: ''
+gold_deluxe_country: ''
+video_racing_country: ''
+sa_gaming_country: ''
+allbet_country: ''
+tgp_country: ''
+evo_gaming_country: ''
+ebet_country: ''
+cq9_country: ''
+solid_gaming_country: ''
+betconstruct_currency: ''
+betconstruct_language_mapping: ''
+betconstruct_country: ''
+betconstruct_container_id: ''
+value: null
+format: null
+safari_notif:
+  value: ''
+  format: basic_html
+fun_gaming_currency: "CNY\r\nRMB"
+fun_gaming_language_mapping: "en|en-US\r\nsc|zh-CN"
+fun_gaming_country: ''
+micro_gaming_currency: "EUR\r\nUSD\r\nGBP\r\nRMB\r\nMYR\r\nTHB\r\nKRW\r\nVND\r\nIDR\r\nINR\r\nPLN\r\nRON\r\nRUB\r\nTRY\r\nKES\r\nGHS\r\nBRL\r\nMXN\r\nCLP\r\nCOP\r\nPEN\r\nARS\r\nVES"
+micro_gaming_language_mapping: "en|en-US\r\nsc|zh-CN\r\nth|th\r\nkr|ko\r\nvn|vi\r\nid|id\r\nes|ES\r\npt|pt-BR"
+micro_gaming_country: "AU\r\nFR\r\nHK\r\nPH\r\nSG\r\nZA\r\nTW\r\nUS"

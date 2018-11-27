@@ -3,25 +3,25 @@ disableBonusAward: 0
 debug_display_all: 1
 domain: ''
 retry_count: '34'
-delay_count: '500'
+delay_count: '1000'
 expiry_delay_count: '10000'
-product_list: "Generic\r\nAlpine\r\nVirtuals"
+product_list: "Generic\r\n\r\n"
 title: 'PUSH NOTIFICATION'
 empty: 'There are no new notifications.'
 expired_message: 'This offer has already expired.'
 date_format: 'dd/mm/yyyy HH:MM'
 date_offset: '+8'
 cta_button_list: "Ok\r\nAccept\r\nDecline"
-dismiss_button_label: 'Dismiss all'
+dismiss_button_label: 'Dismiss All'
 dismiss_content:
   value: "<p class=\"text-align-center\"><strong><span class=\"text-yellow\">ARE YOU SURE YOU WANT<br />\r\nTO DISMISS ALL NOTIFICATIONS?</span></strong></p>\r\n\r\n<p class=\"text-align-center\"><span class=\"text-white\">Dismissing all notifications will also<br />\r\ndecline all promotions you are eligible to</span></p>\r\n"
   format: basic_html
-dismiss_yes: 'YES'
-dismiss_no: 'NO'
-domains: "cashier|{domain:cashier_domain}/{lang}/payment-options/deposit?ticket={auth.token}&product=90&title=headerPopup&width=820&height=700{tracking.token}\r\navaya|https://www.cs-livechat/en/mc-desktop?brand=Dafa&product=Dafabet&s={auth.token}&width=360&height=760"
+dismiss_yes: 'Yes'
+dismiss_no: 'No'
+domains: "cashier|{domain:cashier_domain}/{lang}/payment-options/deposit?ticket={auth.token}&product=ow-sports&title=headerPopup&width=820&height=700{tracking.token}\r\navaya|https://www.cs-livechat/en/mc-desktop?brand=Dafa&product=Dafabet&s={auth.token}&width=360&height=760"
 exclude_pages: /about
 debug_logging: 0
-debug_display_expirydate: 1
+debug_display_expirydate: 0
 product_label_: null
 product_type_id_: null
 product_icon_: null
@@ -29,24 +29,29 @@ product_exclude_: null
 product_exclude_dismiss_: null
 cta_label_: null
 cta_actions_: null
-product_label_generic: Notifications
+product_label_generic: Generic
 product_type_id_generic: '0'
 product_icon_generic: generic
 product_exclude_generic: 0
 product_exclude_dismiss_generic: 0
+product_label_owsports: 'Ow Sports'
+product_type_id_owsports: '3'
+product_icon_owsports: owsports
+product_exclude_owsports: 0
+product_exclude_dismiss_owsports: 0
+product_label_livedealer: 'Live Dealer'
+product_type_id_livedealer: '4'
+product_icon_livedealer: wallet
+product_exclude_livedealer: 0
+product_exclude_dismiss_livedealer: 0
 product_label_alpine: Alpine
 product_type_id_alpine: '101'
-product_icon_alpine: ''
+product_icon_alpine: alpine
 product_exclude_alpine: 0
-product_exclude_dismiss_alpine: 1
-cta_label_ok: 'OK'
+product_exclude_dismiss_alpine: 0
+cta_label_ok: OK
 cta_actions_ok: ''
 cta_label_accept: ACCEPT
 cta_actions_accept: ''
 cta_label_decline: DECLINE
 cta_actions_decline: ''
-product_label_virtuals: Virtuals
-product_type_id_virtuals: '8'
-product_icon_virtuals: ''
-product_exclude_virtuals: 0
-product_exclude_dismiss_virtuals: 0
