@@ -50,6 +50,13 @@ interface AuditStorageInterface {
   public function getDistinct($column);
 
   /**
+   * Gets the total number of records
+   *
+   * @return int
+   */
+  public function getCount();
+
+  /**
    *
    */
   public function insert(EntityInterface $entity);
