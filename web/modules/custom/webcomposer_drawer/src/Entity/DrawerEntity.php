@@ -184,6 +184,7 @@ class DrawerEntity extends ContentEntityBase implements DrawerEntityInterface {
         'text_processing' => 0,
       ])
       ->setDefaultValue('')
+      ->setTranslatable(TRUE)
       ->setDisplayOptions('view', [
         'label' => 'above',
         'type' => 'string',
