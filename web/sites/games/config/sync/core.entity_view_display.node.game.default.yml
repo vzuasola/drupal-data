@@ -19,6 +19,7 @@ dependencies:
     - field.field.node.game.field_jackpot_ticker
     - field.field.node.game.field_meta_tags
     - field.field.node.game.field_play_for_fun_toggle
+    - field.field.node.game.field_preview_display_only
     - field.field.node.game.field_ribbon_configuration
     - field.field.node.game.field_ribbon_label
     - node.type.game
@@ -145,6 +146,16 @@ content:
     region: content
   field_play_for_fun_toggle:
     weight: 106
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_preview_display_only:
+    weight: 117
     label: above
     settings:
       format: default
