@@ -184,6 +184,7 @@ class WebcomposerMetaEntity extends ContentEntityBase implements WebcomposerMeta
         'text_processing' => 0,
       ])
       ->setDefaultValue('')
+      ->setTranslatable(TRUE)
       ->setDisplayOptions('view', [
         'label' => 'above',
         'type' => 'string',

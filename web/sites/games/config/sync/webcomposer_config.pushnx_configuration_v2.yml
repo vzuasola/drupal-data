@@ -5,8 +5,8 @@ domain: ''
 retry_count: '34'
 delay_count: '500'
 expiry_delay_count: '10000'
-product_list: "Generic\r\nAlpine\r\nVirtuals"
-title: 'PUSH NOTIFICATION'
+product_list: "Generic\r\nGames\r\nAlpine\r\nPayments"
+title: Notifications
 empty: 'There are no new notifications.'
 expired_message: 'This offer has already expired.'
 date_format: 'dd/mm/yyyy HH:MM'
@@ -18,10 +18,10 @@ dismiss_content:
   format: basic_html
 dismiss_yes: 'YES'
 dismiss_no: 'NO'
-domains: "cashier|{domain:cashier_domain}/{lang}/payment-options/deposit?ticket={auth.token}&product=90&title=headerPopup&width=820&height=700{tracking.token}\r\navaya|https://www.cs-livechat/en/mc-desktop?brand=Dafa&product=Dafabet&s={auth.token}&width=360&height=760"
-exclude_pages: /about
+domains: "cashier|{domain:cashier_domain}/{lang}[query:(ticket={auth.token}&product=90&title=headerPopup&width=820&height=820})]\r\navaya|https://www.cs-livechat.com/c/en/mc-desktop?brand=Dafa&height=760&width=360&title=avayaChatWindow&product=games"
+exclude_pages: /about-me
 debug_logging: 0
-debug_display_expirydate: 1
+debug_display_expirydate: 0
 product_label_: null
 product_type_id_: null
 product_icon_: null
@@ -29,6 +29,21 @@ product_exclude_: null
 product_exclude_dismiss_: null
 cta_label_: null
 cta_actions_: null
+product_label_games: Games
+product_type_id_games: '4'
+product_icon_games: ''
+product_exclude_games: 0
+product_exclude_dismiss_games: 0
+cta_label_ok: OK
+cta_actions_ok: ''
+cta_label_accept: ACCEPT
+cta_actions_accept: ''
+cta_label_decline: DECLINE
+cta_actions_decline: ''
+cta_label_proceed: 'Yes, Proceed'
+cta_actions_proceed: 'popup::cashier'
+cta_label_no: 'No, Thanks'
+cta_actions_no: ''
 product_label_generic: Notifications
 product_type_id_generic: '0'
 product_icon_generic: generic
@@ -39,14 +54,8 @@ product_type_id_alpine: '101'
 product_icon_alpine: ''
 product_exclude_alpine: 0
 product_exclude_dismiss_alpine: 1
-cta_label_ok: 'OK'
-cta_actions_ok: ''
-cta_label_accept: ACCEPT
-cta_actions_accept: ''
-cta_label_decline: DECLINE
-cta_actions_decline: ''
-product_label_virtuals: Virtuals
-product_type_id_virtuals: '8'
-product_icon_virtuals: ''
-product_exclude_virtuals: 0
-product_exclude_dismiss_virtuals: 0
+product_label_payments: Payments
+product_type_id_payments: '100'
+product_icon_payments: ''
+product_exclude_payments: 0
+product_exclude_dismiss_payments: 1
