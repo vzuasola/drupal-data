@@ -29,6 +29,7 @@ hidden:
   field_v2_game_image: true
   field_v2_game_info: true
   field_v2_game_info_toggle: true
+  field_v2_game_provider: true
   field_v2_game_title: true
   field_v2_game_type: true
   field_v2_meta_tags: true
