@@ -37,10 +37,10 @@ function webcomposer_dashboard_toolbar() {
           'webcomposer_dashboard.clear_cache' => [
             '#lazy_builder' => [ToolbarHandler::class . ':generateToolbar', []],
             '#create_placeholder' => TRUE,
-          ]
+          ],
         ],
         '#attributes' => [
-          'class' => ['toolbar-items-webcomposer'],
+          'class' => ['clearfix', 'menu', 'toolbar-items-webcomposer'],
         ],
       ],
     ],
