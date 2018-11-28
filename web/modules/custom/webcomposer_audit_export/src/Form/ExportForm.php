@@ -39,12 +39,12 @@ class ExportForm extends FormBase {
     if (!empty($_SESSION['webcomposer_audit_export_download'])) {
       $filepath = $_SESSION['webcomposer_audit_export_download'];
 
-      $message = Markup::create("
+      $download = Markup::create("
         Excel file has been generated, please click
         <a class='excel-download-link' href='$filepath' target='_blank'>here</a>
       ");
 
-      $form['message'] = [
+      $form['download'] = [
         '#theme' => 'status_messages',
         '#message_list' => [
           'status' => [$message],
