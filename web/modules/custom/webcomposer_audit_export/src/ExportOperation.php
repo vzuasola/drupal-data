@@ -1,77 +1,142 @@
 <?php
 
-namespace Drupal\webcomposer_audit_export\Parser;
+namespace Drupal\webcomposer_audit_export;
 
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\TypedData\TypedDataInterface;
+use Drupal\Core\DependencyInjection\DependencySerializationTrait;
+use Drupal\Core\Url;
 
 use Drupal\webcomposer_audit\Storage\AuditStorageInterface;
 
 /**
  * Class which handles domain export.
  */
-class LogsExport {
+class ExportOperation {
+  use DependencySerializationTrait;
 
-  /**
-   * ExcelParser object.
-   *
-   * @var excelParser
-   */
-  protected $excelParser;
+  const BATCH_COUNT = 500;
 
-  /**
-   * Service for the export parser.
-   *
-   * @var service
-   */
-  protected $service;
+  private $excelParser;
+  private $storage;
 
-  /**
-   * Filters for the export parser.
-   *
-   * @var filters
-   */
   private $filters = [];
 
   /**
    * Constructor.
    */
-  public function __construct($excelParser, $service) {
+  public function __construct($excelParser, $storage) {
     $this->excelParser = $excelParser;
-    $this->service = $service;
+    $this->storage = $storage;
+  }
+
+  /**
+   * Function for setting Audit Log filters
+   *
+   * @param array $filters Database where filter
+   */
+  public function setAuditFilters($filters) {
+    $this->filters = $filters;
+  }
+
+  public function doBatch($filters = []) {
+    $logsDistinct = $this->storage->getCount([
+      'limit' => 20000,
+      'where' => $this->filters,
+    ]);
+
+    $batchNum = self::BATCH_COUNT;
+    $num_operations = intval(ceil($logsDistinct / $batchNum));
+
+    $operations = [];
+
+    for ($i = 0; $i < $num_operations; $i++) {
+      $operations[] = [
+        [$this, 'logsExportExcel'],
+        [$i],
+      ];
+    }
+
+    $batch = [
+      'title' => t('Exporting Audit Logs'),
+      'operations' => $operations,
+      'finished' => [$this, 'logExportBatchFinished'],
+    ];
+
+    batch_set($batch);
   }
 
   /**
    * Gets Matterhorn Audit Log data and invoke export excel operation.
    *
-   * @param array $filters
-   *   - Array of date filters.
-   * @author yunyce <yunyce.dejesus@bayviewtechnology.com>
+   * @param array $filters Array of date filters
    */
-  public function logsExportExcel() {
-    $data = $this->logsExportGetParsedData();
-    $this->logsExportCreateExcel($data);
+  public function logsExportExcel($i, &$context) {
+    $offset = $i * 500;
+    $data = $this->logsExportGetParsedData($offset);
+
+    $context['results'][] = ['data' => $data];
+    $context['message'] = t('Generating audit logs - Step @id.', ['@id' => $i + 1]);
   }
 
   /**
    * Gets data from Matterhorn Audit Log and parse it to PHP excel readable array.
    *
-   * @return array
-   *   The parsed Matterhorn Audit Log data
+   * @return array The parsed Matterhorn Audit Log data
    */
-  public function logsExportGetParsedData() {
+  private function logsExportGetParsedData($offset) {
     $result = [];
 
-    $logs = $this->service->get_audit_logs($this->filters);
+    $logs = $this->storage->all([
+      'limit' => 500,
+      'offset' => $offset,
+      'where' => $this->filters,
+    ]);
 
-    // Post process audit log data
-    $process_logs = $this->postProcessLogsData($logs);
-
-    $result['logs'] = $this->service->excel_get_audit_logs($process_logs);
+    $result['logs'] = $this->postProcessLogsData($logs);
 
     return $result;
+  }
+
+  /**
+   * Batch 'finished' callback for Audit Log Export
+   */
+  public function logExportBatchFinished($success, $results, $operations) {
+    $messenger = \Drupal::messenger();
+
+    $header[0] = [
+      'title' => 'TITLE',
+      'type' => 'TYPE',
+      'action' => 'ACTION',
+      'user' => 'USER',
+      'date' => 'DATE',
+      'language' => 'LANGUAGE',
+      'entity_before' => 'ENTITY BEFORE',
+      'entity_after' => 'ENTITY AFTER',
+    ];
+
+    if ($success) {
+      $data['logs'] = $header;
+
+      foreach ($results as $result) {
+        $data['logs'] = array_merge($data['logs'], $result['data']['logs']);
+      }
+
+      $this->logsExportCreateExcel($data);
+    } else {
+      $error_operation = reset($operations);
+
+      $messenger->addMessage(
+        t('An error occurred while processing @operation with arguments : @args',
+          [
+            '@operation' => $error_operation[0],
+            '@args' => print_r($error_operation[0], TRUE),
+          ]
+        )
+      );
+    }
   }
 
   /**
@@ -86,16 +151,20 @@ class LogsExport {
    * @param string $output
    *   - The URL to output the file.
    */
-  public function logsExportCreateExcel($data, $excel_version = 'Excel2007', $headers = TRUE, $output = 'php://output') {
-    // Create token placeholder worksheet.
-    $this->excelParser->createSheet($data['logs'], 'Audit Logs');
-    // Invoke excel creation and download.
-    $this->excelParser->save('export.xlsx', $excel_version, $headers, $output);
+  private function logsExportCreateExcel($data) {
+    $date = date('m-d-Y--H-i-s');
 
-    // Stop script only if headers is set to invoke a download.
-    if ($headers) {
-      exit;
-    }
+    $this->excelParser->createSheet($data['logs'], 'Audit Logs');
+
+    $file = $this->excelParser->generateContent();
+
+    $file = file_save_data($file, "public://export-audit-logs-$date.xlsx");
+    $file->setTemporary();
+    $file->save();
+
+    $path = Url::fromUri($file->url());
+
+    $_SESSION['webcomposer_audit_export_download'] = $path->getUri();
   }
 
   /**
@@ -226,10 +295,26 @@ class LogsExport {
    */
   private function getLineChangesFromEntity($entity) {
     $map = [];
+    $entityType = false;
+
+    // checking if entity is present. this condition is needed for
+    // add and delete of logs with support of custom config and
+    // entity related format text
+    if ($entity instanceof Entity) {
+      $entityType = $entity->getEntityTypeId();
+    }
 
     foreach ($entity as $key => $value) {
       if ($value instanceof TypedDataInterface) {
-        $map[$value->getName()] = $value->getString();
+        if (is_array($value->getValue())) {
+          if ($entityType === "config") {
+            $map[$value->getName()] = $value->getValue()['value'];
+          } else {
+            $map[$value->getName()] = $value->getValue();
+          }
+        } else {
+          $map[$value->getName()] = $value->getString();
+        }
       } elseif ($value instanceof EntityInterface) {
         $map[$key] = $this->getLineChangesFromEntity($value->toArray());
       } else {
@@ -238,15 +323,5 @@ class LogsExport {
     }
 
     return $map;
-  }
-
-  /**
-   * Function for setting Audit Log filters
-   *
-   * @param array $filters
-   *   - The array entity data.
-   */
-  public function setAuditFilters($filters) {
-    $this->filters = $filters;
   }
 }

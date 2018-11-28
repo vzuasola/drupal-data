@@ -127,7 +127,7 @@ class NodeEntityNormalizer extends ContentEntityNormalizer {
       $setting = $termTranslated->get($field)->getSettings();
 
       if (isset($setting['target_type'])) {
-        if ($setting['target_type'] == 'file') {
+        if ($setting['target_type'] == 'file' && isset($translatedArray[$field][0])) {
           $field_array = array_merge($translatedArray[$field][0], $this->loadFileById($item[0]['target_id']));
           $translatedArray[$field] = $field_array;
         }

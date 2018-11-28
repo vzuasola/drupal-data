@@ -178,9 +178,6 @@ class OverviewForm extends FormBase {
       '#date_date_format' => self::DATE_FORMAT,
       '#prefix' => '<div class="js-form-item form-item js-form-type-select form-type-select js-form-item-uid form-item-uid">',
       '#suffix' => '</div>',
-      '#attributes' => [
-        'style' =>'width: 100%;',
-      ],
     ];
 
     $form['filters']['wrapper']['date']['date_end'] = [
@@ -192,9 +189,6 @@ class OverviewForm extends FormBase {
       '#date_date_format' => self::DATE_FORMAT,
       '#prefix' => '<div class="js-form-item form-item js-form-type-select form-type-select js-form-item-uid form-item-uid">',
       '#suffix' => '</div>',
-      '#attributes' => [
-        'style' =>'width: 100%;',
-      ],
     ];
 
     $form['filters']['wrapper']['date']['date_picker'] = [
@@ -270,6 +264,10 @@ class OverviewForm extends FormBase {
       'header' => $header,
       'where' => $this->getOverviewFilter(),
       'limit' => $this->getPageLimit(),
+      'extend' => [
+        '\Drupal\Core\Database\Query\PagerSelectExtender',
+        '\Drupal\Core\Database\Query\TableSortExtender',
+      ],
     ]);
 
     foreach ($entries as $key => $value) {
