@@ -1,14 +1,14 @@
-uuid: a32851cb-39fc-4c07-9923-1120f111b851
+uuid: 35afbf83-1999-4469-814c-7a7fe65e9ab1
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.taxonomy_term.field_v2_game_provider_alias
-    - taxonomy.vocabulary.game_provider_2_0
-id: taxonomy_term.game_provider_2_0.field_v2_game_provider_alias
-field_name: field_v2_game_provider_alias
+    - field.storage.taxonomy_term.field_v2_game_category_alias
+    - taxonomy.vocabulary.game_category_2_0
+id: taxonomy_term.game_category_2_0.field_v2_game_category_alias
+field_name: field_v2_game_category_alias
 entity_type: taxonomy_term
-bundle: game_provider_2_0
+bundle: game_category_2_0
 label: Alias
 description: '<strong><i>Unique identifier for game category. Please use only letters, numbers, underscore and dash.</i></strong>'
 required: true

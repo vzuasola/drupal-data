@@ -1,14 +1,14 @@
-uuid: 92f27846-7ffc-4ca3-b61f-9e4beaa3052e
+uuid: 2eeb1fd8-763e-44c1-b75c-cc44b251b013
 langcode: en
 status: true
 dependencies:
   config:
-    - taxonomy.vocabulary.game_provider_2_0
+    - taxonomy.vocabulary.game_category_2_0
   module:
     - taxonomy
     - user
 id: game_category_2_0_entity_reference
-label: 'Game Category 2.0 - Entity Reference'
+label: 'Game Category 2.0 Entity Reference'
 module: views
 description: ''
 tag: ''
@@ -138,7 +138,7 @@ display:
           admin_label: ''
           operator: in
           value:
-            game_provider_2_0: game_provider_2_0
+            game_category_2_0: game_category_2_0
           group: 1
           exposed: false
           expose:

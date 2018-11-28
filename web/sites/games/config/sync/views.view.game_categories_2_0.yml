@@ -1,8 +1,9 @@
-uuid: 7f9b8886-4f74-44fc-a10b-d10bbc8cea8c
+uuid: 21eeb5cf-8a76-48fe-8498-e9b3fd4c19b2
 langcode: en
 status: true
 dependencies:
   config:
+    - taxonomy.vocabulary.game_category_2_0
     - taxonomy.vocabulary.game_provider_2_0
   module:
     - draggableviews
@@ -10,8 +11,8 @@ dependencies:
     - serialization
     - taxonomy
     - webcomposer_rest_extra
-id: games_provider_category_2_0
-label: 'Games Provider Category 2.0'
+id: game_categories_2_0
+label: 'Game Categories 2.0'
 module: views
 description: ''
 tag: ''
@@ -264,8 +265,39 @@ display:
           id: vid
           table: taxonomy_term_field_data
           field: vid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
           value:
-            game_provider_2_0: game_provider_2_0
+            game_category_2_0: game_category_2_0
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
           entity_type: taxonomy_term
           entity_field: vid
           plugin_id: bundle
@@ -508,7 +540,7 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: api/v2-games-provider-categories
+      path: api/v2-game-categories
       pager:
         type: none
         options:
@@ -527,8 +559,39 @@ display:
           id: vid
           table: taxonomy_term_field_data
           field: vid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
           value:
-            game_provider_2_0: game_provider_2_0
+            game_category_2_0: game_category_2_0
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
           entity_type: taxonomy_term
           entity_field: vid
           plugin_id: bundle

@@ -2,8 +2,8 @@ uuid: c96302c3-2849-48cb-a4e5-0ab5e6f21f46
 langcode: en
 status: true
 dependencies: {  }
-name: 'Game Provider Category 2.0'
+name: 'Game Provider 2.0'
 vid: game_provider_2_0
-description: 'Game Provider as Categories for games v2.0'
+description: 'Mapping for Game Providers.'
 hierarchy: 0
-weight: 0
+weight: -3

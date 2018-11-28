@@ -1,17 +1,17 @@
-uuid: dbc98cc0-255b-4e6a-ab0c-64ad6dc215ea
+uuid: 50e0ac90-670c-4503-af63-68f42eeac1de
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.taxonomy_term.field_v2_game_provider_hicon
-    - taxonomy.vocabulary.game_provider_2_0
+    - field.storage.taxonomy_term.field_v2_game_category_icon
+    - taxonomy.vocabulary.game_category_2_0
   module:
     - image
-id: taxonomy_term.game_provider_2_0.field_v2_game_provider_hicon
-field_name: field_v2_game_provider_hicon
+id: taxonomy_term.game_category_2_0.field_v2_game_category_icon
+field_name: field_v2_game_category_icon
 entity_type: taxonomy_term
-bundle: game_provider_2_0
-label: 'Highlighted Icon'
+bundle: game_category_2_0
+label: 'Default Icon'
 description: ''
 required: true
 translatable: false

@@ -6,4 +6,4 @@ name: 'Game Provider'
 vid: game_provider
 description: 'List of Game Provider'
 hierarchy: 0
-weight: 0
+weight: -5

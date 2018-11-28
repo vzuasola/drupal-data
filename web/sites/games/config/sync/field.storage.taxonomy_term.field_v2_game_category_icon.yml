@@ -1,4 +1,4 @@
-uuid: da2bf344-08ae-420c-9fae-e040542e1399
+uuid: 97274ba8-6229-4689-a735-e841c3710c9c
 langcode: en
 status: true
 dependencies:
@@ -6,8 +6,8 @@ dependencies:
     - file
     - image
     - taxonomy
-id: taxonomy_term.field_v2_game_provider_icon
-field_name: field_v2_game_provider_icon
+id: taxonomy_term.field_v2_game_category_icon
+field_name: field_v2_game_category_icon
 entity_type: taxonomy_term
 type: image
 settings:
