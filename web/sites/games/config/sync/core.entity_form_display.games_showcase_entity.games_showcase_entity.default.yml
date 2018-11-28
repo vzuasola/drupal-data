@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.games_showcase_entity.games_showcase_entity.field_game_categories
     - field.field.games_showcase_entity.games_showcase_entity.field_log_in_state
     - field.field.games_showcase_entity.games_showcase_entity.field_publish_date
     - field.field.games_showcase_entity.games_showcase_entity.field_show_in_all
@@ -11,11 +12,9 @@ dependencies:
     - field.field.games_showcase_entity.games_showcase_entity.field_showcase_ribbon
     - field.field.games_showcase_entity.games_showcase_entity.field_title
     - field.field.games_showcase_entity.games_showcase_entity.field_unpublish_date
-    - field.field.games_showcase_entity.games_showcase_entity.field_v2_game_provider
     - image.style.thumbnail
   module:
     - datetime
-    - entity_reference_views_select
     - field_group
     - games_showcase
     - image
@@ -44,6 +43,12 @@ targetEntityType: games_showcase_entity
 bundle: games_showcase_entity
 mode: default
 content:
+  field_game_categories:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_log_in_state:
     weight: 2
     settings: {  }
@@ -99,12 +104,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
-    region: content
-  field_v2_game_provider:
-    weight: 4
-    settings: {  }
-    third_party_settings: {  }
-    type: erviews_options_select
     region: content
   langcode:
     type: language_select

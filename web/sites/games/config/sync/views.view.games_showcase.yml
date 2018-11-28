@@ -9,7 +9,7 @@ dependencies:
     - field.storage.games_showcase_entity.field_title
     - field.storage.games_showcase_entity.field_unpublish_date
     - image.style.thumbnail
-    - taxonomy.vocabulary.game_provider_2_0
+    - taxonomy.vocabulary.game_category_2_0
   module:
     - datetime
     - draggableviews
@@ -876,10 +876,10 @@ display:
           entity_type: games_showcase_entity
           entity_field: langcode
           plugin_id: language
-        field_v2_game_provider_target_id:
-          id: field_v2_game_provider_target_id
-          table: games_showcase_entity__field_v2_game_provider
-          field: field_v2_game_provider_target_id
+        field_game_categories_target_id:
+          id: field_game_categories_target_id
+          table: games_showcase_entity__field_game_categories
+          field: field_game_categories_target_id
           relationship: none
           group_type: group
           admin_label: ''
@@ -888,12 +888,12 @@ display:
           group: 1
           exposed: true
           expose:
-            operator_id: field_v2_game_provider_target_id_op
-            label: 'Game Provider'
+            operator_id: field_game_categories_target_id_op
+            label: 'Game Category'
             description: ''
             use_operator: false
-            operator: field_v2_game_provider_target_id_op
-            identifier: provider
+            operator: field_game_categories_target_id_op
+            identifier: category
             required: false
             remember: false
             multiple: false
@@ -919,7 +919,7 @@ display:
           reduce_duplicates: false
           type: select
           limit: true
-          vid: game_provider_2_0
+          vid: game_category_2_0
           hierarchy: false
           error_message: true
           plugin_id: taxonomy_index_tid
