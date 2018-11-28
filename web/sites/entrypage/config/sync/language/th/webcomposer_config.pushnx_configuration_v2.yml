@@ -3,12 +3,12 @@ empty: ไม่มีการแจ้งเตือนใหม่
 expired_message: 'โปรโมชั่นนี้ หมดอายุแล้ว'
 date_format: 'dd/mm/yyyy HH:MM'
 date_offset: '+7'
-dismiss_button_label: 'Dismiss all'
+dismiss_button_label: 'ยกเลิกทั้งหมด'
 dismiss_content:
-  value: "<p class=\"text-align-center\"><strong><span class=\"text-yellow\">ARE YOU SURE YOU WANT<br />\r\nTO DISMISS ALL NOTIFICATIONS?</span></strong></p>\r\n\r\n<p class=\"text-align-center\"><span class=\"text-white\">Dismissing all notifications will also<br />\r\ndecline all promotions you are eligible to</span></p>\r\n"
+  value: <p class="text-align-center"><strong><span class="text-red">คุณแน่ใจหรือไม่ว่าต้องการดำเนินการต่อ</span></strong></p><p class="text-align-center">การดำเนินการนี้จะลบการแจ้งเตือนทั้งหมดอย่างถาวรและโบนัสที่ปรับอัตโนมัติบางรายการจะถูกยกเลิก</p><p class="text-align-center"><span class="text-12">เคล็ดลับ&colon; คุณสามารถเลือกปิดการแจ้งเตือนโดยคลิกที่ &quot;X&quot; และตรวจสอบได้ในภายหลัง</span></p>
   format: basic_html
-dismiss_yes: 'YES'
-dismiss_no: 'NO'
+dismiss_yes: 'ใช่'
+dismiss_no: 'ไม่'
 product_label_generic: แจ้งเตือน
 product_label_owsports: 'OW Sports'
 product_label_livedealer: ดีลเลอร์สด/เกมส์/เกมส์อาเขต

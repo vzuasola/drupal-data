@@ -5,7 +5,7 @@ date_format: 'dd/mm/yyyy HH:MM'
 date_offset: '+2'
 dismiss_button_label: 'Dismiss all'
 dismiss_content:
-  value: "<p class=\"text-align-center\"><strong><span class=\"text-yellow\">ARE YOU SURE YOU WANT<br />\r\nTO DISMISS ALL NOTIFICATIONS?</span></strong></p>\r\n\r\n<p class=\"text-align-center\"><span class=\"text-white\">Dismissing all notifications will also<br />\r\ndecline all promotions you are eligible to</span></p>\r\n"
+  value: <p class="text-align-center"><strong><span class="text-red">Are you sure you want to continue?</span></strong></p><p class="text-align-center">Doing so will delete all notifications permanently and all bonuses issued will automatically be declined.</p><p class="text-align-center"><span class="text-12">Tip&colon; You can choose to close all notifications by clicking on &quot;<b>X</b>&quot; to review them at a later time.</span></p>
   format: basic_html
 dismiss_yes: 'YES'
 dismiss_no: 'NO'
