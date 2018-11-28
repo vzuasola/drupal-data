@@ -47,7 +47,7 @@ class ExportForm extends FormBase {
       $form['download'] = [
         '#theme' => 'status_messages',
         '#message_list' => [
-          'status' => [$message],
+          'status' => [$download],
         ],
       ];
 
