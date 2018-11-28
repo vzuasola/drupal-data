@@ -42,6 +42,7 @@ class HeaderForm extends FormBase {
     $this->sectionJoinNow($form);
     $this->sectionLogin($form);
     $this->sectionCashier($form);
+    $this->sectionMcashier($form);
     $this->sectionBalance($form);
     $this->sectionNewtag($form);
     $this->sectionWelcome($form);
@@ -241,6 +242,49 @@ class HeaderForm extends FormBase {
         CNY|CN|http://cashier.dafabet.com/
       "),
       '#default_value' => $this->get('cashier_mapping'),
+      '#rows' => 6,
+      '#required' => false,
+      '#translatable' => true,
+    ];
+  }
+
+  /**
+   *
+   */
+  private function sectionMcashier(array &$form) {
+    $form['mcashier_group'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Mobile Cashier'),
+      '#collapsible' => true,
+      '#group' => 'header_settings_tab',
+    ];
+
+    $form['mcashier_group']['default_mcashier_link'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Default Mobile Cashier Link'),
+      '#description' => $this->t('Specify a default Mobile cashier link if no one matches the mapping'),
+      '#default_value' => $this->get('default_mcashier_link'),
+      '#rows' => 1,
+      '#required' => true,
+      '#translatable' => true,
+    ];
+
+    $form['mcashier_group']['mcashier_mapping'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Mobile Cashier Mapping'),
+      '#description' => $this->t("
+        Define a Mobile cashier mapping based on the user's currency and registered country
+        using the format.
+        <br>
+        Use upper case currency and country values (without spaces in between pipes).
+        <br>
+        <strong>currency | country | link</strong>
+        <br><br>
+        Example
+        <br>
+        CNY|CN|http://mcashier.dafabet.com/
+      "),
+      '#default_value' => $this->get('mcashier_mapping'),
       '#rows' => 6,
       '#required' => false,
       '#translatable' => true,
