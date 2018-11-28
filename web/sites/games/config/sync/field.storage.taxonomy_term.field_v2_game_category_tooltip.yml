@@ -1,11 +1,11 @@
-uuid: c0c1e85b-22c8-4bec-9a5e-e10a0ddf566e
+uuid: 85553a93-954e-4f5f-a994-4ea799841d48
 langcode: en
 status: true
 dependencies:
   module:
     - taxonomy
-id: taxonomy_term.field_v2_game_provider_alias
-field_name: field_v2_game_provider_alias
+id: taxonomy_term.field_v2_game_category_tooltip
+field_name: field_v2_game_category_tooltip
 entity_type: taxonomy_term
 type: string
 settings:

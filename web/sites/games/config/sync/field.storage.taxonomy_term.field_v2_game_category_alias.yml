@@ -1,14 +1,17 @@
-uuid: e045d7fc-c19c-4f07-a698-cc63c4b327f8
+uuid: 6f86e5d2-f018-4a13-8340-32d8771a95a7
 langcode: en
 status: true
 dependencies:
   module:
     - taxonomy
-id: taxonomy_term.field_v2_game_provider_disable
-field_name: field_v2_game_provider_disable
+id: taxonomy_term.field_v2_game_category_alias
+field_name: field_v2_game_category_alias
 entity_type: taxonomy_term
-type: boolean
-settings: {  }
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
 module: core
 locked: false
 cardinality: 1

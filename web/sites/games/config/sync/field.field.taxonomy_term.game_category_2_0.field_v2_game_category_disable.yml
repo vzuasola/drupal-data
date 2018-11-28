@@ -1,14 +1,14 @@
-uuid: 07f8bba6-6baf-4b6c-886a-e7784f0d6b0a
+uuid: ee2ca4dd-19a8-48f3-bce1-2abb327053b4
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.taxonomy_term.field_v2_game_provider_disable
-    - taxonomy.vocabulary.game_provider_2_0
-id: taxonomy_term.game_provider_2_0.field_v2_game_provider_disable
-field_name: field_v2_game_provider_disable
+    - field.storage.taxonomy_term.field_v2_game_category_disable
+    - taxonomy.vocabulary.game_category_2_0
+id: taxonomy_term.game_category_2_0.field_v2_game_category_disable
+field_name: field_v2_game_category_disable
 entity_type: taxonomy_term
-bundle: game_provider_2_0
+bundle: game_category_2_0
 label: Disable
 description: 'If checked, this game provider category will not be displayed.'
 required: false
