@@ -210,7 +210,7 @@ class ExportForm extends FormBase {
    */
   private function getDateValue($field) {
     if (isset($_SESSION['webcomposer_audit_export_filter'][$field])) {
-      return new DrupalDateTime($_SESSION['webcomposer_audit_export_filter'][$field]);
+      return $_SESSION['webcomposer_audit_export_filter'][$field];
     }
   }
 
