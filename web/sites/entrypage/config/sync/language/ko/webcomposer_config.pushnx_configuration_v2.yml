@@ -3,12 +3,12 @@ empty: '새로운 알림이 없습니다.'
 expired_message: '본 프로모션은 이미 종료되었습니다.'
 date_format: 'yyyy/mm/dd HH:MM'
 date_offset: '+9'
-dismiss_button_label: 'Dismiss all'
+dismiss_button_label: '모두 닫기'
 dismiss_content:
-  value: "<p class=\"text-align-center\"><strong><span class=\"text-yellow\">ARE YOU SURE YOU WANT<br />\r\nTO DISMISS ALL NOTIFICATIONS?</span></strong></p>\r\n\r\n<p class=\"text-align-center\"><span class=\"text-white\">Dismissing all notifications will also<br />\r\ndecline all promotions you are eligible to</span></p>\r\n"
+  value: <p class="text-align-center"><strong><span class="text-red">계속하시겠습니까?</span></strong></p><p class="text-align-center">이렇게 하면 모든 알림이 영구적으로 삭제되며 발행된 보너스는 모두 자동으로 거부됩니다.</p><p class="text-align-center"><span class="text-12">팁! &quot;X&quot;를 클릭하여 알림을 닫고 나중에 검토할 수 있습니다.</span></p>
   format: basic_html
-dismiss_yes: 'YES'
-dismiss_no: 'NO'
+dismiss_yes: '예'
+dismiss_no: '아니오'
 product_label_generic: 알림
 product_label_owsports: 'OW Sports'
 product_label_livedealer: '라이브 딜러/게임/아케이드'

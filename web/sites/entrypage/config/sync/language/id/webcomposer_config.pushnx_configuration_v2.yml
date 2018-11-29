@@ -3,12 +3,12 @@ empty: 'Tidak ada notifikasi baru.'
 expired_message: 'Masa berlaku penawaran ini telah habis'
 date_format: 'dd/mm/yyyy HH:MM'
 date_offset: '+7'
-dismiss_button_label: 'Dismiss all'
+dismiss_button_label: 'Abaikan Semua'
 dismiss_content:
-  value: "<p class=\"text-align-center\"><strong><span class=\"text-yellow\">ARE YOU SURE YOU WANT<br />\r\nTO DISMISS ALL NOTIFICATIONS?</span></strong></p>\r\n\r\n<p class=\"text-align-center\"><span class=\"text-white\">Dismissing all notifications will also<br />\r\ndecline all promotions you are eligible to</span></p>\r\n"
+  value: <p class="text-align-center"><strong><span class="text-red">Anda yakin ingin melanjutkan?</span></strong></p><p class="text-align-center">Hal tersebut akan menghapus semua notifikasi secara permanen dan semua bonus yang dibagikan akan otomatis ditolak.</p><p class="text-align-center"><span class="text-12">Tips! Anda dapat memilih untuk menutup pemberitahuan dengan mengklik &quot;X&quot; dan melihatnya di lain waktu.</span></p>
   format: basic_html
-dismiss_yes: 'YES'
-dismiss_no: 'NO'
+dismiss_yes: 'Ya'
+dismiss_no: 'Tidak'
 product_label_generic: Notifikasi
 product_label_owsports: 'OW Sports'
 product_label_livedealer: 'Live Dealer/Games/Arcade'
