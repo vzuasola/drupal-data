@@ -2,61 +2,155 @@
 
 namespace Drupal\my_account_core\Form;
 
-use Drupal\webcomposer_config_schema\Form\FormBase;
+use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Path\AliasManagerInterface;
+use Drupal\Core\Form\ConfigFormBase;
+use Drupal\Core\Path\PathValidatorInterface;
+use Drupal\Core\Routing\RequestContext;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
- * Cashier domain mapping configuration.
+ * Implements the vertical tabs demo form controller.
  *
- * @WebcomposerConfigPlugin(
- *   id = "my_account_core.cashier",
- *   route = {
- *     "title" = "Cashier Configuration",
- *     "path" = "/admin/config/my_account/cashier",
- *   },
- *   menu = {
- *     "title" = "My Account Cashier",
- *     "description" = "Cashier domain mapping",
- *     "parent" = "my_account_form_profile.config",
- *   },
- * )
+ * This example demonstrates the use of \Drupal\Core\Render\Element\VerticalTabs
+ * to group input elements according category.
+ *
+ * @see \Drupal\Core\Form\FormBase
+ * @see \Drupal\Core\Form\ConfigFormBase
  */
-class MyAccountCashierForm extends FormBase {
+class MyAccountCashierForm extends ConfigFormBase
+{
 
-  /**
-   * {@inheritdoc}
-   */
-  protected function getEditableConfigNames() {
+    /**
+     * Build the form.
+     *
+     * @inheritdoc
+     */
+    public function buildForm(array $form, FormStateInterface $form_state)
+    {
+        // Get Form configuration.
+        $myAccountCoreConfig = $this->config('my_account_core.cashier');
+        $domains = $myAccountCoreConfig->get('cashier_domain_mapping');
 
-    return ['my_account_core.cashier'];
-  }
+        $form['cashier'] = [
+            '#type' => 'vertical_tabs',
+        ];
 
-  /**
-   * Build the form.
-   *
-   * {@inheritdoc}
-   */
-  public function form(array $form, FormStateInterface $form_state) {
+        $form['field_configuration'] = [
+            '#type' => 'details',
+            '#title' => 'Field Configuration',
+            '#group' => 'cashier',
+            '#open' => true,
+            '#tree' => true,
+        ];
 
-    $form['cashier'] = [
-      '#type' => 'vertical_tabs',
-    ];
+        $form['field_configuration']['cashier_domain_mapping'] = [
+            '#type' => 'textarea',
+            '#title' => t('Cashier Domain Mapping'),
+            '#required' => true,
+            '#description' => $this->t('Cashier Domain Mapping'),
+            '#default_value' => $domains
+        ];
 
-    $form['field_configuration'] = [
-      '#type' => 'details',
-      '#title' => 'Field Configuration',
-      '#group' => 'cashier',
-    ];
+        $form['actions'] = ['#type' => 'actions'];
+        // Add a submit button that handles the submission of the form.
+        $form['actions']['submit'] = [
+            '#type' => 'submit',
+            '#value' => $this->t('Save'),
+        ];
+        return $form;
+    }
 
-    $form['field_configuration']['cashier_domain_mapping'] = [
-      '#type' => 'textarea',
-      '#title' => t('Cashier Domain Mapping'),
-      '#required' => TRUE,
-      '#description' => $this->t('Cashier Domain Mapping'),
-      '#default_value' => $this->get('cashier_domain_mapping'),
-    ];
+    /**
+     * Getter method for Form ID.
+     *
+     * @inheritdoc
+     */
+    public function getFormId()
+    {
+        return 'fapi_cashier_config';
+    }
 
-    return $form;
-  }
+    /**
+     *
+     * @inheritdoc
+     */
+    protected function getEditableConfigNames()
+    {
+        return ['my_account_core.cashier'];
+    }
 
+
+    /**
+     * Implements a form submit handler.
+     *
+     * @param array $form
+     *   The render array of the currently built form.
+     * @param FormStateInterface $form_state
+     *   Object describing the current state of the form.
+     */
+    public function submitForm(array &$form, FormStateInterface $form_state)
+    {
+        $domains = $form_state->getValue('field_configuration')['cashier_domain_mapping'];
+
+        $this->config('my_account_core.cashier')
+            ->set('cashier_domain_mapping', $domains)
+            ->save();
+    }
+
+    /**
+     * The path alias manager.
+     *
+     * @var \Drupal\Core\Path\AliasManagerInterface
+     */
+    protected $aliasManager;
+
+    /**
+     * The path validator.
+     *
+     * @var \Drupal\Core\Path\PathValidatorInterface
+     */
+    protected $pathValidator;
+
+    /**
+     * The request context.
+     *
+     * @var \Drupal\Core\Routing\RequestContext
+     */
+    protected $requestContext;
+
+    /**
+     * Constructs a SiteInformationForm object.
+     *
+     * @param \Drupal\Core\Config\ConfigFactoryInterface $config_factory
+     *   The factory for configuration objects.
+     * @param \Drupal\Core\Path\AliasManagerInterface $alias_manager
+     *   The path alias manager.
+     * @param \Drupal\Core\Path\PathValidatorInterface $path_validator
+     *   The path validator.
+     * @param \Drupal\Core\Routing\RequestContext $request_context
+     *   The request context.
+     */
+    public function __construct(ConfigFactoryInterface $config_factory, AliasManagerInterface $alias_manager, PathValidatorInterface $path_validator, RequestContext $request_context)
+    {
+        parent::__construct($config_factory);
+
+        $this->aliasManager = $alias_manager;
+        $this->pathValidator = $path_validator;
+        $this->requestContext = $request_context;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public static function create(ContainerInterface $container)
+    {
+        return new static(
+            $container->get('config.factory'),
+            $container->get('path.alias_manager'),
+            $container->get('path.validator'),
+            $container->get('router.request_context')
+        );
+    }
 }
