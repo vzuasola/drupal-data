@@ -88,5 +88,5 @@ fun_gaming_currency: "CNY\r\nRMB"
 fun_gaming_language_mapping: "en|en-US\r\nsc|zh-CN"
 fun_gaming_country: ''
 micro_gaming_currency: "EUR\r\nUSD\r\nGBP\r\nRMB\r\nMYR\r\nTHB\r\nKRW\r\nVND\r\nIDR\r\nINR\r\nPLN\r\nRON\r\nRUB\r\nTRY\r\nKES\r\nGHS\r\nBRL\r\nMXN\r\nCLP\r\nCOP\r\nPEN\r\nARS\r\nVES"
-micro_gaming_language_mapping: "en|en-US\r\nsc|zh-CN\r\nth|th\r\nkr|ko\r\nvn|vi\r\nid|id\r\nes|ES\r\npt|pt-BR"
+micro_gaming_language_mapping: "en|en-US\r\nsc|zh-CN\r\nth|th\r\nkr|ko-KR\r\nvn|vi\r\nid|id\r\nes|es\r\npt|pt"
 micro_gaming_country: "AU\r\nFR\r\nHK\r\nPH\r\nSG\r\nZA\r\nTW\r\nUS"
