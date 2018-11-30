@@ -47,7 +47,7 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
             '#title' => 'Back Button Markup',
             '#type' => 'textarea',
             '#description' => 'HTML markup for Back Button.',
-            '#default_value' => '<span class="back-btn form-submit btn-small btn"' .
+            '#default_value' => '<span class="back-btn btn-small btn"' .
               ' style="float:right; margin:0 22px 10px; display:none">Back</span>',
           ],
         ],
