@@ -38,6 +38,21 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
    */
   public function getFields() {
     return [
+
+      'back_button' => [
+        'name' => 'Back Button',
+        'type' => 'markup',
+        'settings' => [
+          'markup' => [
+            '#title' => 'Back Button Markup',
+            '#type' => 'textarea',
+            '#description' => 'HTML markup for Back Button.',
+            '#default_value' => '<span class="back-btn form-submit btn-small btn"' .
+              ' style="float:right; margin:0 22px 10px; display:none">Back</span>',
+          ],
+        ],
+      ],
+
       'username' => [
         'name' => 'Username',
         'type' => 'textfield',
