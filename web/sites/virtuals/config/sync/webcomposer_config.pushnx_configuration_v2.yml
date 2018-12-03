@@ -5,7 +5,7 @@ domain: ''
 retry_count: '34'
 delay_count: '500'
 expiry_delay_count: '10000'
-product_list: "Generic\r\nAlpine\r\nVirtuals"
+product_list: "Generic\r\nAlpine\r\nVirtuals\r\nTaurus"
 title: 'PUSH NOTIFICATION'
 empty: 'There are no new notifications.'
 expired_message: 'This offer has already expired.'
@@ -50,3 +50,9 @@ product_type_id_virtuals: '8'
 product_icon_virtuals: ''
 product_exclude_virtuals: 0
 product_exclude_dismiss_virtuals: 0
+product_label_taurus: ''
+product_type_id_taurus: '100'
+product_icon_taurus: ''
+product_exclude_taurus: 0
+product_exclude_dismiss_taurus: 1
+
