@@ -22,7 +22,7 @@ debug_display_all: 1
 debug_display_expirydate: 1
 disableBonusAward: 0
 text_: ''
-product_list: "Generic\r\nAlpine\r\nExchange"
+product_list: "Generic\r\nAlpine\r\nExchange\r\nTaurus"
 product_type_id: null
 product_icon: null
 product_type_id_owsports: '3'
@@ -79,3 +79,8 @@ product_type_id_exchange: ''
 product_icon_exchange: ''
 product_exclude_exchange: 0
 product_exclude_dismiss_exchange: 0
+product_label_taurus: ''
+product_type_id_taurus: '100'
+product_icon_taurus: ''
+product_exclude_taurus: 0
+product_exclude_dismiss_taurus: 1
