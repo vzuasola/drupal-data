@@ -72,7 +72,7 @@ class DatabaseAuditStorage implements AuditStorageInterface {
 
     if (isset($options['offset'])) {
       $query->range($options['offset'], $options['limit']);
-    } else if (isset($options['limit'])) {
+    } elseif (isset($options['limit'])) {
       $query->limit($options['limit']);
     }
 

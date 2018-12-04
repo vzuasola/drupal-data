@@ -5,7 +5,7 @@ domain: ''
 retry_count: '34'
 delay_count: '500'
 expiry_delay_count: '10000'
-product_list: "Generic\r\nAlpine\r\nLottery"
+product_list: "Generic\r\nAlpine\r\nLottery\r\nTaurus"
 title: 'PUSH NOTIFICATION EN'
 empty: 'There are no new notifications.'
 expired_message: 'This offer has already expired.'
@@ -44,9 +44,14 @@ product_type_id_lottery: '7'
 product_icon_lottery: ''
 product_exclude_lottery: 0
 product_exclude_dismiss_lottery: 0
-cta_label_ok: 'OK'
+cta_label_ok: OK
 cta_actions_ok: ''
 cta_label_accept: ACCEPT
 cta_actions_accept: ''
 cta_label_decline: DECLINE
 cta_actions_decline: ''
+product_label_taurus: ''
+product_type_id_taurus: '100'
+product_icon_taurus: ''
+product_exclude_taurus: 0
+product_exclude_dismiss_taurus: 1

@@ -11,6 +11,11 @@
     background-image: url(../icons/cog.white.svg);
 }
 
-.toolbar-bar .toolbar-items-webcomposer li {
-    margin-left: 0px;
+.toolbar-items-webcomposer li {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.toolbar-items-webcomposer li + li {
+    border-left: 1px solid #ddd;
 }
