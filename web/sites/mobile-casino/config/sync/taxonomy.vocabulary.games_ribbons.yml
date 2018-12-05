@@ -1,0 +1,9 @@
+uuid: 7d6a4215-0ee5-4b99-8147-10db9659cfc8
+langcode: en
+status: true
+dependencies: {  }
+name: 'Games Ribbons'
+vid: games_ribbons
+description: 'Games ribbons list'
+hierarchy: 0
+weight: 0
