@@ -1,12 +1,8 @@
 services:
-  webcomposer_audit_export.export:
-    class: Drupal\webcomposer_audit_export\Parser\ExportParser
-    arguments: []
+  webcomposer_audit_export.export_operation:
+    class: Drupal\webcomposer_audit_export\ExportOperation
+    arguments: ['@webcomposer_audit_export.excel_parser', '@webcomposer_audit.database_storage']
 
   webcomposer_audit_export.excel_parser:
     class: Drupal\webcomposer_audit_export\Parser\ExcelParser
     arguments: []
-
-  webcomposer_audit_export.logs_export:
-    class: Drupal\webcomposer_audit_export\Parser\LogsExport
-    arguments: ['@webcomposer_audit_export.excel_parser','@webcomposer_audit_export.export']

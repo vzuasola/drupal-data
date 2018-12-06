@@ -275,10 +275,10 @@ class PushNotificationV2Form extends FormBase {
       }
     }
 
-    $list_items[] = 'copy:id';
-    $list_items[] = 'redirect:domaintoken';
-    $list_items[] = 'popup:domaintoken';
-    $list_items[] = 'newtab:domaintoken';
+    $list_items[] = 'copy::id';
+    $list_items[] = 'redirect::domaintoken';
+    $list_items[] = 'popup::domaintoken';
+    $list_items[] = 'newtab::domaintoken';
 
     $form['cta_settings']['cta_button_helper'] = [
       '#prefix' => '<div>',

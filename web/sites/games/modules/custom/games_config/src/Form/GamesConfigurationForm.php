@@ -1,5 +1,4 @@
 <?php
-
 namespace Drupal\games_config\Form;
 
 use Drupal\webcomposer_config_schema\Form\FormBase;

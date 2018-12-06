@@ -13,6 +13,7 @@ dependencies:
     - field.field.node.games.field_games_list_thumbnail_size
     - field.field.node.games.field_games_target
     - field.field.node.games.field_keywords
+    - field.field.node.games.field_preview_mode
     - node.type.games
   module:
     - image
@@ -93,6 +94,16 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: basic_string
+    region: content
+  field_preview_mode:
+    weight: 9
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
     region: content
 hidden:
   field_keywords: true

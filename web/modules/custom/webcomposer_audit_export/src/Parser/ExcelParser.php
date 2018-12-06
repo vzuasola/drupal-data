@@ -4,9 +4,6 @@ namespace Drupal\webcomposer_audit_export\Parser;
 
 /**
  * Class for creating and reading Excel Spreadsheet file using PHP Excel.
- *
- * @package Matterhorn Domains
- * @author yunyce <yunyce.dejesus@bayviewtechnology.com>
  */
 class ExcelParser {
 
@@ -33,9 +30,7 @@ class ExcelParser {
    * Constructor function Passing the excel object to the class instance.
    */
   public function __construct() {
-    // Initialize PHP excel object.
     $this->excel = new \PHPExcel();
-    // Set filename.
     $this->sheetNumber = 0;
   }
 
@@ -124,9 +119,16 @@ class ExcelParser {
   }
 
   /**
-   * Triggers the browser to invoke download operation.
    *
-   * @author yunyce <yunyce.dejesus@bayviewtechnology.com>
+   */
+  public function generateContent($excel_version = 'Excel2007') {
+    ob_start();
+    $this->save(NULL, $excel_version, FALSE);
+    return ob_get_clean();
+  }
+
+  /**
+   * Triggers the browser to invoke download operation.
    */
   private function setHeaders($filename) {
     header("Content-Type: application/force-download");
@@ -138,11 +140,8 @@ class ExcelParser {
 
   /**
    * Apply styling to worksheet.
-   *
-   * @author yunyce <yunyce.dejesus@bayviewtechnology.com>
    */
   private function styleExcel() {
-    // Column and row dimension.
     $column = $this->excel->getActiveSheet()->getHighestColumn();
 
     $this->excel->getDefaultStyle()->getAlignment()->setHorizontal(\PHPExcel_Style_Alignment::HORIZONTAL_LEFT);
@@ -156,8 +155,6 @@ class ExcelParser {
     $this->excel->getActiveSheet()->getColumnDimension('H')->setWidth(50);
 
     $this->excel->getActiveSheet()->getStyle('A1:' . $column . '1')->getFont()->setBold(TRUE);
-    // $this->excel->getActiveSheet()->getRowDimension('1')->getStyle()->getFont()->setBold(true);
-    // $this->excel->getDefaultStyle()->getFont()->setName('Arial');
   }
 
 }
