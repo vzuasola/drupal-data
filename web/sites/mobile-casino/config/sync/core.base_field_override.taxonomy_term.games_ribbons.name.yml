@@ -1,0 +1,18 @@
+uuid: bcecb6fd-9ecb-4144-a5bc-ba66e831e308
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.games_ribbons
+id: taxonomy_term.games_ribbons.name
+field_name: name
+entity_type: taxonomy_term
+bundle: games_ribbons
+label: Name
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
