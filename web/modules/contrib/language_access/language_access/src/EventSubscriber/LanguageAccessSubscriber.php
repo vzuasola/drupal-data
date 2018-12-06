@@ -88,7 +88,7 @@ class LanguageAccessSubscriber implements EventSubscriberInterface {
           $route_match = \Drupal::routeMatch();
           $current_route = $route_match->getRouteName();
           $pattern = '/^entity\.([a-za-zA-Z0-9_\-]+)\.edit_form$/';
-          if(preg_match($pattern, $current_route, $matches)) {
+          if (preg_match($pattern, $current_route, $matches)) {
             throw new AccessDeniedHttpException();
           }
         }
