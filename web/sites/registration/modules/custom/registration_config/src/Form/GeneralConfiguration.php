@@ -175,6 +175,20 @@ class GeneralConfiguration extends FormBase {
       '#default_value' => $this->get('mobile_native_app_command'),
       '#required' => TRUE,
     ];
+    $form['integration']['enable_futurama_authentication_poker'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable Futarama Poker client authentication'),
+      '#description' => $this->t('This will enable futurama authentication for Poker and will use that legacy ' .
+        'if unchecked'),
+      '#default_value' => $this->get('enable_futurama_authentication_poker'),
+    ];
+    $form['integration']['enable_futurama_authentication_casino'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable Futarama Casino client authentication'),
+      '#description' => $this->t('This will enable futurama authentication for Casino and will use that legacy ' .
+        'if unchecked'),
+      '#default_value' => $this->get('enable_futurama_authentication_casino'),
+    ];
   }
 
   /**

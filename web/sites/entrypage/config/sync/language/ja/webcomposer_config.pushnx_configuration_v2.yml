@@ -3,9 +3,9 @@ empty: 新しいお知らせはございません。
 expired_message: こちらのプロモーションは期限切れです。
 date_format: 'yyyy/mm/dd HH:MM'
 date_offset: '+9'
-dismiss_button_label: 'Dismiss all'
+dismiss_button_label: 全て削除する
 dismiss_content:
-  value: "<p class=\"text-align-center\"><strong><span class=\"text-yellow\">ARE YOU SURE YOU WANT<br />\r\nTO DISMISS ALL NOTIFICATIONS?</span></strong></p>\r\n\r\n<p class=\"text-align-center\"><span class=\"text-white\">Dismissing all notifications will also<br />\r\ndecline all promotions you are eligible to</span></p>\r\n"
+  value: <p class="text-align-center"><strong><span class="text-red">実行なさいますか？</span></strong></p><p class="text-align-center">実行されますと、お知らせが全て削除され、発行された全てのボーナスは自動的にキャンセルとなります。</p><p class="text-align-center"><span class="text-12">お知らせは &quot;X&quot; をクリックで閉じることができ、後からご確認いただくこともできます。</span></p>
   format: basic_html
 dismiss_yes: 'YES'
 dismiss_no: 'NO'

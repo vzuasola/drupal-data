@@ -4,25 +4,25 @@ namespace Drupal\webcomposer_audit_export\Form;
 
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Datetime\DrupalDateTime;
 
 use Drupal\webcomposer_audit\Form\OverviewForm;
+use Drupal\Core\Render\Markup;
 
 /**
  * Contribute form.
  */
 class ExportForm extends FormBase {
   /**
-   * logsExport object.
    *
-   * @var logsExport
    */
-  private $logsExport;
+  private $exportOperation;
 
   /**
    * Constructor.
    */
   public function __construct() {
-    $this->logsExport = \Drupal::service('webcomposer_audit_export.logs_export');
+    $this->exportOperation = \Drupal::service('webcomposer_audit_export.export_operation');
   }
 
   /**
@@ -36,8 +36,26 @@ class ExportForm extends FormBase {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
+    if (!empty($_SESSION['webcomposer_audit_export_download'])) {
+      $filepath = $_SESSION['webcomposer_audit_export_download'];
+
+      $download = Markup::create("
+        Excel file has been generated, please click
+        <a class='excel-download-link' href='$filepath' target='_blank'>here</a>
+      ");
+
+      $form['download'] = [
+        '#theme' => 'status_messages',
+        '#message_list' => [
+          'status' => [$download],
+        ],
+      ];
+
+      unset($_SESSION['webcomposer_audit_export_download']);
+    }
+
     if (!empty($_SESSION['webcomposer_audit_export_filter'])) {
-      $message = "Filters are applied for this export. You may see fewer results. Reset the filter to export all entries.";
+      $message = "Filters are applied for this export. Fewer results will be exported. Reset the filter to export all entries.";
 
       $form['message'] = [
         '#theme' => 'status_messages',
@@ -60,10 +78,10 @@ class ExportForm extends FormBase {
 
     $form['filters'] = [
       '#type' => 'details',
-      '#title' => $this->t('Filter Audit Logs Export'),
+      '#title' => $this->t('Audit Logs Export'),
       '#open' => TRUE,
       '#attributes' => [
-        'style' =>'float: left; width: 100%;',
+        'style' => 'float: left; width: 100%;',
       ],
     ];
 
@@ -72,7 +90,7 @@ class ExportForm extends FormBase {
     ];
 
     $form['filters']['wrapper']['date'] = [
-      '#type' => 'fieldset',
+      '#type' => 'container',
       '#title' => t('Date Filters'),
       '#collapsible' => FALSE,
       '#collapsed' => FALSE,
@@ -91,9 +109,6 @@ class ExportForm extends FormBase {
       '#date_date_format' => OverviewForm::DATE_FORMAT,
       '#prefix' => '<div class="js-form-item form-item js-form-type-select form-type-select js-form-item-uid form-item-uid">',
       '#suffix' => '</div>',
-      '#attributes' => [
-        'style' =>'width: 100%;',
-      ],
     ];
 
     $form['filters']['wrapper']['date']['date_end'] = [
@@ -105,9 +120,6 @@ class ExportForm extends FormBase {
       '#date_date_format' => OverviewForm::DATE_FORMAT,
       '#prefix' => '<div class="js-form-item form-item js-form-type-select form-type-select js-form-item-uid form-item-uid">',
       '#suffix' => '</div>',
-      '#attributes' => [
-        'style' =>'width: 100%;',
-      ],
     ];
 
     $form['filters']['wrapper']['date']['date_picker'] = [
@@ -122,17 +134,22 @@ class ExportForm extends FormBase {
         $_SESSION['webcomposer_audit_export_filter']['date_picker'] : '-none-',
     ];
 
-
     $form['filters']['wrapper']['actions'] = [
-      '#type' => 'fieldset',
+      '#type' => 'container',
       '#title' => $this->t('Export Audit Logs'),
-      '#description' => $this->t('<ul>
-          <li>Allows you to export audit logs data to a spreadsheet file.</li>
-          <li><b>Reset</b> button fails after a successful <b>Export</b>. Update any
-          filter to reenable <b>Reset</b> button.</li>
-          <li><b>Export</b> button will not refresh the page to generate a spreadsheet
-          file.</li></ul>'),
+      '#attributes' => [
+        'style' => 'float: left; width: 100%; margin-top: 1em; margin-bottom: 1em;',
+      ],
     ];
+
+    // $form['filters']['wrapper']['actions']['label'] = [
+    //   '#type' => 'markup',
+    //   '#markup' => $this->t("
+    //     <p>Allows you to export audit logs data to a spreadsheet file.</p>
+    //     <p><b>Reset</b> button fails after a successful <b>Export</b>. Update any filter to reenable <b>Reset</b> button.</p>
+    //     <p><b>Export</b> button will not refresh the page to generate a spreadsheet file.</p>
+    //   "),
+    // ];
 
     $form['filters']['wrapper']['actions']['reset'] = [
       '#type' => 'submit',
@@ -163,7 +180,6 @@ class ExportForm extends FormBase {
       if (!empty($form_state->getValue($key))) {
         $_SESSION['webcomposer_audit_export_filter'][$key] = $form_state->getValue($key);
       } else {
-        // Delete the session
         unset($_SESSION['webcomposer_audit_export_filter'][$key]);
       }
     }
@@ -172,14 +188,14 @@ class ExportForm extends FormBase {
       if ($form_state->getValue($key)) {
         $_SESSION['webcomposer_audit_export_filter'][$key] = $form_state->getValue($key);
       } else {
-        // Delete session
         unset($_SESSION['webcomposer_audit_export_filter'][$key]);
       }
     }
 
-    // Triggered element: $form_state->getTriggeringElement()['#id']
-    $this->logsExport->setAuditFilters($this->getAllFilters());
-    $this->logsExport->logsExportExcel();
+    $filters = $this->getAllFilters();
+
+    $this->exportOperation->setAuditFilters($filters);
+    $this->exportOperation->doBatch();
   }
 
   /**
@@ -194,10 +210,8 @@ class ExportForm extends FormBase {
    */
   private function getDateValue($field) {
     if (isset($_SESSION['webcomposer_audit_export_filter'][$field])) {
-      return new \Drupal\Core\Datetime\DrupalDateTime($_SESSION['webcomposer_audit_export_filter'][$field]);
+      return $_SESSION['webcomposer_audit_export_filter'][$field];
     }
-
-    return '';
   }
 
   /**
@@ -230,7 +244,7 @@ class ExportForm extends FormBase {
       $date_start = (isset($_SESSION['webcomposer_audit_export_filter']['date_start'])) ?
         strtotime($_SESSION['webcomposer_audit_export_filter']['date_start']) : null;
       $date_end = (isset($_SESSION['webcomposer_audit_export_filter']['date_end'])) ?
-        strtotime($_SESSION['webcomposer_audit_export_filter']['date_end'] . ' 23:59:59') : null;
+        strtotime($_SESSION['webcomposer_audit_export_filter']['date_end']) : null;
 
       if ($date_start && $date_end) {
         return [

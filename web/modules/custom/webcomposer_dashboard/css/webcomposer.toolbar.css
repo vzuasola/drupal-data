@@ -10,3 +10,12 @@
 .toolbar-bar .toolbar-icon-webcomposer.is-active:before {
     background-image: url(../icons/cog.white.svg);
 }
+
+.toolbar-items-webcomposer li {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.toolbar-items-webcomposer li + li {
+    border-left: 1px solid #ddd;
+}

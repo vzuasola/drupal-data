@@ -7,6 +7,7 @@
 
 use Drupal\Core\Url;
 use DrupalProject\custom\EnvironmentResolver;
+use Drupal\webcomposer_dashboard\Toolbar\ToolbarHandler;
 
 /**
  * Implements hook_toolbar().
@@ -21,6 +22,26 @@ function webcomposer_dashboard_toolbar() {
       '#attributes' => [
         'title' => t('Webcomposer'),
         'class' => ['toolbar-icon', 'toolbar-icon-webcomposer'],
+      ],
+    ],
+    'tray' => [
+      '#heading' => t('Webcomposer menu'),
+      'webcomposer' => [
+        '#theme' => 'item_list',
+        '#items' => [
+          'webcomposer.admin' => [
+            '#type' => 'link',
+            '#title' => t('Configuration'),
+            '#url' => Url::fromRoute('webcomposer.admin'),
+          ],
+          'webcomposer_dashboard.clear_cache' => [
+            '#lazy_builder' => [ToolbarHandler::class . ':generateToolbar', []],
+            '#create_placeholder' => TRUE,
+          ],
+        ],
+        '#attributes' => [
+          'class' => ['clearfix', 'menu', 'toolbar-items-webcomposer'],
+        ],
       ],
     ],
     '#attached' => [
