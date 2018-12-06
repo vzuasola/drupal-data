@@ -1,0 +1,23 @@
+uuid: f241802a-925b-42f2-9a52-1c86f60a1a47
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_v2_game_info_toggle
+    - node.type.games_2_0
+id: node.games_2_0.field_v2_game_info_toggle
+field_name: field_v2_game_info_toggle
+entity_type: node
+bundle: games_2_0
+label: 'Show Game Info Button'
+description: 'Uncheck this if you want the game info to be hidden for this game.'
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

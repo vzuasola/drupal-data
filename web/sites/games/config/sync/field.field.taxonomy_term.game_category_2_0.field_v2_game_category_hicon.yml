@@ -1,0 +1,38 @@
+uuid: 34db23f9-5877-4179-a46d-e9bd4d6bacd7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_v2_game_category_hicon
+    - taxonomy.vocabulary.game_category_2_0
+  module:
+    - image
+id: taxonomy_term.game_category_2_0.field_v2_game_category_hicon
+field_name: field_v2_game_category_hicon
+entity_type: taxonomy_term
+bundle: game_category_2_0
+label: 'Hover/Active Icon'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: false
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

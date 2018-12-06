@@ -1,0 +1,21 @@
+uuid: 85553a93-954e-4f5f-a994-4ea799841d48
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.field_v2_game_category_tooltip
+field_name: field_v2_game_category_tooltip
+entity_type: taxonomy_term
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

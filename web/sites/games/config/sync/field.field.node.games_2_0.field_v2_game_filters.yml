@@ -1,0 +1,29 @@
+uuid: dfa9c0f5-1749-49c3-be59-57720da70769
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_v2_game_filters
+    - node.type.games_2_0
+    - taxonomy.vocabulary.game_filters_2_0
+id: node.games_2_0.field_v2_game_filters
+field_name: field_v2_game_filters
+entity_type: node
+bundle: games_2_0
+label: Filters
+description: 'Select filters for this game.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      game_filters_2_0: game_filters_2_0
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
