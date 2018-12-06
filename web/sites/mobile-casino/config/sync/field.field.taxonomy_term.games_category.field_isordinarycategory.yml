@@ -1,0 +1,23 @@
+uuid: 6086c359-bd79-4409-a686-45f5bfb38ba3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_isordinarycategory
+    - taxonomy.vocabulary.games_category
+id: taxonomy_term.games_category.field_isordinarycategory
+field_name: field_isordinarycategory
+entity_type: taxonomy_term
+bundle: games_category
+label: 'Is Ordinary Category'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,21 @@
+uuid: fdddf8b0-97f2-4ac2-a21d-bc2f2cdb4827
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_games_list_thumbnail_size
+    - node.type.games
+  module:
+    - options
+id: node.games.field_games_list_thumbnail_size
+field_name: field_games_list_thumbnail_size
+entity_type: node
+bundle: games
+label: 'Thumbnail Size'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
