@@ -304,6 +304,17 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
           ],
         ],
       ],
+      'captcha' => [
+        'name' => 'Captcha',
+        'type' => 'textfield',
+        'settings' => [
+          'label' => [
+            '#title' => 'Captcha Label',
+            '#type' => 'textfield',
+            '#description' => 'The Label for Captcha field',
+          ],
+        ],
+      ],
       'ip' => [
         'name' => 'IP address',
         'type' => 'hidden',
@@ -320,7 +331,6 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
         'name' => 'Advertiser',
         'type' => 'hidden',
       ],
-      //captcha?
       'submit' => [
         'name' => 'Submit',
         'type' => 'submit',
