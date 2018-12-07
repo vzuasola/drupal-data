@@ -556,5 +556,14 @@ class HeaderForm extends FormBase {
       '#required' => TRUE,
       '#translatable' => TRUE,
     ];
+
+    $form['header_other_group']['links_title'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Quicklinks Label'),
+      '#description' => $this->t('Quicklinks Label'),
+      '#default_value' => $this->get('links_title'),
+      '#required' => true,
+      '#translatable' => true,
+    ];
   }
 }

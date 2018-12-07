@@ -1,4 +1,4 @@
-header_settings_tab__active_tab: edit-header-other-group
+header_settings_tab__active_tab: edit-mcashier-group
 logo_title: 'Mobile gambling with Dafabet en'
 capslock_notification: 'Caps Lock aktif'
 mobile_remember: 'Ingat Username'
@@ -14,11 +14,11 @@ news_announcement_content:
   format: basic_html
 lobby_page_title: 'Online Betting - Bet on Sports, Play Online Casino and Poker at Dafabet'
 join_now_text: GABUNG
-join_now_link: qa1-m.elysium-dfbt.com/cant-login
+join_now_link: '{domain:mobile}/{domain:mobile_lang}/cant-login'
 login_issue_text: 'Tidak bisa Login?'
-login_issue_link: qa1-m.elysium-dfbt.com/cant-login
+login_issue_link: '{domain:mobile}/{domain:mobile_lang}/cant-login'
 product_balance_label: test
-total_balance_label: 'Total Saldo'
+total_balance_label: 'Total Saldo:'
 balance_error_text: 'Error Retrieving.'
 cashier_icon_hover_text: KASIR
 welcome_text: 'Selamat Datang {username}'
@@ -27,3 +27,13 @@ profile_logout_text: Logout
 balance_label_mapping: "4|OW Sports\r\n6|Dafa Sports\r\n11|eSports\r\n10|Exchange\r\n1|Casino Classic\r\n2|Casino Gold\r\n5|Live Dealer, Games, Arcade, Virtuals, & Lottery\r\n8|Opus Live Dealer\r\n9|Keno\r\n3|Poker\r\n7|Fish Hunter"
 balance_error_text_product: test
 cashier_link: test
+registration_link: 'https://google.com'
+profile_icon_hover_text: 'My Profile'
+default_cashier_link: 'https://google.com'
+cashier_mapping: ''
+default_mcashier_link: 'https://google.com'
+mcashier_mapping: ''
+balance_mapping: ''
+product_menu_new_tag: NEW
+promotion_page_title: 'Dafabet mobile betting promotions offer huge rewards!'
+links_title: Links
