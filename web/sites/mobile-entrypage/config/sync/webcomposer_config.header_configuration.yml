@@ -1,7 +1,7 @@
 join_now_text: 'JOIN NOW'
-join_now_link: 'https://qa1-www.elysium-dfbt.com/en/join/dafabet'
-login_issue_text: 'Cant login? EN'
-login_issue_link: 'https://qa1-m.elysium-dfbt.com/cant-login'
+join_now_link: '{domain:registration_link}mobile[query:(regvia=9&{tracking})]'
+login_issue_text: 'Can''t login?'
+login_issue_link: '{domain:mobile}/{domain:mobile_lang}/cant-login'
 sc_lang_text: SC
 ch_lang_text: CH
 balance_error_text: 'Error Retrieving.'
@@ -13,7 +13,7 @@ profile_link: 'https://stg-accountwww.elysium-dfbt.com/en/my-profile'
 profile_logout_text: Logout
 _core:
   default_config_hash: Ynx2hkfeSTtNe4GyBQ1t4lBkrV4wrazLGjX_M7Mk3mg
-lobby_page_title: 'Online Betting - Bet on Sports, Play Online Casino and Poker at Dafabet'
+lobby_page_title: 'Place your online bets anywhere with Dafabet Mobile!'
 critical_announcement: '0'
 critical_announcement_content:
   value: "<p>This is a critical announcement test test test</p>\r\n"
@@ -24,22 +24,29 @@ news_announcement_content:
   format: basic_html
 balance_label_mapping: "4|OW Sports\r\n6|Dafa Sports\r\n10|Exchange\r\n1|Casino\r\n2|Casino Gold\r\n5|Live Dealer, Games, Arcade, & Virtuals\r\n8|Opus Live Dealer\r\n7|AG Fish Hunter\r\n9|Keno\r\n3|Poker"
 balance_error_text_product: N/A
-header_settings_tab__active_tab: edit-join-now-group
+header_settings_tab__active_tab: edit-header-other-group
 logo_title: 'Mobile gambling with Dafabet'
 password_mask_toggle: 0
 caps_lock_toggle: 0
 capslock_notification: 'Caps Lock is ON'
-cashier_link: Cashier
+cashier_link: '{cashier}'
 balance_toggle: 0
 product_balance_label: test
 product_balance_id: ''
 total_balance_label: 'Total Balance:'
 balance_mapping: ''
-balance_label_override: 现场荷官、老虎机、街机、虚拟运动、和大发彩票
-currency_balance_mapping: "9|RMB,MYR,THB,KRW,VND,USD,IDR,INR,EUR\r\n8|RMB,MYR,THB,KRW,VND,USD,IDR,INR,EUR\r\n7|RMB\r\n10|USD,INR"
+balance_label_override: ''
+currency_balance_mapping: "10|INR\r\n9|RMB,MYR,THB,KRW,VND,USD,IDR,INR,EUR\r\n8|RMB,MYR,THB,KRW,VND,USD,IDR,INR,EUR\r\n7|RMB\r\n11|RMB,USD,EUR,GBP,MYR,THB,VND,IDR,INR,KRW,RUB"
 excluded_balance_mapping: '7'
 value: null
 format: null
 mobile_remember: 'Remember Username'
 mobile_login_reg: LOGIN/JOIN
 mobile_total_balance: 'Total Edited:'
+registration_link: '{domain:registration_link}mobile[query:(regvia=9&{tracking})]'
+default_cashier_link: '{domain:mcashier}/{domain:cashier_lang}'
+cashier_mapping: ''
+promotion_page_title: 'Dafabet mobile betting promotions offer huge rewards!'
+default_mcashier_link: '{domain:mcashier}/{domain:cashier_lang}[query:(ticket={auth.token}&{tracking})]'
+mcashier_mapping: ''
+links_title: Links

@@ -1,5 +1,5 @@
 header_settings_tab__active_tab: edit-header-other-group
-logo_title: Dafabet
+logo_title: 移动端投注就在dafabet
 password_mask_toggle: 0
 caps_lock_toggle: 0
 capslock_notification: 大写锁定已开启
@@ -18,13 +18,13 @@ news_announcement_content:
   format: basic_html
 lobby_page_title: 'Online Betting - Bet on Sports, Play Online Casino and Poker at Dafabet'
 mobile_remember: 记住用户名
-mobile_login_reg: 登录/加入
+mobile_login_reg: '登录/ 加入'
 join_now_text: 立即加入
-join_now_link: '/{domain:entry}/{domain:lang_token}/cant-login{tracking.token}'
+join_now_link: '{domain:registration_link}mobile[query:(regvia=9&{tracking})]'
 login_issue_text: 无法登陆？
-login_issue_link: '/{domain:entry}/{domain:lang_token}/cant-login{tracking.token}'
+login_issue_link: '{domain:mobile}/{domain:mobile_lang}/cant-login'
 product_balance_label: QWERTY
-total_balance_label: 总余额
+total_balance_label: '总余额:'
 balance_error_text: 'Error Retrieving.'
 cashier_icon_hover_text: 出纳柜台
 product_menu_new_tag: 新
@@ -34,3 +34,12 @@ profile_logout_text: 退出登录
 balance_label_mapping: "4|OW Sports\r\n6|Dafa Sports\r\n11|eSports\r\n10|Exchange\r\n1|Casino Classic\r\n2|Casino Gold\r\n5|Live Dealer, Games, Arcade, Virtuals, & Lottery\r\n8|Opus Live Dealer\r\n9|Keno\r\n3|Poker\r\n7|Fish Hunter"
 balance_error_text_product: QWERTY
 cashier_link: QWERTY
+registration_link: '{domain:registration_link}mobile[query:(regvia=9&{tracking})]'
+profile_icon_hover_text: 'My Profile'
+default_cashier_link: '{domain:mcashier}/{domain:cashier_lang}'
+cashier_mapping: ''
+default_mcashier_link: '{domain:mcashier}/{domain:cashier_lang}[query:(ticket={auth.token}&{tracking})]'
+mcashier_mapping: ''
+balance_mapping: ''
+promotion_page_title: 'Dafabet mobile betting promotions offer huge rewards!'
+links_title: 链接
