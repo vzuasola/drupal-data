@@ -1,5 +1,5 @@
-header_settings_tab__active_tab: edit-mcashier-group
-logo_title: 'Mobile gambling with Dafabet en'
+header_settings_tab__active_tab: edit-header-other-group
+logo_title: 'Mobile Betting with Dafabet Poland'
 capslock_notification: 'Caps Lock is ON'
 mobile_remember: 'Remember Username'
 mobile_login_reg: 'ZALOGUJ SIĘ/REJESTRACJA'
@@ -12,8 +12,8 @@ news_announcement: 0
 news_announcement_content:
   value: "<p>test</p>\r\n"
   format: basic_html
-lobby_page_title: 'Online Betting - Bet on Sports, Play Online Casino and Poker at Dafabet'
-join_now_link: '{domain:mobile}/{domain:mobile_lang}/cant-login'
+lobby_page_title: 'Bet and win big anywhere! Bet with Dafabet Mobile now!'
+join_now_link: '{domain:registration_link}mobile[query:(regvia=9&{tracking})]'
 login_issue_text: 'Cant login?'
 login_issue_link: '{domain:mobile}/{domain:mobile_lang}/cant-login'
 product_balance_label: test
@@ -27,13 +27,13 @@ balance_error_text_product: test
 balance_mapping: '1|Casino Classic'
 cashier_link: test
 join_now_text: 'JOIN NOW'
-registration_link: 'https://google.com'
+registration_link: '{domain:registration_link}mobile[query:(regvia=9&{tracking})]'
 cashier_icon_hover_text: Cashier
 profile_icon_hover_text: 'My Profile'
-default_cashier_link: 'https://google.com'
+default_cashier_link: '{domain:mcashier}/{domain:cashier_lang}'
 cashier_mapping: ''
-default_mcashier_link: 'https://google.com'
+default_mcashier_link: '{domain:mcashier}/{domain:cashier_lang}[query:(ticket={auth.token}&{tracking})]'
 mcashier_mapping: ''
 product_menu_new_tag: NEW
-promotion_page_title: 'Dafabet mobile betting promotions offer huge rewards!'
+promotion_page_title: 'Exclusive promotions from the leading mobile betting site'
 links_title: Links
