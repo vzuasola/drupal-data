@@ -1,5 +1,5 @@
 header_settings_tab__active_tab: edit-header-other-group
-logo_title: 'Online Betting with Dafabet Asia'
+logo_title: '다파벳과 모바일 갬블링'
 capslock_notification: test
 balance_label_override: ''
 critical_announcement: 0
@@ -10,11 +10,11 @@ news_announcement: 0
 news_announcement_content:
   value: "<p>test</p>\r\n"
   format: basic_html
-lobby_page_title: 'Online Betting - Bet on Sports, Play Online Casino and Poker at Dafabet'
+lobby_page_title: '다파벳 모바일로 언제 어디서나 베팅하세요!'
 mobile_remember: '아이디 기억하기  '
 mobile_login_reg: '로그인/ 가입 '
 join_now_text: '가입 하기'
-join_now_link: '{domain:mobile}/{domain:mobile_lang}/cant-login'
+join_now_link: '{domain:registration_link}mobile[query:(regvia=9&{tracking})]'
 login_issue_text: '아직 다파벳 멤버가 아니시라구요?'
 login_issue_link: '{domain:mobile}/{domain:mobile_lang}/cant-login'
 product_balance_label: test
@@ -28,12 +28,12 @@ balance_label_mapping: "4|OW Sports\r\n6|Dafa Sports\r\n11|eSports\r\n10|Exchang
 balance_error_text_product: test
 balance_mapping: '1|Casino Classic'
 cashier_link: test
-registration_link: 'https://google.com'
+registration_link: '{domain:registration_link}mobile[query:(regvia=9&{tracking})]'
 cashier_icon_hover_text: Cashier
 profile_icon_hover_text: 'My Profile'
-default_cashier_link: 'https://google.com'
+default_cashier_link: '{domain:mcashier}/{domain:cashier_lang}'
 cashier_mapping: ''
-default_mcashier_link: 'https://google.com'
+default_mcashier_link: '{domain:mcashier}/{domain:cashier_lang}[query:(ticket={auth.token}&{tracking})]'
 mcashier_mapping: ''
-promotion_page_title: 'Dafabet mobile betting promotions offer huge rewards!'
+promotion_page_title: '다파벳 모바일로 언제 어디서나 베팅하세요!'
 links_title: 링크
