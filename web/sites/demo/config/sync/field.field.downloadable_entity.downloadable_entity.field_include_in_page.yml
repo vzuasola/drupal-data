@@ -6,6 +6,8 @@ dependencies:
     - field.storage.downloadable_entity.field_include_in_page
   module:
     - webcomposer_downloadables
+_core:
+  default_config_hash: qV-m28nofBP8oSKIKbsSLu1Ajgwb3pARgDN4Z_Z2kCw
 id: downloadable_entity.downloadable_entity.field_include_in_page
 field_name: field_include_in_page
 entity_type: downloadable_entity
@@ -13,7 +15,7 @@ bundle: downloadable_entity
 label: 'Include in page'
 description: 'Specify pages by using their paths. Enter one path per line. The "*" character is a wildcard. An example path is /promotion/* for every user page.'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }
