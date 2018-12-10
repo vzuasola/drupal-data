@@ -5,5 +5,5 @@ dependencies: {  }
 name: 'Game Filters 2.0'
 vid: game_filters_2_0
 description: 'Filter categories for games'
-hierarchy: 0
+hierarchy: 1
 weight: 0
