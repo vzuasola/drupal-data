@@ -1,0 +1,5 @@
+name: Games Search
+type: module
+description: Games Search configuration
+core: 8.x
+package: Web Composer

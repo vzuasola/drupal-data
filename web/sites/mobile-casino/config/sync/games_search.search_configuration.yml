@@ -1,0 +1,15 @@
+title: 'Games Search'
+search_blurb: 'Showing {count} result/s for {keyword}'
+no_result_msg: 'No search result for "{keyword}".'
+title_weight: '1'
+keywords_weight: '0.8'
+no_result_msg_filter: 'No search result for "{keyword}".'
+msg_recommended_available: 'You might want to try our recommended games.'
+msg_no_recommended_available: 'No available recommended games.'
+search_title: Search
+games_filter_title: Filter
+search_no_result_msg: 'No search results for "{keyword}" test'
+filter_no_result_msg: 'Showing {count} result/s for {keyword}'
+msg_no_recommended: ''
+games_filter_submit: Submit
+games_filter_cancel: Cancel
