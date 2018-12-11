@@ -1,0 +1,7 @@
+games_collection.admin_settings:
+  path: 'admin/games/collections'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Games Collection Configuration'
+  requirements:
+    _permission: 'administer site configuration'
