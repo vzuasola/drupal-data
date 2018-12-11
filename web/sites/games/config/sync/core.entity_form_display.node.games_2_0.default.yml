@@ -19,6 +19,7 @@ dependencies:
     - image.style.thumbnail
     - node.type.games_2_0
   module:
+    - entity_reference_views_select
     - field_group
     - image
     - metatag
@@ -94,7 +95,7 @@ content:
     weight: 15
     settings: {  }
     third_party_settings: {  }
-    type: options_select
+    type: erviews_options_select
     region: content
   field_v2_game_image:
     weight: 3
