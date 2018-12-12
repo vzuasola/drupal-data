@@ -1,0 +1,22 @@
+uuid: d3f83c6c-7e5c-49eb-92c0-4326770eb889
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.promotion_tiles.field_pre_blurb
+  module:
+    - promotion_tiles
+    - text
+id: promotion_tiles.promotion_tiles.field_pre_blurb
+field_name: field_pre_blurb
+entity_type: promotion_tiles
+bundle: promotion_tiles
+label: 'Pre Blurb'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

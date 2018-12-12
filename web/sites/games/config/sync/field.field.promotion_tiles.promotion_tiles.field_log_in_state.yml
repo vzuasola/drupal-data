@@ -1,0 +1,21 @@
+uuid: d16789d8-6a26-4456-9748-6df9926c3174
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.promotion_tiles.field_log_in_state
+  module:
+    - options
+    - promotion_tiles
+id: promotion_tiles.promotion_tiles.field_log_in_state
+field_name: field_log_in_state
+entity_type: promotion_tiles
+bundle: promotion_tiles
+label: 'Log-in State'
+description: 'Define if the content to be shown in Pre-login or Post-login'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

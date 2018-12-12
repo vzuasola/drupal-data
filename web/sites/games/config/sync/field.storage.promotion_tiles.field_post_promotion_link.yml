@@ -1,0 +1,19 @@
+uuid: 4e1572bb-561d-499a-b04f-20a32468be32
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - promotion_tiles
+id: promotion_tiles.field_post_promotion_link
+field_name: field_post_promotion_link
+entity_type: promotion_tiles
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
