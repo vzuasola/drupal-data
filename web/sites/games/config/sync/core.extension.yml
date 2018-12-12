@@ -36,6 +36,7 @@ module:
   file: 0
   filter: 0
   games_category: 0
+  games_collection: 0
   games_config: 0
   games_page_background: 0
   games_page_loading: 0

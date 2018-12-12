@@ -20,3 +20,5 @@ game_category_2_0: 1
 game_category_2_0_message: 'Term @term already exists in vocabulary @vocabulary.'
 game_provider_2_0: 0
 game_provider_2_0_message: 'Term @term already exists in vocabulary @vocabulary.'
+games_collection_type: 1
+games_collection_type_message: 'Term @term already exists in vocabulary @vocabulary.'
