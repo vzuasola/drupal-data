@@ -184,6 +184,7 @@ class JamboreeRegistrationForm extends FormBase {
       '#default_value' => $this->get('error_promotions'),
       '#translatable' => TRUE,
     ];
+    //captcha error
     $form['reg_form']['errors']['service_not_available'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Registration Error Message if Service is not Available'),
