@@ -56,6 +56,8 @@ module:
   registration_config: 0
   registration_form: 0
   registration_theme: 0
+  replicate: 0
+  replicate_ui: 0
   rest: 0
   rest_menu_items: 0
   restui: 0
@@ -91,6 +93,7 @@ module:
   webcomposer_mobile_menu: 0
   webcomposer_partner_responsive: 0
   webcomposer_promotions: 0
+  webcomposer_replicate_utility: 0
   webcomposer_rest_extra: 0
   webcomposer_right_side_block: 0
   webcomposer_seo: 0
