@@ -1,1 +1,10 @@
-sitemap_home_label: 首页
+content_types:
+  article:
+    enable: 0
+    label: 'Article SC'
+  blog:
+    enable: 1
+    label: Blog
+  page:
+    enable: 0
+    label: 'Basic page'
