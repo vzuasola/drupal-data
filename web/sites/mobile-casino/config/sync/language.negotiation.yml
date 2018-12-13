@@ -14,6 +14,7 @@ url:
     '': null
     pt-br: pt-br
     es: es
+    eu: eu
   domains:
     en: ''
     zh-hans: ''
@@ -25,6 +26,7 @@ url:
     hi: ''
     pt-br: ''
     es: ''
+    eu: ''
 selected_langcode: site_default
 _core:
   default_config_hash: uEePITI9tV6WqzmsTb7MfPCi5yPWXSxAN1xeLcYFQbM
