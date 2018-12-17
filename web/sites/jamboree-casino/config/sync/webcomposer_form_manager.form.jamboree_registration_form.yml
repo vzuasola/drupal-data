@@ -42,6 +42,8 @@ weights:
     weight: '9'
   coupon_code:
     weight: '10'
+  captcha:
+    weight: '10'
   ip:
     weight: '10'
   username:
