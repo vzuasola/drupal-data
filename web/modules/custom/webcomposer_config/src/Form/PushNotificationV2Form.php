@@ -221,6 +221,14 @@ class PushNotificationV2Form extends FormBase {
       '#translatable' => TRUE,
     ];
 
+    $form['content_settings']['copied'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Copy to clipboard message'),
+      '#default_value' => $this->get('copied'),
+      '#description' => $this->t('Copy to clipboard message'),
+      '#translatable' => TRUE,
+    ];
+
     $form['content_settings']['date_format'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Date Format'),
@@ -379,6 +387,7 @@ class PushNotificationV2Form extends FormBase {
       'title',
       'empty',
       'expired_message',
+      'copied',
       'date_format',
       'date_offset',
       'cta_button_list',

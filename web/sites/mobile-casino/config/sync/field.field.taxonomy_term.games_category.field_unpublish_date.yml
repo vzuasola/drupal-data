@@ -1,0 +1,21 @@
+uuid: 461302a8-bddd-4952-b140-cade8903a7fc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_unpublish_date
+    - taxonomy.vocabulary.games_category
+  module:
+    - datetime
+id: taxonomy_term.games_category.field_unpublish_date
+field_name: field_unpublish_date
+entity_type: taxonomy_term
+bundle: games_category
+label: 'Unpublish Date'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

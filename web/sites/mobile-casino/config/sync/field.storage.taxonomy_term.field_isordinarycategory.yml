@@ -1,0 +1,18 @@
+uuid: 5ae23d2c-a9bc-4649-8205-56ff1988731e
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.field_isordinarycategory
+field_name: field_isordinarycategory
+entity_type: taxonomy_term
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
