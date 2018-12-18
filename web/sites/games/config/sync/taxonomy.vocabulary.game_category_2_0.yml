@@ -1,0 +1,9 @@
+uuid: 7c20fc6b-10ce-4b30-9316-5f3ae438c2ad
+langcode: en
+status: true
+dependencies: {  }
+name: 'Game Category 2.0'
+vid: game_category_2_0
+description: 'Categories for Games 2.0.'
+hierarchy: 0
+weight: -4

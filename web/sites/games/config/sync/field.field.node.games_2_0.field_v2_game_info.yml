@@ -1,0 +1,21 @@
+uuid: 6939d3fc-4cf4-43f6-96e9-755be96de00a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_v2_game_info
+    - node.type.games_2_0
+  module:
+    - text
+id: node.games_2_0.field_v2_game_info
+field_name: field_v2_game_info
+entity_type: node
+bundle: games_2_0
+label: 'Game Info Content'
+description: 'Content that will be displayed upon clicking Game Info button.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

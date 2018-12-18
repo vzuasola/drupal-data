@@ -1,0 +1,19 @@
+games_collection.admin_settings:
+  title: 'Games Collection Configuration'
+  description: 'Provides an interface for managing games collection.'
+  parent: games_config.admin_settings
+  route_name: games_collection.admin_settings
+
+# Games Collection menu items definition
+entity.games_collection.collection:
+  title: 'Games Collection list'
+  route_name: entity.games_collection.collection
+  description: 'List Games Collection entities'
+  parent: games_collection.admin_settings
+  weight: 100
+
+games_collection.admin.structure.settings:
+  title: Games Collection settings
+  description: 'Configure Games Collection entities'
+  route_name: games_collection.settings
+  parent: games_collection.admin_settings

@@ -1,0 +1,30 @@
+uuid: 18a92917-7e1a-4ed8-8b2a-e2906c3f2807
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - promotion_tiles
+id: promotion_tiles.field_pre_link_target
+field_name: field_pre_link_target
+entity_type: promotion_tiles
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: _top
+      label: 'Same Window'
+    -
+      value: _blank
+      label: 'New Tab'
+    -
+      value: window
+      label: 'New Window'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

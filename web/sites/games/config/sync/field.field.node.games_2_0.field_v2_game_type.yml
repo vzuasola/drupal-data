@@ -1,0 +1,23 @@
+uuid: 2ccd0f82-0f6a-4c8b-829e-33782bd7a685
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_v2_game_type
+    - node.type.games_2_0
+  module:
+    - options
+id: node.games_2_0.field_v2_game_type
+field_name: field_v2_game_type
+entity_type: node
+bundle: games_2_0
+label: 'Game Type'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: '0'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

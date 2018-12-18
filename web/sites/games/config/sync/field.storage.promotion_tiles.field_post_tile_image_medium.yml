@@ -1,0 +1,30 @@
+uuid: 199f95ec-8272-43da-90c6-40ffa89f4fc6
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+    - image
+    - promotion_tiles
+id: promotion_tiles.field_post_tile_image_medium
+field_name: field_post_tile_image_medium
+entity_type: promotion_tiles
+type: image
+settings:
+  uri_scheme: public
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  target_type: file
+  display_field: false
+  display_default: false
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

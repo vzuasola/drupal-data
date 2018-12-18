@@ -170,6 +170,18 @@ class ContactUsForm extends WebcomposerFormBase implements WebcomposerFormInterf
         ],
       ],
 
+      'captcha' => [
+        'name' => 'Captcha',
+        'type' => 'textfield',
+        'settings' => [
+          'label' => [
+            '#title' => 'Captcha Label',
+            '#type' => 'textfield',
+            '#description' => 'The Label for Captcha field',
+          ],
+        ],
+      ],
+
       'submit' => [
         'name' => 'Submit',
         'type' => 'submit',

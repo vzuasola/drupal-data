@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.drawer_media.field_disable
     - field.field.paragraph.drawer_media.field_drawer_image
     - field.field.paragraph.drawer_media.field_drawer_thumb
     - field.field.paragraph.drawer_media.field_drawer_video
@@ -13,21 +14,20 @@ dependencies:
     - file
     - image
 _core:
-  default_config_hash: Ye96Gt_7TEsCQvUzecanUBdwe16fZxWahg2ZmckYHBs
+  default_config_hash: gckWzFyOQJyGnH2oek3joPMsDKsqdI9WpJhajpu3mj8
 id: paragraph.drawer_media.default
 targetEntityType: paragraph
 bundle: drawer_media
 mode: default
 content:
-  field_drawer_image:
+  field_disable:
     weight: 0
     settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
+      display_label: true
     third_party_settings: {  }
-    type: image_image
+    type: boolean_checkbox
     region: content
-  field_drawer_thumb:
+  field_drawer_image:
     weight: 1
     settings:
       progress_indicator: throbber
@@ -35,22 +35,30 @@ content:
     third_party_settings: {  }
     type: image_image
     region: content
-  field_drawer_video:
+  field_drawer_thumb:
     weight: 2
     settings:
       progress_indicator: throbber
+      preview_image_style: thumbnail
     third_party_settings: {  }
-    type: file_generic
+    type: image_image
     region: content
-  field_drawer_video_fallback:
+  field_drawer_video:
     weight: 3
     settings:
       progress_indicator: throbber
     third_party_settings: {  }
     type: file_generic
     region: content
-  translation:
+  field_drawer_video_fallback:
     weight: 4
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+    region: content
+  translation:
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }

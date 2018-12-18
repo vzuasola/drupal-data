@@ -6,4 +6,4 @@ name: 'Arcade Game Category'
 vid: arcade_game_category
 description: 'Categories for arcade games.'
 hierarchy: 0
-weight: 0
+weight: -10

@@ -15,14 +15,14 @@ dependencies:
     - text
     - webcomposer_drawer
 _core:
-  default_config_hash: MC9GhJ0-qyYfpe4zxFF159VMfwF7BlMhs8QD_61lYpg
+  default_config_hash: ZLd0H0WcZIAk264za8O4v8tOzJnAxWXCgesm3ahDrQU
 id: drawer_entity.drawer_entity.default
 targetEntityType: drawer_entity
 bundle: drawer_entity
 mode: default
 content:
   field_drawer_button:
-    weight: 4
+    weight: 5
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -30,7 +30,7 @@ content:
     type: link_default
     region: content
   field_drawer_class:
-    weight: 6
+    weight: 7
     settings:
       size: 60
       placeholder: ''
@@ -38,7 +38,7 @@ content:
     type: string_textfield
     region: content
   field_drawer_id:
-    weight: 1
+    weight: 2
     settings:
       size: 60
       placeholder: ''
@@ -47,7 +47,7 @@ content:
     region: content
   field_drawer_media:
     type: entity_reference_paragraphs
-    weight: 7
+    weight: 8
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -58,7 +58,7 @@ content:
     third_party_settings: {  }
     region: content
   field_drawer_summary:
-    weight: 3
+    weight: 4
     settings:
       rows: 5
       placeholder: ''
@@ -66,7 +66,7 @@ content:
     type: text_textarea
     region: content
   field_drawer_title:
-    weight: 2
+    weight: 3
     settings:
       rows: 5
       placeholder: ''
@@ -82,7 +82,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 5
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }

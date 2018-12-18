@@ -1,0 +1,18 @@
+uuid: 81f16189-7557-4cfc-b231-0cf710415f61
+langcode: en
+status: true
+dependencies:
+  module:
+    - promotion_tiles
+id: promotion_tiles.promotion_tiles.metatag
+field_name: metatag
+entity_type: promotion_tiles
+bundle: promotion_tiles
+label: Metatags
+description: 'The metatags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map
