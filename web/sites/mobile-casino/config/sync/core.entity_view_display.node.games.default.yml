@@ -8,9 +8,7 @@ dependencies:
     - field.field.node.games.field_game_provider
     - field.field.node.games.field_game_ribbon
     - field.field.node.games.field_games_list_category
-    - field.field.node.games.field_games_list_thumb_img_big
     - field.field.node.games.field_games_list_thumb_img_small
-    - field.field.node.games.field_games_list_thumbnail_size
     - field.field.node.games.field_games_target
     - field.field.node.games.field_keywords
     - field.field.node.games.field_preview_mode
@@ -63,15 +61,6 @@ content:
     third_party_settings: {  }
     type: entity_reference_label
     region: content
-  field_games_list_thumb_img_big:
-    weight: 3
-    label: above
-    settings:
-      image_style: ''
-      image_link: ''
-    third_party_settings: {  }
-    type: image
-    region: content
   field_games_list_thumb_img_small:
     weight: 2
     label: above
@@ -80,13 +69,6 @@ content:
       image_link: ''
     third_party_settings: {  }
     type: image
-    region: content
-  field_games_list_thumbnail_size:
-    weight: 1
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
     region: content
   field_games_target:
     weight: 7
