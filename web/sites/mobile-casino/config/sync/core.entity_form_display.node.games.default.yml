@@ -8,9 +8,7 @@ dependencies:
     - field.field.node.games.field_game_provider
     - field.field.node.games.field_game_ribbon
     - field.field.node.games.field_games_list_category
-    - field.field.node.games.field_games_list_thumb_img_big
     - field.field.node.games.field_games_list_thumb_img_small
-    - field.field.node.games.field_games_list_thumbnail_size
     - field.field.node.games.field_games_target
     - field.field.node.games.field_keywords
     - field.field.node.games.field_preview_mode
@@ -78,14 +76,6 @@ content:
     third_party_settings: {  }
     type: options_buttons
     region: content
-  field_games_list_thumb_img_big:
-    weight: 17
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    type: image_image
-    region: content
   field_games_list_thumb_img_small:
     weight: 16
     settings:
@@ -93,12 +83,6 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
-    region: content
-  field_games_list_thumbnail_size:
-    weight: 15
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
     region: content
   field_games_target:
     weight: 20
