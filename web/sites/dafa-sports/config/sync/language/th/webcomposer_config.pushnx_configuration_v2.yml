@@ -17,3 +17,6 @@ product_label_virtuals: เกมส์จำลอง
 cta_label_ok: ตกลง
 cta_label_accept: ยอมรับ
 cta_label_decline: ปฏิเสธ
+copied: 'คัดลอกไปที่คลิปบอร์ด'
+cta_label_proceed: 'Yes, Proceed'
+cta_label_no: 'No, Thanks'

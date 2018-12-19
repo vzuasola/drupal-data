@@ -22,7 +22,7 @@ debug_display_all: 1
 debug_display_expirydate: 0
 disableBonusAward: 0
 text_: ''
-product_list: Generic
+product_list: "Generic\r\nTaurus\r\nAlpine"
 product_type_id: null
 product_icon: null
 product_type_id_owsports: '3'
@@ -49,11 +49,11 @@ product_label_payments: ''
 product_type_id_payments: ''
 product_icon_payments: ''
 product_exclude_payments: 1
-product_label_alpine: ''
-product_type_id_alpine: ''
+product_label_alpine: Bank Details
+product_type_id_alpine: '101'
 product_icon_alpine: ''
 product_exclude_alpine: 0
-cta_button_list: "Ok\r\nAccept\r\nDecline"
+cta_button_list: "Ok\r\nAccept\r\nDecline\r\nProceed\r\nNo"
 cta_label_: null
 cta_actions_: null
 cta_label_test: ''
@@ -71,5 +71,16 @@ product_exclude_games: 0
 title: 'PUSH NOTIFICATION'
 empty: 'There are no new notifications.'
 expired_message: 'This offer has already expired.'
-domains: "cashier|{domain:cashier_domain}/{lang}/payment-options/deposit?ticket={auth.token}&product=ow-sports&title=headerPopup&width=820&height=700{tracking.token}\r\navaya|https://www.cs-livechat/en/mc-desktop?brand=Dafa&product=Dafabet&s={auth.token}&width=360&height=760"
+domains: "cashier|{domain:cashier_domain}/{lang}?ticket={auth.token}&product=dafabet&title=headerPopup&width=820&height=700{tracking.token}\r\navaya|https://www.cs-livechat/en/mc-desktop?brand=Dafa&product=Dafabet&s={auth.token}&width=360&height=760"
 product_exclude_dismiss_generic: 0
+copied: 'Copied to Clipboard'
+product_label_taurus: Payment Method
+product_type_id_taurus: '100'
+product_icon_taurus: ''
+product_exclude_taurus: 0
+product_exclude_dismiss_taurus: 0
+product_exclude_dismiss_alpine: 0
+cta_label_proceed: 'Yes, Proceed'
+cta_actions_proceed: 'popup::cashier'
+cta_label_no: 'No, Thanks'
+cta_actions_no: ''
