@@ -1,0 +1,27 @@
+uuid: b6365c2e-1017-4ff2-a338-389f3cb6f924
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - webcomposer_slider_v2
+id: webcomposer_slider_v2_entity.field_game_platform
+field_name: field_game_platform
+entity_type: webcomposer_slider_v2_entity
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: ngm
+      label: NGM
+    -
+      value: live
+      label: LIVE
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
