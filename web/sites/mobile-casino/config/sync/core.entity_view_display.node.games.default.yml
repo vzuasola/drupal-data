@@ -5,7 +5,7 @@ dependencies:
   config:
     - field.field.node.games.field_game_code
     - field.field.node.games.field_game_filter
-    - field.field.node.games.field_game_provider
+    - field.field.node.games.field_game_platform
     - field.field.node.games.field_game_ribbon
     - field.field.node.games.field_games_list_category
     - field.field.node.games.field_games_list_thumb_img_small
@@ -38,8 +38,8 @@ content:
     third_party_settings: {  }
     type: entity_reference_label
     region: content
-  field_game_provider:
-    weight: 6
+  field_game_platform:
+    weight: 10
     label: above
     settings: {  }
     third_party_settings: {  }
