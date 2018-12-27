@@ -6,7 +6,7 @@ class FilesExport {
   public function export($path, $filename) {
     set_time_limit(30000);
 
-    $tempname = tempnam('tmp', $filename);
+    $tempname = tempnam(sys_get_temp_dir(), $filename);
 
     $zip = new eZipArchive();
     $res = $zip->open($tempname, \ZipArchive::CREATE | \ZipArchive::OVERWRITE);

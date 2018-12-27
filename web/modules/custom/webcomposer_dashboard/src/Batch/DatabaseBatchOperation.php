@@ -31,13 +31,16 @@ class DatabaseBatchOperation {
       $connection['host'],
       $connection['username'],
       $connection['password'],
-      $connection['database']
+      $connection['database'],
+      ['batch*', 'cache*', 'flood', 'webcomposer_audit', 'webform_submission']
     );
+
+    $guid = md5(time() . rand() . uniqid());
 
     foreach ($tables as $table) {
       $operations[] = [
         [$this, 'doProcessTable'],
-        [$table, $connection],
+        [$table, $connection, $guid],
       ];
     }
 
@@ -50,9 +53,13 @@ class DatabaseBatchOperation {
     batch_set($batch);
   }
 
-  public function doProcessTable($table, $connection, &$context) {
-    if (!isset($context['results']['dump'])) {
-      $context['results']['dump'] = $this->databaseExporter->preExport($table);
+  public function doProcessTable($table, $connection, $guid, &$context) {
+    if (!isset($context['result']['guid'])) {
+      $context['results']['guid'] = $guid;
+    }
+
+    if (!isset($context['results']['dumps'])) {
+      $context['results']['dumps'] = [];
     }
 
     $dump = $this->databaseExporter->processTable(
@@ -63,14 +70,33 @@ class DatabaseBatchOperation {
       $connection['database']
     );
 
-    $context['results']['dump'] = $context['results']['dump'] . $dump;
+    $tempfile = tempnam(sys_get_temp_dir(), "$table--$guid--database-export");
+
+    file_put_contents($tempfile, $dump);
+
+    $context['results']['dumps'][] = $tempfile;
   }
 
   public function doProcessFinish($success, $results, $operations) {
-    $dump = $results['dump'];
-    $dump = $dump . $this->databaseExporter->postExport();
+    $connection = $this->database->getConnectionOptions();
+
+    $prefix = $this->databaseExporter->preExport($connection['database']);
+    $dump = $this->doRecreateDump($results['dumps']);
+    $suffix = $this->databaseExporter->postExport();
+
+    $dump = $prefix . $dump . $suffix;
 
     $this->doCreateDownload($dump);
+  }
+
+  private function doRecreateDump($files) {
+    $dump = NULL;
+
+    foreach ($files as $file) {
+      $dump = $dump . file_get_contents($file);
+    }
+
+    return $dump;
   }
 
   private function doCreateDownload($dump) {
