@@ -6,7 +6,7 @@ class FilesExport {
   public function export($path, $filename) {
     set_time_limit(30000);
 
-    $tempname = $filename;
+    $tempname = tempnam('tmp', $filename);
 
     $zip = new eZipArchive();
     $res = $zip->open($tempname, \ZipArchive::CREATE | \ZipArchive::OVERWRITE);
@@ -45,9 +45,7 @@ class eZipArchive extends \ZipArchive {
       if (filetype($location . $file) === 'dir') {
         $this->addDir($location . $file, $name . $file);
       } else {
-        // if (file_exists($location . $file)) {
-          $this->addFile($location . $file, $name . $file);
-        // }
+        $this->addFile($location . $file, $name . $file);
       }
     }
   }

@@ -117,9 +117,10 @@ class SiteExportForm extends FormBase {
    */
   public function exportFiles(array &$form, FormStateInterface $form_state) {
     $path = \Drupal::service('file_system')->realpath(file_default_scheme() . "://");
-    $filename = 'site-zip-export' . '--' . date('d-m-Y') . '--' . date('H-i-s') . '.zip';
+    $date = date('m-d-Y--H-i-s');
+    $filename = "site-zip-export-$date.zip";
 
     $fileExporter = new FilesExport();
-    $fileExporter->export($path, $filename);
+    $fileExporter->export($path, $tmpname);
   }
 }
