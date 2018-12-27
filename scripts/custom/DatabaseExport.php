@@ -44,6 +44,14 @@ class DatabaseExport {
     $queryTables = $mysqli->query('SHOW TABLES');
 
     while ($row = $queryTables->fetch_row()) {
+      if (strpos($row[0], 'cache') === 0) {
+        continue;
+      }
+
+      if (strpos($row[0], 'batch') === 0) {
+        continue;
+      }
+
       $target_tables[] = $row[0];
     }
 
