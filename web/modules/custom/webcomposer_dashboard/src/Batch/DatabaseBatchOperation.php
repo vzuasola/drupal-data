@@ -4,6 +4,7 @@ namespace Drupal\webcomposer_dashboard\Batch;
 
 use Drupal\Core\DependencyInjection\DependencySerializationTrait;
 use Drupal\Core\Url;
+use Drupal\file\Entity\File;
 use Drupal\Core\Site\Settings;
 
 use DrupalProject\custom\DatabaseExport;
@@ -18,12 +19,18 @@ class DatabaseBatchOperation {
   private $databaseExporter;
   private $product;
 
+  /**
+   *
+   */
   public function __construct() {
     $this->database = \Drupal::service('database');
     $this->databaseExporter = new DatabaseExport();
     $this->product = Settings::get('product');
   }
 
+  /**
+   *
+   */
   public function doBatch() {
     $connection = $this->database->getConnectionOptions();
 
@@ -35,12 +42,19 @@ class DatabaseBatchOperation {
       ['batch*', 'cache*', 'flood', 'webcomposer_audit', 'webform_submission']
     );
 
-    $guid = md5(time() . rand() . uniqid());
+    // initialize the download file
+
+    $file = $this->doCreateDownload(NULL);
+
+    // write the prefix
+
+    $prefix = $this->databaseExporter->preExport($connection['database']);
+    file_put_contents($file->getFileUri(), $prefix, FILE_APPEND);
 
     foreach ($tables as $table) {
       $operations[] = [
         [$this, 'doProcessTable'],
-        [$table, $connection, $guid],
+        [$table, $connection, $file],
       ];
     }
 
@@ -53,13 +67,12 @@ class DatabaseBatchOperation {
     batch_set($batch);
   }
 
-  public function doProcessTable($table, $connection, $guid, &$context) {
-    if (!isset($context['result']['guid'])) {
-      $context['results']['guid'] = $guid;
-    }
-
-    if (!isset($context['results']['dumps'])) {
-      $context['results']['dumps'] = [];
+  /**
+   *
+   */
+  public function doProcessTable($table, $connection, $file, &$context) {
+    if (!isset($context['result']['file'])) {
+      $context['results']['file'] = $file;
     }
 
     $dump = $this->databaseExporter->processTable(
@@ -70,35 +83,30 @@ class DatabaseBatchOperation {
       $connection['database']
     );
 
-    $tempfile = tempnam(sys_get_temp_dir(), "$table--$guid--database-export");
-
-    file_put_contents($tempfile, $dump);
-
-    $context['results']['dumps'][] = $tempfile;
+    file_put_contents($file->getFileUri(), $dump, FILE_APPEND);
   }
 
+  /**
+   *
+   */
   public function doProcessFinish($success, $results, $operations) {
+    $file = $results['file'];
     $connection = $this->database->getConnectionOptions();
 
-    $prefix = $this->databaseExporter->preExport($connection['database']);
-    $dump = $this->doRecreateDump($results['dumps']);
+    // write the suffix
+
     $suffix = $this->databaseExporter->postExport();
+    file_put_contents($file->getFileUri(), $suffix, FILE_APPEND);
 
-    $dump = $prefix . $dump . $suffix;
+    // tell the session that there is a file that needs to be downloaded
 
-    $this->doCreateDownload($dump);
+    $path = Url::fromUri($file->url());
+    $_SESSION['webcomposer_dashboard_database_export_download'] = $path->getUri();
   }
 
-  private function doRecreateDump($files) {
-    $dump = NULL;
-
-    foreach ($files as $file) {
-      $dump = $dump . file_get_contents($file);
-    }
-
-    return $dump;
-  }
-
+  /**
+   *
+   */
   private function doCreateDownload($dump) {
     $date = date('m-d-Y--H-i-s');
 
@@ -106,12 +114,13 @@ class DatabaseBatchOperation {
       $date = $this->product . '--' . $date;
     }
 
+    $filepath = "public://database-export-$date.sql";
+
     $file = file_save_data($dump, "public://database-export-$date.sql");
     $file->setTemporary();
     $file->save();
 
-    $path = Url::fromUri($file->url());
-
-    $_SESSION['webcomposer_dashboard_database_export_download'] = $path->getUri();
+    return $file;
   }
 }
+
