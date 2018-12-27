@@ -5,6 +5,7 @@ namespace Drupal\webcomposer_dashboard\Form;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Render\Markup;
+use Drupal\Core\Site\Settings;
 
 use DrupalProject\custom\FilesExport;
 
@@ -118,9 +119,16 @@ class SiteExportForm extends FormBase {
   public function exportFiles(array &$form, FormStateInterface $form_state) {
     $path = \Drupal::service('file_system')->realpath(file_default_scheme() . "://");
     $date = date('m-d-Y--H-i-s');
+
+    $product = Settings::get('product');
+
+    if ($product) {
+      $date = $product . '--' . $date;
+    }
+
     $filename = "site-zip-export-$date.zip";
 
     $fileExporter = new FilesExport();
-    $fileExporter->export($path, $tmpname);
+    $fileExporter->export($path, $filename);
   }
 }

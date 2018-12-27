@@ -4,6 +4,7 @@ namespace Drupal\webcomposer_dashboard\Batch;
 
 use Drupal\Core\DependencyInjection\DependencySerializationTrait;
 use Drupal\Core\Url;
+use Drupal\Core\Site\Settings;
 
 use DrupalProject\custom\DatabaseExport;
 
@@ -15,11 +16,12 @@ class DatabaseBatchOperation {
 
   private $database;
   private $databaseExporter;
-
+  private $product;
 
   public function __construct() {
     $this->database = \Drupal::service('database');
     $this->databaseExporter = new DatabaseExport();
+    $this->product = Settings::get('product');
   }
 
   public function doBatch() {
@@ -73,6 +75,10 @@ class DatabaseBatchOperation {
 
   private function doCreateDownload($dump) {
     $date = date('m-d-Y--H-i-s');
+
+    if ($this->product) {
+      $date = $this->product . '--' . $date;
+    }
 
     $file = file_save_data($dump, "public://database-export-$date.sql");
     $file->setTemporary();
