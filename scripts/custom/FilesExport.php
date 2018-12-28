@@ -4,8 +4,6 @@ namespace DrupalProject\custom;
 
 class FilesExport {
   public function export($path, $filename) {
-    set_time_limit(30000);
-
     $tempname = tempnam(sys_get_temp_dir(), $filename);
 
     $zip = new eZipArchive();
@@ -19,7 +17,7 @@ class FilesExport {
       header("Content-Disposition: attachment; filename='$filename'");
       header('Content-Length: ' . filesize($tempname));
 
-      echo file_get_contents($tempname);
+      readfile($tempname);
 
       exit;
     }

@@ -6,6 +6,7 @@ use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Render\Markup;
 use Drupal\Core\Site\Settings;
+use Drupal\Core\Url;
 
 use DrupalProject\custom\FilesExport;
 
@@ -24,8 +25,9 @@ class SiteExportForm extends FormBase {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    if (!empty($_SESSION['webcomposer_dashboard_database_export_download'])) {
-      $filepath = $_SESSION['webcomposer_dashboard_database_export_download'];
+    if (!empty($_SESSION['webcomposer_dashboard.database_export_download.path'])) {
+      $path = Url::fromRoute('webcomposer_dashboard.export_database_download');
+      $filepath = $path->toString();
 
       $download = Markup::create("
         Database export link has been generated, please click
@@ -38,8 +40,6 @@ class SiteExportForm extends FormBase {
           'status' => [$download],
         ],
       ];
-
-      unset($_SESSION['webcomposer_dashboard_database_export_download']);
     }
 
     $form['database'] = [
@@ -118,15 +118,11 @@ class SiteExportForm extends FormBase {
    */
   public function exportFiles(array &$form, FormStateInterface $form_state) {
     $path = \Drupal::service('file_system')->realpath(file_default_scheme() . "://");
-    $date = date('m-d-Y--H-i-s');
 
+    $date = date('m-d-Y--H-i-s');
     $product = Settings::get('product');
 
-    if ($product) {
-      $date = $product . '--' . $date;
-    }
-
-    $filename = "site-zip-export-$date.zip";
+    $filename = "site-zip-export-$product-$date.zip";
 
     $fileExporter = new FilesExport();
     $fileExporter->export($path, $filename);

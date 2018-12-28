@@ -22,3 +22,10 @@ webcomposer_dashboard.export_database:
     _permission: 'administer site configuration'
   options:
     _admin_route: TRUE
+
+webcomposer_dashboard.export_database_download:
+  path: 'admin/config/webcomposer/tools/site-export/download-database'
+  defaults:
+    _controller: '\Drupal\webcomposer_dashboard\Controller\DatabaseExportController::download'
+  requirements:
+    _permission: 'administer site configuration'

@@ -49,7 +49,7 @@ class DatabaseBatchOperation {
     // write the prefix
 
     $prefix = $this->databaseExporter->preExport($connection['database']);
-    file_put_contents($file->getFileUri(), $prefix, FILE_APPEND);
+    file_put_contents($file, $prefix, FILE_APPEND);
 
     foreach ($tables as $table) {
       $operations[] = [
@@ -83,7 +83,7 @@ class DatabaseBatchOperation {
       $connection['database']
     );
 
-    file_put_contents($file->getFileUri(), $dump, FILE_APPEND);
+    file_put_contents($file, $dump, FILE_APPEND);
   }
 
   /**
@@ -96,31 +96,31 @@ class DatabaseBatchOperation {
     // write the suffix
 
     $suffix = $this->databaseExporter->postExport();
-    file_put_contents($file->getFileUri(), $suffix, FILE_APPEND);
+    file_put_contents($file, $suffix, FILE_APPEND);
 
     // tell the session that there is a file that needs to be downloaded
 
-    $path = Url::fromUri($file->url());
-    $_SESSION['webcomposer_dashboard_database_export_download'] = $path->getUri();
+    $_SESSION['webcomposer_dashboard.database_export_download.path'] = $file;
+    $_SESSION['webcomposer_dashboard.database_export_download.filename'] = $this->generateFilename();
   }
 
   /**
    *
    */
   private function doCreateDownload($dump) {
+    $filename = $this->generateFilename();
+
+    return tempnam(sys_get_temp_dir(), $filename);
+  }
+
+  /**
+   *
+   */
+  private function generateFilename() {
     $date = date('m-d-Y--H-i-s');
+    $product = $this->product;
 
-    if ($this->product) {
-      $date = $this->product . '--' . $date;
-    }
-
-    $filepath = "public://database-export-$date.sql";
-
-    $file = file_save_data($dump, "public://database-export-$date.sql");
-    $file->setTemporary();
-    $file->save();
-
-    return $file;
+    return "database-export-$product-$date.sql";
   }
 }
 
