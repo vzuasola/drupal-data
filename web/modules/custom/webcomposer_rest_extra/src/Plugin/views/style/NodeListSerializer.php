@@ -33,7 +33,7 @@ class NodeListSerializer extends Serializer {
       $pager = $this->view->pager;
       $pagerClass = get_class($pager);
       $total_pages = 0;
-      if(!in_array($pagerClass, ['Drupal\views\Plugin\views\pager\None', 'Drupal\views\Plugin\views\pager\Some'])){
+      if (!in_array($pagerClass, ['Drupal\views\Plugin\views\pager\None', 'Drupal\views\Plugin\views\pager\Some'])) {
         $total_pages = $pager->getPagerTotal();
       }
 
@@ -45,24 +45,24 @@ class NodeListSerializer extends Serializer {
     } else {
       foreach ($this->view->result as $row_index => $row) {
         $this->view->row_index = $row_index;
-  
+
         // converting current row into array
         $rowAssoc = $this->serializer->normalize(
           $this->view->rowPlugin->render($row), null, ['view' => $this->view]
         );
-  
+
         // add aliases on the nodes
         if (isset($row->nid)) {
           $alias = \Drupal::service('path.alias_manager')->getAliasByPath("/node/$row->nid");
           $rowAssoc['alias'][0]['value'] = $alias;
         }
-  
+
         foreach ($rowAssoc as $key => $value) {
           // replace the images src for text formats
           if (isset($value[0]['format']) && isset($value[0]['value'])) {
               $rowAssoc[$key][0]['value'] = $this->filterHtml($value[0]['value']);
           }
-  
+
           // loading the terms or paragraphs object onto the rest export
           foreach ($value as $itemkey => $item) {
             if (isset($item['target_type'])) {
@@ -77,7 +77,7 @@ class NodeListSerializer extends Serializer {
             }
           }
         }
-  
+
         $rows[] = $rowAssoc;
       }
     }
