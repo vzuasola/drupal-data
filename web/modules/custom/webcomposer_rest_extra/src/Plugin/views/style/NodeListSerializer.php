@@ -27,42 +27,59 @@ class NodeListSerializer extends Serializer {
   public function render() {
     $rows = [];
 
-    foreach ($this->view->result as $row_index => $row) {
-      $this->view->row_index = $row_index;
-
-      // converting current row into array
-      $rowAssoc = $this->serializer->normalize(
-        $this->view->rowPlugin->render($row), null, ['view' => $this->view]
-      );
-
-      // add aliases on the nodes
-      if (isset($row->nid)) {
-        $alias = \Drupal::service('path.alias_manager')->getAliasByPath("/node/$row->nid");
-        $rowAssoc['alias'][0]['value'] = $alias;
+    $pagerDetails = \Drupal::request()->query->get('pager');
+    if ($pagerDetails) {
+      // Get pager details if "pager" query string is available
+      $pager = $this->view->pager;
+      $pagerClass = get_class($pager);
+      $total_pages = 0;
+      if(!in_array($pagerClass, ['Drupal\views\Plugin\views\pager\None', 'Drupal\views\Plugin\views\pager\Some'])){
+        $total_pages = $pager->getPagerTotal();
       }
 
-      foreach ($rowAssoc as $key => $value) {
-        // replace the images src for text formats
-        if (isset($value[0]['format']) && isset($value[0]['value'])) {
-            $rowAssoc[$key][0]['value'] = $this->filterHtml($value[0]['value']);
+      $rows = [
+          'total_items' => (int) $pager->getTotalItems(),
+          'total_pages' => $total_pages,
+          'items_per_page' => $pager->getItemsPerPage(),
+      ]; 
+    } else {
+      foreach ($this->view->result as $row_index => $row) {
+        $this->view->row_index = $row_index;
+  
+        // converting current row into array
+        $rowAssoc = $this->serializer->normalize(
+          $this->view->rowPlugin->render($row), null, ['view' => $this->view]
+        );
+  
+        // add aliases on the nodes
+        if (isset($row->nid)) {
+          $alias = \Drupal::service('path.alias_manager')->getAliasByPath("/node/$row->nid");
+          $rowAssoc['alias'][0]['value'] = $alias;
         }
-
-        // loading the terms or paragraphs object onto the rest export
-        foreach ($value as $itemkey => $item) {
-          if (isset($item['target_type'])) {
-            switch ($item['target_type']) {
-              case 'paragraph':
-                $rowAssoc[$key][$itemkey] = $this->loadParagraphById($item['target_id']);
-                break;
-              case 'taxonomy_term':
-                $rowAssoc[$key][$itemkey] = $this->loadTerm($item['target_id']);
-                break;
+  
+        foreach ($rowAssoc as $key => $value) {
+          // replace the images src for text formats
+          if (isset($value[0]['format']) && isset($value[0]['value'])) {
+              $rowAssoc[$key][0]['value'] = $this->filterHtml($value[0]['value']);
+          }
+  
+          // loading the terms or paragraphs object onto the rest export
+          foreach ($value as $itemkey => $item) {
+            if (isset($item['target_type'])) {
+              switch ($item['target_type']) {
+                case 'paragraph':
+                  $rowAssoc[$key][$itemkey] = $this->loadParagraphById($item['target_id']);
+                  break;
+                case 'taxonomy_term':
+                  $rowAssoc[$key][$itemkey] = $this->loadTerm($item['target_id']);
+                  break;
+              }
             }
           }
         }
+  
+        $rows[] = $rowAssoc;
       }
-
-      $rows[] = $rowAssoc;
     }
 
     unset($this->view->row_index);
