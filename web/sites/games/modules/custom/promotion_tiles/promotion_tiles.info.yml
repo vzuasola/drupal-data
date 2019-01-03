@@ -1,0 +1,5 @@
+name: Promotion Tiles
+type: module
+description: Manage Games Promotional Tiles
+core: 8.x
+package: Custom

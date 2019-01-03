@@ -22,7 +22,7 @@ class NodeEntityNormalizer extends ContentEntityNormalizer {
    *
    * @var string
    */
-  protected $supportedInterfaceOrClass = 'Drupal\node\NodeInterface';
+  // protected $supportedInterfaceOrClass = 'Drupal\node\NodeInterface';
 
   /**
    * {@inheritdoc}
@@ -127,17 +127,20 @@ class NodeEntityNormalizer extends ContentEntityNormalizer {
       $setting = $termTranslated->get($field)->getSettings();
 
       if (isset($setting['target_type'])) {
-        if ($setting['target_type'] == 'file') {
+        if ($setting['target_type'] == 'file' && isset($translatedArray[$field][0])) {
           $field_array = array_merge($translatedArray[$field][0], $this->loadFileById($item[0]['target_id']));
           $translatedArray[$field] = $field_array;
         }
       }
     }
 
-    if (isset($translatedArray['vid'][0]['target_id']) &&
-      isset($entityData['nid'][0]['value'])
-    ) {
-      $nid = $entityData['nid'][0]['value'];
+    $nid = $entityData['nid'][0]['value'] ?? null;
+
+    if (is_null($nid)) {
+      $nid = $entityData['id'][0]['value'] ?? null;
+    }
+
+    if (isset($translatedArray['vid'][0]['target_id']) && !is_null($nid)) {
       $vid = $translatedArray['vid'][0]['target_id'];
 
       foreach ($exposedFilters as $key => $value) {

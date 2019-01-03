@@ -1,0 +1,26 @@
+uuid: cc078166-6628-48ce-842e-fe11df802752
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.games_showcase_entity.field_game_categories
+  module:
+    - games_showcase
+id: games_showcase_entity.games_showcase_entity.field_game_categories
+field_name: field_game_categories
+entity_type: games_showcase_entity
+bundle: games_showcase_entity
+label: "Game Categories\t"
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: game_category_2_0_entity_reference
+      display_name: entity_reference_1
+      arguments: {  }
+field_type: entity_reference

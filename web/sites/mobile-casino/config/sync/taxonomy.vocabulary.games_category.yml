@@ -1,0 +1,9 @@
+uuid: c825b899-575b-4dc3-a753-7b52d45e17b8
+langcode: en
+status: true
+dependencies: {  }
+name: 'Games Category'
+vid: games_category
+description: 'Games category lists'
+hierarchy: 0
+weight: 0

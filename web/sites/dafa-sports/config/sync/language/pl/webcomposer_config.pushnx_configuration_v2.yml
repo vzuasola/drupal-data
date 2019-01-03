@@ -17,3 +17,6 @@ product_label_virtuals: Virtuals
 cta_label_ok: OK
 cta_label_accept: AKCEPTUJ
 cta_label_decline: ODRZUĆ
+copied: 'Copied to Clipboard'
+cta_label_proceed: 'Yes, Proceed'
+cta_label_no: 'No, Thanks'

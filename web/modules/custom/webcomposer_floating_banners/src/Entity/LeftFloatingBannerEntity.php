@@ -184,6 +184,7 @@ class LeftFloatingBannerEntity extends ContentEntityBase implements LeftFloating
         'text_processing' => 0,
       ))
       ->setDefaultValue('')
+      ->setTranslatable(TRUE)
       ->setDisplayOptions('view', array(
         'label' => 'above',
         'type' => 'string',

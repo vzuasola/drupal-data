@@ -1,0 +1,39 @@
+uuid: 82311cf9-0aed-4ac0-bfef-e8cfb23c32b9
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - webcomposer_slider_v2
+id: webcomposer_slider_v2_entity.field_slider_game_provider
+field_name: field_slider_game_provider
+entity_type: webcomposer_slider_v2_entity
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: voidbridge
+      label: Voidbridge
+    -
+      value: skywind
+      label: Skywind
+    -
+      value: micro_gaming
+      label: 'Micro Gaming'
+    -
+      value: cq9
+      label: CQ9
+    -
+      value: solid_gaming
+      label: 'Solid Gaming'
+    -
+      value: pas
+      label: PAS
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

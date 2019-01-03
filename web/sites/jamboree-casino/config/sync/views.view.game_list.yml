@@ -1067,7 +1067,7 @@ display:
           admin_label: ''
           operator: in
           value:
-            '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
+            ja: ja
           group: 1
           exposed: false
           expose:

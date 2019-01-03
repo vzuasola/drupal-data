@@ -11,9 +11,11 @@ dependencies:
 third_party_settings:
   content_translation:
     translation_sync:
-      alt: alt
-      title: title
-      file: '0'
+      file: file
+      alt: '0'
+      title: '0'
+_core:
+  default_config_hash: b7avFAFh5EGKID0caU6R-M6o1RaM532TRIY5P7elIhg
 id: paragraph.drawer_media.field_drawer_thumb
 field_name: field_drawer_thumb
 entity_type: paragraph

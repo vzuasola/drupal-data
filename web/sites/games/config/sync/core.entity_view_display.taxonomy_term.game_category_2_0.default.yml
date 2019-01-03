@@ -1,0 +1,83 @@
+uuid: 39848c5a-dcca-4534-bf46-72c786810069
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.game_category_2_0.field_v2_game_category_alias
+    - field.field.taxonomy_term.game_category_2_0.field_v2_game_category_disable
+    - field.field.taxonomy_term.game_category_2_0.field_v2_game_category_hicon
+    - field.field.taxonomy_term.game_category_2_0.field_v2_game_category_icon
+    - field.field.taxonomy_term.game_category_2_0.field_v2_game_category_tooltip
+    - field.field.taxonomy_term.game_category_2_0.field_v2_show_tooltip
+    - taxonomy.vocabulary.game_category_2_0
+  module:
+    - image
+    - text
+id: taxonomy_term.game_category_2_0.default
+targetEntityType: taxonomy_term
+bundle: game_category_2_0
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_v2_game_category_alias:
+    weight: 7
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_v2_game_category_disable:
+    weight: 9
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_v2_game_category_hicon:
+    weight: 10
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_v2_game_category_icon:
+    weight: 8
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_v2_game_category_tooltip:
+    weight: 11
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_v2_show_tooltip:
+    weight: 6
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+hidden:
+  langcode: true

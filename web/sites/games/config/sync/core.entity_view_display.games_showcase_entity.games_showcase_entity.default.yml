@@ -3,11 +3,10 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.games_showcase_entity.games_showcase_entity.field_games_category
-    - field.field.games_showcase_entity.games_showcase_entity.field_home_sub_category
-    - field.field.games_showcase_entity.games_showcase_entity.field_home_tab_ribbon
+    - field.field.games_showcase_entity.games_showcase_entity.field_game_categories
     - field.field.games_showcase_entity.games_showcase_entity.field_log_in_state
     - field.field.games_showcase_entity.games_showcase_entity.field_publish_date
+    - field.field.games_showcase_entity.games_showcase_entity.field_show_in_all
     - field.field.games_showcase_entity.games_showcase_entity.field_showcase_body
     - field.field.games_showcase_entity.games_showcase_entity.field_showcase_image
     - field.field.games_showcase_entity.games_showcase_entity.field_showcase_ribbon
@@ -27,24 +26,8 @@ targetEntityType: games_showcase_entity
 bundle: games_showcase_entity
 mode: default
 content:
-  field_games_category:
-    weight: 7
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_home_sub_category:
-    weight: 8
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_home_tab_ribbon:
-    weight: 9
+  field_game_categories:
+    weight: 14
     label: above
     settings:
       link: true
@@ -66,6 +49,16 @@ content:
       timezone_override: ''
     third_party_settings: {  }
     type: datetime_default
+    region: content
+  field_show_in_all:
+    weight: 13
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
     region: content
   field_showcase_body:
     weight: 2

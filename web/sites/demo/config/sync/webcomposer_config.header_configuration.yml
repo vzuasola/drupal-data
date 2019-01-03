@@ -13,7 +13,7 @@ profile_link: 'https://stg-accountwww.elysium-dfbt.com/en/my-profile'
 profile_logout_text: Logout
 _core:
   default_config_hash: Ynx2hkfeSTtNe4GyBQ1t4lBkrV4wrazLGjX_M7Mk3mg
-lobby_page_title: 'Online Betting - Bet on Sports, Play Online Casino and Poker at Dafabet'
+lobby_page_title: 'Online Betting - Bet on Sports, Play Online Casino and Poker at Dafabets'
 critical_announcement: '0'
 critical_announcement_content:
   value: "<p>This is a critical announcement test test test</p>\r\n"
@@ -30,13 +30,17 @@ total_balance_label: 'Total Account Balance'
 product_balance_id: '1'
 excluded_balance_mapping: "7\r\n2"
 currency_balance_mapping: ''
-cashier_link: 'http://google.com/'
+cashier_link: '{cashier}'
 balance_mapping: ''
 password_mask_toggle: 1
 balance_label_override: ''
-logo_title: 'Dafabet EN'
-header_settings_tab__active_tab: edit-balance-group
+logo_title: 'Demo EN 2'
+header_settings_tab__active_tab: edit-join-now-group
 caps_lock_toggle: 1
 capslock_notification: 'Caps lock is enabled'
 value: null
 format: null
+registration_link: 'http://google.com/register'
+cashier_mapping: "USD|CN|http://google.com/usd/cn\r\nRMB|PH|http://google.com/rmb/ph\r\nRMB|CN|{domain:cashier_sample}"
+promotion_page_title: Promotions
+default_cashier_link: 'https://cashier.default.com/'

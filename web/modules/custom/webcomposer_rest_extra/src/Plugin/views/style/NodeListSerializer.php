@@ -7,6 +7,7 @@ use Drupal\file\Entity\File;
 use Drupal\Component\Utility\Html;
 use Drupal\Core\Site\Settings;
 use Drupal\webcomposer_rest_extra\FilterHtmlTrait;
+use Drupal\webcomposer_rest_extra\PagerTrait;
 
 /**
  * @ingroup views_style_plugins
@@ -20,6 +21,7 @@ use Drupal\webcomposer_rest_extra\FilterHtmlTrait;
  */
 class NodeListSerializer extends Serializer {
   use FilterHtmlTrait;
+  use PagerTrait;
 
   /**
    * {@inheritdoc}
@@ -27,41 +29,46 @@ class NodeListSerializer extends Serializer {
   public function render() {
     $rows = [];
 
-    foreach ($this->view->result as $row_index => $row) {
-      $this->view->row_index = $row_index;
+    if ($pager = $this->pagerDetails($this->view->pager)) {
+      $rows = $pager;
+    } else {
+      foreach ($this->view->result as $row_index => $row) {
+        $this->view->row_index = $row_index;
 
-      // converting current row into array
-      $rowAssoc = $this->serializer->normalize(
-        $this->view->rowPlugin->render($row), null, ['view' => $this->view]
-      );
+        // converting current row into array
+        $rowAssoc = $this->serializer->normalize(
+          $this->view->rowPlugin->render($row), null, ['view' => $this->view]
+        );
 
-      // add aliases on the nodes
-      if (isset($row->nid)) {
-        $alias = \Drupal::service('path.alias_manager')->getAliasByPath("/node/$row->nid");
-        $rowAssoc['alias'][0]['value'] = $alias;
-      }
-
-      foreach ($rowAssoc as $key => $value) {
-        // replace the images src for text formats
-        if (isset($value[0]['format']) && isset($value[0]['value'])) {
-            $rowAssoc[$key][0]['value'] = $this->filterHtml($value[0]['value']);
+        // add aliases on the nodes
+        if (isset($row->nid)) {
+          $alias = \Drupal::service('path.alias_manager')->getAliasByPath("/node/$row->nid");
+          $rowAssoc['alias'][0]['value'] = $alias;
         }
 
-        // loading the term object onto the rest export
-        if (isset($value[0]['target_type']) && $value[0]['target_type'] == 'taxonomy_term') {
-          $term = $this->loadTerm($value[0]['target_id']);
-          $rowAssoc[$key][0] = $term;
-        }
+        foreach ($rowAssoc as $key => $value) {
+          // replace the images src for text formats
+          if (isset($value[0]['format']) && isset($value[0]['value'])) {
+              $rowAssoc[$key][0]['value'] = $this->filterHtml($value[0]['value']);
+          }
 
-        // loading the paragraph object onto the rest export
-        foreach ($value as $paragraphKey => $pid) {
-          if (isset($pid['target_type']) && $pid['target_type'] == 'paragraph') {
-            $rowAssoc[$key][$paragraphKey] = $this->loadParagraphById($pid['target_id']);
+          // loading the terms or paragraphs object onto the rest export
+          foreach ($value as $itemkey => $item) {
+            if (isset($item['target_type'])) {
+              switch ($item['target_type']) {
+                case 'paragraph':
+                  $rowAssoc[$key][$itemkey] = $this->loadParagraphById($item['target_id']);
+                  break;
+                case 'taxonomy_term':
+                  $rowAssoc[$key][$itemkey] = $this->loadTerm($item['target_id']);
+                  break;
+              }
+            }
           }
         }
-      }
 
-      $rows[] = $rowAssoc;
+        $rows[] = $rowAssoc;
+      }
     }
 
     unset($this->view->row_index);
@@ -82,7 +89,6 @@ class NodeListSerializer extends Serializer {
    */
   private function loadTerm($tid) {
     $lang = \Drupal::languageManager()->getCurrentLanguage(\Drupal\Core\Language\LanguageInterface::TYPE_CONTENT)->getId();
-
     $term = \Drupal\taxonomy\Entity\Term::load($tid);
     $term_translated = \Drupal::service('entity.repository')->getTranslationFromContext($term, $lang);
 
