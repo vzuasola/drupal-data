@@ -3,8 +3,8 @@
 namespace Drupal\webcomposer_rest_extra;
 
 /**
-* Provide a trait for pager details
-*/
+ * Provide a trait for pager details
+ */
 trait PagerTrait {
 
  /**
