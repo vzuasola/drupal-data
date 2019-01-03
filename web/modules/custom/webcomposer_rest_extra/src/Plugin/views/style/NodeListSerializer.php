@@ -7,6 +7,7 @@ use Drupal\file\Entity\File;
 use Drupal\Component\Utility\Html;
 use Drupal\Core\Site\Settings;
 use Drupal\webcomposer_rest_extra\FilterHtmlTrait;
+use Drupal\webcomposer_rest_extra\PagerTrait;
 
 /**
  * @ingroup views_style_plugins
@@ -20,6 +21,7 @@ use Drupal\webcomposer_rest_extra\FilterHtmlTrait;
  */
 class NodeListSerializer extends Serializer {
   use FilterHtmlTrait;
+  use PagerTrait;
 
   /**
    * {@inheritdoc}
@@ -27,21 +29,8 @@ class NodeListSerializer extends Serializer {
   public function render() {
     $rows = [];
 
-    $pagerDetails = \Drupal::request()->query->get('pager');
-    if ($pagerDetails) {
-      // Get pager details if "pager" query string is available
-      $pager = $this->view->pager;
-      $pagerClass = get_class($pager);
-      $total_pages = 0;
-      if (!in_array($pagerClass, ['Drupal\views\Plugin\views\pager\None', 'Drupal\views\Plugin\views\pager\Some'])) {
-        $total_pages = $pager->getPagerTotal();
-      }
-
-      $rows = [
-          'total_items' => (int) $pager->getTotalItems(),
-          'total_pages' => $total_pages,
-          'items_per_page' => $pager->getItemsPerPage(),
-      ]; 
+    if ($pager = $this->pagerDetails($this->view->pager)) {
+      $rows = $pager;
     } else {
       foreach ($this->view->result as $row_index => $row) {
         $this->view->row_index = $row_index;
