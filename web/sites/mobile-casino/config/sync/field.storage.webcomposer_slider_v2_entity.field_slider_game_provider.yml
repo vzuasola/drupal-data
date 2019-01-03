@@ -26,6 +26,9 @@ settings:
     -
       value: solid_gaming
       label: 'Solid Gaming'
+    -
+      value: pas
+      label: PAS
   allowed_values_function: ''
 module: options
 locked: false

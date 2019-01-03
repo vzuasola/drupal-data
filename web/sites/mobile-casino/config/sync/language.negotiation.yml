@@ -4,27 +4,28 @@ url:
   source: path_prefix
   prefixes:
     en: en
+    eu: eu
     zh-hans: sc
     zh-hant: ch
     th: th
-    vi: vn
-    id: id
     ko: kr
     hi: in
-    '': null
-    pt-br: pt-br
+    vi: vn
+    id: id
     es: es
+    pt-br: pt
   domains:
     en: ''
+    eu: ''
     zh-hans: ''
     zh-hant: ''
     th: ''
-    vi: ''
-    id: ''
     ko: ''
     hi: ''
-    pt-br: ''
+    vi: ''
+    id: ''
     es: ''
+    pt-br: ''
 selected_langcode: site_default
 _core:
   default_config_hash: uEePITI9tV6WqzmsTb7MfPCi5yPWXSxAN1xeLcYFQbM

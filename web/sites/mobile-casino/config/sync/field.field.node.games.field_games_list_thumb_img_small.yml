@@ -18,7 +18,7 @@ id: node.games.field_games_list_thumb_img_small
 field_name: field_games_list_thumb_img_small
 entity_type: node
 bundle: games
-label: 'Thumbnail Image Small'
+label: 'Thumbnail Image'
 description: 'Recommended dimension: w230xh180'
 required: true
 translatable: true

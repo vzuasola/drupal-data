@@ -1,17 +1,17 @@
-uuid: fdddf8b0-97f2-4ac2-a21d-bc2f2cdb4827
+uuid: 3486640a-8e6b-493c-bac3-70923dca824d
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_games_list_thumbnail_size
+    - field.storage.node.field_game_platform
     - node.type.games
   module:
     - options
-id: node.games.field_games_list_thumbnail_size
-field_name: field_games_list_thumbnail_size
+id: node.games.field_game_platform
+field_name: field_game_platform
 entity_type: node
 bundle: games
-label: 'Thumbnail Size'
+label: 'Game Platform'
 description: ''
 required: true
 translatable: true
