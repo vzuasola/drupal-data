@@ -36,7 +36,7 @@ class DatabaseExport {
     return $content;
   }
 
-  public function getTables($host, $user, $pass, $name, $tables = false) {
+  public function getTables($host, $user, $pass, $name, $excludes = []) {
     $mysqli = new \mysqli($host, $user, $pass, $name);
 
     $mysqli->select_db($name);
@@ -44,11 +44,13 @@ class DatabaseExport {
     $queryTables = $mysqli->query('SHOW TABLES');
 
     while ($row = $queryTables->fetch_row()) {
-      $target_tables[] = $row[0];
-    }
+      foreach ($excludes as $value) {
+        if (fnmatch($value, $row[0])) {
+          continue 2;
+        }
+      }
 
-    if ($tables !== false) {
-      $target_tables = array_intersect($target_tables, $tables);
+      $target_tables[] = $row[0];
     }
 
     return $target_tables;

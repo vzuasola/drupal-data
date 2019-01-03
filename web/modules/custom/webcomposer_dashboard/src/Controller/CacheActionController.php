@@ -5,7 +5,7 @@ namespace Drupal\webcomposer_dashboard\Controller;
 use Drupal\Core\Controller\ControllerBase;
 
 /**
- * Returns responses for System routes.
+ *
  */
 class CacheActionController extends ControllerBase {
   public function clearCache() {
