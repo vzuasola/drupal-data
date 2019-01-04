@@ -89,7 +89,8 @@ trait FilterHtmlTrait {
     $path = ltrim($src, '/');
     $uri = "[uri:($path)]";
 
-    \Drupal::moduleHandler()->alter('inline_image_url_change', $uri, $base_path, $src);
+    // Removed hook invoke calls to improve performance
+    // \Drupal::moduleHandler()->alter('inline_image_url_change', $uri, $base_path, $src);
 
     return $uri;
   }
