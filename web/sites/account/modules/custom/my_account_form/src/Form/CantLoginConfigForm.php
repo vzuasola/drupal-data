@@ -145,6 +145,26 @@ class CantLoginConfigForm extends FormBase {
       '#translatable' => TRUE,
     ];
 
+    $content = $this->get('native_app_mobile_forgot_password_success_message');
+    $form['cant_login_tab_menu_config']['forgot_password']['native_app_mobile_forgot_password_success_message'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('Native App Mobile Success Message'),
+      '#default_value' => $content['value'],
+      '#format' => $content['format'],
+      '#required' => TRUE,
+      '#translatable' => TRUE,
+    ];
+
+    $content = $this->get('native_app_tablet_forgot_password_success_message');
+    $form['cant_login_tab_menu_config']['forgot_password']['native_app_tablet_forgot_password_success_message'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('Native App Tablet Success Message'),
+      '#default_value' => $content['value'],
+      '#format' => $content['format'],
+      '#required' => TRUE,
+      '#translatable' => TRUE,
+    ];
+
     $form['cant_login_tab_menu_config']['forgot_username'] = [
       '#type' => 'details',
       '#title' => 'Forgot Username',
@@ -180,6 +200,26 @@ class CantLoginConfigForm extends FormBase {
     $form['cant_login_tab_menu_config']['forgot_username']['mobile_forgot_username_success_message'] = [
       '#type' => 'text_format',
       '#title' => $this->t('Mobile Success Message'),
+      '#default_value' => $content['value'],
+      '#format' => $content['format'],
+      '#required' => TRUE,
+      '#translatable' => TRUE,
+    ];
+
+    $content = $this->get('native_app_mobile_forgot_username_success_message');
+    $form['cant_login_tab_menu_config']['forgot_username']['native_app_mobile_forgot_username_success_message'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('Native App Mobile Success Message'),
+      '#default_value' => $content['value'],
+      '#format' => $content['format'],
+      '#required' => TRUE,
+      '#translatable' => TRUE,
+    ];
+
+    $content = $this->get('native_app_tablet_forgot_username_success_message');
+    $form['cant_login_tab_menu_config']['forgot_username']['native_app_tablet_forgot_username_success_message'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('Native App Tablet Success Message'),
       '#default_value' => $content['value'],
       '#format' => $content['format'],
       '#required' => TRUE,
