@@ -2,13 +2,17 @@
 
 namespace Drupal\webcomposer_rest_extra\Normalizer;
 
-use Drupal\serialization\Normalizer\ContentEntityNormalizer;
 use Drupal\Core\Datetime\DrupalDateTime;
+use Drupal\Core\Language\LanguageInterface;
+use Drupal\Core\Site\Settings;
+use Drupal\Component\Utility\Html;
+
+use Drupal\file\Entity\File;
 use Drupal\rest\Plugin\views\style\Serializer;
 use Drupal\paragraphs\Entity\Paragraph;
-use Drupal\file\Entity\File;
-use Drupal\Component\Utility\Html;
-use Drupal\Core\Site\Settings;
+use Drupal\serialization\Normalizer\ContentEntityNormalizer;
+use Drupal\taxonomy\Entity\Term;
+
 use Drupal\webcomposer_rest_extra\FilterHtmlTrait;
 
 /**
@@ -16,13 +20,6 @@ use Drupal\webcomposer_rest_extra\FilterHtmlTrait;
  */
 class NodeEntityNormalizer extends ContentEntityNormalizer {
   use FilterHtmlTrait;
-
-  /**
-   * The interface or class that this Normalizer supports.
-   *
-   * @var string
-   */
-  // protected $supportedInterfaceOrClass = 'Drupal\node\NodeInterface';
 
   /**
    * {@inheritdoc}
@@ -83,7 +80,7 @@ class NodeEntityNormalizer extends ContentEntityNormalizer {
    * Load Paragraph by ID
    */
   private function loadParagraphById($id) {
-    $lang = \Drupal::languageManager()->getCurrentLanguage(\Drupal\Core\Language\LanguageInterface::TYPE_CONTENT)->getId();
+    $lang = \Drupal::languageManager()->getCurrentLanguage(LanguageInterface::TYPE_CONTENT)->getId();
     $paragraph = \Drupal::entityManager()->getStorage('paragraph')->load($id);
     $paragraphTranslated = \Drupal::service('entity.repository')->getTranslationFromContext($paragraph, $lang);
     $pargraphTranslatedArray = $paragraphTranslated->toArray();
@@ -104,8 +101,8 @@ class NodeEntityNormalizer extends ContentEntityNormalizer {
           $pargraphTranslatedArray[$field][$key]['value'] = $field_array;
         }
       }
-
     }
+
     return $pargraphTranslatedArray;
   }
 
@@ -113,8 +110,8 @@ class NodeEntityNormalizer extends ContentEntityNormalizer {
    * Load terms by taxonomy ID
    */
   private function loadTermById($tid, $entityData = [], $exposedFilters = []) {
-    $lang = \Drupal::languageManager()->getCurrentLanguage(\Drupal\Core\Language\LanguageInterface::TYPE_CONTENT)->getId();
-    $term = \Drupal\taxonomy\Entity\Term::load($tid);
+    $lang = \Drupal::languageManager()->getCurrentLanguage(LanguageInterface::TYPE_CONTENT)->getId();
+    $term = Term::load($tid);
 
     if (!$term) {
       return false;
@@ -170,7 +167,7 @@ class NodeEntityNormalizer extends ContentEntityNormalizer {
    * Load node data by Node ID
    */
   private function loadNodeById($id) {
-    $lang = \Drupal::languageManager()->getCurrentLanguage(\Drupal\Core\Language\LanguageInterface::TYPE_CONTENT)->getId();
+    $lang = \Drupal::languageManager()->getCurrentLanguage(LanguageInterface::TYPE_CONTENT)->getId();
     $node = \Drupal::entityManager()->getStorage('node')->load($id);
 
     if ($node->isPublished()) {
@@ -213,9 +210,12 @@ class NodeEntityNormalizer extends ContentEntityNormalizer {
     return $result;
   }
 
+  /**
+   *
+   */
   private function getExposedFilters($originalView) {
     $filterSet = [];
-    $lang = \Drupal::languageManager()->getCurrentLanguage(\Drupal\Core\Language\LanguageInterface::TYPE_CONTENT)->getId();
+    $lang = \Drupal::languageManager()->getCurrentLanguage(LanguageInterface::TYPE_CONTENT)->getId();
 
     $view = clone $originalView;
 
