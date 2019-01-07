@@ -28,6 +28,15 @@ class NodeEntityNormalizer extends ContentEntityNormalizer {
     $entityData = $entity->toArray();
     $attributes = parent::normalize($entity, $format, $context);
 
+    // add aliases on the nodes
+
+    if (isset($entityData['nid'][0]['value'])) {
+      $nid = $entityData['nid'][0]['value'];
+
+      $alias = \Drupal::service('path.alias_manager')->getAliasByPath("/node/$nid");
+      $attributes['alias'][0]['value'] = $alias;
+    }
+
     $exposedFilters = [];
     if (isset($context['view'])) {
       $exposedFilters = $this->getExposedFilters($context['view']);
@@ -119,6 +128,11 @@ class NodeEntityNormalizer extends ContentEntityNormalizer {
 
     $termTranslated = \Drupal::service('entity.repository')->getTranslationFromContext($term, $lang);
     $translatedArray = $termTranslated->toArray();
+
+    // Add path to term data
+
+    $term_alias = \Drupal::service('path.alias_manager')->getAliasByPath('/taxonomy/term/' . $tid);
+    $translatedArray['path'] = $term_alias;
 
     foreach ($translatedArray as $field => $item) {
       $setting = $termTranslated->get($field)->getSettings();
