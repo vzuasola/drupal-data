@@ -40,6 +40,9 @@ proactive_mobile_url_playstore: 'https://play.google.com/store/apps/details?id=c
 proactive_mobile_url_ios_appstore: 'https://itunes.apple.com/app/wechat/id414478124?mt=8'
 proactive_mobile_timeout: '90'
 s2s_config: "https://serving.dfnb-ads.com/servlet/track?clickid={advrtsrv_id}|advrtsrv_id\r\nhttps://track.buzz-track.com/pixel?adv_id=342&tx_id={advc_id}|advc_id"
-general_settings_tab__active_tab: edit-restriction
+general_settings_tab__active_tab: edit-integration
 value: null
 format: null
+enable_reg_relic_custom_headers: 0
+enable_futurama_authentication_poker: 0
+enable_futurama_authentication_casino: 0
