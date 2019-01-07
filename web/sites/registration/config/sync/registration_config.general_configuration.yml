@@ -2,7 +2,7 @@ step_one_text: Register
 step_two_text: Deposit
 _core:
   default_config_hash: e3hn0uvuv-BJxFFYiLi7_S3p1_xJVxeXLrChy6s_WYE
-registraton_api_url: 'https://tct-www.elysium-dfbt.com/api/v1/registration'
+registraton_api_url: /api/v1/registration
 registraton_portal_id_to_product_name: "2|entry\r\n3|sports\r\n4|casino\r\n5|poker\r\n6|live-dealer\r\n7|games\r\n66|exchange\r\n9|mobile-entrypage\r\n10|mobile-sports\r\n11|mobile-casino\r\n12|mobile-dafasports\r\n14|mobile-games\r\n15|mobile-live-dealer\r\n25|mobile-arcade\r\n67|mobile-exchange\r\n57|mobile-virtuals\r\n60|mobile-keno\r\n19|casino-gold\r\n22|dafa-sportsbook\r\n24|AG-fish-hunter\r\n55|keno\r\n56|virtuals"
 registraton_product_id_to_portal_id: "1|4,11,18,23\r\n2|5,12,17\r\n3|3,10\r\n4|6\r\n5|8"
 success_title: Success
