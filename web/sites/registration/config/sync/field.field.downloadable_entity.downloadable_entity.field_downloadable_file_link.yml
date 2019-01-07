@@ -6,6 +6,8 @@ dependencies:
     - field.storage.downloadable_entity.field_downloadable_file_link
   module:
     - webcomposer_downloadables
+_core:
+  default_config_hash: nH1VLqyfxpcJ-a0Os6qKyAyL1o42CVJ4KbSSjF5npoM
 id: downloadable_entity.downloadable_entity.field_downloadable_file_link
 field_name: field_downloadable_file_link
 entity_type: downloadable_entity
