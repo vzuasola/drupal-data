@@ -7,6 +7,8 @@ dependencies:
     - field.field.downloadable_entity.downloadable_entity.field_include_in_page
   module:
     - webcomposer_downloadables
+_core:
+  default_config_hash: YY3Nu9F3kAaBHCx9VjKpCiQnE0whRsjHITC9ENJR1Yg
 id: downloadable_entity.downloadable_entity.default
 targetEntityType: downloadable_entity
 bundle: downloadable_entity

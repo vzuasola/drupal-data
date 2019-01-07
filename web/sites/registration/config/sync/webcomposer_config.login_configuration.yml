@@ -27,7 +27,7 @@ mobile_login_url: '{domain:mobile}/{lang}/login[query:({credentials.params}&{tra
 tablet_login_button_label: 'Login/Join Now'
 mobile_login_button_label: 'LOGIN/ JOIN'
 login_page_blurb: ''
-advanced__active_tab: edit-mobile-login
+advanced__active_tab: edit-session-timeout-details
 rememberme_label: 'Remember Username'
 value: null
 format: null
