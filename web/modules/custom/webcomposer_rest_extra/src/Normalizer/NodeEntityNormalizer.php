@@ -28,7 +28,7 @@ class NodeEntityNormalizer extends ContentEntityNormalizer {
     $entityData = $entity->toArray();
     $attributes = parent::normalize($entity, $format, $context);
 
-    // add aliases on the nodes
+    // add aliases for nodes
 
     if (isset($entityData['nid'][0]['value'])) {
       $nid = $entityData['nid'][0]['value'];
@@ -37,9 +37,23 @@ class NodeEntityNormalizer extends ContentEntityNormalizer {
       $attributes['alias'][0]['value'] = $alias;
     }
 
+    // add parent for taxonomy terms
+
+    if (isset($entityData['tid'][0]['value'])) {
+      $tid = $entityData['tid'][0]['value'];
+      $parent = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadParents($tid);
+
+      if (!empty($parent)) {
+        $parent_id = array_keys($parent);
+        $attributes['parent'] = $this->loadTermById($parent_id[0]);
+      }
+    }
+
+    // get exposed filters for draggable weights
+
     $exposedFilters = [];
-    if (isset($context['view'])) {
-      $exposedFilters = $this->getExposedFilters($context['view']);
+    if (isset($context['views_style_plugin'])) {
+      $exposedFilters = $this->getExposedFilters($context['views_style_plugin']->view);
     }
 
     foreach ($entityData as $key => $value) {
