@@ -63,7 +63,6 @@ class ExportOperation {
       ];
     }
 
-
     $batch = [
       'title' => t('Exporting Audit Logs'),
       'operations' => $operations,
