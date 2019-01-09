@@ -1,22 +1,22 @@
-uuid: 47affb22-d60d-4078-a7f1-9fdbad2f920c
+uuid: 27df3bf3-48cf-4911-ad70-7cfb81cb6894
 langcode: en
 status: true
 dependencies:
   module:
     - node
     - options
-id: node.field_games_list_thumbnail_size
-field_name: field_games_list_thumbnail_size
+id: node.field_game_platform
+field_name: field_game_platform
 entity_type: node
 type: list_string
 settings:
   allowed_values:
     -
-      value: size-small
-      label: '1 x 1'
+      value: ngm
+      label: NGM
     -
-      value: size-large
-      label: '2 x 2'
+      value: live
+      label: LIVE
   allowed_values_function: ''
 module: options
 locked: false

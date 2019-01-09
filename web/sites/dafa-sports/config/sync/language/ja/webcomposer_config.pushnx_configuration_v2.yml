@@ -17,3 +17,6 @@ product_label_virtuals: ヴァーチャル
 cta_label_ok: OK
 cta_label_accept: 承認
 cta_label_decline: 拒否
+copied: 'クリップボードにコピーされました'
+cta_label_proceed: 'Yes, Proceed'
+cta_label_no: 'No, Thanks'

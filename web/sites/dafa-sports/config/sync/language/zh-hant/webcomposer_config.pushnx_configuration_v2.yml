@@ -17,3 +17,6 @@ product_label_virtuals: 虛擬運動
 cta_label_ok: 确定
 cta_label_accept: 接受
 cta_label_decline: 拒绝
+copied: '已復製到剪切板'
+cta_label_proceed: 'Yes, Proceed'
+cta_label_no: 'No, Thanks'

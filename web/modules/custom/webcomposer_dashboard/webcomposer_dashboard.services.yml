@@ -1,0 +1,4 @@
+services:
+  webcomposer_dashboard.database_batch_operation:
+    class: Drupal\webcomposer_dashboard\Batch\DatabaseBatchOperation
+    arguments: ['@database']

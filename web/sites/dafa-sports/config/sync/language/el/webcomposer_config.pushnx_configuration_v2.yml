@@ -17,3 +17,6 @@ product_label_virtuals: Virtuals
 cta_label_ok: OK
 cta_label_accept: ΑΠΟΔΟΧΗ
 cta_label_decline: ΑΠΟΡΡΙΨΗ
+copied: 'Αντιγράφηκε στο Πρόχειρο'
+cta_label_proceed: 'Ναί, Συνέχεια'
+cta_label_no: 'Όχι, Ευχαριστώ'
