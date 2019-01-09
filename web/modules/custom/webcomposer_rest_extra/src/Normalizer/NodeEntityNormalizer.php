@@ -28,9 +28,32 @@ class NodeEntityNormalizer extends ContentEntityNormalizer {
     $entityData = $entity->toArray();
     $attributes = parent::normalize($entity, $format, $context);
 
+    // add aliases for nodes
+
+    if (isset($entityData['nid'][0]['value'])) {
+      $nid = $entityData['nid'][0]['value'];
+
+      $alias = \Drupal::service('path.alias_manager')->getAliasByPath("/node/$nid");
+      $attributes['alias'][0]['value'] = $alias;
+    }
+
+    // add parent for taxonomy terms
+
+    if (isset($entityData['tid'][0]['value'])) {
+      $tid = $entityData['tid'][0]['value'];
+      $parent = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadParents($tid);
+
+      if (!empty($parent)) {
+        $parent_id = array_keys($parent);
+        $attributes['parent'] = $this->loadTermById($parent_id[0]);
+      }
+    }
+
+    // get exposed filters for draggable weights
+
     $exposedFilters = [];
-    if (isset($context['view'])) {
-      $exposedFilters = $this->getExposedFilters($context['view']);
+    if (isset($context['views_style_plugin'])) {
+      $exposedFilters = $this->getExposedFilters($context['views_style_plugin']->view);
     }
 
     foreach ($entityData as $key => $value) {
@@ -119,6 +142,11 @@ class NodeEntityNormalizer extends ContentEntityNormalizer {
 
     $termTranslated = \Drupal::service('entity.repository')->getTranslationFromContext($term, $lang);
     $translatedArray = $termTranslated->toArray();
+
+    // Add path to term data
+
+    $term_alias = \Drupal::service('path.alias_manager')->getAliasByPath('/taxonomy/term/' . $tid);
+    $translatedArray['path'] = $term_alias;
 
     foreach ($translatedArray as $field => $item) {
       $setting = $termTranslated->get($field)->getSettings();
