@@ -45,6 +45,10 @@ class ExportOperation {
     $logsDistinct = $this->storage->getCount([
       'limit' => 20000,
       'where' => $this->filters,
+      'orderby' => [
+        'field' => 'id',
+        'sort' => 'DESC'
+      ]
     ]);
 
     $batchNum = self::BATCH_COUNT;
@@ -58,6 +62,7 @@ class ExportOperation {
         [$i],
       ];
     }
+
 
     $batch = [
       'title' => t('Exporting Audit Logs'),
@@ -93,6 +98,10 @@ class ExportOperation {
       'limit' => 500,
       'offset' => $offset,
       'where' => $this->filters,
+      'orderby' => [
+        'field' => 'id',
+        'sort' => 'DESC'
+      ]
     ]);
 
     $result['logs'] = $this->postProcessLogsData($logs);
