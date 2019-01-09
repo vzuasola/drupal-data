@@ -1,0 +1,19 @@
+diff --git a/web/modules/contrib/language_access/language_access/src/EventSubscriber/LanguageAccessSubscriber.php b/web/modules/contrib/language_access/language_access/src/EventSubscriber/LanguageAccessSubscriber.php
+index 13c92ba0e..a355a3401 100644
+--- a/web/modules/contrib/language_access/language_access/src/EventSubscriber/LanguageAccessSubscriber.php
++++ b/web/modules/contrib/language_access/language_access/src/EventSubscriber/LanguageAccessSubscriber.php
+@@ -84,6 +84,14 @@ public function customLanguageAccess(GetResponseEvent $event) {
+             }
+           }
+         }
++        else {
++          $route_match = \Drupal::routeMatch();
++          $current_route = $route_match->getRouteName();
++          $pattern = '/^entity\.([a-za-zA-Z0-9_\-]+)\.edit_form$/';
++          if (preg_match($pattern, $current_route, $matches)) {
++            throw new AccessDeniedHttpException();
++          }
++        }
+       }
+     }
+   }
