@@ -1,7 +1,7 @@
-diff --git a/web/modules/contrib/language_access/language_access/src/EventSubscriber/LanguageAccessSubscriber.php b/web/modules/contrib/language_access/language_access/src/EventSubscriber/LanguageAccessSubscriber.php
+diff --git a/web/modules/contrib/language_access/src/EventSubscriber/LanguageAccessSubscriber.php b/web/modules/contrib/language_access/src/EventSubscriber/LanguageAccessSubscriber.php
 index 13c92ba0e..a355a3401 100644
---- a/web/modules/contrib/language_access/language_access/src/EventSubscriber/LanguageAccessSubscriber.php
-+++ b/web/modules/contrib/language_access/language_access/src/EventSubscriber/LanguageAccessSubscriber.php
+--- a/web/modules/contrib/language_access/src/EventSubscriber/LanguageAccessSubscriber.php
++++ b/web/modules/contrib/language_access/src/EventSubscriber/LanguageAccessSubscriber.php
 @@ -84,6 +84,14 @@ public function customLanguageAccess(GetResponseEvent $event) {
              }
            }
