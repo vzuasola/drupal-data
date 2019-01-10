@@ -446,6 +446,14 @@ class HeaderConfiguration extends ConfigFormBase {
       '#default_value' => $config->get('promotion_page_title'),
       '#required' => TRUE,
     ];
+
+    $form['header_other_group']['links_title'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Quicklinks Label'),
+      '#description' => $this->t('Quicklinks Label'),
+      '#default_value' => $config->get('links_title'),
+      '#required' => true,
+    ];
   }
 
   /**
