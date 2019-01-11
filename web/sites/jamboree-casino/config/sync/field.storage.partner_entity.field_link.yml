@@ -1,0 +1,21 @@
+uuid: af311a17-00e7-43df-83b0-acd55c383b96
+langcode: en
+status: true
+dependencies:
+  module:
+    - webcomposer_partner
+id: partner_entity.field_link
+field_name: field_link
+entity_type: partner_entity
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

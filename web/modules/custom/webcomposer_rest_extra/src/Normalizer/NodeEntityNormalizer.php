@@ -186,7 +186,11 @@ class NodeEntityNormalizer extends ContentEntityNormalizer {
     }
 
     $parent = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadParents($tid);
-    $translatedArray['parent'] = array_values($parent);
+
+    if (!empty($parent)) {
+      $parent_id = array_keys($parent);
+      $translatedArray['parent'] = $this->loadTermById($parent_id[0]);
+    }
 
     return $translatedArray;
   }

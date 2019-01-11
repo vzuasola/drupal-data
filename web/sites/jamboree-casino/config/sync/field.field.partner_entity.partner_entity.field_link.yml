@@ -1,0 +1,20 @@
+uuid: c3c67cb3-f8cd-4ca4-b0a7-e1f8c3740373
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.partner_entity.field_link
+  module:
+    - webcomposer_partner
+id: partner_entity.partner_entity.field_link
+field_name: field_link
+entity_type: partner_entity
+bundle: partner_entity
+label: Link
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
