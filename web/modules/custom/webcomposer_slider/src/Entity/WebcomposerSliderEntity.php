@@ -178,6 +178,7 @@ class WebcomposerSliderEntity extends ContentEntityBase implements WebcomposerSl
 
     $fields['name'] = BaseFieldDefinition::create('string')
       ->setLabel(t('Name'))
+      ->setTranslatable(TRUE)
       ->setDescription(t('The name of the Webcomposer slider entity entity.'))
       ->setSettings(array(
         'max_length' => 50,
