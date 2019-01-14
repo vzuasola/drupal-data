@@ -20,6 +20,7 @@ module:
   contact_storage: 0
   content_translation: 0
   contextual: 0
+  csv_importer: 0
   ctools: 0
   datetime: 0
   devel: 0
