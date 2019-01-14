@@ -6,8 +6,10 @@ dependencies:
     - field.field.partner_entity.partner_entity.field_id
     - field.field.partner_entity.partner_entity.field_link
     - field.field.partner_entity.partner_entity.field_logo
+    - field.field.partner_entity.partner_entity.field_redirect_behavior
   module:
     - image
+    - options
     - user
     - webcomposer_partner
 _core:
@@ -41,6 +43,13 @@ content:
       image_link: ''
     third_party_settings: {  }
     type: image
+    region: content
+  field_redirect_behavior:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
   name:
     label: above

@@ -6,6 +6,7 @@ dependencies:
     - field.field.partner_entity.partner_entity.field_id
     - field.field.partner_entity.partner_entity.field_link
     - field.field.partner_entity.partner_entity.field_logo
+    - field.field.partner_entity.partner_entity.field_redirect_behavior
     - image.style.thumbnail
   module:
     - image
@@ -40,6 +41,12 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+    region: content
+  field_redirect_behavior:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   name:
     type: string_textfield
