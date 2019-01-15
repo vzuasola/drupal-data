@@ -1,0 +1,30 @@
+uuid: 2489cfb1-bd47-4f39-ac91-e7fd5cce6531
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - webcomposer_partner
+id: partner_entity.field_redirect_behavior
+field_name: field_redirect_behavior
+entity_type: partner_entity
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '''_blank'''
+      label: 'New Tab'
+    -
+      value: '''_self'''
+      label: 'Same Tab'
+    -
+      value: '''_blank'', ''location=yes'''
+      label: 'New Window'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
