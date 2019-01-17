@@ -1,0 +1,20 @@
+uuid: 18ccf93f-b6e8-4484-8957-4f81610be044
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_game_subprovider
+field_name: field_game_subprovider
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
