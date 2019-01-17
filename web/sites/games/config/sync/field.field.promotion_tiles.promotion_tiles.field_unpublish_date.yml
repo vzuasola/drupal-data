@@ -1,0 +1,21 @@
+uuid: a4138f36-ad69-4a34-9b4f-38c4aba88b75
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.promotion_tiles.field_unpublish_date
+  module:
+    - datetime
+    - promotion_tiles
+id: promotion_tiles.promotion_tiles.field_unpublish_date
+field_name: field_unpublish_date
+entity_type: promotion_tiles
+bundle: promotion_tiles
+label: 'Unpublish Date'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

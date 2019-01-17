@@ -18,8 +18,11 @@ dependencies:
     - field.field.promotion_tiles.promotion_tiles.field_pre_tile_image
     - field.field.promotion_tiles.promotion_tiles.field_pre_tile_image_large
     - field.field.promotion_tiles.promotion_tiles.field_pre_tile_image_medium
+    - field.field.promotion_tiles.promotion_tiles.field_publish_date
     - field.field.promotion_tiles.promotion_tiles.field_title
+    - field.field.promotion_tiles.promotion_tiles.field_unpublish_date
   module:
+    - datetime
     - image
     - link
     - options
@@ -158,6 +161,15 @@ content:
     third_party_settings: {  }
     type: image
     region: content
+  field_publish_date:
+    weight: 17
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
   field_title:
     weight: 10
     label: above
@@ -165,6 +177,15 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_unpublish_date:
+    weight: 18
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
     region: content
   name:
     label: above
