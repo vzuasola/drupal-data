@@ -1,0 +1,20 @@
+uuid: b99a90af-5cab-4214-a7e9-0ef3b6361383
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime
+    - promotion_tiles
+id: promotion_tiles.field_publish_date
+field_name: field_publish_date
+entity_type: promotion_tiles
+type: datetime
+settings:
+  datetime_type: datetime
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
