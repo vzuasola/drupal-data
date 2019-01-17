@@ -74,14 +74,6 @@ function mobile_config_form_webcomposer_config_schema_form_base_alter(&$form, \D
         '#default_value' => \Drupal::service('webcomposer_config_schema.schema')->getConfigValue('webcomposer_config.footer_configuration', 'mobile_pwa_enable'),
       ];
 
-      $form['mobile_pwa']['mobile_pwa_time'] = [
-        '#type' => 'textfield',
-        '#title' => 'PWA Appear ',
-        '#description' => 'Become visible or noticeable',
-        '#default_value' => \Drupal::service('webcomposer_config_schema.schema')->getConfigValue('webcomposer_config.footer_configuration', 'mobile_pwa_time'),
-        '#translatable' => true
-      ];
-
       $form['mobile_pwa']['mobile_pwa_add_homescreen'] = [
         '#type' => 'textfield',
         '#title' => 'Add Dafabet to Homescreen',
