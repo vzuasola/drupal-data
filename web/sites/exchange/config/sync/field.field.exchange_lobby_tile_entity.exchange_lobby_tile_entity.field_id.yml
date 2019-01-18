@@ -1,0 +1,20 @@
+uuid: 2514b07c-e765-4182-89d3-2d6ef773b109
+langcode: hi
+status: true
+dependencies:
+  config:
+    - field.storage.exchange_lobby_tile_entity.field_id
+  module:
+    - exchange_lobby_tile
+id: exchange_lobby_tile_entity.exchange_lobby_tile_entity.field_id
+field_name: field_id
+entity_type: exchange_lobby_tile_entity
+bundle: exchange_lobby_tile_entity
+label: ID
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
