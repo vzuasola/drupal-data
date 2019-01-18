@@ -17,3 +17,8 @@ product_label_virtuals: 虚拟运动
 cta_label_ok: 確定
 cta_label_accept: 接受
 cta_label_decline: 拒絕
+copied: 已复制到剪切板
+product_label_alpine: Alpine
+product_label_taurus: Taurus
+cta_label_proceed: 'Yes, Proceed'
+cta_label_no: 'No, Thanks'
