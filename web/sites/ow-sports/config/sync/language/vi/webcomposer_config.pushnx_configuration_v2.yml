@@ -17,3 +17,8 @@ product_label_virtuals: 'Thể Thao Ảo'
 cta_label_ok: OK
 cta_label_accept: 'CHẤP NHẬN'
 cta_label_decline: 'TỪ CHỐI'
+copied: 'Đã sao chép vào bộ nhớ đệm'
+product_label_alpine: Alpine
+product_label_taurus: Taurus
+cta_label_proceed: 'Yes, Proceed'
+cta_label_no: 'No, Thanks'
