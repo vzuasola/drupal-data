@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.arcade_game.field_arc_game_title
     - field.field.node.arcade_game.field_arc_meta_tags
     - field.field.node.arcade_game.field_arcade_category
+    - field.field.node.arcade_game.field_game_subprovider
     - field.field.node.arcade_game.field_game_thumbnail_image_h
     - field.field.node.arcade_game.field_game_thumbnail_image_v
     - field.field.node.arcade_game.field_game_thumbnail_size
@@ -92,6 +93,14 @@ content:
     region: content
   field_arcade_category:
     weight: 112
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_game_subprovider:
+    weight: 115
     label: above
     settings:
       link: true
