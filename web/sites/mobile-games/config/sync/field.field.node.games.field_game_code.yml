@@ -10,7 +10,7 @@ field_name: field_game_code
 entity_type: node
 bundle: games
 label: 'Game Code'
-description: "<b>iCore game detail to use per provider:</b>\r\n<ul>\r\n <li><b>Skywind:</b> GameId</li>\r\n <li><b>Voidbridge:</b> GameId</li>\r\n <li><b>CQ9:</b> External Game ID <br>Note: For fishing game use pattern <i>External_Game_ID|fish</i></li>\r\n <li><b>Solid Gaming:</b> External Game ID <br>Note: You should prepend <i>SG_</i> to all game codes</li>\r\n</ul>"
+description: "<b>iCore game detail to use per provider:</b>\r\n<ul>\r\n <li><b>Skywind:</b> GameId</li>\r\n <li><b>Voidbridge:</b> GameId</li>\r\n <li><b>CQ9:</b> External Game ID <br>Note: For fishing game use pattern <i>External_Game_ID|fish</i></li>\r\n <li><b>Solid Gaming:</b> External Game ID <br>Note: You should prepend <i>SG_</i> to all game codes</li>\r\n <li><b>Flow Gaming: </b>GameId</li>\r\n</ul>"
 required: true
 translatable: false
 default_value: {  }
