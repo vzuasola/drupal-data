@@ -15,9 +15,7 @@ label: 'Pre Select Image Size'
 description: ''
 required: true
 translatable: true
-default_value:
-  -
-    value: small
+default_value: {  }
 default_value_callback: ''
 settings: {  }
 field_type: list_string
