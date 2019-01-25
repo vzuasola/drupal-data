@@ -12,14 +12,14 @@ use Drupal\Core\Url;
  * Description form plugin
  *
  * @WebcomposerConfigPlugin(
- *   id = "owsports_config",
+ *   id = "rules_regulations",
  *   route = {
- *     "title" = "Rules and Regulations Configuration",
- *     "path" = "/admin/config/webcomposer/config/rules_config",
+ *     "title" = "Rules and Regulations",
+ *     "path" = "/admin/config/owsports/rules-regulations",
  *   },
  *   menu = {
- *     "title" = "Rules and Regulations Configuration",
- *     "description" = "Configure Rules and Regulations Page",
+ *     "title" = "Rules and Regulations",
+ *     "description" = "Provides Rules and Regulations configuration",
  *     "parent" = "owsports_config.list",
  *     "weight" = 30
  *   },
@@ -30,7 +30,7 @@ class RulesRegulationsForm extends FormBase {
    * {@inheritdoc}
    */
   protected function getEditableConfigNames() {
-    return ['owsports_config.rules_configuration'];
+    return ['owsports_config.rules_regulations'];
   }
 
   /**
@@ -83,12 +83,6 @@ class RulesRegulationsForm extends FormBase {
 
     return $form;
   }
-  /**
-   * {@inheritdoc}
-   */
-  public function validateForm(array &$form, FormStateInterface $form_state) {
-    parent::validateForm($form, $form_state);
-  }
 
   /**
    * {@inheritdoc}
@@ -110,14 +104,14 @@ class RulesRegulationsForm extends FormBase {
               $file_usage = \Drupal::service('file.usage');
               $file_usage->add($file, 'owsports_config', 'image', $fid[0]);
 
-              $this->config('owsports_config.rules_configuration')
+              $this->config('owsports_config.rules_regulations')
               ->set("rules_page_background_image_url", file_create_url($file->getFileUri()))
               ->save();
           } else {
-              $this->config('owsports_config.rules_configuration')->set("rules_page_background_image_url", null);
+              $this->config('owsports_config.rules_regulations')->set("rules_page_background_image_url", null);
           }
       }
-      $this->config('owsports_config.rules_configuration')->set($key, $form_state->getValue($key))->save();
+      $this->config('owsports_config.rules_regulations')->set($key, $form_state->getValue($key))->save();
     }
     parent::submitForm($form, $form_state);
   }

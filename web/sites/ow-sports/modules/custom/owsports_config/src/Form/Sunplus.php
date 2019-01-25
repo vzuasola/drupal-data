@@ -1,0 +1,312 @@
+<?php
+
+namespace Drupal\owsports_config\Form;
+
+use Drupal\webcomposer_config_schema\Form\FormBase;
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Sunplus Configuration
+ *
+ * @WebcomposerConfigPlugin(
+ *   id = "sunplus",
+ *   route = {
+ *     "title" = "Sunplus",
+ *     "path" = "/admin/config/owsports/sunplus",
+ *   },
+ *   menu = {
+ *     "title" = "Sunplus",
+ *     "description" = "Provides Sunplus configuration",
+ *     "parent" = "owsports_config.list",
+ *     "weight" = 30
+ *   },
+ * )
+ */
+class Sunplus extends FormBase {
+
+  const MAINTENANCE_TIMEZONE = 'UTC';
+
+  const MAINTENANCE_TIME_FORMAT = 'm/d/Y H:i:s';
+
+  /**
+   * {@inheritdoc}
+   */
+  protected function getEditableConfigNames() {
+    return ['owsports_config.sunplus'];
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function form(array $form, FormStateInterface $form_state) {
+    $form['sunplus_settings_tab'] = [
+      '#type' => 'vertical_tabs',
+      '#title' => t('Settings'),
+    ];
+
+    $this->sectionGeneral($form);
+    $this->sectionAsiaTemplate($form);
+    $this->sectionEuroTemplate($form);
+    $this->sectionSingbetTemplate($form);
+    $this->sectionMaintenance($form);
+
+    return $form;
+  }
+
+  /**
+   *
+   */
+  private function sectionGeneral(array &$form) {
+    $form['general_group'] = [
+      '#type' => 'details',
+      '#title' => $this->t('General Config'),
+      '#collapsible' => TRUE,
+      '#group' => 'sunplus_settings_tab',
+    ];
+
+    $form['general_group']['pre_login_sunplus_domain'] = [
+      '#type' => 'textarea',
+      '#rows' => 1,
+      '#title' => $this->t('Pre Login Sunplus Domain'),
+      '#description' => $this->t('Pre Login Sunplus Domain.'),
+      '#default_value' => $this->get('pre_login_sunplus_domain'),
+      '#required' => TRUE,
+      '#translatable' => TRUE,
+    ];
+
+    $form['general_group']['post_login_sunplus_domain'] = [
+      '#type' => 'textarea',
+      '#rows' => 1,
+      '#title' => $this->t('Post Login Sunplus Domain'),
+      '#description' => $this->t('Post Login Sunplus Domain.'),
+      '#default_value' => $this->get('post_login_sunplus_domain'),
+      '#required' => TRUE,
+      '#translatable' => TRUE,
+    ];
+
+    $form['general_group']['iframe_width'] = [
+      '#type' => 'textarea',
+      '#rows' => 1,
+      '#title' => $this->t('Sunplus Iframe Width.'),
+      '#description' => $this->t('Sunplus Iframe Width.'),
+      '#default_value' => $this->get('iframe_width'),
+      '#required' => TRUE,
+      '#translatable' => TRUE,
+    ];
+
+    $form['general_group']['iframe_height'] = [
+      '#type' => 'textarea',
+      '#rows' => 1,
+      '#title' => $this->t('Sunplus Iframe Height.'),
+      '#description' => $this->t('Sunplus Iframe Height.'),
+      '#default_value' => $this->get('iframe_height'),
+      '#required' => TRUE,
+      '#translatable' => TRUE,
+    ];
+
+    $form['general_group']['transaction_subdomain'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Transaction Subdomain'),
+      '#description' => $this->t('transactions subdomain.'),
+      '#default_value' => $this->get('transaction_subdomain'),
+      '#required' => TRUE,
+    ];
+
+    $form['general_group']['language_mapping'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Language Mapping'),
+      '#description' => $this->t('Language conversion from Drupal to OneWorks language.'),
+      '#default_value' => $this->get('language_mapping'),
+      '#required' => TRUE,
+    ];
+
+    $form['general_group']['url_param'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('iFrame URL parameters'),
+      '#description' => $this->t('query parameters for iFrame. To add use key=value, keyword|key=value'),
+      '#default_value' => $this->get('url_param'),
+    ];
+
+    $form['general_group']['right_side_block'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Hide Right Side Block'),
+      '#default_value' => $this->get('right_side_block'),
+      '#description' => $this->t('Enable this feature to hide the right side block below 1370px and lower width of screen.'),
+    ];
+
+    $form['general_group']['user_preference'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable User Preference'),
+      '#default_value' => $this->get('user_preference'),
+      '#description' => $this->t('Enabling User Preference will automatically save last template visited by Player per language.'),
+    ];
+
+    $form['general_group']['how_to_bet_uri'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('How to bet URI'),
+      '#default_value' => $this->get('how_to_bet_uri'),
+    ];
+  }
+
+  /**
+   *
+   */
+  private function sectionAsiaTemplate(array &$form) {
+    $form['asia_group'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Asia Template (Default)'),
+      '#collapsible' => TRUE,
+      '#group' => 'sunplus_settings_tab',
+    ];
+
+    $form['asia_group']['pre_login_uri'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Pre-Login URI'),
+      '#description' => $this->t('URI used for the Pre-login state for the iFrame.'),
+      '#default_value' => $this->get('pre_login_uri'),
+      '#required' => TRUE,
+    ];
+
+    $form['asia_group']['post_login_uri'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Post-Login URI'),
+      '#description' => $this->t('URI used for the Post-login state for the iFrame.'),
+      '#default_value' => $this->get('post_login_uri'),
+      '#required' => TRUE,
+    ];
+  }
+
+  /**
+   *
+   */
+  private function sectionEuroTemplate(array &$form) {
+    $form['euro_group'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Euro Template'),
+      '#collapsible' => TRUE,
+      '#group' => 'sunplus_settings_tab',
+    ];
+
+    $form['euro_group']['euro_default_asia'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Use Asia template as default'),
+      '#default_value' => $this->get('euro_default_asia')
+    ];
+
+    $form['euro_group']['euro_pre_login_uri'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Pre-Login URI'),
+      '#description' => $this->t('URI used for the Pre-login state for the iFrame.'),
+      '#default_value' => $this->get('euro_pre_login_uri')
+    ];
+
+    $form['euro_group']['euro_post_login_uri'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Post-Login URI'),
+      '#description' => $this->t('URI used for the Post-login state for the iFrame.'),
+      '#default_value' => $this->get('euro_post_login_uri'),
+    ];
+
+    $form['euro_group']['euro_template'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Supported Language'),
+      '#description' => $this->t('Language that uses skin template. This will add "webskin=1" to the query string.'),
+      '#default_value' => $this->get('euro_template'),
+    ];
+  }
+
+  /**
+   *
+   */
+  private function sectionSingbetTemplate(array &$form) {
+    $form['singbet_group'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Singbet Template'),
+      '#collapsible' => TRUE,
+      '#group' => 'sunplus_settings_tab',
+    ];
+
+    $form['singbet_group']['singbet_default_asia'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Use Asia template as default'),
+      '#default_value' => $this->get('singbet_default_asia')
+    ];
+
+    $form['singbet_group']['singbet_pre_login_uri'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Pre-Login URI'),
+      '#description' => $this->t('URI used for the Pre-login state for the iFrame.'),
+      '#default_value' => $this->get('singbet_pre_login_uri'),
+    ];
+
+    $form['singbet_group']['singbet_post_login_uri'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Post-Login URI'),
+      '#description' => $this->t('URI used for the Post-login state for the iFrame.'),
+      '#default_value' => $this->get('singbet_post_login_uri'),
+    ];
+
+    $form['singbet_group']['singbet_template'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Supported Language'),
+      '#description' => $this->t('Language that uses skin template. This will add "webskin=2" to the query string.'),
+      '#default_value' => $this->get('singbet_template'),
+    ];
+  }
+
+  /**
+   *
+   */
+  private function sectionMaintenance(array &$form) {
+    $form['maintenance_group'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Maintenance Config'),
+      '#collapsible' => TRUE,
+      '#group' => 'sunplus_settings_tab',
+    ];
+
+    $form['maintenance_group']['maintenance_feature'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Soft Maintenance Page Status'),
+      '#description' => $this->t('Enable this feature to show the soft maintenance page behaviour in the frontend.'),
+      '#default_value' => $this->get('maintenance_feature'),
+    ];
+
+    $form['maintenance_group']['file_image_maintenance'] = [
+      '#type' => 'managed_file',
+      '#title' => $this->t('Maintenance Image'),
+      '#default_value' => $this->get('file_image_maintenance'),
+      '#upload_location' => 'public://',
+      '#upload_validators' => [
+        'file_validate_extensions' => ['gif png jpg jpeg'],
+      ],
+    ];
+
+    $form['maintenance_group']['maintenance_content'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('Maintenance Content'),
+      '#description' => $this->t('Maintenance blurb content to display.'),
+      '#default_value' => $this->get('maintenance_content')['value'],
+      '#format' => $this->get('maintenance_content')['format'],
+      '#translatable' => TRUE,
+    ];
+
+    $form['maintenance_group']['maintenance_publish_date'] = [
+      '#type' => 'datetime',
+      '#title' => $this->t('Publish Date'),
+      '#description' => $this->t('Publishing date for the maintenance page.'),
+      '#default_value' => $this->get('maintenance_publish_date', ['time_format' => self::MAINTENANCE_TIME_FORMAT]),
+      '#date_timezone' => drupal_get_user_timezone(),
+      '#format' => self::MAINTENANCE_TIME_FORMAT,
+    ];
+
+    $form['maintenance_group']['maintenance_unpublish_date'] = [
+      '#type' => 'datetime',
+      '#title' => $this->t('Unpublish Date'),
+      '#description' => $this->t('Unpublishing date for the maintenance page.'),
+      '#default_value' => $this->get('maintenance_unpublish_date', ['time_format' => self::MAINTENANCE_TIME_FORMAT]),
+      '#date_timezone' => drupal_get_user_timezone(),
+      '#format' => self::MAINTENANCE_TIME_FORMAT,
+    ];
+  }
+}
