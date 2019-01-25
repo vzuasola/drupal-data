@@ -253,6 +253,7 @@ display:
         filter_groups: false
         fields: false
         sorts: false
+        title: false
       row:
         type: fields
         options:
@@ -526,6 +527,7 @@ display:
           entity_type: taxonomy_term
           entity_field: name
           plugin_id: standard
+      title: 'Sort Game Categories 2.0'
     cache_metadata:
       max-age: 0
       contexts:
