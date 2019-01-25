@@ -1,8 +1,8 @@
 header_settings_tab__active_tab: edit-header-other-group
-logo_title: 'Mobile gambling with Dafabet en'
+logo_title: 移動端投注就在dafabet
 capslock_notification: 大寫鎖定已開啟
 mobile_remember: 记住用户名
-mobile_login_reg: 登錄/加入
+mobile_login_reg: '登錄/ 加入 '
 balance_label_override: ''
 critical_announcement: 0
 critical_announcement_content:
@@ -14,11 +14,11 @@ news_announcement_content:
   format: basic_html
 lobby_page_title: 'Online Betting - Bet on Sports, Play Online Casino and Poker at Dafabet'
 join_now_text: 立即加入
-join_now_link: qa1-m.elysium-dfbt.com/cant-login
+join_now_link: '{domain:registration_link}mobile[query:(regvia=9&{tracking})]'
 login_issue_text: 无法登陆？
-login_issue_link: qa1-m.elysium-dfbt.com/cant-login
+login_issue_link: '{domain:mobile}/{domain:mobile_lang}/cant-login'
 product_balance_label: test
-total_balance_label: 'Test Total:'
+total_balance_label: '總余額:'
 balance_error_text: 'Error Retrieving.'
 cashier_icon_hover_text: 出納櫃臺
 product_menu_new_tag: 新
@@ -29,3 +29,11 @@ balance_label_mapping: "4|OW Sports\r\n6|Dafa Sports\r\n11|eSports\r\n10|Exchang
 balance_error_text_product: test
 balance_mapping: '1|Casino Classic'
 cashier_link: test
+registration_link: '{domain:registration_link}mobile[query:(regvia=9&{tracking})]'
+profile_icon_hover_text: 'My Profile'
+default_cashier_link: '{domain:mcashier}/{domain:cashier_lang}'
+cashier_mapping: ''
+default_mcashier_link: '{domain:mcashier}/{domain:cashier_lang}[query:(ticket={auth.token}&{tracking})]'
+mcashier_mapping: ''
+promotion_page_title: 'Dafabet mobile betting promotions offer huge rewards!'
+links_title: 鏈接
