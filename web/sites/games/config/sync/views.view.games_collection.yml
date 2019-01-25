@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.storage.node.field_v2_game_title
     - node.type.games_2_0
   module:
     - node
@@ -251,12 +250,12 @@ display:
         type: entity_reference
         options:
           search_fields:
-            field_v2_game_title: field_v2_game_title
+            title: title
       fields:
-        field_v2_game_title:
-          id: field_v2_game_title
-          table: node__field_v2_game_title
-          field: field_v2_game_title
+        title:
+          id: title
+          table: node_field_data
+          field: title
           relationship: none
           group_type: group
           admin_label: ''
@@ -302,8 +301,9 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: basic_string
-          settings: {  }
+          type: string
+          settings:
+            link_to_entity: false
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -314,6 +314,8 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          entity_type: node
+          entity_field: title
           plugin_id: field
       row:
         type: entity_reference
@@ -327,10 +329,10 @@ display:
         options:
           offset: 0
       sorts:
-        field_v2_game_image_title:
-          id: field_v2_game_image_title
-          table: node__field_v2_game_image
-          field: field_v2_game_image_title
+        title:
+          id: title
+          table: node_field_data
+          field: title
           relationship: none
           group_type: group
           admin_label: ''
@@ -338,6 +340,8 @@ display:
           exposed: false
           expose:
             label: ''
+          entity_type: node
+          entity_field: title
           plugin_id: standard
     cache_metadata:
       max-age: -1
@@ -346,8 +350,7 @@ display:
         - 'languages:language_interface'
         - 'user.node_grants:view'
         - user.permissions
-      tags:
-        - 'config:field.storage.node.field_v2_game_title'
+      tags: {  }
   page_1:
     display_plugin: page
     id: page_1

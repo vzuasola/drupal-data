@@ -4,6 +4,7 @@ namespace Drupal\webcomposer_config_schema\Form;
 
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\file\Entity\File;
+use Drupal\Core\Datetime\DrupalDateTime;
 
 trait SubmitTrait {
   /**
@@ -33,7 +34,14 @@ trait SubmitTrait {
         if (isset($value['#type']) &&
           array_key_exists('#default_value', $value) &&
           !in_array($value['#type'], $excluded_types)) {
-          $data[$key] = $form_state->getValue($key);
+            $values = $form_state->getValue($key);
+
+            // Checking if value is instance of DrupalDateTime.
+            if ($values instanceof DrupalDateTime) {
+              $values = $values->getTimestamp();
+            }
+
+            $data[$key] = $values;
         }
 
         $this->constructSaveData($data, $value, $form_state);

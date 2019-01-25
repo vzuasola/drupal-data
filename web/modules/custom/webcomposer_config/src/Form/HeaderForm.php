@@ -397,6 +397,7 @@ class HeaderForm extends FormBase {
 
       "),
       '#default_value' => $this->get('currency_balance_mapping'),
+      '#translatable' => TRUE,
     ];
 
     $form['balance_group']['excluded_balance_mapping'] = [
