@@ -46,8 +46,6 @@ trait SchemaTrait {
       $date = new DrupalDateTime(date($time_format, $date));
       return $date->setTimezone(new \DateTimeZone(drupal_get_user_timezone()));
     }
-
-    return '';
   }
 
   /**
