@@ -1,6 +1,7 @@
 <?php
 
 namespace Drupal\webcomposer_config_schema\Form;
+use Drupal\Core\Datetime\DrupalDateTime;
 
 trait SchemaTrait {
   /**
@@ -24,11 +25,29 @@ trait SchemaTrait {
    *
    * @return object
    */
-  protected function get($name) {
+  protected function get($name, $options = []) {
+
     $editables = $this->getEditableConfigNames();
     $main = reset($editables);
+    $value = $this->schemaBase->getConfigValue($main, $name);
+    if (isset($options['time_format'])) {
+      $value = $this->createTimestampObject($value, $options['time_format']);
+    }
 
-    return $this->schemaBase->getConfigValue($main, $name);
+    return $value;
+  }
+
+  /**
+   * setting and converting utc to locale timezone if set
+   * referenced from https://www.drupal.org/node/1834108
+   */
+  private function createTimestampObject($date, $time_format) {
+    if (isset($date)) {
+      $date = new DrupalDateTime(date($time_format, $date));
+      return $date->setTimezone(new \DateTimeZone(drupal_get_user_timezone()));
+    }
+
+    return '';
   }
 
   /**
