@@ -45,9 +45,6 @@ class Sunplus extends FormBase {
     ];
 
     $this->sectionGeneral($form);
-    $this->sectionAsiaTemplate($form);
-    $this->sectionEuroTemplate($form);
-    $this->sectionSingbetTemplate($form);
     $this->sectionMaintenance($form);
 
     return $form;
@@ -144,22 +141,6 @@ class Sunplus extends FormBase {
       '#translatable' => TRUE,
     ];
 
-    $form['general_group']['transaction_subdomain'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Transaction Subdomain'),
-      '#description' => $this->t('transactions subdomain.'),
-      '#default_value' => $this->get('transaction_subdomain'),
-      '#required' => TRUE,
-    ];
-
-    $form['general_group']['language_mapping'] = [
-      '#type' => 'textarea',
-      '#title' => $this->t('Language Mapping'),
-      '#description' => $this->t('Language conversion from Drupal to OneWorks language.'),
-      '#default_value' => $this->get('language_mapping'),
-      '#required' => TRUE,
-    ];
-
     $form['general_group']['url_param'] = [
       '#type' => 'textarea',
       '#title' => $this->t('iFrame URL parameters'),
@@ -185,112 +166,6 @@ class Sunplus extends FormBase {
       '#type' => 'textfield',
       '#title' => $this->t('How to bet URI'),
       '#default_value' => $this->get('how_to_bet_uri'),
-    ];
-  }
-
-  /**
-   *
-   */
-  private function sectionAsiaTemplate(array &$form) {
-    $form['asia_group'] = [
-      '#type' => 'details',
-      '#title' => $this->t('Asia Template (Default)'),
-      '#collapsible' => TRUE,
-      '#group' => 'sunplus_settings_tab',
-    ];
-
-    $form['asia_group']['pre_login_uri'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Pre-Login URI'),
-      '#description' => $this->t('URI used for the Pre-login state for the iFrame.'),
-      '#default_value' => $this->get('pre_login_uri'),
-      '#required' => TRUE,
-    ];
-
-    $form['asia_group']['post_login_uri'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Post-Login URI'),
-      '#description' => $this->t('URI used for the Post-login state for the iFrame.'),
-      '#default_value' => $this->get('post_login_uri'),
-      '#required' => TRUE,
-    ];
-  }
-
-  /**
-   *
-   */
-  private function sectionEuroTemplate(array &$form) {
-    $form['euro_group'] = [
-      '#type' => 'details',
-      '#title' => $this->t('Euro Template'),
-      '#collapsible' => TRUE,
-      '#group' => 'sunplus_settings_tab',
-    ];
-
-    $form['euro_group']['euro_default_asia'] = [
-      '#type' => 'checkbox',
-      '#title' => $this->t('Use Asia template as default'),
-      '#default_value' => $this->get('euro_default_asia')
-    ];
-
-    $form['euro_group']['euro_pre_login_uri'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Pre-Login URI'),
-      '#description' => $this->t('URI used for the Pre-login state for the iFrame.'),
-      '#default_value' => $this->get('euro_pre_login_uri')
-    ];
-
-    $form['euro_group']['euro_post_login_uri'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Post-Login URI'),
-      '#description' => $this->t('URI used for the Post-login state for the iFrame.'),
-      '#default_value' => $this->get('euro_post_login_uri'),
-    ];
-
-    $form['euro_group']['euro_template'] = [
-      '#type' => 'textarea',
-      '#title' => $this->t('Supported Language'),
-      '#description' => $this->t('Language that uses skin template. This will add "webskin=1" to the query string.'),
-      '#default_value' => $this->get('euro_template'),
-    ];
-  }
-
-  /**
-   *
-   */
-  private function sectionSingbetTemplate(array &$form) {
-    $form['singbet_group'] = [
-      '#type' => 'details',
-      '#title' => $this->t('Singbet Template'),
-      '#collapsible' => TRUE,
-      '#group' => 'sunplus_settings_tab',
-    ];
-
-    $form['singbet_group']['singbet_default_asia'] = [
-      '#type' => 'checkbox',
-      '#title' => $this->t('Use Asia template as default'),
-      '#default_value' => $this->get('singbet_default_asia')
-    ];
-
-    $form['singbet_group']['singbet_pre_login_uri'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Pre-Login URI'),
-      '#description' => $this->t('URI used for the Pre-login state for the iFrame.'),
-      '#default_value' => $this->get('singbet_pre_login_uri'),
-    ];
-
-    $form['singbet_group']['singbet_post_login_uri'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Post-Login URI'),
-      '#description' => $this->t('URI used for the Post-login state for the iFrame.'),
-      '#default_value' => $this->get('singbet_post_login_uri'),
-    ];
-
-    $form['singbet_group']['singbet_template'] = [
-      '#type' => 'textarea',
-      '#title' => $this->t('Supported Language'),
-      '#description' => $this->t('Language that uses skin template. This will add "webskin=2" to the query string.'),
-      '#default_value' => $this->get('singbet_template'),
     ];
   }
 
