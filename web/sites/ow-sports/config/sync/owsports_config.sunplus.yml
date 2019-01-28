@@ -30,7 +30,7 @@ _core:
 value: null
 format: null
 sunplus_domain: '{domain:sunplus_domain}/vender.aspx?lang={domain:lang_token}&iseuro=0&webskintype=3&act=hdpou&otype=4'
-pre_login_sunplus_domain: '//prices.{sunplus.domain}/vender.aspx?lang=en&iseuro=0&webskintype=3&act={sunplus.act}&otype=4'
-post_login_sunplus_domain: '//play.{sunplus.domain}/Deposit_ProcessLogin.aspx?lang=en&iseuro=0&webskintype=3&act={sunplus.act}&otype=4'
+pre_login_sunplus_domain: 'https://prices.{sunplus.domain}/vender.aspx?lang=en&iseuro=0&webskintype=3&act={sunplus.act}&otype=4'
+post_login_sunplus_domain: 'https://play.{sunplus.domain}/Deposit_ProcessLogin.aspx?lang=en&iseuro=0&webskintype=3&act={sunplus.act}&otype=4'
 iframe_width: 100%
 iframe_height: '1000'
