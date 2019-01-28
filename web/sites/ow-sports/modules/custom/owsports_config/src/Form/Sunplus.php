@@ -54,12 +54,52 @@ class Sunplus extends FormBase {
   }
 
   /**
+   * {@inheritdoc}
+   */
+  public function validateForm(array &$form, FormStateInterface $form_state) {
+    $publishStatus = $form_state->getValue('maintenance_feature');
+    $publishDate = $form_state->getValue('maintenance_publish_date')
+      ? $form_state->getValue('maintenance_publish_date')->getTimestamp()
+      : '';
+    $unpublishDate = $form_state->getValue('maintenance_unpublish_date')
+      ? $form_state->getValue('maintenance_unpublish_date')->getTimestamp()
+      : '';
+
+    if ($publishStatus) {
+      if (!$publishDate || !$unpublishDate) {
+        $form_state->setErrorByName('maintenance_publish_date',
+        t('Please add publish and unpublish date; if you are enabling the soft maintenance.'));
+        $form_state->setErrorByName('maintenance_unpublish_date');
+      }
+      if ($unpublishDate < $publishDate) {
+        $form_state->setErrorByName('maintenance_unpublish_date',
+        t('Unpublish date for maintenance should be greater than the publish date.'));
+      }
+      if ($publishDate < strtotime('now')) {
+        $form_state->setErrorByName('maintenance_publish_date',
+        t('Publish date should be set on future time.'));
+      }
+      if ($unpublishDate < strtotime('now')) {
+        $form_state->setErrorByName('maintenance_publish_date',
+        t('Unpublish date should be set on future time.'));
+      }
+    } else {
+      if ($publishDate || $unpublishDate) {
+        $form_state->setErrorByName('maintenance_feature',
+        t('Please enable soft maintenance feature.'));
+      }
+    }
+
+    parent::validateForm($form, $form_state);
+  }
+
+  /**
    *
    */
   private function sectionGeneral(array &$form) {
     $form['general_group'] = [
       '#type' => 'details',
-      '#title' => $this->t('General Config'),
+      '#title' => $this->t('General'),
       '#collapsible' => TRUE,
       '#group' => 'sunplus_settings_tab',
     ];
@@ -260,7 +300,7 @@ class Sunplus extends FormBase {
   private function sectionMaintenance(array &$form) {
     $form['maintenance_group'] = [
       '#type' => 'details',
-      '#title' => $this->t('Maintenance Config'),
+      '#title' => $this->t('Maintenance'),
       '#collapsible' => TRUE,
       '#group' => 'sunplus_settings_tab',
     ];
