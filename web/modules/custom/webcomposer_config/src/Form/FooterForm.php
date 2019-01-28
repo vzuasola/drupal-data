@@ -163,7 +163,7 @@ class FooterForm extends FormBase {
    * Cookie Notification Config
    */
   private function sectionCookieNotification(array &$form) {
-    $form['responsive_footer'] = [
+    $form['cookie_notification_group'] = [
       '#type' => 'details',
       '#title' => $this->t('Cookie Notification'),
       '#collapsible' => true,
@@ -171,7 +171,7 @@ class FooterForm extends FormBase {
     ];
 
     $defaultValue = $this->get('cookie_notification');
-    $form['responsive_footer']['cookie_notification'] = [
+    $form['cookie_notification_group']['cookie_notification'] = [
       '#type' => 'text_format',
       '#title' => $this->t('Notification Message'),
       '#default_value' => $defaultValue['value'],
