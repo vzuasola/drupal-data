@@ -2,6 +2,7 @@ rules_page_background: null
 advanced__active_tab: edit-rules-regulations
 file_image_rules_page_background: {  }
 rules_page_color: '#000000'
-rules_page_title: 'Page Title'
+rules_page_title: 'Rules and Regulations'
 _core:
   default_config_hash: ovhSBFn_bEVvvFshDpGnkp-wQrDbYzQrF4mLA5UX624
+rules_page_background_image_url: null

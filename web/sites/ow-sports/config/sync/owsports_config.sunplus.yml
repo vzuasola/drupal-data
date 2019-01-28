@@ -6,7 +6,7 @@ transaction_subdomain: sunplustest
 language_mapping: "en|en\r\nsc|cs\r\nch|ch\r\nth|th\r\nvn|vn\r\nid|id\r\njp|jp\r\nkr|ko\r\nin|hien\r\neu|en_eu\r\ngr|el\r\npl|pl\r\nuk|eu\r\nro|ro\r\nru|eu"
 url_param: "world-cup|menutype=2\r\nworld-cup|market=T"
 right_side_block: 0
-user_preference: 0
+user_preference: 1
 colossus_login_lightbox: 0
 colossus_pre_uri: ' http://dafabet.staging-colossusbets.com/pools/13029'
 colossus_post_uri: 'https://prices.map.domain/Deposit_Processlogin.aspx'
@@ -30,7 +30,7 @@ _core:
 value: null
 format: null
 sunplus_domain: '{domain:sunplus_domain}/vender.aspx?lang={domain:lang_token}&iseuro=0&webskintype=3&act=hdpou&otype=4'
-pre_login_sunplus_domain: '//sunplustest.{sunplus.domain}/vender.aspx?lang=en&iseuro=0&webskintype=3&act={sunplus.act}&otype=4'
-post_login_sunplus_domain: '//sunplustest.{sunplus.domain}/Deposit_ProcessLogin.aspx?lang=en&iseuro=0&webskintype=3&act={sunplus.act}&otype=4'
+pre_login_sunplus_domain: '//prices.{sunplus.domain}/vender.aspx?lang=en&iseuro=0&webskintype=3&act={sunplus.act}&otype=4'
+post_login_sunplus_domain: '//play.{sunplus.domain}/Deposit_ProcessLogin.aspx?lang=en&iseuro=0&webskintype=3&act={sunplus.act}&otype=4'
 iframe_width: 100%
 iframe_height: '1000'

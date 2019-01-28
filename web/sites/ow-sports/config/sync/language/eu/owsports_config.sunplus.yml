@@ -1,0 +1,8 @@
+sunplus_settings_tab__active_tab: edit-general-group
+pre_login_sunplus_domain: '//prices.{sunplus.domain}/vender.aspx?lang=en_eu&iseuro=1&webskintype=1&act={sunplus.act}&otype=1'
+post_login_sunplus_domain: '//play.{sunplus.domain}/Deposit_ProcessLogin.aspx?lang=en_eu&iseuro=1&webskintype=1&act={sunplus.act}&otype=1'
+iframe_width: 100%
+iframe_height: '1000'
+maintenance_content:
+  value: "<p>Maintenance Content</p>\r\n"
+  format: basic_html
