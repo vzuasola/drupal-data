@@ -46,6 +46,7 @@ class ICoreGamesIntegrationConfiguration extends FormBase {
     'betconstruct' => 'BetConstruct',
     'fun_gaming' => 'Fun Gaming',
     'micro_gaming' => 'Micro Gaming',
+    'flow_gaming' => 'Flow Gaming',
   ];
 
   protected function getEditableConfigNames() {

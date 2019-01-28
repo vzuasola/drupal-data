@@ -1,0 +1,21 @@
+uuid: d6939185-b364-417e-b4d4-2dcf66cf5924
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.promotion_tiles.field_publish_date
+  module:
+    - datetime
+    - promotion_tiles
+id: promotion_tiles.promotion_tiles.field_publish_date
+field_name: field_publish_date
+entity_type: promotion_tiles
+bundle: promotion_tiles
+label: 'Publish Date'
+description: "<p>If this is set the tile will be available from this date up until the date set on <strong>Unpublish Date</strong>.\r\n<br>Otherwise, the tile will be available upon saving.</p>"
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

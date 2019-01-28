@@ -17,3 +17,8 @@ product_label_virtuals: Virtuals
 cta_label_ok: OK
 cta_label_accept: ACCEPT
 cta_label_decline: DECLINE
+copied: 'Copied to Clipboard'
+product_label_alpine: Alpine
+product_label_taurus: Taurus
+cta_label_proceed: 'Yes, Proceed'
+cta_label_no: 'No, Thanks'

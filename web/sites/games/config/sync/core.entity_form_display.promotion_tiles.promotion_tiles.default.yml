@@ -18,10 +18,13 @@ dependencies:
     - field.field.promotion_tiles.promotion_tiles.field_pre_tile_image
     - field.field.promotion_tiles.promotion_tiles.field_pre_tile_image_large
     - field.field.promotion_tiles.promotion_tiles.field_pre_tile_image_medium
+    - field.field.promotion_tiles.promotion_tiles.field_publish_date
     - field.field.promotion_tiles.promotion_tiles.field_title
+    - field.field.promotion_tiles.promotion_tiles.field_unpublish_date
     - image.style.thumbnail
   module:
     - conditional_fields
+    - datetime
     - field_group
     - image
     - link
@@ -434,6 +437,12 @@ content:
           bundle: promotion_tiles
     type: image_image
     region: content
+  field_publish_date:
+    weight: 27
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
   field_title:
     weight: 0
     settings:
@@ -441,6 +450,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_unpublish_date:
+    weight: 28
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
     region: content
   langcode:
     type: language_select

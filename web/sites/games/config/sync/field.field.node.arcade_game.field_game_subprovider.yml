@@ -1,0 +1,25 @@
+uuid: 3e3c4e25-ff24-4044-b765-8d882b26b5bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_game_subprovider
+    - node.type.arcade_game
+id: node.arcade_game.field_game_subprovider
+field_name: field_game_subprovider
+entity_type: node
+bundle: arcade_game
+label: 'Game Subprovider'
+description: 'Assign a subprovider label override for this game.<br>Currently being used for <a href="/admin/config/webcomposer/games/unsupported-currency" target="blank">UCL</a> game provider label only and is not part of integration.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: game_subprovider
+      display_name: entity_reference_1
+      arguments: {  }
+field_type: entity_reference
