@@ -107,7 +107,9 @@ class Sunplus extends FormBase {
       '#type' => 'textarea',
       '#translatable' => TRUE,
       '#title' => $this->t('Pre Login Sunplus Domain'),
-      '#description' => $this->t('Pre Login Sunplus Domain.'),
+      '#description' => $this->t('Ex:- https://prices.{sunplus.domain}/' .
+        'Deposit_ProcessLogin.aspx?lang=en&iseuro=0&webskintype=3&act=' .
+        '{sunplus.act}&otype=4.'),
       '#default_value' => $this->get('pre_login_sunplus_src'),
     ];
 
@@ -117,7 +119,9 @@ class Sunplus extends FormBase {
       '#type' => 'textarea',
       '#translatable' => TRUE,
       '#title' => $this->t('Post Login Sunplus Domain'),
-      '#description' => $this->t('Post Login Sunplus Domain.'),
+      '#description' => $this->t('Ex:- https://play.{sunplus.domain}/' .
+        'Deposit_ProcessLogin.aspx?lang=en&iseuro=0&webskintype=3&act=' .
+        '{sunplus.act}&otype=4.'),
       '#default_value' => $this->get('post_login_sunplus_src'),
     ];
 
