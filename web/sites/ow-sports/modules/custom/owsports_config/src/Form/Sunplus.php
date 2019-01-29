@@ -40,8 +40,8 @@ class Sunplus extends FormBase {
    */
   public function form(array $form, FormStateInterface $form_state) {
     $form['sunplus_settings_tab'] = [
-      '#type' => 'vertical_tabs',
       '#title' => t('Settings'),
+      '#type' => 'vertical_tabs',
     ];
 
     $this->sectionGeneral($form);
@@ -96,76 +96,65 @@ class Sunplus extends FormBase {
   private function sectionGeneral(array &$form) {
     $form['general_group'] = [
       '#type' => 'details',
-      '#title' => $this->t('General'),
       '#collapsible' => TRUE,
+      '#title' => $this->t('General'),
       '#group' => 'sunplus_settings_tab',
     ];
 
-    $form['general_group']['pre_login_sunplus_domain'] = [
-      '#type' => 'textarea',
+    $form['general_group']['pre_login_sunplus_src'] = [
       '#rows' => 1,
+      '#required' => TRUE,
+      '#type' => 'textarea',
+      '#translatable' => TRUE,
       '#title' => $this->t('Pre Login Sunplus Domain'),
       '#description' => $this->t('Pre Login Sunplus Domain.'),
-      '#default_value' => $this->get('pre_login_sunplus_domain'),
-      '#required' => TRUE,
-      '#translatable' => TRUE,
+      '#default_value' => $this->get('pre_login_sunplus_src'),
     ];
 
-    $form['general_group']['post_login_sunplus_domain'] = [
-      '#type' => 'textarea',
+    $form['general_group']['post_login_sunplus_src'] = [
       '#rows' => 1,
+      '#required' => TRUE,
+      '#type' => 'textarea',
+      '#translatable' => TRUE,
       '#title' => $this->t('Post Login Sunplus Domain'),
       '#description' => $this->t('Post Login Sunplus Domain.'),
-      '#default_value' => $this->get('post_login_sunplus_domain'),
-      '#required' => TRUE,
-      '#translatable' => TRUE,
+      '#default_value' => $this->get('post_login_sunplus_src'),
     ];
 
     $form['general_group']['iframe_width'] = [
-      '#type' => 'textarea',
-      '#rows' => 1,
+      '#size' => 10,
+      '#required' => TRUE,
+      '#type' => 'textfield',
+      '#translatable' => TRUE,
       '#title' => $this->t('Sunplus Iframe Width.'),
       '#description' => $this->t('Sunplus Iframe Width.'),
       '#default_value' => $this->get('iframe_width'),
-      '#required' => TRUE,
-      '#translatable' => TRUE,
     ];
 
     $form['general_group']['iframe_height'] = [
-      '#type' => 'textarea',
-      '#rows' => 1,
-      '#title' => $this->t('Sunplus Iframe Height.'),
-      '#description' => $this->t('Sunplus Iframe Height.'),
-      '#default_value' => $this->get('iframe_height'),
+      '#size' => 10,
       '#required' => TRUE,
+      '#type' => 'textfield',
       '#translatable' => TRUE,
-    ];
-
-    $form['general_group']['url_param'] = [
-      '#type' => 'textarea',
-      '#title' => $this->t('iFrame URL parameters'),
-      '#description' => $this->t('query parameters for iFrame. To add use key=value, keyword|key=value'),
-      '#default_value' => $this->get('url_param'),
+      '#title' => $this->t('Sunplus Iframe Height.'),
+      '#default_value' => $this->get('iframe_height'),
+      '#description' => $this->t('Sunplus Iframe Height.'),
     ];
 
     $form['general_group']['right_side_block'] = [
       '#type' => 'checkbox',
       '#title' => $this->t('Hide Right Side Block'),
       '#default_value' => $this->get('right_side_block'),
-      '#description' => $this->t('Enable this feature to hide the right side block below 1370px and lower width of screen.'),
+      '#description' => $this->t('Enable this feature to hide the right' .
+        'side block below 1370px and lower width of screen.'),
     ];
 
     $form['general_group']['user_preference'] = [
       '#type' => 'checkbox',
       '#title' => $this->t('Enable User Preference'),
       '#default_value' => $this->get('user_preference'),
-      '#description' => $this->t('Enabling User Preference will automatically save last template visited by Player per language.'),
-    ];
-
-    $form['general_group']['how_to_bet_uri'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('How to bet URI'),
-      '#default_value' => $this->get('how_to_bet_uri'),
+      '#description' => $this->t('Enabling User Preference will automatically' .
+       'save last template visited by Player per language.'),
     ];
   }
 
@@ -175,53 +164,56 @@ class Sunplus extends FormBase {
   private function sectionMaintenance(array &$form) {
     $form['maintenance_group'] = [
       '#type' => 'details',
-      '#title' => $this->t('Maintenance'),
       '#collapsible' => TRUE,
       '#group' => 'sunplus_settings_tab',
+      '#title' => $this->t('Maintenance'),
     ];
 
     $form['maintenance_group']['maintenance_feature'] = [
       '#type' => 'checkbox',
       '#title' => $this->t('Soft Maintenance Page Status'),
-      '#description' => $this->t('Enable this feature to show the soft maintenance page behaviour in the frontend.'),
       '#default_value' => $this->get('maintenance_feature'),
+      '#description' => $this->t('Enable this feature to show the soft' .
+        ' maintenance page behaviour in the frontend.'),
     ];
 
     $form['maintenance_group']['file_image_maintenance'] = [
       '#type' => 'managed_file',
-      '#title' => $this->t('Maintenance Image'),
-      '#default_value' => $this->get('file_image_maintenance'),
       '#upload_location' => 'public://',
+      '#title' => $this->t('Maintenance Image'),
       '#upload_validators' => [
         'file_validate_extensions' => ['gif png jpg jpeg'],
       ],
+      '#default_value' => $this->get('file_image_maintenance'),
     ];
 
     $form['maintenance_group']['maintenance_content'] = [
       '#type' => 'text_format',
-      '#title' => $this->t('Maintenance Content'),
-      '#description' => $this->t('Maintenance blurb content to display.'),
-      '#default_value' => $this->get('maintenance_content')['value'],
-      '#format' => $this->get('maintenance_content')['format'],
       '#translatable' => TRUE,
+      '#title' => $this->t('Maintenance Content'),
+      '#format' => $this->get('maintenance_content')['format'],
+      '#default_value' => $this->get('maintenance_content')['value'],
+      '#description' => $this->t('Maintenance blurb content to display.'),
     ];
 
     $form['maintenance_group']['maintenance_publish_date'] = [
       '#type' => 'datetime',
       '#title' => $this->t('Publish Date'),
-      '#description' => $this->t('Publishing date for the maintenance page.'),
-      '#default_value' => $this->get('maintenance_publish_date', ['time_format' => self::MAINTENANCE_TIME_FORMAT]),
-      '#date_timezone' => drupal_get_user_timezone(),
       '#format' => self::MAINTENANCE_TIME_FORMAT,
+      '#date_timezone' => drupal_get_user_timezone(),
+      '#description' => $this->t('Publishing date for the maintenance page.'),
+      '#default_value' => $this->get('maintenance_publish_date',
+        ['time_format' => self::MAINTENANCE_TIME_FORMAT]),
     ];
 
     $form['maintenance_group']['maintenance_unpublish_date'] = [
       '#type' => 'datetime',
       '#title' => $this->t('Unpublish Date'),
-      '#description' => $this->t('Unpublishing date for the maintenance page.'),
-      '#default_value' => $this->get('maintenance_unpublish_date', ['time_format' => self::MAINTENANCE_TIME_FORMAT]),
-      '#date_timezone' => drupal_get_user_timezone(),
       '#format' => self::MAINTENANCE_TIME_FORMAT,
+      '#date_timezone' => drupal_get_user_timezone(),
+      '#description' => $this->t('Unpublishing date for the maintenance page.'),
+      '#default_value' => $this->get('maintenance_unpublish_date',
+        ['time_format' => self::MAINTENANCE_TIME_FORMAT]),
     ];
   }
 }

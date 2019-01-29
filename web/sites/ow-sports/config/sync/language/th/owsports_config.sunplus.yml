@@ -1,6 +1,6 @@
 sunplus_settings_tab__active_tab: edit-general-group
-pre_login_sunplus_domain: 'https://prices.{sunplus.domain}/vender.aspx?lang=th&iseuro=0&webskintype=3&act={sunplus.act}&otype=1'
-post_login_sunplus_domain: 'https://play.{sunplus.domain}/Deposit_ProcessLogin.aspx?lang=th&iseuro=0&webskintype=3&act={sunplus.act}&otype=1'
+pre_login_sunplus_src: 'https://prices.{sunplus.domain}/vender.aspx?lang=th&iseuro=0&webskintype=3&act={sunplus.act}&otype=1'
+post_login_sunplus_src: 'https://play.{sunplus.domain}/Deposit_ProcessLogin.aspx?lang=th&iseuro=0&webskintype=3&act={sunplus.act}&otype=1'
 iframe_width: 100%
 iframe_height: '1000'
 maintenance_content:
