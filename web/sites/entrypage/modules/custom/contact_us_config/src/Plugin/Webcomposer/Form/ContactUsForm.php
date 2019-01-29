@@ -27,6 +27,13 @@ class ContactUsForm extends WebcomposerFormBase implements WebcomposerFormInterf
   public function getFields() {
     return [
 
+      'app_type' => [
+        'name' => 'Application Type',
+        'type' => 'hidden',
+        'settings' => [
+        ],
+      ],
+
       'first_name' => [
         'name' => 'First Name',
         'type' => 'textfield',
