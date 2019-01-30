@@ -3,7 +3,7 @@ maintenance_publish_date: null
 maintenance_unpublish_date: null
 file_image_maintenance: {  }
 right_side_block: 0
-user_preference: 1
+user_preference: 0
 maintenance_feature: 0
 maintenance_content:
   value: "<p>Maintenance Content</p>\r\n"

@@ -159,6 +159,7 @@ class Sunplus extends FormBase {
       '#default_value' => $this->get('user_preference'),
       '#description' => $this->t('Enabling User Preference will automatically' .
        'save last template visited by Player per language.'),
+      '#translatable' => TRUE,
     ];
   }
 
