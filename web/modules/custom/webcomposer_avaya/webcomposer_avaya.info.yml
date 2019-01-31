@@ -5,3 +5,4 @@ core: 8.x
 package: Web Composer
 dependencies:
   - webcomposer_rest_extra
+  - webcomposer_config_schema
