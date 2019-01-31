@@ -7,4 +7,3 @@ iframe_height: '1000'
 maintenance_content:
   value: "<p>Maintenance Content</p>\r\n"
   format: basic_html
-url_param: "world-cup|menutype=2\r\nworld-cup|market=T"

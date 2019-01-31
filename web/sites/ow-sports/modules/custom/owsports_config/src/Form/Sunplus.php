@@ -161,14 +161,6 @@ class Sunplus extends FormBase {
        'save last template visited by Player per language.'),
       '#translatable' => TRUE,
     ];
-
-    $form['general_group']['menu_param'] = [
-      '#type' => 'textarea',
-      '#title' => $this->t('Add Iframe Url Param in Menu'),
-      '#description' => $this->t('query parameters for iFrame. To add use key=value, keyword|key=value'),
-      '#default_value' => $this->get('menu_param'),
-      '#translatable' => TRUE,
-    ];
   }
 
   /**
