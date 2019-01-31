@@ -6,7 +6,7 @@ use Drupal\webcomposer_config_schema\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Description form plugin
+ * Description form plugin.
  *
  * @WebcomposerConfigPlugin(
  *   id = "avaya_configuration",
@@ -48,7 +48,7 @@ class AvayaChatConfiguration extends FormBase {
     $form['field_configuration']['base_url'] = [
       '#rows' => 3,
       '#type' => 'textarea',
-      '#title' => t('Avaya Chat Base URL'),
+      '#title' => $this->t('Avaya Chat Base URL'),
       '#default_value' => $this->get('base_url'),
       '#description' => $this->t('Link for Live Chat.'),
       '#translatable' => TRUE,
@@ -99,4 +99,5 @@ class AvayaChatConfiguration extends FormBase {
 
     return $form;
   }
+
 }
