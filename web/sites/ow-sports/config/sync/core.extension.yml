@@ -46,7 +46,6 @@ module:
   metatag_open_graph: 0
   node: 0
   options: 0
-  owsports_config: 0
   paragraphs: 0
   paragraphs_type_permissions: 0
   path: 0
@@ -64,6 +63,7 @@ module:
   text: 0
   token: 0
   toolbar: 0
+  owsports_config: 0
   user: 0
   views_ui: 0
   webcomposer_affilates: 0

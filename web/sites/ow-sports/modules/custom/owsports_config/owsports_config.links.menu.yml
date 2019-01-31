@@ -1,17 +1,5 @@
 owsports_config.list:
   title: 'OW-Sports Configuration'
-  route_name: owsports_config.admin_settings
+  description: 'OW-Sports Configuration'
   parent: system.admin_config
-  description: 'List of OW-Sports Configuration'
-
-owsports_config.owsports_config_form:
-  title: 'OW-Sports Custom Configuration'
-  description: 'Configure the OW-Sports custom configuration'
-  route_name: owsports_config.owsports_configuration
-  parent: owsports_config.list
-
-owsports_config.twitch_config_form:
-  title: 'Twitch Configuration'
-  description: 'Configure Twitch Settings'
-  route_name: owsports_config.twitch_configuration
-  parent: owsports_config.list
+  route_name: owsports_config.admin_settings

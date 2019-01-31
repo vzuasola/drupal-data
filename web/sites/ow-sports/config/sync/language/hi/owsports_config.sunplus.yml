@@ -1,0 +1,10 @@
+sunplus_settings_tab__active_tab: edit-general-group
+pre_login_sunplus_src: 'https://prices.{sunplus.domain}/vender.aspx?lang=hien&iseuro=0&webskintype=3&act={sunplus.act}&otype=1'
+post_login_sunplus_src: 'https://play.{sunplus.domain}/Deposit_ProcessLogin.aspx?lang=hien&iseuro=0&webskintype=3&act={sunplus.act}&otype=1'
+user_preference: 0
+iframe_width: 100%
+iframe_height: '1000'
+maintenance_content:
+  value: "<p>Maintenance Content</p>\r\n"
+  format: basic_html
+url_param: "world-cup|menutype=2\r\nworld-cup|market=T"

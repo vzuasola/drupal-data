@@ -1,5 +1,8 @@
 name: OW-Sports Configuration
-description: OW-Sports Custom Configuration
-package: Custom
 type: module
+description: OW-Sports Configuration
 core: 8.x
+package: Web Composer
+
+dependencies:
+  - webcomposer_config_schema
