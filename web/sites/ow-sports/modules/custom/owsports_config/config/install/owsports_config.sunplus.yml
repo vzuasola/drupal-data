@@ -12,4 +12,3 @@ pre_login_sunplus_src: '//sunplustest.{sunplus.domain}/vender.aspx?lang=en&iseur
 post_login_sunplus_src: '//sunplustest.{sunplus.domain}/Deposit_ProcessLogin.aspx?lang=en&iseuro=0&webskintype=3&act={sunplus.act}&otype=4'
 iframe_width: 100%
 iframe_height: '1000'
-url_param: "world-cup|menutype=2\r\nworld-cup|market=T"
