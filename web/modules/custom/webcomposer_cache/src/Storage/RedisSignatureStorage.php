@@ -65,6 +65,12 @@ class RedisSignatureStorage implements SignatureStorageInterface {
    * {@inheritdoc}
    */
   public function setSignature($signature) {
+    // calling audit log hook
+    \Drupal::service('module_handler')->invokeAll(
+      'webcomposer_cache_signature_update',
+      [$signature, $this->getSignature()]
+    );
+
     $this->redis->set($this->cacheKey, $signature);
   }
 
