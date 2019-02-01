@@ -44,7 +44,7 @@ class PokerClientPromotionsForm extends ContentEntityForm {
           '%label' => $entity->label(),
         ]));
     }
-    $form_state->setRedirect('entity.poker_client_promotions.canonical', ['poker_client_promotions' => $entity->id()]);
+    $form_state->setRedirectUrl($entity->urlInfo('collection'));
   }
 
 }

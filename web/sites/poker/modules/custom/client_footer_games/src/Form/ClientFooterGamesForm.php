@@ -44,7 +44,7 @@ class ClientFooterGamesForm extends ContentEntityForm {
           '%label' => $entity->label(),
         ]));
     }
-    $form_state->setRedirect('entity.client_footer_games.canonical', ['client_footer_games' => $entity->id()]);
+    $form_state->setRedirectUrl($entity->urlInfo('collection'));
   }
 
 }
