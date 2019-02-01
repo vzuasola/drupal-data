@@ -71,7 +71,7 @@ class RedisSignatureStorage implements SignatureStorageInterface {
       [$signature, $this->getSignature()]
     );
 
-    // $this->redis->set($this->cacheKey, $signature);
+    $this->redis->set($this->cacheKey, $signature);
   }
 
   /**
