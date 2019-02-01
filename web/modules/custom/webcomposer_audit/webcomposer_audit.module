@@ -133,11 +133,15 @@ function webcomposer_audit_webcomposer_form_config_schema_update($name, $data, $
 /**
  *
  */
-function webcomposer_audit_webcomposer_cache_signature_update($name, $newsignature, $oldsignature)
+function webcomposer_audit_webcomposer_cache_signature_update($newsignature, $oldsignature)
 {
-  $entity = new \Drupal\webcomposer_audit\Entity\RawFormEntity($name, $newsignature);
+  $name = 'webcomposer_cache_signature';
+  $newSignature = ['Signature' => $newsignature];
+  $oldSignature = ['Signature' => $oldsignature];
+
+  $entity = new \Drupal\webcomposer_audit\Entity\RawFormEntity($name, $newSignature);
   $before = $before ?? [];
-  $entity->setOriginal(new \Drupal\webcomposer_audit\Entity\RawFormEntity($name, $oldsignature));
+  $entity->setOriginal(new \Drupal\webcomposer_audit\Entity\RawFormEntity($name, $oldSignature));
 
   try {
     \Drupal::service('webcomposer_audit.database_storage')->update($entity);
