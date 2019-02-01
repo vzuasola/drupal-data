@@ -129,3 +129,19 @@ function webcomposer_audit_webcomposer_form_config_schema_update($name, $data, $
     // do nothing
   }
 }
+
+/**
+ *
+ */
+function webcomposer_audit_webcomposer_cache_signature_update($name, $newsignature, $oldsignature)
+{
+  $entity = new \Drupal\webcomposer_audit\Entity\RawFormEntity($name, $newsignature);
+  $before = $before ?? [];
+  $entity->setOriginal(new \Drupal\webcomposer_audit\Entity\RawFormEntity($name, $oldsignature));
+
+  try {
+    \Drupal::service('webcomposer_audit.database_storage')->update($entity);
+  } catch (\Exception $e) {
+    // do nothing
+  }
+}
