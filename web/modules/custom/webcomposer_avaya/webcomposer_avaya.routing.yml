@@ -5,11 +5,3 @@ webcomposer_avaya.admin_settings:
     _title: 'Webcomposer Avaya Chat'
   requirements:
     _permission: 'administer site configuration'
-
-webcomposer_avaya.avaya_configuration_form:
-  path: 'admin/config/webcomposer/avaya/config'
-  defaults:
-    _form: 'Drupal\webcomposer_avaya\Form\AvayaChatConfiguration'
-    _title: 'Avaya Chat Configuration'
-  requirements:
-    _permission: 'administer site configuration'
