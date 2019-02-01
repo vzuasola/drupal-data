@@ -8,7 +8,8 @@ function owsports_config_uninstall() {
     'rest.resource.owsports_config_resource',
     'owsports_config.rules_regulations',
     'owsports_config.sunplus',
-    'owsports_config.twitch'
+    'owsports_config.twitch',
+    'owsports_config.unsupported_page'
   ];
 
   foreach ($keys as $key) {

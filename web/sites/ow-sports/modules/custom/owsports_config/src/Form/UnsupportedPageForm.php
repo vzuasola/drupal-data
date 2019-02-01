@@ -24,21 +24,18 @@ use Drupal\file\Entity\File;
  * )
  */
 
-class UnsupportedPageForm extends FormBase
-{
+class UnsupportedPageForm extends FormBase {
     /**
      * {@inheritdoc}
      */
-    protected function getEditableConfigNames()
-    {
+    protected function getEditableConfigNames() {
         return ['owsports_config.unsupported_page'];
     }
 
     /**
      * {@inheritdoc}
      */
-    public function form(array $form, FormStateInterface $form_state)
-    {
+    public function form(array $form, FormStateInterface $form_state) {
         $form['unsupported_settings_tab'] = [
           '#title' => t('Unsupported Page Settings'),
           '#type' => 'vertical_tabs',
@@ -52,8 +49,7 @@ class UnsupportedPageForm extends FormBase
   /**
    *
    */
-    private function sectionUnsupportedCountry(array &$form)
-    {
+    private function sectionUnsupportedCountry(array &$form) {
         $form['country'] = [
           '#type' => 'details',
           '#title' => t('Country Page Content'),
@@ -109,8 +105,7 @@ class UnsupportedPageForm extends FormBase
     /**
      *
      */
-    private function sectionUnsupportedCurrency(array &$form)
-    {
+    private function sectionUnsupportedCurrency(array &$form) {
         $form['currency'] = [
           '#type' => 'details',
           '#title' => t('Currency Page Content'),
