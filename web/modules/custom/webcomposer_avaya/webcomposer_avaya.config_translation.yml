@@ -1,5 +1,0 @@
-webcomposer_avaya.avaya_configuration_schema:
-  title: 'Avaya Chat Configuration'
-  base_route_name: webcomposer_avaya.avaya_configuration_form
-  names:
-    - 'webcomposer_config.avaya_configuration'
