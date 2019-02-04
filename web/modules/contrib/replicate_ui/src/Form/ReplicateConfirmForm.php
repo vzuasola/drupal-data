@@ -130,7 +130,14 @@ class ReplicateConfirmForm extends ContentEntityConfirmFormBase {
     $replicated_entity = $this->replicator->replicateEntity($entity);
 
     drupal_set_message(t('%type (%id) has been replicated to id %new!', ['%type' => $entity->getEntityTypeId(), '%id' => $entity->id(), '%new' => $replicated_entity->id()]));
-    $form_state->setRedirectUrl($replicated_entity->toUrl());
+
+    // Update
+    $entityTypeId = $entity->getEntityTypeId();
+    $destination = \Drupal\Core\Url::fromRoute("entity.$entityTypeId.edit_form", [
+      "$entityTypeId" => $entity->id()
+    ]);
+
+    $form_state->setRedirectUrl($destination);
   }
 
   /**
