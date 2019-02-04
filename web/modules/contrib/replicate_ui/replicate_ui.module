@@ -57,7 +57,7 @@ function replicate_ui_entity_operation(\Drupal\Core\Entity\EntityInterface $enti
 
   if (in_array($entityTypeId, (array) $config->get('entity_types'))) {
     $destination = \Drupal\Core\Url::fromRoute("entity.$entityTypeId.edit_form", [
-      "$entityTypeId" => $entityId
+      $entityTypeId => $entityId
     ]);
     $options = [
       'query' => [
