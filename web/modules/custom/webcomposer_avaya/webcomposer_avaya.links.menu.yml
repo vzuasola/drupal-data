@@ -3,9 +3,3 @@ webcomposer_avaya.list:
   description: 'Avaya config settings'
   parent: system.admin_config
   route_name: webcomposer_avaya.admin_settings
-
-webcomposer_avaya.admin_avaya_configuration:
-  title: 'Avaya Chat Configuration'
-  parent: webcomposer_avaya.list
-  description: 'Provides configuration for avaya chat support'
-  route_name: webcomposer_avaya.avaya_configuration_form
