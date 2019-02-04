@@ -134,7 +134,7 @@ class ReplicateConfirmForm extends ContentEntityConfirmFormBase {
     // Update
     $entityTypeId = $entity->getEntityTypeId();
     $destination = \Drupal\Core\Url::fromRoute("entity.$entityTypeId.edit_form", [
-      "$entityTypeId" => $entity->id()
+      $entityTypeId => $entity->id()
     ]);
 
     $form_state->setRedirectUrl($destination);

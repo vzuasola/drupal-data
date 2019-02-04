@@ -66,7 +66,7 @@ function replicate_ui_entity_operation(\Drupal\Core\Entity\EntityInterface $enti
     ];
 
     $url = \Drupal\Core\Url::fromRoute("entity.$entityTypeId.replicate", [
-      "$entityTypeId" => $entityId
+      $entityTypeId => $entityId
     ], $options);
 
     $operations['replicate'] = array(
