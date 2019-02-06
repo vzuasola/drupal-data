@@ -35,16 +35,15 @@ class TerritoryBlockingForm extends FormBase {
    * {@inheritdoc}
    */
   public function form(array $form, FormStateInterface $form_state) {
-    $form['territory_blocking'] = [
+    $form['territory_blocking_tab'] = [
       '#type' => 'vertical_tabs',
     ];
 
     $form['field_configuration'] = [
       '#type' => 'details',
-      '#title' => 'Balance Configuration',
-      '#group' => 'territory_blocking',
-      '#open' => true,
-      '#tree' => true,
+      '#title' => $this->t('Balance Configuration'),
+      '#collapsible' => TRUE,
+      '#group' => 'territory_blocking_tab',
     ];
 
     $form['field_configuration']['territory_blocking_mapping'] = [
