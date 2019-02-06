@@ -37,7 +37,7 @@ class UnsupportedPageForm extends FormBase {
    */
   public function form(array $form, FormStateInterface $form_state) {
     $form['unsupported_settings_tab'] = [
-      '#title' => t('Unsupported Page Settings'),
+      '#title' => $this->t('Unsupported Page Settings'),
       '#type' => 'vertical_tabs',
     ];
 
@@ -52,7 +52,7 @@ class UnsupportedPageForm extends FormBase {
   private function sectionSupportedCountry(array &$form) {
     $form['country'] = [
       '#type' => 'details',
-      '#title' => t('Country Page Content'),
+      '#title' => $this->t('Country Page Content'),
       '#group' => 'unsupported_settings_tab',
     ];
 
@@ -87,7 +87,7 @@ class UnsupportedPageForm extends FormBase {
 
     $form['country_list'] = [
       '#type' => 'details',
-      '#title' => t('Supported Country List'),
+      '#title' => $this->t('Supported Country List'),
       '#group' => 'unsupported_settings_tab',
     ];
 
@@ -108,7 +108,7 @@ class UnsupportedPageForm extends FormBase {
   private function sectionSupportedCurrency(array &$form) {
     $form['currency'] = [
       '#type' => 'details',
-      '#title' => t('Currency Page Content'),
+      '#title' => $this->t('Currency Page Content'),
       '#group' => 'unsupported_settings_tab',
     ];
 
@@ -143,7 +143,7 @@ class UnsupportedPageForm extends FormBase {
 
     $form['currency_list'] = [
       '#type' => 'details',
-      '#title' => t('Supported Currencies'),
+      '#title' => $this->t('Supported Currencies'),
       '#group' => 'unsupported_settings_tab',
     ];
 
