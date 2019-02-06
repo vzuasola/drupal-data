@@ -50,33 +50,24 @@ function replicate_ui_entity_type_alter(array $entity_types) {
  * Implements hook_entity_operation().
  */
 function replicate_ui_entity_operation(\Drupal\Core\Entity\EntityInterface $entity) {
-  $operations = array();
+  $operations = [];
   $config = \Drupal::configFactory()->get('replicate_ui.settings');
   $entityTypeId = $entity->getEntityTypeId();
   $entityId = $entity->id();
 
   if (in_array($entityTypeId, (array) $config->get('entity_types'))) {
-    $destination = \Drupal\Core\Url::fromRoute("entity.$entityTypeId.edit_form", [
-      $entityTypeId => $entityId
-    ]);
-    $options = [
-      'query' => [
-        'destination' => $destination->toString()
-      ]
-    ];
-
     $url = \Drupal\Core\Url::fromRoute("entity.$entityTypeId.replicate", [
       $entityTypeId => $entityId
-    ], $options);
+    ]);
 
-    $operations['replicate'] = array(
+    $operations['replicate'] = [
       'title' => t('Replicate'),
       'url' => $url,
       'weight' => 50,
       'query' => [
-        'destination' => $destination->toString()
+        'destination' => NULL,
       ]
-    );
+    ];
   }
   return $operations;
 }
