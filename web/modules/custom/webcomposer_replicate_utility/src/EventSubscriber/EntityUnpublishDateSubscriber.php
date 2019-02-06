@@ -26,7 +26,7 @@ class EntityUnpublishDateSubscriber implements EventSubscriberInterface {
    *   The event we're working on.
    */
   public function onClone(ReplicateAlterEvent $event) {
-    $entity = $event->getEntity();    
+    $entity = $event->getEntity();
     if ($entity->hasField('field_unpublish_date')) {
       $date = gmdate("Y-m-d\TH:i:s", time());
       $entity->set('field_unpublish_date', ['value' => $date]);
