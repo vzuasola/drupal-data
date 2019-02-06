@@ -41,15 +41,15 @@ class UnsupportedPageForm extends FormBase {
       '#type' => 'vertical_tabs',
     ];
 
-    $this->sectionUnsupportedCountry($form);
-    $this->sectionUnsupportedCurrency($form);
+    $this->sectionSupportedCountry($form);
+    $this->sectionSupportedCurrency($form);
     return $form;
   }
 
 /**
  *
  */
-  private function sectionUnsupportedCountry(array &$form) {
+  private function sectionSupportedCountry(array &$form) {
     $form['country'] = [
       '#type' => 'details',
       '#title' => t('Country Page Content'),
@@ -87,14 +87,14 @@ class UnsupportedPageForm extends FormBase {
 
     $form['country_list'] = [
       '#type' => 'details',
-      '#title' => t('Unsupported Country List'),
+      '#title' => t('Supported Country List'),
       '#group' => 'unsupported_settings_tab',
     ];
 
     $form['country_list']['country'] = [
       '#type' => 'textarea',
       '#title' => $this->t('Country List'),
-      '#description' => $this->t('Define the unsupported countries for OW Sports, one per line.'),
+      '#description' => $this->t('Define the supported countries of OW Sports, one per line.'),
       '#default_value' => $this->get('country'),
       '#required' => false,
       '#translatable' => true,
@@ -105,7 +105,7 @@ class UnsupportedPageForm extends FormBase {
   /**
    *
    */
-  private function sectionUnsupportedCurrency(array &$form) {
+  private function sectionSupportedCurrency(array &$form) {
     $form['currency'] = [
       '#type' => 'details',
       '#title' => t('Currency Page Content'),
@@ -143,14 +143,14 @@ class UnsupportedPageForm extends FormBase {
 
     $form['currency_list'] = [
       '#type' => 'details',
-      '#title' => t('Unsupported Currencies'),
+      '#title' => t('Supported Currencies'),
       '#group' => 'unsupported_settings_tab',
     ];
 
     $form['currency_list']['currency'] = [
       '#type' => 'textarea',
       '#title' => $this->t('Currency List'),
-      '#description' => $this->t('Define the unsupported currencies for OW Sports, one per line.'),
+      '#description' => $this->t('Define the supported currencies of OW Sports, one per line.'),
       '#default_value' => $this->get('currency'),
       '#required' => false,
       '#translatable' => true,
