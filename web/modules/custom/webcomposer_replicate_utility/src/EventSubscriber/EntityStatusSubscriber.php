@@ -31,9 +31,13 @@ class EntityStatusSubscriber implements EventSubscriberInterface {
     if (!$entity instanceof Node) {
       return;
     }
-    
-    if ($entity->hasField('status')) {
-      $entity->set('status', 0);
+
+    foreach ($entity->getTranslationLanguages() as $translation_language) {
+      $langcode = $translation_language->getId();
+      $translation = $entity->getTranslation($langcode);
+      if ($translation->hasField('status')) {
+        $translation->set('status', 0);
+      }
     }
   }
 
