@@ -56,25 +56,16 @@ function replicate_ui_entity_operation(\Drupal\Core\Entity\EntityInterface $enti
   $entityId = $entity->id();
 
   if (in_array($entityTypeId, (array) $config->get('entity_types'))) {
-    $destination = \Drupal\Core\Url::fromRoute("entity.$entityTypeId.edit_form", [
-      $entityTypeId => $entityId
-    ]);
-    $options = [
-      'query' => [
-        'destination' => $destination->toString()
-      ]
-    ];
-
     $url = \Drupal\Core\Url::fromRoute("entity.$entityTypeId.replicate", [
       $entityTypeId => $entityId
-    ], $options);
+    ]);
 
     $operations['replicate'] = array(
       'title' => t('Replicate'),
       'url' => $url,
       'weight' => 50,
       'query' => [
-        'destination' => $destination->toString()
+        'destination' => null
       ]
     );
   }
