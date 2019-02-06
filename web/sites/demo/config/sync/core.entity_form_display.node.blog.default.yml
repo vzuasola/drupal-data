@@ -4,8 +4,12 @@ status: true
 dependencies:
   config:
     - field.field.node.blog.body
+    - field.field.node.blog.field_banner
+    - field.field.node.blog.field_category
+    - image.style.thumbnail
     - node.type.blog
   module:
+    - image
     - path
     - scheduler
     - text
@@ -29,11 +33,26 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_banner:
+    weight: 122
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_category:
+    weight: 121
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   langcode:
     type: language_select
     weight: 2
     region: content
-    settings: {  }
+    settings:
+      include_locked: true
     third_party_settings: {  }
   path:
     type: path
