@@ -45,6 +45,7 @@ class Sunplus extends FormBase {
     ];
 
     $this->sectionGeneral($form);
+    $this->sectionColossusbet($form);
     $this->sectionMaintenance($form);
 
     return $form;
@@ -219,6 +220,42 @@ class Sunplus extends FormBase {
       '#description' => $this->t('Unpublishing date for the maintenance page.'),
       '#default_value' => $this->get('maintenance_unpublish_date',
         ['time_format' => self::MAINTENANCE_TIME_FORMAT]),
+    ];
+  }
+
+  /**
+   *
+   */
+  private function sectionColossusbet(array &$form) {
+    $form['colossusbet_group'] = [
+      '#type' => 'details',
+      '#collapsible' => TRUE,
+      '#title' => $this->t('Colossusbet'),
+      '#group' => 'sunplus_settings_tab',
+    ];
+
+    $form['colossusbet_group']['pre_login_colossusbet_src'] = [
+      '#rows' => 1,
+      '#required' => TRUE,
+      '#type' => 'textarea',
+      '#translatable' => TRUE,
+      '#title' => $this->t('Pre Login Colossusbet Domain'),
+      '#description' => $this->t('Ex:- https://prices.{sunplus.domain}/' .
+        'DepositProcessLogin?lang=en&iseuro=0&webskintype=3&act=' .
+        '{sunplus.act}&otype=4.'),
+      '#default_value' => $this->get('pre_login_colossusbet_src'),
+    ];
+
+    $form['colossusbet_group']['post_login_colossusbet_src'] = [
+      '#rows' => 1,
+      '#required' => TRUE,
+      '#type' => 'textarea',
+      '#translatable' => TRUE,
+      '#title' => $this->t('Post Login Colossusbet Domain'),
+      '#description' => $this->t('Ex:- https://play.{sunplus.domain}/' .
+        'DepositProcessLogin?lang=en&iseuro=0&webskintype=3&act=' .
+        '{sunplus.act}&otype=4.'),
+      '#default_value' => $this->get('post_login_colossusbet_src'),
     ];
   }
 }
