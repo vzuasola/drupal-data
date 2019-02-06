@@ -5,11 +5,3 @@ webcomposer_territory_blocking.admin_settings:
     _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
   requirements:
     _permission: 'administer territory blocking'
-
-webcomposer_territory_blocking.territory_blocking_configuration_form:
-  path: '/admin/config/webcomposer/territory_blocking/config'
-  defaults:
-    _title: 'Territory Blocking'
-    _form: '\Drupal\webcomposer_territory_blocking\Form\TerritoryBlockingForm'
-  requirements:
-    _permission: 'administer territory blocking'
