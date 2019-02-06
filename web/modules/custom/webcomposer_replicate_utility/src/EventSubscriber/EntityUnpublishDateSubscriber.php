@@ -29,7 +29,7 @@ class EntityUnpublishDateSubscriber implements EventSubscriberInterface {
     $entity = $event->getEntity();
     
     if ($entity->hasField('field_unpublish_date')) {
-      $date = date('Y-m-d\T00:00:00', time());
+      $date = gmdate("Y-m-d\TH:i:s", time());
       $entity->set('field_unpublish_date', ['value' => $date]);
     }
   }
