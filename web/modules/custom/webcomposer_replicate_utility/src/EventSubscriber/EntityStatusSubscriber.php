@@ -28,7 +28,6 @@ class EntityStatusSubscriber implements EventSubscriberInterface {
    */
   public function onClone(ReplicateAlterEvent $event) {
     $entity = $event->getEntity();
-
     if (!$entity instanceof Node) {
       return;
     }
