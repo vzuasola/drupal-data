@@ -65,7 +65,7 @@ function replicate_ui_entity_operation(\Drupal\Core\Entity\EntityInterface $enti
       'url' => $url,
       'weight' => 50,
       'query' => [
-        'destination' => null
+        'destination' => NULL,
       ]
     );
   }
