@@ -3,9 +3,3 @@ webcomposer_territory_blocking.list:
   description: 'Manage Territory Blocking'
   parent: system.admin_config
   route_name: webcomposer_territory_blocking.admin_settings
-
-webcomposer_territory_blocking.admin_territory_blocking_configuration:
-  title: 'Territory Blocking'
-  description: 'List of restricted countries'
-  route_name: webcomposer_territory_blocking.territory_blocking_configuration_form
-  parent: webcomposer_territory_blocking.list
