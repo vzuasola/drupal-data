@@ -1,14 +1,14 @@
-blocking_country_not_found_title: 'Unsupported Country'
-blocking_country_not_found_image:
-  - '2692'
-blocking_country_not_found_content:
+unsupported_country_title: 'Unsupported Country'
+file_image_unsupported_country:
+  - ''
+unsupported_country_content:
   value: "<div class=\"page-404-text-area text-center\">\r\n<h2 class=\"text-semibold\">COUNTRY RESTRICTION<!--Ooops, that was unexpected. BLOCKING COUNTRY--></h2>\r\n\r\n<p class=\"mb-5\">You are accessing OW Sports from a restricted country.<!--The page doesn't exists.--></p>\r\n\r\n<p class=\"mb-5\">If you have any concerns, please don't hesitate to contact our Customer Services via email at <a href=\" help@indiacsonline.com\">help@indiacsonline.com</a>.</p>\r\n<!--<p class=\"mb-5\">We'll help you get around though.\r\n</p>--></div>\r\n\r\n<div class=\"page-404-icons mt-20 mb-20\">\r\n<ul style=\"overflow:visible;\">\r\n\t<li class=\"ow-sports\"><a class=\"mb-25\" href=\"/in/sports{legacy.params}{tracking.token}\"></a><span>OW Sports</span></li>\r\n\t<li class=\"dafa-sports\"><a class=\"mb-25\" href=\"/in/sports-df{legacy.params}{tracking.token}\"></a><span>Dafa Sports</span></li>\r\n\t<li class=\"casino\"><a class=\"mb-25\" href=\"/in/casino{legacy.params}{tracking.token}\"></a><span>Casino</span></li>\r\n\t<li class=\"live-dealer\"><a class=\"mb-25\" href=\"/in/live-dealer{legacy.params}{tracking.token}\"></a><span>Live Dealer</span></li>\r\n\t<li class=\"poker\"><a class=\"mb-25\" href=\"/en/poker{legacy.params}{tracking.token}\"></a><span>Poker</span></li>\r\n\t<li class=\"games\"><a class=\"mb-25\" href=\"/en/games{legacy.params}{tracking.token}\"></a><span>Games</span></li>\r\n\t<li class=\"keno\"><a class=\"mb-25\" href=\"/en/keno{legacy.params}{tracking.token}\"></a><span>Lottery</span></li>\r\n</ul>\r\n</div>\r\n"
   format: basic_html
 country: ''
-blocking_currency_not_found_title: 'Unsupported Currency'
-blocking_currency_not_found_image:
-  - '2693'
-blocking_currency_not_found_content:
+unsupported_currency_title: 'Unsupported Currency'
+file_image_unsupported_currency:
+  - ''
+unsupported_currency_content:
   value: "<div class=\"page-404-text-area text-center\">\r\n<h2 class=\"text-semibold\"><!--Ooops, that was unexpected. BLOCKING CURRENCY-->UNSUPPORTED CURRENCY</h2>\r\n\r\n<p class=\"mb-5\">OW Sports does not allow the use of your currency at this moment.<!--The page doesn't exists.--></p>\r\n\r\n<p class=\"mb-5\">Please feel free to choose among the list of other Dafabet products that you can use. <!--You may have followed a bad link or typed the address (URL) incorrectly.--></p>\r\n\r\n<p class=\"mb-5\">For more inquiries, you can reach us at <a href=\"mailto:help@indiacsonline.com\">help@indiacsonline.com</a><!--We'll help you get around though.--></p>\r\n</div>\r\n\r\n<div class=\"page-404-icons mt-20 mb-20\">\r\n<ul style=\"overflow:visible;\">\r\n\t<li class=\"ow-sports\"><a class=\"mb-25\" href=\"/in/sports{legacy.params}{tracking.token}\"></a><span>OW Sports</span></li>\r\n\t<li class=\"dafa-sports\"><a class=\"mb-25\" href=\"/in/sports-df{legacy.params}{tracking.token}\"></a><span>Dafa Sports</span></li>\r\n\t<li class=\"casino\"><a class=\"mb-25\" href=\"/in/casino{legacy.params}{tracking.token}\"></a><span>Casino</span></li>\r\n\t<li class=\"live-dealer\"><a class=\"mb-25\" href=\"/in/live-dealer{legacy.params}{tracking.token}\"></a><span>Live Dealer</span></li>\r\n\t<li class=\"poker\"><a class=\"mb-25\" href=\"/en/poker{legacy.params}{tracking.token}\"></a><span>Poker</span></li>\r\n\t<li class=\"games\"><a class=\"mb-25\" href=\"/en/games{legacy.params}{tracking.token}\"></a><span>Games</span></li>\r\n\t<li class=\"keno\"><a class=\"mb-25\" href=\"/en/keno{legacy.params}{tracking.token}\"></a><span>Keno</span></li>\r\n</ul>\r\n</div>\r\n"
   format: basic_html
 currency: ''
