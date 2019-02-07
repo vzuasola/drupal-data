@@ -81,7 +81,6 @@ class ICoreGamesIntegrationConfiguration extends FormBase {
     }
 
     $this->safariNotifTab($form);
-    $this->unsupportedCurrencyTab($form);
     return $form;
   }
 
@@ -207,40 +206,4 @@ class ICoreGamesIntegrationConfiguration extends FormBase {
 
   }
 
-  private function unsupportedCurrencyTab(&$form) {
-    $form['currency'] = [
-      '#type' => 'details',
-      '#title' => $this->t('[Decprecated] Unsupported Currency Message'),
-      '#collapsible' => TRUE,
-      '#group' => 'icore_games_integration_form'
-    ];
-
-    $form['currency']['fallback_error_title'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Fallback Error Title'),
-      '#description' => $this->t('Defines the GPI Game Url'),
-      '#default_value' => $this->get('fallback_error_title'),
-      '#required' => false,
-      '#translatable' => TRUE,
-    ];
-
-   $form['currency']['fallback_error_message'] = [
-      '#type' => 'text_format',
-      '#title' => $this->t('Fallback error button'),
-      '#description' => $this->t('Fallback Error Message'),
-      '#default_value' => $this->get('fallback_error_message')['value'],
-      '#required' => false,
-      '#translatable' => TRUE,
-    ];
-
-   $form['currency']['fallback_error_button'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Fallback error button'),
-      '#description' => $this->t('Fallback Error LightBox Ok button'),
-      '#default_value' => $this->get('fallback_error_button'),
-      '#required' => false,
-      '#translatable' => TRUE,
-    ];
-
-  }
 }
