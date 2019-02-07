@@ -64,10 +64,10 @@ class UnsupportedPageForm extends FormBase {
       '#translatable' => true,
     ];
 
-    $form['country']['file_image_unsupported_country_image'] = [
+    $form['country']['file_image_unsupported_country'] = [
       '#type' => 'managed_file',
       '#title' => $this->t('Image'),
-      '#default_value' => $this->get('file_image_unsupported_country_image'),
+      '#default_value' => $this->get('file_image_unsupported_country'),
       '#upload_location' => 'public://',
       '#required' => false,
       '#translatable' => true,
@@ -120,10 +120,10 @@ class UnsupportedPageForm extends FormBase {
       '#translatable' => true,
     ];
 
-    $form['currency']['file_image_unsupported_currency_image'] = [
+    $form['currency']['file_image_unsupported_currency'] = [
       '#type' => 'managed_file',
       '#title' => $this->t('Image'),
-      '#default_value' => $this->get('file_image_unsupported_currency_image'),
+      '#default_value' => $this->get('file_image_unsupported_currency'),
       '#upload_location' => 'public://',
       '#required' => false,
       '#translatable' => true,
