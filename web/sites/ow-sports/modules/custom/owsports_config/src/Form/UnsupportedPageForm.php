@@ -56,18 +56,18 @@ class UnsupportedPageForm extends FormBase {
       '#group' => 'unsupported_settings_tab',
     ];
 
-    $form['country']['blocking_country_not_found_title'] = [
+    $form['country']['unsupported_country_title'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Title'),
-      '#default_value' => $this->get('blocking_country_not_found_title'),
+      '#default_value' => $this->get('unsupported_country_title'),
       '#required' => false,
       '#translatable' => true,
     ];
 
-    $form['country']['blocking_country_not_found_image'] = [
+    $form['country']['file_image_unsupported_country'] = [
       '#type' => 'managed_file',
       '#title' => $this->t('Image'),
-      '#default_value' => $this->get('blocking_country_not_found_image'),
+      '#default_value' => $this->get('file_image_unsupported_country'),
       '#upload_location' => 'public://',
       '#required' => false,
       '#translatable' => true,
@@ -76,11 +76,11 @@ class UnsupportedPageForm extends FormBase {
       ],
     ];
 
-    $form['country']['blocking_country_not_found_content'] = [
+    $form['country']['unsupported_country_content'] = [
       '#type' => 'text_format',
       '#title' => $this->t('Content'),
       '#description' => $this->t('Content'),
-      '#default_value' => $this->get('blocking_country_not_found_content')['value'],
+      '#default_value' => $this->get('unsupported_country_content')['value'],
       '#required' => false,
       '#translatable' => true,
     ];
@@ -112,18 +112,18 @@ class UnsupportedPageForm extends FormBase {
       '#group' => 'unsupported_settings_tab',
     ];
 
-    $form['currency']['blocking_currency_not_found_title'] = [
+    $form['currency']['unsupported_currency_title'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Title'),
-      '#default_value' => $this->get('blocking_currency_not_found_title'),
+      '#default_value' => $this->get('unsupported_currency_title'),
       '#required' => false,
       '#translatable' => true,
     ];
 
-    $form['currency']['blocking_currency_not_found_image'] = [
+    $form['currency']['file_image_unsupported_currency'] = [
       '#type' => 'managed_file',
       '#title' => $this->t('Image'),
-      '#default_value' => $this->get('blocking_currency_not_found_image'),
+      '#default_value' => $this->get('file_image_unsupported_currency'),
       '#upload_location' => 'public://',
       '#required' => false,
       '#translatable' => true,
@@ -132,11 +132,11 @@ class UnsupportedPageForm extends FormBase {
       ],
     ];
 
-    $form['currency']['blocking_currency_not_found_content'] = [
+    $form['currency']['unsupported_currency_content'] = [
       '#type' => 'text_format',
       '#title' => $this->t('Content'),
       '#description' => $this->t('Content'),
-      '#default_value' => $this->get('blocking_currency_not_found_content')['value'],
+      '#default_value' => $this->get('unsupported_currency_content')['value'],
       '#required' => false,
       '#translatable' => true,
     ];
