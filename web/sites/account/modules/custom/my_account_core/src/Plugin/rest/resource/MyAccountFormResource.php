@@ -223,7 +223,6 @@ class MyAccountFormResource extends ResourceBase
             $value['contact_preference_label'] = $values['contact_preference_label']['options']['label'];
             $value['contact_preference_top_blurb'] = $values['contact_preference_top_blurb'];
             $value['contact_preference_bottom_blurb'] = $values['contact_preference_bottom_blurb'];
-            
         } elseif ($key == 'profile') {
             $unsetKeys = $this->getUnsetKeys();
 
