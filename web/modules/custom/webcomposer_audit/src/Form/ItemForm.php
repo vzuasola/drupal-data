@@ -136,6 +136,8 @@ class ItemForm extends FormBase {
       ',
       '#rows' => $rows,
     ];
+
+    $form['#attached']['library'][] = 'webcomposer_audit/webcomposer_audit_item_form';
   }
 
   /**
