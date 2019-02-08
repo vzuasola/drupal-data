@@ -1,0 +1,4 @@
+webcomposer_audit_item_form:
+  css:
+    theme:
+      css/webcomposer_audit.css: {}
