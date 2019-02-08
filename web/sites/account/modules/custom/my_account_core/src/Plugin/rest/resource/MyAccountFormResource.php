@@ -223,6 +223,7 @@ class MyAccountFormResource extends ResourceBase
             $value['contact_preference_label'] = $values['contact_preference_label']['options']['label'];
             $value['contact_preference_top_blurb'] = $values['contact_preference_top_blurb'];
             $value['contact_preference_bottom_blurb'] = $values['contact_preference_bottom_blurb'];
+            
         } elseif ($key == 'profile') {
             $unsetKeys = $this->getUnsetKeys();
 
@@ -302,6 +303,8 @@ class MyAccountFormResource extends ResourceBase
             $value['fastreg_redirect'] = $values['fastreg_redirect'];
             $value['fastreg_timeout_redirect'] = $values['fastreg_timeout_redirect'];
             $value['fastreg_mobile_redirect'] = $values['fastreg_mobile_redirect'];
+        } else {
+            $value = $values;
         }
         return $value;
     }
