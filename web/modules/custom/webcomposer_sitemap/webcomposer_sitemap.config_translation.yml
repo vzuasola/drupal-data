@@ -1,5 +1,0 @@
-webcomposer_sitemap.sitemap_configuration_schema:
-  title: 'Sitemap Configuration'
-  base_route_name: webcomposer_sitemap.sitemap_configuration_form
-  names:
-    - 'webcomposer_config.sitemap_configuration'
