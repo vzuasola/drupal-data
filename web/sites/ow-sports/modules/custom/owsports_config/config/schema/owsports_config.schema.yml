@@ -1,0 +1,18 @@
+owsports_config.owsports_configuration:
+  type: config_object
+  label: 'OW-Sports Custom Configuration'
+  mapping:
+    maintenance_content:
+      type: text_format
+      label: 'Maintenance Content'
+
+owsports_config.twitch_configuration:
+  type: config_object
+  label: 'Twitch Configuration'
+  mapping:
+    twitch_viewers:
+      type: label
+      label: 'Twitch Viewers'
+    twitch_disclaimer:
+      type: text
+      label: 'Twitch Disclaimer'

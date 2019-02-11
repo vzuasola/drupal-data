@@ -1,7 +1,23 @@
 owsports_config.admin_settings:
-  path: 'admin/config/owsports'
+  path: '/admin/config/owsports_config'
   defaults:
+    _title: 'OW-Sports Configuration Form'
     _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
-    _title: 'TOW-Sports Configuration'
+  requirements:
+    _permission: 'administer site configuration'
+
+owsports_config.owsports_configuration:
+  path: '/admin/config/owsports_config/custom'
+  defaults:
+    _title: 'OW-Sports Configuration Form'
+    _form: '\Drupal\owsports_config\Form\OWSportsCustomConfigForm'
+  requirements:
+    _permission: 'administer site configuration'
+
+owsports_config.twitch_configuration:
+  path: '/admin/config/owsports_config/twitch'
+  defaults:
+    _title: 'Twitch Configuration Form'
+    _form: '\Drupal\owsports_config\Form\TwitchConfigForm'
   requirements:
     _permission: 'administer site configuration'

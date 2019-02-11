@@ -2,56 +2,47 @@
 
 namespace Drupal\owsports_config\Form;
 
-use Drupal\webcomposer_config_schema\Form\FormBase;
+use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\file\Entity\File;
 
-/**
- * Twitch Configuration
- *
- * @WebcomposerConfigPlugin(
- *   id = "twitch",
- *   route = {
- *     "title" = "Twitch",
- *     "path" = "/admin/config/owsports/twitch",
- *   },
- *   menu = {
- *     "title" = "Twitch",
- *     "description" = "Provides Twitch configuration",
- *     "parent" = "owsports_configs.list",
- *     "weight" = 30
- *   },
- * )
- */
-class Twitch extends FormBase {
+class TwitchConfigForm extends ConfigFormBase {
+
   /**
    * {@inheritdoc}
    */
   protected function getEditableConfigNames() {
-    return ['owsports_config.twitch'];
+    return ['owsports_config.twitch_configuration'];
   }
 
   /**
    * {@inheritdoc}
    */
-  public function form(array $form, FormStateInterface $form_state) {
+  public function getFormId() {
+    return 'owsports_config.twitch_configuration_form';
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function buildForm(array $form, FormStateInterface $form_state) {
+    $config = $this->config('owsports_config.twitch_configuration');
+
     $form['twitch_settings_tab'] = [
       '#type' => 'vertical_tabs',
       '#title' => t('Settings'),
     ];
 
-    $this->sectionText($form);
-    $this->sectionTwitch($form);
-
-    return $form;
-  }
-
-  /**
-   *
-   */
-  private function sectionText(array &$form) {
     $form['text_config_group'] = [
       '#type' => 'details',
       '#title' => $this->t('Text Settings'),
+      '#collapsible' => TRUE,
+      '#group' => 'twitch_settings_tab',
+    ];
+
+    $form['twitch_config_group'] = [
+      '#type' => 'details',
+      '#title' => $this->t('API Settings'),
       '#collapsible' => TRUE,
       '#group' => 'twitch_settings_tab',
     ];
@@ -60,35 +51,21 @@ class Twitch extends FormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Viewers Text'),
       '#description' => $this->t('Display text for x number of viewers.'),
-      '#default_value' => $this->get('twitch_viewers'),
+      '#default_value' => $config->get('twitch_viewers'),
       '#required' => TRUE,
-      '#translatable' => TRUE,
     ];
 
     $form['text_config_group']['twitch_disclaimer'] = array(
-      '#type' => 'textarea',
-      '#title' => $this->t('Disclaimer'),
-      '#default_value' => $this->get('twitch_disclaimer'),
-      '#translatable' => TRUE,
+        '#type' => 'textarea',
+        '#title' => $this->t('Disclaimer'),
+        '#default_value' => $config->get('twitch_disclaimer'),
     );
-  }
-
-  /**
-   *
-   */
-  private function sectionTwitch(array &$form) {
-    $form['twitch_config_group'] = [
-      '#type' => 'details',
-      '#title' => $this->t('API Settings'),
-      '#collapsible' => TRUE,
-      '#group' => 'twitch_settings_tab',
-    ];
 
     $form['twitch_config_group']['twitch_url'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Twitch URL'),
       '#description' => $this->t('Twitch API URL (with trailing slash).'),
-      '#default_value' => $this->get('twitch_url'),
+      '#default_value' => $config->get('twitch_url'),
       '#required' => TRUE,
     ];
 
@@ -96,7 +73,7 @@ class Twitch extends FormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Twitch Player JS URL'),
       '#description' => $this->t('Twitch Player JS URL (with trailing slash).'),
-      '#default_value' => $this->get('twitch_player_js'),
+      '#default_value' => $config->get('twitch_player_js'),
       '#required' => TRUE,
     ];
 
@@ -104,8 +81,30 @@ class Twitch extends FormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Client ID'),
       '#description' => $this->t('Client ID for request'),
-      '#default_value' => $this->get('twitch_client_id'),
+      '#default_value' => $config->get('twitch_client_id'),
       '#required' => TRUE,
     ];
+
+    return parent::buildForm($form, $form_state);
   }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function submitForm(array &$form, FormStateInterface $form_state) {
+    $keys = [
+      'twitch_url',
+      'twitch_player_js',
+      'twitch_client_id',
+      'twitch_viewers',
+      'twitch_disclaimer',
+    ];
+
+    foreach ($keys as $key) {
+      $this->config('owsports_config.twitch_configuration')->set($key, $form_state->getValue($key))->save();
+    }
+
+    parent::submitForm($form, $form_state);
+  }
+
 }

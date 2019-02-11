@@ -17,7 +17,7 @@ use Drupal\Core\Form\FormStateInterface;
  *   menu = {
  *     "title" = "Sunplus",
  *     "description" = "Provides Sunplus configuration",
- *     "parent" = "owsports_config.list",
+ *     "parent" = "owsports_configs.list",
  *     "weight" = 30
  *   },
  * )

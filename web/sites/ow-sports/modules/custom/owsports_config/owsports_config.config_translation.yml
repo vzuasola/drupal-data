@@ -1,0 +1,11 @@
+owsports_config.owsports_configuration:
+  title: 'OW-Sports Custom Configuration Translation'
+  base_route_name: owsports_config.owsports_configuration
+  names:
+    - owsports_config.owsports_configuration
+
+owsports_config.twitch_configuration:
+  title: 'Twitch Configuration Translation'
+  base_route_name: owsports_config.twitch_configuration
+  names:
+    - owsports_config.twitch_configuration

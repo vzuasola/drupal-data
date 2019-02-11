@@ -1,0 +1,9 @@
+owsports_config.owsports_configuration:
+  route_name: owsports_config.owsports_configuration
+  base_route: owsports_config.owsports_configuration
+  title: 'OW-Sports custom configuration'
+
+owsports_config.twitch_configuration:
+  route_name: owsports_config.twitch_configuration
+  base_route: owsports_config.twitch_configuration
+  title: 'Twitch configuration'

@@ -1,0 +1,30 @@
+pre_login_uri: vender.aspx
+post_login_uri: Deposit_ProcessLogin.aspx
+language_mapping: "en|en\r\nsc|cs\r\nch|ch\r\nth|th\r\nvn|vn\r\nid|id\r\njp|jp\r\nkr|ko\r\nin|hien\r\neu|en_eu\r\ngr|el\r\npl|pl\r\nuk|eu\r\nro|ro\r\nru|eu"
+euro_pre_login_uri: vender.aspx
+euro_post_login_uri: Deposit_ProcessLogin.aspx
+euro_template: 'eu,gr,pl,uk,ro,ru'
+singbet_pre_login_uri: onebook
+singbet_post_login_uri: Deposit_ProcessLogin.aspx
+singbet_template: 'sc,ch'
+_core:
+  default_config_hash: eq06lVY_EO26YIZp8-gsLZO8-yULblkh-Ie4s306ces
+colossus_pre_uri: 'https://dafabet.colossusbets.com/pools/13029'
+colossus_post_uri: 'https://prices.map.domain/Deposit_Processlogin.aspx'
+singbet_default_asia: 1
+how_to_bet_uri: '{domain:entry}/{domain:lang_token}/sports/getting-started[query:({credentials.params}&{tracking})]'
+euro_default_asia: 0
+transaction_subdomain: prices
+url_param: "world-cup|menutype=2\r\nworld-cup|market=T"
+euro_switch_redirect: null
+colossus_login_lightbox: 1
+right_side_block: 0
+maintenance_feature: 0
+maintenance_content:
+  value: "<p>Maintenance Content</p>\r\n"
+  format: basic_html
+maintenance_publish_date: '08/02/2018 11:11:11'
+maintenance_unpublish_date: '09/02/2018 11:11:11'
+file_image_maintenance_url: 'http://ow-sports.drupal.local/sites/ow-sports/files/Right-Side-Banner-Configuration-Guideline.png'
+file_image_maintenance:
+  - '2217'

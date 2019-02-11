@@ -18,7 +18,7 @@ use Drupal\file\Entity\File;
  *   menu = {
  *     "title" = "Unsupported Page",
  *     "description" = "Provides Unsupported Page and Currency Page configuration",
- *     "parent" = "owsports_config.list",
+ *     "parent" = "owsports_configs.list",
  *     "weight" = 31
  *   },
  * )
