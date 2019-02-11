@@ -72,25 +72,21 @@ class LanguageAccessSubscriber implements EventSubscriberInterface {
     // Allow user path.
     if (strpos($requestUrl, '/user/') === FALSE) {
       // Check access to language.
+      $route_match = \Drupal::routeMatch();
+      $current_route = $route_match->getRouteName();
       if (!$this->currentUser->hasPermission('access language ' . $language->getId())) {
-        $default_language = $this->languageManager->getDefaultLanguage();
-        // We still want to allow access to default language.
-        if ($language->getId() !== $default_language->getId()) {
-          // Do not execute on drush.
-          if (PHP_SAPI != 'cli') {
-            // Display the default access denied page.
-            if ($event->getRequestType() === HttpKernelInterface::MASTER_REQUEST) {
-              throw new AccessDeniedHttpException();
-            }
-          }
-        }
-        else {
-          $route_match = \Drupal::routeMatch();
-          $current_route = $route_match->getRouteName();
-          $pattern = '/^entity\.([a-za-zA-Z0-9_\-]+)\.edit_form$/';
-          if (preg_match($pattern, $current_route, $matches)) {
+        if (PHP_SAPI != 'cli') {
+          // Display the default access denied page.
+          if ($event->getRequestType() === HttpKernelInterface::MASTER_REQUEST) {
             throw new AccessDeniedHttpException();
           }
+        }
+      }
+      // fix for menu entities
+      if (preg_match('/^([a-za-zA-Z0-9_\-.]*)entity.menu.(edit_form|delete_form)$/', $current_route)) {
+        $langcode = $route_match->getParameter('menu')->get('langcode');
+        if (!$this->currentUser->hasPermission('access language ' . $langcode)) {
+          throw new AccessDeniedHttpException();
         }
       }
     }
