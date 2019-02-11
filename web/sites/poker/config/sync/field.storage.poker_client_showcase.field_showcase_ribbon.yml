@@ -1,0 +1,20 @@
+uuid: 47c14ff3-434e-4950-b9a3-ff865c683ed7
+langcode: en
+status: true
+dependencies:
+  module:
+    - poker_client_showcase
+    - taxonomy
+id: poker_client_showcase.field_showcase_ribbon
+field_name: field_showcase_ribbon
+entity_type: poker_client_showcase
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

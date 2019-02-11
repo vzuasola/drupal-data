@@ -1,0 +1,111 @@
+uuid: 4e5b3865-7d47-427c-bd57-1fbe16d75fed
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.poker_client_showcase.poker_client_showcase.field_game_categories
+    - field.field.poker_client_showcase.poker_client_showcase.field_log_in_state
+    - field.field.poker_client_showcase.poker_client_showcase.field_publish_date
+    - field.field.poker_client_showcase.poker_client_showcase.field_showcase_body
+    - field.field.poker_client_showcase.poker_client_showcase.field_showcase_image
+    - field.field.poker_client_showcase.poker_client_showcase.field_showcase_ribbon
+    - field.field.poker_client_showcase.poker_client_showcase.field_title
+    - field.field.poker_client_showcase.poker_client_showcase.field_unpublish_date
+    - image.style.thumbnail
+  module:
+    - datetime
+    - field_group
+    - image
+    - poker_client_showcase
+    - text
+third_party_settings:
+  field_group:
+    group_scheduler_settings:
+      children:
+        - field_publish_date
+        - field_unpublish_date
+      parent_name: ''
+      weight: 8
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Scheduler Settings'
+id: poker_client_showcase.poker_client_showcase.default
+targetEntityType: poker_client_showcase
+bundle: poker_client_showcase
+mode: default
+content:
+  field_game_categories:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_log_in_state:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_publish_date:
+    weight: 11
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_showcase_body:
+    weight: 5
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea_with_summary
+    region: content
+  field_showcase_image:
+    weight: 4
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_showcase_ribbon:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_unpublish_date:
+    weight: 12
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  translation:
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  name: true
+  user_id: true

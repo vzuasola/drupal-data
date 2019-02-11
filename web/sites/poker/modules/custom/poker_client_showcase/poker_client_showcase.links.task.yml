@@ -1,0 +1,22 @@
+# Poker client showcase routing definition
+poker_client_showcase.settings_tab:
+  route_name: poker_client_showcase.settings
+  title: 'Settings'
+  base_route: poker_client_showcase.settings
+
+entity.poker_client_showcase.canonical:
+  route_name: entity.poker_client_showcase.canonical
+  base_route: entity.poker_client_showcase.canonical
+  title: 'View'
+
+entity.poker_client_showcase.edit_form:
+  route_name: entity.poker_client_showcase.edit_form
+  base_route: entity.poker_client_showcase.canonical
+  title: 'Edit'
+
+entity.poker_client_showcase.delete_form:
+  route_name:  entity.poker_client_showcase.delete_form
+  base_route:  entity.poker_client_showcase.canonical
+  title: Delete
+  weight: 10
+
