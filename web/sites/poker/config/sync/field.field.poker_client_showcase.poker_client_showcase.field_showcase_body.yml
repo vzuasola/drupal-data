@@ -1,0 +1,22 @@
+uuid: 88395fdb-575a-4be8-8d93-6ebffa68af2a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.poker_client_showcase.field_showcase_body
+  module:
+    - poker_client_showcase
+    - text
+id: poker_client_showcase.poker_client_showcase.field_showcase_body
+field_name: field_showcase_body
+entity_type: poker_client_showcase
+bundle: poker_client_showcase
+label: 'Showcase Body'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary
