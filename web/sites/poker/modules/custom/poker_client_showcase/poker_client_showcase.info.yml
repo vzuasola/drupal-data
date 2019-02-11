@@ -1,0 +1,5 @@
+name: Poker Client Showcase
+type: module
+description: Manage Poker Client Showcase Entity
+core: 8.x
+package: Custom

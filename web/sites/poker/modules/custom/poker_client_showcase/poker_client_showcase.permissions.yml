@@ -1,0 +1,22 @@
+add poker client showcase entities:
+  title: 'Create new Poker client showcase entities'
+
+administer poker client showcase entities:
+  title: 'Administer Poker client showcase entities'
+  description: 'Allow to access the administration form to configure Poker client showcase entities.'
+  restrict access: true
+
+delete poker client showcase entities:
+  title: 'Delete Poker client showcase entities'
+
+edit poker client showcase entities:
+  title: 'Edit Poker client showcase entities'
+
+access poker client showcase overview:
+  title: 'Access the Poker client showcase overview page'
+
+view published poker client showcase entities:
+  title: 'View published Poker client showcase entities'
+
+view unpublished poker client showcase entities:
+  title: 'View unpublished Poker client showcase entities'
