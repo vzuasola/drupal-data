@@ -1,4 +1,0 @@
-webcomposer_sitemap.sitemap_configuration_tab:
-  route_name: webcomposer_sitemap.sitemap_configuration_form
-  title: 'Sitemap Configuration'
-  base_route: webcomposer_sitemap.sitemap_configuration_form
