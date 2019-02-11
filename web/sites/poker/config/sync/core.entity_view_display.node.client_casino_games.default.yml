@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.client_casino_games.field_clcasino_game_title
     - field.field.node.client_casino_games.field_clcasino_ribbon
     - field.field.node.client_casino_games.field_clcasino_show_game_info
+    - field.field.node.client_casino_games.field_jackpot_code
     - node.type.client_casino_games
   module:
     - image
@@ -76,6 +77,14 @@ content:
       format_custom_true: ''
     third_party_settings: {  }
     type: boolean
+    region: content
+  field_jackpot_code:
+    weight: 109
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
     region: content
   links:
     weight: 100
