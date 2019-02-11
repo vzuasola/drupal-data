@@ -38,7 +38,7 @@ class ConfigFormRoutes {
         // translation routes
 
         $routename = "webcomposer_config_schema.form_{$id}_translate";
-        $routeURI = "/admin/config/webcomposer/translate/{$id}";
+        $routeURI = "/admin/config/{$id}/translate/{$id}";
 
         $routes[$routename] = new Route(
           $routeURI,
