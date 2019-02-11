@@ -1,58 +1,150 @@
 <?php
-
 namespace Drupal\webcomposer_sitemap\Form;
 
-use Drupal\Core\Form\ConfigFormBase;
+use Drupal\webcomposer_config_schema\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Configuration Form for Sitemap Configuration.
+ * Sitemap Configuration Configuration
+ *
+ * @WebcomposerConfigPlugin(
+ *   id = "webcomposer_sitemap_settings_form",
+ *   route = {
+ *     "title" = "Sitemap Configuration",
+ *     "path" = "admin/config/webcomposer/sitemap",
+ *   },
+ *   menu = {
+ *     "title" = "Sitemap Configuration",
+ *     "description" = "Provides configuration for Sitemap Page.",
+ *     "parent" = "webcomposer_sitemap.list",
+ *     "weight" = 1
+ *   },
+ * )
  */
-class SitemapConfiguration extends ConfigFormBase {
+class SitemapConfiguration extends FormBase {
   /**
-   * {@inheritdoc}
+   * @inheritdoc
    */
+
   protected function getEditableConfigNames() {
     return ['webcomposer_config.sitemap_configuration'];
   }
 
-  /**
-   * {@inheritdoc}
-   */
-  public function getFormId() {
-    return 'webcomposer_sitemap_settings_form';
+  public function form(array $form, FormStateInterface $form_state) {
+    $form['webcomposer_sitemap_settings_form'] = [
+      '#type' => 'vertical_tabs',
+      '#title' => t('Settings'),
+    ];
+
+    $this->generalConfig($form);
+    return $form;
   }
 
-  /**
-   * {@inheritdoc}.
-   */
-  public function buildForm(array $form, FormStateInterface $form_state) {
-    $config = $this->config('webcomposer_config.sitemap_configuration');
+  private function generalConfig(&$form) {
 
-    $form['enable_sitemap'] = [
+    $form['gen_config']['enable_sitemap'] = [
       '#type' => 'checkbox',
       '#title' => $this->t('Enable Sitemap'),
-      '#default_value' => $config->get('enable_sitemap'),
-      '#description' => 'When checked, sitemap page will be accessible',
+      '#description' => $this->t('When checked, sitemap page will be accessible'),
+      '#default_value' => $this->get('enable_sitemap'),
+      '#required' => FALSE,
+      '#translatable' => TRUE,
     ];
 
-    $form['sitemap_title'] = [
+    $form['gen_config']['sitemap_title'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Title'),
-      '#default_value' => $config->get('sitemap_title'),
+      '#default_value' => $this->get('sitemap_title'),
+      '#required' => FALSE,
+      '#translatable' => TRUE,
     ];
 
-    $data = $config->get('sitemap_content');
-    $form['sitemap_content'] = [
+   $form['gen_config']['sitemap_content'] = [
       '#type' => 'text_format',
       '#title' => $this->t('Sitemap Blurb'),
-      '#default_value' => $data['value'],
-      '#format' => $data['format'],
+      '#default_value' => $this->get('sitemap_content')['value'],
+      '#required' => FALSE,
+      '#translatable' => TRUE,
+    ];
+    // form elements for the deprecated static links, to be removed
+    $this->generateStaticLinks($form);
+    $this->generateDynamicLinks($form);
+    $this->generateContentTypeForm($form);
+
+  }
+  /**
+   *
+   */
+  private function generateStaticLinks(&$form) {
+    
+    $form['static_links'] = [
+      '#type' => 'details',
+      '#title' => 'Deprecated Links',
+      '#description' => 'Links used for the old sitemap implementation. On newer products,
+        this are not used anymore.',
     ];
 
-    // form elements for the deprecated static links, to be removed
-    $this->generateStaticLinks($form, $form_state);
+    $form['static_links']['sitemap_home_label'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Home Title'),
+      '#default_value' => $this->get('sitemap_home_label'),
+      '#required' => FALSE,
+      '#translatable' => TRUE,
+    ];
 
+    $form['static_links']['sitemap_home_link'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Home Link'),
+      '#default_value' => $this->get('sitemap_home_link'),
+      '#required' => FALSE,
+      '#translatable' => TRUE,
+    ];
+
+    $form['static_links']['sitemap_promotions_label'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Promotions Label'),
+      '#default_value' => $this->get('sitemap_promotions_label'),
+      '#required' => FALSE,
+      '#translatable' => TRUE,
+    ];
+
+    $form['static_links']['sitemap_promotions_link'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Promotions Link'),
+      '#default_value' => $this->get('sitemap_promotions_link'),
+      '#required' => FALSE,
+      '#translatable' => TRUE,
+    ];
+
+    $form['static_links']['sitemap_mobile_label'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Mobile Label'),
+      '#default_value' => $this->get('sitemap_mobile_label'),
+      '#required' => FALSE,
+      '#translatable' => TRUE,
+    ];
+
+    $form['static_links']['sitemap_mobile_link'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Mobile Link'),
+      '#default_value' => $this->get('sitemap_mobile_link'),
+      '#required' => FALSE,
+      '#translatable' => TRUE,
+    ];
+
+    $form['static_links']['sitemap_basic_pages_label'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Basic Page Label'),
+      '#default_value' => $this->get('sitemap_basic_pages_label'),
+      '#required' => FALSE,
+      '#translatable' => TRUE,
+    ];
+  }
+  /**
+   *
+   */
+  private function generateDynamicLinks(&$form) {
+    
     $form['dynamic_links'] = [
       '#type' => 'details',
       '#title' => 'Custom Links',
@@ -62,7 +154,7 @@ class SitemapConfiguration extends ConfigFormBase {
     $form['dynamic_links']['sitemap_links'] = [
       '#type' => 'textarea',
       '#title' => $this->t('Sitemap Links'),
-      '#default_value' => $config->get('sitemap_links'),
+      '#default_value' => $this->get('sitemap_links'),
       '#description' => "Provide a pipe separated key value pair of links. Slash can be ommited
         for relative paths
         <br><br>
@@ -74,83 +166,23 @@ class SitemapConfiguration extends ConfigFormBase {
         <br>
         <strong>Promo|promotions/promo</strong>
       ",
+      '#required' => FALSE,
+      '#translatable' => TRUE,
     ];
 
-    $this->generateContentTypeForm($form, $form_state);
-
-    return parent::buildForm($form, $form_state);
   }
-
   /**
    *
    */
-  private function generateStaticLinks(array &$form, FormStateInterface $form_state) {
-    $config = $this->config('webcomposer_config.sitemap_configuration');
-
-    $form['static_links'] = [
-      '#type' => 'details',
-      '#title' => 'Deprecated Links',
-      '#description' => 'Links used for the old sitemap implementation. On newer products,
-        this are not used anymore.',
-    ];
-
-    $form['static_links']['sitemap_home_label'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Home Title'),
-      '#default_value' => $config->get('sitemap_home_label'),
-    ];
-
-    $form['static_links']['sitemap_home_link'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Home Link'),
-      '#default_value' => $config->get('sitemap_home_link'),
-    ];
-
-    $form['static_links']['sitemap_promotions_label'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Promotions Label'),
-      '#default_value' => $config->get('sitemap_promotions_label'),
-    ];
-
-    $form['static_links']['sitemap_promotions_link'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Promotions Link'),
-      '#default_value' => $config->get('sitemap_promotions_link'),
-    ];
-
-    $form['static_links']['sitemap_mobile_label'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Mobile Label'),
-      '#default_value' => $config->get('sitemap_mobile_label'),
-    ];
-
-    $form['static_links']['sitemap_mobile_link'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Mobile Link'),
-      '#default_value' => $config->get('sitemap_mobile_link'),
-    ];
-
-    $form['static_links']['sitemap_basic_pages_label'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Basic Page Label'),
-      '#default_value' => $config->get('sitemap_basic_pages_label'),
-    ];
-  }
-
-  /**
-   *
-   */
-  private function generateContentTypeForm(array &$form, FormStateInterface $form_state) {
-    $config = $this->config('webcomposer_config.sitemap_configuration')->get('content_types');
-
+  private function generateContentTypeForm(&$form) {
+    
     $form['content_types_wrapper'] = [
       '#type' => 'vertical_tabs',
       '#title' => 'Configure content types to show on site map',
-      '#tree' => TRUE,
+      '#tree' => true,
     ];
 
     $content_types = \Drupal::service('entity.manager')->getStorage('node_type')->loadMultiple();
-
     foreach ($content_types as $content_type) {
       $key = $content_type->id();
       $label = $content_type->label();
@@ -178,33 +210,5 @@ class SitemapConfiguration extends ConfigFormBase {
         '#default_value' => isset($config[$key]['label']) ? $config[$key]['label'] : $label,
       ];
     }
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  public function submitForm(array &$form, FormStateInterface $form_state) {
-    $sitemapConfig = [
-      'enable_sitemap',
-      'sitemap_title',
-      'sitemap_content',
-      'sitemap_home_label',
-      'sitemap_home_link',
-      'sitemap_promotions_label',
-      'sitemap_promotions_link',
-      'sitemap_mobile_label',
-      'sitemap_mobile_link',
-      'sitemap_basic_pages_label',
-      'sitemap_links',
-    ];
-
-    foreach ($sitemapConfig as $keys) {
-        $this->config('webcomposer_config.sitemap_configuration')->set($keys, $form_state->getValue($keys))->save();
-    }
-
-    // save content type values
-    $this->config('webcomposer_config.sitemap_configuration')->set('content_types', $form_state->getValue('content_types'))->save();
-
-    parent::submitForm($form, $form_state);
   }
 }
