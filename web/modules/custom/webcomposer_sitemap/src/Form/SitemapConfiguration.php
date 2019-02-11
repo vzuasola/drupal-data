@@ -25,16 +25,11 @@ class SitemapConfiguration extends FormBase {
   /**
    * @inheritdoc
    */
-   /**
-   * Sitemap Configuration definitions
-   */
+
   protected function getEditableConfigNames() {
     return ['webcomposer_config.sitemap_configuration'];
   }
 
-  /**
-   * @inheritdoc
-   */
   public function form(array $form, FormStateInterface $form_state) {
     $form['webcomposer_sitemap_settings_form'] = [
       '#type' => 'vertical_tabs',
@@ -52,7 +47,7 @@ class SitemapConfiguration extends FormBase {
       '#title' => $this->t('Enable Sitemap'),
       '#description' => $this->t('When checked, sitemap page will be accessible'),
       '#default_value' => $this->get('enable_sitemap'),
-      '#required' => false,
+      '#required' => FALSE,
       '#translatable' => TRUE,
     ];
 
@@ -60,7 +55,7 @@ class SitemapConfiguration extends FormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Title'),
       '#default_value' => $this->get('sitemap_title'),
-      '#required' => false,
+      '#required' => FALSE,
       '#translatable' => TRUE,
     ];
 
@@ -68,7 +63,7 @@ class SitemapConfiguration extends FormBase {
       '#type' => 'text_format',
       '#title' => $this->t('Sitemap Blurb'),
       '#default_value' => $this->get('sitemap_content')['value'],
-      '#required' => false,
+      '#required' => FALSE,
       '#translatable' => TRUE,
     ];
     // form elements for the deprecated static links, to be removed
@@ -93,7 +88,7 @@ class SitemapConfiguration extends FormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Home Title'),
       '#default_value' => $this->get('sitemap_home_label'),
-      '#required' => false,
+      '#required' => FALSE,
       '#translatable' => TRUE,
     ];
 
@@ -101,7 +96,7 @@ class SitemapConfiguration extends FormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Home Link'),
       '#default_value' => $this->get('sitemap_home_link'),
-      '#required' => false,
+      '#required' => FALSE,
       '#translatable' => TRUE,
     ];
 
@@ -109,7 +104,7 @@ class SitemapConfiguration extends FormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Promotions Label'),
       '#default_value' => $this->get('sitemap_promotions_label'),
-      '#required' => false,
+      '#required' => FALSE,
       '#translatable' => TRUE,
     ];
 
@@ -117,7 +112,7 @@ class SitemapConfiguration extends FormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Promotions Link'),
       '#default_value' => $this->get('sitemap_promotions_link'),
-      '#required' => false,
+      '#required' => FALSE,
       '#translatable' => TRUE,
     ];
 
@@ -125,7 +120,7 @@ class SitemapConfiguration extends FormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Mobile Label'),
       '#default_value' => $this->get('sitemap_mobile_label'),
-      '#required' => false,
+      '#required' => FALSE,
       '#translatable' => TRUE,
     ];
 
@@ -133,7 +128,7 @@ class SitemapConfiguration extends FormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Mobile Link'),
       '#default_value' => $this->get('sitemap_mobile_link'),
-      '#required' => false,
+      '#required' => FALSE,
       '#translatable' => TRUE,
     ];
 
@@ -141,7 +136,7 @@ class SitemapConfiguration extends FormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Basic Page Label'),
       '#default_value' => $this->get('sitemap_basic_pages_label'),
-      '#required' => false,
+      '#required' => FALSE,
       '#translatable' => TRUE,
     ];
   }
@@ -171,7 +166,7 @@ class SitemapConfiguration extends FormBase {
         <br>
         <strong>Promo|promotions/promo</strong>
       ",
-      '#required' => false,
+      '#required' => FALSE,
       '#translatable' => TRUE,
     ];
 
@@ -215,7 +210,5 @@ class SitemapConfiguration extends FormBase {
         '#default_value' => isset($config[$key]['label']) ? $config[$key]['label'] : $label,
       ];
     }
-
   }
-
 }
