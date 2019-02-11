@@ -18,7 +18,6 @@ index 3b7ed39..2672497 100644
 -            if ($event->getRequestType() === HttpKernelInterface::MASTER_REQUEST) {
 -              throw new AccessDeniedHttpException();
 -            }
-+        var_dump($current_route);
 +        $patterns = [
 +          '/^entity\.([a-za-zA-Z0-9_\-.]+)$/',
 +          '/^webcomposer_config([a-zA-Z0-9_\-\.]+)$/',
