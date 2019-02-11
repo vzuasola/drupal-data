@@ -24,14 +24,9 @@ $container['errorHandler'] = function ($c) {
         $response = $response->withStatus(500);
 ...
 ```
-> Place this Google Analytics script event to track players who visited entrypage and redirected to its last visited product.
+> Place this Google Analytics script event under ga('send', 'pageview'); to track players who visited entrypage and redirected to its last visited product.
 
 ```js
-    ga('create', 'UA-89039619-1', 'auto');
-    ga('set', 'userId', userId);
-    ga('set', 'dimension3', dimension3);
-    ga('send', 'pageview');
-
     if (location.hash === '#redirect') {
         ga('send', 'event', { eventCategory: 'Redirect', eventAction: 'Product menu', eventLabel: 'Lottery'});
         if(window.history.pushState) {
@@ -43,7 +38,7 @@ $container['errorHandler'] = function ($c) {
 
 ...
 ```
-> Here is the aflex script for redirection
+> Here is the aflex script for redirection for reference
 
 ```js
 # Last visited product rules
