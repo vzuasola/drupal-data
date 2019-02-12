@@ -1,0 +1,21 @@
+uuid: 62ae0531-92e3-4596-9bb4-c3636fd336b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.jamboree_withdraw_method_entity.field_body
+  module:
+    - jamboree_withdraw_method
+    - text
+id: jamboree_withdraw_method_entity.jamboree_withdraw_method_entity.field_body
+field_name: field_body
+entity_type: jamboree_withdraw_method_entity
+bundle: jamboree_withdraw_method_entity
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

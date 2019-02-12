@@ -1,0 +1,20 @@
+uuid: 2a36de62-66fb-499c-895a-41ca87893ff5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.jamboree_withdraw_method_entity.field_button_url
+  module:
+    - jamboree_withdraw_method
+id: jamboree_withdraw_method_entity.jamboree_withdraw_method_entity.field_button_url
+field_name: field_button_url
+entity_type: jamboree_withdraw_method_entity
+bundle: jamboree_withdraw_method_entity
+label: 'Button URL'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

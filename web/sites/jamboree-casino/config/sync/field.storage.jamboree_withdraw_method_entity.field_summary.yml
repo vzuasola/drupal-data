@@ -1,0 +1,19 @@
+uuid: 19ff6229-f182-4667-b930-610210b50429
+langcode: en
+status: true
+dependencies:
+  module:
+    - jamboree_withdraw_method
+id: jamboree_withdraw_method_entity.field_summary
+field_name: field_summary
+entity_type: jamboree_withdraw_method_entity
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

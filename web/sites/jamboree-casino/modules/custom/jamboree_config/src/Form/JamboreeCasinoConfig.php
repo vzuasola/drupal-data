@@ -275,5 +275,12 @@ class JamboreeCasinoConfig extends FormBase {
       '#default_value' => $this->get('fair_gaming_breadcrumb'),
       '#translatable' => TRUE,
     ];
+
+    $form['inner_breadcrumb']['withdraw_method_breadcrumb'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Withdraw Method'),
+      '#default_value' => $this->get('withdraw_method_breadcrumb'),
+      '#translatable' => true,
+    ];
   }
 }

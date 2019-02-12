@@ -1,0 +1,17 @@
+uuid: 2ba49202-c0e9-4164-8eea-a7388c5fcffa
+langcode: en
+status: true
+dependencies:
+  module:
+    - content_translation
+    - jamboree_withdraw_method
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: jamboree_withdraw_method_entity.jamboree_withdraw_method_entity
+target_entity_type_id: jamboree_withdraw_method_entity
+target_bundle: jamboree_withdraw_method_entity
+default_langcode: site_default
+language_alterable: true
