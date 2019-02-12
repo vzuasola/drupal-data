@@ -11,6 +11,11 @@ is_admin: false
 permissions:
   - 'access comments'
   - 'access content'
+  - 'access language en'
+  - 'access language id'
+  - 'access language ko'
+  - 'access language th'
+  - 'access language vi'
   - 'access shortcuts'
   - 'access site-wide contact form'
   - 'administer rest resources'
