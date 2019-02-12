@@ -11,6 +11,8 @@ is_admin: false
 permissions:
   - 'access comments'
   - 'access content'
+  - 'access language en'
+  - 'access language hi'
   - 'access site-wide contact form'
   - 'administer rest resources'
   - 'restful get affiliate_rest_resource'
