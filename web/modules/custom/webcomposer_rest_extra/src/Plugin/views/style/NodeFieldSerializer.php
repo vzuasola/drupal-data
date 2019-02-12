@@ -2,9 +2,6 @@
 
 namespace Drupal\webcomposer_rest_extra\Plugin\views\style;
 
-use Drupal\Component\Utility\Html;
-use Drupal\Core\Site\Settings;
-use Drupal\file\Entity\File;
 use Drupal\rest\Plugin\views\style\Serializer;
 
 /**
