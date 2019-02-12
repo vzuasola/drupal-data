@@ -27,14 +27,14 @@ class NodeFieldSerializer extends Serializer {
 
     foreach ($this->view->result as $row_index => $row) {
       $this->view->row_index = $row_index;
-      
+
       $dataFieldRows = [];
       foreach ($this->view->rowPlugin->render($row) as $fieldName => $fieldValue) {
         switch ($fieldName) {
           case 'type':
             $dataFieldRows[$fieldName] = $this->fieldValueFormatter($fieldValue, 'target_id');
             break;
-          
+
           default:
             $dataFieldRows[$fieldName] = $this->fieldValueFormatter($fieldValue);
             break;
@@ -65,8 +65,7 @@ class NodeFieldSerializer extends Serializer {
   /**
    * {@inheritdoc}
    */
-  private function fieldValueFormatter($fieldValue, $key = 'value')
-  {
+  private function fieldValueFormatter($fieldValue, $key = 'value') {
     return [
       [$key => $fieldValue],
     ];
