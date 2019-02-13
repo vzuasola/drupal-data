@@ -1,0 +1,33 @@
+<?php
+
+/**
+ * Implements hook_uninstall
+ */
+function jamboree_mobile_games_uninstall()
+{
+    $keys = [
+        'core.base_field_override.jamboree_withdraw_method_entity.jamboree_withdraw_method_entity.metatag',
+        'core.entity_form_display.jamboree_withdraw_method_entity.jamboree_withdraw_method_entity.default',
+        'core.entity_view_display.jamboree_withdraw_method_entity.jamboree_withdraw_method_entity.default',
+        'field.field.jamboree_withdraw_method_entity.jamboree_withdraw_method_entity.field_banner',
+        'field.field.jamboree_withdraw_method_entity.jamboree_withdraw_method_entity.field_body',
+        'field.field.jamboree_withdraw_method_entity.jamboree_withdraw_method_entity.field_button_label',
+        'field.field.jamboree_withdraw_method_entity.jamboree_withdraw_method_entity.field_button_url',
+        'field.field.jamboree_withdraw_method_entity.jamboree_withdraw_method_entity.field_summary',
+        'field.field.jamboree_withdraw_method_entity.jamboree_withdraw_method_entity.field_thumbnail',
+        'field.field.jamboree_withdraw_method_entity.jamboree_withdraw_method_entity.field_title',
+        'field.storage.jamboree_withdraw_method_entity.field_banner',
+        'field.storage.jamboree_withdraw_method_entity.field_body',
+        'field.storage.jamboree_withdraw_method_entity.field_button_label',
+        'field.storage.jamboree_withdraw_method_entity.field_button_url',
+        'field.storage.jamboree_withdraw_method_entity.field_summary',
+        'field.storage.jamboree_withdraw_method_entity.field_thumbnail',
+        'field.storage.jamboree_withdraw_method_entity.field_title',
+        'language.content_settings.jamboree_withdraw_method_entity.jamboree_withdraw_method_entity',
+        'views.view.withdraw_method',
+    ];
+
+    foreach ($keys as $key) {
+        \Drupal::configFactory()->getEditable($key)->delete();
+    }
+}
