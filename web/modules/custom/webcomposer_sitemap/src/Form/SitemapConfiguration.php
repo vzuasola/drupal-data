@@ -185,7 +185,9 @@ class SitemapConfiguration extends FormBase {
     $content_types = \Drupal::service('entity.manager')->getStorage('node_type')->loadMultiple();
     foreach ($content_types as $content_type) {
       $key = $content_type->id();
+
       $label = $content_type->label();
+      $config = $this->get('content_types');
 
       $form["content_types_$key"] = [
         '#type' => 'details',
@@ -210,5 +212,27 @@ class SitemapConfiguration extends FormBase {
         '#default_value' => isset($config[$key]['label']) ? $config[$key]['label'] : $label,
       ];
     }
+  }
+
+  public function submit(array &$form, FormStateInterface $form_state) {
+    $keys = [
+      'enable_sitemap',
+      'sitemap_title',
+      'sitemap_content',
+      'sitemap_home_label',
+      'sitemap_home_link',
+      'sitemap_promotions_label',
+      'sitemap_promotions_link',
+      'sitemap_mobile_label',
+      'sitemap_mobile_link',
+      'sitemap_basic_pages_label',
+      'sitemap_links',
+      'content_types',
+    ];
+
+    foreach ($keys as $key) {
+      $data[$key] = $form_state->getValue($key);
+    }
+    $this->save($data);
   }
 }

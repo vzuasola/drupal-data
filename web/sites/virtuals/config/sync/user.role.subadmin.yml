@@ -56,6 +56,7 @@ permissions:
   - 'administer left floating banner entity entities'
   - 'administer marketing script entities'
   - 'administer menu'
+  - 'administer meta tags'
   - 'administer modules'
   - 'administer nodes'
   - 'administer partner entity entities'
