@@ -3,7 +3,7 @@
 /**
  * Implements hook_uninstall
  */
-function jamboree_mobile_games_uninstall() {
+function jamboree_withdraw_method_uninstall() {
     $keys = [
         'core.base_field_override.jamboree_withdraw_method_entity.jamboree_withdraw_method_entity.metatag',
         'core.entity_form_display.jamboree_withdraw_method_entity.jamboree_withdraw_method_entity.default',
