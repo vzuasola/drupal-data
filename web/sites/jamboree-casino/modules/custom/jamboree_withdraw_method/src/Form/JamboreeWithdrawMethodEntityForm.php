@@ -44,7 +44,7 @@ class JamboreeWithdrawMethodEntityForm extends ContentEntityForm {
           '%label' => $entity->label(),
         ]));
     }
-    $form_state->setRedirect('entity.jamboree_withdraw_method_entity.canonical', ['jamboree_withdraw_method_entity' => $entity->id()]);
+    $form_state->setRedirectUrl($entity->urlInfo('collection'));
   }
 
 }
