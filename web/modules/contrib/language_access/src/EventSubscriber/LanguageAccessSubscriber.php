@@ -82,9 +82,16 @@ class LanguageAccessSubscriber implements EventSubscriberInterface {
           }
         }
       }
-      // fix for menu entities
-      if (preg_match('/^([a-za-zA-Z0-9_\-.]*)entity.menu.(edit_form|delete_form)$/', $current_route)) {
-        $langcode = $route_match->getParameter('menu')->get('langcode');
+      // fix for menu and node entities
+      if (preg_match('/^([a-za-zA-Z0-9_\-.]*)entity.(menu|node).(edit_form|delete_form)$/', $current_route)) {
+
+        $langcode = $language->getId();
+        if ($route_match->getParameter('menu') !== NULL) {
+          $langcode = $route_match->getParameter('menu')->get('langcode');
+        }
+        if ($route_match->getParameter('node') !== NULL) {
+          $langcode = $route_match->getParameter('node')->langcode->value;
+        }
         if (!$this->currentUser->hasPermission('access language ' . $langcode)) {
           throw new AccessDeniedHttpException();
         }
