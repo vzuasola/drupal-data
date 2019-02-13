@@ -13,7 +13,7 @@ bundle: poker_client_promotions
 label: Publish
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value:
   -
     value: 0

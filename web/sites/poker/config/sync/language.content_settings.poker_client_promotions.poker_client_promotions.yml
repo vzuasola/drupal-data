@@ -1,0 +1,17 @@
+uuid: 32e92994-b718-45ce-b793-9b27aa733497
+langcode: en
+status: true
+dependencies:
+  module:
+    - content_translation
+    - poker_client_promotions
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: poker_client_promotions.poker_client_promotions
+target_entity_type_id: poker_client_promotions
+target_bundle: poker_client_promotions
+default_langcode: site_default
+language_alterable: true
