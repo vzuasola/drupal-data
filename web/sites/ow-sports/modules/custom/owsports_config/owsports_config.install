@@ -1,0 +1,18 @@
+<?php
+
+/**
+ * Implements hook_uninstall
+ */
+function owsports_config_uninstall() {
+  $keys = [
+    'rest.resource.owsports_config_resource',
+    'owsports_config.rules_regulations',
+    'owsports_config.sunplus',
+    'owsports_config.twitch',
+    'owsports_config.unsupported_page'
+  ];
+
+  foreach ($keys as $key) {
+    \Drupal::configFactory()->getEditable($key)->delete();
+  }
+}

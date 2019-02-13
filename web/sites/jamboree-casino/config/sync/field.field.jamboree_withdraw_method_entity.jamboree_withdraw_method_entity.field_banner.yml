@@ -1,0 +1,45 @@
+uuid: 8e835d3f-ca2b-4f4e-ab42-58fb2593f1dc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.jamboree_withdraw_method_entity.field_banner
+  module:
+    - content_translation
+    - image
+    - jamboree_withdraw_method
+third_party_settings:
+  content_translation:
+    translation_sync:
+      alt: alt
+      title: title
+      file: '0'
+id: jamboree_withdraw_method_entity.jamboree_withdraw_method_entity.field_banner
+field_name: field_banner
+entity_type: jamboree_withdraw_method_entity
+bundle: jamboree_withdraw_method_entity
+label: Banner
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

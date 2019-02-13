@@ -1,0 +1,11 @@
+sunplus_settings_tab__active_tab: edit-general-group
+user_preference: 1
+iframe_width: 100%
+iframe_height: '1000'
+maintenance_content:
+  value: "<p>Maintenance Content</p>\r\n"
+  format: basic_html
+pre_login_sunplus_src: 'https://prices.{sunplus.domain}/vender.aspx?lang=cs&iseuro=0&webskintype=3&act={sunplus.act}&otype=1'
+post_login_sunplus_src: 'https://play.{sunplus.domain}/Deposit_ProcessLogin.aspx?lang=cs&iseuro=0&webskintype=3&act={sunplus.act}&otype=1'
+pre_login_colossusbet_src: 'https://prices.{sunplus.domain}/DepositProcessLogin?lang=cs&iseuro=0&webskintype=3&act={sunplus.act}&otype=1'
+post_login_colossusbet_src: 'https://play.{sunplus.domain}/DepositProcessLogin?lang=cs&iseuro=0&webskintype=3&act={sunplus.act}&otype=1'

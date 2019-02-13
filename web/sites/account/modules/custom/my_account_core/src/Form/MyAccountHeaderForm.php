@@ -74,6 +74,15 @@ class MyAccountHeaderForm extends FormBase {
       '#default_value' => $this->get('help_tooltip'),
       '#translatable' => TRUE,
     ];
+    $form['field_configuration']['error_mid_down'] = [
+      '#type' => 'textarea',
+      '#title' => t('Error Message MID Down'),
+      '#size' => 500,
+      '#required' => TRUE,
+      '#description' => $this->t('General Error Message across all forms of my account if MID is down.'),
+      '#default_value' => $this->get('error_mid_down'),
+      '#translatable' => TRUE,
+    ];
 
     return $form;
   }

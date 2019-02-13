@@ -1,0 +1,4 @@
+.diff.responsive-enabled td{
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}

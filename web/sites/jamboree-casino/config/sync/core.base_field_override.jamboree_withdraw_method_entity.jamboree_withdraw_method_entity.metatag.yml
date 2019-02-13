@@ -1,0 +1,18 @@
+uuid: 52057f73-cd39-4a5d-8903-ea25cc2e8b76
+langcode: en
+status: true
+dependencies:
+  module:
+    - jamboree_withdraw_method
+id: jamboree_withdraw_method_entity.jamboree_withdraw_method_entity.metatag
+field_name: metatag
+entity_type: jamboree_withdraw_method_entity
+bundle: jamboree_withdraw_method_entity
+label: Metatags
+description: 'The metatags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

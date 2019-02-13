@@ -19,7 +19,7 @@ field_name: field_game_thumbnail
 entity_type: client_footer_games
 bundle: client_footer_games
 label: 'Game Thumbnail'
-description: 'Recommended upload size <b>124X70px<b> '
+description: 'Recommended upload size <b>124X56px<b> '
 required: true
 translatable: true
 default_value: {  }
@@ -28,8 +28,8 @@ settings:
   file_directory: '[date:custom:Y]-[date:custom:m]'
   file_extensions: 'png gif jpg jpeg'
   max_filesize: ''
-  max_resolution: 124x70
-  min_resolution: 120x69
+  max_resolution: 124x56
+  min_resolution: 124x56
   alt_field: true
   alt_field_required: true
   title_field: false

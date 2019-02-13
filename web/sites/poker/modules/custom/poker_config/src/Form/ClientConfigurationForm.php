@@ -65,6 +65,20 @@ class ClientConfigurationForm extends FormBase
           '#required' => true
         ];
 
+        $form['casino_list'] = [
+          '#type' => 'details',
+          '#title' => $this->t('Casino List Setting'),
+          '#collapsible' => true,
+          '#open' => true
+        ];
+
+        $form['casino_list']['lazyload_enable'] = array(
+          '#type' => 'checkbox',
+          '#title' => $this->t('Enable Lazy Load'),
+          '#description' => $this->t('Enable Lazy Load on Casino Games List'),
+          '#default_value' => $this->get('lazyload_enable'),
+        );
+
         return $form;
     }
 }
