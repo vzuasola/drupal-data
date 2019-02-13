@@ -89,6 +89,5 @@ class JamboreeWithdrawMethodForm extends FormBase {
             '#default_value' => $this->get('page_url'),
             '#translatable' => true,
         ];
-
     }
 }
