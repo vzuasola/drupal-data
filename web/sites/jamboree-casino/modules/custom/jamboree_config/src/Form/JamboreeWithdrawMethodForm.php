@@ -10,7 +10,7 @@ use Drupal\Core\Datetime\DrupalDateTime;
  * My module form plugin
  *
  * @WebcomposerConfigPlugin(
- *   id = "jamboree_withdraw_method",
+ *   id = "jamboree_withdraw_method_form",
  *   route = {
  *     "title" = "Withdraw Method Page Configuration",
  *     "path" = "/admin/config/jamboree/withdraw_method_page_configuration",
