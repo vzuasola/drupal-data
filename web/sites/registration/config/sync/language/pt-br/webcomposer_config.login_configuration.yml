@@ -1,0 +1,28 @@
+advanced__active_tab: edit-mobile-login
+rememberme_label: 'Lembrar do usuário'
+lightbox_blurb: 'Ainda não é um membro Dafabet?'
+login_page_blurb: ''
+autologout_box_content:
+  format: basic_html
+  value: "<p>Sua sessão expirará em {seconds} segundos. Você quer continuar sua sessão?</p>\r\n"
+notification_content:
+  format: basic_html
+  value: "<p>Sua sessão expirou devido à inatividade.</p>\r\n"
+mobile_login_button_label: 'LOGIN/ JOIN'
+mobile_cant_login_url: '{domain:mobile}/{lang}/cant-login'
+username_placeholder: 'Nome de usuário'
+password_placeholder: Senha
+login_bottom_label: ENTRAR
+error_message_blank_username: 'Nome de usuário é obrigatório'
+error_message_blank_password: 'Senha é obrigatória'
+error_message_blank_passname: 'Nome de usuário e senha são obrigatórios'
+error_message_invalid_passname: 'Sorry the Username and Password you entered do not match. Please try again.'
+error_message_service_not_available: 'Serviço não disponível.'
+error_message_account_suspended: 'Sua conta foi bloqueada devido a tentativas de login falhas Por favor, entre em contato com o nosso atendimento ao cliente'
+error_message_account_locked: 'Sua conta foi bloqueada devido a tentativas de login falhas Por favor, entre em contato com o nosso atendimento ao cliente'
+autologout_box_title: LEMBRETE
+affirmative_button_text: Sim
+negative_button_text: Não
+notification_title: 'SESSÃO EXPIRADA'
+notification_window_title: 'SESSÃO EXPIRADA'
+mobile_login_url: '{domain:mobile}/{lang}/login[query:({credentials.params}&{tracking})]'

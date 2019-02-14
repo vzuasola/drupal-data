@@ -1,10 +1,10 @@
 field_settings:
   label: ชื่อจริง
   placeholder: กรอกชื่อจริงเป็นภาษาอังกฤษ
-  annotation: 'ใช้ชื่อจริงเดียวกันกับบัญชีธนาคารของคุณ ที่ใช้ฝากและถอนเงิน'
+  annotation: "กรุณากรอกชื่อจริงที่ระบุอยู่ในหน้าบัญชีธนาคารของคุณ (ตัวอย่าง: โสภิดา ส่วนเสน่ห์)\r\n"
 field_validations:
   required:
-    error_message: กรุณากรอกชื่อจริงเป็นภาษาอังกฤษ
+    error_message: "จำเป็นต้องกรอกข้อมูลที่ช่องนี้ \r\n"
   alpha:
     error_message: 'Field should be Alphabet characters only'
   alphanumeric:
@@ -22,12 +22,18 @@ field_validations:
   min_length:
     error_message: "กรอกยูสเซอร์เนมได้ 1-50 ตัวอักษรเท่านั้น \r\n"
   max_length:
-    error_message: "กรอกยูสเซอร์เนมได้ 1-50 ตัวอักษรเท่านั้น \r\n"
+    error_message: "ชื่อจะต้องไม่เกิน 50 ตัวอักษร \r\n"
+  regex:
+    error_message: 'This field only accepts specific characters.'
+  valid_date:
+    error_message: 'Date is invalid'
   username_availability:
     error_message: 'Username not available'
   email_availability:
     error_message: 'Email not available'
   invalid_words:
-    error_message: "กรุณากรอกชื่อจริงอย่างถูกต้อง\r\n"
+    error_message: "กรุณากรอกชื่อจริง \r\n"
   valid_languages:
-    error_message: "กรุณาใช้ตัวอักษรภาษาอังกฤษเท่านั้น \r\n"
+    error_message: "ช่องนี้กรอกได้เฉพาะตัวอักษรภาษาอังกฤษและสัญลักษณ์ (') หรือ (-) เท่านั้น \r\n"
+  not_match_username:
+    error_message: 'Password should not equal to username'

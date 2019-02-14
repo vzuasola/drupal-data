@@ -4,7 +4,7 @@ field_settings:
   annotation: "Παρακαλούμε εισάγετε το Επίθετό σας, για παράδειγμα: Νικόλαος <u>Παπαδόπουλος</u>. Δεν θα μπορούμε να επεξεργαστούμε καταθέσεις καρτών, τσεκ ή εμβασμάτων αν το όνομα που συμπληρώσατε είναι διαφορετικό με αυτό του κατόχου του λογαριασμού.\r\n"
 field_validations:
   required:
-    error_message: "Το Επίθετό σας πρέπει να εισαχθεί σωστά.\r\n"
+    error_message: "Αυτό το πεδίο είναι υποχρεωτικό\r\n"
   alpha:
     error_message: 'Field should be Alphabet characters only'
   alphanumeric:
@@ -22,12 +22,18 @@ field_validations:
   min_length:
     error_message: "\_Το όνομα πρέπει να είναι μεταξύ 1-50 χαρακτήρες\r\n"
   max_length:
-    error_message: "\_Το όνομα πρέπει να είναι μεταξύ 1-50 χαρακτήρες\r\n"
+    error_message: "Το Επίθετο δεν πρέπει να υπερβαίνει τους 50 χαρακτήρες\r\n"
+  regex:
+    error_message: 'This field only accepts specific characters.'
+  valid_date:
+    error_message: 'Date is invalid'
   username_availability:
     error_message: 'Username not available'
   email_availability:
     error_message: 'Email not available'
   invalid_words:
-    error_message: "Το Επίθετό σας πρέπει να εισαχθεί σωστά.\r\n"
+    error_message: "Παρακαλώ εισάγετε ένα έγκυρο επίθετο\r\n"
   valid_languages:
-    error_message: "\_Παρακαλούμε χρησιμοποιήστε μόνο Αγγλικούς/Κινέζικους/Κορεάτικους/Ελληνικούς χαρακτήρες.\r\n"
+    error_message: "Το πεδίο δέχεται Αγγλικούς, Κινέζικους, Κορεάτικους, Ελληνικούς, απόστροφο (') και παύλα (-) χαρακτήρες μόνο\r\n"
+  not_match_username:
+    error_message: 'Password should not equal to username'

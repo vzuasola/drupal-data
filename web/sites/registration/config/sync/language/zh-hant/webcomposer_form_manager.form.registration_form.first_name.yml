@@ -1,10 +1,10 @@
 field_settings:
   label: 輸入您的名字
   placeholder: 輸入您的名字
-  annotation: 請輸入您的名字，例如：陳<u>美麗</u>。如果您輸入的名字和銀行開戶人/身份證姓名不一樣，我們將無法處理您的提款申請。
+  annotation: "請輸入在您的銀行帳戶顯示的名字（如：喬-史密斯）\r\n"
 field_validations:
   required:
-    error_message: 您必須輸入正確的名字。
+    error_message: "此項為必填項。\r\n"
   alpha:
     error_message: 'Field should be Alphabet characters only'
   alphanumeric:
@@ -22,12 +22,18 @@ field_validations:
   min_length:
     error_message: "姓名須在1-50個字符以內\r\n"
   max_length:
-    error_message: "姓名須在1-50個字符以內\r\n"
+    error_message: "名字不可超過50 字符\r\n"
+  regex:
+    error_message: 'This field only accepts specific characters.'
+  valid_date:
+    error_message: 'Date is invalid'
   username_availability:
     error_message: 'Username not available'
   email_availability:
     error_message: 'Email not available'
   invalid_words:
-    error_message: 您必須輸入正確的名字。
+    error_message: "請輸入有效的名字。\r\n"
   valid_languages:
-    error_message: "僅可輸入英文/數字字符。\r\n"
+    error_message: "此項僅接受英語,中文,韓語,希臘語,撇號('),和破折號(-) 字符\r\n"
+  not_match_username:
+    error_message: 'Password should not equal to username'

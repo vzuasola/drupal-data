@@ -1,10 +1,10 @@
 field_settings:
   label: 이름
   placeholder: 이름
-  annotation: "이름을 입력하십시오, 예: 홍<u>길동</u>. 입력하신 이름이 계좌명과 다른 경우 카드 입금, 수표 또는 은행 송금을 처리할 수 없습니다.\r\n"
+  annotation: "은행 계좌에 표시된대로 이름을 입력하십시오 (예: 홍<u>길동</u>)\r\n"
 field_validations:
   required:
-    error_message: "이름을 올바르게 입력해야 합니다.\r\n"
+    error_message: "이 항목은 필수 항목입니다\r\n"
   alpha:
     error_message: 'Field should be Alphabet characters only'
   alphanumeric:
@@ -22,12 +22,18 @@ field_validations:
   min_length:
     error_message: "이름은 1-50자 사이여야 합니다.\r\n"
   max_length:
-    error_message: "이름은 1-50자 사이여야 합니다.\r\n"
+    error_message: "이름은 50자를 넘지 않아야 합니다\r\n"
+  regex:
+    error_message: 'This field only accepts specific characters.'
+  valid_date:
+    error_message: 'Date is invalid'
   username_availability:
     error_message: 'Username not available'
   email_availability:
     error_message: 'Email not available'
   invalid_words:
-    error_message: "이름을 올바르게 입력해야 합니다.\r\n"
+    error_message: "유효한 이름을 입력하십시오\r\n"
   valid_languages:
-    error_message: "영어/중국어/한국어/그리스어 문자만 사용하십시오.\r\n"
+    error_message: "입력란에는 한국어, 영어, 한자 그리스어, 아포스트로피 ( ') 및 대시 (-) 문자만 허용됩니다\r\n"
+  not_match_username:
+    error_message: 'Password should not equal to username'
