@@ -24,8 +24,6 @@ field_validations:
     error_message: 'Minimum requirement not met'
   max_length:
     error_message: 'Maximum requirement not met'
-  regex:
-    error_message: 'This field only accepts specific characters.'
   valid_date:
     error_message: 请按照该格式输入您的出生日期：日/月/年
   username_availability:
@@ -36,5 +34,3 @@ field_validations:
     error_message: 'Invalid/not allowed characters'
   valid_languages:
     error_message: 请按照该格式输入您的出生日期：日/月/年
-  not_match_username:
-    error_message: 'Password should not equal to username'

@@ -4,8 +4,6 @@ status: true
 dependencies:
   module:
     - webcomposer_downloadables
-_core:
-  default_config_hash: RorV4ZSVwKrcy5gSXG178KiA_HkGT8fd-fXEIM-06Qs
 id: downloadable_entity.field_include_in_page
 field_name: field_include_in_page
 entity_type: downloadable_entity

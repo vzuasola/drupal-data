@@ -2,7 +2,7 @@ field_settings:
   label: 'Date of Birth'
   placeholder: DD/MM/YYYY
   date-format: DD/MM/YYYY
-  annotation: 'Should be at least 18 years old.'
+  annotation: ''
 field_validations:
   required:
     enable: 1
@@ -48,6 +48,14 @@ field_validations:
     error_message: 'Maximum requirement not met'
     parameters:
       length: '10'
+  regex:
+    enable: 0
+    error_message: 'This field only accepts specific characters.'
+    parameters:
+      regex_value: ''
+  valid_date:
+    enable: 1
+    error_message: 'Please enter your Date of Birth in this format: DD/MM/YYYY'
   username_availability:
     enable: 0
     error_message: 'Username not available'
@@ -64,6 +72,6 @@ field_validations:
     error_message: 'Please enter your Date of Birth in this format: DD/MM/YYYY'
     parameters:
       regex_value: '^[0-9/]+$'
-  valid_date:
-    enable: 1
-    error_message: 'Please enter your Date of Birth in this format: DD/MM/YYYY'
+  not_match_username:
+    enable: 0
+    error_message: 'Password should not equal to username'

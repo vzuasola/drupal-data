@@ -7,7 +7,7 @@ field_settings:
 field_validations:
   required:
     enable: 1
-    error_message: "Please enter your Mobile Number.\r\n"
+    error_message: 'This field is required.'
   alpha:
     enable: 0
     error_message: 'Field should be Alphabet characters only'
@@ -28,27 +28,35 @@ field_validations:
       disallow: 0
       special: ''
   numeric:
-    enable: 0
-    error_message: 'Field should be numeric'
+    enable: 1
+    error_message: 'Please enter a valid mobile number.'
   no_symbols:
     enable: 0
     error_message: 'Field contains invalid special characters'
   numeric_symbols:
     enable: 1
-    error_message: "Please enter your Mobile Number.\r\n"
+    error_message: 'Please enter a valid mobile number.'
   email:
     enable: 0
     error_message: 'Field does not contain a valid email address'
   min_length:
     enable: 1
-    error_message: "Please enter your Mobile Number.\r\n"
+    error_message: 'Mobile Number must be 6-15 digits.'
     parameters:
       length: '6'
   max_length:
     enable: 1
-    error_message: "Please enter your Mobile Number.\r\n"
+    error_message: 'Mobile Number must be 6-15 digits.'
     parameters:
       length: '15'
+  regex:
+    enable: 0
+    error_message: 'This field only accepts specific characters.'
+    parameters:
+      regex_value: ''
+  valid_date:
+    enable: 0
+    error_message: 'Date is invalid'
   username_availability:
     enable: 0
     error_message: 'Username not available'
@@ -65,6 +73,6 @@ field_validations:
     error_message: 'This field only accepts specific characters.'
     parameters:
       regex_value: ''
-  valid_date:
+  not_match_username:
     enable: 0
-    error_message: 'Date is invalid'
+    error_message: 'Password should not equal to username'

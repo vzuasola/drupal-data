@@ -1,10 +1,10 @@
 field_settings:
   label: 'Nama Depan'
   placeholder: 'Nama Depan'
-  annotation: "Harap masukkan Nama Depan Anda, contoh: <u>Joe</u> Smith. Kami tidak dapat memproses card deposit, cek, transfer bank, apabila nama yang dimasukkan berbeda dengan nama pemegang akun.\r\n"
+  annotation: "Silakan masukkan Nama Depan Anda seperti yang tertera pada rekening bank Anda (contoh: <u>Joe</u> Smith)\r\n"
 field_validations:
   required:
-    error_message: "Nama Depan Anda harus diisi dengan benar.\r\n"
+    error_message: "Kolom ini wajib diisi\r\n"
   alpha:
     error_message: 'Field should be Alphabet characters only'
   alphanumeric:
@@ -22,12 +22,18 @@ field_validations:
   min_length:
     error_message: "Kolom Nama harus diisi dengan 1-50 karakter\r\n"
   max_length:
-    error_message: "Kolom Nama harus diisi dengan 1-50 karakter\r\n"
+    error_message: "Nama tidak boleh lebih dari 50 karakter\r\n"
+  regex:
+    error_message: 'This field only accepts specific characters.'
+  valid_date:
+    error_message: 'Date is invalid'
   username_availability:
     error_message: 'Username not available'
   email_availability:
     error_message: 'Email not available'
   invalid_words:
-    error_message: "Nama Depan Anda harus diisi dengan benar.\r\n"
+    error_message: "Silakan masukkan nama yang valid\r\n"
   valid_languages:
-    error_message: "Harap gunakan aksara Latin/Cina/Korea/Yunani saja\r\n"
+    error_message: "Kolom ini hanya dapat diisi dengan karakter bahasa Inggris, Cina, Korea, Yunani, apostrof ('), dan tanda pisah (-)\r\n"
+  not_match_username:
+    error_message: 'Password should not equal to username'

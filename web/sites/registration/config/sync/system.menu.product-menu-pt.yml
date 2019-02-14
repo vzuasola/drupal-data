@@ -1,0 +1,8 @@
+uuid: 679abd4e-efeb-47e4-9877-d4eb28e605c5
+langcode: en
+status: true
+dependencies: {  }
+id: product-menu-pt
+label: 'Product Menu PT'
+description: ''
+locked: false
