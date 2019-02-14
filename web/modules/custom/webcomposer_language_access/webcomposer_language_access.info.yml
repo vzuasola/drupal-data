@@ -1,0 +1,7 @@
+name: Webcomposer Language Access
+type: module
+description: Language Access Alters
+core: 8.x
+package: Web Composer
+dependencies:
+  - language_access

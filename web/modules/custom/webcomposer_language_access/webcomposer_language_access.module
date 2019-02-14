@@ -1,0 +1,58 @@
+<?php
+
+/**
+ * @file
+ * Contains webcomposer_language_access.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function webcomposer_language_access_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the webcomposer_language_access module.
+    case 'help.page.webcomposer_language_access':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Language Access Alters') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+
+
+function language_access_form_alter(&$form, $form_state, $form_id) {
+  $roles = Drupal::currentUser()->getRoles();
+  $permissions = user_role_permissions($roles);
+
+  if (isset($permissions['subadmin'])) {
+    $current_language = \Drupal::languageManager()->getCurrentLanguage();
+    $lang = $current_language->getId();
+    $permission = $permissions['subadmin'];
+
+    if (isset($form['langcode'])) {
+      $languages = \Drupal::languageManager()->getLanguages();
+      $options = [];
+      foreach ($languages as $language) {
+        if (\Drupal::currentUser()->hasPermission('access language ' . $language->getId())) {
+          $options[$language->getId()] = $language->getName();
+        }
+      }
+
+      if (isset($form['langcode']['widget'])) {
+        $form['langcode']['widget'][0]['value']['#default_value'] = $lang;
+        $form['langcode']['widget'][0]['value']['#options'] = $options;
+      }
+
+      if (isset($form['langcode']['#options'])) {
+        $interfaceLang = $form['langcode']['#options']['***LANGUAGE_language_interface***'];
+        $options['***LANGUAGE_language_interface***'] = $interfaceLang;
+        $form['langcode']['#options'] = $options;
+      }
+    }
+  }
+}
