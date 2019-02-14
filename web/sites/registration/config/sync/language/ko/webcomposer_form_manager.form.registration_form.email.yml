@@ -1,10 +1,10 @@
 field_settings:
   label: '이메일 주소'
   placeholder: '이메일 주소'
-  annotation: '특별 보너스 및 혜택을 받으시려면 유효한 이메일 주소를 입력해주십시오. 거래 관련 중요 공지사항 및 업데이트 역시 기입된 이메일 주소로 전송됩니다.'
+  annotation: "최신 프로모션, 업데이트 및 특별 혜택을 받으려면 유효한 이메일 주소를 입력하십시오.\r\n"
 field_validations:
   required:
-    error_message: "유효한 이메일 주소를 입력해주세요. (예: name@domain.com)\r\n"
+    error_message: "이 항목은 필수 항목입니다\r\n"
   alpha:
     error_message: 'Field should be Alphabet characters only'
   alphanumeric:
@@ -18,11 +18,11 @@ field_validations:
   numeric_symbols:
     error_message: 'Field contains invalid special characters'
   email:
-    error_message: "연락이 가능하고 유효한 이메일 주소를 입력하십시오. (예. name@domain.com)\r\n"
+    error_message: "유효한 이메일 주소를 입력하세요. (예: name@domain.com)\r\n"
   min_length:
-    error_message: "연락이 가능하고 유효한 이메일 주소를 입력하십시오. (예. name@domain.com)\r\n"
+    error_message: "유효한 이메일 주소를 입력하세요. (예: name@domain.com)\r\n"
   max_length:
-    error_message: "연락이 가능하고 유효한 이메일 주소를 입력하십시오. (예. name@domain.com)\r\n"
+    error_message: "유효한 이메일 주소를 입력하세요. (예: name@domain.com)\r\n"
   regex:
     error_message: 'This field only accepts specific characters.'
   valid_date:
