@@ -4,6 +4,8 @@ status: true
 dependencies:
   module:
     - jamboree_withdraw_method
+_core:
+  default_config_hash: bVAkETQ4pbuRvgaBPjWLKltIh1J4Rkcf-qVnSIQia1k
 id: jamboree_withdraw_method_entity.field_summary
 field_name: field_summary
 entity_type: jamboree_withdraw_method_entity

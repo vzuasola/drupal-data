@@ -6,6 +6,8 @@ dependencies:
     - field.storage.jamboree_withdraw_method_entity.field_button_url
   module:
     - jamboree_withdraw_method
+_core:
+  default_config_hash: GWAn80Bz_AI1k1Sw1Z6buL4KqxAoTaAt5PDiItCz06o
 id: jamboree_withdraw_method_entity.jamboree_withdraw_method_entity.field_button_url
 field_name: field_button_url
 entity_type: jamboree_withdraw_method_entity

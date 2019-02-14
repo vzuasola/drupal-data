@@ -6,6 +6,8 @@ dependencies:
     - file
     - image
     - jamboree_withdraw_method
+_core:
+  default_config_hash: 17ZGmM8YKTdqEG52DeJTpDLDpgEYFyNpN70IECYBDVA
 id: jamboree_withdraw_method_entity.field_thumbnail
 field_name: field_thumbnail
 entity_type: jamboree_withdraw_method_entity

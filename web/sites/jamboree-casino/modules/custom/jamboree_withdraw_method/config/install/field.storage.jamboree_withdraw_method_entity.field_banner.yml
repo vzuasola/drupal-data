@@ -6,6 +6,8 @@ dependencies:
     - file
     - image
     - jamboree_withdraw_method
+_core:
+  default_config_hash: PW0rio4-OckLNulgXuI2W4a1ew3UtpMnqbqmvIgFPhY
 id: jamboree_withdraw_method_entity.field_banner
 field_name: field_banner
 entity_type: jamboree_withdraw_method_entity

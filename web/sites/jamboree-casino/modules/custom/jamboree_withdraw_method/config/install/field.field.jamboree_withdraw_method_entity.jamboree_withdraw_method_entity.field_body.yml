@@ -7,6 +7,8 @@ dependencies:
   module:
     - jamboree_withdraw_method
     - text
+_core:
+  default_config_hash: NaPMQHs9dPH4pPeP7UKak5UYqPj7isk8v5-wKoz3Xjs
 id: jamboree_withdraw_method_entity.jamboree_withdraw_method_entity.field_body
 field_name: field_body
 entity_type: jamboree_withdraw_method_entity

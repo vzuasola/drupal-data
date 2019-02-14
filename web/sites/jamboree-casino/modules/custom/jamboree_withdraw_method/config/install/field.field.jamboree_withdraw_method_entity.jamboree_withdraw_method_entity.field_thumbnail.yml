@@ -14,6 +14,8 @@ third_party_settings:
       alt: alt
       title: title
       file: '0'
+_core:
+  default_config_hash: Ec3cFRHil_DsEXaA_p3tR-a00gS70GvYrV7xb1P16BM
 id: jamboree_withdraw_method_entity.jamboree_withdraw_method_entity.field_thumbnail
 field_name: field_thumbnail
 entity_type: jamboree_withdraw_method_entity
