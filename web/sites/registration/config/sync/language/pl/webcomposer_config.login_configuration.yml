@@ -4,9 +4,9 @@ autologout_box_content:
 notification_content:
   format: basic_html
   value: "<p>Z powodu braku aktywności Twoja sesja wygasła.</p>\r\n"
-lightbox_blurb: 'Nie jesteś jeszcze członkiem Dafabet?'
+lightbox_blurb: "Nie jesteś jeszcze członkiem Dafabet? \r\n"
 mobile_login_button_label: 'LOGOWANIE/ REJESTRACJA'
-advanced__active_tab: edit-mobile-login
+advanced__active_tab: edit-login-form-details
 rememberme_label: 'Przypomnij Username '
 login_page_blurb: ''
 mobile_cant_login_url: '{domain:mobile}/{lang}/cant-login'

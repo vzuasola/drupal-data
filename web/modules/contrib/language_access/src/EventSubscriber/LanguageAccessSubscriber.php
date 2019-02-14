@@ -82,14 +82,63 @@ class LanguageAccessSubscriber implements EventSubscriberInterface {
           }
         }
       }
-      // fix for menu entities
-      if (preg_match('/^([a-za-zA-Z0-9_\-.]*)entity.menu.(edit_form|delete_form)$/', $current_route)) {
-        $langcode = $route_match->getParameter('menu')->get('langcode');
-        if (!$this->currentUser->hasPermission('access language ' . $langcode)) {
-          throw new AccessDeniedHttpException();
+
+      // fix for entities but show pages for translations
+      if (!preg_match('/^([a-za-zA-Z0-9_\-.]*)(overview|translation)([a-za-zA-Z0-9_\-.]*)$/', $current_route)) {
+        $entity = $this->get_page_entity();
+        if ($entity !== NULL) {
+          $langcode = $entity->language()->getId();
+          if (!$this->currentUser->hasPermission('access language ' . $langcode)) {
+            throw new AccessDeniedHttpException();
+          }
         }
       }
     }
+  }
+
+  /**
+   * Helper function to check if current route is an entity or not
+   *
+   * @return mixed
+   *   Entity or NULL
+   */
+  private function get_page_entity() {
+    $current_route = \Drupal::routeMatch();
+    foreach ($current_route->getParameters() as $param) {
+      if ($param instanceof \Drupal\Core\Entity\EntityInterface) {
+        $page_entity = $param;
+        break;
+      }
+    }
+
+    if (!isset($page_entity)) {
+      // Some routes don't properly define entity parameters.
+      // Thus, try to load them by its raw Id, if given.
+      $entity_type_manager = \Drupal::entityTypeManager();
+      $types = $entity_type_manager->getDefinitions();
+      foreach ($current_route->getParameters()->keys() as $param_key) {
+        if (!isset($types[$param_key])) {
+          continue;
+        }
+
+        if ($param = $current_route->getParameter($param_key)) {
+          if (is_string($param) || is_numeric($param)) {
+            try {
+              $page_entity = $entity_type_manager->getStorage($param_key)->load($param);
+            }
+            catch (\Exception $e) {
+            }
+          }
+          break;
+        }
+      }
+    }
+
+    if (!isset($page_entity) || !$page_entity->access('view')) {
+      $page_entity = FALSE;
+      return NULL;
+    }
+    return $page_entity;
   }
 
   /**
