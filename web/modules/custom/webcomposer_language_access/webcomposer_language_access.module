@@ -1,0 +1,41 @@
+<?php
+
+/**
+ * @file
+ * Contains webcomposer_language_access.module.
+ */
+
+/**
+ *
+ */
+function language_access_form_alter(&$form, $form_state, $form_id) {
+  $roles = Drupal::currentUser()->getRoles();
+  $permissions = user_role_permissions($roles);
+
+  if (isset($permissions['subadmin'])) {
+    $current_language = \Drupal::languageManager()->getCurrentLanguage();
+    $lang = $current_language->getId();
+    $permission = $permissions['subadmin'];
+
+    if (isset($form['langcode'])) {
+      $languages = \Drupal::languageManager()->getLanguages();
+      $options = [];
+      foreach ($languages as $language) {
+        if (\Drupal::currentUser()->hasPermission('access language ' . $language->getId())) {
+          $options[$language->getId()] = $language->getName();
+        }
+      }
+
+      if (isset($form['langcode']['widget'])) {
+        $form['langcode']['widget'][0]['value']['#default_value'] = $lang;
+        $form['langcode']['widget'][0]['value']['#options'] = $options;
+      }
+
+      if (isset($form['langcode']['#options'])) {
+        $interfaceLang = $form['langcode']['#options']['***LANGUAGE_language_interface***'];
+        $options['***LANGUAGE_language_interface***'] = $interfaceLang;
+        $form['langcode']['#options'] = $options;
+      }
+    }
+  }
+}
