@@ -12,5 +12,5 @@ iframe_width: 100%
 iframe_height: '1000'
 pre_login_sunplus_src: 'https://prices.{sunplus.domain}/vender.aspx?lang=en&iseuro=0&webskintype=3&act={sunplus.act}&otype=4'
 post_login_sunplus_src: 'https://play.{sunplus.domain}/Deposit_ProcessLogin.aspx?lang=en&iseuro=0&webskintype=3&act={sunplus.act}&otype=4'
-pre_login_colossusbet_src: 'https://prices.{sunplus.domain}/GamePage.aspx?Game={sunplus.act}&lang=en'
-post_login_colossusbet_src: 'https://play.{sunplus.domain}/DepositProcessLogin?lang=en&iseuro=0&webskintype=3&act={sunplus.act}'
+pre_login_colossusbet_src: 'https://prices.{sunplus.domain}/GamePage.aspx?Game=Colossusbet&lang=en'
+post_login_colossusbet_src: 'https://play.{sunplus.domain}/DepositProcessLogin?lang=en&iseuro=0&webskintype=3&act=Colossusbet&redirectUrl={colossus.redirectUrl}'
