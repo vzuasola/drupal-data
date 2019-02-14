@@ -5,8 +5,9 @@
  * Contains webcomposer_language_access.module.
  */
 
-use Drupal\Core\Routing\RouteMatchInterface;
-
+/**
+ *
+ */
 function language_access_form_alter(&$form, $form_state, $form_id) {
   $roles = Drupal::currentUser()->getRoles();
   $permissions = user_role_permissions($roles);
