@@ -1,0 +1,8 @@
+uuid: 4665cab5-42af-4434-acda-2c1594629e7d
+langcode: en
+status: true
+dependencies: {  }
+id: quicklinks-pt
+label: 'Quicklinks PT'
+description: ''
+locked: false

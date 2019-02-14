@@ -1,0 +1,8 @@
+uuid: 416c043f-1067-4226-bb51-ded12c525795
+langcode: en
+status: true
+dependencies: {  }
+id: cashier-menu-pt
+label: 'Cashier Menu PT'
+description: ''
+locked: false

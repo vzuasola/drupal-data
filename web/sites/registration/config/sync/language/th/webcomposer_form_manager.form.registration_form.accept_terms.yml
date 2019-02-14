@@ -1,5 +1,5 @@
 field_settings:
-  markup: "ฉันมีอายุ 18 ปีบริบูรณ์ขึ้นไป เข้าใจและยอมรับ  <strong><u>\r\n<a href=\"/{lang}/terms-of-use[query:({tracking})]\" target=\"_blank\" class=\"visible-desktop\">ข้อกำหนดและเงื่อนไข</a>\r\n<a href=\"/{lang}/terms-of-use[query:({tracking})]\" target=\"_blank\" class=\"visible-client\">ข้อกำหนดและเงื่อนไข</a>\r\n<a href=\"{domain:mobile}/{lang}/terms-use[query:({credentials.params}&{tracking})]\" target=\"_blank\" class=\"visible-mobile\">ข้อกำหนดและเงื่อนไข</a>\r\n<a href=\"{domain:mobile}/{lang}/terms-use[query:({credentials.params}&{tracking})]\" target=\"_blank\" class=\"visible-tablet\">ข้อกำหนดและเงื่อนไข</a>\r\n<a href=\"{domain:mobile}/{lang}/terms-use[query:(clientflag=1&{tracking.token})]\" target=\"_blank\" class=\"visible-app\">ข้อกำหนดและเงื่อนไข</a>\r\n</u></strong>"
+  markup: "ฉันมีอายุ 18 ปีบริบูรณ์ขึ้นไป เข้าใจและยอมรับ  <strong><u>\r\n<a href=\"/{lang}/terms-of-use[query:({tracking})]\" target=\"_blank\" class=\"visible-desktop\">ข้อกำหนดและเงื่อนไข</a>\r\n<a href=\"/{lang}/terms-of-use[query:({tracking})]\" target=\"_blank\" class=\"visible-client\">ข้อกำหนดและเงื่อนไข</a>\r\n<a href=\"{domain:mobile}/{lang}/terms-of-use[query:({credentials.params}&{tracking})]\" target=\"_blank\" class=\"visible-mobile\">ข้อกำหนดและเงื่อนไข</a>\r\n<a href=\"{domain:mobile}/{lang}/terms-of-use[query:({credentials.params}&{tracking})]\" target=\"_blank\" class=\"visible-tablet\">ข้อกำหนดและเงื่อนไข</a>\r\n<a href=\"{domain:mobile}/{lang}/terms-of-use[query:(clientflag=1&{tracking.token})]\" target=\"_blank\" class=\"visible-app\">ข้อกำหนดและเงื่อนไข</a>\r\n</u></strong>"
 field_validations:
   required:
     error_message: 'Field should be required'
@@ -21,6 +21,10 @@ field_validations:
     error_message: 'Minimum requirement not met'
   max_length:
     error_message: 'Maximum requirement not met'
+  regex:
+    error_message: 'This field only accepts specific characters.'
+  valid_date:
+    error_message: 'Date is invalid'
   username_availability:
     error_message: 'Username not available'
   email_availability:
@@ -29,5 +33,5 @@ field_validations:
     error_message: 'Invalid/not allowed characters'
   valid_languages:
     error_message: 'This field only accepts specific characters.'
-  valid_date:
-    error_message: 'Date is invalid'
+  not_match_username:
+    error_message: 'Password should not equal to username'

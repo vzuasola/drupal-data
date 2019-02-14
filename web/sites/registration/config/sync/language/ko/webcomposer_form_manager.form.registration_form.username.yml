@@ -4,11 +4,11 @@ field_settings:
   annotation: ''
 field_validations:
   required:
-    error_message: "아이디가 고유한지 확인하십시오. 회원님의 아이디는 모든 제품에 사용됩니다. 이 영역에는 3-15개의 영문 및 숫자만 사용할 수 있습니다.\r\n"
+    error_message: '이 항목은 필수 항목입니다.'
   alpha:
     error_message: 'Field should be Alphabet characters only'
   alphanumeric:
-    error_message: "아이디가 고유한지 확인하십시오. 회원님의 아이디는 모든 제품에 사용됩니다. 이 영역에는 3-15개의 영문 및 숫자만 사용할 수 있습니다.\r\n"
+    error_message: "이 영역은 영문 및 숫자만 허용합니다.\r\n"
   alpha_multi:
     error_message: 'Value is not a valid multilingual character'
   numeric:
@@ -20,12 +20,20 @@ field_validations:
   email:
     error_message: 'Field does not contain a valid email address'
   min_length:
-    error_message: "아이디가 고유한지 확인하십시오. 회원님의 아이디는 모든 제품에 사용됩니다. 이 영역에는 3-15개의 영문 및 숫자만 사용할 수 있습니다.\r\n"
+    error_message: '아이디는 3-15자여야 합니다.'
   max_length:
-    error_message: "아이디가 고유한지 확인하십시오. 회원님의 아이디는 모든 제품에 사용됩니다. 이 영역에는 3-15개의 영문 및 숫자만 사용할 수 있습니다.\r\n"
+    error_message: '아이디는 3-15자여야 합니다.'
+  regex:
+    error_message: 'This field only accepts specific characters.'
+  valid_date:
+    error_message: 'Date is invalid'
   username_availability:
-    error_message: "아이디가 고유한지 확인하십시오. 회원님의 아이디는 모든 제품에 사용됩니다. 이 영역에는 3-15개의 영문 및 숫자만 사용할 수 있습니다.\r\n"
+    error_message: "아이디가 이미 사용 중입니다. 새로운 아이디를 입력하십시오.\r\n"
   email_availability:
     error_message: 'Please use a unique email.'
   invalid_words:
     error_message: 'Invalid/not allowed characters'
+  valid_languages:
+    error_message: 'This field only accepts specific characters.'
+  not_match_username:
+    error_message: 'Password should not equal to username'
