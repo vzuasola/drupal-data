@@ -1,0 +1,29 @@
+general_settings_tab__active_tab: edit-proactive-settings
+step_one_text: Cadastre-se
+step_two_text: Depósito
+home_title: 'Comece a apostar hoje com a Dafabet! Inscreva-se agora!'
+success_title: Sucesso
+native_app_title: ''
+enable_reg_relic_custom_headers: 0
+portal_id_to_product_name_mapping: "3|OW Sports|sports\r\n10|OW Sports|sports\r\n28|OW Sports|sports\r\n47|OW Sports|sports\r\n22|Esportes Dafa|sports-df\r\n26|Esportes Dafa|sports-df\r\n29|Esportes Dafa|sports-df\r\n48|Esportes Dafa|sports-df\r\n4|Cassino|casino\r\n11|Cassino|casino\r\n16|Cassino|casino\r\n18|Cassino|casino\r\n30|Cassino|casino\r\n49|Cassino|casino\r\n23|Cassino|casino\r\n19|Casino Gold|casino-gold\r\n20|Casino Gold|casino-gold\r\n21|Casino Gold|casino-gold\r\n35|Casino Gold|casino-gold\r\n54|Casino Gold|casino-gold\r\n6|Live Dealer|live-dealer\r\n15|Live Dealer|live-dealer\r\n33|Live Dealer|live-dealer\r\n52|Live Dealer|live-dealer\r\n5|Poker|poker\r\n12|Poker|poker\r\n17|Poker|poker\r\n31|Poker|poker\r\n50|Poker|poker\r\n24|Videogames|fish-hunter\r\n25|Videogames|fish-hunter\r\n34|Videogames|fish-hunter\r\n53|Videogames|fish-hunter\r\n8|Jogos|games\r\n14|Jogos|games\r\n32|Jogos|games\r\n51|Jogos|games\r\n56|Virtuais|virtuals\r\n57|Virtuais|virtuals\r\n58|Virtuais|virtuals\r\n59|Virtuais|virtuals\r\n55|Lottery|keno\r\n45|Lottery|keno\r\n60|Lottery|keno\r\n61|Lottery|keno\r\n66|Exchange|exchange\r\n67|Exchange|exchange\r\n68|Exchange|exchange\r\n69|Exchange|exchange"
+country_restriction_message: '[product] não está disponível em sua região'
+generic_error_message: 'O registro da conta falhou. Por favor, entre em contato com nosso <a href="mailto:suporte@dafabet.com">suporte ao cliente</a> para obter assistência. '
+unauthenticated_error_message: 'Não podemos autenticá-lo no Dafabet, pois parece que sua conta foi desconectada. Por favor, faça o login na sua conta.'
+enable_avaya_proactive: '0'
+livechat_header: 'Precisa de ajuda?'
+livechat_text: 'Como podemos te ajudar?'
+enable_proactive_mobile: '0'
+proactive_mobile_class: proactive-wechat-my
+proactive_mobile_url: 'weixin://dl/chat?DafabetMY1'
+proactive_mobile_url_playstore: 'https://play.google.com/store/apps/details?id=com.tencent.mm'
+proactive_mobile_url_ios: 'weixin://dl/chat?DafabetMY1'
+proactive_mobile_url_ios_appstore: 'https://itunes.apple.com/app/wechat/id414478124?mt='
+enable_cashier_payment_methods: 0
+deposit_now_text: ''
+payment_method_headers: 'Payment Options|Description|Min/Max| '
+with_payment_method:
+  value: "<div class=\"payment-option-header background-light-gray text-center\"><strong>Deposit Made Easy</strong></div>\r\n\r\n<p class=\"payment-option-desc text-14 text-center hidden-mobile mt-15 mb-15\">Learn the different payment methods you can use to be able to enjoy betting at Dafabet.&nbsp;</p>\r\n"
+  format: basic_html
+without_payment_method:
+  value: "<div class=\"content-header background-light-gray text-center pt-10 pb-10\"><strong class=\"text-20\">How to Deposit?</strong>\r\n<p class=\"text-16 mb-0\">Contact our Customer Support 24/7</p>\r\n</div>\r\n\r\n<div class=\"container-contact-us p-10 text-center\">\r\n<div class=\"image-contact-us-item inline-block mr-30\"><picture> <source media=\"(min-width: 768px)\" srcset=\"http://via.placeholder.com/220x120\" /> <source media=\"(min-width: 320px)\" srcset=\"http://via.placeholder.com/120x80\" /> <img alt=\"\" data-entity-type=\"\" data-entity-uuid=\"\" src=\"http://via.placeholder.com/220x120\" /> </picture></div>\r\n\r\n<div class=\"image-contact-us-item inline-block\"><picture> <source media=\"(min-width: 768px)\" srcset=\"http://via.placeholder.com/220x120\" /> <source media=\"(min-width: 320px)\" srcset=\"http://via.placeholder.com/120x80\" /> <img alt=\"\" data-entity-type=\"\" data-entity-uuid=\"\" src=\"http://via.placeholder.com/220x120\" /> </picture></div>\r\n\r\n<div><a href=\"https://www.google.com\"><img alt=\"masters.png\" data-entity-type=\"\" data-entity-uuid=\"\" height=\"44\" src=\"/sites/registration/files/2017-11/masters.png\" width=\"56\" /></a></div>\r\n</div>\r\n"
+  format: basic_html

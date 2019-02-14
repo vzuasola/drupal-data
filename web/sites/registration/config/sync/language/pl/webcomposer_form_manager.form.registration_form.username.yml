@@ -4,11 +4,11 @@ field_settings:
   annotation: ''
 field_validations:
   required:
-    error_message: "Upewnij się, że Twój username jest tak unikatowy jak  to tylko możliwe. Twój Username będzie taki sam, dla wszystkich produktów. Dozowolone jest 3-15 alfanumerycznych znaków.\r\n"
+    error_message: "This field is required\r\n"
   alpha:
     error_message: 'Field should be Alphabet characters only'
   alphanumeric:
-    error_message: "Upewnij się, że Twój username jest tak unikatowy jak  to tylko możliwe. Twój Username będzie taki sam, dla wszystkich produktów. Dozowolone jest 3-15 alfanumerycznych znaków.\r\n"
+    error_message: "Field only accepts alphanumeric characters\r\n"
   alpha_multi:
     error_message: 'Value is not a valid multilingual character'
   numeric:
@@ -20,16 +20,20 @@ field_validations:
   email:
     error_message: 'Field does not contain a valid email address'
   min_length:
-    error_message: "Upewnij się, że Twój username jest tak unikatowy jak  to tylko możliwe. Twój Username będzie taki sam, dla wszystkich produktów. Dozowolone jest 3-15 alfanumerycznych znaków.\r\n"
+    error_message: "Username must be 3-15 characters\r\n"
   max_length:
-    error_message: "Upewnij się, że Twój username jest tak unikatowy jak  to tylko możliwe. Twój Username będzie taki sam, dla wszystkich produktów. Dozowolone jest 3-15 alfanumerycznych znaków.\r\n"
+    error_message: "Username must be 3-15 characters\r\n"
+  regex:
+    error_message: 'This field only accepts specific characters.'
+  valid_date:
+    error_message: 'Date is invalid'
   username_availability:
-    error_message: "Upewnij się, że Twój username jest tak unikatowy jak  to tylko możliwe. Twój Username będzie taki sam, dla wszystkich produktów. Dozowolone jest 3-15 alfanumerycznych znaków.\r\n"
+    error_message: "Username has already been taken. Please enter a new username.\r\n"
   email_availability:
     error_message: 'Please use a unique email.'
   invalid_words:
     error_message: 'Invalid/not allowed characters'
   valid_languages:
     error_message: 'This field only accepts specific characters.'
-  valid_date:
-    error_message: 'Date is invalid'
+  not_match_username:
+    error_message: 'Password should not equal to username'

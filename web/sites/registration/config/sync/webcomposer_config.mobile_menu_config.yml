@@ -1,6 +1,6 @@
 mobile_menu_language_lightbox_title: 'Select Language'
 mobile_menu_cashier_links_label: Cashier
-mobile_menu_cashier_links: '{domain:mcashier_domain}/{domain:cashier_lang}[query:(ticket={auth.token}&{tracking})]'
+mobile_menu_cashier_links: '{mcashier}[query:(ticket={auth.token}&{tracking})]'
 mobile_menu_account_links_label: 'My Account'
 mobile_menu_account_links: '/{domain:myaccount_domain}/{lang}/my-profile?title=headerPopup&width=820&height=700&token={legacy.credentials}'
 mobile_menu_promotion_label: 'My Account'
