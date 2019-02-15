@@ -88,9 +88,9 @@ class LanguageAccessSubscriber implements EventSubscriberInterface {
         $entity = $this->get_page_entity();
         if ($entity !== NULL) {
           $langcode = $entity->language()->getId();
-          if (!$this->currentUser->hasPermission('access language ' . $langcode)) {
-            throw new AccessDeniedHttpException();
-          }
+          // if (!$this->currentUser->hasPermission('access language ' . $langcode)) {
+          //   throw new AccessDeniedHttpException();
+          // }
         }
       }
     }
