@@ -74,11 +74,13 @@ class LanguageAccessSubscriber implements EventSubscriberInterface {
       // Check access to language.
       $route_match = \Drupal::routeMatch();
       $current_route = $route_match->getRouteName();
-      if (!$this->currentUser->hasPermission('access language ' . $language->getId())) {
-        if (PHP_SAPI != 'cli') {
-          // Display the default access denied page.
-          if ($event->getRequestType() === HttpKernelInterface::MASTER_REQUEST) {
-            throw new AccessDeniedHttpException();
+      if (strpos($current_route, '/api') <= 0) {
+        if (!$this->currentUser->hasPermission('access language ' . $language->getId())) {
+          if (PHP_SAPI != 'cli') {
+            // Display the default access denied page.
+            if ($event->getRequestType() === HttpKernelInterface::MASTER_REQUEST) {
+              throw new AccessDeniedHttpException();
+            }
           }
         }
       }
