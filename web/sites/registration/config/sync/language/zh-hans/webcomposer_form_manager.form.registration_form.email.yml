@@ -1,10 +1,10 @@
 field_settings:
   label: 电子邮箱地址
   placeholder: 电子邮箱地址
-  annotation: 请输入有效的邮箱地址来接收独家奖金优惠及奉送。重要提示及交易相关的信息也将发送至您的注册邮箱。
+  annotation: "请输入有效邮箱地址以接收最新活动、动态和专属奖励。\r\n"
 field_validations:
   required:
-    error_message: "请输入有效邮箱地址。（例如：123456789@qq.com）\r\n"
+    error_message: "此项为必填项。\r\n"
   alpha:
     error_message: 'Field should be Alphabet characters only'
   alphanumeric:
@@ -18,11 +18,11 @@ field_validations:
   numeric_symbols:
     error_message: 'Field contains invalid special characters'
   email:
-    error_message: "请输入您的有效的目前正处于激活状态的电子邮件地址（如name@domain.com）。请不要在您的电子邮件地址末尾使用额外的空格。\r\n"
+    error_message: "请输入有效的邮箱。 (例如. name@domain.com)\r\n"
   min_length:
-    error_message: "请输入您的有效的目前正处于激活状态的电子邮件地址（如name@domain.com）。请不要在您的电子邮件地址末尾使用额外的空格。\r\n"
+    error_message: "请输入有效的邮箱。 (例如. name@domain.com)\r\n"
   max_length:
-    error_message: "请输入您的有效的目前正处于激活状态的电子邮件地址（如name@domain.com）。请不要在您的电子邮件地址末尾使用额外的空格。\r\n"
+    error_message: "请输入有效的邮箱。 (例如. name@domain.com)\r\n"
   regex:
     error_message: 'This field only accepts specific characters.'
   valid_date:

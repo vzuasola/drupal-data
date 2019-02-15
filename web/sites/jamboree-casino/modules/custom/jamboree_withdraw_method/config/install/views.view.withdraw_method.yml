@@ -15,6 +15,8 @@ dependencies:
     - rest
     - serialization
     - text
+_core:
+  default_config_hash: 4MJUpZ_OLgYuTaf38ruUGYDLbSNoy0hXnPreWTpUHi0
 id: withdraw_method
 label: 'Withdraw Method'
 module: views
@@ -654,7 +656,7 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: admin/structure/jamboree_big_winner_entity
+      path: admin/structure/jamboree_withdraw_method_entity
       style:
         type: table
         options:
@@ -688,132 +690,6 @@ display:
         type: fields
         options: {  }
       fields:
-        field_banner:
-          id: field_banner
-          table: jamboree_withdraw_method_entity__field_banner
-          field: field_banner
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: Banner
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: image
-          settings:
-            image_style: ''
-            image_link: ''
-          group_column: ''
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_body:
-          id: field_body
-          table: jamboree_withdraw_method_entity__field_body
-          field: field_body
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: Body
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: text_default
-          settings: {  }
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
         id:
           id: id
           table: jamboree_withdraw_method_entity_field_data
@@ -880,14 +756,14 @@ display:
           entity_type: jamboree_withdraw_method_entity
           entity_field: id
           plugin_id: field
-        field_summary:
-          id: field_summary
-          table: jamboree_withdraw_method_entity__field_summary
-          field: field_summary
+        field_title:
+          id: field_title
+          table: jamboree_withdraw_method_entity__field_title
+          field: field_title
           relationship: none
           group_type: group
           admin_label: ''
-          label: Summary
+          label: Title
           exclude: false
           alter:
             alter_text: false
@@ -929,8 +805,9 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: basic_string
-          settings: {  }
+          type: string
+          settings:
+            link_to_entity: false
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -1006,14 +883,14 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_title:
-          id: field_title
-          table: jamboree_withdraw_method_entity__field_title
-          field: field_title
+        field_summary:
+          id: field_summary
+          table: jamboree_withdraw_method_entity__field_summary
+          field: field_summary
           relationship: none
           group_type: group
           admin_label: ''
-          label: Title
+          label: Summary
           exclude: false
           alter:
             alter_text: false
@@ -1055,9 +932,8 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: string
-          settings:
-            link_to_entity: false
+          type: basic_string
+          settings: {  }
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -1069,6 +945,57 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
+        operations:
+          id: operations
+          table: jamboree_withdraw_method_entity
+          field: operations
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Operations links'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          destination: false
+          entity_type: jamboree_withdraw_method_entity
+          plugin_id: entity_operations
       filters:
         langcode:
           id: langcode
@@ -1125,8 +1052,6 @@ display:
         - 'languages:language_interface'
         - url
       tags:
-        - 'config:field.storage.jamboree_withdraw_method_entity.field_banner'
-        - 'config:field.storage.jamboree_withdraw_method_entity.field_body'
         - 'config:field.storage.jamboree_withdraw_method_entity.field_summary'
         - 'config:field.storage.jamboree_withdraw_method_entity.field_thumbnail'
         - 'config:field.storage.jamboree_withdraw_method_entity.field_title'

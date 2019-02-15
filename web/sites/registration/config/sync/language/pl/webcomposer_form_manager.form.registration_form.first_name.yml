@@ -1,10 +1,10 @@
 field_settings:
   label: Imię
   placeholder: Imię
-  annotation: "Proszę podać swoje prawdziwe imię i nazwisko, na przykład: <u>Joe</u> Smith. Nie będziemy w stanie przetworzyć depozytu karty, czeków lub przelewów bankowych, jeśli wprowadzona nazwa będzie inna niż nazwa właściciela konta.\r\n"
+  annotation: "Please enter your Given Name as indicated in your bank account. (e.g. <u>Joe</u> Smith)\r\n"
 field_validations:
   required:
-    error_message: "Twoje Imię musi zostać wprowadzone poprawnie\r\n"
+    error_message: "This field is required\r\n"
   alpha:
     error_message: 'Field should be Alphabet characters only'
   alphanumeric:
@@ -22,12 +22,18 @@ field_validations:
   min_length:
     error_message: "Imię musi zawierać 1-50 znaków\r\n"
   max_length:
-    error_message: "Imię musi zawierać 1-50 znaków\r\n"
+    error_message: "Name must not exceed 50 characters\r\n"
+  regex:
+    error_message: 'This field only accepts specific characters.'
+  valid_date:
+    error_message: 'Date is invalid'
   username_availability:
     error_message: 'Username not available'
   email_availability:
     error_message: 'Email not available'
   invalid_words:
-    error_message: "Twoje Imię musi zostać wprowadzone poprawnie\r\n"
+    error_message: "Please enter a valid name\r\n"
   valid_languages:
-    error_message: "Proszę używaj tylko znaków angielskich/chińskich/koreańskich/greckich\r\n"
+    error_message: "Field accepts English, Chinese, Korean, Greek, apostrophe ('), and dash (-) characters only\r\n"
+  not_match_username:
+    error_message: 'Password should not equal to username'

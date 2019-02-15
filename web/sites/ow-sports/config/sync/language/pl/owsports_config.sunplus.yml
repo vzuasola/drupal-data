@@ -7,5 +7,5 @@ maintenance_content:
   format: basic_html
 pre_login_sunplus_src: 'https://prices.{sunplus.domain}/vender.aspx?lang=pl&iseuro=1&webskintype=1&act={sunplus.act}&otype=1'
 post_login_sunplus_src: 'https://play.{sunplus.domain}/Deposit_ProcessLogin.aspx?lang=pl&iseuro=1&webskintype=1&act={sunplus.act}&otype=1'
-pre_login_colossusbet_src: 'https://prices.{sunplus.domain}/DepositProcessLogin?lang=pl&iseuro=0&webskintype=3&act={sunplus.act}&otype=1'
-post_login_colossusbet_src: 'https://play.{sunplus.domain}/DepositProcessLogin?lang=pl&iseuro=0&webskintype=3&act={sunplus.act}&otype=1'
+pre_login_colossusbet_src: 'https://prices.{sunplus.domain}/GamePage.aspx?Game=Colossusbet&lang=pl'
+post_login_colossusbet_src: 'https://play.{sunplus.domain}/DepositProcessLogin?lang=pl&iseuro=0&webskintype=3&act=Colossusbet&redirectUrl={colossus.redirectUrl}'

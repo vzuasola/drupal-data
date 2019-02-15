@@ -27,7 +27,6 @@ class JamboreeWithdrawMethodEntityListBuilder extends EntityListBuilder {
    */
   public function buildRow(EntityInterface $entity) {
     /* @var $entity \Drupal\jamboree_withdraw_method\Entity\JamboreeWithdrawMethodEntity */
-    $row['id'] = $entity->id();
     $row['name'] = Link::createFromRoute(
       $entity->label(),
       'entity.jamboree_withdraw_method_entity.edit_form',

@@ -8,3 +8,5 @@ value: null
 format: null
 page_button_label: 'Go to top'
 page_url: withdraw-options
+_core:
+  default_config_hash: iROQYmC3KSarCPg9zNjaJKfsd0ccotT52BRxMPCwTAs

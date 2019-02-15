@@ -15,6 +15,8 @@ dependencies:
     - jamboree_withdraw_method
     - text
     - user
+_core:
+  default_config_hash: 1qdKzzXh5DoTytb9hsm1GZtBR-ADHyB_5NjVXQW6gdw
 id: jamboree_withdraw_method_entity.jamboree_withdraw_method_entity.default
 targetEntityType: jamboree_withdraw_method_entity
 bundle: jamboree_withdraw_method_entity

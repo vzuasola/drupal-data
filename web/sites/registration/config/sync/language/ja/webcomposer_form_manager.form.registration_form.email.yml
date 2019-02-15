@@ -1,10 +1,10 @@
 field_settings:
   label: Eメールアドレス
   placeholder: Eメールアドレス
-  annotation: '確認や銀行取引（Moneybookers, Skrillなど）に利用されているEメールアドレスが有効である事をご確認ください。Eメールアドレスが一致しない場合や、無効なEメールアドレスを利用されている場合、入出金処理が遅れる場合がございます。パスワードの変更やアカウント関連情報等の重要なメッセージやお知らせもご登録のメールアドレスに送信されます。'
+  annotation: "最新のプロモーション、最新情報、特典などを受け取るには有効なメールアドレスを入力してください\r\n"
 field_validations:
   required:
-    error_message: "ご利用のメールアドレスを入力して下さい。(例: name@domain.com)\r\n"
+    error_message: "この項目は必須です\r\n"
   alpha:
     error_message: 'Field should be Alphabet characters only'
   alphanumeric:
@@ -18,11 +18,11 @@ field_validations:
   numeric_symbols:
     error_message: 'Field contains invalid special characters'
   email:
-    error_message: "ご利用のメールアドレスを入力して下さい。(例: name@domain.com)\r\n"
+    error_message: "有効なメールアドレスを入力してください（ (例 name@domain.com)）\r\n"
   min_length:
-    error_message: 'Minimum requirement not met'
+    error_message: "有効なメールアドレスを入力してください（ (例 name@domain.com)）\r\n"
   max_length:
-    error_message: 'Maximum requirement not met'
+    error_message: "有効なメールアドレスを入力してください（ (例 name@domain.com)）\r\n"
   regex:
     error_message: 'This field only accepts specific characters.'
   valid_date:

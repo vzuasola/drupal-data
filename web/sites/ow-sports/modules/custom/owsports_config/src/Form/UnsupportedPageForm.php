@@ -87,20 +87,19 @@ class UnsupportedPageForm extends FormBase {
 
     $form['country_list'] = [
       '#type' => 'details',
-      '#title' => $this->t('Supported Country List'),
+      '#title' => $this->t('Unsupported Country List'),
       '#group' => 'unsupported_settings_tab',
     ];
 
     $form['country_list']['country'] = [
       '#type' => 'textarea',
       '#title' => $this->t('Country List'),
-      '#description' => $this->t('Define the supported countries of OW Sports, one per line.'),
+      '#description' => $this->t('Define the unsupported countries of OW Sports, one per line.'),
       '#default_value' => $this->get('country'),
       '#required' => false,
       '#translatable' => true,
     ];
   }
-
 
   /**
    *
