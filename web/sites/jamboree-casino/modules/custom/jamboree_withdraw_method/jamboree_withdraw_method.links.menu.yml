@@ -1,0 +1,18 @@
+jamboree_withdraw_method.list:
+  title: 'Jamboree Withdraw Method Configuration'
+  description: 'List of Jambree Withdraw Method Entities'
+  parent: system.admin_config
+  route_name: jamboree_withdraw_method.admin_settings
+
+# Jamboree withdraw method entity menu items definition
+entity.jamboree_withdraw_method_entity.collection:
+  title: 'Jamboree withdraw method entity list'
+  route_name: entity.jamboree_withdraw_method_entity.collection
+  description: 'List Jamboree withdraw method entity entities'
+  parent: jamboree_withdraw_method.list
+
+jamboree_withdraw_method_entity.admin.structure.settings:
+  title: Jamboree withdraw method entity settings
+  description: 'Configure Jamboree withdraw method entity entities'
+  route_name: jamboree_withdraw_method_entity.settings
+  parent: jamboree_withdraw_method.list

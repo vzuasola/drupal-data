@@ -1,0 +1,5 @@
+entity.jamboree_withdraw_method_entity.add_form:
+  route_name: entity.jamboree_withdraw_method_entity.add_form
+  title: 'Add Jamboree withdraw method entity'
+  appears_on:
+    - entity.jamboree_withdraw_method_entity.collection
