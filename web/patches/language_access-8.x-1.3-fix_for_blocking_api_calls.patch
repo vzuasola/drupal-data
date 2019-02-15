@@ -11,7 +11,7 @@ index 3fdc1b2..e5c9ae8 100644
 -          // Display the default access denied page.
 -          if ($event->getRequestType() === HttpKernelInterface::MASTER_REQUEST) {
 -            throw new AccessDeniedHttpException();
-+      if (strpos($current_route, '/api') <= 0) {
++      if (strpos($requestUrl, '/api') <= -1) {
 +        if (!$this->currentUser->hasPermission('access language ' . $language->getId())) {
 +          if (PHP_SAPI != 'cli') {
 +            // Display the default access denied page.
