@@ -23,19 +23,16 @@ use Drupal\Core\Datetime\DrupalDateTime;
  *   },
  * )
  */
-class JamboreePaymentMethodForm extends FormBase
-{
+class JamboreePaymentMethodForm extends FormBase {
 
     /**
      * {@inheritdoc}
      */
-    protected function getEditableConfigNames()
-    {
+    protected function getEditableConfigNames() {
         return ['jamboree_config.payment_method_page_configuration'];
     }
 
-    public function form(array $form, FormStateInterface $form_state)
-    {
+    public function form(array $form, FormStateInterface $form_state) {
         $form['advanced'] = [
             '#type' => 'vertical_tabs',
             '#title' => t('Payment Method Page Configuration'),
@@ -49,8 +46,7 @@ class JamboreePaymentMethodForm extends FormBase
     /**
      * {@inheritdoc}
      */
-    private function sectionPageSetting(array &$form)
-    {
+    private function sectionPageSetting(array &$form) {
         $form['page_setting'] = [
             '#type' => 'details',
             '#title' => t('Payment Method Page Setting'),
