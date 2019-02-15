@@ -1,0 +1,17 @@
+uuid: 4d558f67-3285-4993-b19e-b58fc1bcd4ac
+langcode: en
+status: true
+dependencies:
+  module:
+    - client_footer_games
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: client_footer_games.client_footer_games
+target_entity_type_id: client_footer_games
+target_bundle: client_footer_games
+default_langcode: site_default
+language_alterable: true
