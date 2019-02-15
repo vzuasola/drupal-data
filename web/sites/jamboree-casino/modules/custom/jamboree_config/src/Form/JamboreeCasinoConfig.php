@@ -179,6 +179,13 @@ class JamboreeCasinoConfig extends FormBase {
       '#translatable' => true,
     ];
 
+    $form['page_setting']['payment_method_title'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Payment Method Page Title'),
+      '#default_value' => $this->get('payment_method_title'),
+      '#translatable' => true,
+    ];
+
     $form['inner_breadcrumb'] = [
       '#type' => 'details',
       '#title' => t('InnerPage Breadcrumb'),
@@ -287,6 +294,13 @@ class JamboreeCasinoConfig extends FormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Withdraw Method'),
       '#default_value' => $this->get('withdraw_method_breadcrumb'),
+      '#translatable' => true,
+    ];
+
+    $form['inner_breadcrumb']['payment_method_breadcrumb'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Payment Method'),
+      '#default_value' => $this->get('payment_method_breadcrumb'),
       '#translatable' => true,
     ];
   }

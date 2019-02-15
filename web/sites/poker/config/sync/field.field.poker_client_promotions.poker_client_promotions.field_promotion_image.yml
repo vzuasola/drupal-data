@@ -11,9 +11,9 @@ dependencies:
 third_party_settings:
   content_translation:
     translation_sync:
-      file: file
-      alt: '0'
-      title: '0'
+      alt: alt
+      title: title
+      file: '0'
 id: poker_client_promotions.poker_client_promotions.field_promotion_image
 field_name: field_promotion_image
 entity_type: poker_client_promotions
