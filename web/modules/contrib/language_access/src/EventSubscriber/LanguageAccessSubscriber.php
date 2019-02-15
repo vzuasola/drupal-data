@@ -84,15 +84,15 @@ class LanguageAccessSubscriber implements EventSubscriberInterface {
       }
 
       // fix for entities but show pages for translations
-      if (!preg_match('/^([a-za-zA-Z0-9_\-.]*)(overview|translation)([a-za-zA-Z0-9_\-.]*)$/', $current_route)) {
-        $entity = $this->get_page_entity();
-        if ($entity !== NULL) {
-          $langcode = $entity->language()->getId();
-          // if (!$this->currentUser->hasPermission('access language ' . $langcode)) {
-          //   throw new AccessDeniedHttpException();
-          // }
-        }
-      }
+      // if (!preg_match('/^([a-za-zA-Z0-9_\-.]*)(overview|translation)([a-za-zA-Z0-9_\-.]*)$/', $current_route)) {
+      //   $entity = $this->get_page_entity();
+      //   if ($entity !== NULL) {
+      //     $langcode = $entity->language()->getId();
+      //     if (!$this->currentUser->hasPermission('access language ' . $langcode)) {
+      //       throw new AccessDeniedHttpException();
+      //     }
+      //   }
+      // }
     }
   }
 
