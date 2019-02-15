@@ -1,0 +1,5 @@
+name: Jamboree Payment Method
+type: module
+description: Jamboree Payment Method Module
+core: 8.x
+package: Web Composer

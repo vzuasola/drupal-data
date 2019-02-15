@@ -1,0 +1,18 @@
+jamboree_payment_method.list:
+  title: 'Jamboree Payment Method Configuration'
+  description: 'List of Jamboree Payment Method Entities'
+  parent: system.admin_config
+  route_name: jamboree_payment_method.admin_settings
+
+# Payment method entity menu items definition
+entity.payment_method_entity.collection:
+  title: 'Payment method entity list'
+  route_name: entity.payment_method_entity.collection
+  description: 'List Payment method entity entities'
+  parent: jamboree_payment_method.list
+
+payment_method_entity.admin.structure.settings:
+  title: Payment method entity settings
+  description: 'Configure Payment method entity entities'
+  route_name: payment_method_entity.settings
+  parent: jamboree_payment_method.list
