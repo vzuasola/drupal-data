@@ -85,8 +85,8 @@ class LanguageAccessSubscriber implements EventSubscriberInterface {
         }
       }
 
-      // fix for entities but show pages for translations
-      if (!preg_match('/^([a-za-zA-Z0-9_\-.]*)(overview|translation)([a-za-zA-Z0-9_\-.]*)$/', $current_route)) {
+      // fix for entities and show pages for translations and adding nodes
+      if (!preg_match('/^([a-zA-Z0-9_\-.]*)(overview|translation|node.add)([a-zA-Z0-9_\-.]*)$/', $current_route)) {
         $entity = $this->get_page_entity();
         if ($entity !== NULL) {
           $langcode = $entity->language()->getId();
