@@ -50,5 +50,4 @@ class JamboreeFairGamingEntitySettingsForm extends FormBase {
     'Settings form for Jamboree fair gaming entity entities. Manage field settings here.';
     return $form;
   }
-
 }
