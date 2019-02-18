@@ -1,0 +1,22 @@
+# Jamboree fair gaming entity routing definition
+jamboree_fair_gaming_entity.settings_tab:
+  route_name: jamboree_fair_gaming_entity.settings
+  title: 'Settings'
+  base_route: jamboree_fair_gaming_entity.settings
+
+entity.jamboree_fair_gaming_entity.canonical:
+  route_name: entity.jamboree_fair_gaming_entity.canonical
+  base_route: entity.jamboree_fair_gaming_entity.canonical
+  title: 'View'
+
+entity.jamboree_fair_gaming_entity.edit_form:
+  route_name: entity.jamboree_fair_gaming_entity.edit_form
+  base_route: entity.jamboree_fair_gaming_entity.canonical
+  title: 'Edit'
+
+entity.jamboree_fair_gaming_entity.delete_form:
+  route_name:  entity.jamboree_fair_gaming_entity.delete_form
+  base_route:  entity.jamboree_fair_gaming_entity.canonical
+  title: Delete
+  weight: 10
+

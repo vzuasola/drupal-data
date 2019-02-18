@@ -1,0 +1,18 @@
+uuid: c8cd63ac-63ec-4298-851e-a9df400ffb73
+langcode: en
+status: true
+dependencies:
+  module:
+    - jamboree_fair_gaming
+id: jamboree_fair_gaming_entity.jamboree_fair_gaming_entity.metatag
+field_name: metatag
+entity_type: jamboree_fair_gaming_entity
+bundle: jamboree_fair_gaming_entity
+label: Metatags
+description: 'The metatags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map
