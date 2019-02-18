@@ -10,13 +10,15 @@ dependencies:
     - field.storage.jamboree_withdraw_method_entity.field_title
   module:
     - content_translation
+    - draggableviews
     - image
     - jamboree_withdraw_method
     - rest
     - serialization
     - text
+    - webcomposer_rest_extra
 _core:
-  default_config_hash: 4MJUpZ_OLgYuTaf38ruUGYDLbSNoy0hXnPreWTpUHi0
+  default_config_hash: 7PCCRdDWmAeiKJMR-2A7A6xe8mwD3BlVUSN3M9Dr27A
 id: withdraw_method
 label: 'Withdraw Method'
 module: views
@@ -686,6 +688,7 @@ display:
         fields: false
         filters: false
         filter_groups: false
+        sorts: false
       row:
         type: fields
         options: {  }
@@ -996,6 +999,60 @@ display:
           destination: false
           entity_type: jamboree_withdraw_method_entity
           plugin_id: entity_operations
+        draggableviews:
+          id: draggableviews
+          table: jamboree_withdraw_method_entity_field_data
+          field: draggableviews
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Jamboree withdraw method entity'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          action_title: Action
+          include_exclude: exclude
+          selected_actions: {  }
+          entity_type: jamboree_withdraw_method_entity
+          entity_field: id
+          plugin_id: draggable_views_field
       filters:
         langcode:
           id: langcode
@@ -1045,8 +1102,21 @@ display:
         operator: AND
         groups:
           1: AND
+      sorts:
+        weight:
+          id: weight
+          table: draggableviews_structure
+          field: weight
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: standard
     cache_metadata:
-      max-age: -1
+      max-age: 0
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
@@ -1064,10 +1134,16 @@ display:
       display_extenders: {  }
       path: api/withdraw_method
       style:
-        type: serializer
+        type: node_list_serializer
+        options:
+          uses_fields: false
+          formats: {  }
       defaults:
         style: false
         row: false
+        filters: false
+        filter_groups: false
+        sorts: false
       row:
         type: data_entity
         options: {  }
@@ -1076,6 +1152,64 @@ display:
         options:
           items_per_page: 10
           offset: 0
+      filters:
+        langcode:
+          id: langcode
+          table: jamboree_withdraw_method_entity_field_data
+          field: langcode
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            '***LANGUAGE_site_default***': '***LANGUAGE_site_default***'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: jamboree_withdraw_method_entity
+          entity_field: langcode
+          plugin_id: language
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      sorts:
+        weight:
+          id: weight
+          table: draggableviews_structure
+          field: weight
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: standard
     cache_metadata:
       max-age: -1
       contexts:
