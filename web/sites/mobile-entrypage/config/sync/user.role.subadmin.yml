@@ -14,7 +14,6 @@ permissions:
   - 'access draggableviews'
   - 'access kint'
   - 'access language es'
-  - 'access language ko'
   - 'access language pt-br'
   - 'access lobby product tiles overview'
   - 'access marketing script overview'
