@@ -55,3 +55,9 @@ product_type_id_taurus: '100'
 product_icon_taurus: ''
 product_exclude_taurus: 0
 product_exclude_dismiss_taurus: 1
+copied: 'Copied to Clipboard'
+cta_label_proceed: 'Yes, Proceed'
+cta_actions_proceed: 'popup::cashier'
+cta_label_no: 'No, Thanks'
+cta_actions_no: ''
+
