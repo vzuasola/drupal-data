@@ -1,0 +1,30 @@
+uuid: 6b7ab47e-53f3-434a-b51e-e1143c360f0d
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+    - image
+    - jamboree_fair_gaming
+id: jamboree_fair_gaming_entity.field_fair_gaming_image
+field_name: field_fair_gaming_image
+entity_type: jamboree_fair_gaming_entity
+type: image
+settings:
+  uri_scheme: public
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  target_type: file
+  display_field: false
+  display_default: false
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
