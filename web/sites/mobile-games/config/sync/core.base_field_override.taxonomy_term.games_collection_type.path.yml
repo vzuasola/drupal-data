@@ -1,0 +1,20 @@
+uuid: cb464bd8-a9ae-429a-a16f-92f975ee5679
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.games_collection_type
+  module:
+    - path
+id: taxonomy_term.games_collection_type.path
+field_name: path
+entity_type: taxonomy_term
+bundle: games_collection_type
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path
