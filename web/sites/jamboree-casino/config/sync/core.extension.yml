@@ -42,16 +42,15 @@ module:
   jamboree_desktop_blocks: 0
   jamboree_desktop_games: 0
   jamboree_dropdown_menu: 0
+  jamboree_fair_gaming: 0
   jamboree_faq: 0
   jamboree_jackpot: 0
   jamboree_mobile_blocks: 0
   jamboree_mobile_games: 0
   jamboree_news_and_updates: 0
-  jamboree_payment_method: 0
   jamboree_registration: 0
   jamboree_rightside_blocks: 0
   jamboree_weekly_winner: 0
-  jamboree_withdraw_method: 0
   lang_dropdown: 0
   language: 0
   libraries: 0
@@ -84,7 +83,6 @@ module:
   webcomposer_avaya: 0
   webcomposer_config: 0
   webcomposer_config_schema: 0
-  webcomposer_dashboard: 0
   webcomposer_editor: 0
   webcomposer_form_manager: 0
   webcomposer_games: 0
