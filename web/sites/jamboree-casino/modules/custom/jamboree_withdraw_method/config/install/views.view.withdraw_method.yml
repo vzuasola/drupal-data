@@ -18,7 +18,7 @@ dependencies:
     - text
     - webcomposer_rest_extra
 _core:
-  default_config_hash: 7PCCRdDWmAeiKJMR-2A7A6xe8mwD3BlVUSN3M9Dr27A
+  default_config_hash: oLP6mRX7pZ3cT4VmyNJqp3worC2T0ediJ827Fh8lFqc
 id: withdraw_method
 label: 'Withdraw Method'
 module: views
@@ -1162,7 +1162,7 @@ display:
           admin_label: ''
           operator: in
           value:
-            '***LANGUAGE_site_default***': '***LANGUAGE_site_default***'
+            '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
           group: 1
           exposed: false
           expose:
