@@ -19,7 +19,6 @@ function jamboree_fair_gaming_uninstall() {
     'field.storage.jamboree_fair_gaming_entity.field_fair_gaming_year_category.yml',
     'field.storage.jamboree_fair_gaming_entity.field_title.yml',
     'field.storage.taxonomy_term.field_year_category.yml',
-    'jamboree_config.fair_gaming_configuration.yml',
     'language.content_settings.jamboree_fair_gaming_entity.jamboree_fair_gaming_entity.yml',
     'views.view.fair_gaming_list.yml',
     'views.view.fair_gaming_year.yml',
