@@ -1,0 +1,49 @@
+uuid: 631ae8e0-fff8-4a51-bee6-4b3d6b37d189
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.jamboree_fair_gaming_entity.jamboree_fair_gaming_entity.field_fair_gaming_image
+    - field.field.jamboree_fair_gaming_entity.jamboree_fair_gaming_entity.field_fair_gaming_year_category
+    - field.field.jamboree_fair_gaming_entity.jamboree_fair_gaming_entity.field_title
+    - image.style.thumbnail
+  module:
+    - entity_reference_views_select
+    - image
+    - jamboree_fair_gaming
+id: jamboree_fair_gaming_entity.jamboree_fair_gaming_entity.default
+targetEntityType: jamboree_fair_gaming_entity
+bundle: jamboree_fair_gaming_entity
+mode: default
+content:
+  field_fair_gaming_image:
+    weight: 2
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_fair_gaming_year_category:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: erviews_options_select
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  translation:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true
+  name: true
+  user_id: true

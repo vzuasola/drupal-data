@@ -1,0 +1,7 @@
+jamboree_fair_gaming.admin_settings:
+  path: 'admin/config/jamboree/fair_gaming'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Jamboree Fair Gaming'
+  requirements:
+    _permission: 'administer site configuration'

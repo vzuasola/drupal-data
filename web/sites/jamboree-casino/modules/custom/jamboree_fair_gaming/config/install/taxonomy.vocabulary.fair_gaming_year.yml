@@ -4,6 +4,6 @@ status: true
 dependencies: {  }
 name: 'Fair Gaming Year'
 vid: fair_gaming_year
-description: ''
+description: 'Fair Gaming Year'
 hierarchy: 0
 weight: 0

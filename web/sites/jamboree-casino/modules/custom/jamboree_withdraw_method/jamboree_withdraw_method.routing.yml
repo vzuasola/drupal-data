@@ -1,0 +1,7 @@
+jamboree_withdraw_method.admin_settings:
+  path: 'admin/config/jamboree/withdraw_method'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Jamboree Withdraw Method'
+  requirements:
+    _permission: 'administer site configuration'

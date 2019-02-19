@@ -1,0 +1,30 @@
+<?php
+
+/**
+ * Implements hook_uninstall
+ */
+function jamboree_fair_gaming_uninstall() {
+  $keys = [
+    'core.base_field_override.jamboree_fair_gaming_entity.jamboree_fair_gaming_entity.metatag.yml',
+    'core.entity_form_display.jamboree_fair_gaming_entity.jamboree_fair_gaming_entity.default.yml',
+    'core.entity_form_display.taxonomy_term.fair_gaming_year.default.yml',
+    'core.entity_view_display.jamboree_fair_gaming_entity.jamboree_fair_gaming_entity.default.yml',
+    'core.entity_view_display.taxonomy_term.fair_gaming_year.default.yml',
+    'field.field.jamboree_fair_gaming_entity.jamboree_fair_gaming_entity.field_fair_gaming_image.yml',
+    'field.field.jamboree_fair_gaming_entity.jamboree_fair_gaming_entity.field_fair_gaming_year_category.yml',
+    'field.field.jamboree_fair_gaming_entity.jamboree_fair_gaming_entity.field_title.yml',
+    'field.field.taxonomy_term.fair_gaming_year.field_enable.yml',
+    'field.field.taxonomy_term.fair_gaming_year.field_year_category.yml',
+    'field.storage.jamboree_fair_gaming_entity.field_fair_gaming_image.yml',
+    'field.storage.jamboree_fair_gaming_entity.field_fair_gaming_year_category.yml',
+    'field.storage.jamboree_fair_gaming_entity.field_title.yml',
+    'field.storage.taxonomy_term.field_year_category.yml',
+    'language.content_settings.jamboree_fair_gaming_entity.jamboree_fair_gaming_entity.yml',
+    'views.view.fair_gaming_list.yml',
+    'views.view.fair_gaming_year.yml',
+  ];
+
+  foreach ($keys as $key) {
+    \Drupal::configFactory()->getEditable($key)->delete();
+  }
+}

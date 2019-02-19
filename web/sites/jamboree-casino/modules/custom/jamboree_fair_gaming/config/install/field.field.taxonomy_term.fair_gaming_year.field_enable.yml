@@ -1,0 +1,23 @@
+uuid: d9a598a6-1adf-471d-8381-55e0e16d489c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_enable
+    - taxonomy.vocabulary.fair_gaming_year
+id: taxonomy_term.fair_gaming_year.field_enable
+field_name: field_enable
+entity_type: taxonomy_term
+bundle: fair_gaming_year
+label: Enable
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,20 @@
+uuid: 167b41a3-f0b6-450c-9324-11a7ded4531d
+langcode: en
+status: true
+dependencies:
+  module:
+    - jamboree_fair_gaming
+    - taxonomy
+id: jamboree_fair_gaming_entity.field_fair_gaming_year_category
+field_name: field_fair_gaming_year_category
+entity_type: jamboree_fair_gaming_entity
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
