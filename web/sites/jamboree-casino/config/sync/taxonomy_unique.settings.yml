@@ -30,5 +30,5 @@ weekly_winner_year: 1
 weekly_winner_year_message: 'Term @term already exists in vocabulary @vocabulary.'
 weekly_winner_month: 1
 weekly_winner_month_message: 'Term @term already exists in vocabulary @vocabulary.'
-fair_gaming_year: 0
+fair_gaming_year: 1
 fair_gaming_year_message: 'Term @term already exists in vocabulary @vocabulary.'
