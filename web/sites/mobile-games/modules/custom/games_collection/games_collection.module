@@ -1,0 +1,55 @@
+<?php
+
+/**
+ * @file
+ * Contains games_collection.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Entity\EntityFormInterface;
+
+/**
+ * Implements hook_help().
+ */
+function games_collection_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the games_collection module.
+    case 'help.page.games_collection':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Providers configuration to group the games.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+function games_collection_form_alter(&$form, $form_state, $form_id) {
+  $forms = ['games_collection_edit_form', 'games_collection_add_form'];
+  if (in_array($form_id, $forms)) {
+    $form['#validate'][] = 'validate_collection_type';
+  }
+}
+
+function validate_collection_type($form, &$form_state) {
+  $language =  \Drupal::languageManager()->getCurrentLanguage()->getId();
+  $type = $form_state->getValue('field_type')[0]['target_id'] ?? null;
+  if (!is_null($type)) {
+      $term = \Drupal\taxonomy\Entity\Term::load($type);
+      $termName = $term->getName();
+      $content = \Drupal::entityTypeManager()->getStorage('games_collection')->loadMultiple();
+      $nid = null;
+      if ($form_state->getFormObject() instanceof EntityFormInterface) {
+          $nid = $form_state->getformObject()->getEntity()->id();
+      }
+
+      foreach ($content as $item) {
+          if ($item->hasTranslation($language)) {
+              $translatedItem = $item->getTranslation($language);
+              if ($translatedItem->field_type->target_id === $type && (is_null($nid) || ($nid !== $item->id()))) {
+                  $form_state->setErrorByName('type', "A game collection for $termName is already existing.");
+              }
+          }
+      }
+  }
+}

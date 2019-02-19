@@ -4,7 +4,7 @@ webcomposer_dm.admin_settings:
     _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
     _title: 'Webcomposer Domains Configuration'
   requirements:
-    _permission: 'administer site configuration'
+    _permission: 'administer wbc domains'
 
 webcomposer_dm.manage_groups:
   path: 'admin/config/webcomposer/domains/groups'
@@ -12,7 +12,7 @@ webcomposer_dm.manage_groups:
     _controller: '\Drupal\webcomposer_dm\Controller\DomainManagement::getManageGroupsPage'
     _title: 'Manage Domain Groups'
   requirements:
-    _permission: 'administer site configuration'
+    _permission: 'administer wbc domains'
   options:
     _admin_route: TRUE
 
@@ -22,7 +22,7 @@ webcomposer_dm.manage_domains:
     _controller: '\Drupal\webcomposer_dm\Controller\DomainManagement::getManageDomainsPage'
     _title: 'Manage Domains'
   requirements:
-    _permission: 'administer site configuration'
+    _permission: 'administer wbc domains'
   options:
     _admin_route: TRUE
 
@@ -32,6 +32,6 @@ webcomposer_dm.manage_placeholders:
     _controller: '\Drupal\webcomposer_dm\Controller\DomainManagement::getManagePlaceholdersPage'
     _title: 'Domain Management Configuration'
   requirements:
-    _permission: 'administer site configuration'
+    _permission: 'administer wbc domains'
   options:
     _admin_route: TRUE
