@@ -1,0 +1,4 @@
+administer wbc domains:
+  title: 'Administer WBC Domains'
+  description: 'Administer WBC Domains Configurations'
+  restrict access: TRUE

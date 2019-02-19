@@ -7,3 +7,11 @@ services:
     class: \Drupal\webcomposer_replicate_utility\EventSubscriber\SetReplicateDefaultLabel
     tags:
       - { name: event_subscriber }
+  webcomposer_replicate_utility.entity_status:
+    class: \Drupal\webcomposer_replicate_utility\EventSubscriber\EntityStatusSubscriber
+    tags:
+      - { name: event_subscriber }
+  webcomposer_replicate_utility.entity_unpublish_date:
+    class: \Drupal\webcomposer_replicate_utility\EventSubscriber\EntityUnpublishDateSubscriber
+    tags:
+      - { name: event_subscriber }

@@ -1,0 +1,22 @@
+# Games Collection routing definition
+games_collection.settings_tab:
+  route_name: games_collection.settings
+  title: 'Settings'
+  base_route: games_collection.settings
+
+entity.games_collection.canonical:
+  route_name: entity.games_collection.canonical
+  base_route: entity.games_collection.canonical
+  title: 'View'
+
+entity.games_collection.edit_form:
+  route_name: entity.games_collection.edit_form
+  base_route: entity.games_collection.canonical
+  title: 'Edit'
+
+entity.games_collection.delete_form:
+  route_name:  entity.games_collection.delete_form
+  base_route:  entity.games_collection.canonical
+  title: Delete
+  weight: 10
+
