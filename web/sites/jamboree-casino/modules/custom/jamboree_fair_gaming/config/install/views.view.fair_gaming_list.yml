@@ -410,16 +410,7 @@ display:
       header: {  }
       footer: {  }
       empty: {  }
-      relationships:
-        field_fair_gaming_year_category:
-          id: field_fair_gaming_year_category
-          table: jamboree_fair_gaming_entity__field_fair_gaming_year_category
-          field: field_fair_gaming_year_category
-          relationship: none
-          group_type: group
-          admin_label: 'field_fair_gaming_year_category: Taxonomy term'
-          required: true
-          plugin_id: standard
+      relationships: {  }
       arguments: {  }
       display_extenders: {  }
     cache_metadata:
