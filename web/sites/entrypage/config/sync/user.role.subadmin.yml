@@ -13,6 +13,8 @@ permissions:
   - 'access contextual links'
   - 'access draggableviews'
   - 'access inner page right side block overview'
+  - 'access language es'
+  - 'access language pt-br'
   - 'access left floating banner entity overview'
   - 'access marketing script overview'
   - 'access partner entity overview'
