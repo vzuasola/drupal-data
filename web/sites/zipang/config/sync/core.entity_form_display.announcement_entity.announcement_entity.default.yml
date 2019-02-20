@@ -1,0 +1,72 @@
+uuid: 2991eaad-c8d0-4ac4-8f1f-9b1f0e639e8c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.announcement_entity.announcement_entity.field_body
+    - field.field.announcement_entity.announcement_entity.field_publish_date
+    - field.field.announcement_entity.announcement_entity.field_unpublish_date
+  module:
+    - datetime
+    - field_group
+    - text
+    - webcomposer_announcements
+third_party_settings:
+  field_group:
+    group_scheduler_settings:
+      children:
+        - field_publish_date
+        - field_unpublish_date
+      parent_name: ''
+      weight: 3
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: false
+      label: 'Scheduler Settings'
+_core:
+  default_config_hash: ATL0JcDWzxT2OoyjF4vTuFGFHVWDyvIaTXBIPEjf0hI
+id: announcement_entity.announcement_entity.default
+targetEntityType: announcement_entity
+bundle: announcement_entity
+mode: default
+content:
+  field_body:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_publish_date:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_unpublish_date:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  translation: true
+  user_id: true
