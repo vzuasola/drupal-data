@@ -28,9 +28,6 @@ settings:
     -
       value: linkedin
       label: LinkedIn
-    -
-      value: instagram
-      label: Instagram
   allowed_values_function: ''
 module: options
 locked: false
