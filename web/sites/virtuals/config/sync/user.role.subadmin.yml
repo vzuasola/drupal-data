@@ -34,7 +34,6 @@ permissions:
   - 'add inner page right side block entities'
   - 'add marketing script entities'
   - 'add partner entity entities'
-  - 'add slider overlay entities'
   - 'add webcomposer meta entity entities'
   - 'add webcomposer slider 2.0 entity entities'
   - 'add webcomposer slider entity entities'
