@@ -1,0 +1,26 @@
+uuid: 868b100e-af1e-40c7-9f68-3817633055a7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.poker_client_showcase.field_game_categories
+  module:
+    - poker_client_showcase
+id: poker_client_showcase.poker_client_showcase.field_game_categories
+field_name: field_game_categories
+entity_type: poker_client_showcase
+bundle: poker_client_showcase
+label: 'Game Categories'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: client_casino_category
+      display_name: entity_reference_1
+      arguments: {  }
+field_type: entity_reference

@@ -1,0 +1,30 @@
+uuid: 5fed3d05-de10-40f7-93ae-25880869a26b
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - poker_client_showcase
+id: poker_client_showcase.field_log_in_state
+field_name: field_log_in_state
+entity_type: poker_client_showcase
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '0'
+      label: 'Pre Login'
+    -
+      value: '1'
+      label: 'Post Login'
+    -
+      value: '2'
+      label: Both
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

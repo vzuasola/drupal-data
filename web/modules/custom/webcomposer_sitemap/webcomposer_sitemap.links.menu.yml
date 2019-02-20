@@ -3,9 +3,4 @@ webcomposer_sitemap.list:
   description: 'Manage Sitemap'
   parent: system.admin_config
   route_name: webcomposer_sitemap.admin_settings
-
-webcomposer_sitemap.admin_sitemap_configuration:
-  title: 'Sitemap Configuration'
-  parent: webcomposer_sitemap.list
-  description: 'Provides configuration for Sitemap Page.'
-  route_name: webcomposer_sitemap.sitemap_configuration_form
+  

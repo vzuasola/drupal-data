@@ -1,0 +1,18 @@
+uuid: 6a2b306d-e0c6-4333-b57e-87f0fff5aecd
+langcode: en
+status: true
+dependencies:
+  module:
+    - poker_client_showcase
+id: poker_client_showcase.poker_client_showcase.metatag
+field_name: metatag
+entity_type: poker_client_showcase
+bundle: poker_client_showcase
+label: Metatags
+description: 'The metatags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

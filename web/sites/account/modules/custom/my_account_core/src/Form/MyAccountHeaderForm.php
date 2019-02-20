@@ -19,147 +19,71 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  * @see \Drupal\Core\Form\FormBase
  * @see \Drupal\Core\Form\ConfigFormBase
  */
-class MyAccountHeaderForm extends ConfigFormBase
-{
+class MyAccountHeaderForm extends FormBase {
 
-    /**
-     * Build the form.
-     *
-     * @inheritdoc
-     */
-    public function buildForm(array $form, FormStateInterface $form_state)
-    {
+  /**
+   * {@inheritdoc}
+   */
+  protected function getEditableConfigNames() {
 
-        // Get Form configuration.
-        $myAccountCoreConfig = $this->config('my_account_core.header');
+    return ['my_account_core.header'];
+  }
 
-        $form['header'] = [
-            '#type' => 'vertical_tabs',
-        ];
+  /**
+   * Build the form.
+   *
+   * {@inheritdoc}
+   */
+  public function form(array $form, FormStateInterface $form_state) {
 
-        $form['field_configuration'] = [
-            '#type' => 'details',
-            '#title' => 'Welcome Text',
-            '#group' => 'header',
-            '#open' => true,
-            '#tree' => true,
-        ];
+    $form['header'] = [
+      '#type' => 'vertical_tabs',
+    ];
 
-        $form['field_configuration']['welcome_text'] = [
-            '#type' => 'textfield',
-            '#title' => t('Welcome text'),
-            '#size' => 255,
-            '#required' => true,
-            '#description' => $this->t('Text for welcome text appear at the header top navigation.'),
-            '#default_value' => $myAccountCoreConfig->get('welcome_text')
-        ];
+    $form['field_configuration'] = [
+      '#type' => 'details',
+      '#title' => 'Welcome Text',
+      '#group' => 'header',
+    ];
 
-        $form['field_configuration']['product_menu_new_tag'] = [
-            '#type' => 'textfield',
-            '#title' => t('New Tag'),
-            '#size' => 255,
-            '#required' => true,
-            '#description' => $this->t('Text for new tag'),
-            '#default_value' => $myAccountCoreConfig->get('product_menu_new_tag')
-        ];
+    $form['field_configuration']['welcome_text'] = [
+      '#type' => 'textfield',
+      '#title' => t('Welcome text'),
+      '#required' => TRUE,
+      '#description' => $this->t('Text for welcome text appear at the header top navigation.'),
+      '#default_value' => $this->get('welcome_text'),
+      '#translatable' => TRUE,
+    ];
 
-        $form['field_configuration']['help_tooltip'] = [
-            '#type' => 'textfield',
-            '#title' => t('Help Tooltip'),
-            '#size' => 255,
-            '#required' => true,
-            '#description' => $this->t('Tooltip for help'),
-            '#default_value' => $myAccountCoreConfig->get('help_tooltip')
-        ];
+    $form['field_configuration']['product_menu_new_tag'] = [
+      '#type' => 'textfield',
+      '#title' => t('New Tag'),
+      '#required' => TRUE,
+      '#description' => $this->t('Text for new tag'),
+      '#default_value' => $this->get('product_menu_new_tag'),
+      '#translatable' => TRUE,
+    ];
 
-        $form['actions'] = ['#type' => 'actions'];
-        // Add a submit button that handles the submission of the form.
-        $form['actions']['submit'] = [
-            '#type' => 'submit',
-            '#value' => $this->t('Save'),
-        ];
-        return $form;
-    }
+    $form['field_configuration']['help_tooltip'] = [
+      '#type' => 'textfield',
+      '#title' => t('Help Tooltip'),
+      '#required' => TRUE,
+      '#description' => $this->t('Tooltip for help'),
+      '#default_value' => $this->get('help_tooltip'),
+      '#translatable' => TRUE,
+    ];
+    $form['field_configuration']['error_mid_down'] = [
+      '#type' => 'textarea',
+      '#title' => t('Error Message MID Down'),
+      '#size' => 500,
+      '#required' => TRUE,
+      '#description' => $this->t('General Error Message across all forms of my account if MID is down.'),
+      '#default_value' => $this->get('error_mid_down'),
+      '#translatable' => TRUE,
+    ];
 
-    /**
-     * Getter method for Form ID.
-     *
-     * @inheritdoc
-     */
-    public function getFormId()
-    {
-        return 'fapi_header_config';
-    }
-
-    /**
-     *
-     * @inheritdoc
-     */
-    protected function getEditableConfigNames()
-    {
-        return ['my_account_core.header'];
-    }
-
-
-    /**
-     * Implements a form submit handler.
-     *
-     * @param array $form
-     *   The render array of the currently built form.
-     * @param FormStateInterface $form_state
-     *   Object describing the current state of the form.
-     */
-    public function submitForm(array &$form, FormStateInterface $form_state)
-    {
-        $configuration = $form_state->getValue('field_configuration');
-        $this->config('my_account_core.header')
-            ->set('welcome_text', $configuration['welcome_text'])
-            ->set('product_menu_new_tag', $configuration['product_menu_new_tag'])
-            ->set('help_tooltip', $configuration['help_tooltip'])
-            ->save();
-    }
-
-    /**
-     * The path alias manager.
-     *
-     * @var \Drupal\Core\Path\AliasManagerInterface
-     */
-    protected $aliasManager;
-
-    /**
-     * The path validator.
-     *
-     * @var \Drupal\Core\Path\PathValidatorInterface
-     */
-    protected $pathValidator;
-
-    /**
-     * The request context.
-     *
-     * @var \Drupal\Core\Routing\RequestContext
-     */
-    protected $requestContext;
-
-    /**
-     * Constructs a SiteInformationForm object.
-     *
-     * @param \Drupal\Core\Config\ConfigFactoryInterface $config_factory
-     *   The factory for configuration objects.
-     * @param \Drupal\Core\Path\AliasManagerInterface $alias_manager
-     *   The path alias manager.
-     * @param \Drupal\Core\Path\PathValidatorInterface $path_validator
-     *   The path validator.
-     * @param \Drupal\Core\Routing\RequestContext $request_context
-     *   The request context.
-     */
-    public function __construct(ConfigFactoryInterface $config_factory, AliasManagerInterface $alias_manager, PathValidatorInterface $path_validator, RequestContext $request_context)
-    {
-        parent::__construct($config_factory);
-
-        $this->aliasManager = $alias_manager;
-        $this->pathValidator = $path_validator;
-        $this->requestContext = $request_context;
-    }
+    return $form;
+  }
 
     /**
      * {@inheritdoc}

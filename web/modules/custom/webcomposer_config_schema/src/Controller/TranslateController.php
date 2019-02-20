@@ -44,7 +44,7 @@ class TranslateController extends ControllerBase {
     $definitions = $this->pluginManager->getDefinitions();
 
     foreach ($definitions as $key => $definition) {
-      if ($path === "admin/config/webcomposer/translate/$key") {
+      if ($path === "admin/config/$key/translate/$key") {
         return $definition;
       }
     }

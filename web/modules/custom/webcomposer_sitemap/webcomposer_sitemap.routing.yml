@@ -6,10 +6,3 @@ webcomposer_sitemap.admin_settings:
   requirements:
     _permission: 'administer site configuration'
 
-webcomposer_sitemap.sitemap_configuration_form:
-  path: 'admin/config/webcomposer/sitemap/config'
-  defaults:
-    _form: 'Drupal\webcomposer_sitemap\Form\SitemapConfiguration'
-    _title: 'Sitemap Configuration'
-  requirements:
-    _permission: 'administer site configuration'

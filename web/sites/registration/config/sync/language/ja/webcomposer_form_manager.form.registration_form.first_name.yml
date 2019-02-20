@@ -1,10 +1,10 @@
 field_settings:
   label: 名前
   placeholder: 名前
-  annotation: "正確な名前（例：山田　<u>太郎</u>）をご入力下さい。ご入力された名前が口座名義と異なる場合、クレジットカード、小切手、銀行送金での入金処理が出来ません。\r\n"
+  annotation: "あなたの銀行口座に登録されているものと同じ名前を入力してください。 （例：山田 <u>太郎</u>）\r\n"
 field_validations:
   required:
-    error_message: "正しいお名前をご入力ください。\r\n"
+    error_message: "この項目は必須です\r\n"
   alpha:
     error_message: 'Field should be Alphabet characters only'
   alphanumeric:
@@ -22,12 +22,18 @@ field_validations:
   min_length:
     error_message: "氏名は半角英字にて1～50文字にてご入力下さい。\r\n"
   max_length:
-    error_message: "氏名は半角英字にて1～50文字にてご入力下さい。\r\n"
+    error_message: "名前は50文字以内で入力してください\r\n"
+  regex:
+    error_message: 'This field only accepts specific characters.'
+  valid_date:
+    error_message: 'Date is invalid'
   username_availability:
     error_message: 'Username not available'
   email_availability:
     error_message: 'Email not available'
   invalid_words:
-    error_message: "正しいお名前をご入力ください。\r\n"
+    error_message: "有効な名前を入力してください\r\n"
   valid_languages:
-    error_message: "半角英字のみにてご入力下さい。\r\n"
+    error_message: "この欄は、英語、中国語、韓国語、ギリシャ語、アポストロフィ（'）、ハイフン（-）のみ入力できます\r\n"
+  not_match_username:
+    error_message: 'Password should not equal to username'

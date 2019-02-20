@@ -302,6 +302,8 @@ class MyAccountFormResource extends ResourceBase
             $value['fastreg_redirect'] = $values['fastreg_redirect'];
             $value['fastreg_timeout_redirect'] = $values['fastreg_timeout_redirect'];
             $value['fastreg_mobile_redirect'] = $values['fastreg_mobile_redirect'];
+        } else {
+            $value = $values;
         }
         return $value;
     }

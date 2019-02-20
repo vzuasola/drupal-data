@@ -70,3 +70,13 @@ function webcomposer_dashboard_page_top(&$page) {
     ];
   }
 }
+
+function webcomposer_dashboard_entity_operation_alter(array &$operations, \Drupal\Core\Entity\EntityInterface $entity) {
+  $langMgr = \Drupal::languageManager();
+  $lang = $langMgr->getLanguage($langMgr->getCurrentLanguage()->getId());
+
+  // for each operation link, language should be the same as the current language
+  foreach ($operations as $key => $value) {
+    $value['url']->setOption('language', $lang);
+  }
+}

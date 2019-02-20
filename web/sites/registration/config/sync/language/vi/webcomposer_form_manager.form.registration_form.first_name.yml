@@ -1,10 +1,10 @@
 field_settings:
   label: 'Nhập Tên Đệm và Tên'
   placeholder: 'Nhập Tên Đệm và Tên'
-  annotation: 'Vui lòng nhập TÊN, ví dụ: Nguyen <u>Van A</u>. Chúng tôi sẽ không thể xử lý tiền nạp qua thẻ, séc, hoặc ngân hàng điện tử nếu bạn nhập Tên khác với Tên chủ tài khoản.'
+  annotation: "Vui lòng điền Tên Đệm và Têm khớp với thông tin tài khoản ngân hàng của bạn (ví dụ: Van A)\r\n"
 field_validations:
   required:
-    error_message: "Bạn phải nhập đúng Tên.\r\n"
+    error_message: "Tên là bắt buộc\r\n"
   alpha:
     error_message: 'Field should be Alphabet characters only'
   alphanumeric:
@@ -22,12 +22,18 @@ field_validations:
   min_length:
     error_message: "Tên phải bao gồm từ 1-50 ký tự\r\n"
   max_length:
-    error_message: "Tên phải bao gồm từ 1-50 ký tự\r\n"
+    error_message: "Tên Đệm và Tên không vượt quá 50 ký tự\r\n"
+  regex:
+    error_message: 'This field only accepts specific characters.'
+  valid_date:
+    error_message: 'Date is invalid'
   username_availability:
     error_message: 'Username not available'
   email_availability:
     error_message: 'Email not available'
   invalid_words:
-    error_message: "Bạn phải nhập đúng Tên.\r\n"
+    error_message: 'Vui lòng điền Tên Đệm và Tên hợp lệ.'
   valid_languages:
-    error_message: "Vui lòng chỉ sử dụng các ký tự tiếng Anh/ Trung Quốc/ Hàn Quốc / Hy Lạp.\r\n"
+    error_message: 'Tên Đệm và Tên phải là ký tự ABC và không dấu.'
+  not_match_username:
+    error_message: 'Password should not equal to username'

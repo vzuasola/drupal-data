@@ -4,22 +4,22 @@ autologout_box_content:
 notification_content:
   format: basic_html
   value: "<p>因沒有任何在線活動，您的登錄已超時失效。</p>\r\n"
-lightbox_blurb: 还不是大发会员？
+lightbox_blurb: "还不是大发用户？\r\n"
 mobile_login_button_label: 登录/加入
-advanced__active_tab: edit-login-form-details
+advanced__active_tab: edit-login-form-error-messages-details
 rememberme_label: 记住用户名
 login_page_blurb: ''
 mobile_cant_login_url: '{domain:mobile}/{lang}/cant-login'
 username_placeholder: 用户名
 password_placeholder: 密码
 login_bottom_label: 登录
-error_message_blank_username: 你的用户名为必填项。
-error_message_blank_password: 你的密码为必填项。
+error_message_blank_username: 请输入用户名。
+error_message_blank_password: 请输入密码。
 error_message_blank_passname: 请检查所有字段，再试一次。
-error_message_invalid_passname: 对不起，您输入了无效的用户名和/或密码。请再试一次。
-error_message_service_not_available: 服务暂不可用。
-error_message_account_suspended: '您的账户由于登录失败已被锁定。 请联系客服处理。'
-error_message_account_locked: '您的账户由于登录失败已被锁定。 请联系客服处理。'
+error_message_invalid_passname: 很抱歉，您输入的用户名和密码不正确，请重新输入。
+error_message_service_not_available: 无法提供服务
+error_message_account_suspended: 您的账户因多次登录失败已被锁定，请联系客服。
+error_message_account_locked: 您的账户因多次登录失败已被锁定，请联系客服。
 autologout_box_title: 提示
 affirmative_button_text: 是
 negative_button_text: 不
