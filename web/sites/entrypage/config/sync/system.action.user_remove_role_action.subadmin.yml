@@ -1,0 +1,14 @@
+uuid: 068f56d8-8f1e-4b4f-b6bd-72c03c4c1b7d
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.subadmin
+  module:
+    - user
+id: user_remove_role_action.subadmin
+label: 'Remove the subadmin role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: subadmin
