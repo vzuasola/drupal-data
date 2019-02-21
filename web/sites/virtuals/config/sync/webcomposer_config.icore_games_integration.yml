@@ -77,3 +77,7 @@ gameworx_quicklotto_realitycheck_url: ''
 gameworx_quicklotto_plugin_id: ''
 gameworx_quicklotto_operator_id: ''
 gameworx_quicklotto_lobby_type: ''
+betconstruct_currency: "EUR\r\nUSD\r\nGBP\r\nRMB\r\nMYR\r\nTHB\r\nKRW\r\nVND\r\nIDR\r\nINR\r\nPLN\r\nRUB"
+betconstruct_language_mapping: "en|en-US\r\nsc|zh-CN\r\nch|zh-TW\r\nth|th\r\nkr|ko-KR\r\nid|en-US\r\nvn|vi-VN\r\njp|ja\r\nin|hi"
+betconstruct_country: TH
+betconstruct_container_id: BetConstruct

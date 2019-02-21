@@ -1,0 +1,20 @@
+uuid: 6784e4a5-1e50-432b-9423-32bbf6f4c8d3
+langcode: en
+status: true
+dependencies:
+  module:
+    - jamboree_withdraw_method
+id: jamboree_withdraw_method_entity.jamboree_withdraw_method_entity.user_id
+field_name: user_id
+entity_type: jamboree_withdraw_method_entity
+bundle: jamboree_withdraw_method_entity
+label: 'Authored by'
+description: 'The user ID of author of the Jamboree withdraw method entity entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

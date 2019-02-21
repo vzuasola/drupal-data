@@ -1,0 +1,20 @@
+uuid: eb2d293d-a3c0-4f8c-9e0f-f1bc2ee1c0a3
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_v2_allribbon_configuration
+field_name: field_v2_allribbon_configuration
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
