@@ -1,0 +1,5 @@
+name: Zipang Configurations Module
+type: module
+description: Zipang Specific Configurations Module.
+core: 8.x
+package: Zipang
