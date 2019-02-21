@@ -1,0 +1,23 @@
+diff --git a/web/modules/contrib/language_access/src/EventSubscriber/LanguageAccessSubscriber.php b/web/modules/contrib/language_access/src/EventSubscriber/LanguageAccessSubscriber.php
+index 3fdc1b2..e5c9ae8 100644
+--- a/web/modules/contrib/language_access/src/EventSubscriber/LanguageAccessSubscriber.php
++++ b/web/modules/contrib/language_access/src/EventSubscriber/LanguageAccessSubscriber.php
+@@ -74,11 +74,13 @@ class LanguageAccessSubscriber implements EventSubscriberInterface {
+       // Check access to language.
+       $route_match = \Drupal::routeMatch();
+       $current_route = $route_match->getRouteName();
+-      if (!$this->currentUser->hasPermission('access language ' . $language->getId())) {
+-        if (PHP_SAPI != 'cli') {
+-          // Display the default access denied page.
+-          if ($event->getRequestType() === HttpKernelInterface::MASTER_REQUEST) {
+-            throw new AccessDeniedHttpException();
++      if (strpos($requestUrl, '/api') <= -1) {
++        if (!$this->currentUser->hasPermission('access language ' . $language->getId())) {
++          if (PHP_SAPI != 'cli') {
++            // Display the default access denied page.
++            if ($event->getRequestType() === HttpKernelInterface::MASTER_REQUEST) {
++              throw new AccessDeniedHttpException();
++            }
+           }
+         }
+       }

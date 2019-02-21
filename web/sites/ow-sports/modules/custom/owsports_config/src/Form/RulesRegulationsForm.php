@@ -14,7 +14,7 @@ use Drupal\Core\Url;
  * @WebcomposerConfigPlugin(
  *   id = "owsports_config",
  *   route = {
- *     "title" = "Rules and Regulations Configuration",
+ *     "title" = "Rules and Regulations Configuration Deprecated",
  *     "path" = "/admin/config/webcomposer/config/rules_config",
  *   },
  *   menu = {

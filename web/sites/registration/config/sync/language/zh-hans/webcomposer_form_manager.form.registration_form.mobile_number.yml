@@ -6,7 +6,7 @@ field_settings:
   country_area_code_validation: "86|11|11|Please input an exact 11 characters\r\n66|9|9|Please input an exact 9 characters\r\n84|9|11|Please input 9-11 characters\r\n62|10|12|Please input 10-12 characters\r\n82|10|10|Please input an exact 10 characters\r\n91|10|10|Please input an exact 10 characters\r\n60|9|10|Please input 9-10 characters"
 field_validations:
   required:
-    error_message: "请输入您的手机号码\r\n"
+    error_message: "此项为必填项。\r\n"
   alpha:
     error_message: 'Field should be Alphabet characters only'
   alphanumeric:
@@ -14,17 +14,21 @@ field_validations:
   alpha_multi:
     error_message: 'Value is not a valid multilingual character'
   numeric:
-    error_message: 'Field should be numeric'
+    error_message: "请输入有效的手机号码。\r\n"
   no_symbols:
     error_message: 'Field contains invalid special characters'
   numeric_symbols:
-    error_message: "请输入您的手机号码\r\n"
+    error_message: "请输入有效的手机号码。\r\n"
   email:
     error_message: 'Field does not contain a valid email address'
   min_length:
-    error_message: "请输入您的手机号码\r\n"
+    error_message: "手机号需为6-15数字。\r\n"
   max_length:
-    error_message: "请输入您的手机号码\r\n"
+    error_message: "手机号需为6-15数字。\r\n"
+  regex:
+    error_message: 'This field only accepts specific characters.'
+  valid_date:
+    error_message: 'Date is invalid'
   username_availability:
     error_message: 'Username not available'
   email_availability:
@@ -33,5 +37,5 @@ field_validations:
     error_message: 'Invalid/not allowed characters'
   valid_languages:
     error_message: 'This field only accepts specific characters.'
-  valid_date:
-    error_message: 'Date is invalid'
+  not_match_username:
+    error_message: 'Password should not equal to username'

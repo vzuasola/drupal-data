@@ -1,0 +1,17 @@
+uuid: 042ca2ff-c7f7-4ade-a7de-a5fdc1243ee8
+langcode: en
+status: true
+dependencies:
+  module:
+    - content_translation
+    - poker_client_showcase
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: poker_client_showcase.poker_client_showcase
+target_entity_type_id: poker_client_showcase
+target_bundle: poker_client_showcase
+default_langcode: site_default
+language_alterable: true

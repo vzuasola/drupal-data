@@ -73,6 +73,15 @@ settings:
     -
       value: dafabet-connect
       label: 'Dafabet Connect'
+    -
+      value: fbmessenger
+      label: 'FB Messenger'
+    -
+      value: skywind
+      label: 'Sky Wind'
+    -
+      value: microgaming
+      label: 'Microgaming'
   allowed_values_function: ''
 module: options
 locked: false

@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.client_casino_games.field_clcasino_game_title
     - field.field.node.client_casino_games.field_clcasino_ribbon
     - field.field.node.client_casino_games.field_clcasino_show_game_info
+    - field.field.node.client_casino_games.field_jackpot_code
     - image.style.thumbnail
     - node.type.client_casino_games
   module:
@@ -25,7 +26,7 @@ third_party_settings:
         - field_clcasino_show_game_info
         - field_clcasino_game_info
       parent_name: ''
-      weight: 7
+      weight: 8
       format_type: tab
       format_settings:
         id: ''
@@ -41,7 +42,7 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 10
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -84,7 +85,7 @@ content:
     type: string_textarea
     region: content
   field_clcasino_ribbon:
-    weight: 6
+    weight: 7
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -96,6 +97,14 @@ content:
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
+  field_jackpot_code:
+    weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   langcode:
     type: language_select
     weight: 2
@@ -105,18 +114,18 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 12
+    weight: 13
     region: content
     settings: {  }
     third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
-    weight: 13
+    weight: 14
     region: content
     settings: {  }
     third_party_settings: {  }
   scheduler_settings:
-    weight: 11
+    weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -124,7 +133,7 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 15
+    weight: 16
     region: content
     third_party_settings: {  }
   title:
@@ -136,13 +145,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 9
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 8
+    weight: 9
     settings:
       match_operator: CONTAINS
       size: 60
@@ -151,7 +160,7 @@ content:
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp_no_default
-    weight: 14
+    weight: 15
     region: content
     settings: {  }
     third_party_settings: {  }

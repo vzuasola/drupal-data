@@ -1,0 +1,21 @@
+uuid: 9eeedf77-3e5e-4077-b7e2-dba6edce4291
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.poker_client_showcase.field_unpublish_date
+  module:
+    - datetime
+    - poker_client_showcase
+id: poker_client_showcase.poker_client_showcase.field_unpublish_date
+field_name: field_unpublish_date
+entity_type: poker_client_showcase
+bundle: poker_client_showcase
+label: 'Unpublish Date (optional)'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime
