@@ -1,0 +1,22 @@
+uuid: 66a17757-7896-4307-bdc6-f50b225ec1f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.jamboree_withdraw_method_entity.field_button_label
+  module:
+    - jamboree_withdraw_method
+_core:
+  default_config_hash: vyAocn2zMnEM-I0HqnNLB_qcpVGQW_yH-meloq3nfiU
+id: jamboree_withdraw_method_entity.jamboree_withdraw_method_entity.field_button_label
+field_name: field_button_label
+entity_type: jamboree_withdraw_method_entity
+bundle: jamboree_withdraw_method_entity
+label: 'Button Label'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
