@@ -44,6 +44,7 @@ permissions:
   - 'administer taxonomy'
   - 'administer territory blocking'
   - 'administer url aliases'
+  - 'administer webcomposer meta entity entities'
   - 'bypass node access'
   - 'bypass paragraphs type content access'
   - 'cancel account'
