@@ -1,0 +1,19 @@
+uuid: fc3b962d-b33a-4fde-8d6e-380cadc3c328
+langcode: en
+status: true
+dependencies:
+  module:
+    - jamboree_payment_method
+id: payment_method_entity.field_summary
+field_name: field_summary
+entity_type: payment_method_entity
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

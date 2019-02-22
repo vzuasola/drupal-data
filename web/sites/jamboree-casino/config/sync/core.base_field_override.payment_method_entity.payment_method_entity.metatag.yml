@@ -1,13 +1,13 @@
-uuid: 1aeafca0-5202-4339-ac13-af7c20b901cc
-langcode: en
+uuid: ab81439d-0993-4592-bdb1-55210d8c3254
+langcode: ja
 status: true
 dependencies:
-  config:
-    - taxonomy.vocabulary.fair_gaming_year
-id: taxonomy_term.fair_gaming_year.metatag
+  module:
+    - jamboree_payment_method
+id: payment_method_entity.payment_method_entity.metatag
 field_name: metatag
-entity_type: taxonomy_term
-bundle: fair_gaming_year
+entity_type: payment_method_entity
+bundle: payment_method_entity
 label: Metatags
 description: 'The metatags for the entity.'
 required: false

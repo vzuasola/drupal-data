@@ -1,18 +1,17 @@
-uuid: 4fccc109-f20f-46ae-b6e9-aeb086e13e67
-langcode: en
+uuid: 40bf6aa9-c931-4954-ae48-986d3fc0afb2
+langcode: ja
 status: true
 dependencies:
-  config:
-    - taxonomy.vocabulary.fair_gaming_year
   module:
     - content_translation
+    - jamboree_payment_method
 third_party_settings:
   content_translation:
     enabled: true
     bundle_settings:
       untranslatable_fields_hide: '0'
-id: taxonomy_term.fair_gaming_year
-target_entity_type_id: taxonomy_term
-target_bundle: fair_gaming_year
+id: payment_method_entity.payment_method_entity
+target_entity_type_id: payment_method_entity
+target_bundle: payment_method_entity
 default_langcode: site_default
 language_alterable: true
