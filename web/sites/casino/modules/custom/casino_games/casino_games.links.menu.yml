@@ -4,13 +4,6 @@ casino_games.admin_settings:
   parent: system.admin_config
   route_name: casino_games.admin_settings
 
-casino_games.games_configuration:
-  title: 'Games Custom Configuration'
-  route_name: casino_games.games_configuration
-  description: 'Configure the Games'
-  parent: casino_games.admin_settings
-  weight: 10
-
 casino_games.list.games:
   title: 'Manage Games'
   parent: casino_games.admin_settings

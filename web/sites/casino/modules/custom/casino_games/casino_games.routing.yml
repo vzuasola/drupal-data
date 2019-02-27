@@ -21,11 +21,3 @@ casino_games.sort.games:
     _title: 'Sort Games'
   requirements:
     _permission: 'administer site configuration'
-
-casino_games.games_configuration:
-  path: 'admin/games/config'
-  defaults:
-    _form: 'Drupal\casino_games\Form\GamesConfigurationForm'
-    _title: 'Games Custom Configuration'
-  requirements:
-    _permission: 'administer site configuration'
