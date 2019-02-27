@@ -2,11 +2,27 @@
 
 namespace Drupal\casino_games\Form;
 
-use Drupal\Core\Form\ConfigFormBase;
+use Drupal\webcomposer_config_schema\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\file\Entity\File;
 
-class GamesConfigurationForm extends ConfigFormBase {
+/**
+ * Casino custom config form plugin
+ *
+ * @WebcomposerConfigPlugin(
+ *   id = "casino_config_form",
+ *   route = {
+ *     "title" = "Casino Custom Configuration",
+ *     "path" = "/admin/games/config",
+ *   },
+ *   menu = {
+ *     "title" = "Casino Custom Configuration",
+ *     "description" = "Configure custom casino games configuration",
+ *     "parent" = "casino_games.admin_settings",
+ *     "weight" = -5
+ *   },
+ * )
+ */
+class CasinoGamesConfigurationForm extends FormBase {
   /**
    * {@inheritdoc}
    */
@@ -17,70 +33,23 @@ class GamesConfigurationForm extends ConfigFormBase {
   /**
    * {@inheritdoc}
    */
-  public function getFormId() {
-    return 'casino_games.games_configuration_form';
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  public function buildForm(array $form, FormStateInterface $form_state) {
-    $config = $this->config('casino_games.games_configuration');
-
+  public function form(array $form, FormStateInterface $form_state) {
     $form['games_configuration_tab'] = [
       '#type' => 'vertical_tabs',
       '#title' => t('Settings'),
     ];
 
-    $this->gamePageheaderSection($form, $config);
-    $this->gameCategorySection($form, $config);
-    $this->gamsThumbnailSection($form, $config);
-    $this->gamePageLightboxSection($form, $config);
-    $this->gameFilterSection($form, $config);
-    $this->gameDrawerSection($form, $config);
+    $this->gamePageheaderSection($form);
+    $this->gameCategorySection($form);
+    $this->gamesThumbnailSection($form);
+    $this->gamePageLightboxSection($form);
+    $this->gameFilterSection($form);
+    $this->gameDrawerSection($form);
 
-    return parent::buildForm($form, $form_state);
+    return $form;
   }
 
-  /**
-   * {@inheritdoc}
-   */
-  public function submitForm(array &$form, FormStateInterface $form_state) {
-    parent::submitForm($form, $form_state);
-
-    $keys = [
-      'play_text',
-      'play_for_fun_text',
-      'game_info_text',
-      'kebab_menu_text',
-      'load_more_text',
-      'load_more_disabled',
-      'favorites_text',
-      'recently_played_text',
-      'freeplay_lightbox_title',
-      'freeplay_lightbox_content',
-      'html5_lightbox_title',
-      'html5_lightbox_content',
-      'pas_error_lightbox_title',
-      'pas_error_lightbox_content',
-      'disable_jackpot_ticker',
-      'game_promotion_link',
-      'game_promotion_link_target',
-      'game_real_play_text',
-      'game_real_play_disabled',
-      'filter_icon',
-      'filter_header',
-      'filter_submit',
-      'filter_clear',
-      'drawer_switch'
-    ];
-
-    foreach ($keys as $key) {
-      $this->config('casino_games.games_configuration')->set($key, $form_state->getValue($key))->save();
-    }
-  }
-
-  private function gamePageheaderSection(&$form, $config) {
+  private function gamePageheaderSection(&$form) {
     $form['header_group'] = [
       '#type' => 'details',
       '#title' => $this->t('Game Page Header Icons'),
@@ -95,7 +64,7 @@ class GamesConfigurationForm extends ConfigFormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Promotions Link'),
       '#description' => $this->t('Add redirection to Centralized Promotions page'),
-      '#default_value' => $config->get('game_promotion_link'),
+      '#default_value' => $this->get('game_promotion_link'),
       '#required' => TRUE,
       '#prefix' => '<p>Configure the promotion icon link and target window.</p>',
     ];
@@ -108,7 +77,7 @@ class GamesConfigurationForm extends ConfigFormBase {
       ],
       '#title' => $this->t('Promotions Link Target'),
       '#description' => $this->t('Select Target for the promotions link'),
-      '#default_value' => $config->get('game_promotion_link_target'),
+      '#default_value' => $this->get('game_promotion_link_target'),
       '#required' => TRUE,
     ];
 
@@ -120,19 +89,20 @@ class GamesConfigurationForm extends ConfigFormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Real Play Button Label'),
       '#description' => $this->t('The text to display on real play button.'),
-      '#default_value' => $config->get('game_real_play_text'),
+      '#default_value' => $this->get('game_real_play_text'),
       '#required' => TRUE,
+      '#translatable' => TRUE
     ];
     $form['header_group']['game_real_play']['game_real_play_disabled'] = [
       '#type' => 'checkbox',
       '#title' => $this->t('Disable Real Play Button'),
       '#description' => $this->t('If checked the real play button on pre-login state will not be displayed.'),
-      '#default_value' => $config->get('game_real_play_disabled'),
+      '#default_value' => $this->get('game_real_play_disabled'),
       '#required' => FALSE,
     ];
   }
 
-  private function gameCategorySection(&$form, $config) {
+  private function gameCategorySection(&$form) {
     $form['category_group'] = [
       '#type' => 'details',
       '#title' => $this->t('Games Category Settings'),
@@ -144,23 +114,25 @@ class GamesConfigurationForm extends ConfigFormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Category Kebab Text'),
       '#description' => $this->t('The text to display on category kebab menu.'),
-      '#default_value' => $config->get('kebab_menu_text'),
+      '#default_value' => $this->get('kebab_menu_text'),
       '#required' => TRUE,
+      '#translatable' => TRUE
     ];
 
     $form['category_group']['load_more_text'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Load More Text'),
       '#description' => $this->t('The text to display on load more button.'),
-      '#default_value' => $config->get('load_more_text'),
+      '#default_value' => $this->get('load_more_text'),
       '#required' => TRUE,
+      '#translatable' => TRUE
     ];
 
     $form['category_group']['load_more_disabled'] = [
       '#type' => 'checkbox',
       '#title' => $this->t('Disable Load More'),
       '#description' => $this->t('If checked all games will be shown at once.'),
-      '#default_value' => $config->get('load_more_disabled'),
+      '#default_value' => $this->get('load_more_disabled'),
       '#required' => FALSE,
     ];
 
@@ -172,19 +144,21 @@ class GamesConfigurationForm extends ConfigFormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Favorites Tab Text'),
       '#description' => $this->t('The text to display for the favorites category.'),
-      '#default_value' => $config->get('favorites_text'),
+      '#default_value' => $this->get('favorites_text'),
       '#required' => TRUE,
+      '#translatable' => TRUE
     ];
     $form['category_group']['special_categories']['recently_played_text'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Recently Played Text'),
       '#description' => $this->t('The text to display for the recently played category.'),
-      '#default_value' => $config->get('recently_played_text'),
+      '#default_value' => $this->get('recently_played_text'),
       '#required' => TRUE,
+      '#translatable' => TRUE
     ];
   }
 
-  private function gamsThumbnailSection(&$form, $config) {
+  private function gamesThumbnailSection(&$form) {
     $form['thumbnail_group'] = [
       '#type' => 'details',
       '#title' => $this->t('Game Thumbnail Settings'),
@@ -195,7 +169,7 @@ class GamesConfigurationForm extends ConfigFormBase {
     $form['thumbnail_group']['disable_jackpot_ticker'] = [
       '#type' => 'checkbox',
       '#title' => $this->t('Disable Game Thumbnail Jackpot Ticker'),
-      '#default_value' => $config->get('disable_jackpot_ticker'),
+      '#default_value' => $this->get('disable_jackpot_ticker'),
       '#description' => $this->t('If checked all jackpot ticker on game thumbnails will not be displayed.')
     ];
 
@@ -203,28 +177,31 @@ class GamesConfigurationForm extends ConfigFormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Play Now Button Text'),
       '#description' => $this->t('The text to display on play button.'),
-      '#default_value' => $config->get('play_text'),
+      '#default_value' => $this->get('play_text'),
       '#required' => TRUE,
+      '#translatable' => TRUE
     ];
 
     $form['thumbnail_group']['play_for_fun_text'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Play For Fun Link Text'),
       '#description' => $this->t('The text to display on play for fun link.'),
-      '#default_value' => $config->get('play_for_fun_text'),
+      '#default_value' => $this->get('play_for_fun_text'),
       '#required' => TRUE,
+      '#translatable' => TRUE
     ];
 
     $form['thumbnail_group']['game_info_text'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Game Info Link Text'),
       '#description' => $this->t('The text to display on game info link.'),
-      '#default_value' => $config->get('game_info_text'),
+      '#default_value' => $this->get('game_info_text'),
       '#required' => TRUE,
+      '#translatable' => TRUE
     ];
   }
 
-  private function gamePageLightboxSection(&$form, $config) {
+  private function gamePageLightboxSection(&$form) {
     $form['lightbox_group'] = [
       '#type' => 'details',
       '#title' => $this->t('Game Page Lightbox'),
@@ -243,10 +220,12 @@ class GamesConfigurationForm extends ConfigFormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Title'),
       '#description' => $this->t('The text that will be displayed as title of the lightbox.'),
-      '#default_value' => $config->get('freeplay_lightbox_title'),
+      '#default_value' => $this->get('freeplay_lightbox_title'),
       '#required' => TRUE,
+      '#translatable' => TRUE
+
     ];
-    $freePlayLightboxContent = $config->get('freeplay_lightbox_content');
+    $freePlayLightboxContent = $this->get('freeplay_lightbox_content');
     $form['lightbox_group']['freeplay']['freeplay_lightbox_content'] = [
       '#type' => 'text_format',
       '#title' => $this->t('Content'),
@@ -254,6 +233,7 @@ class GamesConfigurationForm extends ConfigFormBase {
       '#default_value' => $freePlayLightboxContent['value'],
       '#format' => $freePlayLightboxContent['format'],
       '#required' => TRUE,
+      '#translatable' => TRUE
     ];
 
     $html5LightboxGroupTitle = $this->t('HTML5 Alert (Lightbox)');
@@ -268,10 +248,11 @@ class GamesConfigurationForm extends ConfigFormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Title'),
       '#description' => $this->t('The text that will be displayed as title of the lightbox.'),
-      '#default_value' => $config->get('html5_lightbox_title'),
+      '#default_value' => $this->get('html5_lightbox_title'),
       '#required' => TRUE,
+      '#translatable' => TRUE
     ];
-    $html5LightboxContent = $config->get('html5_lightbox_content');
+    $html5LightboxContent = $this->get('html5_lightbox_content');
     $form['lightbox_group']['html5']['html5_lightbox_content'] = [
       '#type' => 'text_format',
       '#title' => $this->t('Content'),
@@ -279,6 +260,7 @@ class GamesConfigurationForm extends ConfigFormBase {
       '#default_value' => $html5LightboxContent['value'],
       '#format' => $html5LightboxContent['format'],
       '#required' => TRUE,
+      '#translatable' => TRUE
     ];
     $pasLightboxGroupTitle = $this->t('PAS Error (Lightbox)');
     $form['lightbox_group']['pas'] = [
@@ -291,10 +273,11 @@ class GamesConfigurationForm extends ConfigFormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Title'),
       '#description' => $this->t('The text that will be displayed as title of the lightbox.'),
-      '#default_value' => $config->get('pas_error_lightbox_title'),
+      '#default_value' => $this->get('pas_error_lightbox_title'),
       '#required' => FALSE,
+      '#translatable' => TRUE
     ];
-    $pasErrorLightboxContent = $config->get('pas_error_lightbox_content');
+    $pasErrorLightboxContent = $this->get('pas_error_lightbox_content');
     $form['lightbox_group']['pas']['pas_error_lightbox_content'] = [
       '#type' => 'text_format',
       '#title' => $this->t('Content'),
@@ -302,10 +285,11 @@ class GamesConfigurationForm extends ConfigFormBase {
       '#default_value' => $pasErrorLightboxContent['value'],
       '#format' => $pasErrorLightboxContent['format'],
       '#required' => TRUE,
+      '#translatable' => TRUE
     ];
   }
 
-  private function gameFilterSection(&$form, $config) {
+  private function gameFilterSection(&$form) {
     $form['filter_group'] = [
       '#type' => 'details',
       '#title' => $this->t('Game Filter'),
@@ -316,37 +300,41 @@ class GamesConfigurationForm extends ConfigFormBase {
     $form['filter_group']['filter_icon'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Game Filter Icon Text'),
-      '#default_value' => $config->get('filter_icon'),
+      '#default_value' => $this->get('filter_icon'),
       '#description' => $this->t('The test to display in the front'),
-        '#required' => TRUE,
+      '#required' => TRUE,
+      '#translatable' => TRUE
     ];
 
     $form['filter_group']['filter_header'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Game Filter Lightbox Header Text'),
       '#description' => $this->t('The text to display on the header of lightbox'),
-      '#default_value' => $config->get('filter_header'),
+      '#default_value' => $this->get('filter_header'),
       '#required' => TRUE,
+      '#translatable' => TRUE
     ];
 
     $form['filter_group']['filter_submit'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Game Filter Lightbox Submit Botton Text'),
       '#description' => $this->t('The text to display on the submit botton of filter lightbox'),
-      '#default_value' => $config->get('filter_submit'),
+      '#default_value' => $this->get('filter_submit'),
       '#required' => TRUE,
+      '#translatable' => TRUE
     ];
 
     $form['filter_group']['filter_clear'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Game Filter Lightbox Clear Botton Text'),
       '#description' => $this->t('The text to display on clear botton of filter lightbox'),
-      '#default_value' => $config->get('filter_clear'),
+      '#default_value' => $this->get('filter_clear'),
       '#required' => TRUE,
+      '#translatable' => TRUE
     ];
   }
 
-  private function gameDrawerSection(&$form, $config) {
+  private function gameDrawerSection(&$form) {
     $form['drawer'] = [
       '#type' => 'details',
       '#title' => $this->t('Game Drawer'),
@@ -358,8 +346,9 @@ class GamesConfigurationForm extends ConfigFormBase {
       '#type' => 'checkbox',
       '#title' => $this->t('Enable Game Drawer'),
       '#description' => $this->t('Enable Game Drawer feature'),
-      '#default_value' => $config->get('drawer_switch'),
+      '#default_value' => $this->get('drawer_switch'),
       '#required' => FALSE,
+      '#translatable' => TRUE
     ];
   }
 }
