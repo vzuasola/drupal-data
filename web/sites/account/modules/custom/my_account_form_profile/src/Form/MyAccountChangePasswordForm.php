@@ -2,24 +2,22 @@
 
 namespace Drupal\my_account_form_profile\Form;
 
-use Drupal\webcomposer_config_schema\Form\FormBase;
+use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Path\AliasManagerInterface;
+use Drupal\Core\Form\ConfigFormBase;
+use Drupal\Core\Path\PathValidatorInterface;
+use Drupal\Core\Routing\RequestContext;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
- * Bonus History configuration.
+ * Implements the vertical tabs demo form controller.
  *
- * @WebcomposerConfigPlugin(
- *   id = "change_password",
- *   route = {
- *     "title" = "My Account Change Password Form",
- *     "path" = "/admin/config/my_account/change_password",
- *   },
- *   menu = {
- *     "title" = "My Account Change Password Form",
- *     "description" = "My Account Change Password Form COnfiguration",
- *     "parent" = "my_account_form_profile.config",
- *   },
- * )
+ * This example demonstrates the use of \Drupal\Core\Render\Element\VerticalTabs
+ * to group input elements according category.
+ *
+ * @see \Drupal\Core\Form\FormBase
+ * @see \Drupal\Core\Form\ConfigFormBase
  */
 class MyAccountChangePasswordForm extends FormBase {
 
