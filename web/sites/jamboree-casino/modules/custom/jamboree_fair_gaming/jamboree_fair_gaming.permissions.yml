@@ -1,0 +1,22 @@
+add jamboree fair gaming entity entities:
+  title: 'Create new Jamboree fair gaming entity entities'
+
+administer jamboree fair gaming entity entities:
+  title: 'Administer Jamboree fair gaming entity entities'
+  description: 'Allow to access the administration form to configure Jamboree fair gaming entity entities.'
+  restrict access: true
+
+delete jamboree fair gaming entity entities:
+  title: 'Delete Jamboree fair gaming entity entities'
+
+edit jamboree fair gaming entity entities:
+  title: 'Edit Jamboree fair gaming entity entities'
+
+access jamboree fair gaming entity overview:
+  title: 'Access the Jamboree fair gaming entity overview page'
+
+view published jamboree fair gaming entity entities:
+  title: 'View published Jamboree fair gaming entity entities'
+
+view unpublished jamboree fair gaming entity entities:
+  title: 'View unpublished Jamboree fair gaming entity entities'
