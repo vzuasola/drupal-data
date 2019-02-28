@@ -152,6 +152,7 @@ permissions:
   - 'translate any entity'
   - 'translate basic_page_category taxonomy_term'
   - 'translate block_content'
+  - 'translate configuration'
   - 'translate drawer_entity'
   - 'translate game_provider taxonomy_term'
   - 'translate games node'
