@@ -395,6 +395,8 @@ staging:
   only:
     - /^release-.*$/
     - tags
+  tags:
+    - stgrunner
 
 staging-mobile-stack:
   stage: deploy-staging
