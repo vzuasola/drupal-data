@@ -1,24 +1,26 @@
-uuid: cf310dfd-8552-4c12-9746-d0a84eced0ba
+uuid: 73efdb14-865d-4367-82ae-71f040f42307
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_image
-    - node.type.page
+    - field.storage.jamboree_withdraw_method_entity.field_thumbnail
   module:
     - content_translation
     - image
+    - jamboree_withdraw_method
 third_party_settings:
   content_translation:
     translation_sync:
       alt: alt
       title: title
       file: '0'
-id: node.page.field_image
-field_name: field_image
-entity_type: node
-bundle: page
-label: Image
+_core:
+  default_config_hash: Ec3cFRHil_DsEXaA_p3tR-a00gS70GvYrV7xb1P16BM
+id: jamboree_withdraw_method_entity.jamboree_withdraw_method_entity.field_thumbnail
+field_name: field_thumbnail
+entity_type: jamboree_withdraw_method_entity
+bundle: jamboree_withdraw_method_entity
+label: Thumbnail
 description: ''
 required: false
 translatable: true

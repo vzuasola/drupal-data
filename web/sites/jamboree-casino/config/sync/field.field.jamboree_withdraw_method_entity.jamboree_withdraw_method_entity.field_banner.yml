@@ -1,24 +1,26 @@
-uuid: b298873c-5e67-4cb8-9490-ef3089c3c2ea
+uuid: 8e835d3f-ca2b-4f4e-ab42-58fb2593f1dc
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_post_banner_image
-    - node.type.page
+    - field.storage.jamboree_withdraw_method_entity.field_banner
   module:
     - content_translation
     - image
+    - jamboree_withdraw_method
 third_party_settings:
   content_translation:
     translation_sync:
-      file: file
-      alt: '0'
-      title: '0'
-id: node.page.field_post_banner_image
-field_name: field_post_banner_image
-entity_type: node
-bundle: page
-label: 'Banner Image'
+      alt: alt
+      title: title
+      file: '0'
+_core:
+  default_config_hash: VDuKGtu2Cyt1fimapseqGAZzIZiHdW6yI9u6_NOdK8Y
+id: jamboree_withdraw_method_entity.jamboree_withdraw_method_entity.field_banner
+field_name: field_banner
+entity_type: jamboree_withdraw_method_entity
+bundle: jamboree_withdraw_method_entity
+label: Banner
 description: ''
 required: false
 translatable: true
@@ -30,7 +32,7 @@ settings:
   max_filesize: ''
   max_resolution: ''
   min_resolution: ''
-  alt_field: false
+  alt_field: true
   alt_field_required: true
   title_field: false
   title_field_required: false

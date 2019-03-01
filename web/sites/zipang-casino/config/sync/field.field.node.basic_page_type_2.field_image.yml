@@ -1,10 +1,10 @@
-uuid: cf310dfd-8552-4c12-9746-d0a84eced0ba
+uuid: 18c68a67-9482-4db0-aafd-8a98a9df5094
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_image
-    - node.type.page
+    - node.type.basic_page_type_2
   module:
     - content_translation
     - image
@@ -14,11 +14,11 @@ third_party_settings:
       alt: alt
       title: title
       file: '0'
-id: node.page.field_image
+id: node.basic_page_type_2.field_image
 field_name: field_image
 entity_type: node
-bundle: page
-label: Image
+bundle: basic_page_type_2
+label: 'Banner Image'
 description: ''
 required: false
 translatable: true

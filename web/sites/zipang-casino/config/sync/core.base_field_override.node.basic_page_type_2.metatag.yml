@@ -1,13 +1,13 @@
-uuid: 1aeafca0-5202-4339-ac13-af7c20b901cc
+uuid: afa5c988-0b7b-44de-8022-a25041519422
 langcode: en
 status: true
 dependencies:
   config:
-    - taxonomy.vocabulary.fair_gaming_year
-id: taxonomy_term.fair_gaming_year.metatag
+    - node.type.basic_page_type_2
+id: node.basic_page_type_2.metatag
 field_name: metatag
-entity_type: taxonomy_term
-bundle: fair_gaming_year
+entity_type: node
+bundle: basic_page_type_2
 label: Metatags
 description: 'The metatags for the entity.'
 required: false

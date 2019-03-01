@@ -1,26 +1,26 @@
-uuid: cf310dfd-8552-4c12-9746-d0a84eced0ba
+uuid: e0328c7c-6e08-494e-bd38-5c27b6586aca
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_image
-    - node.type.page
+    - field.storage.payment_method_entity.field_banner
   module:
     - content_translation
     - image
+    - jamboree_payment_method
 third_party_settings:
   content_translation:
     translation_sync:
       alt: alt
       title: title
       file: '0'
-id: node.page.field_image
-field_name: field_image
-entity_type: node
-bundle: page
-label: Image
+id: payment_method_entity.payment_method_entity.field_banner
+field_name: field_banner
+entity_type: payment_method_entity
+bundle: payment_method_entity
+label: Banner
 description: ''
-required: false
+required: true
 translatable: true
 default_value: {  }
 default_value_callback: ''
