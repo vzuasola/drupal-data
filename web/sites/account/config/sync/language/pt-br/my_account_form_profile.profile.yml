@@ -1,0 +1,41 @@
+profile__active_tab: edit-field-labels-validation-configuration
+contact_preference_yes_label: 'Yes PT'
+contact_preference_no_label: 'No PT'
+enable_sms_verification: 1
+verify_text: 'Verify PT'
+modal_verify_header_text: 'Verify Mobile Number PT'
+modal_verify_body_text: 'A verification code has been sent to you via SMS. To complete your phone number verification, please enter the 6-digit code below within 10 minutes. Please make sure you have entered the correct mobile number format with country code (e.g. +60312345678). If the problem persists, please contact Customer Support. PT'
+modal_verification_code_placeholder: 'Verification Code PT'
+modal_verification_resend_code_text: 'Resend code PT'
+modal_verification_submit_text: 'Submit PT'
+verification_code_response: "SMS_VERIFICATION_SUCCESS|A verification code has been sent to your mobile number.\r\nSMS_VERIFICATION_FAILED|Sorry, there was an error verifying your mobile number. Please try again or you may contact us at the following: <a href=\"/linkto:avaya\" class=\"live-chat-popup-trigger\"> Live Chat </a> or <a href=\"mailto:ensupport@dafabet.com\"> Email </a> (Code:110)\r\nSMS_VERIFICATION_SUBMIT_SUCCESS|Your mobile number has been successfully verified.\r\nSMS_VERIFICATION_SUBMIT_FAILED| You have entered an invalid verification code. Please try again. (Code:111) PT\r\nINTERNAL_ERROR|Internal Error (Code: 801)\r\nCHECK_SMS_STATUS_VERIFIED|Success"
+verification_code_required_message: 'This is a required field. PT'
+verification_code_numeric_message: 'This field accepts numbers only! PT'
+verification_code_min_length_message: 'Please enter at least 6 characters.'
+verification_code_max_length_message: 'Please enter no more than 6 characters.'
+modal_preview_header: 'Save Account Changes PT'
+modal_preview_top_blurb: 'Please review list of changes.  PT'
+modal_preview_current_label: 'Current PT'
+modal_preview_new_label: 'New PT'
+modal_preview_bottom_blurb: 'Enter your password to save changes to your account PT'
+modal_preview_placeholder: 'Password PT'
+modal_preview_btn: 'Save Changes PT'
+server_side_validation: "INTERNAL_ERROR|Internal Error (Code: 801)\r\nUPDATE_PROFILE_SUCCESS|Your profile has been updated.\r\nUPDATE_PROFILE_FAILED|There was an error updating your profile. Please try again or you may contact us at the following: <a href=\"/linkto:avaya\" class=\"live-chat-popup-trigger\">Live Chat</a> or <a href=\"mailto:ensupport@dafabet.com\">Email.</a> (Code: 700) PT\r\nCHECK_SESSION_PASSWORD_FAILED|There was an error updating your profile. Please try again or you may contact us at the following: <a href=\"/linkto:avaya\" class=\"live-chat-popup-trigger\">Live Chat</a> or <a href=\"mailto:ensupport@dafabet.com\">Email.</a> (Code: 700) PT"
+required_validation: 'This is a required field. PT'
+password_format_validation: 'This field can only contain alphanumeric values. '
+password_min_length_validation: 'Please enter at least 6 characters. '
+password_max_length_validation: 'Please enter no more than 10 characters.'
+primary_label: 'Primary PT'
+add_mobile_label: 'Add mobile number PT'
+no_changed_detected_message: 'No changes have been detected PT'
+male_label: 'Male PT'
+female_label: 'Female PT'
+message_timeout: '5'
+my_profile_tab: Profile
+change_password_tab: 'Change Password'
+fastreg_timeout_redirect: '2'
+fastreg_redirect: '{domain:cashier_domain}/{domain:cashier_lang}'
+fastreg_mobile_redirect: '{domain:mcashier}/{domain:cashier_lang}'
+fast_reg_flash_message:
+  value: "<p class=\"text-black mb-0 show-desktop\"><strong>Please complete required fields to make a deposit and claim bonus desktop.</strong></p>\r\n\r\n<p class=\"text-red mb-0 show-mobile\"><em>Please complete required fields to make a deposit and claim bonus mobile.</em></p>\r\n"
+  format: full_html
