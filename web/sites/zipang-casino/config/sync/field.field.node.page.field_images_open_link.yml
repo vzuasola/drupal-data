@@ -1,0 +1,23 @@
+uuid: eb4d2e1b-c0e3-4fce-8b86-de32f65f1f67
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_images_open_link
+    - node.type.page
+  module:
+    - options
+id: node.page.field_images_open_link
+field_name: field_images_open_link
+entity_type: node
+bundle: page
+label: 'Where to open images'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: same_tab
+default_value_callback: ''
+settings: {  }
+field_type: list_string

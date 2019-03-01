@@ -1,17 +1,17 @@
-uuid: 998e34e4-f93e-449c-854f-72f3038dfbde
+uuid: 1e99bcb3-afb9-463a-b962-85c05a3931b4
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_post_banner_link
+    - field.storage.node.field_button_link
     - node.type.page
   module:
     - link
-id: node.page.field_post_banner_link
-field_name: field_post_banner_link
+id: node.page.field_button_link
+field_name: field_button_link
 entity_type: node
 bundle: page
-label: 'Banner Link'
+label: 'Button Link'
 description: ''
 required: false
 translatable: true
@@ -19,5 +19,5 @@ default_value: {  }
 default_value_callback: ''
 settings:
   link_type: 17
-  title: 0
+  title: 2
 field_type: link

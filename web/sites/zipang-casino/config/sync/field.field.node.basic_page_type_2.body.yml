@@ -1,16 +1,16 @@
-uuid: 12b020c7-b7c9-41ba-8b9c-5f0f22470f07
+uuid: e4e8d53c-c043-4415-9504-a81fa39348f3
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_post_body
-    - node.type.page
+    - field.storage.node.body
+    - node.type.basic_page_type_2
   module:
     - text
-id: node.page.field_post_body
-field_name: field_post_body
+id: node.basic_page_type_2.body
+field_name: body
 entity_type: node
-bundle: page
+bundle: basic_page_type_2
 label: Body
 description: ''
 required: false
@@ -18,5 +18,5 @@ translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
-  display_summary: false
+  display_summary: true
 field_type: text_with_summary
