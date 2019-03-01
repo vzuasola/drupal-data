@@ -1,9 +1,9 @@
-uuid: cf310dfd-8552-4c12-9746-d0a84eced0ba
+uuid: 0e60664d-fc29-48a4-9530-88021b7b049f
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_image
+    - field.storage.node.field_thumbnail_image
     - node.type.page
   module:
     - content_translation
@@ -14,11 +14,11 @@ third_party_settings:
       alt: alt
       title: title
       file: '0'
-id: node.page.field_image
-field_name: field_image
+id: node.page.field_thumbnail_image
+field_name: field_thumbnail_image
 entity_type: node
 bundle: page
-label: Image
+label: 'Thumbnail Image'
 description: ''
 required: false
 translatable: true

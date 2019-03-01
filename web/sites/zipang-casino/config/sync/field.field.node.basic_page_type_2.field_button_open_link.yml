@@ -1,0 +1,23 @@
+uuid: 42cd48cf-ca11-4253-9a79-06fbba09ef8a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_button_open_link
+    - node.type.basic_page_type_2
+  module:
+    - options
+id: node.basic_page_type_2.field_button_open_link
+field_name: field_button_open_link
+entity_type: node
+bundle: basic_page_type_2
+label: 'Where to open link'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: same_tab
+default_value_callback: ''
+settings: {  }
+field_type: list_string

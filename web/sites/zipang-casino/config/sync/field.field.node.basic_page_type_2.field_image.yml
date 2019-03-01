@@ -1,23 +1,23 @@
-uuid: b298873c-5e67-4cb8-9490-ef3089c3c2ea
+uuid: 18c68a67-9482-4db0-aafd-8a98a9df5094
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_post_banner_image
-    - node.type.page
+    - field.storage.node.field_image
+    - node.type.basic_page_type_2
   module:
     - content_translation
     - image
 third_party_settings:
   content_translation:
     translation_sync:
-      file: file
-      alt: '0'
-      title: '0'
-id: node.page.field_post_banner_image
-field_name: field_post_banner_image
+      alt: alt
+      title: title
+      file: '0'
+id: node.basic_page_type_2.field_image
+field_name: field_image
 entity_type: node
-bundle: page
+bundle: basic_page_type_2
 label: 'Banner Image'
 description: ''
 required: false
@@ -30,7 +30,7 @@ settings:
   max_filesize: ''
   max_resolution: ''
   min_resolution: ''
-  alt_field: false
+  alt_field: true
   alt_field_required: true
   title_field: false
   title_field_required: false
