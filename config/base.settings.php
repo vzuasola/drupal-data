@@ -8,13 +8,17 @@
 $databases = [];
 $config_directories = [];
 
+list($path, $product) = explode('/', $site_path);
+
 /**
  * Cache backend settings
  *
  */
 
-$settings['container_yamls'][] = DRUPAL_ROOT . '/modules/contrib/redis/redis.services.yml';
+$settings['container_yamls'][] = $app_root . '/modules/contrib/redis/redis.services.yml';
+
 $settings['cache']['default'] = 'cache.backend.redis';
+$settings['cache_prefix'] = "drupal.cache.$product";
 
 /**
  * Dynamic Sentinel Redis
@@ -40,6 +44,9 @@ if (isset($_SERVER['REDIS_SERVER']) && isset($_SERVER['REDIS_SERVICE'])) {
   $settings['redis.connection']['interface'] = 'Predis';
   $settings['redis.connection']['host'] = $clients;
   $settings['redis.connection']['options'] = $options;
+
+  // use different DB for Redis Cache
+  $settings['redis.connection']['options']['parameters']['database'] = 2;
 }
 
 /**

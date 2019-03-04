@@ -30,6 +30,9 @@ $settings['redis.connection']['options'] = [
   'parameters' => ['database' => 1],
 ];
 
+// use different DB for Redis Cache
+$settings['redis.connection']['options']['parameters']['database'] = 2;
+
 /**
  * Monolog settings
  */
