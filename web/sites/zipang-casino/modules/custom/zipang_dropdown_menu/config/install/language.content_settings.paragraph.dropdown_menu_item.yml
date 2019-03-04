@@ -1,0 +1,16 @@
+uuid: 18615b3d-a86f-4c76-985e-001d75a3d9b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.dropdown_menu_item
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: paragraph.dropdown_menu_item
+target_entity_type_id: paragraph
+target_bundle: dropdown_menu_item
+default_langcode: site_default
+language_alterable: true

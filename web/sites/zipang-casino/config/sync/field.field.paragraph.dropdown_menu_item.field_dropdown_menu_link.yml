@@ -1,0 +1,21 @@
+uuid: 7e1659ef-1ab9-41fa-95ca-4fe57310be38
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_dropdown_menu_link
+    - paragraphs.paragraphs_type.dropdown_menu_item
+_core:
+  default_config_hash: pfhfpUYPLk1IaetGG7h9-XcWKmh0X9aNpDfKjZ5hsP0
+id: paragraph.dropdown_menu_item.field_dropdown_menu_link
+field_name: field_dropdown_menu_link
+entity_type: paragraph
+bundle: dropdown_menu_item
+label: Link
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,21 @@
+uuid: 59165127-3d50-4deb-8841-2aff3bbea4b8
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_dropdown_menu_description
+    - paragraphs.paragraphs_type.dropdown_menu_item
+_core:
+  default_config_hash: OASMnuDAsR4xCcC7UEa3zeSOrX5Yc2SW3FNkredi6fw
+id: paragraph.dropdown_menu_item.field_dropdown_menu_description
+field_name: field_dropdown_menu_description
+entity_type: paragraph
+bundle: dropdown_menu_item
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

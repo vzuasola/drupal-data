@@ -1,0 +1,20 @@
+uuid: 014502ed-64a2-4690-b0c8-e139bb8f0066
+langcode: ja
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.dropdown_menu_item
+_core:
+  default_config_hash: H4K3275KeIFy5hwlOKEk5FenMhsOZiZgL3Vrf8z9FKQ
+id: paragraph.dropdown_menu_item.created
+field_name: created
+entity_type: paragraph
+bundle: dropdown_menu_item
+label: 'Authored on'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

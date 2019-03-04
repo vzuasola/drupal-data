@@ -9,6 +9,8 @@ dependencies:
 third_party_settings:
   content_translation:
     enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
 _core:
   default_config_hash: plaJ5juMMm_xCH_YNGwmCWieBrpfRAMEzSlnxRiMHQ8
 id: paragraph.metatag

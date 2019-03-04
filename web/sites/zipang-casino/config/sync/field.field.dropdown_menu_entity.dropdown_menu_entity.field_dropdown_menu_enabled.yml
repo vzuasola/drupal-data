@@ -1,0 +1,26 @@
+uuid: c4e54e65-d107-4da5-bffb-92edcafd8658
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.dropdown_menu_entity.field_dropdown_menu_enabled
+  module:
+    - zipang_dropdown_menu
+_core:
+  default_config_hash: F_O7Gt0RUcLK_Z_bePFSn5DEYt8zrmkWmVclYpMxHgM
+id: dropdown_menu_entity.dropdown_menu_entity.field_dropdown_menu_enabled
+field_name: field_dropdown_menu_enabled
+entity_type: dropdown_menu_entity
+bundle: dropdown_menu_entity
+label: Enabled
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
