@@ -13,3 +13,4 @@ attributes:
     label: 'Menu Tag'
     options:
       new: 'New Product'
+langcode: ja

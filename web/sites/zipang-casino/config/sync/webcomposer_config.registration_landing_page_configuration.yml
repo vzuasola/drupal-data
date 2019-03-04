@@ -4,3 +4,4 @@ registration_content:
 registration_title: 'Make Deposit'
 _core:
   default_config_hash: sfUFjN1dGh56fNM5VYvR0atJ4WByUvyDd-vw7vZAkDg
+langcode: ja

@@ -171,7 +171,7 @@ libraries:
   excluded_libraries:
     - jquery.chosen
   cdn: false
-langcode: en
+langcode: ja
 third_party_settings: {  }
 _core:
   default_config_hash: Ogs5iIs2gNcR9Awk-_1S3xYuJ4ZDtjMvjUQwY-wz3Hs
