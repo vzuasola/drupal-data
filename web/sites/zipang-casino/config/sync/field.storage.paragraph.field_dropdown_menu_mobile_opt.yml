@@ -1,0 +1,32 @@
+uuid: dc29cac6-7263-4cd5-865a-d05da04d4812
+langcode: ja
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+_core:
+  default_config_hash: LBGJo0n7wXXoI6ebfD9rVl3Y-esGC-5dVEhX6NF--54
+id: paragraph.field_dropdown_menu_mobile_opt
+field_name: field_dropdown_menu_mobile_opt
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: desktop
+      label: 'Show menu on Desktop'
+    -
+      value: mobile
+      label: 'Show menu on Mobile'
+    -
+      value: both
+      label: 'Show menu on both Desktop and Mobile'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

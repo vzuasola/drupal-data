@@ -1,0 +1,23 @@
+uuid: ea38312b-0d03-4953-91a6-1f744f94e1c4
+langcode: ja
+status: true
+dependencies:
+  module:
+    - paragraphs
+_core:
+  default_config_hash: TkLncvXAIEgEZaExwgVdRaU29tkcOYdtoGA-ma3xPHE
+id: paragraph.field_dropdown_menu_description
+field_name: field_dropdown_menu_description
+entity_type: paragraph
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
