@@ -33,6 +33,10 @@ $settings['redis.connection']['options'] = [
 // use different DB for Redis Cache
 $settings['redis.connection']['options']['parameters']['database'] = 2;
 
+$settings['container_yamls'][] = $app_root . '/modules/contrib/redis/redis.services.yml';
+$settings['cache']['default'] = 'cache.backend.redis';
+$settings['cache_prefix'] = "drupal.cache.$product";
+
 /**
  * Monolog settings
  */
