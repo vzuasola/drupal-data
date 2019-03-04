@@ -1,0 +1,22 @@
+# Poker client promotions routing definition
+poker_client_promotions.settings_tab:
+  route_name: poker_client_promotions.settings
+  title: 'Settings'
+  base_route: poker_client_promotions.settings
+
+entity.poker_client_promotions.canonical:
+  route_name: entity.poker_client_promotions.canonical
+  base_route: entity.poker_client_promotions.canonical
+  title: 'View'
+
+entity.poker_client_promotions.edit_form:
+  route_name: entity.poker_client_promotions.edit_form
+  base_route: entity.poker_client_promotions.canonical
+  title: 'Edit'
+
+entity.poker_client_promotions.delete_form:
+  route_name:  entity.poker_client_promotions.delete_form
+  base_route:  entity.poker_client_promotions.canonical
+  title: Delete
+  weight: 10
+

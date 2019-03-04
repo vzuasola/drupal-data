@@ -100,11 +100,11 @@ class ContactUsForm extends WebcomposerFormBase implements WebcomposerFormInterf
 
       'email' => [
         'name' => 'Email',
-        'type' => 'textfield',
+        'type' => 'email',
         'settings' => [
           'label' => [
             '#title' => 'Email Label',
-            '#type' => 'textfield',
+            '#type' => 'email',
             '#description' => 'The Label for Email field',
           ],
           'placeholder' => [
@@ -166,6 +166,18 @@ class ContactUsForm extends WebcomposerFormBase implements WebcomposerFormInterf
             '#title' => 'Message Annotation text',
             '#type' => 'textarea',
             '#description' => 'field annotation that will be displayed on focus',
+          ],
+        ],
+      ],
+
+      'captcha' => [
+        'name' => 'Captcha',
+        'type' => 'textfield',
+        'settings' => [
+          'label' => [
+            '#title' => 'Captcha Label',
+            '#type' => 'textfield',
+            '#description' => 'The Label for Captcha field',
           ],
         ],
       ],

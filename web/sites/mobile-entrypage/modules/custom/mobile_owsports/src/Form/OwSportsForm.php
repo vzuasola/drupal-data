@@ -61,6 +61,34 @@ class OWSportsForm extends FormBase {
       '#translatable' => TRUE,
     ];
 
+    $form['integration']['owsports_param_encode'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Encode OWSports URL Params'),
+      '#default_value' => $this->get('owsports_param_encode'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['integration']['smart_wap_prelogin'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Smart WAP Prelogin URL'),
+      '#default_value' => $this->get('smart_wap_prelogin'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['integration']['owsports_prelogin_param'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('OWSports URL Params for pre login'),
+      '#default_value' => $this->get('owsports_prelogin_param'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['integration']['owsports_prelogin_param_encode'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Encode OWSports Prelogin URL Params'),
+      '#default_value' => $this->get('owsports_prelogin_param_encode'),
+      '#translatable' => TRUE,
+    ];
+
     $form['integration']['iwap_agents'] = [
       '#type' => 'textarea',
       '#title' => $this->t('iWAP Mobile Agents'),

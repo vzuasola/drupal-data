@@ -1,0 +1,20 @@
+uuid: c2fb773b-6ef0-4b38-b55e-182852e2feed
+langcode: en
+status: true
+dependencies:
+  module:
+    - games_showcase
+    - taxonomy
+id: games_showcase_entity.field_game_categories
+field_name: field_game_categories
+entity_type: games_showcase_entity
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

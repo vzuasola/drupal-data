@@ -1,0 +1,45 @@
+uuid: 26b61688-9acc-40df-9537-dfc7d8e8ab6b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_clcasino_game_thumbnail
+    - node.type.client_casino_games
+  module:
+    - content_translation
+    - image
+third_party_settings:
+  content_translation:
+    translation_sync:
+      alt: alt
+      title: title
+      file: '0'
+id: node.client_casino_games.field_clcasino_game_thumbnail
+field_name: field_clcasino_game_thumbnail
+entity_type: node
+bundle: client_casino_games
+label: 'Game Thumbnail'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: 180x137
+  min_resolution: 180x137
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

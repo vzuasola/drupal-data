@@ -1,10 +1,10 @@
 field_settings:
   label: 'First Name'
   placeholder: 'First Name'
-  annotation: 'Please enter your Given Name, example: <u>Joe</u> Smith. We will be unable to process card deposits, cheques, or bankwires if the name entered is different from the account holder.'
+  annotation: 'Please enter your First Name as indicated in your bank account/PAN ID (e.g. <u>Joe</u> Smith)'
 field_validations:
   required:
-    error_message: "Your First Name must be entered correctly.\r\n"
+    error_message: "This field is required.\r\n"
   alpha:
     error_message: 'Field should be Alphabet characters only'
   alphanumeric:
@@ -20,14 +20,20 @@ field_validations:
   email:
     error_message: 'Field does not contain a valid email address'
   min_length:
-    error_message: "Name must be between 1-50 characters long\r\n"
+    error_message: ''
   max_length:
-    error_message: "Name must be between 1-50 characters long\r\n"
+    error_message: 'Name must not exceed 50 characters.'
+  regex:
+    error_message: 'This field only accepts specific characters.'
+  valid_date:
+    error_message: 'Date is invalid'
   username_availability:
     error_message: 'Username not available'
   email_availability:
     error_message: 'Email not available'
   invalid_words:
-    error_message: "Your First Name must be entered correctly.\r\n"
+    error_message: "Please enter a valid name.\r\n"
   valid_languages:
-    error_message: "Please use English/Chinese/Korean/Greek characters only.\r\n"
+    error_message: 'Field accepts English, Chinese, Korean, Greek, apostrophe (''), and dash (-) characters only.'
+  not_match_username:
+    error_message: 'Password should not equal to username'

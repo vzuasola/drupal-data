@@ -1,0 +1,30 @@
+uuid: e99f0cea-4c67-477d-b1aa-4f45829f0ff4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.jamboree_fair_gaming_entity.field_fair_gaming_year_category
+    - taxonomy.vocabulary.fair_gaming_year
+  module:
+    - jamboree_fair_gaming
+id: jamboree_fair_gaming_entity.jamboree_fair_gaming_entity.field_fair_gaming_year_category
+field_name: field_fair_gaming_year_category
+entity_type: jamboree_fair_gaming_entity
+bundle: jamboree_fair_gaming_entity
+label: 'Fair Gaming Year Category'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      fair_gaming_year: fair_gaming_year
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

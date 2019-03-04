@@ -3,9 +3,10 @@ field_settings:
   placeholder: 携帯電話番号
   annotation: ''
   country_area_code: "AF|アフガニスタン|93\r\nAX|オーランド諸島|35818\r\nAL|アルバニア|355\r\nDZ|アルジェリア|213\r\nAD|アンドラ|376\r\nAO|アンゴラ|244\r\nAI|アンギラ|1264\r\nAQ|南極大陸|672\r\nAR|アルゼンチン|54\r\nAM|アルメニア|374\r\nAW|アルバニア|297\r\nAU|オーストラリア|61\r\nAT|オーストリア|43\r\nAZ|アゼルバイジャン|994\r\nBS|バハマ|1242\r\nBH|バーレーン|973\r\nBD|バングラデシュ|880\r\nBB|バルバドス|1246\r\nBY|ベラルーシ|375\r\nBZ|ベリーズ|501\r\nBJ|ベニン|229\r\nBM|バミューダ|1441\r\nBT|ブータン|975\r\nBO|ボリビア|591\r\nBT|ボネール、シント･ユースタティウス及びサバ|599\r\nBA|ボスニア･ヘルツェゴビナ|387\r\nBW|ボツワナ|267\r\nBV|ブーベ島|55\r\nBR|ブラジル|55\r\nIO|イギリス領インド洋地域|246\r\nVG|イギリス領ヴァージン諸島|1284\r\nBN|ブルネイ|673\r\nBG|ブルガリア|359\r\nBF|ブルキナファソ|226\r\nBI|ブルンジ|257\r\nKH|カンボジア|855\r\nCM|カメルーン|237\r\nCA|カナダ|1\r\nCV|カーボベルデ|238\r\nKY|ケイマン諸島|1345\r\nCF|中央アフリカ共和国|236\r\nTD|チャド|235\r\nCL|チリ|56\r\nCN|中国|86\r\nCX|クリスマス島|618\r\nCC|ココス諸島|618\r\nCO|コロンビア|57\r\nKM|コモロ|269\r\nCG|コンゴ|242\r\nCG|コンゴ民主共和国|243\r\nCK|クック諸島|682\r\nCR|コスタリカ|506\r\nCI|コートジボワール|225\r\nHR|クロアチア|385\r\nCU|キューバ|53\r\nCZ|チェコ共和国|420\r\nDK|デンマーク|45\r\nDJ|ジブチ|253\r\nDM|ドミニカ|1767\r\nDO|ドミニカ共和国|1809\r\nEC|エクアドル|593\r\nEG|エジプト|20\r\nSV|エルサルバドル|503\r\nGQ|赤道ギニア|240\r\nER|エリトリア|291\r\nEE|エストニア|372\r\nET|エチオピア|251\r\nFK|フォークランド諸島|500\r\nFO|フェロー諸島|298\r\nFJ|フィジー|679\r\nFI|フィンランド|358\r\nGF|フランス領ギアナ|594\r\nPF|フランス領ポリネシア|689\r\nTF|フランス領南方･南極地域|262\r\nGA|ガボン|241\r\nGM|ガンビア|220\r\nGE|ジョージア|995\r\nDE|ドイツ|49\r\nGH|ガーナ|233\r\nGI|ジブラルタル|350\r\nGR|ギリシャ|30\r\nGL|グリーンランド|299\r\nGD|グレナダ|1473\r\nGP|グアドループ|590\r\nGT|グアテマラ|502\r\nGG|ガーンジー|441481\r\nGN|ギニア|224\r\nGW|ギニアビサウ|245\r\nGY|ガイアナ|592\r\nHT|ハイチ|509\r\nHM|ハード島とマクドナルド諸島|0\r\nVA|バチカン|379\r\nHN|ホンジュラス|504\r\nHK|香港|852\r\nHU|ハンガリー|36\r\nIS|アイスランド|354\r\nIN|インド|91\r\nID|インドネシア|62\r\nIE|アイルランド|353\r\nIM|マン島|441624\r\nIT|イタリア|39\r\nJM|ジャマイカ|1876\r\nJP|日本|81\r\nJE|ジャージー|44\r\nJO|ヨルダン|962\r\nKZ|カザフスタン|7\r\nKE|ケニヤ|254\r\nKI|キリバス|686\r\nKR|大韓民国|82\r\nKW|クウェート|965\r\nKG|キルギス|996\r\nLA|ラオス|856\r\nLV|ラトビア|371\r\nLB|レバノン|961\r\nLS|レソト|266\r\nLR|リベリア|231\r\nLY|リビア|218\r\nLI|リヒテンシュタイン|423\r\nLT|リトアニア|370\r\nLU|ルクセンブルク|352\r\nMK|マケドニア共和国|389\r\nMG|マダガスカル|261\r\nMW|マラウィ|265\r\nMY|マレーシア|60\r\nMV|モルディブ|960\r\nML|マリ|223\r\nMT|マルタ|356\r\nMQ|マルティニーク|596\r\nMR|モーリタニア|222\r\nMU|モーリシャス|230\r\nYT|マヨット|262\r\nMX|メキシコ|52\r\nMD|モルドバ|373\r\nMC|モナコ|377\r\nMN|モンゴル国|976\r\nME|モンテネグロ|382\r\nMS|モントセラト|1664\r\nMA|モロッコ|212\r\nMZ|モザンビーク|258\r\nMM|ミャンマー|95\r\nNA|ナミビア|264\r\nNR|ナウル|674\r\nNP|ネパール|977\r\nNL|オランダ|31\r\nNL|オランダ領アンティル|31\r\nNC|ニューカレドニア|687\r\nNZ|ニュージーランド|64\r\nNI|ニカラグア|505\r\nNG|ニジェール|227\r\nNG|ナイジェリア|234\r\nNU|ニウエ|683\r\nNF|ノーフォーク島|6723\r\nNO|ノルウェー|47\r\nOM|オマーン|968\r\nPK|パキスタン|92\r\nPS|パレスチナ自治区|970\r\nPA|パナマ|507\r\nPG|パプアニューギニア|675\r\nPY|パラグアイ|595\r\nPE|ペルー|51\r\nPN|ピトケアン諸島|64\r\nPL|ポーランド|48\r\nQA|カタール|974\r\nRE|レユニオン|262\r\nRO|ルーマニア|40\r\nRU|ロシア連邦|7\r\nRW|ルワンダ|250\r\nBL|サン･バルテルミー島|590\r\nSH|セントヘレナ・アセンションおよびトリスタンダクーニャ|290\r\nKN|セントクリストファー・ネイビス連邦|1869\r\nLC|セントルシア|1758\r\nMF|セント・マーチン島|590\r\nPM|サンピエール島およびミクロン島|508\r\nVC|セントビンセント及びグレナディーン諸島|1784\r\nAS|サモア|685\r\nSM|サンマリノ|378\r\nST|サントメ・プリンシペ民主共和国|239\r\nSA|サウジアラビア|966\r\nSN|セネガル|221\r\nRS|セルビア|381\r\nSC|セーシェル共和国|248\r\nSL|シエラレオネ共和国|232\r\nSX|シント・マールテン|1721\r\nSK|スロバキア|421\r\nSI|スロベニア|386\r\nSB|ソロモン諸島|677\r\nSO|ソマリア|252\r\nZA|南アフリカ|27\r\nGS|サウスジョージア・サウスサンドウィッチ諸島|500\r\nLK|スリランカ|94\r\nSD|スーダン|249\r\nSR|スリナム|597\r\nSJ|スヴァールバル諸島およびヤンマイエン島|47\r\nSZ|スワジランド|268\r\nSE|スウェーデン|46\r\nCH|スイス|41\r\nSY|シリア|963\r\nTJ|タジキスタン|992\r\nTZ|タンザニア|255\r\nTH|タイ|66\r\nTL|東ティモール|670\r\nTG|トーゴ|228\r\nTK|トケラウ|690\r\nTO|トンガ|676\r\nTT|トリニダード･トバゴ|1868\r\nTN|チュニジア|216\r\nTM|トルクメニスタン|993\r\nTC|タークス･カイコス諸島|1649\r\nTV|ツバル|688\r\nUG|ウガンダ|256\r\nUA|ウクライナ|380\r\nAE|UAE|971\r\nUY|ウルグアイ|598\r\nUS|アメリカ|1\r\nUZ|ウズベキスタン|998\r\nVU|バヌアツ|678\r\nVE|ベネズエラ|58\r\nVN|ベトナム|84\r\nWF|ウォリス･フツナ|681\r\nEH|西サハラ|212\r\nYE|イエメン|967\r\nZM|ザンビア|260\r\nZW|ジンバブエ|263"
+  country_area_code_validation: "86|11|11|Please input an exact 11 characters\r\n66|9|9|Please input an exact 9 characters\r\n84|9|11|Please input 9-11 characters\r\n62|10|12|Please input 10-12 characters\r\n82|10|10|Please input an exact 10 characters\r\n91|10|10|Please input an exact 10 characters\r\n60|9|10|Please input 9-10 characters"
 field_validations:
   required:
-    error_message: "携帯電話番号をご入力ください。\r\n"
+    error_message: "この項目は必須です\r\n"
   alpha:
     error_message: 'Field should be Alphabet characters only'
   alphanumeric:
@@ -13,17 +14,21 @@ field_validations:
   alpha_multi:
     error_message: 'Value is not a valid multilingual character'
   numeric:
-    error_message: 'Field should be numeric'
+    error_message: "有効な携帯電話番号を入力してください\r\n"
   no_symbols:
     error_message: 'Field contains invalid special characters'
   numeric_symbols:
-    error_message: "携帯電話番号をご入力ください。\r\n"
+    error_message: "有効な携帯電話番号を入力してください\r\n"
   email:
     error_message: 'Field does not contain a valid email address'
   min_length:
-    error_message: "携帯電話番号をご入力ください。\r\n"
+    error_message: "携帯電話番号は6～15桁で入力して下さい\r\n"
   max_length:
-    error_message: "携帯電話番号をご入力ください。\r\n"
+    error_message: "携帯電話番号は6～15桁で入力して下さい\r\n"
+  regex:
+    error_message: 'This field only accepts specific characters.'
+  valid_date:
+    error_message: 'Date is invalid'
   username_availability:
     error_message: 'Username not available'
   email_availability:
@@ -32,3 +37,5 @@ field_validations:
     error_message: 'Invalid/not allowed characters'
   valid_languages:
     error_message: 'This field only accepts specific characters.'
+  not_match_username:
+    error_message: 'Password should not equal to username'

@@ -1,5 +1,5 @@
 join_now_text: 'JOIN NOW'
-join_now_link: '/{domain:entry}/{lang}/join/virtual-sports[query:({tracking})]'
+join_now_link: '/{domain:entry}/{lang}/join/virtual-sports[query:(regvia=56&{tracking})]'
 login_issue_text: 'Cant login?'
 login_issue_link: '/{domain:myaccount_domain}/{domain:lang_token}/cant-login[query:({tracking})]'
 sc_lang_text: SC
@@ -37,6 +37,10 @@ logo_title: 'Virtual Sports Betting at Dafabet'
 password_mask_toggle: 1
 caps_lock_toggle: 1
 capslock_notification: 'Caps Lock is on'
-header_settings_tab__active_tab: edit-logo-group
+header_settings_tab__active_tab: edit-join-now-group
 value: null
 format: null
+promotion_page_title: Promotions
+registration_link: '/{domain:entry}/{lang}/join/virtual-sports[query:(regvia=56&{tracking})]'
+default_cashier_link: '{domain:cashier_domain}/{domain:lang_token}/payment-options[query:(ticket={auth.token}&{tracking}&width=820&height=820)]'
+cashier_mapping: null

@@ -1,0 +1,23 @@
+uuid: 1b410e3b-5871-4831-96f4-fed9e615f890
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_v2_meta_tags
+    - node.type.games_2_0
+  module:
+    - metatag
+id: node.games_2_0.field_v2_meta_tags
+field_name: field_v2_meta_tags
+entity_type: node
+bundle: games_2_0
+label: 'Meta Tags'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 'a:0:{}'
+default_value_callback: ''
+settings: {  }
+field_type: metatag

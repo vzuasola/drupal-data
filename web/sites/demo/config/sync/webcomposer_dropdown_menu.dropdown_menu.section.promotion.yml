@@ -1,0 +1,7 @@
+title: Promotion
+promotion_endpoint: 'http://entry.dafabet.env/en/api/promotion/view/all'
+promotion_link_text: 'More promotions'
+promotion_link: 'http://entry.dafabet.env/en/promotions'
+promotion_error_message: 'Error retrieving promotions'
+_core:
+  default_config_hash: dDNaz3C7ZPCaEah4JhDdOhGkCTkTz4Jl1cCAChUCNOg

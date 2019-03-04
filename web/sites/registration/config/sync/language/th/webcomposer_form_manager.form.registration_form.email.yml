@@ -1,10 +1,10 @@
 field_settings:
   label: อีเมล
   placeholder: อีเมล
-  annotation: 'กรุณากรอกอีเมลจริง ที่สามารถติดต่อคุณได้ '
+  annotation: "กรุณากรอกอีเมลที่ใช้งานได้จริงเพื่อใช้รับข่าวสารโปรโมชั่นรวมถึงข้อมูลอัพเดตพิเศษต่างๆ \r\n"
 field_validations:
   required:
-    error_message: "โปรดกรอกที่อยู่อีเมลที่ถูกต้องและใช้งานได้เพื่อการติดต่อสื่อสาร (เช่น name@domain.com)\r\n"
+    error_message: "จำเป็นต้องกรอกข้อมูลที่ช่องนี้ \r\n"
   alpha:
     error_message: 'Field should be Alphabet characters only'
   alphanumeric:
@@ -18,18 +18,22 @@ field_validations:
   numeric_symbols:
     error_message: 'Field contains invalid special characters'
   email:
-    error_message: 'กรุณากรอกอีเมลให้ถูกต้อง '
+    error_message: "กรุณากรอกอีเมลที่ใช้งานได้ (ตัวอย่าง: name@domain.com)\r\n"
   min_length:
-    error_message: "โปรดกรอกที่อยู่อีเมลที่ถูกต้องและใช้งานได้เพื่อการติดต่อสื่อสาร (เช่น name@domain.com)\r\n"
+    error_message: "กรุณากรอกอีเมลที่ใช้งานได้ (ตัวอย่าง: name@domain.com)\r\n"
   max_length:
-    error_message: "โปรดกรอกที่อยู่อีเมลที่ถูกต้องและใช้งานได้เพื่อการติดต่อสื่อสาร (เช่น name@domain.com)\r\n"
+    error_message: "กรุณากรอกอีเมลที่ใช้งานได้ (ตัวอย่าง: name@domain.com)\r\n"
+  regex:
+    error_message: 'This field only accepts specific characters.'
+  valid_date:
+    error_message: 'Date is invalid'
   username_availability:
     error_message: 'Username not available'
   email_availability:
-    error_message: "<span class=\"visible-desktop\">อีเมลนี้ใช้สมัครสมาชิกแล้วคลิก<a href=\"/th/cant-login\" target=\"popup\" onclick=\"window.open('/th/cant-login','popup','width=820,height=810,scrollbars=no,resizable=no'); return false;\" class=\"visible-desktop\">ที่นี่</a>พื่อกู้ยูสเซอร์เนมและรหัสผ่าน</span>\r\n<span class=\"visible-tablet\">อีเมลนี้ใช้สมัครสมาชิกแล้วคลิก<a href=\"/th/cant-login\" target=\"_blank\" class=\"visible-tablet\">ที่นี่</a>พื่อกู้ยูสเซอร์เนมและรหัสผ่าน</span>\r\n<span class=\"visible-mobile\">อีเมลนี้ใช้สมัครสมาชิกแล้วคลิก<a href=\"/th/cant-login\" target=\"_blank\" class=\"visible-mobile\">ที่นี่</a>พื่อกู้ยูสเซอร์เนมและรหัสผ่าน</span>\r\n<span class=\"visible-app\">อีเมลนี้ใช้สมัครสมาชิกแล้วคลิก<a href=\"https://m.dafawin.com/th/cant-login?clientflag=1\" target=\"_blank\" class=\"visible-app\">ที่นี่</a>พื่อกู้ยูสเซอร์เนมและรหัสผ่าน</span>"
+    error_message: "<span class=\"visible-desktop\">อีเมลนี้ใช้สมัครสมาชิกแล้วคลิก<a href=\"{domain:myaccount_domain}/th/cant-login\" target=\"popup\" onclick=\"window.open('{domain:myaccount_domain}/th/cant-login','popup','width=820,height=810,scrollbars=no,resizable=no'); return false;\" class=\"visible-desktop\">ที่นี่</a>พื่อกู้ยูสเซอร์เนมและรหัสผ่าน</span>\r\n<span class=\"visible-client\">อีเมลนี้ใช้สมัครสมาชิกแล้วคลิก<u><a href=\"{domain:myaccount_domain}/th/cant-login\" target=\"popup\" onclick=\"window.open('{domain:myaccount_domain}/th/cant-login','popup','width=820,height=810,scrollbars=no,resizable=no'); return false;\" class=\"visible-desktop\">ที่นี่</a></u>พื่อกู้ยูสเซอร์เนมและรหัสผ่าน</span>\r\n<span class=\"visible-tablet\">อีเมลนี้ใช้สมัครสมาชิกแล้วคลิก<a href=\"{domain:mobile}/th/cant-login\" target=\"_blank\" class=\"visible-tablet\">ที่นี่</a>พื่อกู้ยูสเซอร์เนมและรหัสผ่าน</span>\r\n<span class=\"visible-mobile\">อีเมลนี้ใช้สมัครสมาชิกแล้วคลิก<a href=\"{domain:mobile}/th/cant-login\" target=\"_blank\" class=\"visible-mobile\">ที่นี่</a>พื่อกู้ยูสเซอร์เนมและรหัสผ่าน</span>\r\n<span class=\"visible-app\">อีเมลนี้ใช้สมัครสมาชิกแล้วคลิก<a href=\"https://m.dfnba.net/th/cant-login?clientflag=1\" target=\"_blank\" class=\"visible-app\">ที่นี่</a>พื่อกู้ยูสเซอร์เนมและรหัสผ่าน</span>"
   invalid_words:
     error_message: 'Invalid/not allowed characters'
   valid_languages:
     error_message: 'This field only accepts specific characters.'
-  valid_date:
-    error_message: 'Date is invalid'
+  not_match_username:
+    error_message: 'Password should not equal to username'

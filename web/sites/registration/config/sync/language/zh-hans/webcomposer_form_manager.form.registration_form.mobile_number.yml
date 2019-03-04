@@ -3,9 +3,10 @@ field_settings:
   placeholder: 手机号码
   annotation: ''
   country_area_code: "AF|阿富汗|93\r\nAX|阿兰群岛|35818\r\nAL|阿尔巴尼亚|355\r\nDZ|阿尔及利亚|213\r\nAD|安道尔|376\r\nAO|安哥拉|244\r\nAI|安圭拉岛|1264\r\nAQ|南极洲|672\r\nAR|阿根廷|54\r\nAM|亚美尼亚|374\r\nAW|阿鲁巴岛|297\r\nAU|澳大利亚|61\r\nAT|奥地利|43\r\nAZ|阿塞拜疆|994\r\nBS|巴哈马群岛|1242\r\nBH|巴林|973\r\nBD|孟加拉国|880\r\nBB|巴巴多斯|1246\r\nBY|白俄罗斯|375\r\nBZ|伯利兹|501\r\nBJ|贝宁|229\r\nBM|百慕大|1441\r\nBT|不丹|975\r\nBO|玻利维亚|591\r\nBT|博内尔岛圣尤斯特歇斯岛和萨巴|599\r\nBA|波斯尼亚和黑塞哥维那|387\r\nBW|博茨瓦纳|267\r\nBV|布维岛|55\r\nBR|巴西|55\r\nIO|英属印度洋领地|246\r\nVG|英国维尔京群岛|1284\r\nBN|文莱达鲁萨兰国|673\r\nBG|保加利亚|359\r\nBF|布吉纳法索|226\r\nBI|布隆迪|257\r\nKH|柬埔寨|855\r\nCM|喀麦隆|237\r\nCA|加拿大|1\r\nCV|佛得角|238\r\nKY|开曼群岛|1345\r\nCF|中非共和国|236\r\nTD|乍得|235\r\nCL|智利|56\r\nCN|中国|86\r\nCX|圣诞岛|618\r\nCC|科科斯群岛(基林群岛)|618\r\nCO|哥伦比亚|57\r\nKM|科摩罗|269\r\nCG|刚果|242\r\nCG|刚果民主共和国|243\r\nCK|库克群岛|682\r\nCR|哥斯达黎加|506\r\nCI|科特迪瓦|225\r\nHR|克罗地亚|385\r\nCU|古巴|53\r\nCZ|捷克共和国|420\r\nDK|丹麦|45\r\nDJ|吉布提|253\r\nDM|多米尼加|1767\r\nDO|多米尼加共和国|1809\r\nEC|厄瓜多尔|593\r\nEG|埃及|20\r\nSV|萨尔瓦多|503\r\nGQ|赤道几内亚|240\r\nER|厄立特里亚|291\r\nEE|爱沙尼亚|372\r\nET|埃塞俄比亚|251\r\nFK|福克兰群岛(马尔维纳斯)|500\r\nFO|法罗群岛|298\r\nFJ|斐济|679\r\nFI|芬兰|358\r\nGF|法属圭亚那|594\r\nPF|法属波利尼西亚|689\r\nTF|法国南部地区|262\r\nGA|加蓬|241\r\nGM|冈比亚|220\r\nGE|格鲁吉亚|995\r\nDE|德国|49\r\nGH|加纳|233\r\nGI|直布罗陀|350\r\nGR|希腊|30\r\nGL|格陵兰岛|299\r\nGD|格林纳达|1473\r\nGP|瓜德罗普岛|590\r\nGT|危地马拉|502\r\nGG|格恩西岛|441481\r\nGN|几内亚|224\r\nGW|几内亚比绍|245\r\nGY|圭亚那|592\r\nHT|海地|509\r\nHM|赫德岛和麦克唐纳群岛|0\r\nVA|圣座(梵蒂冈城)|379\r\nHN|洪都拉斯|504\r\nHK|香港|852\r\nHU|匈牙利|36\r\nIS|冰岛|354\r\nIN|印度|91\r\nID|印尼|62\r\nIE|爱尔兰|353\r\nIM|英国属地曼岛|441624\r\nIT|意大利|39\r\nJM|牙买加|1876\r\nJP|日本|81\r\nJE|泽西岛|44\r\nJO|约旦|962\r\nKZ|哈萨克斯坦|7\r\nKE|肯尼亚|254\r\nKI|基里巴斯|686\r\nKR|韩国|82\r\nKW|科威特|965\r\nKG|吉尔吉斯斯坦|996\r\nLA|老挝|856\r\nLV|拉脱维亚|371\r\nLB|黎巴嫩|961\r\nLS|莱索托|266\r\nLR|利比里亚|231\r\nLY|阿拉伯利比亚民众国|218\r\nLI|列支敦斯登|423\r\nLT|立陶宛|370\r\nLU|卢森堡|352\r\nMK|马其顿|389\r\nMG|马达加斯加|261\r\nMW|马拉维|265\r\nMY|马来西亚|60\r\nMV|马尔代夫|960\r\nML|马里|223\r\nMT|马耳他|356\r\nMQ|马提尼克岛|596\r\nMR|毛利塔尼亚|222\r\nMU|毛里求斯|230\r\nYT|马约特岛|262\r\nMX|墨西哥|52\r\nMD|摩尔多瓦共和国|373\r\nMC|摩纳哥|377\r\nMN|蒙古|976\r\nME|黑山共和国|382\r\nMS|蒙特塞拉特|1664\r\nMA|摩洛哥|212\r\nMZ|莫桑比克|258\r\nMM|缅甸|95\r\nNA|纳米比亚|264\r\nNR|瑙鲁|674\r\nNP|尼泊尔|977\r\nNL|荷兰|31\r\nNL|荷属安的列斯群岛|31\r\nNC|新喀里多尼亚|687\r\nNZ|新西兰|64\r\nNI|尼加拉瓜|505\r\nNG|尼日尔|227\r\nNG|尼日利亚|234\r\nNU|纽埃岛|683\r\nNF|诺福克岛|6723\r\nNO|挪威|47\r\nOM|阿曼|968\r\nPK|巴基斯坦|92\r\nPS|巴勒斯坦领土|970\r\nPA|巴拿马|507\r\nPG|巴布新几内亚|675\r\nPY|巴拉圭|595\r\nPE|秘鲁|51\r\nPN|皮特克恩岛|64\r\nPL|波兰|48\r\nQA|卡塔尔|974\r\nRE|留尼旺岛|262\r\nRO|罗马尼亚|40\r\nRU|俄罗斯联邦|7\r\nRW|卢旺达|250\r\nBL|圣巴泰勒米岛|590\r\nSH|圣赫勒拿阿森松和特里斯坦-达库尼亚群岛|290\r\nKN|圣基茨和尼维斯|1869\r\nLC|圣卢西亚岛|1758\r\nMF|圣马丁|590\r\nPM|圣皮埃尔和密克隆群岛|508\r\nVC|圣文森特和格林纳丁斯|1784\r\nAS|萨摩亚|685\r\nSM|圣马力诺|378\r\nST|圣多美和普林西比|239\r\nSA|沙特阿拉伯|966\r\nSN|塞内加尔|221\r\nRS|塞尔维亚|381\r\nSC|塞舌尔|248\r\nSL|塞拉利昂|232\r\nSX|圣马丁岛(荷兰)|1721\r\nSK|斯洛伐克|421\r\nSI|斯洛文尼亚|386\r\nSB|所罗门群岛|677\r\nSO|索马里|252\r\nZA|南非|27\r\nGS|南乔治亚岛和南桑威奇群岛|500\r\nLK|斯里兰卡|94\r\nSD|苏丹|249\r\nSR|苏里南|597\r\nSJ|斯瓦尔巴群岛和扬马延岛|47\r\nSZ|斯威士兰|268\r\nSE|瑞典|46\r\nCH|瑞士|41\r\nSY|阿拉伯叙利亚共和国|963\r\nTJ|塔吉克斯坦|992\r\nTZ|坦桑尼亚联合共和国|255\r\nTH|泰国|66\r\nTL|东帝汶|670\r\nTG|多哥|228\r\nTK|托克劳|690\r\nTO|汤加|676\r\nTT|特立尼达和多巴哥|1868\r\nTN|突尼斯|216\r\nTM|土库曼斯坦|993\r\nTC|特克斯和凯科斯群岛|1649\r\nTV|图瓦卢|688\r\nUG|乌干达|256\r\nUA|乌克兰|380\r\nAE|阿拉伯联合酋长国|971\r\nUY|乌拉圭|598\r\nUS|美国|1\r\nUZ|乌兹别克斯坦|998\r\nVU|瓦努阿图|678\r\nVE|委内瑞拉|58\r\nVN|越南|84\r\nWF|瓦利斯群岛和富图纳群岛|681\r\nEH|西撒哈拉|212\r\nYE|也门|967\r\nZM|赞比亚|260\r\nZW|津巴布韦|263"
+  country_area_code_validation: "86|11|11|Please input an exact 11 characters\r\n66|9|9|Please input an exact 9 characters\r\n84|9|11|Please input 9-11 characters\r\n62|10|12|Please input 10-12 characters\r\n82|10|10|Please input an exact 10 characters\r\n91|10|10|Please input an exact 10 characters\r\n60|9|10|Please input 9-10 characters"
 field_validations:
   required:
-    error_message: "请输入您的手机号码\r\n"
+    error_message: "此项为必填项。\r\n"
   alpha:
     error_message: 'Field should be Alphabet characters only'
   alphanumeric:
@@ -13,17 +14,21 @@ field_validations:
   alpha_multi:
     error_message: 'Value is not a valid multilingual character'
   numeric:
-    error_message: 'Field should be numeric'
+    error_message: "请输入有效的手机号码。\r\n"
   no_symbols:
     error_message: 'Field contains invalid special characters'
   numeric_symbols:
-    error_message: "请输入您的手机号码\r\n"
+    error_message: "请输入有效的手机号码。\r\n"
   email:
     error_message: 'Field does not contain a valid email address'
   min_length:
-    error_message: "请输入您的手机号码\r\n"
+    error_message: "手机号需为6-15数字。\r\n"
   max_length:
-    error_message: "请输入您的手机号码\r\n"
+    error_message: "手机号需为6-15数字。\r\n"
+  regex:
+    error_message: 'This field only accepts specific characters.'
+  valid_date:
+    error_message: 'Date is invalid'
   username_availability:
     error_message: 'Username not available'
   email_availability:
@@ -32,3 +37,5 @@ field_validations:
     error_message: 'Invalid/not allowed characters'
   valid_languages:
     error_message: 'This field only accepts specific characters.'
+  not_match_username:
+    error_message: 'Password should not equal to username'

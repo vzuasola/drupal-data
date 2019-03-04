@@ -20,7 +20,7 @@ class PluginTypeExampleTest extends ExamplesBrowserTestBase {
    *
    * @var array
    */
-  public static $modules = array('plugin_type_example');
+  public static $modules = ['plugin_type_example'];
 
   /**
    * The installation profile to use with this test.
@@ -32,7 +32,7 @@ class PluginTypeExampleTest extends ExamplesBrowserTestBase {
   /**
    * Test the plugin manager can be loaded, and the plugins are registered.
    *
-   * @todo: Check the alter hook fired and changed a property.
+   * @todo: https://www.drupal.org/project/examples/issues/2985705
    */
   public function testPluginExample() {
     /* @var $manager \Drupal\plugin_type_example\SandwichPluginManager */
@@ -47,7 +47,7 @@ class PluginTypeExampleTest extends ExamplesBrowserTestBase {
     $this->assertEquals(426, $sandwich_plugin_definition['calories'], 'The ham sandwich plugin definition\'s calories property is not set.');
 
     // Create an instance of the ham sandwich plugin to check it works.
-    $plugin = $manager->createInstance('ham_sandwich', array('of' => 'configuration values'));
+    $plugin = $manager->createInstance('ham_sandwich', ['of' => 'configuration values']);
 
     $this->assertInstanceOf(ExampleHamSandwich::class, $plugin);
 

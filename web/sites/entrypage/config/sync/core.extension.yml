@@ -42,6 +42,7 @@ module:
   imce: 0
   lang_dropdown: 0
   language: 0
+  language_access: 0
   libraries: 0
   link: 0
   locale: 0
@@ -56,6 +57,8 @@ module:
   path: 0
   quickedit: 0
   rdf: 0
+  replicate: 0
+  replicate_ui: 0
   rest: 0
   rest_menu_items: 0
   restui: 0
@@ -83,12 +86,14 @@ module:
   webcomposer_floating_banners: 0
   webcomposer_form_manager: 0
   webcomposer_games: 0
+  webcomposer_language_access: 0
   webcomposer_language_hierarchy: 0
   webcomposer_mailer: 0
   webcomposer_marketing_script: 0
   webcomposer_partner: 0
   webcomposer_permission: 0
   webcomposer_promotions: 0
+  webcomposer_replicate_utility: 0
   webcomposer_rest_extra: 0
   webcomposer_right_side_block: 0
   webcomposer_seo: 0

@@ -1,0 +1,22 @@
+title: 'Thông báo'
+empty: 'Không có thông báo mới.'
+expired_message: 'Ưu đãi này đã hết hạn'
+date_format: 'dd/mm/yyyy HH:MM'
+date_offset: '+7'
+dismiss_button_label: 'Dismiss all'
+dismiss_content:
+  value: "<p class=\"text-align-center\"><strong><span class=\"text-yellow\">ARE YOU SURE YOU WANT<br />\r\nTO DISMISS ALL NOTIFICATIONS?</span></strong></p>\r\n\r\n<p class=\"text-align-center\"><span class=\"text-white\">Dismissing all notifications will also<br />\r\ndecline all promotions you are eligible to</span></p>\r\n"
+  format: basic_html
+dismiss_yes: 'YES'
+dismiss_no: 'NO'
+product_label_generic: 'Thông báo'
+product_label_owsports: 'OW Sports'
+product_label_livedealer: 'Casino Trực Tuyến/Trò Chơi/Arcade'
+product_label_lottery: Keno
+product_label_virtuals: 'Thể Thao Ảo'
+cta_label_ok: OK
+cta_label_accept: 'CHẤP NHẬN'
+cta_label_decline: 'TỪ CHỐI'
+copied: 'Đã sao chép vào bộ nhớ đệm'
+cta_label_proceed: 'Yes, Proceed'
+cta_label_no: 'No, Thanks'

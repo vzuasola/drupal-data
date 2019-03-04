@@ -1,7 +1,13 @@
 uuid: 360aceee-dfd2-4f98-8010-7278e60204d2
-langcode: en
+langcode: pl
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - webcomposer_language_hierarchy
+third_party_settings:
+  webcomposer_language_hierarchy:
+    webcomposer_fallback_langcode: en
+    webcomposer_language_custom_label: Polish
 id: pl
 label: Polish
 direction: ltr

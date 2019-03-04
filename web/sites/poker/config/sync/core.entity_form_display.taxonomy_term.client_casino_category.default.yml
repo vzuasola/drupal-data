@@ -1,0 +1,72 @@
+uuid: d12d6eca-144c-41fd-bb6c-c9ce00a43d6a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.client_casino_category.field_clcasino_cat_alias
+    - field.field.taxonomy_term.client_casino_category.field_clcasino_cat_disable
+    - field.field.taxonomy_term.client_casino_category.field_clcasino_cat_hicon
+    - field.field.taxonomy_term.client_casino_category.field_clclient_cat_icon
+    - image.style.thumbnail
+    - taxonomy.vocabulary.client_casino_category
+  module:
+    - image
+id: taxonomy_term.client_casino_category.default
+targetEntityType: taxonomy_term
+bundle: client_casino_category
+mode: default
+content:
+  field_clcasino_cat_alias:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_clcasino_cat_disable:
+    weight: 4
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_clcasino_cat_hicon:
+    weight: 6
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_clclient_cat_icon:
+    weight: 5
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true

@@ -132,10 +132,10 @@ class VirtualConfigForm extends FormBase {
       ],
     ];
 
-    $form['basic_page']['basic_page_background'] = [
+    $form['basic_page']['file_image_basic_page_background'] = [
       '#type' => 'managed_file',
       '#title' => $this->t('Basic Page Background Image'),
-      '#default_value' => $this->get('basic_page_background'),
+      '#default_value' => $this->get('file_image_basic_page_background'),
       '#upload_location' => 'public://',
       '#upload_validators' => [
         'file_validate_extensions' => ['gif png jpg jpeg'],

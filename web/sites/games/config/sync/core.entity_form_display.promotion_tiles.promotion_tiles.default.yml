@@ -1,0 +1,474 @@
+uuid: 7696ce80-fbae-4f4d-a978-a4aa237fa9d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.promotion_tiles.promotion_tiles.field_log_in_state
+    - field.field.promotion_tiles.promotion_tiles.field_post_blurb
+    - field.field.promotion_tiles.promotion_tiles.field_post_link_target
+    - field.field.promotion_tiles.promotion_tiles.field_post_promotion_link
+    - field.field.promotion_tiles.promotion_tiles.field_post_slelect_image_size
+    - field.field.promotion_tiles.promotion_tiles.field_post_tile_image
+    - field.field.promotion_tiles.promotion_tiles.field_post_tile_image_large
+    - field.field.promotion_tiles.promotion_tiles.field_post_tile_image_medium
+    - field.field.promotion_tiles.promotion_tiles.field_pre_blurb
+    - field.field.promotion_tiles.promotion_tiles.field_pre_link_target
+    - field.field.promotion_tiles.promotion_tiles.field_pre_promotion_link
+    - field.field.promotion_tiles.promotion_tiles.field_pre_slelect_image_size
+    - field.field.promotion_tiles.promotion_tiles.field_pre_tile_image
+    - field.field.promotion_tiles.promotion_tiles.field_pre_tile_image_large
+    - field.field.promotion_tiles.promotion_tiles.field_pre_tile_image_medium
+    - field.field.promotion_tiles.promotion_tiles.field_publish_date
+    - field.field.promotion_tiles.promotion_tiles.field_title
+    - field.field.promotion_tiles.promotion_tiles.field_unpublish_date
+    - image.style.thumbnail
+  module:
+    - conditional_fields
+    - datetime
+    - field_group
+    - image
+    - link
+    - promotion_tiles
+    - text
+third_party_settings:
+  field_group:
+    group_pre_promotion_fields:
+      children:
+        - field_pre_slelect_image_size
+        - field_pre_tile_image
+        - field_pre_tile_image_medium
+        - field_pre_tile_image_large
+        - field_pre_promotion_link
+        - field_pre_link_target
+        - field_pre_blurb
+      parent_name: ''
+      weight: 3
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Pre Promotion Fields'
+    group_post_promotion_fields:
+      children:
+        - field_post_slelect_image_size
+        - field_post_tile_image
+        - field_post_tile_image_medium
+        - field_post_tile_image_large
+        - field_post_promotion_link
+        - field_post_link_target
+        - field_post_blurb
+      parent_name: ''
+      weight: 4
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Post Promotion Fields'
+id: promotion_tiles.promotion_tiles.default
+targetEntityType: promotion_tiles
+bundle: promotion_tiles
+mode: default
+content:
+  field_log_in_state:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_post_blurb:
+    weight: 26
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings:
+      conditional_fields:
+        04261d55-412e-4eb2-96ba-7bc5da06cbd7:
+          dependee: field_log_in_state
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: '1'
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: promotion_tiles
+          bundle: promotion_tiles
+    type: text_textarea_with_summary
+    region: content
+  field_post_link_target:
+    weight: 25
+    settings: {  }
+    third_party_settings:
+      conditional_fields:
+        ba70959c-b6bc-4cc6-8404-3724733b7033:
+          dependee: field_log_in_state
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: '1'
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: promotion_tiles
+          bundle: promotion_tiles
+    type: options_select
+    region: content
+  field_post_promotion_link:
+    weight: 24
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings:
+      conditional_fields:
+        565d894b-3f2f-47a5-a8fc-4ac4c8823d72:
+          dependee: field_log_in_state
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: '1'
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: promotion_tiles
+          bundle: promotion_tiles
+    type: link_default
+    region: content
+  field_post_slelect_image_size:
+    weight: 20
+    settings: {  }
+    third_party_settings:
+      conditional_fields:
+        2bfcc18e-a8ef-4ecb-8ab7-9c296f6bd9a3:
+          dependee: field_log_in_state
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: '1'
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: promotion_tiles
+          bundle: promotion_tiles
+    type: options_buttons
+    region: content
+  field_post_tile_image:
+    weight: 21
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings:
+      conditional_fields:
+        cba627ee-db92-46f7-a2aa-a259ba592e71:
+          dependee: field_post_slelect_image_size
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: small
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: promotion_tiles
+          bundle: promotion_tiles
+    type: image_image
+    region: content
+  field_post_tile_image_large:
+    weight: 23
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings:
+      conditional_fields:
+        509a825e-6cd0-4fb6-8fca-dfc93626e690:
+          dependee: field_post_slelect_image_size
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: large
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: promotion_tiles
+          bundle: promotion_tiles
+    type: image_image
+    region: content
+  field_post_tile_image_medium:
+    weight: 22
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings:
+      conditional_fields:
+        c41280f4-d6c7-4d8f-978b-9c5407fd6c91:
+          dependee: field_post_slelect_image_size
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: medium
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: promotion_tiles
+          bundle: promotion_tiles
+    type: image_image
+    region: content
+  field_pre_blurb:
+    weight: 19
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings:
+      conditional_fields:
+        4727b793-56f0-40ac-9055-2c633d1a1f4b:
+          dependee: field_log_in_state
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: '0'
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: promotion_tiles
+          bundle: promotion_tiles
+    type: text_textarea_with_summary
+    region: content
+  field_pre_link_target:
+    weight: 18
+    settings: {  }
+    third_party_settings:
+      conditional_fields:
+        ad08c4ac-dc3a-4990-9dab-db2db4743ab9:
+          dependee: field_log_in_state
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: '0'
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: promotion_tiles
+          bundle: promotion_tiles
+    type: options_select
+    region: content
+  field_pre_promotion_link:
+    weight: 17
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings:
+      conditional_fields:
+        57bc8fdc-009e-43fa-83a0-4072aac634f3:
+          dependee: field_log_in_state
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: '0'
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: promotion_tiles
+          bundle: promotion_tiles
+    type: link_default
+    region: content
+  field_pre_slelect_image_size:
+    weight: 13
+    settings: {  }
+    third_party_settings:
+      conditional_fields:
+        9a8a7cd2-1084-4a0e-a857-6d3c2d25c896:
+          dependee: field_log_in_state
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: '0'
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: promotion_tiles
+          bundle: promotion_tiles
+    type: options_buttons
+    region: content
+  field_pre_tile_image:
+    weight: 14
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings:
+      conditional_fields:
+        5504dcee-d27d-45ce-a7ce-08bb91bce96d:
+          dependee: field_pre_slelect_image_size
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: small
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: promotion_tiles
+          bundle: promotion_tiles
+    type: image_image
+    region: content
+  field_pre_tile_image_large:
+    weight: 16
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings:
+      conditional_fields:
+        046713d6-9029-4695-a670-f2644451f518:
+          dependee: field_pre_slelect_image_size
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: large
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: promotion_tiles
+          bundle: promotion_tiles
+    type: image_image
+    region: content
+  field_pre_tile_image_medium:
+    weight: 15
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings:
+      conditional_fields:
+        d997ed55-0987-4af7-97a0-9323dad28ad1:
+          dependee: field_pre_slelect_image_size
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: medium
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: promotion_tiles
+          bundle: promotion_tiles
+    type: image_image
+    region: content
+  field_publish_date:
+    weight: 27
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_unpublish_date:
+    weight: 28
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  translation:
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  name: true
+  user_id: true

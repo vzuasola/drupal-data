@@ -1,0 +1,5 @@
+entity.poker_client_showcase.add_form:
+  route_name: entity.poker_client_showcase.add_form
+  title: 'Add Poker client showcase'
+  appears_on:
+    - entity.poker_client_showcase.collection

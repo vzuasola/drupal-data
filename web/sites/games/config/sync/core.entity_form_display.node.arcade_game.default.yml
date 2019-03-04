@@ -5,12 +5,14 @@ dependencies:
   config:
     - field.field.node.arcade_game.body
     - field.field.node.arcade_game.field_arc_game_code
+    - field.field.node.arcade_game.field_arc_game_keywords
     - field.field.node.arcade_game.field_arc_game_provider
     - field.field.node.arcade_game.field_arc_game_ribbon
     - field.field.node.arcade_game.field_arc_game_thumbnail_image
     - field.field.node.arcade_game.field_arc_game_title
     - field.field.node.arcade_game.field_arc_meta_tags
     - field.field.node.arcade_game.field_arcade_category
+    - field.field.node.arcade_game.field_game_subprovider
     - field.field.node.arcade_game.field_game_thumbnail_image_h
     - field.field.node.arcade_game.field_game_thumbnail_image_v
     - field.field.node.arcade_game.field_game_thumbnail_size
@@ -28,6 +30,7 @@ third_party_settings:
     group_game_launching:
       children:
         - field_arc_game_provider
+        - field_game_subprovider
         - field_arc_game_code
       parent_name: ''
       weight: 8
@@ -70,6 +73,14 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
+  field_arc_game_keywords:
+    weight: 27
+    settings:
+      size: 100
+      placeholder: 'e.g., slots, top, live'
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_arc_game_provider:
     weight: 10
     settings: {  }
@@ -109,6 +120,12 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
+    region: content
+  field_game_subprovider:
+    weight: 11
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   field_game_thumbnail_image_h:
     weight: 11

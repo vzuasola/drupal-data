@@ -8,7 +8,7 @@ dependencies:
   module:
     - file
 _core:
-  default_config_hash: lPcfcoenbQ0yw8ZhHZSZaYckmYDN4htilwK3KHJ1JmQ
+  default_config_hash: p5u1a5zhKCohp1DkcrYOwrCKhQabuieuTfBkHtyStM8
 id: paragraph.drawer_media.field_drawer_video
 field_name: field_drawer_video
 entity_type: paragraph

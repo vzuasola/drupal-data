@@ -5,7 +5,8 @@
  */
 function webcomposer_dropdown_menu_uninstall() {
   $keys = [
-    'webcomposer_dropdown_menu'
+    'webcomposer_dropdown_menu',
+    'webcomposer_config.dropdown_menu_settings',
   ];
 
   foreach ($keys as $key) {

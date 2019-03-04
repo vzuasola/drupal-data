@@ -59,5 +59,27 @@ function mobile_config_form_webcomposer_config_schema_form_base_alter(&$form, \D
         '#default_value' => \Drupal::service('webcomposer_config_schema.schema')->getConfigValue('webcomposer_config.footer_configuration', 'mobile_language_select') ?? 'Select Language',
         '#translatable' => TRUE
       ];
+
+      $form['mobile_pwa'] = [
+        '#type' => 'details',
+        '#title' => 'PWA Homescreen',
+        '#collapsible' => TRUE,
+        '#group' => 'advanced'
+      ];
+
+      $form['mobile_pwa']['mobile_pwa_enable'] = [
+        '#type' => 'checkbox',
+        '#title' => 'Enable Add Homescreen',
+        '#description' => 'Notify user to add Dafabet Homescreen.',
+        '#default_value' => \Drupal::service('webcomposer_config_schema.schema')->getConfigValue('webcomposer_config.footer_configuration', 'mobile_pwa_enable'),
+      ];
+
+      $form['mobile_pwa']['mobile_pwa_add_homescreen'] = [
+        '#type' => 'textfield',
+        '#title' => 'Add Dafabet to Homescreen',
+        '#description' => 'PWA Add Dafabet to Homescreen Text.',
+        '#default_value' => \Drupal::service('webcomposer_config_schema.schema')->getConfigValue('webcomposer_config.footer_configuration', 'mobile_pwa_add_homescreen') ?? 'Add Dafabet to Homescreen',
+        '#translatable' => TRUE
+      ];
     }
 }

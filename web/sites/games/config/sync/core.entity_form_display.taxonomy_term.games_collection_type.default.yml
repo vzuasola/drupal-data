@@ -1,0 +1,23 @@
+uuid: de3150a5-b33a-4c0a-822a-2c533f0a9ae7
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.games_collection_type
+id: taxonomy_term.games_collection_type.default
+targetEntityType: taxonomy_term
+bundle: games_collection_type
+mode: default
+content:
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  description: true
+  langcode: true
+  path: true

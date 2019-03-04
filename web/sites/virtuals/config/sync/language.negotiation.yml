@@ -10,6 +10,8 @@ url:
     ko: kr
     id: id
     ja: jp
+    es: es
+    pt-br: pt
   domains:
     en: ''
     zh-hans: ''
@@ -18,6 +20,8 @@ url:
     ko: ''
     id: ''
     ja: ''
+    es: ''
+    pt-br: ''
 selected_langcode: site_default
 _core:
   default_config_hash: uEePITI9tV6WqzmsTb7MfPCi5yPWXSxAN1xeLcYFQbM

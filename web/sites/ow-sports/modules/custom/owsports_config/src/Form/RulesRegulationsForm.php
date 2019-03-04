@@ -14,7 +14,7 @@ use Drupal\Core\Url;
  * @WebcomposerConfigPlugin(
  *   id = "owsports_config",
  *   route = {
- *     "title" = "Rules and Regulations Configuration",
+ *     "title" = "Rules and Regulations Configuration Deprecated",
  *     "path" = "/admin/config/webcomposer/config/rules_config",
  *   },
  *   menu = {
@@ -53,14 +53,15 @@ class RulesRegulationsForm extends FormBase {
       '#group' => 'advanced',
     ];
 
-    $form['rules_regulations']['rules_page_background'] = [
+    $form['rules_regulations']['file_image_rules_page_background'] = [
       '#type' => 'managed_file',
       '#title' => $this->t('Background Image'),
-      '#default_value' => $this->get('rules_page_background'),
+      '#default_value' => $this->get('file_image_rules_page_background'),
       '#upload_location' => 'public://',
       '#upload_validators' => [
         'file_validate_extensions' => ['gif png jpg jpeg'],
       ],
+      '#description' => $this->t('Recommended minimum width is 1920px and height is 800px'),
     ];
 
     $form['rules_regulations']['rules_page_color'] = [

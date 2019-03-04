@@ -1,0 +1,78 @@
+uuid: ada9eb6d-6bc8-4dab-bbbc-c57b1c05d7d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.client_footer_games.client_footer_games.field_game_code
+    - field.field.client_footer_games.client_footer_games.field_game_thumbnail
+    - field.field.client_footer_games.client_footer_games.field_game_thumbnail_hover
+    - field.field.client_footer_games.client_footer_games.field_game_type
+    - field.field.client_footer_games.client_footer_games.field_publish
+    - image.style.thumbnail
+  module:
+    - client_footer_games
+    - image
+id: client_footer_games.client_footer_games.default
+targetEntityType: client_footer_games
+bundle: client_footer_games
+mode: default
+content:
+  field_game_code:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_game_thumbnail:
+    weight: 3
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_game_thumbnail_hover:
+    weight: 4
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_game_type:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_publish:
+    weight: 7
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  user_id: true

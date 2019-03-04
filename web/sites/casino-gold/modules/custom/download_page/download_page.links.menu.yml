@@ -1,0 +1,33 @@
+download_page.list:
+  title: 'Download Page'
+  description: 'Configure the Download Page items.'
+  parent: system.admin_config
+  route_name: download_page.admin_settings
+  weight: 1500
+
+# Download page entity menu items definition
+entity.download_page_entity.collection:
+  title: 'Download page entity list'
+  route_name: entity.download_page_entity.collection
+  description: 'List Download page entity entities'
+  parent: download_page.list
+  weight: 100
+
+download_page_entity.admin.structure.settings:
+  title: Download page entity settings
+  description: 'Configure Download page entity entities'
+  route_name: download_page_entity.settings
+  parent: download_page.list
+# Download page entity menu items definition
+entity.download_page_entity.collection:
+  title: 'Download page entity list'
+  route_name: entity.download_page_entity.collection
+  description: 'List Download page entity entities'
+  parent: system.admin_structure
+  weight: 100
+
+download_page_entity.admin.structure.settings:
+  title: Download page entity settings
+  description: 'Configure Download page entity entities'
+  route_name: download_page_entity.settings
+  parent: system.admin_structure

@@ -142,32 +142,5 @@ class OpusProviderConfiguration extends FormBase {
       '#translatable' => TRUE,
       '#required' => false,
     ];
-
-    $form['opus_unsupported_currencies_title'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Unsupported Currency title'),
-      '#description' => $this->t('Defines the Unsupported Currency LightBox title'),
-      '#default_value' => $this->get('opus_unsupported_currencies_title'),
-      '#required' => false,
-      '#translatable' => TRUE,
-    ];
-
-    $form['opus_unsupported_currencies_message'] = [
-      '#type' => 'text_format',
-      '#title' => $this->t('Unsupported Currency Message'),
-      '#default_value' => $this->get('opus_unsupported_currencies_message')['value'],
-      '#required' => false,
-      '#translatable' => TRUE,
-      '#format' => $message['format'],
-    ];
-
-    $form['opus_unsupported_currencies_button'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Lottey Unsupported Currency button'),
-      '#description' => $this->t('Defines the Unsupported Currency LightBox Ok button'),
-      '#default_value' => $this->get('opus_unsupported_currencies_button'),
-      '#required' => false,
-      '#translatable' => TRUE,
-    ];
   }
 }

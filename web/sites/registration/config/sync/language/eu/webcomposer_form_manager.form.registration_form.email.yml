@@ -1,10 +1,10 @@
 field_settings:
   label: 'Email Address'
   placeholder: 'Email Address'
-  annotation: 'Please ensure that your are using an active email address for verification and bank transaction purposes (such as Moneybookers/Skrill). Mismatched and/or invalid email addresses used may result in delays in processing your transactions. Important messages and notifications will also be sent to your email address, including password recovery and/or account related information.'
+  annotation: "Please enter a valid email address to receive latest promotions, updates and exclusive offers.\r\n"
 field_validations:
   required:
-    error_message: "Please enter your valid and active Email Address for communication purposes. (e.g. name@domain.com)\r\n"
+    error_message: "This field is required.\r\n"
   alpha:
     error_message: 'Field should be Alphabet characters only'
   alphanumeric:
@@ -18,18 +18,22 @@ field_validations:
   numeric_symbols:
     error_message: 'Field contains invalid special characters'
   email:
-    error_message: 'Please enter your valid and active Email Address for communication purposes. (e.g. name@domain.com)'
+    error_message: "Please enter a valid email address. (e.g. name@domain.com)\r\n"
   min_length:
-    error_message: "Please enter your valid and active Email Address for communication purposes. (e.g. name@domain.com)\r\n"
+    error_message: "Please enter a valid email address. (e.g. name@domain.com)\r\n"
   max_length:
-    error_message: "Please enter your valid and active Email Address for communication purposes. (e.g. name@domain.com)\r\n"
+    error_message: "Please enter a valid email address. (e.g. name@domain.com)\r\n"
+  regex:
+    error_message: 'This field only accepts specific characters.'
+  valid_date:
+    error_message: 'Date is invalid'
   username_availability:
     error_message: 'Username not available'
   email_availability:
-    error_message: "<span class=\"visible-desktop\">Email is already in use. Click <a href=\"/eu/cant-login\" target=\"popup\" onclick=\"window.open('/eu/cant-login','popup','width=820,height=810,scrollbars=no,resizable=no'); return false;\">here</a> to retrieve username/password.</span>\r\n<span class=\"visible-tablet\">Email is already in use. Click<a href=\"/eu/cant-login\" target=\"_blank\">here</a> to retrieve username/password.</span>\r\n<span class=\"visible-mobile\">Email is already in use. Click<a href=\"/eu/cant-login\" target=\"_blank\">here</a> to retrieve username/password.</span>\r\n<span class=\"visible-app\">Email is already in use. Click<a href=\"https://m.dafawin.com/eu/cant-login?clientflag=1\" target=\"_blank\">here</a> to retrieve username/password.</span>"
+    error_message: "<span class=\"visible-desktop\">Email is already in use. Click <a href=\"{domain:myaccount_domain}/eu/cant-login\" target=\"popup\" onclick=\"window.open('{domain:myaccount_domain}/eu/cant-login','popup','width=820,height=810,scrollbars=no,resizable=no'); return false;\">here</a> to retrieve username/password.</span>\r\n<span class=\"visible-client\">Email is already in use. Click <u><a href=\"{domain:myaccount_domain}/eu/cant-login\" target=\"popup\" onclick=\"window.open('{domain:myaccount_domain}/eu/cant-login','popup','width=820,height=810,scrollbars=no,resizable=no'); return false;\">here</a></u> to retrieve username/password.</span>\r\n<span class=\"visible-tablet\">Email is already in use. Click <a href=\"{domain:mobile}/eu/cant-login\" target=\"_blank\">here</a> to retrieve username/password.</span>\r\n<span class=\"visible-mobile\">Email is already in use. Click <a href=\"{domain:mobile}/eu/cant-login\" target=\"_blank\">here</a> to retrieve username/password.</span>\r\n<span class=\"visible-app\">Email is already in use. Click <a href=\"https://m.dfnba.net/eu/cant-login?clientflag=1\" target=\"_blank\">here</a> to retrieve username/password.</span>"
   invalid_words:
     error_message: 'Invalid/not allowed characters'
   valid_languages:
     error_message: 'This field only accepts specific characters.'
-  valid_date:
-    error_message: 'Date is invalid'
+  not_match_username:
+    error_message: 'Password should not equal to username'

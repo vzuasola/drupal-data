@@ -1,10 +1,10 @@
 field_settings:
   label: 'Địa chỉ Email'
   placeholder: 'Địa chỉ Email'
-  annotation: "Hãy đảm bảo rằng bạn đang sử dụng địa chỉ email đang hoạt động để xác thực và các mục đích giao dịch ngân hàng (ví dụ như Moneybookers / Skrill). Sử dụng địa chỉ email không trùng khớp và/hoặc không hợp lệ có thể dẫn đến sự chậm trễ trong việc xử lý các giao dịch của bạn. Các thông báo và tin nhắn quan trọng cũng sẽ được gửi đến địa chỉ email của bạn, bao gồm cả việc khôi phục mật khẩu và/hoặc thông tin liên quan đến tài khoản.\r\n\r\n"
+  annotation: "Vui lòng điền địa chỉ email hợp lệ để nhận thông báo khuyến mãi, cập nhật và ưu đãi mới nhất.\r\n"
 field_validations:
   required:
-    error_message: 'Vui lòng nhập địa chỉ Email hợp lệ (ví dụ: abc@email.com)'
+    error_message: "Email là bắt buộc\r\n"
   alpha:
     error_message: 'Field should be Alphabet characters only'
   alphanumeric:
@@ -18,18 +18,22 @@ field_validations:
   numeric_symbols:
     error_message: 'Field contains invalid special characters'
   email:
-    error_message: 'Vui lòng nhập địa chỉ Email hợp lệ (ví dụ: abc@email.com)'
+    error_message: "Vui lòng điền email hợp lệ. (vd: ten@tenmien.com)\r\n"
   min_length:
-    error_message: 'Vui lòng nhập địa chỉ Email hợp lệ (ví dụ: abc@email.com)'
+    error_message: "Vui lòng điền email hợp lệ. (vd: ten@tenmien.com)\r\n"
   max_length:
-    error_message: 'Vui lòng nhập địa chỉ Email hợp lệ (ví dụ: abc@email.com)'
+    error_message: "Vui lòng điền email hợp lệ. (vd: ten@tenmien.com)\r\n"
+  regex:
+    error_message: 'This field only accepts specific characters.'
+  valid_date:
+    error_message: 'Date is invalid'
   username_availability:
     error_message: 'Username not available'
   email_availability:
-    error_message: "<span class=\"visible-desktop\">Email đã được sử dụng. Vui lòng nhấn <a href=\"/vn/cant-login\" target=\"popup\" onclick=\"window.open('/vn/cant-login','popup','width=820,height=810,scrollbars=no,resizable=no'); return false;\" class=\"visible-desktop\">đây</a> để lấy lại tên người dùng/mật khẩu.</span>\r\n<span class=\"visible-tablet\">Email đã được sử dụng. Vui lòng nhấn <a href=\"/vn/cant-login\" target=\"_blank\" class=\"visible-tablet\">đây</a> để lấy lại tên người dùng/mật khẩu.</span>\r\n<span class=\"visible-mobile\">Email đã được sử dụng. Vui lòng nhấn <a href=\"/vn/cant-login\" target=\"_blank\" class=\"visible-mobile\">đây</a> để lấy lại tên người dùng/mật khẩu.</span>\r\n<span class=\"visible-app\">Email đã được sử dụng. Vui lòng nhấn <a href=\"https://m.dafawin.com/vn/cant-login?clientflag=1\" target=\"_blank\" class=\"visible-app\">đây</a> để lấy lại tên người dùng/mật khẩu.</span>\r\n"
+    error_message: "<span class=\"visible-desktop\">Email đã được sử dụng. Vui lòng nhấn <a href=\"{domain:myaccount_domain}/vn/cant-login\" target=\"popup\" onclick=\"window.open('{domain:myaccount_domain}/vn/cant-login','popup','width=820,height=810,scrollbars=no,resizable=no'); return false;\" class=\"visible-desktop\">đây</a> để lấy lại tên người dùng/mật khẩu.</span>\r\n<span class=\"visible-client\">Email đã được sử dụng. Vui lòng nhấn <u><a href=\"{domain:myaccount_domain}/vn/cant-login\" target=\"popup\" onclick=\"window.open('{domain:myaccount_domain}/vn/cant-login','popup','width=820,height=810,scrollbars=no,resizable=no'); return false;\" class=\"visible-desktop\">đây</a></u> để lấy lại tên người dùng/mật khẩu.</span>\r\n<span class=\"visible-tablet\">Email đã được sử dụng. Vui lòng nhấn <a href=\"{domain:mobile}/vn/cant-login\" target=\"_blank\" class=\"visible-tablet\">đây</a> để lấy lại tên người dùng/mật khẩu.</span>\r\n<span class=\"visible-mobile\">Email đã được sử dụng. Vui lòng nhấn <a href=\"{domain:mobile}/vn/cant-login\" target=\"_blank\" class=\"visible-mobile\">đây</a> để lấy lại tên người dùng/mật khẩu.</span>\r\n<span class=\"visible-app\">Email đã được sử dụng. Vui lòng nhấn <a href=\"https://m.dfnba.net/vn/cant-login?clientflag=1\" target=\"_blank\" class=\"visible-app\">đây</a> để lấy lại tên người dùng/mật khẩu.</span>\r\n"
   invalid_words:
     error_message: 'Invalid/not allowed characters'
   valid_languages:
     error_message: 'This field only accepts specific characters.'
-  valid_date:
-    error_message: 'Date is invalid'
+  not_match_username:
+    error_message: 'Password should not equal to username'

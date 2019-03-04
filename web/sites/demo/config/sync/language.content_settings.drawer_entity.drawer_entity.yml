@@ -8,8 +8,10 @@ dependencies:
 third_party_settings:
   content_translation:
     enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
 _core:
-  default_config_hash: QhAT7EOFJORSwtnTRMlOZmszKVjSugmoLAI0-dhhiF4
+  default_config_hash: dpFgaz640cTbpSM4yV2w3uxjRLc4XjKKIA9k0n79YTU
 id: drawer_entity.drawer_entity
 target_entity_type_id: drawer_entity
 target_bundle: drawer_entity

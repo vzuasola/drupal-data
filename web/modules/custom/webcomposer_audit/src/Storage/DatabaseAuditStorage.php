@@ -23,10 +23,13 @@ class DatabaseAuditStorage implements AuditStorageInterface {
    * {@inheritdoc}
    */
   public function all($options = []) {
-    $query = $this->database
-      ->select(self::TABLE, 'w')
-      ->extend('\Drupal\Core\Database\Query\PagerSelectExtender')
-      ->extend('\Drupal\Core\Database\Query\TableSortExtender');
+    $query = $this->database->select(self::TABLE, 'w');
+
+    if (isset($options['extend'])) {
+      foreach ($options['extend'] as $extend) {
+        $query = $query->extend($extend);
+      }
+    }
 
     $query->fields('w', [
       'id',
@@ -47,7 +50,11 @@ class DatabaseAuditStorage implements AuditStorageInterface {
 
     if (isset($options['where'])) {
       foreach ($options['where'] as $key => $value) {
-        $query->condition("w.$key", "%$value%", 'like');
+        if (is_array($value)) {
+          $query->condition("w.$key", $value['value'], $value['operator']);
+        } else {
+          $query->condition("w.$key", "%$value%", 'like');
+        }
       }
     }
 
@@ -63,9 +70,13 @@ class DatabaseAuditStorage implements AuditStorageInterface {
       $query->orderBy($options['orderby']['field'], $options['orderby']['sort']);
     }
 
-    $result = $query
-      ->limit($options['limit'])
-      ->execute();
+    if (isset($options['offset'])) {
+      $query->range($options['offset'], $options['limit']);
+    } elseif (isset($options['limit'])) {
+      $query->limit($options['limit']);
+    }
+
+    $result = $query->execute();
 
     return $result;
   }
@@ -76,10 +87,31 @@ class DatabaseAuditStorage implements AuditStorageInterface {
   public function getDistinct($column, $options = []) {
     $data = [];
 
-    $result = $this->database
+    $query = $this->database
       ->select(self::TABLE, 'w')
       ->fields('w', [$column])
-      ->distinct()
+      ->distinct();
+
+    if (isset($options['orderby'])) {
+      $query->orderBy($options['orderby']['field'], $options['orderby']['sort']);
+    }
+
+    if (isset($options['where'])) {
+      foreach ($options['where'] as $key => $value) {
+        if (is_array($value)) {
+          $query->condition("w.$key", $value['value'], $value['operator']);
+        } else {
+          $query->condition("w.$key", "%$value%", 'like');
+        }
+      }
+    }
+
+    if (!isset($options['limit'])) {
+      $options['limit'] = 50;
+    }
+
+    $result = $query
+      ->range(0, $options['limit'])
       ->execute()
       ->fetchAllAssoc($column);
 
@@ -93,6 +125,15 @@ class DatabaseAuditStorage implements AuditStorageInterface {
     }
 
     return $data;
+  }
+
+  /**
+   *
+   */
+  public function getCount($options = []) {
+    $records = $this->getDistinct('id', $options);
+
+    return count($records);
   }
 
   /**

@@ -60,13 +60,15 @@ class CronExampleForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   public static function create(ContainerInterface $container) {
-    return new static(
+    $form = new static(
       $container->get('config.factory'),
       $container->get('current_user'),
       $container->get('cron'),
       $container->get('queue'),
       $container->get('state')
     );
+    $form->setMessenger($container->get('messenger'));
+    return $form;
   }
 
   /**
@@ -92,11 +94,11 @@ class CronExampleForm extends ConfigFormBase {
       '#markup' => $this->t('The cron example demonstrates hook_cron() and hook_queue_info() processing. If you have administrative privileges you can run cron from this page and see the results.'),
     ];
 
-    $next_execution = \Drupal::state()->get('cron_example.next_execution');
+    $next_execution = $this->state->get('cron_example.next_execution');
     $next_execution = !empty($next_execution) ? $next_execution : REQUEST_TIME;
 
     $args = [
-      '%time' => date_iso8601(\Drupal::state()->get('cron_example.next_execution')),
+      '%time' => date_iso8601($this->state->get('cron_example.next_execution')),
       '%seconds' => $next_execution - REQUEST_TIME,
     ];
     $form['status']['last'] = [
@@ -191,16 +193,16 @@ class CronExampleForm extends ConfigFormBase {
 
     $cron_reset = $form_state->getValue('cron_reset');
     if (!empty($cron_reset)) {
-      \Drupal::state()->set('cron_example.next_execution', 0);
+      $this->state->set('cron_example.next_execution', 0);
     }
 
     // Use a state variable to signal that cron was run manually from this form.
     $this->state->set('cron_example_show_status_message', TRUE);
     if ($this->cron->run()) {
-      drupal_set_message($this->t('Cron ran successfully.'));
+      $this->messenger()->addMessage($this->t('Cron ran successfully.'));
     }
     else {
-      drupal_set_message($this->t('Cron run failed.'), 'error');
+      $this->messenger()->addError($this->t('Cron run failed.'));
     }
   }
 
@@ -229,7 +231,7 @@ class CronExampleForm extends ConfigFormBase {
       '%num' => $num_items,
       '%queue' => $queue_name,
     ];
-    drupal_set_message($this->t('Added %num items to %queue', $args));
+    $this->messenger()->addMessage($this->t('Added %num items to %queue', $args));
   }
 
   /**

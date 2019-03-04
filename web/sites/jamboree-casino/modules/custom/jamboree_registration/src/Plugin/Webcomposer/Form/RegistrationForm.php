@@ -97,22 +97,22 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
       ],
       'email' => [
         'name' => 'Email Address',
-        'type' => 'textfield',
+        'type' => 'email',
         'settings' => [
           'label' => [
             '#title' => 'Email Address Label',
-            '#type' => 'textfield',
+            '#type' => 'email',
             '#description' => 'The Label for Email Address field',
           ],
         ],
       ],
       'confirm_email' => [
         'name' => 'Confirm Email Address',
-        'type' => 'textfield',
+        'type' => 'email',
         'settings' => [
           'label' => [
             '#title' => 'Confirm Email Address Label',
-            '#type' => 'textfield',
+            '#type' => 'email',
             '#description' => 'The Label for Confirm Email Address field',
           ],
         ],
@@ -304,6 +304,17 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
           ],
         ],
       ],
+      'captcha' => [
+        'name' => 'Captcha',
+        'type' => 'textfield',
+        'settings' => [
+          'label' => [
+            '#title' => 'Captcha Label',
+            '#type' => 'textfield',
+            '#description' => 'The Label for Captcha field',
+          ],
+        ],
+      ],
       'ip' => [
         'name' => 'IP address',
         'type' => 'hidden',
@@ -320,7 +331,6 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
         'name' => 'Advertiser',
         'type' => 'hidden',
       ],
-      //captcha?
       'submit' => [
         'name' => 'Submit',
         'type' => 'submit',

@@ -5,3 +5,27 @@ webcomposer.admin:
     _title: 'Webcomposer'
   requirements:
     _permission: 'access administration pages'
+
+webcomposer_dashboard.clear_cache:
+  path: 'admin/config/webcomposer/clear-cache'
+  defaults:
+    _controller: '\Drupal\webcomposer_dashboard\Controller\CacheActionController::clearCache'
+  requirements:
+    _permission: 'administer site configuration'
+
+webcomposer_dashboard.export_database:
+  path: 'admin/config/webcomposer/tools/site-export'
+  defaults:
+     _form: '\Drupal\webcomposer_dashboard\Form\SiteExportForm'
+     _title: 'Site Export'
+  requirements:
+    _permission: 'administer site configuration'
+  options:
+    _admin_route: TRUE
+
+webcomposer_dashboard.export_database_download:
+  path: 'admin/config/webcomposer/tools/site-export/download-database'
+  defaults:
+    _controller: '\Drupal\webcomposer_dashboard\Controller\DatabaseExportController::download'
+  requirements:
+    _permission: 'administer site configuration'

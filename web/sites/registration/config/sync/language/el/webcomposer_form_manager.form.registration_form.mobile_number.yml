@@ -3,9 +3,10 @@ field_settings:
   placeholder: 'Αριθμός Κινητού'
   annotation: ''
   country_area_code: "AF|Αφγανιστάν|93\r\nAX|Νησιά Άλαντ|35818\r\nAL|Αλβανία|355\r\nDZ|Αλγερία|213\r\nAD|Ανδόρα|376\r\nAO|Αγκόλα|244\r\nAI|Ανγκουίλα|1264\r\nAQ|Ανταρκτική|672\r\nAR|Αργεντινή|54\r\nAM|Αρμενία|374\r\nAW|Αρούμπα|297\r\nAU|Αυστραλία|61\r\nAT|Αυστρία|43\r\nAZ|Αζερμπαϊτζάν|994\r\nBS|Μπαχάμες|1242\r\nBH|Μπαχρέιν|973\r\nBD|Μπαγκλαντές|880\r\nBB|Μπαρμπάντος|1246\r\nBY|Λευκορωσία|375\r\nBZ|Μπελίζ|501\r\nBJ|Μπενίν|229\r\nBM|\_Βερμούδες|1441\r\nBT|Μπουτάν|975\r\nBO|Βολιβία|591\r\nBT|Μπονέρ Αγίου Ευσταθίου και Σάμπα|599\r\nBA|Βοσνία και Ερζεγοβίνη|387\r\nBW|Μποτσουάνα|267\r\nBV|Νήσος Μπουβέ|55\r\nBR|Βραζιλία|55\r\nIO|Βρετανική Επικράτεια Ινδικού Ωκεανού|246\r\nVG|Βρετανικοί Παρθένοι Νήσοι |1284\r\nBN|Μπρουνέι|673\r\nBG|Βουλγαρία|359\r\nBF|Μπουρκίνα Φάσο|226\r\nBI|Μπουρούντι|257\r\nKH|Καμπότζη|855\r\nCM|Καμερούν|237\r\nCA|Καναδάς|1\r\nCV|Πράσινο Ακρωτήριο|238\r\nKY|Νήσοι Κέιμαν|1345\r\nCF|Κεντροαφρικανική Δημοκρατία|236\r\nTD|Τσαντ|235\r\nCL|Χιλή|56\r\nCN|Κίνα|86\r\nCX|Νήσος των Χριστουγέννων|618\r\nCC|Νήσοι Κόκος (Κίλινγκ)|618\r\nCO|Κολομβία|57\r\nKM|Κομόρες|269\r\nCG|Κογκό|242\r\nCG|Λαϊκή Δημοκρατία του Κονγκό|243\r\nCK|Νήσοι Κουκ|682\r\nCR|Κόστα Ρίκα|506\r\nCI|Ακτή Ελεφαντοστού|225\r\nHR|Κροατία|385\r\nCU|Κούβα|53\r\nCZ|\_Τσεχία|420\r\nDK|Δανία|45\r\nDJ|Τζιμπουτί|253\r\nDM|Δομινίκα|1767\r\nDO|Δομινικανή Δημοκρατία|1809\r\nEC|Εκουαδόρ|593\r\nEG|Αίγυπτος|20\r\nSV|Ελ Σαλβαδόρ|503\r\nGQ|Ισημερινή Γουινέα|240\r\nER|Ερυθραία|291\r\nEE|\_Εσθονία|372\r\nET|Αιθιοπία|251\r\nFK|Νήσοι Φώκλαντ (Μαλβίνες)|500\r\nFO|Νήσοι Φερόες|298\r\nFJ|Φίτζι|679\r\nFI|Φινλανδία|358\r\nGF|Γαλλική Γουιάνα|594\r\nPF|Γαλλική Πολυνησία|689\r\nTF|Νότιες Γαλλικές Επικράτειες|262\r\nGA|Γκαμπόν|241\r\nGM|Γκάμπια|220\r\nGE|Γεωργία|995\r\nDE|Γερμανία|49\r\nGH|Γκάνα|233\r\nGI|Γιβραλτάρ|350\r\nGR|Ελλάδα|30\r\nGL|Γροιλανδία|299\r\nGD|Γρενάδα|1473\r\nGP|Γουαδελούπη|590\r\nGT|Γουατεμάλα|502\r\nGG|Γκέρνσεϊ|441481\r\nGN|Γουινέα |224\r\nGW|Γουινέα-Μπισάου|245\r\nGY|Γουιάνα|592\r\nHT|Αϊτή|509\r\nHM|Χερντ και ΜακΝτόναλντ Νήσοι|0\r\nVA|Αγία Έδρα (Πόλη του Βατικανού)|379\r\nHN|Ονδούρα|504\r\nHK|\_Χονγκ Κονγκ|852\r\nHU|Ουγγαρία|36\r\nIS|Ισλανδία|354\r\nIN|Ινδία|91\r\nID|Ινδονησία|62\r\nIE|\_Ιρλανδία|353\r\nIM|Νήσος του Μαν|441624\r\nIT|\_Ιταλία|39\r\nJM|Τζαμάικα|1876\r\nJP|Ιαπωνία|81\r\nJE|Τζέρσεϊ|44\r\nJO|Ιορδανία|962\r\nKZ|Καζακστάν|7\r\nKE|Κένυα|254\r\nKI|Κιριμπάτι|686\r\nKR|Νότια Κορέα|82\r\nKW|Κουβέιτ|965\r\nKG|Κιργιστάν|996\r\nLA|Λάος|856\r\nLV|Λετονία|371\r\nLB|Λίβανος|961\r\nLS|Λεσότο|266\r\nLR|Λιβερία|231\r\nLY|Λιβύη|218\r\nLI|Λίχτενσταϊν|423\r\nLT|Λιθουανία|370\r\nLU|\_Λουξεμβούργο|352\r\nMK|ΠΓΔΜ|389\r\nMG|Μαδαγασκάρη|261\r\nMW|Μαλάουι|265\r\nMY|Μαλαισία|60\r\nMV|Μαλδίβες|960\r\nML|Μάλι|223\r\nMT|Μάλτα|356\r\nMQ|Μαρτινίκα|596\r\nMR|Μαυριτανία|222\r\nMU|Μαυρίκιος|230\r\nYT|Μαγιότ|262\r\nMX|Μεξικό|52\r\nMD|Μολδαβία|373\r\nMC|Μονακό|377\r\nMN|Μογγολία|976\r\nME|Μαυροβούνιο|382\r\nMS|Μοντσεράτ|1664\r\nMA|Μαρόκο|212\r\nMZ|Μοζαμβίκη|258\r\nMM|Μιανμάρ|95\r\nNA|Ναμίμπια|264\r\nNR|Ναουρού|674\r\nNP|Νεπάλ|977\r\nNL|\_Ολλανδία|31\r\nNL|Ολλανδικές Αντίλλες|31\r\nNC|Νέα Καληδονία|687\r\nNZ|Νέα Ζηλανδία|64\r\nNI|Νικαράγουα|505\r\nNG|Νίγηρας|227\r\nNG|Νιγηρία|234\r\nNU|Νιούε|683\r\nNF|Νήσος Νόρφολκ|6723\r\nNO|Νορβηγία|47\r\nOM|Ομάν|968\r\nPK|Πακιστάν|92\r\nPS|Κατεχόμενα Εδάφη Παλαιστίνης|970\r\nPA|Παναμάς|507\r\nPG|Παπούα Νέα Γουινέα|675\r\nPY|Παραγουάη|595\r\nPE|Περού|51\r\nPN|Νήσοι Πίτκαιρν|64\r\nPL|\_Πολωνία|48\r\nQA|Κατάρ|974\r\nRE|Ρεουνιόν|262\r\nRO|\_Ρουμανία|40\r\nRU|Ρωσική Ομοσπονδία|7\r\nRW|Ρουάντα|250\r\nBL|Άγιος Βαρθολομαίος|590\r\nSH|Νήσος Αγίας Ελένης|290\r\nKN|Άγιος Χριστόφορος και Νέβις|1869\r\nLC|Αγία Λουκία|1758\r\nMF|Άγιος Μαρτίνος (Γαλλία)|590\r\nPM|Σαιντ Πιέρ και Μικελόν|508\r\nVC|Άγιος Βικέντιος και Γρεναδίνες|1784\r\nAS|Σαμόα|685\r\nSM|Σαν Μαρίνο|378\r\nST|Σάο Τομέ και Πρίνσιπε|239\r\nSA|Σαουδική Αραβία|966\r\nSN|Σενεγάλη|221\r\nRS|Σερβία|381\r\nSC|Σεϋχέλλες|248\r\nSL|Σιέρρα Λεόνε|232\r\nSX|Άγιος Μαρτίνος (Ολλανδία)|1721\r\nSK|Σλοβακία|421\r\nSI|Σλοβενία|386\r\nSB|Νησιά Σολομώντα|677\r\nSO|Σομαλία|252\r\nZA|Νότια Αφρική|27\r\nGS|Νότια Γεωργία και Νότιοι Νήσοι Σάντουιτς|500\r\nLK|Σρι Λάνκα|94\r\nSD|Σουδάν|249\r\nSR|Σουρινάμ|597\r\nSJ|Σβάλμπαρντ και Γιαν Μαγιέν|47\r\nSZ|Σουαζιλάνδη|268\r\nSE|Σουηδία|46\r\nCH|\_Ελβετία|41\r\nSY|Συρία|963\r\nTJ|Τατζικιστάν|992\r\nTZ|Τανζανία|255\r\nTH|Ταϊλάνδη|66\r\nTL|Τιμόρ-Λέστε|670\r\nTG|Τόγκο|228\r\nTK|Τοκελάου|690\r\nTO|Τόνγκα|676\r\nTT|Τρινιντάντ και Τομπάγκο|1868\r\nTN|Τυνησία|216\r\nTM|Τουρκμενιστάν|993\r\nTC|Νήσοι Τερκς και Κάικος|1649\r\nTV|Τουβαλού|688\r\nUG|Ουγκάντα|256\r\nUA|Ουκρανία|380\r\nAE|Ηνωμένα Αραβικά Εμιράτα|971\r\nUY|Ουρουγουάη|598\r\nUS|\_ΗΠΑ|1\r\nUZ|Ουζμπεκιστάν|998\r\nVU|Βανουάτου|678\r\nVE|Βενεζουέλα|58\r\nVN|Βιετνάμ|84\r\nWF|Ουόλις και Φουτούνα|681\r\nEH|Δυτική Σαχάρα|212\r\nYE|Υεμένη|967\r\nZM|Ζάμπια|260\r\nZW|Ζιμπάμπουε|263"
+  country_area_code_validation: "86|11|11|Please input an exact 11 characters\r\n66|9|9|Please input an exact 9 characters\r\n84|9|11|Please input 9-11 characters\r\n62|10|12|Please input 10-12 characters\r\n82|10|10|Please input an exact 10 characters\r\n91|10|10|Please input an exact 10 characters\r\n60|9|10|Please input 9-10 characters"
 field_validations:
   required:
-    error_message: "Παρακαλούμε εισάγετε τον Αριθμό Κινητού σας.\r\n"
+    error_message: "Αυτό το πεδίο είναι υποχρεωτικό\r\n"
   alpha:
     error_message: 'Field should be Alphabet characters only'
   alphanumeric:
@@ -13,17 +14,21 @@ field_validations:
   alpha_multi:
     error_message: 'Value is not a valid multilingual character'
   numeric:
-    error_message: 'Field should be numeric'
+    error_message: "Παρακαλώ εισάγετε έναν έγκυρο αριθμό κινητού\r\n"
   no_symbols:
     error_message: 'Field contains invalid special characters'
   numeric_symbols:
-    error_message: "Παρακαλούμε εισάγετε τον Αριθμό Κινητού σας.\r\n"
+    error_message: "Παρακαλώ εισάγετε έναν έγκυρο αριθμό κινητού\r\n"
   email:
     error_message: 'Field does not contain a valid email address'
   min_length:
-    error_message: "Παρακαλούμε εισάγετε τον Αριθμό Κινητού σας.\r\n"
+    error_message: "Ο Αριθμός Κινητού πρέπει να είναι 6-15 ψηφία\r\n"
   max_length:
-    error_message: "Παρακαλούμε εισάγετε τον Αριθμό Κινητού σας.\r\n"
+    error_message: "Ο Αριθμός Κινητού πρέπει να είναι 6-15 ψηφία\r\n"
+  regex:
+    error_message: 'This field only accepts specific characters.'
+  valid_date:
+    error_message: 'Date is invalid'
   username_availability:
     error_message: 'Username not available'
   email_availability:
@@ -32,3 +37,5 @@ field_validations:
     error_message: 'Invalid/not allowed characters'
   valid_languages:
     error_message: 'This field only accepts specific characters.'
+  not_match_username:
+    error_message: 'Password should not equal to username'

@@ -1,0 +1,20 @@
+uuid: c12b398f-eb1b-4a06-92c9-5f4d0a17fc65
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.poker_client_showcase.field_title
+  module:
+    - poker_client_showcase
+id: poker_client_showcase.poker_client_showcase.field_title
+field_name: field_title
+entity_type: poker_client_showcase
+bundle: poker_client_showcase
+label: Title
+description: 'The title of this showcase.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

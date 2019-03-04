@@ -1,0 +1,23 @@
+uuid: 2deff787-1c7d-4e9d-a1c5-7d1e56bbadf1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.promotion_tiles.field_pre_promotion_link
+  module:
+    - link
+    - promotion_tiles
+id: promotion_tiles.promotion_tiles.field_pre_promotion_link
+field_name: field_pre_promotion_link
+entity_type: promotion_tiles
+bundle: promotion_tiles
+label: 'Pre Promotion Link'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+field_type: link

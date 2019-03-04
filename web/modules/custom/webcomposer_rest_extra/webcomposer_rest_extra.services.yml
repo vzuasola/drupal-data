@@ -1,4 +1,7 @@
 services:
+  webcomposer_rest_extra.draggable_views_weight:
+    class: Drupal\webcomposer_rest_extra\DraggableViews\WeightProvider
+
   webcomposer_rest_extra.node_entity:
     class: Drupal\webcomposer_rest_extra\Normalizer\NodeEntityNormalizer
     arguments: ['@entity.manager']

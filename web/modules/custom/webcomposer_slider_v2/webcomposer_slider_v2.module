@@ -1,6 +1,7 @@
 <?php
 
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Entity\TranslatableInterface;
 
 /**
  * Form alter for webcomposer_slider_v2 section.

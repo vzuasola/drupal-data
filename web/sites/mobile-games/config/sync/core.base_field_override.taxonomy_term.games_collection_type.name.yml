@@ -1,0 +1,18 @@
+uuid: b3e86a31-94e2-47a4-a7b8-b50af6e10aa1
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.games_collection_type
+id: taxonomy_term.games_collection_type.name
+field_name: name
+entity_type: taxonomy_term
+bundle: games_collection_type
+label: Name
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

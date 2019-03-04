@@ -1,0 +1,24 @@
+title: การแจ้งเตือน
+empty: ไม่มีการแจ้งเตือนใหม่
+expired_message: 'โปรโมชั่นนี้ หมดอายุแล้ว'
+date_format: 'dd/mm/yyyy HH:MM'
+date_offset: '+7'
+dismiss_button_label: 'Dismiss all'
+dismiss_content:
+  value: "<p class=\"text-align-center\"><strong><span class=\"text-yellow\">ARE YOU SURE YOU WANT<br />\r\nTO DISMISS ALL NOTIFICATIONS?</span></strong></p>\r\n\r\n<p class=\"text-align-center\"><span class=\"text-white\">Dismissing all notifications will also<br />\r\ndecline all promotions you are eligible to</span></p>\r\n"
+  format: basic_html
+dismiss_yes: 'YES'
+dismiss_no: 'NO'
+product_label_generic: แจ้งเตือน
+product_label_owsports: 'OW Sports'
+product_label_livedealer: ดีลเลอร์สด/เกมส์/เกมส์อาเขต
+product_label_lottery: ล็อตโต้
+product_label_virtuals: เกมส์จำลอง
+cta_label_ok: ตกลง
+cta_label_accept: ยอมรับ
+cta_label_decline: ปฏิเสธ
+copied: คัดลอกไปที่คลิปบอร์ด
+product_label_alpine: Alpine
+product_label_taurus: Taurus
+cta_label_proceed: 'Yes, Proceed'
+cta_label_no: 'No, Thanks'

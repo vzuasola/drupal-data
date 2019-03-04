@@ -1,0 +1,20 @@
+uuid: 14318563-e468-4f56-b9ad-b4a7097e58d9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.client_footer_games.field_game_code
+  module:
+    - client_footer_games
+id: client_footer_games.client_footer_games.field_game_code
+field_name: field_game_code
+entity_type: client_footer_games
+bundle: client_footer_games
+label: 'Game Code'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

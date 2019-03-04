@@ -1,0 +1,69 @@
+uuid: 47225a75-d7e2-4ce7-8d2c-97b5b2e79ff0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.poker_client_promotions.poker_client_promotions.field_promotion_image
+    - field.field.poker_client_promotions.poker_client_promotions.field_publish
+    - field.field.poker_client_promotions.poker_client_promotions.field_ribbon_configuration
+    - field.field.poker_client_promotions.poker_client_promotions.field_url
+    - image.style.thumbnail
+  module:
+    - image
+    - poker_client_promotions
+id: poker_client_promotions.poker_client_promotions.default
+targetEntityType: poker_client_promotions
+bundle: poker_client_promotions
+mode: default
+content:
+  field_promotion_image:
+    weight: 3
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_publish:
+    weight: 5
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_ribbon_configuration:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_url:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  user_id: true

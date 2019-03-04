@@ -1,0 +1,9 @@
+uuid: 33073013-e601-4ad8-8a81-b8c9184c5463
+langcode: en
+status: true
+dependencies: {  }
+name: 'Game Filters 2.0'
+vid: game_filters_2_0
+description: 'Filter categories for games'
+hierarchy: 1
+weight: 0

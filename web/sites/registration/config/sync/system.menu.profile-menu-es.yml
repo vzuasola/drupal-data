@@ -1,0 +1,8 @@
+uuid: 3b5b2e84-5c57-4443-8a95-b13013ade2ba
+langcode: es
+status: true
+dependencies: {  }
+id: profile-menu-es
+label: 'Profile Menu ES'
+description: ''
+locked: false

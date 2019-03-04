@@ -1,0 +1,9 @@
+entity_types:
+  - exchange_lobby_tile_entity
+  - node
+  - announcement_entity
+  - partner_entity
+  - webcomposer_meta_entity
+  - webcomposer_slider_v2_entity
+_core:
+  default_config_hash: 4HHP96M4EvFXLlTv2x7sF5zHnLIi_Hw_ckmE76MB6r4

@@ -41,6 +41,8 @@ class HeaderForm extends FormBase {
     $this->sectionLogo($form);
     $this->sectionJoinNow($form);
     $this->sectionLogin($form);
+    $this->sectionCashier($form);
+    $this->sectionMcashier($form);
     $this->sectionBalance($form);
     $this->sectionNewtag($form);
     $this->sectionWelcome($form);
@@ -206,6 +208,92 @@ class HeaderForm extends FormBase {
   /**
    *
    */
+  private function sectionCashier(array &$form) {
+    $form['cashier_group'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Cashier'),
+      '#collapsible' => true,
+      '#group' => 'header_settings_tab',
+    ];
+
+    $form['cashier_group']['default_cashier_link'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Default Cashier Link'),
+      '#description' => $this->t('Specify a default cashier link if no one matches the mapping'),
+      '#default_value' => $this->get('default_cashier_link'),
+      '#rows' => 1,
+      '#required' => true,
+      '#translatable' => true,
+    ];
+
+    $form['cashier_group']['cashier_mapping'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Cashier Mapping'),
+      '#description' => $this->t("
+        Define a cashier mapping based on the user's currency and registered country
+        using the format.
+        <br>
+        Use upper case currency and country values (without spaces in between pipes).
+        <br>
+        <strong>currency | country | link</strong>
+        <br><br>
+        Example
+        <br>
+        CNY|CN|http://cashier.dafabet.com/
+      "),
+      '#default_value' => $this->get('cashier_mapping'),
+      '#rows' => 6,
+      '#required' => false,
+      '#translatable' => true,
+    ];
+  }
+
+  /**
+   *
+   */
+  private function sectionMcashier(array &$form) {
+    $form['mcashier_group'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Mobile Cashier'),
+      '#collapsible' => true,
+      '#group' => 'header_settings_tab',
+    ];
+
+    $form['mcashier_group']['default_mcashier_link'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Default Mobile Cashier Link'),
+      '#description' => $this->t('Specify a default Mobile cashier link if no one matches the mapping'),
+      '#default_value' => $this->get('default_mcashier_link'),
+      '#rows' => 1,
+      '#required' => true,
+      '#translatable' => true,
+    ];
+
+    $form['mcashier_group']['mcashier_mapping'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Mobile Cashier Mapping'),
+      '#description' => $this->t("
+        Define a Mobile cashier mapping based on the user's currency and registered country
+        using the format.
+        <br>
+        Use upper case currency and country values (without spaces in between pipes).
+        <br>
+        <strong>currency | country | link</strong>
+        <br><br>
+        Example
+        <br>
+        CNY|CN|http://mcashier.dafabet.com/
+      "),
+      '#default_value' => $this->get('mcashier_mapping'),
+      '#rows' => 6,
+      '#required' => false,
+      '#translatable' => true,
+    ];
+  }
+
+  /**
+   *
+   */
   private function sectionBalance(array &$form) {
     $form['balance_group'] = [
       '#type' => 'details',
@@ -309,6 +397,7 @@ class HeaderForm extends FormBase {
 
       "),
       '#default_value' => $this->get('currency_balance_mapping'),
+      '#translatable' => TRUE,
     ];
 
     $form['balance_group']['excluded_balance_mapping'] = [
@@ -458,6 +547,24 @@ class HeaderForm extends FormBase {
       '#default_value' => $this->get('lobby_page_title'),
       '#required' => TRUE,
       '#translatable' => TRUE,
+    ];
+
+    $form['header_other_group']['promotion_page_title'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Promotion Page Title.'),
+      '#description' => $this->t('Promotion Page Title.'),
+      '#default_value' => $this->get('promotion_page_title'),
+      '#required' => TRUE,
+      '#translatable' => TRUE,
+    ];
+
+    $form['header_other_group']['links_title'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Quicklinks Label'),
+      '#description' => $this->t('Quicklinks Label'),
+      '#default_value' => $this->get('links_title'),
+      '#required' => true,
+      '#translatable' => true,
     ];
   }
 }

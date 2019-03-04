@@ -43,6 +43,7 @@ class FooterForm extends FormBase {
     $this->sectionSocials($form);
     $this->sectionBackToTop($form);
     $this->sectionResponsive($form);
+    $this->sectionCookieNotification($form);
 
     return $form;
   }
@@ -155,6 +156,34 @@ class FooterForm extends FormBase {
       '#default_value' => $this->get('sponsor_mobile_desc') ?? 'Official Main Club Sponsors',
       '#required' => TRUE,
       '#translatable' => TRUE,
+    ];
+  }
+
+  /**
+   * Cookie Notification Config
+   */
+  private function sectionCookieNotification(array &$form) {
+    $form['cookie_notification_group'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Cookie Notification'),
+      '#collapsible' => true,
+      '#group' => 'advanced',
+    ];
+
+    $form['cookie_notification_group']['country_codes'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Country Code'),
+      '#description' => $this->t('Enter multiple country code separated by comma.'),
+      '#default_value' => $this->get('country_codes'),
+    ];
+
+    $defaultValue = $this->get('cookie_notification');
+    $form['cookie_notification_group']['cookie_notification'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('Notification Message'),
+      '#default_value' => $defaultValue['value'],
+      '#format' => $defaultValue['format'],
+      '#translatable' => true,
     ];
   }
 }

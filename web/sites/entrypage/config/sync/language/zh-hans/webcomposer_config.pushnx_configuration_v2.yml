@@ -1,0 +1,19 @@
+title: 通知
+empty: 没有新通知。
+expired_message: 本活动已过期。
+date_format: 'yyyy/mm/dd HH:MM'
+date_offset: '+8'
+dismiss_button_label: '清除所有'
+dismiss_content:
+  value: <p class="text-align-center"><strong><span class="text-red">您确定继续吗？</span></strong></p><p class="text-align-center">这将永久性删除所有通知，并自动拒绝奖金发放。</p><p class="text-align-center"><span class="text-12">提示！您可点击“X”选择关闭通知，并可在稍后再回看。</span></p>
+  format: basic_html
+dismiss_yes: '是'
+dismiss_no: '否'
+product_label_generic: 通知
+product_label_owsports: 'OW Sports'
+product_label_livedealer: 现场荷官/老虎机/街机
+product_label_lottery: 大發彩票
+product_label_virtuals: 虛擬運動
+cta_label_ok: 确定
+cta_label_accept: 接受
+cta_label_decline: 拒绝

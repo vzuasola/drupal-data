@@ -1,0 +1,7 @@
+gts.admin_settings:
+  path: 'admin/config/games-mobile'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Mobile Games Configurations'
+  requirements:
+    _permission: 'administer mobile config'

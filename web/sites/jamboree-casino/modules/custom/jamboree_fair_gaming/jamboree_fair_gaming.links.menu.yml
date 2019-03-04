@@ -1,0 +1,18 @@
+jamboree_fair_gaming.list:
+  title: 'Jamboree Fair Gaming Configuration'
+  description: 'List of Jambree Fair Gaming Entities'
+  parent: system.admin_config
+  route_name: jamboree_fair_gaming.admin_settings
+
+# Jamboree fair gaming entity menu items definition
+entity.jamboree_fair_gaming_entity.collection:
+  title: 'Jamboree fair gaming entity list'
+  route_name: entity.jamboree_fair_gaming_entity.collection
+  description: 'List Jamboree fair gaming entity entities'
+  parent: jamboree_fair_gaming.list
+
+jamboree_fair_gaming_entity.admin.structure.settings:
+  title: Jamboree fair gaming entity settings
+  description: 'Configure Jamboree fair gaming entity entities'
+  route_name: jamboree_fair_gaming_entity.settings
+  parent: jamboree_fair_gaming.list

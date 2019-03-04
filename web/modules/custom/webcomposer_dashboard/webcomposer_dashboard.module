@@ -6,6 +6,8 @@
  */
 
 use Drupal\Core\Url;
+use DrupalProject\custom\EnvironmentResolver;
+use Drupal\webcomposer_dashboard\Toolbar\ToolbarHandler;
 
 /**
  * Implements hook_toolbar().
@@ -22,6 +24,26 @@ function webcomposer_dashboard_toolbar() {
         'class' => ['toolbar-icon', 'toolbar-icon-webcomposer'],
       ],
     ],
+    'tray' => [
+      '#heading' => t('Webcomposer menu'),
+      'webcomposer' => [
+        '#theme' => 'item_list',
+        '#items' => [
+          'webcomposer.admin' => [
+            '#type' => 'link',
+            '#title' => t('Configuration'),
+            '#url' => Url::fromRoute('webcomposer.admin'),
+          ],
+          'webcomposer_dashboard.clear_cache' => [
+            '#lazy_builder' => [ToolbarHandler::class . ':generateToolbar', []],
+            '#create_placeholder' => TRUE,
+          ],
+        ],
+        '#attributes' => [
+          'class' => ['clearfix', 'menu', 'toolbar-items-webcomposer'],
+        ],
+      ],
+    ],
     '#attached' => [
       'library' => [
         'webcomposer_dashboard/webcomposer.toolbar',
@@ -31,4 +53,36 @@ function webcomposer_dashboard_toolbar() {
   ];
 
   return $items;
+}
+
+function webcomposer_dashboard_page_top(&$page) {
+  $env = EnvironmentResolver::getEnvironment();
+
+  if ($env === 'PRD') {
+    $message = "You are editing <strong>PRODUCTION</strong> environment";
+
+    $page['webcomposer_warning'] = [
+      '#markup' => "
+        <div class='webcomposer-status-message'>
+          $message
+        </div>
+      ",
+    ];
+  }
+}
+
+function webcomposer_dashboard_entity_operation_alter(array &$operations, \Drupal\Core\Entity\EntityInterface $entity) {
+  $langMgr = \Drupal::languageManager();
+  $lang = $langMgr->getLanguage($langMgr->getCurrentLanguage()->getId());
+
+  $route_match = \Drupal::routeMatch();
+  $current_route = $route_match->getRouteName();
+
+  // apply link update on web composer entities only (i.e., sponsors, metatags, etc.)
+  if (strpos($current_route, 'system.admin_content') <= -1) {
+    // for each operation link, language should be the same as the current language
+    foreach ($operations as $key => $value) {
+      $value['url']->setOption('language', $lang);
+    }
+  }
 }

@@ -3,11 +3,10 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.games_showcase_entity.games_showcase_entity.field_games_category
-    - field.field.games_showcase_entity.games_showcase_entity.field_home_sub_category
-    - field.field.games_showcase_entity.games_showcase_entity.field_home_tab_ribbon
+    - field.field.games_showcase_entity.games_showcase_entity.field_game_categories
     - field.field.games_showcase_entity.games_showcase_entity.field_log_in_state
     - field.field.games_showcase_entity.games_showcase_entity.field_publish_date
+    - field.field.games_showcase_entity.games_showcase_entity.field_show_in_all
     - field.field.games_showcase_entity.games_showcase_entity.field_showcase_body
     - field.field.games_showcase_entity.games_showcase_entity.field_showcase_image
     - field.field.games_showcase_entity.games_showcase_entity.field_showcase_ribbon
@@ -27,7 +26,7 @@ third_party_settings:
         - field_publish_date
         - field_unpublish_date
       parent_name: ''
-      weight: 10
+      weight: 9
       format_type: tab
       format_settings:
         label: 'Scheduler Settings'
@@ -44,20 +43,8 @@ targetEntityType: games_showcase_entity
 bundle: games_showcase_entity
 mode: default
 content:
-  field_games_category:
-    weight: 3
-    settings: {  }
-    third_party_settings: {  }
-    type: options_buttons
-    region: content
-  field_home_sub_category:
+  field_game_categories:
     weight: 4
-    settings: {  }
-    third_party_settings: {  }
-    type: options_buttons
-    region: content
-  field_home_tab_ribbon:
-    weight: 8
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -73,6 +60,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
+    region: content
+  field_show_in_all:
+    weight: 3
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
     region: content
   field_showcase_body:
     weight: 6
@@ -115,10 +109,11 @@ content:
     type: language_select
     weight: 1
     region: content
-    settings: {  }
+    settings:
+      include_locked: true
     third_party_settings: {  }
   translation:
-    weight: 9
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }

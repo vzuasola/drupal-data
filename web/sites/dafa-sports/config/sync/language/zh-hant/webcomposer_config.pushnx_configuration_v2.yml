@@ -1,0 +1,22 @@
+title: 通知
+empty: 沒有新通知。
+expired_message: 本活动已过期。
+date_format: 'yyyy/mm/dd HH:MM'
+date_offset: '+8'
+dismiss_button_label: 'Dismiss all'
+dismiss_content:
+  value: "<p class=\"text-align-center\"><strong><span class=\"text-yellow\">ARE YOU SURE YOU WANT<br />\r\nTO DISMISS ALL NOTIFICATIONS?</span></strong></p>\r\n\r\n<p class=\"text-align-center\"><span class=\"text-white\">Dismissing all notifications will also<br />\r\ndecline all promotions you are eligible to</span></p>\r\n"
+  format: basic_html
+dismiss_yes: 'YES'
+dismiss_no: 'NO'
+product_label_generic: 通知
+product_label_owsports: 'OW Sports'
+product_label_livedealer: 现场荷官/老虎机/街机
+product_label_lottery: 大發彩票
+product_label_virtuals: 虛擬運動
+cta_label_ok: 确定
+cta_label_accept: 接受
+cta_label_decline: 拒绝
+copied: '已復製到剪切板'
+cta_label_proceed: 'Yes, Proceed'
+cta_label_no: 'No, Thanks'

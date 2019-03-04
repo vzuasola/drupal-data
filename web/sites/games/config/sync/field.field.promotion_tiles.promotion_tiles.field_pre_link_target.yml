@@ -1,0 +1,23 @@
+uuid: 086791d4-715c-4dc6-b37b-21a432877fad
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.promotion_tiles.field_pre_link_target
+  module:
+    - options
+    - promotion_tiles
+id: promotion_tiles.promotion_tiles.field_pre_link_target
+field_name: field_pre_link_target
+entity_type: promotion_tiles
+bundle: promotion_tiles
+label: 'Pre Link Target'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: _top
+default_value_callback: ''
+settings: {  }
+field_type: list_string

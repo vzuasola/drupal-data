@@ -3,12 +3,15 @@ langcode: hi
 status: true
 dependencies:
   config:
+    - field.field.exchange_lobby_tile_entity.exchange_lobby_tile_entity.field_available_on_desktop
+    - field.field.exchange_lobby_tile_entity.exchange_lobby_tile_entity.field_available_on_tablet
     - field.field.exchange_lobby_tile_entity.exchange_lobby_tile_entity.field_blurb
     - field.field.exchange_lobby_tile_entity.exchange_lobby_tile_entity.field_button_link
     - field.field.exchange_lobby_tile_entity.exchange_lobby_tile_entity.field_button_link_target
     - field.field.exchange_lobby_tile_entity.exchange_lobby_tile_entity.field_button_text
     - field.field.exchange_lobby_tile_entity.exchange_lobby_tile_entity.field_disable_in_tablet
     - field.field.exchange_lobby_tile_entity.exchange_lobby_tile_entity.field_enable_game_launching
+    - field.field.exchange_lobby_tile_entity.exchange_lobby_tile_entity.field_id
     - field.field.exchange_lobby_tile_entity.exchange_lobby_tile_entity.field_log_in_state
     - field.field.exchange_lobby_tile_entity.exchange_lobby_tile_entity.field_preview_display_only
     - field.field.exchange_lobby_tile_entity.exchange_lobby_tile_entity.field_status
@@ -30,10 +33,9 @@ third_party_settings:
     group_display_statuses:
       children:
         - field_status
-        - field_disable_in_tablet
         - field_preview_display_only
       parent_name: ''
-      weight: 20
+      weight: 14
       format_type: fieldset
       format_settings:
         id: ''
@@ -41,13 +43,40 @@ third_party_settings:
         description: ''
         required_fields: true
       label: 'Display Statuses'
+    group_content_availability:
+      children:
+        - field_available_on_desktop
+        - field_available_on_tablet
+      parent_name: ''
+      weight: 15
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Content Availability'
 id: exchange_lobby_tile_entity.exchange_lobby_tile_entity.default
 targetEntityType: exchange_lobby_tile_entity
 bundle: exchange_lobby_tile_entity
 mode: default
 content:
+  field_available_on_desktop:
+    weight: 16
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_available_on_tablet:
+    weight: 17
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
   field_blurb:
-    weight: 6
+    weight: 7
     settings:
       rows: 5
       placeholder: ''
@@ -55,7 +84,7 @@ content:
     type: text_textarea
     region: content
   field_button_link:
-    weight: 8
+    weight: 9
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -63,35 +92,36 @@ content:
     type: link_default
     region: content
   field_button_link_target:
-    weight: 9
+    weight: 10
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_button_text:
-    weight: 7
+    weight: 8
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_disable_in_tablet:
-    weight: 14
+  field_enable_game_launching:
+    weight: 13
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
-  field_enable_game_launching:
-    weight: 12
+  field_id:
+    weight: 2
     settings:
-      display_label: true
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
-    type: boolean_checkbox
+    type: string_textfield
     region: content
   field_log_in_state:
-    weight: 2
+    weight: 3
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -110,7 +140,7 @@ content:
     type: options_select
     region: content
   field_tile_image:
-    weight: 3
+    weight: 4
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -118,7 +148,7 @@ content:
     type: image_image
     region: content
   field_tile_image_link:
-    weight: 4
+    weight: 5
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -126,13 +156,13 @@ content:
     type: link_default
     region: content
   field_tile_image_link_target:
-    weight: 5
+    weight: 6
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_tile_video:
-    weight: 11
+    weight: 12
     settings:
       progress_indicator: throbber
     third_party_settings: {  }
@@ -154,10 +184,11 @@ content:
       include_locked: true
     third_party_settings: {  }
   translation:
-    weight: 10
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_disable_in_tablet: true
   name: true
   user_id: true

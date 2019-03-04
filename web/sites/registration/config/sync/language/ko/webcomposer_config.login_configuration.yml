@@ -4,20 +4,25 @@ autologout_box_content:
 notification_content:
   format: basic_html
   value: "<p>활동이 없어 세션 시간이 초과되었습니다.</p>\r\n"
-lightbox_blurb: '아직 다파벳 멤버가 아니시라구요?'
+lightbox_blurb: "아직 다파벳 회원이 아니세요?\r\n"
 mobile_login_button_label: 로그인/가입
+advanced__active_tab: edit-login-form-error-messages-details
+rememberme_label: '아이디 기억하기'
+login_page_blurb: ''
+mobile_cant_login_url: '{domain:mobile}/{lang}/cant-login'
 username_placeholder: 아이디
 password_placeholder: 비밀번호
 login_bottom_label: 로그인
-error_message_blank_username: '아이디는 필수 항목입니다.'
+error_message_blank_username: '아이디가 필요합니다.'
 error_message_blank_password: '비밀번호는 필수 항목입니다.'
 error_message_blank_passname: '모든 항목을 다시 확인하시기 바랍니다.'
-error_message_invalid_passname: '아이디 혹은 비밀번호가 틀렸습니다. 다시 시도해 주세요.'
-error_message_service_not_available: '지원되지 않는 서비스입니다.'
-error_message_account_suspended: '회원님의 계정이 잠겨 있습니다. 고객상담팀에 문의해주세요'
-error_message_account_locked: '회원님의 계정이 잠겨 있습니다. 고객상담팀에 문의해주세요'
+error_message_invalid_passname: '죄송합니다. 입력하신 아이디와 비밀번호가 일치하지 않습니다. 다시 시도하십시오.'
+error_message_service_not_available: '서비스를 사용할 수 없습니다.'
+error_message_account_suspended: '로그인 시도 실패로 인해 회원님의 계정이 잠겼습니다. 고객지원팀에 문의하십시오.'
+error_message_account_locked: '로그인 시도 실패로 인해 회원님의 계정이 잠겼습니다. 고객지원팀에 문의하십시오.'
 autologout_box_title: 리마인더
 affirmative_button_text: 예
 negative_button_text: 아니오
 notification_title: 알림
 notification_window_title: '세션 타임아웃'
+mobile_login_url: '{domain:mobile}/{lang}/login[query:({credentials.params}&{tracking})]'

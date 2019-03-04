@@ -1,5 +1,4 @@
 <?php
-
 namespace Drupal\games_config\Form;
 
 use Drupal\webcomposer_config_schema\Form\FormBase;
@@ -294,7 +293,15 @@ class GamesConfigurationForm extends FormBase {
       '#group' => 'games_configuration_tab',
     );
 
-    $form['filter_group']['filter_icon'] = array(
+    $form['filter_group']['deprecated'] = array(
+      '#type' => 'details',
+      '#title' => $this->t('Deprecated'),
+      '#description' => $this->t('These are deprecated fields to support old products.'),
+      '#collapsible' => TRUE,
+      '#open' => FALSE,
+    );
+
+    $form['filter_group']['deprecated']['filter_icon'] = array(
       '#type' => 'textfield',
       '#title' => t('Game Filter Icon Text'),
       '#default_value' => $this->get('filter_icon'),
@@ -303,7 +310,7 @@ class GamesConfigurationForm extends FormBase {
       '#translatable' => true,
     );
 
-    $form['filter_group']['filter_header'] = array(
+    $form['filter_group']['deprecated']['filter_header'] = array(
       '#type' => 'textfield',
       '#title' => t('Game Filter Lightbox Header Text'),
       '#description' => t('The text to display on the header of lightbox'),
@@ -312,7 +319,7 @@ class GamesConfigurationForm extends FormBase {
       '#translatable' => true,
     );
 
-    $form['filter_group']['filter_submit'] = array(
+    $form['filter_group']['deprecated']['filter_submit'] = array(
       '#type' => 'textfield',
       '#title' => t('Game Filter Lightbox Submit Botton Text'),
       '#description' => t('The text to display on the submit botton of filter lightbox'),
@@ -321,11 +328,47 @@ class GamesConfigurationForm extends FormBase {
       '#translatable' => true,
     );
 
-    $form['filter_group']['filter_clear'] = array(
+    $form['filter_group']['deprecated']['filter_clear'] = array(
       '#type' => 'textfield',
       '#title' => t('Game Filter Lightbox Clear Botton Text'),
       '#description' => t('The text to display on clear botton of filter lightbox'),
       '#default_value' => $this->get('filter_clear'),
+      '#required' => TRUE,
+      '#translatable' => true,
+    );
+
+    $form['filter_group']['filter_header_title'] = array(
+      '#type' => 'textfield',
+      '#title' => t('Game filter header text'),
+      '#description' => t('The text to display on the header of filter section'),
+      '#default_value' => $this->get('filter_header_title'),
+      '#required' => TRUE,
+      '#translatable' => true,
+    );
+
+    $form['filter_group']['clear_filters'] = array(
+      '#type' => 'textfield',
+      '#title' => t('Game Filter clear selection button text'),
+      '#description' => t('The text to display on clear botton of filter section'),
+      '#default_value' => $this->get('clear_filters'),
+      '#required' => TRUE,
+      '#translatable' => true,
+    );
+
+    $form['filter_group']['userdata_header'] = array(
+      '#type' => 'textfield',
+      '#title' => t('Userdata Filter Header'),
+      '#default_value' => $this->get('userdata_header'),
+      '#description' => t('Header to be used for userdata filters (Recently Played, Favorites etc.)'),
+      '#required' => TRUE,
+      '#translatable' => true,
+    );
+
+    $form['filter_group']['provider_header'] = array(
+      '#type' => 'textfield',
+      '#title' => t('Provider Filter Header'),
+      '#default_value' => $this->get('provider_header'),
+      '#description' => t('Header to be used for providers filters'),
       '#required' => TRUE,
       '#translatable' => true,
     );

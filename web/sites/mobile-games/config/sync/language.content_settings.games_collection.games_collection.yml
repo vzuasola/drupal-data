@@ -1,0 +1,17 @@
+uuid: cf3ed859-3d3a-4d47-9920-ea425187c04c
+langcode: en
+status: true
+dependencies:
+  module:
+    - content_translation
+    - games_collection
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: games_collection.games_collection
+target_entity_type_id: games_collection
+target_bundle: games_collection
+default_langcode: site_default
+language_alterable: true

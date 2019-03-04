@@ -35,6 +35,8 @@ module:
   field_ui: 0
   file: 0
   filter: 0
+  games_category: 0
+  games_collection: 0
   games_config: 0
   games_page_background: 0
   games_page_loading: 0
@@ -45,6 +47,7 @@ module:
   key_value: 0
   lang_dropdown: 0
   language: 0
+  language_access: 0
   libraries: 0
   link: 0
   locale: 0
@@ -59,6 +62,7 @@ module:
   paragraphs: 0
   paragraphs_type_permissions: 0
   path: 0
+  promotion_tiles: 0
   quickedit: 0
   rdf: 0
   rest: 0
@@ -79,7 +83,9 @@ module:
   webcomposer_affilates: 0
   webcomposer_announcements: 0
   webcomposer_audit: 0
+  webcomposer_audit_export: 0
   webcomposer_avaya: 0
+  webcomposer_cache: 0
   webcomposer_config: 0
   webcomposer_config_schema: 0
   webcomposer_dashboard: 0
@@ -90,6 +96,7 @@ module:
   webcomposer_floating_banners: 0
   webcomposer_games: 0
   webcomposer_games_statuses: 0
+  webcomposer_language_access: 0
   webcomposer_language_hierarchy: 0
   webcomposer_marketing_script: 0
   webcomposer_partner: 0

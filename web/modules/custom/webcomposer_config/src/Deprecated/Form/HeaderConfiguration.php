@@ -438,6 +438,22 @@ class HeaderConfiguration extends ConfigFormBase {
       '#default_value' => $config->get('lobby_page_title'),
       '#required' => TRUE,
     ];
+
+    $form['header_other_group']['promotion_page_title'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Promotion Page Title.'),
+      '#description' => $this->t('Promotion Page Title.'),
+      '#default_value' => $config->get('promotion_page_title'),
+      '#required' => TRUE,
+    ];
+
+    $form['header_other_group']['links_title'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Quicklinks Label'),
+      '#description' => $this->t('Quicklinks Label'),
+      '#default_value' => $config->get('links_title'),
+      '#required' => true,
+    ];
   }
 
   /**

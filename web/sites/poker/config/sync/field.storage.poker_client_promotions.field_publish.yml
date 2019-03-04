@@ -1,0 +1,18 @@
+uuid: cbde5da5-9b85-4293-a18b-2aa15820afb7
+langcode: en
+status: true
+dependencies:
+  module:
+    - poker_client_promotions
+id: poker_client_promotions.field_publish
+field_name: field_publish
+entity_type: poker_client_promotions
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

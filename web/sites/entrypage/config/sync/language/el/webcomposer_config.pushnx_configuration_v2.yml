@@ -1,0 +1,19 @@
+title: Ειδοποιήσεις
+empty: 'Δεν υπάρχουν νέες ειδοποιήσεις.'
+expired_message: 'Αυτή η προσφορά έχει ήδη λήξει.'
+date_format: 'dd/mm/yyyy HH:MM'
+date_offset: '+3'
+dismiss_button_label: 'Απόρριψη Όλων'
+dismiss_content:
+  value: <p class="text-align-center"><strong><span class="text-red">Είστε σίγουροι ότι θέλετε να συνεχίσετε;</span></strong></p><p class="text-align-center">Αν το κάνετε θα διαγράψετε μόνιμα όλες τις ειδοποιήσεις.</p><p class="text-align-center"><span class="text-12"> Συμβουλή&colon; Μπορείτε να επιλέξετε να κλείσετε όλες τις ειδοποιήσεις πατώντας &quot;Χ&quot; για να τις δείτε αργότερα.</span></p>
+  format: basic_html
+dismiss_yes: 'Ναι'
+dismiss_no: 'Όχι'
+product_label_generic: Notification
+product_label_owsports: 'OW Sports'
+product_label_livedealer: 'Live Dealer/Games/Arcade'
+product_label_lottery: Lottery
+product_label_virtuals: Virtuals
+cta_label_ok: OK
+cta_label_accept: ΑΠΟΔΟΧΗ
+cta_label_decline: ΑΠΟΡΡΙΨΗ

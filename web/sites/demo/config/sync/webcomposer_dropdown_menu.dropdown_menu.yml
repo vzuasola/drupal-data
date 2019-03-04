@@ -1,0 +1,10 @@
+sort:
+  about:
+    region: content
+    weight: '-1'
+  game:
+    region: content
+    weight: '0'
+  promotion:
+    region: content
+    weight: '1'

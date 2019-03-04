@@ -29,3 +29,5 @@ build/deployed/*.jsonl
 deploy/*
 pipeline.log
 .composer-cache
+
+.vscode/

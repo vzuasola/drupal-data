@@ -2,10 +2,10 @@ field_settings:
   label: สกุลเงิน
   placeholder: สกุลเงิน
   choices: "117|หยวน(จีน)\r\n2|ดอลล่าร์(สหรัฐ)\r\n1|ยูโร\r\n3|ปอนด์\r\n102|ริงกิต(มาเลเซีย)\r\n103|บาท(ไทย)\r\n105|ดอง\r\n111|รูเปีย\r\n112|รูปี\r\n104|วอน\r\n116|รูเบิล\r\n114|โปแลนด์ "
-  portal_id_to_currency_mapping: "2|117,2,1,3,102,103,105,111,112,104,116,114\r\n3|117,2,1,3,102,103,105,111,112,104,116,114\r\n22|117,2,1,3,102,103,105,111,112,104,116,114\r\n4|117,2,1,3,102,103,105,111,112,104,116,114\r\n19|117,2,1,3,102,103,105,111,112,104,116,114\r\n6|117,2,1,3,102,103,105,111,112,104,116,114\r\n55|117,2,1,102,103,105,111,112,104\r\n5|117,2,1,3,102,103,105,111,112,104,116,114\r\n24|117\r\n8|117,2,1,3,102,103,105,111,112,104,116,114\r\n56|117,2,1,3,102,103,105,111,112,104,116\r\n66|2,112"
+  portal_id_to_currency_mapping: "2|117,2,1,3,102,103,105,111,112,104,116,114\r\n3|117,2,1,3,102,103,105,111,112,104,116,114\r\n22|117,2,1,3,102,103,105,111,112,104,116,114\r\n66|112\r\n4|117,2,1,3,102,103,105,111,112,104,116,114\r\n19|117,2,1,3,102,103,105,111,112,104,116,114\r\n6|117,2,1,3,102,103,105,111,112,104,116,114\r\n8|117,2,1,3,102,103,105,111,112,104,116,114\r\n24|117,2,1,3,102,103,105,111,112,104,116,114\r\n55|117,2,1,102,103,105,111,112,104\r\n5|117,2,1,3,102,103,105,111,112,104,116,114\r\n56|117,2,1,3,102,103,105,111,112,104,116"
 field_validations:
   required:
-    error_message: 'กรุณาเลือกสกุลเงินที่ต้องการฝากและถอน '
+    error_message: "กรุณาเลือกสกุลเงินที่คุณต้องการใช้งาน \r\n"
   alpha:
     error_message: 'Field should be Alphabet characters only'
   alphanumeric:
@@ -24,6 +24,10 @@ field_validations:
     error_message: 'Minimum requirement not met'
   max_length:
     error_message: 'Maximum requirement not met'
+  regex:
+    error_message: 'This field only accepts specific characters.'
+  valid_date:
+    error_message: 'Date is invalid'
   username_availability:
     error_message: 'Username not available'
   email_availability:
@@ -32,5 +36,5 @@ field_validations:
     error_message: 'Invalid/not allowed characters'
   valid_languages:
     error_message: 'This field only accepts specific characters.'
-  valid_date:
-    error_message: 'Date is invalid'
+  not_match_username:
+    error_message: 'Password should not equal to username'
