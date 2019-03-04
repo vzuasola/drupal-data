@@ -131,6 +131,13 @@ if (file_exists($app_root . '/' . $site_path . '/database.php')) {
 }
 
 /**
+ * Fix database deadlocks
+ */
+$databases['default']['default']['init_commands'] = [
+  'isolation' => "SET SESSION tx_isolation='READ-COMMITTED'",
+];
+
+/**
  * Check if we need to load the development configurations
  */
 $env = getenv('DRUPAL_ENV');
@@ -140,3 +147,4 @@ if ($env && $env == 'local') {
 
   $config['system.logging']['error_level'] = 'verbose';
 }
+

@@ -312,6 +312,8 @@ uat:
   only:
     - /^release-.*$/
     - tags
+  tags:
+    - stgrunner
 
 uat-mobile-stack:
   stage: deploy-staging
@@ -395,6 +397,8 @@ staging:
   only:
     - /^release-.*$/
     - tags
+  tags:
+    - stgrunner
 
 staging-mobile-stack:
   stage: deploy-staging
