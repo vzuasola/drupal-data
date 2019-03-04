@@ -18,3 +18,4 @@ text_ok: "en-US|OK\r\nzh-TW|確定\r\nel|OK\r\nid|OK\r\nhi|OK\r\nja|OK\r\nko-KR|
 text_accept: "en-US|ACCEPT\r\nzh-TW|接受\r\nel|ΑΠΟΔΟΧΗ\r\nid|TERIMA\r\nhi|ACCEPT\r\nja|承認\r\nko-KR|수락\r\npl|AKCEPTUJ\r\nru|ACCEPT\r\nzh-CN|接受\r\nth|ยอมรับ\r\nen-GB|ACCEPT\r\nvi|CHẤP NHẬN"
 text_decline: "en-US|DECLINE\r\nzh-TW|拒絕\r\nel|ΑΠΟΡΡΙΨΗ\r\nid|TOLAK\r\nhi|DECLINE\r\nja|拒否\r\nko-KR|거부\r\npl|ODRZUĆ\r\nru|DECLINE\r\nzh-CN|拒绝\r\nth|ปฏิเสธ\r\nen-GB|DECLINE\r\nvi|TỪ CHỐI"
 domain: ''
+langcode: ja

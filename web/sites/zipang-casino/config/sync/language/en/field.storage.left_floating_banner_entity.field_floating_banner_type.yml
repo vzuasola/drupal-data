@@ -1,0 +1,6 @@
+settings:
+  allowed_values:
+    -
+      label: 'Floating Banner Left'
+    -
+      label: 'Floating Banner Right'
