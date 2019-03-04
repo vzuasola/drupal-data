@@ -1,8 +1,0 @@
-settings:
-  allowed_values:
-    -
-      label: 'Facing Right, Stacked Downwards'
-    -
-      label: 'Facing Down, Stacked Downwards'
-    -
-      label: 'Facing Up, Stacked Upwards'
