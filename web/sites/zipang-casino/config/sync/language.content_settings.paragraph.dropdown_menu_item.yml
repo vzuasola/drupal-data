@@ -9,6 +9,8 @@ dependencies:
 third_party_settings:
   content_translation:
     enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
 _core:
   default_config_hash: us-mVSTHSf5OQyx_UUMfv1v8k4q3HRYqF0GpqFevHYk
 id: paragraph.dropdown_menu_item

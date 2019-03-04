@@ -6,7 +6,14 @@ dependencies:
     - field.storage.paragraph.field_dropdown_menu_icon_image
     - paragraphs.paragraphs_type.dropdown_menu_item
   module:
+    - content_translation
     - image
+third_party_settings:
+  content_translation:
+    translation_sync:
+      file: file
+      alt: '0'
+      title: '0'
 _core:
   default_config_hash: CpG66LyG3e9HmursxYAXUW7IR4AOpp3-HqmWM6H5acY
 id: paragraph.dropdown_menu_item.field_dropdown_menu_icon_image
@@ -16,7 +23,7 @@ bundle: dropdown_menu_item
 label: 'Icon Image'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
