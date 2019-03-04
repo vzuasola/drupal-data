@@ -57,6 +57,12 @@ class PushNotificationV2Form extends FormBase {
       '#group' => 'pushnx_settings_tab',
     ];
 
+    $form['layout_settings'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Layout'),
+      '#group' => 'pushnx_settings_tab',
+    ];
+
     $form['cta_settings'] = [
       '#type' => 'details',
       '#title' => $this->t('CTA Buttons'),
