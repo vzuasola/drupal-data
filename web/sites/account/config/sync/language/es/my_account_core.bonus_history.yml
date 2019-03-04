@@ -1,9 +1,0 @@
-my_account_group__active_tab: edit-bonus-history-group
-page_title: 'Active Bonuses ES'
-datetime_format: 'd/m/Y h:i A'
-zero_display: N/A
-no_result: 'You currently don''t have any bonuses for this product.'
-service_unavailable: 'Error Fetching Data'
-sportsbook_expirydate_display: N/A
-next_label: 'Next ES'
-prev_label: Prev

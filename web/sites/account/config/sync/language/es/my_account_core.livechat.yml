@@ -1,9 +1,0 @@
-livechat__active_tab: edit-field-jwt-configuration
-live_chat_text: '24/7 Livechat ES'
-live_chat_link: 'https://tct-chat.elysium-dfbt.com/c/en/mc-desktop?brand=Dafa&height=760&width=360&product=Dafabet'
-jwt_enabled: 1
-url_post: 'https://tct-chat.elysium-dfbt.com/s/jwt'
-url_post_timout: '5000'
-jwt_key: secret-jwt-key
-validity_time: '5000'
-xDomain_proxy: 'https://tct-chat.elysium-dfbt.com'
