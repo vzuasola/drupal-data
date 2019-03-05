@@ -5,6 +5,7 @@ dependencies with [Composer](https://getcomposer.org/).
 
 ## Important
 
+* [Migrate Drupal cache to Redis](docs/news/2019-03-05-redis-caching.md)
 * [New Implementation for Drupal Configuration Forms](docs/news/2018-03-28-new-config-form-implementation.md)
 
 ## Documentations

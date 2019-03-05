@@ -41,9 +41,12 @@ if (isset($_SERVER['REDIS_SERVER']) && isset($_SERVER['REDIS_SERVICE'])) {
   // cache backend module
 
   $settings['container_yamls'][] = $app_root . '/modules/contrib/redis/redis.services.yml';
-  $settings['cache']['default'] = 'cache.backend.redis';
-  $settings['cache_prefix'] = "drupal.cache.$product";
 }
+
+// if (isset($_SERVER['REDIS_SERVER']) && isset($_SERVER['REDIS_SERVICE'])) {
+//   $settings['cache']['default'] = 'cache.backend.redis';
+//   $settings['cache_prefix'] = "drupal.cache.$product";
+// }
 
 /**
  * Access control for update.php script.
