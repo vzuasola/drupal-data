@@ -8,6 +8,8 @@
 $databases = [];
 $config_directories = [];
 
+list($path, $product) = explode('/', $site_path);
+
 /**
  * Dynamic Sentinel Redis
  *
@@ -18,15 +20,33 @@ if (isset($_SERVER['REDIS_SERVER']) && isset($_SERVER['REDIS_SERVICE'])) {
   $clients = \DrupalProject\helper\Sentinel::resolve($_SERVER['REDIS_SERVER']);
   $redisService = $_SERVER['REDIS_SERVICE'];
 
+  $options = [
+    'replication' => 'sentinel',
+    'service' => $redisService,
+    'parameters' => ['database' => 1],
+  ];
+
   $settings['webcomposer_cache']['redis'] = [
     'clients' => $clients,
-      'options' => [
-          'replication' => 'sentinel',
-          'service' => $redisService,
-          'parameters' => ['database' => 1],
-      ],
+    'options' => $options,
   ];
+
+  $settings['redis.connection']['interface'] = 'Predis';
+  $settings['redis.connection']['host'] = $clients;
+  $settings['redis.connection']['options'] = $options;
+
+  // use different DB for Redis Cache
+  $settings['redis.connection']['options']['parameters']['database'] = 2;
+
+  // cache backend module
+
+  $settings['container_yamls'][] = $app_root . '/modules/contrib/redis/redis.services.yml';
 }
+
+// if (isset($_SERVER['REDIS_SERVER']) && isset($_SERVER['REDIS_SERVICE'])) {
+//   $settings['cache']['default'] = 'cache.backend.redis';
+//   $settings['cache_prefix'] = "drupal.cache.$product";
+// }
 
 /**
  * Access control for update.php script.
