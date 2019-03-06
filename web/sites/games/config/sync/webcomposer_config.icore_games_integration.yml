@@ -93,3 +93,6 @@ micro_gaming_country: "AU\r\nFR\r\nHK\r\nPH\r\nSG\r\nZA\r\nTW\r\nUS"
 flow_gaming_currency: "CNY\r\nMYR\r\nTHB\r\nUSD\r\nINR"
 flow_gaming_language_mapping: "en|en-US\r\nsc|zh-CN"
 flow_gaming_country: "AF\r\nAL\r\nDZ\r\nAO\r\nAU\r\nBS\r\nBE\r\nBW\r\nBG\r\nKH\r\nCA\r\nCZ\r\nDK\r\nEC\r\nEE\r\nET\r\nFR\r\nGH\r\nGY\r\nHK\r\nID\r\nIR\r\nIQ\r\nIL\r\nIT\r\nKW\r\nLA\r\nLV\r\nLT\r\nMX\r\nMM\r\nNA\r\nNI\r\nKP\r\nPK\r\nPA\r\nPG\r\nPT\r\nRO\r\nRS\r\nSG\r\nLK\r\nKR\r\nES\r\nSD\r\nSE\r\nSY\r\nTW\r\nTT\r\nTN\r\nUG\r\nGB\r\nUS\r\nYE\r\nZW"
+ky_gaming_currency: "RMB\r\nCNY"
+ky_gaming_language_mapping: sc|zh-CN
+ky_gaming_country: ''
