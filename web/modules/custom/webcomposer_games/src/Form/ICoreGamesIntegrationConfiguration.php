@@ -47,7 +47,7 @@ class ICoreGamesIntegrationConfiguration extends FormBase {
     'fun_gaming' => 'Fun Gaming',
     'micro_gaming' => 'Micro Gaming',
     'flow_gaming' => 'Flow Gaming',
-    'ky' => 'KY Provider'
+    'ky_gaming' => 'Kaiyuan (KY) Gaming'
   ];
 
   protected function getEditableConfigNames() {
