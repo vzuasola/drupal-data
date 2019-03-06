@@ -118,9 +118,9 @@ class PushNotificationV2Form extends FormBase {
 
     $form['connection_settings']['counter_enable'] = [
       '#type' => 'checkbox',
-      '#title' => $this->t('Enable message counter'),
+      '#title' => $this->t('Enable counter'),
       '#default_value' => $this->get('counter_enable'),
-      '#description' => $this->t('Display message counter badge.'),
+      '#description' => $this->t('Display counter badge.'),
     ];
 
     $form['connection_settings']['domain'] = [
