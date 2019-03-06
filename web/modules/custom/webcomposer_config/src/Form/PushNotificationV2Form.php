@@ -116,6 +116,13 @@ class PushNotificationV2Form extends FormBase {
       '#description' => $this->t('Enable filtering of Expired Messages.'),
     ];
 
+    $form['connection_settings']['counter_enable'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable message counter'),
+      '#default_value' => $this->get('counter_enable'),
+      '#description' => $this->t('Display message counter badge.'),
+    ];
+
     $form['connection_settings']['domain'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Domain'),
@@ -248,6 +255,73 @@ class PushNotificationV2Form extends FormBase {
       '#title' => $this->t('Date Offset'),
       '#default_value' => $this->get('date_offset'),
       '#description' => $this->t('Date Offset'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['content_settings']['counter_message'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Counter message'),
+      '#default_value' => $this->get('counter_message'),
+      '#translatable' => TRUE,
+    ];
+
+    // Layout Settings.
+    $form['layout_settings']['promotions'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Promotions tab'),
+      '#open' => TRUE,
+    ];
+
+    $form['layout_settings']['promotions']['promotions_tab_enable'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable'),
+      '#default_value' => $this->get('promotions_tab_enable'),
+    ];
+
+    $form['layout_settings']['promotions']['promotions_tab_title'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Tab title'),
+      '#default_value' => $this->get('promotions_tab_title'),
+      '#description' => $this->t('Promotion tab title'),
+      '#translatable' => TRUE,
+    ];
+
+    $promotions = $this->get('promotions_tab_empty_message');
+
+    $form['layout_settings']['promotions']['promotions_tab_empty_message'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('Empty Message'),
+      '#default_value' => $promotions['value'],
+      '#format' => $promotions['format'],
+      '#translatable' => TRUE,
+    ];
+
+    $form['layout_settings']['payments'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Payments tab'),
+    ];
+
+    $form['layout_settings']['payments']['payments_tab_enable'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable'),
+      '#default_value' => $this->get('payments_tab_enable'),
+    ];
+
+    $form['layout_settings']['payments']['payments_tab_title'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Tab title'),
+      '#default_value' => $this->get('payments_tab_title'),
+      '#description' => $this->t('Payment tab title'),
+      '#translatable' => TRUE,
+    ];
+
+    $payments = $this->get('payments_tab_empty_message');
+
+    $form['layout_settings']['payments']['payments_tab_empty_message'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('Empty Message'),
+      '#default_value' => $payments['value'],
+      '#format' => $payments['format'],
       '#translatable' => TRUE,
     ];
 
@@ -385,6 +459,7 @@ class PushNotificationV2Form extends FormBase {
       'enable',
       'disableBonusAward',
       'debug_display_all',
+      'counter_enable',
       'domain',
       'retry_count',
       'delay_count',
@@ -396,6 +471,13 @@ class PushNotificationV2Form extends FormBase {
       'copied',
       'date_format',
       'date_offset',
+      'counter_message',
+      'promotions_tab_enable',
+      'promotions_tab_title',
+      'promotions_tab_empty_message',
+      'payments_tab_enable',
+      'payments_tab_title',
+      'payments_tab_empty_message',
       'cta_button_list',
       'dismiss_button_label',
       'dismiss_content',
