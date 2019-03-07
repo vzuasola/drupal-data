@@ -1,0 +1,7 @@
+zipang_desktop_blocks.admin_settings:
+  path: 'admin/config/zipang/desktop_block'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'zipang Desktop Blocks'
+  requirements:
+    _permission: 'administer site configuration'

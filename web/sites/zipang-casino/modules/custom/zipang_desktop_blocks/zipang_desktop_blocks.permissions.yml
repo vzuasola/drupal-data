@@ -1,0 +1,22 @@
+add zipang desktop block entities:
+  title: 'Create new Zipang desktop block entities'
+
+administer zipang desktop block entities:
+  title: 'Administer Zipang desktop block entities'
+  description: 'Allow to access the administration form to configure Zipang desktop block entities.'
+  restrict access: true
+
+delete zipang desktop block entities:
+  title: 'Delete Zipang desktop block entities'
+
+edit zipang desktop block entities:
+  title: 'Edit Zipang desktop block entities'
+
+access zipang desktop block overview:
+  title: 'Access the Zipang desktop block overview page'
+
+view published zipang desktop block entities:
+  title: 'View published Zipang desktop block entities'
+
+view unpublished zipang desktop block entities:
+  title: 'View unpublished Zipang desktop block entities'
