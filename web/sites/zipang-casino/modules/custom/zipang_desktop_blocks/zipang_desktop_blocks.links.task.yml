@@ -1,0 +1,22 @@
+# Zipang desktop block routing definition
+zipang_desktop_block.settings_tab:
+  route_name: zipang_desktop_block.settings
+  title: 'Settings'
+  base_route: zipang_desktop_block.settings
+
+entity.zipang_desktop_block.canonical:
+  route_name: entity.zipang_desktop_block.canonical
+  base_route: entity.zipang_desktop_block.canonical
+  title: 'View'
+
+entity.zipang_desktop_block.edit_form:
+  route_name: entity.zipang_desktop_block.edit_form
+  base_route: entity.zipang_desktop_block.canonical
+  title: 'Edit'
+
+entity.zipang_desktop_block.delete_form:
+  route_name:  entity.zipang_desktop_block.delete_form
+  base_route:  entity.zipang_desktop_block.canonical
+  title: Delete
+  weight: 10
+
