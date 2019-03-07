@@ -63,8 +63,8 @@ class PlaytechProviderConfiguration extends FormBase {
     $form['futurama_switch'] = [
       '#type' => 'checkbox',
       '#title' => $this->t('Enable Futurama'),
-      '#description' => $this->t('This will enable futurama features. 
-      This will disable the PAS login during player login and will transfer the logic on Game launch'),
+      '#description' => $this->t('This will enable futurama features.
+       This will disable the PAS login during player login and will transfer the logic on Game launch'),
       '#default_value' => $this->get('futurama_switch'),
     ];
 
