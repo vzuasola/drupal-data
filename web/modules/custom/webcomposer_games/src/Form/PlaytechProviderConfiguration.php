@@ -58,11 +58,13 @@ class PlaytechProviderConfiguration extends FormBase {
       '#access' => !$this->isTranslated() // Hide the integration config since all fields are non translatable
     ];
 
-    // This field is temporary and will be removed once futurama has been deployed to production and all sites have done the PAS cleanup.
+    // This field is temporary
+    // Will be removed once futurama has been deployed to production and all sites have done the PAS cleanup.
     $form['futurama_switch'] = [
       '#type' => 'checkbox',
       '#title' => $this->t('Enable Futurama'),
-      '#description' => $this->t('This will enable futurama features. This will disable the PAS login during player login and will transfer the logic on Game launch'),
+      '#description' => $this->t('This will enable futurama features. 
+      This will disable the PAS login during player login and will transfer the logic on Game launch'),
       '#default_value' => $this->get('futurama_switch'),
     ];
 
@@ -107,8 +109,7 @@ class PlaytechProviderConfiguration extends FormBase {
     ];
   }
 
-  private function errorHandlingConfig(&$form)
-  {
+  private function errorHandlingConfig(&$form) {
     $form = [
       '#type' => 'details',
       '#title' => $this->t('Error Handling'),
@@ -128,5 +129,4 @@ class PlaytechProviderConfiguration extends FormBase {
       '#rows' => 10
     ];
   }
-
 }
