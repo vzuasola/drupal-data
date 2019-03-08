@@ -1,0 +1,8 @@
+uuid: 0f8bd603-a869-4086-82e0-d0fd01cd8721
+langcode: zh-hant
+status: true
+dependencies: {  }
+id: quicklinks-ch
+label: 'Quicklinks CH'
+description: ''
+locked: false
