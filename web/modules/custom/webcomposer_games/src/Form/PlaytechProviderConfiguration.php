@@ -44,31 +44,47 @@ class PlaytechProviderConfiguration extends FormBase {
       '#title' => t('Settings'),
     ];
 
-    $this->generalConfig($form);
+    $this->integrationConfig($form['integration_config']);
+    $this->errorHandlingConfig($form['error_handling_config']);
     return $form;
   }
 
-  private function generalConfig(&$form) {
+  private function integrationConfig(&$form) {
+    $form = [
+      '#type' => 'details',
+      '#title' => $this->t('Integration Settings'),
+      '#collapsible' => true,
+      '#group' => 'games_playtech_provider_form',
+      '#access' => !$this->isTranslated() // Hide the integration config since all fields are non translatable
+    ];
 
-    $form['gen_config']['javascript_assets'] = [
+    // This field is temporary
+    // Will be removed once futurama has been deployed to production and all sites have done the PAS cleanup.
+    $form['futurama_switch'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable Futurama'),
+      '#description' => $this->t('This will enable futurama features.
+       This will disable the PAS login during player login and will transfer the logic on Game launch'),
+      '#default_value' => $this->get('futurama_switch'),
+    ];
+
+    $form['javascript_assets'] = [
       '#type' => 'textarea',
       '#title' => $this->t('Javascript Assets'),
       '#description' => $this->t('Define the Playtech scripts that should be included on game launch. Provide one script per line'),
       '#default_value' => $this->get('javascript_assets'),
       '#required' => false,
-      '#translatable' => TRUE,
     ];
 
-    $form['gen_config']['playtech_pas_casino'] = [
+    $form['playtech_pas_casino'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Playtech PAS Casino'),
       '#description' => $this->t('Defines the casino value used for authenticating PAS'),
       '#default_value' => $this->get('playtech_pas_casino'),
-      '#required' => false,
-      '#translatable' => TRUE,
+      '#required' => false
     ];
 
-    $form['gen_config']['languages'] = [
+    $form['languages'] = [
       '#type' => 'textarea',
       '#title' => $this->t('Language Mapping'),
       '#description' => $this->t('Define the language mapping for Playtech games. Pipe separated language code and value, one per line.
@@ -77,11 +93,10 @@ class PlaytechProviderConfiguration extends FormBase {
           <br>
           <strong>en|en-us</strong>'),
       '#default_value' => $this->get('languages'),
-      '#required' => false,
-      '#translatable' => TRUE,
+      '#required' => false
     ];
 
-    $form['gen_config']['iapiconf_override'] = [
+    $form['iapiconf_override'] = [
       '#type' => 'textarea',
       '#title' => $this->t('iapiConf Override'),
       '#description' => $this->t('Define iapiConf to be overrided prior PAS initalization
@@ -90,9 +105,28 @@ class PlaytechProviderConfiguration extends FormBase {
           <br>
           <strong>clientUrl_casino|https://cachebanner.9bonus.com/casinoclient.html</strong>'),
       '#default_value' => $this->get('iapiconf_override'),
-      '#required' => false,
-      '#translatable' => TRUE,
+      '#required' => false
     ];
   }
 
+  private function errorHandlingConfig(&$form) {
+    $form = [
+      '#type' => 'details',
+      '#title' => $this->t('Error Handling'),
+      '#collapsible' => TRUE,
+      '#group' => 'games_playtech_provider_form'
+    ];
+
+    $form['error_mapping'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Error Mapping'),
+      '#description' => $this->t('Define error messages for corresponding PAS error codes<br/>
+          pattern: <strong>code|message</strong><br/>
+          special codes: <br/>
+           - <i>all</i>: Generic handler '),
+      '#default_value' => $this->get('error_mapping'),
+      '#translatable' => true,
+      '#rows' => 10
+    ];
+  }
 }
