@@ -1,0 +1,7 @@
+zipang_rightside_blocks.admin_settings:
+  path: 'admin/config/zipang/rightside_blocks'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'zipang Rightside Blocks'
+  requirements:
+    _permission: 'administer site configuration'
