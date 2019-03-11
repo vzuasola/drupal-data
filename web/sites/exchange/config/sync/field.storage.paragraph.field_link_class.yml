@@ -76,6 +76,12 @@ settings:
     -
       value: fbmessenger
       label: 'FB Messenger'
+    -
+      value: microgaming
+      label: 'Microgaming'
+    -
+      value: skywind
+      label: 'Sky Wind'
   allowed_values_function: ''
 module: options
 locked: false
