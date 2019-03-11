@@ -1,0 +1,23 @@
+uuid: 6cbd0bee-5c78-4ada-85e3-4b981611adfe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.zipang_rightside_block_entity.field_content_type
+  module:
+    - zipang_rightside_blocks
+    - options
+id: zipang_rightside_block_entity.zipang_rightside_block_entity.field_content_type
+field_name: field_content_type
+entity_type: zipang_rightside_block_entity
+bundle: zipang_rightside_block_entity
+label: 'Content Type'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: image
+default_value_callback: ''
+settings: {  }
+field_type: list_string
