@@ -29,6 +29,9 @@ settings:
     -
       value: flow_gaming
       label: 'Flow Gaming'
+    -
+      value: sa_gaming
+      label: 'SA Gaming'
   allowed_values_function: ''
 module: options
 locked: false
