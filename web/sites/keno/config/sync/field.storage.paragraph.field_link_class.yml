@@ -81,7 +81,7 @@ settings:
       label: 'Microgaming'
     -
       value: skywind
-      label: 'Sky Wind'
+      label: 'Skywind'
   allowed_values_function: ''
 module: options
 locked: false
