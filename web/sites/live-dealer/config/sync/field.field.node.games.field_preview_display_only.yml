@@ -1,0 +1,23 @@
+uuid: 944aef8d-6310-49f1-a00a-fdf05f37ee71
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_preview_display_only
+    - node.type.games
+id: node.games.field_preview_display_only
+field_name: field_preview_display_only
+entity_type: node
+bundle: games
+label: 'Preview Mode'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

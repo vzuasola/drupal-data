@@ -1,0 +1,226 @@
+diff --git a/README.Predis.txt b/README.Predis.txt
+index 09bbbce..4064c44 100644
+--- a/README.Predis.txt
++++ b/README.Predis.txt
+@@ -18,20 +18,25 @@ There is not much different to configure about Predis.
+ Adding this to settings.php should suffice for basic usage:
+ 
+ $settings['redis.connection']['interface'] = 'Predis';
+-$settings['redis.connection']['host']      = '1.2.3.4';  // Your Redis instance hostname.
++$settings['redis.connection']['host'] = '1.2.3.4';  // Your Redis instance hostname.
+ $settings['cache']['default'] = 'cache.backend.redis';
+ 
+ To add more magic with a primary/replica setup you can use a config like this:
+ 
+ $settings['redis.connection']['interface'] = 'Predis'; // Use predis library.
+-$settings['redis.connection']['replication'] = TRUE; // Turns on replication.
+-$settings['redis.connection']['replication.host'][1]['host'] = '1.2.3.4';  // Your Redis instance hostname.
+-$settings['redis.connection']['replication.host'][1]['port'] = '6379'; // Only required if using non-standard port.
+-$settings['redis.connection']['replication.host'][1]['role'] = 'primary'; // The redis instance role.
+-$settings['redis.connection']['replication.host'][2]['host'] = '1.2.3.5';
+-$settings['redis.connection']['replication.host'][2]['port'] = '6379';
+-$settings['redis.connection']['replication.host'][2]['role'] = 'replica';
+-$settings['redis.connection']['replication.host'][3]['host'] = '1.2.3.6';
+-$settings['redis.connection']['replication.host'][3]['port'] = '6379';
+-$settings['redis.connection']['replication.host'][3]['role'] = 'replica';
+-$settings['cache']['default'] = 'cache.backend.redis';
+\ No newline at end of file
++$settings['redis.connection']['host'] = ['tcp://10.0.0.1?alias=master', 'tcp://10.0.0.2', 'tcp://10.0.0.3'];
++$settings['redis.connection']['options'] = ['replication' => true]; // Options supported by Predis
++$settings['cache']['default'] = 'cache.backend.redis';
++
++You can supply any host and option support by Predis. For Sentinel support, you can do something like this:
++
++$settings['redis.connection']['interface'] = 'Predis'; // Use predis library.
++$settings['redis.connection']['host'] = ['tcp://10.0.0.1', 'tcp://10.0.0.2', 'tcp://10.0.0.3'];
++$settings['redis.connection']['options'] = [
++  'replication' => 'sentinel',
++  'service' => 'my-service',
++  'parameters' => [
++    'database' => 1
++  ],
++];
++$settings['cache']['default'] = 'cache.backend.redis';
+diff --git a/README.md b/README.md
+index 1648bb0..4ed9c4c 100644
+--- a/README.md
++++ b/README.md
+@@ -14,8 +14,8 @@ will need to compile the extension yourself.
+ Predis
+ ------
+ 
+-Support for the Predis PHP library is experimental, but feel free to try it out. 
+-You can install the required library using composer. Check out the README.Predis.txt file 
++Support for the Predis PHP library is experimental, but feel free to try it out.
++You can install the required library using composer. Check out the README.Predis.txt file
+ for more information.
+ 
+ Important notice
+@@ -35,22 +35,27 @@ Here is a simple yet working easy way to setup the module.
+ This method will allow Drupal to use Redis for all caches.
+ 
+     $settings['redis.connection']['interface'] = 'PhpRedis'; // Can be "Predis".
+-    $settings['redis.connection']['host']      = '1.2.3.4';  // Your Redis instance hostname.
++    $settings['redis.connection']['host'] = '1.2.3.4';  // Your Redis instance hostname.
++    $settings['cache']['default'] = 'cache.backend.redis';
++
++To use some Predis goodness, including a redis primary/replica setup you can use a config like this. You can even pass any options supported by Predis.
++
++    $settings['redis.connection']['interface'] = 'Predis'; // Use predis library.
++    $settings['redis.connection']['host'] = ['tcp://10.0.0.1?alias=master', 'tcp://10.0.0.2', 'tcp://10.0.0.3'];
++    $settings['redis.connection']['options'] = ['replication' => true]; // Options supported by Predis
+     $settings['cache']['default'] = 'cache.backend.redis';
+ 
+-To use some Predis goodness, including a redis primary/replica setup you can use a config like this.
++To use Sentinel, setup your configuration like this.
+ 
+     $settings['redis.connection']['interface'] = 'Predis'; // Use predis library.
+-    $settings['redis.connection']['replication'] = TRUE; // Turns on replication.
+-    $settings['redis.connection']['replication.host'][1]['host'] = '1.2.3.4';  // Your Redis instance hostname.
+-    $settings['redis.connection']['replication.host'][1]['port'] = '6379'; // Only required if using non-standard port.
+-    $settings['redis.connection']['replication.host'][1]['role'] = 'primary'; // The redis instance role.
+-    $settings['redis.connection']['replication.host'][2]['host'] = '1.2.3.5';
+-    $settings['redis.connection']['replication.host'][2]['port'] = '6379';
+-    $settings['redis.connection']['replication.host'][2]['role'] = 'replica';
+-    $settings['redis.connection']['replication.host'][3]['host'] = '1.2.3.6';
+-    $settings['redis.connection']['replication.host'][3]['port'] = '6379';
+-    $settings['redis.connection']['replication.host'][3]['role'] = 'replica';
++    $settings['redis.connection']['host'] = ['tcp://10.0.0.1', 'tcp://10.0.0.2', 'tcp://10.0.0.3'];
++    $settings['redis.connection']['options'] = [
++      'replication' => 'sentinel',
++      'service' => 'my-service',
++      'parameters' => [
++          'database' => 1
++      ],
++    ];
+     $settings['cache']['default'] = 'cache.backend.redis';
+ 
+ Either include the default example.services.yml from the module, which will
+@@ -200,11 +205,11 @@ Here is a complex sample:
+ 
+     // Default behavior for all bins, prefix is 'mysite_'.
+     $settings['cache_prefix']['default'] = 'mysite_';
+-  
++
+     // Set no prefix explicitely for 'cache' and 'cache_bootstrap' bins.
+     $settings['cache_prefix']['cache'] = FALSE;
+     $settings['cache_prefix']['cache_bootstrap'] = FALSE;
+-  
++
+     // Set another prefix for 'cache_menu' bin.
+     $settings['cache_prefix']['cache_menu'] = 'menumysite_';
+ 
+diff --git a/src/Client/PhpRedis.php b/src/Client/PhpRedis.php
+index 147d2c7..d036f11 100644
+--- a/src/Client/PhpRedis.php
++++ b/src/Client/PhpRedis.php
+@@ -14,7 +14,7 @@ class PhpRedis implements ClientInterface {
+   /**
+    * {@inheritdoc}
+    */
+-  public function getClient($host = NULL, $port = NULL, $base = NULL, $password = NULL) {
++  public function getClient($host = NULL, $base = NULL, $password = NULL, $options = NULL) {
+     $client = new \Redis();
+ 
+     // Sentinel mode, get the real master.
+diff --git a/src/Client/Predis.php b/src/Client/Predis.php
+index 747d73a..f317292 100644
+--- a/src/Client/Predis.php
++++ b/src/Client/Predis.php
+@@ -11,48 +11,16 @@ use Predis\Client;
+  */
+ class Predis implements ClientInterface {
+ 
+-  public function getClient($host = NULL, $port = NULL, $base = NULL, $password = NULL, $replicationHosts = NULL) {
+-    $connectionInfo = [
+-      'password' => $password,
+-      'host'     => $host,
+-      'port'     => $port,
+-      'database' => $base
+-    ];
+-
+-    foreach ($connectionInfo as $key => $value) {
+-      if (!isset($value)) {
+-        unset($connectionInfo[$key]);
+-      }
+-    }
+-
++  public function getClient($host = NULL, $base = NULL, $password = NULL, $options = NULL) {
+     // I'm not sure why but the error handler is driven crazy if timezone
+     // is not set at this point.
+     // Hopefully Drupal will restore the right one this once the current
+     // account has logged in.
+     date_default_timezone_set(@date_default_timezone_get());
+ 
+-    // If we are passed in an array of $replicationHosts, we should attempt a clustered client connection.
+-    if ($replicationHosts !== NULL) {
+-      $parameters = [];
+-
+-      foreach ($replicationHosts as $replicationHost) {
+-        // Configure master.
+-        if ($replicationHost['role'] === 'primary') {
+-          $parameters[] = 'tcp://' . $replicationHost['host'] . ':' . $replicationHost['port'] . '?alias=master';
+-        }
+-        else {
+-          $parameters[] = 'tcp://' . $replicationHost['host'] . ':' . $replicationHost['port'];
+-        }
+-      }
+-
+-      $options = ['replication' => true];
+-      $client = new Client($parameters, $options);
+-    }
+-    else {
+-      $client = new Client($connectionInfo);
+-    }
+-    return $client;
++    $client = new Client($host, $options);
+ 
++    return $client;
+   }
+ 
+   public function getName() {
+diff --git a/src/ClientFactory.php b/src/ClientFactory.php
+index cddabd9..33b4e2a 100644
+--- a/src/ClientFactory.php
++++ b/src/ClientFactory.php
+@@ -147,33 +147,17 @@ class ClientFactory {
+       $settings = Settings::get('redis.connection', []);
+       $settings += [
+         'host' => self::REDIS_DEFAULT_HOST,
+-        'port' => self::REDIS_DEFAULT_PORT,
+         'base' => self::REDIS_DEFAULT_BASE,
+         'password' => self::REDIS_DEFAULT_PASSWORD,
++        'options' => [],
+       ];
+ 
+-      // If using replication, lets create the client appropriately.
+-      if (isset($settings['replication']) && $settings['replication'] === TRUE) {
+-        foreach ($settings['replication.host'] as $key => $replicationHost) {
+-          if (!isset($replicationHost['port'])) {
+-            $settings['replication.host'][$key]['port'] = self::REDIS_DEFAULT_PORT;
+-          }
+-        }
+-
+-        self::$_client = self::getClientInterface()->getClient(
+-          $settings['host'],
+-          $settings['port'],
+-          $settings['base'],
+-          $settings['password'],
+-          $settings['replication.host']);
+-      }
+-      else {
+-        self::$_client = self::getClientInterface()->getClient(
+-          $settings['host'],
+-          $settings['port'],
+-          $settings['base'],
+-          $settings['password']);
+-      }
++      self::$_client = self::getClientInterface()->getClient(
++        $settings['host'],
++        $settings['base'],
++        $settings['password'],
++        $settings['options']
++      );
+     }
+ 
+     return self::$_client;
