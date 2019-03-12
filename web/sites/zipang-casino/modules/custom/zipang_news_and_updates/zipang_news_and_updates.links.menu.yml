@@ -1,0 +1,18 @@
+zipang_news_and_updates.list:
+  title: 'Zipang News and Updates Configuration'
+  description: 'List Zipang default entities'
+  parent: system.admin_config
+  route_name: zipang_news_and_updates.admin_settings
+
+# News and updates entity menu items definition
+entity.news_and_updates_entity.collection:
+  title: 'News and updates entity list'
+  route_name: entity.news_and_updates_entity.collection
+  description: 'List News and updates entity entities'
+  parent: zipang_news_and_updates.list
+
+news_and_updates_entity.admin.structure.settings:
+  title: News and updates entity settings
+  description: 'Configure News and updates entity entities'
+  route_name: news_and_updates_entity.settings
+  parent: zipang_news_and_updates.list
