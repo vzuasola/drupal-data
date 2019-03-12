@@ -331,6 +331,8 @@ uat-mobile-stack:
   only:
     - /^release-.*$/
     - tags
+  tags:
+    - stgrunner
 
 uat-japan-stack:
   stage: deploy-staging
@@ -416,6 +418,8 @@ staging-mobile-stack:
   only:
     - /^release-.*$/
     - tags
+  tags:
+    - stgrunner
 
 staging-japan-stack:
   stage: deploy-staging
