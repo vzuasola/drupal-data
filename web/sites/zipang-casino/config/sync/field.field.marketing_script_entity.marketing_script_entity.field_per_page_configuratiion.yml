@@ -1,0 +1,22 @@
+uuid: 2ce55ea9-db61-4903-b721-23eb8f42c266
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.marketing_script_entity.field_per_page_configuratiion
+  module:
+    - webcomposer_marketing_script
+_core:
+  default_config_hash: VlsPd5XHADs3ZTEdMOwOJAb93sod3Us85jDBjcxIEak
+id: marketing_script_entity.marketing_script_entity.field_per_page_configuratiion
+field_name: field_per_page_configuratiion
+entity_type: marketing_script_entity
+bundle: marketing_script_entity
+label: 'Per Page Configuratiion'
+description: 'Specify pages by using their paths. Enter one path per line. The ''*'' character is a wildcard. An example path is /promotion/* for every user page.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

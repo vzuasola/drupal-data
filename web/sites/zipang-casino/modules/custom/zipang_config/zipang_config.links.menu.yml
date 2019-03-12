@@ -1,0 +1,5 @@
+zipang_config.zipang_config:
+  title: 'Zipang Configuration'
+  description: Zipang Casino Configuration
+  parent: system.admin_config
+  route_name: zipang_config.admin_settings

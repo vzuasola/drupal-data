@@ -1,0 +1,29 @@
+zipang_settings_tab__active_tab: ''
+login_button_label_main: Login
+login_button_label_sub: Sub
+login_lightbox_title: Login
+login_username: 'Username JA'
+login_password: 'Password JA'
+login_remember_username: 'Remember Username JA'
+login_submit_button: Submit
+login_forgot_password: 'Forgot Password JA'
+login_forgot_password_link: /forgot-password
+login_registration: 'Registration JA'
+login_registration_link: /registration
+login_pt_casino_name: ''
+login_pt_secret_key: ''
+login_pt_getbalance_url: ''
+login_pt_cashier_url: ''
+login_pt_error_messages: ''
+login_username_required: ''
+login_password_required: ''
+login_session_time: ''
+session_timeout: ''
+change_pass_form_title: ''
+change_pass_current_password: ''
+change_pass_new_password: ''
+change_pass_confirm_new_password: ''
+change_pass_submit: ''
+change_pass_old_password_error: ''
+change_pass_new_password_error: ''
+change_pass_confirm_new_password_error: ''

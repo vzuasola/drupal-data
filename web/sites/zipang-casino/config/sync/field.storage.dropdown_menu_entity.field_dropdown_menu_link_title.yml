@@ -1,0 +1,23 @@
+uuid: 4b515a0c-5e0b-4d5d-9f46-8c2a639fe0e7
+langcode: ja
+status: true
+dependencies:
+  module:
+    - zipang_dropdown_menu
+_core:
+  default_config_hash: GYwNAT1Nq4_60pa-y2s5tgIq8XDnw4xQ7JUNVmq66k8
+id: dropdown_menu_entity.field_dropdown_menu_link_title
+field_name: field_dropdown_menu_link_title
+entity_type: dropdown_menu_entity
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

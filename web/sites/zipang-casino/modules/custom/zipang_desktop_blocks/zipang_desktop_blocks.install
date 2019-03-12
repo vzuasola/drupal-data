@@ -1,0 +1,38 @@
+<?php
+
+/**
+ * Implements hook_uninstall
+ */
+function zipang_desktop_blocks_uninstall() {
+  $keys = [
+    'core.base_field_override.zipang_desktop_block.zipang_desktop_block.metatag.yml',
+    'core.entity_form_display.zipang_desktop_block.zipang_desktop_block.default.yml',
+    'core.entity_view_display.zipang_desktop_block.zipang_desktop_block.default.yml',
+    'field.field.zipang_desktop_block.zipang_desktop_block.field_add_background.yml',
+    'field.field.zipang_desktop_block.zipang_desktop_block.field_add_border.yml',
+    'field.field.zipang_desktop_block.zipang_desktop_block.field_description.yml',
+    'field.field.zipang_desktop_block.zipang_desktop_block.field_hide_title.yml',
+    'field.field.zipang_desktop_block.zipang_desktop_block.field_image_banner.yml',
+    'field.field.zipang_desktop_block.zipang_desktop_block.field_image_banner_link.yml',
+    'field.field.zipang_desktop_block.zipang_desktop_block.field_image_banner_link_target.yml',
+    'field.field.zipang_desktop_block.zipang_desktop_block.field_log_in_state.yml',
+    'field.field.zipang_desktop_block.zipang_desktop_block.field_position.yml',
+    'field.field.zipang_desktop_block.zipang_desktop_block.field_title.yml',
+    'field.storage.zipang_desktop_block.field_add_background.yml',
+    'field.storage.zipang_desktop_block.field_add_border.yml',
+    'field.storage.zipang_desktop_block.field_description.yml',
+    'field.storage.zipang_desktop_block.field_hide_title.yml',
+    'field.storage.zipang_desktop_block.field_image_banner.yml',
+    'field.storage.zipang_desktop_block.field_image_banner_link.yml',
+    'field.storage.zipang_desktop_block.field_image_banner_link_target.yml',
+    'field.storage.zipang_desktop_block.field_log_in_state.yml',
+    'field.storage.zipang_desktop_block.field_position.yml',
+    'field.storage.zipang_desktop_block.field_title.yml',
+    'language.content_settings.zipang_desktop_block.zipang_desktop_block.yml',
+    'views.view.zipang_desktop_blocks.yml',
+  ];
+
+  foreach ($keys as $key) {
+    \Drupal::configFactory()->getEditable($key)->delete();
+  }
+}

@@ -1,0 +1,30 @@
+uuid: 379c554f-81ab-47a6-9d97-fa191e2de24f
+langcode: en
+status: true
+dependencies:
+  module:
+    - zipang_rightside_blocks
+    - options
+id: zipang_rightside_block_entity.field_log_in_state
+field_name: field_log_in_state
+entity_type: zipang_rightside_block_entity
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '0'
+      label: 'Pre Login'
+    -
+      value: '1'
+      label: 'Post Login'
+    -
+      value: '2'
+      label: Both
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

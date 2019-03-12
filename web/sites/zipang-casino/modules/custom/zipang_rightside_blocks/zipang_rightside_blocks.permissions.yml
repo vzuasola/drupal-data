@@ -1,0 +1,22 @@
+add zipang rightside block entity entities:
+  title: 'Create new Zipang rightside block entity entities'
+
+administer zipang rightside block entity entities:
+  title: 'Administer Zipang rightside block entity entities'
+  description: 'Allow to access the administration form to configure Zipang rightside block entity entities.'
+  restrict access: true
+
+delete zipang rightside block entity entities:
+  title: 'Delete Zipang rightside block entity entities'
+
+edit zipang rightside block entity entities:
+  title: 'Edit Zipang rightside block entity entities'
+
+access zipang rightside block entity overview:
+  title: 'Access the Zipang rightside block entity overview page'
+
+view published zipang rightside block entity entities:
+  title: 'View published Zipang rightside block entity entities'
+
+view unpublished zipang rightside block entity entities:
+  title: 'View unpublished Zipang rightside block entity entities'

@@ -1,0 +1,73 @@
+uuid: bbb40b46-1a80-47bf-963f-fdabaf19dd4d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.dropdown_menu_entity.dropdown_menu_entity.field_dropdown_menu_description
+    - field.field.dropdown_menu_entity.dropdown_menu_entity.field_dropdown_menu_enabled
+    - field.field.dropdown_menu_entity.dropdown_menu_entity.field_dropdown_menu_link
+    - field.field.dropdown_menu_entity.dropdown_menu_entity.field_dropdown_menu_link_title
+    - field.field.dropdown_menu_entity.dropdown_menu_entity.field_dropdown_menu_mobile_opt
+    - field.field.dropdown_menu_entity.dropdown_menu_entity.field_dropdown_submenu_items
+  module:
+    - zipang_dropdown_menu
+    - paragraphs
+id: dropdown_menu_entity.dropdown_menu_entity.default
+targetEntityType: dropdown_menu_entity
+bundle: dropdown_menu_entity
+mode: default
+content:
+  field_dropdown_menu_description:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_dropdown_menu_enabled:
+    weight: 2
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_dropdown_menu_link:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_dropdown_menu_link_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_dropdown_menu_mobile_opt:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_dropdown_submenu_items:
+    type: entity_reference_paragraphs
+    weight: 5
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+hidden:
+  langcode: true
+  name: true
+  translation: true
+  user_id: true

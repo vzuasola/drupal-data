@@ -1,0 +1,9 @@
+uuid: ba335579-e3e6-4f19-9743-f13690ea3bbc
+langcode: ja
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: RuQXNPGKv_XUsQh2t6tCo6IVWJAd5KOsyj5-8ueqqjQ
+id: domain_management_configuration
+label: 'Domain Management Configuration'
+behavior_plugins: {  }

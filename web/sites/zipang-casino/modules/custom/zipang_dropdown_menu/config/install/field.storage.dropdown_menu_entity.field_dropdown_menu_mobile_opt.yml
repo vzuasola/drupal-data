@@ -1,0 +1,30 @@
+uuid: db5b34f3-8d65-42cc-bd4b-b8169409cb2b
+langcode: en
+status: true
+dependencies:
+  module:
+    - zipang_dropdown_menu
+    - options
+id: dropdown_menu_entity.field_dropdown_menu_mobile_opt
+field_name: field_dropdown_menu_mobile_opt
+entity_type: dropdown_menu_entity
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: desktop
+      label: 'Show menu on Desktop'
+    -
+      value: mobile
+      label: 'Show menu on Mobile'
+    -
+      value: both
+      label: 'Show menu on both Desktop and Mobile'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

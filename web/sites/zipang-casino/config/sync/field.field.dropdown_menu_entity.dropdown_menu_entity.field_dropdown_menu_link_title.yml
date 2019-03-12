@@ -1,0 +1,22 @@
+uuid: b8ce2fe7-50c5-4c1b-a38d-143cb2f6c501
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.dropdown_menu_entity.field_dropdown_menu_link_title
+  module:
+    - zipang_dropdown_menu
+_core:
+  default_config_hash: qL-l-vRmpw2Ncnlvyg6JHjp2Ud00S1VFVbwIZ9Vlkk4
+id: dropdown_menu_entity.dropdown_menu_entity.field_dropdown_menu_link_title
+field_name: field_dropdown_menu_link_title
+entity_type: dropdown_menu_entity
+bundle: dropdown_menu_entity
+label: 'Menu Link Title'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

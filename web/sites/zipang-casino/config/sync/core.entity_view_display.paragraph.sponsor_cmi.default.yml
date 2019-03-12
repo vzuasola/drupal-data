@@ -1,0 +1,44 @@
+uuid: c5e3c676-2791-4a63-abbe-2cb69e923569
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.sponsor_cmi.field_sponsor_cmi_link
+    - field.field.paragraph.sponsor_cmi.field_sponsor_cmi_link_target
+    - field.field.paragraph.sponsor_cmi.field_sponsor_cmi_logo
+    - paragraphs.paragraphs_type.sponsor_cmi
+  module:
+    - image
+    - options
+_core:
+  default_config_hash: C-T2Ug4u8m5SjUOXVFsb2-AbEFCZjOhf-94jEulkV6M
+id: paragraph.sponsor_cmi.default
+targetEntityType: paragraph
+bundle: sponsor_cmi
+mode: default
+content:
+  field_sponsor_cmi_link:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_sponsor_cmi_link_target:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_sponsor_cmi_logo:
+    weight: 2
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden: {  }

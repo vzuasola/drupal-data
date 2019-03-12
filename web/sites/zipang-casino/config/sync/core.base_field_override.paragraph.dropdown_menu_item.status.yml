@@ -1,0 +1,24 @@
+uuid: 27aa04cb-9c30-4a10-92f5-ed8994e3c279
+langcode: ja
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.dropdown_menu_item
+_core:
+  default_config_hash: NtE0P3cIAxkQjFu4tK8g9TUwZeMkFH1mS4cMOxy6Kf0
+id: paragraph.dropdown_menu_item.status
+field_name: status
+entity_type: paragraph
+bundle: dropdown_menu_item
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

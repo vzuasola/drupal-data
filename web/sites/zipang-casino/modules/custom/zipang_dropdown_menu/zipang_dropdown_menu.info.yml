@@ -1,0 +1,5 @@
+name: Zipang Dropdown Menu
+type: module
+description: Main Menu for Zipang Casino site
+core: 8.x
+package: Zipang

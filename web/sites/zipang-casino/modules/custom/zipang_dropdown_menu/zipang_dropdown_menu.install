@@ -1,0 +1,38 @@
+<?php
+
+/**
+ * Implements hook_uninstall
+ */
+function zipang_dropdown_menu_uninstall() {
+  $keys = [
+    'core.base_field_override.dropdown_menu_entity.dropdown_menu_entity.metatag.yml',
+    'core.base_field_override.dropdown_menu_entity.dropdown_menu_entity.user_id.yml',
+    'core.base_field_override.paragraph.dropdown_menu_item.created.yml',
+    'core.base_field_override.paragraph.dropdown_menu_item.status.yml',
+    'core.base_field_override.paragraph.dropdown_menu_item.uid.yml',
+    'core.entity_form_display.dropdown_menu_entity.dropdown_menu_entity.default.yml',
+    'core.entity_form_display.paragraph.dropdown_menu_item.default.yml',
+    'core.entity_view_display.dropdown_menu_entity.dropdown_menu_entity.default.yml',
+    'core.entity_view_display.paragraph.dropdown_menu_item.default.yml',
+    'field.field.dropdown_menu_entity.dropdown_menu_entity.field_dropdown_submenu_items.yml',
+    'field.storage.dropdown_menu_entity.field_dropdown_submenu_items.yml',
+    'language.content_settings.dropdown_menu_entity.dropdown_menu_entity.yml',
+    'language.content_settings.paragraph.dropdown_menu_item.yml',
+    'paragraphs.paragraphs_type.dropdown_menu_item.yml',
+    'views.view.dropdown_menu.yml',
+    'core.entity_form_display.content_block_entity.content_block_entity.default.yml',
+    'core.entity_form_display.dropdown_menu_entity.dropdown_menu_entity.default.yml',
+    'core.entity_form_display.paragraph.dropdown_menu_item.default.yml',
+    'core.entity_view_display.content_block_entity.content_block_entity.default.yml',
+    'core.entity_view_display.dropdown_menu_entity.dropdown_menu_entity.default.yml',
+    'core.entity_view_display.paragraph.dropdown_menu_item.default.yml',
+  ];
+
+  foreach ($keys as $key) {
+    \Drupal::configFactory()->getEditable($key)->delete();
+  }
+}
+
+
+
+    

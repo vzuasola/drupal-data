@@ -1,0 +1,20 @@
+uuid: 6297a3b8-bba6-4870-b7ae-6422a54e64f0
+langcode: en
+status: true
+dependencies:
+  module:
+    - zipang_news_and_updates
+id: news_and_updates_entity.news_and_updates_entity.user_id
+field_name: user_id
+entity_type: news_and_updates_entity
+bundle: news_and_updates_entity
+label: 'Authored by'
+description: 'The user ID of author of the News and updates entity entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

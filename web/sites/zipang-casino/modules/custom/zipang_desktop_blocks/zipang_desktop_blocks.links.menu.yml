@@ -1,0 +1,18 @@
+zipang_desktop_blocks.list:
+  title: 'Zipang Desktop Block Configuration'
+  description: 'List zipang desktop blocks entities'
+  parent: system.admin_config
+  route_name: zipang_desktop_blocks.admin_settings
+
+# Zipang desktop block menu items definition
+entity.zipang_desktop_block.collection:
+  title: 'Zipang desktop block entity list'
+  route_name: entity.zipang_desktop_block.collection
+  description: 'List Zipang desktop block entities'
+  parent: zipang_desktop_blocks.list
+
+zipang_desktop_block.admin.structure.settings:
+  title: Zipang desktop block entity settings
+  description: 'Configure Zipang desktop block entities'
+  route_name: zipang_desktop_block.settings
+  parent: zipang_desktop_blocks.list

@@ -1,0 +1,17 @@
+uuid: 541c1a8e-979f-4cb7-bf58-98f852365d6c
+langcode: ja
+status: true
+dependencies:
+  module:
+    - webcomposer_language_hierarchy
+third_party_settings:
+  webcomposer_language_hierarchy:
+    webcomposer_fallback_langcode: ''
+    webcomposer_language_custom_label: 'English (Asia)'
+_core:
+  default_config_hash: lBXDpdDPXQtrfTJQhr6MjRJJEEyYSoRJ0acdvHLsWeA
+id: en
+label: 'English (Asia)'
+direction: ltr
+weight: -10
+locked: false
