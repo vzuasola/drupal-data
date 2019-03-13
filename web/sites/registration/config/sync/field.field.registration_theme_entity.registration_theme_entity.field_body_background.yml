@@ -15,7 +15,10 @@ label: 'Body Background'
 description: ''
 required: false
 translatable: true
-default_value: {  }
+default_value:
+  -
+    color: '#ffffff'
+    opacity: null
 default_value_callback: ''
 settings:
   opacity: 0
