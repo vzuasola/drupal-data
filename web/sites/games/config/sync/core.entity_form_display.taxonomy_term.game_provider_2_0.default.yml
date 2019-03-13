@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.taxonomy_term.game_provider_2_0.field_product_type
     - field.field.taxonomy_term.game_provider_2_0.field_v2_game_provider_key
     - taxonomy.vocabulary.game_provider_2_0
 id: taxonomy_term.game_provider_2_0.default
@@ -10,6 +11,14 @@ targetEntityType: taxonomy_term
 bundle: game_provider_2_0
 mode: default
 content:
+  field_product_type:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_v2_game_provider_key:
     weight: 1
     settings:
@@ -20,7 +29,7 @@ content:
     region: content
   langcode:
     type: language_select
-    weight: 2
+    weight: 3
     region: content
     settings:
       include_locked: true

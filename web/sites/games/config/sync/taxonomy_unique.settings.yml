@@ -24,3 +24,7 @@ games_collection_type: 1
 games_collection_type_message: 'Term @term already exists in vocabulary @vocabulary.'
 game_subprovider: 0
 game_subprovider_message: 'Term @term already exists in vocabulary @vocabulary.'
+games_es_test: 0
+games_es_test_message: 'Term @term already exists in vocabulary @vocabulary.'
+games_pt_test: 0
+games_pt_test_message: 'Term @term already exists in vocabulary @vocabulary.'
