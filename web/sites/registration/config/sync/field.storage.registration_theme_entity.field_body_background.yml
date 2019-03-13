@@ -1,0 +1,20 @@
+uuid: 3b6bb311-a184-49a3-b6c8-67be50353afb
+langcode: en
+status: true
+dependencies:
+  module:
+    - color_field
+    - registration_theme
+id: registration_theme_entity.field_body_background
+field_name: field_body_background
+entity_type: registration_theme_entity
+type: color_field_type
+settings:
+  format: '#HEXHEX'
+module: color_field
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
