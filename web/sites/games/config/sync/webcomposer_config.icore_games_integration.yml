@@ -21,7 +21,7 @@ fallback_error_button: ''
 video_racing_currency: ''
 video_racing_language_mapping: ''
 game_provider_mapping: "playtech|Playtech\r\ngold_deluxe|Gold Deluxe\r\nskywind|Skywind\r\nvoidbridge|Voidbridge\r\nsa_gaming|SA Gaming\r\nasia_gaming|Asia Gaming"
-sa_gaming_currency: "EUR\r\nUSD\r\nCNY\r\nMYR\r\nTHB\r\nVND\r\nIDR\r\nRMB\r\nINR\r\nRUB"
+sa_gaming_currency: "USD \r\nCNY\r\nRMB\r\nEUR \r\nVND\r\nMYR\r\nIDR\r\nGBP\r\nTHB\r\nINR\r\nRUB\r\nPLN\r\nKRW"
 sa_gaming_language_mapping: "en|en-US\r\nsc|zh-CN\r\nch|zh-TW\r\nid|id\r\njp|ja\r\nth|th\r\nvn|vi"
 safari_notif_message:
   value: "<p class=\"mb-0\">Need help in launching our games?<a class=\"btn-yellow btn-small ml-5\" href=\"{domain:entry}/{domain:lang_token}/games/safari-notification\">Click Here</a><a class=\"btn-close\" href=\"#\" id=\"safari-notif-close\">close</a></p>\r\n"
@@ -36,8 +36,8 @@ evo_gaming_currency: ''
 evo_gaming_language_mapping: ''
 ebet_currency: ''
 ebet_language_mapping: ''
-asia_gaming_currency: "RMB\r\nCNY"
-asia_gaming_language_mapping: sc|zh-CN
+asia_gaming_currency: "CNY\r\nRMB\r\nKRW\r\nMYR\r\nUSD\r\nTHB\r\nIDR\r\nVND\r\nEUR\r\nINR\r\nGBP\r\nBRL\r\nJPY\r\nAUD\r\nMMK"
+asia_gaming_language_mapping: "en|en-US\r\nsc|zh-CN\r\nth|th\r\nkr|ko\r\nvn|vi\r\nid|id\r\npt|prt"
 cq9_currency: "RMB\r\nEUR\r\nUSD\r\nGBP\r\nCNY\r\nMYR\r\nTHB\r\nINR\r\nKRW\r\nVND\r\nIDR"
 cq9_language_mapping: "en|en-US\r\nsc|zh-CN\r\nth|th\r\nkr|ko-KR\r\nvn|vi\r\nid|id"
 solid_gaming_currency: "RMB\r\nEUR\r\nUSD\r\nCNY\r\nMYR\r\nTHB\r\nVND\r\nIDR\r\nINR\r\nKRW"
