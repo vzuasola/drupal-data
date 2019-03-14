@@ -485,6 +485,13 @@ class GeneralConfiguration extends FormBase {
       '#default_value' => $this->get('enable_tripwire_popup'),
       '#translatable' => TRUE,
     ];
+    $form['tripwire_popup']['tripwire_popup_show_limit'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Show Limit'),
+      '#description' => $this->t('Number of times popup will show'),
+      '#default_value' => $this->get('tripwire_popup_show_limit') ?? 2,
+      '#translatable' => FALSE,
+    ];
     $content = $this->get('tripwire_popup_content');
     $form['tripwire_popup']['tripwire_popup_content'] = [
       '#type' => 'text_format',
