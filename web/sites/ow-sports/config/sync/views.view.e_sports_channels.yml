@@ -175,7 +175,7 @@ display:
     position: 2
     display_options:
       display_extenders: {  }
-      path: admin/structure/e_sports_channel_entity
+      path: admin/config/owsports/e_sports_channel_entity
       style:
         type: table
         options:
