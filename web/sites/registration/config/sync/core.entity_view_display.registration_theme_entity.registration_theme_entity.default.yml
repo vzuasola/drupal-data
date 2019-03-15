@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.field.registration_theme_entity.registration_theme_entity.field_application
     - field.field.registration_theme_entity.registration_theme_entity.field_asterisk_color
-    - field.field.registration_theme_entity.registration_theme_entity.field_background_color
     - field.field.registration_theme_entity.registration_theme_entity.field_background_image
     - field.field.registration_theme_entity.registration_theme_entity.field_banner_font_color
     - field.field.registration_theme_entity.registration_theme_entity.field_banner_highlight
@@ -50,15 +49,6 @@ content:
     third_party_settings: {  }
   field_asterisk_color:
     weight: 16
-    label: above
-    settings:
-      format: hex
-      opacity: '1'
-    third_party_settings: {  }
-    type: color_field_formatter_text
-    region: content
-  field_background_color:
-    weight: 4
     label: above
     settings:
       format: hex
