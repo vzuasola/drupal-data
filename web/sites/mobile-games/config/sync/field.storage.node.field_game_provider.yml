@@ -35,6 +35,9 @@ settings:
     -
       value: pg_soft
       label: PGSoft
+    -
+      value: asia_gaming
+      label: 'Asia Gaming'
   allowed_values_function: ''
 module: options
 locked: false
