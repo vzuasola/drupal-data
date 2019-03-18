@@ -99,3 +99,8 @@ $sites['mobile-casino.drupal.env'] = 'mobile-casino';
 $sites['poker.drupal.local'] = 'poker';
 $sites['poker.drupal.dev'] = 'poker';
 $sites['poker.drupal.env'] = 'poker';
+
+// Dafa Ghana revamp instance
+$sites['dafa-ghana.drupal.local'] = 'dafa-ghana';
+$sites['dafa-ghana.drupal.dev'] = 'dafa-ghana';
+$sites['dafa-ghana.drupal.env'] = 'dafa-ghana';
