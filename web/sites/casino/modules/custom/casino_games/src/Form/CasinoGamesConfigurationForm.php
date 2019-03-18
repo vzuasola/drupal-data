@@ -262,11 +262,11 @@ class CasinoGamesConfigurationForm extends FormBase {
       '#required' => TRUE,
       '#translatable' => TRUE
     ];
-    $pasLightboxGroupTitle = $this->t('PAS Error (Lightbox)');
+    $pasLightboxGroupTitle = $this->t('[deprecated] PAS Error (Lightbox)');
     $form['lightbox_group']['pas'] = [
         '#type' => 'details',
         '#title' => $pasLightboxGroupTitle,
-        '#open' => TRUE,
+        '#open' => false,
         '#description' => '<p>This lightbox will appear if pas authentication failed on game launch.</p>'
     ];
     $form['lightbox_group']['pas']['pas_error_lightbox_title'] = [
