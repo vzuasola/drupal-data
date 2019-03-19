@@ -1,0 +1,47 @@
+uuid: 7f7b5f15-8d9f-40e2-b7ee-2f4fd5b64022
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.left_floating_banner_entity.field_image
+  module:
+    - content_translation
+    - image
+    - webcomposer_floating_banners
+third_party_settings:
+  content_translation:
+    translation_sync:
+      alt: alt
+      title: title
+      file: '0'
+_core:
+  default_config_hash: nPUanhcj0GxWT_mPiPyySRT3opyEYI3-bH_KYZbqqu0
+id: left_floating_banner_entity.left_floating_banner_entity.field_image
+field_name: field_image
+entity_type: left_floating_banner_entity
+bundle: left_floating_banner_entity
+label: Image
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

@@ -1,0 +1,7 @@
+zipang_config.admin_settings:
+  path: 'admin/config/zipang'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Zipang Configuration'
+  requirements:
+    _permission: 'administer site configuration'

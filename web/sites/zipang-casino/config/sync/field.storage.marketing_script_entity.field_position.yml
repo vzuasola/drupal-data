@@ -1,0 +1,29 @@
+uuid: fb66a5a8-e13b-4dec-9b87-2a24bf985a32
+langcode: ja
+status: true
+dependencies:
+  module:
+    - options
+    - webcomposer_marketing_script
+_core:
+  default_config_hash: rKA0XapXOSZ6-7RljuIUTfAU2SG2qMdBryXtddBNo8Q
+id: marketing_script_entity.field_position
+field_name: field_position
+entity_type: marketing_script_entity
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: header
+      label: Header
+    -
+      value: footer
+      label: Footer
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

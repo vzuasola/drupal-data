@@ -1,0 +1,22 @@
+{#
+/**
+ * @file zipang_desktop_block.html.twig
+ * Default theme implementation to present Zipang desktop block data.
+ *
+ * This template is used when viewing Zipang desktop block pages.
+ *
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_zipang_desktop_block()
+ *
+ * @ingroup themeable
+ */
+#}
+<div{{ attributes.addClass('zipang_desktop_block') }}>
+  {% if content %}
+    {{- content -}}
+  {% endif %}
+</div>

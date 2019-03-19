@@ -1,0 +1,57 @@
+uuid: 8147dbe8-9062-4c84-be01-80fdb7f464ff
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.domain.field_add_placeholder
+    - field.field.taxonomy_term.domain.field_select_domain_group
+    - taxonomy.vocabulary.domain
+  module:
+    - paragraphs
+_core:
+  default_config_hash: UefWlOEAmGD5PDQimGMB5elM5bTW_WWKGF6iilVSmfw
+id: taxonomy_term.domain.default
+targetEntityType: taxonomy_term
+bundle: domain
+mode: default
+content:
+  field_add_placeholder:
+    weight: 2
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: domain_management_configuration
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+    region: content
+  field_select_domain_group:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  langcode:
+    type: language_select
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true

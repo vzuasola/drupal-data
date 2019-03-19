@@ -1,0 +1,18 @@
+zipang_dropdown_menu.list:
+  title: 'Zipang Dropdown menu Configuration'
+  description: 'List Dropdown Menu entities'
+  parent: system.admin_config
+  route_name: zipang_dropdown_menu.admin_settings
+
+# Default entity menu items definition
+entity.dropdown_menu_entity.collection:
+  title: 'Dropdown Menu List'
+  route_name: entity.dropdown_menu_entity.collection
+  description: 'List Dropdown menu entity entities'
+  parent: zipang_dropdown_menu.list
+
+zipang_dropdown_menu.admin.structure.settings:
+  title: Dropdown Menu Entity Settings
+  description: 'Configure Dropdown entity entities'
+  route_name: dropdown_menu_entity.settings
+  parent: zipang_dropdown_menu.list

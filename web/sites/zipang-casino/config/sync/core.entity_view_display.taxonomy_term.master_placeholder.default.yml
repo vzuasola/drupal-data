@@ -1,0 +1,35 @@
+uuid: 8ac9bbf7-e242-483e-bc8b-52f0ec8c9b62
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.master_placeholder.field_add_master_placeholder
+    - taxonomy.vocabulary.master_placeholder
+  module:
+    - entity_reference_revisions
+    - text
+_core:
+  default_config_hash: W3HxO6hKC4v6RwRRD4avnvgn6GwceYGc1U-xqpBpnl0
+id: taxonomy_term.master_placeholder.default
+targetEntityType: taxonomy_term
+bundle: master_placeholder
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_add_master_placeholder:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

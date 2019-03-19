@@ -1,0 +1,20 @@
+uuid: f6dd650d-b62b-4ab0-a47a-76e60a8ecb6e
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime
+    - zipang_news_and_updates
+id: news_and_updates_entity.field_authored_date
+field_name: field_authored_date
+entity_type: news_and_updates_entity
+type: datetime
+settings:
+  datetime_type: datetime
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

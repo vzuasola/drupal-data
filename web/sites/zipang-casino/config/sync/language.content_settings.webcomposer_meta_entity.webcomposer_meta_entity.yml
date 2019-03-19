@@ -1,0 +1,19 @@
+uuid: ca29c430-cf6f-4738-bd64-f77cfdb60be8
+langcode: ja
+status: true
+dependencies:
+  module:
+    - content_translation
+    - webcomposer_seo
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+_core:
+  default_config_hash: 6dXRHpX68D0k5jIAwWOtfpME-kJ3nRoDqpTaEt7Dtfc
+id: webcomposer_meta_entity.webcomposer_meta_entity
+target_entity_type_id: webcomposer_meta_entity
+target_bundle: webcomposer_meta_entity
+default_langcode: site_default
+language_alterable: true

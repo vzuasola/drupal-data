@@ -1,0 +1,18 @@
+uuid: 01d872bb-7b76-4684-91ca-a185ce8e9000
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.basic_page_type_2
+id: node.basic_page_type_2.created
+field_name: created
+entity_type: node
+bundle: basic_page_type_2
+label: 'Authored on'
+description: 'The time that the node was created.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

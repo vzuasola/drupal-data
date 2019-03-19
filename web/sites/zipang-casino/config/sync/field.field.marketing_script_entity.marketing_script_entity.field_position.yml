@@ -1,0 +1,25 @@
+uuid: 18406e01-abbe-4527-acfb-797d5336c5d3
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.marketing_script_entity.field_position
+  module:
+    - options
+    - webcomposer_marketing_script
+_core:
+  default_config_hash: hI7-Z61L-1YeO5me1h1bK4N9tUMUV0hwXi3LThxyiS0
+id: marketing_script_entity.marketing_script_entity.field_position
+field_name: field_position
+entity_type: marketing_script_entity
+bundle: marketing_script_entity
+label: Position
+description: 'The position of the entry. Footer is recommended for most assets.'
+required: true
+translatable: true
+default_value:
+  -
+    value: footer
+default_value_callback: ''
+settings: {  }
+field_type: list_string
