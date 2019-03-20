@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * Implements hook_uninstall
+ */
+function webcomposer_slider_uninstall() {
+  $keys = [
+    'core.base_field_override.quick_links_entity.quick_links_entity.metatag',
+    'core.entity_form_display.quick_links_entity.quick_links_entity.default',
+    'core.entity_view_display.quick_links_entity.quick_links_entity.default',
+    'field.field.quick_links_entity.quick_links_entity.field_link',
+    'field.field.quick_links_entity.quick_links_entity.field_link_text',
+    'field.storage.quick_links_entity.field_link',
+    'field.storage.quick_links_entity.field_link_text',
+    'language.content_settings.quick_links_entity.quick_links_entity',
+    'views.view.quick_links_entity_api',
+  ];
+
+  foreach ($keys as $key) {
+    \Drupal::configFactory()->getEditable($key)->delete();
+  }
+}

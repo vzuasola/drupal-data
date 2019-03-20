@@ -1,0 +1,40 @@
+uuid: 69448ee6-c440-47d3-8723-2e70fcf1661b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.quick_links_entity.quick_links_entity.field_link
+    - field.field.quick_links_entity.quick_links_entity.field_link_text
+  module:
+    - ghana_quick_links
+id: quick_links_entity.quick_links_entity.default
+targetEntityType: quick_links_entity
+bundle: quick_links_entity
+mode: default
+content:
+  field_link:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_link_text:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  langcode:
+    type: language_select
+    weight: 0
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+hidden:
+  name: true
+  user_id: true

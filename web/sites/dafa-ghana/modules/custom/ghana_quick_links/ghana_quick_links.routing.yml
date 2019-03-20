@@ -1,0 +1,7 @@
+ghana_quick_links.admin_settings:
+  path: 'admin/config/Ghana/ghana_quick_links'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Ghana Quick Links'
+  requirements:
+    _permission: 'administer site configuration'

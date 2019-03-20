@@ -1,0 +1,5 @@
+entity.quick_links_entity.add_form:
+  route_name: entity.quick_links_entity.add_form
+  title: 'Add Quick links entity'
+  appears_on:
+    - entity.quick_links_entity.collection

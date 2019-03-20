@@ -96,6 +96,7 @@ module:
   pathauto: 1
   views: 10
   config_installer: 1000
+  ghana_quick_links: 0
 theme:
   stable: 0
   classy: 0

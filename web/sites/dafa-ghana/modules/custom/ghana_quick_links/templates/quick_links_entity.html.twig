@@ -1,0 +1,22 @@
+{#
+/**
+ * @file quick_links_entity.html.twig
+ * Default theme implementation to present Quick links entity data.
+ *
+ * This template is used when viewing Quick links entity pages.
+ *
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_quick_links_entity()
+ *
+ * @ingroup themeable
+ */
+#}
+<div{{ attributes.addClass('quick_links_entity') }}>
+  {% if content %}
+    {{- content -}}
+  {% endif %}
+</div>

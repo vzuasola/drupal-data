@@ -1,0 +1,22 @@
+add quick links entity entities:
+  title: 'Create new Quick links entity entities'
+
+administer quick links entity entities:
+  title: 'Administer Quick links entity entities'
+  description: 'Allow to access the administration form to configure Quick links entity entities.'
+  restrict access: true
+
+delete quick links entity entities:
+  title: 'Delete Quick links entity entities'
+
+edit quick links entity entities:
+  title: 'Edit Quick links entity entities'
+
+access quick links entity overview:
+  title: 'Access the Quick links entity overview page'
+
+view published quick links entity entities:
+  title: 'View published Quick links entity entities'
+
+view unpublished quick links entity entities:
+  title: 'View unpublished Quick links entity entities'
