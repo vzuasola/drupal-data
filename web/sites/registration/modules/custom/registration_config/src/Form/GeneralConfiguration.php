@@ -190,6 +190,13 @@ class GeneralConfiguration extends FormBase {
         'if unchecked'),
       '#default_value' => $this->get('enable_futurama_authentication_casino'),
     ];
+    $form['integration']['enable_futurama_native_app'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable Futarama Native App authentication'),
+      '#description' => $this->t('This will enable futurama authentication for Native App and will use that legacy ' .
+        'if unchecked'),
+      '#default_value' => $this->get('enable_futurama_native_app'),
+    ];
   }
 
   /**
