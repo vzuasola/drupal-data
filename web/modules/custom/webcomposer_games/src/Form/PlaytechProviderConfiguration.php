@@ -140,7 +140,11 @@ class PlaytechProviderConfiguration extends FormBase {
     $form['error_button'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Button text'),
-      '#description' => $this->t('Button Text and link. <br/>Sample value: Ok|www.dafabet.com <br/>Empty 2nd part of | or |#close will close the lightbox. <br/>"|#reload" will reload the current page.<br/>Leave empty for no button'),
+      '#description' => $this->t('Button Text and link.
+      <br/>Sample value: Ok|www.dafabet.com
+      <br/>Empty 2nd part of | or |#close will close the lightbox.
+      <br/>"|#reload" will reload the current page.
+      <br/>Leave empty for no button'),
       '#default_value' => $this->get('error_button'),
       '#translatable' => true
     ];
