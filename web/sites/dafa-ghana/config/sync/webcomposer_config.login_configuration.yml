@@ -4,23 +4,30 @@ login_bottom_label: Login
 error_message_blank_username: 'Username is required.'
 error_message_blank_password: 'Password is required.'
 error_message_blank_passname: 'Username and Password is required.'
-error_message_invalid_passname: 'Sorry, invalid username and/or password. Please try again.'
+error_message_invalid_passname: 'Sorry the Username and Password you entered does not match. Please try again.'
 error_message_service_not_available: 'Service not available.'
-error_message_account_suspended: 'Account locked. Please contact our customer support.'
-error_message_account_locked: 'Account locked. Please contact our customer support.'
-session_maxtime: '1'
-autologout_box_title: REMINDER
+error_message_account_suspended: 'Your account is locked. Please contact customer support.'
+error_message_account_locked: 'Your account is locked. Please contact customer support.'
+session_maxtime: '5'
+autologout_box_title: Reminder
 autologout_box_content:
   value: "<p>Your session will expire in {seconds} seconds. Do you want to continue your session ?</p>\r\n"
   format: basic_html
 affirmative_button_text: 'Yes'
 negative_button_text: 'No'
-notification_title: 'Session Timeout'
+notification_title: Notification
+notification_window_title: 'Session has timed out!'
 notification_content:
   value: "<p>Your session has timed out due to inactivity.</p>\r\n"
   format: basic_html
-lightbox_blurb: 'Not yet a Dafabet member?'
+lightbox_blurb: 'Login Lightbox blurb'
+mobile_login_url: 'https://m.dafabet.com/login'
 _core:
-  default_config_hash: LDw8PW9wswSVGgpFjaaHESQeB7QVJEtmV2mGoR4ANVY
-notification_window_title: 'Session Timeout'
-mobile_login_url: 'https://qa1-casino.elysium-dfbt.com/'
+  default_config_hash: JKXRNDRNsdrQBSccXhaxXnC-LV2AwSK_fPLvRd-fVrQ
+advanced__active_tab: edit-login-form-details
+rememberme_label: 'Remember Username'
+login_page_blurb: 'Login Page Blurb'
+value: null
+format: null
+mobile_login_button_label: Login
+mobile_cant_login_url: /myaccount

@@ -1,8 +1,10 @@
-uuid: 5d55f463-29d2-4d2f-bb28-61a64d25da3b
+uuid: 14eab86c-c21f-417f-9015-546747389cf0
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: 6okYzkc37Lmhl8xICm21_bq0TtgZjRyhP3ERqbLs5fo
 id: secondary-menu
-label: 'Secondary Menu EN'
-description: ''
+label: 'Secondary Menu'
+description: 'Menu to add the Secondary items eg: Promotions and mobile page'
 locked: false
