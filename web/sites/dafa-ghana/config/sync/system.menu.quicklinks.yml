@@ -5,6 +5,6 @@ dependencies: {  }
 _core:
   default_config_hash: i7L_ll-a4yDjex1N9td22CKkdE0r-FLLDtg_iSteFGo
 id: quicklinks
-label: 'Quicklinks EN'
+label: Quicklinks
 description: 'Menu to add the quicklink items'
 locked: false

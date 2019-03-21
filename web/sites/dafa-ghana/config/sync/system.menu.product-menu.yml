@@ -1,8 +1,10 @@
-uuid: c20994d3-3811-4180-acf7-44f8b7ac9c6e
-langcode: en
+uuid: 321624ad-c0ef-4bf6-8e2f-c9589d05da17
+langcode: zh-hant
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: uOboQETZR560AiLpf3BHItudd2fdSKtxI0_meRuXwHQ
 id: product-menu
-label: 'Product Menu EN'
-description: ''
+label: 'Product Menu'
+description: 'Menu to add the product menu items available'
 locked: false

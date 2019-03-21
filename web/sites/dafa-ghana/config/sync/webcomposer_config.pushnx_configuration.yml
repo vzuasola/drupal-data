@@ -1,4 +1,4 @@
-enable: 1
+enable: 0
 producttype_id: ''
 retry_count: '34'
 delay_count: '500'
@@ -8,7 +8,7 @@ translated_texts: "Notifications\r\nOK\r\nACCEPT\r\nDECLINE"
 expiry_error_message: "en-US|This offer has already expired.\r\nzh-TW|本活動已過期。\r\nel|Αυτή η προσφορά έχει ήδη λήξει.\r\nid|Masa berlaku penawaran ini telah habis\r\nhi|This offer has already expired.\r\nja|こちらのプロモーションは期限切れです。\r\nko-KR|본 프로모션은 이미 종료되었습니다.\r\npl|Ta oferta jest już nieważna.\r\nru|This offer has already expired.\r\nzh-CN|本活动已过期。\r\nth|โปรโมชั่นนี้ หมดอายุแล้ว\r\nen-GB|This offer has already expired.\r\nvi|Ưu đãi này đã hết hạn"
 date_format: "en-US|dd/mm/yyyy HH:MM\r\nzh-TW|yyyy/mm/dd HH:MM\r\nel|dd/mm/yyyy HH:MM\r\nid|dd/mm/yyyy HH:MM\r\nhi|dd/mm/yyyy HH:MM\r\nja|yyyy/mm/dd HH:MM\r\nko-KR|yyyy/mm/dd HH:MM\r\npl|dd/mm/yyyy HH:MM\r\nru|dd/mm/yyyy HH:MM\r\nzh-CN|yyyy/mm/dd HH:MM\r\nth|dd/mm/yyyy HH:MM\r\nen-GB|dd/mm/yyyy HH:MM\r\nvi|dd/mm/yyyy HH:MM"
 date_offset: "en-US|+8\r\nzh-TW|+8\r\nel|+3\r\nid|+7\r\nhi|+8\r\nja|+9\r\nko-KR|+9\r\npl|+2\r\nru|+3\r\nzh-CN|+8\r\nth|+7\r\nen-GB||+1\r\nvi|+7"
-login_selector: null
+login_selector: ''
 debug_logging: 0
 debug_display_all: 0
 debug_display_expirydate: 1
@@ -17,4 +17,6 @@ text_notifications: "en-US|Notifications\r\nzh-TW|通知\r\nel|Ειδοποιή�
 text_ok: "en-US|OK\r\nzh-TW|確定\r\nel|OK\r\nid|OK\r\nhi|OK\r\nja|OK\r\nko-KR|확인\r\npl|OK\r\nru|OK\r\nzh-CN|确定\r\nth|ตกลง\r\nen-GB|OK\r\nvi|OK"
 text_accept: "en-US|ACCEPT\r\nzh-TW|接受\r\nel|ΑΠΟΔΟΧΗ\r\nid|TERIMA\r\nhi|ACCEPT\r\nja|承認\r\nko-KR|수락\r\npl|AKCEPTUJ\r\nru|ACCEPT\r\nzh-CN|接受\r\nth|ยอมรับ\r\nen-GB|ACCEPT\r\nvi|CHẤP NHẬN"
 text_decline: "en-US|DECLINE\r\nzh-TW|拒絕\r\nel|ΑΠΟΡΡΙΨΗ\r\nid|TOLAK\r\nhi|DECLINE\r\nja|拒否\r\nko-KR|거부\r\npl|ODRZUĆ\r\nru|DECLINE\r\nzh-CN|拒绝\r\nth|ปฏิเสธ\r\nen-GB|DECLINE\r\nvi|TỪ CHỐI"
-domain: ''
+disableBonusAward: 0
+_core:
+  default_config_hash: KfM_RTH8ACgMTAnfoXdfC-0EWViG1evAMVZh827_Iwc
