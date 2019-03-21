@@ -1,0 +1,21 @@
+uuid: fd01253c-aafe-4ea6-ad7e-05f9daabcd24
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.zipang_desktop_block.field_position
+  module:
+    - zipang_desktop_blocks
+    - options
+id: zipang_desktop_block.zipang_desktop_block.field_position
+field_name: field_position
+entity_type: zipang_desktop_block
+bundle: zipang_desktop_block
+label: Position
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.taxonomy_term.game_provider.field_game_provider_key
+    - field.field.taxonomy_term.game_provider.field_product_type
     - taxonomy.vocabulary.game_provider
 id: taxonomy_term.game_provider.default
 targetEntityType: taxonomy_term
@@ -12,6 +13,14 @@ mode: default
 content:
   field_game_provider_key:
     weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_product_type:
+    weight: 2
     settings:
       size: 60
       placeholder: ''

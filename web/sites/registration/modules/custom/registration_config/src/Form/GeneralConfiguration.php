@@ -47,6 +47,7 @@ class GeneralConfiguration extends FormBase {
     $this->cashierConfig($form);
     $this->logConfig($form);
     $this->trackingConfig($form);
+    $this->tripwirePopupConfig($form);
 
     return $form;
   }
@@ -188,6 +189,13 @@ class GeneralConfiguration extends FormBase {
       '#description' => $this->t('This will enable futurama authentication for Casino and will use that legacy ' .
         'if unchecked'),
       '#default_value' => $this->get('enable_futurama_authentication_casino'),
+    ];
+    $form['integration']['enable_futurama_native_app'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable Futarama Native App authentication'),
+      '#description' => $this->t('This will enable futurama authentication for Native App and will use that legacy ' .
+        'if unchecked'),
+      '#default_value' => $this->get('enable_futurama_native_app'),
     ];
   }
 
@@ -467,4 +475,43 @@ class GeneralConfiguration extends FormBase {
     ];
   }
 
+  /**
+   * Tripwire Pop-up Configuration
+   */
+  private function tripwirePopupConfig(array &$form) {
+    $form['tripwire_popup'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Tripwire Popup'),
+      '#collapsible' => TRUE,
+      '#group' => 'general_settings_tab',
+    ];
+    $form['tripwire_popup']['enable_tripwire_popup'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable Tripwire Popup'),
+      '#description' => $this->t('Check to enable tripwire popup'),
+      '#default_value' => $this->get('enable_tripwire_popup'),
+      '#translatable' => TRUE,
+    ];
+    $form['tripwire_popup']['tripwire_popup_show_limit'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Show Limit'),
+      '#description' => $this->t('Number of times popup will show'),
+      '#default_value' => $this->get('tripwire_popup_show_limit') ?? 2,
+    ];
+    $form['tripwire_popup']['tripwire_popup_show_delay'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Show Delay'),
+      '#description' => $this->t('Delay before popup will show in milliseconds'),
+      '#default_value' => $this->get('tripwire_popup_show_delay') ?? 3000,
+    ];
+    $content = $this->get('tripwire_popup_content');
+    $form['tripwire_popup']['tripwire_popup_content'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('Content'),
+      '#description' => $this->t("Message to be displayed inside pop-up."),
+      '#default_value' => $content['value'],
+      '#format' => $content['format'],
+      '#translatable' => TRUE,
+    ];
+  }
 }

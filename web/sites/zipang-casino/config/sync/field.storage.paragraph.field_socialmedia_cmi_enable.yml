@@ -1,0 +1,20 @@
+uuid: 967ed74c-f461-4080-993c-1d9f174cb9c0
+langcode: ja
+status: true
+dependencies:
+  module:
+    - paragraphs
+_core:
+  default_config_hash: wA0Vdg_p81YV1lLIXDFmkTT5mtE73nXvwb4k3TyiEwE
+id: paragraph.field_socialmedia_cmi_enable
+field_name: field_socialmedia_cmi_enable
+entity_type: paragraph
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

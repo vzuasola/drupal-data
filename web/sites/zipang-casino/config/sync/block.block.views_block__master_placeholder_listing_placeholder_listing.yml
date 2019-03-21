@@ -1,0 +1,32 @@
+uuid: 4f50990d-39c9-4f87-8f68-808589ba8ebb
+langcode: ja
+status: true
+dependencies:
+  config:
+    - views.view.master_placeholder_listing
+  module:
+    - system
+    - views
+  theme:
+    - seven
+_core:
+  default_config_hash: iYM5W0LsdP8immYYaIHqa9COyBAkDSwq0hqfIid4X3k
+id: views_block__master_placeholder_listing_placeholder_listing
+theme: seven
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:master_placeholder_listing-placeholder_listing'
+settings:
+  id: 'views_block:master_placeholder_listing-placeholder_listing'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /admin/config/webcomposer/domains/placeholders
+    negate: false
+    context_mapping: {  }

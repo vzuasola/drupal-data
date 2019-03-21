@@ -1,0 +1,19 @@
+uuid: 9ff970cb-76bd-446f-8e97-1c3a576733c9
+langcode: ja
+status: true
+dependencies:
+  module:
+    - content_translation
+    - zipang_dropdown_menu
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+_core:
+  default_config_hash: vEOHczLY36DrKEey9ciRaUPoeEjd7MWPlv-M1oN9Z_w
+id: dropdown_menu_entity.dropdown_menu_entity
+target_entity_type_id: dropdown_menu_entity
+target_bundle: dropdown_menu_entity
+default_langcode: site_default
+language_alterable: true

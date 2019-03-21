@@ -1,0 +1,18 @@
+zipang_rightside_blocks.list:
+  title: 'Zipang Rightside Blocks Configuration'
+  description: 'List zipang rightside blocks entities'
+  parent: system.admin_config
+  route_name: zipang_rightside_blocks.admin_settings
+
+# Zipang rightside block entity menu items definition
+entity.zipang_rightside_block_entity.collection:
+  title: 'Zipang rightside block entity list'
+  route_name: entity.zipang_rightside_block_entity.collection
+  description: 'List Zipang rightside block entity entities'
+  parent: zipang_rightside_blocks.list
+
+zipang_rightside_block_entity.admin.structure.settings:
+  title: Zipang rightside block entity settings
+  description: 'Configure Zipang rightside block entity entities'
+  route_name: zipang_rightside_block_entity.settings
+  parent: zipang_rightside_blocks.list

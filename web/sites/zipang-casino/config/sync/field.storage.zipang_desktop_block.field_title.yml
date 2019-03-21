@@ -1,0 +1,21 @@
+uuid: f2b6c908-d9ae-411b-b30e-85e58a557b8e
+langcode: en
+status: true
+dependencies:
+  module:
+    - zipang_desktop_blocks
+id: zipang_desktop_block.field_title
+field_name: field_title
+entity_type: zipang_desktop_block
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

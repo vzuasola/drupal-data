@@ -1,0 +1,30 @@
+uuid: 1a9ea8ec-5174-41eb-94bd-f17e1467142a
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_select_domain_group
+    - taxonomy.vocabulary.domain
+    - taxonomy.vocabulary.domain_groups
+_core:
+  default_config_hash: IrMKuFI7vHhf72oLecFdP9VbWY74Lfr4upepPDcRBws
+id: taxonomy_term.domain.field_select_domain_group
+field_name: field_select_domain_group
+entity_type: taxonomy_term
+bundle: domain
+label: 'Select Domain Group'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      domain_groups: domain_groups
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

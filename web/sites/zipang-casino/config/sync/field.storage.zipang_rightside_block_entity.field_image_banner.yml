@@ -1,0 +1,30 @@
+uuid: 8da77def-1660-48bd-87a1-ac548cbb88e8
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+    - image
+    - zipang_rightside_blocks
+id: zipang_rightside_block_entity.field_image_banner
+field_name: field_image_banner
+entity_type: zipang_rightside_block_entity
+type: image
+settings:
+  uri_scheme: public
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  target_type: file
+  display_field: false
+  display_default: false
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

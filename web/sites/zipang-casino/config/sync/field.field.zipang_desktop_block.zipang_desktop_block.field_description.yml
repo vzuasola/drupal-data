@@ -1,0 +1,21 @@
+uuid: 192f5a93-3a42-4b3a-baba-0cc874e6ee5a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.zipang_desktop_block.field_description
+  module:
+    - zipang_desktop_blocks
+    - text
+id: zipang_desktop_block.zipang_desktop_block.field_description
+field_name: field_description
+entity_type: zipang_desktop_block
+bundle: zipang_desktop_block
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

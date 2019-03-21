@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains zipang_rightside_blocks.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function zipang_rightside_blocks_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the zipang_rightside_blocks module.
+    case 'help.page.zipang_rightside_blocks':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Zipang Rightside Blocks') . '</p>';
+      return $output;
+
+    default:
+  }
+}

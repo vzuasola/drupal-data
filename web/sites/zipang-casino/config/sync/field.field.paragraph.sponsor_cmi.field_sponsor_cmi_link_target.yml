@@ -1,0 +1,23 @@
+uuid: 64873a1d-abbe-42f6-9fb7-41a59f9d2074
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_sponsor_cmi_link_target
+    - paragraphs.paragraphs_type.sponsor_cmi
+  module:
+    - options
+_core:
+  default_config_hash: '-U8RLuiOSuS4HmnyMIDdde2L1T3Cok0YYch5Idw3UK8'
+id: paragraph.sponsor_cmi.field_sponsor_cmi_link_target
+field_name: field_sponsor_cmi_link_target
+entity_type: paragraph
+bundle: sponsor_cmi
+label: 'Link Target'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

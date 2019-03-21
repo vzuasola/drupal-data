@@ -1,0 +1,6 @@
+advanced__active_tab: edit-pt-settings
+pt_host: 'https://extstg2-cashier01.ptstaging.eu/newplayer.php'
+casino_name: ptstaging2.78
+secret_key: 23Snqq
+balance_currency_mapping: $|USD
+balance_error: 'error retrieving'

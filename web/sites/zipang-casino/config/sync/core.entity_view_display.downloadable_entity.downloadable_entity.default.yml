@@ -1,0 +1,39 @@
+uuid: 172210cb-28ee-4c97-93e2-baafe0140ca1
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.field.downloadable_entity.downloadable_entity.field_downloadable_file_link
+    - field.field.downloadable_entity.downloadable_entity.field_include_in_page
+  module:
+    - webcomposer_downloadables
+id: downloadable_entity.downloadable_entity.default
+targetEntityType: downloadable_entity
+bundle: downloadable_entity
+mode: default
+content:
+  field_downloadable_file_link:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_include_in_page:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  name:
+    label: above
+    type: string
+    weight: 0
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  langcode: true
+  user_id: true

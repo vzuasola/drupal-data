@@ -1,0 +1,11 @@
+uuid: 7c1d8bf0-de9c-4cc3-8bc6-058ce1ffed89
+langcode: ja
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: yW_hfrKWZu_FJzRmBgNiAhJqLGNJcbXeUjLY5zrQ6qM
+name: Domain
+vid: domain
+description: 'Allows to add domain under domain groups.'
+hierarchy: 0
+weight: 0

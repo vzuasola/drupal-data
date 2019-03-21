@@ -1,0 +1,14 @@
+ignored_config_entities:
+  0: 'webform.webform.*'
+  2: 'webcomposer_config.*'
+  4: 'system.menu.*'
+  6: 'block.*'
+  8: 'filter.*'
+  10: 'language.*'
+  12: 'devel.*'
+  14: 'zipang_config.*'
+  16: 'webcomposer_form_manager.form.*'
+  18: 'contact_us_config.*'
+_core:
+  default_config_hash: UVH1aJ4b44UM-VdPVN7hNNuuVqfReJxwfVeDQH1Hvsk
+langcode: ja
