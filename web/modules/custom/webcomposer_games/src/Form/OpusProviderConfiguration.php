@@ -56,7 +56,6 @@ class OpusProviderConfiguration extends FormBase {
   }
 
   private function gpiContentTab(&$form, $key, $value) {
-    
     $config = $this->config('webcomposer_config.games_opus_provider');
     $content = $config->get('opus_game_loader_content');
     $message = $config->get('opus_unsupported_currencies_message');

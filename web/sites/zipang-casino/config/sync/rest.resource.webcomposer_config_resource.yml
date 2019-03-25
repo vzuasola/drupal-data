@@ -1,0 +1,20 @@
+uuid: 8f358f09-22fe-4d9a-8219-562bd76c822e
+langcode: ja
+status: true
+dependencies:
+  module:
+    - serialization
+    - user
+    - webcomposer_config_schema
+_core:
+  default_config_hash: EXbsllmhFdqaghc0968AVjmn60lIPEf9sJtZPEMqpdg
+id: webcomposer_config_resource
+plugin_id: webcomposer_config_resource
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+      - xml
+    supported_auth:
+      - cookie

@@ -1,0 +1,21 @@
+uuid: 22d8c448-b4b1-464e-a437-41072ce8e59a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.content_block_entity.field_rightside_content_type
+  module:
+    - zipang_content_blocks
+    - options
+id: content_block_entity.content_block_entity.field_rightside_content_type
+field_name: field_rightside_content_type
+entity_type: content_block_entity
+bundle: content_block_entity
+label: 'Rightside Content Type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

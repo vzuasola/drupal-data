@@ -1,0 +1,20 @@
+uuid: 42647568-2040-4660-9e87-827bf63daffd
+langcode: ja
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.domain
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+_core:
+  default_config_hash: wIwZQrm9hAucycHCYV90QfurjTYRZXTQF0hqBTv5LQM
+id: taxonomy_term.domain
+target_entity_type_id: taxonomy_term
+target_bundle: domain
+default_langcode: site_default
+language_alterable: false

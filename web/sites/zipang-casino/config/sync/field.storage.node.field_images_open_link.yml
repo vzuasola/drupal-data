@@ -1,0 +1,30 @@
+uuid: ace7030c-d104-4448-96bd-273396c52cf2
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_images_open_link
+field_name: field_images_open_link
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: same_tab
+      label: Same
+    -
+      value: new_tab
+      label: 'New Tab'
+    -
+      value: new_window
+      label: 'New Window'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

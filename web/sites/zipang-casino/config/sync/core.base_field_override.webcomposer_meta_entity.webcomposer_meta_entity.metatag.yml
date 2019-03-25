@@ -1,0 +1,20 @@
+uuid: e03596f7-8a4a-483a-89b8-763aa609c2c6
+langcode: ja
+status: true
+dependencies:
+  module:
+    - webcomposer_seo
+_core:
+  default_config_hash: zkrz-TguUR4LqwWwwDUnNUpE-Z_KOsnHcN6FSBZS0LQ
+id: webcomposer_meta_entity.webcomposer_meta_entity.metatag
+field_name: metatag
+entity_type: webcomposer_meta_entity
+bundle: webcomposer_meta_entity
+label: Metatags
+description: 'The metatags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

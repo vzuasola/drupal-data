@@ -1,0 +1,5 @@
+entity.zipang_desktop_block.add_form:
+  route_name: entity.zipang_desktop_block.add_form
+  title: 'Add Zipang desktop block'
+  appears_on:
+    - entity.zipang_desktop_block.collection

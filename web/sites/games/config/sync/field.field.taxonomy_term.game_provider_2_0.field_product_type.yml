@@ -1,0 +1,19 @@
+uuid: 1f811b60-ca3f-4018-93da-a9b55ac0c738
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_product_type
+    - taxonomy.vocabulary.game_provider_2_0
+id: taxonomy_term.game_provider_2_0.field_product_type
+field_name: field_product_type
+entity_type: taxonomy_term
+bundle: game_provider_2_0
+label: 'Product Type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

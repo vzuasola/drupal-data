@@ -1,0 +1,23 @@
+uuid: 925e0948-6d9f-4db4-a046-fc2a5ece9a14
+langcode: ja
+status: true
+dependencies:
+  module:
+    - entity_reference_revisions
+    - paragraphs
+    - webcomposer_floating_banners
+_core:
+  default_config_hash: KaK-fScE4utMtTCyOxOVyle5aknhKaMbMV3_BJt-T74
+id: left_floating_banner_entity.field_banner_item
+field_name: field_banner_item
+entity_type: left_floating_banner_entity
+type: entity_reference_revisions
+settings:
+  target_type: paragraph
+module: entity_reference_revisions
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,22 @@
+# Zipang rightside block entity routing definition
+zipang_rightside_block_entity.settings_tab:
+  route_name: zipang_rightside_block_entity.settings
+  title: 'Settings'
+  base_route: zipang_rightside_block_entity.settings
+
+entity.zipang_rightside_block_entity.canonical:
+  route_name: entity.zipang_rightside_block_entity.canonical
+  base_route: entity.zipang_rightside_block_entity.canonical
+  title: 'View'
+
+entity.zipang_rightside_block_entity.edit_form:
+  route_name: entity.zipang_rightside_block_entity.edit_form
+  base_route: entity.zipang_rightside_block_entity.canonical
+  title: 'Edit'
+
+entity.zipang_rightside_block_entity.delete_form:
+  route_name:  entity.zipang_rightside_block_entity.delete_form
+  base_route:  entity.zipang_rightside_block_entity.canonical
+  title: Delete
+  weight: 10
+

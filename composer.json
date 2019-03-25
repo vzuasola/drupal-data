@@ -45,7 +45,8 @@
     "prefer-stable": true,
     "autoload": {
         "psr-4": {
-            "DrupalProject\\": "scripts/"
+            "DrupalProject\\": "scripts/",
+            "Drupal\\redis\\": "web/modules/contrib/redis/src/"
         }
     },
     "scripts": {

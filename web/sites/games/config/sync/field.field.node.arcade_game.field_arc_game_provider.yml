@@ -11,7 +11,7 @@ field_name: field_arc_game_provider
 entity_type: node
 bundle: arcade_game
 label: 'Game Provider'
-description: ''
+description: "Provider for this game. <br/>\r\n<b>Note:</b> Aside from the main provider, some providers have product types, this includes:<br/>\r\n<ul>\r\n    <li>Fish</li>\r\n    <li>Slots</li>\r\n    <li>Games</li>\r\n    <li>Arcade RNG</li>\r\n</ul>\r\nProviders that have multiple <i>product types</i> are:\r\n<ul>\r\n    <li>SA Gaming</li>\r\n    <li>Asia Gaming</li>\r\n    <li>CQ9</li>\r\n    <li>Solid Gaming</li>\r\n</ul>\r\n"
 required: true
 translatable: true
 default_value: {  }

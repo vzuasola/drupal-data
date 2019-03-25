@@ -1,0 +1,50 @@
+uuid: 35922b1e-b6e9-469a-b514-e65cb3d89705
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.sponsor_entity.field_sponsor_cmi
+    - paragraphs.paragraphs_type.sponsor_cmi
+  module:
+    - entity_reference_revisions
+    - webcomposer_sponsor
+_core:
+  default_config_hash: OE5ANCiruX51Hj3hqPQz5CfHkz0gkU-Yc-5nAT4j3TA
+id: sponsor_entity.sponsor_entity.field_sponsor_cmi
+field_name: field_sponsor_cmi
+entity_type: sponsor_entity
+bundle: sponsor_entity
+label: 'Sponsor List'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      sponsor_cmi: sponsor_cmi
+    target_bundles_drag_drop:
+      sponsor_cmi:
+        enabled: true
+        weight: -15
+      domain_management_configuration:
+        weight: -14
+        enabled: false
+      floating_banner_item:
+        weight: -13
+        enabled: false
+      right_side_block_content:
+        weight: -12
+        enabled: false
+      social_media:
+        weight: -11
+        enabled: false
+      social_media_cmi:
+        weight: -10
+        enabled: false
+      sponsorship:
+        weight: -9
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,26 @@
+<?php
+
+/**
+ * Implements hook_uninstall
+ */
+function zipang_news_and_updates_uninstall() {
+  $keys = [
+    'core.base_field_override.news_and_updates_entity.news_and_updates_entity.metatag.yml',
+    'core.base_field_override.news_and_updates_entity.news_and_updates_entity.user_id.yml',
+    'core.entity_form_display.news_and_updates_entity.news_and_updates_entity.default.yml',
+    'field.field.news_and_updates_entity.news_and_updates_entity.field_authored_date.yml',
+    'field.field.news_and_updates_entity.news_and_updates_entity.field_authored_on.yml',
+    'field.field.news_and_updates_entity.news_and_updates_entity.field_body.yml',
+    'field.field.news_and_updates_entity.news_and_updates_entity.field_title.yml',
+    'field.storage.news_and_updates_entity.field_authored_date.yml',
+    'field.storage.news_and_updates_entity.field_authored_on.yml',
+    'field.storage.news_and_updates_entity.field_body.yml',
+    'field.storage.news_and_updates_entity.field_title.yml',
+    'language.content_settings.news_and_updates_entity.news_and_updates_entity.yml',
+    'views.view.news_and_updates_entity.yml',
+  ];
+
+  foreach ($keys as $key) {
+    \Drupal::configFactory()->getEditable($key)->delete();
+  }
+}

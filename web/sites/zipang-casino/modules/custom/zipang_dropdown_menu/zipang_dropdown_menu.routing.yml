@@ -1,0 +1,7 @@
+zipang_dropdown_menu.admin_settings:
+  path: 'admin/config/zipang/dropdown_menu'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Dropdown Menu'
+  requirements:
+    _permission: 'administer site configuration'

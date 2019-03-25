@@ -15,6 +15,7 @@ dependencies:
     - field.field.node.games.field_hide
     - field.field.node.games.field_image_size
     - field.field.node.games.field_maintenance_blurb
+    - field.field.node.games.field_preview_display_only
     - field.field.node.games.field_ribbon_configuration
     - field.field.node.games.field_show_game_info_toggle
     - field.field.node.games.field_start_date
@@ -209,7 +210,7 @@ content:
     type: string_textarea
     region: content
   field_hide:
-    weight: 121
+    weight: 14
     settings:
       display_label: true
     third_party_settings: {  }
@@ -229,6 +230,13 @@ content:
     third_party_settings:
       conditional_fields: {  }
     type: text_textarea
+    region: content
+  field_preview_display_only:
+    weight: 13
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
     region: content
   field_ribbon_configuration:
     type: entity_reference_autocomplete
@@ -257,7 +265,8 @@ content:
     type: language_select
     weight: 1
     region: content
-    settings: {  }
+    settings:
+      include_locked: true
     third_party_settings: {  }
   path:
     type: path
@@ -280,7 +289,7 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 120
+    weight: 12
     region: content
     third_party_settings: {  }
   title:

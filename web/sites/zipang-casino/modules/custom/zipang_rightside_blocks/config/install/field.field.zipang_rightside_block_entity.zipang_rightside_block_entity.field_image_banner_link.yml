@@ -1,0 +1,20 @@
+uuid: dbfe059c-f07c-424d-9986-3b91513e8e35
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.zipang_rightside_block_entity.field_image_banner_link
+  module:
+    - zipang_rightside_blocks
+id: zipang_rightside_block_entity.zipang_rightside_block_entity.field_image_banner_link
+field_name: field_image_banner_link
+entity_type: zipang_rightside_block_entity
+bundle: zipang_rightside_block_entity
+label: 'Image Banner Link'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
