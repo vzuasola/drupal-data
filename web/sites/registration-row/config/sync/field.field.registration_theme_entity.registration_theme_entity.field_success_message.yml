@@ -1,0 +1,22 @@
+uuid: 8ada0e1c-91dc-4aae-8a1e-cf56506ba093
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.registration_theme_entity.field_success_message
+  module:
+    - registration_theme
+id: registration_theme_entity.registration_theme_entity.field_success_message
+field_name: field_success_message
+entity_type: registration_theme_entity
+bundle: registration_theme_entity
+label: 'Registration Success Message'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 'Registration Successful'
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,5 @@
+elements: ''
+third_party_settings:
+  webcomposer_webform:
+    webcomposer_webform_layout:
+      label_font_color: '#4286f4'

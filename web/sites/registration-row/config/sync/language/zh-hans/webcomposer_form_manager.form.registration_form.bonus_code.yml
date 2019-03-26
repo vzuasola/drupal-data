@@ -1,0 +1,22 @@
+field_settings:
+  label: 奖金代码
+  placeholder: 'Bonus Code'
+  annotation: ''
+  is_hidden: 1
+field_validations:
+  required:
+    error_message: 'Field should be required'
+  alphanumeric:
+    error_message: 'Field should be alphanumeric'
+  numeric:
+    error_message: 'Field should be numeric'
+  no_symbols:
+    error_message: 'Field contains invalid special characters'
+  numeric_symbols:
+    error_message: 'Field contains invalid special characters'
+  email:
+    error_message: 'Field does not contain a valid email address'
+  min_length:
+    error_message: 'Minimum requirement not met'
+  max_length:
+    error_message: 'Maximum requirement not met'

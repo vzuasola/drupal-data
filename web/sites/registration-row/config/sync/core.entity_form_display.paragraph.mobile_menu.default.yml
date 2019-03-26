@@ -1,0 +1,74 @@
+uuid: 0387cf77-677a-4eb4-9337-9ab8905ab31d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.mobile_menu.field_mobile_menu_class
+    - field.field.paragraph.mobile_menu.field_mobile_menu_enabled
+    - field.field.paragraph.mobile_menu.field_mobile_menu_label
+    - field.field.paragraph.mobile_menu.field_mobile_menu_link
+    - field.field.paragraph.mobile_menu.field_mobile_menu_new_tag
+    - field.field.paragraph.mobile_menu.field_mobile_menu_target
+    - paragraphs.paragraphs_type.mobile_menu
+  module:
+    - link
+_core:
+  default_config_hash: iNLTlHcvQmshlrFPaStloCaH0eWag-u0Va4dUzBuIMg
+id: paragraph.mobile_menu.default
+targetEntityType: paragraph
+bundle: mobile_menu
+mode: default
+content:
+  field_mobile_menu_class:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_mobile_menu_enabled:
+    type: boolean_checkbox
+    weight: 0
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_mobile_menu_label:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_mobile_menu_link:
+    weight: 2
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_mobile_menu_new_tag:
+    weight: 5
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_mobile_menu_target:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  translation:
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
+  uid: true

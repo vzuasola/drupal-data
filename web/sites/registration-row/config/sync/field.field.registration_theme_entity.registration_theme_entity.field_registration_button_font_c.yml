@@ -1,0 +1,25 @@
+uuid: 8d752890-893f-4034-a6b2-93c6d4a3751e
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - field.storage.registration_theme_entity.field_registration_button_font_c
+  module:
+    - color_field
+    - registration_theme
+id: registration_theme_entity.registration_theme_entity.field_registration_button_font_c
+field_name: field_registration_button_font_c
+entity_type: registration_theme_entity
+bundle: registration_theme_entity
+label: 'Registration Button Font Color'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    color: '#373737'
+    opacity: null
+default_value_callback: ''
+settings:
+  opacity: 0
+field_type: color_field_type

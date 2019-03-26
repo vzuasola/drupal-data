@@ -1,0 +1,21 @@
+uuid: 4263ae9d-41a8-452d-a3f1-aa9291db3327
+langcode: zh-hans
+status: true
+dependencies:
+  module:
+    - taxonomy
+_core:
+  default_config_hash: eaT5da9BLeK9iHs6MINA0HGCuD1RgXnLYwR9i1ZRkwA
+id: taxonomy_term.field_select_affiliates_group
+field_name: field_select_affiliates_group
+entity_type: taxonomy_term
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

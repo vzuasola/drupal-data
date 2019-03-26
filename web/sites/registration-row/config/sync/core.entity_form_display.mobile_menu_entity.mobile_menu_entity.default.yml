@@ -1,0 +1,53 @@
+uuid: 0874f57e-1eb4-47d2-ae9e-033e1eb1eb16
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.mobile_menu_entity.mobile_menu_entity.field_menu_id
+    - field.field.mobile_menu_entity.mobile_menu_entity.field_mobile_menu_item
+  module:
+    - paragraphs
+    - webcomposer_mobile_menu
+_core:
+  default_config_hash: E8CO2INYdvMtuZ0DAlbI503n-l_QMkeq137Y-h14vn0
+id: mobile_menu_entity.mobile_menu_entity.default
+targetEntityType: mobile_menu_entity
+bundle: mobile_menu_entity
+mode: default
+content:
+  field_menu_id:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_mobile_menu_item:
+    type: entity_reference_paragraphs
+    weight: 2
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true
+  user_id: true

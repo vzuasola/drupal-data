@@ -1,0 +1,25 @@
+uuid: 6ebce5d1-5abd-47f9-a061-4d0940403320
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.registration_theme_entity.field_asterisk_color
+  module:
+    - color_field
+    - registration_theme
+id: registration_theme_entity.registration_theme_entity.field_asterisk_color
+field_name: field_asterisk_color
+entity_type: registration_theme_entity
+bundle: registration_theme_entity
+label: 'Asterisk Color'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    color: '#ff0000'
+    opacity: null
+default_value_callback: ''
+settings:
+  opacity: 0
+field_type: color_field_type

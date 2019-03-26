@@ -1,0 +1,18 @@
+uuid: 8f2d94d9-7b8e-403a-bdde-0cd7a7dadfec
+langcode: en
+status: true
+dependencies:
+  module:
+    - webcomposer_seo
+id: webcomposer_meta_entity.webcomposer_meta_entity.metatag
+field_name: metatag
+entity_type: webcomposer_meta_entity
+bundle: webcomposer_meta_entity
+label: Metatags
+description: 'The metatags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

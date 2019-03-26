@@ -1,0 +1,11 @@
+uuid: e7c5bd3b-10f6-4e67-a993-7233fe8fb93b
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: GHQL7gR6bw9TLggLS-VoEyrIM9SV7GOQu0TcnNs-7II
+name: Products
+vid: products
+description: 'List of all the products.'
+hierarchy: 1
+weight: 0

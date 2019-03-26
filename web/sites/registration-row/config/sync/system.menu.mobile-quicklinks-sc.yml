@@ -1,0 +1,8 @@
+uuid: 652b9636-d661-43fd-91a0-418862e08171
+langcode: en
+status: true
+dependencies: {  }
+id: mobile-quicklinks-sc
+label: 'Mobile Quicklinks SC'
+description: ''
+locked: false

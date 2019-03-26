@@ -1,0 +1,105 @@
+uuid: 76abf0ab-9e4f-4d14-8c5c-3637ad40c325
+langcode: en
+status: open
+dependencies: {  }
+open: null
+close: null
+uid: 112
+template: false
+id: test_opt_in_casino
+title: 'Test - Opt in - Casino'
+description: ''
+category: campaign
+elements: "username:\n  '#type': textarea\n  '#title': Username\n  '#description': 'The name of the user'\n  '#visibility': 1\n  '#required': true\n  '#required_error': 'Not valid'\n  '#alphanumeric': 1\n  '#alphanumeric_error': 'Input should be alphanumeric'\n  '#unicode': 0\n  '#unicode_error': ''\n  '#email': 0\n  '#email_error': ''\n  '#numeric': 0\n  '#numeric_error': ''\n  '#numeric_symbols': 0\n  '#numeric_symbols_error': ''\n  '#min_length': 1\n  '#min_length_value': '5'\n  '#min_length_error': 'Min length requirement not met'\n  '#max_length': 1\n  '#max_length_value': '10'\n  '#max_length_error': 'Max length exceeded'\ngender:\n  '#type': select\n  '#title': Gender\n  '#description': 'your gender'\n  '#visibility': 1\n  '#options':\n    Girl: Girl\n    Boy: Boy\n    Woman: Woman\n    Man: Man\n  '#required': true\n  '#alphanumeric': 0\n  '#alphanumeric_error': ''\n  '#unicode': 0\n  '#unicode_error': ''\n  '#email': 0\n  '#email_error': ''\n  '#numeric': 0\n  '#numeric_error': ''\n  '#numeric_symbols': 0\n  '#numeric_symbols_error': ''\n  '#min_length': 0\n  '#min_length_value': ''\n  '#min_length_error': ''\n  '#max_length': 0\n  '#max_length_value': ''\n  '#max_length_error': ''\n"
+css: ''
+javascript: ''
+settings:
+  ajax: false
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  form_submit_once: false
+  form_exception_message: ''
+  form_open_message: ''
+  form_close_message: ''
+  form_previous_submissions: true
+  form_confidential: false
+  form_confidential_message: ''
+  form_convert_anonymous: false
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_unsaved: false
+  form_disable_back: false
+  form_autofocus: false
+  form_details_toggle: false
+  submission_label: ''
+  submission_log: false
+  submission_user_columns: {  }
+  wizard_progress_bar: true
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_start_label: ''
+  wizard_complete: true
+  wizard_complete_label: ''
+  preview: 0
+  preview_label: ''
+  preview_title: ''
+  preview_message: ''
+  preview_attributes: {  }
+  preview_excluded_elements: {  }
+  draft: none
+  draft_multiple: false
+  draft_auto_save: false
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  confirmation_type: page
+  confirmation_title: ''
+  confirmation_message: ''
+  confirmation_url: ''
+  confirmation_attributes: {  }
+  confirmation_back: true
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  limit_total: null
+  limit_total_message: ''
+  limit_user: null
+  limit_user_message: ''
+  purge: none
+  purge_days: null
+  entity_limit_total: null
+  entity_limit_user: null
+  results_disabled: false
+  results_disabled_ignore: false
+  token_update: false
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+  view_any:
+    roles: {  }
+    users: {  }
+  update_any:
+    roles: {  }
+    users: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+  view_own:
+    roles: {  }
+    users: {  }
+  update_own:
+    roles: {  }
+    users: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+handlers: {  }

@@ -1,0 +1,18 @@
+uuid: c911c854-29b9-4794-b910-12a06d7c8138
+langcode: en
+status: true
+dependencies:
+  module:
+    - vip_modal
+id: vip_modal_entity.vip_modal_entity.metatag
+field_name: metatag
+entity_type: vip_modal_entity
+bundle: vip_modal_entity
+label: Metatags
+description: 'The metatags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

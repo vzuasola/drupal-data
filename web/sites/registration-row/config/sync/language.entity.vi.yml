@@ -1,0 +1,15 @@
+uuid: b880e043-7172-4564-8206-7e730c083dec
+langcode: vi
+status: true
+dependencies:
+  module:
+    - webcomposer_language_hierarchy
+third_party_settings:
+  webcomposer_language_hierarchy:
+    webcomposer_fallback_langcode: en
+    webcomposer_language_custom_label: 'Tiếng Việt'
+id: vi
+label: 'Tiếng Việt'
+direction: ltr
+weight: -5
+locked: false

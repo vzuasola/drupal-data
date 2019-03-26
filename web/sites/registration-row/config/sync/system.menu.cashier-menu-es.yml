@@ -1,0 +1,8 @@
+uuid: 2b95fb3e-7cbe-4ff9-ab48-d72fdb3f788a
+langcode: en
+status: true
+dependencies: {  }
+id: cashier-menu-es
+label: 'Cashier Menu ES'
+description: ''
+locked: false

@@ -1,0 +1,19 @@
+uuid: a1541f2d-d215-404a-bb13-a0e0505630f7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_sponsor_alternative_text
+    - paragraphs.paragraphs_type.responsive_sponsor
+id: paragraph.responsive_sponsor.field_sponsor_alternative_text
+field_name: field_sponsor_alternative_text
+entity_type: paragraph
+bundle: responsive_sponsor
+label: 'Alternative Text'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

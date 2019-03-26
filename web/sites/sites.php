@@ -99,3 +99,8 @@ $sites['mobile-casino.drupal.env'] = 'mobile-casino';
 $sites['poker.drupal.local'] = 'poker';
 $sites['poker.drupal.dev'] = 'poker';
 $sites['poker.drupal.env'] = 'poker';
+
+// registration ROW
+$sites['registration-row.drupal.local'] = 'registration-row';
+$sites['registration-row.drupal.dev'] = 'registration-row';
+$sites['registration-row.drupal.env'] = 'registration-row';

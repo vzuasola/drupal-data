@@ -1,0 +1,22 @@
+uuid: 434e3b31-56bd-4a4a-9e74-8b4d4b38ffed
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.lobby_banner_slider
+  module:
+    - text
+id: node.lobby_banner_slider.body
+field_name: body
+entity_type: node
+bundle: lobby_banner_slider
+label: Content
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

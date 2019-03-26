@@ -1,0 +1,23 @@
+uuid: 7deaf70c-a8f7-4d02-a94e-cdd760447f3b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_mark_as_featured
+    - node.type.promotion
+id: node.promotion.field_mark_as_featured
+field_name: field_mark_as_featured
+entity_type: node
+bundle: promotion
+label: 'Mark as Featured'
+description: 'Please choose that this promotion is feature or not.'
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

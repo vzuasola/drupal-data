@@ -1,0 +1,53 @@
+uuid: f65a8377-6a0b-4a79-84ff-49a90ba20865
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_add_placeholder
+    - paragraphs.paragraphs_type.domain_management_configuration
+    - taxonomy.vocabulary.domain
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: NFG8ixJb91ukaz2yBEcX4V1Jw0Jzkp2U7V9aXX3v8h8
+id: taxonomy_term.domain.field_add_placeholder
+field_name: field_add_placeholder
+entity_type: taxonomy_term
+bundle: domain
+label: 'Add Placeholder'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      domain_management_configuration: domain_management_configuration
+    target_bundles_drag_drop:
+      domain_management_configuration:
+        enabled: true
+        weight: 2
+      floating_banner_item:
+        weight: 10
+        enabled: false
+      mobile_menu:
+        weight: 11
+        enabled: false
+      responsive_partner:
+        weight: 12
+        enabled: false
+      responsive_sponsor:
+        weight: 13
+        enabled: false
+      right_side_block_content:
+        weight: 14
+        enabled: false
+      slider_overlay_cmi:
+        weight: 15
+        enabled: false
+      social_media_cmi:
+        weight: 16
+        enabled: false
+field_type: entity_reference_revisions

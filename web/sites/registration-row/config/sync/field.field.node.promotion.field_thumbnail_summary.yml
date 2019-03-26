@@ -1,0 +1,23 @@
+uuid: 2688aef3-668b-4a1c-a146-71b39963d3a1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_thumbnail_summary
+    - node.type.promotion
+  module:
+    - text
+_core:
+  default_config_hash: 1YqeT2XId7I060sXNVdtOkX5rQAnr4FFgoK_7zZi2tc
+id: node.promotion.field_thumbnail_summary
+field_name: field_thumbnail_summary
+entity_type: node
+bundle: promotion
+label: 'Thumbnail summary'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
