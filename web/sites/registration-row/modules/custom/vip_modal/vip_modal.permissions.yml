@@ -1,0 +1,22 @@
+add vip modal content entity entities:
+  title: 'Create new Vip Modal Content Entity entities'
+
+administer vip modal content entity entities:
+  title: 'Administer Vip Modal Content Entity entities'
+  description: 'Allow to access the administration form to configure Vip Modal Content Entity entities.'
+  restrict access: true
+
+delete vip modal content entity entities:
+  title: 'Delete Vip Modal Content Entity entities'
+
+edit vip modal content entity entities:
+  title: 'Edit Vip Modal Content Entity entities'
+
+access vip modal content entity overview:
+  title: 'Access the Vip Modal Content Entity overview page'
+
+view published vip modal content entity entities:
+  title: 'View published Vip Modal Content Entity entities'
+
+view unpublished vip modal content entity entities:
+  title: 'View unpublished Vip Modal Content Entity entities'

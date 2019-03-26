@@ -1,0 +1,52 @@
+uuid: 6fae5ba0-758f-4e14-8d15-c520c10f5b94
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.mobile_menu_entity.mobile_menu_entity.field_menu_id
+    - field.field.mobile_menu_entity.mobile_menu_entity.field_mobile_menu_item
+  module:
+    - entity_reference_revisions
+    - user
+    - webcomposer_mobile_menu
+_core:
+  default_config_hash: l-TRh4CiOaIpyZ99d1m9OuN4Ty5aF6vVENlTBHLS7cQ
+id: mobile_menu_entity.mobile_menu_entity.default
+targetEntityType: mobile_menu_entity
+bundle: mobile_menu_entity
+mode: default
+content:
+  field_menu_id:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_mobile_menu_item:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  name:
+    label: above
+    type: string
+    weight: -4
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  user_id:
+    label: hidden
+    type: author
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

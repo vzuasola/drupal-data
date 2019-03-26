@@ -1,0 +1,21 @@
+uuid: 315d95ee-b09f-4aa5-a2d0-445b544403dd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_mobile_menu_class
+    - paragraphs.paragraphs_type.mobile_menu
+_core:
+  default_config_hash: zHz7q-TIGP7bR2eB7koG4Fsj2bei76aG8ZKP-xvKhQ8
+id: paragraph.mobile_menu.field_mobile_menu_class
+field_name: field_mobile_menu_class
+entity_type: paragraph
+bundle: mobile_menu
+label: Class
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

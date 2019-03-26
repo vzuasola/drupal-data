@@ -1,0 +1,8 @@
+uuid: feb3c551-5a1e-48f2-bee8-5cd4d3314f75
+langcode: en
+status: true
+dependencies: {  }
+id: mobile-quicklinks-gr
+label: 'Mobile Quicklinks GR'
+description: ''
+locked: false

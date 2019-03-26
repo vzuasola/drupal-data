@@ -1,0 +1,39 @@
+field_settings:
+  label: 輸入您的姓
+  placeholder: 輸入您的姓
+  annotation: "請輸入在您的銀行帳戶顯示的姓氏（如：喬-史密斯）\r\n"
+field_validations:
+  required:
+    error_message: "此項為必填項。\r\n"
+  alpha:
+    error_message: 'Field should be Alphabet characters only'
+  alphanumeric:
+    error_message: 'Field should be alphanumeric'
+  alpha_multi:
+    error_message: 您必須輸入正確的姓氏。
+  numeric:
+    error_message: 'Field should be numeric'
+  no_symbols:
+    error_message: "姓名包含無效字符 (如: .,@,#,%,^,*,( ),[],/)\r\n"
+  numeric_symbols:
+    error_message: 'Field contains invalid special characters'
+  email:
+    error_message: 'Field does not contain a valid email address'
+  min_length:
+    error_message: "姓名須在1-50個字符以內\r\n"
+  max_length:
+    error_message: "名字不可超過50 字符\r\n"
+  regex:
+    error_message: 'This field only accepts specific characters.'
+  valid_date:
+    error_message: 'Date is invalid'
+  username_availability:
+    error_message: 'Username not available'
+  email_availability:
+    error_message: 'Email not available'
+  invalid_words:
+    error_message: "請輸入有效的名字。\r\n"
+  valid_languages:
+    error_message: "此項僅接受英語,中文,韓語,希臘語,撇號('),和破折號(-) 字符\r\n"
+  not_match_username:
+    error_message: 'Password should not equal to username'

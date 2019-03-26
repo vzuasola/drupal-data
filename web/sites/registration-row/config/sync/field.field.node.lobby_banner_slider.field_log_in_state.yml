@@ -1,0 +1,21 @@
+uuid: 92f12406-19d9-4be7-8bd3-4570712cdb9e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_log_in_state
+    - node.type.lobby_banner_slider
+  module:
+    - options
+id: node.lobby_banner_slider.field_log_in_state
+field_name: field_log_in_state
+entity_type: node
+bundle: lobby_banner_slider
+label: 'Log-in State'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

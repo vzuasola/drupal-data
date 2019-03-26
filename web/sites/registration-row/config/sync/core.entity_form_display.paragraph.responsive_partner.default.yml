@@ -1,0 +1,75 @@
+uuid: ec7df5cc-8d8b-4c5b-9274-17d308dc86bb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.responsive_partner.field_link_target
+    - field.field.paragraph.responsive_partner.field_partner_alternative_text
+    - field.field.paragraph.responsive_partner.field_res_sponsor_image
+    - field.field.paragraph.responsive_partner.field_res_sponsor_link
+    - field.field.paragraph.responsive_partner.field_res_sponsor_mobile_logo
+    - field.field.paragraph.responsive_partner.field_res_sponsor_tablet_logo
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.responsive_partner
+  module:
+    - image
+id: paragraph.responsive_partner.default
+targetEntityType: paragraph
+bundle: responsive_partner
+mode: default
+content:
+  field_link_target:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_partner_alternative_text:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_res_sponsor_image:
+    weight: 2
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_res_sponsor_link:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_res_sponsor_mobile_logo:
+    weight: 4
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_res_sponsor_tablet_logo:
+    weight: 3
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  translation:
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
+  uid: true

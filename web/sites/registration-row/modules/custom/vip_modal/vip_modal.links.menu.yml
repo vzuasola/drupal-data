@@ -1,0 +1,21 @@
+
+vip_modal.list:
+  title: 'VIP Modal'
+  description: 'Configure modal contents'
+  parent: system.admin_config
+  route_name: vip_modal.admin_settings
+  weight: 1500
+
+# Vip Modal Content Entity menu items definition
+entity.vip_modal_entity.collection:
+  title: 'Vip Modal Content Entity list'
+  route_name: entity.vip_modal_entity.collection
+  description: 'List Vip Modal Content Entity entities'
+  parent: vip_modal.list
+  weight: 100
+
+vip_modal_entity.admin.structure.settings:
+  title: Vip Modal Content Entity settings
+  description: 'Configure Vip Modal Content Entity entities'
+  route_name: vip_modal_entity.settings
+  parent: vip_modal.list

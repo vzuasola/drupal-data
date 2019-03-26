@@ -1,0 +1,23 @@
+uuid: b38beb7c-3807-471a-a3ae-427862e080b4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hide_promotion
+    - node.type.promotion
+id: node.promotion.field_hide_promotion
+field_name: field_hide_promotion
+entity_type: node
+bundle: promotion
+label: 'Hide Promotion'
+description: 'Check this option to hide promotion from Summary page and Right side block of promotions.'
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

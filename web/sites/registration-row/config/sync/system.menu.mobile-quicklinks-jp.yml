@@ -1,0 +1,8 @@
+uuid: 5ad4f766-232b-4e48-ac1f-6bbc4439ba1f
+langcode: en
+status: true
+dependencies: {  }
+id: mobile-quicklinks-jp
+label: 'Mobile Quicklinks JP'
+description: ''
+locked: false

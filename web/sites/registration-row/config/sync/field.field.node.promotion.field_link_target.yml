@@ -1,0 +1,25 @@
+uuid: c2a6b601-529b-4499-ab8b-2f08ca3e9ebd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_link_target
+    - node.type.promotion
+  module:
+    - options
+_core:
+  default_config_hash: Xz6ED98nLhXKGfBo66qKjcI6Bfn0uIMGX5nC8w3muWM
+id: node.promotion.field_link_target
+field_name: field_link_target
+entity_type: node
+bundle: promotion
+label: 'Link Target'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: _self
+default_value_callback: ''
+settings: {  }
+field_type: list_string

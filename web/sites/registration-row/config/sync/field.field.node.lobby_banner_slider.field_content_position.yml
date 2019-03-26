@@ -1,0 +1,23 @@
+uuid: b3a74169-7d10-436f-9187-094da33beb24
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content_position
+    - node.type.lobby_banner_slider
+  module:
+    - options
+id: node.lobby_banner_slider.field_content_position
+field_name: field_content_position
+entity_type: node
+bundle: lobby_banner_slider
+label: 'Content Position'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: top
+default_value_callback: ''
+settings: {  }
+field_type: list_string

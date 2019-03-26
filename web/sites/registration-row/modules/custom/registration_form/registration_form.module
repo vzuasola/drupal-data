@@ -1,0 +1,60 @@
+<?php
+
+/**
+ * @file
+ */
+
+/**
+ * Implements hook_webcomposer_form_validation_alter().
+ *
+ * Registration form - Username and Email validation
+ */
+function registration_form_webcomposer_form_validation_alter(&$validations) {
+  $validations['username_availability'] = [
+    'title' => 'Username Availability',
+    'description' => 'Validate username if already exist',
+    'error' => 'Username not available',
+  ];
+  $validations['email_availability'] = [
+    'title' => 'Email Availability',
+    'description' => 'Validate user email if already exist',
+    'error' => 'Email not available',
+  ];
+  $validations['invalid_words'] = [
+    'title' => 'Invalid Words',
+    'description' => 'Validation to disallow specific words in the field',
+    'error' => 'Invalid/not allowed characters',
+    'parameters' => [
+      'invalid_words_list' => [
+        '#title' => 'Invalid Words List',
+        '#description' => 'List of words to disallow',
+        '#type' => 'textarea',
+      ],
+    ],
+  ];
+  $validations['valid_languages'] = [
+    'title' => 'Valid Languages',
+    'description' => 'Validation to allow or disallow specific languages based on regex value',
+    'error' => "This field only accepts specific characters.",
+    'parameters' => [
+      'regex_value' => [
+        '#title' => 'Regex String',
+        '#description' => 'Regex value that will be tested on the front end. ' .
+          '(Only configure this if you know how to code a regex)',
+        '#type' => 'textarea',
+      ],
+    ],
+  ];
+  $validations['valid_date'] = [
+    'title' => 'Valid Date',
+    'description' => 'Validation to check if the inputted date is correct based on format' .
+      '(must have a Birthdate format on field settings)',
+    'error' => 'Date is invalid',
+  ];
+  // password validation
+  $validations['not_match_username'] = [
+    'title' => 'Not Match Username',
+    'description' => 'Validation to disallow current username as password',
+    'error' => 'Password should not equal to username',
+  ];
+}

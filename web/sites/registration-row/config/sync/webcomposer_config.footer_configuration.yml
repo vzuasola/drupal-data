@@ -1,0 +1,22 @@
+about_dafabet_title: 'About Dafabet'
+about_dafabet_content:
+  value: "<p>Welcome to Dafabet, Asia's leading online betting site and home to some of the best gaming products on the web that includes Sports Betting, Online Casino, Live Casino Games, Online Poker, Flash Games and an array of world class online betting games. &nbsp;Dafabet is licensed and regulated by the Philippine government.</p>\r\n"
+  format: basic_html
+partners_image_url: 'http://qa1-registration.elysium-dfbt.com/sites/registration/files/footer-partners_3_1.png'
+partners_logo:
+  - '800'
+quicklinks_title: 'Quick Links'
+_core:
+  default_config_hash: e_KLM_h2W7kLIYPPfIZzKHCSSzugsz96pboXQxlbhys
+social_media_title: 'Follow us and receive the latest updates'
+back_to_top_title: ''
+sponsor_mobile_desc: 'Official Main Club Sponsor'
+tablet_partners_logo:
+  - '682'
+advanced__active_tab: edit-cookie-notification-group
+value: null
+format: null
+country_codes: 'BE,DE,EL,ES,FR,HR,CY,PT,UK,AL,AD,AM,AT,AZ,BY,BA,BG,HR,CZ,DK,EE,FI,GE,DE,GR,HU,IS,IE,IT,KZ,LV,LI,LT,LU,MK,MT,MD,MC,ME,NL,NO,PL,RO,RU,SM,RS,SK,SI,SE,TR,UA,VA,EU'
+cookie_notification:
+  value: "<p>We use cookies to give you the best experience possible. By continuing to navigate through this site you consent to the use of cookies in accordance with our <a href=\"{domain:entry}/{lang}/security\" target=\"_blank\">Cookies Policy</a>.\r\n</p>\r\n"
+  format: basic_html

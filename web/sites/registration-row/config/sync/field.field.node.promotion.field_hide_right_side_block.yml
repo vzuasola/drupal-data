@@ -1,0 +1,23 @@
+uuid: 74450f9a-c361-4a58-b683-32f0abbfea92
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hide_right_side_block
+    - node.type.promotion
+id: node.promotion.field_hide_right_side_block
+field_name: field_hide_right_side_block
+entity_type: node
+bundle: promotion
+label: 'Hide Right Side Block'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

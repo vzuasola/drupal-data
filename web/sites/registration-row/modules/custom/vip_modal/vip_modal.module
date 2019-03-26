@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains vip_modal.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function vip_modal_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the vip_modal module.
+    case 'help.page.vip_modal':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('This module provides configuration to upload modal contents for VIP') . '</p>';
+      return $output;
+
+    default:
+  }
+}

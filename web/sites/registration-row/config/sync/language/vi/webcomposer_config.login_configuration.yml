@@ -1,0 +1,28 @@
+autologout_box_content:
+  format: basic_html
+  value: "<p>Lượt truy cập của Quý Khách sẽ kết thúc trong vòng {seconds}. Quý Khách có muốn tiếp tục truy cập?</p>\r\n"
+notification_content:
+  format: basic_html
+  value: "<p>Lượt truy cập của Quý Khách đã kết thúc vì không có hoạt động.</p>\r\n"
+lightbox_blurb: "Bạn chưa là Thành viên Dafabet?\r\n"
+mobile_login_button_label: 'ĐĂNG NHẬP/ĐĂNG KÝ'
+advanced__active_tab: edit-login-form-error-messages-details
+login_page_blurb: ''
+rememberme_label: 'Nhớ Tên đăng nhập'
+mobile_cant_login_url: '{domain:mobile}/{lang}/cant-login'
+username_placeholder: 'Tên đăng nhập'
+password_placeholder: 'Mật khẩu'
+login_bottom_label: 'ĐĂNG NHẬP'
+error_message_blank_username: 'Cần điền Tên Đăng Nhập'
+error_message_blank_password: 'Cần điền Mật khẩu'
+error_message_blank_passname: 'Vui lòng kiểm tra tất cả các mục và thử lại.'
+error_message_invalid_passname: 'Rất tiếc, Tên đăng nhập/ Mật khẩu bạn vừa nhập không đúng. Vui lòng thử lại.'
+error_message_service_not_available: 'Dịch vụ không sẵn sàng'
+error_message_account_suspended: 'Tài khoản của Quý khách bị tạm khóa vì đăng nhập sai thông tin. Vui lòng liên hệ Bộ Phận Chăm Sóc Khách Hàng'
+error_message_account_locked: 'Tài khoản của Quý khách bị tạm khóa vì đăng nhập sai thông tin. Vui lòng liên hệ Bộ Phận Chăm Sóc Khách Hàng'
+autologout_box_title: 'LƯU Ý'
+affirmative_button_text: 'CÓ '
+negative_button_text: KHÔNG
+notification_title: 'THÔNG BÁO'
+notification_window_title: 'Phiên truy cập kết thúc'
+mobile_login_url: '{domain:mobile}/{lang}/login[query:({credentials.params}&{tracking})]'

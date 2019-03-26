@@ -1,0 +1,78 @@
+field_settings:
+  label: 'Mobile Number'
+  placeholder: 'Mobile Number'
+  annotation: ''
+  country_area_code: "AF|Afghanistan|93\r\nAX|Aland Islands|35818\r\nAL|Albania|355\r\nDZ|Algeria|213\r\nAD|Andorra|376\r\nAO|Angola|244\r\nAI|Anguilla|1264\r\nAQ|Antarctica|672\r\nAR|Argentina|54\r\nAM|Armenia|374\r\nAW|Aruba|297\r\nAU|Australia|61\r\nAT|Austria|43\r\nAZ|Azerbaijan|994\r\nBS|Bahamas|1242\r\nBH|Bahrain|973\r\nBD|Bangladesh|880\r\nBB|Barbados|1246\r\nBY|Belarus|375\r\nBZ|Belize|501\r\nBJ|Benin|229\r\nBM|Bermuda|1441\r\nBT|Bhutan|975\r\nBO|Bolivia|591\r\nBT|Bonaire Saint Eustatius and Saba|599\r\nBA|Bosnia and Herzegovina|387\r\nBW|Botswana|267\r\nBV|Bouvet Island|55\r\nBR|Brazil|55\r\nIO|British Indian Ocean Territory|246\r\nVG|British Virgin Islands|1284\r\nBN|Brunei Darussalam|673\r\nBG|Bulgaria|359\r\nBF|Burkina Faso|226\r\nBI|Burundi|257\r\nKH|Cambodia|855\r\nCM|Cameroon|237\r\nCA|Canada|1\r\nCV|Cape Verde|238\r\nKY|Cayman Islands|1345\r\nCF|Central African Republic|236\r\nTD|Chad|235\r\nCL|Chile|56\r\nCN|China|86\r\nCX|Christmas Island|618\r\nCC|Cocos (Keeling) Islands|618\r\nCO|Colombia|57\r\nKM|Comoros|269\r\nCG|Congo|242\r\nCG|Congo The Democratic Republic of the|243\r\nCK|Cook Islands|682\r\nCR|Costa Rica|506\r\nCI|Cote D'Ivoire|225\r\nHR|Croatia|385\r\nCU|Cuba|53\r\nCZ|Czech Republic|420\r\nDK|Denmark|45\r\nDJ|Djibouti|253\r\nDM|Dominica|1767\r\nDO|Dominican Republic|1809\r\nEC|Ecuador|593\r\nEG|Egypt|20\r\nSV|El Salvador|503\r\nGQ|Equatorial Guinea|240\r\nER|Eritrea|291\r\nEE|Estonia|372\r\nET|Ethiopia|251\r\nFK|Falkland Islands (Malvinas)|500\r\nFO|Faroe Islands|298\r\nFJ|Fiji|679\r\nFI|Finland|358\r\nGF|French Guiana|594\r\nPF|French Polynesia|689\r\nTF|French Southern Territories|262\r\nGA|Gabon|241\r\nGM|Gambia|220\r\nGE|Georgia|995\r\nDE|Germany|49\r\nGH|Ghana|233\r\nGI|Gibraltar|350\r\nGR|Greece|30\r\nGL|Greenland|299\r\nGD|Grenada|1473\r\nGP|Guadeloupe|590\r\nGT|Guatemala|502\r\nGG|Guernsey|441481\r\nGN|Guinea|224\r\nGW|Guinea-Bissau|245\r\nGY|Guyana|592\r\nHT|Haiti|509\r\nHM|Heard Island and McDonald Islands|0\r\nVA|Holy Sea (Vatican City State)|379\r\nHN|Honduras|504\r\nHK|Hongkong|852\r\nHU|Hungary|36\r\nIS|Iceland|354\r\nIN|India|91\r\nID|Indonesia|62\r\nIE|Ireland|353\r\nIM|Isle of Man|441624\r\nIT|Italy|39\r\nJM|Jamaica|1876\r\nJP|Japan|81\r\nJE|Jersey|44\r\nJO|Jordan|962\r\nKZ|Kazakhstan|7\r\nKE|Kenya|254\r\nKI|Kiribati|686\r\nKR|Korea Republic of|82\r\nKW|Kuwait|965\r\nKG|Kyrgyzstan|996\r\nLA|Lao People's Democratic Republic|856\r\nLV|Latvia|371\r\nLB|Lebanon|961\r\nLS|Lesotho|266\r\nLR|Liberia|231\r\nLY|Libyan Arab Jamahiriya|218\r\nLI|Liechtenstein|423\r\nLT|Lithuania|370\r\nLU|Luxembourg|352\r\nMK|Macedonia|389\r\nMG|Madagascar|261\r\nMW|Malawi|265\r\nMY|Malaysia|60\r\nMV|Maldives|960\r\nML|Mali|223\r\nMT|Malta|356\r\nMQ|Martinique|596\r\nMR|Mauritania|222\r\nMU|Mauritius|230\r\nYT|Mayotte|262\r\nMX|Mexico|52\r\nMD|Moldova Republic of|373\r\nMC|Monaco|377\r\nMN|Mongolia|976\r\nME|Montenegro|382\r\nMS|Montserrat|1664\r\nMA|Morocco|212\r\nMZ|Mozambique|258\r\nMM|Myanmar|95\r\nNA|Namibia|264\r\nNR|Nauru|674\r\nNP|Nepal|977\r\nNL|Netherlands|31\r\nNL|Netherlands Antilles|31\r\nNC|New Caledonia|687\r\nNZ|New Zealand|64\r\nNI|Nicaragua|505\r\nNG|Niger|227\r\nNG|Nigeria|234\r\nNU|Niue|683\r\nNF|Norfolk Island|6723\r\nNO|Norway|47\r\nOM|Oman|968\r\nPK|Pakistan|92\r\nPS|Palestinian Territory Occupied|970\r\nPA|Panama|507\r\nPG|Papua New Guinea|675\r\nPY|Paraguay|595\r\nPE|Peru|51\r\nPN|Pitcairn Islands|64\r\nPL|Poland|48\r\nQA|Qatar|974\r\nRE|Reunion|262\r\nRO|Romania|40\r\nRU|Russian Federation|7\r\nRW|Rwanda|250\r\nBL|Saint Barthelemy|590\r\nSH|Saint Helena Ascension and Tristan da Cunha|290\r\nKN|Saint Kitts and Nevis|1869\r\nLC|Saint Lucia|1758\r\nMF|Saint Martin|590\r\nPM|Saint Pierre and Miquelon|508\r\nVC|Saint Vincent and the Grenadines|1784\r\nAS|Samoa|685\r\nSM|San Marino|378\r\nST|Sao Tome and Principe|239\r\nSA|Saudi Arabia|966\r\nSN|Senegal|221\r\nRS|Serbia|381\r\nSC|Seychelles|248\r\nSL|Sierra Leone|232\r\nSX|Sint Maarten (Dutch part)|1721\r\nSK|Slovakia|421\r\nSI|Slovenia|386\r\nSB|Solomon Islands|677\r\nSO|Somalia|252\r\nZA|South Africa|27\r\nGS|South Georgia and the South Sandwich Islands|500\r\nLK|Sri Lanka|94\r\nSD|Sudan|249\r\nSR|Suriname|597\r\nSJ|Svalbard and Jan Mayen|47\r\nSZ|Swaziland|268\r\nSE|Sweden|46\r\nCH|Switzerland|41\r\nSY|Syrian Arab Republic|963\r\nTJ|Tajikistan|992\r\nTZ|Tanzania United Republic of|255\r\nTH|Thailand|66\r\nTL|Timor-Leste|670\r\nTG|Togo|228\r\nTK|Tokelau|690\r\nTO|Tonga|676\r\nTT|Trinidad and Tobago|1868\r\nTN|Tunisia|216\r\nTM|Turkmenistan|993\r\nTC|Turks and Caicos Islands|1649\r\nTV|Tuvalu|688\r\nUG|Uganda|256\r\nUA|Ukraine|380\r\nAE|United Arab Emirates|971\r\nUY|Uruguay|598\r\nUS|USA|1\r\nUZ|Uzbekistan|998\r\nVU|Vanuatu|678\r\nVE|Venezuela|58\r\nVN|Vietnam|84\r\nWF|Wallis and Futuna|681\r\nEH|Western Sahara|212\r\nYE|Yemen|967\r\nZM|Zambia|260\r\nZW|Zimbabwe|263"
+  country_area_code_validation: "86|11|11|Please input an exact 11 characters\r\n66|9|9|Please input an exact 9 characters\r\n84|9|11|Please input 9-11 characters\r\n62|10|12|Please input 10-12 characters\r\n82|10|10|Please input an exact 10 characters\r\n91|10|10|Please input an exact 10 characters\r\n60|9|10|Please input 9-10 characters"
+field_validations:
+  required:
+    enable: 1
+    error_message: 'This field is required.'
+  alpha:
+    enable: 0
+    error_message: 'Field should be Alphabet characters only'
+    parameters:
+      spaces: 1
+  alphanumeric:
+    enable: 0
+    error_message: 'Field should be alphanumeric'
+    parameters:
+      spaces: 1
+  alpha_multi:
+    enable: 0
+    error_message: 'Value is not a valid multilingual character'
+    parameters:
+      space: 1
+      numeric: 1
+      allow: 0
+      disallow: 0
+      special: ''
+  numeric:
+    enable: 1
+    error_message: 'Please enter a valid mobile number.'
+  no_symbols:
+    enable: 0
+    error_message: 'Field contains invalid special characters'
+  numeric_symbols:
+    enable: 1
+    error_message: 'Please enter a valid mobile number.'
+  email:
+    enable: 0
+    error_message: 'Field does not contain a valid email address'
+  min_length:
+    enable: 1
+    error_message: 'Mobile Number must be 6-15 digits.'
+    parameters:
+      length: '6'
+  max_length:
+    enable: 1
+    error_message: 'Mobile Number must be 6-15 digits.'
+    parameters:
+      length: '15'
+  regex:
+    enable: 0
+    error_message: 'This field only accepts specific characters.'
+    parameters:
+      regex_value: ''
+  valid_date:
+    enable: 0
+    error_message: 'Date is invalid'
+  username_availability:
+    enable: 0
+    error_message: 'Username not available'
+  email_availability:
+    enable: 0
+    error_message: 'Email not available'
+  invalid_words:
+    enable: 0
+    error_message: 'Invalid/not allowed characters'
+    parameters:
+      invalid_words_list: ''
+  valid_languages:
+    enable: 0
+    error_message: 'This field only accepts specific characters.'
+    parameters:
+      regex_value: ''
+  not_match_username:
+    enable: 0
+    error_message: 'Password should not equal to username'

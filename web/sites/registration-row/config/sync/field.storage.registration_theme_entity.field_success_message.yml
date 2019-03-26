@@ -1,0 +1,21 @@
+uuid: 5970820f-4fcc-4d0e-ae27-438ca9bca66f
+langcode: en
+status: true
+dependencies:
+  module:
+    - registration_theme
+id: registration_theme_entity.field_success_message
+field_name: field_success_message
+entity_type: registration_theme_entity
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

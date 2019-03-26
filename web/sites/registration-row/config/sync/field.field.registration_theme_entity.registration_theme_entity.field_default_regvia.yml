@@ -1,0 +1,22 @@
+uuid: 98f92045-d221-4bfc-af9b-34b03eab073b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.registration_theme_entity.field_default_regvia
+  module:
+    - registration_theme
+id: registration_theme_entity.registration_theme_entity.field_default_regvia
+field_name: field_default_regvia
+entity_type: registration_theme_entity
+bundle: registration_theme_entity
+label: 'Default Regvia'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: '2'
+default_value_callback: ''
+settings: {  }
+field_type: string

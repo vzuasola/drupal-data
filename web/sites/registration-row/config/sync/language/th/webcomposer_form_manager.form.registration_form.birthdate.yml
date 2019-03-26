@@ -1,0 +1,36 @@
+field_settings:
+  label: วันเกิด
+  placeholder: วัน/เดือน/ปี
+  date-format: DD/MM/YYYY
+  annotation: 'กรุณาระบุวันเดือนปีเกิดของคุณ ทั้งนี้สมาชิกจะต้องมีอายุ18 ปีบริบูรณ์ขึ้นไป'
+field_validations:
+  required:
+    error_message: 'กรุณาระบุวันเดือนปีเกิดของคุณให้ถูกต้อง ทั้งนี้สมาชิกจะต้องมีอายุ18 ปีบริบูรณ์ขึ้นไป'
+  alpha:
+    error_message: 'Field should be Alphabet characters only'
+  alphanumeric:
+    error_message: 'Field should be alphanumeric'
+  alpha_multi:
+    error_message: 'Value is not a valid multilingual character'
+  numeric:
+    error_message: 'Field should be numeric'
+  no_symbols:
+    error_message: 'Field contains invalid special characters'
+  numeric_symbols:
+    error_message: 'Field contains invalid special characters'
+  email:
+    error_message: 'Field does not contain a valid email address'
+  min_length:
+    error_message: 'Minimum requirement not met'
+  max_length:
+    error_message: 'Maximum requirement not met'
+  username_availability:
+    error_message: 'Username not available'
+  email_availability:
+    error_message: 'Email not available'
+  invalid_words:
+    error_message: 'Invalid/not allowed characters'
+  valid_languages:
+    error_message: "กรุณาใส่วันเดือนปีเกิดของคุณตามนี้ วัน/เดือน/ปี\r\n"
+  valid_date:
+    error_message: "กรุณาใส่วันเดือนปีเกิดของคุณตามนี้ วัน/เดือน/ปี\r\n"

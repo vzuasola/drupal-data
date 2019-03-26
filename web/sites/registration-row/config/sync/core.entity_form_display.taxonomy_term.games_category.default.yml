@@ -1,0 +1,50 @@
+uuid: 1e2a1e6b-b904-4175-bece-66fb30e20bf6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.games_category.field_alias
+    - field.field.taxonomy_term.games_category.field_show_to_kebab
+    - taxonomy.vocabulary.games_category
+id: taxonomy_term.games_category.default
+targetEntityType: taxonomy_term
+bundle: games_category
+mode: default
+content:
+  field_alias:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_show_to_kebab:
+    weight: 3
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true

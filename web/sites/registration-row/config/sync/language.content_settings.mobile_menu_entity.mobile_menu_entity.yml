@@ -1,0 +1,19 @@
+uuid: 5bf5608d-4a10-4941-86fa-1c37ef008693
+langcode: en
+status: true
+dependencies:
+  module:
+    - content_translation
+    - webcomposer_mobile_menu
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+_core:
+  default_config_hash: 1S3AmeqorrZUs9FkmDkPwhmj1EIltUwvIdGAAjl66kI
+id: mobile_menu_entity.mobile_menu_entity
+target_entity_type_id: mobile_menu_entity
+target_bundle: mobile_menu_entity
+default_langcode: site_default
+language_alterable: true
