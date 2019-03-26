@@ -12,7 +12,7 @@ dependencies:
     - user
     - webcomposer_announcements
 _core:
-  default_config_hash: 3RpcEecnACMi_ZoEiLjldfDJPRK9nt72AXgw3TW3V8o
+  default_config_hash: atpYhQqkYqROGMBcHJ6420vwUW7PIIGka-g2sSAqNVI
 id: announcement_entity.announcement_entity.default
 targetEntityType: announcement_entity
 bundle: announcement_entity
