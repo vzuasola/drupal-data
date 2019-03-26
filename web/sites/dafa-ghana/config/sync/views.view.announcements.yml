@@ -7,7 +7,7 @@ dependencies:
     - serialization
     - webcomposer_announcements
 _core:
-  default_config_hash: vgimOMC8KwcM92VPqu3064nNlinS-rlejQVaKOrsN8k
+  default_config_hash: AG4LU4uxddxhqu5_6PdgSo2odSwtTSO-WAEoxknPbxY
 id: announcements
 label: 'Announcements - REST'
 module: views

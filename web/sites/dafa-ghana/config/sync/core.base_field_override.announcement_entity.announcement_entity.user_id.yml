@@ -4,6 +4,8 @@ status: true
 dependencies:
   module:
     - webcomposer_announcements
+_core:
+  default_config_hash: K90FPoofh5wJkcMmdtsk1BfG0_tquxvwuDs0KnpVkhQ
 id: announcement_entity.announcement_entity.user_id
 field_name: user_id
 entity_type: announcement_entity

@@ -6,24 +6,24 @@ sc_lang_text: SC
 ch_lang_text: CH
 balance_toggle: 0
 product_balance_label: 'Product Account Balance'
-total_balance_label: 'Total Account Balance'
+total_balance_label: 'Total Accountx Balance'
 product_balance_id: '1'
 balance_error_text: 'Error fetching balances'
 profile_icon_hover_text: 'My Profile'
 cashier_icon_hover_text: Cashier
 product_menu_new_tag: NEW
-welcome_text: 'Hola {username}!'
+welcome_text: 'Hello {username}!'
 profile_link: '#'
 profile_logout_text: /logout
-balance_label_mapping: "4|OW Sports\r\n6|Dafa Sports\r\n1|Casino Classic\r\n2|Casino Gold\r\n5|Live Dealer & Games\r\n3|Poker\r\n7|Fish Hunter"
-currency_balance_mapping: 7|RMB
-excluded_balance_mapping: '7'
+balance_label_mapping: 77|Sports
+currency_balance_mapping: ''
+excluded_balance_mapping: ''
 balance_error_text_product: N/A
-balance_mapping: "5|Live Dealer & Games\r\n3|Poker"
+balance_mapping: ''
 cashier_link: N/A
 _core:
   default_config_hash: PFMPsrAHrtmTBlFCW-BXWUi2GEIezDmqwYV3B8cSc9U
-header_settings_tab__active_tab: edit-header-other-group
+header_settings_tab__active_tab: edit-balance-group
 logo_title: dafabet
 registration_link: /join
 password_mask_toggle: 0
@@ -34,15 +34,15 @@ cashier_mapping: ''
 default_mcashier_link: /cashier
 mcashier_mapping: ''
 balance_label_override: ''
-critical_announcement: '0'
+critical_announcement: '1'
 critical_announcement_content:
-  value: ''
+  value: "<p>tester crit</p>\r\n"
   format: basic_html
 value: null
 format: null
-news_announcement: '0'
+news_announcement: '1'
 news_announcement_content:
-  value: ''
+  value: "<p>tester news</p>\r\n"
   format: basic_html
 lobby_page_title: lobby
 promotion_page_title: promotion

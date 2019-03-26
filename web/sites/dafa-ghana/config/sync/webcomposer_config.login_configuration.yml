@@ -1,5 +1,5 @@
-username_placeholder: Username
-password_placeholder: Password
+username_placeholder: Username1
+password_placeholder: 1Password
 login_bottom_label: Login
 error_message_blank_username: 'Username is required.'
 error_message_blank_password: 'Password is required.'
