@@ -1,0 +1,25 @@
+uuid: 31840157-28f1-4fad-9774-c286add2e404
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.webcomposer_slider_v2_entity.field_content_position
+  module:
+    - options
+    - webcomposer_slider_v2
+_core:
+  default_config_hash: '-gLHwsDYXadCQDOZZdMqwa3cw8o30cx0WMmpuQaZ9Wg'
+id: webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_content_position
+field_name: field_content_position
+entity_type: webcomposer_slider_v2_entity
+bundle: webcomposer_slider_v2_entity
+label: 'Pre Content Position'
+description: 'Position the Blurb content'
+required: false
+translatable: true
+default_value:
+  -
+    value: bottom
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,18 @@
+uuid: fbe08cda-2cf7-4774-a1d2-bead48361c2e
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.games_filter
+id: taxonomy_term.games_filter.metatag
+field_name: metatag
+entity_type: taxonomy_term
+bundle: games_filter
+label: Metatags
+description: 'The metatags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map
