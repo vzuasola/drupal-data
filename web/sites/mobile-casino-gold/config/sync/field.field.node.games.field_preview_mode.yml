@@ -1,0 +1,23 @@
+uuid: 022384bf-b1b0-46eb-93b7-955e780100cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_preview_mode
+    - node.type.games
+id: node.games.field_preview_mode
+field_name: field_preview_mode
+entity_type: node
+bundle: games
+label: 'Preview Mode'
+description: 'Mark this game as preview mode'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: '1'
+  off_label: '0'
+field_type: boolean

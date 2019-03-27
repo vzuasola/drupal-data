@@ -1,0 +1,7 @@
+casino.admin_settings:
+  path: 'admin/config/casino-mobile'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Mobile Casino Configurations'
+  requirements:
+    _permission: 'administer mobile config'
