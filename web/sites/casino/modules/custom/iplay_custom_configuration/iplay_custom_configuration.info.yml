@@ -1,0 +1,5 @@
+name: Iplay Custom Configuration
+type: module
+description: Configure Iplay custom configurations
+core: 8.x
+package: Custom
