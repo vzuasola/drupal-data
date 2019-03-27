@@ -110,6 +110,41 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
         ],
       ],
 
+      'confirm_password' => [
+        'name' => 'Confirm Password',
+        'type' => 'password',
+        'settings' => [
+          'label' => [
+            '#title' => 'Confirm Password label',
+            '#type' => 'textfield',
+            '#description' => 'The Label for Password field',
+          ],
+          'placeholder' => [
+            '#title' => 'Confirm Password placeholder label',
+            '#type' => 'textfield',
+            '#description' => 'label for Password field placeholder',
+          ],
+          'annotation' => [
+            '#title' => 'Confirm Password Annotation text',
+            '#type' => 'textarea',
+            '#description' => 'field annotation that will be displayed on focus',
+          ],
+        ],
+      ],
+
+      'confirm_password_meter' => [
+        'name' => 'Password Meter',
+        'type' => 'markup',
+        'settings' => [
+          'markup' => [
+            '#title' => 'Confirm Password meter markup',
+            '#type' => 'textarea',
+            '#description' => 'HTML markup for password meter.',
+            '#default_value' => '<div class="password_meter_wrapper password-meter-hidden grid mb-0"></div>',
+          ],
+        ],
+      ],
+
       'breakline_1' => [
         'name' => 'Break Line Markup',
         'type' => 'markup',
@@ -119,62 +154,6 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
             '#type' => 'textarea',
             '#description' => 'A Markup text breakline for registration form',
             '#default_value' => '<hr>',
-          ],
-        ],
-      ],
-
-      'email' => [
-        'name' => 'Email',
-        'type' => 'textfield',
-        'settings' => [
-          'label' => [
-            '#title' => 'Email Label',
-            '#type' => 'textfield',
-            '#description' => 'The Label for Email field',
-          ],
-          'placeholder' => [
-            '#title' => 'Email placeholder label',
-            '#type' => 'textfield',
-            '#description' => 'label for Email field placeholder',
-          ],
-          'annotation' => [
-            '#title' => 'Email Annotation text',
-            '#type' => 'textarea',
-            '#description' => 'field annotation that will be displayed on focus',
-          ],
-        ],
-      ],
-
-      'mobile_number' => [
-        'name' => 'Mobile Number',
-        'type' => 'textfield',
-        'settings' => [
-          'label' => [
-            '#title' => 'Mobile Number Label',
-            '#type' => 'textfield',
-            '#description' => 'The label for the Mobile Number field',
-          ],
-          'placeholder' => [
-            '#title' => 'Mobile Number placeholder label',
-            '#type' => 'textfield',
-            '#description' => 'label for Mobile number field placeholder',
-          ],
-          'annotation' => [
-            '#title' => 'Mobile Number Annotation text',
-            '#type' => 'textarea',
-            '#description' => 'field annotation that will be displayed on focus',
-          ],
-          'country_area_code' => [
-            '#title' => 'Country Area Codes',
-            '#type' => 'textarea',
-            '#description' => 'List of area codes that will appear beside the mobile number ' .
-            '(take note: must be a valid area code or the image will not appear beside the are code)',
-          ],
-          'country_area_code_validation' => [
-            '#title' => 'Country Area Code Custom Validation',
-            '#type' => 'textarea',
-            '#description' => 'List of area codes that will be validated upon submission in which it had' .
-            ' different min and max character allowed per country code and custom message validation for it',
           ],
         ],
       ],
@@ -263,23 +242,28 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
         ],
       ],
 
-      'currency' => [
-        'name' => 'Currency',
+      'security_question_1' => [
+        'name' => 'Security Question 1',
         'type' => 'select',
         'settings' => [
           'label' => [
-            '#title' => 'Currency Label',
+            '#title' => 'Security Question 1 Label',
             '#type' => 'textfield',
             '#description' => 'The dLabel for the Currency field',
           ],
           'placeholder' => [
-            '#title' => 'Choose a currency',
+            '#title' => 'Choose a Security Question 1',
             '#type' => 'textfield',
             '#description' => 'Placeholder value for this textfield',
-            '#default_value' => 'Select your currency...',
+            '#default_value' => 'Select your question...',
+          ],
+          'groups' => [
+            '#title' => 'Group Name',
+            '#type' => 'textfield',
+            '#description' => 'Group name for Security Answer 1',
           ],
           'choices' => [
-            '#title' => 'Currency Choices',
+            '#title' => 'Security Question 1 Choices',
             '#type' => 'textarea',
             '#description' => 'Provide a pipe separated key value pair. <br> <small>Example key|My Value</small>',
             '#default_value' => implode(PHP_EOL, [
@@ -288,50 +272,82 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
               '1|EUR',
             ]),
           ],
-          'portal_id_to_currency_mapping' => [
-            '#title' => 'Mapping of portal IDs to list of currencies',
+        ],
+      ],
+
+      'security_answer_1' => [
+        'name' => 'Security Answer 1',
+        'type' => 'textfield',
+        'settings' => [
+          'label' => [
+            '#title' => 'Security Answer 1 label',
+            '#type' => 'textfield',
+            '#description' => 'label for Security Answer 1 field',
+          ],
+          'placeholder' => [
+            '#title' => 'Security Answer 1 placeholder label',
+            '#type' => 'textfield',
+            '#description' => 'label for Security Answer 1 field placeholder',
+          ],
+          'annotation' => [
+            '#title' => 'Security Answer 1 Annotation text',
             '#type' => 'textarea',
-            '#description' => 'Mapping of icore portal IDs to the list of currencies, e.g 2|117,2,1 where 2 is the' .
-            'entrypage portal ID and 117,2,1 are the list of currencies that will appear on it',
+            '#description' => 'field annotation that will be displayed on focus',
+          ],
+        ],
+      ],
+
+      'security_question_2' => [
+        'name' => 'Security Question 2',
+        'type' => 'select',
+        'settings' => [
+          'label' => [
+            '#title' => 'Security Question 2 Label',
+            '#type' => 'textfield',
+            '#description' => 'The dLabel for the Currency field',
+          ],
+          'placeholder' => [
+            '#title' => 'Choose a Security Question 2',
+            '#type' => 'textfield',
+            '#description' => 'Placeholder value for this textfield',
+            '#default_value' => 'Select your question...',
+          ],
+          'groups' => [
+            '#title' => 'Group Name',
+            '#type' => 'textfield',
+            '#description' => 'Group name for Security Answer 1',
+          ],
+          'choices' => [
+            '#title' => 'Security Question 2 Choices',
+            '#type' => 'textarea',
+            '#description' => 'Provide a pipe separated key value pair. <br> <small>Example key|My Value</small>',
             '#default_value' => implode(PHP_EOL, [
-              '2|117,2,1',
-              '3|117,2,1',
+              '117|RMB/CNY',
+              '2|USD',
+              '1|EUR',
             ]),
           ],
         ],
       ],
 
-      'country' => [
-        'name' => 'Country',
-        'type' => 'select',
+      'security_answer_2' => [
+        'name' => 'Security Answer 2',
+        'type' => 'textfield',
         'settings' => [
           'label' => [
-            '#title' => 'Country Label',
+            '#title' => 'Security Answer 2 label',
             '#type' => 'textfield',
-            '#description' => 'The Label for the Country field',
+            '#description' => 'label for Security Answer 2 field',
           ],
           'placeholder' => [
-            '#title' => 'Choose a country',
+            '#title' => 'Security Answer 2 placeholder label',
             '#type' => 'textfield',
-            '#description' => 'Placeholder value for this textfield',
-            '#default_value' => 'Select your country...',
+            '#description' => 'label for Security Answer 2 field placeholder',
           ],
-          'choices' => [
-            '#title' => 'Country Choices',
+          'annotation' => [
+            '#title' => 'Security Answer 2 Annotation text',
             '#type' => 'textarea',
-            '#description' => 'Provide a pipe separated key value pair. <br> <small>Example key|My Value</small>',
-            '#default_value' => implode(PHP_EOL, [
-              '48|China',
-              '208|Thailand',
-            ]),
-          ],
-          'top_choices' => [
-            '#title' => 'Top Country Choices',
-            '#type' => 'textarea',
-            '#description' => 'Top Countries that will appear at dropdown',
-            '#default_value' => implode(PHP_EOL, [
-              '48',
-            ]),
+            '#description' => 'field annotation that will be displayed on focus',
           ],
         ],
       ],
@@ -378,10 +394,23 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
 
       'accept_terms' => [
         'name' => 'Accept Terms Markup',
-        'type' => 'markup',
+        'type' => 'checkbox',
         'settings' => [
           'markup' => [
             '#title' => 'Accept Terms Text',
+            '#type' => 'textarea',
+            '#description' => 'A Markup text for accept terms and conditions beside the submit button',
+            '#default_value' => 'I am at least 18 years old and have read and accept the Terms and Condition',
+          ],
+        ],
+      ],
+
+      'legal_age' => [
+        'name' => 'Legal Age Markup',
+        'type' => 'checkbox',
+        'settings' => [
+          'markup' => [
+            '#title' => 'Legal Age Text',
             '#type' => 'textarea',
             '#description' => 'A Markup text for accept terms and conditions beside the submit button',
             '#default_value' => 'I am at least 18 years old and have read and accept the Terms and Condition',
