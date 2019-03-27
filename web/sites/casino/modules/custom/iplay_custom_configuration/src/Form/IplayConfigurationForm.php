@@ -16,7 +16,7 @@ use Drupal\Core\Form\FormStateInterface;
  *   },
  *   menu = {
  *     "title" = "Iplay Custom Configuration",
- *     "description" = "Configure custom Ipaly configuration",
+ *     "description" = "Configure custom Iplay configuration",
  *     "parent" = "casino_games.admin_settings",
  *     "weight" = -5
  *   },
