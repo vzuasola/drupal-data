@@ -1,0 +1,19 @@
+uuid: 7116e906-45ee-45b4-b230-01cb402c2139
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_product_id
+    - taxonomy.vocabulary.products
+id: taxonomy_term.products.field_product_id
+field_name: field_product_id
+entity_type: taxonomy_term
+bundle: products
+label: 'Product ID'
+description: 'The unique ID for this term'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

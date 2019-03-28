@@ -1,0 +1,128 @@
+uuid: aca1aad0-3048-4eed-877d-c46185c498e2
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.products.field_class
+    - field.field.taxonomy_term.products.field_enable_disable
+    - field.field.taxonomy_term.products.field_product_id
+    - field.field.taxonomy_term.products.field_product_tag
+    - field.field.taxonomy_term.products.field_target
+    - field.field.taxonomy_term.products.field_this_product_kebab
+    - taxonomy.vocabulary.products
+  module:
+    - field_group
+    - path
+    - text
+third_party_settings:
+  field_group:
+    group_attributes:
+      children:
+        - field_class
+        - field_target
+        - field_product_tag
+      parent_name: ''
+      weight: 4
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: Attributes
+    group_taxonomy:
+      children:
+        - langcode
+        - translation
+        - description
+        - path
+      parent_name: ''
+      weight: 5
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: Taxonomy
+id: taxonomy_term.products.default
+targetEntityType: taxonomy_term
+bundle: products
+mode: default
+content:
+  description:
+    type: text_textarea
+    weight: 4
+    region: content
+    settings:
+      placeholder: ''
+      rows: 5
+    third_party_settings: {  }
+  field_class:
+    weight: 7
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_enable_disable:
+    weight: 1
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_product_id:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_product_tag:
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_target:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_this_product_kebab:
+    weight: 2
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  translation:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

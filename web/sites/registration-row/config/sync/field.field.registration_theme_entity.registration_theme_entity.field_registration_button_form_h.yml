@@ -1,0 +1,25 @@
+uuid: e3a9e950-6916-4081-99b0-92b90bc1482f
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - field.storage.registration_theme_entity.field_registration_button_form_h
+  module:
+    - color_field
+    - registration_theme
+id: registration_theme_entity.registration_theme_entity.field_registration_button_form_h
+field_name: field_registration_button_form_h
+entity_type: registration_theme_entity
+bundle: registration_theme_entity
+label: 'Registration Button Highlight Color'
+description: 'Highlighted Background Color for registration buttons'
+required: true
+translatable: false
+default_value:
+  -
+    color: '#fbe470'
+    opacity: null
+default_value_callback: ''
+settings:
+  opacity: 0
+field_type: color_field_type

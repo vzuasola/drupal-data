@@ -1,0 +1,21 @@
+uuid: bd010ae5-19db-4547-91df-e755eb8c45cd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description
+    - paragraphs.paragraphs_type.domain_management_configuration
+_core:
+  default_config_hash: 18WWDz05gJTGFmTcP1J0EjwoTx9lKiP-P5qRWkdLxZY
+id: paragraph.domain_management_configuration.field_description
+field_name: field_description
+entity_type: paragraph
+bundle: domain_management_configuration
+label: Description
+description: 'Describe what this placeholder is used for, e.g. for GA codes or for CDN paths.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -1,0 +1,23 @@
+uuid: 39937881-910a-4203-85fa-a8338263dfe6
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_reference_revisions
+    - paragraphs
+    - webcomposer_mobile_menu
+_core:
+  default_config_hash: d7HhbjGe0qMqAqHbWeVVWzZ0FFD5oGEa64LovZWZNTE
+id: mobile_menu_entity.field_mobile_menu_item
+field_name: field_mobile_menu_item
+entity_type: mobile_menu_entity
+type: entity_reference_revisions
+settings:
+  target_type: paragraph
+module: entity_reference_revisions
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

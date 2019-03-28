@@ -1,0 +1,23 @@
+uuid: a60202f6-9f9a-4e36-9f06-2e672c8c5ccf
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_enable_disable
+    - taxonomy.vocabulary.products
+id: taxonomy_term.products.field_enable_disable
+field_name: field_enable_disable
+entity_type: taxonomy_term
+bundle: products
+label: Enable/Disable
+description: 'Please check this for enable the product tab.'
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

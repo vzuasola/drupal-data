@@ -1,0 +1,39 @@
+field_settings:
+  label: 输入您的姓
+  placeholder: 输入您的姓
+  annotation: "请输入在您的银行账户显示的姓氏（如: 张）\r\n"
+field_validations:
+  required:
+    error_message: "此项为必填项。\r\n"
+  alpha:
+    error_message: 'Field should be Alphabet characters only'
+  alphanumeric:
+    error_message: 'Field should be alphanumeric'
+  alpha_multi:
+    error_message: "您必须输入正确的姓氏。\r\n"
+  numeric:
+    error_message: 'Field should be numeric'
+  no_symbols:
+    error_message: "姓名包含无效字符 (如: .,@,#,%,^,*,( ),[],/)\r\n"
+  numeric_symbols:
+    error_message: 'Field contains invalid special characters'
+  email:
+    error_message: 'Field does not contain a valid email address'
+  min_length:
+    error_message: "姓名须在1-50个字符以内\r\n"
+  max_length:
+    error_message: "名字不可超过50字符\r\n"
+  regex:
+    error_message: 'This field only accepts specific characters.'
+  valid_date:
+    error_message: 'Date is invalid'
+  username_availability:
+    error_message: 'Username not available'
+  email_availability:
+    error_message: 'Email not available'
+  invalid_words:
+    error_message: "请输入有效的名字。\r\n"
+  valid_languages:
+    error_message: "此项仅接受英语,中文,韩语,希腊语,撇号('),和破折号(-)字符\r\n"
+  not_match_username:
+    error_message: 'Password should not equal to username'

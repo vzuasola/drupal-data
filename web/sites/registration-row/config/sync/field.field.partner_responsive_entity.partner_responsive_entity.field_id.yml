@@ -1,0 +1,22 @@
+uuid: b159bde9-def2-4ffa-9ac9-f2e7e2aac61d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.partner_responsive_entity.field_id
+  module:
+    - webcomposer_partner_responsive
+_core:
+  default_config_hash: ywzQNr8MAuVGC33l3Knz_eQRStAZVLb4TaJSMz_95P0
+id: partner_responsive_entity.partner_responsive_entity.field_id
+field_name: field_id
+entity_type: partner_responsive_entity
+bundle: partner_responsive_entity
+label: ID
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

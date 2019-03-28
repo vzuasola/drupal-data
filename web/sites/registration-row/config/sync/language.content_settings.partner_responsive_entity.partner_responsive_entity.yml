@@ -1,0 +1,19 @@
+uuid: 12dafbfd-4edc-4fe7-b2fa-5b61c5226038
+langcode: en
+status: true
+dependencies:
+  module:
+    - content_translation
+    - webcomposer_partner_responsive
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+_core:
+  default_config_hash: S9mFgmAUmJHmZGNSC5I8KAsOUhzJq_AwRg2DwQRqok8
+id: partner_responsive_entity.partner_responsive_entity
+target_entity_type_id: partner_responsive_entity
+target_bundle: partner_responsive_entity
+default_langcode: site_default
+language_alterable: true

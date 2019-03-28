@@ -1,0 +1,41 @@
+field_settings:
+  label: '휴대폰 번호'
+  placeholder: '휴대폰 번호'
+  annotation: ''
+  country_area_code: "AF|아프가니스탄\_|93\r\nAX|올란드 제도|35818\r\nAL|알바니아|355\r\nDZ|알제리|213\r\nAD|안도라|376\r\nAO|앙골라|244\r\nAI|앵귈라|1264\r\nAQ|남극 대륙|672\r\nAR|아르헨티나|54\r\nAM|아르메니아|374\r\nAW|아루바|297\r\nAU|호주|61\r\nAT|오스트리아|43\r\nAZ|아제르바이잔|994\r\nBS|바하마|1242\r\nBH|바레인|973\r\nBD|방글라데시|880\r\nBB|바베이도스|1246\r\nBY|벨라루스|375\r\nBZ|벨리즈|501\r\nBJ|베냉|229\r\nBM|버뮤다|1441\r\nBT|부탄|975\r\nBO|볼리비아|591\r\nBT|네덜란드령 카리브|599\r\nBA|보스니아헤르체고비나|387\r\nBW|보츠와나|267\r\nBV|부베 섬|55\r\nBR|브라질|55\r\nIO|영국령 인도양 식민지|246\r\nVG|영국령 버진아일랜드|1284\r\nBN|브루나이|673\r\nBG|불가리아|359\r\nBF|부르키나파소|226\r\nBI|부룬디|257\r\nKH|캄보디아|855\r\nCM|카메룬|237\r\nCA|캐나다|1\r\nCV|카보베르데|238\r\nKY|케이맨 제도|1345\r\nCF|중앙아프리카 공화국|236\r\nTD|차드|235\r\nCL|칠레|56\r\nCN|중국|86\r\nCX|크리스마스 섬|618\r\nCC|코코스 제도|618\r\nCO|콜롬비아|57\r\nKM|코모로|269\r\nCG|콩고|242\r\nCG|콩고 민주 공화국|243\r\nCK|쿡 제도|682\r\nCR|코스타리카|506\r\nCI|코트디부아르|225\r\nHR|크로아티아|385\r\nCU|쿠바|53\r\nCZ|체코 공화국|420\r\nDK|덴마크|45\r\nDJ|지부티|253\r\nDM|도미니카 연방\_ |1767\r\nDO|도미니카공화국|1809\r\nEC|에콰도르|593\r\nEG|이집트|20\r\nSV|엘살바도르|503\r\nGQ|적도 기니|240\r\nER|에리트레아|291\r\nEE|에스토니아|372\r\nET|에티오피아|251\r\nFK|포클랜드 제도|500\r\nFO|페로 제도|298\r\nFJ|피지|679\r\nFI|핀란드|358\r\nGF|프랑스령 기아나|594\r\nPF|프랑스령 폴리네시아|689\r\nTF|프랑스령 남방 및 남극|262\r\nGA|가봉|241\r\nGM|감비아|220\r\nGE|조지아|995\r\nDE|독일|49\r\nGH|가나|233\r\nGI|지브롤터|350\r\nGR|그리스|30\r\nGL|그린란드|299\r\nGD|그레나다|1473\r\nGP|과들루프|590\r\nGT|과테말라|502\r\nGG|건지|441481\r\nGN|기니|224\r\nGW|기니비사우|245\r\nGY|가이아나|592\r\nHT|아이티|509\r\nHM|허드 맥도널드 제도|0\r\nVA|바티칸 시국|379\r\nHN|온두라스|504\r\nHK|홍콩|852\r\nHU|헝가리|36\r\nIS|아이슬란드|354\r\nIN|인도|91\r\nID|인도네시아|62\r\nIE|아일랜드|353\r\nIM|맨 섬|441624\r\nIT|이탈리아|39\r\nJM|자메이카|1876\r\nJP|일본|81\r\nJE|저지 섬|44\r\nJO|요르단|962\r\nKZ|카자흐스탄|7\r\nKE|케냐|254\r\nKI|키리바시|686\r\nKR|대한민국|82\r\nKW|쿠웨이트|965\r\nKG|키르기스스탄|996\r\nLA|라오스|856\r\nLV|라트비아|371\r\nLB|레바논|961\r\nLS|레소토|266\r\nLR|라이베리아|231\r\nLY|리비아|218\r\nLI|리히텐슈타인|423\r\nLT|리투아니아|370\r\nLU|룩셈부르크|352\r\nMK|마케도니아|389\r\nMG|마다가스카르|261\r\nMW|말라위|265\r\nMY|말레이시아|60\r\nMV|몰디브|960\r\nML|말리|223\r\nMT|몰타|356\r\nMQ|마르티니크|596\r\nMR|모리타니|222\r\nMU|모리셔스|230\r\nYT|마요트|262\r\nMX|멕시코|52\r\nMD|몰도바|373\r\nMC|모나코|377\r\nMN|몽골|976\r\nME|몬테네그로|382\r\nMS|몬트세랫|1664\r\nMA|모로코|212\r\nMZ|모잠비크|258\r\nMM|미얀마|95\r\nNA|나미비아|264\r\nNR|나우루|674\r\nNP|네팔|977\r\nNL|네덜란드|31\r\nNL|네덜란드령 안틸레스|31\r\nNC|뉴칼레도니아|687\r\nNZ|뉴질랜드|64\r\nNI|니카라과|505\r\nNG|니제르|227\r\nNG|나이지리아|234\r\nNU|니우에|683\r\nNF|노퍽 섬|6723\r\nNO|노르웨이|47\r\nOM|오만|968\r\nPK|파키스탄|92\r\nPS|팔레스타인 영토|970\r\nPA|파나마|507\r\nPG|파푸아뉴기니|675\r\nPY|파라과이|595\r\nPE|페루|51\r\nPN|핏케언 제도|64\r\nPL|폴란드|48\r\nQA|카타르|974\r\nRE|레위니옹|262\r\nRO|루마니아|40\r\nRU|러시아|7\r\nRW|르완다|250\r\nBL|생바르텔레미|590\r\nSH|세인트헬레나 어센션 트리스탄다쿠냐|290\r\nKN|세인트키츠네비스|1869\r\nLC|세인트루시아|1758\r\nMF|세인트마틴|590\r\nPM|생피에르 미클롱|508\r\nVC|세인트빈센트 그레나딘|1784\r\nAS|사모아|685\r\nSM|산마리노|378\r\nST|상투메프린시페|239\r\nSA|사우디아라비아|966\r\nSN|세네갈|221\r\nRS|세르비아|381\r\nSC|세이셸|248\r\nSL|시에라리온|232\r\nSX|신트마르턴|1721\r\nSK|슬로바키아|421\r\nSI|슬로베니아|386\r\nSB|솔로몬제도|677\r\nSO|소말리아|252\r\nZA|남아프리카공화국|27\r\nGS|사우스조지아 사우스샌드위치 제도|500\r\nLK|스리랑카|94\r\nSD|수단|249\r\nSR|수리남|597\r\nSJ|스발바르 얀마옌 제도|47\r\nSZ|스와질란드|268\r\nSE|스웨덴|46\r\nCH|스위스|41\r\nSY|시리아|963\r\nTJ|타지키스탄|992\r\nTZ|탄자니아|255\r\nTH|타이|66\r\nTL|동티모르|670\r\nTG|토고|228\r\nTK|토켈라우|690\r\nTO|통가|676\r\nTT|트리니다드토바고|1868\r\nTN|튀니지|216\r\nTM|투르크메니스탄|993\r\nTC|터크스 케이커스 제도|1649\r\nTV|투발루|688\r\nUG|우간다|256\r\nUA|우크라이나|380\r\nAE|아랍에미리트|971\r\nUY|우루과이\_|598\r\nUS|미국|1\r\nUZ|우즈베키스탄|998\r\nVU|바누아투|678\r\nVE|베네수엘라|58\r\nVN|베트남|84\r\nWF|왈리스 퓌튀나|681\r\nEH|서사하라|212\r\nYE|예멘|967\r\nZM|잠비아|260\r\nZW|짐바브웨|263"
+  country_area_code_validation: "86|11|11|Please input an exact 11 characters\r\n66|9|9|Please input an exact 9 characters\r\n84|9|11|Please input 9-11 characters\r\n62|10|12|Please input 10-12 characters\r\n82|10|10|Please input an exact 10 characters\r\n91|10|10|Please input an exact 10 characters\r\n60|9|10|Please input 9-10 characters"
+field_validations:
+  required:
+    error_message: "이 항목은 필수 항목입니다\r\n"
+  alpha:
+    error_message: 'Field should be Alphabet characters only'
+  alphanumeric:
+    error_message: 'Field should be alphanumeric'
+  alpha_multi:
+    error_message: 'Value is not a valid multilingual character'
+  numeric:
+    error_message: "유효한 휴대폰 번호를 입력하십시오\r\n"
+  no_symbols:
+    error_message: 'Field contains invalid special characters'
+  numeric_symbols:
+    error_message: "유효한 휴대폰 번호를 입력하십시오\r\n"
+  email:
+    error_message: 'Field does not contain a valid email address'
+  min_length:
+    error_message: "휴대폰 번호는 6-15자리여야 합니다\r\n"
+  max_length:
+    error_message: "휴대폰 번호는 6-15자리여야 합니다\r\n"
+  regex:
+    error_message: 'This field only accepts specific characters.'
+  valid_date:
+    error_message: 'Date is invalid'
+  username_availability:
+    error_message: 'Username not available'
+  email_availability:
+    error_message: 'Email not available'
+  invalid_words:
+    error_message: 'Invalid/not allowed characters'
+  valid_languages:
+    error_message: 'This field only accepts specific characters.'
+  not_match_username:
+    error_message: 'Password should not equal to username'

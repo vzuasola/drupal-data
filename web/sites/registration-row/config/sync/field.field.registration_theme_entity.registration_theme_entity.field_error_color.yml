@@ -1,0 +1,25 @@
+uuid: e95a29e0-665d-45c6-b98d-b3db981b7aae
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.registration_theme_entity.field_error_color
+  module:
+    - color_field
+    - registration_theme
+id: registration_theme_entity.registration_theme_entity.field_error_color
+field_name: field_error_color
+entity_type: registration_theme_entity
+bundle: registration_theme_entity
+label: 'Error Color'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    color: '#ff0000'
+    opacity: null
+default_value_callback: ''
+settings:
+  opacity: 0
+field_type: color_field_type

@@ -1,0 +1,8 @@
+uuid: 6057310f-2e56-4089-9d73-97c00e2533c3
+langcode: en
+status: true
+dependencies: {  }
+id: customer-support-kr
+label: 'Customer Support KR'
+description: ''
+locked: false

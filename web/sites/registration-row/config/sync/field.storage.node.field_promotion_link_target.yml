@@ -1,0 +1,30 @@
+uuid: 4243a001-2163-46cf-8674-5774baecb0a1
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_promotion_link_target
+field_name: field_promotion_link_target
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: _blank
+      label: 'New Tab'
+    -
+      value: _self
+      label: 'Same Window'
+    -
+      value: window
+      label: 'New Window'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,28 @@
+country_restriction_message: '[product] ไม่สามารถใช้งานได้ในพื้นที่ของคุณ'
+unauthenticated_error_message: "\"ไม่สามารถใช้งานได้ขณะนี้เนื่องจากบัญชีของคุณอาจออกจากระบบแล้ว\r\nกรุณาล็อกอินใหม่อีกครั้ง \""
+success_title: การสมัครสมาชิกเสร็จสมบูรณ์
+home_title: 'เดิมพันวันนี้ ที่ดาฟาเบท! สมัครสมาชิก!'
+generic_error_message: 'สมัครสมาชิกไม่สำเร็จ  (i-1000) หากต้องการความช่ว<a href="mailto:thaisupport@dafabet.com">แชทสด 24 ชั่วโมง</a>'
+portal_id_to_product_name_mapping: "3|กีฬา|sports\r\n10|กีฬา|sports\r\n28|กีฬา|sports\r\n47|กีฬา|sports\r\n22|กีฬาเอเชีย|sports-df\r\n26|กีฬาเอเชีย|sports-df\r\n29|กีฬาเอเชีย|sports-df\r\n48|กีฬาเอเชีย|sports-df\r\n4|คาสิโน|casino\r\n11|คาสิโน|casino\r\n16|คาสิโน|casino\r\n18|คาสิโน|casino\r\n30|คาสิโน|casino\r\n49|คาสิโน|casino\r\n23|คาสิโน|casino\r\n19|คาสิโนโกลด์|casino-gold\r\n20|คาสิโนโกลด์|casino-gold\r\n21|คาสิโนโกลด์|casino-gold\r\n35|คาสิโนโกลด์|casino-gold\r\n54|คาสิโนโกลด์|casino-gold\r\n6|ดีลเลอร์สด|live-dealer\r\n15|ดีลเลอร์สด|live-dealer\r\n33|ดีลเลอร์สด|live-dealer\r\n52|ดีลเลอร์สด|live-dealer\r\n5|โป๊กเกอร์|poker\r\n12|โป๊กเกอร์|poker\r\n17|โป๊กเกอร์|poker\r\n31|โป๊กเกอร์|poker\r\n50|โป๊กเกอร์|poker\r\n24|เกมส์อาเขต|fish-hunter\r\n25|เกมส์อาเขต|fish-hunter\r\n34|เกมส์อาเขต|fish-hunter\r\n53|เกมส์อาเขต|fish-hunter\r\n8|เกมส์|games\r\n14|เกมส์|games\r\n32|เกมส์|games\r\n51|เกมส์|games\r\n56|เกมส์จำลอง|virtuals\r\n57|เกมส์จำลอง|virtuals\r\n58|เกมส์จำลอง|virtuals\r\n59|เกมส์จำลอง|virtuals\r\n55|ล็อตเตอรี่|keno\r\n45|ล็อตเตอรี่|keno\r\n60|ล็อตเตอรี่|keno\r\n61|ล็อตเตอรี่|keno\r\n66|ริกเก็ต|exchange\r\n67|ริกเก็ต|exchange\r\n68|ริกเก็ต|exchange\r\n69|ริกเก็ต|exchange"
+livechat_header: 'ต้องการความช่วยเหลือ? '
+livechat_text: 'ให้เราช่วยเหลือเรื่องใด? '
+step_one_text: สมัครสมาชิก
+step_two_text: ฝากเงิน
+proactive_mobile_class: proactive-line-th
+proactive_mobile_url: 'https://line.me/R/ti/p/%40bki3473x'
+proactive_mobile_url_ios: 'https://line.me/R/ti/p/%40bki3473x'
+proactive_mobile_url_playstore: ''
+proactive_mobile_url_ios_appstore: ''
+general_settings_tab__active_tab: edit-restriction
+native_app_title: ''
+enable_avaya_proactive: '1'
+enable_proactive_mobile: '1'
+enable_cashier_payment_methods: 0
+deposit_now_text: ''
+payment_method_headers: 'Payment Options|Description|Min/Max| '
+with_payment_method:
+  value: "<div class=\"payment-option-header background-light-gray text-center\"><strong>Deposit Made Easy</strong></div>\r\n\r\n<p class=\"payment-option-desc text-14 text-center hidden-mobile mt-15 mb-15\">Learn the different payment methods you can use to be able to enjoy betting at Dafabet.</p>\r\n"
+  format: basic_html
+without_payment_method:
+  value: "<div class=\"content-header background-light-gray text-center pt-10 pb-10\"><strong class=\"text-20\">How to Deposit?</strong>\r\n<p class=\"text-16 mb-0\">Contact our Customer Support 24/7</p>\r\n</div>\r\n\r\n<div class=\"container-contact-us p-10 text-center\">\r\n<div class=\"image-contact-us-item inline-block mr-30\"><picture> <source media=\"(min-width: 768px)\" srcset=\"http://via.placeholder.com/220x120\" /> <source media=\"(min-width: 320px)\" srcset=\"http://via.placeholder.com/120x80\" /> <img alt=\"\" data-entity-type=\"\" data-entity-uuid=\"\" src=\"http://via.placeholder.com/220x120\" /> </picture></div>\r\n\r\n<div class=\"image-contact-us-item inline-block\"><picture> <source media=\"(min-width: 768px)\" srcset=\"http://via.placeholder.com/220x120\" /> <source media=\"(min-width: 320px)\" srcset=\"http://via.placeholder.com/120x80\" /> <img alt=\"\" data-entity-type=\"\" data-entity-uuid=\"\" src=\"http://via.placeholder.com/220x120\" /> </picture></div>\r\n\r\n<div><a href=\"https://www.google.com\"><img alt=\"masters.png\" data-entity-type=\"\" data-entity-uuid=\"\" height=\"44\" src=\"/sites/registration/files/2017-11/masters.png\" width=\"56\" /></a></div>\r\n</div>\r\n"
+  format: basic_html

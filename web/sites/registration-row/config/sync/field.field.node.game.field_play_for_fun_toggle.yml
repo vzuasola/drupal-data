@@ -1,0 +1,23 @@
+uuid: bb5ff701-13fb-4863-b50c-59c302f3f035
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_play_for_fun_toggle
+    - node.type.game
+id: node.game.field_play_for_fun_toggle
+field_name: field_play_for_fun_toggle
+entity_type: node
+bundle: game
+label: 'Show Play for Fun Button'
+description: 'Uncheck this to hide the <b>Play for Fun</b> button.'
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
