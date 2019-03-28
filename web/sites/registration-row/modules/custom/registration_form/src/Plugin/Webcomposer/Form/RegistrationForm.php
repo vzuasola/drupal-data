@@ -139,11 +139,11 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
       ],
 
       'breakline_1' => [
-        'name' => 'Break Line Mark',
+        'name' => 'Break Line Markup',
         'type' => 'markup',
         'settings' => [
           'markup' => [
-            '#title' => 'Horizonta',
+            '#title' => 'Horizontal Line Markup',
             '#type' => 'textarea',
             '#description' => 'A Markup text breakline for registration form',
             '#default_value' => '<hr>',
