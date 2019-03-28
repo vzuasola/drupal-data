@@ -700,7 +700,7 @@ display:
           admin_label: ''
           operator: in
           value:
-            '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
+            '***LANGUAGE_site_default***': '***LANGUAGE_site_default***'
           group: 1
           exposed: true
           expose:
@@ -718,6 +718,7 @@ display:
               anonymous: '0'
               administrator: '0'
               e: '0'
+              subadmin: '0'
             reduce: false
           is_grouped: false
           group_info:
