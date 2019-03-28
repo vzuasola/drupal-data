@@ -30,9 +30,6 @@ class LeftFloatingBannerEntityDeleteForm extends ContentEntityDeleteForm {
       $form_state->setRedirectUrl($this->getRedirectUrl());
     }
 
-    drupal_set_message($this->getDeletionMessage());
-    $this->logDeletionMessage();
-
   }
 
 }
