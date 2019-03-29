@@ -1,0 +1,16 @@
+advanced__active_tab: edit-page-forgot-password-setting
+page_title: 'Cannot Access your Dafabet Account?'
+page_tab_title: 'Forgot Password'
+page_form_title: 'Retrieve Password'
+page_form_desc:
+  value: "<p>Please fill in the following details. An email will be sent to your registered email address.</p>\r\n"
+  format: basic_html
+value: null
+format: null
+page_form_footer:
+  value: "<p class=\"customer-support-text\">For any question or concerns please contact <a href=\"linkto:avaya\">CustomerSupport</a>.</p>\r\n"
+  format: basic_html
+page_cm_title: ' Reset Password Request Sent!'
+page_cm_desc:
+  value: "<p>A confirmation message has been sent to your registered email address. Please reset your password within the next 24 hours.</p>\r\n\r\n<p>For any question or concerns please contact <a href=\"linkto:avaya\">Customer Support</a>.</p>\r\n"
+  format: basic_html

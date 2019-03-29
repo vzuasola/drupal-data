@@ -1,0 +1,7 @@
+ghana_config.admin_settings:
+  path: 'admin/config/ghana'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Ghana Configuration'
+  requirements:
+    _permission: 'administer site configuration'
