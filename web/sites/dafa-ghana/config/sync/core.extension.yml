@@ -97,6 +97,8 @@ module:
   pathauto: 1
   views: 10
   config_installer: 1000
+  ghana_config: 0
+  vip_modal: 0
 theme:
   stable: 0
   classy: 0
