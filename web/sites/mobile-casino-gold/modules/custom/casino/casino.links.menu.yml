@@ -1,0 +1,5 @@
+casino.list:
+  title: 'Casino Mobile Configuration'
+  description: 'Provides configuration for Casino Mobile Site'
+  parent: system.admin_config
+  route_name: casino.admin_settings

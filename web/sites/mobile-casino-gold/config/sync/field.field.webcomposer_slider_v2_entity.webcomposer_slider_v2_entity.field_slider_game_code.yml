@@ -1,0 +1,20 @@
+uuid: b362b004-702f-408b-831d-a70a887d252f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.webcomposer_slider_v2_entity.field_slider_game_code
+  module:
+    - webcomposer_slider_v2
+id: webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_slider_game_code
+field_name: field_slider_game_code
+entity_type: webcomposer_slider_v2_entity
+bundle: webcomposer_slider_v2_entity
+label: 'Game Code'
+description: "<b>iCore game detail to use per provider:</b>\r\n<ul>\r\n <li><b>Skywind:</b> GameId</li>\r\n <li><b>Voidbridge:</b> GameId</li>\r\n <li><b>CQ9:</b> External Game ID <br>Note: For fishing game use pattern <i>External_Game_ID|fish</i></li>\r\n <li><b>Solid Gaming:</b> External Game ID <br>Note: You should prepend <i>SG_</i> to all game codes</li>\r\n <li><b>PAS:</b> GameId</li>\r\n <li><b>GPAS:</b> GPAS_GameId_POP</li>\r\n</ul>"
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
