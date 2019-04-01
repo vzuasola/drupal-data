@@ -101,6 +101,20 @@ dev-japan-stack:
       - automation/deployed/*.jsonl
     expire_in: 1 month
 
+dev-row-stack:
+  stage: deploy-dev
+  environment:
+    name: development
+  script:
+    - DEPLOY_DEVELOPMENT=$DEPLOY_DEVELOPMENT_ROW python -u automation/run.py --stage deploy-development
+  when: manual
+  dependencies:
+    - create package
+  artifacts:
+    paths:
+      - automation/deployed/*.jsonl
+    expire_in: 1 month
+
 .selenium tests development:
   stage: integration-tests-development
   script:
@@ -254,6 +268,21 @@ tct-japan-stack:
       - automation/deployed/*.jsonl
     expire_in: 1 month
 
+tct-row-stack:
+  stage: deploy-test
+  environment:
+    name: tct
+  script:
+    - DEPLOY_TCT=$DEPLOY_TCT_ROW python -u automation/run.py --stage deploy-tct
+  when: manual
+  dependencies:
+    - dev
+    - create package
+  artifacts:
+    paths:
+      - automation/deployed/*.jsonl
+    expire_in: 1 month
+
 .selenium tests tct:
   stage: integration-tests-test
   script:
@@ -351,6 +380,23 @@ uat-japan-stack:
     - /^release-.*$/
     - tags
 
+uat-row-stack:
+  stage: deploy-staging
+  environment:
+    name: uat
+  script:
+    - DEPLOY_UAT=$DEPLOY_UAT_ROW python -u automation/run.py --stage deploy-uat
+  when: manual
+  dependencies:
+    - testing signoff
+  artifacts:
+    paths:
+      - automation/deployed/*.jsonl
+    expire_in: 1 month
+  only:
+    - /^release-.*$/
+    - tags
+
 .selenium tests uat:
   stage: integration-tests-staging
   script:
@@ -427,6 +473,23 @@ staging-japan-stack:
     name: staging
   script:
     - DEPLOY_STG=$DEPLOY_STG_JAPAN python -u automation/run.py --stage deploy-staging
+  when: manual
+  dependencies:
+    - testing signoff
+  artifacts:
+    paths:
+      - automation/deployed/*.jsonl
+    expire_in: 1 month
+  only:
+    - /^release-.*$/
+    - tags
+
+staging-row-stack:
+  stage: deploy-staging
+  environment:
+    name: staging
+  script:
+    - DEPLOY_STG=$DEPLOY_STG_ROW python -u automation/run.py --stage deploy-staging
   when: manual
   dependencies:
     - testing signoff
@@ -545,6 +608,23 @@ production-japan-stack:
     name: production
   script:
     - DEPLOY_PROD=$DEPLOY_PROD_JAPAN python -u automation/run.py --stage deploy-production
+  when: manual
+  dependencies:
+   - staging signoff
+  artifacts:
+    paths:
+      - automation/deployed/*.jsonl
+    expire_in: 1 month
+  only:
+    - /^release-.*$/
+    - tags
+
+production-row-stack:
+  stage: deploy-production
+  environment:
+    name: production
+  script:
+    - DEPLOY_PROD=$DEPLOY_PROD_ROW python -u automation/run.py --stage deploy-production
   when: manual
   dependencies:
    - staging signoff

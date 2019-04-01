@@ -1,0 +1,22 @@
+uuid: 504d43f7-6c76-4bf7-ab33-20809c0cf33f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.metatag_entity.field_keywords
+  module:
+    - webcomposer_metatags
+_core:
+  default_config_hash: El7FhMYDjxS5tXinyG2Kk52_TjWt3mmtZtJ-fCNGyk4
+id: metatag_entity.metatag_entity.field_keywords
+field_name: field_keywords
+entity_type: metatag_entity
+bundle: metatag_entity
+label: Keywords
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long
