@@ -1,0 +1,39 @@
+field_settings:
+  label: ユーザー名
+  placeholder: ユーザー名
+  annotation: ''
+field_validations:
+  required:
+    error_message: "この項目は必須です。\r\n"
+  alpha:
+    error_message: 'Field should be Alphabet characters only'
+  alphanumeric:
+    error_message: "この欄は英数字のみ、ご入力いただけます。\r\n"
+  alpha_multi:
+    error_message: 'Value is not a valid multilingual character'
+  numeric:
+    error_message: 'Field should be numeric'
+  no_symbols:
+    error_message: 'Field contains invalid special characters'
+  numeric_symbols:
+    error_message: 'Field contains invalid special characters'
+  email:
+    error_message: 'Field does not contain a valid email address'
+  min_length:
+    error_message: "ユーザー名は3～15文字で入力して下さい。\r\n"
+  max_length:
+    error_message: "ユーザー名は3～15文字で入力して下さい。\r\n"
+  regex:
+    error_message: 'This field only accepts specific characters.'
+  valid_date:
+    error_message: 'Date is invalid'
+  username_availability:
+    error_message: "ユーザー名は既に使われています。新しいユーザー名を入力してください\r\n"
+  email_availability:
+    error_message: 'Please use a unique email.'
+  invalid_words:
+    error_message: 'Invalid/not allowed characters'
+  valid_languages:
+    error_message: 'This field only accepts specific characters.'
+  not_match_username:
+    error_message: 'Password should not equal to username'

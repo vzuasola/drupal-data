@@ -1,0 +1,39 @@
+field_settings:
+  label: ยูสเซอร์เนม
+  placeholder: ยูสเซอร์เนม
+  annotation: 'กรุณาตั้งยูสเซอร์เนม โดยใช้ตัวอักษรหรือตัวเลข 3-15 ตัวอักษร '
+field_validations:
+  required:
+    error_message: "จำเป็นต้องกรอกข้อมูลที่ช่องนี้ \r\n"
+  alpha:
+    error_message: 'Field should be Alphabet characters only'
+  alphanumeric:
+    error_message: "กรอกได้เฉพาะตัวอักษรและตัวเลขเท่านั้น \r\n"
+  alpha_multi:
+    error_message: 'Value is not a valid multilingual character'
+  numeric:
+    error_message: 'Field should be numeric'
+  no_symbols:
+    error_message: 'Field contains invalid special characters'
+  numeric_symbols:
+    error_message: 'Field contains invalid special characters'
+  email:
+    error_message: 'Field does not contain a valid email address'
+  min_length:
+    error_message: "ยูสเซอร์เนมจะต้องมี 3 - 15 ตัวอักษร \r\n"
+  max_length:
+    error_message: "ยูสเซอร์เนมจะต้องมี 3 - 15 ตัวอักษร \r\n"
+  regex:
+    error_message: 'This field only accepts specific characters.'
+  valid_date:
+    error_message: 'Date is invalid'
+  username_availability:
+    error_message: "ยูสเซอร์เนมมีการถูกใช้งานแล้ว กรุณากรอกยูสเซอร์เนมใหม่ \r\n"
+  email_availability:
+    error_message: 'Please use a unique email.'
+  invalid_words:
+    error_message: 'Invalid/not allowed characters'
+  valid_languages:
+    error_message: 'This field only accepts specific characters.'
+  not_match_username:
+    error_message: 'Password should not equal to username'

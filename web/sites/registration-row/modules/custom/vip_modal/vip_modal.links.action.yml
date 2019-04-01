@@ -1,0 +1,5 @@
+entity.vip_modal_entity.add_form:
+  route_name: entity.vip_modal_entity.add_form
+  title: 'Add Vip Modal Content Entity'
+  appears_on:
+    - entity.vip_modal_entity.collection

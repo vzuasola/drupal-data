@@ -1,0 +1,92 @@
+uuid: 1a5a5a9e-7fbf-4d5a-9487-0ccfd2432ca5
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+_core:
+  default_config_hash: HJ0LrnRG-NCfppJmgej1jngi0-2YUriE19ocQIVstnY
+id: paragraph.field_link_class
+field_name: field_link_class
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: faq
+      label: FAQ
+    -
+      value: email
+      label: Email
+    -
+      value: call
+      label: Call
+    -
+      value: banner-facebook
+      label: Facebook
+    -
+      value: banner-twitter
+      label: Twitter
+    -
+      value: banner-youtube
+      label: Youtube
+    -
+      value: wechat
+      label: Wechat
+    -
+      value: weibo
+      label: Weibo
+    -
+      value: viber
+      label: Viber
+    -
+      value: zalo
+      label: Zalo
+    -
+      value: line
+      label: Line
+    -
+      value: talk
+      label: Talk
+    -
+      value: messenger
+      label: Messenger
+    -
+      value: whatsapp
+      label: WhatsApp
+    -
+      value: bbm
+      label: BBM
+    -
+      value: casino
+      label: Casino
+    -
+      value: casino-gold
+      label: 'Casino Gold'
+    -
+      value: poker
+      label: Poker
+    -
+      value: qq
+      label: QQ
+    -
+      value: dafabet-connect
+      label: 'Dafabet Connect'
+    -
+      value: fbmessenger
+      label: 'FB Messenger'
+    -
+      value: skywind
+      label: Skywind
+    -
+      value: microgaming
+      label: MicroGaming
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

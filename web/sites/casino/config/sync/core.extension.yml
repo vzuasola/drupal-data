@@ -39,6 +39,7 @@ module:
   games_showcase: 0
   image: 0
   imce: 0
+  iplay_custom_configuration: 0
   lang_dropdown: 0
   language: 0
   language_access: 0

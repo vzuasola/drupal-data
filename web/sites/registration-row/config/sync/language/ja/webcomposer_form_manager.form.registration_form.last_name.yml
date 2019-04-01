@@ -1,0 +1,39 @@
+field_settings:
+  label: 苗字
+  placeholder: 苗字
+  annotation: "あなたの銀行口座に登録されているものと同じ苗字を入力してください。 （例：<u>山田</u> 太郎）\r\n"
+field_validations:
+  required:
+    error_message: "この項目は必須です\r\n"
+  alpha:
+    error_message: 'Field should be Alphabet characters only'
+  alphanumeric:
+    error_message: 'Field should be alphanumeric'
+  alpha_multi:
+    error_message: "正しい苗字をご入力ください。\r\n"
+  numeric:
+    error_message: 'Field should be numeric'
+  no_symbols:
+    error_message: "氏名に無効な記号（例：.,@,#,%,^,*,( ),[],/）が含まれています。\r\n"
+  numeric_symbols:
+    error_message: 'Field contains invalid special characters'
+  email:
+    error_message: 'Field does not contain a valid email address'
+  min_length:
+    error_message: "氏名は半角英字にて1～50文字にてご入力下さい。\r\n"
+  max_length:
+    error_message: "苗字は50文字以内で入力してください\r\n"
+  regex:
+    error_message: 'This field only accepts specific characters.'
+  valid_date:
+    error_message: 'Date is invalid'
+  username_availability:
+    error_message: 'Username not available'
+  email_availability:
+    error_message: 'Email not available'
+  invalid_words:
+    error_message: "有効な苗字を入力してください\r\n"
+  valid_languages:
+    error_message: "この欄は、英語、中国語、韓国語、ギリシャ語、アポストロフィ（'）、ハイフン（-）のみ入力できます\r\n"
+  not_match_username:
+    error_message: 'Password should not equal to username'

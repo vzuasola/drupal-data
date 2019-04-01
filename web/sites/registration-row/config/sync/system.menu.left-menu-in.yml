@@ -1,0 +1,8 @@
+uuid: 5a740e73-36dd-4a41-9f3c-ceae5304f89f
+langcode: en
+status: true
+dependencies: {  }
+id: left-menu-in
+label: 'Left Menu IN'
+description: ''
+locked: false

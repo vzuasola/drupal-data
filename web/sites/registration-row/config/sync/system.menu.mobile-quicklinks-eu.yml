@@ -1,0 +1,8 @@
+uuid: 1413285f-c131-4776-b0c9-0b80530367c6
+langcode: en
+status: true
+dependencies: {  }
+id: mobile-quicklinks-eu
+label: 'Mobile Quicklinks EU'
+description: ''
+locked: false

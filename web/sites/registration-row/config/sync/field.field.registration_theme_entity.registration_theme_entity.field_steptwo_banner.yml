@@ -1,0 +1,45 @@
+uuid: b19db6ad-40c7-4b00-92b7-1eea5914f31a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.registration_theme_entity.field_steptwo_banner
+  module:
+    - content_translation
+    - image
+    - registration_theme
+third_party_settings:
+  content_translation:
+    translation_sync:
+      file: file
+      alt: '0'
+      title: '0'
+id: registration_theme_entity.registration_theme_entity.field_steptwo_banner
+field_name: field_steptwo_banner
+entity_type: registration_theme_entity
+bundle: registration_theme_entity
+label: Banner
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: false
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

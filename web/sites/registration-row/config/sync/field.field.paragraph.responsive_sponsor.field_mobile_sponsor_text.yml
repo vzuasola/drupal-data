@@ -1,0 +1,19 @@
+uuid: 87f9416e-ca59-49f8-861a-b8840313a9ad
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_mobile_sponsor_text
+    - paragraphs.paragraphs_type.responsive_sponsor
+id: paragraph.responsive_sponsor.field_mobile_sponsor_text
+field_name: field_mobile_sponsor_text
+entity_type: paragraph
+bundle: responsive_sponsor
+label: 'Mobile Sponsor Text'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,23 @@
+uuid: bfe41c6a-c952-46aa-94cb-9539ca8c5728
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_link_class
+    - paragraphs.paragraphs_type.floating_banner_item
+  module:
+    - options
+_core:
+  default_config_hash: fVsdmTI-yafcRE_EFwInqS7l9mTRGsbjJ1KNXFcmUQo
+id: paragraph.floating_banner_item.field_link_class
+field_name: field_link_class
+entity_type: paragraph
+bundle: floating_banner_item
+label: 'Link Class'
+description: 'Specify a class that can add a predefined icon for the links.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

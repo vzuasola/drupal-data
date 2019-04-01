@@ -1,0 +1,17 @@
+uuid: e067060f-05cb-4feb-9267-01c84407b388
+langcode: en
+status: true
+dependencies:
+  module:
+    - content_translation
+    - webcomposer_sponsor_responsive
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: sponsor_responsive_entity.sponsor_responsive_entity
+target_entity_type_id: sponsor_responsive_entity
+target_bundle: sponsor_responsive_entity
+default_langcode: site_default
+language_alterable: true

@@ -1,0 +1,39 @@
+field_settings:
+  label: 'Adres Mailowy'
+  placeholder: 'Adres Mailowy'
+  annotation: "Please enter a valid email address to receive latest promotions, updates and exclusive offers.\r\n"
+field_validations:
+  required:
+    error_message: "This field is required\r\n"
+  alpha:
+    error_message: 'Field should be Alphabet characters only'
+  alphanumeric:
+    error_message: 'Field should be alphanumeric'
+  alpha_multi:
+    error_message: 'Value is not a valid multilingual character'
+  numeric:
+    error_message: 'Field should be numeric'
+  no_symbols:
+    error_message: 'Field contains invalid special characters'
+  numeric_symbols:
+    error_message: 'Field contains invalid special characters'
+  email:
+    error_message: "Please enter a valid email address. (e.g. name@domain.com)\r\n"
+  min_length:
+    error_message: "Please enter a valid email address. (e.g. name@domain.com)\r\n"
+  max_length:
+    error_message: "Please enter a valid email address. (e.g. name@domain.com)\r\n"
+  regex:
+    error_message: 'This field only accepts specific characters.'
+  valid_date:
+    error_message: 'Date is invalid'
+  username_availability:
+    error_message: 'Username not available'
+  email_availability:
+    error_message: "<span class=\"visible-desktop\">Email jest już w uzyciu. Kliknij <a href=\"{domain:myaccount_domain}/pl/cant-login\" target=\"popup\" onclick=\"window.open('{domain:myaccount_domain}/pl/cant-login','popup','width=820,height=810,scrollbars=no,resizable=no'); return false;\" class=\"visible-desktop\">tutaj</a>, aby odzyskać username/hasło</span>\r\n<span class=\"visible-client\">Email jest już w uzyciu. Kliknij <u><a href=\"{domain:myaccount_domain}/pl/cant-login\" target=\"popup\" onclick=\"window.open('{domain:myaccount_domain}/pl/cant-login','popup','width=820,height=810,scrollbars=no,resizable=no'); return false;\" class=\"visible-desktop\">tutaj</a></u>, aby odzyskać username/hasło</span>\r\n<span class=\"visible-tablet\">Email jest już w uzyciu. Kliknij <a href=\"{domain:mobile}/pl/cant-login\" target=\"_blank\" class=\"visible-tablet\">tutaj</a>, aby odzyskać username/hasło</span>\r\n<span class=\"visible-mobile\">Email jest już w uzyciu. Kliknij <a href=\"{domain:mobile}/pl/cant-login\" target=\"_blank\" class=\"visible-mobile\">tutaj</a>, aby odzyskać username/hasło</span>\r\n<span class=\"visible-app\">Email jest już w uzyciu. Kliknij <a href=\"https://m.dfnba.net/pl/cant-login?clientflag=1\" target=\"_blank\" class=\"visible-app\">tutaj</a>, aby odzyskać username/hasło</span>"
+  invalid_words:
+    error_message: 'Invalid/not allowed characters'
+  valid_languages:
+    error_message: 'This field only accepts specific characters.'
+  not_match_username:
+    error_message: 'Password should not equal to username'

@@ -1,0 +1,20 @@
+uuid: 92ef704b-c041-4531-b018-a08d562a7092
+langcode: en
+status: true
+dependencies:
+  module:
+    - webcomposer_partner_responsive
+_core:
+  default_config_hash: G19LgTAfpxcJGAzUbihnBJIjTyydTERxVxfIabz-7q8
+id: partner_responsive_entity.partner_responsive_entity.metatag
+field_name: metatag
+entity_type: partner_responsive_entity
+bundle: partner_responsive_entity
+label: Metatags
+description: 'The metatags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map
