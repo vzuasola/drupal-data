@@ -8,3 +8,7 @@ require $app_root . '/../config/base.settings.php';
  */
 $settings['product'] = 'dafa-ghana';
 
+/**
+ * The front end prefix that CKEditor will append for all products
+ */
+$settings['ck_editor_inline_image_prefix'] = '/en';
