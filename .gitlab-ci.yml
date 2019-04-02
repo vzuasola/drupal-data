@@ -396,6 +396,8 @@ uat-row-stack:
   only:
     - /^release-.*$/
     - tags
+  tags:
+    - stgrunner
 
 .selenium tests uat:
   stage: integration-tests-staging
@@ -500,6 +502,8 @@ staging-row-stack:
   only:
     - /^release-.*$/
     - tags
+  tags:
+    - stgrunner
 
 .selenium tests staging:
   stage: integration-tests-staging
