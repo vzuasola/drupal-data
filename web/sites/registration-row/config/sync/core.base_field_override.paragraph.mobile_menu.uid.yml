@@ -1,0 +1,22 @@
+uuid: 48d0cab3-e304-4947-9693-511727bed7ae
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.mobile_menu
+_core:
+  default_config_hash: TUzAnJMHw4qpjxAj05rHW0KMkQ9LiBhygv0g25wSb0I
+id: paragraph.mobile_menu.uid
+field_name: uid
+entity_type: paragraph
+bundle: mobile_menu
+label: 'Authored by'
+description: 'The user ID of the paragraphs author.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: 'Drupal\paragraphs\Entity\Paragraph::getCurrentUserId'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

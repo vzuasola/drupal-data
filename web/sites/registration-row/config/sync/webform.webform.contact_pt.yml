@@ -1,0 +1,139 @@
+uuid: c38ee39d-a65b-4f43-807d-0d09fb6c3cbe
+langcode: en
+status: open
+dependencies:
+  enforced:
+    module:
+      - webform
+  module:
+    - webcomposer_webform
+third_party_settings:
+  webcomposer_webform:
+    webcomposer_webform_layout:
+      label_font_color: '#400000'
+      error_font_color: '#ff0000'
+      header_markup:
+        value: "<p class=\"text-align-center\"><span class=\"text-dark-red\"><span class=\"text-18\"><strong>WEBFORM FOR TSHIRTS</strong></span></span>\r\n</p>\r\n<p class=\"text-align-center\"><a href=\"http://www.google.com\"><b>Text link</b></a>\r\n</p>\r\n"
+        format: basic_html
+    webcomposer_webform_submission_layout:
+      success_font_color: '#ffffff'
+      success_background_color: '#008000'
+      error_font_color: '#ffffff'
+      error_background_color: '#ff0000'
+    webform_background:
+      background_image: {  }
+      background_image_en: {  }
+      background_image_eu: {  }
+      background_image_sc: {  }
+      background_image_ch: {  }
+      background_image_th: {  }
+      background_image_vn: {  }
+      background_image_id: {  }
+      background_image_jp: {  }
+      background_image_kr: {  }
+      background_image_in: {  }
+      background_image_gr: {  }
+      background_image_pl: {  }
+_core:
+  default_config_hash: k-pt3VLxBw-YVz1njxzRpczoo8bThqMQspJ3h0rf_FE
+open: null
+close: null
+uid: 1
+template: false
+id: contact_pt
+title: Contact_PT
+description: 'Basic email contact webform.xxx'
+category: ''
+elements: "username:\n  '#type': textfield\n  '#title': Username\n  '#visibility': 1\n  '#required': true\n  '#alphanumeric': 1\n  '#alphanumeric_error': 'Input should be alphanumeric'\n  '#no_symbols': 0\n  '#no_symbols_error': ''\n  '#email': 0\n  '#email_error': ''\n  '#numeric': 0\n  '#numeric_error': ''\n  '#numeric_symbols': 0\n  '#numeric_symbols_error': ''\n  '#min_length': 1\n  '#min_length_value': '3'\n  '#min_length_error': 'Min length requirement not met'\n  '#max_length': 1\n  '#max_length_value': '13'\n  '#max_length_error': 'Max length exceeded'\n  '#format_items': comma\n  '#unicode': 0\n  '#unicode_error': ''\nname:\n  '#type': textfield\n  '#title': 'E-mail Address'\n  '#visibility': 1\n  '#field_prefix': ''''\n  '#placeholder': promocode-12345\n  '#disabled': true\n  '#required': true\n  '#required_error': 'Name is required'\n  '#alphanumeric': 1\n  '#alphanumeric_error': 'Name should be alphanumeric'\n  '#no_symbols': 0\n  '#no_symbols_error': ''\n  '#email': 0\n  '#email_error': ''\n  '#numeric': 0\n  '#numeric_error': ''\n  '#numeric_symbols': 0\n  '#numeric_symbols_error': ''\n  '#min_length': 0\n  '#min_length_value': ''\n  '#min_length_error': ''\n  '#max_length': 0\n  '#max_length_value': ''\n  '#max_length_error': ''\n  '#unicode': 0\n  '#unicode_error': ''\nsubject:\n  '#type': textfield\n  '#title': Subject\n  '#visibility': 1\n  '#required': true\n  '#alphanumeric': 0\n  '#alphanumeric_error': ''\n  '#unicode': 0\n  '#unicode_error': ''\n  '#email': 0\n  '#email_error': ''\n  '#numeric': 0\n  '#numeric_error': ''\n  '#numeric_symbols': 0\n  '#numeric_symbols_error': ''\n  '#min_length': 0\n  '#min_length_value': ''\n  '#min_length_error': ''\n  '#max_length': 0\n  '#max_length_value': ''\n  '#max_length_error': ''\nfavorites:\n  '#type': checkboxes\n  '#title': Favorites\n  '#visibility': 1\n  '#options':\n    Web: Web\n    Travel: Travel\n    Food: Food\n    Sports: Sports\n  '#alphanumeric': 0\n  '#alphanumeric_error': ''\n  '#unicode': 0\n  '#unicode_error': ''\n  '#email': 0\n  '#email_error': ''\n  '#numeric': 0\n  '#numeric_error': ''\n  '#numeric_symbols': 0\n  '#numeric_symbols_error': ''\n  '#min_length': 0\n  '#min_length_value': ''\n  '#min_length_error': ''\n  '#max_length': 0\n  '#max_length_value': ''\n  '#max_length_error': ''\nchoices:\n  '#type': radios\n  '#title': Choices\n  '#visibility': 1\n  '#options':\n    'Yes': 'Yes'\n    'No': 'No'\n  '#required': true\n  '#alphanumeric': 0\n  '#alphanumeric_error': ''\n  '#unicode': 0\n  '#unicode_error': ''\n  '#email': 0\n  '#email_error': ''\n  '#numeric': 0\n  '#numeric_error': ''\n  '#numeric_symbols': 0\n  '#numeric_symbols_error': ''\n  '#min_length': 0\n  '#min_length_value': ''\n  '#min_length_error': ''\n  '#max_length': 0\n  '#max_length_value': ''\n  '#max_length_error': ''\nmessage:\n  '#type': textarea\n  '#title': Message\n  '#visibility': 1\n  '#required': true\n  '#alphanumeric': 1\n  '#alphanumeric_error': 'Input should be alphanumeric'\n  '#unicode': 0\n  '#unicode_error': ''\n  '#email': 0\n  '#email_error': ''\n  '#numeric': 0\n  '#numeric_error': ''\n  '#numeric_symbols': 0\n  '#numeric_symbols_error': ''\n  '#min_length': 0\n  '#min_length_value': ''\n  '#min_length_error': ''\n  '#max_length': 0\n  '#max_length_value': ''\n  '#max_length_error': ''\nothers:\n  '#type': select\n  '#title': Others\n  '#visibility': 1\n  '#options':\n    'Value 1': 'Value 1'\n    'Value 2': 'Value 2'\n    'Value 3': 'Value 3'\n  '#empty_option': 'Select items...'\n  '#required': true\n  '#required_error': 'This select field is required'\n  '#alphanumeric': 0\n  '#alphanumeric_error': ''\n  '#unicode': 0\n  '#unicode_error': ''\n  '#email': 0\n  '#email_error': ''\n  '#numeric': 0\n  '#numeric_error': ''\n  '#numeric_symbols': 0\n  '#numeric_symbols_error': ''\n  '#min_length': 0\n  '#min_length_value': ''\n  '#min_length_error': ''\n  '#max_length': 0\n  '#max_length_value': ''\n  '#max_length_error': ''\nlook:\n  '#type': fieldset\n  '#title': Buttons\n  '#visibility': 1\n  '#legend': ''\n  '#class': ''\n  '#alphanumeric': 0\n  '#alphanumeric_error': ''\n  '#no_symbols': 0\n  '#no_symbols_error': ''\n  '#email': 0\n  '#email_error': ''\n  '#numeric': 0\n  '#numeric_error': ''\n  '#numeric_symbols': 0\n  '#numeric_symbols_error': ''\n  '#min_length': 0\n  '#min_length_value': ''\n  '#min_length_error': ''\n  '#max_length': 0\n  '#max_length_value': ''\n  '#max_length_error': ''\n  actions:\n    '#type': webform_actions\n    '#title': 'Submit button(s)'\n    '#visibility': 1\n    '#submit__label': 'Send message'\n  clear:\n    '#type': webform_reset\n    '#title': Clear\n    '#visibility': 1\nfooter:\n  '#type': processed_text\n  '#visibility': 1\n  '#admin_title': 'Footer blurb'\n  '#text': \"<p>This is a footer blurb</p>\\r\\n\\r\\n<p>This is another paragraph</p>\\r\\n\"\n  '#format': basic_html\n"
+css: ''
+javascript: ''
+settings:
+  ajax: false
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  form_submit_once: false
+  form_exception_message: ''
+  form_open_message: ''
+  form_close_message: 'This form is closed. Try next year!'
+  form_previous_submissions: true
+  form_confidential: false
+  form_confidential_message: ''
+  form_convert_anonymous: false
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_unsaved: false
+  form_disable_back: false
+  form_autofocus: false
+  form_details_toggle: false
+  submission_label: ''
+  submission_log: false
+  submission_user_columns: {  }
+  wizard_progress_bar: true
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_start_label: ''
+  wizard_complete: true
+  wizard_complete_label: ''
+  preview: 0
+  preview_label: ''
+  preview_title: ''
+  preview_message: ''
+  preview_attributes: {  }
+  preview_excluded_elements: {  }
+  draft: none
+  draft_multiple: false
+  draft_auto_save: false
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  confirmation_type: page
+  confirmation_title: ''
+  confirmation_message: 'Your message has been sent.'
+  confirmation_url: '<front>'
+  confirmation_attributes: {  }
+  confirmation_back: true
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  limit_total: null
+  limit_total_message: 'Limit has now been reached'
+  limit_user: null
+  limit_user_message: ''
+  purge: none
+  purge_days: null
+  entity_limit_total: null
+  entity_limit_user: null
+  results_disabled: false
+  results_disabled_ignore: false
+  token_update: false
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+  view_any:
+    roles: {  }
+    users: {  }
+  update_any:
+    roles: {  }
+    users: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+  view_own:
+    roles: {  }
+    users: {  }
+  update_own:
+    roles: {  }
+    users: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+handlers: {  }

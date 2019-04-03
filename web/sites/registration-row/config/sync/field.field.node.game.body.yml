@@ -1,0 +1,24 @@
+uuid: 5d3c6fa0-102a-4b81-91c9-68ebd72a3221
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.game
+  module:
+    - text
+_core:
+  default_config_hash: MrTfH4ixsbvHmAUaMfFVk3VQQGAMnOoyqxIG2Za8ZlI
+id: node.game.body
+field_name: body
+entity_type: node
+bundle: game
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

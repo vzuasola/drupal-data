@@ -1,0 +1,36 @@
+field_settings:
+  label: 'Date of Birth'
+  placeholder: DD/MM/YYYY
+  date-format: DD/MM/YYYY
+  annotation: ''
+field_validations:
+  required:
+    error_message: "Please select the Year in which you were born. You must be at least 18 years of age to register an account.\r\n"
+  alpha:
+    error_message: 'Field should be Alphabet characters only'
+  alphanumeric:
+    error_message: 'Field should be alphanumeric'
+  alpha_multi:
+    error_message: 'Value is not a valid multilingual character'
+  numeric:
+    error_message: 'Field should be numeric'
+  no_symbols:
+    error_message: 'Field contains invalid special characters'
+  numeric_symbols:
+    error_message: 'Field contains invalid special characters'
+  email:
+    error_message: 'Field does not contain a valid email address'
+  min_length:
+    error_message: 'Minimum requirement not met'
+  max_length:
+    error_message: 'Maximum requirement not met'
+  username_availability:
+    error_message: 'Username not available'
+  email_availability:
+    error_message: 'Email not available'
+  invalid_words:
+    error_message: 'Invalid/not allowed characters'
+  valid_languages:
+    error_message: 'Please enter your Date of Birth in this format: DD/MM/YYYY'
+  valid_date:
+    error_message: 'Please enter your Date of Birth in this format: DD/MM/YYYY'

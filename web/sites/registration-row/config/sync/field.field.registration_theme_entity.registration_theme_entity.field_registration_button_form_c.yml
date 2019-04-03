@@ -1,0 +1,25 @@
+uuid: 0fe7de36-70ec-4983-a1dd-d197e97967a9
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - field.storage.registration_theme_entity.field_registration_button_form_c
+  module:
+    - color_field
+    - registration_theme
+id: registration_theme_entity.registration_theme_entity.field_registration_button_form_c
+field_name: field_registration_button_form_c
+entity_type: registration_theme_entity
+bundle: registration_theme_entity
+label: 'Registration Button Background Color'
+description: 'Button color for registration page'
+required: true
+translatable: false
+default_value:
+  -
+    color: '#ffe000'
+    opacity: null
+default_value_callback: ''
+settings:
+  opacity: 0
+field_type: color_field_type

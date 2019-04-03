@@ -1,0 +1,8 @@
+uuid: 5185f66e-6e63-459f-9c9f-d11156a04737
+langcode: en
+status: true
+dependencies: {  }
+id: mobile-quicklinks-th
+label: 'Mobile Quicklinks TH'
+description: ''
+locked: false

@@ -1,0 +1,19 @@
+uuid: 152fff1d-e38f-4019-8043-cfdf8889d311
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_partner_alternative_text
+    - paragraphs.paragraphs_type.responsive_partner
+id: paragraph.responsive_partner.field_partner_alternative_text
+field_name: field_partner_alternative_text
+entity_type: paragraph
+bundle: responsive_partner
+label: 'Alternative Text'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

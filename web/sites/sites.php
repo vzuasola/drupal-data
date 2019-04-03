@@ -95,7 +95,17 @@ $sites['mobile-casino.drupal.dev'] = 'mobile-casino';
 $sites['mobile-casino.drupal.local'] = 'mobile-casino';
 $sites['mobile-casino.drupal.env'] = 'mobile-casino';
 
+// Mobile Casino Gold Revamp instance
+$sites['mobile-casino-gold.drupal.dev'] = 'mobile-casino-gold';
+$sites['mobile-casino-gold.drupal.local'] = 'mobile-casino-gold';
+$sites['mobile-casino-gold.drupal.env'] = 'mobile-casino-gold';
+
 // Poker revamp instance
 $sites['poker.drupal.local'] = 'poker';
 $sites['poker.drupal.dev'] = 'poker';
 $sites['poker.drupal.env'] = 'poker';
+
+// registration ROW
+$sites['registration-row.drupal.local'] = 'registration-row';
+$sites['registration-row.drupal.dev'] = 'registration-row';
+$sites['registration-row.drupal.env'] = 'registration-row';

@@ -1,0 +1,25 @@
+uuid: de777e24-3924-4ca7-83f3-8d28849626e7
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - field.storage.registration_theme_entity.field_form_font_color
+  module:
+    - color_field
+    - registration_theme
+id: registration_theme_entity.registration_theme_entity.field_form_font_color
+field_name: field_form_font_color
+entity_type: registration_theme_entity
+bundle: registration_theme_entity
+label: 'Form Font Color'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    color: '#424242'
+    opacity: null
+default_value_callback: ''
+settings:
+  opacity: 0
+field_type: color_field_type

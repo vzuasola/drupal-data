@@ -1,0 +1,24 @@
+uuid: ac8d2e18-3aa8-49da-87fe-6f93c92510bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.promotion
+  module:
+    - text
+_core:
+  default_config_hash: 1P2kJGKAIK5uC6TH8zwvMpJsJkUB8g5eR1RU1GF4Bos
+id: node.promotion.body
+field_name: body
+entity_type: node
+bundle: promotion
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

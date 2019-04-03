@@ -1,0 +1,39 @@
+field_settings:
+  label: 'Nhập Họ'
+  placeholder: 'Nhập Họ'
+  annotation: "Vui lòng điền Họ khớp với thông tin tài khoản ngân hàng của bạn (ví dụ: Nguyen)\r\n"
+field_validations:
+  required:
+    error_message: "Họ là bắt buộc\r\n"
+  alpha:
+    error_message: 'Field should be Alphabet characters only'
+  alphanumeric:
+    error_message: 'Field should be alphanumeric'
+  alpha_multi:
+    error_message: "Bạn phải nhập đúng Họ.\r\n"
+  numeric:
+    error_message: 'Field should be numeric'
+  no_symbols:
+    error_message: "Tên chứa các ký tự không hợp lệ (ví dụ:., @, #,%, ^, *, (), [], /)\r\n"
+  numeric_symbols:
+    error_message: 'Field contains invalid special characters'
+  email:
+    error_message: 'Field does not contain a valid email address'
+  min_length:
+    error_message: "Tên phải bao gồm từ 1-50 ký tự\r\n"
+  max_length:
+    error_message: "Họ không vượt quá 50 ký tự\r\n"
+  regex:
+    error_message: 'This field only accepts specific characters.'
+  valid_date:
+    error_message: 'Date is invalid'
+  username_availability:
+    error_message: 'Username not available'
+  email_availability:
+    error_message: 'Email not available'
+  invalid_words:
+    error_message: "Vui lòng điền Họ hợp lệ\r\n"
+  valid_languages:
+    error_message: "Họ phải là ký tự ABC và không dấu.\r\n"
+  not_match_username:
+    error_message: 'Password should not equal to username'

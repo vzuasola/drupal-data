@@ -1,0 +1,23 @@
+uuid: 05809ae2-97a9-4c3a-b86a-47337956d194
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_right_side_block_option
+    - node.type.promotion
+id: node.promotion.field_right_side_block_option
+field_name: field_right_side_block_option
+entity_type: node
+bundle: promotion
+label: 'Right Side Block Option'
+description: 'Show the right side promotion'
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

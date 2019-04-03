@@ -1,0 +1,9 @@
+uuid: d0e2b4d3-2177-4061-be94-fbb0d6e4c1dd
+langcode: en
+status: true
+dependencies: {  }
+name: 'Games Filter'
+vid: games_filter
+description: 'Filters for games under search'
+hierarchy: 0
+weight: 0

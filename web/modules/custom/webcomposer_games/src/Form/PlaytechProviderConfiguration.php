@@ -121,12 +121,32 @@ class PlaytechProviderConfiguration extends FormBase {
       '#type' => 'textarea',
       '#title' => $this->t('Error Mapping'),
       '#description' => $this->t('Define error messages for corresponding PAS error codes<br/>
-          pattern: <strong>code|message</strong><br/>
+          pattern: <strong>code|message|custom_header_title</strong><br/>
           special codes: <br/>
-           - <i>all</i>: Generic handler '),
+           - <i>all</i>: Generic handler'),
       '#default_value' => $this->get('error_mapping'),
-      '#translatable' => true,
-      '#rows' => 10
+      '#rows' => 10,
+      '#translatable' => true
+    ];
+
+    $form['error_header_title_text'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Header title text'),
+      '#description' => $this->t('Default header title for the error.'),
+      '#default_value' => $this->get('error_header_title_text'),
+      '#translatable' => true
+    ];
+
+    $form['error_button'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Button text'),
+      '#description' => $this->t('Button Text and link.
+      <br/>Sample value: Ok|www.dafabet.com
+      <br/>Empty 2nd part of | or |#close will close the lightbox.
+      <br/>"|#reload" will reload the current page.
+      <br/>Leave empty for no button'),
+      '#default_value' => $this->get('error_button'),
+      '#translatable' => true
     ];
   }
 }

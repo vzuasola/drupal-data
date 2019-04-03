@@ -1,0 +1,21 @@
+uuid: cbba6bab-5029-460d-835b-c69feab4e7f6
+langcode: en
+status: true
+dependencies:
+  module:
+    - registration_theme
+id: registration_theme_entity.field_default_regvia
+field_name: field_default_regvia
+entity_type: registration_theme_entity
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

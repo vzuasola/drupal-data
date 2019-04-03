@@ -1,0 +1,19 @@
+uuid: a8996a90-41e0-4132-9b6c-02f550fa748b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_res_sponsor_link
+    - paragraphs.paragraphs_type.responsive_partner
+id: paragraph.responsive_partner.field_res_sponsor_link
+field_name: field_res_sponsor_link
+entity_type: paragraph
+bundle: responsive_partner
+label: Link
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

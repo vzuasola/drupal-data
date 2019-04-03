@@ -1,0 +1,36 @@
+field_settings:
+  label: 생년월일
+  placeholder: YYYY/MM/DD
+  date-format: YYYY/MM/DD
+  annotation: ''
+field_validations:
+  required:
+    error_message: "태어난 연도를 선택하십시오. 계정을 등록하려면 20세 이상이어야 합니다.\r\n"
+  alpha:
+    error_message: 'Field should be Alphabet characters only'
+  alphanumeric:
+    error_message: 'Field should be alphanumeric'
+  alpha_multi:
+    error_message: 'Value is not a valid multilingual character'
+  numeric:
+    error_message: 'Field should be numeric'
+  no_symbols:
+    error_message: 'Field contains invalid special characters'
+  numeric_symbols:
+    error_message: 'Field contains invalid special characters'
+  email:
+    error_message: 'Field does not contain a valid email address'
+  min_length:
+    error_message: 'Minimum requirement not met'
+  max_length:
+    error_message: 'Maximum requirement not met'
+  username_availability:
+    error_message: 'Username not available'
+  email_availability:
+    error_message: 'Email not available'
+  invalid_words:
+    error_message: 'Invalid/not allowed characters'
+  valid_languages:
+    error_message: "생년월일을 다음의 형식으로 입력해주세요: YYYY/MM/DD\r\n"
+  valid_date:
+    error_message: "생년월일을 다음의 형식으로 입력해주세요: YYYY/MM/DD\r\n"

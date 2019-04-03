@@ -1,0 +1,13 @@
+uuid: 60f66467-1c86-4012-ba94-4d504b04392a
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: b-qxCu1VLGWjqvXKv4Nt7y2BUo5VSGpEIj8gb6C_PUY
+id: global
+label: Global
+tags:
+  description: 'Welcome to Dafabet, Asia''s leading online betting site and home to some of the best gaming products on the web that includes Sports Betting, Online Casino, Live Casino Games, Online Poker, Flash Games and an array of world class online betting games.'
+  title: 'Registration | Dafabet'
+  robots: 'index, follow, noindex, nofollow, noarchive, nosnippet'
+  keywords: 'Dafabet, Online Betting, Sports Betting'

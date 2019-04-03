@@ -1,0 +1,24 @@
+uuid: c194b21a-7e40-477e-963d-704cbb510ff3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.registration_theme_entity.field_steptwo_content
+  module:
+    - registration_theme
+    - text
+id: registration_theme_entity.registration_theme_entity.field_steptwo_content
+field_name: field_steptwo_content
+entity_type: registration_theme_entity
+bundle: registration_theme_entity
+label: Content
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: "<p class=\"banner-header mb-0 mt-10 text-24 text-white\"><strong>Welcome to Dafabet, {username}</strong>\r\n  <br />\r\n  You have completed your account registration!\r\n</p>\r\n<p class=\"banner-promotion text-white\">To join in the excitement of real money action,\r\n  <br />\r\n  make your deposit with our selection of secured payment methods!\r\n</p>\r\n<div class=\"button-deposit-now visible-desktop\"><a class=\"btn desktop-btn-medium tablet-btn-medium mobile-btn-medium btn-yellow\" data-url=\"{domain:entry}/{domain:lang_token}[query:({tracking})]\" href=\"{domain:cashier_domain}/{domain:lang_token}/payment-options[query:(ticket={auth.token})]\" target=\"window\">Deposit Now</a>\r\n</div>\r\n<div class=\"button-deposit-now visible-mobile\"><a class=\"btn desktop-btn-medium tablet-btn-medium mobile-btn-medium btn-yellow\" data-url=\"{domain:mobile_entry}/{domain:lang_token}[query:({tracking})]\" href=\"{domain:mobile_cashier_domain}/{domain:lang_token}/transaction/deposit[query:(ticket={auth.token})]\" target=\"window\">Deposit Now</a>\r\n</div>\r\n<div class=\"button-deposit-now visible-tablet\"><a class=\"btn desktop-btn-medium tablet-btn-medium mobile-btn-medium btn-yellow\" data-url=\"{domain:mobile_entry}/{domain:lang_token}[query:({tracking})]\" href=\"{domain:mobile_cashier_domain}/{domain:lang_token}/transaction/deposit[query:(ticket={auth.token})]\" target=\"window\">Deposit Now</a>\r\n</div>\r\n<p><u><span class=\"skip-link\"><a class=\"text-white visible-desktop\" href=\"{domain:entry}/{domain:lang_token}[query:({tracking})]]\" target=\"_self\">Skip</a><a class=\"text-white visible-mobile\" href=\"{domain:mobile_entry}/{domain:lang_token}[query:({tracking})]\" target=\"_self\">Skip</a><a class=\"text-white visible-tablet\" href=\"{domain:mobile_entry}/{domain:lang_token}[query:({tracking})]\" target=\"_self\">Skip</a></span></u>\r\n</p>\r\n"
+    format: basic_html
+default_value_callback: ''
+settings: {  }
+field_type: text_long
