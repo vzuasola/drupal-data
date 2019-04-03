@@ -78,7 +78,7 @@ dev-mobile-stack:
   environment:
     name: development
   script:
-    - DEPLOY_DEVELOPMENT=$DEPLOY_DEVELOPMENT_MOBILE python -u automation/run.py --stage deploy-development 
+    - DEPLOY_DEVELOPMENT=$DEPLOY_DEVELOPMENT_MOBILE python -u automation/run.py --stage deploy-development
   when: manual
   dependencies:
     - create package
@@ -92,7 +92,7 @@ dev-japan-stack:
   environment:
     name: development
   script:
-    - DEPLOY_DEVELOPMENT=$DEPLOY_DEVELOPMENT_JAPAN python -u automation/run.py --stage deploy-development 
+    - DEPLOY_DEVELOPMENT=$DEPLOY_DEVELOPMENT_JAPAN python -u automation/run.py --stage deploy-development
   when: manual
   dependencies:
     - create package
@@ -274,6 +274,23 @@ tct-row-stack:
     name: tct
   script:
     - DEPLOY_TCT=$DEPLOY_TCT_ROW python -u automation/run.py --stage deploy-tct
+  when: manual
+  dependencies:
+    - dev
+    - create package
+  artifacts:
+    paths:
+      - automation/deployed/*.jsonl
+    expire_in: 1 month
+
+tct_o:
+  stage: deploy-test
+  environment:
+    name: tct
+  script:
+    - DEPLOY_TCT=$DEPLOY_TCT_O
+    - DEPLOY_TCT_TOWER_HOST=$DEPLOY_TCT_TOWER_HOST
+    - python -u automation/run.py --stage deploy-tct
   when: manual
   dependencies:
     - dev
