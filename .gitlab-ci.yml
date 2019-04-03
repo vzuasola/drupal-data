@@ -299,6 +299,8 @@ tct_o:
     paths:
       - automation/deployed/*.jsonl
     expire_in: 1 month
+  tags:
+    - stgrunner_ipvg
 
 tct_o-mobile-stack:
   stage: deploy-test
@@ -316,6 +318,8 @@ tct_o-mobile-stack:
     paths:
       - automation/deployed/*.jsonl
     expire_in: 1 month
+  tags:
+    - stgrunner_ipvg
 
 .selenium tests tct:
   stage: integration-tests-test
