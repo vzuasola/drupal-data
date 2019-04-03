@@ -288,9 +288,7 @@ tct_o:
   environment:
     name: tct
   script:
-    - DEPLOY_TCT=$DEPLOY_TCT_O
-    - DEPLOY_TCT_TOWER_HOST=$DEPLOY_TCT_TOWER_HOST
-    - python -u automation/run.py --stage deploy-tct
+    - DEPLOY_TCT=$DEPLOY_TCT_O DEPLOY_TCT_TOWER_HOST=$DEPLOY_TCT_TOWER_HOST python -u automation/run.py --stage deploy-tct
   when: manual
   dependencies:
     - dev
