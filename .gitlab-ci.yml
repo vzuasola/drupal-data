@@ -543,6 +543,48 @@ staging-row-stack:
   tags:
     - stgrunner
 
+staging_o:
+  stage: deploy-staging
+  environment:
+    name: staging
+  script:
+    - DEPLOY_STG=$DEPLOY_STG_O
+    - DEPLOY_STG_TOWER_HOST=$DEPLOY_STG_O_TOWER_HOST
+    - python -u automation/run.py --stage deploy-staging
+  when: manual
+  dependencies:
+    - testing signoff
+  artifacts:
+    paths:
+      - automation/deployed/*.jsonl
+    expire_in: 1 month
+  only:
+    - /^release-.*$/
+    - tags
+  tags:
+    - stgrunner_ipvg
+
+staging_o-mobile-stack:
+  stage: deploy-staging
+  environment:
+    name: staging
+  script:
+    - DEPLOY_STG=$DEPLOY_STG_O_MOBILE
+    - DEPLOY_STG_TOWER_HOST=$DEPLOY_STG_O_TOWER_HOST
+    - python -u automation/run.py --stage deploy-staging
+  when: manual
+  dependencies:
+    - testing signoff
+  artifacts:
+    paths:
+      - automation/deployed/*.jsonl
+    expire_in: 1 month
+  only:
+    - /^release-.*$/
+    - tags
+  tags:
+    - stgrunner_ipvg
+
 .selenium tests staging:
   stage: integration-tests-staging
   script:
