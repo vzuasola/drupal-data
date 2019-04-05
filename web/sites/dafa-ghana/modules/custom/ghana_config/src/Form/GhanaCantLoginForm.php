@@ -53,6 +53,34 @@ class GhanaCantLoginForm extends FormBase {
             '#group' => 'advanced',
         ];
 
+        $form['page_forgot_password_setting']['page_host_url'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Host URL'),
+            '#default_value' => $this->get('page_host_url'),
+            '#translatable' => true,
+        ];
+
+        $form['page_forgot_password_setting']['page_username_label'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Username Label'),
+            '#default_value' => $this->get('page_username_label'),
+            '#translatable' => true,
+        ];
+
+        $form['page_forgot_password_setting']['page_pin_label'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Pin Label'),
+            '#default_value' => $this->get('page_pin_label'),
+            '#translatable' => true,
+        ];
+
+        $form['page_forgot_password_setting']['page_submit_label'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Submit Button Label'),
+            '#default_value' => $this->get('page_submit_label'),
+            '#translatable' => true,
+        ];
+
         $form['page_forgot_password_setting']['page_title'] = [
             '#type' => 'textfield',
             '#title' => $this->t('Title'),
@@ -102,6 +130,20 @@ class GhanaCantLoginForm extends FormBase {
             '#type' => 'textfield',
             '#title' => $this->t('Title'),
             '#default_value' => $this->get('page_cm_title'),
+            '#translatable' => true,
+        ];
+
+        $form['page_confirmation_message_setting']['page_button_label'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Button Label'),
+            '#default_value' => $this->get('page_button_label'),
+            '#translatable' => true,
+        ];
+
+        $form['page_confirmation_message_setting']['page_button_link'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Button Link'),
+            '#default_value' => $this->get('page_button_link'),
             '#translatable' => true,
         ];
 
