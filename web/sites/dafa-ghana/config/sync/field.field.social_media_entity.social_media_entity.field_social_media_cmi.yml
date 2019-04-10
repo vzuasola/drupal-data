@@ -1,0 +1,50 @@
+uuid: d3964eaf-c2b3-4afb-a6c3-dcbaff6fd537
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.social_media_entity.field_social_media_cmi
+    - paragraphs.paragraphs_type.social_media_cmi
+  module:
+    - entity_reference_revisions
+    - webcomposer_social_media
+_core:
+  default_config_hash: f7DZKQ0JLvbKJ_mlBYD9vxX3Ik_CXbHnHKjG998dWog
+id: social_media_entity.social_media_entity.field_social_media_cmi
+field_name: field_social_media_cmi
+entity_type: social_media_entity
+bundle: social_media_entity
+label: 'Social Media List'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      social_media_cmi: social_media_cmi
+    target_bundles_drag_drop:
+      social_media_cmi:
+        enabled: true
+        weight: -15
+      domain_management_configuration:
+        weight: -14
+        enabled: false
+      floating_banner_item:
+        weight: -13
+        enabled: false
+      right_side_block_content:
+        weight: -12
+        enabled: false
+      social_media:
+        weight: -11
+        enabled: false
+      sponsorship:
+        weight: -10
+        enabled: false
+      sponsor_cmi:
+        weight: -9
+        enabled: false
+field_type: entity_reference_revisions

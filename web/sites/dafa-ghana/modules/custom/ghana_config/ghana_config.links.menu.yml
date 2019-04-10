@@ -1,0 +1,5 @@
+ghana_config.list:
+  title: 'Ghana Configuration'
+  description: Ghana Configuration
+  parent: system.admin_config
+  route_name: ghana_config.admin_settings

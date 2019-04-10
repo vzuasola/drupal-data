@@ -1,0 +1,20 @@
+uuid: f41887f1-3b85-44e2-a7ec-b9e20e52817a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.vip_modal_entity.field_vip_modal_id
+  module:
+    - vip_modal
+id: vip_modal_entity.vip_modal_entity.field_vip_modal_id
+field_name: field_vip_modal_id
+entity_type: vip_modal_entity
+bundle: vip_modal_entity
+label: 'Modal ID'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
