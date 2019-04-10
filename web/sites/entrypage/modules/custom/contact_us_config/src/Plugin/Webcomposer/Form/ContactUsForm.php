@@ -34,6 +34,13 @@ class ContactUsForm extends WebcomposerFormBase implements WebcomposerFormInterf
         ],
       ],
 
+      'middle_name' => [
+        'name' => 'Middle Name',
+        'type' => 'textfield',
+        'settings' => [
+        ],
+      ],
+
       'first_name' => [
         'name' => 'First Name',
         'type' => 'textfield',
