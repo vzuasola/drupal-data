@@ -37,12 +37,6 @@ php code sniffer:
     - python -u automation/run.py --stage phpcs
   allow_failure: true
 
-sensiolabs security checker:
-  stage: tests
-  script:
-    - python -u automation/run.py --stage sensiolab-security-checker
-  allow_failure: true
-
 create package:
   stage: package
   script:
