@@ -641,9 +641,11 @@ staging signoff:
     - staging
     - staging-mobile-stack
     - staging-japan-stack
+    - staging-row-stack
     - uat
     - uat-mobile-stack
     - uat-japan-stack
+    - uat-row-stack
   artifacts:
     paths:
       - automation/deployed/*.jsonl
