@@ -67,10 +67,16 @@ field_validations:
     parameters:
       invalid_words_list: 'last name'
   valid_languages:
-    enable: 1
+    enable: 0
     error_message: 'Field accepts English, Chinese, Korean, Greek, apostrophe (''), and dash (-) characters only.'
     parameters:
       regex_value: '^(?!\s)[a-zA-Z\\\-''\u4E00-\uFA29\uAC00-\uD7AF\s]+$'
   not_match_username:
     enable: 0
     error_message: 'Password should not equal to username'
+  duplicated_security_question:
+    enable: 0
+    error_message: 'Security Questions should not be the same'
+  match_password:
+    enable: 0
+    error_message: 'Password not match'
