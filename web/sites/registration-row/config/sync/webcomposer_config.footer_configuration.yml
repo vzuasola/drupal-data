@@ -16,7 +16,7 @@ tablet_partners_logo:
 advanced__active_tab: edit-cookie-notification-group
 value: null
 format: null
-country_codes: 'BE,DE,EL,ES,FR,HR,CY,PT,UK,AL,AD,AM,AT,AZ,BY,BA,BG,HR,CZ,DK,EE,FI,GE,DE,GR,HU,IS,IE,IT,KZ,LV,LI,LT,LU,MK,MT,MD,MC,ME,NL,NO,PL,RO,RU,SM,RS,SK,SI,SE,TR,UA,VA,EU'
+country_codes: AT
 cookie_notification:
-  value: "<p>We use cookies to give you the best experience possible. By continuing to navigate through this site you consent to the use of cookies in accordance with our <a href=\"{domain:entry}/{lang}/security\" target=\"_blank\">Cookies Policy</a>.\r\n</p>\r\n"
+  value: "<ol>\r\n\t<li><a href=\"http://registration.drupal.local/en/admin/config/webcomposer/config\">Webcomposer Configuration</a></li>\r\n\t<li><a href=\"http://registration.drupal.local/en/admin/config/webcomposer/config\">Webcomposer Configuration</a></li>\r\n\t<li><a href=\"http://registration.drupal.local/en/admin/config/webcomposer/config\">Webcomposer Configuration</a></li>\r\n\t<li><a href=\"http://registration.drupal.local/en/admin/config/webcomposer/config\">Webcomposer Configuration</a></li>\r\n\t<li><a href=\"http://registration.drupal.local/en/admin/config/webcomposer/config\">Webcomposer Configuration</a></li>\r\n\t<li><a href=\"http://registration.drupal.local/en/admin/config/webcomposer/config\">Webcomposer Configuration</a></li>\r\n\t<li><a href=\"http://registration.drupal.local/en/admin/config/webcomposer/config\">Webcomposer Configuration</a></li>\r\n\t<li>&nbsp;</li>\r\n\t<li>&nbsp;</li>\r\n\t<li>&nbsp;</li>\r\n\t<li>&nbsp;</li>\r\n\t<li>&nbsp;</li>\r\n</ol>\r\n"
   format: basic_html

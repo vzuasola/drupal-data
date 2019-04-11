@@ -1,5 +1,8 @@
 field_settings:
-  markup: "I have read and accepted the <strong><u>\r\n<a href=\"/{lang}/terms-of-use[query:({tracking})]\" target=\"_blank\" class=\"visible-desktop\">Terms and Conditions</a>\r\n<a href=\"/{lang}/terms-of-use[query:({tracking})]\" target=\"_blank\" class=\"visible-client\">Terms and Conditions</a>\r\n<a href=\"{domain:mobile}/{lang}/terms-of-use[query:({credentials.params}&{tracking})]\" target=\"_blank\" class=\"visible-mobile\">Terms and Conditions</a>\r\n<a href=\"{domain:mobile}/{lang}/terms-of-use[query:({credentials.params}&{tracking})]\" target=\"_blank\" class=\"visible-tablet\">Terms and Conditions</a>\r\n<a href=\"{domain:mobile}/{lang}/terms-of-use[query:(clientflag=1&{tracking.token})]\" target=\"_blank\" class=\"visible-app\">Terms and Conditions</a>\r\n</u></strong>.<br/>"
+  label: 'Security Question 2'
+  placeholder: 'Security Question 2'
+  groups: security-question
+  choices: "1|What is your mother’s maiden name?\r\n2|What is your father’s first name?\r\n3|What is the model of your first car?\r\n4|What is the name of your first school?\r\n5|What is the name of your first pet?\r\n6|Place of Birth?\r\n7|Favorite celebrity?\r\n8|Favorite food?\r\n9|Favorite sport team?\r\n10|Place of work?\r\n11|Ask for security answer\r\n12|What is the name of your pet?\r\n13|What is your favorite color?\r\n14|What is your date of birth?"
 field_validations:
   required:
     enable: 1
@@ -73,7 +76,7 @@ field_validations:
     enable: 0
     error_message: 'Password should not equal to username'
   duplicated_security_question:
-    enable: 0
+    enable: 1
     error_message: 'Security Questions should not be the same'
   match_password:
     enable: 0
