@@ -8,10 +8,6 @@ weights:
     weight: '-9'
   breakline_1:
     weight: '-8'
-  email:
-    weight: '-7'
-  mobile_number:
-    weight: '-6'
   breakline_2:
     weight: '-5'
   last_name:
@@ -20,10 +16,6 @@ weights:
     weight: '-3'
   birthdate:
     weight: '-2'
-  currency:
-    weight: '-1'
-  country:
-    weight: '0'
   breakline_3:
     weight: '1'
   bonus_code:

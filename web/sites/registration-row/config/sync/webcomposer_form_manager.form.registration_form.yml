@@ -2,37 +2,41 @@ form_settings:
   show: 1
   alias: ''
 weights:
-  breakline_1:
-    weight: '-10'
   back_button:
+    weight: '-10'
+  breakline_1:
     weight: '-9'
-  username:
-    weight: '-8'
-  password:
-    weight: '-7'
-  email:
-    weight: '-6'
-  mobile_number:
-    weight: '-5'
   breakline_2:
+    weight: '-8'
+  breakline_3:
+    weight: '-7'
+  bonus_code:
+    weight: '-6'
+  username:
+    weight: '-5'
+  password:
     weight: '-4'
-  first_name:
+  confirm_password:
     weight: '-3'
   password_meter:
     weight: '-2'
-  last_name:
+  first_name:
     weight: '-1'
-  birthdate:
+  last_name:
     weight: '0'
-  currency:
+  birthdate:
     weight: '1'
-  country:
+  security_question_1:
     weight: '2'
-  breakline_3:
+  security_answer_1:
     weight: '3'
-  bonus_code:
+  security_question_2:
     weight: '4'
-  accept_terms:
+  security_answer_2:
     weight: '5'
-  submit:
+  accept_terms:
     weight: '6'
+  legal_age:
+    weight: '7'
+  submit:
+    weight: '8'

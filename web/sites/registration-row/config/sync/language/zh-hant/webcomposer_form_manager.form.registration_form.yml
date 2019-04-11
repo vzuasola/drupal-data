@@ -6,14 +6,8 @@ weights:
     weight: '-10'
   password:
     weight: '-9'
-  password_meter:
-    weight: '-8'
   breakline_1:
     weight: '-7'
-  email:
-    weight: '-6'
-  mobile_number:
-    weight: '-5'
   breakline_2:
     weight: '-4'
   last_name:
@@ -22,10 +16,6 @@ weights:
     weight: '-2'
   birthdate:
     weight: '-1'
-  currency:
-    weight: '0'
-  country:
-    weight: '1'
   breakline_3:
     weight: '2'
   bonus_code:
