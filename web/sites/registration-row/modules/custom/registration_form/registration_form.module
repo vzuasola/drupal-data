@@ -69,4 +69,18 @@ function registration_form_webcomposer_form_validation_alter(&$validations) {
     'description' => 'Validation for password if match',
     'error' => 'Password not match',
   ];
+  // username prefix validation
+  $validations['valid_username_prefix'] = [
+    'title' => 'Valid Username Prefix',
+    'description' => 'Username Prefix should match in the listed prefix below',
+    'error' => 'Username Prefix not valid',
+    'parameters' => [
+      'prefixes' => [
+        '#title' => 'Valid Prefixes',
+        '#description' => 'List of valid prefixes',
+        '#type' => 'textarea',
+        '#default_value' => '000,000,000'
+      ],
+    ],
+  ];
 }
