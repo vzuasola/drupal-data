@@ -5,10 +5,10 @@ dependencies:
   config:
     - field.field.registration_theme_entity.registration_theme_entity.field_application
     - field.field.registration_theme_entity.registration_theme_entity.field_asterisk_color
+    - field.field.registration_theme_entity.registration_theme_entity.field_background_color
     - field.field.registration_theme_entity.registration_theme_entity.field_background_image
     - field.field.registration_theme_entity.registration_theme_entity.field_banner_font_color
     - field.field.registration_theme_entity.registration_theme_entity.field_banner_highlight
-    - field.field.registration_theme_entity.registration_theme_entity.field_body_background
     - field.field.registration_theme_entity.registration_theme_entity.field_content_two_columns
     - field.field.registration_theme_entity.registration_theme_entity.field_default_regvia
     - field.field.registration_theme_entity.registration_theme_entity.field_enable_two_columns
@@ -28,6 +28,7 @@ dependencies:
     - field.field.registration_theme_entity.registration_theme_entity.field_success_message
     - field.field.registration_theme_entity.registration_theme_entity.field_success_message_color
     - field.field.registration_theme_entity.registration_theme_entity.field_theme_alternative_text
+    - field.field.registration_theme_entity.registration_theme_entity.field_tripwire_content
     - image.style.thumbnail
   module:
     - color_field
@@ -52,7 +53,6 @@ third_party_settings:
       label: Login
     group_forms:
       children:
-        - field_body_background
         - field_background_image
         - field_background_color
         - field_form_font_color
@@ -116,6 +116,18 @@ third_party_settings:
         open: false
         required_fields: true
       label: '2 Columns Layout'
+    group_tripwire_popup:
+      children:
+        - field_tripwire_content
+      parent_name: ''
+      weight: 20
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: 'This will popup when cursor leaves the page'
+        required_fields: false
+      label: 'Tripwire Popup'
 id: registration_theme_entity.registration_theme_entity.default
 targetEntityType: registration_theme_entity
 bundle: registration_theme_entity
@@ -128,13 +140,19 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_asterisk_color:
-    weight: 11
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    type: color_field_widget_html5
+    region: content
+  field_background_color:
+    weight: 6
     settings: {  }
     third_party_settings: {  }
     type: color_field_widget_html5
     region: content
   field_background_image:
-    weight: 6
+    weight: 4
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -153,14 +171,8 @@ content:
     third_party_settings: {  }
     type: color_field_widget_html5
     region: content
-  field_body_background:
-    weight: 5
-    settings: {  }
-    third_party_settings: {  }
-    type: color_field_widget_html5
-    region: content
   field_content_two_columns:
-    weight: 34
+    weight: 31
     settings:
       rows: 5
       placeholder: ''
@@ -176,26 +188,26 @@ content:
     type: string_textfield
     region: content
   field_enable_two_columns:
-    weight: 33
+    weight: 30
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
   field_error_color:
-    weight: 10
+    weight: 9
     settings: {  }
     third_party_settings: {  }
     type: color_field_widget_html5
     region: content
   field_form_font_color:
-    weight: 8
+    weight: 7
     settings: {  }
     third_party_settings: {  }
     type: color_field_widget_html5
     region: content
   field_link_color:
-    weight: 9
+    weight: 8
     settings: {  }
     third_party_settings: {  }
     type: color_field_widget_html5
@@ -209,19 +221,19 @@ content:
     type: link_default
     region: content
   field_registration_button_font_c:
-    weight: 13
+    weight: 12
     settings: {  }
     third_party_settings: {  }
     type: color_field_widget_html5
     region: content
   field_registration_button_form_c:
-    weight: 15
+    weight: 14
     settings: {  }
     third_party_settings: {  }
     type: color_field_widget_html5
     region: content
   field_registration_button_form_h:
-    weight: 14
+    weight: 13
     settings: {  }
     third_party_settings: {  }
     type: color_field_widget_html5
@@ -235,7 +247,7 @@ content:
     type: string_textfield
     region: content
   field_separator_color:
-    weight: 12
+    weight: 11
     settings: {  }
     third_party_settings: {  }
     type: color_field_widget_html5
@@ -293,6 +305,14 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_tripwire_content:
+    weight: 32
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
     region: content
   langcode:
     type: language_select
