@@ -10,8 +10,9 @@ use Drupal\Core\Routing\RouteMatchInterface;
 /**
  * Implements hook_help().
  */
-function casino_games_help($route_name, RouteMatchInterface $route_match) {
-  switch ($route_name) {
+function casino_games_help($route_name, RouteMatchInterface $route_match)
+{
+    switch ($route_name) {
     // Main module help for the casino_games module.
     case 'help.page.casino_games':
       $output = '';
@@ -24,16 +25,46 @@ function casino_games_help($route_name, RouteMatchInterface $route_match) {
 }
 
 
-function casino_games_form_alter(&$form, $form_state, $form_id) {
-  	if ($form_id == 'node_game_form' || $form_id == 'node_game_edit_form') {
- 		foreach (array_keys($form['actions']) as $action) {
-		    if ($action != 'preview' && isset($form['actions'][$action]['#type']) && $form['actions'][$action]['#type'] === 'submit') {
-		      $form['actions'][$action]['#submit'][] = 'casino_games_form_submit';
-		    }
-  		}
-  	}
+function casino_games_form_alter(&$form, $form_state, $form_id)
+{
+    if ($form_id == 'node_game_form' || $form_id == 'node_game_edit_form') {
+        foreach (array_keys($form['actions']) as $action) {
+            if ($action != 'preview' && isset($form['actions'][$action]['#type']) && $form['actions'][$action]['#type'] === 'submit') {
+                $form['actions'][$action]['#submit'][] = 'casino_games_form_submit';
+            }
+        }
+    }
 }
 
-function casino_games_form_submit($form, &$form_state) {
-	$form_state->setRedirect('casino_games.list.games');
+function casino_games_form_submit($form, &$form_state)
+{
+    $form_state->setRedirect('casino_games.list.games');
+}
+
+/**
+ * Remove CH translation from all entities
+ */
+function casino_games_update_8001()
+{
+    $lang = 'zh-hant';
+    $transTypes = array();
+    $definitions = \Drupal::entityTypeManager()->getDefinitions();
+    foreach ($definitions as $id => $definition) {
+        if ($definition->isTranslatable() && $id !== 'paragraph') {
+            $transTypes[] = $id;
+        }
+    }
+
+    foreach ($transTypes as $type) {
+        $entities = \Drupal::entityQuery($type)->execute();
+
+        foreach ($entities as $id) {
+            $entity = \Drupal::entityTypeManager()->getStorage($type)->load($id);
+            if ($entity->hasTranslation($lang)) {
+                $entity->removeTranslation($lang);
+                $entity->save();
+            }
+        }
+        print "Processed " . count($entities) . " entities of type $type\n";
+    }
 }
