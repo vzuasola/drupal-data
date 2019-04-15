@@ -2,11 +2,13 @@ form_settings:
   show: 1
   alias: ''
 weights:
-  username:
+  back_button:
     weight: '-10'
-  password:
-    weight: '-9'
   breakline_1:
+    weight: '-9'
+  username:
+    weight: '-8'
+  password:
     weight: '-7'
   email:
     weight: '-6'
@@ -18,17 +20,19 @@ weights:
     weight: '-3'
   first_name:
     weight: '-2'
-  birthdate:
+  password_meter:
     weight: '-1'
-  currency:
+  birthdate:
     weight: '0'
-  country:
+  currency:
     weight: '1'
-  breakline_3:
+  country:
     weight: '2'
-  bonus_code:
+  breakline_3:
     weight: '3'
-  accept_terms:
+  bonus_code:
     weight: '4'
-  submit:
+  accept_terms:
     weight: '5'
+  submit:
+    weight: '6'

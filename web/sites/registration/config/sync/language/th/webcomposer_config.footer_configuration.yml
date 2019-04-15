@@ -1,7 +1,11 @@
 about_dafabet_content:
-  format: basic_html
   value: "<p>ยินดีต้อนรับเข้าสู่ดาฟาเบท เว็บไซต์เดิมพันออนไลน์ที่ดีที่สุดในเอเชีย อุดมไปด้วยผลิตภัณฑ์เพื่อให้คุณเพลิดเพลินกับการเดิมพันออนไลน์มากมายทั้ง กีฬา, คาสิโน, ดีลเลอร์สด, โป๊กเกอร์, แฟลชเกมส์ และเกมส์ระดับโลกอีกคับคั่ง: ดาฟาเบทได้รับอนุญาติและควบคุมดูแลภายใต้รัฐบาลฟิลิปปินส์ตามข้อตกลงอย่างถูกต้อง</p>\r\n"
+  format: basic_html
 social_media_title: ติดตามเราและรับข่าวสารเพิ่มเติม
 sponsor_mobile_desc: 'ผู้สนับสนุนหลัก อย่างเป็นทางการ'
 about_dafabet_title: เกี่ยวกับDAFABET
 quicklinks_title: คลิกที่นี่
+advanced__active_tab: edit-cookie-notification-group
+cookie_notification:
+  value: "<p>เราใช้คุ้กกี้เพื่อมอบประสบการณ์ที่ดีที่สุดแก่คุณ การใช้งานต่อเนื่องผ่านหน้าเว็บไซต์จะถือว่าคุณได้ยอมรับการใช้คุ้กกี้ตาม <a href=\"{domain:entry}/{lang}/security\" target=\"_blank\">นโยบายของเรา</a>.</p>\r\n"
+  format: basic_html
