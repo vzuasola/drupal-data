@@ -5,14 +5,12 @@ dependencies:
   config:
     - field.storage.node.field_game_ribbon
     - field.storage.node.field_games_list_category
-    - field.storage.node.field_games_list_thumb_img_small
     - field.storage.node.field_keywords
     - node.type.games
     - system.menu.admin
     - taxonomy.vocabulary.games_category
   module:
     - draggableviews
-    - image
     - node
     - rest
     - serialization
@@ -396,70 +394,6 @@ display:
         groups:
           1: AND
       fields:
-        field_games_list_thumb_img_small:
-          id: field_games_list_thumb_img_small
-          table: node__field_games_list_thumb_img_small
-          field: field_games_list_thumb_img_small
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: Image
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: image
-          settings:
-            image_style: ''
-            image_link: ''
-          group_column: ''
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
         title:
           id: title
           table: node_field_data
@@ -900,7 +834,6 @@ display:
       tags:
         - 'config:field.storage.node.field_game_ribbon'
         - 'config:field.storage.node.field_games_list_category'
-        - 'config:field.storage.node.field_games_list_thumb_img_small'
         - 'config:field.storage.node.field_keywords'
   rest_export_1:
     display_plugin: rest_export
