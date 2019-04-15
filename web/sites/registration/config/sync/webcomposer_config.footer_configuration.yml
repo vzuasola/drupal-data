@@ -16,7 +16,7 @@ tablet_partners_logo:
 advanced__active_tab: edit-cookie-notification-group
 value: null
 format: null
-country_codes: ''
+country_codes: AT
 cookie_notification:
-  value: ''
+  value: "<ol>\r\n\t<li><a href=\"http://registration.drupal.local/en/admin/config/webcomposer/config\">Webcomposer Configuration</a></li>\r\n\t<li><a href=\"http://registration.drupal.local/en/admin/config/webcomposer/config\">Webcomposer Configuration</a></li>\r\n\t<li><a href=\"http://registration.drupal.local/en/admin/config/webcomposer/config\">Webcomposer Configuration</a></li>\r\n\t<li><a href=\"http://registration.drupal.local/en/admin/config/webcomposer/config\">Webcomposer Configuration</a></li>\r\n\t<li><a href=\"http://registration.drupal.local/en/admin/config/webcomposer/config\">Webcomposer Configuration</a></li>\r\n\t<li><a href=\"http://registration.drupal.local/en/admin/config/webcomposer/config\">Webcomposer Configuration</a></li>\r\n\t<li><a href=\"http://registration.drupal.local/en/admin/config/webcomposer/config\">Webcomposer Configuration</a></li>\r\n\t<li>&nbsp;</li>\r\n\t<li>&nbsp;</li>\r\n\t<li>&nbsp;</li>\r\n\t<li>&nbsp;</li>\r\n\t<li>&nbsp;</li>\r\n</ol>\r\n"
   format: basic_html

@@ -504,14 +504,5 @@ class GeneralConfiguration extends FormBase {
       '#description' => $this->t('Delay before popup will show in milliseconds'),
       '#default_value' => $this->get('tripwire_popup_show_delay') ?? 3000,
     ];
-    $content = $this->get('tripwire_popup_content');
-    $form['tripwire_popup']['tripwire_popup_content'] = [
-      '#type' => 'text_format',
-      '#title' => $this->t('Content'),
-      '#description' => $this->t("Message to be displayed inside pop-up."),
-      '#default_value' => $content['value'],
-      '#format' => $content['format'],
-      '#translatable' => TRUE,
-    ];
   }
 }
