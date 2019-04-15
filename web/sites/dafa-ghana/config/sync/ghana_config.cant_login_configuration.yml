@@ -14,3 +14,10 @@ page_cm_title: ' Reset Password Request Sent!'
 page_cm_desc:
   value: "<p>A confirmation message has been sent to your registered email address. Please reset your password within the next 24 hours.</p>\r\n\r\n<p>For any question or concerns please contact <a href=\"linkto:avaya\">Customer Support</a>.</p>\r\n"
   format: basic_html
+page_username_label: Username
+page_pin_label: Pin
+page_submit_label: Submit
+page_close_label: 'Close Window'
+page_button_label: Home
+page_button_link: /
+page_host_url: 'http://172.25.1.199'
