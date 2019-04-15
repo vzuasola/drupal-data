@@ -6,8 +6,6 @@ weights:
     weight: '-10'
   password:
     weight: '-9'
-  password_meter:
-    weight: '-8'
   breakline_1:
     weight: '-7'
   email:
