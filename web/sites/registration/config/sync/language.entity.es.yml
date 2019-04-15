@@ -2,6 +2,10 @@ uuid: 7045d129-b4f7-4c80-b2ba-8b8dab90f501
 langcode: en
 status: true
 dependencies: {  }
+third_party_settings:
+  webcomposer_language_hierarchy:
+    webcomposer_fallback_langcode: ''
+    webcomposer_language_custom_label: Español
 id: es
 label: Spanish
 direction: ltr

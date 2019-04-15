@@ -1,8 +1,8 @@
-step_one_text: Register
+step_one_text: 'Create account'
 step_two_text: Deposit
 _core:
   default_config_hash: e3hn0uvuv-BJxFFYiLi7_S3p1_xJVxeXLrChy6s_WYE
-registraton_api_url: 'https://tct-www.elysium-dfbt.com//api/v1/registration'
+registraton_api_url: /api/v1/registration
 registraton_portal_id_to_product_name: "2|entry\r\n3|sports\r\n4|casino\r\n5|poker\r\n6|live-dealer\r\n7|games\r\n66|exchange\r\n9|mobile-entrypage\r\n10|mobile-sports\r\n11|mobile-casino\r\n12|mobile-dafasports\r\n14|mobile-games\r\n15|mobile-live-dealer\r\n25|mobile-arcade\r\n67|mobile-exchange\r\n57|mobile-virtuals\r\n60|mobile-keno\r\n19|casino-gold\r\n22|dafa-sportsbook\r\n24|AG-fish-hunter\r\n55|keno\r\n56|virtuals"
 registraton_product_id_to_portal_id: "1|4,11,18,23\r\n2|5,12,17\r\n3|3,10\r\n4|6\r\n5|8"
 success_title: Success
@@ -30,7 +30,7 @@ payment_method_headers: 'Payment Options|Description|Min/Max| '
 livechat_kr_link: 'https://z3.liveper.sn/api/account/51941735/route/campaign/643555051/engagement/698050251'
 deposit_now_text: ''
 enable_rs_logging: 1
-native_app_title: ''
+native_app_title: 'Create account'
 mobile_native_app_command: 'htcmd://command?message='
 enable_proactive_mobile: '1'
 proactive_mobile_class: proactive-wechat-my
@@ -40,19 +40,16 @@ proactive_mobile_url_playstore: 'https://play.google.com/store/apps/details?id=c
 proactive_mobile_url_ios_appstore: 'https://itunes.apple.com/app/wechat/id414478124?mt=8'
 proactive_mobile_timeout: '90'
 s2s_config: "https://serving.dfnb-ads.com/servlet/track?clickid={advrtsrv_id}|advrtsrv_id\r\nhttps://track.buzz-track.com/pixel?adv_id=342&tx_id={advc_id}|advc_id"
-general_settings_tab__active_tab: edit-tripwire-popup
+general_settings_tab__active_tab: edit-integration
 value: null
 format: null
 enable_reg_relic_custom_headers: 0
 enable_futurama_authentication_poker: 1
-enable_futurama_authentication_casino: 0
-enable_tripwire_popup: 1
-content:
-  value: "<div id=\"silver-pre\" class=\"modal modal-popup\"><div class=\"modal-overlay\"></div>\r\n  <div class=\"modal-content no-scroll\">\r\n    <div class=\"modal-body\" style=\"height: auto;\">\r\n      <p class=\"text-red text-semibold text-20\">Wait! Before you go....</p>\r\n      <p class=\"text-20 mb-35 mt-20\">Don't you want to <span class=\"text-36 text-extrabold text-black\">GET 150% FIRST DEPOSIT BONUS </span> On your favorite sports?</p>\r\n      <div class=\"flex\">\r\n        <a href=\"#\" class=\"cta-btn btn-yellow btn-small mr-10\">\r\n          <p class=\"text-extrabold text-black text-18 mb-0 mt-15\">YES, I want to get the bonus!</p>\r\n          <p class=\"text-12 text-dark-gray\">(Continue registration)</p>\r\n        </a>\r\n        <a href=\"#\" class=\"cta-btn btn-gray btn-small ml-10\">\r\n          <p class=\"text-extrabold text-gray text-18 mb-0 mt-15\">No Thanks, Maybe next time</span>\r\n        <p class=\"text-12 text-dark-gray\">(Exit registration)</p>\r\n        </a>\r\n    </div>\r\n  </div>\r\n</div>\r\n</div>"
-  format: basic_html
-tripwire_popup_content:
-  value: "            <p class=\"text-red text-semibold text-20\">Wait! Before you go....</p>\r\n            <p class=\"text-20 mb-35 mt-20\">Don't you want to <span class=\"text-36 text-extrabold text-black\">GET 150% FIRST DEPOSIT BONUS </span> On your favorite sports?</p>\r\n            <div class=\"flex\">\r\n                <a href=\"#\" id=\"yes-action\" class=\"cta-btn btn-yellow btn-small mr-10 yes-action\">\r\n                    <p class=\"text-extrabold text-black text-18 mb-0 mt-15\">YES, I want to get the bonus!</p>\r\n                    <p class=\"text-12 text-dark-gray\">(Continue registration)</p>\r\n                </a>\r\n                <a href=\"{domain:entry}\" id=\"no-action\" class=\"cta-btn btn-gray btn-small ml-10\">\r\n                    <p class=\"text-extrabold text-gray text-18 mb-0 mt-15\">No Thanks, Maybe next time</span>\r\n                    <p class=\"text-12 text-dark-gray\">(Exit registration)</p>\r\n                </a>\r\n            </div>"
-  format: restricted_html
-tripwire_popup_show_limit: '3'
+enable_futurama_authentication_casino: 1
+enable_futurama_native_app: 1
+enable_tripwire_popup: 0
+tripwire_popup_show_limit: '2'
 tripwire_popup_show_delay: '5000'
-enable_futurama_native_app: 0
+tripwire_popup_content:
+  value: "<p class=\"text-red text-semibold text-20\">Wait! Before you go....</p>\r\n\r\n<p class=\"text-20 mb-35 mt-20\">Don't you want to <span class=\"text-36 text-extrabold text-black\">GET 150% FIRST DEPOSIT BONUS </span> On your favorite sports?</p>\r\n\r\n<div class=\"flex\">\r\n<p class=\"text-extrabold text-black text-18 mb-0 mt-15\"><a class=\"cta-btn btn-yellow btn-small mr-10 yes-action\" href=\"#\" id=\"yes-action\">YES, I want to get the bonus!</a></p>\r\n\r\n<p class=\"text-12 text-dark-gray\"><a class=\"cta-btn btn-yellow btn-small mr-10 yes-action\" href=\"#\" id=\"yes-action\">(Continue registration)</a></p>\r\n\r\n<p class=\"text-extrabold text-gray text-18 mb-0 mt-15\"><a class=\"cta-btn btn-gray btn-small ml-10\" href=\"{domain:entry}\" id=\"no-action\">No Thanks, Maybe next time </a></p>\r\n\r\n<p class=\"text-12 text-dark-gray\"><a class=\"cta-btn btn-gray btn-small ml-10\" href=\"{domain:entry}\" id=\"no-action\">(Exit registration)</a></p>\r\n</div>\r\n"
+  format: basic_html

@@ -1,0 +1,11 @@
+advanced__active_tab: edit-cookie-notification-group
+about_dafabet_title: 'Acerca de Dafabet'
+about_dafabet_content:
+  value: "<p>Bienvenido a Dafabet, el Líder Mundial de Sitios de Apuestas En línea. Hogar de algunos de los mejores productos de juego en internet, que incluyen Apuestas Deportivas, Casino En Línea, Juegos de Casino En Vivo y una variedad de Juegos de Apuestas En Línea de primera clase. Dafabet está autorizado y regulado por el gobierno filipino.</p>\r\n"
+  format: basic_html
+quicklinks_title: 'Enlaces Rápidos'
+social_media_title: 'Follow us and receive the latest updates'
+sponsor_mobile_desc: 'Official Main Club Sponsor'
+cookie_notification:
+  value: "<p>Utilizamos cookies para darle la mejor experiencia posible. Al continuar navegando a través de este sitio, usted acepta el uso de cookies de acuerdo con nuestra <a href=\"{domain:entry}/{lang}/security\" target=\"_blank\">Política de Cookies</a>.</p>\r\n"
+  format: basic_html
