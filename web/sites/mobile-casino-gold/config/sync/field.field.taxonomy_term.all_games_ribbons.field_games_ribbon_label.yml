@@ -1,0 +1,19 @@
+uuid: 4c0984a5-3011-4791-b66c-fac056a7fc0b
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_games_ribbon_label
+    - taxonomy.vocabulary.all_games_ribbons
+id: taxonomy_term.all_games_ribbons.field_games_ribbon_label
+field_name: field_games_ribbon_label
+entity_type: taxonomy_term
+bundle: all_games_ribbons
+label: Label
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,22 @@
+uuid: 65cb4caa-0cba-4b12-99ff-221c2c3511d6
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_games_ribbon_color
+    - taxonomy.vocabulary.all_games_ribbons
+  module:
+    - color_field
+id: taxonomy_term.all_games_ribbons.field_games_ribbon_color
+field_name: field_games_ribbon_color
+entity_type: taxonomy_term
+bundle: all_games_ribbons
+label: 'Ribbon Background Color'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  opacity: 0
+field_type: color_field_type

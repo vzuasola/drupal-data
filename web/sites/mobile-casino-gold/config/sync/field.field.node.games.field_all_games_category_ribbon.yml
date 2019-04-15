@@ -1,0 +1,29 @@
+uuid: bc5c4f07-7c75-4fa8-9586-2bf052ba76e2
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_all_games_category_ribbon
+    - node.type.games
+    - taxonomy.vocabulary.all_games_ribbons
+id: node.games.field_all_games_category_ribbon
+field_name: field_all_games_category_ribbon
+entity_type: node
+bundle: games
+label: 'All Games Category Ribbon'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      all_games_ribbons: all_games_ribbons
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
