@@ -1,0 +1,39 @@
+field_settings:
+  label: 'Correo electrónico'
+  placeholder: 'Correo electrónico'
+  annotation: 'Asegúrese de que está utilizando una dirección de correo electrónico activo para fines de verificación y transacciones bancarias (como Moneybookers / Skrill). Las direcciones de correo electrónico que no coincidan o no sean válidas pueden ocasionar demoras en el procesamiento de sus transacciones. También se utilizará para enviar mensajes importantes y notificaciones a su, incluida la recuperación de la contraseña y/o información relacionada con la cuenta.'
+field_validations:
+  required:
+    error_message: 'Por favor ingrese su dirección de correo electrónico válida y activa para fines de comunicación. (por ejemplo, nombre@dominio.com)'
+  alpha:
+    error_message: 'Field should be Alphabet characters only'
+  alphanumeric:
+    error_message: 'Field should be alphanumeric'
+  alpha_multi:
+    error_message: 'Value is not a valid multilingual character'
+  numeric:
+    error_message: 'Field should be numeric'
+  no_symbols:
+    error_message: 'Field contains invalid special characters'
+  numeric_symbols:
+    error_message: 'Field contains invalid special characters'
+  email:
+    error_message: "Por favor ingrese su dirección de correo electrónico válida y activa para fines de comunicación. (por ejemplo, nombre@dominio.com)\r\n"
+  min_length:
+    error_message: 'Por favor ingrese su dirección de correo electrónico válida y activa para fines de comunicación. (por ejemplo, nombre@dominio.com)'
+  max_length:
+    error_message: 'Por favor ingrese su dirección de correo electrónico válida y activa para fines de comunicación. (por ejemplo, nombre@dominio.com)'
+  regex:
+    error_message: 'This field only accepts specific characters.'
+  valid_date:
+    error_message: 'Date is invalid'
+  username_availability:
+    error_message: 'Username not available'
+  email_availability:
+    error_message: "<span class=\"visible-desktop\">Correo electrónico ya está en uso. Haga clic <a href=\"{domain:myaccount_domain}/es/cant-login\" target=\"popup\" onclick=\"window.open('{domain:myaccount_domain}/en/cant-login','popup','width=820,height=810,scrollbars=no,resizable=no'); return false;\">aquí</a> para recuperar el nombre de usuario o contraseña.</span>\r\n<span class=\"visible-client\">Correo electrónico ya está en uso. Haga clic <u><a href=\"{domain:myaccount_domain}/es/cant-login\" target=\"popup\" onclick=\"window.open('{domain:myaccount_domain}/en/cant-login','popup','width=820,height=810,scrollbars=no,resizable=no'); return false;\">aquí</a></u> para recuperar el nombre de usuario o contraseña.</span>\r\n<span class=\"visible-tablet\">Correo electrónico ya está en uso. Haga clic <a href=\"{domain:mobile}/es/cant-login\" target=\"_blank\">aquí</a> para recuperar el nombre de usuario o contraseña.</span>\r\n<span class=\"visible-mobile\">Correo electrónico ya está en uso. Haga clic <a href=\"{domain:mobile}/es/cant-login\" target=\"_blank\">aquí</a> para recuperar el nombre de usuario o contraseña.</span>\r\n<span class=\"visible-app\">Correo electrónico ya está en uso. Haga clic <a href=\"https://m.dfnba.net/es/cant-login?clientflag=1\" target=\"_blank\">aquí</a> para recuperar el nombre de usuario o contraseña.</span>"
+  invalid_words:
+    error_message: 'Invalid/not allowed characters'
+  valid_languages:
+    error_message: 'This field only accepts specific characters.'
+  not_match_username:
+    error_message: 'Password should not equal to username'
