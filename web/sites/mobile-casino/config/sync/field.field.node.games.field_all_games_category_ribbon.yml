@@ -1,5 +1,5 @@
-uuid: bc5c4f07-7c75-4fa8-9586-2bf052ba76e2
-langcode: zh-hans
+uuid: 1b4ae93e-7bd9-489d-9101-0a5d75eb8efc
+langcode: en
 status: true
 dependencies:
   config:
@@ -25,5 +25,5 @@ settings:
       field: name
       direction: asc
     auto_create: false
-    auto_create_bundle: all_games_ribbons
+    auto_create_bundle: ''
 field_type: entity_reference

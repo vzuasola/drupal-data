@@ -1,9 +1,0 @@
-uuid: ba51897e-95d7-4f83-a16b-92cc2d5553cb
-langcode: zh-hans
-status: true
-dependencies: {  }
-name: 'All Games Ribbons'
-vid: all_games_ribbons
-description: 'List of Ribbons that will appear in games thumbnail when in All Games Category'
-hierarchy: 0
-weight: 0
