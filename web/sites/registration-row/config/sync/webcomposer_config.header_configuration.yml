@@ -30,7 +30,7 @@ total_balance_label: 'Total Balance'
 product_balance_id: ''
 currency_balance_mapping: "4|RMB,USD,EUR,GBP,MYR,THB,VND,IDR,INR,KRW,RUB,PLN\r\n6|RMB,USD,EUR,GBP,MYR,THB,VND,IDR,INR,KRW,RUB,PLN,BRL,MXN,CLP,COP,PEN,ARS,VES\r\n11|RMB,USD,EUR,GBP,MYR,THB,VND,IDR,INR,KRW,RUB,PLN\r\n10|INR\r\n1|RMB,USD,EUR,GBP,MYR,THB,VND,IDR,INR,KRW,RUB,PLN,BRL,MXN,CLP,COP,PEN,ARS,VES\r\n2|RMB,USD,EUR,GBP,MYR,THB,VND,IDR,INR,KRW,RUB,PLN,BRL,MXN,CLP,COP,PEN,ARS,VES\r\n8|RMB,MYR,THB,KRW,VND,USD,IDR,INR,EUR\r\n3|RMB,USD,EUR,GBP,MYR,THB,VND,IDR,INR,KRW,RUB,PLN\r\n7|RMB"
 excluded_balance_mapping: '7'
-cashier_link: '{domain:cashier_domain}/{domain:cashier_lang}[query:(ticket={auth.token}&product=dafabet&width=820&height=820)]'
+cashier_link: '{cashier}[query:(ticket={auth.token}&product=dafabet&width=820&height=820)]'
 balance_mapping: ''
 balance_label_override: '综合钱包 '
 logo_title: 'Register at Dafabet'

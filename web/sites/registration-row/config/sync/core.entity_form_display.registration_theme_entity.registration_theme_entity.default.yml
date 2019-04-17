@@ -53,8 +53,6 @@ third_party_settings:
     group_forms:
       children:
         - field_body_background
-        - field_background_image
-        - field_background_color
         - field_form_font_color
         - field_link_color
         - field_error_color
@@ -90,9 +88,6 @@ third_party_settings:
         - field_success_message
         - field_success_message_color
         - field_steptwo_content
-        - field_steptwo_banner
-        - field_steptwo_banner_tablet
-        - field_steptwo_banner_mobile
         - field_theme_alternative_text
       parent_name: ''
       weight: 8
@@ -116,6 +111,21 @@ third_party_settings:
         open: false
         required_fields: true
       label: '2 Columns Layout'
+    group_banner:
+      children:
+        - field_background_image
+        - field_steptwo_banner
+        - field_steptwo_banner_tablet
+        - field_steptwo_banner_mobile
+      parent_name: ''
+      weight: 20
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: Banner
 id: registration_theme_entity.registration_theme_entity.default
 targetEntityType: registration_theme_entity
 bundle: registration_theme_entity
@@ -241,7 +251,7 @@ content:
     type: color_field_widget_html5
     region: content
   field_steptwo_banner:
-    weight: 26
+    weight: 7
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -249,7 +259,7 @@ content:
     type: image_image
     region: content
   field_steptwo_banner_mobile:
-    weight: 28
+    weight: 9
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -257,7 +267,7 @@ content:
     type: image_image
     region: content
   field_steptwo_banner_tablet:
-    weight: 27
+    weight: 8
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail

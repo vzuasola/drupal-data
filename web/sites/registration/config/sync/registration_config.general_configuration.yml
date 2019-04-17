@@ -1,4 +1,4 @@
-step_one_text: Register
+step_one_text: 'Create account'
 step_two_text: Deposit
 _core:
   default_config_hash: e3hn0uvuv-BJxFFYiLi7_S3p1_xJVxeXLrChy6s_WYE
@@ -30,7 +30,7 @@ payment_method_headers: 'Payment Options|Description|Min/Max| '
 livechat_kr_link: 'https://z3.liveper.sn/api/account/51941735/route/campaign/643555051/engagement/698050251'
 deposit_now_text: ''
 enable_rs_logging: 1
-native_app_title: ''
+native_app_title: 'Create account'
 mobile_native_app_command: 'htcmd://command?message='
 enable_proactive_mobile: '1'
 proactive_mobile_class: proactive-wechat-my
@@ -40,9 +40,16 @@ proactive_mobile_url_playstore: 'https://play.google.com/store/apps/details?id=c
 proactive_mobile_url_ios_appstore: 'https://itunes.apple.com/app/wechat/id414478124?mt=8'
 proactive_mobile_timeout: '90'
 s2s_config: "https://serving.dfnb-ads.com/servlet/track?clickid={advrtsrv_id}|advrtsrv_id\r\nhttps://track.buzz-track.com/pixel?adv_id=342&tx_id={advc_id}|advc_id"
-general_settings_tab__active_tab: edit-restriction
+general_settings_tab__active_tab: edit-integration
 value: null
 format: null
 enable_reg_relic_custom_headers: 0
 enable_futurama_authentication_poker: 1
-enable_futurama_authentication_casino: 0
+enable_futurama_authentication_casino: 1
+enable_futurama_native_app: 1
+enable_tripwire_popup: 0
+tripwire_popup_show_limit: '2'
+tripwire_popup_show_delay: '5000'
+tripwire_popup_content:
+  value: "<p class=\"text-red text-semibold text-20\">Wait! Before you go....</p>\r\n\r\n<p class=\"text-20 mb-35 mt-20\">Don't you want to <span class=\"text-36 text-extrabold text-black\">GET 150% FIRST DEPOSIT BONUS </span> On your favorite sports?</p>\r\n\r\n<div class=\"flex\">\r\n<p class=\"text-extrabold text-black text-18 mb-0 mt-15\"><a class=\"cta-btn btn-yellow btn-small mr-10 yes-action\" href=\"#\" id=\"yes-action\">YES, I want to get the bonus!</a></p>\r\n\r\n<p class=\"text-12 text-dark-gray\"><a class=\"cta-btn btn-yellow btn-small mr-10 yes-action\" href=\"#\" id=\"yes-action\">(Continue registration)</a></p>\r\n\r\n<p class=\"text-extrabold text-gray text-18 mb-0 mt-15\"><a class=\"cta-btn btn-gray btn-small ml-10\" href=\"{domain:entry}\" id=\"no-action\">No Thanks, Maybe next time </a></p>\r\n\r\n<p class=\"text-12 text-dark-gray\"><a class=\"cta-btn btn-gray btn-small ml-10\" href=\"{domain:entry}\" id=\"no-action\">(Exit registration)</a></p>\r\n</div>\r\n"
+  format: basic_html

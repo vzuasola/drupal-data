@@ -1,7 +1,11 @@
 about_dafabet_content:
-  format: basic_html
   value: "<p>아시아 최고의 온라인 베팅 사이트이며, 스포츠 베팅, 온라인 카지노, 라이브 카지노 게임, 온라인 포커, 플래시 게임 및 세계 최고 수준의 온라인 베팅 게임이 준비된 웹사이트 다파벳에 오신 것을 환영합니다. 다파벳은 필리핀 정부에 의해 허가 및 규제되고 있습니다.</p>\r\n"
+  format: basic_html
 social_media_title: '다파벳을 팔로우 하시고 최신 소식을 받으세요'
 sponsor_mobile_desc: '공식 메인 클럽 스폰서'
 about_dafabet_title: '다파벳 소개'
 quicklinks_title: 바로가기
+advanced__active_tab: edit-cookie-notification-group
+cookie_notification:
+  value: "<p>저희는 회원님들께 더 나은 경험을 제공해드리기 위해 쿠키를 사용합니다. 사이트에 계속 머무르시면 저희의 <a href=\"{domain:entry}/{lang}/security\" target=\"_blank\">쿠키 사용 정책</a>에 따른 쿠키 사용에 동의하시는 것으로 간주됩니다</p>\r\n"
+  format: basic_html

@@ -1,5 +1,5 @@
 field_settings:
-  markup: '<h3>Security and Contact Details</h3>'
+  markup: '<h3 class="form-legend">Account and Contact Details</h3>'
 field_validations:
   required:
     enable: 0
