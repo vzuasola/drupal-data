@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.games.field_all_games_category_ribbon
     - field.field.node.games.field_game_code
     - field.field.node.games.field_game_filter
     - field.field.node.games.field_game_platform
@@ -25,7 +26,7 @@ third_party_settings:
       children:
         - field_game_filter
       parent_name: ''
-      weight: 19
+      weight: 20
       format_type: details
       format_settings:
         id: ''
@@ -44,6 +45,12 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_all_games_category_ribbon:
+    weight: 17
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_game_code:
     weight: 1
     settings:
@@ -85,13 +92,13 @@ content:
     type: image_image
     region: content
   field_games_target:
-    weight: 18
+    weight: 19
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_keywords:
-    weight: 17
+    weight: 18
     settings:
       rows: 2
       placeholder: ''
@@ -99,7 +106,7 @@ content:
     type: string_textarea
     region: content
   field_preview_mode:
-    weight: 20
+    weight: 21
     settings:
       display_label: true
     third_party_settings: {  }
