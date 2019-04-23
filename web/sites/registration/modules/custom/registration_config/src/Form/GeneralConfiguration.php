@@ -133,7 +133,7 @@ class GeneralConfiguration extends FormBase {
       '#default_value' => $this->get('registraton_api_url'),
       '#required' => TRUE,
     ];
-    $form['integration']['registraton_potextOverBannerConfigrtal_id_to_product_name'] = [
+    $form['integration']['registraton_portal_id_to_product_name'] = [
       '#type' => 'textarea',
       '#title' => $this->t('Registration Portal ID mapping to product name'),
       '#description' => $this->t('Mapping that will be used for portal ID to Product Name e.g. 2|dafabet-entry'),
