@@ -54,7 +54,6 @@ third_party_settings:
       label: Login
     group_forms:
       children:
-        - field_background_image
         - field_background_color
         - field_form_title_color
         - field_form_font_color
@@ -92,10 +91,6 @@ third_party_settings:
         - field_success_message
         - field_success_message_color
         - field_steptwo_content
-        - field_steptwo_banner
-        - field_steptwo_banner_tablet
-        - field_steptwo_banner_mobile
-        - field_theme_alternative_text
       parent_name: ''
       weight: 8
       format_type: details
@@ -122,14 +117,30 @@ third_party_settings:
       children:
         - field_tripwire_content
       parent_name: ''
-      weight: 11
-      format_type: fieldset
+      weight: 20
+      format_type: details
       format_settings:
         id: ''
         classes: ''
-        description: 'This will popup when cursor leaves the page'
-        required_fields: false
+        open: false
+        required_fields: true
       label: 'Tripwire Popup'
+    group_background_banner:
+      children:
+        - field_steptwo_banner_mobile
+        - field_steptwo_banner_tablet
+        - field_steptwo_banner
+        - field_background_image
+        - field_theme_alternative_text
+      parent_name: ''
+      weight: 20
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: 'Background Banner'
 id: registration_theme_entity.registration_theme_entity.default
 targetEntityType: registration_theme_entity
 bundle: registration_theme_entity
@@ -154,7 +165,7 @@ content:
     type: color_field_widget_html5
     region: content
   field_background_image:
-    weight: 4
+    weight: 36
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -261,7 +272,7 @@ content:
     type: color_field_widget_html5
     region: content
   field_steptwo_banner:
-    weight: 26
+    weight: 35
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -269,7 +280,7 @@ content:
     type: image_image
     region: content
   field_steptwo_banner_mobile:
-    weight: 28
+    weight: 33
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -277,7 +288,7 @@ content:
     type: image_image
     region: content
   field_steptwo_banner_tablet:
-    weight: 27
+    weight: 34
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -307,7 +318,7 @@ content:
     type: color_field_widget_html5
     region: content
   field_theme_alternative_text:
-    weight: 29
+    weight: 37
     settings:
       size: 60
       placeholder: ''
