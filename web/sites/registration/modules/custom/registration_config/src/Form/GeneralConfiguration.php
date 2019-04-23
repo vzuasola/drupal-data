@@ -48,6 +48,7 @@ class GeneralConfiguration extends FormBase {
     $this->logConfig($form);
     $this->trackingConfig($form);
     $this->tripwirePopupConfig($form);
+    $this->textOverBannerConfig($form);
 
     return $form;
   }
@@ -68,15 +69,6 @@ class GeneralConfiguration extends FormBase {
       '#title' => $this->t('Step one text'),
       '#description' => $this->t('Text that will be displayed at the top of the form'),
       '#default_value' => $this->get('step_one_text'),
-      '#required' => TRUE,
-      '#translatable' => TRUE,
-    ];
-
-    $form['general']['step_two_text'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Step two text'),
-      '#description' => $this->t('Text that will be displayed at the top of step 2 banner'),
-      '#default_value' => $this->get('step_two_text'),
       '#required' => TRUE,
       '#translatable' => TRUE,
     ];
@@ -141,8 +133,7 @@ class GeneralConfiguration extends FormBase {
       '#default_value' => $this->get('registraton_api_url'),
       '#required' => TRUE,
     ];
-
-    $form['integration']['registraton_portal_id_to_product_name'] = [
+    $form['integration']['registraton_potextOverBannerConfigrtal_id_to_product_name'] = [
       '#type' => 'textarea',
       '#title' => $this->t('Registration Portal ID mapping to product name'),
       '#description' => $this->t('Mapping that will be used for portal ID to Product Name e.g. 2|dafabet-entry'),
@@ -503,6 +494,50 @@ class GeneralConfiguration extends FormBase {
       '#title' => $this->t('Show Delay'),
       '#description' => $this->t('Delay before popup will show in milliseconds'),
       '#default_value' => $this->get('tripwire_popup_show_delay') ?? 3000,
+    ];
+  }
+
+  /**
+   * Text Over Banner Configuration
+   */
+  private function textOverBannerConfig(array &$form) {
+    $form['text_over_banner'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Text Over Banner'),
+      '#collapsible' => TRUE,
+      '#group' => 'general_settings_tab',
+    ];
+    $mobile = $this->get('text_over_banner_mobile');
+    $form['text_over_banner']['text_over_banner_mobile'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('Mobile'),
+      '#description' => $this->t('Above content will display in mobile view.'),
+      '#default_value' => $mobile['value'],
+      '#format' => $mobile['format'],
+    ];
+    $tablet = $this->get('text_over_banner_tablet');
+    $form['text_over_banner']['text_over_banner_tablet'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('<br><br> Tablet'),
+      '#description' => $this->t('Above content will display in tablet view.'),
+      '#default_value' => $tablet['value'],
+      '#format' => $tablet['format'],
+    ];
+    $desktop_left = $this->get('text_over_banner_desktop_left');
+    $form['text_over_banner']['text_over_banner_desktop_left'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('<br><br> Desktop Left Side'),
+      '#description' => $this->t('Above content will display in desktop view on the left side.'),
+      '#default_value' => $desktop_left['value'],
+      '#format' => $desktop_left['format'],
+    ];
+    $desktop_right = $this->get('text_over_banner_desktop_right');
+    $form['text_over_banner']['text_over_banner_desktop_right'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('<br><br> Desktop Right Side'),
+      '#description' => $this->t('Above content will display in desktop view on the right side.'),
+      '#default_value' => $desktop_right['value'],
+      '#format' => $desktop_right['format'],
     ];
   }
 }
