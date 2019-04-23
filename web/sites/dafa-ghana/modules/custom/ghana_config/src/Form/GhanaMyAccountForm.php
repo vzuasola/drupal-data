@@ -88,6 +88,14 @@ class GhanaMyAccountForm extends FormBase {
             '#translatable' => true,
         ];
 
+        $c = $this->get('page_change_password_desc');
+        $form['page_change_password_setting']['page_change_password_desc'] = [
+            '#type' => 'text_format',
+            '#title' => $this->t('Form Description'),
+            '#default_value' => $c['value'],
+            '#format' => $c['format'],
+            '#translatable' => true,
+        ];
 
     }
 }
