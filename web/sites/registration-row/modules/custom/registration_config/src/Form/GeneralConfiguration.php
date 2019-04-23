@@ -48,6 +48,7 @@ class GeneralConfiguration extends FormBase {
     $this->logConfig($form);
     $this->trackingConfig($form);
     $this->tripwirePopupConfig($form);
+    $this->textOverBannerConfig($form);
 
     return $form;
   }
@@ -68,15 +69,6 @@ class GeneralConfiguration extends FormBase {
       '#title' => $this->t('Step one text'),
       '#description' => $this->t('Text that will be displayed at the top of the form'),
       '#default_value' => $this->get('step_one_text'),
-      '#required' => TRUE,
-      '#translatable' => TRUE,
-    ];
-
-    $form['general']['step_two_text'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Step two text'),
-      '#description' => $this->t('Text that will be displayed at the top of step 2 banner'),
-      '#default_value' => $this->get('step_two_text'),
       '#required' => TRUE,
       '#translatable' => TRUE,
     ];
@@ -504,14 +496,49 @@ class GeneralConfiguration extends FormBase {
       '#description' => $this->t('Delay before popup will show in milliseconds'),
       '#default_value' => $this->get('tripwire_popup_show_delay') ?? 3000,
     ];
-    $content = $this->get('tripwire_popup_content');
-    $form['tripwire_popup']['tripwire_popup_content'] = [
+  }
+
+  /**
+   * Text Over Banner Configuration
+   */
+  private function textOverBannerConfig(array &$form) {
+    $form['text_over_banner'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Text Over Banner'),
+      '#collapsible' => TRUE,
+      '#group' => 'general_settings_tab',
+    ];
+    $mobile = $this->get('text_over_banner_mobile');
+    $form['text_over_banner']['text_over_banner_mobile'] = [
       '#type' => 'text_format',
-      '#title' => $this->t('Content'),
-      '#description' => $this->t("Message to be displayed inside pop-up."),
-      '#default_value' => $content['value'],
-      '#format' => $content['format'],
-      '#translatable' => TRUE,
+      '#title' => $this->t('Mobile'),
+      '#description' => $this->t('Above content will display in mobile view.'),
+      '#default_value' => $mobile['value'],
+      '#format' => $mobile['format'],
+    ];
+    $tablet = $this->get('text_over_banner_tablet');
+    $form['text_over_banner']['text_over_banner_tablet'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('<br><br> Tablet'),
+      '#description' => $this->t('Above content will display in tablet view.'),
+      '#default_value' => $tablet['value'],
+      '#format' => $tablet['format'],
+    ];
+    $desktop_left = $this->get('text_over_banner_desktop_left');
+    $form['text_over_banner']['text_over_banner_desktop_left'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('<br><br> Desktop Left Side'),
+      '#description' => $this->t('Above content will display in desktop view on the left side.'),
+      '#default_value' => $desktop_left['value'],
+      '#format' => $desktop_left['format'],
+    ];
+    $desktop_right = $this->get('text_over_banner_desktop_right');
+    $form['text_over_banner']['text_over_banner_desktop_right'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('<br><br> Desktop Right Side'),
+      '#description' => $this->t('Above content will display in desktop view on the right side.'),
+      '#default_value' => $desktop_right['value'],
+      '#format' => $desktop_right['format'],
     ];
   }
 }

@@ -1,0 +1,25 @@
+uuid: 309bd2e3-950a-4ff0-bf6a-afb7b2a5d81c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.registration_theme_entity.field_form_title_color
+  module:
+    - color_field
+    - registration_theme
+id: registration_theme_entity.registration_theme_entity.field_form_title_color
+field_name: field_form_title_color
+entity_type: registration_theme_entity
+bundle: registration_theme_entity
+label: 'Form Title Color'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    color: '#000000'
+    opacity: '1'
+default_value_callback: ''
+settings:
+  opacity: 0
+field_type: color_field_type

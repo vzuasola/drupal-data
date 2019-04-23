@@ -1,4 +1,4 @@
-step_one_text: Register
+step_one_text: 'Create account'
 step_two_text: Deposit
 _core:
   default_config_hash: e3hn0uvuv-BJxFFYiLi7_S3p1_xJVxeXLrChy6s_WYE
@@ -40,13 +40,13 @@ proactive_mobile_url_playstore: 'https://play.google.com/store/apps/details?id=c
 proactive_mobile_url_ios_appstore: 'https://itunes.apple.com/app/wechat/id414478124?mt=8'
 proactive_mobile_timeout: '90'
 s2s_config: "https://serving.dfnb-ads.com/servlet/track?clickid={advrtsrv_id}|advrtsrv_id\r\nhttps://track.buzz-track.com/pixel?adv_id=342&tx_id={advc_id}|advc_id"
-general_settings_tab__active_tab: edit-integration
+general_settings_tab__active_tab: edit-tripwire-popup
 value: null
 format: null
 enable_reg_relic_custom_headers: 0
 enable_futurama_authentication_poker: 1
 enable_futurama_authentication_casino: 0
-enable_tripwire_popup: 0
+enable_tripwire_popup: 1
 content:
   value: "<div id=\"silver-pre\" class=\"modal modal-popup\"><div class=\"modal-overlay\"></div>\r\n  <div class=\"modal-content no-scroll\">\r\n    <div class=\"modal-body\" style=\"height: auto;\">\r\n      <p class=\"text-red text-semibold text-20\">Wait! Before you go....</p>\r\n      <p class=\"text-20 mb-35 mt-20\">Don't you want to <span class=\"text-36 text-extrabold text-black\">GET 150% FIRST DEPOSIT BONUS </span> On your favorite sports?</p>\r\n      <div class=\"flex\">\r\n        <a href=\"#\" class=\"cta-btn btn-yellow btn-small mr-10\">\r\n          <p class=\"text-extrabold text-black text-18 mb-0 mt-15\">YES, I want to get the bonus!</p>\r\n          <p class=\"text-12 text-dark-gray\">(Continue registration)</p>\r\n        </a>\r\n        <a href=\"#\" class=\"cta-btn btn-gray btn-small ml-10\">\r\n          <p class=\"text-extrabold text-gray text-18 mb-0 mt-15\">No Thanks, Maybe next time</span>\r\n        <p class=\"text-12 text-dark-gray\">(Exit registration)</p>\r\n        </a>\r\n    </div>\r\n  </div>\r\n</div>\r\n</div>"
   format: basic_html
@@ -56,3 +56,15 @@ tripwire_popup_content:
 tripwire_popup_show_limit: '3'
 tripwire_popup_show_delay: '5000'
 enable_futurama_native_app: 0
+text_over_banner_mobile:
+  value: "<p><span class=\"text-10 text-white text-bold\">WELCOME TO<br />\r\n<span class=\"text-16 text-yellow text-extrabold\">ASIA'S NUMBER 1</span><br />\r\nONLINE GAMING</span><br />\r\n<span class=\"text-10 text-white text-bold\">AND<br />\r\n<span class=\"text-16 text-yellow text-extrabold\">MOST TRUSTED</span><br />\r\nBETTING WEBSITE!</span></p>\r\n"
+  format: basic_html
+text_over_banner_tablet:
+  value: "<p><span class=\"text-12 text-white text-bold\">WELCOME TO<br />\r\n<span class=\"text-20 text-yellow text-extrabold\">ASIA'S NUMBER 1</span><br />\r\nONLINE GAMING</span><br />\r\n<span class=\"text-12 text-white text-bold\">AND<br />\r\n<span class=\"text-20 text-yellow text-extrabold\">MOST TRUSTED</span><br />\r\nBETTING WEBSITE!</span></p>\r\n"
+  format: basic_html
+text_over_banner_desktop_left:
+  value: "<p><span class=\"text-20 text-white text-bold\">WELCOME TO<br />\r\n<span class=\"text-36 text-yellow text-extrabold\">ASIA'S<br />\r\nNUMBER 1</span><br />\r\nONLINE GAMING</span></p>\r\n"
+  format: basic_html
+text_over_banner_desktop_right:
+  value: "<p><span class=\"text-20 text-white text-bold\">AND<br />\r\n<span class=\"text-36 text-yellow text-extrabold\">MOST<br />\r\nTRUSTED</span><br />\r\nBETTING WEBSITE!</span></p>\r\n"
+  format: basic_html
