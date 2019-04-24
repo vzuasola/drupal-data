@@ -1,0 +1,12 @@
+advanced__active_tab: edit-page-profile-setting
+page_current_password_label: 'Current Password X'
+page_new_password_label: 'New Password X'
+page_confirm_password_label: 'Confirm Password X'
+page_change_password_submit: 'Change Password X'
+page_change_password_desc:
+  value: "<p>Your Password has been successfully changed.&nbsp;</p>\r\n"
+  format: basic_html
+value: null
+format: null
+server_side_validation: "INTERNAL_ERROR|Internal Error (Code: 801)\r\nUPDATE_PROFILE_SUCCESS|Your profile has been updated.\r\nUPDATE_PROFILE_FAILED|There was an error updating your profile. Please try again. (Code: 700)\r\nCHECK_SESSION_PASSWORD_FAILED|There was an error updating your profile. Please try again. (Code: 700)"
+required_validation: 'This is a required field.'
