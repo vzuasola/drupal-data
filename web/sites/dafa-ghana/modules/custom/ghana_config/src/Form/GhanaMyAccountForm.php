@@ -66,10 +66,24 @@ class GhanaMyAccountForm extends FormBase {
             '#translatable' => true,
         ];
 
+        $form['page_change_password_setting']['page_current_password_placeholder'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Current Password Placeholder'),
+            '#default_value' => $this->get('page_current_password_placeholder'),
+            '#translatable' => true,
+        ];
+
         $form['page_change_password_setting']['page_new_password_label'] = [
             '#type' => 'textfield',
             '#title' => $this->t('New Password Label'),
             '#default_value' => $this->get('page_new_password_label'),
+            '#translatable' => true,
+        ];
+
+        $form['page_change_password_setting']['page_new_password_placeholder'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('New Password Placeholder'),
+            '#default_value' => $this->get('page_new_password_placeholder'),
             '#translatable' => true,
         ];
 
@@ -80,6 +94,12 @@ class GhanaMyAccountForm extends FormBase {
             '#translatable' => true,
         ];
 
+        $form['page_change_password_setting']['page_confirm_password_placeholder'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Confirm Password Placeholder'),
+            '#default_value' => $this->get('page_confirm_password_placeholder'),
+            '#translatable' => true,
+        ];
 
         $form['page_change_password_setting']['page_change_password_submit'] = [
             '#type' => 'textfield',
@@ -95,6 +115,14 @@ class GhanaMyAccountForm extends FormBase {
             '#default_value' => $c['value'],
             '#format' => $c['format'],
             '#translatable' => true,
+        ];
+
+        $form['page_change_password_setting']['change_password_integration_error'] = [
+            '#type' => 'textarea',
+            '#title' => $this->t('Integration Error Messages'),
+            '#description' => $this->t('Integration error list.'),
+            '#default_value' => $this->get('change_password_integration_error'),
+            '#translatable' => TRUE,
         ];
 
     }
