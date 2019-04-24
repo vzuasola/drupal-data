@@ -119,5 +119,13 @@ class GhanaMyAccountForm extends FormBase {
             '#translatable' => true,
         ];
 
+        $form['page_change_password_setting']['change_password_integration_error'] = [
+            '#type' => 'textarea',
+            '#title' => $this->t('Integration Error Messages'),
+            '#description' => $this->t('Integration error list.'),
+            '#default_value' => $this->get('change_password_integration_error'),
+            '#translatable' => TRUE,
+        ];
+
     }
 }
