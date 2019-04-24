@@ -37,12 +37,6 @@ php code sniffer:
     - python -u automation/run.py --stage phpcs
   allow_failure: true
 
-sensiolabs security checker:
-  stage: tests
-  script:
-    - python -u automation/run.py --stage sensiolab-security-checker
-  allow_failure: true
-
 create package:
   stage: package
   script:
@@ -78,7 +72,7 @@ dev-mobile-stack:
   environment:
     name: development
   script:
-    - DEPLOY_DEVELOPMENT=$DEPLOY_DEVELOPMENT_MOBILE python -u automation/run.py --stage deploy-development 
+    - DEPLOY_DEVELOPMENT=$DEPLOY_DEVELOPMENT_MOBILE python -u automation/run.py --stage deploy-development
   when: manual
   dependencies:
     - create package
@@ -92,7 +86,7 @@ dev-japan-stack:
   environment:
     name: development
   script:
-    - DEPLOY_DEVELOPMENT=$DEPLOY_DEVELOPMENT_JAPAN python -u automation/run.py --stage deploy-development 
+    - DEPLOY_DEVELOPMENT=$DEPLOY_DEVELOPMENT_JAPAN python -u automation/run.py --stage deploy-development
   when: manual
   dependencies:
     - create package
@@ -283,6 +277,44 @@ tct-row-stack:
       - automation/deployed/*.jsonl
     expire_in: 1 month
 
+tct_o:
+  stage: deploy-test
+  environment:
+    name: tct
+  script:
+    - DEPLOY_TCT=$DEPLOY_TCT_O
+    - DEPLOY_TCT_TOWER_HOST=$DEPLOY_TCT_O_TOWER_HOST
+    - python -u automation/run.py --stage deploy-tct
+  when: manual
+  dependencies:
+    - dev
+    - create package
+  artifacts:
+    paths:
+      - automation/deployed/*.jsonl
+    expire_in: 1 month
+  tags:
+    - stgrunner_ipvg
+
+tct_o-mobile-stack:
+  stage: deploy-test
+  environment:
+    name: tct
+  script:
+    - DEPLOY_TCT=$DEPLOY_TCT_O_MOBILE
+    - DEPLOY_TCT_TOWER_HOST=$DEPLOY_TCT_O_TOWER_HOST
+    - python -u automation/run.py --stage deploy-tct
+  when: manual
+  dependencies:
+    - dev
+    - create package
+  artifacts:
+    paths:
+      - automation/deployed/*.jsonl
+    expire_in: 1 month
+  tags:
+    - stgrunner_ipvg
+
 .selenium tests tct:
   stage: integration-tests-test
   script:
@@ -396,6 +428,8 @@ uat-row-stack:
   only:
     - /^release-.*$/
     - tags
+  tags:
+    - stgrunner
 
 .selenium tests uat:
   stage: integration-tests-staging
@@ -500,6 +534,50 @@ staging-row-stack:
   only:
     - /^release-.*$/
     - tags
+  tags:
+    - stgrunner
+
+staging_o:
+  stage: deploy-staging
+  environment:
+    name: staging
+  script:
+    - DEPLOY_STG=$DEPLOY_STG_O
+    - DEPLOY_STG_TOWER_HOST=$DEPLOY_STG_O_TOWER_HOST
+    - python -u automation/run.py --stage deploy-staging
+  when: manual
+  dependencies:
+    - testing signoff
+  artifacts:
+    paths:
+      - automation/deployed/*.jsonl
+    expire_in: 1 month
+  only:
+    - /^release-.*$/
+    - tags
+  tags:
+    - stgrunner_ipvg
+
+staging_o-mobile-stack:
+  stage: deploy-staging
+  environment:
+    name: staging
+  script:
+    - DEPLOY_STG=$DEPLOY_STG_O_MOBILE
+    - DEPLOY_STG_TOWER_HOST=$DEPLOY_STG_O_TOWER_HOST
+    - python -u automation/run.py --stage deploy-staging
+  when: manual
+  dependencies:
+    - testing signoff
+  artifacts:
+    paths:
+      - automation/deployed/*.jsonl
+    expire_in: 1 month
+  only:
+    - /^release-.*$/
+    - tags
+  tags:
+    - stgrunner_ipvg
 
 .selenium tests staging:
   stage: integration-tests-staging
@@ -557,9 +635,11 @@ staging signoff:
     - staging
     - staging-mobile-stack
     - staging-japan-stack
+    - staging-row-stack
     - uat
     - uat-mobile-stack
     - uat-japan-stack
+    - uat-row-stack
   artifacts:
     paths:
       - automation/deployed/*.jsonl

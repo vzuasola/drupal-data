@@ -1,9 +1,9 @@
 field_settings:
-  markup: "I am at least 18 years old and have read and accepted the <strong><u>\r\n<a href=\"/{lang}/terms-of-use[query:({tracking})]\" target=\"_blank\" class=\"visible-desktop\">Terms and Conditions</a>\r\n<a href=\"/{lang}/terms-of-use[query:({tracking})]\" target=\"_blank\" class=\"visible-client\">Terms and Conditions</a>\r\n<a href=\"{domain:mobile}/{lang}/terms-of-use[query:({credentials.params}&{tracking})]\" target=\"_blank\" class=\"visible-mobile\">Terms and Conditions</a>\r\n<a href=\"{domain:mobile}/{lang}/terms-of-use[query:({credentials.params}&{tracking})]\" target=\"_blank\" class=\"visible-tablet\">Terms and Conditions</a>\r\n<a href=\"{domain:mobile}/{lang}/terms-of-use[query:(clientflag=1&{tracking.token})]\" target=\"_blank\" class=\"visible-app\">Terms and Conditions</a>\r\n</u></strong>."
+  markup: "I have read and accepted the <strong><u>\r\n<a href=\"/{lang}/terms-of-use[query:({tracking})]\" target=\"_blank\" class=\"visible-desktop\">Terms and Conditions</a>\r\n<a href=\"/{lang}/terms-of-use[query:({tracking})]\" target=\"_blank\" class=\"visible-client\">Terms and Conditions</a>\r\n<a href=\"{domain:mobile}/{lang}/terms-of-use[query:({credentials.params}&{tracking})]\" target=\"_blank\" class=\"visible-mobile\">Terms and Conditions</a>\r\n<a href=\"{domain:mobile}/{lang}/terms-of-use[query:({credentials.params}&{tracking})]\" target=\"_blank\" class=\"visible-tablet\">Terms and Conditions</a>\r\n<a href=\"{domain:mobile}/{lang}/terms-of-use[query:(clientflag=1&{tracking.token})]\" target=\"_blank\" class=\"visible-app\">Terms and Conditions</a>\r\n</u></strong>.<br/>"
 field_validations:
   required:
     enable: 1
-    error_message: 'Field should be required'
+    error_message: 'This field is required.'
   alpha:
     enable: 0
     error_message: 'Field should be Alphabet characters only'
@@ -72,3 +72,9 @@ field_validations:
   not_match_username:
     enable: 0
     error_message: 'Password should not equal to username'
+  duplicated_security_question:
+    enable: 0
+    error_message: 'Security Questions should not be the same'
+  match_password:
+    enable: 0
+    error_message: 'Password not match'

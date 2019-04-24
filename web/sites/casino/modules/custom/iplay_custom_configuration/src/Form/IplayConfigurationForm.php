@@ -40,6 +40,7 @@ class IplayConfigurationForm extends FormBase {
     ];
 
     $this->headerNavLinksSection($form);
+    $this->iplayHeaderSettingsOverride($form);
 
     return $form;
   }
@@ -95,5 +96,42 @@ class IplayConfigurationForm extends FormBase {
       '#required' => TRUE,
       '#translatable' => TRUE,
     ];
+  }
+  private function iplayHeaderSettingsOverride(&$form) {
+    $form['header_config_group'] = array(
+      '#type' => 'details',
+      '#title' => $this->t('Header Settings Override'),
+      '#description' => $this->t(
+        '<br/><i><b>NOTE:</b>All empty fields will use the original field under webcomposer header configurations</i>'
+      ),
+      '#collapsible' => TRUE,
+      '#group' => 'ipaly_configuration_tab',
+    );
+
+    $form['header_config_group']['registration'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Registration'),
+      '#description' => $this->t('Registration header config override for Iplay.'),
+      '#collapsible' => TRUE,
+      '#open' => TRUE,
+    ];
+
+    $form['header_config_group']['registration']['iplay_header_override_reg_label'] = array(
+      '#type' => 'textfield',
+      '#title' => $this->t('Join Now Button Text'),
+      '#description' => $this->t('This field will be used as the join now link for iplay site.'),
+      '#default_value' => $this->get('iplay_header_override_reg_label'),
+      '#required' => FALSE,
+      '#translatable' => true
+    );
+
+    $form['header_config_group']['registration']['iplay_header_override_reg_link'] = array(
+      '#type' => 'textfield',
+      '#title' => $this->t('Registration Link'),
+      '#description' => $this->t('This field will be used as the join now link for iplay site.'),
+      '#default_value' => $this->get('iplay_header_override_reg_link'),
+      '#required' => FALSE,
+      '#translatable' => true
+    );
   }
 }

@@ -3,6 +3,13 @@
 This project template should provide a kickstart for managing your site
 dependencies with [Composer](https://getcomposer.org/).
 
+## How to Setup
+
+* Clone this repository `git clone git@gitlab.ph.esl-asia.com:CMS/drupal-data.git`
+* Run `cd drupal-data`
+* Install composer dependencies via `composer install`
+* Make sure to configure your Nginx vhost to tag your Drupal instance as local (Refer to this [link](docs/settings-configs-setup.md))
+
 ## Important
 
 * [Migrate Drupal cache to Redis](docs/news/2019-03-05-redis-caching.md)

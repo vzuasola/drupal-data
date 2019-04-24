@@ -1,0 +1,39 @@
+field_settings:
+  label: Nombre
+  placeholder: Nombre
+  annotation: 'Por favor ingrese su nombre de pila, ejemplo: <u> Joe </u> Smith. No podremos procesar depósitos con tarjeta, cheques o transferencias bancarias si el nombre ingresado es diferente al del titular de la cuenta.'
+field_validations:
+  required:
+    error_message: 'Su nombre debe ser ingresado correctamente.'
+  alpha:
+    error_message: 'Field should be Alphabet characters only'
+  alphanumeric:
+    error_message: "Your First Name must be entered correctly.\r\n"
+  alpha_multi:
+    error_message: 'Your First Name must be entered correctly.'
+  numeric:
+    error_message: 'Field should be numeric'
+  no_symbols:
+    error_message: "Name contains invalid characters (example: .,@,#,%,^,*,( ),[],/)\r\n"
+  numeric_symbols:
+    error_message: 'Field contains invalid special characters'
+  email:
+    error_message: 'Field does not contain a valid email address'
+  min_length:
+    error_message: 'El nombre debe tener entre 1 y 50 caracteres.'
+  max_length:
+    error_message: 'El nombre debe tener entre 1 y 50 caracteres.'
+  regex:
+    error_message: 'This field only accepts specific characters.'
+  valid_date:
+    error_message: 'Date is invalid'
+  username_availability:
+    error_message: 'Username not available'
+  email_availability:
+    error_message: 'Email not available'
+  invalid_words:
+    error_message: 'Su nombre debe ser ingresado correctamente.'
+  valid_languages:
+    error_message: 'Utilice únicamente caracteres en Español/Chino/Coreano/Griego.'
+  not_match_username:
+    error_message: 'Password should not equal to username'

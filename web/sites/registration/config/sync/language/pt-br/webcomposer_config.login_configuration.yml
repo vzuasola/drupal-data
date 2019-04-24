@@ -3,12 +3,12 @@ rememberme_label: 'Lembrar do usuário'
 lightbox_blurb: 'Ainda não é um membro Dafabet?'
 login_page_blurb: ''
 autologout_box_content:
-  format: basic_html
   value: "<p>Sua sessão expirará em {seconds} segundos. Você quer continuar sua sessão?</p>\r\n"
-notification_content:
   format: basic_html
+notification_content:
   value: "<p>Sua sessão expirou devido à inatividade.</p>\r\n"
-mobile_login_button_label: 'LOGIN/ JOIN'
+  format: basic_html
+mobile_login_button_label: 'ENTRAR/ CADASTRAR'
 mobile_cant_login_url: '{domain:mobile}/{lang}/cant-login'
 username_placeholder: 'Nome de usuário'
 password_placeholder: Senha
