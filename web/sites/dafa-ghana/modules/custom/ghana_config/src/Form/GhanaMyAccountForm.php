@@ -53,6 +53,28 @@ class GhanaMyAccountForm extends FormBase {
             '#group' => 'advanced',
         ];
 
+        $form['page_profile_setting']['server_side_validation'] = [
+            '#type' => 'textarea',
+            '#title' => $this->t('Server-side Validation Mapping'),
+            '#required' => TRUE,
+            '#default_value' => $this->get('server_side_validation'),
+            '#translatable' => true,
+        ];
+
+        $form['page_profile_setting']['password_validation'] = [
+            '#type' => 'details',
+            '#title' => 'Password',
+            '#open' => False,
+        ];
+
+        $form['page_profile_setting']['password_validation']['required_validation'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Required Error Message'),
+            '#required' => true,
+            '#default_value' => $this->get('required_validation'),
+            '#translatable' => true,
+        ];
+
         $form['page_change_password_setting'] = [
             '#type' => 'details',
             '#title' => t('Change Password Setting'),
