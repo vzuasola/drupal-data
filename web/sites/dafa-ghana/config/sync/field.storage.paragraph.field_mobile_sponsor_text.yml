@@ -1,0 +1,21 @@
+uuid: 119631e4-b8f7-44ca-ae33-3052f2327b5b
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_mobile_sponsor_text
+field_name: field_mobile_sponsor_text
+entity_type: paragraph
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

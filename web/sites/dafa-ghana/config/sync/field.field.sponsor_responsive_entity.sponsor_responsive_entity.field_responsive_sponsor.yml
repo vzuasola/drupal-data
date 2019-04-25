@@ -1,0 +1,57 @@
+uuid: 7b6c4150-e8be-4e68-a8b5-1ed4acfc2b03
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sponsor_responsive_entity.field_responsive_sponsor
+    - paragraphs.paragraphs_type.responsive_sponsor
+  module:
+    - entity_reference_revisions
+    - webcomposer_sponsor_responsive
+id: sponsor_responsive_entity.sponsor_responsive_entity.field_responsive_sponsor
+field_name: field_responsive_sponsor
+entity_type: sponsor_responsive_entity
+bundle: sponsor_responsive_entity
+label: 'Responsive sponsor'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      responsive_sponsor: responsive_sponsor
+    target_bundles_drag_drop:
+      domain_management_configuration:
+        weight: 11
+        enabled: false
+      floating_banner_item:
+        weight: 12
+        enabled: false
+      metatag:
+        weight: 13
+        enabled: false
+      responsive_sponsor:
+        enabled: true
+        weight: 14
+      right_side_block_content:
+        weight: 15
+        enabled: false
+      slider_overlay_cmi:
+        weight: 16
+        enabled: false
+      social_media:
+        weight: 17
+        enabled: false
+      social_media_cmi:
+        weight: 18
+        enabled: false
+      sponsor_cmi:
+        weight: 19
+        enabled: false
+      sponsorship:
+        weight: 20
+        enabled: false
+field_type: entity_reference_revisions

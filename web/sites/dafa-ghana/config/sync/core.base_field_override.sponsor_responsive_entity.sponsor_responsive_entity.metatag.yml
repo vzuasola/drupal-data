@@ -1,0 +1,18 @@
+uuid: 52b1a4bc-521c-4dea-90b1-6e8abb9880a2
+langcode: en
+status: true
+dependencies:
+  module:
+    - webcomposer_sponsor_responsive
+id: sponsor_responsive_entity.sponsor_responsive_entity.metatag
+field_name: metatag
+entity_type: sponsor_responsive_entity
+bundle: sponsor_responsive_entity
+label: Metatags
+description: 'The metatags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map
