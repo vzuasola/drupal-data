@@ -1,0 +1,21 @@
+uuid: 9f08dade-4689-405e-a8d1-9d0485baf73a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_res_sponsor_link_target
+    - paragraphs.paragraphs_type.responsive_sponsor
+  module:
+    - options
+id: paragraph.responsive_sponsor.field_res_sponsor_link_target
+field_name: field_res_sponsor_link_target
+entity_type: paragraph
+bundle: responsive_sponsor
+label: 'Link Target'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
