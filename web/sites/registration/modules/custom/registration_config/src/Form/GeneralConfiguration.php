@@ -188,6 +188,21 @@ class GeneralConfiguration extends FormBase {
         'if unchecked'),
       '#default_value' => $this->get('enable_futurama_native_app'),
     ];
+    $form['integration']['ow_native_autologin_url'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('One Works Native App Autologin URL'),
+      '#description' => $this->t('URL where we redirect the user for autologin after successful registration'),
+      '#default_value' => $this->get('ow_native_autologin_url'),
+      '#required' => TRUE,
+      '#translatable' => TRUE,
+    ];
+    $form['integration']['cashier_url_native'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Native App Cashier URL'),
+      '#description' => $this->t('This URL will be used if the native app needs a banking URL'),
+      '#default_value' => $this->get('cashier_url_native'),
+      '#required' => TRUE,
+    ];
   }
 
   /**
