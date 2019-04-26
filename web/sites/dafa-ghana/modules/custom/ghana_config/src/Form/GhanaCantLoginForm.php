@@ -67,10 +67,24 @@ class GhanaCantLoginForm extends FormBase {
             '#translatable' => true,
         ];
 
+        $form['page_forgot_password_setting']['page_username_placeholder'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Username Placeholder'),
+            '#default_value' => $this->get('page_username_placeholder'),
+            '#translatable' => true,
+        ];
+
         $form['page_forgot_password_setting']['page_pin_label'] = [
             '#type' => 'textfield',
             '#title' => $this->t('Pin Label'),
             '#default_value' => $this->get('page_pin_label'),
+            '#translatable' => true,
+        ];
+
+        $form['page_forgot_password_setting']['page_pin_placeholder'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Pin Placeholder'),
+            '#default_value' => $this->get('page_pin_placeholder'),
             '#translatable' => true,
         ];
 
