@@ -177,6 +177,38 @@ class GhanaMyAccountForm extends FormBase {
             '#translatable' => true,
         ];
 
+        $form['page_profile_setting']['form_settings']['username_label'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Username Label'),
+            '#required' => true,
+            '#default_value' => $this->get('username_label'),
+            '#translatable' => true,
+        ];
+
+        $form['page_profile_setting']['form_settings']['username_placeholder'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Username Placeholder'),
+            '#required' => true,
+            '#default_value' => $this->get('username_placeholder'),
+            '#translatable' => true,
+        ];
+
+        $form['page_profile_setting']['form_settings']['email_label'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Email Label'),
+            '#required' => true,
+            '#default_value' => $this->get('email_label'),
+            '#translatable' => true,
+        ];
+
+        $form['page_profile_setting']['form_settings']['email_placeholder'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Email Placeholder'),
+            '#required' => true,
+            '#default_value' => $this->get('email_placeholder'),
+            '#translatable' => true,
+        ];
+
         $form['page_profile_setting']['form_settings']['pin_label'] = [
             '#type' => 'textfield',
             '#title' => $this->t('Pin Label'),
@@ -206,22 +238,6 @@ class GhanaMyAccountForm extends FormBase {
             '#title' => $this->t('Country Placeholder'),
             '#required' => true,
             '#default_value' => $this->get('country_placeholder'),
-            '#translatable' => true,
-        ];
-
-        $form['page_profile_setting']['form_settings']['username_label'] = [
-            '#type' => 'textfield',
-            '#title' => $this->t('Username Label'),
-            '#required' => true,
-            '#default_value' => $this->get('username_label'),
-            '#translatable' => true,
-        ];
-
-        $form['page_profile_setting']['form_settings']['username_placeholder'] = [
-            '#type' => 'textfield',
-            '#title' => $this->t('Username Placeholder'),
-            '#required' => true,
-            '#default_value' => $this->get('username_placeholder'),
             '#translatable' => true,
         ];
 
