@@ -63,7 +63,7 @@ class GhanaMyAccountForm extends FormBase {
 
         $form['page_profile_setting']['password_validation'] = [
             '#type' => 'details',
-            '#title' => 'Password',
+            '#title' => 'Review Changes Lightbox Settings',
             '#open' => False,
         ];
 
@@ -72,6 +72,196 @@ class GhanaMyAccountForm extends FormBase {
             '#title' => $this->t('Required Error Message'),
             '#required' => true,
             '#default_value' => $this->get('required_validation'),
+            '#translatable' => true,
+        ];
+
+        $form['page_profile_setting']['password_validation']['password_placeholder'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Password Placeholder'),
+            '#required' => true,
+            '#default_value' => $this->get('password_placeholder'),
+            '#translatable' => true,
+        ];
+
+        $form['page_profile_setting']['password_validation']['submit_lightbox_label'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Submit Lightbox Label'),
+            '#required' => true,
+            '#default_value' => $this->get('submit_lightbox_label'),
+            '#translatable' => true,
+        ];
+
+        $form['page_profile_setting']['password_validation']['lightbox_title'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Lightbox Title'),
+            '#required' => true,
+            '#default_value' => $this->get('lightbox_title'),
+            '#translatable' => true,
+        ];
+
+        $form['page_profile_setting']['password_validation']['lightbox_table_description'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Lightbox Table Description'),
+            '#required' => true,
+            '#default_value' => $this->get('lightbox_table_description'),
+            '#translatable' => true,
+        ];
+
+        $form['page_profile_setting']['password_validation']['lightbox_password_description'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Lightbox Password Description'),
+            '#required' => true,
+            '#default_value' => $this->get('lightbox_password_description'),
+            '#translatable' => true,
+        ];
+
+        $form['page_profile_setting']['password_validation']['saving_message'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Saving Message'),
+            '#required' => true,
+            '#default_value' => $this->get('saving_message'),
+            '#translatable' => true,
+        ];
+
+        $form['page_profile_setting']['password_validation']['current_label'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Current Label'),
+            '#required' => true,
+            '#default_value' => $this->get('current_label'),
+            '#translatable' => true,
+        ];
+
+        $form['page_profile_setting']['password_validation']['new_label'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('New Label'),
+            '#required' => true,
+            '#default_value' => $this->get('new_label'),
+            '#translatable' => true,
+        ];
+
+        $form['page_profile_setting']['form_settings'] = [
+            '#type' => 'details',
+            '#title' => 'Form Settings',
+            '#open' => False,
+        ];
+
+        $form['page_profile_setting']['form_settings']['first_name_label'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('First Name Label'),
+            '#required' => true,
+            '#default_value' => $this->get('first_name_label'),
+            '#translatable' => true,
+        ];
+
+        $form['page_profile_setting']['form_settings']['first_name_placeholder'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('First Name Placeholder'),
+            '#required' => true,
+            '#default_value' => $this->get('first_name_placeholder'),
+            '#translatable' => true,
+        ];
+
+        $form['page_profile_setting']['form_settings']['last_name_label'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Last Name Label'),
+            '#required' => true,
+            '#default_value' => $this->get('last_name_label'),
+            '#translatable' => true,
+        ];
+
+        $form['page_profile_setting']['form_settings']['last_name_placeholder'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Last Name Placeholder'),
+            '#required' => true,
+            '#default_value' => $this->get('last_name_placeholder'),
+            '#translatable' => true,
+        ];
+
+        $form['page_profile_setting']['form_settings']['pin_label'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Pin Label'),
+            '#required' => true,
+            '#default_value' => $this->get('pin_label'),
+            '#translatable' => true,
+        ];
+
+        $form['page_profile_setting']['form_settings']['pin_placeholder'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Pin Placeholder'),
+            '#required' => true,
+            '#default_value' => $this->get('pin_placeholder'),
+            '#translatable' => true,
+        ];
+
+        $form['page_profile_setting']['form_settings']['country_label'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Country Label'),
+            '#required' => true,
+            '#default_value' => $this->get('country_label'),
+            '#translatable' => true,
+        ];
+
+        $form['page_profile_setting']['form_settings']['country_placeholder'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Country Placeholder'),
+            '#required' => true,
+            '#default_value' => $this->get('country_placeholder'),
+            '#translatable' => true,
+        ];
+
+        $form['page_profile_setting']['form_settings']['username_label'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Username Label'),
+            '#required' => true,
+            '#default_value' => $this->get('username_label'),
+            '#translatable' => true,
+        ];
+
+        $form['page_profile_setting']['form_settings']['username_placeholder'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Username Placeholder'),
+            '#required' => true,
+            '#default_value' => $this->get('username_placeholder'),
+            '#translatable' => true,
+        ];
+
+        $form['page_profile_setting']['form_settings']['birthdate_label'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Birthdate Label'),
+            '#required' => true,
+            '#default_value' => $this->get('birthdate_label'),
+            '#translatable' => true,
+        ];
+
+        $form['page_profile_setting']['form_settings']['birthdate_placeholder'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Birthdate Placeholder'),
+            '#required' => true,
+            '#default_value' => $this->get('birthdate_placeholder'),
+            '#translatable' => true,
+        ];
+
+        $form['page_profile_setting']['form_settings']['question_label'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Question Label'),
+            '#required' => true,
+            '#default_value' => $this->get('question_label'),
+            '#translatable' => true,
+        ];
+
+        $form['page_profile_setting']['form_settings']['answer_placeholder'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Answer Placeholder'),
+            '#required' => true,
+            '#default_value' => $this->get('answer_placeholder'),
+            '#translatable' => true,
+        ];
+
+        $form['page_profile_setting']['form_settings']['submit_label'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Submit Label'),
+            '#required' => true,
+            '#default_value' => $this->get('submit_label'),
             '#translatable' => true,
         ];
 
