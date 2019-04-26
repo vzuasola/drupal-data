@@ -119,23 +119,6 @@ class CasinoGamesConfigurationForm extends FormBase {
       '#translatable' => TRUE
     ];
 
-    $form['category_group']['load_more_text'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Load More Text'),
-      '#description' => $this->t('The text to display on load more button.'),
-      '#default_value' => $this->get('load_more_text'),
-      '#required' => TRUE,
-      '#translatable' => TRUE
-    ];
-
-    $form['category_group']['load_more_disabled'] = [
-      '#type' => 'checkbox',
-      '#title' => $this->t('Disable Load More'),
-      '#description' => $this->t('If checked all games will be shown at once.'),
-      '#default_value' => $this->get('load_more_disabled'),
-      '#required' => FALSE,
-    ];
-
     $form['category_group']['special_categories'] = [
       '#type' => 'fieldset',
       '#title' => $this->t('Special Categories'),
