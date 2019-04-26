@@ -21,3 +21,5 @@ page_close_label: 'Close Window'
 page_button_label: Home
 page_button_link: /
 page_host_url: 'http://172.25.1.199'
+page_username_placeholder: ' Username Placeholder'
+page_pin_placeholder: 'Pin Placeholder'
