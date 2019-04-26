@@ -53,6 +53,18 @@ class GhanaCantLoginForm extends FormBase {
             '#group' => 'advanced',
         ];
 
+        $form['page_forgot_password_setting']['page_cant_login_link_target'] = [
+            '#type' => 'select',
+            '#title' => $this->t('Link target'),
+            '#default_value' => $this->get("page_cant_login_link_target") ?: '',
+            '#translatable' => TRUE,
+            '#options' => [
+              '_blank' => $this->t('New Window'),
+              '_self' => $this->t('Same Window'),
+              'window' => $this->t('Popup Window'),
+            ],
+        ];
+
         $form['page_forgot_password_setting']['page_host_url'] = [
             '#type' => 'textfield',
             '#title' => $this->t('Host URL'),
