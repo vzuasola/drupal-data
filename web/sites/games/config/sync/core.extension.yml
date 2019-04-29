@@ -65,6 +65,8 @@ module:
   promotion_tiles: 0
   quickedit: 0
   rdf: 0
+  replicate: 0
+  replicate_ui: 0
   rest: 0
   rest_menu_items: 0
   restui: 0
