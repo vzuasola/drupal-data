@@ -135,6 +135,7 @@ class FooterForm extends FormBase {
       '#title' => $this->t('Exclude These Pages'),
       '#description' => $this->t('Exclude Back To Top Button From These Pages.'),
       '#default_value' => $this->get('back_to_top_title'),
+      '#translatable' => true,
     ];
   }
 

@@ -1,6 +1,11 @@
 about_dafabet_content:
-  format: basic_html
   value: "<p>Dafabetへようこそ！フィリピン共和国政府公認のDafabetはアジアでナンバーワンの信頼と人気を誇るオンラインベッティングサイトで、スポーツベッティング、オンラインカジノ、ライブカジノゲーム、オンラインポーカーやフラッシュゲームなどなど、世界最高レベルのオンラインゲームを多数取り揃えております。</p>\r\n"
+  format: basic_html
 sponsor_mobile_desc: 公式メインクラブスポンサー
 about_dafabet_title: 'DAFABET について'
 quicklinks_title: リンク
+advanced__active_tab: edit-cookie-notification-group
+social_media_title: 'Follow us and receive the latest updates'
+cookie_notification:
+  value: "<p>当方はお客様にできるだけ快適にご利用いただくためクッキーを使用しています。本サイトのご利用を継続されることにより、お客様は当方の <a href=\"{domain:entry}/{lang}/security\" target=\"_blank\">クッキー使用方針</a>に同意したものと見なされます</p>\r\n"
+  format: basic_html

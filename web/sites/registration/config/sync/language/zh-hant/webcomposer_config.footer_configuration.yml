@@ -1,6 +1,11 @@
 about_dafabet_content:
-  format: basic_html
   value: "<p>歡迎來到Dafabet，亞洲領先在線博彩網站，此處擁有最佳遊戲產品，包括體育投注、在線娛樂場、真人娛樂場遊戲、在線撲克、網頁遊戲和各種世界一流的在線投注遊戲。Dafabet由菲律賓政府許可和監管。</p>\r\n"
+  format: basic_html
 sponsor_mobile_desc: 官方俱樂部主贊助商
 about_dafabet_title: '关于 DAFABET'
 quicklinks_title: 快速鏈接
+advanced__active_tab: edit-cookie-notification-group
+social_media_title: 'Follow us and receive the latest updates'
+cookie_notification:
+  value: "<p>我們使用Cookies來給您提供最佳用戶體驗。在您繼續訪問本網站的同時，將默認您同意我們的 <a href=\"{domain:entry}/{lang}/security\" target=\"_blank\">Cookies使用政策</a>.</p>\r\n"
+  format: basic_html

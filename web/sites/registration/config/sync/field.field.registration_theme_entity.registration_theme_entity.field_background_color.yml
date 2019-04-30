@@ -1,0 +1,25 @@
+uuid: 8fb7cb26-c6f1-45cf-96f3-29495b3981b8
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - field.storage.registration_theme_entity.field_background_color
+  module:
+    - color_field
+    - registration_theme
+id: registration_theme_entity.registration_theme_entity.field_background_color
+field_name: field_background_color
+entity_type: registration_theme_entity
+bundle: registration_theme_entity
+label: 'Background Color'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    color: '#d3d3d3'
+    opacity: null
+default_value_callback: ''
+settings:
+  opacity: 0
+field_type: color_field_type

@@ -14,3 +14,5 @@ master_placeholder: 0
 master_placeholder_message: 'Term @term already exists in vocabulary @vocabulary.'
 games_filter: 0
 games_filter_message: 'Term @term already exists in vocabulary @vocabulary.'
+all_games_ribbons: 1
+all_games_ribbons_message: 'Term @term already exists in vocabulary @vocabulary.'

@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.games.field_all_games_category_ribbon
     - field.field.node.games.field_game_code
     - field.field.node.games.field_game_filter
     - field.field.node.games.field_game_provider
@@ -46,6 +47,12 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_all_games_category_ribbon:
+    weight: 19
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_game_code:
     weight: 1
     settings:
@@ -101,13 +108,13 @@ content:
     type: options_select
     region: content
   field_games_target:
-    weight: 20
+    weight: 21
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_keywords:
-    weight: 19
+    weight: 20
     settings:
       rows: 2
       placeholder: ''

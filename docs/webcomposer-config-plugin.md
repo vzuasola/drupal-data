@@ -33,6 +33,9 @@ The important part of the plugin class is the annotation.
 It can contain a **route** option or a **menu** option, if you want this form
 to appear on the admin menu.
 
+> **TIP:** The namespace **Drupal\my_module\Form** means that there is a **Form** folder inside of
+> the module **my_module**. Autoload in Drupal works by module
+
 ```php
 namespace Drupal\my_module\Form;
 

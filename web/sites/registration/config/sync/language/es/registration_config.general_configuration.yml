@@ -1,14 +1,14 @@
-general_settings_tab__active_tab: edit-proactive-settings
-step_one_text: Register
-step_two_text: Deposit
-home_title: 'Start betting today with Dafabet! Sign up now!'
-success_title: Success
+general_settings_tab__active_tab: edit-logging-settings
+step_one_text: Registrarse
+step_two_text: Depositar
+home_title: '¡Comienza a apostar con Dafabet! Regístrate ya!'
+success_title: ¡Realizado!
 native_app_title: ''
 enable_reg_relic_custom_headers: 0
 portal_id_to_product_name_mapping: "3|OW Sports|sports\r\n10|OW Sports|sports\r\n28|OW Sports|sports\r\n47|OW Sports|sports\r\n22|Dafa Sports|sports-df\r\n26|Dafa Sports|sports-df\r\n29|Dafa Sports|sports-df\r\n48|Dafa Sports|sports-df\r\n4|Casino|casino\r\n11|Casino|casino\r\n16|Casino|casino\r\n18|Casino|casino\r\n30|Casino|casino\r\n49|Casino|casino\r\n23|Casino|casino\r\n19|Casino Gold|casino-gold\r\n20|Casino Gold|casino-gold\r\n21|Casino Gold|casino-gold\r\n35|Casino Gold|casino-gold\r\n54|Casino Gold|casino-gold\r\n6|Live Dealer|live-dealer\r\n15|Live Dealer|live-dealer\r\n33|Live Dealer|live-dealer\r\n52|Live Dealer|live-dealer\r\n5|Poker|poker\r\n12|Poker|poker\r\n17|Poker|poker\r\n31|Poker|poker\r\n50|Poker|poker\r\n24|Arcade|fish-hunter\r\n25|Arcade|fish-hunter\r\n34|Arcade|fish-hunter\r\n53|Arcade|fish-hunter\r\n8|Games|games\r\n14|Games|games\r\n32|Games|games\r\n51|Games|games\r\n56|Virtuals|virtuals\r\n57|Virtuals|virtuals\r\n58|Virtuals|virtuals\r\n59|Virtuals|virtuals\r\n55|Lottery|keno\r\n45|Lottery|keno\r\n60|Lottery|keno\r\n61|Lottery|keno\r\n66|Exchange|exchange\r\n67|Exchange|exchange\r\n68|Exchange|exchange\r\n69|Exchange|exchange"
-country_restriction_message: '[product] is not available in your region'
-generic_error_message: 'Account registration failed. Please contact our <a href="mailto:ensupport@dafabet.com">Customer Support</a> for assistance.'
-unauthenticated_error_message: 'We are unable to authenticate you on Dafabet as it seems your account has been logged out. Please login to your account.'
+country_restriction_message: '[product] no está disponible en tu región.'
+generic_error_message: 'Falló el registro de la cuenta. Por favor, póngase en contacto con nuestro <a href="mailto:soporte@dafabet.com">Servicio al Cliente</a> si necesita ayuda.'
+unauthenticated_error_message: 'No podemos autenticarlo en Dafabet ya que parece que su cuenta se ha desconectado. Por favor, ingrese a su cuenta.'
 enable_avaya_proactive: '0'
 livechat_header: 'Need Help?'
 livechat_text: 'How can we help you?'

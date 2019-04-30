@@ -14,7 +14,7 @@ bundle: registration_theme_entity
 label: 'Separator Color'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value:
   -
     color: '#a8a8a8'
