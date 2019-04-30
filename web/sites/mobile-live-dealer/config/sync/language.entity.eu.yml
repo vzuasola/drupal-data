@@ -1,5 +1,5 @@
-uuid: 1fb6c16b-2f4e-43e8-9897-4c61d5e06175
-langcode: hi
+uuid: 3b61d583-71c9-447d-9def-9b9bd40eb181
+langcode: eu
 status: true
 dependencies:
   module:
@@ -7,9 +7,9 @@ dependencies:
 third_party_settings:
   webcomposer_language_hierarchy:
     webcomposer_fallback_langcode: en
-    webcomposer_language_custom_label: हिन्दी
-id: hi
-label: 'Hindi (India)'
+    webcomposer_language_custom_label: 'English (Europe)'
+id: eu
+label: 'English (Europe)'
 direction: ltr
-weight: -3
+weight: -9
 locked: false
