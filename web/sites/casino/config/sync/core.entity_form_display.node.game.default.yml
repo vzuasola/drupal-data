@@ -18,6 +18,7 @@ dependencies:
     - field.field.node.game.field_jackpot_ticker
     - field.field.node.game.field_meta_tags
     - field.field.node.game.field_play_for_fun_toggle
+    - field.field.node.game.field_preview_display_only
     - field.field.node.game.field_ribbon_configuration
     - image.style.thumbnail
     - node.type.game
@@ -90,7 +91,7 @@ content:
     type: string_textfield
     region: content
   field_game_filter:
-    weight: 26
+    weight: 13
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -136,7 +137,7 @@ content:
     type: boolean_checkbox
     region: content
   field_game_keywords:
-    weight: 27
+    weight: 14
     settings:
       size: 100
       placeholder: 'e.g., slots, top, live'
@@ -179,13 +180,20 @@ content:
     type: number
     region: content
   field_meta_tags:
-    weight: 28
+    weight: 15
     settings: {  }
     third_party_settings: {  }
     type: metatag_firehose
     region: content
   field_play_for_fun_toggle:
     weight: 11
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_preview_display_only:
+    weight: 16
     settings:
       display_label: true
     third_party_settings: {  }
@@ -201,7 +209,8 @@ content:
     type: language_select
     weight: 1
     region: content
-    settings: {  }
+    settings:
+      include_locked: true
     third_party_settings: {  }
   path:
     type: path
@@ -219,6 +228,13 @@ content:
     weight: 4
     region: content
     settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 17
+    region: content
     third_party_settings: {  }
   title:
     type: string_textfield
