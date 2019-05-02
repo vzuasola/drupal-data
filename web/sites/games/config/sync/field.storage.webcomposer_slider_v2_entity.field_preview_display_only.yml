@@ -1,18 +1,17 @@
-uuid: f688bb16-2954-49ea-83a9-c92f56d5f75a
+uuid: 79939d9d-a362-4b89-bfc4-103f5d0017a3
 langcode: en
 status: true
 dependencies:
   module:
-    - link
     - webcomposer_slider_v2
 _core:
-  default_config_hash: '-vxJwlmvH2umnNgvyaAwDfOHd1zMpNXKcbC01ty2SkQ'
-id: webcomposer_slider_v2_entity.field_banner_link
-field_name: field_banner_link
+  default_config_hash: S2MTS1gTghnDUVmpN71bUgCukTn99GZc_w4vjyywKsc
+id: webcomposer_slider_v2_entity.field_preview_display_only
+field_name: field_preview_display_only
 entity_type: webcomposer_slider_v2_entity
-type: link
+type: boolean
 settings: {  }
-module: link
+module: core
 locked: false
 cardinality: 1
 translatable: true
