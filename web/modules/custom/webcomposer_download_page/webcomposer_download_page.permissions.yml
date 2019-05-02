@@ -1,0 +1,22 @@
+add webcomposer download page entities:
+  title: 'Create new Webcomposer download page entities'
+
+administer webcomposer download page entities:
+  title: 'Administer Webcomposer download page entities'
+  description: 'Allow to access the administration form to configure Webcomposer download page entities.'
+  restrict access: true
+
+delete webcomposer download page entities:
+  title: 'Delete Webcomposer download page entities'
+
+edit webcomposer download page entities:
+  title: 'Edit Webcomposer download page entities'
+
+access webcomposer download page overview:
+  title: 'Access the Webcomposer download page overview page'
+
+view published webcomposer download page entities:
+  title: 'View published Webcomposer download page entities'
+
+view unpublished webcomposer download page entities:
+  title: 'View unpublished Webcomposer download page entities'

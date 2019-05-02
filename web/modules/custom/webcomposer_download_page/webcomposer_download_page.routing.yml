@@ -1,0 +1,7 @@
+webcomposer_download_page.admin_settings:
+  path: 'admin/config/webcomposer/webcomposer_download_page'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Webcomposer Slider 2.0'
+  requirements:
+    _permission: 'administer site configuration'
