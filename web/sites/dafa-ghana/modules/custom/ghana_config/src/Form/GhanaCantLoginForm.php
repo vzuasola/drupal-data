@@ -53,6 +53,18 @@ class GhanaCantLoginForm extends FormBase {
             '#group' => 'advanced',
         ];
 
+        $form['page_forgot_password_setting']['page_cant_login_link_target'] = [
+            '#type' => 'select',
+            '#title' => $this->t('Link target'),
+            '#default_value' => $this->get("page_cant_login_link_target") ?: '',
+            '#translatable' => TRUE,
+            '#options' => [
+              '_blank' => $this->t('New Window'),
+              '_self' => $this->t('Same Window'),
+              'window' => $this->t('Popup Window'),
+            ],
+        ];
+
         $form['page_forgot_password_setting']['page_host_url'] = [
             '#type' => 'textfield',
             '#title' => $this->t('Host URL'),
@@ -67,10 +79,24 @@ class GhanaCantLoginForm extends FormBase {
             '#translatable' => true,
         ];
 
+        $form['page_forgot_password_setting']['page_username_placeholder'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Username Placeholder'),
+            '#default_value' => $this->get('page_username_placeholder'),
+            '#translatable' => true,
+        ];
+
         $form['page_forgot_password_setting']['page_pin_label'] = [
             '#type' => 'textfield',
             '#title' => $this->t('Pin Label'),
             '#default_value' => $this->get('page_pin_label'),
+            '#translatable' => true,
+        ];
+
+        $form['page_forgot_password_setting']['page_pin_placeholder'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Pin Placeholder'),
+            '#default_value' => $this->get('page_pin_placeholder'),
             '#translatable' => true,
         ];
 

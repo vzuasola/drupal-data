@@ -515,6 +515,7 @@ class GeneralConfiguration extends FormBase {
       '#description' => $this->t('Above content will display in mobile view.'),
       '#default_value' => $mobile['value'],
       '#format' => $mobile['format'],
+      '#translatable' => TRUE,
     ];
     $tablet = $this->get('text_over_banner_tablet');
     $form['text_over_banner']['text_over_banner_tablet'] = [
@@ -523,6 +524,7 @@ class GeneralConfiguration extends FormBase {
       '#description' => $this->t('Above content will display in tablet view.'),
       '#default_value' => $tablet['value'],
       '#format' => $tablet['format'],
+      '#translatable' => TRUE,
     ];
     $desktop_left = $this->get('text_over_banner_desktop_left');
     $form['text_over_banner']['text_over_banner_desktop_left'] = [
@@ -531,6 +533,7 @@ class GeneralConfiguration extends FormBase {
       '#description' => $this->t('Above content will display in desktop view on the left side.'),
       '#default_value' => $desktop_left['value'],
       '#format' => $desktop_left['format'],
+      '#translatable' => TRUE,
     ];
     $desktop_right = $this->get('text_over_banner_desktop_right');
     $form['text_over_banner']['text_over_banner_desktop_right'] = [
@@ -539,6 +542,7 @@ class GeneralConfiguration extends FormBase {
       '#description' => $this->t('Above content will display in desktop view on the right side.'),
       '#default_value' => $desktop_right['value'],
       '#format' => $desktop_right['format'],
+      '#translatable' => TRUE,
     ];
   }
 }
