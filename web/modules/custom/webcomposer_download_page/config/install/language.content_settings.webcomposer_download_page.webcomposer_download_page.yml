@@ -1,0 +1,17 @@
+uuid: e6c6cf17-526f-416e-b728-0b40b35ac209
+langcode: en
+status: true
+dependencies:
+  module:
+    - content_translation
+    - webcomposer_download_page
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: webcomposer_download_page.webcomposer_download_page
+target_entity_type_id: webcomposer_download_page
+target_bundle: webcomposer_download_page
+default_langcode: site_default
+language_alterable: true
