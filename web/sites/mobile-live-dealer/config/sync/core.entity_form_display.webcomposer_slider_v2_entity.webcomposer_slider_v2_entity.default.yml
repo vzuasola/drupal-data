@@ -17,11 +17,15 @@ dependencies:
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_post_content_position
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_preview_display_only
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_publish_date
+    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_ribbon_background_color
+    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_ribbon_label_color
+    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_ribbon_product_label
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_status
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_title
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_unpublish_date
     - image.style.thumbnail
   module:
+    - color_field
     - conditional_fields
     - datetime
     - field_group
@@ -52,7 +56,6 @@ third_party_settings:
         - field_banner_link_target
         - field_banner_blurb
         - field_content_position
-        - field_prelogin_slider_ribbon
       parent_name: ''
       weight: 4
       format_type: fieldset
@@ -69,7 +72,6 @@ third_party_settings:
         - field_post_banner_link_target
         - field_post_banner_blurb
         - field_post_content_position
-        - field_postlogin_slider_ribbon
       parent_name: ''
       weight: 5
       format_type: fieldset
@@ -93,6 +95,20 @@ third_party_settings:
         description: 'Enable Preview, Tablet View, and the Slider entry statuses'
         required_fields: true
       label: 'Additional Statuses'
+    group_product_ribbon:
+      children:
+        - field_ribbon_background_color
+        - field_ribbon_label_color
+        - field_ribbon_product_label
+      parent_name: ''
+      weight: 20
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Product Ribbon'
 _core:
   default_config_hash: OZJ37uq9NXIxbipYTMrqYIn6yXsVaUWLRX1cLOk0Kl0
 id: webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.default
@@ -396,6 +412,40 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
+    region: content
+  field_ribbon_background_color:
+    weight: 23
+    settings: {  }
+    third_party_settings: {  }
+    type: color_field_widget_html5
+    region: content
+  field_ribbon_label_color:
+    weight: 24
+    settings: {  }
+    third_party_settings: {  }
+    type: color_field_widget_html5
+    region: content
+  field_ribbon_product_label:
+    weight: 25
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+  field_slider_game_code:
+    weight: 26
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_slider_game_provider:
+    weight: 27
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   field_status:
     weight: 20
