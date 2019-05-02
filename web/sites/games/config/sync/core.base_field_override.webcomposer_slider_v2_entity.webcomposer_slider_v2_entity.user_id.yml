@@ -4,6 +4,8 @@ status: true
 dependencies:
   module:
     - webcomposer_slider_v2
+_core:
+  default_config_hash: Wjbde03-aeoqrWKyxOkYSzO-xeHEQPeD2qm_5RuK1v4
 id: webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.user_id
 field_name: user_id
 entity_type: webcomposer_slider_v2_entity
