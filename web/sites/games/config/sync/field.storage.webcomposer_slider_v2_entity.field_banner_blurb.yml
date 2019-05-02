@@ -5,6 +5,8 @@ dependencies:
   module:
     - text
     - webcomposer_slider_v2
+_core:
+  default_config_hash: Ly0yYLmhgXEmt8gs9m3xCoBWjTmFKjW4nofLBKr5ei4
 id: webcomposer_slider_v2_entity.field_banner_blurb
 field_name: field_banner_blurb
 entity_type: webcomposer_slider_v2_entity

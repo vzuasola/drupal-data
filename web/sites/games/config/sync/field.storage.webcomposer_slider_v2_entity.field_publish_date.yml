@@ -5,6 +5,8 @@ dependencies:
   module:
     - datetime
     - webcomposer_slider_v2
+_core:
+  default_config_hash: GZvzyankDiIumschjqE9G9K4ayx29RBphcCPPlkTKLE
 id: webcomposer_slider_v2_entity.field_publish_date
 field_name: field_publish_date
 entity_type: webcomposer_slider_v2_entity
