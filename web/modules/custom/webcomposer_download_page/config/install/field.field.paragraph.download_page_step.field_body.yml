@@ -1,0 +1,21 @@
+uuid: 56a0557a-d630-4885-b21c-4fe0c601b70b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_body
+    - paragraphs.paragraphs_type.download_page_step
+  module:
+    - text
+id: paragraph.download_page_step.field_body
+field_name: field_body
+entity_type: paragraph
+bundle: download_page_step
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

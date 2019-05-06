@@ -1,0 +1,22 @@
+# Webcomposer download page routing definition
+webcomposer_download_page.settings_tab:
+  route_name: webcomposer_download_page.settings
+  title: 'Settings'
+  base_route: webcomposer_download_page.settings
+
+entity.webcomposer_download_page.canonical:
+  route_name: entity.webcomposer_download_page.canonical
+  base_route: entity.webcomposer_download_page.canonical
+  title: 'View'
+
+entity.webcomposer_download_page.edit_form:
+  route_name: entity.webcomposer_download_page.edit_form
+  base_route: entity.webcomposer_download_page.canonical
+  title: 'Edit'
+
+entity.webcomposer_download_page.delete_form:
+  route_name:  entity.webcomposer_download_page.delete_form
+  base_route:  entity.webcomposer_download_page.canonical
+  title: Delete
+  weight: 10
+

@@ -1,0 +1,20 @@
+
+webcomposer_download_page.list:
+  title: 'Webcomposer Download Page Configuration'
+  description: 'List Web composer Download Page entities'
+  parent: system.admin_config
+  route_name: webcomposer_download_page.admin_settings
+
+# Webcomposer download page menu items definition
+entity.webcomposer_download_page.collection:
+  title: 'Webcomposer download page list'
+  route_name: entity.webcomposer_download_page.collection
+  description: 'List Webcomposer download page entities'
+  parent: webcomposer_download_page.list
+  weight: 100
+
+webcomposer_download_page.admin.structure.settings:
+  title: Webcomposer download page settings
+  description: 'Configure Webcomposer download page entities'
+  route_name: webcomposer_download_page.settings
+  parent: webcomposer_download_page.list

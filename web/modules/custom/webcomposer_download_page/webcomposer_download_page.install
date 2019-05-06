@@ -1,0 +1,42 @@
+<?php
+
+/**
+ * Implements hook_uninstall
+ */
+function webcomposer_download_page_uninstall() {
+  $keys = [
+    'core.base_field_override.webcomposer_download_page.webcomposer_download_page.metatag',
+    'core.entity_form_display.paragraph.download_page_step.default',
+    'core.entity_form_display.webcomposer_download_page.webcomposer_download_page.default',
+    'core.entity_view_display.paragraph.download_page_step.default',
+    'core.entity_view_display.webcomposer_download_page.webcomposer_download_page.default',
+    'field.field.paragraph.download_page_step.field_body',
+    'field.field.paragraph.download_page_step.field_type',
+    'field.field.webcomposer_download_page.webcomposer_download_page.field_download_step',
+    'field.storage.paragraph.field_body',
+    'field.storage.paragraph.field_type',
+    'field.storage.webcomposer_download_page.field_download_step',
+    'language.content_settings.paragraph.download_page_step',
+    'language.content_settings.webcomposer_download_page.webcomposer_download_page',
+    'paragraphs.paragraphs_type.download_page_step',
+    'views.view.webcomposer_download_page',
+    'webcomposer_download_page.download_page',
+  ];
+
+  foreach ($keys as $key) {
+    \Drupal::configFactory()->getEditable($key)->delete();
+  }
+}
+
+
+/**
+ * Implements hook_update_N
+ *
+ * Changes:
+ * - Added Enable Preview field
+ * - Added Tablet View field
+ * - Added Display Status field
+ */
+function webcomposer_download_page_update_8001() {
+   \Drupal::service('config.installer')->installDefaultConfig('module', 'webcomposer_download_page');
+}

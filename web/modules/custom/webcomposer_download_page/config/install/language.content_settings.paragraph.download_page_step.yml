@@ -1,0 +1,18 @@
+uuid: 61d78999-6cbc-40e6-a25f-910303b9dad9
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.download_page_step
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: paragraph.download_page_step
+target_entity_type_id: paragraph
+target_bundle: download_page_step
+default_langcode: site_default
+language_alterable: true
