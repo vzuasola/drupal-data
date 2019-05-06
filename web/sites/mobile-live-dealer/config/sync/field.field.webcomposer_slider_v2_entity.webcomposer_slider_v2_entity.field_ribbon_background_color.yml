@@ -15,7 +15,10 @@ label: 'Ribbon Background Color'
 description: ''
 required: false
 translatable: false
-default_value: {  }
+default_value:
+  -
+    color: '#000000'
+    opacity: '1'
 default_value_callback: ''
 settings:
   opacity: 0
