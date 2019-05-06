@@ -5,6 +5,8 @@ dependencies:
   module:
     - options
     - webcomposer_slider_v2
+_core:
+  default_config_hash: _OqC0k8d0POh6dLEgFB3ANXyTrEl-mnLLpUQNHE_s9I
 id: webcomposer_slider_v2_entity.field_post_content_position
 field_name: field_post_content_position
 entity_type: webcomposer_slider_v2_entity

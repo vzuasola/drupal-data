@@ -1,4 +1,4 @@
-uuid: fdadb32c-4c8c-4680-89dc-a83aefb9fa7d
+uuid: 8929a2bf-6d72-4e52-ba1e-3fa0e37aceb3
 langcode: en
 status: true
 dependencies:
@@ -6,22 +6,19 @@ dependencies:
     - options
     - webcomposer_slider_v2
 _core:
-  default_config_hash: 5VN9VQ6MmVtw-2zt50Yz8_y2o1eYXai_NP3W8LzXljc
-id: webcomposer_slider_v2_entity.field_banner_link_target
-field_name: field_banner_link_target
+  default_config_hash: phuvMLMislwR3qObzHLtA9dk334RPk9yhjCcQB7Y5fE
+id: webcomposer_slider_v2_entity.field_status
+field_name: field_status
 entity_type: webcomposer_slider_v2_entity
 type: list_string
 settings:
   allowed_values:
     -
-      value: _top
-      label: 'Same Window'
+      value: '0'
+      label: Disabled
     -
-      value: _blank
-      label: 'New Tab'
-    -
-      value: window
-      label: 'New Window'
+      value: '1'
+      label: Enabled
   allowed_values_function: ''
 module: options
 locked: false

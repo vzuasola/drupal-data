@@ -7,6 +7,8 @@ dependencies:
   module:
     - options
     - webcomposer_slider_v2
+_core:
+  default_config_hash: _QJiZr9usQATCjrsMnxBixuSTruzy-A6RQtIY4_COBc
 id: webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_log_in_state
 field_name: field_log_in_state
 entity_type: webcomposer_slider_v2_entity

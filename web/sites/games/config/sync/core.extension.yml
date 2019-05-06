@@ -65,6 +65,8 @@ module:
   promotion_tiles: 0
   quickedit: 0
   rdf: 0
+  replicate: 0
+  replicate_ui: 0
   rest: 0
   rest_menu_items: 0
   restui: 0
@@ -102,6 +104,7 @@ module:
   webcomposer_partner: 0
   webcomposer_promotions: 0
   webcomposer_registration_landing_page: 0
+  webcomposer_replicate_utility: 0
   webcomposer_rest_extra: 0
   webcomposer_right_side_block: 0
   webcomposer_seo: 0
