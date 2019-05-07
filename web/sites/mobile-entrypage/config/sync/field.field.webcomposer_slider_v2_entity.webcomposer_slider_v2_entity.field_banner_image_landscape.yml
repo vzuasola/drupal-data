@@ -1,4 +1,4 @@
-uuid: e40574ac-7887-4ae5-8dba-6f512ab7d61f
+uuid: 145d63b4-17cf-4afe-914c-75c155d55037
 langcode: en
 status: true
 dependencies:
@@ -11,9 +11,9 @@ dependencies:
 third_party_settings:
   content_translation:
     translation_sync:
+      alt: alt
+      title: title
       file: '0'
-      alt: '0'
-      title: '0'
 id: webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_banner_image_landscape
 field_name: field_banner_image_landscape
 entity_type: webcomposer_slider_v2_entity
