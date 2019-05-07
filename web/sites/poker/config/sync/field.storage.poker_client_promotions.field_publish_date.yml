@@ -1,15 +1,17 @@
-uuid: cbde5da5-9b85-4293-a18b-2aa15820afb7
+uuid: 56220403-95a8-4b38-a44c-215ba2282847
 langcode: en
 status: true
 dependencies:
   module:
+    - datetime
     - poker_client_promotions
-id: poker_client_promotions.field_publish
-field_name: field_publish
+id: poker_client_promotions.field_publish_date
+field_name: field_publish_date
 entity_type: poker_client_promotions
-type: boolean
-settings: {  }
-module: core
+type: datetime
+settings:
+  datetime_type: datetime
+module: datetime
 locked: false
 cardinality: 1
 translatable: true

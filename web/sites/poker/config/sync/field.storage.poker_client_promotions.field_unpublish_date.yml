@@ -1,0 +1,20 @@
+uuid: 2a5404c9-eea6-4f1e-8a0f-f47cc290cb4e
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime
+    - poker_client_promotions
+id: poker_client_promotions.field_unpublish_date
+field_name: field_unpublish_date
+entity_type: poker_client_promotions
+type: datetime
+settings:
+  datetime_type: datetime
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
