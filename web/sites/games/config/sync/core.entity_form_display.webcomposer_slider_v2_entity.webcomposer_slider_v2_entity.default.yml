@@ -79,8 +79,7 @@ third_party_settings:
         required_fields: true
       label: 'Post Banner Fields'
     group_additional_statuses:
-      children:
-        - field_status
+      children: {  }
       parent_name: ''
       weight: 8
       format_type: fieldset
@@ -387,12 +386,6 @@ content:
     third_party_settings: {  }
     type: datetime_default
     region: content
-  field_status:
-    weight: 20
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
   field_title:
     weight: 0
     settings:
@@ -422,5 +415,6 @@ content:
 hidden:
   field_disable_in_tablet: true
   field_preview_display_only: true
+  field_status: true
   name: true
   user_id: true
