@@ -1,0 +1,26 @@
+uuid: 8011c64b-6aea-4bea-999f-3247a483d82a
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.zipang_desktop_games_entity.field_enable_game
+  module:
+    - zipang_desktop_games
+_core:
+  default_config_hash: IqOJ-pagYE1CztSRTh9NdrEMMn_1ky2l-WeRenT39U8
+id: zipang_desktop_games_entity.zipang_desktop_games_entity.field_enable_game
+field_name: field_enable_game
+entity_type: zipang_desktop_games_entity
+bundle: zipang_desktop_games_entity
+label: 'Enable Game'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,47 @@
+uuid: 1f64d198-14a1-49d9-9319-63a60986e26f
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_category_image_banner
+    - taxonomy.vocabulary.desktop_game_category
+  module:
+    - content_translation
+    - image
+third_party_settings:
+  content_translation:
+    translation_sync:
+      alt: alt
+      title: title
+      file: '0'
+_core:
+  default_config_hash: g00YlozvNN7f9hEC8mQujDzSmYl5hBEn9WdwR-VZjos
+id: taxonomy_term.desktop_game_category.field_category_image_banner
+field_name: field_category_image_banner
+entity_type: taxonomy_term
+bundle: desktop_game_category
+label: 'Category Image Banner'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

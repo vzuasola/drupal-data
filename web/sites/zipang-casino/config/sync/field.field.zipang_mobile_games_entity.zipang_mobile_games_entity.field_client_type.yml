@@ -1,0 +1,23 @@
+uuid: 3cc19f89-1feb-41ef-b303-4994118e95e9
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.zipang_mobile_games_entity.field_client_type
+  module:
+    - options
+    - zipang_mobile_games
+_core:
+  default_config_hash: NzMSmBfTu62092hKD5NHMrQA-ZKMG5SgI8ipYxjRego
+id: zipang_mobile_games_entity.zipang_mobile_games_entity.field_client_type
+field_name: field_client_type
+entity_type: zipang_mobile_games_entity
+bundle: zipang_mobile_games_entity
+label: 'Client Type'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

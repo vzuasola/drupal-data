@@ -1,0 +1,20 @@
+uuid: 6bf5ca94-038b-4563-ab21-5560bffd52aa
+langcode: ja
+status: true
+dependencies:
+  module:
+    - zipang_desktop_games
+_core:
+  default_config_hash: 3qySCdAHKBk9bipFzBXpquiWeMhGsC4uoQm7_BdB7_k
+id: zipang_desktop_games_entity.zipang_desktop_games_entity.metatag
+field_name: metatag
+entity_type: zipang_desktop_games_entity
+bundle: zipang_desktop_games_entity
+label: Metatags
+description: 'The metatags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

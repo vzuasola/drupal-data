@@ -1,0 +1,32 @@
+uuid: 7f69dfcc-06fb-4cc2-88d2-4fd196ca3b39
+langcode: ja
+status: true
+dependencies:
+  module:
+    - file
+    - image
+    - zipang_desktop_games
+_core:
+  default_config_hash: zOtBPsEeKAIY8AA6hmf9YD2Dr035OfynFfWjsIlL8iQ
+id: zipang_desktop_games_entity.field_game_thumbnail
+field_name: field_game_thumbnail
+entity_type: zipang_desktop_games_entity
+type: image
+settings:
+  uri_scheme: public
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  target_type: file
+  display_field: false
+  display_default: false
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

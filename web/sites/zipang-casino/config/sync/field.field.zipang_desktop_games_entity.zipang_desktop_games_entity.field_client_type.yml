@@ -1,0 +1,23 @@
+uuid: 70052831-7115-4ca7-9300-e9bbddd5b9a0
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.zipang_desktop_games_entity.field_client_type
+  module:
+    - options
+    - zipang_desktop_games
+_core:
+  default_config_hash: ZR14NFRlWmBBI2kEQ3Rgu4fKmhTWbKXyYcY3UJk-D0c
+id: zipang_desktop_games_entity.zipang_desktop_games_entity.field_client_type
+field_name: field_client_type
+entity_type: zipang_desktop_games_entity
+bundle: zipang_desktop_games_entity
+label: 'Client Type'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

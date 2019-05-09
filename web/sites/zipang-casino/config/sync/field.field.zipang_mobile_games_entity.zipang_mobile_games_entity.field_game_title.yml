@@ -1,0 +1,22 @@
+uuid: c90eb02c-84e7-47ff-9b9b-4b05c94d7b7e
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.zipang_mobile_games_entity.field_game_title
+  module:
+    - zipang_mobile_games
+_core:
+  default_config_hash: uj-kPIxx4wQtm4VuWhx7hd9DC5jObvBiTnweNZrsL2s
+id: zipang_mobile_games_entity.zipang_mobile_games_entity.field_game_title
+field_name: field_game_title
+entity_type: zipang_mobile_games_entity
+bundle: zipang_mobile_games_entity
+label: 'Game Title'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

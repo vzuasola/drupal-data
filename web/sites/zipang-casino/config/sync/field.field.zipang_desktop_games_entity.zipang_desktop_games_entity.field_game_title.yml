@@ -1,0 +1,22 @@
+uuid: c5d29d3e-3dfb-42d4-b0fa-a2a4993b30e0
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.zipang_desktop_games_entity.field_game_title
+  module:
+    - zipang_desktop_games
+_core:
+  default_config_hash: G_r_CmsVqGFnEFouNG0qxSqNiMLii7Pin-Zp3BCzjxc
+id: zipang_desktop_games_entity.zipang_desktop_games_entity.field_game_title
+field_name: field_game_title
+entity_type: zipang_desktop_games_entity
+bundle: zipang_desktop_games_entity
+label: 'Game Title'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
