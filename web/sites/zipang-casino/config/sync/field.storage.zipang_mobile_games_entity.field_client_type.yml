@@ -1,0 +1,29 @@
+uuid: ec762880-4f6d-4eae-88d5-d001a66e5336
+langcode: ja
+status: true
+dependencies:
+  module:
+    - options
+    - zipang_mobile_games
+_core:
+  default_config_hash: BzoU3FjcuBq5HiO65zlrcmhcLgJr3GIrojkqSjXCcLw
+id: zipang_mobile_games_entity.field_client_type
+field_name: field_client_type
+entity_type: zipang_mobile_games_entity
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: ngm
+      label: NGM
+    -
+      value: live_mobile
+      label: Live
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

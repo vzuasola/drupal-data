@@ -1,0 +1,20 @@
+uuid: c68c42b8-7bf2-4edc-bd14-7d842f770cc6
+langcode: ja
+status: true
+dependencies:
+  module:
+    - zipang_desktop_games
+_core:
+  default_config_hash: FGQKrj9ug9i72W9h1997zq3fW3pSWR3ZODWBgEGIpzY
+id: zipang_desktop_games_entity.field_enable_game
+field_name: field_enable_game
+entity_type: zipang_desktop_games_entity
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

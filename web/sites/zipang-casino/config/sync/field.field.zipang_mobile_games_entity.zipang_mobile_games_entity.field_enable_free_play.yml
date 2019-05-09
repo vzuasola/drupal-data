@@ -1,0 +1,26 @@
+uuid: ab4a86f3-e6d5-4b13-b14d-868bb0d4a45e
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.zipang_mobile_games_entity.field_enable_free_play
+  module:
+    - zipang_mobile_games
+_core:
+  default_config_hash: rMd0QJcq-CChQrW3cG0SReZl9UzsZHHC-_0-n4u1ecg
+id: zipang_mobile_games_entity.zipang_mobile_games_entity.field_enable_free_play
+field_name: field_enable_free_play
+entity_type: zipang_mobile_games_entity
+bundle: zipang_mobile_games_entity
+label: 'Enable Free Play'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

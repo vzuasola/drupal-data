@@ -1,0 +1,20 @@
+uuid: f5788649-708c-40b3-a530-83152205fba2
+langcode: ja
+status: true
+dependencies:
+  module:
+    - taxonomy
+_core:
+  default_config_hash: 3Ine_b4_5wTc-PTdXyNaxMjod5_n_1tAiiEXHbij0AQ
+id: taxonomy_term.field_enable
+field_name: field_enable
+entity_type: taxonomy_term
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,22 @@
+uuid: 7877ce95-6727-4841-8435-fcbd17768099
+langcode: ja
+status: true
+dependencies:
+  module:
+    - taxonomy
+    - zipang_mobile_games
+_core:
+  default_config_hash: bGpfkNVGdL14uQIpKzeFJMYeeE28eCylK_DxxmV-408
+id: zipang_mobile_games_entity.field_game_category
+field_name: field_game_category
+entity_type: zipang_mobile_games_entity
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

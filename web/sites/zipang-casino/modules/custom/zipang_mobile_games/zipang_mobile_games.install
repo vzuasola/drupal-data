@@ -1,0 +1,50 @@
+<?php
+
+/**
+ * Implements hook_uninstall
+ */
+function zipang_mobile_games_uninstall() {
+  $keys = [
+    'core.base_field_override.zipang_mobile_games_entity.zipang_mobile_games_entity.metatag.yml',
+    'core.entity_form_display.zipang_mobile_games_entity.zipang_mobile_games_entity.default.yml',
+    'core.entity_form_display.taxonomy_term.game_tag.default.yml',
+    'core.entity_form_display.taxonomy_term.mobile_game_category.default.yml',
+    'core.entity_view_display.zipang_mobile_games_entity.zipang_mobile_games_entity.default.yml',
+    'core.entity_view_display.taxonomy_term.game_tag.default.yml',
+    'core.entity_view_display.taxonomy_term.mobile_game_category.default.yml',
+    'field.field.zipang_mobile_games_entity.zipang_mobile_games_entity.field_client_type.yml',
+    'field.field.zipang_mobile_games_entity.zipang_mobile_games_entity.field_enable_free_play.yml',
+    'field.field.zipang_mobile_games_entity.zipang_mobile_games_entity.field_enable_game.yml',
+    'field.field.zipang_mobile_games_entity.zipang_mobile_games_entity.field_game_category.yml',
+    'field.field.zipang_mobile_games_entity.zipang_mobile_games_entity.field_game_code.yml',
+    'field.field.zipang_mobile_games_entity.zipang_mobile_games_entity.field_game_tag.yml',
+    'field.field.zipang_mobile_games_entity.zipang_mobile_games_entity.field_game_thumbnail.yml',
+    'field.field.zipang_mobile_games_entity.zipang_mobile_games_entity.field_game_title.yml',
+    'field.field.taxonomy_term.game_tag.field_game_tag_color.yml',
+    'field.field.taxonomy_term.mobile_game_category.field_category_id.yml',
+    'field.field.taxonomy_term.mobile_game_category.field_category_image_banner.yml',
+    'field.field.taxonomy_term.mobile_game_category.field_enable.yml',
+    'field.field.taxonomy_term.mobile_game_category.field_hide_name.yml',
+    'field.storage.zipang_mobile_games_entity.field_client_type.yml',
+    'field.storage.zipang_mobile_games_entity.field_enable_free_play.yml',
+    'field.storage.zipang_mobile_games_entity.field_enable_game.yml',
+    'field.storage.zipang_mobile_games_entity.field_game_category.yml',
+    'field.storage.zipang_mobile_games_entity.field_game_code.yml',
+    'field.storage.zipang_mobile_games_entity.field_game_tag.yml',
+    'field.storage.zipang_mobile_games_entity.field_game_thumbnail.yml',
+    'field.storage.zipang_mobile_games_entity.field_game_title.yml',
+    'field.storage.taxonomy_term.field_game_tag_color.yml',
+    'language.content_settings.zipang_mobile_games_entity.zipang_mobile_games_entity.yml',
+    'language.content_settings.taxonomy_term.game_tag.yml',
+    'language.content_settings.taxonomy_term.mobile_game_category.yml',
+    'taxonomy.vocabulary.game_tag.yml',
+    'taxonomy.vocabulary.mobile_game_category.yml',
+    'views.view.game_category.yml',
+    'views.view.game_tag.yml',
+    'views.view.mobile_game_list.yml',
+  ];
+
+  foreach ($keys as $key) {
+    \Drupal::configFactory()->getEditable($key)->delete();
+  }
+}
