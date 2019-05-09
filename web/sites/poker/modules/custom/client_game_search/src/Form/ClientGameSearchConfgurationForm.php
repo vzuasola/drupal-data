@@ -75,7 +75,6 @@ class ClientGameSearchConfgurationForm extends FormBase {
       '#collapsible' => TRUE,
       '#group' => 'client_search_tab'
     );
-    
     $recommendation_message = $this->get('recommendation_message');
     $form['recommendation_group']['recommendation_message'] = array(
       '#type' => 'text_format',
@@ -85,7 +84,6 @@ class ClientGameSearchConfgurationForm extends FormBase {
       '#format' => $recommendation_message['format'],
       '#required' => TRUE,
     );
-    
     $recommendation_message_negative = $this->get('recommendation_message_negative');
     $form['recommendation_group']['recommendation_message_negative'] = array(
       '#type' => 'text_format',
