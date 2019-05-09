@@ -1,4 +1,4 @@
-uuid: 49d0480c-0dc6-4f09-8804-7cd3dee5915a
+uuid: b24a008e-2c84-454c-a7ff-5a14530599b0
 langcode: en
 status: true
 dependencies:
@@ -9,6 +9,8 @@ dependencies:
 third_party_settings:
   content_translation:
     enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
 id: node.games
 target_entity_type_id: node
 target_bundle: games
