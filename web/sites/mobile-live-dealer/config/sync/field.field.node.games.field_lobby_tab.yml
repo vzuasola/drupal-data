@@ -1,0 +1,21 @@
+uuid: 02d9f72f-4194-4aef-8921-600a767b9492
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_lobby_tab
+    - node.type.games
+  module:
+    - options
+id: node.games.field_lobby_tab
+field_name: field_lobby_tab
+entity_type: node
+bundle: games
+label: 'Lobby Tab'
+description: 'Choose on which tab will the Game belong.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

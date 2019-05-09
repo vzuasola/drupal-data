@@ -1,0 +1,54 @@
+uuid: a5fc8e2c-f370-4b1a-9729-df81b5ff5c61
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_game_provider
+field_name: field_game_provider
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: allbet
+      label: Allbet
+    -
+      value: asia_gaming
+      label: 'Asia Gaming'
+    -
+      value: ebet
+      label: eBet
+    -
+      value: evo_gaming
+      label: 'Evolution Gaming'
+    -
+      value: gold_deluxe
+      label: 'Gold Deluxe'
+    -
+      value: gpi
+      label: GPI
+    -
+      value: micro_gaming
+      label: 'Micro Gaming'
+    -
+      value: opus
+      label: Opus
+    -
+      value: playtech
+      label: Playtech
+    -
+      value: sa_gaming
+      label: 'SA Gaming'
+    -
+      value: tgp
+      label: TGP
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
