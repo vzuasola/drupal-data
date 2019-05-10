@@ -18,10 +18,54 @@ dependencies:
     - node.type.games
   module:
     - datetime
+    - field_group
     - image
     - path
     - scheduler
     - text
+third_party_settings:
+  field_group:
+    group_under_maintenance_settings:
+      children:
+        - field_maintenance_blurb
+        - field_maintenance_start_date
+        - field_maintenance_end_date
+      parent_name: ''
+      weight: 12
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: 'Under Maintenance Settings'
+    group_provider_details:
+      children:
+        - field_provider_logo
+        - field_game_code
+      parent_name: ''
+      weight: 7
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: true
+        required_fields: true
+      label: 'Provider Details'
+    group_game_thumbnail_settings:
+      children:
+        - field_thumbnail_image
+        - field_target
+        - field_game_ribbon
+      parent_name: ''
+      weight: 9
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: true
+        required_fields: true
+      label: 'Game Thumbnail Settings'
 id: node.games.default
 targetEntityType: node
 bundle: games
@@ -42,19 +86,19 @@ content:
     type: string_textfield
     region: content
   field_game_provider:
-    weight: 6
+    weight: 5
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_game_ribbon:
-    weight: 11
+    weight: 10
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_lobby_tab:
-    weight: 5
+    weight: 6
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -80,7 +124,7 @@ content:
     type: datetime_default
     region: content
   field_preview_mode:
-    weight: 21
+    weight: 19
     settings:
       display_label: true
     third_party_settings: {  }
@@ -95,13 +139,13 @@ content:
     type: image_image
     region: content
   field_target:
-    weight: 10
+    weight: 9
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_thumbnail_image:
-    weight: 9
+    weight: 8
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -117,7 +161,7 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 17
+    weight: 15
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -125,17 +169,17 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 20
+    weight: 18
     region: content
     third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
-    weight: 18
+    weight: 16
     region: content
     settings: {  }
     third_party_settings: {  }
   scheduler_settings:
-    weight: 16
+    weight: 14
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -143,14 +187,14 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 22
+    weight: 20
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 15
+    weight: 13
     region: content
     third_party_settings: {  }
   title:
@@ -177,7 +221,7 @@ content:
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp_no_default
-    weight: 19
+    weight: 17
     region: content
     settings: {  }
     third_party_settings: {  }

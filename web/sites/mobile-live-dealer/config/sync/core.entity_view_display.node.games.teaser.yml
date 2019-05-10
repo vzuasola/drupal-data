@@ -7,7 +7,6 @@ dependencies:
     - field.field.node.games.field_game_code
     - field.field.node.games.field_game_provider
     - field.field.node.games.field_game_ribbon
-    - field.field.node.games.field_lobby_tab
     - field.field.node.games.field_maintenance_blurb
     - field.field.node.games.field_maintenance_end_date
     - field.field.node.games.field_maintenance_start_date
@@ -30,7 +29,6 @@ hidden:
   field_game_code: true
   field_game_provider: true
   field_game_ribbon: true
-  field_lobby_tab: true
   field_maintenance_blurb: true
   field_maintenance_end_date: true
   field_maintenance_start_date: true

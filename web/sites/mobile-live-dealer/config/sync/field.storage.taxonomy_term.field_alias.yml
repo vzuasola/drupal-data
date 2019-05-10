@@ -1,16 +1,17 @@
-uuid: d3f053d2-5d79-4764-9621-9447d0b8df95
+uuid: 4efe98d9-cfa6-43c2-9dc2-92d07ba3cfbc
 langcode: en
 status: true
 dependencies:
   module:
-    - node
     - taxonomy
-id: node.field_lobby_tab
-field_name: field_lobby_tab
-entity_type: node
-type: entity_reference
+id: taxonomy_term.field_alias
+field_name: field_alias
+entity_type: taxonomy_term
+type: string
 settings:
-  target_type: taxonomy_term
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
 module: core
 locked: false
 cardinality: 1

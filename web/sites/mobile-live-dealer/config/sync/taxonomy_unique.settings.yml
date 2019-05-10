@@ -14,3 +14,5 @@ master_placeholder: 0
 master_placeholder_message: 'Term @term already exists in vocabulary @vocabulary.'
 game_ribbons: 1
 game_ribbons_message: 'Term @term already exists in vocabulary @vocabulary.'
+lobby_tab: 1
+lobby_tab_message: 'Term @term already exists in vocabulary @vocabulary.'
