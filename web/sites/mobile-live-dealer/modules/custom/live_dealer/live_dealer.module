@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Contains gts.module.
+ * Contains live_dealer.module.
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;

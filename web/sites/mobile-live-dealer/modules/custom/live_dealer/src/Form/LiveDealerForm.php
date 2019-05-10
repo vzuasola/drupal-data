@@ -6,7 +6,7 @@ use Drupal\webcomposer_config_schema\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Header configuration plugin
+ * Live Dealer configuration plugin
  *
  * @WebcomposerConfigPlugin(
  *   id = "live_dealer",
