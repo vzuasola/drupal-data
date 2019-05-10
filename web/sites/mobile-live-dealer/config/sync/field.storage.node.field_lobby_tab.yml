@@ -1,0 +1,20 @@
+uuid: d3f053d2-5d79-4764-9621-9447d0b8df95
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_lobby_tab
+field_name: field_lobby_tab
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
