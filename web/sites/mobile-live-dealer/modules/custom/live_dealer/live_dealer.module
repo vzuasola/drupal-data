@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains gts.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function live_dealer_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the gts module.
+    case 'help.page.live_dealer':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Live Dealer configuration module') . '</p>';
+      return $output;
+
+    default:
+  }
+}
