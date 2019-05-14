@@ -56,6 +56,7 @@ class ClientGameSearchConfgurationForm extends FormBase {
       '#description' => $this->t('The text to display as placeholder for search field.'),
       '#default_value' => $this->get('search_placeholder'),
       '#required' => TRUE,
+      '#translatable' => TRUE,
     );
 
     $resultMessage = $this->get('search_result_message');
@@ -66,6 +67,7 @@ class ClientGameSearchConfgurationForm extends FormBase {
       '#default_value' => $resultMessage['value'] ?? null,
       '#format' => $resultMessage['format'],
       '#required' => TRUE,
+      '#translatable' => TRUE,
     );
   }
   private function recommendationSection(&$form) {
@@ -83,6 +85,7 @@ class ClientGameSearchConfgurationForm extends FormBase {
       '#default_value' => $recommendation_message['value'] ?? null,
       '#format' => $recommendation_message['format'],
       '#required' => TRUE,
+      '#translatable' => TRUE,
     );
     $recommendation_message_negative = $this->get('recommendation_message_negative');
     $form['recommendation_group']['recommendation_message_negative'] = array(
@@ -92,6 +95,7 @@ class ClientGameSearchConfgurationForm extends FormBase {
       '#default_value' => $recommendation_message_negative['value'] ?? null,
       '#format' => $recommendation_message_negative['format'],
       '#required' => TRUE,
+      '#translatable' => TRUE,
     );
   }
 }
