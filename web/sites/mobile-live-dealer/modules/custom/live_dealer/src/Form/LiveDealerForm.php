@@ -66,6 +66,20 @@ class LiveDealerForm extends FormBase {
       '#translatable' => true,
     ];
 
+    $form['general']['games_transfer_title'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Instant Transfer Title'),
+      '#default_value' => $this->get('games_transfer_title'),
+      '#translatable' => true,
+      '#required' => false,
+    ];
+
+    $form['general']['games_transfer_link'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Instant Transfer URL'),
+      '#default_value' => $this->get('games_transfer_link'),
+      '#translatable' => true,
+    ];
     return $form;
   }
 }
