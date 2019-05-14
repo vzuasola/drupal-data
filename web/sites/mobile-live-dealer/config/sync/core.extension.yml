@@ -39,6 +39,7 @@ module:
   language: 0
   libraries: 0
   link: 0
+  live_dealer: 0
   locale: 0
   menu_link_attributes: 0
   menu_ui: 0
