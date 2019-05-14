@@ -491,13 +491,6 @@ class GeneralConfiguration extends FormBase {
       '#collapsible' => TRUE,
       '#group' => 'general_settings_tab',
     ];
-    $form['tripwire_popup']['enable_tripwire_popup'] = [
-      '#type' => 'checkbox',
-      '#title' => $this->t('Enable Tripwire Popup'),
-      '#description' => $this->t('Check to enable tripwire popup'),
-      '#default_value' => $this->get('enable_tripwire_popup'),
-      '#translatable' => TRUE,
-    ];
     $form['tripwire_popup']['tripwire_popup_show_limit'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Show Limit'),
