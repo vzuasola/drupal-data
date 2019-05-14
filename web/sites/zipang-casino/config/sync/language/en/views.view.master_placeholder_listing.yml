@@ -1,0 +1,34 @@
+label: 'Master Placeholder Listing'
+description: 'List master placeholders.'
+display:
+  default:
+    display_title: Master
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Apply
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      fields:
+        name:
+          label: Name
+          separator: ', '
+        field_add_master_placeholder:
+          label: Placeholder
+          separator: ', '
+        translation_link:
+          label: 'Translate Placeholder'
+          text: Translate
+        edit_taxonomy_term:
+          label: Edit
+          text: edit
+        delete_taxonomy_term:
+          label: Delete
+          text: delete
+      title: 'Master Placeholder Listing'
+  placeholder_listing:
+    display_title: 'Master Placeholder Listing Block'
+    display_options:
+      display_description: 'List master placeholder listing.'

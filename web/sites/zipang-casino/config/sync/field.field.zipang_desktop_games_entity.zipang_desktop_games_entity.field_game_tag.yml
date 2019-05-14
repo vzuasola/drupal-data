@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.storage.zipang_desktop_games_entity.field_game_tag
+    - taxonomy.vocabulary.game_tag
   module:
     - zipang_desktop_games
 _core:
@@ -16,14 +17,13 @@ label: 'Game Tag'
 description: ''
 required: true
 translatable: true
-default_value:
-  -
-    target_uuid: dcc3c5ca-17d6-4b07-93b7-d73c91ae3079
+default_value: {  }
 default_value_callback: ''
 settings:
   handler: 'default:taxonomy_term'
   handler_settings:
-    target_bundles: {  }
+    target_bundles:
+      game_tag: game_tag
     sort:
       field: name
       direction: asc
