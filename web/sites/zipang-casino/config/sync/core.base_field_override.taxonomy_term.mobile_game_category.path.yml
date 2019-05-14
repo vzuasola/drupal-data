@@ -1,0 +1,20 @@
+uuid: dd83ef91-4b42-43a9-9de6-e5150fd7d7bd
+langcode: ja
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.mobile_game_category
+  module:
+    - path
+id: taxonomy_term.mobile_game_category.path
+field_name: path
+entity_type: taxonomy_term
+bundle: mobile_game_category
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path
