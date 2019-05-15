@@ -48,7 +48,8 @@ class ICoreGamesIntegrationConfiguration extends FormBase {
     'micro_gaming' => 'Micro Gaming',
     'flow_gaming' => 'Flow Gaming',
     'ky_gaming' => 'Kaiyuan (KY) Gaming',
-    'pgsoft' => 'Pocket Games Soft'
+    'pgsoft' => 'Pocket Games Soft',
+    'ruby_play' => 'Ruby Play',
   ];
 
   protected function getEditableConfigNames() {
