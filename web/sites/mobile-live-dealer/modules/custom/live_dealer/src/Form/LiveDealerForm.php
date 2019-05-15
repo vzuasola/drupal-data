@@ -66,6 +66,15 @@ class LiveDealerForm extends FormBase {
       '#translatable' => true,
     ];
 
+    $form['general']['all_quicklaunch_title'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('All'),
+      '#description' => 'Label for All tab in quick launch tabs',
+      '#default_value' => $this->get('all_quicklaunch_title'),
+      '#required' => true,
+      '#translatable' => true,
+    ];
+
     $form['general']['games_transfer_title'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Instant Transfer Title'),
