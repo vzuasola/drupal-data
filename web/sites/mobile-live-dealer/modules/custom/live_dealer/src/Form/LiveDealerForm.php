@@ -75,6 +75,15 @@ class LiveDealerForm extends FormBase {
       '#translatable' => true,
     ];
 
+    $form['general']['all_quicklaunch_alt'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Alt Text for All tab'),
+      '#description' => 'Alt text for All tab in quick launch tabs',
+      '#default_value' => $this->get('all_quicklaunch_alt'),
+      '#required' => false,
+      '#translatable' => true,
+    ];
+
     $form['general']['games_transfer_title'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Instant Transfer Title'),
