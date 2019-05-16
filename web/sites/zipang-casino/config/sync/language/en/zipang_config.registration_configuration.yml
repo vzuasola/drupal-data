@@ -1,0 +1,42 @@
+advanced__active_tab: edit-step-2
+reg_form_title: REGISTRATION
+reg_form_link_title: Registration
+error_firstname: 'Firstname is invalid.'
+error_lastname: 'Lastname is invalid.'
+error_password: 'Incorrect password.'
+error_confirm_password: 'Password should match.'
+error_email: 'Email is Invalid.'
+error_confirm_email: 'Email should match.'
+error_birthdate: 'under 18'
+error_phone: 'Contact Number is invalid.'
+error_currency: 'Only USD is available.'
+error_country: 'Please enter your Country.'
+error_prefecture: 'Please enter your Prefecture.'
+error_state: 'Please enter your State.'
+error_city: 'Please enter your Town and city.'
+error_zipcode: 'Please enter your  Zip-code.'
+error_address: 'Please enter your Address.'
+error_couponcode: 'Coupon Code Error'
+error_term_conditions: 'Please read the terms and condition and check only if you accept.'
+error_captcha: ''
+error_promotions: ' Promotions Error'
+step_2_title: Successful
+step_2_link_title: 'Make Deposit'
+success_message: 'Your registration has been completed. Your ID is'
+step_2_body:
+  value: ''
+  format: basic_html
+promotion_label: ''
+promotion_link: ''
+cashier_label: Cashier
+cashier_link: 'https://cashier.casinojamboree.net/en/'
+next_button_label: Skip
+next_button_link: /en/
+step_3_title: ''
+step_3_link_title: ''
+welcome_message: ''
+step_3_body:
+  value: ''
+  format: basic_html
+play_button_label: ''
+play_button_link: ''

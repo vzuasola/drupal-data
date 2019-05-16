@@ -1,45 +1,45 @@
-advanced__active_tab: edit-step-3
-reg_form_title: 'Registration Page Title'
-reg_form_link_title: 'Step 1'
-error_firstname: 'Firstname is invalid.'
-error_lastname: 'Lastname is invalid.'
-error_password: 'Incorrect password.'
-error_confirm_password: 'Password should match.'
-error_email: 'Email is Invalid.'
-error_confirm_email: 'Email should match.'
-error_birthdate: 'under 18'
-error_phone: 'Contact Number is invalid.'
-error_currency: 'Only USD is available.'
-error_country: 'Please enter your Contry.'
-error_prefecture: 'Please enter your Prefecture.'
-error_state: 'Please enter your State.'
-error_city: 'Please enter your Town and city.'
-error_zipcode: 'Please enter your  Zip-code.'
-error_address: 'Please enter your Address.'
+advanced__active_tab: edit-step-2
+reg_form_title: アカウントの登録
+reg_form_link_title: アカウントを作成する
+error_firstname: 名前（名）を半角英字にて入力して下さい。
+error_lastname: 苗字（姓）を半角英字にて入力して下さい。
+error_password: パスワードを半角の大文字と小文字と数字の組み合わせにて5～10字で入力して下さい。
+error_confirm_password: 上と同じパスワードを再度入力して下さい。
+error_email: 現在ご利用のメールアドレスを入力して下さい。
+error_confirm_email: 上と同じメールアドレスを再度入力して下さい。
+error_birthdate: 生年月日を選択して下さい。
+error_phone: 半角数字にて入力して下さい。ハイフン（-）はご入力いただけません。
+error_currency: ご利用いただける通貨はUSDのみです。
+error_country: 居住国を選択して下さい。
+error_prefecture: 都道府県を選択して下さい。
+error_state: 都道府県を選択して下さい。
+error_city: 市区町村を半角英字にて入力して下さい。
+error_zipcode: 郵便番号を半角数字にて入力して下さい。
+error_address: 町名番地を半角英数字にて入力して下さい。
 error_couponcode: 'Coupon Code Error'
-error_term_conditions: 'Please read the terms and condition and check only if you accept.'
-error_captcha: 'Error Message for Captcha'
+error_term_conditions: 利用規約を読んで、受け入れる場合のみチェックを入れて下さい。
+error_captcha: ''
 error_promotions: ' Promotions Error'
 service_not_available: 'SERVICE IS NOT AVAILABLE'
-step_2_title: 'Registration TEST'
-step_2_link_title: 'Make Deposit'
-success_message: 'Your registration has been completed. Your ID is'
+step_2_title: 登録完了
+step_2_link_title: 入金する
+success_message: 'ご登録が完了しました。お客様のIDは '
 step_2_body:
-  value: ''
+  value: "<p><b>カジノジャンボリーでは24時間日本語サポートを提供しております。</b>\r\n</p>\r\n<p>本場のカジノにいるような臨場感あふれる体験ができる最新のカジノゲームを取り揃えており、移動中にも楽しめるモバイル（携帯やタブレット）対応となっております。\r\n</p>\r\n"
   format: basic_html
 value: null
 format: null
 promotion_label: ''
 promotion_link: ''
-cashier_label: Cashier
-cashier_link: 'https://cashier.casinojamboree.net/en/'
-next_button_label: Skip
+cashier_label: 入金する
+cashier_link: 'https://cashier.casinojamboree.net/ja/'
+next_button_label: 後で入金する
 next_button_link: /registration/complete
-step_3_title: Registration
-step_3_link_title: 'Start Playing'
-welcome_message: 'Welcome to Casino Jamboree !!!'
+step_3_title: ''
+step_3_link_title: ''
+welcome_message: ''
 step_3_body:
-  value: "<p class=\"text-align-center\">Your registration has been completed. Your ID is\r\n</p>\r\n"
+  value: ''
   format: basic_html
-play_button_label: 'Play Now'
-play_button_link: '/games?category=new-games'
+play_button_label: ''
+play_button_link: ''

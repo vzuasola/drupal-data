@@ -19,6 +19,9 @@ settings:
     -
       value: live_desktop
       label: Live
+    -
+      value: flash_desktop
+      label: Flash
   allowed_values_function: ''
 module: options
 locked: false
