@@ -1,0 +1,16 @@
+uuid: 0293fd37-5729-4020-be27-62af601056cf
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.client_casino_games_filter
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.client_casino_games_filter
+target_entity_type_id: taxonomy_term
+target_bundle: client_casino_games_filter
+default_langcode: site_default
+language_alterable: false

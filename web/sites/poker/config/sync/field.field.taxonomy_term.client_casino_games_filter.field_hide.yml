@@ -1,0 +1,23 @@
+uuid: e7360953-7e56-4985-bc33-4a382f28531d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_hide
+    - taxonomy.vocabulary.client_casino_games_filter
+id: taxonomy_term.client_casino_games_filter.field_hide
+field_name: field_hide
+entity_type: taxonomy_term
+bundle: client_casino_games_filter
+label: Hide
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

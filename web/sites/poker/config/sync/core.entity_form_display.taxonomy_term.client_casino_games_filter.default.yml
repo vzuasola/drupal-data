@@ -1,0 +1,41 @@
+uuid: 6e869af9-efed-48eb-9c44-744dbca99d18
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.client_casino_games_filter.field_hide
+    - field.field.taxonomy_term.client_casino_games_filter.field_value
+    - taxonomy.vocabulary.client_casino_games_filter
+id: taxonomy_term.client_casino_games_filter.default
+targetEntityType: taxonomy_term
+bundle: client_casino_games_filter
+mode: default
+content:
+  field_hide:
+    weight: 2
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_value:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  description: true
+  langcode: true
+  path: true
+  translation: true

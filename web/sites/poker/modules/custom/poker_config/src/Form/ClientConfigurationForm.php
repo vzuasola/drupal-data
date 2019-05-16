@@ -65,6 +65,22 @@ class ClientConfigurationForm extends FormBase
           '#required' => true
         ];
 
+        $form['common']['filter_submit'] = [
+          '#type' => 'textfield',
+          '#title' => $this->t('Filter Submit Button Label'),
+          '#default_value' => $this->get('filter_submit'),
+          '#translatable' => true,
+          '#required' => true
+        ];
+
+        $form['common']['filter_reset'] = [
+          '#type' => 'textfield',
+          '#title' => $this->t('Filter Reset Button Label'),
+          '#default_value' => $this->get('filter_reset'),
+          '#translatable' => true,
+          '#required' => true
+        ];
+
         $form['casino_list'] = [
           '#type' => 'details',
           '#title' => $this->t('Casino List Setting'),
