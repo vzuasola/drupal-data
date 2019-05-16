@@ -1,0 +1,21 @@
+uuid: 78587196-a8c6-4b82-8f52-e4b80ada620d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.poker_client_promotions.field_unpublish_date
+  module:
+    - datetime
+    - poker_client_promotions
+id: poker_client_promotions.poker_client_promotions.field_unpublish_date
+field_name: field_unpublish_date
+entity_type: poker_client_promotions
+bundle: poker_client_promotions
+label: 'Unpublish Date (optional)'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime
