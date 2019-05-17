@@ -14,6 +14,8 @@ third_party_settings:
       file: file
       alt: '0'
       title: '0'
+_core:
+  default_config_hash: KaeWJJV3dlD-xtsBx9X17putfZSd_E0_fwdP2vlij1Y
 id: webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_banner_image
 field_name: field_banner_image
 entity_type: webcomposer_slider_v2_entity

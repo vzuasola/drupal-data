@@ -5,6 +5,8 @@ dependencies:
   module:
     - link
     - webcomposer_slider_v2
+_core:
+  default_config_hash: '-vxJwlmvH2umnNgvyaAwDfOHd1zMpNXKcbC01ty2SkQ'
 id: webcomposer_slider_v2_entity.field_banner_link
 field_name: field_banner_link
 entity_type: webcomposer_slider_v2_entity

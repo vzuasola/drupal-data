@@ -6,6 +6,8 @@ dependencies:
     - field.storage.webcomposer_slider_v2_entity.field_title
   module:
     - webcomposer_slider_v2
+_core:
+  default_config_hash: VtoirvszNkif0OXLNYWWV1jFjDa0axxslwiuq2_EfwA
 id: webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_title
 field_name: field_title
 entity_type: webcomposer_slider_v2_entity

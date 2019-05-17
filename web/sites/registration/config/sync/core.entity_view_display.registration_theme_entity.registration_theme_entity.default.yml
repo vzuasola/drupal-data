@@ -30,6 +30,7 @@ dependencies:
     - field.field.registration_theme_entity.registration_theme_entity.field_success_message_color
     - field.field.registration_theme_entity.registration_theme_entity.field_theme_alternative_text
     - field.field.registration_theme_entity.registration_theme_entity.field_tripwire_content
+    - field.field.registration_theme_entity.registration_theme_entity.field_tripwire_toggle
   module:
     - color_field
     - image
@@ -276,6 +277,16 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: text_default
+    region: content
+  field_tripwire_toggle:
+    weight: 28
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
     region: content
   name:
     label: above

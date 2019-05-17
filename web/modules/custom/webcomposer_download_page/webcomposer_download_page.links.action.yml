@@ -1,0 +1,5 @@
+entity.webcomposer_download_page.add_form:
+  route_name: entity.webcomposer_download_page.add_form
+  title: 'Add Webcomposer download page'
+  appears_on:
+    - entity.webcomposer_download_page.collection

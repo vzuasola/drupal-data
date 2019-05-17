@@ -1,0 +1,31 @@
+uuid: 0630de2b-7d8b-4157-996f-d8dd058f8c95
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.download_page_step.field_body
+    - field.field.paragraph.download_page_step.field_type
+    - paragraphs.paragraphs_type.download_page_step
+  module:
+    - options
+    - text
+id: paragraph.download_page_step.default
+targetEntityType: paragraph
+bundle: download_page_step
+mode: default
+content:
+  field_body:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_type:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+hidden: {  }
