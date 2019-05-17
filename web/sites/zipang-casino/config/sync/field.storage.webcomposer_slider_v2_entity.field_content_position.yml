@@ -1,0 +1,33 @@
+uuid: 0f891c32-d91a-4e2b-8dcc-c9c96d9217c6
+langcode: ja
+status: true
+dependencies:
+  module:
+    - options
+    - webcomposer_slider_v2
+id: webcomposer_slider_v2_entity.field_content_position
+field_name: field_content_position
+entity_type: webcomposer_slider_v2_entity
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: top
+      label: Top
+    -
+      value: bottom
+      label: Bottom
+    -
+      value: left
+      label: Left
+    -
+      value: right
+      label: Right
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

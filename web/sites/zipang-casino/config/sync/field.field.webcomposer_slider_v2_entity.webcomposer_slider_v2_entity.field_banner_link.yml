@@ -1,0 +1,23 @@
+uuid: 66d1a62b-383e-4a17-8659-ba7d0a10d0c2
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.webcomposer_slider_v2_entity.field_banner_link
+  module:
+    - link
+    - webcomposer_slider_v2
+id: webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_banner_link
+field_name: field_banner_link
+entity_type: webcomposer_slider_v2_entity
+bundle: webcomposer_slider_v2_entity
+label: 'Pre Banner Link'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+field_type: link

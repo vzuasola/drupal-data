@@ -1,4 +1,4 @@
-uuid: a03267ba-e587-4bc1-8790-998edaf89a19
+uuid: be4d1b9b-0577-402a-94e4-bebaa038b9ea
 langcode: ja
 status: true
 dependencies:
@@ -7,11 +7,11 @@ dependencies:
     - zipang_rightside_blocks
 third_party_settings:
   content_translation:
-    enabled: true
+    enabled: false
     bundle_settings:
       untranslatable_fields_hide: '0'
 id: zipang_rightside_block_entity.zipang_rightside_block_entity
 target_entity_type_id: zipang_rightside_block_entity
 target_bundle: zipang_rightside_block_entity
 default_langcode: site_default
-language_alterable: true
+language_alterable: false

@@ -16,7 +16,7 @@ bundle: zipang_desktop_games_entity
 label: 'Client Type'
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }
