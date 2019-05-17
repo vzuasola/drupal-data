@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.games.field_game_code
+    - field.field.node.games.field_game_platform
     - field.field.node.games.field_game_provider
     - field.field.node.games.field_game_ribbon
     - field.field.node.games.field_lobby_tab
@@ -51,6 +52,13 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_game_platform:
+    weight: 14
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
   field_game_provider:
     weight: 3
