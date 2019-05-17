@@ -1,4 +1,4 @@
-uuid: 2af003b5-fda8-4a51-ac63-cc771a41df9b
+uuid: 508314e7-8c65-482d-a45f-c3a6d7a0dd53
 langcode: ja
 status: true
 dependencies:
@@ -7,11 +7,11 @@ dependencies:
     - zipang_desktop_blocks
 third_party_settings:
   content_translation:
-    enabled: true
+    enabled: false
     bundle_settings:
       untranslatable_fields_hide: '0'
 id: zipang_desktop_block.zipang_desktop_block
 target_entity_type_id: zipang_desktop_block
 target_bundle: zipang_desktop_block
 default_langcode: site_default
-language_alterable: true
+language_alterable: false

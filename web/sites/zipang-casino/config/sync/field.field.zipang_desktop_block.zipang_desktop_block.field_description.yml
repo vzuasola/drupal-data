@@ -5,8 +5,8 @@ dependencies:
   config:
     - field.storage.zipang_desktop_block.field_description
   module:
-    - zipang_desktop_blocks
     - text
+    - zipang_desktop_blocks
 id: zipang_desktop_block.zipang_desktop_block.field_description
 field_name: field_description
 entity_type: zipang_desktop_block
@@ -14,7 +14,7 @@ bundle: zipang_desktop_block
 label: Description
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }

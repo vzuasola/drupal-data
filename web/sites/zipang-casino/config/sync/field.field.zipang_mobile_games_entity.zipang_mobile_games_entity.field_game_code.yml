@@ -15,7 +15,7 @@ bundle: zipang_mobile_games_entity
 label: 'Game Code'
 description: ''
 required: true
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }

@@ -15,7 +15,7 @@ bundle: zipang_mobile_games_entity
 label: 'Enable Free Play'
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value:
   -
     value: 0

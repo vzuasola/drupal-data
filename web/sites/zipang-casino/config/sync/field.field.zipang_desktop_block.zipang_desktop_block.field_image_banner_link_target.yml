@@ -5,8 +5,8 @@ dependencies:
   config:
     - field.storage.zipang_desktop_block.field_image_banner_link_target
   module:
-    - zipang_desktop_blocks
     - options
+    - zipang_desktop_blocks
 id: zipang_desktop_block.zipang_desktop_block.field_image_banner_link_target
 field_name: field_image_banner_link_target
 entity_type: zipang_desktop_block
@@ -14,7 +14,7 @@ bundle: zipang_desktop_block
 label: 'Image Banner Link Target'
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }

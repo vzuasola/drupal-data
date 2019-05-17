@@ -5,8 +5,8 @@ dependencies:
   config:
     - field.storage.zipang_rightside_block_entity.field_content_type
   module:
-    - zipang_rightside_blocks
     - options
+    - zipang_rightside_blocks
 id: zipang_rightside_block_entity.zipang_rightside_block_entity.field_content_type
 field_name: field_content_type
 entity_type: zipang_rightside_block_entity
@@ -14,7 +14,7 @@ bundle: zipang_rightside_block_entity
 label: 'Content Type'
 description: ''
 required: true
-translatable: true
+translatable: false
 default_value:
   -
     value: image
