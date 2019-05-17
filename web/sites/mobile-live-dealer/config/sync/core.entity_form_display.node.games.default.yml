@@ -14,6 +14,7 @@ dependencies:
     - field.field.node.games.field_provider_logo
     - field.field.node.games.field_target
     - field.field.node.games.field_thumbnail_image
+    - field.field.node.games.field_use_game_loader
     - image.style.thumbnail
     - node.type.games
   module:
@@ -31,7 +32,7 @@ third_party_settings:
         - field_maintenance_start_date
         - field_maintenance_end_date
       parent_name: ''
-      weight: 12
+      weight: 9
       format_type: details
       format_settings:
         id: ''
@@ -58,7 +59,7 @@ third_party_settings:
         - field_target
         - field_game_ribbon
       parent_name: ''
-      weight: 9
+      weight: 8
       format_type: details
       format_settings:
         id: ''
@@ -124,7 +125,7 @@ content:
     type: datetime_default
     region: content
   field_preview_mode:
-    weight: 19
+    weight: 17
     settings:
       display_label: true
     third_party_settings: {  }
@@ -152,6 +153,13 @@ content:
     third_party_settings: {  }
     type: image_image
     region: content
+  field_use_game_loader:
+    weight: 16
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
   langcode:
     type: language_select
     weight: 1
@@ -161,7 +169,7 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 15
+    weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -169,17 +177,17 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 18
+    weight: 15
     region: content
     third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
-    weight: 16
+    weight: 13
     region: content
     settings: {  }
     third_party_settings: {  }
   scheduler_settings:
-    weight: 14
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -187,14 +195,14 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 20
+    weight: 18
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 13
+    weight: 10
     region: content
     third_party_settings: {  }
   title:
@@ -221,7 +229,7 @@ content:
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp_no_default
-    weight: 17
+    weight: 14
     region: content
     settings: {  }
     third_party_settings: {  }
