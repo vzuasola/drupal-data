@@ -6,6 +6,8 @@ dependencies:
     - file
     - image
     - webcomposer_slider_v2
+_core:
+  default_config_hash: lMiEZHhgL7Qj6K6tTvx0twGJP46DzMrB8OKGHgKgZz4
 id: webcomposer_slider_v2_entity.field_banner_image
 field_name: field_banner_image
 entity_type: webcomposer_slider_v2_entity

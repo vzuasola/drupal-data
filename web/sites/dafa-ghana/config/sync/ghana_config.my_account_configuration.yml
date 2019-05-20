@@ -1,0 +1,51 @@
+advanced__active_tab: edit-page-change-password-setting
+page_current_password_label: 'Current Password EN'
+page_new_password_label: 'New Password EN'
+page_confirm_password_label: 'Confirm Password EN'
+page_change_password_submit: 'Change Password EN'
+page_current_password_label: 'Current Password EN'
+page_change_password_desc:
+  value: "<p>Your Password has been successfully changed.</p>\r\n"
+  format: basic_html
+value: null
+format: null
+change_passwordintegration_error: "INTERNAL_ERROR|Internal Error (Code: 801)\r\nCHANGE_PASSWORD_FAILED|There was an error changing your password.  Please try again or you may contact us: <a href=\"/linkto:avaya\" class=\"live-chat-popup-trigger\"> Live Chat </a> (Code: 800)\r\nCHANGE_PASSWORD_SUCCESS|Your password has been successfully changed."
+change_password_integration_error: "INTERNAL_ERROR|Internal Error (Code: 801)\r\nCHANGE_PASSWORD_FAILED|There was an error changing your password.\r\nCHANGE_PASSWORD_SUCCESS|Your password has been successfully changed."
+page_current_password_placeholder: 'Current Placeholder'
+page_new_password_placeholder: 'New Placeholder'
+page_confirm_password_placeholder: 'Confirm Placeholder'
+server_side_validation: "INTERNAL_ERROR|Internal Error (Code: 801)\r\nUPDATE_PROFILE_SUCCESS|Your profile has been updated.\r\nUPDATE_PROFILE_FAILED|There was an error updating your profile. Please try again. (Code: 700)\r\nCHECK_SESSION_PASSWORD_FAILED|There was an error updating your profile. Please try again. (Code: 700)"
+required_validation: 'This is a required field.'
+page_current_password_placeholder: ''
+page_new_password_placeholder: ''
+page_confirm_password_placeholder: ''
+change_password_integration_error: "INTERNAL_ERROR|Internal Error (Code: 801)\r\nCHANGE_PASSWORD_FAILED|There was an error changing your password.  Please try again.(Code: 800)\r\nCHANGE_PASSWORD_SUCCESS|Your password has been successfully changed."
+password_placeholder: 'Enter Password'
+submit_lightbox_label: 'Save Changes'
+lightbox_title: 'Save Changes'
+lightbox_table_description: 'Please review list of changes.'
+lightbox_password_description: 'Enter your password to save changes to your account'
+first_name_label: 'First Name *'
+first_name_placeholder: 'First Name'
+last_name_label: 'Last Name *'
+last_name_placeholder: 'Last Name'
+username_label: 'Telephone Number *'
+username_placeholder: 'Telephone Number'
+email_label: 'Email *'
+email_placeholder: 'Email'
+pin_label: 'PIN *'
+pin_placeholder: PIN
+country_label: 'Country *'
+country_placeholder: Country
+birthdate_label: 'Date of Birth'
+birthdate_placeholder: 'Date of Birth'
+question1_label: ' Question 1:'
+answer1_placeholder: Answer
+question2_label: 'Question 2:'
+answer2_placeholder: Answer
+submit_label: 'Save Changes'
+saving_message: Saving
+current_label: Current
+new_label: New
+question_label: Question
+answer_placeholder: Answer

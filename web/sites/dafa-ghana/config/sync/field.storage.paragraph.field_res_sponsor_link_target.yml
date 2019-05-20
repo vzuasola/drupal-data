@@ -1,0 +1,30 @@
+uuid: b286a06f-3fc7-40f0-8afa-cdc61fa2aae0
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_res_sponsor_link_target
+field_name: field_res_sponsor_link_target
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: _blank
+      label: 'New Tab'
+    -
+      value: _self
+      label: 'Same Window'
+    -
+      value: window
+      label: 'New Window'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

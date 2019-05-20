@@ -40,7 +40,7 @@ proactive_mobile_url_playstore: 'https://play.google.com/store/apps/details?id=c
 proactive_mobile_url_ios_appstore: 'https://itunes.apple.com/app/wechat/id414478124?mt=8'
 proactive_mobile_timeout: '90'
 s2s_config: "https://serving.dfnb-ads.com/servlet/track?clickid={advrtsrv_id}|advrtsrv_id\r\nhttps://track.buzz-track.com/pixel?adv_id=342&tx_id={advc_id}|advc_id"
-general_settings_tab__active_tab: edit-tripwire-popup
+general_settings_tab__active_tab: edit-integration
 value: null
 format: null
 enable_reg_relic_custom_headers: 0
@@ -61,8 +61,10 @@ text_over_banner_tablet:
   value: "<p><span class=\"text-12 text-white text-bold\">WELCOME TO<br />\r\n<span class=\"text-20 text-yellow text-extrabold\">ASIA'S NUMBER 1</span><br />\r\nONLINE GAMING</span><br />\r\n<span class=\"text-12 text-white text-bold\">AND<br />\r\n<span class=\"text-20 text-yellow text-extrabold\">MOST TRUSTED</span><br />\r\nBETTING WEBSITE!</span></p>\r\n"
   format: basic_html
 text_over_banner_desktop_left:
-  value: "<p><span class=\"text-20 text-white text-bold\">WELCOME TO<br />\r\n<span class=\"text-36 text-yellow text-extrabold\">ASIA'S<br />\r\nNUMBER 1</span><br />\r\nONLINE GAMING</span></p>\r\n"
+  value: "<p><span class=\"text-20 text-white text-bold\">WELCOME TO<br />\r\n<span class=\"text-36 text-yellow text-extrabold\">ASIA'S<br />\r\nNUMBER 1</span><br />\r\nONLINE GAMING</span><br />\r\n<span class=\"text-20 text-white text-bold\">WELCOME TO<br />\r\n<span class=\"text-36 text-yellow text-extrabold\">ASIA'S<br />\r\nNUMBER 1</span><br />\r\nONLINE GAMING</span></p>\r\n"
   format: basic_html
 text_over_banner_desktop_right:
   value: "<p><span class=\"text-20 text-white text-bold\">AND<br />\r\n<span class=\"text-36 text-yellow text-extrabold\">MOST<br />\r\nTRUSTED</span><br />\r\nBETTING WEBSITE!</span></p>\r\n"
   format: basic_html
+ow_native_autologin_url: sample
+cashier_url_native: sample

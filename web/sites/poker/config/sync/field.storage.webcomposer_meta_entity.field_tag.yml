@@ -1,22 +1,22 @@
-uuid: 166dbd23-9046-47b3-ac08-dc22ecdc2336
+uuid: 10663d09-ab04-488e-94af-65400bf60c1c
 langcode: en
 status: true
 dependencies:
   module:
-    - client_footer_games
     - options
-id: client_footer_games.field_game_type
-field_name: field_game_type
-entity_type: client_footer_games
+    - webcomposer_seo
+id: webcomposer_meta_entity.field_tag
+field_name: field_tag
+entity_type: webcomposer_meta_entity
 type: list_string
 settings:
   allowed_values:
     -
-      value: '0'
-      label: NGM
+      value: meta
+      label: Meta
     -
-      value: '1'
-      label: FLASH
+      value: link
+      label: Link
   allowed_values_function: ''
 module: options
 locked: false

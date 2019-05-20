@@ -1,0 +1,57 @@
+uuid: b4a5e80a-1d77-4282-b9b5-16324192fb4e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.webcomposer_download_page.field_download_step
+    - paragraphs.paragraphs_type.download_page_step
+  module:
+    - entity_reference_revisions
+    - webcomposer_download_page
+id: webcomposer_download_page.webcomposer_download_page.field_download_step
+field_name: field_download_step
+entity_type: webcomposer_download_page
+bundle: webcomposer_download_page
+label: 'Download Step'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      download_page_step: download_page_step
+    target_bundles_drag_drop:
+      download_page_step:
+        enabled: true
+        weight: 11
+      domain_management_configuration:
+        weight: 12
+        enabled: false
+      floating_banner_item:
+        weight: 13
+        enabled: false
+      metatag:
+        weight: 14
+        enabled: false
+      right_side_block_content:
+        weight: 15
+        enabled: false
+      slider_overlay_cmi:
+        weight: 16
+        enabled: false
+      social_media:
+        weight: 17
+        enabled: false
+      social_media_cmi:
+        weight: 18
+        enabled: false
+      sponsor_cmi:
+        weight: 19
+        enabled: false
+      sponsorship:
+        weight: 20
+        enabled: false
+field_type: entity_reference_revisions

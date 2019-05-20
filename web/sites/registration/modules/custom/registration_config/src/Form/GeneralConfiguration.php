@@ -188,6 +188,21 @@ class GeneralConfiguration extends FormBase {
         'if unchecked'),
       '#default_value' => $this->get('enable_futurama_native_app'),
     ];
+    $form['integration']['ow_native_autologin_url'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('One Works Native App Autologin URL'),
+      '#description' => $this->t('URL where we redirect the user for autologin after successful registration'),
+      '#default_value' => $this->get('ow_native_autologin_url'),
+      '#required' => TRUE,
+      '#translatable' => TRUE,
+    ];
+    $form['integration']['cashier_url_native'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Native App Cashier URL'),
+      '#description' => $this->t('This URL will be used if the native app needs a banking URL'),
+      '#default_value' => $this->get('cashier_url_native'),
+      '#required' => TRUE,
+    ];
   }
 
   /**
@@ -476,13 +491,6 @@ class GeneralConfiguration extends FormBase {
       '#collapsible' => TRUE,
       '#group' => 'general_settings_tab',
     ];
-    $form['tripwire_popup']['enable_tripwire_popup'] = [
-      '#type' => 'checkbox',
-      '#title' => $this->t('Enable Tripwire Popup'),
-      '#description' => $this->t('Check to enable tripwire popup'),
-      '#default_value' => $this->get('enable_tripwire_popup'),
-      '#translatable' => TRUE,
-    ];
     $form['tripwire_popup']['tripwire_popup_show_limit'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Show Limit'),
@@ -514,6 +522,7 @@ class GeneralConfiguration extends FormBase {
       '#description' => $this->t('Above content will display in mobile view.'),
       '#default_value' => $mobile['value'],
       '#format' => $mobile['format'],
+      '#translatable' => TRUE,
     ];
     $tablet = $this->get('text_over_banner_tablet');
     $form['text_over_banner']['text_over_banner_tablet'] = [
@@ -522,6 +531,7 @@ class GeneralConfiguration extends FormBase {
       '#description' => $this->t('Above content will display in tablet view.'),
       '#default_value' => $tablet['value'],
       '#format' => $tablet['format'],
+      '#translatable' => TRUE,
     ];
     $desktop_left = $this->get('text_over_banner_desktop_left');
     $form['text_over_banner']['text_over_banner_desktop_left'] = [
@@ -530,6 +540,7 @@ class GeneralConfiguration extends FormBase {
       '#description' => $this->t('Above content will display in desktop view on the left side.'),
       '#default_value' => $desktop_left['value'],
       '#format' => $desktop_left['format'],
+      '#translatable' => TRUE,
     ];
     $desktop_right = $this->get('text_over_banner_desktop_right');
     $form['text_over_banner']['text_over_banner_desktop_right'] = [
@@ -538,6 +549,7 @@ class GeneralConfiguration extends FormBase {
       '#description' => $this->t('Above content will display in desktop view on the right side.'),
       '#default_value' => $desktop_right['value'],
       '#format' => $desktop_right['format'],
+      '#translatable' => TRUE,
     ];
   }
 }
