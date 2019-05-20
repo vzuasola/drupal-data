@@ -194,6 +194,7 @@ class ZipangRegistrationForm extends FormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Registration Error Message if Service is not Available'),
       '#default_value' => $this->get('service_not_available'),
+      '#translatable' => TRUE,
     ];
   }
 
