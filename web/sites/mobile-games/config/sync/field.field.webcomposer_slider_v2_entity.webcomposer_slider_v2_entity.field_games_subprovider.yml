@@ -1,0 +1,30 @@
+uuid: 8e3b549e-4865-40d7-aa1f-f5e10866c531
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.webcomposer_slider_v2_entity.field_games_subprovider
+    - taxonomy.vocabulary.games_subprovider
+  module:
+    - webcomposer_slider_v2
+id: webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_games_subprovider
+field_name: field_games_subprovider
+entity_type: webcomposer_slider_v2_entity
+bundle: webcomposer_slider_v2_entity
+label: 'Games Subprovider'
+description: "Assign a subprovider label override for this game.\r\nCurrently being used for UCL game provider label only and is not part of integration."
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      games_subprovider: games_subprovider
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
