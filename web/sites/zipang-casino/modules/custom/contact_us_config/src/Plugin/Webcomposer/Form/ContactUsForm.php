@@ -104,7 +104,7 @@ class ContactUsForm extends WebcomposerFormBase implements WebcomposerFormInterf
         'settings' => [
           'label' => [
             '#title' => 'Email Label',
-            '#type' => 'email',
+            '#type' => 'textfield',
             '#description' => 'The Label for Email field',
           ],
           'placeholder' => [
