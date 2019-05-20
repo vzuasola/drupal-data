@@ -16,7 +16,7 @@ bundle: game_tag
 label: 'Game Tag Color'
 description: ''
 required: true
-translatable: false
+translatable: true
 default_value:
   -
     value: no-color

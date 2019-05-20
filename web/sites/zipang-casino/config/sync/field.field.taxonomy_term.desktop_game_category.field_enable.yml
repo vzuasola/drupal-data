@@ -14,7 +14,7 @@ bundle: desktop_game_category
 label: Enable
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value:
   -
     value: 1

@@ -5,8 +5,15 @@ dependencies:
   config:
     - field.storage.zipang_rightside_block_entity.field_image_banner
   module:
+    - content_translation
     - image
     - zipang_rightside_blocks
+third_party_settings:
+  content_translation:
+    translation_sync:
+      file: file
+      alt: '0'
+      title: '0'
 id: zipang_rightside_block_entity.zipang_rightside_block_entity.field_image_banner
 field_name: field_image_banner
 entity_type: zipang_rightside_block_entity
@@ -14,7 +21,7 @@ bundle: zipang_rightside_block_entity
 label: 'Image Banner'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

@@ -16,7 +16,7 @@ bundle: zipang_mobile_games_entity
 label: 'Game Tag'
 description: ''
 required: true
-translatable: false
+translatable: true
 default_value:
   -
     target_uuid: dcc3c5ca-17d6-4b07-93b7-d73c91ae3079

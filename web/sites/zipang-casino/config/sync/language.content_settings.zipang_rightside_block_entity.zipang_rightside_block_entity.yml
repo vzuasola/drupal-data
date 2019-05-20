@@ -7,11 +7,11 @@ dependencies:
     - zipang_rightside_blocks
 third_party_settings:
   content_translation:
-    enabled: false
+    enabled: true
     bundle_settings:
       untranslatable_fields_hide: '0'
 id: zipang_rightside_block_entity.zipang_rightside_block_entity
 target_entity_type_id: zipang_rightside_block_entity
 target_bundle: zipang_rightside_block_entity
 default_langcode: site_default
-language_alterable: false
+language_alterable: true
