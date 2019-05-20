@@ -5,8 +5,15 @@ dependencies:
   config:
     - field.storage.zipang_mobile_games_entity.field_game_thumbnail
   module:
+    - content_translation
     - image
     - zipang_mobile_games
+third_party_settings:
+  content_translation:
+    translation_sync:
+      file: file
+      alt: '0'
+      title: '0'
 _core:
   default_config_hash: 8UaBqrC0tQQy04sDq08e8bDQ1dFfMCdwrWp-sYJIjqI
 id: zipang_mobile_games_entity.zipang_mobile_games_entity.field_game_thumbnail
@@ -16,7 +23,7 @@ bundle: zipang_mobile_games_entity
 label: 'Game Thumbnail'
 description: ''
 required: true
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

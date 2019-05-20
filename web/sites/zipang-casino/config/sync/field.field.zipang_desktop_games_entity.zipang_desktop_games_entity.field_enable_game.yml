@@ -15,7 +15,7 @@ bundle: zipang_desktop_games_entity
 label: 'Enable Game'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value:
   -
     value: 1

@@ -14,7 +14,7 @@ bundle: webcomposer_slider_v2_entity
 label: Status
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value:
   -
     value: '1'

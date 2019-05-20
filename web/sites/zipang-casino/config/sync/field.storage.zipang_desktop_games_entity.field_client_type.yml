@@ -19,6 +19,12 @@ settings:
     -
       value: live_desktop
       label: Live
+    -
+      value: flash_desktop
+      label: Flash
+    -
+      value: gpas_desktop
+      label: GPAS
   allowed_values_function: ''
 module: options
 locked: false
