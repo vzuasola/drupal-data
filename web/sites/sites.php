@@ -90,6 +90,11 @@ $sites['mobile-games.drupal.dev'] = 'mobile-games';
 $sites['mobile-games.drupal.local'] = 'mobile-games';
 $sites['mobile-games.drupal.env'] = 'mobile-games';
 
+// Mobile Live Dealer Revamp instance
+$sites['mobile-live-dealer.drupal.dev'] = 'mobile-live-dealer';
+$sites['mobile-live-dealer.drupal.local'] = 'mobile-live-dealer';
+$sites['mobile-live-dealer.drupal.env'] = 'mobile-live-dealer';
+
 // Mobile Casino Revamp instance
 $sites['mobile-casino.drupal.dev'] = 'mobile-casino';
 $sites['mobile-casino.drupal.local'] = 'mobile-casino';

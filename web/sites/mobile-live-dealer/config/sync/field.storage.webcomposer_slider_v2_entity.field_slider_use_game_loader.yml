@@ -1,0 +1,18 @@
+uuid: 6785a1aa-b2cf-4155-9ace-65be8ccfd707
+langcode: en
+status: true
+dependencies:
+  module:
+    - webcomposer_slider_v2
+id: webcomposer_slider_v2_entity.field_slider_use_game_loader
+field_name: field_slider_use_game_loader
+entity_type: webcomposer_slider_v2_entity
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

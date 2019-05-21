@@ -1,0 +1,54 @@
+uuid: b2dfaa83-c96b-48ac-9343-ff80bac65f91
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - webcomposer_slider_v2
+id: webcomposer_slider_v2_entity.field_slider_game_provider
+field_name: field_slider_game_provider
+entity_type: webcomposer_slider_v2_entity
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: allbet
+      label: Allbet
+    -
+      value: asia_gaming
+      label: 'Asia Gaming'
+    -
+      value: ebet
+      label: eBet
+    -
+      value: evo_gaming
+      label: 'Evolution Gamin'
+    -
+      value: gold_deluxe
+      label: 'Gold Deluxe'
+    -
+      value: gpi
+      label: GPI
+    -
+      value: micro_gaming
+      label: 'Micro Gaming'
+    -
+      value: opus
+      label: Opus
+    -
+      value: pas
+      label: PAS
+    -
+      value: sa_gaming
+      label: 'SA Gaming'
+    -
+      value: tgp
+      label: TGP
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

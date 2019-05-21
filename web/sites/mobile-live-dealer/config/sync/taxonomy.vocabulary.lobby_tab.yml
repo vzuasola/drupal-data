@@ -1,0 +1,9 @@
+uuid: 13d4e8c1-073a-40c0-8689-f59d2c69e55a
+langcode: en
+status: true
+dependencies: {  }
+name: 'Lobby Tab'
+vid: lobby_tab
+description: 'List of lobby tabs'
+hierarchy: 0
+weight: 0

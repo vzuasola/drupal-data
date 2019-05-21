@@ -1,0 +1,27 @@
+uuid: 01f19577-75d2-40f9-9d54-3c29f2efa4c3
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_game_platform
+field_name: field_game_platform
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: live
+      label: Live
+    -
+      value: ngm
+      label: NGM
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
