@@ -16,12 +16,17 @@ content:
     weight: 100
     region: content
 hidden:
+  field_all_games_category_ribbon: true
   field_game_code: true
+  field_game_filter: true
   field_game_provider: true
   field_game_ribbon: true
   field_games_list_category: true
   field_games_list_thumb_img_big: true
   field_games_list_thumb_img_small: true
   field_games_list_thumbnail_size: true
+  field_games_subprovider: true
   field_games_target: true
+  field_keywords: true
+  field_preview_mode: true
   langcode: true
