@@ -669,8 +669,8 @@ display:
           exposed: true
           expose:
             operator_id: field_segment_name_value_op
-            label: 'Content Type'
-            description: ''
+            label: 'Segment Name (field_segment_name)'
+            description: 'Content Type'
             use_operator: false
             operator: field_segment_name_value_op
             identifier: field_segment_name_value
@@ -702,7 +702,7 @@ display:
               2:
                 title: 'Generic Promotions'
                 operator: empty
-                value: '""'
+                value: ''
           plugin_id: string
       filter_groups:
         operator: AND
