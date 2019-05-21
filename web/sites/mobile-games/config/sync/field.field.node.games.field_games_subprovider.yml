@@ -1,0 +1,29 @@
+uuid: ec985d4b-74a3-4b44-a841-723c570b4d27
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_games_subprovider
+    - node.type.games
+    - taxonomy.vocabulary.games_subprovider
+id: node.games.field_games_subprovider
+field_name: field_games_subprovider
+entity_type: node
+bundle: games
+label: 'Games SubProvider'
+description: "Assign a subprovider label override for this game.\r\nCurrently being used for UCL game provider label only and is not part of integration."
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      games_subprovider: games_subprovider
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
