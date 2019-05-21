@@ -1,0 +1,11 @@
+logo_tooltip: tester
+notification_strip: 1
+notification_strip_content:
+  value: "<p>tester</p>\r\n"
+  format: basic_html
+notification_platform: both
+notification_strip_scheduler: 0
+notif_strip_start_date: false
+notif_strip_end_date: false
+user_id_label: tester
+balance_label: tester

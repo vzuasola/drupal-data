@@ -1,12 +1,12 @@
 uuid: af1080a8-6fb7-4f5a-a2dd-16fb6e84d830
-langcode: en
+langcode: ja
 status: true
 dependencies:
   config:
     - field.storage.news_and_updates_entity.field_body
   module:
-    - zipang_news_and_updates
     - text
+    - zipang_news_and_updates
 id: news_and_updates_entity.news_and_updates_entity.field_body
 field_name: field_body
 entity_type: news_and_updates_entity
@@ -14,7 +14,7 @@ bundle: news_and_updates_entity
 label: 'News and Updates'
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

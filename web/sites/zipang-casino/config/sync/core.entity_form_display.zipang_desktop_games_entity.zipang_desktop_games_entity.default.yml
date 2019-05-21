@@ -1,0 +1,94 @@
+uuid: e76ae1e6-f9a9-40b2-8fbc-89368292e78c
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.field.zipang_desktop_games_entity.zipang_desktop_games_entity.field_client_type
+    - field.field.zipang_desktop_games_entity.zipang_desktop_games_entity.field_enable_free_play
+    - field.field.zipang_desktop_games_entity.zipang_desktop_games_entity.field_enable_game
+    - field.field.zipang_desktop_games_entity.zipang_desktop_games_entity.field_game_category
+    - field.field.zipang_desktop_games_entity.zipang_desktop_games_entity.field_game_code
+    - field.field.zipang_desktop_games_entity.zipang_desktop_games_entity.field_game_tag
+    - field.field.zipang_desktop_games_entity.zipang_desktop_games_entity.field_game_thumbnail
+    - field.field.zipang_desktop_games_entity.zipang_desktop_games_entity.field_game_title
+    - image.style.thumbnail
+  module:
+    - image
+    - zipang_desktop_games
+_core:
+  default_config_hash: ppcWsjWMjCM-R4co2Kyb0QkF-5uQSF7-XGv_SCHeWjg
+id: zipang_desktop_games_entity.zipang_desktop_games_entity.default
+targetEntityType: zipang_desktop_games_entity
+bundle: zipang_desktop_games_entity
+mode: default
+content:
+  field_client_type:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_enable_free_play:
+    weight: 8
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_enable_game:
+    weight: 0
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_game_category:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_game_code:
+    weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_game_tag:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_game_thumbnail:
+    weight: 4
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_game_title:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  translation:
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  name: true
+  user_id: true

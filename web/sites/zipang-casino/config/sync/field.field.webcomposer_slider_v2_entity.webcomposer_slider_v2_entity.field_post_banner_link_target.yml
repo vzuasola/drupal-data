@@ -1,0 +1,23 @@
+uuid: e16218b9-a5a4-4b11-a467-0dde87f4474b
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.webcomposer_slider_v2_entity.field_post_banner_link_target
+  module:
+    - options
+    - webcomposer_slider_v2
+id: webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_post_banner_link_target
+field_name: field_post_banner_link_target
+entity_type: webcomposer_slider_v2_entity
+bundle: webcomposer_slider_v2_entity
+label: 'Post Banner Link Target'
+description: 'The link behavior when clicked'
+required: true
+translatable: true
+default_value:
+  -
+    value: _top
+default_value_callback: ''
+settings: {  }
+field_type: list_string

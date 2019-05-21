@@ -1,0 +1,17 @@
+uuid: 15507f80-4e95-4159-95fa-c6d13a70b541
+langcode: ja
+status: true
+dependencies:
+  module:
+    - content_translation
+    - zipang_mobile_games
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: zipang_mobile_games_entity.zipang_mobile_games_entity
+target_entity_type_id: zipang_mobile_games_entity
+target_bundle: zipang_mobile_games_entity
+default_langcode: site_default
+language_alterable: true

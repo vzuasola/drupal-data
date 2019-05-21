@@ -1,0 +1,18 @@
+uuid: 375b2612-874a-4e0d-9baf-734c5f5e705d
+langcode: ja
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.mobile_game_category
+id: taxonomy_term.mobile_game_category.name
+field_name: name
+entity_type: taxonomy_term
+bundle: mobile_game_category
+label: Name
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

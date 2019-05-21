@@ -12,3 +12,5 @@ games_category: 1
 games_category_message: 'Term @term already exists in vocabulary @vocabulary.'
 master_placeholder: 0
 master_placeholder_message: 'Term @term already exists in vocabulary @vocabulary.'
+desktop_game_category: 1
+desktop_game_category_message: 'Term @term already exists in vocabulary @vocabulary.'

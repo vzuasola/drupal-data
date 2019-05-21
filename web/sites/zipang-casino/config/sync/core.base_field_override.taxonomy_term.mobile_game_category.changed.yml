@@ -1,0 +1,18 @@
+uuid: 5efffe94-1a26-4a08-ad5a-73be023a7cfb
+langcode: ja
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.mobile_game_category
+id: taxonomy_term.mobile_game_category.changed
+field_name: changed
+entity_type: taxonomy_term
+bundle: mobile_game_category
+label: Changed
+description: 'The time that the term was last edited.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

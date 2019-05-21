@@ -1,0 +1,32 @@
+uuid: 080692a2-93b8-4698-9ce8-49fbcada30d5
+langcode: ja
+status: true
+dependencies:
+  module:
+    - file
+    - image
+    - taxonomy
+_core:
+  default_config_hash: 6hZRuAy4GrO0V-7uw9zNBHNZdzElLfkZbcnI-A83aJ0
+id: taxonomy_term.field_category_image_banner
+field_name: field_category_image_banner
+entity_type: taxonomy_term
+type: image
+settings:
+  uri_scheme: public
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  target_type: file
+  display_field: false
+  display_default: false
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

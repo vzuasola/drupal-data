@@ -1,0 +1,20 @@
+uuid: 213a48c7-e21f-4b6f-9f7d-e005dc98bc90
+langcode: ja
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.desktop_game_category
+  module:
+    - path
+id: taxonomy_term.desktop_game_category.path
+field_name: path
+entity_type: taxonomy_term
+bundle: desktop_game_category
+label: 'URL alias'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

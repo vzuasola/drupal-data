@@ -1,0 +1,20 @@
+uuid: 4ecdd145-0b1e-4044-9ba7-950ed77e2da3
+langcode: ja
+status: true
+dependencies:
+  module:
+    - zipang_desktop_blocks
+id: zipang_desktop_block.zipang_desktop_block.user_id
+field_name: user_id
+entity_type: zipang_desktop_block
+bundle: zipang_desktop_block
+label: 'Authored by'
+description: 'The user ID of author of the Zipang desktop block entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

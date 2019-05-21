@@ -1,0 +1,11 @@
+uuid: be4bdf39-b529-4423-8041-b48df61eeef8
+langcode: und
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: ykJMuNttrIwlvqQodb5qdro3yBFz5CbtMEHf3fyTYdY
+name: 'Mobile Game Category'
+vid: mobile_game_category
+description: 'Mobile Game Category'
+hierarchy: 0
+weight: 0

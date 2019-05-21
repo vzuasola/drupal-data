@@ -1,0 +1,18 @@
+zipang_desktop_games.list:
+  title: 'Zipang Desktop Games Configuration'
+  description: 'List Zipang Desktop Games entities'
+  parent: system.admin_config
+  route_name: zipang_desktop_games.admin_settings
+
+# Zipang desktop games entity menu items definition
+entity.zipang_desktop_games_entity.collection:
+  title: 'Zipang desktop games entity list'
+  route_name: entity.zipang_desktop_games_entity.collection
+  description: 'List Zipang desktop games entity entities'
+  parent: zipang_desktop_games.list
+
+zipang_desktop_games_entity.admin.structure.settings:
+  title: Zipang desktop games entity settings
+  description: 'Configure Zipang desktop games entity entities'
+  route_name: zipang_desktop_games_entity.settings
+  parent: zipang_desktop_games.list

@@ -1,0 +1,25 @@
+uuid: 8bb85bf7-073d-446e-890b-43f77d57dfd7
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_game_tag_color
+    - taxonomy.vocabulary.game_tag
+  module:
+    - options
+_core:
+  default_config_hash: yZD9Tkrhr5g70TRGceFur44a7fucBFBaM-zZ2qcbZm0
+id: taxonomy_term.game_tag.field_game_tag_color
+field_name: field_game_tag_color
+entity_type: taxonomy_term
+bundle: game_tag
+label: 'Game Tag Color'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: no-color
+default_value_callback: ''
+settings: {  }
+field_type: list_string

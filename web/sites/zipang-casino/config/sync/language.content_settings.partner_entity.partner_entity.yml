@@ -1,0 +1,11 @@
+uuid: 23b34711-2dac-48c4-9386-1959a57d7093
+langcode: ja
+status: true
+dependencies:
+  module:
+    - webcomposer_partner
+id: partner_entity.partner_entity
+target_entity_type_id: partner_entity
+target_bundle: partner_entity
+default_langcode: site_default
+language_alterable: false
