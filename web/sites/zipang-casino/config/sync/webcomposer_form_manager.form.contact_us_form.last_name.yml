@@ -7,12 +7,12 @@ field_validations:
     enable: 1
     error_message: 'Field should be required'
   alpha:
-    enable: 1
+    enable: 0
     error_message: 'Field should be Alphabet characters only'
     parameters:
       spaces: 1
   alphanumeric:
-    enable: 0
+    enable: 1
     error_message: 'Field should be alphanumeric'
     parameters:
       spaces: 1
