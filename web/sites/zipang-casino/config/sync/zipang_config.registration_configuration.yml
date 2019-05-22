@@ -1,40 +1,40 @@
-advanced__active_tab: edit-step-2
-reg_form_title: アカウントの登録
-reg_form_link_title: アカウントを作成する
-error_firstname: 名前（名）を半角英字にて入力して下さい。
-error_lastname: 苗字（姓）を半角英字にて入力して下さい。
-error_password: パスワードを半角の大文字と小文字と数字の組み合わせにて5～10字で入力して下さい。
-error_confirm_password: 上と同じパスワードを再度入力して下さい。
-error_email: 現在ご利用のメールアドレスを入力して下さい。
-error_confirm_email: 上と同じメールアドレスを再度入力して下さい。
-error_birthdate: 生年月日を選択して下さい。
-error_phone: 半角数字にて入力して下さい。ハイフン（-）はご入力いただけません。
-error_currency: ご利用いただける通貨はUSDのみです。
-error_country: 居住国を選択して下さい。
-error_prefecture: 都道府県を選択して下さい。
-error_state: 都道府県を選択して下さい。
-error_city: 市区町村を半角英字にて入力して下さい。
-error_zipcode: 郵便番号を半角数字にて入力して下さい。
-error_address: 町名番地を半角英数字にて入力して下さい。
-error_couponcode: 'Coupon Code Error'
-error_term_conditions: 利用規約を読んで、受け入れる場合のみチェックを入れて下さい。
-error_captcha: ''
-error_promotions: ' Promotions Error'
-service_not_available: 'SERVICE IS NOT AVAILABLE'
-step_2_title: 登録完了
-step_2_link_title: 入金する
-success_message: 'ご登録が完了しました。お客様のIDは '
+advanced__active_tab: edit-reg-form
+reg_form_title: 'Registration Page ja'
+reg_form_link_title: 'Step 1 ja'
+error_firstname: 'firstname ja'''
+error_lastname: 'lastname ja'
+error_password: 'password ja'
+error_confirm_password: 'confirm password ja'
+error_email: 'email ja'
+error_confirm_email: 'confirm email ja'
+error_birthdate: 'birthdate ja'
+error_phone: 'phone ja'
+error_currency: 'currency ja'
+error_country: 'country ja'
+error_prefecture: 'prefecture ja'
+error_state: 'state ja'
+error_city: 'city ja'
+error_zipcode: 'zip ja'
+error_address: 'address ja'
+error_couponcode: 'coupon ja'
+error_term_conditions: 'tnc ja'
+error_captcha: 'captcha ja'
+error_promotions: 'promotions ja'
+service_not_available: 'service not available JA'
+step_2_title: 'Step 2 JA'
+step_2_link_title: 'Step 2 JA link'
+success_message: 'step 2!'
 step_2_body:
-  value: "<p><b>カジノジャンボリーでは24時間日本語サポートを提供しております。</b>\r\n</p>\r\n<p>本場のカジノにいるような臨場感あふれる体験ができる最新のカジノゲームを取り揃えており、移動中にも楽しめるモバイル（携帯やタブレット）対応となっております。\r\n</p>\r\n"
+  value: "<p>test step 2</p>\r\n"
   format: basic_html
 value: null
 format: null
-promotion_label: ''
-promotion_link: ''
-cashier_label: 入金する
-cashier_link: 'https://cashier.casinojamboree.net/ja/'
-next_button_label: 後で入金する
-next_button_link: /registration/complete
+promotion_label: 'test Promoion'
+promotion_link: /about-us
+cashier_label: test
+cashier_link: /registration
+next_button_label: next
+next_button_link: 'https://www.google.com'
 step_3_title: ''
 step_3_link_title: ''
 welcome_message: ''

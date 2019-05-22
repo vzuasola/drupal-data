@@ -1,11 +1,11 @@
 field_settings:
-  label: メッセージ
-  placeholder: ''
+  label: Message
+  placeholder: Message
   annotation: ''
 field_validations:
   required:
     enable: 1
-    error_message: お問い合わせの内容を入力して下さい。
+    error_message: 'Field should be required'
   alpha:
     enable: 0
     error_message: 'Field should be Alphabet characters only'

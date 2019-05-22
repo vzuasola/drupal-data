@@ -1,4 +1,4 @@
-uuid: 21b2a9fe-87e6-4106-80e9-44efd2e9d879
+uuid: 38ebac5a-e132-47b1-bc9c-444a4f937d8e
 langcode: ja
 status: true
 dependencies:
@@ -10,6 +10,8 @@ third_party_settings:
     enabled: true
     bundle_settings:
       untranslatable_fields_hide: '0'
+_core:
+  default_config_hash: CcZlS6-QQjVB1l2sx1rFik1876H_SumEm9FtBqc5V18
 id: zipang_desktop_games_entity.zipang_desktop_games_entity
 target_entity_type_id: zipang_desktop_games_entity
 target_bundle: zipang_desktop_games_entity

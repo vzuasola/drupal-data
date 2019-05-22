@@ -1,4 +1,4 @@
-uuid: d4d8f68c-61d6-4023-a607-deb25e4929a3
+uuid: 39b06824-8fa2-4957-9530-ebe4869ceac0
 langcode: ja
 status: true
 dependencies:
@@ -8,11 +8,13 @@ dependencies:
     - content_translation
 third_party_settings:
   content_translation:
-    enabled: true
+    enabled: false
     bundle_settings:
       untranslatable_fields_hide: '0'
+_core:
+  default_config_hash: bMSqwatd-u-FyDwoYDYROe_5lDh_3juxjcB1JOQJrDs
 id: taxonomy_term.desktop_game_category
 target_entity_type_id: taxonomy_term
 target_bundle: desktop_game_category
-default_langcode: site_default
+default_langcode: current_interface
 language_alterable: true
