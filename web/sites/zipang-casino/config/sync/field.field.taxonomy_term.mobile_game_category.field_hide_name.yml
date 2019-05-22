@@ -1,0 +1,25 @@
+uuid: fde793a1-835f-4122-9e7b-92f12833949b
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_hide_name
+    - taxonomy.vocabulary.mobile_game_category
+_core:
+  default_config_hash: 5-5wk4LRkl01mYMXf0GK3yoOiOLI2UtxMe_Xg39X5UA
+id: taxonomy_term.mobile_game_category.field_hide_name
+field_name: field_hide_name
+entity_type: taxonomy_term
+bundle: mobile_game_category
+label: 'Hide Name'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

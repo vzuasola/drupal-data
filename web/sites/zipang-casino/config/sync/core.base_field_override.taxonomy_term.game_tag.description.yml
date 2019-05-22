@@ -1,0 +1,20 @@
+uuid: f44ca14e-b6b9-450c-8f4a-3bfa3843e78b
+langcode: ja
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.game_tag
+  module:
+    - text
+id: taxonomy_term.game_tag.description
+field_name: description
+entity_type: taxonomy_term
+bundle: game_tag
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,59 @@
+uuid: 8b591ba3-d52c-4a9d-926a-da0953872053
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.game_ribbons.field_label
+    - field.field.taxonomy_term.game_ribbons.field_ribbon_background_color
+    - field.field.taxonomy_term.game_ribbons.field_ribbon_text_color
+    - taxonomy.vocabulary.game_ribbons
+  module:
+    - color_field
+id: taxonomy_term.game_ribbons.default
+targetEntityType: taxonomy_term
+bundle: game_ribbons
+mode: default
+content:
+  field_label:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_ribbon_background_color:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: color_field_widget_html5
+    region: content
+  field_ribbon_text_color:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: color_field_widget_html5
+    region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true

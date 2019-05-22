@@ -1,0 +1,25 @@
+uuid: 5db8630c-7be5-4846-b5b5-e653b94df168
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_hide_name
+    - taxonomy.vocabulary.desktop_game_category
+_core:
+  default_config_hash: Ydw-ei38lQD_Hc5EOZdW3W8qOSrQjvvtBGiDcWaPxwA
+id: taxonomy_term.desktop_game_category.field_hide_name
+field_name: field_hide_name
+entity_type: taxonomy_term
+bundle: desktop_game_category
+label: 'Hide Name'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,11 @@
+uuid: 2777dc77-a6a8-4d56-a330-6ee07db9bdac
+langcode: und
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: w6RSM_gFqqk319QrToe22QYTF7LURScLyALa5yxl2a8
+name: 'Desktop Game Category'
+vid: desktop_game_category
+description: 'Desktop Game Category'
+hierarchy: 0
+weight: 0

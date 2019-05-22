@@ -1,0 +1,25 @@
+uuid: 5b05b224-bd01-4a80-ba91-776aa0dd9fdb
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_enable
+    - taxonomy.vocabulary.desktop_game_category
+_core:
+  default_config_hash: fO02KXn5aD0RDSDYHePuqiBV-aYtBwrfRT8oXsENTFM
+id: taxonomy_term.desktop_game_category.field_enable
+field_name: field_enable
+entity_type: taxonomy_term
+bundle: desktop_game_category
+label: Enable
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

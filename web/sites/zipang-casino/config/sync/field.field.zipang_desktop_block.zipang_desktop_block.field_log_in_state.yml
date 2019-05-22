@@ -1,12 +1,12 @@
 uuid: dfb2b1fa-31ee-4147-afec-6f80efba1a6f
-langcode: en
+langcode: ja
 status: true
 dependencies:
   config:
     - field.storage.zipang_desktop_block.field_log_in_state
   module:
-    - zipang_desktop_blocks
     - options
+    - zipang_desktop_blocks
 id: zipang_desktop_block.zipang_desktop_block.field_log_in_state
 field_name: field_log_in_state
 entity_type: zipang_desktop_block

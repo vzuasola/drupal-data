@@ -1,0 +1,29 @@
+uuid: 682b8ba0-4bbe-4661-b125-7e9749ae0349
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_lobby_tab
+    - node.type.games
+    - taxonomy.vocabulary.lobby_tab
+id: node.games.field_lobby_tab
+field_name: field_lobby_tab
+entity_type: node
+bundle: games
+label: 'Lobby Tab'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      lobby_tab: lobby_tab
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

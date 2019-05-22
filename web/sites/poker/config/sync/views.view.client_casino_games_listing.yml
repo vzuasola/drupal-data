@@ -74,6 +74,8 @@ display:
           columns:
             title: title
             field_clcasino_game_thumbnail: field_clcasino_game_thumbnail
+            draggableviews: draggableviews
+            operations: operations
           info:
             title:
               sortable: false
@@ -89,8 +91,18 @@ display:
               separator: ''
               empty_column: false
               responsive: ''
+            draggableviews:
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            operations:
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
           default: '-1'
-          empty_table: false
+          empty_table: true
       row:
         type: 'entity:node'
         options:
@@ -399,7 +411,18 @@ display:
       title: ''
       header: {  }
       footer: {  }
-      empty: {  }
+      empty:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content: 'No content available.'
+          plugin_id: text_custom
       relationships: {  }
       arguments: {  }
       display_extenders: {  }

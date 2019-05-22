@@ -1,5 +1,5 @@
 uuid: 57b8bfc5-b3a6-47ce-95d2-856e4614bff6
-langcode: en
+langcode: ja
 status: true
 dependencies:
   config:
@@ -13,7 +13,7 @@ bundle: news_and_updates_entity
 label: 'Authored on'
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value:
   -
     value: 1526004422
