@@ -1,0 +1,21 @@
+uuid: c4a698c9-3945-4fca-bd54-4f80d42f73ba
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.webcomposer_slider_v2_entity.field_unpublish_date
+  module:
+    - datetime
+    - webcomposer_slider_v2
+id: webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_unpublish_date
+field_name: field_unpublish_date
+entity_type: webcomposer_slider_v2_entity
+bundle: webcomposer_slider_v2_entity
+label: 'Unpublish Date (Optional)'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

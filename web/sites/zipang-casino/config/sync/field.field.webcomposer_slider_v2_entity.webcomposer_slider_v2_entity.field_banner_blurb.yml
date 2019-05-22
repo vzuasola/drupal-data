@@ -1,0 +1,21 @@
+uuid: b4c8f4ad-a531-4609-8c95-2299bdc4a3db
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.webcomposer_slider_v2_entity.field_banner_blurb
+  module:
+    - text
+    - webcomposer_slider_v2
+id: webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_banner_blurb
+field_name: field_banner_blurb
+entity_type: webcomposer_slider_v2_entity
+bundle: webcomposer_slider_v2_entity
+label: 'Pre Banner Blurb'
+description: 'The body for this banner'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

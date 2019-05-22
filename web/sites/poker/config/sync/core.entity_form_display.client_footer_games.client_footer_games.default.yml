@@ -6,7 +6,6 @@ dependencies:
     - field.field.client_footer_games.client_footer_games.field_game_code
     - field.field.client_footer_games.client_footer_games.field_game_thumbnail
     - field.field.client_footer_games.client_footer_games.field_game_thumbnail_hover
-    - field.field.client_footer_games.client_footer_games.field_game_type
     - field.field.client_footer_games.client_footer_games.field_publish
     - image.style.thumbnail
   module:
@@ -40,12 +39,6 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
-    region: content
-  field_game_type:
-    weight: 6
-    settings: {  }
-    third_party_settings: {  }
-    type: options_buttons
     region: content
   field_publish:
     weight: 7

@@ -1,12 +1,12 @@
 uuid: 192f5a93-3a42-4b3a-baba-0cc874e6ee5a
-langcode: en
+langcode: ja
 status: true
 dependencies:
   config:
     - field.storage.zipang_desktop_block.field_description
   module:
-    - zipang_desktop_blocks
     - text
+    - zipang_desktop_blocks
 id: zipang_desktop_block.zipang_desktop_block.field_description
 field_name: field_description
 entity_type: zipang_desktop_block

@@ -1,0 +1,18 @@
+uuid: 9944546b-1c1d-480e-8934-4e70224d5dec
+langcode: ja
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.game_tag
+id: taxonomy_term.game_tag.metatag
+field_name: metatag
+entity_type: taxonomy_term
+bundle: game_tag
+label: Metatags
+description: 'The metatags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

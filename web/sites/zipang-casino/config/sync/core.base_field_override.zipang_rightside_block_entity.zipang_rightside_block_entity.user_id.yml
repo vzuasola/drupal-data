@@ -1,0 +1,20 @@
+uuid: 323d1b21-fd8a-4395-8253-b124536580a0
+langcode: ja
+status: true
+dependencies:
+  module:
+    - zipang_rightside_blocks
+id: zipang_rightside_block_entity.zipang_rightside_block_entity.user_id
+field_name: user_id
+entity_type: zipang_rightside_block_entity
+bundle: zipang_rightside_block_entity
+label: 'Authored by'
+description: 'The user ID of author of the Zipang rightside block entity entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

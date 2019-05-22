@@ -1,0 +1,27 @@
+uuid: 4e0b1f76-b014-4a36-b19f-f3a47b61a0cc
+langcode: en
+status: true
+dependencies:
+  module:
+    - zipang_desktop_games
+    - options
+id: zipang_desktop_games_entity.field_client_type
+field_name: field_client_type
+entity_type: zipang_desktop_games_entity
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: ngm2dt
+      label: NGM2DT
+    -
+      value: live_desktop
+      label: Live
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

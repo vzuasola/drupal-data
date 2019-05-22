@@ -1,0 +1,30 @@
+uuid: dc6d3af6-7940-4ded-bfd5-a58a98aae566
+langcode: ja
+status: true
+dependencies:
+  module:
+    - file
+    - image
+    - webcomposer_slider_v2
+id: webcomposer_slider_v2_entity.field_post_banner_image
+field_name: field_post_banner_image
+entity_type: webcomposer_slider_v2_entity
+type: image
+settings:
+  uri_scheme: public
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  target_type: file
+  display_field: false
+  display_default: false
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

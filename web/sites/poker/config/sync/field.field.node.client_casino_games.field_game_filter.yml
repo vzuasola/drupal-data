@@ -1,0 +1,25 @@
+uuid: ca8d9b3b-6d1f-430e-bf8e-8a0876fccb4d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_game_filter
+    - node.type.client_casino_games
+id: node.client_casino_games.field_game_filter
+field_name: field_game_filter
+entity_type: node
+bundle: client_casino_games
+label: 'Game Filter'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: game_filter_entity_reference
+      display_name: entity_reference_1
+      arguments: {  }
+field_type: entity_reference

@@ -1,0 +1,23 @@
+uuid: 8dd5b295-18d3-49d2-907d-cbd1f9c3a642
+langcode: ja
+status: true
+dependencies:
+  module:
+    - zipang_mobile_games
+_core:
+  default_config_hash: bb7eDVEstSpt8W6M0Qd79E9HRmPxh12cXpmTTOw4Fbo
+id: zipang_mobile_games_entity.field_game_title
+field_name: field_game_title
+entity_type: zipang_mobile_games_entity
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

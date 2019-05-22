@@ -1,0 +1,22 @@
+add zipang desktop games entity entities:
+  title: 'Create new Zipang desktop games entity entities'
+
+administer zipang desktop games entity entities:
+  title: 'Administer Zipang desktop games entity entities'
+  description: 'Allow to access the administration form to configure Zipang desktop games entity entities.'
+  restrict access: true
+
+delete zipang desktop games entity entities:
+  title: 'Delete Zipang desktop games entity entities'
+
+edit zipang desktop games entity entities:
+  title: 'Edit Zipang desktop games entity entities'
+
+access zipang desktop games entity overview:
+  title: 'Access the Zipang desktop games entity overview page'
+
+view published zipang desktop games entity entities:
+  title: 'View published Zipang desktop games entity entities'
+
+view unpublished zipang desktop games entity entities:
+  title: 'View unpublished Zipang desktop games entity entities'

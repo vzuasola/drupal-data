@@ -1,5 +1,5 @@
 uuid: 97c686d2-1af0-4216-b1e9-8f711a2d938a
-langcode: en
+langcode: ja
 status: true
 dependencies:
   config:
@@ -11,9 +11,9 @@ dependencies:
 third_party_settings:
   content_translation:
     translation_sync:
-      alt: alt
-      title: title
-      file: '0'
+      file: file
+      alt: '0'
+      title: '0'
 id: zipang_desktop_block.zipang_desktop_block.field_image_banner
 field_name: field_image_banner
 entity_type: zipang_desktop_block

@@ -1,0 +1,2 @@
+label: 'Publish Date (optional)'
+description: "<p>If this is set the announcement will be available from this date up until the date set on <strong>Unpublish Date</strong>.\r\n<br>Otherwise, the announcement will be available upon saving.</p>"

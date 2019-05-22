@@ -1,0 +1,8 @@
+settings:
+  allowed_values:
+    -
+      label: 'New Tab'
+    -
+      label: 'Same Window'
+    -
+      label: 'New Window'
