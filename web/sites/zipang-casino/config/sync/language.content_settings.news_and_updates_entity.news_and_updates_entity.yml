@@ -1,4 +1,4 @@
-uuid: 4cc1109e-2814-43ce-b21d-bbdf2de28e0d
+uuid: 41b3e4f1-0a09-4af4-90cd-59ddd2b3fbed
 langcode: ja
 status: true
 dependencies:
@@ -7,11 +7,11 @@ dependencies:
     - zipang_news_and_updates
 third_party_settings:
   content_translation:
-    enabled: false
+    enabled: true
     bundle_settings:
       untranslatable_fields_hide: '0'
 id: news_and_updates_entity.news_and_updates_entity
 target_entity_type_id: news_and_updates_entity
 target_bundle: news_and_updates_entity
 default_langcode: site_default
-language_alterable: false
+language_alterable: true

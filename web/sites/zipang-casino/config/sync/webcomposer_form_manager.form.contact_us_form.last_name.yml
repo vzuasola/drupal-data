@@ -1,11 +1,11 @@
 field_settings:
-  label: 名前（名）半角英字
-  placeholder: 名前（名）を半角英字にて入力して下さい。
+  label: 'Last Name'
+  placeholder: 'Enter Last Name'
   annotation: ''
 field_validations:
   required:
     enable: 1
-    error_message: 名前（名）を半角英字にて入力して下さい。
+    error_message: 'Field should be required'
   alpha:
     enable: 1
     error_message: 'Field should be Alphabet characters only'
