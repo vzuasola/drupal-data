@@ -1,6 +1,6 @@
-about_dafabet_title: 'About Dafabet'
+about_dafabet_title: 'About Dafabet JA'
 about_dafabet_content:
-  value: "<p>Welcome to Dafabet, Asia's leading online betting site and home to some of the best gaming products on the web that includes Sports Betting, Online Casino, Live Casino Games, Online Poker, Flash Games and an array of world class online betting games.</p>\r\n"
+  value: "<p>Welcome to Dafabet, Asia's <a href=\"https://www.google.com\" target=\"_blank\"><strong>leading online </strong></a>betting site and <a href=\"https://www.yahoo.com\" target=\"_self\">home</a> to some of the best gaming products on the web that includes <a href=\"https://www.google.com\" target=\"window\">Sports Betting</a>, Online Casino, Live Casino Games, Online Poker, Flash Games and an array of world class online betting games.</p>\r\n\r\n<p>&nbsp;</p>\r\n"
   format: basic_html
 partners_image_url: 'http://stg-entrypage.elysium-dfbt.com/sites/entrypage/files/upload/tiles/footer-partners_0.png'
 partners_logo:
@@ -10,3 +10,12 @@ _core:
   default_config_hash: e_KLM_h2W7kLIYPPfIZzKHCSSzugsz96pboXQxlbhys
 social_media_title: 'Follow us and receive the latest updates'
 langcode: ja
+advanced__active_tab: edit-about-dafabet-details
+value: null
+format: null
+back_to_top_title: ''
+sponsor_mobile_desc: 'Official Main Club Sponsors'
+country_codes: ''
+cookie_notification:
+  value: ''
+  format: basic_html

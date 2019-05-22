@@ -1,4 +1,4 @@
-uuid: 9b322b85-b4bf-43db-9bde-4501f806aee0
+uuid: eff72a01-322b-449b-be26-573b3cc041f1
 langcode: ja
 status: true
 dependencies:
@@ -8,9 +8,11 @@ dependencies:
     - content_translation
 third_party_settings:
   content_translation:
-    enabled: true
+    enabled: false
     bundle_settings:
       untranslatable_fields_hide: '0'
+_core:
+  default_config_hash: FM4i3JXxh7UPV8OQjmcNkk_uD1KGT_HLmrwIWG1VCvs
 id: taxonomy_term.mobile_game_category
 target_entity_type_id: taxonomy_term
 target_bundle: mobile_game_category

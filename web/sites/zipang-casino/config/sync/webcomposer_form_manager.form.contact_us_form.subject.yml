@@ -1,11 +1,11 @@
 field_settings:
-  label: 件名
-  placeholder: '- こちらから選択してください -'
-  choices: "件名2|support@casinojamboree.com| 入出金に関して3\r\n件名|support@casinojamboree.com| 入出金に関して3\r\n|support@casinojamboree.com| SAMPLE\r\n件名|support@casinojamboree.com| その他に関する質問\r\n件名|support@casinojamboree.com| パスワード変更に関して\r\n件名|support@casinojamboree.com| 入出金に関して\r\n"
+  label: Subject
+  placeholder: '- Select -'
+  choices: "Subject|support@casinojamboree.com| Other Question\r\nSubject|support@casinojamboree.com| Password Change\r\nSubject|support@casinojamboree.com,JanePearl.Espino@bayviewtechnology.com| Deposit / Withdraw\r\n|support@casinojamboree.com| Other Questionx\r\n|support@casinojamboree.com| Password Changex\r\n|support@casinojamboree.com,JanePearl.Espino@bayviewtechnology.com| Deposit / Withdrawx"
 field_validations:
   required:
     enable: 1
-    error_message: お問い合わせの題名を選択して下さい。
+    error_message: 'Field should be required'
   alpha:
     enable: 0
     error_message: 'Field should be Alphabet characters only'
