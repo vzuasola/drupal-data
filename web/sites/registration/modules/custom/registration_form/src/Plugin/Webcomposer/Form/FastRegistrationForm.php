@@ -156,50 +156,6 @@ class FastRegistrationForm extends WebcomposerFormBase implements WebcomposerFor
         ],
       ],
 
-      'first_name' => [
-        'name' => 'First Name',
-        'type' => 'textfield',
-        'settings' => [
-          'label' => [
-            '#title' => 'First Name Label',
-            '#type' => 'textfield',
-            '#description' => 'The label for the First Name field',
-          ],
-          'placeholder' => [
-            '#title' => 'First name placeholder label',
-            '#type' => 'textfield',
-            '#description' => 'label for First name field placeholder',
-          ],
-          'annotation' => [
-            '#title' => 'First Name Annotation text',
-            '#type' => 'textarea',
-            '#description' => 'field annotation that will be displayed on focus',
-          ],
-        ],
-      ],
-
-      'last_name' => [
-        'name' => 'Last Name',
-        'type' => 'textfield',
-        'settings' => [
-          'label' => [
-            '#title' => 'Last Name Label',
-            '#type' => 'textfield',
-            '#description' => 'The label for the Last Name field',
-          ],
-          'placeholder' => [
-            '#title' => 'Last name placeholder label',
-            '#type' => 'textfield',
-            '#description' => 'label for Last name field placeholder',
-          ],
-          'annotation' => [
-            '#title' => 'Last Name Annotation text',
-            '#type' => 'textarea',
-            '#description' => 'field annotation that will be displayed on focus',
-          ],
-        ],
-      ],
-
       'birthdate' => [
         'name' => 'Date of birth',
         'type' => 'textfield',
