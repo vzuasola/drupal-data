@@ -128,6 +128,12 @@ class MyProfileForm extends WebcomposerFormBase implements WebcomposerFormInterf
             '#type' => 'textfield',
             '#description' => 'The Label for the Birthdate field',
           ],
+          'placeholder' => [
+            '#title' => 'Birthdate placeholder label',
+            '#type' => 'textfield',
+            '#description' => 'label for Birthdate field placeholder',
+            '#default_value' => 'DD/MM/YYYY',
+          ],
           'date-format' => [
             '#title' => 'Birthdate format',
             '#type' => 'textfield',
