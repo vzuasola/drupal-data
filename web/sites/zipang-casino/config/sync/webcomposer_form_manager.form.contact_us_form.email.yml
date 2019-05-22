@@ -1,5 +1,5 @@
 field_settings:
-  label: ご利用のEメールアドレス
+  label: ''
   placeholder: ''
   annotation: ''
 field_validations:
@@ -36,7 +36,7 @@ field_validations:
     error_message: 'Field contains invalid special characters'
   email:
     enable: 1
-    error_message: 現在ご利用のメールアドレスを正確に入力して下さい。
+    error_message: 'Field does not contain a valid email address'
   min_length:
     enable: 0
     error_message: 'Minimum requirement not met'

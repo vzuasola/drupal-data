@@ -1,36 +1,36 @@
 advanced__active_tab: edit-reg-form
-reg_form_title: 'Registration Page ja'
-reg_form_link_title: 'Step 1 ja'
-error_firstname: 'firstname ja'
-error_lastname: 'lastname ja'
-error_password: 'password ja'
-error_confirm_password: 'confirm password ja'
-error_email: 'email ja'
-error_confirm_email: 'confirm email ja'
-error_birthdate: 'birthdate ja'
-error_phone: 'phone ja'
-error_currency: 'currency ja'
-error_country: 'country ja'
-error_prefecture: 'prefecture ja'
-error_state: 'state ja'
-error_city: 'city ja'
-error_zipcode: 'zip ja'
-error_address: 'address ja'
-error_couponcode: 'coupon ja'
-error_term_conditions: 'tnc ja'
-error_captcha: 'captcha ja'
-error_promotions: 'promotions ja'
-step_2_title: 'Step 2'
-step_2_link_title: 'Step 2'
-success_message: 'step 2!'
+reg_form_title: 'Registration Page EN'
+reg_form_link_title: 'Step 1 EN'
+error_firstname: 'firstname EN'
+error_lastname: 'lastname EN'
+error_password: 'password EN'
+error_confirm_password: 'confirm password EN'
+error_email: 'email EN'
+error_confirm_email: 'confirm email EN'
+error_birthdate: 'birthdate EN'
+error_phone: 'phone EN'
+error_currency: 'currency EN'''
+error_country: 'country EN'
+error_prefecture: 'prefecture EN'
+error_state: 'state EN'
+error_city: 'city EN'
+error_zipcode: 'zip EN'
+error_address: 'address EN'
+error_couponcode: 'coupon EN'
+error_term_conditions: 'Terms and Conditions EN'
+error_captcha: 'captcha EN'
+error_promotions: 'promotions EN'
+step_2_title: 'Step 2 EN'
+step_2_link_title: 'Step 2 En'
+success_message: 'step 2 EN!'
 step_2_body:
-  value: "<p>test step 2</p>\r\n"
+  value: "<p>test step 2 EN</p>\r\n"
   format: basic_html
-promotion_label: test
-promotion_link: test
-cashier_label: test
+promotion_label: 'test En'
+promotion_link: /registration
+cashier_label: 'test EN'
 cashier_link: test
-next_button_label: next
+next_button_label: 'next EN'
 next_button_link: next
 step_3_title: 'Step 3'
 step_3_link_title: 'Step 3'
@@ -40,3 +40,4 @@ step_3_body:
   format: basic_html
 play_button_label: test
 play_button_link: test
+service_not_available: 'service not available EN'
