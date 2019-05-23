@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains mobile_entrypage.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function mobile_entrypage_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the mobile_entrypage module.
+    case 'help.page.mobile_entrypage':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Mobile Entrypage configuration') . '</p>';
+      return $output;
+
+    default:
+  }
+}
