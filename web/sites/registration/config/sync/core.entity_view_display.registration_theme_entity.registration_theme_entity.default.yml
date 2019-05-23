@@ -20,6 +20,7 @@ dependencies:
     - field.field.registration_theme_entity.registration_theme_entity.field_registration_button_font_c
     - field.field.registration_theme_entity.registration_theme_entity.field_registration_button_form_c
     - field.field.registration_theme_entity.registration_theme_entity.field_registration_button_form_h
+    - field.field.registration_theme_entity.registration_theme_entity.field_registration_form
     - field.field.registration_theme_entity.registration_theme_entity.field_registration_theme_code
     - field.field.registration_theme_entity.registration_theme_entity.field_separator_color
     - field.field.registration_theme_entity.registration_theme_entity.field_steptwo_banner
@@ -194,6 +195,13 @@ content:
       opacity: '1'
     third_party_settings: {  }
     type: color_field_formatter_text
+    region: content
+  field_registration_form:
+    weight: 29
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
   field_registration_theme_code:
     weight: 2
