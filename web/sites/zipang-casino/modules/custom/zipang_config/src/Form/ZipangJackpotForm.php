@@ -13,7 +13,7 @@ use Drupal\Core\Datetime\DrupalDateTime;
  *   id = "zipang_jackpot",
  *   route = {
  *     "title" = "Jackpot Configuration",
- *     "path" = "/admin/config/jamboree/jackpot_configuration",
+ *     "path" = "/admin/config/zipang/jackpot_configuration",
  *   },
  *   menu = {
  *     "title" = "Jackpot Configuration",
