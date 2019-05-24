@@ -1,0 +1,20 @@
+uuid: 88f36aa1-874e-444a-a8e8-ae7b09a22963
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.zipang_jackpot_entity.field_jackpot_game_title
+  module:
+    - zipang_jackpot
+id: zipang_jackpot_entity.zipang_jackpot_entity.field_jackpot_game_title
+field_name: field_jackpot_game_title
+entity_type: zipang_jackpot_entity
+bundle: zipang_jackpot_entity
+label: 'Jackpot Game Title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

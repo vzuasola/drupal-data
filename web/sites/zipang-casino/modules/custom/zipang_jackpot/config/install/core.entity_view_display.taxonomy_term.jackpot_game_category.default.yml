@@ -1,0 +1,96 @@
+uuid: c950f7d0-6059-4783-a0eb-8e94a62a9c06
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.jackpot_game_category.field_display_all
+    - field.field.taxonomy_term.jackpot_game_category.field_enable
+    - field.field.taxonomy_term.jackpot_game_category.field_jackpot_category_id
+    - field.field.taxonomy_term.jackpot_game_category.field_jackpot_summary_text
+    - field.field.taxonomy_term.jackpot_game_category.field_meta_tag
+    - field.field.taxonomy_term.jackpot_game_category.field_open_in
+    - field.field.taxonomy_term.jackpot_game_category.field_summary_url
+    - field.field.taxonomy_term.jackpot_game_category.field_url
+    - taxonomy.vocabulary.jackpot_game_category
+  module:
+    - metatag
+    - options
+    - text
+id: taxonomy_term.jackpot_game_category.default
+targetEntityType: taxonomy_term
+bundle: jackpot_game_category
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_display_all:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_enable:
+    weight: 2
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_jackpot_category_id:
+    weight: 3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_jackpot_summary_text:
+    weight: 4
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_meta_tag:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
+    region: content
+  field_open_in:
+    weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_summary_url:
+    weight: 7
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_url:
+    weight: 8
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  langcode: true

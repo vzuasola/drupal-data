@@ -4,9 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.partner_entity.partner_entity.field_id
-    - field.field.partner_entity.partner_entity.field_link
     - field.field.partner_entity.partner_entity.field_logo
-    - field.field.partner_entity.partner_entity.field_redirect_behavior
     - image.style.thumbnail
   module:
     - image
@@ -26,14 +24,6 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_link:
-    weight: 3
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_logo:
     weight: 1
     settings:
@@ -41,12 +31,6 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
-    region: content
-  field_redirect_behavior:
-    weight: 4
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
     region: content
   name:
     type: string_textfield

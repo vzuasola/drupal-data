@@ -1,0 +1,23 @@
+uuid: a928d515-d7eb-4e66-9482-ba53cf7c9f5f
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_enable
+    - taxonomy.vocabulary.jackpot_game_category
+id: taxonomy_term.jackpot_game_category.field_enable
+field_name: field_enable
+entity_type: taxonomy_term
+bundle: jackpot_game_category
+label: Enable
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

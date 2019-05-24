@@ -12,7 +12,7 @@ field_validations:
     parameters:
       spaces: 1
   alphanumeric:
-    enable: 1
+    enable: 0
     error_message: 'Field should be alphanumeric'
     parameters:
       spaces: 1
