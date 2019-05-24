@@ -1,0 +1,23 @@
+uuid: cf48a1e8-59fd-4284-b880-cfdfeba93b18
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.partner_entity.field_redirect_behavior
+  module:
+    - options
+    - webcomposer_partner
+id: partner_entity.partner_entity.field_redirect_behavior
+field_name: field_redirect_behavior
+entity_type: partner_entity
+bundle: partner_entity
+label: 'Redirect Behavior'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: '''_self'''
+default_value_callback: ''
+settings: {  }
+field_type: list_string
