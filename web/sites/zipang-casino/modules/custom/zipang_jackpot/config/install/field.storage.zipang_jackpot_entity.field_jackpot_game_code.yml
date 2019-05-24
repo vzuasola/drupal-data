@@ -1,12 +1,12 @@
-uuid: d21ce9ee-3eae-4e51-955f-9e4877b622d5
+uuid: ad0737bc-ae03-4f32-8bdf-20eb61a9a751
 langcode: ja
 status: true
 dependencies:
   module:
-    - webcomposer_partner
-id: partner_entity.field_link
-field_name: field_link
-entity_type: partner_entity
+    - zipang_jackpot
+id: zipang_jackpot_entity.field_jackpot_game_code
+field_name: field_jackpot_game_code
+entity_type: zipang_jackpot_entity
 type: string
 settings:
   max_length: 255

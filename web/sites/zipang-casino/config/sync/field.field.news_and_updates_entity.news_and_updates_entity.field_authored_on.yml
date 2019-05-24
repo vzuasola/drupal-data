@@ -13,7 +13,7 @@ bundle: news_and_updates_entity
 label: 'Authored on'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value:
   -
     value: 1526004422

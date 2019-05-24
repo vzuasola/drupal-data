@@ -1,0 +1,30 @@
+uuid: 0f89a7d1-f1e7-4db1-92ad-df66f8cf1e09
+langcode: ja
+status: true
+dependencies:
+  module:
+    - file
+    - image
+    - zipang_jackpot
+id: zipang_jackpot_entity.field_jackpot_game_thumbnail
+field_name: field_jackpot_game_thumbnail
+entity_type: zipang_jackpot_entity
+type: image
+settings:
+  uri_scheme: public
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  target_type: file
+  display_field: false
+  display_default: false
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

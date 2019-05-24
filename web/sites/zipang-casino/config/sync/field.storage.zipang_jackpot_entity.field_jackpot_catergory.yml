@@ -1,0 +1,22 @@
+uuid: eabd9f6d-0d26-49cc-845b-c9da0940c62c
+langcode: ja
+status: true
+dependencies:
+  module:
+    - taxonomy
+    - zipang_jackpot
+_core:
+  default_config_hash: odVzaQH9Lr39-cWAOjc6xpBnsbSwka4QjvFBz7Xt5Is
+id: zipang_jackpot_entity.field_jackpot_catergory
+field_name: field_jackpot_catergory
+entity_type: zipang_jackpot_entity
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
