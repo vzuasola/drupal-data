@@ -83,22 +83,6 @@ class ZipangGameIntegrationForm extends FormBase {
       '#required' => TRUE,
     ];
 
-    $form['game_integration']['gpas_desktop_client_url'] = [
-      '#type' => 'textarea',
-      '#title' => t('GPAS Desktop Games Client'),
-      '#default_value' => $this->get('gpas_desktop_client_url'),
-      '#translatable' => TRUE,
-      '#required' => TRUE,
-    ];
-
-    $form['game_integration']['gpas_mobile_client_url'] = [
-      '#type' => 'textarea',
-      '#title' => t('GPAS Mobile Games Client'),
-      '#default_value' => $this->get('gpas_mobile_client_url'),
-      '#translatable' => TRUE,
-      '#required' => TRUE,
-    ];
-
     $form['game_buttons_config'] = [
       '#type' => 'details',
       '#title' => t('Game Launch Buttons Configuration'),

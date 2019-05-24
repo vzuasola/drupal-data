@@ -30,6 +30,7 @@ dependencies:
     - field.field.registration_theme_entity.registration_theme_entity.field_success_message_color
     - field.field.registration_theme_entity.registration_theme_entity.field_theme_alternative_text
     - field.field.registration_theme_entity.registration_theme_entity.field_tripwire_content
+    - field.field.registration_theme_entity.registration_theme_entity.field_tripwire_toggle
     - image.style.thumbnail
   module:
     - color_field
@@ -115,6 +116,7 @@ third_party_settings:
       label: '2 Columns Layout'
     group_tripwire_popup:
       children:
+        - field_tripwire_toggle
         - field_tripwire_content
       parent_name: ''
       weight: 20
@@ -326,12 +328,19 @@ content:
     type: string_textfield
     region: content
   field_tripwire_content:
-    weight: 32
+    weight: 34
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
+    region: content
+  field_tripwire_toggle:
+    weight: 33
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
     region: content
   langcode:
     type: language_select

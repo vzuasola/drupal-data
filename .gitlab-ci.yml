@@ -517,6 +517,8 @@ staging-japan-stack:
   only:
     - /^release-.*$/
     - tags
+  tags:
+    - stgrunner
 
 staging-row-stack:
   stage: deploy-staging
