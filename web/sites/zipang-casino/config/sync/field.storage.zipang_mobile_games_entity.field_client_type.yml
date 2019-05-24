@@ -17,9 +17,6 @@ settings:
       value: ngm
       label: NGM
     -
-      value: gpas
-      label: Live
-    -
       value: live_mobile
       label: Live
   allowed_values_function: ''

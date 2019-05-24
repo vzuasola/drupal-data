@@ -1,0 +1,170 @@
+uuid: 49358baf-202f-452e-af33-3b8baf69171f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.games.field_game_code
+    - field.field.node.games.field_game_platform
+    - field.field.node.games.field_game_provider
+    - field.field.node.games.field_game_ribbon
+    - field.field.node.games.field_lobby_tab
+    - field.field.node.games.field_maintenance_blurb
+    - field.field.node.games.field_maintenance_end_date
+    - field.field.node.games.field_maintenance_start_date
+    - field.field.node.games.field_preview_mode
+    - field.field.node.games.field_provider_logo
+    - field.field.node.games.field_target
+    - field.field.node.games.field_thumbnail_image
+    - field.field.node.games.field_use_game_loader
+    - node.type.games
+  module:
+    - datetime
+    - field_group
+    - image
+    - options
+    - text
+    - user
+third_party_settings:
+  field_group:
+    group_under_maintenance_settings:
+      children:
+        - field_maintenance_blurb
+        - field_maintenance_start_date
+        - field_maintenance_end_date
+      parent_name: ''
+      weight: 9
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: true
+        required_fields: false
+      label: 'Under Maintenance Settings'
+id: node.games.default
+targetEntityType: node
+bundle: games
+mode: default
+content:
+  field_game_code:
+    weight: 5
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_game_platform:
+    weight: 14
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_game_provider:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_game_ribbon:
+    weight: 8
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_lobby_tab:
+    weight: 2
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_maintenance_blurb:
+    weight: 10
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_maintenance_end_date:
+    weight: 12
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_maintenance_start_date:
+    weight: 11
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_preview_mode:
+    weight: 10
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_provider_logo:
+    weight: 4
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_target:
+    weight: 7
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_thumbnail_image:
+    weight: 6
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_use_game_loader:
+    weight: 13
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  langcode:
+    type: language
+    weight: 1
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+      native_language: false
+    third_party_settings: {  }
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

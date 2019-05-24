@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_banner_blurb
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_banner_image
+    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_banner_image_landscape
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_banner_link
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_banner_link_target
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_content_position
@@ -13,6 +14,7 @@ dependencies:
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_log_in_state
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_post_banner_blurb
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_post_banner_image
+    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_post_banner_image_landscap
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_post_banner_link
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_post_banner_link_target
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_post_content_position
@@ -43,14 +45,23 @@ bundle: webcomposer_slider_v2_entity
 mode: default
 content:
   field_banner_blurb:
-    weight: 6
+    weight: 8
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_banner_image:
-    weight: 3
+    weight: 4
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_banner_image_landscape:
+    weight: 5
     label: above
     settings:
       image_style: ''
@@ -59,7 +70,7 @@ content:
     type: image
     region: content
   field_banner_link:
-    weight: 4
+    weight: 6
     label: above
     settings:
       trim_length: 80
@@ -71,21 +82,21 @@ content:
     type: link
     region: content
   field_banner_link_target:
-    weight: 5
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
-    region: content
-  field_content_position:
     weight: 7
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
+  field_content_position:
+    weight: 9
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
   field_disable_in_tablet:
-    weight: 20
+    weight: 19
     label: above
     settings:
       format: default
@@ -103,28 +114,37 @@ content:
     type: entity_reference_label
     region: content
   field_game_platform:
-    weight: 27
+    weight: 26
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_log_in_state:
-    weight: 2
+    weight: 3
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_post_banner_blurb:
-    weight: 15
+    weight: 17
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_post_banner_image:
-    weight: 14
+    weight: 15
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_post_banner_image_landscap:
+    weight: 16
     label: above
     settings:
       image_style: ''
@@ -133,7 +153,7 @@ content:
     type: image
     region: content
   field_post_banner_link:
-    weight: 11
+    weight: 12
     label: above
     settings:
       trim_length: 80
@@ -145,14 +165,14 @@ content:
     type: link
     region: content
   field_post_banner_link_target:
-    weight: 12
+    weight: 13
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_post_content_position:
-    weight: 13
+    weight: 14
     label: above
     settings: {  }
     third_party_settings: {  }
@@ -175,7 +195,7 @@ content:
     type: entity_reference_label
     region: content
   field_preview_display_only:
-    weight: 19
+    weight: 18
     label: above
     settings:
       format: default
@@ -185,7 +205,7 @@ content:
     type: boolean
     region: content
   field_publish_date:
-    weight: 8
+    weight: 10
     label: above
     settings:
       format_type: medium
@@ -194,7 +214,7 @@ content:
     type: datetime_default
     region: content
   field_ribbon_background_color:
-    weight: 22
+    weight: 21
     label: above
     settings:
       format: hex
@@ -203,7 +223,7 @@ content:
     type: color_field_formatter_text
     region: content
   field_ribbon_label_color:
-    weight: 23
+    weight: 22
     label: above
     settings:
       format: hex
@@ -212,14 +232,14 @@ content:
     type: color_field_formatter_text
     region: content
   field_ribbon_product_label:
-    weight: 24
+    weight: 23
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_slider_game_code:
-    weight: 25
+    weight: 24
     label: above
     settings:
       link_to_entity: false
@@ -227,21 +247,21 @@ content:
     type: string
     region: content
   field_slider_game_provider:
-    weight: 26
+    weight: 25
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_status:
-    weight: 21
+    weight: 20
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_title:
-    weight: 1
+    weight: 2
     label: above
     settings:
       link_to_entity: false
@@ -249,7 +269,7 @@ content:
     type: string
     region: content
   field_unpublish_date:
-    weight: 9
+    weight: 11
     label: above
     settings:
       format_type: medium
@@ -260,7 +280,7 @@ content:
   name:
     label: above
     type: string
-    weight: -4
+    weight: 0
     region: content
     settings:
       link_to_entity: false
@@ -268,7 +288,7 @@ content:
   user_id:
     label: hidden
     type: author
-    weight: 0
+    weight: 1
     region: content
     settings: {  }
     third_party_settings: {  }

@@ -1,0 +1,52 @@
+uuid: 1bca236d-3c8f-435e-82bf-19790867685a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.lobby_tab.field_alias
+    - field.field.taxonomy_term.lobby_tab.field_label
+    - taxonomy.vocabulary.lobby_tab
+id: taxonomy_term.lobby_tab.default
+targetEntityType: taxonomy_term
+bundle: lobby_tab
+mode: default
+content:
+  field_alias:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_label:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true

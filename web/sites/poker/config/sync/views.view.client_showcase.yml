@@ -248,7 +248,7 @@ display:
           exposed: true
           expose:
             operator_id: field_game_categories_target_id_op
-            label: 'Game Categories (field_game_categories)'
+            label: 'Game Categories'
             description: ''
             use_operator: false
             operator: field_game_categories_target_id_op

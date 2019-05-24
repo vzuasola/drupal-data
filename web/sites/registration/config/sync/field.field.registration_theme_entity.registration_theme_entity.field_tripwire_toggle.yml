@@ -1,0 +1,24 @@
+uuid: b3830f57-21bb-4639-80ec-04542cb00b22
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.registration_theme_entity.field_tripwire_toggle
+  module:
+    - registration_theme
+id: registration_theme_entity.registration_theme_entity.field_tripwire_toggle
+field_name: field_tripwire_toggle
+entity_type: registration_theme_entity
+bundle: registration_theme_entity
+label: 'Tripwire Toggle'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Show
+  off_label: Hide
+field_type: boolean
