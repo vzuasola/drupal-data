@@ -1,0 +1,7 @@
+live_dealer.admin_settings:
+  path: 'admin/config/live-dealer-mobile'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Mobile Live Dealer Configurations'
+  requirements:
+    _permission: 'administer mobile config'

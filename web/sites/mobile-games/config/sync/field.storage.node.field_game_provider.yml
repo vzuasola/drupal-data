@@ -38,6 +38,9 @@ settings:
     -
       value: asia_gaming
       label: 'Asia Gaming'
+    -
+      value: ruby_play
+      label: 'Ruby Play'
   allowed_values_function: ''
 module: options
 locked: false
