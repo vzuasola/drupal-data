@@ -4,6 +4,8 @@ status: true
 dependencies:
   module:
     - zipang_jackpot
+_core:
+  default_config_hash: g20v1rlrKGmPPVVCSkY6HlOxYllPJwnr50ySvG8NTEw
 id: zipang_jackpot_entity.field_hits_benchmark
 field_name: field_hits_benchmark
 entity_type: zipang_jackpot_entity

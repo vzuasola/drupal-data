@@ -6,6 +6,8 @@ dependencies:
     - file
     - image
     - zipang_jackpot
+_core:
+  default_config_hash: wN4nO_h3i0mOaSEbZqhuf0vXXXK-iumlMkVg_pVFxdQ
 id: zipang_jackpot_entity.field_jackpot_game_thumbnail
 field_name: field_jackpot_game_thumbnail
 entity_type: zipang_jackpot_entity

@@ -6,6 +6,8 @@ dependencies:
     - field.storage.zipang_jackpot_entity.field_jackpot_game_title
   module:
     - zipang_jackpot
+_core:
+  default_config_hash: vqx4A_1NVNqO5fjyt1RgrL1dgQlqaR-XjoJMU2Bw6Ng
 id: zipang_jackpot_entity.zipang_jackpot_entity.field_jackpot_game_title
 field_name: field_jackpot_game_title
 entity_type: zipang_jackpot_entity

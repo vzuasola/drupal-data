@@ -1,4 +1,4 @@
-uuid: b8db21c6-5964-4614-a0e1-559c0cd8900c
+uuid: a253f63d-3c21-4216-97ef-ce5c0ee1ea8a
 langcode: ja
 status: true
 dependencies:
@@ -14,7 +14,7 @@ bundle: jackpot_game_category
 label: 'Open In'
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value:
   -
     value: _self

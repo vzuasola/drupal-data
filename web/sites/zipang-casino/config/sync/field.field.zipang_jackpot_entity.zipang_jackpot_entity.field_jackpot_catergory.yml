@@ -1,5 +1,5 @@
 uuid: 164e9a3b-1467-4bd6-b8a2-69ab27977f84
-langcode: en
+langcode: ja
 status: true
 dependencies:
   config:
@@ -7,6 +7,8 @@ dependencies:
     - taxonomy.vocabulary.jackpot_game_category
   module:
     - zipang_jackpot
+_core:
+  default_config_hash: j9UJJRPw9tEwJPtlmljfeAVSobf8PwpiZilVcs7n9s0
 id: zipang_jackpot_entity.zipang_jackpot_entity.field_jackpot_catergory
 field_name: field_jackpot_catergory
 entity_type: zipang_jackpot_entity

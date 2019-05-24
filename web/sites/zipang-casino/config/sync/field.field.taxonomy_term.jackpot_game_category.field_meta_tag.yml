@@ -1,4 +1,4 @@
-uuid: 2a17ea79-afd8-43e1-b64a-d0c2d402fde7
+uuid: 073f238f-6775-4de6-840b-36ac50d7609b
 langcode: ja
 status: true
 dependencies:
@@ -15,7 +15,9 @@ label: 'Meta Tag'
 description: ''
 required: false
 translatable: false
-default_value: {  }
+default_value:
+  -
+    value: 'a:0:{}'
 default_value_callback: ''
 settings: {  }
 field_type: metatag

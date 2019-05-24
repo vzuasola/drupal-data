@@ -1,4 +1,4 @@
-uuid: febfe2f3-ad23-44b8-b222-829d6b7b3f58
+uuid: 640baee9-96b5-4ea4-9e85-5534de0ae450
 langcode: ja
 status: true
 dependencies:
@@ -12,7 +12,7 @@ bundle: jackpot_game_category
 label: 'Jackpot Category ID'
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }

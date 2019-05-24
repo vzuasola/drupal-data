@@ -2,6 +2,8 @@ uuid: 98617c0d-3372-4162-b1ef-dc594d96788e
 langcode: ja
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: IDVW8fPThcdjkl8T00j1boi4YXhK5-cRXn7bE-GOTu0
 name: 'Jackpot Game Category'
 vid: jackpot_game_category
 description: 'Jackpot Game Category'

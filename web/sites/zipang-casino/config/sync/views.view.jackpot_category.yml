@@ -9,6 +9,8 @@ dependencies:
     - serialization
     - taxonomy
     - user
+_core:
+  default_config_hash: DXJreMZwoND1nFeOSvbkOIRbtEk-L120YD9CmrL1dnM
 id: jackpot_category
 label: 'Jackpot Category'
 module: views
@@ -141,6 +143,7 @@ display:
       empty: {  }
       relationships: {  }
       arguments: {  }
+      display_extenders: {  }
     cache_metadata:
       max-age: -1
       contexts:

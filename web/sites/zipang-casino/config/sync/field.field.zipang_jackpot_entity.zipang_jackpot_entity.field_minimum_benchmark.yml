@@ -6,6 +6,8 @@ dependencies:
     - field.storage.zipang_jackpot_entity.field_minimum_benchmark
   module:
     - zipang_jackpot
+_core:
+  default_config_hash: nFe3HfDAqyRg2zbpAU5BntPPat4i6_DwXFZBLNUXdlI
 id: zipang_jackpot_entity.zipang_jackpot_entity.field_minimum_benchmark
 field_name: field_minimum_benchmark
 entity_type: zipang_jackpot_entity

@@ -10,6 +10,8 @@ third_party_settings:
     enabled: true
     bundle_settings:
       untranslatable_fields_hide: '0'
+_core:
+  default_config_hash: ygwvZ-Q2Av8nT61CTAcuX0_1viPmb1Grl2RcO7_ixik
 id: zipang_jackpot_entity.zipang_jackpot_entity
 target_entity_type_id: zipang_jackpot_entity
 target_bundle: zipang_jackpot_entity

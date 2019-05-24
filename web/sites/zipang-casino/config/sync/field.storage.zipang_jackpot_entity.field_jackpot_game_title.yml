@@ -4,6 +4,8 @@ status: true
 dependencies:
   module:
     - zipang_jackpot
+_core:
+  default_config_hash: IRTMqXdoAAQ5OqD8j2fTmzZxO5YoOYUSghgXDdDNbc4
 id: zipang_jackpot_entity.field_jackpot_game_title
 field_name: field_jackpot_game_title
 entity_type: zipang_jackpot_entity
