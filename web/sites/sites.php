@@ -6,6 +6,7 @@
  */
 
 // Webcomposer Demo Instances
+$sites['localhost'] = 'demo';
 $sites['demo.drupal.dev'] = 'demo';
 $sites['demo.drupal.local'] = 'demo';
 $sites['demo.drupal.env'] = 'demo';
