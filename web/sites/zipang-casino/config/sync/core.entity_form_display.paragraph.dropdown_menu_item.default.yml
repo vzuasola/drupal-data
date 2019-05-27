@@ -3,9 +3,11 @@ langcode: ja
 status: true
 dependencies:
   config:
+    - field.field.paragraph.dropdown_menu_item.field_dropdown_menu_class
     - field.field.paragraph.dropdown_menu_item.field_dropdown_menu_description
     - field.field.paragraph.dropdown_menu_item.field_dropdown_menu_enabled
     - field.field.paragraph.dropdown_menu_item.field_dropdown_menu_icon_image
+    - field.field.paragraph.dropdown_menu_item.field_dropdown_menu_id
     - field.field.paragraph.dropdown_menu_item.field_dropdown_menu_link
     - field.field.paragraph.dropdown_menu_item.field_dropdown_menu_link_title
     - field.field.paragraph.dropdown_menu_item.field_dropdown_menu_mobile_opt
@@ -20,8 +22,16 @@ targetEntityType: paragraph
 bundle: dropdown_menu_item
 mode: default
 content:
+  field_dropdown_menu_class:
+    weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_dropdown_menu_description:
-    weight: 5
+    weight: 4
     settings:
       size: 60
       placeholder: ''
@@ -29,7 +39,7 @@ content:
     type: string_textfield
     region: content
   field_dropdown_menu_enabled:
-    weight: 4
+    weight: 7
     settings:
       display_label: true
     third_party_settings: {  }
@@ -42,6 +52,14 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+    region: content
+  field_dropdown_menu_id:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
   field_dropdown_menu_link:
     weight: 2
@@ -60,7 +78,7 @@ content:
     type: string_textfield
     region: content
   field_dropdown_menu_mobile_opt:
-    weight: 6
+    weight: 8
     settings: {  }
     third_party_settings: {  }
     type: options_select
