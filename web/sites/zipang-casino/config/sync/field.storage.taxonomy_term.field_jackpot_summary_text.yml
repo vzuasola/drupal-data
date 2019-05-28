@@ -4,6 +4,8 @@ status: true
 dependencies:
   module:
     - taxonomy
+_core:
+  default_config_hash: OhRLIdOjG6jYRauh4RlVRICJIIzajSNvjLKetFeRoCE
 id: taxonomy_term.field_jackpot_summary_text
 field_name: field_jackpot_summary_text
 entity_type: taxonomy_term

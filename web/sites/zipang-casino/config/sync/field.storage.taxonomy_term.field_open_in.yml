@@ -5,6 +5,8 @@ dependencies:
   module:
     - options
     - taxonomy
+_core:
+  default_config_hash: WKIwQv10yJ4M2dzP3vCoFPpruq25A-JwkBX0tiahh_8
 id: taxonomy_term.field_open_in
 field_name: field_open_in
 entity_type: taxonomy_term
