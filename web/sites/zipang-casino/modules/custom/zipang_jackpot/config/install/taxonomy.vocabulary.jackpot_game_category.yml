@@ -1,0 +1,9 @@
+uuid: 98617c0d-3372-4162-b1ef-dc594d96788e
+langcode: ja
+status: true
+dependencies: {  }
+name: 'Jackpot Game Category'
+vid: jackpot_game_category
+description: 'Jackpot Game Category'
+hierarchy: 0
+weight: 0

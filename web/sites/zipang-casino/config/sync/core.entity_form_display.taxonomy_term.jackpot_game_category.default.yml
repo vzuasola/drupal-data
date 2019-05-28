@@ -1,0 +1,115 @@
+uuid: 141d3b8a-f2a7-4599-acc3-04c976cb756b
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.jackpot_game_category.field_display_all
+    - field.field.taxonomy_term.jackpot_game_category.field_enable
+    - field.field.taxonomy_term.jackpot_game_category.field_jackpot_category_id
+    - field.field.taxonomy_term.jackpot_game_category.field_jackpot_summary_text
+    - field.field.taxonomy_term.jackpot_game_category.field_meta_tag
+    - field.field.taxonomy_term.jackpot_game_category.field_open_in
+    - field.field.taxonomy_term.jackpot_game_category.field_summary_url
+    - field.field.taxonomy_term.jackpot_game_category.field_url
+    - taxonomy.vocabulary.jackpot_game_category
+  module:
+    - metatag
+    - path
+    - text
+id: taxonomy_term.jackpot_game_category.default
+targetEntityType: taxonomy_term
+bundle: jackpot_game_category
+mode: default
+content:
+  description:
+    type: text_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_display_all:
+    weight: 31
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_enable:
+    weight: 32
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_jackpot_category_id:
+    weight: 33
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_jackpot_summary_text:
+    weight: 34
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_meta_tag:
+    weight: 35
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_firehose
+    region: content
+  field_open_in:
+    weight: 36
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_summary_url:
+    weight: 37
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_url:
+    weight: 38
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
+hidden: {  }

@@ -1,0 +1,28 @@
+field_settings:
+  label: ''
+  choices: "jp|Japan\r\ncn|China\r\nid|Indonesia\r\nkr|Korea\r\nmy|Malaysia\r\nvn|Vietnam\r\nth|Thailand\r\naf|Afghanistan\r\nal|Albania\r\ndz|Algeria\r\nab|Antigua and Barbuda\r\nar|Argentina\r\nam|Armenia\r\nat|Austria\r\naz|Azerbaijan\r\nbh|Bahrain\r\nby|Belarus\r\nbz|Belize\r\nbo|Bolivia\r\nba|Bosnia and Herzegovina\r\nbr|Brazil\r\nbn|Brunei Darussalam\r\nkh|Cambodia\r\nca|Canada\r\ncl|Chile\r\ncr|Costa Rica\r\nhr|Croatia\r\ndk|Denmark\r\ndo|Dominican Republic\r\nec|Ecuador\r\neg|Egypt\r\nsv|El Salvador\r\nfo|Faroe Islands\r\nfi|Finland\r\nge|Georgia\r\nde|Germany\r\ngr|Greece\r\ngd|Grenada\r\ngt|Guatemala\r\nhn|Honduras\r\nhu|Hungary\r\nis|Iceland\r\nin|India\r\nir|Iran\r\niq|Iraq\r\npk|Islamic Republic of Pakistan\r\njm|Jamaica\r\njo|Jordan\r\nkz|Kazakhstan\r\nke|Kenya\r\nkw|Kuwait\r\nkg|Kyrgyzstan\r\nlv|Latvia\r\nlb|Lebanon\r\nly|Libya\r\nli|Liechtenstein\r\nlt|Lithuania\r\nlu|Luxembourg\r\nmk|Macedonia (FYROM)\r\nmv|Maldives\r\nmt|Malta\r\nmx|Mexico\r\nmd|Moldova\r\nmn|Mongolia\r\nme|Montenegro\r\nma|Morocco\r\nnp|Nepal\r\nnl|Netherlands\r\nnz|New Zealand\r\nni|Nicaragua\r\nng|Nigeria\r\nno|Norway\r\nom|Oman\r\npa|Panama\r\npy|Paraguay\r\npe|Peru\r\nmc|Principality of Monaco\r\nqa|Qatar\r\nru|Russia\r\nsa|Saudi Arabia\r\nrs|Serbia\r\nsk|Slovakia\r\nsi|Slovenia\r\nza|South Africa\r\nse|Sweden\r\nsy|Syria\r\ntt|Trinidad and Tobago\r\ntn|Tunisia\r\nae|U.A.E.\r\nuy|Uruguay\r\nuz|Uzbekistan\r\nve|Venezuela\r\nye|Yemen\r\nzw|Zimbabwe"
+field_validations:
+  required:
+    error_message: 'Field should be required'
+  alpha:
+    error_message: 'Field should be Alphabet characters only'
+  alphanumeric:
+    error_message: 'Field should be alphanumeric'
+  alpha_multi:
+    error_message: 'Value is not a valid multilingual character'
+  numeric:
+    error_message: 'Field should be numeric'
+  no_symbols:
+    error_message: 'Field contains invalid special characters'
+  numeric_symbols:
+    error_message: 'Field contains invalid special characters'
+  email:
+    error_message: 'Field does not contain a valid email address'
+  min_length:
+    error_message: 'Minimum requirement not met'
+  max_length:
+    error_message: 'Maximum requirement not met'
+  regex:
+    error_message: 'This field only accepts specific characters.'
+  valid_date:
+    error_message: 'Date is invalid'

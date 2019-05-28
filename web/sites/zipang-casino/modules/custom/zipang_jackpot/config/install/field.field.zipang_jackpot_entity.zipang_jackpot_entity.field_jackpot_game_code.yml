@@ -1,0 +1,20 @@
+uuid: dddab8ee-e93f-4174-8413-8eb151218a07
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.zipang_jackpot_entity.field_jackpot_game_code
+  module:
+    - zipang_jackpot
+id: zipang_jackpot_entity.zipang_jackpot_entity.field_jackpot_game_code
+field_name: field_jackpot_game_code
+entity_type: zipang_jackpot_entity
+bundle: zipang_jackpot_entity
+label: 'Jackpot Game Code'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

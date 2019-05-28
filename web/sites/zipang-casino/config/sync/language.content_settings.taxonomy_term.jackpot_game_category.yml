@@ -1,0 +1,20 @@
+uuid: f48c562c-b343-4303-b33a-89b1d5922330
+langcode: ja
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.jackpot_game_category
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+_core:
+  default_config_hash: LUPiuA20_AN4TeQbdN4g7rL-do-XlY5fQw8bkbxuNZY
+id: taxonomy_term.jackpot_game_category
+target_entity_type_id: taxonomy_term
+target_bundle: jackpot_game_category
+default_langcode: site_default
+language_alterable: true
