@@ -122,6 +122,11 @@ $sites['registration-row.drupal.dev'] = 'registration-row';
 $sites['registration-row.drupal.env'] = 'registration-row';
 
 // dynamic sites.php values via environment variables
+
 if (isset($_SERVER['DRUPAL_SITES_DOMAIN']) && isset($_SERVER['DRUPAL_SITES_MULTISITE'])) {
   $sites[$_SERVER['DRUPAL_SITES_DOMAIN']] = $_SERVER['DRUPAL_SITES_MULTISITE'];
+}
+
+if (isset($_SERVER['DRUPAL_SITES_DOMAIN_ALIAS']) && isset($_SERVER['DRUPAL_SITES_MULTISITE_ALIAS'])) {
+  $sites[$_SERVER['DRUPAL_SITES_DOMAIN_ALIAS']] = $_SERVER['DRUPAL_SITES_MULTISITE_ALIAS'];
 }
