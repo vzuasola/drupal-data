@@ -5,11 +5,6 @@
  * Configuration file for multi-site support and directory aliasing feature.
  */
 
-// dynamic sites.php values via environment variables
-if (isset($_SERVER['DRUPAL_SITES_DOMAIN']) && isset($_SERVER['DRUPAL_SITES_MULTISITE'])) {
-  $sites[$_SERVER['DRUPAL_SITES_DOMAIN']] = $_SERVER['DRUPAL_SITES_MULTISITE'];
-}
-
 // Webcomposer Demo Instances
 $sites['localhost'] = 'demo';
 $sites['demo.drupal.dev'] = 'demo';
@@ -126,3 +121,7 @@ $sites['registration-row.drupal.local'] = 'registration-row';
 $sites['registration-row.drupal.dev'] = 'registration-row';
 $sites['registration-row.drupal.env'] = 'registration-row';
 
+// dynamic sites.php values via environment variables
+if (isset($_SERVER['DRUPAL_SITES_DOMAIN']) && isset($_SERVER['DRUPAL_SITES_MULTISITE'])) {
+  $sites[$_SERVER['DRUPAL_SITES_DOMAIN']] = $_SERVER['DRUPAL_SITES_MULTISITE'];
+}
