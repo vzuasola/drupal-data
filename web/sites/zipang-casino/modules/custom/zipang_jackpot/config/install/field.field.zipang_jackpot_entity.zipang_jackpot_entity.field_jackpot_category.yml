@@ -1,0 +1,30 @@
+uuid: 659da0fe-cd25-4c3c-a506-140097715be2
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.zipang_jackpot_entity.field_jackpot_category
+    - taxonomy.vocabulary.jackpot_game_category
+  module:
+    - zipang_jackpot
+id: zipang_jackpot_entity.zipang_jackpot_entity.field_jackpot_category
+field_name: field_jackpot_category
+entity_type: zipang_jackpot_entity
+bundle: zipang_jackpot_entity
+label: 'Jackpot Category'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      jackpot_game_category: jackpot_game_category
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
