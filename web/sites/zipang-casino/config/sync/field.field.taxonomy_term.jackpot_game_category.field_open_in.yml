@@ -7,6 +7,8 @@ dependencies:
     - taxonomy.vocabulary.jackpot_game_category
   module:
     - options
+_core:
+  default_config_hash: ik89lLdp90mTMBhM_cwZ4dYzvzluPYT4fUvD5qi7zLs
 id: taxonomy_term.jackpot_game_category.field_open_in
 field_name: field_open_in
 entity_type: taxonomy_term

@@ -5,7 +5,7 @@ dependencies:
   config:
     - field.field.zipang_jackpot_entity.zipang_jackpot_entity.field_enable_jackpot_game
     - field.field.zipang_jackpot_entity.zipang_jackpot_entity.field_hits_benchmark
-    - field.field.zipang_jackpot_entity.zipang_jackpot_entity.field_jackpot_catergory
+    - field.field.zipang_jackpot_entity.zipang_jackpot_entity.field_jackpot_category
     - field.field.zipang_jackpot_entity.zipang_jackpot_entity.field_jackpot_game_code
     - field.field.zipang_jackpot_entity.zipang_jackpot_entity.field_jackpot_game_thumbnail
     - field.field.zipang_jackpot_entity.zipang_jackpot_entity.field_jackpot_game_title
@@ -36,7 +36,7 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_jackpot_catergory:
+  field_jackpot_category:
     weight: 4
     settings: {  }
     third_party_settings: {  }

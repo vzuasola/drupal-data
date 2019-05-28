@@ -5,6 +5,8 @@ dependencies:
   module:
     - metatag
     - taxonomy
+_core:
+  default_config_hash: _T5-UIjaVeCaff6WNKrzO8Of4_SN6-f3vxaejcMWZl4
 id: taxonomy_term.field_meta_tag
 field_name: field_meta_tag
 entity_type: taxonomy_term

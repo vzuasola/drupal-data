@@ -11,6 +11,8 @@ third_party_settings:
     enabled: true
     bundle_settings:
       untranslatable_fields_hide: '0'
+_core:
+  default_config_hash: LUPiuA20_AN4TeQbdN4g7rL-do-XlY5fQw8bkbxuNZY
 id: taxonomy_term.jackpot_game_category
 target_entity_type_id: taxonomy_term
 target_bundle: jackpot_game_category

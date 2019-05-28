@@ -7,6 +7,8 @@ dependencies:
     - taxonomy.vocabulary.jackpot_game_category
   module:
     - metatag
+_core:
+  default_config_hash: 4jOjXFCV-4ATd4eGBWJ3Y-vasLvW03GP_Kk_9_3yJqg
 id: taxonomy_term.jackpot_game_category.field_meta_tag
 field_name: field_meta_tag
 entity_type: taxonomy_term

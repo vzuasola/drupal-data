@@ -5,6 +5,8 @@ dependencies:
   config:
     - field.storage.taxonomy_term.field_jackpot_summary_text
     - taxonomy.vocabulary.jackpot_game_category
+_core:
+  default_config_hash: mE9ptpMfU4nrPU3Yy0GhquRdo2o7iEtJX-9lWQpugdQ
 id: taxonomy_term.jackpot_game_category.field_jackpot_summary_text
 field_name: field_jackpot_summary_text
 entity_type: taxonomy_term
