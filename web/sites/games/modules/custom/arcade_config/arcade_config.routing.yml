@@ -5,3 +5,11 @@ arcade_config.admin_settings:
     _title: 'Arcade Configuration'
   requirements:
     _permission: 'administer site configuration'
+
+arcade_config.manage_category:
+  path: '/admin/arcade/categories'
+  defaults:
+    _controller: '\Drupal\arcade_config\Controller\ArcadeController::placeholder'
+    _title: 'Arcade Game Categories'
+  requirements:
+    _permission: 'administer site configuration'
