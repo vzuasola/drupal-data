@@ -20,6 +20,7 @@ dependencies:
     - field.field.registration_theme_entity.registration_theme_entity.field_registration_button_font_c
     - field.field.registration_theme_entity.registration_theme_entity.field_registration_button_form_c
     - field.field.registration_theme_entity.registration_theme_entity.field_registration_button_form_h
+    - field.field.registration_theme_entity.registration_theme_entity.field_registration_form
     - field.field.registration_theme_entity.registration_theme_entity.field_registration_theme_code
     - field.field.registration_theme_entity.registration_theme_entity.field_separator_color
     - field.field.registration_theme_entity.registration_theme_entity.field_steptwo_banner
@@ -45,7 +46,7 @@ third_party_settings:
       children:
         - field_login_destination_url
       parent_name: ''
-      weight: 4
+      weight: 5
       format_type: details
       format_settings:
         id: ''
@@ -66,7 +67,7 @@ third_party_settings:
         - field_registration_button_form_h
         - field_registration_button_form_c
       parent_name: ''
-      weight: 5
+      weight: 6
       format_type: details
       format_settings:
         id: ''
@@ -79,7 +80,7 @@ third_party_settings:
         - field_banner_highlight
         - field_banner_font_color
       parent_name: ''
-      weight: 7
+      weight: 8
       format_type: details
       format_settings:
         id: ''
@@ -93,7 +94,7 @@ third_party_settings:
         - field_success_message_color
         - field_steptwo_content
       parent_name: ''
-      weight: 8
+      weight: 9
       format_type: details
       format_settings:
         id: ''
@@ -106,7 +107,7 @@ third_party_settings:
         - field_enable_two_columns
         - field_content_two_columns
       parent_name: ''
-      weight: 6
+      weight: 7
       format_type: details
       format_settings:
         id: ''
@@ -119,7 +120,7 @@ third_party_settings:
         - field_tripwire_toggle
         - field_tripwire_content
       parent_name: ''
-      weight: 20
+      weight: 12
       format_type: details
       format_settings:
         id: ''
@@ -135,7 +136,7 @@ third_party_settings:
         - field_background_image
         - field_theme_alternative_text
       parent_name: ''
-      weight: 20
+      weight: 13
       format_type: details
       format_settings:
         id: ''
@@ -242,22 +243,28 @@ content:
     type: link_default
     region: content
   field_registration_button_font_c:
-    weight: 12
+    weight: 13
     settings: {  }
     third_party_settings: {  }
     type: color_field_widget_html5
     region: content
   field_registration_button_form_c:
-    weight: 14
+    weight: 15
     settings: {  }
     third_party_settings: {  }
     type: color_field_widget_html5
     region: content
   field_registration_button_form_h:
-    weight: 13
+    weight: 14
     settings: {  }
     third_party_settings: {  }
     type: color_field_widget_html5
+    region: content
+  field_registration_form:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   field_registration_theme_code:
     weight: 1
@@ -268,7 +275,7 @@ content:
     type: string_textfield
     region: content
   field_separator_color:
-    weight: 11
+    weight: 12
     settings: {  }
     third_party_settings: {  }
     type: color_field_widget_html5
@@ -344,7 +351,7 @@ content:
     region: content
   langcode:
     type: language_select
-    weight: 9
+    weight: 10
     region: content
     settings:
       include_locked: true
@@ -358,7 +365,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 10
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
