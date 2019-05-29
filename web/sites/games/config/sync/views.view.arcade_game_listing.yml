@@ -165,16 +165,19 @@ display:
           value:
             '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
           group: 1
-          exposed: true
+          exposed: false
           expose:
+            operator_id: langcode_op
+            label: 'Translation language'
+            description: null
             use_operator: false
             operator: langcode_op
             identifier: langcode
-            label: 'Translation language'
-            description: null
+            required: false
             remember: false
             multiple: false
-            required: false
+            remember_roles:
+              authenticated: authenticated
             reduce: false
           is_grouped: false
           group_info:
@@ -231,7 +234,6 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - request_format
-        - url
         - url.query_args
         - 'user.node_grants:view'
         - user.permissions
@@ -623,16 +625,43 @@ display:
         menu_name: main
       filters:
         status:
-          value: '1'
+          id: status
           table: node_field_data
           field: status
-          plugin_id: boolean
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
           entity_type: node
           entity_field: status
-          id: status
-          expose:
-            operator: ''
-          group: 1
+          plugin_id: boolean
         type:
           id: type
           table: node_field_data
@@ -642,6 +671,7 @@ display:
           entity_type: node
           entity_field: type
           plugin_id: bundle
+          group: 1
         langcode:
           id: langcode
           table: node_field_data
@@ -749,26 +779,13 @@ display:
       tags:
         - 'config:field.storage.node.field_arc_game_thumbnail_image'
         - 'config:field.storage.node.field_game_thumbnail_size'
-  rest_export_1:
+  rest_export_2:
     display_plugin: rest_export
-    id: rest_export_1
-    display_title: 'REST export'
-    position: 1
+    id: rest_export_2
+    display_title: 'REST export 2'
+    position: 3
     display_options:
       display_extenders: {  }
-      path: api/arcade_games_by_category
-      pager:
-        type: none
-        options:
-          offset: 0
-      style:
-        type: node_list_serializer
-        options:
-          uses_fields: false
-          formats: {  }
-      row:
-        type: data_entity
-        options: {  }
       filters:
         status:
           value: '1'
@@ -830,71 +847,37 @@ display:
           entity_type: node
           entity_field: langcode
           plugin_id: language
-        field_arcade_category_target_id:
-          id: field_arcade_category_target_id
-          table: node__field_arcade_category
-          field: field_arcade_category_target_id
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: or
-          value: {  }
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_arcade_category_target_id_op
-            label: 'Category (field_arcade_category)'
-            description: ''
-            use_operator: false
-            operator: field_arcade_category_target_id_op
-            identifier: category
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              e: '0'
-              site_admin: '0'
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          type: select
-          limit: true
-          vid: arcade_game_category
-          hierarchy: false
-          error_message: true
-          plugin_id: taxonomy_index_tid
       defaults:
         filters: false
         filter_groups: false
         access: false
+        sorts: false
+        relationships: false
       filter_groups:
         operator: AND
         groups:
           1: AND
+      pager:
+        type: some
+        options:
+          items_per_page: 100
+          offset: 0
       access:
         type: none
         options: {  }
+      path: api/arcade_games
+      sorts: {  }
+      style:
+        type: node_list_serializer
+        options:
+          uses_fields: false
+          formats: {  }
+      relationships: {  }
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
         - request_format
-        - url
-        - user
         - 'user.node_grants:view'
       tags: {  }
