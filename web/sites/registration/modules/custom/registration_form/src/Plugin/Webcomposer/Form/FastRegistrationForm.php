@@ -156,33 +156,6 @@ class FastRegistrationForm extends WebcomposerFormBase implements WebcomposerFor
         ],
       ],
 
-      'birthdate' => [
-        'name' => 'Date of birth',
-        'type' => 'textfield',
-        'settings' => [
-          'label' => [
-            '#title' => 'Date of Birth Label',
-            '#type' => 'textfield',
-            '#description' => 'The Label for the Birthdate field',
-          ],
-          'placeholder' => [
-            '#title' => 'Birthdate placeholder label',
-            '#type' => 'textfield',
-            '#description' => 'label for Birthdate field placeholder',
-          ],
-          'date-format' => [
-            '#title' => 'Birthdate format',
-            '#type' => 'textfield',
-            '#description' => 'Date Format for Birthdate',
-          ],
-          'annotation' => [
-            '#title' => 'Birthdate Annotation text',
-            '#type' => 'textarea',
-            '#description' => 'field annotation that will be displayed on focus',
-          ],
-        ],
-      ],
-
       'currency' => [
         'name' => 'Currency',
         'type' => 'select',
@@ -256,7 +229,7 @@ class FastRegistrationForm extends WebcomposerFormBase implements WebcomposerFor
         ],
       ],
 
-      'breakline_3' => [
+      'breakline' => [
         'name' => 'Break Line Markup',
         'type' => 'markup',
         'settings' => [
