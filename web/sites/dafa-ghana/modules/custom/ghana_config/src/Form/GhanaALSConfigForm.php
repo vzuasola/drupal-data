@@ -100,7 +100,7 @@ class GhanaALSConfigForm extends FormBase {
 
     $form['footer_configuration_setting'] = [
       '#type' => 'details',
-      '#title' => t('Footer Setting'),
+      '#title' => $this->t('Footer Setting'),
       '#group' => 'advanced',
     ];
 
