@@ -22,6 +22,7 @@ use Drupal\Core\Form\FormStateInterface;
  *   },
  * )
  */
+
 class GhanaALSConfigForm extends FormBase {
   /**
    * {@inheritdoc}
