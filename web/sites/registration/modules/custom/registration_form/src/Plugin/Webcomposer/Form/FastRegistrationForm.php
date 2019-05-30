@@ -237,7 +237,20 @@ class FastRegistrationForm extends WebcomposerFormBase implements WebcomposerFor
             '#title' => 'Horizontal Line Markup',
             '#type' => 'textarea',
             '#description' => 'A Markup text breakline for registration form',
-            '#default_value' => '<hr>',
+            '#default_value' => '',
+          ],
+        ],
+      ],
+
+      'accept_terms' => [
+        'name' => 'Accept Terms Markup',
+        'type' => 'markup',
+        'settings' => [
+          'markup' => [
+            '#title' => 'Accept Terms Text',
+            '#type' => 'textarea',
+            '#description' => 'A Markup text for accept terms and conditions beside the submit button',
+            '#default_value' => 'I am at least 18 years old and have read and accept the Terms and Condition',
           ],
         ],
       ],
