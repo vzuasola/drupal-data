@@ -1,5 +1,0 @@
-games_config.games_loading_configuration:
-  title: 'Games Page Loading Custom Configuration'
-  base_route_name: games_page_loading.games_loading_configuration
-  names:
-    - 'games_config.games_loading_configuration'

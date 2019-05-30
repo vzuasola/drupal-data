@@ -4,12 +4,6 @@ webcomposer_announcements.admin_settings:
   parent: system.admin_config
   route_name: webcomposer_announcements.admin_settings
 
-webcomposer_announcements.announcements_configuration:
-  title: 'Announcements Custom Configuration'
-  route_name: webcomposer_announcements.announcements_configuration
-  description: 'Configure the announcements custom configuration'
-  parent: webcomposer_announcements.admin_settings
-
 # Announcement menu items definition
 entity.announcement_entity.collection:
   title: 'Announcement List'
