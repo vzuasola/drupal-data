@@ -92,7 +92,10 @@ class ProductTabs extends ResourceBase {
    */
   public function get() {
     $build = new CacheableMetadata();
-    $build->setCacheTags(['taxonomy_term_list']);
+    $build->setCacheTags([
+      'taxonomy_term_list',
+      'promotion_node_list',
+    ]);
     $build->setCacheContexts(['url.query_args']);
 
     $state = $this->currentRequest->query->get('state');
@@ -184,16 +187,11 @@ class ProductTabs extends ResourceBase {
             }
           }
 
-          if ($segments) {
-            $urlsegments = urldecode($segments);
-            $decodedsegments = json_decode($urlsegments);
-          }
-
           // get a separate count for the All featured tab
           if ($productId == 'all') {
-            $count = $this->getAllFeaturedPromotionCount($langCode, $state, $decodedsegments);
+            $count = $this->getAllFeaturedPromotionCount($langCode, $state, $segments);
           } else {
-            $count = $this->getPromotionCount($key, $langCode, $state, $decodedsegments);
+            $count = $this->getPromotionCount($key, $langCode, $state, $segments);
           }
 
           $productAttribute = ['class'=> $class , 'target' => $target, 'tag' => $tag];
@@ -228,23 +226,21 @@ class ProductTabs extends ResourceBase {
     $query->condition('field_product.target_id', $productId, NULL, $langCode);
     $query->condition('field_hide_promotion.value', 0, NULL, $langCode);
 
-    $tmpqry = $query->orConditionGroup();
-
     if (isset($segments)) {
-      foreach ($segments as $value) {
-        $tmpqry->condition('field_segment_name.value', $value, NULL, $langCode);
-      }
+      $segmentsGroup = $query
+        ->orConditionGroup()
+        ->condition('field_segment_name.value', $segments, 'IN', $langCode)
+        ->condition('field_segment_name.value', NULL, 'IS NULL', $langCode);
+      $query->condition($segmentsGroup);
+    } else {
+      $query->condition('field_segment_name.value', NULL, 'IS NULL', $langCode);
     }
 
-    $tmpqry->notExists('field_segment_name.value');
-
-    $query->condition($tmpqry);
-
-    $group = $query
+    $stateGroup = $query
       ->orConditionGroup()
       ->condition('field_log_in_state.value', 2, NULL, $langCode)
       ->condition('field_log_in_state.value', $state, NULL, $langCode);
-    $query->condition($group);
+    $query->condition($stateGroup);
     $query->count();
     $result = $query->execute();
 
@@ -266,17 +262,15 @@ class ProductTabs extends ResourceBase {
     $query->condition('field_hide_promotion.value', 0, NULL, $langCode);
     $query->condition('field_mark_as_featured.value', 1, NULL, $langCode);
 
-    $tmpqry = $query->orConditionGroup();
-
     if (isset($segments)) {
-      foreach ($segments as $value) {
-        $tmpqry->condition('field_segment_name.value', $value, NULL, $langCode);
-      }
+      $segmentsGroup = $query
+        ->orConditionGroup()
+        ->condition('field_segment_name.value', $segments, 'IN', $langCode)
+        ->condition('field_segment_name.value', NULL, 'IS NULL', $langCode);
+      $query->condition($segmentsGroup);
+    } else {
+      $query->condition('field_segment_name.value', NULL, 'IS NULL', $langCode);
     }
-
-    $tmpqry->notExists('field_segment_name.value');
-
-    $query->condition($tmpqry);
 
     $group = $query
       ->orConditionGroup()
