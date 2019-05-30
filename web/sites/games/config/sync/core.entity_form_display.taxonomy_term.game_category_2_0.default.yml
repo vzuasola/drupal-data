@@ -7,6 +7,7 @@ dependencies:
     - field.field.taxonomy_term.game_category_2_0.field_v2_game_category_disable
     - field.field.taxonomy_term.game_category_2_0.field_v2_game_category_hicon
     - field.field.taxonomy_term.game_category_2_0.field_v2_game_category_icon
+    - field.field.taxonomy_term.game_category_2_0.field_v2_game_category_new
     - field.field.taxonomy_term.game_category_2_0.field_v2_game_category_tooltip
     - field.field.taxonomy_term.game_category_2_0.field_v2_show_tooltip
     - image.style.thumbnail
@@ -58,7 +59,7 @@ content:
     type: string_textfield
     region: content
   field_v2_game_category_disable:
-    weight: 5
+    weight: 6
     settings:
       display_label: true
     third_party_settings: {  }
@@ -79,6 +80,13 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+    region: content
+  field_v2_game_category_new:
+    weight: 5
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
     region: content
   field_v2_game_category_tooltip:
     weight: 9
