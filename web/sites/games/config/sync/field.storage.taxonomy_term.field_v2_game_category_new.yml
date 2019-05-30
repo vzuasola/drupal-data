@@ -1,0 +1,18 @@
+uuid: 0e20aa89-6538-4534-a963-817d8854814c
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.field_v2_game_category_new
+field_name: field_v2_game_category_new
+entity_type: taxonomy_term
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
