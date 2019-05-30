@@ -97,8 +97,9 @@ class ProductTabs extends ResourceBase {
 
     $state = $this->currentRequest->query->get('state');
     $type = $this->currentRequest->query->get('type');
+    $segments = $this->currentRequest->query->get('segments');
 
-    $data = $this->getProductTabs($state, $type);
+    $data = $this->getProductTabs($state, $type, $segments);
 
     if (!$data) {
       $errorMessage = t('No Product tabs are configured. Please configure the products and translation in product taxonomy.');
@@ -116,7 +117,7 @@ class ProductTabs extends ResourceBase {
    *
    * @return <json> The product tabs.
    */
-  private function getProductTabs($state, $type) {
+  private function getProductTabs($state, $type, $segments) {
     // You must to implement the logic of your REST Resource here.
     $query = \Drupal::entityQuery('taxonomy_term');
     $query->condition('vid', "products");
@@ -183,11 +184,16 @@ class ProductTabs extends ResourceBase {
             }
           }
 
+          if ($segments) {
+            $urlsegments = urldecode($segments);
+            $decodedsegments = json_decode($urlsegments);
+          }
+
           // get a separate count for the All featured tab
           if ($productId == 'all') {
-            $count = $this->getAllFeaturedPromotionCount($langCode, $state);
+            $count = $this->getAllFeaturedPromotionCount($langCode, $state, $decodedsegments);
           } else {
-            $count = $this->getPromotionCount($key, $langCode, $state);
+            $count = $this->getPromotionCount($key, $langCode, $state, $decodedsegments);
           }
 
           $productAttribute = ['class'=> $class , 'target' => $target, 'tag' => $tag];
@@ -215,13 +221,25 @@ class ProductTabs extends ResourceBase {
    *
    * @return <string> The product promotion count.
    */
-  private function getPromotionCount($productId, $langCode, $state) {
-
+  private function getPromotionCount($productId, $langCode, $state, $segments) {
     $query = \Drupal::entityQuery('node');
     $query->condition('type', "promotion", NULL, $langCode);
     $query->condition('status', 1, NULL, $langCode);
     $query->condition('field_product.target_id', $productId, NULL, $langCode);
     $query->condition('field_hide_promotion.value', 0, NULL, $langCode);
+
+    $tmpqry = $query->orConditionGroup();
+
+    if (isset($segments)) {
+      foreach ($segments as $value) {
+        $tmpqry->condition('field_segment_name.value', $value, NULL, $langCode);
+      }
+    }
+
+    $tmpqry->notExists('field_segment_name.value');
+
+    $query->condition($tmpqry);
+
     $group = $query
       ->orConditionGroup()
       ->condition('field_log_in_state.value', 2, NULL, $langCode)
@@ -240,13 +258,26 @@ class ProductTabs extends ResourceBase {
    *
    * @return <string> The product promotion count.
    */
-  private function getAllFeaturedPromotionCount($langCode, $state) {
+  private function getAllFeaturedPromotionCount($langCode, $state, $segments) {
 
     $query = \Drupal::entityQuery('node');
     $query->condition('type', "promotion", NULL, $langCode);
     $query->condition('status', 1, NULL, $langCode);
     $query->condition('field_hide_promotion.value', 0, NULL, $langCode);
     $query->condition('field_mark_as_featured.value', 1, NULL, $langCode);
+
+    $tmpqry = $query->orConditionGroup();
+
+    if (isset($segments)) {
+      foreach ($segments as $value) {
+        $tmpqry->condition('field_segment_name.value', $value, NULL, $langCode);
+      }
+    }
+
+    $tmpqry->notExists('field_segment_name.value');
+
+    $query->condition($tmpqry);
+
     $group = $query
       ->orConditionGroup()
       ->condition('field_log_in_state.value', 2, NULL, $langCode)
