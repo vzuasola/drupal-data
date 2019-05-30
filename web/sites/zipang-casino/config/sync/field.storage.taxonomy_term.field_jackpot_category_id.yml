@@ -1,0 +1,23 @@
+uuid: 0865e318-e872-4124-841e-84a387962f80
+langcode: ja
+status: true
+dependencies:
+  module:
+    - taxonomy
+_core:
+  default_config_hash: lQaVIl8tQNZOpDNO2H9xFvJoF4Te_wzXDUJX0viFbi8
+id: taxonomy_term.field_jackpot_category_id
+field_name: field_jackpot_category_id
+entity_type: taxonomy_term
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

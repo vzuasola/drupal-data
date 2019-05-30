@@ -1,0 +1,21 @@
+uuid: 1f7b2617-961d-4368-8034-5912d61b2a1a
+langcode: ja
+status: true
+dependencies:
+  module:
+    - zipang_jackpot
+id: zipang_jackpot_entity.field_minimum_benchmark
+field_name: field_minimum_benchmark
+entity_type: zipang_jackpot_entity
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

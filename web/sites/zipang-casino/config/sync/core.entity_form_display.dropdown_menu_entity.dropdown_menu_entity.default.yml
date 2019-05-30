@@ -3,8 +3,10 @@ langcode: ja
 status: true
 dependencies:
   config:
+    - field.field.dropdown_menu_entity.dropdown_menu_entity.field_dropdown_menu_class
     - field.field.dropdown_menu_entity.dropdown_menu_entity.field_dropdown_menu_description
     - field.field.dropdown_menu_entity.dropdown_menu_entity.field_dropdown_menu_enabled
+    - field.field.dropdown_menu_entity.dropdown_menu_entity.field_dropdown_menu_id
     - field.field.dropdown_menu_entity.dropdown_menu_entity.field_dropdown_menu_link
     - field.field.dropdown_menu_entity.dropdown_menu_entity.field_dropdown_menu_link_title
     - field.field.dropdown_menu_entity.dropdown_menu_entity.field_dropdown_menu_mobile_opt
@@ -19,6 +21,14 @@ targetEntityType: dropdown_menu_entity
 bundle: dropdown_menu_entity
 mode: default
 content:
+  field_dropdown_menu_class:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_dropdown_menu_description:
     weight: 3
     settings:
@@ -33,6 +43,14 @@ content:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
+    region: content
+  field_dropdown_menu_id:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
   field_dropdown_menu_link:
     weight: 1
@@ -51,14 +69,14 @@ content:
     type: string_textfield
     region: content
   field_dropdown_menu_mobile_opt:
-    weight: 4
+    weight: 6
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_dropdown_submenu_items:
     type: entity_reference_paragraphs
-    weight: 5
+    weight: 7
     region: content
     settings:
       title: Paragraph

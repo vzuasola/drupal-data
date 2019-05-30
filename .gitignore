@@ -19,6 +19,7 @@ console/log
 
 # Ignore settings files
 web/sites/*/database.local.php
+sites.override.php
 
 # files created by the build process
 *.pyc

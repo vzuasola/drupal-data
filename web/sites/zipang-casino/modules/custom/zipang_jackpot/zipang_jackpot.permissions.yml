@@ -1,0 +1,22 @@
+add zipang jackpot entity entities:
+  title: 'Create new Zipang jackpot entity entities'
+
+administer zipang jackpot entity entities:
+  title: 'Administer Zipang jackpot entity entities'
+  description: 'Allow to access the administration form to configure Zipang jackpot entity entities.'
+  restrict access: true
+
+delete zipang jackpot entity entities:
+  title: 'Delete Zipang jackpot entity entities'
+
+edit zipang jackpot entity entities:
+  title: 'Edit Zipang jackpot entity entities'
+
+access zipang jackpot entity overview:
+  title: 'Access the Zipang jackpot entity overview page'
+
+view published zipang jackpot entity entities:
+  title: 'View published Zipang jackpot entity entities'
+
+view unpublished zipang jackpot entity entities:
+  title: 'View unpublished Zipang jackpot entity entities'

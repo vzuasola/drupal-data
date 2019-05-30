@@ -1,0 +1,106 @@
+uuid: a605915c-f10e-4860-b9dd-753450a52475
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.field.zipang_jackpot_entity.zipang_jackpot_entity.field_enable_jackpot_game
+    - field.field.zipang_jackpot_entity.zipang_jackpot_entity.field_hits_benchmark
+    - field.field.zipang_jackpot_entity.zipang_jackpot_entity.field_jackpot_category
+    - field.field.zipang_jackpot_entity.zipang_jackpot_entity.field_jackpot_game_code
+    - field.field.zipang_jackpot_entity.zipang_jackpot_entity.field_jackpot_game_thumbnail
+    - field.field.zipang_jackpot_entity.zipang_jackpot_entity.field_jackpot_game_title
+    - field.field.zipang_jackpot_entity.zipang_jackpot_entity.field_minimum_benchmark
+    - image.style.thumbnail
+  module:
+    - image
+    - zipang_jackpot
+_core:
+  default_config_hash: fVYj2bZ-B-vi54v6E9RH8iJdt2B-vf5wG1VwP7xgMrE
+id: zipang_jackpot_entity.zipang_jackpot_entity.default
+targetEntityType: zipang_jackpot_entity
+bundle: zipang_jackpot_entity
+mode: default
+content:
+  field_enable_jackpot_game:
+    weight: 3
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_hits_benchmark:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_jackpot_category:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_jackpot_game_code:
+    weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_jackpot_game_thumbnail:
+    weight: 7
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_jackpot_game_title:
+    weight: 9
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_minimum_benchmark:
+    weight: 10
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  user_id:
+    type: entity_reference_autocomplete
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+hidden: {  }
