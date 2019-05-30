@@ -1,0 +1,31 @@
+<?php
+
+/**
+ * Implements hook_uninstall
+ */
+function zipang_faq_uninstall() {
+  $keys = [
+    'core.base_field_override.taxonomy_term.faq_category.changed',
+    'core.base_field_override.taxonomy_term.faq_category.description',
+    'core.base_field_override.taxonomy_term.faq_category.name',
+    'core.base_field_override.taxonomy_term.faq_category.path',
+    'core.base_field_override.zipang_f_a_q_entity.zipang_f_a_q_entity.user_id',
+    'core.entity_form_display.zipang_f_a_q_entity.zipang_f_a_q_entity.default',
+    'core.entity_view_display.zipang_f_a_q_entity.zipang_f_a_q_entity.default',
+    'field.field.zipang_f_a_q_entity.zipang_f_a_q_entity.field_answers',
+    'field.field.zipang_f_a_q_entity.zipang_f_a_q_entity.field_faq_category',
+    'field.field.zipang_f_a_q_entity.zipang_f_a_q_entity.field_question',
+    'field.storage.zipang_f_a_q_entity.field_answers',
+    'field.storage.zipang_f_a_q_entity.field_faq_category',
+    'field.storage.zipang_f_a_q_entity.field_question',
+    'language.content_settings.taxonomy_term.faq_category',
+    'language.content_settings.zipang_f_a_q_entity.zipang_f_a_q_entity',
+    'taxonomy.vocabulary.faq_category',
+    'views.view.faq_category',
+    'views.view.zipang_faq',
+  ];
+
+  foreach ($keys as $key) {
+    \Drupal::configFactory()->getEditable($key)->delete();
+  }
+}
