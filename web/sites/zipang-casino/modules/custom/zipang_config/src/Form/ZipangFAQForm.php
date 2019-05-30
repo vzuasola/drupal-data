@@ -23,7 +23,7 @@ use Drupal\Core\Datetime\DrupalDateTime;
  *   },
  * )
  */
-class zipangFAQForm extends FormBase {
+class ZipangFAQForm extends FormBase {
 
   /**
    * {@inheritdoc}
