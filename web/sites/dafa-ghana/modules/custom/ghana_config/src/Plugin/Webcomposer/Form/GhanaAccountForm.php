@@ -47,7 +47,7 @@ class GhanaAccountForm extends WebcomposerFormBase implements WebcomposerFormInt
             '#title' => 'Account Details Title Markup',
             '#type' => 'textarea',
             '#description' => 'A Markup text for the Account details title.',
-            '#default_value' => 'Account Details',
+            '#default_value' => 'Account Details<hr>',
           ],
         ],
       ],
@@ -226,19 +226,6 @@ class GhanaAccountForm extends WebcomposerFormBase implements WebcomposerFormInt
         ],
       ],
 
-      'breakline_1' => [
-        'name' => 'Break Line Markup',
-        'type' => 'markup',
-        'settings' => [
-          'markup' => [
-            '#title' => 'Horizontal Line Markup',
-            '#type' => 'textarea',
-            '#description' => 'A Markup text breakline for Security Question form',
-            '#default_value' => '<hr>',
-          ],
-        ],
-      ],
-
       'security_questions_title' => [
         'name' => 'Security Questions Title Markup',
         'type' => 'markup',
@@ -247,7 +234,7 @@ class GhanaAccountForm extends WebcomposerFormBase implements WebcomposerFormInt
             '#title' => 'Security Questions Title Markup',
             '#type' => 'textarea',
             '#description' => 'A Markup text for the Security questions title.',
-            '#default_value' => 'Security Questions',
+            '#default_value' => 'Security Questions<hr>',
           ],
         ],
       ],
@@ -279,9 +266,10 @@ class GhanaAccountForm extends WebcomposerFormBase implements WebcomposerFormInt
             '#type' => 'textarea',
             '#description' => 'Provide a pipe separated key value pair. <br> <small>Example key|My Value</small>',
             '#default_value' => implode(PHP_EOL, [
-              '1|What is your mother’s maiden name?',
-              '2|What is your father’s first name?',
-              '3|What is the model of your first car?',
+              '1|What is your father’s first name?',
+              '2|Place of Birth?',
+              '3|Favorite celebrity?',
+              '4|Favorite sport team?',
             ]),
           ],
         ],
@@ -338,9 +326,10 @@ class GhanaAccountForm extends WebcomposerFormBase implements WebcomposerFormInt
             '#type' => 'textarea',
             '#description' => 'Provide a pipe separated key value pair. <br> <small>Example key|My Value</small>',
             '#default_value' => implode(PHP_EOL, [
-              '1|What is your mother’s maiden name?',
-              '2|What is your father’s first name?',
-              '3|What is the model of your first car?',
+              '1|What is your father’s first name?',
+              '2|Place of Birth?',
+              '3|Favorite celebrity?',
+              '4|Favorite sport team?',
             ]),
           ],
         ],
