@@ -11,7 +11,7 @@ use Drupal\Core\Form\FormStateInterface;
  *   id = "icore_playtech_provider_form",
  *   route = {
  *     "title" = "ICore Playtech Provider Configuration",
- *     "path" = "/admin/config/webcomposer/games/icore/playtech",
+ *     "path" = "/admin/config/webcomposer/games/icore-playtech",
  *   },
  *   menu = {
  *     "title" = "ICore Playtech Provider Configuration",
@@ -49,13 +49,13 @@ class ICorePlaytechProviderConfiguration extends FormBase {
     );
 
     foreach (self::PLAYTECH_CASINO as $key => $value) {
-      $this->gpiContentTab($form[$key], $key, $value);
+      $this->contentTab($form[$key], $key, $value);
     }
 
     return $form;
   }
 
-  private function gpiContentTab(&$form, $key, $value) {
+  private function contentTab(&$form, $key, $value) {
     $form = array(
       '#type' => 'details',
       '#title' => $this->t($value),
@@ -68,7 +68,6 @@ class ICorePlaytechProviderConfiguration extends FormBase {
       '#title' => $this->t('Supported Currencies'),
       '#description' => $this->t("Currency mapping for " . $value),
       '#default_value' => $this->get($key . '_currency'),
-      '#translatable' => TRUE,
       '#required' => false,
     ];
 
@@ -77,7 +76,6 @@ class ICorePlaytechProviderConfiguration extends FormBase {
       '#title' => $this->t('Unsupported Countries'),
       '#description' => $this->t("Define the unsupported countries for " . $value),
       '#default_value' => $this->get($key . '_country'),
-      '#translatable' => TRUE,
       '#required' => false,
     ];
 
@@ -86,7 +84,6 @@ class ICorePlaytechProviderConfiguration extends FormBase {
       '#title' => $this->t('Language Mapping'),
       '#description' => $this->t("Language mapping for " . $value),
       '#default_value' => $this->get($key . '_language_mapping'),
-      '#translatable' => TRUE,
       '#required' => false,
     ];
 
@@ -113,10 +110,7 @@ class ICorePlaytechProviderConfiguration extends FormBase {
          - clientUrl_casino<br/>
       "),
       '#default_value' => $this->get($key . '_iapiconf_override'),
-      '#translatable' => TRUE,
       '#required' => false,
     ];
-
   }
-
 }

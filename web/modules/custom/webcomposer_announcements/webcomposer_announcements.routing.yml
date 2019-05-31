@@ -5,11 +5,3 @@ webcomposer_announcements.admin_settings:
     _title: 'Webcomposer Announcements'
   requirements:
     _permission: 'administer site configuration'
-    
-webcomposer_announcements.announcements_configuration:
-  path: 'admin/config/webcomposer/announcements/config'
-  defaults:
-    _form: 'Drupal\webcomposer_announcements\Form\AnnouncementConfigurationForm'
-    _title: 'Web Composer Announcement Configuration'
-  requirements:
-    _permission: 'administer site configuration'

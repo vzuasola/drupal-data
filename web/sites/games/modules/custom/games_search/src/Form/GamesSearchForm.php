@@ -2,11 +2,27 @@
 
 namespace Drupal\games_search\Form;
 
-use Drupal\Core\Form\ConfigFormBase;
+use Drupal\webcomposer_config_schema\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\file\Entity\File;
 
-class GamesSearchForm extends ConfigFormBase {
+/**
+ * Game Search Form
+ *
+ * @WebcomposerConfigPlugin(
+ *   id = "game_search_config_form",
+ *   route = {
+ *     "title" = "Game Search Configuration",
+ *     "path" = "/admin/games/search-config",
+ *   },
+ *   menu = {
+ *     "title" = "Game Search Configuration",
+ *     "description" = "Configuration for game search UI",
+ *     "parent" = "games_config.admin_settings",
+ *     "weight" = 10
+ *   },
+ * )
+ */
+class GamesSearchForm extends FormBase {
   /**
    * {@inheritdoc}
    */
@@ -17,19 +33,10 @@ class GamesSearchForm extends ConfigFormBase {
   /**
    * {@inheritdoc}
    */
-  public function getFormId() {
-    return 'games_search.search_configuration_form';
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  public function buildForm(array $form, FormStateInterface $form_state) {
-    $config = $this->config('games_config.search_configuration');
-
+  public function form(array $form, FormStateInterface $form_state) {
     $form['search_configuration_tab'] = array(
       '#type' => 'vertical_tabs',
-      '#title' => t('Settings'),
+      '#title' => $this->t('Settings'),
     );
 
     $form['recommendations'] = array(
@@ -39,7 +46,7 @@ class GamesSearchForm extends ConfigFormBase {
       '#group' => 'search_configuration_tab'
     );
 
-    $recommendation_message = $config->get('recommendation_message');
+    $recommendation_message = $this->get('recommendation_message');
     $form['recommendations']['recommendation_message'] = array(
       '#type' => 'text_format',
       '#title' => $this->t('Recommendation Message'),
@@ -47,9 +54,10 @@ class GamesSearchForm extends ConfigFormBase {
       '#default_value' => $recommendation_message['value'],
       '#format' => $recommendation_message['format'],
       '#required' => TRUE,
+      '#translatable' => true
     );
 
-    $recommendation_message_negative = $config->get('recommendation_message_negative');
+    $recommendation_message_negative = $this->get('recommendation_message_negative');
     $form['recommendations']['recommendation_message_negative'] = array(
       '#type' => 'text_format',
       '#title' => $this->t('Recommendation Not Set Message'),
@@ -57,6 +65,7 @@ class GamesSearchForm extends ConfigFormBase {
       '#default_value' => $recommendation_message_negative['value'],
       '#format' => $recommendation_message_negative['format'],
       '#required' => TRUE,
+      '#translatable' => true
     );
 
     $form['search'] = array(
@@ -70,10 +79,11 @@ class GamesSearchForm extends ConfigFormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Search Field Placeholder'),
       '#description' => $this->t('The text to display as placeholder for search field.'),
-      '#default_value' => $config->get('search_placeholder'),
+      '#default_value' => $this->get('search_placeholder'),
       '#required' => TRUE,
+      '#translatable' => true
     );
-    $search_result_message = $config->get('search_result_message');
+    $search_result_message = $this->get('search_result_message');
     $form['search']['search_result_message'] = array(
       '#type' => 'text_format',
       '#title' => $this->t('Search Result Message'),
@@ -81,6 +91,7 @@ class GamesSearchForm extends ConfigFormBase {
       '#default_value' => $search_result_message['value'],
       '#format' => $search_result_message['format'],
       '#required' => TRUE,
+      '#translatable' => true
     );
 
     $form['filter'] = array(
@@ -90,7 +101,7 @@ class GamesSearchForm extends ConfigFormBase {
       '#group' => 'search_configuration_tab'
     );
 
-    $filter_message = $config->get('filter_message');
+    $filter_message = $this->get('filter_message');
     $form['filter']['filter_message'] = array(
       '#type' => 'text_format',
       '#title' => $this->t('No Result on Filter (with Recommendation)'),
@@ -98,9 +109,10 @@ class GamesSearchForm extends ConfigFormBase {
       '#default_value' => $filter_message['value'],
       '#format' => $filter_message['format'],
       '#required' => TRUE,
+      '#translatable' => true
     );
 
-    $filter_message_negative = $config->get('filter_message_negative');
+    $filter_message_negative = $this->get('filter_message_negative');
     $form['filter']['filter_message_negative'] = array(
       '#type' => 'text_format',
       '#title' => $this->t('No Result on Filter (No Recommendation)'),
@@ -108,29 +120,9 @@ class GamesSearchForm extends ConfigFormBase {
       '#default_value' => $filter_message_negative['value'],
       '#format' => $filter_message_negative['format'],
       '#required' => TRUE,
+      '#translatable' => true
     );
 
-    return parent::buildForm($form, $form_state);
+    return $form;
   }
-
-  /**
-   * {@inheritdoc}
-   */
-  public function submitForm(array &$form, FormStateInterface $form_state) {
-    parent::submitForm($form, $form_state);
-
-    $keys = array(
-      'recommendation_message',
-      'recommendation_message_negative',
-      'filter_message',
-      'filter_message_negative',
-      'search_placeholder',
-      'search_result_message',
-    );
-
-    foreach ($keys as $key) {
-      $this->config('games_config.search_configuration')->set($key, $form_state->getValue($key))->save();
-    }
-  }
-
 }
