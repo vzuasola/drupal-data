@@ -7,7 +7,6 @@ dependencies:
     - field.field.node.games_2_0.field_preview_display_only
     - field.field.node.games_2_0.field_um_end
     - field.field.node.games_2_0.field_um_start
-    - field.field.node.games_2_0.field_under_maintenance
     - field.field.node.games_2_0.field_under_maintenance_message
     - field.field.node.games_2_0.field_v2_allribbon_configuration
     - field.field.node.games_2_0.field_v2_game_categories
@@ -71,16 +70,6 @@ content:
       timezone_override: ''
     third_party_settings: {  }
     type: datetime_default
-    region: content
-  field_under_maintenance:
-    weight: 118
-    label: above
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    type: boolean
     region: content
   field_under_maintenance_message:
     weight: 119
