@@ -82,6 +82,12 @@ settings:
     -
       value: microgaming
       label: Microgaming
+    -
+      value: owsports
+      label: OWsports
+    -
+      value: dafasports
+      label: Dafasports
   allowed_values_function: ''
 module: options
 locked: false

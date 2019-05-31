@@ -1,4 +1,0 @@
-games_page_loading.games_loading_configuration_tab:
-  route_name: games_page_loading.games_loading_configuration
-  title: 'Configure Games Page Loading'
-  base_route: games_page_loading.games_loading_configuration
