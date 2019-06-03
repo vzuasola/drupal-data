@@ -1,0 +1,21 @@
+uuid: 3e6f3a6e-b876-4f89-bea1-5c09b5f4be2b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_um_end
+    - node.type.games_2_0
+  module:
+    - datetime
+id: node.games_2_0.field_um_end
+field_name: field_um_end
+entity_type: node
+bundle: games_2_0
+label: 'Under Maintenance End'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime
