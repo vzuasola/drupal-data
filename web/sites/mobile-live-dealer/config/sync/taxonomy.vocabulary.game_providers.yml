@@ -1,0 +1,9 @@
+uuid: 80bf0e78-5f93-435e-ace7-4806d52e5e89
+langcode: en
+status: true
+dependencies: {  }
+name: 'Game Providers'
+vid: game_providers
+description: 'Game providers maintenance config'
+hierarchy: 0
+weight: 0
