@@ -16,3 +16,5 @@ game_ribbons: 1
 game_ribbons_message: 'Term @term already exists in vocabulary @vocabulary.'
 lobby_tab: 1
 lobby_tab_message: 'Term @term already exists in vocabulary @vocabulary.'
+game_providers: 0
+game_providers_message: 'Term @term already exists in vocabulary @vocabulary.'
