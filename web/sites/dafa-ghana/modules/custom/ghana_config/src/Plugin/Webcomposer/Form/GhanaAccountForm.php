@@ -33,10 +33,30 @@ class GhanaAccountForm extends WebcomposerFormBase implements WebcomposerFormInt
     ];
   }
 
+  private function questions() {
+    return implode(PHP_EOL, [
+        '1|What is your mother’s maiden name?',
+        '2|What is your father’s first name?',
+        '3|What is the model of your first car??',
+        '4|What is the name of your first school??',
+        '5|What is the name of your first pet?',
+        '6|Place of Birth?',
+        '7|Favorite celebrity?',
+        '8|Favorite food?',
+        '9|Favorite sport team?',
+        '10|Place of work?',
+        '11|Ask for security answer?',
+        '13|What is your favorite color?',
+        '14|What is your date of birth?',
+      ]);
+  }
+
   /**
    * Set Fields.
    */
   public function getFields() {
+    $questions = $this->questions();
+
     return [
 
       'account_details_title' => [
@@ -265,12 +285,7 @@ class GhanaAccountForm extends WebcomposerFormBase implements WebcomposerFormInt
             '#title' => 'Security Question 1 Choices',
             '#type' => 'textarea',
             '#description' => 'Provide a pipe separated key value pair. <br> <small>Example key|My Value</small>',
-            '#default_value' => implode(PHP_EOL, [
-              '1|What is your father’s first name?',
-              '2|Place of Birth?',
-              '3|Favorite celebrity?',
-              '4|Favorite sport team?',
-            ]),
+            '#default_value' => $questions,
           ],
         ],
       ],
@@ -325,12 +340,7 @@ class GhanaAccountForm extends WebcomposerFormBase implements WebcomposerFormInt
             '#title' => 'Security Question 2 Choices',
             '#type' => 'textarea',
             '#description' => 'Provide a pipe separated key value pair. <br> <small>Example key|My Value</small>',
-            '#default_value' => implode(PHP_EOL, [
-              '1|What is your father’s first name?',
-              '2|Place of Birth?',
-              '3|Favorite celebrity?',
-              '4|Favorite sport team?',
-            ]),
+            '#default_value' => $questions,
           ],
         ],
       ],
