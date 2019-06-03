@@ -1,0 +1,23 @@
+uuid: 860f74ec-966b-4169-b85b-4b8a0868ea82
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_game_provider_maintenance
+    - taxonomy.vocabulary.game_providers
+id: taxonomy_term.game_providers.field_game_provider_maintenance
+field_name: field_game_provider_maintenance
+entity_type: taxonomy_term
+bundle: game_providers
+label: Maintenance
+description: 'Check to enable maintenance'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
