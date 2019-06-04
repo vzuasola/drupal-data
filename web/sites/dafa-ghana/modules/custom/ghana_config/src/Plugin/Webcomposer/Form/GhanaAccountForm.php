@@ -230,13 +230,13 @@ class GhanaAccountForm extends WebcomposerFormBase implements WebcomposerFormInt
             '#title' => 'Birthdate placeholder label',
             '#type' => 'textfield',
             '#description' => 'label for Birthdate field placeholder',
-            '#default_value' => 'DD/MM/YYYY',
+            '#default_value' => 'MM/DD/YYYY',
           ],
           'date-format' => [
             '#title' => 'Birthdate format',
             '#type' => 'textfield',
             '#description' => 'Date Format for Birthdate',
-            '#default_value' => 'DD/MM/YYYY',
+            '#default_value' => 'm/d/Y',
           ],
           'annotation' => [
             '#title' => 'Birthdate Annotation text',
