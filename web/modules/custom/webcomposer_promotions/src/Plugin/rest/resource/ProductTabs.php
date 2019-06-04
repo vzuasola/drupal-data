@@ -225,15 +225,17 @@ class ProductTabs extends ResourceBase {
     $query->condition('status', 1, NULL, $langCode);
     $query->condition('field_product.target_id', $productId, NULL, $langCode);
     $query->condition('field_hide_promotion.value', 0, NULL, $langCode);
-
+    
     if (isset($segments)) {
-      $segmentsGroup = $query
+      if (!empty($segments)) {
+        $segmentsGroup = $query
         ->orConditionGroup()
         ->condition('field_segment_name.value', $segments, 'IN', $langCode)
         ->condition('field_segment_name.value', NULL, 'IS NULL', $langCode);
-      $query->condition($segmentsGroup);
-    } else {
-      $query->condition('field_segment_name.value', NULL, 'IS NULL', $langCode);
+        $query->condition($segmentsGroup);
+      } else {
+        $query->condition('field_segment_name.value', NULL, 'IS NULL', $langCode);
+      }
     }
 
     $stateGroup = $query
@@ -263,13 +265,15 @@ class ProductTabs extends ResourceBase {
     $query->condition('field_mark_as_featured.value', 1, NULL, $langCode);
 
     if (isset($segments)) {
-      $segmentsGroup = $query
+      if (!empty($segments)) {
+        $segmentsGroup = $query
         ->orConditionGroup()
         ->condition('field_segment_name.value', $segments, 'IN', $langCode)
         ->condition('field_segment_name.value', NULL, 'IS NULL', $langCode);
-      $query->condition($segmentsGroup);
-    } else {
-      $query->condition('field_segment_name.value', NULL, 'IS NULL', $langCode);
+        $query->condition($segmentsGroup);
+      } else {
+        $query->condition('field_segment_name.value', NULL, 'IS NULL', $langCode);
+      }
     }
 
     $group = $query
