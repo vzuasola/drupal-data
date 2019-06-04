@@ -44,6 +44,7 @@ function webcomposer_slider_uninstall() {
     'language.content_settings.zipang_jackpot_entity.zipang_jackpot_entity',
     'taxonomy.vocabulary.jackpot_game_category',
     'views.view.jackpot_category',
+    'views.view.jackpot_list',
   ];
 
   foreach ($keys as $key) {
