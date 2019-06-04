@@ -22,14 +22,14 @@ use Drupal\Core\Cache\CacheableMetadata;
  * TODO This can be refined
  *
  * @RestResource(
- *   id = "product_tabs",
- *   label = @Translation("Product Tabs"),
+ *   id = "segments_product_tabs",
+ *   label = @Translation("Segments Product Tabs"),
  *   uri_paths = {
- *     "canonical" = "/api/product_tabs"
+ *     "canonical" = "/api/segments/product_tabs"
  *   }
  * )
  */
-class ProductTabs extends ResourceBase {
+class ProductTabsSegment extends ResourceBase {
   /**
    *  A current user instance.
    *
@@ -92,13 +92,17 @@ class ProductTabs extends ResourceBase {
    */
   public function get() {
     $build = new CacheableMetadata();
-    $build->setCacheTags(['taxonomy_term_list']);
+    $build->setCacheTags([
+      'taxonomy_term_list',
+      'promotion_node_list',
+    ]);
     $build->setCacheContexts(['url.query_args']);
 
     $state = $this->currentRequest->query->get('state');
     $type = $this->currentRequest->query->get('type');
+    $segments = $this->currentRequest->query->get('segments');
 
-    $data = $this->getProductTabs($state, $type);
+    $data = $this->getProductTabs($state, $type, $segments);
 
     if (!$data) {
       $errorMessage = t('No Product tabs are configured. Please configure the products and translation in product taxonomy.');
@@ -116,7 +120,7 @@ class ProductTabs extends ResourceBase {
    *
    * @return <json> The product tabs.
    */
-  private function getProductTabs($state, $type) {
+  private function getProductTabs($state, $type, $segments) {
     // You must to implement the logic of your REST Resource here.
     $query = \Drupal::entityQuery('taxonomy_term');
     $query->condition('vid', "products");
@@ -185,9 +189,9 @@ class ProductTabs extends ResourceBase {
 
           // get a separate count for the All featured tab
           if ($productId == 'all') {
-            $count = $this->getAllFeaturedPromotionCount($langCode, $state);
+            $count = $this->getAllFeaturedPromotionCount($langCode, $state, $segments);
           } else {
-            $count = $this->getPromotionCount($key, $langCode, $state);
+            $count = $this->getPromotionCount($key, $langCode, $state, $segments);
           }
 
           $productAttribute = ['class'=> $class , 'target' => $target, 'tag' => $tag];
@@ -215,12 +219,22 @@ class ProductTabs extends ResourceBase {
    *
    * @return <string> The product promotion count.
    */
-  private function getPromotionCount($productId, $langCode, $state) {
+  private function getPromotionCount($productId, $langCode, $state, $segments) {
     $query = \Drupal::entityQuery('node');
     $query->condition('type', "promotion", NULL, $langCode);
     $query->condition('status', 1, NULL, $langCode);
     $query->condition('field_product.target_id', $productId, NULL, $langCode);
     $query->condition('field_hide_promotion.value', 0, NULL, $langCode);
+    
+    if (isset($segments)) {
+      $segmentsGroup = $query
+      ->orConditionGroup()
+      ->condition('field_segment_name.value', $segments, 'IN', $langCode)
+      ->condition('field_segment_name.value', NULL, 'IS NULL', $langCode);
+      $query->condition($segmentsGroup);
+    } else {
+      $query->condition('field_segment_name.value', NULL, 'IS NULL', $langCode);
+    }
 
     $stateGroup = $query
       ->orConditionGroup()
@@ -240,13 +254,23 @@ class ProductTabs extends ResourceBase {
    *
    * @return <string> The product promotion count.
    */
-  private function getAllFeaturedPromotionCount($langCode, $state) {
+  private function getAllFeaturedPromotionCount($langCode, $state, $segments) {
 
     $query = \Drupal::entityQuery('node');
     $query->condition('type', "promotion", NULL, $langCode);
     $query->condition('status', 1, NULL, $langCode);
     $query->condition('field_hide_promotion.value', 0, NULL, $langCode);
     $query->condition('field_mark_as_featured.value', 1, NULL, $langCode);
+
+    if (!empty($segments)) {
+      $segmentsGroup = $query
+      ->orConditionGroup()
+      ->condition('field_segment_name.value', $segments, 'IN', $langCode)
+      ->condition('field_segment_name.value', NULL, 'IS NULL', $langCode);
+      $query->condition($segmentsGroup);
+    } else {
+      $query->condition('field_segment_name.value', NULL, 'IS NULL', $langCode);
+    }
 
     $group = $query
       ->orConditionGroup()

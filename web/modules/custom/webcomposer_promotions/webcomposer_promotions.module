@@ -1,0 +1,13 @@
+<?php
+
+use Drupal\node\NodeInterface;
+use Drupal\Core\Cache\Cache;
+
+/**
+ * Implements hook_node_presave().
+ */
+function webcomposer_promotions_node_presave(NodeInterface $node) {
+  if ($node->getType() == 'promotion') {
+    Cache::invalidateTags(['promotion_node_list']);
+  }
+}
