@@ -1,0 +1,17 @@
+uuid: 9eae2d49-b218-47ca-b2dd-a65da79871cd
+langcode: en
+status: true
+dependencies:
+  module:
+    - serialization
+    - user
+    - webcomposer_promotions
+id: segments_product_tabs
+plugin_id: segments_product_tabs
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+    supported_auth:
+      - cookie

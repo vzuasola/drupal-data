@@ -22,14 +22,14 @@ use Drupal\Core\Cache\CacheableMetadata;
  * TODO This can be refined
  *
  * @RestResource(
- *   id = "product_tabs",
- *   label = @Translation("Product Tabs"),
+ *   id = "segments_product_tabs",
+ *   label = @Translation("Segments Product Tabs"),
  *   uri_paths = {
  *     "canonical" = "/api/segments/product_tabs"
  *   }
  * )
  */
-class ProductTabsSegments extends ResourceBase {
+class ProductTabsSegment extends ResourceBase {
   /**
    *  A current user instance.
    *
