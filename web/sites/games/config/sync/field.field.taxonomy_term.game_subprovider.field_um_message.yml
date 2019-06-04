@@ -1,0 +1,19 @@
+uuid: 92f94599-f26b-4613-afb6-ff366ffd3d24
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_um_message
+    - taxonomy.vocabulary.game_subprovider
+id: taxonomy_term.game_subprovider.field_um_message
+field_name: field_um_message
+entity_type: taxonomy_term
+bundle: game_subprovider
+label: 'Under Maintenance Message'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long
