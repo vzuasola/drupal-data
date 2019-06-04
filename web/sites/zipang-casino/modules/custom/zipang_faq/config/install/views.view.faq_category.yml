@@ -1,18 +1,17 @@
-uuid: bd7c10a0-031a-4503-bb81-6bb53bb7df12
+uuid: a736ec3d-a838-4e78-89eb-6faab5b1a679
 langcode: ja
 status: true
 dependencies:
   config:
-    - taxonomy.vocabulary.jackpot_game_category
+    - taxonomy.vocabulary.faq_category
   module:
     - rest
     - serialization
     - taxonomy
     - user
-_core:
-  default_config_hash: DXJreMZwoND1nFeOSvbkOIRbtEk-L120YD9CmrL1dnM
-id: jackpot_category
-label: 'Jackpot Category'
+    - webcomposer_rest_extra
+id: faq_category
+label: 'FAQ Category'
 module: views
 description: ''
 tag: ''
@@ -132,8 +131,39 @@ display:
           id: vid
           table: taxonomy_term_field_data
           field: vid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
           value:
-            jackpot_game_category: jackpot_game_category
+            faq_category: faq_category
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
           entity_type: taxonomy_term
           entity_field: vid
           plugin_id: bundle
@@ -148,22 +178,19 @@ display:
           value:
             '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
           group: 1
-          exposed: true
+          exposed: false
           expose:
-            operator_id: langcode_op
-            label: 'Translation language'
+            operator_id: ''
+            label: ''
             description: ''
             use_operator: false
-            operator: langcode_op
-            identifier: langcode
+            operator: ''
+            identifier: ''
             required: false
             remember: false
             multiple: false
             remember_roles:
               authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              e: '0'
             reduce: false
           is_grouped: false
           group_info:
@@ -180,7 +207,21 @@ display:
           entity_type: taxonomy_term
           entity_field: langcode
           plugin_id: language
-      sorts: {  }
+      sorts:
+        weight:
+          id: weight
+          table: taxonomy_term_field_data
+          field: weight
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          entity_type: taxonomy_term
+          entity_field: weight
+          plugin_id: standard
       header: {  }
       footer: {  }
       empty: {  }
@@ -193,7 +234,6 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - request_format
-        - url
         - url.query_args
         - user.permissions
       tags: {  }
@@ -204,18 +244,17 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: api/jackpot_categories
+      path: api/faq_category
       pager:
-        type: some
+        type: none
         options:
-          items_per_page: 10
           offset: 0
       style:
-        type: serializer
+        type: taxonomy_list_serializer
         options:
-          grouping: {  }
           uses_fields: false
-          formats: {  }
+          formats:
+            json: json
       row:
         type: data_entity
         options: {  }
@@ -225,6 +264,5 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - request_format
-        - url
         - user.permissions
       tags: {  }

@@ -1,0 +1,22 @@
+add zipang faq entity entities:
+  title: 'Create new Zipang FAQ Entity entities'
+
+administer zipang faq entity entities:
+  title: 'Administer Zipang FAQ Entity entities'
+  description: 'Allow to access the administration form to configure Zipang FAQ Entity entities.'
+  restrict access: true
+
+delete zipang faq entity entities:
+  title: 'Delete Zipang FAQ Entity entities'
+
+edit zipang faq entity entities:
+  title: 'Edit Zipang FAQ Entity entities'
+
+access zipang faq entity overview:
+  title: 'Access the Zipang FAQ Entity overview page'
+
+view published zipang faq entity entities:
+  title: 'View published Zipang FAQ Entity entities'
+
+view unpublished zipang faq entity entities:
+  title: 'View unpublished Zipang FAQ Entity entities'

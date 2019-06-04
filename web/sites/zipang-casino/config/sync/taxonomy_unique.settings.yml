@@ -16,3 +16,5 @@ desktop_game_category: 1
 desktop_game_category_message: 'Term @term already exists in vocabulary @vocabulary.'
 jackpot_game_category: 1
 jackpot_game_category_message: 'Term @term already exists in vocabulary @vocabulary.'
+faq_category: 0
+faq_category_message: 'Term @term already exists in vocabulary @vocabulary.'
