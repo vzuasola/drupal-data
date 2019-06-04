@@ -25,7 +25,7 @@ use Drupal\Core\Cache\CacheableMetadata;
  *   id = "product_tabs",
  *   label = @Translation("Product Tabs"),
  *   uri_paths = {
- *     "canonical" = "/api/product_tabs/segments"
+ *     "canonical" = "/api/segments/product_tabs"
  *   }
  * )
  */
