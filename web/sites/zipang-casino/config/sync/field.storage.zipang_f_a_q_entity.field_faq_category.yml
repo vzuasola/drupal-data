@@ -1,0 +1,22 @@
+uuid: 9930c6f5-189f-4ab9-b57e-104580b6be47
+langcode: ja
+status: true
+dependencies:
+  module:
+    - taxonomy
+    - zipang_faq
+_core:
+  default_config_hash: JLrS22aRnVDc_MY94v-Z3G85zowbxxP6-deXlVaDWb0
+id: zipang_f_a_q_entity.field_faq_category
+field_name: field_faq_category
+entity_type: zipang_f_a_q_entity
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
