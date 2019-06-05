@@ -98,6 +98,13 @@ class LiveDealerForm extends FormBase {
       '#default_value' => $this->get('games_transfer_link'),
       '#translatable' => true,
     ];
+
+    $form['general']['games_maintenance_text'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Games maintenance text'),
+      '#default_value' => $this->get('games_maintenance_text'),
+      '#translatable' => true,
+    ];
     return $form;
   }
 }
