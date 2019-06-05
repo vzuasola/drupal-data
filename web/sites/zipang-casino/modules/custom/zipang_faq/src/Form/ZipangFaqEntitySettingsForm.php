@@ -35,7 +35,7 @@ class ZipangFaqEntitySettingsForm extends FormBase {
   }
 
   /**
-   * Defines the settings form for Zipang FAQ Entity entities.
+   * Defines the settings form for Zipang faq entity entities.
    *
    * @param array $form
    *   An associative array containing the structure of the form.
@@ -46,7 +46,7 @@ class ZipangFaqEntitySettingsForm extends FormBase {
    *   Form definition array.
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    $form['zipangfaqentity_settings']['#markup'] = 'Settings form for Zipang FAQ Entity entities. Manage field settings here.';
+    $form['zipangfaqentity_settings']['#markup'] = 'Settings form for Zipang faq entity entities. Manage field settings here.';
     return $form;
   }
 

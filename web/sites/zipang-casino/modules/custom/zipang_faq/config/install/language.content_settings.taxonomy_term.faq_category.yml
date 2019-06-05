@@ -1,4 +1,4 @@
-uuid: 4a3e8e82-6fa6-4dab-8449-12de76e5a29c
+uuid: 5467a9be-43b0-420e-a720-9c39885e58eb
 langcode: ja
 status: true
 dependencies:
@@ -11,8 +11,10 @@ third_party_settings:
     enabled: false
     bundle_settings:
       untranslatable_fields_hide: '0'
+_core:
+  default_config_hash: tIsG9VMDFQNvbTjDYCtlm2JnqPYXwI_PZR1xJG-rsQY
 id: taxonomy_term.faq_category
 target_entity_type_id: taxonomy_term
 target_bundle: faq_category
 default_langcode: site_default
-language_alterable: false
+language_alterable: true

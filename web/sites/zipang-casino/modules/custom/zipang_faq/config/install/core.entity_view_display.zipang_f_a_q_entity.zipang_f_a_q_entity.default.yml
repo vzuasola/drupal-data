@@ -1,4 +1,4 @@
-uuid: e0ec5502-799f-4325-8bf5-ce25b0fe2ec2
+uuid: f183227f-d966-462c-9d85-9d587608dbb6
 langcode: ja
 status: true
 dependencies:
@@ -10,13 +10,15 @@ dependencies:
     - text
     - user
     - zipang_faq
+_core:
+  default_config_hash: i_oo38tzaxb1ONDkOt77qCC784NGd53gzSQefrXjlHc
 id: zipang_f_a_q_entity.zipang_f_a_q_entity.default
 targetEntityType: zipang_f_a_q_entity
 bundle: zipang_f_a_q_entity
 mode: default
 content:
   field_answers:
-    weight: 4
+    weight: 1
     label: above
     settings: {  }
     third_party_settings: {  }
@@ -41,7 +43,7 @@ content:
   name:
     label: above
     type: string
-    weight: 0
+    weight: -4
     region: content
     settings:
       link_to_entity: false
@@ -49,7 +51,7 @@ content:
   user_id:
     label: hidden
     type: author
-    weight: 1
+    weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }

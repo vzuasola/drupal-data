@@ -7,7 +7,7 @@ use Drupal\Core\Entity\EntityChangedInterface;
 use Drupal\user\EntityOwnerInterface;
 
 /**
- * Provides an interface for defining Zipang FAQ Entity entities.
+ * Provides an interface for defining Zipang faq entity entities.
  *
  * @ingroup zipang_faq
  */
@@ -16,61 +16,61 @@ interface ZipangFaqEntityInterface extends  ContentEntityInterface, EntityChange
   // Add get/set methods for your configuration properties here.
 
   /**
-   * Gets the Zipang FAQ Entity name.
+   * Gets the Zipang faq entity name.
    *
    * @return string
-   *   Name of the Zipang FAQ Entity.
+   *   Name of the Zipang faq entity.
    */
   public function getName();
 
   /**
-   * Sets the Zipang FAQ Entity name.
+   * Sets the Zipang faq entity name.
    *
    * @param string $name
-   *   The Zipang FAQ Entity name.
+   *   The Zipang faq entity name.
    *
    * @return \Drupal\zipang_faq\Entity\ZipangFaqEntityInterface
-   *   The called Zipang FAQ Entity entity.
+   *   The called Zipang faq entity entity.
    */
   public function setName($name);
 
   /**
-   * Gets the Zipang FAQ Entity creation timestamp.
+   * Gets the Zipang faq entity creation timestamp.
    *
    * @return int
-   *   Creation timestamp of the Zipang FAQ Entity.
+   *   Creation timestamp of the Zipang faq entity.
    */
   public function getCreatedTime();
 
   /**
-   * Sets the Zipang FAQ Entity creation timestamp.
+   * Sets the Zipang faq entity creation timestamp.
    *
    * @param int $timestamp
-   *   The Zipang FAQ Entity creation timestamp.
+   *   The Zipang faq entity creation timestamp.
    *
    * @return \Drupal\zipang_faq\Entity\ZipangFaqEntityInterface
-   *   The called Zipang FAQ Entity entity.
+   *   The called Zipang faq entity entity.
    */
   public function setCreatedTime($timestamp);
 
   /**
-   * Returns the Zipang FAQ Entity published status indicator.
+   * Returns the Zipang faq entity published status indicator.
    *
-   * Unpublished Zipang FAQ Entity are only visible to restricted users.
+   * Unpublished Zipang faq entity are only visible to restricted users.
    *
    * @return bool
-   *   TRUE if the Zipang FAQ Entity is published.
+   *   TRUE if the Zipang faq entity is published.
    */
   public function isPublished();
 
   /**
-   * Sets the published status of a Zipang FAQ Entity.
+   * Sets the published status of a Zipang faq entity.
    *
    * @param bool $published
-   *   TRUE to set this Zipang FAQ Entity to published, FALSE to set it to unpublished.
+   *   TRUE to set this Zipang faq entity to published, FALSE to set it to unpublished.
    *
    * @return \Drupal\zipang_faq\Entity\ZipangFaqEntityInterface
-   *   The called Zipang FAQ Entity entity.
+   *   The called Zipang faq entity entity.
    */
   public function setPublished($published);
 
