@@ -17,7 +17,7 @@ module: views
 description: ''
 tag: ''
 base_table: taxonomy_term_field_data
-base_field: nid
+base_field: tid
 core: 8.x
 display:
   default:
@@ -137,6 +137,49 @@ display:
           entity_type: taxonomy_term
           entity_field: vid
           plugin_id: bundle
+        langcode:
+          id: langcode
+          table: taxonomy_term_field_data
+          field: langcode
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
+          group: 1
+          exposed: true
+          expose:
+            operator_id: langcode_op
+            label: 'Translation language'
+            description: ''
+            use_operator: false
+            operator: langcode_op
+            identifier: langcode
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              e: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: taxonomy_term
+          entity_field: langcode
+          plugin_id: language
       sorts: {  }
       header: {  }
       footer: {  }
@@ -150,6 +193,7 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - request_format
+        - url
         - url.query_args
         - user.permissions
       tags: {  }
@@ -160,7 +204,7 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: /api/jackpot_categories
+      path: api/jackpot_categories
       pager:
         type: some
         options:
@@ -181,5 +225,6 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - request_format
+        - url
         - user.permissions
       tags: {  }

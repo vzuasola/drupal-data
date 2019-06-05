@@ -2,13 +2,26 @@
 
 namespace Drupal\webcomposer_announcements\Form;
 
-use Drupal\Core\Form\ConfigFormBase;
+use Drupal\webcomposer_config_schema\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Config form for Announcement feature.
+ * Announcement custom config form
+ *
+ * @WebcomposerConfigPlugin(
+ *   id = "announcement_custom_config_form",
+ *   route = {
+ *     "title" = "Web Composer Announcement Configuration",
+ *     "path" = "/admin/config/webcomposer/announcements/config",
+ *   },
+ *   menu = {
+ *     "title" = "Web Composer Announcement Configuration",
+ *     "description" = "Configure the announcements custom configuration",
+ *     "parent" = "webcomposer_announcements.admin_settings",
+ *   },
+ * )
  */
-class AnnouncementConfigurationForm extends ConfigFormBase {
+class AnnouncementConfigurationForm extends FormBase {
 
   /**
    * {@inheritdoc}
@@ -20,67 +33,43 @@ class AnnouncementConfigurationForm extends ConfigFormBase {
   /**
    * {@inheritdoc}
    */
-  public function getFormId() {
-    return 'webcomposer_announcements.announcements_configuration_form';
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  public function buildForm(array $form, FormStateInterface $form_state) {
-    $config = $this->config('webcomposer_config.announcements_configuration');
-
+  public function form(array $form, FormStateInterface $form_state) {
     $form['title'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Title'),
       '#description' => $this->t('Title of the announcement lightbox.'),
-      '#default_value' => $config->get('title'),
+      '#default_value' => $this->get('title'),
       '#required' => TRUE,
+      '#translatable' => true
     ];
 
     $form['default_message'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Default Message'),
       '#description' => $this->t('Message to display inside the lightbox when there is no published announcement.'),
-      '#default_value' => $config->get('default_message'),
+      '#default_value' => $this->get('default_message'),
       '#required' => TRUE,
+      '#translatable' => true
     ];
 
     $form['see_all'] = [
       '#type' => 'textfield',
       '#title' => $this->t('See all text'),
       '#description' => $this->t('Announcement see all text.'),
-      '#default_value' => $config->get('see_all'),
+      '#default_value' => $this->get('see_all'),
       '#required' => TRUE,
+      '#translatable' => true
     ];
 
     $form['dismiss_all'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Dismiss all text'),
       '#description' => $this->t('Announcement dismiss all text.'),
-      '#default_value' => $config->get('dismiss_all'),
+      '#default_value' => $this->get('dismiss_all'),
       '#required' => TRUE,
+      '#translatable' => true
     ];
 
-    return parent::buildForm($form, $form_state);
+    return $form;
   }
-
-  /**
-   * {@inheritdoc}
-   */
-  public function submitForm(array &$form, FormStateInterface $form_state) {
-    parent::submitForm($form, $form_state);
-
-    $keys = [
-      'title',
-      'default_message',
-      'see_all',
-      'dismiss_all'
-    ];
-
-    foreach ($keys as $key) {
-      $this->config('webcomposer_config.announcements_configuration')->set($key, $form_state->getValue($key))->save();
-    }
-  }
-
 }

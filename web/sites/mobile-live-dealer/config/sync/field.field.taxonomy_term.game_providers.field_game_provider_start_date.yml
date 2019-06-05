@@ -1,0 +1,21 @@
+uuid: c48d3c6f-f03f-4274-810e-4ab5e2d2b02c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_game_provider_start_date
+    - taxonomy.vocabulary.game_providers
+  module:
+    - datetime
+id: taxonomy_term.game_providers.field_game_provider_start_date
+field_name: field_game_provider_start_date
+entity_type: taxonomy_term
+bundle: game_providers
+label: 'Start Date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

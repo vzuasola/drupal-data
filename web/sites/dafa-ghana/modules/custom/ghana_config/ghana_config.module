@@ -22,3 +22,58 @@ function ghana_config_help($route_name, RouteMatchInterface $route_match) {
     default:
   }
 }
+
+/**
+ * @file
+ */
+
+/**
+ * Implements hook_webcomposer_form_validation_alter().
+ *
+ * Registration form - Username and Email validation
+ */
+function ghana_config_webcomposer_form_validation_alter(&$validations) {
+  $validations['email_availability'] = [
+    'title' => 'Email Availability',
+    'description' => 'Validate user email if already exist',
+    'error' => 'Email not available',
+  ];
+  $validations['valid_date'] = [
+    'title' => 'Valid Date',
+    'description' => 'Validation to check if the inputted date is correct based on format' .
+      '(must have a Birthdate format on field settings)',
+    'error' => 'Date is invalid',
+  ];
+  // password validation
+  $validations['not_match_username'] = [
+    'title' => 'Not Match Username',
+    'description' => 'Validation to disallow current username as password',
+    'error' => 'Password should not equal to username',
+  ];
+  // security question validation
+  $validations['duplicated_security_question'] = [
+    'title' => 'Validate Duplicated Security Questions',
+    'description' => 'Validation to block user from selecting same question',
+    'error' => 'Security Questions should not be the same',
+  ];
+  // confirm password validation
+  $validations['match_password'] = [
+    'title' => 'Validate password to be match',
+    'description' => 'Validation for password if match',
+    'error' => 'Password not match',
+  ];
+  // username prefix validation
+  $validations['valid_username_prefix'] = [
+    'title' => 'Valid Username Prefix',
+    'description' => 'Username Prefix should match in the listed prefix below',
+    'error' => 'Username Prefix not valid',
+    'parameters' => [
+      'prefixes' => [
+        '#title' => 'Valid Prefixes',
+        '#description' => 'List of valid prefixes',
+        '#type' => 'textarea',
+        '#default_value' => '000,000,000'
+      ],
+    ],
+  ];
+}

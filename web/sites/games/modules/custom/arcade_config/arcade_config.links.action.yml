@@ -8,3 +8,14 @@ arcade_config.add_form:
           destination: '/admin/content/arcade/game_list_sort'
   appears_on:
       - view.arcade_game_listing.page_1
+
+arcade_config.category_add_form:
+    route_name: 'entity.taxonomy_term.add_form'
+    title: 'Add Category'
+    route_parameters:
+        taxonomy_vocabulary: 'arcade_game_category'
+    options:
+        query:
+            destination: '/admin/arcade/categories'
+    appears_on:
+        - arcade_config.manage_category
