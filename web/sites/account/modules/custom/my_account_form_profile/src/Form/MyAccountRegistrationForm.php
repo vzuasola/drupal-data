@@ -456,5 +456,21 @@ class MyAccountRegistrationForm extends FormBase
           '#translatable' => TRUE,
           '#description' => '<strong>[Fast Reg] </strong> Message to be displayed to update First Name and Last Name.'
         ];
+        $form['profile_form_fastreg_config']['fastreg_desktop_redirects'] = [
+            '#type' => 'textarea',
+            '#title' => $this->t('[Desktop] - Redirect To'),
+            '#default_value' => $this->get('fastreg_desktop_redirects'),
+            '#required' => TRUE,
+            '#translatable' => TRUE,
+            '#description' => '<strong>[Fast Reg] - </strong>redirect URL for Desktop'
+          ];
+        $form['profile_form_fastreg_config']['fastreg_mobile_redirects'] = [
+            '#type' => 'textarea',
+            '#title' => $this->t('[Mobile] - Redirect To'),
+            '#default_value' => $this->get('fastreg_mobile_redirects'),
+            '#required' => TRUE,
+            '#translatable' => TRUE,
+            '#description' => '<strong>[Fast Reg] - </strong>redirect URL for Mobile'
+          ];
     }
 }
