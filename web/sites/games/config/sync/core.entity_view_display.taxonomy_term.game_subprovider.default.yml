@@ -1,0 +1,51 @@
+uuid: d7fb9885-8e0e-4f5b-8273-28944ca000fb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.game_subprovider.field_um_end
+    - field.field.taxonomy_term.game_subprovider.field_um_message
+    - field.field.taxonomy_term.game_subprovider.field_um_start
+    - taxonomy.vocabulary.game_subprovider
+  module:
+    - datetime
+    - text
+id: taxonomy_term.game_subprovider.default
+targetEntityType: taxonomy_term
+bundle: game_subprovider
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_um_end:
+    weight: 3
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_um_message:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_um_start:
+    weight: 2
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+hidden:
+  langcode: true

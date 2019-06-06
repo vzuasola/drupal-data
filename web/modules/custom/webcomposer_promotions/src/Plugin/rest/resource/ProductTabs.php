@@ -216,17 +216,17 @@ class ProductTabs extends ResourceBase {
    * @return <string> The product promotion count.
    */
   private function getPromotionCount($productId, $langCode, $state) {
-
     $query = \Drupal::entityQuery('node');
     $query->condition('type', "promotion", NULL, $langCode);
     $query->condition('status', 1, NULL, $langCode);
     $query->condition('field_product.target_id', $productId, NULL, $langCode);
     $query->condition('field_hide_promotion.value', 0, NULL, $langCode);
-    $group = $query
+
+    $stateGroup = $query
       ->orConditionGroup()
       ->condition('field_log_in_state.value', 2, NULL, $langCode)
       ->condition('field_log_in_state.value', $state, NULL, $langCode);
-    $query->condition($group);
+    $query->condition($stateGroup);
     $query->count();
     $result = $query->execute();
 
@@ -247,6 +247,7 @@ class ProductTabs extends ResourceBase {
     $query->condition('status', 1, NULL, $langCode);
     $query->condition('field_hide_promotion.value', 0, NULL, $langCode);
     $query->condition('field_mark_as_featured.value', 1, NULL, $langCode);
+
     $group = $query
       ->orConditionGroup()
       ->condition('field_log_in_state.value', 2, NULL, $langCode)

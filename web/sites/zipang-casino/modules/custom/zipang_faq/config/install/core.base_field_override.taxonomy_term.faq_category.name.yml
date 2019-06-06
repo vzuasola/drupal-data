@@ -1,0 +1,18 @@
+uuid: 3effb69b-2278-4fd3-9709-a25b98f2d4cd
+langcode: ja
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.faq_category
+id: taxonomy_term.faq_category.name
+field_name: name
+entity_type: taxonomy_term
+bundle: faq_category
+label: Name
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
