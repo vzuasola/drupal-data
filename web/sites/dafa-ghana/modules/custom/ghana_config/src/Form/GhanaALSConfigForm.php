@@ -48,7 +48,7 @@ class GhanaALSConfigForm extends FormBase {
   /**
    * {@inheritdoc}
    */
-  private function sectionPageSetting(array &$form){
+  private function sectionPageSetting(array &$form) {
     $form['als_configuration_setting'] = [
       '#type' => 'details',
       '#title' => t('ALS Configuration'),
