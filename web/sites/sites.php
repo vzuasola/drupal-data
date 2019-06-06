@@ -6,6 +6,7 @@
  */
 
 // Webcomposer Demo Instances
+$sites['localhost'] = 'demo';
 $sites['demo.drupal.dev'] = 'demo';
 $sites['demo.drupal.local'] = 'demo';
 $sites['demo.drupal.env'] = 'demo';
@@ -105,6 +106,11 @@ $sites['mobile-casino-gold.drupal.dev'] = 'mobile-casino-gold';
 $sites['mobile-casino-gold.drupal.local'] = 'mobile-casino-gold';
 $sites['mobile-casino-gold.drupal.env'] = 'mobile-casino-gold';
 
+// Mobile Lottery Revamp instance
+$sites['mobile-lottery.drupal.dev'] = 'mobile-lottery';
+$sites['mobile-lottery.drupal.local'] = 'mobile-lottery';
+$sites['mobile-lottery.drupal.env'] = 'mobile-lottery';
+
 // Poker revamp instance
 $sites['poker.drupal.local'] = 'poker';
 $sites['poker.drupal.dev'] = 'poker';
@@ -120,3 +126,8 @@ $sites['registration-row.drupal.local'] = 'registration-row';
 $sites['registration-row.drupal.dev'] = 'registration-row';
 $sites['registration-row.drupal.env'] = 'registration-row';
 
+// dynamic sites.php values via environment variables
+
+if (file_exists(__DIR__ . '/sites.override.php')) {
+  require __DIR__ . '/sites.override.php';
+}

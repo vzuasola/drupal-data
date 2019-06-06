@@ -246,7 +246,7 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: admin/structure/taxonomy/manage/arcade_game_category/overview
+      path: admin/arcade/categories
       fields:
         name:
           id: name
@@ -749,6 +749,10 @@ display:
       access:
         type: none
         options: {  }
+      pager:
+        type: none
+        options:
+          offset: 0
     cache_metadata:
       max-age: -1
       contexts:

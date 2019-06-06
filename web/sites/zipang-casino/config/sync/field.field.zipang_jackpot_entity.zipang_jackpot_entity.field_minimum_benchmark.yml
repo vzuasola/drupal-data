@@ -1,0 +1,24 @@
+uuid: d3e2a414-f1dd-432e-aa07-921e774a1cee
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.zipang_jackpot_entity.field_minimum_benchmark
+  module:
+    - zipang_jackpot
+_core:
+  default_config_hash: nFe3HfDAqyRg2zbpAU5BntPPat4i6_DwXFZBLNUXdlI
+id: zipang_jackpot_entity.zipang_jackpot_entity.field_minimum_benchmark
+field_name: field_minimum_benchmark
+entity_type: zipang_jackpot_entity
+bundle: zipang_jackpot_entity
+label: 'Minimum Benchmark'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: '5000'
+default_value_callback: ''
+settings: {  }
+field_type: string

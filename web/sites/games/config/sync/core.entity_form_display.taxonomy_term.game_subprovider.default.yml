@@ -3,12 +3,55 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.taxonomy_term.game_subprovider.field_um_end
+    - field.field.taxonomy_term.game_subprovider.field_um_message
+    - field.field.taxonomy_term.game_subprovider.field_um_start
     - taxonomy.vocabulary.game_subprovider
+  module:
+    - datetime
+    - field_group
+third_party_settings:
+  field_group:
+    group_maintenance:
+      children:
+        - field_um_message
+        - field_um_start
+        - field_um_end
+      parent_name: ''
+      weight: 20
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Maintenance
 id: taxonomy_term.game_subprovider.default
 targetEntityType: taxonomy_term
 bundle: game_subprovider
 mode: default
 content:
+  field_um_end:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_um_message:
+    weight: 5
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_um_start:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
   langcode:
     type: language_select
     weight: 1

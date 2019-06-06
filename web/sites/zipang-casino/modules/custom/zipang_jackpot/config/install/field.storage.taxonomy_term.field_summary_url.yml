@@ -1,0 +1,21 @@
+uuid: f0b6ebf3-baab-4d57-b686-f7c94bb632b1
+langcode: ja
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.field_summary_url
+field_name: field_summary_url
+entity_type: taxonomy_term
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

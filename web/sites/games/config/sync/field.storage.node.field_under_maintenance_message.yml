@@ -1,0 +1,19 @@
+uuid: 9177474e-8b18-4e52-bcca-cfd5adc1b40c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_under_maintenance_message
+field_name: field_under_maintenance_message
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
