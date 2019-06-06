@@ -19,8 +19,7 @@ use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
     /**
      * @{inheritdoc}
      */
-    public function getSettings()
-    {
+    public function getSettings() {
         return [
             'show' => [
                 '#title' => 'Show this form',
@@ -35,8 +34,7 @@ use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
         ];
     }
 
-    public function getFields()
-    {
+    public function getFields() {
         return [
 
             "current_password" => [

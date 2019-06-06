@@ -27,16 +27,14 @@ class GhanaALSConfigForm extends FormBase {
   /**
    * {@inheritdoc}
    */
-  protected function getEditableConfigNames()
-  {
+  protected function getEditableConfigNames() {
     return ['ghana_config.als_configuration'];
   }
 
   /**
    * {@inheritdoc}
    */
-  public function form(array $form, FormStateInterface $form_state)
-  {
+  public function form(array $form, FormStateInterface $form_state) {
     $form['advanced'] = [
         '#type' => 'vertical_tabs',
         '#title' => t('General Configuration'),
@@ -50,8 +48,7 @@ class GhanaALSConfigForm extends FormBase {
   /**
    * {@inheritdoc}
    */
-  private function sectionPageSetting(array &$form)
-  {
+  private function sectionPageSetting(array &$form) {
     $form['als_configuration_setting'] = [
       '#type' => 'details',
       '#title' => t('ALS Configuration'),
