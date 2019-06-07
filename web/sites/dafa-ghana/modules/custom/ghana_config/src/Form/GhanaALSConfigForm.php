@@ -40,7 +40,9 @@ class GhanaALSConfigForm extends FormBase {
         '#title' => t('General Configuration'),
     ];
 
+    $this->integrationConfig($form);
     $this->sectionPageSetting($form);
+    $this->resetPasswordConfig($form);
 
     return $form;
   }
@@ -120,4 +122,78 @@ class GhanaALSConfigForm extends FormBase {
       '#translatable' => TRUE,
     ];
   }
+
+  /**
+   * Integration Configuration.
+   */
+  private function integrationConfig(&$form) {
+    $form['cant_login_integration_config'] = [
+      '#type' => 'details',
+      '#title' => t("Integration"),
+      '#group' => 'advanced',
+    ];
+
+    $form['cant_login_integration_config']['cant_login_response_mapping'] = [
+      '#type' => 'textarea',
+      '#title' => t('Response Code Mapping'),
+      '#required' => TRUE,
+      '#description' => $this->t('Cant Login API Response Code Mapping'),
+      '#default_value' => $this->get('cant_login_response_mapping'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['cant_login_integration_config']['error_mid_down'] = [
+      '#type' => 'textarea',
+      '#title' => t('Error Message MID Down'),
+      '#size' => 500,
+      '#required' => TRUE,
+      '#description' => $this->t('General Error Message across all forms of my account if MID is down.'),
+      '#default_value' => $this->get('error_mid_down'),
+      '#translatable' => TRUE,
+    ];
+  }
+
+
+  /**
+   * Reset Password Configuration.
+   */
+  private function resetPasswordConfig(&$form) {
+    $form['cant_login_reset_password_config'] = [
+      '#type' => 'details',
+      '#title' => t("Reset Password"),
+      '#group' => 'advanced',
+    ];
+
+    $content = $this->get('forgot_password_success_message');
+    $form['cant_login_reset_password_config']['forgot_password_success_message'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('Forgot Password Success Message'),
+      '#default_value' => $content['value'],
+      '#format' => $content['format'],
+      '#required' => TRUE,
+      '#translatable' => TRUE,
+    ];
+
+
+    $content = $this->get('reset_password_success_message');
+    $form['cant_login_reset_password_config']['reset_password_success_message'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('Reset Password Success Message'),
+      '#default_value' => $content['value'],
+      '#format' => $content['format'],
+      '#required' => TRUE,
+      '#translatable' => TRUE,
+    ];
+
+    $content = $this->get('expired_message');
+    $form['cant_login_reset_password_config']['expired_message'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('Expired Message'),
+      '#default_value' => $content['value'],
+      '#format' => $content['format'],
+      '#required' => TRUE,
+      '#translatable' => TRUE,
+    ];
+  }
+
 }
