@@ -28,7 +28,6 @@ function games_config_help($route_name, RouteMatchInterface $route_match) {
 
 function games_config_form_alter(&$form, $form_state, $form_id) {
     $submitAction = false;
-    dpm($form_id);
     switch($form_id) {
         case 'node_game_form':
         case 'node_game_edit_form':
