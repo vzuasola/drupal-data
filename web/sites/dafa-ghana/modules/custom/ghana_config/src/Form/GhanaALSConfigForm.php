@@ -164,10 +164,10 @@ class GhanaALSConfigForm extends FormBase {
       '#group' => 'advanced',
     ];
 
-    $content = $this->get('forgot_username_success_message');
-    $form['cant_login_reset_password_config']['forgot_username_success_message'] = [
+    $content = $this->get('forgot_password_success_message');
+    $form['cant_login_reset_password_config']['forgot_password_success_message'] = [
       '#type' => 'text_format',
-      '#title' => $this->t('Forgot Username Success Message'),
+      '#title' => $this->t('Forgot Password Success Message'),
       '#default_value' => $content['value'],
       '#format' => $content['format'],
       '#required' => TRUE,
