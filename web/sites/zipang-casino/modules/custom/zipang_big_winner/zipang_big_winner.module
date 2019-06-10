@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains zipang_big_winner.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function zipang_big_winner_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the zipang_big_winner module.
+    case 'help.page.zipang_big_winner':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Zipang Big Winner') . '</p>';
+      return $output;
+
+    default:
+  }
+}

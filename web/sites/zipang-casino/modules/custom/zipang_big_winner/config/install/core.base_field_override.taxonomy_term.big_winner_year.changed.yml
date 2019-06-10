@@ -1,0 +1,18 @@
+uuid: f54f56dd-c98b-4af4-a763-16e23c9dabee
+langcode: ja
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.big_winner_year
+id: taxonomy_term.big_winner_year.changed
+field_name: changed
+entity_type: taxonomy_term
+bundle: big_winner_year
+label: Changed
+description: 'The time that the term was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

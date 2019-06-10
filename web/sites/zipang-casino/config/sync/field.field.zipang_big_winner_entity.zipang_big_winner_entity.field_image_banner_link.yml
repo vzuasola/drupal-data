@@ -1,0 +1,20 @@
+uuid: 174c4e85-e561-4d76-a652-0ef5fae18a80
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.zipang_big_winner_entity.field_image_banner_link
+  module:
+    - zipang_big_winner
+id: zipang_big_winner_entity.zipang_big_winner_entity.field_image_banner_link
+field_name: field_image_banner_link
+entity_type: zipang_big_winner_entity
+bundle: zipang_big_winner_entity
+label: 'Image Banner Link'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

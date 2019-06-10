@@ -1,0 +1,18 @@
+zipang_big_winner.list:
+  title: 'Zipang Big Winner Configuration'
+  description: 'List of Zipang Big Winner Entities'
+  parent: system.admin_config
+  route_name: zipang_big_winner.admin_settings
+
+# Zipang big winner entity menu items definition
+entity.zipang_big_winner_entity.collection:
+  title: 'Zipang big winner entity list'
+  route_name: entity.zipang_big_winner_entity.collection
+  description: 'List Zipang big winner entity entities'
+  parent: zipang_big_winner.list
+
+zipang_big_winner_entity.admin.structure.settings:
+  title: Zipang big winner entity settings
+  description: 'Configure Zipang big winner entity entities'
+  route_name: zipang_big_winner_entity.settings
+  parent: zipang_big_winner.list

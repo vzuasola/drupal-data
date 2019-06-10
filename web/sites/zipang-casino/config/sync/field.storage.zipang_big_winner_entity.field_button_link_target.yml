@@ -1,0 +1,27 @@
+uuid: ad1d698c-9a8b-4cdc-abfa-a6bb19aa7559
+langcode: ja
+status: true
+dependencies:
+  module:
+    - options
+    - zipang_big_winner
+id: zipang_big_winner_entity.field_button_link_target
+field_name: field_button_link_target
+entity_type: zipang_big_winner_entity
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: _target
+      label: 'New Tab'
+    -
+      value: _self
+      label: 'Same Window'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,30 @@
+uuid: 8a04368f-cd9d-4818-a793-3a6cd0164636
+langcode: ja
+status: true
+dependencies:
+  module:
+    - file
+    - image
+    - zipang_big_winner
+id: zipang_big_winner_entity.field_image_banner
+field_name: field_image_banner
+entity_type: zipang_big_winner_entity
+type: image
+settings:
+  uri_scheme: public
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  target_type: file
+  display_field: false
+  display_default: false
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
