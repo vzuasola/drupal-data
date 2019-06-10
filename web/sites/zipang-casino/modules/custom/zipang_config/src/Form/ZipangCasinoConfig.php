@@ -303,5 +303,12 @@ class ZipangCasinoConfig extends FormBase {
       '#default_value' => $this->get('payment_method_breadcrumb'),
       '#translatable' => true,
     ];
+
+    $form['inner_breadcrumb']['download_breadcrumb'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Download'),
+      '#default_value' => $this->get('download_breadcrumb'),
+      '#translatable' => true,
+    ];
   }
 }
