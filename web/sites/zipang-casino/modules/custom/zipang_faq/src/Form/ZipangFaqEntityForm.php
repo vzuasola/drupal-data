@@ -6,7 +6,7 @@ use Drupal\Core\Entity\ContentEntityForm;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Form controller for Zipang FAQ Entity edit forms.
+ * Form controller for Zipang faq entity edit forms.
  *
  * @ingroup zipang_faq
  */
@@ -34,13 +34,13 @@ class ZipangFaqEntityForm extends ContentEntityForm {
 
     switch ($status) {
       case SAVED_NEW:
-        drupal_set_message($this->t('Created the %label Zipang FAQ Entity.', [
+        drupal_set_message($this->t('Created the %label Zipang faq entity.', [
           '%label' => $entity->label(),
         ]));
         break;
 
       default:
-        drupal_set_message($this->t('Saved the %label Zipang FAQ Entity.', [
+        drupal_set_message($this->t('Saved the %label Zipang faq entity.', [
           '%label' => $entity->label(),
         ]));
     }

@@ -1,4 +1,4 @@
-uuid: 297dbe06-2397-4583-9dec-2c5550c5d3d3
+uuid: b72b0cbe-3b10-41aa-ba21-033d1e504459
 langcode: ja
 status: true
 dependencies:
@@ -9,6 +9,8 @@ dependencies:
   module:
     - text
     - zipang_faq
+_core:
+  default_config_hash: PCZHj0fVA_-fptr91sVc1cBX4IuIuw3qUeTSUYJe7pc
 id: zipang_f_a_q_entity.zipang_f_a_q_entity.default
 targetEntityType: zipang_f_a_q_entity
 bundle: zipang_f_a_q_entity

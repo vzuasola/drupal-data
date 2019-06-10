@@ -1,4 +1,4 @@
-uuid: d65b21c5-9b85-42eb-8df9-2d2e2b691d9a
+uuid: 1a9f753d-464f-4f69-b8aa-8e6953884d5b
 langcode: ja
 status: true
 dependencies:
@@ -6,6 +6,8 @@ dependencies:
     - taxonomy.vocabulary.faq_category
   module:
     - text
+_core:
+  default_config_hash: pr5Q7Ridu6F8csrpo7qV1Fjyfb0cwICyQmy6jznnZ5k
 id: taxonomy_term.faq_category.description
 field_name: description
 entity_type: taxonomy_term

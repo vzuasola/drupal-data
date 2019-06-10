@@ -1,9 +1,11 @@
-uuid: 54bd544b-e5fb-4e1e-8173-03846d9f1bfb
+uuid: 986e5a0e-829c-45fb-9e32-91630c22a2e0
 langcode: ja
 status: true
 dependencies:
   config:
     - taxonomy.vocabulary.faq_category
+_core:
+  default_config_hash: 17ALuHjDplUoYzaxYqpZxGMw58O1dNA09HeM7RG9o3o
 id: taxonomy_term.faq_category.changed
 field_name: changed
 entity_type: taxonomy_term

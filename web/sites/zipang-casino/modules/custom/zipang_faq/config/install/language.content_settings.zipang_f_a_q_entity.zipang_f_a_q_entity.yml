@@ -1,4 +1,4 @@
-uuid: bb920714-0b9f-4079-9d96-d67729d23c9a
+uuid: 70459b56-f854-4395-9ab1-a405eb07972d
 langcode: ja
 status: true
 dependencies:
@@ -10,8 +10,10 @@ third_party_settings:
     enabled: true
     bundle_settings:
       untranslatable_fields_hide: '0'
+_core:
+  default_config_hash: x3ADqXsuLBZpwwSYEzCmsMZbg5BBezoJ2WKFlExs6m4
 id: zipang_f_a_q_entity.zipang_f_a_q_entity
 target_entity_type_id: zipang_f_a_q_entity
 target_bundle: zipang_f_a_q_entity
-default_langcode: site_default
+default_langcode: current_interface
 language_alterable: true

@@ -1,4 +1,4 @@
-# Zipang FAQ Entity routing definition
+# Zipang faq entity routing definition
 zipang_f_a_q_entity.settings_tab:
   route_name: zipang_f_a_q_entity.settings
   title: 'Settings'
