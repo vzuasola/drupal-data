@@ -1,0 +1,19 @@
+
+# Zipang 404 Image Entity menu items definition
+zipang_404_image_entity.list:
+  title: 'Zipang 404 Image Default Configuration'
+  description: 'List Zipang 404 Image default entities'
+  parent: system.admin_config
+  route_name: zipang_404.admin_settings
+
+entity.zipang_404_image_entity.collection:
+  title: 'Zipang 404 Image Entity list'
+  route_name: entity.zipang_404_image_entity.collection
+  description: 'List Zipang 404 Image Entity entities'
+  parent: zipang_404_image_entity.list
+
+zipang_404_image_entity.admin.structure.settings:
+  title: Zipang 404 Image Entity settings
+  description: 'Configure Zipang 404 Image Entity entities'
+  route_name: zipang_404_image_entity.settings
+  parent: zipang_404_image_entity.list

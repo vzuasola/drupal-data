@@ -1,0 +1,7 @@
+zipang_404.admin_settings:
+  path: 'admin/config/Zipang/zipang_404'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Zipang 404 Images'
+  requirements:
+    _permission: 'administer site configuration'
