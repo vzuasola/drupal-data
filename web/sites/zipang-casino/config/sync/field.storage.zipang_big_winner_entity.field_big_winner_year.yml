@@ -1,0 +1,20 @@
+uuid: 4d1a3790-2e5d-4627-aab1-a9fd1932e85d
+langcode: ja
+status: true
+dependencies:
+  module:
+    - taxonomy
+    - zipang_big_winner
+id: zipang_big_winner_entity.field_big_winner_year
+field_name: field_big_winner_year
+entity_type: zipang_big_winner_entity
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
