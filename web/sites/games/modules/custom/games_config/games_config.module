@@ -99,6 +99,14 @@ function games_config_validate(&$form, FormStateInterface $form_state) {
   $publishDate = isset($publish[0]['value']) ? $publish[0]['value']->format('U') : NULL;
   $unpublishDate = isset($unpublish[0]['value']) ? $unpublish[0]['value']->format('U') : NULL;
 
+  if ($unpublishDate === null  && $publishDate) {
+    $form_state->setErrorByName('field_unpublish_date', t('End date cannot be empty.'));
+  }
+
+  if ($publishDate === null  && $unpublishDate) {
+    $form_state->setErrorByName('field_unpublish_date', t('Start date cannot be empty.'));
+  }
+
   if ($unpublishDate && $unpublishDate < $publishDate) {
     $form_state->setErrorByName('field_unpublish_date', t('Under maintenance end date should be greater than the start date.'));
   }
