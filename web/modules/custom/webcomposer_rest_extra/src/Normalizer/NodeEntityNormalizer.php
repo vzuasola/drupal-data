@@ -201,9 +201,9 @@ class NodeEntityNormalizer extends ContentEntityNormalizer {
   private function loadNodeById($id) {
     $lang = \Drupal::languageManager()->getCurrentLanguage(LanguageInterface::TYPE_CONTENT)->getId();
     $node = \Drupal::entityManager()->getStorage('node')->load($id);
+    $nodeTranslated = \Drupal::service('entity.repository')->getTranslationFromContext($node, $lang);
 
-    if ($node->isPublished()) {
-      $nodeTranslated = \Drupal::service('entity.repository')->getTranslationFromContext($node, $lang);
+    if ($nodeTranslated->isPublished()) {
       $nodeTranslatedArray = $nodeTranslated->toArray();
 
       foreach ($nodeTranslatedArray as $field => $item) {
