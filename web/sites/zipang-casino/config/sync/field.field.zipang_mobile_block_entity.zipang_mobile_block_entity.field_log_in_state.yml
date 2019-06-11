@@ -1,0 +1,25 @@
+uuid: 26314216-2322-4c92-876b-aaa36022293d
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.zipang_mobile_block_entity.field_log_in_state
+  module:
+    - options
+    - zipang_mobile_blocks
+_core:
+  default_config_hash: r3hjc63aFUie7SZ34OCKKU6queYCnsGbAZzhg7YoqHI
+id: zipang_mobile_block_entity.zipang_mobile_block_entity.field_log_in_state
+field_name: field_log_in_state
+entity_type: zipang_mobile_block_entity
+bundle: zipang_mobile_block_entity
+label: 'Log-in State'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: '0'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

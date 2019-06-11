@@ -1,0 +1,18 @@
+zipang_mobile_blocks.list:
+  title: 'Zipang Mobile Blocks Configuration'
+  description: 'List Zipang Mobile Block entities'
+  parent: system.admin_config
+  route_name: zipang_mobile_blocks.admin_settings
+
+# Zipang mobile block entity menu items definition
+entity.zipang_mobile_block_entity.collection:
+  title: 'Zipang mobile block entity list'
+  route_name: entity.zipang_mobile_block_entity.collection
+  description: 'List Zipang mobile block entity entities'
+  parent: zipang_mobile_blocks.list
+
+zipang_mobile_block_entity.admin.structure.settings:
+  title: Zipang mobile block entity settings
+  description: 'Configure Zipang mobile block entity entities'
+  route_name: zipang_mobile_block_entity.settings
+  parent: zipang_mobile_blocks.list

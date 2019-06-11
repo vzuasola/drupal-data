@@ -1,14 +1,16 @@
-uuid: c7bc8c50-c81d-48a8-8826-bf0bda126344
+uuid: 83125992-a9d2-443f-a70e-5455f08d597e
 langcode: ja
 status: true
 dependencies:
   module:
     - file
     - image
-    - zipang_404
-id: zipang_404_image_entity.field_image
-field_name: field_image
-entity_type: zipang_404_image_entity
+    - zipang_mobile_blocks
+_core:
+  default_config_hash: nktDedpLeWz_3XDDMHrWJKpXvpPpBBIVIVNsxR7ILrA
+id: zipang_mobile_block_entity.field_image_banner
+field_name: field_image_banner
+entity_type: zipang_mobile_block_entity
 type: image
 settings:
   uri_scheme: public

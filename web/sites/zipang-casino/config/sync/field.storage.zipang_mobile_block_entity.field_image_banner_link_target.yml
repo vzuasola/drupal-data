@@ -1,0 +1,29 @@
+uuid: 951fac22-a783-4ef9-9c39-76092f9f2e14
+langcode: ja
+status: true
+dependencies:
+  module:
+    - options
+    - zipang_mobile_blocks
+_core:
+  default_config_hash: qHORCE_2mLPMF63ezFyVYeT0lblt1Dkd1cU0kgotV2E
+id: zipang_mobile_block_entity.field_image_banner_link_target
+field_name: field_image_banner_link_target
+entity_type: zipang_mobile_block_entity
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: _target
+      label: 'New Tab'
+    -
+      value: _self
+      label: 'Same Window'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

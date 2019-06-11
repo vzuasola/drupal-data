@@ -1,0 +1,24 @@
+uuid: 1ec32c18-f875-48ee-b930-a974977d4212
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.zipang_mobile_block_entity.field_add_border
+  module:
+    - zipang_mobile_blocks
+id: zipang_mobile_block_entity.zipang_mobile_block_entity.field_add_border
+field_name: field_add_border
+entity_type: zipang_mobile_block_entity
+bundle: zipang_mobile_block_entity
+label: 'Add Border'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

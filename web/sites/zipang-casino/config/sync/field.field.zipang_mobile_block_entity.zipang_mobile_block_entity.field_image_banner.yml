@@ -1,26 +1,28 @@
-uuid: 74f59673-6caf-4cd9-88bb-273cd4a86761
+uuid: 7f62f658-d995-48ca-b7a3-aa14350d7b6a
 langcode: ja
 status: true
 dependencies:
   config:
-    - field.storage.zipang_404_image_entity.field_image
+    - field.storage.zipang_mobile_block_entity.field_image_banner
   module:
     - content_translation
     - image
-    - zipang_404
+    - zipang_mobile_blocks
 third_party_settings:
   content_translation:
     translation_sync:
-      alt: alt
-      title: title
-      file: '0'
-id: zipang_404_image_entity.zipang_404_image_entity.field_image
-field_name: field_image
-entity_type: zipang_404_image_entity
-bundle: zipang_404_image_entity
-label: Image
+      file: file
+      alt: '0'
+      title: '0'
+_core:
+  default_config_hash: oQbV5Et8OMOxfZgMpBtnOXXcyBxxoH-hxPRn9CYAJYU
+id: zipang_mobile_block_entity.zipang_mobile_block_entity.field_image_banner
+field_name: field_image_banner
+entity_type: zipang_mobile_block_entity
+bundle: zipang_mobile_block_entity
+label: 'Image Banner'
 description: ''
-required: true
+required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''
