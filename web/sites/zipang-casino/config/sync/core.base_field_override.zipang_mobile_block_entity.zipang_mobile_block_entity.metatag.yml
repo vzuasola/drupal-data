@@ -1,0 +1,20 @@
+uuid: dfb14b66-7689-46ec-b72e-e91ad984a4f3
+langcode: ja
+status: true
+dependencies:
+  module:
+    - zipang_mobile_blocks
+_core:
+  default_config_hash: Js9uqNgD5C0ps2ia1Ai3yj8082QE4zz3z8YseBrPzrY
+id: zipang_mobile_block_entity.zipang_mobile_block_entity.metatag
+field_name: metatag
+entity_type: zipang_mobile_block_entity
+bundle: zipang_mobile_block_entity
+label: Metatags
+description: 'The metatags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

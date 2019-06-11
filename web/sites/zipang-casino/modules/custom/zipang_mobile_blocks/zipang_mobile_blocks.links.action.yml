@@ -1,0 +1,5 @@
+entity.zipang_mobile_block_entity.add_form:
+  route_name: entity.zipang_mobile_block_entity.add_form
+  title: 'Add Zipang mobile block entity'
+  appears_on:
+    - entity.zipang_mobile_block_entity.collection

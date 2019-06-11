@@ -1,0 +1,19 @@
+uuid: 854ade97-f463-4577-bcb4-0656c20ea8e3
+langcode: ja
+status: true
+dependencies:
+  module:
+    - content_translation
+    - zipang_mobile_blocks
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+_core:
+  default_config_hash: oj641C8fLR9T6Qatg1diuowGBJUkp6aD8vKJ8BRWzYY
+id: zipang_mobile_block_entity.zipang_mobile_block_entity
+target_entity_type_id: zipang_mobile_block_entity
+target_bundle: zipang_mobile_block_entity
+default_langcode: site_default
+language_alterable: true

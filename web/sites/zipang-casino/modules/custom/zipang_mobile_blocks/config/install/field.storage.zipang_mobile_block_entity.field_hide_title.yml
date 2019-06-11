@@ -1,0 +1,18 @@
+uuid: 7d2ad503-17cf-4a41-a34c-d4343413f468
+langcode: ja
+status: true
+dependencies:
+  module:
+    - zipang_mobile_blocks
+id: zipang_mobile_block_entity.field_hide_title
+field_name: field_hide_title
+entity_type: zipang_mobile_block_entity
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
