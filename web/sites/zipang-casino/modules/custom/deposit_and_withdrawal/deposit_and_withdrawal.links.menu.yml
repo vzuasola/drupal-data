@@ -1,0 +1,21 @@
+
+# Deposit and withdrawal entity menu items definition
+
+deposit_and_withdrawal.list:
+  title: 'Zipang deposit and withdrawal entity'
+  description: 'List zipang deposit and withdrawal entities'
+  parent: system.admin_config
+  route_name: deposit_and_withdrawal.admin_settings
+
+
+entity.deposit_and_withdrawal_entity.collection:
+  title: 'Deposit and withdrawal entity list'
+  route_name: entity.deposit_and_withdrawal_entity.collection
+  description: 'List Deposit and withdrawal entity entities'
+  parent: deposit_and_withdrawal.list
+
+deposit_and_withdrawal.admin.structure.settings:
+  title: Deposit and withdrawal entity settings
+  description: 'Configure Deposit and withdrawal entity entities'
+  route_name: deposit_and_withdrawal_entity.settings
+  parent: deposit_and_withdrawal.list

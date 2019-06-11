@@ -1,0 +1,109 @@
+uuid: c1d4e0b7-f0da-4b4b-a289-d1987d000b3f
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.field.deposit_and_withdrawal_entity.deposit_and_withdrawal_entity.field_banner
+    - field.field.deposit_and_withdrawal_entity.deposit_and_withdrawal_entity.field_body
+    - field.field.deposit_and_withdrawal_entity.deposit_and_withdrawal_entity.field_button_label
+    - field.field.deposit_and_withdrawal_entity.deposit_and_withdrawal_entity.field_button_url
+    - field.field.deposit_and_withdrawal_entity.deposit_and_withdrawal_entity.field_configurable_url
+    - field.field.deposit_and_withdrawal_entity.deposit_and_withdrawal_entity.field_summary
+    - field.field.deposit_and_withdrawal_entity.deposit_and_withdrawal_entity.field_thumbnail
+    - field.field.deposit_and_withdrawal_entity.deposit_and_withdrawal_entity.field_title
+    - field.field.deposit_and_withdrawal_entity.deposit_and_withdrawal_entity.field_type
+    - image.style.thumbnail
+  module:
+    - deposit_and_withdrawal
+    - image
+    - text
+id: deposit_and_withdrawal_entity.deposit_and_withdrawal_entity.default
+targetEntityType: deposit_and_withdrawal_entity
+bundle: deposit_and_withdrawal_entity
+mode: default
+content:
+  field_banner:
+    weight: 4
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_body:
+    weight: 6
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_button_label:
+    weight: 8
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_button_url:
+    weight: 11
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_configurable_url:
+    weight: 10
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_summary:
+    weight: 3
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_thumbnail:
+    weight: 5
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_type:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  langcode:
+    type: language_select
+    weight: 0
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  translation:
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  name: true
+  user_id: true

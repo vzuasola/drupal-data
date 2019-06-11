@@ -1,0 +1,37 @@
+<?php 
+
+/**
+ * Implements hook_uninstall
+ */
+function deposit_and_withdrawal_uninstall() {
+  $keys = [
+    'core.base_field_override.deposit_and_withdrawal_entity.deposit_and_withdrawal_entity.metatag',
+    'core.base_field_override.deposit_and_withdrawal_entity.deposit_and_withdrawal_entity.user_id',
+    'core.entity_form_display.deposit_and_withdrawal_entity.deposit_and_withdrawal_entity.default',
+    'core.entity_view_display.deposit_and_withdrawal_entity.deposit_and_withdrawal_entity.default',
+    'field.field.deposit_and_withdrawal_entity.deposit_and_withdrawal_entity.field_banner',
+    'field.field.deposit_and_withdrawal_entity.deposit_and_withdrawal_entity.field_body',
+    'field.field.deposit_and_withdrawal_entity.deposit_and_withdrawal_entity.field_button_label',
+    'field.field.deposit_and_withdrawal_entity.deposit_and_withdrawal_entity.field_button_url',
+    'field.field.deposit_and_withdrawal_entity.deposit_and_withdrawal_entity.field_configurable_url',
+    'field.field.deposit_and_withdrawal_entity.deposit_and_withdrawal_entity.field_summary',
+    'field.field.deposit_and_withdrawal_entity.deposit_and_withdrawal_entity.field_thumbnail',
+    'field.field.deposit_and_withdrawal_entity.deposit_and_withdrawal_entity.field_title',
+    'field.field.deposit_and_withdrawal_entity.deposit_and_withdrawal_entity.field_type',
+    'field.storage.deposit_and_withdrawal_entity.field_banner',
+    'field.storage.deposit_and_withdrawal_entity.field_body',
+    'field.storage.deposit_and_withdrawal_entity.field_button_label',
+    'field.storage.deposit_and_withdrawal_entity.field_button_url',
+    'field.storage.deposit_and_withdrawal_entity.field_configurable_url',
+    'field.storage.deposit_and_withdrawal_entity.field_summary',
+    'field.storage.deposit_and_withdrawal_entity.field_thumbnail',
+    'field.storage.deposit_and_withdrawal_entity.field_title',
+    'field.storage.deposit_and_withdrawal_entity.field_type',
+    'language.content_settings.deposit_and_withdrawal_entity.deposit_and_withdrawal_entity',
+    'views.view.deposit_and_withdrawal_method',
+  ];
+
+  foreach ($keys as $key) {
+    \Drupal::configFactory()->getEditable($key)->delete();
+  }
+}

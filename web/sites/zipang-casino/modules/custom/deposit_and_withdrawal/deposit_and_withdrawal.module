@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains deposit_and_withdrawal.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function deposit_and_withdrawal_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the deposit_and_withdrawal module.
+    case 'help.page.deposit_and_withdrawal':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Description') . '</p>';
+      return $output;
+
+    default:
+  }
+}
