@@ -1,12 +1,12 @@
 uuid: 34d06f84-3028-4f6a-81b4-805f7e111554
-langcode: en
+langcode: ja
 status: true
 dependencies:
   config:
     - field.storage.zipang_rightside_block_entity.field_image_banner_link_target
   module:
-    - zipang_rightside_blocks
     - options
+    - zipang_rightside_blocks
 id: zipang_rightside_block_entity.zipang_rightside_block_entity.field_image_banner_link_target
 field_name: field_image_banner_link_target
 entity_type: zipang_rightside_block_entity

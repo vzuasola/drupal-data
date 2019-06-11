@@ -1,0 +1,16 @@
+settings:
+  allowed_values:
+    -
+      label: Orange
+    -
+      label: Blue
+    -
+      label: Sky
+    -
+      label: White
+    -
+      label: Pink
+    -
+      label: Red
+    -
+      label: 'No Color'

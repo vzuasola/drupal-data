@@ -1,0 +1,18 @@
+zipang_mobile_games.list:
+  title: 'Zipang Mobile Games Configuration'
+  description: 'List Zipang Mobile Games entities'
+  parent: system.admin_config
+  route_name: zipang_mobile_games.admin_settings
+
+# Zipang mobile games entity menu items definition
+entity.zipang_mobile_games_entity.collection:
+  title: 'Zipang mobile games entity list'
+  route_name: entity.zipang_mobile_games_entity.collection
+  description: 'List Zipang mobile games entity entities'
+  parent: zipang_mobile_games.list
+
+zipang_mobile_games_entity.admin.structure.settings:
+  title: Zipang mobile games entity settings
+  description: 'Configure Zipang mobile games entity entities'
+  route_name: zipang_mobile_games_entity.settings
+  parent: zipang_mobile_games.list

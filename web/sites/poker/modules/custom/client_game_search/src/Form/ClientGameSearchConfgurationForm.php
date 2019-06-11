@@ -40,6 +40,7 @@ class ClientGameSearchConfgurationForm extends FormBase {
     ];
     $this->recommendationSection($form);
     $this->searchSection($form);
+    $this->filterSection($form);
     return $form;
   }
 
@@ -70,6 +71,7 @@ class ClientGameSearchConfgurationForm extends FormBase {
       '#translatable' => TRUE,
     );
   }
+
   private function recommendationSection(&$form) {
     $form['recommendation_group'] = array(
       '#type' => 'details',
@@ -94,6 +96,37 @@ class ClientGameSearchConfgurationForm extends FormBase {
       '#description' => $this->t('The text to display on recommendation message when no recommendation is set.'),
       '#default_value' => $recommendation_message_negative['value'] ?? null,
       '#format' => $recommendation_message_negative['format'],
+      '#required' => TRUE,
+      '#translatable' => TRUE,
+    );
+  }
+
+  private function filterSection(&$form) {
+    $form['filter_group'] = array(
+      '#type' => 'details',
+      '#title' => $this->t('Filter Settings'),
+      '#collapsible' => TRUE,
+      '#group' => 'client_search_tab'
+    );
+
+    $filter_message = $this->get('filter_message');
+    $form['filter_group']['filter_message'] = array(
+      '#type' => 'text_format',
+      '#title' => $this->t('No Result on Filter (with Recommendation)'),
+      '#description' => $this->t('The text to display when there are no result for filter and recommendation is set.'),
+      '#default_value' => $filter_message['value'],
+      '#format' => $filter_message['format'],
+      '#required' => TRUE,
+      '#translatable' => TRUE,
+    );
+
+    $filter_message_negative = $this->get('filter_message_negative');
+    $form['filter_group']['filter_message_negative'] = array(
+      '#type' => 'text_format',
+      '#title' => $this->t('No Result on Filter (No Recommendation)'),
+      '#description' => $this->t('The text to display when there are no result for filter and no recommendation.'),
+      '#default_value' => $filter_message_negative['value'],
+      '#format' => $filter_message_negative['format'],
       '#required' => TRUE,
       '#translatable' => TRUE,
     );

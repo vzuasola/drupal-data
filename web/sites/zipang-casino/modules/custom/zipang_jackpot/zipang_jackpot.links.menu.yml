@@ -1,0 +1,18 @@
+zipang_jackpot.list:
+  title: 'Zipang Jackpot Games Configuration'
+  description: 'List Zipang Jackpot Games entities'
+  parent: system.admin_config
+  route_name: zipang_jackpot.admin_settings
+
+# Zipang jackpot entity menu items definition
+entity.zipang_jackpot_entity.collection:
+  title: 'Zipang jackpot entity list'
+  route_name: entity.zipang_jackpot_entity.collection
+  description: 'List Zipang jackpot entity entities'
+  parent: zipang_jackpot.list
+
+zipang_jackpot_entity.admin.structure.settings:
+  title: Zipang jackpot entity settings
+  description: 'Configure Zipang jackpot entity entities'
+  route_name: zipang_jackpot_entity.settings
+  parent: zipang_jackpot.list

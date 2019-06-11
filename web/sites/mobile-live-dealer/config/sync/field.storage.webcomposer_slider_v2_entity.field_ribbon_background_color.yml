@@ -1,0 +1,20 @@
+uuid: 348f9b00-ebbd-4673-8362-e190befd980a
+langcode: en
+status: true
+dependencies:
+  module:
+    - color_field
+    - webcomposer_slider_v2
+id: webcomposer_slider_v2_entity.field_ribbon_background_color
+field_name: field_ribbon_background_color
+entity_type: webcomposer_slider_v2_entity
+type: color_field_type
+settings:
+  format: '#HEXHEX'
+module: color_field
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

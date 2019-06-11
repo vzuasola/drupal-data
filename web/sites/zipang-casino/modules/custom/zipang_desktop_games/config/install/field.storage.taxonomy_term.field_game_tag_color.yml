@@ -1,0 +1,42 @@
+uuid: fd7a9bd5-5167-415d-9e60-58d8561b3db5
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - taxonomy
+id: taxonomy_term.field_game_tag_color
+field_name: field_game_tag_color
+entity_type: taxonomy_term
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: orange
+      label: Orange
+    -
+      value: blue
+      label: Blue
+    -
+      value: sky
+      label: Sky
+    -
+      value: white
+      label: White
+    -
+      value: pink
+      label: Pink
+    -
+      value: red
+      label: Red
+    -
+      value: no-color
+      label: 'No Color'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -14,6 +14,4 @@ arcade_config.list.categories:
   title: 'Manage Arcade Game Categories'
   parent: arcade_config.admin_settings
   description: 'Manage Arcade Game Categories'
-  route_name: entity.taxonomy_vocabulary.overview_form
-  route_parameters:
-    taxonomy_vocabulary: 'arcade_game_category'
+  route_name: arcade_config.manage_category

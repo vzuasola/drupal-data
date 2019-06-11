@@ -1,0 +1,32 @@
+uuid: 8760c4b5-dc4d-4df4-be5a-1f33d6399211
+langcode: ja
+status: true
+dependencies:
+  module:
+    - file
+    - image
+    - webcomposer_partner
+_core:
+  default_config_hash: 2C1ylPwdvOmW1apJSMhniv1YpxIqHIYypgPzmYi64V4
+id: partner_entity.field_logo
+field_name: field_logo
+entity_type: partner_entity
+type: image
+settings:
+  uri_scheme: public
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  target_type: file
+  display_field: false
+  display_default: false
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

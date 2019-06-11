@@ -138,6 +138,28 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
         ],
       ],
 
+      'email' => [
+        'name' => 'Email',
+        'type' => 'textfield',
+        'settings' => [
+          'label' => [
+            '#title' => 'Email Label',
+            '#type' => 'textfield',
+            '#description' => 'The Label for Email field',
+          ],
+          'placeholder' => [
+            '#title' => 'Email placeholder label',
+            '#type' => 'textfield',
+            '#description' => 'label for Email field placeholder',
+          ],
+          'annotation' => [
+            '#title' => 'Email Annotation text',
+            '#type' => 'textarea',
+            '#description' => 'field annotation that will be displayed on focus',
+          ],
+        ],
+      ],
+
       'breakline_1' => [
         'name' => 'Break Line Markup',
         'type' => 'markup',

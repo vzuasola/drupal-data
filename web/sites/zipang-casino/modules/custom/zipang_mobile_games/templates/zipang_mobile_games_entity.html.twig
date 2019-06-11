@@ -1,0 +1,22 @@
+{#
+/**
+ * @file zipang_mobile_games_entity.html.twig
+ * Default theme implementation to present Zipang mobile games entity data.
+ *
+ * This template is used when viewing Zipang mobile games entity pages.
+ *
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_zipang_mobile_games_entity()
+ *
+ * @ingroup themeable
+ */
+#}
+<div{{ attributes.addClass('zipang_mobile_games_entity') }}>
+  {% if content %}
+    {{- content -}}
+  {% endif %}
+</div>

@@ -1,6 +1,0 @@
-games_page_loading.games_loading_configuration:
-  title: 'Games Page Loading Custom Configuration'
-  route_name: games_page_loading.games_loading_configuration
-  description: 'Configure the Games Page Loading Messages'
-  parent: games_config.admin_settings
-  weight: 11

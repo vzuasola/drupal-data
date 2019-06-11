@@ -1,6 +1,0 @@
-games_search.search_configuration:
-  title: 'Games Search Custom Configuration'
-  route_name: games_search.search_configuration
-  description: 'Configure the Games Search'
-  parent: games_config.admin_settings
-  weight: 10

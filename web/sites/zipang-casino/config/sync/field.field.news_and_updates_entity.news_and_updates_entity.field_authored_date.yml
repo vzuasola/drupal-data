@@ -1,5 +1,5 @@
 uuid: 84395ee0-6a08-4ed9-84c4-490fb21fcd02
-langcode: en
+langcode: ja
 status: true
 dependencies:
   config:
@@ -14,7 +14,7 @@ bundle: news_and_updates_entity
 label: 'Authored date'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value:
   -
     default_date_type: now

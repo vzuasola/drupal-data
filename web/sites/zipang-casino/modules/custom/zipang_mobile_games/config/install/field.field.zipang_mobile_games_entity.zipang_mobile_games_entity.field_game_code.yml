@@ -1,0 +1,20 @@
+uuid: 920e1a58-9a6c-46e5-841d-41fff8d0d93b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.zipang_mobile_games_entity.field_game_code
+  module:
+    - zipang_mobile_games
+id: zipang_mobile_games_entity.zipang_mobile_games_entity.field_game_code
+field_name: field_game_code
+entity_type: zipang_mobile_games_entity
+bundle: zipang_mobile_games_entity
+label: 'Game Code'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,22 @@
+uuid: 68a4a718-c7b6-4dfe-a14a-89cc4420628f
+langcode: ja
+status: true
+dependencies:
+  module:
+    - taxonomy
+    - zipang_desktop_games
+_core:
+  default_config_hash: Ikd2kVWOWtrnwGGKAcMdDXnHI5lj-4YmzXBDdE-Xt9I
+id: zipang_desktop_games_entity.field_game_tag
+field_name: field_game_tag
+entity_type: zipang_desktop_games_entity
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

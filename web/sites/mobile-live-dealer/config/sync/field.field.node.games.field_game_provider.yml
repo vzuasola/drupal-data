@@ -1,0 +1,21 @@
+uuid: ff2f2331-8a08-4f11-918b-5d612e32a0ce
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_game_provider
+    - node.type.games
+  module:
+    - options
+id: node.games.field_game_provider
+field_name: field_game_provider
+entity_type: node
+bundle: games
+label: 'Game Provider'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

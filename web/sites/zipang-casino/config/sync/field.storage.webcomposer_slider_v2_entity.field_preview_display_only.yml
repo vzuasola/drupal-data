@@ -1,0 +1,18 @@
+uuid: 86bf7176-2a45-4ff1-86be-7b2078b2605e
+langcode: ja
+status: true
+dependencies:
+  module:
+    - webcomposer_slider_v2
+id: webcomposer_slider_v2_entity.field_preview_display_only
+field_name: field_preview_display_only
+entity_type: webcomposer_slider_v2_entity
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

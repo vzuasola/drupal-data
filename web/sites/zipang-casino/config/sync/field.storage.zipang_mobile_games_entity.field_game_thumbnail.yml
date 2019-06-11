@@ -1,0 +1,32 @@
+uuid: 660d1742-d93f-4edb-8961-3866510e2fa4
+langcode: ja
+status: true
+dependencies:
+  module:
+    - file
+    - image
+    - zipang_mobile_games
+_core:
+  default_config_hash: mpQNcq-TzRVAVSNX9djTSam1D7228-55e4IOIRJg8-k
+id: zipang_mobile_games_entity.field_game_thumbnail
+field_name: field_game_thumbnail
+entity_type: zipang_mobile_games_entity
+type: image
+settings:
+  uri_scheme: public
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  target_type: file
+  display_field: false
+  display_default: false
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

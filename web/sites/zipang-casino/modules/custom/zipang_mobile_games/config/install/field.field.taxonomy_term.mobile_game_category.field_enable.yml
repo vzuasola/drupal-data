@@ -1,0 +1,23 @@
+uuid: a9a9df95-df4f-4731-8a98-84676e1de775
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_enable
+    - taxonomy.vocabulary.mobile_game_category
+id: taxonomy_term.mobile_game_category.field_enable
+field_name: field_enable
+entity_type: taxonomy_term
+bundle: mobile_game_category
+label: Enable
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

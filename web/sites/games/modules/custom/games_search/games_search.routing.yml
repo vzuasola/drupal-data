@@ -5,11 +5,3 @@ games_search.admin_settings:
     _title: 'Games Search Configuration'
   requirements:
     _permission: 'administer site configuration'
-
-games_search.search_configuration:
-  path: 'admin/games/search-config'
-  defaults:
-    _form: 'Drupal\games_search\Form\GamesSearchForm'
-    _title: 'Games Search Configuration'
-  requirements:
-    _permission: 'administer site configuration'

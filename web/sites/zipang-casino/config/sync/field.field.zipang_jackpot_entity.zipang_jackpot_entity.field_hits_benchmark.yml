@@ -1,0 +1,22 @@
+uuid: 5c194ef0-07c6-4263-a744-aacb222ec07e
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.zipang_jackpot_entity.field_hits_benchmark
+  module:
+    - zipang_jackpot
+_core:
+  default_config_hash: zG9q0FzNcL8iCT48OfB5Wdr4Paa2VR2cnY24LRtuaZY
+id: zipang_jackpot_entity.zipang_jackpot_entity.field_hits_benchmark
+field_name: field_hits_benchmark
+entity_type: zipang_jackpot_entity
+bundle: zipang_jackpot_entity
+label: 'Hits Benchmark'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

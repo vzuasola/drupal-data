@@ -1,12 +1,12 @@
 uuid: 53ae41e0-7cb5-4547-b879-2ac9fb9eb78f
-langcode: en
+langcode: ja
 status: true
 dependencies:
   config:
     - field.storage.zipang_rightside_block_entity.field_log_in_state
   module:
-    - zipang_rightside_blocks
     - options
+    - zipang_rightside_blocks
 id: zipang_rightside_block_entity.zipang_rightside_block_entity.field_log_in_state
 field_name: field_log_in_state
 entity_type: zipang_rightside_block_entity

@@ -1,0 +1,23 @@
+uuid: fa49eb2d-67a4-4633-9398-95164aa443ca
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.webcomposer_slider_v2_entity.field_banner_link_target
+  module:
+    - options
+    - webcomposer_slider_v2
+id: webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_banner_link_target
+field_name: field_banner_link_target
+entity_type: webcomposer_slider_v2_entity
+bundle: webcomposer_slider_v2_entity
+label: 'Pre Banner Link Target'
+description: 'The link behavior when clicked'
+required: true
+translatable: true
+default_value:
+  -
+    value: _top
+default_value_callback: ''
+settings: {  }
+field_type: list_string

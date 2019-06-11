@@ -1,0 +1,59 @@
+label: 'Mobile Game List'
+display:
+  default:
+    display_title: Master
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Apply
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      fields:
+        name:
+          label: Name
+          separator: ', '
+      title: 'Mobile Game List'
+  page_1:
+    display_title: Page
+    display_options:
+      fields:
+        field_enable_game:
+          label: Enabled
+          separator: ', '
+        field_game_title:
+          label: 'Game Title'
+          separator: ', '
+        field_game_category:
+          label: 'Game Category'
+          separator: ', '
+        field_game_code:
+          label: 'Game Code'
+          separator: ', '
+        field_game_tag:
+          label: 'Game Tag'
+          separator: ', '
+        field_enable_free_play:
+          label: 'Free Play'
+          separator: ', '
+        operations:
+          label: 'Operations links'
+      filters:
+        langcode:
+          expose:
+            label: 'Translation language'
+        field_game_category_target_id:
+          expose:
+            label: 'Game Category'
+        field_game_tag_target_id:
+          expose:
+            label: 'Game Tag'
+        field_enable_game_value:
+          expose:
+            label: Enabled
+        field_enable_free_play_value:
+          expose:
+            label: 'Free Play'
+  rest_export_1:
+    display_title: 'REST export'

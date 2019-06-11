@@ -1,0 +1,18 @@
+uuid: 6a163c85-8b51-4268-ae26-5705d99c1298
+langcode: ja
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.game_tag
+id: taxonomy_term.game_tag.changed
+field_name: changed
+entity_type: taxonomy_term
+bundle: game_tag
+label: Changed
+description: 'The time that the term was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed
