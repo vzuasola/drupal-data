@@ -1,0 +1,20 @@
+uuid: ade630e3-14dc-440a-a8c7-633da341172d
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.deposit_and_withdrawal_entity.field_configurable_url
+  module:
+    - deposit_and_withdrawal
+id: deposit_and_withdrawal_entity.deposit_and_withdrawal_entity.field_configurable_url
+field_name: field_configurable_url
+entity_type: deposit_and_withdrawal_entity
+bundle: deposit_and_withdrawal_entity
+label: 'Configurable URL'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
