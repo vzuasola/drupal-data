@@ -1,0 +1,29 @@
+uuid: 95f34b00-6d70-4979-8bdf-44e996d38c78
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.field.zipang_404_image_entity.zipang_404_image_entity.field_image
+  module:
+    - image
+    - zipang_404
+_core:
+  default_config_hash: 17opKDCVWULPq_no5oLmt_DEieEHUD5V7j9zeJpXr8U
+id: zipang_404_image_entity.zipang_404_image_entity.default
+targetEntityType: zipang_404_image_entity
+bundle: zipang_404_image_entity
+mode: default
+content:
+  field_image:
+    weight: 0
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden:
+  langcode: true
+  name: true
+  user_id: true
