@@ -97,13 +97,13 @@ function games_config_validate(&$form, FormStateInterface $form_state) {
   $unpublish = $form_state->getValue('field_um_end');
 
   if (is_array($publish[0]['value'])  || is_array($unpublish[0]['value'])) {
-      if (
-          $publish[0]['value']['time'] === "" ||
-          $publish[0]['value']['date'] === "" || 
-          $unpublish[0]['value']['time']  === "" || 
-          $unpublish[0]['value']['date']  === "") {
-          return;
-      }
+    if (
+      $publish[0]['value']['time'] === "" ||
+      $publish[0]['value']['date'] === "" || 
+      $unpublish[0]['value']['time']  === "" || 
+      $unpublish[0]['value']['date']  === "") {
+      return;
+    }
   }
 
   $publishDate = isset($publish[0]['value']) ? $publish[0]['value']->format('U') : NULL;
