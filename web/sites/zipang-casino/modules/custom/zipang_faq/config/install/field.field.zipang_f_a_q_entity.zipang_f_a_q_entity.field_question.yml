@@ -1,4 +1,4 @@
-uuid: 566ef1d5-2de7-4737-aba2-9a765b31a76c
+uuid: e572d5a9-cc58-4d66-b346-b274c3bac3f7
 langcode: ja
 status: true
 dependencies:
@@ -6,6 +6,8 @@ dependencies:
     - field.storage.zipang_f_a_q_entity.field_question
   module:
     - zipang_faq
+_core:
+  default_config_hash: GbxYw6wkDSwtSJRObaVPjUYBE5dEGv2KQsQK45x9B_s
 id: zipang_f_a_q_entity.zipang_f_a_q_entity.field_question
 field_name: field_question
 entity_type: zipang_f_a_q_entity

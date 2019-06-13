@@ -81,7 +81,13 @@ settings:
       label: 'Sky Wind'
     -
       value: microgaming
-      label: 'Microgaming'
+      label: Microgaming
+    -
+      value: owsports
+      label: OWSports
+    -
+      value: dafasports
+      label: DafaSports
   allowed_values_function: ''
 module: options
 locked: false

@@ -9,7 +9,7 @@ id: node.games_2_0.field_v2_allribbon_configuration
 field_name: field_v2_allribbon_configuration
 entity_type: node
 bundle: games_2_0
-label: 'All Catergory Ribbon Configuration'
+label: 'All Category Ribbon Configuration'
 description: ''
 required: false
 translatable: true

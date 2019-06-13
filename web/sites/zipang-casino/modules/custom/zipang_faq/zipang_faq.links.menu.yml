@@ -4,15 +4,15 @@ zipang_faq.list:
   parent: system.admin_config
   route_name: zipang_faq.admin_settings
 
-# Zipang FAQ Entity menu items definition
+# Zipang faq entity menu items definition
 entity.zipang_f_a_q_entity.collection:
-  title: 'Zipang FAQ Entity list'
+  title: 'Zipang faq entity list'
   route_name: entity.zipang_f_a_q_entity.collection
-  description: 'List Zipang FAQ Entity entities'
+  description: 'List Zipang faq entity entities'
   parent: zipang_faq.list
 
 zipang_f_a_q_entity.admin.structure.settings:
-  title: Zipang FAQ Entity settings
-  description: 'Configure Zipang FAQ Entity entities'
+  title: Zipang faq entity settings
+  description: 'Configure Zipang faq entity entities'
   route_name: zipang_f_a_q_entity.settings
   parent: zipang_faq.list

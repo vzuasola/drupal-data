@@ -5,7 +5,7 @@ namespace Drupal\zipang_faq\Entity;
 use Drupal\views\EntityViewsData;
 
 /**
- * Provides Views data for Zipang FAQ Entity entities.
+ * Provides Views data for Zipang faq entity entities.
  */
 class ZipangFaqEntityViewsData extends EntityViewsData {
 

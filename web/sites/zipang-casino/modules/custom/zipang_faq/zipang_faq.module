@@ -16,7 +16,7 @@ function zipang_faq_help($route_name, RouteMatchInterface $route_match) {
     case 'help.page.zipang_faq':
       $output = '';
       $output .= '<h3>' . t('About') . '</h3>';
-      $output .= '<p>' . t('Zipang FAQ') . '</p>';
+      $output .= '<p>' . t('Zipang Faq') . '</p>';
       return $output;
 
     default:

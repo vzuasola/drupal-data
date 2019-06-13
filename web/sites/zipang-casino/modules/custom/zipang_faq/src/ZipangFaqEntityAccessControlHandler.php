@@ -8,7 +8,7 @@ use Drupal\Core\Session\AccountInterface;
 use Drupal\Core\Access\AccessResult;
 
 /**
- * Access controller for the Zipang FAQ Entity entity.
+ * Access controller for the Zipang faq entity entity.
  *
  * @see \Drupal\zipang_faq\Entity\ZipangFaqEntity.
  */

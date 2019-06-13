@@ -10,13 +10,13 @@ use Drupal\Core\Entity\EntityTypeInterface;
 use Drupal\user\UserInterface;
 
 /**
- * Defines the Zipang FAQ Entity entity.
+ * Defines the Zipang faq entity entity.
  *
  * @ingroup zipang_faq
  *
  * @ContentEntityType(
  *   id = "zipang_f_a_q_entity",
- *   label = @Translation("Zipang FAQ Entity"),
+ *   label = @Translation("Zipang faq entity"),
  *   handlers = {
  *     "view_builder" = "Drupal\Core\Entity\EntityViewBuilder",
  *     "list_builder" = "Drupal\zipang_faq\ZipangFaqEntityListBuilder",
@@ -153,7 +153,7 @@ class ZipangFaqEntity extends ContentEntityBase implements ZipangFaqEntityInterf
 
     $fields['user_id'] = BaseFieldDefinition::create('entity_reference')
       ->setLabel(t('Authored by'))
-      ->setDescription(t('The user ID of author of the Zipang FAQ Entity entity.'))
+      ->setDescription(t('The user ID of author of the Zipang faq entity entity.'))
       ->setRevisionable(TRUE)
       ->setSetting('target_type', 'user')
       ->setSetting('handler', 'default')
@@ -178,7 +178,7 @@ class ZipangFaqEntity extends ContentEntityBase implements ZipangFaqEntityInterf
 
     $fields['name'] = BaseFieldDefinition::create('string')
       ->setLabel(t('Name'))
-      ->setDescription(t('The name of the Zipang FAQ Entity entity.'))
+      ->setDescription(t('The name of the Zipang faq entity entity.'))
       ->setSettings([
         'max_length' => 50,
         'text_processing' => 0,
@@ -198,7 +198,7 @@ class ZipangFaqEntity extends ContentEntityBase implements ZipangFaqEntityInterf
 
     $fields['status'] = BaseFieldDefinition::create('boolean')
       ->setLabel(t('Publishing status'))
-      ->setDescription(t('A boolean indicating whether the Zipang FAQ Entity is published.'))
+      ->setDescription(t('A boolean indicating whether the Zipang faq entity is published.'))
       ->setDefaultValue(TRUE);
 
     $fields['created'] = BaseFieldDefinition::create('created')

@@ -4,13 +4,13 @@
  * @file
  * Contains zipang_f_a_q_entity.page.inc.
  *
- * Page callback for Zipang FAQ Entity entities.
+ * Page callback for Zipang faq entity entities.
  */
 
 use Drupal\Core\Render\Element;
 
 /**
- * Prepares variables for Zipang FAQ Entity templates.
+ * Prepares variables for Zipang faq entity templates.
  *
  * Default template: zipang_f_a_q_entity.html.twig.
  *

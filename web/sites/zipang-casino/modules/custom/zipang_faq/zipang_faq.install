@@ -9,7 +9,6 @@ function zipang_faq_uninstall() {
     'core.base_field_override.taxonomy_term.faq_category.description',
     'core.base_field_override.taxonomy_term.faq_category.name',
     'core.base_field_override.taxonomy_term.faq_category.path',
-    'core.base_field_override.zipang_f_a_q_entity.zipang_f_a_q_entity.user_id',
     'core.entity_form_display.zipang_f_a_q_entity.zipang_f_a_q_entity.default',
     'core.entity_view_display.zipang_f_a_q_entity.zipang_f_a_q_entity.default',
     'field.field.zipang_f_a_q_entity.zipang_f_a_q_entity.field_answers',
