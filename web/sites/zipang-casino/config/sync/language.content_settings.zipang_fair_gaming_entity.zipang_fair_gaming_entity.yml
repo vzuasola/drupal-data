@@ -1,0 +1,17 @@
+uuid: 10428ee8-9662-4a3e-bc6d-b0f84647ea92
+langcode: ja
+status: true
+dependencies:
+  module:
+    - content_translation
+    - zipang_fair_gaming
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: zipang_fair_gaming_entity.zipang_fair_gaming_entity
+target_entity_type_id: zipang_fair_gaming_entity
+target_bundle: zipang_fair_gaming_entity
+default_langcode: site_default
+language_alterable: true

@@ -1,0 +1,30 @@
+uuid: 2db9b738-700c-4419-b58a-b6538169335b
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.zipang_fair_gaming_entity.field_fair_gaming_year_category
+    - taxonomy.vocabulary.fair_gaming_year
+  module:
+    - zipang_fair_gaming
+id: zipang_fair_gaming_entity.zipang_fair_gaming_entity.field_fair_gaming_year_category
+field_name: field_fair_gaming_year_category
+entity_type: zipang_fair_gaming_entity
+bundle: zipang_fair_gaming_entity
+label: 'Fair Gaming Year Category'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      fair_gaming_year: fair_gaming_year
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

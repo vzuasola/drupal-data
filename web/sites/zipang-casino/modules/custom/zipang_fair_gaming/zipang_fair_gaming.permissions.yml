@@ -1,0 +1,22 @@
+add zipang fair gaming entity entities:
+  title: 'Create new Zipang fair gaming entity entities'
+
+administer zipang fair gaming entity entities:
+  title: 'Administer Zipang fair gaming entity entities'
+  description: 'Allow to access the administration form to configure Zipang fair gaming entity entities.'
+  restrict access: true
+
+delete zipang fair gaming entity entities:
+  title: 'Delete Zipang fair gaming entity entities'
+
+edit zipang fair gaming entity entities:
+  title: 'Edit Zipang fair gaming entity entities'
+
+access zipang fair gaming entity overview:
+  title: 'Access the Zipang fair gaming entity overview page'
+
+view published zipang fair gaming entity entities:
+  title: 'View published Zipang fair gaming entity entities'
+
+view unpublished zipang fair gaming entity entities:
+  title: 'View unpublished Zipang fair gaming entity entities'
