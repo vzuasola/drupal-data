@@ -1,0 +1,18 @@
+zipang_fair_gaming.list:
+  title: 'Zipang Fair Gaming Configuration'
+  description: 'List of Zipang Fair Gaming Entities'
+  parent: system.admin_config
+  route_name: zipang_fair_gaming.admin_settings
+
+# Zipang Fair Gaming entity menu items definition
+entity.zipang_fair_gaming_entity.collection:
+  title: 'Zipang Fair Gaming entity list'
+  route_name: entity.zipang_fair_gaming_entity.collection
+  description: 'List Zipang Fair Gaming entity entities'
+  parent: zipang_fair_gaming.list
+
+zipang_fair_gaming.admin.structure.settings:
+  title: Zipang Fair Gaming entity settings
+  description: 'Configure Zipang Fair Gaming entity entities'
+  route_name: zipang_fair_gaming_entity.settings
+  parent: zipang_fair_gaming.list
