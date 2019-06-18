@@ -20,3 +20,4 @@ attributes:
     label: 'Device'
     options:
       ios: 'iOS Device'
+      android: 'Android Device'
