@@ -16,3 +16,7 @@ attributes:
     label: 'Menu Tag'
     options:
       new: 'New Product'
+  device:
+    label: 'Device'
+    options:
+      ios: 'iOS Device'
