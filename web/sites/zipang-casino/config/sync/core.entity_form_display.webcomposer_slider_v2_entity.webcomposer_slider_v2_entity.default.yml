@@ -9,7 +9,7 @@ dependencies:
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_banner_link_target
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_content_position
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_disable_in_tablet
-    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_log_in
+    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_log_in_state
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_post_banner_blurb
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_post_banner_image
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_post_banner_link
@@ -22,6 +22,7 @@ dependencies:
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_unpublish_date
     - image.style.thumbnail
   module:
+    - conditional_fields
     - datetime
     - field_group
     - image
@@ -100,7 +101,25 @@ content:
     settings:
       rows: 5
       placeholder: ''
-    third_party_settings: {  }
+    third_party_settings:
+      conditional_fields:
+        09b26e01-699c-49bf-89d8-3e6d8532f70a:
+          dependee: field_log_in_state
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: '0'
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: webcomposer_slider_v2_entity
+          bundle: webcomposer_slider_v2_entity
     type: text_textarea
     region: content
   field_banner_image:
@@ -108,7 +127,25 @@ content:
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
-    third_party_settings: {  }
+    third_party_settings:
+      conditional_fields:
+        3d6c55f4-d148-4694-933f-7bcdcaba5d93:
+          dependee: field_log_in_state
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: '0'
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: webcomposer_slider_v2_entity
+          bundle: webcomposer_slider_v2_entity
     type: image_image
     region: content
   field_banner_link:
@@ -116,19 +153,73 @@ content:
     settings:
       placeholder_url: ''
       placeholder_title: ''
-    third_party_settings: {  }
+    third_party_settings:
+      conditional_fields:
+        ed2992a9-29a7-43f6-8134-8b58a70d7a33:
+          dependee: field_log_in_state
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: '0'
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: webcomposer_slider_v2_entity
+          bundle: webcomposer_slider_v2_entity
     type: link_default
     region: content
   field_banner_link_target:
     weight: 8
     settings: {  }
-    third_party_settings: {  }
+    third_party_settings:
+      conditional_fields:
+        8ef94272-b539-4d5e-92bd-8f07fa51dfca:
+          dependee: field_log_in_state
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: '0'
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: webcomposer_slider_v2_entity
+          bundle: webcomposer_slider_v2_entity
     type: options_select
     region: content
   field_content_position:
     weight: 10
     settings: {  }
-    third_party_settings: {  }
+    third_party_settings:
+      conditional_fields:
+        15ee3dc3-3bb0-48ed-9337-35536b07542b:
+          dependee: field_log_in_state
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: '0'
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: webcomposer_slider_v2_entity
+          bundle: webcomposer_slider_v2_entity
     type: options_select
     region: content
   field_disable_in_tablet:
@@ -138,8 +229,8 @@ content:
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
-  field_log_in:
-    weight: 1
+  field_log_in_state:
+    weight: 2
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
@@ -149,7 +240,25 @@ content:
     settings:
       rows: 5
       placeholder: ''
-    third_party_settings: {  }
+    third_party_settings:
+      conditional_fields:
+        bb0d227f-7e07-41a0-9c6a-41df3f9473fa:
+          dependee: field_log_in_state
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: '1'
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: webcomposer_slider_v2_entity
+          bundle: webcomposer_slider_v2_entity
     type: text_textarea
     region: content
   field_post_banner_image:
@@ -157,7 +266,25 @@ content:
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
-    third_party_settings: {  }
+    third_party_settings:
+      conditional_fields:
+        07402a76-ee1b-40d8-8d92-3c3d58c3cace:
+          dependee: field_log_in_state
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: '1'
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: webcomposer_slider_v2_entity
+          bundle: webcomposer_slider_v2_entity
     type: image_image
     region: content
   field_post_banner_link:
@@ -165,19 +292,73 @@ content:
     settings:
       placeholder_url: ''
       placeholder_title: ''
-    third_party_settings: {  }
+    third_party_settings:
+      conditional_fields:
+        1059e2ef-6deb-4bb5-bac7-ec44566141a0:
+          dependee: field_log_in_state
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: '1'
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: webcomposer_slider_v2_entity
+          bundle: webcomposer_slider_v2_entity
     type: link_default
     region: content
   field_post_banner_link_target:
     weight: 12
     settings: {  }
-    third_party_settings: {  }
+    third_party_settings:
+      conditional_fields:
+        cf88d96f-6ebc-41ba-a0a6-3034e4a50243:
+          dependee: field_log_in_state
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: '1'
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: webcomposer_slider_v2_entity
+          bundle: webcomposer_slider_v2_entity
     type: options_select
     region: content
   field_post_content_position:
     weight: 14
     settings: {  }
-    third_party_settings: {  }
+    third_party_settings:
+      conditional_fields:
+        97eabd3c-68ed-4b22-b7b9-dbabc7b6701a:
+          dependee: field_log_in_state
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: '1'
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: webcomposer_slider_v2_entity
+          bundle: webcomposer_slider_v2_entity
     type: options_select
     region: content
   field_preview_display_only:
@@ -215,7 +396,7 @@ content:
     region: content
   langcode:
     type: language_select
-    weight: 2
+    weight: 1
     region: content
     settings:
       include_locked: true

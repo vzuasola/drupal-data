@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - field.storage.webcomposer_slider_v2_entity.field_banner_image
-    - field.storage.webcomposer_slider_v2_entity.field_log_in
+    - field.storage.webcomposer_slider_v2_entity.field_log_in_state
     - field.storage.webcomposer_slider_v2_entity.field_post_banner_image
     - field.storage.webcomposer_slider_v2_entity.field_publish_date
     - field.storage.webcomposer_slider_v2_entity.field_title
@@ -738,7 +738,7 @@ display:
           exposed: true
           expose:
             operator_id: field_title_value_op
-            label: 'Title (field_title)'
+            label: Title
             description: ''
             use_operator: false
             operator: field_title_value_op
@@ -1031,10 +1031,10 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_log_in:
-          id: field_log_in
-          table: webcomposer_slider_v2_entity__field_log_in
-          field: field_log_in
+        field_log_in_state:
+          id: field_log_in_state
+          table: webcomposer_slider_v2_entity__field_log_in_state
+          field: field_log_in_state
           relationship: none
           group_type: group
           admin_label: ''
@@ -1374,7 +1374,7 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.webcomposer_slider_v2_entity.field_banner_image'
-        - 'config:field.storage.webcomposer_slider_v2_entity.field_log_in'
+        - 'config:field.storage.webcomposer_slider_v2_entity.field_log_in_state'
         - 'config:field.storage.webcomposer_slider_v2_entity.field_post_banner_image'
         - 'config:field.storage.webcomposer_slider_v2_entity.field_publish_date'
         - 'config:field.storage.webcomposer_slider_v2_entity.field_title'
