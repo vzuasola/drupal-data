@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - field.storage.deposit_and_withdrawal_entity.field_configurable_url
-    - field.storage.deposit_and_withdrawal_entity.field_summary
+    - field.storage.deposit_and_withdrawal_entity.field_enable
     - field.storage.deposit_and_withdrawal_entity.field_thumbnail
     - field.storage.deposit_and_withdrawal_entity.field_title
     - field.storage.deposit_and_withdrawal_entity.field_type
@@ -208,6 +208,71 @@ display:
       display_extenders: {  }
       path: admin/config/deposit_and_withdrawal_entity
       fields:
+        field_enable:
+          id: field_enable
+          table: deposit_and_withdrawal_entity__field_enable
+          field: field_enable
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Publishing Status'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: boolean
+          settings:
+            format: unicode-yes-no
+            format_custom_true: ''
+            format_custom_false: ''
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
         field_title:
           id: field_title
           table: deposit_and_withdrawal_entity__field_title
@@ -335,131 +400,6 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_summary:
-          id: field_summary
-          table: deposit_and_withdrawal_entity__field_summary
-          field: field_summary
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: Summary
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: basic_string
-          settings: {  }
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_configurable_url:
-          id: field_configurable_url
-          table: deposit_and_withdrawal_entity__field_configurable_url
-          field: field_configurable_url
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: 'Configurable URL'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: string
-          settings:
-            link_to_entity: true
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
         field_type:
           id: field_type
           table: deposit_and_withdrawal_entity__field_type
@@ -511,6 +451,69 @@ display:
           click_sort_column: value
           type: list_default
           settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_configurable_url:
+          id: field_configurable_url
+          table: deposit_and_withdrawal_entity__field_configurable_url
+          field: field_configurable_url
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'URL Alias'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -701,7 +704,7 @@ display:
         - url
       tags:
         - 'config:field.storage.deposit_and_withdrawal_entity.field_configurable_url'
-        - 'config:field.storage.deposit_and_withdrawal_entity.field_summary'
+        - 'config:field.storage.deposit_and_withdrawal_entity.field_enable'
         - 'config:field.storage.deposit_and_withdrawal_entity.field_thumbnail'
         - 'config:field.storage.deposit_and_withdrawal_entity.field_title'
         - 'config:field.storage.deposit_and_withdrawal_entity.field_type'
