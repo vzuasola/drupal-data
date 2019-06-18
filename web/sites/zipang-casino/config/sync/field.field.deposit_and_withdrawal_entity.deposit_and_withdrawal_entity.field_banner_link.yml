@@ -1,0 +1,20 @@
+uuid: f31416dc-00ec-4741-9b25-6f5c5aaa31ef
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.deposit_and_withdrawal_entity.field_banner_link
+  module:
+    - deposit_and_withdrawal
+id: deposit_and_withdrawal_entity.deposit_and_withdrawal_entity.field_banner_link
+field_name: field_banner_link
+entity_type: deposit_and_withdrawal_entity
+bundle: deposit_and_withdrawal_entity
+label: 'Banner Link'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
