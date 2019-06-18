@@ -17,7 +17,7 @@ attributes:
     options:
       new: 'New Product'
   device:
-    label: Device
+    label: 'Device'
     options:
       ios: 'iOS Device'
       android: 'Android Device'
