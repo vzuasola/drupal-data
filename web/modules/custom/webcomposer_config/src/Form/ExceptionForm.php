@@ -40,9 +40,16 @@ class ExceptionForm extends FormBase {
       '#title' => t('Exception Configuration'),
     ];
 
+    $this->sectionNotFound($form);
+    $this->sectionUnsupportedCurrency($form);
+    
+    return $form;
+  }
+
+  private function sectionNotFound(array &$form) {
     $form['not_found'] = [
       '#type' => 'details',
-      '#title' => $this->t('Access Denied'),
+      '#title' => $this->t('Page not found'),
       '#collapsible' => TRUE,
       '#group' => 'advanced',
     ];
@@ -73,8 +80,23 @@ class ExceptionForm extends FormBase {
       '#format' => $content['format'],
       '#translatable' => TRUE,
     ];
+  }
 
-    return $form;
+  private function sectionUnsupportedCurrency(&$form)
+  {
+    $form['unsupported_currency'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Unsupported Currency'),
+      '#collapsible' => TRUE,
+      '#group' => 'advanced',
+    ];
+
+    $form['unsupported_currency']['currency_mapping'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Unsupported Currency Mapping'),
+      '#description' => $this->t('Provide the list of currency that the site does not support to show the unsupported currency page.'),
+      '#default_value' => $this->get('currency_mapping')
+    ];
   }
 
   /**
