@@ -1,0 +1,23 @@
+uuid: c25e7752-5864-4f5f-93ec-a95f1b158a7e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_disable_game_loader
+    - node.type.games
+id: node.games.field_disable_game_loader
+field_name: field_disable_game_loader
+entity_type: node
+bundle: games
+label: 'Disable Game Loader'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
