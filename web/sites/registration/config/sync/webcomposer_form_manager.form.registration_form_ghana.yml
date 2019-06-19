@@ -1,39 +1,42 @@
 form_settings:
   show: 1
   alias: ''
-  form_name: RegistrationForm
 weights:
   back_button:
     weight: '-10'
-  breakline_1:
-    weight: '-9'
-  username:
-    weight: '-8'
-  password:
-    weight: '-7'
-  email:
-    weight: '-6'
-  mobile_number:
-    weight: '-5'
   breakline_2:
-    weight: '-4'
-  first_name:
-    weight: '-3'
+    weight: '-9'
+  breakline_1:
+    weight: '-8'
+  username:
+    weight: '-7'
+  password:
+    weight: '-6'
   password_meter:
+    weight: '-5'
+  confirm_password:
+    weight: '-4'
+  breakline_3:
+    weight: '-3'
+  first_name:
     weight: '-2'
   last_name:
     weight: '-1'
   birthdate:
     weight: '0'
-  currency:
+  security_question_1:
     weight: '1'
-  country:
+  security_answer_1:
     weight: '2'
-  breakline_3:
+  security_question_2:
     weight: '3'
-  bonus_code:
+  security_answer_2:
     weight: '4'
   accept_terms:
     weight: '5'
-  submit:
+  legal_age:
     weight: '6'
+  bonus_code:
+    weight: '7'
+  submit:
+    weight: '8'

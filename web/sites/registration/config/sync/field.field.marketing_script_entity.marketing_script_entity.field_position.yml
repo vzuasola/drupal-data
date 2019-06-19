@@ -16,7 +16,7 @@ bundle: marketing_script_entity
 label: Position
 description: 'The position of the entry. Footer is recommended for most assets.'
 required: true
-translatable: false
+translatable: true
 default_value:
   -
     value: footer
