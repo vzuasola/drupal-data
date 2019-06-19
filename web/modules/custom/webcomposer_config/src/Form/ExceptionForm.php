@@ -42,7 +42,7 @@ class ExceptionForm extends FormBase {
 
     $this->sectionNotFound($form);
     $this->sectionUnsupportedCurrency($form);
-    
+
     return $form;
   }
 
@@ -82,8 +82,7 @@ class ExceptionForm extends FormBase {
     ];
   }
 
-  private function sectionUnsupportedCurrency(&$form)
-  {
+  private function sectionUnsupportedCurrency(&$form) {
     $form['unsupported_currency'] = [
       '#type' => 'details',
       '#title' => $this->t('Unsupported Currency'),
