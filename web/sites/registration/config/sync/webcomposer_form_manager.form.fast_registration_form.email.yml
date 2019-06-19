@@ -1,12 +1,11 @@
 field_settings:
-  label: Currency
-  placeholder: Currency
-  choices: "124|ARS\r\n117|RMB/CNY\r\n2|USD\r\n1|EUR\r\n3|GBP\r\n102|MYR\r\n103|THB\r\n105|VND\r\n111|IDR\r\n112|INR\r\n104|KRW\r\n116|RUB\r\n114|PLN\r\n119|BRL\r\n120|MXN\r\n121|CLP\r\n123|PEN"
-  portal_id_to_currency_mapping: "2|117,2,1,3,102,103,105,111,112,104,116,114,119,120,121,122,123,124,125\r\n3|117,2,1,3,102,103,105,111,112,104,116,114\r\n22|117,2,1,3,102,103,105,111,112,104,116,114,119,120,121,122,123,124,125\r\n66|112\r\n4|117,2,1,3,102,103,105,111,112,104,116,114,119,120,121,122,123,124,125\r\n19|117,2,1,3,102,103,105,111,112,104,116,114\r\n6|117,2,1,3,102,103,105,111,112,104,116,114\r\n8|117,2,1,3,102,103,105,111,112,104,116,114,119,120,121,122,123,124,125\r\n24|117,2,1,3,102,103,105,111,112,104,116,114,119,120,121,122,123,124,125\r\n55|117,2,1,102,103,105,111,112,104\r\n5|117,2,1,3,102,103,105,111,112,104,116,114\r\n56|117,2,1,3,102,103,105,111,112,104,116,119,120,121,122,123,124,125"
+  label: Email
+  placeholder: Email
+  annotation: "Please enter a valid email address to receive latest promotions, updates and exclusive offers.\r\n"
 field_validations:
   required:
     enable: 1
-    error_message: 'Please select your preferred Currency.'
+    error_message: 'Field should be required fast Reg'
   alpha:
     enable: 0
     error_message: 'Field should be Alphabet characters only'
@@ -60,8 +59,8 @@ field_validations:
     enable: 0
     error_message: 'Username not available'
   email_availability:
-    enable: 0
-    error_message: 'Email not available'
+    enable: 1
+    error_message: "<span class=\"visible-desktop\">Email is already in use. Click <a href=\"{domain:myaccount_domain}/en/cant-login\" target=\"popup\" onclick=\"window.open('{domain:myaccount_domain}/en/cant-login','popup','width=820,height=810,scrollbars=no,resizable=no'); return false;\">here</a> to retrieve username/password.</span>\r\n<span class=\"visible-client\">Email is already in use. Click <u><a href=\"{domain:myaccount_domain}/en/cant-login\" target=\"popup\" onclick=\"window.open('{domain:myaccount_domain}/en/cant-login','popup','width=820,height=810,scrollbars=no,resizable=no'); return false;\">here</a></u> to retrieve username/password.</span>\r\n<span class=\"visible-tablet\">Email is already in use. Click <a href=\"{domain:mobile}/en/cant-login\" target=\"_blank\">here</a> to retrieve username/password.</span>\r\n<span class=\"visible-mobile\">Email is already in use. Click <a href=\"{domain:mobile}/en/cant-login\" target=\"_blank\">here</a> to retrieve username/password.</span>\r\n<span class=\"visible-app\">Email is already in use. Click <a href=\"https://m.dfnba.net/en/cant-login?clientflag=1\" target=\"_blank\">here</a> to retrieve username/password.</span>"
   invalid_words:
     enable: 0
     error_message: 'Invalid/not allowed characters'
@@ -75,14 +74,3 @@ field_validations:
   not_match_username:
     enable: 0
     error_message: 'Password should not equal to username'
-  duplicated_security_question:
-    enable: 0
-    error_message: 'Security Questions should not be the same'
-  match_password:
-    enable: 0
-    error_message: 'Password not match'
-  valid_username_prefix:
-    enable: 0
-    error_message: 'Username Prefix not valid'
-    parameters:
-      prefixes: '000,000,000'

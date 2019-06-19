@@ -1,0 +1,18 @@
+uuid: ba9a97b2-10b4-48d2-a89e-a63d5fa003c7
+langcode: en
+status: true
+dependencies:
+  module:
+    - webcomposer_marketing_script
+id: marketing_script_entity.marketing_script_entity.metatag
+field_name: metatag
+entity_type: marketing_script_entity
+bundle: marketing_script_entity
+label: Metatags
+description: 'The metatags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

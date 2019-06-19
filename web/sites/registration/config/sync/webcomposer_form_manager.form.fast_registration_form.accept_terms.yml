@@ -1,12 +1,9 @@
 field_settings:
-  label: Currency
-  placeholder: Currency
-  choices: "124|ARS\r\n117|RMB/CNY\r\n2|USD\r\n1|EUR\r\n3|GBP\r\n102|MYR\r\n103|THB\r\n105|VND\r\n111|IDR\r\n112|INR\r\n104|KRW\r\n116|RUB\r\n114|PLN\r\n119|BRL\r\n120|MXN\r\n121|CLP\r\n123|PEN"
-  portal_id_to_currency_mapping: "2|117,2,1,3,102,103,105,111,112,104,116,114,119,120,121,122,123,124,125\r\n3|117,2,1,3,102,103,105,111,112,104,116,114\r\n22|117,2,1,3,102,103,105,111,112,104,116,114,119,120,121,122,123,124,125\r\n66|112\r\n4|117,2,1,3,102,103,105,111,112,104,116,114,119,120,121,122,123,124,125\r\n19|117,2,1,3,102,103,105,111,112,104,116,114\r\n6|117,2,1,3,102,103,105,111,112,104,116,114\r\n8|117,2,1,3,102,103,105,111,112,104,116,114,119,120,121,122,123,124,125\r\n24|117,2,1,3,102,103,105,111,112,104,116,114,119,120,121,122,123,124,125\r\n55|117,2,1,102,103,105,111,112,104\r\n5|117,2,1,3,102,103,105,111,112,104,116,114\r\n56|117,2,1,3,102,103,105,111,112,104,116,119,120,121,122,123,124,125"
+  markup: "I am at least 18 years old and have read and accepted the <strong><u>\r\n<a href=\"/{lang}/terms-of-use[query:({tracking})]\" target=\"_blank\" class=\"visible-desktop\">Terms and Conditions</a>\r\n<a href=\"/{lang}/terms-of-use[query:({tracking})]\" target=\"_blank\" class=\"visible-client\">Terms and Conditions</a>\r\n<a href=\"{domain:mobile}/{lang}/terms-of-use[query:({credentials.params}&{tracking})]\" target=\"_blank\" class=\"visible-mobile\">Terms and Conditions</a>\r\n<a href=\"{domain:mobile}/{lang}/terms-of-use[query:({credentials.params}&{tracking})]\" target=\"_blank\" class=\"visible-tablet\">Terms and Conditions</a>\r\n<a href=\"{domain:mobile}/{lang}/terms-of-use[query:(clientflag=1&{tracking.token})]\" target=\"_blank\" class=\"visible-app\">Terms and Conditions</a>\r\n</u></strong>."
 field_validations:
   required:
-    enable: 1
-    error_message: 'Please select your preferred Currency.'
+    enable: 0
+    error_message: 'Field should be required'
   alpha:
     enable: 0
     error_message: 'Field should be Alphabet characters only'
@@ -75,14 +72,3 @@ field_validations:
   not_match_username:
     enable: 0
     error_message: 'Password should not equal to username'
-  duplicated_security_question:
-    enable: 0
-    error_message: 'Security Questions should not be the same'
-  match_password:
-    enable: 0
-    error_message: 'Password not match'
-  valid_username_prefix:
-    enable: 0
-    error_message: 'Username Prefix not valid'
-    parameters:
-      prefixes: '000,000,000'
