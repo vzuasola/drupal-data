@@ -1,0 +1,19 @@
+uuid: 8d0b22bb-7304-4800-9ad1-ba5edad5739d
+langcode: ja
+status: true
+dependencies:
+  module:
+    - content_translation
+    - zipang_weekly_winner
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+_core:
+  default_config_hash: TuYIwyCj_oeip7RFfnNjDPVLpHqTICynIRX6B8XM1Hg
+id: zipang_weekly_winner_entity.zipang_weekly_winner_entity
+target_entity_type_id: zipang_weekly_winner_entity
+target_bundle: zipang_weekly_winner_entity
+default_langcode: site_default
+language_alterable: false

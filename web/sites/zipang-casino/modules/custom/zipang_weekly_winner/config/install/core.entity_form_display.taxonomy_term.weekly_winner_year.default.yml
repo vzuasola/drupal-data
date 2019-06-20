@@ -1,0 +1,25 @@
+uuid: 983c429f-e9b3-4a9f-8f28-859e7ec721bc
+langcode: ja
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.weekly_winner_year
+_core:
+  default_config_hash: 6DVCuPWbsTXXG4Ec23n36myU1eNcjSgvf5l3GkockYQ
+id: taxonomy_term.weekly_winner_year.default
+targetEntityType: taxonomy_term
+bundle: weekly_winner_year
+mode: default
+content:
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  description: true
+  langcode: true
+  path: true

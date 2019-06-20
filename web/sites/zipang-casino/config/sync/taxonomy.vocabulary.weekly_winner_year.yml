@@ -1,0 +1,11 @@
+uuid: 97f2e08e-eefc-4606-8e34-53ae75ea83e6
+langcode: ja
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: AbqwKrBnvsdsNdD0FA8iva9ZlTIygzH-39yIyrck1ME
+name: 'Weekly Winner Year'
+vid: weekly_winner_year
+description: ''
+hierarchy: 0
+weight: 0
