@@ -1,0 +1,18 @@
+uuid: 1aaff39f-76b6-4d9a-a9f0-8be3d370593a
+langcode: ja
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.weekly_winner_month
+id: taxonomy_term.weekly_winner_month.changed
+field_name: changed
+entity_type: taxonomy_term
+bundle: weekly_winner_month
+label: Changed
+description: 'The time that the term was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

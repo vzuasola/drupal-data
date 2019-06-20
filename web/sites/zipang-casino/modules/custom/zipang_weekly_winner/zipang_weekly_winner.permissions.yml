@@ -1,0 +1,22 @@
+add zipang weekly winner entity entities:
+  title: 'Create new Zipang weekly winner entity entities'
+
+administer zipang weekly winner entity entities:
+  title: 'Administer Zipang weekly winner entity entities'
+  description: 'Allow to access the administration form to configure Zipang weekly winner entity entities.'
+  restrict access: true
+
+delete zipang weekly winner entity entities:
+  title: 'Delete Zipang weekly winner entity entities'
+
+edit zipang weekly winner entity entities:
+  title: 'Edit Zipang weekly winner entity entities'
+
+access zipang weekly winner entity overview:
+  title: 'Access the Zipang weekly winner entity overview page'
+
+view published zipang weekly winner entity entities:
+  title: 'View published Zipang weekly winner entity entities'
+
+view unpublished zipang weekly winner entity entities:
+  title: 'View unpublished Zipang weekly winner entity entities'

@@ -1,0 +1,32 @@
+uuid: bb1b962f-82b2-4b8c-9cd4-1074f8e5d570
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.zipang_weekly_winner_entity.field_weekly_winner_month
+    - taxonomy.vocabulary.weekly_winner_month
+  module:
+    - zipang_weekly_winner
+_core:
+  default_config_hash: bsA1jx3egLbF832zk-IEw2oBFodZT_44tBvDZmDWSRI
+id: zipang_weekly_winner_entity.zipang_weekly_winner_entity.field_weekly_winner_month
+field_name: field_weekly_winner_month
+entity_type: zipang_weekly_winner_entity
+bundle: zipang_weekly_winner_entity
+label: 'Weekly Winner Month'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      weekly_winner_month: weekly_winner_month
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

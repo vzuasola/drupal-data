@@ -1,0 +1,22 @@
+uuid: a25efa8c-f90e-4365-b043-cde465f8c814
+langcode: ja
+status: true
+dependencies:
+  module:
+    - taxonomy
+    - zipang_weekly_winner
+_core:
+  default_config_hash: JgLYdPM5swW_IMAHGJyNMocjtmBL_wTeOxYUISkXwmY
+id: zipang_weekly_winner_entity.field_weekly_winner_year
+field_name: field_weekly_winner_year
+entity_type: zipang_weekly_winner_entity
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

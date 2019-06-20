@@ -1,0 +1,20 @@
+uuid: 069c664b-a0e5-43d8-b98d-cca030c0c26d
+langcode: ja
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.weekly_winner_month
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+_core:
+  default_config_hash: 0C4LoXKnbb3ihxn3DGcifpJ9Qu7vi18SmIel91aLk_U
+id: taxonomy_term.weekly_winner_month
+target_entity_type_id: taxonomy_term
+target_bundle: weekly_winner_month
+default_langcode: site_default
+language_alterable: false

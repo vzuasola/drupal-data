@@ -98,14 +98,15 @@ module:
   zipang_desktop_blocks: 0
   zipang_desktop_games: 0
   zipang_dropdown_menu: 0
-  zipang_fair_gaming: 0
   zipang_faq: 0
+  zipang_fair_gaming: 0
   zipang_jackpot: 0
   zipang_mobile_blocks: 0
   zipang_mobile_games: 0
   zipang_news_and_updates: 0
   zipang_registration: 0
   zipang_rightside_blocks: 0
+  zipang_weekly_winner: 0
   menu_link_content: 1
   pathauto: 1
   views: 10
