@@ -1,0 +1,21 @@
+uuid: 6ecfd567-ef75-44e3-96fb-6a119f749c33
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_display_mode
+    - node.type.client_casino_games
+  module:
+    - options
+id: node.client_casino_games.field_display_mode
+field_name: field_display_mode
+entity_type: node
+bundle: client_casino_games
+label: 'Display Mode'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
