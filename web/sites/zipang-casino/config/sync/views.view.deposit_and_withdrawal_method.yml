@@ -179,6 +179,41 @@ display:
           entity_type: deposit_and_withdrawal_entity
           entity_field: langcode
           plugin_id: language
+        field_type_value:
+          id: field_type_value
+          table: deposit_and_withdrawal_entity__field_type
+          field: field_type_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            use_operator: false
+            operator: field_type_value_op
+            identifier: field_type_value
+            label: 'Type (field_type)'
+            description: null
+            remember: false
+            multiple: false
+            required: false
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          plugin_id: list_field
       sorts:
         weight:
           id: weight
@@ -676,6 +711,50 @@ display:
           entity_type: deposit_and_withdrawal_entity
           entity_field: langcode
           plugin_id: language
+        field_type_value:
+          id: field_type_value
+          table: deposit_and_withdrawal_entity__field_type
+          field: field_type_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_type_value_op
+            label: 'Type (field_type)'
+            description: ''
+            use_operator: false
+            operator: field_type_value_op
+            identifier: field_type_value
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              e: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: 'Type (field_type)'
+            description: null
+            identifier: field_type_value
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items:
+              1: {  }
+              2: {  }
+              3: {  }
+          reduce_duplicates: false
+          plugin_id: list_field
       filter_groups:
         operator: AND
         groups:
@@ -722,6 +801,8 @@ display:
         style: false
         row: false
         sorts: false
+        filters: false
+        filter_groups: false
       row:
         type: data_entity
         options: {  }
@@ -743,6 +824,95 @@ display:
           expose:
             label: ''
           plugin_id: standard
+      filters:
+        langcode:
+          id: langcode
+          table: deposit_and_withdrawal_entity_field_data
+          field: langcode
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
+          group: 1
+          exposed: true
+          expose:
+            operator_id: langcode_op
+            label: 'Translation language'
+            description: ''
+            use_operator: false
+            operator: langcode_op
+            identifier: langcode
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              e: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: deposit_and_withdrawal_entity
+          entity_field: langcode
+          plugin_id: language
+        field_type_value:
+          id: field_type_value
+          table: deposit_and_withdrawal_entity__field_type
+          field: field_type_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_type_value_op
+            label: Type
+            description: ''
+            use_operator: false
+            operator: field_type_value_op
+            identifier: field_type_value
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              e: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          plugin_id: list_field
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
     cache_metadata:
       max-age: -1
       contexts:
