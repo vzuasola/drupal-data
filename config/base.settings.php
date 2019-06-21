@@ -36,7 +36,7 @@ if (isset($_SERVER['REDIS_SERVER']) && isset($_SERVER['REDIS_SERVICE'])) {
   $settings['redis.connection']['options'] = $options;
 
   // use different DB for Redis Cache
-  $settings['redis.connection']['options']['parameters']['database'] = 2;
+  $settings['redis.connection']['options']['parameters']['database'] = 8;
 
   // cache backend module
 

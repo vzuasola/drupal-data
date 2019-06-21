@@ -31,7 +31,7 @@ $settings['redis.connection']['options'] = [
 ];
 
 // use different DB for Redis Cache
-$settings['redis.connection']['options']['parameters']['database'] = 2;
+$settings['redis.connection']['options']['parameters']['database'] = 8;
 
 $settings['container_yamls'][] = $app_root . '/modules/contrib/redis/redis.services.yml';
 
