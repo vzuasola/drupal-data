@@ -18,13 +18,13 @@ bundle: client_footer_games
 mode: default
 content:
   field_display_mode:
-    weight: 8
+    type: options_buttons
+    weight: 5
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_buttons
-    region: content
   field_game_code:
-    weight: 5
+    weight: 6
     settings:
       size: 60
       placeholder: ''

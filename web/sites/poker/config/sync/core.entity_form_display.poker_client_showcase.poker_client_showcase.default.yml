@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.field.poker_client_showcase.poker_client_showcase.field_display_mode
     - field.field.poker_client_showcase.poker_client_showcase.field_game_categories
-    - field.field.poker_client_showcase.poker_client_showcase.field_log_in_state
     - field.field.poker_client_showcase.poker_client_showcase.field_publish_date
     - field.field.poker_client_showcase.poker_client_showcase.field_showcase_body
     - field.field.poker_client_showcase.poker_client_showcase.field_showcase_image
@@ -41,19 +40,13 @@ bundle: poker_client_showcase
 mode: default
 content:
   field_display_mode:
-    weight: 13
+    type: options_buttons
+    weight: 9
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_buttons
-    region: content
   field_game_categories:
     weight: 3
-    settings: {  }
-    third_party_settings: {  }
-    type: options_buttons
-    region: content
-  field_log_in_state:
-    weight: 2
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
