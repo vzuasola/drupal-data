@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.poker_client_showcase.poker_client_showcase.field_display_mode
     - field.field.poker_client_showcase.poker_client_showcase.field_game_categories
     - field.field.poker_client_showcase.poker_client_showcase.field_log_in_state
     - field.field.poker_client_showcase.poker_client_showcase.field_publish_date
@@ -23,6 +24,13 @@ targetEntityType: poker_client_showcase
 bundle: poker_client_showcase
 mode: default
 content:
+  field_display_mode:
+    weight: 11
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
   field_game_categories:
     weight: 8
     label: above

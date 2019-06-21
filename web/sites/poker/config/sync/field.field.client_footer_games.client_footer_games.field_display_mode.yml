@@ -1,0 +1,21 @@
+uuid: 51ad18f6-3805-4894-be32-1a10d8e64442
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.client_footer_games.field_display_mode
+  module:
+    - client_footer_games
+    - options
+id: client_footer_games.client_footer_games.field_display_mode
+field_name: field_display_mode
+entity_type: client_footer_games
+bundle: client_footer_games
+label: 'Display Mode'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

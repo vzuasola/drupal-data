@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.client_footer_games.client_footer_games.field_display_mode
     - field.field.client_footer_games.client_footer_games.field_game_code
     - field.field.client_footer_games.client_footer_games.field_game_thumbnail
     - field.field.client_footer_games.client_footer_games.field_game_thumbnail_hover
@@ -16,6 +17,12 @@ targetEntityType: client_footer_games
 bundle: client_footer_games
 mode: default
 content:
+  field_display_mode:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
   field_game_code:
     weight: 5
     settings:
