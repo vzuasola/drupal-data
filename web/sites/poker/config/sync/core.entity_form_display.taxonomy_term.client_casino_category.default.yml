@@ -7,6 +7,7 @@ dependencies:
     - field.field.taxonomy_term.client_casino_category.field_clcasino_cat_disable
     - field.field.taxonomy_term.client_casino_category.field_clcasino_cat_hicon
     - field.field.taxonomy_term.client_casino_category.field_clclient_cat_icon
+    - field.field.taxonomy_term.client_casino_category.field_display_mode
     - image.style.thumbnail
     - taxonomy.vocabulary.client_casino_category
   module:
@@ -46,6 +47,12 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+    region: content
+  field_display_mode:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
     region: content
   langcode:
     type: language_select
