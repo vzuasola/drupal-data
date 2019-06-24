@@ -1,13 +1,13 @@
-uuid: fb109884-f9d8-4b5a-b65c-98e28c6ada61
+uuid: f3a1a7e6-cfa6-4b40-a6fd-b88ecaefe7b3
 langcode: en
 status: true
 dependencies:
   module:
+    - client_footer_games
     - options
-    - poker_client_showcase
-id: poker_client_showcase.field_display_mode
+id: client_footer_games.field_display_mode
 field_name: field_display_mode
-entity_type: poker_client_showcase
+entity_type: client_footer_games
 type: list_string
 settings:
   allowed_values:

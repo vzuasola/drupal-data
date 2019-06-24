@@ -1,13 +1,13 @@
-uuid: fb109884-f9d8-4b5a-b65c-98e28c6ada61
+uuid: f27f62f8-e4eb-4c7a-b79c-6b17eee012a7
 langcode: en
 status: true
 dependencies:
   module:
     - options
-    - poker_client_showcase
-id: poker_client_showcase.field_display_mode
+    - taxonomy
+id: taxonomy_term.field_display_mode
 field_name: field_display_mode
-entity_type: poker_client_showcase
+entity_type: taxonomy_term
 type: list_string
 settings:
   allowed_values:

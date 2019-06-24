@@ -10,12 +10,14 @@ dependencies:
     - field.field.node.client_casino_games.field_clcasino_game_title
     - field.field.node.client_casino_games.field_clcasino_ribbon
     - field.field.node.client_casino_games.field_clcasino_show_game_info
+    - field.field.node.client_casino_games.field_display_mode
     - field.field.node.client_casino_games.field_game_filter
     - field.field.node.client_casino_games.field_jackpot_code
     - field.field.node.client_casino_games.field_keywords
     - node.type.client_casino_games
   module:
     - image
+    - options
     - text
     - user
 id: node.client_casino_games.default
@@ -24,7 +26,7 @@ bundle: client_casino_games
 mode: default
 content:
   field_clcasino_category:
-    weight: 102
+    weight: 1
     label: above
     settings:
       link: true
@@ -32,7 +34,7 @@ content:
     type: entity_reference_label
     region: content
   field_clcasino_game_code:
-    weight: 103
+    weight: 2
     label: above
     settings:
       link_to_entity: false
@@ -40,14 +42,14 @@ content:
     type: string
     region: content
   field_clcasino_game_info:
-    weight: 104
+    weight: 3
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_clcasino_game_thumbnail:
-    weight: 106
+    weight: 5
     label: above
     settings:
       image_style: ''
@@ -56,14 +58,14 @@ content:
     type: image
     region: content
   field_clcasino_game_title:
-    weight: 107
+    weight: 6
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_clcasino_ribbon:
-    weight: 108
+    weight: 7
     label: above
     settings:
       link: true
@@ -71,7 +73,7 @@ content:
     type: entity_reference_label
     region: content
   field_clcasino_show_game_info:
-    weight: 105
+    weight: 4
     label: above
     settings:
       format: default
@@ -80,8 +82,15 @@ content:
     third_party_settings: {  }
     type: boolean
     region: content
+  field_display_mode:
+    type: list_default
+    weight: 11
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
   field_game_filter:
-    weight: 111
+    weight: 10
     label: above
     settings:
       link: true
@@ -89,7 +98,7 @@ content:
     type: entity_reference_label
     region: content
   field_jackpot_code:
-    weight: 109
+    weight: 8
     label: above
     settings:
       link_to_entity: false
@@ -97,7 +106,7 @@ content:
     type: string
     region: content
   field_keywords:
-    weight: 110
+    weight: 9
     label: above
     settings:
       link_to_entity: false
@@ -105,7 +114,7 @@ content:
     type: string
     region: content
   links:
-    weight: 100
+    weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
