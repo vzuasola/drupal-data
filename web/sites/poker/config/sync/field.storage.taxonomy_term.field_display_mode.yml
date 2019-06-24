@@ -1,0 +1,30 @@
+uuid: f27f62f8-e4eb-4c7a-b79c-6b17eee012a7
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - taxonomy
+id: taxonomy_term.field_display_mode
+field_name: field_display_mode
+entity_type: taxonomy_term
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: free
+      label: Free
+    -
+      value: online
+      label: Online
+    -
+      value: offline
+      label: Offline
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 3
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
