@@ -15,7 +15,7 @@ entity_type: zipang_weekly_winner_entity
 bundle: zipang_weekly_winner_entity
 label: 'Weekly Winner Year'
 description: ''
-required: false
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''
