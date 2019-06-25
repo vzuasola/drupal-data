@@ -10,7 +10,7 @@ dependencies:
 id: languagedropdownswitcher
 theme: seven
 region: content
-weight: -1
+weight: -5
 provider: null
 plugin: 'language_dropdown_block:language_interface'
 settings:
