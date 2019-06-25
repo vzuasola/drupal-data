@@ -2,13 +2,13 @@
 
 namespace Drupal\webcomposer_affilates\Form;
 
-use Drupal\Core\Form\ConfigFormBase;
+use Drupal\webcomposer_config_schema\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
  * Config form for Affiliate Configuration.
  */
-class AffiliateConfiguration extends ConfigFormBase {
+class AffiliateConfiguration extends FormBase {
   /**
    * {@inheritdoc}
    */
@@ -17,16 +17,22 @@ class AffiliateConfiguration extends ConfigFormBase {
   }
 
   /**
-   * {@inheritdoc}
+   * Aff configuration plugin
+   *
+   * @WebcomposerConfigPlugin(
+   *   id = "affiliate_settings_form",
+   *   route = {
+   *     "title" = "Affiliates Configuration",
+   *     "path" = "/admin/config/webcomposer/config/affiliates/config",
+   *   },
+   *   menu = {
+   *     "title" = "Affiliates Configuration",
+   *     "description" = "Provides Affiliates Configuration",
+   *     "parent" = "webcomposer_affiliates.list",
+   *   },
+   * )
    */
-  public function getFormId() {
-    return 'affiliate_settings_form';
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  public function buildForm(array $form, FormStateInterface $form_state) {
+  public function form(array $form, FormStateInterface $form_state) {
     $config = $this->config('webcomposer_config.affiliate_configuration');
 
     $form['affiliate_settings_tab'] = [
@@ -49,21 +55,6 @@ class AffiliateConfiguration extends ConfigFormBase {
       '#required' => TRUE,
     ];
 
-    return parent::buildForm($form, $form_state);
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  public function submitForm(array &$form, FormStateInterface $form_state) {
-    $keys = [
-      'affiliate_expiration',
-    ];
-
-    foreach ($keys as $key) {
-      $this->config('webcomposer_config.affiliate_configuration')->set($key, $form_state->getValue($key))->save();
-    }
-
-    return parent::submitForm($form, $form_state);
+    return $form;
   }
 }
