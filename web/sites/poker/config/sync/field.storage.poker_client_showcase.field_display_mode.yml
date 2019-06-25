@@ -1,29 +1,29 @@
-uuid: 5fed3d05-de10-40f7-93ae-25880869a26b
+uuid: fb109884-f9d8-4b5a-b65c-98e28c6ada61
 langcode: en
 status: true
 dependencies:
   module:
     - options
     - poker_client_showcase
-id: poker_client_showcase.field_log_in_state
-field_name: field_log_in_state
+id: poker_client_showcase.field_display_mode
+field_name: field_display_mode
 entity_type: poker_client_showcase
 type: list_string
 settings:
   allowed_values:
     -
-      value: '0'
-      label: 'Pre Login'
+      value: free
+      label: Free
     -
-      value: '1'
-      label: 'Post Login'
+      value: online
+      label: Online
     -
-      value: '2'
-      label: Both
+      value: offline
+      label: Offline
   allowed_values_function: ''
 module: options
 locked: false
-cardinality: 1
+cardinality: 3
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

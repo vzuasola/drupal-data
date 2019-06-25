@@ -5,8 +5,13 @@ dependencies:
   config:
     - field.field.taxonomy_term.games_category.field_alias
     - field.field.taxonomy_term.games_category.field_disable
+    - field.field.taxonomy_term.games_category.field_icon
     - field.field.taxonomy_term.games_category.field_show_to_kebab
+    - field.field.taxonomy_term.games_category.field_tooltip
+    - image.style.thumbnail
     - taxonomy.vocabulary.games_category
+  module:
+    - image
 id: taxonomy_term.games_category.default
 targetEntityType: taxonomy_term
 bundle: games_category
@@ -21,17 +26,34 @@ content:
     type: string_textfield
     region: content
   field_disable:
-    weight: 4
+    weight: 6
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
+  field_icon:
+    weight: 4
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_tooltip:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   langcode:
     type: language_select
     weight: 1
     region: content
-    settings: {  }
+    settings:
+      include_locked: true
     third_party_settings: {  }
   name:
     type: string_textfield

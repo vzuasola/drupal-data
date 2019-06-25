@@ -1,21 +1,20 @@
-uuid: a10fb8ab-6642-4b6e-b6fd-b9fa2d610dec
+uuid: 2903bdaf-5e0c-46cf-96d4-a9e5cf9155df
 langcode: en
 status: true
 dependencies:
   config:
-    - node.type.game
+    - taxonomy.vocabulary.games_category
   module:
-    - node
     - rest
     - serialization
-    - webcomposer_rest_extra
-id: all_games_api
-label: 'Games - Listing API'
+    - taxonomy
+id: game_categories
+label: 'Game Categories'
 module: views
 description: ''
 tag: ''
-base_table: node_field_data
-base_field: nid
+base_table: taxonomy_term_field_data
+base_field: tid
 core: 8.x
 display:
   default:
@@ -76,12 +75,12 @@ display:
           hide_empty: false
           default_field_elements: true
       fields:
-        title:
-          id: title
-          table: node_field_data
-          field: title
-          entity_type: node
-          entity_field: title
+        name:
+          id: name
+          table: taxonomy_term_field_data
+          field: name
+          entity_type: taxonomy_term
+          entity_field: name
           label: ''
           alter:
             alter_text: false
@@ -94,9 +93,10 @@ display:
             html: false
           hide_empty: false
           empty_zero: false
+          type: string
           settings:
             link_to_entity: true
-          plugin_id: field
+          plugin_id: term_name
           relationship: none
           group_type: group
           admin_label: ''
@@ -112,7 +112,6 @@ display:
           empty: ''
           hide_alter_empty: true
           click_sort_column: value
-          type: string
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -123,61 +122,20 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          convert_spaces: false
       filters:
-        status:
-          value: '1'
-          table: node_field_data
-          field: status
-          plugin_id: boolean
-          entity_type: node
-          entity_field: status
-          id: status
-          expose:
-            operator: ''
-          group: 1
-        type:
-          id: type
-          table: node_field_data
-          field: type
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: in
+        vid:
+          id: vid
+          table: taxonomy_term_field_data
+          field: vid
           value:
-            game: game
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          entity_type: node
-          entity_field: type
+            games_category: games_category
+          entity_type: taxonomy_term
+          entity_field: vid
           plugin_id: bundle
         langcode:
           id: langcode
-          table: node_field_data
+          table: taxonomy_term_field_data
           field: langcode
           relationship: none
           group_type: group
@@ -212,31 +170,16 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          entity_type: node
+          entity_type: taxonomy_term
           entity_field: langcode
           plugin_id: language
-      sorts:
-        title:
-          id: title
-          table: node_field_data
-          field: title
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: ASC
-          exposed: false
-          expose:
-            label: ''
-          entity_type: node
-          entity_field: title
-          plugin_id: standard
+      sorts: {  }
       header: {  }
       footer: {  }
       empty: {  }
       relationships: {  }
       arguments: {  }
       display_extenders: {  }
-      title: 'Games List'
     cache_metadata:
       max-age: -1
       contexts:
@@ -244,35 +187,32 @@ display:
         - 'languages:language_interface'
         - request_format
         - url.query_args
-        - 'user.node_grants:view'
       tags: {  }
-  rest_export_all_games:
+  rest_export_1:
     display_plugin: rest_export
-    id: rest_export_all_games
-    display_title: 'Games - Listing API'
+    id: rest_export_1
+    display_title: 'REST export'
     position: 1
     display_options:
       display_extenders: {  }
-      path: api/games-pool
+      path: api/game-categories
       pager:
         type: none
         options:
           offset: 0
       style:
-        type: node_list_serializer
+        type: serializer
         options:
+          grouping: {  }
           uses_fields: false
-          formats:
-            json: json
+          formats: {  }
       row:
         type: data_entity
         options: {  }
-      display_description: ''
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
         - request_format
-        - 'user.node_grants:view'
       tags: {  }
