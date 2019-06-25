@@ -401,9 +401,30 @@ content:
     third_party_settings: {  }
     type: datetime_default
     region: content
+  field_slider_enable_game_launch:
+    type: boolean_checkbox
+    weight: 7
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_slider_game_code:
+    type: string_textfield
+    weight: 9
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_slider_game_provider:
+    type: options_select
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_slider_use_game_loader:
     type: boolean_checkbox
-    weight: 10
+    weight: 8
     region: content
     settings:
       display_label: true
@@ -441,8 +462,5 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
-  field_slider_enable_game_launch: true
-  field_slider_game_code: true
-  field_slider_game_provider: true
   name: true
   user_id: true
