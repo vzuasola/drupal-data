@@ -28,7 +28,7 @@ display:
         type: none
         options: {  }
       cache:
-        type: tag
+        type: none
         options: {  }
       query:
         type: views_query
@@ -253,7 +253,7 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: api/games
+      path: api/games-pool
       pager:
         type: none
         options:
