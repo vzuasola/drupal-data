@@ -15,7 +15,7 @@ bundle: webcomposer_slider_v2_entity
 label: 'Preview Display Only'
 description: 'Enable this field if you want the slider entry to be viewable on Preview Mode only.'
 required: false
-translatable: false
+translatable: true
 default_value:
   -
     value: 0
