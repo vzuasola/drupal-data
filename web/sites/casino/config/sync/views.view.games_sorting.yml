@@ -35,7 +35,7 @@ display:
         options:
           perm: 'access content overview'
       cache:
-        type: none
+        type: tag
         options: {  }
       query:
         type: views_query
@@ -808,7 +808,7 @@ display:
     display_plugin: page
     display_title: 'Page - Games - Sorting'
     id: page_games_sorting
-    position: 1
+    position: 3
     cache_metadata:
       contexts:
         - 'languages:language_interface'
@@ -824,7 +824,7 @@ display:
     display_plugin: rest_export
     id: rest_export_1
     display_title: 'REST - Games By Category'
-    position: 3
+    position: 2
     display_options:
       display_extenders: {  }
       display_description: ''
@@ -1065,7 +1065,6 @@ display:
         - 'languages:language_interface'
         - request_format
         - url
-        - user
         - 'user.node_grants:view'
       tags: {  }
   rest_export_games:
@@ -1086,6 +1085,7 @@ display:
         sorts: false
         access: false
         arguments: false
+        cache: false
       fields:
         title:
           id: title
@@ -1325,12 +1325,14 @@ display:
           formats:
             json: json
       enabled: true
+      cache:
+        type: tag
+        options: {  }
     cache_metadata:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
         - request_format
-        - url.query_args
         - 'user.node_grants:view'
-      max-age: 0
+      max-age: -1
       tags: {  }
