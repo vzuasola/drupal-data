@@ -8,3 +8,14 @@ game.add_form:
           destination: '/admin/games/manage'
   appears_on:
       - casino_games.list.games
+
+game.category_add_form:
+    route_name: 'entity.taxonomy_term.add_form'
+    title: 'Add Category'
+    route_parameters:
+        taxonomy_vocabulary: 'games_category'
+    options:
+        query:
+            destination: '/admin/casino/v2/categories'
+    appears_on:
+        - casino_games.list.categories_v2
