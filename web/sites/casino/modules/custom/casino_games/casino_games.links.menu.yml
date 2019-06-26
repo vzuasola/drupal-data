@@ -19,13 +19,20 @@ casino_games.sort.games:
   weight: 8
 
 casino_games.list.categories:
-  title: 'Manage Categories'
+  title: 'Manage Categories (iPlay)'
   parent: casino_games.admin_settings
-  description: 'Manage Game Categories'
+  description: 'Manage Game Categories (iPlay)'
   route_name: entity.taxonomy_vocabulary.overview_form
   route_parameters:
     taxonomy_vocabulary: 'games_category'
   weight: 7
+
+casino_games.list.categories_v2:
+  title: 'Manage Categories (Casino)'
+  parent: casino_games.admin_settings
+  description: 'Manage Game Categories (Casino)'
+  route_name: casino_games.list.categories_v2
+  weight: 8
 
 casino_games.list.ribbons:
   title: 'Manage Ribbons'
