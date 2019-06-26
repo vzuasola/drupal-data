@@ -11,12 +11,12 @@ use Drupal\Core\Form\FormStateInterface;
  * @WebcomposerConfigPlugin(
  *   id = "iplay_config_form",
  *   route = {
- *     "title" = "Iplay Custom Configuration",
+ *     "title" = "iPlay Custom Configuration",
  *     "path" = "/admin/iplay/config",
  *   },
  *   menu = {
- *     "title" = "Iplay Custom Configuration",
- *     "description" = "Configure custom Iplay configuration",
+ *     "title" = "iPlay Custom Configuration",
+ *     "description" = "Configure custom iPlay configuration",
  *     "parent" = "casino_games.admin_settings",
  *     "weight" = -5
  *   },
