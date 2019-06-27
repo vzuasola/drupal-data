@@ -1,0 +1,21 @@
+uuid: 8e2903a7-20f8-401c-ada3-7b880ffbf8ff
+langcode: ja
+status: true
+dependencies:
+  module:
+    - zipang_big_winner
+id: zipang_big_winner_entity.field_image_banner_link
+field_name: field_image_banner_link
+entity_type: zipang_big_winner_entity
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

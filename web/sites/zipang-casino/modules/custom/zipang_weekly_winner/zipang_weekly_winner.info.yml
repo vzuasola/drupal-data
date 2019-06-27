@@ -1,0 +1,5 @@
+name: Zipang Weekly Winner
+type: module
+description: List of Zipang Weekly Winner entities
+core: 8.x
+package: Custom

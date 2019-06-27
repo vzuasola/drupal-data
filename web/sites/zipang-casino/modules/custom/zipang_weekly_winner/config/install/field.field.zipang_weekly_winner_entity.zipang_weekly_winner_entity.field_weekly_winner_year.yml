@@ -1,0 +1,32 @@
+uuid: ec56d3e9-dd25-4eb2-8026-433fa4ab333d
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.zipang_weekly_winner_entity.field_weekly_winner_year
+    - taxonomy.vocabulary.weekly_winner_year
+  module:
+    - zipang_weekly_winner
+_core:
+  default_config_hash: h9IT9hl5Yna1GtucFnMqapjBUwtyYB3W-uKgseUTHxQ
+id: zipang_weekly_winner_entity.zipang_weekly_winner_entity.field_weekly_winner_year
+field_name: field_weekly_winner_year
+entity_type: zipang_weekly_winner_entity
+bundle: zipang_weekly_winner_entity
+label: 'Weekly Winner Year'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      weekly_winner_year: weekly_winner_year
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

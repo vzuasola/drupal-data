@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains zipang_404.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function zipang_404_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the zipang_404 module.
+    case 'help.page.zipang_404':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Zipang 404 Page') . '</p>';
+      return $output;
+
+    default:
+  }
+}

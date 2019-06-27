@@ -1,0 +1,18 @@
+zipang_weekly_winner.list:
+  title: 'Zipang Weekly Winner'
+  description: 'List of zipang weekly winner entities'
+  parent: system.admin_config
+  route_name: zipang_weekly_winner.admin_settings
+
+# Zipang weekly winner entity menu items definition
+entity.zipang_weekly_winner_entity.collection:
+  title: 'Zipang weekly winner entity list'
+  route_name: entity.zipang_weekly_winner_entity.collection
+  description: 'List Zipang weekly winner entity entities'
+  parent: zipang_weekly_winner.list
+
+zipang_weekly_winner_entity.admin.structure.settings:
+  title: Zipang weekly winner entity settings
+  description: 'Configure Zipang weekly winner entity entities'
+  route_name: zipang_weekly_winner_entity.settings
+  parent: zipang_weekly_winner.list

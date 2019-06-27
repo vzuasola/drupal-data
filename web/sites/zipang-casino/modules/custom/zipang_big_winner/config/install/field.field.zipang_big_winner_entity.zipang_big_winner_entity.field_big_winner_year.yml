@@ -1,0 +1,30 @@
+uuid: 9b4ebcd4-5710-4a31-abf4-7d6947b3eef1
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.zipang_big_winner_entity.field_big_winner_year
+    - taxonomy.vocabulary.big_winner_year
+  module:
+    - zipang_big_winner
+id: zipang_big_winner_entity.zipang_big_winner_entity.field_big_winner_year
+field_name: field_big_winner_year
+entity_type: zipang_big_winner_entity
+bundle: zipang_big_winner_entity
+label: 'Big Winner Year'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      big_winner_year: big_winner_year
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

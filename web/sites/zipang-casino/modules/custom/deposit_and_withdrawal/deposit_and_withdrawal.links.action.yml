@@ -1,0 +1,5 @@
+entity.deposit_and_withdrawal_entity.add_form:
+  route_name: entity.deposit_and_withdrawal_entity.add_form
+  title: 'Add Deposit and withdrawal entity'
+  appears_on:
+    - entity.deposit_and_withdrawal_entity.collection

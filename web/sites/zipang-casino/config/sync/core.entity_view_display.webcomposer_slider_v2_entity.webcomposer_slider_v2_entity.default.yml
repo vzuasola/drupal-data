@@ -9,7 +9,7 @@ dependencies:
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_banner_link_target
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_content_position
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_disable_in_tablet
-    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_log_in
+    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_log_in_state
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_post_banner_blurb
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_post_banner_image
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_post_banner_link
@@ -34,14 +34,14 @@ bundle: webcomposer_slider_v2_entity
 mode: default
 content:
   field_banner_blurb:
-    weight: 4
+    weight: 8
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_banner_image:
-    weight: 1
+    weight: 5
     label: above
     settings:
       image_style: ''
@@ -50,7 +50,7 @@ content:
     type: image
     region: content
   field_banner_link:
-    weight: 10
+    weight: 6
     label: above
     settings:
       trim_length: 80
@@ -62,21 +62,21 @@ content:
     type: link
     region: content
   field_banner_link_target:
-    weight: 11
+    weight: 7
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_content_position:
-    weight: 12
+    weight: 9
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_disable_in_tablet:
-    weight: 2
+    weight: 4
     label: above
     settings:
       format: default
@@ -85,7 +85,7 @@ content:
     third_party_settings: {  }
     type: boolean
     region: content
-  field_log_in:
+  field_log_in_state:
     weight: 3
     label: above
     settings: {  }
@@ -93,14 +93,14 @@ content:
     type: list_default
     region: content
   field_post_banner_blurb:
-    weight: 5
+    weight: 13
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_post_banner_image:
-    weight: 6
+    weight: 10
     label: above
     settings:
       image_style: ''
@@ -109,7 +109,7 @@ content:
     type: image
     region: content
   field_post_banner_link:
-    weight: 7
+    weight: 11
     label: above
     settings:
       trim_length: 80
@@ -121,21 +121,21 @@ content:
     type: link
     region: content
   field_post_banner_link_target:
-    weight: 8
+    weight: 12
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_post_content_position:
-    weight: 9
+    weight: 14
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_preview_display_only:
-    weight: 13
+    weight: 15
     label: above
     settings:
       format: default
@@ -145,7 +145,7 @@ content:
     type: boolean
     region: content
   field_publish_date:
-    weight: 14
+    weight: 16
     label: above
     settings:
       format_type: medium
@@ -154,14 +154,14 @@ content:
     type: datetime_default
     region: content
   field_status:
-    weight: 15
+    weight: 18
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_title:
-    weight: 16
+    weight: 2
     label: above
     settings:
       link_to_entity: false
@@ -180,7 +180,7 @@ content:
   name:
     label: above
     type: string
-    weight: -4
+    weight: 0
     region: content
     settings:
       link_to_entity: false
@@ -188,7 +188,7 @@ content:
   user_id:
     label: hidden
     type: author
-    weight: 0
+    weight: 1
     region: content
     settings: {  }
     third_party_settings: {  }

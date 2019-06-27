@@ -1,0 +1,47 @@
+uuid: 7f62f658-d995-48ca-b7a3-aa14350d7b6a
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.zipang_mobile_block_entity.field_image_banner
+  module:
+    - content_translation
+    - image
+    - zipang_mobile_blocks
+third_party_settings:
+  content_translation:
+    translation_sync:
+      file: file
+      alt: '0'
+      title: '0'
+_core:
+  default_config_hash: oQbV5Et8OMOxfZgMpBtnOXXcyBxxoH-hxPRn9CYAJYU
+id: zipang_mobile_block_entity.zipang_mobile_block_entity.field_image_banner
+field_name: field_image_banner
+entity_type: zipang_mobile_block_entity
+bundle: zipang_mobile_block_entity
+label: 'Image Banner'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

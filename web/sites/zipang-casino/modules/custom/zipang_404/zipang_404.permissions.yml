@@ -1,0 +1,22 @@
+add Zipang 404 image entity entities:
+  title: 'Create new Zipang 404 Image Entity entities'
+
+administer Zipang 404 image entity entities:
+  title: 'Administer Zipang 404 Image Entity entities'
+  description: 'Allow to access the administration form to configure Zipang 404 Image Entity entities.'
+  restrict access: true
+
+delete Zipang 404 image entity entities:
+  title: 'Delete Zipang 404 Image Entity entities'
+
+edit Zipang 404 image entity entities:
+  title: 'Edit Zipang 404 Image Entity entities'
+
+access Zipang 404 image entity overview:
+  title: 'Access the Zipang 404 Image Entity overview page'
+
+view published Zipang 404 image entity entities:
+  title: 'View published Zipang 404 Image Entity entities'
+
+view unpublished Zipang 404 image entity entities:
+  title: 'View unpublished Zipang 404 Image Entity entities'

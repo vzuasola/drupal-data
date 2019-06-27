@@ -1,0 +1,20 @@
+uuid: 5e2f4368-78d3-4f11-b91f-8bac38eba2d9
+langcode: ja
+status: true
+dependencies:
+  module:
+    - taxonomy
+    - zipang_big_winner
+id: zipang_big_winner_entity.field_tag
+field_name: field_tag
+entity_type: zipang_big_winner_entity
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,21 @@
+uuid: ab2681c2-6632-4ad7-b3b0-1d35604d9376
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.zipang_big_winner_entity.field_body
+  module:
+    - text
+    - zipang_big_winner
+id: zipang_big_winner_entity.zipang_big_winner_entity.field_body
+field_name: field_body
+entity_type: zipang_big_winner_entity
+bundle: zipang_big_winner_entity
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

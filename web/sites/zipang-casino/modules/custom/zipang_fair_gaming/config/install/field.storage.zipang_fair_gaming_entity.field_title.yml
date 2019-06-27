@@ -1,0 +1,21 @@
+uuid: c78ddde2-c545-4868-8d8b-44b054d211dc
+langcode: ja
+status: true
+dependencies:
+  module:
+    - zipang_fair_gaming
+id: zipang_fair_gaming_entity.field_title
+field_name: field_title
+entity_type: zipang_fair_gaming_entity
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

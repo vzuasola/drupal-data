@@ -1,0 +1,21 @@
+uuid: f57678cd-2158-4483-a959-5742dfbce5f1
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.deposit_and_withdrawal_entity.field_where_to_open_link
+  module:
+    - deposit_and_withdrawal
+    - options
+id: deposit_and_withdrawal_entity.deposit_and_withdrawal_entity.field_where_to_open_link
+field_name: field_where_to_open_link
+entity_type: deposit_and_withdrawal_entity
+bundle: deposit_and_withdrawal_entity
+label: 'Where to open link'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

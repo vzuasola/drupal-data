@@ -1,0 +1,19 @@
+uuid: 9954591f-fd15-459d-a8f2-83960d87abe8
+langcode: ja
+status: true
+dependencies:
+  module:
+    - text
+    - zipang_big_winner
+id: zipang_big_winner_entity.field_body
+field_name: field_body
+entity_type: zipang_big_winner_entity
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
