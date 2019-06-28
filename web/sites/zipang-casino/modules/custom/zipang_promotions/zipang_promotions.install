@@ -1,0 +1,41 @@
+<?php
+
+/**
+ * Implements hook_uninstall
+ */
+function zipang_promotions_uninstall() {
+  $keys = [
+    'core.entity_form_display.zipang_promotions_entity.zipang_promotions_entity.default',
+    'core.entity_view_display.zipang_promotions_entity.zipang_promotions_entity.default',
+    'field.field.zipang_promotions_entity.zipang_promotions_entity.field_body',
+    'field.field.zipang_promotions_entity.zipang_promotions_entity.field_button_label',
+    'field.field.zipang_promotions_entity.zipang_promotions_entity.field_button_link',
+    'field.field.zipang_promotions_entity.zipang_promotions_entity.field_button_link_target',
+    'field.field.zipang_promotions_entity.zipang_promotions_entity.field_configurable_url',
+    'field.field.zipang_promotions_entity.zipang_promotions_entity.field_image_banner',
+    'field.field.zipang_promotions_entity.zipang_promotions_entity.field_image_banner_link',
+    'field.field.zipang_promotions_entity.zipang_promotions_entity.field_image_banner_link_target',
+    'field.field.zipang_promotions_entity.zipang_promotions_entity.field_tag',
+    'field.field.zipang_promotions_entity.zipang_promotions_entity.field_thumbnail',
+    'field.field.zipang_promotions_entity.zipang_promotions_entity.field_title',
+    'field.storage.zipang_promotions_entity.field_body',
+    'field.storage.zipang_promotions_entity.field_button_label',
+    'field.storage.zipang_promotions_entity.field_button_link',
+    'field.storage.zipang_promotions_entity.field_button_link_target',
+    'field.storage.zipang_promotions_entity.field_configurable_url',
+    'field.storage.zipang_promotions_entity.field_image_banner',
+    'field.storage.zipang_promotions_entity.field_image_banner_link',
+    'field.storage.zipang_promotions_entity.field_image_banner_link_target',
+    'field.storage.zipang_promotions_entity.field_tag',
+    'field.storage.zipang_promotions_entity.field_thumbnail',
+    'field.storage.zipang_promotions_entity.field_title',
+    'language.content_settings.zipang_promotions_entity.zipang_promotions_entity',
+    'views.view.zipang_promotions',
+    'zipang_config.promotions_page_configuration',
+
+  ];
+
+  foreach ($keys as $key) {
+    \Drupal::configFactory()->getEditable($key)->delete();
+  }
+}
