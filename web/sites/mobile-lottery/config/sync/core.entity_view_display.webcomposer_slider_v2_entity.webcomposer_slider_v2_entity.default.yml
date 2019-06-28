@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_banner_blurb
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_banner_image
+    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_banner_image_landscape
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_banner_link
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_banner_link_target
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_content_position
@@ -12,11 +13,16 @@ dependencies:
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_log_in_state
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_post_banner_blurb
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_post_banner_image
+    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_post_banner_image_landscap
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_post_banner_link
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_post_banner_link_target
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_post_content_position
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_preview_display_only
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_publish_date
+    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_slider_enable_game_launch
+    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_slider_game_code
+    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_slider_game_provider
+    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_slider_use_game_loader
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_status
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_title
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_unpublish_date
@@ -44,6 +50,15 @@ content:
     region: content
   field_banner_image:
     weight: 3
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_banner_image_landscape:
+    weight: 22
     label: above
     settings:
       image_style: ''
@@ -111,6 +126,15 @@ content:
     region: content
   field_post_banner_image:
     weight: 14
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_post_banner_image_landscap:
+    weight: 23
     label: above
     settings:
       image_style: ''
