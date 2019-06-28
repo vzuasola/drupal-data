@@ -179,8 +179,10 @@ class NodeEntityNormalizer extends ContentEntityNormalizer {
             ],
             $nid
           );
-
-          $translatedArray['field_draggable_views'][$value['identifier']] = $weight;
+          if (!empty($weight)) {
+            $translatedArray['field_draggable_views'][$value['identifier']] = $weight;
+            break;
+          }
         }
       }
     }
