@@ -269,10 +269,10 @@ class ZipangCasinoConfig extends FormBase {
       '#translatable' => TRUE,
     ];
 
-    $form['inner_breadcrumb']['promotion_breadcrumb'] = [
+    $form['inner_breadcrumb']['promotions_breadcrumb'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Promotion'),
-      '#default_value' => $this->get('promotion_breadcrumb'),
+      '#default_value' => $this->get('promotions_breadcrumb'),
       '#translatable' => TRUE,
     ];
 
