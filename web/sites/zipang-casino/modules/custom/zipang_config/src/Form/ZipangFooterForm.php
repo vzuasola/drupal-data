@@ -39,6 +39,7 @@ class ZipangFooterForm extends FormBase {
     ];
 
     $this->sectionFooterBlurb($form);
+    $this->sectionCookieNotification($form);
 
     return $form;
   }
@@ -62,5 +63,31 @@ class ZipangFooterForm extends FormBase {
       '#format' => $d['format'],
       '#translatable' => TRUE,
     ];
+  }
+
+  private function sectionCookieNotification(array &$form) {
+    $form['cookie_notif'] = [
+      '#type' => 'details',
+      '#title' => t('Cookie Notification'),
+      '#group' => 'advanced',
+    ];
+
+    $default_website_cookie_body = $this->get('cookie_notif_body');
+    $form['cookie_notif']['cookie_notif_body'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('Notification Message'),
+      '#default_value' => $default_website_cookie_body['value'],
+      '#format' => $default_website_cookie_body['format'],
+      '#translatable' => TRUE,
+    ];
+
+    $default_website_cookie_acceptbutton_text = $this->get('cookie_notif_acceptbutton_text');
+    $form['cookie_notif']['cookie_notif_acceptbutton_text'] = [
+      '#type' => 'textfield',
+      '#title' => t('Accept Button Text'),
+      '#default_value' => $default_website_cookie_acceptbutton_text,
+      '#translatable' => TRUE,
+    ];
+
   }
 }
