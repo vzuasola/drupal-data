@@ -1,0 +1,22 @@
+add zipang promotions entity entities:
+  title: 'Create new Zipang promotions entity entities'
+
+administer zipang promotions entity entities:
+  title: 'Administer Zipang promotions entity entities'
+  description: 'Allow to access the administration form to configure Zipang promotions entity entities.'
+  restrict access: true
+
+delete zipang promotions entity entities:
+  title: 'Delete Zipang promotions entity entities'
+
+edit zipang promotions entity entities:
+  title: 'Edit Zipang promotions entity entities'
+
+access zipang promotions entity overview:
+  title: 'Access the Zipang promotions entity overview page'
+
+view published zipang promotions entity entities:
+  title: 'View published Zipang promotions entity entities'
+
+view unpublished zipang promotions entity entities:
+  title: 'View unpublished Zipang promotions entity entities'

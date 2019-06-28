@@ -1,0 +1,20 @@
+uuid: 90863f97-519e-4213-90ae-1c2c70d2c07f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.zipang_promotions_entity.field_title
+  module:
+    - zipang_promotions
+id: zipang_promotions_entity.zipang_promotions_entity.field_title
+field_name: field_title
+entity_type: zipang_promotions_entity
+bundle: zipang_promotions_entity
+label: Title
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

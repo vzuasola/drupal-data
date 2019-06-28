@@ -1,0 +1,20 @@
+uuid: 39ff8ad8-d68e-4188-9ba3-27d47843f604
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.zipang_promotions_entity.field_button_link
+  module:
+    - zipang_promotions
+id: zipang_promotions_entity.zipang_promotions_entity.field_button_link
+field_name: field_button_link
+entity_type: zipang_promotions_entity
+bundle: zipang_promotions_entity
+label: 'Button Link'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
