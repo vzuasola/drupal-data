@@ -194,9 +194,18 @@ class ZipangLoginConfigForm extends FormBase {
     $default_pt_error_messages = $this->get('login_pt_error_messages');
     $form['login_pt_settings']['login_pt_error_messages'] = [
       '#type' => 'textarea',
-      '#title' => t('Playtech error messages'),
+      '#title' => t('Login Playtech error messages'),
       '#default_value' => $default_pt_error_messages,
-      '#description' => $this->t('Mapping for error messages from playtech. Format errorCode|errorMessage'),
+      '#description' => $this->t('Mapping for login error messages from playtech. Format errorCode|errorMessage'),
+      '#translatable' => TRUE,
+    ];
+
+    $default_general_error_messages = $this->get('general_pt_error_messages');
+    $form['login_pt_settings']['general_pt_error_messages'] = [
+      '#type' => 'textarea',
+      '#title' => t('Playtech General error messages'),
+      '#default_value' => $default_general_error_messages,
+      '#description' => $this->t('Mapping for general error messages from playtech. Format errorCode|errorMessage'),
       '#translatable' => TRUE,
     ];
 
