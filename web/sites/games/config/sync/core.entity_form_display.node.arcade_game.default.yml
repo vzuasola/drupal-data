@@ -17,9 +17,13 @@ dependencies:
     - field.field.node.arcade_game.field_game_thumbnail_image_v
     - field.field.node.arcade_game.field_game_thumbnail_size
     - field.field.node.arcade_game.field_preview_display_only
+    - field.field.node.arcade_game.field_um_end
+    - field.field.node.arcade_game.field_um_start
+    - field.field.node.arcade_game.field_under_maintenance_message
     - image.style.thumbnail
     - node.type.arcade_game
   module:
+    - datetime
     - field_group
     - image
     - metatag
@@ -60,6 +64,21 @@ third_party_settings:
         description: ''
         required_fields: false
       label: 'Game Thumbnail'
+    group_maintenance:
+      children:
+        - field_under_maintenance_message
+        - field_um_start
+        - field_um_end
+      parent_name: ''
+      weight: 13
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Maintenance
 id: node.arcade_game.default
 targetEntityType: node
 bundle: arcade_game
@@ -74,7 +93,7 @@ content:
     type: string_textfield
     region: content
   field_arc_game_keywords:
-    weight: 27
+    weight: 12
     settings:
       size: 100
       placeholder: 'e.g., slots, top, live'
@@ -156,6 +175,26 @@ content:
     settings:
       display_label: true
     third_party_settings: {  }
+  field_um_end:
+    weight: 18
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_um_start:
+    weight: 17
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_under_maintenance_message:
+    weight: 16
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
   langcode:
     type: language_select
     weight: 1
