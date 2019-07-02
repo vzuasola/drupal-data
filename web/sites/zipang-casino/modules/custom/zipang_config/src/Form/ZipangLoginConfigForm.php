@@ -247,15 +247,6 @@ class ZipangLoginConfigForm extends FormBase {
       '#description' => $this->t('Login Session Time in Minutes'),
       '#translatable' => FALSE,
     ];
-
-    $default_session_timeout = $this->get('session_timeout');
-    $form['login_session']['session_timeout'] = [
-      '#type' => 'textfield',
-      '#title' => t('Session Timeout Error Message'),
-      '#default_value' => $default_session_timeout,
-      '#description' => $this->t('Session Timeout Error Message'),
-      '#translatable' => TRUE,
-    ];
   }
 
   private function sectionChangePassConfig(array &$form) {
