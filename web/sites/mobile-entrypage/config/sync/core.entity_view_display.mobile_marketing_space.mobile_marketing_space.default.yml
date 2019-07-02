@@ -1,0 +1,81 @@
+uuid: 4f100bcb-5aa4-41ed-8f1f-83909d6ec66f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.mobile_marketing_space.mobile_marketing_space.field_banner_image_landscape
+    - field.field.mobile_marketing_space.mobile_marketing_space.field_banner_image_portrait
+    - field.field.mobile_marketing_space.mobile_marketing_space.field_banner_link
+    - field.field.mobile_marketing_space.mobile_marketing_space.field_publish_date
+    - field.field.mobile_marketing_space.mobile_marketing_space.field_title
+    - field.field.mobile_marketing_space.mobile_marketing_space.field_unpublish_date
+  module:
+    - datetime
+    - image
+    - link
+    - mobile_marketing_space
+id: mobile_marketing_space.mobile_marketing_space.default
+targetEntityType: mobile_marketing_space
+bundle: mobile_marketing_space
+mode: default
+content:
+  field_banner_image_landscape:
+    weight: 1
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_banner_image_portrait:
+    weight: 0
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_banner_link:
+    weight: 2
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_publish_date:
+    weight: 4
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_title:
+    weight: 3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_unpublish_date:
+    weight: 5
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+hidden:
+  langcode: true
+  name: true
+  user_id: true

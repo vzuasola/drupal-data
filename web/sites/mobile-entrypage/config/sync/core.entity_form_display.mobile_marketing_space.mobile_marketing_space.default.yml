@@ -1,0 +1,100 @@
+uuid: b74dd0f2-1ff0-40bd-b36d-77470b7def63
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.mobile_marketing_space.mobile_marketing_space.field_banner_image_landscape
+    - field.field.mobile_marketing_space.mobile_marketing_space.field_banner_image_portrait
+    - field.field.mobile_marketing_space.mobile_marketing_space.field_banner_link
+    - field.field.mobile_marketing_space.mobile_marketing_space.field_publish_date
+    - field.field.mobile_marketing_space.mobile_marketing_space.field_title
+    - field.field.mobile_marketing_space.mobile_marketing_space.field_unpublish_date
+    - image.style.thumbnail
+  module:
+    - datetime
+    - field_group
+    - image
+    - link
+    - mobile_marketing_space
+third_party_settings:
+  field_group:
+    group_marketing_space:
+      children:
+        - field_banner_image_portrait
+        - field_banner_image_landscape
+        - field_banner_link
+      parent_name: ''
+      weight: 1
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Marketing Space'
+    group_scheduler_settings:
+      children:
+        - field_publish_date
+        - field_unpublish_date
+      parent_name: ''
+      weight: 20
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Scheduler Settings'
+id: mobile_marketing_space.mobile_marketing_space.default
+targetEntityType: mobile_marketing_space
+bundle: mobile_marketing_space
+mode: default
+content:
+  field_banner_image_landscape:
+    weight: 2
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_banner_image_portrait:
+    weight: 1
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_banner_link:
+    weight: 3
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_publish_date:
+    weight: 21
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_unpublish_date:
+    weight: 22
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  langcode:
+    type: language_select
+    weight: 0
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+hidden:
+  field_title: true
+  name: true
+  translation: true
+  user_id: true
