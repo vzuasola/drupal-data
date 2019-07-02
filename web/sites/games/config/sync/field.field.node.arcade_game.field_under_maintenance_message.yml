@@ -1,0 +1,19 @@
+uuid: 1aac6e09-3e63-4343-a8ad-c8448885fc9b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_under_maintenance_message
+    - node.type.arcade_game
+id: node.arcade_game.field_under_maintenance_message
+field_name: field_under_maintenance_message
+entity_type: node
+bundle: arcade_game
+label: 'Under Maintenance Message'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long
