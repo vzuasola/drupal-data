@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.taxonomy_term.arcade_game_category.field_arcade_cat_alias
     - field.field.taxonomy_term.arcade_game_category.field_arcade_cat_disable
+    - field.field.taxonomy_term.arcade_game_category.field_new
     - taxonomy.vocabulary.arcade_game_category
 id: taxonomy_term.arcade_game_category.default
 targetEntityType: taxonomy_term
@@ -20,6 +21,13 @@ content:
     type: string_textfield
     region: content
   field_arcade_cat_disable:
+    weight: 5
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_new:
     weight: 4
     settings:
       display_label: true
