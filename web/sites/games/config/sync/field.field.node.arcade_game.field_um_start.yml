@@ -1,0 +1,21 @@
+uuid: f265160d-9e8c-46c2-9680-17144946ff26
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_um_start
+    - node.type.arcade_game
+  module:
+    - datetime
+id: node.arcade_game.field_um_start
+field_name: field_um_start
+entity_type: node
+bundle: arcade_game
+label: 'Under Maintenance Start'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime
