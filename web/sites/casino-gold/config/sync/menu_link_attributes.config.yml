@@ -13,4 +13,6 @@ attributes:
     label: 'Menu Tag'
     options:
       new: 'New Product'
-langcode: zh-hans
+  disabled:
+    label: 'Currency Restriction (Blacklist)'
+    description: 'Example: RMB,USD,KRW'
