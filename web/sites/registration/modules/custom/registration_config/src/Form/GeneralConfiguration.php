@@ -249,6 +249,22 @@ class GeneralConfiguration extends FormBase {
       '#required' => TRUE,
       '#translatable' => TRUE,
     ];
+
+    $form['restriction']['mbtc_product_portal_id'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Product Portal ID'),
+      '#description' => $this->t('Portal ID of Product that support mBTC currency.'),
+      '#default_value' => $this->get('mbtc_product_portal_id'),
+      '#required' => TRUE,
+    ];
+
+    $form['restriction']['mbtc_restriction_message'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Currency Restriction Message'),
+      '#default_value' => $this->get('mbtc_restriction_message'),
+      '#required' => TRUE,
+      '#translatable' => TRUE,
+    ];
   }
 
   /**
