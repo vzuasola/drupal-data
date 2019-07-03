@@ -188,6 +188,20 @@ class GeneralConfiguration extends FormBase {
         'if unchecked'),
       '#default_value' => $this->get('enable_futurama_native_app'),
     ];
+    $form['integration']['enable_futurama_poker_native_app_back'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable back button in Poker Native App'),
+      '#description' => $this->t('If checked, back button will be visible to the player.' .
+        'if unchecked'),
+      '#default_value' => $this->get('enable_futurama_poker_native_app_back'),
+    ];
+    $form['integration']['enable_futurama_authentication_poker_native_app'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable Futarama Poker Native App authentication'),
+      '#description' => $this->t('This will enable futurama authentication for Poker Native App and will use that legacy ' .
+        'if unchecked'),
+      '#default_value' => $this->get('enable_futurama_authentication_poker_native_app'),
+    ];
     $form['integration']['ow_native_autologin_url'] = [
       '#type' => 'textfield',
       '#title' => $this->t('One Works Native App Autologin URL'),
