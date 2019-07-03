@@ -1,0 +1,42 @@
+<?php
+
+/**
+ * Implements hook_uninstall
+ */
+function zipang_weekly_winner_uninstall() {
+  $keys = [
+    'core.base_field_override.taxonomy_term.weekly_winner_month.changed.yml',
+    'core.base_field_override.taxonomy_term.weekly_winner_month.description.yml',
+    'core.base_field_override.taxonomy_term.weekly_winner_month.name.yml',
+    'core.base_field_override.taxonomy_term.weekly_winner_month.path.yml',
+    'core.base_field_override.taxonomy_term.weekly_winner_year.changed.yml',
+    'core.base_field_override.taxonomy_term.weekly_winner_year.description.yml',
+    'core.base_field_override.taxonomy_term.weekly_winner_year.name.yml',
+    'core.base_field_override.taxonomy_term.weekly_winner_year.path.yml',
+    'core.base_field_override.zipang_weekly_winner_entity.zipang_weekly_winner_entity.metatag.yml',
+    'core.base_field_override.zipang_weekly_winner_entity.zipang_weekly_winner_entity.user_id.yml',
+    'core.entity_form_display.zipang_weekly_winner_entity.zipang_weekly_winner_entity.default.yml',
+    'core.entity_view_display.zipang_weekly_winner_entity.zipang_weekly_winner_entity.default.yml',
+    'core.entity_form_display.taxonomy_term.weekly_winner_year.default.yml',
+    'core.entity_form_display.taxonomy_term.weekly_winner_month.default.yml',
+    'field.field.zipang_weekly_winner_entity.zipang_weekly_winner_entity.field_body.yml',
+    'field.field.zipang_weekly_winner_entity.zipang_weekly_winner_entity.field_title.yml',
+    'field.field.zipang_weekly_winner_entity.zipang_weekly_winner_entity.field_weekly_winner_year.yml',
+    'field.field.zipang_weekly_winner_entity.zipang_weekly_winner_entity.field_weekly_winner_month.yml',
+    'field.storage.zipang_weekly_winner_entity.field_body.yml',
+    'field.storage.zipang_weekly_winner_entity.field_title.yml',
+    'field.storage.zipang_weekly_winner_entity.field_weekly_winner_year.yml',
+    'field.storage.zipang_weekly_winner_entity.field_weekly_winner_month.yml',
+    'language.content_settings.zipang_weekly_winner_entity.zipang_weekly_winner_entity.yml',
+    'language.content_settings.taxonomy_term.weekly_winner_month.yml',
+    'language.content_settings.taxonomy_term.weekly_winner_year.yml',
+    'taxonomy.vocabulary.weekly_winner_year.yml',
+    'taxonomy.vocabulary.weekly_winner_month.yml',
+    'views.view.weekly_winner.yml',
+    'views.view.weekly_winner_category.yml',
+  ];
+
+  foreach ($keys as $key) {
+    \Drupal::configFactory()->getEditable($key)->delete();
+  }
+}

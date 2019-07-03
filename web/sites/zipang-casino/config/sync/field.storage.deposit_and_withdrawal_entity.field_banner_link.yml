@@ -1,0 +1,21 @@
+uuid: 6d9ac273-3cce-46f2-94a5-9bf15e976f82
+langcode: ja
+status: true
+dependencies:
+  module:
+    - deposit_and_withdrawal
+id: deposit_and_withdrawal_entity.field_banner_link
+field_name: field_banner_link
+entity_type: deposit_and_withdrawal_entity
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

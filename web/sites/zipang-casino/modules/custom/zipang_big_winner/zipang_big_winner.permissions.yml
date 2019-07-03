@@ -1,0 +1,22 @@
+add zipang big winner entity entities:
+  title: 'Create new Zipang big winner entity entities'
+
+administer zipang big winner entity entities:
+  title: 'Administer Zipang big winner entity entities'
+  description: 'Allow to access the administration form to configure Zipang big winner entity entities.'
+  restrict access: true
+
+delete zipang big winner entity entities:
+  title: 'Delete Zipang big winner entity entities'
+
+edit zipang big winner entity entities:
+  title: 'Edit Zipang big winner entity entities'
+
+access zipang big winner entity overview:
+  title: 'Access the Zipang big winner entity overview page'
+
+view published zipang big winner entity entities:
+  title: 'View published Zipang big winner entity entities'
+
+view unpublished zipang big winner entity entities:
+  title: 'View unpublished Zipang big winner entity entities'

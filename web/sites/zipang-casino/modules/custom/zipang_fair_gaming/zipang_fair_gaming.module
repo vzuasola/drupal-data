@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains zipang_fair_gaming.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function zipang_fair_gaming_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the zipang_fair_gaming module.
+    case 'help.page.zipang_fair_gaming':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Zipang Fair Gaming') . '</p>';
+      return $output;
+
+    default:
+  }
+}

@@ -1,0 +1,5 @@
+entity.zipang_big_winner_entity.add_form:
+  route_name: entity.zipang_big_winner_entity.add_form
+  title: 'Add Zipang big winner entity'
+  appears_on:
+    - entity.zipang_big_winner_entity.collection

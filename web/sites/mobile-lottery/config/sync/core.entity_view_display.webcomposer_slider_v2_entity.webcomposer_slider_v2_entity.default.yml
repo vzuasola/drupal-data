@@ -1,0 +1,246 @@
+uuid: 364b70a8-f049-4a6d-be76-c3a8e4dcadc8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_banner_blurb
+    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_banner_image
+    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_banner_image_landscape
+    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_banner_link
+    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_banner_link_target
+    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_content_position
+    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_disable_in_tablet
+    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_log_in_state
+    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_post_banner_blurb
+    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_post_banner_image
+    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_post_banner_image_landscap
+    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_post_banner_link
+    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_post_banner_link_target
+    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_post_content_position
+    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_preview_display_only
+    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_publish_date
+    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_slider_enable_game_launch
+    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_slider_game_code
+    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_slider_game_provider
+    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_slider_use_game_loader
+    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_status
+    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_title
+    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_unpublish_date
+  module:
+    - datetime
+    - image
+    - link
+    - options
+    - text
+    - user
+    - webcomposer_slider_v2
+_core:
+  default_config_hash: lTOa1e37jE2gIy0Alk0YcBDwuKHa3-X2bDXwinqK7S4
+id: webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.default
+targetEntityType: webcomposer_slider_v2_entity
+bundle: webcomposer_slider_v2_entity
+mode: default
+content:
+  field_banner_blurb:
+    weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_banner_image:
+    weight: 3
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_banner_image_landscape:
+    weight: 22
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_banner_link:
+    weight: 4
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_banner_link_target:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_content_position:
+    weight: 7
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_disable_in_tablet:
+    weight: 20
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_game_launching:
+    weight: 16
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_log_in_state:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_post_banner_blurb:
+    weight: 15
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_post_banner_image:
+    weight: 14
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_post_banner_image_landscap:
+    weight: 23
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_post_banner_link:
+    weight: 11
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_post_banner_link_target:
+    weight: 12
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_post_content_position:
+    weight: 13
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_postlogin_slider_ribbon:
+    weight: 17
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_prelogin_slider_ribbon:
+    weight: 18
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_preview_display_only:
+    weight: 19
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_publish_date:
+    weight: 8
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_status:
+    weight: 21
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_title:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_unpublish_date:
+    weight: 9
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  name:
+    label: above
+    type: string
+    weight: -4
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  user_id:
+    label: hidden
+    type: author
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

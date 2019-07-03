@@ -1,0 +1,33 @@
+<?php
+/**
+ * Implements hook_uninstall
+ */
+function zipang_fair_gaming_uninstall() {
+  $keys = [
+    'core.base_field_override.zipang_fair_gaming_entity.zipang_fair_gaming_entity.metatag',
+    'core.base_field_override.zipang_fair_gaming_entity.zipang_fair_gaming_entity.user_id',
+    'core.entity_form_display.taxonomy_term.fair_gaming_year.default',
+    'core.entity_form_display.zipang_fair_gaming_entity.zipang_fair_gaming_entity.default',
+    'core.entity_view_display.taxonomy_term.fair_gaming_year.default',
+    'core.entity_view_display.zipang_fair_gaming_entity.zipang_fair_gaming_entity.default',
+    'field.field.taxonomy_term.fair_gaming_year.field_enable',
+    'field.field.taxonomy_term.fair_gaming_year.field_year_category',
+    'field.field.zipang_fair_gaming_entity.zipang_fair_gaming_entity.field_fair_gaming_image',
+    'field.field.zipang_fair_gaming_entity.zipang_fair_gaming_entity.field_fair_gaming_year_category',
+    'field.field.zipang_fair_gaming_entity.zipang_fair_gaming_entity.field_title',
+    'field.storage.taxonomy_term.field_year_category',
+    'field.storage.zipang_fair_gaming_entity.field_fair_gaming_image',
+    'field.storage.zipang_fair_gaming_entity.field_fair_gaming_year_category',
+    'field.storage.zipang_fair_gaming_entity.field_title',
+    'language.content_settings.taxonomy_term.fair_gaming_year',
+    'language.content_settings.zipang_fair_gaming_entity.zipang_fair_gaming_entity',
+    'taxonomy.vocabulary.fair_gaming_year',
+    'views.view.fair_gaming_list',
+    'views.view.fair_gaming_year',
+    'zipang_config.fair_gaming_configuration',
+  ];
+
+  foreach ($keys as $key) {
+    \Drupal::configFactory()->getEditable($key)->delete();
+  }
+}

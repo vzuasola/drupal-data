@@ -1,0 +1,21 @@
+uuid: b4940f08-8801-4110-81a0-60aeae508e34
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.zipang_mobile_block_entity.field_image_banner_link_target
+  module:
+    - zipang_mobile_blocks
+    - options
+id: zipang_mobile_block_entity.zipang_mobile_block_entity.field_image_banner_link_target
+field_name: field_image_banner_link_target
+entity_type: zipang_mobile_block_entity
+bundle: zipang_mobile_block_entity
+label: 'Image Banner Link Target'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

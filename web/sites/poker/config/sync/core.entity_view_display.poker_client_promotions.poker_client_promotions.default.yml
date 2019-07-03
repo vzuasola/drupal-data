@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.poker_client_promotions.poker_client_promotions.field_display_mode
     - field.field.poker_client_promotions.poker_client_promotions.field_promotion_image
     - field.field.poker_client_promotions.poker_client_promotions.field_publish_date
     - field.field.poker_client_promotions.poker_client_promotions.field_ribbon_configuration
@@ -11,6 +12,7 @@ dependencies:
   module:
     - datetime
     - image
+    - options
     - poker_client_promotions
     - user
 id: poker_client_promotions.poker_client_promotions.default
@@ -18,6 +20,13 @@ targetEntityType: poker_client_promotions
 bundle: poker_client_promotions
 mode: default
 content:
+  field_display_mode:
+    weight: 8
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
   field_promotion_image:
     weight: 1
     label: above

@@ -1,0 +1,5 @@
+name: Zipang 404
+type: module
+description: Zipang 404 Page
+core: 8.x
+package: Zipang

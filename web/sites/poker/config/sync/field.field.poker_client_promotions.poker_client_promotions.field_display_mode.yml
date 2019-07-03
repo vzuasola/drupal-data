@@ -1,0 +1,21 @@
+uuid: cbd470fe-11b9-43aa-a26a-6220677e5fb5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.poker_client_promotions.field_display_mode
+  module:
+    - options
+    - poker_client_promotions
+id: poker_client_promotions.poker_client_promotions.field_display_mode
+field_name: field_display_mode
+entity_type: poker_client_promotions
+bundle: poker_client_promotions
+label: 'Display Mode'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,30 @@
+uuid: dd87f41c-5c97-4b0b-be60-0fbd867e91b2
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - poker_client_promotions
+id: poker_client_promotions.field_display_mode
+field_name: field_display_mode
+entity_type: poker_client_promotions
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: free
+      label: Free
+    -
+      value: online
+      label: Online
+    -
+      value: offline
+      label: Offline
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 3
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

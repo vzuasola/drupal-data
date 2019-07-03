@@ -1,0 +1,16 @@
+uuid: a24edf5b-61c9-4361-ac7d-218a81b4f454
+langcode: ja
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.fair_gaming_year
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.fair_gaming_year
+target_entity_type_id: taxonomy_term
+target_bundle: fair_gaming_year
+default_langcode: site_default
+language_alterable: true

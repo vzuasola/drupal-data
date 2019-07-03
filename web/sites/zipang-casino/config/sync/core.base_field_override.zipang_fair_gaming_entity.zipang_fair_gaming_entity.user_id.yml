@@ -1,0 +1,20 @@
+uuid: 4235b62e-8ea5-4ee4-8fee-d374eb13a765
+langcode: ja
+status: true
+dependencies:
+  module:
+    - zipang_fair_gaming
+id: zipang_fair_gaming_entity.zipang_fair_gaming_entity.user_id
+field_name: user_id
+entity_type: zipang_fair_gaming_entity
+bundle: zipang_fair_gaming_entity
+label: 'Authored by'
+description: 'The user ID of author of the Zipang fair gaming entity entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference
