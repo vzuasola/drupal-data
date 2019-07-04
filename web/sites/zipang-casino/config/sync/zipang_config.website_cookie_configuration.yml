@@ -1,0 +1,7 @@
+settings_tab__active_tab: ''
+website_cookie_body:
+  value: "<p>We use cookies to give you the best online experience. By continue browsing you agree to our use of cookies in accordance with our cookie policy.&nbsp;<span class=\"text-yellow\"><a href=\"https://www.google.com\" target=\"_blank\">Privacy Policy.</a></span></p>\r\n"
+  format: basic_html
+value: null
+format: null
+website_cookie_acceptbutton_text: Accept

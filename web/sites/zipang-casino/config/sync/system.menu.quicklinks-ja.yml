@@ -1,0 +1,8 @@
+uuid: aac6170e-c7b7-4715-a736-aca38c4a61cb
+langcode: ja
+status: true
+dependencies: {  }
+id: quicklinks-ja
+label: 'Quicklinks JA'
+description: 'Menu to add the quicklink items [Japanese Language]'
+locked: false
