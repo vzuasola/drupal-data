@@ -1,0 +1,30 @@
+uuid: 8adc6ca9-57f0-4164-8050-b05807f37f51
+langcode: en
+status: true
+dependencies:
+  module:
+    - mobile_marketing_space
+    - options
+id: mobile_marketing_space.field_banner_link_target
+field_name: field_banner_link_target
+entity_type: mobile_marketing_space
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: _top
+      label: 'Same Window'
+    -
+      value: _blank
+      label: 'New Tab'
+    -
+      value: window
+      label: 'New Window'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

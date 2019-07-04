@@ -1,0 +1,317 @@
+uuid: b74dd0f2-1ff0-40bd-b36d-77470b7def63
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.mobile_marketing_space.mobile_marketing_space.field_banner_image_landscape
+    - field.field.mobile_marketing_space.mobile_marketing_space.field_banner_image_portrait
+    - field.field.mobile_marketing_space.mobile_marketing_space.field_banner_link
+    - field.field.mobile_marketing_space.mobile_marketing_space.field_banner_link_target
+    - field.field.mobile_marketing_space.mobile_marketing_space.field_log_in_state
+    - field.field.mobile_marketing_space.mobile_marketing_space.field_post_banner_image_landscap
+    - field.field.mobile_marketing_space.mobile_marketing_space.field_post_banner_image_portrait
+    - field.field.mobile_marketing_space.mobile_marketing_space.field_post_banner_link
+    - field.field.mobile_marketing_space.mobile_marketing_space.field_post_banner_link_target
+    - field.field.mobile_marketing_space.mobile_marketing_space.field_publish_date
+    - field.field.mobile_marketing_space.mobile_marketing_space.field_title
+    - field.field.mobile_marketing_space.mobile_marketing_space.field_unpublish_date
+    - image.style.thumbnail
+  module:
+    - conditional_fields
+    - datetime
+    - field_group
+    - image
+    - link
+    - mobile_marketing_space
+third_party_settings:
+  field_group:
+    group_marketing_space:
+      children:
+        - field_banner_image_portrait
+        - field_banner_image_landscape
+        - field_banner_link
+        - field_banner_link_target
+      parent_name: ''
+      weight: 3
+      format_type: fieldset
+      format_settings:
+        label: 'Pre Marketing Space Top Leader Board'
+        description: ''
+        required_fields: true
+        id: ''
+        classes: ''
+      label: 'Pre Marketing Space Top Leader Board'
+    group_scheduler_settings:
+      children:
+        - field_publish_date
+        - field_unpublish_date
+      parent_name: ''
+      weight: 5
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Scheduler Settings'
+    group_post_marketing_space_top_l:
+      children:
+        - field_post_banner_image_portrait
+        - field_post_banner_image_landscap
+        - field_post_banner_link
+        - field_post_banner_link_target
+      parent_name: ''
+      weight: 4
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Post Marketing Space Top Leader Board'
+id: mobile_marketing_space.mobile_marketing_space.default
+targetEntityType: mobile_marketing_space
+bundle: mobile_marketing_space
+mode: default
+content:
+  field_banner_image_landscape:
+    weight: 2
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings:
+      conditional_fields:
+        37dcb7da-8215-45ce-a9b8-1d5863a144cb:
+          dependee: field_log_in_state
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: '0'
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: mobile_marketing_space
+          bundle: mobile_marketing_space
+    type: image_image
+    region: content
+  field_banner_image_portrait:
+    weight: 1
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings:
+      conditional_fields:
+        2f7c9c90-ee9f-4189-8b04-5dfbcf6b955e:
+          dependee: field_log_in_state
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: '0'
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: mobile_marketing_space
+          bundle: mobile_marketing_space
+    type: image_image
+    region: content
+  field_banner_link:
+    weight: 3
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings:
+      conditional_fields:
+        3d1e8d5b-a2d4-4028-81ad-f4a6a93d5960:
+          dependee: field_log_in_state
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: '0'
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: mobile_marketing_space
+          bundle: mobile_marketing_space
+    type: link_default
+    region: content
+  field_banner_link_target:
+    weight: 4
+    settings: {  }
+    third_party_settings:
+      conditional_fields:
+        b94c95d0-301e-4554-a94e-bf4016545866:
+          dependee: field_log_in_state
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: '0'
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: mobile_marketing_space
+          bundle: mobile_marketing_space
+    type: options_select
+    region: content
+  field_log_in_state:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_post_banner_image_landscap:
+    weight: 25
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings:
+      conditional_fields:
+        8d8f2646-804b-46be-bf37-1bff4c22f44b:
+          dependee: field_log_in_state
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: '1'
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: mobile_marketing_space
+          bundle: mobile_marketing_space
+    type: image_image
+    region: content
+  field_post_banner_image_portrait:
+    weight: 24
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings:
+      conditional_fields:
+        e3c9f593-d36b-41dc-89be-ec85e22cb067:
+          dependee: field_log_in_state
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: '1'
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: mobile_marketing_space
+          bundle: mobile_marketing_space
+    type: image_image
+    region: content
+  field_post_banner_link:
+    weight: 26
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings:
+      conditional_fields:
+        e5d99146-56c8-4532-b5b8-d1edbd951e9a:
+          dependee: field_log_in_state
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: '1'
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: mobile_marketing_space
+          bundle: mobile_marketing_space
+    type: link_default
+    region: content
+  field_post_banner_link_target:
+    weight: 27
+    settings: {  }
+    third_party_settings:
+      conditional_fields:
+        55577cb4-4e37-4295-a636-d0e2f5ae47fb:
+          dependee: field_log_in_state
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: '1'
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: mobile_marketing_space
+          bundle: mobile_marketing_space
+    type: options_select
+    region: content
+  field_publish_date:
+    weight: 21
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_unpublish_date:
+    weight: 22
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+hidden:
+  name: true
+  translation: true
+  user_id: true

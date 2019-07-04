@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains mobile_marketing_space.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function mobile_marketing_space_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the mobile_marketing_space module.
+    case 'help.page.mobile_marketing_space':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Mobile Marketing Space configuration') . '</p>';
+      return $output;
+
+    default:
+  }
+}
