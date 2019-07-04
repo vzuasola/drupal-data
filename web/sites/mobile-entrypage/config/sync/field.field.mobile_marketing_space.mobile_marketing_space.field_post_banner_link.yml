@@ -1,0 +1,23 @@
+uuid: 3efc8fd8-c975-4885-b6fd-16a73128573c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.mobile_marketing_space.field_post_banner_link
+  module:
+    - link
+    - mobile_marketing_space
+id: mobile_marketing_space.mobile_marketing_space.field_post_banner_link
+field_name: field_post_banner_link
+entity_type: mobile_marketing_space
+bundle: mobile_marketing_space
+label: 'Post Banner Link'
+description: 'The link when this post banner is clicked'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+field_type: link

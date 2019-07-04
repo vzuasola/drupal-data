@@ -3,11 +3,14 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.storage.mobile_marketing_space.field_banner_image_portrait
     - field.storage.mobile_marketing_space.field_publish_date
     - field.storage.mobile_marketing_space.field_title
     - field.storage.mobile_marketing_space.field_unpublish_date
+    - image.style.thumbnail
   module:
     - datetime
+    - image
     - mobile_marketing_space
     - rest
     - serialization
@@ -358,7 +361,7 @@ display:
           exposed: true
           expose:
             operator_id: field_title_value_op
-            label: 'Title (field_title)'
+            label: Title
             description: ''
             use_operator: false
             operator: field_title_value_op
@@ -509,6 +512,70 @@ display:
           settings:
             link_to_entity: false
           group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_banner_image_portrait:
+          id: field_banner_image_portrait
+          table: mobile_marketing_space__field_banner_image_portrait
+          field: field_banner_image_portrait
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Banner Image'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: image
+          settings:
+            image_style: thumbnail
+            image_link: ''
+          group_column: ''
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -706,6 +773,7 @@ display:
         - url
         - user.permissions
       tags:
+        - 'config:field.storage.mobile_marketing_space.field_banner_image_portrait'
         - 'config:field.storage.mobile_marketing_space.field_publish_date'
         - 'config:field.storage.mobile_marketing_space.field_title'
         - 'config:field.storage.mobile_marketing_space.field_unpublish_date'
@@ -716,7 +784,7 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: api/mobile_marketing_space
+      path: api/marketing_space
       pager:
         type: none
         options:
