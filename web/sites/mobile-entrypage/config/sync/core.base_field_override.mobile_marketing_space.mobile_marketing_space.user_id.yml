@@ -1,0 +1,20 @@
+uuid: 3b8f4607-2979-479f-bfae-8514436dcf09
+langcode: en
+status: true
+dependencies:
+  module:
+    - mobile_marketing_space
+id: mobile_marketing_space.mobile_marketing_space.user_id
+field_name: user_id
+entity_type: mobile_marketing_space
+bundle: mobile_marketing_space
+label: 'Authored by'
+description: 'The user ID of author of the Mobile marketing space entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference
