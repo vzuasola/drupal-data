@@ -1,0 +1,29 @@
+uuid: 57872d65-52f3-4c70-b4ca-5eca5734fad2
+langcode: ja
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.press_month
+id: taxonomy_term.press_month.default
+targetEntityType: taxonomy_term
+bundle: press_month
+mode: default
+content:
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true

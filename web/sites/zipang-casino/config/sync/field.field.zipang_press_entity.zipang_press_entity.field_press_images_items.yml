@@ -1,0 +1,60 @@
+uuid: 88d47bee-6fec-42d0-b2f3-2a86c2af9902
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.zipang_press_entity.field_press_images_items
+    - paragraphs.paragraphs_type.press_images
+  module:
+    - entity_reference_revisions
+    - zipang_press
+id: zipang_press_entity.zipang_press_entity.field_press_images_items
+field_name: field_press_images_items
+entity_type: zipang_press_entity
+bundle: zipang_press_entity
+label: 'Press Images Items'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      press_images: press_images
+    target_bundles_drag_drop:
+      press_images:
+        enabled: true
+        weight: 12
+      domain_management_configuration:
+        weight: 13
+        enabled: false
+      dropdown_menu_item:
+        weight: 14
+        enabled: false
+      floating_banner_item:
+        weight: 15
+        enabled: false
+      metatag:
+        weight: 16
+        enabled: false
+      right_side_block_content:
+        weight: 17
+        enabled: false
+      slider_overlay_cmi:
+        weight: 18
+        enabled: false
+      social_media:
+        weight: 19
+        enabled: false
+      social_media_cmi:
+        weight: 20
+        enabled: false
+      sponsor_cmi:
+        weight: 21
+        enabled: false
+      sponsorship:
+        weight: 22
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,30 @@
+uuid: 5185d167-0101-48e2-95ff-78606e0ebfe7
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.zipang_press_entity.field_press_month
+    - taxonomy.vocabulary.press_month
+  module:
+    - zipang_press
+id: zipang_press_entity.zipang_press_entity.field_press_month
+field_name: field_press_month
+entity_type: zipang_press_entity
+bundle: zipang_press_entity
+label: 'Press Month'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      press_month: press_month
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

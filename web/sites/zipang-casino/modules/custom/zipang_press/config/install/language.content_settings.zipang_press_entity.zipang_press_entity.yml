@@ -1,0 +1,17 @@
+uuid: e4b07241-c2d0-4a49-b5e1-add84bfe894c
+langcode: ja
+status: true
+dependencies:
+  module:
+    - content_translation
+    - zipang_press
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: zipang_press_entity.zipang_press_entity
+target_entity_type_id: zipang_press_entity
+target_bundle: zipang_press_entity
+default_langcode: site_default
+language_alterable: true

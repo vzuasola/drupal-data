@@ -1,0 +1,29 @@
+uuid: 1f5dc9d8-eea6-4d3f-bfbd-f7242755aa61
+langcode: ja
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.press_year
+id: taxonomy_term.press_year.default
+targetEntityType: taxonomy_term
+bundle: press_year
+mode: default
+content:
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true

@@ -1,0 +1,9 @@
+uuid: 3b7135ed-c074-44fb-ab69-05e518ffb2b5
+langcode: ja
+status: true
+dependencies: {  }
+name: 'Press Month'
+vid: press_month
+description: ''
+hierarchy: 0
+weight: 0

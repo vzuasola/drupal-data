@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains zipang_press.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function zipang_press_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the zipang_press module.
+    case 'help.page.zipang_press':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Zipang Press') . '</p>';
+      return $output;
+
+    default:
+  }
+}

@@ -1,0 +1,5 @@
+name: Zipang Press
+type: module
+description: Zipang Press
+core: 8.x
+package: Zipang
