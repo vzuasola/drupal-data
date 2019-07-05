@@ -1,4 +1,4 @@
-advanced__active_tab: edit-cookie-notif
+advanced__active_tab: edit-backtotop
 footer_blurb:
   value: "<p><span class=\"text-16\"><span class=\"text-yellow\">About Zipang Casino JA</span></span></p>\r\n\r\n<p><span class=\"text-12\">Test 元祖24時間日本語サポートを提供するカジノジャンボリー</span>（<a href=\"https://www.google.com\" target=\"_blank\">Zipang Casino</a>）<span class=\"text-12\">では、まるで</span><span class=\"text-12\"><span class=\"text-12\">ト）対応となったことで、場所を選ぶことなくいつでもご遊戯いただくことが可能です。初心者の方でも安心してご遊戯いただけるようカジノジャンボリー・モバイルは、イギリス・プレイテック（<a href=\"https://www.google.com\" target=\"_self\"><span class=\"text-14\"><span class=\"text-red\">Test</span></span></a>）社の</span>開発する最も信頼できるプラットフォームを利用すると共に、長年に</span>本場のカジノにいるような臨場感あふれる体験ができる最新のカジノゲームを取り揃えております。緊張感あふれるゲームが移動中にも楽しめるモバイル（携帯やタブレッ<span class=\"text-12\">わたってフィリピン政府が発行するライセンスを保有し、また、外部機関による監査も定期的に実施しております。セキュリティ（安全性）はもちろんのこと、すべての方に公平な結果をお約束いたします！もちろん困ったときに頼りになる日本語サポートも24時間365日ご提供いたしております</span> <span class=\"text-black\"><a href=\"https://www.google.com\" target=\"window\"><span class=\"text-18\">Test new window</span></a></span></p>\r\n"
   format: basic_html
@@ -8,3 +8,4 @@ cookie_notif_body:
   value: "<p>We use cookies to give you the best online experience. By continue browsing you agree to our use of cookies in accordance with our cookie policy.&nbsp;<u><span class=\"text-yellow\"><a href=\"https://www.google.com\" target=\"_blank\">Privacy Policy.</a></span></u></p>\r\n"
   format: basic_html
 cookie_notif_acceptbutton_text: Accept
+backtotop_checkbox: 0

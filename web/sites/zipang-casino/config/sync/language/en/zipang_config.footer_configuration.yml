@@ -1,0 +1,4 @@
+advanced__active_tab: edit-footer
+footer_blurb:
+  value: "<p><span class=\"text-16\"><span class=\"text-yellow\">About Zipang Casino EN</span></span></p>\r\n\r\n<p><span class=\"text-12\">Test</span>（<a href=\"https://www.google.com\" target=\"_blank\">Zipang Casino</a>）<span class=\"text-12\"><span class=\"text-12\">（<a href=\"https://www.google.com\" target=\"_self\"><span class=\"text-14\"><span class=\"text-red\">Test</span></span></a>）</span></span><span class=\"text-12\"></span> <span class=\"text-black\"><a href=\"https://www.google.com\" target=\"window\"><span class=\"text-18\">Test new window</span></a></span></p>\r\n\r\n<p>EN Footer blurb Zipang Casino</p>\r\n"
+  format: basic_html
