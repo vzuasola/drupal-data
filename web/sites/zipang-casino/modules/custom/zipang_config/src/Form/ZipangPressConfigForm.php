@@ -61,5 +61,12 @@ class ZipangPressConfigForm extends FormBase {
       '#format' => $d['format'],
       '#translatable' => TRUE,
     ];
+
+    $form['page_setting']['error_message'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('No Result Message'),
+      '#default_value' => $this->get('error_message'),
+      '#translatable' => TRUE,
+    ];
   }
 }

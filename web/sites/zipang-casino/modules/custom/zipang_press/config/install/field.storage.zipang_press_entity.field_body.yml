@@ -1,0 +1,19 @@
+uuid: 6d233f02-2446-4667-87c3-a3d5b030193c
+langcode: ja
+status: true
+dependencies:
+  module:
+    - text
+    - zipang_press
+id: zipang_press_entity.field_body
+field_name: field_body
+entity_type: zipang_press_entity
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
