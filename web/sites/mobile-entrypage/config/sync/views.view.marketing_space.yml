@@ -18,7 +18,7 @@ dependencies:
     - user
     - webcomposer_rest_extra
 id: marketing_space
-label: 'Marketing Space'
+label: 'Marketing Space - Top Leaderboard'
 module: views
 description: ''
 tag: ''
@@ -851,7 +851,7 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: api/marketing_space
+      path: api/top_leaderboard
       pager:
         type: none
         options:
