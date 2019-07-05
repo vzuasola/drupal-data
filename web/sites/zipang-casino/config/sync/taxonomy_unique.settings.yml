@@ -22,3 +22,7 @@ big_winner_year: 0
 big_winner_year_message: 'Term @term already exists in vocabulary @vocabulary.'
 fair_gaming_year: 0
 fair_gaming_year_message: 'Term @term already exists in vocabulary @vocabulary.'
+press_month: 0
+press_month_message: 'Term @term already exists in vocabulary @vocabulary.'
+press_year: 0
+press_year_message: 'Term @term already exists in vocabulary @vocabulary.'
