@@ -55,23 +55,20 @@ function mobile_marketing_space_validate(&$form, FormStateInterface $form_state)
   if ($unpublishDate && $unpublishDate < $publishDate) {
     $form_state->setErrorByName('field_unpublish_date', t('Unpublish date should be greater than the publish date.'));
   }
-  // Validation for pre bammer image.
+
   if ($loginState[0]['value'] == 0 && $bannerImage[0]['fids'] == NULL) {
-    $form_state->setErrorByName("$bannerImage", t('Pre Banner Image Portrait field is required.'));
+    $form_state->setErrorByName('field_banner_image_portrait', t('Pre Banner Image Portrait field is required.'));
   }
 
-  // Validation for pre bammer image.
   if ($loginState[0]['value'] == 0 && $bannerImageLandscape[0]['fids'] == NULL) {
-    $form_state->setErrorByName("$bannerImageLandscape", t('Pre Banner Image Landscape field is required.'));
+    $form_state->setErrorByName('field_banner_image_landscape', t('Pre Banner Image Landscape field is required.'));
   }
 
-  // Validation for pre bammer image.
   if ($loginState[1]['value'] == 1 && $bannerImagePost[0]['fids'] == NULL) {
-    $form_state->setErrorByName("$bannerImagePost", t('Post Banner Image Portrait field is required.'));
+    $form_state->setErrorByName('field_post_banner_image_portrait', t('Post Banner Image Portrait field is required.'));
   }
 
-  // Validation for pre bammer image.
   if ($loginState[1]['value'] == 1 && $bannerImagePostLandscape[0]['fids'] == NULL) {
-    $form_state->setErrorByName("$bannerImagePostLandscape", t('Post Banner Image Landscape field is required.'));
+    $form_state->setErrorByName('field_post_banner_image_landscap', t('Post Banner Image Landscape field is required.'));
   }
 }
