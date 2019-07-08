@@ -16,11 +16,13 @@ dependencies:
     - field.field.node.games.field_use_game_loader
     - image.style.thumbnail
     - node.type.games
-  module:
+  module:    
+    - datetime
     - field_group
     - image
     - path
     - scheduler
+    - text
 third_party_settings:
   field_group:
     group_game_thumbnail_settings:
