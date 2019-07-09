@@ -1,0 +1,23 @@
+uuid: 787c1769-e818-4ae8-be54-ab2471ad3f86
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.mobile_sponsor_list.field_mobile_row
+  module:
+    - mobile_sponsor_list
+    - options
+id: mobile_sponsor_list.mobile_sponsor_list.field_mobile_row
+field_name: field_mobile_row
+entity_type: mobile_sponsor_list
+bundle: mobile_sponsor_list
+label: 'Mobile Row'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: '1'
+default_value_callback: ''
+settings: {  }
+field_type: list_string
