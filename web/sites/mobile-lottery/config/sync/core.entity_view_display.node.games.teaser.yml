@@ -4,6 +4,9 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.games.field_maintenance_blurb
+    - field.field.node.games.field_maintenance_end_date
+    - field.field.node.games.field_maintenance_start_date
     - field.field.node.games.body
     - node.type.games
   module:
@@ -26,4 +29,7 @@ content:
     weight: 100
     region: content
 hidden:
+  field_maintenance_blurb: true
+  field_maintenance_end_date: true
+  field_maintenance_start_date: true  
   langcode: true

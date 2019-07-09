@@ -9,14 +9,35 @@ dependencies:
     - field.field.node.games.field_game_thumbnail_large
     - field.field.node.games.field_game_thumbnail_size
     - field.field.node.games.field_game_thumbnail_small
+    - field.field.node.games.field_maintenance_blurb
+    - field.field.node.games.field_maintenance_end_date
+    - field.field.node.games.field_maintenance_start_date
     - field.field.node.games.field_target
     - field.field.node.games.field_use_game_loader
     - node.type.games
   module:
+    - datetime
+    - field_group
     - image
     - options
     - text
     - user
+third_party_settings:
+  field_group:
+    group_under_maintenance_settings:
+      children:
+        - field_maintenance_blurb
+        - field_maintenance_start_date
+        - field_maintenance_end_date
+      parent_name: ''
+      weight: 9
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: true
+        required_fields: false
+      label: 'Under Maintenance Settings'
 id: node.games.default
 targetEntityType: node
 bundle: games
@@ -86,6 +107,31 @@ content:
       format_custom_true: ''
     third_party_settings: {  }
     type: boolean
+    region: content
+  field_maintenance_blurb:
+    weight: 10
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_maintenance_end_date:
+    weight: 12
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_maintenance_start_date:
+    weight: 11
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
     region: content
   links:
     weight: 100
