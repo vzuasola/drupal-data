@@ -11,8 +11,8 @@ dependencies:
 third_party_settings:
   content_translation:
     translation_sync:
-      file: file
-      alt: '0'
+      alt: alt
+      file: '0'
       title: '0'
 id: mobile_marketing_space.mobile_marketing_space.field_banner_image_landscape
 field_name: field_banner_image_landscape
@@ -32,7 +32,7 @@ settings:
   min_resolution: ''
   alt_field: true
   alt_field_required: false
-  title_field: true
+  title_field: false
   title_field_required: false
   default_image:
     uuid: ''
