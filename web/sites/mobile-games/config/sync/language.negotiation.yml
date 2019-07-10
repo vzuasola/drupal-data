@@ -6,20 +6,21 @@ url:
     en: en
     zh-hans: sc
     th: th
+    ko: kr
     vi: vn
     id: id
-    ko: kr
-    '': null
-    zh-hant: zh-hant
+    es: es
+    pt-br: pt
     hi: hi
   domains:
     en: ''
     zh-hans: ''
     th: ''
+    ko: ''
     vi: ''
     id: ''
-    ko: ''
-    zh-hant: ''
+    es: ''
+    pt-br: ''
     hi: ''
 selected_langcode: site_default
 _core:
