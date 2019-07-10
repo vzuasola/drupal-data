@@ -1,0 +1,18 @@
+zipang_press.list:
+  title: 'Zipang Press Configuration'
+  description: 'List Zipang Press entities'
+  parent: system.admin_config
+  route_name: zipang_press.admin_settings
+
+# Zipang press entity menu items definition
+entity.zipang_press_entity.collection:
+  title: 'Zipang press entity list'
+  route_name: entity.zipang_press_entity.collection
+  description: 'List Zipang press entity entities'
+  parent: zipang_press.list
+
+zipang_press.admin.structure.settings:
+  title: Zipang press entity settings
+  description: 'Configure Zipang press entity entities'
+  route_name: zipang_press_entity.settings
+  parent: zipang_press.list

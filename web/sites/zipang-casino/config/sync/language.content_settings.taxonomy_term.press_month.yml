@@ -1,0 +1,11 @@
+uuid: b0432372-0df5-4bd5-88d9-2d4c1737105f
+langcode: ja
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.press_month
+id: taxonomy_term.press_month
+target_entity_type_id: taxonomy_term
+target_bundle: press_month
+default_langcode: site_default
+language_alterable: false

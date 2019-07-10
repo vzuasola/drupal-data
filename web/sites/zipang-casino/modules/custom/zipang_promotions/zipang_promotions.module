@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains zipang_promotions.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function zipang_promotions_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the zipang_promotions module.
+    case 'help.page.zipang_promotions':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Zipang Promotions') . '</p>';
+      return $output;
+
+    default:
+  }
+}
