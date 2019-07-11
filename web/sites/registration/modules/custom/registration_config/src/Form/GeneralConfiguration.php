@@ -188,6 +188,20 @@ class GeneralConfiguration extends FormBase {
         'if unchecked'),
       '#default_value' => $this->get('enable_futurama_native_app'),
     ];
+    $form['integration']['enable_futurama_poker_native_app_back'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable back button in Poker Native App'),
+      '#description' => $this->t('If checked, back button will be visible to the player.' .
+        'if unchecked'),
+      '#default_value' => $this->get('enable_futurama_poker_native_app_back'),
+    ];
+    $form['integration']['enable_futurama_authentication_poker_native_app'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable Futarama Poker Native App authentication'),
+      '#description' => $this->t('This will enable futurama authentication for Poker Native App and will use that legacy ' .
+        'if unchecked'),
+      '#default_value' => $this->get('enable_futurama_authentication_poker_native_app'),
+    ];
     $form['integration']['ow_native_autologin_url'] = [
       '#type' => 'textfield',
       '#title' => $this->t('One Works Native App Autologin URL'),
@@ -246,6 +260,22 @@ class GeneralConfiguration extends FormBase {
         'you can use the "[product]" as a placeholder to specify the product he is ' .
         'restricted to.'),
       '#default_value' => $this->get('country_restriction_message'),
+      '#required' => TRUE,
+      '#translatable' => TRUE,
+    ];
+
+    $form['restriction']['mbtc_product_portal_id'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Product Portal ID'),
+      '#description' => $this->t('Portal ID of Product that support mBTC currency.'),
+      '#default_value' => $this->get('mbtc_product_portal_id'),
+      '#required' => TRUE,
+    ];
+
+    $form['restriction']['mbtc_restriction_message'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Currency Restriction Message'),
+      '#default_value' => $this->get('mbtc_restriction_message'),
       '#required' => TRUE,
       '#translatable' => TRUE,
     ];

@@ -1,0 +1,20 @@
+
+mobile_marketing_space.list:
+  title: 'Mobile Marketing Space'
+  description: 'List Mobile Marketing Space entities'
+  parent: system.admin_config
+  route_name: mobile_marketing_space.admin_settings
+
+# Mobile marketing space menu items definition
+entity.mobile_marketing_space.collection:
+  title: 'Mobile marketing space top leader board list'
+  route_name: entity.mobile_marketing_space.collection
+  description: 'List Mobile marketing space entities'
+  parent: mobile_marketing_space.list
+  weight: 100
+
+mobile_marketing_space.admin.structure.settings:
+  title: Mobile marketing space settings
+  description: 'Configure Mobile marketing space entities'
+  route_name: mobile_marketing_space.settings
+  parent: mobile_marketing_space.list
