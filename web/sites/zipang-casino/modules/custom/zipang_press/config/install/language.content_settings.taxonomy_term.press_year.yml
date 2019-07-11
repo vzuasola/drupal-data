@@ -1,0 +1,11 @@
+uuid: 6a720c81-c60f-422e-b0de-d37a76cdf91d
+langcode: ja
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.press_year
+id: taxonomy_term.press_year
+target_entity_type_id: taxonomy_term
+target_bundle: press_year
+default_langcode: site_default
+language_alterable: false

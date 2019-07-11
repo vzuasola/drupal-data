@@ -1,0 +1,21 @@
+uuid: a51e8d0a-0320-4de7-b5de-3a2a63d522e2
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.zipang_press_entity.field_body
+  module:
+    - text
+    - zipang_press
+id: zipang_press_entity.zipang_press_entity.field_body
+field_name: field_body
+entity_type: zipang_press_entity
+bundle: zipang_press_entity
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

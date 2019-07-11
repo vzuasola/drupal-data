@@ -1,0 +1,30 @@
+uuid: 1a7c8ab5-d63a-4895-8b3c-506ff891ac9b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.zipang_promotions_entity.field_tag
+    - taxonomy.vocabulary.game_tag
+  module:
+    - zipang_promotions
+id: zipang_promotions_entity.zipang_promotions_entity.field_tag
+field_name: field_tag
+entity_type: zipang_promotions_entity
+bundle: zipang_promotions_entity
+label: Tag
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      game_tag: game_tag
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

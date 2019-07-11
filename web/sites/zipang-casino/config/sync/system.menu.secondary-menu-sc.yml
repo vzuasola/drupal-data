@@ -1,8 +1,0 @@
-uuid: 3c2ec690-76ad-4b6f-800d-333bf5d72ee5
-langcode: zh-hans
-status: true
-dependencies: {  }
-id: secondary-menu-sc
-label: 'Secondary Menu SC'
-description: ''
-locked: false

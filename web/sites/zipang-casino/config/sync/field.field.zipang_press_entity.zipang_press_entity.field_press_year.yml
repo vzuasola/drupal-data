@@ -1,0 +1,30 @@
+uuid: e4e46e18-e93c-4902-b5cf-89985bf11df6
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.zipang_press_entity.field_press_year
+    - taxonomy.vocabulary.press_year
+  module:
+    - zipang_press
+id: zipang_press_entity.zipang_press_entity.field_press_year
+field_name: field_press_year
+entity_type: zipang_press_entity
+bundle: zipang_press_entity
+label: 'Press Year'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      press_year: press_year
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
