@@ -19,7 +19,7 @@ field_name: field_post_banner_image_landscap
 entity_type: mobile_marketing_space
 bundle: mobile_marketing_space
 label: 'Post Banner Image Landscape'
-description: 'Recommended dimension of image is 600px x 150px.'
+description: 'Recommended dimension of image is 600px x 50px.'
 required: true
 translatable: true
 default_value: {  }
