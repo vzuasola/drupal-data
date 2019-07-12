@@ -17,7 +17,7 @@ use Drupal\Core\Datetime\DrupalDateTime;
  *   },
  *   menu = {
  *     "title" = "Release Page Configuration",
- *     "description" = "Provides release page configuration",
+ *     "description" = "Provides Release Page configuration",
  *     "parent" = "zipang_config.zipang_config",
  *     "weight" = 30
  *   },
