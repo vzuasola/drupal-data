@@ -1,0 +1,31 @@
+<?php
+/**
+ * Implements hook_uninstall
+ */
+function zipang_special_promotions_notif_uninstall() {
+  $keys = [
+    'core.base_field_override.zipang_special_promotions_entity.zipang_special_promotions_entity.metatag.yml',
+    'core.entity_form_display.zipang_special_promotions_entity.zipang_special_promotions_entity.default.yml',
+    'core.entity_view_display.zipang_special_promotions_entity.zipang_special_promotions_entity.default.yml',
+    'field.field.zipang_special_promotions_entity.zipang_special_promotions_entity.field_banner_link.yml',
+    'field.field.zipang_special_promotions_entity.zipang_special_promotions_entity.field_banner.yml',
+    'field.field.zipang_special_promotions_entity.zipang_special_promotions_entity.field_body.yml',
+    'field.field.zipang_special_promotions_entity.zipang_special_promotions_entity.field_button_label.yml',
+    'field.field.zipang_special_promotions_entity.zipang_special_promotions_entity.field_button_url.yml',
+    'field.field.zipang_special_promotions_entity.zipang_special_promotions_entity.field_title.yml',
+    'field.field.zipang_special_promotions_entity.zipang_special_promotions_entity.field_where_to_open_images.yml',
+    'field.storage.zipang_special_promotions_entity.field_banner_link.yml',
+    'field.storage.zipang_special_promotions_entity.field_banner.yml',
+    'field.storage.zipang_special_promotions_entity.field_body.yml',
+    'field.storage.zipang_special_promotions_entity.field_button_label.yml',
+    'field.storage.zipang_special_promotions_entity.field_button_url.yml',
+    'field.storage.zipang_special_promotions_entity.field_title.yml',
+    'field.storage.zipang_special_promotions_entity.field_where_to_open_images.yml',
+    'language.content_settings.zipang_special_promotions_entity.zipang_special_promotions_entity.yml',
+    'views.view.special_promotions_notification.yml'
+  ];
+
+  foreach ($keys as $key) {
+    \Drupal::configFactory()->getEditable($key)->delete();
+  }
+}

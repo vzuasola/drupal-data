@@ -1,0 +1,20 @@
+uuid: c970688e-f472-42e0-ae3e-1763fb0b5245
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.zipang_special_promotions_entity.field_button_label
+  module:
+    - zipang_special_promotions_notif
+id: zipang_special_promotions_entity.zipang_special_promotions_entity.field_button_label
+field_name: field_button_label
+entity_type: zipang_special_promotions_entity
+bundle: zipang_special_promotions_entity
+label: 'Button Label'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
