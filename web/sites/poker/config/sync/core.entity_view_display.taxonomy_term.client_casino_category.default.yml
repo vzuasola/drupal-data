@@ -7,9 +7,11 @@ dependencies:
     - field.field.taxonomy_term.client_casino_category.field_clcasino_cat_disable
     - field.field.taxonomy_term.client_casino_category.field_clcasino_cat_hicon
     - field.field.taxonomy_term.client_casino_category.field_clclient_cat_icon
+    - field.field.taxonomy_term.client_casino_category.field_display_mode
     - taxonomy.vocabulary.client_casino_category
   module:
     - image
+    - options
     - text
 id: taxonomy_term.client_casino_category.default
 targetEntityType: taxonomy_term
@@ -58,6 +60,13 @@ content:
       image_link: ''
     third_party_settings: {  }
     type: image
+    region: content
+  field_display_mode:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
 hidden:
   langcode: true

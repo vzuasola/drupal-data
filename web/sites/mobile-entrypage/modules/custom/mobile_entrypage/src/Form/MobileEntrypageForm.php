@@ -47,6 +47,13 @@ class MobileEntrypageForm extends FormBase {
       '#translatable' => TRUE,
     ];
 
+    $form['entrypage_configuration']['view_less_text'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('View Less Here'),
+      '#default_value' => $this->get('view_less_text'),
+      '#translatable' => true,
+    ];
+
     return $form;
   }
 }

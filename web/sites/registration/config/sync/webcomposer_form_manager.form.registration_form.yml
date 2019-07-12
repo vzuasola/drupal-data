@@ -1,6 +1,7 @@
 form_settings:
   show: 1
   alias: ''
+  form_name: RegistrationForm
 weights:
   back_button:
     weight: '-10'

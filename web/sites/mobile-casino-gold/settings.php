@@ -8,3 +8,5 @@ require $app_root . '/../config/base.settings.php';
  */
 $settings['product'] = 'mobile-entrypage';
 $settings['primary_site_prefix'] = '';
+
+

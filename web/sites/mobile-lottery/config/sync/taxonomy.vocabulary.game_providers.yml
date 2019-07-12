@@ -1,0 +1,9 @@
+uuid: 57f247dd-0c51-4543-9cd1-e119acf9d516
+langcode: en
+status: true
+dependencies: {  }
+name: 'Game Providers'
+vid: game_providers
+description: 'List of game providers for Lottery Mobile'
+hierarchy: 0
+weight: 0

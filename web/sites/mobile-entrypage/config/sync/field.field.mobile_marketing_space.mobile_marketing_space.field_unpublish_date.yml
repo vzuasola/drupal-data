@@ -1,0 +1,21 @@
+uuid: 65b8713b-78e9-49c3-a54c-6ed07d1df703
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.mobile_marketing_space.field_unpublish_date
+  module:
+    - datetime
+    - mobile_marketing_space
+id: mobile_marketing_space.mobile_marketing_space.field_unpublish_date
+field_name: field_unpublish_date
+entity_type: mobile_marketing_space
+bundle: mobile_marketing_space
+label: 'Unpublish Date (optional)'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

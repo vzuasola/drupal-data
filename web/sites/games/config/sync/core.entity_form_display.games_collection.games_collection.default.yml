@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.games_collection.games_collection.field_game_category
     - field.field.games_collection.games_collection.field_games
     - field.field.games_collection.games_collection.field_type
   module:
@@ -12,8 +13,14 @@ targetEntityType: games_collection
 bundle: games_collection
 mode: default
 content:
-  field_games:
+  field_game_category:
     weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_games:
+    weight: 4
     settings:
       match_operator: CONTAINS
       size: 60
@@ -43,7 +50,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 4
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }

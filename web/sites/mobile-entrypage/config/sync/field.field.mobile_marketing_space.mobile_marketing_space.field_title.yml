@@ -1,0 +1,20 @@
+uuid: eb78f095-76c1-4be2-bec7-0b695c94b500
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.mobile_marketing_space.field_title
+  module:
+    - mobile_marketing_space
+id: mobile_marketing_space.mobile_marketing_space.field_title
+field_name: field_title
+entity_type: mobile_marketing_space
+bundle: mobile_marketing_space
+label: Title
+description: 'The title of Marketing Space'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

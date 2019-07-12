@@ -1,0 +1,30 @@
+uuid: 8076842a-edce-4a89-a48c-fd5745677bf3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.games_collection.field_game_category
+    - taxonomy.vocabulary.game_category_2_0
+  module:
+    - games_collection
+id: games_collection.games_collection.field_game_category
+field_name: field_game_category
+entity_type: games_collection
+bundle: games_collection
+label: 'Game Category'
+description: '<i>Applicable only for <strong>top</strong> collection type.</i>'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      game_category_2_0: game_category_2_0
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

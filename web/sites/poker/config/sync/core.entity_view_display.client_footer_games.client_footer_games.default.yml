@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.client_footer_games.client_footer_games.field_display_mode
     - field.field.client_footer_games.client_footer_games.field_game_code
     - field.field.client_footer_games.client_footer_games.field_game_thumbnail
     - field.field.client_footer_games.client_footer_games.field_game_thumbnail_hover
@@ -10,13 +11,21 @@ dependencies:
   module:
     - client_footer_games
     - image
+    - options
 id: client_footer_games.client_footer_games.default
 targetEntityType: client_footer_games
 bundle: client_footer_games
 mode: default
 content:
+  field_display_mode:
+    type: list_default
+    weight: 6
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
   field_game_code:
-    weight: 4
+    weight: 3
     label: above
     settings:
       link_to_entity: false
@@ -24,7 +33,7 @@ content:
     type: string
     region: content
   field_game_thumbnail:
-    weight: 3
+    weight: 2
     label: above
     settings:
       image_style: ''
@@ -33,7 +42,7 @@ content:
     type: image
     region: content
   field_game_thumbnail_hover:
-    weight: 7
+    weight: 5
     label: above
     settings:
       image_style: ''
@@ -42,7 +51,7 @@ content:
     type: image
     region: content
   field_publish:
-    weight: 6
+    weight: 4
     label: above
     settings:
       format: default

@@ -1,0 +1,12 @@
+<?php
+
+/**
+ * Implements hook_uninstall
+ */
+function mobile_marketing_space_uninstall() {
+  $keys = [];
+
+  foreach ($keys as $key) {
+    \Drupal::configFactory()->getEditable($key)->delete();
+  }
+}

@@ -1,0 +1,20 @@
+uuid: 394b4c7d-c072-4c89-9235-bd550e92af15
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime
+    - mobile_marketing_space
+id: mobile_marketing_space.field_unpublish_date
+field_name: field_unpublish_date
+entity_type: mobile_marketing_space
+type: datetime
+settings:
+  datetime_type: datetime
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
