@@ -1,0 +1,21 @@
+uuid: 08f87ced-a514-4c82-9630-8c8618a17032
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.zipang_special_promotions_entity.field_where_to_open_images
+  module:
+    - options
+    - zipang_special_promotions_notif
+id: zipang_special_promotions_entity.zipang_special_promotions_entity.field_where_to_open_images
+field_name: field_where_to_open_images
+entity_type: zipang_special_promotions_entity
+bundle: zipang_special_promotions_entity
+label: 'Where to open images'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

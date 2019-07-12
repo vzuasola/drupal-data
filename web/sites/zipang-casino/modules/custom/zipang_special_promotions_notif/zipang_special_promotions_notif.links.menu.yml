@@ -1,0 +1,18 @@
+zipang_special_promotions_notif.list:
+  title: 'Zipang Special Promotions'
+  description: 'List of zipang special promotions notif entities'
+  parent: system.admin_config
+  route_name: zipang_special_promotions_notif.admin_settings
+
+# Zipang special promotions notif entity menu items definition
+entity.zipang_special_promotions_entity.collection:
+  title: 'Zipang special promotions entity list'
+  route_name: entity.zipang_special_promotions_entity.collection
+  description: 'List Zipang special promotions entity entities'
+  parent: zipang_special_promotions_notif.list
+
+zipang_special_promotions_entity.admin.structure.settings:
+  title: Zipang special promotions entity settings
+  description: 'Configure Zipang special promotions entity entities'
+  route_name: zipang_special_promotions_entity.settings
+  parent: zipang_special_promotions_notif.list

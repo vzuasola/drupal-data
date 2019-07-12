@@ -1,0 +1,17 @@
+uuid: c0674394-8b2d-4d44-91ec-a84be8470a57
+langcode: ja
+status: true
+dependencies:
+  module:
+    - content_translation
+    - zipang_special_promotions_notif
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: zipang_special_promotions_entity.zipang_special_promotions_entity
+target_entity_type_id: zipang_special_promotions_entity
+target_bundle: zipang_special_promotions_entity
+default_langcode: site_default
+language_alterable: true
