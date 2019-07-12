@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains zipang_special_promotions_notif.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function zipang_special_promotions_notif_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the zipang_special_promotions_notif module.
+    case 'help.page.zipang_special_promotions_notif':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Special Promotions Notification Module') . '</p>';
+      return $output;
+
+    default:
+  }
+}

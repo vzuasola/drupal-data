@@ -1,0 +1,5 @@
+name: Zipang Special Promotions Notif
+type: module
+description: Special Promotions Notification Module
+core: 8.x
+package: Custom
