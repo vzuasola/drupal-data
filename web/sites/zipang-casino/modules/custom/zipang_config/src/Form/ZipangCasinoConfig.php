@@ -200,6 +200,13 @@ class ZipangCasinoConfig extends FormBase {
       '#translatable' => true,
     ];
 
+    $form['page_setting']['gallery'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Gallery Page Title'),
+      '#default_value' => $this->get('gallery'),
+      '#translatable' => true,
+    ];
+
     $form['inner_breadcrumb'] = [
       '#type' => 'details',
       '#title' => t('InnerPage Breadcrumb'),
@@ -336,6 +343,13 @@ class ZipangCasinoConfig extends FormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Special Promotions'),
       '#default_value' => $this->get('special_promotions_breadcrumb'),
+      '#translatable' => true,
+    ];
+
+    $form['inner_breadcrumb']['gallery_breadcrumb'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Gallery'),
+      '#default_value' => $this->get('gallery_breadcrumb'),
       '#translatable' => true,
     ];
 
