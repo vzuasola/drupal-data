@@ -1,0 +1,188 @@
+uuid: 03a5026a-3b98-477a-91b8-46345c7aaad7
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.field.node.release_page.body
+    - field.field.node.release_page.field_release_banner_link_target
+    - field.field.node.release_page.field_release_button_label
+    - field.field.node.release_page.field_release_button_link
+    - field.field.node.release_page.field_release_image_banner
+    - field.field.node.release_page.field_release_image_banner_link
+    - field.field.node.release_page.field_release_link_target
+    - field.field.node.release_page.field_release_tag
+    - field.field.node.release_page.field_release_thumbnail
+    - field.field.node.release_page.field_release_year
+    - image.style.thumbnail
+    - node.type.release_page
+  module:
+    - field_group
+    - image
+    - path
+    - scheduler
+    - text
+third_party_settings:
+  field_group:
+    group_button:
+      children:
+        - field_release_button_label
+        - field_release_button_link
+        - field_release_link_target
+      parent_name: ''
+      weight: 13
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: Button
+    group_image_banner:
+      children:
+        - field_release_image_banner
+        - field_release_image_banner_link
+        - field_release_banner_link_target
+      parent_name: ''
+      weight: 11
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Image Banner'
+id: node.release_page.default
+targetEntityType: node
+bundle: release_page
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 12
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_release_banner_link_target:
+    weight: 15
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_release_button_label:
+    weight: 14
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_release_button_link:
+    weight: 15
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_release_image_banner:
+    weight: 13
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_release_image_banner_link:
+    weight: 14
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_release_link_target:
+    weight: 16
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_release_tag:
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_release_thumbnail:
+    weight: 10
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_release_year:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 2
+    region: content
+    third_party_settings: {  }
+  publish_on:
+    type: datetime_timestamp_no_default
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 7
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 3
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  unpublish_on:
+    type: datetime_timestamp_no_default
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  uid: true

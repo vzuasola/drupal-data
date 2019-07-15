@@ -1,0 +1,9 @@
+uuid: 55c1ef39-4d4c-414a-b274-b31bda956af4
+langcode: ja
+status: true
+dependencies: {  }
+name: 'Release Year'
+vid: release_year
+description: ''
+hierarchy: 0
+weight: 0
