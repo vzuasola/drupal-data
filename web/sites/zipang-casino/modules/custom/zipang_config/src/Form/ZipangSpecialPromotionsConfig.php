@@ -10,10 +10,10 @@ use Drupal\Core\Datetime\DrupalDateTime;
  * My module form plugin
  *
  * @WebcomposerConfigPlugin(
- *   id = "zipang_release",
+ *   id = "zipang_special_promotions",
  *   route = {
  *     "title" = "Special Promotions Page Configuration",
- *     "path" = "/admin/config/zipang/release_page_configuration",
+ *     "path" = "/admin/config/zipang/special_promotions_page_configuration",
  *   },
  *   menu = {
  *     "title" = "Special Promotions Page Configuration",
