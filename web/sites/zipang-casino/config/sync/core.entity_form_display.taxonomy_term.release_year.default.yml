@@ -1,0 +1,23 @@
+uuid: 50e899f7-2f63-4831-b6c8-19dc868043f2
+langcode: ja
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.release_year
+id: taxonomy_term.release_year.default
+targetEntityType: taxonomy_term
+bundle: release_year
+mode: default
+content:
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  description: true
+  langcode: true
+  path: true

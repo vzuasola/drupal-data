@@ -1,0 +1,21 @@
+uuid: 45f2eb89-7cb6-4b5c-9e35-6978e6d0a3f2
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_release_banner_link_target
+    - node.type.release_page
+  module:
+    - options
+id: node.release_page.field_release_banner_link_target
+field_name: field_release_banner_link_target
+entity_type: node
+bundle: release_page
+label: 'Image Banner Link Target'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

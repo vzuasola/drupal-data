@@ -1,0 +1,29 @@
+uuid: 7a5835b5-3c1f-472b-90ee-360e2488148a
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_release_year
+    - node.type.release_page
+    - taxonomy.vocabulary.release_year
+id: node.release_page.field_release_year
+field_name: field_release_year
+entity_type: node
+bundle: release_page
+label: 'Release Year'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      release_year: release_year
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,19 @@
+uuid: e11ce706-1606-42f0-9365-4a7cf195be97
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_release_image_banner_link
+    - node.type.release_page
+id: node.release_page.field_release_image_banner_link
+field_name: field_release_image_banner_link
+entity_type: node
+bundle: release_page
+label: 'Image Banner Link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

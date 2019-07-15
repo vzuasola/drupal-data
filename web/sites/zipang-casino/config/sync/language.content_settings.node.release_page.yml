@@ -1,0 +1,11 @@
+uuid: d692c929-56aa-4eaf-a01a-3176d4b00fca
+langcode: ja
+status: true
+dependencies:
+  config:
+    - node.type.release_page
+id: node.release_page
+target_entity_type_id: node
+target_bundle: release_page
+default_langcode: site_default
+language_alterable: false
