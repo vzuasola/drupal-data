@@ -91,29 +91,12 @@ content:
     third_party_settings: {  }
     type: image
     region: content
-  field_target:
-    weight: 104
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
-    region: content
-  field_use_game_loader:
-    weight: 108
-    label: above
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    type: boolean
-    region: content
   field_maintenance_blurb:
-    weight: 10
+    weight: 109
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    type: string_textfield
     region: content
   field_maintenance_end_date:
     weight: 12
@@ -132,6 +115,23 @@ content:
       timezone_override: ''
     third_party_settings: {  }
     type: datetime_default
+    region: content
+  field_target:
+    weight: 104
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_use_game_loader:
+    weight: 108
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
     region: content
   links:
     weight: 100

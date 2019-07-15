@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.games.body
-    - field.field.node.games.field_game_provider    
+    - field.field.node.games.field_game_provider
     - field.field.node.games.field_maintenance_blurb
     - field.field.node.games.field_maintenance_end_date
     - field.field.node.games.field_maintenance_start_date
@@ -16,7 +16,7 @@ dependencies:
     - field.field.node.games.field_use_game_loader
     - image.style.thumbnail
     - node.type.games
-  module:    
+  module:
     - datetime
     - field_group
     - image
@@ -67,7 +67,7 @@ third_party_settings:
         classes: ''
         open: false
         required_fields: true
-      label: 'Under Maintenance Settings'  
+      label: 'Under Maintenance Settings'
 id: node.games.default
 targetEntityType: node
 bundle: games
@@ -91,26 +91,6 @@ content:
     third_party_settings: {  }
     type: options_select
     region: content
-  field_maintenance_blurb:
-    weight: 12
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    type: text_textarea
-    region: content
-  field_maintenance_end_date:
-    weight: 14
-    settings: {  }
-    third_party_settings: {  }
-    type: datetime_default
-    region: content
-  field_maintenance_start_date:
-    weight: 13
-    settings: {  }
-    third_party_settings: {  }
-    type: datetime_default
-    region: content  
   field_game_thumbnail_large:
     weight: 126
     settings:
@@ -132,6 +112,26 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+    region: content
+  field_maintenance_blurb:
+    weight: 12
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_maintenance_end_date:
+    weight: 14
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_maintenance_start_date:
+    weight: 13
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
     region: content
   field_target:
     weight: 16
