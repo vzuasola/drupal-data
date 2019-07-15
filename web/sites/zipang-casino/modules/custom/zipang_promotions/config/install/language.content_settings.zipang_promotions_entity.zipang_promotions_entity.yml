@@ -1,0 +1,17 @@
+uuid: dd3fefb0-5c36-443c-add3-2214c74a2ebe
+langcode: en
+status: true
+dependencies:
+  module:
+    - content_translation
+    - zipang_promotions
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: zipang_promotions_entity.zipang_promotions_entity
+target_entity_type_id: zipang_promotions_entity
+target_bundle: zipang_promotions_entity
+default_langcode: site_default
+language_alterable: true

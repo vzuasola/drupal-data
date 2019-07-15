@@ -1,0 +1,20 @@
+uuid: 6369132c-114f-4534-a9cd-2c6c96e8066d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.zipang_promotions_entity.field_image_banner_link
+  module:
+    - zipang_promotions
+id: zipang_promotions_entity.zipang_promotions_entity.field_image_banner_link
+field_name: field_image_banner_link
+entity_type: zipang_promotions_entity
+bundle: zipang_promotions_entity
+label: 'Image Banner Link'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

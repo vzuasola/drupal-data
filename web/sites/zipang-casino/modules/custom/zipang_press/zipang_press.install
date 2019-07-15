@@ -1,0 +1,44 @@
+<?php
+
+/**
+ * Implements hook_uninstall
+ */
+function zipang_press_uninstall() {
+  $keys = [
+    'core.base_field_override.zipang_press_entity.zipang_press_entity.metatag',
+    'core.base_field_override.zipang_press_entity.zipang_press_entity.user_id',
+    'core.entity_form_display.paragraph.press_images.default',
+    'core.entity_form_display.taxonomy_term.press_month.default',
+    'core.entity_form_display.taxonomy_term.press_year.default',
+    'core.entity_form_display.zipang_press_entity.zipang_press_entity.default',
+    'core.entity_view_display.paragraph.press_images.default',
+    'core.entity_view_display.zipang_press_entity.zipang_press_entity.default',
+    'field.field.paragraph.press_images.field_image',
+    'field.field.paragraph.press_images.field_link_url',
+    'field.field.zipang_press_entity.zipang_press_entity.field_body',
+    'field.field.zipang_press_entity.zipang_press_entity.field_press_cover_image',
+    'field.field.zipang_press_entity.zipang_press_entity.field_press_images_items',
+    'field.field.zipang_press_entity.zipang_press_entity.field_press_month',
+    'field.field.zipang_press_entity.zipang_press_entity.field_press_year',
+    'field.field.zipang_press_entity.zipang_press_entity.field_title',
+    'field.storage.zipang_press_entity.field_body',
+    'field.storage.zipang_press_entity.field_press_cover_image',
+    'field.storage.zipang_press_entity.field_press_images_items',
+    'field.storage.zipang_press_entity.field_press_month',
+    'field.storage.zipang_press_entity.field_press_year',
+    'field.storage.zipang_press_entity.field_title',
+    'language.content_settings.taxonomy_term.press_month',
+    'language.content_settings.taxonomy_term.press_year',
+    'language.content_settings.zipang_press_entity.zipang_press_entity',
+    'paragraphs.paragraphs_type.press_images',
+    'taxonomy.vocabulary.press_month',
+    'taxonomy.vocabulary.press_year',
+    'views.view.press',
+    'views.view.press_category',
+    'zipang_config.press_config_page_configuration',
+  ];
+
+  foreach ($keys as $key) {
+    \Drupal::configFactory()->getEditable($key)->delete();
+  }
+}

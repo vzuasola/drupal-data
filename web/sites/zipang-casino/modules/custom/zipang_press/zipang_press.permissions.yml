@@ -1,0 +1,22 @@
+add zipang press entity entities:
+  title: 'Create new Zipang press entity entities'
+
+administer zipang press entity entities:
+  title: 'Administer Zipang press entity entities'
+  description: 'Allow to access the administration form to configure Zipang press entity entities.'
+  restrict access: true
+
+delete zipang press entity entities:
+  title: 'Delete Zipang press entity entities'
+
+edit zipang press entity entities:
+  title: 'Edit Zipang press entity entities'
+
+access zipang press entity overview:
+  title: 'Access the Zipang press entity overview page'
+
+view published zipang press entity entities:
+  title: 'View published Zipang press entity entities'
+
+view unpublished zipang press entity entities:
+  title: 'View unpublished Zipang press entity entities'

@@ -1,0 +1,30 @@
+uuid: aef892ee-b5d6-45ab-80ff-759b8c727f7d
+langcode: ja
+status: true
+dependencies:
+  module:
+    - options
+    - zipang_promotions
+id: zipang_promotions_entity.field_button_link_target
+field_name: field_button_link_target
+entity_type: zipang_promotions_entity
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: _blank
+      label: 'New Tab'
+    -
+      value: _self
+      label: 'Same Tab'
+    -
+      value: window
+      label: 'New Window'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,8 @@
+uuid: 4e14b589-5e13-4738-9eed-2d3f667a8254
+langcode: en
+status: true
+dependencies: {  }
+id: quicklinks-en
+label: 'Quicklinks EN'
+description: 'Menu to add the quicklink items [English Language]'
+locked: false

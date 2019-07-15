@@ -1,0 +1,20 @@
+uuid: 69d566a6-3161-484c-be60-604e77da7704
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.zipang_promotions_entity.field_button_label
+  module:
+    - zipang_promotions
+id: zipang_promotions_entity.zipang_promotions_entity.field_button_label
+field_name: field_button_label
+entity_type: zipang_promotions_entity
+bundle: zipang_promotions_entity
+label: 'Button Label'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
