@@ -114,7 +114,7 @@ content:
     type: image_image
     region: content
   field_maintenance_blurb:
-    weight: 12
+    weight: 127
     settings:
       size: 60
       placeholder: ''

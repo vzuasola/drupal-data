@@ -94,9 +94,10 @@ content:
   field_maintenance_blurb:
     weight: 109
     label: above
-    settings: {  }
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
-    type: string_textfield
+    type: string
     region: content
   field_maintenance_end_date:
     weight: 12
