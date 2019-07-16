@@ -1,0 +1,20 @@
+uuid: 454ec812-879f-40c5-bb6e-ef434effbcfa
+langcode: ja
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_sp_year
+field_name: field_sp_year
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

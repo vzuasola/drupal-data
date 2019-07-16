@@ -1,0 +1,30 @@
+uuid: 769ccb29-405f-4e7d-9154-2bf401afba1d
+langcode: ja
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_image_banner_link_target
+field_name: field_image_banner_link_target
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: _blank
+      label: 'New Tab'
+    -
+      value: _self
+      label: 'Same Tab'
+    -
+      value: window
+      label: 'New Window'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
