@@ -1,0 +1,29 @@
+uuid: 3324c86e-7056-4f7a-a377-06c3d4c60c9f
+langcode: ja
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.special_promotions_year
+id: taxonomy_term.special_promotions_year.default
+targetEntityType: taxonomy_term
+bundle: special_promotions_year
+mode: default
+content:
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true

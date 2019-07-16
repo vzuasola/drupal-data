@@ -1,0 +1,30 @@
+uuid: 6fa6dede-ad18-46f7-aa4f-d15c1b9e0863
+langcode: ja
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - scheduler
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+  scheduler:
+    expand_fieldset: when_required
+    fields_display_mode: vertical_tab
+    publish_enable: false
+    publish_past_date: error
+    publish_required: false
+    publish_revision: false
+    publish_touch: false
+    unpublish_enable: false
+    unpublish_required: false
+    unpublish_revision: false
+name: 'Special Promotions Page'
+type: special_promotions_page
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true
