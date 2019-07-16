@@ -1,0 +1,19 @@
+uuid: 497e4088-ad3b-41d5-8a8f-12069a4e854e
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sp_button_label
+    - node.type.special_promotions_page
+id: node.special_promotions_page.field_sp_button_label
+field_name: field_sp_button_label
+entity_type: node
+bundle: special_promotions_page
+label: 'Button Label'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
