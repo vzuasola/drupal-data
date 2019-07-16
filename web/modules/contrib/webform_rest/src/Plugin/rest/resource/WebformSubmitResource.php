@@ -43,6 +43,8 @@ class WebformSubmitResource extends ResourceBase {
       return new Response('', 500);
     }
 
+    $this->setDataFlags();
+
     // Convert to webform values format.
     $values = [
       'webform_id' => $webform_data['webform_id'],
@@ -70,14 +72,14 @@ class WebformSubmitResource extends ResourceBase {
       // Check there are no validation errors.
       if (!empty($errors)) {
         $errors = [
-        'error' => $errors, 
+        'error' => $errors,
         'form_exception_message' => $webformSetting['form_exception_message']];
         return new ModifiedResourceResponse($errors);
       }
       else {
         // Return submission ID.
         $webform_submission = WebformSubmissionForm::submitValues($values);
-        
+
         $response = [
         'sid' => $webform_submission->id(),
         'confirmation_message' => $webformSetting['confirmation_message'],
@@ -102,6 +104,13 @@ class WebformSubmitResource extends ResourceBase {
         ];
         return new ModifiedResourceResponse($response);
     }
+  }
+
+  /**
+   * Sets custom data flag before a batch operation starts
+   */
+  private function setDataFlags() {
+    define('AUDIT_LOG_EXCLUDE_REQUEST', TRUE);
   }
 
 }
