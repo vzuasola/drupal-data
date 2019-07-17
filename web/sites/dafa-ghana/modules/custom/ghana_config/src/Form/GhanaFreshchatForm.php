@@ -56,39 +56,6 @@ class GhanaFreshchatForm extends FormBase {
             '#default_value' => TRUE,
             '#translatable' => TRUE,
         ];
-
-        // Other configurations for ROW Sprint 5
-        // $form['ghana_freshchat_faq_settings'] = [
-        //     '#type' => 'details',
-        //     '#title' => t('FAQ Settings'),
-        //     '#group' => 'advanced',
-        // ];
-
-        // $form['ghana_freshchat_faq_settings']['faq_show'] = [
-        //     '#type' => 'checkbox',
-        //     '#title' => $this->t('Hide FAQ'),
-        //     '#default_value' => FALSE,
-        //     '#translatable' => TRUE,
-        // ];
-
-        // $form['ghana_freshchat_faq_settings']['faq_show_on_open'] = [
-        //     '#type' => 'checkbox',
-        //     '#title' => $this->t('Show FAQ on chat open'),
-        //     '#default_value' => TRUE,
-        //     '#translatable' => TRUE,
-        // ];
-
-        // $form['ghana_freshchat_header_settings'] = [
-        //     '#type' => 'details',
-        //     '#title' => t('Header Settings'),
-        //     '#group' => 'advanced',
-        // ];
-
-        // $form['ghana_freshchat_header_settings']['app_name'] = [
-        //     '#type' => 'details',
-        //     '#title' => t('Header Settings'),
-        //     '#group' => 'advanced',
-        // ];
     }
 
 }
