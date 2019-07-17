@@ -1,0 +1,20 @@
+uuid: 08afc6bd-28b4-44c5-ad46-bf2e7d63e025
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime
+    - taxonomy
+id: taxonomy_term.field_game_provider_start_date
+field_name: field_game_provider_start_date
+entity_type: taxonomy_term
+type: datetime
+settings:
+  datetime_type: datetime
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -29,7 +29,7 @@ location ~ '\.php$|^/update.php' {
     fastcgi_param DRUPAL_ENV "local";
 
     fastcgi_intercept_errors on;
-    fastcgi_pass  php-fpm-drupal:9000;
+    fastcgi_pass  php-fpm:9000;
 }
 ```
 

@@ -1,0 +1,22 @@
+add zipang mobile games entity entities:
+  title: 'Create new Zipang mobile games entity entities'
+
+administer zipang mobile games entity entities:
+  title: 'Administer Zipang mobile games entity entities'
+  description: 'Allow to access the administration form to configure Zipang mobile games entity entities.'
+  restrict access: true
+
+delete zipang mobile games entity entities:
+  title: 'Delete Zipang mobile games entity entities'
+
+edit zipang mobile games entity entities:
+  title: 'Edit Zipang mobile games entity entities'
+
+access zipang mobile games entity overview:
+  title: 'Access the Zipang mobile games entity overview page'
+
+view published zipang mobile games entity entities:
+  title: 'View published Zipang mobile games entity entities'
+
+view unpublished zipang mobile games entity entities:
+  title: 'View unpublished Zipang mobile games entity entities'

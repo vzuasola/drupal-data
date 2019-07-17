@@ -1,0 +1,30 @@
+uuid: 75112916-e221-442d-a0ee-2836125c06b6
+langcode: ja
+status: true
+dependencies:
+  module:
+    - file
+    - image
+    - zipang_fair_gaming
+id: zipang_fair_gaming_entity.field_fair_gaming_image
+field_name: field_fair_gaming_image
+entity_type: zipang_fair_gaming_entity
+type: image
+settings:
+  uri_scheme: public
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  target_type: file
+  display_field: false
+  display_default: false
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

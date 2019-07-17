@@ -1,0 +1,357 @@
+uuid: 5bb43ca7-2d33-4fa2-aa9f-a26274886c4d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.registration_theme_entity.registration_theme_entity.field_application
+    - field.field.registration_theme_entity.registration_theme_entity.field_asterisk_color
+    - field.field.registration_theme_entity.registration_theme_entity.field_background_image
+    - field.field.registration_theme_entity.registration_theme_entity.field_banner_font_color
+    - field.field.registration_theme_entity.registration_theme_entity.field_banner_highlight
+    - field.field.registration_theme_entity.registration_theme_entity.field_body_background
+    - field.field.registration_theme_entity.registration_theme_entity.field_content_two_columns
+    - field.field.registration_theme_entity.registration_theme_entity.field_default_regvia
+    - field.field.registration_theme_entity.registration_theme_entity.field_enable_two_columns
+    - field.field.registration_theme_entity.registration_theme_entity.field_error_color
+    - field.field.registration_theme_entity.registration_theme_entity.field_form_font_color
+    - field.field.registration_theme_entity.registration_theme_entity.field_form_title_color
+    - field.field.registration_theme_entity.registration_theme_entity.field_link_color
+    - field.field.registration_theme_entity.registration_theme_entity.field_login_destination_url
+    - field.field.registration_theme_entity.registration_theme_entity.field_registration_button_font_c
+    - field.field.registration_theme_entity.registration_theme_entity.field_registration_button_form_c
+    - field.field.registration_theme_entity.registration_theme_entity.field_registration_button_form_h
+    - field.field.registration_theme_entity.registration_theme_entity.field_registration_theme_code
+    - field.field.registration_theme_entity.registration_theme_entity.field_separator_color
+    - field.field.registration_theme_entity.registration_theme_entity.field_steptwo_banner
+    - field.field.registration_theme_entity.registration_theme_entity.field_steptwo_banner_mobile
+    - field.field.registration_theme_entity.registration_theme_entity.field_steptwo_banner_tablet
+    - field.field.registration_theme_entity.registration_theme_entity.field_steptwo_content
+    - field.field.registration_theme_entity.registration_theme_entity.field_success_message
+    - field.field.registration_theme_entity.registration_theme_entity.field_success_message_color
+    - field.field.registration_theme_entity.registration_theme_entity.field_theme_alternative_text
+    - field.field.registration_theme_entity.registration_theme_entity.field_tripwire_content
+    - image.style.thumbnail
+  module:
+    - color_field
+    - field_group
+    - image
+    - link
+    - registration_theme
+    - text
+third_party_settings:
+  field_group:
+    group_login:
+      children:
+        - field_login_destination_url
+      parent_name: ''
+      weight: 4
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: Login
+    group_forms:
+      children:
+        - field_body_background
+        - field_form_title_color
+        - field_form_font_color
+        - field_link_color
+        - field_error_color
+        - field_asterisk_color
+        - field_separator_color
+        - field_registration_button_font_c
+        - field_registration_button_form_h
+        - field_registration_button_form_c
+      parent_name: ''
+      weight: 5
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: Forms
+    group_registration_steps:
+      children:
+        - field_banner_highlight
+        - field_banner_font_color
+      parent_name: ''
+      weight: 7
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: 'Registration Steps'
+    group_step_2:
+      children:
+        - field_success_message
+        - field_success_message_color
+        - field_steptwo_content
+      parent_name: ''
+      weight: 8
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: 'Step 2'
+    group_2_columns_layout:
+      children:
+        - field_enable_two_columns
+        - field_content_two_columns
+      parent_name: ''
+      weight: 6
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: '2 Columns Layout'
+    group_background_banner:
+      children:
+        - field_steptwo_banner_mobile
+        - field_steptwo_banner_tablet
+        - field_steptwo_banner
+        - field_background_image
+        - field_theme_alternative_text
+      parent_name: ''
+      weight: 20
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: 'Background Banner'
+    group_tripwire_popup:
+      children:
+        - field_tripwire_content
+      parent_name: ''
+      weight: 20
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: 'Tripwire Popup'
+id: registration_theme_entity.registration_theme_entity.default
+targetEntityType: registration_theme_entity
+bundle: registration_theme_entity
+mode: default
+content:
+  field_application:
+    type: options_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_asterisk_color:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    type: color_field_widget_html5
+    region: content
+  field_background_image:
+    weight: 11
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_banner_font_color:
+    type: color_field_widget_html5
+    weight: 22
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_banner_highlight:
+    weight: 21
+    settings: {  }
+    third_party_settings: {  }
+    type: color_field_widget_html5
+    region: content
+  field_body_background:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: color_field_widget_html5
+    region: content
+  field_content_two_columns:
+    weight: 34
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_default_regvia:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_enable_two_columns:
+    weight: 33
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_error_color:
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    type: color_field_widget_html5
+    region: content
+  field_form_font_color:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: color_field_widget_html5
+    region: content
+  field_form_title_color:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: color_field_widget_html5
+    region: content
+  field_link_color:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: color_field_widget_html5
+    region: content
+  field_login_destination_url:
+    weight: 3
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_registration_button_font_c:
+    weight: 12
+    settings: {  }
+    third_party_settings: {  }
+    type: color_field_widget_html5
+    region: content
+  field_registration_button_form_c:
+    weight: 14
+    settings: {  }
+    third_party_settings: {  }
+    type: color_field_widget_html5
+    region: content
+  field_registration_button_form_h:
+    weight: 13
+    settings: {  }
+    third_party_settings: {  }
+    type: color_field_widget_html5
+    region: content
+  field_registration_theme_code:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_separator_color:
+    weight: 11
+    settings: {  }
+    third_party_settings: {  }
+    type: color_field_widget_html5
+    region: content
+  field_steptwo_banner:
+    weight: 10
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_steptwo_banner_mobile:
+    weight: 8
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_steptwo_banner_tablet:
+    weight: 9
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_steptwo_content:
+    weight: 25
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_success_message:
+    weight: 23
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_success_message_color:
+    weight: 24
+    settings: {  }
+    third_party_settings: {  }
+    type: color_field_widget_html5
+    region: content
+  field_theme_alternative_text:
+    weight: 12
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_tripwire_content:
+    weight: 36
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  langcode:
+    type: language_select
+    weight: 9
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  user_id: true

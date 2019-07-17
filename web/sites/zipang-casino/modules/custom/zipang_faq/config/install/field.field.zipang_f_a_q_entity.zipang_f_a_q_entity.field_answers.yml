@@ -1,0 +1,24 @@
+uuid: 3613811a-12fc-4a1e-bc40-83cd0a4d11cf
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.zipang_f_a_q_entity.field_answers
+  module:
+    - text
+    - zipang_faq
+_core:
+  default_config_hash: fzguWmfLiArGK6COITP7HL4uWq2btHJneFrHym_Tgt8
+id: zipang_f_a_q_entity.zipang_f_a_q_entity.field_answers
+field_name: field_answers
+entity_type: zipang_f_a_q_entity
+bundle: zipang_f_a_q_entity
+label: Answers
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

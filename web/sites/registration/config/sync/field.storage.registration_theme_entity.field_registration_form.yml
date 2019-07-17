@@ -1,0 +1,27 @@
+uuid: 12fc2a96-6d8e-464b-a7ff-7626c7339352
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - registration_theme
+id: registration_theme_entity.field_registration_form
+field_name: field_registration_form
+entity_type: registration_theme_entity
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: fast_registration_form
+      label: 'Fast Registration Form'
+    -
+      value: registration_form
+      label: 'Default Registration Form'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

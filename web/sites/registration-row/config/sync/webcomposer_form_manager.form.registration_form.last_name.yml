@@ -1,0 +1,82 @@
+field_settings:
+  label: 'Last Name'
+  placeholder: 'Last Name'
+  annotation: "Please enter your Last Name as indicated in your bank account. (e.g. Joe <u>Smith</u>)\r\n"
+field_validations:
+  required:
+    enable: 1
+    error_message: "This field is required.\r\n"
+  alpha:
+    enable: 0
+    error_message: 'Field should be Alphabet characters only'
+    parameters:
+      spaces: 1
+  alphanumeric:
+    enable: 0
+    error_message: 'Field should be alphanumeric'
+    parameters:
+      spaces: 1
+  alpha_multi:
+    enable: 0
+    error_message: "Your Last Name must be entered correctly.\r\n"
+    parameters:
+      space: 1
+      numeric: 0
+      allow: 1
+      disallow: 0
+      special: '\-'''
+  numeric:
+    enable: 0
+    error_message: 'Field should be numeric'
+  no_symbols:
+    enable: 0
+    error_message: "Name contains invalid characters (example: .,@,#,%,^,*,( ),[],/)\r\n"
+  numeric_symbols:
+    enable: 0
+    error_message: 'Field contains invalid special characters'
+  email:
+    enable: 0
+    error_message: 'Field does not contain a valid email address'
+  min_length:
+    enable: 1
+    error_message: "Name must be between 1-50 characters long\r\n"
+    parameters:
+      length: '1'
+  max_length:
+    enable: 1
+    error_message: 'Name must not exceed 50 characters.'
+    parameters:
+      length: '50'
+  regex:
+    enable: 0
+    error_message: 'This field only accepts specific characters.'
+    parameters:
+      regex_value: ''
+  valid_date:
+    enable: 0
+    error_message: 'Date is invalid'
+  username_availability:
+    enable: 0
+    error_message: 'Username not available'
+  email_availability:
+    enable: 0
+    error_message: 'Email not available'
+  invalid_words:
+    enable: 1
+    error_message: 'Please enter a valid name.'
+    parameters:
+      invalid_words_list: 'last name'
+  valid_languages:
+    enable: 0
+    error_message: 'Field accepts English, Chinese, Korean, Greek, apostrophe (''), and dash (-) characters only.'
+    parameters:
+      regex_value: '^(?!\s)[a-zA-Z\\\-''\u4E00-\uFA29\uAC00-\uD7AF\s]+$'
+  not_match_username:
+    enable: 0
+    error_message: 'Password should not equal to username'
+  duplicated_security_question:
+    enable: 0
+    error_message: 'Security Questions should not be the same'
+  match_password:
+    enable: 0
+    error_message: 'Password not match'

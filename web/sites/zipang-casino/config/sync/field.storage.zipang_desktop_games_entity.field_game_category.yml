@@ -1,0 +1,22 @@
+uuid: cdda2350-c4d5-48be-8cba-61245a563884
+langcode: ja
+status: true
+dependencies:
+  module:
+    - taxonomy
+    - zipang_desktop_games
+_core:
+  default_config_hash: CGSiFqj__tCn4GMk6g2La7foip24n-AmKgOpYsxhfhg
+id: zipang_desktop_games_entity.field_game_category
+field_name: field_game_category
+entity_type: zipang_desktop_games_entity
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

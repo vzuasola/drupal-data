@@ -1,0 +1,10 @@
+uuid: 37b22151-ec7f-4bc8-9314-ad161895f1f5
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: i7L_ll-a4yDjex1N9td22CKkdE0r-FLLDtg_iSteFGo
+id: quicklinks
+label: Quicklinks
+description: 'Menu to add the quicklink items'
+locked: false

@@ -1,0 +1,7 @@
+uuid: a1d0ce0e-17c5-42cc-84bf-72f799027ae6
+langcode: ja
+status: true
+dependencies: {  }
+id: press_images
+label: 'Press Images'
+behavior_plugins: {  }

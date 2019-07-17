@@ -51,7 +51,7 @@ field_validations:
     enable: 1
     error_message: 'This field can only contain alphanumeric values and ()_-/\&#,.'
     parameters:
-      regex_value: '^(?!\s)[a-zA-Z0-9_,.&#/\\\-''\u4E00-\uFA29\uAC00-\uD7AF\u0370-\u03FF\u0E00-\u0E7F\s]+$'
+      regex_value: '^(?!\s)[a-zA-Z0-9_,.&#/\\\-''\u4E00-\uFA29\uAC00-\uD7AF\u0370-\u03FF\u0E00-\u0E7F\u3040-\u309f\u30a0-\u30ff\u3000-\u303f\uff00-\uffef\u4e00-\u9faf\u00C0-\u1EF9\s]+$'
   valid_date:
     enable: 0
     error_message: 'Date is invalid'

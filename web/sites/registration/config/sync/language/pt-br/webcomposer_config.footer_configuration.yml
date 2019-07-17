@@ -1,8 +1,11 @@
-advanced__active_tab: edit-responsive-footer
+advanced__active_tab: edit-cookie-notification-group
 about_dafabet_content:
-  format: basic_html
   value: "<p>Bem-vindo ao Dafabet, principal site de apostas online da Ásia e lar de alguns dos melhores produtos de jogos da web que incluem apostas esportivas, cassino online, jogos de cassino ao vivo, pôquer on-line, jogos em Flash e uma variedade de jogos de apostas online. Dafabet é licenciado e regulamentado pelo governo filipino.</p>\r\n"
+  format: basic_html
 social_media_title: 'Siga-nos e receba as últimas atualizações'
 sponsor_mobile_desc: 'Patrocinador oficial do clube'
 about_dafabet_title: 'Sobre o Dafabet'
 quicklinks_title: 'Links Rápidos'
+cookie_notification:
+  value: "<p>Nós utilizamos cookies para oferecer a melhor experiência possível. Ao continuar navegando neste site, você concorda com o uso de cookies de acordo com nossa <a href=\"{domain:entry}/{lang}/security\" target=\"_blank\">Política de Cookies</a>.</p>\r\n"
+  format: basic_html

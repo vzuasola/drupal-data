@@ -11,6 +11,7 @@
 
 use Drupal\Core\Url;
 use Drupal\views\ViewExecutable;
+use Drupal\Core\Form\FormStateInterface;
 
 /**
  * Implements hook_toolbar().
@@ -33,24 +34,6 @@ function arcade_config_toolbar() {
   return $items;
 }
 
-function arcade_config_form_alter(&$form, $form_state, $form_id) {
-    $submitAction = false;
-    switch($form_id) {
-        case 'taxonomy_term_arcade_game_category_form':
-            $submitAction = 'arcade_config_taxonomy_form_submit';
-            break;
-    }
-
-    if ($submitAction !== false) {
-        foreach (array_keys($form['actions']) as $action) {
-            if ($action != 'preview' && isset($form['actions'][$action]['#type']) && 
-                $form['actions'][$action]['#type'] === 'submit') {
-                $form['actions'][$action]['#submit'][] = $submitAction;
-            }
-        }
-    }
-}
-
 function arcade_config_taxonomy_form_submit($form, &$form_state) {
     $vid = $form_state->getFormObject()->getEntity()->bundle();
     $form_state->setRedirect('entity.taxonomy_vocabulary.overview_form', [
@@ -66,5 +49,55 @@ function arcade_config_views_pre_build(ViewExecutable $view) {
     if ($view->filter['field_preview_display_only_value']->value == 0) {
       $view->filter['field_preview_display_only_value']->accept_null = TRUE;
     }
+  }
+}
+
+function arcade_config_form_alter(&$form, $form_state, $form_id) {
+    $submitAction = false;
+    switch($form_id) {
+        case 'node_arcade_game_edit_form':
+          $form['#validate'][] = 'arcade_config_validate';
+          break;
+    }
+    if ($submitAction !== false) {
+        foreach (array_keys($form['actions']) as $action) {
+            if ($action != 'preview' && isset($form['actions'][$action]['#type']) && 
+                $form['actions'][$action]['#type'] === 'submit') {
+                $form['actions'][$action]['#submit'][] = $submitAction;
+            }
+        }
+    }
+}
+
+/**
+ * Form validation for game maintenance scheduler.
+ */
+function arcade_config_validate(&$form, FormStateInterface $form_state) {
+  $publish = $form_state->getValue('field_um_start');
+  $unpublish = $form_state->getValue('field_um_end');
+
+  if (is_array($publish[0]['value'])  || is_array($unpublish[0]['value'])) {
+    if (
+      $publish[0]['value']['time'] === "" ||
+      $publish[0]['value']['date'] === "" || 
+      $unpublish[0]['value']['time']  === "" || 
+      $unpublish[0]['value']['date']  === "") {
+      return;
+    }
+  }
+
+  $publishDate = isset($publish[0]['value']) ? $publish[0]['value']->format('U') : NULL;
+  $unpublishDate = isset($unpublish[0]['value']) ? $unpublish[0]['value']->format('U') : NULL;
+
+  if ($unpublishDate === null && $publishDate) {
+    $form_state->setErrorByName('field_unpublish_date', t('End date cannot be empty.'));
+  }
+
+  if ($publishDate === null && $unpublishDate) {
+    $form_state->setErrorByName('field_unpublish_date', t('Start date cannot be empty.'));
+  }
+
+  if ($unpublishDate && $unpublishDate < $publishDate) {
+    $form_state->setErrorByName('field_unpublish_date', t('Under maintenance end date should be greater than the start date.'));
   }
 }

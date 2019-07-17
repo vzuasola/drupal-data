@@ -1,0 +1,5 @@
+entity.zipang_f_a_q_entity.add_form:
+  route_name: entity.zipang_f_a_q_entity.add_form
+  title: 'Add Zipang faq entity'
+  appears_on:
+    - entity.zipang_f_a_q_entity.collection

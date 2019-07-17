@@ -1,0 +1,17 @@
+uuid: 1d145bc0-0ee2-4e4e-93c1-fecff0b1b942
+langcode: ja
+status: true
+dependencies:
+  module:
+    - content_translation
+    - deposit_and_withdrawal
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: deposit_and_withdrawal_entity.deposit_and_withdrawal_entity
+target_entity_type_id: deposit_and_withdrawal_entity
+target_bundle: deposit_and_withdrawal_entity
+default_langcode: site_default
+language_alterable: true

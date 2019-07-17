@@ -1,0 +1,30 @@
+uuid: f3a1a7e6-cfa6-4b40-a6fd-b88ecaefe7b3
+langcode: en
+status: true
+dependencies:
+  module:
+    - client_footer_games
+    - options
+id: client_footer_games.field_display_mode
+field_name: field_display_mode
+entity_type: client_footer_games
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: free
+      label: Free
+    -
+      value: online
+      label: Online
+    -
+      value: offline
+      label: Offline
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 3
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

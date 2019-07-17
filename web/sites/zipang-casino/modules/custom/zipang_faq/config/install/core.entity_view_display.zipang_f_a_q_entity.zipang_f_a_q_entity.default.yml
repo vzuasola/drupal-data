@@ -1,0 +1,59 @@
+uuid: f183227f-d966-462c-9d85-9d587608dbb6
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.field.zipang_f_a_q_entity.zipang_f_a_q_entity.field_answers
+    - field.field.zipang_f_a_q_entity.zipang_f_a_q_entity.field_faq_category
+    - field.field.zipang_f_a_q_entity.zipang_f_a_q_entity.field_question
+  module:
+    - text
+    - user
+    - zipang_faq
+_core:
+  default_config_hash: i_oo38tzaxb1ONDkOt77qCC784NGd53gzSQefrXjlHc
+id: zipang_f_a_q_entity.zipang_f_a_q_entity.default
+targetEntityType: zipang_f_a_q_entity
+bundle: zipang_f_a_q_entity
+mode: default
+content:
+  field_answers:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_faq_category:
+    weight: 2
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_question:
+    weight: 3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  name:
+    label: above
+    type: string
+    weight: -4
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  user_id:
+    label: hidden
+    type: author
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

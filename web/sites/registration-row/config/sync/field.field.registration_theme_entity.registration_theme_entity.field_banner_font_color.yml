@@ -1,0 +1,25 @@
+uuid: 53ee4fb0-c914-4057-b8e5-8f537c0df66e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.registration_theme_entity.field_banner_font_color
+  module:
+    - color_field
+    - registration_theme
+id: registration_theme_entity.registration_theme_entity.field_banner_font_color
+field_name: field_banner_font_color
+entity_type: registration_theme_entity
+bundle: registration_theme_entity
+label: 'Banner Font Color'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    color: '#ffe000'
+    opacity: null
+default_value_callback: ''
+settings:
+  opacity: 0
+field_type: color_field_type

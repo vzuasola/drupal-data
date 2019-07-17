@@ -1,0 +1,18 @@
+uuid: 166a8480-3b19-4874-8b8f-ac879dcd4285
+langcode: ja
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.desktop_game_category
+id: taxonomy_term.desktop_game_category.changed
+field_name: changed
+entity_type: taxonomy_term
+bundle: desktop_game_category
+label: Changed
+description: 'The time that the term was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

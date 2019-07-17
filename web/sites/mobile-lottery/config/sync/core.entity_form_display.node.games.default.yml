@@ -1,0 +1,223 @@
+uuid: c444022c-7c06-481e-8cff-3ee428ed9571
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.games.body
+    - field.field.node.games.field_game_provider
+    - field.field.node.games.field_maintenance_blurb
+    - field.field.node.games.field_maintenance_end_date
+    - field.field.node.games.field_maintenance_start_date
+    - field.field.node.games.field_game_ribbon
+    - field.field.node.games.field_game_thumbnail_large
+    - field.field.node.games.field_game_thumbnail_size
+    - field.field.node.games.field_game_thumbnail_small
+    - field.field.node.games.field_target
+    - field.field.node.games.field_use_game_loader
+    - image.style.thumbnail
+    - node.type.games
+  module:
+    - datetime
+    - field_group
+    - image
+    - path
+    - scheduler
+    - text
+third_party_settings:
+  field_group:
+    group_game_thumbnail_settings:
+      children:
+        - field_game_ribbon
+        - field_game_thumbnail_size
+        - field_game_thumbnail_small
+        - field_game_thumbnail_large
+      parent_name: ''
+      weight: 3
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Game Thumbnail Settings'
+    group_game_provider_settings:
+      children:
+        - field_game_provider
+        - field_target
+        - field_use_game_loader
+      parent_name: ''
+      weight: 2
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Game Provider Settings'
+    group_under_maintenance_settings:
+      children:
+        - field_maintenance_blurb
+        - field_maintenance_start_date
+        - field_maintenance_end_date
+      parent_name: ''
+      weight: 9
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: 'Under Maintenance Settings'
+id: node.games.default
+targetEntityType: node
+bundle: games
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_game_provider:
+    weight: 15
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_game_ribbon:
+    weight: 123
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_game_thumbnail_large:
+    weight: 126
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_game_thumbnail_size:
+    weight: 124
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_game_thumbnail_small:
+    weight: 125
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_maintenance_blurb:
+    weight: 127
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_maintenance_end_date:
+    weight: 14
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_maintenance_start_date:
+    weight: 13
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_target:
+    weight: 16
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_use_game_loader:
+    weight: 17
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 7
+    region: content
+    third_party_settings: {  }
+  publish_on:
+    type: datetime_timestamp_no_default
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  scheduler_settings:
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 13
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 8
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 4
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+  unpublish_on:
+    type: datetime_timestamp_no_default
+    weight: 12
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  body: true

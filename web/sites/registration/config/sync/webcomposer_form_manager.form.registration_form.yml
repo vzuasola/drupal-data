@@ -1,10 +1,11 @@
 form_settings:
   show: 1
   alias: ''
+  form_name: RegistrationForm
 weights:
-  breakline_1:
-    weight: '-10'
   back_button:
+    weight: '-10'
+  breakline_1:
     weight: '-9'
   username:
     weight: '-8'

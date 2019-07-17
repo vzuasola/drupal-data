@@ -1,4 +1,0 @@
-games_search.search_configuration_tab:
-  route_name: games_search.search_configuration
-  title: 'Configure Games Search'
-  base_route: games_search.search_configuration

@@ -1,0 +1,21 @@
+uuid: c1fd51fc-3eb3-40fc-960d-a2f30b734f41
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.zipang_promotions_entity.field_image_banner_link_target
+  module:
+    - options
+    - zipang_promotions
+id: zipang_promotions_entity.zipang_promotions_entity.field_image_banner_link_target
+field_name: field_image_banner_link_target
+entity_type: zipang_promotions_entity
+bundle: zipang_promotions_entity
+label: 'Image Banner Link Target'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

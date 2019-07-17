@@ -1,0 +1,20 @@
+uuid: 12cd59c6-cc4d-44eb-91fd-fe3b39a89c18
+langcode: ja
+status: true
+dependencies:
+  module:
+    - zipang_mobile_games
+id: zipang_mobile_games_entity.zipang_mobile_games_entity.user_id
+field_name: user_id
+entity_type: zipang_mobile_games_entity
+bundle: zipang_mobile_games_entity
+label: 'Authored by'
+description: 'The user ID of author of the Zipang mobile games entity entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

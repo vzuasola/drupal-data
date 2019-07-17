@@ -1,0 +1,11 @@
+uuid: 490740ab-58fd-4011-8f9f-885543a0d562
+langcode: und
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: lXsSKmV1cJCKPZP_Upc_Xbco24-vRBo8aVzIejEPiMY
+name: 'FAQ Category'
+vid: faq_category
+description: ''
+hierarchy: 0
+weight: 0

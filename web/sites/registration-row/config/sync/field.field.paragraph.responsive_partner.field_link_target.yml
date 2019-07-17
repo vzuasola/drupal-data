@@ -1,0 +1,21 @@
+uuid: 1afc896d-e199-4f25-bbb0-f4a942678fca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_link_target
+    - paragraphs.paragraphs_type.responsive_partner
+  module:
+    - options
+id: paragraph.responsive_partner.field_link_target
+field_name: field_link_target
+entity_type: paragraph
+bundle: responsive_partner
+label: 'Link Target'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

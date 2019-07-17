@@ -26,16 +26,16 @@ poker_config.manage_featured_tiles:
   route_name: view.featured_tiles.page_2
   weight: 98
 
-# poker_config.client_category:
-#   title: 'Client Casino - Manage Category'
-#   parent: poker_config.admin_settings
-#   description: 'Client Casino - Manage Category'
-#   route_name: view.client_casino_category_icon.page_1
-#   weight: 97
+poker_config.client_category:
+  title: 'Client Casino - Manage Category'
+  parent: poker_config.admin_settings
+  description: 'Client Casino - Manage Category'
+  route_name: view.client_casino_category_icon.page_1
+  weight: 97
 
-# poker_config.client_list:
-#   title: 'Client Casino - Manage Games'
-#   parent: poker_config.admin_settings
-#   description: 'Client Casino - Manage Games'
-#   route_name: view.client_casino_games_listing.page_1
-#   weight: 96
+poker_config.client_list:
+  title: 'Client Casino - Manage Games'
+  parent: poker_config.admin_settings
+  description: 'Client Casino - Manage Games'
+  route_name: view.client_casino_games_listing.page_1
+  weight: 96

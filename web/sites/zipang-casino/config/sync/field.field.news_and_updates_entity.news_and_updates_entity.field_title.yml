@@ -1,5 +1,5 @@
 uuid: 68ec2174-eddf-4aa0-9a02-daa280bff0fe
-langcode: en
+langcode: ja
 status: true
 dependencies:
   config:
@@ -13,7 +13,7 @@ bundle: news_and_updates_entity
 label: Title
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

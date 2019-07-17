@@ -1,0 +1,22 @@
+{#
+/**
+ * @file zipang_f_a_q_entity.html.twig
+ * Default theme implementation to present Zipang faq entity data.
+ *
+ * This template is used when viewing Zipang faq entity pages.
+ *
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_zipang_f_a_q_entity()
+ *
+ * @ingroup themeable
+ */
+#}
+<div{{ attributes.addClass('zipang_f_a_q_entity') }}>
+  {% if content %}
+    {{- content -}}
+  {% endif %}
+</div>

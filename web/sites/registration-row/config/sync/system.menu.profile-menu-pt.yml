@@ -1,0 +1,8 @@
+uuid: 07be30a6-8130-471a-9dfb-9cd616aa9c87
+langcode: pt-br
+status: true
+dependencies: {  }
+id: profile-menu-pt
+label: 'Profile Menu PT'
+description: ''
+locked: false

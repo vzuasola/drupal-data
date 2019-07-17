@@ -1,0 +1,21 @@
+uuid: 71ba1e04-7ea9-43c4-bdb3-5b06a7309230
+langcode: ja
+status: true
+dependencies:
+  module:
+    - text
+    - zipang_weekly_winner
+_core:
+  default_config_hash: eukopVfnUmpBQgOF-p4ST9jSPqrSs0bYjOZyQC6B23s
+id: zipang_weekly_winner_entity.field_body
+field_name: field_body
+entity_type: zipang_weekly_winner_entity
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

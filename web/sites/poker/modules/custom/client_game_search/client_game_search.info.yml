@@ -1,0 +1,5 @@
+name: Client Game Search
+type: module
+description: Poke Client Games search and Filter Configurations
+core: 8.x
+package: Custom

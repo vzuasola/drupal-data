@@ -1,0 +1,27 @@
+uuid: 586bb0ab-bb5a-4897-a9de-a47b81504c9f
+langcode: en
+status: true
+dependencies:
+  module:
+    - mobile_marketing_space
+    - options
+id: mobile_marketing_space.field_log_in_state
+field_name: field_log_in_state
+entity_type: mobile_marketing_space
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '0'
+      label: 'Pre Login'
+    -
+      value: '1'
+      label: 'Post Login'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 2
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

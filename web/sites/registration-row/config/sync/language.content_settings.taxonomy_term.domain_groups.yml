@@ -1,0 +1,20 @@
+uuid: 8d1a5852-0e6e-445c-98b9-a7bb06a5aadd
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.domain_groups
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+_core:
+  default_config_hash: aod9DXcLsMPrhctj0fGMevbz1MworInCTHMvO3_L67k
+id: taxonomy_term.domain_groups
+target_entity_type_id: taxonomy_term
+target_bundle: domain_groups
+default_langcode: site_default
+language_alterable: true

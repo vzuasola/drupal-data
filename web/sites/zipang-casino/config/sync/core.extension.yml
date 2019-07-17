@@ -17,10 +17,12 @@ module:
   config_translation: 0
   contact: 0
   contact_storage: 0
+  contact_us_config: 0
   content_translation: 0
   contextual: 0
   ctools: 0
   datetime: 0
+  deposit_and_withdrawal: 0
   devel: 0
   draggableviews: 0
   dynamic_page_cache: 0
@@ -70,33 +72,43 @@ module:
   webcomposer_config: 0
   webcomposer_config_schema: 0
   webcomposer_dashboard: 0
-  webcomposer_dm: 0
-  webcomposer_domain_import: 0
   webcomposer_downloadables: 0
   webcomposer_editor: 0
   webcomposer_floating_banners: 0
   webcomposer_form_manager: 0
   webcomposer_games: 0
   webcomposer_language_hierarchy: 0
+  webcomposer_mailer: 0
   webcomposer_marketing_script: 0
+  webcomposer_partner: 0
   webcomposer_promotions: 0
   webcomposer_registration_landing_page: 0
   webcomposer_rest_extra: 0
   webcomposer_seo: 0
-  webcomposer_sitemap: 0
+  webcomposer_slider_v2: 0
   webcomposer_social_media: 0
   webcomposer_sponsor: 0
   webcomposer_webform: 0
-  webcomposer_slider_v2: 0
   webform: 0
   webform_rest: 0
   webform_ui: 0
+  zipang_big_winner: 0
+  zipang_404: 0
   zipang_config: 0
-  zipang_dropdown_menu: 0
-  zipang_registration: 0
   zipang_desktop_blocks: 0
-  zipang_rightside_blocks: 0
+  zipang_desktop_games: 0
+  zipang_dropdown_menu: 0
+  zipang_faq: 0
+  zipang_fair_gaming: 0
+  zipang_jackpot: 0
+  zipang_mobile_blocks: 0
+  zipang_mobile_games: 0
   zipang_news_and_updates: 0
+  zipang_press: 0
+  zipang_promotions: 0
+  zipang_registration: 0
+  zipang_rightside_blocks: 0
+  zipang_weekly_winner: 0
   menu_link_content: 1
   pathauto: 1
   views: 10

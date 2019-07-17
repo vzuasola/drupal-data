@@ -7,7 +7,7 @@ dependencies:
     - webcomposer_marketing_script
 third_party_settings:
   content_translation:
-    enabled: false
+    enabled: true
     bundle_settings:
       untranslatable_fields_hide: '0'
 _core:
@@ -16,4 +16,4 @@ id: marketing_script_entity.marketing_script_entity
 target_entity_type_id: marketing_script_entity
 target_bundle: marketing_script_entity
 default_langcode: site_default
-language_alterable: false
+language_alterable: true

@@ -1,0 +1,24 @@
+uuid: 9542af3e-e40e-47f9-8ed1-97f29a014acb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.registration_theme_entity.field_tripwire_content
+  module:
+    - registration_theme
+    - text
+id: registration_theme_entity.registration_theme_entity.field_tripwire_content
+field_name: field_tripwire_content
+entity_type: registration_theme_entity
+bundle: registration_theme_entity
+label: 'Tripwire Content'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: "            <p class=\"text-red text-semibold text-24\">Wait! Before you go....</p>\r\n            <p class=\"text-28 mb-35 mt-20 text-darker-gray\">Get <span class=\"text-36 text-extrabold text-darkest-gray\">150% up to RM 450 </span> on your First Deposit! </p>\r\n            <div class=\"flex\">\r\n                <a href=\"#\" id=\"yes-action\" class=\"cta-btn btn-yellow btn-small br-12 mr-10 yes-action\">\r\n                    <p class=\"text-extrabold text-24 mb-0 mt-15\">YES, I want to get the bonus!</p><br>\r\n                </a>\r\n                <a href=\"{domain:entry}\" id=\"no-action\" class=\"cta-btn btn-lighter-gray btn-small br-12 ml-10\">\r\n                    <p class=\"text-extrabold text-24 mb-0 mt-15\">No Thanks, Maybe next time</span><br>\r\n                </a>\r\n            </div>"
+    format: restricted_html
+default_value_callback: ''
+settings: {  }
+field_type: text_long

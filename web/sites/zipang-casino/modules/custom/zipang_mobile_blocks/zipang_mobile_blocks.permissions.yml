@@ -1,0 +1,22 @@
+add Zipang mobile block entity entities:
+  title: 'Create new Zipang mobile block entity entities'
+
+administer Zipang mobile block entity entities:
+  title: 'Administer Zipang mobile block entity entities'
+  description: 'Allow to access the administration form to configure Zipang mobile block entity entities.'
+  restrict access: true
+
+delete Zipang mobile block entity entities:
+  title: 'Delete Zipang mobile block entity entities'
+
+edit Zipang mobile block entity entities:
+  title: 'Edit Zipang mobile block entity entities'
+
+access Zipang mobile block entity overview:
+  title: 'Access the Zipang mobile block entity overview page'
+
+view published Zipang mobile block entity entities:
+  title: 'View published Zipang mobile block entity entities'
+
+view unpublished Zipang mobile block entity entities:
+  title: 'View unpublished Zipang mobile block entity entities'

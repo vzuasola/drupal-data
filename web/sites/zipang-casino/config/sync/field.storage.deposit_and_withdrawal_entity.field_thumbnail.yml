@@ -1,0 +1,30 @@
+uuid: 17ec0778-9c52-4825-bb46-17b7458e46f8
+langcode: ja
+status: true
+dependencies:
+  module:
+    - deposit_and_withdrawal
+    - file
+    - image
+id: deposit_and_withdrawal_entity.field_thumbnail
+field_name: field_thumbnail
+entity_type: deposit_and_withdrawal_entity
+type: image
+settings:
+  default_image:
+    uuid: null
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  target_type: file
+  display_field: false
+  display_default: false
+  uri_scheme: public
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

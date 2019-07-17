@@ -1,0 +1,39 @@
+field_settings:
+  label: 성
+  placeholder: 성
+  annotation: "은행 계좌에 표시된대로 성을 입력하십시오 (예: <u>홍</u>길동)\r\n"
+field_validations:
+  required:
+    error_message: "이 항목은 필수 항목입니다\r\n"
+  alpha:
+    error_message: 'Field should be Alphabet characters only'
+  alphanumeric:
+    error_message: 'Field should be alphanumeric'
+  alpha_multi:
+    error_message: "성을 올바르게 입력해야 합니다.\r\n"
+  numeric:
+    error_message: 'Field should be numeric'
+  no_symbols:
+    error_message: "이름에 유효하지 않은 문자 (예:.,@,#,%,^,*,(),[],/)가 있습니다.\r\n"
+  numeric_symbols:
+    error_message: 'Field contains invalid special characters'
+  email:
+    error_message: 'Field does not contain a valid email address'
+  min_length:
+    error_message: "이름은 1-50자 사이여야 합니다.\r\n"
+  max_length:
+    error_message: "이름은 50자를 넘지 않아야 합니다\r\n"
+  regex:
+    error_message: 'This field only accepts specific characters.'
+  valid_date:
+    error_message: 'Date is invalid'
+  username_availability:
+    error_message: 'Username not available'
+  email_availability:
+    error_message: 'Email not available'
+  invalid_words:
+    error_message: "유효한 이름을 입력하십시오\r\n"
+  valid_languages:
+    error_message: "입력란에는 한국어, 영어, 한자 그리스어, 아포스트로피 ( ') 및 대시 (-) 문자만 허용됩니다\r\n"
+  not_match_username:
+    error_message: 'Password should not equal to username'

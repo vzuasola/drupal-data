@@ -1,0 +1,19 @@
+uuid: caf3288a-4163-4284-8bf2-0409ad099398
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_year_category
+    - taxonomy.vocabulary.fair_gaming_year
+id: taxonomy_term.fair_gaming_year.field_year_category
+field_name: field_year_category
+entity_type: taxonomy_term
+bundle: fair_gaming_year
+label: 'Year Category'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

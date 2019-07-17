@@ -1,0 +1,20 @@
+uuid: 66c261c2-0094-420b-a112-0fad2ba1058d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.registration_theme_entity.field_theme_alternative_text
+  module:
+    - registration_theme
+id: registration_theme_entity.registration_theme_entity.field_theme_alternative_text
+field_name: field_theme_alternative_text
+entity_type: registration_theme_entity
+bundle: registration_theme_entity
+label: 'Banner Alternative text'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

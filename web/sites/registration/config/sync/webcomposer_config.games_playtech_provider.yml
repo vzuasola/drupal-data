@@ -1,8 +1,13 @@
-javascript_assets: '/jswrapper/integration.js.php?casino=dafa888&min=1'
+javascript_assets: 'https://login.mannycasino.com/jswrapper/mannycasino/integration.js'
 lobby_url: ''
 playtech_pas_endpoint: 'https://login.wsocdd.com/Login.php'
-playtech_pas_casino: dafa888
-languages: "sc|zh-cn\r\nch|zh-cn\r\nkr|ko\r\nvn|en\r\njp|en\r\neu|en\r\nid|en\r\nin|en\r\ngr|en\r\npl|en"
+playtech_pas_casino: mannycasino
+languages: "sc|zh-cn\r\nch|zh-cn\r\nkr|ko\r\nvn|en\r\njp|en\r\neu|en\r\nid|en\r\nin|en\r\ngr|en\r\npl|en\r\nes|ES-MX\r\npt|PT"
 _core:
   default_config_hash: 44f16f0qKZJuxkuiP2e1YfOhM2iQbeq5MWa1Qrp3HV8
 iapiconf_override: ''
+games_playtech_provider_form__active_tab: edit-integration-config
+futurama_switch: 1
+error_mapping: ''
+error_header_title_text: ''
+error_button: ''

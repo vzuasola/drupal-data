@@ -119,23 +119,6 @@ class CasinoGamesConfigurationForm extends FormBase {
       '#translatable' => TRUE
     ];
 
-    $form['category_group']['load_more_text'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Load More Text'),
-      '#description' => $this->t('The text to display on load more button.'),
-      '#default_value' => $this->get('load_more_text'),
-      '#required' => TRUE,
-      '#translatable' => TRUE
-    ];
-
-    $form['category_group']['load_more_disabled'] = [
-      '#type' => 'checkbox',
-      '#title' => $this->t('Disable Load More'),
-      '#description' => $this->t('If checked all games will be shown at once.'),
-      '#default_value' => $this->get('load_more_disabled'),
-      '#required' => FALSE,
-    ];
-
     $form['category_group']['special_categories'] = [
       '#type' => 'fieldset',
       '#title' => $this->t('Special Categories'),
@@ -262,11 +245,11 @@ class CasinoGamesConfigurationForm extends FormBase {
       '#required' => TRUE,
       '#translatable' => TRUE
     ];
-    $pasLightboxGroupTitle = $this->t('PAS Error (Lightbox)');
+    $pasLightboxGroupTitle = $this->t('[deprecated] PAS Error (Lightbox)');
     $form['lightbox_group']['pas'] = [
         '#type' => 'details',
         '#title' => $pasLightboxGroupTitle,
-        '#open' => TRUE,
+        '#open' => false,
         '#description' => '<p>This lightbox will appear if pas authentication failed on game launch.</p>'
     ];
     $form['lightbox_group']['pas']['pas_error_lightbox_title'] = [

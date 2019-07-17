@@ -1,0 +1,5 @@
+name: Webcomposer Download Page
+type: module
+description: Provides Configuration for Download Page
+core: 8.x
+package: Custom

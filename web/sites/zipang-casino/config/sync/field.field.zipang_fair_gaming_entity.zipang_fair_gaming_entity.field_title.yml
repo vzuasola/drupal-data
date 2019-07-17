@@ -1,0 +1,20 @@
+uuid: d2eeb620-c54f-4aa4-95ae-63f8c745a0cb
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.zipang_fair_gaming_entity.field_title
+  module:
+    - zipang_fair_gaming
+id: zipang_fair_gaming_entity.zipang_fair_gaming_entity.field_title
+field_name: field_title
+entity_type: zipang_fair_gaming_entity
+bundle: zipang_fair_gaming_entity
+label: Title
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

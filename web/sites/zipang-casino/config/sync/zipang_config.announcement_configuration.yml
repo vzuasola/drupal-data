@@ -1,0 +1,17 @@
+critical_announcement: 1
+critical_announcement_content:
+  value: "<p>tester crit</p>\r\n"
+  format: basic_html
+critical_announcement_scheduler: 0
+critical_issue_start_date: false
+critical_issue_end_date: false
+critical_announcement_add_background: 0
+news_announcement: 1
+news_announcement_content:
+  value: "<p>test anno</p>\r\n"
+  format: basic_html
+news_announcement_scheduler: 0
+news_announcement_start_date: false
+news_announcement_end_date: false
+news_announcement_add_background: 0
+announcement_pages: '*'

@@ -1,0 +1,20 @@
+uuid: bf0b1ddb-0d68-4ec0-addb-ea06179528b3
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.dropdown_menu_entity.field_dropdown_menu_id
+  module:
+    - zipang_dropdown_menu
+id: dropdown_menu_entity.dropdown_menu_entity.field_dropdown_menu_id
+field_name: field_dropdown_menu_id
+entity_type: dropdown_menu_entity
+bundle: dropdown_menu_entity
+label: ID
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

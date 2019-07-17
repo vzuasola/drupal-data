@@ -1,0 +1,20 @@
+uuid: 16f5c79f-373c-4408-98ca-bf067fe37130
+langcode: en
+status: true
+dependencies:
+  module:
+    - registration_theme
+id: registration_theme_entity.registration_theme_entity.user_id
+field_name: user_id
+entity_type: registration_theme_entity
+bundle: registration_theme_entity
+label: 'Authored by'
+description: 'The user ID of author of the Registration theme entity entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

@@ -9,17 +9,18 @@ dependencies:
     - field.field.registration_theme_entity.registration_theme_entity.field_background_image
     - field.field.registration_theme_entity.registration_theme_entity.field_banner_font_color
     - field.field.registration_theme_entity.registration_theme_entity.field_banner_highlight
-    - field.field.registration_theme_entity.registration_theme_entity.field_body_background
     - field.field.registration_theme_entity.registration_theme_entity.field_content_two_columns
     - field.field.registration_theme_entity.registration_theme_entity.field_default_regvia
     - field.field.registration_theme_entity.registration_theme_entity.field_enable_two_columns
     - field.field.registration_theme_entity.registration_theme_entity.field_error_color
     - field.field.registration_theme_entity.registration_theme_entity.field_form_font_color
+    - field.field.registration_theme_entity.registration_theme_entity.field_form_title_color
     - field.field.registration_theme_entity.registration_theme_entity.field_link_color
     - field.field.registration_theme_entity.registration_theme_entity.field_login_destination_url
     - field.field.registration_theme_entity.registration_theme_entity.field_registration_button_font_c
     - field.field.registration_theme_entity.registration_theme_entity.field_registration_button_form_c
     - field.field.registration_theme_entity.registration_theme_entity.field_registration_button_form_h
+    - field.field.registration_theme_entity.registration_theme_entity.field_registration_form
     - field.field.registration_theme_entity.registration_theme_entity.field_registration_theme_code
     - field.field.registration_theme_entity.registration_theme_entity.field_separator_color
     - field.field.registration_theme_entity.registration_theme_entity.field_steptwo_banner
@@ -29,6 +30,8 @@ dependencies:
     - field.field.registration_theme_entity.registration_theme_entity.field_success_message
     - field.field.registration_theme_entity.registration_theme_entity.field_success_message_color
     - field.field.registration_theme_entity.registration_theme_entity.field_theme_alternative_text
+    - field.field.registration_theme_entity.registration_theme_entity.field_tripwire_content
+    - field.field.registration_theme_entity.registration_theme_entity.field_tripwire_toggle
   module:
     - color_field
     - image
@@ -93,15 +96,6 @@ content:
     third_party_settings: {  }
     type: color_field_formatter_text
     region: content
-  field_body_background:
-    weight: 26
-    label: above
-    settings:
-      format: hex
-      opacity: '1'
-    third_party_settings: {  }
-    type: color_field_formatter_text
-    region: content
   field_content_two_columns:
     weight: 25
     label: above
@@ -138,6 +132,15 @@ content:
     region: content
   field_form_font_color:
     weight: 5
+    label: above
+    settings:
+      format: hex
+      opacity: '1'
+    third_party_settings: {  }
+    type: color_field_formatter_text
+    region: content
+  field_form_title_color:
+    weight: 27
     label: above
     settings:
       format: hex
@@ -192,6 +195,13 @@ content:
       opacity: '1'
     third_party_settings: {  }
     type: color_field_formatter_text
+    region: content
+  field_registration_form:
+    weight: 29
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
   field_registration_theme_code:
     weight: 2
@@ -268,6 +278,23 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_tripwire_content:
+    weight: 26
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_tripwire_toggle:
+    weight: 28
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
     region: content
   name:
     label: above

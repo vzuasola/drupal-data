@@ -3,10 +3,10 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.client_footer_games.client_footer_games.field_display_mode
     - field.field.client_footer_games.client_footer_games.field_game_code
     - field.field.client_footer_games.client_footer_games.field_game_thumbnail
     - field.field.client_footer_games.client_footer_games.field_game_thumbnail_hover
-    - field.field.client_footer_games.client_footer_games.field_game_type
     - field.field.client_footer_games.client_footer_games.field_publish
     - image.style.thumbnail
   module:
@@ -17,8 +17,14 @@ targetEntityType: client_footer_games
 bundle: client_footer_games
 mode: default
 content:
-  field_game_code:
+  field_display_mode:
+    type: options_buttons
     weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_game_code:
+    weight: 6
     settings:
       size: 60
       placeholder: ''
@@ -40,12 +46,6 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
-    region: content
-  field_game_type:
-    weight: 6
-    settings: {  }
-    third_party_settings: {  }
-    type: options_buttons
     region: content
   field_publish:
     weight: 7

@@ -1,0 +1,36 @@
+<?php
+
+/**
+ * Implements hook_uninstall
+ */
+function zipang_mobile_blocks_uninstall() {
+  $keys = [
+    'core.base_field_override.zipang_mobile_block_entity.zipang_mobile_block_entity.metatag.yml',
+    'core.entity_form_display.zipang_mobile_block_entity.zipang_mobile_block_entity.default.yml',
+    'core.entity_view_display.zipang_mobile_block_entity.zipang_mobile_block_entity.default.yml',
+    'field.field.zipang_mobile_block_entity.zipang_mobile_block_entity.field_add_background.yml',
+    'field.field.zipang_mobile_block_entity.zipang_mobile_block_entity.field_add_border.yml',
+    'field.field.zipang_mobile_block_entity.zipang_mobile_block_entity.field_description.yml',
+    'field.field.zipang_mobile_block_entity.zipang_mobile_block_entity.field_hide_title.yml',
+    'field.field.zipang_mobile_block_entity.zipang_mobile_block_entity.field_image_banner.yml',
+    'field.field.zipang_mobile_block_entity.zipang_mobile_block_entity.field_image_banner_link.yml',
+    'field.field.zipang_mobile_block_entity.zipang_mobile_block_entity.field_image_banner_link_target.yml',
+    'field.field.zipang_mobile_block_entity.zipang_mobile_block_entity.field_log_in_state.yml',
+    'field.field.zipang_mobile_block_entity.zipang_mobile_block_entity.field_title.yml',
+    'field.storage.zipang_mobile_block_entity.field_add_background.yml',
+    'field.storage.zipang_mobile_block_entity.field_add_border.yml',
+    'field.storage.zipang_mobile_block_entity.field_description.yml',
+    'field.storage.zipang_mobile_block_entity.field_hide_title.yml',
+    'field.storage.zipang_mobile_block_entity.field_image_banner.yml',
+    'field.storage.zipang_mobile_block_entity.field_image_banner_link.yml',
+    'field.storage.zipang_mobile_block_entity.field_image_banner_link_target.yml',
+    'field.storage.zipang_mobile_block_entity.field_log_in_state.yml',
+    'field.storage.zipang_mobile_block_entity.field_title.yml',
+    'language.content_settings.zipang_mobile_block_entity.zipang_mobile_block_entity.yml',
+    'views.view.zipang_mobile_blocks.yml',
+  ];
+
+  foreach ($keys as $key) {
+    \Drupal::configFactory()->getEditable($key)->delete();
+  }
+}

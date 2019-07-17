@@ -1,0 +1,4 @@
+label: Enable
+settings:
+  on_label: 'On'
+  off_label: 'Off'

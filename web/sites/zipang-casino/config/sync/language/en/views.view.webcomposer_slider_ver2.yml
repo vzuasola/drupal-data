@@ -1,0 +1,48 @@
+label: 'Webcomposer Slider 2.0'
+display:
+  default:
+    display_title: Master
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Apply
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      fields:
+        name:
+          separator: ', '
+  page_1:
+    display_title: Page
+    display_options:
+      filters:
+        field_title_value:
+          expose:
+            label: Title
+      fields:
+        name:
+          separator: ', '
+        field_title:
+          label: Title
+          separator: ', '
+        field_post_banner_image:
+          label: 'Post Banner Image'
+          separator: ', '
+        field_publish_date:
+          label: 'Publish Date (optional)'
+          separator: ', '
+        field_unpublish_date:
+          label: 'Unpublish Date (optional)'
+          separator: ', '
+        draggableviews:
+          label: 'Webcomposer slider 2.0 entity'
+        operations:
+          label: 'Operations links'
+      empty:
+        area_text_custom:
+          content: 'No content available.'
+      menu:
+        title: Sorting
+  rest_export_1:
+    display_title: 'Slider 2.0'

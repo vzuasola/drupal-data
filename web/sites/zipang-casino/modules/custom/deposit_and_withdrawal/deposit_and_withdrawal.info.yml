@@ -1,0 +1,5 @@
+name: Deposit and Withdrawal
+type: module
+description: Description
+core: 8.x
+package: Zipang Withdraw and Deposit Method Configuration

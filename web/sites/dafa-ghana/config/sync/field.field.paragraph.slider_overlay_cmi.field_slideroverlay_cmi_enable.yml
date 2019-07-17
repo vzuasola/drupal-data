@@ -1,0 +1,23 @@
+uuid: c3dc35c3-40ee-4f04-ae79-4b4144c064f2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_slideroverlay_cmi_enable
+    - paragraphs.paragraphs_type.slider_overlay_cmi
+id: paragraph.slider_overlay_cmi.field_slideroverlay_cmi_enable
+field_name: field_slideroverlay_cmi_enable
+entity_type: paragraph
+bundle: slider_overlay_cmi
+label: Enable
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

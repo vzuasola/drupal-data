@@ -48,6 +48,7 @@ class GeneralConfiguration extends FormBase {
     $this->logConfig($form);
     $this->trackingConfig($form);
     $this->tripwirePopupConfig($form);
+    $this->textOverBannerConfig($form);
 
     return $form;
   }
@@ -68,15 +69,6 @@ class GeneralConfiguration extends FormBase {
       '#title' => $this->t('Step one text'),
       '#description' => $this->t('Text that will be displayed at the top of the form'),
       '#default_value' => $this->get('step_one_text'),
-      '#required' => TRUE,
-      '#translatable' => TRUE,
-    ];
-
-    $form['general']['step_two_text'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Step two text'),
-      '#description' => $this->t('Text that will be displayed at the top of step 2 banner'),
-      '#default_value' => $this->get('step_two_text'),
       '#required' => TRUE,
       '#translatable' => TRUE,
     ];
@@ -141,7 +133,6 @@ class GeneralConfiguration extends FormBase {
       '#default_value' => $this->get('registraton_api_url'),
       '#required' => TRUE,
     ];
-
     $form['integration']['registraton_portal_id_to_product_name'] = [
       '#type' => 'textarea',
       '#title' => $this->t('Registration Portal ID mapping to product name'),
@@ -190,6 +181,42 @@ class GeneralConfiguration extends FormBase {
         'if unchecked'),
       '#default_value' => $this->get('enable_futurama_authentication_casino'),
     ];
+    $form['integration']['enable_futurama_native_app'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable Futarama Native App authentication'),
+      '#description' => $this->t('This will enable futurama authentication for Native App and will use that legacy ' .
+        'if unchecked'),
+      '#default_value' => $this->get('enable_futurama_native_app'),
+    ];
+    $form['integration']['enable_futurama_poker_native_app_back'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable back button in Poker Native App'),
+      '#description' => $this->t('If checked, back button will be visible to the player.' .
+        'if unchecked'),
+      '#default_value' => $this->get('enable_futurama_poker_native_app_back'),
+    ];
+    $form['integration']['enable_futurama_authentication_poker_native_app'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable Futarama Poker Native App authentication'),
+      '#description' => $this->t('This will enable futurama authentication for Poker Native App and will use that legacy ' .
+        'if unchecked'),
+      '#default_value' => $this->get('enable_futurama_authentication_poker_native_app'),
+    ];
+    $form['integration']['ow_native_autologin_url'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('One Works Native App Autologin URL'),
+      '#description' => $this->t('URL where we redirect the user for autologin after successful registration'),
+      '#default_value' => $this->get('ow_native_autologin_url'),
+      '#required' => TRUE,
+      '#translatable' => TRUE,
+    ];
+    $form['integration']['cashier_url_native'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Native App Cashier URL'),
+      '#description' => $this->t('This URL will be used if the native app needs a banking URL'),
+      '#default_value' => $this->get('cashier_url_native'),
+      '#required' => TRUE,
+    ];
   }
 
   /**
@@ -233,6 +260,22 @@ class GeneralConfiguration extends FormBase {
         'you can use the "[product]" as a placeholder to specify the product he is ' .
         'restricted to.'),
       '#default_value' => $this->get('country_restriction_message'),
+      '#required' => TRUE,
+      '#translatable' => TRUE,
+    ];
+
+    $form['restriction']['mbtc_product_portal_id'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Product Portal ID'),
+      '#description' => $this->t('Portal ID of Product that support mBTC currency.'),
+      '#default_value' => $this->get('mbtc_product_portal_id'),
+      '#required' => TRUE,
+    ];
+
+    $form['restriction']['mbtc_restriction_message'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Currency Restriction Message'),
+      '#default_value' => $this->get('mbtc_restriction_message'),
       '#required' => TRUE,
       '#translatable' => TRUE,
     ];
@@ -478,27 +521,64 @@ class GeneralConfiguration extends FormBase {
       '#collapsible' => TRUE,
       '#group' => 'general_settings_tab',
     ];
-    $form['tripwire_popup']['enable_tripwire_popup'] = [
-      '#type' => 'checkbox',
-      '#title' => $this->t('Enable Tripwire Popup'),
-      '#description' => $this->t('Check to enable tripwire popup'),
-      '#default_value' => $this->get('enable_tripwire_popup'),
-      '#translatable' => TRUE,
-    ];
     $form['tripwire_popup']['tripwire_popup_show_limit'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Show Limit'),
       '#description' => $this->t('Number of times popup will show'),
       '#default_value' => $this->get('tripwire_popup_show_limit') ?? 2,
-      '#translatable' => FALSE,
     ];
-    $content = $this->get('tripwire_popup_content');
-    $form['tripwire_popup']['tripwire_popup_content'] = [
+    $form['tripwire_popup']['tripwire_popup_show_delay'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Show Delay'),
+      '#description' => $this->t('Delay before popup will show in milliseconds'),
+      '#default_value' => $this->get('tripwire_popup_show_delay') ?? 3000,
+    ];
+  }
+
+  /**
+   * Text Over Banner Configuration
+   */
+  private function textOverBannerConfig(array &$form) {
+    $form['text_over_banner'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Text Over Banner'),
+      '#collapsible' => TRUE,
+      '#group' => 'general_settings_tab',
+    ];
+    $mobile = $this->get('text_over_banner_mobile');
+    $form['text_over_banner']['text_over_banner_mobile'] = [
       '#type' => 'text_format',
-      '#title' => $this->t('Content'),
-      '#description' => $this->t("Message to be displayed inside pop-up."),
-      '#default_value' => $content['value'],
-      '#format' => $content['format'],
+      '#title' => $this->t('Mobile'),
+      '#description' => $this->t('Above content will display in mobile view.'),
+      '#default_value' => $mobile['value'],
+      '#format' => $mobile['format'],
+      '#translatable' => TRUE,
+    ];
+    $tablet = $this->get('text_over_banner_tablet');
+    $form['text_over_banner']['text_over_banner_tablet'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('<br><br> Tablet'),
+      '#description' => $this->t('Above content will display in tablet view.'),
+      '#default_value' => $tablet['value'],
+      '#format' => $tablet['format'],
+      '#translatable' => TRUE,
+    ];
+    $desktop_left = $this->get('text_over_banner_desktop_left');
+    $form['text_over_banner']['text_over_banner_desktop_left'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('<br><br> Desktop Left Side'),
+      '#description' => $this->t('Above content will display in desktop view on the left side.'),
+      '#default_value' => $desktop_left['value'],
+      '#format' => $desktop_left['format'],
+      '#translatable' => TRUE,
+    ];
+    $desktop_right = $this->get('text_over_banner_desktop_right');
+    $form['text_over_banner']['text_over_banner_desktop_right'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('<br><br> Desktop Right Side'),
+      '#description' => $this->t('Above content will display in desktop view on the right side.'),
+      '#default_value' => $desktop_right['value'],
+      '#format' => $desktop_right['format'],
       '#translatable' => TRUE,
     ];
   }

@@ -1,13 +1,13 @@
-step_one_text: Register
+step_one_text: 'Create account'
 step_two_text: Deposit
 _core:
   default_config_hash: e3hn0uvuv-BJxFFYiLi7_S3p1_xJVxeXLrChy6s_WYE
-registraton_api_url: /api/v1/registration
+registraton_api_url: 'https://tct-www.elysium-dfbt.com/api/v1/registration'
 registraton_portal_id_to_product_name: "2|entry\r\n3|sports\r\n4|casino\r\n5|poker\r\n6|live-dealer\r\n7|games\r\n66|exchange\r\n9|mobile-entrypage\r\n10|mobile-sports\r\n11|mobile-casino\r\n12|mobile-dafasports\r\n14|mobile-games\r\n15|mobile-live-dealer\r\n25|mobile-arcade\r\n67|mobile-exchange\r\n57|mobile-virtuals\r\n60|mobile-keno\r\n19|casino-gold\r\n22|dafa-sportsbook\r\n24|AG-fish-hunter\r\n55|keno\r\n56|virtuals"
 registraton_product_id_to_portal_id: "1|4,11,18,23\r\n2|5,12,17\r\n3|3,10\r\n4|6\r\n5|8"
 success_title: Success
 home_title: 'Start betting today with Dafabet! Sign up now!'
-registraton_portal_id_to_dafaconnect_portal_id: "2|27\r\n3|28\r\n4|30\r\n5|31\r\n6|33\r\n8|32\r\n9|46\r\n10|47\r\n11|49\r\n12|50\r\n14|51\r\n15|52\r\n19|35\r\n20|54\r\n22|29\r\n24|34\r\n25|53\r\n26|48\r\n55|45\r\n56|58\r\n57|59\r\n60|61\r\n66|68\r\n67|69"
+registraton_portal_id_to_dafaconnect_portal_id: "2|27|105|129\r\n3|28|106|130\r\n4|30|107|132\r\n5|31|108|133\r\n6|33|109|135\r\n8|32|110|134\r\n9|46|111|139\r\n10|47|112|140\r\n11|49|113|142\r\n12|50|114|143\r\n14|51|115|144\r\n15|52|116|145\r\n19|35|120|137\r\n20|54|121|147\r\n22|29|131|141\r\n24|34|125|136\r\n25|53|126|146\r\n26|48|128|141\r\n55|45|148|138\r\n56|58|149|151\r\n57|59|150|152\r\n60|61|153|154\r\n66|68|155|157\r\n67|69|156|158"
 portal_id_country_restriction: "4|25,49,250,220,54,62,105,174,184, 57\r\n5|25,49,250,220,54,62,105,174,184, 57\r\n8|25,49,250,220,54,62,105,174,184\r\n11|25,49,250,220,54,62,105,174,184, 57\r\n12|25,49,250,220,54,62,105,174,184, 57\r\n14|25,49,250,220,54,62,105,174,184\r\n16|25,49,250,220,54,62,105,174,184, 57\r\n17|25,49,250,220,54,62,105,174,184, 57\r\n18|25,49,250,220,54,62,105,174,184, 57\r\n19|25,49,250,220,54,62,105,174,184, 57\r\n20|25,49,250,220,54,62,105,174,184, 57\r\n21|25,49,250,220,54,62,105,174,184, 57\r\n22|8,3,9,19,37,20,25,39,76,80,104,120,130,124,128,148,134,133,135,186,197,185,194,220,226,29,62,97,105,129,184,43,142\r\n23|25,49,250,220,54,62,105,174,184, 57\r\n26|8,3,9,19,37,20,25,39,76,80,104,120,130,124,128,148,134,133,135,186,197,185,194,220,226,29,62,97,105,129,184,43,142\r\n29|8,3,9,19,37,20,25,39,76,80,104,120,130,124,128,148,134,133,135,186,197,185,194,220,226,29,62,97,105,129,184,43,142\r\n30|25,49,250,220,54,62,105,174,184, 57\r\n31|25,49,250,220,54,62,105,174,184, 57\r\n32|25,49,250,220,54,62,105,174,184\r\n35|25,49,250,220,54,62,105,174,184, 57\r\n45|90,109,91,223\r\n48|8,3,9,19,37,20,25,39,76,80,104,120,130,124,128,148,134,133,135,186,197,185,194,220,226,29,62,97,105,129,184,43,142\r\n49|25,49,250,220,54,62,105,174,184, 57\r\n50|25,49,250,220,54,62,105,174,184, 57\r\n51|25,49,250,220,54,62,105,174,184\r\n54|25,49,250,220,54,62,105,174,184, 57\r\n55|90,109,91,223\r\n56|237,223\r\n57|237,223\r\n58|237,223\r\n59|237,223\r\n66|5,18,8,60,3,11,7,12,13,9,17,16,15,19,33,26,21,37,38,28,29,34,31,247,20,36,35,32,101,229,327,112,47,39,52,119,41,206,46,48,1,2,49,114,42,40,45,50,44,93,51,54,57,56,58,59,61,63,202,85,64,62,66,69,71,68,67,77,170,240,73,82,76,55,79,80,86,81,75,84,87,78,83,89,90,94,241,226,92,91,95,104,96,97,99,105,107,109,106,108,120,110,113,117,118,111,121,130,122,127,126,131,124,128,129,139,137,151,153,150,140,148,145,146,149,236,152,134,133,142,135,147,132,154,141,155,164,163,161,250,156,166,160,157,159,165,158,162,167,178,168,171,181,169,176,174,182,183,184,186,187,242,243,115,123,136,175,227,234,197,201,188,198,185,190,196,249,195,194,189,199,237,244,191,200,245,204,192,43,203,209,219,208,211,207,210,214,216,213,212,205,217,221,220,4,224,223,225,232,228,231,233,246,235,238,239\r\n67|5,18,8,60,3,11,7,12,13,9,17,16,15,19,33,26,21,37,38,28,29,34,31,247,20,36,35,32,101,229,327,112,47,39,52,119,41,206,46,48,1,2,49,114,42,40,45,50,44,93,51,54,57,56,58,59,61,63,202,85,64,62,66,69,71,68,67,77,170,240,73,82,76,55,79,80,86,81,75,84,87,78,83,89,90,94,241,226,92,91,95,104,96,97,99,105,107,109,106,108,120,110,113,117,118,111,121,130,122,127,126,131,124,128,129,139,137,151,153,150,140,148,145,146,149,236,152,134,133,142,135,147,132,154,141,155,164,163,161,250,156,166,160,157,159,165,158,162,167,178,168,171,181,169,176,174,182,183,184,186,187,242,243,115,123,136,175,227,234,197,201,188,198,185,190,196,249,195,194,189,199,237,244,191,200,245,204,192,43,203,209,219,208,211,207,210,214,216,213,212,205,217,221,220,4,224,223,225,232,228,231,233,246,235,238,239\r\n68|5,18,8,60,3,11,7,12,13,9,17,16,15,19,33,26,21,37,38,28,29,34,31,247,20,36,35,32,101,229,327,112,47,39,52,119,41,206,46,48,1,2,49,114,42,40,45,50,44,93,51,54,57,56,58,59,61,63,202,85,64,62,66,69,71,68,67,77,170,240,73,82,76,55,79,80,86,81,75,84,87,78,83,89,90,94,241,226,92,91,95,104,96,97,99,105,107,109,106,108,120,110,113,117,118,111,121,130,122,127,126,131,124,128,129,139,137,151,153,150,140,148,145,146,149,236,152,134,133,142,135,147,132,154,141,155,164,163,161,250,156,166,160,157,159,165,158,162,167,178,168,171,181,169,176,174,182,183,184,186,187,242,243,115,123,136,175,227,234,197,201,188,198,185,190,196,249,195,194,189,199,237,244,191,200,245,204,192,43,203,209,219,208,211,207,210,214,216,213,212,205,217,221,220,4,224,223,225,232,228,231,233,246,235,238,239\r\n69|5,18,8,60,3,11,7,12,13,9,17,16,15,19,33,26,21,37,38,28,29,34,31,247,20,36,35,32,101,229,327,112,47,39,52,119,41,206,46,48,1,2,49,114,42,40,45,50,44,93,51,54,57,56,58,59,61,63,202,85,64,62,66,69,71,68,67,77,170,240,73,82,76,55,79,80,86,81,75,84,87,78,83,89,90,94,241,226,92,91,95,104,96,97,99,105,107,109,106,108,120,110,113,117,118,111,121,130,122,127,126,131,124,128,129,139,137,151,153,150,140,148,145,146,149,236,152,134,133,142,135,147,132,154,141,155,164,163,161,250,156,166,160,157,159,165,158,162,167,178,168,171,181,169,176,174,182,183,184,186,187,242,243,115,123,136,175,227,234,197,201,188,198,185,190,196,249,195,194,189,199,237,244,191,200,245,204,192,43,203,209,219,208,211,207,210,214,216,213,212,205,217,221,220,4,224,223,225,232,228,231,233,246,235,238,239\r\n24|25,49,250,220,54,62,105,174,184\r\n34|25,49,250,220,54,62,105,174,184\r\n25|25,49,250,220,54,62,105,174,184\r\n53|25,49,250,220,54,62,105,174,184"
 geoip_to_default_currency_country: "CN|117,48\r\nTH|103,208\r\nID|111,96\r\nVN|105,231\r\nMY|102,153\r\nIN|112,100\r\nKR|104,117\r\nGR|1,86\r\nJP|2,109\r\nBR|119,32"
 generic_error_message: 'Account registration failed. Please contact our <a href="mailto:ensupport@dafabet.com">Customer Support</a> for assistance.'
@@ -30,7 +30,7 @@ payment_method_headers: 'Payment Options|Description|Min/Max| '
 livechat_kr_link: 'https://z3.liveper.sn/api/account/51941735/route/campaign/643555051/engagement/698050251'
 deposit_now_text: ''
 enable_rs_logging: 1
-native_app_title: ''
+native_app_title: 'Create account'
 mobile_native_app_command: 'htcmd://command?message='
 enable_proactive_mobile: '1'
 proactive_mobile_class: proactive-wechat-my
@@ -40,9 +40,30 @@ proactive_mobile_url_playstore: 'https://play.google.com/store/apps/details?id=c
 proactive_mobile_url_ios_appstore: 'https://itunes.apple.com/app/wechat/id414478124?mt=8'
 proactive_mobile_timeout: '90'
 s2s_config: "https://serving.dfnb-ads.com/servlet/track?clickid={advrtsrv_id}|advrtsrv_id\r\nhttps://track.buzz-track.com/pixel?adv_id=342&tx_id={advc_id}|advc_id"
-general_settings_tab__active_tab: edit-restriction
+general_settings_tab__active_tab: edit-integration
 value: null
 format: null
 enable_reg_relic_custom_headers: 0
 enable_futurama_authentication_poker: 1
-enable_futurama_authentication_casino: 0
+enable_futurama_authentication_casino: 1
+enable_futurama_native_app: 1
+enable_tripwire_popup: 0
+tripwire_popup_show_limit: '2'
+tripwire_popup_show_delay: '5000'
+tripwire_popup_content:
+  value: "<p class=\"text-red text-semibold text-20\">Wait! Before you go....</p>\r\n\r\n<p class=\"text-20 mb-35 mt-20\">Don't you want to <span class=\"text-36 text-extrabold text-black\">GET 150% FIRST DEPOSIT BONUS </span> On your favorite sports?</p>\r\n\r\n<div class=\"flex\">\r\n<p class=\"text-extrabold text-black text-18 mb-0 mt-15\"><a class=\"cta-btn btn-yellow btn-small mr-10 yes-action\" href=\"#\" id=\"yes-action\">YES, I want to get the bonus!</a></p>\r\n\r\n<p class=\"text-12 text-dark-gray\"><a class=\"cta-btn btn-yellow btn-small mr-10 yes-action\" href=\"#\" id=\"yes-action\">(Continue registration)</a></p>\r\n\r\n<p class=\"text-extrabold text-gray text-18 mb-0 mt-15\"><a class=\"cta-btn btn-gray btn-small ml-10\" href=\"{domain:entry}\" id=\"no-action\">No Thanks, Maybe next time </a></p>\r\n\r\n<p class=\"text-12 text-dark-gray\"><a class=\"cta-btn btn-gray btn-small ml-10\" href=\"{domain:entry}\" id=\"no-action\">(Exit registration)</a></p>\r\n</div>\r\n"
+  format: basic_html
+ow_native_autologin_url: 'https://smartsbtest.dafabet.com/Deposit_processlogin.aspx?lang=en'
+cashier_url_native: '{domain:cashier_domain}/{domain:lang_token}?clientflag=1'
+text_over_banner_mobile:
+  value: ''
+  format: basic_html
+text_over_banner_tablet:
+  value: ''
+  format: basic_html
+text_over_banner_desktop_left:
+  value: ''
+  format: basic_html
+text_over_banner_desktop_right:
+  value: ''
+  format: basic_html

@@ -1,0 +1,17 @@
+uuid: 176f3cd9-7dd7-42f3-896d-1e4d97c38c7b
+langcode: en
+status: true
+dependencies:
+  module:
+    - serialization
+    - taxonomy
+    - user
+id: entity.taxonomy_vocabulary
+plugin_id: 'entity:taxonomy_vocabulary'
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+    supported_auth:
+      - cookie

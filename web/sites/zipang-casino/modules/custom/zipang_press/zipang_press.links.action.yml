@@ -1,0 +1,5 @@
+entity.zipang_press_entity.add_form:
+  route_name: entity.zipang_press_entity.add_form
+  title: 'Add Zipang press entity'
+  appears_on:
+    - entity.zipang_press_entity.collection

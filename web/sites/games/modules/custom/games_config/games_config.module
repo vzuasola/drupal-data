@@ -7,6 +7,7 @@
 
 use Drupal\Core\Routing\RouteMatchInterface;
 use Drupal\taxonomy\Entity\Term;
+use Drupal\Core\Form\FormStateInterface;
 
 /**
  * Implements hook_help().
@@ -32,6 +33,12 @@ function games_config_form_alter(&$form, $form_state, $form_id) {
         case 'node_game_edit_form':
             $submitAction = 'games_config_node_form_submit';
             break;
+        case 'taxonomy_term_game_subprovider_form':
+        case 'taxonomy_term_game_subprovider_form':
+        case 'node_games_2_0_form':
+        case 'node_games_2_0_edit_form':
+          $form['#validate'][] = 'games_config_validate';
+          break;
     }
     if ($submitAction !== false) {
         foreach (array_keys($form['actions']) as $action) {
@@ -81,3 +88,37 @@ function _games_config_taxonomy_vocabulary_load() {
     }
   }
 }
+
+/**
+ * Form validation for webcomposer_slider_v2 scheduler.
+ */
+function games_config_validate(&$form, FormStateInterface $form_state) {
+  $publish = $form_state->getValue('field_um_start');
+  $unpublish = $form_state->getValue('field_um_end');
+
+  if (is_array($publish[0]['value'])  || is_array($unpublish[0]['value'])) {
+    if (
+      $publish[0]['value']['time'] === "" ||
+      $publish[0]['value']['date'] === "" || 
+      $unpublish[0]['value']['time']  === "" || 
+      $unpublish[0]['value']['date']  === "") {
+      return;
+    }
+  }
+
+  $publishDate = isset($publish[0]['value']) ? $publish[0]['value']->format('U') : NULL;
+  $unpublishDate = isset($unpublish[0]['value']) ? $unpublish[0]['value']->format('U') : NULL;
+
+  if ($unpublishDate === null && $publishDate) {
+    $form_state->setErrorByName('field_unpublish_date', t('End date cannot be empty.'));
+  }
+
+  if ($publishDate === null && $unpublishDate) {
+    $form_state->setErrorByName('field_unpublish_date', t('Start date cannot be empty.'));
+  }
+
+  if ($unpublishDate && $unpublishDate < $publishDate) {
+    $form_state->setErrorByName('field_unpublish_date', t('Under maintenance end date should be greater than the start date.'));
+  }
+}
+

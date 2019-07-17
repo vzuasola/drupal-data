@@ -1,0 +1,23 @@
+uuid: 226a882f-63a1-4176-8fd8-2f200cfe6817
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_log_in_state
+    - node.type.promotion
+  module:
+    - options
+_core:
+  default_config_hash: GG7mdZfunFRfau6Pp5ty3_hd_l5MCQL-LPg36s5Xx94
+id: node.promotion.field_log_in_state
+field_name: field_log_in_state
+entity_type: node
+bundle: promotion
+label: 'Log-in State'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

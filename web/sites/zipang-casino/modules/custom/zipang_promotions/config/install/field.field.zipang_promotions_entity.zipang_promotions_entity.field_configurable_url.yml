@@ -1,0 +1,20 @@
+uuid: ff08d5ce-c2e9-484e-8b00-74d8e7766e1b
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.zipang_promotions_entity.field_configurable_url
+  module:
+    - zipang_promotions
+id: zipang_promotions_entity.zipang_promotions_entity.field_configurable_url
+field_name: field_configurable_url
+entity_type: zipang_promotions_entity
+bundle: zipang_promotions_entity
+label: 'Configurable URL'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

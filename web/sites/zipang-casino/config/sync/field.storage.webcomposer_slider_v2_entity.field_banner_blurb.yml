@@ -1,0 +1,19 @@
+uuid: 4ec3f17a-386f-4772-bfcc-4d74407a924c
+langcode: ja
+status: true
+dependencies:
+  module:
+    - text
+    - webcomposer_slider_v2
+id: webcomposer_slider_v2_entity.field_banner_blurb
+field_name: field_banner_blurb
+entity_type: webcomposer_slider_v2_entity
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

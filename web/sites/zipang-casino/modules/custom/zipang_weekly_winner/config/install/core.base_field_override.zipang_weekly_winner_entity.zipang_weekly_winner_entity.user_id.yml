@@ -1,0 +1,22 @@
+uuid: d9e97e81-cd59-4a81-a9ae-59b0609dc143
+langcode: ja
+status: true
+dependencies:
+  module:
+    - zipang_weekly_winner
+_core:
+  default_config_hash: VJsGRLhEs3OeOCEXo4UR1rzPjefvnmhK79s7t9VwH2k
+id: zipang_weekly_winner_entity.zipang_weekly_winner_entity.user_id
+field_name: user_id
+entity_type: zipang_weekly_winner_entity
+bundle: zipang_weekly_winner_entity
+label: 'Authored by'
+description: 'The user ID of author of the Zipang weekly winner entity entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

@@ -1,0 +1,20 @@
+uuid: 6e67120e-fad3-4a8c-901d-672bed6489f7
+langcode: ja
+status: true
+dependencies:
+  module:
+    - taxonomy
+    - zipang_press
+id: zipang_press_entity.field_press_year
+field_name: field_press_year
+entity_type: zipang_press_entity
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

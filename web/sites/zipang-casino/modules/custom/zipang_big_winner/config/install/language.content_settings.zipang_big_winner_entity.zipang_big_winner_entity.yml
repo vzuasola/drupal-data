@@ -1,0 +1,17 @@
+uuid: 588c6c57-9008-4864-b85c-43d58f8fd12a
+langcode: ja
+status: true
+dependencies:
+  module:
+    - content_translation
+    - zipang_big_winner
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: zipang_big_winner_entity.zipang_big_winner_entity
+target_entity_type_id: zipang_big_winner_entity
+target_bundle: zipang_big_winner_entity
+default_langcode: site_default
+language_alterable: true

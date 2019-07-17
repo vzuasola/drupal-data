@@ -1,0 +1,20 @@
+uuid: 5467a9be-43b0-420e-a720-9c39885e58eb
+langcode: ja
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.faq_category
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+_core:
+  default_config_hash: tIsG9VMDFQNvbTjDYCtlm2JnqPYXwI_PZR1xJG-rsQY
+id: taxonomy_term.faq_category
+target_entity_type_id: taxonomy_term
+target_bundle: faq_category
+default_langcode: site_default
+language_alterable: true

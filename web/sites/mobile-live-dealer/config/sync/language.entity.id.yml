@@ -1,0 +1,15 @@
+uuid: 91438369-b1e5-4d54-8c23-43a65fcb8aa4
+langcode: id
+status: true
+dependencies:
+  module:
+    - webcomposer_language_hierarchy
+third_party_settings:
+  webcomposer_language_hierarchy:
+    webcomposer_fallback_langcode: en
+    webcomposer_language_custom_label: 'Bahasa Indonesia'
+id: id
+label: 'Bahasa Indonesia'
+direction: ltr
+weight: -5
+locked: false

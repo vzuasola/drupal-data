@@ -1,0 +1,39 @@
+uuid: be1f4f86-a425-4404-b49d-370b3c72307a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.games.field_game_code
+    - field.field.node.games.field_game_provider
+    - field.field.node.games.field_game_ribbon
+    - field.field.node.games.field_maintenance_blurb
+    - field.field.node.games.field_maintenance_end_date
+    - field.field.node.games.field_maintenance_start_date
+    - field.field.node.games.field_preview_mode
+    - field.field.node.games.field_provider_logo
+    - field.field.node.games.field_target
+    - field.field.node.games.field_thumbnail_image
+    - node.type.games
+  module:
+    - user
+id: node.games.teaser
+targetEntityType: node
+bundle: games
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_game_code: true
+  field_game_provider: true
+  field_game_ribbon: true
+  field_maintenance_blurb: true
+  field_maintenance_end_date: true
+  field_maintenance_start_date: true
+  field_preview_mode: true
+  field_provider_logo: true
+  field_target: true
+  field_thumbnail_image: true
+  langcode: true

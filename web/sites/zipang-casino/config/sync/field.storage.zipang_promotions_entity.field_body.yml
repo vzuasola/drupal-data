@@ -1,0 +1,19 @@
+uuid: d31a6fcd-acad-43a3-977d-636c9080267d
+langcode: en
+status: true
+dependencies:
+  module:
+    - text
+    - zipang_promotions
+id: zipang_promotions_entity.field_body
+field_name: field_body
+entity_type: zipang_promotions_entity
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

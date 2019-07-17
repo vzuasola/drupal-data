@@ -1,0 +1,8 @@
+uuid: f9f19a0e-b83b-4b49-96a6-cf0f2f9ec516
+langcode: en
+status: true
+dependencies: {  }
+id: mobile-quicklinks-id
+label: 'Mobile Quicklinks ID'
+description: ''
+locked: false

@@ -16,3 +16,5 @@ games_filter: 0
 games_filter_message: 'Term @term already exists in vocabulary @vocabulary.'
 games_collection_type: 1
 games_collection_type_message: 'Term @term already exists in vocabulary @vocabulary.'
+games_subprovider: 1
+games_subprovider_message: 'Term @term already exists in vocabulary @vocabulary.'

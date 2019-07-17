@@ -68,6 +68,14 @@ class PlaytechProviderConfiguration extends FormBase {
       '#default_value' => $this->get('futurama_switch'),
     ];
 
+    $form['futurama_gold_switch'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable Gold Futurama'),
+      '#description' => $this->t('This will enable futurama features for gold.
+       This will disable the PAS login during player login and will transfer the logic on Game launch'),
+      '#default_value' => $this->get('futurama_gold_switch'),
+    ];
+
     $form['javascript_assets'] = [
       '#type' => 'textarea',
       '#title' => $this->t('Javascript Assets'),
@@ -121,12 +129,32 @@ class PlaytechProviderConfiguration extends FormBase {
       '#type' => 'textarea',
       '#title' => $this->t('Error Mapping'),
       '#description' => $this->t('Define error messages for corresponding PAS error codes<br/>
-          pattern: <strong>code|message</strong><br/>
+          pattern: <strong>code|message|custom_header_title</strong><br/>
           special codes: <br/>
-           - <i>all</i>: Generic handler '),
+           - <i>all</i>: Generic handler'),
       '#default_value' => $this->get('error_mapping'),
-      '#translatable' => true,
-      '#rows' => 10
+      '#rows' => 10,
+      '#translatable' => true
+    ];
+
+    $form['error_header_title_text'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Header title text'),
+      '#description' => $this->t('Default header title for the error.'),
+      '#default_value' => $this->get('error_header_title_text'),
+      '#translatable' => true
+    ];
+
+    $form['error_button'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Button text'),
+      '#description' => $this->t('Button Text and link.
+      <br/>Sample value: Ok|www.dafabet.com
+      <br/>Empty 2nd part of | or |#close will close the lightbox.
+      <br/>"|#reload" will reload the current page.
+      <br/>Leave empty for no button'),
+      '#default_value' => $this->get('error_button'),
+      '#translatable' => true
     ];
   }
 }

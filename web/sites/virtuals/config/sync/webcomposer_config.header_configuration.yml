@@ -13,7 +13,7 @@ profile_link: '/{domain:myaccount_domain}/{lang}/my-profile?title=headerPopup&wi
 profile_logout_text: Logout
 _core:
   default_config_hash: Ynx2hkfeSTtNe4GyBQ1t4lBkrV4wrazLGjX_M7Mk3mg
-lobby_page_title: 'Start placing your Virtual Sports Bets with Dafabet!'
+lobby_page_title: 'Start placing your bets on the virtual world of sports!'
 critical_announcement: '1'
 critical_announcement_content:
   value: "<p>Our Webchat will not be available on February 21 5:00-5:30AM GMT+8, as we upgrade our site in order to make your experience with us much better. You may contact us in our other communication channels-social media and downloadable client chat or you may send us an email. Thank you.</p>\r\n"
@@ -22,15 +22,15 @@ news_announcement: '0'
 news_announcement_content:
   value: "<p>test</p>\r\n"
   format: basic_html
-balance_label_mapping: "4|OW Sports\r\n6|Dafa Sports\r\n11|eSports\r\n10|Exchange\r\n1|Casino\r\n2|Casino Gold\r\n5|Common Wallet\r\n8|Opus Live Dealer\r\n7|AG Fish Hunter\r\n9|Opus Keno\r\n3|Poker"
+balance_label_mapping: "4|OW Sports\r\n6|Dafa Sports\r\n11|eSports\r\n10|Exchange\r\n1|Casino\r\n2|Casino Gold\r\n5|Common Wallet\r\n8|Opus Live Dealer\r\n7|AG Fish Hunter\r\n3|Poker"
 balance_error_text_product: N/A
 balance_toggle: 1
 product_balance_label: 'Live Dealer, Games, & Virtuals'
 total_balance_label: 'Total Balance '
 product_balance_id: '5'
-currency_balance_mapping: "9|RMB,MYR,THB,KRW,VND,USD,IDR,INR,EUR\r\n7|RMB\r\n8|RMB,MYR,THB,KRW,VND,USD,IDR,INR,EUR\r\n10|INR"
+currency_balance_mapping: "4|RMB,USD,EUR,GBP,MYR,THB,VND,IDR,INR,KRW,RUB,PLN\r\n6|RMB,USD,EUR,GBP,MYR,THB,VND,IDR,INR,KRW,RUB,PLN,BRL,MXN,CLP,COP,PEN,ARS,VES\r\n11|RMB,USD,EUR,GBP,MYR,THB,VND,IDR,INR,KRW,RUB,PLN\r\n10|INR\r\n1|RMB,USD,EUR,GBP,MYR,THB,VND,IDR,INR,KRW,RUB,PLN,BRL,MXN,CLP,COP,PEN,ARS,VES\r\n2|RMB,USD,EUR,GBP,MYR,THB,VND,IDR,INR,KRW,RUB,PLN,BRL,MXN,CLP,COP,PEN,ARS,VES\r\n8|RMB,MYR,THB,KRW,VND,USD,IDR,INR,EUR\r\n3|RMB,USD,EUR,GBP,MYR,THB,VND,IDR,INR,KRW,RUB,PLN\r\n7|RMB"
 excluded_balance_mapping: '7'
-cashier_link: '{domain:cashier_domain}/{lang}?ticket={auth.token}&product=virtuals&title=headerPopup&width=820&height=820'
+cashier_link: '{cashier}[query:(ticket={auth.token}&product=56&width=820&height=820})]'
 balance_mapping: '5|Common Wallet'
 balance_label_override: '综合钱包 '
 logo_title: 'Virtual Sports Betting at Dafabet'
@@ -40,7 +40,10 @@ capslock_notification: 'Caps Lock is on'
 header_settings_tab__active_tab: edit-join-now-group
 value: null
 format: null
-promotion_page_title: Promotions
+promotion_page_title: 'Start placing your Virtual Sports Bets with Dafabet!'
 registration_link: '/{domain:entry}/{lang}/join/virtual-sports[query:(regvia=56&{tracking})]'
 default_cashier_link: '{domain:cashier_domain}/{domain:lang_token}/payment-options[query:(ticket={auth.token}&{tracking}&width=820&height=820)]'
 cashier_mapping: null
+default_mcashier_link: '{domain:cashier_domain}/{lang}?ticket={auth.token}&product=virtuals&title=headerPopup&width=820&height=820'
+mcashier_mapping: ''
+links_title: '#'

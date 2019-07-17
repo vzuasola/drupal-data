@@ -1,0 +1,20 @@
+uuid: f103be90-68bb-4cf6-a81c-56e945a57e9c
+langcode: ja
+status: true
+dependencies:
+  module:
+    - taxonomy
+    - zipang_fair_gaming
+id: zipang_fair_gaming_entity.field_fair_gaming_year_category
+field_name: field_fair_gaming_year_category
+entity_type: zipang_fair_gaming_entity
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,23 @@
+uuid: d59bb496-d1f5-4df0-a41d-26fb83766bec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.registration_theme_entity.field_registration_form
+  module:
+    - options
+    - registration_theme
+id: registration_theme_entity.registration_theme_entity.field_registration_form
+field_name: field_registration_form
+entity_type: registration_theme_entity
+bundle: registration_theme_entity
+label: Form
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: registration_form
+default_value_callback: ''
+settings: {  }
+field_type: list_string

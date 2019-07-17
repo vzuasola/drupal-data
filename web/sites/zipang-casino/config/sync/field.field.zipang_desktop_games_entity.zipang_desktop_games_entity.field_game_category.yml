@@ -1,0 +1,32 @@
+uuid: ff9f8ee0-7507-45dc-9740-9a3e95397c9b
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.zipang_desktop_games_entity.field_game_category
+    - taxonomy.vocabulary.desktop_game_category
+  module:
+    - zipang_desktop_games
+_core:
+  default_config_hash: k81yo95GV9zexXA5sTcbUqvhAhXA6LimmhlFZyyxAcM
+id: zipang_desktop_games_entity.zipang_desktop_games_entity.field_game_category
+field_name: field_game_category
+entity_type: zipang_desktop_games_entity
+bundle: zipang_desktop_games_entity
+label: 'Game Category'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      desktop_game_category: desktop_game_category
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

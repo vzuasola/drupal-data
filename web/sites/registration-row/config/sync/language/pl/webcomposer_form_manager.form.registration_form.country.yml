@@ -1,0 +1,40 @@
+field_settings:
+  label: Kraj
+  placeholder: Kraj
+  choices: "5|Afganistan\r\n18|Wyspy Alandzkie\r\n8|Albania\r\n60|Algeria\r\n3|Andora\r\n11|Angola\r\n7|Anguilla\r\n12|Antarktyda\r\n13|Argentyna\r\n9|Armenia\r\n17|Aruba\r\n15|Austria\r\n19|Azerbejdżan\r\n33|Bahamy\r\n26|Bahrajn\r\n22|Bangladesz\r\n21|Barbados\r\n37|Białoruś\r\n38|Belize\r\n28|Benin\r\n29|Bermudy\r\n34|Bhutan\r\n31|Boliwia\r\n247|Bonaire Saint Eustatius i Saba\r\n20|Bośnia i Hercegowina\r\n36|Botswana\r\n35|Wyspa Bouveta\r\n32|Brazylia\r\n101|Brytyjskie Terytorium Oceanu Indyjskiego\r\n229|Brytyjskie Wyspy Dziewicze\r\n30|Brunei Darussalam\r\n25|Bulgaria\r\n24|Burkina Faso\r\n27|Burundi\r\n112|Kambodża\r\n47|Kamerun\r\n39|Kanada\r\n52|Republika Zielonego Przylądka\r\n119|Kajmany\r\n41|Republika Środkowoafrykańska\r\n206|Czad\r\n46|Chile\r\n48|Chiny\r\n1|Wyspa Bożego Narodzenia\r\n2|Wyspy Kokosowe\r\n49|Kolumbia\r\n114|Komory\r\n42|Kongo\r\n40|Demokratyczna Republika Konga\r\n45|Wyspy Cooka\r\n50|Kostaryka\r\n44|Republika Wybrzeża Kości Słoniowej\r\n93|Chorwacja\r\n51|Kuba\r\n54|Czechy\r\n57|Dania\r\n56|Dzibuti\r\n58|Dominikana\r\n59|Republika Dominikańska\r\n61|Ekwador\r\n63|Egipt\r\n202|Salwador\r\n85|Gwinea Równikowa\r\n64|Erytrea\r\n62|Estonia\r\n66|Etiopia\r\n69|Falklandy\r\n71|Wyspy Owcze\r\n68|Fidzi\r\n67|Findlandia\r\n77|Gujana Francuska\r\n170|Polinezja Francuska\r\n240|Francuskie Terytoria Południowe\r\n73|Gabon\r\n82|Gambia\r\n76|Gruzja\r\n79|Ghana\r\n80|Giblartar\r\n86|Grecja\r\n81|Grenlandia\r\n75|Grenada\r\n84|Gwadelupa\r\n87|Gwatemala\r\n78|Guernsey\r\n83|Gwinea \r\n89|Gwinea-Bissau\r\n90|Gujana \r\n94|Haiti\r\n241|Wyspa Heard oraz Wyspa McDonald\r\n226|Stolica Apostolska (Watykan)\r\n92|Honduras\r\n95|Węgry\r\n104|Islandia\r\n100|Indie\r\n96|Indonezja\r\n99|Isle of Man\r\n105|Włochy\r\n107|Jamajka\r\n109|Japonia\r\n106|Jersey\r\n108|Jordan\r\n120|Kazachstan\r\n110|Kenia\r\n113|Kiribati\r\n117|Republika Koreańska\r\n118|Kuwejt\r\n111|Kirgistan\r\n121|Laotańska Republika Ludowo-Demokratyczna\r\n130|Łotwa\r\n122|Liban\r\n127|Lesoto\r\n126|Liberia\r\n131|Libia\r\n124|Liechtenstein\r\n128|Litwa\r\n129|Luksemburg\r\n139|Macedonia\r\n137|Madagaskar\r\n151|Malawi\r\n153|Malezja\r\n150|Malediwy\r\n140|Mali\r\n148|Malta\r\n145|Martynika\r\n146|Mauretania\r\n149|Mauritius\r\n236|Majotta\r\n152|Meksyk\r\n134|Republika Mołdawi\r\n133|Monako\r\n142|Mongolia\r\n135|Czarnogóra\r\n147|Montserrat\r\n132|Maroko\r\n154|Mozambik\r\n141|Mjanma\r\n155|Namibia\r\n164|Nauru\r\n163|Nepal\r\n161|Holandia\r\n250|Antyle Holenderskie\r\n156|Nowa Kaledonia\r\n166|Nowa Zelandia\r\n160|Nikaragua\r\n157|Niger\r\n159|Nigeria\r\n165|Niue\r\n158|Wyspan Norfolk\r\n162|Norwegia\r\n167|Oman\r\n173|Pakistan\r\n178|Palestyna\r\n168|Panama\r\n171|Papua Nowa Gwinea\r\n181|Paragwaj\r\n169|Peru\r\n176|Pitcairn\r\n174|Polska\r\n182|Katar\r\n183|Reunion\r\n184|Rumunia\r\n186|Federacja Rosyjska\r\n187|Rwanda\r\n242|Saint Barthelemy\r\n243|Wyspan Świętej Heleny, Wyspa Wniebowzięcia i Tristan da Cunha\r\n115|Saint Kitts and Nevis\r\n123|Saint Lucia\r\n136|Saint Martin\r\n175|Saint Pierre and Miquelon\r\n227|Saint Vincent i Grenadyny\r\n234|Samoa\r\n197|San Marino\r\n201|Wyspy Świętego Tomasza i Książeca\r\n188|Arabia Saudyjska\r\n198|Senegal\r\n185|Serbia\r\n190|Seszele\r\n196|Sierra Leone\r\n249|Sint Maarten (Terytorium Holandii)\r\n195|Słowacja\r\n194|Słowenia\r\n189|Wyspy Salomona\r\n199|Somalia\r\n237|Afryka Południowa\r\n244|Giorgia Południowa i Sandwich Południowy\r\n125|Sri Lanka\r\n191|Sudan\r\n200|Surinam\r\n245|Svalbard i Jan Mayen\r\n204|Suazi\r\n192|Szwecja\r\n203|Syryjska Republika Arabska\r\n209|Tadżykistan\r\n219|Zjednoczona Republika Tanzani\r\n208|Tajlandia\r\n211|Timor Wschodni\r\n207|Togo\r\n210|Tokelau\r\n214|Tonga\r\n216|Trinidad i Tobago\r\n213|Tunezja\r\n212|Turkmenistan\r\n205|Wyspy Turks i Caicos \r\n217|Tuvalu\r\n221|Uganda\r\n220|Ukrajina\r\n4|Zjednoczone Emiraty Arabskie\r\n224|Urugwaj\r\n225|Uzbekistan\r\n232|Vanuatu\r\n228|Wenezuela\r\n231|Wietnam\r\n233|Wallis i Futuna\r\n246|Sahara Zachodnia\r\n235|Jemen\r\n238|Zambia\r\n239|Zimbabwe"
+  top_choices: "48\r\n96\r\n109\r\n117\r\n153\r\n208\r\n231"
+field_validations:
+  required:
+    error_message: 'Wybierz kraj, w którym obecnie przebywasz.'
+  alpha:
+    error_message: 'Field should be Alphabet characters only'
+  alphanumeric:
+    error_message: 'Field should be alphanumeric'
+  alpha_multi:
+    error_message: 'Value is not a valid multilingual character'
+  numeric:
+    error_message: 'Field should be numeric'
+  no_symbols:
+    error_message: 'Field contains invalid special characters'
+  numeric_symbols:
+    error_message: 'Field contains invalid special characters'
+  email:
+    error_message: 'Field does not contain a valid email address'
+  min_length:
+    error_message: 'Minimum requirement not met'
+  max_length:
+    error_message: 'Maximum requirement not met'
+  regex:
+    error_message: 'This field only accepts specific characters.'
+  valid_date:
+    error_message: 'Date is invalid'
+  username_availability:
+    error_message: 'Username not available'
+  email_availability:
+    error_message: 'Email not available'
+  invalid_words:
+    error_message: 'Invalid/not allowed characters'
+  valid_languages:
+    error_message: 'This field only accepts specific characters.'
+  not_match_username:
+    error_message: 'Password should not equal to username'
