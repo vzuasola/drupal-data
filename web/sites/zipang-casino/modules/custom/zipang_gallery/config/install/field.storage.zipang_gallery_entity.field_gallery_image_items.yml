@@ -1,0 +1,21 @@
+uuid: 54e787b2-eeff-4ee4-96d7-bdae8afb8e75
+langcode: ja
+status: true
+dependencies:
+  module:
+    - entity_reference_revisions
+    - paragraphs
+    - zipang_gallery
+id: zipang_gallery_entity.field_gallery_image_items
+field_name: field_gallery_image_items
+entity_type: zipang_gallery_entity
+type: entity_reference_revisions
+settings:
+  target_type: paragraph
+module: entity_reference_revisions
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

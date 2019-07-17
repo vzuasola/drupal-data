@@ -1,0 +1,19 @@
+uuid: 33274e5b-dc9d-40f0-9891-e6cf9ffddb55
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_link_url
+    - paragraphs.paragraphs_type.gallery_images
+id: paragraph.gallery_images.field_link_url
+field_name: field_link_url
+entity_type: paragraph
+bundle: gallery_images
+label: 'Link URL'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

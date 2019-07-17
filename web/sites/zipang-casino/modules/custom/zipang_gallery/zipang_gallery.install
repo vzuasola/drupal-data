@@ -1,0 +1,29 @@
+<?php
+/**
+ * Implements hook_uninstall
+ */
+function zipang_gallery_uninstall() {
+  $keys = [
+    'core.base_field_override.zipang_gallery_entity.zipang_gallery_entity.metatag',
+    'core.entity_form_display.paragraph.gallery_images.default',
+    'core.entity_form_display.zipang_gallery_entity.zipang_gallery_entity.default',
+    'core.entity_view_display.paragraph.gallery_images.default',
+    'core.entity_view_display.zipang_gallery_entity.zipang_gallery_entity.default',
+    'field.field.paragraph.gallery_images.field_image',
+    'field.field.paragraph.gallery_images.field_link_url',
+    'field.field.zipang_gallery_entity.zipang_gallery_entity.field_gallery_cover_image',
+    'field.field.zipang_gallery_entity.zipang_gallery_entity.field_gallery_image_items',
+    'field.field.zipang_gallery_entity.zipang_gallery_entity.field_title',
+    'field.storage.zipang_gallery_entity.field_gallery_cover_image',
+    'field.storage.zipang_gallery_entity.field_gallery_image_items',
+    'field.storage.zipang_gallery_entity.field_title',
+    'language.content_settings.zipang_gallery_entity.zipang_gallery_entity',
+    'paragraphs.paragraphs_type.gallery_images',
+    'views.view.gallery_zipang_gallery_entity_',
+    'zipang_config.gallery_page_configuration',
+  ];
+
+  foreach ($keys as $key) {
+    \Drupal::configFactory()->getEditable($key)->delete();
+  }
+}

@@ -1,0 +1,55 @@
+uuid: 6dc672b8-f01e-4bf2-bb9b-a0ca7a80aded
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.field.zipang_gallery_entity.zipang_gallery_entity.field_gallery_cover_image
+    - field.field.zipang_gallery_entity.zipang_gallery_entity.field_gallery_image_items
+    - field.field.zipang_gallery_entity.zipang_gallery_entity.field_title
+    - image.style.thumbnail
+  module:
+    - image
+    - paragraphs
+    - zipang_gallery
+id: zipang_gallery_entity.zipang_gallery_entity.default
+targetEntityType: zipang_gallery_entity
+bundle: zipang_gallery_entity
+mode: default
+content:
+  field_gallery_cover_image:
+    weight: 1
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_gallery_image_items:
+    type: entity_reference_paragraphs
+    weight: 2
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  translation:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true
+  name: true
+  user_id: true

@@ -1,0 +1,19 @@
+add zipang gallery entity entities:
+  title: 'Create new Zipang gallery entity entities'
+
+administer zipang gallery entity entities:
+  title: 'Administer Zipang gallery entity entities'
+  description: 'Allow to access the administration form to configure Zipang gallery entity entities.'
+  restrict access: true
+
+delete zipang gallery entity entities:
+  title: 'Delete Zipang gallery entity entities'
+
+edit zipang gallery entity entities:
+  title: 'Edit Zipang gallery entity entities'
+
+view published zipang gallery entity entities:
+  title: 'View published Zipang gallery entity entities'
+
+view unpublished zipang gallery entity entities:
+  title: 'View unpublished Zipang gallery entity entities'

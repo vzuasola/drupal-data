@@ -1,0 +1,63 @@
+uuid: d2b888f8-271e-440c-bbaf-0b397fe6eb12
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.zipang_gallery_entity.field_gallery_image_items
+    - paragraphs.paragraphs_type.gallery_images
+  module:
+    - entity_reference_revisions
+    - zipang_gallery
+id: zipang_gallery_entity.zipang_gallery_entity.field_gallery_image_items
+field_name: field_gallery_image_items
+entity_type: zipang_gallery_entity
+bundle: zipang_gallery_entity
+label: 'Gallery Image Items'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      gallery_images: gallery_images
+    target_bundles_drag_drop:
+      domain_management_configuration:
+        weight: 12
+        enabled: false
+      gallery_images:
+        enabled: true
+        weight: 13
+      dropdown_menu_item:
+        weight: 13
+        enabled: false
+      floating_banner_item:
+        weight: 14
+        enabled: false
+      metatag:
+        weight: 15
+        enabled: false
+      press_images:
+        weight: 16
+        enabled: false
+      right_side_block_content:
+        weight: 17
+        enabled: false
+      slider_overlay_cmi:
+        weight: 18
+        enabled: false
+      social_media:
+        weight: 19
+        enabled: false
+      social_media_cmi:
+        weight: 20
+        enabled: false
+      sponsorship:
+        weight: 21
+        enabled: false
+      sponsor_cmi:
+        weight: 22
+        enabled: false
+field_type: entity_reference_revisions

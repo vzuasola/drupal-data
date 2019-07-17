@@ -1,0 +1,7 @@
+uuid: 0333b9f7-a267-4e71-b404-7eade270b0e0
+langcode: ja
+status: true
+dependencies: {  }
+id: gallery_images
+label: 'Gallery Images'
+behavior_plugins: {  }

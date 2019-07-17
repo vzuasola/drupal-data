@@ -1,0 +1,18 @@
+zipang_gallery.list:
+  title: 'Zipang Gallery Configuration'
+  description: 'List of Zipang Gallery Entities'
+  parent: system.admin_config
+  route_name: zipang_gallery.admin_settings
+
+# Zipang Gallery entity menu items definition
+entity.zipang_gallery_entity.collection:
+  title: 'Zipang Gallery entity list'
+  route_name: entity.zipang_gallery_entity.collection
+  description: 'List Zipang Gallery entity entities'
+  parent: zipang_gallery.list
+
+zipang_gallery.admin.structure.settings:
+  title: Zipang Gallery entity settings
+  description: 'Configure Zipang Gallery entity entities'
+  route_name: zipang_gallery_entity.settings
+  parent: zipang_gallery.list
