@@ -209,6 +209,7 @@ display:
         filters: false
         filter_groups: false
         sorts: false
+        pager: false
       row:
         type: fields
         options: {  }
@@ -566,13 +567,16 @@ display:
           entity_type: zipang_press_entity
           entity_field: created
           plugin_id: date
+      pager:
+        type: none
+        options:
+          offset: 0
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
-        - url.query_args
         - user
       tags:
         - 'config:field.storage.zipang_press_entity.field_press_month'
