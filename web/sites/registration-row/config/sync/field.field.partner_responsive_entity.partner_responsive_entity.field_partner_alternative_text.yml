@@ -1,0 +1,20 @@
+uuid: 878b3ff8-eed0-4059-a3c6-ac64dc43b39f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.partner_responsive_entity.field_partner_alternative_text
+  module:
+    - webcomposer_partner_responsive
+id: partner_responsive_entity.partner_responsive_entity.field_partner_alternative_text
+field_name: field_partner_alternative_text
+entity_type: partner_responsive_entity
+bundle: partner_responsive_entity
+label: 'Alternative Text'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

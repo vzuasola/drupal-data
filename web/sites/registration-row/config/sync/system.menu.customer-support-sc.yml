@@ -1,0 +1,8 @@
+uuid: 49207d8f-dbe3-43e0-a2e0-f0df9051050e
+langcode: en
+status: true
+dependencies: {  }
+id: customer-support-sc
+label: 'Customer Support SC'
+description: ''
+locked: false

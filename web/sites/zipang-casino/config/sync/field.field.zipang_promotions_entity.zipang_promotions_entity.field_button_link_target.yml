@@ -1,0 +1,21 @@
+uuid: 3796f010-0000-4816-a979-dcf07c7de864
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.zipang_promotions_entity.field_button_link_target
+  module:
+    - options
+    - zipang_promotions
+id: zipang_promotions_entity.zipang_promotions_entity.field_button_link_target
+field_name: field_button_link_target
+entity_type: zipang_promotions_entity
+bundle: zipang_promotions_entity
+label: 'Button Link Target'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,21 @@
+uuid: 1a4132a2-8a69-4d93-b3ce-30f47f1308a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_um_start
+    - node.type.games_2_0
+  module:
+    - datetime
+id: node.games_2_0.field_um_start
+field_name: field_um_start
+entity_type: node
+bundle: games_2_0
+label: 'Under Maintenance Start'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

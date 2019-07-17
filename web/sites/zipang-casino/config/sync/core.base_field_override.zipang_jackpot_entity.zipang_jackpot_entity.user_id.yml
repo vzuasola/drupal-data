@@ -1,0 +1,22 @@
+uuid: 2eae4f23-e2bb-43a0-bb8c-433a13ce9452
+langcode: ja
+status: true
+dependencies:
+  module:
+    - zipang_jackpot
+_core:
+  default_config_hash: HsS1MYPYYcXOWaCD8_uvv6GclDIGIjL8u_SKTMMn3nw
+id: zipang_jackpot_entity.zipang_jackpot_entity.user_id
+field_name: user_id
+entity_type: zipang_jackpot_entity
+bundle: zipang_jackpot_entity
+label: 'Authored by'
+description: 'The user ID of author of the Zipang jackpot entity entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

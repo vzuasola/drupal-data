@@ -1,0 +1,12 @@
+registration_theme.registration_theme_entity.*:
+  type: config_entity
+  label: 'Registration Theme config'
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    label:
+      type: label
+      label: 'Label'
+    uuid:
+      type: string

@@ -1,0 +1,15 @@
+uuid: d6491ad1-9334-4eef-91f6-f6378b5c025c
+langcode: zh-hans
+status: true
+dependencies:
+  module:
+    - webcomposer_language_hierarchy
+third_party_settings:
+  webcomposer_language_hierarchy:
+    webcomposer_fallback_langcode: ''
+    webcomposer_language_custom_label: 简体中文
+id: zh-hans
+label: 'Simplified Chinese'
+direction: ltr
+weight: -8
+locked: false

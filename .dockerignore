@@ -1,0 +1,8 @@
+drush/contrib
+vendor
+web/core
+/logs/*
+!/logs/.gitkeep
+web/sites/*/files/*
+!web/sites/*/files/.htaccess
+.composer-cache

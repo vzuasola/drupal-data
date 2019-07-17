@@ -1,0 +1,39 @@
+field_settings:
+  label: 'Email Address'
+  placeholder: 'Email Address'
+  annotation: "Please enter a valid email address to receive latest promotions, updates and exclusive offers.\r\n"
+field_validations:
+  required:
+    error_message: "This field is required.\r\n"
+  alpha:
+    error_message: 'Field should be Alphabet characters only'
+  alphanumeric:
+    error_message: 'Field should be alphanumeric'
+  alpha_multi:
+    error_message: 'Value is not a valid multilingual character'
+  numeric:
+    error_message: 'Field should be numeric'
+  no_symbols:
+    error_message: 'Field contains invalid special characters'
+  numeric_symbols:
+    error_message: 'Field contains invalid special characters'
+  email:
+    error_message: "Please enter a valid email address. (e.g. name@domain.com)\r\n"
+  min_length:
+    error_message: "Please enter a valid email address. (e.g. name@domain.com)\r\n"
+  max_length:
+    error_message: "Please enter a valid email address. (e.g. name@domain.com)\r\n"
+  regex:
+    error_message: 'This field only accepts specific characters.'
+  valid_date:
+    error_message: 'Date is invalid'
+  username_availability:
+    error_message: 'Username not available'
+  email_availability:
+    error_message: "<span class=\"visible-desktop\">Email is already in use. Click <a href=\"{domain:myaccount_domain}/in/cant-login\" target=\"popup\" onclick=\"window.open('{domain:myaccount_domain}/in/cant-login','popup','width=820,height=810,scrollbars=no,resizable=no'); return false;\">here</a> to retrieve username/password.</span>\r\n<span class=\"visible-client\">Email is already in use. Click <u><a href=\"{domain:myaccount_domain}/in/cant-login\" target=\"popup\" onclick=\"window.open('{domain:myaccount_domain}/in/cant-login','popup','width=820,height=810,scrollbars=no,resizable=no'); return false;\">here</a></u> to retrieve username/password.</span>\r\n<span class=\"visible-tablet\">Email is already in use. Click <a href=\"{domain:mobile}/in/cant-login\" target=\"_blank\">here</a> to retrieve username/password.</span>\r\n<span class=\"visible-mobile\">Email is already in use. Click <a href=\"{domain:mobile}/in/cant-login\" target=\"_blank\">here</a> to retrieve username/password.</span>\r\n<span class=\"visible-app\">Email is already in use. Click <a href=\"https://m.dfnba.net/in/cant-login?clientflag=1\" target=\"_blank\">here</a> to retrieve username/password.</span>"
+  invalid_words:
+    error_message: 'Invalid/not allowed characters'
+  valid_languages:
+    error_message: 'This field only accepts specific characters.'
+  not_match_username:
+    error_message: 'Password should not equal to username'

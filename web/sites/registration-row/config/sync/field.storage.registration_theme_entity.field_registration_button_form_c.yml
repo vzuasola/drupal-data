@@ -1,0 +1,20 @@
+uuid: 8fba419b-03f1-4634-b8cf-723d7e51591e
+langcode: zh-hans
+status: true
+dependencies:
+  module:
+    - color_field
+    - registration_theme
+id: registration_theme_entity.field_registration_button_form_c
+field_name: field_registration_button_form_c
+entity_type: registration_theme_entity
+type: color_field_type
+settings:
+  format: '#HEXHEX'
+module: color_field
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

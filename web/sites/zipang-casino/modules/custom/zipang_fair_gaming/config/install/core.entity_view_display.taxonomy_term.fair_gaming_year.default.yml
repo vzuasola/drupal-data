@@ -1,0 +1,43 @@
+uuid: 2a9f2f55-432f-4e8c-bf33-523d4c28155a
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.fair_gaming_year.field_enable
+    - field.field.taxonomy_term.fair_gaming_year.field_year_category
+    - taxonomy.vocabulary.fair_gaming_year
+  module:
+    - text
+id: taxonomy_term.fair_gaming_year.default
+targetEntityType: taxonomy_term
+bundle: fair_gaming_year
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_enable:
+    weight: 2
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  langcode:
+    type: language
+    weight: 1
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+      native_language: false
+    third_party_settings: {  }
+hidden:
+  field_year_category: true

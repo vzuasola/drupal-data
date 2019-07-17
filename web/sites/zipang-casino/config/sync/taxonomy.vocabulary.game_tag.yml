@@ -1,0 +1,11 @@
+uuid: 5ba3a3d4-aa49-43b5-bc74-22b4b6ba61ba
+langcode: ja
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: dJH_THlt7svSDQnzQRoAeIXhm9q4Id4lRJbXXeiGML0
+name: 'Game Tag'
+vid: game_tag
+description: 'Game Tag'
+hierarchy: 0
+weight: 0

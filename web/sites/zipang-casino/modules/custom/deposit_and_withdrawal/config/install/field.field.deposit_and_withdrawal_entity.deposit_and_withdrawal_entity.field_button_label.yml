@@ -1,0 +1,20 @@
+uuid: 23413b1f-2717-4c96-babc-b4ce411bb4ae
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.deposit_and_withdrawal_entity.field_button_label
+  module:
+    - deposit_and_withdrawal
+id: deposit_and_withdrawal_entity.deposit_and_withdrawal_entity.field_button_label
+field_name: field_button_label
+entity_type: deposit_and_withdrawal_entity
+bundle: deposit_and_withdrawal_entity
+label: 'Button Label'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

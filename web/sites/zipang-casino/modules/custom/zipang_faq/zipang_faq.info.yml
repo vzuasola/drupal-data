@@ -1,0 +1,5 @@
+name: Zipang Faq
+type: module
+description: Zipang Faq
+core: 8.x
+package: Zipang

@@ -1,0 +1,18 @@
+uuid: af099df3-8f78-47db-8520-1c1686388d3f
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.affiliates_parameters
+id: taxonomy_term.affiliates_parameters.name
+field_name: name
+entity_type: taxonomy_term
+bundle: affiliates_parameters
+label: Name
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

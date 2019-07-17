@@ -1,0 +1,8 @@
+settings:
+  allowed_values:
+    -
+      label: 'Show menu on Desktop'
+    -
+      label: 'Show menu on Mobile'
+    -
+      label: 'Show menu on both Desktop and Mobile'

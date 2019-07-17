@@ -1,7 +1,11 @@
 about_dafabet_content:
-  format: basic_html
   value: "<p>Chào mừng bạn đến với Dafabet, trang web cá cược trực tuyến hàng đầu châu Á và là nơi cung cấp những sản phẩm chơi game tốt nhất bao gồm Cá Cược Thể Thao, Casino, Trò chơi Casino Trực Tuyến, Keno, Poker Trực Tuyến, Trò chơi Flash và vô vàn các trò chơi cá cược trực tuyến đẳng cấp Thế Giới.Dafabet được cấp phép và quản lý bởi chính phủ Philippines.</p>\r\n"
+  format: basic_html
 social_media_title: 'Theo dõi chúng tôi để được cập nhật'
 sponsor_mobile_desc: 'Nhà Tài Trợ Chính Thức'
 about_dafabet_title: 'Về DAFABET'
 quicklinks_title: 'LINK NHANH'
+advanced__active_tab: edit-cookie-notification-group
+cookie_notification:
+  value: "<p>Chúng tôi sử dụng cookie để cung cấp cho bạn trải nghiệm tốt nhất. Bằng cách tiếp tục điều hướng qua trang web này, bạn đồng ý với việc sử dụng cookie theo <a href=\"{domain:entry}/{lang}/security\" target=\"_blank\">Chính Sách Cookie</a> của chúng tôi.</p>\r\n"
+  format: basic_html

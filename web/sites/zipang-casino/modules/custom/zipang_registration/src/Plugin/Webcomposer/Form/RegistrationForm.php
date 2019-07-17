@@ -101,7 +101,7 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
         'settings' => [
           'label' => [
             '#title' => 'Email Address Label',
-            '#type' => 'email',
+            '#type' => 'textfield',
             '#description' => 'The Label for Email Address field',
           ],
         ],
@@ -112,7 +112,7 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
         'settings' => [
           'label' => [
             '#title' => 'Confirm Email Address Label',
-            '#type' => 'email',
+            '#type' => 'textfield',
             '#description' => 'The Label for Confirm Email Address field',
           ],
         ],

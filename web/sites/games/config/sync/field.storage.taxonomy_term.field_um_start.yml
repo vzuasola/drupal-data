@@ -1,0 +1,20 @@
+uuid: eae7c2d1-5152-4400-83ef-e23047bbd7e6
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime
+    - taxonomy
+id: taxonomy_term.field_um_start
+field_name: field_um_start
+entity_type: taxonomy_term
+type: datetime
+settings:
+  datetime_type: datetime
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

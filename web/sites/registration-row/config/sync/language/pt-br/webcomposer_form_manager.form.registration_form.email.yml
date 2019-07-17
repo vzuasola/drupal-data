@@ -1,0 +1,39 @@
+field_settings:
+  label: 'Endereço de e-mail'
+  placeholder: 'Endereço de e-mail'
+  annotation: 'Por favor, insira um endereço de e-mail válido para receber as últimas promoções, atualizações e ofertas exclusivas.'
+field_validations:
+  required:
+    error_message: 'Este campo é obrigatório'
+  alpha:
+    error_message: 'Field should be Alphabet characters only'
+  alphanumeric:
+    error_message: 'Field should be alphanumeric'
+  alpha_multi:
+    error_message: 'Value is not a valid multilingual character'
+  numeric:
+    error_message: 'Field should be numeric'
+  no_symbols:
+    error_message: 'Field contains invalid special characters'
+  numeric_symbols:
+    error_message: 'Field contains invalid special characters'
+  email:
+    error_message: 'Por favor insira um endereço de e-mail válido. (por exemplo, nome@dominio.com)'
+  min_length:
+    error_message: 'Por favor insira um endereço de e-mail válido. (por exemplo, nome@dominio.com)'
+  max_length:
+    error_message: 'Por favor insira um endereço de e-mail válido. (por exemplo, nome@dominio.com)'
+  regex:
+    error_message: 'This field only accepts specific characters.'
+  valid_date:
+    error_message: 'Date is invalid'
+  username_availability:
+    error_message: 'Username not available'
+  email_availability:
+    error_message: "<span class=\"visible-desktop\">O e-mail já está sendo usado. Clique <a href=\"{domain:myaccount_domain}/pt/cant-login\" target=\"popup\" onclick=\"window.open('{domain:myaccount_domain}/pt/cant-login','popup','width=820,height=810,scrollbars=no,resizable=no'); return false;\">aqui</a> para recuperar o nome de usuário / senha.</span>\r\n<span class=\"visible-client\">O e-mail já está sendo usado. Clique <u><a href=\"{domain:myaccount_domain}/pt/cant-login\" target=\"popup\" onclick=\"window.open('{domain:myaccount_domain}/pt/cant-login','popup','width=820,height=810,scrollbars=no,resizable=no'); return false;\">aqui</a></u> para recuperar o nome de usuário / senha.</span>\r\n<span class=\"visible-tablet\">O e-mail já está sendo usado. Clique <a href=\"{domain:mobile}/pt/cant-login\" target=\"_blank\">aqui</a> para recuperar o nome de usuário / senha.</span>\r\n<span class=\"visible-mobile\">O e-mail já está sendo usado. Clique <a href=\"{domain:mobile}/pt/cant-login\" target=\"_blank\">aqui</a> para recuperar o nome de usuário / senha.</span>\r\n<span class=\"visible-app\">O e-mail já está sendo usado. Clique <a href=\"https://m.dfnba.net/pt/cant-login?clientflag=1\" target=\"_blank\">aqui</a> para recuperar o nome de usuário / senha.</span>"
+  invalid_words:
+    error_message: 'Invalid/not allowed characters'
+  valid_languages:
+    error_message: 'This field only accepts specific characters.'
+  not_match_username:
+    error_message: 'Password should not equal to username'

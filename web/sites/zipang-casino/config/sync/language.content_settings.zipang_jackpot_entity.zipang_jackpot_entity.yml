@@ -1,0 +1,19 @@
+uuid: 2ae95bc1-b37e-4fef-b797-c2aca555efc1
+langcode: ja
+status: true
+dependencies:
+  module:
+    - content_translation
+    - zipang_jackpot
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+_core:
+  default_config_hash: ygwvZ-Q2Av8nT61CTAcuX0_1viPmb1Grl2RcO7_ixik
+id: zipang_jackpot_entity.zipang_jackpot_entity
+target_entity_type_id: zipang_jackpot_entity
+target_bundle: zipang_jackpot_entity
+default_langcode: site_default
+language_alterable: true

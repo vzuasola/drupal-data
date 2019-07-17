@@ -1,0 +1,47 @@
+uuid: d48f6797-4960-40c4-853a-f334ae2779c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_sponsor_cmi_logo
+    - paragraphs.paragraphs_type.sponsor_cmi
+  module:
+    - content_translation
+    - image
+third_party_settings:
+  content_translation:
+    translation_sync:
+      file: file
+      alt: '0'
+      title: '0'
+_core:
+  default_config_hash: WlP718dwwxVEgI2ERDG9P4qQPzFtFjKCizLqwlu5sRk
+id: paragraph.sponsor_cmi.field_sponsor_cmi_logo
+field_name: field_sponsor_cmi_logo
+entity_type: paragraph
+bundle: sponsor_cmi
+label: Logo
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: false
+  alt_field_required: false
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

@@ -1,0 +1,21 @@
+uuid: 152ea303-2b7d-435b-9f0f-4fa1b2b363ff
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_display_mode
+    - taxonomy.vocabulary.client_casino_category
+  module:
+    - options
+id: taxonomy_term.client_casino_category.field_display_mode
+field_name: field_display_mode
+entity_type: taxonomy_term
+bundle: client_casino_category
+label: 'Display Mode'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -5,12 +5,14 @@ dependencies:
   config:
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_banner_blurb
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_banner_image
+    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_banner_image_landscape
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_banner_link
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_banner_link_target
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_content_position
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_log_in_state
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_post_banner_blurb
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_post_banner_image
+    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_post_banner_image_landscap
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_post_banner_link
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_post_banner_link_target
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_post_content_position
@@ -50,6 +52,7 @@ third_party_settings:
     group_pre_banner_fields:
       children:
         - field_banner_image
+        - field_banner_image_landscape
         - field_banner_link
         - field_banner_link_target
         - field_banner_blurb
@@ -66,6 +69,7 @@ third_party_settings:
     group_post_banner_fields:
       children:
         - field_post_banner_image
+        - field_post_banner_image_landscap
         - field_post_banner_link
         - field_post_banner_link_target
         - field_post_banner_blurb
@@ -103,7 +107,7 @@ bundle: webcomposer_slider_v2_entity
 mode: default
 content:
   field_banner_blurb:
-    weight: 6
+    weight: 7
     settings:
       rows: 5
       placeholder: ''
@@ -154,8 +158,34 @@ content:
           bundle: webcomposer_slider_v2_entity
     type: image_image
     region: content
-  field_banner_link:
+  field_banner_image_landscape:
     weight: 4
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings:
+      conditional_fields:
+        aeddf86f-9296-447b-965f-229bc22a5283:
+          dependee: field_log_in_state
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: '0'
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: webcomposer_slider_v2_entity
+          bundle: webcomposer_slider_v2_entity
+    type: image_image
+    region: content
+  field_banner_link:
+    weight: 5
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -181,7 +211,7 @@ content:
     type: link_default
     region: content
   field_banner_link_target:
-    weight: 5
+    weight: 6
     settings: {  }
     third_party_settings:
       conditional_fields:
@@ -205,7 +235,7 @@ content:
     type: options_select
     region: content
   field_content_position:
-    weight: 7
+    weight: 8
     settings: {  }
     third_party_settings:
       conditional_fields:
@@ -236,7 +266,7 @@ content:
     type: options_buttons
     region: content
   field_post_banner_blurb:
-    weight: 15
+    weight: 16
     settings:
       rows: 5
       placeholder: ''
@@ -287,8 +317,34 @@ content:
           bundle: webcomposer_slider_v2_entity
     type: image_image
     region: content
-  field_post_banner_link:
+  field_post_banner_image_landscap:
     weight: 13
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings:
+      conditional_fields:
+        4f97d65c-4b1a-4159-84d3-4e926f3b028f:
+          dependee: field_log_in_state
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: '1'
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: webcomposer_slider_v2_entity
+          bundle: webcomposer_slider_v2_entity
+    type: image_image
+    region: content
+  field_post_banner_link:
+    weight: 14
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -314,7 +370,7 @@ content:
     type: link_default
     region: content
   field_post_banner_link_target:
-    weight: 14
+    weight: 15
     settings: {  }
     third_party_settings:
       conditional_fields:
@@ -338,7 +394,7 @@ content:
     type: options_select
     region: content
   field_post_content_position:
-    weight: 16
+    weight: 17
     settings: {  }
     third_party_settings:
       conditional_fields:
@@ -411,7 +467,8 @@ content:
     type: language_select
     weight: 2
     region: content
-    settings: {  }
+    settings:
+      include_locked: true
     third_party_settings: {  }
   translation:
     weight: 6

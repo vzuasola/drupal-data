@@ -1,0 +1,20 @@
+uuid: c9467077-26b9-4534-9159-63b491c79b99
+langcode: ja
+status: true
+dependencies:
+  module:
+    - zipang_mobile_games
+_core:
+  default_config_hash: Krduzg1eem1w1i3AuO0WMzXW0mGeis8eLVSahP90qn8
+id: zipang_mobile_games_entity.field_enable_game
+field_name: field_enable_game
+entity_type: zipang_mobile_games_entity
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

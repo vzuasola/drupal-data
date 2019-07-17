@@ -1,0 +1,40 @@
+field_settings:
+  label: 国家
+  placeholder: 国家
+  choices: "5|阿富汗\r\n18|阿兰群岛\r\n8|阿尔巴尼亚\r\n60|阿尔及利亚\r\n3|安道尔\r\n11|安哥拉\r\n7|安圭拉岛\r\n12|南极洲\r\n13|阿根廷\r\n9|亚美尼亚\r\n17|阿鲁巴岛\r\n15|奥地利\r\n19|阿塞拜疆\r\n33|巴哈马群岛\r\n26|巴林\r\n22|孟加拉国\r\n21|巴巴多斯\r\n37|白俄罗斯\r\n38|伯利兹\r\n28|贝宁\r\n29|百慕大\r\n34|不丹\r\n31|玻利维亚\r\n247|博内尔岛圣尤斯特歇斯岛和萨巴\r\n20|波斯尼亚和黑塞哥维那\r\n36|博茨瓦纳\r\n35|布维岛\r\n32|巴西\r\n101|英属印度洋领地\r\n229|英国维尔京群岛\r\n30|文莱达鲁萨兰国\r\n25|保加利亚\r\n24|布吉纳法索\r\n27|布隆迪\r\n112|柬埔寨\r\n47|喀麦隆\r\n39|加拿大\r\n52|佛得角\r\n119|开曼群岛\r\n41|中非共和国\r\n206|乍得\r\n46|智利\r\n48|中国\r\n1|圣诞岛\r\n2|科科斯群岛(基林群岛)\r\n49|哥伦比亚\r\n114|科摩罗\r\n42|刚果\r\n40|刚果民主共和国\r\n45|库克群岛\r\n50|哥斯达黎加\r\n44|科特迪瓦\r\n93|克罗地亚\r\n51|古巴\r\n54|捷克共和国\r\n57|丹麦\r\n56|吉布提\r\n58|多米尼加\r\n59|多米尼加共和国\r\n61|厄瓜多尔\r\n63|埃及\r\n202|萨尔瓦多\r\n85|赤道几内亚\r\n64|厄立特里亚\r\n62|爱沙尼亚\r\n66|埃塞俄比亚\r\n69|福克兰群岛(马尔维纳斯)\r\n71|法罗群岛\r\n68|斐济\r\n67|芬兰\r\n77|法属圭亚那\r\n170|法属波利尼西亚\r\n240|法国南部地区\r\n73|加蓬\r\n82|冈比亚\r\n76|格鲁吉亚\r\n79|加纳\r\n80|直布罗陀\r\n86|希腊\r\n81|格陵兰岛\r\n75|格林纳达\r\n84|瓜德罗普岛\r\n87|危地马拉\r\n78|格恩西岛\r\n83|几内亚\r\n89|几内亚比绍\r\n90|圭亚那\r\n94|海地\r\n241|赫德岛和麦克唐纳群岛\r\n226|圣座(梵蒂冈城)\r\n92|洪都拉斯\r\n95|匈牙利\r\n104|冰岛\r\n100|印度\r\n96|印尼\r\n99|英国属地曼岛\r\n105|意大利\r\n107|牙买加\r\n109|日本\r\n106|泽西岛\r\n108|约旦\r\n120|哈萨克斯坦\r\n110|肯尼亚\r\n113|基里巴斯\r\n117|韩国\r\n118|科威特\r\n111|吉尔吉斯斯坦\r\n121|老挝\r\n130|拉脱维亚\r\n122|黎巴嫩\r\n127|莱索托\r\n126|利比里亚\r\n131|阿拉伯利比亚民众国\r\n124|列支敦斯登\r\n128|立陶宛\r\n129|卢森堡\r\n139|马其顿\r\n137|马达加斯加\r\n151|马拉维\r\n153|马来西亚\r\n150|马尔代夫\r\n140|马里\r\n148|马耳他\r\n145|马提尼克岛\r\n146|毛利塔尼亚\r\n149|毛里求斯\r\n236|马约特岛\r\n152|墨西哥\r\n134|摩尔多瓦共和国\r\n133|摩纳哥\r\n142|蒙古\r\n135|黑山共和国\r\n147|蒙特塞拉特\r\n132|摩洛哥\r\n154|莫桑比克\r\n141|缅甸\r\n155|纳米比亚\r\n164|瑙鲁\r\n163|尼泊尔\r\n161|荷兰\r\n250|荷属安的列斯群岛\r\n156|新喀里多尼亚\r\n166|新西兰\r\n160|尼加拉瓜\r\n157|尼日尔\r\n159|尼日利亚\r\n165|纽埃岛\r\n158|诺福克岛\r\n162|挪威\r\n167|阿曼\r\n173|巴基斯坦\r\n178|巴勒斯坦领土\r\n168|巴拿马\r\n171|巴布新几内亚\r\n181|巴拉圭\r\n169|秘鲁\r\n176|皮特克恩岛\r\n174|波兰\r\n182|卡塔尔\r\n183|留尼旺岛\r\n184|罗马尼亚\r\n186|俄罗斯联邦\r\n187|卢旺达\r\n242|圣巴泰勒米岛\r\n243|圣赫勒拿阿森松和特里斯坦-达库尼亚群岛\r\n115|圣基茨和尼维斯\r\n123|圣卢西亚岛\r\n136|圣马丁\r\n175|圣皮埃尔和密克隆群岛\r\n227|圣文森特和格林纳丁斯\r\n234|萨摩亚\r\n197|圣马力诺\r\n201|圣多美和普林西比\r\n188|沙特阿拉伯\r\n198|塞内加尔\r\n185|塞尔维亚\r\n190|塞舌尔\r\n196|塞拉利昂\r\n249|圣马丁岛(荷兰)\r\n195|斯洛伐克\r\n194|斯洛文尼亚\r\n189|所罗门群岛\r\n199|索马里\r\n237|南非\r\n244|南乔治亚岛和南桑威奇群岛\r\n125|斯里兰卡\r\n191|苏丹\r\n200|苏里南\r\n245|斯瓦尔巴群岛和扬马延岛\r\n204|斯威士兰\r\n192|瑞典\r\n203|阿拉伯叙利亚共和国\r\n209|塔吉克斯坦\r\n219|坦桑尼亚联合共和国\r\n208|泰国\r\n211|东帝汶\r\n207|多哥\r\n210|托克劳\r\n214|汤加\r\n216|特立尼达和多巴哥\r\n213|突尼斯\r\n212|土库曼斯坦\r\n205|特克斯和凯科斯群岛\r\n217|图瓦卢\r\n221|乌干达\r\n220|乌克兰\r\n4|阿拉伯联合酋长国\r\n224|乌拉圭\r\n225|乌兹别克斯坦\r\n232|瓦努阿图\r\n228|委内瑞拉\r\n231|越南\r\n233|瓦利斯群岛和富图纳群岛\r\n246|西撒哈拉\r\n235|也门\r\n238|赞比亚\r\n239|津巴布韦"
+  top_choices: "48\r\n96\r\n109\r\n117\r\n153\r\n208\r\n231"
+field_validations:
+  required:
+    error_message: 请选择您现在居住的国家
+  alpha:
+    error_message: 'Field should be Alphabet characters only'
+  alphanumeric:
+    error_message: 'Field should be alphanumeric'
+  alpha_multi:
+    error_message: 'Value is not a valid multilingual character'
+  numeric:
+    error_message: 'Field should be numeric'
+  no_symbols:
+    error_message: 'Field contains invalid special characters'
+  numeric_symbols:
+    error_message: 'Field contains invalid special characters'
+  email:
+    error_message: 'Field does not contain a valid email address'
+  min_length:
+    error_message: 'Minimum requirement not met'
+  max_length:
+    error_message: 'Maximum requirement not met'
+  regex:
+    error_message: 'This field only accepts specific characters.'
+  valid_date:
+    error_message: 'Date is invalid'
+  username_availability:
+    error_message: 'Username not available'
+  email_availability:
+    error_message: 'Email not available'
+  invalid_words:
+    error_message: 'Invalid/not allowed characters'
+  valid_languages:
+    error_message: 'This field only accepts specific characters.'
+  not_match_username:
+    error_message: 'Password should not equal to username'

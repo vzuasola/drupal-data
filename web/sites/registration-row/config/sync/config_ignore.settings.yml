@@ -1,0 +1,13 @@
+ignored_config_entities:
+  0: 'webform.webform.*'
+  2: 'system.menu.*'
+  4: 'filter.*'
+  6: 'devel.*'
+  8: 'webcomposer_config.*'
+  10: 'languange.*'
+  12: 'registration_config.*'
+  14: 'webcomposer_form_manager.*'
+  16: '~system.menu.mobile-quicklinks-*'
+  18: '~system.menu.customer-support-*'
+_core:
+  default_config_hash: UVH1aJ4b44UM-VdPVN7hNNuuVqfReJxwfVeDQH1Hvsk

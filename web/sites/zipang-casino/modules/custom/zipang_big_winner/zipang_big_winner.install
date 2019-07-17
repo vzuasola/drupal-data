@@ -1,0 +1,50 @@
+<?php
+
+/**
+ * Implements hook_uninstall
+ */
+function zipang_big_winner_uninstall() {
+  $keys = [
+    'core.base_field_override.taxonomy_term.big_winner_year.changed',
+    'core.base_field_override.taxonomy_term.big_winner_year.description',
+    'core.base_field_override.taxonomy_term.big_winner_year.name',
+    'core.base_field_override.taxonomy_term.big_winner_year.path',
+    'core.entity_form_display.taxonomy_term.big_winner_year.default',
+    'core.entity_form_display.zipang_big_winner_entity.zipang_big_winner_entity.default',
+    'core.entity_view_display.zipang_big_winner_entity.zipang_big_winner_entity.default',
+    'field.field.zipang_big_winner_entity.zipang_big_winner_entity.field_big_winner_year',
+    'field.field.zipang_big_winner_entity.zipang_big_winner_entity.field_body',
+    'field.field.zipang_big_winner_entity.zipang_big_winner_entity.field_button_label',
+    'field.field.zipang_big_winner_entity.zipang_big_winner_entity.field_button_link',
+    'field.field.zipang_big_winner_entity.zipang_big_winner_entity.field_button_link_target',
+    'field.field.zipang_big_winner_entity.zipang_big_winner_entity.field_image_banner',
+    'field.field.zipang_big_winner_entity.zipang_big_winner_entity.field_image_banner_link',
+    'field.field.zipang_big_winner_entity.zipang_big_winner_entity.field_image_banner_link_target',
+    'field.field.zipang_big_winner_entity.zipang_big_winner_entity.field_summary',
+    'field.field.zipang_big_winner_entity.zipang_big_winner_entity.field_tag',
+    'field.field.zipang_big_winner_entity.zipang_big_winner_entity.field_thumbnail',
+    'field.field.zipang_big_winner_entity.zipang_big_winner_entity.field_title',
+    'field.storage.zipang_big_winner_entity.field_big_winner_year',
+    'field.storage.zipang_big_winner_entity.field_body',
+    'field.storage.zipang_big_winner_entity.field_button_label',
+    'field.storage.zipang_big_winner_entity.field_button_link',
+    'field.storage.zipang_big_winner_entity.field_button_link_target',
+    'field.storage.zipang_big_winner_entity.field_image_banner',
+    'field.storage.zipang_big_winner_entity.field_image_banner_link',
+    'field.storage.zipang_big_winner_entity.field_image_banner_link_target',
+    'field.storage.zipang_big_winner_entity.field_summary',
+    'field.storage.zipang_big_winner_entity.field_tag',
+    'field.storage.zipang_big_winner_entity.field_thumbnail',
+    'field.storage.zipang_big_winner_entity.field_title',
+    'language.content_settings.taxonomy_term.big_winner_year',
+    'language.content_settings.zipang_big_winner_entity.zipang_big_winner_entity',
+    'taxonomy.vocabulary.big_winner_year',
+    'views.view.big_winner',
+    'views.view.big_winner_year',
+    'zipang_config.big_winner_page_configuration',
+  ];
+
+  foreach ($keys as $key) {
+    \Drupal::configFactory()->getEditable($key)->delete();
+  }
+}

@@ -3,12 +3,15 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.poker_client_promotions.poker_client_promotions.field_display_mode
     - field.field.poker_client_promotions.poker_client_promotions.field_promotion_image
-    - field.field.poker_client_promotions.poker_client_promotions.field_publish
+    - field.field.poker_client_promotions.poker_client_promotions.field_publish_date
     - field.field.poker_client_promotions.poker_client_promotions.field_ribbon_configuration
+    - field.field.poker_client_promotions.poker_client_promotions.field_unpublish_date
     - field.field.poker_client_promotions.poker_client_promotions.field_url
     - image.style.thumbnail
   module:
+    - datetime
     - image
     - poker_client_promotions
 id: poker_client_promotions.poker_client_promotions.default
@@ -16,6 +19,12 @@ targetEntityType: poker_client_promotions
 bundle: poker_client_promotions
 mode: default
 content:
+  field_display_mode:
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
   field_promotion_image:
     weight: 3
     settings:
@@ -24,18 +33,23 @@ content:
     third_party_settings: {  }
     type: image_image
     region: content
-  field_publish:
-    weight: 5
-    settings:
-      display_label: true
+  field_publish_date:
+    weight: 7
+    settings: {  }
     third_party_settings: {  }
-    type: boolean_checkbox
+    type: datetime_default
     region: content
   field_ribbon_configuration:
     weight: 4
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
+  field_unpublish_date:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
     region: content
   field_url:
     weight: 2

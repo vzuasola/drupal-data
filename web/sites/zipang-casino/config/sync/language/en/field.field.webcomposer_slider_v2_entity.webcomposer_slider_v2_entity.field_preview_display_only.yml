@@ -1,0 +1,5 @@
+label: 'Preview Display Only'
+description: 'Enable this field if you want the slider entry to be viewable on Preview Mode only.'
+settings:
+  on_label: 'On'
+  off_label: 'Off'

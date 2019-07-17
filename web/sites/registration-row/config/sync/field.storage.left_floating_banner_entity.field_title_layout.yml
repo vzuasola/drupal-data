@@ -1,0 +1,32 @@
+uuid: c6d69d6d-c9cc-4995-9de5-f18784d4320a
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - webcomposer_floating_banners
+_core:
+  default_config_hash: ywCAvVz2AfCyGUQp7bjSXAGtoDUDlRmsZybvVueL_lU
+id: left_floating_banner_entity.field_title_layout
+field_name: field_title_layout
+entity_type: left_floating_banner_entity
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: right
+      label: 'Facing Right, Stacked Downwards'
+    -
+      value: down
+      label: 'Facing Down, Stacked Downwards'
+    -
+      value: up
+      label: 'Facing Up, Stacked Upwards'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,34 @@
+label: 'Domain Listing'
+description: 'List all domains.'
+display:
+  default:
+    display_title: Master
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Apply
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      fields:
+        name:
+          label: 'Domain Name'
+          separator: ', '
+        field_select_domain_group:
+          label: 'Domain Group'
+          separator: ', '
+        translation_link:
+          label: 'Translate Domain'
+          text: Translate
+        edit_taxonomy_term:
+          label: Edit
+          text: edit
+        delete_taxonomy_term:
+          label: Delete
+          text: delete
+      title: 'Domain Listing'
+  domain_listing:
+    display_title: 'Domain Listing Block'
+    display_options:
+      display_description: 'List domains under domain management.'

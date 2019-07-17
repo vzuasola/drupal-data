@@ -48,6 +48,8 @@ module:
   mobile_als: 0
   mobile_casino: 0
   mobile_config: 0
+  mobile_entrypage: 0
+  mobile_marketing_space: 0
   mobile_owsports: 0
   mobile_product_menu: 0
   mobile_promotions: 0
@@ -78,6 +80,7 @@ module:
   webcomposer_affilates: 0
   webcomposer_announcements: 0
   webcomposer_audit: 0
+  webcomposer_audit_export: 0
   webcomposer_avaya: 0
   webcomposer_cache: 0
   webcomposer_config: 0

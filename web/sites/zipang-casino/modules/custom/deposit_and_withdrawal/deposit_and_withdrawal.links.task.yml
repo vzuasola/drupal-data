@@ -1,0 +1,22 @@
+# Deposit and withdrawal entity routing definition
+deposit_and_withdrawal_entity.settings_tab:
+  route_name: deposit_and_withdrawal_entity.settings
+  title: 'Settings'
+  base_route: deposit_and_withdrawal_entity.settings
+
+entity.deposit_and_withdrawal_entity.canonical:
+  route_name: entity.deposit_and_withdrawal_entity.canonical
+  base_route: entity.deposit_and_withdrawal_entity.canonical
+  title: 'View'
+
+entity.deposit_and_withdrawal_entity.edit_form:
+  route_name: entity.deposit_and_withdrawal_entity.edit_form
+  base_route: entity.deposit_and_withdrawal_entity.canonical
+  title: 'Edit'
+
+entity.deposit_and_withdrawal_entity.delete_form:
+  route_name:  entity.deposit_and_withdrawal_entity.delete_form
+  base_route:  entity.deposit_and_withdrawal_entity.canonical
+  title: Delete
+  weight: 10
+

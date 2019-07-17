@@ -1,5 +1,5 @@
 poker_client_showcase.admin_settings:
-  title: 'Client Footer Games'
+  title: 'Client Casino Game Showcase'
   description: 'Configure the Client Showcase.'
   parent: system.admin_config
   route_name: poker_client_showcase.admin_settings

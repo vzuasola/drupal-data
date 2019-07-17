@@ -1,0 +1,22 @@
+add registration theme entity entities:
+  title: 'Create new Registration theme entity entities'
+
+administer registration theme entity entities:
+  title: 'Administer Registration theme entity entities'
+  description: 'Allow to access the administration form to configure Registration theme entity entities.'
+  restrict access: true
+
+delete registration theme entity entities:
+  title: 'Delete Registration theme entity entities'
+
+edit registration theme entity entities:
+  title: 'Edit Registration theme entity entities'
+
+access registration theme entity overview:
+  title: 'Access the Registration theme entity overview page'
+
+view published registration theme entity entities:
+  title: 'View published Registration theme entity entities'
+
+view unpublished registration theme entity entities:
+  title: 'View unpublished Registration theme entity entities'

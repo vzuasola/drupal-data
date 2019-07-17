@@ -1,0 +1,36 @@
+field_settings:
+  label: 出生日期
+  placeholder: 年/月/日
+  date-format: YYYY/MM/DD
+  annotation: ''
+field_validations:
+  required:
+    error_message: "请选择您的出生年份。您须年满18周岁才可注册账户。\r\n"
+  alpha:
+    error_message: 'Field should be Alphabet characters only'
+  alphanumeric:
+    error_message: 'Field should be alphanumeric'
+  alpha_multi:
+    error_message: 'Value is not a valid multilingual character'
+  numeric:
+    error_message: 'Field should be numeric'
+  no_symbols:
+    error_message: 'Field contains invalid special characters'
+  numeric_symbols:
+    error_message: 'Field contains invalid special characters'
+  email:
+    error_message: 'Field does not contain a valid email address'
+  min_length:
+    error_message: 'Minimum requirement not met'
+  max_length:
+    error_message: 'Maximum requirement not met'
+  valid_date:
+    error_message: 请按照该格式输入您的出生日期：日/月/年
+  username_availability:
+    error_message: 'Username not available'
+  email_availability:
+    error_message: 'Email not available'
+  invalid_words:
+    error_message: 'Invalid/not allowed characters'
+  valid_languages:
+    error_message: 请按照该格式输入您的出生日期：日/月/年

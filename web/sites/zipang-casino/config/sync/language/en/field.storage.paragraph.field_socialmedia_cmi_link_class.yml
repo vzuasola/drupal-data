@@ -1,0 +1,12 @@
+settings:
+  allowed_values:
+    -
+      label: Facebook
+    -
+      label: Twitter
+    -
+      label: 'Google Plus'
+    -
+      label: Youtube
+    -
+      label: LinkedIn

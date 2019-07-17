@@ -1,0 +1,21 @@
+uuid: ae356e84-1708-4e89-8380-e63cef202fb9
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_category_id
+    - taxonomy.vocabulary.mobile_game_category
+_core:
+  default_config_hash: _LbVwyQ4XvpSJlZTJf6wm6jbmTijAxOk9QOTCPiMIl8
+id: taxonomy_term.mobile_game_category.field_category_id
+field_name: field_category_id
+entity_type: taxonomy_term
+bundle: mobile_game_category
+label: 'Category ID'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

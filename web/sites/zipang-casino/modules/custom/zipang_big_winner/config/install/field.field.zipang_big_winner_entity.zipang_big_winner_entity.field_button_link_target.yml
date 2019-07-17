@@ -1,0 +1,21 @@
+uuid: 25ae5b8d-3ce7-45f0-80fc-081a4afeed60
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.zipang_big_winner_entity.field_button_link_target
+  module:
+    - options
+    - zipang_big_winner
+id: zipang_big_winner_entity.zipang_big_winner_entity.field_button_link_target
+field_name: field_button_link_target
+entity_type: zipang_big_winner_entity
+bundle: zipang_big_winner_entity
+label: 'Button Link Target'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

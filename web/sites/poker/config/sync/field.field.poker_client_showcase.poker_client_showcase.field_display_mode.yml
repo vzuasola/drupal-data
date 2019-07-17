@@ -1,0 +1,21 @@
+uuid: 7606a176-26b9-48af-aa22-417f6b846c2c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.poker_client_showcase.field_display_mode
+  module:
+    - options
+    - poker_client_showcase
+id: poker_client_showcase.poker_client_showcase.field_display_mode
+field_name: field_display_mode
+entity_type: poker_client_showcase
+bundle: poker_client_showcase
+label: 'Display Mode'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

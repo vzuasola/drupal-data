@@ -1,0 +1,29 @@
+form_settings:
+  show: 1
+  alias: ''
+  form_name: ''
+weights:
+  username:
+    weight: '-10'
+  password:
+    weight: '-9'
+  password_meter:
+    weight: '-8'
+  email:
+    weight: '-7'
+  mobile_number:
+    weight: '-6'
+  birthdate:
+    weight: '-5'
+  currency:
+    weight: '-4'
+  country:
+    weight: '-3'
+  first_name:
+    weight: '-2'
+  last_name:
+    weight: '-1'
+  breakline_3:
+    weight: '0'
+  submit:
+    weight: '1'

@@ -1,0 +1,22 @@
+uuid: 52250fe3-fe11-4415-8f4b-8d3db8535d0a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_ribbon_text_color
+    - taxonomy.vocabulary.game_ribbons
+  module:
+    - color_field
+id: taxonomy_term.game_ribbons.field_ribbon_text_color
+field_name: field_ribbon_text_color
+entity_type: taxonomy_term
+bundle: game_ribbons
+label: 'Ribbon Text Color'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  opacity: 0
+field_type: color_field_type

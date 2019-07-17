@@ -1,0 +1,22 @@
+uuid: 20e2c92c-f2ef-4d4a-a5b4-2faf403d9b87
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.vip_modal_entity.field_vip_modal_title
+  module:
+    - vip_modal
+_core:
+  default_config_hash: LhAFoTSFQSyyyQVt30GQwt_6ntXFGEs0FQZvU6Cenak
+id: vip_modal_entity.vip_modal_entity.field_vip_modal_title
+field_name: field_vip_modal_title
+entity_type: vip_modal_entity
+bundle: vip_modal_entity
+label: 'Modal Title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

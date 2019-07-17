@@ -1,0 +1,9 @@
+uuid: 78b225b5-881d-45ad-9db9-6c7b41c91b45
+langcode: ja
+status: true
+dependencies: {  }
+name: 'Press Year'
+vid: press_year
+description: ''
+hierarchy: 0
+weight: 0

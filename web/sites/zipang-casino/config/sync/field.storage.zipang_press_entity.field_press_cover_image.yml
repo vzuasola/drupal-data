@@ -1,0 +1,30 @@
+uuid: ed670667-2a4d-4f7f-8512-8cd2b6be551a
+langcode: ja
+status: true
+dependencies:
+  module:
+    - file
+    - image
+    - zipang_press
+id: zipang_press_entity.field_press_cover_image
+field_name: field_press_cover_image
+entity_type: zipang_press_entity
+type: image
+settings:
+  uri_scheme: public
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  target_type: file
+  display_field: false
+  display_default: false
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

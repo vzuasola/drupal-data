@@ -1,0 +1,11 @@
+ignored_config_entities:
+  - 'webform.webform.*'
+  - 'webcomposer_config.*'
+  - 'system.menu.*'
+  - 'block.*'
+  - 'filter.*'
+  - 'language.*'
+  - 'devel.*'
+  - 'ghana_config.*'
+_core:
+  default_config_hash: UVH1aJ4b44UM-VdPVN7hNNuuVqfReJxwfVeDQH1Hvsk

@@ -1,0 +1,25 @@
+uuid: 14c0a757-63b5-4a49-9db8-d9a8aaa369fc
+langcode: ja
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.weekly_winner_month
+_core:
+  default_config_hash: g5vJs_Frkyl0xIg7ErKpFi90pxDvFj4wpaKKFw1xX3A
+id: taxonomy_term.weekly_winner_month.default
+targetEntityType: taxonomy_term
+bundle: weekly_winner_month
+mode: default
+content:
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  description: true
+  langcode: true
+  path: true

@@ -1,0 +1,21 @@
+uuid: 50558b98-bbd0-4b44-b46a-55c2aabfd2c5
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_product_tag
+    - taxonomy.vocabulary.products
+  module:
+    - options
+id: taxonomy_term.products.field_product_tag
+field_name: field_product_tag
+entity_type: taxonomy_term
+bundle: products
+label: 'Product Tag'
+description: 'Enter value for Product Tag attribute.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

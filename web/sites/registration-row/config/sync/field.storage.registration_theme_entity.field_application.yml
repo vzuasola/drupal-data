@@ -1,0 +1,30 @@
+uuid: 715fd825-b177-4a1f-9533-00c9166091da
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - registration_theme
+id: registration_theme_entity.field_application
+field_name: field_application
+entity_type: registration_theme_entity
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: web
+      label: 'Web Browser'
+    -
+      value: client
+      label: 'Downloadable Client'
+    -
+      value: app
+      label: 'Native App'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

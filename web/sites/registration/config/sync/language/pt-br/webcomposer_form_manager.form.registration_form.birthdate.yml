@@ -1,6 +1,6 @@
 field_settings:
-  label: 'Date of Birth'
-  placeholder: DD/MM/YYYY
+  label: 'Data de Nascimento'
+  placeholder: DD/MM/AAAA
   date-format: DD/MM/YYYY
   annotation: ''
 field_validations:

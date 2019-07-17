@@ -1,0 +1,25 @@
+uuid: 073f238f-6775-4de6-840b-36ac50d7609b
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_meta_tag
+    - taxonomy.vocabulary.jackpot_game_category
+  module:
+    - metatag
+_core:
+  default_config_hash: 4jOjXFCV-4ATd4eGBWJ3Y-vasLvW03GP_Kk_9_3yJqg
+id: taxonomy_term.jackpot_game_category.field_meta_tag
+field_name: field_meta_tag
+entity_type: taxonomy_term
+bundle: jackpot_game_category
+label: 'Meta Tag'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 'a:0:{}'
+default_value_callback: ''
+settings: {  }
+field_type: metatag

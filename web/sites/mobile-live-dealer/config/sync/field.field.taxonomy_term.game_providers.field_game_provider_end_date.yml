@@ -1,0 +1,21 @@
+uuid: c522ba4c-8382-4638-9ca6-a0cf5cd8f797
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_game_provider_end_date
+    - taxonomy.vocabulary.game_providers
+  module:
+    - datetime
+id: taxonomy_term.game_providers.field_game_provider_end_date
+field_name: field_game_provider_end_date
+entity_type: taxonomy_term
+bundle: game_providers
+label: 'End Date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

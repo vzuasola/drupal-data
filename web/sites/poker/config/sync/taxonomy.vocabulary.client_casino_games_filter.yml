@@ -1,0 +1,9 @@
+uuid: 75e3892a-0346-4f28-a9d6-833080537dac
+langcode: en
+status: true
+dependencies: {  }
+name: 'Client Casino Games Filter'
+vid: client_casino_games_filter
+description: ''
+hierarchy: 1
+weight: 0

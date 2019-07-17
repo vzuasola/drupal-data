@@ -1,0 +1,162 @@
+uuid: 3192d17c-ef83-4dad-b1fc-a168f91b3c9d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.game.body
+    - field.field.node.game.field_game_image
+    - field.field.node.game.field_game_info
+    - field.field.node.game.field_game_info_toggle
+    - field.field.node.game.field_game_title
+    - field.field.node.game.field_games_category
+    - field.field.node.game.field_play_for_fun_toggle
+    - field.field.node.game.field_ribbon_configuration
+    - image.style.thumbnail
+    - node.type.game
+  module:
+    - field_group
+    - image
+    - path
+    - scheduler
+    - text
+third_party_settings:
+  field_group:
+    group_game_info:
+      children:
+        - field_game_info_toggle
+        - field_game_info
+      parent_name: ''
+      weight: 9
+      format_type: details
+      format_settings:
+        label: 'Game Information'
+        open: true
+        id: ''
+        classes: ''
+        required_fields: false
+      label: 'Game Information'
+    group_game_langu:
+      children:
+        - field_play_now_toggle
+        - field_play_for_fun_toggle
+      parent_name: ''
+      weight: 10
+      format_type: details
+      format_settings:
+        label: 'Game Launching'
+        open: true
+        id: ''
+        classes: ''
+        required_fields: false
+      label: 'Game Launching'
+_core:
+  default_config_hash: tYMNVoRMcnzjYWed7L97NAkH34_8EOrvU6_GTa2vJzQ
+id: node.game.default
+targetEntityType: node
+bundle: game
+mode: default
+content:
+  field_game_image:
+    weight: 8
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_game_info:
+    weight: 14
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_game_info_toggle:
+    weight: 13
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_game_title:
+    weight: 2
+    settings:
+      rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_games_category:
+    type: options_buttons
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_play_for_fun_toggle:
+    weight: 11
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_ribbon_configuration:
+    weight: 26
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  publish_on:
+    type: datetime_timestamp_no_default
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  scheduler_settings:
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 120
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  unpublish_on:
+    type: datetime_timestamp_no_default
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  body: true
+  created: true
+  promote: true
+  sticky: true
+  translation: true
+  uid: true

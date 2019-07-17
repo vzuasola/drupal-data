@@ -5,6 +5,9 @@ dependencies:
   config:
     - field.field.node.games_2_0.field_game_subprovider
     - field.field.node.games_2_0.field_preview_display_only
+    - field.field.node.games_2_0.field_um_end
+    - field.field.node.games_2_0.field_um_start
+    - field.field.node.games_2_0.field_under_maintenance_message
     - field.field.node.games_2_0.field_v2_allribbon_configuration
     - field.field.node.games_2_0.field_v2_game_categories
     - field.field.node.games_2_0.field_v2_game_code
@@ -21,6 +24,7 @@ dependencies:
     - field.field.node.games_2_0.field_v2_ribbon_configuration
     - node.type.games_2_0
   module:
+    - datetime
     - image
     - metatag
     - options
@@ -48,6 +52,31 @@ content:
       format_custom_true: ''
     third_party_settings: {  }
     type: boolean
+    region: content
+  field_um_end:
+    weight: 121
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_um_start:
+    weight: 120
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_under_maintenance_message:
+    weight: 119
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
     region: content
   field_v2_allribbon_configuration:
     weight: 117

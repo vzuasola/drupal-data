@@ -277,6 +277,7 @@ display:
         sorts: false
         cache: false
         show_admin_links: false
+        pager: false
       fields:
         name:
           table: games_showcase_entity_field_data
@@ -875,178 +876,21 @@ display:
         type: none
         options: {  }
       show_admin_links: false
+      pager:
+        type: none
+        options:
+          offset: 0
     cache_metadata:
       max-age: 0
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
-        - url.query_args
         - user
       tags:
         - 'config:field.storage.games_showcase_entity.field_log_in_state'
         - 'config:field.storage.games_showcase_entity.field_showcase_image'
         - 'config:field.storage.games_showcase_entity.field_title'
-  rest_export_1:
-    display_plugin: rest_export
-    id: rest_export_1
-    display_title: 'Games Showcase'
-    position: 1
-    display_options:
-      display_extenders: {  }
-      path: api/games_showcase
-      pager:
-        type: none
-        options:
-          offset: 0
-      style:
-        type: node_list_serializer
-        options:
-          uses_fields: false
-          formats:
-            json: json
-      row:
-        type: data_entity
-        options: {  }
-      display_description: ''
-      filters:
-        langcode:
-          id: langcode
-          table: games_showcase_entity_field_data
-          field: langcode
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: in
-          value:
-            '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          entity_type: games_showcase_entity
-          entity_field: langcode
-          plugin_id: language
-        field_games_category_target_id:
-          id: field_games_category_target_id
-          table: games_showcase_entity__field_games_category
-          field: field_games_category_target_id
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: or
-          value: {  }
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_games_category_target_id_op
-            label: 'Games Category (field_games_category)'
-            description: ''
-            use_operator: false
-            operator: field_games_category_target_id_op
-            identifier: category
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              e: '0'
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          type: select
-          limit: true
-          vid: games_category
-          hierarchy: false
-          error_message: true
-          plugin_id: taxonomy_index_tid
-      defaults:
-        filters: false
-        filter_groups: false
-        sorts: false
-        cache: false
-        arguments: false
-      filter_groups:
-        operator: AND
-        groups:
-          1: AND
-      sorts:
-        weight:
-          id: weight
-          table: draggableviews_structure
-          field: weight
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: ASC
-          exposed: false
-          expose:
-            label: ''
-          plugin_id: standard
-        created:
-          id: created
-          table: games_showcase_entity_field_data
-          field: created
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: DESC
-          exposed: false
-          expose:
-            label: ''
-          granularity: second
-          entity_type: games_showcase_entity
-          entity_field: created
-          plugin_id: date
-      cache:
-        type: none
-        options: {  }
-      arguments: {  }
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - request_format
-        - url
-        - user
-      tags: {  }
   rest_export_2:
     display_plugin: rest_export
     id: rest_export_2
@@ -1063,25 +907,20 @@ display:
         sorts: false
         cache: false
       arguments: {  }
-      sorts:
-        created:
-          id: created
-          table: games_showcase_entity_field_data
-          field: created
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: DESC
-          exposed: false
-          expose:
-            label: ''
-          granularity: second
-          entity_type: games_showcase_entity
-          entity_field: created
-          plugin_id: date
+      sorts: {  }
       cache:
         type: none
         options: {  }
+      style:
+        type: node_list_serializer
+        options:
+          uses_fields: false
+          formats:
+            json: json
+      pager:
+        type: none
+        options:
+          offset: 0
     cache_metadata:
       max-age: -1
       contexts:

@@ -29,6 +29,18 @@ settings:
     -
       value: flow_gaming
       label: 'Flow Gaming'
+    -
+      value: sa_gaming
+      label: 'SA Gaming'
+    -
+      value: pg_soft
+      label: PGSoft
+    -
+      value: asia_gaming
+      label: 'Asia Gaming'
+    -
+      value: ruby_play
+      label: 'Ruby Play'
   allowed_values_function: ''
 module: options
 locked: false

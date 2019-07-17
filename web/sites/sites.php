@@ -6,6 +6,7 @@
  */
 
 // Webcomposer Demo Instances
+$sites['localhost'] = 'demo';
 $sites['demo.drupal.dev'] = 'demo';
 $sites['demo.drupal.local'] = 'demo';
 $sites['demo.drupal.env'] = 'demo';
@@ -90,12 +91,43 @@ $sites['mobile-games.drupal.dev'] = 'mobile-games';
 $sites['mobile-games.drupal.local'] = 'mobile-games';
 $sites['mobile-games.drupal.env'] = 'mobile-games';
 
+// Mobile Live Dealer Revamp instance
+$sites['mobile-live-dealer.drupal.dev'] = 'mobile-live-dealer';
+$sites['mobile-live-dealer.drupal.local'] = 'mobile-live-dealer';
+$sites['mobile-live-dealer.drupal.env'] = 'mobile-live-dealer';
+
 // Mobile Casino Revamp instance
 $sites['mobile-casino.drupal.dev'] = 'mobile-casino';
 $sites['mobile-casino.drupal.local'] = 'mobile-casino';
 $sites['mobile-casino.drupal.env'] = 'mobile-casino';
 
+// Mobile Casino Gold Revamp instance
+$sites['mobile-casino-gold.drupal.dev'] = 'mobile-casino-gold';
+$sites['mobile-casino-gold.drupal.local'] = 'mobile-casino-gold';
+$sites['mobile-casino-gold.drupal.env'] = 'mobile-casino-gold';
+
+// Mobile Lottery Revamp instance
+$sites['mobile-lottery.drupal.dev'] = 'mobile-lottery';
+$sites['mobile-lottery.drupal.local'] = 'mobile-lottery';
+$sites['mobile-lottery.drupal.env'] = 'mobile-lottery';
+
 // Poker revamp instance
 $sites['poker.drupal.local'] = 'poker';
 $sites['poker.drupal.dev'] = 'poker';
 $sites['poker.drupal.env'] = 'poker';
+
+// Dafa Ghana instance
+$sites['dafa-ghana.drupal.local'] = 'dafa-ghana';
+$sites['dafa-ghana.drupal.dev'] = 'dafa-ghana';
+$sites['dafa-ghana.drupal.env'] = 'dafa-ghana';
+
+// registration ROW
+$sites['registration-row.drupal.local'] = 'registration-row';
+$sites['registration-row.drupal.dev'] = 'registration-row';
+$sites['registration-row.drupal.env'] = 'registration-row';
+
+// dynamic sites.php values via environment variables
+
+if (file_exists(__DIR__ . '/sites.override.php')) {
+  require __DIR__ . '/sites.override.php';
+}

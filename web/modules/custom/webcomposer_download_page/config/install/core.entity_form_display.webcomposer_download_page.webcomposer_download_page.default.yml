@@ -1,0 +1,48 @@
+uuid: 9834dc24-4c8e-4ac1-b3a3-436624268953
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.webcomposer_download_page.webcomposer_download_page.field_download_step
+  module:
+    - paragraphs
+    - webcomposer_download_page
+id: webcomposer_download_page.webcomposer_download_page.default
+targetEntityType: webcomposer_download_page
+bundle: webcomposer_download_page
+mode: default
+content:
+  field_download_step:
+    type: entity_reference_paragraphs
+    weight: 6
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  user_id: true

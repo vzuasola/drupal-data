@@ -5,6 +5,9 @@ dependencies:
   config:
     - field.field.node.games_2_0.field_game_subprovider
     - field.field.node.games_2_0.field_preview_display_only
+    - field.field.node.games_2_0.field_um_end
+    - field.field.node.games_2_0.field_um_start
+    - field.field.node.games_2_0.field_under_maintenance_message
     - field.field.node.games_2_0.field_v2_allribbon_configuration
     - field.field.node.games_2_0.field_v2_game_categories
     - field.field.node.games_2_0.field_v2_game_code
@@ -22,6 +25,7 @@ dependencies:
     - image.style.thumbnail
     - node.type.games_2_0
   module:
+    - datetime
     - field_group
     - image
     - metatag
@@ -89,6 +93,22 @@ third_party_settings:
         description: ''
         required_fields: false
       label: 'Ribbons Configuration'
+    group_maintenance:
+      children:
+        - field_under_maintenance
+        - field_under_maintenance_message
+        - field_um_start
+        - field_um_end
+      parent_name: ''
+      weight: 20
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Maintenance
 id: node.games_2_0.default
 targetEntityType: node
 bundle: games_2_0
@@ -106,6 +126,26 @@ content:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
+    region: content
+  field_um_end:
+    weight: 29
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_um_start:
+    weight: 28
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_under_maintenance_message:
+    weight: 27
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
     region: content
   field_v2_allribbon_configuration:
     weight: 16

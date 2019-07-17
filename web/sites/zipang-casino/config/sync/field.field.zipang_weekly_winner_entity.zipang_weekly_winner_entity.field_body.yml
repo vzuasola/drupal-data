@@ -1,0 +1,23 @@
+uuid: 3956b84f-8a3f-4dc9-ae89-0c549a887946
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.zipang_weekly_winner_entity.field_body
+  module:
+    - text
+    - zipang_weekly_winner
+_core:
+  default_config_hash: hK7zNbGbgSNcRGQiUfhLpjt97MrIIyKgTWb99D66HpQ
+id: zipang_weekly_winner_entity.zipang_weekly_winner_entity.field_body
+field_name: field_body
+entity_type: zipang_weekly_winner_entity
+bundle: zipang_weekly_winner_entity
+label: Body
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -7,6 +7,7 @@ dependencies:
     - field.field.taxonomy_term.game_category_2_0.field_v2_game_category_disable
     - field.field.taxonomy_term.game_category_2_0.field_v2_game_category_hicon
     - field.field.taxonomy_term.game_category_2_0.field_v2_game_category_icon
+    - field.field.taxonomy_term.game_category_2_0.field_v2_game_category_new
     - field.field.taxonomy_term.game_category_2_0.field_v2_game_category_tooltip
     - field.field.taxonomy_term.game_category_2_0.field_v2_show_tooltip
     - taxonomy.vocabulary.game_category_2_0
@@ -60,6 +61,16 @@ content:
       image_link: ''
     third_party_settings: {  }
     type: image
+    region: content
+  field_v2_game_category_new:
+    weight: 12
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
     region: content
   field_v2_game_category_tooltip:
     weight: 11

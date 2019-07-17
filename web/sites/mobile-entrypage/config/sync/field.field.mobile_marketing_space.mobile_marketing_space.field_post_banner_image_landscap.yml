@@ -1,0 +1,45 @@
+uuid: a25dbbea-aab1-4d66-a232-5b6ccb37ce99
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.mobile_marketing_space.field_post_banner_image_landscap
+  module:
+    - content_translation
+    - image
+    - mobile_marketing_space
+third_party_settings:
+  content_translation:
+    translation_sync:
+      alt: alt
+      file: '0'
+      title: '0'
+id: mobile_marketing_space.mobile_marketing_space.field_post_banner_image_landscap
+field_name: field_post_banner_image_landscap
+entity_type: mobile_marketing_space
+bundle: mobile_marketing_space
+label: 'Post Banner Image Landscape'
+description: 'Recommended dimension of image is 600px x 50px.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: false
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

@@ -1,0 +1,18 @@
+form_settings: null
+weights:
+  last_name:
+    weight: '1'
+  first_name:
+    weight: '2'
+  username:
+    weight: '3'
+  email:
+    weight: '4'
+  subject:
+    weight: '5'
+  message:
+    weight: '6'
+  captcha:
+    weight: '7'
+  submit:
+    weight: '8'

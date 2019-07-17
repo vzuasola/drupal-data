@@ -1,0 +1,25 @@
+uuid: 067de7c1-e758-4a64-9a52-b25e62c251d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_mobile_menu_enabled
+    - paragraphs.paragraphs_type.mobile_menu
+_core:
+  default_config_hash: RBaxy77OG4yWDjVrVx-IXgoEbb0X6lgiFlREhAz2FEQ
+id: paragraph.mobile_menu.field_mobile_menu_enabled
+field_name: field_mobile_menu_enabled
+entity_type: paragraph
+bundle: mobile_menu
+label: Enabled
+description: 'If unchecked then this menu item will be disabled.'
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Enable
+  off_label: Disabled
+field_type: boolean

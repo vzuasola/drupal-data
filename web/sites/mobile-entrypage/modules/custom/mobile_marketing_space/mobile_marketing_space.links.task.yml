@@ -1,0 +1,22 @@
+# Mobile marketing space routing definition
+mobile_marketing_space.settings_tab:
+  route_name: mobile_marketing_space.settings
+  title: 'Settings'
+  base_route: mobile_marketing_space.settings
+
+entity.mobile_marketing_space.canonical:
+  route_name: entity.mobile_marketing_space.canonical
+  base_route: entity.mobile_marketing_space.canonical
+  title: 'View'
+
+entity.mobile_marketing_space.edit_form:
+  route_name: entity.mobile_marketing_space.edit_form
+  base_route: entity.mobile_marketing_space.canonical
+  title: 'Edit'
+
+entity.mobile_marketing_space.delete_form:
+  route_name:  entity.mobile_marketing_space.delete_form
+  base_route:  entity.mobile_marketing_space.canonical
+  title: Delete
+  weight: 10
+

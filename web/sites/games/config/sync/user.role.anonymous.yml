@@ -13,6 +13,7 @@ permissions:
   - 'access content'
   - 'access language en'
   - 'access language es'
+  - 'access language hi'
   - 'access language id'
   - 'access language ko'
   - 'access language pt-br'

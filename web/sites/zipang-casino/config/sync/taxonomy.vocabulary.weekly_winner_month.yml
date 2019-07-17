@@ -1,0 +1,11 @@
+uuid: c02d0977-64b2-4fcd-ab8b-4a3a0f1d35ad
+langcode: ja
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 56YiMQEgXL1dd9wl5BMrl_uDt3PVzSKBlrLANAyNXtg
+name: 'Weekly Winner Month'
+vid: weekly_winner_month
+description: ''
+hierarchy: 0
+weight: 0

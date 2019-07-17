@@ -1,0 +1,20 @@
+uuid: 83425195-fb78-4316-8d22-8bfc97833b6b
+langcode: ja
+status: true
+dependencies:
+  module:
+    - zipang_weekly_winner
+_core:
+  default_config_hash: qbDnf4KhtOas9s1WKCLDKIlmaTx9PISnOv1MNRyCINQ
+id: zipang_weekly_winner_entity.zipang_weekly_winner_entity.metatag
+field_name: metatag
+entity_type: zipang_weekly_winner_entity
+bundle: zipang_weekly_winner_entity
+label: Metatags
+description: 'The metatags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

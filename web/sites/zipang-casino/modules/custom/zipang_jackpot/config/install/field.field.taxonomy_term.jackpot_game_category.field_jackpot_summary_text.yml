@@ -1,0 +1,21 @@
+uuid: 72ec1b49-9caa-4009-b531-209fc8717e03
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_jackpot_summary_text
+    - taxonomy.vocabulary.jackpot_game_category
+id: taxonomy_term.jackpot_game_category.field_jackpot_summary_text
+field_name: field_jackpot_summary_text
+entity_type: taxonomy_term
+bundle: jackpot_game_category
+label: 'Jackpot Summary Text'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 'Jackpot Summary'
+default_value_callback: ''
+settings: {  }
+field_type: string

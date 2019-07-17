@@ -1,0 +1,18 @@
+uuid: 404c3589-a985-4e48-b392-01e8b13b0d9a
+langcode: ja
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.desktop_game_category
+id: taxonomy_term.desktop_game_category.name
+field_name: name
+entity_type: taxonomy_term
+bundle: desktop_game_category
+label: Name
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

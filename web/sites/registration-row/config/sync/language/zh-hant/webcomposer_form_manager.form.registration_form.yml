@@ -1,0 +1,26 @@
+form_settings:
+  show: 1
+  alias: ''
+weights:
+  username:
+    weight: '-10'
+  password:
+    weight: '-9'
+  breakline_1:
+    weight: '-7'
+  breakline_2:
+    weight: '-4'
+  last_name:
+    weight: '-3'
+  first_name:
+    weight: '-2'
+  birthdate:
+    weight: '-1'
+  breakline_3:
+    weight: '2'
+  bonus_code:
+    weight: '3'
+  accept_terms:
+    weight: '4'
+  submit:
+    weight: '5'

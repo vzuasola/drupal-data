@@ -1,0 +1,18 @@
+uuid: 181d0518-14ab-45c0-99fb-97cc5e49f9e8
+langcode: en
+status: true
+dependencies:
+  module:
+    - registration_theme
+id: registration_theme_entity.field_tripwire_toggle
+field_name: field_tripwire_toggle
+entity_type: registration_theme_entity
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

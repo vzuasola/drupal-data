@@ -1,0 +1,16 @@
+uuid: 4c1c07a4-fb8d-4857-b711-22c0835e29a1
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.games
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.games
+target_entity_type_id: node
+target_bundle: games
+default_langcode: current_interface
+language_alterable: true

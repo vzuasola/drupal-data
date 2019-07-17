@@ -1,0 +1,17 @@
+uuid: 9772cccc-ef52-47c0-aafc-0edb6dcf3b07
+langcode: en
+status: true
+dependencies:
+  module:
+    - content_translation
+    - webcomposer_downloadables
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: downloadable_entity.downloadable_entity
+target_entity_type_id: downloadable_entity
+target_bundle: downloadable_entity
+default_langcode: site_default
+language_alterable: false

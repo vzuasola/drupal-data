@@ -1,0 +1,21 @@
+uuid: d7a1cf93-53f9-4b00-9162-32f61c0429b7
+langcode: ja
+status: true
+dependencies:
+  module:
+    - metatag
+    - taxonomy
+_core:
+  default_config_hash: _T5-UIjaVeCaff6WNKrzO8Of4_SN6-f3vxaejcMWZl4
+id: taxonomy_term.field_meta_tag
+field_name: field_meta_tag
+entity_type: taxonomy_term
+type: metatag
+settings: {  }
+module: metatag
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

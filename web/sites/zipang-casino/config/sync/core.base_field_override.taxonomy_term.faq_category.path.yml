@@ -1,0 +1,22 @@
+uuid: 5e9c5412-aa9a-4c5a-be8c-bef270e72568
+langcode: ja
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.faq_category
+  module:
+    - path
+_core:
+  default_config_hash: e_x2176-nXv_EAULe3qW5cPJOc48qigkC7z-K8MtC34
+id: taxonomy_term.faq_category.path
+field_name: path
+entity_type: taxonomy_term
+bundle: faq_category
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

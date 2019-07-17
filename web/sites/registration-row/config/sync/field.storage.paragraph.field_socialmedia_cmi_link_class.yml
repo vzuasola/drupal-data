@@ -1,0 +1,41 @@
+uuid: 5f92f81b-eead-44c8-aad3-0dd3381a1ec1
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+_core:
+  default_config_hash: hD-0UwQwyaZrlniS6l6akNJRFCcX_u07vPFC6WFByP8
+id: paragraph.field_socialmedia_cmi_link_class
+field_name: field_socialmedia_cmi_link_class
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: facebook
+      label: Facebook
+    -
+      value: twitter
+      label: Twitter
+    -
+      value: google
+      label: 'Google Plus'
+    -
+      value: youtube
+      label: Youtube
+    -
+      value: linkedin
+      label: LinkedIn
+    -
+      value: instagram
+      label: Instagram
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

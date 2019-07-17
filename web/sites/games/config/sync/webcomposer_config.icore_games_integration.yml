@@ -99,3 +99,6 @@ ky_gaming_country: ''
 pgsoft_currency: "CNY\r\nRMB\r\nEUR\r\nTHB\r\nUSD\r\nIDR\r\nVND\r\nKRW\r\nGBP\r\nRUB\r\nPLN\r\nINR"
 pgsoft_language_mapping: "en|en-US\r\nsc|zh-CN"
 pgsoft_country: "MY\r\nSG\r\nTW\r\nUS\r\nLV"
+ruby_play_currency: "EUR\r\nUSD\r\nGBP\r\nRMB\r\nCNY\r\nMYR\r\nTHB\r\nKRW\r\nVND\r\nIDR\r\nINR\r\nPLN\r\nRON\r\nRUB"
+ruby_play_language_mapping: "en|en\r\nsc|zh\r\nth|th\r\nkr|ko\r\nvn|vi\r\nid|id\r\nes|es\r\npt|pt-BR"
+ruby_play_country: ''
