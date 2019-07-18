@@ -214,6 +214,11 @@ class MyProfileForm extends WebcomposerFormBase implements WebcomposerFormInterf
             '#type' => 'textfield',
             '#description' => 'label for Mobile number field placeholder',
           ],
+          'annotation' => [
+            '#title' => 'Annotation text',
+            '#type' => 'textarea',
+            '#description' => 'field annotation that will be displayed on focus',
+          ],
           'tooltip-content' => [
             '#title' => 'Tooltip text',
             '#type' => 'textarea',
@@ -256,6 +261,11 @@ class MyProfileForm extends WebcomposerFormBase implements WebcomposerFormInterf
             '#title' => 'Mobile Number 2 Label',
             '#type' => 'textfield',
             '#description' => 'The label for the Mobile Number 2 field',
+          ],
+          'annotation' => [
+            '#title' => 'Annotation text',
+            '#type' => 'textarea',
+            '#description' => 'field annotation that will be displayed on focus',
           ],
         ],
       ],
