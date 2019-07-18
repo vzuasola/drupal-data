@@ -143,5 +143,14 @@ class ContactUsConfigForm extends FormBase {
       </ul>',
       '#translatable' => TRUE,
     ];
+
+    $form['settings']['from_email'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('From Email'),
+      '#description' => $this->t('Adds froms email while sending contact us form.'),
+      '#default_value' => $this->get('from_email'),
+      '#required' => TRUE,
+      '#translatable' => TRUE,
+    ];
   }
 }
