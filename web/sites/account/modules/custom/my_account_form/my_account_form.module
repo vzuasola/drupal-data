@@ -39,4 +39,10 @@ function my_account_form_webcomposer_form_validation_alter(&$validations) {
     'description' => 'Validation to confirm new password.',
     'error' => 'Password not match.',
   ];
+
+  $validations['allowed_date'] = [
+    'title' => 'Allowed Date',
+    'description' => 'Validation to confirm allowed date.',
+    'error' => 'Date is not allowed.',
+  ];
 }
