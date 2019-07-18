@@ -376,6 +376,23 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
         ],
       ],
 
+      'captcha' => [
+        'name' => 'Sliding Captcha',
+        'type' => 'checkbox',
+        'settings' => [
+          'normal' => [
+            '#title' => 'Normal State Text',
+            '#type' => 'textfield',
+            '#description' => 'Will show when user is not yet sliding the captcha'
+          ],
+          'success' => [
+            '#title' => 'Success State Text',
+            '#type' => 'textfield',
+            '#description' => 'Will show after sliding the captcha'
+          ]
+        ],
+      ],
+
       'accept_terms' => [
         'name' => 'Accept Terms Markup',
         'type' => 'markup',
