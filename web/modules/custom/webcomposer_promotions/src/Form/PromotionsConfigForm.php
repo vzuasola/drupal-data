@@ -117,10 +117,10 @@ class PromotionsConfigForm extends FormBase {
       '#default_value' => $this->get('exception_title'),
     );
 
-    $form['exception']['exception_image'] = [
+    $form['exception']['file_image_exception'] = [
       '#type' => 'managed_file',
       '#title' => $this->t('Exception Image'),
-      '#default_value' => $this->get('exception_image'),
+      '#default_value' => $this->get('file_image_exception'),
       '#upload_location' => 'public://',
       '#upload_validators' => [
         'file_validate_extensions' => ['gif png jpg jpeg'],
