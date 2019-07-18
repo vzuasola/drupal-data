@@ -1,0 +1,21 @@
+uuid: 8a682f14-8bd9-4cdd-8f2a-d95a751717e5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_game_landscape_size
+    - node.type.games
+  module:
+    - options
+id: node.games.field_game_landscape_size
+field_name: field_game_landscape_size
+entity_type: node
+bundle: games
+label: 'Game Landscape Size'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
