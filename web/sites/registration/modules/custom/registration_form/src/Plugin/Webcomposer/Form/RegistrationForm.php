@@ -380,6 +380,11 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
         'name' => 'Sliding Captcha',
         'type' => 'checkbox',
         'settings' => [
+          'enabled' => [
+            '#title' => 'Enable this field',
+            '#type' => 'checkbox',
+            '#description' => 'Captcha will show on the form when enabled.'
+          ],
           'normal' => [
             '#title' => 'Normal State Text',
             '#type' => 'textfield',
