@@ -1,0 +1,6 @@
+webcomposer_settings.form_fields_filter:
+  version: VERSION
+  js:
+    js/form-fields-filter.js:  {}
+  dependencies:
+    - core/jquery

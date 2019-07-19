@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\webcomposer_form_field_filter\Form;
+namespace Drupal\webcomposer_settings\Form;
 
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\webcomposer_config_schema\Form\FormBase;
@@ -9,26 +9,26 @@ use Drupal\webcomposer_config_schema\Form\FormBase;
  * Filter Form configuration plugin.
  *
  * @WebcomposerConfigPlugin(
- *   id = "webcomposer_form_field_filter_form_settings",
+ *   id = "webcomposer_settings_form_fields_filter_settings",
  *   route = {
- *     "title" = "Filter Form Configuration Settings",
- *     "path" = "/admin/config/webcomposer/config/form_field_filter_settings",
+ *     "title" = "Form Fields Filter Settings",
+ *     "path" = "/admin/config/webcomposer/config/form_fields_filter_settings",
  *   },
  *   menu = {
- *     "title" = "Filter Form Configuration Settings",
+ *     "title" = "Form Fields Filter Settings",
  *     "description" = "Provides additional settings",
  *     "parent" = "webcomposer_config.list",
  *     "weight" = 100,
  *   },
  * )
  */
-class FilterFormSettingsForm extends FormBase {
+class FormFieldsFilterSettingsForm extends FormBase {
 
   /**
    * {@inheritdoc}
    */
   protected function getEditableConfigNames() {
-    return ['webcomposer_form_field_filter.form_settings'];
+    return ['webcomposer_settings.form_fields_filter_settings'];
   }
 
   /**
@@ -53,7 +53,7 @@ class FilterFormSettingsForm extends FormBase {
     $form['#disabled_form_filter'] = TRUE;
 
     foreach ($this->getConfigFactoryList() as $key => $configs) {
-      if ($key == 'webcomposer_config.form_settings') {
+      if ($key == 'webcomposer_config.form_fields_filter_settings') {
         continue;
       }
 
@@ -71,6 +71,11 @@ class FilterFormSettingsForm extends FormBase {
         '#group' => 'advanced',
       ];
 
+      $form[$id]['select'] = [
+        '#type' => 'item',
+        '#markup' => '<a href="#" class="select-all" data-checkbox-selector="' . $id . '">Select All</a> | <a href="#" class="deselect-all" data-checkbox-selector="' . $id . '">Deselect All</a><br /><br />',
+      ];
+
       $excluded_fields = ['_core', 'value', 'format', 'title'];
 
       foreach ($configs as $field_name => $value) {
@@ -82,24 +87,33 @@ class FilterFormSettingsForm extends FormBase {
           '#type' => 'checkbox',
           '#title' => $field_name,
           '#default_value' => $this->get($field_name),
-        ];
-
-        $apiUrl = implode('/', [
-          \Drupal::request()->getSchemeAndHttpHost(),
-          \Drupal::languageManager()->getCurrentLanguage()->getId(),
-          "api/general/configuration/$id?_format=json",
-        ]);
-
-        $form[$id]['api_url'] = [
-          '#type' => 'item',
-          '#title' => t('API URL'),
-          '#markup' => '<a href="' . $apiUrl . '" target="_blank">' . $apiUrl . '</a>',
-          '#weight' => 50,
+          '#attributes' => [
+            'class' => [$id . '-form-fields-filter']
+          ],
         ];
       }
+
+      $apiUrl = implode('/', [
+        \Drupal::request()->getSchemeAndHttpHost(),
+        \Drupal::languageManager()->getCurrentLanguage()->getId(),
+        "api/general/configuration/$id?_format=json",
+      ]);
+
+      $form[$id]['api_url'] = [
+        '#type' => 'item',
+        '#title' => t('API URL'),
+        '#markup' => '<a href="' . $apiUrl . '" target="_blank">' . $apiUrl . '</a>',
+        '#weight' => 50,
+      ];
     }
 
+    $form['#attached']['library'][] = 'webcomposer_settings/webcomposer_settings.form_fields_filter';
+
     return $form;
+  }
+
+  private function selectAllScript() {
+    return '(function(){var checboxes = document.querySelector(this.getAttribute("data-checkbox-selector")); console.log(checboxes);}();';
   }
 
 }

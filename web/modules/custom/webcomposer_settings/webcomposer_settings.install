@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * @file
+ * It will uninstall the config during module uninstallation.
+ */
+
+/**
+ * Implements hook_uninstall.
+ */
+function webcomposer_settings_uninstall() {
+    \Drupal::configFactory()->getEditable('webcomposer_settings.form_fields_filter_settings')->delete();
+}
