@@ -19,6 +19,9 @@ dependencies:
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_post_content_position
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_preview_display_only
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_publish_date
+    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_ribbon_background_color
+    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_ribbon_label_color
+    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_ribbon_product_label
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_slider_enable_game_launch
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_slider_game_code
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_slider_game_provider
@@ -27,6 +30,7 @@ dependencies:
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_title
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_unpublish_date
   module:
+    - color_field
     - datetime
     - image
     - link
@@ -203,6 +207,46 @@ content:
     third_party_settings: {  }
     type: datetime_default
     region: content
+  field_ribbon_background_color:
+    weight: 21
+    label: above
+    settings:
+      format: hex
+      opacity: '1'
+    third_party_settings: {  }
+    type: color_field_formatter_text
+    region: content
+  field_ribbon_label_color:
+    weight: 22
+    label: above
+    settings:
+      format: hex
+      opacity: '1'
+    third_party_settings: {  }
+    type: color_field_formatter_text
+    region: content
+  field_ribbon_product_label:
+    weight: 23
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_slider_game_code:
+    type: string
+    weight: 24
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_slider_game_provider:
+    type: list_default
+    weight: 25
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
   field_status:
     weight: 21
     label: above
