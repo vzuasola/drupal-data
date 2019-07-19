@@ -4,3 +4,10 @@ webcomposer_settings.form_fields_filter:
     js/form-fields-filter.js:  {}
   dependencies:
     - core/jquery
+
+webcomposer_settings.entity_blocks_filter:
+  version: VERSION
+  js:
+    js/entity-blocks-filter.js:  {}
+  dependencies:
+    - core/jquery

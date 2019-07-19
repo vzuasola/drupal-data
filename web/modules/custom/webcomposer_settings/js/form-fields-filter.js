@@ -8,7 +8,7 @@
     'use strict';
   
     /**
-     * Filter webform autocomplete handler.
+     * Webcomposer settings handler.
      *
      * @type {Drupal~behavior}
      */

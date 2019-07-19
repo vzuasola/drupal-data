@@ -111,9 +111,4 @@ class FormFieldsFilterSettingsForm extends FormBase {
 
     return $form;
   }
-
-  private function selectAllScript() {
-    return '(function(){var checboxes = document.querySelector(this.getAttribute("data-checkbox-selector")); console.log(checboxes);}();';
-  }
-
 }

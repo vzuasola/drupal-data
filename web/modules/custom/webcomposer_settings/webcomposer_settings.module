@@ -24,6 +24,64 @@ function webcomposer_settings_help($route_name, RouteMatchInterface $route_match
   }
 }
 
+/**
+ * Prepares variables for administrative index page templates.
+ *
+ * Default template: admin-page.html.twig.
+ *
+ * @param $variables
+ *   An associative array containing:
+ *   - blocks: An array of blocks to display. Each array should include a
+ *     'title', a 'description', a formatted 'content' and a 'position' which
+ *     will control which container it will be in. This is usually 'left' or
+ *     'right'.
+ */
+function webcomposer_settings_preprocess_admin_page(&$variables) {
+  $settings = \Drupal::getContainer()
+    ->get('config.factory')
+    ->getEditable('webcomposer_settings.admin_page_entity_blocks_settings')
+    ->get();
+
+  $blocks = _webcomposer_settings_entity_blocks_link($variables['blocks'], $settings);
+
+  $variables['containers'] = [];
+  $stripe = 0;
+  foreach ($blocks as $block) {
+    if (!empty($block['content']['#content'])) {
+      if (empty($block['position'])) {
+        // Perform automatic striping.
+        $block['position'] = ++$stripe % 2 ? 'left' : 'right';
+      }
+      $variables['containers'][$block['position']]['blocks'][] = [
+        '#theme' => 'admin_block',
+        '#block' => $block,
+      ];
+    }
+  }
+}
+
+/**
+ * Recursively removes the admin blocks and its links.
+ */
+function _webcomposer_settings_entity_blocks_link(&$blocks, $settings) {
+  foreach ($blocks as $desc => &$block) {
+    foreach ($settings as $menu_name => $value) {
+      $menu_id = str_replace('___', ':', $menu_name);
+      $menu_id = str_replace('__', '.', $menu_id);
+
+      if (strpos($desc, $menu_id) > 0 && $value == 1) {
+        unset($blocks[$desc]);
+        continue 2;
+      }
+    }
+
+    if (isset($block['content']) && !empty($block['content'])) {
+      $block['content']['#content'] = _webcomposer_settings_entity_blocks_link($block['content']['#content'], $settings);
+    }
+  }
+
+  return $blocks;
+}
 
 /**
  * Implements hook_config_schema_form_base_alter().
@@ -35,7 +93,10 @@ function webcomposer_settings_config_schema_form_base_alter(&$form) {
 
   $excluded_field_types = ['vertical_tabs'];
 
-  $settings = \Drupal::getContainer()->get('config.factory')->get('webcomposer_settings.form_fields_filter_settings')->get();
+  $settings = \Drupal::getContainer()
+    ->get('config.factory')
+    ->get('webcomposer_settings.form_fields_filter_settings')
+    ->get();
 
   foreach (Element::children($form) as $group_name) {
     if (!in_array($form[$group_name]['#type'], $excluded_field_types)) {
