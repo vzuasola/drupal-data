@@ -1,0 +1,70 @@
+<?php
+
+/**
+ * @file
+ * Contains webcomposer_form_field_filter.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Render\Element;
+
+/**
+ * Implements hook_help().
+ */
+function webcomposer_form_field_filter_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the webcomposer_form_field_filter module.
+    case 'help.page.webcomposer_form_field_filter':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Web Composer Form Field Filter') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+
+/**
+ * Implements hook_config_schema_form_base_alter().
+ */
+function webcomposer_form_field_filter_config_schema_form_base_alter(&$form) {
+  if (isset($form['#disabled_form_filter']) && $form['#disabled_form_filter']) {
+    return;
+  }
+
+  $excluded_field_types = ['vertical_tabs'];
+
+  $settings = \Drupal::getContainer()->get('config.factory')->get('webcomposer_form_field_filter.form_settings')->get();
+
+  foreach (Element::children($form) as $group_name) {
+    if (!in_array($form[$group_name]['#type'], $excluded_field_types)) {
+      $fields = Element::children($form[$group_name]);
+
+      foreach ($fields as $key => $field_name) {
+        if ($props = Element::children($form[$group_name][$field_name])) {
+          foreach ($props as $index => $prop_name) {
+            if (isset($settings[$prop_name]) && $settings[$prop_name] == 0) {
+              unset($form[$group_name][$field_name][$prop_name]);
+              unset($props[$index]);
+            }
+
+            if (empty($props)) {
+              unset($form[$group_name][$field_name]);
+            }
+          }
+        }
+
+        if (isset($settings[$field_name]) && $settings[$field_name] == 0) {
+          unset($form[$group_name][$field_name]);
+          unset($fields[$key]);
+        }
+      }
+
+      if (empty(Element::children($form[$group_name]))) {
+        unset($form[$group_name]);
+      }
+    }
+  }
+}
+

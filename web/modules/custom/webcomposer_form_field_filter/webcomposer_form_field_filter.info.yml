@@ -1,0 +1,8 @@
+name: Webcomposer Form Field Filter
+type: module
+description: Web composer form field filter
+core: 8.x
+package: Web Composer
+dependencies:
+  - webcomposer_config
+  - webcomposer_config_schema
