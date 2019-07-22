@@ -2,7 +2,6 @@
 
 namespace Drupal\webcomposer_rest_extra\Event;
 
-use Drupal\user\UserInterface;
 use Symfony\Component\EventDispatcher\Event;
 
 /**
