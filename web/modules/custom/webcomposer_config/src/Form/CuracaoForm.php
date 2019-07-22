@@ -66,7 +66,7 @@ class CuracaoForm extends FormBase {
       '#default_value' => $this->get('status'),
       '#weight' => 5,
     ];
-   
+
     return $form;
   }
 }
