@@ -135,6 +135,13 @@ class LoginForm extends FormBase {
       '#translatable' => TRUE,
     ];
 
+    $form['login_form_error_messages_details']['error_message_restricted_country'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Error for restricted country'),
+      '#default_value' => $this->get('error_message_restricted_country'),
+      '#translatable' => TRUE,
+    ];
+
     $form['login_form_error_messages_details']['error_message_service_not_available'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Error thrown by services'),
