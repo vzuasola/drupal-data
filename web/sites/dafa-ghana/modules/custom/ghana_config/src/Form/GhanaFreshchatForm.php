@@ -50,10 +50,37 @@ class GhanaFreshchatForm extends FormBase {
             '#group' => 'advanced',
         ];
 
+        $form['ghana_freshchat_settings']['token'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Freshchat Token'),
+            '#default_value' => $this->get('token'),
+            '#translatable' => TRUE,
+        ];
+
         $form['ghana_freshchat_settings']['enability'] = [
             '#type' => 'checkbox',
             '#title' => $this->t('Enable Freshchat'),
-            '#default_value' => TRUE,
+            '#default_value' => $this->get('enability'),
+            '#translatable' => TRUE,
+        ];
+
+        $form['ghana_freshchat_faq_settings'] = [
+            '#type' => 'details',
+            '#title' => t('FAQ Settings'),
+            '#group' => 'advanced',
+        ];
+
+        $form['ghana_freshchat_faq_settings']['faq_show'] = [
+            '#type' => 'checkbox',
+            '#title' => $this->t('Hide FAQ'),
+            '#default_value' => $this->get('faq_show'),
+            '#translatable' => TRUE,
+        ];
+
+        $form['ghana_freshchat_faq_settings']['faq_show_on_open'] = [
+            '#type' => 'checkbox',
+            '#title' => $this->t('Show FAQ on chat open'),
+            '#default_value' => $this->get('faq_show_on_open'),
             '#translatable' => TRUE,
         ];
     }
