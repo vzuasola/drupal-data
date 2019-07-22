@@ -71,9 +71,12 @@ class FormFieldsFilterSettingsForm extends FormBase {
         '#group' => 'advanced',
       ];
 
+      $select_all = '<a href="#" class="select-all" data-checkbox-selector="' . $id . '">Select All</a>';
+      $deselect_all = '<a href="#" class="deselect-all" data-checkbox-selector="' . $id . '">Deselect All</a>';
+
       $form[$id]['select'] = [
         '#type' => 'item',
-        '#markup' => '<a href="#" class="select-all" data-checkbox-selector="' . $id . '">Select All</a> | <a href="#" class="deselect-all" data-checkbox-selector="' . $id . '">Deselect All</a><br /><br />',
+        '#markup' =>  $select_all . ' | ' . $deselect_all . '<br /><br />',
       ];
 
       $excluded_fields = ['_core', 'value', 'format', 'title'];

@@ -34,7 +34,9 @@ class ConfigurationResourceSubscriber implements EventSubscriberInterface {
    * @param \Drupal\webcomposer_rest_extra\Event\ConfigurationResourceEvent $event
    */
   public function configAlter($event) {
-    $settings = \Drupal::service('config.factory')->get('webcomposer_settings.form_fields_filter_settings')->get();
+    $settings = \Drupal::service('config.factory')
+      ->get('webcomposer_settings.form_fields_filter_settings')
+      ->get();
 
     foreach (array_keys($event->data) as $key) {
       if (isset($settings[$key]) && $settings[$key] == 0) {
