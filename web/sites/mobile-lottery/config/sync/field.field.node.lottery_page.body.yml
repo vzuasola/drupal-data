@@ -1,0 +1,22 @@
+uuid: c56a1267-f314-4e8c-9ff0-534d25b1516a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.lottery_page
+  module:
+    - text
+id: node.lottery_page.body
+field_name: body
+entity_type: node
+bundle: lottery_page
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

@@ -1,5 +1,5 @@
-uuid: b880e043-7172-4564-8206-7e730c083dec
-langcode: vi
+uuid: 6b52205b-096c-4b51-a4e1-c26d332eaa40
+langcode: hi
 status: true
 dependencies:
   module:
@@ -7,9 +7,9 @@ dependencies:
 third_party_settings:
   webcomposer_language_hierarchy:
     webcomposer_fallback_langcode: en
-    webcomposer_language_custom_label: 'Tiếng Việt'
-id: vi
-label: Vietnamese
+    webcomposer_language_custom_label: हिन्दी
+id: hi
+label: 'Hindi (India)'
 direction: ltr
-weight: -7
+weight: -4
 locked: false

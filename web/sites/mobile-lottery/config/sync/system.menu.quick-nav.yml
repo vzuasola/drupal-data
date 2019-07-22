@@ -1,0 +1,8 @@
+uuid: b28ead29-0aa0-4c89-b781-ce99bcae53e7
+langcode: en
+status: true
+dependencies: {  }
+id: quick-nav
+label: 'Quick Nav'
+description: ''
+locked: false
