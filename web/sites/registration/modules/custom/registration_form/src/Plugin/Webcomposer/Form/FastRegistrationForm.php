@@ -242,6 +242,38 @@ class FastRegistrationForm extends WebcomposerFormBase implements WebcomposerFor
         ],
       ],
 
+      'captcha' => [
+        'name' => 'Sliding Captcha',
+        'type' => 'checkbox',
+        'settings' => [
+          'enabled' => [
+            '#title' => 'Enable this field',
+            '#type' => 'checkbox',
+            '#description' => 'Captcha will show on the form when enabled.'
+          ],
+          'initial' => [
+            '#title' => 'Initial State Text',
+            '#type' => 'textfield',
+            '#description' => 'Will show when user is not yet sliding the captcha'
+          ],
+          'sliding' => [
+            '#title' => 'Sliding State Text',
+            '#type' => 'textfield',
+            '#description' => 'Will show when user is sliding the captcha'
+          ],
+          'failed' => [
+            '#title' => 'Failed State Text',
+            '#type' => 'textfield',
+            '#description' => 'Will show when user left the captcha unfinished'
+          ],
+          'success' => [
+            '#title' => 'Success State Text',
+            '#type' => 'textfield',
+            '#description' => 'Will show after sliding the captcha'
+          ]
+        ],
+      ],
+
       'accept_terms' => [
         'name' => 'Accept Terms Markup',
         'type' => 'markup',
