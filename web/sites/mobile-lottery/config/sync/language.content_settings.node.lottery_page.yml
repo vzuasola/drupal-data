@@ -1,0 +1,16 @@
+uuid: 0e79196c-6e99-4b62-af30-4ad3fe4168d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.lottery_page
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.lottery_page
+target_entity_type_id: node
+target_bundle: lottery_page
+default_langcode: site_default
+language_alterable: true

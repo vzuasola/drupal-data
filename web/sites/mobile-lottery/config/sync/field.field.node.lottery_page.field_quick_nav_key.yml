@@ -1,0 +1,19 @@
+uuid: 1285436d-330d-459b-8f56-a72aceba596c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_quick_nav_key
+    - node.type.lottery_page
+id: node.lottery_page.field_quick_nav_key
+field_name: field_quick_nav_key
+entity_type: node
+bundle: lottery_page
+label: 'Quick Nav Key'
+description: 'Key used to map Lottery Pages to Quick Nav Menus. Usually used as class under Attributes fieldset.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
