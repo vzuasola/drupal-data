@@ -10,4 +10,5 @@
  */
 function webcomposer_settings_uninstall() {
     \Drupal::configFactory()->getEditable('webcomposer_settings.form_fields_filter_settings')->delete();
+    \Drupal::configFactory()->getEditable('webcomposer_settings.admin_page_entity_blocks_settings')->delete();
 }
