@@ -412,8 +412,7 @@ class MyAccountRegistrationForm extends FormBase
         return $form;
     }
 
-    private function mobileNumberAnnotation(&$form){
-
+    private function mobileNumberAnnotation(&$form) {
         $form['mobile_number_config'] = [
             '#type' => 'details',
             '#title' => 'Mobile Number Annotation',
