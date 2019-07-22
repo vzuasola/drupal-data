@@ -134,7 +134,8 @@ class WebComposerSiteMaintenanceConfigurationForm extends FormBase {
       : '';
 
       if ($unpublishDate < $publishDate) {
-        $form_state->setErrorByName('maintenance_unpublish_date_' . $text_key, t('Unpublish date should be greater than the publish date.'));
+        $form_state->setErrorByName('maintenance_unpublish_date_' . $text_key,
+         t('Unpublish date should be greater than the publish date.'));
       }
     }
   }
