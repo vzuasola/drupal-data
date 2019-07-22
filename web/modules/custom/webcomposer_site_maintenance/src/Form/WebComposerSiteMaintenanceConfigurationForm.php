@@ -24,8 +24,6 @@ use Drupal\Core\Datetime\DrupalDateTime;
  */
 class WebComposerSiteMaintenanceConfigurationForm extends FormBase {
 
-    const MAINTENANCE_TIMEZONE = 'UTC';
-
     const MAINTENANCE_TIME_FORMAT = 'm/d/Y H:i:s';
 
   /**
