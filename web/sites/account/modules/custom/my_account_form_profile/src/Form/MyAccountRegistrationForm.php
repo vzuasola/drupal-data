@@ -407,8 +407,28 @@ class MyAccountRegistrationForm extends FormBase
         ];
 
         $this->fastRegConfig($form);
+        $this->mobileNumberAnnotation($form);
 
         return $form;
+    }
+
+    private function mobileNumberAnnotation(&$form)
+    {
+        $form['mobile_number_config'] = [
+            '#type' => 'details',
+            '#title' => 'Mobile Number Annotation',
+            '#open' => False,
+            '#group' => 'profile',
+        ];
+
+        $form['mobile_number_config']['enable_mobile_number_annotation'] = [
+            '#type' => 'checkbox',
+            '#title' => $this->t('Enable annotaion'),
+            '#required' => FALSE,
+            '#description' => $this->t('lorem ipsum'),
+            '#default_value' => $this->get('enable_mobile_number_annotation') ?? true,
+            '#translatable' => true,
+        ];
     }
 
     private function fastRegConfig(&$form) {

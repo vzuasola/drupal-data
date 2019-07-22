@@ -262,6 +262,11 @@ class MyProfileForm extends WebcomposerFormBase implements WebcomposerFormInterf
             '#type' => 'textfield',
             '#description' => 'The label for the Mobile Number 2 field',
           ],
+          'placeholder' => [
+            '#title' => 'Mobile Number placeholder label',
+            '#type' => 'textfield',
+            '#description' => 'label for Mobile number field placeholder',
+          ],
           'annotation' => [
             '#title' => 'Annotation text',
             '#type' => 'textarea',
