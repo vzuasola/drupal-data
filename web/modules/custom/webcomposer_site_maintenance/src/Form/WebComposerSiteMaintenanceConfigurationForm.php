@@ -133,7 +133,7 @@ class WebComposerSiteMaintenanceConfigurationForm extends FormBase {
       ? $form_state->getValue('maintenance_unpublish_date_' . $text_key)->getTimestamp()
       : '';
 
-      if ($unpublishDate < $publishDate) {
+      if ($unpublishDate && $unpublishDate < $publishDate) {
         $form_state->setErrorByName('maintenance_unpublish_date_' . $text_key,
          t('Unpublish date should be greater than the publish date.'));
       }
