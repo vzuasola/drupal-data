@@ -412,8 +412,8 @@ class MyAccountRegistrationForm extends FormBase
         return $form;
     }
 
-    private function mobileNumberAnnotation(&$form)
-    {
+    private function mobileNumberAnnotation(&$form){
+
         $form['mobile_number_config'] = [
             '#type' => 'details',
             '#title' => 'Mobile Number Annotation',
@@ -423,9 +423,9 @@ class MyAccountRegistrationForm extends FormBase
 
         $form['mobile_number_config']['enable_mobile_number_annotation'] = [
             '#type' => 'checkbox',
-            '#title' => $this->t('Enable annotaion'),
+            '#title' => $this->t('Enable Mobile Number Annotation'),
             '#required' => FALSE,
-            '#description' => $this->t('lorem ipsum'),
+            '#description' => $this->t('Enable annotation in mobile number field'),
             '#default_value' => $this->get('enable_mobile_number_annotation') ?? true,
             '#translatable' => true,
         ];
