@@ -16,6 +16,7 @@ function contact_us_config_mail($key, &$message, $params) {
         $email_template = \Drupal::config('contact_us_config.contact_us_configuration')->get('email_template');
 
         $subject = html::escape($params['subject']);
+        $email = html::escape($params['email']);
         $firstName = html::escape($params['firstname']);
         $lastName = html::escape($params['lastname']);
         $from = html::escape($message['reply-to']);
@@ -24,7 +25,7 @@ function contact_us_config_mail($key, &$message, $params) {
         $body = Html::escape($params['body']);
 
         $message['subject'] = $subject;
-        $message['headers']['From'] = "$firstName $lastName <$from>";
+        $message['headers']['From'] = "$from";
 
         $messageBody = str_replace([
             '@firstname',
@@ -41,7 +42,7 @@ function contact_us_config_mail($key, &$message, $params) {
             $firstName,
             $lastName,
             $userName,
-            $from,
+            $email,
             $product,
             $subject,
             $body,
