@@ -8,6 +8,8 @@ dependencies:
 third_party_settings:
   content_translation:
     enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
 _core:
   default_config_hash: hk5Ywaji0rc3htM5DWc1yf3n_ptyP7Rld9iz_Sah5pU
 id: metatag_entity.metatag_entity
