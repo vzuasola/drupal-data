@@ -287,4 +287,6 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_slider_enable_game_launch: true
+  field_slider_use_game_loader: true
   langcode: true
