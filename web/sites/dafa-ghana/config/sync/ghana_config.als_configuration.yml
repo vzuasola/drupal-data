@@ -1,6 +1,6 @@
 als_url: 'https://als.dafabet.com.gh/m/en[query:({tracking})]'
 als_cookie_url_pre: ''
-als_cookie_url_post: "cashierDeposit|https://mpay.dafabet.com.gh/en/transaction/deposit/cloudafrica_deposit[query:(ticket={auth.token}&{tracking})]\r\ncashierDeposit|https://mpay.dafabet.com.gh/en/transaction/deposit/cloudafrica_deposit[query:(ticket={auth.token}&{tracking})]\r\ncashierWithdrawal|https://mpay.dafabet.com.gh/en/transaction/withdrawal/cloudafrica_withdraw[query:(ticket={auth.token}&{tracking})]"
+als_cookie_url_post: "cashierDeposit|https://mpay.dafabet.com.gh/en/transaction/deposit/cloudafrica_deposit[query:(ticket={auth.token}&{tracking})]\r\ncashierWithdrawal|https://mpay.dafabet.com.gh/en/transaction/withdrawal/cloudafrica_withdraw[query:(ticket={auth.token}&{tracking})]"
 als_enable_domain: 1
 advanced__active_tab: edit-als-configuration-setting
 ghana_footer_title: Footer
