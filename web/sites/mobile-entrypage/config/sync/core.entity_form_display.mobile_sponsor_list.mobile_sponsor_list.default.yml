@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.mobile_sponsor_list.mobile_sponsor_list.field_mobile_full_row
+    - field.field.mobile_sponsor_list.mobile_sponsor_list.field_mobile_row
     - field.field.mobile_sponsor_list.mobile_sponsor_list.field_mobile_sponsor_row_enable
     - field.field.mobile_sponsor_list.mobile_sponsor_list.field_sponsors_row
     - field.field.mobile_sponsor_list.mobile_sponsor_list.field_sponsors_row_title
@@ -15,15 +15,14 @@ targetEntityType: mobile_sponsor_list
 bundle: mobile_sponsor_list
 mode: default
 content:
-  field_mobile_full_row:
-    weight: 3
-    settings:
-      display_label: true
+  field_mobile_row:
+    weight: 2
+    settings: {  }
     third_party_settings: {  }
-    type: boolean_checkbox
+    type: options_select
     region: content
   field_mobile_sponsor_row_enable:
-    weight: 2
+    weight: 3
     settings:
       display_label: true
     third_party_settings: {  }
