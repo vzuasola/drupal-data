@@ -217,6 +217,13 @@ class GeneralConfiguration extends FormBase {
       '#default_value' => $this->get('cashier_url_native'),
       '#required' => TRUE,
     ];
+    $form['integration']['iovation_portal_ids'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Iovation Portal IDs'),
+      '#description' => $this->t('portal IDs where will iovation be invoked'),
+      '#default_value' => $this->get('iovation_portal_ids') ?? '22,123,26,128,29,131,48,141',
+      '#required' => TRUE,
+    ];
   }
 
   /**
