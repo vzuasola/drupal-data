@@ -73,6 +73,14 @@ function webcomposer_language_hierarchy_form_language_admin_edit_form_alter(&$fo
     '#default_value' => $this_language->getThirdPartySetting('webcomposer_language_hierarchy', 'webcomposer_language_custom_label'),
   );
 
+  // Hide language
+  $form['webcomposer_language_hidden'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Hide Language'),
+    '#description' => t('Note: Setting this will hide this language in the language list, but will still be enabled within the CMS.'),
+    '#default_value' => $this_language->getThirdPartySetting('webcomposer_language_hierarchy', 'webcomposer_language_hidden', false),
+  );
+
   $options['site_default_language'] = t('Site Default Language(' . $default_language->getName(). ')');
   $form['webcomposer_language_hierarchy_fallback_langcode'] = array(
     '#type' => 'select',
@@ -110,4 +118,9 @@ function webcomposer_language_hierarchy_form_language_admin_edit_form_builder($e
       'webcomposer_language_custom_label'
     );
   }
+  $this_language->setThirdPartySetting(
+    'webcomposer_language_hierarchy',
+    'webcomposer_language_hidden',
+    $form_state->getValue('webcomposer_language_hidden')
+  );
 }
