@@ -4,15 +4,13 @@ status: true
 dependencies:
   module:
     - node
+    - text
 id: node.field_maintenance_blurb
 field_name: field_maintenance_blurb
 entity_type: node
-type: string
-settings:
-  max_length: 255
-  is_ascii: false
-  case_sensitive: false
-module: core
+type: text_long
+settings: {  }
+module: text
 locked: false
 cardinality: 1
 translatable: true
