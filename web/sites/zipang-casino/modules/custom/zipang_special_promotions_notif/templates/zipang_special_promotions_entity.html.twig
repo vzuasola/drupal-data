@@ -1,0 +1,22 @@
+{#
+/**
+ * @file zipang_special_promotions_entity.html.twig
+ * Default theme implementation to present Zipang special promotions entity data.
+ *
+ * This template is used when viewing Zipang special promotions entity pages.
+ *
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_zipang_special_promotions_entity()
+ *
+ * @ingroup themeable
+ */
+#}
+<div{{ attributes.addClass('zipang_special_promotions_entity') }}>
+  {% if content %}
+    {{- content -}}
+  {% endif %}
+</div>

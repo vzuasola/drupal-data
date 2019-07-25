@@ -1,0 +1,20 @@
+uuid: 5bd064be-fed4-4425-9d5a-802d92d15392
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.zipang_special_promotions_entity.field_button_url
+  module:
+    - zipang_special_promotions_notif
+id: zipang_special_promotions_entity.zipang_special_promotions_entity.field_button_url
+field_name: field_button_url
+entity_type: zipang_special_promotions_entity
+bundle: zipang_special_promotions_entity
+label: 'Button URL '
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
