@@ -421,6 +421,11 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
         ],
       ],
 
+      'ioblackbox' => [
+        'name' => 'Iovation Blackbox hidden field',
+        'type' => 'hidden',
+      ],
+
       'submit' => [
         'name' => 'Submit',
         'type' => 'submit',
