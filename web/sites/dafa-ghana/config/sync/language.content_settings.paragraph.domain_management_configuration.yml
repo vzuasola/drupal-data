@@ -9,6 +9,8 @@ dependencies:
 third_party_settings:
   content_translation:
     enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
 _core:
   default_config_hash: UL4Xw7OnIXp8jrRm9AV2BCyt5M4OISO1-5b7e9WLnnE
 id: paragraph.domain_management_configuration

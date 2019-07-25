@@ -14,7 +14,7 @@ bundle: domain_management_configuration
 label: 'Placeholder Key'
 description: 'Unique identifier for the placeholder. Use only numbers, letters, -, and -'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

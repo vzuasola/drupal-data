@@ -1,0 +1,95 @@
+vip_settings_tab__active_tab: edit-gold-level-card-section
+vip_home_title: 'Be a Dafabet VIP today!'
+vip_level_card_ribbon_title: 'VIP LEVELS'
+vip_level_card_blurb: 'Level up and reach for the top'
+vip_level_card_unlocked: 'You''ve unlocked this level!'
+rewards_recognition_title: 'VIP REWARDS AND RECOGNITION'
+rewards_recognition_content:
+  value: "<p class=\"text-align-center mb-25\"><strong>Expect the best VIP experience only at Dafabet</strong></p>\r\n\r\n<div style=\"overflow-x:auto;\">\r\n<table border=\"1\" cellpadding=\"1\" cellspacing=\"1\" style=\"width: 100%;\">\r\n\t<tbody>\r\n\t\t<tr>\r\n\t\t\t<td style=\"background-color: rgb(175, 0, 0); width: 461px;\">&nbsp;</td>\r\n\t\t\t<td class=\"text-white\" style=\"background-color: rgb(175, 0, 0); text-align: center; vertical-align: middle; width: 245px;\"><span class=\"icon-vip-bronze\"></span><br />\r\n\t\t\tBRONZE</td>\r\n\t\t\t<td class=\"text-white\" style=\"background-color: rgb(175, 0, 0); text-align: center; vertical-align: middle; width: 245px;\"><span class=\"icon-vip-silver\"></span><br />\r\n\t\t\tSILVER</td>\r\n\t\t\t<td class=\"text-white\" style=\"background-color: rgb(175, 0, 0); text-align: center; vertical-align: middle; width: 245px;\"><span class=\"icon-vip-gold\"></span><br />\r\n\t\t\tGOLD</td>\r\n\t\t\t<td class=\"text-white\" style=\"background-color: rgb(175, 0, 0); text-align: center; vertical-align: middle; width: 245px;\"><span class=\"icon-vip-platinum\"></span><br />\r\n\t\t\tPLATINUM</td>\r\n\t\t</tr>\r\n\t\t<tr class=\"text-white\">\r\n\t\t\t<td style=\"background-color: rgb(55, 55, 55); text-align: center; vertical-align: middle; width: 461px; border-color: rgb(55, 55, 55);\"><strong><span class=\"text-16\"><span class=\"text-yellow\"></span></span></strong><font color=\"#ffe000\"><span style=\"font-size:16px\"><b>REBATES</b></span></font></td>\r\n\t\t\t<td colspan=\"4\" style=\"background-color: rgb(55, 55, 55); width: 670px; border-color: rgb(55, 55, 55);\">&nbsp;</td>\r\n\t\t</tr>\r\n\t\t<tr class=\"odd\">\r\n\t\t\t<td style=\"width: 461px; border-color: rgb(55, 55, 55);\"><span class=\"text-black\">Mix Parlay Rebate</span></td>\r\n\t\t\t<td class=\"text-align-center\" style=\"width: 158px; border-color: rgb(55, 55, 55);\"><span class=\"text-black\">2%</span></td>\r\n\t\t\t<td class=\"text-align-center\" style=\"width: 160px; border-color: rgb(55, 55, 55);\"><span class=\"text-black\">3%</span></td>\r\n\t\t\t<td class=\"text-align-center\" style=\"width: 156px; border-color: rgb(55, 55, 55);\"><span class=\"text-black\">3.5%</span></td>\r\n\t\t\t<td class=\"text-align-center\" style=\"width: 136px; border-color: rgb(55, 55, 55);\"><span class=\"text-black\">4%</span></td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td style=\"background-color: rgb(55, 55, 55); text-align: center; vertical-align: middle; width: 461px; border-color: rgb(55, 55, 55);\"><strong><span class=\"text-16\"><span class=\"text-yellow\">EXCLUSIVE ACCESS AND PROMOS</span></span></strong></td>\r\n\t\t\t<td colspan=\"4\" style=\"background-color: rgb(55, 55, 55); width: 670px; border-color: rgb(55, 55, 55);\">&nbsp;</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td style=\"width: 461px; border-color: rgb(55, 55, 55);\"><span class=\"text-black\">Deposit and Withdrawal Prioritization</span></td>\r\n\t\t\t<td class=\"text-align-center\" style=\"width: 158px; border-color: rgb(55, 55, 55);\"><span class=\"text-black\"></span> <span>​</span><span class=\"text-black\"><img alt=\"check-icon-vip.png\" data-entity-type=\"file\" data-entity-uuid=\"\" height=\"22\" src=\"/sites/dafa-ghana/files/images/check-icon-vip.png\" width=\"28\" /></span><span>​</span></td>\r\n\t\t\t<td class=\"text-align-center\" style=\"width: 160px; border-color: rgb(55, 55, 55);\"><span class=\"text-black\"></span> <span>​</span><span class=\"text-black\"><img alt=\"check-icon-vip.png\" data-entity-type=\"\" data-entity-uuid=\"\" height=\"22\" src=\"/sites/dafa-ghana/files/images/check-icon-vip.png\" width=\"28\" /></span><span>​</span></td>\r\n\t\t\t<td class=\"text-align-center\" style=\"width: 156px; border-color: rgb(55, 55, 55);\"><span class=\"text-black\">High Priority</span></td>\r\n\t\t\t<td class=\"text-align-center\" style=\"width: 136px; border-color: rgb(55, 55, 55);\"><span class=\"text-black\">First Priority</span></td>\r\n\t\t</tr>\r\n\t\t<tr class=\"odd\">\r\n\t\t\t<td style=\"width: 461px; border-color: rgb(55, 55, 55);\"><span class=\"text-black\">Betting Limits</span></td>\r\n\t\t\t<td class=\"text-align-center\" style=\"width: 158px; border-color: rgb(55, 55, 55);\"><span class=\"text-black\">Standard</span></td>\r\n\t\t\t<td class=\"text-align-center\" style=\"width: 160px; border-color: rgb(55, 55, 55);\"><span class=\"text-black\">Standard</span></td>\r\n\t\t\t<td class=\"text-align-center\" style=\"width: 156px; border-color: rgb(55, 55, 55);\"><span class=\"text-black\">High Limits</span></td>\r\n\t\t\t<td class=\"text-align-center\" style=\"width: 136px; border-color: rgb(55, 55, 55);\"><span class=\"text-black\">Elite Limits</span></td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td style=\"width: 461px; border-color: rgb(55, 55, 55);\"><span class=\"text-black\">Exclusive Gifts, Rewards &amp; Tournaments</span></td>\r\n\t\t\t<td class=\"text-align-center\" style=\"width: 158px; border-color: rgb(55, 55, 55);\"><span class=\"text-black\"></span></td>\r\n\t\t\t<td class=\"text-align-center\" style=\"width: 160px; border-color: rgb(55, 55, 55);\"><span class=\"text-black\"><img alt=\"check-icon-vip.png\" data-entity-type=\"\" data-entity-uuid=\"\" height=\"22\" src=\"/sites/dafa-ghana/files/images/check-icon-vip.png\" width=\"28\" /></span></td>\r\n\t\t\t<td class=\"text-align-center\" style=\"width: 156px; border-color: rgb(55, 55, 55);\"><span class=\"text-black\"><img alt=\"check-icon-vip.png\" data-entity-type=\"\" data-entity-uuid=\"\" height=\"22\" src=\"/sites/dafa-ghana/files/images/check-icon-vip.png\" width=\"28\" /></span></td>\r\n\t\t\t<td class=\"text-align-center\" style=\"width: 136px; border-color: rgb(55, 55, 55);\"><span class=\"text-black\"><img alt=\"check-icon-vip.png\" data-entity-type=\"\" data-entity-uuid=\"\" height=\"22\" src=\"/sites/dafa-ghana/files/images/check-icon-vip.png\" width=\"28\" /></span></td>\r\n\t\t</tr>\r\n\t\t<tr class=\"odd\">\r\n\t\t\t<td style=\"width: 461px; border-color: rgb(55, 55, 55);\"><span class=\"text-black\">VIP Exclusive Promotions and Bonuses</span></td>\r\n\t\t\t<td class=\"text-align-center\" style=\"width: 158px; border-color: rgb(55, 55, 55);\"><span class=\"text-black\"></span></td>\r\n\t\t\t<td class=\"text-align-center\" style=\"width: 160px; border-color: rgb(55, 55, 55);\"><span class=\"text-black\"></span></td>\r\n\t\t\t<td class=\"text-align-center\" style=\"width: 156px; border-color: rgb(55, 55, 55);\"><span class=\"text-black\"><img alt=\"check-icon-vip.png\" data-entity-type=\"\" data-entity-uuid=\"\" height=\"22\" src=\"/sites/dafa-ghana/files/images/check-icon-vip.png\" width=\"28\" /></span></td>\r\n\t\t\t<td class=\"text-align-center\" style=\"width: 136px; border-color: rgb(55, 55, 55);\"><span class=\"text-black\"><img alt=\"check-icon-vip.png\" data-entity-type=\"\" data-entity-uuid=\"\" height=\"22\" src=\"/sites/dafa-ghana/files/images/check-icon-vip.png\" width=\"28\" /></span></td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td style=\"width: 461px; border-color: rgb(55, 55, 55);\"><span class=\"text-black\">Priority Payment Solutions</span></td>\r\n\t\t\t<td class=\"text-align-center\" style=\"width: 158px; border-color: rgb(55, 55, 55);\"><span class=\"text-black\"></span></td>\r\n\t\t\t<td class=\"text-align-center\" style=\"width: 160px; border-color: rgb(55, 55, 55);\"><span class=\"text-black\"></span></td>\r\n\t\t\t<td class=\"text-align-center\" style=\"width: 156px; border-color: rgb(55, 55, 55);\"><span class=\"text-black\">​<img alt=\"check-icon-vip.png\" data-entity-type=\"\" data-entity-uuid=\"\" height=\"22\" src=\"/sites/dafa-ghana/files/images/check-icon-vip.png\" width=\"28\" />​</span></td>\r\n\t\t\t<td class=\"text-align-center\" style=\"width: 136px; border-color: rgb(55, 55, 55);\"><span class=\"text-black\">​<img alt=\"check-icon-vip.png\" data-entity-type=\"\" data-entity-uuid=\"\" height=\"22\" src=\"/sites/dafa-ghana/files/images/check-icon-vip.png\" width=\"28\" />​</span></td>\r\n\t\t</tr>\r\n\t\t<tr class=\"odd\">\r\n\t\t\t<td style=\"width: 461px; border-color: rgb(55, 55, 55);\"><font color=\"#000000\">Access to Exclusive Payment Solutions</font></td>\r\n\t\t\t<td class=\"text-align-center\" style=\"width: 158px; border-color: rgb(55, 55, 55);\"><span class=\"text-black\"></span></td>\r\n\t\t\t<td class=\"text-align-center\" style=\"width: 160px; border-color: rgb(55, 55, 55);\"><span class=\"text-black\"></span></td>\r\n\t\t\t<td class=\"text-align-center\" style=\"width: 156px; border-color: rgb(55, 55, 55);\"><span class=\"text-black\"><img alt=\"check-icon-vip.png\" data-entity-type=\"\" data-entity-uuid=\"\" height=\"22\" src=\"/sites/dafa-ghana/files/images/check-icon-vip.png\" width=\"28\" /></span></td>\r\n\t\t\t<td class=\"text-align-center\" style=\"width: 136px; border-color: rgb(55, 55, 55);\"><span class=\"text-black\"><img alt=\"check-icon-vip.png\" data-entity-type=\"\" data-entity-uuid=\"\" height=\"22\" src=\"/sites/dafa-ghana/files/images/check-icon-vip.png\" width=\"28\" /></span></td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td style=\"width: 461px; border-color: rgb(55, 55, 55);\"><font color=\"#000000\">Dedicated Personal VIP Team</font></td>\r\n\t\t\t<td class=\"text-align-center\" style=\"width: 158px; border-color: rgb(55, 55, 55);\"><span class=\"text-black\"></span></td>\r\n\t\t\t<td class=\"text-align-center\" style=\"width: 160px; border-color: rgb(55, 55, 55);\"><span class=\"text-black\"></span></td>\r\n\t\t\t<td class=\"text-align-center\" style=\"width: 156px; border-color: rgb(55, 55, 55);\"><span class=\"text-black\"><img alt=\"check-icon-vip.png\" data-entity-type=\"\" data-entity-uuid=\"\" height=\"22\" src=\"/sites/dafa-ghana/files/images/check-icon-vip.png\" width=\"28\" /></span></td>\r\n\t\t\t<td class=\"text-align-center\" style=\"width: 136px; border-color: rgb(55, 55, 55);\"><span class=\"text-black\"><img alt=\"check-icon-vip.png\" data-entity-type=\"\" data-entity-uuid=\"\" height=\"22\" src=\"/sites/dafa-ghana/files/images/check-icon-vip.png\" width=\"28\" /></span></td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td style=\"width: 461px; border-color: rgb(55, 55, 55);\"><font color=\"#000000\">VIP Welcome Bonus</font></td>\r\n\t\t\t<td class=\"text-align-center\" style=\"width: 158px; border-color: rgb(55, 55, 55);\"><span class=\"text-black\"></span></td>\r\n\t\t\t<td class=\"text-align-center\" style=\"width: 160px; border-color: rgb(55, 55, 55);\"><span class=\"text-black\"></span></td>\r\n\t\t\t<td class=\"text-align-center\" style=\"width: 156px; border-color: rgb(55, 55, 55);\"><span class=\"text-black\"></span></td>\r\n\t\t\t<td class=\"text-align-center\" style=\"width: 136px; border-color: rgb(55, 55, 55);\"><span class=\"text-black\"><img alt=\"check-icon-vip.png\" data-entity-type=\"\" data-entity-uuid=\"\" height=\"22\" src=\"/sites/dafa-ghana/files/images/check-icon-vip.png\" width=\"28\" /></span></td>\r\n\t\t</tr>\r\n\t\t<tr class=\"odd\">\r\n\t\t\t<td style=\"width: 461px; border-color: rgb(55, 55, 55);\"><span class=\"text-black\">Exclusive Elite Recognition</span></td>\r\n\t\t\t<td class=\"text-align-center\" style=\"width: 158px; border-color: rgb(55, 55, 55);\"><span class=\"text-black\"></span></td>\r\n\t\t\t<td class=\"text-align-center\" style=\"width: 160px; border-color: rgb(55, 55, 55);\"><span class=\"text-black\"></span></td>\r\n\t\t\t<td class=\"text-align-center\" style=\"width: 156px; border-color: rgb(55, 55, 55);\"><span class=\"text-black\"></span></td>\r\n\t\t\t<td class=\"text-align-center\" style=\"width: 136px; border-color: rgb(55, 55, 55);\"><span class=\"text-black\"><img alt=\"check-icon-vip.png\" data-entity-type=\"\" data-entity-uuid=\"\" height=\"22\" src=\"/sites/dafa-ghana/files/images/check-icon-vip.png\" width=\"28\" /></span></td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td style=\"width: 461px; border-color: rgb(55, 55, 55);\"><span class=\"text-black\">Premiere Invitation to Exclusive Events</span></td>\r\n\t\t\t<td class=\"text-align-center\" style=\"width: 158px; border-color: rgb(55, 55, 55);\"><span class=\"text-black\"></span></td>\r\n\t\t\t<td class=\"text-align-center\" style=\"width: 160px; border-color: rgb(55, 55, 55);\"><span class=\"text-black\"></span></td>\r\n\t\t\t<td class=\"text-align-center\" style=\"width: 156px; border-color: rgb(55, 55, 55);\"><span class=\"text-black\"></span></td>\r\n\t\t\t<td class=\"text-align-center\" style=\"width: 136px; border-color: rgb(55, 55, 55);\"><span class=\"text-black\"></span> <span>​</span><span class=\"text-black\"><img alt=\"check-icon-vip.png\" data-entity-type=\"\" data-entity-uuid=\"\" height=\"22\" src=\"/sites/dafa-ghana/files/images/check-icon-vip.png\" width=\"28\" /></span><span>​</span></td>\r\n\t\t</tr>\r\n\t</tbody>\r\n</table>\r\n</div>\r\n"
+  format: basic_html
+value: null
+format: null
+bronze_level_card_title: BRONZE
+bronze_level_card_link: '#bronze'
+bronze_level_card_target: modal
+bronze_level_pre_content:
+  value: "<ul class=\"text-align-left\">\r\n\t<li>Welcome incentives and reloads</li>\r\n\t<li>Daily rewards and bonuses</li>\r\n\t<li>Customer service</li>\r\n\t<li>A parlay rebate of 2%&nbsp;</li>\r\n</ul>\r\n"
+  format: basic_html
+bronze_pre_button_label: 'JOIN NOW'
+bronze_pre_button_link: /join
+bronze_pre_button_target: _blank
+bronze_level_post_description:
+  value: "<p>Newly registered members will be instantly welcomed into this club.</p>\r\n"
+  format: basic_html
+bronze_current_level_content:
+  value: "<p>Congratulations! Check out all your benefits below.</p>\r\n"
+  format: basic_html
+bronze_level_unlocked_content:
+  value: "<p class=\"modal-trigger mb-0\">To receive Sports offers, click here to <a class=\"modal-trigger\" href=\"#optin\" style=\"font-size: 14px;\">Opt-In</a>.</p>\r\n"
+  format: basic_html
+bronze_post_button_label: Unlocked
+bronze_post_button_link: '#'
+bronze_post_button_target: _blank
+silver_level_card_title: SILVER
+silver_level_card_link: '#silver'
+silver_level_card_target: modal
+silver_level_pre_content:
+  value: "<ul class=\"text-align-left\">\r\n\t<li>Lucrative Promotions</li>\r\n\t<li>Higher bonus offers</li>\r\n\t<li>Surprise gifts and exclusive tournaments</li>\r\n\t<li>Daily rewards and bonuses</li>\r\n\t<li>A parlay rebate of 3%</li>\r\n</ul>\r\n"
+  format: basic_html
+silver_pre_button_label: 'LEVEL UP TO SILVER'
+silver_pre_button_link: '#silver'
+silver_pre_button_target: modal
+silver_level_post_description:
+  value: "<ul class=\"text-align-left\">\r\n\t<li>Lucrative Promotions</li>\r\n\t<li>Higher bonus offers</li>\r\n\t<li>Surprise gifts and exclusive tournaments</li>\r\n\t<li>Daily rewards and bonuses</li>\r\n\t<li>A parlay rebate of 3%&nbsp;</li>\r\n</ul>\r\n"
+  format: basic_html
+silver_current_level_content:
+  value: "<p>Congratulations! Check out all your silver benefits below.</p>\r\n"
+  format: basic_html
+silver_level_unlocked_content:
+  value: ''
+  format: basic_html
+silver_post_button_label: 'LEVEL UP TO SILVER'
+silver_post_button_link: '#silver'
+silver_post_button_target: modal
+gold_level_card_title: GOLD
+gold_level_card_link: '#gold'
+gold_level_card_target: modal
+gold_level_pre_content:
+  value: "<ul class=\"text-align-left\">\r\n\t<li>Exclusive Promotions</li>\r\n\t<li>VIP Monthly Raffle Draw</li>\r\n\t<li>A parlay rebate of 3.5%</li>\r\n</ul>\r\n"
+  format: basic_html
+gold_pre_button_label: 'LEVEL UP TO GOLD'
+gold_pre_button_link: '#gold'
+gold_pre_button_target: modal
+gold_level_post_description:
+  value: "<ul class=\"text-align-left\">\r\n\t<li>Exclusive Promotions</li>\r\n\t<li>VIP Monthly Raffle Draw</li>\r\n\t<li>A parlay rebate of 3.5%</li>\r\n</ul>\r\n"
+  format: basic_html
+gold_current_level_content:
+  value: '<p>Congratulations! Check out all your gold benefits below.</p>'
+  format: basic_html
+gold_level_unlocked_content:
+  value: "\r\n"
+  format: basic_html
+gold_post_button_label: 'LEVEL UP TO GOLD'
+gold_post_button_link: '#gold'
+gold_post_button_target: modal
+platinum_level_card_title: PLATINUM
+platinum_level_card_link: '#platinum'
+platinum_level_card_target: modal
+platinum_level_pre_content:
+  value: "<ul class=\"text-align-left\">\r\n\t<li>Specialized VIP Support</li>\r\n\t<li>Premiere Invitation to Exclusive Events</li>\r\n\t<li>VIP Monthly Raffle Draw</li>\r\n\t<li>Fast Payouts</li>\r\n\t<li>Higher deposit limits</li>\r\n\t<li>A parlay rebate of 4%</li>\r\n</ul>\r\n"
+  format: basic_html
+platinum_pre_button_label: 'BY INVITATION ONLY'
+platinum_pre_button_link: '#platinum'
+platinum_pre_button_target: modal
+platinum_level_post_description:
+  value: "<ul class=\"text-align-left\">\r\n\t<li>Specialized VIP Support</li>\r\n\t<li>Premiere Invitation to Exclusive Events</li>\r\n\t<li>VIP Monthly Raffle Draw</li>\r\n\t<li>Fast Payouts</li>\r\n\t<li>Higher deposit limits</li>\r\n\t<li>A parlay rebate of 4%</li>\r\n</ul>\r\n"
+  format: basic_html
+platinum_current_level_content:
+  value: "<p>Congratulations! Check out all your benefits below.</p>\r\n"
+  format: basic_html
+platinum_level_unlocked_content:
+  value: "<p>You've unlocked this level</p>\r\n"
+  format: basic_html
+platinum_post_button_label: 'BY INVITATION ONLY'
+platinum_post_button_link: '#platinum'
+platinum_post_button_target: modal
