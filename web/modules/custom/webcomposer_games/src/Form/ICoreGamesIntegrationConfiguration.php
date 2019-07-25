@@ -50,6 +50,8 @@ class ICoreGamesIntegrationConfiguration extends FormBase {
     'ky_gaming' => 'Kaiyuan (KY) Gaming',
     'pgsoft' => 'Pocket Games Soft',
     'ruby_play' => 'Ruby Play',
+    'ezugi_gaming' => 'Ezugi Gaming',
+    'wac' => 'We Are Casino',
   ];
 
   protected function getEditableConfigNames() {

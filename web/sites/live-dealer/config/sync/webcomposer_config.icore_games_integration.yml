@@ -14,10 +14,10 @@ sa_gaming_currency: "RMB\r\nUSD\r\nMYR\r\nVND\r\nIDR\r\nINR\r\nEUR\r\nGBP\r\nPLN
 sa_gaming_language_mapping: "en|en-US\r\nin|en-US\r\nsc|zh-CN\r\nid|id\r\njp|ja\r\nth|th\r\nvn|vi"
 unsupported_currencies_title: 'Unsupported Currency title'
 unsupported_currencies_message:
-  value: "<p>Sorry, your account currency is not supported by this <b>{game_provider}&nbsp;</b> Provider.<br />\r\nPlease try other games.</p>\r\n"
+  value: "<p>Sorry, your account currency is not supported by this <b>{game_provider}&nbsp;</b> Provider.<br />\r\nPlease try other games. test</p>\r\n"
   format: basic_html
-unsupported_currencies_button: Ok
-game_provider_mapping: "sa_gaming|SA Gaming\r\ngold_deluxe|GD\r\nallbet|AllBet\r\nevo_gaming|Evolution Gaming\r\ntgp|TGP\r\nebet|eBet\r\nasia_gaming|Asia Gaming\r\ngpi|GPI"
+unsupported_currencies_button: 'Ok test'
+game_provider_mapping: "sa_gaming|SA Gaming\r\ngold_deluxe|GD\r\nallbet|AllBet\r\nevo_gaming|Evolution Gaming\r\ntgp|TGP\r\nebet|eBet\r\nasian_gaming|Asia Gaming\r\ngpi|GPI"
 fallback_error_title: ''
 fallback_error_message:
   value: ''
@@ -38,7 +38,7 @@ gb_virtual_sports_currency: ''
 gb_virtual_sports_language_mapping: ''
 asia_gaming_currency: "EUR\r\nRMB\r\nCNY\r\nUSD\r\nMYR\r\nTHB\r\nKRW\r\nVND\r\nIDR\r\nINR\r\nEUR"
 asia_gaming_language_mapping: "en|en-US\r\nsc|zh-CN\r\nth|th\r\nko|ko-KR\r\nvn|vn\r\nid|id\r\nin|hi"
-icore_games_integration_form__active_tab: edit-micro-gaming
+icore_games_integration_form__active_tab: edit-ezugi-gaming
 asia_gaming_country: ''
 kiron_virtual_sports_country: ''
 gb_virtual_sports_country: ''
@@ -82,20 +82,29 @@ betconstruct_container_id: ''
 fun_gaming_currency: ''
 fun_gaming_language_mapping: ''
 fun_gaming_country: ''
-micro_gaming_currency: "USD\r\nJPY\r\nCNY\r\nRMB\r\nMYR\r\nTHB\r\nKRW\r\nVND\r\nIDR"
-micro_gaming_language_mapping: "en|en-US\r\nsc|zh-CN\r\nth|th\r\nkr|ko-KR\r\nvn|vi\r\nid|id"
-micro_gaming_country: ''
+micro_gaming_currency: "USD\r\nJPY\r\nRMB\r\nMYR\r\nTHB\r\nKRW\r\nVND\r\nIDR"
+micro_gaming_language_mapping: "en|en-US\r\nin|en-IN\r\nsc|zh-CN\r\nth|th\r\nkr|ko-KR\r\nvn|vi\r\nid|id\r\nes|es\r\npt|pt"
+micro_gaming_country: "AU\r\nFR\r\nHK\r\nSG\r\nZA\r\nTW\r\nUS"
+safari_notif:
+  value: ''
+  format: basic_html
+value: null
+format: null
 flow_gaming_currency: ''
 flow_gaming_language_mapping: ''
 flow_gaming_country: ''
 ky_gaming_currency: ''
 ky_gaming_language_mapping: ''
 ky_gaming_country: ''
+pg_soft_currency: ''
+pg_soft_language_mapping: ''
+pg_soft_country: ''
 pgsoft_currency: ''
 pgsoft_language_mapping: ''
 pgsoft_country: ''
-safari_notif:
-  value: ''
-  format: basic_html
-value: null
-format: null
+ruby_play_currency: ''
+ruby_play_language_mapping: ''
+ruby_play_country: ''
+ezugi_gaming_currency: "EUR\r\nUSD\r\nGBP\r\nCNY\r\nRMB\r\nMYR\r\nTHB\r\nKRW\r\nVND\r\nIDR\r\nINR\r\nPLN\r\nRON\r\nRUB\r\nTRY\r\nKES\r\nGHS\r\nBRL\r\nMXN\r\nCLP\r\nCOP\r\nPEN\r\nARS\r\nVES\r\nBTC\r\n"
+ezugi_gaming_language_mapping: "en|en-US\r\nsc|zh-CN\r\nvi|vi\r\nth|th\r\nko|ko-KR\r\nid|id\r\nes|es\r\npt|pt"
+ezugi_gaming_country: ''

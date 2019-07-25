@@ -1,12 +1,10 @@
-uuid: c53bb787-af3a-4ca3-b669-ffbf0c1b9b04
+uuid: 3a5573ea-5a13-4da8-84cc-2861a1b8d119
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_maintenance_blurb
     - node.type.games
-  module:
-    - text
 id: node.games.field_maintenance_blurb
 field_name: field_maintenance_blurb
 entity_type: node
@@ -14,8 +12,8 @@ bundle: games
 label: 'Maintenance Blurb'
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: text_long
+field_type: string

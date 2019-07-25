@@ -12,7 +12,7 @@ field_name: field_banner_image_landscape
 entity_type: webcomposer_slider_v2_entity
 bundle: webcomposer_slider_v2_entity
 label: 'Banner Image Landscape'
-description: ''
+description: 'Recommended dimension of image is 1661px x 376px.'
 required: true
 translatable: false
 default_value: {  }

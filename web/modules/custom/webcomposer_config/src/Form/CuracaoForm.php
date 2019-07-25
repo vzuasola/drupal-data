@@ -59,6 +59,14 @@ class CuracaoForm extends FormBase {
       '#default_value' => $this->get('markup'),
     ];
 
+    $form['curacao']['status'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable'),
+      '#description' => $this->t('Enable Curacao Marketing Script'),
+      '#default_value' => $this->get('status'),
+      '#weight' => 5,
+    ];
+
     return $form;
   }
 }
