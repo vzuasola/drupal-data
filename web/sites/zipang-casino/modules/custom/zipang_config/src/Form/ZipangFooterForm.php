@@ -40,6 +40,7 @@ class ZipangFooterForm extends FormBase {
 
     $this->sectionFooterBlurb($form);
     $this->sectionCookieNotification($form);
+    $this->sectionBacktoTop($form);
 
     return $form;
   }
@@ -88,6 +89,25 @@ class ZipangFooterForm extends FormBase {
       '#default_value' => $default_website_cookie_acceptbutton_text,
       '#translatable' => TRUE,
     ];
+
+  }
+
+  private function sectionBacktoTop(array &$form) {
+    $form['backtotop'] = [
+      '#type' => 'details',
+      '#title' => t('Back to top'),
+      '#group' => 'advanced',
+    ];
+
+    $this->get('backtotop_checkbox');
+    $form['backtotop']['backtotop_checkbox'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('<b>Enable Back to top</b>'),
+      '#description' => $this->t('Show/hide Back to top in Mobile View. Default value is "Disabled".'),
+      '#default_value' => $this->get('backtotop_checkbox'),
+      '#translatable' => TRUE,
+    ];
+
 
   }
 }
