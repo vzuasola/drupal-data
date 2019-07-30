@@ -62,8 +62,7 @@ class GhanaFreshchatForm extends FormBase {
     /**
      * General
      */
-    private function generalSettings(&$form)
-    {
+    private function generalSettings(&$form) {
         $form['ghana_freshchat_settings']['main'] = [
             '#type' => 'details',
             '#title' => t('Main'),
@@ -214,8 +213,7 @@ class GhanaFreshchatForm extends FormBase {
     /**
      * FAQ
      */
-    private function faqSettings(&$form)
-    {
+    private function faqSettings(&$form) {
         $form['ghana_freshchat_faq_settings'] = [
             '#type' => 'details',
             '#title' => t('FAQ Settings'),
@@ -301,8 +299,7 @@ class GhanaFreshchatForm extends FormBase {
     /**
      * Customer satisfactory
      */
-    private function csatSettings(&$form)
-    {
+    private function csatSettings(&$form) {
         $form['ghana_freshchat_customer_satisfactory'] = [
             '#type' => 'details',
             '#title' => t('Customer satisfactory'),
@@ -375,8 +372,7 @@ class GhanaFreshchatForm extends FormBase {
     /**
      * Push notifications
      */
-    private function pushSettings(&$form)
-    {
+    private function pushSettings(&$form) {
         $form['ghana_freshchat_push_notif'] = [
             '#type' => 'details',
             '#title' => t('Push notifications'),
@@ -403,8 +399,7 @@ class GhanaFreshchatForm extends FormBase {
         ];
     }
 
-    private function agentSettings(&$form)
-    {
+    private function agentSettings(&$form) {
         $form['ghana_freshchat_agent'] = [
             '#type' => 'details',
             '#title' => t('Agent settings'),
@@ -440,8 +435,7 @@ class GhanaFreshchatForm extends FormBase {
     /**
      * {@inheritdoc}
      */
-    public function submitForm(array &$form, FormStateInterface $form_state)
-    {
+    public function submitForm(array &$form, FormStateInterface $form_state) {
         $keys = [
             'app_logo',
             'bg_img',
