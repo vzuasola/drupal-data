@@ -12,12 +12,12 @@ use Drupal\Core\Datetime\DrupalDateTime;
  * @WebcomposerConfigPlugin(
  *   id = "zipang_special_promotions_notif",
  *   route = {
- *     "title" = "Special Promotions Notif Configuration",
+ *     "title" = "Special Promotions Notification Configuration",
  *     "path" = "/admin/config/zipang/special_promotions_notif_page_configuration",
  *   },
  *   menu = {
- *     "title" = "Special Promotions Notif Configuration",
- *     "description" = "Provides Special Promotions Notif configuration",
+ *     "title" = "Special Promotions Notification Configuration",
+ *     "description" = "Special Promotions Notification configuration",
  *     "parent" = "zipang_config.zipang_config",
  *     "weight" = 30
  *   },
@@ -35,7 +35,7 @@ class ZipangSpecialPromotionsNotifConfig extends FormBase {
   public function form(array $form, FormStateInterface $form_state) {
     $form['advanced'] = [
       '#type' => 'vertical_tabs',
-      '#title' => t('Special Promotion Notif Configuration'),
+      '#title' => t('Special Promotions Notification Configuration'),
     ];
 
     $this->sectionPageSetting($form);
@@ -49,7 +49,7 @@ class ZipangSpecialPromotionsNotifConfig extends FormBase {
   private function sectionPageSetting(array &$form) {
     $form['sp_notif'] = [
         '#type' => 'details',
-        '#title' => t('Special Promotions Notif'),
+        '#title' => t('Special Promotions Notification'),
         '#group' => 'advanced',
       ];
 
