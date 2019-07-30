@@ -69,7 +69,7 @@ class ZipangSpecialPromotionsNotifConfig extends FormBase {
 
     $form['sp_notif']['sp_next'] = [
         '#type' => 'textfield',
-        '#title' => t('Right Label.'),
+        '#title' => t('Next Label.'),
         '#default_value' => $this->get('sp_next'),
         '#translatable' => TRUE,
       ];
