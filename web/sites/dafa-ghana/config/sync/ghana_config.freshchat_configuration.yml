@@ -28,7 +28,7 @@ faq_helpful: 'Is this article helpful?'
 faq_thankyou: 'Thank you for your feedback'
 faq_message_us: 'Not what your looking for? Chat us'
 faq_comment: 'Tell us your opinion about the solution'
-chat_title: 'Chat us!'
+chat_title: 'Chat us'
 chat_description: 'Reach out to us for any concerns'
 chat_placeholder: 'What''s your concern?'
 faq_search: Search
@@ -42,3 +42,4 @@ hidechat: 0
 direction: rtr
 showchat: 1
 host: 'https://wchat.freshchat.com'
+chat_header: 'Chat us'

@@ -111,11 +111,11 @@ class GhanaFreshchatForm extends FormBase {
             '#open' => TRUE,
         ];
 
-        $form['ghana_freshchat_settings']['chat']['chat_title'] = [
+        $form['ghana_freshchat_settings']['chat']['chat_header'] = [
             '#type' => 'textfield',
             '#title' => t('Chat title'),
             '#description' => t('Title when chat is opened'),
-            '#default_value' => $this->get('chat_title'),
+            '#default_value' => $this->get('chat_header'),
             '#translatable' => true,
         ];
 
