@@ -11,7 +11,7 @@ entity_type: node
 bundle: special_promotions_page
 label: 'Image Banner Link'
 description: ''
-required: true
+required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''
