@@ -320,7 +320,7 @@ tct_o-row-stack:
   environment:
     name: tct
   script:
-    - DEPLOY_TCT=$DEPLOY_TCT_O
+    - DEPLOY_TCT=$DEPLOY_TCT_O_ROW
     - DEPLOY_TCT_TOWER_HOST=$DEPLOY_TCT_O_TOWER_HOST
     - python -u automation/run.py --stage deploy-tct
   when: manual
