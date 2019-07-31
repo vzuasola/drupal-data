@@ -315,6 +315,25 @@ tct_o-mobile-stack:
   tags:
     - stgrunner_ipvg
 
+tct_o-row-stack:
+  stage: deploy-test
+  environment:
+    name: tct
+  script:
+    - DEPLOY_TCT=$DEPLOY_TCT_O
+    - DEPLOY_TCT_TOWER_HOST=$DEPLOY_TCT_O_TOWER_HOST
+    - python -u automation/run.py --stage deploy-tct
+  when: manual
+  dependencies:
+    - dev
+    - create package
+  artifacts:
+    paths:
+      - automation/deployed/*.jsonl
+    expire_in: 1 month
+  tags:
+    - stgrunner_ipvg
+
 .selenium tests tct:
   stage: integration-tests-test
   script:
