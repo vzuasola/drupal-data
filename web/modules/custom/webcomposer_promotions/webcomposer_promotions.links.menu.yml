@@ -1,6 +1,0 @@
-webcomposer_promotions.promotion_configuration:
-  title: 'Promotion Custom Configuration'
-  route_name: webcomposer_promotions.promotion_configuration
-  description: 'Configure the Promotion custom configuration'
-  parent: webcomposer_config.list
-

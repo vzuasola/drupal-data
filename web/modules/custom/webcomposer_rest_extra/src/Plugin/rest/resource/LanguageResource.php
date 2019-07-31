@@ -120,11 +120,14 @@ class LanguageResource extends ResourceBase {
         foreach ($lang_obj as $lang_array) {
           $key = $lang_array->getId();
           $customLabel = $this->getCustomLabel($key);
+          $fallbackLang = $this->getLanguageHiearchyValues('webcomposer_fallback_langcode', $key);
 
           $data[$key] = [
             'name' => $customLabel ?? $lang_array->getName(),
             'id' => $key,
-            'prefix' => $prefixes[$key]
+            'prefix' => $prefixes[$key],
+            'fallback' => ($fallbackLang) ? $fallbackLang : false,
+            'hide' => (bool) $this->getLanguageHiearchyValues('webcomposer_language_hidden', $key, false)
           ];
         }
 
@@ -164,9 +167,24 @@ class LanguageResource extends ResourceBase {
    */
   private function getCustomLabel($langKey) {
     $configManager = \Drupal::entityTypeManager()->getStorage('configurable_language');
-    $languageConfigEntity= $configManager->load($langKey);
+    $languageConfigEntity = $configManager->load($langKey);
     $customLabel = $languageConfigEntity->getThirdPartySetting('webcomposer_language_hierarchy', 'webcomposer_language_custom_label');
 
     return $customLabel;
+  }
+
+  /**
+   * Gets any custom config from language hiearchy module
+   *
+   * @param string $langKey
+   *
+   * @return mixed
+   */
+  private function getLanguageHiearchyValues($key, $langKey, $default = null) {
+    $configManager = \Drupal::entityTypeManager()->getStorage('configurable_language');
+    $languageConfigEntity = $configManager->load($langKey);
+    $result = $languageConfigEntity->getThirdPartySetting('webcomposer_language_hierarchy', $key, $default);
+
+    return $result;
   }
 }

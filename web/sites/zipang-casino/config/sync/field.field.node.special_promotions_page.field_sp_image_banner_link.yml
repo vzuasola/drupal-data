@@ -1,0 +1,19 @@
+uuid: 0898c99e-9711-46ed-8ff2-2bd9813100b0
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sp_image_banner_link
+    - node.type.special_promotions_page
+id: node.special_promotions_page.field_sp_image_banner_link
+field_name: field_sp_image_banner_link
+entity_type: node
+bundle: special_promotions_page
+label: 'Image Banner Link'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

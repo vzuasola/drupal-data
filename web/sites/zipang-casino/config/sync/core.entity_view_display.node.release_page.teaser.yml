@@ -1,0 +1,29 @@
+uuid: 60a9e19f-5c24-474c-be8c-8d020c1bdea9
+langcode: ja
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.release_page.body
+    - node.type.release_page
+  module:
+    - text
+    - user
+id: node.release_page.teaser
+targetEntityType: node
+bundle: release_page
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true
