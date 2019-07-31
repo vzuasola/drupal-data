@@ -90,6 +90,13 @@ class GhanaFreshchatForm extends FormBase {
             '#translatable' => TRUE,
         ];
 
+        $form['ghana_freshchat_settings']['main']['host'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Freshchat Host'),
+            '#default_value' => $this->get('host'),
+            '#translatable' => TRUE,
+        ];
+
         $form['ghana_freshchat_settings']['main']['site_id'] = [
             '#type' => 'textfield',
             '#title' => t('Site ID'),
