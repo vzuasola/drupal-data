@@ -2,6 +2,7 @@
 
 namespace Drupal\webcomposer_floating_banners\Form;
 
+use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Entity\ContentEntityDeleteForm;
 
 /**
@@ -14,11 +15,11 @@ class LeftFloatingBannerEntityDeleteForm extends ContentEntityDeleteForm {
   /**
    * {@inheritdoc}
    */
-  public function submitForm(array &$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+  public function submitForm(array &$form, FormStateInterface $form_state) {
     /** @var \Drupal\Core\Entity\ContentEntityInterface $entity */
     $entity = $this->getEntity();
 
-    // // Make sure that deleting a translation does not delete the whole entity.
+    // Make sure that deleting a translation does not delete the whole entity.
     if (!$entity->isDefaultTranslation()) {
       $untranslated_entity = $entity->getUntranslated();
       $untranslated_entity->removeTranslation($entity->language()->getId());
@@ -29,6 +30,8 @@ class LeftFloatingBannerEntityDeleteForm extends ContentEntityDeleteForm {
       $entity->delete();
       $form_state->setRedirectUrl($this->getRedirectUrl());
     }
+
+    drupal_set_message('Floating Banner item is deleted.');
 
   }
 
