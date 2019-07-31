@@ -16,6 +16,7 @@ dependencies:
     - field.field.node.games.field_image_size
     - field.field.node.games.field_maintenance_blurb
     - field.field.node.games.field_preview_display_only
+    - field.field.node.games.field_product
     - field.field.node.games.field_ribbon_configuration
     - field.field.node.games.field_show_game_info_toggle
     - field.field.node.games.field_start_date
@@ -79,6 +80,7 @@ third_party_settings:
       children:
         - field_game_provider
         - field_game_code
+        - field_product
       parent_name: ''
       weight: 10
       format_type: tab
@@ -118,7 +120,7 @@ content:
     type: datetime_default
     region: content
   field_game_code:
-    weight: 38
+    weight: 27
     settings:
       size: 60
       placeholder: ''
@@ -199,7 +201,7 @@ content:
     weight: 26
     settings: {  }
     third_party_settings: {  }
-    type: options_buttons
+    type: options_select
     region: content
   field_game_title:
     weight: 2
@@ -237,6 +239,12 @@ content:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
+    region: content
+  field_product:
+    weight: 28
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   field_ribbon_configuration:
     type: entity_reference_autocomplete
