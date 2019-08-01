@@ -1,0 +1,7 @@
+entrypage_news.admin_settings:
+  path: 'admin/news'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'News Section Configuration'
+  requirements:
+    _permission: 'administer site configuration'

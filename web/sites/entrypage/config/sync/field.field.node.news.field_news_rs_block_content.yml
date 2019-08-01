@@ -1,0 +1,25 @@
+uuid: feb9b8b3-251a-43bc-bf1d-84b41e621c6f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_news_rs_block_content
+    - node.type.news
+id: node.news.field_news_rs_block_content
+field_name: field_news_rs_block_content
+entity_type: node
+bundle: news
+label: 'Right Side Block Content'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: right_side_block_news
+      display_name: right_side_block_news_entity_reference
+      arguments: {  }
+field_type: entity_reference

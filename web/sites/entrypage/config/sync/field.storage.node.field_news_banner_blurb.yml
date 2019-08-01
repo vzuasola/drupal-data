@@ -1,0 +1,19 @@
+uuid: 81e43260-7686-4db1-92f2-b2901e281edd
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_news_banner_blurb
+field_name: field_news_banner_blurb
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
