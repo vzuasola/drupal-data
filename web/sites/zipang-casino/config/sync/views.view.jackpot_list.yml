@@ -514,6 +514,7 @@ display:
         filters: false
         filter_groups: false
         pager: false
+        sorts: false
       filters:
         langcode:
           id: langcode
@@ -651,6 +652,31 @@ display:
         type: none
         options:
           offset: 0
+      sorts:
+        field_jackpot_game_title_value:
+          id: field_jackpot_game_title_value
+          table: zipang_jackpot_entity__field_jackpot_game_title
+          field: field_jackpot_game_title_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: standard
+        field_jackpot_category_target_id:
+          id: field_jackpot_category_target_id
+          table: zipang_jackpot_entity__field_jackpot_category
+          field: field_jackpot_category_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: standard
     cache_metadata:
       max-age: -1
       contexts:

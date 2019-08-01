@@ -9,9 +9,9 @@ url:
     vi: vn
     id: id
     ko: kr
-    '': null
-    zh-hant: zh-hant
-    hi: hi
+    hi: in
+    es: es
+    pt-br: pt
   domains:
     en: ''
     zh-hans: ''
@@ -19,8 +19,9 @@ url:
     vi: ''
     id: ''
     ko: ''
-    zh-hant: ''
     hi: ''
+    es: ''
+    pt-br: ''
 selected_langcode: site_default
 _core:
   default_config_hash: uEePITI9tV6WqzmsTb7MfPCi5yPWXSxAN1xeLcYFQbM

@@ -1,0 +1,29 @@
+uuid: 54531bb1-061a-443d-8963-1a744a886ba3
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sp_year
+    - node.type.special_promotions_page
+    - taxonomy.vocabulary.special_promotions_year
+id: node.special_promotions_page.field_sp_year
+field_name: field_sp_year
+entity_type: node
+bundle: special_promotions_page
+label: 'Special Promotions Year'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      special_promotions_year: special_promotions_year
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,21 @@
+uuid: 33dcdad9-4dfb-4a10-8465-349f94f5ebcb
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_image_banner_link_target
+    - node.type.special_promotions_page
+  module:
+    - options
+id: node.special_promotions_page.field_image_banner_link_target
+field_name: field_image_banner_link_target
+entity_type: node
+bundle: special_promotions_page
+label: 'Image Banner Link Target'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

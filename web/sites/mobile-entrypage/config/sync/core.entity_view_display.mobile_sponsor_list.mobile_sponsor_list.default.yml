@@ -3,28 +3,26 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.mobile_sponsor_list.mobile_sponsor_list.field_mobile_full_row
+    - field.field.mobile_sponsor_list.mobile_sponsor_list.field_mobile_row
     - field.field.mobile_sponsor_list.mobile_sponsor_list.field_mobile_sponsor_row_enable
     - field.field.mobile_sponsor_list.mobile_sponsor_list.field_sponsors_row
     - field.field.mobile_sponsor_list.mobile_sponsor_list.field_sponsors_row_title
   module:
     - entity_reference_revisions
     - mobile_sponsor_list
+    - options
     - user
 id: mobile_sponsor_list.mobile_sponsor_list.default
 targetEntityType: mobile_sponsor_list
 bundle: mobile_sponsor_list
 mode: default
 content:
-  field_mobile_full_row:
-    weight: 3
+  field_mobile_row:
+    weight: 5
     label: above
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
+    settings: {  }
     third_party_settings: {  }
-    type: boolean
+    type: list_default
     region: content
   field_mobile_sponsor_row_enable:
     weight: 4

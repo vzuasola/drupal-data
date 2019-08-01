@@ -1,0 +1,29 @@
+uuid: a30347b1-5567-42f5-9c31-fc8f77c37462
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_release_tag
+    - node.type.release_page
+    - taxonomy.vocabulary.game_tag
+id: node.release_page.field_release_tag
+field_name: field_release_tag
+entity_type: node
+bundle: release_page
+label: 'Release Tag'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      game_tag: game_tag
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

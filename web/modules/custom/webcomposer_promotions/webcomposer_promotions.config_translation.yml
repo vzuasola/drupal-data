@@ -1,5 +1,0 @@
-webcomposer_promotions.promotion_configuration:
-  title: 'Promotion Custom Configuration'
-  base_route_name: webcomposer_promotions.promotion_configuration
-  names:
-    - 'webcomposer_config.promotion_configuration'

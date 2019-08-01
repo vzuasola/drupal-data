@@ -1,0 +1,86 @@
+uuid: fa806d02-aec3-4471-83ef-c302b5852699
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.field.zipang_special_promotions_entity.zipang_special_promotions_entity.field_banner
+    - field.field.zipang_special_promotions_entity.zipang_special_promotions_entity.field_banner_link
+    - field.field.zipang_special_promotions_entity.zipang_special_promotions_entity.field_body
+    - field.field.zipang_special_promotions_entity.zipang_special_promotions_entity.field_button_label
+    - field.field.zipang_special_promotions_entity.zipang_special_promotions_entity.field_button_url
+    - field.field.zipang_special_promotions_entity.zipang_special_promotions_entity.field_title
+    - field.field.zipang_special_promotions_entity.zipang_special_promotions_entity.field_where_to_open_images
+    - image.style.thumbnail
+  module:
+    - image
+    - text
+    - zipang_special_promotions_notif
+id: zipang_special_promotions_entity.zipang_special_promotions_entity.default
+targetEntityType: zipang_special_promotions_entity
+bundle: zipang_special_promotions_entity
+mode: default
+content:
+  field_banner:
+    weight: 2
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_banner_link:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_body:
+    weight: 5
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_button_label:
+    weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_button_url:
+    weight: 7
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_where_to_open_images:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  langcode:
+    type: language_select
+    weight: 0
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+hidden:
+  name: true
+  user_id: true
