@@ -20,7 +20,7 @@ entity_type: zipang_promotions_entity
 bundle: zipang_promotions_entity
 label: Thumbnail
 description: ''
-required: true
+required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''
