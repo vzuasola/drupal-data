@@ -287,6 +287,11 @@ class FastRegistrationForm extends WebcomposerFormBase implements WebcomposerFor
         ],
       ],
 
+      'ioblackbox' => [
+        'name' => 'Iovation Blackbox hidden field',
+        'type' => 'hidden',
+      ],
+
       'submit' => [
         'name' => 'Submit',
         'type' => 'submit',

@@ -1,0 +1,21 @@
+uuid: cfada5fe-964a-48fc-ae64-25ef89a58605
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.zipang_special_promotions_entity.field_body
+  module:
+    - text
+    - zipang_special_promotions_notif
+id: zipang_special_promotions_entity.zipang_special_promotions_entity.field_body
+field_name: field_body
+entity_type: zipang_special_promotions_entity
+bundle: zipang_special_promotions_entity
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

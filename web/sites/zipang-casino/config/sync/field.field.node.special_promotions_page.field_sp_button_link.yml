@@ -1,0 +1,19 @@
+uuid: 2d79db59-6b40-4b11-853d-7eeef6cfbdfe
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sp_button_link
+    - node.type.special_promotions_page
+id: node.special_promotions_page.field_sp_button_link
+field_name: field_sp_button_link
+entity_type: node
+bundle: special_promotions_page
+label: 'Button Link'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
