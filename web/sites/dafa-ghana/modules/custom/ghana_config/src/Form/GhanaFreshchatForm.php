@@ -457,7 +457,10 @@ class GhanaFreshchatForm extends FormBase {
                         $file_usage = \Drupal::service('file.usage');
                         $file_usage->add($file, 'ghana_config', 'image', $fid[0]);
 
-                        $this->config('ghana_config.freshchat_configuration')->set($key . '_url', file_create_url($file->getFileUri()))->save();
+                        $this->config('ghana_config.freshchat_configuration')->set(
+                            $key . '_url',
+                            file_create_url($file->getFileUri())
+                            )->save();
                     }
                 }
                 $this->config('ghana_config.freshchat_configuration')->set($key, $form_state->getValue($key))->save();
