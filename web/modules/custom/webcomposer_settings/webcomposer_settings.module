@@ -42,6 +42,8 @@ function webcomposer_settings_preprocess_admin_page(&$variables) {
     ->getEditable('webcomposer_settings.admin_page_entity_blocks_settings')
     ->get();
 
+  $settings['current_user'] = \Drupal::currentUser();
+
   $blocks = _webcomposer_settings_entity_blocks_link($variables['blocks'], $settings);
 
   $variables['containers'] = [];
@@ -64,10 +66,22 @@ function webcomposer_settings_preprocess_admin_page(&$variables) {
  * Recursively removes the admin blocks and its links.
  */
 function _webcomposer_settings_entity_blocks_link(&$blocks, $settings) {
+  $master_forms = [
+    'webcomposer_config_schema.form_webcomposer_settings_entity_settings',
+    'webcomposer_config_schema.form_webcomposer_settings_form_fields_filter_settings',
+  ];
+
   foreach ($blocks as $desc => &$block) {
     foreach ($settings as $menu_name => $value) {
       $menu_id = str_replace('___', ':', $menu_name);
       $menu_id = str_replace('__', '.', $menu_id);
+
+      if (isset($block['url'])) {
+        if ($settings['current_user']->id() != '1' && in_array($block['url']->getRouteName(), $master_forms)) {
+          unset($blocks[$desc]);
+          continue 2;
+        }
+      }
 
       if (strpos($desc, $menu_id) > 0 && $value == 1) {
         unset($blocks[$desc]);
