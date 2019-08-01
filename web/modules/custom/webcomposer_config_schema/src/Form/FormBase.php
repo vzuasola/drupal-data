@@ -80,6 +80,8 @@ abstract class FormBase extends ConfigFormBase {
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
     $form = $this->form($form, $form_state);
+    \Drupal::moduleHandler()->alter('config_schema_form_base', $form);
+
     $editables = $this->getEditableConfigNames();
 
     $form['#editable_config_names'] = $editables;

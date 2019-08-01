@@ -15,6 +15,7 @@ use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
 use Psr\Log\LoggerInterface;
 use Drupal\file\Entity\File;
 use Drupal\webcomposer_rest_extra\FilterHtmlTrait;
+use Drupal\webcomposer_rest_extra\Event\ConfigurationResourceEvent;
 
 /**
  * Provides a resource to get view of configuration.
@@ -45,6 +46,13 @@ class ConfigurationResource extends ResourceBase {
   protected $configFactory;
 
   /**
+   * Event Dispatcher Object.
+   *
+   * @var core/lib/Drupal/Component/EventDispatcher/ContainerAwareEventDispatcher.php
+   */
+  protected $eventDispatcher;
+
+  /**
    * Constructs a Drupal\rest\Plugin\ResourceBase object.
    *
    * @param array $configuration
@@ -66,11 +74,14 @@ class ConfigurationResource extends ResourceBase {
     $plugin_definition,
     array $serializer_formats,
     LoggerInterface $logger,
-    AccountProxyInterface $current_user, $configFactory) {
+    AccountProxyInterface $current_user,
+    $configFactory,
+    $eventDispatcher) {
     parent::__construct($configuration, $plugin_id, $plugin_definition, $serializer_formats, $logger);
 
     $this->currentUser = $current_user;
     $this->configFactory = $configFactory;
+    $this->eventDispatcher = $eventDispatcher;
   }
 
   /**
@@ -84,7 +95,8 @@ class ConfigurationResource extends ResourceBase {
       $container->getParameter('serializer.formats'),
       $container->get('logger.factory')->get('custom_rest'),
       $container->get('current_user'),
-      $container->get('config.factory')
+      $container->get('config.factory'),
+      $container->get('event_dispatcher')
     );
   }
 
@@ -107,6 +119,11 @@ class ConfigurationResource extends ResourceBase {
       $config = $this->configFactory->get("webcomposer_config.$id");
 
       $data = $config->get();
+
+      $this->eventDispatcher->dispatch(
+        ConfigurationResourceEvent::EVENT_NAME,
+        new ConfigurationResourceEvent($data)
+      );
 
       $this->resolveFieldImages($id, $data);
       $this->resolveRecursive($data);

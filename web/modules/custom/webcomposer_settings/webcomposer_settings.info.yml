@@ -1,0 +1,8 @@
+name: Webcomposer Settings
+type: module
+description: Web composer settings
+core: 8.x
+package: Web Composer
+dependencies:
+  - webcomposer_config
+  - webcomposer_config_schema
