@@ -8,9 +8,6 @@ dependencies:
     - field.field.node.games.field_game_provider
     - field.field.node.games.field_game_ribbon
     - field.field.node.games.field_lobby_tab
-    - field.field.node.games.field_maintenance_blurb
-    - field.field.node.games.field_maintenance_end_date
-    - field.field.node.games.field_maintenance_start_date
     - field.field.node.games.field_preview_mode
     - field.field.node.games.field_provider_logo
     - field.field.node.games.field_target
@@ -18,11 +15,9 @@ dependencies:
     - field.field.node.games.field_use_game_loader
     - node.type.games
   module:
-    - datetime
     - field_group
     - image
     - options
-    - text
     - user
 third_party_settings:
   field_group:
@@ -82,31 +77,6 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
-    region: content
-  field_maintenance_blurb:
-    weight: 10
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
-    region: content
-  field_maintenance_end_date:
-    weight: 12
-    label: above
-    settings:
-      format_type: medium
-      timezone_override: ''
-    third_party_settings: {  }
-    type: datetime_default
-    region: content
-  field_maintenance_start_date:
-    weight: 11
-    label: above
-    settings:
-      format_type: medium
-      timezone_override: ''
-    third_party_settings: {  }
-    type: datetime_default
     region: content
   field_preview_mode:
     weight: 10
