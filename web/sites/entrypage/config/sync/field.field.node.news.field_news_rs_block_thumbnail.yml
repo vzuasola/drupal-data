@@ -1,0 +1,45 @@
+uuid: ce35611a-9845-4395-b863-d1754c87ff86
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_news_rs_block_thumbnail
+    - node.type.news
+  module:
+    - content_translation
+    - image
+third_party_settings:
+  content_translation:
+    translation_sync:
+      file: file
+      alt: '0'
+      title: '0'
+id: node.news.field_news_rs_block_thumbnail
+field_name: field_news_rs_block_thumbnail
+entity_type: node
+bundle: news
+label: 'Right Side Block Thumbnail'
+description: 'The Image upload size is 225px by 225px.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: 225x225
+  min_resolution: 225x225
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image
