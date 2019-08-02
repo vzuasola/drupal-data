@@ -694,7 +694,7 @@ display:
     position: 2
     display_options:
       display_extenders: {  }
-      path: api/news_section
+      path: api/news-section
       style:
         type: node_list_serializer
         options:
