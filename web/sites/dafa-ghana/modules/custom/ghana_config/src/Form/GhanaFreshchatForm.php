@@ -76,13 +76,6 @@ class GhanaFreshchatForm extends FormBase {
             '#translatable' => TRUE,
         ];
 
-        $form['ghana_freshchat_settings']['main']['hidechat'] = [
-            '#type' => 'checkbox',
-            '#title' => $this->t('Hide chat button'),
-            '#default_value' => $this->get('hidechat'),
-            '#translatable' => TRUE,
-        ];
-
         $form['ghana_freshchat_settings']['main']['token'] = [
             '#type' => 'textfield',
             '#title' => $this->t('Freshchat Token'),
@@ -230,6 +223,7 @@ class GhanaFreshchatForm extends FormBase {
         $form['ghana_freshchat_faq_settings']['faq_show'] = [
             '#type' => 'checkbox',
             '#title' => $this->t('Hide FAQ'),
+            '#description' => t('If checked, Show FAQ on open will not work'),
             '#default_value' => $this->get('faq_show'),
             '#translatable' => TRUE,
         ];
@@ -237,6 +231,7 @@ class GhanaFreshchatForm extends FormBase {
         $form['ghana_freshchat_faq_settings']['faq_show_on_open'] = [
             '#type' => 'checkbox',
             '#title' => $this->t('Show FAQ on chat open'),
+            '#description' => t('If checked, FAQ will be the first to open when icon is clicked'),
             '#default_value' => $this->get('faq_show_on_open'),
             '#translatable' => TRUE,
         ];
