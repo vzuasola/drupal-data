@@ -44,6 +44,12 @@ settings:
     -
       value: tgp
       label: TGP
+    -
+      value: wac
+      label: 'We Are Casino'
+    -
+      value: ezugi_gaming
+      label: 'Ezugi Gaming'
   allowed_values_function: ''
 module: options
 locked: false

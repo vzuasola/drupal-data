@@ -1,17 +1,14 @@
-uuid: 637dae86-83b4-4e7a-9e9a-e4028f6fa050
+uuid: 76e5e545-f7a1-4d7b-bcb0-22e31af401a2
 langcode: ja
 status: true
 dependencies:
   module:
     - zipang_promotions
-id: zipang_promotions_entity.field_title
-field_name: field_title
+id: zipang_promotions_entity.field_promote_to_promotions
+field_name: field_promote_to_promotions
 entity_type: zipang_promotions_entity
-type: string
-settings:
-  max_length: 255
-  is_ascii: false
-  case_sensitive: false
+type: boolean
+settings: {  }
 module: core
 locked: false
 cardinality: 1
