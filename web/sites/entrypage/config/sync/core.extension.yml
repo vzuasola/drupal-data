@@ -31,6 +31,7 @@ module:
   entityqueue: 0
   entrypage_config: 0
   entrypage_front_blocks: 0
+  entrypage_news: 0
   entrypage_partners: 0
   entrypage_promotions: 0
   field: 0

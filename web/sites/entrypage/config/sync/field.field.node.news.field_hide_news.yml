@@ -1,0 +1,23 @@
+uuid: 9594b7e2-74c2-45c8-bfe7-d17dd91816d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hide_news
+    - node.type.news
+id: node.news.field_hide_news
+field_name: field_hide_news
+entity_type: node
+bundle: news
+label: 'Hide News'
+description: 'Check this option to hide news from News Section Listing Page and Right side block of news inner page.'
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
