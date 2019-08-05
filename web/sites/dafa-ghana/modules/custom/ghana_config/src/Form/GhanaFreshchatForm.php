@@ -419,11 +419,12 @@ class GhanaFreshchatForm extends FormBase {
             '#type' => 'checkbox',
             '#title' => t('Hide agent name'),
             '#default_value' => $this->get('agent_hide_name'),
+            '#description' => t('Note: Checking this box will also hide the agent picture'),
         ];
 
         $form['ghana_freshchat_agent']['agent_description']['agent_hide_pic'] = [
             '#type' => 'checkbox',
-            '#title' => t('Hide agent pic'),
+            '#title' => t('Hide agent picture'),
             '#default_value' => $this->get('agent_hide_pic'),
         ];
     }
