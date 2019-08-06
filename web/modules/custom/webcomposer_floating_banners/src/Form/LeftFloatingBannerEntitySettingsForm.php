@@ -70,9 +70,9 @@ class LeftFloatingBannerEntitySettingsForm extends ConfigFormBase {
       '#title' => $this->t('Enable Per Product Configuration'),
       '#default_value' => $config->get('enable_per_product'),
     ];
-    
+
     $form['LeftFloatingBannerEntity_settings']['#markup'] = 'Settings form for Floating Banner entities. Manage field settings here.';
-    
+
     return parent::buildForm($form, $form_state);
   }
 }
