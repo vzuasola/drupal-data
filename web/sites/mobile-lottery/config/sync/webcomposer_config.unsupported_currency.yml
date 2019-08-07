@@ -6,4 +6,4 @@ unsupported_currencies_message:
 value: null
 format: null
 unsupported_currencies_button: OK
-game_provider_mapping: "video_racing|Video Racing\r\ngpi_keno|GPI Keno\r\ngpi_thai|Thai Lottery\r\ngpi_pk|PK10"
+game_provider_mapping: "video_racing|Video Racing\r\ngpi_keno|GPI Keno\r\ngpi_thai|Thai Lottery\r\ngpi_pk|PK10\r\ngpi_sode|Sode"

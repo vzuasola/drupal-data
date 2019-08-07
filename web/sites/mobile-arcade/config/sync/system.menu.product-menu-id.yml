@@ -1,0 +1,8 @@
+uuid: 742e802c-9aad-4a39-b01a-0e47006213c3
+langcode: id
+status: true
+dependencies: {  }
+id: product-menu-id
+label: 'Product Menu ID'
+description: ''
+locked: false

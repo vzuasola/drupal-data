@@ -5,7 +5,7 @@ gpi_pk10_language_mapping: "en|en-us\r\nsc|zh-cn\r\nid|id-id\r\nkr|ko-kr\r\nth|t
 gpi_thai_lottey_currency: "EUR\r\nUSD\r\nVND\r\nGBP\r\nCNY\r\nMYR\r\nTHB\r\nIDR\r\nINR\r\nPLN\r\nRUB\r\nRMB"
 gpi_thai_lottey_language_mapping: "en|en-us\r\nsc|zh-cn\r\nkr|ko-kr\r\nth|th-th"
 gpi_sode_country: US
-gpi_sode_extra_params: "game|sode\r\ntheme|1"
+gpi_sode_extra_params: game|sode
 gpi_live_dealer_currency: ''
 gpi_live_dealer_language_mapping: ''
 gpi_ladder_currency: ''
