@@ -1,0 +1,5 @@
+name: Entrypage News Section
+type: module
+description: This module takes of entrypage news section features.
+core: 8.x
+package: Custom

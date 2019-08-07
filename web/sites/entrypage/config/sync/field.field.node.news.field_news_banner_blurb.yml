@@ -1,0 +1,21 @@
+uuid: ea78459f-0ba1-492c-8cb4-4ad5a991e647
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_news_banner_blurb
+    - node.type.news
+  module:
+    - text
+id: node.news.field_news_banner_blurb
+field_name: field_news_banner_blurb
+entity_type: node
+bundle: news
+label: 'Banner Blurb Content'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

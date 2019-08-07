@@ -1,0 +1,196 @@
+uuid: 879b43d9-d5f0-4e52-b65e-54424c0fc529
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.news.field_hide_news
+    - field.field.node.news.field_news_banner_blurb
+    - field.field.node.news.field_news_banner_image
+    - field.field.node.news.field_news_banner_link
+    - field.field.node.news.field_news_banner_link_target
+    - field.field.node.news.field_news_body_content
+    - field.field.node.news.field_news_meta_tags
+    - field.field.node.news.field_news_rs_block_content
+    - field.field.node.news.field_news_rs_block_link
+    - field.field.node.news.field_news_rs_block_link_target
+    - field.field.node.news.field_news_rs_block_option
+    - field.field.node.news.field_news_rs_block_summary
+    - field.field.node.news.field_news_rs_block_thumbnail
+    - field.field.node.news.field_news_rs_block_title
+    - field.field.node.news.field_news_summ_link_target
+    - field.field.node.news.field_news_summary
+    - field.field.node.news.field_news_summary_link
+    - field.field.node.news.field_news_summary_thumbnail
+    - node.type.news
+  module:
+    - image
+    - link
+    - metatag
+    - options
+    - text
+    - user
+id: node.news.default
+targetEntityType: node
+bundle: news
+mode: default
+content:
+  field_hide_news:
+    weight: 101
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_news_banner_blurb:
+    weight: 106
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_news_banner_image:
+    weight: 107
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_news_banner_link:
+    weight: 122
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_news_banner_link_target:
+    weight: 108
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_news_body_content:
+    weight: 109
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_news_meta_tags:
+    weight: 105
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
+    region: content
+  field_news_rs_block_content:
+    weight: 121
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_news_rs_block_link:
+    weight: 115
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_news_rs_block_link_target:
+    weight: 116
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_news_rs_block_option:
+    weight: 118
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_news_rs_block_summary:
+    weight: 120
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_news_rs_block_thumbnail:
+    weight: 119
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_news_rs_block_title:
+    weight: 117
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_news_summ_link_target:
+    weight: 110
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_news_summary:
+    weight: 111
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_news_summary_link:
+    weight: 112
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_news_summary_thumbnail:
+    weight: 113
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

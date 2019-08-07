@@ -1,0 +1,23 @@
+uuid: 5dfd5d61-fcd3-432a-96af-642232cbdd7e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_news_banner_link_target
+    - node.type.news
+  module:
+    - options
+id: node.news.field_news_banner_link_target
+field_name: field_news_banner_link_target
+entity_type: node
+bundle: news
+label: 'Banner Link Target'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: _blank
+default_value_callback: ''
+settings: {  }
+field_type: list_string
