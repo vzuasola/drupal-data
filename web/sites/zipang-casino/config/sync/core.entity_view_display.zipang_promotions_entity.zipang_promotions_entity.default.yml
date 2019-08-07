@@ -1,5 +1,5 @@
 uuid: 40b06b8a-5aef-44b2-9df5-9db5308053d7
-langcode: en
+langcode: ja
 status: true
 dependencies:
   config:
@@ -11,6 +11,8 @@ dependencies:
     - field.field.zipang_promotions_entity.zipang_promotions_entity.field_image_banner
     - field.field.zipang_promotions_entity.zipang_promotions_entity.field_image_banner_link
     - field.field.zipang_promotions_entity.zipang_promotions_entity.field_image_banner_link_target
+    - field.field.zipang_promotions_entity.zipang_promotions_entity.field_promote_to_promotions
+    - field.field.zipang_promotions_entity.zipang_promotions_entity.field_publish_promotion
     - field.field.zipang_promotions_entity.zipang_promotions_entity.field_tag
     - field.field.zipang_promotions_entity.zipang_promotions_entity.field_thumbnail
     - field.field.zipang_promotions_entity.zipang_promotions_entity.field_title
@@ -86,6 +88,26 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: list_default
+    region: content
+  field_promote_to_promotions:
+    weight: 16
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_publish_promotion:
+    weight: 15
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
     region: content
   field_tag:
     weight: 9

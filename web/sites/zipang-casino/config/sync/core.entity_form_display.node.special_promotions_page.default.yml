@@ -25,7 +25,6 @@ third_party_settings:
   field_group:
     group_image_group:
       children:
-        - group_button
         - field_sp_image_banner
         - field_sp_image_banner_link
         - field_image_banner_link_target
@@ -43,8 +42,8 @@ third_party_settings:
         - field_sp_button_label
         - field_sp_button_link
         - field_sp_button_link_target
-      parent_name: group_image_group
-      weight: 14
+      parent_name: ''
+      weight: 16
       format_type: fieldset
       format_settings:
         id: ''

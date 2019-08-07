@@ -13,6 +13,10 @@ url:
     hi: in
     es: es
     pt-br: pt
+    es-MX: es-MX
+    es-PE: es-PE
+    es-CL: es-CL
+    es-AR: es-AR
   domains:
     en: ''
     zh-hans: ''

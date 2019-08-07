@@ -1,16 +1,16 @@
-uuid: c3f8b635-adf9-49e5-87e2-abbbb9e2e04e
+uuid: 141ece4d-4212-4ad7-9f08-4b1e3d3acea2
 langcode: en
 status: true
 dependencies:
   module:
+    - link
     - node
-    - text
-id: node.field_maintenance_blurb
-field_name: field_maintenance_blurb
+id: node.field_news_rs_block_link
+field_name: field_news_rs_block_link
 entity_type: node
-type: text_long
+type: link
 settings: {  }
-module: text
+module: link
 locked: false
 cardinality: 1
 translatable: true

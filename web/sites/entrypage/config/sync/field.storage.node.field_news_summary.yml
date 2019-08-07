@@ -1,17 +1,16 @@
-uuid: 1c86b660-0fb2-440c-bb51-59d94bd9e3a0
+uuid: a6f3c5f6-a52e-46b8-aa81-3260f0915412
 langcode: en
 status: true
 dependencies:
   module:
-    - datetime
     - node
-id: node.field_maintenance_start_date
-field_name: field_maintenance_start_date
+id: node.field_news_summary
+field_name: field_news_summary
 entity_type: node
-type: datetime
+type: string_long
 settings:
-  datetime_type: datetime
-module: datetime
+  case_sensitive: false
+module: core
 locked: false
 cardinality: 1
 translatable: true

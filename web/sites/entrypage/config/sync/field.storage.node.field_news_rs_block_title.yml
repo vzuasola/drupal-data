@@ -1,17 +1,18 @@
-uuid: 43255fde-28b1-45b7-a49b-a5f5fec07dba
+uuid: 3c190c86-17af-46a5-946d-5071f1d2d608
 langcode: en
 status: true
 dependencies:
   module:
-    - datetime
     - node
-id: node.field_maintenance_end_date
-field_name: field_maintenance_end_date
+id: node.field_news_rs_block_title
+field_name: field_news_rs_block_title
 entity_type: node
-type: datetime
+type: string
 settings:
-  datetime_type: datetime
-module: datetime
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
 locked: false
 cardinality: 1
 translatable: true

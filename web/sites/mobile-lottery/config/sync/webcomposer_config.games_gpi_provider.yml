@@ -22,3 +22,7 @@ gpi_arcade_currency: "RMB\r\nCNY\r\nEUR\r\nUSD\r\nGBP\r\nMYR\r\nTHB\r\nKRW\r\nIN
 gpi_arcade_language_mapping: "en|en-US\r\nsc|zh-CN\r\nth|th\r\nkr|ko-KR\r\nvn|vn\r\nid|id"
 gpi_arcade_country: ''
 gpi_arcade_extra_params: ''
+gpi_sode_currency: "EUR\r\nUSD\r\nVND\r\nGBP\r\nCNY\r\nMYR\r\nTHB\r\nKRW\r\nIDR\r\nINR\r\nPLN\r\nRUB\r\nRMB"
+gpi_sode_language_mapping: "en|en-us\r\nsc|zh-cn\r\nid|id-id\r\nkr|ko-kr\r\nth|th-th\r\nvn|vi-vn"
+gpi_sode_country: US
+gpi_sode_extra_params: ''

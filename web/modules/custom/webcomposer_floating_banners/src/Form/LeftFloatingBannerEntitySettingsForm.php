@@ -2,7 +2,7 @@
 
 namespace Drupal\webcomposer_floating_banners\Form;
 
-use Drupal\Core\Form\FormBase;
+use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
@@ -12,7 +12,14 @@ use Drupal\Core\Form\FormStateInterface;
  *
  * @ingroup webcomposer_floating_banners
  */
-class LeftFloatingBannerEntitySettingsForm extends FormBase {
+class LeftFloatingBannerEntitySettingsForm extends ConfigFormBase {
+
+  /**
+   * {@inheritdoc}
+   */
+  protected function getEditableConfigNames() {
+    return ['webcomposer_config.floating_banner_configuration'];
+  }
 
   /**
    * Returns a unique string identifying the form.
@@ -33,7 +40,15 @@ class LeftFloatingBannerEntitySettingsForm extends FormBase {
    *   The current state of the form.
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    // Empty implementation of the abstract submit class.
+    $keys = [
+      'enable_per_product',
+    ];
+
+    foreach ($keys as $key) {
+      $this->config('webcomposer_config.floating_banner_configuration')->set($key, $form_state->getValue($key))->save();
+    }
+
+    return parent::submitForm($form, $form_state);
   }
 
   /**
@@ -48,8 +63,16 @@ class LeftFloatingBannerEntitySettingsForm extends FormBase {
    *   Form definition array.
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    $form['LeftFloatingBannerEntity_settings']['#markup'] = 'Settings form for Floating Banner entities. Manage field settings here.';
-    return $form;
-  }
+    $config = $this->config('webcomposer_config.floating_banner_configuration');
 
+    $form['LeftFloatingBannerEntity_settings']['enable_per_product'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable Per Product Configuration'),
+      '#default_value' => $config->get('enable_per_product'),
+    ];
+
+    $form['LeftFloatingBannerEntity_settings']['#markup'] = 'Settings form for Floating Banner entities. Manage field settings here.';
+
+    return parent::buildForm($form, $form_state);
+  }
 }

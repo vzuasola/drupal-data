@@ -9,7 +9,7 @@ id: node.games.field_game_code
 field_name: field_game_code
 entity_type: node
 bundle: games
-label: 'Game Code (Playtech & SA Gaming)'
+label: 'Game Code (Playtech ,SA Gaming, We Are Casino, Ezugi Gaming)'
 description: ''
 required: false
 translatable: false
