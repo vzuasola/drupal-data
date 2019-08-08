@@ -77,5 +77,23 @@ class NewsSectionConfiguration extends FormBase {
       '#required' => TRUE,
       '#translatable' => TRUE,
     ];
+
+    $form['settings']['pagination_next'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Label for "Next" pagination'),
+      '#description' => $this->t('Shows as label for the next news'),
+      '#default_value' => $this->get('pagination_next'),
+      '#required' => TRUE,
+      '#translatable' => TRUE,
+    ];
+
+    $form['settings']['pagination_previous'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Label for "Previous" pagination'),
+      '#description' => $this->t('Shows as label for the previous news'),
+      '#default_value' => $this->get('pagination_previous'),
+      '#required' => TRUE,
+      '#translatable' => TRUE,
+    ];
   }
 }
