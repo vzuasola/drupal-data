@@ -7,6 +7,12 @@ dependencies:
     - node.type.special_promotions_page
   module:
     - image
+third_party_settings:
+  content_translation:
+    translation_sync:
+      alt: alt
+      title: title
+      file: '0'
 id: node.special_promotions_page.field_sp_thumbnail
 field_name: field_sp_thumbnail
 entity_type: node
