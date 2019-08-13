@@ -43,7 +43,7 @@ class ToggleConfiguration extends ConfigFormBase {
     ];
 
     $domain_batch = $config->get('domains_batch');
-    $default_batch = isset($domain_batch)?$domain_batch:9;
+    $default_batch = isset($domain_batch)?$domain_batch:4;
     $form['domains_batch'] = [
       '#type' => 'select',
       '#inline' => TRUE,

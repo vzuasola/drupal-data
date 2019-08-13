@@ -419,8 +419,12 @@ class DomainImport {
 
         $paragraph = Paragraph::create([
             'type' => 'domain_management_configuration',
-            'field_placeholder_key' => $token,
-            'field_default_value' => $value,
+            'field_placeholder_key' => [
+              'value' => $token,
+            ],
+            'field_default_value' => [
+              'value' => $value,
+            ],
         ]);
         $paragraph->save();
 
@@ -437,8 +441,12 @@ class DomainImport {
           $placeholder = $this->ImportParser->excel_get_master_placeholder($lang);
 
           $paragraph->addTranslation($lang, [
-            'field_placeholder_key' => $token,
-            'field_default_value' => $placeholder[$token],
+            'field_placeholder_key' => [
+              'value' => $token,
+            ],
+            'field_default_value' => [
+              'value' => $placeholder[$token],
+            ],
           ]);
           $paragraph->save();
 
@@ -524,8 +532,12 @@ class DomainImport {
         // create paragraph and assign to term
         $paragraph[$token] = Paragraph::create([
             'type' => 'domain_management_configuration',
-            'field_placeholder_key' => $token,
-            'field_default_value' => $value,
+            'field_placeholder_key' => [
+              'value' => $token,
+            ],
+            'field_default_value' => [
+              'value' => $value,
+            ],
         ]);
         $paragraph[$token]->save();
         $termItem['field_add_placeholder'][] = $paragraph[$token];
@@ -543,8 +555,12 @@ class DomainImport {
         // create translation paragraph and assign it to term
         if (!is_null($value)) {
           $paragraph[$token]->addTranslation($lang, [
-            'field_placeholder_key' => $token,
-            'field_default_value' => $value,
+            'field_placeholder_key' => [
+              'value' => $token,
+            ],
+            'field_default_value' => [
+              'value' => $value,
+            ],
           ]);
           $paragraph[$token]->save();
           $paragraphs[] = $paragraph[$token];
