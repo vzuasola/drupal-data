@@ -66,9 +66,9 @@ class ImportForm extends FormBase {
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $config = $this->config('webcomposer_config.toggle_configuration');
 
-    $optimizeInsert = $config->get('optimize_import');
+    $optimizeImport = $config->get('optimize_import');
 
-    if(!empty($optimizeInsert)) {
+    if(!empty($optimizeImport)) {
       // placeholders batch
       $operations = [
         [[$this->domainImport, 'importPlaceholder'], [$form_state]],

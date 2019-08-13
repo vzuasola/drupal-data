@@ -47,7 +47,7 @@ class ToggleConfiguration extends ConfigFormBase {
     $form['domains_batch'] = [
       '#type' => 'select',
       '#inline' => TRUE,
-      '#options' => range(1,100),
+      '#options' => range(1, 100),
       '#title' => $this->t('Domains Per Batch'),
       '#default_value' => $default_batch,
     ];

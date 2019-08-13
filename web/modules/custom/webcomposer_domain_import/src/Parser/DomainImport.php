@@ -515,7 +515,7 @@ class DomainImport {
       'langcode' => 'en',
     ];
     // add parent group field term id
-    if(!empty($param['gid'])) {
+    if (!empty($param['gid'])) {
       $termItem['field_select_domain_group'] = $param['gid'];
     }
     // create en term
@@ -534,7 +534,7 @@ class DomainImport {
     $term->save();
     // create other languages terms
     $languages = $this->ImportParser->excel_get_languages();
-    foreach(array_slice($languages, 1) as $lang) {
+    foreach (array_slice($languages, 1) as $lang) {
       // load other language variables
       $variable = $this->ImportParser->excel_get_variables($lang);
 
@@ -575,7 +575,7 @@ class DomainImport {
 
       $pids = \Drupal::entityQuery('paragraph')
         ->condition('type', 'domain_management_configuration')
-        ->condition('created',$export_time ,'<')
+        ->condition('created', $export_time, '<')
         ->execute();
       entity_delete_multiple('paragraph', $pids);
     }
@@ -600,7 +600,7 @@ class DomainImport {
       foreach ($vid as $key => $vocab) {
         $tids = \Drupal::entityQuery('taxonomy_term')
           ->condition('vid', $vocab)
-          ->condition('content_translation_created',$export_time ,'<')
+          ->condition('content_translation_created', $export_time, '<')
           ->execute();
         entity_delete_multiple('taxonomy_term', $tids);
       }
