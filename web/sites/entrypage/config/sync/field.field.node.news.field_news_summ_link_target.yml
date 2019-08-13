@@ -1,0 +1,23 @@
+uuid: 2d551f17-1dec-45f0-a58e-6c613209fdf1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_news_summ_link_target
+    - node.type.news
+  module:
+    - options
+id: node.news.field_news_summ_link_target
+field_name: field_news_summ_link_target
+entity_type: node
+bundle: news
+label: 'News Summary Link Target'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: _self
+default_value_callback: ''
+settings: {  }
+field_type: list_string
