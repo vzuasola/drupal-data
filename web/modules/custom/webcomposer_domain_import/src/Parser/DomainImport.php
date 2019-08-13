@@ -437,6 +437,7 @@ class DomainImport {
           $placeholder = $this->ImportParser->excel_get_master_placeholder($lang);
 
           $paragraph->addTranslation($lang, [
+            'field_placeholder_key' => $token,
             'field_default_value' => $placeholder[$token],
           ]);
           $paragraph->save();
@@ -542,6 +543,7 @@ class DomainImport {
         // create translation paragraph and assign it to term
         if (!is_null($value)) {
           $paragraph[$token]->addTranslation($lang, [
+            'field_placeholder_key' => $token,
             'field_default_value' => $value,
           ]);
           $paragraph[$token]->save();
@@ -568,7 +570,7 @@ class DomainImport {
     $this->readExcel($form_state, $context);
 
     if ($context['sandbox'] === "EXCEL_FORMAT_OK") {
-      $message = 'Deleting Paragraphs';
+      $message = 'Deleting Translations';
       $context['message'] = $message;
 
       $pids = \Drupal::entityQuery('paragraph')
@@ -590,7 +592,7 @@ class DomainImport {
     $this->readExcel($form_state, $context);
 
     if ($context['sandbox'] === "EXCEL_FORMAT_OK") {
-      $message = 'Deleting Taxonomies';
+      $message = 'Deleting Domains';
       $context['message'] = $message;
 
       $vid = [self::DOMAIN, self::DOMAIN_GROUP, self::MASTER_PLACEHOLDER];
