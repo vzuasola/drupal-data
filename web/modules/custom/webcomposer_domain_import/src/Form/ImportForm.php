@@ -106,8 +106,8 @@ class ImportForm extends FormBase {
       // delete batch
       $export_time = time();
       $operations = [
-        [[$this->domainImport, 'deleteParagraphs'],[$form_state, $export_time]],
-        [[$this->domainImport, 'deleteTaxonomies'],[$form_state, $export_time]],
+        [[$this->domainImport, 'deleteParagraphs'], [$form_state, $export_time]],
+        [[$this->domainImport, 'deleteTaxonomies'], [$form_state, $export_time]],
       ];
 
       $batch = [
