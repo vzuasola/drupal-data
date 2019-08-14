@@ -85,15 +85,15 @@ class ImportForm extends FormBase {
       $domainBatch = (int)$domainBatch + 1;
 
       $domains = $this->domainImport->getExcelDomains($form_state);
-      foreach($domains as $group => $domain) {
+      foreach ($domains as $group => $domain) {
         $operations = [
-          [[$this->domainImport, 'importDomainGroup'],[$form_state, $group]]
+          [[$this->domainImport, 'importDomainGroup'], [$form_state, $group]]
         ];
 
         $domainsAvg = ceil(count($domain)/$domainBatch);
-        for($i = 0; $i < $domainsAvg; $i++) {
-          $domainSlice = array_slice($domain,($i * $domainBatch) ,$domainBatch);
-          $operations[] = [[$this->domainImport, 'importDomain'],[$form_state, $domainSlice]];
+        for ($i = 0; $i < $domainsAvg; $i++) {
+          $domainSlice = array_slice($domain,($i * $domainBatch), $domainBatch);
+          $operations[] = [[$this->domainImport, 'importDomain'], [$form_state, $domainSlice]];
         }
         // domains batch
         $batch = [
@@ -117,9 +117,9 @@ class ImportForm extends FormBase {
       $operations = [];
       $taxonomyAvg = ceil(count($tids)/$domainBatch);
 
-      for($i = 0; $i < $taxonomyAvg; $i++) {
-        $tid = array_slice($tids,($i * $domainBatch) ,$domainBatch);
-        $operations[] = [[$this->domainImport, 'deleteTaxonomies'],[$form_state, $tid]];
+      for ($i = 0; $i < $taxonomyAvg; $i++) {
+        $tid = array_slice($tids,($i * $domainBatch), $domainBatch);
+        $operations[] = [[$this->domainImport, 'deleteTaxonomies'], [$form_state, $tid]];
       }
 
       $pids = \Drupal::entityQuery('paragraph')
@@ -128,12 +128,12 @@ class ImportForm extends FormBase {
         ->execute();
 
       $paragraphAvg = ceil(count($pids)/$domainBatch);
-      for($i = 0; $i < $paragraphAvg; $i++) {
-        $pid = array_slice($pids,($i * $domainBatch) ,$domainBatch);
-        $operations[] = [[$this->domainImport, 'deleteParagraphs'],[$form_state, $pid]];
+      for ($i = 0; $i < $paragraphAvg; $i++) {
+        $pid = array_slice($pids,($i * $domainBatch), $domainBatch);
+        $operations[] = [[$this->domainImport, 'deleteParagraphs'], [$form_state, $pid]];
       }
 
-      $operations[] = [[$this->domainImport, 'domainImportFinishedCallback'],[$form_state]];
+      $operations[] = [[$this->domainImport, 'domainImportFinishedCallback'], [$form_state]];
 
       $batch = [
         'title' => t('Importing Domains'),
