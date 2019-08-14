@@ -575,20 +575,54 @@ class DomainImport {
     return $term->id();
   }
 
+
   /**
    * deleteTaxonomies.
    *
    * @param [Array] $form_state
    * @param [Array] &$context
    */
-  public function deleteParagraphs($form_state, $pids, &$context) {
+  public function deleteParagraphs($form_state, $export_time, &$context) {
     $this->setDataFlags();
     $this->readExcel($form_state, $context);
 
     if ($context['sandbox'] === "EXCEL_FORMAT_OK") {
       $message = 'Deleting Translations';
       $context['message'] = $message;
-      entity_delete_multiple('paragraph', $pids);
+
+      $pids = \Drupal::entityQuery('paragraph')
+        ->condition('type', 'domain_management_configuration')
+        ->condition('created', $export_time, '<')
+        ->execute();
+
+      if (!empty($pids)) {
+        $tables = ['paragraph__field_placeholder_key',
+          'paragraph__field_default_value',
+          'paragraph__field_description',
+          'paragraph_revision__field_default_value',
+          'paragraph_revision__field_description',
+          'paragraph_revision__field_placeholder_key',
+        ];
+
+        foreach ($tables as $table) {
+          \Drupal::database()->delete($table)
+            ->condition('entity_id', $pids, 'IN')
+            ->execute();
+        }
+
+        $tables = [
+          'paragraphs_item',
+          'paragraphs_item_field_data',
+          'paragraphs_item_revision',
+          'paragraphs_item_revision_field_data',
+        ];
+
+        foreach ($tables as $table) {
+          \Drupal::database()->delete($table)
+            ->condition('id', $pids, 'IN')
+            ->execute();
+        }
+      }
     }
   }
 
@@ -598,14 +632,48 @@ class DomainImport {
    * @param [Array] $form_state
    * @param [Array] &$context
    */
-  public function deleteTaxonomies($form_state, $tids, &$context) {
+  public function deleteTaxonomies($form_state, $export_time, &$context) {
     $this->setDataFlags();
     $this->readExcel($form_state, $context);
 
     if ($context['sandbox'] === "EXCEL_FORMAT_OK") {
       $message = 'Deleting Domains';
       $context['message'] = $message;
-      entity_delete_multiple('taxonomy_term', $tids);
+
+      $query = \Drupal::entityQuery('taxonomy_term')
+        ->condition('content_translation_created', $export_time, '<');
+      $group = $query->orConditionGroup()
+        ->condition('vid', 'domain')
+        ->condition('vid', 'domain_groups')
+        ->condition('vid', 'master_placeholder');
+      $tids = $query->condition($group)->execute();
+
+      if (!empty($tids)) {
+        $tables = ['taxonomy_term__field_add_master_placeholder',
+          'taxonomy_term__field_add_placeholder',
+          'taxonomy_term__field_select_domain_group',
+        ];
+
+        foreach ($tables as $table) {
+          \Drupal::database()->delete($table)
+            ->condition('entity_id', $tids, 'IN')
+            ->execute();
+        }
+
+        $tables = [
+          'taxonomy_term_data',
+          'taxonomy_term_field_data',
+          'taxonomy_term_hierarchy',
+        ];
+
+        foreach ($tables as $table) {
+          \Drupal::database()->delete($table)
+            ->condition('tid', $tids, 'IN')
+            ->execute();
+        }
+      }
+
+      $this->domainImportFinishedCallback();
     }
   }
 

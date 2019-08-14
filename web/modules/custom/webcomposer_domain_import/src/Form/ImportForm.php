@@ -105,35 +105,10 @@ class ImportForm extends FormBase {
       }
       // delete batch
       $export_time = time();
-
-      $query = \Drupal::entityQuery('taxonomy_term')
-        ->condition('content_translation_created', $export_time, '<');
-      $group = $query->orConditionGroup()
-        ->condition('vid', 'domain')
-        ->condition('vid', 'domain_groups')
-        ->condition('vid', 'master_placeholder');
-      $tids = $query->condition($group)->execute();
-
-      $pids = \Drupal::entityQuery('paragraph')
-        ->condition('type', 'domain_management_configuration')
-        ->condition('created', $export_time, '<')
-        ->execute();
-
-      $operations = [];
-
-      $taxonomyAvg = ceil(count($tids)/$domainBatch);
-      for ($i = 0; $i < $taxonomyAvg; $i++) {
-        $tid = array_slice($tids,($i * $domainBatch), $domainBatch);
-        $operations[] = [[$this->domainImport, 'deleteTaxonomies'], [$form_state, $tid]];
-      }
-
-      $paragraphAvg = ceil(count($pids)/$domainBatch);
-      for ($i = 0; $i < $paragraphAvg; $i++) {
-        $pid = array_slice($pids,($i * $domainBatch), $domainBatch);
-        $operations[] = [[$this->domainImport, 'deleteParagraphs'], [$form_state, $pid]];
-      }
-
-      $operations[] = [[$this->domainImport, 'domainImportFinishedCallback'], [$form_state]];
+      $operations = [
+        [[$this->domainImport, 'deleteParagraphs'],[$form_state, $export_time]],
+        [[$this->domainImport, 'deleteTaxonomies'],[$form_state, $export_time]],
+      ];
 
       $batch = [
         'title' => t('Importing Domains'),
