@@ -1,0 +1,21 @@
+uuid: 44ae392a-067e-4229-90d6-46232fa1fe28
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sp_button_link_target
+    - node.type.special_promotions_page
+  module:
+    - options
+id: node.special_promotions_page.field_sp_button_link_target
+field_name: field_sp_button_link_target
+entity_type: node
+bundle: special_promotions_page
+label: 'Button Link Target'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
