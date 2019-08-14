@@ -643,9 +643,9 @@ class DomainImport {
       $query = \Drupal::entityQuery('taxonomy_term')
         ->condition('content_translation_created', $export_time, '<');
       $group = $query->orConditionGroup()
-        ->condition('vid', 'domain')
-        ->condition('vid', 'domain_groups')
-        ->condition('vid', 'master_placeholder');
+        ->condition('vid', self::DOMAIN)
+        ->condition('vid', self::DOMAIN_GROUP)
+        ->condition('vid', self::MASTER_PLACEHOLDER);
       $tids = $query->condition($group)->execute();
 
       if (!empty($tids)) {
