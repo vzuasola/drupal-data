@@ -114,18 +114,18 @@ class ImportForm extends FormBase {
         ->condition('vid', 'master_placeholder');
       $tids = $query->condition($group)->execute();
 
-      $operations = [];
-      $taxonomyAvg = ceil(count($tids)/$domainBatch);
-
-      for ($i = 0; $i < $taxonomyAvg; $i++) {
-        $tid = array_slice($tids,($i * $domainBatch), $domainBatch);
-        $operations[] = [[$this->domainImport, 'deleteTaxonomies'], [$form_state, $tid]];
-      }
-
       $pids = \Drupal::entityQuery('paragraph')
         ->condition('type', 'domain_management_configuration')
         ->condition('created', $export_time, '<')
         ->execute();
+
+      $operations = [];
+
+      $taxonomyAvg = ceil(count($tids)/$domainBatch);
+      for ($i = 0; $i < $taxonomyAvg; $i++) {
+        $tid = array_slice($tids,($i * $domainBatch), $domainBatch);
+        $operations[] = [[$this->domainImport, 'deleteTaxonomies'], [$form_state, $tid]];
+      }
 
       $paragraphAvg = ceil(count($pids)/$domainBatch);
       for ($i = 0; $i < $paragraphAvg; $i++) {
