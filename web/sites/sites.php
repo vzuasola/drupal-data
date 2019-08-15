@@ -116,6 +116,11 @@ $sites['mobile-arcade.drupal.dev'] = 'mobile-arcade';
 $sites['mobile-arcade.drupal.local'] = 'mobile-arcade';
 $sites['mobile-arcade.drupal.env'] = 'mobile-arcade';
 
+// Mobile Exchange Revamp instance
+$sites['mobile-exchange.drupal.dev'] = 'mobile-exchange';
+$sites['mobile-exchange.drupal.local'] = 'mobile-exchange';
+$sites['mobile-exchange.drupal.env'] = 'mobile-exchange';
+
 // Poker revamp instance
 $sites['poker.drupal.local'] = 'poker';
 $sites['poker.drupal.dev'] = 'poker';
