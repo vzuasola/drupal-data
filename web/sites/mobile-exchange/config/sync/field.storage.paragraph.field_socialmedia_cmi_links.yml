@@ -1,0 +1,23 @@
+uuid: 255dccfa-4075-4611-83d9-a4ba9625c83c
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+_core:
+  default_config_hash: 9N9TCITRBVIRfNEP-WzbO61VMdZo8TYTzCOPRaZjWxQ
+id: paragraph.field_socialmedia_cmi_links
+field_name: field_socialmedia_cmi_links
+entity_type: paragraph
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
