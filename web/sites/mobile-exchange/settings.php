@@ -6,4 +6,4 @@ require $app_root . '/../config/base.settings.php';
 /**
  * The product code
  */
-$settings['product'] = 'product';
+$settings['product'] = 'mobile-entrypage';
