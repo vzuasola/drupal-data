@@ -1,0 +1,30 @@
+uuid: 5edb4e6a-c6ab-4614-a51b-f5b5be687883
+langcode: ja
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_sp_button_link_target
+field_name: field_sp_button_link_target
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: _blank
+      label: 'New Tab'
+    -
+      value: _self
+      label: 'Same Tab'
+    -
+      value: window
+      label: 'New Window'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

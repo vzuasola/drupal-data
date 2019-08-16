@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.games.body
+    - field.field.node.games.field_game_landscape_size
     - field.field.node.games.field_game_provider
     - field.field.node.games.field_maintenance_blurb
     - field.field.node.games.field_maintenance_end_date
@@ -29,6 +30,7 @@ third_party_settings:
       children:
         - field_game_ribbon
         - field_game_thumbnail_size
+        - field_game_landscape_size
         - field_game_thumbnail_small
         - field_game_thumbnail_large
       parent_name: ''
@@ -79,6 +81,12 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_game_landscape_size:
+    weight: 125
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_game_provider:
     weight: 15
     settings: {  }
@@ -92,7 +100,7 @@ content:
     type: options_select
     region: content
   field_game_thumbnail_large:
-    weight: 126
+    weight: 127
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -106,7 +114,7 @@ content:
     type: options_select
     region: content
   field_game_thumbnail_small:
-    weight: 125
+    weight: 126
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail

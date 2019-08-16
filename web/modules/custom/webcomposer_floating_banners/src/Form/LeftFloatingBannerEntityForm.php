@@ -20,6 +20,14 @@ class LeftFloatingBannerEntityForm extends ContentEntityForm {
   public function buildForm(array $form, FormStateInterface $form_state) {
     /* @var $entity \Drupal\webcomposer_floating_banners\Entity\LeftFloatingBannerEntity */
     $form = parent::buildForm($form, $form_state);
+    $perProductStatus = $this->config('webcomposer_config.floating_banner_configuration')
+      ->get('enable_per_product') ?? 0;
+
+    if ($perProductStatus) {
+      $form['field_per_page_config']['#access'] = false;
+    } else {
+      $form['field_per_product_config']['#access'] = false;
+    }
 
     $entity = $this->entity;
 

@@ -1,0 +1,18 @@
+uuid: 0e818622-fd16-4f78-97be-b1d867cbf869
+langcode: ja
+status: true
+dependencies:
+  module:
+    - zipang_special_promotions_notif
+id: zipang_special_promotions_entity.zipang_special_promotions_entity.metatag
+field_name: metatag
+entity_type: zipang_special_promotions_entity
+bundle: zipang_special_promotions_entity
+label: Metatags
+description: 'The metatags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

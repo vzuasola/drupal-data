@@ -111,6 +111,16 @@ $sites['mobile-lottery.drupal.dev'] = 'mobile-lottery';
 $sites['mobile-lottery.drupal.local'] = 'mobile-lottery';
 $sites['mobile-lottery.drupal.env'] = 'mobile-lottery';
 
+// Mobile Arcade Revamp instance
+$sites['mobile-arcade.drupal.dev'] = 'mobile-arcade';
+$sites['mobile-arcade.drupal.local'] = 'mobile-arcade';
+$sites['mobile-arcade.drupal.env'] = 'mobile-arcade';
+
+// Mobile Exchange Revamp instance
+$sites['mobile-exchange.drupal.dev'] = 'mobile-exchange';
+$sites['mobile-exchange.drupal.local'] = 'mobile-exchange';
+$sites['mobile-exchange.drupal.env'] = 'mobile-exchange';
+
 // Poker revamp instance
 $sites['poker.drupal.local'] = 'poker';
 $sites['poker.drupal.dev'] = 'poker';

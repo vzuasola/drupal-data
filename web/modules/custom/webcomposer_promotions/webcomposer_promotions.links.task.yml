@@ -1,4 +1,0 @@
-webcomposer_promotions.promotion_configuration_tab:
-  route_name: webcomposer_promotions.promotion_configuration
-  title: 'Promotion Right Side'
-  base_route: webcomposer_promotions.promotion_configuration

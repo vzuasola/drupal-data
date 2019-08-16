@@ -1,0 +1,5 @@
+services:
+  webcomposer_settings.configuration_resource_subscriber:
+    class: Drupal\webcomposer_settings\EventSubscriber\ConfigurationResourceSubscriber
+    tags:
+      - { name: 'event_subscriber' }

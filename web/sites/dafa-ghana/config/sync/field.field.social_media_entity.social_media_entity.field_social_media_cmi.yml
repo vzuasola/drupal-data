@@ -17,7 +17,7 @@ bundle: social_media_entity
 label: 'Social Media List'
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

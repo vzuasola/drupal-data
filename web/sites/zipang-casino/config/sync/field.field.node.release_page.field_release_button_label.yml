@@ -1,0 +1,19 @@
+uuid: b98f1516-1ffe-4037-8e6b-8ebff1e7f351
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_release_button_label
+    - node.type.release_page
+id: node.release_page.field_release_button_label
+field_name: field_release_button_label
+entity_type: node
+bundle: release_page
+label: 'Button Label'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

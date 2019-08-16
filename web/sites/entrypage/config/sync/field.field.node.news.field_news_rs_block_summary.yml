@@ -1,0 +1,21 @@
+uuid: 13de7cfd-e01e-4603-b2ea-b6f64894f7d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_news_rs_block_summary
+    - node.type.news
+  module:
+    - text
+id: node.news.field_news_rs_block_summary
+field_name: field_news_rs_block_summary
+entity_type: node
+bundle: news
+label: 'Right Side Block Summary'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

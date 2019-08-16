@@ -4,13 +4,10 @@ status: true
 dependencies:
   config:
     - field.field.taxonomy_term.game_providers.field_game_provider_key
-    - field.field.taxonomy_term.game_providers.field_game_provider_maintenance
     - taxonomy.vocabulary.game_providers
   module:
     - path
     - text
-    - datetime
-    - field_group
 third_party_settings:
   field_group:
     group_gp_maintenance_schedule:
@@ -46,13 +43,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
-    region: content
-  field_game_provider_maintenance:
-    weight: 2
-    settings:
-      display_label: true
-    third_party_settings: {  }
-    type: boolean_checkbox
     region: content
   langcode:
     type: language_select
