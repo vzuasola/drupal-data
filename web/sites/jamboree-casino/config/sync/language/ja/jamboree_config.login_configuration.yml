@@ -1,0 +1,17 @@
+jamboree_settings_tab__active_tab: ''
+login_button_label_main: ログイン
+login_button_label_sub: アカウントの登録
+login_lightbox_title: ログイン
+login_username: ユーザー名
+login_password: パスワード
+login_remember_username: パスワードを保存する
+login_submit_button: ログイン
+login_forgot_password: パスワードを忘れた場合
+login_forgot_password_link: /contact-us
+login_registration: アカウントを作成する
+login_registration_link: /registration
+login_username_required: ユーザーネームが一致しません。
+login_password_required: パスワードが一致しません。
+login_pt_error_messages: ''
+login_session_time: ''
+session_timeout: セッションタイムアウト
