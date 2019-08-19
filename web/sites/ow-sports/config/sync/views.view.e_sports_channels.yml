@@ -175,7 +175,7 @@ display:
     position: 2
     display_options:
       display_extenders: {  }
-      path: admin/structure/e_sports_channel_entity
+      path: admin/config/owsports/e_sports_channel_entity
       style:
         type: table
         options:
@@ -207,6 +207,7 @@ display:
         filter_groups: false
         pager: false
         sorts: false
+        title: false
       row:
         type: fields
         options:
@@ -657,6 +658,7 @@ display:
           expose:
             label: ''
           plugin_id: standard
+      title: 'Esports channel'
     cache_metadata:
       max-age: -1
       contexts:

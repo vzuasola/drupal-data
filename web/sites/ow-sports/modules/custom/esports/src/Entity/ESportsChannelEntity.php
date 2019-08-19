@@ -47,11 +47,11 @@ use Drupal\user\UserInterface;
  *     "status" = "status",
  *   },
  *   links = {
- *     "canonical" = "/admin/structure/e_sports_channel_entity/{e_sports_channel_entity}",
- *     "add-form" = "/admin/structure/e_sports_channel_entity/add",
- *     "edit-form" = "/admin/structure/e_sports_channel_entity/{e_sports_channel_entity}/edit",
- *     "delete-form" = "/admin/structure/e_sports_channel_entity/{e_sports_channel_entity}/delete",
- *     "collection" = "/admin/structure/e_sports_channel_entity",
+ *     "canonical" = "/admin/config/owsports/e_sports_channel_entity/{e_sports_channel_entity}",
+ *     "add-form" = "/admin/config/owsports/e_sports_channel_entity/add",
+ *     "edit-form" = "/admin/config/owsports/e_sports_channel_entity/{e_sports_channel_entity}/edit",
+ *     "delete-form" = "/admin/config/owsports/e_sports_channel_entity/{e_sports_channel_entity}/delete",
+ *     "collection" = "/admin/config/owsports/e_sports_channel_entity",
  *   },
  *   field_ui_base_route = "e_sports_channel_entity.settings"
  * )
