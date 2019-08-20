@@ -1,18 +1,12 @@
-e_sports_channel_entity.list:
-  title: 'E-Sports Channel Configuration'
-  description: 'E-Sports Channel Configuration'
-  parent: system.admin_config
-  route_name: e_sports_channel_entity.admin_settings
-
 # Esports channel entity menu items definition
 entity.e_sports_channel_entity.collection:
-  title: 'E-Sports channel entity list'
+  title: 'E-Sports Channel List'
   route_name: entity.e_sports_channel_entity.collection
   description: 'List Esports channel entity entities'
-  parent: e_sports_channel_entity.list
+  parent: owsports_configs.list
 
 e_sports_channel_entity.admin.structure.settings:
-  title: E-Sports channel entity settings
+  title: E-Sports Channel Settings
   description: 'Configure Esports channel entity entities'
   route_name: e_sports_channel_entity.settings
-  parent: e_sports_channel_entity.list
+  parent: owsports_configs.list
