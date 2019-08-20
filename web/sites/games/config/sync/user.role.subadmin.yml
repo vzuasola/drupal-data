@@ -43,7 +43,6 @@ permissions:
   - 'add webcomposer slider entity entities'
   - 'administer content types'
   - 'administer drawer entity entities'
-  - 'administer left floating banner entity entities'
   - 'administer menu'
   - 'administer meta tags'
   - 'administer nodes'
