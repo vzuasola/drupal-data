@@ -1,0 +1,22 @@
+add deposit and withdrawal entity entities:
+  title: 'Create new Deposit and withdrawal entity entities'
+
+administer deposit and withdrawal entity entities:
+  title: 'Administer Deposit and withdrawal entity entities'
+  description: 'Allow to access the administration form to configure Deposit and withdrawal entity entities.'
+  restrict access: true
+
+delete deposit and withdrawal entity entities:
+  title: 'Delete Deposit and withdrawal entity entities'
+
+edit deposit and withdrawal entity entities:
+  title: 'Edit Deposit and withdrawal entity entities'
+
+access deposit and withdrawal entity overview:
+  title: 'Access the Deposit and withdrawal entity overview page'
+
+view published deposit and withdrawal entity entities:
+  title: 'View published Deposit and withdrawal entity entities'
+
+view unpublished deposit and withdrawal entity entities:
+  title: 'View unpublished Deposit and withdrawal entity entities'
