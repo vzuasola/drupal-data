@@ -37,7 +37,7 @@ class ZipangCanonicalForm extends FormBase {
       '#title' => t('Zipang Configurations'),
     ];
 
-    $this->section404PageConfig($form);
+    $this->sectionCanonicalConfig($form);
 
     return $form;
   }
@@ -45,29 +45,23 @@ class ZipangCanonicalForm extends FormBase {
   /**
    * {@inheritdoc}
    */
-  private function section404PageConfig(array &$form) {
-    $form['not_found_config'] = [
-      '#type' => 'details',
-      '#title' => $this->t('Canonical'),
-    ];
-
-    $default_404_page_title = $this->get('not_found_title');
-    $form['not_found_config']['not_found_title'] = [
+  private function sectionCanonicalConfig(array &$form) {
+    $default_url = $this->get('canonical_url');
+    $form['canonical_config']['canonical_url'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('404 Page Title'),
-      '#default_value' => $default_404_page_title,
+      '#title' => $this->t('Canonical URL'),
+      '#default_value' => $default_url,
       '#translatable' => TRUE,
     ];
 
-    $default_404_page_body = $this->get('not_found_body');
-    $form['not_found_config']['not_found_body'] = [
-      '#type' => 'text_format',
-      '#title' => t('404 Page Body'),
-      '#default_value' => $default_404_page_body['value'],
-      '#description' => $this->t('404 Page Body.'),
-      '#format' => $default_404_page_body['format'],
+    $d = $this->get('alternate_url');
+    $form['fair_gaming_setting']['alternate_url'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Alternate URL'),
+      '#default_value' => $d,
+      '#format' => $d['format'],
+      '#description' => 'Define the hreflang mapping for alternate URL. Pipe seperated URL and hreflang per line.<br />test',
       '#translatable' => TRUE,
     ];
-
   }
 }
