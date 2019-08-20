@@ -60,7 +60,7 @@ class ZipangCanonicalForm extends FormBase {
       '#title' => $this->t('Alternate URL'),
       '#default_value' => $d,
       '#format' => $d['format'],
-      '#description' => 'Define the hreflang mapping for alternate URL. Pipe seperated URL and hreflang per line.<br />test',
+      '#description' => 'Define the hreflang mapping for alternate URL. Pipe seperated URL and hreflang per line.',
       '#translatable' => TRUE,
     ];
   }
