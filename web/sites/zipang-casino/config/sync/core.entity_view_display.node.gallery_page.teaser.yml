@@ -16,4 +16,14 @@ content:
     weight: 100
     region: content
 hidden:
+  body: true
+  field_button_label: true
+  field_buttons: true
+  field_gallery_banner: true
+  field_gallery_banner_link: true
+  field_gallery_banner_link_target: true
+  field_gallery_button_link: true
+  field_gallery_button_link_target: true
+  field_gallery_image_items: true
+  field_gallery_summary_desc: true
   langcode: true

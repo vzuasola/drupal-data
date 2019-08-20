@@ -1,0 +1,9 @@
+uuid: a870e340-4e6c-4a4c-8c83-652780f7911f
+langcode: ja
+status: true
+dependencies: {  }
+name: 'Special Promotions Year'
+vid: special_promotions_year
+description: ''
+hierarchy: 0
+weight: 0

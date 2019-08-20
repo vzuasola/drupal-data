@@ -14,8 +14,8 @@ use Drupal\Core\Form\FormStateInterface;
 function zipang_config_form_system_site_maintenance_mode_alter(array &$form, FormStateInterface $form_state, $form_id) {
 
     // config for maintenance mode enabled pages
-    $maintenance_mode_enabled_pages = \Drupal::config('site.maintenance')->get('maintenance_mode_enabled_pages');
-    $soft_maintenance_mode = \Drupal::config('site.maintenance')->get('soft_maintenance_mode');
+    $maintenance_mode_enabled_pages = \Drupal::config('zipang_config.maintenance')->get('maintenance_mode_enabled_pages');
+    $soft_maintenance_mode = \Drupal::config('zipang_config.maintenance')->get('soft_maintenance_mode');
     $form['advanced'] = [
       '#type' => 'vertical_tabs',
       '#title' => t('Put site into Soft Maintenance Mode'),
@@ -45,11 +45,11 @@ function zipang_config_form_system_site_maintenance_mode_alter(array &$form, For
 }
 
 function maintenance_alter_submit(array $form, FormStateInterface $form_state) {
-    \Drupal::configFactory()->getEditable('site.maintenance')
+    \Drupal::configFactory()->getEditable('zipang_config.maintenance')
       ->set('maintenance_mode_enabled_pages', $form_state->getValue('maintenance_mode_enabled_pages'))
       ->save();
 
-    \Drupal::configFactory()->getEditable('site.maintenance')
+    \Drupal::configFactory()->getEditable('zipang_config.maintenance')
       ->set('soft_maintenance_mode', $form_state->getValue('soft_maintenance_mode'))
       ->save();
 }
