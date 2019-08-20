@@ -23,6 +23,7 @@ module:
   ctools: 0
   datetime: 0
   deposit_and_withdrawal: 0
+  devel: 0
   draggableviews: 0
   dynamic_page_cache: 0
   editor: 0
@@ -91,15 +92,14 @@ module:
   webform: 0
   webform_rest: 0
   webform_ui: 0
-  zipang_404: 0
   zipang_big_winner: 0
-  zipang_canonical: 0
+  zipang_404: 0
   zipang_config: 0
   zipang_desktop_blocks: 0
   zipang_desktop_games: 0
   zipang_dropdown_menu: 0
-  zipang_fair_gaming: 0
   zipang_faq: 0
+  zipang_fair_gaming: 0
   zipang_jackpot: 0
   zipang_mobile_blocks: 0
   zipang_mobile_games: 0
