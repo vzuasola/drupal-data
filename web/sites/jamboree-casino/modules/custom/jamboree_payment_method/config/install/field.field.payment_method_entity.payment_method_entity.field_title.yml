@@ -1,0 +1,20 @@
+uuid: 4557d3cd-5068-45ba-a5f6-07bda0eaebdf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.payment_method_entity.field_title
+  module:
+    - jamboree_payment_method
+id: payment_method_entity.payment_method_entity.field_title
+field_name: field_title
+entity_type: payment_method_entity
+bundle: payment_method_entity
+label: Title
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
