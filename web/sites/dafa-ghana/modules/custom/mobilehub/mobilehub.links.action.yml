@@ -1,0 +1,14 @@
+# mobilehub.add_form:
+#   route_name: 'node.add'
+#   title: 'Add Tile'
+#   route_parameters:
+#       node_type: 'news'
+#   options:
+#       query:
+#           destination: '/admin/news/sorting'
+#   appears_on:
+#       - view.news.page_news_sortingentity.mobile_tiles.add_form:
+  route_name: entity.mobile_tiles.add_form
+  title: 'Add Mobile tiles'
+  appears_on:
+    - entity.mobile_tiles.collection
