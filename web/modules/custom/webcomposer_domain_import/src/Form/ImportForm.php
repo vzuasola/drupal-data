@@ -64,29 +64,83 @@ class ImportForm extends FormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    $languages = $this->domainImport->getExcelLanguages($form_state);
-    $operations = [
-        [[$this->domainImport, 'importPrepare'], [$form_state]],
-        [[$this->domainImport, 'importMasterPlaceholder'], [$form_state]],
-    ];
-    foreach ($languages as $key => $langcode) {
-      $operations[] = [[$this->domainImport, 'importDomainGroups'],
-      [$form_state, $langcode],
-      ];
-    }
+    $config = $this->config('webcomposer_config.toggle_configuration');
 
-    foreach ($languages as $key => $langcode) {
-      $operations[] = [[$this->domainImport, 'importDomains'],
-      [$form_state, $langcode],
-      ];
-    }
+    $optimizeImport = $config->get('optimize_import');
 
-    $batch = [
-      'title' => t('Importing Domains'),
-      'operations' => $operations,
-      'init_message' => t('Batch is starting.'),
-    ];
-    batch_set($batch);
+    if(!empty($optimizeImport)) {
+      // placeholders batch
+      $operations = [
+        [[$this->domainImport, 'importPlaceholder'], [$form_state]],
+      ];
+      $batch = [
+        'title' => t('Importing Domains'),
+        'operations' => $operations,
+        'init_message' => t('Batch is starting'),
+      ];
+      batch_set($batch);
+
+      // get how many domains per batch
+      $domainBatch = $config->get('domains_batch');
+      $domainBatch = (int)$domainBatch + 1;
+
+      $domains = $this->domainImport->getExcelDomains($form_state);
+      foreach ($domains as $group => $domain) {
+        $operations = [
+          [[$this->domainImport, 'importDomainGroup'], [$form_state, $group]]
+        ];
+
+        $domainsAvg = ceil(count($domain)/$domainBatch);
+        for ($i = 0; $i < $domainsAvg; $i++) {
+          $domainSlice = array_slice($domain,($i * $domainBatch), $domainBatch);
+          $operations[] = [[$this->domainImport, 'importDomain'], [$form_state, $domainSlice]];
+        }
+        // domains batch
+        $batch = [
+          'title' => t('Importing Domains'),
+          'operations' => $operations,
+          'init_message' => t('Importing domains - '. $group),
+        ];
+        batch_set($batch);
+      }
+      // delete batch
+      $export_time = time();
+      $operations = [
+        [[$this->domainImport, 'deleteParagraphs'], [$form_state, $export_time]],
+        [[$this->domainImport, 'deleteTaxonomies'], [$form_state, $export_time]],
+      ];
+
+      $batch = [
+        'title' => t('Importing Domains'),
+        'operations' => $operations,
+        'init_message' => t('Batch is ending'),
+      ];
+      batch_set($batch);
+    }
+    else {
+      $languages = $this->domainImport->getExcelLanguages($form_state);
+      $operations = [
+          [[$this->domainImport, 'importPrepare'], [$form_state]],
+          [[$this->domainImport, 'importMasterPlaceholder'], [$form_state]],
+      ];
+
+      foreach ($languages as $key => $langcode) {
+        $operations[] = [[$this->domainImport, 'importDomainGroups'],
+        [$form_state, $langcode],
+        ];
+      }
+      foreach ($languages as $key => $langcode) {
+        $operations[] = [[$this->domainImport, 'importDomains'],
+        [$form_state, $langcode],
+        ];
+      }
+      $batch = [
+        'title' => t('Importing Domains'),
+        'operations' => $operations,
+        'init_message' => t('Batch is starting.'),
+      ];
+      batch_set($batch);
+    }
   }
 
 }

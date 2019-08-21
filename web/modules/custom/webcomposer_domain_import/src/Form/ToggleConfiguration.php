@@ -36,6 +36,22 @@ class ToggleConfiguration extends ConfigFormBase {
       '#default_value' => $config->get('domain_toggle'),
     ];
 
+    $form['optimize_import'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Optimize Domain Import'),
+      '#default_value' => $config->get('optimize_import'),
+    ];
+
+    $domain_batch = $config->get('domains_batch');
+    $default_batch = isset($domain_batch)?$domain_batch:4;
+    $form['domains_batch'] = [
+      '#type' => 'select',
+      '#inline' => TRUE,
+      '#options' => range(1, 100),
+      '#title' => $this->t('Domains Per Batch'),
+      '#default_value' => $default_batch,
+    ];
+
     return parent::buildForm($form, $form_state);
   }
 
@@ -45,6 +61,8 @@ class ToggleConfiguration extends ConfigFormBase {
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $keys = [
       'domain_toggle',
+      'optimize_import',
+      'domains_batch',
     ];
 
     foreach ($keys as $key) {
