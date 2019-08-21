@@ -55,10 +55,9 @@ class MobilehubConfiguration extends FormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Mobilehub Page Title'),
       '#description' => $this->t('Adds Browser Tab Title on Mobilehub Page'),
-      '#default_value' => $this->get('tab_title'),
+      '#default_value' => $this->get('page_title'),
       '#required' => TRUE,
       '#translatable' => TRUE,
     ];
-
   }
 }
