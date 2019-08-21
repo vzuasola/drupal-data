@@ -13,8 +13,8 @@ entity_type: mobile_tiles
 bundle: mobile_tiles
 label: 'Login State'
 description: ''
-required: false
-translatable: false
+required: true
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }
