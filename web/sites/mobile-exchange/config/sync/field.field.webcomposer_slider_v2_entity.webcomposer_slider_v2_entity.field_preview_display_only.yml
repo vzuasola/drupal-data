@@ -1,0 +1,26 @@
+uuid: 23e9322f-b863-4945-b103-ca96122dad8f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.webcomposer_slider_v2_entity.field_preview_display_only
+  module:
+    - webcomposer_slider_v2
+_core:
+  default_config_hash: vBUNyQeFLZyQ-jq8Gf5wUM1GykZSITw9zVfUlXnZy7M
+id: webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_preview_display_only
+field_name: field_preview_display_only
+entity_type: webcomposer_slider_v2_entity
+bundle: webcomposer_slider_v2_entity
+label: 'Preview Display Only'
+description: 'Enable this field if you want the slider entry to be viewable on Preview Mode only.'
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
