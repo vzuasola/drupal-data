@@ -1,0 +1,24 @@
+uuid: 8e0dad8a-906e-4fe7-96f9-08f0bb0317ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.webcomposer_slider_v2_entity.field_slider_use_game_loader
+  module:
+    - webcomposer_slider_v2
+id: webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_slider_use_game_loader
+field_name: field_slider_use_game_loader
+entity_type: webcomposer_slider_v2_entity
+bundle: webcomposer_slider_v2_entity
+label: 'Use Game Loader'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'true'
+  off_label: 'false'
+field_type: boolean
