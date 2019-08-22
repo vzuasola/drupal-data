@@ -41,7 +41,8 @@ class MobileTilesStorage extends SqlContentEntityStorage implements MobileTilesS
    * {@inheritdoc}
    */
   public function countDefaultLanguageRevisions(MobileTilesInterface $entity) {
-    return $this->database->query('SELECT COUNT(*) FROM {mobile_tiles_field_revision} WHERE id = :id AND default_langcode = 1', [':id' => $entity->id()])
+    return $this->database->query('SELECT COUNT(*) FROM {mobile_tiles_field_revision}
+      WHERE id = :id AND default_langcode = 1', [':id' => $entity->id()])
       ->fetchField();
   }
 
