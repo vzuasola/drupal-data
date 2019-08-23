@@ -140,16 +140,19 @@ class DomainResource extends ResourceBase {
         $key = $translatedEntity->field_placeholder_key->value;
         $domainGroup = 'domain_groups';
         $fallback = $this->webcomposerPlaceholderFallback($domainGroup, $key);
-
-        $checkIfKeyExits = array_key_exists($key, $fallback) ? true : false;
+        $checkIfKeyExits = false;
+        if ($fallback) {
+          $checkIfKeyExits = array_key_exists($key, $fallback) ? true : false;
+        }
         if ($checkIfKeyExits == true) {
           $definition = array_merge($definition, $fallback);
         }
 
         // check in master placeholder list
         $masterPlaceholderList = 'master_placeholder';
-        $fallback = $this->webcomposerPlaceholderFallback($masterPlaceholderList, $key);
-
+        if ($fallback) {
+          $fallback = $this->webcomposerPlaceholderFallback($masterPlaceholderList, $key);
+        }
         $checkIfKeyExits = array_key_exists($key, $fallback) ? true : false;
         if ($checkIfKeyExits == true) {
           $definition = array_merge($definition, $fallback);
@@ -183,7 +186,7 @@ class DomainResource extends ResourceBase {
       $result = $query->execute()->fetchAll();
 
     }
-
+    $definition = array();
     foreach ($result as $getEntity) {
       $translatedEntity  = \Drupal\paragraphs\Entity\Paragraph::load($getEntity->$field)->getTranslation($this->currentLanguage);
       $key = $translatedEntity->field_placeholder_key->value;
