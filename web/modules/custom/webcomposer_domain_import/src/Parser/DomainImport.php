@@ -566,10 +566,17 @@ class DomainImport {
           $paragraphs[] = $paragraph[$token];
         }
       }
-      $term->addTranslation($lang, [
+
+      $termTranslate = [
         'name' => $domain,
         'field_add_placeholder' => $paragraphs,
-      ]);
+      ];
+      // add parent group field term id
+      if (!empty($param['gid'])) {
+        $termTranslate['field_select_domain_group'] = $param['gid'];
+      }
+
+      $term->addTranslation($lang, $termTranslate);
     }
     $term->save();
     return $term->id();
