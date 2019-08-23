@@ -1,0 +1,18 @@
+uuid: 67521272-1f37-46f7-9554-343c4a175f91
+langcode: ja
+status: true
+dependencies:
+  module:
+    - deposit_and_withdrawal
+id: deposit_and_withdrawal_entity.deposit_and_withdrawal_entity.metatag
+field_name: metatag
+entity_type: deposit_and_withdrawal_entity
+bundle: deposit_and_withdrawal_entity
+label: Metatags
+description: 'The metatags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

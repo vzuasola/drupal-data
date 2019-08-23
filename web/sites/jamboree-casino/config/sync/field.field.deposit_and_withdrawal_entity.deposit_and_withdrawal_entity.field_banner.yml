@@ -1,23 +1,24 @@
-uuid: 008e5ae7-697c-4e2e-b3b3-5c58455b853d
+uuid: 988f1932-cc13-4e06-b13e-7659f154853f
 langcode: ja
 status: true
 dependencies:
   config:
-    - field.storage.deposit_and_withdrawal_entity.field_thumbnail
+    - field.storage.deposit_and_withdrawal_entity.field_banner
   module:
+    - content_translation
     - deposit_and_withdrawal
     - image
 third_party_settings:
   content_translation:
     translation_sync:
-      file: file
-      alt: '0'
-      title: '0'
-id: deposit_and_withdrawal_entity.deposit_and_withdrawal_entity.field_thumbnail
-field_name: field_thumbnail
+      alt: alt
+      title: title
+      file: '0'
+id: deposit_and_withdrawal_entity.deposit_and_withdrawal_entity.field_banner
+field_name: field_banner
 entity_type: deposit_and_withdrawal_entity
 bundle: deposit_and_withdrawal_entity
-label: Thumbnail
+label: Banner
 description: ''
 required: false
 translatable: true
