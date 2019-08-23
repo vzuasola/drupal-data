@@ -1,0 +1,21 @@
+uuid: 8d73c73e-f75a-43fa-bff4-4be8a3f2743e
+langcode: ja
+status: true
+dependencies:
+  module:
+    - deposit_and_withdrawal
+id: deposit_and_withdrawal_entity.field_button_label
+field_name: field_button_label
+entity_type: deposit_and_withdrawal_entity
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

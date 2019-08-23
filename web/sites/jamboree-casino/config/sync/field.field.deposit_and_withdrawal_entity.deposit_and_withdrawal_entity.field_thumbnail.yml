@@ -7,12 +7,6 @@ dependencies:
   module:
     - deposit_and_withdrawal
     - image
-third_party_settings:
-  content_translation:
-    translation_sync:
-      file: file
-      alt: '0'
-      title: '0'
 id: deposit_and_withdrawal_entity.deposit_and_withdrawal_entity.field_thumbnail
 field_name: field_thumbnail
 entity_type: deposit_and_withdrawal_entity
