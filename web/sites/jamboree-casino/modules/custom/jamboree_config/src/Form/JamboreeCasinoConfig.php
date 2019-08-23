@@ -317,5 +317,25 @@ class JamboreeCasinoConfig extends FormBase {
       '#default_value' => $this->get('special_promotions_breadcrumb'),
       '#translatable' => true,
     ];
+
+    $form['slider_settings'] = [
+      '#type' => 'details',
+      '#title' => t('Slider Settings'),
+      '#group' => 'advanced',
+    ];
+
+    $form['slider_settings']['slider_speed'] = [
+      '#type' => 'number',
+      '#title' => $this->t('Slider Speed (seconds)'),
+      '#default_value' => $this->get('slider_speed'),
+      '#translatable' => true,
+    ];
+
+    $form['slider_settings']['slider_speed'] = [
+      '#type' => 'number',
+      '#title' => $this->t('Slider Speed (seconds)'),
+      '#default_value' => $this->get('slider_speed'),
+      '#translatable' => true,
+    ];
   }
 }
