@@ -130,7 +130,7 @@ class DomainResource extends ResourceBase {
     foreach ($result as $getEntity) {
       $value = NULL;
       if ($getEntity->langcode === $this->currentLanguage) {
-        $translatedEntity  = \Drupal\paragraphs\Entity\Paragraph::load($getEntity->field_add_placeholder_target_id);
+        $translatedEntity  = \Drupal\paragraphs\Entity\Paragraph::load($getEntity->field_add_placeholder_target_id)->getTranslation($this->currentLanguage);
         $value = $translatedEntity->field_default_value->value;
         $definition[$translatedEntity->field_placeholder_key->value] = $translatedEntity->field_default_value->value;
       }
@@ -185,7 +185,7 @@ class DomainResource extends ResourceBase {
     }
 
     foreach ($result as $getEntity) {
-      $translatedEntity  = \Drupal\paragraphs\Entity\Paragraph::load($getEntity->$field);
+      $translatedEntity  = \Drupal\paragraphs\Entity\Paragraph::load($getEntity->$field)->getTranslation($this->currentLanguage);
       $key = $translatedEntity->field_placeholder_key->value;
       $value = $translatedEntity->field_default_value->value;
 
