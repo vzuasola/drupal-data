@@ -1,0 +1,30 @@
+uuid: fd8d92a5-770a-4504-bf2b-4ec2d22f5b3f
+langcode: ja
+status: true
+dependencies:
+  module:
+    - deposit_and_withdrawal
+    - options
+id: deposit_and_withdrawal_entity.field_where_to_open_images
+field_name: field_where_to_open_images
+entity_type: deposit_and_withdrawal_entity
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '''_blank'''
+      label: 'New Tab'
+    -
+      value: '''_self'''
+      label: 'Same Tab'
+    -
+      value: '''_blank'', ''location=yes'''
+      label: 'New Window'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
