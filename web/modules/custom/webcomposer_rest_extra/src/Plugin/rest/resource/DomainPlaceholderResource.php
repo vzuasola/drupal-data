@@ -12,6 +12,7 @@ use Psr\Log\LoggerInterface;
 use Drupal\taxonomy\Entity\Term;
 use Drupal\webcomposer_rest_extra\Plugin\rest\resource\utils\LegacyDomainResource;
 use Drupal\webcomposer_rest_extra\Plugin\rest\resource\utils\DomainResource;
+use Drupal\webcomposer_rest_extra\Plugin\rest\resource\utils\OptimizedDomainResource;
 /**
  * Provides a resource to get view domains,domain groups and master placeholder.
  *
@@ -55,6 +56,12 @@ class DomainPlaceholderResource extends ResourceBase {
    * @var Drupal\webcomposer_rest_extra\Plugin\rest\resource\utils\DomainResource
    */
   protected $NewResource;
+
+  /**
+   * The query object for getting new token resource.
+   * @var Drupal\webcomposer_rest_extra\Plugin\rest\resource\utils\OptimizedDomainResource
+   */
+  protected $OptimizedResource;
 
   /**
    * Constructs a Drupal\rest\Plugin\ResourceBase object.
@@ -108,6 +115,17 @@ class DomainPlaceholderResource extends ResourceBase {
       $entityTypeManager,
       $entityQuery
       );
+    $this->OptimizedResource = new OptimizedDomainResource(
+      $configuration,
+      $plugin_id,
+      $plugin_definition,
+      $serializer_formats,
+      $logger,
+      $current_user,
+      $language_manager,
+      $entityTypeManager,
+      $entityQuery
+      );
 
   }
 
@@ -146,7 +164,15 @@ class DomainPlaceholderResource extends ResourceBase {
       }
       else {
         // If toggle is on use the new system
-        $data = $this->NewResource->get($domain);
+        $optimized = \Drupal::config('webcomposer_config.toggle_configuration')->get('optimize_import');
+
+        if(is_null($optimized) || $optimized === 1) {
+          // if optimized import is enabled
+          $data = $this->OptimizedResource->get($domain);
+        }
+        else {
+          $data = $this->NewResource->get($domain);
+        }
       }
 
       if (!$data) {
