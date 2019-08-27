@@ -59,7 +59,7 @@ class OptimizedDomainResource extends ResourceBase {
     array $serializer_formats,
     LoggerInterface $logger,
     AccountProxyInterface $current_user,
-    $language_manager,$entityTypeManager, $entityQuery
+    $language_manager, $entityTypeManager, $entityQuery
   ) {
     parent::__construct($configuration, $plugin_id, $plugin_definition, $serializer_formats, $logger);
     $this->currentUser = $current_user;
@@ -133,7 +133,8 @@ class OptimizedDomainResource extends ResourceBase {
     foreach ($result as $getEntity) {
       $value = NULL;
       if ($getEntity->langcode === $this->currentLanguage) {
-        $translatedEntity  = \Drupal\paragraphs\Entity\Paragraph::load($getEntity->field_add_placeholder_target_id)->getTranslation($this->currentLanguage);
+        $translatedEntity  = \Drupal\paragraphs\Entity\Paragraph::load($getEntity->field_add_placeholder_target_id);
+        $translatedEntity = $translatedEntity->getTranslation($this->currentLanguage);
         $value = $translatedEntity->field_default_value->value;
         if (!is_null($value)) {
           $definition[$translatedEntity->field_placeholder_key->value] = $translatedEntity->field_default_value->value;
@@ -162,7 +163,7 @@ class OptimizedDomainResource extends ResourceBase {
     if (!empty($term)) {
       $query = \Drupal::database()->select("taxonomy_term__$table", 'p');
       $query->fields('p', ["$field", 'langcode']);
-      $query->condition('p.entity_id', $getID, '=');
+      $query->conption('p.entity_id', $getID, '=');
       $query->condition('p.langcode', $this->currentLanguage, '=');
       $result = $query->execute()->fetchAll();
 
