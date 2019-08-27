@@ -530,19 +530,17 @@ class DomainImport {
     $paragraph = [];
     foreach ($variables[$domain]['variables'] as $token => $value) {
         // create paragraph and assign to term
-        if (!is_null($value)) {
-          $paragraph[$token] = Paragraph::create([
-              'type' => 'domain_management_configuration',
-              'field_placeholder_key' => [
-                'value' => $token,
-              ],
-              'field_default_value' => [
-                'value' => $value,
-              ],
-          ]);
-          $paragraph[$token]->save();
-          $termItem['field_add_placeholder'][] = $paragraph[$token];
-        }
+        $paragraph[$token] = Paragraph::create([
+            'type' => 'domain_management_configuration',
+            'field_placeholder_key' => [
+              'value' => $token,
+            ],
+            'field_default_value' => [
+              'value' => $value,
+            ],
+        ]);
+        $paragraph[$token]->save();
+        $termItem['field_add_placeholder'][] = $paragraph[$token];
     }
     $term = Term::create($termItem);
     $term->save();
