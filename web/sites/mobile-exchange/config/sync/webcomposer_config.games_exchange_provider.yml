@@ -1,0 +1,7 @@
+exchange_game_url: 'Deposit_ProcessLogin.aspx?game=exchange'
+languages: "en|en\r\nin|en"
+currency: "INR\r\n"
+country: "IN\r\nLK\r\nBD\r\nPK\r\nPH"
+transaction_subdomain: 'https://prices'
+exchange_tablet_url: 'https://ismart'
+tablet_game_url: 'Deposit_ProcessLogin.aspx?type=exchange&lang=en&st={legacy.credentials}&homeURL={domain:entry}/{domain:lang_token}&extendSessionURL={domain:entry}/{domain:lang_token}&OType=01&oddstype=1'
