@@ -26,6 +26,7 @@ class JamboreePressEntityListBuilder extends EntityListBuilder {
    * {@inheritdoc}
    */
   public function buildRow(EntityInterface $entity) {
+    /* @var $entity \Drupal\jamboree_press\Entity\JamboreePressEntity */
     $row['name'] = Link::createFromRoute(
       $entity->label(),
       'entity.jamboree_press_entity.edit_form',

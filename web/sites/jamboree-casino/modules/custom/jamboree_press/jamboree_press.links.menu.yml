@@ -1,6 +1,6 @@
 jamboree_press.list:
-  title: 'Jamboree Press Configuration'
-  description: 'List Jamboree Press entities'
+  title: 'Jamboree Configuration'
+  description: 'List of Jamboree default entities'
   parent: system.admin_config
   route_name: jamboree_press.admin_settings
 
@@ -11,7 +11,7 @@ entity.jamboree_press_entity.collection:
   description: 'List Jamboree press entity entities'
   parent: jamboree_press.list
 
-jamboree_press.admin.structure.settings:
+jamboree_press_entity.admin.structure.settings:
   title: Jamboree press entity settings
   description: 'Configure Jamboree press entity entities'
   route_name: jamboree_press_entity.settings
