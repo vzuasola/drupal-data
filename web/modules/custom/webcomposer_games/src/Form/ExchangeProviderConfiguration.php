@@ -71,8 +71,8 @@ class ExchangeProviderConfiguration extends FormBase {
 
     $form['gen_config']['exchange_tablet_url'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('Tablet Transaction Domain'),
-      '#description' => $this->t('Defines the Exchange Tablet URL'),
+      '#title' => $this->t('Mobile/Tablet Transaction Domain'),
+      '#description' => $this->t('Defines the Exchange Mobile/Tablet URL'),
       '#default_value' => $this->get('exchange_tablet_url'),
       '#required' => false,
       '#translatable' => TRUE,
