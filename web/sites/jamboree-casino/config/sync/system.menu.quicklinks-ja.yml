@@ -3,6 +3,6 @@ langcode: ja
 status: true
 dependencies: {  }
 id: quicklinks-ja
-label: サイトマップ
-description: カジノジャンボリーのサイトマップ
+label: 'Quicklinks JA'
+description: 'Menu to add the quicklink items [Japanese Language]'
 locked: false
