@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.lobby_tile.field_game_provider
     - field.field.node.lobby_tile.field_lobby_thumbnail_large
     - field.field.node.lobby_tile.field_lobby_thumbnail_size
     - field.field.node.lobby_tile.field_lobby_thumbnail_small
@@ -27,6 +28,12 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_game_provider:
+    weight: 27
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_lobby_thumbnail_large:
     weight: 15
     settings:
