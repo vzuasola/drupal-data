@@ -1,0 +1,16 @@
+uuid: e5d7139c-960c-41df-8506-ff06480dae51
+langcode: ja
+status: true
+dependencies:
+  config:
+    - node.type.special_promotions_page
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.special_promotions_page
+target_entity_type_id: node
+target_bundle: special_promotions_page
+default_langcode: site_default
+language_alterable: false

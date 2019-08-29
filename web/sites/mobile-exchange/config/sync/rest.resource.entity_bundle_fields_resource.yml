@@ -1,0 +1,17 @@
+uuid: 4d763857-b890-4c6f-995c-40070bab3ccb
+langcode: en
+status: true
+dependencies:
+  module:
+    - serialization
+    - user
+    - webcomposer_rest_extra
+id: entity_bundle_fields_resource
+plugin_id: entity_bundle_fields_resource
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+    supported_auth:
+      - cookie

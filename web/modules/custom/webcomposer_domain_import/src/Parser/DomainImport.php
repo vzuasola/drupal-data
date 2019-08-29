@@ -81,6 +81,18 @@ class DomainImport {
   }
 
   /**
+   * Get all the languages from sheet.
+   *
+   * @param string $form_state
+   *   Form state after submit.
+   */
+  public function getExcelDomains($form_state) {
+    $this->readExcel($form_state, $context);
+
+    return $this->ImportParser->excel_get_domains();
+  }
+
+  /**
    * Preparing the Import.
    *
    * @param [Array] $form_state
@@ -386,6 +398,289 @@ class DomainImport {
       $context['finished'] = 1;
       $status = drupal_set_message($message, 'error');
       $this->domainImportErrorCallback($status);
+    }
+  }
+
+  /**
+  * importPlaceholder.
+  *
+  * @param [Array] $form_state
+  * @param [Array] &$context
+  */
+  public function importPlaceholder($form_state, &$context) {
+    $this->setDataFlags();
+    $this->readExcel($form_state, $context);
+
+    if ($context['sandbox'] === "EXCEL_FORMAT_OK") {
+      $placeholders = $this->ImportParser->excel_get_master_placeholder('en');
+
+      foreach ($placeholders as $token => $value) {
+        $context['message'] = 'Importing Placeholders - ' . $token;
+
+        $paragraph = Paragraph::create([
+            'type' => 'domain_management_configuration',
+            'field_placeholder_key' => [
+              'value' => $token,
+            ],
+            'field_default_value' => [
+              'value' => $value,
+            ],
+        ]);
+        $paragraph->save();
+
+        $term = Term::create([
+          'name' => trim($token),
+          'vid' => self::MASTER_PLACEHOLDER,
+          'langcode' => 'en',
+          'field_add_master_placeholder' => $paragraph,
+        ]);
+        $term->save();
+
+        $languages = $this->ImportParser->excel_get_languages();
+        foreach (array_slice($languages, 1) as $lang) {
+          $placeholder = $this->ImportParser->excel_get_master_placeholder($lang);
+
+          $paragraph->addTranslation($lang, [
+            'field_placeholder_key' => [
+              'value' => $token,
+            ],
+            'field_default_value' => [
+              'value' => $placeholder[$token],
+            ],
+          ]);
+          $paragraph->save();
+
+          $term->addTranslation($lang, [
+            'name' => trim($token),
+            'field_add_master_placeholder' => $paragraph,
+          ]);
+        }
+        $term->save();
+      }
+    }
+  }
+
+  /**
+   * importDomainGroups.
+   *
+   * @param [Array] $form_state
+   * @param [Array] &$context
+   */
+  public function importDomainGroup($form_state, $group, &$context) {
+    $this->setDataFlags();
+    $this->readExcel($form_state, $context);
+
+    if ($context['sandbox'] === "EXCEL_FORMAT_OK") {
+      $context['message'] = "Importing domain groups - " . $group;
+      // create group term and get the tid
+      $param = [
+        'domain' => $group,
+        'vid' => self::DOMAIN_GROUP,
+      ];
+
+      $context['results']['gid'] = $this->createGroupDomain($param);
+    }
+  }
+
+  /**
+   * importDomain.
+   *
+   * @param [Array] $form_state
+   * @param [Array] &$context
+   */
+  public function importDomain($form_state, $domains, &$context) {
+    $this->setDataFlags();
+    $this->readExcel($form_state, $context);
+
+    if ($context['sandbox'] === "EXCEL_FORMAT_OK") {
+      // loop each batched domains and assign group tid
+      foreach ($domains as $domain) {
+        $context['message'] = "Importing domains - " . $domain;
+
+        $param = [
+          'domain' => $domain,
+          'vid' => self::DOMAIN,
+          'gid' => $context['results']['gid'],
+        ];
+
+        $this->createGroupDomain($param);
+      }
+    }
+  }
+
+  /**
+   * createGroupDomain.
+   */
+  private function createGroupDomain($param) {
+    // load en variables
+    $variables = $this->ImportParser->excel_get_variables('en');
+
+    $domain = trim($param['domain']);
+
+    $termItem = [
+      'name' => $domain,
+      'vid' => $param['vid'],
+      'langcode' => 'en',
+    ];
+    // add parent group field term id
+    if (!empty($param['gid'])) {
+      $termItem['field_select_domain_group'] = $param['gid'];
+    }
+    // create en term
+    $paragraph = [];
+    foreach ($variables[$domain]['variables'] as $token => $value) {
+      // create paragraph and assign to term
+      $paragraph[$token] = Paragraph::create([
+          'type' => 'domain_management_configuration',
+          'field_placeholder_key' => [
+            'value' => $token,
+          ],
+          'field_default_value' => [
+            'value' => $value,
+          ],
+      ]);
+      $paragraph[$token]->save();
+      $termItem['field_add_placeholder'][] = $paragraph[$token];
+    }
+    $term = Term::create($termItem);
+    $term->save();
+    // create other languages terms
+    $languages = $this->ImportParser->excel_get_languages();
+    foreach (array_slice($languages, 1) as $lang) {
+      // load other language variables
+      $variable = $this->ImportParser->excel_get_variables($lang);
+
+      $paragraphs = [];
+      foreach ($variable[$domain]['variables'] as $token => $value) {
+        // create translation paragraph and assign it to term
+        if (!is_null($value)) {
+          $paragraph[$token]->addTranslation($lang, [
+            'field_placeholder_key' => [
+              'value' => $token,
+            ],
+            'field_default_value' => [
+              'value' => $value,
+            ],
+          ]);
+          $paragraph[$token]->save();
+          $paragraphs[] = $paragraph[$token];
+        }
+      }
+
+      $termTranslate = [
+        'name' => $domain,
+        'field_add_placeholder' => $paragraphs,
+      ];
+      // add parent group field term id
+      if (!empty($param['gid'])) {
+        $termTranslate['field_select_domain_group'] = $param['gid'];
+      }
+
+      $term->addTranslation($lang, $termTranslate);
+    }
+    $term->save();
+    return $term->id();
+  }
+
+
+  /**
+   * deleteTaxonomies.
+   *
+   * @param [Array] $form_state
+   * @param [Array] &$context
+   */
+  public function deleteParagraphs($form_state, $export_time, &$context) {
+    $this->setDataFlags();
+    $this->readExcel($form_state, $context);
+
+    if ($context['sandbox'] === "EXCEL_FORMAT_OK") {
+      $message = 'Deleting Translations';
+      $context['message'] = $message;
+
+      $pids = \Drupal::entityQuery('paragraph')
+        ->condition('type', 'domain_management_configuration')
+        ->condition('created', $export_time, '<')
+        ->execute();
+
+      if (!empty($pids)) {
+        $tables = ['paragraph__field_placeholder_key',
+          'paragraph__field_default_value',
+          'paragraph__field_description',
+          'paragraph_revision__field_default_value',
+          'paragraph_revision__field_description',
+          'paragraph_revision__field_placeholder_key',
+        ];
+
+        foreach ($tables as $table) {
+          \Drupal::database()->delete($table)
+            ->condition('entity_id', $pids, 'IN')
+            ->execute();
+        }
+
+        $tables = [
+          'paragraphs_item',
+          'paragraphs_item_field_data',
+          'paragraphs_item_revision',
+          'paragraphs_item_revision_field_data',
+        ];
+
+        foreach ($tables as $table) {
+          \Drupal::database()->delete($table)
+            ->condition('id', $pids, 'IN')
+            ->execute();
+        }
+      }
+    }
+  }
+
+  /**
+   * deleteTaxonomies.
+   *
+   * @param [Array] $form_state
+   * @param [Array] &$context
+   */
+  public function deleteTaxonomies($form_state, $export_time, &$context) {
+    $this->setDataFlags();
+    $this->readExcel($form_state, $context);
+
+    if ($context['sandbox'] === "EXCEL_FORMAT_OK") {
+      $message = 'Deleting Domains';
+      $context['message'] = $message;
+
+      $query = \Drupal::entityQuery('taxonomy_term')
+        ->condition('content_translation_created', $export_time, '<');
+      $group = $query->orConditionGroup()
+        ->condition('vid', self::DOMAIN)
+        ->condition('vid', self::DOMAIN_GROUP)
+        ->condition('vid', self::MASTER_PLACEHOLDER);
+      $tids = $query->condition($group)->execute();
+
+      if (!empty($tids)) {
+        $tables = ['taxonomy_term__field_add_master_placeholder',
+          'taxonomy_term__field_add_placeholder',
+          'taxonomy_term__field_select_domain_group',
+        ];
+
+        foreach ($tables as $table) {
+          \Drupal::database()->delete($table)
+            ->condition('entity_id', $tids, 'IN')
+            ->execute();
+        }
+
+        $tables = [
+          'taxonomy_term_data',
+          'taxonomy_term_field_data',
+          'taxonomy_term_hierarchy',
+        ];
+
+        foreach ($tables as $table) {
+          \Drupal::database()->delete($table)
+            ->condition('tid', $tids, 'IN')
+            ->execute();
+        }
+      }
+
+      $this->domainImportFinishedCallback();
     }
   }
 
