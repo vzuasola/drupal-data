@@ -158,6 +158,13 @@ class JamboreeCasinoConfig extends FormBase {
       '#translatable' => TRUE,
     ];
 
+    $form['page_setting']['press'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Press Page Title'),
+      '#default_value' => $this->get('Press'),
+      '#translatable' => TRUE,
+    ];
+
     $form['page_setting']['release'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Release Page Title'),
@@ -297,6 +304,13 @@ class JamboreeCasinoConfig extends FormBase {
       '#translatable' => TRUE,
     ];
 
+    $form['inner_breadcrumb']['press_breadcrumb'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Press'),
+      '#default_value' => $this->get('press_breadcrumb'),
+      '#translatable' => TRUE,
+    ];
+
     $form['inner_breadcrumb']['withdraw_method_breadcrumb'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Withdraw Method'),
@@ -315,6 +329,26 @@ class JamboreeCasinoConfig extends FormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Special Promotions'),
       '#default_value' => $this->get('special_promotions_breadcrumb'),
+      '#translatable' => true,
+    ];
+
+    $form['slider_settings'] = [
+      '#type' => 'details',
+      '#title' => t('Slider Settings'),
+      '#group' => 'advanced',
+    ];
+
+    $form['slider_settings']['slider_speed'] = [
+      '#type' => 'number',
+      '#title' => $this->t('Slider Speed (seconds)'),
+      '#default_value' => $this->get('slider_speed'),
+      '#translatable' => true,
+    ];
+
+    $form['slider_settings']['slider_speed'] = [
+      '#type' => 'number',
+      '#title' => $this->t('Slider Speed (seconds)'),
+      '#default_value' => $this->get('slider_speed'),
       '#translatable' => true,
     ];
   }
