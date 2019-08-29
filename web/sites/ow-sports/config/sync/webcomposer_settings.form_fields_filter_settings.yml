@@ -1,4 +1,4 @@
-advanced__active_tab: edit-affiliate-configuration
+advanced__active_tab: edit-pushnx-configuration-v2
 affiliate_expiration: 0
 default_message: 0
 base_url: 0
@@ -121,7 +121,7 @@ debug_display_all: 0
 debug_display_expirydate: 0
 disableBonusAward: 0
 text_: 0
-product_list: 0
+product_list: 1
 product_type_id: 0
 product_icon: 0
 product_type_id_owsports: 1
@@ -175,10 +175,10 @@ product_exclude_dismiss_payments: 0
 domains: 0
 copied: 0
 product_exclude_dismiss_alpine: 1
-product_label_taurus: 0
-product_type_id_taurus: 0
-product_icon_taurus: 0
-product_exclude_taurus: 0
+product_label_taurus: 1
+product_type_id_taurus: 1
+product_icon_taurus: 1
+product_exclude_taurus: 1
 product_exclude_dismiss_taurus: 1
 cta_label_proceed: 0
 cta_actions_proceed: 0
@@ -372,3 +372,17 @@ unsupported_currencies_title: 0
 unsupported_currencies_message: 0
 unsupported_currencies_button: 0
 game_provider_mapping: 0
+status: 0
+country_codes: 0
+cookie_notification: 0
+error_message_restricted_country: 0
+disable_logging: 0
+logging_url: 0
+exception_title: 0
+file_image_exception: 0
+exception_content: 0
+text_notifications: 0
+text_ok: 0
+text_accept: 0
+text_decline: 0
+text_owsports: 0
