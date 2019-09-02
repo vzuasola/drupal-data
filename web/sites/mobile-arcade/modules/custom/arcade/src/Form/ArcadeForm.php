@@ -91,7 +91,7 @@ class ArcadeForm extends FormBase {
         '#translatable' => true,
         '#required' => false,
       ];
-  
+
       $form['general']['transfer_link'] = [
         '#type' => 'textfield',
         '#title' => $this->t('Instant Transfer URL'),
