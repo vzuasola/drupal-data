@@ -1,0 +1,15 @@
+uuid: 3c6ce153-3cbc-4454-b156-e3b1ed0b6a56
+langcode: es-MX
+status: true
+dependencies:
+  module:
+    - webcomposer_language_hierarchy
+third_party_settings:
+  webcomposer_language_hierarchy:
+    webcomposer_fallback_langcode: es
+    webcomposer_language_hidden: 1
+id: es-MX
+label: 'Spanish, Mexico'
+direction: ltr
+weight: 4
+locked: false
