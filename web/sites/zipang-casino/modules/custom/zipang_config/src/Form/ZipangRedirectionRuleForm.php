@@ -59,7 +59,7 @@ class ZipangRedirectionRuleForm extends FormBase {
       '#title' => $this->t('Redirection URLS'),
       '#default_value' => $d,
       '#format' => $d['format'],
-      '#description' => 'Define the URLs and the Redirection Links. Pipe seperated URL and Redirects to per line. Ex. "jp/about-us|about-us" ',
+      '#description' => 'Pipe seperated URL and Redirects to per line. Ex. "jp/about-us|about-us" ',
       '#translatable' => TRUE,
     ];
   }
