@@ -1,0 +1,23 @@
+uuid: 8ed135ae-7f2a-4f6a-97d0-0ab16fd0c9a7
+langcode: en
+status: true
+dependencies:
+  module:
+    - jamboree_withdraw_method
+_core:
+  default_config_hash: 5mubnwGd9UDqK_hbZsT-I_kf7_vp4h8C1tfCGk6FmUc
+id: jamboree_withdraw_method_entity.field_button_url
+field_name: field_button_url
+entity_type: jamboree_withdraw_method_entity
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

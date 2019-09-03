@@ -1,0 +1,22 @@
+uuid: 1efcb17e-3fbe-4750-98d1-6f9e2546757c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.jamboree_withdraw_method_entity.field_summary
+  module:
+    - jamboree_withdraw_method
+_core:
+  default_config_hash: PJWwRjZ7ud_CjTkkodSoJYQNihhyvBDkJHspDPpX5Uc
+id: jamboree_withdraw_method_entity.jamboree_withdraw_method_entity.field_summary
+field_name: field_summary
+entity_type: jamboree_withdraw_method_entity
+bundle: jamboree_withdraw_method_entity
+label: Summary
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long
