@@ -1,0 +1,20 @@
+uuid: 30348546-c2ef-4d6a-b846-a3ec1b30be75
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.payment_method_entity.field_button_label
+  module:
+    - jamboree_payment_method
+id: payment_method_entity.payment_method_entity.field_button_label
+field_name: field_button_label
+entity_type: payment_method_entity
+bundle: payment_method_entity
+label: 'Button Label'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,47 @@
+uuid: 73efdb14-865d-4367-82ae-71f040f42307
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.jamboree_withdraw_method_entity.field_thumbnail
+  module:
+    - content_translation
+    - image
+    - jamboree_withdraw_method
+third_party_settings:
+  content_translation:
+    translation_sync:
+      alt: alt
+      title: title
+      file: '0'
+_core:
+  default_config_hash: Ec3cFRHil_DsEXaA_p3tR-a00gS70GvYrV7xb1P16BM
+id: jamboree_withdraw_method_entity.jamboree_withdraw_method_entity.field_thumbnail
+field_name: field_thumbnail
+entity_type: jamboree_withdraw_method_entity
+bundle: jamboree_withdraw_method_entity
+label: Thumbnail
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image
