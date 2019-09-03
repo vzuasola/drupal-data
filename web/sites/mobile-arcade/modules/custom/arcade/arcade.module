@@ -12,8 +12,8 @@ use Drupal\Core\Routing\RouteMatchInterface;
  */
 function arcade_help($route_name, RouteMatchInterface $route_match) {
   switch ($route_name) {
-    // Main module help for the gts module.
-    case 'help.page.gts':
+    // Main module help for the arcade module.
+    case 'help.page.arcade':
       $output = '';
       $output .= '<h3>' . t('About') . '</h3>';
       $output .= '<p>' . t('Arcade configuration module') . '</p>';

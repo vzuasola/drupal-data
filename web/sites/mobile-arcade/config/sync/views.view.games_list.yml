@@ -19,7 +19,7 @@ dependencies:
 id: games_list
 label: 'Games - List (Content)'
 module: views
-description: ''
+description: 'Manage Arcade Games'
 tag: ''
 base_table: node_field_data
 base_field: nid
@@ -500,8 +500,8 @@ display:
       rendering_language: '***LANGUAGE_language_interface***'
       menu:
         type: normal
-        title: 'Sort Games'
-        description: 'Sorting for the Games Content'
+        title: 'Manage Arcade Games'
+        description: 'Manage & Sort Arcade Games'
         expanded: false
         parent: arcade.list
         weight: 0
