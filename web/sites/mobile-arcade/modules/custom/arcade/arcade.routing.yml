@@ -1,5 +1,5 @@
 arcade.admin_settings:
-  path: 'admin/config/arcade-mobile'
+  path: 'admin/arcade-mobile'
   defaults:
     _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
     _title: 'Mobile Arcade Configurations'
