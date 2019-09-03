@@ -9,7 +9,7 @@ dependencies:
     - field.storage.node.field_maintenance_end_date
     - field.storage.node.field_maintenance_start_date
     - node.type.lobby_tile
-    - system.menu.main
+    - system.menu.admin
   module:
     - datetime
     - draggableviews
@@ -234,6 +234,18 @@ display:
           entity_field: langcode
           plugin_id: language
       sorts:
+        weight:
+          id: weight
+          table: draggableviews_structure
+          field: weight
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: standard
         created:
           id: created
           table: node_field_data
@@ -249,18 +261,6 @@ display:
           expose:
             label: ''
           granularity: second
-        weight:
-          id: weight
-          table: draggableviews_structure
-          field: weight
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: ASC
-          exposed: false
-          expose:
-            label: ''
-          plugin_id: standard
       title: 'Sort Lobby Tiles'
       header: {  }
       footer: {  }
@@ -860,12 +860,12 @@ display:
       menu:
         type: normal
         title: 'Sort Lobby Tiles'
-        description: ''
+        description: 'Used to sort Exchange Lobby tiles'
         expanded: false
-        parent: ''
+        parent: exchange_config.exchange_config_list
         weight: 0
         context: '0'
-        menu_name: main
+        menu_name: admin
     cache_metadata:
       max-age: 0
       contexts:
