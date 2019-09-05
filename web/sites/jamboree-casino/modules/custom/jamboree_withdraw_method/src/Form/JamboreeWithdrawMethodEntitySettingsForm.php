@@ -46,8 +46,7 @@ class JamboreeWithdrawMethodEntitySettingsForm extends FormBase {
    *   Form definition array.
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    $form['jamboreewithdrawmethodentity_settings']['#markup'] = 'Settings form for Jamboree withdraw
-     method entity entities.Manage field settings here.';
+    $form['jamboreewithdrawmethodentity_settings']['#markup'] = 'Settings form for Jamboree withdraw method entity entities. Manage field settings here.';
     return $form;
   }
 

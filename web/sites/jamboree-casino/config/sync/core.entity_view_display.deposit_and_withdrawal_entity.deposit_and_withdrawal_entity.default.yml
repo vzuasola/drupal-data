@@ -117,14 +117,14 @@ content:
     type: list_default
     region: content
   field_where_to_open_images:
-    weight: 12
+    weight: 17
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_where_to_open_link:
-    weight: 14
+    weight: 16
     label: above
     settings: {  }
     third_party_settings: {  }
