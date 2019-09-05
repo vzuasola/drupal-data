@@ -1,5 +1,5 @@
-uuid: f52178c2-f88c-46df-8289-9ef0076c1b05
-langcode: ja
+uuid: 943d8f2b-bb0d-43b0-a0b2-c66fa2867122
+langcode: en
 status: true
 dependencies:
   module:
@@ -12,13 +12,13 @@ type: list_string
 settings:
   allowed_values:
     -
-      value: '''_blank'''
+      value: _blank
       label: 'New Tab'
     -
-      value: '''_self'''
+      value: _self
       label: 'Same Tab'
     -
-      value: '''_blank'', ''location=yes'''
+      value: window
       label: 'New Window'
   allowed_values_function: ''
 module: options
