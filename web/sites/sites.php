@@ -136,6 +136,11 @@ $sites['registration-row.drupal.local'] = 'registration-row';
 $sites['registration-row.drupal.dev'] = 'registration-row';
 $sites['registration-row.drupal.env'] = 'registration-row';
 
+// Soda Casino instance
+$sites['soda-casino.drupal.dev'] = 'soda-casino';
+$sites['soda-casino.drupal.local'] = 'soda-casino';
+$sites['soda-casino-row.drupal.env'] = 'soda-casino';
+
 // dynamic sites.php values via environment variables
 
 if (file_exists(__DIR__ . '/sites.override.php')) {
