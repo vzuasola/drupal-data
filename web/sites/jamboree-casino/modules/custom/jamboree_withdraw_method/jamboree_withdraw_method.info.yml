@@ -1,0 +1,5 @@
+name: Jamboree Withdraw Method
+type: module
+description: Module for withdraw method
+core: 8.x
+package: Web Composer

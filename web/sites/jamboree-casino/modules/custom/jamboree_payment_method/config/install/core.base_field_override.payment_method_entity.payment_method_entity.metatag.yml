@@ -1,0 +1,18 @@
+uuid: ab81439d-0993-4592-bdb1-55210d8c3254
+langcode: ja
+status: true
+dependencies:
+  module:
+    - jamboree_payment_method
+id: payment_method_entity.payment_method_entity.metatag
+field_name: metatag
+entity_type: payment_method_entity
+bundle: payment_method_entity
+label: Metatags
+description: 'The metatags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

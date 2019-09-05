@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.lobby_tile.field_game_provider
+    - field.field.node.lobby_tile.field_lobby_landscape_size
     - field.field.node.lobby_tile.field_lobby_thumbnail_large
     - field.field.node.lobby_tile.field_lobby_thumbnail_size
     - field.field.node.lobby_tile.field_lobby_thumbnail_small
@@ -28,6 +29,13 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
+    region: content
+  field_lobby_landscape_size:
+    weight: 9
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
   field_lobby_thumbnail_large:
     weight: 3

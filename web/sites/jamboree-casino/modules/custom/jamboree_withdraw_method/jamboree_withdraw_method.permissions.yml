@@ -1,0 +1,22 @@
+add jamboree withdraw method entity entities:
+  title: 'Create new Jamboree withdraw method entity entities'
+
+administer jamboree withdraw method entity entities:
+  title: 'Administer Jamboree withdraw method entity entities'
+  description: 'Allow to access the administration form to configure Jamboree withdraw method entity entities.'
+  restrict access: true
+
+delete jamboree withdraw method entity entities:
+  title: 'Delete Jamboree withdraw method entity entities'
+
+edit jamboree withdraw method entity entities:
+  title: 'Edit Jamboree withdraw method entity entities'
+
+access jamboree withdraw method entity overview:
+  title: 'Access the Jamboree withdraw method entity overview page'
+
+view published jamboree withdraw method entity entities:
+  title: 'View published Jamboree withdraw method entity entities'
+
+view unpublished jamboree withdraw method entity entities:
+  title: 'View unpublished Jamboree withdraw method entity entities'

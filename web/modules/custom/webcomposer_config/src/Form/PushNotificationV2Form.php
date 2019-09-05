@@ -330,7 +330,16 @@ class PushNotificationV2Form extends FormBase {
       '#type' => 'textarea',
       '#title' => $this->t('CTA Buttons'),
       '#default_value' => $this->get('cta_button_list'),
-      '#description' => $this->t('Enter CTA Buttons per line.'),
+      '#description' => $this->t('
+        <p>Enter CTA Buttons per line.</p>
+        <p>Available action that can be bind on CTA.</p>
+        <ul>
+          <li>copy::id</li>
+          <li>redirect::domaintoken</li>
+          <li>popup::domaintoken</li>
+          <li>newtab::domaintoken</li>
+          </ul>
+        '),
     ];
 
     $buttons = array_map('trim', explode(PHP_EOL, $this->get('cta_button_list')));
@@ -362,23 +371,6 @@ class PushNotificationV2Form extends FormBase {
         ];
       }
     }
-
-    $list_items[] = 'copy::id';
-    $list_items[] = 'redirect::domaintoken';
-    $list_items[] = 'popup::domaintoken';
-    $list_items[] = 'newtab::domaintoken';
-
-    $form['cta_settings']['cta_button_helper'] = [
-      '#prefix' => '<div>',
-      '#markup' => 'Available action that can be bind on CTA.',
-      '#suffix' => '</div>',
-    ];
-
-    $form['cta_settings']['cta_button_legends'] = [
-      '#prefix' => '<ul><li>',
-      '#markup' => implode('</li><li>', $list_items),
-      '#suffix' => '</li></ul>',
-    ];
 
     // Dismiss Notifications.
     $form['dismiss_notifications_settings']['dismiss_button_label'] = [

@@ -79,7 +79,7 @@ class FormFieldsFilterSettingsForm extends FormBase {
         '#markup' =>  $select_all . ' | ' . $deselect_all . '<br /><br />',
       ];
 
-      $excluded_fields = ['_core', 'value', 'format', 'title'];
+      $excluded_fields = ['_core', 'value', 'format'];
 
       foreach ($configs as $field_name => $value) {
         if (in_array($field_name, $excluded_fields) || stripos($field_name, '__active_tab') > 1) {

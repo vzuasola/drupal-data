@@ -1,0 +1,30 @@
+uuid: e671885d-c2b2-449c-93db-94b67a48b4b4
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+    - image
+    - jamboree_payment_method
+id: payment_method_entity.field_thumbnail
+field_name: field_thumbnail
+entity_type: payment_method_entity
+type: image
+settings:
+  uri_scheme: public
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  target_type: file
+  display_field: false
+  display_default: false
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,7 +1,7 @@
 join_now_text: JOIN NOW
 join_now_link: 'http://google.com'
 login_issue_text: 'Cant login'
-login_issue_link: 'http://google.com'
+login_issue_link: '/{domain:myaccount_domain}/{domain:lang_token}/cant-login[query:({tracking})]'
 sc_lang_text: SC
 ch_lang_text: CH
 balance_toggle: false
@@ -20,4 +20,4 @@ currency_balance_mapping: "7|RMB"
 excluded_balance_mapping: '7'
 balance_error_text_product: "N/A"
 balance_mapping: "5|Live Dealer & Games\r\n3|Poker"
-cashier_link: "N/A"
+cashier_link: "{cashier}[query:(ticket={auth.token}&product=dafabet&width=820&height=820)]"
