@@ -1,12 +1,12 @@
-uuid: 93871d92-240b-4c10-8818-c2d458b5ed23
+uuid: 2d286ba4-2f54-426a-a29c-2ce88e1b0f1b
 langcode: en
 status: true
 dependencies:
   module:
-    - taxonomy
-id: taxonomy_term.field_year_category
-field_name: field_year_category
-entity_type: taxonomy_term
+    - jamboree_fair_gaming
+id: jamboree_fair_gaming_entity.field_title
+field_name: field_title
+entity_type: jamboree_fair_gaming_entity
 type: string
 settings:
   max_length: 255
