@@ -1,5 +1,5 @@
 jamboree_canonical.admin_settings:
-  path: 'admin/config/zipang/canonical_configuration'
+  path: 'admin/config/jamboree'
   defaults:
     _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
     _title: 'Jamboree Canonical Configuration'
