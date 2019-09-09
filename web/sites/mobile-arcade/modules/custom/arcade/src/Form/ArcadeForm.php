@@ -45,7 +45,7 @@ class ArcadeForm extends FormBase {
       '#title' => $this->t('Enable lobby lazy load (Infinite Scroll)'),
       '#default_value' => $this->get('arcade_lobby_infinite_scroll'),
       '#description' => 'Enable lazy loading for games lobby.',
-      '#translatable' => TRUE,
+      '#translatable' => false,
     ];
 
     $form['general']['more_provider_drawer'] = [
