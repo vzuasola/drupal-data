@@ -41,6 +41,9 @@ settings:
     -
       value: ruby_play
       label: 'Ruby Play'
+    -
+      value: pas
+      label: PAS
   allowed_values_function: ''
 module: options
 locked: false
