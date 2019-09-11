@@ -1,0 +1,5 @@
+name: Arcade Mobile Configuration
+type: module
+description: Arcade configuration module
+core: 8.x
+package: Web Composer
