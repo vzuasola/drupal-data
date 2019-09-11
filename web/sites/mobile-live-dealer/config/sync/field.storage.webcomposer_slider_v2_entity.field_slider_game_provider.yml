@@ -50,6 +50,9 @@ settings:
     -
       value: ezugi_gaming
       label: 'Ezugi Gaming'
+    -
+      value: skywind
+      label: Skywind
   allowed_values_function: ''
 module: options
 locked: false
