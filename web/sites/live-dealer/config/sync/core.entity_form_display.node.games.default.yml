@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.games.field_game_image
     - field.field.node.games.field_game_image_large
     - field.field.node.games.field_game_info_id
+    - field.field.node.games.field_game_lobby_category
     - field.field.node.games.field_game_provider
     - field.field.node.games.field_game_title
     - field.field.node.games.field_hide
@@ -81,6 +82,7 @@ third_party_settings:
         - field_game_provider
         - field_game_code
         - field_product
+        - field_game_lobby_category
       parent_name: ''
       weight: 10
       format_type: tab
@@ -196,6 +198,12 @@ content:
     third_party_settings:
       conditional_fields: {  }
     type: string_textfield
+    region: content
+  field_game_lobby_category:
+    weight: 29
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   field_game_provider:
     weight: 26
