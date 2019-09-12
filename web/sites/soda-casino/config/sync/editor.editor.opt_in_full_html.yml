@@ -1,0 +1,78 @@
+uuid: 55b0a58c-72b2-4aec-8e80-abc350cf1cda
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.opt_in_full_html
+  module:
+    - ckeditor
+format: opt_in_full_html
+editor: ckeditor
+settings:
+  toolbar:
+    rows:
+      -
+        -
+          name: Formatting
+          items:
+            - Bold
+            - Italic
+            - FontColors
+            - FontSizes
+            - Format
+            - Styles
+        -
+          name: Links
+          items:
+            - Unlink
+            - Link
+            - ImceImage
+        -
+          name: Lists
+          items:
+            - BulletedList
+            - NumberedList
+        -
+          name: Media
+          items:
+            - Blockquote
+            - DrupalImage
+        -
+          name: Tools
+          items:
+            - Source
+        -
+          name: alignment
+          items:
+            - JustifyCenter
+            - JustifyLeft
+            - JustifyBlock
+            - JustifyRight
+  plugins:
+    stylescombo:
+      styles: ''
+    language:
+      language_list: un
+    codemirror:
+      enable: false
+      mode: htmlmixed
+      theme: default
+      lineNumbers: true
+      lineWrapping: true
+      matchBrackets: true
+      autoCloseTags: true
+      autoCloseBrackets: true
+      enableSearchTools: true
+      enableCodeFolding: true
+      enableCodeFormatting: true
+      autoFormatOnStart: true
+      autoFormatOnModeChange: true
+      autoFormatOnUncomment: true
+image_upload:
+  status: true
+  scheme: public
+  directory: inline-images
+  max_size: ''
+  max_dimensions:
+    width: null
+    height: null

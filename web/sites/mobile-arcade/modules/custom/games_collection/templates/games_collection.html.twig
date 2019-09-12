@@ -1,0 +1,22 @@
+{#
+/**
+ * @file games_collection.html.twig
+ * Default theme implementation to present Games Collection data.
+ *
+ * This template is used when viewing Games Collection pages.
+ *
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_games_collection()
+ *
+ * @ingroup themeable
+ */
+#}
+<div{{ attributes.addClass('games_collection') }}>
+  {% if content %}
+    {{- content -}}
+  {% endif %}
+</div>

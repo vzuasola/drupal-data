@@ -226,7 +226,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          empty: false
+          empty: true
           tokenize: false
           content:
             value: "<ul class=\"action-links\">\n  <li>\n  \t<a href=\"[site:url]/admin/structure/left_floating_banner_entity/add\" class=\"button button-action button--primary button--small\" data-drupal-link-system-path=\"admin/structure/left_floating_banner_entity/add\">Add Floating Banner</a>\n  </li>\n</ul>"
@@ -559,7 +559,7 @@ display:
           1: AND
       path: admin/structure/webcomposer_floating_banners_entity_list
     cache_metadata:
-      max-age: 0
+      max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'

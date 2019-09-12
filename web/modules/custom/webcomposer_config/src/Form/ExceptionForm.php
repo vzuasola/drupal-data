@@ -96,6 +96,16 @@ class ExceptionForm extends FormBase {
       '#description' => $this->t('Provide the list of currency that the site does not support to show the unsupported currency page.'),
       '#default_value' => $this->get('currency_mapping')
     ];
+
+    $content = $this->get('ucp_content');
+
+    $form['unsupported_currency']['ucp_content'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('Unsupported Currency Page Content'),
+      '#default_value' => $content['value'],
+      '#format' => $content['format'],
+      '#translatable' => TRUE,
+    ];
   }
 
   /**

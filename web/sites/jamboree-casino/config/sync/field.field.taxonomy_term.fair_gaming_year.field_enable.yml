@@ -1,4 +1,4 @@
-uuid: 780da8fa-655a-4223-ad81-44c11fd29fe2
+uuid: a8eb504e-6a25-4504-b6cc-eb3d0fcc810f
 langcode: en
 status: true
 dependencies:
@@ -12,10 +12,10 @@ bundle: fair_gaming_year
 label: Enable
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value:
   -
-    value: 0
+    value: 1
 default_value_callback: ''
 settings:
   on_label: 'On'
