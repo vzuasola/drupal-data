@@ -1,4 +1,4 @@
-uuid: 8c12af83-0e37-45f2-9872-35eec207bdbd
+uuid: 35f43cba-056e-43cc-9674-989ae844e99e
 langcode: en
 status: true
 dependencies:
@@ -31,12 +31,20 @@ content:
     type: boolean
     region: content
   field_year_category:
-    weight: 2
+    weight: 3
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
-hidden:
-  langcode: true
+  langcode:
+    type: language
+    weight: 2
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+      native_language: false
+    third_party_settings: {  }
+hidden: {  }
