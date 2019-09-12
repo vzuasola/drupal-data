@@ -22,10 +22,13 @@ content:
     weight: 100
     region: content
 hidden:
+  field_game_provider: true
+  field_lobby_landscape_size: true
   field_lobby_thumbnail_large: true
   field_lobby_thumbnail_size: true
   field_lobby_thumbnail_small: true
   field_lobby_tile_ribbon: true
+  field_lobby_tile_url: true
   field_target: true
   field_use_game_loader: true
   langcode: true

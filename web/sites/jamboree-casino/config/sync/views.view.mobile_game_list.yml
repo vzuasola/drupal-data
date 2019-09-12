@@ -9,6 +9,7 @@ dependencies:
     - field.storage.jamboree_mobile_games_entity.field_game_code
     - field.storage.jamboree_mobile_games_entity.field_game_tag
     - field.storage.jamboree_mobile_games_entity.field_game_title
+    - field.storage.taxonomy_term.field_enable
     - taxonomy.vocabulary.game_tag
     - taxonomy.vocabulary.mobile_game_category
   module:
@@ -350,8 +351,73 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_game_code:
-          id: field_game_code
+        field_enable:
+          id: field_enable
+          table: taxonomy_term__field_enable
+          field: field_enable
+          relationship: field_game_category
+          group_type: group
+          admin_label: ''
+          label: 'Enabled Game Category'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: boolean
+          settings:
+            format: unicode-yes-no
+            format_custom_true: ''
+            format_custom_false: ''
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_game_code_1:
+          id: field_game_code_1
           table: jamboree_mobile_games_entity__field_game_code
           field: field_game_code
           relationship: none
@@ -413,8 +479,8 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_game_tag:
-          id: field_game_tag
+        field_game_tag_1:
+          id: field_game_tag_1
           table: jamboree_mobile_games_entity__field_game_tag
           field: field_game_tag
           relationship: none
@@ -457,7 +523,7 @@ display:
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
-          empty: 'No Tag'
+          empty: ''
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
@@ -476,8 +542,8 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_enable_free_play:
-          id: field_enable_free_play
+        field_enable_free_play_1:
+          id: field_enable_free_play_1
           table: jamboree_mobile_games_entity__field_enable_free_play
           field: field_enable_free_play
           relationship: none
@@ -541,8 +607,8 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        operations:
-          id: operations
+        operations_1:
+          id: operations_1
           table: jamboree_mobile_games_entity
           field: operations
           relationship: none
@@ -893,6 +959,15 @@ display:
           admin_label: 'field_game_tag: Taxonomy term'
           required: true
           plugin_id: standard
+        field_game_category:
+          id: field_game_category
+          table: jamboree_mobile_games_entity__field_game_category
+          field: field_game_category
+          relationship: none
+          group_type: group
+          admin_label: 'field_game_category: Taxonomy term'
+          required: false
+          plugin_id: standard
     cache_metadata:
       max-age: -1
       contexts:
@@ -907,6 +982,7 @@ display:
         - 'config:field.storage.jamboree_mobile_games_entity.field_game_code'
         - 'config:field.storage.jamboree_mobile_games_entity.field_game_tag'
         - 'config:field.storage.jamboree_mobile_games_entity.field_game_title'
+        - 'config:field.storage.taxonomy_term.field_enable'
   rest_export_1:
     display_plugin: rest_export
     id: rest_export_1

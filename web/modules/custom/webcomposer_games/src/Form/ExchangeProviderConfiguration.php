@@ -60,6 +60,8 @@ class ExchangeProviderConfiguration extends FormBase {
 
     $form['gen_config']['exchange_game_url'] = [
       '#type' => 'textfield',
+      '#size' => 500,
+      '#maxlength' => 500,
       '#title' => $this->t('Desktop URL Parameters'),
       '#description' => $this->t('Defines the Exchange URL Parameters'),
       '#default_value' => $this->get('exchange_game_url'),
@@ -69,8 +71,8 @@ class ExchangeProviderConfiguration extends FormBase {
 
     $form['gen_config']['exchange_tablet_url'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('Tablet Transaction Domain'),
-      '#description' => $this->t('Defines the Exchange Tablet URL'),
+      '#title' => $this->t('Mobile/Tablet Transaction Domain'),
+      '#description' => $this->t('Defines the Exchange Mobile/Tablet URL'),
       '#default_value' => $this->get('exchange_tablet_url'),
       '#required' => false,
       '#translatable' => TRUE,
@@ -78,8 +80,10 @@ class ExchangeProviderConfiguration extends FormBase {
 
     $form['gen_config']['tablet_game_url'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('Defines the exchange Tablet URL'),
-      '#description' => $this->t('Defines the Tablet URL Parameters'),
+      '#size' => 500,
+      '#maxlength' => 500,
+      '#title' => $this->t('Defines the exchange Mobile/Tablet URL'),
+      '#description' => $this->t('Defines the exchange Mobile/Tablet URL'),
       '#default_value' => $this->get('tablet_game_url'),
       '#required' => false,
       '#translatable' => TRUE,

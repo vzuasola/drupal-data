@@ -13,3 +13,6 @@ attributes:
     label: 'Menu Tag'
     options:
       new: 'New Product'
+  disabled:
+    label: 'Disable per currency'
+    description: 'Enter currency where you want to disable this item (applicable for cashier menu only)'
