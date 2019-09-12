@@ -1,4 +1,4 @@
-uuid: 8a8fdfd2-1aa0-456e-b51e-763fd2495080
+uuid: 4c1ffee1-df03-4b86-bfab-ee8187900ec8
 langcode: en
 status: true
 dependencies:
@@ -14,7 +14,7 @@ bundle: jamboree_fair_gaming_entity
 label: 'Fair Gaming Image'
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

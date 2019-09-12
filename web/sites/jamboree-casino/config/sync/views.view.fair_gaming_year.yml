@@ -1,4 +1,4 @@
-uuid: fc79173c-2cd3-4ede-904c-a3fb1af95187
+uuid: 9054461a-1abf-459f-b782-acfce908ec67
 langcode: en
 status: true
 dependencies:
@@ -215,8 +215,9 @@ display:
       display_extenders: {  }
       path: api/fair_gaming_year
       pager:
-        type: none
+        type: some
         options:
+          items_per_page: null
           offset: 0
       style:
         type: taxonomy_list_serializer
