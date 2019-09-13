@@ -8,8 +8,9 @@ require $app_root . '/../config/base.settings.php';
  */
 $settings['product'] = 'product';
 
+
 $databases['default']['default'] = array (
-  'database' => 'mobile_soda',
+  'database' => 'mobile_soda1',
   'username' => 'root',
   'password' => 'secret',
   'prefix' => '',
@@ -18,3 +19,6 @@ $databases['default']['default'] = array (
   'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
   'driver' => 'mysql',
 );
+
+$settings['hash_salt'] = 'zqwSIHFNEVABYMvuBE214NEew3iBbt-rbVFUHM4EtVFmcvWtEt7CD2o6hAr55YISfomlaVW6Kw';
+$settings['install_profile'] = 'config_installer';
