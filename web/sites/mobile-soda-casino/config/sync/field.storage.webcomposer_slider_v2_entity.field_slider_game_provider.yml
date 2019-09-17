@@ -1,0 +1,39 @@
+uuid: 40369c3c-9e6d-4dbf-be89-d5cedc49ed44
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - webcomposer_slider_v2
+id: webcomposer_slider_v2_entity.field_slider_game_provider
+field_name: field_slider_game_provider
+entity_type: webcomposer_slider_v2_entity
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: gameworx_lottery
+      label: 'Gameworx Lottery'
+    -
+      value: gameworx_quicklotto
+      label: 'Gameworx Quick Lotto'
+    -
+      value: gpi_keno
+      label: 'GPI Keno'
+    -
+      value: gpi_thai
+      label: 'Gpi Thai'
+    -
+      value: gpi_pk
+      label: Pk10
+    -
+      value: video_racing
+      label: VR
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
