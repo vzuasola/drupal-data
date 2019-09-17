@@ -321,7 +321,8 @@ class DomainImport {
     if ($context['sandbox'] === "EXCEL_FORMAT_OK") {
       $message = 'Importing Master Placeholder...';
       $context['message'] = $message;
-      $languages = $this->ImportParser->excel_get_languages();
+      $excelLanguages = $this->ImportParser->excel_get_languages();
+      $languages = $this->filter_languages($excelLanguages);
       foreach ($languages as $key => $value) {
         $getPlaceholderVariables[$value] = $this->ImportParser->excel_get_master_placeholder($value);
       }
@@ -410,9 +411,13 @@ class DomainImport {
   public function importPlaceholder($form_state, &$context) {
     $this->setDataFlags();
     $this->readExcel($form_state, $context);
-
+    $excelLanguages = $this->ImportParser->excel_get_languages();
+    $filteredLanguages = $this->filter_languages($excelLanguages);
+    $availableLanguages = $this->get_main_language($filteredLanguages);
+    $languages = $availableLanguages['languages'];
+    $mainLanguage = $availableLanguages['main'];
     if ($context['sandbox'] === "EXCEL_FORMAT_OK") {
-      $placeholders = $this->ImportParser->excel_get_master_placeholder('en');
+      $placeholders = $this->ImportParser->excel_get_master_placeholder($mainLanguage);
 
       foreach ($placeholders as $token => $value) {
         $context['message'] = 'Importing Placeholders - ' . $token;
@@ -431,12 +436,11 @@ class DomainImport {
         $term = Term::create([
           'name' => trim($token),
           'vid' => self::MASTER_PLACEHOLDER,
-          'langcode' => 'en',
+          'langcode' => $mainLanguage,
           'field_add_master_placeholder' => $paragraph,
         ]);
         $term->save();
 
-        $languages = $this->ImportParser->excel_get_languages();
         foreach (array_slice($languages, 1) as $lang) {
           $placeholder = $this->ImportParser->excel_get_master_placeholder($lang);
 
@@ -512,23 +516,30 @@ class DomainImport {
    * createGroupDomain.
    */
   private function createGroupDomain($param) {
-    // load en variables
-    $variables = $this->ImportParser->excel_get_variables('en');
-
+    $excelLanguages = $this->ImportParser->excel_get_languages();
+    $filteredLanguages = $this->filter_languages($excelLanguages);
+    $availableLanguages = $this->get_main_language($filteredLanguages);
+    $languages = $availableLanguages['languages'];
+    $mainLanguage = $availableLanguages['main'];
+    // load main language variables
+    $variables = $this->ImportParser->excel_get_variables($mainLanguage);
     $domain = trim($param['domain']);
-
     $termItem = [
       'name' => $domain,
       'vid' => $param['vid'],
-      'langcode' => 'en',
+      'langcode' => $mainLanguage,
     ];
     // add parent group field term id
     if (!empty($param['gid'])) {
       $termItem['field_select_domain_group'] = $param['gid'];
     }
-    // create en term
+    // create main language term
     $paragraph = [];
-    foreach ($variables[$domain]['variables'] as $token => $value) {
+    foreach ($variables[$domain]['variables'] as $token => $value) { 
+      // Continue loop if value is boolean or null
+      if (is_bool($value) || $value == NULL) {
+        continue;
+      }
       // create paragraph and assign to term
       $paragraph[$token] = Paragraph::create([
           'type' => 'domain_management_configuration',
@@ -545,15 +556,17 @@ class DomainImport {
     $term = Term::create($termItem);
     $term->save();
     // create other languages terms
-    $languages = $this->ImportParser->excel_get_languages();
     foreach (array_slice($languages, 1) as $lang) {
       // load other language variables
       $variable = $this->ImportParser->excel_get_variables($lang);
-
       $paragraphs = [];
       foreach ($variable[$domain]['variables'] as $token => $value) {
         // create translation paragraph and assign it to term
         if (!is_null($value)) {
+          // If paragraph does not exist, continue loop
+          if (empty($paragraph[$token])) {
+            continue;
+          }
           $paragraph[$token]->addTranslation($lang, [
             'field_placeholder_key' => [
               'value' => $token,
@@ -820,4 +833,49 @@ class DomainImport {
     define('AUDIT_LOG_EXCLUDE_REQUEST', TRUE);
   }
 
+  /**
+   * Filter/Validate system languages and excel languages
+   *
+   * @author junmar <junmar.jose@bayviewtechnology.com>
+   * @param array $languages
+   *   - languages from the excel spreadsheet
+   *
+   * @return result
+   */
+  public function filter_languages($languages) {
+    // Get all system languages from language manager interface
+    $systemLanguages = \Drupal::languageManager()->getLanguages();
+    $systemLanguages = array_keys($systemLanguages);
+
+    return array_intersect($languages, $systemLanguages);
+  }
+
+  /**
+   * Get main language of the current system/excel file
+   *
+   * @author junmar <junmar.jose@bayviewtechnology.com>
+   * @param array $languages
+   *   - filtered languages from the excel spreadsheet
+   *
+   * @return result
+   */
+  public function get_main_language($languages) {
+    // Get default language from language manager interface
+    $defaultLanguage = \Drupal::languageManager()->getDefaultLanguage()->getId();
+    // If system default language is in array, return as main language
+    if (in_array($defaultLanguage, $languages)) {
+      $result = [];
+      $index = array_search($defaultLanguage, $languages);
+      unset($languages[$index]);
+      array_unshift($languages, $defaultLanguage);
+      $result['languages'] = $languages;
+      $result['main'] = $defaultLanguage;
+      return $result;
+    } 
+    // Set first language in array as main language
+    return [
+      'languages' => $languages,
+      'main' => reset($languages)
+    ];
+  }
 }
