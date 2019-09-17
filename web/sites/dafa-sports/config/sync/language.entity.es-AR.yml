@@ -1,0 +1,9 @@
+uuid: 355adbce-c686-4206-99c7-98ff9309341f
+langcode: en
+status: true
+dependencies: {  }
+id: es-AR
+label: 'Spanish, Argentina'
+direction: ltr
+weight: 7
+locked: false

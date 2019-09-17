@@ -1,0 +1,9 @@
+uuid: 4615daca-6784-49e7-8ab2-efed740ca95b
+langcode: en
+status: true
+dependencies: {  }
+id: es-PE
+label: 'Spanish, Peru'
+direction: ltr
+weight: 5
+locked: false
