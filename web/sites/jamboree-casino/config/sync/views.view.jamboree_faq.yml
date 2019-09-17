@@ -416,7 +416,7 @@ display:
           relationship: none
           group_type: group
           admin_label: 'field_faq_category: Taxonomy term'
-          required: true
+          required: false
           plugin_id: standard
       filters:
         langcode:
@@ -460,46 +460,6 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           entity_type: jamboree_f_a_q_entity
-          entity_field: langcode
-          plugin_id: language
-        langcode_1:
-          id: langcode_1
-          table: taxonomy_term_field_data
-          field: langcode
-          relationship: field_faq_category
-          group_type: group
-          admin_label: ''
-          operator: in
-          value:
-            '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          entity_type: taxonomy_term
           entity_field: langcode
           plugin_id: language
         field_faq_category_target_id:
@@ -639,46 +599,6 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           entity_type: jamboree_f_a_q_entity
-          entity_field: langcode
-          plugin_id: language
-        langcode_1:
-          id: langcode_1
-          table: taxonomy_term_field_data
-          field: langcode
-          relationship: field_faq_category
-          group_type: group
-          admin_label: ''
-          operator: in
-          value:
-            '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          entity_type: taxonomy_term
           entity_field: langcode
           plugin_id: language
       filter_groups:
