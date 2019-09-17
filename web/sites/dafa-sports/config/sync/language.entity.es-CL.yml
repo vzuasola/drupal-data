@@ -1,0 +1,9 @@
+uuid: ebe2faf9-98b3-40ba-8ccb-4424fe4a135c
+langcode: en
+status: true
+dependencies: {  }
+id: es-CL
+label: 'Spanish, Chile'
+direction: ltr
+weight: 6
+locked: false
