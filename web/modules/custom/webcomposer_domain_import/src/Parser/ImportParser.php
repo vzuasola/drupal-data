@@ -35,7 +35,7 @@ class ImportParser {
    *   - the phpexcel array object.
    */
   public function setData($rows) {
-    return $this->rows = $rows;
+    return $this->rows = $this->sanitize_array($rows);
 
   }
 
@@ -133,7 +133,7 @@ class ImportParser {
         $this->columns[$index][$column_key][$row_key] = $column_data;
       }
     }
-
+    
     return $this->columns[$index];
   }
 
@@ -225,6 +225,7 @@ class ImportParser {
     // Reformat array to domains per domain group.
     foreach ($columns as $column_data) {
 
+      $column_data = $this->sanitize_array($column_data);
       $column_data = array_values($column_data);
 
       // Skip the loop if the domain is empty.
@@ -233,6 +234,7 @@ class ImportParser {
       }
       // Populate domain list property.
       $this->list = array_merge_recursive($this->list, array_filter($column_data));
+      $this->list = $this->sanitize_array($this->list);
       // Populate domains property.
       $this->domains[$column_data[0]] = array_filter($column_data);
     }
@@ -243,6 +245,7 @@ class ImportParser {
       unset($this->domains[$key][0]);
     }
 
+    $this->domains = $this->sanitize_array($this->domains);
     return $this->domains;
   }
 
@@ -435,8 +438,8 @@ class ImportParser {
 
     foreach ($this->languages as $language) {
 
-      $token = $cache['columns'][$language][0][1];
-      $description = $cache['columns'][$language][1][1];
+      $token = $cache['columns'][$language][0][0];
+      $description = $cache['columns'][$language][1][0];
 
       if (strtolower($token) !== 'tokens' || strtolower($description) !== 'default') {
         return 'EXCEL_IMPROPER_FORMAT_DOMAIN_LABELS';
@@ -524,18 +527,19 @@ class ImportParser {
    */
   private function validate_domain_consistency() {
     $rows = $this->rows;
-
+    
     // Reformat and sort domain list.
     $domain_list = $this->list;
+    $domain_list = $this->sanitize_array($domain_list);
     asort($domain_list);
     $domain_list = array_values($domain_list);
     foreach ($this->languages as $language) {
 
-      $domain = $rows[$language][1];
+      $domain = $rows[$language][0];
 
       // Unset labels.
-      unset($domain['A']);
-      unset($domain['B']);
+      unset($domain[0]);
+      unset($domain[1]);
 
       // Remove nulls and sort domain list.
       $domain = array_filter($domain, 'strlen');
@@ -565,7 +569,7 @@ class ImportParser {
       return $value;
     };
 
-    $domain_list = array_map($func, $this->list);
+    $domain_list = $this->sanitize_array($this->list);
 
     if (array_diff_key($domain_list, array_unique($domain_list))) {
       return 'EXCEL_FORMAT_DOMAINS_DUPLICATES';
@@ -650,6 +654,26 @@ class ImportParser {
     }
 
     return $this->placeholders[$language];
+  }
+
+  /**
+   * Sanitize the array returned by phpexcel
+   *
+   * @author junmar <junmar.jose@bayviewtechnology.com>
+   * @param array $sheet
+   *   - the array sheet from phpexcel
+   *
+   * @return result
+   */
+  public function sanitize_array($sheet) {
+    // Return cell if value is not boolean or null
+    $clean = array_filter($sheet, function($cell) {
+      if (is_bool($cell) === false && $cell != null) {
+        return $cell;
+      }
+    });
+
+    return $clean;
   }
 
 }
