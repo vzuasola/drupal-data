@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.games.field_disable_game_loader
     - field.field.node.games.field_game_code
     - field.field.node.games.field_game_filter
+    - field.field.node.games.field_game_platform
     - field.field.node.games.field_game_provider
     - field.field.node.games.field_game_ribbon
     - field.field.node.games.field_games_list_category
@@ -30,7 +31,7 @@ third_party_settings:
       children:
         - field_game_filter
       parent_name: ''
-      weight: 23
+      weight: 24
       format_type: details
       format_settings:
         id: ''
@@ -45,12 +46,12 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 7
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
   field_all_games_category_ribbon:
-    weight: 20
+    weight: 21
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -76,6 +77,12 @@ content:
     third_party_settings: {  }
     type: options_buttons
     region: content
+  field_game_platform:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_game_provider:
     weight: 2
     settings: {  }
@@ -83,19 +90,19 @@ content:
     type: options_select
     region: content
   field_game_ribbon:
-    weight: 19
+    weight: 20
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_games_list_category:
-    weight: 15
+    weight: 16
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
     region: content
   field_games_list_thumb_img_big:
-    weight: 18
+    weight: 19
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -103,7 +110,7 @@ content:
     type: image_image
     region: content
   field_games_list_thumb_img_small:
-    weight: 17
+    weight: 18
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -111,7 +118,7 @@ content:
     type: image_image
     region: content
   field_games_list_thumbnail_size:
-    weight: 16
+    weight: 17
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -123,13 +130,13 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_games_target:
-    weight: 22
+    weight: 23
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_keywords:
-    weight: 21
+    weight: 22
     settings:
       rows: 2
       placeholder: ''
@@ -137,7 +144,7 @@ content:
     type: string_textarea
     region: content
   field_preview_mode:
-    weight: 24
+    weight: 25
     settings:
       display_label: true
     third_party_settings: {  }
@@ -145,14 +152,14 @@ content:
     region: content
   langcode:
     type: language_select
-    weight: 4
+    weight: 5
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   path:
     type: path
-    weight: 11
+    weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -160,17 +167,17 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 8
+    weight: 9
     region: content
     third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
-    weight: 12
+    weight: 13
     region: content
     settings: {  }
     third_party_settings: {  }
   scheduler_settings:
-    weight: 10
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -178,14 +185,14 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 14
+    weight: 15
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 9
+    weight: 10
     region: content
     third_party_settings: {  }
   title:
@@ -197,13 +204,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 6
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 5
+    weight: 6
     settings:
       match_operator: CONTAINS
       size: 60
@@ -212,7 +219,7 @@ content:
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp_no_default
-    weight: 13
+    weight: 14
     region: content
     settings: {  }
     third_party_settings: {  }

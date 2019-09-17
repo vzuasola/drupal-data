@@ -1,0 +1,15 @@
+uuid: 7072227e-a348-44ad-b584-b8ebda960304
+langcode: es-CL
+status: true
+dependencies:
+  module:
+    - webcomposer_language_hierarchy
+third_party_settings:
+  webcomposer_language_hierarchy:
+    webcomposer_fallback_langcode: es
+    webcomposer_language_hidden: 1
+id: es-CL
+label: 'Spanish, Chile'
+direction: ltr
+weight: 6
+locked: false
