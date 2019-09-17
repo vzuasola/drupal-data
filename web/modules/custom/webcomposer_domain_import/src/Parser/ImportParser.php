@@ -133,7 +133,7 @@ class ImportParser {
         $this->columns[$index][$column_key][$row_key] = $column_data;
       }
     }
-    
+
     return $this->columns[$index];
   }
 
@@ -527,7 +527,7 @@ class ImportParser {
    */
   private function validate_domain_consistency() {
     $rows = $this->rows;
-    
+
     // Reformat and sort domain list.
     $domain_list = $this->list;
     $domain_list = $this->sanitize_array($domain_list);

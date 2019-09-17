@@ -323,7 +323,6 @@ class DomainImport {
       $context['message'] = $message;
       $excelLanguages = $this->ImportParser->excel_get_languages();
       $languages = $this->filter_languages($excelLanguages);
-
       foreach ($languages as $key => $value) {
         $getPlaceholderVariables[$value] = $this->ImportParser->excel_get_master_placeholder($value);
       }
@@ -414,11 +413,9 @@ class DomainImport {
     $this->readExcel($form_state, $context);
     $excelLanguages = $this->ImportParser->excel_get_languages();
     $filteredLanguages = $this->filter_languages($excelLanguages);
-    
     $availableLanguages = $this->get_main_language($filteredLanguages);
     $languages = $availableLanguages['languages'];
     $mainLanguage = $availableLanguages['main'];
-    
     if ($context['sandbox'] === "EXCEL_FORMAT_OK") {
       $placeholders = $this->ImportParser->excel_get_master_placeholder($mainLanguage);
 
@@ -521,21 +518,17 @@ class DomainImport {
   private function createGroupDomain($param) {
     $excelLanguages = $this->ImportParser->excel_get_languages();
     $filteredLanguages = $this->filter_languages($excelLanguages);
-
     $availableLanguages = $this->get_main_language($filteredLanguages);
     $languages = $availableLanguages['languages'];
     $mainLanguage = $availableLanguages['main'];
     // load main language variables
     $variables = $this->ImportParser->excel_get_variables($mainLanguage);
-    
     $domain = trim($param['domain']);
-    
     $termItem = [
       'name' => $domain,
       'vid' => $param['vid'],
       'langcode' => $mainLanguage,
     ];
-    
     // add parent group field term id
     if (!empty($param['gid'])) {
       $termItem['field_select_domain_group'] = $param['gid'];
@@ -560,14 +553,12 @@ class DomainImport {
       $paragraph[$token]->save();
       $termItem['field_add_placeholder'][] = $paragraph[$token];
     }
-    
     $term = Term::create($termItem);
     $term->save();
     // create other languages terms
     foreach (array_slice($languages, 1) as $lang) {
       // load other language variables
       $variable = $this->ImportParser->excel_get_variables($lang);
-
       $paragraphs = [];
       foreach ($variable[$domain]['variables'] as $token => $value) {
         // create translation paragraph and assign it to term
@@ -855,7 +846,7 @@ class DomainImport {
     // Get all system languages from language manager interface
     $systemLanguages = \Drupal::languageManager()->getLanguages();
     $systemLanguages = array_keys($systemLanguages);
-    
+
     return array_intersect($languages, $systemLanguages);
   }
 
@@ -887,7 +878,4 @@ class DomainImport {
       'main' => reset($languages)
     ];
   }
-
-
-
 }
