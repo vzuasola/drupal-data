@@ -1,0 +1,25 @@
+uuid: 32a0a83c-f11b-43fd-8091-69bbc85bf466
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.webcomposer_slider_v2_entity.field_status
+  module:
+    - options
+    - webcomposer_slider_v2
+_core:
+  default_config_hash: 0K6cYAzcXup3Hn397gHeIbfAYQarJ9LRfzUUR_lMXJ4
+id: webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_status
+field_name: field_status
+entity_type: webcomposer_slider_v2_entity
+bundle: webcomposer_slider_v2_entity
+label: Status
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: '1'
+default_value_callback: ''
+settings: {  }
+field_type: list_string
