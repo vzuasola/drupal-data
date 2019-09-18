@@ -10,7 +10,43 @@ field_name: field_slider_game_provider
 entity_type: webcomposer_slider_v2_entity
 type: list_string
 settings:
-  allowed_values: {  }
+  allowed_values:
+    -
+      value: asia_gaming
+      label: 'Asia Gaming'
+    -
+      value: cq9
+      label: 'CQ9 Gaming'
+    -
+      value: fun_gaming
+      label: 'Fun Gaming'
+    -
+      value: gold_deluxe
+      label: 'Gold Deluxe'
+    -
+      value: gpi
+      label: GPI
+    -
+      value: ky_gaming
+      label: 'Kaiyuan (KY) Gaming'
+    -
+      value: micro_gaming
+      label: 'MG Arcade'
+    -
+      value: sa_gaming
+      label: 'SA Gaming'
+    -
+      value: skywind
+      label: Skywind
+    -
+      value: solid_gaming
+      label: 'Solid Gaming'
+    -
+      value: voidbridge
+      label: Voidbridge
+    -
+      value: wac
+      label: 'WAC Video Bingo'
   allowed_values_function: ''
 module: options
 locked: false
