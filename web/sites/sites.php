@@ -121,6 +121,11 @@ $sites['mobile-exchange.drupal.dev'] = 'mobile-exchange';
 $sites['mobile-exchange.drupal.local'] = 'mobile-exchange';
 $sites['mobile-exchange.drupal.env'] = 'mobile-exchange';
 
+// Mobile Soda Casino Revamp instance
+$sites['mobile-soda-casino.drupal.dev'] = 'mobile-soda-casino';
+$sites['mobile-soda-casino.drupal.local'] = 'mobile-soda-casino';
+$sites['mobile-soda-casino.drupal.env'] = 'mobile-soda-casino';
+
 // Poker revamp instance
 $sites['poker.drupal.local'] = 'poker';
 $sites['poker.drupal.dev'] = 'poker';
