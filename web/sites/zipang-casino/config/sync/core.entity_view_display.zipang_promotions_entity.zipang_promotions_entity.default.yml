@@ -13,6 +13,7 @@ dependencies:
     - field.field.zipang_promotions_entity.zipang_promotions_entity.field_image_banner_link_target
     - field.field.zipang_promotions_entity.zipang_promotions_entity.field_promote_to_promotions
     - field.field.zipang_promotions_entity.zipang_promotions_entity.field_publish_promotion
+    - field.field.zipang_promotions_entity.zipang_promotions_entity.field_summary
     - field.field.zipang_promotions_entity.zipang_promotions_entity.field_tag
     - field.field.zipang_promotions_entity.zipang_promotions_entity.field_thumbnail
     - field.field.zipang_promotions_entity.zipang_promotions_entity.field_title
@@ -108,6 +109,13 @@ content:
       format_custom_true: ''
     third_party_settings: {  }
     type: boolean
+    region: content
+  field_summary:
+    weight: 17
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
     region: content
   field_tag:
     weight: 9
