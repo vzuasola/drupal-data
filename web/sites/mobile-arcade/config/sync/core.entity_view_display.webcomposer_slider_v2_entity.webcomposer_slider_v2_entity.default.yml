@@ -26,6 +26,7 @@ dependencies:
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_slider_enable_game_launch
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_slider_game_code
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_slider_game_provider
+    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_slider_use_game_loader
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_status
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_title
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_unpublish_date
@@ -264,6 +265,16 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: list_default
+    region: content
+  field_slider_use_game_loader:
+    weight: 33
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
     region: content
   field_status:
     weight: 21
