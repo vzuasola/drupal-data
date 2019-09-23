@@ -200,6 +200,11 @@ display:
           admin_label: 'field_game_tag: Taxonomy term'
           required: true
           plugin_id: standard
+        field_game_category:
+          id: field_game_category
+          table: jamboree_desktop_games_entity__field_game_category
+          field: field_game_category
+          plugin_id: standard
       arguments: {  }
       display_extenders: {  }
     cache_metadata:
@@ -724,6 +729,7 @@ display:
         sorts: false
         title: false
         relationships: false
+        arguments: false
       filters:
         langcode:
           id: langcode
@@ -978,6 +984,46 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           plugin_id: boolean
+        langcode_2:
+          id: langcode_2
+          table: taxonomy_term_field_data
+          field: langcode
+          relationship: field_game_category
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: taxonomy_term
+          entity_field: langcode
+          plugin_id: language
       filter_groups:
         operator: AND
         groups:
@@ -1029,6 +1075,8 @@ display:
           admin_label: 'field_game_category: Taxonomy term'
           required: false
           plugin_id: standard
+      rendering_language: '***LANGUAGE_entity_translation***'
+      arguments: {  }
     cache_metadata:
       max-age: -1
       contexts:
@@ -1065,6 +1113,7 @@ display:
         sorts: false
         filters: false
         filter_groups: false
+        relationships: false
       row:
         type: data_entity
         options: {  }
@@ -1225,10 +1274,29 @@ display:
         operator: AND
         groups:
           1: AND
+      relationships:
+        field_game_tag:
+          id: field_game_tag
+          table: jamboree_desktop_games_entity__field_game_tag
+          field: field_game_tag
+          relationship: none
+          group_type: group
+          admin_label: 'field_game_tag: Taxonomy term'
+          required: true
+          plugin_id: standard
+        field_game_category:
+          id: field_game_category
+          table: jamboree_desktop_games_entity__field_game_category
+          field: field_game_category
+          relationship: none
+          group_type: group
+          admin_label: 'field_game_category: Taxonomy term'
+          required: true
+          plugin_id: standard
+      rendering_language: '***LANGUAGE_language_interface***'
     cache_metadata:
       max-age: -1
       contexts:
-        - 'languages:language_content'
         - 'languages:language_interface'
         - request_format
       tags: {  }
