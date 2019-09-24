@@ -1,0 +1,20 @@
+uuid: 60b9cb48-e244-4de5-8638-0e0ad3a653f9
+langcode: en
+status: true
+dependencies:
+  module:
+    - color_field
+    - taxonomy
+id: taxonomy_term.field_games_ribbon_color
+field_name: field_games_ribbon_color
+entity_type: taxonomy_term
+type: color_field_type
+settings:
+  format: '#HEXHEX'
+module: color_field
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
