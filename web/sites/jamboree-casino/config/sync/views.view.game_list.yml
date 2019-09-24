@@ -1293,10 +1293,11 @@ display:
           admin_label: 'field_game_category: Taxonomy term'
           required: true
           plugin_id: standard
-      rendering_language: '***LANGUAGE_language_interface***'
+      rendering_language: '***LANGUAGE_entity_translation***'
     cache_metadata:
       max-age: -1
       contexts:
+        - 'languages:language_content'
         - 'languages:language_interface'
         - request_format
       tags: {  }
