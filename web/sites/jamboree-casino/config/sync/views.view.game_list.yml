@@ -1284,15 +1284,6 @@ display:
           admin_label: 'field_game_tag: Taxonomy term'
           required: true
           plugin_id: standard
-        field_game_category:
-          id: field_game_category
-          table: jamboree_desktop_games_entity__field_game_category
-          field: field_game_category
-          relationship: none
-          group_type: group
-          admin_label: 'field_game_category: Taxonomy term'
-          required: true
-          plugin_id: standard
       rendering_language: '***LANGUAGE_entity_translation***'
     cache_metadata:
       max-age: -1
