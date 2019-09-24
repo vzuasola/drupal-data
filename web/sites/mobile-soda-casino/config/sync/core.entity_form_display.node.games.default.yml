@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.games.field_game_code
     - field.field.node.games.field_game_platform
     - field.field.node.games.field_game_ribbon
+    - field.field.node.games.field_games_list_category
     - field.field.node.games.field_games_list_thumb_img_small
     - field.field.node.games.field_games_target
     - field.field.node.games.field_keywords
@@ -15,7 +16,6 @@ dependencies:
     - image.style.thumbnail
     - node.type.games
   module:
-    - field_group
     - image
     - path
     - scheduler
@@ -31,13 +31,13 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_all_games_category_ribbon:
-    weight: 17
+    weight: 12
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_disable_game_loader:
-    weight: 26
+    weight: 17
     settings:
       display_label: true
     third_party_settings: {  }
@@ -52,19 +52,25 @@ content:
     type: string_textfield
     region: content
   field_game_platform:
-    weight: 2
+    weight: 3
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
     region: content
   field_game_ribbon:
-    weight: 16
+    weight: 11
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
+  field_games_list_category:
+    type: options_buttons
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_games_list_thumb_img_small:
-    weight: 15
+    weight: 8
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -72,21 +78,21 @@ content:
     type: image_image
     region: content
   field_games_target:
-    weight: 19
+    weight: 13
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_keywords:
     type: string_textarea
-    weight: 19
+    weight: 14
     region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
   field_preview_mode:
-    weight: 21
+    weight: 16
     settings:
       display_label: true
     third_party_settings: {  }
@@ -101,7 +107,7 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 30
+    weight: 20
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -109,17 +115,17 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 15
+    weight: 9
     region: content
     third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
-    weight: 30
+    weight: 19
     region: content
     settings: {  }
     third_party_settings: {  }
   scheduler_settings:
-    weight: 20
+    weight: 15
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -127,26 +133,26 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 120
+    weight: 21
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 16
+    weight: 10
     region: content
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: -5
+    weight: 0
     region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 10
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -161,9 +167,8 @@ content:
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp_no_default
-    weight: 30
+    weight: 18
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden:
-  field_all_games_category_ribbon: true
+hidden: {  }
