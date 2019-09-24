@@ -59,8 +59,8 @@ class ArcadeForm extends FormBase {
 
     $form['general']['title_provider_drawer'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('Game Providers'),
-      '#description' => 'Title of Providers Drawer',
+      '#title' => $this->t('Game Categories'),
+      '#description' => 'Title of Categories Drawer',
       '#default_value' => $this->get('title_provider_drawer'),
       '#required' => true,
       '#translatable' => true,
