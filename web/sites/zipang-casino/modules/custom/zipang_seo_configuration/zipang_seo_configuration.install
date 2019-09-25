@@ -19,6 +19,8 @@ function zipang_seo_configuration_uninstall() {
     'field.field.zipang_seo_config_entity.zipang_seo_config_entity.field_meta.yml',
     'field.field.zipang_seo_config_entity.zipang_seo_config_entity.field_name.yml',
     'field.field.zipang_seo_config_entity.zipang_seo_config_entity.field_per_page_visibility.yml',
+    'field.storage.paragraph.field_content.yml',
+    'field.storage.paragraph.field_metatag_name.yml',
     'field.storage.zipang_seo_config_entity.field_meta.yml',
     'field.storage.zipang_seo_config_entity.field_per_page_visibility.yml',
     'field.storage.zipang_seo_config_entity.field_name.yml',
