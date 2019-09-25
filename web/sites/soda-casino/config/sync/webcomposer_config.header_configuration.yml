@@ -24,7 +24,7 @@ news_announcement_content:
   format: basic_html
 balance_label_mapping: "4|OW Sports\r\n6|Dafa Sports\r\n1|Casino Classic\r\n2|Casino Gold\r\n5|Live Dealer & Games\r\n3|Poker\r\n7|Fish Hunter\r\n13|Soda Casino"
 balance_error_text_product: N/A
-header_settings_tab__active_tab: edit-mcashier-group
+header_settings_tab__active_tab: edit-balance-group
 logo_title: SODA
 registration_link: '/{domain:entry}/{lang}/join/{product}[query:(regvia=4&{tracking})]'
 password_mask_toggle: 1
@@ -39,7 +39,7 @@ balance_toggle: 1
 product_balance_label: 'Total Balance'
 product_balance_id: '1'
 total_balance_label: 'Total Balance'
-balance_mapping: '1|Casino Classic Balance'
+balance_mapping: '13|Soda Casino'
 balance_label_override: 现场荷官、老虎机、街机、虚拟运动、和大发彩票
 currency_balance_mapping: "4|RMB,USD,EUR,GBP,MYR,THB,VND,IDR,INR,KRW,RUB,PLN\r\n6|RMB,USD,EUR,GBP,MYR,THB,VND,IDR,INR,KRW,RUB,PLN,BRL,MXN,CLP,COP,PEN,ARS,VES,MBC\t\r\n11|RMB,USD,EUR,GBP,MYR,THB,VND,IDR,INR,KRW,RUB,PLN\r\n10|INR\t\r\n1|RMB,USD,EUR,GBP,MYR,THB,VND,IDR,INR,KRW,RUB,PLN,BRL,MXN,CLP,COP,PEN,ARS,VES\t\r\n2|RMB,USD,EUR,GBP,MYR,THB,VND,IDR,INR,KRW,RUB,PLN,BRL,MXN,CLP,COP,PEN,ARS,VES\t\r\n5|RMB,USD,EUR,GBP,MYR,THB,VND,IDR,INR,KRW,RUB,PLN,BRL,MXN,CLP,COP,PEN,ARS,VES\t\r\n8|RMB,MYR,THB,KRW,VND,USD,IDR,INR,EUR\t\r\n9|RMB,MYR,THB,KRW,VND,USD,IDR,INR,EUR\t\r\n3|RMB,USD,EUR,GBP,MYR,THB,VND,IDR,INR,KRW,RUB,PLN\r\n7|RMB"
 excluded_balance_mapping: 7|
