@@ -67,7 +67,13 @@ class ExcelParser {
 
     foreach ($worksheetNames as $key => $sheetName) {
       $excel->setActiveSheetIndexByName($sheetName);
-      $sheets[$sheetName] = $excel->getActiveSheet()->toArray(NULL, TRUE, TRUE, TRUE);
+
+      // Get last column with data
+      $column = $excel->getActiveSheet()->getHighestDataColumn();
+      // Get last row with data
+      $row = $excel->getActiveSheet()->getHighestRow();
+      $cell = $column.$row;
+      $sheets[$sheetName] = $excel->getActiveSheet()->rangeToArray('A1:'.$cell, TRUE, TRUE, TRUE);
     }
 
     return $sheets;

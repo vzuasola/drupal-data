@@ -1,0 +1,5 @@
+label: 'Disable in Tablet'
+description: 'Check if the slider entry is only available in Desktop.'
+settings:
+  on_label: 'On'
+  off_label: 'Off'
