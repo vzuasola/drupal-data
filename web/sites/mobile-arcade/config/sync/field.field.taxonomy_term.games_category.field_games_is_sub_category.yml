@@ -9,8 +9,8 @@ id: taxonomy_term.games_category.field_games_is_sub_category
 field_name: field_games_is_sub_category
 entity_type: taxonomy_term
 bundle: games_category
-label: 'Is Sub Category'
-description: ''
+label: 'Add to Secondary Menu'
+description: 'If ticked, category will appear in category drawer once Provider tab is clicked.'
 required: false
 translatable: false
 default_value:
