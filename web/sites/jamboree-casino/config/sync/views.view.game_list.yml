@@ -758,19 +758,23 @@ display:
               anonymous: '0'
               administrator: '0'
               e: '0'
+              access_management: '0'
             reduce: false
           is_grouped: false
           group_info:
-            label: ''
-            description: ''
-            identifier: ''
+            label: 'Translation language'
+            description: null
+            identifier: langcode
             optional: true
             widget: select
             multiple: false
             remember: false
             default_group: All
             default_group_multiple: {  }
-            group_items: {  }
+            group_items:
+              1: {  }
+              2: {  }
+              3: {  }
           entity_type: jamboree_desktop_games_entity
           entity_field: langcode
           plugin_id: language
@@ -783,7 +787,7 @@ display:
           admin_label: ''
           operator: in
           value:
-            '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
+            ja: ja
           group: 1
           exposed: false
           expose:
@@ -1073,14 +1077,13 @@ display:
           relationship: none
           group_type: group
           admin_label: 'field_game_category: Taxonomy term'
-          required: false
+          required: true
           plugin_id: standard
-      rendering_language: '***LANGUAGE_entity_translation***'
+      rendering_language: '***LANGUAGE_language_interface***'
       arguments: {  }
     cache_metadata:
       max-age: -1
       contexts:
-        - 'languages:language_content'
         - 'languages:language_interface'
         - url
         - user
@@ -1270,6 +1273,46 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           plugin_id: boolean
+        langcode_2:
+          id: langcode_2
+          table: taxonomy_term_field_data
+          field: langcode
+          relationship: field_game_category
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: taxonomy_term
+          entity_field: langcode
+          plugin_id: language
       filter_groups:
         operator: AND
         groups:
@@ -1284,11 +1327,19 @@ display:
           admin_label: 'field_game_tag: Taxonomy term'
           required: true
           plugin_id: standard
-      rendering_language: '***LANGUAGE_entity_translation***'
+        field_game_category:
+          id: field_game_category
+          table: jamboree_desktop_games_entity__field_game_category
+          field: field_game_category
+          relationship: none
+          group_type: group
+          admin_label: 'field_game_category: Taxonomy term'
+          required: true
+          plugin_id: standard
+      rendering_language: '***LANGUAGE_language_interface***'
     cache_metadata:
       max-age: -1
       contexts:
-        - 'languages:language_content'
         - 'languages:language_interface'
         - request_format
       tags: {  }
