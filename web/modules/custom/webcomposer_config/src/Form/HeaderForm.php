@@ -269,6 +269,21 @@ class HeaderForm extends FormBase {
       '#translatable' => true,
     ];
 
+    $form['mcashier_group']['mcashier_link_target'] = [
+      '#type' => 'select',
+      '#options' => [
+        '_self' => 'Same Tab',
+        '_blank' => 'New Tab',
+        'window' => 'New Window'
+      ],
+      '#title' => $this->t('Mobile Cashier Link Target'),
+      '#description' => $this->t('Select a Mobile cashier link target'),
+      '#default_value' => $this->get('mcashier_link_target'),
+      '#rows' => 1,
+      '#required' => true,
+      '#translatable' => true,
+    ];
+
     $form['mcashier_group']['mcashier_mapping'] = [
       '#type' => 'textarea',
       '#title' => $this->t('Mobile Cashier Mapping'),

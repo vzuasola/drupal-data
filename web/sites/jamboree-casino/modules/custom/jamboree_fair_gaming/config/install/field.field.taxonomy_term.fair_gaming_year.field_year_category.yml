@@ -1,4 +1,4 @@
-uuid: af2c78fe-c9ac-4166-a604-02084848154d
+uuid: 0db41828-1b93-44c0-964e-3c793b2a0ec9
 langcode: en
 status: true
 dependencies:
@@ -12,7 +12,7 @@ bundle: fair_gaming_year
 label: 'Year Category'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

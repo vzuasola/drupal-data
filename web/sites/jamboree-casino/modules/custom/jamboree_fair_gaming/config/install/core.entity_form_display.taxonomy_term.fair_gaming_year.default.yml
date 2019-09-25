@@ -1,4 +1,4 @@
-uuid: 071d95c6-1d90-4505-8065-11c428a137ce
+uuid: c363b25b-e7bb-434e-ac0d-624af175d4c0
 langcode: en
 status: true
 dependencies:
@@ -12,14 +12,14 @@ bundle: fair_gaming_year
 mode: default
 content:
   field_enable:
-    weight: 1
+    weight: 2
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
   field_year_category:
-    weight: 2
+    weight: 3
     settings:
       size: 60
       placeholder: ''
@@ -35,7 +35,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 3
+    weight: 1
     region: content
     settings: {  }
     third_party_settings: {  }

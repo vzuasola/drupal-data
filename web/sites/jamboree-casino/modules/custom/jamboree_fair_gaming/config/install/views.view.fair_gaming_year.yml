@@ -1,4 +1,4 @@
-uuid: 62ee4e77-066d-4fbd-954c-93bd16a7d9e3
+uuid: fc79173c-2cd3-4ede-904c-a3fb1af95187
 langcode: en
 status: true
 dependencies:
@@ -131,39 +131,8 @@ display:
           id: vid
           table: taxonomy_term_field_data
           field: vid
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: in
           value:
             fair_gaming_year: fair_gaming_year
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
           entity_type: taxonomy_term
           entity_field: vid
           plugin_id: bundle
@@ -208,19 +177,19 @@ display:
           entity_field: langcode
           plugin_id: language
       sorts:
-        name:
-          id: name
+        weight:
+          id: weight
           table: taxonomy_term_field_data
-          field: name
+          field: weight
           relationship: none
           group_type: group
           admin_label: ''
-          order: DESC
+          order: ASC
           exposed: false
           expose:
             label: ''
           entity_type: taxonomy_term
-          entity_field: name
+          entity_field: weight
           plugin_id: standard
       header: {  }
       footer: {  }

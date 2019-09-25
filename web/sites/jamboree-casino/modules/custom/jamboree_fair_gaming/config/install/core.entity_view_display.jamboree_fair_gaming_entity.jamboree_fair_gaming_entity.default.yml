@@ -1,4 +1,4 @@
-uuid: bc4e4e5a-c028-43ad-a2bf-2b30bbf3535e
+uuid: 8e346c2a-032d-436f-bbb8-a9cc5f850d19
 langcode: en
 status: true
 dependencies:
@@ -25,7 +25,7 @@ content:
     type: image
     region: content
   field_fair_gaming_year_category:
-    weight: 1
+    weight: 3
     label: above
     settings:
       link: true
@@ -40,6 +40,15 @@ content:
     third_party_settings: {  }
     type: string
     region: content
+  langcode:
+    type: language
+    weight: 1
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+      native_language: false
+    third_party_settings: {  }
   name:
     label: above
     type: string
@@ -51,9 +60,8 @@ content:
   user_id:
     label: hidden
     type: author
-    weight: 3
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden:
-  langcode: true
+hidden: {  }

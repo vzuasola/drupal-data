@@ -1,5 +1,5 @@
-uuid: f669ad3c-f675-4801-9d95-5e4d9cd67066
-langcode: ja
+uuid: a84ed56c-95dc-4a93-a0f1-96e119108eea
+langcode: en
 status: true
 dependencies:
   config:
@@ -13,9 +13,11 @@ entity_type: deposit_and_withdrawal_entity
 bundle: deposit_and_withdrawal_entity
 label: 'Where to open images'
 description: ''
-required: true
+required: false
 translatable: false
-default_value: {  }
+default_value:
+  -
+    value: _self
 default_value_callback: ''
 settings: {  }
 field_type: list_string

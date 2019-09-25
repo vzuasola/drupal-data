@@ -1,5 +1,5 @@
-uuid: 83da06ea-cfcb-499e-86e9-345b0ccf9cae
-langcode: ja
+uuid: adb94385-9346-4114-8824-b7bd64d009c6
+langcode: en
 status: true
 dependencies:
   config:
@@ -13,9 +13,11 @@ entity_type: deposit_and_withdrawal_entity
 bundle: deposit_and_withdrawal_entity
 label: 'Where to open link'
 description: ''
-required: true
+required: false
 translatable: false
-default_value: {  }
+default_value:
+  -
+    value: _self
 default_value_callback: ''
 settings: {  }
 field_type: list_string
