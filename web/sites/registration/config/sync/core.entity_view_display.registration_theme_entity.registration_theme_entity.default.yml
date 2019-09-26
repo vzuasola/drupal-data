@@ -10,6 +10,7 @@ dependencies:
     - field.field.registration_theme_entity.registration_theme_entity.field_banner_font_color
     - field.field.registration_theme_entity.registration_theme_entity.field_banner_highlight
     - field.field.registration_theme_entity.registration_theme_entity.field_content_two_columns
+    - field.field.registration_theme_entity.registration_theme_entity.field_dafabet_logo
     - field.field.registration_theme_entity.registration_theme_entity.field_default_regvia
     - field.field.registration_theme_entity.registration_theme_entity.field_enable_two_columns
     - field.field.registration_theme_entity.registration_theme_entity.field_error_color
@@ -102,6 +103,15 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: text_default
+    region: content
+  field_dafabet_logo:
+    weight: 30
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
     region: content
   field_default_regvia:
     weight: 19
