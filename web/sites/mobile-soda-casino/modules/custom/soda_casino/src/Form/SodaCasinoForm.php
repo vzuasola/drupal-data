@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\gts\Form;
+namespace Drupal\soda_casino\Form;
 
 use Drupal\webcomposer_config_schema\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
@@ -9,7 +9,7 @@ use Drupal\Core\Form\FormStateInterface;
  * Header configuration plugin
  *
  * @WebcomposerConfigPlugin(
- *   id = "gts",
+ *   id = "soda_casino",
  *   route = {
  *     "title" = "Mobile Soda Casino Configuration",
  *     "path" = "/admin/config/soda-casino-mobile/configuration",
@@ -17,16 +17,16 @@ use Drupal\Core\Form\FormStateInterface;
  *   menu = {
  *     "title" = "Mobile Soda Casino Configuration",
  *     "description" = "Provides configuration for Soda Casino Mobile",
- *     "parent" = "gts.list",
+ *     "parent" = "soda_casino.list",
  *   },
  * )
  */
-class GTSForm extends FormBase {
+class SodaCasinoForm extends FormBase {
   /**
    * {@inheritdoc}
    */
   protected function getEditableConfigNames() {
-    return ['gts.gts_configuration'];
+    return ['soda_casino.soda_casino_configuration'];
   }
 
   /**
@@ -40,10 +40,10 @@ class GTSForm extends FormBase {
       '#open' => TRUE,
     ];
 
-    $form['general']['gts_lobby_infinite_scroll'] = [
+    $form['general']['soda_casino_lobby_infinite_scroll'] = [
       '#type' => 'checkbox',
       '#title' => $this->t('Enable lobby lazy load (Infinite Scroll)'),
-      '#default_value' => $this->get('gts_lobby_infinite_scroll'),
+      '#default_value' => $this->get('soda_casino_lobby_infinite_scroll'),
       '#description' => 'Enable lazy loading for games lobby.',
       '#translatable' => TRUE,
     ];
