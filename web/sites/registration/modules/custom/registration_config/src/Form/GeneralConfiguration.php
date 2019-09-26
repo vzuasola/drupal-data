@@ -224,6 +224,14 @@ class GeneralConfiguration extends FormBase {
       '#default_value' => $this->get('iovation_portal_ids') ?? '22,123,26,128,29,131,48,141',
       '#required' => TRUE,
     ];
+    $form['integration']['reg_api_key'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Registration API Key'),
+      '#description' => $this->t('Key that will be used for the authentication mechanism for Reg API'),
+      '#default_value' => $this->get('reg_api_key'),
+      '#required' => TRUE,
+      '#translatable' => TRUE,
+    ];
   }
 
   /**
