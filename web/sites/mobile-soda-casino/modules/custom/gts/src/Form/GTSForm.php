@@ -35,7 +35,7 @@ class GTSForm extends FormBase {
   public function form(array $form, FormStateInterface $form_state) {
     $form['general'] = [
       '#type' => 'details',
-      '#title' => $this->t('Mobile Games Genral Configuration'),
+      '#title' => $this->t('Mobile Soda Casino General Configuration'),
       '#collapsible' => TRUE,
       '#open' => TRUE,
     ];
