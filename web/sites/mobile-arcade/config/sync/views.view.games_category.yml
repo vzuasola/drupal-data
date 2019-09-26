@@ -417,7 +417,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Is Sub Category'
+          label: 'Is Secondary Menu'
           exclude: false
           alter:
             alter_text: false
