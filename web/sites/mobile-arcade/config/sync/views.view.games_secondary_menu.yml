@@ -18,7 +18,7 @@ dependencies:
 id: games_secondary_menu
 label: 'Games - Providers'
 module: views
-description: 'Manage Arcade Games Sub Categories'
+description: 'Manage Arcade Games Secondary Menu'
 tag: ''
 base_table: taxonomy_term_field_data
 base_field: tid
@@ -301,7 +301,7 @@ display:
         weight: 0
         context: '0'
         menu_name: admin
-      title: 'Games Categories Sorting'
+      title: 'Games Secondary Menu Sorting'
       defaults:
         title: false
         style: false
@@ -447,7 +447,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Is Sub Category'
+          label: 'Is Secondary Menu'
           exclude: false
           alter:
             alter_text: false
