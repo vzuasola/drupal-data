@@ -1,0 +1,5 @@
+gts.list:
+  title: 'Soda Casino Mobile Configuration'
+  description: 'Provides configuration for Soda Casino Mobile Site'
+  parent: system.admin_config
+  route_name: gts.admin_settings

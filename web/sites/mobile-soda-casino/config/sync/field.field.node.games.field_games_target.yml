@@ -1,0 +1,21 @@
+uuid: 575bc823-7c2d-46a0-96f3-28773aacebe1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_games_target
+    - node.type.games
+  module:
+    - options
+id: node.games.field_games_target
+field_name: field_games_target
+entity_type: node
+bundle: games
+label: Target
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

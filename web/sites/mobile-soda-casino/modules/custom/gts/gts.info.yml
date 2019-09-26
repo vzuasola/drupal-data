@@ -1,0 +1,5 @@
+name: gts
+type: module
+description: Games configuration module
+core: 8.x
+package: Web Composer
