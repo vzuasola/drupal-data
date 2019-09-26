@@ -11,12 +11,12 @@ use Drupal\Core\Form\FormStateInterface;
  * @WebcomposerConfigPlugin(
  *   id = "gts",
  *   route = {
- *     "title" = "Mobile Games Configuration",
- *     "path" = "/admin/config/games-mobile/configuration",
+ *     "title" = "Mobile Soda Casino Configuration",
+ *     "path" = "/admin/config/soda-casino-mobile/configuration",
  *   },
  *   menu = {
- *     "title" = "Mobile Games Configuration",
- *     "description" = "Provides configuration for Games Mobile",
+ *     "title" = "Mobile Soda Casino Configuration",
+ *     "description" = "Provides configuration for Soda Casino Mobile",
  *     "parent" = "gts.list",
  *   },
  * )
