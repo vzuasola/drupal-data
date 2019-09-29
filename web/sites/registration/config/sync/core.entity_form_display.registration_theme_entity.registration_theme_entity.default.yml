@@ -22,6 +22,7 @@ dependencies:
     - field.field.registration_theme_entity.registration_theme_entity.field_registration_button_form_c
     - field.field.registration_theme_entity.registration_theme_entity.field_registration_button_form_h
     - field.field.registration_theme_entity.registration_theme_entity.field_registration_form
+    - field.field.registration_theme_entity.registration_theme_entity.field_registration_skin_colors
     - field.field.registration_theme_entity.registration_theme_entity.field_registration_theme_code
     - field.field.registration_theme_entity.registration_theme_entity.field_separator_color
     - field.field.registration_theme_entity.registration_theme_entity.field_steptwo_banner
@@ -274,6 +275,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
+  field_registration_skin_colors:
+    weight: 39
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
     region: content
   field_registration_theme_code:
     weight: 1
