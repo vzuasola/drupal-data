@@ -1,0 +1,27 @@
+uuid: 0c10392e-5b3f-4efe-ae64-cbfa2ef11110
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - webcomposer_floating_banners
+id: left_floating_banner_entity.field_theme
+field_name: field_theme
+entity_type: left_floating_banner_entity
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: default
+      label: Default
+    -
+      value: soda
+      label: Soda
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -24,6 +24,10 @@ field_validations:
     error_message: 'Minimum requirement not met'
   max_length:
     error_message: 'Maximum requirement not met'
+  regex:
+    error_message: 'This field only accepts specific characters.'
+  valid_date:
+    error_message: "Hãy nhập Ngày Sinh theo định dáng: DD/MM/YYYY\r\n"
   username_availability:
     error_message: 'Username not available'
   email_availability:
@@ -32,5 +36,7 @@ field_validations:
     error_message: 'Invalid/not allowed characters'
   valid_languages:
     error_message: "Hãy nhập Ngày Sinh theo định dáng: DD/MM/YYYY\r\n"
-  valid_date:
-    error_message: "Hãy nhập Ngày Sinh theo định dáng: DD/MM/YYYY\r\n"
+  not_match_username:
+    error_message: 'Password should not equal to username'
+  allowed_date:
+    error_message: 'Vui lòng điền ngày tháng hợp lệ'

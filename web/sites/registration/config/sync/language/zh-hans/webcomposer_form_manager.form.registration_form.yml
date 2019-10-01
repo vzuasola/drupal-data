@@ -10,29 +10,33 @@ weights:
     weight: '-8'
   password:
     weight: '-7'
-  email:
+  ioblackbox:
     weight: '-6'
-  mobile_number:
+  email:
     weight: '-5'
-  breakline_2:
+  mobile_number:
     weight: '-4'
-  last_name:
+  breakline_2:
     weight: '-3'
-  first_name:
+  last_name:
     weight: '-2'
-  password_meter:
+  first_name:
     weight: '-1'
-  birthdate:
+  password_meter:
     weight: '0'
-  currency:
+  birthdate:
     weight: '1'
-  country:
+  currency:
     weight: '2'
-  breakline_3:
+  country:
     weight: '3'
-  bonus_code:
+  breakline_3:
     weight: '4'
-  accept_terms:
+  bonus_code:
     weight: '5'
-  submit:
+  captcha:
     weight: '6'
+  accept_terms:
+    weight: '7'
+  submit:
+    weight: '8'

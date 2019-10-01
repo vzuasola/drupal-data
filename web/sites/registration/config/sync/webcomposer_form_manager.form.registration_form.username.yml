@@ -1,6 +1,6 @@
 field_settings:
-  label: Username
-  placeholder: Username
+  label: 'Username TCT'
+  placeholder: 'Username TCT'
   annotation: ''
 field_validations:
   required:
@@ -74,3 +74,6 @@ field_validations:
   not_match_username:
     enable: 0
     error_message: 'Password should not equal to username'
+  allowed_date:
+    enable: 0
+    error_message: 'Date is not allowed.'

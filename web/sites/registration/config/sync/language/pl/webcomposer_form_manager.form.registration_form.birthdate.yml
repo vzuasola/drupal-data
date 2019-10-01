@@ -1,6 +1,6 @@
 field_settings:
   label: 'Data Urodzenia'
-  placeholder: DD/MM/YYYY
+  placeholder: DD/MM/RRRR
   date-format: DD/MM/YYYY
   annotation: ''
 field_validations:

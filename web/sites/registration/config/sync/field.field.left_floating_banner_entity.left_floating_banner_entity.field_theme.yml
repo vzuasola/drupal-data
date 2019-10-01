@@ -1,0 +1,23 @@
+uuid: 02b579c4-f654-44f3-ba39-761583126b18
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.left_floating_banner_entity.field_theme
+  module:
+    - options
+    - webcomposer_floating_banners
+id: left_floating_banner_entity.left_floating_banner_entity.field_theme
+field_name: field_theme
+entity_type: left_floating_banner_entity
+bundle: left_floating_banner_entity
+label: Theme
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: default
+default_value_callback: ''
+settings: {  }
+field_type: list_string
