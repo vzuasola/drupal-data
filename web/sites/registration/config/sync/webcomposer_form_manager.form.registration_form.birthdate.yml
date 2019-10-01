@@ -75,3 +75,6 @@ field_validations:
   not_match_username:
     enable: 0
     error_message: 'Password should not equal to username'
+  allowed_date:
+    enable: 1
+    error_message: 'Please enter a valid date'

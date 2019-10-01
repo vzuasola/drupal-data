@@ -10,6 +10,7 @@ dependencies:
     - field.field.paragraph.floating_banner_item.field_link
     - field.field.paragraph.floating_banner_item.field_link_class
     - field.field.paragraph.floating_banner_item.field_link_target
+    - field.field.paragraph.floating_banner_item.field_theme
     - paragraphs.paragraphs_type.floating_banner_item
   module:
     - field_group
@@ -98,6 +99,12 @@ content:
     region: content
   field_link_target:
     weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_theme:
+    weight: 11
     settings: {  }
     third_party_settings: {  }
     type: options_select
