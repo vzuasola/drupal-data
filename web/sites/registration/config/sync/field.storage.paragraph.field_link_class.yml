@@ -88,6 +88,9 @@ settings:
     -
       value: dafasports
       label: 'Dafa Sports'
+    -
+      value: soda
+      label: Soda
   allowed_values_function: ''
 module: options
 locked: false

@@ -1,7 +1,6 @@
 form_settings:
   show: 1
   alias: ''
-  form_name: RegistrationForm
 weights:
   back_button:
     weight: '-10'
@@ -33,7 +32,9 @@ weights:
     weight: '3'
   bonus_code:
     weight: '4'
-  accept_terms:
+  captcha:
     weight: '5'
-  submit:
+  accept_terms:
     weight: '6'
+  submit:
+    weight: '7'
