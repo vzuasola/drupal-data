@@ -76,6 +76,11 @@ $sites['zipang-casino.drupal.dev'] = 'zipang-casino';
 $sites['zipang-casino.drupal.local'] = 'zipang-casino';
 $sites['zipang-casino.drupal.env'] = 'zipang-casino';
 
+// 777Baby
+$sites['777baby-casino.drupal.dev'] = '777baby-casino';
+$sites['777baby-casino.drupal.local'] = '777baby-casino';
+$sites['777baby-casino.drupal.env'] = '777baby-casino';
+
 // Dafasports Site instance
 $sites['dafa-sports.drupal.local'] = 'dafa-sports';
 $sites['dafa-sports.drupal.dev'] = 'dafa-sports';
