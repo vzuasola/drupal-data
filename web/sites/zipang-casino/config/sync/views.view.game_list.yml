@@ -2,6 +2,15 @@ uuid: 38451571-bd14-46d1-8ebf-92c2d264c9ed
 langcode: ja
 status: true
 dependencies:
+  config:
+    - field.storage.zipang_desktop_games_entity.field_enable_free_play
+    - field.storage.zipang_desktop_games_entity.field_enable_game
+    - field.storage.zipang_desktop_games_entity.field_game_category
+    - field.storage.zipang_desktop_games_entity.field_game_code
+    - field.storage.zipang_desktop_games_entity.field_game_tag
+    - field.storage.zipang_desktop_games_entity.field_game_title
+    - taxonomy.vocabulary.desktop_game_category
+    - taxonomy.vocabulary.game_tag
   module:
     - rest
     - serialization
@@ -703,7 +712,7 @@ display:
           admin_label: ''
           operator: in
           value:
-            '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
+            ja: ja
           group: 1
           exposed: false
           expose:
@@ -936,12 +945,20 @@ display:
             label: ''
           plugin_id: standard
       title: 'Desktop Game List'
+      rendering_language: '***LANGUAGE_language_interface***'
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_interface'
         - url
-      tags: {  }
+        - user
+      tags:
+        - 'config:field.storage.zipang_desktop_games_entity.field_enable_free_play'
+        - 'config:field.storage.zipang_desktop_games_entity.field_enable_game'
+        - 'config:field.storage.zipang_desktop_games_entity.field_game_category'
+        - 'config:field.storage.zipang_desktop_games_entity.field_game_code'
+        - 'config:field.storage.zipang_desktop_games_entity.field_game_tag'
+        - 'config:field.storage.zipang_desktop_games_entity.field_game_title'
   rest_export_1:
     display_plugin: rest_export
     id: rest_export_1
@@ -1052,7 +1069,7 @@ display:
           admin_label: ''
           operator: in
           value:
-            '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
+            ja: ja
           group: 1
           exposed: false
           expose:
@@ -1123,10 +1140,10 @@ display:
         operator: AND
         groups:
           1: AND
+      rendering_language: '***LANGUAGE_language_interface***'
     cache_metadata:
       max-age: -1
       contexts:
-        - 'languages:language_content'
         - 'languages:language_interface'
         - request_format
       tags: {  }

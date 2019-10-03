@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains lucky_baby_config.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function lucky_baby_config_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the lucky_baby_config module.
+    case 'help.page.lucky_baby_config':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('777baby casino configuration') . '</p>';
+      return $output;
+
+    default:
+  }
+}
