@@ -2,6 +2,15 @@ uuid: a0e74094-e361-4be0-b702-266336531c9e
 langcode: ja
 status: true
 dependencies:
+  config:
+    - field.storage.zipang_mobile_games_entity.field_enable_free_play
+    - field.storage.zipang_mobile_games_entity.field_enable_game
+    - field.storage.zipang_mobile_games_entity.field_game_category
+    - field.storage.zipang_mobile_games_entity.field_game_code
+    - field.storage.zipang_mobile_games_entity.field_game_tag
+    - field.storage.zipang_mobile_games_entity.field_game_title
+    - taxonomy.vocabulary.game_tag
+    - taxonomy.vocabulary.mobile_game_category
   module:
     - rest
     - serialization
@@ -644,7 +653,7 @@ display:
           admin_label: ''
           operator: in
           value:
-            '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
+            ja: ja
           group: 1
           exposed: false
           expose:
@@ -886,12 +895,20 @@ display:
           admin_label: 'field_game_tag: Taxonomy term'
           required: true
           plugin_id: standard
+      rendering_language: '***LANGUAGE_language_interface***'
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_interface'
         - url
-      tags: {  }
+        - user
+      tags:
+        - 'config:field.storage.zipang_mobile_games_entity.field_enable_free_play'
+        - 'config:field.storage.zipang_mobile_games_entity.field_enable_game'
+        - 'config:field.storage.zipang_mobile_games_entity.field_game_category'
+        - 'config:field.storage.zipang_mobile_games_entity.field_game_code'
+        - 'config:field.storage.zipang_mobile_games_entity.field_game_tag'
+        - 'config:field.storage.zipang_mobile_games_entity.field_game_title'
   rest_export_1:
     display_plugin: rest_export
     id: rest_export_1
@@ -970,7 +987,7 @@ display:
           admin_label: ''
           operator: in
           value:
-            '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
+            ja: ja
           group: 1
           exposed: false
           expose:
@@ -1068,10 +1085,10 @@ display:
           expose:
             label: ''
           plugin_id: standard
+      rendering_language: '***LANGUAGE_language_interface***'
     cache_metadata:
       max-age: -1
       contexts:
-        - 'languages:language_content'
         - 'languages:language_interface'
         - request_format
       tags: {  }
