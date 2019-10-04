@@ -2,15 +2,27 @@
 
 namespace Drupal\webcomposer_cdn\Form;
 
+use Drupal\webcomposer_config_schema\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\Core\Form\ConfigFormBase;
 
 /**
- * Class CDNConfigForm.
+ * Description form plugin.
  *
- * @package Drupal\webcomposer_cdn\Form
+ * @WebcomposerConfigPlugin(
+ *   id = "cdn_config_form",
+ *   route = {
+ *     "title" = "CDN Configuration",
+ *     "path" = "/admin/config/webcomposer/cdn/settings",
+ *   },
+ *   menu = {
+ *     "title" = "CDN configuration",
+ *     "description" = "Provides configuration for CDN",
+ *     "parent" = "webcomposer_cdn.list",
+ *     "weight" = 30
+ *   },
+ * )
  */
-class CDNConfigForm extends ConfigFormBase {
+class CDNConfigForm extends FormBase {
   /**
    * {@inheritdoc}
    */
@@ -21,49 +33,26 @@ class CDNConfigForm extends ConfigFormBase {
   /**
    * {@inheritdoc}
    */
-  public function getFormId() {
-    return 'cdn_config_form';
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  public function buildForm(array $form, FormStateInterface $form_state) {
-    $config = $this->config('webcomposer_config.cdn_configuration');
+  public function form(array $form, FormStateInterface $form_state) {
     $form['enable_cdn'] = [
       '#type' => 'checkbox',
       '#title' => $this->t('Enable CDN'),
-      '#default_value' => $config->get('enable_cdn'),
+      '#default_value' => $this->get('enable_cdn'),
       '#description' => $this->t('This will enable CDN functionality if checked'),
     ];
     $form['cdn_domain_configuration'] = [
       '#type' => 'textarea',
+      '#rows' => 20,
       '#title' => $this->t('CDN Domain Configuration'),
-      '#default_value' => $config->get('cdn_domain_configuration'),
+      '#default_value' => $this->get('cdn_domain_configuration'),
       '#description' => $this->t("Add the CDN domain mapping. Mapping should consist of
         country code to CDN domain.
         <br>
         Example <strong>PH|example.cdn.com</strong>"),
+      '#translatable' => TRUE,
     ];
 
-    return parent::buildForm($form, $form_state);
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  public function submitForm(array &$form, FormStateInterface $form_state) {
-    $keys = [
-      'enable_cdn',
-      'cdn_domain_configuration',
-    ];
-
-    foreach ($keys as $key) {
-      $this->config('webcomposer_config.cdn_configuration')->set($key, $form_state->getValue($key))->save();
-    }
-
-    parent::submitForm($form, $form_state);
-
+    return $form;
   }
 
 }
