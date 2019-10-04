@@ -18,8 +18,6 @@ error_message_blank_password: パスワードは必須です
 error_message_blank_passname: 全ての欄をご確認の上、再度お試し下さい。
 error_message_invalid_passname: '申し訳ありませんが、入力したユーザー名とパスワードが一致しません。 もう一度お試しください。'
 error_message_service_not_available: サービスはご利用いただけません。
-error_message_account_suspended: ログインに失敗したため、アカウントはロックされています。カスタマーサポートまで、ご連絡ください。
-error_message_account_locked: ログインに失敗したため、アカウントはロックされています。カスタマーサポートまで、ご連絡ください。
 autologout_box_title: お知らせ
 affirmative_button_text: はい
 negative_button_text: いいえ

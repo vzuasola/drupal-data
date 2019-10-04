@@ -18,8 +18,6 @@ error_message_blank_password: '비밀번호는 필수 항목입니다.'
 error_message_blank_passname: '모든 항목을 다시 확인하시기 바랍니다.'
 error_message_invalid_passname: '죄송합니다. 입력하신 아이디와 비밀번호가 일치하지 않습니다. 다시 시도하십시오.'
 error_message_service_not_available: '서비스를 사용할 수 없습니다.'
-error_message_account_suspended: '로그인 시도 실패로 인해 회원님의 계정이 잠겼습니다. 고객지원팀에 문의하십시오.'
-error_message_account_locked: '로그인 시도 실패로 인해 회원님의 계정이 잠겼습니다. 고객지원팀에 문의하십시오.'
 autologout_box_title: 리마인더
 affirmative_button_text: 예
 negative_button_text: 아니오

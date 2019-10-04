@@ -17,10 +17,11 @@ news_announcement_content:
   format: basic_html
 lobby_page_title: 'Start betting today with Dafabet! Sign up now!'
 promotion_page_title: 'Start betting today with Dafabet! Sign up now!'
+currency_balance_mapping: "4|RMB,USD,EUR,GBP,MYR,THB,VND,IDR,INR,KRW,RUB,PLN\r\n6|RMB,USD,EUR,GBP,MYR,THB,VND,IDR,INR,KRW,RUB,PLN,BRL,MXN,CLP,COP,PEN,ARS,VES,MBC\t\r\n11|RMB,USD,EUR,GBP,MYR,THB,VND,IDR,INR,KRW,RUB,PLN\r\n10|INR\t\r\n1|RMB,USD,EUR,GBP,MYR,THB,VND,IDR,INR,KRW,RUB,PLN,BRL,MXN,CLP,COP,PEN,ARS,VES\t\r\n2|RMB,USD,EUR,GBP,MYR,THB,VND,IDR,INR,KRW,RUB,PLN,BRL,MXN,CLP,COP,PEN,ARS,VES\t\r\n5|RMB,USD,EUR,GBP,MYR,THB,VND,IDR,INR,KRW,RUB,PLN,BRL,MXN,CLP,COP,PEN,ARS,VES\t\r\n8|RMB,MYR,THB,KRW,VND,USD,IDR,INR,EUR\t\r\n9|RMB,MYR,THB,KRW,VND,USD,IDR,INR,EUR\t\r\n3|RMB,USD,EUR,GBP,MYR,THB,VND,IDR,INR,KRW,RUB,PLN\r\n7|RMB"
+links_title: Quicklinks
 join_now_text: 'CADASTRAR AGORA'
 join_now_link: '/{domain:myaccount_domain}/{domain:lang_token}/cant-login[query:({tracking})]'
 login_issue_text: 'Não consegue entrar?'
-login_issue_link: '/{domain:myaccount_domain}/{domain:lang_token}/cant-login[query:({tracking})]'
 product_balance_label: 'Account Balance'
 total_balance_label: 'Saldo total'
 balance_error_text: 'Error Retrieving.'
@@ -33,6 +34,3 @@ profile_logout_text: Sair
 balance_label_mapping: "4|OW Sports\r\n6|Esportes\r\n11|eSports\r\n10|Exchange\r\n1|Casino\r\n2|Casino Gold\r\n5|Jogos/Arcade/Virtuais\r\n8|Opus Live Dealer\r\n3|Poker\r\n7|AG Fish Hunter"
 balance_error_text_product: N/A
 cashier_link: '{cashier}[query:(ticket={auth.token}&product=dafabet&title=headerPopup&width=820&height=820&{tracking})]'
-balance_mapping: ''
-currency_balance_mapping: "4|RMB,USD,EUR,GBP,MYR,THB,VND,IDR,INR,KRW,RUB,PLN\r\n6|RMB,USD,EUR,GBP,MYR,THB,VND,IDR,INR,KRW,RUB,PLN,BRL,MXN,CLP,COP,PEN,ARS,VES,MBC\t\r\n11|RMB,USD,EUR,GBP,MYR,THB,VND,IDR,INR,KRW,RUB,PLN\r\n10|INR\t\r\n1|RMB,USD,EUR,GBP,MYR,THB,VND,IDR,INR,KRW,RUB,PLN,BRL,MXN,CLP,COP,PEN,ARS,VES\t\r\n2|RMB,USD,EUR,GBP,MYR,THB,VND,IDR,INR,KRW,RUB,PLN,BRL,MXN,CLP,COP,PEN,ARS,VES\t\r\n5|RMB,USD,EUR,GBP,MYR,THB,VND,IDR,INR,KRW,RUB,PLN,BRL,MXN,CLP,COP,PEN,ARS,VES\t\r\n8|RMB,MYR,THB,KRW,VND,USD,IDR,INR,EUR\t\r\n9|RMB,MYR,THB,KRW,VND,USD,IDR,INR,EUR\t\r\n3|RMB,USD,EUR,GBP,MYR,THB,VND,IDR,INR,KRW,RUB,PLN\r\n7|RMB"
-links_title: Quicklinks
