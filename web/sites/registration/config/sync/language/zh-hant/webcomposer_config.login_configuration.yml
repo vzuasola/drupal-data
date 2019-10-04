@@ -18,8 +18,6 @@ error_message_blank_password: 請輸入密碼。
 error_message_blank_passname: 請檢查所有字段，再試一次。
 error_message_invalid_passname: 很抱歉，您輸入的用戶名和密碼不正確，請重新輸入。
 error_message_service_not_available: 無法提供服務
-error_message_account_suspended: 您的賬戶因多次登錄失敗已被鎖定，請聯系客服。
-error_message_account_locked: 您的賬戶因多次登錄失敗已被鎖定，請聯系客服。
 autologout_box_title: 提示
 affirmative_button_text: 是
 negative_button_text: 不
