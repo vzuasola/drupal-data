@@ -18,8 +18,6 @@ error_message_blank_password: 'Password wajib diisi'
 error_message_blank_passname: 'Silahkan periksa semua kolom dan coba lagi.'
 error_message_invalid_passname: 'Maaf Username dan Password yang Anda masukan tidak cocok. Silakan coba lagi.'
 error_message_service_not_available: 'Layanan tidak tersedia'
-error_message_account_suspended: 'Akun Anda telah dikunci karena upaya masuk gagal. Silakan hubungi Layanan Pelanggan'
-error_message_account_locked: 'Akun Anda telah dikunci karena upaya masuk gagal. Silakan hubungi Layanan Pelanggan'
 autologout_box_title: PERINGATAN
 affirmative_button_text: YA
 negative_button_text: TIDAK
