@@ -224,6 +224,12 @@ class GeneralConfiguration extends FormBase {
       '#default_value' => $this->get('iovation_portal_ids') ?? '22,123,26,128,29,131,48,141',
       '#required' => TRUE,
     ];
+    $form['integration']['enable_reg_api_auth'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable Registration API Authentication'),
+      '#description' => $this->t('tick the checkbox to enable pass headers to authenticate to Registration API'),
+      '#default_value' => $this->get('enable_reg_api_auth')
+    ];
     $form['integration']['reg_api_key'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Registration API Key'),
