@@ -1,0 +1,25 @@
+<?php
+
+/**
+ * @file
+ * Contains games_collection.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Entity\EntityFormInterface;
+
+/**
+ * Implements hook_help().
+ */
+function games_collection_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the games_collection module.
+    case 'help.page.games_collection':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Providers configuration to group the games.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
