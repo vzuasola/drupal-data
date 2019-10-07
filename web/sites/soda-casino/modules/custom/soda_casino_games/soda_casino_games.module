@@ -27,12 +27,18 @@ function soda_casino_games_help($route_name, RouteMatchInterface $route_match)
 
 function soda_casino_games_form_alter(&$form, $form_state, $form_id)
 {
-    if ($form_id == 'node_game_form' || $form_id == 'node_game_edit_form') {
-        foreach (array_keys($form['actions']) as $action) {
-            if ($action != 'preview' && isset($form['actions'][$action]['#type']) && $form['actions'][$action]['#type'] === 'submit') {
-                $form['actions'][$action]['#submit'][] = 'soda_casino_games_form_submit';
+    switch ($form_id) {
+        case 'node_game_form':
+        case 'node_game_edit_form':
+            foreach (array_keys($form['actions']) as $action) {
+                if ($action != 'preview' && isset($form['actions'][$action]['#type']) && $form['actions'][$action]['#type'] === 'submit') {
+                    $form['actions'][$action]['#submit'][] = 'soda_casino_games_form_submit';
+                }
             }
-        }
+            break;
+        case 'node_game_delete_form':
+            drupal_set_message(t('Please make sure first that this game has been deleted from Games Collections.'), 'warning');
+            break;
     }
 }
 
