@@ -37,7 +37,9 @@ function soda_casino_games_form_alter(&$form, $form_state, $form_id)
             }
             break;
         case 'node_game_delete_form':
-            drupal_set_message(t('Please make sure first that this game has been deleted from Games Collections.'), 'warning');
+            drupal_set_message(t('Please make sure that this game has been removed from the following features:<br>
+                <ul><li>Games Collections</li></ul>')
+                , 'warning');
             break;
     }
 }
