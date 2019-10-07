@@ -34,7 +34,7 @@ class LuckyBabyLoginConfigForm extends FormBase {
   public function form(array $form, FormStateInterface $form_state) {
     $form['lucky_baby_settings_tab'] = [
       '#type' => 'vertical_tabs',
-      '#title' => t('lucky_baby Configurations'),
+      '#title' => t('LuckyBaby Configurations'),
     ];
 
     $this->sectionLoginConfig($form);
@@ -49,7 +49,7 @@ class LuckyBabyLoginConfigForm extends FormBase {
 
     $form['login_form'] = [
       '#type' => 'details',
-      '#title' => $this->t('Lucky Baby Login Form Configuration'),
+      '#title' => $this->t('LuckyBaby Login Form Configuration'),
     ];
 
     $default_login_button_main = $this->get('login_button_label_main');
