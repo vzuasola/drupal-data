@@ -1,21 +1,21 @@
-uuid: 3b70f3f0-d941-4627-a720-2ee70c68d9f9
-langcode: zh-hans
+uuid: bf5c6678-03d2-47e3-a28a-081731fdcfa5
+langcode: en
 status: true
 dependencies:
+  config:
+    - field.storage.games_collection.field_game_category
+    - field.storage.games_collection.field_type
   module:
-    - draggableviews
+    - games_collection
     - rest
     - serialization
-    - user
-    - webcomposer_downloadables
-_core:
-  default_config_hash: cSawzGNnZejqSxY908EFLfp5lTiwx0E3rX4zdzfaYIU
-id: webcomposer_downloadable
-label: 'WebComposer Downloadable'
+    - webcomposer_rest_extra
+id: games_collection_entities
+label: 'Games Collection Entities'
 module: views
 description: ''
 tag: ''
-base_table: downloadable_entity_field_data
+base_table: games_collection_field_data
 base_field: id
 core: 8.x
 display:
@@ -29,7 +29,7 @@ display:
         type: none
         options: {  }
       cache:
-        type: tag
+        type: none
         options: {  }
       query:
         type: views_query
@@ -52,20 +52,37 @@ display:
       pager:
         type: none
         options:
-          items_per_page: null
           offset: 0
       style:
         type: table
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
+          override: true
+          sticky: false
+          caption: ''
+          summary: ''
+          description: ''
+          columns:
+            name: name
+          info:
+            name:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+          default: '-1'
+          empty_table: false
       row:
         type: fields
       fields:
         name:
-          table: downloadable_entity_field_data
-          field: name
           id: name
-          entity_type: null
-          entity_field: name
-          plugin_id: field
+          table: games_collection_field_data
+          field: name
           relationship: none
           group_type: group
           admin_label: ''
@@ -112,7 +129,8 @@ display:
           hide_alter_empty: true
           click_sort_column: value
           type: string
-          settings: {  }
+          settings:
+            link_to_entity: false
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -123,14 +141,17 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        user_id:
-          id: user_id
-          table: downloadable_entity_field_data
-          field: user_id
+          entity_type: null
+          entity_field: name
+          plugin_id: field
+        operations:
+          id: operations
+          table: games_collection
+          field: operations
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Created by'
+          label: Operations
           exclude: false
           alter:
             alter_text: false
@@ -171,30 +192,81 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: target_id
-          type: author
-          settings: {  }
-          group_column: target_id
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          entity_type: downloadable_entity
-          entity_field: user_id
-          plugin_id: field
-        changed:
-          id: changed
-          table: downloadable_entity_field_data
-          field: changed
+          destination: false
+          entity_type: games_collection
+          plugin_id: entity_operations
+      filters:
+        langcode:
+          id: langcode
+          table: games_collection_field_data
+          field: langcode
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Last Updated'
+          operator: in
+          value:
+            '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: games_collection
+          entity_field: langcode
+          plugin_id: language
+      sorts: {  }
+      title: 'Games Collection Entities'
+      header: {  }
+      footer: {  }
+      empty: {  }
+      relationships: {  }
+      arguments: {  }
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+      tags: {  }
+  page_1:
+    display_plugin: page
+    id: page_1
+    display_title: Page
+    position: 1
+    display_options:
+      display_extenders: {  }
+      path: admin/games/collections/games_collection
+      fields:
+        name:
+          id: name
+          table: games_collection_field_data
+          field: name
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Name
           exclude: false
           alter:
             alter_text: false
@@ -236,9 +308,9 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: timestamp_ago
+          type: string
           settings:
-            granularity: 2
+            link_to_entity: false
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -249,17 +321,17 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: downloadable_entity
-          entity_field: changed
+          entity_type: null
+          entity_field: name
           plugin_id: field
-        operations:
-          id: operations
-          table: downloadable_entity
-          field: operations
+        field_type:
+          id: field_type
+          table: games_collection__field_type
+          field: field_type
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Operations links'
+          label: Type
           exclude: false
           alter:
             alter_text: false
@@ -300,17 +372,29 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          destination: true
-          entity_type: downloadable_entity
-          plugin_id: entity_operations
-        draggableviews:
-          id: draggableviews
-          table: downloadable_entity_field_data
-          field: draggableviews
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: false
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_game_category:
+          id: field_game_category
+          table: games_collection__field_game_category
+          field: field_game_category
           relationship: none
           group_type: group
           admin_label: ''
-          label: ''
+          label: 'Game Category'
           exclude: false
           alter:
             alter_text: false
@@ -343,7 +427,70 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: false
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: All
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: false
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        operations:
+          id: operations
+          table: games_collection
+          field: operations
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Operations
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -351,58 +498,17 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          action_title: Action
-          include_exclude: exclude
-          selected_actions: {  }
-          entity_type: downloadable_entity
-          entity_field: id
-          plugin_id: draggable_views_field
-      filters:
-        langcode:
-          id: langcode
-          table: downloadable_entity_field_data
-          field: langcode
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: in
-          value:
-            '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          entity_type: downloadable_entity
-          entity_field: langcode
-          plugin_id: language
+          destination: false
+          entity_type: games_collection
+          plugin_id: entity_operations
+      defaults:
+        fields: false
+        sorts: false
       sorts:
-        weight:
-          id: weight
-          table: draggableviews_structure
-          field: weight
+        field_type_target_id:
+          id: field_type_target_id
+          table: games_collection__field_type
+          field: field_type_target_id
           relationship: none
           group_type: group
           admin_label: ''
@@ -413,7 +519,7 @@ display:
           plugin_id: standard
         created:
           id: created
-          table: downloadable_entity_field_data
+          table: games_collection_field_data
           field: created
           relationship: none
           group_type: group
@@ -423,36 +529,17 @@ display:
           expose:
             label: ''
           granularity: second
-          entity_type: downloadable_entity
+          entity_type: games_collection
           entity_field: created
           plugin_id: date
-      title: 'WebComposer Downloadable'
-      header: {  }
-      footer: {  }
-      empty: {  }
-      relationships: {  }
-      arguments: {  }
-      display_extenders: {  }
     cache_metadata:
-      max-age: 0
+      max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-      tags: {  }
-  page_1:
-    display_plugin: page
-    id: page_1
-    display_title: Page
-    position: 1
-    display_options:
-      display_extenders: {  }
-      path: admin/config/webcomposer/downloadable/downloadable_entity
-    cache_metadata:
-      max-age: 0
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-      tags: {  }
+      tags:
+        - 'config:field.storage.games_collection.field_game_category'
+        - 'config:field.storage.games_collection.field_type'
   rest_export_1:
     display_plugin: rest_export
     id: rest_export_1
@@ -460,22 +547,39 @@ display:
     position: 2
     display_options:
       display_extenders: {  }
-      path: api/downloadable
+      path: api/games-collection
       style:
-        type: serializer
-      defaults:
-        style: false
-        row: false
-      row:
-        type: data_entity
-        options: {  }
-      pager:
-        type: some
+        type: node_list_serializer
         options:
-          items_per_page: 10
+          uses_fields: false
+          formats:
+            json: json
+      pager:
+        type: none
+        options:
           offset: 0
+      relationships: {  }
+      defaults:
+        relationships: false
+        sorts: false
+      sorts:
+        created:
+          id: created
+          table: games_collection_field_data
+          field: created
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: DESC
+          exposed: false
+          expose:
+            label: ''
+          granularity: second
+          entity_type: games_collection
+          entity_field: created
+          plugin_id: date
     cache_metadata:
-      max-age: 0
+      max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
