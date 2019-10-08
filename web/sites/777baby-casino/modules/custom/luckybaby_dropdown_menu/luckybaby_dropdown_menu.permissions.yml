@@ -1,0 +1,22 @@
+add dropdown menu entity entities:
+  title: 'Create new Dropdown menu entity entities'
+
+administer dropdown menu entity entities:
+  title: 'Administer Dropdown menu entity entities'
+  description: 'Allow to access the administration form to configure Dropdown menu entity entities.'
+  restrict access: true
+
+delete dropdown menu entity entities:
+  title: 'Delete Dropdown menu entity entities'
+
+edit dropdown menu entity entities:
+  title: 'Edit Dropdown menu entity entities'
+
+access dropdown menu entity overview:
+  title: 'Access the Dropdown menu entity overview page'
+
+view published dropdown menu entity entities:
+  title: 'View published Dropdown menu entity entities'
+
+view unpublished dropdown menu entity entities:
+  title: 'View unpublished Dropdown menu entity entities'
