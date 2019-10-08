@@ -52,7 +52,7 @@ function checkCollectionReferences(&$form) {
         $renderable = [
           '#theme' => 'games_collection_warning',
           '#title' => 'Error Message',
-          '#message' => 'Please remove the game from the following Games collections:',
+          '#message' => 'Please remove the game from the following Games collections and from its translations:',
           '#items' => $links
         ];
 
