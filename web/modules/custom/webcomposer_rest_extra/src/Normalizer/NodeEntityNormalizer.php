@@ -203,24 +203,27 @@ class NodeEntityNormalizer extends ContentEntityNormalizer {
   private function loadNodeById($id) {
     $lang = \Drupal::languageManager()->getCurrentLanguage(LanguageInterface::TYPE_CONTENT)->getId();
     $node = \Drupal::entityManager()->getStorage('node')->load($id);
-    $nodeTranslated = \Drupal::service('entity.repository')->getTranslationFromContext($node, $lang);
 
-    if ($nodeTranslated->isPublished()) {
-      $nodeTranslatedArray = $nodeTranslated->toArray();
+    if ($node) {
+        $nodeTranslated = \Drupal::service('entity.repository')->getTranslationFromContext($node, $lang);
 
-      foreach ($nodeTranslatedArray as $field => $item) {
-        $setting = $nodeTranslated->get($field)->getSettings();
+        if ($nodeTranslated->isPublished()) {
+            $nodeTranslatedArray = $nodeTranslated->toArray();
 
-        if (isset($setting['target_type'])) {
-          if ($setting['target_type'] == 'file') {
-            $field_array = array_merge($nodeTranslatedArray[$field][0], $this->loadFileById($item[0]['target_id']));
-            $nodeTranslatedArray[$field] = $field_array;
-          }
+            foreach ($nodeTranslatedArray as $field => $item) {
+                $setting = $nodeTranslated->get($field)->getSettings();
+
+                if (isset($setting['target_type'])) {
+                    if ($setting['target_type'] == 'file') {
+                        $field_array = array_merge($nodeTranslatedArray[$field][0], $this->loadFileById($item[0]['target_id']));
+                        $nodeTranslatedArray[$field] = $field_array;
+                    }
+                }
+            }
         }
-      }
-    }
 
-    return $nodeTranslatedArray;
+        return $nodeTranslatedArray;
+    }
   }
 
   /**
