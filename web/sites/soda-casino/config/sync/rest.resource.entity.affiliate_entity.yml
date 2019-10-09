@@ -1,13 +1,13 @@
-uuid: d77490aa-5e27-4c53-8fd5-0dd4ff2bea18
+uuid: 01346c9c-03df-4345-a913-45792ced9466
 langcode: zh-hans
 status: true
 dependencies:
   module:
-    - node
     - serialization
     - user
-id: entity.node
-plugin_id: 'entity:node'
+    - webcomposer_affilates
+id: entity.affiliate_entity
+plugin_id: 'entity:affiliate_entity'
 granularity: method
 configuration:
   GET:
