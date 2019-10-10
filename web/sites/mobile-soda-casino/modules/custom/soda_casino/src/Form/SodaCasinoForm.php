@@ -48,20 +48,11 @@ class SodaCasinoForm extends FormBase {
       '#translatable' => TRUE,
     ];
 
-    $form['general']['more_provider_drawer'] = [
+    $form['general']['search_placeholder'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('More'),
-      '#description' => 'More',
-      '#default_value' => $this->get('more_provider_drawer'),
-      '#required' => true,
-      '#translatable' => true,
-    ];
-
-    $form['general']['title_provider_drawer'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Game Providers'),
-      '#description' => 'Game Providers',
-      '#default_value' => $this->get('title_provider_drawer'),
+      '#title' => $this->t('Placeholder for Search Field'),
+      '#description' => 'Placeholder text for Search Game field',
+      '#default_value' => $this->get('search_placeholder'),
       '#required' => true,
       '#translatable' => true,
     ];
