@@ -24,8 +24,8 @@ settings:
       value: gold_deluxe
       label: 'Gold Deluxe'
     -
-      value: gpi
-      label: GPI
+      value: gpi_arcade
+      label: 'GPI Arcade'
     -
       value: ky_gaming
       label: 'Kaiyuan (KY) Gaming'

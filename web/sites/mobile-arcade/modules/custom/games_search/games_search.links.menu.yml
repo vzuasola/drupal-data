@@ -1,0 +1,5 @@
+games_search.list:
+  title: 'Games Search Configuration'
+  description: 'Provides configuration for Mobile Games Search module'
+  parent: system.admin_config
+  route_name: games_search.admin_settings

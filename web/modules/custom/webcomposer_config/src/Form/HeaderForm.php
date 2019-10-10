@@ -103,6 +103,16 @@ class HeaderForm extends FormBase {
       '#translatable' => true,
     ];
 
+    $form['join_now_group']['registration_link_mobile'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Registration Mobile Link'),
+      '#description' => $this->t('The link for user redirection when clicked on Join Now Button on mobile view.'),
+      '#default_value' => $this->get('registration_link_mobile'),
+      '#rows' => 1,
+      '#required' => false,
+      '#translatable' => true,
+    ];
+
     $form['join_now_group']['join_now_link'] = [
       '#type' => 'textarea',
       '#title' => $this->t('Join Now Link (Deprecated)'),

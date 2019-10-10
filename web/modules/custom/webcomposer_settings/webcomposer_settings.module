@@ -136,7 +136,7 @@ function webcomposer_settings_config_schema_form_base_alter(&$form) {
         }
       }
 
-      if (empty(Element::children($form[$group_name]))) {
+      if (empty(Element::children($form[$group_name])) && $form[$group_name]['#type'] == 'details') {
         unset($form[$group_name]);
       }
     }

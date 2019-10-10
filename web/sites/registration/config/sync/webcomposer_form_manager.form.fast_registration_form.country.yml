@@ -5,8 +5,8 @@ field_settings:
   top_choices: "48\r\n96\r\n100\r\n109\r\n117\r\n153\r\n208\r\n231"
 field_validations:
   required:
-    enable: 0
-    error_message: 'Field should be required'
+    enable: 1
+    error_message: 'Select the Country you are currently residing in.'
   alpha:
     enable: 0
     error_message: 'Field should be Alphabet characters only'
@@ -75,14 +75,3 @@ field_validations:
   not_match_username:
     enable: 0
     error_message: 'Password should not equal to username'
-  duplicated_security_question:
-    enable: 0
-    error_message: 'Security Questions should not be the same'
-  match_password:
-    enable: 0
-    error_message: 'Password not match'
-  valid_username_prefix:
-    enable: 0
-    error_message: 'Username Prefix not valid'
-    parameters:
-      prefixes: '000,000,000'

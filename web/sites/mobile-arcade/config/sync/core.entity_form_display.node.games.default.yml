@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.games.field_all_games_category_ribbon
     - field.field.node.games.field_disable_game_loader
     - field.field.node.games.field_game_code
+    - field.field.node.games.field_game_filter
     - field.field.node.games.field_game_provider
     - field.field.node.games.field_game_ribbon
     - field.field.node.games.field_games_list_category
@@ -49,6 +50,19 @@ third_party_settings:
         open: false
         required_fields: true
       label: Ribbons
+    group_search_and_filter_settings:
+      children:
+        - field_keywords
+        - field_game_filter
+      parent_name: ''
+      weight: 18
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: 'Search and Filter Settings'
 id: node.games.default
 targetEntityType: node
 bundle: games
@@ -67,7 +81,7 @@ content:
     type: options_select
     region: content
   field_disable_game_loader:
-    weight: 19
+    weight: 20
     settings:
       display_label: true
     third_party_settings: {  }
@@ -80,6 +94,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_game_filter:
+    weight: 20
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
     region: content
   field_game_provider:
     weight: 3
@@ -120,7 +140,7 @@ content:
     type: image_image
     region: content
   field_keywords:
-    weight: 18
+    weight: 19
     settings:
       rows: 5
       placeholder: ''
@@ -128,7 +148,7 @@ content:
     type: string_textarea
     region: content
   field_preview_mode:
-    weight: 20
+    weight: 22
     settings:
       display_label: true
     third_party_settings: {  }
@@ -157,6 +177,11 @@ content:
   publish_on:
     type: datetime_timestamp_no_default
     weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  scheduler_settings:
+    weight: 21
     region: content
     settings: {  }
     third_party_settings: {  }

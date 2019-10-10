@@ -3,13 +3,13 @@ unauthenticated_error_message: 您的賬戶已退出，我們無法驗證您的�
 success_title: 注冊成功
 home_title: 投注就在dafabet!馬上註冊！
 generic_error_message: '賬戶注冊失敗。如需幫助，請聯系我們的 <a href="mailto:cnsupport@dafabet.com">客服</a>。 (i-1000)'
-portal_id_to_product_name_mapping: "3|沙巴體育|sports\r\n10|沙巴體育|sports\r\n28|沙巴體育|sports\r\n47|沙巴體育|sports\r\n22|大發體育|sports-df\r\n26|大發體育|sports-df\r\n29|大發體育|sports-df\r\n48|大發體育|sports-df\r\n4|娛樂場|casino\r\n11|娛樂場|casino\r\n16|娛樂場|casino\r\n18|娛樂場|casino\r\n30|娛樂場|casino\r\n49|娛樂場|casino\r\n23|娛樂場|casino\r\n19|娛樂場黃金版|casino-gold\r\n20|娛樂場黃金版|casino-gold\r\n21|娛樂場黃金版|casino-gold\r\n35|娛樂場黃金版|casino-gold\r\n54|娛樂場黃金版|casino-gold\r\n6|現場荷官|live-dealer\r\n15|現場荷官|live-dealer\r\n33|現場荷官|live-dealer\r\n52|現場荷官|live-dealer\r\n5|撲克|poker\r\n12|撲克|poker\r\n17|撲克|poker\r\n31|撲克|poker\r\n50|撲克|poker\r\n24|街機|fish-hunter\r\n25|街機|fish-hunter\r\n34|街機|fish-hunter\r\n53|街機|fish-hunter\r\n8|老虎機|games\r\n14|老虎機|games\r\n32|老虎機|games\r\n51|老虎機|games\r\n56|虛擬運動|virtuals\r\n57|虛擬運動|virtuals\r\n58|虛擬運動|virtuals\r\n59|虛擬運動|virtuals\r\n55|大發彩票|keno\r\n45|大發彩票|keno\r\n60|大發彩票|keno\r\n61|大發彩票|keno\r\n66|交易所|exchange\r\n67|交易所|exchange\r\n68|交易所|exchange\r\n69|交易所|exchange"
+portal_id_to_product_name_mapping: "3|沙巴體育|sports\r\n28|沙巴體育|sports\r\n130|沙巴體育|sports\r\n106|沙巴體育|sports\r\n10|沙巴體育|sports\r\n47|沙巴體育|sports\r\n140|沙巴體育|sports\r\n112|沙巴體育|sports\r\n22|大發體育|sports-df\r\n26|大發體育|sports-df\r\n29|大發體育|sports-df\r\n48|大發體育|sports-df\r\n131|大發體育|sports-df\r\n123|大發體育|sports-df\r\n4|娛樂場|casino\r\n11|娛樂場|casino\r\n16|娛樂場|casino\r\n18|娛樂場|casino\r\n30|娛樂場|casino\r\n49|娛樂場|casino\r\n23|娛樂場|casino\r\n132|娛樂場|casino\r\n107|娛樂場|casino\r\n159|娛樂場|casino\r\n119|娛樂場|casino\r\n19|娛樂場黃金版|casino-gold\r\n20|娛樂場黃金版|casino-gold\r\n21|娛樂場黃金版|casino-gold\r\n35|娛樂場黃金版|casino-gold\r\n54|娛樂場黃金版|casino-gold\r\n137|娛樂場黃金版|casino-gold\r\n120|娛樂場黃金版|casino-gold\r\n6|現場荷官|live-dealer\r\n33|現場荷官|live-dealer\r\n135|現場荷官|live-dealer\r\n109|現場荷官|live-dealer\r\n15|現場荷官|live-dealer\r\n52|現場荷官|live-dealer\r\n145|現場荷官|live-dealer\r\n116|現場荷官|live-dealer\r\n5|撲克|poker\r\n12|撲克|poker\r\n17|撲克|poker\r\n31|撲克|poker\r\n50|撲克|poker\r\n133|撲克|poker\r\n108|撲克|poker\r\n24|街機|fish-hunter\r\n25|街機|fish-hunter\r\n34|街機|fish-hunter\r\n53|街機|fish-hunter\r\n136|街機|fish-hunter\r\n125|街機|fish-hunter\r\n8|老虎機|games\r\n14|老虎機|games\r\n32|老虎機|games\r\n51|老虎機|games\r\n134|老虎機|games\r\n110|老虎機|games\r\n56|虛擬運動|virtuals\r\n57|虛擬運動|virtuals\r\n58|虛擬運動|virtuals\r\n59|虛擬運動|virtuals\r\n151|虛擬運動|virtuals\r\n149|虛擬運動|virtuals\r\n55|大發彩票|keno\r\n45|大發彩票|keno\r\n60|大發彩票|keno\r\n61|大發彩票|keno\r\n138|大發彩票|keno\r\n148|大發彩票|keno\r\n66|交易所|exchange\r\n67|交易所|exchange\r\n68|交易所|exchange\r\n69|交易所|exchange\r\n157|交易所|exchange\r\n155|交易所|exchange"
 livechat_header: 需要幫助？
 livechat_text: 請問有什麽可以幫到您？
 step_one_text: 注冊
 step_two_text: 存款
 enable_proactive_mobile: '0'
-general_settings_tab__active_tab: edit-restriction
+general_settings_tab__active_tab: edit-text-over-banner
 native_app_title: ''
 enable_avaya_proactive: '1'
 proactive_mobile_class: proactive-wechat-my
@@ -26,3 +26,18 @@ with_payment_method:
 without_payment_method:
   value: "<div class=\"content-header background-light-gray text-center pt-10 pb-10\"><strong class=\"text-20\">How to Deposit?</strong>\r\n<p class=\"text-16 mb-0\">Contact our Customer Support 24/7</p>\r\n</div>\r\n\r\n<div class=\"container-contact-us p-10 text-center\">\r\n<div class=\"image-contact-us-item inline-block mr-30\"><picture> <source media=\"(min-width: 768px)\" srcset=\"http://via.placeholder.com/220x120\" /> <source media=\"(min-width: 320px)\" srcset=\"http://via.placeholder.com/120x80\" /> <img alt=\"\" data-entity-type=\"\" data-entity-uuid=\"\" src=\"http://via.placeholder.com/220x120\" /> </picture></div>\r\n\r\n<div class=\"image-contact-us-item inline-block\"><picture> <source media=\"(min-width: 768px)\" srcset=\"http://via.placeholder.com/220x120\" /> <source media=\"(min-width: 320px)\" srcset=\"http://via.placeholder.com/120x80\" /> <img alt=\"\" data-entity-type=\"\" data-entity-uuid=\"\" src=\"http://via.placeholder.com/220x120\" /> </picture></div>\r\n\r\n<div><a href=\"https://www.google.com\"><img alt=\"masters.png\" data-entity-type=\"\" data-entity-uuid=\"\" height=\"44\" src=\"/sites/registration/files/2017-11/masters.png\" width=\"56\" /></a></div>\r\n</div>\r\n"
   format: basic_html
+ow_native_autologin_url: 'https://ismart.0ej8hp9a.com/Deposit_processlogin.aspx?lang=cs'
+enable_tripwire_popup: 0
+text_over_banner_mobile:
+  value: "<p><span class=\"text-10 text-white text-bold\">歡迎瀏覽<br />\r\n<span class=\"text-16 text-yellow text-extrabold\">亞洲最佳</span><br />\r\n<span class=\"text-16 text-yellow text-extrabold\">最受信賴</span><br />\r\n線上游戲平台</span></p>\r\n"
+  format: basic_html
+text_over_banner_tablet:
+  value: "<p><span class=\"text-20 text-white text-bold\">歡迎瀏覽<br />\r\n<span class=\"text-36 text-yellow text-extrabold\">亞洲最佳</span> </span></p>\r\n"
+  format: basic_html
+text_over_banner_desktop_left:
+  value: "<p><span class=\"text-20 text-white text-bold\">歡迎瀏覽</span><br />\r\n<span class=\"text-36 text-yellow text-extrabold\">亞洲最佳</span></p>\r\n"
+  format: basic_html
+text_over_banner_desktop_right:
+  value: "<p>&nbsp;</p>\r\n\r\n<p><span class=\"text-36 text-yellow text-extrabold\">最受信賴</span><br />\r\n<span class=\"text-20 text-white text-bold\">線上游戲平台</span></p>\r\n"
+  format: basic_html
+mbtc_restriction_message: 比特幣僅適用於大發體育。

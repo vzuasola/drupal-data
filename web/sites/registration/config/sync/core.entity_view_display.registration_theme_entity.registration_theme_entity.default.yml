@@ -10,6 +10,7 @@ dependencies:
     - field.field.registration_theme_entity.registration_theme_entity.field_banner_font_color
     - field.field.registration_theme_entity.registration_theme_entity.field_banner_highlight
     - field.field.registration_theme_entity.registration_theme_entity.field_content_two_columns
+    - field.field.registration_theme_entity.registration_theme_entity.field_dafabet_logo
     - field.field.registration_theme_entity.registration_theme_entity.field_default_regvia
     - field.field.registration_theme_entity.registration_theme_entity.field_enable_two_columns
     - field.field.registration_theme_entity.registration_theme_entity.field_error_color
@@ -21,6 +22,7 @@ dependencies:
     - field.field.registration_theme_entity.registration_theme_entity.field_registration_button_form_c
     - field.field.registration_theme_entity.registration_theme_entity.field_registration_button_form_h
     - field.field.registration_theme_entity.registration_theme_entity.field_registration_form
+    - field.field.registration_theme_entity.registration_theme_entity.field_registration_skin_colors
     - field.field.registration_theme_entity.registration_theme_entity.field_registration_theme_code
     - field.field.registration_theme_entity.registration_theme_entity.field_separator_color
     - field.field.registration_theme_entity.registration_theme_entity.field_steptwo_banner
@@ -102,6 +104,15 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: text_default
+    region: content
+  field_dafabet_logo:
+    weight: 30
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
     region: content
   field_default_regvia:
     weight: 19
@@ -202,6 +213,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: list_default
+    region: content
+  field_registration_skin_colors:
+    weight: 31
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
     region: content
   field_registration_theme_code:
     weight: 2
