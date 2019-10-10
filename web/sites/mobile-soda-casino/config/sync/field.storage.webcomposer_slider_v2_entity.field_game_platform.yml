@@ -1,22 +1,22 @@
-uuid: 40369c3c-9e6d-4dbf-be89-d5cedc49ed44
-langcode: en
+uuid: 40aee6dc-1f4a-4afc-983f-df7ce6ef1ba3
+langcode: zh-hans
 status: true
 dependencies:
   module:
     - options
     - webcomposer_slider_v2
-id: webcomposer_slider_v2_entity.field_slider_game_provider
-field_name: field_slider_game_provider
+id: webcomposer_slider_v2_entity.field_game_platform
+field_name: field_game_platform
 entity_type: webcomposer_slider_v2_entity
 type: list_string
 settings:
   allowed_values:
     -
-      value: soda_casino
-      label: SODA
+      value: ngm
+      label: NGM
     -
-      value: pas
-      label: PAS
+      value: live
+      label: LIVE
   allowed_values_function: ''
 module: options
 locked: false
