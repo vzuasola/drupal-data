@@ -73,11 +73,15 @@ class ICoreGamesIntegrationConfiguration extends FormBase {
       switch ($key) {
         case 'gameworx_lottery':
         case 'gameworx_quicklotto':
-            $this->getGameWorksFields($form[$key], $key, $value);
+          $this->getGameWorksFields($form[$key], $key, $value);
           break;
 
         case 'betconstruct':
-            $this->getBetContructFields($form[$key], $key, $value);
+          $this->getBetContructFields($form[$key], $key, $value);
+          break;
+
+        case 'asia_gaming':
+          $this->getAsiaGamingFields($form[$key], $key, $value);
           break;
 
         default:
@@ -187,6 +191,33 @@ class ICoreGamesIntegrationConfiguration extends FormBase {
       '#title' => $this->t('Container ID'),
       '#description' => $this->t("The ID of html element where BetConstruct will be inserted."),
       '#default_value' => $this->get('betconstruct_container_id'),
+      '#translatable' => TRUE,
+      '#required' => false,
+    ];
+  }
+
+  /**
+   * Adds additional form fields for Asian Gaming Provider
+   *
+   * @param $form
+   * @param $key
+   * @param $value
+   */
+  private function getAsiaGamingFields(&$form, $key, $value) {
+    $form[$key . '_custom_lobbyDomain'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Custom Lobby Domain'),
+      '#description' => $this->t("The domain that will replace the lobbyURL parameter."),
+      '#default_value' => $this->get($key . '_custom_lobbyDomain'),
+      '#translatable' => TRUE,
+      '#required' => false,
+    ];
+
+    $form[$key . '_custom_lobbyDomain_enabled'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Use custom lobby Domain'),
+      '#description' => $this->t("If enabled, Custom Lobby Domain field will overwrite the lobbyURL parameter."),
+      '#default_value' => $this->get($key . '_custom_lobbyDomain_enabled'),
       '#translatable' => TRUE,
       '#required' => false,
     ];
