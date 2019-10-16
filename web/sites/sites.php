@@ -12,6 +12,7 @@ $sites['demo.drupal.local'] = 'demo';
 $sites['demo.drupal.env'] = 'demo';
 
 // Entry page Instances
+$sites['entrypage-wbc-local.drupal.local'] = 'entrypage';
 $sites['entrypage.drupal.local'] = 'entrypage';
 $sites['entrypage.drupal.dev'] = 'entrypage';
 $sites['entrypage.drupal.env'] = 'entrypage';
@@ -47,6 +48,7 @@ $sites['virtuals.drupal.dev'] = 'virtuals';
 $sites['virtuals.drupal.env'] = 'virtuals';
 
 // Owsports Site Instances
+$sites['ow-sports-wbc-local.drupal.local'] = 'ow-sports';
 $sites['ow-sports.drupal.local'] = 'ow-sports';
 $sites['ow-sports.drupal.dev'] = 'ow-sports';
 $sites['ow-sports.drupal.env'] = 'ow-sports';
@@ -82,6 +84,7 @@ $sites['777baby-casino.drupal.local'] = '777baby-casino';
 $sites['777baby-casino.drupal.env'] = '777baby-casino';
 
 // Dafasports Site instance
+$sites['dafa-sports-wbc-local.drupal.local'] = 'dafa-sports';
 $sites['dafa-sports.drupal.local'] = 'dafa-sports';
 $sites['dafa-sports.drupal.dev'] = 'dafa-sports';
 $sites['dafa-sports.drupal.env'] = 'dafa-sports';
