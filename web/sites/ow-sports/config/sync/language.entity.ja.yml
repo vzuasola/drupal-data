@@ -10,5 +10,5 @@ third_party_settings:
 id: ja
 label: 日本語
 direction: ltr
-weight: -3
+weight: -5
 locked: false
