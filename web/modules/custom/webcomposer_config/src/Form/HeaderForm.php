@@ -72,7 +72,7 @@ class HeaderForm extends FormBase {
       '#required' => TRUE,
       '#translatable' => TRUE,
     ];
-    
+
     $form['logo_group']['logo_url'] = [
       '#type' => 'textarea',
       '#title' => $this->t('Logo URL'),
