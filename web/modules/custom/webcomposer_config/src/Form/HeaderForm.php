@@ -72,6 +72,26 @@ class HeaderForm extends FormBase {
       '#required' => TRUE,
       '#translatable' => TRUE,
     ];
+    
+    $form['logo_group']['logo_url'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Logo URL'),
+      '#description' => $this->t('The link for logo redirection.'),
+      '#default_value' => $this->get('logo_url'),
+      '#rows' => 1,
+      '#required' => FALSE,
+      '#translatable' => TRUE,
+    ];
+
+    $form['logo_group']['mobile_logo_url'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Mobile Logo URL'),
+      '#description' => $this->t('The link for logo redirection on mobile.'),
+      '#default_value' => $this->get('mobile_logo_url'),
+      '#rows' => 1,
+      '#required' => FALSE,
+      '#translatable' => TRUE,
+    ];
   }
 
   /**
