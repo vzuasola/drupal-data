@@ -41,6 +41,7 @@ class HeaderForm extends FormBase {
     $this->sectionLogo($form);
     $this->sectionJoinNow($form);
     $this->sectionLogin($form);
+    $this->sectionMlogin($form);
     $this->sectionCashier($form);
     $this->sectionMcashier($form);
     $this->sectionBalance($form);
@@ -209,6 +210,28 @@ class HeaderForm extends FormBase {
       '#title' => $this->t('Cashier Link'),
       '#description' => $this->t('Cashier Link For Header'),
       '#default_value' => $this->get('cashier_link'),
+      '#rows' => 1,
+      '#required' => TRUE,
+      '#translatable' => TRUE,
+    ];
+  }
+
+  /**
+   *
+   */
+  private function sectionMlogin(array &$form) {
+    $form['mlogin_group'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Mobile Login'),
+      '#collapsible' => true,
+      '#group' => 'header_settings_tab',
+    ];
+
+    $form['mlogin_group']['login_join_now_text'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Mobile Login/Join Now Text'),
+      '#description' => $this->t('The button text on mobile view.'),
+      '#default_value' => $this->get('login_join_now_text'),
       '#rows' => 1,
       '#required' => TRUE,
       '#translatable' => TRUE,
