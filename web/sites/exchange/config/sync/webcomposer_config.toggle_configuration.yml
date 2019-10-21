@@ -1,1 +1,3 @@
 domain_toggle: 1
+optimize_import: 1
+domains_batch: '4'
