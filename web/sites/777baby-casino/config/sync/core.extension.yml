@@ -40,6 +40,8 @@ module:
   link: 0
   locale: 0
   lucky_baby_config: 0
+  lucky_baby_desktop_block: 0
+  lucky_baby_mobile_block: 0
   luckybaby_dropdown_menu: 0
   menu_link_attributes: 0
   menu_ui: 0
