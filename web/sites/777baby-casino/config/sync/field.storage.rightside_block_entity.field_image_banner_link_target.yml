@@ -12,13 +12,13 @@ type: list_string
 settings:
   allowed_values:
     -
-      value: same_tab
-      label: Same
-    -
-      value: new_tab
+      value: '''_blank'''
       label: 'New Tab'
     -
-      value: new_window
+      value: '''_self'''
+      label: 'Same Tab'
+    -
+      value: '''_blank'', ''location=yes'''
       label: 'New Window'
   allowed_values_function: ''
 module: options
