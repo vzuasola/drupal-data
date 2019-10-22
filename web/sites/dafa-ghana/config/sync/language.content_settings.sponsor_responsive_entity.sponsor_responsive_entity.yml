@@ -7,11 +7,11 @@ dependencies:
     - webcomposer_sponsor_responsive
 third_party_settings:
   content_translation:
-    enabled: false
+    enabled: true
     bundle_settings:
       untranslatable_fields_hide: '0'
 id: sponsor_responsive_entity.sponsor_responsive_entity
 target_entity_type_id: sponsor_responsive_entity
 target_bundle: sponsor_responsive_entity
 default_langcode: site_default
-language_alterable: false
+language_alterable: true
