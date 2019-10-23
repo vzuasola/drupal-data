@@ -68,7 +68,7 @@ content:
     type: string_textfield
     region: content
   field_image_banner_link_target:
-    weight: 6
+    weight: 11
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -94,6 +94,9 @@ content:
     settings:
       include_locked: true
     third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
 hidden:
   name: true
   user_id: true

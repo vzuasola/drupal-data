@@ -1,4 +1,4 @@
-uuid: 1d1c0bf7-269d-4365-ae49-881bd69fc02d
+uuid: 6283d7a9-2f5d-4ac2-a569-13a494367a36
 langcode: ja
 status: true
 dependencies:
@@ -14,10 +14,10 @@ bundle: lucky_baby_mobile_block_entity
 label: 'Image Banner Link Target'
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value:
   -
-    value: same_tab
+    value: _self
 default_value_callback: ''
 settings: {  }
 field_type: list_string

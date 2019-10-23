@@ -1,4 +1,4 @@
-uuid: 7b7e9818-d062-45ed-8081-622fec1f42be
+uuid: deb559e5-cc7e-474e-a08a-d01fe3176141
 langcode: ja
 status: true
 dependencies:
@@ -14,10 +14,10 @@ bundle: lucky_baby_desktop_block_entity
 label: 'Image Banner Link Target'
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value:
   -
-    value: same_tab
+    value: _self
 default_value_callback: ''
 settings: {  }
 field_type: list_string
