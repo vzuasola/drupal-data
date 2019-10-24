@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\zipang_config\Form;
+namespace Drupal\lucky_baby_config\Form;
 
 use Drupal\webcomposer_config_schema\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
@@ -10,26 +10,26 @@ use Drupal\Core\Datetime\DrupalDateTime;
  * My module form plugin
  *
  * @WebcomposerConfigPlugin(
- *   id = "zipang_jackpot",
+ *   id = "lucky_baby_jackpot",
  *   route = {
  *     "title" = "Jackpot Configuration",
- *     "path" = "/admin/config/zipang/jackpot_configuration",
+ *     "path" = "/admin/config/lucky_baby/jackpot_configuration",
  *   },
  *   menu = {
  *     "title" = "Jackpot Configuration",
  *     "description" = "Provides Jackpot configuration",
- *     "parent" = "zipang_config.zipang_config",
+ *     "parent" = "lucky_baby_config.lucky_baby_config",
  *     "weight" = 30
  *   },
  * )
  */
-class ZipangJackpotForm extends FormBase {
+class LuckyBabyJackpotForm extends FormBase {
 
   /**
    * {@inheritdoc}
    */
   protected function getEditableConfigNames() {
-    return ['zipang_config.jackpot_configuration'];
+    return ['lucky_baby_config.jackpot_configuration'];
   }
 
   public function form(array $form, FormStateInterface $form_state) {
