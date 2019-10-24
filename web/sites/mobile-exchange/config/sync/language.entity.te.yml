@@ -1,5 +1,5 @@
-uuid: 91438369-b1e5-4d54-8c23-43a65fcb8aa4
-langcode: id
+uuid: 47dedd55-9e0c-4aaf-97c6-c9884b09e753
+langcode: te
 status: true
 dependencies:
   module:
@@ -7,9 +7,9 @@ dependencies:
 third_party_settings:
   webcomposer_language_hierarchy:
     webcomposer_fallback_langcode: en
-    webcomposer_language_custom_label: 'Bahasa Indonesia'
-id: id
-label: 'Bahasa Indonesia'
+    webcomposer_language_hidden: 0
+id: te
+label: 'Telugu (India)'
 direction: ltr
-weight: -3
+weight: -8
 locked: false
