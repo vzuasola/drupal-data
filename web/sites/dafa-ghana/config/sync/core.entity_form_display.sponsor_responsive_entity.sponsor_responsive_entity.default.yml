@@ -24,6 +24,13 @@ content:
       default_paragraph_type: ''
     third_party_settings: {  }
     region: content
+  langcode:
+    type: language_select
+    weight: 3
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
   name:
     type: string_textfield
     weight: 0
@@ -38,5 +45,4 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
-  langcode: true
   user_id: true
