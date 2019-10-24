@@ -1,5 +1,5 @@
-uuid: 633d1733-8d5a-4828-9f17-b46817741dc4
-langcode: ko
+uuid: 0e5774c7-92e4-4139-8a28-0af46c78a0d2
+langcode: te
 status: true
 dependencies:
   module:
@@ -7,9 +7,9 @@ dependencies:
 third_party_settings:
   webcomposer_language_hierarchy:
     webcomposer_fallback_langcode: en
-    webcomposer_language_custom_label: 한국어
-id: ko
-label: Korean
+    webcomposer_language_hidden: 0
+id: te
+label: 'Telugu (India)'
 direction: ltr
-weight: -6
+weight: -2
 locked: false
