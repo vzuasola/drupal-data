@@ -11,5 +11,5 @@ third_party_settings:
 id: pl
 label: Polish
 direction: ltr
-weight: 1
+weight: 3
 locked: false

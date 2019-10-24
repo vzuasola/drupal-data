@@ -11,5 +11,5 @@ third_party_settings:
 id: pt-br
 label: 'Portuguese, Brazil'
 direction: ltr
-weight: 3
+weight: 5
 locked: false
