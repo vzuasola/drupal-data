@@ -78,7 +78,7 @@ content:
     type: string
     region: content
   field_image_banner_link_target:
-    weight: 7
+    weight: 10
     label: above
     settings: {  }
     third_party_settings: {  }

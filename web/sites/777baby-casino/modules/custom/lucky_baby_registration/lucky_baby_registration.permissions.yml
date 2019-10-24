@@ -1,0 +1,7 @@
+administer registration form entities:
+  title: 'Administer Registration form config entities'
+  description: 'Allow to access the administration form to configure Registration form.'
+  restrict access: true
+
+edit registration form config entities:
+  title: 'Edit Registration form config'
