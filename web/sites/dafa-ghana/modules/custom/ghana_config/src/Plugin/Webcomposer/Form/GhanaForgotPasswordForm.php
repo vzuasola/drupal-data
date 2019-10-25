@@ -93,6 +93,42 @@ class GhanaForgotPasswordForm extends WebcomposerFormBase implements Webcomposer
           '#type' => 'textarea',
           '#description' => 'field annotation that will be displayed on focus',
         ],
+        'enabled' => [
+          '#title' => 'Enabled',
+          '#default_value' => 1,
+          '#type' => 'checkbox',
+          '#description' => 'Field to check if the element is enabled.',
+        ],
+      ],
+    ];
+
+    $fields['pin'] = [
+      'name' => 'PIN',
+      'type' => 'textfield',
+      'settings' => [
+        'label' => [
+          '#title' => 'PIN Label',
+          '#type' => 'textfield',
+          '#description' => 'The Label for PIN field',
+          '#default_value' => 'PIN',
+        ],
+        'placeholder' => [
+          '#title' => 'PIN placeholder label',
+          '#type' => 'textfield',
+          '#description' => 'label for PIN field placeholder',
+          '#default_value' => 'PIN',
+        ],
+        'annotation' => [
+          '#title' => 'Annotation text',
+          '#type' => 'textarea',
+          '#description' => 'field annotation that will be displayed on focus',
+        ],
+        'enabled' => [
+          '#title' => 'Enabled',
+          '#default_value' => 1,
+          '#type' => 'checkbox',
+          '#description' => 'Field to check if the element is enabled.',
+        ],
       ],
     ];
 
