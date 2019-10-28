@@ -5,8 +5,10 @@ dependencies:
   config:
     - field.field.webcomposer_meta_entity.webcomposer_meta_entity.field_meta
     - field.field.webcomposer_meta_entity.webcomposer_meta_entity.field_per_page_visibility
+    - field.field.webcomposer_meta_entity.webcomposer_meta_entity.field_tag
   module:
     - entity_reference_revisions
+    - options
     - user
     - webcomposer_seo
 _core:
@@ -18,7 +20,7 @@ mode: default
 content:
   field_meta:
     type: entity_reference_revisions_entity_view
-    weight: 1
+    weight: 3
     label: above
     settings:
       view_mode: default
@@ -26,16 +28,23 @@ content:
     third_party_settings: {  }
     region: content
   field_per_page_visibility:
-    weight: 2
+    weight: 4
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
+  field_tag:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
   name:
     label: above
     type: string
-    weight: -4
+    weight: 0
     region: content
     settings:
       link_to_entity: false
@@ -43,7 +52,7 @@ content:
   user_id:
     label: hidden
     type: author
-    weight: 0
+    weight: 1
     region: content
     settings: {  }
     third_party_settings: {  }

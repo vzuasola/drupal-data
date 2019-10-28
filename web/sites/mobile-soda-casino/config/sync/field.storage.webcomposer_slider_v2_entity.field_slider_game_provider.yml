@@ -14,6 +14,9 @@ settings:
     -
       value: soda_casino
       label: SODA
+    -
+      value: pas
+      label: PAS
   allowed_values_function: ''
 module: options
 locked: false

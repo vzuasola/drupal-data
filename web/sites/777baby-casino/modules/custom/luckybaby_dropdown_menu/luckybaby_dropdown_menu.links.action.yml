@@ -1,0 +1,5 @@
+entity.dropdown_menu_entity.add_form:
+  route_name: entity.dropdown_menu_entity.add_form
+  title: 'Add Dropdown menu entity'
+  appears_on:
+    - entity.dropdown_menu_entity.collection
