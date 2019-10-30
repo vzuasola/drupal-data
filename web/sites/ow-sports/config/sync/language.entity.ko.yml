@@ -10,5 +10,5 @@ third_party_settings:
 id: ko
 label: 한국어
 direction: ltr
-weight: -2
+weight: -4
 locked: false

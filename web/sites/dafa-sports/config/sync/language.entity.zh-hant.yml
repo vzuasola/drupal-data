@@ -10,5 +10,5 @@ third_party_settings:
 id: zh-hant
 label: 繁體中文
 direction: ltr
-weight: -7
+weight: -9
 locked: false
