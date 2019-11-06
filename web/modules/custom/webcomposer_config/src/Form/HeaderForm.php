@@ -478,7 +478,8 @@ class HeaderForm extends FormBase {
     $form['balance_group']['currency_label_mapping'] = [
       '#type' => 'textarea',
       '#title' => $this->t('Currency Label Mapping on Header Total Balance'),
-      '#description' => $this->t("Define a mapping of cashier currency Label to site specific currency label. This will appear on header total balance
+      '#description' => $this->t("Define a mapping of cashier currency Label to site specific currency label.
+        This will appear on header total balance
         <br><br>
         Pattern:
         <br>
