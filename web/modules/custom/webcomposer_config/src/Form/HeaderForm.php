@@ -474,6 +474,24 @@ class HeaderForm extends FormBase {
       '#description' => $this->t('Define product IDs one per line'),
       '#default_value' => $this->get('excluded_balance_mapping'),
     ];
+
+    $form['balance_group']['currency_label_mapping'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Currency Label Mapping on Header Total Balance'),
+      '#description' => $this->t("Define a mapping of cashier currency Label to site specific currency label. This will appear on header total balance
+        <br><br>
+        Pattern:
+        <br>
+        {Cashier Currency Label}|{Site Specific Currency Label Alter}
+        <br><br>
+        Example:
+        <br>
+        KSH|KSh
+
+      "),
+      '#default_value' => $this->get('currency_label_mapping'),
+      '#translatable' => TRUE,
+    ];
   }
 
   /**
