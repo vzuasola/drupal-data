@@ -8,6 +8,7 @@ use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
 /**
  * KenyaRegistrationForm.
  *
+ *
  * @WebcomposerForm(
  *   id = "registration_form_ke",
  *   name = "Kenya Registration Form",
