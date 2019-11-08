@@ -1,5 +1,5 @@
-uuid: 22ab9bd3-6fdd-4d75-bab2-8ea6d077b8bf
-langcode: el
+uuid: fa9153a5-a256-4d04-8688-374d61d4b8f9
+langcode: in
 status: true
 dependencies:
   module:
@@ -7,9 +7,9 @@ dependencies:
 third_party_settings:
   webcomposer_language_hierarchy:
     webcomposer_fallback_langcode: en
-    webcomposer_language_custom_label: Ελληνικά
-id: el
-label: Greek
+    webcomposer_language_hidden: 0
+id: in
+label: 'English (India)'
 direction: ltr
-weight: 2
+weight: -4
 locked: false

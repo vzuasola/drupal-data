@@ -12,7 +12,9 @@ url:
     id: id
     ja: jp
     ko: kr
-    hi: in
+    in: in
+    hi: hi
+    te: te
     el: gr
     pl: pl
     es: es
@@ -27,7 +29,9 @@ url:
     id: ''
     ja: ''
     ko: ''
+    in: ''
     hi: ''
+    te: ''
     el: ''
     pl: ''
     es: ''

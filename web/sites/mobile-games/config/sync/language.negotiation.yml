@@ -9,7 +9,9 @@ url:
     vi: vn
     id: id
     ko: kr
-    hi: in
+    in: in
+    hi: hi
+    te: te
     es: es
     pt-br: pt
   domains:
@@ -19,7 +21,9 @@ url:
     vi: ''
     id: ''
     ko: ''
+    in: ''
     hi: ''
+    te: ''
     es: ''
     pt-br: ''
 selected_langcode: site_default
