@@ -16,7 +16,9 @@ url:
     el: gr
     pl: pl
     es: es
-    pt-br: pt
+    pt-br: 
+    in: hi
+    te: te
   domains:
     en: ''
     eu: ''
@@ -32,6 +34,8 @@ url:
     pl: ''
     es: ''
     pt-br: ''
+    hi: ''
+    te: ''
 selected_langcode: site_default
 _core:
   default_config_hash: uEePITI9tV6WqzmsTb7MfPCi5yPWXSxAN1xeLcYFQbM
