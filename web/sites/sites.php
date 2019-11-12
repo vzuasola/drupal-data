@@ -12,7 +12,6 @@ $sites['demo.drupal.local'] = 'demo';
 $sites['demo.drupal.env'] = 'demo';
 
 // Entry page Instances
-$sites['entrypage-wbc-local.drupal.local'] = 'entrypage';
 $sites['entrypage.drupal.local'] = 'entrypage';
 $sites['entrypage.drupal.dev'] = 'entrypage';
 $sites['entrypage.drupal.env'] = 'entrypage';
@@ -48,7 +47,6 @@ $sites['virtuals.drupal.dev'] = 'virtuals';
 $sites['virtuals.drupal.env'] = 'virtuals';
 
 // Owsports Site Instances
-$sites['ow-sports-wbc-local.drupal.local'] = 'ow-sports';
 $sites['ow-sports.drupal.local'] = 'ow-sports';
 $sites['ow-sports.drupal.dev'] = 'ow-sports';
 $sites['ow-sports.drupal.env'] = 'ow-sports';
