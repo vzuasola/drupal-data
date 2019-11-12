@@ -54,6 +54,13 @@ class MobileEntrypageForm extends FormBase {
       '#translatable' => true,
     ];
 
+    $form['entrypage_configuration']['download_app_text'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Download App Here'),
+      '#default_value' => $this->get('download_app_text'),
+      '#translatable' => true,
+    ];
+
     return $form;
   }
 }
