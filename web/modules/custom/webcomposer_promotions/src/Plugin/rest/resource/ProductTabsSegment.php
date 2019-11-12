@@ -187,11 +187,21 @@ class ProductTabsSegment extends ResourceBase {
             }
           }
 
+          $segmentCount = 0;
+
           // get a separate count for the All featured tab
           if ($productId == 'all') {
-            $count = $this->getAllFeaturedPromotionCount($langCode, $state, $segments);
+            $genericCount = $this->getAllFeaturedPromotionCount($langCode, $state, []);
+
+            if ($segments) {
+              $segmentCount = $this->getAllFeaturedPromotionCount($langCode, $state, $segments);
+            }
           } else {
-            $count = $this->getPromotionCount($key, $langCode, $state, $segments);
+            $genericCount = $this->getPromotionCount($key, $langCode, $state, []);
+
+            if ($segments) {
+              $segmentCount = $this->getPromotionCount($key, $langCode, $state, $segments);
+            }
           }
 
           $productAttribute = ['class'=> $class , 'target' => $target, 'tag' => $tag];
@@ -200,7 +210,9 @@ class ProductTabsSegment extends ResourceBase {
             'product_name' => $translation->getName(),
             'product_id' => $productId,
             'id' => $key,
-            'count' => $count,
+            'generic' => $genericCount,
+            'segments' => $segmentCount,
+            'count' => $genericCount + $segmentCount,
             'product_attribute' => $productAttribute,
             'kebab_product' => $KebabProduct,
             'filters' => $filters,
@@ -226,11 +238,10 @@ class ProductTabsSegment extends ResourceBase {
     $query->condition('field_product.target_id', $productId, NULL, $langCode);
     $query->condition('field_hide_promotion.value', 0, NULL, $langCode);
     
-    if (isset($segments)) {
+    if (!empty($segments)) {
       $segmentsGroup = $query
       ->orConditionGroup()
-      ->condition('field_segment_name.value', $segments, 'IN', $langCode)
-      ->condition('field_segment_name.value', NULL, 'IS NULL', $langCode);
+      ->condition('field_segment_name.value', $segments, 'IN', $langCode);
       $query->condition($segmentsGroup);
     } else {
       $query->condition('field_segment_name.value', NULL, 'IS NULL', $langCode);
@@ -265,8 +276,7 @@ class ProductTabsSegment extends ResourceBase {
     if (!empty($segments)) {
       $segmentsGroup = $query
       ->orConditionGroup()
-      ->condition('field_segment_name.value', $segments, 'IN', $langCode)
-      ->condition('field_segment_name.value', NULL, 'IS NULL', $langCode);
+      ->condition('field_segment_name.value', $segments, 'IN', $langCode);
       $query->condition($segmentsGroup);
     } else {
       $query->condition('field_segment_name.value', NULL, 'IS NULL', $langCode);
