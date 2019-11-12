@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * @file
+ * Create the menu, block and paragraph on module installation.
+ */
+
+/**
+ * Implements hook_install().
+ */
+// function registration_config_install() {
+
+// }
