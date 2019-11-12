@@ -1,0 +1,22 @@
+add news and updates entity entities:
+  title: 'Create new News and updates entity entities'
+
+administer news and updates entity entities:
+  title: 'Administer News and updates entity entities'
+  description: 'Allow to access the administration form to configure News and updates entity entities.'
+  restrict access: true
+
+delete news and updates entity entities:
+  title: 'Delete News and updates entity entities'
+
+edit news and updates entity entities:
+  title: 'Edit News and updates entity entities'
+
+access news and updates entity overview:
+  title: 'Access the News and updates entity overview page'
+
+view published news and updates entity entities:
+  title: 'View published News and updates entity entities'
+
+view unpublished news and updates entity entities:
+  title: 'View unpublished News and updates entity entities'
