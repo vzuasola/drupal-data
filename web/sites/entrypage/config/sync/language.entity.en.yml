@@ -12,5 +12,5 @@ _core:
 id: en
 label: 'English (Asia)'
 direction: ltr
-weight: -10
+weight: -12
 locked: false

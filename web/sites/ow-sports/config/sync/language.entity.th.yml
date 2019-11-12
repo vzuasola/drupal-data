@@ -10,5 +10,5 @@ third_party_settings:
 id: th
 label: ภาษาไทย
 direction: ltr
-weight: -6
+weight: -8
 locked: false

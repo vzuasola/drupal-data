@@ -11,5 +11,5 @@ third_party_settings:
 id: el
 label: Greek
 direction: ltr
-weight: 0
+weight: 2
 locked: false

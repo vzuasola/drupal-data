@@ -10,5 +10,5 @@ third_party_settings:
 id: vi
 label: 'Tiếng Việt'
 direction: ltr
-weight: -5
+weight: -7
 locked: false

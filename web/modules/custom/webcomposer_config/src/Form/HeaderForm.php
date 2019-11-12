@@ -41,6 +41,7 @@ class HeaderForm extends FormBase {
     $this->sectionLogo($form);
     $this->sectionJoinNow($form);
     $this->sectionLogin($form);
+    $this->sectionMlogin($form);
     $this->sectionCashier($form);
     $this->sectionMcashier($form);
     $this->sectionBalance($form);
@@ -69,6 +70,26 @@ class HeaderForm extends FormBase {
       '#description' => $this->t('The title attribute for the main logo.'),
       '#default_value' => $this->get('logo_title'),
       '#required' => TRUE,
+      '#translatable' => TRUE,
+    ];
+
+    $form['logo_group']['logo_url'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Logo URL'),
+      '#description' => $this->t('The link for logo redirection.'),
+      '#default_value' => $this->get('logo_url'),
+      '#rows' => 1,
+      '#required' => FALSE,
+      '#translatable' => TRUE,
+    ];
+
+    $form['logo_group']['mobile_logo_url'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Mobile Logo URL'),
+      '#description' => $this->t('The link for logo redirection on mobile.'),
+      '#default_value' => $this->get('mobile_logo_url'),
+      '#rows' => 1,
+      '#required' => FALSE,
       '#translatable' => TRUE,
     ];
   }
@@ -209,6 +230,28 @@ class HeaderForm extends FormBase {
       '#title' => $this->t('Cashier Link'),
       '#description' => $this->t('Cashier Link For Header'),
       '#default_value' => $this->get('cashier_link'),
+      '#rows' => 1,
+      '#required' => TRUE,
+      '#translatable' => TRUE,
+    ];
+  }
+
+  /**
+   *
+   */
+  private function sectionMlogin(array &$form) {
+    $form['mlogin_group'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Mobile Login'),
+      '#collapsible' => true,
+      '#group' => 'header_settings_tab',
+    ];
+
+    $form['mlogin_group']['login_join_now_text'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Mobile Login/Join Now Text'),
+      '#description' => $this->t('The button text on mobile view.'),
+      '#default_value' => $this->get('login_join_now_text'),
       '#rows' => 1,
       '#required' => TRUE,
       '#translatable' => TRUE,
@@ -430,6 +473,25 @@ class HeaderForm extends FormBase {
       '#title' => $this->t('Excluded Balance Mapping'),
       '#description' => $this->t('Define product IDs one per line'),
       '#default_value' => $this->get('excluded_balance_mapping'),
+    ];
+
+    $form['balance_group']['currency_label_mapping'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Currency Label Mapping on Header Total Balance'),
+      '#description' => $this->t("Define a mapping of cashier currency Label to site specific currency label.
+        This will appear on header total balance
+        <br><br>
+        Pattern:
+        <br>
+        {Cashier Currency Label}|{Site Specific Currency Label Alter}
+        <br><br>
+        Example:
+        <br>
+        KSH|KSh
+
+      "),
+      '#default_value' => $this->get('currency_label_mapping'),
+      '#translatable' => TRUE,
     ];
   }
 

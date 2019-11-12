@@ -16,3 +16,7 @@ attributes:
   disabled:
     label: 'Disable per currency'
     description: 'Enter currency where you want to disable this item (applicable for cashier menu only)'
+  svg:
+    label: 'SVG Icon'
+    type: textarea
+    description: 'Svg icon for main menu'
