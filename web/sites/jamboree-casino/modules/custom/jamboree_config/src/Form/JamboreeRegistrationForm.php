@@ -76,6 +76,12 @@ class JamboreeRegistrationForm extends FormBase {
       '#type' => 'fieldset',
       '#title' => t('Registration Error Messages'),
     ];
+    $form['reg_form']['errors']['error_username'] = [
+      '#type' => 'textfield',
+      '#title' => t('Registration Error Message for Username Field'),
+      '#default_value' => $this->get('error_username'),
+      '#translatable' => TRUE,
+    ];
     $form['reg_form']['errors']['error_firstname'] = [
       '#type' => 'textfield',
       '#title' => t('Registration Error Message for Firstname Field'),
