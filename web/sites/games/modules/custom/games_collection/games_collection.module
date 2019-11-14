@@ -25,7 +25,11 @@ function games_collection_help($route_name, RouteMatchInterface $route_match) {
 }
 
 function games_collection_form_alter(&$form, $form_state, $form_id) {
-  checkCollectionReferences($form);
+  switch ($form_id) {
+    case 'node_games_2_0_delete_form':
+        checkCollectionReferences($form);
+        break;
+  }
 }
 
 function checkCollectionReferences(&$form) {

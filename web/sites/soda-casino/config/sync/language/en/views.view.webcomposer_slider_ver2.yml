@@ -30,8 +30,6 @@ display:
           expose:
             label: Title
       fields:
-        name:
-          separator: ', '
         field_title:
           label: Title
           separator: ', '
