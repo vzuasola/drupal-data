@@ -48,6 +48,14 @@ class ArcadeForm extends FormBase {
       '#translatable' => false,
     ];
 
+    $form['general']['arcade_lobby_filter'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable Filter for Arcade Lobby'),
+      '#default_value' => $this->get('arcade_lobby_filter'),
+      '#description' => 'Enable Filter for Arcade Lobby.',
+      '#translatable' => false,
+    ];
+
     $form['general']['more_provider_drawer'] = [
       '#type' => 'textfield',
       '#title' => $this->t('More'),
