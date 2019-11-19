@@ -13,6 +13,8 @@ permissions:
   - 'access content'
   - 'access language en'
   - 'access language hi'
+  - 'access language in'
+  - 'access language te'
   - 'access site-wide contact form'
   - 'administer rest resources'
   - 'restful get affiliate_rest_resource'
