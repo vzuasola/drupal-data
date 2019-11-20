@@ -54,6 +54,27 @@ class MobileEntrypageForm extends FormBase {
       '#translatable' => true,
     ];
 
+    $form['entrypage_configuration']['download_app_text'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Download App Here'),
+      '#default_value' => $this->get('download_app_text'),
+      '#translatable' => true,
+    ];
+
+    $form['entrypage_configuration']['contact_us_home_text'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Contact Us Here'),
+      '#default_value' => $this->get('contact_us_home_text'),
+      '#translatable' => true,
+    ];
+
+    $form['entrypage_configuration']['parnerts_and_sponsor_title_text'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Partners and Sponsors Here'),
+      '#default_value' => $this->get('parnerts_and_sponsor_title_text'),
+      '#translatable' => true,
+    ];
+
     return $form;
   }
 }

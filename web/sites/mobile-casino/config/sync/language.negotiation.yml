@@ -4,24 +4,24 @@ url:
   source: path_prefix
   prefixes:
     en: en
-    eu: eu
     zh-hans: sc
-    zh-hant: ch
     th: th
     ko: kr
-    hi: in
+    in: in
+    hi: hi
+    te: te
     vi: vn
     id: id
     es: es
     pt-br: pt
   domains:
     en: ''
-    eu: ''
     zh-hans: ''
-    zh-hant: ''
     th: ''
     ko: ''
+    in: ''
     hi: ''
+    te: ''
     vi: ''
     id: ''
     es: ''
