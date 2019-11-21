@@ -105,7 +105,7 @@ class DomainExport {
    * @param string $output
    *   - The URL to output the file.
    */
-  public function domainExportCreateExcel($data, $excel_version = 'Excel2007', $headers = TRUE, $output = 'php://output') {
+  public function domainExportCreateExcel($data, $excel_version = 'Xlsx', $headers = TRUE, $output = 'php://output') {
     $getLanguages = $this->languages->getLanguages($flags = 1);
     $language = [];
     // Get all languages from which are enabled.

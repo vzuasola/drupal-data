@@ -30,7 +30,7 @@ class ExcelParser {
    * Constructor function Passing the excel object to the class instance.
    */
   public function __construct() {
-    $this->excel = new \PHPExcel();
+    $this->excel = new \PhpOffice\PhpSpreadsheet\Spreadsheet();
     $this->sheetNumber = 0;
   }
 
@@ -46,7 +46,7 @@ class ExcelParser {
   public function readExcel($path) {
     try {
       // Attempt to read excel file.
-      $excelReader = \PHPExcel_IOFactory::createReaderForFile($path);
+      $excelReader = \PhpOffice\PhpSpreadsheet\IOFactory::createReaderForFile($path);
       $excelReader->setLoadAllSheets();
       $excel = $excelReader->load($path);
     }
@@ -103,11 +103,11 @@ class ExcelParser {
    * @param string $output
    *   The URL to output the file.
    */
-  public function save($filename, $excel_version = 'Excel2007', $headers = TRUE, $output = 'php://output') {
+  public function save($filename, $excel_version = 'Xlsx', $headers = TRUE, $output = 'php://output') {
     // Removes the blank worksheet set by PHP excel.
     $this->excel->removeSheetByIndex($this->sheetNumber);
     // Create writer for excel object.
-    $excelWriter = \PHPExcel_IOFactory::createWriter($this->excel, $excel_version);
+    $excelWriter = \PhpOffice\PhpSpreadsheet\IOFactory::createWriter($this->excel, $excel_version);
 
     // Set the headers so that browser will invoke an upload.
     if ($headers) {
@@ -121,7 +121,7 @@ class ExcelParser {
   /**
    *
    */
-  public function generateContent($excel_version = 'Excel2007') {
+  public function generateContent($excel_version = 'Xlsx') {
     ob_start();
     $this->save(NULL, $excel_version, FALSE);
     return ob_get_clean();
@@ -144,8 +144,8 @@ class ExcelParser {
   private function styleExcel() {
     $column = $this->excel->getActiveSheet()->getHighestColumn();
 
-    $this->excel->getDefaultStyle()->getAlignment()->setHorizontal(\PHPExcel_Style_Alignment::HORIZONTAL_LEFT);
-    $this->excel->getDefaultStyle()->getAlignment()->setVertical(\PHPExcel_Style_Alignment::VERTICAL_TOP);
+    $this->excel->getDefaultStyle()->getAlignment()->setHorizontal(\PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_LEFT);
+    $this->excel->getDefaultStyle()->getAlignment()->setVertical(\PhpOffice\PhpSpreadsheet\Style\Alignment::VERTICAL_TOP);
     $this->excel->getDefaultStyle()->getAlignment()->setWrapText(TRUE);
     $this->excel->getActiveSheet()->getDefaultRowDimension()->setRowHeight(-1);
     $this->excel->getActiveSheet()->getDefaultColumnDimension()->setWidth(20);
