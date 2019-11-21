@@ -55,6 +55,11 @@ field_validations:
   valid_date:
     enable: 0
     error_message: 'Date is invalid'
+  must_not_match:
+    enable: 1
+    error_message: 'This must not match deafult.'
+    parameters:
+      not_match: FirstName
   email_availability:
     enable: 0
     error_message: 'Email not available'
