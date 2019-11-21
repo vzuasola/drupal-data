@@ -143,6 +143,18 @@ class ValidationManager {
       '(must have a Birthdate format on field settings)',
       'error' => 'Date is invalid',
     ],
+    'must_not_match' => [
+      'title' => 'Must Not Match',
+      'description' => 'Validation to check if the inputted value matches the string',
+      'error' => "This must not match deafult.",
+      'parameters' => [
+        'not_match' => [
+          '#title' => 'Not Allowed Value',
+          '#description' => 'The exact value not allowed to input in this field',
+          '#type' => 'textarea',
+        ],
+      ],
+    ],
   ];
 
   /**
