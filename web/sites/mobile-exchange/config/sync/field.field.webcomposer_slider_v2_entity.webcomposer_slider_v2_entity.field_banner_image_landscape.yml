@@ -5,8 +5,15 @@ dependencies:
   config:
     - field.storage.webcomposer_slider_v2_entity.field_banner_image_landscape
   module:
+    - content_translation
     - image
     - webcomposer_slider_v2
+third_party_settings:
+  content_translation:
+    translation_sync:
+      file: file
+      alt: '0'
+      title: '0'
 id: webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_banner_image_landscape
 field_name: field_banner_image_landscape
 entity_type: webcomposer_slider_v2_entity
@@ -18,21 +25,21 @@ translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
   file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: 1661x376
+  min_resolution: 1661x376
   alt_field: false
   alt_field_required: false
   title_field: false
   title_field_required: false
-  max_resolution: ''
-  min_resolution: ''
   default_image:
-    uuid: null
+    uuid: ''
     alt: ''
     title: ''
     width: null
     height: null
-  file_directory: '[date:custom:Y]-[date:custom:m]'
-  max_filesize: ''
   handler: 'default:file'
   handler_settings: {  }
 field_type: image
