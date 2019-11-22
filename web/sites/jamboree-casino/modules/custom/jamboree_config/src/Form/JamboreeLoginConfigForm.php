@@ -151,55 +151,6 @@ class JamboreeLoginConfigForm extends FormBase {
       '#translatable' => TRUE,
     ];
 
-    $form['login_pt_settings'] = [
-      '#type' => 'details',
-      '#title' => $this->t('Playtech Settings'),
-    ];
-
-    $default_pt_casino_name = $this->get('login_pt_casino_name');
-    $form['login_pt_settings']['login_pt_casino_name'] = [
-      '#type' => 'textfield',
-      '#title' => t('Casino Name'),
-      '#default_value' => $default_pt_casino_name,
-      '#translatable' => FALSE,
-    ];
-
-    $default_pt_secret_key = $this->get('login_pt_secret_key');
-    $form['login_pt_settings']['login_pt_secret_key'] = [
-      '#type' => 'textfield',
-      '#title' => t('Secret Key'),
-      '#default_value' => $default_pt_secret_key,
-      '#description' => $this->t('Secret key to be used for integrating with playtech web apis.'),
-      '#translatable' => FALSE,
-    ];
-
-    $default_pt_getbalance_url = $this->get('login_pt_getbalance_url');
-    $form['login_pt_settings']['login_pt_getbalance_url'] = [
-      '#type' => 'textfield',
-      '#title' => t('Playtech Getbalance API URL'),
-      '#default_value' => $default_pt_getbalance_url,
-      '#description' => $this->t('URL to be used to get player balance.'),
-      '#translatable' => FALSE,
-    ];
-
-    $default_pt_cashier_url = $this->get('login_pt_cashier_url');
-    $form['login_pt_settings']['login_pt_cashier_url'] = [
-      '#type' => 'textfield',
-      '#title' => t('Playtech Cashier URL'),
-      '#default_value' => $default_pt_cashier_url,
-      '#description' => $this->t('Playtech Cashier URL.'),
-      '#translatable' => FALSE,
-    ];
-
-    $default_pt_error_messages = $this->get('login_pt_error_messages');
-    $form['login_pt_settings']['login_pt_error_messages'] = [
-      '#type' => 'textarea',
-      '#title' => t('Playtech error messages'),
-      '#default_value' => $default_pt_error_messages,
-      '#description' => $this->t('Mapping for error messages from playtech. Format errorCode|errorMessage'),
-      '#translatable' => TRUE,
-    ];
-
     $form['login_error_messages'] = [
       '#type' => 'details',
       '#title' => $this->t('Login Error Messages'),
@@ -220,6 +171,15 @@ class JamboreeLoginConfigForm extends FormBase {
       '#title' => t('Password required'),
       '#default_value' => $default_password_required,
       '#description' => $this->t('Password required error message.'),
+      '#translatable' => TRUE,
+    ];
+
+    $default_login_error_messages_config = $this->get('login_error_messages_config');
+    $form['login_error_messages']['login_error_messages_config'] = [
+      '#type' => 'textarea',
+      '#title' => t('Login error messages config'),
+      '#default_value' => $default_login_error_messages_config,
+      '#description' => $this->t('Mapping for error messages. Format errorCode|errorMessage'),
       '#translatable' => TRUE,
     ];
   }
