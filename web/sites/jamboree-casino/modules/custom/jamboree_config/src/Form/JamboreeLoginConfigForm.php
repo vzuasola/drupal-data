@@ -177,7 +177,7 @@ class JamboreeLoginConfigForm extends FormBase {
     $default_login_error_messages_config = $this->get('login_error_messages_config');
     $form['login_error_messages']['login_error_messages_config'] = [
       '#type' => 'textarea',
-      '#title' => t('Login error messages config'),
+      '#title' => t('Login Error Messages Config'),
       '#default_value' => $default_login_error_messages_config,
       '#description' => $this->t('Mapping for error messages. Format errorCode|errorMessage'),
       '#translatable' => TRUE,
