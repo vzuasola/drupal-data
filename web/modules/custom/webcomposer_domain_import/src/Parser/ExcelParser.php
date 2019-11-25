@@ -34,6 +34,16 @@ class ExcelParser {
    * Constructor function Passing the excel object to the class instance.
    */
   public function __construct() {
+    $settings = Settings::get('redis.connection');
+    // Memory saving
+    if (!empty($settings['host'])) {
+      $options = $settings['options'];
+      $options['parameters']['database'] = 5;
+      $client = new \Predis\Client($settings['host'], $options );
+      $pool = new \Cache\Adapter\Predis\PredisCachePool($client);
+      $simpleCache = new \Cache\Bridge\SimpleCache\SimpleCacheBridge($pool);
+      \PhpOffice\PhpSpreadsheet\Settings::setCache($simpleCache);
+    }
     // Initialize PHP excel object.
     $this->excel = new \PhpOffice\PhpSpreadsheet\Spreadsheet();
     // Set filename.
@@ -55,18 +65,6 @@ class ExcelParser {
       $excelReader = \PhpOffice\PhpSpreadsheet\IOFactory::createReaderForFile($path);
       $excelReader->setLoadAllSheets();
       $excel = $excelReader->load($path);
-
-      $settings = Settings::get('redis.connection');
-      
-      // Memory saving
-      if (!empty($settings['host'])) {
-        $client = new \Predis\Client($settings['host'] , $settings['options'] );
-        $pool = new \Cache\Adapter\Predis\PredisCachePool($client);
-        $simpleCache = new \Cache\Bridge\SimpleCache\SimpleCacheBridge($pool);
-
-        \PhpOffice\PhpSpreadsheet\Settings::setCache($simpleCache);
-      }
-      
     }
     catch (Exception $e) {
       // An error has occured parsing the excel file.
