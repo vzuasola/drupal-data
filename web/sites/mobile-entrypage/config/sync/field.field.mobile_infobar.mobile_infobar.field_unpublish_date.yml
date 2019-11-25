@@ -1,0 +1,21 @@
+uuid: 17c338bf-a420-4d8d-9d2e-63f96b7061ad
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.mobile_infobar.field_unpublish_date
+  module:
+    - datetime
+    - mobile_infobar
+id: mobile_infobar.mobile_infobar.field_unpublish_date
+field_name: field_unpublish_date
+entity_type: mobile_infobar
+bundle: mobile_infobar
+label: 'Unpublish Date'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

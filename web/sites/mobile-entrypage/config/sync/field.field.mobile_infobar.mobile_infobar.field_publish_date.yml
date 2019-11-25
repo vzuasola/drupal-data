@@ -1,0 +1,21 @@
+uuid: 2a199f71-badd-4223-b7b3-87bcec2a3f53
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.mobile_infobar.field_publish_date
+  module:
+    - datetime
+    - mobile_infobar
+id: mobile_infobar.mobile_infobar.field_publish_date
+field_name: field_publish_date
+entity_type: mobile_infobar
+bundle: mobile_infobar
+label: 'Publish Date'
+description: "<p>If this is set the info bar will be available from this date up until the date set on <strong>Unpublish Date</strong>.\r\n<br>Otherwise, the  info bar will be available upon saving.</p>"
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime
