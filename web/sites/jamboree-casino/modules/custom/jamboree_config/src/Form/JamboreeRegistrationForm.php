@@ -367,6 +367,7 @@ class JamboreeRegistrationForm extends FormBase {
       '#default_value' => $this->get('Registration API URL'),
       '#description' => $this->t('Endpoint for registration API'),
       '#translatable' => TRUE,
+      '#required' => TRUE,
     ];
 
     $form['icore_integration']['enable_reg_api_auth'] = [
