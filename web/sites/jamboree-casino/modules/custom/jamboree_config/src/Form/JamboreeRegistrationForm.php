@@ -41,7 +41,7 @@ class JamboreeRegistrationForm extends FormBase {
     $this->sectionRegistrationForm($form);
     $this->sectionStep2($form);
     $this->sectionStep3($form);
-
+    $this->sectionIcoreIntegration($form);
     return $form;
   }
 
@@ -349,5 +349,56 @@ class JamboreeRegistrationForm extends FormBase {
       '#default_value' => $this->get('play_button_link'),
       '#translatable' => TRUE,
     ];
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  private function sectionIcoreIntegration(array &$form) {
+    $form['icore_integration'] = [
+      '#type' => 'details',
+      '#title' => t('Icore Integration Settings'),
+      '#group' => 'advanced',
+    ];
+
+    $form['icore_integration']['reg_api_url'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Registration API URL'),
+      '#default_value' => $this->get('Registration API URL'),
+      '#description' => $this->t('Endpoint for registration API'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['icore_integration']['enable_reg_api_auth'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable Registration API Authentication'),
+      '#description' => $this->t('tick the checkbox to enable pass headers to authenticate to Registration API'),
+      '#default_value' => $this->get('enable_reg_api_auth')
+    ];
+
+    $form['icore_integration']['reg_api_key'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Registration API KEY'),
+      '#default_value' => $this->get('Registration API Key'),
+      '#description' => $this->t('Key that will be used for the authentication mechanism for Reg API'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['icore_integration']['enable_email_validation'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable Email Validation'),
+      '#description' => $this->t('Enable / disable email validation'),
+      '#default_value' => $this->get('enable_reg_api_auth')
+    ];
+
+    $form['icore_integration']['enable_username_validation'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable Username Validation'),
+      '#description' => $this->t('Enable / disable username validation'),
+      '#default_value' => $this->get('enable_reg_api_auth')
+    ];
+
+
+
   }
 }
