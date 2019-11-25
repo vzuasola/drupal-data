@@ -364,7 +364,7 @@ class JamboreeRegistrationForm extends FormBase {
     $form['icore_integration']['reg_api_url'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Registration API URL'),
-      '#default_value' => $this->get('Registration API URL'),
+      '#default_value' => $this->get('reg_api_url'),
       '#description' => $this->t('Endpoint for registration API'),
       '#translatable' => TRUE,
       '#required' => TRUE,
@@ -380,7 +380,7 @@ class JamboreeRegistrationForm extends FormBase {
     $form['icore_integration']['reg_api_key'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Registration API KEY'),
-      '#default_value' => $this->get('Registration API Key'),
+      '#default_value' => $this->get('reg_api_key'),
       '#description' => $this->t('Key that will be used for the authentication mechanism for Reg API'),
       '#translatable' => TRUE,
     ];
@@ -389,14 +389,14 @@ class JamboreeRegistrationForm extends FormBase {
       '#type' => 'checkbox',
       '#title' => $this->t('Enable Email Validation'),
       '#description' => $this->t('Enable / disable email validation'),
-      '#default_value' => $this->get('enable_reg_api_auth')
+      '#default_value' => $this->get('enable_email_validation')
     ];
 
     $form['icore_integration']['enable_username_validation'] = [
       '#type' => 'checkbox',
       '#title' => $this->t('Enable Username Validation'),
       '#description' => $this->t('Enable / disable username validation'),
-      '#default_value' => $this->get('enable_reg_api_auth')
+      '#default_value' => $this->get('enable_email_validation')
     ];
 
 
