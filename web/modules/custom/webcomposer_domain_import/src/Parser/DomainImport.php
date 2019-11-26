@@ -461,6 +461,11 @@ class DomainImport {
         }
         $term->save();
       }
+    } else {
+      $context['finished'] = 1;
+      $message = t('An error occurred while processing %error_operation .', ['%error_operation' => $context['sandbox']]);
+      $status = drupal_set_message($message, 'error');
+      $this->domainImportErrorCallback($status);
     }
   }
 
@@ -483,6 +488,11 @@ class DomainImport {
       ];
 
       $context['results']['gid'] = $this->createGroupDomain($param);
+    } else {
+      $context['finished'] = 1;
+      $message = t('An error occurred while processing %error_operation .', ['%error_operation' => $context['sandbox']]);
+      $status = drupal_set_message($message, 'error');
+      $this->domainImportErrorCallback($status);
     }
   }
 
@@ -509,6 +519,11 @@ class DomainImport {
 
         $this->createGroupDomain($param);
       }
+    } else {
+      $context['finished'] = 1;
+      $message = t('An error occurred while processing %error_operation .', ['%error_operation' => $context['sandbox']]);
+      $status = drupal_set_message($message, 'error');
+      $this->domainImportErrorCallback($status);
     }
   }
 
