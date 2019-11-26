@@ -26,7 +26,9 @@
         "phpoffice/phpexcel": "^1.8",
         "squizlabs/php_codesniffer": "^2.7",
         "predis/predis": "^1.1",
-        "phpoffice/phpspreadsheet": "^1.10"
+        "phpoffice/phpspreadsheet": "^1.10",
+        "cache/predis-adapter": "^1.0",
+        "cache/simple-cache-bridge": "^1.0"
     },
     "require-dev": {
         "drupal/console": "~1.0.2",
