@@ -6,11 +6,8 @@ dependencies:
     - field.field.mobile_infobar.mobile_infobar.field_body
     - field.field.mobile_infobar.mobile_infobar.field_log_in_state
     - field.field.mobile_infobar.mobile_infobar.field_post_body
-    - field.field.mobile_infobar.mobile_infobar.field_publish_date
     - field.field.mobile_infobar.mobile_infobar.field_title
-    - field.field.mobile_infobar.mobile_infobar.field_unpublish_date
   module:
-    - datetime
     - mobile_infobar
     - options
     - text
@@ -41,15 +38,6 @@ content:
     third_party_settings: {  }
     type: text_default
     region: content
-  field_publish_date:
-    weight: 3
-    label: above
-    settings:
-      format_type: medium
-      timezone_override: ''
-    third_party_settings: {  }
-    type: datetime_default
-    region: content
   field_title:
     weight: 1
     label: above
@@ -57,15 +45,6 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
-    region: content
-  field_unpublish_date:
-    weight: 4
-    label: above
-    settings:
-      format_type: medium
-      timezone_override: ''
-    third_party_settings: {  }
-    type: datetime_default
     region: content
   name:
     label: above
