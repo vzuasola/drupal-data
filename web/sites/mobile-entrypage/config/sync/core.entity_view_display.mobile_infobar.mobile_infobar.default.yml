@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.mobile_infobar.mobile_infobar.field_body
     - field.field.mobile_infobar.mobile_infobar.field_log_in_state
+    - field.field.mobile_infobar.mobile_infobar.field_post_body
     - field.field.mobile_infobar.mobile_infobar.field_publish_date
     - field.field.mobile_infobar.mobile_infobar.field_title
     - field.field.mobile_infobar.mobile_infobar.field_unpublish_date
@@ -32,6 +33,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: list_default
+    region: content
+  field_post_body:
+    weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
     region: content
   field_publish_date:
     weight: 3

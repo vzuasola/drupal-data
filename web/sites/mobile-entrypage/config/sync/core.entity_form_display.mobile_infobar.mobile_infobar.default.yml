@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.mobile_infobar.mobile_infobar.field_body
     - field.field.mobile_infobar.mobile_infobar.field_log_in_state
+    - field.field.mobile_infobar.mobile_infobar.field_post_body
     - field.field.mobile_infobar.mobile_infobar.field_publish_date
     - field.field.mobile_infobar.mobile_infobar.field_title
     - field.field.mobile_infobar.mobile_infobar.field_unpublish_date
@@ -21,7 +22,7 @@ third_party_settings:
         - field_publish_date
         - field_unpublish_date
       parent_name: ''
-      weight: 20
+      weight: 5
       format_type: fieldset
       format_settings:
         id: ''
@@ -66,6 +67,33 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
+    region: content
+  field_post_body:
+    weight: 4
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings:
+      conditional_fields:
+        de71f195-ced8-4a39-a5cf-a784ac4c2c81:
+          dependee: field_log_in_state
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: '1'
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: mobile_infobar
+          bundle: mobile_infobar
+    type: text_textarea_with_summary
     region: content
   field_publish_date:
     weight: 4
