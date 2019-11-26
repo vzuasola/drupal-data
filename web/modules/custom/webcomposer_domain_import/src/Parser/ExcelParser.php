@@ -39,7 +39,7 @@ class ExcelParser {
     if (!empty($settings['host'])) {
       $options = $settings['options'];
       $options['parameters']['database'] = 5;
-      $client = new \Predis\Client($settings['host'], $options );
+      $client = new \Predis\Client($settings['host'], $options);
       $pool = new \Cache\Adapter\Predis\PredisCachePool($client);
       $simpleCache = new \Cache\Bridge\SimpleCache\SimpleCacheBridge($pool);
       \PhpOffice\PhpSpreadsheet\Settings::setCache($simpleCache);
