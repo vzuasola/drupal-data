@@ -1,7 +1,6 @@
 <?php
 
 namespace Drupal\webcomposer_domain_import\Parser;
-use Drupal\Core\Site\Settings;
 
 /**
  * Class for creating and reading Excel Spreadsheet file using PHP Excel.
@@ -34,14 +33,6 @@ class ExcelParser {
    * Constructor function Passing the excel object to the class instance.
    */
   public function __construct() {
-    $settings = Settings::get('redis.connection');
-    // Memory saving
-    if (!empty($settings['host'])) {
-      $client = new \Predis\Client($settings['host'], $settings['options']);
-      $pool = new \Cache\Adapter\Predis\PredisCachePool($client);
-      $simpleCache = new \Cache\Bridge\SimpleCache\SimpleCacheBridge($pool);
-      \PhpOffice\PhpSpreadsheet\Settings::setCache($simpleCache);
-    }
     // Initialize PHP excel object.
     $this->excel = new \PhpOffice\PhpSpreadsheet\Spreadsheet();
     // Set filename.
