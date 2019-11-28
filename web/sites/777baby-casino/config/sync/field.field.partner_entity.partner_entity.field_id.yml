@@ -1,0 +1,22 @@
+uuid: 47b96a29-b31d-4d5f-9168-357275217163
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.partner_entity.field_id
+  module:
+    - webcomposer_partner
+_core:
+  default_config_hash: QN9IE27mdMBth3EBRtSIdBPqIRg69j-BAQDp8SYq5rg
+id: partner_entity.partner_entity.field_id
+field_name: field_id
+entity_type: partner_entity
+bundle: partner_entity
+label: ID
+description: 'The unique identifier of this partner entity. ID can be used to distinguish partners from one another.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

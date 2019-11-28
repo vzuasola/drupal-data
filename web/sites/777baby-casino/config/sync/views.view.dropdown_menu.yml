@@ -3,6 +3,7 @@ langcode: ja
 status: true
 dependencies:
   config:
+    - block.block.languagedropdownswitcher_2
     - field.storage.dropdown_menu_entity.field_dropdown_menu_link_title
     - user.role.administrator
     - user.role.authenticated
@@ -13,6 +14,8 @@ dependencies:
     - serialization
     - user
     - webcomposer_rest_extra
+_core:
+  default_config_hash: Qh_v0p85JGJm5FNdZu2qUrQtVzmoA3PuOVPhOHJL68A
 id: dropdown_menu
 label: 'Dropdown Menu'
 module: views
@@ -195,6 +198,7 @@ display:
         pager: false
         access: false
         sorts: false
+        header: false
       row:
         type: 'entity:dropdown_menu_entity'
         options: {  }
@@ -451,6 +455,20 @@ display:
           entity_type: dropdown_menu_entity
           entity_field: changed
           plugin_id: date
+      header:
+        entity_block:
+          id: entity_block
+          table: views
+          field: entity_block
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: true
+          target: languagedropdownswitcher_2
+          view_mode: default
+          bypass_access: false
+          plugin_id: entity
     cache_metadata:
       max-age: 0
       contexts:

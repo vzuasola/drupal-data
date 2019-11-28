@@ -38,8 +38,8 @@ class ArcadeConfigurationForm extends FormBase {
       '#title' => t('Settings'),
     );
 
-    $this->arcadeCategorySetting($form);
     $this->arcadeHeaderSettingsOverride($form);
+    $this->arcadeCategorySetting($form);
 
     return $form;
   }
@@ -72,6 +72,27 @@ class ArcadeConfigurationForm extends FormBase {
       '#group' => 'arcade_configuration_tab',
     );
 
+    $form['header_config_group']['arcade_header_override_lobby_page_title'] = array(
+      '#type' => 'textfield',
+      '#title' => $this->t('Lobby Page Title'),
+      '#default_value' => $this->get('arcade_header_override_lobby_page_title'),
+      '#required' => FALSE,
+      '#translatable' => true
+    );
+
+    $form['header_config_group']['arcade_header_override_logo_title'] = array(
+      '#type' => 'textfield',
+      '#title' => $this->t('Logo Title'),
+      '#description' => $this->t('The title attribute for the main logo.'),
+      '#default_value' => $this->get('arcade_header_override_logo_title'),
+      '#required' => FALSE,
+      '#translatable' => true
+    );
+
+    $this->registrationSettings($form);
+  }
+
+  private function registrationSettings(&$form) {
     $form['header_config_group']['registration'] = [
       '#type' => 'details',
       '#title' => $this->t('Registration'),
