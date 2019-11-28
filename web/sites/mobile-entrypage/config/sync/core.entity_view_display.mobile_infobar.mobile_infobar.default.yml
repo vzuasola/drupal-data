@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.mobile_infobar.mobile_infobar.field_body
+    - field.field.mobile_infobar.mobile_infobar.field_infobar_enable
     - field.field.mobile_infobar.mobile_infobar.field_log_in_state
     - field.field.mobile_infobar.mobile_infobar.field_post_body
     - field.field.mobile_infobar.mobile_infobar.field_title
@@ -23,6 +24,16 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: text_default
+    region: content
+  field_infobar_enable:
+    weight: 7
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
     region: content
   field_log_in_state:
     weight: 2
