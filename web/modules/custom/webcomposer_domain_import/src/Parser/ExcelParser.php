@@ -34,7 +34,7 @@ class ExcelParser {
    */
   public function __construct() {
     // Initialize PHP excel object.
-    $this->excel = new \PHPExcel();
+    $this->excel = new \PhpOffice\PhpSpreadsheet\Spreadsheet();
     // Set filename.
     $this->sheetNumber = 0;
   }
@@ -51,7 +51,7 @@ class ExcelParser {
   public function readExcel($path) {
     try {
       // Attempt to read excel file.
-      $excelReader = \PHPExcel_IOFactory::createReaderForFile($path);
+      $excelReader = \PhpOffice\PhpSpreadsheet\IOFactory::createReaderForFile($path);
       $excelReader->setLoadAllSheets();
       $excel = $excelReader->load($path);
     }
@@ -76,6 +76,8 @@ class ExcelParser {
       $sheets[$sheetName] = $excel->getActiveSheet()->rangeToArray('A1:'.$cell, TRUE, TRUE, TRUE);
     }
 
+    $excel->disconnectWorksheets();
+    unset($excel);
     return $sheets;
   }
 
@@ -114,11 +116,11 @@ class ExcelParser {
    * @param string $output
    *   The URL to output the file.
    */
-  public function save($filename, $excel_version = 'Excel2007', $headers = TRUE, $output = 'php://output') {
+  public function save($filename, $excel_version = 'Xlsx', $headers = TRUE, $output = 'php://output') {
     // Removes the blank worksheet set by PHP excel.
     $this->excel->removeSheetByIndex($this->sheetNumber);
     // Create writer for excel object.
-    $excelWriter = \PHPExcel_IOFactory::createWriter($this->excel, $excel_version);
+    $excelWriter = \PhpOffice\PhpSpreadsheet\IOFactory::createWriter($this->excel, $excel_version);
 
     // Set the headers so that browser will invoke an upload.
     if ($headers) {
@@ -151,7 +153,7 @@ class ExcelParser {
     // Column and row dimension.
     $column = $this->excel->getActiveSheet()->getHighestColumn();
 
-    $this->excel->getDefaultStyle()->getAlignment()->setHorizontal(\PHPExcel_Style_Alignment::HORIZONTAL_LEFT);
+    $this->excel->getDefaultStyle()->getAlignment()->setHorizontal(\PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_LEFT);
     $this->excel->getActiveSheet()->getColumnDimension('A')->setAutoSize(TRUE);
     // $this->excel->getDefaultStyle()->getAlignment()->setWrapText(true);
     $this->excel->getActiveSheet()->getDefaultRowDimension()->setRowHeight(17);
