@@ -164,8 +164,17 @@ class GeneralConfiguration extends FormBase {
       '#type' => 'textarea',
       '#title' => $this->t('Registration Country code to Data-geoip code mapping'),
       '#description' => $this->t('Mapping that will be used for country code to data-geoip code' .
-        'mapping upon registration e.g. "100|IN" where 100 is the country code of India and IN is the data-geoip code'),
+        ' mapping upon registration e.g. "100|IN" where 100 is the country code of India and IN is the data-geoip code'),
       '#default_value' => $this->get('registraton_country_code_to_geoip_code'),
+      '#required' => TRUE,
+    ];
+
+    $form['integration']['registraton_currency_code_mapping'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Registration Currency value to Currency code'),
+      '#description' => $this->t('Mapping that will be used for Currency value to currency code' .
+        ' mapping upon registration e.g. "2|USD" where 2 is the country value of USA and USA is the curreny code'),
+      '#default_value' => $this->get('registraton_currency_code_mapping'),
       '#required' => TRUE,
     ];
 
