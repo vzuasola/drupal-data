@@ -256,6 +256,14 @@ class GeneralConfiguration extends FormBase {
       '#required' => TRUE,
       '#translatable' => TRUE,
     ];
+    $form['integration']['jpay_api'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('JPAY API Endpoint'),
+      '#description' => $this->t('Endpoint for JPAY API'),
+      '#default_value' => $this->get('jpay_api'),
+      '#required' => TRUE,
+      '#translatable' => TRUE,
+    ];
   }
 
   /**
