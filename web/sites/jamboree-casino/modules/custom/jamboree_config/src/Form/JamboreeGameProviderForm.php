@@ -103,7 +103,6 @@ class JamboreeGameProviderForm extends FormBase {
       '#type' => 'textarea',
       '#title' => t('Language Map'),
       '#default_value' => $this->get('voidbridge_language_map'),
-      '#translatable' => TRUE,
       '#required' => TRUE,
     ];
   }
