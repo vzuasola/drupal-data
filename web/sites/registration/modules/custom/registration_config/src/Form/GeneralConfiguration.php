@@ -160,6 +160,24 @@ class GeneralConfiguration extends FormBase {
       '#required' => TRUE,
     ];
 
+    $form['integration']['registration_country_code_to_geoip_code'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Registration Country code to Data-geoip code mapping'),
+      '#description' => $this->t('Mapping that will be used for country code to data-geoip code' .
+        ' mapping upon registration e.g. "100|IN" where 100 is the country code of India and IN is the data-geoip code'),
+      '#default_value' => $this->get('registration_country_code_to_geoip_code'),
+      '#required' => TRUE,
+    ];
+
+    $form['integration']['registration_currency_code_mapping'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Registration Currency value to Currency code'),
+      '#description' => $this->t('Mapping that will be used for Currency value to currency code' .
+        ' mapping upon registration e.g. "2|USD" where 2 is the country value of USA and USA is the curreny code'),
+      '#default_value' => $this->get('registration_currency_code_mapping'),
+      '#required' => TRUE,
+    ];
+
     $form['integration']['mobile_native_app_command'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Mobile Native App CMD'),
@@ -235,6 +253,14 @@ class GeneralConfiguration extends FormBase {
       '#title' => $this->t('Registration API Key'),
       '#description' => $this->t('Key that will be used for the authentication mechanism for Reg API'),
       '#default_value' => $this->get('reg_api_key'),
+      '#required' => TRUE,
+      '#translatable' => TRUE,
+    ];
+    $form['integration']['jpay_api'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('JPAY API Endpoint'),
+      '#description' => $this->t('Endpoint for JPAY API'),
+      '#default_value' => $this->get('jpay_api'),
       '#required' => TRUE,
       '#translatable' => TRUE,
     ];
