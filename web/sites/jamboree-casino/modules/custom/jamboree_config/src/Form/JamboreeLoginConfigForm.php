@@ -293,6 +293,15 @@ class JamboreeLoginConfigForm extends FormBase {
       '#description' => $this->t('Change Password Confirm New Password error message.'),
       '#translatable' => TRUE,
     ];
+
+    $default_cp_forgot_failed = $this->get('change_pass_failed');
+    $form['change_pass_error_messages']['change_pass_failed'] = [
+      '#type' => 'textfield',
+      '#title' => t('Change Password Failed Error Message.'),
+      '#default_value' => $default_cp_forgot_failed,
+      '#description' => $this->t('Change Password Failed process.'),
+      '#translatable' => TRUE,
+    ];
   }
 
   /**
