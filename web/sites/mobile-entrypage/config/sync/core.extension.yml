@@ -17,6 +17,7 @@ module:
   config_translation: 0
   contact: 0
   contact_storage: 0
+  contact_us_config: 0
   content_translation: 0
   contextual: 0
   ctools: 0
@@ -90,6 +91,7 @@ module:
   webcomposer_dm: 0
   webcomposer_domain_import: 0
   webcomposer_editor: 0
+  webcomposer_form_manager: 0
   webcomposer_games: 0
   webcomposer_language_access: 0
   webcomposer_language_hierarchy: 0
