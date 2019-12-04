@@ -40,10 +40,15 @@ module:
   link: 0
   locale: 0
   lucky_baby_config: 0
+  lucky_baby_desktop_block: 0
+  lucky_baby_mobile_block: 0
+  lucky_baby_jackpot: 0
+  lucky_baby_registration: 0
   luckybaby_dropdown_menu: 0
   menu_link_attributes: 0
   menu_ui: 0
   metatag: 0
+  news_and_updates: 0
   node: 0
   options: 0
   paragraphs: 0
@@ -54,6 +59,7 @@ module:
   rest: 0
   rest_menu_items: 0
   restui: 0
+  rightside_block: 0
   scheduler: 0
   serialization: 0
   shortcut: 0
@@ -76,9 +82,11 @@ module:
   webcomposer_downloadables: 0
   webcomposer_editor: 0
   webcomposer_floating_banners: 0
+  webcomposer_form_manager: 0
   webcomposer_games: 0
   webcomposer_language_hierarchy: 0
   webcomposer_marketing_script: 0
+  webcomposer_partner: 0
   webcomposer_promotions: 0
   webcomposer_registration_landing_page: 0
   webcomposer_rest_extra: 0

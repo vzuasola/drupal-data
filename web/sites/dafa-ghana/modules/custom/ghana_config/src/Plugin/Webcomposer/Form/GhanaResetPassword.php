@@ -115,6 +115,12 @@ class GhanaResetPassword extends WebcomposerFormBase implements WebcomposerFormI
           '#type' => 'textarea',
           '#description' => 'field annotation that will be displayed on focus',
         ],
+        'enable' => [
+          '#title' => 'Enable Field',
+          '#type' => 'checkbox',
+          '#description' => 'Check to enable field',
+          '#default_value' => TRUE,
+        ],
       ],
     ];
 
