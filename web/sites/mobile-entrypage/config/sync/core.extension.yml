@@ -17,6 +17,7 @@ module:
   config_translation: 0
   contact: 0
   contact_storage: 0
+  contact_tabs: 0
   contact_us_config: 0
   content_translation: 0
   contextual: 0
