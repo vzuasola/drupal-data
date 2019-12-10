@@ -39,6 +39,8 @@ class JamboreeForgotPassword extends FormBase {
     ];
 
     $this->sectionForgotPassword($form);
+    $this->sectionError($form);
+    $this->sectionSuccess($form);
 
     return $form;
   }
@@ -86,6 +88,45 @@ class JamboreeForgotPassword extends FormBase {
         '#format' => $d['format'],
         '#translatable' => TRUE,
       ];
+  }
+
+  private function sectionSuccess(array &$form) {
+    // form setting
+    $form['forgot_success'] = [
+      '#type' => 'details',
+      '#title' => t('Forgot Success Config'),
+      '#group' => 'advanced',
+    ];
+
+    $form['forgot_success']['form']['success'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Success forgot password message'),
+      '#default_value' => $this->get('success'),
+      '#translatable' => TRUE,
+    ];
+  }
+
+  private function sectionError(array &$form) {
+    // form setting
+    $form['forgot_error'] = [
+      '#type' => 'details',
+      '#title' => t('Forgot Error Config'),
+      '#group' => 'advanced',
+    ];
+
+    $form['forgot_error']['form']['username_error'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Username required field error message'),
+      '#default_value' => $this->get('username_error'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['forgot_error']['form']['email_error'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Email required field error message'),
+      '#default_value' => $this->get('email_error'),
+      '#translatable' => TRUE,
+    ];
   }
 
 }
