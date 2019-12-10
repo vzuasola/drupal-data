@@ -17,10 +17,10 @@ settings:
       value: live-chat
       label: 'Live Chat'
     -
-      value: email-us
+      value: mail
       label: 'Email Us'
     -
-      value: call-us
+      value: phone
       label: 'Call Us'
     -
       value: social
