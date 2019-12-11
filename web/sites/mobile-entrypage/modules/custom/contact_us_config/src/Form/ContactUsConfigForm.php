@@ -65,11 +65,11 @@ class ContactUsConfigForm extends FormBase {
       '#translatable' => TRUE,
     ];
 
-    $form['content']['page_image'] = [
+    $form['content']['file_image_page'] = [
       '#type' => 'managed_file',
       '#title' => $this->t('Image'),
       '#description' => $this->t('Adds page image to the contact us page.'),
-      '#default_value' => $this->get('page_image'),
+      '#default_value' => $this->get('file_image_page'),
       '#required' => FALSE,
       '#translatable' => TRUE,
     ];
