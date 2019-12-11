@@ -12,5 +12,4 @@ success_message:
 form_title: 'Contact Us Form'
 email_template: ''
 from_email: admin@bayviewtechnology.com
-file_image_page_image:
-  - '75'
+file_image_page_image: ''
