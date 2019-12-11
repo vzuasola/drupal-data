@@ -104,6 +104,14 @@ class JamboreeForgotPassword extends FormBase {
       '#default_value' => $this->get('success'),
       '#translatable' => TRUE,
     ];
+
+    $form['forgot_success']['form']['button_success'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Button Success label'),
+      '#default_value' => $this->get('button_success'),
+      '#translatable' => TRUE,
+    ];
+
   }
 
   private function sectionError(array &$form) {
