@@ -96,6 +96,7 @@ module:
   webcomposer_games: 0
   webcomposer_language_access: 0
   webcomposer_language_hierarchy: 0
+  webcomposer_mailer: 0
   webcomposer_marketing_script: 0
   webcomposer_registration_landing_page: 0
   webcomposer_replicate_utility: 0
