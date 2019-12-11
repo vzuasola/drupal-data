@@ -5,10 +5,12 @@ body_content:
   format: basic_html
 value: null
 format: null
-success_title: axczx
+success_title: 'Contact Us Success Page'
 success_message:
   value: ''
   format: basic_html
-form_title: czcz
+form_title: 'Contact Us Form'
 email_template: ''
 from_email: admin@bayviewtechnology.com
+page_image:
+  - '73'
