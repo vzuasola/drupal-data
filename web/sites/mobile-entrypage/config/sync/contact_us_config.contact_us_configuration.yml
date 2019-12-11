@@ -1,14 +1,18 @@
-advanced__active_tab: edit-settings
+advanced__active_tab: edit-content
 page_title: 'How may we help you?'
 body_content:
-  value: "<p>Feel free to chat or call us, send an email or simply complete the form below.<img alt=\"contact-person.png\" data-entity-type=\"\" data-entity-uuid=\"\" height=\"200\" src=\"/sites/mobile-entrypage/files/contact-person.png\" width=\"200\" /></p>\r\n"
+  value: "<p>Feel free to chat or call us, send an email or simply complete the form below.</p>\r\n"
   format: basic_html
 value: null
 format: null
-success_title: axczx
+success_title: 'Contact Us Success Page'
 success_message:
   value: ''
   format: basic_html
-form_title: czcz
+form_title: 'Contact Us Form'
 email_template: ''
 from_email: admin@bayviewtechnology.com
+page_image:
+  - '74'
+file_image_page_image:
+  - '77'
