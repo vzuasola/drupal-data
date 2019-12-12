@@ -80,6 +80,12 @@ class JamboreeForgotPassword extends FormBase {
       '#default_value' => $this->get('email_acc'),
       '#translatable' => TRUE,
     ];
+    $form['forgot_pass']['form']['submit_button'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Submit Button'),
+      '#default_value' => $this->get('submit_button'),
+      '#translatable' => TRUE,
+    ];
     $d = $this->get('header');
     $form['forgot_pass']['form']['header'] = [
         '#type' => 'text_format',
