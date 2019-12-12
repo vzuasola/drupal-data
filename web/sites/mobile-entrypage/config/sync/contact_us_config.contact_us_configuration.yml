@@ -1,7 +1,7 @@
 advanced__active_tab: edit-content
 page_title: 'How may we help you?'
 body_content:
-  value: "<p>Feel free to chat or call us, send an email or simply complete the form below.xxx</p>\r\n"
+  value: "<p>Feel free to chat or call us, send an email or simply complete the form below.</p>\r\n"
   format: basic_html
 value: null
 format: null
