@@ -41,6 +41,7 @@ class JamboreeLoginConfigForm extends FormBase {
     $this->sectionLoginSessionConfig($form);
     $this->sectionChangePassConfig($form);
     $this->sectionChangePassErrorMessages($form);
+    $this->sectionChangePassResetToken($form);
 
     return $form;
   }
@@ -291,6 +292,40 @@ class JamboreeLoginConfigForm extends FormBase {
       '#title' => t('Change Password Confirm New Password error message.'),
       '#default_value' => $default_cp_confirm_new_password_required,
       '#description' => $this->t('Change Password Confirm New Password error message.'),
+      '#translatable' => TRUE,
+    ];
+
+    $default_cp_forgot_failed = $this->get('change_pass_failed');
+    $form['change_pass_error_messages']['change_pass_failed'] = [
+      '#type' => 'textfield',
+      '#title' => t('Change Password Failed Error Message.'),
+      '#default_value' => $default_cp_forgot_failed,
+      '#description' => $this->t('Change Password Failed process.'),
+      '#translatable' => TRUE,
+    ];
+  }
+
+  private function sectionChangePassResetToken(array &$form) {
+    $form['reset_token'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Change Password Reset Token Config'),
+    ];
+
+    $default_reset_token_title = $this->get('reset_token_title');
+    $form['reset_token']['reset_token_title'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Reset Token Title.'),
+      '#default_value' => $default_reset_token_title,
+      '#description' => $this->t('Reset Token Page title configuration.'),
+      '#translatable' => TRUE,
+    ];
+
+    $default_reset_token_description = $this->get('reset_token_description');
+    $form['reset_token']['reset_token_description'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('Description of page content'),
+      '#default_value' => $default_reset_token_description['value'],
+      '#format' => $default_reset_token_description['format'],
       '#translatable' => TRUE,
     ];
   }
