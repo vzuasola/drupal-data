@@ -228,7 +228,7 @@ class ICoreGamesIntegrationConfiguration extends FormBase {
   }
 
   /**
-   * Adds additional form fields for 
+   * Adds additional form fields for Ruby Play tabs
    *
    * @param $form
    * @param $key
