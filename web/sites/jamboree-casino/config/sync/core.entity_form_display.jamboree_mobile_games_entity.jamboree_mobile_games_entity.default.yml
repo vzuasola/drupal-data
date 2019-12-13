@@ -8,8 +8,6 @@ dependencies:
     - field.field.jamboree_mobile_games_entity.jamboree_mobile_games_entity.field_enable_game
     - field.field.jamboree_mobile_games_entity.jamboree_mobile_games_entity.field_game_category
     - field.field.jamboree_mobile_games_entity.jamboree_mobile_games_entity.field_game_code
-    - field.field.jamboree_mobile_games_entity.jamboree_mobile_games_entity.field_game_code_icore
-    - field.field.jamboree_mobile_games_entity.jamboree_mobile_games_entity.field_game_provider
     - field.field.jamboree_mobile_games_entity.jamboree_mobile_games_entity.field_game_tag
     - field.field.jamboree_mobile_games_entity.jamboree_mobile_games_entity.field_game_thumbnail
     - field.field.jamboree_mobile_games_entity.jamboree_mobile_games_entity.field_game_title
@@ -56,20 +54,6 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_game_code_icore:
-    weight: 9
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_game_provider:
-    weight: 10
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
   field_game_tag:
     weight: 7
     settings: {  }
@@ -96,11 +80,10 @@ content:
     type: language_select
     weight: 1
     region: content
-    settings:
-      include_locked: true
+    settings: {  }
     third_party_settings: {  }
   translation:
-    weight: 11
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }
