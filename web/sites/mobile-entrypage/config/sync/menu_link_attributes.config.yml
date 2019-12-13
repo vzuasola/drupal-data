@@ -3,6 +3,10 @@ attributes:
     label: 'Disabled Data Router'
     options:
       disabled: 'Disabled Data Router'
+  partnerMatrixPlayer:
+    label: 'Partner Matrix App '
+    options:
+      partner-matrix-app: 'Partner Matrix App'
   class:
     label: ''
     description: ''
