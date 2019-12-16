@@ -9,7 +9,6 @@ dependencies:
     - field.storage.jamboree_desktop_games_entity.field_game_code
     - field.storage.jamboree_desktop_games_entity.field_game_tag
     - field.storage.jamboree_desktop_games_entity.field_game_title
-    - field.storage.taxonomy_term.field_enable
     - taxonomy.vocabulary.desktop_game_category
     - taxonomy.vocabulary.game_tag
   module:
@@ -411,72 +410,7 @@ display:
           delta_offset: 0
           delta_reversed: false
           delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_enable:
-          id: field_enable
-          table: taxonomy_term__field_enable
-          field: field_enable
-          relationship: field_game_category
-          group_type: group
-          admin_label: ''
-          label: 'Enabled Game Category'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: boolean
-          settings:
-            format: unicode-yes-no
-            format_custom_true: ''
-            format_custom_false: ''
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
+          multi_type: ul
           separator: ', '
           field_api_classes: false
           plugin_id: field
@@ -778,46 +712,6 @@ display:
           entity_type: jamboree_desktop_games_entity
           entity_field: langcode
           plugin_id: language
-        langcode_1:
-          id: langcode_1
-          table: taxonomy_term_field_data
-          field: langcode
-          relationship: field_game_tag
-          group_type: group
-          admin_label: ''
-          operator: in
-          value:
-            ja: ja
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          entity_type: taxonomy_term
-          entity_field: langcode
-          plugin_id: language
         field_game_category_target_id:
           id: field_game_category_target_id
           table: jamboree_desktop_games_entity__field_game_category
@@ -992,7 +886,7 @@ display:
           id: langcode_2
           table: taxonomy_term_field_data
           field: langcode
-          relationship: field_game_category
+          relationship: field_game_tag
           group_type: group
           admin_label: ''
           operator: in
@@ -1070,15 +964,6 @@ display:
           admin_label: 'field_game_tag: Taxonomy term'
           required: true
           plugin_id: standard
-        field_game_category:
-          id: field_game_category
-          table: jamboree_desktop_games_entity__field_game_category
-          field: field_game_category
-          relationship: none
-          group_type: group
-          admin_label: 'field_game_category: Taxonomy term'
-          required: true
-          plugin_id: standard
       rendering_language: '***LANGUAGE_language_interface***'
       arguments: {  }
     cache_metadata:
@@ -1094,7 +979,6 @@ display:
         - 'config:field.storage.jamboree_desktop_games_entity.field_game_code'
         - 'config:field.storage.jamboree_desktop_games_entity.field_game_tag'
         - 'config:field.storage.jamboree_desktop_games_entity.field_game_title'
-        - 'config:field.storage.taxonomy_term.field_enable'
   rest_export_1:
     display_plugin: rest_export
     id: rest_export_1

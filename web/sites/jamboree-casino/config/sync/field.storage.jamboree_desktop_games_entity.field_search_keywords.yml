@@ -1,16 +1,15 @@
-uuid: a2a74b6b-3d1d-488b-9982-01cf5f1b8a60
-langcode: en
+uuid: a06440ff-b6dd-428f-a6b5-5cce85ffbb56
+langcode: ja
 status: true
 dependencies:
   module:
     - jamboree_desktop_games
-    - taxonomy
-id: jamboree_desktop_games_entity.field_game_provider
-field_name: field_game_provider
+id: jamboree_desktop_games_entity.field_search_keywords
+field_name: field_search_keywords
 entity_type: jamboree_desktop_games_entity
-type: entity_reference
+type: string_long
 settings:
-  target_type: taxonomy_term
+  case_sensitive: false
 module: core
 locked: false
 cardinality: 1

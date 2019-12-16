@@ -1,12 +1,12 @@
-uuid: ea962920-494d-4e4f-a3db-8c3f579a07d2
+uuid: 03451b8b-0968-47eb-89b1-a6526e2c99b4
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.jamboree_desktop_games_entity.field_game_provider
+    - taxonomy.vocabulary.game_provider
   module:
     - jamboree_desktop_games
-    - options
 id: jamboree_desktop_games_entity.jamboree_desktop_games_entity.field_game_provider
 field_name: field_game_provider
 entity_type: jamboree_desktop_games_entity
@@ -15,9 +15,16 @@ label: 'Game Provider'
 description: ''
 required: true
 translatable: false
-default_value:
-  -
-    value: playtech
+default_value: {  }
 default_value_callback: ''
-settings: {  }
-field_type: list_string
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      game_provider: game_provider
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

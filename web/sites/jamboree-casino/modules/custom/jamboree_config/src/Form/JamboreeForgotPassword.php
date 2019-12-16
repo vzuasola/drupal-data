@@ -39,6 +39,8 @@ class JamboreeForgotPassword extends FormBase {
     ];
 
     $this->sectionForgotPassword($form);
+    $this->sectionError($form);
+    $this->sectionSuccess($form);
 
     return $form;
   }
@@ -78,6 +80,12 @@ class JamboreeForgotPassword extends FormBase {
       '#default_value' => $this->get('email_acc'),
       '#translatable' => TRUE,
     ];
+    $form['forgot_pass']['form']['submit_button'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Submit Button'),
+      '#default_value' => $this->get('submit_button'),
+      '#translatable' => TRUE,
+    ];
     $d = $this->get('header');
     $form['forgot_pass']['form']['header'] = [
         '#type' => 'text_format',
@@ -86,6 +94,53 @@ class JamboreeForgotPassword extends FormBase {
         '#format' => $d['format'],
         '#translatable' => TRUE,
       ];
+  }
+
+  private function sectionSuccess(array &$form) {
+    // form setting
+    $form['forgot_success'] = [
+      '#type' => 'details',
+      '#title' => t('Forgot Success Config'),
+      '#group' => 'advanced',
+    ];
+
+    $form['forgot_success']['form']['success'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Success forgot password message'),
+      '#default_value' => $this->get('success'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['forgot_success']['form']['button_success'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Button Success label'),
+      '#default_value' => $this->get('button_success'),
+      '#translatable' => TRUE,
+    ];
+
+  }
+
+  private function sectionError(array &$form) {
+    // form setting
+    $form['forgot_error'] = [
+      '#type' => 'details',
+      '#title' => t('Forgot Error Config'),
+      '#group' => 'advanced',
+    ];
+
+    $form['forgot_error']['form']['username_error'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Username required field error message'),
+      '#default_value' => $this->get('username_error'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['forgot_error']['form']['email_error'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Email required field error message'),
+      '#default_value' => $this->get('email_error'),
+      '#translatable' => TRUE,
+    ];
   }
 
 }
