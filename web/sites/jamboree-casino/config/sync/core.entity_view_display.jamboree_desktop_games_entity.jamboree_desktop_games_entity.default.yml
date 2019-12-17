@@ -14,7 +14,6 @@ dependencies:
     - field.field.jamboree_desktop_games_entity.jamboree_desktop_games_entity.field_game_tag
     - field.field.jamboree_desktop_games_entity.jamboree_desktop_games_entity.field_game_thumbnail
     - field.field.jamboree_desktop_games_entity.jamboree_desktop_games_entity.field_game_title
-    - field.field.jamboree_desktop_games_entity.jamboree_desktop_games_entity.field_search_keywords
   module:
     - image
     - jamboree_desktop_games
@@ -116,13 +115,6 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
-    region: content
-  field_search_keywords:
-    weight: 12
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: basic_string
     region: content
   name:
     label: above
