@@ -9,6 +9,7 @@ dependencies:
     - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_blurb
     - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_content_position
     - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_content_position_post
+    - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_enable_for_agent_players
     - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_log_in_state
     - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_post_blurb
     - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_publish_date
@@ -73,6 +74,13 @@ content:
     region: content
   field_content_position_post:
     weight: 11
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_enable_for_agent_players:
+    weight: 12
     label: above
     settings: {  }
     third_party_settings: {  }
