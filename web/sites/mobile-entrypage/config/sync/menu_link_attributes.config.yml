@@ -1,4 +1,12 @@
 attributes:
+  dataRouter:
+    label: 'Disabled Data Router'
+    options:
+      disabled: 'Disabled Data Router'
+  partnerMatrixPlayer:
+    label: 'Partner Matrix App '
+    options:
+      partner-matrix-app: 'Partner Matrix App'
   class:
     label: ''
     description: ''
@@ -17,7 +25,7 @@ attributes:
     options:
       new: 'New Product'
   device:
-    label: 'Device'
+    label: Device
     options:
       ios: 'iOS Device'
       android: 'Android Device'

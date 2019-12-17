@@ -84,6 +84,10 @@ class ICoreGamesIntegrationConfiguration extends FormBase {
           $this->getAsiaGamingFields($form[$key], $key, $value);
           break;
 
+        case 'ruby_play':
+            $this->getRubyPlayFields($form[$key], $key, $value);
+            break;
+
         default:
           break;
       }
@@ -219,6 +223,24 @@ class ICoreGamesIntegrationConfiguration extends FormBase {
       '#description' => $this->t("If enabled, Custom Lobby Domain field will overwrite the lobbyURL parameter."),
       '#default_value' => $this->get($key . '_custom_lobbyDomain_enabled'),
       '#translatable' => TRUE,
+      '#required' => false,
+    ];
+  }
+
+  /**
+   * Adds additional form fields for Ruby Play tabs
+   *
+   * @param $form
+   * @param $key
+   * @param $value
+   */
+  private function getRubyPlayFields(&$form, $key, $value) {
+    $form[$key . '_geoip_domain_override'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('GeoIP domain'),
+      '#description' => $this->t("Override the game URL domain base from Geo IP. <br />Use pipe (|) pattern"),
+      '#default_value' => $this->get($key . '_geoip_domain_override'),
+      '#translatable' => false,
       '#required' => false,
     ];
   }

@@ -261,6 +261,8 @@ tct-japan-stack:
     paths:
       - automation/deployed/*.jsonl
     expire_in: 1 month
+  tags:
+    - ipvg-stg-02
 
 tct-row-stack:
   stage: deploy-test

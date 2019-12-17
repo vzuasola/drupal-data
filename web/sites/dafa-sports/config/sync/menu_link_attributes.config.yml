@@ -16,3 +16,7 @@ attributes:
   disabled:
     label: 'Disable per currency'
     description: 'Enter currency where you want to disable this item (applicable for cashier menu only)'
+  isAgentPlayer:
+    label: 'Enable for Agent players'
+    type: checkbox
+    description: 'A flag for whether the menus should be enabled for agent players.'
