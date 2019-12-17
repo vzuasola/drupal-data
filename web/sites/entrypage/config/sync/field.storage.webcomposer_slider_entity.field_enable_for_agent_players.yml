@@ -1,0 +1,30 @@
+uuid: 16832e91-edb8-4bf5-842c-397c48954050
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - webcomposer_slider
+id: webcomposer_slider_entity.field_enable_for_agent_players
+field_name: field_enable_for_agent_players
+entity_type: webcomposer_slider_entity
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '0'
+      label: 'No'
+    -
+      value: '1'
+      label: 'Both (Real and Agent Player)'
+    -
+      value: '2'
+      label: 'Agent Player only'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
