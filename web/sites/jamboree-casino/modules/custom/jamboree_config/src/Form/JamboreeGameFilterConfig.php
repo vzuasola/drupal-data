@@ -77,7 +77,18 @@ class JamboreeGameFilterConfig extends FormBase {
         '#title' => $this->t('Sub category title'),
         '#default_value' => $this->get('game_filter_sub_category'),
         '#translatable' => TRUE,
-      ];
+    ];
+    $form['game_filter']['form']['game_filter_apply'] = [
+        '#type' => 'textfield',
+        '#title' => $this->t('Apply button title'),
+        '#default_value' => $this->get('game_filter_apply'),
+    ];
+      $form['game_filter']['form']['game_filter_reset'] = [
+        '#type' => 'textfield',
+        '#title' => $this->t('Reset button title'),
+        '#default_value' => $this->get('game_filter_reset'),
+        '#translatable' => TRUE,
+    ];
     $d = $this->get('game_filter_description');
     $form['game_filter']['form']['game_filter_description'] = [
         '#type' => 'text_format',
