@@ -159,7 +159,7 @@ class GeneralConfiguration extends FormBase {
       '#default_value' => $this->get('registraton_portal_id_to_dafaconnect_portal_id'),
       '#required' => TRUE,
     ];
-
+    
     $form['integration']['mobile_native_app_command'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Mobile Native App CMD'),
@@ -235,6 +235,14 @@ class GeneralConfiguration extends FormBase {
       '#title' => $this->t('Registration API Key'),
       '#description' => $this->t('Key that will be used for the authentication mechanism for Reg API'),
       '#default_value' => $this->get('reg_api_key'),
+      '#required' => TRUE,
+      '#translatable' => TRUE,
+    ];
+    $form['integration']['jpay_api'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('JPAY API Endpoint'),
+      '#description' => $this->t('Endpoint for JPAY API'),
+      '#default_value' => $this->get('jpay_api'),
       '#required' => TRUE,
       '#translatable' => TRUE,
     ];

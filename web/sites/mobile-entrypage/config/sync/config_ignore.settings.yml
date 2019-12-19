@@ -12,5 +12,7 @@ ignored_config_entities:
   20: 'webcomposer_cache.*'
   22: 'mobile_promotions.*'
   24: 'mobile_entrypage.*'
+  26: 'contact_us_config.*'
+  28: 'webcomposer_form_manager.form.contact_us_form.*'
 _core:
   default_config_hash: UVH1aJ4b44UM-VdPVN7hNNuuVqfReJxwfVeDQH1Hvsk

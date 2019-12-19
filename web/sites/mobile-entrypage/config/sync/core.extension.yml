@@ -17,6 +17,8 @@ module:
   config_translation: 0
   contact: 0
   contact_storage: 0
+  contact_tabs: 0
+  contact_us_config: 0
   content_translation: 0
   contextual: 0
   ctools: 0
@@ -49,6 +51,7 @@ module:
   mobile_casino: 0
   mobile_config: 0
   mobile_entrypage: 0
+  mobile_infobar: 0
   mobile_marketing_space: 0
   mobile_owsports: 0
   mobile_product_menu: 0
@@ -89,9 +92,11 @@ module:
   webcomposer_dm: 0
   webcomposer_domain_import: 0
   webcomposer_editor: 0
+  webcomposer_form_manager: 0
   webcomposer_games: 0
   webcomposer_language_access: 0
   webcomposer_language_hierarchy: 0
+  webcomposer_mailer: 0
   webcomposer_marketing_script: 0
   webcomposer_registration_landing_page: 0
   webcomposer_replicate_utility: 0
