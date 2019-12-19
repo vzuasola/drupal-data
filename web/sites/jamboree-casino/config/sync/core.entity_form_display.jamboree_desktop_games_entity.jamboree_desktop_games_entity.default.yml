@@ -14,7 +14,6 @@ dependencies:
     - field.field.jamboree_desktop_games_entity.jamboree_desktop_games_entity.field_game_tag
     - field.field.jamboree_desktop_games_entity.jamboree_desktop_games_entity.field_game_thumbnail
     - field.field.jamboree_desktop_games_entity.jamboree_desktop_games_entity.field_game_title
-    - field.field.jamboree_desktop_games_entity.jamboree_desktop_games_entity.field_search_keywords
     - image.style.thumbnail
   module:
     - entity_reference_views_select
@@ -100,14 +99,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
-    region: content
-  field_search_keywords:
-    weight: 12
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textarea
     region: content
   langcode:
     type: language_select
