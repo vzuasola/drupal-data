@@ -1,0 +1,19 @@
+mobile_sponsor_list_v2.list:
+  title: 'Mobile Sponsor List version 2.0'
+  description: 'List Mobile Sponsor List version 2.0 entities'
+  parent: system.admin_config
+  route_name: mobile_sponsor_list_v2.admin_settings
+
+# Mobile Sponsor List version 2.0 menu items definition
+entity.mobile_sponsor_list_v2.collection:
+  title: 'Default entity list'
+  route_name: entity.mobile_sponsor_list_v2.collection
+  description: 'List Default entity entities'
+  parent: system.admin_structure
+  weight: 100
+
+mobile_sponsor_list_v2.admin.structure.settings:
+  title: Default entity settings
+  description: 'Configure Default entity entities'
+  route_name: mobile_sponsor_list_v2.settings
+  parent: system.admin_structure
