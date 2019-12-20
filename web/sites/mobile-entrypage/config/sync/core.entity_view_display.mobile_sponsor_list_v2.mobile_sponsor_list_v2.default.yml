@@ -1,0 +1,39 @@
+uuid: fe63e84e-6bd0-4207-a633-451abc0ce724
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.mobile_sponsor_list_v2.mobile_sponsor_list_v2.field_title
+  module:
+    - mobile_sponsor_list_v2
+    - user
+id: mobile_sponsor_list_v2.mobile_sponsor_list_v2.default
+targetEntityType: mobile_sponsor_list_v2
+bundle: mobile_sponsor_list_v2
+mode: default
+content:
+  field_title:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  name:
+    label: above
+    type: string
+    weight: -4
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  user_id:
+    label: hidden
+    type: author
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

@@ -10,13 +10,13 @@ use Drupal\Core\Entity\EntityTypeInterface;
 use Drupal\user\UserInterface;
 
 /**
- * Defines the Default entity entity.
+ * Defines the Mobile Sponsor List version 2.0 entity.
  *
  * @ingroup mobile_sponsor_list_v2
  *
  * @ContentEntityType(
  *   id = "mobile_sponsor_list_v2",
- *   label = @Translation("Default entity"),
+ *   label = @Translation("Mobile Sponsor List version 2.0"),
  *   handlers = {
  *     "view_builder" = "Drupal\Core\Entity\EntityViewBuilder",
  *     "list_builder" = "Drupal\mobile_sponsor_list_v2\MobileSponsorListv2ListBuilder",
@@ -37,7 +37,7 @@ use Drupal\user\UserInterface;
  *   base_table = "mobile_sponsor_list_v2",
  *   data_table = "mobile_sponsor_list_v2_field_data",
  *   translatable = TRUE,
- *   admin_permission = "administer default entity entities",
+ *   admin_permission = "administer Mobile Sponsor List version 2.0 entities",
  *   entity_keys = {
  *     "id" = "id",
  *     "label" = "name",
@@ -153,7 +153,7 @@ class MobileSponsorListv2 extends ContentEntityBase implements MobileSponsorList
 
     $fields['user_id'] = BaseFieldDefinition::create('entity_reference')
       ->setLabel(t('Authored by'))
-      ->setDescription(t('The user ID of author of the Default entity entity.'))
+      ->setDescription(t('The user ID of author of the Mobile Sponsor List version 2.0 entity.'))
       ->setRevisionable(TRUE)
       ->setSetting('target_type', 'user')
       ->setSetting('handler', 'default')
@@ -178,7 +178,7 @@ class MobileSponsorListv2 extends ContentEntityBase implements MobileSponsorList
 
     $fields['name'] = BaseFieldDefinition::create('string')
       ->setLabel(t('Name'))
-      ->setDescription(t('The name of the Default entity entity.'))
+      ->setDescription(t('The name of the Mobile Sponsor List version 2.0 entity.'))
       ->setSettings([
         'max_length' => 50,
         'text_processing' => 0,
@@ -198,7 +198,7 @@ class MobileSponsorListv2 extends ContentEntityBase implements MobileSponsorList
 
     $fields['status'] = BaseFieldDefinition::create('boolean')
       ->setLabel(t('Publishing status'))
-      ->setDescription(t('A boolean indicating whether the Default entity is published.'))
+      ->setDescription(t('A boolean indicating whether the Mobile Sponsor List version 2.0 is published.'))
       ->setDefaultValue(TRUE);
 
     $fields['created'] = BaseFieldDefinition::create('created')

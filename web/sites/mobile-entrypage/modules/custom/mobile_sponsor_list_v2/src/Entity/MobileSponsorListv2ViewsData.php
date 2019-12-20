@@ -5,7 +5,7 @@ namespace Drupal\mobile_sponsor_list_v2\Entity;
 use Drupal\views\EntityViewsData;
 
 /**
- * Provides Views data for Default entity entities.
+ * Provides Views data for Mobile Sponsor List version 2.0 entities.
  */
 class MobileSponsorListv2ViewsData extends EntityViewsData {
 
