@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.mobile_sponsor_list_v2.mobile_sponsor_list_v2.field_sponsor_svg_class
     - field.field.mobile_sponsor_list_v2.mobile_sponsor_list_v2.field_title
   module:
     - mobile_sponsor_list_v2
@@ -11,36 +12,28 @@ targetEntityType: mobile_sponsor_list_v2
 bundle: mobile_sponsor_list_v2
 mode: default
 content:
-  field_title:
-    weight: 6
+  field_sponsor_svg_class:
+    weight: 1
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
     region: content
-  langcode:
-    type: language_select
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  translation:
     weight: 2
     region: content
-    settings:
-      include_locked: true
+    settings: {  }
     third_party_settings: {  }
-  name:
-    type: string_textfield
-    weight: -4
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  user_id:
-    type: entity_reference_autocomplete
-    weight: 5
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    region: content
-    third_party_settings: {  }
-hidden: {  }
+hidden:
+  langcode: true
+  name: true
+  user_id: true
