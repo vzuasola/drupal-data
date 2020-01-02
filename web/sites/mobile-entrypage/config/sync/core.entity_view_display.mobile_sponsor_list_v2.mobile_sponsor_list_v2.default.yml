@@ -3,16 +3,39 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.mobile_sponsor_list_v2.mobile_sponsor_list_v2.field_link_target
+    - field.field.mobile_sponsor_list_v2.mobile_sponsor_list_v2.field_sponsor_link
     - field.field.mobile_sponsor_list_v2.mobile_sponsor_list_v2.field_sponsor_svg_class
     - field.field.mobile_sponsor_list_v2.mobile_sponsor_list_v2.field_title
   module:
+    - link
     - mobile_sponsor_list_v2
+    - options
     - user
 id: mobile_sponsor_list_v2.mobile_sponsor_list_v2.default
 targetEntityType: mobile_sponsor_list_v2
 bundle: mobile_sponsor_list_v2
 mode: default
 content:
+  field_link_target:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_sponsor_link:
+    weight: 5
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
   field_sponsor_svg_class:
     weight: 2
     label: above
