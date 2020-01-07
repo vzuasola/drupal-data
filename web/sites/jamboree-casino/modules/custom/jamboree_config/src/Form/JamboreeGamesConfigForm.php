@@ -105,5 +105,18 @@ class JamboreeGamesConfigForm extends FormBase {
       '#default_value' => $this->get('subcategory_all_label') ?? "ALL",
       '#translatable' => TRUE,
     ];
+
+    $form['more_category_label'] = [
+      '#type' => 'details',
+      '#title' => t('More Category Label Configuration'),
+      '#group' => 'advanced',
+    ];
+
+    $form['more_category_label']['more_label'] = [
+      '#type' => 'textfield',
+      '#title' => t('More Label'),
+      '#default_value' => $this->get('more_label') ?? "More",
+      '#translatable' => TRUE,
+    ];
   }
 }
