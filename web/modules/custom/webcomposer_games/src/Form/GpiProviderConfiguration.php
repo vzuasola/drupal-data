@@ -75,7 +75,6 @@ class GpiProviderConfiguration extends FormBase {
       '#description' => $this->t('Defines the GPI Game Url'),
       '#default_value' => $this->get('gpi_game_url'),
       '#required' => false,
-      '#translatable' => TRUE,
     ];
 
     $form['gen_config']['gpi_lottery_keno_version_no'] = [
@@ -84,7 +83,6 @@ class GpiProviderConfiguration extends FormBase {
       '#description' => $this->t('Defines the  GPI lottery Keno Version Number'),
       '#default_value' => $this->get('gpi_lottery_keno_version_no'),
       '#required' => false,
-      '#translatable' => TRUE,
     ];
 
     $form['gen_config']['gpi_vendor_id'] = [
@@ -93,7 +91,6 @@ class GpiProviderConfiguration extends FormBase {
       '#description' => $this->t('Defines the  GPI  Vendor Id'),
       '#default_value' => $this->get('gpi_vendor_id'),
       '#required' => false,
-      '#translatable' => TRUE,
     ];
 
   }
@@ -111,7 +108,6 @@ class GpiProviderConfiguration extends FormBase {
       '#title' => $this->t('Supported Currencies'),
       '#description' => $this->t("Currency mapping for " . $value),
       '#default_value' => $this->get($key . '_currency'),
-      '#translatable' => TRUE,
       '#required' => false,
     ];
 
@@ -120,7 +116,6 @@ class GpiProviderConfiguration extends FormBase {
       '#title' => $this->t('Language Mapping'),
       '#description' => $this->t("Language mapping for " . $value),
       '#default_value' => $this->get($key . '_language_mapping'),
-      '#translatable' => TRUE,
       '#required' => false,
     ];
 
@@ -129,7 +124,6 @@ class GpiProviderConfiguration extends FormBase {
       '#title' => $this->t('Country'),
       '#description' => $this->t("Define the Unsupported Country code for " . $value),
       '#default_value' => $this->get($key . '_country'),
-      '#translatable' => TRUE,
       '#required' => false,
     ];
 
@@ -138,7 +132,6 @@ class GpiProviderConfiguration extends FormBase {
       '#title' => $this->t('Extra Parameters'),
       '#description' => $this->t("Defines extra parameters that will be added to the game url"),
       '#default_value' => $this->get($key . '_extra_params'),
-      '#translatable' => TRUE,
       '#required' => false,
     ];
 
