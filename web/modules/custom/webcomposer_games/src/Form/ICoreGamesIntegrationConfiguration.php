@@ -238,7 +238,7 @@ class ICoreGamesIntegrationConfiguration extends FormBase {
     $form[$key . '_geoip_domain_override'] = [
       '#type' => 'textarea',
       '#title' => $this->t('GeoIP domain'),
-      '#description' => $this->t("Override the game URL domain base from Geo IP. <br />Use pipe (|) pattern"),
+      '#description' => $this->t("Override the game URL domain base from Geo IP. <br />Use pipe (|) pattern (GeoIP|DomainOverride|server_urlParamOverride)"),
       '#default_value' => $this->get($key . '_geoip_domain_override'),
       '#translatable' => false,
       '#required' => false,
