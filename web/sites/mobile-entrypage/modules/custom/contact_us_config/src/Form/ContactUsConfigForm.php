@@ -70,6 +70,7 @@ class ContactUsConfigForm extends FormBase {
       '#title' => $this->t('Image'),
       '#description' => $this->t('Adds page image to the contact us page.'),
       '#default_value' => $this->get('file_image_page_image'),
+      '#translatable' => TRUE,
       '#upload_location' => 'public://',
       '#upload_validators' => [
         'file_validate_extensions' => ['gif png jpg jpeg'],
