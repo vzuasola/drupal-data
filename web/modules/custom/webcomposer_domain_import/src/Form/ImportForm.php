@@ -91,9 +91,9 @@ class ImportForm extends FormBase {
           [[$this->domainImport, 'importDomainGroup'], [$form_state, $group]]
         ];
 
-        $domainsAvg = ceil(count($domain)/4);
+        $domainsAvg = ceil(count($domain)/3);
         for ($i = 0; $i <= $domainsAvg; $i++) {
-          $domainSlice = array_slice($domain,($i * 4), 4);
+          $domainSlice = array_slice($domain,($i * 3), 3);
           $operations3[] = [[$this->domainImport, 'importDomainPlaceholderTrans'], [$form_state, $domainSlice]];
         }
 
@@ -131,7 +131,7 @@ class ImportForm extends FormBase {
       // delete batch
       $export_time = time();
       $operations = [
-        [[$this->domainImport, 'deleteParagraphs'], [$form_state, $export_time, $operations3]],
+        [[$this->domainImport, 'deleteParagraphs'], [$form_state, $export_time]],
         [[$this->domainImport, 'deleteTaxonomies'], [$form_state, $export_time]],
       ];
 

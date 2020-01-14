@@ -518,7 +518,7 @@ class DomainImport {
       $languages = $availableLanguages['languages'];
       $mainLanguage = $availableLanguages['main'];
       foreach ($domains as $domain) {
-        $context['message'] = "Importing domains - " . $domain;
+        $context['message'] = "Importing domains in default language- " . $domain;
 
         $param = [
           'domain' => $domain,
@@ -648,7 +648,6 @@ class DomainImport {
       foreach (array_slice($languages, 1) as $lang) {
         $termTranslate = [
           'name' => $domain,
-          // 'field_add_placeholder' => $paragraphs,
         ];
 
         // add parent group field term id
@@ -692,7 +691,7 @@ class DomainImport {
                   'value' => $token,
                 ],
                 'field_default_value' => [
-                  'value' => $value,
+                  'value' => $variable[$domain]['variables'][$token],
                 ],
               ]);
               $paragraph[$token]->save();
@@ -712,45 +711,6 @@ class DomainImport {
           // The translation already exists.
         }
       }
-
-      // create other languages terms
-      // foreach (array_slice($languages, 1) as $lang) {
-      //   // load other language variables
-      //   $variable = $this->ImportParser->excel_get_variables($lang);
-      //   $paragraphs = [];
-      //   foreach ($variable[$domain]['variables'] as $token => $value) {
-      //     // create translation paragraph and assign it to term
-      //     if (!is_null($value)) {
-      //       // If paragraph does not exist, continue loop
-      //       if (empty($paragraph[$token])) {
-      //         continue;
-      //       }
-      //       try {
-      //         $paragraph[$token]->addTranslation($lang, [
-      //           'field_placeholder_key' => [
-      //             'value' => $token,
-      //           ],
-      //           'field_default_value' => [
-      //             'value' => $value,
-      //           ],
-      //         ]);
-      //         $paragraph[$token]->save();
-      //         $paragraphs[] = $paragraph[$token];
-      //       } catch (\InvalidArgumentException $e) {
-      //         // The translation already exists.
-      //       }
-      //     }
-      //   }
-
-      //   try {
-      //     $termTranslation = $term->getTranslation($lang);
-      //     $termTranslation->set('field_add_placeholder', $paragraphs);
-      //     $term->save();
-      //   }
-      //   catch (\InvalidArgumentException $e) {
-      //     // The translation already exists.
-      //   }
-      // }
     }
   }
 
@@ -760,15 +720,7 @@ class DomainImport {
    * @param [Array] $form_state
    * @param [Array] &$context
    */
-  public function deleteParagraphs($form_state, $export_time, $operations3, &$context) {
-    // $context['message'] = "Translating domain placeholders";
-    // $batch = [
-    //   'title' => t('Translating Paragraphs'),
-    //   'operations' => $operations3,
-    //   'init_message' => t('Translating domain placeholders'),
-    // ];
-    // batch_set($batch);
-
+  public function deleteParagraphs($form_state, $export_time, &$context) {
     $this->setDataFlags();
     $this->readExcel($form_state, $context);
 
