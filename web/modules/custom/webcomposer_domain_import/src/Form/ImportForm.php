@@ -91,8 +91,10 @@ class ImportForm extends FormBase {
           [[$this->domainImport, 'importDomainGroup'], [$form_state, $group]]
         ];
 
-        for ($i = 1; $i <= count($domain); $i++) {
-          $operations3[] = [[$this->domainImport, 'importDomainPlaceholderTrans'], [$form_state, $domain[$i]]];
+        $domainsAvg = ceil(count($domain)/4);
+        for ($i = 0; $i <= $domainsAvg; $i++) {
+          $domainSlice = array_slice($domain,($i * 4), 4);
+          $operations3[] = [[$this->domainImport, 'importDomainPlaceholderTrans'], [$form_state, $domainSlice]];
         }
 
         $domainsAvg = ceil(count($domain)/$domainBatch);
@@ -110,8 +112,7 @@ class ImportForm extends FormBase {
         ];
         batch_set($batch);
       }
-      // // translate domains batch
-      
+      // translate domains batch
       $batch = [
         'title' => t('Translating Domains'),
         'operations' => $operations2,
@@ -119,12 +120,13 @@ class ImportForm extends FormBase {
       ];
       batch_set($batch);
 
-      // $batch = [
-      //   'title' => t('Translating Paragraphs'),
-      //   'operations' => $operations3,
-      //   'init_message' => t('Translating domain placeholders'),
-      // ];
-      // batch_set($batch);
+      // translate domains placeholoder overrides
+      $batch = [
+        'title' => t('Translating Paragraphs'),
+        'operations' => $operations3,
+        'init_message' => t('Translating domain placeholders'),
+      ];
+      batch_set($batch);
 
       // delete batch
       $export_time = time();
