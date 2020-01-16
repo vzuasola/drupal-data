@@ -473,6 +473,7 @@ class HeaderForm extends FormBase {
       '#title' => $this->t('Excluded Balance Mapping'),
       '#description' => $this->t('Define product IDs one per line'),
       '#default_value' => $this->get('excluded_balance_mapping'),
+      '#translatable' => TRUE,
     ];
 
     $form['balance_group']['currency_label_mapping'] = [
