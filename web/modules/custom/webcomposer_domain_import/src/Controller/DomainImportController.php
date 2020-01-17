@@ -8,7 +8,7 @@ class DomainImportController extends ControllerBase {
   /**
    * Returns a render-able array for a test page.
    */
-  public function content($import_file = null) {
+  public function content() {
     $build = [
       '#markup' => 'Domain Import'
     ];
@@ -17,7 +17,7 @@ class DomainImportController extends ControllerBase {
     // get how many domains per batch
     $domain_batch = $config->get('domains_batch');
     $domain_batch = (int)$domain_batch + 1;
-    $fid = $_GET['import_file'][0];
+    $fid = \Drupal::request()->query->get('import_file')[0];
 
     // form for masterplaceholders
     $build['form_masterplaceholder'] = \Drupal::formBuilder()->getForm(
@@ -28,7 +28,7 @@ class DomainImportController extends ControllerBase {
         'id' => 'domain-import-form-placeholder',
       ]
     );
-    $domains = $domain_import->getExcelDomains($_GET['import_file'][0]);
+    $domains = $domain_import->getExcelDomains($fid);
     foreach ($domains as $group => $domain) {
       // form for domain groups
       $build["form_domain_group_$group"] = \Drupal::formBuilder()->getForm(

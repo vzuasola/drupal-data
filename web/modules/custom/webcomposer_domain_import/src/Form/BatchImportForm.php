@@ -58,7 +58,7 @@ class BatchImportForm extends FormBase {
       '#type' => 'submit',
       '#value' => $this->t('Import'),
       '#name' => $extras['id']. "_submit",
-      '#submit' => $extras['submit_callback']
+      '#submit' => $extras['submit_callback'],
     );
    
     if (isset($extras["domain_slice"])) {
