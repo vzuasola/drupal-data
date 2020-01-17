@@ -52,6 +52,7 @@ class ICoreGamesIntegrationConfiguration extends FormBase {
     'ruby_play' => 'Ruby Play',
     'ezugi_gaming' => 'Ezugi Gaming',
     'wac' => 'We Are Casino',
+    'lottoland' => 'Lottoland'
   ];
 
   protected function getEditableConfigNames() {
