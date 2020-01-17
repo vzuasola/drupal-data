@@ -40,6 +40,14 @@ class SodaCasinoForm extends FormBase {
       '#open' => TRUE,
     ];
 
+    $form['general']['soda_casino_maintenance'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable Maintenance Page'),
+      '#default_value' => $this->get('soda_casino_maintenance'),
+      '#description' => '',
+      '#translatable' => TRUE,
+    ];
+
     $form['general']['soda_casino_lobby_infinite_scroll'] = [
       '#type' => 'checkbox',
       '#title' => $this->t('Enable lobby lazy load (Infinite Scroll)'),
