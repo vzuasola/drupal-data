@@ -59,11 +59,20 @@ class DomainImport {
   private function readExcel($form_state, &$context) {
     $message = 'Reading File...';
     $context['message'] = $message;
-    $file_field = $form_state->getValue('import_file');
-    $fid = $file_field[0];
+    if (is_object($form_state)) {
+      $fid = $form_state->getValue('fid');
+      if (!$fid) {
+        $file_field = $form_state->getValue('import_file');
+        $fid = $file_field[0];
+      }
+    } else {
+      $fid =  $form_state;
+    }
+
     $uri = File::load($fid)->getFileUri();
     $realPath = drupal_realpath($uri);
     $sheets = $this->ExcelParser->readExcel($realPath);
+
     $this->ImportParser->setData($sheets);
     $context['sandbox'] = $this->ImportParser->validate();
   }
@@ -506,7 +515,7 @@ class DomainImport {
    * @param [Array] $form_state
    * @param [Array] &$context
    */
-  public function importDomain($form_state, $domains, &$context) {
+  public function importDomain($form_state, $domains, $group, &$context) {
     $this->setDataFlags();
     $this->readExcel($form_state, $context);
 
@@ -517,13 +526,19 @@ class DomainImport {
       $availableLanguages = $this->get_main_language($filteredLanguages);
       $languages = $availableLanguages['languages'];
       $mainLanguage = $availableLanguages['main'];
+      $terms = \Drupal::entityTypeManager()
+        ->getStorage('taxonomy_term')
+        ->loadByProperties(['name' => $group]);
+        
+      $term = end($terms);
+      $gid =  $term->get('tid')->getValue()[0]['value'];
       foreach ($domains as $domain) {
         $context['message'] = "Importing domains in default language- " . $domain;
 
         $param = [
           'domain' => $domain,
           'vid' => self::DOMAIN,
-          'gid' => $context['results']['gid'],
+          'gid' => $gid,
         ];
 
         $this->createGroupDomain($param, $languages, $mainLanguage);
@@ -571,7 +586,7 @@ class DomainImport {
    * @param [Array] $form_state
    * @param [Array] &$context
    */
-  public function importDomainPlaceholderTrans($form_state, $domains, &$context) {
+  public function importDomainPlaceholderTrans($form_state, $domain, &$context) {
     $this->setDataFlags();
     $this->readExcel($form_state, $context);
 
@@ -582,10 +597,8 @@ class DomainImport {
       $availableLanguages = $this->get_main_language($filteredLanguages);
       $languages = $availableLanguages['languages'];
       $mainLanguage = $availableLanguages['main'];
-      foreach ($domains as $domain) {
-        $context['message'] = "Translating domain's placeholders - " . $domain;
-        $this->paragraphTranslate($domain, $languages);
-      }
+      $context['message'] = "Translating domain's placeholders - " . $domain;
+      $this->paragraphTranslate($domain, $languages);
     } else {
       $context['finished'] = 1;
       $message = t('An error occurred while processing %error_operation .', ['%error_operation' => $context['sandbox']]);
