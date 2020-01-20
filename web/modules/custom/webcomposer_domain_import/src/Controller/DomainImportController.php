@@ -43,7 +43,7 @@ class DomainImportController extends ControllerBase {
       $domain_avg = ceil(count($domain)/$domain_batch);
       for ($i = 0; $i < $domain_avg; $i++) {
         // form for domains
-        $domain_slice = array_slice($domain,($i * $domain_batch), $domain_batch);
+        $domain_slice = array_slice($domain, ($i * $domain_batch), $domain_batch);
         $id = "domain-import-form_". strtolower($group). $i;
         $build[$id] = \Drupal::formBuilder()->getForm(
             '\Drupal\webcomposer_domain_import\Form\BatchImportForm', [

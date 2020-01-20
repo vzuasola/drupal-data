@@ -529,7 +529,7 @@ class DomainImport {
       $terms = \Drupal::entityTypeManager()
         ->getStorage('taxonomy_term')
         ->loadByProperties(['name' => $group]);
-        
+
       $term = end($terms);
       $gid =  $term->get('tid')->getValue()[0]['value'];
       foreach ($domains as $domain) {

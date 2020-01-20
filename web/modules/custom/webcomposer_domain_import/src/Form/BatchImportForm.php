@@ -35,7 +35,7 @@ class BatchImportForm extends FormBase {
     else {
       self::$instanceId++;
     }
-  
+
     return 'batch_import_form' . self::$instanceId;
   }
 
@@ -53,14 +53,14 @@ class BatchImportForm extends FormBase {
       '#tag' => 'p',
       '#value' => $extras["action"],
     );
-    
+
     $form['actions']['domains'] = array(
       '#type' => 'submit',
       '#value' => $this->t('Import'),
       '#name' => $extras['id']. "_submit",
       '#submit' => $extras['submit_callback'],
     );
-   
+
     if (isset($extras["domain_slice"])) {
       $form['domains_list'] = array(
         '#type' => 'hidden',
@@ -123,7 +123,7 @@ class BatchImportForm extends FormBase {
     foreach ($domain_slice as $domain) {
       $operations3[] = [[$this->domainImport, 'importDomainPlaceholderTrans'], [$form_state, $domain]];
     }
-    
+
     // domains batch in default language
     $batch = [
       'title' => t('Importing Domains'),
@@ -131,7 +131,7 @@ class BatchImportForm extends FormBase {
       'init_message' => t('Importing domains '),
     ];
     batch_set($batch);
-  
+
     // translate domains batch
     $batch = [
       'title' => t('Translating Domains'),

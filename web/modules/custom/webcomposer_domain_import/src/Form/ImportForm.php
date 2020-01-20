@@ -36,7 +36,6 @@ class ImportForm extends FormBase {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
- 
     $form['import_file'] = [
       '#type' => 'managed_file',
       '#title' => $this->t('Import file'),
