@@ -132,6 +132,15 @@ class ICoreGamesIntegrationConfiguration extends FormBase {
       '#translatable' => false,
       '#required' => false,
     ];
+
+    $form[$key . '_javascript_assets'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Javascript Assets'),
+      '#description' => $this->t("Define scripts that should be included on game launch. Provide one script per line"),
+      '#default_value' => $this->get($key . '_javascript_assets'),
+      '#translatable' => false,
+      '#required' => false,
+    ];
   }
 
   private function getGameWorksFields(&$form, $key, $value) {
