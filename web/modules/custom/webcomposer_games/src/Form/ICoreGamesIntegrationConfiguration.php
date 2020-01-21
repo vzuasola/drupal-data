@@ -52,6 +52,7 @@ class ICoreGamesIntegrationConfiguration extends FormBase {
     'ruby_play' => 'Ruby Play',
     'ezugi_gaming' => 'Ezugi Gaming',
     'wac' => 'We Are Casino',
+    'lottoland' => 'Lottoland'
   ];
 
   protected function getEditableConfigNames() {
@@ -86,6 +87,10 @@ class ICoreGamesIntegrationConfiguration extends FormBase {
 
         case 'ruby_play':
             $this->getRubyPlayFields($form[$key], $key, $value);
+            break;
+
+        case 'lottoland':
+            $this->getLottolandFields($form[$key], $key, $value);
             break;
 
         default:
@@ -245,6 +250,24 @@ class ICoreGamesIntegrationConfiguration extends FormBase {
     ];
   }
 
+  /**
+   * Adds additional form fields for Lottoland tabs
+   *
+   * @param $form
+   * @param $key
+   * @param $value
+   */
+  private function getLottolandFields(&$form, $key, $value) {
+    $form[$key . '_javascript_assets'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Javascript Assets'),
+      '#description' => $this->t("Define scripts that should be included on game launch. Provide one script per line"),
+      '#default_value' => $this->get($key . '_javascript_assets'),
+      '#translatable' => false,
+      '#required' => false,
+    ];
+  }
+
   private function safariNotifTab(&$form) {
 
     $form['message'] = [
@@ -261,7 +284,6 @@ class ICoreGamesIntegrationConfiguration extends FormBase {
       '#required' => false,
       '#translatable' => TRUE,
     ];
-
   }
 
 }
