@@ -88,6 +88,10 @@ class ICoreGamesIntegrationConfiguration extends FormBase {
         case 'ruby_play':
             $this->getRubyPlayFields($form[$key], $key, $value);
             break;
+            
+        case 'lottoland':
+            $this->getLottolandFields($form[$key], $key, $value);
+            break;
 
         default:
           break;
@@ -129,15 +133,6 @@ class ICoreGamesIntegrationConfiguration extends FormBase {
       '#title' => $this->t('Country'),
       '#description' => $this->t("Define the unsupported country code for " . $value),
       '#default_value' => $this->get($key . '_country'),
-      '#translatable' => false,
-      '#required' => false,
-    ];
-
-    $form[$key . '_javascript_assets'] = [
-      '#type' => 'textarea',
-      '#title' => $this->t('Javascript Assets'),
-      '#description' => $this->t("Define scripts that should be included on game launch. Provide one script per line"),
-      '#default_value' => $this->get($key . '_javascript_assets'),
       '#translatable' => false,
       '#required' => false,
     ];
@@ -250,6 +245,24 @@ class ICoreGamesIntegrationConfiguration extends FormBase {
       '#title' => $this->t('GeoIP domain'),
       '#description' => $this->t("Override the game URL domain base from Geo IP. <br />Use pipe (|) pattern (GeoIP|DomainOverride|server_urlParamOverride)"),
       '#default_value' => $this->get($key . '_geoip_domain_override'),
+      '#translatable' => false,
+      '#required' => false,
+    ];
+  }
+
+  /**
+   * Adds additional form fields for Lottoland tabs
+   *
+   * @param $form
+   * @param $key
+   * @param $value
+   */
+  private function getLottolandFields(&$form, $key, $value) {
+    $form[$key . '_javascript_assets'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Javascript Assets'),
+      '#description' => $this->t("Define scripts that should be included on game launch. Provide one script per line"),
+      '#default_value' => $this->get($key . '_javascript_assets'),
       '#translatable' => false,
       '#required' => false,
     ];
