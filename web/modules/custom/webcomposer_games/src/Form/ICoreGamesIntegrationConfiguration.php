@@ -284,7 +284,6 @@ class ICoreGamesIntegrationConfiguration extends FormBase {
       '#required' => false,
       '#translatable' => TRUE,
     ];
-
   }
 
 }
