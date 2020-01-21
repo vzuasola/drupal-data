@@ -6,6 +6,7 @@ use Drupal\file\Entity\File;
 use Drupal\taxonomy\Entity\Term;
 use Drupal\paragraphs\Entity\Paragraph;
 use Drupal\Core\Database\Database;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 
 /**
  * Class DomainImport.
@@ -824,7 +825,7 @@ class DomainImport {
         }
       }
 
-      $this->domainImportFinishedCallback();
+      // $this->domainImportFinishedCallback();
     }
   }
 
@@ -955,6 +956,9 @@ class DomainImport {
    */
   public function domainImportFinishedCallback() {
     drupal_set_message(t('Import successfully Completed!'), 'status');
+    $response = new RedirectResponse(\Drupal::url('webcomposer_dm.manage_domains'), 302);
+    $response->send();
+    return;
   }
 
   /**

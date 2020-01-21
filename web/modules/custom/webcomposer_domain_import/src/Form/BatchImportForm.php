@@ -42,43 +42,48 @@ class BatchImportForm extends FormBase {
   /**
    * {@inheritdoc}
    */
-  public function buildForm(array $form, FormStateInterface $form_state, $extras = []) {
+  public function buildForm(array $form, FormStateInterface $form_state, $args = []) {
     $form['domains'] = array(
-      '#type' => 'container',
-      '#title' => $extras['group'] . " Batch ",
+      '#type' => 'details',
+      '#title' => $args['title'],
+      '#open' => true,
     );
 
     $form['domains']["text"] = array(
       '#type' => 'html_tag',
       '#tag' => 'p',
-      '#value' => $extras["action"],
+      '#value' => $args["action"],
     );
 
-    $form['actions']['domains'] = array(
+    $form['domains']['actions'] = array(
       '#type' => 'submit',
       '#value' => $this->t('Import'),
-      '#name' => $extras['id']. "_submit",
-      '#submit' => $extras['submit_callback'],
+      '#name' => $args['id']. "_submit",
+      '#submit' => $args['submit_callback'],
     );
 
-    if (isset($extras["domain_slice"])) {
+    if (isset($args["domain_slice"])) {
       $form['domains_list'] = array(
         '#type' => 'hidden',
-        '#value' => implode(", ", $extras["domain_slice"]),
+        '#value' => implode(", ", $args["domain_slice"]),
       );
     }
 
-    if (isset($extras["group"])) {
+    if (isset($args["group"])) {
       $form['group'] = array(
         '#type' => 'hidden',
-        '#value' => $extras["group"],
+        '#value' => $args["group"],
       );
     }
 
-    $form['#attributes']['id'] = $extras['id'];
+    $form['#attributes']['id'] = $args['id'];
+    $form['form_name'] = array(
+      '#type' => 'hidden',
+      '#value' => $args['id'],
+    );;
     $form['fid'] = array(
       '#type' => 'hidden',
-      '#value' => $extras['fid'],
+      '#value' => $args['fid'],
     );
 
     return $form;
@@ -96,10 +101,11 @@ class BatchImportForm extends FormBase {
         [[$this->domainImport, 'importPlaceholder'], [$form_state]],
     ];
     $batch = [
-    'title' => t('Importing Domains'),
+    'title' => t('Importing Placeholders'),
     'operations' => $operations,
     'init_message' => t('Importing placeholders'),
     ];
+    $this->setProcessedForms($form_state);
     batch_set($batch);
   }
 
@@ -109,10 +115,11 @@ class BatchImportForm extends FormBase {
     ];
     // domains batch
     $batch = [
-      'title' => t('Importing Domains'),
+      'title' => t('Importing Domain Groups'),
       'operations' => $operations,
       'init_message' => t('Importing domain group - '. $form_state->getValue('group')),
     ];
+    $this->setProcessedForms($form_state);
     batch_set($batch);
   }
 
@@ -123,7 +130,7 @@ class BatchImportForm extends FormBase {
     foreach ($domain_slice as $domain) {
       $operations3[] = [[$this->domainImport, 'importDomainPlaceholderTrans'], [$form_state, $domain]];
     }
-
+    $this->setProcessedForms($form_state);
     // domains batch in default language
     $batch = [
       'title' => t('Importing Domains'),
@@ -151,22 +158,31 @@ class BatchImportForm extends FormBase {
 
   public function submitDomainRemoveBackup(array &$form, FormStateInterface $form_state) {
     // delete batch
-    $export_time = time();
+    $export_time = $_SESSION['webcomposer_domain_import']['export_time'] ?? time();
     $operations = [
       [[$this->domainImport, 'deleteParagraphs'], [$form_state, $export_time]],
       [[$this->domainImport, 'deleteTaxonomies'], [$form_state, $export_time]],
     ];
 
     $batch = [
-      'title' => t('Importing Domains'),
+      'title' => t('Removing Backup'),
       'operations' => $operations,
       'init_message' => t('Batch is ending'),
+      'finished' => [$this->domainImport, 'domainImportFinishedCallback'],
     ];
+    unset($_SESSION['webcomposer_domain_import']['export_time']);
+    $_SESSION['webcomposer_domain_import']['processed_forms'] = [];
     batch_set($batch);
   }
 
   public function submitForm(array &$form, FormStateInterface $form_state) {
     // placeholder
+  }
+
+  private function setProcessedForms($form_state) {
+    $tempstore = $_SESSION['webcomposer_domain_import']['processed_forms'] ?? [];
+    array_push($tempstore, $form_state->getValue('form_name'));
+    $_SESSION['webcomposer_domain_import']['processed_forms'] = $tempstore;
   }
 
 }

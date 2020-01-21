@@ -69,10 +69,12 @@ class ImportForm extends FormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
+    $_SESSION['webcomposer_domain_import']['processed_forms'] = [];
     $config = $this->config('webcomposer_config.toggle_configuration');
     $optimizeImport = $config->get('optimize_import');
 
     if(!empty($optimizeImport)) {
+      $_SESSION['webcomposer_domain_import']['start_processing'] = true;
       $form_state->setRedirect('webcomposer_domain_import.webcomposer_domain_batch_import', [
         'import_file' => $form_state->getValue('import_file')
       ]);
