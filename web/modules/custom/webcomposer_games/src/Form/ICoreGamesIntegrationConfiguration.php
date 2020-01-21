@@ -88,7 +88,7 @@ class ICoreGamesIntegrationConfiguration extends FormBase {
         case 'ruby_play':
             $this->getRubyPlayFields($form[$key], $key, $value);
             break;
-            
+
         case 'lottoland':
             $this->getLottolandFields($form[$key], $key, $value);
             break;
