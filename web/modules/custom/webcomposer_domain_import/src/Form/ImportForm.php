@@ -74,7 +74,6 @@ class ImportForm extends FormBase {
     $optimizeImport = $config->get('optimize_import');
 
     if(!empty($optimizeImport)) {
-      $_SESSION['webcomposer_domain_import']['start_processing'] = true;
       $form_state->setRedirect('webcomposer_domain_import.webcomposer_domain_batch_import', [
         'import_file' => $form_state->getValue('import_file')
       ]);
