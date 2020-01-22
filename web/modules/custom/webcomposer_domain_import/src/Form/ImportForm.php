@@ -74,9 +74,15 @@ class ImportForm extends FormBase {
     $optimizeImport = $config->get('optimize_import');
 
     if(!empty($optimizeImport)) {
-      $form_state->setRedirect('webcomposer_domain_import.webcomposer_domain_batch_import', [
-        'import_file' => $form_state->getValue('import_file')
-      ]);
+      $domain_import = \Drupal::service('webcomposer_domain_import.domain_import');
+      $validate = $domain_import->validateExcelFile($form_state);
+      if (!$validate['status']) {
+        drupal_set_message($validate['message'], 'error');
+      } else {
+        $form_state->setRedirect('webcomposer_domain_import.webcomposer_domain_batch_import', [
+          'import_file' => $form_state->getValue('import_file')
+        ]);
+      }
     }
     else {
       $languages = $this->domainImport->getExcelLanguages($form_state);
