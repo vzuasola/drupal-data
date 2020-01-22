@@ -101,6 +101,28 @@ class DomainImport {
 
     return $this->ImportParser->excel_get_domains();
   }
+   /**
+   * Validates excel file
+   *
+   * @param string $form_state
+   *   Form state after submit.
+   */
+  public function validateExcelFile($form_state) {
+    $this->readExcel($form_state, $context);
+
+    if ($context['sandbox'] === "EXCEL_FORMAT_OK") {
+      return [
+        'status' => true,
+        'message' => $context['sandbox']
+      ];
+    } else {
+      $message = t('An error occurred while processing %error_operation .', ['%error_operation' => $context['sandbox']]);
+      return [
+        'status' => false,
+        'message' => $message
+      ];
+    }
+  }
 
   /**
    * Preparing the Import.
