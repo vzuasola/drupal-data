@@ -2,6 +2,7 @@
 namespace Drupal\webcomposer_domain_import\Controller;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Drupal\Core\Controller\ControllerBase;
+use Drupal\file\Entity\File;
 
 class DomainImportController extends ControllerBase {
 
@@ -21,7 +22,7 @@ class DomainImportController extends ControllerBase {
     $fid = \Drupal::request()->query->get('import_file')[0];
     $ctr = 1;
 
-    if ($fid) {
+    if ($fid && File::load($fid)) {
      // form for masterplaceholders
       $build["domain-import-form-$ctr"] = \Drupal::formBuilder()->getForm(
         '\Drupal\webcomposer_domain_import\Form\BatchImportForm', [
