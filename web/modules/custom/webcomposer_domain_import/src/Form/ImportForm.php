@@ -69,12 +69,13 @@ class ImportForm extends FormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    $_SESSION['webcomposer_domain_import']['processed_forms'] = [];
     $config = $this->config('webcomposer_config.toggle_configuration');
     $optimizeImport = $config->get('optimize_import');
 
     if(!empty($optimizeImport)) {
       $domain_import = \Drupal::service('webcomposer_domain_import.domain_import');
+      $_SESSION['webcomposer_domain_import']['processed_forms'] = [];
+      $_SESSION['webcomposer_domain_import']['export_time'] = time();
       $validate = $domain_import->validateExcelFile($form_state);
       if (!$validate['status']) {
         drupal_set_message($validate['message'], 'error');

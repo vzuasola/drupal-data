@@ -687,7 +687,8 @@ class DomainImport {
         ];
 
         // add parent group field term id
-        if (!empty($term->get('field_select_domain_group')->getValue()[0]['target_id'])) {
+        if ($term->hasField('field_select_domain_group')
+          && !empty($term->get('field_select_domain_group')->getValue()[0]['target_id'])) {
           $termTranslate['field_select_domain_group'] = $term->get('field_select_domain_group')->getValue()[0]['target_id'];
         }
         try {

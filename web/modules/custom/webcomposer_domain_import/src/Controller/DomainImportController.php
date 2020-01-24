@@ -11,7 +11,7 @@ class DomainImportController extends ControllerBase {
    */
   public function content() {
     if (!isset ($_SESSION['webcomposer_domain_import']['export_time'])) {
-      $_SESSION['webcomposer_domain_import']['export_time'] = $export_time = time();
+      $_SESSION['webcomposer_domain_import']['export_time'] = time();
     }
     $processed_forms = $_SESSION['webcomposer_domain_import']['processed_forms'] ?? [];
     $config = $this->config('webcomposer_config.toggle_configuration');
