@@ -111,7 +111,9 @@ class BatchImportForm extends FormBase {
 
   public function submitDomainGroup(array &$form, FormStateInterface $form_state) {
     $operations = [
-      [[$this->domainImport, 'importDomainGroup'], [$form_state, $form_state->getValue('group')]]
+      [[$this->domainImport, 'importDomainGroup'], [$form_state, $form_state->getValue('group')]],
+      [[$this->domainImport, 'importDomainTranslated'], [$form_state, [$form_state->getValue('group')]]],
+      [[$this->domainImport, 'importDomainPlaceholderTrans'], [$form_state, $form_state->getValue('group')]]
     ];
     // domains batch
     $batch = [
