@@ -10,10 +10,10 @@ use Drupal\Core\Datetime\DrupalDateTime;
  * My module form plugin
  *
  * @WebcomposerConfigPlugin(
- *   id = "jamboree_forgot_password",
+ *   id = "jamboree_game_filter",
  *   route = {
  *     "title" = "Game Filter Configuration",
- *     "path" = "/admin/config/jamboree/forgot_password_configuration",
+ *     "path" = "/admin/config/jamboree/game_filter_configuration",
  *   },
  *   menu = {
  *     "title" = "Game Filter Configuration",
