@@ -575,9 +575,10 @@ class DomainImport {
   }
 
   /**
-   * importDomain.
+   * importDomainTranslated.
    *
    * @param [Array] $form_state
+   * @param [Array] $domains
    * @param [Array] &$context
    */
   public function importDomainTranslated($form_state, $domains, &$context) {
@@ -607,6 +608,8 @@ class DomainImport {
    * importDomainPlaceholderTranslated.
    *
    * @param [Array] $form_state
+   * @param [String] $domain
+   * @param [String] $lang
    * @param [Array] &$context
    */
   public function importDomainPlaceholderTrans($form_state, $domain, &$context) {
@@ -706,7 +709,6 @@ class DomainImport {
     $terms = \Drupal::entityTypeManager()
     ->getStorage('taxonomy_term')
     ->loadByProperties(['name' => $domain]);
-    
     $term = end($terms);
     if (is_object($term)) {
       // get paragraphs under term
