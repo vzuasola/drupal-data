@@ -34,6 +34,7 @@ class DomainImportController extends ControllerBase {
         ]
       );
       $domains = $domain_import->getExcelDomains($fid);
+      $languages = $domain_import->getExcelLanguages($fid);
       foreach ($domains as $group => $domain) {
         $ctr++;
         // form for domain groups
@@ -52,17 +53,29 @@ class DomainImportController extends ControllerBase {
           $ctr++;
           // form for domains
           $domain_slice = array_slice($domain, ($i * $domain_batch), $domain_batch);
-          $id = "domain-import-form-$ctr";
-          $build[$id] = \Drupal::formBuilder()->getForm(
+          $domain_slice_grouped = implode(", ", $domain_slice);
+          $build["domain-import-form-$ctr"] = \Drupal::formBuilder()->getForm(
               '\Drupal\webcomposer_domain_import\Form\BatchImportForm', [
                 'submit_callback' => array('::submitDomainBatch'),
                 'title' => "Import DOMAINS of $group Group",
-                'action' => implode(", ", $domain_slice),
+                'action' => $domain_slice_grouped,
                 'fid' => $fid,
                 'group' => $group,
-                'id' => $id,
+                'id' => "domain-import-form-$ctr",
                 'domain_slice' => $domain_slice,
               ]
+          );
+          $ctr++;
+          $build["domain-import-form-$ctr"] = \Drupal::formBuilder()->getForm(
+            '\Drupal\webcomposer_domain_import\Form\BatchImportForm', [
+              'submit_callback' => array('::submitTranslatePlaceholder'),
+              'title' => "Import DOMAINS Placeholder of $domain_slice_grouped",
+              'action' => $domain_slice_grouped,
+              'fid' => $fid,
+              'group' => $group,
+              'id' => "domain-import-form-$ctr",
+              'domain_slice' => $domain_slice,
+            ]
           );
         }
       }

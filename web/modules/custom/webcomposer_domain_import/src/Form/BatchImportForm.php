@@ -113,8 +113,9 @@ class BatchImportForm extends FormBase {
     $operations = [
       [[$this->domainImport, 'importDomainGroup'], [$form_state, $form_state->getValue('group')]],
       [[$this->domainImport, 'importDomainTranslated'], [$form_state, [$form_state->getValue('group')]]],
-      [[$this->domainImport, 'importDomainPlaceholderTrans'], [$form_state, $form_state->getValue('group')]]
+      [[$this->domainImport, 'importDomainPlaceholderTrans'], [$form_state, $form_state->getValue('group')]],
     ];
+
     // domains batch
     $batch = [
       'title' => t('Importing Domain Groups'),
@@ -129,9 +130,7 @@ class BatchImportForm extends FormBase {
     $domain_slice = explode(", ", $form_state->getValue('domains_list'));
     $operations[] = [[$this->domainImport, 'importDomain'], [$form_state, $domain_slice, $form_state->getValue('group')]];
     $operations2[] = [[$this->domainImport, 'importDomainTranslated'], [$form_state, $domain_slice]];
-    foreach ($domain_slice as $domain) {
-      $operations3[] = [[$this->domainImport, 'importDomainPlaceholderTrans'], [$form_state, $domain]];
-    }
+
     $this->setProcessedForms($form_state);
     // domains batch in default language
     $batch = [
@@ -148,11 +147,19 @@ class BatchImportForm extends FormBase {
       'init_message' => t('Translating domains'),
     ];
     batch_set($batch);
+  }
 
+  public function submitTranslatePlaceholder(array &$form, FormStateInterface $form_state) {
+    $domain_slice = explode(", ", $form_state->getValue('domains_list'));
+    foreach ($domain_slice as $domain) {
+      $operations[] = [[$this->domainImport, 'importDomainPlaceholderTrans'], [$form_state, $domain]];
+    }
+
+    $this->setProcessedForms($form_state);
     // translate domains placeholoder overrides
     $batch = [
       'title' => t('Translating Paragraphs'),
-      'operations' => $operations3,
+      'operations' => $operations,
       'init_message' => t('Translating domain placeholders'),
     ];
     batch_set($batch);
