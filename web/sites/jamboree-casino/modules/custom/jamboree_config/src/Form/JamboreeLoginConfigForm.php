@@ -163,7 +163,7 @@ class JamboreeLoginConfigForm extends FormBase {
       '#title' => t('Cashier URL'),
       '#default_value' => $default_pt_cashier_url,
       '#description' => $this->t('Cashier URL.'),
-      '#translatable' => FALSE,
+      '#translatable' => TRUE,
     ];
 
     $form['login_error_messages'] = [
