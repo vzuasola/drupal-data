@@ -1,0 +1,6 @@
+domain-batch-process:
+  version: 1.x
+  js:
+    js/domain-batch-process.js: {}
+    dependencies:
+    - core/jquery

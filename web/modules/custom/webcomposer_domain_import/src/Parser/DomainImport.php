@@ -6,6 +6,7 @@ use Drupal\file\Entity\File;
 use Drupal\taxonomy\Entity\Term;
 use Drupal\paragraphs\Entity\Paragraph;
 use Drupal\Core\Database\Database;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 
 /**
  * Class DomainImport.
@@ -59,11 +60,20 @@ class DomainImport {
   private function readExcel($form_state, &$context) {
     $message = 'Reading File...';
     $context['message'] = $message;
-    $file_field = $form_state->getValue('import_file');
-    $fid = $file_field[0];
+    if (is_object($form_state)) {
+      $fid = $form_state->getValue('fid');
+      if (!$fid) {
+        $file_field = $form_state->getValue('import_file');
+        $fid = $file_field[0];
+      }
+    } else {
+      $fid =  $form_state;
+    }
+
     $uri = File::load($fid)->getFileUri();
     $realPath = drupal_realpath($uri);
     $sheets = $this->ExcelParser->readExcel($realPath);
+
     $this->ImportParser->setData($sheets);
     $context['sandbox'] = $this->ImportParser->validate();
   }
@@ -90,6 +100,28 @@ class DomainImport {
     $this->readExcel($form_state, $context);
 
     return $this->ImportParser->excel_get_domains();
+  }
+   /**
+   * Validates excel file
+   *
+   * @param string $form_state
+   *   Form state after submit.
+   */
+  public function validateExcelFile($form_state) {
+    $this->readExcel($form_state, $context);
+
+    if ($context['sandbox'] === "EXCEL_FORMAT_OK") {
+      return [
+        'status' => true,
+        'message' => $context['sandbox']
+      ];
+    } else {
+      $message = t('An error occurred while processing %error_operation .', ['%error_operation' => $context['sandbox']]);
+      return [
+        'status' => false,
+        'message' => $message
+      ];
+    }
   }
 
   /**
@@ -506,7 +538,7 @@ class DomainImport {
    * @param [Array] $form_state
    * @param [Array] &$context
    */
-  public function importDomain($form_state, $domains, &$context) {
+  public function importDomain($form_state, $domains, $group, &$context) {
     $this->setDataFlags();
     $this->readExcel($form_state, $context);
 
@@ -517,13 +549,19 @@ class DomainImport {
       $availableLanguages = $this->get_main_language($filteredLanguages);
       $languages = $availableLanguages['languages'];
       $mainLanguage = $availableLanguages['main'];
+      $terms = \Drupal::entityTypeManager()
+        ->getStorage('taxonomy_term')
+        ->loadByProperties(['name' => $group]);
+
+      $term = end($terms);
+      $gid =  $term->get('tid')->getValue()[0]['value'];
       foreach ($domains as $domain) {
         $context['message'] = "Importing domains in default language- " . $domain;
 
         $param = [
           'domain' => $domain,
           'vid' => self::DOMAIN,
-          'gid' => $context['results']['gid'],
+          'gid' => $gid,
         ];
 
         $this->createGroupDomain($param, $languages, $mainLanguage);
@@ -537,9 +575,10 @@ class DomainImport {
   }
 
   /**
-   * importDomain.
+   * importDomainTranslated.
    *
    * @param [Array] $form_state
+   * @param [Array] $domains
    * @param [Array] &$context
    */
   public function importDomainTranslated($form_state, $domains, &$context) {
@@ -569,9 +608,11 @@ class DomainImport {
    * importDomainPlaceholderTranslated.
    *
    * @param [Array] $form_state
+   * @param [String] $domain
+   * @param [String] $lang
    * @param [Array] &$context
    */
-  public function importDomainPlaceholderTrans($form_state, $domains, &$context) {
+  public function importDomainPlaceholderTrans($form_state, $domain, &$context) {
     $this->setDataFlags();
     $this->readExcel($form_state, $context);
 
@@ -582,10 +623,8 @@ class DomainImport {
       $availableLanguages = $this->get_main_language($filteredLanguages);
       $languages = $availableLanguages['languages'];
       $mainLanguage = $availableLanguages['main'];
-      foreach ($domains as $domain) {
-        $context['message'] = "Translating domain's placeholders - " . $domain;
-        $this->paragraphTranslate($domain, $languages);
-      }
+      $context['message'] = "Translating domain's placeholders - " . $domain;
+      $this->paragraphTranslate($domain, $languages);
     } else {
       $context['finished'] = 1;
       $message = t('An error occurred while processing %error_operation .', ['%error_operation' => $context['sandbox']]);
@@ -651,7 +690,8 @@ class DomainImport {
         ];
 
         // add parent group field term id
-        if (!empty($term->get('field_select_domain_group')->getValue()[0]['target_id'])) {
+        if ($term->hasField('field_select_domain_group')
+          && !empty($term->get('field_select_domain_group')->getValue()[0]['target_id'])) {
           $termTranslate['field_select_domain_group'] = $term->get('field_select_domain_group')->getValue()[0]['target_id'];
         }
         try {
@@ -669,7 +709,6 @@ class DomainImport {
     $terms = \Drupal::entityTypeManager()
     ->getStorage('taxonomy_term')
     ->loadByProperties(['name' => $domain]);
-    
     $term = end($terms);
     if (is_object($term)) {
       // get paragraphs under term
@@ -811,7 +850,7 @@ class DomainImport {
         }
       }
 
-      $this->domainImportFinishedCallback();
+      // $this->domainImportFinishedCallback();
     }
   }
 
@@ -942,6 +981,9 @@ class DomainImport {
    */
   public function domainImportFinishedCallback() {
     drupal_set_message(t('Import successfully Completed!'), 'status');
+    $response = new RedirectResponse(\Drupal::url('webcomposer_dm.manage_domains'), 302);
+    $response->send();
+    return;
   }
 
   /**
