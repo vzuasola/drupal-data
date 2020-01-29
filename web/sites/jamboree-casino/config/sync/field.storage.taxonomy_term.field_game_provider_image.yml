@@ -1,14 +1,14 @@
-uuid: 660d1742-d93f-4edb-8961-3866510e2fa4
+uuid: 35e59863-073a-48e8-aed9-7356d01a1e8f
 langcode: ja
 status: true
 dependencies:
   module:
     - file
     - image
-    - jamboree_mobile_games
-id: jamboree_mobile_games_entity.field_game_thumbnail
-field_name: field_game_thumbnail
-entity_type: jamboree_mobile_games_entity
+    - taxonomy
+id: taxonomy_term.field_game_provider_image
+field_name: field_game_provider_image
+entity_type: taxonomy_term
 type: image
 settings:
   uri_scheme: public

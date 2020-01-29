@@ -1,27 +1,20 @@
-uuid: 17e93009-fc70-48ba-b117-f221a02addab
+uuid: 7ed253f5-c4fd-4702-9322-2d10c41a6717
 langcode: ja
 status: true
 dependencies:
   config:
-    - field.storage.jamboree_desktop_games_entity.field_game_thumbnail
+    - field.storage.taxonomy_term.field_game_provider_image_banner
+    - taxonomy.vocabulary.game_provider
   module:
-    - content_translation
     - image
-    - jamboree_desktop_games
-third_party_settings:
-  content_translation:
-    translation_sync:
-      file: file
-      alt: '0'
-      title: '0'
-id: jamboree_desktop_games_entity.jamboree_desktop_games_entity.field_game_thumbnail
-field_name: field_game_thumbnail
-entity_type: jamboree_desktop_games_entity
-bundle: jamboree_desktop_games_entity
-label: 'Game Thumbnail'
+id: taxonomy_term.game_provider.field_game_provider_image_banner
+field_name: field_game_provider_image_banner
+entity_type: taxonomy_term
+bundle: game_provider
+label: 'Game Provider Image Banner'
 description: ''
-required: true
-translatable: true
+required: false
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
