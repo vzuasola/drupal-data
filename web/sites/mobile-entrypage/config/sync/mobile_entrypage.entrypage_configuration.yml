@@ -3,3 +3,10 @@ view_less_text: 'VIEW LESS'
 download_app_text: 'DOWNLOAD APP'
 contact_us_home_text: 'CONTACT US'
 parnerts_and_sponsor_title_text: 'PARTNERS & SPONSORS'
+advanced__active_tab: edit-entrypage-configuration-footer
+mobile_language_select: 'SELECT YOUR LANGUAGE'
+mobile_language_description_select:
+  value: ''
+  format: basic_html
+value: null
+format: null
