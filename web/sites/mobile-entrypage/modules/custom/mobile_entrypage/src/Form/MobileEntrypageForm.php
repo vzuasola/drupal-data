@@ -32,12 +32,24 @@ class MobileEntrypageForm extends FormBase {
   /**
    * {@inheritdoc}
    */
-  public function form(array $form, FormStateInterface $form_state) {
+  public function form(array $form, FormStateInterface $form_state)
+  {
+    $form['advanced'] = [
+      '#type' => 'vertical_tabs',
+      '#title' => t('Entrypage Configuration'),
+    ];
+
+    $this->sectionEntrypageConfigs($form);
+    $this->sectionEntrypageFooter($form);
+
+    return $form;
+  }
+
+  private function sectionEntrypageConfigs(array &$form) {
     $form['entrypage_configuration'] = [
       '#type' => 'details',
-      '#title' => $this->t('Entrypage Configuration'),
-      '#collapsible' => TRUE,
-      '#open' => TRUE,
+      '#title' => t('Entrypage Configuration'),
+      '#group' => 'advanced',
     ];
 
     $form['entrypage_configuration']['all_apps_text'] = [
@@ -74,7 +86,30 @@ class MobileEntrypageForm extends FormBase {
       '#default_value' => $this->get('parnerts_and_sponsor_title_text'),
       '#translatable' => true,
     ];
+  }
 
-    return $form;
+  private function sectionEntrypageFooter(array &$form) {
+    $form['entrypage_configuration_footer'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Language Selector'),
+      '#group' => 'advanced',
+    ];
+
+    $form['entrypage_configuration_footer']['mobile_language_select'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Select Language Text'),
+      '#description' => $this->t('Select Language text for language lightbox.'),
+      '#default_value' => $this->get('mobile_language_select'),
+      '#translatable' => TRUE
+    ];
+
+    $defaultValue = $this->get('mobile_language_description_select');
+    $form['entrypage_configuration_footer']['mobile_language_description_select'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('Select Language Description Text'),
+      '#default_value' => $defaultValue['value'],
+      '#format' => $defaultValue['format'],
+      '#translatable' => true,
+    ];
   }
 }
