@@ -91,7 +91,7 @@ class MobileEntrypageForm extends FormBase {
   private function sectionEntrypageFooter(array &$form) {
     $form['entrypage_configuration_footer'] = [
       '#type' => 'details',
-      '#title' => $this->t('Language Selector'),
+      '#title' => $this->t('India Language Selector'),
       '#group' => 'advanced',
     ];
 
