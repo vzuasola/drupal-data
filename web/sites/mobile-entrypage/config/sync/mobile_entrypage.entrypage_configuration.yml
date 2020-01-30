@@ -6,7 +6,7 @@ parnerts_and_sponsor_title_text: 'PARTNERS & SPONSORS'
 advanced__active_tab: edit-entrypage-configuration-footer
 mobile_language_select: 'SELECT YOUR LANGUAGE'
 mobile_language_description_select:
-  value: ''
+  value: "<p>Please select your preferred language for a more personalised experience with Dafabet.</p>\r\n"
   format: basic_html
 value: null
 format: null
