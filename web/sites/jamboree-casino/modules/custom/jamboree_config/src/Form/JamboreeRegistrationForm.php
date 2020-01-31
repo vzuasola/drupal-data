@@ -367,6 +367,15 @@ class JamboreeRegistrationForm extends FormBase {
       '#group' => 'advanced',
     ];
 
+    $form['icore_integration']['jpay_api_url'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('JPAY API Endpoint'),
+      '#default_value' => $this->get('jpay_api_url'),
+      '#description' => $this->t('Endpoint for JPAY API'),
+      '#translatable' => TRUE,
+      '#required' => TRUE,
+    ];
+
     $form['icore_integration']['reg_api_url'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Registration API URL'),
