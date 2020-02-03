@@ -9,7 +9,7 @@ dependencies:
     - taxonomy
     - user
 id: game_filter_entity_reference
-label: 'Game Filter Entity Reference'
+label: 'Game Filter Casino Entity Reference'
 module: views
 description: ''
 tag: ''

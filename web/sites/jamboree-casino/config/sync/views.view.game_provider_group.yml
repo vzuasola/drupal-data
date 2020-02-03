@@ -137,10 +137,10 @@ display:
           entity_field: vid
           plugin_id: bundle
       sorts:
-        name:
-          id: name
+        weight:
+          id: weight
           table: taxonomy_term_field_data
-          field: name
+          field: weight
           relationship: none
           group_type: group
           admin_label: ''
@@ -149,7 +149,7 @@ display:
           expose:
             label: ''
           entity_type: taxonomy_term
-          entity_field: name
+          entity_field: weight
           plugin_id: standard
       header: {  }
       footer: {  }
