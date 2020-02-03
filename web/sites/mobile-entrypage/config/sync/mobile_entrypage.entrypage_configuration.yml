@@ -10,3 +10,4 @@ mobile_language_description_select:
   format: basic_html
 value: null
 format: null
+mobile_language_svg_class: in-language
