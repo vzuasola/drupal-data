@@ -103,10 +103,18 @@ class MobileEntrypageForm extends FormBase {
       '#translatable' => TRUE
     ];
 
+    $form['entrypage_configuration_footer']['mobile_language_svg_class'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Svg'),
+      '#description' => $this->t('svg class'),
+      '#default_value' => $this->get('mobile_language_svg_class'),
+      '#translatable' => TRUE
+    ];
+
     $defaultValue = $this->get('mobile_language_description_select');
     $form['entrypage_configuration_footer']['mobile_language_description_select'] = [
       '#type' => 'text_format',
-      '#title' => $this->t('Select Language Description Text'),
+      '#title' => $this->t('Language Description Text'),
       '#default_value' => $defaultValue['value'],
       '#format' => $defaultValue['format'],
       '#translatable' => true,
