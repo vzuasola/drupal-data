@@ -114,7 +114,7 @@ class MobileEntrypageForm extends FormBase {
     $form['entrypage_configuration_footer']['mobile_language_code'] = [
       '#type' => 'textarea',
       '#title' => $this->t('Language Code'),
-      '#description' => $this->t('IN Language Code'),
+      '#description' => $this->t('IN Language Code - <i>"data-lang|data-lang-prefix|language text"</i> example: en-IN|in|English'),
       '#default_value' => $this->get('mobile_language_code')
     ];
 
