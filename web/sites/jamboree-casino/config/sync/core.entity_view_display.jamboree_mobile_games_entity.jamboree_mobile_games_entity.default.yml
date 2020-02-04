@@ -10,6 +10,7 @@ dependencies:
     - field.field.jamboree_mobile_games_entity.jamboree_mobile_games_entity.field_game_code
     - field.field.jamboree_mobile_games_entity.jamboree_mobile_games_entity.field_game_code_icore
     - field.field.jamboree_mobile_games_entity.jamboree_mobile_games_entity.field_game_filter
+    - field.field.jamboree_mobile_games_entity.jamboree_mobile_games_entity.field_game_filter_games
     - field.field.jamboree_mobile_games_entity.jamboree_mobile_games_entity.field_game_provider
     - field.field.jamboree_mobile_games_entity.jamboree_mobile_games_entity.field_game_tag
     - field.field.jamboree_mobile_games_entity.jamboree_mobile_games_entity.field_game_thumbnail
@@ -77,6 +78,14 @@ content:
     region: content
   field_game_filter:
     weight: 13
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_game_filter_games:
+    weight: 14
     label: above
     settings:
       link: true
