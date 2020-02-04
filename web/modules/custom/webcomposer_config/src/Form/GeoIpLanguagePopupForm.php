@@ -81,31 +81,4 @@ class GeoIpLanguagePopupForm extends FormBase {
 
     return $form;
   }
-
-  /**
-   * {@inheritdoc}
-   */
-  public function submit(array &$form, FormStateInterface $form_state) {
-    $keys = [
-      'geoip_list',
-    ];
-
-    $geoips = array_map('trim', explode(PHP_EOL, $this->get('geoip_list')));
-
-    foreach ($geoips as $geoip) {
-      $keys[] = strtolower($geoip) . '_popup_content';
-    }
-
-    foreach ($keys as $key) {
-      switch ($key) {
-        case 'geoip_list':
-          $data[$key] = strtolower($form_state->getValue($key));
-          break;
-        default:
-          $data[$key] = $form_state->getValue($key);
-      }
-    }
-
-    $this->save($data);
-  }
 }
