@@ -1,17 +1,17 @@
-uuid: 4cb97ac8-9fed-49b9-bd55-ccc14083c801
+uuid: 208b396a-0cd5-42b7-98f0-c1c3b5107807
 langcode: en
 status: true
 dependencies:
   config:
-    - taxonomy.vocabulary.game_filter
+    - taxonomy.vocabulary.game_filter_games
   module:
     - rest
     - serialization
     - taxonomy
     - user
     - webcomposer_rest_extra
-id: game_filter
-label: 'Game Filter (casino)'
+id: game_filter_games
+label: 'Game Filter (games)'
 module: views
 description: ''
 tag: ''
@@ -131,39 +131,8 @@ display:
           id: vid
           table: taxonomy_term_field_data
           field: vid
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: in
           value:
-            game_filter: game_filter
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
+            game_filter_games: game_filter_games
           entity_type: taxonomy_term
           entity_field: vid
           plugin_id: bundle
@@ -307,7 +276,7 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: api/game_filter
+      path: api/game_filter_games
       pager:
         type: none
         options:

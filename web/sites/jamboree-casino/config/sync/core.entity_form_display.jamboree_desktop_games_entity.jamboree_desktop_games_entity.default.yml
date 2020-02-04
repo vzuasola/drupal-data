@@ -10,6 +10,7 @@ dependencies:
     - field.field.jamboree_desktop_games_entity.jamboree_desktop_games_entity.field_game_code
     - field.field.jamboree_desktop_games_entity.jamboree_desktop_games_entity.field_game_code_icore
     - field.field.jamboree_desktop_games_entity.jamboree_desktop_games_entity.field_game_filter
+    - field.field.jamboree_desktop_games_entity.jamboree_desktop_games_entity.field_game_filter_games
     - field.field.jamboree_desktop_games_entity.jamboree_desktop_games_entity.field_game_provider
     - field.field.jamboree_desktop_games_entity.jamboree_desktop_games_entity.field_game_tag
     - field.field.jamboree_desktop_games_entity.jamboree_desktop_games_entity.field_game_thumbnail
@@ -68,6 +69,12 @@ content:
     region: content
   field_game_filter:
     weight: 11
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_game_filter_games:
+    weight: 12
     settings: {  }
     third_party_settings: {  }
     type: options_select
