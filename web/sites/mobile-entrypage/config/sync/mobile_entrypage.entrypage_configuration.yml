@@ -11,4 +11,4 @@ mobile_language_description_select:
 value: null
 format: null
 mobile_language_svg_class: in-language
-mobile_language_code: "en-IN|English\r\nhi|हिन्दी\r\nte|తెలుగు"
+mobile_language_code: "en-IN|in|English\r\nhi|hi|हिन्दी\r\nte|te|తెలుగు"
