@@ -14,7 +14,7 @@ bundle: game_provider
 label: 'Game Provider Image Banner'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
