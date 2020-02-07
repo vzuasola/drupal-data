@@ -81,6 +81,13 @@ class JamboreeCasinoConfig extends FormBase {
       '#translatable' => TRUE,
     ];
 
+    $form['page_setting']['casino'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Casino Page Title'),
+      '#default_value' => $this->get('casino'),
+      '#translatable' => TRUE,
+    ];
+
     $form['page_setting']['games'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Games Page Title'),
@@ -280,6 +287,13 @@ class JamboreeCasinoConfig extends FormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Registration'),
       '#default_value' => $this->get('reg_breadcrumb'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['inner_breadcrumb']['casino_breadcrumb'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Casino'),
+      '#default_value' => $this->get('casino_breadcrumb'),
       '#translatable' => TRUE,
     ];
 
