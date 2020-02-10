@@ -13,7 +13,7 @@ entity_type: jamboree_mobile_games_entity
 bundle: jamboree_mobile_games_entity
 label: 'Game Category'
 description: ''
-required: true
+required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''
