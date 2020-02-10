@@ -73,6 +73,12 @@ class MobileMenuConfiguration extends ConfigFormBase {
       '#maxlength' => 256,
     ];
 
+    $form['account']['mobile_menu_cashier_links_class'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Cashier Link Class'),
+      '#default_value' => $config->get('mobile_menu_cashier_links_class'),
+    ];
+
     // Promotion Link.
     $form['account']['mobile_menu_promotion_label'] = [
       '#type' => 'textfield',
@@ -88,6 +94,13 @@ class MobileMenuConfiguration extends ConfigFormBase {
       '#maxlength' => 256,
     ];
 
+    $form['account']['mobile_menu_promotion_class'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Promotion Link Class'),
+      '#default_value' => $config->get('mobile_menu_promotion_class'),
+    ];
+
+
     return parent::buildForm($form, $form_state);
   }
 
@@ -99,8 +112,10 @@ class MobileMenuConfiguration extends ConfigFormBase {
       'mobile_menu_language_lightbox_title',
       'mobile_menu_cashier_links_label',
       'mobile_menu_cashier_links',
+      'mobile_menu_cashier_links_class',
       'mobile_menu_promotion_label',
       'mobile_menu_promotion_url',
+      'mobile_menu_promotion_class',
     ];
 
     foreach ($keys as $key) {
