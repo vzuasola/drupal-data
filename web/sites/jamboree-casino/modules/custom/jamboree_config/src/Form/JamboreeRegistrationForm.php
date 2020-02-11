@@ -196,6 +196,12 @@ class JamboreeRegistrationForm extends FormBase {
       '#default_value' => $this->get('error_promotions'),
       '#translatable' => TRUE,
     ];
+    $form['reg_form']['errors']['error_captcha'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Registration Error Message for Captcha Field'),
+      '#default_value' => $this->get('error_captcha'),
+      '#translatable' => TRUE,
+    ];
     $form['reg_form']['errors']['service_not_available'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Registration Error Message if Service is not Available'),
@@ -359,6 +365,24 @@ class JamboreeRegistrationForm extends FormBase {
       '#type' => 'details',
       '#title' => t('Icore Integration Settings'),
       '#group' => 'advanced',
+    ];
+
+    $form['icore_integration']['jpay_api_url'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('JPAY API Endpoint'),
+      '#default_value' => $this->get('jpay_api_url'),
+      '#description' => $this->t('Endpoint for JPAY API'),
+      '#translatable' => TRUE,
+      '#required' => TRUE,
+    ];
+
+    $form['icore_integration']['jpay_site_id'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('JPAY Site ID'),
+      '#default_value' => $this->get('jpay_site_id'),
+      '#description' => $this->t('JPAY Site ID'),
+      '#translatable' => TRUE,
+      '#required' => TRUE,
     ];
 
     $form['icore_integration']['reg_api_url'] = [
