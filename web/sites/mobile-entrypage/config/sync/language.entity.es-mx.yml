@@ -1,0 +1,9 @@
+uuid: 71ede0c5-1f94-49b4-a59d-668e816ff16f
+langcode: en
+status: true
+dependencies: {  }
+id: es-mx
+label: 'Spanish, Mexico'
+direction: ltr
+weight: 10
+locked: false
