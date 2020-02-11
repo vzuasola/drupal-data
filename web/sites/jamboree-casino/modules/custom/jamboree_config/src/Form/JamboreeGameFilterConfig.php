@@ -60,6 +60,12 @@ class JamboreeGameFilterConfig extends FormBase {
       '#default_value' => $this->get('game_filter_title'),
       '#translatable' => TRUE,
     ];
+    $form['game_filter']['form']['game_filter_button_label'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Game filter button label'),
+      '#default_value' => $this->get('game_filter_button_label'),
+      '#translatable' => TRUE,
+    ];
     $form['game_filter']['game_filter_game_provider'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Game provider title'),
