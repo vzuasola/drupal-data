@@ -312,8 +312,7 @@ class ImportParser {
     }
 
     $columns = $this->excel_filter_column($language);
-
-    $row = array_values($this->rows[$language]);
+    $row = array_values($this->sanitize_array($this->rows[$language]));
     $domains = $row[0];
     $domains = array_values($domains);
 
@@ -332,7 +331,7 @@ class ImportParser {
       $this->variables[$language][$domain]['type'] = $this->excel_get_domain_type($domain);
 
       $columns[0] = array_values($columns[0]);
-      $columns[$key] = array_values($columns[$key]);
+      $columns[$key] = array_values($this->sanitize_array($columns[$key]));
 
       // Unset label as part of domain tokens.
       unset($columns[$key][0]);
@@ -542,7 +541,7 @@ class ImportParser {
       unset($domain[1]);
 
       // Remove nulls and sort domain list.
-      $domain = array_filter($domain, 'strlen');
+      $domain = $this->sanitize_array($domain);
       asort($domain);
       $domain = array_values($domain);
 
