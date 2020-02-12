@@ -29,7 +29,7 @@ class JamboreeGameFilterConfig extends FormBase {
    * {@inheritdoc}
    */
   protected function getEditableConfigNames() {
-    return ['jamboree_config.game_filter_configuration'];
+    return ['jamboree_config.game_filter'];
   }
 
   public function form(array $form, FormStateInterface $form_state) {
