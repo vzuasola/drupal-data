@@ -87,6 +87,7 @@ module:
   webcomposer_audit_export: 0
   webcomposer_avaya: 0
   webcomposer_cache: 0
+  webcomposer_cdn: 0
   webcomposer_config: 0
   webcomposer_config_schema: 0
   webcomposer_dashboard: 0
@@ -103,6 +104,7 @@ module:
   webcomposer_replicate_utility: 0
   webcomposer_rest_extra: 0
   webcomposer_seo: 0
+  webcomposer_site_page_not_found: 0
   webcomposer_sitemap: 0
   webcomposer_slider_v2: 0
   webcomposer_territory_blocking: 0

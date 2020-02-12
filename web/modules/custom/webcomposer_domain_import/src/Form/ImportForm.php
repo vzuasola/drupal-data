@@ -16,6 +16,7 @@ class ImportForm extends FormBase {
    * @var domainImport
    */
   protected $domainImport;
+  protected static $instanceId;
 
   /**
    * Constructor.
@@ -47,9 +48,13 @@ class ImportForm extends FormBase {
       '#description' => t('Upload a file to Import Domains! Supported format xlsx'),
     ];
 
-    $form['submit'] = [
+    $form['actions'] = [
+      '#type' => 'actions',
+    ];
+
+    $form['actions']['next'] = [
       '#type' => 'submit',
-      '#value' => $this->t('Import'),
+      '#value' => $this->t('Next'),
     ];
     return $form;
   }
@@ -65,57 +70,20 @@ class ImportForm extends FormBase {
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $config = $this->config('webcomposer_config.toggle_configuration');
-
     $optimizeImport = $config->get('optimize_import');
 
     if(!empty($optimizeImport)) {
-      // placeholders batch
-      $operations = [
-        [[$this->domainImport, 'importPlaceholder'], [$form_state]],
-      ];
-      $batch = [
-        'title' => t('Importing Domains'),
-        'operations' => $operations,
-        'init_message' => t('Batch is starting'),
-      ];
-      batch_set($batch);
-
-      // get how many domains per batch
-      $domainBatch = $config->get('domains_batch');
-      $domainBatch = (int)$domainBatch + 1;
-
-      $domains = $this->domainImport->getExcelDomains($form_state);
-      foreach ($domains as $group => $domain) {
-        $operations = [
-          [[$this->domainImport, 'importDomainGroup'], [$form_state, $group]]
-        ];
-
-        $domainsAvg = ceil(count($domain)/$domainBatch);
-        for ($i = 0; $i < $domainsAvg; $i++) {
-          $domainSlice = array_slice($domain,($i * $domainBatch), $domainBatch);
-          $operations[] = [[$this->domainImport, 'importDomain'], [$form_state, $domainSlice]];
-        }
-        // domains batch
-        $batch = [
-          'title' => t('Importing Domains'),
-          'operations' => $operations,
-          'init_message' => t('Importing domains - '. $group),
-        ];
-        batch_set($batch);
+      $domain_import = \Drupal::service('webcomposer_domain_import.domain_import');
+      $_SESSION['webcomposer_domain_import']['processed_forms'] = [];
+      $_SESSION['webcomposer_domain_import']['export_time'] = time();
+      $validate = $domain_import->validateExcelFile($form_state);
+      if (!$validate['status']) {
+        drupal_set_message($validate['message'], 'error');
+      } else {
+        $form_state->setRedirect('webcomposer_domain_import.webcomposer_domain_batch_import', [
+          'import_file' => $form_state->getValue('import_file')
+        ]);
       }
-      // delete batch
-      $export_time = time();
-      $operations = [
-        [[$this->domainImport, 'deleteParagraphs'], [$form_state, $export_time]],
-        [[$this->domainImport, 'deleteTaxonomies'], [$form_state, $export_time]],
-      ];
-
-      $batch = [
-        'title' => t('Importing Domains'),
-        'operations' => $operations,
-        'init_message' => t('Batch is ending'),
-      ];
-      batch_set($batch);
     }
     else {
       $languages = $this->domainImport->getExcelLanguages($form_state);
