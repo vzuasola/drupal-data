@@ -29,7 +29,7 @@ third_party_settings:
         - field_game_category
         - field_game_filter
       parent_name: ''
-      weight: 9
+      weight: 10
       format_type: fieldset
       format_settings:
         id: ''
@@ -41,7 +41,7 @@ third_party_settings:
       children:
         - field_game_filter_games
       parent_name: ''
-      weight: 10
+      weight: 11
       format_type: fieldset
       format_settings:
         id: ''
@@ -55,13 +55,13 @@ bundle: jamboree_mobile_games_entity
 mode: default
 content:
   field_client_type:
-    weight: 5
+    weight: 6
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_enable_free_play:
-    weight: 7
+    weight: 8
     settings:
       display_label: true
     third_party_settings: {  }
@@ -99,7 +99,7 @@ content:
     type: erviews_options_buttons
     region: content
   field_game_code:
-    weight: 3
+    weight: 4
     settings:
       size: 60
       placeholder: ''
@@ -107,7 +107,7 @@ content:
     type: string_textfield
     region: content
   field_game_code_icore:
-    weight: 4
+    weight: 5
     settings:
       size: 60
       placeholder: ''
@@ -163,19 +163,19 @@ content:
     type: erviews_options_select
     region: content
   field_game_provider:
-    weight: 8
+    weight: 9
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_game_tag:
-    weight: 6
+    weight: 7
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_game_thumbnail:
-    weight: 2
+    weight: 3
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -190,8 +190,14 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
 hidden:
-  langcode: true
   name: true
   translation: true
   user_id: true
