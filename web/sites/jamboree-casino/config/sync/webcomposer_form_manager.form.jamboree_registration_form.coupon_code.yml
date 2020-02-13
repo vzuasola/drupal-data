@@ -54,3 +54,13 @@ field_validations:
   valid_date:
     enable: 0
     error_message: 'Date is invalid'
+  invalid_words:
+    enable: 0
+    error_message: 'Invalid/not allowed characters'
+    parameters:
+      invalid_words_list: ''
+  valid_languages:
+    enable: 0
+    error_message: 'This field only accepts specific characters.'
+    parameters:
+      regex_value: ''
