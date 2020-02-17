@@ -139,6 +139,13 @@ class CasinoGamesConfigurationForm extends FormBase {
       '#required' => TRUE,
       '#translatable' => TRUE
     ];
+    $form['category_group']['special_categories']['all_games_categories_text'] = array(
+      '#type' => 'textfield',
+      '#title' => t('All Games Categories Text'),
+      '#description' => t('The text to display for the all games category. <i>Leave blank to not show.</i>'),
+      '#default_value' => $this->get('all_games_categories_text'),
+      '#translatable' => true,
+    );
   }
 
   private function gamesThumbnailSection(&$form) {
