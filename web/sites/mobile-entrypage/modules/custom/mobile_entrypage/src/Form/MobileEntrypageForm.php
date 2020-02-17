@@ -95,6 +95,13 @@ class MobileEntrypageForm extends FormBase {
       '#group' => 'advanced',
     ];
 
+    $form['entrypage_configuration_footer']['enable_popup_in_language'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable popup IN language'),
+      '#default_value' => $this->get('enable_popup_in_language'),
+      '#description' => $this->t('This will enable popup IN language'),
+    ];
+
     $form['entrypage_configuration_footer']['mobile_language_select'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Select Language Text'),
@@ -114,7 +121,7 @@ class MobileEntrypageForm extends FormBase {
     $form['entrypage_configuration_footer']['mobile_language_code'] = [
       '#type' => 'textarea',
       '#title' => $this->t('Language Code'),
-      '#description' => $this->t('IN Language Code - <i>"data-lang|data-lang-prefix|language text"</i> example: en-IN|in|English'),
+      '#description' => $this->t('IN Language Code - <i>"icore-lang|data-lang-prefix|language text"</i> example: en-IN|in|English'),
       '#default_value' => $this->get('mobile_language_code')
     ];
 
