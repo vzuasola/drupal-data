@@ -76,6 +76,12 @@ class JamboreeRegistrationForm extends FormBase {
       '#type' => 'fieldset',
       '#title' => t('Registration Error Messages'),
     ];
+    $form['reg_form']['errors']['error_username'] = [
+      '#type' => 'textfield',
+      '#title' => t('Registration Error Message for Username Field'),
+      '#default_value' => $this->get('error_username'),
+      '#translatable' => TRUE,
+    ];
     $form['reg_form']['errors']['error_firstname'] = [
       '#type' => 'textfield',
       '#title' => t('Registration Error Message for Firstname Field'),
@@ -200,6 +206,16 @@ class JamboreeRegistrationForm extends FormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Registration Error Message if Service is not Available'),
       '#default_value' => $this->get('service_not_available'),
+    ];
+    $form['reg_form']['errors']['icore_username_validation'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Registration Error Message if Username is already exists'),
+      '#default_value' => $this->get('icore_username_validation'),
+    ];
+    $form['reg_form']['errors']['icore_email_validation'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Registration Error Message if Email is already exists'),
+      '#default_value' => $this->get('icore_email_validation'),
     ];
   }
 
