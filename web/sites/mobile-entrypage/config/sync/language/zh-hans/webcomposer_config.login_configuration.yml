@@ -1,22 +1,29 @@
-advanced__active_tab: edit-login-form-details
-lightbox_blurb: '还不是 Dafabet 会员? '
+advanced__active_tab: edit-mobile-login
+lightbox_blurb: 还不是大发用户？
 login_page_blurb: ''
 autologout_box_content:
+  value: "<p>Your session will expire in {seconds} seconds. Do you want to continue your session ?&nbsp;SC</p>\r\n"
   format: basic_html
 notification_content:
+  value: "<p>Your session has timed out due to inactivity.&nbsp;SC</p>\r\n"
   format: basic_html
-mobile_login_button_label: 登录/加入
-username_placeholder: Username
-password_placeholder: 用户名
-login_bottom_label: 登录/加入
-error_message_blank_username: 用户名是必需的。
-error_message_blank_password: 密码是必需的。
-error_message_blank_passname: 用户名是必需的。
-error_message_invalid_passname: 很抱歉，您输入的用户名和密码不匹配。请再试一次。
-error_message_service_not_available: 服务不可用
-error_message_account_suspended: 您的帐户由于登录尝试失败而被锁定。请联系客户支持。
-error_message_account_locked: 您的帐户由于登录尝试失败而被锁定。请联系客户支持。
-autologout_box_title: REMINDER
-notification_title: 'Session Timeout'
-notification_window_title: 'Session Timeout'
-mobile_login_url: 'https://qa1-casino.elysium-dfbt.com/'
+mobile_login_button_label: '登录/加入 '
+username_placeholder: 用户名
+password_placeholder: 密码
+login_bottom_label: 登录
+rememberme_label: 记住用户名
+error_message_blank_username: 请输入用户名。
+error_message_blank_password: 请输入密码。
+error_message_blank_passname: 请检查所有字段，再试一次。
+error_message_invalid_passname: 很抱歉，您输入的用户名和密码不正确，请重新输入。
+error_message_account_suspended: 您的账户已被关闭，请联系客服。
+error_message_account_locked: 您的账户因多次登录失败已被锁定，请联系客服。
+error_message_restricted_country: 您所在的地区访问受限，无法正常浏览我们的网站。若您有任何疑问，请联系我们的在线客服。
+error_message_service_not_available: 无法提供服务
+autologout_box_title: 'REMINDER SC'
+affirmative_button_text: 'Yes'
+negative_button_text: 'No'
+notification_title: 'NOTIFICATION SC'
+notification_window_title: 'Session Timeout SC'
+mobile_login_url: '#'
+mobile_cant_login_url: ''
