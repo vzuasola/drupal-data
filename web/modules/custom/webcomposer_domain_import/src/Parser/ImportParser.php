@@ -312,7 +312,6 @@ class ImportParser {
     }
 
     $columns = $this->excel_filter_column($language);
-
     $row = array_values($this->rows[$language]);
     $domains = $row[0];
     $domains = array_values($domains);
