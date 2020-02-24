@@ -60,7 +60,6 @@ class JamboreeAvayaBlockingForm extends FormBase {
       '#default_value' => $d,
       '#format' => $d['format'],
       '#description' => 'One username per line ',
-      '#translatable' => TRUE,
     ];
   }
 }
