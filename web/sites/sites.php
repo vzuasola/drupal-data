@@ -86,6 +86,11 @@ $sites['dafa-sports.drupal.local'] = 'dafa-sports';
 $sites['dafa-sports.drupal.dev'] = 'dafa-sports';
 $sites['dafa-sports.drupal.env'] = 'dafa-sports';
 
+// Nextbet Site instance
+$sites['nextbet.drupal.local'] = 'nextbet';
+$sites['nextbet.drupal.dev'] = 'nextbet';
+$sites['nextbet.drupal.env'] = 'nextbet';
+
 // Mobile Entrypage Revamp instance
 $sites['mobile-entrypage.drupal.dev'] = 'mobile-entrypage';
 $sites['mobile-entrypage.drupal.local'] = 'mobile-entrypage';

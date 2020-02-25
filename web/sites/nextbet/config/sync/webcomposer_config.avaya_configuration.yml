@@ -1,0 +1,6 @@
+base_url: 'https://qa1-chat.elysium-dfbt.com/c/en/mc-desktop?brand=Dafa&height=760&width=360&title=avayaChatWindow&product=casino'
+url_post: 'https://qa1-chat.elysium-dfbt.com/s/jwt'
+url_post_timout: '5000'
+jwt_key: secret-jwt-key
+validity_time: '1800'
+xdomain_proxy: 'https://qa1-chat.elysium-dfbt.com'
