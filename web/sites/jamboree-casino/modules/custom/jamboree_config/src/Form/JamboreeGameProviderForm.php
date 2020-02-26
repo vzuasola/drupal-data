@@ -37,10 +37,36 @@ class JamboreeGameProviderForm extends FormBase {
       '#title' => t('Game Provider Configurations'),
     ];
 
+    $this->sectionGeneralConfig($form);
     $this->sectionPlaytechGameProvider($form);
     $this->sectionVoidbridgeGameProvider($form);
 
     return $form;
+  }
+
+  private function sectionGeneralConfig(array &$form) {
+
+    $form['general'] = [
+      '#type' => 'details',
+      '#title' => t('General'),
+      '#group' => 'advanced',
+    ];
+
+    $form['general']['gamelaunch_error_message_title'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Game Launch Error Message Title'),
+      '#default_value' => $this->get('gamelaunch_error_message_title'),
+      '#translatable' => TRUE,
+    ];
+
+    $d = $this->get('gamelaunch_error_message');
+    $form['general']['gamelaunch_error_message'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('Game Launch Error Message'),
+      '#default_value' => $d['value'],
+      '#format' => $d['format'],
+      '#translatable' => TRUE,
+    ];
   }
 
   private function sectionPlaytechGameProvider(array &$form) {
