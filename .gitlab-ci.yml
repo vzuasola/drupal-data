@@ -222,6 +222,22 @@ tct-nextbet-stack:
   tags:
     - ipvg-stg-02
 
+tct-nextbet-mobile-stack:
+  stage: deploy-test
+  environment:
+    name: tct
+  variables:
+    env: tct
+    STACK: row-stack
+  script:
+    - export DEPLOY_TOKEN DEPLOY_URL
+    - bash automation/jenkins_deploy.sh
+  when: manual
+  dependencies:
+    - create package
+  tags:
+    - ipvg-stg-02
+
 tct_o:
   stage: deploy-test
   environment:
