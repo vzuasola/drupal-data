@@ -53,11 +53,10 @@ class JamboreeAvayaBlockingForm extends FormBase {
         '#group' => 'advanced',
       ];
 
-    $d = $this->get('users_list');
     $form['page_setting']['users_list'] = [
       '#type' => 'textarea',
       '#title' => $this->t('Users List'),
-      '#default_value' => $d,
+      '#default_value' => $this->get('users_list'),
       '#format' => $d['format'],
       '#description' => 'One username per line ',
     ];
