@@ -1,0 +1,23 @@
+uuid: 2b61d070-cd91-4ae4-95fa-73066afaffa2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_enable_for_agent_players
+    - paragraphs.paragraphs_type.floating_banner_item
+id: paragraph.floating_banner_item.field_enable_for_agent_players
+field_name: field_enable_for_agent_players
+entity_type: paragraph
+bundle: floating_banner_item
+label: 'Enable for Agent players'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
