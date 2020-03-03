@@ -74,3 +74,5 @@ evo_gaming_country: ''
 ebet_country: ''
 cq9_country: ''
 solid_gaming_country: ''
+lottoland_currency: "EUR\r\nUSD\r\nVND\r\nGBP\r\nCNY\r\nMYR\r\nTHB\r\nKRW\r\nIDR\r\nINR\r\nPLN\r\nRUB\r\nRMB"
+lottoland_language_mapping: "en|en-us\r\nsc|zh-cn\r\nid|id-id\r\nkr|ko-kr\r\nth|th-th\r\nvn|vi-vn"

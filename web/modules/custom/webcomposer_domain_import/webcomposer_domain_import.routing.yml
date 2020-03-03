@@ -28,3 +28,14 @@ webcomposer_domain_import.webcomposer_domain_toggle:
     _permission: 'administer wbc domain toggle'
   options:
     _admin_route: TRUE
+
+webcomposer_domain_import.webcomposer_domain_batch_import:
+  path: 'admin/config/webcomposer/domains/batch/import'
+  defaults:
+     _controller: '\Drupal\webcomposer_domain_import\Controller\DomainImportController::content'
+     _title: 'Domain Batch Import'
+  requirements:
+    _permission: 'administer wbc domain toggle'
+  options:
+    _admin_route: TRUE
+
