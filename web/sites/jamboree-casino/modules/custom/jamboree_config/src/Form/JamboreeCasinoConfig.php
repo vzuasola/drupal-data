@@ -81,6 +81,13 @@ class JamboreeCasinoConfig extends FormBase {
       '#translatable' => TRUE,
     ];
 
+    $form['page_setting']['casino'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Casino Page Title'),
+      '#default_value' => $this->get('casino'),
+      '#translatable' => TRUE,
+    ];
+
     $form['page_setting']['games'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Games Page Title'),
@@ -200,6 +207,13 @@ class JamboreeCasinoConfig extends FormBase {
       '#translatable' => true,
     ];
 
+    $form['page_setting']['my_account_title'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('My Account Page Title'),
+      '#default_value' => $this->get('my_account_title') ?? "My Account Title",
+      '#translatable' => true,
+    ];
+
     $form['inner_breadcrumb'] = [
       '#type' => 'details',
       '#title' => t('InnerPage Breadcrumb'),
@@ -276,6 +290,13 @@ class JamboreeCasinoConfig extends FormBase {
       '#translatable' => TRUE,
     ];
 
+    $form['inner_breadcrumb']['casino_breadcrumb'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Casino'),
+      '#default_value' => $this->get('casino_breadcrumb'),
+      '#translatable' => TRUE,
+    ];
+
     $form['inner_breadcrumb']['games_breadcrumb'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Games'),
@@ -329,6 +350,13 @@ class JamboreeCasinoConfig extends FormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Special Promotions'),
       '#default_value' => $this->get('special_promotions_breadcrumb'),
+      '#translatable' => true,
+    ];
+
+    $form['inner_breadcrumb']['my_account_breadcrumb'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('My Account'),
+      '#default_value' => $this->get('my_account_breadcrumb') ?? "My Account Breadcrumb",
       '#translatable' => true,
     ];
 

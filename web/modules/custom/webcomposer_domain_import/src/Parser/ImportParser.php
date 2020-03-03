@@ -312,7 +312,6 @@ class ImportParser {
     }
 
     $columns = $this->excel_filter_column($language);
-
     $row = array_values($this->rows[$language]);
     $domains = $row[0];
     $domains = array_values($domains);
@@ -571,8 +570,8 @@ class ImportParser {
 
     $domain_list = $this->sanitize_array($this->list);
 
-    if (array_diff_key($domain_list, array_unique($domain_list))) {
-      return 'EXCEL_FORMAT_DOMAINS_DUPLICATES';
+    if ($diff = array_diff_key($domain_list, array_unique($domain_list))) {
+      return 'EXCEL_FORMAT_DOMAINS_DUPLICATES: ' . implode(",", $diff);
     }
 
     return 'VALIDATE_OK';

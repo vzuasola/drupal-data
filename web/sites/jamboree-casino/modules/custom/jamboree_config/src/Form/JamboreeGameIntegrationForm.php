@@ -105,6 +105,19 @@ class JamboreeGameIntegrationForm extends FormBase {
       '#required' => TRUE,
     ];
 
+    $form['sub_category_label'] = [
+      '#type' => 'details',
+      '#title' => t('Sub Category Label Configuration'),
+      '#group' => 'advanced',
+    ];
+
+    $form['sub_category_label']['subcategory_all_label'] = [
+      '#type' => 'textfield',
+      '#title' => t('Subcategory All Label'),
+      '#default_value' => $this->get('subcategory_all_label') ?? "ALL",
+      '#translatable' => TRUE,
+    ];
+
   }
 
   /**
