@@ -4,7 +4,7 @@ kiron_virtual_sports_currency: ''
 kiron_virtual_sports_language_mapping: ''
 skywind_currency: "RMB\r\nCNY\r\nMYR\r\nTHB\r\nKRW\r\nIDR\r\nVND\r\nUSD\r\nEUR\r\nGBP\r\nRUB\r\nBRL\r\nMXN\r\nCLP\r\nCOP\r\nPEN\r\nARS\r\nVES"
 skywind_language_mapping: "en|en-US\r\nsc|zh-CN\r\nth|th\r\nkr|ko\r\nvn|vi\r\nid|id\r\nes|ES\r\npt|pt"
-voidbridge_currency: "RMB\r\nCNY\r\nMYR\r\nTHB\r\nKRW\r\nIDR\r\nINR\r\nVND\r\nUSD\r\nEUR\r\nGBP\r\nRUB\r\nBRL\r\nMXN\r\nCLP\r\nCOP\r\nPEN\r\nARS\r\nVES"
+voidbridge_currency: "RMB\r\nCNY\r\nMYR\r\nTHB\r\nKRW\r\nIDR\r\nINR\r\nVND\r\nUSD\r\nEUR\r\nGBP\r\nRUB\r\nBRL\r\nMXN\r\nCLP\r\nCOP\r\nPEN\r\nARS\r\nVES\r\nmBC"
 voidbridge_language_mapping: "en|en-US\r\nsc|zh-CN\r\nth|th\r\nkr|ko\r\nvn|vi\r\nid|id\r\nes|ES\r\npt|pt-BR"
 gold_deluxe_currency: "CNY\r\nMYR\r\nTHB\r\nIDR\r\nVND\r\nUSD\r\nRMB"
 gold_deluxe_language_mapping: "en|en-US\r\nsc|zh-CN\r\nth|th\r\nkr|ko-KR\r\nvn|vi\r\nid|id"
@@ -38,7 +38,7 @@ ebet_currency: ''
 ebet_language_mapping: ''
 asia_gaming_currency: "CNY\r\nRMB\r\nKRW\r\nMYR\r\nUSD\r\nTHB\r\nIDR\r\nVND\r\nEUR\r\nINR\r\nGBP\r\nBRL\r\nJPY\r\nAUD\r\nMMK"
 asia_gaming_language_mapping: "en|en-US\r\nsc|zh-CN\r\nth|th\r\nkr|ko\r\nvn|vi\r\nid|id\r\npt|prt"
-cq9_currency: "RMB\r\nEUR\r\nUSD\r\nGBP\r\nCNY\r\nMYR\r\nTHB\r\nINR\r\nKRW\r\nVND\r\nIDR"
+cq9_currency: "RMB\r\nEUR\r\nUSD\r\nGBP\r\nCNY\r\nMYR\r\nTHB\r\nINR\r\nKRW\r\nVND\r\nIDR\r\nmBC"
 cq9_language_mapping: "en|en-US\r\nsc|zh-CN\r\nth|th\r\nkr|ko-KR\r\nvn|vi\r\nid|id"
 solid_gaming_currency: "RMB\r\nEUR\r\nUSD\r\nCNY\r\nMYR\r\nTHB\r\nVND\r\nIDR\r\nINR\r\nKRW"
 solid_gaming_language_mapping: "en|en-US\r\nsc|zh-CN\r\nth|th\r\nkr|ko-KR\r\nvn|vi\r\nid|id"
@@ -60,7 +60,7 @@ gameworx_quicklotto_plugin_id: ''
 gameworx_quicklotto_operator_id: ''
 gameworx_quicklotto_lobby_type: ''
 gameworx_quicklotto_country: ''
-icore_games_integration_form__active_tab: edit-message
+icore_games_integration_form__active_tab: edit-pgsoft
 asia_gaming_country: ''
 kiron_virtual_sports_country: ''
 gb_virtual_sports_country: ''
@@ -82,7 +82,7 @@ betconstruct_container_id: ''
 value: null
 format: null
 safari_notif:
-  value: "<p>Are you having trouble launching our games in Safari? Ask for help: <a class=\"btn btn-yellow btn-small\" href=\"safari-notification\" target=\"_blank\">Click here for instructions</a> or <a class=\"btn btn-yellow btn-small\" href=\"{domain:entry}/{domain:lang_token}/contact-us?product=casino\" target=\"_blank\">Contact our Customer Support</a><a class=\"btn-close\" href=\"#\" id=\"safari-notif-close\">close</a>\r\n</p>"
+  value: "<p>Are you having trouble launching our games in Safari? Ask for help: <a class=\"btn btn-yellow btn-small\" href=\"safari-notification\" target=\"_blank\">Click here for instructions</a> or <a class=\"btn btn-yellow btn-small\" href=\"{domain:entry}/{domain:lang_token}/contact-us?product=casino\" target=\"_blank\">Contact our Customer Support</a><a class=\"btn-close\" href=\"#\" id=\"safari-notif-close\">close</a></p>\r\n"
   format: basic_html
 fun_gaming_currency: "CNY\r\nRMB"
 fun_gaming_language_mapping: "en|en-US\r\nsc|zh-CN"
@@ -90,15 +90,28 @@ fun_gaming_country: ''
 micro_gaming_currency: "EUR\r\nUSD\r\nGBP\r\nRMB\r\nMYR\r\nTHB\r\nKRW\r\nVND\r\nIDR\r\nINR\r\nPLN\r\nRON\r\nRUB\r\nTRY\r\nKES\r\nGHS\r\nBRL\r\nMXN\r\nCLP\r\nCOP\r\nPEN\r\nARS\r\nVES"
 micro_gaming_language_mapping: "en|en-US\r\nsc|zh-CN\r\nth|th\r\nkr|ko-KR\r\nvn|vi\r\nid|id\r\nes|es\r\npt|pt"
 micro_gaming_country: "AU\r\nFR\r\nHK\r\nSG\r\nZA\r\nTW\r\nUS"
-flow_gaming_currency: "CNY\r\nRMB\r\nMYR\r\nTHB\r\nUSD\r\nINR\r\nKRW"
+flow_gaming_currency: "CNY\r\nRMB\r\nMYR\r\nTHB\r\nUSD\r\nINR\r\nKRW\r\nIDR\r\nVND"
 flow_gaming_language_mapping: "en|en-US\r\nsc|zh-CN"
 flow_gaming_country: "AF\r\nAL\r\nDZ\r\nAO\r\nAU\r\nBS\r\nBE\r\nBW\r\nBG\r\nKH\r\nCA\r\nCZ\r\nDK\r\nEC\r\nEE\r\nET\r\nFR\r\nGH\r\nGY\r\nHK\r\nID\r\nIR\r\nIQ\r\nIL\r\nIT\r\nKW\r\nLA\r\nLV\r\nLT\r\nMX\r\nMM\r\nNA\r\nNI\r\nKP\r\nPK\r\nPA\r\nPG\r\nPT\r\nRO\r\nRS\r\nSG\r\nLK\r\nKR\r\nES\r\nSD\r\nSE\r\nSY\r\nTW\r\nTT\r\nTN\r\nUG\r\nGB\r\nUS\r\nYE\r\nZW"
 ky_gaming_currency: "RMB\r\nCNY"
 ky_gaming_language_mapping: sc|zh-CN
 ky_gaming_country: ''
-pgsoft_currency: "CNY\r\nRMB\r\nEUR\r\nTHB\r\nUSD\r\nIDR\r\nVND\r\nKRW\r\nGBP\r\nRUB\r\nPLN\r\nINR"
-pgsoft_language_mapping: "en|en-US\r\nsc|zh-CN"
+pgsoft_currency: "CNY\r\nRMB\r\nEUR\r\nTHB\r\nUSD\r\nIDR\r\nVND\r\nKRW\r\nGBP\r\nRUB\r\nPLN\r\nINR\r\nmBC"
+pgsoft_language_mapping: "en|en-US\r\nsc|zh-CN\r\nth|th\r\nkr|ko-KR\r\nvn|vi\r\nid|id\r\nes|es\r\npt|pt"
 pgsoft_country: "MY\r\nSG\r\nTW\r\nUS\r\nLV"
-ruby_play_currency: "EUR\r\nUSD\r\nGBP\r\nRMB\r\nCNY\r\nMYR\r\nTHB\r\nKRW\r\nVND\r\nIDR\r\nINR\r\nPLN\r\nRON\r\nRUB"
-ruby_play_language_mapping: "en|en\r\nsc|zh\r\nth|th\r\nkr|ko\r\nvn|vi\r\nid|id\r\nes|es\r\npt|pt-BR"
+ruby_play_currency: "EUR\r\nUSD\r\nGBP\r\nRMB\r\nCNY\r\nMYR\r\nTHB\r\nKRW\r\nVND\r\nIDR\r\nINR\r\nPLN\r\nRON\r\nRUB\r\nBRL\r\nMXN\r\nCLP\r\nPEN\r\nARS"
+ruby_play_language_mapping: "en|en-US\r\nsc|zh-CN\r\nth|th\r\nkr|ko-KR\r\nvn|vi\r\nid|id\r\nes|es\r\npt|pt-BR"
 ruby_play_country: ''
+ezugi_gaming_currency: ''
+ezugi_gaming_language_mapping: ''
+ezugi_gaming_country: ''
+wac_currency: "RMB\r\nEUR\r\nUSD\r\nGBP\r\nMYR\r\nTHB\r\nKRW\r\nVND\r\nIDR\r\nINR\r\nPLN\r\nRON\r\nRUB\r\nTRY\r\nKES\r\nGHS\r\nBRL\r\nMXN\r\nCLP\r\nCOP\r\nPEN\r\nARS\r\nVES"
+wac_language_mapping: "en|en-US\r\nsc|zh-CN\r\nth|th\r\nkr|ko\r\nvn|vi\r\nid|id\r\nes|ES\r\npt|pt"
+wac_country: "ORTIZ|AL,FR,HR,IT,DK,RO,IL\r\nNJOY|US,AU,NL\r\nRed Rake|US,UK,PT,ES,FR,HR,IT,DK,RO,IL\r\nRCT|US,AU,NL\r\nPatagonia|HK,FR,HR,IT,DK,RO,IL"
+asia_gaming_custom_lobbyDomain: ''
+asia_gaming_custom_lobbyDomain_enabled: 0
+ruby_play_geoip_domain_override: 'CN|https://slb01.huaqitps.com|https://test.huaqitps.com'
+lottoland_currency: ''
+lottoland_language_mapping: ''
+lottoland_country: ''
+lottoland_javascript_assets: ''
