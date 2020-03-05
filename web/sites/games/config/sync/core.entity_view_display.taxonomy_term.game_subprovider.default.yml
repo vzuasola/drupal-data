@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.taxonomy_term.game_subprovider.field_supported_currencies
     - field.field.taxonomy_term.game_subprovider.field_um_end
     - field.field.taxonomy_term.game_subprovider.field_um_message
     - field.field.taxonomy_term.game_subprovider.field_um_start
@@ -22,6 +23,13 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_supported_currencies:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
   field_um_end:
     weight: 3
     label: above
