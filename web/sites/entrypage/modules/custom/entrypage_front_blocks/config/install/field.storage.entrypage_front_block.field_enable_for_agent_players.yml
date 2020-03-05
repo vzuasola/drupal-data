@@ -1,0 +1,30 @@
+uuid: 2633227a-cce6-4b96-a60c-4f4fb5f50a92
+langcode: en
+status: true
+dependencies:
+  module:
+    - entrypage_front_blocks
+    - options
+id: entrypage_front_block.field_enable_for_agent_players
+field_name: field_enable_for_agent_players
+entity_type: entrypage_front_block
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '0'
+      label: 'No'
+    -
+      value: '1'
+      label: 'Both (Real and Agent Player)'
+    -
+      value: '2'
+      label: 'Agent Player Only'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
