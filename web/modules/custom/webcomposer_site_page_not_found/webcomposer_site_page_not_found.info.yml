@@ -1,0 +1,5 @@
+name: Webcomposer Site Page Not Found
+type: module
+description: Provides configurations for Page Not Found.
+core: 8.x
+package: Custom
