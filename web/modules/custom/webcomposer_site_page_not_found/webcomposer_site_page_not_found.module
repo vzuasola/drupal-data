@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains webcomposer_site_page_not_found.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function webcomposer_site_page_not_found_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the webcomposer_site_page_not_found module.
+    case 'help.page.webcomposer_site_page_not_found':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Provides configurations for Page Not Found.') . '</p>';
+      return $output;
+
+    default:
+  }
+}

@@ -41,6 +41,7 @@ class JamboreeLoginConfigForm extends FormBase {
     $this->sectionLoginSessionConfig($form);
     $this->sectionChangePassConfig($form);
     $this->sectionChangePassErrorMessages($form);
+    $this->sectionChangePassResetToken($form);
 
     return $form;
   }
@@ -150,53 +151,18 @@ class JamboreeLoginConfigForm extends FormBase {
       '#description' => $this->t('Registration link.'),
       '#translatable' => TRUE,
     ];
-
+    
     $form['login_pt_settings'] = [
       '#type' => 'details',
-      '#title' => $this->t('Playtech Settings'),
-    ];
-
-    $default_pt_casino_name = $this->get('login_pt_casino_name');
-    $form['login_pt_settings']['login_pt_casino_name'] = [
-      '#type' => 'textfield',
-      '#title' => t('Casino Name'),
-      '#default_value' => $default_pt_casino_name,
-      '#translatable' => FALSE,
-    ];
-
-    $default_pt_secret_key = $this->get('login_pt_secret_key');
-    $form['login_pt_settings']['login_pt_secret_key'] = [
-      '#type' => 'textfield',
-      '#title' => t('Secret Key'),
-      '#default_value' => $default_pt_secret_key,
-      '#description' => $this->t('Secret key to be used for integrating with playtech web apis.'),
-      '#translatable' => FALSE,
-    ];
-
-    $default_pt_getbalance_url = $this->get('login_pt_getbalance_url');
-    $form['login_pt_settings']['login_pt_getbalance_url'] = [
-      '#type' => 'textfield',
-      '#title' => t('Playtech Getbalance API URL'),
-      '#default_value' => $default_pt_getbalance_url,
-      '#description' => $this->t('URL to be used to get player balance.'),
-      '#translatable' => FALSE,
+      '#title' => $this->t('Cashier Settings'),
     ];
 
     $default_pt_cashier_url = $this->get('login_pt_cashier_url');
     $form['login_pt_settings']['login_pt_cashier_url'] = [
       '#type' => 'textfield',
-      '#title' => t('Playtech Cashier URL'),
+      '#title' => t('Cashier URL'),
       '#default_value' => $default_pt_cashier_url,
-      '#description' => $this->t('Playtech Cashier URL.'),
-      '#translatable' => FALSE,
-    ];
-
-    $default_pt_error_messages = $this->get('login_pt_error_messages');
-    $form['login_pt_settings']['login_pt_error_messages'] = [
-      '#type' => 'textarea',
-      '#title' => t('Playtech error messages'),
-      '#default_value' => $default_pt_error_messages,
-      '#description' => $this->t('Mapping for error messages from playtech. Format errorCode|errorMessage'),
+      '#description' => $this->t('Cashier URL.'),
       '#translatable' => TRUE,
     ];
 
@@ -220,6 +186,15 @@ class JamboreeLoginConfigForm extends FormBase {
       '#title' => t('Password required'),
       '#default_value' => $default_password_required,
       '#description' => $this->t('Password required error message.'),
+      '#translatable' => TRUE,
+    ];
+
+    $default_login_error_messages_config = $this->get('login_error_messages_config');
+    $form['login_error_messages']['login_error_messages_config'] = [
+      '#type' => 'textarea',
+      '#title' => t('Login Error Messages Config'),
+      '#default_value' => $default_login_error_messages_config,
+      '#description' => $this->t('Mapping for error messages. Format errorCode|errorMessage'),
       '#translatable' => TRUE,
     ];
   }
@@ -331,6 +306,40 @@ class JamboreeLoginConfigForm extends FormBase {
       '#title' => t('Change Password Confirm New Password error message.'),
       '#default_value' => $default_cp_confirm_new_password_required,
       '#description' => $this->t('Change Password Confirm New Password error message.'),
+      '#translatable' => TRUE,
+    ];
+
+    $default_cp_forgot_failed = $this->get('change_pass_failed');
+    $form['change_pass_error_messages']['change_pass_failed'] = [
+      '#type' => 'textfield',
+      '#title' => t('Change Password Failed Error Message.'),
+      '#default_value' => $default_cp_forgot_failed,
+      '#description' => $this->t('Change Password Failed process.'),
+      '#translatable' => TRUE,
+    ];
+  }
+
+  private function sectionChangePassResetToken(array &$form) {
+    $form['reset_token'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Change Password Reset Token Config'),
+    ];
+
+    $default_reset_token_title = $this->get('reset_token_title');
+    $form['reset_token']['reset_token_title'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Reset Token Title.'),
+      '#default_value' => $default_reset_token_title,
+      '#description' => $this->t('Reset Token Page title configuration.'),
+      '#translatable' => TRUE,
+    ];
+
+    $default_reset_token_description = $this->get('reset_token_description');
+    $form['reset_token']['reset_token_description'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('Description of page content'),
+      '#default_value' => $default_reset_token_description['value'],
+      '#format' => $default_reset_token_description['format'],
       '#translatable' => TRUE,
     ];
   }

@@ -1,0 +1,23 @@
+uuid: e2585877-97ae-44fb-bf32-858a6a52f78b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.announcement_entity.field_unpublish_date
+  module:
+    - datetime
+    - webcomposer_announcements
+_core:
+  default_config_hash: IYRloBsInL8EOmLRJtO7qpGTTwOWZzziwQLkQGVzvp4
+id: announcement_entity.announcement_entity.field_unpublish_date
+field_name: field_unpublish_date
+entity_type: announcement_entity
+bundle: announcement_entity
+label: 'Unpublish Date (optional)'
+description: "<p>If this is set the announcement will be unavailable after this date.\r\n<br>To republish the announcement reset this field.\r\n</p>"
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

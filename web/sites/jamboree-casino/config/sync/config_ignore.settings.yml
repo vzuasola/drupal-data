@@ -9,5 +9,6 @@ ignored_config_entities:
   14: 'jamboree_config.*'
   16: 'webcomposer_form_manager.form.*'
   18: 'contact_us_config.*'
+  20: 'jamboree_canonical.*'
 _core:
   default_config_hash: UVH1aJ4b44UM-VdPVN7hNNuuVqfReJxwfVeDQH1Hvsk
