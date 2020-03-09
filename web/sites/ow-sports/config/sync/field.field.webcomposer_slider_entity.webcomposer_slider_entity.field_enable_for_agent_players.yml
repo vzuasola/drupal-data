@@ -14,7 +14,7 @@ bundle: webcomposer_slider_entity
 label: 'Enable for Agent players'
 description: 'Post-login only'
 required: false
-translatable: false
+translatable: true
 default_value:
   -
     value: '0'
