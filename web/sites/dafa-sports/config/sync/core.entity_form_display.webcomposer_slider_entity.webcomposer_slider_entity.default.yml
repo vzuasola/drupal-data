@@ -9,6 +9,7 @@ dependencies:
     - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_blurb
     - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_content_position
     - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_content_position_post
+    - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_enable_for_agent_players
     - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_log_in_state
     - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_post_blurb
     - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_publish_date
@@ -40,6 +41,7 @@ third_party_settings:
       label: 'Scheduler Settings'
     group_banner_settings:
       children:
+        - field_enable_for_agent_players
         - group_banner_image
         - group_blurb_settings
       parent_name: group_fields
@@ -59,7 +61,7 @@ third_party_settings:
         - field_post_blurb
         - field_content_position_post
       parent_name: group_banner_settings
-      weight: 22
+      weight: 26
       format_type: tab
       format_settings:
         label: 'Banner Blurb Settings'
@@ -102,7 +104,7 @@ third_party_settings:
         - field_banner_link
         - field_banner_link_target
       parent_name: group_banner_settings
-      weight: 20
+      weight: 25
       format_type: tab
       format_settings:
         id: ''
@@ -119,7 +121,7 @@ bundle: webcomposer_slider_entity
 mode: default
 content:
   field_banner_image:
-    weight: 21
+    weight: 25
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -127,7 +129,7 @@ content:
     type: image_image
     region: content
   field_banner_link:
-    weight: 22
+    weight: 26
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -135,7 +137,7 @@ content:
     type: link_default
     region: content
   field_banner_link_target:
-    weight: 23
+    weight: 27
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -156,6 +158,12 @@ content:
     region: content
   field_content_position_post:
     weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_enable_for_agent_players:
+    weight: 24
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -198,7 +206,8 @@ content:
     type: language_select
     weight: 2
     region: content
-    settings: {  }
+    settings:
+      include_locked: true
     third_party_settings: {  }
   name:
     type: string_textfield
