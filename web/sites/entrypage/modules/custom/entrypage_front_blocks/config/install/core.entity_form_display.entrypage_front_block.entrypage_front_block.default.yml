@@ -206,7 +206,7 @@ content:
     weight: 2
     region: content
     settings: {  }
-    third_party_settings: {  }
+    third_party_settings: {  } 
   name:
     type: string_textfield
     weight: 1
