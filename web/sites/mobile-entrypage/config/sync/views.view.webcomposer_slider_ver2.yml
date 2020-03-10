@@ -9,6 +9,7 @@ dependencies:
     - field.storage.webcomposer_slider_v2_entity.field_publish_date
     - field.storage.webcomposer_slider_v2_entity.field_title
     - field.storage.webcomposer_slider_v2_entity.field_unpublish_date
+    - field.storage.webcomposer_slider_v2_entity.field_user_availability
     - image.style.thumbnail
   module:
     - datetime
@@ -1186,6 +1187,11 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
+        field_user_availability:
+          id: field_user_availability
+          table: webcomposer_slider_v2_entity__field_user_availability
+          field: field_user_availability
+          plugin_id: field
         field_publish_date:
           id: field_publish_date
           table: webcomposer_slider_v2_entity__field_publish_date
@@ -1462,6 +1468,7 @@ display:
         - 'config:field.storage.webcomposer_slider_v2_entity.field_publish_date'
         - 'config:field.storage.webcomposer_slider_v2_entity.field_title'
         - 'config:field.storage.webcomposer_slider_v2_entity.field_unpublish_date'
+        - 'config:field.storage.webcomposer_slider_v2_entity.field_user_availability'
   rest_export_1:
     display_plugin: rest_export
     id: rest_export_1
