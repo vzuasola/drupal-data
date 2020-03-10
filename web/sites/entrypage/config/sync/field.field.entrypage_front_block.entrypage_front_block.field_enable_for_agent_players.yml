@@ -1,0 +1,23 @@
+uuid: b4f9b27d-fcb1-42bc-8d4c-9cccabb607e0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.entrypage_front_block.field_enable_for_agent_players
+  module:
+    - entrypage_front_blocks
+    - options
+id: entrypage_front_block.entrypage_front_block.field_enable_for_agent_players
+field_name: field_enable_for_agent_players
+entity_type: entrypage_front_block
+bundle: entrypage_front_block
+label: 'Enable for Agent players'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: '1'
+default_value_callback: ''
+settings: {  }
+field_type: list_string
