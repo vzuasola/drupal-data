@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.entrypage_front_block.entrypage_front_block.field_body
+    - field.field.entrypage_front_block.entrypage_front_block.field_enable_for_agent_players
     - field.field.entrypage_front_block.entrypage_front_block.field_featured_tag
     - field.field.entrypage_front_block.entrypage_front_block.field_featured_tag_bg_color
     - field.field.entrypage_front_block.entrypage_front_block.field_featured_tag_label_color
@@ -23,6 +24,7 @@ dependencies:
     - entrypage_front_blocks
     - image
     - link
+    - options
     - text
 _core:
   default_config_hash: RuWJ4gYozw2xYw6HERNcH1hk0SsV43W-oR3QoPI7MFk
@@ -37,6 +39,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: text_default
+    region: content
+  field_enable_for_agent_players:
+    weight: 13
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
   field_featured_tag:
     weight: 9
@@ -130,6 +139,6 @@ hidden:
   field_link: true
   field_link_target: true
   field_link_text_hover_1: true
-  field_link_text_hover_2: true 
+  field_link_text_hover_2: true
   langcode: true
   user_id: true

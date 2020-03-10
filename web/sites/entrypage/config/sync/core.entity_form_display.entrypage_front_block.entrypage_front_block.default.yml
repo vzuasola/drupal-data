@@ -1,9 +1,10 @@
-uuid: 80e61901-2f93-4c87-859b-356676a83848 
+uuid: 80e61901-2f93-4c87-859b-356676a83848
 langcode: en
 status: true
 dependencies:
   config:
     - field.field.entrypage_front_block.entrypage_front_block.field_body
+    - field.field.entrypage_front_block.entrypage_front_block.field_enable_for_agent_players
     - field.field.entrypage_front_block.entrypage_front_block.field_featured_tag
     - field.field.entrypage_front_block.entrypage_front_block.field_featured_tag_bg_color
     - field.field.entrypage_front_block.entrypage_front_block.field_featured_tag_label_color
@@ -35,7 +36,7 @@ third_party_settings:
         - field_link
         - field_image_target
       parent_name: ''
-      weight: 3
+      weight: 4
       format_type: tab
       format_settings:
         id: ''
@@ -49,7 +50,7 @@ third_party_settings:
         - field_url
         - field_link_target
       parent_name: ''
-      weight: 5
+      weight: 6
       format_type: tab
       format_settings:
         label: 'CTA Button Hover Settings'
@@ -67,7 +68,7 @@ third_party_settings:
         - field_featured_tag_label_color
         - field_featured_tag_bg_color
       parent_name: ''
-      weight: 4
+      weight: 5
       format_type: tab
       format_settings:
         id: ''
@@ -81,7 +82,7 @@ third_party_settings:
         - field_link_text_hover_1
         - field_link_text_hover_2
       parent_name: ''
-      weight: 6
+      weight: 7
       format_type: tab
       format_settings:
         label: 'Text Hover Settings'
@@ -99,12 +100,18 @@ bundle: entrypage_front_block
 mode: default
 content:
   field_body:
-    weight: 7
+    weight: 8
     settings:
       rows: 1
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
+    region: content
+  field_enable_for_agent_players:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
     region: content
   field_featured_tag:
     weight: 10
@@ -115,13 +122,13 @@ content:
     type: text_textfield
     region: content
   field_featured_tag_bg_color:
-    weight: 12
+    weight: 13
     settings: {  }
     third_party_settings: {  }
     type: color_field_widget_html5
     region: content
   field_featured_tag_label_color:
-    weight: 11
+    weight: 12
     settings: {  }
     third_party_settings: {  }
     type: color_field_widget_html5
@@ -205,7 +212,8 @@ content:
     type: language_select
     weight: 2
     region: content
-    settings: {  }
+    settings:
+      include_locked: true
     third_party_settings: {  }
   name:
     type: string_textfield
