@@ -130,6 +130,6 @@ hidden:
   field_link: true
   field_link_target: true
   field_link_text_hover_1: true
-  field_link_text_hover_2: true
+  field_link_text_hover_2: true 
   langcode: true
   user_id: true
