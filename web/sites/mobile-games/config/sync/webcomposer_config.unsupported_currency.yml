@@ -1,0 +1,9 @@
+unsupported_currency_configuration_form__active_tab: ''
+unsupported_currencies_title: 'Unsupported Currency'
+unsupported_currencies_message:
+  value: "<p>Unsupported {game_provider}</p>\r\n"
+  format: basic_html
+value: null
+format: null
+unsupported_currencies_button: OK
+game_provider_mapping: "micro_gaming|MicROGaming\r\nruby_play|Ruby Play\r\nasia_gaming|Asia Gaming\r\nvoidbridge|VoidBridge"
