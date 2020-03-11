@@ -350,6 +350,13 @@ class GeneralConfiguration extends FormBase {
       '#required' => TRUE,
       '#translatable' => TRUE,
     ];
+    $form['error_settings']['forbidden_request_error_message'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Registration API forbidden request error message'),
+      '#default_value' => $this->get('forbidden_request_error_message'),
+      '#required' => TRUE,
+      '#translatable' => TRUE,
+    ];
   }
 
   /**
