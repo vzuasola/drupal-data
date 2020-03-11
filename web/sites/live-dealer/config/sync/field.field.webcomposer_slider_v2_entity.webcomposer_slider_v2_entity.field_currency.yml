@@ -13,7 +13,7 @@ bundle: webcomposer_slider_v2_entity
 label: Currency
 description: "This text will be used to strict slider to display only in specific currency.\r\nExample: RMB,USD,KRW"
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }
