@@ -20,6 +20,12 @@ stages:
   - staging-signoff
   - deploy-production
 
+before_script:
+  - export PACKAGE_VERSION="$CI_COMMIT_REF_NAME.$CI_PIPELINE_ID"
+  - export DEPLOY_STATUS_URL="$DEPLOY_URL/lastBuild/api/json"
+  - export DEPLOY_RESULT_URL="$DEPLOY_URL/lastBuild/logText/progressiveText?start=0"
+  - export GITLAB_EMAIL="$GITLAB_USER_EMAIL"
+
 static code analysis:
   stage: tests
   script:
@@ -53,117 +59,37 @@ create package:
   tags:
     - devrunner
 
-dev:
-  stage: deploy-dev
-  environment:
-    name: development
-  script:
-    - python -u automation/run.py --stage deploy-development
-  when: manual
-  dependencies:
-    - create package
-  artifacts:
-    paths:
-      - automation/deployed/*.jsonl
-    expire_in: 1 month
-
-dev-mobile-stack:
-  stage: deploy-dev
-  environment:
-    name: development
-  script:
-    - DEPLOY_DEVELOPMENT=$DEPLOY_DEVELOPMENT_MOBILE python -u automation/run.py --stage deploy-development
-  when: manual
-  dependencies:
-    - create package
-  artifacts:
-    paths:
-      - automation/deployed/*.jsonl
-    expire_in: 1 month
-
-dev-japan-stack:
-  stage: deploy-dev
-  environment:
-    name: development
-  script:
-    - DEPLOY_DEVELOPMENT=$DEPLOY_DEVELOPMENT_JAPAN python -u automation/run.py --stage deploy-development
-  when: manual
-  dependencies:
-    - create package
-  artifacts:
-    paths:
-      - automation/deployed/*.jsonl
-    expire_in: 1 month
-
-dev-row-stack:
-  stage: deploy-dev
-  environment:
-    name: development
-  script:
-    - DEPLOY_DEVELOPMENT=$DEPLOY_DEVELOPMENT_ROW python -u automation/run.py --stage deploy-development
-  when: manual
-  dependencies:
-    - create package
-  artifacts:
-    paths:
-      - automation/deployed/*.jsonl
-    expire_in: 1 month
-
-.selenium tests development:
-  stage: integration-tests-development
-  script:
-    - python -u automation/run.py --stage integration-tests-development
-  when: manual
-  dependencies:
-    - dev
-  artifacts:
-    paths:
-      - automation/deployed/*.jsonl
-    expire_in: 1 month
-
-.jmeter development:
-  stage: performance-tests-development
-  script:
-    - python -u automation/run.py --stage performance-tests-dev
-  when: manual
-  dependencies:
-    - dev
-  artifacts:
-    paths:
-      - automation/deployed/*.jsonl
-    expire_in: 1 month
-  tags:
-    - jmeter
-
 qa1:
   stage: deploy-test
   environment:
     name: testing
+  variables:
+    env: tst
+    STACK: dafa-stack
   script:
-    - python -u automation/run.py --stage deploy-testing
+    - export DEPLOY_TOKEN DEPLOY_URL
+    - bash automation/jenkins_deploy.sh
   when: manual
   dependencies:
-    - dev
     - create package
-  artifacts:
-    paths:
-      - automation/deployed/*.jsonl
-    expire_in: 1 month
+  tags:
+    - ipvg-stg-02
 
 qa1-mobile-stack:
   stage: deploy-test
   environment:
     name: testing
+  variables:
+    env: tst
+    STACK: mobile-dafa-stack
   script:
-    - DEPLOY_QA=$DEPLOY_QA_MOBILE python -u automation/run.py --stage deploy-testing
+    - export DEPLOY_TOKEN DEPLOY_URL
+    - bash automation/jenkins_deploy.sh
   when: manual
   dependencies:
-    - dev
     - create package
-  artifacts:
-    paths:
-      - automation/deployed/*.jsonl
-    expire_in: 1 month
+  tags:
+    - ipvg-stg-02
 
 qa1-japan-stack:
   stage: deploy-test
@@ -173,7 +99,6 @@ qa1-japan-stack:
     - DEPLOY_QA=$DEPLOY_QA_JAPAN python -u automation/run.py --stage deploy-testing
   when: manual
   dependencies:
-    - dev
     - create package
   artifacts:
     paths:
@@ -221,31 +146,33 @@ tct:
   stage: deploy-test
   environment:
     name: tct
+  variables:
+    env: tct
+    STACK: dafa-stack
   script:
-    - python -u automation/run.py --stage deploy-tct
+    - export DEPLOY_TOKEN DEPLOY_URL
+    - bash automation/jenkins_deploy.sh
   when: manual
   dependencies:
-    - dev
     - create package
-  artifacts:
-    paths:
-      - automation/deployed/*.jsonl
-    expire_in: 1 month
+  tags:
+    - ipvg-stg-02
 
 tct-mobile-stack:
   stage: deploy-test
   environment:
     name: tct
+  variables:
+    env: tct
+    STACK: mobile-dafa-stack
   script:
-    - DEPLOY_TCT=$DEPLOY_TCT_MOBILE python -u automation/run.py --stage deploy-tct
+    - export DEPLOY_TOKEN DEPLOY_URL
+    - bash automation/jenkins_deploy.sh
   when: manual
   dependencies:
-    - dev
     - create package
-  artifacts:
-    paths:
-      - automation/deployed/*.jsonl
-    expire_in: 1 month
+  tags:
+    - ipvg-stg-02
 
 tct-japan-stack:
   stage: deploy-test
@@ -255,7 +182,6 @@ tct-japan-stack:
     - DEPLOY_TCT=$DEPLOY_TCT_JAPAN python -u automation/run.py --stage deploy-tct
   when: manual
   dependencies:
-    - dev
     - create package
   artifacts:
     paths:
@@ -268,16 +194,49 @@ tct-row-stack:
   stage: deploy-test
   environment:
     name: tct
+  variables:
+    env: tct
+    STACK: row-stack
   script:
-    - DEPLOY_TCT=$DEPLOY_TCT_ROW python -u automation/run.py --stage deploy-tct
+    - export DEPLOY_TOKEN DEPLOY_URL
+    - bash automation/jenkins_deploy.sh
   when: manual
   dependencies:
-    - dev
     - create package
-  artifacts:
-    paths:
-      - automation/deployed/*.jsonl
-    expire_in: 1 month
+  tags:
+    - ipvg-stg-02
+
+tct-nextbet-stack:
+  stage: deploy-test
+  environment:
+    name: tct
+  variables:
+    env: tct
+    STACK: row-stack
+  script:
+    - export DEPLOY_TOKEN DEPLOY_URL
+    - bash automation/jenkins_deploy.sh
+  when: manual
+  dependencies:
+    - create package
+  tags:
+    - ipvg-stg-02
+
+tct-nextbet-mobile-stack:
+  stage: deploy-test
+  environment:
+    name: tct
+  variables:
+    env: tct
+    STACK: row-stack
+  script:
+    - export DEPLOY_TOKEN DEPLOY_URL
+    - bash automation/jenkins_deploy.sh
+  when: manual
+  dependencies:
+    - create package
+  tags:
+    - ipvg-stg-02
 
 tct_o:
   stage: deploy-test
@@ -289,7 +248,6 @@ tct_o:
     - python -u automation/run.py --stage deploy-tct
   when: manual
   dependencies:
-    - dev
     - create package
   artifacts:
     paths:
@@ -308,7 +266,6 @@ tct_o-mobile-stack:
     - python -u automation/run.py --stage deploy-tct
   when: manual
   dependencies:
-    - dev
     - create package
   artifacts:
     paths:
@@ -327,7 +284,6 @@ tct_o-row-stack:
     - python -u automation/run.py --stage deploy-tct
   when: manual
   dependencies:
-    - dev
     - create package
   artifacts:
     paths:
@@ -382,39 +338,33 @@ uat:
   stage: deploy-staging
   environment:
     name: uat
+  variables:
+    env: uat
+    STACK: dafa-stack
   script:
-    - python -u automation/run.py --stage deploy-uat
+    - export DEPLOY_TOKEN DEPLOY_URL
+    - bash automation/jenkins_deploy.sh
   when: manual
   dependencies:
     - testing signoff
-  artifacts:
-    paths:
-      - automation/deployed/*.jsonl
-    expire_in: 1 month
-  only:
-    - /^release-.*$/
-    - tags
   tags:
-    - stgrunner
+    - ipvg-stg-02
 
 uat-mobile-stack:
   stage: deploy-staging
   environment:
     name: uat
+  variables:
+    env: uat
+    STACK: mobile-dafa-stack
   script:
-    - DEPLOY_UAT=$DEPLOY_UAT_MOBILE python -u automation/run.py --stage deploy-uat
+    - export DEPLOY_TOKEN DEPLOY_URL
+    - bash automation/jenkins_deploy.sh
   when: manual
   dependencies:
     - testing signoff
-  artifacts:
-    paths:
-      - automation/deployed/*.jsonl
-    expire_in: 1 month
-  only:
-    - /^release-.*$/
-    - tags
   tags:
-    - stgrunner
+    - ipvg-stg-02
 
 uat-japan-stack:
   stage: deploy-staging
@@ -437,20 +387,17 @@ uat-row-stack:
   stage: deploy-staging
   environment:
     name: uat
+  variables:
+    env: uat
+    STACK: row-stack
   script:
-    - DEPLOY_UAT=$DEPLOY_UAT_ROW python -u automation/run.py --stage deploy-uat
+    - export DEPLOY_TOKEN DEPLOY_URL
+    - bash automation/jenkins_deploy.sh
   when: manual
   dependencies:
     - testing signoff
-  artifacts:
-    paths:
-      - automation/deployed/*.jsonl
-    expire_in: 1 month
-  only:
-    - /^release-.*$/
-    - tags
   tags:
-    - stgrunner
+    - ipvg-stg-02
 
 .selenium tests uat:
   stage: integration-tests-staging
@@ -488,39 +435,33 @@ staging:
   stage: deploy-staging
   environment:
     name: staging
+  variables:
+    env: stg
+    STACK: dafa-stack
   script:
-    - python -u automation/run.py --stage deploy-staging
+    - export DEPLOY_TOKEN DEPLOY_URL
+    - bash automation/jenkins_deploy.sh
   when: manual
   dependencies:
     - testing signoff
-  artifacts:
-    paths:
-      - automation/deployed/*.jsonl
-    expire_in: 1 month
-  only:
-    - /^release-.*$/
-    - tags
   tags:
-    - stgrunner
+    - ipvg-stg-02
 
 staging-mobile-stack:
   stage: deploy-staging
   environment:
     name: staging
+  variables:
+    env: stg
+    STACK: mobile-dafa-stack
   script:
-    - DEPLOY_STG=$DEPLOY_STG_MOBILE python -u automation/run.py --stage deploy-staging
+    - export DEPLOY_TOKEN DEPLOY_URL
+    - bash automation/jenkins_deploy.sh
   when: manual
   dependencies:
     - testing signoff
-  artifacts:
-    paths:
-      - automation/deployed/*.jsonl
-    expire_in: 1 month
-  only:
-    - /^release-.*$/
-    - tags
   tags:
-    - stgrunner
+    - ipvg-stg-02
 
 staging-japan-stack:
   stage: deploy-staging
@@ -545,20 +486,17 @@ staging-row-stack:
   stage: deploy-staging
   environment:
     name: staging
+  variables:
+    env: stg
+    STACK: row-stack
   script:
-    - DEPLOY_STG=$DEPLOY_STG_ROW python -u automation/run.py --stage deploy-staging
+    - export DEPLOY_TOKEN DEPLOY_URL
+    - bash automation/jenkins_deploy.sh
   when: manual
   dependencies:
     - testing signoff
-  artifacts:
-    paths:
-      - automation/deployed/*.jsonl
-    expire_in: 1 month
-  only:
-    - /^release-.*$/
-    - tags
   tags:
-    - stgrunner
+    - ipvg-stg-02
 
 staging_o:
   stage: deploy-staging

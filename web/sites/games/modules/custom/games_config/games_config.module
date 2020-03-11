@@ -34,7 +34,7 @@ function games_config_form_alter(&$form, $form_state, $form_id) {
             $submitAction = 'games_config_node_form_submit';
             break;
         case 'taxonomy_term_game_subprovider_form':
-        case 'taxonomy_term_game_subprovider_form':
+          $submitAction = 'games_config_subprovider_form_submit';
         case 'node_games_2_0_form':
         case 'node_games_2_0_edit_form':
           $form['#validate'][] = 'games_config_validate';
@@ -65,6 +65,32 @@ function games_config_form_alter(&$form, $form_state, $form_id) {
 
 function games_config_node_form_submit($form, &$form_state) {
     $form_state->setRedirect('games_config.list.games');
+}
+
+function games_config_subprovider_form_submit($form, &$form_state) {
+  $request = \Drupal::request();
+  $current_path = $request->getPathInfo();
+  $path_args = explode('/', $current_path);
+  $tid = $path_args[4] ?? null;
+
+  if ($tid) {
+    $nodes = _get_nodes_by_term($tid);
+    $tags = array_map(function ($node) {
+      return "node:{$node->nid}";
+    }, $nodes);
+
+    if ($tags) {
+      \Drupal\Core\Cache\Cache::invalidateTags($tags);
+    }
+  }
+}
+
+function _get_nodes_by_term($term_id) {
+  $query = \Drupal::database()->select('taxonomy_index', 'ti');
+  $query->fields('ti', ['nid']);
+  $query->condition('ti.tid', $term_id);
+  $nodes = $query->execute()->fetchAll();
+  return $nodes;
 }
 /**
  *
@@ -121,4 +147,3 @@ function games_config_validate(&$form, FormStateInterface $form_state) {
     $form_state->setErrorByName('field_unpublish_date', t('Under maintenance end date should be greater than the start date.'));
   }
 }
-
