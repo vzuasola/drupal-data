@@ -11,7 +11,7 @@ id: entrypage_front_block.entrypage_front_block.field_enable_for_agent_players
 field_name: field_enable_for_agent_players
 entity_type: entrypage_front_block
 bundle: entrypage_front_block
-label: 'Enable for Agent players'
+label: 'Player State'
 description: ''
 required: true
 translatable: true
