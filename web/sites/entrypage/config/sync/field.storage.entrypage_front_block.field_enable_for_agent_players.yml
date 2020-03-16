@@ -13,10 +13,10 @@ settings:
   allowed_values:
     -
       value: '0'
-      label: 'No'
+      label: 'Regular Player Only'
     -
       value: '1'
-      label: 'Both (Real and Agent Player)'
+      label: 'Both (Regular and Agent Player)'
     -
       value: '2'
       label: 'Agent Player Only'
