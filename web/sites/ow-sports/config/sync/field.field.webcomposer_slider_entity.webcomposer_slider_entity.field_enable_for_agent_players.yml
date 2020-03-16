@@ -11,7 +11,7 @@ id: webcomposer_slider_entity.webcomposer_slider_entity.field_enable_for_agent_p
 field_name: field_enable_for_agent_players
 entity_type: webcomposer_slider_entity
 bundle: webcomposer_slider_entity
-label: 'Enable for Agent players'
+label: 'Player State'
 description: 'Post-login only'
 required: false
 translatable: true
