@@ -1,6 +1,6 @@
 field_settings:
   label: Country
-  choices: "jp|Japan\r\ncn|China\r\nid|Indonesia\r\nkr|Korea\r\nmy|Malaysia\r\nvn|Vietnam\r\nth|Thailand\r\naf|Afghanistan\r\nal|Albania\r\ndz|Algeria\r\nab|Antigua and Barbuda\r\nar|Argentina\r\nam|Armenia\r\nat|Austria\r\naz|Azerbaijan\r\nbh|Bahrain\r\nby|Belarus\r\nbz|Belize\r\nbo|Bolivia\r\nba|Bosnia and Herzegovina\r\nbr|Brazil\r\nbn|Brunei Darussalam\r\nkh|Cambodia\r\nca|Canada\r\ncl|Chile\r\ncr|Costa Rica\r\nhr|Croatia\r\ndk|Denmark\r\ndo|Dominican Republic\r\nec|Ecuador\r\neg|Egypt\r\nsv|El Salvador\r\nfo|Faroe Islands\r\nfi|Finland\r\nge|Georgia\r\nde|Germany\r\ngr|Greece\r\ngd|Grenada\r\ngt|Guatemala\r\nhn|Honduras\r\nhu|Hungary\r\nis|Iceland\r\nin|India\r\nir|Iran\r\niq|Iraq\r\npk|Islamic Republic of Pakistan\r\njm|Jamaica\r\njo|Jordan\r\nkz|Kazakhstan\r\nke|Kenya\r\nkw|Kuwait\r\nkg|Kyrgyzstan\r\nlv|Latvia\r\nlb|Lebanon\r\nly|Libya\r\nli|Liechtenstein\r\nlt|Lithuania\r\nlu|Luxembourg\r\nmk|Macedonia (FYROM)\r\nmv|Maldives\r\nmt|Malta\r\nmx|Mexico\r\nmd|Moldova\r\nmn|Mongolia\r\nme|Montenegro\r\nma|Morocco\r\nnp|Nepal\r\nnl|Netherlands\r\nnz|New Zealand\r\nni|Nicaragua\r\nng|Nigeria\r\nno|Norway\r\nom|Oman\r\npa|Panama\r\npy|Paraguay\r\npe|Peru\r\nmc|Principality of Monaco\r\nqa|Qatar\r\nru|Russia\r\nsa|Saudi Arabia\r\nrs|Serbia\r\nsk|Slovakia\r\nsi|Slovenia\r\nza|South Africa\r\nse|Sweden\r\nsy|Syria\r\ntt|Trinidad and Tobago\r\ntn|Tunisia\r\nae|U.A.E.\r\nuy|Uruguay\r\nuz|Uzbekistan\r\nve|Venezuela\r\nye|Yemen\r\nzw|Zimbabwe"
+  choices: "109|Japan\r\n48|China\r\n153|Malaysia\r\n231|Vietnam\r\n208|Thailand\r\n5|Afghanistan\r\n8|Albania\r\n60|Algeria\r\n3|Andora\r\n13|Argentina\r\n9|Armenia\r\n15|Austria\r\n19|Azerbaijan\r\n33|Bahamas\r\n26|Bahrain\r\n22|Bangladesh\r\n21|Barbados\r\n37|Belarus\r\n38|Belize\r\n28|Benin\r\n29|Bermuda\r\n34|Bhutan\r\n31|Bolivia\r\n247|Bonaire and Herzegovina\r\n36|Botswana\r\n35|Boulet Island\r\n32|Brazil\r\n101|British Indian Ocean Territory\r\n112|Cambodia\r\n47|Cameroon\r\n39|Canada\r\n52|Cape Verde\r\n119|Cayman Islands\r\n41|Central African Republic\r\n206|Chad\r\n46|Chile\r\n1|Christmas Island\r\n2|Cocos (Keeling) Islands\r\n49|Colombia\r\n114|Comoros\r\n50|Costa Rica\r\n93|Croatia\r\n57|Denmark\r\n59|Dominican Republic\r\n61|Ecuador\r\n63|Egypt\r\n202|El Salvador\r\n71|Faroe Islands\r\n67|Finland\r\n76|Georgia\r\n86|Greece\r\n75|Grenada\r\n87|Guatemala\r\n92|Honduras\r\n95|Hungary\r\n104|Iceland\r\n173|Islamic Republic of Pakistan\r\n107|Jamaica\r\n108|Jordan\r\n120|Kazakhstan\r\n110|Kenya\r\n118|Kuwait\r\n111|Kyrgyzstan\r\n130|Latvia\r\n122|Lebanon\r\n124|Liechtenstein\r\n128|Lithuania\r\n129|Luxembourg\r\n139|Macedonia (FYROM)\r\n150|Maldives\r\n148|Malta\r\n152|Mexico\r\n134|Moldova\r\n142|Mongolia\r\n135|Montenegro\r\n132|Morocco\r\n163|Nepal\r\n161|Netherlands\r\n166|New Zealand\r\n160|Nicaragua\r\n159|Nigeria\r\n162|Norway\r\n167|Oman\r\n168|Panama\r\n181|Paraguay\r\n169|Peru\r\n182|Qatar\r\n186|Russia\r\n188|Saudi Arabia\r\n185|Serbia\r\n195|Slovakia\r\n194|Slovenia\r\n237|South Africa\r\n192|Sweden\r\n203|Syria\r\n216|Trinidad and Tobago\r\n213|Tunisia\r\n4|U.A.E.\r\n224|Uruguay\r\n225|Uzbekistan\r\n228|Venezuela\r\n235|Yemen\r\n239|Zimbabwe"
 field_validations:
   required:
     enable: 0
@@ -54,3 +54,13 @@ field_validations:
   valid_date:
     enable: 0
     error_message: 'Date is invalid'
+  invalid_words:
+    enable: 0
+    error_message: 'Invalid/not allowed characters'
+    parameters:
+      invalid_words_list: ''
+  valid_languages:
+    enable: 0
+    error_message: 'This field only accepts specific characters.'
+    parameters:
+      regex_value: ''

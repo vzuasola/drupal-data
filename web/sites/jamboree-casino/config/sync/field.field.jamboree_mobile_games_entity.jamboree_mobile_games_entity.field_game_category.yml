@@ -1,5 +1,5 @@
 uuid: 4982fbba-d293-4f6a-98aa-0a506c36aa5b
-langcode: en
+langcode: ja
 status: true
 dependencies:
   config:
@@ -13,7 +13,7 @@ entity_type: jamboree_mobile_games_entity
 bundle: jamboree_mobile_games_entity
 label: 'Game Category'
 description: ''
-required: true
+required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''
