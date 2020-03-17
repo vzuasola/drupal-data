@@ -9,7 +9,7 @@ webcomposer_cache__settings_form: 0
 webcomposer_downloadables__admin_settings: 0
 entity__downloadable_entity__collection: 0
 downloadable_entity__admin__structure__settings: 1
-webcomposer_floating_banners__list: 1
+webcomposer_floating_banners__list: 0
 entity__left_floating_banner_entity__collection: 1
 left_floating_banner_entity__admin__structure__settings: 1
 webcomposer_games__list: 0
@@ -33,7 +33,7 @@ entity__partner_entity__manage: 0
 entity__partner_entity__collection: 0
 partner_entity__admin__structure__settings: 1
 webcomposer_registration_landing_page__list: 0
-webcomposer_registration_landing_page__admin_registration_landing_page_configuration: 0
+webcomposer_registration_landing_page__admin_registration_landing_page_configuration: 1
 webcomposer_right_side_block__list: 0
 entity__right_side_block_entity__collection: 0
 right_side_block_entity__admin__structure__settings: 1

@@ -1,4 +1,4 @@
-advanced__active_tab: edit-territory-blocking
+advanced__active_tab: edit-geoip-language-popup
 affiliate_expiration: 0
 default_message: 1
 base_url: 1
@@ -97,8 +97,8 @@ page_not_found_image_url: 0
 read_more: 0
 countdown: 0
 all_text: 0
-promotion_right_side_title: 0
-promotion_right_side_visibility: 0
+promotion_right_side_title: 1
+promotion_right_side_visibility: 1
 enable: 0
 producttype_id: 0
 producttype_id_mapping: 0
@@ -423,3 +423,15 @@ product_exclude_live-dealer: 0
 product_exclude_dismiss_live-dealer: 0
 optimize_import: 0
 domains_batch: 0
+geoip_list: 1
+en_popup_content: 1
+pl_popup_content: 1
+in_popup_content: 1
+lottoland_currency: 0
+lottoland_language_mapping: 0
+lottoland_country: 0
+lottoland_javascript_assets: 0
+maintenance_title_live-dealer: 0
+maintenance_content_live-dealer: 0
+maintenance_publish_date_live-dealer: 0
+maintenance_unpublish_date_live-dealer: 0
