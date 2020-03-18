@@ -3,15 +3,10 @@ langcode: en
 status: true
 dependencies:
   config:
-    - block.block.languagedropdownswitcher_2
     - field.storage.taxonomy_term.field_games_alias
-    - field.storage.taxonomy_term.field_games_is_sub_category
     - field.storage.taxonomy_term.field_supported_currencies
-    - system.menu.admin
-    - taxonomy.vocabulary.games_category
     - taxonomy.vocabulary.games_subprovider
   module:
-    - draggableviews
     - rest
     - serialization
     - taxonomy
@@ -268,7 +263,6 @@ display:
       style:
         type: taxonomy_list_serializer
         options:
-          uses_fields: false
           formats:
             json: json
       row:
@@ -277,6 +271,9 @@ display:
           field_options:
             name:
               alias: ''
+              raw_output: false
+            field_supported_currencies:
+              alias: supported_currency
               raw_output: false
       fields:
         name:
