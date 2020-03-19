@@ -13,6 +13,9 @@ attributes:
     label: 'Menu Tag'
     options:
       new: 'New Product'
+  disabled:
+    label: 'Currency Restriction (Blacklist)'
+    description: 'Example: RMB,USD,KRW'
   isAgentPlayer:
     label: 'Enable for Agent players'
     type: checkbox
