@@ -179,7 +179,9 @@ tct-japan-stack:
   environment:
     name: tct
   script:
-    - DEPLOY_TCT=$DEPLOY_TCT_JAPAN python -u automation/run.py --stage deploy-tct
+    - DEPLOY_TCT=$DEPLOY_TCT_JAPAN
+    - DEPLOY_TCT_TOWER_HOST=$DEPLOY_TCT_O_TOWER_HOST
+    - python -u automation/run.py --stage deploy-tct
   when: manual
   dependencies:
     - create package
