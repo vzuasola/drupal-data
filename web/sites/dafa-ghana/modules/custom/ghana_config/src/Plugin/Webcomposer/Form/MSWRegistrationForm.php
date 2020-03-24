@@ -238,13 +238,13 @@ use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
               '#title' => 'Address Label',
               '#type' => 'textfield',
               '#description' => 'The label for the Address field',
-              '#default_value' => 'Address',
+              '#default_value' => 'House Number',
             ],
             'placeholder' => [
               '#title' => 'Address placeholder label',
               '#type' => 'textfield',
               '#description' => 'label for Address field placeholder',
-              '#default_value' => 'Address',
+              '#default_value' => 'House Number',
             ],
             'annotation' => [
               '#title' => 'Address Annotation text',
@@ -385,6 +385,46 @@ use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
               '#type' => 'textarea',
               '#description' => 'field annotation that will be displayed on focus',
             ],
+          ],
+        ],
+
+        'btn_upload_id_1' => [
+          'name' => 'Button UPLOAD ID 1',
+          'type' => 'button',
+          'settings' => [
+            'label' => [
+              '#title' => 'UPLOAD ID 1 label',
+              '#type' => 'textfield',
+              '#description' => 'Label for the UPLOAD ID 1 button',
+              '#default_value' => 'UPLOAD ID 1',
+            ],
+          ],
+        ],
+
+        'btn_upload_id_2' => [
+          'name' => 'Button UPLOAD ID 2',
+          'type' => 'button',
+          'settings' => [
+            'label' => [
+              '#title' => 'UPLOAD ID 2 label',
+              '#type' => 'textfield',
+              '#description' => 'Label for the UPLOAD ID 2 button',
+              '#default_value' => 'UPLOAD ID 2',
+            ],
+          ],
+        ],
+
+        'upload_id_1' => [
+          'name' => 'UPLOAD ID 1',
+          'type' => 'file',
+          'settings' => [
+          ],
+        ],
+
+        'upload_id_2' => [
+          'name' => 'UPLOAD ID 2',
+          'type' => 'file',
+          'settings' => [
           ],
         ],
 
