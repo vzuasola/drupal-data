@@ -9,6 +9,7 @@ dependencies:
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_banner_link
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_banner_link_target
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_content_position
+    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_currency
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_disable_in_tablet
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_game_subprovider
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_log_in_state
@@ -81,6 +82,7 @@ third_party_settings:
         - field_post_banner_link_target
         - field_post_banner_blurb
         - field_post_content_position
+        - field_currency
       parent_name: ''
       weight: 4
       format_type: fieldset
@@ -110,7 +112,7 @@ third_party_settings:
         - field_ribbon_label_color
         - field_ribbon_product_label
       parent_name: ''
-      weight: 8
+      weight: 9
       format_type: fieldset
       format_settings:
         id: ''
@@ -277,6 +279,14 @@ content:
           bundle: webcomposer_slider_v2_entity
     type: options_select
     region: content
+  field_currency:
+    weight: 18
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
   field_disable_in_tablet:
     weight: 21
     settings:
@@ -291,7 +301,7 @@ content:
     type: options_select
     region: content
   field_game_subprovider:
-    weight: 13
+    weight: 14
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -501,14 +511,14 @@ content:
     type: text_textfield
     region: content
   field_slider_enable_game_launch:
-    weight: 9
+    weight: 10
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
   field_slider_game_code:
-    weight: 11
+    weight: 12
     settings:
       size: 60
       placeholder: ''
@@ -516,13 +526,13 @@ content:
     type: string_textfield
     region: content
   field_slider_game_provider:
-    weight: 12
+    weight: 13
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_slider_use_game_loader:
-    weight: 10
+    weight: 11
     settings:
       display_label: true
     third_party_settings: {  }
