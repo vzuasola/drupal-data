@@ -1,0 +1,7 @@
+webcomposer_domains_configuration_v2.admin_settings:
+  path: 'admin/config/webcomposer/domains-config'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Webcomposer Domain Configuration v2.0'
+  requirements:
+    _permission: 'administer site configuration'
