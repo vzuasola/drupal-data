@@ -418,6 +418,12 @@ use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
           'name' => 'UPLOAD ID 1',
           'type' => 'file',
           'settings' => [
+            'accept-format' => [
+              '#title' => 'Accepted Format',
+              '#type' => 'textfield',
+              '#description' => 'Format files to accept',
+              '#default_value' => '.pdf,.doc,.jpg,.docx,.png,jpeg,.tif,.gif,.tiff,.xps',
+            ],
           ],
         ],
 
@@ -425,6 +431,12 @@ use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
           'name' => 'UPLOAD ID 2',
           'type' => 'file',
           'settings' => [
+            'accept-format' => [
+              '#title' => 'Accepted Format',
+              '#type' => 'textfield',
+              '#description' => 'Format files to accept',
+              '#default_value' => '.pdf,.doc,.jpg,.docx,.png,jpeg,.tif,.gif,.tiff,.xps',
+            ],
           ],
         ],
 
