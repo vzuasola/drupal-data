@@ -631,7 +631,7 @@ use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
 
         'security_answer_1' => [
           'name' => 'Security Answer 1',
-          'type' => 'textfield',
+          'type' => 'password',
           'settings' => [
             'label' => [
               '#title' => 'Security Answer 1 label',
@@ -686,7 +686,7 @@ use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
 
         'security_answer_2' => [
           'name' => 'Security Answer 2',
-          'type' => 'textfield',
+          'type' => 'password',
           'settings' => [
             'label' => [
               '#title' => 'Security Answer 2 label',
