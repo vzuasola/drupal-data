@@ -1,6 +1,6 @@
 field_settings:
-  label: 'Mobile phone'
-  placeholder: 'Mobile phone'
+  label: 'ID Number 2'
+  placeholder: 'ID Number 2'
   annotation: ''
 field_validations:
   required:
