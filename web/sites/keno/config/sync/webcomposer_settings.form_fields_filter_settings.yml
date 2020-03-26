@@ -351,7 +351,7 @@ dafabetgames_iapiconf_override: 0
 rememberme_label: 0
 mobile_cant_login_url: 0
 currency_mapping: 1
-ucp_content: 1
+ucp_content: 0
 browser_title: 0
 text_notifications: 0
 text_ok: 0
