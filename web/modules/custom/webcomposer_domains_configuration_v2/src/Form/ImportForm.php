@@ -10,7 +10,7 @@ use Drupal\webcomposer_config_schema\Annotation\WebcomposerConfigPlugin;
  * My module form plugin
  *
  * @WebcomposerConfigPlugin(
- *   id = "webcomposer_domains_configuration_v2",
+ *   id = "webcomposer_domains_configuration_v2_import",
  *   route = {
  *     "title" = "Domains Import",
  *     "path" = "/admin/config/webcomposer/config/domains-import",
@@ -19,7 +19,7 @@ use Drupal\webcomposer_config_schema\Annotation\WebcomposerConfigPlugin;
  *     "title" = "Domains Import",
  *     "description" = "Provides domain import configuration",
  *     "parent" = "webcomposer_domains_configuration_v2.list",
- *     "weight" = 30
+ *     "weight" = 1
  *   },
  * )
  */
