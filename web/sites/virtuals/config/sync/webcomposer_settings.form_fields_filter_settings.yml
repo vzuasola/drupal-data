@@ -1,4 +1,4 @@
-advanced__active_tab: edit-page-not-found
+advanced__active_tab: edit-webcomposer-site-maintenance
 affiliate_expiration: 1
 default_message: 1
 base_url: 1
@@ -371,8 +371,8 @@ domains_batch: 0
 unsupported_country_title: 0
 unsupported_country_message: 0
 unsupported_country_button: 0
-maintenance_title_virtuals: 0
-maintenance_content_virtuals: 0
-maintenance_publish_date_virtuals: 0
-maintenance_unpublish_date_virtuals: 0
+maintenance_title_virtuals: 1
+maintenance_content_virtuals: 1
+maintenance_publish_date_virtuals: 1
+maintenance_unpublish_date_virtuals: 1
 error_message_restricted_country: 0
