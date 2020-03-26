@@ -221,8 +221,8 @@ class MyAccountFormResource extends ResourceBase
             $value['communication'] = $values['communication_detail_field']['options']['label'];
             $value['home_address'] = $values['home_address_field']['options']['label'];
             $value['contact_preference_label'] = $values['contact_preference_label']['options']['label'];
-            $value['contact_preference_top_blurb'] = $values['contact_preference_top_blurb'];
-            $value['contact_preference_bottom_blurb'] = $values['contact_preference_bottom_blurb'];
+            $value['contact_preference_top_blurb'] = $values['contact_preference_top_blurb_field'];
+            $value['contact_preference_bottom_blurb'] = $values['contact_preference_bottom_blurb_field'];
         } elseif ($key == 'profile') {
             $unsetKeys = $this->getUnsetKeys();
 
@@ -245,39 +245,39 @@ class MyAccountFormResource extends ResourceBase
             $value['verification_code_max_length_message'] = $values['verification_code_max_length_message'];
             $value['verification_code_numeric_message'] = $values['verification_code_numeric_message'];
         } elseif ($key == 'country_mapping') {
-            $value['country_mapping'] = $values['country_mapping'];
+            $value['country_mapping'] = $values['country_mapping_field'];
         } elseif ($key == 'country_code_mapping') {
-            $value['country_code_mapping'] = $values['country_code_mapping'];
+            $value['country_code_mapping'] = $values['country_code_mapping_field'];
         } elseif ($key == 'btn_config') {
-            $value['save_changes'] = $values['save_changes'];
-            $value['cancel'] = $values['cancel'];
+            $value['save_changes'] = $values['save_changes_field'];
+            $value['cancel'] = $values['cancel_field'];
         } elseif ($key == 'modal_preview') {
-            $value['modal_preview_header'] = $values['modal_preview_header'];
-            $value['modal_preview_top_blurb'] = $values['modal_preview_top_blurb'];
-            $value['modal_preview_current_label'] = $values['modal_preview_current_label'];
-            $value['modal_preview_new_label'] = $values['modal_preview_new_label'];
-            $value['modal_preview_bottom_blurb'] = $values['modal_preview_bottom_blurb'];
-            $value['modal_preview_placeholder'] = $values['modal_preview_placeholder'];
-            $value['modal_preview_btn'] = $values['modal_preview_btn'];
+            $value['modal_preview_header'] = $values['modal_preview_header_field'];
+            $value['modal_preview_top_blurb'] = $values['modal_preview_top_blurb_field'];
+            $value['modal_preview_current_label'] = $values['modal_preview_current_label_field'];
+            $value['modal_preview_new_label'] = $values['modal_preview_new_label_field'];
+            $value['modal_preview_bottom_blurb'] = $values['modal_preview_bottom_blurb_field'];
+            $value['modal_preview_placeholder'] = $values['modal_preview_placeholder_field'];
+            $value['modal_preview_btn'] = $values['modal_preview_btn_field'];
         } elseif ($key == 'server_side_mapping') {
-            $value['server_side_mapping'] = $values['server_side_validation'];
+            $value['server_side_mapping'] = $values['server_side_validation_field'];
         } elseif ($key == 'myprofile_clientside_validation') {
-            $value['required_validation_field'] = $values['required_validation'];
-            $value['mobile_number_format_validation_field'] = $values['mobile_number_format_validation'];
-            $value['mobile_number_min_length_validation_field'] = $values['mobile_number_min_length_validation'];
-            $value['mobile_number_max_length_validation_field'] = $values['mobile_number_max_length_validation'];
-            $value['address_format_validation_field'] = $values['address_format_validation'];
-            $value['address_min_length_validation_field'] = $values['address_min_length_validation'];
-            $value['address_max_length_validation_field'] = $values['address_max_length_validation'];
-            $value['city_format_validation_field'] = $values['city_format_validation'];
-            $value['city_min_length_validation_field'] = $values['city_min_length_validation'];
-            $value['city_max_length_validation_field'] = $values['city_max_length_validation'];
-            $value['postal_code_format_validation_field'] = $values['postal_code_format_validation'];
-            $value['postal_code_max_length_value_field'] = $values['postal_code_max_length_value'];
-            $value['postal_code_max_length_validation_field'] = $values['postal_code_max_length_validation'];
-            $value['password_format_validation_field'] = $values['password_format_validation'];
-            $value['password_min_length_validation_field'] = $values['password_min_length_validation'];
-            $value['password_max_length_validation_field'] = $values['password_max_length_validation'];
+            $value['required_validation_field'] = $values['required_validation_field'];
+            $value['mobile_number_format_validation_field'] = $values['mobile_number_format_validation_field'];
+            $value['mobile_number_min_length_validation_field'] = $values['mobile_number_min_length_validation_field'];
+            $value['mobile_number_max_length_validation_field'] = $values['mobile_number_max_length_validation_field'];
+            $value['address_format_validation_field'] = $values['address_format_validation_field'];
+            $value['address_min_length_validation_field'] = $values['address_min_length_validation_field'];
+            $value['address_max_length_validation_field'] = $values['address_max_length_validation_field'];
+            $value['city_format_validation_field'] = $values['city_format_validation_field'];
+            $value['city_min_length_validation_field'] = $values['city_min_length_validation_field'];
+            $value['city_max_length_validation_field'] = $values['city_max_length_validation_field'];
+            $value['postal_code_format_validation_field'] = $values['postal_code_format_validation_field'];
+            $value['postal_code_max_length_value_field'] = $values['postal_code_max_length_value_field'];
+            $value['postal_code_max_length_validation_field'] = $values['postal_code_max_length_validation_field'];
+            $value['password_format_validation_field'] = $values['password_format_validation_field'];
+            $value['password_min_length_validation_field'] = $values['password_min_length_validation_field'];
+            $value['password_max_length_validation_field'] = $values['password_max_length_validation_field'];
         } elseif ($key == 'myprofile_labels') {
             $value['country_label'] = $values['country_field']['options']['label'];
             $value['gender_label'] = $values['gender_field']['options']['label'];
@@ -287,8 +287,8 @@ class MyAccountFormResource extends ResourceBase
             $value['city_label'] = $values['city_field']['options']['label'];
             $value['postal_code_label'] = $values['postal_code_field']['options']['label'];
             $value['contact_preference_label'] = $values['contact_preference_field']['options']['label'];
-            $value['contact_preference_yes'] = $values['contact_preference_yes_label'];
-            $value['contact_preference_no'] = $values['contact_preference_no_label'];
+            $value['contact_preference_yes'] = $values['contact_preference_yes_label_field'];
+            $value['contact_preference_no'] = $values['contact_preference_no_label_field'];
         } elseif ($key == 'myprofile_general_configuration') {
             $value['primary_label'] = $values['primary_label'];
             $value['add_mobile_label'] = $values['add_mobile_label'];

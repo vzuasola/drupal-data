@@ -1,0 +1,14 @@
+my_account_error_handler.403_config:
+  path: '/admin/config/my_account/access_denied'
+  defaults:
+    _title: 'MyAccount Access Denied'
+    _form: '\Drupal\my_account_error_handler\Form\MyAccountAccessDeniedForm'
+  requirements:
+    _permission: 'administer my_account error_handler'
+my_account_error_handler.404_config:
+  path: '/admin/config/my_account/page_not_found'
+  defaults:
+    _title: 'MyAccount Page Not Found'
+    _form: '\Drupal\my_account_error_handler\Form\MyAccountPageNotFoundForm'
+  requirements:
+    _permission: 'administer my_account error_handler'
