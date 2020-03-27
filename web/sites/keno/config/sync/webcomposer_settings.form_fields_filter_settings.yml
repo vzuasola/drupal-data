@@ -65,7 +65,7 @@ password_mask_toggle: 0
 caps_lock_toggle: 0
 capslock_notification: 0
 cashier_link: 0
-balance_label_override: 0
+balance_label_override: 1
 balance_mapping: 1
 username_placeholder: 1
 password_placeholder: 1
