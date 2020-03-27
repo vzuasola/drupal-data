@@ -632,7 +632,19 @@ display:
           query_comment: ''
           query_tags: null
       group_by: false
-      sorts: {  }
+      sorts:
+        delta:
+          id: delta
+          table: games_collection__field_games
+          field: delta
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: standard
     cache_metadata:
       max-age: -1
       contexts:
