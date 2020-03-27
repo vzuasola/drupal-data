@@ -9,5 +9,6 @@ ignored_config_entities:
   14: 'language.*'
   16: 'keno_config.*'
   18: 'field.storage.paragraph.*'
+  20: 'webcomposer_settings.*'
 _core:
   default_config_hash: UVH1aJ4b44UM-VdPVN7hNNuuVqfReJxwfVeDQH1Hvsk
