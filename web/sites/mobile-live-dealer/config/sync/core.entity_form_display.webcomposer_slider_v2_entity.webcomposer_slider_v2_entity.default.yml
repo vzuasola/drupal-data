@@ -31,6 +31,7 @@ dependencies:
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_status
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_title
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_unpublish_date
+    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_user_availability
     - image.style.thumbnail
   module:
     - color_field
@@ -83,6 +84,7 @@ third_party_settings:
         - field_post_banner_blurb
         - field_post_content_position
         - field_currency
+        - field_user_availability
       parent_name: ''
       weight: 4
       format_type: fieldset
@@ -288,7 +290,7 @@ content:
     type: string_textarea
     region: content
   field_disable_in_tablet:
-    weight: 21
+    weight: 22
     settings:
       display_label: true
     third_party_settings: {  }
@@ -478,7 +480,7 @@ content:
     type: options_select
     region: content
   field_preview_display_only:
-    weight: 22
+    weight: 23
     settings:
       display_label: true
     third_party_settings: {  }
@@ -491,19 +493,19 @@ content:
     type: datetime_default
     region: content
   field_ribbon_background_color:
-    weight: 23
+    weight: 27
     settings: {  }
     third_party_settings: {  }
     type: color_field_widget_html5
     region: content
   field_ribbon_label_color:
-    weight: 24
+    weight: 28
     settings: {  }
     third_party_settings: {  }
     type: color_field_widget_html5
     region: content
   field_ribbon_product_label:
-    weight: 25
+    weight: 29
     settings:
       size: 60
       placeholder: ''
@@ -557,6 +559,12 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
+    region: content
+  field_user_availability:
+    weight: 19
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
     region: content
   langcode:
     type: language_select
