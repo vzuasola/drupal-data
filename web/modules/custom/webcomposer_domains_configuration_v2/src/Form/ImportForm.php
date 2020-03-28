@@ -5,6 +5,7 @@ namespace Drupal\webcomposer_domains_configuration_v2\Form;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\webcomposer_config_schema\Annotation\WebcomposerConfigPlugin;
+use Drupal\webcomposer_domains_configuration_v2\Parser\ImportParser;
 
 /**
  * My module form plugin
@@ -29,12 +30,16 @@ class ImportForm extends FormBase
   protected static $instanceId;
   protected $enabled;
 
+  /** @var ImportParser $importParser */
+  protected $importParser;
+
   /**
    * Constructor.
    */
   public function __construct()
   {
     $this->enabled = true;
+    $this->importParser =  \Drupal::service('webcomposer_domains_configuration_v2.import');
   }
 
   /**
@@ -100,6 +105,7 @@ class ImportForm extends FormBase
       // TODO: Populate the redis here
       // TODO: optional create a progress status while importing
       drupal_set_message('The domains was imported successfully.');
+      drupal_set_message($this->importParser->readExcel($form_state));
     }
 
     // $form_state->setResponse($this-> buildResponse());

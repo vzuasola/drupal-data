@@ -1,0 +1,5 @@
+services:
+  webcomposer_domains_configuration_v2.import:
+    class: Drupal\webcomposer_domains_configuration_v2\Parser\ImportParser
+    arguments: []
+
