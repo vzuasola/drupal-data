@@ -29,6 +29,7 @@ dependencies:
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_status
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_title
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_unpublish_date
+    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_user_availability
     - image.style.thumbnail
   module:
     - color_field
@@ -63,7 +64,6 @@ third_party_settings:
         - field_banner_link_target
         - field_banner_blurb
         - field_content_position
-        - field_prelogin_slider_ribbon
       parent_name: ''
       weight: 3
       format_type: fieldset
@@ -81,7 +81,7 @@ third_party_settings:
         - field_post_banner_link_target
         - field_post_banner_blurb
         - field_post_content_position
-        - field_postlogin_slider_ribbon
+        - field_user_availability
       parent_name: ''
       weight: 4
       format_type: fieldset
@@ -111,7 +111,7 @@ third_party_settings:
         - field_ribbon_label_color
         - field_ribbon_product_label
       parent_name: ''
-      weight: 28
+      weight: 13
       format_type: fieldset
       format_settings:
         id: ''
@@ -468,7 +468,7 @@ content:
     third_party_settings: {  }
   field_slider_game_code:
     type: string_textfield
-    weight: 9
+    weight: 11
     region: content
     settings:
       size: 60
@@ -476,13 +476,13 @@ content:
     third_party_settings: {  }
   field_slider_game_provider:
     type: options_select
-    weight: 10
+    weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }
   field_slider_use_game_loader:
     type: boolean_checkbox
-    weight: 8
+    weight: 10
     region: content
     settings:
       display_label: true
@@ -507,6 +507,12 @@ content:
     third_party_settings: {  }
     type: datetime_default
     region: content
+  field_user_availability:
+    weight: 18
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
   langcode:
     type: language_select
     weight: 2
@@ -515,7 +521,7 @@ content:
       include_locked: true
     third_party_settings: {  }
   translation:
-    weight: 7
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
