@@ -5,6 +5,7 @@ namespace Drupal\webcomposer_domains_configuration_v2\Service;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\webcomposer_domains_configuration_v2\Parser\ImportParser;
 use Drupal\webcomposer_domains_configuration_v2\Storage\RedisService;
+use Drupal\webcomposer_domains_configuration_v2\Storage\StorageInterface;
 
 /**
  * Class DomainImportService.
@@ -20,19 +21,19 @@ class DomainImportService
   protected $importParser;
 
   /**
-   * Drupal\webcomposer_domains_configuration_v2\Parser\ImportParser definition.
+   * Drupal\webcomposer_domains_configuration_v2\Storage\StorageInterface definition.
    *
-   * @var RedisService
+   * @var StorageInterface
    */
-  protected $redisService;
+  protected $storage;
 
   /**
    * Constructs a new DomainImportService object.
    */
-  public function __construct(ImportParser $importParser, RedisService $redisService)
+  public function __construct(ImportParser $importParser, StorageInterface $storage)
   {
     $this->importParser = $importParser;
-    $this->redisService = $redisService;
+    $this->storage = $storage;
   }
 
   public function execute(FormStateInterface $formState)
