@@ -7,3 +7,7 @@ services:
     class: Drupal\webcomposer_domains_configuration_v2\Storage\RedisService
     arguments: []
 
+  webcomposer_domains_configuration_v2.domain_import:
+    class: Drupal\webcomposer_domains_configuration_v2\Service\DomainImportService
+    arguments: ['@webcomposer_domains_configuration_v2.import', '@webcomposer_domains_configuration_v2.redis_storage']
+
