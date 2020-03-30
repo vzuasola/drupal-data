@@ -1,0 +1,80 @@
+field_settings:
+  label: Province
+  placeholder: Province
+  groups: province
+  choices: "Abra\r\nAgusan del Norte\r\nAgusan del Sur\r\nAklan\r\nAlbay\r\nAntique\r\nApayao\r\nAurora\r\nBasilan\r\nBataan\r\nBatanes\r\nBatangas\r\nBenguet\r\nBiliran\r\nBohol\r\nBukidnon\r\nBulacan\r\nCagayan\r\nCamarines Norte\r\nCamarines Sur\r\nCamiguin\r\nCapiz\r\nCatanduanes\r\nCavite\r\nCebu\r\nCotabato\r\nDavao de Oro\r\nDavao del Norte\r\nDavao del Sur\r\nDavao Occidental\r\nDavao Oriental\r\nDinagat Islands\r\nEastern Samar\r\nGuimaras\r\nIfugao\r\nIlocos Norte\r\nIlocos Sur\r\nIloilo\r\nIsabela\r\nKalinga\r\nLa Union\r\nLaguna\r\nLanao del Norte\r\nLanao del Sur\r\nLeyte\r\nMaguindanao\r\nMarinduque\r\nMasbate\r\nMisamis Occidental\r\nMisamis Oriental\r\nMountain Province\r\nNCR, 3rd district\r\nNCR, 4th district\r\nNCR, 2nd district\r\nNCR, City of Manila, 1st district\r\nNegros Occidental\r\nNegros Oriental\r\nNorthern Samar\r\nNueva Ecija\r\nNueva Vizcaya\r\nOccidental Mindoro\r\nOriental Mindoro\r\nPalawan\r\nPampanga\r\nPangasinan\r\nQuezon\r\nQuirino\r\nRizal\r\nRomblon\r\nSamar\r\nSarangani\r\nSiquijor\r\nSorsogon\r\nSouth Cotabato\r\nSouthern Leyte\r\nSultan Kudarat\r\nSulu\r\nSurigao del Norte\r\nSurigao del Sur\r\nTarlac\r\nTawi-Tawi\r\nZambales\r\nZamboanga del Norte\r\nZamboanga del Sur\r\nZamboanga Sibugay"
+field_validations:
+  required:
+    enable: 0
+    error_message: 'Field should be required'
+  alpha:
+    enable: 0
+    error_message: 'Field should be Alphabet characters only'
+    parameters:
+      spaces: 1
+  alphanumeric:
+    enable: 0
+    error_message: 'Field should be alphanumeric'
+    parameters:
+      spaces: 1
+  alpha_multi:
+    enable: 0
+    error_message: 'Value is not a valid multilingual character'
+    parameters:
+      space: 1
+      numeric: 1
+      allow: 0
+      disallow: 0
+      special: ''
+  numeric:
+    enable: 0
+    error_message: 'Field should be numeric'
+  no_symbols:
+    enable: 0
+    error_message: 'Field contains invalid special characters'
+  numeric_symbols:
+    enable: 0
+    error_message: 'Field contains invalid special characters'
+  email:
+    enable: 0
+    error_message: 'Field does not contain a valid email address'
+  min_length:
+    enable: 0
+    error_message: 'Minimum requirement not met'
+    parameters:
+      length: '2'
+  max_length:
+    enable: 0
+    error_message: 'Maximum requirement not met'
+    parameters:
+      length: '10'
+  regex:
+    enable: 0
+    error_message: 'This field only accepts specific characters.'
+    parameters:
+      regex_value: ''
+  valid_date:
+    enable: 0
+    error_message: 'Date is invalid'
+  must_not_match:
+    enable: 0
+    error_message: 'This must not match deafult.'
+    parameters:
+      not_match: ''
+  email_availability:
+    enable: 0
+    error_message: 'Email not available'
+  not_match_username:
+    enable: 0
+    error_message: 'Password should not equal to username'
+  duplicated_security_question:
+    enable: 0
+    error_message: 'Security Questions should not be the same'
+  match_password:
+    enable: 0
+    error_message: 'Password not match'
+  valid_username_prefix:
+    enable: 0
+    error_message: 'Username Prefix not valid'
+    parameters:
+      prefixes: '000,000,000'

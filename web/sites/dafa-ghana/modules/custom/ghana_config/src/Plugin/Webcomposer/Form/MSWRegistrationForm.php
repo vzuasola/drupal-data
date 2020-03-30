@@ -193,7 +193,7 @@ use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
             'choices' => [
               '#title' => 'Province Choices',
               '#type' => 'textarea',
-              '#description' => 'Provide a pipe separated key value pair. <br> <small>Example key|My Value</small>',
+              '#description' => 'Provide a list of Provinces per line.',
               '#default_value' => '',
             ],
           ],
@@ -303,7 +303,7 @@ use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
             'choices' => [
               '#title' => 'Select ID 1 Choices',
               '#type' => 'textarea',
-              '#description' => 'Provide a pipe separated key value pair. <br> <small>Example key|My Value</small>',
+              '#description' => 'Provide a list of ID per line.',
               '#default_value' => $id1,
             ],
           ],
@@ -334,7 +334,7 @@ use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
             'choices' => [
               '#title' => 'Select ID 2 Choices',
               '#type' => 'textarea',
-              '#description' => 'Provide a pipe separated key value pair. <br> <small>Example key|My Value</small>',
+              '#description' => 'Provide a list of ID per line',
               '#default_value' => $id2,
             ],
           ],
