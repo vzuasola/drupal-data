@@ -38,6 +38,9 @@ class DomainImportService
 
   public function execute(FormStateInterface $formState)
   {
+    // TODO: Create here
+    // 0 - Validate form state?
+
     // 1 - Read the import file
     $excelData = $this->importParser->readExcel($formState);
 
