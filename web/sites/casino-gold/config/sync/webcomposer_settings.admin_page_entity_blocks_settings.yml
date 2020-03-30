@@ -42,8 +42,8 @@ webcomposer_config_schema__form_menu_links___webcomposer_config_schema__admin_fo
 webcomposer_slider__list: 0
 entity__webcomposer_slider_entity__collection: 0
 webcomposer_slider_entity__admin__structure__settings: 0
-webcomposer_social_media__list: 0
-entity__social_media_entity__collection: 0
+webcomposer_social_media__list: 1
+entity__social_media_entity__collection: 1
 social_media_entity__admin__structure__settings: 1
 webcomposer_sponsor__list: 0
 entity__sponsor_entity__collection: 0
