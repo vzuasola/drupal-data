@@ -3,11 +3,15 @@ services:
     class: Drupal\webcomposer_domains_configuration_v2\Parser\ImportParser
     arguments: []
 
-  webcomposer_domains_configuration_v2.redis_storage:
-    class: Drupal\webcomposer_domains_configuration_v2\Storage\RedisService
+  webcomposer_domains_configuration_v2.storage:
+    class: Drupal\webcomposer_domains_configuration_v2\Storage\StorageService
     arguments: []
 
   webcomposer_domains_configuration_v2.domain_import:
     class: Drupal\webcomposer_domains_configuration_v2\Service\DomainImportService
-    arguments: ['@webcomposer_domains_configuration_v2.import', '@webcomposer_domains_configuration_v2.redis_storage']
+    arguments: ['@webcomposer_domains_configuration_v2.import', '@webcomposer_domains_configuration_v2.storage']
+
+  webcomposer_domains_configuration_v2.redis:
+    class: Drupal\webcomposer_domains_configuration_v2\Storage\RedisService
+    arguments: []
 
