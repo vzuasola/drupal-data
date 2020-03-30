@@ -573,7 +573,7 @@ use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
 
         'rfidpin' => [
           'name' => 'RFID Pin',
-          'type' => 'textfield',
+          'type' => 'password',
           'settings' => [
             'label' => [
               '#title' => 'RFID Pin label',
