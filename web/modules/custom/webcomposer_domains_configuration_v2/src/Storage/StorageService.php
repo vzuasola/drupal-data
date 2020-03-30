@@ -3,7 +3,6 @@
 namespace Drupal\webcomposer_domains_configuration_v2\Storage;
 
 use Drupal\webcomposer_domains_configuration_v2\Parser\ImportParser;
-use Drupal\webcomposer_domains_configuration_v2\Service\DomainImportService;
 
 /**
  * Class StorageService.
@@ -23,25 +22,38 @@ class StorageService implements StorageInterface {
     $this->storage =  \Drupal::service('webcomposer_domains_configuration_v2.redis');
   }
 
+  /**
+   * Processes all the data for storing on the storage provider
+   *
+   * @param array $data
+   */
   public function processAllData(array $data) {
     // Parsing of data store should be done here
     $domains = $this->getDomains($data);
     foreach ($domains as $domain => $domainData) {
+      // TODO: Research on redis cli, create transactional update before applying the changes
       $this->set($domain, $domainData);
     }
-    // TODO: Research on redis cli, create transactional update before applying the changes
   }
 
+  /** @inheritDoc */
   public function set(string $key, array $data) {
     // Any Modification per data store should be done here before the actual saving
-    $this->storage->set($key, $data);
+    return $this->storage->set($key, $data);
   }
 
+  /** @inheritDoc */
   public function get(string $key)
   {
     return $this->storage->get($key);
   }
 
+  /**
+   * Retrieves the domain list from the sheet/excel data array
+   *
+   * @param $data
+   * @return array
+   */
   private function getDomains($data) {
     $domains = [];
     foreach ($data as $sheet => $sheetData) {
