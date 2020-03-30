@@ -29,6 +29,7 @@ class StorageService implements StorageInterface {
     foreach ($domains as $domain => $domainData) {
       $this->set($domain, $domainData);
     }
+    // TODO: Research on redis cli, create transactional update before applying the changes
   }
 
   public function set(string $key, array $data) {
