@@ -62,7 +62,7 @@ class ImportForm extends FormBase
       '#title' => $this->t('Import file'),
       '#required' => TRUE,
       '#upload_validators' => [
-        'file_validate_extensions' => ['csv xml xlsx'],
+        'file_validate_extensions' => ['xlsx'],
         'file_validate_size' => [25600000],
       ],
       '#upload_location' => 'public://taxonomy_files/',
@@ -100,15 +100,9 @@ class ImportForm extends FormBase
       drupal_set_message('Failed to import domains due to the following reason(s): ' . implode('<br>', $error)
         , 'error');
     } else {
-      // TODO: Create the excel parser here
-      // TODO: Create the redis client here
-      // TODO: Populate the redis here
-      // TODO: optional create a progress status while importing
+      $this->domainImportService->execute($form_state);
       drupal_set_message('The domains was imported successfully.');
-      drupal_set_message($this->domainImportService->execute($form_state));
     }
-
-    // $form_state->setResponse($this-> buildResponse());
   }
 
 }
