@@ -9,6 +9,10 @@ use PhpOffice\PhpSpreadsheet\Worksheet\Worksheet;
 
 class ImportParser
 {
+  private $tokens = [];
+  const DOMAIN_COLUMN = 'domains';
+  const TOKEN_COLUMN = 'tokens';
+
   public function __construct()
   {
   }
@@ -19,7 +23,6 @@ class ImportParser
 
   public function readExcel($form_state)
   {
-    $message = 'Reading File...';
     if (is_object($form_state)) {
       $fid = $form_state->getValue('fid');
       if (!$fid) {
@@ -34,8 +37,7 @@ class ImportParser
     $realPath = \Drupal::service('file_system')->realpath($uri);
 
     // Extract the data from the excel file
-    $excelData = $this->getExcelData($realPath);
-
+    return  $this->getExcelData($realPath);
   }
 
   private function getExcelData(string $path)
@@ -46,9 +48,7 @@ class ImportParser
       $excelReader->setLoadAllSheets();
       $excel = $excelReader->load($path);
       $sheets = $excel->getSheetNames();
-      // Isolate Token Sheets from Grouped sheets with domains
-      // This is for me to set the default value for the domains without token values
-      $datas = [];
+      $excelData = [];
 
       foreach ($sheets as $sheetName) {
         $sheet = $excel->getSheetByName($sheetName)
@@ -57,24 +57,71 @@ class ImportParser
           . $sheet->getHighestDataColumn()
           . $sheet->getHighestDataRow(); // TODO: Test if same with blanks
 
-        $sheetData = $sheet->rangeToArray($range, true, true, true);
-        $this->parseSheet($sheetData, $sheet);
+        $sheetData = $sheet->rangeToArray($range, true, true, false);
+        $excelData[$sheet->getCodeName()] = $this->parseSheet($sheetData, $sheet);
       }
 
-      die();
+      return ($excelData);
     } catch (\Throwable $e) {
       // Log the error here?
-      return $e;
+      return [];
     }
   }
 
   private function parseSheet($sheetData, Worksheet $sheet)
   {
     $sheetName = $sheet->getCodeName();
-    if($sheetName === 'tokens') {
-      var_dump($sheetData);
+    if ($sheetName === self::TOKEN_COLUMN) {
+      return $this->parseTokens($sheetData);
     }
-    var_dump($sheetName);
+    return $this->parseDomains($sheetData);
   }
 
+  private function parseTokens($sheetData)
+  {
+    $headings = array_shift($sheetData);
+    array_walk(
+      $sheetData,
+      function (&$row) use ($headings) {
+        $row = array_combine($headings, $row);
+      }
+    );
+
+    return $this->tokens = array_column($sheetData, 'Default', self::TOKEN_COLUMN);
+  }
+
+  private function parseDomains($sheetData)
+  {
+    $headings = array_shift($sheetData);
+    $domainData = [];
+    array_walk(
+      $sheetData,
+      function (&$row) use ($headings) {
+        $row = array_combine($headings, $row);
+      }
+    );
+
+    // Remove domains rows with no value
+    $sheetData = array_filter($sheetData, function ($sheet) {
+      return is_string($sheet[self::DOMAIN_COLUMN]);
+    });
+
+    foreach ($sheetData as $domainRow) {
+      $domain = $domainRow[self::DOMAIN_COLUMN];
+      $this->getTokenDefaults($domainRow);
+      $domainData[$domain] = $domainRow;
+    }
+
+    return $domainData;
+  }
+
+  private function getTokenDefaults(&$domainRow)
+  {
+    unset($domainRow[self::DOMAIN_COLUMN]);
+    foreach ($domainRow as $key => $data) {
+      $domainRow[$key] = is_string($data)
+        ? $data
+        : $this->tokens[$key] ?? "";
+    }
+  }
 }

@@ -38,8 +38,12 @@ class DomainImportService
 
   public function execute(FormStateInterface $formState)
   {
+    $start = microtime(true);
     // 1 - Read the import file
-    $this->importParser->readExcel($formState);
+    $excelData = $this->importParser->readExcel($formState);
+
+    print "Execution Time: " . number_format((microtime(true) - $start), 2);
+    die();
   }
 
 }
