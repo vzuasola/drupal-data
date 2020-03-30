@@ -55,6 +55,9 @@ class RedisService implements StorageInterface {
    */
   public function get(string $key)
   {
-    // TODO: Implement get() method.
+    $value = $this->redis->get(self::DOMAIN_NAMESPACE . $key);
+    $decoded = json_decode($value);
+
+    return (json_last_error() === JSON_ERROR_NONE) ? $decoded : $value;
   }
 }
