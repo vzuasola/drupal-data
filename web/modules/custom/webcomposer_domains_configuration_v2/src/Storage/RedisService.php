@@ -14,4 +14,14 @@ class RedisService implements StorageInterface {
 
   }
 
+  public function set(string $key, array $data)
+  {
+    $data = json_encode($data);
+    print("KEY: {$key} \n VALUE: {$data} \n\n" );
+  }
+
+  public function get(string $key)
+  {
+    // TODO: Implement get() method.
+  }
 }
