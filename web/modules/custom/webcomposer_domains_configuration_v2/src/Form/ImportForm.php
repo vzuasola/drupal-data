@@ -94,14 +94,11 @@ class ImportForm extends FormBase
       drupal_set_message('Failed to import domains due to the following reason(s): Module not enabled!', 'error');
     }
 
-    // TODO CREATE VALIDATIONS HERE
-    if (false) {
-      $error = ['foo', 'bar', 'baz'];
-      drupal_set_message('Failed to import domains due to the following reason(s): ' . implode('<br>', $error)
-        , 'error');
-    } else {
+    try {
       $this->domainImportService->execute($form_state);
       drupal_set_message('The domains was imported successfully.');
+    } catch (\Throwable $e) {
+      drupal_set_message('Failed to import domains due to the following reason(s): ' . $e->getMessage());
     }
   }
 
