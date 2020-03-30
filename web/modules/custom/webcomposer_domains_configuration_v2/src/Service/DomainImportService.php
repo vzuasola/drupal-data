@@ -38,15 +38,11 @@ class DomainImportService
 
   public function execute(FormStateInterface $formState)
   {
-    $start = microtime(true);
     // 1 - Read the import file
     $excelData = $this->importParser->readExcel($formState);
 
     // 2 - Store the sheet data on storage
     $this->storage->processAllData($excelData);
-
-    print "Execution Time: " . number_format((microtime(true) - $start), 2);
-    die();
   }
 
 }
