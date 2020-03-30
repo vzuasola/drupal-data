@@ -212,6 +212,7 @@ promotion_page_title: 0
 links_title: 0
 _core:
   default_config_hash: SRCpRPiOZeqqX1r7f9aLd4FWZxP8bNAmVb1R76zsWUI
+langcode: zh-hans
 title: 1
 see_all: 0
 dismiss_all: 0
