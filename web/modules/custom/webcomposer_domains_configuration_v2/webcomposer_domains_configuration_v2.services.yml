@@ -15,3 +15,7 @@ services:
     class: Drupal\webcomposer_domains_configuration_v2\Storage\RedisService
     arguments: []
 
+  webcomposer_domains_configuration_v2.cryptography:
+    class: Drupal\webcomposer_domains_configuration_v2\Service\CryptographyService
+    arguments: []
+
