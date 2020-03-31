@@ -11,16 +11,18 @@ interface StorageInterface
    * Stores the data using the provided key
    *
    * @param string $key
-   * @param array | string $data
+   * @param array $data
+   * @param string $lang
    * @return bool
    */
-  public function set(string $key, $data);
+  public function set(string $key, array $data, string $lang);
 
   /**
    * Retrieves the data using the provided key
    *
    * @param string $key
+   * @param string $lang
    * @return mixed
    */
-  public function get(string $key);
+  public function get(string $key, string $lang);
 }

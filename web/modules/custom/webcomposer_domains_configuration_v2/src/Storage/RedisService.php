@@ -12,7 +12,10 @@ class RedisService implements StorageInterface {
   /**
    *
    */
-  protected const DOMAIN_NAMESPACE = "domains:";
+  protected const DOMAIN_NAMESPACE = "domains";
+
+  protected const DEFAULT_LANG = "en";
+
   // TODO: Create a config for this
   /**
    * @var array
@@ -39,21 +42,14 @@ class RedisService implements StorageInterface {
   }
 
   /** @inheritDoc */
-  public function set(string $key, $data)
+  public function set(string $key, array $data, string $lang = self::DEFAULT_LANG)
   {
-    if(is_array($data)) {
-      $data = json_encode($data);
-    }
-
-    return $this->redis->set(self::DOMAIN_NAMESPACE . $key, $data);
+    return $this->redis->hmset(self::DOMAIN_NAMESPACE .":" . $key . ":" . $lang,  $data);
   }
 
   /** @inheritDoc */
-  public function get(string $key)
+  public function get(string $key, string $lang = self::DEFAULT_LANG)
   {
-    $value = $this->redis->get(self::DOMAIN_NAMESPACE . $key);
-    $decoded = json_decode($value);
-
-    return (json_last_error() === JSON_ERROR_NONE) ? $decoded : $value;
+    return $this->redis->hgetall(self::DOMAIN_NAMESPACE . ":" . $key . $lang);
   }
 }
