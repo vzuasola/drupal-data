@@ -211,7 +211,7 @@ class JamboreeLoginConfigForm extends FormBase {
       '#title' => t('Session Timer'),
       '#default_value' => $default_login_session_time,
       '#description' => $this->t('Login Session Time in Minutes'),
-      '#translatable' => FALSE,
+      '#translatable' => TRUE,
     ];
 
     $default_session_timeout = $this->get('session_timeout');
@@ -343,8 +343,4 @@ class JamboreeLoginConfigForm extends FormBase {
       '#translatable' => TRUE,
     ];
   }
-
-  /**
-   * {@inheritdoc}
-   */
 }
