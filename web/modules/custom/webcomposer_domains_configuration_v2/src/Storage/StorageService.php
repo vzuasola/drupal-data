@@ -38,7 +38,7 @@ class StorageService implements StorageInterface {
   }
 
   /** @inheritDoc */
-  public function set(string $key, array $data, string $lang = 'es') {
+  public function set(string $key, array $data, string $lang = 'en') {
     // Any Modification per data store should be done here before the actual saving
     return $this->storage->set($key, $data, $lang);
   }
