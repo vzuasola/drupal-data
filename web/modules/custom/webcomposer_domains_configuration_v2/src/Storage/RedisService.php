@@ -35,12 +35,14 @@ class RedisService implements StorageInterface
   /** @inheritDoc */
   public function set(string $key, array $data, string $lang = self::DEFAULT_LANG)
   {
+    $lang = self::DEFAULT_LANG; // TODO: This will force to set the language to en, remove until further notice
     return $this->redis->hmset(self::DOMAIN_NAMESPACE . ":" . $key . ":" . $lang, $data);
   }
 
   /** @inheritDoc */
   public function get(string $key, string $lang = self::DEFAULT_LANG)
   {
-    return $this->redis->hgetall(self::DOMAIN_NAMESPACE . ":" . $key . $lang);
+    $lang = self::DEFAULT_LANG; // TODO: This will force to set the language to en, remove until further notice
+    return $this->redis->hgetall(self::DOMAIN_NAMESPACE . ":" . $key . ":" . $lang);
   }
 }
