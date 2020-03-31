@@ -1,8 +1,9 @@
-uuid: a894c921-f68f-4936-b6fd-aee6d5c08d91
+uuid: 4010b7cd-314b-47d6-a668-7214b9cedb2d
 langcode: en
 status: true
 dependencies:
   config:
+    - block.block.languagedropdownswitcher_2
     - field.storage.node.field_product_category
     - field.storage.node.field_promo_availability
     - node.type.promotion
@@ -14,8 +15,8 @@ dependencies:
     - rest
     - serialization
     - user
-id: featured_promotions
-label: 'Featured Promotions'
+id: promotions_archive
+label: 'Archived Promotions'
 module: views
 description: ''
 tag: ''
@@ -167,42 +168,6 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           plugin_id: boolean
-        field_mark_as_featured_value:
-          id: field_mark_as_featured_value
-          table: node__field_mark_as_featured
-          field: field_mark_as_featured_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: '='
-          value: '1'
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          plugin_id: boolean
         langcode:
           id: langcode
           table: node_field_data
@@ -251,7 +216,7 @@ display:
           group_type: group
           admin_label: ''
           operator: '='
-          value: '0'
+          value: '1'
           group: 1
           exposed: false
           expose:
@@ -292,7 +257,22 @@ display:
           expose:
             label: ''
           plugin_id: standard
-      title: 'Featured Promotions'
+        changed:
+          id: changed
+          table: node_field_data
+          field: changed
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: DESC
+          exposed: false
+          expose:
+            label: ''
+          granularity: second
+          entity_type: node
+          entity_field: changed
+          plugin_id: date
+      title: 'Archived Promotions'
       header: {  }
       footer: {  }
       empty: {  }
@@ -310,12 +290,12 @@ display:
   page_1:
     display_plugin: page
     id: page_1
-    display_title: 'Feature Promotions'
+    display_title: 'Archived Promotions'
     position: 1
     display_options:
       display_extenders: {  }
-      path: admin/config/mobile_promotions/featured
-      display_description: 'List of featured promotions'
+      path: admin/config/mobile_promotions/archived
+      display_description: 'List of archived promotions'
       fields:
         title:
           id: title
@@ -563,15 +543,30 @@ display:
           plugin_id: draggable_views_field
       defaults:
         fields: false
+        header: false
       menu:
         type: normal
-        title: 'Manage Featured Promotions'
+        title: 'Manage Archived Promotions'
         description: 'Sort featured promotions'
         expanded: false
         parent: mobile_promotions.list
-        weight: 5
+        weight: 20
         context: '0'
         menu_name: admin
+      header:
+        entity_block:
+          id: entity_block
+          table: views
+          field: entity_block
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: true
+          target: languagedropdownswitcher_2
+          view_mode: default
+          bypass_access: false
+          plugin_id: entity
     cache_metadata:
       max-age: 0
       contexts:
@@ -585,11 +580,11 @@ display:
   rest_export_1:
     display_plugin: rest_export
     id: rest_export_1
-    display_title: 'Featured REST'
+    display_title: 'Archived REST'
     position: 2
     display_options:
       display_extenders: {  }
-      path: api/featured_promotions
+      path: api/promotions_archive
       style:
         type: serializer
       defaults:
@@ -599,8 +594,9 @@ display:
         type: data_entity
         options: {  }
       pager:
-        type: none
+        type: some
         options:
+          items_per_page: 3
           offset: 0
       rendering_language: '***LANGUAGE_language_interface***'
       display_description: ''
