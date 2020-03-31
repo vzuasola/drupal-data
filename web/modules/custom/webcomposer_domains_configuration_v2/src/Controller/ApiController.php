@@ -3,41 +3,48 @@
 namespace Drupal\webcomposer_domains_configuration_v2\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
-use Symfony\Component\DependencyInjection\ContainerInterface;
+use Drupal\Core\Language\LanguageManager;
 use Drupal\language\ConfigurableLanguageManager;
 use Drupal\webcomposer_domains_configuration_v2\Storage\StorageService;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
 /**
  * Class ApiController.
  */
-class ApiController extends ControllerBase {
+class ApiController extends ControllerBase
+{
 
   /**
    * Drupal\language\ConfigurableLanguageManager definition.
    *
-   * @var \Drupal\language\ConfigurableLanguageManager
+   * @var LanguageManager
    */
   protected $languageManager;
   /**
    * Drupal\webcomposer_domains_configuration_v2\Storage\StorageService definition.
    *
-   * @var \Drupal\webcomposer_domains_configuration_v2\Storage\StorageService
+   * @var StorageService
    */
-  protected $webcomposerDomainsConfigurationV2Storage;
+  protected $storageService;
 
   /**
    * Constructs a new ApiController object.
    */
-  public function __construct(ConfigurableLanguageManager $language_manager, StorageService $webcomposer_domains_configuration_v2_storage) {
+  public function __construct(
+    ConfigurableLanguageManager $language_manager,
+    StorageService $storageService
+  )
+  {
     $this->languageManager = $language_manager;
-    $this->webcomposerDomainsConfigurationV2Storage = $webcomposer_domains_configuration_v2_storage;
+    $this->storageService = $storageService;
   }
 
   /**
    * {@inheritdoc}
    */
-  public static function create(ContainerInterface $container) {
+  public static function create(ContainerInterface $container)
+  {
     return new static(
       $container->get('language_manager'),
       $container->get('webcomposer_domains_configuration_v2.storage')
@@ -45,14 +52,17 @@ class ApiController extends ControllerBase {
   }
 
   /**
-   * Getdomain.
+   * Get the domain details from the provided domain param
    *
-   * @return string
-   *   Return Hello string.
+   * @param $domain
+   * @return JsonResponse
    */
-  public function getDomain($domain) {
+  public function getDomain($domain)
+  {
     $lang = $this->languageManager->getCurrentLanguage()->getId();
-    return new JsonResponse(["Implement method: getDomain with parameter(s): $domain, $lang"]);
+    $domainDetails = $this->storageService->get($domain, $lang);
+
+    return new JsonResponse($domainDetails);
   }
 
 }
