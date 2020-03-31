@@ -6,14 +6,6 @@ webcomposer_domains_configuration_v2.admin_settings:
   requirements:
     _permission: 'administer site configuration'
 
-webcomposer_domains_configuration_v2.import_controller_import:
-  path: '/webcomposer_domains_configuration_v2/import'
-  defaults:
-    _controller: '\Drupal\webcomposer_domains_configuration_v2\Controller\ImportController::import'
-    _title: 'content'
-  requirements:
-    _permission: 'administer site configuration'
-
 webcomposer_domains_configuration_v2.api_controller_getDomain:
   path: '/api/domain-v2/{domain}'
   defaults:
