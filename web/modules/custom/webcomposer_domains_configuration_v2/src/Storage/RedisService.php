@@ -38,21 +38,17 @@ class RedisService implements StorageInterface {
     $this->redis = new Redis($this->redisConfig['client'], $this->redisConfig['options']);
   }
 
-  /**
-   * @param string $key
-   * @param array $data
-   * @return bool|void
-   */
-  public function set(string $key, array $data)
+  /** @inheritDoc */
+  public function set(string $key, $data)
   {
-    $data = json_encode($data);
+    if(is_array($data)) {
+      $data = json_encode($data);
+    }
+
     return $this->redis->set(self::DOMAIN_NAMESPACE . $key, $data);
   }
 
-  /**
-   * @param string $key
-   * @return mixed|void
-   */
+  /** @inheritDoc */
   public function get(string $key)
   {
     $value = $this->redis->get(self::DOMAIN_NAMESPACE . $key);
