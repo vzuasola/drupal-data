@@ -11,10 +11,10 @@ interface StorageInterface
    * Stores the data using the provided key
    *
    * @param string $key
-   * @param array $data
+   * @param array | string $data
    * @return bool
    */
-  public function set(string $key, array $data);
+  public function set(string $key, $data);
 
   /**
    * Retrieves the data using the provided key

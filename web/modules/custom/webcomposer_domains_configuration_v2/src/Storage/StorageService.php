@@ -14,6 +14,13 @@ class StorageService implements StorageInterface {
    */
   private $storage;
 
+  const SALT = "SUPER SECRET RANDOM STRING...";
+
+  const CIPHER = "aes-128-ctr";
+
+  const HASH_METHOD = "SHA256";
+
+
   /**
    * Constructs a new StorageService object.
    */
@@ -37,15 +44,21 @@ class StorageService implements StorageInterface {
   }
 
   /** @inheritDoc */
-  public function set(string $key, array $data) {
+  public function set(string $key, $data) {
     // Any Modification per data store should be done here before the actual saving
+    $this->encrypt($key);
+    $this->encrypt($data);
     return $this->storage->set($key, $data);
   }
 
   /** @inheritDoc */
   public function get(string $key)
   {
-    return $this->storage->get($key);
+    $this->encrypt($key);
+    $data = $this->storage->get($key);
+    $this->decrypt($data);
+
+    return $data;
   }
 
   /**
@@ -63,5 +76,26 @@ class StorageService implements StorageInterface {
     }
 
     return $domains;
+  }
+
+  private function encrypt(&$data)
+  {
+    if(is_array($data)) {
+      $data = json_encode($data);
+    }
+    $encryptionKey = openssl_digest(self::SALT, self::HASH_METHOD, TRUE);
+    $iv = openssl_random_pseudo_bytes(openssl_cipher_iv_length($this->cipher));
+    $data = openssl_encrypt($data, self::CIPHER, $encryptionKey, 0, $iv) . "::" . bin2hex($iv);
+  }
+
+  private function decrypt(&$data) {
+    $encryptionKey = openssl_digest(self::SALT, self::HASH_METHOD, TRUE);
+    list($data, $iv) = explode("::", $data);
+    $data = openssl_decrypt($data, self::CIPHER, $encryptionKey, 0, hex2bin($iv));
+    $decoded = json_decode($data);
+
+    if((json_last_error() === JSON_ERROR_NONE)) {
+      $data = $decoded;
+    }
   }
 }
