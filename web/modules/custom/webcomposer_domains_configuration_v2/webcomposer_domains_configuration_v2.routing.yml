@@ -11,5 +11,6 @@ webcomposer_domains_configuration_v2.api_controller_getDomain:
   defaults:
     _controller: '\Drupal\webcomposer_domains_configuration_v2\Controller\ApiController::getDomain'
     _title: 'getDomain'
+  methods: [GET]
   requirements:
     _access: 'TRUE'
