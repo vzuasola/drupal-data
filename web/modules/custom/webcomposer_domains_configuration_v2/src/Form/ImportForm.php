@@ -39,7 +39,7 @@ class ImportForm extends FormBase
   public function __construct()
   {
     $this->enabled = true;
-    $this->domainImportService =  \Drupal::service('webcomposer_domains_configuration_v2.domain_import');
+    $this->domainImportService = \Drupal::service('webcomposer_domains_configuration_v2.domain_import');
   }
 
   /**
