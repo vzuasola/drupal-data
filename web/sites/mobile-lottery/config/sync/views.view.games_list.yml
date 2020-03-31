@@ -3,11 +3,14 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.storage.node.field_game_landscape_size
+    - field.storage.node.field_game_thumbnail_size
     - node.type.games
     - system.menu.admin
   module:
     - draggableviews
     - node
+    - options
     - rest
     - serialization
     - webcomposer_rest_extra
@@ -300,14 +303,14 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        operations:
-          id: operations
-          table: node
-          field: operations
+        field_game_thumbnail_size:
+          id: field_game_thumbnail_size
+          table: node__field_game_thumbnail_size
+          field: field_game_thumbnail_size
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Operations links'
+          label: Portrait
           exclude: false
           alter:
             alter_text: false
@@ -348,9 +351,82 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          destination: false
-          entity_type: node
-          plugin_id: entity_operations
+          click_sort_column: value
+          type: list_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_game_landscape_size:
+          id: field_game_landscape_size
+          table: node__field_game_landscape_size
+          field: field_game_landscape_size
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Landscape
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: list_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
         status:
           id: status
           table: node_field_data
@@ -418,6 +494,57 @@ display:
           entity_type: node
           entity_field: status
           plugin_id: field
+        operations:
+          id: operations
+          table: node
+          field: operations
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Operations links'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          destination: false
+          entity_type: node
+          plugin_id: entity_operations
         draggableviews:
           id: draggableviews
           table: node_field_data
@@ -487,7 +614,9 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - 'user.node_grants:view'
-      tags: {  }
+      tags:
+        - 'config:field.storage.node.field_game_landscape_size'
+        - 'config:field.storage.node.field_game_thumbnail_size'
   rest_export_1:
     display_plugin: rest_export
     id: rest_export_1
