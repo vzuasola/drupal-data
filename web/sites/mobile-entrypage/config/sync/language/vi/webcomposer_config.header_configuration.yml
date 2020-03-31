@@ -1,4 +1,4 @@
-header_settings_tab__active_tab: edit-logo-group
+header_settings_tab__active_tab: edit-header-other-group
 logo_title: 'Cá cược trên di động với Dafabet'
 capslock_notification: 'Đang bật CAP LOCK'
 balance_label_override: ''
@@ -19,7 +19,7 @@ cashier_mapping: "USD|AR|{domain:crow_cashier}/en\r\nUSD|BO|{domain:crow_cashier
 default_mcashier_link: '{domain:mcashier}/{domain:cashier_lang}[query:(ticket={auth.token}&{tracking})]'
 mcashier_mapping: ''
 promotion_page_title: 'Khuyến mãi cá cược Giải thưởng đặc biệt tại Dafabet Di động'
-links_title: Quicklinks
+links_title: 'LINK NHANH'
 logo_url: ''
 mobile_logo_url: ''
 join_now_text: 'THAM GIA NGAY'
