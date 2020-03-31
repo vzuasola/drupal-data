@@ -64,7 +64,7 @@ logo_title: 1
 password_mask_toggle: 0
 caps_lock_toggle: 0
 capslock_notification: 0
-cashier_link: 0
+cashier_link: 1
 balance_label_override: 0
 balance_mapping: 1
 username_placeholder: 1
@@ -203,7 +203,7 @@ territory_blocking_mapping: 1
 domain_toggle: 1
 vip_mapping_configuration: 1
 vip_badge_tooltip: 1
-registration_link: 0
+registration_link: 1
 default_cashier_link: 1
 cashier_mapping: 1
 default_mcashier_link: 0
@@ -266,3 +266,5 @@ promotions_tab_empty_message: 0
 payments_tab_enable: 0
 payments_tab_title: 0
 payments_tab_empty_message: 0
+currency_mapping: 1
+ucp_content: 1
