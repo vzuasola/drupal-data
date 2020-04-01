@@ -119,6 +119,13 @@ class ImportParser
   {
     unset($domainRow[self::DOMAIN_COLUMN]);
     foreach ($domainRow as $key => $data) {
+      // If the $domainRow has a token not included on the masterlist token,
+      // do not include it on the parsed data
+      if(!isset($this->tokens[$key])) {
+        unset($domainRow[$key]);
+        continue;
+      }
+
       $domainRow[$key] = is_string($data)
         ? $data
         : $this->tokens[$key] ?? "";
