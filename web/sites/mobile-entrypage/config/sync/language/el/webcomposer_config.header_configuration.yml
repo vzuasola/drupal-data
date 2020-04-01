@@ -19,7 +19,7 @@ cashier_mapping: "USD|AR|{domain:crow_cashier}/en\r\nUSD|BO|{domain:crow_cashier
 default_mcashier_link: '{domain:mcashier}/{domain:cashier_lang}[query:(ticket={auth.token}&{tracking})]'
 mcashier_mapping: ''
 promotion_page_title: 'Enjoy betting on mobile with exclusive promotions!'
-links_title: Quicklinks
+links_title: 'ΓΡΗΓΟΡΟΙ ΣΥΝΔΕΣΜΟΙ'
 logo_url: ''
 mobile_logo_url: ''
 join_now_text: ΕΓΓΡΑΦΗ

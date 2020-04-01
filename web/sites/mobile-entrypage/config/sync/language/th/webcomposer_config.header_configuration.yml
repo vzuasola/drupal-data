@@ -1,4 +1,4 @@
-header_settings_tab__active_tab: edit-logo-group
+header_settings_tab__active_tab: edit-header-other-group
 logo_title: เดิมพันบนมือถือกับดาฟาเบท
 capslock_notification: 'ปิดปุ่ม  Caps Lock'
 mobile_remember: บันทึกยูสเซอร์เนม
@@ -19,7 +19,7 @@ cashier_mapping: "USD|AR|{domain:crow_cashier}/en\r\nUSD|BO|{domain:crow_cashier
 default_mcashier_link: '{domain:mcashier}/{domain:cashier_lang}[query:(ticket={auth.token}&{tracking})]'
 mcashier_mapping: ''
 promotion_page_title: รับสิทธิ์พิเศษมากมายกับโปรโมชั่นเดิมพันบนมือถือกับเดดาฟาเบท!
-links_title: Quicklinks
+links_title: คลิกที่นี่
 logo_url: ''
 mobile_logo_url: ''
 join_now_text: สมัครสมาชิก
