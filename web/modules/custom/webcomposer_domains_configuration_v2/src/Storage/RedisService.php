@@ -11,8 +11,6 @@ use Predis\Client as Redis;
 class RedisService implements StorageInterface
 {
 
-  protected const DOMAIN_NAMESPACE = "domains";
-
   protected const DEFAULT_LANG = "en";
 
   /**
@@ -35,14 +33,18 @@ class RedisService implements StorageInterface
   /** @inheritDoc */
   public function set(string $key, array $data, string $lang = self::DEFAULT_LANG)
   {
-    $lang = self::DEFAULT_LANG; // TODO: This will force to set the language to en, remove until further notice
-    return $this->redis->hmset(self::DOMAIN_NAMESPACE . ":" . $key . ":" . $lang, $data);
+    if ($lang) {
+      $lang = ":" . $lang;
+    }
+    return $this->redis->hmset($key . $lang, $data);
   }
 
   /** @inheritDoc */
   public function get(string $key, string $lang = self::DEFAULT_LANG)
   {
-    $lang = self::DEFAULT_LANG; // TODO: This will force to set the language to en, remove until further notice
-    return $this->redis->hgetall(self::DOMAIN_NAMESPACE . ":" . $key . ":" . $lang);
+    if ($lang) {
+      $lang = ":" . $lang;
+    }
+    return $this->redis->hgetall($key . $lang);
   }
 }

@@ -60,7 +60,7 @@ class ApiController extends ControllerBase
   public function getDomain($domain)
   {
     $lang = $this->languageManager->getCurrentLanguage()->getId();
-    $domainDetails = $this->storageService->get($domain, $lang);
+    $domainDetails = $this->storageService->get("domains:" . $domain, $lang);
 
     return new JsonResponse($domainDetails);
   }
