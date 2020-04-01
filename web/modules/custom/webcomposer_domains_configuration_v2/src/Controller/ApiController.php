@@ -12,8 +12,7 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 /**
  * Class ApiController.
  */
-class ApiController extends ControllerBase
-{
+class ApiController extends ControllerBase {
 
   /**
    * Drupal\language\ConfigurableLanguageManager definition.
@@ -61,12 +60,12 @@ class ApiController extends ControllerBase
   {
     $lang = $this->languageManager->getCurrentLanguage()->getId();
     $domainDetails = $this->storageService->get("domains:" . $domain, $lang);
-    if($domainDetails) {
+    if ($domainDetails) {
       $masterToken = $this->storageService->get("tokens", "");
       array_walk(
         $domainDetails,
         function (&$value, $token) use ($masterToken) {
-          if(empty($value)) {
+          if (empty($value)) {
             $value = $masterToken[$token] ?? "";
           }
         }

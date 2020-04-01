@@ -10,8 +10,7 @@ use Drupal\webcomposer_domains_configuration_v2\Storage\StorageService;
 /**
  * Class DomainImportService.
  */
-class DomainImportService
-{
+class DomainImportService {
 
   /**
    * Drupal\webcomposer_domains_configuration_v2\Parser\ImportParser definition.

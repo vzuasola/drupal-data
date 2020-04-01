@@ -2,10 +2,12 @@
 
 namespace Drupal\webcomposer_domains_configuration_v2\Form;
 
+use Drupal;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\webcomposer_config_schema\Annotation\WebcomposerConfigPlugin;
 use Drupal\webcomposer_domains_configuration_v2\Service\DomainImportService;
+use Throwable;
 
 /**
  * My module form plugin
@@ -24,8 +26,7 @@ use Drupal\webcomposer_domains_configuration_v2\Service\DomainImportService;
  *   },
  * )
  */
-class ImportForm extends FormBase
-{
+class ImportForm extends FormBase {
   const FORM_ID = 'import_domains_form';
   protected static $instanceId;
   protected $enabled;
@@ -39,7 +40,7 @@ class ImportForm extends FormBase
   public function __construct()
   {
     $this->enabled = true;
-    $this->domainImportService = \Drupal::service('webcomposer_domains_configuration_v2.domain_import');
+    $this->domainImportService = Drupal::service('webcomposer_domains_configuration_v2.domain_import');
   }
 
   /**
@@ -97,7 +98,7 @@ class ImportForm extends FormBase
     try {
       $this->domainImportService->execute($form_state);
       drupal_set_message('The domains was imported successfully.');
-    } catch (\Throwable $e) {
+    } catch (Throwable $e) {
       drupal_set_message('Failed to import domains due to the following reason(s): ' . $e->getMessage(), 'error');
     }
   }

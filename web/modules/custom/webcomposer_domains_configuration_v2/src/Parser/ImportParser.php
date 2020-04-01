@@ -2,13 +2,14 @@
 
 namespace Drupal\webcomposer_domains_configuration_v2\Parser;
 
+use Drupal;
 use Drupal\file\Entity\File;
+use Exception;
 use Interop\Container\ContainerInterface;
 use PhpOffice\PhpSpreadsheet\IOFactory;
 use PhpOffice\PhpSpreadsheet\Worksheet\Worksheet;
 
-class ImportParser
-{
+class ImportParser {
   private $tokens = [];
   const DOMAIN_COLUMN = 'domains';
   const TOKEN_COLUMN = 'tokens';
@@ -34,10 +35,10 @@ class ImportParser
     }
 
     $uri = File::load($fid)->getFileUri();
-    $realPath = \Drupal::service('file_system')->realpath($uri);
+    $realPath = Drupal::service('file_system')->realpath($uri);
 
     // Extract the data from the excel file
-    return  $this->getExcelData($realPath);
+    return $this->getExcelData($realPath);
   }
 
   private function getExcelData(string $path)
@@ -98,10 +99,10 @@ class ImportParser
 
     // Remove domains rows with no value
     $sheetData = array_filter($sheetData, function ($sheet) {
-      if($sheet[self::DOMAIN_COLUMN]) {
+      if ($sheet[self::DOMAIN_COLUMN]) {
         return is_string($sheet[self::DOMAIN_COLUMN]);
       }
-      throw new \Exception("Invalid Sheet Format");
+      throw new Exception("Invalid Sheet Format");
     });
 
     foreach ($sheetData as $domainRow) {
@@ -119,7 +120,7 @@ class ImportParser
     foreach ($domainRow as $key => $data) {
       // If the $domainRow has a token not included on the masterlist token,
       // do not include it on the parsed data
-      if(!isset($this->tokens[$key])) {
+      if (!isset($this->tokens[$key])) {
         unset($domainRow[$key]);
         continue;
       }

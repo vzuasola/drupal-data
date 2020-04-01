@@ -8,8 +8,7 @@ use Predis\Client as Redis;
 /**
  * Class RedisService.
  */
-class RedisService implements StorageInterface
-{
+class RedisService implements StorageInterface {
 
   protected const DEFAULT_LANG = "en";
 
@@ -23,7 +22,7 @@ class RedisService implements StorageInterface
    */
   public function __construct()
   {
-    $this->redis =$this->createRedisInstance();
+    $this->redis = $this->createRedisInstance();
   }
 
   /** @inheritDoc */
