@@ -27,7 +27,12 @@ class StorageService implements StorageInterface {
    *
    * @param array $data
    */
-  public function processAllData(array $data) {
+  public function processAllData(array $data)
+  {
+    // Start Transaction
+    $this->createTransaction();
+    // 0 - Flush database
+
     // 1 - Save tokens
     $tokens = $data[ImportParser::TOKEN_COLUMN] ?? [];
     $this->set("tokens", $tokens, "");
@@ -43,6 +48,9 @@ class StorageService implements StorageInterface {
         $this->set("domains:{$domain}", $domainData, $lang);
       }
     }
+
+    // Commit the transaction changes
+    $this->commitTransaction();
   }
 
   /** @inheritDoc */
@@ -72,5 +80,25 @@ class StorageService implements StorageInterface {
     }
 
     return $domains;
+  }
+
+  public function createTransaction()
+  {
+    $this->storage->createTransaction();
+  }
+
+  public function commitTransaction()
+  {
+    $this->storage->commitTransaction();
+  }
+
+  public function getAll()
+  {
+    // TODO: Implement getAll() method.
+  }
+
+  public function clearAll()
+  {
+    // TODO: Implement clearAll() method.
   }
 }

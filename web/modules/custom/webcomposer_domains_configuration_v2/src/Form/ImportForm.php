@@ -98,7 +98,7 @@ class ImportForm extends FormBase
       $this->domainImportService->execute($form_state);
       drupal_set_message('The domains was imported successfully.');
     } catch (\Throwable $e) {
-      drupal_set_message('Failed to import domains due to the following reason(s): ' . $e->getMessage());
+      drupal_set_message('Failed to import domains due to the following reason(s): ' . $e->getMessage(), 'error');
     }
   }
 

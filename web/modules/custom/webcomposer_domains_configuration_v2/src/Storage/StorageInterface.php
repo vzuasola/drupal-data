@@ -25,4 +25,12 @@ interface StorageInterface
    * @return mixed
    */
   public function get(string $key, string $lang);
+
+  public function createTransaction();
+
+  public function commitTransaction();
+
+  public function getAll();
+
+  public function clearAll();
 }
