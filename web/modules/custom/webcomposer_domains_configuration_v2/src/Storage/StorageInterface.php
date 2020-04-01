@@ -5,8 +5,7 @@ namespace Drupal\webcomposer_domains_configuration_v2\Storage;
 /**
  * Interface StorageInterface.
  */
-interface StorageInterface
-{
+interface StorageInterface {
   /**
    * Stores the data using the provided key
    *

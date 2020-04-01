@@ -2,6 +2,7 @@
 
 namespace Drupal\webcomposer_domains_configuration_v2\Storage;
 
+use Drupal;
 use Drupal\webcomposer_domains_configuration_v2\Parser\ImportParser;
 
 /**
@@ -17,9 +18,10 @@ class StorageService implements StorageInterface {
   /**
    * Constructs a new StorageService object.
    */
-  public function __construct() {
+  public function __construct()
+  {
     // TODO: Create a switching of storage provider here
-    $this->storage =  \Drupal::service('webcomposer_domains_configuration_v2.redis');
+    $this->storage = Drupal::service('webcomposer_domains_configuration_v2.redis');
   }
 
   /**
@@ -56,7 +58,8 @@ class StorageService implements StorageInterface {
   }
 
   /** @inheritDoc */
-  public function set(string $key, array $data, string $lang = 'en') {
+  public function set(string $key, array $data, string $lang = 'en')
+  {
     // Any Modification per data store should be done here before the actual saving
     return $this->storage->set($key, $data, $lang);
   }
@@ -73,10 +76,11 @@ class StorageService implements StorageInterface {
    * @param $data
    * @return array
    */
-  private function getDomains($data) {
+  private function getDomains($data)
+  {
     $domains = [];
     foreach ($data as $sheet => $sheetData) {
-      if($sheet !== ImportParser::TOKEN_COLUMN) {
+      if ($sheet !== ImportParser::TOKEN_COLUMN) {
         $domains[$sheet] = $sheetData;
       }
     }
