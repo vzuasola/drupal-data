@@ -28,7 +28,6 @@ class StorageService implements StorageInterface {
    * @param array $data
    */
   public function processAllData(array $data) {
-    // Parsing of data store should be done here
     $domains = $this->getDomains($data);
     foreach ($domains as $domain => $domainData) {
       // TODO: Research on redis cli, create transactional update before applying the changes
