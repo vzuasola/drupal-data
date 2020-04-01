@@ -108,14 +108,14 @@ class ImportParser
 
     foreach ($sheetData as $domainRow) {
       $domain = $domainRow[self::DOMAIN_COLUMN];
-      $this->getTokenDefaults($domainRow);
+      $this->filterTokens($domainRow);
       $domainData[$domain] = $domainRow;
     }
 
     return $domainData;
   }
 
-  private function getTokenDefaults(&$domainRow)
+  private function filterTokens(&$domainRow)
   {
     unset($domainRow[self::DOMAIN_COLUMN]);
     foreach ($domainRow as $key => $data) {
@@ -125,10 +125,10 @@ class ImportParser
         unset($domainRow[$key]);
         continue;
       }
-
-      $domainRow[$key] = is_string($data)
-        ? $data
-        : $this->tokens[$key] ?? "";
+      // If the domain column has a boolean value this means that it is empty on its cell
+      $domainRow[$key] = (is_bool($domainRow[$key]) && $domainRow[$key])
+        ? ""
+        : $domainRow[$key];
     }
   }
 }
