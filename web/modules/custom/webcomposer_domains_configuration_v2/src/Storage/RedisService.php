@@ -23,11 +23,7 @@ class RedisService implements StorageInterface
    */
   public function __construct()
   {
-    $settings = Settings::get('webcomposer_domains_configuration_v2')['redis'];
-    $this->redis = new Redis(
-      $settings['clients'],
-      $settings['options']
-    );
+    $this->redis =$this->createRedisInstance();
   }
 
   /** @inheritDoc */
@@ -63,8 +59,25 @@ class RedisService implements StorageInterface
     // TODO: Implement getAll() method.
   }
 
-  public function clearAll()
+  public function clearAll(?array $keys)
   {
-    // TODO: Implement clearAll() method.
+    // Create a new redis instance this is to handle if
+    // there is a multi transaction on the constructed
+    // redis instance it will still provide keys
+    $redis = $this->createRedisInstance();
+    foreach ($keys as $key) {
+      $keysFound = $redis->keys($key);
+      $this->redis->del($keysFound);
+    }
+    $redis->quit(); // Close the newly created redis instance
+  }
+
+  private function createRedisInstance()
+  {
+    $settings = Settings::get('webcomposer_domains_configuration_v2')['redis'];
+    return new Redis(
+      $settings['clients'],
+      $settings['options']
+    );
   }
 }
