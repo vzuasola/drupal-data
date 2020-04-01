@@ -28,11 +28,20 @@ class StorageService implements StorageInterface {
    * @param array $data
    */
   public function processAllData(array $data) {
+    // 1 - Save tokens
+    $tokens = $data[ImportParser::TOKEN_COLUMN] ?? [];
+    $this->set("tokens", $tokens, "");
+
     $domains = $this->getDomains($data);
-    foreach ($domains as $domain => $domainData) {
-      // TODO: Research on redis cli, create transactional update before applying the changes
-      // TODO: Pass the language parameter here
-      $this->set($domain, $domainData);
+    foreach ($domains as $group => $domainList) {
+      // 2 - Save Groups
+      $this->set("groups:{$group}", array_keys($domainList), "");
+      foreach ($domainList as $domain => $domainData) {
+        // 3 - Save Domains
+        // TODO: Pass the language parameter
+        $lang = 'en'; // TODO: This will force to set the language to en, remove until further notice
+        $this->set("domains:{$domain}", $domainData, $lang);
+      }
     }
   }
 
@@ -58,7 +67,7 @@ class StorageService implements StorageInterface {
     $domains = [];
     foreach ($data as $sheet => $sheetData) {
       if($sheet !== ImportParser::TOKEN_COLUMN) {
-        $domains = array_merge_recursive($domains, $sheetData);
+        $domains[$sheet] = $sheetData;
       }
     }
 
