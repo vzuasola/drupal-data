@@ -32,5 +32,5 @@ interface StorageInterface
 
   public function getAll();
 
-  public function clearAll();
+  public function clearAll(?array $keys);
 }

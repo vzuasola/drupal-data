@@ -42,30 +42,25 @@ class ImportParser
 
   private function getExcelData(string $path)
   {
-    try {
-      // Attempt to read excel file.
-      $excelReader = IOFactory::createReaderForFile($path);
-      $excelReader->setLoadAllSheets();
-      $excel = $excelReader->load($path);
-      $sheets = $excel->getSheetNames();
-      $excelData = [];
+    // Attempt to read excel file.
+    $excelReader = IOFactory::createReaderForFile($path);
+    $excelReader->setLoadAllSheets();
+    $excel = $excelReader->load($path);
+    $sheets = $excel->getSheetNames();
+    $excelData = [];
 
-      foreach ($sheets as $sheetName) {
-        $sheet = $excel->getSheetByName($sheetName)
-          ->setCodeName(strtolower($sheetName));
-        $range = "A1:"
-          . $sheet->getHighestDataColumn()
-          . $sheet->getHighestDataRow(); // TODO: Test if same with blanks
+    foreach ($sheets as $sheetName) {
+      $sheet = $excel->getSheetByName($sheetName)
+        ->setCodeName(strtolower($sheetName));
+      $range = "A1:"
+        . $sheet->getHighestDataColumn()
+        . $sheet->getHighestDataRow(); // TODO: Test if same with blanks
 
-        $sheetData = $sheet->rangeToArray($range, true, true, false);
-        $excelData[$sheet->getCodeName()] = $this->parseSheet($sheetData, $sheet);
-      }
-
-      return ($excelData);
-    } catch (\Throwable $e) {
-      // Log the error here?
-      return [];
+      $sheetData = $sheet->rangeToArray($range, true, true, false);
+      $excelData[$sheet->getCodeName()] = $this->parseSheet($sheetData, $sheet);
     }
+
+    return ($excelData);
   }
 
   private function parseSheet($sheetData, Worksheet $sheet)
@@ -103,7 +98,10 @@ class ImportParser
 
     // Remove domains rows with no value
     $sheetData = array_filter($sheetData, function ($sheet) {
-      return is_string($sheet[self::DOMAIN_COLUMN]);
+      if($sheet[self::DOMAIN_COLUMN]) {
+        return is_string($sheet[self::DOMAIN_COLUMN]);
+      }
+      throw new \Exception("Invalid Sheet Format");
     });
 
     foreach ($sheetData as $domainRow) {
