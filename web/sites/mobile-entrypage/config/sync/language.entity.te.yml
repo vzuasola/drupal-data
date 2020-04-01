@@ -7,7 +7,7 @@ dependencies:
 third_party_settings:
   webcomposer_language_hierarchy:
     webcomposer_fallback_langcode: en
-    webcomposer_language_custom_label: 'Telugu (India)'
+    webcomposer_language_custom_label: తెలుగు
     webcomposer_language_hidden: 0
 id: te
 label: Telugu
