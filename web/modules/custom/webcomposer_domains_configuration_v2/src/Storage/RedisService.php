@@ -47,4 +47,24 @@ class RedisService implements StorageInterface
     }
     return $this->redis->hgetall($key . $lang);
   }
+
+  public function createTransaction()
+  {
+    $this->redis->multi();
+  }
+
+  public function commitTransaction()
+  {
+    $this->redis->exec();
+  }
+
+  public function getAll()
+  {
+    // TODO: Implement getAll() method.
+  }
+
+  public function clearAll()
+  {
+    // TODO: Implement clearAll() method.
+  }
 }
