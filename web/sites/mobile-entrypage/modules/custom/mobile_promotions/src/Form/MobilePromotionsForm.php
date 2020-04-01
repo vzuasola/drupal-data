@@ -80,6 +80,21 @@ class MobilePromotionsForm extends FormBase {
       '#required' => TRUE,
     ];
 
+    $form['promotions_configuration']['no_archive_msg'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('No available archived promotions message'),
+      '#default_value' => $this->get('no_archive_msg'),
+      '#translatable' => TRUE,
+      '#required' => TRUE,
+    ];
+
+    $form['promotions_configuration']['btn_archive_title'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Archive Button text'),
+      '#default_value' => $this->get('btn_archive_title'),
+      '#translatable' => TRUE,
+      '#required' => TRUE,
+    ];
     return $form;
   }
 }

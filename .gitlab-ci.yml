@@ -467,20 +467,17 @@ staging-japan-stack:
   stage: deploy-staging
   environment:
     name: staging
+  variables:
+    env: stg
+    STACK: japan-stack
   script:
-    - DEPLOY_STG=$DEPLOY_STG_JAPAN python -u automation/run.py --stage deploy-staging
+    - export DEPLOY_TOKEN DEPLOY_URL
+    - bash automation/jenkins_deploy.sh
   when: manual
   dependencies:
     - testing signoff
-  artifacts:
-    paths:
-      - automation/deployed/*.jsonl
-    expire_in: 1 month
-  only:
-    - /^release-.*$/
-    - tags
   tags:
-    - stgrunner
+    - ipvg-stg-02
 
 staging-row-stack:
   stage: deploy-staging
@@ -617,7 +614,7 @@ production:
     - python -u automation/run.py --stage deploy-production
   when: manual
   dependencies:
-   - staging signoff
+   - staging
   artifacts:
     paths:
       - automation/deployed/*.jsonl
@@ -634,7 +631,7 @@ production-mobile-stack:
     - DEPLOY_PROD=$DEPLOY_PROD_MOBILE python -u automation/run.py --stage deploy-production
   when: manual
   dependencies:
-   - staging signoff
+   - staging
   artifacts:
     paths:
       - automation/deployed/*.jsonl
