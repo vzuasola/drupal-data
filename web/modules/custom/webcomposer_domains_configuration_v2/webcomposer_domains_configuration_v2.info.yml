@@ -1,0 +1,5 @@
+name: Webcomposer Domains Configuration V2
+type: module
+description: This module take care of domain configuration
+core: 8.x
+package: Web Composer
