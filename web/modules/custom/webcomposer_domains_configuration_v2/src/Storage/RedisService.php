@@ -31,7 +31,10 @@ class RedisService implements StorageInterface {
     if ($lang) {
       $lang = ":" . $lang;
     }
-    return $this->redis->hmset($key . $lang, $data);
+
+    return ($this->isHash($data)
+      ? $this->redis->hmset($key . $lang, $data)
+      : $this->redis->set($key, json_encode($data)));
   }
 
   /** @inheritDoc */
@@ -64,9 +67,17 @@ class RedisService implements StorageInterface {
     // there is a multi transaction on the constructed
     // redis instance it will still provide keys
     $redis = $this->createRedisInstance();
+    // Delete old backup
+    if($oldBackup = $redis->keys("backup:*")) {
+      $this->redis->del($oldBackup);
+    }
+
     foreach ($keys as $key) {
       $keysFound = $redis->keys($key);
       if($keysFound) {
+        array_map(function($key){
+          $this->redis->rename($key, "backup:{$key}");
+        }, $keysFound);
         $this->redis->del($keysFound);
       }
     }
@@ -80,5 +91,10 @@ class RedisService implements StorageInterface {
       $settings['clients'],
       $settings['options']
     );
+  }
+
+  private function isHash($data) {
+    if (array() === $data) return false;
+    return array_keys($data) !== range(0, count($data) - 1);
   }
 }
