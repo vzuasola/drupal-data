@@ -66,7 +66,9 @@ class RedisService implements StorageInterface {
     $redis = $this->createRedisInstance();
     foreach ($keys as $key) {
       $keysFound = $redis->keys($key);
-      $this->redis->del($keysFound);
+      if($keysFound) {
+        $this->redis->del($keysFound);
+      }
     }
     $redis->quit(); // Close the newly created redis instance
   }
