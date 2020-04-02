@@ -72,7 +72,7 @@ class ApiController extends ControllerBase {
       );
     }
 
-    return new JsonResponse($domainDetails);
+    return new JsonResponse(($domainDetails) ? $domainDetails : ['message' => "domain not found"]);
   }
 
 }
