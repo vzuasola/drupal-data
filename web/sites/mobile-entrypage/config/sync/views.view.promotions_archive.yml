@@ -594,9 +594,8 @@ display:
         type: data_entity
         options: {  }
       pager:
-        type: some
+        type: none
         options:
-          items_per_page: 3
           offset: 0
       rendering_language: '***LANGUAGE_language_interface***'
       display_description: ''
