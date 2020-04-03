@@ -1,0 +1,8 @@
+uuid: 0af2d65f-9611-4ddd-a8b4-369b86dc4cc3
+langcode: ko
+status: true
+dependencies: {  }
+id: secondary-menu-kr
+label: 'Secondary Menu KR'
+description: ''
+locked: false

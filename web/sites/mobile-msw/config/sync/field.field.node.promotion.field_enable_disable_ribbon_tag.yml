@@ -1,0 +1,23 @@
+uuid: 9365238b-cacf-4dc9-aaf0-1ebba33ac03e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_enable_disable_ribbon_tag
+    - node.type.promotion
+id: node.promotion.field_enable_disable_ribbon_tag
+field_name: field_enable_disable_ribbon_tag
+entity_type: node
+bundle: promotion
+label: 'Enable Ribbon Tag'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

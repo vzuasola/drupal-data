@@ -1,0 +1,22 @@
+add lobby product tiles entities:
+  title: 'Create new Lobby Product Tiles entities'
+
+administer lobby product tiles entities:
+  title: 'Administer Lobby Product Tiles entities'
+  description: 'Allow to access the administration form to configure Lobby Product Tiles entities.'
+  restrict access: true
+
+delete lobby product tiles entities:
+  title: 'Delete Lobby Product Tiles entities'
+
+edit lobby product tiles entities:
+  title: 'Edit Lobby Product Tiles entities'
+
+access lobby product tiles overview:
+  title: 'Access the Lobby Product Tiles overview page'
+
+view published lobby product tiles entities:
+  title: 'View published Lobby Product Tiles entities'
+
+view unpublished lobby product tiles entities:
+  title: 'View unpublished Lobby Product Tiles entities'
