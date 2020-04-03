@@ -1,0 +1,23 @@
+uuid: 6c832da3-23f6-49cb-8092-46b664af86ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.mobile_marketing_space.field_banner_link_target
+  module:
+    - mobile_marketing_space
+    - options
+id: mobile_marketing_space.mobile_marketing_space.field_banner_link_target
+field_name: field_banner_link_target
+entity_type: mobile_marketing_space
+bundle: mobile_marketing_space
+label: 'Pre Banner Link Target'
+description: 'The link behavior when clicked'
+required: true
+translatable: true
+default_value:
+  -
+    value: _top
+default_value_callback: ''
+settings: {  }
+field_type: list_string

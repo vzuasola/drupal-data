@@ -1,0 +1,27 @@
+uuid: 1e553b82-c0ad-4cd9-bf26-badf6815564a
+langcode: en
+status: true
+dependencies:
+  module:
+    - mobile_product_menu
+    - options
+id: mobile_product_menu.field_mobile_product_menu_target
+field_name: field_mobile_product_menu_target
+entity_type: mobile_product_menu
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: _blank
+      label: 'New Window'
+    -
+      value: _self
+      label: 'Same Window'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,9 @@
+uuid: a8046fd2-758c-4b6c-9587-fc28d5e0c9e9
+langcode: en
+status: true
+dependencies: {  }
+id: e
+label: 'Editorial board'
+weight: 3
+is_admin: null
+permissions: {  }

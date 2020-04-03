@@ -1,0 +1,25 @@
+uuid: 08f643c1-9dac-46b5-a226-5ff63c08c436
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_enable
+    - paragraphs.paragraphs_type.social_media
+_core:
+  default_config_hash: YiA6OUnM_w3t-5g-JqTCGC3y7UxyMKnbDy4cPdbkru4
+id: paragraph.social_media.field_enable
+field_name: field_enable
+entity_type: paragraph
+bundle: social_media
+label: Enable
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Enable
+  off_label: Disabled
+field_type: boolean
