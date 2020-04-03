@@ -34,14 +34,12 @@ class StorageService implements StorageInterface {
     // Start Transaction
     $this->createTransaction();
 
-    // 0 - Flush database
-    $this->clearAll(['tokens', 'groups:*', 'domains:*']);
+    // Preapare data
+    $tokens = $data[ImportParser::TOKEN_COLUMN] ?? [];
+    $domains = $this->getDomains($data);
 
     // 1 - Save tokens
-    $tokens = $data[ImportParser::TOKEN_COLUMN] ?? [];
     $this->set("tokens", $tokens, "");
-
-    $domains = $this->getDomains($data);
     foreach ($domains as $group => $domainList) {
       // 2 - Save Groups
       $this->set("groups:{$group}", array_keys($domainList), "");
@@ -52,6 +50,11 @@ class StorageService implements StorageInterface {
         $this->set("domains:{$domain}", $domainData, $lang);
       }
     }
+
+    // 0 - Flush database
+    $this->clearAll('tokens', $tokens); // Clear tokens
+    $this->clearAll('groups:*', $domains); // Clear Group and Domains
+    $this->clearAll('domains:*', $domains); // Clear Group and Domains
 
     // Commit the transaction changes
     $this->commitTransaction();
@@ -103,8 +106,8 @@ class StorageService implements StorageInterface {
     // TODO: Implement getAll() method.
   }
 
-  public function clearAll(?array $keys)
+  public function clearAll(string $key, array $data)
   {
-    $this->storage->clearAll($keys);
+    $this->storage->clearAll($key, $data);
   }
 }

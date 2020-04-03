@@ -61,25 +61,45 @@ class RedisService implements StorageInterface {
     // TODO: Implement getAll() method.
   }
 
-  public function clearAll(?array $keys)
+  public function clearAll(string $key, array $data)
   {
     // Create a new redis instance this is to handle if
     // there is a multi transaction on the constructed
     // redis instance it will still provide keys
     $redis = $this->createRedisInstance();
-    // Delete old backup
-    if($oldBackup = $redis->keys("backup:*")) {
-      $this->redis->del($oldBackup);
+    switch ($key) {
+      case "tokens":
+        $keysFound = $redis->hkeys($key);
+
+        $keys = array_keys($data);
+        break;
+      case "groups:*":
+        $keysFound = $redis->keys($key);
+        $keys = array_keys($data);
+        array_walk($keys, function (&$key) {
+          $key = "groups:{$key}";
+        });
+
+        break;
+      default:
+        $keysFound = $redis->keys($key);
+        array_walk($data, function (&$group) {
+          $group = array_keys($group);
+        });
+
+        $keys = [];
+        foreach ($data as $group) {
+          $domains = array_values($group);
+          array_walk($domains, function (&$domain) {
+            $domain = "domains:{$domain}:en"; // to replace when language is available
+          });
+          $keys = array_merge($keys, $domains);
+        }
     }
 
-    foreach ($keys as $key) {
-      $keysFound = $redis->keys($key);
-      if($keysFound) {
-        array_map(function($key){
-          $this->redis->rename($key, "backup:{$key}");
-        }, $keysFound);
-        $this->redis->del($keysFound);
-      }
+    $keysDiff = array_diff($keysFound, $keys);
+    if ($keysDiff) {
+      $this->redis->del($keysDiff);
     }
     $redis->quit(); // Close the newly created redis instance
   }
@@ -93,7 +113,8 @@ class RedisService implements StorageInterface {
     );
   }
 
-  private function isHash($data) {
+  private function isHash($data)
+  {
     if (array() === $data) return false;
     return array_keys($data) !== range(0, count($data) - 1);
   }
