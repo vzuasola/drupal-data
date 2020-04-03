@@ -1,0 +1,19 @@
+uuid: 5d82cab9-ed67-406f-bf5f-ec740d0e51cd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_registration_url
+    - taxonomy.vocabulary.product_integrations
+id: taxonomy_term.product_integrations.field_registration_url
+field_name: field_registration_url
+entity_type: taxonomy_term
+bundle: product_integrations
+label: 'Registration URL'
+description: 'Define the URL that will be used to the registration link for this product. This will override the default registration URL.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
