@@ -2,10 +2,10 @@ field_settings:
   label: 'Security Question 2'
   placeholder: 'Select your question...'
   groups: security-question
-  choices: '[]'
+  choices: "1|Mother's maiden name\r\n2|Favorite team\r\n3|Place of birth\r\n4|Pet name\r\n5|Favorite color\r\n6|Date of birth"
 field_validations:
   required:
-    enable: 1
+    enable: 0
     error_message: 'Field should be required'
   alpha:
     enable: 0

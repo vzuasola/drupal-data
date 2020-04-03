@@ -1,11 +1,8 @@
 field_settings:
-  label: 'Security Question 1'
-  placeholder: 'Select your question...'
-  groups: security-question
-  choices: "1|Mother's maiden name\r\n2|Favorite team\r\n3|Place of birth\r\n4|Pet name\r\n5|Favorite color\r\n6|Date of birth"
+  accept-format: '.pdf,.doc,.jpg,.docx,.png,jpeg,.tif,.gif,.tiff,.xps'
 field_validations:
   required:
-    enable: 0
+    enable: 1
     error_message: 'Field should be required'
   alpha:
     enable: 0
@@ -68,7 +65,7 @@ field_validations:
     enable: 0
     error_message: 'Password should not equal to username'
   duplicated_security_question:
-    enable: 1
+    enable: 0
     error_message: 'Security Questions should not be the same'
   match_password:
     enable: 0
