@@ -1,0 +1,27 @@
+uuid: 7c18d994-922f-4a29-be22-694f9ecc5b37
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_mobile_sponsor_link_target
+field_name: field_mobile_sponsor_link_target
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: _blank
+      label: 'New Window'
+    -
+      value: _self
+      label: 'Same Window'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

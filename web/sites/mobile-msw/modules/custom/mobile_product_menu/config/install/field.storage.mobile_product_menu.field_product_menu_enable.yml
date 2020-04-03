@@ -1,0 +1,18 @@
+uuid: fb812dd7-bc27-470b-ac6e-b13e6a348e36
+langcode: en
+status: true
+dependencies:
+  module:
+    - mobile_product_menu
+id: mobile_product_menu.field_product_menu_enable
+field_name: field_product_menu_enable
+entity_type: mobile_product_menu
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

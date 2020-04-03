@@ -1,0 +1,21 @@
+uuid: 3138c4e9-7996-433a-8d88-4e3404fe6f40
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_promo_availability
+    - node.type.promotion
+  module:
+    - options
+id: node.promotion.field_promo_availability
+field_name: field_promo_availability
+entity_type: node
+bundle: promotion
+label: 'Promo Availability'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

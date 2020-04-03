@@ -1,0 +1,20 @@
+uuid: 12d7a749-f9a6-4ad8-97ef-b1bf6ba41a46
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.sponsor_cmi
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+_core:
+  default_config_hash: LaJKo1Rcum7G5V-2HonQG91xpIraLUlECjEgxRaFZE4
+id: paragraph.sponsor_cmi
+target_entity_type_id: paragraph
+target_bundle: sponsor_cmi
+default_langcode: site_default
+language_alterable: true
