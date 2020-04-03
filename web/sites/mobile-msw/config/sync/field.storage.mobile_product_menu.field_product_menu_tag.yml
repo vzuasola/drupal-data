@@ -1,0 +1,24 @@
+uuid: c284d390-03f5-40cc-832c-8d1eb40088b5
+langcode: en
+status: true
+dependencies:
+  module:
+    - mobile_product_menu
+    - options
+id: mobile_product_menu.field_product_menu_tag
+field_name: field_product_menu_tag
+entity_type: mobile_product_menu
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'New Product'
+      label: 'New Product'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

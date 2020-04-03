@@ -1,0 +1,21 @@
+uuid: 600914d2-66b3-4c82-9c4c-37b013548228
+langcode: en
+status: true
+dependencies:
+  module:
+    - mobile_sponsor_list
+id: mobile_sponsor_list.field_sponsors_row_title
+field_name: field_sponsors_row_title
+entity_type: mobile_sponsor_list
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
