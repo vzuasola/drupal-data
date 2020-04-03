@@ -1,0 +1,23 @@
+uuid: d1dbb5ab-2f6f-4964-a1dc-b06c82b4c4bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.mobile_marketing_space.field_post_banner_link_target
+  module:
+    - mobile_marketing_space
+    - options
+id: mobile_marketing_space.mobile_marketing_space.field_post_banner_link_target
+field_name: field_post_banner_link_target
+entity_type: mobile_marketing_space
+bundle: mobile_marketing_space
+label: 'Post Banner Link Target'
+description: 'The link behavior when clicked'
+required: true
+translatable: true
+default_value:
+  -
+    value: _top
+default_value_callback: ''
+settings: {  }
+field_type: list_string

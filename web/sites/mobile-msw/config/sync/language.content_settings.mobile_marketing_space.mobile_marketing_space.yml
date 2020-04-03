@@ -1,0 +1,17 @@
+uuid: ea954767-afaa-423a-b95a-42423713f709
+langcode: en
+status: true
+dependencies:
+  module:
+    - content_translation
+    - mobile_marketing_space
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: mobile_marketing_space.mobile_marketing_space
+target_entity_type_id: mobile_marketing_space
+target_bundle: mobile_marketing_space
+default_langcode: site_default
+language_alterable: true

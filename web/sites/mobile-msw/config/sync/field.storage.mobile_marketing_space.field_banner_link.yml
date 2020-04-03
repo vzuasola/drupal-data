@@ -1,0 +1,19 @@
+uuid: 9f9eabe1-e043-4571-9416-7ff87952e239
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - mobile_marketing_space
+id: mobile_marketing_space.field_banner_link
+field_name: field_banner_link
+entity_type: mobile_marketing_space
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
