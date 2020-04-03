@@ -96,6 +96,13 @@ $sites['mobile-entrypage.drupal.dev'] = 'mobile-entrypage';
 $sites['mobile-entrypage.drupal.local'] = 'mobile-entrypage';
 $sites['mobile-entrypage.drupal.env'] = 'mobile-entrypage';
 
+
+// Mobile Nextbet Revamp instance
+$sites['mobile-nextbet.drupal.dev'] = 'mobile-nextbet';
+$sites['mobile-nextbet.drupal.local'] = 'mobile-nextbet';
+$sites['mobile-nextbet.drupal.env'] = 'mobile-nextbet';
+
+
 // Mobile Games Revamp instance
 $sites['mobile-games.drupal.dev'] = 'mobile-games';
 $sites['mobile-games.drupal.local'] = 'mobile-games';
