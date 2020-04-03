@@ -1,0 +1,9 @@
+uuid: f16f7165-74cf-44b4-864d-8c8af66cc44d
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: FZwzfCsnnzAWRdzHrUoJN4CffGfb2ojAIzFyRdwvN7I
+id: metatag
+label: Metatag
+behavior_plugins: {  }
