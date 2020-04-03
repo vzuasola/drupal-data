@@ -41,17 +41,17 @@ field_validations:
     enable: 0
     error_message: 'Minimum requirement not met'
     parameters:
-      length: '11'
+      length: '2'
   max_length:
     enable: 0
     error_message: 'Maximum requirement not met'
     parameters:
-      length: '11'
+      length: '10'
   regex:
     enable: 1
-    error_message: 'Invalid mobile phone number.'
+    error_message: 'This field accepts alphanumeric, space and dash only.'
     parameters:
-      regex_value: '^(09)([0-9]{9})$'
+      regex_value: '^[- 0-9a-zA-Z]+$'
   valid_date:
     enable: 0
     error_message: 'Date is invalid'
@@ -74,6 +74,6 @@ field_validations:
     error_message: 'Password not match'
   valid_username_prefix:
     enable: 0
-    error_message: 'Mobile phone prefix not valid.'
+    error_message: 'Username Prefix not valid'
     parameters:
-      prefixes: '09'
+      prefixes: '000,000,000'
