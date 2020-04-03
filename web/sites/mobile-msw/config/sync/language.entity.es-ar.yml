@@ -1,0 +1,15 @@
+uuid: cc8b3f3c-c6df-4dfd-a8f4-3ea81321ff5c
+langcode: es-ar
+status: true
+dependencies:
+  module:
+    - webcomposer_language_hierarchy
+third_party_settings:
+  webcomposer_language_hierarchy:
+    webcomposer_fallback_langcode: ''
+    webcomposer_language_hidden: 1
+id: es-ar
+label: 'Spanish, Argentina'
+direction: ltr
+weight: 9
+locked: false

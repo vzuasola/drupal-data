@@ -1,0 +1,4 @@
+see_all: '모두 보기'
+dismiss_all: '다시 보지 않기'
+title: 공지사항
+default_message: '새로운 공지사항이 없습니다.'
