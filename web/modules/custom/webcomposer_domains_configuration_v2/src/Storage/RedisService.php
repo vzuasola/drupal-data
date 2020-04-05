@@ -20,14 +20,12 @@ class RedisService implements StorageInterface {
   /**
    * Constructs a new RedisService object.
    */
-  public function __construct()
-  {
+  public function __construct() {
     $this->redis = $this->createRedisInstance();
   }
 
   /** @inheritDoc */
-  public function set(string $key, array $data, string $lang = self::DEFAULT_LANG)
-  {
+  public function set(string $key, array $data, string $lang = self::DEFAULT_LANG) {
     if ($lang) {
       $lang = ":" . $lang;
     }
@@ -38,31 +36,26 @@ class RedisService implements StorageInterface {
   }
 
   /** @inheritDoc */
-  public function get(string $key, string $lang = self::DEFAULT_LANG)
-  {
+  public function get(string $key, string $lang = self::DEFAULT_LANG) {
     if ($lang) {
       $lang = ":" . $lang;
     }
     return $this->redis->hgetall($key . $lang);
   }
 
-  public function createTransaction()
-  {
+  public function createTransaction() {
     $this->redis->multi();
   }
 
-  public function commitTransaction()
-  {
+  public function commitTransaction() {
     $this->redis->exec();
   }
 
-  public function getAll()
-  {
+  public function getAll() {
     // TODO: Implement getAll() method.
   }
 
-  public function clearAll(string $key, array $data)
-  {
+  public function clearAll(string $key, array $data) {
     // Create a new redis instance this is to handle if
     // there is a multi transaction on the constructed
     // redis instance it will still provide keys
@@ -104,8 +97,7 @@ class RedisService implements StorageInterface {
     $redis->quit(); // Close the newly created redis instance
   }
 
-  private function createRedisInstance()
-  {
+  private function createRedisInstance() {
     $settings = Settings::get('webcomposer_domains_configuration_v2')['redis'];
     return new Redis(
       $settings['clients'],
@@ -113,8 +105,7 @@ class RedisService implements StorageInterface {
     );
   }
 
-  private function isHash($data)
-  {
+  private function isHash($data) {
     if (array() === $data) return false;
     return array_keys($data) !== range(0, count($data) - 1);
   }
