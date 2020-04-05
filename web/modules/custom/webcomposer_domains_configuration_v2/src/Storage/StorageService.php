@@ -18,8 +18,7 @@ class StorageService implements StorageInterface {
   /**
    * Constructs a new StorageService object.
    */
-  public function __construct()
-  {
+  public function __construct() {
     // TODO: Create a switching of storage provider here
     $this->storage = Drupal::service('webcomposer_domains_configuration_v2.redis');
   }
@@ -29,8 +28,7 @@ class StorageService implements StorageInterface {
    *
    * @param array $data
    */
-  public function processAllData(array $data)
-  {
+  public function processAllData(array $data) {
     // Start Transaction
     $this->createTransaction();
 
@@ -61,15 +59,13 @@ class StorageService implements StorageInterface {
   }
 
   /** @inheritDoc */
-  public function set(string $key, array $data, string $lang = 'en')
-  {
+  public function set(string $key, array $data, string $lang = 'en') {
     // Any Modification per data store should be done here before the actual saving
     return $this->storage->set($key, $data, $lang);
   }
 
   /** @inheritDoc */
-  public function get(string $key, string $lang = 'en')
-  {
+  public function get(string $key, string $lang = 'en') {
     $lang = 'en'; // TODO: This will force to set the language to en, remove until further notice
     return $this->storage->get($key, $lang);
   }
@@ -80,8 +76,7 @@ class StorageService implements StorageInterface {
    * @param $data
    * @return array
    */
-  private function getDomains($data)
-  {
+  private function getDomains($data) {
     $domains = [];
     foreach ($data as $sheet => $sheetData) {
       if ($sheet !== ImportParser::TOKEN_COLUMN) {
@@ -92,23 +87,19 @@ class StorageService implements StorageInterface {
     return $domains;
   }
 
-  public function createTransaction()
-  {
+  public function createTransaction() {
     $this->storage->createTransaction();
   }
 
-  public function commitTransaction()
-  {
+  public function commitTransaction() {
     $this->storage->commitTransaction();
   }
 
-  public function getAll()
-  {
+  public function getAll() {
     // TODO: Implement getAll() method.
   }
 
-  public function clearAll(string $key, array $data)
-  {
+  public function clearAll(string $key, array $data) {
     $this->storage->clearAll($key, $data);
   }
 }

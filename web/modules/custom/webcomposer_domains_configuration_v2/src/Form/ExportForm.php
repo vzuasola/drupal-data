@@ -30,8 +30,7 @@ class ExportForm extends FormBase {
   /**
    * Constructor.
    */
-  public function __construct()
-  {
+  public function __construct() {
 
   }
 
@@ -40,16 +39,14 @@ class ExportForm extends FormBase {
    *
    * @return string
    */
-  public function getFormId()
-  {
+  public function getFormId() {
     return self::FORM_ID;
   }
 
   /**
    * {@inheritdoc}
    */
-  public function buildForm(array $form, FormStateInterface $form_state)
-  {
+  public function buildForm(array $form, FormStateInterface $form_state) {
     $form['description'] = [
       '#type' => 'item',
       '#title' => $this->t('Export Form'),
@@ -59,12 +56,10 @@ class ExportForm extends FormBase {
     return $form;
   }
 
-  public function validateForm(array &$form, FormStateInterface $form_state)
-  {
+  public function validateForm(array &$form, FormStateInterface $form_state) {
   }
 
-  public function submitForm(array &$form, FormStateInterface $form_state)
-  {
+  public function submitForm(array &$form, FormStateInterface $form_state) {
 
   }
 

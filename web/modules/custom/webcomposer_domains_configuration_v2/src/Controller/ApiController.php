@@ -33,8 +33,7 @@ class ApiController extends ControllerBase {
   public function __construct(
     ConfigurableLanguageManager $language_manager,
     StorageService $storageService
-  )
-  {
+  ) {
     $this->languageManager = $language_manager;
     $this->storageService = $storageService;
   }
@@ -42,8 +41,7 @@ class ApiController extends ControllerBase {
   /**
    * {@inheritdoc}
    */
-  public static function create(ContainerInterface $container)
-  {
+  public static function create(ContainerInterface $container) {
     return new static(
       $container->get('language_manager'),
       $container->get('webcomposer_domains_configuration_v2.storage')
@@ -56,8 +54,7 @@ class ApiController extends ControllerBase {
    * @param $domain
    * @return JsonResponse
    */
-  public function getDomain($domain)
-  {
+  public function getDomain($domain) {
     $lang = $this->languageManager->getCurrentLanguage()->getId();
     $domainDetails = $this->storageService->get("domains:" . $domain, $lang);
     if ($domainDetails) {

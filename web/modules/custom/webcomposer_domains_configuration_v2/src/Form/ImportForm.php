@@ -37,8 +37,7 @@ class ImportForm extends FormBase {
   /**
    * Constructor.
    */
-  public function __construct()
-  {
+  public function __construct() {
     $this->enabled = true;
     $this->domainImportService = Drupal::service('webcomposer_domains_configuration_v2.domain_import');
   }
@@ -48,16 +47,14 @@ class ImportForm extends FormBase {
    *
    * @return string
    */
-  public function getFormId()
-  {
+  public function getFormId() {
     return self::FORM_ID;
   }
 
   /**
    * {@inheritdoc}
    */
-  public function buildForm(array $form, FormStateInterface $form_state)
-  {
+  public function buildForm(array $form, FormStateInterface $form_state) {
     $form['import_file'] = [
       '#type' => 'managed_file',
       '#title' => $this->t('Import file'),
@@ -83,13 +80,11 @@ class ImportForm extends FormBase {
     return $form;
   }
 
-  public function validateForm(array &$form, FormStateInterface $form_state)
-  {
+  public function validateForm(array &$form, FormStateInterface $form_state) {
     parent::validateForm($form, $form_state);
   }
 
-  public function submitForm(array &$form, FormStateInterface $form_state)
-  {
+  public function submitForm(array &$form, FormStateInterface $form_state) {
     // If this module is not enabled do nothing
     if (!$this->enabled) {
       drupal_set_message('Failed to import domains due to the following reason(s): Module not enabled!', 'error');
