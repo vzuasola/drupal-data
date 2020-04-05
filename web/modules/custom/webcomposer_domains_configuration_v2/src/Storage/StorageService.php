@@ -70,6 +70,7 @@ class StorageService implements StorageInterface {
   /** @inheritDoc */
   public function get(string $key, string $lang = 'en')
   {
+    $lang = 'en'; // TODO: This will force to set the language to en, remove until further notice
     return $this->storage->get($key, $lang);
   }
 
