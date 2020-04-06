@@ -14,16 +14,13 @@ class ImportParser {
   const DOMAIN_COLUMN = 'domains';
   const TOKEN_COLUMN = 'tokens';
 
-  public function __construct()
-  {
+  public function __construct() {
   }
 
-  public static function create(ContainerInterface $container)
-  {
+  public static function create(ContainerInterface $container) {
   }
 
-  public function readExcel($form_state)
-  {
+  public function readExcel($form_state) {
     if (is_object($form_state)) {
       $fid = $form_state->getValue('fid');
       if (!$fid) {
@@ -41,8 +38,7 @@ class ImportParser {
     return $this->getExcelData($realPath);
   }
 
-  private function getExcelData(string $path)
-  {
+  private function getExcelData(string $path) {
     // Attempt to read excel file.
     $excelReader = IOFactory::createReaderForFile($path);
     $excelReader->setLoadAllSheets();
@@ -64,8 +60,7 @@ class ImportParser {
     return ($excelData);
   }
 
-  private function parseSheet($sheetData, Worksheet $sheet)
-  {
+  private function parseSheet($sheetData, Worksheet $sheet) {
     $sheetName = $sheet->getCodeName();
     if ($sheetName === self::TOKEN_COLUMN) {
       return $this->parseTokens($sheetData);
@@ -73,8 +68,7 @@ class ImportParser {
     return $this->parseDomains($sheetData);
   }
 
-  private function parseTokens($sheetData)
-  {
+  private function parseTokens($sheetData) {
     $headings = array_shift($sheetData);
     array_walk(
       $sheetData,
@@ -86,8 +80,7 @@ class ImportParser {
     return $this->tokens = array_column($sheetData, 'Default', self::TOKEN_COLUMN);
   }
 
-  private function parseDomains($sheetData)
-  {
+  private function parseDomains($sheetData) {
     $headings = array_shift($sheetData);
     $domainData = [];
     array_walk(
@@ -114,8 +107,7 @@ class ImportParser {
     return $domainData;
   }
 
-  private function filterTokens(&$domainRow)
-  {
+  private function filterTokens(&$domainRow) {
     unset($domainRow[self::DOMAIN_COLUMN]);
     foreach ($domainRow as $key => $data) {
       // If the $domainRow has a token not included on the masterlist token,
