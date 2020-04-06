@@ -29,16 +29,14 @@ interface StorageInterface {
 
   public function commitTransaction();
 
-  public function getAll();
-
   public function clearAll(array $data);
 
   public function setTokens($data);
   public function getTokens();
 
   public function setGroups($data);
-  public function getGroups();
+  public function getGroups(string $group);
 
   public function setDomains($data, $lang);
-  public function getDomains();
+  public function getDomains(string $domain, string $lang);
 }

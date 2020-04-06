@@ -56,9 +56,9 @@ class ApiController extends ControllerBase {
    */
   public function getDomain($domain) {
     $lang = $this->languageManager->getCurrentLanguage()->getId();
-    $domainDetails = $this->storageService->get("domains:" . $domain, $lang);
+    $domainDetails = $this->storageService->getDomain($domain, $lang);
     if ($domainDetails) {
-      $masterToken = $this->storageService->get("tokens", "");
+      $masterToken = $this->storageService->getTokens();
       array_walk(
         $domainDetails,
         function (&$value, $token) use ($masterToken) {

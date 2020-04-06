@@ -46,12 +46,12 @@ class RedisService implements StorageInterface {
     $this->redis->exec();
   }
 
-  public function getAll() {
-    // TODO: Implement getAll() method.
-  }
-
   public function clearAll(array $data) {
+    // Clear Tokens
 
+    // Clear Groups
+
+    // Clear Domains
   }
 
   private function createRedisInstance() {
@@ -82,8 +82,8 @@ class RedisService implements StorageInterface {
     }
   }
 
-  public function getGroups() {
-    return $this->redis->keys(self::GROUP_NAMESPACE . ":*");
+  public function getGroups(string $group) {
+    return $this->redis->get(self::GROUP_NAMESPACE . ":{$group}");
   }
 
   public function setDomains($data, $lang) {
@@ -94,7 +94,7 @@ class RedisService implements StorageInterface {
     }
   }
 
-  public function getDomains() {
-    return $this->redis->hgetall(self::TOKEN_NAMESPACE);
+  public function getDomains(string $domain, string $lang = self::DEFAULT_LANG) {
+    return $this->redis->hgetall(self::DOMAIN_NAMESPACE . ":{$domain}:{$lang}");
   }
 }
