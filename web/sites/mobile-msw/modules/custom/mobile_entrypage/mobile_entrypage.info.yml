@@ -1,0 +1,5 @@
+name: Mobile Entrypage
+type: module
+description: Mobile Entrypage configuration
+core: 8.x
+package: Web Composer

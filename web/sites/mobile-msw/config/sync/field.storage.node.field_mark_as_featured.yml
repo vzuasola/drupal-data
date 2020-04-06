@@ -1,0 +1,18 @@
+uuid: 25fc32bb-96e7-4a11-9542-72f15d177bd9
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_mark_as_featured
+field_name: field_mark_as_featured
+entity_type: node
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

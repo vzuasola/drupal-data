@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains mobile_casino.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function mobile_casino_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the mobile_casino module.
+    case 'help.page.mobile_casino':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Mobile Casino configuration') . '</p>';
+      return $output;
+
+    default:
+  }
+}

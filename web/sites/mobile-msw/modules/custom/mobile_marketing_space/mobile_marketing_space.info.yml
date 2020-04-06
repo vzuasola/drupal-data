@@ -1,0 +1,5 @@
+name: Mobile Marketing Space
+type: module
+description: Mobile Marketing Space configuration
+core: 8.x
+package: Web Composer
