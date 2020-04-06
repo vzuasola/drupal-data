@@ -29,14 +29,12 @@ class DomainImportService {
   /**
    * Constructs a new DomainImportService object.
    */
-  public function __construct(ImportParser $importParser, StorageService $storage)
-  {
+  public function __construct(ImportParser $importParser, StorageService $storage) {
     $this->importParser = $importParser;
     $this->storage = $storage;
   }
 
-  public function execute(FormStateInterface $formState)
-  {
+  public function execute(FormStateInterface $formState) {
     // TODO: Create here
     // 0 - Validate form state?
 
