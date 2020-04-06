@@ -5,27 +5,23 @@ namespace Drupal\webcomposer_domains_configuration_v2\Storage;
 use Drupal\Core\Site\Settings;
 use Predis\Client as Redis;
 
-/**
- * Class RedisService.
- */
 class RedisService implements StorageInterface {
 
   protected const DEFAULT_LANG = "en";
+  protected const TOKEN_NAMESPACE = "tokens";
+  protected const GROUP_NAMESPACE = "groups";
+  protected const DOMAIN_NAMESPACE = "domains";
 
   /**
    * @var Redis
    */
   private $redis;
 
-  /**
-   * Constructs a new RedisService object.
-   */
   public function __construct() {
     $this->redis = $this->createRedisInstance();
   }
 
-  /** @inheritDoc */
-  public function set(string $key, array $data, string $lang = self::DEFAULT_LANG) {
+  public function set_FOOBAR(string $key, array $data, string $lang = self::DEFAULT_LANG) {
     if ($lang) {
       $lang = ":" . $lang;
     }
@@ -35,8 +31,7 @@ class RedisService implements StorageInterface {
       : $this->redis->set($key, json_encode($data)));
   }
 
-  /** @inheritDoc */
-  public function get(string $key, string $lang = self::DEFAULT_LANG) {
+  public function get_FOOBAR(string $key, string $lang = self::DEFAULT_LANG) {
     if ($lang) {
       $lang = ":" . $lang;
     }
@@ -55,46 +50,8 @@ class RedisService implements StorageInterface {
     // TODO: Implement getAll() method.
   }
 
-  public function clearAll(string $key, array $data) {
-    // Create a new redis instance this is to handle if
-    // there is a multi transaction on the constructed
-    // redis instance it will still provide keys
-    $redis = $this->createRedisInstance();
-    switch ($key) {
-      case "tokens":
-        $keysFound = $redis->hkeys($key);
+  public function clearAll(array $data) {
 
-        $keys = array_keys($data);
-        break;
-      case "groups:*":
-        $keysFound = $redis->keys($key);
-        $keys = array_keys($data);
-        array_walk($keys, function (&$key) {
-          $key = "groups:{$key}";
-        });
-
-        break;
-      default:
-        $keysFound = $redis->keys($key);
-        array_walk($data, function (&$group) {
-          $group = array_keys($group);
-        });
-
-        $keys = [];
-        foreach ($data as $group) {
-          $domains = array_values($group);
-          array_walk($domains, function (&$domain) {
-            $domain = "domains:{$domain}:en"; // to replace when language is available
-          });
-          $keys = array_merge($keys, $domains);
-        }
-    }
-
-    $keysDiff = array_diff($keysFound, $keys);
-    if ($keysDiff) {
-      $this->redis->del($keysDiff);
-    }
-    $redis->quit(); // Close the newly created redis instance
   }
 
   private function createRedisInstance() {
@@ -108,5 +65,36 @@ class RedisService implements StorageInterface {
   private function isHash($data) {
     if (array() === $data) return false;
     return array_keys($data) !== range(0, count($data) - 1);
+  }
+
+  public function setTokens($data) {
+    $this->redis->hmset(self::TOKEN_NAMESPACE, $data);
+  }
+
+  public function getTokens() {
+    return $this->redis->hgetall(self::TOKEN_NAMESPACE);
+  }
+
+  public function setGroups($data) {
+    foreach ($data as $group => $domainList) {
+      $domains = array_keys($domainList);
+      $this->redis->set(self::GROUP_NAMESPACE . ":{$group}", json_encode($domains));
+    }
+  }
+
+  public function getGroups() {
+    return $this->redis->keys(self::GROUP_NAMESPACE . ":*");
+  }
+
+  public function setDomains($data, $lang) {
+    foreach ($data as $group => $domainList) {
+      foreach ($domainList as $domain => $domainData) {
+        $this->redis->hmset(self::DOMAIN_NAMESPACE . ":{$domain}:{$lang}", $domainData);
+      }
+    }
+  }
+
+  public function getDomains() {
+    return $this->redis->hgetall(self::TOKEN_NAMESPACE);
   }
 }
