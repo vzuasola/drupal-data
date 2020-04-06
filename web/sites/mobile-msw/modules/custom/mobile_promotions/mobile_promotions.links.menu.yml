@@ -1,0 +1,5 @@
+mobile_promotions.list:
+  title: 'Mobile Promotions Configuration'
+  description: 'Provides configuration for Mobile Promotions'
+  parent: system.admin_config
+  route_name: mobile_promotions.admin_settings

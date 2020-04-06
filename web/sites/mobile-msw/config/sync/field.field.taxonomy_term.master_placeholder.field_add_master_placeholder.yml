@@ -1,0 +1,32 @@
+uuid: e5c29417-0c77-48c7-8700-4f7a77c4a8bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_add_master_placeholder
+    - paragraphs.paragraphs_type.domain_management_configuration
+    - taxonomy.vocabulary.master_placeholder
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: WoyLKR-cew6ChcrBUlYeXiC8WpOaNpUTYpvKXL2Ws2U
+id: taxonomy_term.master_placeholder.field_add_master_placeholder
+field_name: field_add_master_placeholder
+entity_type: taxonomy_term
+bundle: master_placeholder
+label: 'Add Placeholder'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      domain_management_configuration: domain_management_configuration
+    target_bundles_drag_drop:
+      domain_management_configuration:
+        enabled: true
+        weight: 2
+field_type: entity_reference_revisions

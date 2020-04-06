@@ -1,0 +1,19 @@
+uuid: d0d78a11-5667-469c-82db-b962fc990700
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ribbon_label
+    - node.type.promotion
+id: node.promotion.field_ribbon_label
+field_name: field_ribbon_label
+entity_type: node
+bundle: promotion
+label: 'Ribbon Label'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

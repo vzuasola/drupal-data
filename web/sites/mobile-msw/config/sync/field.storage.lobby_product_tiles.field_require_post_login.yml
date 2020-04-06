@@ -1,0 +1,18 @@
+uuid: 83f49a24-248a-49a1-b470-74c67f0b4879
+langcode: en
+status: true
+dependencies:
+  module:
+    - lobby_product_tiles
+id: lobby_product_tiles.field_require_post_login
+field_name: field_require_post_login
+entity_type: lobby_product_tiles
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

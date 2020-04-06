@@ -1,0 +1,20 @@
+uuid: fe68357e-fa7c-4616-8cde-b50a8cbdc5b4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.mobile_sponsor_list.field_sponsors_row_title
+  module:
+    - mobile_sponsor_list
+id: mobile_sponsor_list.mobile_sponsor_list.field_sponsors_row_title
+field_name: field_sponsors_row_title
+entity_type: mobile_sponsor_list
+bundle: mobile_sponsor_list
+label: 'Sponsors Row Title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
