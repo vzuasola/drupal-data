@@ -25,7 +25,7 @@ cashier_mapping: "USD|AR|{domain:crow_cashier}/en\r\nUSD|BO|{domain:crow_cashier
 default_mcashier_link: '{domain:mcashier}/{domain:cashier_lang}[query:(ticket={auth.token}&{tracking})]'
 mcashier_mapping: ''
 promotion_page_title: Dafabet移动端投注优惠活动独家奖励!
-links_title: Quicklinks
+links_title: 快速链接
 logo_url: ''
 mobile_logo_url: ''
 join_now_text: 立即加入
