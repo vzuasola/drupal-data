@@ -9,6 +9,7 @@ dependencies:
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_banner_link
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_banner_link_target
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_content_position
+    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_currency
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_disable_in_tablet
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_game_platform
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_games_subprovider
@@ -30,6 +31,7 @@ dependencies:
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_status
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_title
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_unpublish_date
+    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_user_availability
     - image.style.thumbnail
   module:
     - color_field
@@ -81,6 +83,8 @@ third_party_settings:
         - field_post_banner_link_target
         - field_post_banner_blurb
         - field_post_content_position
+        - field_currency
+        - field_user_availability
       parent_name: ''
       weight: 5
       format_type: fieldset
@@ -276,6 +280,14 @@ content:
           entity_type: webcomposer_slider_v2_entity
           bundle: webcomposer_slider_v2_entity
     type: options_select
+    region: content
+  field_currency:
+    weight: 18
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
     region: content
   field_disable_in_tablet:
     weight: 21
@@ -546,6 +558,12 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
+    region: content
+  field_user_availability:
+    weight: 19
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
     region: content
   langcode:
     type: language_select

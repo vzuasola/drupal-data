@@ -11,15 +11,15 @@ dependencies:
 third_party_settings:
   content_translation:
     translation_sync:
-      alt: alt
-      title: title
-      file: '0'
+      file: file
+      alt: '0'
+      title: '0'
 id: node.games.field_game_thumbnail_large
 field_name: field_game_thumbnail_large
 entity_type: node
 bundle: games
 label: 'Game Thumbnail Large'
-description: ''
+description: 'Recommended dimension of image is 370px x 150px.'
 required: true
 translatable: true
 default_value: {  }
@@ -28,8 +28,8 @@ settings:
   file_directory: '[date:custom:Y]-[date:custom:m]'
   file_extensions: 'png gif jpg jpeg'
   max_filesize: ''
-  max_resolution: ''
-  min_resolution: ''
+  max_resolution: 370x150
+  min_resolution: 370x150
   alt_field: false
   alt_field_required: false
   title_field: false

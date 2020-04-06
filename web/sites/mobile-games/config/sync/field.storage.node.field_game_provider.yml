@@ -44,6 +44,9 @@ settings:
     -
       value: pas
       label: PAS
+    -
+      value: pgsoft
+      label: PGSoft
   allowed_values_function: ''
 module: options
 locked: false
