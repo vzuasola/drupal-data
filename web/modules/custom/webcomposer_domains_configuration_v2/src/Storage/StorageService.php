@@ -17,7 +17,7 @@ class StorageService {
     $this->storage = Drupal::service('webcomposer_domains_configuration_v2.redis');
   }
 
-  public function processAllData(array $data) {
+  public function processImport(array $data) {
     // Start Transaction
     $this->storage->createTransaction();
 
@@ -38,10 +38,18 @@ class StorageService {
     $this->storage->setDomains($domains, $lang);
 
     // 4 - Flush Old Data
-    $this->storage->clearAll($data); // Clear tokens, Groups, Domains
+    $this->storage->clearAll($data);
 
     // Commit the transaction changes
     $this->storage->commitTransaction();
+  }
+
+  public function getDomain(string $domain, string $lang) {
+    return $this->storage->getDomains($domain, $lang);
+  }
+
+  public function getTokens() {
+    return $this->storage->getTokens();
   }
 
 }
