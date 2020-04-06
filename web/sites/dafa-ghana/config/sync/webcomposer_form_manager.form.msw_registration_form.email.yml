@@ -4,7 +4,7 @@ field_settings:
   annotation: ''
 field_validations:
   required:
-    enable: 1
+    enable: 0
     error_message: 'Field should be required'
   alpha:
     enable: 0
@@ -43,10 +43,10 @@ field_validations:
     parameters:
       length: '2'
   max_length:
-    enable: 1
+    enable: 0
     error_message: 'Maximum requirement not met'
     parameters:
-      length: '100'
+      length: '10'
   regex:
     enable: 0
     error_message: 'This field only accepts specific characters.'
