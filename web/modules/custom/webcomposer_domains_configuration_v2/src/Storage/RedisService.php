@@ -39,12 +39,7 @@ class RedisService implements StorageInterface {
 
   public function clearTokens(array $data): array {
     $redis = $this->createRedisInstance();
-    $keysFound = [];
-    do {
-      list($cursor, $redisTokens) = $redis->hscan(self::TOKEN_NAMESPACE, $cursor ?? 0);
-      $keysFound = array_merge($keysFound, array_keys($redisTokens));
-      $done = (intval($cursor) === 0);
-    } while (!$done);
+    $keysFound = array_keys($redis->hgetall(self::TOKEN_NAMESPACE));
     $keys = array_keys($data);
 
     $keysDiff = array_diff($keysFound, $keys);
