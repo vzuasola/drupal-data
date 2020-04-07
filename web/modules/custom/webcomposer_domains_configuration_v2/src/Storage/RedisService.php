@@ -21,37 +21,12 @@ class RedisService implements StorageInterface {
     $this->redis = $this->createRedisInstance();
   }
 
-  public function set_FOOBAR(string $key, array $data, string $lang = self::DEFAULT_LANG) {
-    if ($lang) {
-      $lang = ":" . $lang;
-    }
-
-    return ($this->isHash($data)
-      ? $this->redis->hmset($key . $lang, $data)
-      : $this->redis->set($key, json_encode($data)));
-  }
-
-  public function get_FOOBAR(string $key, string $lang = self::DEFAULT_LANG) {
-    if ($lang) {
-      $lang = ":" . $lang;
-    }
-    return $this->redis->hgetall($key . $lang);
-  }
-
   public function createTransaction() {
     $this->redis->multi();
   }
 
   public function commitTransaction() {
     $this->redis->exec();
-  }
-
-  public function clearAll(array $data) {
-    // Clear Tokens
-
-    // Clear Groups
-
-    // Clear Domains
   }
 
   private function createRedisInstance() {
@@ -62,31 +37,70 @@ class RedisService implements StorageInterface {
     );
   }
 
-  private function isHash($data) {
-    if (array() === $data) return false;
-    return array_keys($data) !== range(0, count($data) - 1);
+  public function clearTokens(array $data) {
+    $redis = $this->createRedisInstance();
+    $keysFound = $redis->hkeys(self::TOKEN_NAMESPACE);
+    $keys = array_keys($data);
+
+    $keysDiff = array_diff($keysFound, $keys);
+    if ($keysDiff) {
+      $this->redis->del($keysDiff);
+    }
+    $redis->quit();
   }
 
-  public function setTokens($data) {
+  public function setTokens(array $data) {
     $this->redis->hmset(self::TOKEN_NAMESPACE, $data);
   }
 
-  public function getTokens() {
+  public function getTokens(): array {
     return $this->redis->hgetall(self::TOKEN_NAMESPACE);
   }
 
-  public function setGroups($data) {
+  public function clearGroups(array $data) {
+    $redis = $this->createRedisInstance();
+    $keysFound = $redis->keys(self::GROUP_NAMESPACE . ":*");
+    array_walk($data, function (&$key) {
+      $key = self::GROUP_NAMESPACE . ":{$key}";
+    });
+
+    $keysDiff = array_diff($keysFound, $data);
+    if ($keysDiff) {
+      $this->redis->del($keysDiff);
+    }
+    $redis->quit();
+  }
+
+  public function setGroups(array $data) {
     foreach ($data as $group => $domainList) {
       $domains = array_keys($domainList);
       $this->redis->set(self::GROUP_NAMESPACE . ":{$group}", json_encode($domains));
     }
   }
 
-  public function getGroups(string $group) {
+  public function getGroups(string $group): string {
     return $this->redis->get(self::GROUP_NAMESPACE . ":{$group}");
   }
 
-  public function setDomains($data, $lang) {
+  public function clearDomains(array $data, string $lang) {
+    $redis = $this->createRedisInstance();
+    $keysFound = $redis->keys(self::DOMAIN_NAMESPACE . ":*:{$lang}");
+    $domains = [];
+    array_walk($data, function ($group) use (&$domains) {
+      $domains = array_merge($domains, array_keys($group));
+    });
+    array_walk($domains, function (&$domain) use ($lang) {
+      $domain = self::DOMAIN_NAMESPACE . ":{$domain}:{$lang}";
+    });
+
+    $keysDiff = array_diff($keysFound, $domains);
+    if ($keysDiff) {
+      $this->redis->del($keysDiff);
+    }
+    $redis->quit();
+  }
+
+  public function setDomains(array $data, string $lang) {
     foreach ($data as $group => $domainList) {
       foreach ($domainList as $domain => $domainData) {
         $this->redis->hmset(self::DOMAIN_NAMESPACE . ":{$domain}:{$lang}", $domainData);
@@ -94,7 +108,7 @@ class RedisService implements StorageInterface {
     }
   }
 
-  public function getDomains(string $domain, string $lang = self::DEFAULT_LANG) {
+  public function getDomains(string $domain, string $lang = self::DEFAULT_LANG): array {
     return $this->redis->hgetall(self::DOMAIN_NAMESPACE . ":{$domain}:{$lang}");
   }
 }

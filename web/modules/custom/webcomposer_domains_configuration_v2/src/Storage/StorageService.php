@@ -8,7 +8,7 @@ use Drupal\webcomposer_domains_configuration_v2\Parser\ImportParser;
 class StorageService {
 
   /**
-   * @var StorageInterface | RedisService $storage
+   * @var StorageInterface $storage
    */
   private $storage;
 
@@ -38,7 +38,9 @@ class StorageService {
     $this->storage->setDomains($domains, $lang);
 
     // 4 - Flush Old Data
-    $this->storage->clearAll($data);
+    $this->storage->clearTokens($tokens);
+    $this->storage->clearGroups(array_keys($domains));
+    $this->storage->clearDomains($domains, $lang);
 
     // Commit the transaction changes
     $this->storage->commitTransaction();
