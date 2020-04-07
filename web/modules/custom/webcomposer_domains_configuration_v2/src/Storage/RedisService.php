@@ -38,15 +38,13 @@ class RedisService implements StorageInterface {
   }
 
   public function clearTokens(array $data): array {
-    $redis = $this->createRedisInstance();
-    $keysFound = array_keys($redis->hgetall(self::TOKEN_NAMESPACE));
+    $keysFound = array_keys($this->getTokens());
     $keys = array_keys($data);
 
     $keysDiff = array_diff($keysFound, $keys);
     if ($keysDiff) {
       $this->redis->hdel(self::TOKEN_NAMESPACE, $keysDiff);
     }
-    $redis->quit();
 
     return $keysDiff;
   }
@@ -56,51 +54,37 @@ class RedisService implements StorageInterface {
   }
 
   public function getTokens(): array {
-    return $this->redis->hgetall(self::TOKEN_NAMESPACE);
+    $redis = $this->createRedisInstance();
+    return $redis->hgetall(self::TOKEN_NAMESPACE);
   }
 
   public function clearGroups(array $data) {
     $groups = array_keys($data);
-    $redis = $this->createRedisInstance();
-    $keysFound = [];
-    do {
-      list($cursor, $redisGroups) = $redis->scan($cursor ?? 0,
-        ['match' => self::GROUP_NAMESPACE . ":*"]);
-      $keysFound = array_merge($keysFound, $redisGroups);
-      $done = (intval($cursor) === 0);
-    } while (!$done);
+    $keysFound = $this->getGroups();
+    if(!$keysFound) {
+      return;
+    }
+
     array_walk($groups, function (&$key) {
       $key = self::GROUP_NAMESPACE . ":{$key}";
     });
 
     // Delete Entire Group If removed from new import
-    $keysDiff = array_diff($keysFound, $groups);
+    $keysDiff = array_diff(array_keys($keysFound), $groups);
     if ($keysDiff) {
       $this->redis->del($keysDiff);
     }
 
-    if($keysFound) {
-      // Removed domains not included on the group
-      foreach($keysFound as $groupKey) {
-        $importDomains = array_keys($data[str_replace(self::GROUP_NAMESPACE . ":", "", $groupKey)] ?? []);
-        $cursor = null;
-        $redisDomains = [];
-        do {
-          list($cursor, $domains) = $redis->sscan($groupKey
-            , $cursor ?? 0);
-          $redisDomains = array_merge($redisDomains, $domains);
-          $done = (intval($cursor) === 0);
-        } while (!$done);
-
-        $domainDiff = array_diff($redisDomains, $importDomains);
-        if($domainDiff) {
-          array_walk($domainDiff, function ($domain) use ($groupKey) {
-              $this->redis->srem($groupKey, $domain);
-          });
-        }
+    // Removed domains not included on the group
+    foreach($keysFound as $groupKey => $redisDomains) {
+      $importDomains = array_keys($data[str_replace(self::GROUP_NAMESPACE . ":", "", $groupKey)] ?? []);
+      $domainDiff = array_diff($redisDomains, $importDomains);
+      if($domainDiff) {
+        array_walk($domainDiff, function ($domain) use ($groupKey) {
+          $this->redis->srem($groupKey, $domain);
+        });
       }
     }
-    $redis->quit();
   }
 
   public function setGroups(array $data) {
@@ -109,20 +93,32 @@ class RedisService implements StorageInterface {
     }
   }
 
-  public function getGroups(string $group): string {
-    return $this->redis->get(self::GROUP_NAMESPACE . ":{$group}");
+  public function getGroups(): array {
+    $redis = $this->createRedisInstance();
+    $groupsKey = [];
+    do {
+      list($cursor, $key) = $redis->scan($cursor ?? 0,
+        ['match' => self::GROUP_NAMESPACE . ":*"]);
+      if ($key) {
+        foreach ($key as $group) {
+          $groupsKey[$group] = $redis->smembers($group);
+        }
+      }
+      $done = (intval($cursor) === 0);
+    } while (!$done);
+    return $groupsKey;
   }
 
   public function clearDomains(array $data, string $lang, array $clearedTokens) {
-    $redis = $this->createRedisInstance();
-    $keysFound = [];
-    do {
-      list($cursor, $redisDomains) = $redis->scan($cursor ?? 0,
-        ['match' => self::DOMAIN_NAMESPACE . ":*:{$lang}"]
-      );
-      $keysFound = array_merge($keysFound, $redisDomains);
-      $done = (intval($cursor) === 0);
-    } while (!$done);
+    $redisGroups = $this->getGroups();
+    $redisDomains = [];
+    foreach ($redisGroups as $group => $domains) {
+      $redisDomains = array_merge($redisDomains, $domains);
+    }
+
+    array_walk($redisDomains, function(&$domain) use ($lang) {
+      $domain = self::DOMAIN_NAMESPACE . ":{$domain}:{$lang}";
+    });
 
     $domains = [];
     array_walk($data, function ($group) use (&$domains) {
@@ -131,15 +127,15 @@ class RedisService implements StorageInterface {
     array_walk($domains, function (&$domain) use ($lang, $clearedTokens) {
       $domain = self::DOMAIN_NAMESPACE . ":{$domain}:{$lang}";
       if($clearedTokens) {
+        // Clear Updated tokens from hash
         $this->redis->hdel($domain, $clearedTokens);
       }
     });
 
-    $keysDiff = array_diff($keysFound, $domains);
+    $keysDiff = array_diff($redisDomains, $domains);
     if ($keysDiff) {
       $this->redis->del($keysDiff);
     }
-    $redis->quit();
   }
 
   public function setDomains(array $data, string $lang) {
