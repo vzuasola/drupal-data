@@ -89,7 +89,15 @@ class RedisService implements StorageInterface {
 
   public function clearDomains(array $data, string $lang) {
     $redis = $this->createRedisInstance();
-    $keysFound = $redis->keys(self::DOMAIN_NAMESPACE . ":*:{$lang}");
+    $keysFound = [];
+    do {
+      list($cursor, $redisDomains) = $redis->scan($cursor ?? 0,
+        ['match' => self::DOMAIN_NAMESPACE . ":*:{$lang}"]
+      );
+      $keysFound = array_merge($keysFound, $redisDomains);
+      $done = (intval($cursor) === 0);
+    } while (!$done);
+
     $domains = [];
     array_walk($data, function ($group) use (&$domains) {
       $domains = array_merge($domains, array_keys($group));
