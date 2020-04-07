@@ -30,7 +30,7 @@ class StorageService {
 
     // 1 - Save tokens
     $this->storage->setTokens($tokens);
-    $this->storage->clearTokens($tokens);
+    $clearedTokens = $this->storage->clearTokens($tokens);
 
     // 2 - Save Groups
     $this->storage->setGroups($domains);
@@ -38,7 +38,7 @@ class StorageService {
 
     // 3 - Save Domains
     $this->storage->setDomains($domains, $lang);
-    $this->storage->clearDomains($domains, $lang);
+    $this->storage->clearDomains($domains, $lang, $clearedTokens);
 
     // Commit the transaction changes
     $this->storage->commitTransaction();

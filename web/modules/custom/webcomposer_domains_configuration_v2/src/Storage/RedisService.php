@@ -37,12 +37,12 @@ class RedisService implements StorageInterface {
     );
   }
 
-  public function clearTokens(array $data) {
+  public function clearTokens(array $data): array {
     $redis = $this->createRedisInstance();
     $keysFound = [];
     do {
-      list($cursor, $data) = $redis->hscan(self::TOKEN_NAMESPACE, $cursor ?? 0);
-      $keysFound = array_merge($keysFound, array_keys($data));
+      list($cursor, $redisTokens) = $redis->hscan(self::TOKEN_NAMESPACE, $cursor ?? 0);
+      $keysFound = array_merge($keysFound, array_keys($redisTokens));
       $done = (intval($cursor) === 0);
     } while (!$done);
     $keys = array_keys($data);
@@ -52,6 +52,8 @@ class RedisService implements StorageInterface {
       $this->redis->hdel(self::TOKEN_NAMESPACE, $keysDiff);
     }
     $redis->quit();
+
+    return $keysDiff;
   }
 
   public function setTokens(array $data) {
@@ -87,7 +89,7 @@ class RedisService implements StorageInterface {
     return $this->redis->get(self::GROUP_NAMESPACE . ":{$group}");
   }
 
-  public function clearDomains(array $data, string $lang) {
+  public function clearDomains(array $data, string $lang, array $clearedTokens) {
     $redis = $this->createRedisInstance();
     $keysFound = [];
     do {
@@ -102,8 +104,11 @@ class RedisService implements StorageInterface {
     array_walk($data, function ($group) use (&$domains) {
       $domains = array_merge($domains, array_keys($group));
     });
-    array_walk($domains, function (&$domain) use ($lang) {
+    array_walk($domains, function (&$domain) use ($lang, $clearedTokens) {
       $domain = self::DOMAIN_NAMESPACE . ":{$domain}:{$lang}";
+      if($clearedTokens) {
+        $this->redis->hdel($domain, $clearedTokens);
+      }
     });
 
     $keysDiff = array_diff($keysFound, $domains);
