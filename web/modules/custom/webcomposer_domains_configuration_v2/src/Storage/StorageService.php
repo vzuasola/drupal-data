@@ -34,7 +34,7 @@ class StorageService {
 
     // 2 - Save Groups
     $this->storage->setGroups($domains);
-    $this->storage->clearGroups(array_keys($domains));
+    $this->storage->clearGroups($domains);
 
     // 3 - Save Domains
     $this->storage->setDomains($domains, $lang);
