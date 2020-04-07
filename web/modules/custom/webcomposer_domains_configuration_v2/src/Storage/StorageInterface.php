@@ -20,7 +20,7 @@ interface StorageInterface {
 
   public function setGroups(array $data);
 
-  public function getGroups(string $group): string;
+  public function getGroups(): array;
 
   public function clearDomains(array $data, string $lang, array $clearedTokens);
 
