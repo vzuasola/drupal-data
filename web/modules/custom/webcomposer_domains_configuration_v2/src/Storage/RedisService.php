@@ -39,12 +39,17 @@ class RedisService implements StorageInterface {
 
   public function clearTokens(array $data) {
     $redis = $this->createRedisInstance();
-    $keysFound = $redis->hkeys(self::TOKEN_NAMESPACE);
+    $keysFound = [];
+    do {
+      list($cursor, $data) = $redis->hscan(self::TOKEN_NAMESPACE, $cursor ?? 0);
+      $keysFound = array_merge($keysFound, array_keys($data));
+      $done = (intval($cursor) === 0);
+    } while (!$done);
     $keys = array_keys($data);
 
     $keysDiff = array_diff($keysFound, $keys);
     if ($keysDiff) {
-      $this->redis->del($keysDiff);
+      $this->redis->hdel(self::TOKEN_NAMESPACE, $keysDiff);
     }
     $redis->quit();
   }
@@ -74,7 +79,7 @@ class RedisService implements StorageInterface {
   public function setGroups(array $data) {
     foreach ($data as $group => $domainList) {
       $domains = array_keys($domainList);
-      $this->redis->set(self::GROUP_NAMESPACE . ":{$group}", json_encode($domains));
+      $this->redis->lpush(self::GROUP_NAMESPACE . ":{$group}", $domains);
     }
   }
 

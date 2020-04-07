@@ -8,7 +8,7 @@ use Drupal\webcomposer_domains_configuration_v2\Parser\ImportParser;
 class StorageService {
 
   /**
-   * @var StorageInterface $storage
+   * @var RedisService $storage
    */
   private $storage;
 
@@ -30,16 +30,14 @@ class StorageService {
 
     // 1 - Save tokens
     $this->storage->setTokens($tokens);
+    $this->storage->clearTokens($tokens);
 
     // 2 - Save Groups
     $this->storage->setGroups($domains);
+    $this->storage->clearGroups(array_keys($domains));
 
     // 3 - Save Domains
     $this->storage->setDomains($domains, $lang);
-
-    // 4 - Flush Old Data
-    $this->storage->clearTokens($tokens);
-    $this->storage->clearGroups(array_keys($domains));
     $this->storage->clearDomains($domains, $lang);
 
     // Commit the transaction changes
@@ -47,6 +45,7 @@ class StorageService {
   }
 
   public function getDomain(string $domain, string $lang) {
+    $lang = 'en'; // TODO: This will force to set the language to en, remove until further notice
     return $this->storage->getDomains($domain, $lang);
   }
 
