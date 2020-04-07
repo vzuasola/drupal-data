@@ -842,6 +842,10 @@ display:
           plugin_id: date
       defaults:
         sorts: false
+        cache: false
+      cache:
+        type: tag
+        options: {  }
     cache_metadata:
       max-age: -1
       contexts:
