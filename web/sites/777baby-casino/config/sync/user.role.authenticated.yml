@@ -1,5 +1,5 @@
 uuid: 3840d1aa-2b25-4f21-b3ef-c1d872b61e20
-langcode: en
+langcode: ja
 status: true
 dependencies: {  }
 _core:
@@ -28,6 +28,7 @@ permissions:
   - 'restful get rest_menu_item'
   - 'restful get webcomposer_config'
   - 'restful get webcomposer_config_resource'
+  - 'restful get webcomposer_form_rest_resource'
   - 'restful get webform_rest_elements'
   - 'restful get webform_rest_list'
   - 'restful post user_registration'
