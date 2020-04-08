@@ -18,13 +18,13 @@ interface StorageInterface {
 
   public function clearGroups(array $data);
 
-  public function setGroups(array $data);
+  public function setGroups(array &$data);
 
   public function getGroups(): array;
 
   public function clearDomains(array $data, string $lang, array $clearedTokens);
 
-  public function setDomains(array $data, string $lang);
+  public function setDomains(array &$data, string $lang);
 
   public function getDomains(string $domain, string $lang): array;
 }
