@@ -38,10 +38,10 @@ class RedisService implements StorageInterface {
   }
 
   public function clearTokens(array $data): array {
-    $keysFound = array_keys($this->getTokens());
+    $redisTokens = array_keys($this->getTokens());
     $keys = array_keys($data);
 
-    $keysDiff = array_diff($keysFound, $keys);
+    $keysDiff = array_diff($redisTokens, $keys);
     if ($keysDiff) {
       $this->redis->hdel(self::TOKEN_NAMESPACE, $keysDiff);
     }
@@ -65,10 +65,6 @@ class RedisService implements StorageInterface {
       return;
     }
 
-    array_walk($groups, function (&$key) {
-      $key = self::GROUP_NAMESPACE . ":{$key}";
-    });
-
     // Delete Entire Group If removed from new import
     $keysDiff = array_diff(array_keys($redisGroups), $groups);
     if ($keysDiff) {
@@ -77,7 +73,6 @@ class RedisService implements StorageInterface {
 
     // Removed domains not included on the group
     foreach($data as $groupKey => $groupData) {
-      $groupKey = self::GROUP_NAMESPACE . ":{$groupKey}";
       $redisDomains = $redisGroups[$groupKey] ?? [];
       $importDomains = array_keys($groupData);
       $domainDiff = array_diff($redisDomains, $importDomains);
@@ -89,10 +84,15 @@ class RedisService implements StorageInterface {
     }
   }
 
-  public function setGroups(array $data) {
+  public function setGroups(array &$data) {
+    $parsedData = [];
     foreach ($data as $group => $domainList) {
-      $this->redis->sadd(self::GROUP_NAMESPACE . ":{$group}", array_keys($domainList));
+      $groupKey = self::GROUP_NAMESPACE . ":{$group}";
+      $this->redis->sadd($groupKey, array_keys($domainList));
+
+      $parsedData[$groupKey] = $domainList;
     }
+    $data = $parsedData;
   }
 
   public function getGroups(): array {
@@ -114,38 +114,41 @@ class RedisService implements StorageInterface {
   public function clearDomains(array $data, string $lang, array $clearedTokens) {
     $redisGroups = $this->getGroups();
     $redisDomains = [];
-    foreach ($redisGroups as $group => $domains) {
+    $importDomains = [];
+
+    array_walk($redisGroups, function ($domains) use (&$redisDomains, $lang, $clearedTokens) {
+      array_walk($domains, function (&$domain) use ($lang, $clearedTokens) {
+        $domain = self::DOMAIN_NAMESPACE . ":{$domain}:{$lang}";
+        if($clearedTokens) {
+          // Clear Updated tokens from hash
+          $this->redis->hdel($domain, $clearedTokens);
+        }
+      });
       $redisDomains = array_merge($redisDomains, $domains);
-    }
-
-    array_walk($redisDomains, function(&$domain) use ($lang) {
-      $domain = self::DOMAIN_NAMESPACE . ":{$domain}:{$lang}";
     });
 
-    $domains = [];
-    array_walk($data, function ($group) use (&$domains) {
-      $domains = array_merge($domains, array_keys($group));
-    });
-    array_walk($domains, function (&$domain) use ($lang, $clearedTokens) {
-      $domain = self::DOMAIN_NAMESPACE . ":{$domain}:{$lang}";
-      if($clearedTokens) {
-        // Clear Updated tokens from hash
-        $this->redis->hdel($domain, $clearedTokens);
-      }
+    array_walk($data, function ($group) use (&$importDomains) {
+      $domains = array_keys($group);
+      $importDomains = array_merge($importDomains, $domains);
     });
 
-    $keysDiff = array_diff($redisDomains, $domains);
+    $keysDiff = array_diff($redisDomains, $importDomains);
+
     if ($keysDiff) {
       $this->redis->del($keysDiff);
     }
   }
 
-  public function setDomains(array $data, string $lang) {
+  public function setDomains(array &$data, string $lang) {
+    $parsedData = [];
     foreach ($data as $group => $domainList) {
       foreach ($domainList as $domain => $domainData) {
-        $this->redis->hmset(self::DOMAIN_NAMESPACE . ":{$domain}:{$lang}", $domainData);
+        $domainKey = self::DOMAIN_NAMESPACE . ":{$domain}:{$lang}";
+        $this->redis->hmset($domainKey, $domainData);
+        $parsedData[$group][$domainKey] = $domainData;
       }
     }
+    $data = $parsedData;
   }
 
   public function getDomains(string $domain, string $lang = self::DEFAULT_LANG): array {
