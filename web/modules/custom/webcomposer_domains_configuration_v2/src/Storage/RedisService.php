@@ -55,7 +55,10 @@ class RedisService implements StorageInterface {
 
   public function getTokens(): array {
     $redis = $this->createRedisInstance();
-    return $redis->hgetall(self::TOKEN_NAMESPACE);
+    $tokens = $redis->hgetall(self::TOKEN_NAMESPACE);
+    $redis->quit();
+
+    return $tokens;
   }
 
   public function clearGroups(array $data) {
@@ -108,6 +111,7 @@ class RedisService implements StorageInterface {
       }
       $done = (intval($cursor) === 0);
     } while (!$done);
+    $redis->quit();
     return $groupsKey;
   }
 
