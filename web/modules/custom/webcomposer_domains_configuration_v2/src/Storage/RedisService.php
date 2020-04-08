@@ -60,8 +60,8 @@ class RedisService implements StorageInterface {
 
   public function clearGroups(array $data) {
     $groups = array_keys($data);
-    $keysFound = $this->getGroups();
-    if(!$keysFound) {
+    $redisGroups = $this->getGroups();
+    if(!$redisGroups) {
       return;
     }
 
@@ -70,14 +70,16 @@ class RedisService implements StorageInterface {
     });
 
     // Delete Entire Group If removed from new import
-    $keysDiff = array_diff(array_keys($keysFound), $groups);
+    $keysDiff = array_diff(array_keys($redisGroups), $groups);
     if ($keysDiff) {
       $this->redis->del($keysDiff);
     }
 
     // Removed domains not included on the group
-    foreach($keysFound as $groupKey => $redisDomains) {
-      $importDomains = array_keys($data[str_replace(self::GROUP_NAMESPACE . ":", "", $groupKey)] ?? []);
+    foreach($data as $groupKey => $groupData) {
+      $groupKey = self::GROUP_NAMESPACE . ":{$groupKey}";
+      $redisDomains = $redisGroups[$groupKey] ?? [];
+      $importDomains = array_keys($groupData);
       $domainDiff = array_diff($redisDomains, $importDomains);
       if($domainDiff) {
         array_walk($domainDiff, function ($domain) use ($groupKey) {
