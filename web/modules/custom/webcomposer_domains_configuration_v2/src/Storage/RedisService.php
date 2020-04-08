@@ -37,8 +37,11 @@ class RedisService implements StorageInterface {
     );
   }
 
-  public function clearTokens(array $data): array {
-    $redisTokens = array_keys($this->getTokens());
+  public function clearTokens(array $data, array $storageData): array {
+    if(!$storageData) {
+      return [];
+    }
+    $redisTokens = array_keys($storageData);
     $keys = array_keys($data);
 
     $keysDiff = array_diff($redisTokens, $keys);
@@ -61,41 +64,39 @@ class RedisService implements StorageInterface {
     return $tokens;
   }
 
-  public function clearGroups(array $data) {
+  public function clearGroups(array $data, array $storageData) {
     $groups = array_keys($data);
-    $redisGroups = $this->getGroups();
-    if(!$redisGroups) {
+    if(!$storageData) {
       return;
     }
 
     // Delete Entire Group If removed from new import
-    $keysDiff = array_diff(array_keys($redisGroups), $groups);
+    $keysDiff = array_diff(array_keys($storageData), $groups);
     if ($keysDiff) {
+      array_walk($keysDiff,function(&$group) {
+        $group = self::GROUP_NAMESPACE . ":{$group}";
+      });
       $this->redis->del($keysDiff);
     }
 
     // Removed domains not included on the group
     foreach($data as $groupKey => $groupData) {
-      $redisDomains = $redisGroups[$groupKey] ?? [];
+      $redisDomains = $storageData[$groupKey] ?? [];
       $importDomains = array_keys($groupData);
-      $domainDiff = array_diff($redisDomains, $importDomains);
+      $domainDiff = array_diff(array_keys($redisDomains), $importDomains);
       if($domainDiff) {
         array_walk($domainDiff, function ($domain) use ($groupKey) {
-          $this->redis->srem($groupKey, $domain);
+          $this->redis->srem(self::GROUP_NAMESPACE . ":{$groupKey}", $domain);
         });
       }
     }
   }
 
-  public function setGroups(array &$data) {
-    $parsedData = [];
+  public function setGroups(array $data) {
     foreach ($data as $group => $domainList) {
       $groupKey = self::GROUP_NAMESPACE . ":{$group}";
       $this->redis->sadd($groupKey, array_keys($domainList));
-
-      $parsedData[$groupKey] = $domainList;
     }
-    $data = $parsedData;
   }
 
   public function getGroups(): array {
@@ -115,44 +116,45 @@ class RedisService implements StorageInterface {
     return $groupsKey;
   }
 
-  public function clearDomains(array $data, string $lang, array $clearedTokens) {
-    $redisGroups = $this->getGroups();
+  public function clearDomains(array $data, array $storageData, string $lang, array $clearedTokens) {
     $redisDomains = [];
     $importDomains = [];
 
-    array_walk($redisGroups, function ($domains) use (&$redisDomains, $lang, $clearedTokens) {
-      array_walk($domains, function (&$domain) use ($lang, $clearedTokens) {
+    array_walk($storageData, function ($domains) use (&$redisDomains, $lang) {
+      $domains = array_keys($domains);
+      array_walk($domains, function(&$domain) use ($lang){
         $domain = self::DOMAIN_NAMESPACE . ":{$domain}:{$lang}";
-        if($clearedTokens) {
-          // Clear Updated tokens from hash
-          $this->redis->hdel($domain, $clearedTokens);
-        }
       });
       $redisDomains = array_merge($redisDomains, $domains);
     });
 
-    array_walk($data, function ($group) use (&$importDomains) {
+    array_walk($data, function ($group) use (&$importDomains, $lang) {
       $domains = array_keys($group);
+      array_walk($domains, function(&$domain) use ($lang){
+        $domain = self::DOMAIN_NAMESPACE . ":{$domain}:{$lang}";
+      });
       $importDomains = array_merge($importDomains, $domains);
     });
-
     $keysDiff = array_diff($redisDomains, $importDomains);
-
     if ($keysDiff) {
       $this->redis->del($keysDiff);
     }
+
+    // Clear Updated tokens from hash
+    if($clearedTokens) {
+      array_walk($importDomains, function($domain) use ($clearedTokens) {
+        $this->redis->hdel($domain, $clearedTokens);
+      });
+    }
   }
 
-  public function setDomains(array &$data, string $lang) {
-    $parsedData = [];
+  public function setDomains(array $data, string $lang) {
     foreach ($data as $group => $domainList) {
       foreach ($domainList as $domain => $domainData) {
         $domainKey = self::DOMAIN_NAMESPACE . ":{$domain}:{$lang}";
         $this->redis->hmset($domainKey, $domainData);
-        $parsedData[$group][$domainKey] = $domainData;
       }
     }
-    $data = $parsedData;
   }
 
   public function getDomains(string $domain, string $lang = self::DEFAULT_LANG): array {

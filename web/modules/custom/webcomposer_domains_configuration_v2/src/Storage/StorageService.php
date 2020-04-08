@@ -18,6 +18,18 @@ class StorageService {
   }
 
   public function processImport(array $data) {
+    $lang = 'en'; // TODO: This will force to set the language to en, remove until further notice
+    $storageTokens = $this->storage->getTokens();
+    $storageGroups = $this->storage->getGroups();
+    $storageDomains = [];
+
+    array_walk($storageGroups, function ($domains, $group) use (&$storageDomains, $lang) {
+      $group = str_replace('groups:', '', $group);
+      array_walk($domains, function($domain) use (&$storageDomains, $group, $lang) {
+        $storageDomains[$group][$domain] = $this->storage->getDomains($domain, $lang);
+      });
+    });;
+
     // Start Transaction
     $this->storage->createTransaction();
 
@@ -26,19 +38,18 @@ class StorageService {
     $domains = array_filter($data, function ($sheetName) {
       return $sheetName !== ImportParser::TOKEN_COLUMN;
     }, ARRAY_FILTER_USE_KEY);
-    $lang = 'en'; // TODO: This will force to set the language to en, remove until further notice
 
     // 1 - Save tokens
     $this->storage->setTokens($tokens);
-    $clearedTokens = $this->storage->clearTokens($tokens);
+    $clearedTokens = $this->storage->clearTokens($tokens, $storageTokens);
 
     // 2 - Save Groups
     $this->storage->setGroups($domains);
-    $this->storage->clearGroups($domains);
+    $this->storage->clearGroups($domains, $storageDomains);
 
     // 3 - Save Domains
     $this->storage->setDomains($domains, $lang);
-    $this->storage->clearDomains($domains, $lang, $clearedTokens);
+    $this->storage->clearDomains($domains, $storageDomains, $lang, $clearedTokens);
 
     // Commit the transaction changes
     $this->storage->commitTransaction();
