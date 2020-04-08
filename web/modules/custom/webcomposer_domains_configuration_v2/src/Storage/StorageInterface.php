@@ -10,21 +10,21 @@ interface StorageInterface {
 
   public function commitTransaction();
 
-  public function clearTokens(array $data);
+  public function clearTokens(array $data, array $storageData);
 
   public function setTokens(array $data);
 
   public function getTokens(): array;
 
-  public function clearGroups(array $data);
+  public function clearGroups(array $data, array $storageData);
 
-  public function setGroups(array &$data);
+  public function setGroups(array $data);
 
   public function getGroups(): array;
 
-  public function clearDomains(array $data, string $lang, array $clearedTokens);
+  public function clearDomains(array $data, array $storageData, string $lang, array $clearedTokens);
 
-  public function setDomains(array &$data, string $lang);
+  public function setDomains(array $data, string $lang);
 
   public function getDomains(string $domain, string $lang): array;
 }
