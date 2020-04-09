@@ -1,12 +1,12 @@
-uuid: ee96fc17-557d-4bb7-9cb3-e4b3bc412585
+uuid: b20cb280-4dde-4a87-940a-3d82accfefc1
 langcode: en
 status: true
 dependencies:
   module:
-    - webcomposer_slider_v2
-id: webcomposer_slider_v2_entity.field_currency
-field_name: field_currency
-entity_type: webcomposer_slider_v2_entity
+    - taxonomy
+id: taxonomy_term.field_supported_currencies
+field_name: field_supported_currencies
+entity_type: taxonomy_term
 type: string_long
 settings:
   case_sensitive: false
