@@ -1,9 +1,8 @@
-uuid: b58c14f4-2f74-46d8-85c8-2e60eb51b97a
+uuid: 1f831f93-84c5-411f-90f5-edfd15ac1ff2
 langcode: en
 status: true
 dependencies:
   config:
-    - block.block.languagedropdownswitcher_2
     - core.entity_view_mode.node.teaser
     - field.storage.node.field_product_category
     - field.storage.node.field_promo_availability
@@ -16,8 +15,8 @@ dependencies:
     - rest
     - serialization
     - user
-id: promotions_archive
-label: 'Archived Promotions'
+id: featured_promotions
+label: 'Featured Promotions'
 module: views
 description: ''
 tag: ''
@@ -223,6 +222,42 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           plugin_id: boolean
+        field_mark_as_featured_value:
+          id: field_mark_as_featured_value
+          table: node__field_mark_as_featured
+          field: field_mark_as_featured_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: boolean
         langcode:
           id: langcode
           table: node_field_data
@@ -271,7 +306,7 @@ display:
           group_type: group
           admin_label: ''
           operator: '='
-          value: '1'
+          value: '0'
           group: 1
           exposed: false
           expose:
@@ -312,22 +347,7 @@ display:
           expose:
             label: ''
           plugin_id: standard
-        changed:
-          id: changed
-          table: node_field_data
-          field: changed
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: DESC
-          exposed: false
-          expose:
-            label: ''
-          granularity: second
-          entity_type: node
-          entity_field: changed
-          plugin_id: date
-      title: 'Archived Promotions'
+      title: 'Featured Promotions'
       header: {  }
       footer: {  }
       empty: {  }
@@ -345,37 +365,36 @@ display:
   page_1:
     display_plugin: page
     id: page_1
-    display_title: 'Archived Promotions'
+    display_title: 'Featured Promotions'
     position: 1
     display_options:
       display_extenders: {  }
-      path: admin/config/mobile_promotions/archived
+      path: admin/config/mobile_promotions/featured
       display_description: ''
       menu:
         type: normal
-        title: 'Manage Archived Promotions'
+        title: 'Manage Featured Promotions'
         description: 'Sort featured promotions'
         expanded: false
         parent: mobile_promotions.list
-        weight: 20
+        weight: 5
         context: '0'
         menu_name: admin
-      header:
-        entity_block:
-          id: entity_block
-          table: views
-          field: entity_block
+      sorts:
+        weight:
+          id: weight
+          table: draggableviews_structure
+          field: weight
           relationship: none
           group_type: group
           admin_label: ''
-          empty: false
-          tokenize: true
-          target: languagedropdownswitcher_2
-          view_mode: default
-          bypass_access: false
-          plugin_id: entity
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: standard
       defaults:
-        header: false
+        sorts: false
         fields: false
       fields:
         title:
@@ -617,17 +636,17 @@ display:
   rest_export_1:
     display_plugin: rest_export
     id: rest_export_1
-    display_title: 'Archived REST'
+    display_title: 'Featured REST'
     position: 2
     display_options:
       display_extenders: {  }
-      display_description: ''
-      path: api/promotions_archive
+      path: api/featured_promotions
       pager:
         type: none
         options:
           offset: 0
       rendering_language: '***LANGUAGE_language_interface***'
+      display_description: ''
     cache_metadata:
       max-age: -1
       contexts:
