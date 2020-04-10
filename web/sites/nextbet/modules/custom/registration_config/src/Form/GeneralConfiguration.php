@@ -141,11 +141,12 @@ class GeneralConfiguration extends FormBase {
       '#required' => TRUE,
     ];
 
-    $lbl = 'Mapping that will be used for Product Type ID  to portal ID mapping upon registration e.g. "1|4,11,18" where 1 is the product type ID and the 4,11,18 is the portal IDs';
+    $lbl1 = 'Mapping that will be used for Product Type ID  to portal ID mapping upon registration ';
+    $lbl2 = 'e.g. "1|4,11,18" where 1 is the product type ID and the 4,11,18 is the portal IDs';
     $form['integration']['registraton_product_id_to_portal_id'] = [
       '#type' => 'textarea',
       '#title' => $this->t('Registration Portal ID to product ID mapping'),
-      '#description' => $this->t($lbl),
+      '#description' => $this->t($lbl1.$lbl2),
       '#default_value' => $this->get('registraton_product_id_to_portal_id'),
       '#required' => TRUE,
     ];
