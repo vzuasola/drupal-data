@@ -161,7 +161,7 @@ class GeneralConfiguration extends FormBase {
       '#default_value' => $this->get('registraton_portal_id_to_dafaconnect_portal_id'),
       '#required' => TRUE,
     ];
-    
+
     $form['integration']['mobile_native_app_command'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Mobile Native App CMD'),
