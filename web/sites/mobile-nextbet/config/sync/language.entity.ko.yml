@@ -11,5 +11,5 @@ third_party_settings:
 id: ko
 label: Korean
 direction: ltr
-weight: -6
+weight: -2
 locked: false
