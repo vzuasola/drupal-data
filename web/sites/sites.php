@@ -168,6 +168,11 @@ $sites['mobile-msw.drupal.dev'] = 'mobile-msw';
 $sites['mobile-msw.drupal.local'] = 'mobile-msw';
 $sites['mobile-msw.drupal.env'] = 'mobile-msw';
 
+// MSW Desktop instance
+$sites['msw.drupal.dev'] = 'msw';
+$sites['msw.drupal.local'] = 'msw';
+$sites['msw.drupal.env'] = 'msw';
+
 // dynamic sites.php values via environment variables
 
 if (file_exists(__DIR__ . '/sites.override.php')) {
