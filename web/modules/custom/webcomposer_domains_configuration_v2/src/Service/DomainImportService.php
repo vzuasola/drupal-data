@@ -42,7 +42,7 @@ class DomainImportService {
     $excelData = $this->importParser->readExcel($formState);
 
     // 2 - Store the sheet data on storage
-    $this->storage->processAllData($excelData);
+    $this->storage->processImport($excelData);
   }
 
 }

@@ -5,101 +5,63 @@ namespace Drupal\webcomposer_domains_configuration_v2\Storage;
 use Drupal;
 use Drupal\webcomposer_domains_configuration_v2\Parser\ImportParser;
 
-/**
- * Class StorageService.
- */
-class StorageService implements StorageInterface {
+class StorageService {
 
   /**
-   * @var StorageInterface $storage
+   * @var RedisService $storage
    */
   private $storage;
 
-  /**
-   * Constructs a new StorageService object.
-   */
   public function __construct() {
     // TODO: Create a switching of storage provider here
     $this->storage = Drupal::service('webcomposer_domains_configuration_v2.redis');
   }
 
-  /**
-   * Processes all the data for storing on the storage provider
-   *
-   * @param array $data
-   */
-  public function processAllData(array $data) {
-    // Start Transaction
-    $this->createTransaction();
+  public function processImport(array $data) {
+    $lang = 'en'; // TODO: This will force to set the language to en, remove until further notice
+    $storageTokens = $this->storage->getTokens();
+    $storageGroups = $this->storage->getGroups();
+    $storageDomains = [];
 
-    // Preapare data
+    array_walk($storageGroups, function ($domains, $group) use (&$storageDomains, $lang) {
+      $group = str_replace('groups:', '', $group);
+      array_walk($domains, function($domain) use (&$storageDomains, $group, $lang) {
+        $storageDomains[$group][$domain] = $this->storage->getDomains($domain, $lang);
+      });
+    });;
+
+    // Start Transaction
+    $this->storage->createTransaction();
+
+    // Prepare data
     $tokens = $data[ImportParser::TOKEN_COLUMN] ?? [];
-    $domains = $this->getDomains($data);
+    $domains = array_filter($data, function ($sheetName) {
+      return $sheetName !== ImportParser::TOKEN_COLUMN;
+    }, ARRAY_FILTER_USE_KEY);
 
     // 1 - Save tokens
-    $this->set("tokens", $tokens, "");
-    foreach ($domains as $group => $domainList) {
-      // 2 - Save Groups
-      $this->set("groups:{$group}", array_keys($domainList), "");
-      foreach ($domainList as $domain => $domainData) {
-        // 3 - Save Domains
-        // TODO: Pass the language parameter
-        $lang = 'en'; // TODO: This will force to set the language to en, remove until further notice
-        $this->set("domains:{$domain}", $domainData, $lang);
-      }
-    }
+    $this->storage->setTokens($tokens);
+    $clearedTokens = $this->storage->clearTokens($tokens, $storageTokens);
 
-    // 0 - Flush database
-    $this->clearAll('tokens', $tokens); // Clear tokens
-    $this->clearAll('groups:*', $domains); // Clear Group and Domains
-    $this->clearAll('domains:*', $domains); // Clear Group and Domains
+    // 2 - Save Groups
+    $this->storage->setGroups($domains);
+    $this->storage->clearGroups($domains, $storageDomains);
+
+    // 3 - Save Domains
+    $this->storage->setDomains($domains, $lang);
+    $this->storage->clearDomains($domains, $storageDomains, $lang, $clearedTokens);
 
     // Commit the transaction changes
-    $this->commitTransaction();
-  }
-
-  /** @inheritDoc */
-  public function set(string $key, array $data, string $lang = 'en') {
-    // Any Modification per data store should be done here before the actual saving
-    return $this->storage->set($key, $data, $lang);
-  }
-
-  /** @inheritDoc */
-  public function get(string $key, string $lang = 'en') {
-    $lang = 'en'; // TODO: This will force to set the language to en, remove until further notice
-    return $this->storage->get($key, $lang);
-  }
-
-  /**
-   * Retrieves the domain list from the sheet/excel data array
-   *
-   * @param $data
-   * @return array
-   */
-  private function getDomains($data) {
-    $domains = [];
-    foreach ($data as $sheet => $sheetData) {
-      if ($sheet !== ImportParser::TOKEN_COLUMN) {
-        $domains[$sheet] = $sheetData;
-      }
-    }
-
-    return $domains;
-  }
-
-  public function createTransaction() {
-    $this->storage->createTransaction();
-  }
-
-  public function commitTransaction() {
     $this->storage->commitTransaction();
   }
 
-  public function getAll() {
-    // TODO: Implement getAll() method.
+  public function getDomain(string $domain, string $lang) {
+    $lang = 'en'; // TODO: This will force to set the language to en, remove until further notice
+    return $this->storage->getDomains($domain, $lang);
   }
 
-  public function clearAll(string $key, array $data) {
-    $this->storage->clearAll($key, $data);
+  public function getTokens() {
+    return $this->storage->getTokens();
   }
+
 }
