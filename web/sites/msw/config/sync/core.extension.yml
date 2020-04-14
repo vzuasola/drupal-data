@@ -43,6 +43,7 @@ module:
   menu_link_attributes: 0
   menu_ui: 0
   metatag: 0
+  msw_config: 0
   node: 0
   options: 0
   paragraphs: 0
@@ -68,6 +69,7 @@ module:
   webcomposer_announcements: 0
   webcomposer_audit: 0
   webcomposer_avaya: 0
+  webcomposer_cache: 0
   webcomposer_config: 0
   webcomposer_config_schema: 0
   webcomposer_dashboard: 0
@@ -76,6 +78,7 @@ module:
   webcomposer_downloadables: 0
   webcomposer_editor: 0
   webcomposer_floating_banners: 0
+  webcomposer_form_manager: 0
   webcomposer_games: 0
   webcomposer_language_hierarchy: 0
   webcomposer_marketing_script: 0
