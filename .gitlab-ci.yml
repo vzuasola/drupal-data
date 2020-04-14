@@ -503,7 +503,7 @@ staging-mobile-nextbet-stack:
     name: staging
   variables:
     env: stg
-    STACK: row-stack
+    STACK: nextbet-stack
   script:
     - export DEPLOY_TOKEN DEPLOY_URL
     - bash automation/jenkins_deploy.sh
