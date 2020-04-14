@@ -9,7 +9,7 @@ id: node.promotion.field_field_enable_sticky_pre
 field_name: field_field_enable_sticky_pre
 entity_type: node
 bundle: promotion
-label: 'Enable sticky component'
+label: 'Enable sticky component PRE'
 description: ''
 required: false
 translatable: true

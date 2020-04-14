@@ -122,11 +122,11 @@ third_party_settings:
       label: 'Sticky Component'
     group_component_one:
       children:
-        - field_field_enable_sticky_post
-        - field_sticky_url_post
-        - field_sticky_link_target_pre2
+        - field_field_enable_sticky_pre
+        - field_sticky_url_pre
+        - field_sticky_link_target_pre
         - field_sticky_text_color_pre
-        - field_sticky_background_post2
+        - field_sticky_background_pre
       parent_name: group_sticky_component
       weight: 20
       format_type: details
@@ -139,11 +139,11 @@ third_party_settings:
       label: 'Component One'
     group_component_two:
       children:
-        - field_field_enable_sticky_post2
-        - field_sticky_url_post2
-        - field_sticky_link_target_post
+        - field_field_enable_sticky_pre2
+        - field_sticky_url_pre2
+        - field_sticky_link_target_pre2
         - field_sticky_text_color_pre2
-        - field_sticky_background_post
+        - field_sticky_background_pre2
       parent_name: group_sticky_component
       weight: 21
       format_type: details
@@ -227,11 +227,11 @@ third_party_settings:
       label: 'Sticky Component'
     group_component_one_post:
       children:
-        - field_field_enable_sticky_pre
-        - field_sticky_url_pre
-        - field_sticky_link_target_post2
+        - field_field_enable_sticky_post
+        - field_sticky_url_post
+        - field_sticky_link_target_post
         - field_sticky_text_color_post
-        - field_sticky_background_pre
+        - field_sticky_background_post
       parent_name: group_sticky_component_post
       weight: 20
       format_type: details
@@ -243,11 +243,11 @@ third_party_settings:
       label: 'Component One'
     group_component_two_post:
       children:
-        - field_field_enable_sticky_pre2
-        - field_sticky_url_pre2
-        - field_sticky_link_target_pre
+        - field_field_enable_sticky_post2
+        - field_sticky_url_post2
+        - field_sticky_link_target_post2
         - field_sticky_text_color_post2
-        - field_sticky_background_pre2
+        - field_sticky_background_post2
       parent_name: group_sticky_component_post
       weight: 21
       format_type: details
@@ -314,14 +314,14 @@ content:
     type: boolean_checkbox
     region: content
   field_field_enable_sticky_post:
-    weight: 30
+    weight: 27
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
   field_field_enable_sticky_post2:
-    weight: 31
+    weight: 28
     settings:
       display_label: true
     third_party_settings: {  }
@@ -455,13 +455,13 @@ content:
     type: color_field_widget_html5
     region: content
   field_sticky_background_post:
-    weight: 35
+    weight: 32
     settings: {  }
     third_party_settings: {  }
     type: color_field_widget_html5
     region: content
   field_sticky_background_post2:
-    weight: 34
+    weight: 32
     settings: {  }
     third_party_settings: {  }
     type: color_field_widget_html5
@@ -473,61 +473,61 @@ content:
     type: color_field_widget_html5
     region: content
   field_sticky_background_pre2:
-    weight: 31
+    weight: 33
     settings: {  }
     third_party_settings: {  }
     type: color_field_widget_html5
     region: content
   field_sticky_link_target_post:
-    weight: 33
+    weight: 29
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_sticky_link_target_post2:
-    weight: 28
+    weight: 30
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_sticky_link_target_pre:
-    weight: 29
+    weight: 28
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_sticky_link_target_pre2:
-    weight: 32
+    weight: 29
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_sticky_text_color_post:
-    weight: 29
+    weight: 31
     settings: {  }
     third_party_settings: {  }
     type: color_field_widget_html5
     region: content
   field_sticky_text_color_post2:
-    weight: 30
+    weight: 31
     settings: {  }
     third_party_settings: {  }
     type: color_field_widget_html5
     region: content
   field_sticky_text_color_pre:
-    weight: 33
+    weight: 29
     settings: {  }
     third_party_settings: {  }
     type: color_field_widget_html5
     region: content
   field_sticky_text_color_pre2:
-    weight: 34
+    weight: 32
     settings: {  }
     third_party_settings: {  }
     type: color_field_widget_html5
     region: content
   field_sticky_url_post:
-    weight: 31
+    weight: 28
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -535,7 +535,7 @@ content:
     type: link_default
     region: content
   field_sticky_url_post2:
-    weight: 32
+    weight: 29
     settings:
       placeholder_url: ''
       placeholder_title: ''

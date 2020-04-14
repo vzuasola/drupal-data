@@ -11,7 +11,7 @@ id: node.promotion.field_sticky_link_target_post2
 field_name: field_sticky_link_target_post2
 entity_type: node
 bundle: promotion
-label: 'Sticky Link Target'
+label: 'Sticky Link Target POST2'
 description: 'Please use " - None - " for Same Window behavior.'
 required: false
 translatable: true
