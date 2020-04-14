@@ -12,11 +12,14 @@ type: list_string
 settings:
   allowed_values:
     -
+      value: _top
+      label: 'Full window'
+    -
       value: _blank
       label: 'New Tab'
     -
-      value: window
-      label: 'New Window'
+      value: _self
+      label: 'Same Window'
   allowed_values_function: ''
 module: options
 locked: false
