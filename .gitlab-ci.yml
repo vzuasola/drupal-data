@@ -481,8 +481,7 @@ staging-japan-stack:
   tags:
     - ipvg-stg-02
 
-staging-row-stack
-- staging-mobile-nextbet-stack:
+staging-row-stack:
   stage: deploy-staging
   environment:
     name: staging
@@ -504,7 +503,7 @@ staging-mobile-nextbet-stack:
     name: staging
   variables:
     env: stg
-    STACK: nextbet-stack
+    STACK: row-stack
   script:
     - export DEPLOY_TOKEN DEPLOY_URL
     - bash automation/jenkins_deploy.sh
