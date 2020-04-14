@@ -11,7 +11,7 @@ id: node.promotion.field_sticky_url_pre
 field_name: field_sticky_url_pre
 entity_type: node
 bundle: promotion
-label: 'Sticky URL'
+label: 'Sticky URL PRE'
 description: ''
 required: false
 translatable: true
