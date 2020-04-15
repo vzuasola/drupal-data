@@ -1,0 +1,8 @@
+uuid: fb886273-540f-4f06-80b8-0c948433b79d
+langcode: el
+status: true
+dependencies: {  }
+id: mobile-footer-gr
+label: 'Mobile Footer GR'
+description: ''
+locked: false

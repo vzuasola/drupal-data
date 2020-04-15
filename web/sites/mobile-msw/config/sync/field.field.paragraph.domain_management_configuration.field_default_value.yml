@@ -1,0 +1,21 @@
+uuid: a2505491-c5b9-460d-ac33-065f8560fe41
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_default_value
+    - paragraphs.paragraphs_type.domain_management_configuration
+_core:
+  default_config_hash: P3XHOW95XKSiZq3lpgo_ZHQjd27uEo3Zylo4SCE5FVU
+id: paragraph.domain_management_configuration.field_default_value
+field_name: field_default_value
+entity_type: paragraph
+bundle: domain_management_configuration
+label: 'Default Value'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,37 @@
+uuid: 96332454-4923-474b-8b1e-28d6812ab702
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.social_media_entity.social_media_entity.field_social_media_cmi
+  module:
+    - entity_reference_revisions
+    - webcomposer_social_media
+_core:
+  default_config_hash: AmN8d-T6VJ3nIhgaD8-IRMtBq9m-gkKp8_pfUKgQBrQ
+id: social_media_entity.social_media_entity.default
+targetEntityType: social_media_entity
+bundle: social_media_entity
+mode: default
+content:
+  field_social_media_cmi:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  langcode:
+    type: language
+    weight: 0
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+      native_language: false
+    third_party_settings: {  }
+hidden:
+  name: true
+  user_id: true
