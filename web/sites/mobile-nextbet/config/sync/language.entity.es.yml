@@ -1,0 +1,16 @@
+uuid: 1be0a3f6-e32d-4426-a894-b8659081576e
+langcode: es
+status: true
+dependencies:
+  module:
+    - webcomposer_language_hierarchy
+third_party_settings:
+  webcomposer_language_hierarchy:
+    webcomposer_fallback_langcode: en
+    webcomposer_language_custom_label: Español
+    webcomposer_language_hidden: 0
+id: es
+label: Spanish
+direction: ltr
+weight: 4
+locked: false
