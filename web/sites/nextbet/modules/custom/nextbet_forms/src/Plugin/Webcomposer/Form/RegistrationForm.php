@@ -348,65 +348,6 @@ class RegistrationForm extends WebcomposerFormBase implements WebcomposerFormInt
         ],
       ],
 
-      'bonus_code' => [
-        'name' => 'Bonus Code',
-        'type' => 'textfield',
-        'settings' => [
-          'label' => [
-            '#title' => 'Bonus Code label',
-            '#type' => 'textfield',
-            '#description' => 'label for Bonus Code field',
-          ],
-          'placeholder' => [
-            '#title' => 'Bonus code placeholder label',
-            '#type' => 'textfield',
-            '#description' => 'label for Bonus code field placeholder',
-          ],
-          'annotation' => [
-            '#title' => 'Bonus code Annotation text',
-            '#type' => 'textarea',
-            '#description' => 'field annotation that will be displayed on focus',
-          ],
-          'is_hidden' => [
-            '#title' => 'Hide Bonus Code',
-            '#type' => 'checkbox',
-            '#description' => 'Enable or disable bonus code',
-          ],
-        ],
-      ],
-
-      'captcha' => [
-        'name' => 'Sliding Captcha',
-        'type' => 'checkbox',
-        'settings' => [
-          'enabled' => [
-            '#title' => 'Enable this field',
-            '#type' => 'checkbox',
-            '#description' => 'Captcha will show on the form when enabled.'
-          ],
-          'initial' => [
-            '#title' => 'Initial State Text',
-            '#type' => 'textfield',
-            '#description' => 'Will show when user is not yet sliding the captcha'
-          ],
-          'sliding' => [
-            '#title' => 'Sliding State Text',
-            '#type' => 'textfield',
-            '#description' => 'Will show when user is sliding the captcha'
-          ],
-          'failed' => [
-            '#title' => 'Failed State Text',
-            '#type' => 'textfield',
-            '#description' => 'Will show when user left the captcha unfinished'
-          ],
-          'success' => [
-            '#title' => 'Success State Text',
-            '#type' => 'textfield',
-            '#description' => 'Will show after sliding the captcha'
-          ]
-        ],
-      ],
-
       'accept_terms' => [
         'name' => 'Accept Terms Markup',
         'type' => 'markup',
