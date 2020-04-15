@@ -1,0 +1,23 @@
+uuid: 8615351f-860a-4880-9f84-38c14088c23b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.webcomposer_slider_v2_entity.field_log_in_state
+  module:
+    - options
+    - webcomposer_slider_v2
+_core:
+  default_config_hash: _QJiZr9usQATCjrsMnxBixuSTruzy-A6RQtIY4_COBc
+id: webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_log_in_state
+field_name: field_log_in_state
+entity_type: webcomposer_slider_v2_entity
+bundle: webcomposer_slider_v2_entity
+label: 'Log-in State'
+description: 'Control where this slider will show up.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
