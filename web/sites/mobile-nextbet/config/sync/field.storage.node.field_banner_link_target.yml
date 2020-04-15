@@ -14,9 +14,6 @@ type: list_string
 settings:
   allowed_values:
     -
-      value: _top
-      label: 'Same Window'
-    -
       value: _blank
       label: 'New Tab'
     -
