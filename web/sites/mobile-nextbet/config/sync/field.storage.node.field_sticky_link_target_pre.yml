@@ -17,9 +17,6 @@ settings:
     -
       value: _blank
       label: 'New Tab'
-    -
-      value: _self
-      label: 'Same Window'
   allowed_values_function: ''
 module: options
 locked: false
