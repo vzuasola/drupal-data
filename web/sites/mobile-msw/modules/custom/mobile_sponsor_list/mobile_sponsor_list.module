@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains mobile_sponsor_list.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function mobile_sponsor_list_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the mobile_sponsor_list module.
+    case 'help.page.mobile_sponsor_list':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Sponsor and partners list configurations') . '</p>';
+      return $output;
+
+    default:
+  }
+}

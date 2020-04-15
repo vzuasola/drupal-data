@@ -1,0 +1,7 @@
+mobile_sponsor_list.admin_settings:
+  path: 'admin/config/mobile/mobile_sponsor_list'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Mobile Sponsor List'
+  requirements:
+    _permission: 'administer sponsor list configuration'

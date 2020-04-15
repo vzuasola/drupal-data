@@ -1,0 +1,29 @@
+advanced__active_tab: edit-mobile-login
+username_placeholder: 'Nombre de usuario'
+password_placeholder: Contraseña
+login_bottom_label: 'Iniciar sesión'
+rememberme_label: ' Recordar el nombre de usuario'
+lightbox_blurb: '¿Aún no es miembro de Dafabet?'
+login_page_blurb: ''
+error_message_blank_username: 'El nombre de usuario es requerido.'
+error_message_blank_password: 'La contraseña es requerida.'
+error_message_blank_passname: 'El nombre de usuario y contraseña son requeridos.'
+error_message_invalid_passname: 'Lo sentimos, el nombre de usuario y la contraseña que ingresaste no coinciden. Inténtalo de nuevo.'
+error_message_account_suspended: 'Su cuenta ha sido bloqueada debido a intentos fallidos de inicio de sesión. Por favor, póngase en contacto con Atención al Clien'
+error_message_account_locked: 'Your account has been locked due to failed login attempts. Please contact Customer Support.'
+error_message_restricted_country: 'Estás accediendo a nuestro sitio desde una ubicación prohibida. Por favor, ponte en contacto con nuestro servicio de atención al'
+error_message_service_not_available: 'Servicio no disponible.'
+autologout_box_title: RECORDATORIO
+autologout_box_content:
+  value: "<p>Su sesión expirará en {segundos} segundos. ¿Deseas&nbsp;continuar en&nbsp;tu sesión ?</p>\r\n"
+  format: basic_html
+affirmative_button_text: Sí
+negative_button_text: 'No'
+notification_title: NOTIFICACIÓN
+notification_window_title: 'Sesión Expirada'
+notification_content:
+  value: "<p>Su sesión ha expirado debido a inactividad.</p>\r\n"
+  format: basic_html
+mobile_login_url: '#'
+mobile_login_button_label: 'Entrar/    Unirse  '
+mobile_cant_login_url: ''
