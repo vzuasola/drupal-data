@@ -416,11 +416,11 @@ text_notification: 0
 text_oken: 0
 text_accepten: 0
 text_declineen: 0
-product_label_live-dealer: 0
-product_type_id_live-dealer: 0
-product_icon_live-dealer: 0
-product_exclude_live-dealer: 0
-product_exclude_dismiss_live-dealer: 0
+product_label_live-dealer: 1
+product_type_id_live-dealer: 1
+product_icon_live-dealer: 1
+product_exclude_live-dealer: 1
+product_exclude_dismiss_live-dealer: 1
 optimize_import: 0
 domains_batch: 0
 geoip_list: 1
