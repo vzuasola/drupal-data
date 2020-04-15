@@ -1,0 +1,22 @@
+add mobile marketing space entities:
+  title: 'Create new Mobile marketing space entities'
+
+administer mobile marketing space entities:
+  title: 'Administer Mobile marketing space entities'
+  description: 'Allow to access the administration form to configure Mobile marketing space entities.'
+  restrict access: true
+
+delete mobile marketing space entities:
+  title: 'Delete Mobile marketing space entities'
+
+edit mobile marketing space entities:
+  title: 'Edit Mobile marketing space entities'
+
+access mobile marketing space overview:
+  title: 'Access the Mobile marketing space overview page'
+
+view published mobile marketing space entities:
+  title: 'View published Mobile marketing space entities'
+
+view unpublished mobile marketing space entities:
+  title: 'View unpublished Mobile marketing space entities'

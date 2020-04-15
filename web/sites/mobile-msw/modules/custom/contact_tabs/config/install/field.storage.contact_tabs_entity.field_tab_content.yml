@@ -1,0 +1,21 @@
+uuid: ed8ef3d0-07ad-4ca6-b42f-8f22debccb79
+langcode: en
+status: true
+dependencies:
+  module:
+    - contact_tabs
+    - text
+_core:
+  default_config_hash: lvOeyZyktJanh27qy2vsZOoV0Mk6FHy-BC2-Z8m4znE
+id: contact_tabs_entity.field_tab_content
+field_name: field_tab_content
+entity_type: contact_tabs_entity
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

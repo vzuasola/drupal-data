@@ -1,0 +1,43 @@
+<?php
+
+/**
+ * Implements hook_uninstall
+ */
+function mobile_sponsor_list_uninstall() {
+  $keys = [
+    'core.base_field_override.mobile_sponsor_list.mobile_sponsor_list.metatag',
+    'core.base_field_override.paragraph.mobile_sponsors.created',
+    'core.base_field_override.paragraph.mobile_sponsors.status',
+    'core.base_field_override.paragraph.mobile_sponsors.uid',
+    'core.entity_form_display.mobile_sponsor_list.mobile_sponsor_list.default',
+    'core.entity_form_display.paragraph.mobile_sponsors.default',
+    'core.entity_view_display.mobile_sponsor_list.mobile_sponsor_list.default',
+    'core.entity_view_display.paragraph.mobile_sponsors.default',
+    'field.field.mobile_sponsor_list.mobile_sponsor_list.field_mobile_full_row',
+    'field.field.mobile_sponsor_list.mobile_sponsor_list.field_mobile_sponsor_row_enable',
+    'field.field.mobile_sponsor_list.mobile_sponsor_list.field_sponsors_row',
+    'field.field.mobile_sponsor_list.mobile_sponsor_list.field_sponsors_row_title',
+    'field.field.paragraph.mobile_sponsors.field_mobile_sponsor_enable',
+    'field.field.paragraph.mobile_sponsors.field_mobile_sponsor_image',
+    'field.field.paragraph.mobile_sponsors.field_mobile_sponsor_image_link',
+    'field.field.paragraph.mobile_sponsors.field_mobile_sponsor_link_target',
+    'field.field.paragraph.mobile_sponsors.field_sponsors_column_title',
+    'field.storage.mobile_sponsor_list.field_mobile_full_row',
+    'field.storage.mobile_sponsor_list.field_mobile_sponsor_row_enable',
+    'field.storage.mobile_sponsor_list.field_sponsors_row',
+    'field.storage.mobile_sponsor_list.field_sponsors_row_title',
+    'field.storage.paragraph.field_mobile_sponsor_enable',
+    'field.storage.paragraph.field_mobile_sponsor_image',
+    'field.storage.paragraph.field_mobile_sponsor_image_link',
+    'field.storage.paragraph.field_mobile_sponsor_link_target',
+    'field.storage.paragraph.field_sponsors_column_title',
+    'language.content_settings.mobile_sponsor_list.mobile_sponsor_list',
+    'language.content_settings.paragraph.mobile_sponsors',
+    'paragraphs.paragraphs_type.mobile_sponsors',
+    'views.view.mobile_sponsors'
+  ];
+
+  foreach ($keys as $key) {
+    \Drupal::configFactory()->getEditable($key)->delete();
+  }
+}
