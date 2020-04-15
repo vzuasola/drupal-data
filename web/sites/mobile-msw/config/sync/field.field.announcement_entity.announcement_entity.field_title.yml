@@ -1,0 +1,20 @@
+uuid: e5f2f242-39b2-4aa5-8dc2-4f0a76509df8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.announcement_entity.field_title
+  module:
+    - webcomposer_announcements
+id: announcement_entity.announcement_entity.field_title
+field_name: field_title
+entity_type: announcement_entity
+bundle: announcement_entity
+label: Title
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

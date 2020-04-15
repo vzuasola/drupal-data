@@ -1,0 +1,5 @@
+entity.mobile_marketing_space.add_form:
+  route_name: entity.mobile_marketing_space.add_form
+  title: 'Add Mobile marketing space'
+  appears_on:
+    - entity.mobile_marketing_space.collection
