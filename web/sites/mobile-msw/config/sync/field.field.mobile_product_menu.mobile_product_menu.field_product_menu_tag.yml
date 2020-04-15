@@ -1,0 +1,21 @@
+uuid: 50ca7732-bbe7-4c86-b76e-67edb2ff148e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.mobile_product_menu.field_product_menu_tag
+  module:
+    - mobile_product_menu
+    - options
+id: mobile_product_menu.mobile_product_menu.field_product_menu_tag
+field_name: field_product_menu_tag
+entity_type: mobile_product_menu
+bundle: mobile_product_menu
+label: 'Product Menu Tag'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,7 @@
+mobile_marketing_space.admin_settings:
+  path: 'admin/config/mobile/mobile_marketing_space'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Mobile Marketing Space'
+  requirements:
+    _permission: 'administer site configuration'
