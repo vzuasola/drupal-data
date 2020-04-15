@@ -1,0 +1,23 @@
+uuid: 4ebe8acc-8c88-4dd3-9a8d-1435d7bed954
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.mobile_product_menu.field_product_menu_url_pre_log
+  module:
+    - link
+    - mobile_product_menu
+id: mobile_product_menu.mobile_product_menu.field_product_menu_url_pre_log
+field_name: field_product_menu_url_pre_log
+entity_type: mobile_product_menu
+bundle: mobile_product_menu
+label: 'Product Menu URL Pre Login'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+field_type: link

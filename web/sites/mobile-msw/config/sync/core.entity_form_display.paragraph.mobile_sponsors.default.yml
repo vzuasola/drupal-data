@@ -1,0 +1,66 @@
+uuid: 983879d0-68e5-42cc-a458-9b48fbfbefb4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.mobile_sponsors.field_mobile_sponsor_enable
+    - field.field.paragraph.mobile_sponsors.field_mobile_sponsor_image
+    - field.field.paragraph.mobile_sponsors.field_mobile_sponsor_image_link
+    - field.field.paragraph.mobile_sponsors.field_mobile_sponsor_link_target
+    - field.field.paragraph.mobile_sponsors.field_sponsors_column_title
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.mobile_sponsors
+  module:
+    - image
+    - link
+id: paragraph.mobile_sponsors.default
+targetEntityType: paragraph
+bundle: mobile_sponsors
+mode: default
+content:
+  field_mobile_sponsor_enable:
+    weight: 1
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_mobile_sponsor_image:
+    weight: 2
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_mobile_sponsor_image_link:
+    weight: 3
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_mobile_sponsor_link_target:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_sponsors_column_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  translation:
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
+  uid: true

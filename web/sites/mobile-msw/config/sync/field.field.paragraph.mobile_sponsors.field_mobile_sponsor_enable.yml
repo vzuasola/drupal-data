@@ -1,0 +1,23 @@
+uuid: 402c4d62-2b46-4da3-bf41-df60054124ac
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_mobile_sponsor_enable
+    - paragraphs.paragraphs_type.mobile_sponsors
+id: paragraph.mobile_sponsors.field_mobile_sponsor_enable
+field_name: field_mobile_sponsor_enable
+entity_type: paragraph
+bundle: mobile_sponsors
+label: 'Mobile Sponsor Enable'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: '1'
+  off_label: '0'
+field_type: boolean

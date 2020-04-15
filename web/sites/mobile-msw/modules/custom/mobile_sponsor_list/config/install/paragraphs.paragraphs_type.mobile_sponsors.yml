@@ -1,0 +1,7 @@
+uuid: c56d906f-485a-48f6-8ccc-fbb050ebe442
+langcode: en
+status: true
+dependencies: {  }
+id: mobile_sponsors
+label: 'Mobile Sponsors'
+behavior_plugins: {  }

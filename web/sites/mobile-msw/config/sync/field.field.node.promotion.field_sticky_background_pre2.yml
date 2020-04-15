@@ -1,0 +1,25 @@
+uuid: 45596f11-f983-4863-a450-c693c5bcc73e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sticky_background_pre2
+    - node.type.promotion
+  module:
+    - color_field
+id: node.promotion.field_sticky_background_pre2
+field_name: field_sticky_background_pre2
+entity_type: node
+bundle: promotion
+label: 'Sticky Background Color'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    color: '#000000'
+    opacity: null
+default_value_callback: ''
+settings:
+  opacity: 0
+field_type: color_field_type
