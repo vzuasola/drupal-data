@@ -5,5 +5,5 @@ dependencies: {  }
 name: 'Mobile Game Category'
 vid: mobile_game_category
 description: 'Mobile Game Category'
-hierarchy: 0
+hierarchy: 1
 weight: 0
