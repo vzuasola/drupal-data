@@ -5,5 +5,5 @@ dependencies: {  }
 name: 'Game Filter (casino)'
 vid: game_filter
 description: 'Game Page Filters for Casino Page'
-hierarchy: 0
+hierarchy: 1
 weight: 0
