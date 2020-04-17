@@ -1,0 +1,21 @@
+uuid: 96abcede-ca9b-4040-b7e4-a313838ef7e6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.mobile_marketing_space.field_publish_date
+  module:
+    - datetime
+    - mobile_marketing_space
+id: mobile_marketing_space.mobile_marketing_space.field_publish_date
+field_name: field_publish_date
+entity_type: mobile_marketing_space
+bundle: mobile_marketing_space
+label: 'Publish Date (optional)'
+description: "<p>If this is set the marketing space will be available from this date up until the date set on <strong>Unpublish Date</strong>.\r\n<br>Otherwise, the marketing space will be available upon saving.</p>"
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

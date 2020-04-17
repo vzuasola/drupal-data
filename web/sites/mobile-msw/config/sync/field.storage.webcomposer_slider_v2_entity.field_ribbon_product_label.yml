@@ -1,0 +1,20 @@
+uuid: 3ae838f0-b5eb-44bf-ab4b-0ca43dfb0f22
+langcode: en
+status: true
+dependencies:
+  module:
+    - text
+    - webcomposer_slider_v2
+id: webcomposer_slider_v2_entity.field_ribbon_product_label
+field_name: field_ribbon_product_label
+entity_type: webcomposer_slider_v2_entity
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

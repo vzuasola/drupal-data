@@ -1,0 +1,7 @@
+mobile_product_menu.admin_settings:
+  path: 'admin/config/mobile/mobile_product_menu'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Product Menu List'
+  requirements:
+    _permission: 'administer product menu configuration'
