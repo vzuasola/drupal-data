@@ -1,0 +1,22 @@
+# Contact tabs entity routing definition
+contact_tabs_entity.settings_tab:
+  route_name: contact_tabs_entity.settings
+  title: 'Settings'
+  base_route: contact_tabs_entity.settings
+
+entity.contact_tabs_entity.canonical:
+  route_name: entity.contact_tabs_entity.canonical
+  base_route: entity.contact_tabs_entity.canonical
+  title: 'View'
+
+entity.contact_tabs_entity.edit_form:
+  route_name: entity.contact_tabs_entity.edit_form
+  base_route: entity.contact_tabs_entity.canonical
+  title: 'Edit'
+
+entity.contact_tabs_entity.delete_form:
+  route_name:  entity.contact_tabs_entity.delete_form
+  base_route:  entity.contact_tabs_entity.canonical
+  title: Delete
+  weight: 10
+

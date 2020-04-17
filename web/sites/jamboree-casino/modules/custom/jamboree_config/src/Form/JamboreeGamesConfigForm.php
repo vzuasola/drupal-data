@@ -40,6 +40,7 @@ class JamboreeGamesConfigForm extends FormBase {
 
     $this->sectionGames($form);
     $this->sectionPagination($form);
+    $this->sectionMixedGameLobbyAllConfig($form);
 
     return $form;
   }
@@ -116,6 +117,41 @@ class JamboreeGamesConfigForm extends FormBase {
       '#type' => 'textfield',
       '#title' => t('More Label'),
       '#default_value' => $this->get('more_label') ?? "More",
+      '#translatable' => TRUE,
+    ];
+  }
+
+  private function sectionMixedGameLobbyAllConfig(array &$form) {
+    $form['mixed_game_lobby_all'] = [
+      '#type' => 'details',
+      '#title' => t('Mixed Game Lobby ALL Config'),
+      '#group' => 'advanced',
+    ];
+
+    $form['mixed_game_lobby_all']['mixed_game_lobby_all_title'] = [
+      '#type' => 'textfield',
+      '#title' => t('Header title label'),
+      '#default_value' => $this->get('mixed_game_lobby_all_title') ?? "ALL",
+      '#translatable' => TRUE,
+    ];
+
+    $e = $this->get('mixed_game_lobby_all_banner');
+
+    $form['mixed_game_lobby_all']['mixed_game_lobby_all_banner'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('Top Block Banner'),
+      '#default_value' => $e['value'],
+      '#format' => $e['format'],
+      '#translatable' => TRUE,
+    ];
+
+    $d = $this->get('mixed_game_lobby_all_desc');
+
+    $form['mixed_game_lobby_all']['mixed_game_lobby_all_desc'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('Description'),
+      '#default_value' => $d['value'],
+      '#format' => $d['format'],
       '#translatable' => TRUE,
     ];
   }

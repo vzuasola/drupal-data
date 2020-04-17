@@ -1,0 +1,23 @@
+uuid: 18ee84aa-385e-4a92-9dba-6d28a72ae90e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_field_enable_sticky_post
+    - node.type.promotion
+id: node.promotion.field_field_enable_sticky_post
+field_name: field_field_enable_sticky_post
+entity_type: node
+bundle: promotion
+label: 'Enable sticky component'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

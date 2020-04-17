@@ -51,6 +51,7 @@ class JamboreeLoginConfigForm extends FormBase {
     $form['login_form'] = [
       '#type' => 'details',
       '#title' => $this->t('Jamboree Login Form Configuration'),
+      '#group' => 'jamboree_settings_tab',
     ];
 
     $default_login_button_main = $this->get('login_button_label_main');
@@ -155,6 +156,7 @@ class JamboreeLoginConfigForm extends FormBase {
     $form['login_pt_settings'] = [
       '#type' => 'details',
       '#title' => $this->t('Cashier Settings'),
+      '#group' => 'jamboree_settings_tab',
     ];
 
     $default_pt_cashier_url = $this->get('login_pt_cashier_url');
@@ -169,6 +171,7 @@ class JamboreeLoginConfigForm extends FormBase {
     $form['login_error_messages'] = [
       '#type' => 'details',
       '#title' => $this->t('Login Error Messages'),
+      '#group' => 'jamboree_settings_tab',
     ];
 
     $default_username_required = $this->get('login_username_required');
@@ -203,6 +206,7 @@ class JamboreeLoginConfigForm extends FormBase {
     $form['login_session'] = [
       '#type' => 'details',
       '#title' => $this->t('Login Session Configuration'),
+      '#group' => 'jamboree_settings_tab',
     ];
 
     $default_login_session_time = $this->get('login_session_time');
@@ -228,6 +232,7 @@ class JamboreeLoginConfigForm extends FormBase {
     $form['change_pass'] = [
       '#type' => 'details',
       '#title' => $this->t('Change Password Configuration'),
+      '#group' => 'jamboree_settings_tab',
     ];
 
     $default_form_title = $this->get('change_pass_form_title');
@@ -280,6 +285,7 @@ class JamboreeLoginConfigForm extends FormBase {
     $form['change_pass_error_messages'] = [
       '#type' => 'details',
       '#title' => $this->t('Change Password Error Messages'),
+      '#group' => 'jamboree_settings_tab',
     ];
 
     $default_cp_old_password_required = $this->get('change_pass_old_password_error');
@@ -323,6 +329,7 @@ class JamboreeLoginConfigForm extends FormBase {
     $form['reset_token'] = [
       '#type' => 'details',
       '#title' => $this->t('Change Password Reset Token Config'),
+      '#group' => 'jamboree_settings_tab',
     ];
 
     $default_reset_token_title = $this->get('reset_token_title');
@@ -343,8 +350,4 @@ class JamboreeLoginConfigForm extends FormBase {
       '#translatable' => TRUE,
     ];
   }
-
-  /**
-   * {@inheritdoc}
-   */
 }

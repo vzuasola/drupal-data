@@ -92,7 +92,7 @@ content:
             values: {  }
             value_form:
               -
-                target_id: '129'
+                target_id: '101'
             effect: show
             effect_options: {  }
             selector: ''
@@ -132,7 +132,7 @@ content:
             values: {  }
             value_form:
               -
-                target_id: '129'
+                target_id: '101'
             effect: show
             effect_options: {  }
             selector: ''
@@ -156,7 +156,7 @@ content:
             values: "129\r\nPlaytech Casino"
             value_form:
               -
-                target_id: '129'
+                target_id: '101'
             effect: show
             effect_options: {  }
             selector: ''
