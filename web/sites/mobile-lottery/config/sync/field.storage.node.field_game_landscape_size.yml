@@ -17,6 +17,9 @@ settings:
     -
       value: large
       label: Large
+    -
+      value: full
+      label: Full
   allowed_values_function: ''
 module: options
 locked: false

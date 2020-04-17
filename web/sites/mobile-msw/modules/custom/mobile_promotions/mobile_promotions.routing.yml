@@ -1,0 +1,7 @@
+mobile_promotions.admin_settings:
+  path: 'admin/config/mobile_promotions'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Mobile Promotions Configurations'
+  requirements:
+    _permission: 'administer mobile config'

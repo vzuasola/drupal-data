@@ -1,0 +1,8 @@
+uuid: 294d8bca-3679-4257-8128-b2fad72be4a1
+langcode: ko
+status: true
+dependencies: {  }
+id: product-menu-kr
+label: 'Product Menu KR'
+description: ''
+locked: false

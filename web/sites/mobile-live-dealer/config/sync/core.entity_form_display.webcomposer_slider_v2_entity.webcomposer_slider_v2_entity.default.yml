@@ -9,6 +9,7 @@ dependencies:
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_banner_link
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_banner_link_target
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_content_position
+    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_currency
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_disable_in_tablet
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_game_platform
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_log_in_state
@@ -30,6 +31,7 @@ dependencies:
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_status
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_title
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_unpublish_date
+    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_user_availability
     - image.style.thumbnail
   module:
     - color_field
@@ -47,7 +49,7 @@ third_party_settings:
         - field_publish_date
         - field_unpublish_date
       parent_name: ''
-      weight: 5
+      weight: 6
       format_type: tab
       format_settings:
         id: ''
@@ -81,6 +83,8 @@ third_party_settings:
         - field_post_banner_link_target
         - field_post_banner_blurb
         - field_post_content_position
+        - field_currency
+        - field_user_availability
       parent_name: ''
       weight: 4
       format_type: fieldset
@@ -96,7 +100,7 @@ third_party_settings:
         - field_disable_in_tablet
         - field_preview_display_only
       parent_name: ''
-      weight: 7
+      weight: 8
       format_type: fieldset
       format_settings:
         id: ''
@@ -110,7 +114,7 @@ third_party_settings:
         - field_ribbon_label_color
         - field_ribbon_product_label
       parent_name: ''
-      weight: 8
+      weight: 9
       format_type: fieldset
       format_settings:
         id: ''
@@ -277,8 +281,16 @@ content:
           bundle: webcomposer_slider_v2_entity
     type: options_select
     region: content
+  field_currency:
+    weight: 18
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
   field_disable_in_tablet:
-    weight: 21
+    weight: 22
     settings:
       display_label: true
     third_party_settings: {  }
@@ -291,7 +303,7 @@ content:
     type: options_select
     region: content
   field_game_platform:
-    weight: 26
+    weight: 14
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -468,7 +480,7 @@ content:
     type: options_select
     region: content
   field_preview_display_only:
-    weight: 22
+    weight: 23
     settings:
       display_label: true
     third_party_settings: {  }
@@ -481,19 +493,19 @@ content:
     type: datetime_default
     region: content
   field_ribbon_background_color:
-    weight: 23
+    weight: 27
     settings: {  }
     third_party_settings: {  }
     type: color_field_widget_html5
     region: content
   field_ribbon_label_color:
-    weight: 24
+    weight: 28
     settings: {  }
     third_party_settings: {  }
     type: color_field_widget_html5
     region: content
   field_ribbon_product_label:
-    weight: 25
+    weight: 29
     settings:
       size: 60
       placeholder: ''
@@ -501,14 +513,14 @@ content:
     type: text_textfield
     region: content
   field_slider_enable_game_launch:
-    weight: 9
+    weight: 10
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
   field_slider_game_code:
-    weight: 11
+    weight: 12
     settings:
       size: 60
       placeholder: ''
@@ -516,13 +528,13 @@ content:
     type: string_textfield
     region: content
   field_slider_game_provider:
-    weight: 12
+    weight: 13
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_slider_use_game_loader:
-    weight: 10
+    weight: 11
     settings:
       display_label: true
     third_party_settings: {  }
@@ -548,6 +560,12 @@ content:
     third_party_settings: {  }
     type: datetime_default
     region: content
+  field_user_availability:
+    weight: 19
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
   langcode:
     type: language_select
     weight: 2
@@ -556,7 +574,7 @@ content:
       include_locked: true
     third_party_settings: {  }
   translation:
-    weight: 6
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }

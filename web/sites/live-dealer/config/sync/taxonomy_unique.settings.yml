@@ -16,3 +16,5 @@ product: 1
 product_message: 'Term @term already exists in vocabulary @vocabulary.'
 game_lobby_category: 0
 game_lobby_category_message: 'Term @term already exists in vocabulary @vocabulary.'
+game_subprovider: 1
+game_subprovider_message: 'Term @term already exists in vocabulary @vocabulary.'

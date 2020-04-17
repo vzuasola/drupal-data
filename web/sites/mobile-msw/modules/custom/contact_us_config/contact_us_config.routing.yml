@@ -1,0 +1,7 @@
+contact_us_config.admin_settings:
+  path: 'admin/config/webcomposer/custom'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Contact Us Configuration'
+  requirements:
+    _permission: 'administer site configuration'

@@ -1,0 +1,8 @@
+uuid: 649807d4-fbd1-47ff-ab93-91bb633cd425
+langcode: vi
+status: true
+dependencies: {  }
+id: mobile-footer-vn
+label: 'Mobile Footer VN'
+description: ''
+locked: false

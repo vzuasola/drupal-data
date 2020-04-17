@@ -96,6 +96,13 @@ $sites['mobile-entrypage.drupal.dev'] = 'mobile-entrypage';
 $sites['mobile-entrypage.drupal.local'] = 'mobile-entrypage';
 $sites['mobile-entrypage.drupal.env'] = 'mobile-entrypage';
 
+
+// Mobile Nextbet Revamp instance
+$sites['mobile-nextbet.drupal.dev'] = 'mobile-nextbet';
+$sites['mobile-nextbet.drupal.local'] = 'mobile-nextbet';
+$sites['mobile-nextbet.drupal.env'] = 'mobile-nextbet';
+
+
 // Mobile Games Revamp instance
 $sites['mobile-games.drupal.dev'] = 'mobile-games';
 $sites['mobile-games.drupal.local'] = 'mobile-games';
@@ -155,6 +162,16 @@ $sites['registration-row.drupal.env'] = 'registration-row';
 $sites['soda-casino.drupal.dev'] = 'soda-casino';
 $sites['soda-casino.drupal.local'] = 'soda-casino';
 $sites['soda-casino-row.drupal.env'] = 'soda-casino';
+
+// Mobile MSW instance
+$sites['mobile-msw.drupal.dev'] = 'mobile-msw';
+$sites['mobile-msw.drupal.local'] = 'mobile-msw';
+$sites['mobile-msw.drupal.env'] = 'mobile-msw';
+
+// MSW Desktop instance
+$sites['msw.drupal.dev'] = 'msw';
+$sites['msw.drupal.local'] = 'msw';
+$sites['msw.drupal.env'] = 'msw';
 
 // dynamic sites.php values via environment variables
 

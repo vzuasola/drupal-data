@@ -13,6 +13,7 @@ dependencies:
     - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_blurb_post
     - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_content_position
     - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_content_position_post
+    - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_currency_localization
     - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_enable_for_agent_players
     - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_log_in_state
     - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_product
@@ -121,6 +122,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: list_default
+    region: content
+  field_currency_localization:
+    weight: 22
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
     region: content
   field_enable_for_agent_players:
     weight: 20
