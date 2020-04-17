@@ -28,7 +28,7 @@ trait FilterHtmlTrait {
     if ($base_path) {
       // if base path is available, make them relative of front end
       foreach ($images as $image) {
-        $src = preg_replace('/\/sites\/[a-z\-]+\/files/', '', $image['src']);
+        $src = preg_replace('/\/sites\/[a-z0-9\-]+\/files/', '', $image['src']);
         $replace = $base_path . $src;
 
         if (UrlHelper::isExternal($src)) {

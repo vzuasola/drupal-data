@@ -1,0 +1,22 @@
+add mobile sponsor list entities:
+  title: 'Create new Mobile sponsor list entities'
+
+administer mobile sponsor list entities:
+  title: 'Administer Mobile sponsor list entities'
+  description: 'Allow to access the administration form to configure Mobile sponsor list entities.'
+  restrict access: true
+
+delete mobile sponsor list entities:
+  title: 'Delete Mobile sponsor list entities'
+
+edit mobile sponsor list entities:
+  title: 'Edit Mobile sponsor list entities'
+
+access mobile sponsor list overview:
+  title: 'Access the Mobile sponsor list overview page'
+
+view published mobile sponsor list entities:
+  title: 'View published Mobile sponsor list entities'
+
+view unpublished mobile sponsor list entities:
+  title: 'View unpublished Mobile sponsor list entities'
