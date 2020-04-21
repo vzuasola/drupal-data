@@ -48,7 +48,7 @@ class ImportParser {
 
     foreach ($sheets as $sheetName) {
       $sheet = $excel->getSheetByName($sheetName)
-        ->setCodeName(strtolower($sheetName));
+        ->setCodeName(strtolower(trim($sheetName)));
       $range = "A1:"
         . $sheet->getHighestDataColumn()
         . $sheet->getHighestDataRow(); // TODO: Test if same with blanks
@@ -56,6 +56,7 @@ class ImportParser {
       $sheetData = $sheet->rangeToArray($range, true, true, false);
       $excelData[$sheet->getCodeName()] = $this->parseSheet($sheetData, $sheet);
     }
+    $this->sanitizeSheetData($excelData);
 
     return ($excelData);
   }
@@ -121,5 +122,16 @@ class ImportParser {
         ? ""
         : $domainRow[$key];
     }
+  }
+
+  private function sanitizeSheetData(&$sheet) {
+      array_walk_recursive(
+        $sheet,
+        function (&$value) {
+            if (is_string($value)) {
+                $value = trim($value);
+            }
+        }
+      );
   }
 }
