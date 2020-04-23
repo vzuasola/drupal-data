@@ -1,0 +1,15 @@
+uuid: 463f6596-0008-4452-aa77-a0cb5ca6db6b
+langcode: bu
+status: true
+dependencies:
+  module:
+    - webcomposer_language_hierarchy
+third_party_settings:
+  webcomposer_language_hierarchy:
+    webcomposer_fallback_langcode: ''
+    webcomposer_language_hidden: 0
+id: bu
+label: Burmese
+direction: ltr
+weight: 9
+locked: false
