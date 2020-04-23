@@ -18,6 +18,7 @@ dependencies:
     - field.field.node.games.field_image_size
     - field.field.node.games.field_maintenance_blurb
     - field.field.node.games.field_popup_window_name
+    - field.field.node.games.field_popup_window_size
     - field.field.node.games.field_preview_display_only
     - field.field.node.games.field_product
     - field.field.node.games.field_ribbon_configuration
@@ -157,6 +158,14 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
+  field_popup_window_size:
+    weight: 20
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
   field_preview_display_only:
     weight: 15
     label: above
