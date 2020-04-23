@@ -1,0 +1,15 @@
+uuid: 8a0b19c6-ff2d-4182-a9f7-12f792cbdb3f
+langcode: lo
+status: true
+dependencies:
+  module:
+    - webcomposer_language_hierarchy
+third_party_settings:
+  webcomposer_language_hierarchy:
+    webcomposer_fallback_langcode: ''
+    webcomposer_language_hidden: 0
+id: lo
+label: Lao
+direction: ltr
+weight: 8
+locked: false
