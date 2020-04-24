@@ -1,0 +1,16 @@
+uuid: fe5d5576-6b16-491c-b37c-4508311f1e0e
+langcode: km
+status: true
+dependencies:
+  module:
+    - webcomposer_language_hierarchy
+third_party_settings:
+  webcomposer_language_hierarchy:
+    webcomposer_fallback_langcode: en
+    webcomposer_language_custom_label: កម្ពុជា
+    webcomposer_language_hidden: 0
+id: km
+label: Cambodia
+direction: ltr
+weight: 10
+locked: false
