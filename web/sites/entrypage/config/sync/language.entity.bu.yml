@@ -11,5 +11,5 @@ third_party_settings:
 id: bu
 label: Burmese
 direction: ltr
-weight: 9
+weight: 11
 locked: false
