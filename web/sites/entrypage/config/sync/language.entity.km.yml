@@ -11,5 +11,5 @@ third_party_settings:
 id: km
 label: Khmer
 direction: ltr
-weight: 10
+weight: 12
 locked: false

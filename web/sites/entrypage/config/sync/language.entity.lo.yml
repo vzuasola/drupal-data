@@ -11,5 +11,5 @@ third_party_settings:
 id: lo
 label: Lao
 direction: ltr
-weight: 8
+weight: 10
 locked: false
