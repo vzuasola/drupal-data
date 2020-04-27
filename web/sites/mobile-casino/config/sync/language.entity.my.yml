@@ -1,0 +1,16 @@
+uuid: 42d6474d-d14c-420a-80de-310b2843ff4a
+langcode: my
+status: true
+dependencies:
+  module:
+    - webcomposer_language_hierarchy
+third_party_settings:
+  webcomposer_language_hierarchy:
+    webcomposer_fallback_langcode: en
+    webcomposer_language_custom_label: မြန်မာ
+    webcomposer_language_hidden: 0
+id: my
+label: Myanmar
+direction: ltr
+weight: 2
+locked: false

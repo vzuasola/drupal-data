@@ -14,6 +14,9 @@ url:
     id: id
     es: es
     pt-br: pt
+    lo: lo
+    my: my
+    km: km
   domains:
     en: ''
     zh-hans: ''
@@ -26,6 +29,9 @@ url:
     id: ''
     es: ''
     pt-br: ''
+    lo: ''
+    my: ''
+    km: ''
 selected_langcode: site_default
 _core:
   default_config_hash: uEePITI9tV6WqzmsTb7MfPCi5yPWXSxAN1xeLcYFQbM
