@@ -1,0 +1,18 @@
+uuid: fba91640-36fc-4140-bf3b-96ee1a46b2ce
+langcode: ja
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.game_filter_games_
+id: taxonomy_term.game_filter_games_.name
+field_name: name
+entity_type: taxonomy_term
+bundle: game_filter_games_
+label: Name
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
