@@ -1,0 +1,18 @@
+uuid: 779a39ef-291f-45fc-bec3-d03cf14c9d96
+langcode: ja
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.game_filter_games_
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: taxonomy_term.game_filter_games_
+target_entity_type_id: taxonomy_term
+target_bundle: game_filter_games_
+default_langcode: site_default
+language_alterable: false

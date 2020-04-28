@@ -1,0 +1,20 @@
+uuid: d448e9d1-c30c-4c9f-942b-b17d20cfd05a
+langcode: ja
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.game_filter_games_
+  module:
+    - text
+id: taxonomy_term.game_filter_games_.description
+field_name: description
+entity_type: taxonomy_term
+bundle: game_filter_games_
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
