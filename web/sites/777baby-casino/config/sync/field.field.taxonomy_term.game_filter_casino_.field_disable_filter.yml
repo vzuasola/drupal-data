@@ -1,0 +1,23 @@
+uuid: 137595ba-0f18-4d8a-95f7-626e603d3e60
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_disable_filter
+    - taxonomy.vocabulary.game_filter_casino_
+id: taxonomy_term.game_filter_casino_.field_disable_filter
+field_name: field_disable_filter
+entity_type: taxonomy_term
+bundle: game_filter_casino_
+label: 'Disable filter'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
