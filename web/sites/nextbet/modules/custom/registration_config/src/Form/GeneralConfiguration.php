@@ -40,15 +40,6 @@ class GeneralConfiguration extends FormBase {
     ];
 
     $this->generalConfig($form);
-    // $this->integrationConfig($form);
-    // $this->restrictionConfig($form);
-    // $this->errorConfig($form);
-    // $this->proactiveConfig($form);
-    // $this->cashierConfig($form);
-    // $this->logConfig($form);
-    // $this->trackingConfig($form);
-    // $this->tripwirePopupConfig($form);
-    // $this->textOverBannerConfig($form);
 
     return $form;
   }
