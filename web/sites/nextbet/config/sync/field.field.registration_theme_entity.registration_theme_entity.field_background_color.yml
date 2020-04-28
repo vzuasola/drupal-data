@@ -1,0 +1,22 @@
+uuid: c5247b0b-9de0-46bf-b1f7-b50b7329f87f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.registration_theme_entity.field_background_color
+  module:
+    - color_field
+    - registration_theme
+id: registration_theme_entity.registration_theme_entity.field_background_color
+field_name: field_background_color
+entity_type: registration_theme_entity
+bundle: registration_theme_entity
+label: 'Background Color'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  opacity: 0
+field_type: color_field_type
