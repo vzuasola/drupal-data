@@ -1,0 +1,33 @@
+uuid: 2c902a17-9cd0-4b49-9725-8a8eb296349b
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.game_filter_games_.field_disable_filter
+    - taxonomy.vocabulary.game_filter_games_
+  module:
+    - text
+id: taxonomy_term.game_filter_games_.default
+targetEntityType: taxonomy_term
+bundle: game_filter_games_
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_disable_filter:
+    weight: 1
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+hidden:
+  langcode: true

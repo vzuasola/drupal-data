@@ -1,0 +1,32 @@
+uuid: c894965f-b137-4c61-8685-8428823a55c1
+langcode: ja
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.game_filter_casino_.field_disable_filter
+    - taxonomy.vocabulary.game_filter_casino_
+id: taxonomy_term.game_filter_casino_.default
+targetEntityType: taxonomy_term
+bundle: game_filter_casino_
+mode: default
+content:
+  field_disable_filter:
+    weight: 1
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  description: true
+  langcode: true
+  path: true
+  translation: true
