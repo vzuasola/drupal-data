@@ -178,17 +178,15 @@ tct-japan-stack:
   stage: deploy-test
   environment:
     name: tct
+  variables:
+    env: tct
+    STACK: japan-stack
   script:
-    - DEPLOY_TCT=$DEPLOY_TCT_JAPAN
-    - DEPLOY_TCT_TOWER_HOST=$DEPLOY_TCT_O_TOWER_HOST
-    - python -u automation/run.py --stage deploy-tct
+    - export DEPLOY_TOKEN DEPLOY_URL
+    - bash automation/jenkins_deploy.sh
   when: manual
   dependencies:
     - create package
-  artifacts:
-    paths:
-      - automation/deployed/*.jsonl
-    expire_in: 1 month
   tags:
     - ipvg-stg-02
 

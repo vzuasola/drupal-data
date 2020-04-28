@@ -18,6 +18,7 @@ dependencies:
     - field.field.node.games.field_image_size
     - field.field.node.games.field_maintenance_blurb
     - field.field.node.games.field_popup_window_name
+    - field.field.node.games.field_popup_window_size
     - field.field.node.games.field_preview_display_only
     - field.field.node.games.field_product
     - field.field.node.games.field_ribbon_configuration
@@ -86,7 +87,6 @@ third_party_settings:
         - field_game_code
         - field_product
         - field_game_lobby_category
-        - field_popup_window_name
       parent_name: ''
       weight: 10
       format_type: tab
@@ -103,16 +103,31 @@ third_party_settings:
         - field_start_date
         - field_end_date
       parent_name: ''
-      weight: 11
+      weight: 12
       format_type: tab
       format_settings:
         label: 'Game Room Maintenance/Coming Soon'
-        formatter: open
+        formatter: closed
         description: ''
         id: ''
         classes: ''
         required_fields: false
       label: 'Game Room Maintenance/Coming Soon'
+    group_popup_settings:
+      children:
+        - field_popup_window_name
+        - field_popup_window_size
+      parent_name: ''
+      weight: 11
+      format_type: tab
+      format_settings:
+        label: 'Popup Settings'
+        formatter: closed
+        description: 'Customize popup behavior'
+        required_fields: true
+        id: ''
+        classes: ''
+      label: 'Popup Settings'
 id: node.games.default
 targetEntityType: node
 bundle: games
@@ -230,7 +245,7 @@ content:
     type: string_textarea
     region: content
   field_hide:
-    weight: 14
+    weight: 15
     settings:
       display_label: true
     third_party_settings: {  }
@@ -259,8 +274,16 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_popup_window_size:
+    weight: 32
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_preview_display_only:
-    weight: 13
+    weight: 14
     settings:
       display_label: true
     third_party_settings: {  }
@@ -323,7 +346,7 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 12
+    weight: 13
     region: content
     third_party_settings: {  }
   title:
