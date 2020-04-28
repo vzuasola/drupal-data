@@ -1,0 +1,27 @@
+uuid: e210117f-59ab-474e-ac5c-bb2ba518a0c6
+langcode: en
+status: true
+dependencies:
+  module:
+    - mobile_sponsor_list_v2
+    - options
+id: mobile_sponsor_list_v2.field_li
+field_name: field_li
+entity_type: mobile_sponsor_list_v2
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: _blank
+      label: 'New Tab'
+    -
+      value: window
+      label: 'New Window'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
