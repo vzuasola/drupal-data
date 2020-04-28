@@ -1,0 +1,21 @@
+uuid: 086095ff-887b-44d9-8d5b-83996508e2ff
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - webcomposer_slider_v2
+_core:
+  default_config_hash: c1f7O07BPDmlt4A0p1lNx6La5__UEBKThjGxNDQgJ9U
+id: webcomposer_slider_v2_entity.field_post_banner_link
+field_name: field_post_banner_link
+entity_type: webcomposer_slider_v2_entity
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
