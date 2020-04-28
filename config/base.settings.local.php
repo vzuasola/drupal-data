@@ -18,6 +18,9 @@ $settings['webcomposer_cache']['redis'] = [
   'options' => $options,
 ];
 
+$settings['webcomposer_domains_configuration_v2']['redis'] = $settings['webcomposer_cache']['redis'];
+$settings['webcomposer_domains_configuration_v2']['redis']['options']['parameters']['database'] = 5;
+
 $settings['redis.connection']['interface'] = 'Predis';
 $settings['redis.connection']['host'] = $clients;
 $settings['redis.connection']['options'] = $options;
