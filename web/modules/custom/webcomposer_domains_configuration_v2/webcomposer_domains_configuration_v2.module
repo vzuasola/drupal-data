@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains webcomposer_domains_configuration_v2.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function webcomposer_domains_configuration_v2_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the webcomposer_domains_configuration_v2 module.
+    case 'help.page.webcomposer_domains_configuration_v2':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('This module take care of domain configuration') . '</p>';
+      return $output;
+
+    default:
+  }
+}

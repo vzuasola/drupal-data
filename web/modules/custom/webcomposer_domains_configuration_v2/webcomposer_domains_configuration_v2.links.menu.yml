@@ -1,0 +1,5 @@
+webcomposer_domains_configuration_v2.list:
+  title: 'Webcomposer Domains Configuration v2.0'
+  description: 'Provides a form for domain import/export'
+  parent: system.admin_config
+  route_name: webcomposer_domains_configuration_v2.admin_settings
