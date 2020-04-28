@@ -45,7 +45,6 @@ function lucky_baby_mobile_games_uninstall() {
     'language.content_settings.lucky_baby_mobile_games_entity.lucky_baby_mobile_games_entity.yml',
     'language.content_settings.taxonomy_term.game_tag.yml',
     'language.content_settings.taxonomy_term.mobile_game_category.yml',
-    'taxonomy.vocabulary.game_provider.yml',
     'taxonomy.vocabulary.game_tag.yml',
     'taxonomy.vocabulary.mobile_game_category.yml',
     'views.view.game_category.yml',
