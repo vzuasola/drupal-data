@@ -80,6 +80,13 @@ class MSWGeneralConfigurationForm extends FormBase {
       '#default_value' => $this->get('registration_step_two_url'),
       '#translatable' => TRUE,
     ];
+
+    $form['registration_setting']['registration']['registration_keep_alive_url'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Keep Alive Endpoint'),
+      '#default_value' => $this->get('registration_keep_alive_url'),
+      '#translatable' => TRUE,
+    ];
   }
 
 }

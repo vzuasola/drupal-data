@@ -1,0 +1,16 @@
+webcomposer_domains_configuration_v2.admin_settings:
+  path: 'admin/config/webcomposer/domains-config'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Webcomposer Domain Configuration v2.0'
+  requirements:
+    _permission: 'administer site configuration'
+
+webcomposer_domains_configuration_v2.api_controller_getDomain:
+  path: '/api/domain-v2/{domain}'
+  defaults:
+    _controller: '\Drupal\webcomposer_domains_configuration_v2\Controller\ApiController::getDomain'
+    _title: 'getDomain'
+  methods: [GET]
+  requirements:
+    _access: 'TRUE'

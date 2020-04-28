@@ -17,6 +17,7 @@ module:
   config_translation: 0
   contact: 0
   contact_storage: 0
+  contact_us_config: 0
   content_translation: 0
   contextual: 0
   ctools: 0
@@ -39,12 +40,15 @@ module:
   libraries: 0
   link: 0
   locale: 0
+  lucky_baby_big_winner: 0
   lucky_baby_config: 0
   lucky_baby_desktop_block: 0
+  lucky_baby_fair_gaming: 0
   lucky_baby_faq: 0
   lucky_baby_jackpot: 0
   lucky_baby_mobile_block: 0
   lucky_baby_registration: 0
+  lucky_baby_weekly_winner: 0
   luckybaby_dropdown_menu: 0
   menu_link_attributes: 0
   menu_ui: 0
@@ -85,6 +89,7 @@ module:
   webcomposer_floating_banners: 0
   webcomposer_form_manager: 0
   webcomposer_games: 0
+  webcomposer_mailer: 0
   webcomposer_language_hierarchy: 0
   webcomposer_marketing_script: 0
   webcomposer_partner: 0
