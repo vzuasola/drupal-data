@@ -1,7 +1,7 @@
 module:
   action: 0
   automated_cron: 0
-  basic_auth: 1
+  basic_auth: 0
   block: 0
   block_content: 0
   breakpoint: 0
@@ -45,7 +45,7 @@ module:
   menu_link_attributes: 0
   menu_ui: 0
   metatag: 0
-  nextbet_forms: 1
+  nextbet_forms: 0
   node: 0
   options: 0
   paragraphs: 0
@@ -53,8 +53,9 @@ module:
   path: 0
   quickedit: 0
   rdf: 0
-  registration_config: 1
-  registration_theme: 0
+  registration_config: 0
+  replicate: 0
+  replicate_ui: 0
   rest: 0
   rest_menu_items: 0
   restui: 0
@@ -89,6 +90,7 @@ module:
   webcomposer_marketing_script: 0
   webcomposer_promotions: 0
   webcomposer_registration_landing_page: 0
+  webcomposer_replicate_utility: 0
   webcomposer_rest_extra: 0
   webcomposer_seo: 0
   webcomposer_sitemap: 0
