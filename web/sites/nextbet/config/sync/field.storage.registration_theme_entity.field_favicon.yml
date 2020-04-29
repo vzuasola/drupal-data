@@ -1,0 +1,23 @@
+uuid: 4de0b53c-8a86-4028-b791-0b2b4b48e206
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+    - registration_theme
+id: registration_theme_entity.field_favicon
+field_name: field_favicon
+entity_type: registration_theme_entity
+type: file
+settings:
+  target_type: file
+  display_field: false
+  display_default: false
+  uri_scheme: public
+module: file
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
