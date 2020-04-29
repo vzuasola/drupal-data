@@ -23,6 +23,9 @@ url:
     es-AR: es-AR
     te: te
     in: hi
+    lo: lo
+    bu: bu
+    km: km
   domains:
     en: ''
     zh-hans: ''
@@ -44,6 +47,9 @@ url:
     es-AR: ''
     te: ''
     in: ''
+    lo: ''
+    bu: ''
+    km: ''
 selected_langcode: site_default
 _core:
   default_config_hash: uEePITI9tV6WqzmsTb7MfPCi5yPWXSxAN1xeLcYFQbM
