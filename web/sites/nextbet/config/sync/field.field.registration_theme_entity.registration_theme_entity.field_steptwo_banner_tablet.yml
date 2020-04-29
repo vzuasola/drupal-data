@@ -1,0 +1,38 @@
+uuid: 719fc096-a6bc-47b1-8643-ba6088469c86
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.registration_theme_entity.field_steptwo_banner_tablet
+  module:
+    - image
+    - registration_theme
+id: registration_theme_entity.registration_theme_entity.field_steptwo_banner_tablet
+field_name: field_steptwo_banner_tablet
+entity_type: registration_theme_entity
+bundle: registration_theme_entity
+label: 'Banner Tablet'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image
