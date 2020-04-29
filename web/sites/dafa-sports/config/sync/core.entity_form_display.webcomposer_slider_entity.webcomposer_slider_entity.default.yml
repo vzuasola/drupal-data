@@ -9,6 +9,7 @@ dependencies:
     - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_blurb
     - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_content_position
     - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_content_position_post
+    - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_currency_localization
     - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_enable_for_agent_players
     - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_log_in_state
     - field.field.webcomposer_slider_entity.webcomposer_slider_entity.field_post_blurb
@@ -60,6 +61,7 @@ third_party_settings:
         - field_content_position
         - field_post_blurb
         - field_content_position_post
+        - field_currency_localization
       parent_name: group_banner_settings
       weight: 26
       format_type: tab
@@ -161,6 +163,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
+  field_currency_localization:
+    weight: 9
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
     region: content
   field_enable_for_agent_players:
     weight: 24

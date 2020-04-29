@@ -1,0 +1,30 @@
+uuid: 117bb0b9-bf68-4c85-954c-cf3821d9cff0
+langcode: en
+status: true
+dependencies:
+  module:
+    - mobile_sponsor_list
+    - options
+id: mobile_sponsor_list.field_mobile_row
+field_name: field_mobile_row
+entity_type: mobile_sponsor_list
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '0'
+      label: 'One Column'
+    -
+      value: '1'
+      label: 'Two Column'
+    -
+      value: '2'
+      label: 'Three Column'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

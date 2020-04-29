@@ -1,0 +1,8 @@
+uuid: 1a3fa71a-f513-4f20-b36d-7c6fc69b2823
+langcode: vi
+status: true
+dependencies: {  }
+id: mobile-post-login-vn
+label: 'Mobile Post Login VN'
+description: ''
+locked: false
