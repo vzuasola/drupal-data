@@ -422,6 +422,12 @@ use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
               '#description' => 'Format files to accept',
               '#default_value' => '.pdf,.doc,.jpg,.docx,.png,jpeg,.tif,.gif,.tiff,.xps',
             ],
+            'accept-size' => [
+              '#title' => 'Accepted file size',
+              '#type' => 'textfield',
+              '#description' => 'File size to accept in kb, 1mb = 1024kb',
+              '#default_value' => '1024',
+            ],
           ],
         ],
 
@@ -434,6 +440,12 @@ use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
               '#type' => 'textfield',
               '#description' => 'Format files to accept',
               '#default_value' => '.pdf,.doc,.jpg,.docx,.png,jpeg,.tif,.gif,.tiff,.xps',
+            ],
+            'accept-size' => [
+              '#title' => 'Accepted file size',
+              '#type' => 'textfield',
+              '#description' => 'File size to accept in kb, 1mb = 1024kb',
+              '#default_value' => '1024',
             ],
           ],
         ],
