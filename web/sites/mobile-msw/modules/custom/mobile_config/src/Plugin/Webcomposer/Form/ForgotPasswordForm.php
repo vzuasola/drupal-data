@@ -40,7 +40,8 @@ class ForgotPasswordForm extends WebcomposerFormBase implements WebcomposerFormI
           'markup' => [
             '#title' => 'Header Blurb',
             '#type' => 'text_format',
-            '#default_value' => '<p class="blurb-summary">Please fill in the following details. An email will be sent to your registered email address.</p>',
+            '#default_value' => '<p class="blurb-summary">Please fill in the following details. 
+            An email will be sent to your registered email address.</p>',
           ],
         ],
       ],
@@ -113,7 +114,9 @@ class ForgotPasswordForm extends WebcomposerFormBase implements WebcomposerFormI
           'markup' => [
             '#title' => 'Footer Blurb',
             '#type' => 'text_format',
-            '#default_value' => '<img alt="invalid-black.svg" data-entity-type="" data-entity-uuid="" height="78" src="/images/svg/invalid-black.svg" width="78" /><p>For any question or concerns please contact <a href="#">Customer Support</a>.</p>',
+            '#default_value' => '<img alt="invalid-black.svg" data-entity-type="" data-entity-uuid="" 
+            height="78" src="/images/svg/invalid-black.svg" width="78" /><p>For any question or concerns please contact 
+            <a href="#">Customer Support</a>.</p>',
           ],
         ],
       ],
