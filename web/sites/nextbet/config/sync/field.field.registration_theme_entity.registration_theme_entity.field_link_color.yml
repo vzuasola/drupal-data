@@ -1,24 +1,21 @@
-uuid: 7de80e44-c184-4108-bf5d-a6976b617119
+uuid: e95a6d1e-e665-4113-93d3-91f07f985aae
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.registration_theme_entity.field_asterisk_color
+    - field.storage.registration_theme_entity.field_link_color
   module:
     - color_field
     - registration_theme
-id: registration_theme_entity.registration_theme_entity.field_asterisk_color
-field_name: field_asterisk_color
+id: registration_theme_entity.registration_theme_entity.field_link_color
+field_name: field_link_color
 entity_type: registration_theme_entity
 bundle: registration_theme_entity
-label: 'Asterisk Color'
+label: 'Link Color'
 description: ''
 required: false
 translatable: true
-default_value:
-  -
-    color: '#3a2020'
-    opacity: '1'
+default_value: {  }
 default_value_callback: ''
 settings:
   opacity: 0
