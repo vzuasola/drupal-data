@@ -1,5 +1,5 @@
-uuid: 602ad22f-07f0-49d9-b83e-3ecccc4ab018
-langcode: my
+uuid: 63c58cd7-bc53-42b5-932a-5d2417deb6fd
+langcode: bu
 status: true
 dependencies:
   module:
@@ -7,10 +7,10 @@ dependencies:
 third_party_settings:
   webcomposer_language_hierarchy:
     webcomposer_fallback_langcode: en
-    webcomposer_language_custom_label: မြန်မာ
+    webcomposer_language_custom_label: Burmese
     webcomposer_language_hidden: 0
-id: my
+id: bu
 label: Myanmar
 direction: ltr
-weight: 9
+weight: 2
 locked: false
