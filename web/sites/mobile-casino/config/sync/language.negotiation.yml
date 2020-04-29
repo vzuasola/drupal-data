@@ -15,7 +15,6 @@ url:
     es: es
     pt-br: pt
     lo: lo
-    km: km
     bu: bu
   domains:
     en: ''
@@ -30,7 +29,6 @@ url:
     es: ''
     pt-br: ''
     lo: ''
-    km: ''
     bu: ''
 selected_langcode: site_default
 _core:
