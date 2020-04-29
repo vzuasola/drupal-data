@@ -1,0 +1,19 @@
+uuid: f6784bf0-c969-4699-b4fc-30d720ca6939
+langcode: en
+status: true
+dependencies:
+  module:
+    - registration_theme
+    - text
+id: registration_theme_entity.field_tripwire_content
+field_name: field_tripwire_content
+entity_type: registration_theme_entity
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

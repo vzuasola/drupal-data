@@ -1,0 +1,20 @@
+uuid: bee3a7bc-4b39-4652-a68d-2694eeaf34d7
+langcode: en
+status: true
+dependencies:
+  module:
+    - color_field
+    - registration_theme
+id: registration_theme_entity.field_banner_highlight
+field_name: field_banner_highlight
+entity_type: registration_theme_entity
+type: color_field_type
+settings:
+  format: '#HEXHEX'
+module: color_field
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
