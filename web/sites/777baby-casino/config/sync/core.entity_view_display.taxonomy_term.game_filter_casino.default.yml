@@ -1,15 +1,15 @@
-uuid: ae418084-ea03-41cf-997a-e446014c10a9
+uuid: 273923b4-674c-4b64-bc91-6b7a3f86b809
 langcode: ja
 status: true
 dependencies:
   config:
-    - field.field.taxonomy_term.game_filter_casino_.field_disable_filter
-    - taxonomy.vocabulary.game_filter_casino_
+    - field.field.taxonomy_term.game_filter_casino.field_disable_filter
+    - taxonomy.vocabulary.game_filter_casino
   module:
     - text
-id: taxonomy_term.game_filter_casino_.default
+id: taxonomy_term.game_filter_casino.default
 targetEntityType: taxonomy_term
-bundle: game_filter_casino_
+bundle: game_filter_casino
 mode: default
 content:
   description:

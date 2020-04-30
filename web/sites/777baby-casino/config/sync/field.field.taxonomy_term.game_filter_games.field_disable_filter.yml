@@ -1,18 +1,18 @@
-uuid: 137595ba-0f18-4d8a-95f7-626e603d3e60
+uuid: 1ca34579-4563-48ca-b6fb-893a73ae3cd9
 langcode: ja
 status: true
 dependencies:
   config:
     - field.storage.taxonomy_term.field_disable_filter
-    - taxonomy.vocabulary.game_filter_casino_
-id: taxonomy_term.game_filter_casino_.field_disable_filter
+    - taxonomy.vocabulary.game_filter_games
+id: taxonomy_term.game_filter_games.field_disable_filter
 field_name: field_disable_filter
 entity_type: taxonomy_term
-bundle: game_filter_casino_
+bundle: game_filter_games
 label: 'Disable filter'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value:
   -
     value: 0
