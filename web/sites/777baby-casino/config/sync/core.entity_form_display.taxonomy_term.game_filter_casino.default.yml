@@ -1,13 +1,13 @@
-uuid: 24f367db-b6f3-4f6b-b913-eab759ed42c5
+uuid: 214e1e99-73c5-438b-9916-335efdb50027
 langcode: ja
 status: true
 dependencies:
   config:
-    - field.field.taxonomy_term.game_filter_games_.field_disable_filter
-    - taxonomy.vocabulary.game_filter_games_
-id: taxonomy_term.game_filter_games_.default
+    - field.field.taxonomy_term.game_filter_casino.field_disable_filter
+    - taxonomy.vocabulary.game_filter_casino
+id: taxonomy_term.game_filter_casino.default
 targetEntityType: taxonomy_term
-bundle: game_filter_games_
+bundle: game_filter_casino
 mode: default
 content:
   field_disable_filter:
@@ -29,3 +29,4 @@ hidden:
   description: true
   langcode: true
   path: true
+  translation: true

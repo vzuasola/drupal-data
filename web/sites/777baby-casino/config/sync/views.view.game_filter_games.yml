@@ -1,9 +1,9 @@
-uuid: b515d07e-715a-4fc2-9205-900e02ad2fb2
+uuid: 0da3b44c-3abe-48fc-9612-7bb178baea02
 langcode: ja
 status: true
 dependencies:
   config:
-    - taxonomy.vocabulary.game_filter_games_
+    - taxonomy.vocabulary.game_filter_games
   module:
     - rest
     - serialization
@@ -136,7 +136,7 @@ display:
           admin_label: ''
           operator: in
           value:
-            game_filter_games_: game_filter_games_
+            game_filter_games: game_filter_games
           group: 1
           exposed: false
           expose:
@@ -171,7 +171,7 @@ display:
           id: langcode
           table: taxonomy_term_field_data
           field: langcode
-          relationship: parent
+          relationship: none
           group_type: group
           admin_label: ''
           operator: in
@@ -211,7 +211,7 @@ display:
           id: langcode_1
           table: taxonomy_term_field_data
           field: langcode
-          relationship: none
+          relationship: parent
           group_type: group
           admin_label: ''
           operator: in

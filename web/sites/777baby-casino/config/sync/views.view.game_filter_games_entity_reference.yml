@@ -1,9 +1,9 @@
-uuid: c48957c3-fc0f-46c7-aeaa-09e950cc7f17
+uuid: ffe51ebe-cce2-47ca-a6a5-d8bcf7891229
 langcode: ja
 status: true
 dependencies:
   config:
-    - taxonomy.vocabulary.game_filter_games_
+    - taxonomy.vocabulary.game_filter_games
   module:
     - taxonomy
     - user
@@ -204,7 +204,7 @@ display:
           admin_label: ''
           operator: in
           value:
-            game_filter_games_: game_filter_games_
+            game_filter_games: game_filter_games
           group: 1
           exposed: false
           expose:
@@ -326,7 +326,7 @@ display:
           order: ASC
           exposed: false
           expose:
-            label: ''
+            label: Weight
           entity_type: taxonomy_term
           entity_field: weight
           plugin_id: standard
@@ -379,17 +379,11 @@ display:
         options:
           search_fields:
             name: name
+            name_1: '0'
       pager:
         type: none
         options:
           offset: 0
-      row:
-        type: entity_reference
-        options:
-          default_field_elements: true
-          inline: {  }
-          separator: '-'
-          hide_empty: false
     cache_metadata:
       max-age: -1
       contexts:
