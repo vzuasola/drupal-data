@@ -1,9 +1,9 @@
-uuid: 5c234dbc-bd34-45b5-8969-c3cff50896df
+uuid: 8de3a922-6aee-44c2-9bc7-84426c1afb7b
 langcode: ja
 status: true
 dependencies:
   config:
-    - taxonomy.vocabulary.game_filter_casino_
+    - taxonomy.vocabulary.game_filter_casino
   module:
     - rest
     - serialization
@@ -136,7 +136,7 @@ display:
           admin_label: ''
           operator: in
           value:
-            game_filter_casino_: game_filter_casino_
+            game_filter_casino: game_filter_casino
           group: 1
           exposed: false
           expose:
@@ -171,7 +171,7 @@ display:
           id: langcode
           table: taxonomy_term_field_data
           field: langcode
-          relationship: parent
+          relationship: none
           group_type: group
           admin_label: ''
           operator: in
@@ -211,7 +211,7 @@ display:
           id: langcode_1
           table: taxonomy_term_field_data
           field: langcode
-          relationship: none
+          relationship: parent
           group_type: group
           admin_label: ''
           operator: in
@@ -220,12 +220,12 @@ display:
           group: 1
           exposed: false
           expose:
-            operator_id: ''
-            label: ''
-            description: ''
+            operator_id: langcode_1_op
+            label: 'Translation language'
+            description: null
             use_operator: false
-            operator: ''
-            identifier: ''
+            operator: langcode_1_op
+            identifier: langcode_1
             required: false
             remember: false
             multiple: false

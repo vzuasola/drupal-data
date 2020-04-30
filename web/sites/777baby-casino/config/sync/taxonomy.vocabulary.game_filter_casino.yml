@@ -1,0 +1,9 @@
+uuid: d3a50523-25dc-447f-b716-2948f1c7369d
+langcode: ja
+status: true
+dependencies: {  }
+name: 'Game Filter (casino)'
+vid: game_filter_casino
+description: ''
+hierarchy: 0
+weight: 0
