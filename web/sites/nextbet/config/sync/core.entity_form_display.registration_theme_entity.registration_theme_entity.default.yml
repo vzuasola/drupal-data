@@ -20,7 +20,6 @@ dependencies:
     - field.field.registration_theme_entity.registration_theme_entity.field_steptwo_content
     - field.field.registration_theme_entity.registration_theme_entity.field_success_message
     - field.field.registration_theme_entity.registration_theme_entity.field_success_message_color
-    - field.field.registration_theme_entity.registration_theme_entity.field_theme_alternative_text
     - image.style.thumbnail
   module:
     - color_field
@@ -251,14 +250,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: color_field_widget_html5
-    region: content
-  field_theme_alternative_text:
-    weight: 20
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
     region: content
   langcode:
     type: language_select
