@@ -19,9 +19,9 @@ url:
     pt-br: pt
     in: hi
     te: te
-    km: km 		
-   	lo: lo 		
- 	  bu: bu
+    km: km
+    lo: lo
+    bu: bu
   domains:
     en: ''
     eu: ''
@@ -39,9 +39,9 @@ url:
     pt-br: ''
     hi: ''
     te: ''
-    km: '' 		
-   	lo: '' 		
- 	  bu: ''
+    km: ''
+    lo: ''
+    bu: ''
 selected_langcode: site_default
 _core:
   default_config_hash: uEePITI9tV6WqzmsTb7MfPCi5yPWXSxAN1xeLcYFQbM
