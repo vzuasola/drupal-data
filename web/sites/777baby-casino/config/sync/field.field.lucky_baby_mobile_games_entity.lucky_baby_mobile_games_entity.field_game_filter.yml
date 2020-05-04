@@ -1,13 +1,13 @@
-uuid: 30155562-2db8-4674-bd44-91667ae417e4
+uuid: ac7c6f21-cf9f-43f9-be61-0639015812df
 langcode: ja
 status: true
 dependencies:
   config:
-    - field.storage.lucky_baby_mobile_games_entity.field_game_filter_casino
+    - field.storage.lucky_baby_mobile_games_entity.field_game_filter
   module:
     - lucky_baby_mobile_games
-id: lucky_baby_mobile_games_entity.lucky_baby_mobile_games_entity.field_game_filter_casino
-field_name: field_game_filter_casino
+id: lucky_baby_mobile_games_entity.lucky_baby_mobile_games_entity.field_game_filter
+field_name: field_game_filter
 entity_type: lucky_baby_mobile_games_entity
 bundle: lucky_baby_mobile_games_entity
 label: 'Game Filter (casino)'
