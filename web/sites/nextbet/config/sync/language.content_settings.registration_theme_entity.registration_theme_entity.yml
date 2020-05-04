@@ -1,4 +1,4 @@
-uuid: bfda37b8-a506-4980-90eb-5ab711ab266e
+uuid: ca66caca-5750-4bc2-88eb-527a82fe4235
 langcode: en
 status: true
 dependencies:
@@ -7,11 +7,11 @@ dependencies:
     - registration_theme
 third_party_settings:
   content_translation:
-    enabled: true
+    enabled: false
     bundle_settings:
       untranslatable_fields_hide: '0'
 id: registration_theme_entity.registration_theme_entity
 target_entity_type_id: registration_theme_entity
 target_bundle: registration_theme_entity
 default_langcode: site_default
-language_alterable: true
+language_alterable: false
