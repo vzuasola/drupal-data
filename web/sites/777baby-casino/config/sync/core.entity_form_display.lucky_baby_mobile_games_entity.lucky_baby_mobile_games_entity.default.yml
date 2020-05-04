@@ -9,7 +9,7 @@ dependencies:
     - field.field.lucky_baby_mobile_games_entity.lucky_baby_mobile_games_entity.field_game_category
     - field.field.lucky_baby_mobile_games_entity.lucky_baby_mobile_games_entity.field_game_code
     - field.field.lucky_baby_mobile_games_entity.lucky_baby_mobile_games_entity.field_game_code_icore
-    - field.field.lucky_baby_mobile_games_entity.lucky_baby_mobile_games_entity.field_game_filter
+    - field.field.lucky_baby_mobile_games_entity.lucky_baby_mobile_games_entity.field_game_filter_casino
     - field.field.lucky_baby_mobile_games_entity.lucky_baby_mobile_games_entity.field_game_filter_games
     - field.field.lucky_baby_mobile_games_entity.lucky_baby_mobile_games_entity.field_game_provider
     - field.field.lucky_baby_mobile_games_entity.lucky_baby_mobile_games_entity.field_game_tag
@@ -25,8 +25,8 @@ third_party_settings:
   field_group:
     group_for_casino_page:
       children:
-        - field_game_filter
         - field_game_category
+        - field_game_filter_casino
       parent_name: ''
       weight: 10
       format_type: fieldset
@@ -95,14 +95,14 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_game_filter:
-    weight: 12
+  field_game_filter_casino:
+    weight: 14
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_game_filter_games:
-    weight: 12
+    weight: 15
     settings: {  }
     third_party_settings: {  }
     type: options_select
