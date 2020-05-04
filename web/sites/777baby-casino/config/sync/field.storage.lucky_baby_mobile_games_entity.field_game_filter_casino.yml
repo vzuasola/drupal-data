@@ -1,19 +1,19 @@
-uuid: fb4af589-e15d-4c02-87d6-645845f5e908
+uuid: 8e9580cd-ac32-4d1d-a629-ce23f6158824
 langcode: ja
 status: true
 dependencies:
   module:
     - lucky_baby_mobile_games
     - taxonomy
-id: lucky_baby_mobile_games_entity.field_game_filter
-field_name: field_game_filter
+id: lucky_baby_mobile_games_entity.field_game_filter_casino
+field_name: field_game_filter_casino
 entity_type: lucky_baby_mobile_games_entity
 type: entity_reference
 settings:
   target_type: taxonomy_term
 module: core
 locked: false
-cardinality: 1
+cardinality: -1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false
