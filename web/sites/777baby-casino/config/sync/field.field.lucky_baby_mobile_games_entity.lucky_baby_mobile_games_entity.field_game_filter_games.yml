@@ -1,4 +1,4 @@
-uuid: d162e157-c5eb-4914-8535-1096dd5ea188
+uuid: 614a71a4-d74e-489d-a3aa-cf3cf0bfeb00
 langcode: ja
 status: true
 dependencies:
@@ -13,7 +13,7 @@ bundle: lucky_baby_mobile_games_entity
 label: 'Game Filter (games)'
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
