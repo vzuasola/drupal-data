@@ -54,6 +54,7 @@ module:
   quickedit: 0
   rdf: 0
   registration_config: 0
+  registration_theme: 0
   replicate: 0
   replicate_ui: 0
   rest: 0
