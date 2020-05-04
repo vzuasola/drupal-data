@@ -1,0 +1,16 @@
+uuid: 5b9d959f-b8e6-4b46-855b-feec5f6f1b2a
+langcode: km
+status: true
+dependencies:
+  module:
+    - webcomposer_language_hierarchy
+third_party_settings:
+  webcomposer_language_hierarchy:
+    webcomposer_fallback_langcode: ''
+    webcomposer_language_custom_label: ខ្មែរ
+    webcomposer_language_hidden: 0
+id: km
+label: Khmer
+direction: ltr
+weight: 8
+locked: false
