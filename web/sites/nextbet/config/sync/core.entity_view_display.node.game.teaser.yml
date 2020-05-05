@@ -1,0 +1,21 @@
+uuid: 00fa95c4-a502-4c50-90de-972a456b7ebf
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.game.field_all_category_ribbon_config
+    - node.type.game
+  module:
+    - user
+id: node.game.teaser
+targetEntityType: node
+bundle: game
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_all_category_ribbon_config: true
+  langcode: true
