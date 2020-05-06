@@ -181,5 +181,56 @@ class MSWCantLoginForm extends FormBase {
             '#format' => $c['format'],
             '#translatable' => true,
         ];
+
+        //Cant Login Setting
+        $form['cant_login_integration_config'] = [
+            '#type' => 'details',
+            '#title' => t('Response Code Mapping'),
+            '#group' => 'advanced',
+        ];
+
+        $form['cant_login_integration_config']['cant_login_response_mapping'] = [
+            '#type' => 'textarea',
+            '#title' => t('Response Code Mapping'),
+            '#required' => TRUE,
+            '#description' => $this->t('Cant Login API Response Code Mapping'),
+            '#default_value' => $this->get('cant_login_response_mapping'),
+            '#translatable' => TRUE,
+        ];
+
+        // Reset Password
+        $form['page_reset_password_setting'] = [
+            '#type' => 'details',
+            '#title' => t('Reset Password Setting'),
+            '#group' => 'advanced',
+        ];
+
+        $form['page_reset_password_setting']['reset_password_success_message'] = [
+            '#type' => 'text_format',
+            '#title' => $this->t('Reset Password Success Message'),
+            '#default_value' => $content['value'],
+            '#format' => $content['format'],
+            '#required' => TRUE,
+            '#translatable' => TRUE,
+        ];
+
+        $form['page_reset_password_setting']['reset_password_error_message'] = [
+            '#type' => 'text_format',
+            '#title' => $this->t('Reset Password Error Message'),
+            '#default_value' => $content['value'],
+            '#format' => $content['format'],
+            '#required' => TRUE,
+            '#translatable' => TRUE,
+        ];
+
+        $form['page_reset_password_setting']['expired_message'] = [
+            '#type' => 'text_format',
+            '#title' => $this->t('Expired Message'),
+            '#default_value' => $content['value'],
+            '#format' => $content['format'],
+            '#required' => TRUE,
+            '#translatable' => TRUE,
+        ];
+
     }
 }
