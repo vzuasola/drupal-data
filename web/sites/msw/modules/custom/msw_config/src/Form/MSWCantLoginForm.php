@@ -182,22 +182,6 @@ class MSWCantLoginForm extends FormBase {
             '#translatable' => true,
         ];
 
-        //Cant Login Setting
-        $form['cant_login_integration_config'] = [
-            '#type' => 'details',
-            '#title' => t('Response Code Mapping'),
-            '#group' => 'advanced',
-        ];
-
-        $form['cant_login_integration_config']['cant_login_response_mapping'] = [
-            '#type' => 'textarea',
-            '#title' => t('Response Code Mapping'),
-            '#required' => TRUE,
-            '#description' => $this->t('Cant Login API Response Code Mapping'),
-            '#default_value' => $this->get('cant_login_response_mapping'),
-            '#translatable' => TRUE,
-        ];
-
         // Reset Password
         $form['page_reset_password_setting'] = [
             '#type' => 'details',
@@ -233,4 +217,34 @@ class MSWCantLoginForm extends FormBase {
         ];
 
     }
+
+      /**
+   * Integration Configuration.
+   */
+  private function integrationConfig(&$form) {
+    $form['cant_login_integration_config'] = [
+      '#type' => 'details',
+      '#title' => t("Integration"),
+      '#group' => 'advanced',
+    ];
+
+    $form['cant_login_integration_config']['cant_login_response_mapping'] = [
+      '#type' => 'textarea',
+      '#title' => t('Response Code Mapping'),
+      '#required' => TRUE,
+      '#description' => $this->t('Cant Login API Response Code Mapping'),
+      '#default_value' => $this->get('cant_login_response_mapping'),
+      '#translatable' => TRUE,
+    ];
+
+    $form['cant_login_integration_config']['error_mid_down'] = [
+      '#type' => 'textarea',
+      '#title' => t('Error Message MID Down'),
+      '#size' => 500,
+      '#required' => TRUE,
+      '#description' => $this->t('General Error Message across all forms of my account if MID is down.'),
+      '#default_value' => $this->get('error_mid_down'),
+      '#translatable' => TRUE,
+    ];
+  }
 }
