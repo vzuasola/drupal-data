@@ -7,5 +7,6 @@ ignored_config_entities:
   - 'language.*'
   - 'devel.*'
   - 'webcomposer_form_manager.*'
+  - 'nextbet_urls.*'
 _core:
   default_config_hash: UVH1aJ4b44UM-VdPVN7hNNuuVqfReJxwfVeDQH1Hvsk
