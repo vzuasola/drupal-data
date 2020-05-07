@@ -1,0 +1,9 @@
+uuid: dc71ee5e-a6d8-43e5-a445-3182962c3842
+langcode: en
+status: true
+dependencies: {  }
+id: lo
+label: Lao
+direction: ltr
+weight: 5
+locked: false
