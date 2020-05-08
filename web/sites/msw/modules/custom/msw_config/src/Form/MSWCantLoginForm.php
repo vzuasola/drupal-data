@@ -222,7 +222,7 @@ class MSWCantLoginForm extends FormBase {
             '#title' => t("Integration"),
             '#group' => 'advanced',
         ];
-    
+
         $form['cant_login_integration_config']['cant_login_response_mapping'] = [
             '#type' => 'textarea',
             '#title' => t('Response Code Mapping'),
@@ -231,7 +231,7 @@ class MSWCantLoginForm extends FormBase {
             '#default_value' => $this->get('cant_login_response_mapping'),
             '#translatable' => TRUE,
         ];
-    
+
         $form['cant_login_integration_config']['error_mid_down'] = [
             '#type' => 'textarea',
             '#title' => t('Error Message MID Down'),
