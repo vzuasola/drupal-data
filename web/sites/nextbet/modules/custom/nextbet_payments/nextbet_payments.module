@@ -1,0 +1,21 @@
+<?php
+
+/**
+ * @file
+ * Contains nextbet_payments.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+function nextbet_payments_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the nextbet_payments module.
+    case 'help.page.nextbet_payments':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('This module shows nextbet payments.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
