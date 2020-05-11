@@ -18,4 +18,23 @@ content:
     region: content
 hidden:
   field_all_category_ribbon_config: true
+  field_game_categories: true
+  field_game_code: true
+  field_game_filters: true
+  field_game_info: true
+  field_game_info_toggle: true
+  field_game_integration: true
+  field_game_keywords: true
+  field_game_meta_tags: true
+  field_game_play_for_fun_toggle: true
+  field_game_preview_mode: true
+  field_game_provider: true
+  field_game_ribbon: true
+  field_game_subprovider: true
+  field_game_thumbnail: true
+  field_game_title: true
+  field_game_type: true
+  field_maintenance_end: true
+  field_maintenance_message: true
+  field_maintenance_start: true
   langcode: true
