@@ -223,7 +223,7 @@ display:
       pager:
         type: full
         options:
-          items_per_page: 1
+          items_per_page: 150
           offset: 0
           id: 0
           total_pages: null
