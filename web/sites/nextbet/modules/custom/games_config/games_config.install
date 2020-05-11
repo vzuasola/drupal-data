@@ -1,0 +1,27 @@
+<?php
+
+/**
+ * Implements hook_uninstall
+ */
+function games_config_uninstall() {
+   \Drupal::configFactory()->getEditable('games_config.games_configuration')->delete();
+ }
+
+/**
+ * Implements hook_update_N
+ *
+ * Changes:
+ * Remove deprecated fields from old games
+ */
+function games_config_update_8001() {
+   $key = [
+      'filter_icon',
+      'filter_header',
+      'filter_submit',
+      'filter_clear'
+   ];
+
+   foreach ($keys as $key) {
+      \Drupal::configFactory()->getEditable('games_config.games_configuration.' . $key)->delete();
+   }
+}
