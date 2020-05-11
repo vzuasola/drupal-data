@@ -8,6 +8,7 @@ dependencies:
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_banner_link
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_banner_link_target
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_content_position
+    - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_currency
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_disable_in_tablet
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_log_in_state
     - field.field.webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_post_banner_blurb
@@ -83,6 +84,7 @@ third_party_settings:
         - field_status
         - field_disable_in_tablet
         - field_preview_display_only
+        - field_currency
       parent_name: ''
       weight: 8
       format_type: fieldset
@@ -224,6 +226,14 @@ content:
           entity_type: webcomposer_slider_v2_entity
           bundle: webcomposer_slider_v2_entity
     type: options_select
+    region: content
+  field_currency:
+    weight: 23
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
   field_disable_in_tablet:
     weight: 21
