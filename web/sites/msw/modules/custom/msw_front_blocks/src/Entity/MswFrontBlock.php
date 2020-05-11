@@ -16,7 +16,7 @@ use Drupal\user\UserInterface;
  *
  * @ContentEntityType(
  *   id = "msw_front_block",
- *   label = @Translation("msw front block"),
+ *   label = @Translation("Msw front block"),
  *   handlers = {
  *     "view_builder" = "Drupal\Core\Entity\EntityViewBuilder",
  *     "list_builder" = "Drupal\msw_front_blocks\MswFrontBlockListBuilder",
