@@ -58,7 +58,7 @@ class CantLoginForm extends FormBase {
         $form['page_forgot_password_setting']['forgot_password_success_message'] = [
             '#type' => 'text_format',
             '#title' => $this->t('Forgot Password Success Message'),
-            '#default_value' => $this->get('forgot_password_success_message'),
+            '#default_value' => $content['value'],
             '#format' => $content['format'],
             '#required' => FALSE,
             '#translatable' => TRUE,
