@@ -32,7 +32,6 @@ class ForgotPasswordForm extends WebcomposerFormBase implements WebcomposerFormI
    */
   public function getFields() {
     return [
-      
       'header_markup' => [
         'name' => 'Header Markup',
         'type' => 'markup',
@@ -106,7 +105,7 @@ class ForgotPasswordForm extends WebcomposerFormBase implements WebcomposerFormI
           ],
         ],
       ],
-      
+
       'footer_markup' => [
         'name' => 'Footer Markup',
         'type' => 'markup',
