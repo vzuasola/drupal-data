@@ -15,6 +15,9 @@ url:
     hi: in
     el: gr
     pl: pl
+    my: bu
+    lo: lo
+    km: km
   domains:
     en: ''
     eu: ''
@@ -28,6 +31,9 @@ url:
     hi: ''
     el: ''
     pl: ''
+    my: ''
+    lo: ''
+    km: ''
 selected_langcode: site_default
 _core:
   default_config_hash: uEePITI9tV6WqzmsTb7MfPCi5yPWXSxAN1xeLcYFQbM

@@ -1,0 +1,9 @@
+uuid: 0e41cbcb-1930-48c1-bd7c-d516cbb979ee
+langcode: en
+status: true
+dependencies: {  }
+id: km
+label: Khmer
+direction: ltr
+weight: 6
+locked: false

@@ -10,6 +10,9 @@ dependencies:
     - field.storage.webcomposer_slider_v2_entity.field_title
     - field.storage.webcomposer_slider_v2_entity.field_unpublish_date
     - image.style.thumbnail
+    - taxonomy.vocabulary.product
+  content:
+    - 'taxonomy_term:product:15d8b3fa-e630-4ee4-b45c-aa6ae725c959'
   module:
     - datetime
     - draggableviews
@@ -17,6 +20,7 @@ dependencies:
     - options
     - rest
     - serialization
+    - taxonomy
     - user
     - webcomposer_rest_extra
     - webcomposer_slider_v2
@@ -772,6 +776,53 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           plugin_id: string
+        field_product_target_id:
+          id: field_product_target_id
+          table: webcomposer_slider_v2_entity__field_product
+          field: field_product_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value:
+            8: 8
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_product_target_id_op
+            label: Product
+            description: ''
+            use_operator: false
+            operator: field_product_target_id_op
+            identifier: product
+            required: true
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              e: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: product
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
       defaults:
         filters: false
         filter_groups: false
@@ -782,6 +833,7 @@ display:
         empty: false
         access: false
         pager: false
+        arguments: false
       filter_groups:
         operator: OR
         groups:
@@ -1418,12 +1470,14 @@ display:
         type: none
         options:
           offset: 0
+      arguments: {  }
     cache_metadata:
       max-age: 0
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
+        - user
         - user.permissions
       tags:
         - 'config:field.storage.webcomposer_slider_v2_entity.field_banner_image'
@@ -1495,16 +1549,66 @@ display:
           entity_type: webcomposer_slider_v2_entity
           entity_field: langcode
           plugin_id: language
+        field_product_target_id:
+          id: field_product_target_id
+          table: webcomposer_slider_v2_entity__field_product
+          field: field_product_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_product_target_id_op
+            label: 'Product (field_product)'
+            description: ''
+            use_operator: false
+            operator: field_product_target_id_op
+            identifier: product
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              e: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: textfield
+          limit: true
+          vid: product
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
       defaults:
         filters: false
         filter_groups: false
+        arguments: false
       filter_groups:
         operator: OR
         groups: {  }
+      arguments: {  }
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
         - request_format
+        - url
+        - user
       tags: {  }
