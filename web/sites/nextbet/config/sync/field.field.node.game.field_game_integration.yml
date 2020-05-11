@@ -1,0 +1,19 @@
+uuid: d6c48e72-c571-4938-8d65-4ba4626b8742
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_game_integration
+    - node.type.game
+id: node.game.field_game_integration
+field_name: field_game_integration
+entity_type: node
+bundle: game
+label: 'Integration Parameters'
+description: 'Game URL parameter'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long
