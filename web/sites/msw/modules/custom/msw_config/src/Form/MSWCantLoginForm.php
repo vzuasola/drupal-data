@@ -189,6 +189,7 @@ class MSWCantLoginForm extends FormBase {
             '#group' => 'advanced',
         ];
 
+        $content = $this->get('reset_password_success_message');
         $form['page_reset_password_setting']['reset_password_success_message'] = [
             '#type' => 'text_format',
             '#title' => $this->t('Reset Password Success Message'),
@@ -198,6 +199,7 @@ class MSWCantLoginForm extends FormBase {
             '#translatable' => TRUE,
         ];
 
+        $content = $this->get('reset_password_error_message');
         $form['page_reset_password_setting']['reset_password_error_message'] = [
             '#type' => 'text_format',
             '#title' => $this->t('Reset Password Error Message'),
@@ -207,6 +209,7 @@ class MSWCantLoginForm extends FormBase {
             '#translatable' => TRUE,
         ];
 
+        $content = $this->get('expired_message');
         $form['page_reset_password_setting']['expired_message'] = [
             '#type' => 'text_format',
             '#title' => $this->t('Expired Message'),
