@@ -1,0 +1,25 @@
+entity.games_collection.add_form:
+  route_name: entity.games_collection.add_form
+  title: 'Add Games Collection'
+  appears_on:
+    - entity.games_collection.collection
+
+entity.games_collections.goto_list:
+  route_name: entity.games_collection.collection
+  title: 'Games Collection list'
+  appears_on:
+    - games_collection.settings
+  options:
+    attributes:
+      class:
+        - default-action-button
+
+entity.games_collections.goto_settings:
+  route_name: games_collection.settings
+  title: 'Games Collection settings'
+  appears_on:
+    - entity.games_collection.collection
+  options:
+    attributes:
+      class:
+        - default-action-button
