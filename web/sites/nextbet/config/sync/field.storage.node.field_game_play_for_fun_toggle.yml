@@ -1,0 +1,18 @@
+uuid: 1583a200-601d-4c9c-ad4b-16795c09cad8
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_game_play_for_fun_toggle
+field_name: field_game_play_for_fun_toggle
+entity_type: node
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
