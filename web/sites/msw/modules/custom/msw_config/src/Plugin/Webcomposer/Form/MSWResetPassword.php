@@ -16,7 +16,7 @@ use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
 class MSWResetPassword extends WebcomposerFormBase implements WebcomposerFormInterface {
 
   /**
-   * Get Settings.
+   * Get Settings of MSWResestPassword.
    */
   public function getSettings() {
     return [
