@@ -5,6 +5,8 @@ dependencies:
   module:
     - msw_front_blocks
     - text
+_core:
+  default_config_hash: hjy1JOqXzFCDo2UIKbl6AsqiK3pyzXEwVH5w-hc-YRc
 id: msw_front_block.field_body
 field_name: field_body
 entity_type: msw_front_block
