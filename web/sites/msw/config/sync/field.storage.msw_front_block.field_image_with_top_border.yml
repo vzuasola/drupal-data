@@ -4,6 +4,8 @@ status: true
 dependencies:
   module:
     - msw_front_blocks
+_core:
+  default_config_hash: fYoitzkv_MGj6Rb7mSJkuwUGg0mDTjOrEXfapcyysDM
 id: msw_front_block.field_image_with_top_border
 field_name: field_image_with_top_border
 entity_type: msw_front_block
