@@ -7,6 +7,8 @@ dependencies:
   module:
     - msw_front_blocks
     - link
+_core:
+  default_config_hash: nnjSG41SGHO_D3n7esPUdS2tQyKJn6UVrdR8R8CkiQs
 id: msw_front_block.msw_front_block.field_url
 field_name: field_url
 entity_type: msw_front_block
