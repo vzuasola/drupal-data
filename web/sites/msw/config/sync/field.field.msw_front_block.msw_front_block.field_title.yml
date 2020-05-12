@@ -6,6 +6,8 @@ dependencies:
     - field.storage.msw_front_block.field_title
   module:
     - msw_front_blocks
+_core:
+  default_config_hash: RfNE5KlkNHJETNDJvZaQ4H3xcsxkYgMraYKeBup2EXA
 id: msw_front_block.msw_front_block.field_title
 field_name: field_title
 entity_type: msw_front_block

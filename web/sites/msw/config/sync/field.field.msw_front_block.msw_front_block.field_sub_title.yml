@@ -6,6 +6,8 @@ dependencies:
     - field.storage.msw_front_block.field_sub_title
   module:
     - msw_front_blocks
+_core:
+  default_config_hash: UEKG1_Oo9tLgfzh5fCuADKHlbAZ5wl9MfQ1RnG4jVv0
 id: msw_front_block.msw_front_block.field_sub_title
 field_name: field_sub_title
 entity_type: msw_front_block

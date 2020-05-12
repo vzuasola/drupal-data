@@ -6,6 +6,8 @@ dependencies:
     - field.storage.msw_front_block.field_image_with_top_border
   module:
     - msw_front_blocks
+_core:
+  default_config_hash: '-WNyMSNRqVBujC3nB1LK_UZjUOdIBu0-tgGm9YqHQOM'
 id: msw_front_block.msw_front_block.field_image_with_top_border
 field_name: field_image_with_top_border
 entity_type: msw_front_block
