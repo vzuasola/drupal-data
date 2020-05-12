@@ -1,26 +1,25 @@
-uuid: 20006447-f40d-4d1e-86ae-bb3b04bf558c
+uuid: f04c8558-e561-4b16-8d2b-60d391d935d1
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.msw_front_block.field_image_with_top_border
+    - field.storage.msw_front_block.field_link
   module:
     - msw_front_blocks
+    - link
 _core:
-  default_config_hash: '-WNyMSNRqVBujC3nB1LK_UZjUOdIBu0-tgGm9YqHQOM'
-id: msw_front_block.msw_front_block.field_image_with_top_border
-field_name: field_image_with_top_border
+  default_config_hash: Z3Dy6Eqr0KEj13_bli9ITexFZN-Tet25o9OUp3B8pPs
+id: msw_front_block.msw_front_block.field_link
+field_name: field_link
 entity_type: msw_front_block
 bundle: msw_front_block
-label: 'Top Border'
+label: 'Image Link'
 description: ''
 required: false
 translatable: true
-default_value:
-  -
-    value: 0
+default_value: {  }
 default_value_callback: ''
 settings:
-  on_label: 'On'
-  off_label: 'Off'
-field_type: boolean
+  link_type: 17
+  title: 1
+field_type: link
