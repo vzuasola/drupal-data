@@ -14,6 +14,8 @@ third_party_settings:
       file: file
       alt: '0'
       title: '0'
+_core:
+  default_config_hash: qt25tiALjpJOROtYCFE4tuQ_O1VVcZ5rz7w9oX0Za3Y
 id: msw_front_block.msw_front_block.field_image
 field_name: field_image
 entity_type: msw_front_block
