@@ -47,6 +47,7 @@ module:
   menu_ui: 0
   metatag: 0
   nextbet_config: 0
+  nextbet_footer_config: 0
   nextbet_forms: 0
   nextbet_urls: 0
   node: 0
