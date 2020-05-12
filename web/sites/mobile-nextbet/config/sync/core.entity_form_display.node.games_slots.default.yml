@@ -3,27 +3,17 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.games_slots.body
     - field.field.node.games_slots.field_all_games_category_ribbon
+    - field.field.node.games_slots.field_games_list_category
     - node.type.games_slots
   module:
     - path
     - scheduler
-    - text
 id: node.games_slots.default
 targetEntityType: node
 bundle: games_slots
 mode: default
 content:
-  body:
-    type: text_textarea_with_summary
-    weight: 121
-    settings:
-      rows: 9
-      summary_rows: 3
-      placeholder: ''
-    third_party_settings: {  }
-    region: content
   created:
     type: datetime_timestamp
     weight: 10
@@ -35,6 +25,12 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
+  field_games_list_category:
+    weight: 123
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
     region: content
   langcode:
     type: language_select
