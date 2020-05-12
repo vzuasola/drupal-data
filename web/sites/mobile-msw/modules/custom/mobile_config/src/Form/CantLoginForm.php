@@ -54,7 +54,7 @@ class CantLoginForm extends FormBase {
             '#title' => t('Forgot Password Setting'),
             '#group' => 'advanced',
         ];
-
+        $content = $this->get('forgot_password_success_message');
         $form['page_forgot_password_setting']['forgot_password_success_message'] = [
             '#type' => 'text_format',
             '#title' => $this->t('Forgot Password Success Message'),
@@ -70,7 +70,7 @@ class CantLoginForm extends FormBase {
             '#title' => t('Reset Password Setting'),
             '#group' => 'advanced',
         ];
-
+        $content = $this->get('reset_password_success_message');
         $form['page_reset_password_setting']['reset_password_success_message'] = [
             '#type' => 'text_format',
             '#title' => $this->t('Reset Password Success Message'),
@@ -79,7 +79,7 @@ class CantLoginForm extends FormBase {
             '#required' => FALSE,
             '#translatable' => TRUE,
         ];
-
+        $content = $this->get('reset_password_error_message');
         $form['page_reset_password_setting']['reset_password_error_message'] = [
             '#type' => 'text_format',
             '#title' => $this->t('Reset Password Error Message'),
@@ -88,7 +88,7 @@ class CantLoginForm extends FormBase {
             '#required' => FALSE,
             '#translatable' => TRUE,
         ];
-
+        $content = $this->get('expired_message');
         $form['page_reset_password_setting']['expired_message'] = [
             '#type' => 'text_format',
             '#title' => $this->t('Expired Message'),
