@@ -4,8 +4,7 @@ namespace Drupal\nextbet_payments;
 
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Entity\EntityListBuilder;
-use Drupal\Core\Routing\LinkGeneratorTrait;
-use Drupal\Core\Url;
+use Drupal\Core\Link;
 
 /**
  * Defines a class to build a listing of Nextbet payment entities.
@@ -13,7 +12,6 @@ use Drupal\Core\Url;
  * @ingroup nextbet_payments
  */
 class NextbetPaymentListBuilder extends EntityListBuilder {
-  use LinkGeneratorTrait;
 
   /**
    * {@inheritdoc}
