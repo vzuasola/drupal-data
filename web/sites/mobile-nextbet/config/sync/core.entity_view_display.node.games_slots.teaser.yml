@@ -4,26 +4,20 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.games_slots.body
+    - field.field.node.games_slots.field_all_games_category_ribbon
+    - field.field.node.games_slots.field_games_list_category
     - node.type.games_slots
   module:
-    - text
     - user
 id: node.games_slots.teaser
 targetEntityType: node
 bundle: games_slots
 mode: teaser
 content:
-  body:
-    label: hidden
-    type: text_summary_or_trimmed
-    weight: 101
-    settings:
-      trim_length: 600
-    third_party_settings: {  }
-    region: content
   links:
     weight: 100
     region: content
 hidden:
+  field_all_games_category_ribbon: true
+  field_games_list_category: true
   langcode: true
