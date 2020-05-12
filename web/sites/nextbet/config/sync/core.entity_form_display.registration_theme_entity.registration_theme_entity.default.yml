@@ -15,7 +15,6 @@ dependencies:
     - field.field.registration_theme_entity.registration_theme_entity.field_registration_button_form_h
     - field.field.registration_theme_entity.registration_theme_entity.field_registration_form
     - field.field.registration_theme_entity.registration_theme_entity.field_registration_theme_code
-    - field.field.registration_theme_entity.registration_theme_entity.field_separator_color
     - field.field.registration_theme_entity.registration_theme_entity.field_steptwo_banner
     - field.field.registration_theme_entity.registration_theme_entity.field_steptwo_content
     - field.field.registration_theme_entity.registration_theme_entity.field_success_message
@@ -214,12 +213,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
-    region: content
-  field_separator_color:
-    weight: 12
-    settings: {  }
-    third_party_settings: {  }
-    type: color_field_widget_html5
     region: content
   field_steptwo_banner:
     weight: 18
