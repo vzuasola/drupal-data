@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.games_slots.field_game_ribbon
     - field.field.node.games_slots.field_games_list_category
     - field.field.node.games_slots.field_games_subprovider
+    - field.field.node.games_slots.field_keywords
     - node.type.games_slots
   module:
     - path
@@ -83,6 +84,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
+  field_keywords:
+    weight: 131
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
     region: content
   langcode:
     type: language_select
