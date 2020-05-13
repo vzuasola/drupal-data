@@ -16,7 +16,7 @@ function nextbet_payments_uninstall()
       'field.field.nextbet_payment.nextbet_payment.field_partner_link_target.yml',
       'field.storage.nextbet_payment.field_partner_link_target.yml',
       'language.content_settings.nextbet_payment.nextbet_payment.yml',
-      'views.view.nextbet_payments_api.yml'
+      'views.view.nextbet_payment.yml'
     ];
 
     foreach ($keys as $key) {

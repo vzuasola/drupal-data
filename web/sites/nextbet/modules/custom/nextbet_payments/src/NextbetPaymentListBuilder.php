@@ -34,14 +34,10 @@ class NextbetPaymentListBuilder extends EntityListBuilder {
       $entity = $entity->getTranslation($language);
       $name = $entity->get('name')->value;
 
-      $row['name'] = $this->l(
+      $row['name'] = Link::createFromRoute(
         $name,
-        new Url(
-          'entity.nextbet_payment.edit_form',
-          array(
-            'nextbet_payment' => $entity->id(),
-          )
-        )
+        'entity.nextbet_payment.edit_form',
+        ['nextbet_payment' => $entity->id()]
       );
 
       return $row + parent::buildRow($entity);
