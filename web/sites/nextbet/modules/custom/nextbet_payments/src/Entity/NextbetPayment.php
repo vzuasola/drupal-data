@@ -10,13 +10,13 @@ use Drupal\Core\Entity\EntityTypeInterface;
 use Drupal\user\UserInterface;
 
 /**
- * Defines the Nextbet Payment entity.
+ * Defines the Nextbet payment entity.
  *
  * @ingroup nextbet_payments
  *
  * @ContentEntityType(
  *   id = "nextbet_payment",
- *   label = @Translation("Nextbet Payment"),
+ *   label = @Translation("Nextbet payment"),
  *   handlers = {
  *     "view_builder" = "Drupal\Core\Entity\EntityViewBuilder",
  *     "list_builder" = "Drupal\nextbet_payments\NextbetPaymentListBuilder",
@@ -37,7 +37,7 @@ use Drupal\user\UserInterface;
  *   base_table = "nextbet_payment",
  *   data_table = "nextbet_payment_field_data",
  *   translatable = TRUE,
- *   admin_permission = "administer nextbet payment entities",
+ *   admin_permission = "administer Nextbet payment entities",
  *   entity_keys = {
  *     "id" = "id",
  *     "label" = "name",
