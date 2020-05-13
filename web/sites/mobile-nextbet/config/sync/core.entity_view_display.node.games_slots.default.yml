@@ -13,6 +13,7 @@ dependencies:
     - field.field.node.games_slots.field_games_list_category
     - field.field.node.games_slots.field_games_subprovider
     - field.field.node.games_slots.field_keywords
+    - field.field.node.games_slots.field_preview_mode
     - node.type.games_slots
   module:
     - options
@@ -100,6 +101,16 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: basic_string
+    region: content
+  field_preview_mode:
+    weight: 112
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
     region: content
   links:
     weight: 100
