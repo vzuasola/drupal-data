@@ -22,3 +22,5 @@ games_ribbon: 0
 games_ribbon_message: 'Term @term already exists in vocabulary @vocabulary.'
 games_filter: 0
 games_filter_message: 'Term @term already exists in vocabulary @vocabulary.'
+games_subprovider: 1
+games_subprovider_message: 'Term @term already exists in vocabulary @vocabulary.'
