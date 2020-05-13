@@ -13,6 +13,7 @@ dependencies:
     - field.field.node.games_slots.field_games_list_category
     - field.field.node.games_slots.field_games_list_thumb_img_big
     - field.field.node.games_slots.field_games_list_thumb_img_small
+    - field.field.node.games_slots.field_games_list_thumbnail_size
     - field.field.node.games_slots.field_games_subprovider
     - field.field.node.games_slots.field_games_target
     - field.field.node.games_slots.field_keywords
@@ -108,6 +109,13 @@ content:
       image_link: ''
     third_party_settings: {  }
     type: image
+    region: content
+  field_games_list_thumbnail_size:
+    weight: 116
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
   field_games_subprovider:
     weight: 110
