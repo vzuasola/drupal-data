@@ -29,16 +29,13 @@ function games_config_help($route_name, RouteMatchInterface $route_match) {
 function games_config_form_alter(&$form, $form_state, $form_id) {
     $submitAction = false;
     switch($form_id) {
-        case 'node_game_form':
-        case 'node_game_edit_form':
-            $submitAction = 'games_config_node_form_submit';
-            break;
-        case 'taxonomy_term_game_subprovider_form':
-          $submitAction = 'games_config_subprovider_form_submit';
-        case 'node_games_2_0_form':
-        case 'node_games_2_0_edit_form':
-          $form['#validate'][] = 'games_config_validate';
-          break;
+      case 'node_game_form':
+      case 'node_game_edit_form':
+        $form['#validate'][] = 'games_config_validate';
+        break;
+      case 'taxonomy_term_game_subprovider_form':
+        $submitAction = 'games_config_subprovider_form_submit';
+        break;
     }
     if ($submitAction !== false) {
         foreach (array_keys($form['actions']) as $action) {
