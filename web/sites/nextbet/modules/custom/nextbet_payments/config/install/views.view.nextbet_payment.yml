@@ -6,6 +6,7 @@ dependencies:
     - nextbet_payments
     - rest
     - serialization
+    - webcomposer_rest_extra
 id: nextbet_payment
 label: 'Nextbet Payment'
 module: views
@@ -200,17 +201,17 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: api/nextbet_payments
+      path: api/nextbet-payments
       pager:
         type: none
         options:
           offset: 0
       style:
-        type: serializer
+        type: node_list_serializer
         options:
-          grouping: {  }
           uses_fields: false
-          formats: {  }
+          formats:
+            json: json
       row:
         type: data_entity
         options: {  }
