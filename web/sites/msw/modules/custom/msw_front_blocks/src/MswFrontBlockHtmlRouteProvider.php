@@ -43,7 +43,7 @@ class MswFrontBlockHtmlRouteProvider extends AdminHtmlRouteProvider {
       $route = new Route("/admin/structure/{$entity_type->id()}/settings");
       $route
         ->setDefaults([
-          '_form' => 'Drupal\msw_front_blocks\Form\mswFrontBlockSettingsForm',
+          '_form' => 'Drupal\msw_front_blocks\Form\MswFrontBlockSettingsForm',
           '_title' => "{$entity_type->getLabel()} settings",
         ])
         ->setRequirement('_permission', $entity_type->getAdminPermission())
