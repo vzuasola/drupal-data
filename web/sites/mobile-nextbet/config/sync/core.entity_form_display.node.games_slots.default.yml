@@ -11,12 +11,15 @@ dependencies:
     - field.field.node.games_slots.field_game_provider
     - field.field.node.games_slots.field_game_ribbon
     - field.field.node.games_slots.field_games_list_category
+    - field.field.node.games_slots.field_games_list_thumb_img_big
     - field.field.node.games_slots.field_games_subprovider
     - field.field.node.games_slots.field_games_target
     - field.field.node.games_slots.field_keywords
     - field.field.node.games_slots.field_preview_mode
+    - image.style.thumbnail
     - node.type.games_slots
   module:
+    - image
     - path
     - scheduler
 id: node.games_slots.default
@@ -80,6 +83,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
+    region: content
+  field_games_list_thumb_img_big:
+    weight: 134
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
     region: content
   field_games_subprovider:
     weight: 130
