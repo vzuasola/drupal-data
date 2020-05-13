@@ -1,0 +1,7 @@
+webcomposer_module.admin_settings:
+  path: 'admin/config/registration/theme'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Registration Theme'
+  requirements:
+    _permission: 'administer site configuration'
