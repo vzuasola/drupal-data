@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.games_slots.field_game_ribbon
     - field.field.node.games_slots.field_games_list_category
     - field.field.node.games_slots.field_games_subprovider
+    - field.field.node.games_slots.field_keywords
     - node.type.games_slots
   module:
     - options
@@ -92,6 +93,13 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
+    region: content
+  field_keywords:
+    weight: 111
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
     region: content
   links:
     weight: 100
