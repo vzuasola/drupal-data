@@ -1,0 +1,16 @@
+uuid: 54d6eaed-a322-4854-9f26-b0f3bae8ecd7
+langcode: lo
+status: true
+dependencies:
+  module:
+    - webcomposer_language_hierarchy
+third_party_settings:
+  webcomposer_language_hierarchy:
+    webcomposer_fallback_langcode: en
+    webcomposer_language_custom_label: Lao
+    webcomposer_language_hidden: 0
+id: lo
+label: Laos
+direction: ltr
+weight: 10
+locked: false

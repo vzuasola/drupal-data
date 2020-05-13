@@ -7,6 +7,8 @@ dependencies:
   module:
     - color_field
     - msw_front_blocks
+_core:
+  default_config_hash: v-x0AykH7BBDIMA4zl2jZZTH-xLFqrQP0Wxo8F2wRe8
 id: msw_front_block.msw_front_block.field_featured_tag_label_color
 field_name: field_featured_tag_label_color
 entity_type: msw_front_block
