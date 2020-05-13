@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.games_slots.field_game_ribbon
     - field.field.node.games_slots.field_games_list_category
     - field.field.node.games_slots.field_games_subprovider
+    - field.field.node.games_slots.field_games_target
     - field.field.node.games_slots.field_keywords
     - field.field.node.games_slots.field_preview_mode
     - node.type.games_slots
@@ -82,6 +83,12 @@ content:
     region: content
   field_games_subprovider:
     weight: 130
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_games_target:
+    weight: 133
     settings: {  }
     third_party_settings: {  }
     type: options_select
