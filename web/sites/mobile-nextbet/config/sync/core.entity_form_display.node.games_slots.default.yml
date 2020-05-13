@@ -13,6 +13,7 @@ dependencies:
     - field.field.node.games_slots.field_games_list_category
     - field.field.node.games_slots.field_games_subprovider
     - field.field.node.games_slots.field_keywords
+    - field.field.node.games_slots.field_preview_mode
     - node.type.games_slots
   module:
     - path
@@ -92,6 +93,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textarea
+    region: content
+  field_preview_mode:
+    weight: 132
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
     region: content
   langcode:
     type: language_select
