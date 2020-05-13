@@ -11,5 +11,5 @@ third_party_settings:
 id: es-ar
 label: 'Spanish, Argentina'
 direction: ltr
-weight: 9
+weight: 8
 locked: false
