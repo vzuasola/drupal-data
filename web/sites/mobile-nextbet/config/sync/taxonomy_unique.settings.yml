@@ -18,3 +18,9 @@ product_integrations: 1
 product_integrations_message: 'Term @term already exists in vocabulary @vocabulary.'
 promotions_product_filter: 0
 promotions_product_filter_message: 'Term @term already exists in vocabulary @vocabulary.'
+games_ribbon: 0
+games_ribbon_message: 'Term @term already exists in vocabulary @vocabulary.'
+games_filter: 0
+games_filter_message: 'Term @term already exists in vocabulary @vocabulary.'
+games_subprovider: 1
+games_subprovider_message: 'Term @term already exists in vocabulary @vocabulary.'

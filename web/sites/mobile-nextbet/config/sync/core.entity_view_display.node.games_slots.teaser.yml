@@ -1,0 +1,23 @@
+uuid: 793c753f-0a40-4265-9daa-6600d8526026
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.games_slots.field_all_games_category_ribbon
+    - field.field.node.games_slots.field_games_list_category
+    - node.type.games_slots
+  module:
+    - user
+id: node.games_slots.teaser
+targetEntityType: node
+bundle: games_slots
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_all_games_category_ribbon: true
+  field_games_list_category: true
+  langcode: true
