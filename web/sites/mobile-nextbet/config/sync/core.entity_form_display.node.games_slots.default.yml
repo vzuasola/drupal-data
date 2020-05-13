@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.games_slots.field_game_ribbon
     - field.field.node.games_slots.field_games_list_category
     - field.field.node.games_slots.field_games_list_thumb_img_big
+    - field.field.node.games_slots.field_games_list_thumb_img_small
     - field.field.node.games_slots.field_games_subprovider
     - field.field.node.games_slots.field_games_target
     - field.field.node.games_slots.field_keywords
@@ -86,6 +87,14 @@ content:
     region: content
   field_games_list_thumb_img_big:
     weight: 134
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_games_list_thumb_img_small:
+    weight: 135
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
