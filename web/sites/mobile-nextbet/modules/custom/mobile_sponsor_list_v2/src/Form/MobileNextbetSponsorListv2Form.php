@@ -32,8 +32,7 @@ class MobileNextbetSponsorListv2Form extends FormBase {
   /**
    * {@inheritdoc}
    */
-  public function form(array $form, FormStateInterface $form_state)
-  {
+  public function form(array $form, FormStateInterface $form_state) {
     $this->sectionNextbetConfigs($form);
 
     return $form;
