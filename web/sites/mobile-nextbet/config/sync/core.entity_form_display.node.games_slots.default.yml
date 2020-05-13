@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.games_slots.field_disable_game_loader
     - field.field.node.games_slots.field_game_code
     - field.field.node.games_slots.field_game_filter
+    - field.field.node.games_slots.field_game_platform
     - field.field.node.games_slots.field_games_list_category
     - node.type.games_slots
   module:
@@ -49,6 +50,12 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
+    region: content
+  field_game_platform:
+    weight: 127
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   field_games_list_category:
     weight: 123
