@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.games_slots.field_game_filter
     - field.field.node.games_slots.field_game_platform
     - field.field.node.games_slots.field_game_provider
+    - field.field.node.games_slots.field_game_ribbon
     - field.field.node.games_slots.field_games_list_category
     - node.type.games_slots
   module:
@@ -60,6 +61,12 @@ content:
     region: content
   field_game_provider:
     weight: 128
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_game_ribbon:
+    weight: 129
     settings: {  }
     third_party_settings: {  }
     type: options_select
