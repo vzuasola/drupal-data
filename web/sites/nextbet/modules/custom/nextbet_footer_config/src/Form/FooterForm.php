@@ -50,7 +50,6 @@ class FooterForm extends FormBase {
    *
    */
   private function sectionInformation(array &$form) {
-    $config = $this->config('nextbet_footer_config.footer_configuration');
 
     $form['information_group'] = [
       '#type' => 'details',
@@ -63,8 +62,9 @@ class FooterForm extends FormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Information Title'),
       '#description' => $this->t('Text to be displayed in information title.'),
-      '#default_value' => $config->get('information_title'),
-      '#required' => TRUE,
+      '#default_value' => $this->get('information_title'),
+      '#translatable' => TRUE,
+
     ];
   }
 
@@ -72,7 +72,6 @@ class FooterForm extends FormBase {
    *
    */
   private function sectionHelpCenter(array &$form) {
-    $config = $this->config('nextbet_footer_config.footer_configuration');
 
     $form['help_center_group'] = [
       '#type' => 'details',
@@ -85,8 +84,8 @@ class FooterForm extends FormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Help Center Title'),
       '#description' => $this->t('Text to be displayed in help center title.'),
-      '#default_value' => $config->get('help_center_title'),
-      '#required' => TRUE,
+      '#default_value' => $this->get('help_center_title'),
+      '#translatable' => TRUE,
     ];
   }
 
@@ -94,7 +93,6 @@ class FooterForm extends FormBase {
    *
    */
   private function sectionPayments(array &$form) {
-    $config = $this->config('nextbet_footer_config.footer_configuration');
 
     $form['payments_group'] = [
       '#type' => 'details',
@@ -107,8 +105,8 @@ class FooterForm extends FormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Payments Title'),
       '#description' => $this->t('Text to be displayed in payment title.'),
-      '#default_value' => $config->get('payments_title'),
-      '#required' => TRUE,
+      '#default_value' => $this->get('payments_title'),
+      '#translatable' => TRUE,
     ];
   }
 
@@ -116,7 +114,6 @@ class FooterForm extends FormBase {
    *
    */
   private function sectionPartners(array &$form) {
-    $config = $this->config('nextbet_footer_config.footer_configuration');
 
     $form['partners_group'] = [
       '#type' => 'details',
@@ -129,8 +126,8 @@ class FooterForm extends FormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Official Partner Title'),
       '#description' => $this->t('Text to be displayed in partner title.'),
-      '#default_value' => $config->get('partners_title'),
-      '#required' => TRUE,
+      '#default_value' => $this->get('partners_title'),
+      '#translatable' => TRUE,
     ];
   }
 }

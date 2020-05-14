@@ -6,6 +6,8 @@ dependencies:
     - msw_front_blocks
     - file
     - image
+_core:
+  default_config_hash: YAkLycFNnoNNysyU_Q-3cYGcyaQMJc0OHlkaHZplffs
 id: msw_front_block.field_image
 field_name: field_image
 entity_type: msw_front_block

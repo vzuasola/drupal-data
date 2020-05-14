@@ -11,5 +11,5 @@ third_party_settings:
 id: es-cl
 label: 'Spanish, Chile'
 direction: ltr
-weight: 8
+weight: 7
 locked: false
