@@ -9,12 +9,18 @@ dependencies:
     - field.field.left_floating_banner_entity.left_floating_banner_entity.field_link
     - field.field.left_floating_banner_entity.left_floating_banner_entity.field_link_target
     - field.field.left_floating_banner_entity.left_floating_banner_entity.field_link_text
+    - field.field.left_floating_banner_entity.left_floating_banner_entity.field_os_excluded
     - field.field.left_floating_banner_entity.left_floating_banner_entity.field_per_page_config
+    - field.field.left_floating_banner_entity.left_floating_banner_entity.field_per_product_config
+    - field.field.left_floating_banner_entity.left_floating_banner_entity.field_platform
     - field.field.left_floating_banner_entity.left_floating_banner_entity.field_title
     - field.field.left_floating_banner_entity.left_floating_banner_entity.field_title_layout
   module:
+    - options
     - user
     - webcomposer_floating_banners
+_core:
+  default_config_hash: gqe-SURSFMW7PX2rDQiLlavv8l3TRTB5fSW1kFoGkMc
 id: left_floating_banner_entity.left_floating_banner_entity.default
 targetEntityType: left_floating_banner_entity
 bundle: left_floating_banner_entity
@@ -35,6 +41,27 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_os_excluded:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_per_product_config:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_platform:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
   name:
     label: above
