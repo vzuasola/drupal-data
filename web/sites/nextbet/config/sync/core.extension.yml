@@ -48,6 +48,7 @@ module:
   menu_ui: 0
   metatag: 0
   nextbet_config: 0
+  nextbet_footer_config: 0
   nextbet_forms: 0
   nextbet_urls: 0
   node: 0
@@ -105,6 +106,8 @@ module:
   webcomposer_territory_blocking: 0
   webcomposer_token: 0
   webcomposer_webform: 0
+  nextbet_footer_config: 0
+  nextbet_payments: 0
   webform: 0
   webform_rest: 0
   webform_ui: 0

@@ -4,6 +4,8 @@ status: true
 dependencies:
   module:
     - msw_front_blocks
+_core:
+  default_config_hash: LTklg2U5DZuGZgTyRjSmjLHBZ1BbB2Tu4_w0lB5HMBk
 id: msw_front_block.msw_front_block.user_id
 field_name: user_id
 entity_type: msw_front_block
