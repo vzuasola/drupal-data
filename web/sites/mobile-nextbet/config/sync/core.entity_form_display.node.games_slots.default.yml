@@ -21,9 +21,26 @@ dependencies:
     - image.style.thumbnail
     - node.type.games_slots
   module:
+    - field_group
     - image
     - path
     - scheduler
+third_party_settings:
+  field_group:
+    group_game_filters:
+      children:
+        - field_game_filter
+      parent_name: ''
+      weight: 24
+      format_type: tab
+      format_settings:
+        label: 'Game Filters'
+        formatter: open
+        description: ''
+        required_fields: true
+        id: game-filters
+        classes: ''
+      label: 'Game Filters'
 id: node.games_slots.default
 targetEntityType: node
 bundle: games_slots
@@ -31,25 +48,25 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 10
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
   field_all_games_category_ribbon:
-    weight: 122
+    type: options_select
+    weight: 21
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_disable_game_loader:
-    weight: 124
+    type: boolean_checkbox
+    weight: 26
+    region: content
     settings:
       display_label: true
     third_party_settings: {  }
-    type: boolean_checkbox
-    region: content
   field_game_code:
-    weight: 125
+    weight: 1
     settings:
       size: 60
       placeholder: ''
@@ -57,154 +74,154 @@ content:
     type: string_textfield
     region: content
   field_game_filter:
-    weight: 126
-    settings: {  }
-    third_party_settings: {  }
     type: options_buttons
+    weight: 0
     region: content
-  field_game_platform:
-    weight: 127
     settings: {  }
     third_party_settings: {  }
+  field_game_platform:
     type: options_select
+    weight: 4
     region: content
+    settings: {  }
+    third_party_settings: {  }
   field_game_provider:
-    weight: 128
+    weight: 2
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_game_ribbon:
-    weight: 129
+    type: options_select
+    weight: 20
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_games_list_category:
-    weight: 123
-    settings: {  }
-    third_party_settings: {  }
     type: options_buttons
+    weight: 16
     region: content
+    settings: {  }
+    third_party_settings: {  }
   field_games_list_thumb_img_big:
-    weight: 134
+    type: image_image
+    weight: 19
+    region: content
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
-    type: image_image
-    region: content
   field_games_list_thumb_img_small:
-    weight: 135
+    type: image_image
+    weight: 18
+    region: content
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
-    type: image_image
-    region: content
   field_games_list_thumbnail_size:
-    weight: 136
+    type: options_select
+    weight: 17
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_games_subprovider:
-    weight: 130
+    type: options_select
+    weight: 3
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_games_target:
-    weight: 133
+    type: options_select
+    weight: 23
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_keywords:
-    weight: 131
+    type: string_textarea
+    weight: 22
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textarea
-    region: content
   field_preview_mode:
-    weight: 132
+    type: boolean_checkbox
+    weight: 25
+    region: content
     settings:
       display_label: true
     third_party_settings: {  }
-    type: boolean_checkbox
-    region: content
   langcode:
     type: language_select
-    weight: 2
+    weight: 5
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   path:
     type: path
-    weight: 30
+    weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
+    weight: 9
+    region: content
     settings:
       display_label: true
-    weight: 15
-    region: content
     third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
-    weight: 30
+    weight: 13
     region: content
     settings: {  }
     third_party_settings: {  }
   scheduler_settings:
-    weight: 20
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
+    weight: 15
+    region: content
     settings:
       display_label: true
-    weight: 120
-    region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
+    weight: 10
+    region: content
     settings:
       display_label: true
-    weight: 16
-    region: content
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: -5
+    weight: 0
     region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 10
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 5
+    weight: 6
+    region: content
     settings:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
-    region: content
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp_no_default
-    weight: 30
+    weight: 14
     region: content
     settings: {  }
     third_party_settings: {  }
