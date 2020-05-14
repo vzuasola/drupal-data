@@ -11,7 +11,7 @@ ignored_config_entities:
   18: 'mobile_owsports.*'
   20: 'webcomposer_cache.*'
   22: 'mobile_promotions.*'
-  24: 'mobile_entrypage.*'
+  24: 'mobile_nextbet.*'
   26: 'contact_us_config.*'
   28: 'webcomposer_form_manager.form.contact_us_form.*'
 _core:
