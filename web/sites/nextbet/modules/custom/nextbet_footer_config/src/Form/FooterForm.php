@@ -62,7 +62,8 @@ class FooterForm extends FormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Information Title'),
       '#description' => $this->t('Text to be displayed in information title.'),
-      '#default_value' => $this->get('information_title'),
+      '#default_value' => $this->get('information_title') ?? 'Information',
+      '#required' => TRUE,
       '#translatable' => TRUE,
 
     ];
@@ -84,7 +85,8 @@ class FooterForm extends FormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Help Center Title'),
       '#description' => $this->t('Text to be displayed in help center title.'),
-      '#default_value' => $this->get('help_center_title'),
+      '#default_value' => $this->get('help_center_title') ?? 'Help Center',
+      '#required' => TRUE,
       '#translatable' => TRUE,
     ];
   }
@@ -105,7 +107,8 @@ class FooterForm extends FormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Payments Title'),
       '#description' => $this->t('Text to be displayed in payment title.'),
-      '#default_value' => $this->get('payments_title'),
+      '#default_value' => $this->get('payments_title') ?? 'Payments',
+      '#required' => TRUE,
       '#translatable' => TRUE,
     ];
   }
@@ -126,7 +129,8 @@ class FooterForm extends FormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Official Partner Title'),
       '#description' => $this->t('Text to be displayed in partner title.'),
-      '#default_value' => $this->get('partners_title'),
+      '#default_value' => $this->get('partners_title') ?? 'Official Partner of',
+      '#required' => TRUE,
       '#translatable' => TRUE,
     ];
   }
