@@ -32,8 +32,7 @@ class MobileNextbetForm extends FormBase {
   /**
    * {@inheritdoc}
    */
-  public function form(array $form, FormStateInterface $form_state)
-  {
+  public function form(array $form, FormStateInterface $form_state) {
     $form['advanced'] = [
       '#type' => 'vertical_tabs',
       '#title' => t('Nextbet Configuration'),
