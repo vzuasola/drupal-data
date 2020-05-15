@@ -60,11 +60,13 @@ class MSWForgotPasswordForm extends WebcomposerFormBase implements WebcomposerFo
           '#title' => 'Username label',
           '#type' => 'textfield',
           '#description' => 'label for Username field',
+          '#default_value' => 'Username',
         ],
         'placeholder' => [
           '#title' => 'Username placeholder label',
           '#type' => 'textfield',
           '#description' => 'label for Username field placeholder',
+          '#default_value' => 'Username',
         ],
         'annotation' => [
           '#title' => 'Annotation text',
@@ -82,11 +84,13 @@ class MSWForgotPasswordForm extends WebcomposerFormBase implements WebcomposerFo
           '#title' => 'Email Label',
           '#type' => 'textfield',
           '#description' => 'The Label for Email field',
+          '#default_value' => 'Email',
         ],
         'placeholder' => [
           '#title' => 'Email placeholder label',
           '#type' => 'textfield',
           '#description' => 'label for Email field placeholder',
+          '#default_value' => 'Email',
         ],
         'annotation' => [
           '#title' => 'Annotation text',
