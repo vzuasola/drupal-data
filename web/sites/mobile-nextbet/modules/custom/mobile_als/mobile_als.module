@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains mobile_als.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function mobile_als_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the mobile_als module.
+    case 'help.page.mobile_als':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Mobile ALS specific configurations') . '</p>';
+      return $output;
+
+    default:
+  }
+}
