@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.mobile_sponsor_list_v2.mobile_sponsor_list_v2.field_li
+    - field.field.mobile_sponsor_list_v2.mobile_sponsor_list_v2.field_link_target
     - field.field.mobile_sponsor_list_v2.mobile_sponsor_list_v2.field_sponsor_enable
     - field.field.mobile_sponsor_list_v2.mobile_sponsor_list_v2.field_sponsor_link
     - field.field.mobile_sponsor_list_v2.mobile_sponsor_list_v2.field_sponsor_svg_class
@@ -16,7 +16,7 @@ targetEntityType: mobile_sponsor_list_v2
 bundle: mobile_sponsor_list_v2
 mode: default
 content:
-  field_li:
+  field_link_target:
     weight: 5
     settings: {  }
     third_party_settings: {  }

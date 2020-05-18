@@ -14,7 +14,7 @@ bundle: floating_banner_item
 label: 'Lightbox Title'
 description: 'Please add lightbox title'
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }
