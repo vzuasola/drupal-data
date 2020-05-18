@@ -1,0 +1,5 @@
+name: Game Category Provider Configs
+type: module
+description: Custom configurations for Game Category Provider.
+package: Custom
+core: 8.x
