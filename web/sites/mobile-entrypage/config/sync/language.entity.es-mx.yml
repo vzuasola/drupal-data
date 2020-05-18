@@ -11,5 +11,5 @@ third_party_settings:
 id: es-mx
 label: 'Spanish, Mexico'
 direction: ltr
-weight: 10
+weight: 9
 locked: false

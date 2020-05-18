@@ -11,5 +11,5 @@ third_party_settings:
 id: es-pe
 label: 'Spanish, Peru'
 direction: ltr
-weight: 7
+weight: 6
 locked: false

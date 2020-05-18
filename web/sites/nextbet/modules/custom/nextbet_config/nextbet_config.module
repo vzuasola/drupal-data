@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains nextbet_config.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function nextbet_config_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the nextbet_config module.
+    case 'help.page.nextbet_config':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Custom module for nextbet specific updates') . '</p>';
+      return $output;
+
+    default:
+  }
+}

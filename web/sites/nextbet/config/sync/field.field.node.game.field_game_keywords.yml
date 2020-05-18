@@ -1,0 +1,21 @@
+uuid: 4182a8ee-25c2-4b1f-866f-b0b90e617086
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_game_keywords
+    - node.type.game
+  module:
+    - text
+id: node.game.field_game_keywords
+field_name: field_game_keywords
+entity_type: node
+bundle: game
+label: 'Search Keywords'
+description: 'Please enter all the game keywords separated by comma (,) that can be used for the game search.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

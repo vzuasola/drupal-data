@@ -23,6 +23,9 @@ url:
     es-cl: es-cl
     es-ar: es-ar
     es-mx: es-mx
+    km: km
+    lo: lo
+    bu: bu
   domains:
     en: ''
     eu: ''
@@ -44,6 +47,9 @@ url:
     es-cl: ''
     es-ar: ''
     es-mx: ''
+    km: ''
+    lo: ''
+    bu: ''
 selected_langcode: site_default
 _core:
   default_config_hash: uEePITI9tV6WqzmsTb7MfPCi5yPWXSxAN1xeLcYFQbM

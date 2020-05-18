@@ -11,9 +11,12 @@ url:
     ko: kr
     in: in
     hi: hi
-    te: te
     es: es
     pt-br: pt
+    te: te
+    lo: lo
+    km: km
+    my: bu
   domains:
     en: ''
     zh-hans: ''
@@ -23,9 +26,12 @@ url:
     ko: ''
     in: ''
     hi: ''
-    te: ''
     es: ''
     pt-br: ''
+    te: ''
+    lo: ''
+    km: ''
+    my: ''
 selected_langcode: site_default
 _core:
   default_config_hash: uEePITI9tV6WqzmsTb7MfPCi5yPWXSxAN1xeLcYFQbM
