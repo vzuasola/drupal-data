@@ -1,19 +1,19 @@
-uuid: 0e995d62-b5b5-44c2-9ceb-036d1e56060c
+uuid: e9ca7730-be9a-46a6-adfd-53af8c2e3917
 langcode: en
 status: true
 dependencies:
   module:
     - content_translation
-    - webcomposer_sponsor
+    - lobby_product_tiles
 third_party_settings:
   content_translation:
     enabled: true
     bundle_settings:
       untranslatable_fields_hide: '0'
 _core:
-  default_config_hash: 02YQL1LKnM9jqkM_UMaNg6UBqba0nSL1f7S50kb73Lk
-id: sponsor_entity.sponsor_entity
-target_entity_type_id: sponsor_entity
-target_bundle: sponsor_entity
+  default_config_hash: eCJ_P_UMvyimNgpFcxTuqNTC1OoMY1--E09wIVZbGBw
+id: lobby_product_tiles.lobby_product_tiles
+target_entity_type_id: lobby_product_tiles
+target_bundle: lobby_product_tiles
 default_langcode: site_default
 language_alterable: true
