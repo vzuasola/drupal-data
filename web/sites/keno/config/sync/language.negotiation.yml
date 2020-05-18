@@ -9,6 +9,9 @@ url:
     vi: vn
     id: id
     ko: kr
+    lo: lo
+    km: km
+    bu: bu
     '': null
   domains:
     en: ''
@@ -17,6 +20,9 @@ url:
     vi: ''
     id: ''
     ko: ''
+    lo: ''
+    km: ''
+    bu: ''
 selected_langcode: site_default
 _core:
   default_config_hash: uEePITI9tV6WqzmsTb7MfPCi5yPWXSxAN1xeLcYFQbM
