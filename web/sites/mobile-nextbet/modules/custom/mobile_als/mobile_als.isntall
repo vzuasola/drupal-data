@@ -1,0 +1,17 @@
+<?php
+
+
+/**
+ * Implements hook_uninstall
+ */
+function mobile_als_uninstall() {
+  $keys = [
+    'webcomposer_form_manager.form.als_url',
+    'webcomposer_form_manager.form.als_cookie_url_pre',
+    'webcomposer_form_manager.form.als_cookie_url_post',
+  ];
+
+  foreach ($keys as $key) {
+    \Drupal::configFactory()->getEditable($key)->delete();
+  }
+}
