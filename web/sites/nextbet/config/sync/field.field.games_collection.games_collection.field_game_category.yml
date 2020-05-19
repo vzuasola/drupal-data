@@ -13,7 +13,7 @@ entity_type: games_collection
 bundle: games_collection
 label: 'Game Category'
 description: '<i>Applicable only for <strong>top</strong> collection type.</i>'
-required: true
+required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''
