@@ -1,0 +1,22 @@
+uuid: e9e2f0ef-ab1c-4c82-896c-89d4d9175d0e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.webcomposer_slider_v2_entity.field_title
+  module:
+    - webcomposer_slider_v2
+_core:
+  default_config_hash: VtoirvszNkif0OXLNYWWV1jFjDa0axxslwiuq2_EfwA
+id: webcomposer_slider_v2_entity.webcomposer_slider_v2_entity.field_title
+field_name: field_title
+entity_type: webcomposer_slider_v2_entity
+bundle: webcomposer_slider_v2_entity
+label: Title
+description: 'The title of banner slider 2.0'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
