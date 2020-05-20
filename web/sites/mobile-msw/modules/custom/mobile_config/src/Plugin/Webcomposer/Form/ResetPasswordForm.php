@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\reset_password\Plugin\Webcomposer\Form;
+namespace Drupal\mobile_config\Plugin\Webcomposer\Form;
 
 use Drupal\webcomposer_form_manager\WebcomposerFormBase;
 use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
