@@ -17,7 +17,7 @@ use Drupal\Core\Form\FormStateInterface;
  *   menu = {
  *     "title" = "Change Password Form Configuration",
  *     "description" = "Change Password Form COnfiguration",
- *     "parent" = "account_config.config",
+ *     "parent" = "account_config.list",
  *   },
  * )
  */
@@ -27,7 +27,7 @@ class MyAccountChangePasswordForm extends FormBase {
    * {@inheritdoc}
    */
   protected function getEditableConfigNames() {
-    return ['account_config.change_password'];
+    return ['account_config.general_configuration'];
   }
 
   /**
@@ -57,7 +57,7 @@ class MyAccountChangePasswordForm extends FormBase {
 
     $form['field_success_message_group'] = [
       '#type' => 'details',
-      '#title' => 'Mobile Response - Messages',
+      '#title' => 'Response Messages',
       '#group' => 'change_password',
     ];
 

@@ -1,5 +1,5 @@
-account_config.config:
-  title: 'My Account'
-  route_name: account_config.config
-  parent: system.admin
-  description: 'My Account Menu.'
+account_config.list:
+  title: 'My Account Configuration'
+  description: 'Configuration for My Account'
+  parent: system.admin_config
+  route_name: account_config.admin_settings
