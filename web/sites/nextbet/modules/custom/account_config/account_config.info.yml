@@ -1,0 +1,8 @@
+name: My Account Configurations
+description: Module for my account configurations
+package: My Account Configurations
+type: module
+core: 8.x
+dependencies:
+  - rest
+
