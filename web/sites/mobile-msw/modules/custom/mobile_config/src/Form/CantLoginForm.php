@@ -57,8 +57,8 @@ class CantLoginForm extends FormBase {
 
         $content = $this->get('forgot_title');
         $form['page_forgot_password_setting']['forgot_title'] = [
-            '#type' => 'textfield',
-            '#title' => $this->t('Title'),
+            '#type' => 'text_format',
+            '#title' => $this->t('Forgot Password Title'),
             '#default_value' => $content['value'],
             '#translatable' => true,
         ];
@@ -81,9 +81,9 @@ class CantLoginForm extends FormBase {
         ];
 
         $content = $this->get('reset_title');
-        $form['page_forgot_password_setting']['reset_title'] = [
-            '#type' => 'textfield',
-            '#title' => $this->t('Title'),
+        $form['page_reset_password_setting']['reset_title'] = [
+            '#type' => 'text_format',
+            '#title' => $this->t('Reset Password Title'),
             '#default_value' => $content['value'],
             '#translatable' => true,
         ];
