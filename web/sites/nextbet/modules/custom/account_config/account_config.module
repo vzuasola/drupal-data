@@ -1,18 +1,6 @@
 <?php
+
 /**
  * @file
- * My Account Custom entity configuration.
+ * Support module for Webform module custom properties testing.
  */
-
-use Drupal\Core\Menu\MenuTreeParameters;
-use Drupal\Core\Routing\RouteMatchInterface;
-use Drupal\Core\Url;
-
-/**
- *  Implements hook_page_attachments().
- */
-function account_config_page_attachments(array &$attachments)
-{
-    // Unconditionally attach an asset to the page.
-    $attachments['#attached']['library'][] = 'account_config/my_account.menu.icon';
-}
