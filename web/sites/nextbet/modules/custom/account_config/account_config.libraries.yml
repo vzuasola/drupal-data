@@ -1,0 +1,7 @@
+my_account.menu.icon:
+  version: VERSION
+  js:
+      js/account_config.js: {}
+  css:
+    theme:
+      css/account_config.css: {}

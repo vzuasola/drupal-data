@@ -1,0 +1,5 @@
+account_config.config:
+  title: 'My Account'
+  route_name: account_config.config
+  parent: system.admin
+  description: 'My Account Menu.'
