@@ -1,3 +1,9 @@
+games_collection.list_tab:
+  route_name: entity.games_collection.collection
+  base_route: games_collection.settings
+  title: 'List Collections'
+  weight: -100
+
 # Games Collection routing definition
 games_collection.settings_tab:
   route_name: games_collection.settings
