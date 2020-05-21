@@ -14,7 +14,7 @@ bundle: floating_banner_item
 label: Enable
 description: 'If unchecked then this banner item will be disabled.'
 required: false
-translatable: true
+translatable: false
 default_value:
   -
     value: 1

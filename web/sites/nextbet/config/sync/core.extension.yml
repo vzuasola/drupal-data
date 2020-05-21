@@ -50,6 +50,7 @@ module:
   nextbet_config: 0
   nextbet_footer_config: 0
   nextbet_forms: 0
+  nextbet_front_blocks: 0
   nextbet_urls: 0
   node: 0
   options: 0
@@ -94,6 +95,7 @@ module:
   webcomposer_language_access: 0
   webcomposer_language_hierarchy: 0
   webcomposer_marketing_script: 0
+  webcomposer_partner: 0
   webcomposer_promotions: 0
   webcomposer_registration_landing_page: 0
   webcomposer_replicate_utility: 0
