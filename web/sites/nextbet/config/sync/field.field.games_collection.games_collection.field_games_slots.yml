@@ -1,18 +1,18 @@
-uuid: 189dedc0-be7d-4b9e-8b62-89163a432db7
+uuid: 8c7c7de3-7970-4535-a6c7-a9fef0efdfce
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.games_collection.field_games
+    - field.storage.games_collection.field_games_slots
   module:
     - games_collection
-id: games_collection.games_collection.field_games
-field_name: field_games
+id: games_collection.games_collection.field_games_slots
+field_name: field_games_slots
 entity_type: games_collection
 bundle: games_collection
-label: Games
+label: 'Games - Slots'
 description: ''
-required: true
+required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''
@@ -21,6 +21,6 @@ settings:
   handler_settings:
     view:
       view_name: games_collection_entity_reference
-      display_name: entity_reference_1
+      display_name: entity_reference_2
       arguments: {  }
 field_type: entity_reference

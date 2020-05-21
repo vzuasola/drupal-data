@@ -1,12 +1,12 @@
-uuid: 48bbb1cd-7ee0-46db-a7aa-66f9111423a1
+uuid: 63f71afc-d37c-42f9-9272-64bc082b58d8
 langcode: en
 status: true
 dependencies:
   module:
     - games_collection
     - node
-id: games_collection.field_games
-field_name: field_games
+id: games_collection.field_games_arcade
+field_name: field_games_arcade
 entity_type: games_collection
 type: entity_reference
 settings:
