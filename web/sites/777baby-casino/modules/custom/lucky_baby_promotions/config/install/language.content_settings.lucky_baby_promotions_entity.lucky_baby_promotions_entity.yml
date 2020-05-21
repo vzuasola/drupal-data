@@ -1,18 +1,17 @@
-uuid: 95d7628c-2a44-417b-a646-e1f8a4121a05
+uuid: 415b4a34-991e-4c03-994e-01a6e3fa68ed
 langcode: ja
 status: true
 dependencies:
-  config:
-    - taxonomy.vocabulary.game_filter_casino
   module:
     - content_translation
+    - lucky_baby_promotions
 third_party_settings:
   content_translation:
     enabled: true
     bundle_settings:
       untranslatable_fields_hide: '0'
-id: taxonomy_term.game_filter_casino
-target_entity_type_id: taxonomy_term
-target_bundle: game_filter_casino
+id: lucky_baby_promotions_entity.lucky_baby_promotions_entity
+target_entity_type_id: lucky_baby_promotions_entity
+target_bundle: lucky_baby_promotions_entity
 default_langcode: site_default
 language_alterable: true
