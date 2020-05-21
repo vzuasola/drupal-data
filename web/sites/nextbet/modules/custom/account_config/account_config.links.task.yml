@@ -1,0 +1,4 @@
+account_config.general_configuration_tab:
+  route_name: account_config.general_configuration_form
+  title: 'General'
+  base_route: account_config.general_configuration_form
