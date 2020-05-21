@@ -44,7 +44,6 @@ module:
   menu_ui: 0
   metatag: 0
   msw_config: 0
-  msw_front_blocks: 0
   node: 0
   options: 0
   paragraphs: 0
@@ -88,6 +87,7 @@ module:
   webcomposer_rest_extra: 0
   webcomposer_seo: 0
   webcomposer_sitemap: 0
+  webcomposer_slider_v2: 0
   webcomposer_social_media: 0
   webcomposer_sponsor: 0
   webcomposer_territory_blocking: 0
