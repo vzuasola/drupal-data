@@ -55,12 +55,12 @@ class CantLoginForm extends FormBase {
             '#group' => 'advanced',
         ];
 
-        $content = $this->get('forgot_title');
         $form['page_forgot_password_setting']['forgot_title'] = [
-            '#type' => 'text_format',
-            '#title' => $this->t('Forgot Password Title'),
-            '#default_value' => $content['value'],
-            '#translatable' => true,
+            '#type' => 'textfield',
+            '#title' => t('Forgot Password Title'),
+            '#description' => $this->t('Text for header.'),
+            '#default_value' => $this->get('forgot_title'),
+            '#translatable' => TRUE,
         ];
 
         $content = $this->get('forgot_password_success_message');
@@ -80,12 +80,12 @@ class CantLoginForm extends FormBase {
             '#group' => 'advanced',
         ];
 
-        $content = $this->get('reset_title');
         $form['page_reset_password_setting']['reset_title'] = [
-            '#type' => 'text_format',
-            '#title' => $this->t('Reset Password Title'),
-            '#default_value' => $content['value'],
-            '#translatable' => true,
+            '#type' => 'textfield',
+            '#title' => t('Reset Password Title'),
+            '#description' => $this->t('Text for header.'),
+            '#default_value' => $this->get('reset_title'),
+            '#translatable' => TRUE,
         ];
 
         $content = $this->get('reset_password_success_message');
