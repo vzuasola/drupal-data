@@ -273,3 +273,28 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
+  entity_reference_2:
+    display_plugin: entity_reference
+    id: entity_reference_2
+    display_title: 'Slots Games Entity Reference'
+    position: 2
+    display_options:
+      display_extenders: {  }
+      display_description: ''
+      pager:
+        type: none
+        options:
+          offset: 0
+      style:
+        type: entity_reference
+        options:
+          search_fields:
+            title: title
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - 'user.node_grants:view'
+        - user.permissions
+      tags: {  }
