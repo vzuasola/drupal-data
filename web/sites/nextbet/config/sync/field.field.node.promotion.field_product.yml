@@ -11,11 +11,15 @@ entity_type: node
 bundle: promotion
 label: Product
 description: ''
-required: false
-translatable: false
+required: true
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:taxonomy_term'
-  handler_settings: {  }
+  handler: views
+  handler_settings:
+    view:
+      view_name: product
+      display_name: entity_reference_1
+      arguments: {  }
 field_type: entity_reference
