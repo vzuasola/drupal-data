@@ -11,7 +11,7 @@ field_name: field_product_subfilter
 entity_type: node
 bundle: promotion
 label: 'Product Subfilter'
-description: ''
+description: 'The filter which this product will be tagged'
 required: false
 translatable: true
 default_value: {  }
