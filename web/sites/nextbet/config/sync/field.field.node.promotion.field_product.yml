@@ -10,7 +10,7 @@ field_name: field_product
 entity_type: node
 bundle: promotion
 label: Product
-description: ''
+description: 'The product this promotion content will be tagged to'
 required: true
 translatable: true
 default_value: {  }
