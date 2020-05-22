@@ -1,8 +1,9 @@
 field_settings:
-  accept-format: '.pdf,.doc,.jpg,.docx,.png,jpeg,.tif,.gif,.tiff,.xps'
+  accept-format: '.pdf,.doc,.jpg,.docx,.png,.jpeg,.tif,.gif,.tiff,.xps'
+  accept-size: '1024'
 field_validations:
   required:
-    enable: 1
+    enable: 0
     error_message: 'Field should be required'
   alpha:
     enable: 0

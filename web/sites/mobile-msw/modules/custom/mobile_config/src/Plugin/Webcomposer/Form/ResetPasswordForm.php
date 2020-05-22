@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\reset_password\Plugin\Webcomposer\Form;
+namespace Drupal\mobile_config\Plugin\Webcomposer\Form;
 
 use Drupal\webcomposer_form_manager\WebcomposerFormBase;
 use Drupal\webcomposer_form_manager\WebcomposerFormInterface;
@@ -32,6 +32,18 @@ class ResetPasswordForm extends WebcomposerFormBase implements WebcomposerFormIn
    */
   public function getFields() {
     return [
+      'header_markup' => [
+        'name' => 'Header Markup',
+        'type' => 'markup',
+        'settings' => [
+          'markup' => [
+            '#title' => 'Header Blurb',
+            '#type' => 'text_format',
+            '#default_value' => '',
+          ],
+        ],
+      ],
+
       'new_password' => [
         'name' => 'New Password',
         'type' => 'password',
@@ -119,6 +131,19 @@ class ResetPasswordForm extends WebcomposerFormBase implements WebcomposerFormIn
           ],
         ],
       ],
+
+      'footer_markup' => [
+        'name' => 'Footer Markup',
+        'type' => 'markup',
+        'settings' => [
+          'markup' => [
+            '#title' => 'Footer Blurb',
+            '#type' => 'text_format',
+            '#default_value' => '',
+          ],
+        ],
+      ],
+
     ];
   }
 }
