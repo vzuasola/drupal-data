@@ -420,19 +420,6 @@ class MyAccountForm extends WebcomposerFormBase implements WebcomposerFormInterf
         ],
       ],
 
-      'customer_support_markup' => [
-        'name' => 'Customer Support Markup',
-        'type' => 'markup',
-        'settings' => [
-          'markup' => [
-            '#title' => 'Header Customer Support details for with Horizontal Line Markup',
-            '#type' => 'textarea',
-            '#description' => 'A Markup text my profile form',
-            '#default_value' => 'Customer Support<hr>',
-          ],
-        ],
-      ],
-
       'submit' => [
         'name' => 'Save',
         'type' => 'submit',
