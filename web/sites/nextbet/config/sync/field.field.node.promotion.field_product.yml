@@ -1,0 +1,21 @@
+uuid: a9b1362a-b2b6-47e3-b19c-ae37c6c9320a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_product
+    - node.type.promotion
+id: node.promotion.field_product
+field_name: field_product
+entity_type: node
+bundle: promotion
+label: Product
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings: {  }
+field_type: entity_reference

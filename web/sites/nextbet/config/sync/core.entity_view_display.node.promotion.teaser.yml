@@ -1,0 +1,19 @@
+uuid: b4136baf-28f3-4b7a-b47d-00e8b58102ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.promotion
+  module:
+    - user
+id: node.promotion.teaser
+targetEntityType: node
+bundle: promotion
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true
