@@ -206,7 +206,7 @@ class MyAccountConfigForm extends FormBase {
       $form['field_success_message_group'] = [
         '#type' => 'details',
         '#title' => 'Mobile Response - Messages',
-        '#group' => 'change_password',
+        '#group' => 'advanced',
       ];
   
       $content = $this->get('change_password_mobile_success_message');
