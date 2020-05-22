@@ -43,6 +43,7 @@ class MyAccountConfigForm extends FormBase {
     $this->myAccountTabs($form);
     $this->contactPreferences($form);
     $this->customerSupport($form);
+    $this->sectionPageSetting($form);
 
     return $form;
   }
@@ -123,5 +124,84 @@ class MyAccountConfigForm extends FormBase {
       '#required' => TRUE,
       '#translatable' => TRUE,
     ];
+  }
+
+  /**
+  * {@inheritdoc}
+  */
+  private function sectionPageSetting(array &$form) {
+      // Change password Setting
+      $form['page_change_password_setting'] = [
+          '#type' => 'details',
+          '#title' => t('Change Password Setting'),
+          '#group' => 'advanced',
+      ];
+
+      $form['page_change_password_setting']['page_current_password_label'] = [
+          '#type' => 'textfield',
+          '#title' => $this->t('Current Password Label'),
+          '#default_value' => $this->get('page_current_password_label'),
+          '#translatable' => true,
+      ];
+
+      $form['page_change_password_setting']['page_current_password_placeholder'] = [
+          '#type' => 'textfield',
+          '#title' => $this->t('Current Password Placeholder'),
+          '#default_value' => $this->get('page_current_password_placeholder'),
+          '#translatable' => true,
+      ];
+
+      $form['page_change_password_setting']['page_new_password_label'] = [
+          '#type' => 'textfield',
+          '#title' => $this->t('New Password Label'),
+          '#default_value' => $this->get('page_new_password_label'),
+          '#translatable' => true,
+      ];
+
+      $form['page_change_password_setting']['page_new_password_placeholder'] = [
+          '#type' => 'textfield',
+          '#title' => $this->t('New Password Placeholder'),
+          '#default_value' => $this->get('page_new_password_placeholder'),
+          '#translatable' => true,
+      ];
+
+      $form['page_change_password_setting']['page_confirm_password_label'] = [
+          '#type' => 'textfield',
+          '#title' => $this->t('Confirm Password Label'),
+          '#default_value' => $this->get('page_confirm_password_label'),
+          '#translatable' => true,
+      ];
+
+      $form['page_change_password_setting']['page_confirm_password_placeholder'] = [
+          '#type' => 'textfield',
+          '#title' => $this->t('Confirm Password Placeholder'),
+          '#default_value' => $this->get('page_confirm_password_placeholder'),
+          '#translatable' => true,
+      ];
+
+      $form['page_change_password_setting']['page_change_password_submit'] = [
+          '#type' => 'textfield',
+          '#title' => $this->t('Submit Button Label'),
+          '#default_value' => $this->get('page_change_password_submit'),
+          '#translatable' => true,
+      ];
+
+      $c = $this->get('page_change_password_desc');
+      $form['page_change_password_setting']['page_change_password_desc'] = [
+          '#type' => 'text_format',
+          '#title' => $this->t('Form Description'),
+          '#default_value' => $c['value'],
+          '#format' => $c['format'],
+          '#translatable' => true,
+      ];
+
+      $form['page_change_password_setting']['change_password_integration_error'] = [
+          '#type' => 'textarea',
+          '#title' => $this->t('Integration Error Messages'),
+          '#description' => $this->t('Integration error list.'),
+          '#default_value' => $this->get('change_password_integration_error'),
+          '#translatable' => TRUE,
+      ];
+
   }
 }
