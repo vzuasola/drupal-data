@@ -44,6 +44,7 @@ class MyAccountConfigForm extends FormBase {
     $this->contactPreferences($form);
     $this->customerSupport($form);
     $this->sectionPageSetting($form);
+    $this->fieldMessage($form);
 
     return $form;
   }
@@ -203,31 +204,33 @@ class MyAccountConfigForm extends FormBase {
           '#translatable' => TRUE,
       ];
 
-      $form['field_success_message_group'] = [
-        '#type' => 'details',
-        '#title' => 'Mobile Response - Messages',
-        '#group' => 'advanced',
-      ];
+  }
 
-      $content = $this->get('change_password_mobile_success_message');
-      $form['field_success_message_group']['change_password_mobile_success_message'] = [
-        '#type' => 'text_format',
-        '#title' => $this->t('Success Message'),
-        '#default_value' => $content['value'],
-        '#format' => $content['format'],
-        '#required' => TRUE,
-        '#translatable' => TRUE,
-      ];
+  private function fieldMessage(array &$form) {
+    $form['field_success_message_group'] = [
+      '#type' => 'details',
+      '#title' => 'Mobile Response - Messages',
+      '#group' => 'advanced',
+    ];
 
-      $content = $this->get('change_password_mobile_failed_message');
-      $form['field_success_message_group']['change_password_mobile_failed_message'] = [
-        '#type' => 'text_format',
-        '#title' => $this->t('Failed Message'),
-        '#default_value' => $content['value'],
-        '#format' => $content['format'],
-        '#required' => TRUE,
-        '#translatable' => TRUE,
-      ];
+    $content = $this->get('change_password_mobile_success_message');
+    $form['field_success_message_group']['change_password_mobile_success_message'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('Success Message'),
+      '#default_value' => $content['value'],
+      '#format' => $content['format'],
+      '#required' => TRUE,
+      '#translatable' => TRUE,
+    ];
 
+    $content = $this->get('change_password_mobile_failed_message');
+    $form['field_success_message_group']['change_password_mobile_failed_message'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('Failed Message'),
+      '#default_value' => $content['value'],
+      '#format' => $content['format'],
+      '#required' => TRUE,
+      '#translatable' => TRUE,
+    ];
   }
 }
