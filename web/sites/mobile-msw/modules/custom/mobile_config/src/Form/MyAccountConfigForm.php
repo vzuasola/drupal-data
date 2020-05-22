@@ -218,7 +218,7 @@ class MyAccountConfigForm extends FormBase {
         '#required' => TRUE,
         '#translatable' => TRUE,
       ];
-  
+
       $content = $this->get('change_password_mobile_failed_message');
       $form['field_success_message_group']['change_password_mobile_failed_message'] = [
         '#type' => 'text_format',
