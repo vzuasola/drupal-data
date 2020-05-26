@@ -1,0 +1,22 @@
+add games collection entities:
+  title: 'Create new Games Collection entities'
+
+administer games collection entities:
+  title: 'Administer Games Collection entities'
+  description: 'Allow to access the administration form to configure Games Collection entities.'
+  restrict access: true
+
+delete games collection entities:
+  title: 'Delete Games Collection entities'
+
+edit games collection entities:
+  title: 'Edit Games Collection entities'
+
+access games collection overview:
+  title: 'Access the Games Collection overview page'
+
+view published games collection entities:
+  title: 'View published Games Collection entities'
+
+view unpublished games collection entities:
+  title: 'View unpublished Games Collection entities'
