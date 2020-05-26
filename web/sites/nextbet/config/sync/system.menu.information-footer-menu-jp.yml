@@ -1,0 +1,8 @@
+uuid: 52d9fd5a-0992-4e07-a2fc-5bc2254f758b
+langcode: ja
+status: true
+dependencies: {  }
+id: information-footer-menu-jp
+label: 'Information Footer Menu JP'
+description: ''
+locked: false
