@@ -1,0 +1,5 @@
+games_collection.admin_settings:
+  title: 'Games Collection Configuration'
+  description: 'Provides an interface for managing games collection.'
+  parent: games_config.admin_settings
+  route_name: entity.games_collection.collection

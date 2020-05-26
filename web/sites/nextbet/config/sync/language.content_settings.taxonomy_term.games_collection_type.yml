@@ -1,16 +1,18 @@
-uuid: e09857a9-b0cb-48a0-87e7-33a7921df888
+uuid: 334189e8-5b70-4c55-92df-2af087d54b4c
 langcode: en
 status: true
 dependencies:
   config:
-    - taxonomy.vocabulary.product
+    - taxonomy.vocabulary.games_collection_type
+  module:
+    - content_translation
 third_party_settings:
   content_translation:
     enabled: false
     bundle_settings:
       untranslatable_fields_hide: '0'
-id: taxonomy_term.product
+id: taxonomy_term.games_collection_type
 target_entity_type_id: taxonomy_term
-target_bundle: product
+target_bundle: games_collection_type
 default_langcode: site_default
 language_alterable: false
