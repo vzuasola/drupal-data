@@ -1,0 +1,7 @@
+mobile_arcade.admin_settings:
+  path: 'admin/arcade-mobile'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Mobile Arcade Configurations'
+  requirements:
+    _permission: 'administer mobile config'
