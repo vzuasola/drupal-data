@@ -90,12 +90,9 @@ content:
     third_party_settings: {  }
   field_all_games_category_ribbon:
     weight: 18
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: options_select
     region: content
   field_disable_game_loader:
     weight: 21
@@ -114,12 +111,9 @@ content:
     region: content
   field_game_filter:
     weight: 19
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: options_buttons
     region: content
   field_game_provider:
     weight: 3
@@ -129,12 +123,9 @@ content:
     region: content
   field_game_ribbon:
     weight: 20
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: options_select
     region: content
   field_games_list_category:
     weight: 15
