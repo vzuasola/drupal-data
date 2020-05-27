@@ -1,0 +1,29 @@
+uuid: 18ad6756-4fc5-4b0f-b185-618c779bd9d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_games_list_category
+    - node.type.games_arcade
+    - taxonomy.vocabulary.games_category_arcade
+id: node.games_arcade.field_games_list_category
+field_name: field_games_list_category
+entity_type: node
+bundle: games_arcade
+label: Category
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      games_category_arcade: games_category_arcade
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
