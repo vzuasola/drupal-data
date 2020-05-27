@@ -12,6 +12,9 @@ type: list_string
 settings:
   allowed_values:
     -
+      value: mobile-nextbet
+      label: Entrypage
+    -
       value: mobile-nextbet-slots
       label: Slots
   allowed_values_function: ''
