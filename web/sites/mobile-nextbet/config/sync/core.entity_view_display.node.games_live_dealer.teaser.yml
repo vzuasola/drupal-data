@@ -1,0 +1,29 @@
+uuid: e0573b8e-c2b2-4a3d-8885-8cca8988918e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.games_live_dealer.body
+    - node.type.games_live_dealer
+  module:
+    - text
+    - user
+id: node.games_live_dealer.teaser
+targetEntityType: node
+bundle: games_live_dealer
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true
