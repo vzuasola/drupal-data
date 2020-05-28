@@ -524,6 +524,7 @@ display:
         style: false
         row: false
         fields: false
+        access: false
       row:
         type: data_field
         options:
@@ -532,9 +533,8 @@ display:
               alias: ''
               raw_output: false
       pager:
-        type: some
+        type: none
         options:
-          items_per_page: 10
           offset: 0
       fields:
         field_games_alias:
@@ -600,12 +600,14 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
+      access:
+        type: none
+        options: {  }
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
         - request_format
-        - user.permissions
       tags:
         - 'config:field.storage.taxonomy_term.field_games_alias'
