@@ -16,6 +16,7 @@ dependencies:
     - field.field.node.promotion.field_hide_right_side_block
     - field.field.node.promotion.field_image
     - field.field.node.promotion.field_image_post
+    - field.field.node.promotion.field_link_target
     - field.field.node.promotion.field_log_in_state
     - field.field.node.promotion.field_mark_as_featured
     - field.field.node.promotion.field_meta_tags
@@ -24,11 +25,21 @@ dependencies:
     - field.field.node.promotion.field_promotion_link_target
     - field.field.node.promotion.field_promotion_summary
     - field.field.node.promotion.field_promotion_summary_link
+    - field.field.node.promotion.field_ribbon_background_color
+    - field.field.node.promotion.field_ribbon_label
+    - field.field.node.promotion.field_right_side_block_content
+    - field.field.node.promotion.field_right_side_block_link
+    - field.field.node.promotion.field_right_side_block_option
+    - field.field.node.promotion.field_right_side_block_title
     - field.field.node.promotion.field_segment_name
     - field.field.node.promotion.field_summary_image
+    - field.field.node.promotion.field_text_color
+    - field.field.node.promotion.field_thumbnail_image
+    - field.field.node.promotion.field_thumbnail_summary
     - image.style.thumbnail
     - node.type.promotion
   module:
+    - color_field
     - entity_reference_views_select
     - field_group
     - image
@@ -60,11 +71,12 @@ third_party_settings:
       weight: 10
       format_type: tab
       format_settings:
-        id: ''
-        classes: ''
-        formatter: closed
+        label: 'Body Content'
+        formatter: open
         description: ''
         required_fields: true
+        id: ''
+        classes: ''
       label: 'Body Content'
     group_pre_login_body:
       children:
@@ -81,7 +93,7 @@ third_party_settings:
       label: 'Pre Login Body'
     group_post_login_body:
       children:
-        - field_banner_content_post
+        - field_body_post
       parent_name: group_body_content
       weight: 15
       format_type: tab
@@ -126,7 +138,7 @@ third_party_settings:
         - field_image_post
         - field_banner_link_post
         - field_banner_link_target_post
-        - field_body_post
+        - field_banner_content_post
       parent_name: group_promotions_banner
       weight: 14
       format_type: tab
@@ -141,11 +153,11 @@ third_party_settings:
       children:
         - field_promotion_summary_link
         - field_promotion_link_target
-        - field_summary_image
+        - field_thumbnail_image
         - field_promotion_summary
         - field_hide_countdown
       parent_name: ''
-      weight: 12
+      weight: 14
       format_type: details
       format_settings:
         id: ''
@@ -165,7 +177,7 @@ third_party_settings:
         - field_meta_tags
         - status
       parent_name: ''
-      weight: 13
+      weight: 16
       format_type: details
       format_settings:
         id: ''
@@ -173,6 +185,49 @@ third_party_settings:
         open: false
         required_fields: true
       label: 'INNER PAGE RIGHT-SIDE BLOCK'
+    group_promotion_thumbnail_right_:
+      children:
+        - field_right_side_block_link
+        - field_link_target
+        - field_summary_image
+        - field_thumbnail_summary
+      parent_name: ''
+      weight: 12
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: 'PROMOTION THUMBNAIL (RIGHT-SIDE BLOCK)'
+    group_right_side_block:
+      children:
+        - field_right_side_block_option
+        - field_right_side_block_title
+        - field_right_side_block_content
+      parent_name: ''
+      weight: 13
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: true
+        required_fields: true
+      label: 'Right Side Block'
+    group_ribbon_configuration:
+      children:
+        - field_ribbon_label
+        - field_text_color
+        - field_ribbon_background_color
+      parent_name: ''
+      weight: 15
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: 'Ribbon Configuration'
 id: node.promotion.default
 targetEntityType: node
 bundle: promotion
@@ -202,7 +257,7 @@ content:
     type: text_textarea
     region: content
   field_banner_content_post:
-    weight: 20
+    weight: 15
     settings:
       rows: 5
       placeholder: ''
@@ -238,7 +293,7 @@ content:
     type: options_select
     region: content
   field_body_post:
-    weight: 15
+    weight: 21
     settings:
       rows: 9
       summary_rows: 3
@@ -247,7 +302,7 @@ content:
     type: text_textarea_with_summary
     region: content
   field_hide_countdown:
-    weight: 20
+    weight: 21
     settings:
       display_label: true
     third_party_settings: {  }
@@ -276,6 +331,12 @@ content:
     third_party_settings: {  }
     type: image_image
     region: content
+  field_link_target:
+    type: options_select
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_log_in_state:
     weight: 7
     settings: {  }
@@ -314,7 +375,7 @@ content:
     type: options_select
     region: content
   field_promotion_summary:
-    weight: 19
+    weight: 20
     settings:
       rows: 5
       placeholder: ''
@@ -329,6 +390,53 @@ content:
     third_party_settings: {  }
     type: link_default
     region: content
+  field_ribbon_background_color:
+    weight: 20
+    settings: {  }
+    third_party_settings: {  }
+    type: color_field_widget_html5
+    region: content
+  field_ribbon_label:
+    weight: 18
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_right_side_block_content:
+    weight: 21
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_right_side_block_link:
+    weight: 29
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_right_side_block_option:
+    weight: 19
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_right_side_block_title:
+    weight: 20
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_segment_name:
     weight: 9
     settings:
@@ -338,12 +446,34 @@ content:
     type: string_textfield
     region: content
   field_summary_image:
-    weight: 18
+    weight: 31
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+    region: content
+  field_text_color:
+    weight: 19
+    settings: {  }
+    third_party_settings: {  }
+    type: color_field_widget_html5
+    region: content
+  field_thumbnail_image:
+    weight: 19
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_thumbnail_summary:
+    weight: 32
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
     region: content
   langcode:
     type: language_select
@@ -380,7 +510,7 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 22
+    weight: 23
     region: content
     third_party_settings: {  }
   sticky:
