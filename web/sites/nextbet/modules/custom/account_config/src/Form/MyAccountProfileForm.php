@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\account_profile_config\Form;
+namespace Drupal\account_config\Form;
 
 use Drupal\webcomposer_config_schema\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
