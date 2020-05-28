@@ -1,8 +1,0 @@
-uuid: 2a72610a-2ab1-4556-ac6c-fb666def0527
-langcode: vi
-status: true
-dependencies: {  }
-id: secondary-menu-vn
-label: 'Secondary Menu VN'
-description: ''
-locked: false
