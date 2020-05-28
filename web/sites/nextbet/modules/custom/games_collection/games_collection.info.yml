@@ -1,0 +1,7 @@
+name: Games Collection
+type: module
+description: Providers configuration to group the games.
+core: 8.x
+package: Custom
+dependencies:
+  - games_config

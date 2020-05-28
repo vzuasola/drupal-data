@@ -41,6 +41,7 @@ class GeneralConfiguration extends FormBase {
 
     $this->generalConfig($form);
     $this->integrationConfig($form);
+    $this->jpayIntegration($form);
     $this->restrictionConfig($form);
     $this->errorConfig($form);
     $this->proactiveConfig($form);
@@ -237,14 +238,6 @@ class GeneralConfiguration extends FormBase {
       '#title' => $this->t('Registration API Key'),
       '#description' => $this->t('Key that will be used for the authentication mechanism for Reg API'),
       '#default_value' => $this->get('reg_api_key'),
-      '#required' => TRUE,
-      '#translatable' => TRUE,
-    ];
-    $form['integration']['jpay_api'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('JPAY API Endpoint'),
-      '#description' => $this->t('Endpoint for JPAY API'),
-      '#default_value' => $this->get('jpay_api'),
       '#required' => TRUE,
       '#translatable' => TRUE,
     ];
@@ -617,6 +610,34 @@ class GeneralConfiguration extends FormBase {
       '#description' => $this->t('Above content will display in desktop view on the right side.'),
       '#default_value' => $desktop_right['value'],
       '#format' => $desktop_right['format'],
+      '#translatable' => TRUE,
+    ];
+  }
+
+  /**
+   * JPay Integration Config.
+   */
+  private function jpayIntegration(&$form) {
+    $form['jpay_integration'] = [
+      '#type' => 'details',
+      '#title' => $this->t('JPay Integration'),
+      '#collapsible' => TRUE,
+      '#group' => 'general_settings_tab',
+    ];
+
+    $form['jpay_integration']['jpay_api'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('JPAY API Endpoint'),
+      '#description' => $this->t('Endpoint for JPAY API'),
+      '#default_value' => $this->get('jpay_api') ?? "http://cms-jpayws.games.prd/api/cashier/",
+      '#translatable' => TRUE,
+    ];
+
+    $form['jpay_integration']['jpay_siteid'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('JPay Site ID'),
+      '#description' => $this->t('JPay Site ID for nextbet'),
+      '#default_value' => $this->get('jpay_siteid') ?? 106,
       '#translatable' => TRUE,
     ];
   }

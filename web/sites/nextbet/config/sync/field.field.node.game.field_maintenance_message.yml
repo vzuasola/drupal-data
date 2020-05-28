@@ -1,0 +1,19 @@
+uuid: 771f6737-15e4-47ec-848e-4139a7aa6acf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_maintenance_message
+    - node.type.game
+id: node.game.field_maintenance_message
+field_name: field_maintenance_message
+entity_type: node
+bundle: game
+label: 'Under Maintenance Message'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

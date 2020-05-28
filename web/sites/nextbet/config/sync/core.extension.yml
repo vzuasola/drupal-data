@@ -1,6 +1,8 @@
 module:
+  account_config: 0
   action: 0
   automated_cron: 0
+  basic_auth: 0
   block: 0
   block_content: 0
   breakpoint: 0
@@ -33,16 +35,24 @@ module:
   field_ui: 0
   file: 0
   filter: 0
+  games_collection: 0
+  games_config: 0
   image: 0
   imce: 0
   lang_dropdown: 0
   language: 0
+  language_access: 0
   libraries: 0
   link: 0
   locale: 0
   menu_link_attributes: 0
   menu_ui: 0
   metatag: 0
+  nextbet_config: 0
+  nextbet_footer_config: 0
+  nextbet_forms: 0
+  nextbet_front_blocks: 0
+  nextbet_urls: 0
   node: 0
   options: 0
   paragraphs: 0
@@ -50,6 +60,10 @@ module:
   path: 0
   quickedit: 0
   rdf: 0
+  registration_config: 0
+  registration_theme: 0
+  replicate: 0
+  replicate_ui: 0
   rest: 0
   rest_menu_items: 0
   restui: 0
@@ -77,11 +91,15 @@ module:
   webcomposer_downloadables: 0
   webcomposer_editor: 0
   webcomposer_floating_banners: 0
+  webcomposer_form_manager: 0
   webcomposer_games: 0
+  webcomposer_language_access: 0
   webcomposer_language_hierarchy: 0
   webcomposer_marketing_script: 0
+  webcomposer_partner: 0
   webcomposer_promotions: 0
   webcomposer_registration_landing_page: 0
+  webcomposer_replicate_utility: 0
   webcomposer_rest_extra: 0
   webcomposer_seo: 0
   webcomposer_sitemap: 0
@@ -91,6 +109,8 @@ module:
   webcomposer_territory_blocking: 0
   webcomposer_token: 0
   webcomposer_webform: 0
+  nextbet_footer_config: 0
+  nextbet_payments: 0
   webform: 0
   webform_rest: 0
   webform_ui: 0
