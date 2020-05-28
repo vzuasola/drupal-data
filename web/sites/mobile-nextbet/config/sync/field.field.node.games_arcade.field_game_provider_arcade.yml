@@ -13,7 +13,7 @@ entity_type: node
 bundle: games_arcade
 label: 'Game Provider'
 description: ''
-required: false
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''
