@@ -9,10 +9,10 @@ use Drupal\Core\Form\FormStateInterface;
  * Change Password configuration.
  *
  * @WebcomposerConfigPlugin(
- *   id = "change_password",
+ *   id = "change_password_form",
  *   route = {
  *     "title" = "Change Password Form",
- *     "path" = "/admin/config/my_account/change_password",
+ *     "path" = "/admin/config/my-account/change_password",
  *   },
  *   menu = {
  *     "title" = "Change Password Form Configuration",
