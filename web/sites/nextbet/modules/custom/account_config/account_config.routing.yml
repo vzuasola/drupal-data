@@ -1,5 +1,5 @@
 account_config.admin_settings:
-  path: '/admin/config/my_account'
+  path: '/admin/config/my-account'
   defaults:
     _title: 'My Account Configurations'
     _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
