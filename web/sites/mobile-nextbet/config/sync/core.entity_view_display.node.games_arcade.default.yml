@@ -8,7 +8,7 @@ dependencies:
     - field.field.node.games_arcade.field_disable_game_loader
     - field.field.node.games_arcade.field_game_code
     - field.field.node.games_arcade.field_game_filter
-    - field.field.node.games_arcade.field_game_provider
+    - field.field.node.games_arcade.field_game_provider_arcade
     - field.field.node.games_arcade.field_game_ribbon
     - field.field.node.games_arcade.field_games_list_category
     - field.field.node.games_arcade.field_games_subprovider
@@ -68,8 +68,8 @@ content:
     third_party_settings: {  }
     type: entity_reference_label
     region: content
-  field_game_provider:
-    weight: 107
+  field_game_provider_arcade:
+    weight: 114
     label: above
     settings: {  }
     third_party_settings: {  }
