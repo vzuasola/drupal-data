@@ -26,7 +26,7 @@ class MyAccountProfileForm extends FormBase {
      * {@inheritdoc}
      */
     protected function getEditableConfigNames() {
-        return ['account_profile_config.general_configuration'];
+        return ['account_config.general_configuration'];
     }
 
     /**
