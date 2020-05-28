@@ -12,7 +12,7 @@ use Drupal\Core\Form\FormStateInterface;
  *   id = "change_password_form",
  *   route = {
  *     "title" = "Change Password Form",
- *     "path" = "/admin/config/my-account/change_password",
+ *     "path" = "/admin/config/my-account/change-password",
  *   },
  *   menu = {
  *     "title" = "Change Password Form Configuration",
@@ -61,7 +61,6 @@ class MyAccountChangePasswordForm extends FormBase {
       '#group' => 'change_password',
     ];
 
-    $content = $this->get('change_password_mobile_success_message');
     $form['field_success_message_group']['change_password_mobile_success_message'] = [
       '#type' => 'textarea',
       '#title' => $this->t('Success Message'),
@@ -70,7 +69,6 @@ class MyAccountChangePasswordForm extends FormBase {
       '#translatable' => TRUE,
     ];
 
-    $content = $this->get('change_password_mobile_failed_message');
     $form['field_success_message_group']['change_password_mobile_failed_message'] = [
       '#type' => 'textarea',
       '#title' => $this->t('Failed Message'),
