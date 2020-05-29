@@ -33,9 +33,6 @@ settings:
       value: micro_gaming
       label: 'MG Arcade'
     -
-      value: pg_soft
-      label: PGSoft
-    -
       value: sa_gaming
       label: 'SA Gaming'
     -
