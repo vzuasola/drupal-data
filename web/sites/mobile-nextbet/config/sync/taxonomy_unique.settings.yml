@@ -32,3 +32,5 @@ lobby_tab: 1
 lobby_tab_message: 'Term @term already exists in vocabulary @vocabulary.'
 lobby_tab_ld: 1
 lobby_tab_ld_message: 'Term @term already exists in vocabulary @vocabulary.'
+games_providers_live_dealer: 0
+games_providers_live_dealer_message: 'Term @term already exists in vocabulary @vocabulary.'
