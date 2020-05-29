@@ -1,18 +1,18 @@
-uuid: 32be713e-02b4-4d62-8b9e-3183a38bd16c
+uuid: 5b62c0af-6294-4856-a698-e3d4b80f2f1d
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_game_provider
+    - field.storage.node.field_game_provider_arcade
     - node.type.games_arcade
   module:
     - options
-id: node.games_arcade.field_game_provider
-field_name: field_game_provider
+id: node.games_arcade.field_game_provider_arcade
+field_name: field_game_provider_arcade
 entity_type: node
 bundle: games_arcade
 label: 'Game Provider'
-description: 'Game provider for game launching'
+description: ''
 required: true
 translatable: false
 default_value: {  }
