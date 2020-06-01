@@ -17,6 +17,12 @@ settings:
     -
       value: mobile-nextbet-slots
       label: Slots
+    -
+      value: mobile-nextbet-arcade
+      label: Arcade
+    -
+      value: mobile-nextbet-live-dealer
+      label: 'Live Dealer'
   allowed_values_function: ''
 module: options
 locked: false
