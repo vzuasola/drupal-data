@@ -1,58 +1,61 @@
-uuid: f2d16ab2-0676-4628-b65b-1f3698ad20f6
+uuid: e345ba2b-90d7-40ab-b1f6-d965eb173fe0
 langcode: en
 status: true
 dependencies:
   module:
     - node
     - options
-id: node.field_game_provider
-field_name: field_game_provider
+id: node.field_game_provider_live_dealer
+field_name: field_game_provider_live_dealer
 entity_type: node
 type: list_string
 settings:
   allowed_values:
     -
+      value: allbet
+      label: Allbet
+    -
       value: asia_gaming
       label: 'Asia Gaming'
     -
-      value: cq9
-      label: 'CQ9 Gaming'
+      value: ebet
+      label: eBet
     -
-      value: fun_gaming
-      label: 'Fun Gaming'
+      value: evo_gaming
+      label: 'Evolution Gaming'
     -
       value: gold_deluxe
       label: 'Gold Deluxe'
     -
-      value: gpi_arcade
-      label: 'GPI Arcade'
-    -
-      value: ky_gaming
-      label: 'Kaiyuan (KY) Gaming'
+      value: gpi
+      label: GPI
     -
       value: micro_gaming
-      label: 'MG Arcade'
+      label: 'Micro Gaming'
+    -
+      value: opus
+      label: Opus
+    -
+      value: pas
+      label: PAS
     -
       value: sa_gaming
       label: 'SA Gaming'
     -
+      value: tgp
+      label: TGP
+    -
+      value: wac
+      label: 'We Are Casino'
+    -
+      value: ezugi_gaming
+      label: 'Ezugi Gaming'
+    -
       value: skywind
       label: Skywind
     -
-      value: solid_gaming
-      label: 'Solid Gaming'
-    -
       value: voidbridge
       label: Voidbridge
-    -
-      value: wac
-      label: 'WAC Video Bingo'
-    -
-      value: flow_gaming
-      label: 'Flow Gaming'
-    -
-      value: pgsoft
-      label: PGSoft
   allowed_values_function: ''
 module: options
 locked: false
