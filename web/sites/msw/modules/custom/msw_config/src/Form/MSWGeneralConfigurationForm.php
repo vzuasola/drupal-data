@@ -96,5 +96,13 @@ class MSWGeneralConfigurationForm extends FormBase {
       '#translatable' => TRUE,
       '#required' => TRUE,
     ];
+
+    $form['registration_setting']['registration']['registration_jpay_integration'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Icore Error Mapping'),
+      '#default_value' => $this->get('registration_jpay_integration'),
+      '#description' => $this->t('JPay API url for registration account creation.'),
+      '#required' => TRUE,
+    ];
   }
 }
