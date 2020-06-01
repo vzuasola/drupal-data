@@ -9,6 +9,7 @@ dependencies:
     - serialization
     - taxonomy
     - user
+    - webcomposer_rest_extra
 id: games_provider_live_dealer
 label: 'Games Provider - LIve Dealer'
 module: views
@@ -158,17 +159,17 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: api/game_providers_live_dealers
+      path: api/games_provider_live_dealer
       pager:
         type: none
         options:
           offset: 0
       style:
-        type: serializer
+        type: taxonomy_list_serializer
         options:
-          grouping: {  }
           uses_fields: false
-          formats: {  }
+          formats:
+            json: json
       row:
         type: data_entity
         options: {  }
