@@ -3,3 +3,4 @@ registration_step_two_target: _self
 registration_step_two_url: 'https://slipstream-msw-in1.elysium-dfbt.com/'
 registration_keep_alive_url: 'https://slipstream-msw-in1.elysium-dfbt.com/xapi/m/acc/id/'
 registation_icore_error_mapping: "PrincipalExist|Principal already exists - Player with same username exists\r\nEmailExist|Email already taken\r\nCouponNotFound|Coupon code not found\r\nPlayerUnderAge|Player is underage\r\nMandatoryField|Mandatory field validation failed. Field: [Locale], Value [].\r\nNicknameExist|Player with same nickname already exist.\r\nInvalidNickname|Nickname validation failed\r\nPortalNotActive|Portal is not active.\r\nPortalNotExist|Portal does not exist.\r\nInternalError|Internal error\r\nInvalidContactInfoSubType|Invalid InstantMessengerType value\r\nExternalPlayerAccountCreationFailed|Internal Icore Error"
+registration_jpay_integration: 'http://13.113.179.115'
