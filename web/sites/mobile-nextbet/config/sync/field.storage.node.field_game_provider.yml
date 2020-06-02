@@ -33,9 +33,6 @@ settings:
       value: sa_gaming
       label: 'SA Gaming'
     -
-      value: pg_soft
-      label: PGSoft
-    -
       value: asia_gaming
       label: 'Asia Gaming'
     -
