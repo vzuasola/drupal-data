@@ -166,18 +166,9 @@ third_party_settings:
         required_fields: true
       label: 'Promotion Thumbnail ( summary page )'
     group_inner_page_right_side_bloc:
-      children:
-        - translation
-        - path
-        - publish_on
-        - unpublish_on
-        - scheduler_settings
-        - sticky
-        - promote
-        - field_meta_tags
-        - status
+      children: {  }
       parent_name: ''
-      weight: 16
+      weight: 25
       format_type: details
       format_settings:
         id: ''
@@ -351,7 +342,7 @@ content:
     type: boolean_checkbox
     region: content
   field_meta_tags:
-    weight: 21
+    weight: 23
     settings: {  }
     third_party_settings: {  }
     type: metatag_firehose
@@ -484,7 +475,7 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 15
+    weight: 17
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -492,17 +483,17 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 20
+    weight: 22
     region: content
     third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
-    weight: 16
+    weight: 18
     region: content
     settings: {  }
     third_party_settings: {  }
   scheduler_settings:
-    weight: 18
+    weight: 20
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -510,14 +501,14 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 23
+    weight: 24
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 19
+    weight: 21
     region: content
     third_party_settings: {  }
   title:
@@ -529,7 +520,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 14
+    weight: 16
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -544,7 +535,7 @@ content:
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp_no_default
-    weight: 17
+    weight: 19
     region: content
     settings: {  }
     third_party_settings: {  }

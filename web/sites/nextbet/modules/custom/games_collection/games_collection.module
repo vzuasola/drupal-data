@@ -1,5 +1,7 @@
 <?php
 
+use Drupal\field\Entity\FieldStorageConfig;
+
 /**
  * @file
  * Contains games_collection.module.
@@ -36,12 +38,38 @@ function checkCollectionReferences(&$form) {
   $node = \Drupal::routeMatch()->getParameter('node');
   if ($node instanceof \Drupal\node\NodeInterface) {
       $nid = $node->id();
-      $query = \Drupal::entityQuery('games_collection')
-          ->condition('field_games', $nid, 'IN');
-      $nids = $query->execute();
+      $nids = [];
+      $products = \Drupal::entityManager()->getStorage('taxonomy_term')->loadTree('product');
+      $product_names = [];
+
+      foreach ($products as $product) {
+        $product_names[] = $product->name;
+      }
+
+      $query = \Drupal::entityQuery('games_collection');
+
+      if (! empty($product_names)) {
+        $group = $query->orConditionGroup();
+
+        foreach ($product_names as $product_name) {
+          $field_name = "field_games_{$product_name}";
+          $field_storage = FieldStorageConfig::loadByName('games_collection', $field_name);
+  
+          if (! empty($field_storage)) {
+            $group = $group->condition($field_name, $nid, 'IN');
+          }
+        }
+      }
+
+      if (isset($group)) {
+          $nids = $query->condition($group)->execute();
+      }
+
       $entities = \Drupal::entityManager()->getStorage('games_collection')->loadMultiple($nids);
+
       if ($entities) {
         $links = [];
+
         foreach ($entities as $entity) {
             $url = \Drupal\Core\Url::fromRoute('entity.games_collection.edit_form', ['games_collection' => $entity->id->value]);
             $url->setOptions(['attributes' => ['target' => '_blank']]);
