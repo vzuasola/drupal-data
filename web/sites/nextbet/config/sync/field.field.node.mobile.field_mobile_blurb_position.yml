@@ -1,0 +1,23 @@
+uuid: b5ca7266-5852-4514-b360-f76771f5f6dd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_mobile_blurb_position
+    - node.type.mobile
+  module:
+    - options
+id: node.mobile.field_mobile_blurb_position
+field_name: field_mobile_blurb_position
+entity_type: node
+bundle: mobile
+label: 'Mobile Blurb Position'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: right
+default_value_callback: ''
+settings: {  }
+field_type: list_string
