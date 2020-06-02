@@ -11,8 +11,6 @@ dependencies:
     - field.storage.webcomposer_slider_v2_entity.field_unpublish_date
     - image.style.thumbnail
     - taxonomy.vocabulary.product
-  content:
-    - 'taxonomy_term:product:15d8b3fa-e630-4ee4-b45c-aa6ae725c959'
   module:
     - datetime
     - draggableviews
@@ -736,46 +734,6 @@ display:
           entity_type: webcomposer_slider_v2_entity
           entity_field: langcode
           plugin_id: language
-        field_title_value:
-          id: field_title_value
-          table: webcomposer_slider_v2_entity__field_title
-          field: field_title_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: '='
-          value: ''
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_title_value_op
-            label: Title
-            description: ''
-            use_operator: false
-            operator: field_title_value_op
-            identifier: title
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              e: '0'
-            placeholder: ''
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          plugin_id: string
         field_product_target_id:
           id: field_product_target_id
           table: webcomposer_slider_v2_entity__field_product
@@ -784,8 +742,7 @@ display:
           group_type: group
           admin_label: ''
           operator: or
-          value:
-            8: 8
+          value: {  }
           group: 1
           exposed: true
           expose:
@@ -795,7 +752,7 @@ display:
             use_operator: false
             operator: field_product_target_id_op
             identifier: product
-            required: true
+            required: false
             remember: false
             multiple: false
             remember_roles:
@@ -1562,7 +1519,7 @@ display:
           exposed: true
           expose:
             operator_id: field_product_target_id_op
-            label: 'Product (field_product)'
+            label: Product
             description: ''
             use_operator: false
             operator: field_product_target_id_op
@@ -1589,7 +1546,7 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: false
-          type: textfield
+          type: select
           limit: true
           vid: product
           hierarchy: false
@@ -1599,10 +1556,14 @@ display:
         filters: false
         filter_groups: false
         arguments: false
+        cache: false
       filter_groups:
         operator: OR
         groups: {  }
       arguments: {  }
+      cache:
+        type: tag
+        options: {  }
     cache_metadata:
       max-age: -1
       contexts:
